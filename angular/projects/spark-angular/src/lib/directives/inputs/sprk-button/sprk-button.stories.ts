@@ -56,7 +56,7 @@ export const primary = () => ({
   moduleMetadata: modules,
   template: `
     <button
-      data-id="button-primary"
+      idString="button-primary"
       sprkButton
     >
       Button
@@ -76,8 +76,8 @@ export const secondary = () => ({
   moduleMetadata: modules,
   template: `
     <button
-      class="sprk-c-Button--secondary"
-      data-id="button-secondary"
+      variant="secondary"
+      idString="button-secondary"
       sprkButton
     >
       Button
@@ -97,8 +97,8 @@ export const tertiary = () => ({
   moduleMetadata: modules,
   template: `
     <button
-      class="sprk-c-Button--tertiary"
-      data-id="button-tertiary"
+      variant="tertiary"
+      idString="button-tertiary"
       sprkButton
     >
       Button
@@ -119,7 +119,7 @@ export const disabled = () => ({
   template: `
     <button
       disabled
-      data-id="button-disabled"
+      idString="button-disabled"
       sprkButton
     >
       Button
@@ -140,7 +140,8 @@ export const loading = () => {
     moduleMetadata: modules,
     template: `
       <button
-        data-id="button-loading"
+        idString="button-loading"
+        analyticsString="loading"
         sprkButton
         [isSpinning]="true"
       >
@@ -158,13 +159,37 @@ loading.story = {
   },
 };
 
+export const loadingSecondary = () => {
+  return {
+    moduleMetadata: modules,
+    template: `
+      <button
+        variant="secondary"
+        idString="button-loading-secondary"
+        sprkButton
+        [isSpinning]="true"
+      >
+        Button
+      </button>
+    `,
+  };
+};
+
+loadingSecondary.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
+
 export const fullWidthAtSmallViewport = () => {
   return {
     moduleMetadata: modules,
     template: `
       <button
         class="sprk-c-Button--full@s"
-        data-id="button-full-width-at-small"
+        idString="button-full-width-at-small"
         sprkButton
       >
         Button
@@ -188,7 +213,7 @@ export const fullWidthAtExtraSmallViewport = () => {
     template: `
       <button
         class="sprk-c-Button--full@xs"
-        data-id="button-full-width-at-extra-small"
+        idString="button-full-width-at-extra-small"
         sprkButton
       >
         Button
