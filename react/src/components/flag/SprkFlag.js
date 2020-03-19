@@ -17,8 +17,6 @@ const SprkFlag = (props) => {
     ...other
   } = props;
 
-
-
   const flagClassNames = classnames(
     'sprk-o-Flag',
     additionalClasses,
