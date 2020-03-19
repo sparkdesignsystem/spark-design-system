@@ -39,6 +39,11 @@ describe('SprkButton:', () => {
     expect(wrapper.find('.sprk-c-Spinner').length).toBe(1);
   });
 
+  it('if loading is set and variant is secondary, should render the secondary spinner', () => {
+    const wrapper = mount(<SprkButton loading variant="secondary"/>);
+    expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(1);
+  });
+
   it('should add role=button if an anchor is rendered', () => {
     const wrapper = mount(<SprkButton element="a" href="#nogo" />);
     expect(wrapper.find('[role="button"]').length).toBe(1);
