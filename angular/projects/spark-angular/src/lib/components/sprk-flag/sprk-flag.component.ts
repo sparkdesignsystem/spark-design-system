@@ -81,7 +81,7 @@ export class SprkFlagComponent {
    * Determines the vertical alignment of content.
    */
   @Input()
-  verticalAlignment: 'middle' | 'bottom';
+  verticalAlignment: 'top' | 'middle' | 'bottom' = 'top';
 
   /**
    * @ignore
@@ -101,7 +101,7 @@ export class SprkFlagComponent {
       classArray.push(spacingClasses[this.spacing]);
     }
 
-    if (this.verticalAlignment) {
+    if (this.verticalAlignment !== 'top') {
       const verticalAlignmentClasses = {
         middle: 'sprk-o-Flag--middle',
         bottom: 'sprk-o-Flag--bottom',
