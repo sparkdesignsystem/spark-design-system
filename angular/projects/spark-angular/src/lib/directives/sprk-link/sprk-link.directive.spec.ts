@@ -57,7 +57,6 @@ describe('SprkLink Directive', () => {
   });
 
   it('should apply correct Spark classes for simple variant', () => {
-    console.log(linkSimple, 'kasjfklasjdf;kds clases')
     expect(linkSimple.classList.contains('sprk-b-Link')).toBe(true);
     expect(linkSimple.classList.contains('sprk-b-Link--simple')).toBe(true);
   });
