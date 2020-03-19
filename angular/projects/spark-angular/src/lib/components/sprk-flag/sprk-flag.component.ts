@@ -110,11 +110,11 @@ export class SprkFlagComponent {
       classArray.push(verticalAlignmentClasses[this.verticalAlignment]);
     }
 
-    if (this.isReversed === true) {
+    if (this.isReversed !== false) {
       classArray.push('sprk-o-Flag--rev');
     }
 
-    if (this.isStacked === true) {
+    if (this.isStacked !== false) {
       classArray.push('sprk-o-Flag--stacked');
     }
 
