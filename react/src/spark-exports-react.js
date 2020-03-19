@@ -9,6 +9,8 @@ export { default as SprkDivider }
   from './components/dividers/SprkDivider';
 export { default as SprkDropdown }
   from './components/dropdown/SprkDropdown';
+export { default as SprkFlag }
+  from './components/flag/SprkFlag';
 export { default as SprkHighlightBoard }
   from './components/highlight-board/SprkHighlightBoard';
 export { default as SprkIcon }

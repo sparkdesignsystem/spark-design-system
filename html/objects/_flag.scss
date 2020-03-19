@@ -103,15 +103,26 @@
 /// Vertically align content to the middle.
 .sprk-o-Flag--middle {
   align-items: center;
+
+  @media all and (max-width: $sprk-flag-stacked-breakpoint) {
+    &.sprk-o-Flag--stacked {
+      align-items: stretch;
+    }
+  }
 }
 
 /// Vertically align content to the bottom.
 .sprk-o-Flag--bottom {
   align-items: flex-end;
+
+  @media all and (max-width: $sprk-flag-stacked-breakpoint) {
+    &.sprk-o-Flag--stacked {
+      align-items: stretch;
+    }
+  }
 }
 
 @media all and (max-width: $sprk-flag-stacked-breakpoint) {
-
   /// Stacked flag at smaller screen width.
   .sprk-o-Flag--stacked {
     flex-direction: column;
