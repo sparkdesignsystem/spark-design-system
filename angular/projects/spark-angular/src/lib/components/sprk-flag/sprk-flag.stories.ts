@@ -61,7 +61,7 @@ export const reverse = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-flag
-      isReversed="true"
+      [isReversed]="true"
     >
       <img
         media-slot
@@ -86,7 +86,7 @@ export const stacked = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-flag
-      isStacked="true"
+      [isStacked]="true"
     >
       <img
         media-slot
