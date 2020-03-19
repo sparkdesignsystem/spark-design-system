@@ -75,7 +75,7 @@ export class SprkFlagComponent {
    * media and the body.
    */
   @Input()
-  spacing: 'flush' | 'tiny' | 'small' | 'large' | 'huge';
+  spacing: 'flush' | 'tiny' | 'small' | 'medium' | 'large' | 'huge' = 'medium';
 
   /**
    * Determines the vertical alignment of content.
@@ -89,7 +89,7 @@ export class SprkFlagComponent {
   getClasses(): string {
     const classArray: string[] = ['sprk-o-Flag'];
 
-    if (this.spacing) {
+    if (this.spacing !== 'medium') {
       const spacingClasses = {
         flush: 'sprk-o-Flag--flush',
         tiny: 'sprk-o-Flag--tiny',
