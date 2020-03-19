@@ -20,7 +20,6 @@ ${markdownDocumentationLinkBuilder('button')}
 
 export const defaultStory = () => (
   <SprkFlag
-    isStacked
     media={
       <img
           alt="Provide useful alternative text"

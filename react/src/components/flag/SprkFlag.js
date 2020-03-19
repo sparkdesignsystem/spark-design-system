@@ -60,7 +60,7 @@ const SprkFlag = (props) => {
 
 SprkFlag.propTypes = {
   /**
-   * Recieves a component that will render media into the Flag component.
+   * Recieves a component that will render media into the Flag component. Required.
    */
   media: PropTypes.element.isRequired,
   /**
@@ -74,11 +74,11 @@ SprkFlag.propTypes = {
   /**
    * Determines how much space between the figure and the body.
    */
-  spacing: PropTypes.oneOf(['tiny', 'small', 'large', 'huge']),
+  spacing: PropTypes.oneOf(['tiny', 'small','medium', 'large', 'huge']),
   /**
    * Determines the vertical alignment of content.
    */
-  verticalAlignment: PropTypes.oneOf(['middle', 'bottom']),
+  verticalAlignment: PropTypes.oneOf(['top', 'middle', 'bottom']),
   /**
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
