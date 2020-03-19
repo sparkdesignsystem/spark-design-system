@@ -177,7 +177,7 @@ export class SprkLinkComponent implements OnInit {
     "replace any instance of the <sprk-link> component in your codebase with " +
     "the new Directive syntax.";
 
-    console.log(message);
+    console.warn(message);
 
     // Sets the default href if none provided
     if (this.href === '' || this.href === null || this.href === undefined) {
