@@ -57,6 +57,8 @@ describe('Spark Button Directive', () => {
   });
 
   it('should add the dark spinner class when isSpinning is true on a secondary button', () => {
+    const spinnerNotThere = button3Element.querySelector('.sprk-c-Spinner');
+    expect(spinnerNotThere).toBeNull();
     component.spinnerVal = true;
     fixture.detectChanges();
     const spinner = button3Element.querySelector('.sprk-c-Spinner');
