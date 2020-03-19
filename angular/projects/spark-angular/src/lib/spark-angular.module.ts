@@ -60,6 +60,7 @@ import { SprkBoxModule } from './directives/sprk-box/sprk-box.module';
 import { SprkTextModule } from './directives/sprk-text/sprk-text.module';
 import { SprkHeadingModule } from './directives/sprk-heading/sprk-heading.module';
 import { SprkLinkDirectiveModule } from './directives/sprk-link/sprk-link.module';
+import { SprkFlagModule } from './components/sprk-flag/sprk-flag.module';
 
 @NgModule({
   exports: [
@@ -114,7 +115,8 @@ import { SprkLinkDirectiveModule } from './directives/sprk-link/sprk-link.module
     SprkBoxModule,
     SprkTextModule,
     SprkHeadingModule,
-    SprkLinkDirectiveModule
+    SprkLinkDirectiveModule,
+    SprkFlagModule,
   ]
 })
 export class SparkAngularModule {}
