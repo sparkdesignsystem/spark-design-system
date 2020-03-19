@@ -43,8 +43,18 @@ This modifier rearranges elements of the flag so the media is to the right of th
 #### Accessibility
 Tabbing and screen readers are based on DOM order. Keep in mind that this reverse modifier is purely a visual change, not a DOM change. With more complex layouts, be mindful that visual and DOM order misatches will affect keyboard, magnifier, and screen reader users.
 <ComponentPreview
-  componentName="flag--reverse"
+  componentName="flag--reversed"
   hasHTML
+  hasReact
+/>
+
+### Stacked Modifier
+This modifier rearranges elements to stack on top of each other based on a breakpoint.
+This can be used in conjunction with reverse, but the stacking will always have the media element above the body content.
+<ComponentPreview
+  componentName="flag--stacked"
+  hasHTML
+  hasReact
 />
 
 <SprkDivider
