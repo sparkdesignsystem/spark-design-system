@@ -39,7 +39,7 @@ defaultStory.story = {
   name: 'Default',
 };
 
-export const reverse = () => (
+export const reversed = () => (
   <SprkFlag
     isReversed
     media={
