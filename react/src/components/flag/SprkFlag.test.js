@@ -51,7 +51,7 @@ describe('SprkFlag:', () => {
   });
 
   it('should apply additional media classes', () => {
-    const testClass = "testMedia";
+    const testClass = 'testMedia';
     const wrapper = shallow(
       <SprkFlag
         additionalMediaClasses={testClass}
@@ -64,11 +64,11 @@ describe('SprkFlag:', () => {
         additionalClasses={testClass}
       />
     );
-    expect(wrapper.hasClass(testClass)).toBe(true);
+    expect(wrapper.find('.sprk-o-Flag__figure').hasClass(testClass)).toBe(true);
   });
 
   it('should apply additional body classes', () => {
-    const testClass = "testBody";
+    const testClass = 'testBody';
     const wrapper = shallow(
       <SprkFlag
         additionalBodyClasses={testClass}
@@ -81,11 +81,11 @@ describe('SprkFlag:', () => {
         additionalClasses={testClass}
       />
     );
-    expect(wrapper.hasClass(testClass)).toBe(true);
+    expect(wrapper.find('.sprk-o-Flag__body').hasClass(testClass)).toBe(true);
   });
 
   it('should apply additional classes', () => {
-    const testClass = "test";
+    const testClass = 'test';
     const wrapper = shallow(
       <SprkFlag
         media={
@@ -101,7 +101,7 @@ describe('SprkFlag:', () => {
   });
 
   it('should apply idString', () => {
-    const testId = "test";
+    const testId = 'test';
     const wrapper = mount(
       <SprkFlag
         media={
