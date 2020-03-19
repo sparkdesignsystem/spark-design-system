@@ -57,9 +57,9 @@ export const reverse = () => (
   </SprkFlag>
 );
 
-export const middleAligned = () => (
+export const stacked = () => (
   <SprkFlag
-    verticalAlignment="middle"
+    isStacked
     media={
       <img
           alt="Provide useful alternative text"
@@ -73,55 +73,3 @@ export const middleAligned = () => (
     </p>
   </SprkFlag>
 );
-
-export const bottomAligned = () => (
-  <SprkFlag
-    verticalAlignment="bottom"
-    media={
-      <img
-          alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
-      />
-    }
-  >
-    <p>
-      Lorem ipsum dolor. Sit amet pede. Tempus donec et.
-      Suspendisse id inventore integer eum non enim diam habitant.
-    </p>
-  </SprkFlag>
-);
-
-export const tinySpacing = () => (
-  <SprkFlag
-    spacing="tiny"
-    media={
-      <img
-          alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
-      />
-    }
-  >
-    <p>
-      Lorem ipsum dolor. Sit amet pede. Tempus donec et.
-      Suspendisse id inventore integer eum non enim diam habitant.
-    </p>
-  </SprkFlag>
-);
-
-export const smallSpacing = () => (
-  <SprkFlag
-    spacing="small"
-    media={
-      <img
-          alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
-      />
-    }
-  >
-    <p>
-      Lorem ipsum dolor. Sit amet pede. Tempus donec et.
-      Suspendisse id inventore integer eum non enim diam habitant.
-    </p>
-  </SprkFlag>
-);
-
