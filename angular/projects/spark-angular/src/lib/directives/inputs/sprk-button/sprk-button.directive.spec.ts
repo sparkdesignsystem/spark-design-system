@@ -20,7 +20,7 @@ import { SprkButtonDirective } from './sprk-button.directive';
   `
 })
 class TestComponent {
- spinnerVal = false;
+  spinnerVal = false;
 }
 
 describe('Spark Button Directive', () => {

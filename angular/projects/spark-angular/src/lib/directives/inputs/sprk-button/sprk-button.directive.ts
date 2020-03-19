@@ -93,12 +93,27 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     const el = element;
     const width = element.offsetWidth;
     let spinnerClass = 'sprk-c-Spinner sprk-c-Spinner--circle';
-    if (el.classList.contains('sprk-c-Button--secondary') || this.variant === 'secondary') {
+    if (
+        el.classList.contains('sprk-c-Button--secondary') ||
+        this.variant === 'secondary') {
       spinnerClass += ' sprk-c-Spinner--dark';
     }
-    el.setAttribute('data-sprk-spinner-text', el.textContent);
+    this.renderer.setAttribute(
+      el,
+      'data-sprk-spinner-text',
+      el.textContent,
+    );
     el.innerHTML = `<div class="${spinnerClass}"></div>`;
     el.setAttribute('data-sprk-has-spinner', 'true');
-    el.setAttribute('style', `width: ${width}px`);
+    this.renderer.setAttribute(
+      el,
+      'data-sprk-has-spinner',
+      'true',
+    );
+    this.renderer.setAttribute(
+      el,
+      'style',
+      `width: ${width}px`,
+    );
   }
 }
