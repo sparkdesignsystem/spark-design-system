@@ -4,23 +4,23 @@ import { Router } from '@angular/router';
   selector: 'sprk-link',
   template: `
     <a
-      (click)="handleClick($event)"
-      [ngClass]="getClasses()"
-      [href]="href"
-      [attr.data-analytics]="analyticsString"
-      [attr.target]="target"
-      [attr.data-id]="idString"
-      [attr.disabled]="isDisabled"
-      [attr.aria-controls]="ariaControls"
-      [attr.aria-label]="ariaLabel"
-      [attr.aria-labelledby]="ariaLabelledby"
-      [attr.aria-haspopup]="ariaHasPopUp"
-      [attr.role]="role"
-      [attr.id]="id"
-      [attr.aria-current]="ariaCurrent"
-      [attr.aria-expanded]="ariaExpanded"
-      [attr.aria-hidden]="ariaHidden"
-      [attr.aria-selected]="ariaSelected"
+      (click)='handleClick($event)'
+      [ngClass]='getClasses()'
+      [href]='href'
+      [attr.data-analytics]='analyticsString'
+      [attr.target]='target'
+      [attr.data-id]='idString'
+      [attr.disabled]='isDisabled'
+      [attr.aria-controls]='ariaControls'
+      [attr.aria-label]='ariaLabel'
+      [attr.aria-labelledby]='ariaLabelledby'
+      [attr.aria-haspopup]='ariaHasPopUp'
+      [attr.role]='role'
+      [attr.id]='id'
+      [attr.aria-current]='ariaCurrent'
+      [attr.aria-expanded]='ariaExpanded'
+      [attr.aria-hidden]='ariaHidden'
+      [attr.aria-selected]='ariaSelected'
     >
       <ng-content></ng-content>
     </a>
@@ -170,12 +170,12 @@ export class SprkLinkComponent implements OnInit {
     // This message is split up like this so that we can keep the line
     // length down in the editor while also logging a single unformatted
     // line of text in the console.
-    const message = "Spark Design System Warning: Spark Link has been " +
-    "refactored to be an Angular Directive. The old Angular Component " +
-    "version has been deprecated. This version will be permanently removed " +
-    "from Spark in our Summer 2020 release. To update to the new version, " +
-    "replace any instance of the <sprk-link> component in your codebase with " +
-    "the new Directive syntax.";
+    const message = 'Spark Design System Warning: Spark Link has been ' +
+    'refactored to be an Angular Directive. The old Angular Component ' +
+    'version has been deprecated. This version will be permanently removed ' +
+    'from Spark in our Summer 2020 release. To update to the new version, ' +
+    'replace any instance of the <sprk-link> component in your codebase with ' +
+    'the new Directive syntax.';
 
     console.warn(message);
 

@@ -140,9 +140,9 @@ export const deprecated = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-link
-      href="#"
-      idString="link-5"
-      analyticsString="object.action.event"
+      href='#'
+      idString='link-5'
+      analyticsString='object.action.event'
     >
       Deprecated Web Component Link
     </sprk-link>
@@ -150,7 +150,7 @@ export const deprecated = () => ({
 });
 
 deprecated.story = {
-  name: "Component (Deprecated)",
+  name: 'Component (Deprecated)',
   parameters: {
     jest: ['sprk-link.directive'],
   }
