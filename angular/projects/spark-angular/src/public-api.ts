@@ -582,3 +582,39 @@ export {
 export {
   SprkTabbedNavigationTabModule as ɵdk
 } from './lib/directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
+export {
+  SprkCenteredColumnDirective
+} from './lib/directives/sprk-centered-column/sprk-centered-column.directive';
+export {
+  SprkCenteredColumnModule
+} from './lib/directives/sprk-centered-column/sprk-centered-column.module';
+export {
+  SprkFlagComponent
+} from './lib/components/sprk-flag/sprk-flag.component';
+export {
+  SprkFlagModule
+} from './lib/components/sprk-flag/sprk-flag.module';
+export {
+  SprkLinkDirective
+} from './lib/directives/sprk-link/sprk-link.directive';
+export {
+  SprkLinkDirectiveModule
+} from './lib/directives/sprk-link/sprk-link.module';
+export {
+  SprkTextDirective
+} from './lib/directives/sprk-text/sprk-text.directive';
+export {
+  SprkTextModule
+} from './lib/directives/sprk-text/sprk-text.module';
+export {
+  SprkHeadingDirective
+} from './lib/directives/sprk-heading/sprk-heading.directive';
+export {
+  SprkHeadingModule
+} from './lib/directives/sprk-heading/sprk-heading.module';
+export {
+  SprkBoxDirective
+} from './lib/directives/sprk-box/sprk-box.directive';
+export {
+  SprkBoxModule
+} from './lib/directives/sprk-box/sprk-box.module';
