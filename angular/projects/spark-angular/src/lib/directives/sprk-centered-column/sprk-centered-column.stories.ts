@@ -27,7 +27,7 @@ const modules = {
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-    <div sprkCenteredColumn idString="foo">
+    <div sprkCenteredColumn idString="centered-column">
     </div>
   `,
 });
