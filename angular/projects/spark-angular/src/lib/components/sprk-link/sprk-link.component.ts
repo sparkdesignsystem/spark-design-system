@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
       (click)="handleClick($event)"
       [ngClass]="getClasses()"
       [href]="href"
-      [attr.data-analytics]='analyticsString'
+      [attr.data-analytics]="analyticsString"
       [attr.target]="target"
       [attr.data-id]="idString"
       [attr.disabled]="isDisabled"
