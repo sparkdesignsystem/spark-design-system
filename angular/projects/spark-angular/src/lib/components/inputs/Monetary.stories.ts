@@ -38,7 +38,7 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
-- In order to use angular form validation on these inputs, add a pattern
+- In order to use Angular form validation on these inputs, add a pattern
 attribute containing a regular expression to the input.
 - Formatting can be turned on by adding the \`sprkFormatterMonetary\`
 directive to the input. Formatting is run on blur to add commas and

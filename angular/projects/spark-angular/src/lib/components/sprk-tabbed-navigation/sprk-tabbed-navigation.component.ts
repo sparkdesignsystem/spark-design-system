@@ -233,24 +233,24 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    * @ignore
    */
   incrementTab(tabs, tabpanels, activeClass, direction) {
-    var activeIndex = this.getActiveTabIndex(tabs, activeClass);
+    let activeIndex = this.getActiveTabIndex(tabs, activeClass);
 
     let foundNewIndex = false;
 
     // Start looking for the next available tab
-    while (foundNewIndex === false){
+    while (foundNewIndex === false) {
       // if the next tab would be off the left of the tabstrip
       if (activeIndex + direction < 0) {
         // loop to the end and keep looking
         activeIndex = tabs.length;
 
       // if the next tab would be off the right of the tabstrip
-      } else if (activeIndex + direction >= tabs.length){
+      } else if (activeIndex + direction >= tabs.length) {
         // loop back to the beginning and keep looking
         activeIndex = -1;
 
       // If the next tab is not disabled
-      } else if (!tabs[activeIndex + direction].hasAttribute('disabled')){
+      } else if (!tabs[activeIndex + direction].hasAttribute('disabled')) {
         // move to the next tab
         activeIndex += direction;
         // stop looking for the correct tab
@@ -258,7 +258,7 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
 
       } else {
         // move to the next tab and keep looking
-        activeIndex+= direction;
+        activeIndex += direction;
       }
     }
 
@@ -269,11 +269,11 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   }
 
   goToEndTab(tabs, tabpanels, activeClass, direction) {
-    var newActiveIndex;
+    let newActiveIndex;
 
     // if direction is positive, go to the right-most tab
     if (direction > 0) {
-      newActiveIndex = tabs.length-1;
+      newActiveIndex = tabs.length - 1;
 
     // else go to the left-most tab
     } else {
@@ -283,17 +283,17 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     let foundNewIndex = false;
 
     // step through the tabs until we find one that isn't disabled
-    while (foundNewIndex === false){
+    while (foundNewIndex === false) {
 
       // if this tab is not disabled
-      if (!tabs[newActiveIndex].hasAttribute('disabled')){
+      if (!tabs[newActiveIndex].hasAttribute('disabled')) {
 
         // stop looking for the correct tab
         foundNewIndex = true;
 
       // else step one tab away from the end and keep looking
       } else {
-        newActiveIndex-=direction;
+        newActiveIndex -= direction;
       }
     }
 
