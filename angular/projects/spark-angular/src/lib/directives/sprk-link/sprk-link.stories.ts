@@ -152,7 +152,7 @@ export const deprecated = () => ({
 deprecated.story = {
   name: 'Component (Deprecated)',
   parameters: {
-    jest: ['sprk-link.directive'],
+    jest: ['sprk-link.component'],
   }
 };
 
