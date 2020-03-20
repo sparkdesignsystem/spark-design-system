@@ -136,5 +136,5 @@ export class SprkBoxDirective {
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef) {}
+  constructor() {}
 }
