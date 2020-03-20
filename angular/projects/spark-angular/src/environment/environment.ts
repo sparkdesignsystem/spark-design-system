@@ -1,3 +1,3 @@
 export const environment = {
-  version: '9.5.0-alpha.0'
+  version: '9.5.0-alpha.1'
 };
