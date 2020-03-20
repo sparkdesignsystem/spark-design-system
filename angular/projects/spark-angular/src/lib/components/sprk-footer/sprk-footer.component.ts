@@ -280,16 +280,16 @@ export class SprkFooterComponent {
   connectHeading: string;
   /**
    * Array of
-   * [ISprkFooterGlobalLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-footer-global-link.interface.ts)
-   * used to build the
+   * [ISprkFooterGlobalLink](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   *  used to build the
    * links in the "Global" section.
    */
   @Input()
   globalLinks: ISprkFooterGlobalLink[];
   /**
    * Array of
-   * [ISprkFooterLocalLinkColumn](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-footer-local-link-column.interface.ts)
-   * used to build
+   * [ISprkFooterLocalLinkColumn](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   *  used to build
    * the columns of links
    * in the "Site Links" section.
    */
@@ -297,24 +297,24 @@ export class SprkFooterComponent {
   localLinks: ISprkFooterLocalLinkColumn[];
   /**
    * Array of
-   * [ISprkFooterSocialLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/interfaces/sprk-footer-local-link.interface.ts)
-   * used to build the
+   * [ISprkFooterSocialLink](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   *  used to build the
    * icon links in the "Connect With Us section".
    */
   @Input()
   socialLinks: ISprkFooterSocialLink[];
   /**
    * Array of
-   * [ISprkFooterAward](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
-   * used to build the
+   * [ISprkFooterAward](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   *  used to build the
    * awards in the "Awards" section.
    */
   @Input()
   awards: ISprkFooterAward[];
   /**
    * Array of
-   * [ISprkFooterBadgeLink](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
-   * used to build the
+   * [ISprkFooterBadgeLink](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   *  used to build the
    * icon links in the icon
    * section in the bottom
    * of the Footer.
@@ -323,16 +323,16 @@ export class SprkFooterComponent {
   badgeLinks: ISprkFooterBadgeLink[];
   /**
    * Array of
-   * [ISprkText](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/components/sprk-footer/sprk-footer.interfaces.ts)
-   * used to build disclaimer text in the
+   * [ISprkDisclaimerText](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   *  used to build disclaimer text in the
    * of the Footer.
    */
   @Input()
   disclaimerText: ISprkDisclaimerText[];
   /**
    * Array of
-   * [ISprkDisclaimerToggle](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
-   * used to build
+   * [ISprkDisclaimerToggle](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   *  used to build
    * the disclamer toggle(s) in
    * the the Footer.
    */
