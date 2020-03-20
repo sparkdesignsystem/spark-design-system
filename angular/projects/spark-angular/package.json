@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
-  "version": "9.5.0-alpha.0",
+  "version": "9.5.0-alpha.2",
   "peerDependencies": {
     "@angular/animations": ">=7.0.0 < 9.0.0",
     "@angular/common": ">=7.0.0 < 9.0.0",
