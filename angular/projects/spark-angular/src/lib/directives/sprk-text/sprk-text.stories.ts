@@ -50,7 +50,7 @@ const modules = {
 export const bodyOne = () => ({
   moduleMetadata: modules,
   template: `
-    <p sprkText variant="one">
+    <p sprkText variant="bodyOne">
       Lorem ipsum dolor sit amet, consectetur
       adipiscing elit. Sed gravida urna quis
       nulla ultrices, sed efficitur risus
@@ -77,7 +77,7 @@ bodyOne.story = {
 export const bodyTwo = () => ({
   moduleMetadata: modules,
   template: `
-    <p sprkText variant="two">
+    <p sprkText variant="bodyTwo">
       Lorem ipsum dolor sit amet, consectetur
       adipiscing elit. Sed gravida urna quis
       nulla ultrices, sed efficitur risus
@@ -104,7 +104,7 @@ bodyTwo.story = {
 export const bodyThree = () => ({
   moduleMetadata: modules,
   template: `
-    <p sprkText variant="three">
+    <p sprkText variant="bodyThree">
       Lorem ipsum dolor sit amet, consectetur
       adipiscing elit. Sed gravida urna quis
       nulla ultrices, sed efficitur risus
@@ -131,7 +131,7 @@ bodyThree.story = {
 export const bodyFour = () => ({
   moduleMetadata: modules,
   template: `
-    <p sprkText variant="four">
+    <p sprkText variant="bodyFour">
       Lorem ipsum dolor sit amet, consectetur
       adipiscing elit. Sed gravida urna quis
       nulla ultrices, sed efficitur risus
