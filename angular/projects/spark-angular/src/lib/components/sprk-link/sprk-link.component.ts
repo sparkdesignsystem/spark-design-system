@@ -4,23 +4,23 @@ import { Router } from '@angular/router';
   selector: 'sprk-link',
   template: `
     <a
-      (click)='handleClick($event)'
-      [ngClass]='getClasses()'
-      [href]='href'
+      (click)="handleClick($event)"
+      [ngClass]="getClasses()"
+      [href]="href"
       [attr.data-analytics]='analyticsString'
-      [attr.target]='target'
-      [attr.data-id]='idString'
-      [attr.disabled]='isDisabled'
-      [attr.aria-controls]='ariaControls'
-      [attr.aria-label]='ariaLabel'
-      [attr.aria-labelledby]='ariaLabelledby'
-      [attr.aria-haspopup]='ariaHasPopUp'
-      [attr.role]='role'
-      [attr.id]='id'
-      [attr.aria-current]='ariaCurrent'
-      [attr.aria-expanded]='ariaExpanded'
-      [attr.aria-hidden]='ariaHidden'
-      [attr.aria-selected]='ariaSelected'
+      [attr.target]="target"
+      [attr.data-id]="idString"
+      [attr.disabled]="isDisabled"
+      [attr.aria-controls]="ariaControls"
+      [attr.aria-label]="ariaLabel"
+      [attr.aria-labelledby]="ariaLabelledby"
+      [attr.aria-haspopup]="ariaHasPopUp"
+      [attr.role]="role"
+      [attr.id]="id"
+      [attr.aria-current]="ariaCurrent"
+      [attr.aria-expanded]="ariaExpanded"
+      [attr.aria-hidden]="ariaHidden"
+      [attr.aria-selected]="ariaSelected"
     >
       <ng-content></ng-content>
     </a>
