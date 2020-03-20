@@ -61,6 +61,7 @@ import { SprkTextModule } from './directives/sprk-text/sprk-text.module';
 import { SprkHeadingModule } from './directives/sprk-heading/sprk-heading.module';
 import { SprkLinkDirectiveModule } from './directives/sprk-link/sprk-link.module';
 import { SprkFlagModule } from './components/sprk-flag/sprk-flag.module';
+import { SprkCenteredColumnModule } from './directives/sprk-centered-column/sprk-centered-column.module';
 
 @NgModule({
   exports: [
@@ -117,6 +118,7 @@ import { SprkFlagModule } from './components/sprk-flag/sprk-flag.module';
     SprkHeadingModule,
     SprkLinkDirectiveModule,
     SprkFlagModule,
+    SprkCenteredColumnModule,
   ]
 })
 export class SparkAngularModule {}
