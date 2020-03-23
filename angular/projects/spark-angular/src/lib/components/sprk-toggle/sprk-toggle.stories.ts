@@ -1,6 +1,4 @@
-import { RouterModule } from '@angular/router';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkToggleModule } from './sprk-toggle.module';
 import { SprkToggleComponent } from './sprk-toggle.component';
@@ -25,10 +23,8 @@ export default {
 const modules = {
   imports: [
     SprkToggleModule,
-    RouterModule.forRoot([{ path: 'iframe.html', component: SprkToggleComponent }]),
     BrowserAnimationsModule,
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({
@@ -57,4 +53,9 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-toggle.component',
+    ],
+  },
 };

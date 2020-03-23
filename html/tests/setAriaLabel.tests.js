@@ -1,8 +1,5 @@
-/* global document describe before it */
-import { expect } from 'chai';
-import {
-  setAriaLabel,
-} from '../components/pagination';
+/* global document describe beforeEach it */
+import { setAriaLabel } from '../components/pagination';
 
 describe('Pagination tests', () => {
   let navContainer;
@@ -14,7 +11,7 @@ describe('Pagination tests', () => {
   let longListItem;
   let longPagLink;
 
-  before(() => {
+  beforeEach(() => {
     navContainer = document.createElement('nav');
     uListContainer = document.createElement('ul');
     listItem = document.createElement('li');
@@ -45,7 +42,7 @@ describe('Pagination tests', () => {
     setAriaLabel(pagLink);
     const pagNum = pagLink.textContent;
     const pagLabel = `Page ${pagNum}`;
-    expect(pagLink.getAttribute('aria-label')).eql(pagLabel);
+    expect(pagLink.getAttribute('aria-label')).toEqual(pagLabel);
   });
 
   it('should add/set the aria label to match the link text in the long'
@@ -53,6 +50,6 @@ describe('Pagination tests', () => {
     setAriaLabel(longPagLink);
     const longPagNum = longPagLink.textContent;
     const longPagLabel = `Page ${longPagNum}`;
-    expect(longPagLink.getAttribute('aria-label')).eql(longPagLabel);
+    expect(longPagLink.getAttribute('aria-label')).toEqual(longPagLabel);
   });
 });

@@ -22,6 +22,8 @@ Before you begin, make sure you <a href="https://www.npmjs.com/get-npm" target="
 (`npm`). This is a tool that makes it easy to share and reuse
 JavaScript code and to update the JavaScript code you’re sharing.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vo4BIUoYX28" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Create the Folder Structure
 
 1. First you’ll need to make a new directory for your project, open it
@@ -49,7 +51,7 @@ it:
 ``` javascript
 function component() {
   const element = document.createElement('div');
-  element.innerHTML = 'Hello, Spark!';
+  element.innerHTML = 'Hello, Spark! Javascript is working!';
   return element;
 }
 
@@ -185,18 +187,7 @@ module.exports = {
 };
 ```
 
-13. At the top of `index.js`, add this reference to the uncompiled `scss`
-file:
-
-``` javascript
-import "../src/style.scss"
-```
-
-Now when Webpack compiles `index.js`, this import line will include
-your style file. It will be processed according to the rules
-we set up in the webpack config in the previous step.
-
-14. Now let’s write some CSS to compile. Create a new file in `src`
+13. Now let’s write some CSS to compile. Create a new file in `src`
 called `style.scss` and copy this CSS into it:
 
 ``` css
@@ -205,7 +196,18 @@ body {
 }
 ```
 
-15. In `index.html`, add this reference to your new compiled CSS:
+14. At the top of `index.js`, add this reference to the uncompiled `scss`
+file:
+
+``` javascript
+import "./style.scss"
+```
+
+Now when Webpack compiles `index.js`, this import line will include
+your style file. It will be processed according to the rules
+we set up in the webpack config in the previous step.
+
+15. Add this reference to your new compiled CSS in the `<head>` element of `index.html`:
 
 ``` html
 <link rel="stylesheet" href="bundle.css"></link>

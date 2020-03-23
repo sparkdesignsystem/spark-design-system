@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
+import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkFooterComponent } from './sprk-footer.component';
 import { SprkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
 
@@ -12,12 +11,11 @@ describe('SprkFooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
       declarations: [
         SprkIconComponent,
         SprkToggleComponent,
         SprkFooterComponent,
-        SprkLinkComponent
+        SprkLinkDirective
       ]
     }).compileComponents();
   }));

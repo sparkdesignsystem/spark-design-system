@@ -59,6 +59,9 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['sprk-modal.component'],
+  }
 };
 
 export const info = () => ({
@@ -81,6 +84,12 @@ export const info = () => ({
   },
 });
 
+info.story = {
+  parameters: {
+    jest: ['sprk-modal.component'],
+  }
+};
+
 export const wait = () => ({
   moduleMetadata: modules,
   template: `
@@ -90,11 +99,20 @@ export const wait = () => ({
       modalType="wait"
       idString="modal-wait-1"
     >
-      This type of modal can't be closed by the
-      user.
+      <p class="sprk-c-Modal__content">
+        Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
     </sprk-modal>
   `,
   props: {
     waitVisible: true,
   },
 });
+
+wait.story = {
+  parameters: {
+    jest: ['sprk-modal.component'],
+  }
+};

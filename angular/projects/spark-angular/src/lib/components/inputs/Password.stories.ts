@@ -89,6 +89,15 @@ export const passwordInput = () => ({
 
 passwordInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-input.directive',
+      'sprk-selection-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const invalidPasswordInput = () => ({
@@ -126,6 +135,16 @@ export const invalidPasswordInput = () => ({
 
 invalidPasswordInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-input.directive',
+      'sprk-selection-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
 };
 
 export const disabledPasswordInput = () => ({
@@ -151,4 +170,13 @@ export const disabledPasswordInput = () => ({
 
 disabledPasswordInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-input.directive',
+      'sprk-selection-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };

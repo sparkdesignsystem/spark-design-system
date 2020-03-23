@@ -1,8 +1,6 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkHighlightBoardModule } from './sprk-highlight-board.module';
 import { SprkHighlightBoardComponent } from './sprk-highlight-board.component';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -31,12 +29,7 @@ then they should be \`<button>\` elements with \`aria-role=button\`.
 const modules = {
   imports: [
     SprkHighlightBoardModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkHighlightBoardComponent,
-    }]),
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({
@@ -57,7 +50,10 @@ export const defaultStory = () => ({
 });
 
 defaultStory.story = {
-  name: 'Default'
+  name: 'Default',
+  parameters: {
+    jest: ['sprk-highlight-board.component'],
+  }
 };
 
 export const noImage = () => ({
@@ -77,6 +73,7 @@ export const noImage = () => ({
 noImage.story = {
   parameters: {
     docs: { iframeHeight: 300 },
+    jest: ['sprk-highlight-board.component'],
   }
 };
 
@@ -98,6 +95,7 @@ export const stacked = () => ({
 stacked.story = {
   parameters: {
     docs: { iframeHeight: 800 },
+    jest: ['sprk-highlight-board.component'],
   }
-}
+};
 

@@ -1,12 +1,11 @@
-/* global document describe before it */
-import { expect } from 'chai';
+/* global document describe beforeEach it */
 import getArrowClass from '../utilities/getArrowClass';
 
 describe('datepicker getArrowClass tests', () => {
   let inputContainer;
   let input;
 
-  before(() => {
+  beforeEach(() => {
     inputContainer = document.createElement('div');
     const errorContainer = document.createElement('span');
     errorContainer.classList.add('sprk-b-ErrorText');
@@ -19,7 +18,7 @@ describe('datepicker getArrowClass tests', () => {
     const rect = inputContainer.getBoundingClientRect();
     const scrollTop = 0;
     const innerHeight = 500;
-    expect(getArrowClass(rect, scrollTop, innerHeight)).eql('dp-below-top');
+    expect(getArrowClass(rect, scrollTop, innerHeight)).toBe('dp-below-top');
   });
 
   it('should return dp-above-top when there is no room at the bottom', () => {
@@ -27,6 +26,6 @@ describe('datepicker getArrowClass tests', () => {
     rect.height = 100;
     const scrollTop = 400;
     const innerHeight = 300;
-    expect(getArrowClass(rect, scrollTop, innerHeight)).eql('dp-above-top');
+    expect(getArrowClass(rect, scrollTop, innerHeight)).toBe('dp-above-top');
   });
 });

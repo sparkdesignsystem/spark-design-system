@@ -74,7 +74,7 @@ export const searchInput = () => ({
       <input
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon"
-        type="text"
+        type="search"
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
@@ -87,6 +87,13 @@ export const searchInput = () => ({
 
 searchInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const invalidSearchInput = () => ({
@@ -107,7 +114,7 @@ export const invalidSearchInput = () => ({
       <input
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
-        type="text"
+        type="search"
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
@@ -128,6 +135,14 @@ export const invalidSearchInput = () => ({
 
 invalidSearchInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
 };
 
 export const disabledSearchInput = () => ({
@@ -148,7 +163,7 @@ export const disabledSearchInput = () => ({
       <input
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon"
-        type="text"
+        type="search"
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
@@ -162,6 +177,13 @@ export const disabledSearchInput = () => ({
 
 disabledSearchInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 

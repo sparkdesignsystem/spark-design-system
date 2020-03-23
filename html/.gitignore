@@ -1,4 +1,5 @@
 dist/
 es5/
 storybook-static/
-.nyc_output/
+coverage/
+.jest-test-results.json

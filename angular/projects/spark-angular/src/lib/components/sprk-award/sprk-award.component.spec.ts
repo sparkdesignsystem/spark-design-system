@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
+import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkAwardComponent } from './sprk-award.component';
 import { SprkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
@@ -9,17 +8,17 @@ import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-st
 
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 
-describe('SparkAwardComponent', () => {
+describe('SprkAwardComponent', () => {
   let component: SprkAwardComponent;
   let fixture: ComponentFixture<SprkAwardComponent>;
   let element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, BrowserAnimationsModule],
+      imports: [BrowserAnimationsModule],
       declarations: [
         SprkAwardComponent,
-        SprkLinkComponent,
+        SprkLinkDirective,
         SprkToggleComponent,
         SprkStackComponent,
         SprkStackItemDirective,
@@ -67,6 +66,30 @@ describe('SparkAwardComponent', () => {
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
       'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack--split@s'
+    );
+  });
+
+  it('should add the additionalClasses to imgOne', () => {
+    component.additionalClassesImgOne = 'test-img-one';
+    fixture.detectChanges();
+    expect(element.querySelector('img').classList.toString()).toEqual(
+      component.getClassesImgOne()
+    );
+  });
+
+  it('should add the additionalClasses to imgTwo', () => {
+    component.additionalClassesImgTwo = 'test-img-two';
+    fixture.detectChanges();
+    expect(element.querySelectorAll('img')[1].classList.toString()).toEqual(
+      component.getClassesImgTwo()
+    );
+  });
+
+  it('should add the correct class to images if splitAt is set', () => {
+    component.splitAt = 'small';
+    fixture.detectChanges();
+    expect(component.getImgContainerClasses()).toEqual(
+      'sprk-o-Stack__item sprk-o-Stack__item--flex@s'
     );
   });
 

@@ -1,5 +1,4 @@
 /* global document describe beforeEach it */
-import { expect } from 'chai';
 import setValidSelect from '../utilities/validation/setValidSelect';
 
 describe('setValidSelect tests', () => {
@@ -31,11 +30,11 @@ describe('setValidSelect tests', () => {
   it('should empty the error container', () => {
     inputContainer.appendChild(errorContainer);
     setValidSelect(inputContainer);
-    expect(errorContainer.textContent).eql('');
+    expect(errorContainer.textContent).toBe('');
   });
 
   it('should not error if there is no error container', () => {
     setValidSelect(inputContainer);
-    expect(select.getAttribute('aria-invalid')).eql('false');
+    expect(select.getAttribute('aria-invalid')).toBe('false');
   });
 });

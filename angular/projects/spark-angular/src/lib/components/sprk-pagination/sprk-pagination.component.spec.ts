@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
+import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import {
   SprkUnorderedListComponent
 } from '../sprk-unordered-list/sprk-unordered-list.component';
@@ -17,12 +16,11 @@ describe('SprkPaginationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
       declarations: [
         SprkPaginationComponent,
         SprkUnorderedListComponent,
         SprkIconComponent,
-        SprkLinkComponent,
+        SprkLinkDirective,
         SprkListItemComponent
       ]
     }).compileComponents();
@@ -184,7 +182,7 @@ describe('SprkPaginationComponent', () => {
     );
     // expect 1 selected page with text 1
     expect(
-      element.querySelector('.sprk-c-Pagination__link--current').innerText
+      element.querySelector('.sprk-c-Pagination__link--current').textContent.trim()
     ).toEqual('1');
   });
 
@@ -223,12 +221,13 @@ describe('SprkPaginationComponent', () => {
     ).toEqual(3); // 3 pages
     expect(
       Array.from(element.querySelectorAll('a')).filter(
-        x => (x as HTMLElement).innerText === '...'
+        (x: HTMLLIElement) => x.textContent === '...'
       ).length
     ).toEqual(0); // 0 chevrons
   });
 
   it('renders ellipses with more than 3 pages', () => {
+    const str = '...';
     // < 1 ... 3 ... 5 >
     component.totalItems = 50;
     component.itemsPerPage = 10;
@@ -243,16 +242,17 @@ describe('SprkPaginationComponent', () => {
     ).toEqual(3); // 3 pages
     expect(
       Array.from(element.querySelectorAll('li')).filter(
-        x => (x as HTMLElement).innerText === '...'
+        (x: HTMLLIElement) => x.textContent.trim() === str
       ).length
     ).toEqual(2); // 2 ellipses
 
     // < 1 ... 4 5 >
     component.currentPage = 4;
+
     fixture.detectChanges();
     expect(
       Array.from(element.querySelectorAll('li')).filter(
-        x => (x as HTMLElement).innerText === '...'
+        (x: HTMLLIElement) => x.textContent.trim() === str
       ).length
     ).toEqual(1); // 1 ellipsis
   });
@@ -285,6 +285,7 @@ describe('SprkPaginationComponent', () => {
     component.currentPage = 3;
     fixture.detectChanges();
 
+    const str = '...';
     expect(
       element.querySelectorAll('a.sprk-c-Pagination__icon').length
     ).toEqual(2); // 2 chevrons
@@ -293,7 +294,7 @@ describe('SprkPaginationComponent', () => {
     ).toEqual(3); // 3 pages
     expect(
       Array.from(element.querySelectorAll('li')).filter(
-        x => (x as HTMLElement).innerText === '...'
+        (x: HTMLLIElement) => x.textContent.trim() === str
       ).length
     ).toEqual(2); // 2 ellipses
 
@@ -302,12 +303,13 @@ describe('SprkPaginationComponent', () => {
     fixture.detectChanges();
     expect(
       Array.from(element.querySelectorAll('li')).filter(
-        x => (x as HTMLElement).innerText === '...'
+        (x: HTMLLIElement) => x.textContent.trim() === str
       ).length
     ).toEqual(1); // 1 ellipsis
   });
 
   it('renders three numbered pages and no ellipses with 3 or fewer pages in long variant', () => {
+    const str = '...';
     // < 1 2 3 >
     component.paginationType = 'long';
     component.totalItems = 30;
@@ -322,7 +324,7 @@ describe('SprkPaginationComponent', () => {
     ).toEqual(3); // 3 pages
     expect(
       Array.from(element.querySelectorAll('a')).filter(
-        x => (x as HTMLElement).innerText === '...'
+        (x: HTMLLIElement) => x.textContent.trim() === str
       ).length
     ).toEqual(0); // 0 chevrons
   });

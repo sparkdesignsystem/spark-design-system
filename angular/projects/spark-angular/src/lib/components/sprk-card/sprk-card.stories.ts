@@ -1,8 +1,6 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkCardModule } from './sprk-card.module';
 import { SprkCardComponent } from './sprk-card.component';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -28,12 +26,7 @@ const modules = {
     SprkCardModule,
     SprkStackModule,
     SprkStackItemModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkCardComponent,
-    }]),
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({
@@ -58,6 +51,7 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     docs: { iframeHeight: 150 },
+    jest: ['sprk-card.component'],
   },
 };
 
@@ -77,6 +71,12 @@ export const standout = () => ({
     </sprk-card>
   `
 });
+
+standout.story = {
+  parameters: {
+    jest: ['sprk-card.component'],
+  },
+};
 
 export const highlightedHeader = () => ({
   moduleMetadata: modules,
@@ -124,6 +124,7 @@ highlightedHeader.story = {
   name: 'Highlighted Header',
   parameters: {
     docs: { iframeHeight: 300 },
+    jest: ['sprk-card.component'],
   },
 };
 
@@ -153,6 +154,7 @@ teaser.story = {
   name: 'Teaser',
   parameters: {
     docs: { iframeHeight: 500 },
+    jest: ['sprk-card.component'],
   },
 };
 
@@ -210,6 +212,7 @@ twoUpCards.story = {
   name: 'Card Layout - Two Up',
   parameters: {
     docs: { iframeHeight: 600 },
+    jest: ['sprk-card.component'],
   },
 };
 
@@ -286,6 +289,7 @@ threeUpCards.story = {
   name: 'Card Layout - Three Up',
   parameters: {
     docs: { iframeHeight: 600 },
+    jest: ['sprk-card.component'],
   },
 };
 
@@ -381,5 +385,6 @@ fourUpCards.story = {
   name: 'Card Layout - Four Up',
   parameters: {
     docs: { iframeHeight: 600 },
+    jest: ['sprk-card.component'],
   },
 };

@@ -97,4 +97,11 @@ export const defaultStory = () => ({
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-tabbed-navigation.component',
+      'sprk-tabbed-navigation-panel.directive',
+      'sprk-tabbed-navigation-tab.directive',
+    ],
+  },
 };

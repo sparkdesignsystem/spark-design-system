@@ -12,6 +12,13 @@ import { SprkFormatterMonetaryDirective } from './sprk-formatter-monetary.direct
       placeholder="Enter some input."
       sprkFormatterMonetary
     />
+    <input
+      type="text"
+      class="test2"
+      pattern="^[+-]?[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$"
+      sprkFormatterMonetary
+      sprkInput
+    />
   `
 })
 class TestComponent {}
@@ -20,6 +27,7 @@ describe('SprkFormatterMonetaryDirective', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let inputElement: DebugElement;
+  let input2Element: DebugElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -31,6 +39,7 @@ describe('SprkFormatterMonetaryDirective', () => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     inputElement = fixture.debugElement.query(By.css('input'));
+    input2Element = fixture.debugElement.query(By.css('input.test2'));
   });
 
   it('should set 0.00 if there is no value', () => {
@@ -66,5 +75,13 @@ describe('SprkFormatterMonetaryDirective', () => {
     inputElement.nativeElement.dispatchEvent(new Event('blur'));
     fixture.detectChanges();
     expect(inputElement.nativeElement.value).toEqual('123,123.22');
+  });
+
+  it('if input is invalid, it should not format', () => {
+    const testValue = '123,123.21dd';
+    input2Element.nativeElement.value = testValue;
+    input2Element.nativeElement.dispatchEvent(new Event('blur'));
+    fixture.detectChanges();
+    expect(input2Element.nativeElement.value).toEqual(testValue);
   });
 });

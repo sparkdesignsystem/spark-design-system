@@ -9,6 +9,8 @@ export { default as SprkDivider }
   from './components/dividers/SprkDivider';
 export { default as SprkDropdown }
   from './components/dropdown/SprkDropdown';
+export { default as SprkFlag }
+  from './components/flag/SprkFlag';
 export { default as SprkHighlightBoard }
   from './components/highlight-board/SprkHighlightBoard';
 export { default as SprkIcon }
@@ -56,8 +58,16 @@ export { default as SprkAward }
 export { default as SprkCard }
   from './components/card/SprkCard';
 export { default as SprkModal }
-  from './components/modals/SprkModal';  
+  from './components/modals/SprkModal';
 export { default as SprkStepper }
   from './components/stepper/SprkStepper';
-export { default as SprkStepperStep } 
+export { default as SprkStepperStep }
   from './components/stepper/components/SprkStepperStep/SprkStepperStep';
+export { default as SprkBox }
+  from './objects/box/SprkBox';
+export { default as SprkText }
+  from './base/typography/SprkText/SprkText';
+export { default as SprkHeading }
+  from './base/typography/SprkHeading/SprkHeading';
+export { default as SprkCenteredColumn }
+  from './objects/centered-column/SprkCenteredColumn';

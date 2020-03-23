@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { SprkLinkModule } from '../sprk-link/sprk-link.module';
+import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkCardComponent } from './sprk-card.component';
 
@@ -11,7 +10,7 @@ describe('SparkCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, SprkLinkModule, SprkIconModule],
+      imports: [SprkLinkDirectiveModule, SprkIconModule],
       declarations: [SprkCardComponent]
     }).compileComponents();
   }));
@@ -67,13 +66,36 @@ describe('SparkCardComponent', () => {
   });
 
   it('should add the correct classes if cardType has no value, but additionalClasses does', () => {
-    component.cardType = '';
     component.body = 'Some body copy.';
     component.title = 'Title!';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClassesCard()).toEqual(
       'sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man'
+    );
+  });
+
+  it('should add the correct classes if ctaIcon is set and ctaType is set to link', () => {
+    component.cardType = 'teaser';
+    component.body = 'Some body copy.';
+    component.title = 'Title!';
+    component.ctaIcon = 'bell';
+    component.ctaType = 'link';
+    fixture.detectChanges();
+    expect(component.getClassesCta()).toEqual(
+      'sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon'
+    );
+  });
+
+  it('should not add the ctaIcon classes if the ctaType is button', () => {
+    component.cardType = 'teaser';
+    component.body = 'Some body copy.';
+    component.title = 'Title!';
+    component.ctaIcon = 'bell';
+    component.ctaType = 'button';
+    fixture.detectChanges();
+    expect(component.getClassesCta()).toEqual(
+      'sprk-c-Button'
     );
   });
 

@@ -1,23 +1,15 @@
-/* global document describe beforeEach afterEach it  window  */
-import { expect } from 'chai';
-import sinon from 'sinon';
+/* global document describe beforeEach afterEach it window */
 import
-  createElementFromString
+createElementFromString
   from '../tests/_createElementFromString';
-import { carousel as regCarousel } from '../components/carousel';
-
-const proxyquire = require('proxyquire');
-
-const lorySpy = sinon.spy();
-
-const { carousel, beforeLoryInit, afterLoryInit, afterLorySlide } = proxyquire(
-  '../components/carousel',
-  {
-    'lory.js': {
-      lory: lorySpy,
-    },
-  },
-);
+import {
+  carousel as regCarousel
+} from '../components/carousel';
+import {
+  beforeLoryInit,
+  afterLoryInit,
+  afterLorySlide,
+} from '../components/carousel';
 
 describe('Carousel tests', () => {
   let carouselContainer;
@@ -76,11 +68,6 @@ describe('Carousel tests', () => {
     document.body.innerHTML = '';
   });
 
-  it('should call lory on the element passed in', () => {
-    carousel(carouselContainer);
-    expect(lorySpy.calledOnce).eql(true);
-  });
-
   it('should emit sprk.carousel.slide event after sliding', () => {
     const carouselInstance = regCarousel(carouselContainer);
     let caughtEvent = false;
@@ -88,7 +75,7 @@ describe('Carousel tests', () => {
       caughtEvent = true;
     });
     carouselInstance.slideTo(2);
-    expect(caughtEvent).eql(true);
+    expect(caughtEvent).toBe(true);
   });
 
   it('clicking a dot should end up with a call to slideTo()', () => {
@@ -96,24 +83,24 @@ describe('Carousel tests', () => {
     const dot = document.createElement('div');
     dotContainer.appendChild(dot);
     const instance = {
-      slideTo: () => {},
+      slideTo: () => { },
     };
     const instanceSpy = sinon.spy(instance, 'slideTo');
 
     afterLoryInit(dotContainer, instance);
     dot.click();
-    expect(instanceSpy.calledOnce).eql(true);
+    expect(instanceSpy.calledOnce).toBe(true);
   });
 
   it('beforeLoryInit shouldnt error if dotContainer is null', () => {
-    expect(beforeLoryInit(null, 4)).eql();
+    expect(beforeLoryInit(null, 4)).toBe();
   });
 
   it('afterLoryInit shouldnt error if dotContainer is null', () => {
-    expect(afterLoryInit(null, {})).eql();
+    expect(afterLoryInit(null, {})).toBe();
   });
 
   it('afterLorySlide shouldnt error if dotContainer is null', () => {
-    expect(afterLorySlide(null, {}, {})).eql();
+    expect(afterLorySlide(null, {}, {})).toBe();
   });
 });

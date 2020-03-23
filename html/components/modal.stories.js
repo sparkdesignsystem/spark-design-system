@@ -103,6 +103,9 @@ export const defaultStory = () => {
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['modals'],
+  }
 };
 
 export const info = () => {
@@ -163,6 +166,12 @@ export const info = () => {
   `;
 };
 
+info.story = {
+  parameters: {
+    jest: ['modals'],
+  }
+};
+
 export const wait = () => {
   useEffect(() => {
     modals();
@@ -199,8 +208,8 @@ export const wait = () => {
               sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"
           ></div>
           <p
-            class="sprk-o-Stack__item sprk-b-TypeBodyTwo" i
-            d="modalWaitContent">
+            class="sprk-o-Stack__item sprk-b-TypeBodyTwo sprk-c-Modal__content"
+            id="modalWaitContent">
             Lorem ipsum dolor sit amet,
             consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
@@ -215,4 +224,10 @@ export const wait = () => {
       tabindex="-1"
     ></div>
   `;
+};
+
+wait.story = {
+  parameters: {
+    jest: ['modals'],
+  }
 };

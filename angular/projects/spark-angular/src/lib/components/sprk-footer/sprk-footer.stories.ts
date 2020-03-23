@@ -1,7 +1,5 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkFooterModule } from './sprk-footer.module';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -30,13 +28,8 @@ must be present.
 const modules = {
   imports: [
     SprkFooterModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkFooterComponent,
-    }]),
     BrowserAnimationsModule,
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({
@@ -266,5 +259,8 @@ export const defaultStory = () => ({
 });
 
 defaultStory.story = {
-  name: 'Default'
+  name: 'Default',
+  parameters: {
+    jest: ['sprk-footer.component'],
+  }
 };

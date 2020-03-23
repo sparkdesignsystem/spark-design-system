@@ -74,6 +74,9 @@ export const defaultStory = () => {
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['dropdown'],
+  }
 };
 
 export const informational = () => {
@@ -166,4 +169,7 @@ export const informational = () => {
 
 informational.story = {
   name: 'Informational',
+  parameters: {
+    jest: ['dropdown'],
+  }
 };

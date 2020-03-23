@@ -20,6 +20,8 @@ This guide is Part 2 in a 3-Part series. You can also check out
 For instructions on setting up Spark in other environments, check out the
 guides for [Angular](/installing-spark/angular) and [React](/installing-spark/react) development environments.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u9Cz3IJWJe4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Install the Spark Package
 
 1. First, use `npm` to install the Spark package. This will download the
@@ -32,8 +34,7 @@ npm install --save-dev @sparkdesignsystem/spark
 2. This will download all the JavaScript and CSS needed to render the Spark
 components into your `node_modules` folder. To access
 them in your compiled website, import them in your script. Webpack will
-include them in your bundled site JavaScript.
-
+include them in your bundled site JavaScript. Copy this import code into your `index.js` file:
 ``` javascript
 // import the Spark JavaScript
 import spark from "@sparkdesignsystem/spark/es5/spark";
@@ -80,14 +81,18 @@ here:
 
 ## Configure Spark
 
-3. Finally, in `index.html`, find the `body` element and add the 
+3. Finally, in `index.html`, find or create the container of your main content and add the 
 `data-sprk-main` attribute. This attribute is required for some
 Spark components to correctly handle focus changes.
 
+### Notes:
+- Do not put `data-sprk-main` on the `<body>` tag.
+- The main content container cannot contain the Spark Masthead component.
+
 ``` html
-<body data-sprk-main>
-  ...
-</body>
+<div data-sprk-main>
+  // Main Content
+</div>
 ```
 
 ## You did it!

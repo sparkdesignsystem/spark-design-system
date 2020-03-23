@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
+import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
 
 describe('SprkDropdownComponent', () => {
@@ -13,11 +12,10 @@ describe('SprkDropdownComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
       declarations: [
         SprkDropdownComponent,
         SprkIconComponent,
-        SprkLinkComponent
+        SprkLinkDirective
       ]
     }).compileComponents();
   }));
@@ -160,7 +158,7 @@ describe('SprkDropdownComponent', () => {
     component.triggerText = 'test';
     component.screenReaderText = '';
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('sprk-link').getAttribute('aria-label')).toEqual(
+    expect(fixture.nativeElement.querySelector('a').getAttribute('aria-label')).toEqual(
       'test'
     );
   });
@@ -169,14 +167,14 @@ describe('SprkDropdownComponent', () => {
     component.triggerText = '';
     component.screenReaderText = 'test';
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('sprk-link').getAttribute('aria-label')).toEqual(
+    expect(fixture.nativeElement.querySelector('a').getAttribute('aria-label')).toEqual(
       'test'
     );
   });
 
   it('should apply a default aria-label when none is provided', () => {
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('sprk-link').getAttribute('aria-label')).toEqual(
+    expect(fixture.nativeElement.querySelector('a').getAttribute('aria-label')).toEqual(
       'Choose One'
     );
   });

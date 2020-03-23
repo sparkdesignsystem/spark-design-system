@@ -1,4 +1,5 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Attribute } from '@angular/core';
+import { Validators } from '@angular/forms';
 
 @Directive({
   selector: '[sprkFormatterMonetary]'
@@ -6,22 +7,24 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 export class SprkFormatterMonetaryDirective {
   constructor(public ref: ElementRef) {}
 
-  @HostListener('blur', ['$event.target.value'])
-  onFocus(value) {
+  @HostListener('blur', ['this.ref.nativeElement.value'])
+  onBlur(value) {
     this.ref.nativeElement.value = this.formatMonetary(value);
-    this.ref.nativeElement.classList.add('sprk-b-TextInput--has-value');
   }
 
   formatMonetary(value): void {
-    const m = value.match(/(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$/);
     let number;
-    if (m) {
+    if (this.ref.nativeElement.validity.valid) {
       number = Number(value.replace(/[\$,]/g, ''));
+
+      if (isNaN(number)) {
+        return value;
+      }
+
       return number
         .toLocaleString('en-US', { style: 'currency', currency: 'USD' })
         .replace(/\$/g, '');
     }
-
     return value;
   }
 }

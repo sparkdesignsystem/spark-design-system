@@ -1,5 +1,4 @@
 /* global document describe it */
-import { expect } from 'chai';
 import getElements from '../utilities/getElements';
 
 describe('getElements tests', () => {
@@ -10,7 +9,7 @@ describe('getElements tests', () => {
     getElements('.foo', () => {
       count += 1;
     });
-    expect(count).eql(1);
+    expect(count).toBe(1);
   });
   it('should not call the given function if no elements are found', () => {
     document.body.innerHTML = '<!DOCTYPE html><html><body>'
@@ -19,6 +18,6 @@ describe('getElements tests', () => {
     getElements('.bar', () => {
       count += 1;
     });
-    expect(count).eql(0);
+    expect(count).toBe(0);
   });
 });

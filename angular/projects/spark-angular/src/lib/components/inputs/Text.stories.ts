@@ -70,6 +70,13 @@ export const textInput = () => ({
 
 textInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const invalidTextInput = () => ({
@@ -99,6 +106,14 @@ export const invalidTextInput = () => ({
 
 invalidTextInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
 };
 
 export const disabledTextInput = () => ({
@@ -120,4 +135,11 @@ export const disabledTextInput = () => ({
 
 disabledTextInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };

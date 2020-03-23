@@ -56,20 +56,28 @@ export const primary = () => ({
   moduleMetadata: modules,
   template: `
     <button
-      data-id="button-primary"
+      idString="button-primary"
       sprkButton
     >
       Button
     </button>
   `,
 });
+
+primary.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
 
 export const secondary = () => ({
   moduleMetadata: modules,
   template: `
     <button
-      class="sprk-c-Button--secondary"
-      data-id="button-secondary"
+      variant="secondary"
+      idString="button-secondary"
       sprkButton
     >
       Button
@@ -77,25 +85,41 @@ export const secondary = () => ({
   `,
 });
 
+secondary.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
+
 export const tertiary = () => ({
   moduleMetadata: modules,
   template: `
     <button
-      class="sprk-c-Button--tertiary"
-      data-id="button-tertiary"
+      variant="tertiary"
+      idString="button-tertiary"
       sprkButton
     >
       Button
     </button>
   `,
 });
+
+tertiary.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
 
 export const disabled = () => ({
   moduleMetadata: modules,
   template: `
     <button
       disabled
-      data-id="button-disabled"
+      idString="button-disabled"
       sprkButton
     >
       Button
@@ -103,12 +127,21 @@ export const disabled = () => ({
   `,
 });
 
+disabled.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
+
 export const loading = () => {
   return {
     moduleMetadata: modules,
     template: `
       <button
-        data-id="button-loading"
+        idString="button-loading"
+        analyticsString="loading"
         sprkButton
         [isSpinning]="true"
       >
@@ -118,13 +151,45 @@ export const loading = () => {
   };
 };
 
+loading.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
+
+export const loadingSecondary = () => {
+  return {
+    moduleMetadata: modules,
+    template: `
+      <button
+        variant="secondary"
+        idString="button-loading-secondary"
+        sprkButton
+        [isSpinning]="true"
+      >
+        Button
+      </button>
+    `,
+  };
+};
+
+loadingSecondary.story = {
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
+};
+
 export const fullWidthAtSmallViewport = () => {
   return {
     moduleMetadata: modules,
     template: `
       <button
         class="sprk-c-Button--full@s"
-        data-id="button-full-width-at-small"
+        idString="button-full-width-at-small"
         sprkButton
       >
         Button
@@ -135,6 +200,11 @@ export const fullWidthAtSmallViewport = () => {
 
 fullWidthAtSmallViewport.story = {
   name: 'Full Width at Small Viewport',
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
 };
 
 export const fullWidthAtExtraSmallViewport = () => {
@@ -143,7 +213,7 @@ export const fullWidthAtExtraSmallViewport = () => {
     template: `
       <button
         class="sprk-c-Button--full@xs"
-        data-id="button-full-width-at-extra-small"
+        idString="button-full-width-at-extra-small"
         sprkButton
       >
         Button
@@ -154,4 +224,9 @@ export const fullWidthAtExtraSmallViewport = () => {
 
 fullWidthAtExtraSmallViewport.story = {
   name: 'Full Width at Extra Small Viewport',
+  parameters: {
+    jest: [
+      'sprk-button.directive',
+    ],
+  },
 };

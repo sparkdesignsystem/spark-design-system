@@ -52,15 +52,21 @@ const connectIcons = {
   heading: 'Connect With Us',
   icons: [
     {
+      href: 'https://www.youtube.com/channel/UCDWybvtWDN2L9uO4GlQJL7A',
+      name: 'youtube',
+      screenReaderText: 'Spark Youtube Channel',
+      element: 'a',
+    },
+    {
       href: 'https://twitter.com/sparkQL',
       name: 'twitter',
-      screenReaderText: 'Twitter',
+      screenReaderText: 'Spark Twitter',
       element: 'a',
     },
     {
       href: 'mailto:sparkdesignsystem@quickenloans.com',
       name: 'email',
-      screenReaderText: 'Email',
+      screenReaderText: 'Spark Email',
       element: 'a',
     },
   ],

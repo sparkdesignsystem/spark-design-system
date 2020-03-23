@@ -1,6 +1,4 @@
 /* global window document describe it beforeEach afterEach */
-import sinon from 'sinon';
-import { expect } from 'chai';
 import { dateInput, formatDate, bindUIEvents } from '../base/inputs/dateInput';
 
 describe('dateInput init', () => {
@@ -12,7 +10,7 @@ describe('dateInput init', () => {
     sinon.spy(document, 'querySelectorAll');
     dateInput();
     expect(document.querySelectorAll
-      .getCall(0).args[0]).eql('[data-sprk-input="date"]');
+      .getCall(0).args[0]).toBe('[data-sprk-input="date"]');
   });
 });
 
@@ -44,43 +42,43 @@ describe('dateInput UI Events tests', () => {
   });
 
   it('should bind the input event', () => {
-    expect(input.addEventListener.getCall(0).args[0]).eql('input');
+    expect(input.addEventListener.getCall(0).args[0]).toBe('input');
   });
 
   it('should format when input is triggered', () => {
     input.value = '12252019';
     event = new window.Event('input');
     input.dispatchEvent(event);
-    expect(input.getAttribute('aria-invalid')).eql('false');
-    expect(input.value).eql('12/25/2019');
+    expect(input.getAttribute('aria-invalid')).toBe('false');
+    expect(input.value).toBe('12/25/2019');
   });
 
   it('should not format when input is triggered with invalid data', () => {
     input.value = 'asdf';
     event = new window.Event('input');
     input.dispatchEvent(event);
-    expect(input.getAttribute('aria-invalid')).eql('true');
-    expect(input.value).eql('asdf');
+    expect(input.getAttribute('aria-invalid')).toBe('true');
+    expect(input.value).toBe('asdf');
   });
 
   it('should bind the blur event', () => {
-    expect(input.addEventListener.getCall(1).args[0]).eql('blur');
+    expect(input.addEventListener.getCall(1).args[0]).toBe('blur');
   });
 
   it('should format when blur is triggered with valid data', () => {
     input.value = '12252019';
     event = new window.Event('blur');
     input.dispatchEvent(event);
-    expect(input.getAttribute('aria-invalid')).eql('false');
-    expect(input.value).eql('12/25/2019');
+    expect(input.getAttribute('aria-invalid')).toBe('false');
+    expect(input.value).toBe('12/25/2019');
   });
 
   it('should not format when blur is triggered with invalid data', () => {
     input.value = 'asdf';
     event = new window.Event('blur');
     input.dispatchEvent(event);
-    expect(input.getAttribute('aria-invalid')).eql('true');
-    expect(input.value).eql('asdf');
+    expect(input.getAttribute('aria-invalid')).toBe('true');
+    expect(input.value).toBe('asdf');
   });
 });
 
@@ -88,6 +86,6 @@ describe('formatDate tests', () => {
   it('should format the date in the XX/XX/XXXX style', () => {
     const div = document.createElement('input');
     div.value = '12345678';
-    expect(formatDate(div.value)).eql('12/34/5678');
+    expect(formatDate(div.value)).toBe('12/34/5678');
   });
 });

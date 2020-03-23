@@ -1,8 +1,4 @@
 /* global window document beforeEach describe it afterEach */
-import sinon from 'sinon';
-import { expect } from 'chai';
-
-const proxyquire = require('proxyquire');
 
 describe('datePicker tests', () => {
   let dp;
@@ -19,11 +15,11 @@ describe('datePicker tests', () => {
     return stub;
   };
 
-  const tdpSpy = sinon.spy(tinyDatePickerStub);
+  const mockTDPSpy = sinon.spy(tinyDatePickerStub);
 
-  const { datePicker } = proxyquire('../base/inputs/datePicker', {
-    'tiny-date-picker': tdpSpy,
-  });
+  jest.mock('tiny-date-picker', () => mockTDPSpy);
+
+  const { datePicker } = require('../base/inputs/datePicker');
 
   beforeEach(() => {
     dp = document.createElement('div'); // calendar stub
@@ -54,16 +50,16 @@ describe('datePicker tests', () => {
 
   it('should call tdp on init', () => {
     datePicker();
-    expect(tdpSpy.calledOnce).eql(true);
+    expect(mockTDPSpy.calledOnce).toBe(true);
   });
 
   it('datePicker should call tdp with defaults set', () => {
     datePicker();
-    expect(tdpSpy.getCalls()[0].args[1].mode).eql('dp-below');
+    expect(mockTDPSpy.getCalls()[0].args[1].mode).toBe('dp-below');
   });
 
   it('datePicker should override defaults with config object', () => {
     datePicker({ mode: 'dp-modal' });
-    expect(tdpSpy.getCalls()[2].args[1].mode).eql('dp-modal');
+    expect(mockTDPSpy.getCalls()[2].args[1].mode).toBe('dp-modal');
   });
 });

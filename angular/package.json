@@ -3,16 +3,25 @@
   "version": "0.0.0",
   "scripts": {
     "build": "npm run set-version && ng build spark-angular",
-    "test": "ng test",
+    "test": "jest --config ./projects/spark-angular/jest.config.js --verbose",
+    "test:generate-output": "jest --config ./projects/spark-angular/jest.config.js --json --outputFile=./src/.jest-test-results.json",
+    "test:watch": "jest -o --watch --config ./projects/spark-angular/jest.config.js",
     "lint": "ng lint",
-    "coverage": "ng test spark-angular --watch=false --code-coverage",
+    "coverage": "jest --coverage --config ./projects/spark-angular/jest.config.js",
     "docs:json": "compodoc --disableLifeCycleHooks -p ./tsconfig.json -e json -d .",
     "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./projects/spark-angular/package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./projects/spark-angular/src/environment/environment.ts",
-    "storybook": "npm run docs:json && start-storybook -p 8006 -s ../storybook-utilities/favicon",
-    "build-storybook": "npm run docs:json && build-storybook -s ../storybook-utilities/favicon",
+    "prebuild:storybook": "npm run docs:json && npm run test:generate-output",
+    "storybook": "npm run prebuild:storybook && start-storybook -p 8006 -s ../storybook-utilities/favicon",
+    "build-storybook": "npm run prebuild:storybook & npm run docs:json && build-storybook -s ../storybook-utilities/favicon",
     "publish": "npm run build && cd dist/spark-angular && npm publish"
   },
   "private": true,
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "./src/setup-jest.ts"
+    ]
+  },
   "dependencies": {
     "@angular/animations": "~8.2.0",
     "@angular/common": "~8.2.0",
@@ -30,7 +39,7 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.802.2",
+    "@angular-devkit/build-angular": "^0.900.7",
     "@angular-devkit/build-ng-packagr": "~0.802.2",
     "@angular/cli": "~8.2.2",
     "@angular/compiler-cli": "~8.2.0",
@@ -38,27 +47,22 @@
     "@babel/preset-react": "^7.7.4",
     "@babel/traverse": "^7.6.0",
     "@compodoc/compodoc": "^1.1.11",
-    "@storybook/addon-a11y": "^5.3.9",
-    "@storybook/addon-docs": "^5.3.9",
-    "@storybook/addon-google-analytics": "^5.3.9",
-    "@storybook/addons": "^5.3.9",
-    "@storybook/angular": "^5.3.9",
+    "@storybook/addon-a11y": "^5.3.14",
+    "@storybook/addon-docs": "^5.3.14",
+    "@storybook/addon-google-analytics": "^5.3.14",
+    "@storybook/addon-jest": "^5.3.14",
+    "@storybook/addons": "^5.3.14",
+    "@storybook/angular": "^5.3.14",
     "@storybook/preset-scss": "^1.0.2",
-    "@storybook/theming": "^5.3.9",
-    "@types/jasmine": "~3.3.8",
-    "@types/jasminewd2": "~2.0.3",
+    "@storybook/theming": "^5.3.14",
+    "@types/jest": "^25.1.3",
     "@types/node": "~8.9.4",
     "babel-loader": "^8.0.6",
     "codelyzer": "^5.0.0",
     "css-loader": "^3.1.0",
     "eslint": "^6.5.1",
-    "jasmine-core": "~3.4.0",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~4.1.0",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.0",
+    "jest": "^25.1.0",
+    "jest-preset-angular": "^8.1.2",
     "ng-packagr": "^5.3.0",
     "node-sass": "^4.13.1",
     "protractor": "~5.4.0",
@@ -67,6 +71,7 @@
     "ts-node": "~7.0.0",
     "tsickle": "^0.36.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "whatwg-fetch": "^3.0.0"
   }
 }

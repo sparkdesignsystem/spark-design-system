@@ -75,6 +75,13 @@ export const hugeTextInput = () => ({
 
 hugeTextInput.story = {
   name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-huge-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 
 export const invalidHugeTextInput = () => ({
@@ -105,6 +112,14 @@ export const invalidHugeTextInput = () => ({
 
 invalidHugeTextInput.story = {
   name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-huge-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
 };
 
 export const disabledHugeTextInput = () => ({
@@ -127,5 +142,12 @@ export const disabledHugeTextInput = () => ({
 
 disabledHugeTextInput.story = {
   name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-huge-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
 };
 

@@ -108,8 +108,8 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    */
   @HostListener('keydown', ['$event'])
   onKeydown($event) {
-    const isPanel = $event.target.classList.contains('sprk-c-Tabs__content');
-    if (isPanel) {
+    const isTabsButton = $event.target.classList.contains('sprk-c-Tabs__button');
+    if (!isTabsButton) {
       return;
     }
 
@@ -127,24 +127,20 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     const panelElements = this.panels.map(panel => panel.ref.nativeElement);
 
     if ($event.keyCode === keys.left || $event.keyCode === keys.up) {
-      this.retreatTab(tabElements, panelElements, this.activeClass);
+      this.incrementTab(tabElements, panelElements, this.activeClass, -1);
     } else if ($event.keyCode === keys.right || $event.keyCode === keys.down) {
-      this.advanceTab(tabElements, panelElements, this.activeClass);
+      this.incrementTab(tabElements, panelElements, this.activeClass, 1);
     } else if ($event.keyCode === keys.tab) {
       if ($event.target.getAttribute('role') === 'tab') {
-        event.preventDefault();
+        $event.preventDefault();
         panelElements[
           this.getActiveTabIndex(tabElements, this.activeClass)
         ].focus();
       }
     } else if ($event.keyCode === keys.home) {
-      this.setActiveTab(tabElements[0], panelElements[0], this.activeClass);
+      this.goToEndTab(tabElements, panelElements, this.activeClass, -1);
     } else if ($event.keyCode === keys.end) {
-      this.setActiveTab(
-        tabElements[tabElements.length - 1],
-        panelElements[panelElements.length - 1],
-        this.activeClass
-      );
+      this.goToEndTab(tabElements, panelElements, this.activeClass, 1);
     }
   }
 
@@ -194,24 +190,6 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   /**
    * @ignore
    */
-  advanceTab(tabs, tabpanels, activeClass) {
-    const activeIndex = this.getActiveTabIndex(tabs, activeClass);
-    this.resetTabs(tabs, tabpanels, activeClass);
-
-    if (activeIndex + 1 <= tabs.length - 1) {
-      this.setActiveTab(
-        tabs[activeIndex + 1],
-        tabpanels[activeIndex + 1],
-        activeClass
-      );
-    } else {
-      this.setActiveTab(tabs[0], tabpanels[0], activeClass);
-    }
-  }
-
-  /**
-   * @ignore
-   */
   ariaOrientation(width, element) {
     // switch aria-orientation on mobile (based on _tabs.scss breakpoint)
     if (width <= 736) {
@@ -254,24 +232,73 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   /**
    * @ignore
    */
-  retreatTab(tabs, tabpanels, activeClass) {
-    const activeIndex = this.getActiveTabIndex(tabs, activeClass);
+  incrementTab(tabs, tabpanels, activeClass, direction) {
+    let activeIndex = this.getActiveTabIndex(tabs, activeClass);
+
+    let foundNewIndex = false;
+
+    // Start looking for the next available tab
+    while (foundNewIndex === false) {
+      // if the next tab would be off the left of the tabstrip
+      if (activeIndex + direction < 0) {
+        // loop to the end and keep looking
+        activeIndex = tabs.length;
+
+      // if the next tab would be off the right of the tabstrip
+      } else if (activeIndex + direction >= tabs.length) {
+        // loop back to the beginning and keep looking
+        activeIndex = -1;
+
+      // If the next tab is not disabled
+      } else if (!tabs[activeIndex + direction].hasAttribute('disabled')) {
+        // move to the next tab
+        activeIndex += direction;
+        // stop looking for the correct tab
+        foundNewIndex = true;
+
+      } else {
+        // move to the next tab and keep looking
+        activeIndex += direction;
+      }
+    }
+
+    // deselect all tabs
+    this.resetTabs(tabs, tabpanels, activeClass);
+    // select the correct tab
+    this.setActiveTab(tabs[activeIndex], tabpanels[activeIndex], activeClass);
+  }
+
+  goToEndTab(tabs, tabpanels, activeClass, direction) {
+    let newActiveIndex;
+
+    // if direction is positive, go to the right-most tab
+    if (direction > 0) {
+      newActiveIndex = tabs.length - 1;
+
+    // else go to the left-most tab
+    } else {
+      newActiveIndex = 0;
+    }
+
+    let foundNewIndex = false;
+
+    // step through the tabs until we find one that isn't disabled
+    while (foundNewIndex === false) {
+
+      // if this tab is not disabled
+      if (!tabs[newActiveIndex].hasAttribute('disabled')) {
+
+        // stop looking for the correct tab
+        foundNewIndex = true;
+
+      // else step one tab away from the end and keep looking
+      } else {
+        newActiveIndex -= direction;
+      }
+    }
 
     this.resetTabs(tabs, tabpanels, activeClass);
-
-    if (activeIndex - 1 === -1) {
-      this.setActiveTab(
-        tabs[tabs.length - 1],
-        tabpanels[tabs.length - 1],
-        activeClass
-      );
-    } else {
-      this.setActiveTab(
-        tabs[activeIndex - 1],
-        tabpanels[activeIndex - 1],
-        activeClass
-      );
-    }
+    this.setActiveTab(tabs[newActiveIndex], tabpanels[newActiveIndex], activeClass);
   }
 
   /**

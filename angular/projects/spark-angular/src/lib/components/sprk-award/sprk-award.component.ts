@@ -11,41 +11,51 @@ import { Component, Input } from '@angular/core';
         sprkStackItem
         [attr.data-id]="idString"
         class="
-        sprk-o-Stack__item
-        sprk-b-TypeDisplayFive
-        sprk-b-Measure sprk-b-Measure--narrow
-        sprk-u-TextAlign--center
-        sprk-o-Stack__item--center-column"
+          sprk-o-Stack__item
+          sprk-b-TypeDisplayFive
+          sprk-b-Measure sprk-b-Measure--narrow
+          sprk-u-TextAlign--center
+          sprk-o-Stack__item--center-column
+        "
       >
         {{ title }}
       </h2>
 
       <div sprkStackItem [ngClass]="getClasses()">
-        <sprk-link
-          linkType="unstyled"
-          additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
-          [href]="imgOneHref"
-          [analyticsString]="analyticsStringImgOne"
+        <div
+          [ngClass]="getImgContainerClasses()"
         >
-          <img
-            [ngClass]="getClassesImgOne()"
-            alt="{{ imgOneAlt }}"
-            src="{{ imgOneSrc }}"
-          />
-        </sprk-link>
-
-        <sprk-link
-          linkType="unstyled"
-          additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
-          [href]="imgTwoHref"
-          [analyticsString]="analyticsStringImgTwo"
+          <a
+            sprkLink
+            variant="unstyled"
+            class="sprk-o-Stack"
+            [attr.href]="imgOneHref"
+            [analyticsString]="analyticsStringImgOne"
+          >
+            <img
+              [ngClass]="getClassesImgOne()"
+              alt="{{ imgOneAlt }}"
+              src="{{ imgOneSrc }}"
+            />
+          </a>
+        </div>
+        <div
+          [ngClass]="getImgContainerClasses()"
         >
-          <img
-            [ngClass]="getClassesImgTwo()"
-            alt="{{ imgTwoAlt }}"
-            src="{{ imgTwoSrc }}"
-          />
-        </sprk-link>
+          <a
+            sprkLink
+            variant="unstyled"
+            class="sprk-o-Stack"
+            [attr.href]="imgTwoHref"
+            [analyticsString]="analyticsStringImgTwo"
+          >
+            <img
+              [ngClass]="getClassesImgTwo()"
+              alt="{{ imgTwoAlt }}"
+              src="{{ imgTwoSrc }}"
+            />
+          </a>
+        </div>
       </div>
 
       <sprk-toggle
@@ -59,8 +69,7 @@ import { Component, Input } from '@angular/core';
         <p class="sprk-b-TypeBodyFour">{{ disclaimerCopy }}</p>
       </sprk-toggle>
     </sprk-stack>
-  `,
-  styles: ['']
+  `
 })
 export class SprkAwardComponent {
   /**
@@ -219,6 +228,38 @@ export class SprkAwardComponent {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
+  getImgContainerClasses(): string {
+    const classArray: string[] = [
+      'sprk-o-Stack__item'
+    ];
+
+    // Handle the choice of item split
+    // breakpoint by adding CSS class
+    switch (this.splitAt) {
+      case 'tiny':
+        classArray.push('sprk-o-Stack__item--flex@xs');
+        break;
+      case 'small':
+        classArray.push('sprk-o-Stack__item--flex@s');
+        break;
+      case 'medium':
+        classArray.push('sprk-o-Stack__item--flex@m');
+        break;
+      case 'large':
+        classArray.push('sprk-o-Stack__item--flex@l');
+        break;
+      case 'huge':
+        classArray.push('sprk-o-Stack__item--flex@xl');
+        break;
+      default:
+        break;
+    }
+
+    return classArray.join(' ');
+  }
   /**
    * @ignore
    */

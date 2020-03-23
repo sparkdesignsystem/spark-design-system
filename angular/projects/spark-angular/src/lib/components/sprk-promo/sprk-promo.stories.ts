@@ -1,5 +1,3 @@
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkPromoModule } from './sprk-promo.module';
 import { SprkPromoComponent } from './sprk-promo.component';
@@ -24,12 +22,7 @@ export default {
 const modules = {
   imports: [
     SprkPromoModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkPromoComponent,
-    }]),
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
 };
 
 export const defaultStory = () => ({
@@ -39,7 +32,7 @@ export const defaultStory = () => ({
       title="Title"
       subtitle="Subtitle"
       cta="button"
-      ctaLinkHref="foo"
+      buttonHref="#"
       ctaText="Learn More"
       hasBorder="true"
       idString="promo-1"
@@ -52,7 +45,12 @@ export const defaultStory = () => ({
 });
 
 defaultStory.story = {
-  name: 'Default'
+  name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-promo.component',
+    ],
+  },
 };
 
 export const flag = () => ({
@@ -62,6 +60,7 @@ export const flag = () => ({
       isFlag="true"
       imgSrc="https://spark-assets.netlify.com/spark-logo-updated.svg"
       imgAlt="Spark Design System Logo"
+      imgHref="#"
       idString="promo-2"
     >
       Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
@@ -74,6 +73,9 @@ export const flag = () => ({
 flag.story = {
   parameters: {
     docs: { iframeHeight: 300 },
+    jest: [
+      'sprk-promo.component',
+    ],
   },
 };
 
@@ -88,6 +90,7 @@ export const withImage = () => ({
       imgSrc="https://spark-assets.netlify.com/house.jpg"
       cta="button"
       ctaText="Learn More"
+      buttonHref="#"
       idString="promo-3"
     >
       Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
@@ -96,6 +99,14 @@ export const withImage = () => ({
     </sprk-promo>
   `,
 });
+
+withImage.story = {
+  parameters: {
+    jest: [
+      'sprk-promo.component',
+    ],
+  },
+};
 
 export const withReversedImage = () => ({
   moduleMetadata: modules,
@@ -109,6 +120,7 @@ export const withReversedImage = () => ({
       imgHref="https://sparkdesignsystem.com"
       cta="button"
       ctaText="Learn More"
+      buttonHref="#"
       idString="promo-4"
     >
       Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
@@ -118,4 +130,11 @@ export const withReversedImage = () => ({
   `,
 });
 
+withReversedImage.story = {
+  parameters: {
+    jest: [
+      'sprk-promo.component',
+    ],
+  },
+};
 

@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkModalComponent } from './sprk-modal.component';
 
-describe('SparkModalComponent', () => {
+describe('SprkModalComponent', () => {
   let component: SprkModalComponent;
   let fixture: ComponentFixture<SprkModalComponent>;
   let modalElement: HTMLElement;
