@@ -146,21 +146,6 @@ describe('SprkSelectionInput:', () => {
     expect(onChangeMock.mock.calls.length).toBe(1);
   });
 
-  it('should run the supplied onChangeFunc function for selects', () => {
-    const onChangeMock = jest.fn();
-    const wrapper = mount(
-      <SprkSelectionInput
-        choices={choices}
-        variant="select"
-        onChangeFunc={onChangeMock}
-      />,
-    );
-    const select = wrapper.find('.sprk-b-Select');
-    select.value = '1';
-    select.simulate('change', { target: { value: 'test-value' } });
-    expect(onChangeMock.mock.calls.length).toBe(1);
-  });
-
   it('should run the supplied onChange function for huge selects', () => {
     const onChangeMock = jest.fn();
     const wrapper = mount(
@@ -168,22 +153,6 @@ describe('SprkSelectionInput:', () => {
         choices={choices}
         variant="hugeSelect"
         onChange={onChangeMock}
-        defaultValue=""
-      />,
-    );
-    const select = wrapper.find('.sprk-b-Select');
-    select.value = '1';
-    select.simulate('change', { target: { value: 'test-value' } });
-    expect(onChangeMock.mock.calls.length).toBe(1);
-  });
-
-  it('should run the supplied onChangeFunc function for huge selects', () => {
-    const onChangeMock = jest.fn();
-    const wrapper = mount(
-      <SprkSelectionInput
-        choices={choices}
-        variant="hugeSelect"
-        onChangeFunc={onChangeMock}
         defaultValue=""
       />,
     );
