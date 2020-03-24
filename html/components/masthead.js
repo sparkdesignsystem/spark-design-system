@@ -1,5 +1,5 @@
 /* global document window */
-import { throttle } from 'lodash';
+import { throttle, uniqueId } from 'lodash';
 import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
 import { isEscPressed } from '../utilities/keypress';
