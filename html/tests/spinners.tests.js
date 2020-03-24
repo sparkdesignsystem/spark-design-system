@@ -78,12 +78,6 @@ describe('spinners UI tests', () => {
     expect(spinnerContainer.getAttribute('aria-label')).toBe('Loading');
   });
 
-  it('should add the custom aria label if spinner is clicked and it is present', () => {
-    expect(spinnerContainer2.getAttribute('data-sprk-spinner-aria-label')).toBe('custom');
-    spinnerContainer2.click();
-    expect(spinnerContainer2.getAttribute('aria-label')).toBe('custom');
-  });
-
   it('should remove the loading aria label if the sprk-cancel-spinners event is triggered on window', () => {
     spinnerContainer.click();
     expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
