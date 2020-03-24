@@ -1,11 +1,12 @@
 /* global document window */
-import { throttle } from 'lodash';
+import { throttle, uniqueId } from 'lodash';
 import getElements from '../utilities/getElements';
 import { focusFirstEl } from '../utilities/elementState';
 import { isEscPressed } from '../utilities/keypress';
 import isElementVisible from '../utilities/isElementVisible';
 import scrollYDirection from '../utilities/scrollYDirection';
 import { hideDropDown, showDropDown } from './dropdown';
+import { toggleAriaExpanded } from './toggle';
 
 const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   // If user scrolls past the scrollPoint then add class
@@ -82,6 +83,8 @@ const toggleMobileNav = (iconContainer, nav, masthead) => {
     .querySelector('svg')
     .classList.toggle('sprk-c-Menu__icon--open');
   nav.classList.toggle('sprk-u-Display--none');
+
+  toggleAriaExpanded(iconContainer);
 };
 
 const focusTrap = (isOpen, nav) => {
@@ -130,6 +133,38 @@ const bindUIEvents = () => {
         'data-sprk-mobile-nav-trigger',
       )}"]`,
     );
+
+    // init aria-expanded
+    if (!element.hasAttribute('aria-expanded')) {
+      // If it doesn't have it then set it to the initial value
+      const isOpen = !nav.classList.contains('sprk-u-Display--none');
+
+      if (isOpen) {
+        element.setAttribute('aria-expanded', 'true');
+      } else {
+        element.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    // if aria-controls doesn't exist
+    // or it does exist but the ids don't match
+      // init aria-controls
+    if (!element.hasAttribute('aria-controls')
+      || element.getAttribute('aria-controls') != nav.getAttribute('id')) {
+
+      var contentId;
+      // if we already have an ID, use that
+      if (nav.hasAttribute('id')){
+        contentId = nav.getAttribute('id');
+      } else {
+        // if the content doesn't have an ID, generate one and set it
+        contentId = uniqueId('sprk_masthead_content_');
+        nav.setAttribute('id', contentId);
+      }
+
+      element.setAttribute('aria-controls', contentId);
+    }
+
     /*
      * Check if the mobile menu is visible
      * on page and set scroll event
