@@ -65,6 +65,19 @@ describe('spinners UI tests', () => {
     expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
   });
 
+  it('should add the loading aria label if spinner is clicked', () => {
+    spinnerContainer.click();
+    expect(spinnerContainer.getAttribute('aria-label')).toBe('Loading');
+  });
+
+  it('should remove the loading aria label if the sprk-cancel-spinners event is triggered on window', () => {
+    spinnerContainer.click();
+    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
+    event = new window.Event('sprk-cancel-spinners');
+    window.dispatchEvent(event);
+    expect(spinnerContainer.getAttribute('aria-label')).toBe(null);
+  });
+
   it('should remove spinners if the sprk-cancel-spinners event is triggered on window', () => {
     spinnerContainer.click();
     expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
@@ -85,10 +98,10 @@ describe('spinners UI tests', () => {
 
   it('should not try to start spinning something thats already spinning', () => {
     spinnerContainer.click();
-    expect(spinnerContainer.setAttribute.calledThrice).toBe(true);
+    expect(spinnerContainer.setAttribute.getCalls().length).toBe(4);
     expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
     spinnerContainer.click();
-    expect(spinnerContainer.setAttribute.getCalls().length).toBe(3);
+    expect(spinnerContainer.setAttribute.getCalls().length).toBe(4);
   });
 });
 
