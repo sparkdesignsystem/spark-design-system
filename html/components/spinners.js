@@ -30,6 +30,7 @@ const cancelSpinning = (element) => {
   el.innerHTML = '';
   el.textContent = el.getAttribute('data-sprk-spinner-text') || '';
   el.removeAttribute('data-sprk-has-spinner');
+  el.removeAttribute('aria-label');
   el.removeAttribute('style');
 };
 
