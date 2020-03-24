@@ -72,7 +72,12 @@ export const disabled = () => (
 
 export const loading = () => (
   `
-  <button class="sprk-c-Button" data-sprk-spinner="click" data-id="button-spinner">
+  <button
+    class="sprk-c-Button"
+    data-sprk-spinner="click"
+    data-id="button-spinner"
+    aria-label="Loading"
+  >
     <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
   </button>
   `
@@ -80,7 +85,13 @@ export const loading = () => (
 
 export const loadingSecondary = () => (
   `
-  <button class="sprk-c-Button sprk-c-Button--secondary" data-sprk-spinner="click" data-id="button-spinner-dark">
+  <button
+    class="sprk-c-Button sprk-c-Button--secondary"
+    data-sprk-spinner="click"
+    data-sprk-spinner-lightness="dark"
+    data-id="button-spinner-dark"
+    aria-label="Loading"
+  >
     <div class="sprk-c-Spinner sprk-c-Spinner--dark sprk-c-Spinner--circle"></div>
   </button>
   `
