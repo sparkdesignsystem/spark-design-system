@@ -47,7 +47,7 @@ describe('spinners UI tests', () => {
 
     spinnerContainer2 = document.createElement('button');
     spinnerContainer2.setAttribute('data-sprk-spinner', 'click');
-    spinnerContainer2.setAttribute('data-sprk-spinner-aria-label', 'custom');
+    spinnerContainer2.setAttribute('data-sprk-spinner-label', 'custom');
     spinnerContainer2.textContent = 'Submit';
 
     sinon.spy(spinnerContainer, 'addEventListener');
@@ -76,6 +76,12 @@ describe('spinners UI tests', () => {
   it('should add the loading aria label if spinner is clicked', () => {
     spinnerContainer.click();
     expect(spinnerContainer.getAttribute('aria-label')).toBe('Loading');
+  });
+
+  it('should add the custom aria label if spinner is clicked and it is present', () => {
+    expect(spinnerContainer2.getAttribute('data-sprk-spinner-label')).toBe('custom');
+    spinnerContainer2.click();
+    expect(spinnerContainer2.getAttribute('aria-label')).toBe('custom');
   });
 
   it('should remove the loading aria label if the sprk-cancel-spinners event is triggered on window', () => {
