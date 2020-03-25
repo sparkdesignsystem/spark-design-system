@@ -152,9 +152,9 @@ const bindUIEvents = () => {
     if (!element.hasAttribute('aria-controls')
       || element.getAttribute('aria-controls') != nav.getAttribute('id')) {
 
-      var contentId;
+      let contentId;
       // if we already have an ID, use that
-      if (nav.hasAttribute('id')){
+      if (nav.hasAttribute('id')) {
         contentId = nav.getAttribute('id');
       } else {
         // if the content doesn't have an ID, generate one and set it
