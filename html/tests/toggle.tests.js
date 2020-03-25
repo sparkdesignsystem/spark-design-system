@@ -46,9 +46,10 @@ describe('Toggle tests', () => {
     containerAccordion.setAttribute('data-sprk-toggle', 'container');
     containerAccordion.classList.add('sprk-c-Accordion__item');
 
-    trigger = document.createElement('a');
+    trigger = document.createElement('button');
     trigger.setAttribute('data-sprk-toggle', 'trigger');
     trigger.setAttribute('aria-expanded', 'false');
+    trigger.setAttribute('aria-controls', 'triggerId');
     trigger.textContent = 'My Toggle Link Text';
     trigger.classList.add(
       'sprk-b-TypeBodyThree',
@@ -69,6 +70,7 @@ describe('Toggle tests', () => {
 
     content = document.createElement('div');
     content.setAttribute('data-sprk-toggle', 'content');
+    content.setAttribute('id', 'contentId');
     content.textContent = 'This is the toggle content..';
     content.classList.add('sprk-b-TypeBodyFour', 'sprk-u-pts');
     content.slideToggle = () => new Promise((resolve) => {
@@ -106,6 +108,20 @@ describe('Toggle tests', () => {
     triggerAccordion.append(iconAccordion);
     containerAccordion.append(triggerAccordion);
     containerAccordion.append(contentAccordion);
+  });
+
+  it('should add id and aria-controls when not present', () => {
+    console.log(content, 'toggleContent');
+
+    console.log(trigger.getAttribute('aria-controls'), 'aria-controls');
+    trigger.setAttribute('aria-controls', null);
+    console.log(trigger.getAttribute('aria-controls'), 'aria-controls AFTER');
+
+    content.setAttribute('id', null);
+    bindToggleUIEvents(container);
+    bindToggleUIEvents(trigger);
+    expect(trigger.hasAttribute('aria-controls')).toBe(true);
+    expect(content.hasAttribute('id')).toBe(true);
   });
 
   it('should toggle aria-expanded attribute for toggles', () => {

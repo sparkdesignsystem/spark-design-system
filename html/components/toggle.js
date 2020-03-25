@@ -77,6 +77,8 @@ const bindToggleUIEvents = (element) => {
   const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
   const toggleIconUse = element.querySelector('[data-sprk-toggle="accordionIconUseElement"]');
 
+  console.log(toggleContent, 'toggleContent');
+
   const toggleContentId = toggleContent.getAttribute('id');
   const toggleTriggerAriaControls = toggleTrigger.getAttribute('aria-controls');
 
@@ -96,12 +98,12 @@ const bindToggleUIEvents = (element) => {
 
   // Warn if aria-controls and id doesn't match
   if (toggleContentId !== toggleTriggerAriaControls) {
-    console.warn('Toggle Trigger id and Content Trigger aria-controls do not match.')
+    console.warn('Toggle Trigger id and Content Trigger aria-controls do not match.');
   }
 
   // Warn if aria-controls exist, but trigger doesn't have matching id
   if (toggleTriggerAriaControls && !toggleContentId) {
-    console.warn('Toggle Trigger id and Content Trigger aria-controls do not match.')
+    console.warn('Toggle Trigger id and Content Trigger aria-controls do not match.');
   }
 
   // Hide details content, initially shown for no-JS scenarios
