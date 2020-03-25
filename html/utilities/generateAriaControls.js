@@ -4,31 +4,29 @@ import { uniqueId } from 'lodash';
 // into the aria-controls attribute on triggerElement.
 // Generate a unique ID if needed.
 const generateAriaControls = (triggerElement, contentElement) => {
-  const toggleTriggerAriaControls = triggerElement.getAttribute('aria-controls');
-  const toggleContentId = contentElement.getAttribute('id');
+  let triggerAriaControls = triggerElement.getAttribute('aria-controls');
+  let contentId = contentElement.getAttribute('id');
 
-  // If neither attribute has a value, generate an ID with lodash
-  if (!toggleContentId && !toggleTriggerAriaControls) {
-    const ariaToggleId = uniqueId('sprk_masthead_content_');
-    contentElement.setAttribute('id', ariaToggleId);
-    triggerElement.setAttribute('aria-controls', ariaToggleId);
+  // Warn if aria-controls exists but the id does not
+  if (triggerAriaControls && !contentId) {
+    console.warn('Spark Design System Warning - The component with aria-controls="' + triggerAriaControls + '" expects a matching id on the content element.');
+    return;
   }
 
-  // If content has an ID but trigger doesn't have aria-controls,
-  // add the ID to the trigger
-  if (toggleContentId && !toggleTriggerAriaControls) {
-    triggerElement.setAttribute('aria-controls', toggleContentId);
+  // Warn if aria-controls and id both exist but don't match
+  if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
+    console.warn('Spark Design System Warning - The value of aria-controls ("' + triggerAriaControls + '") should match the id of the content element ("' + contentId + '").');
+    return;
   }
 
-  // Warn if aria-controls and id don't match
-  if (toggleContentId !== toggleTriggerAriaControls) {
-    console.warn("Spark Design System Warning - these should have the same value");
+  // If we don't have a valid id, generate one with lodash
+  if (!contentId) {
+    contentId = uniqueId('sprk_masthead_content_');
+    contentElement.setAttribute('id', contentId);
   }
 
-  // Warn if aria-controls exists but the ids don't match
-  if (toggleTriggerAriaControls && !toggleContentId) {
-    console.warn("Spark Design System Warning - aria-controls exists but id is missing")
-  }
+  // set the value of aria-controls
+  triggerElement.setAttribute('aria-controls', contentId);
 };
 
 export { generateAriaControls };
