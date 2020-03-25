@@ -6,7 +6,8 @@ import { isEscPressed } from '../utilities/keypress';
 import isElementVisible from '../utilities/isElementVisible';
 import scrollYDirection from '../utilities/scrollYDirection';
 import { hideDropDown, showDropDown } from './dropdown';
-import { toggleAriaExpanded } from './toggle';
+import { toggleAriaExpanded } from '../utilities/toggleAriaExpanded';
+import { generateAriaControls } from '../utilities/generateAriaControls';
 
 const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   // If user scrolls past the scrollPoint then add class
@@ -146,24 +147,7 @@ const bindUIEvents = () => {
       }
     }
 
-    // if aria-controls doesn't exist
-    // or it does exist but the ids don't match
-      // init aria-controls
-    if (!element.hasAttribute('aria-controls')
-      || element.getAttribute('aria-controls') != nav.getAttribute('id')) {
-
-      let contentId;
-      // if we already have an ID, use that
-      if (nav.hasAttribute('id')) {
-        contentId = nav.getAttribute('id');
-      } else {
-        // if the content doesn't have an ID, generate one and set it
-        contentId = uniqueId('sprk_masthead_content_');
-        nav.setAttribute('id', contentId);
-      }
-
-      element.setAttribute('aria-controls', contentId);
-    }
+    generateAriaControls(element, nav);
 
     /*
      * Check if the mobile menu is visible
