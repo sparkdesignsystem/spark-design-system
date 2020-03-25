@@ -136,6 +136,8 @@ import {
 } from './components/stepper';
 import { carousel } from './components/carousel';
 import { highlightBoard } from './components/highlight-board';
+import { toggleAriaExpanded as toggleAriaExpandedAttribute } from './utilities/toggleAriaExpanded';
+import { generateAriaControls } from './utilities/generateAriaControls';
 import isElementVisible from './utilities/isElementVisible';
 import scrollYDirection from './utilities/scrollYDirection';
 
@@ -243,4 +245,6 @@ export {
   bindUIEventsHugeInputOld,
   addClassIfNotEmpty,
   toggleClassWithValue,
+  toggleAriaExpandedAttribute,
+  generateAriaControls,
 };
