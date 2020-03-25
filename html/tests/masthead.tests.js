@@ -92,14 +92,27 @@ describe('masthead init', () => {
     expect(nav.getAttribute('id')).toEqual(iconContainer.getAttribute('aria-controls'));
   });
 
-  it('should override aria-controls if the value doesnt match the id on the content', () => {
+  it('should NOT override aria-controls if the value doesnt match the id on the content', () => {
     nav.setAttribute('id', 'foo');
     iconContainer.setAttribute('aria-controls', 'bar');
 
     masthead();
 
-    // it should make them match
-    expect(nav.getAttribute('id')).toEqual(iconContainer.getAttribute('aria-controls'));
+    // it should NOT make them match
+    // expect a console warn
+    expect(nav.getAttribute('id')).toEqual('foo');
+    expect(iconContainer.getAttribute('aria-controls')).toEqual('bar');
+  });
+
+  it('should log a console warning if aria-controls has a value but content ID is blank', () => {
+    nav.removeAttribute('id');
+    iconContainer.setAttribute('aria-controls', 'bar');
+
+    masthead();
+
+    // expect a console warn
+    expect(nav.getAttribute('id')).toEqual(null);
+    expect(iconContainer.getAttribute('aria-controls')).toEqual('bar');
   });
 
   it('should use the provided content id for aria-controls when aria-controls is missing and the id is available', () => {
