@@ -99,7 +99,6 @@ describe('masthead init', () => {
     masthead();
 
     // it should NOT make them match
-    // expect a console warn
     expect(nav.getAttribute('id')).toEqual('foo');
     expect(iconContainer.getAttribute('aria-controls')).toEqual('bar');
   });
@@ -110,7 +109,6 @@ describe('masthead init', () => {
 
     masthead();
 
-    // expect a console warn
     expect(nav.getAttribute('id')).toEqual(null);
     expect(iconContainer.getAttribute('aria-controls')).toEqual('bar');
   });
