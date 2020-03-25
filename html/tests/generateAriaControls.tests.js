@@ -15,7 +15,6 @@ describe('generateAriaControls tests', () => {
     contentElement.removeAttribute('id');
     generateAriaControls(triggerElement, contentElement);
 
-    // expect a console warn
     expect(triggerElement.hasAttribute('aria-controls')).toEqual(true);
     expect(contentElement.hasAttribute('id')).toEqual(true);
     expect(triggerElement.getAttribute('aria-controls')).toEqual(contentElement.getAttribute('id'));
@@ -26,7 +25,6 @@ describe('generateAriaControls tests', () => {
     contentElement.removeAttribute('id');
     generateAriaControls(triggerElement, contentElement);
 
-    // expect a console warn
     expect(triggerElement.getAttribute('aria-controls')).toEqual('foo');
     expect(contentElement.hasAttribute('id')).toEqual(false);
   });
@@ -38,7 +36,6 @@ describe('generateAriaControls tests', () => {
 
     generateAriaControls(triggerElement, contentElement);
 
-    // expect a console warn
     expect(triggerElement.hasAttribute('aria-controls')).toEqual(true);
     expect(triggerElement.getAttribute('aria-controls')).toEqual('foo');
     expect(contentElement.getAttribute('id')).toEqual('foo');
@@ -49,7 +46,6 @@ describe('generateAriaControls tests', () => {
     contentElement.setAttribute('id', 'bar');
     generateAriaControls(triggerElement, contentElement);
 
-    // expect a console warn
     expect(triggerElement.getAttribute('aria-controls')).toEqual('foo');
     expect(contentElement.getAttribute('id')).toEqual('bar');
   });
