@@ -71,13 +71,23 @@ describe('masthead init', () => {
     expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-mobile-nav-trigger]');
   });
 
-  it('should add aria-expanded if it is missing', () => {
+  it('should init aria-expanded as closed correctly', () => {
     expect(iconContainer.getAttribute('aria-expanded')).toBe(null);
 
     masthead();
 
     expect(iconContainer.hasAttribute('aria-expanded')).toBeTruthy();
     expect(iconContainer.getAttribute('aria-expanded')).toEqual('false');
+  });
+
+  it('should init aria-expanded as open correctly', () => {
+    expect(iconContainer.getAttribute('aria-expanded')).toBe(null);
+    nav.classList.remove('sprk-u-Display--none');
+
+    masthead();
+
+    expect(iconContainer.hasAttribute('aria-expanded')).toBeTruthy();
+    expect(iconContainer.getAttribute('aria-expanded')).toEqual('true');
   });
 
   it('should generate a content id and add it to aria-controls when both values are missing', () => {
