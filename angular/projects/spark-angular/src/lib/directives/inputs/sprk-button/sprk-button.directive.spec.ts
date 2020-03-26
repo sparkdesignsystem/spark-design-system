@@ -12,7 +12,7 @@ import { SprkButtonDirective } from './sprk-button.directive';
       variant="secondary"
       analyticsString="test"
       idString="id-test"
-      spinnerAriaLabel="custom"
+      spinningAriaLabel="custom"
       [isSpinning]="spinnerVal">
       Test 3
     </button>
@@ -86,7 +86,7 @@ describe('Spark Button Directive', () => {
     expect(button3Element.getAttribute('data-id')).toBe('id-test');
   });
 
-  it('should add the value of spinnerAriaLabel to aria-label when isSpinning=true', () => {
+  it('should add the value of spinningAriaLabel to aria-label when isSpinning=true', () => {
     const spinnerEl = button3Element.querySelector('.sprk-c-Spinner');
     expect(spinnerEl).toBeNull();
     component.spinnerVal = true;
