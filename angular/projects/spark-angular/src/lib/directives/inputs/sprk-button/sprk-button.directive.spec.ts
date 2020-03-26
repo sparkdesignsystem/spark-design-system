@@ -100,6 +100,10 @@ describe('Spark Button Directive', () => {
     expect(button2Element.getAttribute('aria-label')).toBe('Loading');
   });
 
+  it('should not add the spinning aria-label when isSpinning=false', () => {
+    expect(button1Element.hasAttribute('aria-label')).toBe(false);
+  });
+
   // This test makes sure the new variant @Input isn't a breaking change
   it('should still add the correct button class if variant is not used', () => {
     expect(button4Element.classList.contains('sprk-c-Button')).toBe(true);
