@@ -25,8 +25,9 @@ always use a \`<button>\` element.
 must include a \`title=””\` attribute.
 - If a Button only includes an Icon with no text,
 alternative text must be provided.
-- If the Button has a spinner, the \`aria-label\`
-will be set to 'Loading' unless you supply a custom
+- If the Button has a spinner setup, the \`aria-label\`
+will be set to 'Loading' when the button is
+clicked unless you supply a custom
 string value to the \`data-sprk-spinner-aria-label\`
 attribute.
 
