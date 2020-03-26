@@ -37,9 +37,9 @@ const SprkButton = ({
       data-id={idString}
       data-analytics={analyticsString}
       disabled={disabled}
-      aria-label={loading ? spinningAriaLabel : undefined}
       href={TagName !== 'button' ? href : undefined}
       {...rest}
+      {...loading && { 'aria-label': spinningAriaLabel }}
     >
       {(loading &&
         <SprkSpinner lightness={variant === 'secondary' ? 'dark' : undefined}/>)
