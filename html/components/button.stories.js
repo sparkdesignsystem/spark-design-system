@@ -87,6 +87,12 @@ export const loading = () => (
   `
 );
 
+loading.story = {
+  parameters: {
+    jest: ['spinners'],
+  }
+};
+
 export const loadingSecondary = () => (
   `
   <button
@@ -101,6 +107,12 @@ export const loadingSecondary = () => (
   `
 );
 
+loadingSecondary.story = {
+  parameters: {
+    jest: ['spinners'],
+  }
+};
+
 export const fullWidthAtSmallViewport = () => (
   `
   <button class="sprk-c-Button sprk-c-Button--full@s" type="button" data-id="button-full-smv">
@@ -108,6 +120,7 @@ export const fullWidthAtSmallViewport = () => (
   </button>
   `
 );
+
 fullWidthAtSmallViewport.story = {
   name: 'Full Width at Small Viewport',
 };
@@ -119,6 +132,7 @@ export const fullWidthAtExtraSmallViewport = () => (
   </button>
   `
 );
+
 fullWidthAtExtraSmallViewport.story = {
   name: 'Full Width at Extra Small Viewport',
 };
