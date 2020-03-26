@@ -39,6 +39,27 @@ describe('SprkButton:', () => {
     expect(wrapper.find('.sprk-c-Spinner').length).toBe(1);
   });
 
+  it('if loading is set, should render the spinner and add aria-label to element', () => {
+    const wrapper = mount(<SprkButton loading />);
+    expect(wrapper.find('button[aria-label="Loading"]').length).toBe(1);
+  });
+
+  it('if loading is set with spinningAriaLabel it should add custom aria-label', () => {
+    const wrapper = mount(<SprkButton loading spinningAriaLabel="custom" />);
+    expect(wrapper.find('button[aria-label="custom"]').length).toBe(1);
+  });
+
+  it('if loading is not set but spinningAriaLabel is, it should not add aria-label', () => {
+    const wrapper = mount(<SprkButton spinningAriaLabel="custom" />);
+    expect(wrapper.find('button[aria-label="custom"]').length).toBe(0);
+  });
+
+
+  it('if loading is not set it should not add aria-label', () => {
+    const wrapper = mount(<SprkButton />);
+    expect(wrapper.find('button[aria-label]').length).toBe(0);
+  });
+
   it('if loading is set and variant is secondary, should render the secondary spinner', () => {
     const wrapper = mount(<SprkButton loading variant="secondary"/>);
     expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(1);

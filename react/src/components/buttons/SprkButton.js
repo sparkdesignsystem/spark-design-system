@@ -13,6 +13,7 @@ const SprkButton = ({
   loading,
   variant,
   href,
+  spinningAriaLabel,
   ...rest
 }) => {
   let TagName;
@@ -36,6 +37,7 @@ const SprkButton = ({
       data-id={idString}
       data-analytics={analyticsString}
       disabled={disabled}
+      aria-label={loading ? spinningAriaLabel : undefined}
       href={TagName !== 'button' ? href : undefined}
       {...rest}
     >
@@ -48,11 +50,13 @@ const SprkButton = ({
 
 SprkButton.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to
+   * add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /** Content to render inside of the SprkButton */
@@ -75,7 +79,8 @@ SprkButton.propTypes = {
     PropTypes.func,
   ]),
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a
+   * unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -83,6 +88,11 @@ SprkButton.propTypes = {
    * rendered in place of the button content.
    */
   loading: PropTypes.bool,
+  /**
+   * Optional string value that is
+   * set for the aria-label when `loading` is `true`.
+   */
+  spinningAriaLabel: PropTypes.string,
   /**
    *  Determines the coresponding button style.
    */
@@ -99,6 +109,7 @@ SprkButton.defaultProps = {
   disabled: false,
   variant: 'primary',
   loading: false,
+  spinningAriaLabel: 'Loading',
 };
 
 export default SprkButton;

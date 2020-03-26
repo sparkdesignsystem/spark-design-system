@@ -4,7 +4,7 @@
   "description": "A collection of Spark Design System components in React 16+",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest --config ./src/jest-config.js --coverage",
+    "test": "jest --config ./src/jest-config.js --coverage --verbose",
     "test:generate-output": "jest --config ./src/jest-config.js --json --outputFile=./src/.jest-test-results.json",
     "build": "rollup -c rollup.config.js",
     "storybook": "npm run prebuild:storybook && start-storybook -p 6006 -s ../storybook-utilities/favicon",
