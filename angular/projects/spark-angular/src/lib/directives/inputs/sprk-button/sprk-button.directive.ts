@@ -30,7 +30,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    * set for the `aria-label`
    * when `isSpinning` is `true`.
    */
-  @Input() spinnerAriaLabel = 'Loading';
+  @Input() spinningAriaLabel = 'Loading';
 
   /**
    *  Determines the coresponding button style.
@@ -99,7 +99,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   setSpinning = (element) => {
     const el = element;
     const width = element.offsetWidth;
-    const ariaLabel = this.spinnerAriaLabel;
+    const ariaLabel = this.spinningAriaLabel;
     let spinnerClass = 'sprk-c-Spinner sprk-c-Spinner--circle';
     if (
         el.classList.contains('sprk-c-Button--secondary') ||
