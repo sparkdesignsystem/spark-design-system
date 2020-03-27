@@ -31,6 +31,9 @@ export const defaultStory = () => {
           sprk-b-TypeBodyThree
           sprk-u-BareButton
           sprk-u-TextCrop--none
+          sprk-b-Link
+          sprk-b-Link--has-icon
+          sprk-b-Link--simple
         "
         data-sprk-toggle="trigger"
         href="#"
