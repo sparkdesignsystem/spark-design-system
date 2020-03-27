@@ -1,8 +1,21 @@
 /* global document beforeEach afterEach describe it window */
 const proxyquireStrict = require('proxyquire').noCallThru();
-const mockDOMSliderStub = {};
 
+// when something tries to import dom-slider,
+// return an empty object
+const mockDOMSliderStub = {};
 jest.mock('dom-slider', () => mockDOMSliderStub);
+
+// when a test tries to access window.domSlider.slideToggle,
+// return a Promise that resolves immediately so we can test
+// the .then()
+const mockDOMSliderWindow = {
+  slideToggle : () => {
+    return new Promise((resolve) => { resolve() })
+  }
+};
+
+window.domSlider = mockDOMSliderWindow;
 
 describe('Toggle init', () => {
   const { toggle } = require('../components/toggle');
@@ -212,7 +225,7 @@ describe('Toggle tests', () => {
   });
 
   it('should not add Accordion__item class if toggle is not an'
-    + 'accordion', () => {
+    + ' accordion', () => {
     handleToggleClick(content, null, null, trigger);
     expect(container.classList.contains('sprk-c-Accordion__item--open')).toBe(false);
   });
