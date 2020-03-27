@@ -49,7 +49,7 @@ describe('Toggle tests', () => {
     trigger = document.createElement('button');
     trigger.setAttribute('data-sprk-toggle', 'trigger');
     trigger.setAttribute('aria-expanded', 'false');
-    trigger.setAttribute('aria-controls', 'triggerId');
+    trigger.setAttribute('aria-controls', 'toggle-1');
     trigger.textContent = 'My Toggle Link Text';
     trigger.classList.add(
       'sprk-b-TypeBodyThree',
@@ -73,7 +73,7 @@ describe('Toggle tests', () => {
 
     content = document.createElement('div');
     content.setAttribute('data-sprk-toggle', 'content');
-    content.setAttribute('id', 'contentId');
+    content.setAttribute('id', 'toggle-1');
     content.textContent = 'This is the toggle content..';
     content.classList.add('sprk-b-TypeBodyFour', 'sprk-u-pts');
     content.slideToggle = () => new Promise((resolve) => {
