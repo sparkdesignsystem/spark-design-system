@@ -6,6 +6,8 @@ import { isEscPressed } from '../utilities/keypress';
 import isElementVisible from '../utilities/isElementVisible';
 import scrollYDirection from '../utilities/scrollYDirection';
 import { hideDropDown, showDropDown } from './dropdown';
+import { toggleAriaExpanded } from '../utilities/toggleAriaExpanded';
+import { generateAriaControls } from '../utilities/generateAriaControls';
 
 const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
   // If user scrolls past the scrollPoint then add class
@@ -82,6 +84,8 @@ const toggleMobileNav = (iconContainer, nav, masthead) => {
     .querySelector('svg')
     .classList.toggle('sprk-c-Menu__icon--open');
   nav.classList.toggle('sprk-u-Display--none');
+
+  toggleAriaExpanded(iconContainer);
 };
 
 const focusTrap = (isOpen, nav) => {
@@ -130,6 +134,21 @@ const bindUIEvents = () => {
         'data-sprk-mobile-nav-trigger',
       )}"]`,
     );
+
+    // init aria-expanded
+    if (!element.hasAttribute('aria-expanded')) {
+      // If it doesn't have it then set it to the initial value
+      const isOpen = !nav.classList.contains('sprk-u-Display--none');
+
+      if (isOpen) {
+        element.setAttribute('aria-expanded', 'true');
+      } else {
+        element.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    generateAriaControls(element, nav);
+
     /*
      * Check if the mobile menu is visible
      * on page and set scroll event
