@@ -1,4 +1,5 @@
 import 'dom-slider';
+const { slideToggle } = window.domSlider;
 import getElements from '../utilities/getElements';
 import { generateAriaControls } from '../utilities/generateAriaControls';
 
@@ -61,7 +62,7 @@ const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) =>
   if (isAccordion && !isMastheadAccordion) toggleContent.parentElement.classList.toggle('sprk-c-Accordion__item--open');
   if (isMastheadAccordion) toggleContent.parentElement.classList.toggle('sprk-c-MastheadAccordion__item--open');
 
-  toggleContent.slideToggle(300).then(() => {
+  slideToggle({ element: toggleContent }).then(() => {
     // Enable clicks after animation runs
     trigger.style.pointerEvents = 'auto';
   });
