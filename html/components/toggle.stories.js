@@ -27,30 +27,27 @@ export const defaultStory = () => {
       data-id="toggle-1"
     >
      <button
-        class="sprk-u-BareButton"
+        class="
+          sprk-b-TypeBodyThree
+          sprk-u-BareButton
+          sprk-u-TextCrop--none
+        "
         data-sprk-toggle="trigger"
         href="#"
       >
-        <div class="sprk-o-Flag sprk-o-Flag--middle sprk-o-Flag--tiny">
-          <div class="sprk-o-Flag__figure">
-            <svg
-              class="
-                sprk-c-Icon sprk-c-Icon--l
-                sprk-c-Icon--toggle
-                sprk-u-mrs
-              "
-              data-sprk-toggle="icon"
-              viewBox="0 0 64 64"
-            >
-              <use xlink:href="#chevron-down-circle-two-color"></use>
-            </svg>
-          </div>
-          <div class="sprk-o-Flag__body">
-            <p class="sprk-b-TypeBodyThree">
-              My Disclaimer
-            </p>
-          </div>
-          </div>
+        <svg
+          class="
+            sprk-c-Icon sprk-c-Icon--l
+            sprk-c-Icon--toggle
+            sprk-u-mrs
+          "
+          data-sprk-toggle="icon"
+          viewBox="0 0 64 64"
+        >
+          <use xlink:href="#chevron-down-circle-two-color"></use>
+        </svg>
+
+        My Disclaimer
       </button>
 
       <div data-sprk-toggle="content">
