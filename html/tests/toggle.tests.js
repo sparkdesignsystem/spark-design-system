@@ -53,8 +53,8 @@ describe('Toggle tests', () => {
     trigger.textContent = 'My Toggle Link Text';
     trigger.classList.add(
       'sprk-b-TypeBodyThree',
-      'sprk-b-Link',
-      'sprk-b-Link--simple',
+      'sprk-u-BareButton',
+      'sprk-u-TextCrop--none',
     );
 
     triggerAccordion = document.createElement('a');
