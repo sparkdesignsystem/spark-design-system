@@ -56,7 +56,8 @@ SprkButton.propTypes = {
   additionalClasses: PropTypes.string,
   /**
    * Assigned to the `data-analytics` attribute
-   * serving as a unique selector for outside libraries to capture data.
+   * serving as a unique selector for outside
+   * libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /** Content to render inside of the SprkButton */
