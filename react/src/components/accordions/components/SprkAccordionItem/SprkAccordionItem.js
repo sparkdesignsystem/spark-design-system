@@ -64,6 +64,7 @@ class SprkAccordionItem extends Component {
       <li className={itemClassNames} data-id={idString} {...other}>
         <SprkLink
           variant="unstyled"
+          element="button"
           aria-controls={id}
           additionalClasses="sprk-c-Accordion__summary"
           data-analytics={analyticsString}
