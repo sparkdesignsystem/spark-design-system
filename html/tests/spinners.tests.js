@@ -37,15 +37,23 @@ describe('getSpinnerClasses tests', () => {
 
 describe('spinners UI tests', () => {
   let spinnerContainer;
+  let spinnerContainer2;
   let event;
 
   beforeEach(() => {
     spinnerContainer = document.createElement('button');
     spinnerContainer.setAttribute('data-sprk-spinner', 'click');
     spinnerContainer.textContent = 'Submit';
+
+    spinnerContainer2 = document.createElement('button');
+    spinnerContainer2.setAttribute('data-sprk-spinner', 'click');
+    spinnerContainer2.setAttribute('data-sprk-spinner-aria-label', 'custom');
+    spinnerContainer2.textContent = 'Submit';
+
     sinon.spy(spinnerContainer, 'addEventListener');
     sinon.spy(spinnerContainer, 'setAttribute');
     document.body.append(spinnerContainer);
+    document.body.append(spinnerContainer2);
     spinners();
   });
 
@@ -63,6 +71,25 @@ describe('spinners UI tests', () => {
   it('should start the spinning if its clicked', () => {
     spinnerContainer.click();
     expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
+  });
+
+  it('should add the loading aria label if spinner is clicked', () => {
+    spinnerContainer.click();
+    expect(spinnerContainer.getAttribute('aria-label')).toBe('Loading');
+  });
+
+  it('should add the custom aria label if spinner is clicked and it is present', () => {
+    expect(spinnerContainer2.getAttribute('data-sprk-spinner-aria-label')).toBe('custom');
+    spinnerContainer2.click();
+    expect(spinnerContainer2.getAttribute('aria-label')).toBe('custom');
+  });
+
+  it('should remove the loading aria label if the sprk-cancel-spinners event is triggered on window', () => {
+    spinnerContainer.click();
+    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
+    event = new window.Event('sprk-cancel-spinners');
+    window.dispatchEvent(event);
+    expect(spinnerContainer.getAttribute('aria-label')).toBe(null);
   });
 
   it('should remove spinners if the sprk-cancel-spinners event is triggered on window', () => {
@@ -85,10 +112,10 @@ describe('spinners UI tests', () => {
 
   it('should not try to start spinning something thats already spinning', () => {
     spinnerContainer.click();
-    expect(spinnerContainer.setAttribute.calledThrice).toBe(true);
+    expect(spinnerContainer.setAttribute.getCalls().length).toBe(4);
     expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
     spinnerContainer.click();
-    expect(spinnerContainer.setAttribute.getCalls().length).toBe(3);
+    expect(spinnerContainer.setAttribute.getCalls().length).toBe(4);
   });
 });
 
