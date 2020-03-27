@@ -54,6 +54,15 @@ describe('SprkButton:', () => {
     expect(wrapper.find('button[aria-label="custom"]').length).toBe(0);
   });
 
+  it('it should not overwrite aria-label if loading=false', () => {
+    const wrapper = mount(<SprkButton aria-label="initial" loading={false} />);
+    expect(wrapper.find('button[aria-label="initial"]').length).toBe(1);
+  });
+
+  it('it should overwrite aria-label if loading=true', () => {
+    const wrapper = mount(<SprkButton aria-label="initial" loading={true} />);
+    expect(wrapper.find('button[aria-label="Loading"]').length).toBe(1);
+  });
 
   it('if loading is not set it should not add aria-label', () => {
     const wrapper = mount(<SprkButton />);

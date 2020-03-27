@@ -40,6 +40,7 @@ const SprkButton = ({
       aria-label={loading ? spinningAriaLabel : undefined}
       href={TagName !== 'button' ? href : undefined}
       {...rest}
+      {...loading && { 'aria-label': spinningAriaLabel }}
     >
       {(loading &&
         <SprkSpinner lightness={variant === 'secondary' ? 'dark' : undefined}/>)
@@ -56,7 +57,8 @@ SprkButton.propTypes = {
   additionalClasses: PropTypes.string,
   /**
    * Assigned to the `data-analytics` attribute
-   * serving as a unique selector for outside libraries to capture data.
+   * serving as a unique selector for outside
+   * libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /** Content to render inside of the SprkButton */

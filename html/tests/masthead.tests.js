@@ -1,3 +1,7 @@
+const mockDOMSliderStub = {};
+
+jest.mock('dom-slider', () => mockDOMSliderStub);
+
 /* global window beforeEach afterEach document describe before it */
 import {
   masthead,
@@ -12,8 +16,53 @@ import {
 import { dropdowns } from '../components/dropdown';
 
 describe('masthead init', () => {
+  let main;
+  let nav;
+  let mastheadDiv;
+  let iconContainer;
+  let iconContainerDiv;
+
+  beforeEach(() => {
+    main = document.createElement('div');
+    main.setAttribute('data-sprk-main', null);
+
+    // Create the main Masthead element
+    mastheadDiv = document.createElement('div');
+    mastheadDiv.classList.add('sprk-c-Masthead');
+    mastheadDiv.setAttribute('data-sprk-masthead', null);
+
+    // Create narrow nav
+    nav = document.createElement('nav');
+    nav.classList.add('sprk-u-Display--none');
+    nav.classList.add('sprk-c-Masthead__narrow-nav');
+    nav.setAttribute('data-sprk-mobile-nav', 'mobileNav');
+
+    // Add nav to masthead
+    mastheadDiv.appendChild(nav);
+
+    // Create a menu button container for icon
+    iconContainer = document.createElement('button');
+    iconContainer.setAttribute('data-sprk-mobile-nav-trigger', 'mobileNav');
+
+    // Create a container div for icon
+    iconContainerDiv = document.createElement('div');
+    iconContainerDiv.classList.add('sprk-c-Masthead__menu');
+
+    // Add iconContainer to iconContainerDiv
+    iconContainerDiv.appendChild(iconContainer);
+
+    // Add iconContainerDiv to mastheadDiv
+    mastheadDiv.appendChild(iconContainerDiv);
+    main.appendChild(mastheadDiv);
+    document.body.appendChild(main);
+  })
+
   afterEach(() => {
-    document.querySelectorAll.restore();
+    if (document.querySelectorAll.restore) {
+      document.querySelectorAll.restore();
+    }
+
+    document.body.innerHTML = '';
   });
 
   it('should call getElements once with the correct selector', () => {
@@ -21,6 +70,80 @@ describe('masthead init', () => {
     masthead();
     expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-mobile-nav-trigger]');
   });
+
+  it('should init aria-expanded as closed correctly', () => {
+    expect(iconContainer.getAttribute('aria-expanded')).toBe(null);
+
+    masthead();
+
+    expect(iconContainer.hasAttribute('aria-expanded')).toBeTruthy();
+    expect(iconContainer.getAttribute('aria-expanded')).toEqual('false');
+  });
+
+  it('should init aria-expanded as open correctly', () => {
+    expect(iconContainer.getAttribute('aria-expanded')).toBe(null);
+    nav.classList.remove('sprk-u-Display--none');
+
+    masthead();
+
+    expect(iconContainer.hasAttribute('aria-expanded')).toBeTruthy();
+    expect(iconContainer.getAttribute('aria-expanded')).toEqual('true');
+  });
+
+  it('should generate a content id and add it to aria-controls when both values are missing', () => {
+
+    expect(nav.getAttribute('id')).toBe(null);
+    expect(iconContainer.getAttribute('aria-controls')).toBe(null);
+
+    masthead();
+
+    expect(nav.hasAttribute('id')).toBeTruthy();
+    expect(iconContainer.hasAttribute('aria-controls')).toBeTruthy();
+    expect(nav.getAttribute('id')).toEqual(iconContainer.getAttribute('aria-controls'));
+  });
+
+  it('should NOT override aria-controls if the value doesnt match the id on the content', () => {
+    nav.setAttribute('id', 'foo');
+    iconContainer.setAttribute('aria-controls', 'bar');
+
+    masthead();
+
+    // it should NOT make them match
+    expect(nav.getAttribute('id')).toEqual('foo');
+    expect(iconContainer.getAttribute('aria-controls')).toEqual('bar');
+  });
+
+  it('should log a console warning if aria-controls has a value but content ID is blank', () => {
+    nav.removeAttribute('id');
+    iconContainer.setAttribute('aria-controls', 'bar');
+
+    masthead();
+
+    expect(nav.getAttribute('id')).toEqual(null);
+    expect(iconContainer.getAttribute('aria-controls')).toEqual('bar');
+  });
+
+  it('should use the provided content id for aria-controls when aria-controls is missing and the id is available', () => {
+    nav.setAttribute('id', 'foo');
+    expect(iconContainer.getAttribute('aria-conrols')).toBe(null);
+
+    masthead();
+
+    expect(iconContainer.getAttribute('aria-controls')).toEqual('foo');
+  })
+
+  it('should not change content id or aria-controls if both are valid', () => {
+    nav.setAttribute('id', 'foo');
+    iconContainer.setAttribute('aria-controls', 'foo');
+
+    expect(nav.getAttribute('id')).toEqual('foo');
+    expect(iconContainer.getAttribute('aria-controls')).toEqual('foo');
+
+    masthead();
+
+    expect(nav.getAttribute('id')).toEqual('foo');
+    expect(iconContainer.getAttribute('aria-controls')).toEqual('foo');
+  })
 });
 
 describe('masthead UI Events tests', () => {
@@ -353,6 +476,14 @@ describe('toggleMobileNav tests', () => {
     ).toBe(false);
     expect(nav.classList.contains('sprk-u-Display--none')).toBe(true);
     expect(icon.classList.contains('sprk-c-Menu__icon--open')).toBe(false);
+  });
+
+  it('should toggle the aria-expanded property on the trigger element', () => {
+    iconContainer.setAttribute('aria-expanded', false);
+    toggleMobileNav(iconContainer, nav, mastheadDiv);
+    expect(iconContainer.getAttribute('aria-expanded')).toEqual('true');
+    toggleMobileNav(iconContainer, nav, mastheadDiv);
+    expect(iconContainer.getAttribute('aria-expanded')).toEqual('false');
   });
 
   it('should add sprk-u-Height--100 to the html element', () => {

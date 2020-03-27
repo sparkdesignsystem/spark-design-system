@@ -23,6 +23,7 @@ const toggleIconType = (toggleIcon, toggleIconUse, openIcon, closeIcon) => {
 };
 
 // Toggle the aria expanded attribute
+// TODO - deprecate this and use the one in html/utilities
 const toggleAriaExpanded = (toggleTrigger) => {
   // If the trigger has the attr then determine toggle state
   if (toggleTrigger.hasAttribute('aria-expanded')) {
