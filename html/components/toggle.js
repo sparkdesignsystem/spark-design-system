@@ -1,5 +1,5 @@
 import 'dom-slider';
-const { slideToggle } = window.domSlider
+const { slideToggle } = window.domSlider;
 import getElements from '../utilities/getElements';
 
 /**
