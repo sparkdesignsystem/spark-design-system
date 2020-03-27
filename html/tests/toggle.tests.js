@@ -110,20 +110,6 @@ describe('Toggle tests', () => {
     containerAccordion.append(contentAccordion);
   });
 
-  it('should add id and aria-controls when not present', () => {
-    console.log(content, 'toggleContent');
-
-    console.log(trigger.getAttribute('aria-controls'), 'aria-controls');
-    trigger.setAttribute('aria-controls', null);
-    console.log(trigger.getAttribute('aria-controls'), 'aria-controls AFTER');
-
-    content.setAttribute('id', null);
-    bindToggleUIEvents(container);
-    bindToggleUIEvents(trigger);
-    expect(trigger.hasAttribute('aria-controls')).toBe(true);
-    expect(content.hasAttribute('id')).toBe(true);
-  });
-
   it('should toggle aria-expanded attribute for toggles', () => {
     toggleAriaExpanded(trigger);
     expect(trigger.hasAttribute('aria-expanded')).toBe(true);

@@ -1,6 +1,6 @@
 import 'dom-slider';
 import getElements from '../utilities/getElements';
-import { uniqueId } from 'lodash';
+import { generateAriaControls } from '../utilities/generateAriaControls';
 
 /**
  *  Toggle JS
@@ -77,34 +77,7 @@ const bindToggleUIEvents = (element) => {
   const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
   const toggleIconUse = element.querySelector('[data-sprk-toggle="accordionIconUseElement"]');
 
-  console.log(toggleContent, 'toggleContent');
-
-  const toggleContentId = toggleContent.getAttribute('id');
-  const toggleTriggerAriaControls = toggleTrigger.getAttribute('aria-controls');
-
-  // If neither toggleTrigger or toggleContent has
-  // id nor aria-controls, the set them with uniqueId
-  if (!toggleContentId && !toggleTriggerAriaControls) {
-    const ariaToggleId = uniqueId('toggle-content-');
-    toggleContent.setAttribute('id', ariaToggleId);
-    toggleTrigger.setAttribute('aria-controls', ariaToggleId);
-  }
-
-  // If toggle content has an id but its trigger doesn't have aria-controls,
-  // add it to the trigger.
-  if (toggleContentId && !toggleTriggerAriaControls) {
-    toggleTrigger.setAttribute('aria-controls', toggleContentId);
-  }
-
-  // Warn if aria-controls and id doesn't match
-  if (toggleContentId !== toggleTriggerAriaControls) {
-    console.warn('Toggle Trigger id and Content Trigger aria-controls do not match.');
-  }
-
-  // Warn if aria-controls exist, but trigger doesn't have matching id
-  if (toggleTriggerAriaControls && !toggleContentId) {
-    console.warn('Toggle Trigger id and Content Trigger aria-controls do not match.');
-  }
+  generateAriaControls(toggleTrigger, toggleContent);
 
   // Hide details content, initially shown for no-JS scenarios
   toggleContent.style.display = 'none';
