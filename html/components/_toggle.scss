@@ -1,0 +1,58 @@
+// ==================================================================
+// Toggle
+// ==================================================================
+
+////
+/// @group Toggle
+////
+
+// Future proofing classes that don't have styles right now but might later.
+// .sprk-c-Toggle
+
+
+.sprk-c-Toggle__trigger {
+  border-bottom: $sprk-link-has-icon-border-bottom;
+  text-decoration: $sprk-link-text-decoration;
+  transition: $sprk-link-transition;
+
+
+  @include TextCrop(
+    $sprk-text-crop-line-height: $sprk-line-height-body-three,
+    $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+    $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+    $sprk-text-crop-crop-font-size: (
+      strip-unit($sprk-font-size-body-three) * 16
+    ),
+    $sprk-text-crop-crop-line-height: $sprk-line-height-body-three
+  );
+
+  // .sprk-u-TextCrop--none
+  &::before,
+  &::after {
+    content: none !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  color: $sprk-color-body-three;
+  font-family: $sprk-font-family-body-three;
+  font-size: $sprk-font-size-body-three;
+  font-weight: $sprk-font-weight-body-three;
+
+
+
+  // Button User Agent Resets
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom: $sprk-link-has-icon-hover-border-bottom;
+    color: $sprk-link-has-icon-hover-color-text;
+  }
+
+}
