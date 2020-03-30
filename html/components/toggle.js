@@ -1,6 +1,7 @@
 import 'dom-slider';
 const { slideToggle } = window.domSlider;
 import getElements from '../utilities/getElements';
+import { generateAriaControls } from '../utilities/generateAriaControls';
 
 /**
  *  Toggle JS
@@ -76,6 +77,8 @@ const bindToggleUIEvents = (element) => {
   const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
   const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
   const toggleIconUse = element.querySelector('[data-sprk-toggle="accordionIconUseElement"]');
+
+  generateAriaControls(toggleTrigger, toggleContent);
 
   // Hide details content, initially shown for no-JS scenarios
   toggleContent.style.display = 'none';
