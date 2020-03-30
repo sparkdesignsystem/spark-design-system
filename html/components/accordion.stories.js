@@ -35,7 +35,7 @@ export const defaultStory = () => {
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
     <button
       aria-controls="details-one"
-      class="sprk-c-Accordion__summary sprk-u-Width-100"
+      class="sprk-c-Accordion__summary"
       data-id="accordion-item-1"
       data-analytics="analytics_string_goes_here"
       data-sprk-toggle="trigger"
@@ -88,7 +88,7 @@ export const defaultStory = () => {
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
     <button
       aria-controls="details-two"
-      class="sprk-c-Accordion__summary sprk-u-Width-100"
+      class="sprk-c-Accordion__summary"
       data-id="accordion-item-2"
       data-analytics="analytics_string_goes_here"
       data-sprk-toggle="trigger"
@@ -128,7 +128,7 @@ export const defaultStory = () => {
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
     <button
       aria-controls="details-three"
-      class="sprk-c-Accordion__summary sprk-u-Width-100"
+      class="sprk-c-Accordion__summary"
       data-id="accordion-item-3"
       data-analytics="analytics_string_goes_here"
       data-sprk-toggle="trigger"
@@ -141,7 +141,7 @@ export const defaultStory = () => {
         <svg
           class="
             sprk-c-Icon sprk-c-Icon--toggle
-            sprk-c-Icon--l sprk-c-Accordion__icon 
+            sprk-c-Icon--l sprk-c-Accordion__icon
           "
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
