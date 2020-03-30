@@ -6,12 +6,13 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
   selector: 'sprk-accordion-item',
   template: `
     <li [ngClass]="getClasses()">
-      <a
+      <button
         sprkLink
         variant="unstyled"
         href="#"
         [attr.aria-controls]="accordion_controls_id"
-        class="sprk-c-Accordion__summary"
+        [attr.aria-expanded]="isOpen"
+        class="sprk-c-Accordion__summary sprk-u-Width-100"
         [analyticsString]="analyticsString"
         [idString]="idString"
         (click)="toggleAccordion($event)"
@@ -31,7 +32,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
           }}"
           [iconType]="currentIconType"
         ></sprk-icon>
-      </a>
+      </button>
 
       <div [@toggleContent]="animState">
         <div
