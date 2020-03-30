@@ -8,7 +8,7 @@ describe('SprkAccordionItemComponent', () => {
   let component: SprkAccordionItemComponent;
   let fixture: ComponentFixture<SprkAccordionItemComponent>;
   let accordionItemElement: HTMLElement;
-  let accordionItemLinkElement: HTMLElement;
+  let accordionItemTriggerElement: HTMLElement;
   let accordionHeadingElement: HTMLElement;
   let accordionDetailsElement: HTMLElement;
 
@@ -27,7 +27,7 @@ describe('SprkAccordionItemComponent', () => {
     fixture = TestBed.createComponent(SprkAccordionItemComponent);
     component = fixture.componentInstance;
     accordionItemElement = fixture.nativeElement.querySelector('li');
-    accordionItemLinkElement = fixture.nativeElement.querySelector('a');
+    accordionItemTriggerElement = fixture.nativeElement.querySelector('button');
     accordionHeadingElement = fixture.nativeElement.querySelector('span');
     accordionDetailsElement = fixture.nativeElement.querySelector('div');
   });
@@ -55,7 +55,7 @@ describe('SprkAccordionItemComponent', () => {
   it('should add an analytics data attribute if analyticsString has a value', () => {
     component.analyticsString = 'Link Action';
     fixture.detectChanges();
-    expect(accordionItemLinkElement.getAttribute('data-analytics')).toEqual(
+    expect(accordionItemTriggerElement.getAttribute('data-analytics')).toEqual(
       'Link Action'
     );
   });
@@ -77,9 +77,9 @@ describe('SprkAccordionItemComponent', () => {
   });
 
   it('clicking should toggle isOpen', () => {
-    accordionItemLinkElement.click();
+    accordionItemTriggerElement.click();
     expect(component.isOpen).toEqual(true);
-    accordionItemLinkElement.click();
+    accordionItemTriggerElement.click();
     expect(component.isOpen).toEqual(false);
   });
 
@@ -101,7 +101,7 @@ describe('SprkAccordionItemComponent', () => {
     const testString = 'element-id';
     component.idString = testString;
     fixture.detectChanges();
-    expect(accordionItemLinkElement.getAttribute('data-id')).toEqual(
+    expect(accordionItemTriggerElement.getAttribute('data-id')).toEqual(
       testString
     );
   });
@@ -118,5 +118,40 @@ describe('SprkAccordionItemComponent', () => {
     expect(
       accordionItemElement.classList.contains('sprk-c-Accordion__item--active')
     ).toEqual(true);
+  });
+
+  it('should render with a button element', () => {
+    fixture.detectChanges();
+    expect(accordionItemTriggerElement).toBeTruthy();
+  });
+
+  it('should have the aria-controls attribute', () => {
+    fixture.detectChanges();
+
+    const ariaControls = accordionItemTriggerElement.getAttribute('aria-controls');
+
+    expect(ariaControls).toBeTruthy();
+
+    const contentId = fixture.nativeElement.querySelector('.sprk-c-Accordion__content').getAttribute('id');
+    expect(contentId).toBeTruthy();
+
+    expect(ariaControls).toEqual(contentId);
+  });
+
+  it('should have the aria-expanded attribute', () => {
+    component.isOpen = false;
+    fixture.detectChanges();
+
+    expect(accordionItemTriggerElement.getAttribute('aria-expanded')).toEqual('false');
+
+    accordionItemTriggerElement.click();
+    fixture.detectChanges();
+
+    expect(accordionItemTriggerElement.getAttribute('aria-expanded')).toEqual('true');
+
+    accordionItemTriggerElement.click();
+    fixture.detectChanges();
+
+    expect(accordionItemTriggerElement.getAttribute('aria-expanded')).toEqual('false');
   });
 });
