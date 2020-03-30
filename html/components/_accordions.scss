@@ -2,7 +2,7 @@
 // Accordions
 // ==================================================================
 
-//// 
+////
 /// @group accordion
 ////
 
@@ -39,6 +39,9 @@
   display: flex;
   padding: $sprk-accordion-summary-padding;
   text-decoration: none;
+  text-align: left;
+  border: none;
+  background-color: transparent;
 
   &:hover {
     .sprk-c-Accordion__heading {
