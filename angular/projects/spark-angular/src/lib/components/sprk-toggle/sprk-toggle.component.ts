@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { toggleAnimations } from './sprk-toggle-animations';
+import { generateAriaControls } from '../../../../../../../html/utilities/generateAriaControls';
 
 @Component({
   selector: 'sprk-toggle',
@@ -16,6 +17,7 @@ import { toggleAnimations } from './sprk-toggle-animations';
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
         [analyticsString]="analyticsString"
         href="#"
+        data-sprk-toggle="trigger"
       >
         <sprk-icon
           iconType="chevron-down-circle-two-color"
@@ -26,8 +28,13 @@ import { toggleAnimations } from './sprk-toggle-animations';
         {{ title }}
       </button>
 
-      <div [@toggleContent]="animState">
-        <div class="sprk-u-pts sprk-u-pbs"><ng-content></ng-content></div>
+      <div
+        [@toggleContent]="animState"
+        data-sprk-toggle="content"
+      >
+        <div class="sprk-u-pts sprk-u-pbs">
+          <ng-content></ng-content>
+        </div>
       </div>
     </div>
   `,
@@ -127,7 +134,13 @@ export class SprkToggleComponent implements OnInit {
     return classArray.join(' ');
   }
 
+
   ngOnInit() {
     this.toggleState();
+
+    // Get the toggle's trigger and content elements
+    const toggleTrigger = document.querySelector('[data-sprk-toggle="trigger"]');
+    const toggleContent = document.querySelector('[data-sprk-toggle="content"]');
+    generateAriaControls(toggleTrigger, toggleContent, 'toggle');
   }
 }
