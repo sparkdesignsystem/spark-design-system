@@ -39,9 +39,9 @@
   display: flex;
   padding: $sprk-accordion-summary-padding;
   text-decoration: none;
-  text-align: left;
-  border: none;
-  background-color: transparent;
+  text-align: $sprk-accordion-summary-text-align;
+  border: $sprk-accordion-summary-border;
+  background-color: $sprk-accordion-summary-background-color;
 
   &:hover {
     .sprk-c-Accordion__heading {
