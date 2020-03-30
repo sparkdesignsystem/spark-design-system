@@ -12,6 +12,7 @@ import { SprkButtonDirective } from './sprk-button.directive';
       variant="secondary"
       analyticsString="test"
       idString="id-test"
+      spinningAriaLabel="custom"
       [isSpinning]="spinnerVal">
       Test 3
     </button>
@@ -83,6 +84,24 @@ describe('Spark Button Directive', () => {
 
   it('should add the value of idString to data-id', () => {
     expect(button3Element.getAttribute('data-id')).toBe('id-test');
+  });
+
+  it('should add the value of spinningAriaLabel to aria-label when isSpinning=true', () => {
+    const spinnerEl = button3Element.querySelector('.sprk-c-Spinner');
+    expect(spinnerEl).toBeNull();
+    component.spinnerVal = true;
+    fixture.detectChanges();
+    const spinner = button3Element.querySelector('.sprk-c-Spinner');
+    expect(spinner).toBeTruthy();
+    expect(button3Element.getAttribute('aria-label')).toBe('custom');
+  });
+
+  it('should add the value of "Loading" to aria-label when isSpinning=true', () => {
+    expect(button2Element.getAttribute('aria-label')).toBe('Loading');
+  });
+
+  it('should not add the spinning aria-label when isSpinning=false', () => {
+    expect(button1Element.hasAttribute('aria-label')).toBe(false);
   });
 
   // This test makes sure the new variant @Input isn't a breaking change

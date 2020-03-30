@@ -18,7 +18,9 @@ const getSpinnerClasses = (options) => {
 const setSpinning = (element, options) => {
   const el = element;
   const width = element.offsetWidth;
+  const spinningAriaLabel = options.ariaLabel || 'Loading';
   el.setAttribute('data-sprk-spinner-text', el.textContent);
+  el.setAttribute('aria-label', spinningAriaLabel);
   el.innerHTML = `<div class="${getSpinnerClasses(options)}"></div>`;
   el.setAttribute('data-sprk-has-spinner', 'true');
   el.setAttribute('style', `width: ${width}px`);
@@ -29,6 +31,7 @@ const cancelSpinning = (element) => {
   el.innerHTML = '';
   el.textContent = el.getAttribute('data-sprk-spinner-text') || '';
   el.removeAttribute('data-sprk-has-spinner');
+  el.removeAttribute('aria-label');
   el.removeAttribute('style');
 };
 
@@ -37,6 +40,7 @@ const spinners = () => {
     const options = {};
     options.size = spinnerContainer.getAttribute('data-sprk-spinner-size');
     options.lightness = spinnerContainer.getAttribute('data-sprk-spinner-lightness');
+    options.ariaLabel = spinnerContainer.getAttribute('data-sprk-spinner-aria-label');
 
     spinnerContainer.addEventListener('click', (e) => {
       if (

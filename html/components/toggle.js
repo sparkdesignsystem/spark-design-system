@@ -1,4 +1,5 @@
 import 'dom-slider';
+const { slideToggle } = window.domSlider;
 import getElements from '../utilities/getElements';
 
 /**
@@ -22,6 +23,7 @@ const toggleIconType = (toggleIcon, toggleIconUse, openIcon, closeIcon) => {
 };
 
 // Toggle the aria expanded attribute
+// TODO - deprecate this and use the one in html/utilities
 const toggleAriaExpanded = (toggleTrigger) => {
   // If the trigger has the attr then determine toggle state
   if (toggleTrigger.hasAttribute('aria-expanded')) {
@@ -59,7 +61,7 @@ const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) =>
   if (isAccordion && !isMastheadAccordion) toggleContent.parentElement.classList.toggle('sprk-c-Accordion__item--open');
   if (isMastheadAccordion) toggleContent.parentElement.classList.toggle('sprk-c-MastheadAccordion__item--open');
 
-  toggleContent.slideToggle(300).then(() => {
+  slideToggle({ element: toggleContent }).then(() => {
     // Enable clicks after animation runs
     trigger.style.pointerEvents = 'auto';
   });

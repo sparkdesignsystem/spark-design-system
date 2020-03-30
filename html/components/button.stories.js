@@ -25,6 +25,11 @@ always use a \`<button>\` element.
 must include a \`title=””\` attribute.
 - If a Button only includes an Icon with no text,
 alternative text must be provided.
+- If the Button has a spinner setup, the \`aria-label\`
+will be set to 'Loading' when the button is
+clicked unless you supply a custom
+string value to the \`data-sprk-spinner-aria-label\`
+attribute.
 
 ##### Guidelines
 - If a Button is in a form, but is not intended to
@@ -72,19 +77,42 @@ export const disabled = () => (
 
 export const loading = () => (
   `
-  <button class="sprk-c-Button" data-sprk-spinner="click" data-id="button-spinner">
+  <button
+    class="sprk-c-Button"
+    data-sprk-spinner="click"
+    data-id="button-spinner"
+    aria-label="Loading"
+  >
     <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
   </button>
   `
 );
 
+loading.story = {
+  parameters: {
+    jest: ['spinners'],
+  }
+};
+
 export const loadingSecondary = () => (
   `
-  <button class="sprk-c-Button sprk-c-Button--secondary" data-sprk-spinner="click" data-id="button-spinner-dark">
+  <button
+    class="sprk-c-Button sprk-c-Button--secondary"
+    data-sprk-spinner="click"
+    data-sprk-spinner-lightness="dark"
+    data-id="button-spinner-dark"
+    aria-label="Loading"
+  >
     <div class="sprk-c-Spinner sprk-c-Spinner--dark sprk-c-Spinner--circle"></div>
   </button>
   `
 );
+
+loadingSecondary.story = {
+  parameters: {
+    jest: ['spinners'],
+  }
+};
 
 export const fullWidthAtSmallViewport = () => (
   `
@@ -93,6 +121,7 @@ export const fullWidthAtSmallViewport = () => (
   </button>
   `
 );
+
 fullWidthAtSmallViewport.story = {
   name: 'Full Width at Small Viewport',
 };
@@ -104,6 +133,7 @@ export const fullWidthAtExtraSmallViewport = () => (
   </button>
   `
 );
+
 fullWidthAtExtraSmallViewport.story = {
   name: 'Full Width at Extra Small Viewport',
 };
