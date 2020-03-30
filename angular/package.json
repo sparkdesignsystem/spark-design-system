@@ -36,6 +36,7 @@
     "rxjs": "~6.5.4",
     "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9",
     "tslib": "^1.10.0",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
