@@ -33,7 +33,7 @@ export const defaultStory = () => {
   return `
 <ul class="sprk-c-Accordion sprk-o-VerticalList">
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
-    <a
+    <button
       aria-controls="details-one"
       class="sprk-c-Accordion__summary"
       data-id="accordion-item-1"
@@ -57,7 +57,7 @@ export const defaultStory = () => {
             xlink:href="#chevron-up-circle-two-color"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
-    </a>
+    </button>
 
     <div
       data-sprk-toggle="content"
@@ -86,7 +86,7 @@ export const defaultStory = () => {
   </li>
 
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
-    <a
+    <button
       aria-controls="details-two"
       class="sprk-c-Accordion__summary"
       data-id="accordion-item-2"
@@ -111,7 +111,7 @@ export const defaultStory = () => {
             xlink:href="#chevron-up-circle-two-color"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
-    </a>
+    </button>
 
     <div
       data-sprk-toggle="content"
@@ -126,7 +126,7 @@ export const defaultStory = () => {
   </li>
 
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
-    <a
+    <button
       aria-controls="details-three"
       class="sprk-c-Accordion__summary"
       data-id="accordion-item-3"
@@ -149,7 +149,7 @@ export const defaultStory = () => {
             xlink:href="#chevron-up-circle-two-color"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
-    </a>
+    </button>
 
     <div
       data-sprk-toggle="content"
