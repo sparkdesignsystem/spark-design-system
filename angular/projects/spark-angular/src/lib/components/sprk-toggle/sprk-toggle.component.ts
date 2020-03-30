@@ -8,7 +8,7 @@ import { toggleAnimations } from './sprk-toggle-animations';
       class="sprk-u-Overflow--hidden {{ additionalClasses }}"
       [attr.data-id]="idString"
     >
-      <a
+      <button
         sprkLink
         variant="icon"
         [ngClass]="getClasses()"
@@ -24,7 +24,7 @@ import { toggleAnimations } from './sprk-toggle-animations';
           }} sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
         ></sprk-icon>
         {{ title }}
-      </a>
+      </button>
 
       <div [@toggleContent]="animState">
         <div class="sprk-u-pts sprk-u-pbs"><ng-content></ng-content></div>
@@ -122,6 +122,7 @@ export class SprkToggleComponent implements OnInit {
     const classArray: string[] = [
       this.titleFontClass,
       'sprk-u-TextCrop--none',
+      'sprk-u-BareButton',
     ];
     return classArray.join(' ');
   }
