@@ -8,6 +8,8 @@ describe('SprkToggleComponent', () => {
   let component: SprkToggleComponent;
   let fixture: ComponentFixture<SprkToggleComponent>;
   let element: HTMLElement;
+  let triggerElement;
+  let contentElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -24,6 +26,8 @@ describe('SprkToggleComponent', () => {
     fixture = TestBed.createComponent(SprkToggleComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');
+    triggerElement = element.querySelector('button');
+    contentElement = element.querySelector('[data-sprk-toggle="content"]');
   });
 
   it('should create itself', () => {
@@ -31,7 +35,7 @@ describe('SprkToggleComponent', () => {
   });
 
   it('clicking should show body text', () => {
-    element.querySelector('a').click();
+    element.querySelector('button').click();
     fixture.detectChanges();
     expect(element.querySelector('div.sprk-u-pts.sprk-u-pbs')).toBeTruthy();
   });
@@ -40,17 +44,17 @@ describe('SprkToggleComponent', () => {
     const str = 'One';
     component.analyticsString = str;
     fixture.detectChanges();
-    expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(
+    expect(element.querySelector('button').getAttribute('data-analytics')).toEqual(
       str
     );
   });
 
   it('should add icon classes to icon when toggle is opened', () => {
     component.title = 'placeholder';
-    element.querySelector('a').click();
+    element.querySelector('button').click();
     fixture.detectChanges();
     expect(
-      element.querySelector('a .sprk-c-Icon').classList.toString()
+      element.querySelector('button .sprk-c-Icon').classList.toString()
     ).toEqual(
       'sprk-c-Icon sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open'
     );
@@ -58,11 +62,11 @@ describe('SprkToggleComponent', () => {
 
   it('should add icon classes to icon when the toggle is opened and then closed', () => {
     component.title = 'placeholder';
-    element.querySelector('a').click();
-    element.querySelector('a').click();
+    element.querySelector('button').click();
+    element.querySelector('button').click();
     fixture.detectChanges();
     expect(
-      element.querySelector('a .sprk-c-Icon').classList.toString()
+      element.querySelector('button .sprk-c-Icon').classList.toString()
     ).toEqual('sprk-c-Icon sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle');
   });
 
@@ -85,5 +89,53 @@ describe('SprkToggleComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(element.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should generate values if neither aria-controls nor id is present', () => {
+    triggerElement.removeAttribute('aria-controls');
+    contentElement.removeAttribute('id');
+    fixture.detectChanges();
+
+    expect(triggerElement.hasAttribute('aria-controls')).toEqual(true);
+    expect(contentElement.hasAttribute('id')).toEqual(true);
+    expect(triggerElement.getAttribute('aria-controls')).toEqual(contentElement.getAttribute('id'));
+  });
+
+  it('should not change values if aria-controls is provided but id is missing', () => {
+    triggerElement.setAttribute('aria-controls', 'foo');
+    contentElement.removeAttribute('id');
+    fixture.detectChanges();
+
+    expect(triggerElement.getAttribute('aria-controls')).toEqual('foo');
+    expect(contentElement.hasAttribute('id')).toEqual(false);
+  });
+
+  it('should use the provided value when aria-controls is missing but id is present', () => {
+    triggerElement.removeAttribute('aria-controls');
+    contentElement.setAttribute('id', 'foo');
+    expect(triggerElement.hasAttribute('aria-controls')).toEqual(false);
+    fixture.detectChanges();
+
+    expect(triggerElement.hasAttribute('aria-controls')).toEqual(true);
+    expect(triggerElement.getAttribute('aria-controls')).toEqual('foo');
+    expect(contentElement.getAttribute('id')).toEqual('foo');
+  });
+
+  it('should not change values if aria-controls and are both present but have different values', () => {
+    triggerElement.setAttribute('aria-controls', 'foo');
+    contentElement.setAttribute('id', 'bar');
+    fixture.detectChanges();
+
+    expect(triggerElement.getAttribute('aria-controls')).toEqual('foo');
+    expect(contentElement.getAttribute('id')).toEqual('bar');
+  });
+
+  it('should not change values if aria-controls and are both present and have correct values', () => {
+    triggerElement.setAttribute('aria-controls', 'foo');
+    contentElement.setAttribute('id', 'foo');
+    fixture.detectChanges();
+
+    expect(triggerElement.getAttribute('aria-controls')).toEqual('foo');
+    expect(contentElement.getAttribute('id')).toEqual('foo');
   });
 });

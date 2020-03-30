@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { toggleAnimations } from './sprk-toggle-animations';
-import { generateAriaControls } from '../../../../../../../html/utilities/generateAriaControls';
+import { uniqueId } from 'lodash';
 
 @Component({
   selector: 'sprk-toggle',
@@ -134,6 +134,34 @@ export class SprkToggleComponent implements OnInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
+  generateAriaControls(triggerElement, contentElement): void {
+    const triggerAriaControls = triggerElement.getAttribute('aria-controls');
+    let contentId = contentElement.getAttribute('id');
+
+    // Warn if aria-controls exists but the id does not
+    if (triggerAriaControls && !contentId) {
+      console.warn(`Spark Design System Warning - The component with aria-controls="${triggerAriaControls}" expects a matching id on the content element.`);
+      return;
+    }
+
+    // Warn if aria-controls and id both exist but don't match
+    if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
+      console.warn(`Spark Design System Warning - The value of aria-controls ("${triggerAriaControls}") should match the id of the content element ("${contentId}").`);
+      return;
+    }
+
+    // If we don't have a valid id, generate one with lodash
+    if (!contentId) {
+      contentId = uniqueId(`sprk_toggle_content_`);
+      contentElement.setAttribute('id', contentId);
+    }
+
+    // set the value of aria-controls
+    triggerElement.setAttribute('aria-controls', contentId);
+  }
 
   ngOnInit() {
     this.toggleState();
@@ -141,6 +169,6 @@ export class SprkToggleComponent implements OnInit {
     // Get the toggle's trigger and content elements
     const toggleTrigger = document.querySelector('[data-sprk-toggle="trigger"]');
     const toggleContent = document.querySelector('[data-sprk-toggle="content"]');
-    generateAriaControls(toggleTrigger, toggleContent, 'toggle');
+    this.generateAriaControls(toggleTrigger, toggleContent);
   }
 }
