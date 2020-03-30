@@ -1383,6 +1383,10 @@ $sprk-accordion-content-padding: 0 0 $sprk-space-l !default;
 /// The background color used for hover
 /// and active on items in the Accordion.
 $sprk-accordion-active-background-color: $sprk-gray !default;
+/// The text decoration of the Accordion item summary.
+$sprk-accordion-summary-text-decoration: none;
+/// The text decoration of the Accordion item summary when active.
+$sprk-accordion-summary-active-text-decoration: none;
 
 //
 // Toggle
