@@ -41,13 +41,13 @@
   display: flex;
   padding: $sprk-accordion-summary-padding;
   text-align: $sprk-accordion-summary-text-align;
-  text-decoration: none;
+  text-decoration: $sprk-accordion-summary-text-decoration;
   width: 100%;
 
   &:hover {
     .sprk-c-Accordion__heading {
       color: $sprk-accordion-summary-active-color;
-      text-decoration: none;
+      text-decoration: $sprk-accordion-summary-active-text-decoration;
     }
   }
 }
