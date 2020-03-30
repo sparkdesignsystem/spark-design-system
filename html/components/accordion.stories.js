@@ -34,7 +34,6 @@ export const defaultStory = () => {
 <ul class="sprk-c-Accordion sprk-o-VerticalList">
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
     <button
-      aria-controls="details-one"
       class="sprk-c-Accordion__summary"
       data-id="accordion-item-1"
       data-analytics="analytics_string_goes_here"
@@ -59,9 +58,7 @@ export const defaultStory = () => {
         </svg>
     </button>
 
-    <div
-      data-sprk-toggle="content"
-      id="details-one">
+    <div data-sprk-toggle="content">
       <div class="sprk-c-Accordion__content sprk-o-Stack sprk-o-Stack--medium">
         <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
           This is an example of multiple HTML
@@ -87,7 +84,6 @@ export const defaultStory = () => {
 
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
     <button
-      aria-controls="details-two"
       class="sprk-c-Accordion__summary"
       data-id="accordion-item-2"
       data-analytics="analytics_string_goes_here"
@@ -113,9 +109,7 @@ export const defaultStory = () => {
         </svg>
     </button>
 
-    <div
-      data-sprk-toggle="content"
-      id="details-two">
+    <div data-sprk-toggle="content">
       <div class="sprk-c-Accordion__content sprk-b-TypeBodyTwo">
         This is an example of accordion content.
         This is an example of accordion content.
@@ -127,7 +121,6 @@ export const defaultStory = () => {
 
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
     <button
-      aria-controls="details-three"
       class="sprk-c-Accordion__summary"
       data-id="accordion-item-3"
       data-analytics="analytics_string_goes_here"
@@ -151,9 +144,7 @@ export const defaultStory = () => {
         </svg>
     </button>
 
-    <div
-      data-sprk-toggle="content"
-      id="details-three">
+    <div data-sprk-toggle="content">
       <div class="sprk-c-Accordion__content sprk-b-TypeBodyTwo">
         This is an example of accordion content.
         This is an example of accordion content.
