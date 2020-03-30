@@ -23,18 +23,12 @@ export const defaultStory = () => {
 
   return `
     <div
+      class="sprk-c-Toggle"
       data-sprk-toggle="container"
       data-id="toggle-1"
     >
      <button
-        class="
-          sprk-b-TypeBodyThree
-          sprk-u-BareButton
-          sprk-u-TextCrop--none
-          sprk-b-Link
-          sprk-b-Link--has-icon
-          sprk-b-Link--simple
-        "
+        class="sprk-c-Toggle__trigger"
         data-sprk-toggle="trigger"
         href="#"
       >
@@ -53,7 +47,10 @@ export const defaultStory = () => {
         My Disclaimer
       </button>
 
-      <div data-sprk-toggle="content">
+      <div
+        class="sprk-c-Toggle__content"
+        data-sprk-toggle="content"
+      >
         <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
           This is an example of disclaimer content.
           The aria-expanded="true" attribute

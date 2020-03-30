@@ -41,7 +41,6 @@
   &:hover,
   &:active,
   &:focus {
-    transition: $sprk-link-transition;
     color: $sprk-link-simple-hover-color;
     border-bottom: $sprk-link-simple-hover-border-bottom;
   }
