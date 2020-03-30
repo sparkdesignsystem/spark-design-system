@@ -59,13 +59,17 @@ describe('Toggle tests', () => {
     containerAccordion.setAttribute('data-sprk-toggle', 'container');
     containerAccordion.classList.add('sprk-c-Accordion__item');
 
-    trigger = document.createElement('a');
+    trigger = document.createElement('button');
     trigger.setAttribute('data-sprk-toggle', 'trigger');
     trigger.setAttribute('aria-expanded', 'false');
+    trigger.setAttribute('aria-controls', 'toggle-1');
     trigger.textContent = 'My Toggle Link Text';
     trigger.classList.add(
       'sprk-b-TypeBodyThree',
+      'sprk-u-BareButton',
+      'sprk-u-TextCrop--none',
       'sprk-b-Link',
+      'sprk-b-Link--has-icon',
       'sprk-b-Link--simple',
     );
 
@@ -82,6 +86,7 @@ describe('Toggle tests', () => {
 
     content = document.createElement('div');
     content.setAttribute('data-sprk-toggle', 'content');
+    content.setAttribute('id', 'toggle-1');
     content.textContent = 'This is the toggle content..';
     content.classList.add('sprk-b-TypeBodyFour', 'sprk-u-pts');
     content.slideToggle = () => new Promise((resolve) => {

@@ -794,6 +794,18 @@
   height: auto;
 }
 
+/// For use with elements that are semantically buttons, but
+/// don't need button styles. Example: Toggle triggers are semantically
+//  buttons, but don't need button styles.
+/// @group multi-accessibility
+.sprk-u-BareButton {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  // Other Button resets are in _reset.scss
+}
+
 //
 // layout
 /// When placed on a container, its children will align
