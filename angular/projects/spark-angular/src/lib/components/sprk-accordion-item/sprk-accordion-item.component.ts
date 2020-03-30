@@ -12,7 +12,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
         href="#"
         [attr.aria-controls]="accordion_controls_id"
         [attr.aria-expanded]="isOpen"
-        class="sprk-c-Accordion__summary sprk-u-Width-100"
+        class="sprk-c-Accordion__summary"
         [analyticsString]="analyticsString"
         [idString]="idString"
         (click)="toggleAccordion($event)"
