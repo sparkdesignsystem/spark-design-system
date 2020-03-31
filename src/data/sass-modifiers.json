@@ -11,7 +11,7 @@
       "value": "&::before {\n    display: none;\n  }",
       "line": {
         "start": 18,
-        "end": 61
+        "end": 62
       }
     },
     "group": [
@@ -1794,12 +1794,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 22,
-      "end": 24
+      "start": 18,
+      "end": 20
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-Display--none",
+      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -1818,12 +1818,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 18,
-      "end": 20
+      "start": 22,
+      "end": 24
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
+      "name": ".sprk-u-Display--none",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -2406,14 +2406,14 @@
     }
   },
   {
-    "description": "Adds the styles for the Stacked Highlight Board variant.\n",
+    "description": "Adds the styles for Highlight Boards with an image.\n",
     "commentRange": {
-      "start": 49,
-      "end": 50
+      "start": 56,
+      "end": 57
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-HighlightBoard--stacked",
+      "name": ".sprk-c-HighlightBoard--has-image",
       "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
       "line": {
         "start": 59,
@@ -2430,14 +2430,14 @@
     }
   },
   {
-    "description": "Adds the styles for Highlight Boards with an image.\n",
+    "description": "Adds the styles for the Stacked Highlight Board variant.\n",
     "commentRange": {
-      "start": 56,
-      "end": 57
+      "start": 49,
+      "end": 50
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-HighlightBoard--has-image",
+      "name": ".sprk-c-HighlightBoard--stacked",
       "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
       "line": {
         "start": 59,
@@ -2502,14 +2502,14 @@
     }
   },
   {
-    "description": "Adds the fill and stroke properties\nset to the current color of its container.\n",
+    "description": "Adds styles for small filled Icons.\n",
     "commentRange": {
-      "start": 77,
-      "end": 78
+      "start": 74,
+      "end": 75
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Icon--stroke-current-color",
+      "name": ".sprk-c-Icon--filled-small",
       "value": "stroke: currentColor;",
       "line": {
         "start": 79,
@@ -2526,14 +2526,14 @@
     }
   },
   {
-    "description": "Adds styles for small filled Icons.\n",
+    "description": "Adds the fill and stroke properties\nset to the current color of its container.\n",
     "commentRange": {
-      "start": 74,
-      "end": 75
+      "start": 77,
+      "end": 78
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Icon--filled-small",
+      "name": ".sprk-c-Icon--stroke-current-color",
       "value": "stroke: currentColor;",
       "line": {
         "start": 79,
@@ -2918,10 +2918,10 @@
     "context": {
       "type": "css",
       "name": ".sprk-b-Link--simple",
-      "value": "color: $sprk-link-simple-color;\n  border-bottom: $sprk-link-simple-border-bottom;\n  font-weight: $sprk-link-simple-font-weight;\n\n  &:visited {\n    border-bottom: $sprk-link-simple-visited-border-bottom;\n  }\n\n  &:hover,\n  &:active,\n  &:focus {\n    transition: $sprk-link-transition;\n    color: $sprk-link-simple-hover-color;\n    border-bottom: $sprk-link-simple-hover-border-bottom;\n  }",
+      "value": "color: $sprk-link-simple-color;\n  border-bottom: $sprk-link-simple-border-bottom;\n  font-weight: $sprk-link-simple-font-weight;\n\n  &:visited {\n    border-bottom: $sprk-link-simple-visited-border-bottom;\n  }\n\n  &:hover,\n  &:active,\n  &:focus {\n    color: $sprk-link-simple-hover-color;\n    border-bottom: $sprk-link-simple-hover-border-bottom;\n  }",
       "line": {
         "start": 32,
-        "end": 102
+        "end": 101
       }
     },
     "group": [
@@ -2936,16 +2936,16 @@
   {
     "description": "Used when a link is next to an icon. There will not be an underline.\n",
     "commentRange": {
-      "start": 50,
-      "end": 50
+      "start": 49,
+      "end": 49
     },
     "context": {
       "type": "css",
       "name": ".sprk-b-Link--has-icon",
       "value": "border-bottom: $sprk-link-has-icon-border-bottom;\n  font-weight: $sprk-link-has-icon-font-weight;\n\n  &:hover,\n  &:active,\n  &:focus,\n  &:visited {\n    border-bottom: $sprk-link-has-icon-hover-border-bottom;\n    color: $sprk-link-has-icon-hover-color-text;\n  }",
       "line": {
-        "start": 51,
-        "end": 102
+        "start": 50,
+        "end": 101
       }
     },
     "group": [
@@ -2960,16 +2960,16 @@
   {
     "description": "Disabled links have a muted color and cannot be interacted with.\n",
     "commentRange": {
-      "start": 70,
-      "end": 71
+      "start": 69,
+      "end": 70
     },
     "context": {
       "type": "css",
       "name": ".sprk-b-Link--disabled",
       "value": "color: $sprk-link-disabled-color;\n  stroke: $sprk-link-disabled-color;\n  fill: $sprk-link-has-icon-fill;\n  pointer-events: none;\n  border-bottom: $sprk-link-disabled-border-bottom;\n  font-weight: $sprk-link-disabled-font-weight;\n\n  &:visited,\n  &:hover,\n  &:active,\n  &:focus {\n    border-bottom: $sprk-link-disabled-hover-border-bottom;\n    color: $sprk-link-disabled-color;\n  }",
       "line": {
-        "start": 73,
-        "end": 102
+        "start": 72,
+        "end": 101
       }
     },
     "group": [
@@ -2984,16 +2984,16 @@
   {
     "description": "Removes the underline from links on initial state\nand on hover, active, focus, and visited states.\n",
     "commentRange": {
-      "start": 90,
-      "end": 91
+      "start": 89,
+      "end": 90
     },
     "context": {
       "type": "css",
       "name": ".sprk-b-Link--plain",
       "value": "border: $sprk-link-plain-border;\n\n  &:hover,\n  &:active,\n  &:focus,\n  &:visited {\n    border: $sprk-link-plain-visited-border;\n  }",
       "line": {
-        "start": 92,
-        "end": 102
+        "start": 91,
+        "end": 101
       }
     },
     "group": [
@@ -3222,30 +3222,6 @@
     }
   },
   {
-    "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
-    "commentRange": {
-      "start": 560,
-      "end": 563
-    },
-    "context": {
-      "type": "css",
-      "name": "sprk-u-MarginAll--d",
-      "value": "padding-top: $sprk-space-misc-a !important;",
-      "line": {
-        "start": 569,
-        "end": 841
-      }
-    },
-    "group": [
-      "misc-spacing"
-    ],
-    "access": "public",
-    "file": {
-      "path": "utilities/_utilities.scss",
-      "name": "_utilities.scss"
-    }
-  },
-  {
     "description": "Sets the bottom margin to the current value of\n`$sprk-space-misc-a` (`24px`).\n",
     "commentRange": {
       "start": 550,
@@ -3278,6 +3254,30 @@
     "context": {
       "type": "css",
       "name": "sprk-u-PaddingHorizontal--b",
+      "value": "padding-top: $sprk-space-misc-a !important;",
+      "line": {
+        "start": 569,
+        "end": 841
+      }
+    },
+    "group": [
+      "misc-spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
+    "commentRange": {
+      "start": 560,
+      "end": 563
+    },
+    "context": {
+      "type": "css",
+      "name": "sprk-u-MarginAll--d",
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
         "start": 569,
@@ -19022,7 +19022,7 @@
     }
   },
   {
-    "description": "The background color of the Accordion item summary\n",
+    "description": "The background color of the Accordion item summary.\n",
     "commentRange": {
       "start": 1370,
       "end": 1370
@@ -19047,7 +19047,7 @@
     }
   },
   {
-    "description": "The text-align value of the Accordion item summary\n",
+    "description": "The text-align value of the Accordion item summary.\n",
     "commentRange": {
       "start": 1372,
       "end": 1372
@@ -19072,7 +19072,7 @@
     }
   },
   {
-    "description": "The border of the Accordion item summary\n",
+    "description": "The border of the Accordion item summary.\n",
     "commentRange": {
       "start": 1374,
       "end": 1374
@@ -19197,10 +19197,310 @@
     }
   },
   {
+    "description": "The text decoration of the Accordion item summary.\n",
+    "commentRange": {
+      "start": 1386,
+      "end": 1386
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-accordion-summary-text-decoration",
+      "value": "none",
+      "scope": "private",
+      "line": {
+        "start": 1387,
+        "end": 1387
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The text decoration of the Accordion item summary when active.\n",
+    "commentRange": {
+      "start": 1388,
+      "end": 1388
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-accordion-summary-active-text-decoration",
+      "value": "none",
+      "scope": "private",
+      "line": {
+        "start": 1389,
+        "end": 1389
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The bottom border style for Toggle Trigger\n",
+    "commentRange": {
+      "start": 1395,
+      "end": 1395
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-border-bottom",
+      "value": "$sprk-link-has-icon-border-bottom",
+      "scope": "default",
+      "line": {
+        "start": 1396,
+        "end": 1396
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The text decoration style Toggle Trigger\n",
+    "commentRange": {
+      "start": 1397,
+      "end": 1397
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-text-decoration",
+      "value": "$sprk-link-text-decoration",
+      "scope": "default",
+      "line": {
+        "start": 1398,
+        "end": 1398
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The transition for Toggle Trigger\n",
+    "commentRange": {
+      "start": 1399,
+      "end": 1399
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-transition",
+      "value": "$sprk-link-transition",
+      "scope": "default",
+      "line": {
+        "start": 1400,
+        "end": 1400
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The color for Toggle Trigger\n",
+    "commentRange": {
+      "start": 1402,
+      "end": 1402
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-color",
+      "value": "$sprk-color-body-three",
+      "scope": "default",
+      "line": {
+        "start": 1403,
+        "end": 1403
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font family for Toggle Trigger\n",
+    "commentRange": {
+      "start": 1404,
+      "end": 1404
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-font-family",
+      "value": "$sprk-font-family-body-three",
+      "scope": "default",
+      "line": {
+        "start": 1405,
+        "end": 1405
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font size for Toggle Trigger\n",
+    "commentRange": {
+      "start": 1406,
+      "end": 1406
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-font-size",
+      "value": "$sprk-font-size-body-three",
+      "scope": "default",
+      "line": {
+        "start": 1407,
+        "end": 1407
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font weight for Toggle Trigger\n",
+    "commentRange": {
+      "start": 1408,
+      "end": 1408
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-font-weight",
+      "value": "$sprk-font-weight-body-three",
+      "scope": "default",
+      "line": {
+        "start": 1409,
+        "end": 1409
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font weight for Toggle Trigger\n",
+    "commentRange": {
+      "start": 1410,
+      "end": 1410
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-line-height",
+      "value": "$sprk-line-height-body-three",
+      "scope": "default",
+      "line": {
+        "start": 1411,
+        "end": 1411
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The active border bottom style for Toggle Trigger\n",
+    "commentRange": {
+      "start": 1413,
+      "end": 1413
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-hover-border-bottom",
+      "value": "$sprk-link-has-icon-hover-border-bottom",
+      "scope": "default",
+      "line": {
+        "start": 1414,
+        "end": 1414
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The active color for Toggle Trigger\n",
+    "commentRange": {
+      "start": 1415,
+      "end": 1415
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-hover-color",
+      "value": "$sprk-link-has-icon-hover-color-text",
+      "scope": "default",
+      "line": {
+        "start": 1416,
+        "end": 1416
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
     "description": "The transition timing for the\nrotation of the icon when the Toggle is opened.\n",
     "commentRange": {
-      "start": 1391,
-      "end": 1392
+      "start": 1418,
+      "end": 1419
     },
     "context": {
       "type": "variable",
@@ -19208,8 +19508,8 @@
       "value": "0.3s ease",
       "scope": "default",
       "line": {
-        "start": 1393,
-        "end": 1393
+        "start": 1420,
+        "end": 1420
       }
     },
     "access": "public",
@@ -19224,338 +19524,13 @@
   {
     "description": "Background color of the Dropdown items that\nare active or hovered.\n",
     "commentRange": {
-      "start": 1400,
-      "end": 1401
+      "start": 1427,
+      "end": 1428
     },
     "context": {
       "type": "variable",
       "name": "sprk-dropdown-active-background-color",
       "value": "$sprk-gray",
-      "scope": "default",
-      "line": {
-        "start": 1402,
-        "end": 1402
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The left border of the Dropdown item that is active.\n",
-    "commentRange": {
-      "start": 1403,
-      "end": 1403
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-active-border",
-      "value": "2.5px solid $sprk-green",
-      "scope": "default",
-      "line": {
-        "start": 1404,
-        "end": 1404
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The box-shadow of the Dropdown item that is active.\n",
-    "commentRange": {
-      "start": 1405,
-      "end": 1405
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-active-box-shadow",
-      "value": "-1px 0 0 0 $sprk-green",
-      "scope": "default",
-      "line": {
-        "start": 1406,
-        "end": 1406
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The border of the Dropdown.\n",
-    "commentRange": {
-      "start": 1407,
-      "end": 1407
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-border",
-      "value": "1px solid $sprk-gray",
-      "scope": "default",
-      "line": {
-        "start": 1408,
-        "end": 1408
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font size of the Dropdown.\n",
-    "commentRange": {
-      "start": 1409,
-      "end": 1409
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-font-size",
-      "value": "$sprk-font-size-body-one",
-      "scope": "default",
-      "line": {
-        "start": 1410,
-        "end": 1410
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font weight of the Dropdown.\n",
-    "commentRange": {
-      "start": 1411,
-      "end": 1411
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-font-weight",
-      "value": "400",
-      "scope": "default",
-      "line": {
-        "start": 1412,
-        "end": 1412
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The padding around the Informational Dropdown\nfooter.\n",
-    "commentRange": {
-      "start": 1413,
-      "end": 1414
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-footer-padding",
-      "value": "$sprk-space-inset-short-l",
-      "scope": "default",
-      "line": {
-        "start": 1415,
-        "end": 1415
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The line height of the Dropdown.\n",
-    "commentRange": {
-      "start": 1416,
-      "end": 1416
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-line-height",
-      "value": "1",
-      "scope": "default",
-      "line": {
-        "start": 1417,
-        "end": 1417
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The max-width of the Dropdown.\n",
-    "commentRange": {
-      "start": 1418,
-      "end": 1418
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-max-width",
-      "value": "24rem",
-      "scope": "default",
-      "line": {
-        "start": 1419,
-        "end": 1419
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The padding around the Dropdown items.\n",
-    "commentRange": {
-      "start": 1420,
-      "end": 1420
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-padding",
-      "value": "$sprk-space-misc-a",
-      "scope": "default",
-      "line": {
-        "start": 1421,
-        "end": 1421
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The box shadow of the Dropdown.\n",
-    "commentRange": {
-      "start": 1422,
-      "end": 1422
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-shadow",
-      "value": "0 0 40px 2px rgba(0, 0, 0, 0.1)",
-      "scope": "default",
-      "line": {
-        "start": 1423,
-        "end": 1423
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The color of the Dropdown title.\n",
-    "commentRange": {
-      "start": 1424,
-      "end": 1424
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-title-color",
-      "value": "$sprk-black-tint-25",
-      "scope": "default",
-      "line": {
-        "start": 1425,
-        "end": 1425
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font size of the Dropdown title.\n",
-    "commentRange": {
-      "start": 1426,
-      "end": 1426
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-title-font-size",
-      "value": "$sprk-dropdown-font-size",
-      "scope": "default",
-      "line": {
-        "start": 1427,
-        "end": 1427
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font weight of the Dropdown title.\n",
-    "commentRange": {
-      "start": 1428,
-      "end": 1428
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-dropdown-title-font-weight",
-      "value": "300",
       "scope": "default",
       "line": {
         "start": 1429,
@@ -19572,19 +19547,19 @@
     }
   },
   {
-    "description": "The color of the mask overlay that is shown behind the Modal.\n",
+    "description": "The left border of the Dropdown item that is active.\n",
     "commentRange": {
-      "start": 1435,
-      "end": 1435
+      "start": 1430,
+      "end": 1430
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-mask-color",
-      "value": "rgba(34, 34, 34, 0.35)",
+      "name": "sprk-dropdown-active-border",
+      "value": "2.5px solid $sprk-green",
       "scope": "default",
       "line": {
-        "start": 1436,
-        "end": 1436
+        "start": 1431,
+        "end": 1431
       }
     },
     "access": "public",
@@ -19597,19 +19572,19 @@
     }
   },
   {
-    "description": "The background color of the Modal.\n",
+    "description": "The box-shadow of the Dropdown item that is active.\n",
     "commentRange": {
-      "start": 1437,
-      "end": 1437
+      "start": 1432,
+      "end": 1432
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-color",
-      "value": "$sprk-white",
+      "name": "sprk-dropdown-active-box-shadow",
+      "value": "-1px 0 0 0 $sprk-green",
       "scope": "default",
       "line": {
-        "start": 1438,
-        "end": 1438
+        "start": 1433,
+        "end": 1433
       }
     },
     "access": "public",
@@ -19622,19 +19597,19 @@
     }
   },
   {
-    "description": "The maximum width of the Modal.\n",
+    "description": "The border of the Dropdown.\n",
     "commentRange": {
-      "start": 1439,
-      "end": 1439
+      "start": 1434,
+      "end": 1434
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-max-width",
-      "value": "43.75rem",
+      "name": "sprk-dropdown-border",
+      "value": "1px solid $sprk-gray",
       "scope": "default",
       "line": {
-        "start": 1440,
-        "end": 1440
+        "start": 1435,
+        "end": 1435
       }
     },
     "access": "public",
@@ -19647,15 +19622,65 @@
     }
   },
   {
-    "description": "The maximum height of the Modal.\n",
+    "description": "The font size of the Dropdown.\n",
     "commentRange": {
-      "start": 1441,
+      "start": 1436,
+      "end": 1436
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-font-size",
+      "value": "$sprk-font-size-body-one",
+      "scope": "default",
+      "line": {
+        "start": 1437,
+        "end": 1437
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font weight of the Dropdown.\n",
+    "commentRange": {
+      "start": 1438,
+      "end": 1438
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-font-weight",
+      "value": "400",
+      "scope": "default",
+      "line": {
+        "start": 1439,
+        "end": 1439
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The padding around the Informational Dropdown\nfooter.\n",
+    "commentRange": {
+      "start": 1440,
       "end": 1441
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-height",
-      "value": "70%",
+      "name": "sprk-dropdown-footer-padding",
+      "value": "$sprk-space-inset-short-l",
       "scope": "default",
       "line": {
         "start": 1442,
@@ -19672,15 +19697,40 @@
     }
   },
   {
-    "description": "Determines how far down\nfrom the top of the page the\nModal renders at the small breakpoint.\n",
+    "description": "The line height of the Dropdown.\n",
     "commentRange": {
       "start": 1443,
+      "end": 1443
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-line-height",
+      "value": "1",
+      "scope": "default",
+      "line": {
+        "start": 1444,
+        "end": 1444
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The max-width of the Dropdown.\n",
+    "commentRange": {
+      "start": 1445,
       "end": 1445
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-breakpoint-small",
-      "value": "25rem",
+      "name": "sprk-dropdown-max-width",
+      "value": "24rem",
       "scope": "default",
       "line": {
         "start": 1446,
@@ -19697,15 +19747,40 @@
     }
   },
   {
-    "description": "Determines how far down\nfrom the top of the page the\nModal renders at the medium breakpoint.\n",
+    "description": "The padding around the Dropdown items.\n",
     "commentRange": {
       "start": 1447,
+      "end": 1447
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-padding",
+      "value": "$sprk-space-misc-a",
+      "scope": "default",
+      "line": {
+        "start": 1448,
+        "end": 1448
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The box shadow of the Dropdown.\n",
+    "commentRange": {
+      "start": 1449,
       "end": 1449
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-breakpoint-medium",
-      "value": "37.5rem",
+      "name": "sprk-dropdown-shadow",
+      "value": "0 0 40px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
         "start": 1450,
@@ -19722,15 +19797,15 @@
     }
   },
   {
-    "description": "The box shadow on the Modal.\n",
+    "description": "The color of the Dropdown title.\n",
     "commentRange": {
       "start": 1451,
       "end": 1451
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-shadow",
-      "value": "0 4px 5px rgba(0, 0, 0, 0.6)",
+      "name": "sprk-dropdown-title-color",
+      "value": "$sprk-black-tint-25",
       "scope": "default",
       "line": {
         "start": 1452,
@@ -19747,15 +19822,15 @@
     }
   },
   {
-    "description": "The border radius on the Modal.\n",
+    "description": "The font size of the Dropdown title.\n",
     "commentRange": {
       "start": 1453,
       "end": 1453
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-border-radius",
-      "value": "8px",
+      "name": "sprk-dropdown-title-font-size",
+      "value": "$sprk-dropdown-font-size",
       "scope": "default",
       "line": {
         "start": 1454,
@@ -19772,19 +19847,19 @@
     }
   },
   {
-    "description": "The width of the menu icon on narrow viewports in the Masthead.\n",
+    "description": "The font weight of the Dropdown title.\n",
     "commentRange": {
-      "start": 1460,
-      "end": 1460
+      "start": 1455,
+      "end": 1455
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-menu-icon-width",
-      "value": "$sprk-icon-l",
+      "name": "sprk-dropdown-title-font-weight",
+      "value": "300",
       "scope": "default",
       "line": {
-        "start": 1461,
-        "end": 1461
+        "start": 1456,
+        "end": 1456
       }
     },
     "access": "public",
@@ -19797,15 +19872,15 @@
     }
   },
   {
-    "description": "The height of the menu icon on narrow viewports in the Masthead.\n",
+    "description": "The color of the mask overlay that is shown behind the Modal.\n",
     "commentRange": {
       "start": 1462,
       "end": 1462
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-menu-icon-height",
-      "value": "$sprk-icon-l",
+      "name": "sprk-modal-mask-color",
+      "value": "rgba(34, 34, 34, 0.35)",
       "scope": "default",
       "line": {
         "start": 1463,
@@ -19822,14 +19897,14 @@
     }
   },
   {
-    "description": "The background color of the Masthead.\n",
+    "description": "The background color of the Modal.\n",
     "commentRange": {
       "start": 1464,
       "end": 1464
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-bg-color",
+      "name": "sprk-modal-color",
       "value": "$sprk-white",
       "scope": "default",
       "line": {
@@ -19847,15 +19922,15 @@
     }
   },
   {
-    "description": "The padding of the Masthead content, menu, and branding sections.\n",
+    "description": "The maximum width of the Modal.\n",
     "commentRange": {
       "start": 1466,
       "end": 1466
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-content-padding",
-      "value": "$sprk-space-s",
+      "name": "sprk-modal-max-width",
+      "value": "43.75rem",
       "scope": "default",
       "line": {
         "start": 1467,
@@ -19872,19 +19947,19 @@
     }
   },
   {
-    "description": "The padding top around the content items in the\ncontent section of the Masthead.\n",
+    "description": "The maximum height of the Modal.\n",
     "commentRange": {
       "start": 1468,
-      "end": 1469
+      "end": 1468
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-content-item-padding-top",
-      "value": "$sprk-space-s",
+      "name": "sprk-modal-height",
+      "value": "70%",
       "scope": "default",
       "line": {
-        "start": 1470,
-        "end": 1470
+        "start": 1469,
+        "end": 1469
       }
     },
     "access": "public",
@@ -19897,15 +19972,15 @@
     }
   },
   {
-    "description": "The padding bottom around the content\nitems in the content section of the Masthead.\n",
+    "description": "Determines how far down\nfrom the top of the page the\nModal renders at the small breakpoint.\n",
     "commentRange": {
-      "start": 1471,
+      "start": 1470,
       "end": 1472
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-content-item-padding-bottom",
-      "value": "$sprk-space-s",
+      "name": "sprk-modal-breakpoint-small",
+      "value": "25rem",
       "scope": "default",
       "line": {
         "start": 1473,
@@ -19922,19 +19997,19 @@
     }
   },
   {
-    "description": "The padding right around the content items in the\ncontent section of the Masthead.\n",
+    "description": "Determines how far down\nfrom the top of the page the\nModal renders at the medium breakpoint.\n",
     "commentRange": {
       "start": 1474,
-      "end": 1475
+      "end": 1476
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-content-item-padding-right",
-      "value": "$sprk-space-s",
+      "name": "sprk-modal-breakpoint-medium",
+      "value": "37.5rem",
       "scope": "default",
       "line": {
-        "start": 1476,
-        "end": 1476
+        "start": 1477,
+        "end": 1477
       }
     },
     "access": "public",
@@ -19947,19 +20022,44 @@
     }
   },
   {
-    "description": "The padding around the content\nsection in the Masthead on wide viewports.\n",
+    "description": "The box shadow on the Modal.\n",
+    "commentRange": {
+      "start": 1478,
+      "end": 1478
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-modal-shadow",
+      "value": "0 4px 5px rgba(0, 0, 0, 0.6)",
+      "scope": "default",
+      "line": {
+        "start": 1479,
+        "end": 1479
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The border radius on the Modal.\n",
     "commentRange": {
       "start": 1480,
-      "end": 1481
+      "end": 1480
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-content-padding-wide",
-      "value": "$sprk-space-m",
+      "name": "sprk-modal-border-radius",
+      "value": "8px",
       "scope": "default",
       "line": {
-        "start": 1482,
-        "end": 1482
+        "start": 1481,
+        "end": 1481
       }
     },
     "access": "public",
@@ -19972,40 +20072,15 @@
     }
   },
   {
-    "description": "The padding top of the content\nitems in the content section in the Masthead on wide viewports.\n",
+    "description": "The width of the menu icon on narrow viewports in the Masthead.\n",
     "commentRange": {
-      "start": 1483,
-      "end": 1484
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-content-item-padding-top-wide",
-      "value": "$sprk-space-s",
-      "scope": "default",
-      "line": {
-        "start": 1485,
-        "end": 1485
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The padding bottom of the content\nitems in the content section in the Masthead on wide viewports.\n",
-    "commentRange": {
-      "start": 1486,
+      "start": 1487,
       "end": 1487
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-content-item-padding-bottom-wide",
-      "value": "$sprk-space-s",
+      "name": "sprk-masthead-menu-icon-width",
+      "value": "$sprk-icon-l",
       "scope": "default",
       "line": {
         "start": 1488,
@@ -20022,19 +20097,19 @@
     }
   },
   {
-    "description": "The padding right of the content\nitems in the content section in the Masthead on wide viewports.\n",
+    "description": "The height of the menu icon on narrow viewports in the Masthead.\n",
     "commentRange": {
       "start": 1489,
-      "end": 1490
+      "end": 1489
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-content-item-padding-right-wide",
-      "value": "$sprk-space-m",
+      "name": "sprk-masthead-menu-icon-height",
+      "value": "$sprk-icon-l",
       "scope": "default",
       "line": {
-        "start": 1491,
-        "end": 1491
+        "start": 1490,
+        "end": 1490
       }
     },
     "access": "public",
@@ -20047,15 +20122,40 @@
     }
   },
   {
-    "description": "The padding left of the content\nitems in the content section in the Masthead on wide viewports.\n",
+    "description": "The background color of the Masthead.\n",
     "commentRange": {
-      "start": 1492,
+      "start": 1491,
+      "end": 1491
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-bg-color",
+      "value": "$sprk-white",
+      "scope": "default",
+      "line": {
+        "start": 1492,
+        "end": 1492
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The padding of the Masthead content, menu, and branding sections.\n",
+    "commentRange": {
+      "start": 1493,
       "end": 1493
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-content-item-padding-left-wide",
-      "value": "$sprk-space-m",
+      "name": "sprk-masthead-content-padding",
+      "value": "$sprk-space-s",
       "scope": "default",
       "line": {
         "start": 1494,
@@ -20072,19 +20172,19 @@
     }
   },
   {
-    "description": "The visited state color of Masthead links.\n",
+    "description": "The padding top around the content items in the\ncontent section of the Masthead.\n",
     "commentRange": {
       "start": 1495,
-      "end": 1495
+      "end": 1496
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-link-visited-color",
-      "value": "$sprk-black",
+      "name": "sprk-masthead-content-item-padding-top",
+      "value": "$sprk-space-s",
       "scope": "default",
       "line": {
-        "start": 1496,
-        "end": 1496
+        "start": 1497,
+        "end": 1497
       }
     },
     "access": "public",
@@ -20097,40 +20197,15 @@
     }
   },
   {
-    "description": "The hover state color of Masthead links.\n",
+    "description": "The padding bottom around the content\nitems in the content section of the Masthead.\n",
     "commentRange": {
-      "start": 1497,
-      "end": 1497
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-link-hover-color",
-      "value": "$sprk-green",
-      "scope": "default",
-      "line": {
-        "start": 1498,
-        "end": 1498
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font weight for Masthead links.\n",
-    "commentRange": {
-      "start": 1499,
+      "start": 1498,
       "end": 1499
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-link-font-weight",
-      "value": "500",
+      "name": "sprk-masthead-content-item-padding-bottom",
+      "value": "$sprk-space-s",
       "scope": "default",
       "line": {
         "start": 1500,
@@ -20147,19 +20222,19 @@
     }
   },
   {
-    "description": "The size of the bottom border on the Masthead.\n",
+    "description": "The padding right around the content items in the\ncontent section of the Masthead.\n",
     "commentRange": {
       "start": 1501,
-      "end": 1501
+      "end": 1502
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-border-bottom-size",
-      "value": "1px",
+      "name": "sprk-masthead-content-item-padding-right",
+      "value": "$sprk-space-s",
       "scope": "default",
       "line": {
-        "start": 1502,
-        "end": 1502
+        "start": 1503,
+        "end": 1503
       }
     },
     "access": "public",
@@ -20172,69 +20247,19 @@
     }
   },
   {
-    "description": "The bottom border on the Masthead.\n",
-    "commentRange": {
-      "start": 1503,
-      "end": 1503
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-border-bottom",
-      "value": "$sprk-masthead-border-bottom-size solid $sprk-gray",
-      "scope": "default",
-      "line": {
-        "start": 1504,
-        "end": 1504
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The bottom border on the Masthead on wide viewports.\n",
-    "commentRange": {
-      "start": 1505,
-      "end": 1505
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-border-bottom-wide",
-      "value": "0",
-      "scope": "default",
-      "line": {
-        "start": 1506,
-        "end": 1506
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The right border on the site links in the Masthead.\n",
+    "description": "The padding around the content\nsection in the Masthead on wide viewports.\n",
     "commentRange": {
       "start": 1507,
-      "end": 1507
+      "end": 1508
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-site-links-border-right",
-      "value": "2px solid $sprk-black-tint-25",
+      "name": "sprk-masthead-content-padding-wide",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
-        "start": 1508,
-        "end": 1508
+        "start": 1509,
+        "end": 1509
       }
     },
     "access": "public",
@@ -20247,15 +20272,15 @@
     }
   },
   {
-    "description": "The point at which the Masthead navigation switches\nfrom narrow viewport style to large viewport\nstyle.\n",
+    "description": "The padding top of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
-      "start": 1509,
+      "start": 1510,
       "end": 1511
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-breakpoint",
-      "value": "54rem",
+      "name": "sprk-masthead-content-item-padding-top-wide",
+      "value": "$sprk-space-s",
       "scope": "default",
       "line": {
         "start": 1512,
@@ -20272,19 +20297,19 @@
     }
   },
   {
-    "description": "The maximum width of the Masthead.\n",
+    "description": "The padding bottom of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
       "start": 1513,
-      "end": 1513
+      "end": 1514
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-column-width",
-      "value": "89rem",
+      "name": "sprk-masthead-content-item-padding-bottom-wide",
+      "value": "$sprk-space-s",
       "scope": "default",
       "line": {
-        "start": 1514,
-        "end": 1514
+        "start": 1515,
+        "end": 1515
       }
     },
     "access": "public",
@@ -20297,40 +20322,15 @@
     }
   },
   {
-    "description": "The maximum width of the logo in the Masthead.\n",
+    "description": "The padding right of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
-      "start": 1515,
-      "end": 1515
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-logo-max-width",
-      "value": "192px",
-      "scope": "default",
-      "line": {
-        "start": 1516,
-        "end": 1516
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The minimum width of the logo in the Masthead.\n",
-    "commentRange": {
-      "start": 1517,
+      "start": 1516,
       "end": 1517
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-logo-min-width",
-      "value": "174px",
+      "name": "sprk-masthead-content-item-padding-right-wide",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
         "start": 1518,
@@ -20347,19 +20347,19 @@
     }
   },
   {
-    "description": "The box shadow of the Masthead.\n",
+    "description": "The padding left of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
       "start": 1519,
-      "end": 1519
+      "end": 1520
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-shadow",
-      "value": "none",
+      "name": "sprk-masthead-content-item-padding-left-wide",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
-        "start": 1520,
-        "end": 1520
+        "start": 1521,
+        "end": 1521
       }
     },
     "access": "public",
@@ -20372,19 +20372,19 @@
     }
   },
   {
-    "description": "The box shadow of the Masthead in wide viewports.\n",
+    "description": "The visited state color of Masthead links.\n",
     "commentRange": {
-      "start": 1521,
-      "end": 1521
+      "start": 1522,
+      "end": 1522
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-shadow-wide",
-      "value": "none",
+      "name": "sprk-masthead-link-visited-color",
+      "value": "$sprk-black",
       "scope": "default",
       "line": {
-        "start": 1522,
-        "end": 1522
+        "start": 1523,
+        "end": 1523
       }
     },
     "access": "public",
@@ -20397,19 +20397,19 @@
     }
   },
   {
-    "description": "The Masthead shadow that gets applied when the page is scrolled.\n",
+    "description": "The hover state color of Masthead links.\n",
     "commentRange": {
-      "start": 1523,
-      "end": 1523
+      "start": 1524,
+      "end": 1524
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-shadow-scroll",
-      "value": "0 0 40px rgba(0, 0, 0, 0.1)",
+      "name": "sprk-masthead-link-hover-color",
+      "value": "$sprk-green",
       "scope": "default",
       "line": {
-        "start": 1524,
-        "end": 1524
+        "start": 1525,
+        "end": 1525
       }
     },
     "access": "public",
@@ -20422,19 +20422,19 @@
     }
   },
   {
-    "description": "The border of the selector in the Masthead with Extended Navigation.\n",
+    "description": "The font weight for Masthead links.\n",
     "commentRange": {
-      "start": 1525,
-      "end": 1525
+      "start": 1526,
+      "end": 1526
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-selector-border",
-      "value": "2px solid $sprk-black-tint-25",
+      "name": "sprk-masthead-link-font-weight",
+      "value": "500",
       "scope": "default",
       "line": {
-        "start": 1526,
-        "end": 1526
+        "start": 1527,
+        "end": 1527
       }
     },
     "access": "public",
@@ -20447,15 +20447,15 @@
     }
   },
   {
-    "description": "The border radius of the selector in the Masthead with Extended Navigation.\n",
+    "description": "The size of the bottom border on the Masthead.\n",
     "commentRange": {
       "start": 1528,
       "end": 1528
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-selector-border-radius",
-      "value": "5px",
+      "name": "sprk-masthead-border-bottom-size",
+      "value": "1px",
       "scope": "default",
       "line": {
         "start": 1529,
@@ -20472,15 +20472,40 @@
     }
   },
   {
-    "description": "The bottom border that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
+    "description": "The bottom border on the Masthead.\n",
     "commentRange": {
       "start": 1530,
+      "end": 1530
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-border-bottom",
+      "value": "$sprk-masthead-border-bottom-size solid $sprk-gray",
+      "scope": "default",
+      "line": {
+        "start": 1531,
+        "end": 1531
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The bottom border on the Masthead on wide viewports.\n",
+    "commentRange": {
+      "start": 1532,
       "end": 1532
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-selector-dropdown-border-bottom-mask-open",
-      "value": "2px solid $sprk-gray",
+      "name": "sprk-masthead-border-bottom-wide",
+      "value": "0",
       "scope": "default",
       "line": {
         "start": 1533,
@@ -20497,19 +20522,19 @@
     }
   },
   {
-    "description": "The box shadow that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
+    "description": "The right border on the site links in the Masthead.\n",
     "commentRange": {
       "start": 1534,
-      "end": 1536
+      "end": 1534
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-selector-dropdown-box-shadow-mask-open",
-      "value": "0 5px 10px\n  rgba(0, 0, 0, 0.1)",
+      "name": "sprk-masthead-site-links-border-right",
+      "value": "2px solid $sprk-black-tint-25",
       "scope": "default",
       "line": {
-        "start": 1537,
-        "end": 1538
+        "start": 1535,
+        "end": 1535
       }
     },
     "access": "public",
@@ -20522,19 +20547,19 @@
     }
   },
   {
-    "description": "The border color that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
+    "description": "The point at which the Masthead navigation switches\nfrom narrow viewport style to large viewport\nstyle.\n",
     "commentRange": {
-      "start": 1539,
-      "end": 1541
+      "start": 1536,
+      "end": 1538
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-selector-border-color-mask-open",
-      "value": "$sprk-white",
+      "name": "sprk-masthead-breakpoint",
+      "value": "54rem",
       "scope": "default",
       "line": {
-        "start": 1542,
-        "end": 1542
+        "start": 1539,
+        "end": 1539
       }
     },
     "access": "public",
@@ -20547,15 +20572,65 @@
     }
   },
   {
-    "description": "The font color of the selector in\nthe Masthead with Extended Navigation.\n",
+    "description": "The maximum width of the Masthead.\n",
     "commentRange": {
-      "start": 1543,
+      "start": 1540,
+      "end": 1540
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-column-width",
+      "value": "89rem",
+      "scope": "default",
+      "line": {
+        "start": 1541,
+        "end": 1541
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The maximum width of the logo in the Masthead.\n",
+    "commentRange": {
+      "start": 1542,
+      "end": 1542
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-logo-max-width",
+      "value": "192px",
+      "scope": "default",
+      "line": {
+        "start": 1543,
+        "end": 1543
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The minimum width of the logo in the Masthead.\n",
+    "commentRange": {
+      "start": 1544,
       "end": 1544
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-selector-font-color",
-      "value": "$sprk-black",
+      "name": "sprk-masthead-logo-min-width",
+      "value": "174px",
       "scope": "default",
       "line": {
         "start": 1545,
@@ -20572,19 +20647,19 @@
     }
   },
   {
-    "description": "The background color of the selector in\nthe Masthead with Extended Navigation.\n",
+    "description": "The box shadow of the Masthead.\n",
     "commentRange": {
       "start": 1546,
-      "end": 1547
+      "end": 1546
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-selector-bg-color",
-      "value": "$sprk-white",
+      "name": "sprk-masthead-shadow",
+      "value": "none",
       "scope": "default",
       "line": {
-        "start": 1548,
-        "end": 1548
+        "start": 1547,
+        "end": 1547
       }
     },
     "access": "public",
@@ -20597,15 +20672,40 @@
     }
   },
   {
-    "description": "The padding of the selector in\nthe Masthead with Extended Navigation.\n",
+    "description": "The box shadow of the Masthead in wide viewports.\n",
     "commentRange": {
-      "start": 1549,
+      "start": 1548,
+      "end": 1548
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-shadow-wide",
+      "value": "none",
+      "scope": "default",
+      "line": {
+        "start": 1549,
+        "end": 1549
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The Masthead shadow that gets applied when the page is scrolled.\n",
+    "commentRange": {
+      "start": 1550,
       "end": 1550
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-selector-padding",
-      "value": "$sprk-space-inset-short-m",
+      "name": "sprk-masthead-shadow-scroll",
+      "value": "0 0 40px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
         "start": 1551,
@@ -20622,10 +20722,210 @@
     }
   },
   {
-    "description": "The padding of the selector dropdown in\nthe Masthead with Extended Navigation.\n",
+    "description": "The border of the selector in the Masthead with Extended Navigation.\n",
     "commentRange": {
       "start": 1552,
-      "end": 1553
+      "end": 1552
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-selector-border",
+      "value": "2px solid $sprk-black-tint-25",
+      "scope": "default",
+      "line": {
+        "start": 1553,
+        "end": 1553
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The border radius of the selector in the Masthead with Extended Navigation.\n",
+    "commentRange": {
+      "start": 1555,
+      "end": 1555
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-selector-border-radius",
+      "value": "5px",
+      "scope": "default",
+      "line": {
+        "start": 1556,
+        "end": 1556
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The bottom border that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
+    "commentRange": {
+      "start": 1557,
+      "end": 1559
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-selector-dropdown-border-bottom-mask-open",
+      "value": "2px solid $sprk-gray",
+      "scope": "default",
+      "line": {
+        "start": 1560,
+        "end": 1560
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The box shadow that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
+    "commentRange": {
+      "start": 1561,
+      "end": 1563
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-selector-dropdown-box-shadow-mask-open",
+      "value": "0 5px 10px\n  rgba(0, 0, 0, 0.1)",
+      "scope": "default",
+      "line": {
+        "start": 1564,
+        "end": 1565
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The border color that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
+    "commentRange": {
+      "start": 1566,
+      "end": 1568
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-selector-border-color-mask-open",
+      "value": "$sprk-white",
+      "scope": "default",
+      "line": {
+        "start": 1569,
+        "end": 1569
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font color of the selector in\nthe Masthead with Extended Navigation.\n",
+    "commentRange": {
+      "start": 1570,
+      "end": 1571
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-selector-font-color",
+      "value": "$sprk-black",
+      "scope": "default",
+      "line": {
+        "start": 1572,
+        "end": 1572
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The background color of the selector in\nthe Masthead with Extended Navigation.\n",
+    "commentRange": {
+      "start": 1573,
+      "end": 1574
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-selector-bg-color",
+      "value": "$sprk-white",
+      "scope": "default",
+      "line": {
+        "start": 1575,
+        "end": 1575
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The padding of the selector in\nthe Masthead with Extended Navigation.\n",
+    "commentRange": {
+      "start": 1576,
+      "end": 1577
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-selector-padding",
+      "value": "$sprk-space-inset-short-m",
+      "scope": "default",
+      "line": {
+        "start": 1578,
+        "end": 1578
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The padding of the selector dropdown in\nthe Masthead with Extended Navigation.\n",
+    "commentRange": {
+      "start": 1579,
+      "end": 1580
     },
     "context": {
       "type": "variable",
@@ -20633,8 +20933,8 @@
       "value": "0",
       "scope": "default",
       "line": {
-        "start": 1554,
-        "end": 1554
+        "start": 1581,
+        "end": 1581
       }
     },
     "access": "public",
@@ -20649,8 +20949,8 @@
   {
     "description": "The minimum width of the selector\nin the Masthead with Extended Navigation.\n",
     "commentRange": {
-      "start": 1555,
-      "end": 1556
+      "start": 1582,
+      "end": 1583
     },
     "context": {
       "type": "variable",
@@ -20658,8 +20958,8 @@
       "value": "17rem",
       "scope": "default",
       "line": {
-        "start": 1557,
-        "end": 1557
+        "start": 1584,
+        "end": 1584
       }
     },
     "access": "public",
@@ -20674,8 +20974,8 @@
   {
     "description": "This is the height of the Masthead on\nnarrow viewports and is used to calculate\nhow far from the top the narrow\nnavigation items should be displayed.\n",
     "commentRange": {
-      "start": 1558,
-      "end": 1561
+      "start": 1585,
+      "end": 1588
     },
     "context": {
       "type": "variable",
@@ -20683,8 +20983,8 @@
       "value": "81px",
       "scope": "default",
       "line": {
-        "start": 1562,
-        "end": 1562
+        "start": 1589,
+        "end": 1589
       }
     },
     "access": "public",
@@ -20699,8 +20999,8 @@
   {
     "description": "The color of the mask that\ngets applied when the Masthead selector\ndropdown is open on narrow screens.\n",
     "commentRange": {
-      "start": 1563,
-      "end": 1565
+      "start": 1590,
+      "end": 1592
     },
     "context": {
       "type": "variable",
@@ -20708,8 +21008,8 @@
       "value": "rgba(0, 0, 0, 0.5)",
       "scope": "default",
       "line": {
-        "start": 1566,
-        "end": 1566
+        "start": 1593,
+        "end": 1593
       }
     },
     "access": "public",
@@ -20724,213 +21024,13 @@
   {
     "description": "The transition applied to the Masthead.\n",
     "commentRange": {
-      "start": 1567,
-      "end": 1567
+      "start": 1594,
+      "end": 1594
     },
     "context": {
       "type": "variable",
       "name": "sprk-masthead-transition",
       "value": "all 0.3s ease-in",
-      "scope": "default",
-      "line": {
-        "start": 1568,
-        "end": 1568
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The transform length that gets applied\nwhen the Masthead scrolls out of view on narrow screens.\n",
-    "commentRange": {
-      "start": 1569,
-      "end": 1570
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-translateY",
-      "value": "translateY(-100%)",
-      "scope": "default",
-      "line": {
-        "start": 1571,
-        "end": 1571
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The maximum width of the\nbig navigation items in the\nnavigation bar in the Masthead Extended.\n",
-    "commentRange": {
-      "start": 1574,
-      "end": 1576
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-big-nav-column-width",
-      "value": "64rem",
-      "scope": "default",
-      "line": {
-        "start": 1577,
-        "end": 1577
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The background color of the big\nnavigation bar in the Masthead Extended.\n",
-    "commentRange": {
-      "start": 1578,
-      "end": 1579
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-big-nav-bg",
-      "value": "$sprk-white",
-      "scope": "default",
-      "line": {
-        "start": 1580,
-        "end": 1580
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font weight of the big\nnavigation link in the Masthead Extended.\n",
-    "commentRange": {
-      "start": 1581,
-      "end": 1582
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-big-nav-link-font-weight",
-      "value": "400",
-      "scope": "default",
-      "line": {
-        "start": 1583,
-        "end": 1583
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The padding of the big navigation\nlink in the Masthead Extended.\n",
-    "commentRange": {
-      "start": 1584,
-      "end": 1585
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-big-nav-link-padding",
-      "value": "0 $sprk-space-s",
-      "scope": "default",
-      "line": {
-        "start": 1586,
-        "end": 1586
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The color of the big navigation link in the Masthead Extended.\n",
-    "commentRange": {
-      "start": 1587,
-      "end": 1587
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-big-nav-link-color",
-      "value": "$sprk-black",
-      "scope": "default",
-      "line": {
-        "start": 1588,
-        "end": 1588
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The text and underline color of\nthe active big navigation item in the Masthead Extended.\n",
-    "commentRange": {
-      "start": 1589,
-      "end": 1590
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-big-nav-active-color",
-      "value": "$sprk-big-nav-link-color",
-      "scope": "default",
-      "line": {
-        "start": 1591,
-        "end": 1591
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The line height\nof the big navigation items\nin the Masthead Extended.\n",
-    "commentRange": {
-      "start": 1592,
-      "end": 1594
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-big-nav-item-line-height",
-      "value": "53px",
       "scope": "default",
       "line": {
         "start": 1595,
@@ -20947,240 +21047,215 @@
     }
   },
   {
+    "description": "The transform length that gets applied\nwhen the Masthead scrolls out of view on narrow screens.\n",
+    "commentRange": {
+      "start": 1596,
+      "end": 1597
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-translateY",
+      "value": "translateY(-100%)",
+      "scope": "default",
+      "line": {
+        "start": 1598,
+        "end": 1598
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The maximum width of the\nbig navigation items in the\nnavigation bar in the Masthead Extended.\n",
+    "commentRange": {
+      "start": 1601,
+      "end": 1603
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-big-nav-column-width",
+      "value": "64rem",
+      "scope": "default",
+      "line": {
+        "start": 1604,
+        "end": 1604
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The background color of the big\nnavigation bar in the Masthead Extended.\n",
+    "commentRange": {
+      "start": 1605,
+      "end": 1606
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-big-nav-bg",
+      "value": "$sprk-white",
+      "scope": "default",
+      "line": {
+        "start": 1607,
+        "end": 1607
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font weight of the big\nnavigation link in the Masthead Extended.\n",
+    "commentRange": {
+      "start": 1608,
+      "end": 1609
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-big-nav-link-font-weight",
+      "value": "400",
+      "scope": "default",
+      "line": {
+        "start": 1610,
+        "end": 1610
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The padding of the big navigation\nlink in the Masthead Extended.\n",
+    "commentRange": {
+      "start": 1611,
+      "end": 1612
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-big-nav-link-padding",
+      "value": "0 $sprk-space-s",
+      "scope": "default",
+      "line": {
+        "start": 1613,
+        "end": 1613
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The color of the big navigation link in the Masthead Extended.\n",
+    "commentRange": {
+      "start": 1614,
+      "end": 1614
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-big-nav-link-color",
+      "value": "$sprk-black",
+      "scope": "default",
+      "line": {
+        "start": 1615,
+        "end": 1615
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The text and underline color of\nthe active big navigation item in the Masthead Extended.\n",
+    "commentRange": {
+      "start": 1616,
+      "end": 1617
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-big-nav-active-color",
+      "value": "$sprk-big-nav-link-color",
+      "scope": "default",
+      "line": {
+        "start": 1618,
+        "end": 1618
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The line height\nof the big navigation items\nin the Masthead Extended.\n",
+    "commentRange": {
+      "start": 1619,
+      "end": 1621
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-big-nav-item-line-height",
+      "value": "53px",
+      "scope": "default",
+      "line": {
+        "start": 1622,
+        "end": 1622
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
     "description": "The left border of the active item\nin the narrow viewport Masthead Accordion.\n",
-    "commentRange": {
-      "start": 1597,
-      "end": 1598
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-accordion-active-left-border",
-      "value": "3px solid $sprk-black",
-      "scope": "default",
-      "line": {
-        "start": 1599,
-        "end": 1599
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font weight of the active item\nin the narrow viewport Masthead Accordion.\n",
-    "commentRange": {
-      "start": 1600,
-      "end": 1601
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-accordion-active-heading-font-weight",
-      "value": "400",
-      "scope": "default",
-      "line": {
-        "start": 1602,
-        "end": 1602
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The color of the active item\nin the narrow viewport Masthead Accordion.\n",
-    "commentRange": {
-      "start": 1603,
-      "end": 1604
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-accordion-active-heading-color",
-      "value": "$sprk-black",
-      "scope": "default",
-      "line": {
-        "start": 1605,
-        "end": 1605
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The color of the heading\nin the narrow viewport Masthead Accordion.\n",
-    "commentRange": {
-      "start": 1606,
-      "end": 1607
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-accordion-heading-color",
-      "value": "$sprk-black",
-      "scope": "default",
-      "line": {
-        "start": 1608,
-        "end": 1608
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font weight of the heading\nin the narrow viewport Masthead Accordion.\n",
-    "commentRange": {
-      "start": 1609,
-      "end": 1610
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-accordion-heading-font-weight",
-      "value": "400",
-      "scope": "default",
-      "line": {
-        "start": 1611,
-        "end": 1611
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font weight of the details\nin the narrow viewport Masthead Accordion.\n",
-    "commentRange": {
-      "start": 1612,
-      "end": 1613
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-accordion-details-font-weight",
-      "value": "300",
-      "scope": "default",
-      "line": {
-        "start": 1614,
-        "end": 1614
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font color of the details\nin the narrow viewport Masthead Accordion.\n",
-    "commentRange": {
-      "start": 1615,
-      "end": 1616
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-accordion-details-font-color",
-      "value": "$sprk-black",
-      "scope": "default",
-      "line": {
-        "start": 1617,
-        "end": 1617
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The background color of the active\nitem in the narrow viewport Masthead Accordion.\n",
-    "commentRange": {
-      "start": 1618,
-      "end": 1619
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-accordion-active-background-color",
-      "value": "$sprk-gray",
-      "scope": "default",
-      "line": {
-        "start": 1620,
-        "end": 1620
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font color of the active\nitem in the narrow viewport Masthead Accordion.\n",
-    "commentRange": {
-      "start": 1621,
-      "end": 1622
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-accordion-active-font-color",
-      "value": "$sprk-black",
-      "scope": "default",
-      "line": {
-        "start": 1623,
-        "end": 1623
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The font color of the text\nin items in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
       "start": 1624,
       "end": 1625
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-accordion-font-color",
-      "value": "$sprk-black",
+      "name": "sprk-masthead-accordion-active-left-border",
+      "value": "3px solid $sprk-black",
       "scope": "default",
       "line": {
         "start": 1626,
@@ -21197,15 +21272,15 @@
     }
   },
   {
-    "description": "The color of the line on open items\nin the narrow viewport Masthead Accordion.\n",
+    "description": "The font weight of the active item\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
       "start": 1627,
       "end": 1628
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-accordion-item-open-line-background-color",
-      "value": "$sprk-black-tint-25",
+      "name": "sprk-masthead-accordion-active-heading-font-weight",
+      "value": "400",
       "scope": "default",
       "line": {
         "start": 1629,
@@ -21222,15 +21297,15 @@
     }
   },
   {
-    "description": "The height of the line on open\nitems in the narrow viewport Masthead Accordion.\n",
+    "description": "The color of the active item\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
       "start": 1630,
       "end": 1631
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-accordion-item-open-line-height",
-      "value": "2px",
+      "name": "sprk-masthead-accordion-active-heading-color",
+      "value": "$sprk-black",
       "scope": "default",
       "line": {
         "start": 1632,
@@ -21247,15 +21322,15 @@
     }
   },
   {
-    "description": "The padding of the items in the\nnarrow viewport Masthead Accordion.\n",
+    "description": "The color of the heading\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
       "start": 1633,
       "end": 1634
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-accordion-item-padding",
-      "value": "$sprk-space-m",
+      "name": "sprk-masthead-accordion-heading-color",
+      "value": "$sprk-black",
       "scope": "default",
       "line": {
         "start": 1635,
@@ -21272,19 +21347,19 @@
     }
   },
   {
-    "description": "The height and width of Spinners.\n",
+    "description": "The font weight of the heading\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
-      "start": 1641,
-      "end": 1641
+      "start": 1636,
+      "end": 1637
     },
     "context": {
       "type": "variable",
-      "name": "sprk-spinner-size",
-      "value": "1.3rem",
+      "name": "sprk-masthead-accordion-heading-font-weight",
+      "value": "400",
       "scope": "default",
       "line": {
-        "start": 1642,
-        "end": 1642
+        "start": 1638,
+        "end": 1638
       }
     },
     "access": "public",
@@ -21297,15 +21372,40 @@
     }
   },
   {
-    "description": "The height and width of large Spinners.\n",
+    "description": "The font weight of the details\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
-      "start": 1643,
+      "start": 1639,
+      "end": 1640
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-accordion-details-font-weight",
+      "value": "300",
+      "scope": "default",
+      "line": {
+        "start": 1641,
+        "end": 1641
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font color of the details\nin the narrow viewport Masthead Accordion.\n",
+    "commentRange": {
+      "start": 1642,
       "end": 1643
     },
     "context": {
       "type": "variable",
-      "name": "sprk-spinner-size-large",
-      "value": "3rem",
+      "name": "sprk-masthead-accordion-details-font-color",
+      "value": "$sprk-black",
       "scope": "default",
       "line": {
         "start": 1644,
@@ -21322,19 +21422,19 @@
     }
   },
   {
-    "description": "The speed of the animation for Spinners.\n",
+    "description": "The background color of the active\nitem in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
       "start": 1645,
-      "end": 1645
+      "end": 1646
     },
     "context": {
       "type": "variable",
-      "name": "sprk-spinner-speed",
-      "value": "1s",
+      "name": "sprk-masthead-accordion-active-background-color",
+      "value": "$sprk-gray",
       "scope": "default",
       "line": {
-        "start": 1646,
-        "end": 1646
+        "start": 1647,
+        "end": 1647
       }
     },
     "access": "public",
@@ -21347,40 +21447,15 @@
     }
   },
   {
-    "description": "The thickness of Spinners.\n",
+    "description": "The font color of the active\nitem in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
-      "start": 1647,
-      "end": 1647
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-spinner-thickness",
-      "value": "0.18rem",
-      "scope": "default",
-      "line": {
-        "start": 1648,
-        "end": 1648
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The color of Spinners.\n",
-    "commentRange": {
-      "start": 1649,
+      "start": 1648,
       "end": 1649
     },
     "context": {
       "type": "variable",
-      "name": "sprk-spinner-color",
-      "value": "$sprk-white",
+      "name": "sprk-masthead-accordion-active-font-color",
+      "value": "$sprk-black",
       "scope": "default",
       "line": {
         "start": 1650,
@@ -21397,19 +21472,19 @@
     }
   },
   {
-    "description": "The color of the dark Spinner.\n",
+    "description": "The font color of the text\nin items in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
       "start": 1651,
-      "end": 1651
+      "end": 1652
     },
     "context": {
       "type": "variable",
-      "name": "sprk-spinner-color-dark",
+      "name": "sprk-masthead-accordion-font-color",
       "value": "$sprk-black",
       "scope": "default",
       "line": {
-        "start": 1652,
-        "end": 1652
+        "start": 1653,
+        "end": 1653
       }
     },
     "access": "public",
@@ -21422,19 +21497,19 @@
     }
   },
   {
-    "description": "The breakpoint at which the tabs\ngo from stacked layout to side by side in Tabbed Navigation.\n",
+    "description": "The color of the line on open items\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
-      "start": 1658,
-      "end": 1659
+      "start": 1654,
+      "end": 1655
     },
     "context": {
       "type": "variable",
-      "name": "sprk-tab-navigation-breakpoint",
-      "value": "46rem",
+      "name": "sprk-masthead-accordion-item-open-line-background-color",
+      "value": "$sprk-black-tint-25",
       "scope": "default",
       "line": {
-        "start": 1660,
-        "end": 1660
+        "start": 1656,
+        "end": 1656
       }
     },
     "access": "public",
@@ -21447,15 +21522,40 @@
     }
   },
   {
-    "description": "The tab button text color in Tabbed Navigation.\n",
+    "description": "The height of the line on open\nitems in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
-      "start": 1661,
+      "start": 1657,
+      "end": 1658
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-accordion-item-open-line-height",
+      "value": "2px",
+      "scope": "default",
+      "line": {
+        "start": 1659,
+        "end": 1659
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The padding of the items in the\nnarrow viewport Masthead Accordion.\n",
+    "commentRange": {
+      "start": 1660,
       "end": 1661
     },
     "context": {
       "type": "variable",
-      "name": "sprk-tab-navigation-btn-color",
-      "value": "$sprk-black",
+      "name": "sprk-masthead-accordion-item-padding",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
         "start": 1662,
@@ -21472,65 +21572,15 @@
     }
   },
   {
-    "description": "The tab button background color in Tabbed Navigation.\n",
+    "description": "The height and width of Spinners.\n",
     "commentRange": {
-      "start": 1663,
-      "end": 1663
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-tab-navigation-btn-bg-color",
-      "value": "$sprk-gray",
-      "scope": "default",
-      "line": {
-        "start": 1664,
-        "end": 1664
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The border on the top of the button tabs in Tabbed Navigation.\n",
-    "commentRange": {
-      "start": 1665,
-      "end": 1665
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-tab-navigation-btn-border-top",
-      "value": "3px solid $sprk-gray",
-      "scope": "default",
-      "line": {
-        "start": 1666,
-        "end": 1666
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The border on the top of the\nbutton tabs on hover in Tabbed Navigation.\n",
-    "commentRange": {
-      "start": 1667,
+      "start": 1668,
       "end": 1668
     },
     "context": {
       "type": "variable",
-      "name": "sprk-tab-navigation-btn-hover-border-top",
-      "value": "3px solid $sprk-red",
+      "name": "sprk-spinner-size",
+      "value": "1.3rem",
       "scope": "default",
       "line": {
         "start": 1669,
@@ -21547,19 +21597,19 @@
     }
   },
   {
-    "description": "The button tab text color of the\ncurrently active tab in Tabbed Navigation.\n",
+    "description": "The height and width of large Spinners.\n",
     "commentRange": {
       "start": 1670,
-      "end": 1671
+      "end": 1670
     },
     "context": {
       "type": "variable",
-      "name": "sprk-tab-navigation-btn-active-color",
-      "value": "$sprk-red",
+      "name": "sprk-spinner-size-large",
+      "value": "3rem",
       "scope": "default",
       "line": {
-        "start": 1672,
-        "end": 1672
+        "start": 1671,
+        "end": 1671
       }
     },
     "access": "public",
@@ -21572,15 +21622,40 @@
     }
   },
   {
-    "description": "The button tab top border of the\ncurrently active tab in Tabbed Navigation.\n",
+    "description": "The speed of the animation for Spinners.\n",
     "commentRange": {
-      "start": 1673,
+      "start": 1672,
+      "end": 1672
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-spinner-speed",
+      "value": "1s",
+      "scope": "default",
+      "line": {
+        "start": 1673,
+        "end": 1673
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The thickness of Spinners.\n",
+    "commentRange": {
+      "start": 1674,
       "end": 1674
     },
     "context": {
       "type": "variable",
-      "name": "sprk-tab-navigation-btn-active-border-top",
-      "value": "3px solid $sprk-red",
+      "name": "sprk-spinner-thickness",
+      "value": "0.18rem",
       "scope": "default",
       "line": {
         "start": 1675,
@@ -21597,19 +21672,19 @@
     }
   },
   {
-    "description": "The button tab background color\nof the currently active tab in Tabbed Navigation.\n",
+    "description": "The color of Spinners.\n",
     "commentRange": {
       "start": 1676,
-      "end": 1677
+      "end": 1676
     },
     "context": {
       "type": "variable",
-      "name": "sprk-tab-navigation-btn-active-bg-color",
+      "name": "sprk-spinner-color",
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1678,
-        "end": 1678
+        "start": 1677,
+        "end": 1677
       }
     },
     "access": "public",
@@ -21622,19 +21697,19 @@
     }
   },
   {
-    "description": "The background color of the Stepper.\n",
+    "description": "The color of the dark Spinner.\n",
     "commentRange": {
-      "start": 1684,
-      "end": 1684
+      "start": 1678,
+      "end": 1678
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-bg",
-      "value": "transparent",
+      "name": "sprk-spinner-color-dark",
+      "value": "$sprk-black",
       "scope": "default",
       "line": {
-        "start": 1685,
-        "end": 1685
+        "start": 1679,
+        "end": 1679
       }
     },
     "access": "public",
@@ -21647,19 +21722,19 @@
     }
   },
   {
-    "description": "The minimum width at which the Stepper\nswitches between narrow and wide layouts.\n",
+    "description": "The breakpoint at which the tabs\ngo from stacked layout to side by side in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1686,
-      "end": 1687
+      "start": 1685,
+      "end": 1686
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-breakpoint",
-      "value": "$sprk-split-breakpoint-xl",
+      "name": "sprk-tab-navigation-breakpoint",
+      "value": "46rem",
       "scope": "default",
       "line": {
-        "start": 1688,
-        "end": 1688
+        "start": 1687,
+        "end": 1687
       }
     },
     "access": "public",
@@ -21672,19 +21747,19 @@
     }
   },
   {
-    "description": "The maximum width of the Stepper.\n",
+    "description": "The tab button text color in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1689,
-      "end": 1689
+      "start": 1688,
+      "end": 1688
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-max-width",
-      "value": "480px",
+      "name": "sprk-tab-navigation-btn-color",
+      "value": "$sprk-black",
       "scope": "default",
       "line": {
-        "start": 1690,
-        "end": 1690
+        "start": 1689,
+        "end": 1689
       }
     },
     "access": "public",
@@ -21697,19 +21772,19 @@
     }
   },
   {
-    "description": "The border width of the Stepper icons.\n",
+    "description": "The tab button background color in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1691,
-      "end": 1691
+      "start": 1690,
+      "end": 1690
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-border-width",
-      "value": "2px",
+      "name": "sprk-tab-navigation-btn-bg-color",
+      "value": "$sprk-gray",
       "scope": "default",
       "line": {
-        "start": 1692,
-        "end": 1692
+        "start": 1691,
+        "end": 1691
       }
     },
     "access": "public",
@@ -21722,19 +21797,19 @@
     }
   },
   {
-    "description": "The color of the border around the Stepper icon.\n",
+    "description": "The border on the top of the button tabs in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1693,
-      "end": 1693
+      "start": 1692,
+      "end": 1692
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-border-color",
-      "value": "$sprk-black-tint-50",
+      "name": "sprk-tab-navigation-btn-border-top",
+      "value": "3px solid $sprk-gray",
       "scope": "default",
       "line": {
-        "start": 1694,
-        "end": 1694
+        "start": 1693,
+        "end": 1693
       }
     },
     "access": "public",
@@ -21747,15 +21822,15 @@
     }
   },
   {
-    "description": "The color of the step icon when the step is selected in the Stepper.\n",
+    "description": "The border on the top of the\nbutton tabs on hover in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1695,
+      "start": 1694,
       "end": 1695
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-border-color-selected",
-      "value": "$sprk-green",
+      "name": "sprk-tab-navigation-btn-hover-border-top",
+      "value": "3px solid $sprk-red",
       "scope": "default",
       "line": {
         "start": 1696,
@@ -21772,19 +21847,19 @@
     }
   },
   {
-    "description": "The color of the icon border when the\nStepper is on a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
+    "description": "The button tab text color of the\ncurrently active tab in Tabbed Navigation.\n",
     "commentRange": {
       "start": 1697,
-      "end": 1699
+      "end": 1698
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-dark-icon-border-color",
-      "value": "$sprk-white",
+      "name": "sprk-tab-navigation-btn-active-color",
+      "value": "$sprk-red",
       "scope": "default",
       "line": {
-        "start": 1700,
-        "end": 1700
+        "start": 1699,
+        "end": 1699
       }
     },
     "access": "public",
@@ -21797,15 +21872,15 @@
     }
   },
   {
-    "description": "The height of the step icon in the Stepper.\n",
+    "description": "The button tab top border of the\ncurrently active tab in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1701,
+      "start": 1700,
       "end": 1701
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-height",
-      "value": "16px",
+      "name": "sprk-tab-navigation-btn-active-border-top",
+      "value": "3px solid $sprk-red",
       "scope": "default",
       "line": {
         "start": 1702,
@@ -21822,44 +21897,19 @@
     }
   },
   {
-    "description": "The width of the step icon in the Stepper.\n",
+    "description": "The button tab background color\nof the currently active tab in Tabbed Navigation.\n",
     "commentRange": {
       "start": 1703,
-      "end": 1703
+      "end": 1704
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-width",
-      "value": "16px",
-      "scope": "default",
-      "line": {
-        "start": 1704,
-        "end": 1704
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The color of the step icon in the Stepper.\n",
-    "commentRange": {
-      "start": 1705,
-      "end": 1705
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-icon-color",
+      "name": "sprk-tab-navigation-btn-active-bg-color",
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1706,
-        "end": 1706
+        "start": 1705,
+        "end": 1705
       }
     },
     "access": "public",
@@ -21872,19 +21922,119 @@
     }
   },
   {
-    "description": "The color of the step icon\nin the Stepper when hovered.\n",
+    "description": "The background color of the Stepper.\n",
     "commentRange": {
-      "start": 1707,
-      "end": 1708
+      "start": 1711,
+      "end": 1711
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-color-hover",
+      "name": "sprk-stepper-bg",
+      "value": "transparent",
+      "scope": "default",
+      "line": {
+        "start": 1712,
+        "end": 1712
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The minimum width at which the Stepper\nswitches between narrow and wide layouts.\n",
+    "commentRange": {
+      "start": 1713,
+      "end": 1714
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-breakpoint",
+      "value": "$sprk-split-breakpoint-xl",
+      "scope": "default",
+      "line": {
+        "start": 1715,
+        "end": 1715
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The maximum width of the Stepper.\n",
+    "commentRange": {
+      "start": 1716,
+      "end": 1716
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-max-width",
+      "value": "480px",
+      "scope": "default",
+      "line": {
+        "start": 1717,
+        "end": 1717
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The border width of the Stepper icons.\n",
+    "commentRange": {
+      "start": 1718,
+      "end": 1718
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-icon-border-width",
+      "value": "2px",
+      "scope": "default",
+      "line": {
+        "start": 1719,
+        "end": 1719
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The color of the border around the Stepper icon.\n",
+    "commentRange": {
+      "start": 1720,
+      "end": 1720
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-icon-border-color",
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
-        "start": 1709,
-        "end": 1709
+        "start": 1721,
+        "end": 1721
       }
     },
     "access": "public",
@@ -21897,19 +22047,19 @@
     }
   },
   {
-    "description": "The color of the Stepper step icon when the step is selected.\n",
+    "description": "The color of the step icon when the step is selected in the Stepper.\n",
     "commentRange": {
-      "start": 1710,
-      "end": 1710
+      "start": 1722,
+      "end": 1722
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-color-selected",
-      "value": "$sprk-white",
+      "name": "sprk-stepper-icon-border-color-selected",
+      "value": "$sprk-green",
       "scope": "default",
       "line": {
-        "start": 1711,
-        "end": 1711
+        "start": 1723,
+        "end": 1723
       }
     },
     "access": "public",
@@ -21922,115 +22072,15 @@
     }
   },
   {
-    "description": "The color of the step icon when the\nStepper has a dark background (sprk-c-Stepper--has-dark-bg).\n",
-    "commentRange": {
-      "start": 1712,
-      "end": 1713
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-dark-icon-color",
-      "value": "$sprk-blue",
-      "scope": "default",
-      "line": {
-        "start": 1714,
-        "end": 1714
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The color of the Stepper step icon when the step\nis selected and the Stepper has a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
-    "commentRange": {
-      "start": 1715,
-      "end": 1717
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-dark-icon-color-selected",
-      "value": "$sprk-white",
-      "scope": "default",
-      "line": {
-        "start": 1718,
-        "end": 1718
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The color of the step icon on hover\nwhen the Stepper has a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
-    "commentRange": {
-      "start": 1719,
-      "end": 1721
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-dark-icon-color-hover",
-      "value": "$sprk-white",
-      "scope": "default",
-      "line": {
-        "start": 1722,
-        "end": 1722
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The transition of the Stepper step icon.\n",
+    "description": "The color of the icon border when the\nStepper is on a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
       "start": 1724,
-      "end": 1724
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-icon-transition",
-      "value": "0.3s all ease-in-out",
-      "scope": "default",
-      "line": {
-        "start": 1725,
-        "end": 1725
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The z-index of the Stepper step icon.\n",
-    "commentRange": {
-      "start": 1726,
       "end": 1726
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-z-index",
-      "value": "$sprk-layer-height-xs",
+      "name": "sprk-stepper-dark-icon-border-color",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
         "start": 1727,
@@ -22047,19 +22097,19 @@
     }
   },
   {
-    "description": "The spread value of the icon box\nshadow when the Stepper step is selected.\n",
+    "description": "The height of the step icon in the Stepper.\n",
     "commentRange": {
       "start": 1728,
-      "end": 1729
+      "end": 1728
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-box-shadow-selected-spread",
-      "value": "8px",
+      "name": "sprk-stepper-icon-height",
+      "value": "16px",
       "scope": "default",
       "line": {
-        "start": 1730,
-        "end": 1730
+        "start": 1729,
+        "end": 1729
       }
     },
     "access": "public",
@@ -22072,19 +22122,44 @@
     }
   },
   {
-    "description": "The box shadow of the Stepper step icon\nwhen the icon is selected.\n",
+    "description": "The width of the step icon in the Stepper.\n",
     "commentRange": {
-      "start": 1731,
+      "start": 1730,
+      "end": 1730
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-icon-width",
+      "value": "16px",
+      "scope": "default",
+      "line": {
+        "start": 1731,
+        "end": 1731
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The color of the step icon in the Stepper.\n",
+    "commentRange": {
+      "start": 1732,
       "end": 1732
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-box-shadow-selected",
-      "value": "0 0 0\n  $sprk-stepper-icon-box-shadow-selected-spread\n  $sprk-stepper-icon-border-color-selected",
+      "name": "sprk-stepper-icon-color",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
         "start": 1733,
-        "end": 1735
+        "end": 1733
       }
     },
     "access": "public",
@@ -22097,19 +22172,19 @@
     }
   },
   {
-    "description": "The background color of the content in the Stepper step.\n",
+    "description": "The color of the step icon\nin the Stepper when hovered.\n",
     "commentRange": {
-      "start": 1736,
-      "end": 1736
+      "start": 1734,
+      "end": 1735
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-content-bg",
-      "value": "transparent",
+      "name": "sprk-stepper-icon-color-hover",
+      "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
-        "start": 1737,
-        "end": 1737
+        "start": 1736,
+        "end": 1736
       }
     },
     "access": "public",
@@ -22122,19 +22197,19 @@
     }
   },
   {
-    "description": "The border radius of the Stepper step\ncontent box when it has a description.\n",
+    "description": "The color of the Stepper step icon when the step is selected.\n",
     "commentRange": {
-      "start": 1738,
-      "end": 1739
+      "start": 1737,
+      "end": 1737
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-description-border-radius",
-      "value": "5px",
+      "name": "sprk-stepper-icon-color-selected",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1740,
-        "end": 1740
+        "start": 1738,
+        "end": 1738
       }
     },
     "access": "public",
@@ -22147,19 +22222,19 @@
     }
   },
   {
-    "description": "The box shadow of the Stepper step content\nbox when it has a description.\n",
+    "description": "The color of the step icon when the\nStepper has a dark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
-      "start": 1741,
-      "end": 1742
+      "start": 1739,
+      "end": 1740
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-description-box-shadow",
-      "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
+      "name": "sprk-stepper-dark-icon-color",
+      "value": "$sprk-blue",
       "scope": "default",
       "line": {
-        "start": 1743,
-        "end": 1743
+        "start": 1741,
+        "end": 1741
       }
     },
     "access": "public",
@@ -22172,19 +22247,19 @@
     }
   },
   {
-    "description": "The spacing between the\nStepper step heading and description.\n",
+    "description": "The color of the Stepper step icon when the step\nis selected and the Stepper has a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
-      "start": 1744,
-      "end": 1745
+      "start": 1742,
+      "end": 1744
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-description-top-spacing",
-      "value": "$sprk-space-m",
+      "name": "sprk-stepper-dark-icon-color-selected",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1746,
-        "end": 1746
+        "start": 1745,
+        "end": 1745
       }
     },
     "access": "public",
@@ -22197,19 +22272,19 @@
     }
   },
   {
-    "description": "The font weight of the Stepper step heading.\n",
+    "description": "The color of the step icon on hover\nwhen the Stepper has a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
-      "start": 1747,
-      "end": 1747
+      "start": 1746,
+      "end": 1748
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-heading-font-weight",
-      "value": "400",
+      "name": "sprk-stepper-dark-icon-color-hover",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1748,
-        "end": 1748
+        "start": 1749,
+        "end": 1749
       }
     },
     "access": "public",
@@ -22222,40 +22297,15 @@
     }
   },
   {
-    "description": "The font size of the Stepper step heading.\n",
-    "commentRange": {
-      "start": 1749,
-      "end": 1749
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-step-heading-size",
-      "value": "$sprk-font-size-display-six",
-      "scope": "default",
-      "line": {
-        "start": 1750,
-        "end": 1750
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The color of the Stepper step heading.\n",
+    "description": "The transition of the Stepper step icon.\n",
     "commentRange": {
       "start": 1751,
       "end": 1751
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-heading-color",
-      "value": "$sprk-black",
+      "name": "sprk-stepper-icon-transition",
+      "value": "0.3s all ease-in-out",
       "scope": "default",
       "line": {
         "start": 1752,
@@ -22272,19 +22322,19 @@
     }
   },
   {
-    "description": "The color of the Stepper step heading when\nthe Stepper is on a dark\nbackground (sprk-c-Stepper--has-dark-bg).\n",
+    "description": "The z-index of the Stepper step icon.\n",
     "commentRange": {
       "start": 1753,
-      "end": 1755
+      "end": 1753
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-dark-step-heading-color",
-      "value": "$sprk-white",
+      "name": "sprk-stepper-icon-z-index",
+      "value": "$sprk-layer-height-xs",
       "scope": "default",
       "line": {
-        "start": 1756,
-        "end": 1756
+        "start": 1754,
+        "end": 1754
       }
     },
     "access": "public",
@@ -22297,19 +22347,19 @@
     }
   },
   {
-    "description": "The color of the Stepper\nstep heading when the step is selected.\n",
+    "description": "The spread value of the icon box\nshadow when the Stepper step is selected.\n",
     "commentRange": {
-      "start": 1757,
-      "end": 1758
+      "start": 1755,
+      "end": 1756
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-heading-color-selected",
-      "value": "$sprk-black",
+      "name": "sprk-stepper-icon-box-shadow-selected-spread",
+      "value": "8px",
       "scope": "default",
       "line": {
-        "start": 1759,
-        "end": 1759
+        "start": 1757,
+        "end": 1757
       }
     },
     "access": "public",
@@ -22322,19 +22372,19 @@
     }
   },
   {
-    "description": "The padding value for the Stepper step.\n",
+    "description": "The box shadow of the Stepper step icon\nwhen the icon is selected.\n",
     "commentRange": {
-      "start": 1760,
-      "end": 1760
+      "start": 1758,
+      "end": 1759
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-padding",
-      "value": "$sprk-space-misc-a",
+      "name": "sprk-stepper-icon-box-shadow-selected",
+      "value": "0 0 0\n  $sprk-stepper-icon-box-shadow-selected-spread\n  $sprk-stepper-icon-border-color-selected",
       "scope": "default",
       "line": {
-        "start": 1761,
-        "end": 1761
+        "start": 1760,
+        "end": 1762
       }
     },
     "access": "public",
@@ -22347,14 +22397,14 @@
     }
   },
   {
-    "description": "The background color of the\nStepper step content box when the step is selected.\n",
+    "description": "The background color of the content in the Stepper step.\n",
     "commentRange": {
-      "start": 1762,
+      "start": 1763,
       "end": 1763
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-content-bg-selected",
+      "name": "sprk-stepper-step-content-bg",
       "value": "transparent",
       "scope": "default",
       "line": {
@@ -22372,19 +22422,19 @@
     }
   },
   {
-    "description": "The background color of the Stepper step\ncontent box when it has a\ndescription and when the step is selected.\n",
+    "description": "The border radius of the Stepper step\ncontent box when it has a description.\n",
     "commentRange": {
       "start": 1765,
-      "end": 1767
+      "end": 1766
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-description-bg-selected",
-      "value": "$sprk-white",
+      "name": "sprk-stepper-step-description-border-radius",
+      "value": "5px",
       "scope": "default",
       "line": {
-        "start": 1768,
-        "end": 1768
+        "start": 1767,
+        "end": 1767
       }
     },
     "access": "public",
@@ -22397,15 +22447,40 @@
     }
   },
   {
-    "description": "The text color of a selected Stepper step's\ncontent and header when it has a\ndescription. This applies to\nsteppers with the sprk-c-Stepper--has-dark-bg class.\n",
+    "description": "The box shadow of the Stepper step content\nbox when it has a description.\n",
     "commentRange": {
-      "start": 1769,
+      "start": 1768,
+      "end": 1769
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-step-description-box-shadow",
+      "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
+      "scope": "default",
+      "line": {
+        "start": 1770,
+        "end": 1770
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The spacing between the\nStepper step heading and description.\n",
+    "commentRange": {
+      "start": 1771,
       "end": 1772
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-dark-step-description-selected",
-      "value": "$sprk-black",
+      "name": "sprk-stepper-step-description-top-spacing",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
         "start": 1773,
@@ -22422,15 +22497,15 @@
     }
   },
   {
-    "description": "The color of the bar that connects the steps in the Stepper.\n",
+    "description": "The font weight of the Stepper step heading.\n",
     "commentRange": {
       "start": 1774,
       "end": 1774
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-bar-color",
-      "value": "$sprk-black-tint-50",
+      "name": "sprk-stepper-step-heading-font-weight",
+      "value": "400",
       "scope": "default",
       "line": {
         "start": 1775,
@@ -22447,15 +22522,40 @@
     }
   },
   {
-    "description": "The color of the bar that connects\nthe steps when the Stepper is on a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
+    "description": "The font size of the Stepper step heading.\n",
     "commentRange": {
       "start": 1776,
+      "end": 1776
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-step-heading-size",
+      "value": "$sprk-font-size-display-six",
+      "scope": "default",
+      "line": {
+        "start": 1777,
+        "end": 1777
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The color of the Stepper step heading.\n",
+    "commentRange": {
+      "start": 1778,
       "end": 1778
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-dark-bar-color",
-      "value": "$sprk-white",
+      "name": "sprk-stepper-step-heading-color",
+      "value": "$sprk-black",
       "scope": "default",
       "line": {
         "start": 1779,
@@ -22472,18 +22572,143 @@
     }
   },
   {
-    "description": "The border value for the Carousel component.\n",
+    "description": "The color of the Stepper step heading when\nthe Stepper is on a dark\nbackground (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
-      "start": 1798,
-      "end": 1798
+      "start": 1780,
+      "end": 1782
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-dot-border",
-      "value": "$sprk-stepper-icon-border-width solid\n  $sprk-stepper-dark-icon-border-color",
+      "name": "sprk-stepper-dark-step-heading-color",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1799,
+        "start": 1783,
+        "end": 1783
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The color of the Stepper\nstep heading when the step is selected.\n",
+    "commentRange": {
+      "start": 1784,
+      "end": 1785
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-step-heading-color-selected",
+      "value": "$sprk-black",
+      "scope": "default",
+      "line": {
+        "start": 1786,
+        "end": 1786
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The padding value for the Stepper step.\n",
+    "commentRange": {
+      "start": 1787,
+      "end": 1787
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-step-padding",
+      "value": "$sprk-space-misc-a",
+      "scope": "default",
+      "line": {
+        "start": 1788,
+        "end": 1788
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The background color of the\nStepper step content box when the step is selected.\n",
+    "commentRange": {
+      "start": 1789,
+      "end": 1790
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-step-content-bg-selected",
+      "value": "transparent",
+      "scope": "default",
+      "line": {
+        "start": 1791,
+        "end": 1791
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The background color of the Stepper step\ncontent box when it has a\ndescription and when the step is selected.\n",
+    "commentRange": {
+      "start": 1792,
+      "end": 1794
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-step-description-bg-selected",
+      "value": "$sprk-white",
+      "scope": "default",
+      "line": {
+        "start": 1795,
+        "end": 1795
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The text color of a selected Stepper step's\ncontent and header when it has a\ndescription. This applies to\nsteppers with the sprk-c-Stepper--has-dark-bg class.\n",
+    "commentRange": {
+      "start": 1796,
+      "end": 1799
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-dark-step-description-selected",
+      "value": "$sprk-black",
+      "scope": "default",
+      "line": {
+        "start": 1800,
         "end": 1800
       }
     },
@@ -22497,15 +22722,15 @@
     }
   },
   {
-    "description": "The height of the dots in the Carousel component.\n",
+    "description": "The color of the bar that connects the steps in the Stepper.\n",
     "commentRange": {
       "start": 1801,
       "end": 1801
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-dot-height",
-      "value": "10px",
+      "name": "sprk-stepper-bar-color",
+      "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
         "start": 1802,
@@ -22522,40 +22747,15 @@
     }
   },
   {
-    "description": "The width of the dots in the Carousel component.\n",
+    "description": "The color of the bar that connects\nthe steps when the Stepper is on a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
       "start": 1803,
-      "end": 1803
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-dot-width",
-      "value": "10px",
-      "scope": "default",
-      "line": {
-        "start": 1804,
-        "end": 1804
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The height of the dots in the Carousel component on wide viewports.\n",
-    "commentRange": {
-      "start": 1805,
       "end": 1805
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-wide-dot-height",
-      "value": "10px",
+      "name": "sprk-stepper-dark-bar-color",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
         "start": 1806,
@@ -22572,10 +22772,110 @@
     }
   },
   {
+    "description": "The border value for the Carousel component.\n",
+    "commentRange": {
+      "start": 1825,
+      "end": 1825
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-carousel-dot-border",
+      "value": "$sprk-stepper-icon-border-width solid\n  $sprk-stepper-dark-icon-border-color",
+      "scope": "default",
+      "line": {
+        "start": 1826,
+        "end": 1827
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The height of the dots in the Carousel component.\n",
+    "commentRange": {
+      "start": 1828,
+      "end": 1828
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-carousel-dot-height",
+      "value": "10px",
+      "scope": "default",
+      "line": {
+        "start": 1829,
+        "end": 1829
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The width of the dots in the Carousel component.\n",
+    "commentRange": {
+      "start": 1830,
+      "end": 1830
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-carousel-dot-width",
+      "value": "10px",
+      "scope": "default",
+      "line": {
+        "start": 1831,
+        "end": 1831
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The height of the dots in the Carousel component on wide viewports.\n",
+    "commentRange": {
+      "start": 1832,
+      "end": 1832
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-carousel-wide-dot-height",
+      "value": "10px",
+      "scope": "default",
+      "line": {
+        "start": 1833,
+        "end": 1833
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
     "description": "The width of the dots in the Carousel component on wide viewports.\n",
     "commentRange": {
-      "start": 1807,
-      "end": 1807
+      "start": 1834,
+      "end": 1834
     },
     "context": {
       "type": "variable",
@@ -22583,8 +22883,8 @@
       "value": "10px",
       "scope": "default",
       "line": {
-        "start": 1808,
-        "end": 1808
+        "start": 1835,
+        "end": 1835
       }
     },
     "access": "public",
@@ -22599,288 +22899,13 @@
   {
     "description": "The spacing between dots in the Carousel component.\n",
     "commentRange": {
-      "start": 1809,
-      "end": 1809
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-dot-spacing",
-      "value": "$sprk-space-m",
-      "scope": "default",
-      "line": {
-        "start": 1810,
-        "end": 1810
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The spacing between dots in the Carousel component on wide viewports.\n",
-    "commentRange": {
-      "start": 1811,
-      "end": 1811
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-wide-dot-spacing",
-      "value": "$sprk-carousel-dot-spacing",
-      "scope": "default",
-      "line": {
-        "start": 1812,
-        "end": 1812
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The box shadow of the active dot in the Carousel component.\n",
-    "commentRange": {
-      "start": 1813,
-      "end": 1813
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-dot-selected",
-      "value": "$sprk-stepper-icon-box-shadow-selected",
-      "scope": "default",
-      "line": {
-        "start": 1814,
-        "end": 1814
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The color of the arrows in the Carousel component.\n",
-    "commentRange": {
-      "start": 1815,
-      "end": 1815
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-arrow-color",
-      "value": "$sprk-white",
-      "scope": "default",
-      "line": {
-        "start": 1816,
-        "end": 1816
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The spacing for the arrows in the Carousel component.\n",
-    "commentRange": {
-      "start": 1817,
-      "end": 1817
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-arrow-spacing",
-      "value": "$sprk-space-m",
-      "scope": "default",
-      "line": {
-        "start": 1818,
-        "end": 1818
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The left and right values of the arrows in the Carousel component.\n",
-    "commentRange": {
-      "start": 1819,
-      "end": 1819
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-arrow-edge-spacing",
-      "value": "0",
-      "scope": "default",
-      "line": {
-        "start": 1820,
-        "end": 1820
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The padding value of the arrows in the Carousel component.\n",
-    "commentRange": {
-      "start": 1821,
-      "end": 1821
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-arrow-padding",
-      "value": "$sprk-space-m",
-      "scope": "default",
-      "line": {
-        "start": 1822,
-        "end": 1822
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The maximum width of the image in the Carousel component.\n",
-    "commentRange": {
-      "start": 1823,
-      "end": 1823
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-narrow-image-max-width",
-      "value": "18.75rem",
-      "scope": "default",
-      "line": {
-        "start": 1824,
-        "end": 1824
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The breakpoint for the arrows in the Carousel component.\n",
-    "commentRange": {
-      "start": 1825,
-      "end": 1825
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-arrow-position-breakpoint",
-      "value": "31.25rem",
-      "scope": "default",
-      "line": {
-        "start": 1826,
-        "end": 1826
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The padding value for the dots container in the Carousel component.\n",
-    "commentRange": {
-      "start": 1827,
-      "end": 1827
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-dot-container-padding",
-      "value": "$sprk-space-xs",
-      "scope": "default",
-      "line": {
-        "start": 1828,
-        "end": 1828
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The breakpoint for the Carousel component.\n",
-    "commentRange": {
-      "start": 1829,
-      "end": 1829
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-carousel-breakpoint",
-      "value": "$sprk-split-breakpoint-xl",
-      "scope": "default",
-      "line": {
-        "start": 1830,
-        "end": 1830
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The maximum width of the Card.\n",
-    "commentRange": {
       "start": 1836,
       "end": 1836
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-max-width",
-      "value": "26.5625rem",
+      "name": "sprk-carousel-dot-spacing",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
         "start": 1837,
@@ -22897,15 +22922,15 @@
     }
   },
   {
-    "description": "The main Card breakpoint.\n",
+    "description": "The spacing between dots in the Carousel component on wide viewports.\n",
     "commentRange": {
       "start": 1838,
       "end": 1838
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-breakpoint",
-      "value": "$sprk-split-breakpoint-s",
+      "name": "sprk-carousel-wide-dot-spacing",
+      "value": "$sprk-carousel-dot-spacing",
       "scope": "default",
       "line": {
         "start": 1839,
@@ -22922,15 +22947,15 @@
     }
   },
   {
-    "description": "The box shadow of the Card on narrow viewports.\n",
+    "description": "The box shadow of the active dot in the Carousel component.\n",
     "commentRange": {
       "start": 1840,
       "end": 1840
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-shadow",
-      "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
+      "name": "sprk-carousel-dot-selected",
+      "value": "$sprk-stepper-icon-box-shadow-selected",
       "scope": "default",
       "line": {
         "start": 1841,
@@ -22947,15 +22972,15 @@
     }
   },
   {
-    "description": "The box shadow of the Card on wide viewports.\n",
+    "description": "The color of the arrows in the Carousel component.\n",
     "commentRange": {
       "start": 1842,
       "end": 1842
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-shadow-wide-viewport",
-      "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
+      "name": "sprk-carousel-arrow-color",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
         "start": 1843,
@@ -22972,15 +22997,15 @@
     }
   },
   {
-    "description": "The box shadow of the Standout Card variant on narrow viewports.\n",
+    "description": "The spacing for the arrows in the Carousel component.\n",
     "commentRange": {
       "start": 1844,
       "end": 1844
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-shadow-standout",
-      "value": "0 4px 20px 2px rgba(0, 0, 0, 0.1)",
+      "name": "sprk-carousel-arrow-spacing",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
         "start": 1845,
@@ -22997,15 +23022,15 @@
     }
   },
   {
-    "description": "The box shadow of the Standout Card variant on wide viewports.\n",
+    "description": "The left and right values of the arrows in the Carousel component.\n",
     "commentRange": {
       "start": 1846,
       "end": 1846
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-shadow-standout-wide-viewport",
-      "value": "0 4px 40px 2px rgba(0, 0, 0, 0.1)",
+      "name": "sprk-carousel-arrow-edge-spacing",
+      "value": "0",
       "scope": "default",
       "line": {
         "start": 1847,
@@ -23022,15 +23047,15 @@
     }
   },
   {
-    "description": "The border radius of the Card.\n",
+    "description": "The padding value of the arrows in the Carousel component.\n",
     "commentRange": {
       "start": 1848,
       "end": 1848
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-border-radius",
-      "value": "8px",
+      "name": "sprk-carousel-arrow-padding",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
         "start": 1849,
@@ -23047,15 +23072,15 @@
     }
   },
   {
-    "description": "The padding of the content inside the Card.\n",
+    "description": "The maximum width of the image in the Carousel component.\n",
     "commentRange": {
       "start": 1850,
       "end": 1850
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-content-padding",
-      "value": "$sprk-space-misc-a",
+      "name": "sprk-carousel-narrow-image-max-width",
+      "value": "18.75rem",
       "scope": "default",
       "line": {
         "start": 1851,
@@ -23072,15 +23097,15 @@
     }
   },
   {
-    "description": "The background color of the header area for the Highlighted Header Card.\n",
+    "description": "The breakpoint for the arrows in the Carousel component.\n",
     "commentRange": {
       "start": 1852,
       "end": 1852
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-header-bg-color",
-      "value": "$sprk-green",
+      "name": "sprk-carousel-arrow-position-breakpoint",
+      "value": "31.25rem",
       "scope": "default",
       "line": {
         "start": 1853,
@@ -23097,15 +23122,15 @@
     }
   },
   {
-    "description": "The text color for the Highlighted Header Card.\n",
+    "description": "The padding value for the dots container in the Carousel component.\n",
     "commentRange": {
       "start": 1854,
       "end": 1854
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-header-text-color",
-      "value": "$sprk-white",
+      "name": "sprk-carousel-dot-container-padding",
+      "value": "$sprk-space-xs",
       "scope": "default",
       "line": {
         "start": 1855,
@@ -23122,19 +23147,19 @@
     }
   },
   {
-    "description": "The border surrounding the Dictionary.\n",
+    "description": "The breakpoint for the Carousel component.\n",
     "commentRange": {
-      "start": 1861,
-      "end": 1861
+      "start": 1856,
+      "end": 1856
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-border",
-      "value": "1px solid $sprk-gray",
+      "name": "sprk-carousel-breakpoint",
+      "value": "$sprk-split-breakpoint-xl",
       "scope": "default",
       "line": {
-        "start": 1862,
-        "end": 1862
+        "start": 1857,
+        "end": 1857
       }
     },
     "access": "public",
@@ -23147,15 +23172,15 @@
     }
   },
   {
-    "description": "The background color of the key value pairs in the striped Dictionary.\n",
+    "description": "The maximum width of the Card.\n",
     "commentRange": {
       "start": 1863,
       "end": 1863
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-stripe-color",
-      "value": "$sprk-gray",
+      "name": "sprk-card-max-width",
+      "value": "26.5625rem",
       "scope": "default",
       "line": {
         "start": 1864,
@@ -23172,15 +23197,15 @@
     }
   },
   {
-    "description": "The breakpoint of the Dictionary component.\n",
+    "description": "The main Card breakpoint.\n",
     "commentRange": {
       "start": 1865,
       "end": 1865
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-breakpoint",
-      "value": "38.4375rem",
+      "name": "sprk-card-breakpoint",
+      "value": "$sprk-split-breakpoint-s",
       "scope": "default",
       "line": {
         "start": 1866,
@@ -23197,15 +23222,15 @@
     }
   },
   {
-    "description": "The font size of the labels in the Dictionary.\n",
+    "description": "The box shadow of the Card on narrow viewports.\n",
     "commentRange": {
       "start": 1867,
       "end": 1867
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-label-font-size",
-      "value": "$sprk-font-size-body-one",
+      "name": "sprk-card-shadow",
+      "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
         "start": 1868,
@@ -23222,15 +23247,15 @@
     }
   },
   {
-    "description": "The font weight of the labels in the Dictionary.\n",
+    "description": "The box shadow of the Card on wide viewports.\n",
     "commentRange": {
       "start": 1869,
       "end": 1869
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-label-font-weight",
-      "value": "$sprk-font-weight-body-one",
+      "name": "sprk-card-shadow-wide-viewport",
+      "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
         "start": 1870,
@@ -23247,15 +23272,15 @@
     }
   },
   {
-    "description": "The line height of the labels in the Dictionary.\n",
+    "description": "The box shadow of the Standout Card variant on narrow viewports.\n",
     "commentRange": {
       "start": 1871,
       "end": 1871
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-label-line-height",
-      "value": "$sprk-line-height-body-one",
+      "name": "sprk-card-shadow-standout",
+      "value": "0 4px 20px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
         "start": 1872,
@@ -23272,15 +23297,90 @@
     }
   },
   {
-    "description": "The Highlight Board breakpoint at which styles change\nfor padding, font size and button width.\n",
+    "description": "The box shadow of the Standout Card variant on wide viewports.\n",
     "commentRange": {
-      "start": 1878,
+      "start": 1873,
+      "end": 1873
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-card-shadow-standout-wide-viewport",
+      "value": "0 4px 40px 2px rgba(0, 0, 0, 0.1)",
+      "scope": "default",
+      "line": {
+        "start": 1874,
+        "end": 1874
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The border radius of the Card.\n",
+    "commentRange": {
+      "start": 1875,
+      "end": 1875
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-card-border-radius",
+      "value": "8px",
+      "scope": "default",
+      "line": {
+        "start": 1876,
+        "end": 1876
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The padding of the content inside the Card.\n",
+    "commentRange": {
+      "start": 1877,
+      "end": 1877
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-card-content-padding",
+      "value": "$sprk-space-misc-a",
+      "scope": "default",
+      "line": {
+        "start": 1878,
+        "end": 1878
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The background color of the header area for the Highlighted Header Card.\n",
+    "commentRange": {
+      "start": 1879,
       "end": 1879
     },
     "context": {
       "type": "variable",
-      "name": "sprk-highlight-board-breakpoint",
-      "value": "30rem",
+      "name": "sprk-card-header-bg-color",
+      "value": "$sprk-green",
       "scope": "default",
       "line": {
         "start": 1880,
@@ -23297,10 +23397,210 @@
     }
   },
   {
-    "description": "The maximum width of the content\nfor the Highlight Board when it has an image.\n",
+    "description": "The text color for the Highlighted Header Card.\n",
     "commentRange": {
       "start": 1881,
-      "end": 1882
+      "end": 1881
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-card-header-text-color",
+      "value": "$sprk-white",
+      "scope": "default",
+      "line": {
+        "start": 1882,
+        "end": 1882
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The border surrounding the Dictionary.\n",
+    "commentRange": {
+      "start": 1888,
+      "end": 1888
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dictionary-border",
+      "value": "1px solid $sprk-gray",
+      "scope": "default",
+      "line": {
+        "start": 1889,
+        "end": 1889
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The background color of the key value pairs in the striped Dictionary.\n",
+    "commentRange": {
+      "start": 1890,
+      "end": 1890
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dictionary-stripe-color",
+      "value": "$sprk-gray",
+      "scope": "default",
+      "line": {
+        "start": 1891,
+        "end": 1891
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The breakpoint of the Dictionary component.\n",
+    "commentRange": {
+      "start": 1892,
+      "end": 1892
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dictionary-breakpoint",
+      "value": "38.4375rem",
+      "scope": "default",
+      "line": {
+        "start": 1893,
+        "end": 1893
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font size of the labels in the Dictionary.\n",
+    "commentRange": {
+      "start": 1894,
+      "end": 1894
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dictionary-label-font-size",
+      "value": "$sprk-font-size-body-one",
+      "scope": "default",
+      "line": {
+        "start": 1895,
+        "end": 1895
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font weight of the labels in the Dictionary.\n",
+    "commentRange": {
+      "start": 1896,
+      "end": 1896
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dictionary-label-font-weight",
+      "value": "$sprk-font-weight-body-one",
+      "scope": "default",
+      "line": {
+        "start": 1897,
+        "end": 1897
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The line height of the labels in the Dictionary.\n",
+    "commentRange": {
+      "start": 1898,
+      "end": 1898
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dictionary-label-line-height",
+      "value": "$sprk-line-height-body-one",
+      "scope": "default",
+      "line": {
+        "start": 1899,
+        "end": 1899
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The Highlight Board breakpoint at which styles change\nfor padding, font size and button width.\n",
+    "commentRange": {
+      "start": 1905,
+      "end": 1906
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-highlight-board-breakpoint",
+      "value": "30rem",
+      "scope": "default",
+      "line": {
+        "start": 1907,
+        "end": 1907
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The maximum width of the content\nfor the Highlight Board when it has an image.\n",
+    "commentRange": {
+      "start": 1908,
+      "end": 1909
     },
     "context": {
       "type": "variable",
@@ -23308,8 +23608,8 @@
       "value": "30rem",
       "scope": "default",
       "line": {
-        "start": 1883,
-        "end": 1883
+        "start": 1910,
+        "end": 1910
       }
     },
     "access": "public",
@@ -23324,8 +23624,8 @@
   {
     "description": "Percentage reduction value for the\nfont size in the Highlight Board in narrow viewports.\n",
     "commentRange": {
-      "start": 1884,
-      "end": 1885
+      "start": 1911,
+      "end": 1912
     },
     "context": {
       "type": "variable",
@@ -23333,8 +23633,8 @@
       "value": "0.8",
       "scope": "default",
       "line": {
-        "start": 1886,
-        "end": 1886
+        "start": 1913,
+        "end": 1913
       }
     },
     "access": "public",
@@ -23349,8 +23649,8 @@
   {
     "description": "The height of the Highlight Board image.\n",
     "commentRange": {
-      "start": 1887,
-      "end": 1887
+      "start": 1914,
+      "end": 1914
     },
     "context": {
       "type": "variable",
@@ -23358,8 +23658,8 @@
       "value": "31.25rem",
       "scope": "default",
       "line": {
-        "start": 1888,
-        "end": 1888
+        "start": 1915,
+        "end": 1915
       }
     },
     "access": "public",
@@ -23374,8 +23674,8 @@
   {
     "description": "The background color of the Highlight Board.\n",
     "commentRange": {
-      "start": 1889,
-      "end": 1889
+      "start": 1916,
+      "end": 1916
     },
     "context": {
       "type": "variable",
@@ -23383,8 +23683,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1890,
-        "end": 1890
+        "start": 1917,
+        "end": 1917
       }
     },
     "access": "public",
@@ -23399,8 +23699,8 @@
   {
     "description": "The background color of\nthe content box in the Highlight Board.\n",
     "commentRange": {
-      "start": 1891,
-      "end": 1892
+      "start": 1918,
+      "end": 1919
     },
     "context": {
       "type": "variable",
@@ -23408,8 +23708,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1893,
-        "end": 1893
+        "start": 1920,
+        "end": 1920
       }
     },
     "access": "public",
@@ -23739,12 +24039,12 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 774,
-      "end": 774
+      "start": 770,
+      "end": 770
     },
     "context": {
       "type": "css",
-      "name": "/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "name": "//\n// Accessibility\n///\n\n/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
       "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
       "line": {
         "start": 779,
@@ -23763,12 +24063,12 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 770,
-      "end": 770
+      "start": 774,
+      "end": 774
     },
     "context": {
       "type": "css",
-      "name": "//\n// Accessibility\n///\n\n/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "name": "/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
       "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
       "line": {
         "start": 779,
