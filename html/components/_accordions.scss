@@ -35,18 +35,19 @@
 
 .sprk-c-Accordion__summary {
   align-items: center;
+  background-color: $sprk-accordion-summary-background-color;
+  border: $sprk-accordion-summary-border;
   color: $sprk-accordion-summary-color;
   display: flex;
   padding: $sprk-accordion-summary-padding;
-  text-decoration: none;
   text-align: $sprk-accordion-summary-text-align;
-  border: $sprk-accordion-summary-border;
-  background-color: $sprk-accordion-summary-background-color;
+  text-decoration: $sprk-accordion-summary-text-decoration;
+  width: 100%;
 
   &:hover {
     .sprk-c-Accordion__heading {
       color: $sprk-accordion-summary-active-color;
-      text-decoration: none;
+      text-decoration: $sprk-accordion-summary-active-text-decoration;
     }
   }
 }
