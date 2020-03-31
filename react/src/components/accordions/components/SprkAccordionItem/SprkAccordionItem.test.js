@@ -28,9 +28,9 @@ describe('SprkAccordionItem:', () => {
       <SprkAccordionItem heading="test">test</SprkAccordionItem>,
     );
     expect(wrapper.state().isOpen).toBe(false);
-    wrapper.find('a').simulate('click');
+    wrapper.find('button').simulate('click');
     expect(wrapper.state().isOpen).toBe(true);
-    wrapper.find('a').simulate('click');
+    wrapper.find('button').simulate('click');
     expect(wrapper.state().isOpen).toBe(false);
   });
 
@@ -38,7 +38,7 @@ describe('SprkAccordionItem:', () => {
     const wrapper = mount(
       <SprkAccordionItem heading="test">test</SprkAccordionItem>,
     );
-    wrapper.find('a').simulate('click');
+    wrapper.find('button').simulate('click');
     expect(wrapper.find('.sprk-c-Icon--open').length).toBe(1);
   });
 
@@ -46,7 +46,7 @@ describe('SprkAccordionItem:', () => {
     const wrapper = mount(
       <SprkAccordionItem heading="test">test</SprkAccordionItem>,
     );
-    wrapper.find('a').simulate('click');
+    wrapper.find('button').simulate('click');
     expect(wrapper.find('[aria-expanded="true"]').length).toBe(2);
   });
 
@@ -57,7 +57,35 @@ describe('SprkAccordionItem:', () => {
         test
       </SprkAccordionItem>,
     );
-    wrapper.find('a').simulate('click');
+    wrapper.find('button').simulate('click');
     expect(spyFunc.mock.calls.length).toBe(1);
+  });
+
+  it('should render with a button element', () => {
+    const wrapper = mount(
+      <SprkAccordionItem heading="test">test</SprkAccordionItem>,
+    );
+    expect(wrapper.find('button').length).toBe(1);
+  });
+
+  it('should have aria-controls attribute value equal to content value', () => {
+    const wrapper = mount(
+      <SprkAccordionItem heading="test" id="test-id">test</SprkAccordionItem>,
+    );
+    console.log(wrapper.find('.sprk-c-Accordion__content').getDOMNode(), 'asdfasdfeeeasdf')
+
+    wrapper.find('button').simulate('click');
+    expect(
+      wrapper
+      .find('.sprk-c-Accordion__content')
+      .getDOMNode().id
+    ).toEqual('test-id');
+
+    expect(
+      wrapper
+        .find('button')
+        .getDOMNode()
+        .getAttribute('aria-controls')
+    ).toEqual('test-id');
   });
 });
