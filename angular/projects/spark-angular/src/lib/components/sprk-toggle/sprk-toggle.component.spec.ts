@@ -74,7 +74,7 @@ describe('SprkToggleComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(element.classList.toString()).toEqual(
-      'sprk-u-Overflow--hidden sprk-u-pam sprk-u-man'
+      'sprk-c-Toggle sprk-u-pam sprk-u-man'
     );
   });
 
