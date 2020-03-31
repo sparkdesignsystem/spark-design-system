@@ -6,17 +6,14 @@ import { uniqueId } from 'lodash';
   selector: 'sprk-toggle',
   template: `
     <div
-      class="sprk-u-Overflow--hidden {{ additionalClasses }}"
+      class="sprk-c-Toggle {{ additionalClasses }}"
       [attr.data-id]="idString"
     >
       <button
-        sprkLink
         variant="icon"
         [ngClass]="getClasses()"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
-        [analyticsString]="analyticsString"
-        href="#"
         data-sprk-toggle="trigger"
       >
         <sprk-icon
@@ -32,7 +29,7 @@ import { uniqueId } from 'lodash';
         [@toggleContent]="animState"
         data-sprk-toggle="content"
       >
-        <div class="sprk-u-pts sprk-u-pbs">
+        <div class="sprk-u-pts sprk-u-pbs sprk-c-Toggle__content">
           <ng-content></ng-content>
         </div>
       </div>
@@ -128,8 +125,7 @@ export class SprkToggleComponent implements OnInit {
   getClasses(): string {
     const classArray: string[] = [
       this.titleFontClass,
-      'sprk-u-TextCrop--none',
-      'sprk-u-BareButton',
+      'sprk-c-Toggle__trigger'
     ];
     return classArray.join(' ');
   }
