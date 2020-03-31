@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ElementRef } from '@angular/core';
+import { Component, Input, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { toggleAnimations } from './sprk-toggle-animations';
 import { uniqueId } from 'lodash';
 
@@ -15,7 +15,7 @@ import { uniqueId } from 'lodash';
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
         [attr.data-analytics]="analyticsString"
-        data-sprk-toggle="trigger"
+        #toggleTrigger
       >
         <sprk-icon
           iconType="chevron-down-circle-two-color"
@@ -28,7 +28,7 @@ import { uniqueId } from 'lodash';
 
       <div
         [@toggleContent]="animState"
-        data-sprk-toggle="content"
+        #toggleContent
       >
         <div class="sprk-u-pts sprk-u-pbs sprk-c-Toggle__content">
           <ng-content></ng-content>
@@ -38,7 +38,10 @@ import { uniqueId } from 'lodash';
   `,
   animations: [toggleAnimations.toggleContent]
 })
-export class SprkToggleComponent implements OnInit {
+export class SprkToggleComponent implements AfterViewInit {
+  @ViewChild('toggleTrigger', { static: true }) toggleTrigger: ElementRef;
+  @ViewChild('toggleContent', { static: true }) toggleContent: ElementRef;
+
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
@@ -84,8 +87,6 @@ export class SprkToggleComponent implements OnInit {
    */
   @Input()
   idString: string;
-
-  constructor(public ref: ElementRef) {}
 
   /**
    * @ignore
@@ -162,12 +163,8 @@ export class SprkToggleComponent implements OnInit {
     triggerElement.setAttribute('aria-controls', contentId);
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.toggleState();
-
-    // Get the toggle's trigger and content elements
-    const toggleTrigger = this.ref.nativeElement.querySelector('[data-sprk-toggle="trigger"]');
-    const toggleContent = this.ref.nativeElement.querySelector('[data-sprk-toggle="content"]');
-    this.generateAriaControls(toggleTrigger, toggleContent);
+    this.generateAriaControls(this.toggleTrigger.nativeElement, this.toggleContent.nativeElement);
   }
 }
