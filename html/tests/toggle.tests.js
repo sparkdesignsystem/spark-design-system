@@ -65,12 +65,7 @@ describe('Toggle tests', () => {
     trigger.setAttribute('aria-controls', 'toggle-1');
     trigger.textContent = 'My Toggle Link Text';
     trigger.classList.add(
-      'sprk-b-TypeBodyThree',
-      'sprk-u-BareButton',
-      'sprk-u-TextCrop--none',
-      'sprk-b-Link',
-      'sprk-b-Link--has-icon',
-      'sprk-b-Link--simple',
+      'sprk-c-Toggle__trigger',
     );
 
     triggerAccordion = document.createElement('a');
