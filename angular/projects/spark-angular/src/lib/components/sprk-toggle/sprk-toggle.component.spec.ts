@@ -121,7 +121,7 @@ describe('SprkToggleComponent', () => {
     expect(contentElement.getAttribute('id')).toEqual('foo');
   });
 
-  it('should not change values if aria-controls and are both present but have different values', () => {
+  it('should not change values if aria-controls and id are both present but have different values', () => {
     triggerElement.setAttribute('aria-controls', 'foo');
     contentElement.setAttribute('id', 'bar');
     fixture.detectChanges();
