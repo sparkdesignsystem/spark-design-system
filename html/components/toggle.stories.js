@@ -23,14 +23,12 @@ export const defaultStory = () => {
 
   return `
     <div
-      class="sprk-c-Toggle"
       data-sprk-toggle="container"
       data-id="toggle-1"
     >
      <button
         class="sprk-c-Toggle__trigger"
         data-sprk-toggle="trigger"
-        href="#"
       >
         <svg
           class="
@@ -48,7 +46,6 @@ export const defaultStory = () => {
       </button>
 
       <div
-        class="sprk-c-Toggle__content"
         data-sprk-toggle="content"
       >
         <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
