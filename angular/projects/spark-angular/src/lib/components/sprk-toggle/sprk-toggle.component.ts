@@ -14,6 +14,7 @@ import { uniqueId } from 'lodash';
         [ngClass]="getClasses()"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
+        [attr.data-analytics]="analyticsString"
         data-sprk-toggle="trigger"
       >
         <sprk-icon
