@@ -1367,6 +1367,12 @@ $sprk-accordion-max-width: 53.125rem !default;
 $sprk-accordion-border: $sprk-divider-border !default;
 /// The font color of the Accordion item summary.
 $sprk-accordion-summary-color: $sprk-black !default;
+/// The background color of the Accordion item summary.
+$sprk-accordion-summary-background-color: transparent !default;
+/// The text-align value of the Accordion item summary.
+$sprk-accordion-summary-text-align: left !default;
+/// The border of the Accordion item summary.
+$sprk-accordion-summary-border: none !default;
 /// The color of the icon in the summary when the
 /// Accordion item is open or hovered.
 $sprk-accordion-summary-active-color: $sprk-green !default;
@@ -1377,6 +1383,10 @@ $sprk-accordion-content-padding: 0 0 $sprk-space-l !default;
 /// The background color used for hover
 /// and active on items in the Accordion.
 $sprk-accordion-active-background-color: $sprk-gray !default;
+/// The text decoration of the Accordion item summary.
+$sprk-accordion-summary-text-decoration: none;
+/// The text decoration of the Accordion item summary when active.
+$sprk-accordion-summary-active-text-decoration: none;
 
 //
 // Toggle
