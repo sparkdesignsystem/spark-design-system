@@ -33,14 +33,13 @@ export const defaultStory = () => {
   return `
 <ul class="sprk-c-Accordion sprk-o-VerticalList">
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
-    <a
-      aria-controls="details-one"
+    <button
       class="sprk-c-Accordion__summary"
       data-id="accordion-item-1"
       data-analytics="analytics_string_goes_here"
       data-sprk-toggle="trigger"
       data-sprk-toggle-type="accordion"
-      href="#">
+      >
         <h3 class="sprk-c-Accordion__heading sprk-b-TypeDisplaySeven">
           This is an accordion heading
         </h3>
@@ -57,11 +56,9 @@ export const defaultStory = () => {
             xlink:href="#chevron-up-circle-two-color"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
-    </a>
+    </button>
 
-    <div
-      data-sprk-toggle="content"
-      id="details-one">
+    <div data-sprk-toggle="content">
       <div class="sprk-c-Accordion__content sprk-o-Stack sprk-o-Stack--medium">
         <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
           This is an example of multiple HTML
@@ -86,14 +83,13 @@ export const defaultStory = () => {
   </li>
 
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
-    <a
-      aria-controls="details-two"
+    <button
       class="sprk-c-Accordion__summary"
       data-id="accordion-item-2"
       data-analytics="analytics_string_goes_here"
       data-sprk-toggle="trigger"
       data-sprk-toggle-type="accordion"
-      href="#">
+      >
         <h3 class="sprk-c-Accordion__heading sprk-b-TypeDisplaySeven">
           This is an accordion heading
         </h3>
@@ -111,11 +107,9 @@ export const defaultStory = () => {
             xlink:href="#chevron-up-circle-two-color"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
-    </a>
+    </button>
 
-    <div
-      data-sprk-toggle="content"
-      id="details-two">
+    <div data-sprk-toggle="content">
       <div class="sprk-c-Accordion__content sprk-b-TypeBodyTwo">
         This is an example of accordion content.
         This is an example of accordion content.
@@ -126,14 +120,13 @@ export const defaultStory = () => {
   </li>
 
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
-    <a
-      aria-controls="details-three"
+    <button
       class="sprk-c-Accordion__summary"
       data-id="accordion-item-3"
       data-analytics="analytics_string_goes_here"
       data-sprk-toggle="trigger"
       data-sprk-toggle-type="accordion"
-      href="#">
+      >
         <h3 class="sprk-c-Accordion__heading sprk-b-TypeDisplaySeven">
           This is an accordion heading
         </h3>
@@ -149,11 +142,9 @@ export const defaultStory = () => {
             xlink:href="#chevron-up-circle-two-color"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
-    </a>
+    </button>
 
-    <div
-      data-sprk-toggle="content"
-      id="details-three">
+    <div data-sprk-toggle="content">
       <div class="sprk-c-Accordion__content sprk-b-TypeBodyTwo">
         This is an example of accordion content.
         This is an example of accordion content.
