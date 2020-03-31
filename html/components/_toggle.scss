@@ -12,16 +12,15 @@
 
 
 .sprk-c-Toggle__trigger {
-  // TODO: abstract these variables
-  border-bottom: $sprk-link-has-icon-border-bottom;
-  text-decoration: $sprk-link-text-decoration;
-  transition: $sprk-link-transition;
+  border-bottom: $sprk-toggle-trigger-border-bottom;
+  text-decoration: $sprk-toggle-trigger-text-decoration;
+  transition: $sprk-toggle-trigger-transition;
 
   // Font considerations
-  color: $sprk-color-body-three;
-  font-family: $sprk-font-family-body-three;
-  font-size: $sprk-font-size-body-three;
-  font-weight: $sprk-font-weight-body-three;
+  color: $sprk-toggle-trigger-color;
+  font-family: $sprk-toggle-trigger-font-family;
+  font-size: $sprk-toggle-trigger-font-size;
+  font-weight: $sprk-toggle-trigger-font-weight;
   line-height: $sprk-line-height-body-three;
 
   // Button User Agent Resets
@@ -34,8 +33,8 @@
   &:hover,
   &:active,
   &:focus {
-    border-bottom: $sprk-link-has-icon-hover-border-bottom;
-    color: $sprk-link-has-icon-hover-color-text;
+    border-bottom: $sprk-toggle-trigger-hover-border-bottom;
+    color: $sprk-toggle-trigger-hover-color;
   }
 
 }
