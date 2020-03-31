@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ElementRef } from '@angular/core';
 import { toggleAnimations } from './sprk-toggle-animations';
 import { uniqueId } from 'lodash';
 
@@ -85,6 +85,8 @@ export class SprkToggleComponent implements OnInit {
   @Input()
   idString: string;
 
+  constructor(public ref: ElementRef) {}
+
   /**
    * @ignore
    */
@@ -164,8 +166,8 @@ export class SprkToggleComponent implements OnInit {
     this.toggleState();
 
     // Get the toggle's trigger and content elements
-    const toggleTrigger = document.querySelector('[data-sprk-toggle="trigger"]');
-    const toggleContent = document.querySelector('[data-sprk-toggle="content"]');
+    const toggleTrigger = this.ref.nativeElement.querySelector('[data-sprk-toggle="trigger"]');
+    const toggleContent = this.ref.nativeElement.querySelector('[data-sprk-toggle="content"]');
     this.generateAriaControls(toggleTrigger, toggleContent);
   }
 }
