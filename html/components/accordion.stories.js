@@ -39,7 +39,7 @@ export const defaultStory = () => {
       data-analytics="analytics_string_goes_here"
       data-sprk-toggle="trigger"
       data-sprk-toggle-type="accordion"
-      href="#">
+      >
         <h3 class="sprk-c-Accordion__heading sprk-b-TypeDisplaySeven">
           This is an accordion heading
         </h3>
@@ -89,7 +89,7 @@ export const defaultStory = () => {
       data-analytics="analytics_string_goes_here"
       data-sprk-toggle="trigger"
       data-sprk-toggle-type="accordion"
-      href="#">
+      >
         <h3 class="sprk-c-Accordion__heading sprk-b-TypeDisplaySeven">
           This is an accordion heading
         </h3>
@@ -126,7 +126,7 @@ export const defaultStory = () => {
       data-analytics="analytics_string_goes_here"
       data-sprk-toggle="trigger"
       data-sprk-toggle-type="accordion"
-      href="#">
+      >
         <h3 class="sprk-c-Accordion__heading sprk-b-TypeDisplaySeven">
           This is an accordion heading
         </h3>
