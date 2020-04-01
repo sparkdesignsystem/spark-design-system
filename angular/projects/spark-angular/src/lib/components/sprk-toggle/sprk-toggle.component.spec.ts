@@ -27,7 +27,7 @@ describe('SprkToggleComponent', () => {
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');
     triggerElement = element.querySelector('button');
-    contentElement = element.querySelector('[data-sprk-toggle="content"]');
+    contentElement = element.querySelector('button').nextElementSibling;
   });
 
   it('should create itself', () => {
