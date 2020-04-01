@@ -24,10 +24,10 @@
   line-height: $sprk-line-height-body-three;
 
   // Button User Agent Resets
-  background-color: transparent;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  background-color: $sprk-toggle-trigger-background-color;
+  border-top: $sprk-toggle-trigger-border-top;
+  border-left: $sprk-toggle-trigger-border-left;
+  border-right: $sprk-toggle-trigger-border-right;
   padding: 0;
 
   &:hover,
