@@ -28,7 +28,10 @@
   border-top: $sprk-toggle-trigger-border-top;
   border-left: $sprk-toggle-trigger-border-left;
   border-right: $sprk-toggle-trigger-border-right;
-  padding: 0;
+  padding-top: $sprk-toggle-trigger-padding-top;
+  padding-right: $sprk-toggle-trigger-padding-right;
+  padding-bottom: $sprk-toggle-trigger-padding-bottom;
+  padding-left: $sprk-toggle-trigger-padding-left;
 
   &:hover,
   &:active,
