@@ -1794,12 +1794,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 22,
-      "end": 24
+      "start": 18,
+      "end": 20
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-Display--none",
+      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -1818,12 +1818,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 18,
-      "end": 20
+      "start": 22,
+      "end": 24
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
+      "name": ".sprk-u-Display--none",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -2441,14 +2441,14 @@
     }
   },
   {
-    "description": "A Spark utility class that can be used on\nthe Highlight Board to make it become 100% width.\n",
+    "description": "Adds the styles for the Stacked Highlight Board variant.\n",
     "commentRange": {
-      "start": 52,
-      "end": 54
+      "start": 49,
+      "end": 50
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-FullWidth",
+      "name": ".sprk-c-HighlightBoard--stacked",
       "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
       "line": {
         "start": 59,
@@ -2465,14 +2465,14 @@
     }
   },
   {
-    "description": "Adds the styles for the Stacked Highlight Board variant.\n",
+    "description": "A Spark utility class that can be used on\nthe Highlight Board to make it become 100% width.\n",
     "commentRange": {
-      "start": 49,
-      "end": 50
+      "start": 52,
+      "end": 54
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-HighlightBoard--stacked",
+      "name": ".sprk-u-FullWidth",
       "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
       "line": {
         "start": 59,
@@ -2929,10 +2929,10 @@
     "context": {
       "type": "css",
       "name": ".sprk-b-Link--simple",
-      "value": "color: $sprk-link-simple-color;\n  border-bottom: $sprk-link-simple-border-bottom;\n  font-weight: $sprk-link-simple-font-weight;\n\n  &:visited {\n    border-bottom: $sprk-link-simple-visited-border-bottom;\n  }\n\n  &:hover,\n  &:active,\n  &:focus {\n    color: $sprk-link-simple-hover-color;\n    border-bottom: $sprk-link-simple-hover-border-bottom;\n  }",
+      "value": "color: $sprk-link-simple-color;\n  border-bottom: $sprk-link-simple-border-bottom;\n  font-weight: $sprk-link-simple-font-weight;\n\n  &:visited {\n    border-bottom: $sprk-link-simple-visited-border-bottom;\n  }\n\n  &:hover,\n  &:active,\n  &:focus {\n    transition: $sprk-link-transition;\n    color: $sprk-link-simple-hover-color;\n    border-bottom: $sprk-link-simple-hover-border-bottom;\n  }",
       "line": {
         "start": 32,
-        "end": 101
+        "end": 102
       }
     },
     "group": [
@@ -2947,16 +2947,16 @@
   {
     "description": "Used when a link is next to an icon. There will not be an underline.\n",
     "commentRange": {
-      "start": 49,
-      "end": 49
+      "start": 50,
+      "end": 50
     },
     "context": {
       "type": "css",
       "name": ".sprk-b-Link--has-icon",
       "value": "border-bottom: $sprk-link-has-icon-border-bottom;\n  font-weight: $sprk-link-has-icon-font-weight;\n\n  &:hover,\n  &:active,\n  &:focus,\n  &:visited {\n    border-bottom: $sprk-link-has-icon-hover-border-bottom;\n    color: $sprk-link-has-icon-hover-color-text;\n  }",
       "line": {
-        "start": 50,
-        "end": 101
+        "start": 51,
+        "end": 102
       }
     },
     "group": [
@@ -2971,16 +2971,16 @@
   {
     "description": "Disabled links have a muted color and cannot be interacted with.\n",
     "commentRange": {
-      "start": 69,
-      "end": 70
+      "start": 70,
+      "end": 71
     },
     "context": {
       "type": "css",
       "name": ".sprk-b-Link--disabled",
       "value": "color: $sprk-link-disabled-color;\n  stroke: $sprk-link-disabled-color;\n  fill: $sprk-link-has-icon-fill;\n  pointer-events: none;\n  border-bottom: $sprk-link-disabled-border-bottom;\n  font-weight: $sprk-link-disabled-font-weight;\n\n  &:visited,\n  &:hover,\n  &:active,\n  &:focus {\n    border-bottom: $sprk-link-disabled-hover-border-bottom;\n    color: $sprk-link-disabled-color;\n  }",
       "line": {
-        "start": 72,
-        "end": 101
+        "start": 73,
+        "end": 102
       }
     },
     "group": [
@@ -2995,16 +2995,16 @@
   {
     "description": "Removes the underline from links on initial state\nand on hover, active, focus, and visited states.\n",
     "commentRange": {
-      "start": 89,
-      "end": 90
+      "start": 90,
+      "end": 91
     },
     "context": {
       "type": "css",
       "name": ".sprk-b-Link--plain",
       "value": "border: $sprk-link-plain-border;\n\n  &:hover,\n  &:active,\n  &:focus,\n  &:visited {\n    border: $sprk-link-plain-visited-border;\n  }",
       "line": {
-        "start": 91,
-        "end": 101
+        "start": 92,
+        "end": 102
       }
     },
     "group": [
@@ -4312,14 +4312,14 @@
     }
   },
   {
-    "description": "Sets the left and right padding to `16px`\n",
+    "description": "Sets the bottom margin to `0px`\n",
     "commentRange": {
-      "start": 9,
-      "end": 11
+      "start": 5,
+      "end": 7
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-phm",
+      "name": ".sprk-u-mbn",
       "value": "padding-top: 0 !important;",
       "line": {
         "start": 19,
@@ -4337,6 +4337,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "Sets the left and right padding to `16px`\n",
     "commentRange": {
       "start": 9,
@@ -4347,14 +4348,21 @@
       "name": ".sprk-u-phm",
 =======
     "description": "Sets the bottom margin to `0px`\n",
+=======
+    "description": "Sets the margin on all sides to `64px`\n",
+>>>>>>> Turn text align into variable
     "commentRange": {
-      "start": 5,
-      "end": 7
+      "start": 13,
+      "end": 15
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
       "name": ".sprk-u-mbn",
 >>>>>>> Add modifiers and sass variables
+=======
+      "name": ".sprk-u-mah",
+>>>>>>> Turn text align into variable
       "value": "padding-top: 0 !important;",
       "line": {
         "start": 19,
@@ -4371,14 +4379,14 @@
     }
   },
   {
-    "description": "Sets the margin on all sides to `64px`\n",
+    "description": "Sets the left and right padding to `16px`\n",
     "commentRange": {
-      "start": 13,
-      "end": 15
+      "start": 9,
+      "end": 11
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-mah",
+      "name": ".sprk-u-phm",
       "value": "padding-top: 0 !important;",
       "line": {
         "start": 19,
@@ -4612,6 +4620,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/6\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 293,
@@ -4622,14 +4631,21 @@
       "name": ".sprk-o-Stack__item--sixth@xxs",
 =======
     "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+=======
+    "description": "of its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> Turn text align into variable
     "commentRange": {
-      "start": 318,
-      "end": 321
+      "start": 309,
+      "end": 311
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
       "name": ".sprk-o-Stack__item--three-fourths@xxs",
 >>>>>>> Add modifiers and sass variables
+=======
+      "name": ".sprk-o-Stack__item--third@xxs",
+>>>>>>> Turn text align into variable
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4646,6 +4662,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
@@ -4657,14 +4674,21 @@
       "name": ".sprk-o-Stack__item--fifth@xxs",
 =======
     "description": "of its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+=======
+    "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> Turn text align into variable
     "commentRange": {
-      "start": 309,
-      "end": 311
+      "start": 303,
+      "end": 306
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
       "name": ".sprk-o-Stack__item--third@xxs",
 >>>>>>> Add modifiers and sass variables
+=======
+      "name": ".sprk-o-Stack__item--fourth@xxs",
+>>>>>>> Turn text align into variable
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4682,6 +4706,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 303,
@@ -4692,14 +4717,21 @@
       "name": ".sprk-o-Stack__item--fourth@xxs",
 =======
     "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+=======
+    "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> Turn text align into variable
     "commentRange": {
-      "start": 313,
-      "end": 316
+      "start": 298,
+      "end": 301
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
       "name": ".sprk-o-Stack__item--half@xxs",
 >>>>>>> Add modifiers and sass variables
+=======
+      "name": ".sprk-o-Stack__item--fifth@xxs",
+>>>>>>> Turn text align into variable
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4765,6 +4797,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 313,
@@ -4775,14 +4808,21 @@
       "name": ".sprk-o-Stack__item--half@xxs",
 =======
     "description": "When placed on an item, its width will be 3/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+=======
+    "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> Turn text align into variable
     "commentRange": {
-      "start": 328,
-      "end": 331
+      "start": 318,
+      "end": 321
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
       "name": ".sprk-o-Stack__item--three-fifths@xxs",
 >>>>>>> Add modifiers and sass variables
+=======
+      "name": ".sprk-o-Stack__item--three-fourths@xxs",
+>>>>>>> Turn text align into variable
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4823,6 +4863,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "description": "When placed on an item, its width will be 3/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
@@ -4834,14 +4875,21 @@
       "name": ".sprk-o-Stack__item--three-tenths@xxs",
 =======
     "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+=======
+    "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> Turn text align into variable
     "commentRange": {
-      "start": 303,
-      "end": 306
+      "start": 338,
+      "end": 341
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
       "name": ".sprk-o-Stack__item--fourth@xxs",
 >>>>>>> Add modifiers and sass variables
+=======
+      "name": ".sprk-o-Stack__item--seven-tenths@xxs",
+>>>>>>> Turn text align into variable
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4858,6 +4906,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
@@ -4869,14 +4918,21 @@
       "name": ".sprk-o-Stack__item--seven-tenths@xxs",
 =======
     "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+=======
+    "description": "When placed on an item, its width will be 3/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> Turn text align into variable
     "commentRange": {
-      "start": 298,
-      "end": 301
+      "start": 328,
+      "end": 331
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
       "name": ".sprk-o-Stack__item--fifth@xxs",
 >>>>>>> Add modifiers and sass variables
+=======
+      "name": ".sprk-o-Stack__item--three-fifths@xxs",
+>>>>>>> Turn text align into variable
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4894,6 +4950,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 2/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 323,
@@ -4904,14 +4961,21 @@
       "name": ".sprk-o-Stack__item--two-fifths@xxs",
 =======
     "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+=======
+    "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> Turn text align into variable
     "commentRange": {
-      "start": 338,
-      "end": 341
+      "start": 313,
+      "end": 316
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
       "name": ".sprk-o-Stack__item--seven-tenths@xxs",
 >>>>>>> Add modifiers and sass variables
+=======
+      "name": ".sprk-o-Stack__item--half@xxs",
+>>>>>>> Turn text align into variable
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5312,14 +5376,14 @@
     }
   },
   {
-    "description": "Adds the selected styles to the step that\nis selected.\n",
+    "description": "Adds the needed styles for\nwhen the Stepper has\na dark background color.\n",
     "commentRange": {
-      "start": 44,
-      "end": 46
+      "start": 48,
+      "end": 50
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Stepper__step--selected",
+      "name": ".sprk-c-Stepper--has-dark-bg",
       "value": ".sprk-c-Stepper__step-heading,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-heading-color;\n  }\n\n  .sprk-c-Stepper__step::before {\n    background-color: $sprk-stepper-dark-bar-color;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color;\n    border-color: $sprk-stepper-dark-icon-border-color;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--has-description\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-description-selected;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-icon,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-selected;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-hover;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
       "line": {
         "start": 51,
@@ -5336,14 +5400,14 @@
     }
   },
   {
-    "description": "Adds the needed styles for\nwhen the Stepper has\na dark background color.\n",
+    "description": "Adds the selected styles to the step that\nis selected.\n",
     "commentRange": {
-      "start": 48,
-      "end": 50
+      "start": 44,
+      "end": 46
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Stepper--has-dark-bg",
+      "name": ".sprk-c-Stepper__step--selected",
       "value": ".sprk-c-Stepper__step-heading,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-heading-color;\n  }\n\n  .sprk-c-Stepper__step::before {\n    background-color: $sprk-stepper-dark-bar-color;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color;\n    border-color: $sprk-stepper-dark-icon-border-color;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--has-description\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-description-selected;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-icon,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-selected;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-hover;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
       "line": {
         "start": 51,
@@ -20167,6 +20231,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The maximum height of the Modal.\n",
     "commentRange": {
       "start": 1445,
@@ -20253,19 +20318,27 @@
         "end": 1454
 =======
     "description": "The transition timing for the\nrotation of the icon when the Toggle is opened.\n",
+=======
+    "description": "The padding left for Toggle Trigger\n",
+>>>>>>> Turn text align into variable
     "commentRange": {
-      "start": 1432,
-      "end": 1433
+      "start": 1431,
+      "end": 1431
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-transition-timing",
-      "value": "0.3s ease",
+      "name": "sprk-toggle-trigger-text-align",
+      "value": "left",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
         "start": 1434,
         "end": 1434
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1432,
+        "end": 1432
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -20278,6 +20351,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "description": "The box shadow on the Modal.\n",
     "commentRange": {
@@ -20295,13 +20369,20 @@
       "start": 1441,
       "end": 1442
 >>>>>>> Add modifiers and sass variables
+=======
+    "description": "The transition timing for the\nrotation of the icon when the Toggle is opened.\n",
+    "commentRange": {
+      "start": 1434,
+      "end": 1435
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-active-background-color",
-      "value": "$sprk-gray",
+      "name": "sprk-toggle-transition-timing",
+      "value": "0.3s ease",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1456,
@@ -20314,6 +20395,10 @@
         "start": 1443,
         "end": 1443
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1436,
+        "end": 1436
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -20326,8 +20411,9 @@
     }
   },
   {
-    "description": "The left border of the Dropdown item that is active.\n",
+    "description": "Background color of the Dropdown items that\nare active or hovered.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "start": 1457,
@@ -20338,12 +20424,15 @@
 >>>>>>> Add sass-modifiers and sass-vars
 =======
       "start": 1444,
+=======
+      "start": 1443,
+>>>>>>> Turn text align into variable
       "end": 1444
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-active-border",
-      "value": "2.5px solid $sprk-green",
+      "name": "sprk-dropdown-active-background-color",
+      "value": "$sprk-gray",
       "scope": "default",
       "line": {
         "start": 1445,
@@ -20360,15 +20449,15 @@
     }
   },
   {
-    "description": "The box-shadow of the Dropdown item that is active.\n",
+    "description": "The left border of the Dropdown item that is active.\n",
     "commentRange": {
       "start": 1446,
       "end": 1446
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-active-box-shadow",
-      "value": "-1px 0 0 0 $sprk-green",
+      "name": "sprk-dropdown-active-border",
+      "value": "2.5px solid $sprk-green",
       "scope": "default",
       "line": {
         "start": 1447,
@@ -20385,15 +20474,15 @@
     }
   },
   {
-    "description": "The border of the Dropdown.\n",
+    "description": "The box-shadow of the Dropdown item that is active.\n",
     "commentRange": {
       "start": 1448,
       "end": 1448
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-border",
-      "value": "1px solid $sprk-gray",
+      "name": "sprk-dropdown-active-box-shadow",
+      "value": "-1px 0 0 0 $sprk-green",
       "scope": "default",
       "line": {
         "start": 1449,
@@ -20410,15 +20499,15 @@
     }
   },
   {
-    "description": "The font size of the Dropdown.\n",
+    "description": "The border of the Dropdown.\n",
     "commentRange": {
       "start": 1450,
       "end": 1450
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-font-size",
-      "value": "$sprk-font-size-body-one",
+      "name": "sprk-dropdown-border",
+      "value": "1px solid $sprk-gray",
       "scope": "default",
       "line": {
         "start": 1451,
@@ -20435,15 +20524,15 @@
     }
   },
   {
-    "description": "The font weight of the Dropdown.\n",
+    "description": "The font size of the Dropdown.\n",
     "commentRange": {
       "start": 1452,
       "end": 1452
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-font-weight",
-      "value": "400",
+      "name": "sprk-dropdown-font-size",
+      "value": "$sprk-font-size-body-one",
       "scope": "default",
       "line": {
         "start": 1453,
@@ -20460,19 +20549,19 @@
     }
   },
   {
-    "description": "The padding around the Informational Dropdown\nfooter.\n",
+    "description": "The font weight of the Dropdown.\n",
     "commentRange": {
       "start": 1454,
-      "end": 1455
+      "end": 1454
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-footer-padding",
-      "value": "$sprk-space-inset-short-l",
+      "name": "sprk-dropdown-font-weight",
+      "value": "400",
       "scope": "default",
       "line": {
-        "start": 1456,
-        "end": 1456
+        "start": 1455,
+        "end": 1455
       }
     },
     "access": "public",
@@ -20485,15 +20574,15 @@
     }
   },
   {
-    "description": "The line height of the Dropdown.\n",
+    "description": "The padding around the Informational Dropdown\nfooter.\n",
     "commentRange": {
-      "start": 1457,
+      "start": 1456,
       "end": 1457
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-line-height",
-      "value": "1",
+      "name": "sprk-dropdown-footer-padding",
+      "value": "$sprk-space-inset-short-l",
       "scope": "default",
       "line": {
         "start": 1458,
@@ -20510,15 +20599,15 @@
     }
   },
   {
-    "description": "The max-width of the Dropdown.\n",
+    "description": "The line height of the Dropdown.\n",
     "commentRange": {
       "start": 1459,
       "end": 1459
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-max-width",
-      "value": "24rem",
+      "name": "sprk-dropdown-line-height",
+      "value": "1",
       "scope": "default",
       "line": {
         "start": 1460,
@@ -20535,7 +20624,7 @@
     }
   },
   {
-    "description": "The padding around the Dropdown items.\n",
+    "description": "The max-width of the Dropdown.\n",
     "commentRange": {
       "start": 1461,
       "end": 1461
@@ -20543,8 +20632,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-padding",
-      "value": "$sprk-space-misc-a",
+      "name": "sprk-dropdown-max-width",
+      "value": "24rem",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -20571,7 +20660,7 @@
     }
   },
   {
-    "description": "The box shadow of the Dropdown.\n",
+    "description": "The padding around the Dropdown items.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20588,8 +20677,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-shadow",
-      "value": "0 0 40px 2px rgba(0, 0, 0, 0.1)",
+      "name": "sprk-dropdown-padding",
+      "value": "$sprk-space-misc-a",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -20616,7 +20705,7 @@
     }
   },
   {
-    "description": "The color of the Dropdown title.\n",
+    "description": "The box shadow of the Dropdown.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20633,8 +20722,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-title-color",
-      "value": "$sprk-black-tint-25",
+      "name": "sprk-dropdown-shadow",
+      "value": "0 0 40px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -20661,15 +20750,15 @@
     }
   },
   {
-    "description": "The font size of the Dropdown title.\n",
+    "description": "The color of the Dropdown title.\n",
     "commentRange": {
       "start": 1467,
       "end": 1467
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-title-font-size",
-      "value": "$sprk-dropdown-font-size",
+      "name": "sprk-dropdown-title-color",
+      "value": "$sprk-black-tint-25",
       "scope": "default",
       "line": {
         "start": 1468,
@@ -20686,15 +20775,15 @@
     }
   },
   {
-    "description": "The font weight of the Dropdown title.\n",
+    "description": "The font size of the Dropdown title.\n",
     "commentRange": {
       "start": 1469,
       "end": 1469
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-title-font-weight",
-      "value": "300",
+      "name": "sprk-dropdown-title-font-size",
+      "value": "$sprk-dropdown-font-size",
       "scope": "default",
       "line": {
         "start": 1470,
@@ -20711,19 +20800,19 @@
     }
   },
   {
-    "description": "The color of the mask overlay that is shown behind the Modal.\n",
+    "description": "The font weight of the Dropdown title.\n",
     "commentRange": {
-      "start": 1476,
-      "end": 1476
+      "start": 1471,
+      "end": 1471
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-mask-color",
-      "value": "rgba(34, 34, 34, 0.35)",
+      "name": "sprk-dropdown-title-font-weight",
+      "value": "300",
       "scope": "default",
       "line": {
-        "start": 1477,
-        "end": 1477
+        "start": 1472,
+        "end": 1472
       }
     },
     "access": "public",
@@ -20736,7 +20825,7 @@
     }
   },
   {
-    "description": "The background color of the Modal.\n",
+    "description": "The color of the mask overlay that is shown behind the Modal.\n",
     "commentRange": {
 <<<<<<< HEAD
       "start": 1468,
@@ -20748,8 +20837,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-color",
-      "value": "$sprk-white",
+      "name": "sprk-modal-mask-color",
+      "value": "rgba(34, 34, 34, 0.35)",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -20771,7 +20860,7 @@
     }
   },
   {
-    "description": "The maximum width of the Modal.\n",
+    "description": "The background color of the Modal.\n",
     "commentRange": {
 <<<<<<< HEAD
       "start": 1470,
@@ -20783,8 +20872,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-max-width",
-      "value": "43.75rem",
+      "name": "sprk-modal-color",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -20806,7 +20895,7 @@
     }
   },
   {
-    "description": "The maximum height of the Modal.\n",
+    "description": "The maximum width of the Modal.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20822,8 +20911,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-height",
-      "value": "70%",
+      "name": "sprk-modal-max-width",
+      "value": "43.75rem",
       "scope": "default",
       "line": {
         "start": 1483,
@@ -20840,10 +20929,35 @@
     }
   },
   {
-    "description": "Determines how far down\nfrom the top of the page the\nModal renders at the small breakpoint.\n",
+    "description": "The maximum height of the Modal.\n",
     "commentRange": {
       "start": 1484,
-      "end": 1486
+      "end": 1484
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-modal-height",
+      "value": "70%",
+      "scope": "default",
+      "line": {
+        "start": 1485,
+        "end": 1485
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Determines how far down\nfrom the top of the page the\nModal renders at the small breakpoint.\n",
+    "commentRange": {
+      "start": 1486,
+      "end": 1488
     },
     "context": {
       "type": "variable",
@@ -20851,8 +20965,8 @@
       "value": "25rem",
       "scope": "default",
       "line": {
-        "start": 1487,
-        "end": 1487
+        "start": 1489,
+        "end": 1489
       }
     },
     "access": "public",
@@ -20867,38 +20981,13 @@
   {
     "description": "Determines how far down\nfrom the top of the page the\nModal renders at the medium breakpoint.\n",
     "commentRange": {
-      "start": 1488,
-      "end": 1490
+      "start": 1490,
+      "end": 1492
     },
     "context": {
       "type": "variable",
       "name": "sprk-modal-breakpoint-medium",
       "value": "37.5rem",
-      "scope": "default",
-      "line": {
-        "start": 1491,
-        "end": 1491
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The box shadow on the Modal.\n",
-    "commentRange": {
-      "start": 1492,
-      "end": 1492
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-modal-shadow",
-      "value": "0 4px 5px rgba(0, 0, 0, 0.6)",
       "scope": "default",
       "line": {
         "start": 1493,
@@ -20915,15 +21004,15 @@
     }
   },
   {
-    "description": "The border radius on the Modal.\n",
+    "description": "The box shadow on the Modal.\n",
     "commentRange": {
       "start": 1494,
       "end": 1494
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-border-radius",
-      "value": "8px",
+      "name": "sprk-modal-shadow",
+      "value": "0 4px 5px rgba(0, 0, 0, 0.6)",
       "scope": "default",
       "line": {
         "start": 1495,
@@ -20940,19 +21029,19 @@
     }
   },
   {
-    "description": "The width of the menu icon on narrow viewports in the Masthead.\n",
+    "description": "The border radius on the Modal.\n",
     "commentRange": {
-      "start": 1501,
-      "end": 1501
+      "start": 1496,
+      "end": 1496
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-menu-icon-width",
-      "value": "$sprk-icon-l",
+      "name": "sprk-modal-border-radius",
+      "value": "8px",
       "scope": "default",
       "line": {
-        "start": 1502,
-        "end": 1502
+        "start": 1497,
+        "end": 1497
       }
     },
     "access": "public",
@@ -20965,14 +21054,14 @@
     }
   },
   {
-    "description": "The height of the menu icon on narrow viewports in the Masthead.\n",
+    "description": "The width of the menu icon on narrow viewports in the Masthead.\n",
     "commentRange": {
       "start": 1503,
       "end": 1503
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-menu-icon-height",
+      "name": "sprk-masthead-menu-icon-width",
       "value": "$sprk-icon-l",
       "scope": "default",
       "line": {
@@ -20990,15 +21079,15 @@
     }
   },
   {
-    "description": "The background color of the Masthead.\n",
+    "description": "The height of the menu icon on narrow viewports in the Masthead.\n",
     "commentRange": {
       "start": 1505,
       "end": 1505
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-bg-color",
-      "value": "$sprk-white",
+      "name": "sprk-masthead-menu-icon-height",
+      "value": "$sprk-icon-l",
       "scope": "default",
       "line": {
         "start": 1506,
@@ -21015,15 +21104,15 @@
     }
   },
   {
-    "description": "The padding of the Masthead content, menu, and branding sections.\n",
+    "description": "The background color of the Masthead.\n",
     "commentRange": {
       "start": 1507,
       "end": 1507
     },
     "context": {
       "type": "variable",
-      "name": "sprk-masthead-content-padding",
-      "value": "$sprk-space-s",
+      "name": "sprk-masthead-bg-color",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
         "start": 1508,
@@ -21040,8 +21129,34 @@
     }
   },
   {
+    "description": "The padding of the Masthead content, menu, and branding sections.\n",
+    "commentRange": {
+      "start": 1509,
+      "end": 1509
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-masthead-content-padding",
+      "value": "$sprk-space-s",
+      "scope": "default",
+      "line": {
+        "start": 1510,
+        "end": 1510
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
     "description": "The padding top around the content items in the\ncontent section of the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "start": 1495,
       "end": 1496
@@ -21050,6 +21165,10 @@
       "start": 1509,
       "end": 1510
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1511,
+      "end": 1512
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21057,6 +21176,7 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1474,
@@ -21069,6 +21189,10 @@
         "start": 1511,
         "end": 1511
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1513,
+        "end": 1513
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21085,6 +21209,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1475,
       "end": 1476
 =======
@@ -21095,6 +21220,10 @@
       "start": 1512,
       "end": 1513
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1514,
+      "end": 1515
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21102,6 +21231,7 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1477,
@@ -21114,6 +21244,10 @@
         "start": 1514,
         "end": 1514
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1516,
+        "end": 1516
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21130,6 +21264,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1478,
       "end": 1479
 =======
@@ -21140,6 +21275,10 @@
       "start": 1515,
       "end": 1516
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1517,
+      "end": 1518
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21147,6 +21286,7 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1480,
@@ -21159,6 +21299,10 @@
         "start": 1517,
         "end": 1517
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1519,
+        "end": 1519
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21175,6 +21319,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1484,
       "end": 1485
 =======
@@ -21185,6 +21330,10 @@
       "start": 1521,
       "end": 1522
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1523,
+      "end": 1524
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21192,6 +21341,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1486,
@@ -21204,6 +21354,10 @@
         "start": 1523,
         "end": 1523
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1525,
+        "end": 1525
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21220,6 +21374,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1487,
       "end": 1488
 =======
@@ -21230,6 +21385,10 @@
       "start": 1524,
       "end": 1525
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1526,
+      "end": 1527
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21237,6 +21396,7 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1489,
@@ -21249,6 +21409,10 @@
         "start": 1526,
         "end": 1526
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1528,
+        "end": 1528
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21265,6 +21429,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1490,
       "end": 1491
 =======
@@ -21275,6 +21440,10 @@
       "start": 1527,
       "end": 1528
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1529,
+      "end": 1530
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21282,6 +21451,7 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1492,
@@ -21294,6 +21464,10 @@
         "start": 1529,
         "end": 1529
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1531,
+        "end": 1531
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21310,6 +21484,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1493,
       "end": 1494
 =======
@@ -21320,6 +21495,10 @@
       "start": 1530,
       "end": 1531
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1532,
+      "end": 1533
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21327,6 +21506,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1495,
@@ -21339,6 +21519,10 @@
         "start": 1532,
         "end": 1532
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1534,
+        "end": 1534
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21355,6 +21539,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1496,
       "end": 1497
 =======
@@ -21365,6 +21550,10 @@
       "start": 1533,
       "end": 1534
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1535,
+      "end": 1536
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21372,6 +21561,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1498,
@@ -21384,6 +21574,10 @@
         "start": 1535,
         "end": 1535
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1537,
+        "end": 1537
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21400,6 +21594,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1499,
       "end": 1499
 =======
@@ -21410,6 +21605,10 @@
       "start": 1536,
       "end": 1536
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1538,
+      "end": 1538
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21417,6 +21616,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1500,
@@ -21429,6 +21629,10 @@
         "start": 1537,
         "end": 1537
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1539,
+        "end": 1539
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21445,6 +21649,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1501,
       "end": 1501
 =======
@@ -21455,6 +21660,10 @@
       "start": 1538,
       "end": 1538
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1540,
+      "end": 1540
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21462,6 +21671,7 @@
       "value": "$sprk-green",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1502,
@@ -21474,6 +21684,10 @@
         "start": 1539,
         "end": 1539
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1541,
+        "end": 1541
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21490,6 +21704,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1503,
       "end": 1503
 =======
@@ -21500,6 +21715,10 @@
       "start": 1540,
       "end": 1540
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1542,
+      "end": 1542
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21507,6 +21726,7 @@
       "value": "500",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1504,
@@ -21519,6 +21739,10 @@
         "start": 1541,
         "end": 1541
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1543,
+        "end": 1543
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21535,6 +21759,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1505,
       "end": 1505
 =======
@@ -21545,6 +21770,10 @@
       "start": 1542,
       "end": 1542
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1544,
+      "end": 1544
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21552,6 +21781,7 @@
       "value": "1px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1506,
@@ -21564,6 +21794,10 @@
         "start": 1543,
         "end": 1543
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1545,
+        "end": 1545
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21580,6 +21814,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1507,
       "end": 1507
 =======
@@ -21590,6 +21825,10 @@
       "start": 1544,
       "end": 1544
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1546,
+      "end": 1546
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21597,6 +21836,7 @@
       "value": "$sprk-masthead-border-bottom-size solid $sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1508,
@@ -21609,6 +21849,10 @@
         "start": 1545,
         "end": 1545
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1547,
+        "end": 1547
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21625,6 +21869,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1509,
       "end": 1509
 =======
@@ -21635,6 +21880,10 @@
       "start": 1546,
       "end": 1546
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1548,
+      "end": 1548
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21642,6 +21891,7 @@
       "value": "0",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1510,
@@ -21654,6 +21904,10 @@
         "start": 1547,
         "end": 1547
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1549,
+        "end": 1549
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21670,6 +21924,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1511,
       "end": 1511
 =======
@@ -21680,6 +21935,10 @@
       "start": 1548,
       "end": 1548
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1550,
+      "end": 1550
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21687,6 +21946,7 @@
       "value": "2px solid $sprk-black-tint-25",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1512,
@@ -21699,6 +21959,10 @@
         "start": 1549,
         "end": 1549
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1551,
+        "end": 1551
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21715,6 +21979,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1513,
       "end": 1515
 =======
@@ -21725,6 +21990,10 @@
       "start": 1550,
       "end": 1552
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1552,
+      "end": 1554
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21732,6 +22001,7 @@
       "value": "54rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1516,
@@ -21744,6 +22014,10 @@
         "start": 1553,
         "end": 1553
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1555,
+        "end": 1555
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21760,6 +22034,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1517,
       "end": 1517
 =======
@@ -21770,6 +22045,10 @@
       "start": 1554,
       "end": 1554
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1556,
+      "end": 1556
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21777,6 +22056,7 @@
       "value": "89rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1518,
@@ -21789,6 +22069,10 @@
         "start": 1555,
         "end": 1555
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1557,
+        "end": 1557
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21805,6 +22089,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1519,
       "end": 1519
 =======
@@ -21815,6 +22100,10 @@
       "start": 1556,
       "end": 1556
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1558,
+      "end": 1558
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21822,6 +22111,7 @@
       "value": "192px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1520,
@@ -21834,6 +22124,10 @@
         "start": 1557,
         "end": 1557
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1559,
+        "end": 1559
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21850,6 +22144,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1521,
       "end": 1521
 =======
@@ -21860,6 +22155,10 @@
       "start": 1558,
       "end": 1558
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1560,
+      "end": 1560
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21867,6 +22166,7 @@
       "value": "174px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1522,
@@ -21879,6 +22179,10 @@
         "start": 1559,
         "end": 1559
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1561,
+        "end": 1561
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21895,6 +22199,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1523,
       "end": 1523
 =======
@@ -21905,6 +22210,10 @@
       "start": 1560,
       "end": 1560
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1562,
+      "end": 1562
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21912,6 +22221,7 @@
       "value": "none",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1524,
@@ -21924,6 +22234,10 @@
         "start": 1561,
         "end": 1561
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1563,
+        "end": 1563
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21940,6 +22254,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1525,
       "end": 1525
 =======
@@ -21950,6 +22265,10 @@
       "start": 1562,
       "end": 1562
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1564,
+      "end": 1564
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -21957,6 +22276,7 @@
       "value": "none",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1526,
@@ -21969,6 +22289,10 @@
         "start": 1563,
         "end": 1563
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1565,
+        "end": 1565
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -21985,6 +22309,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1527,
       "end": 1527
 =======
@@ -21995,6 +22320,10 @@
       "start": 1564,
       "end": 1564
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1566,
+      "end": 1566
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22002,6 +22331,7 @@
       "value": "0 0 40px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1528,
@@ -22014,6 +22344,10 @@
         "start": 1565,
         "end": 1565
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1567,
+        "end": 1567
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22030,6 +22364,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1529,
       "end": 1529
 =======
@@ -22040,6 +22375,10 @@
       "start": 1566,
       "end": 1566
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1568,
+      "end": 1568
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22047,6 +22386,7 @@
       "value": "2px solid $sprk-black-tint-25",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1530,
@@ -22059,6 +22399,10 @@
         "start": 1567,
         "end": 1567
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1569,
+        "end": 1569
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22075,6 +22419,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1532,
       "end": 1532
 =======
@@ -22085,6 +22430,10 @@
       "start": 1569,
       "end": 1569
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1571,
+      "end": 1571
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22092,6 +22441,7 @@
       "value": "5px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1533,
@@ -22104,6 +22454,10 @@
         "start": 1570,
         "end": 1570
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1572,
+        "end": 1572
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22120,6 +22474,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1534,
       "end": 1536
 =======
@@ -22130,6 +22485,10 @@
       "start": 1571,
       "end": 1573
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1573,
+      "end": 1575
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22137,6 +22496,7 @@
       "value": "2px solid $sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1537,
@@ -22149,6 +22509,10 @@
         "start": 1574,
         "end": 1574
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1576,
+        "end": 1576
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22165,6 +22529,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1538,
       "end": 1540
 =======
@@ -22175,6 +22540,10 @@
       "start": 1575,
       "end": 1577
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1577,
+      "end": 1579
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22182,6 +22551,7 @@
       "value": "0 5px 10px\n  rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1541,
@@ -22194,6 +22564,10 @@
         "start": 1578,
         "end": 1579
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1580,
+        "end": 1581
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22210,6 +22584,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1543,
       "end": 1545
 =======
@@ -22220,6 +22595,10 @@
       "start": 1580,
       "end": 1582
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1582,
+      "end": 1584
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22227,6 +22606,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1546,
@@ -22239,6 +22619,10 @@
         "start": 1583,
         "end": 1583
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1585,
+        "end": 1585
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22255,6 +22639,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1547,
       "end": 1548
 =======
@@ -22265,6 +22650,10 @@
       "start": 1584,
       "end": 1585
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1586,
+      "end": 1587
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22272,6 +22661,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1549,
@@ -22284,6 +22674,10 @@
         "start": 1586,
         "end": 1586
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1588,
+        "end": 1588
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22300,6 +22694,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1550,
       "end": 1551
 =======
@@ -22310,6 +22705,10 @@
       "start": 1587,
       "end": 1588
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1589,
+      "end": 1590
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22317,6 +22716,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1552,
@@ -22329,6 +22729,10 @@
         "start": 1589,
         "end": 1589
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1591,
+        "end": 1591
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22345,6 +22749,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1553,
       "end": 1554
 =======
@@ -22355,6 +22760,10 @@
       "start": 1590,
       "end": 1591
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1592,
+      "end": 1593
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22362,6 +22771,7 @@
       "value": "$sprk-space-inset-short-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1555,
@@ -22374,6 +22784,10 @@
         "start": 1592,
         "end": 1592
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1594,
+        "end": 1594
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22390,6 +22804,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1556,
       "end": 1557
 =======
@@ -22400,6 +22815,10 @@
       "start": 1593,
       "end": 1594
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1595,
+      "end": 1596
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22407,6 +22826,7 @@
       "value": "0",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1558,
@@ -22419,6 +22839,10 @@
         "start": 1595,
         "end": 1595
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1597,
+        "end": 1597
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22435,6 +22859,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1559,
       "end": 1560
 =======
@@ -22445,6 +22870,10 @@
       "start": 1596,
       "end": 1597
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1598,
+      "end": 1599
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22452,6 +22881,7 @@
       "value": "17rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1561,
@@ -22464,6 +22894,10 @@
         "start": 1598,
         "end": 1598
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1600,
+        "end": 1600
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22480,6 +22914,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1562,
       "end": 1565
 =======
@@ -22490,6 +22925,10 @@
       "start": 1599,
       "end": 1602
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1601,
+      "end": 1604
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22497,6 +22936,7 @@
       "value": "81px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1566,
@@ -22509,6 +22949,10 @@
         "start": 1603,
         "end": 1603
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1605,
+        "end": 1605
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22525,6 +22969,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1567,
       "end": 1569
 =======
@@ -22535,6 +22980,10 @@
       "start": 1604,
       "end": 1606
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1606,
+      "end": 1608
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22542,6 +22991,7 @@
       "value": "rgba(0, 0, 0, 0.5)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1570,
@@ -22554,6 +23004,10 @@
         "start": 1607,
         "end": 1607
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1609,
+        "end": 1609
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22570,6 +23024,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1571,
       "end": 1571
 =======
@@ -22580,6 +23035,10 @@
       "start": 1608,
       "end": 1608
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1610,
+      "end": 1610
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22587,6 +23046,7 @@
       "value": "all 0.3s ease-in",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1572,
@@ -22599,6 +23059,10 @@
         "start": 1609,
         "end": 1609
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1611,
+        "end": 1611
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22615,6 +23079,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1573,
       "end": 1574
 =======
@@ -22625,6 +23090,10 @@
       "start": 1610,
       "end": 1611
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1612,
+      "end": 1613
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22632,6 +23101,7 @@
       "value": "translateY(-100%)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1575,
@@ -22644,6 +23114,10 @@
         "start": 1612,
         "end": 1612
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1614,
+        "end": 1614
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22660,6 +23134,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1578,
       "end": 1580
 =======
@@ -22670,6 +23145,10 @@
       "start": 1615,
       "end": 1617
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1617,
+      "end": 1619
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22677,6 +23156,7 @@
       "value": "64rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1581,
@@ -22689,6 +23169,10 @@
         "start": 1618,
         "end": 1618
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1620,
+        "end": 1620
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22705,6 +23189,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1582,
       "end": 1583
 =======
@@ -22715,6 +23200,10 @@
       "start": 1619,
       "end": 1620
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1621,
+      "end": 1622
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22722,6 +23211,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1584,
@@ -22734,6 +23224,10 @@
         "start": 1621,
         "end": 1621
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1623,
+        "end": 1623
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22750,6 +23244,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1585,
       "end": 1586
 =======
@@ -22760,6 +23255,10 @@
       "start": 1622,
       "end": 1623
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1624,
+      "end": 1625
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22767,6 +23266,7 @@
       "value": "400",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1587,
@@ -22779,6 +23279,10 @@
         "start": 1624,
         "end": 1624
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1626,
+        "end": 1626
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22795,6 +23299,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1588,
       "end": 1589
 =======
@@ -22805,6 +23310,10 @@
       "start": 1625,
       "end": 1626
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1627,
+      "end": 1628
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22812,6 +23321,7 @@
       "value": "0 $sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1590,
@@ -22824,6 +23334,10 @@
         "start": 1627,
         "end": 1627
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1629,
+        "end": 1629
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22840,6 +23354,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1591,
       "end": 1591
 =======
@@ -22850,6 +23365,10 @@
       "start": 1628,
       "end": 1628
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1630,
+      "end": 1630
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22857,6 +23376,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1592,
@@ -22869,6 +23389,10 @@
         "start": 1629,
         "end": 1629
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1631,
+        "end": 1631
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22885,6 +23409,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1593,
       "end": 1594
 =======
@@ -22895,6 +23420,10 @@
       "start": 1630,
       "end": 1631
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1632,
+      "end": 1633
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22902,6 +23431,7 @@
       "value": "$sprk-big-nav-link-color",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1595,
@@ -22914,6 +23444,10 @@
         "start": 1632,
         "end": 1632
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1634,
+        "end": 1634
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22930,6 +23464,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1596,
       "end": 1598
 =======
@@ -22940,6 +23475,10 @@
       "start": 1633,
       "end": 1635
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1635,
+      "end": 1637
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22947,6 +23486,7 @@
       "value": "53px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1599,
@@ -22959,6 +23499,10 @@
         "start": 1636,
         "end": 1636
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1638,
+        "end": 1638
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -22975,6 +23519,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1601,
       "end": 1602
 =======
@@ -22985,6 +23530,10 @@
       "start": 1638,
       "end": 1639
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1640,
+      "end": 1641
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -22992,6 +23541,7 @@
       "value": "3px solid $sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1603,
@@ -23004,6 +23554,10 @@
         "start": 1640,
         "end": 1640
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1642,
+        "end": 1642
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23020,6 +23574,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1604,
       "end": 1605
 =======
@@ -23030,6 +23585,10 @@
       "start": 1641,
       "end": 1642
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1643,
+      "end": 1644
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23037,6 +23596,7 @@
       "value": "400",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1606,
@@ -23049,6 +23609,10 @@
         "start": 1643,
         "end": 1643
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1645,
+        "end": 1645
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23065,6 +23629,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1607,
       "end": 1608
 =======
@@ -23075,6 +23640,10 @@
       "start": 1644,
       "end": 1645
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1646,
+      "end": 1647
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23082,6 +23651,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1609,
@@ -23094,6 +23664,10 @@
         "start": 1646,
         "end": 1646
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1648,
+        "end": 1648
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23110,6 +23684,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1610,
       "end": 1611
 =======
@@ -23120,6 +23695,10 @@
       "start": 1647,
       "end": 1648
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1649,
+      "end": 1650
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23127,6 +23706,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1612,
@@ -23139,6 +23719,10 @@
         "start": 1649,
         "end": 1649
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1651,
+        "end": 1651
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23155,6 +23739,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1613,
       "end": 1614
 =======
@@ -23165,6 +23750,10 @@
       "start": 1650,
       "end": 1651
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1652,
+      "end": 1653
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23172,6 +23761,7 @@
       "value": "400",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1615,
@@ -23184,6 +23774,10 @@
         "start": 1652,
         "end": 1652
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1654,
+        "end": 1654
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23200,6 +23794,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1616,
       "end": 1617
 =======
@@ -23210,6 +23805,10 @@
       "start": 1653,
       "end": 1654
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1655,
+      "end": 1656
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23217,6 +23816,7 @@
       "value": "300",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1618,
@@ -23229,6 +23829,10 @@
         "start": 1655,
         "end": 1655
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1657,
+        "end": 1657
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23245,6 +23849,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1619,
       "end": 1620
 =======
@@ -23255,6 +23860,10 @@
       "start": 1656,
       "end": 1657
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1658,
+      "end": 1659
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23262,6 +23871,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1621,
@@ -23274,6 +23884,10 @@
         "start": 1658,
         "end": 1658
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1660,
+        "end": 1660
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23290,6 +23904,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1622,
       "end": 1623
 =======
@@ -23300,6 +23915,10 @@
       "start": 1659,
       "end": 1660
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1661,
+      "end": 1662
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23307,6 +23926,7 @@
       "value": "$sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1624,
@@ -23319,6 +23939,10 @@
         "start": 1661,
         "end": 1661
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1663,
+        "end": 1663
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23335,6 +23959,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1625,
       "end": 1626
 =======
@@ -23345,6 +23970,10 @@
       "start": 1662,
       "end": 1663
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1664,
+      "end": 1665
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23352,6 +23981,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1627,
@@ -23364,6 +23994,10 @@
         "start": 1664,
         "end": 1664
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1666,
+        "end": 1666
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23380,6 +24014,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1628,
       "end": 1629
 =======
@@ -23390,6 +24025,10 @@
       "start": 1665,
       "end": 1666
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1667,
+      "end": 1668
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23397,6 +24036,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1630,
@@ -23409,6 +24049,10 @@
         "start": 1667,
         "end": 1667
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1669,
+        "end": 1669
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23425,6 +24069,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1631,
       "end": 1632
 =======
@@ -23435,6 +24080,10 @@
       "start": 1668,
       "end": 1669
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1670,
+      "end": 1671
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23442,6 +24091,7 @@
       "value": "$sprk-black-tint-25",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1633,
@@ -23454,6 +24104,10 @@
         "start": 1670,
         "end": 1670
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1672,
+        "end": 1672
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23470,6 +24124,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1634,
       "end": 1635
 =======
@@ -23480,6 +24135,10 @@
       "start": 1671,
       "end": 1672
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1673,
+      "end": 1674
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23487,6 +24146,7 @@
       "value": "2px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1636,
@@ -23499,6 +24159,10 @@
         "start": 1673,
         "end": 1673
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1675,
+        "end": 1675
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23515,6 +24179,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1637,
       "end": 1638
 =======
@@ -23525,6 +24190,10 @@
       "start": 1674,
       "end": 1675
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1676,
+      "end": 1677
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23532,6 +24201,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1639,
@@ -23544,6 +24214,10 @@
         "start": 1676,
         "end": 1676
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1678,
+        "end": 1678
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23560,6 +24234,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1645,
       "end": 1645
 =======
@@ -23570,6 +24245,10 @@
       "start": 1682,
       "end": 1682
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1684,
+      "end": 1684
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23577,6 +24256,7 @@
       "value": "1.3rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1646,
@@ -23589,6 +24269,10 @@
         "start": 1683,
         "end": 1683
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1685,
+        "end": 1685
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23605,6 +24289,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1647,
       "end": 1647
 =======
@@ -23615,6 +24300,10 @@
       "start": 1684,
       "end": 1684
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1686,
+      "end": 1686
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23622,6 +24311,7 @@
       "value": "3rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1648,
@@ -23634,6 +24324,10 @@
         "start": 1685,
         "end": 1685
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1687,
+        "end": 1687
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23650,6 +24344,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1649,
       "end": 1649
 =======
@@ -23660,6 +24355,10 @@
       "start": 1686,
       "end": 1686
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1688,
+      "end": 1688
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23667,6 +24366,7 @@
       "value": "1s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1650,
@@ -23679,6 +24379,10 @@
         "start": 1687,
         "end": 1687
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1689,
+        "end": 1689
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23695,6 +24399,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1651,
       "end": 1651
 =======
@@ -23705,6 +24410,10 @@
       "start": 1688,
       "end": 1688
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1690,
+      "end": 1690
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23712,6 +24421,7 @@
       "value": "0.18rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1652,
@@ -23724,6 +24434,10 @@
         "start": 1689,
         "end": 1689
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1691,
+        "end": 1691
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23740,6 +24454,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1653,
       "end": 1653
 =======
@@ -23750,6 +24465,10 @@
       "start": 1690,
       "end": 1690
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1692,
+      "end": 1692
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23757,6 +24476,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1654,
@@ -23769,6 +24489,10 @@
         "start": 1691,
         "end": 1691
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1693,
+        "end": 1693
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23785,6 +24509,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1655,
       "end": 1655
 =======
@@ -23795,6 +24520,10 @@
       "start": 1692,
       "end": 1692
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1694,
+      "end": 1694
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23802,6 +24531,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1656,
@@ -23814,6 +24544,10 @@
         "start": 1693,
         "end": 1693
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1695,
+        "end": 1695
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23830,6 +24564,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1662,
       "end": 1663
 =======
@@ -23840,6 +24575,10 @@
       "start": 1699,
       "end": 1700
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1701,
+      "end": 1702
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23847,6 +24586,7 @@
       "value": "46rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1664,
@@ -23859,6 +24599,10 @@
         "start": 1701,
         "end": 1701
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1703,
+        "end": 1703
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23875,6 +24619,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1665,
       "end": 1665
 =======
@@ -23885,6 +24630,10 @@
       "start": 1702,
       "end": 1702
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1704,
+      "end": 1704
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23892,6 +24641,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1666,
@@ -23904,6 +24654,10 @@
         "start": 1703,
         "end": 1703
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1705,
+        "end": 1705
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23920,6 +24674,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1667,
       "end": 1667
 =======
@@ -23930,6 +24685,10 @@
       "start": 1704,
       "end": 1704
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1706,
+      "end": 1706
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23937,6 +24696,7 @@
       "value": "$sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1668,
@@ -23949,6 +24709,10 @@
         "start": 1705,
         "end": 1705
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1707,
+        "end": 1707
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -23965,6 +24729,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1669,
       "end": 1669
 =======
@@ -23975,6 +24740,10 @@
       "start": 1706,
       "end": 1706
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1708,
+      "end": 1708
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -23982,6 +24751,7 @@
       "value": "3px solid $sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1670,
@@ -23994,6 +24764,10 @@
         "start": 1707,
         "end": 1707
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1709,
+        "end": 1709
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24010,6 +24784,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1671,
       "end": 1672
 =======
@@ -24020,6 +24795,10 @@
       "start": 1708,
       "end": 1709
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1710,
+      "end": 1711
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24027,6 +24806,7 @@
       "value": "3px solid $sprk-red",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1673,
@@ -24039,6 +24819,10 @@
         "start": 1710,
         "end": 1710
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1712,
+        "end": 1712
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24055,6 +24839,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1674,
       "end": 1675
 =======
@@ -24065,6 +24850,10 @@
       "start": 1711,
       "end": 1712
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1713,
+      "end": 1714
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24072,6 +24861,7 @@
       "value": "$sprk-red",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1676,
@@ -24084,6 +24874,10 @@
         "start": 1713,
         "end": 1713
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1715,
+        "end": 1715
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24100,6 +24894,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1677,
       "end": 1678
 =======
@@ -24110,6 +24905,10 @@
       "start": 1714,
       "end": 1715
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1716,
+      "end": 1717
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24117,6 +24916,7 @@
       "value": "3px solid $sprk-red",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1679,
@@ -24129,6 +24929,10 @@
         "start": 1716,
         "end": 1716
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1718,
+        "end": 1718
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24145,6 +24949,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1680,
       "end": 1681
 =======
@@ -24155,6 +24960,10 @@
       "start": 1717,
       "end": 1718
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1719,
+      "end": 1720
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24162,6 +24971,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1682,
@@ -24174,6 +24984,10 @@
         "start": 1719,
         "end": 1719
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1721,
+        "end": 1721
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24190,6 +25004,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1688,
       "end": 1688
 =======
@@ -24200,6 +25015,10 @@
       "start": 1725,
       "end": 1725
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1727,
+      "end": 1727
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24207,6 +25026,7 @@
       "value": "transparent",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1689,
@@ -24219,6 +25039,10 @@
         "start": 1726,
         "end": 1726
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1728,
+        "end": 1728
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24235,6 +25059,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1690,
       "end": 1691
 =======
@@ -24245,6 +25070,10 @@
       "start": 1727,
       "end": 1728
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1729,
+      "end": 1730
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24252,6 +25081,7 @@
       "value": "$sprk-split-breakpoint-xl",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1692,
@@ -24264,6 +25094,10 @@
         "start": 1729,
         "end": 1729
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1731,
+        "end": 1731
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24280,6 +25114,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1693,
       "end": 1693
 =======
@@ -24290,6 +25125,10 @@
       "start": 1730,
       "end": 1730
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1732,
+      "end": 1732
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24297,6 +25136,7 @@
       "value": "480px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1694,
@@ -24309,6 +25149,10 @@
         "start": 1731,
         "end": 1731
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1733,
+        "end": 1733
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24325,6 +25169,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1695,
       "end": 1695
 =======
@@ -24335,6 +25180,10 @@
       "start": 1732,
       "end": 1732
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1734,
+      "end": 1734
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24342,6 +25191,7 @@
       "value": "2px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1696,
@@ -24354,6 +25204,10 @@
         "start": 1733,
         "end": 1733
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1735,
+        "end": 1735
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24370,6 +25224,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1697,
       "end": 1697
 =======
@@ -24380,6 +25235,10 @@
       "start": 1734,
       "end": 1734
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1736,
+      "end": 1736
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24387,6 +25246,7 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1698,
@@ -24399,6 +25259,10 @@
         "start": 1735,
         "end": 1735
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1737,
+        "end": 1737
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24415,6 +25279,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1699,
       "end": 1699
 =======
@@ -24425,6 +25290,10 @@
       "start": 1736,
       "end": 1736
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1738,
+      "end": 1738
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24432,6 +25301,7 @@
       "value": "$sprk-green",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1700,
@@ -24444,6 +25314,10 @@
         "start": 1737,
         "end": 1737
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1739,
+        "end": 1739
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24460,6 +25334,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1701,
       "end": 1703
 =======
@@ -24470,6 +25345,10 @@
       "start": 1738,
       "end": 1740
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1740,
+      "end": 1742
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24477,6 +25356,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1704,
@@ -24489,6 +25369,10 @@
         "start": 1741,
         "end": 1741
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1743,
+        "end": 1743
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24505,6 +25389,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1705,
       "end": 1705
 =======
@@ -24515,6 +25400,10 @@
       "start": 1742,
       "end": 1742
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1744,
+      "end": 1744
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24522,6 +25411,7 @@
       "value": "16px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1706,
@@ -24534,6 +25424,10 @@
         "start": 1743,
         "end": 1743
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1745,
+        "end": 1745
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24550,6 +25444,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1707,
       "end": 1707
 =======
@@ -24560,6 +25455,10 @@
       "start": 1744,
       "end": 1744
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1746,
+      "end": 1746
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24567,6 +25466,7 @@
       "value": "16px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1708,
@@ -24579,6 +25479,10 @@
         "start": 1745,
         "end": 1745
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1747,
+        "end": 1747
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24595,6 +25499,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1709,
       "end": 1709
 =======
@@ -24605,6 +25510,10 @@
       "start": 1746,
       "end": 1746
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1748,
+      "end": 1748
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24612,6 +25521,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1710,
@@ -24624,6 +25534,10 @@
         "start": 1747,
         "end": 1747
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1749,
+        "end": 1749
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24640,6 +25554,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1711,
       "end": 1712
 =======
@@ -24650,6 +25565,10 @@
       "start": 1748,
       "end": 1749
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1750,
+      "end": 1751
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24657,6 +25576,7 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1713,
@@ -24669,6 +25589,10 @@
         "start": 1750,
         "end": 1750
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1752,
+        "end": 1752
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24685,6 +25609,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1714,
       "end": 1714
 =======
@@ -24695,6 +25620,10 @@
       "start": 1751,
       "end": 1751
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1753,
+      "end": 1753
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24702,6 +25631,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1715,
@@ -24714,6 +25644,10 @@
         "start": 1752,
         "end": 1752
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1754,
+        "end": 1754
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24730,6 +25664,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1716,
       "end": 1717
 =======
@@ -24740,6 +25675,10 @@
       "start": 1753,
       "end": 1754
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1755,
+      "end": 1756
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24747,6 +25686,7 @@
       "value": "$sprk-blue",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1718,
@@ -24759,6 +25699,10 @@
         "start": 1755,
         "end": 1755
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1757,
+        "end": 1757
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24775,6 +25719,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1719,
       "end": 1721
 =======
@@ -24785,6 +25730,10 @@
       "start": 1756,
       "end": 1758
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1758,
+      "end": 1760
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24792,6 +25741,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1722,
@@ -24804,6 +25754,10 @@
         "start": 1759,
         "end": 1759
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1761,
+        "end": 1761
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24820,6 +25774,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1723,
       "end": 1725
 =======
@@ -24830,6 +25785,10 @@
       "start": 1760,
       "end": 1762
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1762,
+      "end": 1764
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24837,6 +25796,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1726,
@@ -24849,6 +25809,10 @@
         "start": 1763,
         "end": 1763
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1765,
+        "end": 1765
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24865,6 +25829,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1728,
       "end": 1728
 =======
@@ -24875,6 +25840,10 @@
       "start": 1765,
       "end": 1765
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1767,
+      "end": 1767
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24882,6 +25851,7 @@
       "value": "0.3s all ease-in-out",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1729,
@@ -24894,6 +25864,10 @@
         "start": 1766,
         "end": 1766
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1768,
+        "end": 1768
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24910,6 +25884,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1730,
       "end": 1730
 =======
@@ -24920,6 +25895,10 @@
       "start": 1767,
       "end": 1767
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1769,
+      "end": 1769
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24927,6 +25906,7 @@
       "value": "$sprk-layer-height-xs",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1731,
@@ -24939,6 +25919,10 @@
         "start": 1768,
         "end": 1768
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1770,
+        "end": 1770
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -24955,6 +25939,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1732,
       "end": 1733
 =======
@@ -24965,6 +25950,10 @@
       "start": 1769,
       "end": 1770
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1771,
+      "end": 1772
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -24972,6 +25961,7 @@
       "value": "8px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1734,
@@ -24984,6 +25974,10 @@
         "start": 1771,
         "end": 1771
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1773,
+        "end": 1773
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25000,6 +25994,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1735,
       "end": 1736
 =======
@@ -25010,6 +26005,10 @@
       "start": 1772,
       "end": 1773
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1774,
+      "end": 1775
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25017,6 +26016,7 @@
       "value": "0 0 0\n  $sprk-stepper-icon-box-shadow-selected-spread\n  $sprk-stepper-icon-border-color-selected",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1737,
@@ -25029,6 +26029,10 @@
         "start": 1774,
         "end": 1776
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1776,
+        "end": 1778
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25045,6 +26049,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1740,
       "end": 1740
 =======
@@ -25055,6 +26060,10 @@
       "start": 1777,
       "end": 1777
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1779,
+      "end": 1779
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25062,6 +26071,7 @@
       "value": "transparent",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1741,
@@ -25074,6 +26084,10 @@
         "start": 1778,
         "end": 1778
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1780,
+        "end": 1780
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25090,6 +26104,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1742,
       "end": 1743
 =======
@@ -25100,6 +26115,10 @@
       "start": 1779,
       "end": 1780
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1781,
+      "end": 1782
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25107,6 +26126,7 @@
       "value": "5px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1744,
@@ -25119,6 +26139,10 @@
         "start": 1781,
         "end": 1781
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1783,
+        "end": 1783
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25135,6 +26159,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1745,
       "end": 1746
 =======
@@ -25145,6 +26170,10 @@
       "start": 1782,
       "end": 1783
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1784,
+      "end": 1785
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25152,6 +26181,7 @@
       "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1747,
@@ -25164,6 +26194,10 @@
         "start": 1784,
         "end": 1784
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1786,
+        "end": 1786
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25180,6 +26214,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1748,
       "end": 1749
 =======
@@ -25190,6 +26225,10 @@
       "start": 1785,
       "end": 1786
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1787,
+      "end": 1788
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25197,6 +26236,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1750,
@@ -25209,6 +26249,10 @@
         "start": 1787,
         "end": 1787
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1789,
+        "end": 1789
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25225,6 +26269,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1751,
       "end": 1751
 =======
@@ -25235,6 +26280,10 @@
       "start": 1788,
       "end": 1788
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1790,
+      "end": 1790
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25242,6 +26291,7 @@
       "value": "400",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1752,
@@ -25254,6 +26304,10 @@
         "start": 1789,
         "end": 1789
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1791,
+        "end": 1791
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25270,6 +26324,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1753,
       "end": 1753
 =======
@@ -25280,6 +26335,10 @@
       "start": 1790,
       "end": 1790
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1792,
+      "end": 1792
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25287,6 +26346,7 @@
       "value": "$sprk-font-size-display-six",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1754,
@@ -25299,6 +26359,10 @@
         "start": 1791,
         "end": 1791
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1793,
+        "end": 1793
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25315,6 +26379,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1755,
       "end": 1755
 =======
@@ -25325,6 +26390,10 @@
       "start": 1792,
       "end": 1792
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1794,
+      "end": 1794
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25332,6 +26401,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1756,
@@ -25344,6 +26414,10 @@
         "start": 1793,
         "end": 1793
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1795,
+        "end": 1795
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25360,6 +26434,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1757,
       "end": 1759
 =======
@@ -25370,6 +26445,10 @@
       "start": 1794,
       "end": 1796
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1796,
+      "end": 1798
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25377,6 +26456,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1760,
@@ -25389,6 +26469,10 @@
         "start": 1797,
         "end": 1797
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1799,
+        "end": 1799
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25405,6 +26489,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1761,
       "end": 1762
 =======
@@ -25415,6 +26500,10 @@
       "start": 1798,
       "end": 1799
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1800,
+      "end": 1801
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25422,6 +26511,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1763,
@@ -25434,6 +26524,10 @@
         "start": 1800,
         "end": 1800
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1802,
+        "end": 1802
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25450,6 +26544,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1764,
       "end": 1764
 =======
@@ -25460,6 +26555,10 @@
       "start": 1801,
       "end": 1801
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1803,
+      "end": 1803
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25467,6 +26566,7 @@
       "value": "$sprk-space-misc-a",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1765,
@@ -25479,6 +26579,10 @@
         "start": 1802,
         "end": 1802
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1804,
+        "end": 1804
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25495,6 +26599,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1766,
       "end": 1767
 =======
@@ -25505,6 +26610,10 @@
       "start": 1803,
       "end": 1804
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1805,
+      "end": 1806
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25512,6 +26621,7 @@
       "value": "transparent",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1768,
@@ -25524,6 +26634,10 @@
         "start": 1805,
         "end": 1805
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1807,
+        "end": 1807
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25540,6 +26654,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1769,
       "end": 1771
 =======
@@ -25550,6 +26665,10 @@
       "start": 1806,
       "end": 1808
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1808,
+      "end": 1810
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25557,6 +26676,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1772,
@@ -25569,6 +26689,10 @@
         "start": 1809,
         "end": 1809
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1811,
+        "end": 1811
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25585,6 +26709,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1773,
       "end": 1776
 =======
@@ -25595,6 +26720,10 @@
       "start": 1810,
       "end": 1813
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1812,
+      "end": 1815
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25602,6 +26731,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1777,
@@ -25614,6 +26744,10 @@
         "start": 1814,
         "end": 1814
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1816,
+        "end": 1816
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25630,6 +26764,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1778,
       "end": 1778
 =======
@@ -25640,6 +26775,10 @@
       "start": 1815,
       "end": 1815
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1817,
+      "end": 1817
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25647,6 +26786,7 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1779,
@@ -25659,6 +26799,10 @@
         "start": 1816,
         "end": 1816
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1818,
+        "end": 1818
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25675,6 +26819,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1780,
       "end": 1782
 =======
@@ -25685,6 +26830,10 @@
       "start": 1817,
       "end": 1819
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1819,
+      "end": 1821
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25692,6 +26841,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1783,
@@ -25704,6 +26854,10 @@
         "start": 1820,
         "end": 1820
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1822,
+        "end": 1822
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -25720,6 +26874,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1802,
       "end": 1802
 =======
@@ -25730,6 +26885,10 @@
       "start": 1839,
       "end": 1839
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1841,
+      "end": 1841
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -25737,6 +26896,7 @@
       "value": "$sprk-stepper-icon-border-width solid\n  $sprk-stepper-dark-icon-border-color",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1803,
@@ -25792,6 +26952,9 @@
 >>>>>>> Add sass-modifiers and sass-vars
 =======
         "start": 1843,
+=======
+        "start": 1842,
+>>>>>>> Turn text align into variable
         "end": 1843
 >>>>>>> Add modifiers and sass variables
       }
@@ -25806,7 +26969,7 @@
     }
   },
   {
-    "description": "The width of the dots in the Carousel component.\n",
+    "description": "The height of the dots in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25823,7 +26986,7 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-dot-width",
+      "name": "sprk-carousel-dot-height",
       "value": "10px",
       "scope": "default",
       "line": {
@@ -25851,7 +27014,7 @@
     }
   },
   {
-    "description": "The height of the dots in the Carousel component on wide viewports.\n",
+    "description": "The width of the dots in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25868,7 +27031,7 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-wide-dot-height",
+      "name": "sprk-carousel-dot-width",
       "value": "10px",
       "scope": "default",
       "line": {
@@ -25896,7 +27059,7 @@
     }
   },
   {
-    "description": "The width of the dots in the Carousel component on wide viewports.\n",
+    "description": "The height of the dots in the Carousel component on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25913,7 +27076,7 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-wide-dot-width",
+      "name": "sprk-carousel-wide-dot-height",
       "value": "10px",
       "scope": "default",
       "line": {
@@ -25941,7 +27104,7 @@
     }
   },
   {
-    "description": "The spacing between dots in the Carousel component.\n",
+    "description": "The width of the dots in the Carousel component on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25958,8 +27121,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-dot-spacing",
-      "value": "$sprk-space-m",
+      "name": "sprk-carousel-wide-dot-width",
+      "value": "10px",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -25986,7 +27149,7 @@
     }
   },
   {
-    "description": "The spacing between dots in the Carousel component on wide viewports.\n",
+    "description": "The spacing between dots in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26003,8 +27166,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-wide-dot-spacing",
-      "value": "$sprk-carousel-dot-spacing",
+      "name": "sprk-carousel-dot-spacing",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26031,7 +27194,7 @@
     }
   },
   {
-    "description": "The box shadow of the active dot in the Carousel component.\n",
+    "description": "The spacing between dots in the Carousel component on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26048,8 +27211,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-dot-selected",
-      "value": "$sprk-stepper-icon-box-shadow-selected",
+      "name": "sprk-carousel-wide-dot-spacing",
+      "value": "$sprk-carousel-dot-spacing",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26076,7 +27239,7 @@
     }
   },
   {
-    "description": "The color of the arrows in the Carousel component.\n",
+    "description": "The box shadow of the active dot in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26093,8 +27256,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-arrow-color",
-      "value": "$sprk-white",
+      "name": "sprk-carousel-dot-selected",
+      "value": "$sprk-stepper-icon-box-shadow-selected",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26121,7 +27284,7 @@
     }
   },
   {
-    "description": "The spacing for the arrows in the Carousel component.\n",
+    "description": "The color of the arrows in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26138,8 +27301,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-arrow-spacing",
-      "value": "$sprk-space-m",
+      "name": "sprk-carousel-arrow-color",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26166,7 +27329,7 @@
     }
   },
   {
-    "description": "The left and right values of the arrows in the Carousel component.\n",
+    "description": "The spacing for the arrows in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26183,8 +27346,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-arrow-edge-spacing",
-      "value": "0",
+      "name": "sprk-carousel-arrow-spacing",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26211,7 +27374,7 @@
     }
   },
   {
-    "description": "The padding value of the arrows in the Carousel component.\n",
+    "description": "The left and right values of the arrows in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26228,8 +27391,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-arrow-padding",
-      "value": "$sprk-space-m",
+      "name": "sprk-carousel-arrow-edge-spacing",
+      "value": "0",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26256,7 +27419,7 @@
     }
   },
   {
-    "description": "The maximum width of the image in the Carousel component.\n",
+    "description": "The padding value of the arrows in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26273,8 +27436,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-narrow-image-max-width",
-      "value": "18.75rem",
+      "name": "sprk-carousel-arrow-padding",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26301,7 +27464,7 @@
     }
   },
   {
-    "description": "The breakpoint for the arrows in the Carousel component.\n",
+    "description": "The maximum width of the image in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26318,8 +27481,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-arrow-position-breakpoint",
-      "value": "31.25rem",
+      "name": "sprk-carousel-narrow-image-max-width",
+      "value": "18.75rem",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26346,7 +27509,7 @@
     }
   },
   {
-    "description": "The padding value for the dots container in the Carousel component.\n",
+    "description": "The breakpoint for the arrows in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26363,8 +27526,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-dot-container-padding",
-      "value": "$sprk-space-xs",
+      "name": "sprk-carousel-arrow-position-breakpoint",
+      "value": "31.25rem",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26391,7 +27554,7 @@
     }
   },
   {
-    "description": "The breakpoint for the Carousel component.\n",
+    "description": "The padding value for the dots container in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26408,8 +27571,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-carousel-breakpoint",
-      "value": "$sprk-split-breakpoint-xl",
+      "name": "sprk-carousel-dot-container-padding",
+      "value": "$sprk-space-xs",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26436,8 +27599,9 @@
     }
   },
   {
-    "description": "The maximum width of the Card.\n",
+    "description": "The breakpoint for the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "start": 1840,
@@ -26450,13 +27614,18 @@
       "start": 1877,
       "end": 1877
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1872,
+      "end": 1872
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-max-width",
-      "value": "26.5625rem",
+      "name": "sprk-carousel-breakpoint",
+      "value": "$sprk-split-breakpoint-xl",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1841,
@@ -26469,6 +27638,10 @@
         "start": 1878,
         "end": 1878
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1873,
+        "end": 1873
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -26481,7 +27654,7 @@
     }
   },
   {
-    "description": "The main Card breakpoint.\n",
+    "description": "The maximum width of the Card.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26498,8 +27671,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-breakpoint",
-      "value": "$sprk-split-breakpoint-s",
+      "name": "sprk-card-max-width",
+      "value": "26.5625rem",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26526,7 +27699,7 @@
     }
   },
   {
-    "description": "The box shadow of the Card on narrow viewports.\n",
+    "description": "The main Card breakpoint.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26543,8 +27716,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-shadow",
-      "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
+      "name": "sprk-card-breakpoint",
+      "value": "$sprk-split-breakpoint-s",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26571,7 +27744,7 @@
     }
   },
   {
-    "description": "The box shadow of the Card on wide viewports.\n",
+    "description": "The box shadow of the Card on narrow viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26588,8 +27761,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-shadow-wide-viewport",
-      "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
+      "name": "sprk-card-shadow",
+      "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26616,7 +27789,7 @@
     }
   },
   {
-    "description": "The box shadow of the Standout Card variant on narrow viewports.\n",
+    "description": "The box shadow of the Card on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26633,8 +27806,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-shadow-standout",
-      "value": "0 4px 20px 2px rgba(0, 0, 0, 0.1)",
+      "name": "sprk-card-shadow-wide-viewport",
+      "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26661,7 +27834,7 @@
     }
   },
   {
-    "description": "The box shadow of the Standout Card variant on wide viewports.\n",
+    "description": "The box shadow of the Standout Card variant on narrow viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26678,8 +27851,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-shadow-standout-wide-viewport",
-      "value": "0 4px 40px 2px rgba(0, 0, 0, 0.1)",
+      "name": "sprk-card-shadow-standout",
+      "value": "0 4px 20px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26706,7 +27879,7 @@
     }
   },
   {
-    "description": "The border radius of the Card.\n",
+    "description": "The box shadow of the Standout Card variant on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26723,8 +27896,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-border-radius",
-      "value": "8px",
+      "name": "sprk-card-shadow-standout-wide-viewport",
+      "value": "0 4px 40px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26751,7 +27924,7 @@
     }
   },
   {
-    "description": "The padding of the content inside the Card.\n",
+    "description": "The border radius of the Card.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26768,8 +27941,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-content-padding",
-      "value": "$sprk-space-misc-a",
+      "name": "sprk-card-border-radius",
+      "value": "8px",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26796,7 +27969,7 @@
     }
   },
   {
-    "description": "The background color of the header area for the Highlighted Header Card.\n",
+    "description": "The padding of the content inside the Card.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26813,8 +27986,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-header-bg-color",
-      "value": "$sprk-green",
+      "name": "sprk-card-content-padding",
+      "value": "$sprk-space-misc-a",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26841,7 +28014,7 @@
     }
   },
   {
-    "description": "The text color for the Highlighted Header Card.\n",
+    "description": "The background color of the header area for the Highlighted Header Card.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26858,8 +28031,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-card-header-text-color",
-      "value": "$sprk-white",
+      "name": "sprk-card-header-bg-color",
+      "value": "$sprk-green",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26886,8 +28059,9 @@
     }
   },
   {
-    "description": "The border surrounding the Dictionary.\n",
+    "description": "The text color for the Highlighted Header Card.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "start": 1865,
@@ -26900,13 +28074,18 @@
       "start": 1902,
       "end": 1902
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1897,
+      "end": 1897
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-border",
-      "value": "1px solid $sprk-gray",
+      "name": "sprk-card-header-text-color",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1866,
@@ -26919,6 +28098,10 @@
         "start": 1903,
         "end": 1903
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1898,
+        "end": 1898
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -26931,7 +28114,7 @@
     }
   },
   {
-    "description": "The background color of the key value pairs in the striped Dictionary.\n",
+    "description": "The border surrounding the Dictionary.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26948,8 +28131,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-stripe-color",
-      "value": "$sprk-gray",
+      "name": "sprk-dictionary-border",
+      "value": "1px solid $sprk-gray",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -26976,7 +28159,7 @@
     }
   },
   {
-    "description": "The breakpoint of the Dictionary component.\n",
+    "description": "The background color of the key value pairs in the striped Dictionary.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26993,8 +28176,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-breakpoint",
-      "value": "38.4375rem",
+      "name": "sprk-dictionary-stripe-color",
+      "value": "$sprk-gray",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -27021,7 +28204,7 @@
     }
   },
   {
-    "description": "The font size of the labels in the Dictionary.\n",
+    "description": "The breakpoint of the Dictionary component.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27038,8 +28221,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-label-font-size",
-      "value": "$sprk-font-size-body-one",
+      "name": "sprk-dictionary-breakpoint",
+      "value": "38.4375rem",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -27066,7 +28249,7 @@
     }
   },
   {
-    "description": "The font weight of the labels in the Dictionary.\n",
+    "description": "The font size of the labels in the Dictionary.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27083,8 +28266,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-label-font-weight",
-      "value": "$sprk-font-weight-body-one",
+      "name": "sprk-dictionary-label-font-size",
+      "value": "$sprk-font-size-body-one",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -27111,7 +28294,7 @@
     }
   },
   {
-    "description": "The line height of the labels in the Dictionary.\n",
+    "description": "The font weight of the labels in the Dictionary.\n",
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27128,8 +28311,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dictionary-label-line-height",
-      "value": "$sprk-line-height-body-one",
+      "name": "sprk-dictionary-label-font-weight",
+      "value": "$sprk-font-weight-body-one",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -27156,8 +28339,34 @@
     }
   },
   {
+    "description": "The line height of the labels in the Dictionary.\n",
+    "commentRange": {
+      "start": 1914,
+      "end": 1914
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dictionary-label-line-height",
+      "value": "$sprk-line-height-body-one",
+      "scope": "default",
+      "line": {
+        "start": 1915,
+        "end": 1915
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
     "description": "The Highlight Board breakpoint at which styles change\nfor padding, font size and button width.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "start": 1882,
@@ -27170,6 +28379,10 @@
       "start": 1919,
       "end": 1920
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1921,
+      "end": 1922
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -27177,6 +28390,7 @@
       "value": "30rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1884,
@@ -27189,6 +28403,10 @@
         "start": 1921,
         "end": 1921
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1923,
+        "end": 1923
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -27205,6 +28423,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1885,
       "end": 1886
 =======
@@ -27215,6 +28434,10 @@
       "start": 1922,
       "end": 1923
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1924,
+      "end": 1925
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -27222,6 +28445,7 @@
       "value": "30rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1887,
@@ -27234,6 +28458,10 @@
         "start": 1924,
         "end": 1924
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1926,
+        "end": 1926
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -27250,6 +28478,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1888,
       "end": 1889
 =======
@@ -27260,6 +28489,10 @@
       "start": 1925,
       "end": 1926
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1927,
+      "end": 1928
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -27267,6 +28500,7 @@
       "value": "0.8",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1890,
@@ -27279,6 +28513,10 @@
         "start": 1927,
         "end": 1927
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1929,
+        "end": 1929
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -27295,6 +28533,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1891,
       "end": 1891
 =======
@@ -27305,6 +28544,10 @@
       "start": 1928,
       "end": 1928
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1930,
+      "end": 1930
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -27312,6 +28555,7 @@
       "value": "31.25rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1892,
@@ -27324,6 +28568,10 @@
         "start": 1929,
         "end": 1929
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1931,
+        "end": 1931
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -27340,6 +28588,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1893,
       "end": 1893
 =======
@@ -27350,6 +28599,10 @@
       "start": 1930,
       "end": 1930
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1932,
+      "end": 1932
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -27357,6 +28610,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1894,
@@ -27369,6 +28623,10 @@
         "start": 1931,
         "end": 1931
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1933,
+        "end": 1933
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
@@ -27385,6 +28643,7 @@
     "commentRange": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1895,
       "end": 1896
 =======
@@ -27395,6 +28654,10 @@
       "start": 1932,
       "end": 1933
 >>>>>>> Add modifiers and sass variables
+=======
+      "start": 1934,
+      "end": 1935
+>>>>>>> Turn text align into variable
     },
     "context": {
       "type": "variable",
@@ -27402,6 +28665,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1897,
@@ -27414,6 +28678,10 @@
         "start": 1934,
         "end": 1934
 >>>>>>> Add modifiers and sass variables
+=======
+        "start": 1936,
+        "end": 1936
+>>>>>>> Turn text align into variable
       }
     },
     "access": "public",
