@@ -1,4 +1,4 @@
-import { Component, Input, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, Input, AfterViewInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { toggleAnimations } from './sprk-toggle-animations';
 import { uniqueId } from 'lodash';
 
@@ -39,6 +39,7 @@ import { uniqueId } from 'lodash';
   animations: [toggleAnimations.toggleContent]
 })
 export class SprkToggleComponent implements AfterViewInit {
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
   @ViewChild('toggleTrigger', { static: true }) toggleTrigger: ElementRef;
   @ViewChild('toggleContent', { static: true }) toggleContent: ElementRef;
 
@@ -128,8 +129,8 @@ export class SprkToggleComponent implements AfterViewInit {
    */
   getClasses(): string {
     const classArray: string[] = [
+      'sprk-c-Toggle__trigger',
       this.titleFontClass,
-      'sprk-c-Toggle__trigger'
     ];
     return classArray.join(' ');
   }
@@ -137,7 +138,9 @@ export class SprkToggleComponent implements AfterViewInit {
   /**
    * @ignore
    */
-  generateAriaControls(triggerElement, contentElement): void {
+  generateAriaControls(): void {
+    const triggerElement = this.toggleTrigger.nativeElement;
+    const contentElement = this.toggleContent.nativeElement;
     const triggerAriaControls = triggerElement.getAttribute('aria-controls');
     let contentId = contentElement.getAttribute('id');
 
@@ -156,15 +159,17 @@ export class SprkToggleComponent implements AfterViewInit {
     // If we don't have a valid id, generate one with lodash
     if (!contentId) {
       contentId = uniqueId(`sprk_toggle_content_`);
-      contentElement.setAttribute('id', contentId);
+      this.renderer.setAttribute(contentElement, 'id', contentId);
+      // contentElement.setAttribute('id', contentId);
     }
 
     // set the value of aria-controls
-    triggerElement.setAttribute('aria-controls', contentId);
+    this.renderer.setAttribute(triggerElement, 'aria-controls', contentId);
+    // triggerElement.setAttribute('aria-controls', contentId);
   }
 
   ngAfterViewInit() {
     this.toggleState();
-    this.generateAriaControls(this.toggleTrigger.nativeElement, this.toggleContent.nativeElement);
+    this.generateAriaControls();
   }
 }
