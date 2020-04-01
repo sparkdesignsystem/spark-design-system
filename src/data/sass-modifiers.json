@@ -1794,12 +1794,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 18,
-      "end": 20
+      "start": 22,
+      "end": 24
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
+      "name": ".sprk-u-Display--none",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -1818,12 +1818,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 22,
-      "end": 24
+      "start": 18,
+      "end": 20
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-Display--none",
+      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -2441,14 +2441,14 @@
     }
   },
   {
-    "description": "Adds the styles for the Stacked Highlight Board variant.\n",
+    "description": "A Spark utility class that can be used on\nthe Highlight Board to make it become 100% width.\n",
     "commentRange": {
-      "start": 49,
-      "end": 50
+      "start": 52,
+      "end": 54
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-HighlightBoard--stacked",
+      "name": ".sprk-u-FullWidth",
       "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
       "line": {
         "start": 59,
@@ -4312,14 +4312,14 @@
     }
   },
   {
-    "description": "Sets the bottom margin to `0px`\n",
+    "description": "Sets the left and right padding to `16px`\n",
     "commentRange": {
-      "start": 5,
-      "end": 7
+      "start": 9,
+      "end": 11
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-mbn",
+      "name": ".sprk-u-phm",
       "value": "padding-top: 0 !important;",
       "line": {
         "start": 19,
@@ -4336,6 +4336,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "Sets the left and right padding to `16px`\n",
     "commentRange": {
       "start": 9,
@@ -4344,6 +4345,16 @@
     "context": {
       "type": "css",
       "name": ".sprk-u-phm",
+=======
+    "description": "Sets the bottom margin to `0px`\n",
+    "commentRange": {
+      "start": 5,
+      "end": 7
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-mbn",
+>>>>>>> Add modifiers and sass variables
       "value": "padding-top: 0 !important;",
       "line": {
         "start": 19,
@@ -4600,6 +4611,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/6\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 293,
@@ -4608,6 +4620,16 @@
     "context": {
       "type": "css",
       "name": ".sprk-o-Stack__item--sixth@xxs",
+=======
+    "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 318,
+      "end": 321
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--three-fourths@xxs",
+>>>>>>> Add modifiers and sass variables
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4624,6 +4646,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 298,
@@ -4632,6 +4655,16 @@
     "context": {
       "type": "css",
       "name": ".sprk-o-Stack__item--fifth@xxs",
+=======
+    "description": "of its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 309,
+      "end": 311
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--third@xxs",
+>>>>>>> Add modifiers and sass variables
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4648,6 +4681,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 303,
@@ -4656,6 +4690,16 @@
     "context": {
       "type": "css",
       "name": ".sprk-o-Stack__item--fourth@xxs",
+=======
+    "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 313,
+      "end": 316
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--half@xxs",
+>>>>>>> Add modifiers and sass variables
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4720,6 +4764,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 313,
@@ -4728,6 +4773,16 @@
     "context": {
       "type": "css",
       "name": ".sprk-o-Stack__item--half@xxs",
+=======
+    "description": "When placed on an item, its width will be 3/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 328,
+      "end": 331
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--three-fifths@xxs",
+>>>>>>> Add modifiers and sass variables
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4768,6 +4823,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 3/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 333,
@@ -4776,6 +4832,16 @@
     "context": {
       "type": "css",
       "name": ".sprk-o-Stack__item--three-tenths@xxs",
+=======
+    "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 303,
+      "end": 306
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--fourth@xxs",
+>>>>>>> Add modifiers and sass variables
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4792,6 +4858,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 338,
@@ -4800,6 +4867,16 @@
     "context": {
       "type": "css",
       "name": ".sprk-o-Stack__item--seven-tenths@xxs",
+=======
+    "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 298,
+      "end": 301
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--fifth@xxs",
+>>>>>>> Add modifiers and sass variables
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4816,6 +4893,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 2/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 323,
@@ -4824,6 +4902,16 @@
     "context": {
       "type": "css",
       "name": ".sprk-o-Stack__item--two-fifths@xxs",
+=======
+    "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 338,
+      "end": 341
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--seven-tenths@xxs",
+>>>>>>> Add modifiers and sass variables
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5224,14 +5312,14 @@
     }
   },
   {
-    "description": "Adds the needed styles for\nwhen the Stepper has\na dark background color.\n",
+    "description": "Adds the selected styles to the step that\nis selected.\n",
     "commentRange": {
-      "start": 48,
-      "end": 50
+      "start": 44,
+      "end": 46
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Stepper--has-dark-bg",
+      "name": ".sprk-c-Stepper__step--selected",
       "value": ".sprk-c-Stepper__step-heading,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-heading-color;\n  }\n\n  .sprk-c-Stepper__step::before {\n    background-color: $sprk-stepper-dark-bar-color;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color;\n    border-color: $sprk-stepper-dark-icon-border-color;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--has-description\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-description-selected;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-icon,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-selected;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-hover;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
       "line": {
         "start": 51,
@@ -5248,14 +5336,14 @@
     }
   },
   {
-    "description": "Adds the selected styles to the step that\nis selected.\n",
+    "description": "Adds the needed styles for\nwhen the Stepper has\na dark background color.\n",
     "commentRange": {
-      "start": 44,
-      "end": 46
+      "start": 48,
+      "end": 50
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Stepper__step--selected",
+      "name": ".sprk-c-Stepper--has-dark-bg",
       "value": ".sprk-c-Stepper__step-heading,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-heading-color;\n  }\n\n  .sprk-c-Stepper__step::before {\n    background-color: $sprk-stepper-dark-bar-color;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color;\n    border-color: $sprk-stepper-dark-icon-border-color;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--has-description\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-description-selected;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-icon,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-selected;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-hover;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
       "line": {
         "start": 51,
@@ -19270,6 +19358,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The transition timing for the\nrotation of the icon when the Toggle is opened.\n",
     "commentRange": {
       "start": 1395,
@@ -19285,14 +19374,17 @@
         "end": 1397
 =======
     "description": "The bottom border style for Toggle Trigger\n",
+=======
+    "description": "The top border style for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
       "start": 1395,
       "end": 1395
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-trigger-border-bottom",
-      "value": "$sprk-link-has-icon-border-bottom",
+      "name": "sprk-toggle-trigger-border-top",
+      "value": "none",
       "scope": "default",
       "line": {
         "start": 1396,
@@ -19311,6 +19403,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "Background color of the Dropdown items that\nare active or hovered.\n",
     "commentRange": {
       "start": 1404,
@@ -19322,15 +19415,23 @@
       "value": "$sprk-gray",
 =======
     "description": "The text decoration style Toggle Trigger\n",
+=======
+    "description": "The right border style for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
       "start": 1397,
       "end": 1397
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
       "name": "sprk-toggle-trigger-text-decoration",
       "value": "$sprk-link-text-decoration",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-border-right",
+      "value": "none",
+>>>>>>> Add modifiers and sass variables
       "scope": "default",
       "line": {
         "start": 1398,
@@ -19348,10 +19449,14 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The left border of the Dropdown item that is active.\n",
 =======
     "description": "The transition for Toggle Trigger\n",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "The bottom border style for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
       "start": 1399,
       "end": 1399
@@ -19359,12 +19464,17 @@
     "context": {
       "type": "variable",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "name": "sprk-dropdown-active-border",
       "value": "2.5px solid $sprk-green",
 =======
       "name": "sprk-toggle-trigger-transition",
       "value": "$sprk-link-transition",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-border-bottom",
+      "value": "$sprk-link-has-icon-border-bottom",
+>>>>>>> Add modifiers and sass variables
       "scope": "default",
       "line": {
         "start": 1400,
@@ -19382,16 +19492,21 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The box-shadow of the Dropdown item that is active.\n",
 =======
     "description": "The color for Toggle Trigger\n",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "The left border style for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1402,
-      "end": 1402
+      "start": 1401,
+      "end": 1401
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": "sprk-dropdown-active-box-shadow",
       "value": "-1px 0 0 0 $sprk-green",
@@ -19399,10 +19514,14 @@
       "name": "sprk-toggle-trigger-color",
       "value": "$sprk-color-body-three",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-border-left",
+      "value": "none",
+>>>>>>> Add modifiers and sass variables
       "scope": "default",
       "line": {
-        "start": 1403,
-        "end": 1403
+        "start": 1402,
+        "end": 1402
       }
     },
     "access": "public",
@@ -19416,16 +19535,21 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The border of the Dropdown.\n",
 =======
     "description": "The font family for Toggle Trigger\n",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "The text decoration style Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1404,
-      "end": 1404
+      "start": 1403,
+      "end": 1403
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": "sprk-dropdown-border",
       "value": "1px solid $sprk-gray",
@@ -19433,10 +19557,14 @@
       "name": "sprk-toggle-trigger-font-family",
       "value": "$sprk-font-family-body-three",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-text-decoration",
+      "value": "$sprk-link-text-decoration",
+>>>>>>> Add modifiers and sass variables
       "scope": "default",
       "line": {
-        "start": 1405,
-        "end": 1405
+        "start": 1404,
+        "end": 1404
       }
     },
     "access": "public",
@@ -19449,6 +19577,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "description": "The font size of the Dropdown.\n",
     "commentRange": {
@@ -19465,19 +19594,27 @@
         "end": 1414
 =======
     "description": "The font size for Toggle Trigger\n",
+=======
+    "description": "The transition for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1406,
-      "end": 1406
+      "start": 1405,
+      "end": 1405
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-trigger-font-size",
-      "value": "$sprk-font-size-body-three",
+      "name": "sprk-toggle-trigger-transition",
+      "value": "$sprk-link-transition",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
         "start": 1407,
         "end": 1407
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1406,
+        "end": 1406
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -19490,6 +19627,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "description": "The font weight of the Dropdown.\n",
     "commentRange": {
@@ -19506,19 +19644,27 @@
         "end": 1416
 =======
     "description": "The font weight for Toggle Trigger\n",
+=======
+    "description": "The color for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1408,
-      "end": 1408
+      "start": 1407,
+      "end": 1407
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-trigger-font-weight",
-      "value": "$sprk-font-weight-body-three",
+      "name": "sprk-toggle-trigger-color",
+      "value": "$sprk-color-body-three",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
         "start": 1409,
         "end": 1409
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1408,
+        "end": 1408
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -19531,6 +19677,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "description": "The padding around the Informational Dropdown\nfooter.\n",
     "commentRange": {
@@ -19543,19 +19690,27 @@
       "value": "$sprk-space-inset-short-l",
 =======
     "description": "The font weight for Toggle Trigger\n",
+=======
+    "description": "The font family for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1410,
-      "end": 1410
+      "start": 1409,
+      "end": 1409
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
       "name": "sprk-toggle-trigger-line-height",
       "value": "$sprk-line-height-body-three",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-font-family",
+      "value": "$sprk-font-family-body-three",
+>>>>>>> Add modifiers and sass variables
       "scope": "default",
       "line": {
-        "start": 1411,
-        "end": 1411
+        "start": 1410,
+        "end": 1410
       }
     },
     "access": "public",
@@ -19569,16 +19724,21 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The line height of the Dropdown.\n",
 =======
     "description": "The active border bottom style for Toggle Trigger\n",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "The font size for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1413,
-      "end": 1413
+      "start": 1411,
+      "end": 1411
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": "sprk-dropdown-line-height",
       "value": "1",
@@ -19586,6 +19746,53 @@
       "name": "sprk-toggle-trigger-hover-border-bottom",
       "value": "$sprk-link-has-icon-hover-border-bottom",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-font-size",
+      "value": "$sprk-font-size-body-three",
+>>>>>>> Add modifiers and sass variables
+      "scope": "default",
+      "line": {
+        "start": 1412,
+        "end": 1412
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "description": "The max-width of the Dropdown.\n",
+=======
+    "description": "The active color for Toggle Trigger\n",
+>>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "The font weight for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
+    "commentRange": {
+      "start": 1413,
+      "end": 1413
+    },
+    "context": {
+      "type": "variable",
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "name": "sprk-dropdown-max-width",
+      "value": "24rem",
+=======
+      "name": "sprk-toggle-trigger-hover-color",
+      "value": "$sprk-link-has-icon-hover-color-text",
+>>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-font-weight",
+      "value": "$sprk-font-weight-body-three",
+>>>>>>> Add modifiers and sass variables
       "scope": "default",
       "line": {
         "start": 1414,
@@ -19603,10 +19810,14 @@
   },
   {
 <<<<<<< HEAD
-    "description": "The max-width of the Dropdown.\n",
+<<<<<<< HEAD
+    "description": "The padding around the Dropdown items.\n",
 =======
-    "description": "The active color for Toggle Trigger\n",
+    "description": "The transition timing for the\nrotation of the icon when the Toggle is opened.\n",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "The font weight for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
       "start": 1415,
       "end": 1415
@@ -19614,12 +19825,17 @@
     "context": {
       "type": "variable",
 <<<<<<< HEAD
-      "name": "sprk-dropdown-max-width",
-      "value": "24rem",
+<<<<<<< HEAD
+      "name": "sprk-dropdown-padding",
+      "value": "$sprk-space-misc-a",
 =======
-      "name": "sprk-toggle-trigger-hover-color",
-      "value": "$sprk-link-has-icon-hover-color-text",
+      "name": "sprk-toggle-transition-timing",
+      "value": "0.3s ease",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-line-height",
+      "value": "$sprk-line-height-body-three",
+>>>>>>> Add modifiers and sass variables
       "scope": "default",
       "line": {
         "start": 1416,
@@ -19637,23 +19853,75 @@
   },
   {
 <<<<<<< HEAD
-    "description": "The padding around the Dropdown items.\n",
+<<<<<<< HEAD
+    "description": "The box shadow of the Dropdown.\n",
 =======
-    "description": "The transition timing for the\nrotation of the icon when the Toggle is opened.\n",
+    "description": "Background color of the Dropdown items that\nare active or hovered.\n",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "The active border bottom style for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1418,
+      "start": 1417,
+      "end": 1417
+    },
+    "context": {
+      "type": "variable",
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "name": "sprk-dropdown-shadow",
+      "value": "0 0 40px 2px rgba(0, 0, 0, 0.1)",
+=======
+      "name": "sprk-dropdown-active-background-color",
+      "value": "$sprk-gray",
+>>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-hover-border-bottom",
+      "value": "$sprk-link-has-icon-hover-border-bottom",
+>>>>>>> Add modifiers and sass variables
+      "scope": "default",
+      "line": {
+        "start": 1418,
+        "end": 1418
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "description": "The color of the Dropdown title.\n",
+=======
+    "description": "The left border of the Dropdown item that is active.\n",
+>>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "The active color for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
+    "commentRange": {
+      "start": 1419,
       "end": 1419
     },
     "context": {
       "type": "variable",
 <<<<<<< HEAD
-      "name": "sprk-dropdown-padding",
-      "value": "$sprk-space-misc-a",
+<<<<<<< HEAD
+      "name": "sprk-dropdown-title-color",
+      "value": "$sprk-black-tint-25",
 =======
-      "name": "sprk-toggle-transition-timing",
-      "value": "0.3s ease",
+      "name": "sprk-dropdown-active-border",
+      "value": "2.5px solid $sprk-green",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-hover-color",
+      "value": "$sprk-link-has-icon-hover-color-text",
+>>>>>>> Add modifiers and sass variables
       "scope": "default",
       "line": {
         "start": 1420,
@@ -19671,73 +19939,6 @@
   },
   {
 <<<<<<< HEAD
-    "description": "The box shadow of the Dropdown.\n",
-=======
-    "description": "Background color of the Dropdown items that\nare active or hovered.\n",
->>>>>>> Add sass-modifiers and sass-vars
-    "commentRange": {
-      "start": 1427,
-      "end": 1428
-    },
-    "context": {
-      "type": "variable",
-<<<<<<< HEAD
-      "name": "sprk-dropdown-shadow",
-      "value": "0 0 40px 2px rgba(0, 0, 0, 0.1)",
-=======
-      "name": "sprk-dropdown-active-background-color",
-      "value": "$sprk-gray",
->>>>>>> Add sass-modifiers and sass-vars
-      "scope": "default",
-      "line": {
-        "start": 1429,
-        "end": 1429
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-<<<<<<< HEAD
-    "description": "The color of the Dropdown title.\n",
-=======
-    "description": "The left border of the Dropdown item that is active.\n",
->>>>>>> Add sass-modifiers and sass-vars
-    "commentRange": {
-      "start": 1430,
-      "end": 1430
-    },
-    "context": {
-      "type": "variable",
-<<<<<<< HEAD
-      "name": "sprk-dropdown-title-color",
-      "value": "$sprk-black-tint-25",
-=======
-      "name": "sprk-dropdown-active-border",
-      "value": "2.5px solid $sprk-green",
->>>>>>> Add sass-modifiers and sass-vars
-      "scope": "default",
-      "line": {
-        "start": 1431,
-        "end": 1431
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
 <<<<<<< HEAD
     "description": "The font size of the Dropdown title.\n",
     "commentRange": {
@@ -19754,19 +19955,27 @@
         "end": 1431
 =======
     "description": "The box-shadow of the Dropdown item that is active.\n",
+=======
+    "description": "The background color for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1432,
-      "end": 1432
+      "start": 1421,
+      "end": 1421
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-active-box-shadow",
-      "value": "-1px 0 0 0 $sprk-green",
+      "name": "sprk-toggle-trigger-background-color",
+      "value": "transparent",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
         "start": 1433,
         "end": 1433
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1422,
+        "end": 1422
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -19779,6 +19988,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "description": "The font weight of the Dropdown title.\n",
     "commentRange": {
@@ -19795,19 +20005,27 @@
         "end": 1433
 =======
     "description": "The border of the Dropdown.\n",
+=======
+    "description": "The padding top for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1434,
-      "end": 1434
+      "start": 1423,
+      "end": 1423
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-border",
-      "value": "1px solid $sprk-gray",
+      "name": "sprk-toggle-trigger-padding-top",
+      "value": "0",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
         "start": 1435,
         "end": 1435
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1424,
+        "end": 1424
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -19821,16 +20039,21 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The color of the mask overlay that is shown behind the Modal.\n",
 =======
     "description": "The font size of the Dropdown.\n",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "The padding right for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1436,
-      "end": 1436
+      "start": 1425,
+      "end": 1425
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": "sprk-modal-mask-color",
       "value": "rgba(34, 34, 34, 0.35)",
@@ -19838,10 +20061,14 @@
       "name": "sprk-dropdown-font-size",
       "value": "$sprk-font-size-body-one",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-padding-right",
+      "value": "0",
+>>>>>>> Add modifiers and sass variables
       "scope": "default",
       "line": {
-        "start": 1437,
-        "end": 1437
+        "start": 1426,
+        "end": 1426
       }
     },
     "access": "public",
@@ -19855,16 +20082,21 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The background color of the Modal.\n",
 =======
     "description": "The font weight of the Dropdown.\n",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "The padding bottom for Toggle Trigger\n",
+>>>>>>> Add modifiers and sass variables
     "commentRange": {
-      "start": 1438,
-      "end": 1438
+      "start": 1427,
+      "end": 1427
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": "sprk-modal-color",
       "value": "$sprk-white",
@@ -19872,10 +20104,14 @@
       "name": "sprk-dropdown-font-weight",
       "value": "400",
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "name": "sprk-toggle-trigger-padding-bottom",
+      "value": "0",
+>>>>>>> Add modifiers and sass variables
       "scope": "default",
       "line": {
-        "start": 1439,
-        "end": 1439
+        "start": 1428,
+        "end": 1428
       }
     },
     "access": "public",
@@ -19888,6 +20124,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "description": "The maximum width of the Modal.\n",
     "commentRange": {
@@ -19902,6 +20139,21 @@
       "line": {
         "start": 1444,
         "end": 1444
+=======
+    "description": "The padding left for Toggle Trigger\n",
+    "commentRange": {
+      "start": 1429,
+      "end": 1429
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-trigger-padding-left",
+      "value": "0",
+      "scope": "default",
+      "line": {
+        "start": 1430,
+        "end": 1430
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -19914,6 +20166,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "The maximum height of the Modal.\n",
     "commentRange": {
       "start": 1445,
@@ -19998,6 +20251,21 @@
       "line": {
         "start": 1454,
         "end": 1454
+=======
+    "description": "The transition timing for the\nrotation of the icon when the Toggle is opened.\n",
+    "commentRange": {
+      "start": 1432,
+      "end": 1433
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-toggle-transition-timing",
+      "value": "0.3s ease",
+      "scope": "default",
+      "line": {
+        "start": 1434,
+        "end": 1434
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20010,6 +20278,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "The box shadow on the Modal.\n",
     "commentRange": {
       "start": 1455,
@@ -20020,13 +20289,20 @@
       "start": 1445,
       "end": 1445
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+    "description": "Background color of the Dropdown items that\nare active or hovered.\n",
+    "commentRange": {
+      "start": 1441,
+      "end": 1442
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-max-width",
-      "value": "24rem",
+      "name": "sprk-dropdown-active-background-color",
+      "value": "$sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1456,
         "end": 1456
@@ -20034,6 +20310,219 @@
         "start": 1446,
         "end": 1446
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1443,
+        "end": 1443
+>>>>>>> Add modifiers and sass variables
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The left border of the Dropdown item that is active.\n",
+    "commentRange": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "start": 1457,
+      "end": 1457
+=======
+      "start": 1447,
+      "end": 1447
+>>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1444,
+      "end": 1444
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-active-border",
+      "value": "2.5px solid $sprk-green",
+      "scope": "default",
+      "line": {
+        "start": 1445,
+        "end": 1445
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The box-shadow of the Dropdown item that is active.\n",
+    "commentRange": {
+      "start": 1446,
+      "end": 1446
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-active-box-shadow",
+      "value": "-1px 0 0 0 $sprk-green",
+      "scope": "default",
+      "line": {
+        "start": 1447,
+        "end": 1447
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The border of the Dropdown.\n",
+    "commentRange": {
+      "start": 1448,
+      "end": 1448
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-border",
+      "value": "1px solid $sprk-gray",
+      "scope": "default",
+      "line": {
+        "start": 1449,
+        "end": 1449
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font size of the Dropdown.\n",
+    "commentRange": {
+      "start": 1450,
+      "end": 1450
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-font-size",
+      "value": "$sprk-font-size-body-one",
+      "scope": "default",
+      "line": {
+        "start": 1451,
+        "end": 1451
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The font weight of the Dropdown.\n",
+    "commentRange": {
+      "start": 1452,
+      "end": 1452
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-font-weight",
+      "value": "400",
+      "scope": "default",
+      "line": {
+        "start": 1453,
+        "end": 1453
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The padding around the Informational Dropdown\nfooter.\n",
+    "commentRange": {
+      "start": 1454,
+      "end": 1455
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-footer-padding",
+      "value": "$sprk-space-inset-short-l",
+      "scope": "default",
+      "line": {
+        "start": 1456,
+        "end": 1456
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The line height of the Dropdown.\n",
+    "commentRange": {
+      "start": 1457,
+      "end": 1457
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-line-height",
+      "value": "1",
+      "scope": "default",
+      "line": {
+        "start": 1458,
+        "end": 1458
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The max-width of the Dropdown.\n",
+    "commentRange": {
+      "start": 1459,
+      "end": 1459
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-dropdown-max-width",
+      "value": "24rem",
+      "scope": "default",
+      "line": {
+        "start": 1460,
+        "end": 1460
       }
     },
     "access": "public",
@@ -20048,13 +20537,9 @@
   {
     "description": "The padding around the Dropdown items.\n",
     "commentRange": {
-<<<<<<< HEAD
-      "start": 1457,
-      "end": 1457
-=======
-      "start": 1447,
-      "end": 1447
->>>>>>> Add sass-modifiers and sass-vars
+      "start": 1461,
+      "end": 1461
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20063,12 +20548,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1458,
         "end": 1458
 =======
         "start": 1448,
         "end": 1448
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1462,
+        "end": 1462
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20084,12 +20574,17 @@
     "description": "The box shadow of the Dropdown.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1464,
       "end": 1464
 =======
       "start": 1449,
       "end": 1449
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1463,
+      "end": 1463
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20098,12 +20593,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1465,
         "end": 1465
 =======
         "start": 1450,
         "end": 1450
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1464,
+        "end": 1464
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20119,12 +20619,17 @@
     "description": "The color of the Dropdown title.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1466,
       "end": 1466
 =======
       "start": 1451,
       "end": 1451
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1465,
+      "end": 1465
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20133,12 +20638,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1467,
         "end": 1467
 =======
         "start": 1452,
         "end": 1452
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1466,
+        "end": 1466
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20153,8 +20663,8 @@
   {
     "description": "The font size of the Dropdown title.\n",
     "commentRange": {
-      "start": 1453,
-      "end": 1453
+      "start": 1467,
+      "end": 1467
     },
     "context": {
       "type": "variable",
@@ -20162,8 +20672,8 @@
       "value": "$sprk-dropdown-font-size",
       "scope": "default",
       "line": {
-        "start": 1454,
-        "end": 1454
+        "start": 1468,
+        "end": 1468
       }
     },
     "access": "public",
@@ -20178,8 +20688,8 @@
   {
     "description": "The font weight of the Dropdown title.\n",
     "commentRange": {
-      "start": 1455,
-      "end": 1455
+      "start": 1469,
+      "end": 1469
     },
     "context": {
       "type": "variable",
@@ -20187,8 +20697,8 @@
       "value": "300",
       "scope": "default",
       "line": {
-        "start": 1456,
-        "end": 1456
+        "start": 1470,
+        "end": 1470
       }
     },
     "access": "public",
@@ -20203,8 +20713,8 @@
   {
     "description": "The color of the mask overlay that is shown behind the Modal.\n",
     "commentRange": {
-      "start": 1462,
-      "end": 1462
+      "start": 1476,
+      "end": 1476
     },
     "context": {
       "type": "variable",
@@ -20212,8 +20722,8 @@
       "value": "rgba(34, 34, 34, 0.35)",
       "scope": "default",
       "line": {
-        "start": 1463,
-        "end": 1463
+        "start": 1477,
+        "end": 1477
       }
     },
     "access": "public",
@@ -20228,8 +20738,13 @@
   {
     "description": "The background color of the Modal.\n",
     "commentRange": {
+<<<<<<< HEAD
       "start": 1468,
       "end": 1468
+=======
+      "start": 1478,
+      "end": 1478
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20237,8 +20752,13 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
         "start": 1469,
         "end": 1469
+=======
+        "start": 1479,
+        "end": 1479
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20253,8 +20773,13 @@
   {
     "description": "The maximum width of the Modal.\n",
     "commentRange": {
+<<<<<<< HEAD
       "start": 1470,
       "end": 1470
+=======
+      "start": 1480,
+      "end": 1480
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20262,8 +20787,13 @@
       "value": "43.75rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
         "start": 1471,
         "end": 1471
+=======
+        "start": 1481,
+        "end": 1481
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20279,11 +20809,16 @@
     "description": "The maximum height of the Modal.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1472,
       "end": 1473
 =======
       "start": 1468,
       "end": 1468
+=======
+      "start": 1482,
+      "end": 1482
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20291,8 +20826,8 @@
       "value": "70%",
       "scope": "default",
       "line": {
-        "start": 1469,
-        "end": 1469
+        "start": 1483,
+        "end": 1483
       }
     },
     "access": "public",
@@ -20307,8 +20842,8 @@
   {
     "description": "Determines how far down\nfrom the top of the page the\nModal renders at the small breakpoint.\n",
     "commentRange": {
-      "start": 1470,
-      "end": 1472
+      "start": 1484,
+      "end": 1486
     },
     "context": {
       "type": "variable",
@@ -20316,8 +20851,8 @@
       "value": "25rem",
       "scope": "default",
       "line": {
-        "start": 1473,
-        "end": 1473
+        "start": 1487,
+        "end": 1487
       }
     },
     "access": "public",
@@ -20332,8 +20867,8 @@
   {
     "description": "Determines how far down\nfrom the top of the page the\nModal renders at the medium breakpoint.\n",
     "commentRange": {
-      "start": 1474,
-      "end": 1476
+      "start": 1488,
+      "end": 1490
     },
     "context": {
       "type": "variable",
@@ -20341,8 +20876,8 @@
       "value": "37.5rem",
       "scope": "default",
       "line": {
-        "start": 1477,
-        "end": 1477
+        "start": 1491,
+        "end": 1491
       }
     },
     "access": "public",
@@ -20357,8 +20892,8 @@
   {
     "description": "The box shadow on the Modal.\n",
     "commentRange": {
-      "start": 1478,
-      "end": 1478
+      "start": 1492,
+      "end": 1492
     },
     "context": {
       "type": "variable",
@@ -20366,8 +20901,8 @@
       "value": "0 4px 5px rgba(0, 0, 0, 0.6)",
       "scope": "default",
       "line": {
-        "start": 1479,
-        "end": 1479
+        "start": 1493,
+        "end": 1493
       }
     },
     "access": "public",
@@ -20382,8 +20917,8 @@
   {
     "description": "The border radius on the Modal.\n",
     "commentRange": {
-      "start": 1480,
-      "end": 1480
+      "start": 1494,
+      "end": 1494
     },
     "context": {
       "type": "variable",
@@ -20391,8 +20926,8 @@
       "value": "8px",
       "scope": "default",
       "line": {
-        "start": 1481,
-        "end": 1481
+        "start": 1495,
+        "end": 1495
       }
     },
     "access": "public",
@@ -20407,8 +20942,8 @@
   {
     "description": "The width of the menu icon on narrow viewports in the Masthead.\n",
     "commentRange": {
-      "start": 1487,
-      "end": 1487
+      "start": 1501,
+      "end": 1501
     },
     "context": {
       "type": "variable",
@@ -20416,8 +20951,8 @@
       "value": "$sprk-icon-l",
       "scope": "default",
       "line": {
-        "start": 1488,
-        "end": 1488
+        "start": 1502,
+        "end": 1502
       }
     },
     "access": "public",
@@ -20432,8 +20967,8 @@
   {
     "description": "The height of the menu icon on narrow viewports in the Masthead.\n",
     "commentRange": {
-      "start": 1489,
-      "end": 1489
+      "start": 1503,
+      "end": 1503
     },
     "context": {
       "type": "variable",
@@ -20441,8 +20976,8 @@
       "value": "$sprk-icon-l",
       "scope": "default",
       "line": {
-        "start": 1490,
-        "end": 1490
+        "start": 1504,
+        "end": 1504
       }
     },
     "access": "public",
@@ -20457,8 +20992,8 @@
   {
     "description": "The background color of the Masthead.\n",
     "commentRange": {
-      "start": 1491,
-      "end": 1491
+      "start": 1505,
+      "end": 1505
     },
     "context": {
       "type": "variable",
@@ -20466,8 +21001,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1492,
-        "end": 1492
+        "start": 1506,
+        "end": 1506
       }
     },
     "access": "public",
@@ -20482,8 +21017,8 @@
   {
     "description": "The padding of the Masthead content, menu, and branding sections.\n",
     "commentRange": {
-      "start": 1493,
-      "end": 1493
+      "start": 1507,
+      "end": 1507
     },
     "context": {
       "type": "variable",
@@ -20491,8 +21026,8 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
-        "start": 1494,
-        "end": 1494
+        "start": 1508,
+        "end": 1508
       }
     },
     "access": "public",
@@ -20507,9 +21042,14 @@
   {
     "description": "The padding top around the content items in the\ncontent section of the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
       "start": 1495,
       "end": 1496
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1509,
+      "end": 1510
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20518,12 +21058,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1474,
         "end": 1474
 =======
         "start": 1497,
         "end": 1497
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1511,
+        "end": 1511
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20539,12 +21084,17 @@
     "description": "The padding bottom around the content\nitems in the content section of the Masthead.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1475,
       "end": 1476
 =======
       "start": 1498,
       "end": 1499
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1512,
+      "end": 1513
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20553,12 +21103,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1477,
         "end": 1477
 =======
         "start": 1500,
         "end": 1500
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1514,
+        "end": 1514
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20574,12 +21129,17 @@
     "description": "The padding right around the content items in the\ncontent section of the Masthead.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1478,
       "end": 1479
 =======
       "start": 1501,
       "end": 1502
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1515,
+      "end": 1516
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20588,12 +21148,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1480,
         "end": 1480
 =======
         "start": 1503,
         "end": 1503
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1517,
+        "end": 1517
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20609,12 +21174,17 @@
     "description": "The padding around the content\nsection in the Masthead on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1484,
       "end": 1485
 =======
       "start": 1507,
       "end": 1508
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1521,
+      "end": 1522
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20623,12 +21193,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1486,
         "end": 1486
 =======
         "start": 1509,
         "end": 1509
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1523,
+        "end": 1523
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20644,12 +21219,17 @@
     "description": "The padding top of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1487,
       "end": 1488
 =======
       "start": 1510,
       "end": 1511
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1524,
+      "end": 1525
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20658,12 +21238,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1489,
         "end": 1489
 =======
         "start": 1512,
         "end": 1512
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1526,
+        "end": 1526
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20679,12 +21264,17 @@
     "description": "The padding bottom of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1490,
       "end": 1491
 =======
       "start": 1513,
       "end": 1514
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1527,
+      "end": 1528
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20693,12 +21283,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1492,
         "end": 1492
 =======
         "start": 1515,
         "end": 1515
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1529,
+        "end": 1529
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20714,12 +21309,17 @@
     "description": "The padding right of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1493,
       "end": 1494
 =======
       "start": 1516,
       "end": 1517
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1530,
+      "end": 1531
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20728,12 +21328,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1495,
         "end": 1495
 =======
         "start": 1518,
         "end": 1518
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1532,
+        "end": 1532
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20749,12 +21354,17 @@
     "description": "The padding left of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1496,
       "end": 1497
 =======
       "start": 1519,
       "end": 1520
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1533,
+      "end": 1534
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20763,12 +21373,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1498,
         "end": 1498
 =======
         "start": 1521,
         "end": 1521
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1535,
+        "end": 1535
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20784,12 +21399,17 @@
     "description": "The visited state color of Masthead links.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1499,
       "end": 1499
 =======
       "start": 1522,
       "end": 1522
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1536,
+      "end": 1536
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20798,12 +21418,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1500,
         "end": 1500
 =======
         "start": 1523,
         "end": 1523
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1537,
+        "end": 1537
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20819,12 +21444,17 @@
     "description": "The hover state color of Masthead links.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1501,
       "end": 1501
 =======
       "start": 1524,
       "end": 1524
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1538,
+      "end": 1538
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20833,12 +21463,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1502,
         "end": 1502
 =======
         "start": 1525,
         "end": 1525
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1539,
+        "end": 1539
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20854,12 +21489,17 @@
     "description": "The font weight for Masthead links.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1503,
       "end": 1503
 =======
       "start": 1526,
       "end": 1526
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1540,
+      "end": 1540
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20868,12 +21508,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1504,
         "end": 1504
 =======
         "start": 1527,
         "end": 1527
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1541,
+        "end": 1541
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20889,12 +21534,17 @@
     "description": "The size of the bottom border on the Masthead.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1505,
       "end": 1505
 =======
       "start": 1528,
       "end": 1528
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1542,
+      "end": 1542
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20903,12 +21553,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1506,
         "end": 1506
 =======
         "start": 1529,
         "end": 1529
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1543,
+        "end": 1543
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20924,12 +21579,17 @@
     "description": "The bottom border on the Masthead.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1507,
       "end": 1507
 =======
       "start": 1530,
       "end": 1530
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1544,
+      "end": 1544
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20938,12 +21598,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1508,
         "end": 1508
 =======
         "start": 1531,
         "end": 1531
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1545,
+        "end": 1545
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20959,12 +21624,17 @@
     "description": "The bottom border on the Masthead on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1509,
       "end": 1509
 =======
       "start": 1532,
       "end": 1532
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1546,
+      "end": 1546
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -20973,12 +21643,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1510,
         "end": 1510
 =======
         "start": 1533,
         "end": 1533
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1547,
+        "end": 1547
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -20994,12 +21669,17 @@
     "description": "The right border on the site links in the Masthead.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1511,
       "end": 1511
 =======
       "start": 1534,
       "end": 1534
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1548,
+      "end": 1548
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21008,12 +21688,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1512,
         "end": 1512
 =======
         "start": 1535,
         "end": 1535
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1549,
+        "end": 1549
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21029,12 +21714,17 @@
     "description": "The point at which the Masthead navigation switches\nfrom narrow viewport style to large viewport\nstyle.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1513,
       "end": 1515
 =======
       "start": 1536,
       "end": 1538
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1550,
+      "end": 1552
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21043,12 +21733,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1516,
         "end": 1516
 =======
         "start": 1539,
         "end": 1539
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1553,
+        "end": 1553
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21064,12 +21759,17 @@
     "description": "The maximum width of the Masthead.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1517,
       "end": 1517
 =======
       "start": 1540,
       "end": 1540
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1554,
+      "end": 1554
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21078,12 +21778,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1518,
         "end": 1518
 =======
         "start": 1541,
         "end": 1541
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1555,
+        "end": 1555
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21099,12 +21804,17 @@
     "description": "The maximum width of the logo in the Masthead.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1519,
       "end": 1519
 =======
       "start": 1542,
       "end": 1542
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1556,
+      "end": 1556
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21113,12 +21823,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1520,
         "end": 1520
 =======
         "start": 1543,
         "end": 1543
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1557,
+        "end": 1557
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21134,12 +21849,17 @@
     "description": "The minimum width of the logo in the Masthead.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1521,
       "end": 1521
 =======
       "start": 1544,
       "end": 1544
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1558,
+      "end": 1558
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21148,12 +21868,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1522,
         "end": 1522
 =======
         "start": 1545,
         "end": 1545
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1559,
+        "end": 1559
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21169,12 +21894,17 @@
     "description": "The box shadow of the Masthead.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1523,
       "end": 1523
 =======
       "start": 1546,
       "end": 1546
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1560,
+      "end": 1560
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21183,12 +21913,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1524,
         "end": 1524
 =======
         "start": 1547,
         "end": 1547
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1561,
+        "end": 1561
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21204,12 +21939,17 @@
     "description": "The box shadow of the Masthead in wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1525,
       "end": 1525
 =======
       "start": 1548,
       "end": 1548
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1562,
+      "end": 1562
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21218,12 +21958,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1526,
         "end": 1526
 =======
         "start": 1549,
         "end": 1549
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1563,
+        "end": 1563
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21239,12 +21984,17 @@
     "description": "The Masthead shadow that gets applied when the page is scrolled.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1527,
       "end": 1527
 =======
       "start": 1550,
       "end": 1550
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1564,
+      "end": 1564
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21253,12 +22003,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1528,
         "end": 1528
 =======
         "start": 1551,
         "end": 1551
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1565,
+        "end": 1565
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21274,12 +22029,17 @@
     "description": "The border of the selector in the Masthead with Extended Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1529,
       "end": 1529
 =======
       "start": 1552,
       "end": 1552
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1566,
+      "end": 1566
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21288,12 +22048,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1530,
         "end": 1530
 =======
         "start": 1553,
         "end": 1553
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1567,
+        "end": 1567
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21309,12 +22074,17 @@
     "description": "The border radius of the selector in the Masthead with Extended Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1532,
       "end": 1532
 =======
       "start": 1555,
       "end": 1555
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1569,
+      "end": 1569
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21323,12 +22093,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1533,
         "end": 1533
 =======
         "start": 1556,
         "end": 1556
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1570,
+        "end": 1570
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21344,12 +22119,17 @@
     "description": "The bottom border that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1534,
       "end": 1536
 =======
       "start": 1557,
       "end": 1559
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1571,
+      "end": 1573
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21358,12 +22138,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1537,
         "end": 1537
 =======
         "start": 1560,
         "end": 1560
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1574,
+        "end": 1574
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21379,12 +22164,17 @@
     "description": "The box shadow that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1538,
       "end": 1540
 =======
       "start": 1561,
       "end": 1563
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1575,
+      "end": 1577
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21393,12 +22183,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1541,
         "end": 1542
 =======
         "start": 1564,
         "end": 1565
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1578,
+        "end": 1579
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21414,12 +22209,17 @@
     "description": "The border color that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1543,
       "end": 1545
 =======
       "start": 1566,
       "end": 1568
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1580,
+      "end": 1582
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21428,12 +22228,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1546,
         "end": 1546
 =======
         "start": 1569,
         "end": 1569
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1583,
+        "end": 1583
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21449,12 +22254,17 @@
     "description": "The font color of the selector in\nthe Masthead with Extended Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1547,
       "end": 1548
 =======
       "start": 1570,
       "end": 1571
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1584,
+      "end": 1585
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21463,12 +22273,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1549,
         "end": 1549
 =======
         "start": 1572,
         "end": 1572
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1586,
+        "end": 1586
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21484,12 +22299,17 @@
     "description": "The background color of the selector in\nthe Masthead with Extended Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1550,
       "end": 1551
 =======
       "start": 1573,
       "end": 1574
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1587,
+      "end": 1588
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21498,12 +22318,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1552,
         "end": 1552
 =======
         "start": 1575,
         "end": 1575
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1589,
+        "end": 1589
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21519,12 +22344,17 @@
     "description": "The padding of the selector in\nthe Masthead with Extended Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1553,
       "end": 1554
 =======
       "start": 1576,
       "end": 1577
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1590,
+      "end": 1591
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21533,12 +22363,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1555,
         "end": 1555
 =======
         "start": 1578,
         "end": 1578
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1592,
+        "end": 1592
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21554,12 +22389,17 @@
     "description": "The padding of the selector dropdown in\nthe Masthead with Extended Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1556,
       "end": 1557
 =======
       "start": 1579,
       "end": 1580
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1593,
+      "end": 1594
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21568,12 +22408,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1558,
         "end": 1558
 =======
         "start": 1581,
         "end": 1581
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1595,
+        "end": 1595
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21589,12 +22434,17 @@
     "description": "The minimum width of the selector\nin the Masthead with Extended Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1559,
       "end": 1560
 =======
       "start": 1582,
       "end": 1583
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1596,
+      "end": 1597
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21603,12 +22453,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1561,
         "end": 1561
 =======
         "start": 1584,
         "end": 1584
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1598,
+        "end": 1598
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21624,12 +22479,17 @@
     "description": "This is the height of the Masthead on\nnarrow viewports and is used to calculate\nhow far from the top the narrow\nnavigation items should be displayed.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1562,
       "end": 1565
 =======
       "start": 1585,
       "end": 1588
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1599,
+      "end": 1602
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21638,12 +22498,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1566,
         "end": 1566
 =======
         "start": 1589,
         "end": 1589
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1603,
+        "end": 1603
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21659,12 +22524,17 @@
     "description": "The color of the mask that\ngets applied when the Masthead selector\ndropdown is open on narrow screens.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1567,
       "end": 1569
 =======
       "start": 1590,
       "end": 1592
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1604,
+      "end": 1606
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21673,12 +22543,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1570,
         "end": 1570
 =======
         "start": 1593,
         "end": 1593
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1607,
+        "end": 1607
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21694,12 +22569,17 @@
     "description": "The transition applied to the Masthead.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1571,
       "end": 1571
 =======
       "start": 1594,
       "end": 1594
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1608,
+      "end": 1608
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21708,12 +22588,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1572,
         "end": 1572
 =======
         "start": 1595,
         "end": 1595
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1609,
+        "end": 1609
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21729,12 +22614,17 @@
     "description": "The transform length that gets applied\nwhen the Masthead scrolls out of view on narrow screens.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1573,
       "end": 1574
 =======
       "start": 1596,
       "end": 1597
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1610,
+      "end": 1611
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21743,12 +22633,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1575,
         "end": 1575
 =======
         "start": 1598,
         "end": 1598
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1612,
+        "end": 1612
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21764,12 +22659,17 @@
     "description": "The maximum width of the\nbig navigation items in the\nnavigation bar in the Masthead Extended.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1578,
       "end": 1580
 =======
       "start": 1601,
       "end": 1603
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1615,
+      "end": 1617
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21778,12 +22678,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1581,
         "end": 1581
 =======
         "start": 1604,
         "end": 1604
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1618,
+        "end": 1618
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21799,12 +22704,17 @@
     "description": "The background color of the big\nnavigation bar in the Masthead Extended.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1582,
       "end": 1583
 =======
       "start": 1605,
       "end": 1606
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1619,
+      "end": 1620
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21813,12 +22723,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1584,
         "end": 1584
 =======
         "start": 1607,
         "end": 1607
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1621,
+        "end": 1621
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21834,12 +22749,17 @@
     "description": "The font weight of the big\nnavigation link in the Masthead Extended.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1585,
       "end": 1586
 =======
       "start": 1608,
       "end": 1609
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1622,
+      "end": 1623
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21848,12 +22768,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1587,
         "end": 1587
 =======
         "start": 1610,
         "end": 1610
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1624,
+        "end": 1624
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21869,12 +22794,17 @@
     "description": "The padding of the big navigation\nlink in the Masthead Extended.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1588,
       "end": 1589
 =======
       "start": 1611,
       "end": 1612
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1625,
+      "end": 1626
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21883,12 +22813,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1590,
         "end": 1590
 =======
         "start": 1613,
         "end": 1613
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1627,
+        "end": 1627
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21904,12 +22839,17 @@
     "description": "The color of the big navigation link in the Masthead Extended.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1591,
       "end": 1591
 =======
       "start": 1614,
       "end": 1614
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1628,
+      "end": 1628
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21918,12 +22858,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1592,
         "end": 1592
 =======
         "start": 1615,
         "end": 1615
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1629,
+        "end": 1629
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21939,12 +22884,17 @@
     "description": "The text and underline color of\nthe active big navigation item in the Masthead Extended.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1593,
       "end": 1594
 =======
       "start": 1616,
       "end": 1617
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1630,
+      "end": 1631
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21953,12 +22903,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1595,
         "end": 1595
 =======
         "start": 1618,
         "end": 1618
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1632,
+        "end": 1632
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -21974,12 +22929,17 @@
     "description": "The line height\nof the big navigation items\nin the Masthead Extended.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1596,
       "end": 1598
 =======
       "start": 1619,
       "end": 1621
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1633,
+      "end": 1635
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -21988,12 +22948,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1599,
         "end": 1599
 =======
         "start": 1622,
         "end": 1622
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1636,
+        "end": 1636
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22009,12 +22974,17 @@
     "description": "The left border of the active item\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1601,
       "end": 1602
 =======
       "start": 1624,
       "end": 1625
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1638,
+      "end": 1639
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22023,12 +22993,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1603,
         "end": 1603
 =======
         "start": 1626,
         "end": 1626
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1640,
+        "end": 1640
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22044,12 +23019,17 @@
     "description": "The font weight of the active item\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1604,
       "end": 1605
 =======
       "start": 1627,
       "end": 1628
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1641,
+      "end": 1642
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22058,12 +23038,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1606,
         "end": 1606
 =======
         "start": 1629,
         "end": 1629
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1643,
+        "end": 1643
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22079,12 +23064,17 @@
     "description": "The color of the active item\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1607,
       "end": 1608
 =======
       "start": 1630,
       "end": 1631
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1644,
+      "end": 1645
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22093,12 +23083,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1609,
         "end": 1609
 =======
         "start": 1632,
         "end": 1632
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1646,
+        "end": 1646
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22114,12 +23109,17 @@
     "description": "The color of the heading\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1610,
       "end": 1611
 =======
       "start": 1633,
       "end": 1634
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1647,
+      "end": 1648
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22128,12 +23128,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1612,
         "end": 1612
 =======
         "start": 1635,
         "end": 1635
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1649,
+        "end": 1649
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22149,12 +23154,17 @@
     "description": "The font weight of the heading\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1613,
       "end": 1614
 =======
       "start": 1636,
       "end": 1637
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1650,
+      "end": 1651
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22163,12 +23173,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1615,
         "end": 1615
 =======
         "start": 1638,
         "end": 1638
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1652,
+        "end": 1652
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22184,12 +23199,17 @@
     "description": "The font weight of the details\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1616,
       "end": 1617
 =======
       "start": 1639,
       "end": 1640
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1653,
+      "end": 1654
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22198,12 +23218,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1618,
         "end": 1618
 =======
         "start": 1641,
         "end": 1641
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1655,
+        "end": 1655
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22219,12 +23244,17 @@
     "description": "The font color of the details\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1619,
       "end": 1620
 =======
       "start": 1642,
       "end": 1643
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1656,
+      "end": 1657
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22233,12 +23263,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1621,
         "end": 1621
 =======
         "start": 1644,
         "end": 1644
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1658,
+        "end": 1658
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22254,12 +23289,17 @@
     "description": "The background color of the active\nitem in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1622,
       "end": 1623
 =======
       "start": 1645,
       "end": 1646
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1659,
+      "end": 1660
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22268,12 +23308,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1624,
         "end": 1624
 =======
         "start": 1647,
         "end": 1647
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1661,
+        "end": 1661
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22289,12 +23334,17 @@
     "description": "The font color of the active\nitem in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1625,
       "end": 1626
 =======
       "start": 1648,
       "end": 1649
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1662,
+      "end": 1663
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22303,12 +23353,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1627,
         "end": 1627
 =======
         "start": 1650,
         "end": 1650
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1664,
+        "end": 1664
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22324,12 +23379,17 @@
     "description": "The font color of the text\nin items in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1628,
       "end": 1629
 =======
       "start": 1651,
       "end": 1652
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1665,
+      "end": 1666
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22338,12 +23398,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1630,
         "end": 1630
 =======
         "start": 1653,
         "end": 1653
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1667,
+        "end": 1667
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22359,12 +23424,17 @@
     "description": "The color of the line on open items\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1631,
       "end": 1632
 =======
       "start": 1654,
       "end": 1655
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1668,
+      "end": 1669
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22373,12 +23443,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1633,
         "end": 1633
 =======
         "start": 1656,
         "end": 1656
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1670,
+        "end": 1670
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22394,12 +23469,17 @@
     "description": "The height of the line on open\nitems in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1634,
       "end": 1635
 =======
       "start": 1657,
       "end": 1658
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1671,
+      "end": 1672
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22408,12 +23488,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1636,
         "end": 1636
 =======
         "start": 1659,
         "end": 1659
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1673,
+        "end": 1673
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22429,12 +23514,17 @@
     "description": "The padding of the items in the\nnarrow viewport Masthead Accordion.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1637,
       "end": 1638
 =======
       "start": 1660,
       "end": 1661
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1674,
+      "end": 1675
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22443,12 +23533,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1639,
         "end": 1639
 =======
         "start": 1662,
         "end": 1662
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1676,
+        "end": 1676
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22464,12 +23559,17 @@
     "description": "The height and width of Spinners.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1645,
       "end": 1645
 =======
       "start": 1668,
       "end": 1668
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1682,
+      "end": 1682
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22478,12 +23578,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1646,
         "end": 1646
 =======
         "start": 1669,
         "end": 1669
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1683,
+        "end": 1683
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22499,12 +23604,17 @@
     "description": "The height and width of large Spinners.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1647,
       "end": 1647
 =======
       "start": 1670,
       "end": 1670
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1684,
+      "end": 1684
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22513,12 +23623,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1648,
         "end": 1648
 =======
         "start": 1671,
         "end": 1671
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1685,
+        "end": 1685
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22534,12 +23649,17 @@
     "description": "The speed of the animation for Spinners.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1649,
       "end": 1649
 =======
       "start": 1672,
       "end": 1672
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1686,
+      "end": 1686
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22548,12 +23668,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1650,
         "end": 1650
 =======
         "start": 1673,
         "end": 1673
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1687,
+        "end": 1687
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22569,12 +23694,17 @@
     "description": "The thickness of Spinners.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1651,
       "end": 1651
 =======
       "start": 1674,
       "end": 1674
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1688,
+      "end": 1688
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22583,12 +23713,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1652,
         "end": 1652
 =======
         "start": 1675,
         "end": 1675
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1689,
+        "end": 1689
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22604,12 +23739,17 @@
     "description": "The color of Spinners.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1653,
       "end": 1653
 =======
       "start": 1676,
       "end": 1676
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1690,
+      "end": 1690
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22618,12 +23758,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1654,
         "end": 1654
 =======
         "start": 1677,
         "end": 1677
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1691,
+        "end": 1691
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22639,12 +23784,17 @@
     "description": "The color of the dark Spinner.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1655,
       "end": 1655
 =======
       "start": 1678,
       "end": 1678
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1692,
+      "end": 1692
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22653,12 +23803,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1656,
         "end": 1656
 =======
         "start": 1679,
         "end": 1679
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1693,
+        "end": 1693
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22674,12 +23829,17 @@
     "description": "The breakpoint at which the tabs\ngo from stacked layout to side by side in Tabbed Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1662,
       "end": 1663
 =======
       "start": 1685,
       "end": 1686
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1699,
+      "end": 1700
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22688,12 +23848,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1664,
         "end": 1664
 =======
         "start": 1687,
         "end": 1687
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1701,
+        "end": 1701
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22709,12 +23874,17 @@
     "description": "The tab button text color in Tabbed Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1665,
       "end": 1665
 =======
       "start": 1688,
       "end": 1688
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1702,
+      "end": 1702
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22723,12 +23893,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1666,
         "end": 1666
 =======
         "start": 1689,
         "end": 1689
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1703,
+        "end": 1703
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22744,12 +23919,17 @@
     "description": "The tab button background color in Tabbed Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1667,
       "end": 1667
 =======
       "start": 1690,
       "end": 1690
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1704,
+      "end": 1704
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22758,12 +23938,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1668,
         "end": 1668
 =======
         "start": 1691,
         "end": 1691
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1705,
+        "end": 1705
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22779,12 +23964,17 @@
     "description": "The border on the top of the button tabs in Tabbed Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1669,
       "end": 1669
 =======
       "start": 1692,
       "end": 1692
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1706,
+      "end": 1706
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22793,12 +23983,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1670,
         "end": 1670
 =======
         "start": 1693,
         "end": 1693
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1707,
+        "end": 1707
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22814,12 +24009,17 @@
     "description": "The border on the top of the\nbutton tabs on hover in Tabbed Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1671,
       "end": 1672
 =======
       "start": 1694,
       "end": 1695
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1708,
+      "end": 1709
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22828,12 +24028,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1673,
         "end": 1673
 =======
         "start": 1696,
         "end": 1696
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1710,
+        "end": 1710
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22849,12 +24054,17 @@
     "description": "The button tab text color of the\ncurrently active tab in Tabbed Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1674,
       "end": 1675
 =======
       "start": 1697,
       "end": 1698
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1711,
+      "end": 1712
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22863,12 +24073,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1676,
         "end": 1676
 =======
         "start": 1699,
         "end": 1699
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1713,
+        "end": 1713
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22884,12 +24099,17 @@
     "description": "The button tab top border of the\ncurrently active tab in Tabbed Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1677,
       "end": 1678
 =======
       "start": 1700,
       "end": 1701
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1714,
+      "end": 1715
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22898,12 +24118,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1679,
         "end": 1679
 =======
         "start": 1702,
         "end": 1702
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1716,
+        "end": 1716
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22919,12 +24144,17 @@
     "description": "The button tab background color\nof the currently active tab in Tabbed Navigation.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1680,
       "end": 1681
 =======
       "start": 1703,
       "end": 1704
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1717,
+      "end": 1718
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22933,12 +24163,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1682,
         "end": 1682
 =======
         "start": 1705,
         "end": 1705
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1719,
+        "end": 1719
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22954,12 +24189,17 @@
     "description": "The background color of the Stepper.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1688,
       "end": 1688
 =======
       "start": 1711,
       "end": 1711
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1725,
+      "end": 1725
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -22968,12 +24208,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1689,
         "end": 1689
 =======
         "start": 1712,
         "end": 1712
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1726,
+        "end": 1726
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -22989,12 +24234,17 @@
     "description": "The minimum width at which the Stepper\nswitches between narrow and wide layouts.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1690,
       "end": 1691
 =======
       "start": 1713,
       "end": 1714
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1727,
+      "end": 1728
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23003,12 +24253,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1692,
         "end": 1692
 =======
         "start": 1715,
         "end": 1715
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1729,
+        "end": 1729
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23024,12 +24279,17 @@
     "description": "The maximum width of the Stepper.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1693,
       "end": 1693
 =======
       "start": 1716,
       "end": 1716
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1730,
+      "end": 1730
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23038,12 +24298,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1694,
         "end": 1694
 =======
         "start": 1717,
         "end": 1717
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1731,
+        "end": 1731
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23059,12 +24324,17 @@
     "description": "The border width of the Stepper icons.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1695,
       "end": 1695
 =======
       "start": 1718,
       "end": 1718
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1732,
+      "end": 1732
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23073,12 +24343,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1696,
         "end": 1696
 =======
         "start": 1719,
         "end": 1719
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1733,
+        "end": 1733
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23094,12 +24369,17 @@
     "description": "The color of the border around the Stepper icon.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1697,
       "end": 1697
 =======
       "start": 1720,
       "end": 1720
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1734,
+      "end": 1734
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23108,12 +24388,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1698,
         "end": 1698
 =======
         "start": 1721,
         "end": 1721
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1735,
+        "end": 1735
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23129,12 +24414,17 @@
     "description": "The color of the step icon when the step is selected in the Stepper.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1699,
       "end": 1699
 =======
       "start": 1722,
       "end": 1722
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1736,
+      "end": 1736
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23143,12 +24433,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1700,
         "end": 1700
 =======
         "start": 1723,
         "end": 1723
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1737,
+        "end": 1737
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23164,12 +24459,17 @@
     "description": "The color of the icon border when the\nStepper is on a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1701,
       "end": 1703
 =======
       "start": 1724,
       "end": 1726
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1738,
+      "end": 1740
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23178,12 +24478,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1704,
         "end": 1704
 =======
         "start": 1727,
         "end": 1727
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1741,
+        "end": 1741
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23199,12 +24504,17 @@
     "description": "The height of the step icon in the Stepper.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1705,
       "end": 1705
 =======
       "start": 1728,
       "end": 1728
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1742,
+      "end": 1742
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23213,12 +24523,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1706,
         "end": 1706
 =======
         "start": 1729,
         "end": 1729
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1743,
+        "end": 1743
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23234,12 +24549,17 @@
     "description": "The width of the step icon in the Stepper.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1707,
       "end": 1707
 =======
       "start": 1730,
       "end": 1730
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1744,
+      "end": 1744
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23248,12 +24568,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1708,
         "end": 1708
 =======
         "start": 1731,
         "end": 1731
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1745,
+        "end": 1745
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23269,12 +24594,17 @@
     "description": "The color of the step icon in the Stepper.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1709,
       "end": 1709
 =======
       "start": 1732,
       "end": 1732
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1746,
+      "end": 1746
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23283,12 +24613,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1710,
         "end": 1710
 =======
         "start": 1733,
         "end": 1733
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1747,
+        "end": 1747
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23304,12 +24639,17 @@
     "description": "The color of the step icon\nin the Stepper when hovered.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1711,
       "end": 1712
 =======
       "start": 1734,
       "end": 1735
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1748,
+      "end": 1749
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23318,12 +24658,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1713,
         "end": 1713
 =======
         "start": 1736,
         "end": 1736
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1750,
+        "end": 1750
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23339,12 +24684,17 @@
     "description": "The color of the Stepper step icon when the step is selected.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1714,
       "end": 1714
 =======
       "start": 1737,
       "end": 1737
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1751,
+      "end": 1751
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23353,12 +24703,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1715,
         "end": 1715
 =======
         "start": 1738,
         "end": 1738
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1752,
+        "end": 1752
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23374,12 +24729,17 @@
     "description": "The color of the step icon when the\nStepper has a dark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1716,
       "end": 1717
 =======
       "start": 1739,
       "end": 1740
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1753,
+      "end": 1754
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23388,12 +24748,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1718,
         "end": 1718
 =======
         "start": 1741,
         "end": 1741
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1755,
+        "end": 1755
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23409,12 +24774,17 @@
     "description": "The color of the Stepper step icon when the step\nis selected and the Stepper has a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1719,
       "end": 1721
 =======
       "start": 1742,
       "end": 1744
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1756,
+      "end": 1758
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23423,12 +24793,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1722,
         "end": 1722
 =======
         "start": 1745,
         "end": 1745
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1759,
+        "end": 1759
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23444,12 +24819,17 @@
     "description": "The color of the step icon on hover\nwhen the Stepper has a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1723,
       "end": 1725
 =======
       "start": 1746,
       "end": 1748
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1760,
+      "end": 1762
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23458,12 +24838,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1726,
         "end": 1726
 =======
         "start": 1749,
         "end": 1749
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1763,
+        "end": 1763
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23479,12 +24864,17 @@
     "description": "The transition of the Stepper step icon.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1728,
       "end": 1728
 =======
       "start": 1751,
       "end": 1751
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1765,
+      "end": 1765
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23493,12 +24883,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1729,
         "end": 1729
 =======
         "start": 1752,
         "end": 1752
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1766,
+        "end": 1766
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23514,12 +24909,17 @@
     "description": "The z-index of the Stepper step icon.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1730,
       "end": 1730
 =======
       "start": 1753,
       "end": 1753
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1767,
+      "end": 1767
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23528,12 +24928,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1731,
         "end": 1731
 =======
         "start": 1754,
         "end": 1754
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1768,
+        "end": 1768
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23549,12 +24954,17 @@
     "description": "The spread value of the icon box\nshadow when the Stepper step is selected.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1732,
       "end": 1733
 =======
       "start": 1755,
       "end": 1756
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1769,
+      "end": 1770
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23563,12 +24973,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1734,
         "end": 1734
 =======
         "start": 1757,
         "end": 1757
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1771,
+        "end": 1771
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23584,12 +24999,17 @@
     "description": "The box shadow of the Stepper step icon\nwhen the icon is selected.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1735,
       "end": 1736
 =======
       "start": 1758,
       "end": 1759
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1772,
+      "end": 1773
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23598,12 +25018,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1737,
         "end": 1739
 =======
         "start": 1760,
         "end": 1762
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1774,
+        "end": 1776
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23619,12 +25044,17 @@
     "description": "The background color of the content in the Stepper step.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1740,
       "end": 1740
 =======
       "start": 1763,
       "end": 1763
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1777,
+      "end": 1777
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23633,12 +25063,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1741,
         "end": 1741
 =======
         "start": 1764,
         "end": 1764
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1778,
+        "end": 1778
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23654,12 +25089,17 @@
     "description": "The border radius of the Stepper step\ncontent box when it has a description.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1742,
       "end": 1743
 =======
       "start": 1765,
       "end": 1766
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1779,
+      "end": 1780
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23668,12 +25108,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1744,
         "end": 1744
 =======
         "start": 1767,
         "end": 1767
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1781,
+        "end": 1781
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23689,12 +25134,17 @@
     "description": "The box shadow of the Stepper step content\nbox when it has a description.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1745,
       "end": 1746
 =======
       "start": 1768,
       "end": 1769
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1782,
+      "end": 1783
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23703,12 +25153,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1747,
         "end": 1747
 =======
         "start": 1770,
         "end": 1770
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1784,
+        "end": 1784
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23724,12 +25179,17 @@
     "description": "The spacing between the\nStepper step heading and description.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1748,
       "end": 1749
 =======
       "start": 1771,
       "end": 1772
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1785,
+      "end": 1786
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23738,12 +25198,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1750,
         "end": 1750
 =======
         "start": 1773,
         "end": 1773
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1787,
+        "end": 1787
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23759,12 +25224,17 @@
     "description": "The font weight of the Stepper step heading.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1751,
       "end": 1751
 =======
       "start": 1774,
       "end": 1774
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1788,
+      "end": 1788
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23773,12 +25243,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1752,
         "end": 1752
 =======
         "start": 1775,
         "end": 1775
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1789,
+        "end": 1789
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23794,12 +25269,17 @@
     "description": "The font size of the Stepper step heading.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1753,
       "end": 1753
 =======
       "start": 1776,
       "end": 1776
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1790,
+      "end": 1790
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23808,12 +25288,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1754,
         "end": 1754
 =======
         "start": 1777,
         "end": 1777
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1791,
+        "end": 1791
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23829,12 +25314,17 @@
     "description": "The color of the Stepper step heading.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1755,
       "end": 1755
 =======
       "start": 1778,
       "end": 1778
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1792,
+      "end": 1792
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23843,12 +25333,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1756,
         "end": 1756
 =======
         "start": 1779,
         "end": 1779
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1793,
+        "end": 1793
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23864,12 +25359,17 @@
     "description": "The color of the Stepper step heading when\nthe Stepper is on a dark\nbackground (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1757,
       "end": 1759
 =======
       "start": 1780,
       "end": 1782
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1794,
+      "end": 1796
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23878,12 +25378,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1760,
         "end": 1760
 =======
         "start": 1783,
         "end": 1783
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1797,
+        "end": 1797
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23899,12 +25404,17 @@
     "description": "The color of the Stepper\nstep heading when the step is selected.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1761,
       "end": 1762
 =======
       "start": 1784,
       "end": 1785
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1798,
+      "end": 1799
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23913,12 +25423,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1763,
         "end": 1763
 =======
         "start": 1786,
         "end": 1786
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1800,
+        "end": 1800
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23934,12 +25449,17 @@
     "description": "The padding value for the Stepper step.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1764,
       "end": 1764
 =======
       "start": 1787,
       "end": 1787
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1801,
+      "end": 1801
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23948,12 +25468,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1765,
         "end": 1765
 =======
         "start": 1788,
         "end": 1788
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1802,
+        "end": 1802
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -23969,12 +25494,17 @@
     "description": "The background color of the\nStepper step content box when the step is selected.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1766,
       "end": 1767
 =======
       "start": 1789,
       "end": 1790
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1803,
+      "end": 1804
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -23983,12 +25513,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1768,
         "end": 1768
 =======
         "start": 1791,
         "end": 1791
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1805,
+        "end": 1805
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24004,12 +25539,17 @@
     "description": "The background color of the Stepper step\ncontent box when it has a\ndescription and when the step is selected.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1769,
       "end": 1771
 =======
       "start": 1792,
       "end": 1794
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1806,
+      "end": 1808
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24018,12 +25558,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1772,
         "end": 1772
 =======
         "start": 1795,
         "end": 1795
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1809,
+        "end": 1809
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24039,12 +25584,17 @@
     "description": "The text color of a selected Stepper step's\ncontent and header when it has a\ndescription. This applies to\nsteppers with the sprk-c-Stepper--has-dark-bg class.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1773,
       "end": 1776
 =======
       "start": 1796,
       "end": 1799
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1810,
+      "end": 1813
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24053,12 +25603,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1777,
         "end": 1777
 =======
         "start": 1800,
         "end": 1800
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1814,
+        "end": 1814
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24074,12 +25629,17 @@
     "description": "The color of the bar that connects the steps in the Stepper.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1778,
       "end": 1778
 =======
       "start": 1801,
       "end": 1801
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1815,
+      "end": 1815
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24088,12 +25648,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1779,
         "end": 1779
 =======
         "start": 1802,
         "end": 1802
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1816,
+        "end": 1816
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24109,12 +25674,17 @@
     "description": "The color of the bar that connects\nthe steps when the Stepper is on a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1780,
       "end": 1782
 =======
       "start": 1803,
       "end": 1805
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1817,
+      "end": 1819
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24123,12 +25693,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1783,
         "end": 1783
 =======
         "start": 1806,
         "end": 1806
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1820,
+        "end": 1820
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24144,12 +25719,17 @@
     "description": "The border value for the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1802,
       "end": 1802
 =======
       "start": 1825,
       "end": 1825
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1839,
+      "end": 1839
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24158,12 +25738,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1803,
         "end": 1804
 =======
         "start": 1826,
         "end": 1827
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1840,
+        "end": 1841
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24179,12 +25764,17 @@
     "description": "The height of the dots in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1805,
       "end": 1805
 =======
       "start": 1828,
       "end": 1828
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1842,
+      "end": 1842
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24193,12 +25783,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1806,
         "end": 1806
 =======
         "start": 1829,
         "end": 1829
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1843,
+        "end": 1843
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24214,12 +25809,17 @@
     "description": "The width of the dots in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1807,
       "end": 1807
 =======
       "start": 1830,
       "end": 1830
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1844,
+      "end": 1844
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24228,12 +25828,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1808,
         "end": 1808
 =======
         "start": 1831,
         "end": 1831
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1845,
+        "end": 1845
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24249,12 +25854,17 @@
     "description": "The height of the dots in the Carousel component on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1809,
       "end": 1809
 =======
       "start": 1832,
       "end": 1832
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1846,
+      "end": 1846
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24263,12 +25873,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1810,
         "end": 1810
 =======
         "start": 1833,
         "end": 1833
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1847,
+        "end": 1847
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24284,12 +25899,17 @@
     "description": "The width of the dots in the Carousel component on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1811,
       "end": 1811
 =======
       "start": 1834,
       "end": 1834
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1848,
+      "end": 1848
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24298,12 +25918,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1812,
         "end": 1812
 =======
         "start": 1835,
         "end": 1835
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1849,
+        "end": 1849
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24319,12 +25944,17 @@
     "description": "The spacing between dots in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1813,
       "end": 1813
 =======
       "start": 1836,
       "end": 1836
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1850,
+      "end": 1850
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24333,12 +25963,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1814,
         "end": 1814
 =======
         "start": 1837,
         "end": 1837
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1851,
+        "end": 1851
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24354,12 +25989,17 @@
     "description": "The spacing between dots in the Carousel component on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1815,
       "end": 1815
 =======
       "start": 1838,
       "end": 1838
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1852,
+      "end": 1852
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24368,12 +26008,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1816,
         "end": 1816
 =======
         "start": 1839,
         "end": 1839
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1853,
+        "end": 1853
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24389,12 +26034,17 @@
     "description": "The box shadow of the active dot in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1817,
       "end": 1817
 =======
       "start": 1840,
       "end": 1840
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1854,
+      "end": 1854
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24403,12 +26053,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1818,
         "end": 1818
 =======
         "start": 1841,
         "end": 1841
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1855,
+        "end": 1855
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24424,12 +26079,17 @@
     "description": "The color of the arrows in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1819,
       "end": 1819
 =======
       "start": 1842,
       "end": 1842
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1856,
+      "end": 1856
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24438,12 +26098,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1820,
         "end": 1820
 =======
         "start": 1843,
         "end": 1843
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1857,
+        "end": 1857
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24459,12 +26124,17 @@
     "description": "The spacing for the arrows in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1821,
       "end": 1821
 =======
       "start": 1844,
       "end": 1844
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1858,
+      "end": 1858
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24473,12 +26143,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1822,
         "end": 1822
 =======
         "start": 1845,
         "end": 1845
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1859,
+        "end": 1859
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24494,12 +26169,17 @@
     "description": "The left and right values of the arrows in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1823,
       "end": 1823
 =======
       "start": 1846,
       "end": 1846
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1860,
+      "end": 1860
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24508,12 +26188,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1824,
         "end": 1824
 =======
         "start": 1847,
         "end": 1847
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1861,
+        "end": 1861
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24529,12 +26214,17 @@
     "description": "The padding value of the arrows in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1825,
       "end": 1825
 =======
       "start": 1848,
       "end": 1848
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1862,
+      "end": 1862
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24543,12 +26233,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1826,
         "end": 1826
 =======
         "start": 1849,
         "end": 1849
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1863,
+        "end": 1863
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24564,12 +26259,17 @@
     "description": "The maximum width of the image in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1827,
       "end": 1827
 =======
       "start": 1850,
       "end": 1850
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1864,
+      "end": 1864
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24578,12 +26278,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1828,
         "end": 1828
 =======
         "start": 1851,
         "end": 1851
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1865,
+        "end": 1865
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24599,12 +26304,17 @@
     "description": "The breakpoint for the arrows in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1829,
       "end": 1829
 =======
       "start": 1852,
       "end": 1852
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1866,
+      "end": 1866
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24613,12 +26323,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1830,
         "end": 1830
 =======
         "start": 1853,
         "end": 1853
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1867,
+        "end": 1867
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24634,12 +26349,17 @@
     "description": "The padding value for the dots container in the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1831,
       "end": 1831
 =======
       "start": 1854,
       "end": 1854
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1868,
+      "end": 1868
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24648,12 +26368,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1832,
         "end": 1832
 =======
         "start": 1855,
         "end": 1855
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1869,
+        "end": 1869
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24669,12 +26394,17 @@
     "description": "The breakpoint for the Carousel component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1833,
       "end": 1833
 =======
       "start": 1856,
       "end": 1856
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1870,
+      "end": 1870
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24683,12 +26413,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1834,
         "end": 1834
 =======
         "start": 1857,
         "end": 1857
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1871,
+        "end": 1871
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24704,12 +26439,17 @@
     "description": "The maximum width of the Card.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1840,
       "end": 1840
 =======
       "start": 1863,
       "end": 1863
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1877,
+      "end": 1877
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24718,12 +26458,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1841,
         "end": 1841
 =======
         "start": 1864,
         "end": 1864
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1878,
+        "end": 1878
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24739,12 +26484,17 @@
     "description": "The main Card breakpoint.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1842,
       "end": 1842
 =======
       "start": 1865,
       "end": 1865
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1879,
+      "end": 1879
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24753,12 +26503,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1843,
         "end": 1843
 =======
         "start": 1866,
         "end": 1866
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1880,
+        "end": 1880
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24774,12 +26529,17 @@
     "description": "The box shadow of the Card on narrow viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1844,
       "end": 1844
 =======
       "start": 1867,
       "end": 1867
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1881,
+      "end": 1881
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24788,12 +26548,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1845,
         "end": 1845
 =======
         "start": 1868,
         "end": 1868
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1882,
+        "end": 1882
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24809,12 +26574,17 @@
     "description": "The box shadow of the Card on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1846,
       "end": 1846
 =======
       "start": 1869,
       "end": 1869
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1883,
+      "end": 1883
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24823,12 +26593,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1847,
         "end": 1847
 =======
         "start": 1870,
         "end": 1870
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1884,
+        "end": 1884
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24844,12 +26619,17 @@
     "description": "The box shadow of the Standout Card variant on narrow viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1848,
       "end": 1848
 =======
       "start": 1871,
       "end": 1871
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1885,
+      "end": 1885
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24858,12 +26638,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1849,
         "end": 1849
 =======
         "start": 1872,
         "end": 1872
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1886,
+        "end": 1886
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24879,12 +26664,17 @@
     "description": "The box shadow of the Standout Card variant on wide viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1850,
       "end": 1850
 =======
       "start": 1873,
       "end": 1873
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1887,
+      "end": 1887
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24893,12 +26683,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1851,
         "end": 1851
 =======
         "start": 1874,
         "end": 1874
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1888,
+        "end": 1888
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24914,12 +26709,17 @@
     "description": "The border radius of the Card.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1852,
       "end": 1852
 =======
       "start": 1875,
       "end": 1875
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1889,
+      "end": 1889
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24928,12 +26728,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1853,
         "end": 1853
 =======
         "start": 1876,
         "end": 1876
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1890,
+        "end": 1890
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24949,12 +26754,17 @@
     "description": "The padding of the content inside the Card.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1854,
       "end": 1854
 =======
       "start": 1877,
       "end": 1877
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1891,
+      "end": 1891
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24963,12 +26773,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1855,
         "end": 1855
 =======
         "start": 1878,
         "end": 1878
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1892,
+        "end": 1892
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -24984,12 +26799,17 @@
     "description": "The background color of the header area for the Highlighted Header Card.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1856,
       "end": 1856
 =======
       "start": 1879,
       "end": 1879
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1893,
+      "end": 1893
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -24998,12 +26818,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1857,
         "end": 1857
 =======
         "start": 1880,
         "end": 1880
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1894,
+        "end": 1894
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25019,12 +26844,17 @@
     "description": "The text color for the Highlighted Header Card.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1858,
       "end": 1858
 =======
       "start": 1881,
       "end": 1881
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1895,
+      "end": 1895
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25033,12 +26863,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1859,
         "end": 1859
 =======
         "start": 1882,
         "end": 1882
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1896,
+        "end": 1896
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25054,12 +26889,17 @@
     "description": "The border surrounding the Dictionary.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1865,
       "end": 1865
 =======
       "start": 1888,
       "end": 1888
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1902,
+      "end": 1902
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25068,12 +26908,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1866,
         "end": 1866
 =======
         "start": 1889,
         "end": 1889
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1903,
+        "end": 1903
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25089,12 +26934,17 @@
     "description": "The background color of the key value pairs in the striped Dictionary.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1867,
       "end": 1867
 =======
       "start": 1890,
       "end": 1890
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1904,
+      "end": 1904
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25103,12 +26953,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1868,
         "end": 1868
 =======
         "start": 1891,
         "end": 1891
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1905,
+        "end": 1905
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25124,12 +26979,17 @@
     "description": "The breakpoint of the Dictionary component.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1869,
       "end": 1869
 =======
       "start": 1892,
       "end": 1892
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1906,
+      "end": 1906
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25138,12 +26998,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1870,
         "end": 1870
 =======
         "start": 1893,
         "end": 1893
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1907,
+        "end": 1907
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25159,12 +27024,17 @@
     "description": "The font size of the labels in the Dictionary.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1871,
       "end": 1871
 =======
       "start": 1894,
       "end": 1894
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1908,
+      "end": 1908
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25173,12 +27043,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1872,
         "end": 1872
 =======
         "start": 1895,
         "end": 1895
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1909,
+        "end": 1909
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25194,12 +27069,17 @@
     "description": "The font weight of the labels in the Dictionary.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1873,
       "end": 1873
 =======
       "start": 1896,
       "end": 1896
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1910,
+      "end": 1910
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25208,12 +27088,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1874,
         "end": 1874
 =======
         "start": 1897,
         "end": 1897
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1911,
+        "end": 1911
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25229,12 +27114,17 @@
     "description": "The line height of the labels in the Dictionary.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1875,
       "end": 1875
 =======
       "start": 1898,
       "end": 1898
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1912,
+      "end": 1912
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25243,12 +27133,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1876,
         "end": 1876
 =======
         "start": 1899,
         "end": 1899
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1913,
+        "end": 1913
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25264,12 +27159,17 @@
     "description": "The Highlight Board breakpoint at which styles change\nfor padding, font size and button width.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1882,
       "end": 1883
 =======
       "start": 1905,
       "end": 1906
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1919,
+      "end": 1920
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25278,12 +27178,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1884,
         "end": 1884
 =======
         "start": 1907,
         "end": 1907
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1921,
+        "end": 1921
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25299,12 +27204,17 @@
     "description": "The maximum width of the content\nfor the Highlight Board when it has an image.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1885,
       "end": 1886
 =======
       "start": 1908,
       "end": 1909
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1922,
+      "end": 1923
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25313,12 +27223,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1887,
         "end": 1887
 =======
         "start": 1910,
         "end": 1910
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1924,
+        "end": 1924
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25334,12 +27249,17 @@
     "description": "Percentage reduction value for the\nfont size in the Highlight Board in narrow viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1888,
       "end": 1889
 =======
       "start": 1911,
       "end": 1912
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1925,
+      "end": 1926
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25348,12 +27268,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1890,
         "end": 1890
 =======
         "start": 1913,
         "end": 1913
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1927,
+        "end": 1927
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25369,12 +27294,17 @@
     "description": "The height of the Highlight Board image.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1891,
       "end": 1891
 =======
       "start": 1914,
       "end": 1914
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1928,
+      "end": 1928
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25383,12 +27313,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1892,
         "end": 1892
 =======
         "start": 1915,
         "end": 1915
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1929,
+        "end": 1929
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25404,12 +27339,17 @@
     "description": "The background color of the Highlight Board.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1893,
       "end": 1893
 =======
       "start": 1916,
       "end": 1916
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1930,
+      "end": 1930
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25418,12 +27358,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1894,
         "end": 1894
 =======
         "start": 1917,
         "end": 1917
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1931,
+        "end": 1931
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
@@ -25439,12 +27384,17 @@
     "description": "The background color of\nthe content box in the Highlight Board.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1895,
       "end": 1896
 =======
       "start": 1918,
       "end": 1919
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+      "start": 1932,
+      "end": 1933
+>>>>>>> Add modifiers and sass variables
     },
     "context": {
       "type": "variable",
@@ -25453,12 +27403,17 @@
       "scope": "default",
       "line": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "start": 1897,
         "end": 1897
 =======
         "start": 1920,
         "end": 1920
 >>>>>>> Add sass-modifiers and sass-vars
+=======
+        "start": 1934,
+        "end": 1934
+>>>>>>> Add modifiers and sass variables
       }
     },
     "access": "public",
