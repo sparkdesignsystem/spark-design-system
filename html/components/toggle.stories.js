@@ -45,9 +45,7 @@ export const defaultStory = () => {
         My Disclaimer
       </button>
 
-      <div
-        data-sprk-toggle="content"
-      >
+      <div data-sprk-toggle="content">
         <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
           This is an example of disclaimer content.
           The aria-expanded="true" attribute
