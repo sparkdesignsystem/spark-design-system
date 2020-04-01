@@ -160,12 +160,10 @@ export class SprkToggleComponent implements AfterViewInit {
     if (!contentId) {
       contentId = uniqueId(`sprk_toggle_content_`);
       this.renderer.setAttribute(contentElement, 'id', contentId);
-      // contentElement.setAttribute('id', contentId);
     }
 
     // set the value of aria-controls
     this.renderer.setAttribute(triggerElement, 'aria-controls', contentId);
-    // triggerElement.setAttribute('aria-controls', contentId);
   }
 
   ngAfterViewInit() {
