@@ -264,7 +264,10 @@ export const defaultStory = () => {
 
             <div class="sprk-o-Stack__item">
               <div data-sprk-toggle="container">
-                <a class="sprk-b-TypeBodyFour sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon sprk-u-FontWeight--normal" data-sprk-toggle="trigger" href="#nogo">
+                <a
+                  class="sprk-c-Toggle__trigger sprk-b-TypeBodyFour sprk-u-FontWeight--normal"
+                  data-sprk-toggle="trigger"
+                >
                   <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--toggle sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 64 64">
                     <use xlink:href="#chevron-down-circle-two-color"></use>
                   </svg>
