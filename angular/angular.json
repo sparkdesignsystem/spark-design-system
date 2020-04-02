@@ -67,12 +67,13 @@
             "tsConfig": "projects/spark-angular/tsconfig.lib.json",
             "project": "projects/spark-angular/ng-package.json"
           }
-        ,"configurations": {
+        ,
+        "configurations": {
             "production": {
               "tsConfig": "projects/spark-angular/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
