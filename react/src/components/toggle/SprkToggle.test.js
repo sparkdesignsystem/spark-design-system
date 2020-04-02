@@ -30,9 +30,9 @@ describe('SprkToggle:', () => {
       <SprkToggle title="Toggle title">Body text</SprkToggle>,
     );
     expect(wrapper.state().isOpen).toBe(false);
-    wrapper.find('a').simulate('click');
+    wrapper.find('button').simulate('click');
     expect(wrapper.state().isOpen).toBe(true);
-    wrapper.find('a').simulate('click');
+    wrapper.find('button').simulate('click');
     expect(wrapper.state().isOpen).toBe(false);
   });
 
@@ -40,7 +40,7 @@ describe('SprkToggle:', () => {
     const wrapper = mount(
       <SprkToggle title="Toggle title">Body text</SprkToggle>,
     );
-    wrapper.find('a').simulate('click');
+    wrapper.find('button').simulate('click');
     expect(wrapper.find('.sprk-c-Icon--open').length).toBe(1);
   });
 
@@ -48,7 +48,7 @@ describe('SprkToggle:', () => {
     const wrapper = mount(
       <SprkToggle title="Toggle title">Body text</SprkToggle>,
     );
-    wrapper.find('a').simulate('click');
-    expect(wrapper.find('[aria-expanded="true"]').length).toBe(2);
+    wrapper.find('button').simulate('click');
+    expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
   });
 });
