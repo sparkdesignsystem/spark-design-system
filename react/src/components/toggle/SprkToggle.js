@@ -112,9 +112,7 @@ SprkToggle.propTypes = {
   titleAddClasses: PropTypes.string,
   /** Additional classes for the toggle icon. */
   iconAddClasses: PropTypes.string,
-  /** A string that is used to set the aria-controls and associated id for the component. 
-   * The default is generated using lodash.uniqueId.
-  */
+  /** A string that is used to set the aria-controls and associated id for the component. */
   ariaControls: PropTypes.string,
 };
 
