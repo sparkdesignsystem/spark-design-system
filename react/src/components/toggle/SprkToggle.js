@@ -34,11 +34,10 @@ class SprkToggle extends Component {
       titleAddClasses,
       iconAddClasses,
       toggleIconName,
+      ariaControls,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
-
-    const ariaControls = uniqueId('sprk_toggle_content_');
 
     const containerClasses = classnames(
       'sprk-c-Toggle',
@@ -83,6 +82,7 @@ class SprkToggle extends Component {
 
 SprkToggle.defaultProps = {
   toggleIconName: 'chevron-down-circle-two-color',
+  ariaControls: uniqueId('sprk_toggle_content_'),
 };
 
 SprkToggle.propTypes = {
@@ -112,6 +112,10 @@ SprkToggle.propTypes = {
   titleAddClasses: PropTypes.string,
   /** Additional classes for the toggle icon. */
   iconAddClasses: PropTypes.string,
+  /** A string that is used to set the aria-controls and associated id for the component. 
+   * The default is generated using lodash.uniqueId.
+  */
+  ariaControls: PropTypes.string,
 };
 
 export default SprkToggle;
