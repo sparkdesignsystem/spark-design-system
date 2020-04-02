@@ -44,7 +44,7 @@ class SprkToggle extends Component {
       additionalClasses
     );
 
-    const titleClassNames = classnames(
+    const titleClasses = classnames(
       'sprk-c-Toggle__trigger',
       titleAddClasses,
     );
@@ -58,7 +58,7 @@ class SprkToggle extends Component {
     return (
       <div data-id={idString} {...other} className={containerClasses}>
         <button
-          className={titleClassNames}
+          className={titleClasses}
           data-analytics={analyticsString}
           onClick={this.toggleOpen}
           aria-expanded={isOpen ? 'true' : 'false'}
