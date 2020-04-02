@@ -12,7 +12,6 @@ class SprkToggle extends Component {
     this.state = {
       isOpen: isDefaultOpen || false,
       height: isDefaultOpen ? 'auto' : 0,
-      ariaControls: uniqueId('sprk_toggle_content_'),
     };
     this.toggleOpen = this.toggleOpen.bind(this);
   }
@@ -37,7 +36,9 @@ class SprkToggle extends Component {
       toggleIconName,
       ...other
     } = this.props;
-    const { isOpen, height, ariaControls } = this.state;
+    const { isOpen, height } = this.state;
+
+    const ariaControls = uniqueId('sprk_toggle_content_');
 
     const containerClasses = classnames(
       'sprk-c-Toggle',
