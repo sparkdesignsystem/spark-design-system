@@ -55,7 +55,7 @@ export const defaultStory = () => {
       data-sprk-toggle="container"
     >
       <button
-        class="sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon"
+        class="sprk-c-Toggle__trigger"
         data-sprk-toggle="trigger"
       >
           <svg
