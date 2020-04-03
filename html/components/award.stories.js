@@ -57,7 +57,6 @@ export const defaultStory = () => {
       <button
         class="sprk-c-Toggle__trigger"
         data-sprk-toggle="trigger"
-        href="#nogo"
       >
           <svg
             class="sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--toggle sprk-u-mrs"
