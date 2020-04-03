@@ -45,3 +45,9 @@
     outline: none;
   }
 }
+
+/// A toggle with a smaller font.
+/// @name .sprk-c-Toggle__trigger--small
+.sprk-c-Toggle__trigger--small {
+  font-size: $sprk-toggle-trigger-font-size-small;
+}
