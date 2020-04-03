@@ -268,6 +268,7 @@ export const defaultStory = () => {
                   class="
                     sprk-c-Toggle__trigger
                     sprk-c-Toggle__trigger--small
+                    sprk-u-FontWeight--normal
                   "
                     data-sprk-toggle="trigger"
                 >
