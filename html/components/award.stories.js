@@ -54,10 +54,9 @@ export const defaultStory = () => {
       class="sprk-o-Stack__item"
       data-sprk-toggle="container"
     >
-      <a
-        class="sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon"
+      <button
+        class="sprk-c-Toggle__trigger"
         data-sprk-toggle="trigger"
-        href="#nogo"
       >
           <svg
             class="sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--toggle sprk-u-mrs"
@@ -67,7 +66,7 @@ export const defaultStory = () => {
             <use xlink:href="#chevron-down-circle-two-color"></use>
           </svg>
           My Disclaimer
-      </a>
+      </button>
 
       <div data-sprk-toggle="content">
         <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
