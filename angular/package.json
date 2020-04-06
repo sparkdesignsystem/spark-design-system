@@ -10,9 +10,9 @@
     "coverage": "jest --coverage --config ./projects/spark-angular/jest.config.js",
     "docs:json": "compodoc --disableLifeCycleHooks -p ./tsconfig.json -e json -d .",
     "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./projects/spark-angular/package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./projects/spark-angular/src/environment/environment.ts",
-    "prebuild:storybook": "npm run docs:json && npm run test:generate-output",
+    "prebuild:storybook": "npm run test:generate-output && npm run docs:json",
     "storybook": "npm run prebuild:storybook && start-storybook -p 8006 -s ../storybook-utilities/favicon",
-    "build-storybook": "npm run prebuild:storybook & npm run docs:json && build-storybook -s ../storybook-utilities/favicon",
+    "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon",
     "publish": "npm run build && cd dist/spark-angular && npm publish"
   },
   "private": true,
