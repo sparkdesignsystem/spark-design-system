@@ -1392,6 +1392,49 @@ $sprk-accordion-summary-active-text-decoration: none;
 // Toggle
 ///
 
+/// The top border style for Toggle Trigger.
+$sprk-toggle-trigger-border-top: none !default;
+/// The right border style for Toggle Trigger.
+$sprk-toggle-trigger-border-right: none !default;
+/// The bottom border style for Toggle Trigger.
+$sprk-toggle-trigger-border-bottom: $sprk-link-has-icon-border-bottom !default;
+/// The left border style for Toggle Trigger.
+$sprk-toggle-trigger-border-left: none !default;
+/// The text decoration style Toggle Trigger.
+$sprk-toggle-trigger-text-decoration: $sprk-link-text-decoration !default;
+/// The transition for Toggle Trigger.
+$sprk-toggle-trigger-transition: $sprk-link-transition !default;
+/// The color for Toggle Trigger.
+$sprk-toggle-trigger-color: $sprk-color-body-three !default;
+/// The font family for Toggle Trigger.
+$sprk-toggle-trigger-font-family: $sprk-font-family-body-three !default;
+/// The font size for Toggle Trigger.
+$sprk-toggle-trigger-font-size: $sprk-font-size-body-three !default;
+/// The font weight for Toggle Trigger.
+$sprk-toggle-trigger-font-weight: $sprk-font-weight-body-three !default;
+/// The line height for Toggle Trigger.
+$sprk-toggle-trigger-line-height: $sprk-line-height-body-three !default;
+/// The hover border bottom style for Toggle Trigger.
+$sprk-toggle-trigger-hover-border-bottom: $sprk-link-has-icon-hover-border-bottom !default;
+/// The hover text color for Toggle Trigger.
+$sprk-toggle-trigger-hover-color: $sprk-link-has-icon-hover-color-text !default;
+/// The background color for Toggle Trigger.
+$sprk-toggle-trigger-background-color: transparent !default;
+/// The padding top for Toggle Trigger.
+$sprk-toggle-trigger-padding-top: 0 !default;
+/// The padding right for Toggle Trigger.
+$sprk-toggle-trigger-padding-right: 0 !default;
+/// The padding bottom for Toggle Trigger.
+$sprk-toggle-trigger-padding-bottom: 0 !default;
+/// The padding left for Toggle Trigger.
+$sprk-toggle-trigger-padding-left: 0 !default;
+/// The text alignment for Toggle Trigger.
+$sprk-toggle-trigger-text-align: left !default;
+/// The font size for small Toggle Trigger.
+$sprk-toggle-trigger-font-size-small: $sprk-font-size-body-four !default;
+/// The font weight for small Toggle Trigger.
+$sprk-toggle-trigger-font-weight-small: normal !default;
+
 /// The transition timing for the
 /// rotation of the icon when the Toggle is opened.
 $sprk-toggle-transition-timing: 0.3s ease !default;
