@@ -1,6 +1,7 @@
 import { Component, Input, AfterViewInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { toggleAnimations } from './sprk-toggle-animations';
 import { uniqueId } from 'lodash';
+import 'focus-visible';
 
 @Component({
   selector: 'sprk-toggle',
