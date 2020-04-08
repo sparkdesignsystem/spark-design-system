@@ -50,6 +50,10 @@
       text-decoration: $sprk-accordion-summary-active-text-decoration;
     }
   }
+
+  &:focus:not(.focus-visible) {
+    outline: none;
+  }
 }
 
 .sprk-c-Accordion__item--open .sprk-c-Accordion__icon {
