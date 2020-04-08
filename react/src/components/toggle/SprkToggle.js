@@ -3,7 +3,8 @@ import AnimateHeight from 'react-animate-height';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import SprkIcon from '../icons/SprkIcon';
-import SprkLink from '../../base/links/SprkLink';
+import uniqueId from 'lodash/uniqueId';
+import 'focus-visible';
 
 class SprkToggle extends Component {
   constructor(props) {
@@ -34,12 +35,18 @@ class SprkToggle extends Component {
       titleAddClasses,
       iconAddClasses,
       toggleIconName,
+      ariaControls,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
 
-    const titleClassNames = classnames(
-      'sprk-b-TypeBodyThree sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--simple',
+    const containerClasses = classnames(
+      'sprk-c-Toggle',
+      additionalClasses
+    );
+
+    const titleClasses = classnames(
+      'sprk-c-Toggle__trigger',
       titleAddClasses,
     );
 
@@ -50,17 +57,23 @@ class SprkToggle extends Component {
     );
 
     return (
-      <div data-id={idString} {...other} className={additionalClasses}>
-        <SprkLink
-          additionalClasses={titleClassNames}
+      <div data-id={idString} {...other} className={containerClasses}>
+        <button
+          className={titleClasses}
           data-analytics={analyticsString}
           onClick={this.toggleOpen}
           aria-expanded={isOpen ? 'true' : 'false'}
+          aria-controls={ariaControls}
         >
           <SprkIcon iconName={toggleIconName} additionalClasses={iconClasses} />
           {title}
-        </SprkLink>
-        <AnimateHeight duration={300} height={height}>
+        </button>
+        <AnimateHeight
+          duration={300}
+          height={height}
+          className='sprk-c-Toggle__content'
+          id={ariaControls}
+        >
           <div>{children}</div>
         </AnimateHeight>
       </div>
@@ -70,6 +83,7 @@ class SprkToggle extends Component {
 
 SprkToggle.defaultProps = {
   toggleIconName: 'chevron-down-circle-two-color',
+  ariaControls: uniqueId('sprk_toggle_content_'),
 };
 
 SprkToggle.propTypes = {
@@ -99,6 +113,8 @@ SprkToggle.propTypes = {
   titleAddClasses: PropTypes.string,
   /** Additional classes for the toggle icon. */
   iconAddClasses: PropTypes.string,
+  /** A string that is used to set the aria-controls and associated id for the component. */
+  ariaControls: PropTypes.string,
 };
 
 export default SprkToggle;
