@@ -90,64 +90,174 @@ const linkColumns = [
         element: 'a',
       },
       {
+        heading: 'Site Links',
+        links: [
+          {
+            href: '#nogo',
+            text: 'About This.',
+            analyticsString: 'about-this-link',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'About This Other Thing',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'About That',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'Link Item',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'This Link Item',
+            element: 'a',
+          },
+        ],
+      },
+      {
+        heading: 'Learn More',
+        links: [
+          {
+            href: '#nogo',
+            text: 'About This Other Thing',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'About This',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'About That',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'Link Item',
+            element: 'a',
+          },
+        ],
+      },
+      {
+        heading: 'Support',
+        links: [
+          {
+            href: '#nogo',
+            text: 'Share Your Screen',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'Opt Out',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'Disclosures and Other Things',
+            element: 'a',
+          },
+          {
+            href: '#nogo',
+            text: 'We Want Your Feedback',
+            element: 'a',
+          },
+        ],
+      },
+    ]}
+    connectIcons={{
+      heading: 'Connect With Us',
+      icons: [
+        {
+          href: '#nogo',
+          name: 'facebook',
+          screenReaderText: 'Facebook',
+          element: 'a',
+        },
+        {
+          href: '#nogo',
+          name: 'instagram',
+          screenReaderText: 'Instagram',
+          element: 'a',
+        },
+        {
+          href: '#nogo',
+          name: 'twitter',
+          screenReaderText: 'Twitter',
+          element: 'a',
+        },
+        {
+          href: '#nogo',
+          name: 'youtube',
+          screenReaderText: 'YouTube',
+          element: 'a',
+        },
+      ],
+    }}
+    awards={{
+      heading: 'Awards Heading Title',
+      images: [
+        {
+          href: '#nogo',
+          src:
+            'https://spark-assets.netlify.com/spark-logo-mark.svg',
+          altText: 'Spark Logo',
+          element: 'a',
+        },
+        {
+          href: '#nogo',
+          src:
+            'https://spark-assets.netlify.com/spark-logo-mark.svg',
+          altText: 'Spark Logo',
+          element: 'a',
+        },
+      ],
+      disclaimerTitle: 'My Award Disclaimer',
+      disclaimerAnalytics: 'test',
+      disclaimerText:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante, non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.',
+    }}
+    additionalIcons={[
+      {
+        name: 'house',
         href: '#nogo',
-        text: 'Link Item',
+        screenReaderText: 'House',
         element: 'a',
       },
       {
+        name: 'house',
         href: '#nogo',
-        text: 'This Link Item',
-        element: 'a',
-      },
-    ],
-  },
-  {
-    heading: 'Learn More',
-    links: [
-      {
-        href: '#nogo',
-        text: 'About This Other Thing',
+        screenReaderText: 'House',
         element: 'a',
       },
       {
+        name: 'house',
         href: '#nogo',
-        text: 'About This',
+        screenReaderText: 'House',
         element: 'a',
       },
+    ]}
+    paragraphs={[
       {
-        href: '#nogo',
-        text: 'About That',
-        element: 'a',
+        text:
+          '*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
       },
       {
-        href: '#nogo',
-        text: 'Link Item',
-        element: 'a',
-      },
-    ],
-  },
-  {
-    heading: 'Support',
-    links: [
-      {
-        href: '#nogo',
-        text: 'Share Your Screen',
-        element: 'a',
+        text:
+          'Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur.',
       },
       {
-        href: '#nogo',
-        text: 'Opt Out',
-        element: 'a',
+        text:
+          '**Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
       },
       {
-        href: '#nogo',
-        text: 'Disclosures and Other Things',
-        element: 'a',
-      },
-      {
-        href: '#nogo',
-        text: 'We Want Your Feedback',
-        element: 'a',
+        text: 'Lorem ipsum dolor sit amet, consectetur.',
       },
     ],
   },
