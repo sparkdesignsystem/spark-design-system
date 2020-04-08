@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import SprkIcon from '../icons/SprkIcon';
 import uniqueId from 'lodash/uniqueId';
+import 'focus-visible';
 
 class SprkToggle extends Component {
   constructor(props) {
