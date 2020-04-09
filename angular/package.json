@@ -32,7 +32,7 @@
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
     "classlist.js": "^1.1.20150312",
-    "focus-visible": "^5.1.0",
+    "focus-visible": "5.0.2",
     "replace": "^1.1.1",
     "rxjs": "~6.4.0",
     "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9",
