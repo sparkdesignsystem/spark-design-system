@@ -1,4 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import compareEdges from '../util/compareEdges';
 
 export const useUsingSparkData = () => {
   const {
@@ -82,10 +83,10 @@ export const useUsingSparkData = () => {
   );
 
   return {
-    components: components.edges,
-    examples: examples.edges,
-    guides: guides.edges,
-    foundations: foundations.edges,
+    components: components.edges.sort(compareEdges),
+    examples: examples.edges.sort(compareEdges),
+    guides: guides.edges.sort(compareEdges),
+    foundations: foundations.edges.sort(compareEdges),
   };
 };
 
