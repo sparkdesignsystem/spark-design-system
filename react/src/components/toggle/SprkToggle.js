@@ -46,7 +46,7 @@ class SprkToggle extends Component {
     );
 
     const titleClasses = classnames(
-      'sprk-c-Toggle__trigger',
+      'sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none',
       titleAddClasses,
     );
 

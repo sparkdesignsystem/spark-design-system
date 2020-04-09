@@ -1,21 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, AfterViewInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { toggleAnimations } from './sprk-toggle-animations';
+import { uniqueId } from 'lodash';
+import 'focus-visible';
 
 @Component({
   selector: 'sprk-toggle',
   template: `
     <div
-      class="sprk-u-Overflow--hidden {{ additionalClasses }}"
+      class="sprk-c-Toggle {{ additionalClasses }}"
       [attr.data-id]="idString"
     >
-      <a
-        sprkLink
+      <button
         variant="icon"
         [ngClass]="getClasses()"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
-        [analyticsString]="analyticsString"
-        href="#"
+        [attr.data-analytics]="analyticsString"
+        #toggleTrigger
       >
         <sprk-icon
           iconType="chevron-down-circle-two-color"
@@ -24,16 +25,25 @@ import { toggleAnimations } from './sprk-toggle-animations';
           }} sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
         ></sprk-icon>
         {{ title }}
-      </a>
+      </button>
 
-      <div [@toggleContent]="animState">
-        <div class="sprk-u-pts sprk-u-pbs"><ng-content></ng-content></div>
+      <div
+        [@toggleContent]="animState"
+        #toggleContent
+      >
+        <div class="sprk-u-pts sprk-u-pbs sprk-c-Toggle__content">
+          <ng-content></ng-content>
+        </div>
       </div>
     </div>
   `,
   animations: [toggleAnimations.toggleContent]
 })
-export class SprkToggleComponent implements OnInit {
+export class SprkToggleComponent implements AfterViewInit {
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
+  @ViewChild('toggleTrigger', { static: true }) toggleTrigger: ElementRef;
+  @ViewChild('toggleContent', { static: true }) toggleContent: ElementRef;
+
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
@@ -120,13 +130,45 @@ export class SprkToggleComponent implements OnInit {
    */
   getClasses(): string {
     const classArray: string[] = [
+      'sprk-c-Toggle__trigger sprk-u-TextCrop--none',
       this.titleFontClass,
-      'sprk-u-TextCrop--none',
     ];
     return classArray.join(' ');
   }
 
-  ngOnInit() {
+  /**
+   * @ignore
+   */
+  generateAriaControls(): void {
+    const triggerElement = this.toggleTrigger.nativeElement;
+    const contentElement = this.toggleContent.nativeElement;
+    const triggerAriaControls = triggerElement.getAttribute('aria-controls');
+    let contentId = contentElement.getAttribute('id');
+
+    // Warn if aria-controls exists but the id does not
+    if (triggerAriaControls && !contentId) {
+      console.warn(`Spark Design System Warning - The component with aria-controls="${triggerAriaControls}" expects a matching id on the content element.`);
+      return;
+    }
+
+    // Warn if aria-controls and id both exist but don't match
+    if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
+      console.warn(`Spark Design System Warning - The value of aria-controls ("${triggerAriaControls}") should match the id of the content element ("${contentId}").`);
+      return;
+    }
+
+    // If we don't have a valid id, generate one with lodash
+    if (!contentId) {
+      contentId = uniqueId(`sprk_toggle_content_`);
+      this.renderer.setAttribute(contentElement, 'id', contentId);
+    }
+
+    // set the value of aria-controls
+    this.renderer.setAttribute(triggerElement, 'aria-controls', contentId);
+  }
+
+  ngAfterViewInit() {
     this.toggleState();
+    this.generateAriaControls();
   }
 }
