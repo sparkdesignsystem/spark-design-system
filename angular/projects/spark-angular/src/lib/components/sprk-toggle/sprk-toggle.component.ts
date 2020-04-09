@@ -78,7 +78,7 @@ export class SprkToggleComponent implements AfterViewInit {
    * This is intended for overrides.
    */
   @Input()
-  titleFontClass = 'sprk-b-TypeBodyThree';
+  titleFontClass: 'sprk-b-TypeBodyThree';
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -130,7 +130,7 @@ export class SprkToggleComponent implements AfterViewInit {
    */
   getClasses(): string {
     const classArray: string[] = [
-      'sprk-c-Toggle__trigger',
+      'sprk-c-Toggle__trigger sprk-u-TextCrop--none',
       this.titleFontClass,
     ];
     return classArray.join(' ');
