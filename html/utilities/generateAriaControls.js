@@ -3,7 +3,7 @@ import { uniqueId } from 'lodash';
 // Copy the value of the id attribute on contentElement
 // into the aria-controls attribute on triggerElement.
 // Generate a unique ID if needed.
-const generateAriaControls = (triggerElement, contentElement) => {
+const generateAriaControls = (triggerElement, contentElement, componentName) => {
   let triggerAriaControls = triggerElement.getAttribute('aria-controls');
   let contentId = contentElement.getAttribute('id');
 
@@ -21,7 +21,7 @@ const generateAriaControls = (triggerElement, contentElement) => {
 
   // If we don't have a valid id, generate one with lodash
   if (!contentId) {
-    contentId = uniqueId('sprk_masthead_content_');
+    contentId = uniqueId(`sprk_${componentName}_content_`);
     contentElement.setAttribute('id', contentId);
   }
 
