@@ -1794,12 +1794,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 22,
-      "end": 24
+      "start": 18,
+      "end": 20
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-Display--none",
+      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -1818,12 +1818,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 18,
-      "end": 20
+      "start": 22,
+      "end": 24
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
+      "name": ".sprk-u-Display--none",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -3252,14 +3252,14 @@
     }
   },
   {
-    "description": "Sets the bottom margin to the current value of\n`$sprk-space-misc-a` (`24px`).\n",
+    "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
     "commentRange": {
-      "start": 550,
-      "end": 553
+      "start": 560,
+      "end": 563
     },
     "context": {
       "type": "css",
-      "name": "sprk-u-MarginBottom--a",
+      "name": "sprk-u-MarginAll--d",
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
         "start": 569,
@@ -3302,6 +3302,7 @@
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "Sets the bottom margin to the current value of\n`$sprk-space-misc-a` (`24px`).\n",
 =======
     "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
@@ -3316,17 +3317,24 @@
       "name": "sprk-u-MarginBottom--a",
 =======
     "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
+=======
+    "description": "Sets the bottom margin to the current value of\n`$sprk-space-misc-a` (`24px`).\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 560,
-      "end": 563
+      "start": 550,
+      "end": 553
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
       "name": "sprk-u-MarginAll--d",
 >>>>>>> Add sass-modifiers and sass-vars
 =======
       "name": "sprk-u-MarginAll--d",
 >>>>>>> Generate sass vars
+=======
+      "name": "sprk-u-MarginBottom--a",
+>>>>>>> update sassdoc jsons
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
         "start": 569,
@@ -4649,16 +4657,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/6\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 =======
     "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 318,
-      "end": 321
+      "start": 303,
+      "end": 306
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": ".sprk-o-Stack__item--sixth@xxs",
 =======
@@ -4681,6 +4694,9 @@
 =======
       "name": ".sprk-o-Stack__item--three-fourths@xxs",
 >>>>>>> Generate sass vars
+=======
+      "name": ".sprk-o-Stack__item--fourth@xxs",
+>>>>>>> update sassdoc jsons
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4700,16 +4716,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 =======
     "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "When placed on an item, its width will be 1/6\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 313,
-      "end": 316
+      "start": 293,
+      "end": 296
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": ".sprk-o-Stack__item--fifth@xxs",
 =======
@@ -4732,6 +4753,9 @@
 =======
       "name": ".sprk-o-Stack__item--half@xxs",
 >>>>>>> Generate sass vars
+=======
+      "name": ".sprk-o-Stack__item--sixth@xxs",
+>>>>>>> update sassdoc jsons
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4799,14 +4823,14 @@
     }
   },
   {
-    "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
-      "start": 303,
-      "end": 306
+      "start": 313,
+      "end": 316
     },
     "context": {
       "type": "css",
-      "name": ".sprk-o-Stack__item--fourth@xxs",
+      "name": ".sprk-o-Stack__item--half@xxs",
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4823,14 +4847,14 @@
     }
   },
   {
-    "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
-      "start": 298,
-      "end": 301
+      "start": 318,
+      "end": 321
     },
     "context": {
       "type": "css",
-      "name": ".sprk-o-Stack__item--fifth@xxs",
+      "name": ".sprk-o-Stack__item--three-fourths@xxs",
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4847,6 +4871,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4854,12 +4879,16 @@
 =======
     "description": "When placed on an item, its width will be 1/6\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "When placed on an item, its width will be 2/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 293,
-      "end": 296
+      "start": 323,
+      "end": 326
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": ".sprk-o-Stack__item--half@xxs",
 =======
@@ -4882,6 +4911,9 @@
 =======
       "name": ".sprk-o-Stack__item--sixth@xxs",
 >>>>>>> Generate sass vars
+=======
+      "name": ".sprk-o-Stack__item--two-fifths@xxs",
+>>>>>>> update sassdoc jsons
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4898,14 +4930,14 @@
     }
   },
   {
-    "description": "When placed on an item, its width will be 2/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
-      "start": 323,
-      "end": 326
+      "start": 298,
+      "end": 301
     },
     "context": {
       "type": "css",
-      "name": ".sprk-o-Stack__item--two-fifths@xxs",
+      "name": ".sprk-o-Stack__item--fifth@xxs",
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4922,6 +4954,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4942,12 +4975,16 @@
 =======
     "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 >>>>>>> Turn text align into variable
+=======
+    "description": "When placed on an item, its width will be 3/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 338,
-      "end": 341
+      "start": 328,
+      "end": 331
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": ".sprk-o-Stack__item--fourth@xxs",
 >>>>>>> Add modifiers and sass variables
@@ -4957,6 +4994,9 @@
 =======
       "name": ".sprk-o-Stack__item--seven-tenths@xxs",
 >>>>>>> Generate sass vars
+=======
+      "name": ".sprk-o-Stack__item--three-fifths@xxs",
+>>>>>>> update sassdoc jsons
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5027,16 +5067,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 2/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 =======
     "description": "When placed on an item, its width will be 3/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 328,
-      "end": 331
+      "start": 338,
+      "end": 341
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": ".sprk-o-Stack__item--two-fifths@xxs",
 =======
@@ -5059,6 +5104,9 @@
 =======
       "name": ".sprk-o-Stack__item--three-fifths@xxs",
 >>>>>>> Generate sass vars
+=======
+      "name": ".sprk-o-Stack__item--seven-tenths@xxs",
+>>>>>>> update sassdoc jsons
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -6085,16 +6133,16 @@
   {
     "description": "A toggle with a smaller font.\n",
     "commentRange": {
-      "start": 49,
-      "end": 50
+      "start": 42,
+      "end": 43
     },
     "context": {
       "type": "css",
       "name": ".sprk-c-Toggle__trigger--small",
       "value": "font-size: $sprk-toggle-trigger-font-size-small;\n  font-weight: $sprk-toggle-trigger-font-weight-small;",
       "line": {
-        "start": 51,
-        "end": 54
+        "start": 44,
+        "end": 47
       }
     },
     "group": [
@@ -6445,12 +6493,12 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 10,
-      "end": 10
+      "start": 15,
+      "end": 15
     },
     "context": {
       "type": "css",
-      "name": "//\n// Inheriting box-sizing Probably Slightly Better Best-Practice\n// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice\n///\nhtml",
+      "name": "html",
       "value": "box-sizing: border-box;",
       "line": {
         "start": 16,
@@ -6469,12 +6517,12 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 15,
-      "end": 15
+      "start": 10,
+      "end": 10
     },
     "context": {
       "type": "css",
-      "name": "html",
+      "name": "//\n// Inheriting box-sizing Probably Slightly Better Best-Practice\n// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice\n///\nhtml",
       "value": "box-sizing: border-box;",
       "line": {
         "start": 16,
@@ -19855,6 +19903,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The font weight of the Dropdown.\n",
 =======
     "description": "The color for Toggle Trigger.\n",
@@ -19877,14 +19926,17 @@
 =======
     "description": "The color for Toggle Trigger\n",
 >>>>>>> Add modifiers and sass variables
+=======
+    "description": "The hover border bottom style for Toggle Trigger.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
       "start": 1407,
       "end": 1407
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-trigger-color",
-      "value": "$sprk-color-body-three",
+      "name": "sprk-toggle-trigger-hover-border-bottom",
+      "value": "$sprk-link-has-icon-hover-border-bottom",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -19914,6 +19966,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The padding around the Informational Dropdown\nfooter.\n",
 =======
     "description": "The font family for Toggle Trigger.\n",
@@ -19932,12 +19985,16 @@
 =======
     "description": "The font family for Toggle Trigger\n",
 >>>>>>> Add modifiers and sass variables
+=======
+    "description": "The hover text color for Toggle Trigger.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
       "start": 1409,
       "end": 1409
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": "sprk-toggle-trigger-line-height",
       "value": "$sprk-line-height-body-three",
@@ -19950,6 +20007,10 @@
       "name": "sprk-toggle-trigger-font-family",
       "value": "$sprk-font-family-body-three",
 >>>>>>> Generate sass vars
+=======
+      "name": "sprk-toggle-trigger-hover-color",
+      "value": "$sprk-link-has-icon-hover-color-text",
+>>>>>>> update sassdoc jsons
       "scope": "default",
       "line": {
         "start": 1410,
@@ -19969,6 +20030,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The line height of the Dropdown.\n",
 =======
     "description": "The active border bottom style for Toggle Trigger\n",
@@ -19979,12 +20041,16 @@
 =======
     "description": "The font size for Toggle Trigger.\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "The background color for Toggle Trigger.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
       "start": 1411,
       "end": 1411
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20002,6 +20068,10 @@
       "name": "sprk-toggle-trigger-font-size",
       "value": "$sprk-font-size-body-three",
 >>>>>>> Generate sass vars
+=======
+      "name": "sprk-toggle-trigger-background-color",
+      "value": "transparent",
+>>>>>>> update sassdoc jsons
       "scope": "default",
       "line": {
         "start": 1412,
@@ -20021,6 +20091,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The max-width of the Dropdown.\n",
 =======
     "description": "The active color for Toggle Trigger\n",
@@ -20031,12 +20102,16 @@
 =======
     "description": "The font weight for Toggle Trigger.\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "The padding top for Toggle Trigger.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
       "start": 1413,
       "end": 1413
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20054,6 +20129,10 @@
       "name": "sprk-toggle-trigger-font-weight",
       "value": "$sprk-font-weight-body-three",
 >>>>>>> Generate sass vars
+=======
+      "name": "sprk-toggle-trigger-padding-top",
+      "value": "0",
+>>>>>>> update sassdoc jsons
       "scope": "default",
       "line": {
         "start": 1414,
@@ -20073,6 +20152,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The padding around the Dropdown items.\n",
 =======
     "description": "The transition timing for the\nrotation of the icon when the Toggle is opened.\n",
@@ -20083,12 +20163,16 @@
 =======
     "description": "The line height for Toggle Trigger.\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "The padding right for Toggle Trigger.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
       "start": 1415,
       "end": 1415
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20106,6 +20190,10 @@
       "name": "sprk-toggle-trigger-line-height",
       "value": "$sprk-line-height-body-three",
 >>>>>>> Generate sass vars
+=======
+      "name": "sprk-toggle-trigger-padding-right",
+      "value": "0",
+>>>>>>> update sassdoc jsons
       "scope": "default",
       "line": {
         "start": 1416,
@@ -20125,6 +20213,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The box shadow of the Dropdown.\n",
 =======
     "description": "Background color of the Dropdown items that\nare active or hovered.\n",
@@ -20135,12 +20224,16 @@
 =======
     "description": "The active border bottom style for Toggle Trigger.\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "The padding bottom for Toggle Trigger.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
       "start": 1417,
       "end": 1417
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20158,6 +20251,10 @@
       "name": "sprk-toggle-trigger-hover-border-bottom",
       "value": "$sprk-link-has-icon-hover-border-bottom",
 >>>>>>> Generate sass vars
+=======
+      "name": "sprk-toggle-trigger-padding-bottom",
+      "value": "0",
+>>>>>>> update sassdoc jsons
       "scope": "default",
       "line": {
         "start": 1418,
@@ -20177,6 +20274,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The color of the Dropdown title.\n",
 =======
     "description": "The left border of the Dropdown item that is active.\n",
@@ -20187,12 +20285,16 @@
 =======
     "description": "The active color for Toggle Trigger.\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "The padding left for Toggle Trigger.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
       "start": 1419,
       "end": 1419
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20210,6 +20312,10 @@
       "name": "sprk-toggle-trigger-hover-color",
       "value": "$sprk-link-has-icon-hover-color-text",
 >>>>>>> Generate sass vars
+=======
+      "name": "sprk-toggle-trigger-padding-left",
+      "value": "0",
+>>>>>>> update sassdoc jsons
       "scope": "default",
       "line": {
         "start": 1420,
@@ -20226,6 +20332,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20251,14 +20358,17 @@
 =======
     "description": "The background color for Toggle Trigger\n",
 >>>>>>> Add modifiers and sass variables
+=======
+    "description": "The text alignment for Toggle Trigger.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
       "start": 1421,
       "end": 1421
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-trigger-background-color",
-      "value": "transparent",
+      "name": "sprk-toggle-trigger-text-align",
+      "value": "left",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -20288,6 +20398,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The font weight of the Dropdown title.\n",
 =======
     "description": "The padding top for Toggle Trigger.\n",
@@ -20310,14 +20421,17 @@
 =======
     "description": "The padding top for Toggle Trigger\n",
 >>>>>>> Add modifiers and sass variables
+=======
+    "description": "The font size for small Toggle Trigger.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
       "start": 1423,
       "end": 1423
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-trigger-padding-top",
-      "value": "0",
+      "name": "sprk-toggle-trigger-font-size-small",
+      "value": "$sprk-font-size-body-four",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -20347,6 +20461,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The color of the mask overlay that is shown behind the Modal.\n",
 =======
     "description": "The font size of the Dropdown.\n",
@@ -20357,12 +20472,16 @@
 =======
     "description": "The padding right for Toggle Trigger.\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "The font weight for small Toggle Trigger.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
       "start": 1425,
       "end": 1425
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20380,6 +20499,10 @@
       "name": "sprk-toggle-trigger-padding-right",
       "value": "0",
 >>>>>>> Generate sass vars
+=======
+      "name": "sprk-toggle-trigger-font-weight-small",
+      "value": "normal",
+>>>>>>> update sassdoc jsons
       "scope": "default",
       "line": {
         "start": 1426,
@@ -20399,6 +20522,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The background color of the Modal.\n",
 =======
     "description": "The font weight of the Dropdown.\n",
@@ -20409,12 +20533,16 @@
 =======
     "description": "The padding bottom for Toggle Trigger.\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "The transition timing for the\nrotation of the icon when the Toggle is opened.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 1427,
-      "end": 1427
+      "start": 1428,
+      "end": 1429
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20432,10 +20560,14 @@
       "name": "sprk-toggle-trigger-padding-bottom",
       "value": "0",
 >>>>>>> Generate sass vars
+=======
+      "name": "sprk-toggle-transition-timing",
+      "value": "0.3s ease",
+>>>>>>> update sassdoc jsons
       "scope": "default",
       "line": {
-        "start": 1428,
-        "end": 1428
+        "start": 1430,
+        "end": 1430
       }
     },
     "access": "public",
@@ -20448,6 +20580,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20470,16 +20603,20 @@
         "end": 1444
 =======
     "description": "The padding left for Toggle Trigger\n",
+=======
+    "description": "Background color of the Dropdown items that\nare active or hovered.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 1429,
-      "end": 1429
+      "start": 1437,
+      "end": 1438
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-trigger-padding-left",
-      "value": "0",
+      "name": "sprk-dropdown-active-background-color",
+      "value": "$sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
         "start": 1430,
         "end": 1430
 >>>>>>> Add modifiers and sass variables
@@ -20487,6 +20624,10 @@
         "start": 1430,
         "end": 1430
 >>>>>>> Generate sass vars
+=======
+        "start": 1439,
+        "end": 1439
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -20502,16 +20643,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "The maximum height of the Modal.\n",
 =======
     "description": "The text alignment for Toggle Trigger.\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "The left border of the Dropdown item that is active.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 1431,
-      "end": 1431
+      "start": 1440,
+      "end": 1440
     },
     "context": {
       "type": "variable",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "name": "sprk-modal-height",
       "value": "70%",
@@ -20538,6 +20684,14 @@
         "start": 1432,
         "end": 1432
 >>>>>>> Generate sass vars
+=======
+      "name": "sprk-dropdown-active-border",
+      "value": "2.5px solid $sprk-green",
+      "scope": "default",
+      "line": {
+        "start": 1441,
+        "end": 1441
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -20550,6 +20704,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "description": "Determines how far down\nfrom the top of the page the\nModal renders at the small breakpoint.\n",
@@ -20575,19 +20730,27 @@
         "end": 1444
 =======
     "description": "The font size for small Toggle Trigger.\n",
+=======
+    "description": "The box-shadow of the Dropdown item that is active.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 1433,
-      "end": 1433
+      "start": 1442,
+      "end": 1442
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-trigger-font-size-small",
-      "value": "$sprk-font-size-body-four",
+      "name": "sprk-dropdown-active-box-shadow",
+      "value": "-1px 0 0 0 $sprk-green",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
         "start": 1434,
         "end": 1434
 >>>>>>> Generate sass vars
+=======
+        "start": 1443,
+        "end": 1443
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -20602,20 +20765,25 @@
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "Determines how far down\nfrom the top of the page the\nModal renders at the medium breakpoint.\n",
 =======
     "description": "The font weight for small Toggle Trigger.\n",
 >>>>>>> Generate sass vars
+=======
+    "description": "The border of the Dropdown.\n",
+>>>>>>> update sassdoc jsons
     "commentRange": {
-      "start": 1435,
-      "end": 1435
+      "start": 1444,
+      "end": 1444
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-trigger-font-weight-small",
-      "value": "normal",
+      "name": "sprk-dropdown-border",
+      "value": "1px solid $sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1454,
         "end": 1454
@@ -20646,6 +20814,10 @@
         "start": 1436,
         "end": 1436
 >>>>>>> Generate sass vars
+=======
+        "start": 1445,
+        "end": 1445
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -20658,6 +20830,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20689,13 +20862,20 @@
       "start": 1438,
       "end": 1439
 >>>>>>> Generate sass vars
+=======
+    "description": "The font size of the Dropdown.\n",
+    "commentRange": {
+      "start": 1446,
+      "end": 1446
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
-      "name": "sprk-toggle-transition-timing",
-      "value": "0.3s ease",
+      "name": "sprk-dropdown-font-size",
+      "value": "$sprk-font-size-body-one",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20718,6 +20898,10 @@
         "start": 1440,
         "end": 1440
 >>>>>>> Generate sass vars
+=======
+        "start": 1447,
+        "end": 1447
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -20730,8 +20914,9 @@
     }
   },
   {
-    "description": "Background color of the Dropdown items that\nare active or hovered.\n",
+    "description": "The font weight of the Dropdown.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20750,13 +20935,16 @@
       "end": 1444
 =======
       "start": 1447,
+=======
+      "start": 1448,
+>>>>>>> update sassdoc jsons
       "end": 1448
 >>>>>>> Generate sass vars
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-active-background-color",
-      "value": "$sprk-gray",
+      "name": "sprk-dropdown-font-weight",
+      "value": "400",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -20778,22 +20966,27 @@
     }
   },
   {
-    "description": "The left border of the Dropdown item that is active.\n",
+    "description": "The padding around the Informational Dropdown\nfooter.\n",
     "commentRange": {
 <<<<<<< HEAD
       "start": 1446,
       "end": 1446
 =======
       "start": 1450,
+<<<<<<< HEAD
       "end": 1450
 >>>>>>> Generate sass vars
+=======
+      "end": 1451
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-active-border",
-      "value": "2.5px solid $sprk-green",
+      "name": "sprk-dropdown-footer-padding",
+      "value": "$sprk-space-inset-short-l",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1447,
         "end": 1447
@@ -20801,6 +20994,10 @@
         "start": 1451,
         "end": 1451
 >>>>>>> Generate sass vars
+=======
+        "start": 1452,
+        "end": 1452
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -20813,8 +21010,9 @@
     }
   },
   {
-    "description": "The box-shadow of the Dropdown item that is active.\n",
+    "description": "The line height of the Dropdown.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "start": 1448,
       "end": 1448
@@ -20822,13 +21020,18 @@
       "start": 1452,
       "end": 1452
 >>>>>>> Generate sass vars
+=======
+      "start": 1453,
+      "end": 1453
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-active-box-shadow",
-      "value": "-1px 0 0 0 $sprk-green",
+      "name": "sprk-dropdown-line-height",
+      "value": "1",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1449,
         "end": 1449
@@ -20836,6 +21039,10 @@
         "start": 1453,
         "end": 1453
 >>>>>>> Generate sass vars
+=======
+        "start": 1454,
+        "end": 1454
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -20848,8 +21055,9 @@
     }
   },
   {
-    "description": "The border of the Dropdown.\n",
+    "description": "The max-width of the Dropdown.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "start": 1450,
       "end": 1450
@@ -20857,13 +21065,18 @@
       "start": 1454,
       "end": 1454
 >>>>>>> Generate sass vars
+=======
+      "start": 1455,
+      "end": 1455
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-border",
-      "value": "1px solid $sprk-gray",
+      "name": "sprk-dropdown-max-width",
+      "value": "24rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1451,
         "end": 1451
@@ -20871,6 +21084,10 @@
         "start": 1455,
         "end": 1455
 >>>>>>> Generate sass vars
+=======
+        "start": 1456,
+        "end": 1456
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -20883,8 +21100,9 @@
     }
   },
   {
-    "description": "The font size of the Dropdown.\n",
+    "description": "The padding around the Dropdown items.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "start": 1452,
       "end": 1452
@@ -20892,13 +21110,18 @@
       "start": 1456,
       "end": 1456
 >>>>>>> Generate sass vars
+=======
+      "start": 1457,
+      "end": 1457
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-font-size",
-      "value": "$sprk-font-size-body-one",
+      "name": "sprk-dropdown-padding",
+      "value": "$sprk-space-misc-a",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1453,
         "end": 1453
@@ -20906,6 +21129,10 @@
         "start": 1457,
         "end": 1457
 >>>>>>> Generate sass vars
+=======
+        "start": 1458,
+        "end": 1458
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -20918,8 +21145,9 @@
     }
   },
   {
-    "description": "The font weight of the Dropdown.\n",
+    "description": "The box shadow of the Dropdown.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "start": 1454,
       "end": 1454
@@ -20927,13 +21155,18 @@
       "start": 1458,
       "end": 1458
 >>>>>>> Generate sass vars
+=======
+      "start": 1459,
+      "end": 1459
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-font-weight",
-      "value": "400",
+      "name": "sprk-dropdown-shadow",
+      "value": "0 0 40px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1455,
         "end": 1455
@@ -20941,6 +21174,10 @@
         "start": 1459,
         "end": 1459
 >>>>>>> Generate sass vars
+=======
+        "start": 1460,
+        "end": 1460
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -20953,20 +21190,24 @@
     }
   },
   {
-    "description": "The padding around the Informational Dropdown\nfooter.\n",
+    "description": "The color of the Dropdown title.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "start": 1456,
       "end": 1457
 =======
       "start": 1460,
+=======
+      "start": 1461,
+>>>>>>> update sassdoc jsons
       "end": 1461
 >>>>>>> Generate sass vars
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-footer-padding",
-      "value": "$sprk-space-inset-short-l",
+      "name": "sprk-dropdown-title-color",
+      "value": "$sprk-black-tint-25",
       "scope": "default",
       "line": {
         "start": 1462,
@@ -20983,15 +21224,15 @@
     }
   },
   {
-    "description": "The line height of the Dropdown.\n",
+    "description": "The font size of the Dropdown title.\n",
     "commentRange": {
       "start": 1463,
       "end": 1463
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-line-height",
-      "value": "1",
+      "name": "sprk-dropdown-title-font-size",
+      "value": "$sprk-dropdown-font-size",
       "scope": "default",
       "line": {
         "start": 1464,
@@ -21008,7 +21249,7 @@
     }
   },
   {
-    "description": "The max-width of the Dropdown.\n",
+    "description": "The font weight of the Dropdown title.\n",
     "commentRange": {
 <<<<<<< HEAD
       "start": 1461,
@@ -21021,8 +21262,8 @@
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-max-width",
-      "value": "24rem",
+      "name": "sprk-dropdown-title-font-weight",
+      "value": "300",
       "scope": "default",
       "line": {
 <<<<<<< HEAD
@@ -21054,8 +21295,9 @@
     }
   },
   {
-    "description": "The padding around the Dropdown items.\n",
+    "description": "The color of the mask overlay that is shown behind the Modal.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21073,13 +21315,18 @@
       "start": 1467,
       "end": 1467
 >>>>>>> Generate sass vars
+=======
+      "start": 1472,
+      "end": 1472
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
-      "name": "sprk-dropdown-padding",
-      "value": "$sprk-space-misc-a",
+      "name": "sprk-modal-mask-color",
+      "value": "rgba(34, 34, 34, 0.35)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21097,6 +21344,10 @@
         "start": 1468,
         "end": 1468
 >>>>>>> Generate sass vars
+=======
+        "start": 1473,
+        "end": 1473
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -21109,8 +21360,9 @@
     }
   },
   {
-    "description": "The box shadow of the Dropdown.\n",
+    "description": "The background color of the Modal.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21298,6 +21550,10 @@
       "start": 1484,
       "end": 1484
 >>>>>>> Generate sass vars
+=======
+      "start": 1474,
+      "end": 1474
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -21305,6 +21561,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1471,
@@ -21317,6 +21574,10 @@
         "start": 1485,
         "end": 1485
 >>>>>>> Generate sass vars
+=======
+        "start": 1475,
+        "end": 1475
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -21334,6 +21595,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1472,
       "end": 1473
 =======
@@ -21347,11 +21609,90 @@
       "start": 1486,
       "end": 1486
 >>>>>>> Generate sass vars
+=======
+      "start": 1476,
+      "end": 1476
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
       "name": "sprk-modal-max-width",
       "value": "43.75rem",
+      "scope": "default",
+      "line": {
+        "start": 1477,
+        "end": 1477
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The maximum height of the Modal.\n",
+    "commentRange": {
+      "start": 1478,
+      "end": 1478
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-modal-height",
+      "value": "70%",
+      "scope": "default",
+      "line": {
+        "start": 1479,
+        "end": 1479
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Determines how far down\nfrom the top of the page the\nModal renders at the small breakpoint.\n",
+    "commentRange": {
+      "start": 1480,
+      "end": 1482
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-modal-breakpoint-small",
+      "value": "25rem",
+      "scope": "default",
+      "line": {
+        "start": 1483,
+        "end": 1483
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Determines how far down\nfrom the top of the page the\nModal renders at the medium breakpoint.\n",
+    "commentRange": {
+      "start": 1484,
+      "end": 1486
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-modal-breakpoint-medium",
+      "value": "37.5rem",
       "scope": "default",
       "line": {
         "start": 1487,
@@ -21368,15 +21709,15 @@
     }
   },
   {
-    "description": "The maximum height of the Modal.\n",
+    "description": "The box shadow on the Modal.\n",
     "commentRange": {
       "start": 1488,
       "end": 1488
     },
     "context": {
       "type": "variable",
-      "name": "sprk-modal-height",
-      "value": "70%",
+      "name": "sprk-modal-shadow",
+      "value": "0 4px 5px rgba(0, 0, 0, 0.6)",
       "scope": "default",
       "line": {
         "start": 1489,
@@ -21393,85 +21734,10 @@
     }
   },
   {
-    "description": "Determines how far down\nfrom the top of the page the\nModal renders at the small breakpoint.\n",
-    "commentRange": {
-      "start": 1490,
-      "end": 1492
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-modal-breakpoint-small",
-      "value": "25rem",
-      "scope": "default",
-      "line": {
-        "start": 1493,
-        "end": 1493
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "Determines how far down\nfrom the top of the page the\nModal renders at the medium breakpoint.\n",
-    "commentRange": {
-      "start": 1494,
-      "end": 1496
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-modal-breakpoint-medium",
-      "value": "37.5rem",
-      "scope": "default",
-      "line": {
-        "start": 1497,
-        "end": 1497
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The box shadow on the Modal.\n",
-    "commentRange": {
-      "start": 1498,
-      "end": 1498
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-modal-shadow",
-      "value": "0 4px 5px rgba(0, 0, 0, 0.6)",
-      "scope": "default",
-      "line": {
-        "start": 1499,
-        "end": 1499
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "settings/_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
     "description": "The border radius on the Modal.\n",
     "commentRange": {
-      "start": 1500,
-      "end": 1500
+      "start": 1490,
+      "end": 1490
     },
     "context": {
       "type": "variable",
@@ -21479,8 +21745,8 @@
       "value": "8px",
       "scope": "default",
       "line": {
-        "start": 1501,
-        "end": 1501
+        "start": 1491,
+        "end": 1491
       }
     },
     "access": "public",
@@ -21495,8 +21761,8 @@
   {
     "description": "The width of the menu icon on narrow viewports in the Masthead.\n",
     "commentRange": {
-      "start": 1507,
-      "end": 1507
+      "start": 1497,
+      "end": 1497
     },
     "context": {
       "type": "variable",
@@ -21504,8 +21770,8 @@
       "value": "$sprk-icon-l",
       "scope": "default",
       "line": {
-        "start": 1508,
-        "end": 1508
+        "start": 1498,
+        "end": 1498
       }
     },
     "access": "public",
@@ -21520,8 +21786,8 @@
   {
     "description": "The height of the menu icon on narrow viewports in the Masthead.\n",
     "commentRange": {
-      "start": 1509,
-      "end": 1509
+      "start": 1499,
+      "end": 1499
     },
     "context": {
       "type": "variable",
@@ -21529,8 +21795,8 @@
       "value": "$sprk-icon-l",
       "scope": "default",
       "line": {
-        "start": 1510,
-        "end": 1510
+        "start": 1500,
+        "end": 1500
       }
     },
     "access": "public",
@@ -21545,8 +21811,8 @@
   {
     "description": "The background color of the Masthead.\n",
     "commentRange": {
-      "start": 1511,
-      "end": 1511
+      "start": 1501,
+      "end": 1501
     },
     "context": {
       "type": "variable",
@@ -21554,8 +21820,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1512,
-        "end": 1512
+        "start": 1502,
+        "end": 1502
       }
     },
     "access": "public",
@@ -21570,8 +21836,8 @@
   {
     "description": "The padding of the Masthead content, menu, and branding sections.\n",
     "commentRange": {
-      "start": 1513,
-      "end": 1513
+      "start": 1503,
+      "end": 1503
     },
     "context": {
       "type": "variable",
@@ -21579,8 +21845,8 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
-        "start": 1514,
-        "end": 1514
+        "start": 1504,
+        "end": 1504
       }
     },
     "access": "public",
@@ -21595,6 +21861,7 @@
   {
     "description": "The padding top around the content items in the\ncontent section of the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21613,6 +21880,10 @@
       "start": 1515,
       "end": 1516
 >>>>>>> Generate sass vars
+=======
+      "start": 1505,
+      "end": 1506
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -21620,6 +21891,7 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21642,6 +21914,10 @@
         "start": 1517,
         "end": 1517
 >>>>>>> Generate sass vars
+=======
+        "start": 1507,
+        "end": 1507
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -21656,6 +21932,7 @@
   {
     "description": "The padding bottom around the content\nitems in the content section of the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21678,6 +21955,10 @@
       "start": 1518,
       "end": 1519
 >>>>>>> Generate sass vars
+=======
+      "start": 1508,
+      "end": 1509
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -21685,6 +21966,7 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21707,6 +21989,10 @@
         "start": 1520,
         "end": 1520
 >>>>>>> Generate sass vars
+=======
+        "start": 1510,
+        "end": 1510
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -21721,6 +22007,7 @@
   {
     "description": "The padding right around the content items in the\ncontent section of the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21743,6 +22030,10 @@
       "start": 1521,
       "end": 1522
 >>>>>>> Generate sass vars
+=======
+      "start": 1511,
+      "end": 1512
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -21750,6 +22041,7 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21772,6 +22064,10 @@
         "start": 1523,
         "end": 1523
 >>>>>>> Generate sass vars
+=======
+        "start": 1513,
+        "end": 1513
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -21786,6 +22082,7 @@
   {
     "description": "The padding around the content\nsection in the Masthead on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21808,6 +22105,10 @@
       "start": 1527,
       "end": 1528
 >>>>>>> Generate sass vars
+=======
+      "start": 1517,
+      "end": 1518
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -21815,6 +22116,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21837,6 +22139,10 @@
         "start": 1529,
         "end": 1529
 >>>>>>> Generate sass vars
+=======
+        "start": 1519,
+        "end": 1519
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -21851,6 +22157,7 @@
   {
     "description": "The padding top of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21873,6 +22180,10 @@
       "start": 1530,
       "end": 1531
 >>>>>>> Generate sass vars
+=======
+      "start": 1520,
+      "end": 1521
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -21880,6 +22191,7 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21902,6 +22214,10 @@
         "start": 1532,
         "end": 1532
 >>>>>>> Generate sass vars
+=======
+        "start": 1522,
+        "end": 1522
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -21916,6 +22232,7 @@
   {
     "description": "The padding bottom of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21938,6 +22255,10 @@
       "start": 1533,
       "end": 1534
 >>>>>>> Generate sass vars
+=======
+      "start": 1523,
+      "end": 1524
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -21945,6 +22266,7 @@
       "value": "$sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21967,6 +22289,10 @@
         "start": 1535,
         "end": 1535
 >>>>>>> Generate sass vars
+=======
+        "start": 1525,
+        "end": 1525
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -21981,6 +22307,7 @@
   {
     "description": "The padding right of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22003,6 +22330,10 @@
       "start": 1536,
       "end": 1537
 >>>>>>> Generate sass vars
+=======
+      "start": 1526,
+      "end": 1527
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22010,6 +22341,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22032,6 +22364,10 @@
         "start": 1538,
         "end": 1538
 >>>>>>> Generate sass vars
+=======
+        "start": 1528,
+        "end": 1528
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22046,6 +22382,7 @@
   {
     "description": "The padding left of the content\nitems in the content section in the Masthead on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22068,6 +22405,10 @@
       "start": 1539,
       "end": 1540
 >>>>>>> Generate sass vars
+=======
+      "start": 1529,
+      "end": 1530
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22075,6 +22416,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22097,6 +22439,10 @@
         "start": 1541,
         "end": 1541
 >>>>>>> Generate sass vars
+=======
+        "start": 1531,
+        "end": 1531
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22111,6 +22457,7 @@
   {
     "description": "The visited state color of Masthead links.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22133,6 +22480,10 @@
       "start": 1542,
       "end": 1542
 >>>>>>> Generate sass vars
+=======
+      "start": 1532,
+      "end": 1532
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22140,6 +22491,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22162,6 +22514,10 @@
         "start": 1543,
         "end": 1543
 >>>>>>> Generate sass vars
+=======
+        "start": 1533,
+        "end": 1533
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22176,6 +22532,7 @@
   {
     "description": "The hover state color of Masthead links.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22198,6 +22555,10 @@
       "start": 1544,
       "end": 1544
 >>>>>>> Generate sass vars
+=======
+      "start": 1534,
+      "end": 1534
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22205,6 +22566,7 @@
       "value": "$sprk-green",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22227,6 +22589,10 @@
         "start": 1545,
         "end": 1545
 >>>>>>> Generate sass vars
+=======
+        "start": 1535,
+        "end": 1535
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22241,6 +22607,7 @@
   {
     "description": "The font weight for Masthead links.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22263,6 +22630,10 @@
       "start": 1546,
       "end": 1546
 >>>>>>> Generate sass vars
+=======
+      "start": 1536,
+      "end": 1536
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22270,6 +22641,7 @@
       "value": "500",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22292,6 +22664,10 @@
         "start": 1547,
         "end": 1547
 >>>>>>> Generate sass vars
+=======
+        "start": 1537,
+        "end": 1537
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22306,6 +22682,7 @@
   {
     "description": "The size of the bottom border on the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22328,6 +22705,10 @@
       "start": 1548,
       "end": 1548
 >>>>>>> Generate sass vars
+=======
+      "start": 1538,
+      "end": 1538
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22335,6 +22716,7 @@
       "value": "1px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22357,6 +22739,10 @@
         "start": 1549,
         "end": 1549
 >>>>>>> Generate sass vars
+=======
+        "start": 1539,
+        "end": 1539
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22371,6 +22757,7 @@
   {
     "description": "The bottom border on the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22393,6 +22780,10 @@
       "start": 1550,
       "end": 1550
 >>>>>>> Generate sass vars
+=======
+      "start": 1540,
+      "end": 1540
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22400,6 +22791,7 @@
       "value": "$sprk-masthead-border-bottom-size solid $sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22422,6 +22814,10 @@
         "start": 1551,
         "end": 1551
 >>>>>>> Generate sass vars
+=======
+        "start": 1541,
+        "end": 1541
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22436,6 +22832,7 @@
   {
     "description": "The bottom border on the Masthead on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22458,6 +22855,10 @@
       "start": 1552,
       "end": 1552
 >>>>>>> Generate sass vars
+=======
+      "start": 1542,
+      "end": 1542
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22465,6 +22866,7 @@
       "value": "0",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22487,6 +22889,10 @@
         "start": 1553,
         "end": 1553
 >>>>>>> Generate sass vars
+=======
+        "start": 1543,
+        "end": 1543
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22501,6 +22907,7 @@
   {
     "description": "The right border on the site links in the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22523,6 +22930,10 @@
       "start": 1554,
       "end": 1554
 >>>>>>> Generate sass vars
+=======
+      "start": 1544,
+      "end": 1544
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22530,6 +22941,7 @@
       "value": "2px solid $sprk-black-tint-25",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22552,6 +22964,10 @@
         "start": 1555,
         "end": 1555
 >>>>>>> Generate sass vars
+=======
+        "start": 1545,
+        "end": 1545
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22566,6 +22982,7 @@
   {
     "description": "The point at which the Masthead navigation switches\nfrom narrow viewport style to large viewport\nstyle.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22588,6 +23005,10 @@
       "start": 1556,
       "end": 1558
 >>>>>>> Generate sass vars
+=======
+      "start": 1546,
+      "end": 1548
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22595,6 +23016,7 @@
       "value": "54rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22617,6 +23039,10 @@
         "start": 1559,
         "end": 1559
 >>>>>>> Generate sass vars
+=======
+        "start": 1549,
+        "end": 1549
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22631,6 +23057,7 @@
   {
     "description": "The maximum width of the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22653,6 +23080,10 @@
       "start": 1560,
       "end": 1560
 >>>>>>> Generate sass vars
+=======
+      "start": 1550,
+      "end": 1550
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22660,6 +23091,7 @@
       "value": "89rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22682,6 +23114,10 @@
         "start": 1561,
         "end": 1561
 >>>>>>> Generate sass vars
+=======
+        "start": 1551,
+        "end": 1551
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22696,6 +23132,7 @@
   {
     "description": "The maximum width of the logo in the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22718,6 +23155,10 @@
       "start": 1562,
       "end": 1562
 >>>>>>> Generate sass vars
+=======
+      "start": 1552,
+      "end": 1552
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22725,6 +23166,7 @@
       "value": "192px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22747,6 +23189,10 @@
         "start": 1563,
         "end": 1563
 >>>>>>> Generate sass vars
+=======
+        "start": 1553,
+        "end": 1553
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22761,6 +23207,7 @@
   {
     "description": "The minimum width of the logo in the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22783,6 +23230,10 @@
       "start": 1564,
       "end": 1564
 >>>>>>> Generate sass vars
+=======
+      "start": 1554,
+      "end": 1554
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22790,6 +23241,7 @@
       "value": "174px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22812,6 +23264,10 @@
         "start": 1565,
         "end": 1565
 >>>>>>> Generate sass vars
+=======
+        "start": 1555,
+        "end": 1555
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22826,6 +23282,7 @@
   {
     "description": "The box shadow of the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22848,6 +23305,10 @@
       "start": 1566,
       "end": 1566
 >>>>>>> Generate sass vars
+=======
+      "start": 1556,
+      "end": 1556
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22855,6 +23316,7 @@
       "value": "none",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22877,6 +23339,10 @@
         "start": 1567,
         "end": 1567
 >>>>>>> Generate sass vars
+=======
+        "start": 1557,
+        "end": 1557
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22891,6 +23357,7 @@
   {
     "description": "The box shadow of the Masthead in wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22913,6 +23380,10 @@
       "start": 1568,
       "end": 1568
 >>>>>>> Generate sass vars
+=======
+      "start": 1558,
+      "end": 1558
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22920,6 +23391,7 @@
       "value": "none",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22942,6 +23414,10 @@
         "start": 1569,
         "end": 1569
 >>>>>>> Generate sass vars
+=======
+        "start": 1559,
+        "end": 1559
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -22956,6 +23432,7 @@
   {
     "description": "The Masthead shadow that gets applied when the page is scrolled.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22978,6 +23455,10 @@
       "start": 1570,
       "end": 1570
 >>>>>>> Generate sass vars
+=======
+      "start": 1560,
+      "end": 1560
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -22985,6 +23466,7 @@
       "value": "0 0 40px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23007,6 +23489,10 @@
         "start": 1571,
         "end": 1571
 >>>>>>> Generate sass vars
+=======
+        "start": 1561,
+        "end": 1561
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23021,6 +23507,7 @@
   {
     "description": "The border of the selector in the Masthead with Extended Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23043,6 +23530,10 @@
       "start": 1572,
       "end": 1572
 >>>>>>> Generate sass vars
+=======
+      "start": 1562,
+      "end": 1562
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23050,6 +23541,7 @@
       "value": "2px solid $sprk-black-tint-25",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23072,6 +23564,10 @@
         "start": 1573,
         "end": 1573
 >>>>>>> Generate sass vars
+=======
+        "start": 1563,
+        "end": 1563
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23086,6 +23582,7 @@
   {
     "description": "The border radius of the selector in the Masthead with Extended Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23108,6 +23605,10 @@
       "start": 1575,
       "end": 1575
 >>>>>>> Generate sass vars
+=======
+      "start": 1565,
+      "end": 1565
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23115,6 +23616,7 @@
       "value": "5px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23137,6 +23639,10 @@
         "start": 1576,
         "end": 1576
 >>>>>>> Generate sass vars
+=======
+        "start": 1566,
+        "end": 1566
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23151,6 +23657,7 @@
   {
     "description": "The bottom border that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23173,6 +23680,10 @@
       "start": 1577,
       "end": 1579
 >>>>>>> Generate sass vars
+=======
+      "start": 1567,
+      "end": 1569
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23180,6 +23691,7 @@
       "value": "2px solid $sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23202,6 +23714,10 @@
         "start": 1580,
         "end": 1580
 >>>>>>> Generate sass vars
+=======
+        "start": 1570,
+        "end": 1570
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23216,6 +23732,7 @@
   {
     "description": "The box shadow that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23238,6 +23755,10 @@
       "start": 1581,
       "end": 1583
 >>>>>>> Generate sass vars
+=======
+      "start": 1571,
+      "end": 1573
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23245,6 +23766,7 @@
       "value": "0 5px 10px\n  rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23267,6 +23789,10 @@
         "start": 1584,
         "end": 1585
 >>>>>>> Generate sass vars
+=======
+        "start": 1574,
+        "end": 1575
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23281,6 +23807,7 @@
   {
     "description": "The border color that gets applied to\nthe selector dropdown when open in the\nMasthead with Extended Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23303,6 +23830,10 @@
       "start": 1586,
       "end": 1588
 >>>>>>> Generate sass vars
+=======
+      "start": 1576,
+      "end": 1578
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23310,6 +23841,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23332,6 +23864,10 @@
         "start": 1589,
         "end": 1589
 >>>>>>> Generate sass vars
+=======
+        "start": 1579,
+        "end": 1579
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23346,6 +23882,7 @@
   {
     "description": "The font color of the selector in\nthe Masthead with Extended Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23368,6 +23905,10 @@
       "start": 1590,
       "end": 1591
 >>>>>>> Generate sass vars
+=======
+      "start": 1580,
+      "end": 1581
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23375,6 +23916,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23397,6 +23939,10 @@
         "start": 1592,
         "end": 1592
 >>>>>>> Generate sass vars
+=======
+        "start": 1582,
+        "end": 1582
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23411,6 +23957,7 @@
   {
     "description": "The background color of the selector in\nthe Masthead with Extended Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23433,6 +23980,10 @@
       "start": 1593,
       "end": 1594
 >>>>>>> Generate sass vars
+=======
+      "start": 1583,
+      "end": 1584
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23440,6 +23991,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23462,6 +24014,10 @@
         "start": 1595,
         "end": 1595
 >>>>>>> Generate sass vars
+=======
+        "start": 1585,
+        "end": 1585
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23476,6 +24032,7 @@
   {
     "description": "The padding of the selector in\nthe Masthead with Extended Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23498,6 +24055,10 @@
       "start": 1596,
       "end": 1597
 >>>>>>> Generate sass vars
+=======
+      "start": 1586,
+      "end": 1587
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23505,6 +24066,7 @@
       "value": "$sprk-space-inset-short-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23527,6 +24089,10 @@
         "start": 1598,
         "end": 1598
 >>>>>>> Generate sass vars
+=======
+        "start": 1588,
+        "end": 1588
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23541,6 +24107,7 @@
   {
     "description": "The padding of the selector dropdown in\nthe Masthead with Extended Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23563,6 +24130,10 @@
       "start": 1599,
       "end": 1600
 >>>>>>> Generate sass vars
+=======
+      "start": 1589,
+      "end": 1590
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23570,6 +24141,7 @@
       "value": "0",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23592,6 +24164,10 @@
         "start": 1601,
         "end": 1601
 >>>>>>> Generate sass vars
+=======
+        "start": 1591,
+        "end": 1591
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23606,6 +24182,7 @@
   {
     "description": "The minimum width of the selector\nin the Masthead with Extended Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23628,6 +24205,10 @@
       "start": 1602,
       "end": 1603
 >>>>>>> Generate sass vars
+=======
+      "start": 1592,
+      "end": 1593
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23635,6 +24216,7 @@
       "value": "17rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23657,6 +24239,10 @@
         "start": 1604,
         "end": 1604
 >>>>>>> Generate sass vars
+=======
+        "start": 1594,
+        "end": 1594
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23671,6 +24257,7 @@
   {
     "description": "This is the height of the Masthead on\nnarrow viewports and is used to calculate\nhow far from the top the narrow\nnavigation items should be displayed.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23693,6 +24280,10 @@
       "start": 1605,
       "end": 1608
 >>>>>>> Generate sass vars
+=======
+      "start": 1595,
+      "end": 1598
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23700,6 +24291,7 @@
       "value": "81px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23722,6 +24314,10 @@
         "start": 1609,
         "end": 1609
 >>>>>>> Generate sass vars
+=======
+        "start": 1599,
+        "end": 1599
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23736,6 +24332,7 @@
   {
     "description": "The color of the mask that\ngets applied when the Masthead selector\ndropdown is open on narrow screens.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23758,6 +24355,10 @@
       "start": 1610,
       "end": 1612
 >>>>>>> Generate sass vars
+=======
+      "start": 1600,
+      "end": 1602
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23765,6 +24366,7 @@
       "value": "rgba(0, 0, 0, 0.5)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23787,6 +24389,10 @@
         "start": 1613,
         "end": 1613
 >>>>>>> Generate sass vars
+=======
+        "start": 1603,
+        "end": 1603
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23801,6 +24407,7 @@
   {
     "description": "The transition applied to the Masthead.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23823,6 +24430,10 @@
       "start": 1614,
       "end": 1614
 >>>>>>> Generate sass vars
+=======
+      "start": 1604,
+      "end": 1604
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23830,6 +24441,7 @@
       "value": "all 0.3s ease-in",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23852,6 +24464,10 @@
         "start": 1615,
         "end": 1615
 >>>>>>> Generate sass vars
+=======
+        "start": 1605,
+        "end": 1605
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23866,6 +24482,7 @@
   {
     "description": "The transform length that gets applied\nwhen the Masthead scrolls out of view on narrow screens.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23888,6 +24505,10 @@
       "start": 1616,
       "end": 1617
 >>>>>>> Generate sass vars
+=======
+      "start": 1606,
+      "end": 1607
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23895,6 +24516,7 @@
       "value": "translateY(-100%)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23917,6 +24539,10 @@
         "start": 1618,
         "end": 1618
 >>>>>>> Generate sass vars
+=======
+        "start": 1608,
+        "end": 1608
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23931,6 +24557,7 @@
   {
     "description": "The maximum width of the\nbig navigation items in the\nnavigation bar in the Masthead Extended.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23953,6 +24580,10 @@
       "start": 1621,
       "end": 1623
 >>>>>>> Generate sass vars
+=======
+      "start": 1611,
+      "end": 1613
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -23960,6 +24591,7 @@
       "value": "64rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23982,6 +24614,10 @@
         "start": 1624,
         "end": 1624
 >>>>>>> Generate sass vars
+=======
+        "start": 1614,
+        "end": 1614
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -23996,6 +24632,7 @@
   {
     "description": "The background color of the big\nnavigation bar in the Masthead Extended.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24018,6 +24655,10 @@
       "start": 1625,
       "end": 1626
 >>>>>>> Generate sass vars
+=======
+      "start": 1615,
+      "end": 1616
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24025,6 +24666,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24047,6 +24689,10 @@
         "start": 1627,
         "end": 1627
 >>>>>>> Generate sass vars
+=======
+        "start": 1617,
+        "end": 1617
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24061,6 +24707,7 @@
   {
     "description": "The font weight of the big\nnavigation link in the Masthead Extended.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24083,6 +24730,10 @@
       "start": 1628,
       "end": 1629
 >>>>>>> Generate sass vars
+=======
+      "start": 1618,
+      "end": 1619
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24090,6 +24741,7 @@
       "value": "400",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24112,6 +24764,10 @@
         "start": 1630,
         "end": 1630
 >>>>>>> Generate sass vars
+=======
+        "start": 1620,
+        "end": 1620
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24126,6 +24782,7 @@
   {
     "description": "The padding of the big navigation\nlink in the Masthead Extended.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24148,6 +24805,10 @@
       "start": 1631,
       "end": 1632
 >>>>>>> Generate sass vars
+=======
+      "start": 1621,
+      "end": 1622
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24155,6 +24816,7 @@
       "value": "0 $sprk-space-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24177,6 +24839,10 @@
         "start": 1633,
         "end": 1633
 >>>>>>> Generate sass vars
+=======
+        "start": 1623,
+        "end": 1623
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24191,6 +24857,7 @@
   {
     "description": "The color of the big navigation link in the Masthead Extended.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24213,6 +24880,10 @@
       "start": 1634,
       "end": 1634
 >>>>>>> Generate sass vars
+=======
+      "start": 1624,
+      "end": 1624
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24220,6 +24891,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24242,6 +24914,10 @@
         "start": 1635,
         "end": 1635
 >>>>>>> Generate sass vars
+=======
+        "start": 1625,
+        "end": 1625
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24256,6 +24932,7 @@
   {
     "description": "The text and underline color of\nthe active big navigation item in the Masthead Extended.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24278,6 +24955,10 @@
       "start": 1636,
       "end": 1637
 >>>>>>> Generate sass vars
+=======
+      "start": 1626,
+      "end": 1627
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24285,6 +24966,7 @@
       "value": "$sprk-big-nav-link-color",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24307,6 +24989,10 @@
         "start": 1638,
         "end": 1638
 >>>>>>> Generate sass vars
+=======
+        "start": 1628,
+        "end": 1628
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24321,6 +25007,7 @@
   {
     "description": "The line height\nof the big navigation items\nin the Masthead Extended.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24343,6 +25030,10 @@
       "start": 1639,
       "end": 1641
 >>>>>>> Generate sass vars
+=======
+      "start": 1629,
+      "end": 1631
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24350,6 +25041,7 @@
       "value": "53px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24372,6 +25064,10 @@
         "start": 1642,
         "end": 1642
 >>>>>>> Generate sass vars
+=======
+        "start": 1632,
+        "end": 1632
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24386,6 +25082,7 @@
   {
     "description": "The left border of the active item\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24408,6 +25105,10 @@
       "start": 1644,
       "end": 1645
 >>>>>>> Generate sass vars
+=======
+      "start": 1634,
+      "end": 1635
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24415,6 +25116,7 @@
       "value": "3px solid $sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24437,6 +25139,10 @@
         "start": 1646,
         "end": 1646
 >>>>>>> Generate sass vars
+=======
+        "start": 1636,
+        "end": 1636
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24451,6 +25157,7 @@
   {
     "description": "The font weight of the active item\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24473,6 +25180,10 @@
       "start": 1647,
       "end": 1648
 >>>>>>> Generate sass vars
+=======
+      "start": 1637,
+      "end": 1638
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24480,6 +25191,7 @@
       "value": "400",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24502,6 +25214,10 @@
         "start": 1649,
         "end": 1649
 >>>>>>> Generate sass vars
+=======
+        "start": 1639,
+        "end": 1639
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24516,6 +25232,7 @@
   {
     "description": "The color of the active item\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24538,6 +25255,10 @@
       "start": 1650,
       "end": 1651
 >>>>>>> Generate sass vars
+=======
+      "start": 1640,
+      "end": 1641
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24545,6 +25266,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24567,6 +25289,10 @@
         "start": 1652,
         "end": 1652
 >>>>>>> Generate sass vars
+=======
+        "start": 1642,
+        "end": 1642
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24581,6 +25307,7 @@
   {
     "description": "The color of the heading\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24603,6 +25330,10 @@
       "start": 1653,
       "end": 1654
 >>>>>>> Generate sass vars
+=======
+      "start": 1643,
+      "end": 1644
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24610,6 +25341,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24632,6 +25364,10 @@
         "start": 1655,
         "end": 1655
 >>>>>>> Generate sass vars
+=======
+        "start": 1645,
+        "end": 1645
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24646,6 +25382,7 @@
   {
     "description": "The font weight of the heading\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24668,6 +25405,10 @@
       "start": 1656,
       "end": 1657
 >>>>>>> Generate sass vars
+=======
+      "start": 1646,
+      "end": 1647
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24675,6 +25416,7 @@
       "value": "400",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24697,6 +25439,10 @@
         "start": 1658,
         "end": 1658
 >>>>>>> Generate sass vars
+=======
+        "start": 1648,
+        "end": 1648
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24711,6 +25457,7 @@
   {
     "description": "The font weight of the details\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24733,6 +25480,10 @@
       "start": 1659,
       "end": 1660
 >>>>>>> Generate sass vars
+=======
+      "start": 1649,
+      "end": 1650
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24740,6 +25491,7 @@
       "value": "300",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24762,6 +25514,10 @@
         "start": 1661,
         "end": 1661
 >>>>>>> Generate sass vars
+=======
+        "start": 1651,
+        "end": 1651
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24776,6 +25532,7 @@
   {
     "description": "The font color of the details\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24798,6 +25555,10 @@
       "start": 1662,
       "end": 1663
 >>>>>>> Generate sass vars
+=======
+      "start": 1652,
+      "end": 1653
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24805,6 +25566,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24827,6 +25589,10 @@
         "start": 1664,
         "end": 1664
 >>>>>>> Generate sass vars
+=======
+        "start": 1654,
+        "end": 1654
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24841,6 +25607,7 @@
   {
     "description": "The background color of the active\nitem in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24863,6 +25630,10 @@
       "start": 1665,
       "end": 1666
 >>>>>>> Generate sass vars
+=======
+      "start": 1655,
+      "end": 1656
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24870,6 +25641,7 @@
       "value": "$sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24892,6 +25664,10 @@
         "start": 1667,
         "end": 1667
 >>>>>>> Generate sass vars
+=======
+        "start": 1657,
+        "end": 1657
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24906,6 +25682,7 @@
   {
     "description": "The font color of the active\nitem in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24928,6 +25705,10 @@
       "start": 1668,
       "end": 1669
 >>>>>>> Generate sass vars
+=======
+      "start": 1658,
+      "end": 1659
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -24935,6 +25716,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24957,6 +25739,10 @@
         "start": 1670,
         "end": 1670
 >>>>>>> Generate sass vars
+=======
+        "start": 1660,
+        "end": 1660
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -24971,6 +25757,7 @@
   {
     "description": "The font color of the text\nin items in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24993,6 +25780,10 @@
       "start": 1671,
       "end": 1672
 >>>>>>> Generate sass vars
+=======
+      "start": 1661,
+      "end": 1662
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25000,6 +25791,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25022,6 +25814,10 @@
         "start": 1673,
         "end": 1673
 >>>>>>> Generate sass vars
+=======
+        "start": 1663,
+        "end": 1663
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25036,6 +25832,7 @@
   {
     "description": "The color of the line on open items\nin the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25058,6 +25855,10 @@
       "start": 1674,
       "end": 1675
 >>>>>>> Generate sass vars
+=======
+      "start": 1664,
+      "end": 1665
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25065,6 +25866,7 @@
       "value": "$sprk-black-tint-25",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25087,6 +25889,10 @@
         "start": 1676,
         "end": 1676
 >>>>>>> Generate sass vars
+=======
+        "start": 1666,
+        "end": 1666
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25101,6 +25907,7 @@
   {
     "description": "The height of the line on open\nitems in the narrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25123,6 +25930,10 @@
       "start": 1677,
       "end": 1678
 >>>>>>> Generate sass vars
+=======
+      "start": 1667,
+      "end": 1668
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25130,6 +25941,7 @@
       "value": "2px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25152,6 +25964,10 @@
         "start": 1679,
         "end": 1679
 >>>>>>> Generate sass vars
+=======
+        "start": 1669,
+        "end": 1669
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25166,6 +25982,7 @@
   {
     "description": "The padding of the items in the\nnarrow viewport Masthead Accordion.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25188,6 +26005,10 @@
       "start": 1680,
       "end": 1681
 >>>>>>> Generate sass vars
+=======
+      "start": 1670,
+      "end": 1671
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25195,6 +26016,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25217,6 +26039,10 @@
         "start": 1682,
         "end": 1682
 >>>>>>> Generate sass vars
+=======
+        "start": 1672,
+        "end": 1672
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25231,6 +26057,7 @@
   {
     "description": "The height and width of Spinners.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25253,6 +26080,10 @@
       "start": 1688,
       "end": 1688
 >>>>>>> Generate sass vars
+=======
+      "start": 1678,
+      "end": 1678
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25260,6 +26091,7 @@
       "value": "1.3rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25282,6 +26114,10 @@
         "start": 1689,
         "end": 1689
 >>>>>>> Generate sass vars
+=======
+        "start": 1679,
+        "end": 1679
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25296,6 +26132,7 @@
   {
     "description": "The height and width of large Spinners.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25318,6 +26155,10 @@
       "start": 1690,
       "end": 1690
 >>>>>>> Generate sass vars
+=======
+      "start": 1680,
+      "end": 1680
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25325,6 +26166,7 @@
       "value": "3rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25347,6 +26189,10 @@
         "start": 1691,
         "end": 1691
 >>>>>>> Generate sass vars
+=======
+        "start": 1681,
+        "end": 1681
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25361,6 +26207,7 @@
   {
     "description": "The speed of the animation for Spinners.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25383,6 +26230,10 @@
       "start": 1692,
       "end": 1692
 >>>>>>> Generate sass vars
+=======
+      "start": 1682,
+      "end": 1682
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25390,6 +26241,7 @@
       "value": "1s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25412,6 +26264,10 @@
         "start": 1693,
         "end": 1693
 >>>>>>> Generate sass vars
+=======
+        "start": 1683,
+        "end": 1683
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25426,6 +26282,7 @@
   {
     "description": "The thickness of Spinners.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25448,6 +26305,10 @@
       "start": 1694,
       "end": 1694
 >>>>>>> Generate sass vars
+=======
+      "start": 1684,
+      "end": 1684
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25455,6 +26316,7 @@
       "value": "0.18rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25477,6 +26339,10 @@
         "start": 1695,
         "end": 1695
 >>>>>>> Generate sass vars
+=======
+        "start": 1685,
+        "end": 1685
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25491,6 +26357,7 @@
   {
     "description": "The color of Spinners.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25513,6 +26380,10 @@
       "start": 1696,
       "end": 1696
 >>>>>>> Generate sass vars
+=======
+      "start": 1686,
+      "end": 1686
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25520,6 +26391,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25542,6 +26414,10 @@
         "start": 1697,
         "end": 1697
 >>>>>>> Generate sass vars
+=======
+        "start": 1687,
+        "end": 1687
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25556,6 +26432,7 @@
   {
     "description": "The color of the dark Spinner.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25578,6 +26455,10 @@
       "start": 1698,
       "end": 1698
 >>>>>>> Generate sass vars
+=======
+      "start": 1688,
+      "end": 1688
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25585,6 +26466,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25607,6 +26489,10 @@
         "start": 1699,
         "end": 1699
 >>>>>>> Generate sass vars
+=======
+        "start": 1689,
+        "end": 1689
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25621,6 +26507,7 @@
   {
     "description": "The breakpoint at which the tabs\ngo from stacked layout to side by side in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25643,6 +26530,10 @@
       "start": 1705,
       "end": 1706
 >>>>>>> Generate sass vars
+=======
+      "start": 1695,
+      "end": 1696
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25650,6 +26541,7 @@
       "value": "46rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25672,6 +26564,10 @@
         "start": 1707,
         "end": 1707
 >>>>>>> Generate sass vars
+=======
+        "start": 1697,
+        "end": 1697
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25686,6 +26582,7 @@
   {
     "description": "The tab button text color in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25708,6 +26605,10 @@
       "start": 1708,
       "end": 1708
 >>>>>>> Generate sass vars
+=======
+      "start": 1698,
+      "end": 1698
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25715,6 +26616,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25737,6 +26639,10 @@
         "start": 1709,
         "end": 1709
 >>>>>>> Generate sass vars
+=======
+        "start": 1699,
+        "end": 1699
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25751,6 +26657,7 @@
   {
     "description": "The tab button background color in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25773,6 +26680,10 @@
       "start": 1710,
       "end": 1710
 >>>>>>> Generate sass vars
+=======
+      "start": 1700,
+      "end": 1700
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25780,6 +26691,7 @@
       "value": "$sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25802,6 +26714,10 @@
         "start": 1711,
         "end": 1711
 >>>>>>> Generate sass vars
+=======
+        "start": 1701,
+        "end": 1701
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25816,6 +26732,7 @@
   {
     "description": "The border on the top of the button tabs in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25838,6 +26755,10 @@
       "start": 1712,
       "end": 1712
 >>>>>>> Generate sass vars
+=======
+      "start": 1702,
+      "end": 1702
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25845,6 +26766,7 @@
       "value": "3px solid $sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25867,6 +26789,10 @@
         "start": 1713,
         "end": 1713
 >>>>>>> Generate sass vars
+=======
+        "start": 1703,
+        "end": 1703
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25881,6 +26807,7 @@
   {
     "description": "The border on the top of the\nbutton tabs on hover in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25903,6 +26830,10 @@
       "start": 1714,
       "end": 1715
 >>>>>>> Generate sass vars
+=======
+      "start": 1704,
+      "end": 1705
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25910,6 +26841,7 @@
       "value": "3px solid $sprk-red",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25932,6 +26864,10 @@
         "start": 1716,
         "end": 1716
 >>>>>>> Generate sass vars
+=======
+        "start": 1706,
+        "end": 1706
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -25946,6 +26882,7 @@
   {
     "description": "The button tab text color of the\ncurrently active tab in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25968,6 +26905,10 @@
       "start": 1717,
       "end": 1718
 >>>>>>> Generate sass vars
+=======
+      "start": 1707,
+      "end": 1708
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -25975,6 +26916,7 @@
       "value": "$sprk-red",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25997,6 +26939,10 @@
         "start": 1719,
         "end": 1719
 >>>>>>> Generate sass vars
+=======
+        "start": 1709,
+        "end": 1709
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26011,6 +26957,7 @@
   {
     "description": "The button tab top border of the\ncurrently active tab in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26033,6 +26980,10 @@
       "start": 1720,
       "end": 1721
 >>>>>>> Generate sass vars
+=======
+      "start": 1710,
+      "end": 1711
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26040,6 +26991,7 @@
       "value": "3px solid $sprk-red",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26062,6 +27014,10 @@
         "start": 1722,
         "end": 1722
 >>>>>>> Generate sass vars
+=======
+        "start": 1712,
+        "end": 1712
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26076,6 +27032,7 @@
   {
     "description": "The button tab background color\nof the currently active tab in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26098,6 +27055,10 @@
       "start": 1723,
       "end": 1724
 >>>>>>> Generate sass vars
+=======
+      "start": 1713,
+      "end": 1714
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26105,6 +27066,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26127,6 +27089,10 @@
         "start": 1725,
         "end": 1725
 >>>>>>> Generate sass vars
+=======
+        "start": 1715,
+        "end": 1715
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26141,6 +27107,7 @@
   {
     "description": "The background color of the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26163,6 +27130,10 @@
       "start": 1731,
       "end": 1731
 >>>>>>> Generate sass vars
+=======
+      "start": 1721,
+      "end": 1721
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26170,6 +27141,7 @@
       "value": "transparent",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26192,6 +27164,10 @@
         "start": 1732,
         "end": 1732
 >>>>>>> Generate sass vars
+=======
+        "start": 1722,
+        "end": 1722
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26206,6 +27182,7 @@
   {
     "description": "The minimum width at which the Stepper\nswitches between narrow and wide layouts.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26228,6 +27205,10 @@
       "start": 1733,
       "end": 1734
 >>>>>>> Generate sass vars
+=======
+      "start": 1723,
+      "end": 1724
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26235,6 +27216,7 @@
       "value": "$sprk-split-breakpoint-xl",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26257,6 +27239,10 @@
         "start": 1735,
         "end": 1735
 >>>>>>> Generate sass vars
+=======
+        "start": 1725,
+        "end": 1725
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26271,6 +27257,7 @@
   {
     "description": "The maximum width of the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26293,6 +27280,10 @@
       "start": 1736,
       "end": 1736
 >>>>>>> Generate sass vars
+=======
+      "start": 1726,
+      "end": 1726
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26300,6 +27291,7 @@
       "value": "480px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26322,6 +27314,10 @@
         "start": 1737,
         "end": 1737
 >>>>>>> Generate sass vars
+=======
+        "start": 1727,
+        "end": 1727
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26336,6 +27332,7 @@
   {
     "description": "The border width of the Stepper icons.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26358,6 +27355,10 @@
       "start": 1738,
       "end": 1738
 >>>>>>> Generate sass vars
+=======
+      "start": 1728,
+      "end": 1728
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26365,6 +27366,7 @@
       "value": "2px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26387,6 +27389,10 @@
         "start": 1739,
         "end": 1739
 >>>>>>> Generate sass vars
+=======
+        "start": 1729,
+        "end": 1729
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26401,6 +27407,7 @@
   {
     "description": "The color of the border around the Stepper icon.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26423,6 +27430,10 @@
       "start": 1740,
       "end": 1740
 >>>>>>> Generate sass vars
+=======
+      "start": 1730,
+      "end": 1730
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26430,6 +27441,7 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26452,6 +27464,10 @@
         "start": 1741,
         "end": 1741
 >>>>>>> Generate sass vars
+=======
+        "start": 1731,
+        "end": 1731
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26466,6 +27482,7 @@
   {
     "description": "The color of the step icon when the step is selected in the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26488,6 +27505,10 @@
       "start": 1742,
       "end": 1742
 >>>>>>> Generate sass vars
+=======
+      "start": 1732,
+      "end": 1732
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26495,6 +27516,7 @@
       "value": "$sprk-green",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26517,6 +27539,10 @@
         "start": 1743,
         "end": 1743
 >>>>>>> Generate sass vars
+=======
+        "start": 1733,
+        "end": 1733
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26531,6 +27557,7 @@
   {
     "description": "The color of the icon border when the\nStepper is on a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26553,6 +27580,10 @@
       "start": 1744,
       "end": 1746
 >>>>>>> Generate sass vars
+=======
+      "start": 1734,
+      "end": 1736
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26560,6 +27591,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26582,6 +27614,10 @@
         "start": 1747,
         "end": 1747
 >>>>>>> Generate sass vars
+=======
+        "start": 1737,
+        "end": 1737
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26596,6 +27632,7 @@
   {
     "description": "The height of the step icon in the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26618,6 +27655,10 @@
       "start": 1748,
       "end": 1748
 >>>>>>> Generate sass vars
+=======
+      "start": 1738,
+      "end": 1738
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26625,6 +27666,7 @@
       "value": "16px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26647,6 +27689,10 @@
         "start": 1749,
         "end": 1749
 >>>>>>> Generate sass vars
+=======
+        "start": 1739,
+        "end": 1739
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26661,6 +27707,7 @@
   {
     "description": "The width of the step icon in the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26683,6 +27730,10 @@
       "start": 1750,
       "end": 1750
 >>>>>>> Generate sass vars
+=======
+      "start": 1740,
+      "end": 1740
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26690,6 +27741,7 @@
       "value": "16px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26712,6 +27764,10 @@
         "start": 1751,
         "end": 1751
 >>>>>>> Generate sass vars
+=======
+        "start": 1741,
+        "end": 1741
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26726,6 +27782,7 @@
   {
     "description": "The color of the step icon in the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26748,6 +27805,10 @@
       "start": 1752,
       "end": 1752
 >>>>>>> Generate sass vars
+=======
+      "start": 1742,
+      "end": 1742
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26755,6 +27816,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26777,6 +27839,10 @@
         "start": 1753,
         "end": 1753
 >>>>>>> Generate sass vars
+=======
+        "start": 1743,
+        "end": 1743
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26791,6 +27857,7 @@
   {
     "description": "The color of the step icon\nin the Stepper when hovered.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26813,6 +27880,10 @@
       "start": 1754,
       "end": 1755
 >>>>>>> Generate sass vars
+=======
+      "start": 1744,
+      "end": 1745
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26820,6 +27891,7 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26842,6 +27914,10 @@
         "start": 1756,
         "end": 1756
 >>>>>>> Generate sass vars
+=======
+        "start": 1746,
+        "end": 1746
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26856,6 +27932,7 @@
   {
     "description": "The color of the Stepper step icon when the step is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26878,6 +27955,10 @@
       "start": 1757,
       "end": 1757
 >>>>>>> Generate sass vars
+=======
+      "start": 1747,
+      "end": 1747
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26885,6 +27966,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26907,6 +27989,10 @@
         "start": 1758,
         "end": 1758
 >>>>>>> Generate sass vars
+=======
+        "start": 1748,
+        "end": 1748
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26921,6 +28007,7 @@
   {
     "description": "The color of the step icon when the\nStepper has a dark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26943,6 +28030,10 @@
       "start": 1759,
       "end": 1760
 >>>>>>> Generate sass vars
+=======
+      "start": 1749,
+      "end": 1750
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -26950,6 +28041,7 @@
       "value": "$sprk-blue",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26972,6 +28064,10 @@
         "start": 1761,
         "end": 1761
 >>>>>>> Generate sass vars
+=======
+        "start": 1751,
+        "end": 1751
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -26986,6 +28082,7 @@
   {
     "description": "The color of the Stepper step icon when the step\nis selected and the Stepper has a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27008,6 +28105,10 @@
       "start": 1762,
       "end": 1764
 >>>>>>> Generate sass vars
+=======
+      "start": 1752,
+      "end": 1754
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27015,6 +28116,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27037,6 +28139,10 @@
         "start": 1765,
         "end": 1765
 >>>>>>> Generate sass vars
+=======
+        "start": 1755,
+        "end": 1755
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27051,6 +28157,7 @@
   {
     "description": "The color of the step icon on hover\nwhen the Stepper has a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27073,6 +28180,10 @@
       "start": 1766,
       "end": 1768
 >>>>>>> Generate sass vars
+=======
+      "start": 1756,
+      "end": 1758
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27080,6 +28191,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27102,6 +28214,10 @@
         "start": 1769,
         "end": 1769
 >>>>>>> Generate sass vars
+=======
+        "start": 1759,
+        "end": 1759
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27116,6 +28232,7 @@
   {
     "description": "The transition of the Stepper step icon.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27138,6 +28255,10 @@
       "start": 1771,
       "end": 1771
 >>>>>>> Generate sass vars
+=======
+      "start": 1761,
+      "end": 1761
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27145,6 +28266,7 @@
       "value": "0.3s all ease-in-out",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27167,6 +28289,10 @@
         "start": 1772,
         "end": 1772
 >>>>>>> Generate sass vars
+=======
+        "start": 1762,
+        "end": 1762
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27181,6 +28307,7 @@
   {
     "description": "The z-index of the Stepper step icon.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27203,6 +28330,10 @@
       "start": 1773,
       "end": 1773
 >>>>>>> Generate sass vars
+=======
+      "start": 1763,
+      "end": 1763
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27210,6 +28341,7 @@
       "value": "$sprk-layer-height-xs",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27232,6 +28364,10 @@
         "start": 1774,
         "end": 1774
 >>>>>>> Generate sass vars
+=======
+        "start": 1764,
+        "end": 1764
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27246,6 +28382,7 @@
   {
     "description": "The spread value of the icon box\nshadow when the Stepper step is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27268,6 +28405,10 @@
       "start": 1775,
       "end": 1776
 >>>>>>> Generate sass vars
+=======
+      "start": 1765,
+      "end": 1766
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27275,6 +28416,7 @@
       "value": "8px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27297,6 +28439,10 @@
         "start": 1777,
         "end": 1777
 >>>>>>> Generate sass vars
+=======
+        "start": 1767,
+        "end": 1767
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27311,6 +28457,7 @@
   {
     "description": "The box shadow of the Stepper step icon\nwhen the icon is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27333,6 +28480,10 @@
       "start": 1778,
       "end": 1779
 >>>>>>> Generate sass vars
+=======
+      "start": 1768,
+      "end": 1769
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27340,6 +28491,7 @@
       "value": "0 0 0\n  $sprk-stepper-icon-box-shadow-selected-spread\n  $sprk-stepper-icon-border-color-selected",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27362,6 +28514,10 @@
         "start": 1780,
         "end": 1782
 >>>>>>> Generate sass vars
+=======
+        "start": 1770,
+        "end": 1772
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27376,6 +28532,7 @@
   {
     "description": "The background color of the content in the Stepper step.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27398,6 +28555,10 @@
       "start": 1783,
       "end": 1783
 >>>>>>> Generate sass vars
+=======
+      "start": 1773,
+      "end": 1773
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27405,6 +28566,7 @@
       "value": "transparent",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27427,6 +28589,10 @@
         "start": 1784,
         "end": 1784
 >>>>>>> Generate sass vars
+=======
+        "start": 1774,
+        "end": 1774
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27441,6 +28607,7 @@
   {
     "description": "The border radius of the Stepper step\ncontent box when it has a description.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27463,6 +28630,10 @@
       "start": 1785,
       "end": 1786
 >>>>>>> Generate sass vars
+=======
+      "start": 1775,
+      "end": 1776
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27470,6 +28641,7 @@
       "value": "5px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27492,6 +28664,10 @@
         "start": 1787,
         "end": 1787
 >>>>>>> Generate sass vars
+=======
+        "start": 1777,
+        "end": 1777
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27506,6 +28682,7 @@
   {
     "description": "The box shadow of the Stepper step content\nbox when it has a description.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27528,6 +28705,10 @@
       "start": 1788,
       "end": 1789
 >>>>>>> Generate sass vars
+=======
+      "start": 1778,
+      "end": 1779
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27535,6 +28716,7 @@
       "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27557,6 +28739,10 @@
         "start": 1790,
         "end": 1790
 >>>>>>> Generate sass vars
+=======
+        "start": 1780,
+        "end": 1780
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27571,6 +28757,7 @@
   {
     "description": "The spacing between the\nStepper step heading and description.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27593,6 +28780,10 @@
       "start": 1791,
       "end": 1792
 >>>>>>> Generate sass vars
+=======
+      "start": 1781,
+      "end": 1782
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27600,6 +28791,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27622,6 +28814,10 @@
         "start": 1793,
         "end": 1793
 >>>>>>> Generate sass vars
+=======
+        "start": 1783,
+        "end": 1783
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27636,6 +28832,7 @@
   {
     "description": "The font weight of the Stepper step heading.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27658,6 +28855,10 @@
       "start": 1794,
       "end": 1794
 >>>>>>> Generate sass vars
+=======
+      "start": 1784,
+      "end": 1784
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27665,6 +28866,7 @@
       "value": "400",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27687,6 +28889,10 @@
         "start": 1795,
         "end": 1795
 >>>>>>> Generate sass vars
+=======
+        "start": 1785,
+        "end": 1785
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27701,6 +28907,7 @@
   {
     "description": "The font size of the Stepper step heading.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27723,6 +28930,10 @@
       "start": 1796,
       "end": 1796
 >>>>>>> Generate sass vars
+=======
+      "start": 1786,
+      "end": 1786
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27730,6 +28941,7 @@
       "value": "$sprk-font-size-display-six",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27752,6 +28964,10 @@
         "start": 1797,
         "end": 1797
 >>>>>>> Generate sass vars
+=======
+        "start": 1787,
+        "end": 1787
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27766,6 +28982,7 @@
   {
     "description": "The color of the Stepper step heading.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27788,6 +29005,10 @@
       "start": 1798,
       "end": 1798
 >>>>>>> Generate sass vars
+=======
+      "start": 1788,
+      "end": 1788
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27795,6 +29016,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27817,6 +29039,10 @@
         "start": 1799,
         "end": 1799
 >>>>>>> Generate sass vars
+=======
+        "start": 1789,
+        "end": 1789
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27831,6 +29057,7 @@
   {
     "description": "The color of the Stepper step heading when\nthe Stepper is on a dark\nbackground (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27853,6 +29080,10 @@
       "start": 1800,
       "end": 1802
 >>>>>>> Generate sass vars
+=======
+      "start": 1790,
+      "end": 1792
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27860,6 +29091,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27882,6 +29114,10 @@
         "start": 1803,
         "end": 1803
 >>>>>>> Generate sass vars
+=======
+        "start": 1793,
+        "end": 1793
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27896,6 +29132,7 @@
   {
     "description": "The color of the Stepper\nstep heading when the step is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27918,6 +29155,10 @@
       "start": 1804,
       "end": 1805
 >>>>>>> Generate sass vars
+=======
+      "start": 1794,
+      "end": 1795
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27925,6 +29166,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27947,6 +29189,10 @@
         "start": 1806,
         "end": 1806
 >>>>>>> Generate sass vars
+=======
+        "start": 1796,
+        "end": 1796
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -27961,6 +29207,7 @@
   {
     "description": "The padding value for the Stepper step.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27983,6 +29230,10 @@
       "start": 1807,
       "end": 1807
 >>>>>>> Generate sass vars
+=======
+      "start": 1797,
+      "end": 1797
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -27990,6 +29241,7 @@
       "value": "$sprk-space-misc-a",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28012,6 +29264,10 @@
         "start": 1808,
         "end": 1808
 >>>>>>> Generate sass vars
+=======
+        "start": 1798,
+        "end": 1798
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28026,6 +29282,7 @@
   {
     "description": "The background color of the\nStepper step content box when the step is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28048,6 +29305,10 @@
       "start": 1809,
       "end": 1810
 >>>>>>> Generate sass vars
+=======
+      "start": 1799,
+      "end": 1800
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28055,6 +29316,7 @@
       "value": "transparent",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28077,6 +29339,10 @@
         "start": 1811,
         "end": 1811
 >>>>>>> Generate sass vars
+=======
+        "start": 1801,
+        "end": 1801
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28091,6 +29357,7 @@
   {
     "description": "The background color of the Stepper step\ncontent box when it has a\ndescription and when the step is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28113,6 +29380,10 @@
       "start": 1812,
       "end": 1814
 >>>>>>> Generate sass vars
+=======
+      "start": 1802,
+      "end": 1804
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28120,6 +29391,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28142,6 +29414,10 @@
         "start": 1815,
         "end": 1815
 >>>>>>> Generate sass vars
+=======
+        "start": 1805,
+        "end": 1805
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28156,6 +29432,7 @@
   {
     "description": "The text color of a selected Stepper step's\ncontent and header when it has a\ndescription. This applies to\nsteppers with the sprk-c-Stepper--has-dark-bg class.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28178,6 +29455,10 @@
       "start": 1816,
       "end": 1819
 >>>>>>> Generate sass vars
+=======
+      "start": 1806,
+      "end": 1809
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28185,6 +29466,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28207,6 +29489,10 @@
         "start": 1820,
         "end": 1820
 >>>>>>> Generate sass vars
+=======
+        "start": 1810,
+        "end": 1810
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28221,6 +29507,7 @@
   {
     "description": "The color of the bar that connects the steps in the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28243,6 +29530,10 @@
       "start": 1821,
       "end": 1821
 >>>>>>> Generate sass vars
+=======
+      "start": 1811,
+      "end": 1811
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28250,6 +29541,7 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28272,6 +29564,10 @@
         "start": 1822,
         "end": 1822
 >>>>>>> Generate sass vars
+=======
+        "start": 1812,
+        "end": 1812
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28286,6 +29582,7 @@
   {
     "description": "The color of the bar that connects\nthe steps when the Stepper is on a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28308,6 +29605,10 @@
       "start": 1823,
       "end": 1825
 >>>>>>> Generate sass vars
+=======
+      "start": 1813,
+      "end": 1815
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28315,6 +29616,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28337,6 +29639,10 @@
         "start": 1826,
         "end": 1826
 >>>>>>> Generate sass vars
+=======
+        "start": 1816,
+        "end": 1816
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28351,6 +29657,7 @@
   {
     "description": "The border value for the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28373,6 +29680,10 @@
       "start": 1845,
       "end": 1845
 >>>>>>> Generate sass vars
+=======
+      "start": 1835,
+      "end": 1835
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28380,6 +29691,7 @@
       "value": "$sprk-stepper-icon-border-width solid\n  $sprk-stepper-dark-icon-border-color",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28398,6 +29710,10 @@
         "start": 1846,
         "end": 1847
 >>>>>>> Generate sass vars
+=======
+        "start": 1836,
+        "end": 1837
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28415,6 +29731,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1805,
       "end": 1805
 =======
@@ -28429,6 +29746,10 @@
       "start": 1848,
       "end": 1848
 >>>>>>> Generate sass vars
+=======
+      "start": 1838,
+      "end": 1838
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28436,6 +29757,7 @@
       "value": "10px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28456,6 +29778,10 @@
         "start": 1849,
         "end": 1849
 >>>>>>> Generate sass vars
+=======
+        "start": 1839,
+        "end": 1839
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28473,6 +29799,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1807,
       "end": 1807
 =======
@@ -28487,6 +29814,10 @@
       "start": 1850,
       "end": 1850
 >>>>>>> Generate sass vars
+=======
+      "start": 1840,
+      "end": 1840
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28494,6 +29825,7 @@
       "value": "10px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28511,6 +29843,10 @@
         "start": 1851,
         "end": 1851
 >>>>>>> Generate sass vars
+=======
+        "start": 1841,
+        "end": 1841
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28528,6 +29864,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1809,
       "end": 1809
 =======
@@ -28542,6 +29879,10 @@
       "start": 1852,
       "end": 1852
 >>>>>>> Generate sass vars
+=======
+      "start": 1842,
+      "end": 1842
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28549,6 +29890,7 @@
       "value": "10px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28566,6 +29908,10 @@
         "start": 1853,
         "end": 1853
 >>>>>>> Generate sass vars
+=======
+        "start": 1843,
+        "end": 1843
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28583,6 +29929,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1811,
       "end": 1811
 =======
@@ -28597,6 +29944,10 @@
       "start": 1854,
       "end": 1854
 >>>>>>> Generate sass vars
+=======
+      "start": 1844,
+      "end": 1844
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28604,6 +29955,7 @@
       "value": "10px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28621,6 +29973,10 @@
         "start": 1855,
         "end": 1855
 >>>>>>> Generate sass vars
+=======
+        "start": 1845,
+        "end": 1845
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28638,6 +29994,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1813,
       "end": 1813
 =======
@@ -28652,6 +30009,10 @@
       "start": 1856,
       "end": 1856
 >>>>>>> Generate sass vars
+=======
+      "start": 1846,
+      "end": 1846
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28659,6 +30020,7 @@
       "value": "10px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28676,6 +30038,10 @@
         "start": 1857,
         "end": 1857
 >>>>>>> Generate sass vars
+=======
+        "start": 1847,
+        "end": 1847
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28693,6 +30059,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1815,
       "end": 1815
 =======
@@ -28707,6 +30074,10 @@
       "start": 1858,
       "end": 1858
 >>>>>>> Generate sass vars
+=======
+      "start": 1848,
+      "end": 1848
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28714,6 +30085,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28731,6 +30103,10 @@
         "start": 1859,
         "end": 1859
 >>>>>>> Generate sass vars
+=======
+        "start": 1849,
+        "end": 1849
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28748,6 +30124,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1817,
       "end": 1817
 =======
@@ -28762,6 +30139,10 @@
       "start": 1860,
       "end": 1860
 >>>>>>> Generate sass vars
+=======
+      "start": 1850,
+      "end": 1850
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28769,6 +30150,7 @@
       "value": "$sprk-carousel-dot-spacing",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28786,6 +30168,10 @@
         "start": 1861,
         "end": 1861
 >>>>>>> Generate sass vars
+=======
+        "start": 1851,
+        "end": 1851
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28803,6 +30189,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1819,
       "end": 1819
 =======
@@ -28817,6 +30204,10 @@
       "start": 1862,
       "end": 1862
 >>>>>>> Generate sass vars
+=======
+      "start": 1852,
+      "end": 1852
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28824,6 +30215,7 @@
       "value": "$sprk-stepper-icon-box-shadow-selected",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28841,6 +30233,10 @@
         "start": 1863,
         "end": 1863
 >>>>>>> Generate sass vars
+=======
+        "start": 1853,
+        "end": 1853
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28858,6 +30254,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1821,
       "end": 1821
 =======
@@ -28872,6 +30269,10 @@
       "start": 1864,
       "end": 1864
 >>>>>>> Generate sass vars
+=======
+      "start": 1854,
+      "end": 1854
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28879,6 +30280,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28896,6 +30298,10 @@
         "start": 1865,
         "end": 1865
 >>>>>>> Generate sass vars
+=======
+        "start": 1855,
+        "end": 1855
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28913,6 +30319,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1823,
       "end": 1823
 =======
@@ -28927,6 +30334,10 @@
       "start": 1866,
       "end": 1866
 >>>>>>> Generate sass vars
+=======
+      "start": 1856,
+      "end": 1856
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28934,6 +30345,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28951,6 +30363,10 @@
         "start": 1867,
         "end": 1867
 >>>>>>> Generate sass vars
+=======
+        "start": 1857,
+        "end": 1857
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -28968,6 +30384,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1825,
       "end": 1825
 =======
@@ -28982,6 +30399,10 @@
       "start": 1868,
       "end": 1868
 >>>>>>> Generate sass vars
+=======
+      "start": 1858,
+      "end": 1858
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -28989,6 +30410,7 @@
       "value": "0",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29006,6 +30428,10 @@
         "start": 1869,
         "end": 1869
 >>>>>>> Generate sass vars
+=======
+        "start": 1859,
+        "end": 1859
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29023,6 +30449,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1827,
       "end": 1827
 =======
@@ -29037,6 +30464,10 @@
       "start": 1870,
       "end": 1870
 >>>>>>> Generate sass vars
+=======
+      "start": 1860,
+      "end": 1860
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29044,6 +30475,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29061,6 +30493,10 @@
         "start": 1871,
         "end": 1871
 >>>>>>> Generate sass vars
+=======
+        "start": 1861,
+        "end": 1861
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29078,6 +30514,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1829,
       "end": 1829
 =======
@@ -29092,6 +30529,10 @@
       "start": 1872,
       "end": 1872
 >>>>>>> Generate sass vars
+=======
+      "start": 1862,
+      "end": 1862
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29099,6 +30540,7 @@
       "value": "18.75rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29116,6 +30558,10 @@
         "start": 1873,
         "end": 1873
 >>>>>>> Generate sass vars
+=======
+        "start": 1863,
+        "end": 1863
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29133,6 +30579,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1831,
       "end": 1831
 =======
@@ -29147,6 +30594,10 @@
       "start": 1874,
       "end": 1874
 >>>>>>> Generate sass vars
+=======
+      "start": 1864,
+      "end": 1864
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29154,6 +30605,7 @@
       "value": "31.25rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29171,6 +30623,10 @@
         "start": 1875,
         "end": 1875
 >>>>>>> Generate sass vars
+=======
+        "start": 1865,
+        "end": 1865
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29188,6 +30644,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1833,
       "end": 1833
 =======
@@ -29202,6 +30659,10 @@
       "start": 1876,
       "end": 1876
 >>>>>>> Generate sass vars
+=======
+      "start": 1866,
+      "end": 1866
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29209,6 +30670,7 @@
       "value": "$sprk-space-xs",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29226,6 +30688,10 @@
         "start": 1877,
         "end": 1877
 >>>>>>> Generate sass vars
+=======
+        "start": 1867,
+        "end": 1867
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29240,6 +30706,7 @@
   {
     "description": "The breakpoint for the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29262,6 +30729,10 @@
       "start": 1883,
       "end": 1883
 >>>>>>> Generate sass vars
+=======
+      "start": 1873,
+      "end": 1873
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29269,6 +30740,7 @@
       "value": "$sprk-split-breakpoint-xl",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29291,6 +30763,10 @@
         "start": 1884,
         "end": 1884
 >>>>>>> Generate sass vars
+=======
+        "start": 1874,
+        "end": 1874
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29308,6 +30784,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1842,
       "end": 1842
 =======
@@ -29322,6 +30799,10 @@
       "start": 1885,
       "end": 1885
 >>>>>>> Generate sass vars
+=======
+      "start": 1875,
+      "end": 1875
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29329,6 +30810,7 @@
       "value": "26.5625rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29346,6 +30828,10 @@
         "start": 1886,
         "end": 1886
 >>>>>>> Generate sass vars
+=======
+        "start": 1876,
+        "end": 1876
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29363,6 +30849,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1844,
       "end": 1844
 =======
@@ -29377,6 +30864,10 @@
       "start": 1887,
       "end": 1887
 >>>>>>> Generate sass vars
+=======
+      "start": 1877,
+      "end": 1877
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29384,6 +30875,7 @@
       "value": "$sprk-split-breakpoint-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29401,6 +30893,10 @@
         "start": 1888,
         "end": 1888
 >>>>>>> Generate sass vars
+=======
+        "start": 1878,
+        "end": 1878
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29418,6 +30914,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1846,
       "end": 1846
 =======
@@ -29432,6 +30929,10 @@
       "start": 1889,
       "end": 1889
 >>>>>>> Generate sass vars
+=======
+      "start": 1879,
+      "end": 1879
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29439,6 +30940,7 @@
       "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29456,6 +30958,10 @@
         "start": 1890,
         "end": 1890
 >>>>>>> Generate sass vars
+=======
+        "start": 1880,
+        "end": 1880
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29473,6 +30979,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1848,
       "end": 1848
 =======
@@ -29487,6 +30994,10 @@
       "start": 1891,
       "end": 1891
 >>>>>>> Generate sass vars
+=======
+      "start": 1881,
+      "end": 1881
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29494,6 +31005,7 @@
       "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29511,6 +31023,10 @@
         "start": 1892,
         "end": 1892
 >>>>>>> Generate sass vars
+=======
+        "start": 1882,
+        "end": 1882
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29528,6 +31044,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1850,
       "end": 1850
 =======
@@ -29542,6 +31059,10 @@
       "start": 1893,
       "end": 1893
 >>>>>>> Generate sass vars
+=======
+      "start": 1883,
+      "end": 1883
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29549,6 +31070,7 @@
       "value": "0 4px 20px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29566,6 +31088,10 @@
         "start": 1894,
         "end": 1894
 >>>>>>> Generate sass vars
+=======
+        "start": 1884,
+        "end": 1884
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29583,6 +31109,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1852,
       "end": 1852
 =======
@@ -29597,6 +31124,10 @@
       "start": 1895,
       "end": 1895
 >>>>>>> Generate sass vars
+=======
+      "start": 1885,
+      "end": 1885
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29604,6 +31135,7 @@
       "value": "0 4px 40px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29621,6 +31153,10 @@
         "start": 1896,
         "end": 1896
 >>>>>>> Generate sass vars
+=======
+        "start": 1886,
+        "end": 1886
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29638,6 +31174,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1854,
       "end": 1854
 =======
@@ -29652,6 +31189,10 @@
       "start": 1897,
       "end": 1897
 >>>>>>> Generate sass vars
+=======
+      "start": 1887,
+      "end": 1887
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29659,6 +31200,7 @@
       "value": "8px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29676,6 +31218,10 @@
         "start": 1898,
         "end": 1898
 >>>>>>> Generate sass vars
+=======
+        "start": 1888,
+        "end": 1888
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29693,6 +31239,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1856,
       "end": 1856
 =======
@@ -29707,6 +31254,10 @@
       "start": 1899,
       "end": 1899
 >>>>>>> Generate sass vars
+=======
+      "start": 1889,
+      "end": 1889
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29714,6 +31265,7 @@
       "value": "$sprk-space-misc-a",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29731,6 +31283,10 @@
         "start": 1900,
         "end": 1900
 >>>>>>> Generate sass vars
+=======
+        "start": 1890,
+        "end": 1890
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29748,6 +31304,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1858,
       "end": 1858
 =======
@@ -29762,6 +31319,10 @@
       "start": 1901,
       "end": 1901
 >>>>>>> Generate sass vars
+=======
+      "start": 1891,
+      "end": 1891
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29769,6 +31330,7 @@
       "value": "$sprk-green",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29786,6 +31348,10 @@
         "start": 1902,
         "end": 1902
 >>>>>>> Generate sass vars
+=======
+        "start": 1892,
+        "end": 1892
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29800,6 +31366,7 @@
   {
     "description": "The text color for the Highlighted Header Card.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29822,6 +31389,10 @@
       "start": 1908,
       "end": 1908
 >>>>>>> Generate sass vars
+=======
+      "start": 1898,
+      "end": 1898
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29829,6 +31400,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29851,6 +31423,10 @@
         "start": 1909,
         "end": 1909
 >>>>>>> Generate sass vars
+=======
+        "start": 1899,
+        "end": 1899
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29868,6 +31444,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1867,
       "end": 1867
 =======
@@ -29882,6 +31459,10 @@
       "start": 1910,
       "end": 1910
 >>>>>>> Generate sass vars
+=======
+      "start": 1900,
+      "end": 1900
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29889,6 +31470,7 @@
       "value": "1px solid $sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29906,6 +31488,10 @@
         "start": 1911,
         "end": 1911
 >>>>>>> Generate sass vars
+=======
+        "start": 1901,
+        "end": 1901
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29923,6 +31509,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1869,
       "end": 1869
 =======
@@ -29937,6 +31524,10 @@
       "start": 1912,
       "end": 1912
 >>>>>>> Generate sass vars
+=======
+      "start": 1902,
+      "end": 1902
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29944,6 +31535,7 @@
       "value": "$sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29961,6 +31553,10 @@
         "start": 1913,
         "end": 1913
 >>>>>>> Generate sass vars
+=======
+        "start": 1903,
+        "end": 1903
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -29978,6 +31574,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1871,
       "end": 1871
 =======
@@ -29992,6 +31589,10 @@
       "start": 1914,
       "end": 1914
 >>>>>>> Generate sass vars
+=======
+      "start": 1904,
+      "end": 1904
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -29999,6 +31600,7 @@
       "value": "38.4375rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30016,6 +31618,10 @@
         "start": 1915,
         "end": 1915
 >>>>>>> Generate sass vars
+=======
+        "start": 1905,
+        "end": 1905
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -30033,6 +31639,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1873,
       "end": 1873
 =======
@@ -30047,6 +31654,10 @@
       "start": 1916,
       "end": 1916
 >>>>>>> Generate sass vars
+=======
+      "start": 1906,
+      "end": 1906
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -30054,6 +31665,7 @@
       "value": "$sprk-font-size-body-one",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30071,6 +31683,10 @@
         "start": 1917,
         "end": 1917
 >>>>>>> Generate sass vars
+=======
+        "start": 1907,
+        "end": 1907
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -30085,6 +31701,7 @@
   {
     "description": "The font weight of the labels in the Dictionary.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30138,6 +31755,10 @@
     "commentRange": {
       "start": 1914,
       "end": 1914
+=======
+      "start": 1908,
+      "end": 1908
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -30145,12 +31766,17 @@
       "value": "$sprk-line-height-body-one",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
         "start": 1915,
         "end": 1915
 =======
         "start": 1919,
         "end": 1919
 >>>>>>> Generate sass vars
+=======
+        "start": 1909,
+        "end": 1909
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -30165,6 +31791,7 @@
   {
     "description": "The Highlight Board breakpoint at which styles change\nfor padding, font size and button width.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30187,6 +31814,10 @@
       "start": 1925,
       "end": 1926
 >>>>>>> Generate sass vars
+=======
+      "start": 1915,
+      "end": 1916
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -30194,6 +31825,7 @@
       "value": "30rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30216,6 +31848,10 @@
         "start": 1927,
         "end": 1927
 >>>>>>> Generate sass vars
+=======
+        "start": 1917,
+        "end": 1917
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -30230,6 +31866,7 @@
   {
     "description": "The maximum width of the content\nfor the Highlight Board when it has an image.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30252,6 +31889,10 @@
       "start": 1928,
       "end": 1929
 >>>>>>> Generate sass vars
+=======
+      "start": 1918,
+      "end": 1919
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -30259,6 +31900,7 @@
       "value": "30rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30281,6 +31923,10 @@
         "start": 1930,
         "end": 1930
 >>>>>>> Generate sass vars
+=======
+        "start": 1920,
+        "end": 1920
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -30295,6 +31941,7 @@
   {
     "description": "Percentage reduction value for the\nfont size in the Highlight Board in narrow viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30317,6 +31964,10 @@
       "start": 1931,
       "end": 1932
 >>>>>>> Generate sass vars
+=======
+      "start": 1921,
+      "end": 1922
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -30324,6 +31975,7 @@
       "value": "0.8",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30346,6 +31998,10 @@
         "start": 1933,
         "end": 1933
 >>>>>>> Generate sass vars
+=======
+        "start": 1923,
+        "end": 1923
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -30360,6 +32016,7 @@
   {
     "description": "The height of the Highlight Board image.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30382,6 +32039,10 @@
       "start": 1934,
       "end": 1934
 >>>>>>> Generate sass vars
+=======
+      "start": 1924,
+      "end": 1924
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -30389,6 +32050,7 @@
       "value": "31.25rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30411,6 +32073,10 @@
         "start": 1935,
         "end": 1935
 >>>>>>> Generate sass vars
+=======
+        "start": 1925,
+        "end": 1925
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -30425,6 +32091,7 @@
   {
     "description": "The background color of the Highlight Board.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30447,6 +32114,10 @@
       "start": 1936,
       "end": 1936
 >>>>>>> Generate sass vars
+=======
+      "start": 1926,
+      "end": 1926
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -30454,6 +32125,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30476,6 +32148,10 @@
         "start": 1937,
         "end": 1937
 >>>>>>> Generate sass vars
+=======
+        "start": 1927,
+        "end": 1927
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
@@ -30490,6 +32166,7 @@
   {
     "description": "The background color of\nthe content box in the Highlight Board.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30512,6 +32189,10 @@
       "start": 1938,
       "end": 1939
 >>>>>>> Generate sass vars
+=======
+      "start": 1928,
+      "end": 1929
+>>>>>>> update sassdoc jsons
     },
     "context": {
       "type": "variable",
@@ -30519,6 +32200,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30541,6 +32223,10 @@
         "start": 1940,
         "end": 1940
 >>>>>>> Generate sass vars
+=======
+        "start": 1930,
+        "end": 1930
+>>>>>>> update sassdoc jsons
       }
     },
     "access": "public",
