@@ -147,7 +147,7 @@ const bindUIEvents = () => {
       }
     }
 
-    generateAriaControls(element, nav);
+    generateAriaControls(element, nav, 'masthead');
 
     /*
      * Check if the mobile menu is visible

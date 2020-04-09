@@ -27,7 +27,7 @@ export const defaultStory = () => {
       data-id="toggle-1"
     >
      <button
-        class="sprk-c-Toggle__trigger"
+        class="sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none"
         data-sprk-toggle="trigger"
       >
         <svg
