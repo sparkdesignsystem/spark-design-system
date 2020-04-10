@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as _ from 'lodash';
 
 function SprkMastheadMenuIcon({
   additionalClasses,
@@ -9,7 +8,7 @@ function SprkMastheadMenuIcon({
   idString,
   isOpen,
   toggleNarrowNav,
-  menuAriaControl,
+  narrowNavId,
 }) {
   return (
     <div
@@ -25,7 +24,7 @@ function SprkMastheadMenuIcon({
         className="sprk-c-Menu"
         type="button"
         aria-expanded={isOpen ? 'true' : 'false'}
-        aria-controls={menuAriaControl}
+        aria-controls={narrowNavId}
       >
         <span className="sprk-u-ScreenReaderText">Toggle Navigation</span>
         <svg
@@ -69,10 +68,6 @@ SprkMastheadMenuIcon.propTypes = {
    */
   analyticsString: PropTypes.string,
   /**
-   * Assigned to the `aria-controls` and id of the corresponding toggle and toggle content. Assigned a uniqueID if not provided.
-   */
-  menuAriaControl: PropTypes.string,
-  /**
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
@@ -88,7 +83,6 @@ SprkMastheadMenuIcon.propTypes = {
 
 SprkMastheadMenuIcon.defaultProps = {
   additionalClasses: '',
-  menuAriaControl: _.uniqueId(`sprk_masthead_narrow_nav_content_`),
   analyticsString: '',
   idString: '',
   isOpen: false,
