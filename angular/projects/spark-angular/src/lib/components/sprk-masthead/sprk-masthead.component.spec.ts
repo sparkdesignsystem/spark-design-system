@@ -195,7 +195,7 @@ describe('SprkMastheadComponent', () => {
     expect(spyOnResize).toHaveBeenCalled();
   });
 
-  it('should add aria-controls and id to narrowNav if narrowNavAriaControls is not passed', () => {
+  it('should add aria-controls and id to narrowNav if narrowNavId is not passed', () => {
     component.isNarrowNavOpen = true;
     fixture.detectChanges();
     narrowNavElement = fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav');
@@ -203,7 +203,7 @@ describe('SprkMastheadComponent', () => {
     expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(narrowNavElement.getAttribute('id'));
   });
 
-  it('should add correct aria-controls and id to narrowNav if narrowNavAriaControls is passed', () => {
+  it('should add correct aria-controls and id to narrowNav if narrowNavId is passed', () => {
     component.isNarrowNavOpen = true;
     component.narrowNavId = 'test_controls';
     fixture.detectChanges();
