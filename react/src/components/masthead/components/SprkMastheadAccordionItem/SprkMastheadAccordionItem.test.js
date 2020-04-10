@@ -147,4 +147,44 @@ describe('SprkMastheadAccordionItem:', () => {
     wrapper.find('.sprk-c-MastheadAccordion__summary').simulate('click');
     expect(wrapper.find('[aria-expanded="true"]').length).toBe(2);
   });
+
+  it('should add aria-controls and id to narrowNav if narrowNavId is not passed', () => {
+    const wrapper = mount(
+      <SprkMastheadAccordionItem
+        text="Item 1"
+        subNavLinks={[{ text: 'Item 1' }]}
+      />,
+    );
+
+    const menuItemToggle = wrapper.find('.sprk-c-MastheadAccordion__summary');
+    menuItemToggle.simulate('click');
+
+    const menuItemContent = wrapper.find('.sprk-c-MastheadAccordion__details');
+    const menuItemContentId = menuItemContent.getDOMNode().getAttribute('id');
+    const menuItemToggleAriaControls = menuItemToggle.getDOMNode().getAttribute('aria-controls');
+
+    expect(menuItemContentId).toMatch(/sprk_accordion_item_\d/);
+    expect(menuItemToggleAriaControls).toEqual(menuItemContentId);
+  });
+
+  it('should add correct aria-controls and id to narrowNav if narrowNavId is passed', () => {
+    const testItemId = "test12345";
+    const wrapper = mount(
+      <SprkMastheadAccordionItem
+        text="Item 1"
+        itemId={testItemId}
+        subNavLinks={[{ text: 'Item 1'}]}
+      />,
+    );
+
+    const menuItemToggle = wrapper.find('.sprk-c-MastheadAccordion__summary');
+    const menuItemContent = wrapper.find('.sprk-c-MastheadAccordion__details');
+    const menuItemContentId = menuItemContent.getDOMNode().getAttribute('id');
+    const menuItemToggleAriaControls = menuItemToggle.getDOMNode().getAttribute('aria-controls');
+
+    expect(menuItemContentId).toEqual(testItemId);
+    expect(menuItemToggleAriaControls).toEqual(testItemId);
+  });
+
+
 });

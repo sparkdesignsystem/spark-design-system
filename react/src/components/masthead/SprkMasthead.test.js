@@ -209,9 +209,9 @@ describe('SprkMasthead:', () => {
 
   it('should add aria-controls and id to narrowNav if narrowNavId is not passed', () => {
     const wrapper = mount(<SprkMasthead narrowNavLinks={[{ text: 'Hi' }]} />);
-    wrapper.find('.sprk-c-Menu').simulate('click');
-    const narrowNavElement = wrapper.find('.sprk-c-Masthead__narrow-nav');
     const hamburgerIcon = wrapper.find('.sprk-c-Menu');
+    hamburgerIcon.simulate('click');
+    const narrowNavElement = wrapper.find('.sprk-c-Masthead__narrow-nav');
     const narrowNavElementId = narrowNavElement.getDOMNode().getAttribute('id');
     const hamburgerIconAriaControls = hamburgerIcon.getDOMNode().getAttribute('aria-controls');
 
@@ -227,9 +227,9 @@ describe('SprkMasthead:', () => {
         narrowNavLinks={[{ text: 'Hi' }]}
       />
     );
-    wrapper.find('.sprk-c-Menu').simulate('click');
-    const narrowNavElement = wrapper.find('.sprk-c-Masthead__narrow-nav');
     const hamburgerIcon = wrapper.find('.sprk-c-Menu');
+    hamburgerIcon.simulate('click');
+    const narrowNavElement = wrapper.find('.sprk-c-Masthead__narrow-nav');
     const narrowNavElementId = narrowNavElement.getDOMNode().getAttribute('id');
     const hamburgerIconAriaControls = hamburgerIcon.getDOMNode().getAttribute('aria-controls');
 
