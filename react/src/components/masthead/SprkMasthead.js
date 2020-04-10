@@ -8,7 +8,7 @@ import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMasthe
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 import SprkLink from '../../base/links/SprkLink';
 import throttle from 'lodash/throttle';
-import * as _ from 'lodash';
+import { uniqueId } from 'lodash';
 
 class SprkMasthead extends Component {
   constructor() {
@@ -171,7 +171,7 @@ class SprkMasthead extends Component {
       logoLinkElement,
       navLink,
       narrowNavSelectionFunction,
-      narrowNavContentId,
+      narrowNavId,
     } = this.props;
     const { isScrolled, narrowNavOpen, isHidden } = this.state;
 
@@ -195,7 +195,7 @@ class SprkMasthead extends Component {
           <SprkMastheadMenuIcon
             toggleNarrowNav={this.toggleNarrowNav}
             isOpen={narrowNavOpen}
-            menuAriaControl={narrowNavContentId}
+            menuAriaControls={narrowNavId}
           />
 
           <div className="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs">
@@ -243,7 +243,7 @@ class SprkMasthead extends Component {
             selector={narrowSelector}
             links={narrowNavLinks}
             isOpen={narrowNavOpen}
-            id={narrowNavContentId}
+            id={narrowNavId}
           />
         )}
       </header>
@@ -257,9 +257,10 @@ SprkMasthead.propTypes = {
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the id and the `aria-controls` attributes of the corresponding toggle and toggle content. This will be assigned a uniqueID if not provided.
+   * Assigned to the id and the `aria-controls` attributes of the corresponding narrow menu toggle icon and content.
+   * Will be assigned a uniqueID if not provided.
    */
-  narrowNavContentId: PropTypes.string,
+  narrowNavId: PropTypes.string,
   /**
    * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
    */
@@ -512,7 +513,7 @@ SprkMasthead.propTypes = {
 
 SprkMasthead.defaultProps = {
   narrowNavSelectionFunction: () => {},
-  narrowNavContentId: _.uniqueId(`sprk_masthead_narrow_nav_content_`),
+  narrowNavId: uniqueId(`sprk_masthead_narrow_nav_`),
   littleNavLinks: [],
   narrowNavLinks: [],
   bigNavLinks: [],
