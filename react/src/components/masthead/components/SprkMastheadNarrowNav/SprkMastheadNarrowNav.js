@@ -59,6 +59,10 @@ SprkMastheadNarrowNav.propTypes = {
        */
       text: PropTypes.string,
       /**
+       * id of the link item
+       */
+      itemId: PropTypes.string,
+      /**
        * Expects an array containing link objects.
        * Will be treated as a subnav to the link.
        */
