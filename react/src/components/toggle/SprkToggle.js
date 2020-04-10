@@ -35,7 +35,7 @@ class SprkToggle extends Component {
       titleAddClasses,
       iconAddClasses,
       toggleIconName,
-      ariaControls,
+      contentId,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
@@ -63,7 +63,7 @@ class SprkToggle extends Component {
           data-analytics={analyticsString}
           onClick={this.toggleOpen}
           aria-expanded={isOpen ? 'true' : 'false'}
-          aria-controls={ariaControls}
+          aria-controls={contentId}
         >
           <SprkIcon iconName={toggleIconName} additionalClasses={iconClasses} />
           {title}
@@ -72,7 +72,7 @@ class SprkToggle extends Component {
           duration={300}
           height={height}
           className='sprk-c-Toggle__content'
-          id={ariaControls}
+          id={contentId}
         >
           <div>{children}</div>
         </AnimateHeight>
@@ -83,7 +83,7 @@ class SprkToggle extends Component {
 
 SprkToggle.defaultProps = {
   toggleIconName: 'chevron-down-circle-two-color',
-  ariaControls: uniqueId('sprk_toggle_content_'),
+  contentId: uniqueId('sprk_toggle_content_'),
 };
 
 SprkToggle.propTypes = {
@@ -113,8 +113,11 @@ SprkToggle.propTypes = {
   titleAddClasses: PropTypes.string,
   /** Additional classes for the toggle icon. */
   iconAddClasses: PropTypes.string,
-  /** A string that is used to set the aria-controls and associated id for the component. */
-  ariaControls: PropTypes.string,
+  /**
+   * A string that is used to set the `id` on the content
+   * and the `aria-controls` for the toggle trigger button.
+   */
+  contentId: PropTypes.string,
 };
 
 export default SprkToggle;
