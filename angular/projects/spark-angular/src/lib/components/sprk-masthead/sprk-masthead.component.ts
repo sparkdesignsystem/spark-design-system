@@ -28,7 +28,7 @@ import {
             type="button"
             [attr.aria-expanded]="isNarrowNavOpen ? true : false"
             (click)="toggleNarrowNav($event)"
-            [attr.aria-controls]="narrowNavAriaControls"
+            [attr.aria-controls]="narrowNavId"
           >
             <span class="sprk-u-ScreenReaderText">Toggle Navigation</span>
             <svg
@@ -142,7 +142,7 @@ import {
         *ngIf="isNarrowNavOpen"
         class="sprk-c-Masthead__narrow-nav"
         role="navigation"
-        [id]="narrowNavAriaControls"
+        [id]="narrowNavId"
       >
         <sprk-dropdown
           *ngIf="narrowSelector"
@@ -338,7 +338,7 @@ export class SprkMastheadComponent implements AfterContentInit {
    * and associated id for the narrow navigation toggle.
    */
   @Input()
-  narrowNavAriaControls = _.uniqueId(`sprk_masthead_narrow_nav_content_`);
+  narrowNavId = _.uniqueId(`sprk_masthead_narrow_nav_`);
 
   /**
    * @ignore
