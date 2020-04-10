@@ -163,6 +163,7 @@ export const defaultStory = () => (
   <SprkMasthead
     littleNavLinks={links}
     narrowNavLinks={links.concat(addedNarrowNavLinks)}
+    narrowNavMenuToggleAriaControls="sprk-masthead-narrow-nav-toggle-aria-default"
     siteLogo={<svg className="sprk-c-Masthead__logo" xmlns="http://www.w3.org/2000/svg" width="365.4" height="48" viewBox="0 0 365.4 101.35">
       <title>spark-red-full-outlines</title>
       <path
@@ -268,6 +269,7 @@ export const extended = () => (
     bigNavLinks={links}
     selector={selector}
     narrowSelector={selector}
+    narrowNavMenuToggleAriaControls="sprk-masthead-narrow-nav-toggle-aria-extended"
     narrowNavLinks={links.concat(addedNarrowNavLinks)}
     siteLogo={<svg className="sprk-c-Masthead__logo" xmlns="http://www.w3.org/2000/svg" width="365.4" height="48" viewBox="0 0 365.4 101.35">
       <title>spark-red-full-outlines</title>
