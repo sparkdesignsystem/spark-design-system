@@ -17,9 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/angular",
             "index": "src/index.html",
-            "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "./tsconfig.json",
             "assets": [
@@ -66,6 +66,12 @@
           "options": {
             "tsConfig": "projects/spark-angular/tsconfig.lib.json",
             "project": "projects/spark-angular/ng-package.json"
+          }
+        ,
+        "configurations": {
+            "production": {
+              "tsConfig": "projects/spark-angular/tsconfig.lib.prod.json"
+            }
           }
         },
         "lint": {
