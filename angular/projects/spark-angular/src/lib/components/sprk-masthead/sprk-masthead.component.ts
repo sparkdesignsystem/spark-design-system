@@ -334,7 +334,7 @@ export class SprkMastheadComponent implements AfterContentInit {
   @Input()
   narrowSelector: ISprkNarrowSelector;
   /**
-   * A string that is used to set the aria-controls
+   * A string that is used to set the `aria-controls`
    * and associated id for the narrow navigation toggle.
    */
   @Input()

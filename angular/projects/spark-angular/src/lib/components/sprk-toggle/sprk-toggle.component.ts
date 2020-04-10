@@ -1,4 +1,4 @@
-import { Component, Input, AfterViewInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
+import { Component, Input, AfterViewInit } from '@angular/core';
 import { toggleAnimations } from './sprk-toggle-animations';
 import { uniqueId } from 'lodash';
 import 'focus-visible';
@@ -16,7 +16,7 @@ import 'focus-visible';
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
         [attr.data-analytics]="analyticsString"
-        #toggleTrigger
+        [attr.aria-controls]="contentId"
       >
         <sprk-icon
           iconType="chevron-down-circle-two-color"
@@ -29,7 +29,7 @@ import 'focus-visible';
 
       <div
         [@toggleContent]="animState"
-        #toggleContent
+        [id]="contentId"
       >
         <div class="sprk-u-pts sprk-u-pbs sprk-c-Toggle__content">
           <ng-content></ng-content>
@@ -40,9 +40,6 @@ import 'focus-visible';
   animations: [toggleAnimations.toggleContent]
 })
 export class SprkToggleComponent implements AfterViewInit {
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
-  @ViewChild('toggleTrigger', { static: true }) toggleTrigger: ElementRef;
-  @ViewChild('toggleContent', { static: true }) toggleContent: ElementRef;
 
   /**
    * The value supplied will be assigned to the
@@ -89,6 +86,12 @@ export class SprkToggleComponent implements AfterViewInit {
    */
   @Input()
   idString: string;
+  /**
+   * A string that is used to set the id on the content
+   * and the `aria-controls` for the toggle trigger button.
+   */
+  @Input()
+  contentId = uniqueId(`sprk_toggle_content_`);
 
   /**
    * @ignore
@@ -136,39 +139,7 @@ export class SprkToggleComponent implements AfterViewInit {
     return classArray.join(' ');
   }
 
-  /**
-   * @ignore
-   */
-  generateAriaControls(): void {
-    const triggerElement = this.toggleTrigger.nativeElement;
-    const contentElement = this.toggleContent.nativeElement;
-    const triggerAriaControls = triggerElement.getAttribute('aria-controls');
-    let contentId = contentElement.getAttribute('id');
-
-    // Warn if aria-controls exists but the id does not
-    if (triggerAriaControls && !contentId) {
-      console.warn(`Spark Design System Warning - The component with aria-controls="${triggerAriaControls}" expects a matching id on the content element.`);
-      return;
-    }
-
-    // Warn if aria-controls and id both exist but don't match
-    if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
-      console.warn(`Spark Design System Warning - The value of aria-controls ("${triggerAriaControls}") should match the id of the content element ("${contentId}").`);
-      return;
-    }
-
-    // If we don't have a valid id, generate one with lodash
-    if (!contentId) {
-      contentId = uniqueId(`sprk_toggle_content_`);
-      this.renderer.setAttribute(contentElement, 'id', contentId);
-    }
-
-    // set the value of aria-controls
-    this.renderer.setAttribute(triggerElement, 'aria-controls', contentId);
-  }
-
   ngAfterViewInit() {
     this.toggleState();
-    this.generateAriaControls();
   }
 }
