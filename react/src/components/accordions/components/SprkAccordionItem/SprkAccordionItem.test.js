@@ -72,7 +72,6 @@ describe('SprkAccordionItem:', () => {
     const wrapper = mount(
       <SprkAccordionItem heading="test" id="test-id">test</SprkAccordionItem>,
     );
-    console.log(wrapper.find('.sprk-c-Accordion__content').getDOMNode(), 'asdfasdfeeeasdf')
 
     wrapper.find('button').simulate('click');
     expect(
