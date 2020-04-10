@@ -8,7 +8,7 @@ function SprkMastheadMenuIcon({
   idString,
   isOpen,
   toggleNarrowNav,
-  narrowNavId,
+  menuAriaControls,
 }) {
   return (
     <div
@@ -24,7 +24,7 @@ function SprkMastheadMenuIcon({
         className="sprk-c-Menu"
         type="button"
         aria-expanded={isOpen ? 'true' : 'false'}
-        aria-controls={narrowNavId}
+        aria-controls={menuAriaControls}
       >
         <span className="sprk-u-ScreenReaderText">Toggle Navigation</span>
         <svg
