@@ -334,8 +334,8 @@ export class SprkMastheadComponent implements AfterContentInit {
   @Input()
   narrowSelector: ISprkNarrowSelector;
   /**
-   * A string that is used to set the `aria-controls`
-   * and associated id for the narrow navigation toggle.
+   * A string that is used to set the `id` on the narrow nav
+   * and the `aria-controls` for the menu trigger button.
    */
   @Input()
   narrowNavId = _.uniqueId(`sprk_masthead_narrow_nav_`);
