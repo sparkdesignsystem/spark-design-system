@@ -87,7 +87,7 @@ export class SprkToggleComponent implements AfterViewInit {
   @Input()
   idString: string;
   /**
-   * A string that is used to set the id on the content
+   * A string that is used to set the `id` on the content
    * and the `aria-controls` for the toggle trigger button.
    */
   @Input()
