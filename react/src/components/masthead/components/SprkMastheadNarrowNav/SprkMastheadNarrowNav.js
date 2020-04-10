@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SprkMastheadAccordion from '../SprkMastheadAccordion/SprkMastheadAccordion';
 import SprkMastheadSelector from '../SprkMastheadSelector/SprkMastheadSelector';
+import * as _ from 'lodash';
 
 const SprkMastheadNarrowNav = ({
   idString,
@@ -9,6 +10,7 @@ const SprkMastheadNarrowNav = ({
   isOpen,
   links,
   selector,
+  narrowNavAriaControls,
   ...rest
 }) => (
   <React.Fragment>
@@ -17,6 +19,7 @@ const SprkMastheadNarrowNav = ({
         className="sprk-c-Masthead__narrow-nav"
         role="navigation"
         data-id={idString}
+        id={narrowNavAriaControls}
         {...rest}
       >
         {selector.items && <SprkMastheadSelector isFlush choices={selector} />}
@@ -31,6 +34,10 @@ SprkMastheadNarrowNav.propTypes = {
    * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
+  /**
+   * Assigned to the `aria-controls` and id of the corresponding toggle and toggle content. Assigned a uniqueID if not provided.
+   */
+  navAriaControls: PropTypes.string,
   /**
    * If `true`, will render the Narrow Navigation.
    */
@@ -123,6 +130,7 @@ SprkMastheadNarrowNav.propTypes = {
 
 SprkMastheadNarrowNav.defaultProps = {
   linkSelectionFunction: () => {},
+  narrowNavAriaControls: _.uniqueId(`sprk_masthead_narrow_nav_content_`),
   idString: '',
   isOpen: false,
   selector: {},
