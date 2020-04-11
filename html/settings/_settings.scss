@@ -1670,6 +1670,18 @@ $sprk-masthead-accordion-item-open-line-height: 2px !default;
 /// The padding of the items in the
 /// narrow viewport Masthead Accordion.
 $sprk-masthead-accordion-item-padding: $sprk-space-m !default;
+/// The text alignment of an item in the
+/// narrow viewport Masthead Accordion.
+$sprk-masthead-accordion-item-text-align: left !default;
+/// The border of an item in the
+/// narrow viewport Masthead Accordion.
+$sprk-masthead-accordion-item-border: 0 !default;
+/// The background of an item in the
+/// narrow viewport Masthead Accordion.
+$sprk-masthead-accordion-item-background: transparent !default;
+/// The color of the accordion icon in the
+/// narrow viewport Masthead Accordion.
+$sprk-masthead-accordion-item-summary-icon-color: $sprk-green !default;
 
 //
 // Spinners
