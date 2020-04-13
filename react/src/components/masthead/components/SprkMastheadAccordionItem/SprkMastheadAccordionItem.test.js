@@ -145,7 +145,7 @@ describe('SprkMastheadAccordionItem:', () => {
     );
     expect(wrapper.state().isOpen).toBe(false);
     wrapper.find('.sprk-c-MastheadAccordion__summary').simulate('click');
-    expect(wrapper.find('[aria-expanded="true"]').length).toBe(2);
+    expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
   });
 
   it('should add aria-controls and id to narrowNav if narrowNavId is not passed', () => {
