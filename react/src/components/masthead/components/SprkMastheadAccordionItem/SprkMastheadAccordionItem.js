@@ -39,6 +39,7 @@ class SprkMastheadAccordionItem extends Component {
       leadingIcon,
       subNavLinks,
       text,
+      itemId,
       ...rest
     } = this.props;
     const { isOpen, height, subNavLinks: stateLinks } = this.state;
@@ -57,22 +58,30 @@ class SprkMastheadAccordionItem extends Component {
       >
         {stateLinks.length > 0 && (
           <React.Fragment>
-            <SprkLink
-              variant="unstyled"
-              additionalClasses="sprk-c-MastheadAccordion__summary"
+            <button
+              className="sprk-c-MastheadAccordion__summary"
               onClick={this.toggleAccordionOpen}
               aria-expanded={isOpen ? 'true' : 'false'}
+              aria-controls={itemId}
             >
               <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
                 {text}
               </span>
               <SprkIcon
-                additionalClasses={classNames({ 'sprk-c-Icon--open': isOpen })}
+                additionalClasses={
+                  classNames(
+                    'sprk-c-MastheadAccordion__icon',
+                    { 'sprk-c-Icon--open': isOpen }
+                  )
+                }
                 iconName="chevron-down"
               />
-            </SprkLink>
+            </button>
             <AnimateHeight duration={300} height={height}>
-              <ul className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details">
+              <ul
+                className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
+                id={itemId}
+              >
                 {stateLinks.map((subnavlink) => {
                   const {
                     element: innerElement,
@@ -215,6 +224,7 @@ SprkMastheadAccordionItem.defaultProps = {
   isButton: false,
   subNavLinks: [],
   href: '#nogo',
+  itemId: uniqueId('sprk_accordion_item_'),
 };
 
 export default SprkMastheadAccordionItem;

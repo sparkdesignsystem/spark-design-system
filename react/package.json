@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --config ./src/jest-config.js --coverage --verbose",
+    "test:watch": "jest --config ./src/jest-config.js --coverage --verbose --watch",
     "test:generate-output": "jest --config ./src/jest-config.js --json --outputFile=./src/.jest-test-results.json",
     "build": "rollup -c rollup.config.js",
     "storybook": "npm run prebuild:storybook && start-storybook -p 6006 -s ../storybook-utilities/favicon",

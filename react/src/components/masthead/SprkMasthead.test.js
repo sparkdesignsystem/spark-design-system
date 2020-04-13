@@ -206,6 +206,37 @@ describe('SprkMasthead:', () => {
     instance.checkLayoutOnResize();
     expect(spy).toHaveBeenCalled();
   });
+
+  it('should add aria-controls and id to narrowNav if narrowNavId is not passed', () => {
+    const wrapper = mount(<SprkMasthead narrowNavLinks={[{ text: 'Hi' }]} />);
+    const hamburgerIcon = wrapper.find('.sprk-c-Menu');
+    hamburgerIcon.simulate('click');
+    const narrowNavElement = wrapper.find('.sprk-c-Masthead__narrow-nav');
+    const narrowNavElementId = narrowNavElement.getDOMNode().getAttribute('id');
+    const hamburgerIconAriaControls = hamburgerIcon.getDOMNode().getAttribute('aria-controls');
+
+    expect(narrowNavElementId).toMatch(/sprk_masthead_narrow_nav_\d/);
+    expect(hamburgerIconAriaControls).toEqual(narrowNavElementId);
+  });
+
+  it('should add correct aria-controls and id to narrowNav if narrowNavId is passed', () => {
+    const testNarrowNavId = "test1234"
+    const wrapper = mount(
+      <SprkMasthead i
+        narrowNavId={testNarrowNavId}
+        narrowNavLinks={[{ text: 'Hi' }]}
+      />
+    );
+    const hamburgerIcon = wrapper.find('.sprk-c-Menu');
+    hamburgerIcon.simulate('click');
+    const narrowNavElement = wrapper.find('.sprk-c-Masthead__narrow-nav');
+    const narrowNavElementId = narrowNavElement.getDOMNode().getAttribute('id');
+    const hamburgerIconAriaControls = hamburgerIcon.getDOMNode().getAttribute('aria-controls');
+
+
+    expect(narrowNavElementId).toEqual(testNarrowNavId);
+    expect(hamburgerIconAriaControls).toEqual(testNarrowNavId);
+  });
 });
 
 // NOT TESTING REMOVAL OF EVENTLISTENERS ON UNMOUNT

@@ -338,6 +338,7 @@
 
 .sprk-c-MastheadAccordion__icon {
   flex: 0 0 auto;
+  stroke: $sprk-masthead-accordion-item-summary-icon-color;
 }
 
 .sprk-c-MastheadAccordion__summary {
@@ -348,11 +349,22 @@
   padding: $sprk-masthead-accordion-item-padding;
   text-decoration: none;
 
+  // Button User Agent Resets
+  width: 100%;
+  background: $sprk-masthead-accordion-item-background;
+  border: $sprk-masthead-accordion-item-border;
+  text-align: $sprk-masthead-accordion-item-text-align;
+
   &:hover,
   &:active {
     background-color: $sprk-masthead-accordion-active-background-color;
     color: $sprk-masthead-accordion-active-font-color;
     text-decoration: none;
+  }
+
+  // Polyfill for focus-visible
+  &:focus:not(.focus-visible) {
+    outline: none;
   }
 }
 
