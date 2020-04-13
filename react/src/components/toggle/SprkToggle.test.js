@@ -52,15 +52,15 @@ describe('SprkToggle:', () => {
     expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
   });
 
-  it('should add aria-controls="custom_control" and id="custom_control" when the ariaControls is passed', () => {
+  it('should add aria-controls="custom_control" and id="custom_control" when the contentId is passed', () => {
     const wrapper = mount(
-      <SprkToggle title="Toggle title" ariaControls="custom_control">Body text</SprkToggle>,
+      <SprkToggle title="Toggle title" contentId="custom_control">Body text</SprkToggle>,
     );
     expect(wrapper.find('[aria-controls="custom_control"]').length).toBe(1);
     expect(wrapper.find('div#custom_control').length).toBe(1);
   });
 
-  it('should add aria-controls and id when the ariaControls is not passed', () => {
+  it('should add aria-controls and id when the contentId is not passed', () => {
     const wrapper = mount(
       <SprkToggle title="Toggle title">Body text</SprkToggle>,
     );
