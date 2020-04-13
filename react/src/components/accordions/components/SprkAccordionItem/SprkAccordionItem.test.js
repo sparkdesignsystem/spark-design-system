@@ -70,7 +70,11 @@ describe('SprkAccordionItem:', () => {
 
   it('should have aria-controls attribute value equal to content value', () => {
     const wrapper = mount(
-      <SprkAccordionItem heading="test" id="test-id">test</SprkAccordionItem>,
+      <SprkAccordionItem
+        heading="test"
+        id="test-id">
+          test
+      </SprkAccordionItem>,
     );
 
     wrapper.find('button').simulate('click');
