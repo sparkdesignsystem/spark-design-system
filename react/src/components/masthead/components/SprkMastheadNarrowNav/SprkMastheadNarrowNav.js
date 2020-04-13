@@ -59,7 +59,7 @@ SprkMastheadNarrowNav.propTypes = {
        */
       text: PropTypes.string,
       /**
-       * id of the link item
+       * `id` of the link item
        */
       itemId: PropTypes.string,
       /**
