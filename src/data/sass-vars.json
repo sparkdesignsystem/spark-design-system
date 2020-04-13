@@ -15496,7 +15496,7 @@
     }
   },
   {
-    "description": "The left border of the active item\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The left border of the active item\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1634,
       "end": 1635
@@ -15521,7 +15521,7 @@
     }
   },
   {
-    "description": "The font weight of the active item\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The font weight of the active item\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1637,
       "end": 1638
@@ -15546,7 +15546,7 @@
     }
   },
   {
-    "description": "The color of the active item\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The color of the active item\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1640,
       "end": 1641
@@ -15571,7 +15571,7 @@
     }
   },
   {
-    "description": "The color of the heading\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The color of the heading\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1643,
       "end": 1644
@@ -15596,7 +15596,7 @@
     }
   },
   {
-    "description": "The font weight of the heading\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The font weight of the heading\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1646,
       "end": 1647
@@ -15621,7 +15621,7 @@
     }
   },
   {
-    "description": "The font weight of the details\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The font weight of the details\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1649,
       "end": 1650
@@ -15646,7 +15646,7 @@
     }
   },
   {
-    "description": "The font color of the details\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The font color of the details\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1652,
       "end": 1653
@@ -15671,7 +15671,7 @@
     }
   },
   {
-    "description": "The background color of the active\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The background color of the active\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1655,
       "end": 1656
@@ -15696,7 +15696,7 @@
     }
   },
   {
-    "description": "The font color of the active\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The font color of the active\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1658,
       "end": 1659
@@ -15721,7 +15721,7 @@
     }
   },
   {
-    "description": "The font color of the text\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The font color of the text\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1661,
       "end": 1662
@@ -15746,7 +15746,7 @@
     }
   },
   {
-    "description": "The color of the line on open items\nnavigation links when masthead is on narrow viewports.\n",
+    "description": "The color of the line on open items\nin the naviation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1664,
       "end": 1665
