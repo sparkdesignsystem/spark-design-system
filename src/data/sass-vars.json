@@ -15496,7 +15496,7 @@
     }
   },
   {
-    "description": "The left border of the active item\nin the narrow viewport Masthead Accordion.\n",
+    "description": "The left border of the active item\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1634,
       "end": 1635
@@ -15521,7 +15521,7 @@
     }
   },
   {
-    "description": "The font weight of the active item\nin the narrow viewport Masthead Accordion.\n",
+    "description": "The font weight of the active item\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1637,
       "end": 1638
@@ -15546,7 +15546,7 @@
     }
   },
   {
-    "description": "The color of the active item\nin the narrow viewport Masthead Accordion.\n",
+    "description": "The color of the active item\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1640,
       "end": 1641
@@ -15571,7 +15571,7 @@
     }
   },
   {
-    "description": "The color of the heading\nin the narrow viewport Masthead Accordion.\n",
+    "description": "The color of the heading\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1643,
       "end": 1644
@@ -15596,7 +15596,7 @@
     }
   },
   {
-    "description": "The font weight of the heading\nin the narrow viewport Masthead Accordion.\n",
+    "description": "The font weight of the heading\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1646,
       "end": 1647
@@ -15621,7 +15621,7 @@
     }
   },
   {
-    "description": "The font weight of the details\nin the narrow viewport Masthead Accordion.\n",
+    "description": "The font weight of the details\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1649,
       "end": 1650
@@ -15646,7 +15646,7 @@
     }
   },
   {
-    "description": "The font color of the details\nin the narrow viewport Masthead Accordion.\n",
+    "description": "The font color of the details\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1652,
       "end": 1653
@@ -15671,7 +15671,7 @@
     }
   },
   {
-    "description": "The background color of the active\nitem in the narrow viewport Masthead Accordion.\n",
+    "description": "The background color of the active\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1655,
       "end": 1656
@@ -15696,7 +15696,7 @@
     }
   },
   {
-    "description": "The font color of the active\nitem in the narrow viewport Masthead Accordion.\n",
+    "description": "The font color of the active\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1658,
       "end": 1659
@@ -15721,7 +15721,7 @@
     }
   },
   {
-    "description": "The font color of the text\nin items in the narrow viewport Masthead Accordion.\n",
+    "description": "The font color of the text\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1661,
       "end": 1662
@@ -15746,7 +15746,7 @@
     }
   },
   {
-    "description": "The color of the line on open items\nin the narrow viewport Masthead Accordion.\n",
+    "description": "The color of the line on open items\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1664,
       "end": 1665
@@ -15771,7 +15771,7 @@
     }
   },
   {
-    "description": "The height of the line on open\nitems in the narrow viewport Masthead Accordion.\n",
+    "description": "The height of the line on open\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1667,
       "end": 1668
@@ -15796,7 +15796,7 @@
     }
   },
   {
-    "description": "The padding of the items in the\nnarrow viewport Masthead Accordion.\n",
+    "description": "The padding of the items in the\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1670,
       "end": 1671
@@ -15821,7 +15821,7 @@
     }
   },
   {
-    "description": "The text alignment of an item in the\nnarrow viewport Masthead Accordion.\n",
+    "description": "The text alignment of an item in the\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1673,
       "end": 1674
@@ -15846,7 +15846,7 @@
     }
   },
   {
-    "description": "The border of an item in the\nnarrow viewport Masthead Accordion.\n",
+    "description": "The border of an item in the\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1676,
       "end": 1677
@@ -15871,7 +15871,7 @@
     }
   },
   {
-    "description": "The background of an item in the\nnarrow viewport Masthead Accordion.\n",
+    "description": "The background of an item in the\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1679,
       "end": 1680
@@ -15896,7 +15896,7 @@
     }
   },
   {
-    "description": "The color of the accordion icon in the\nnarrow viewport Masthead Accordion.\n",
+    "description": "The color of the accordion icon in the\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1682,
       "end": 1683
@@ -15904,7 +15904,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-masthead-accordion-item-summary-icon-color",
-      "value": "$sprk-green",
+      "value": "$sprk-link-has-icon-color-icon",
       "scope": "default",
       "line": {
         "start": 1684,
