@@ -2406,16 +2406,6 @@
     }
   },
   {
-<<<<<<< HEAD
-    "description": "A Spark utility class that can be used on\nthe Highlight Board to make it become 100% width.\n",
-    "commentRange": {
-      "start": 52,
-      "end": 54
-    },
-    "context": {
-      "type": "css",
-      "name": ".sprk-u-FullWidth",
-=======
     "description": "Adds the styles for the Stacked Highlight Board variant.\n",
     "commentRange": {
       "start": 49,
@@ -2424,7 +2414,6 @@
     "context": {
       "type": "css",
       "name": ".sprk-c-HighlightBoard--stacked",
->>>>>>> 33df03df49b5012ad214a0f1555378e681f4a0bc
       "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
       "line": {
         "start": 59,
@@ -2465,14 +2454,14 @@
     }
   },
   {
-    "description": "Adds the styles for the Stacked Highlight Board variant.\n",
+    "description": "A Spark utility class that can be used on\nthe Highlight Board to make it become 100% width.\n",
     "commentRange": {
-      "start": 49,
-      "end": 50
+      "start": 52,
+      "end": 54
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-HighlightBoard--stacked",
+      "name": ".sprk-u-FullWidth",
       "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
       "line": {
         "start": 59,
@@ -3052,7 +3041,7 @@
       "value": "position: fixed;\n  left: 0;\n  right: 0;\n  height: 100%;\n\n  @media all and (min-width: $sprk-masthead-breakpoint) {\n    position: sticky;\n    height: auto;\n  }",
       "line": {
         "start": 22,
-        "end": 428
+        "end": 427
       }
     },
     "group": [
@@ -3076,7 +3065,7 @@
       "value": "box-shadow: $sprk-masthead-shadow-scroll;",
       "line": {
         "start": 35,
-        "end": 428
+        "end": 427
       }
     },
     "group": [
@@ -3100,7 +3089,7 @@
       "value": "transform: $sprk-masthead-translateY;\n  transition: $sprk-masthead-transition;",
       "line": {
         "start": 41,
-        "end": 428
+        "end": 427
       }
     },
     "group": [
@@ -3124,7 +3113,7 @@
       "value": "display: block;\n  font-weight: $sprk-big-nav-link-font-weight;\n  padding: $sprk-big-nav-link-padding;\n\n  &:hover,\n  &:active,\n  &:focus {\n    color: $sprk-big-nav-link-color;\n  }",
       "line": {
         "start": 205,
-        "end": 428
+        "end": 427
       }
     },
     "group": [
@@ -3148,7 +3137,7 @@
       "value": "color: $sprk-big-nav-active-color;\n  font-weight: $sprk-big-nav-link-font-weight;",
       "line": {
         "start": 249,
-        "end": 428
+        "end": 427
       }
     },
     "group": [
@@ -3172,7 +3161,7 @@
       "value": "@include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 100%, $sprk-hoverline-height: 2px);",
       "line": {
         "start": 258,
-        "end": 428
+        "end": 427
       }
     },
     "group": [
@@ -3187,16 +3176,16 @@
   {
     "description": "Adds top divider when open.\n",
     "commentRange": {
-      "start": 375,
-      "end": 376
+      "start": 374,
+      "end": 375
     },
     "context": {
       "type": "css",
       "name": ".sprk-c-MastheadAccordion__item--open",
       "value": "background-color: $sprk-masthead-accordion-item-open-line-background-color;\n  content: '';\n  display: block;\n  height: $sprk-masthead-accordion-item-open-line-height;\n  margin: 0 auto;\n  width: 100%;",
       "line": {
-        "start": 377,
-        "end": 428
+        "start": 376,
+        "end": 427
       }
     },
     "group": [
@@ -3211,16 +3200,16 @@
   {
     "description": "Adds selected item background highlight and left color bar.\n",
     "commentRange": {
-      "start": 386,
-      "end": 387
+      "start": 385,
+      "end": 386
     },
     "context": {
       "type": "css",
       "name": ".sprk-c-MastheadAccordion__item--active",
       "value": "background-color: $sprk-masthead-accordion-active-background-color;\n  border-left: $sprk-masthead-accordion-active-left-border;",
       "line": {
-        "start": 389,
-        "end": 428
+        "start": 388,
+        "end": 427
       }
     },
     "group": [
@@ -3233,16 +3222,6 @@
     }
   },
   {
-<<<<<<< HEAD
-    "description": "Sets the padding on the left and right (horizontal)\nto `$sprk-space-misc-b` (`40px`).\n",
-    "commentRange": {
-      "start": 555,
-      "end": 558
-    },
-    "context": {
-      "type": "css",
-      "name": "sprk-u-PaddingHorizontal--b",
-=======
     "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
     "commentRange": {
       "start": 560,
@@ -3251,7 +3230,6 @@
     "context": {
       "type": "css",
       "name": "sprk-u-MarginAll--d",
->>>>>>> 33df03df49b5012ad214a0f1555378e681f4a0bc
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
         "start": 569,
@@ -4576,16 +4554,6 @@
     }
   },
   {
-<<<<<<< HEAD
-    "description": "of its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
-    "commentRange": {
-      "start": 309,
-      "end": 311
-    },
-    "context": {
-      "type": "css",
-      "name": ".sprk-o-Stack__item--third@xxs",
-=======
     "description": "When placed on an item, its width will be 3/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 333,
@@ -4594,7 +4562,6 @@
     "context": {
       "type": "css",
       "name": ".sprk-o-Stack__item--three-tenths@xxs",
->>>>>>> 33df03df49b5012ad214a0f1555378e681f4a0bc
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4779,16 +4746,6 @@
     }
   },
   {
-<<<<<<< HEAD
-    "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
-    "commentRange": {
-      "start": 338,
-      "end": 341
-    },
-    "context": {
-      "type": "css",
-      "name": ".sprk-o-Stack__item--seven-tenths@xxs",
-=======
     "description": "When placed on an item, its width will be 3/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 328,
@@ -4797,7 +4754,6 @@
     "context": {
       "type": "css",
       "name": ".sprk-o-Stack__item--three-fifths@xxs",
->>>>>>> 33df03df49b5012ad214a0f1555378e681f4a0bc
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4814,16 +4770,6 @@
     }
   },
   {
-<<<<<<< HEAD
-    "description": "When placed on an item, its width will be 3/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
-    "commentRange": {
-      "start": 328,
-      "end": 331
-    },
-    "context": {
-      "type": "css",
-      "name": ".sprk-o-Stack__item--three-fifths@xxs",
-=======
     "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
       "start": 338,
@@ -4832,7 +4778,6 @@
     "context": {
       "type": "css",
       "name": ".sprk-o-Stack__item--seven-tenths@xxs",
->>>>>>> 33df03df49b5012ad214a0f1555378e681f4a0bc
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -24329,31 +24274,7 @@
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
         "start": 569,
-        "end": 841
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "utilities/_utilities.scss",
-      "name": "_utilities.scss"
-    }
-  },
-  {
-    "description": "\n",
-    "commentRange": {
-      "start": 770,
-      "end": 770
-    },
-    "context": {
-      "type": "css",
-      "name": "//\n// Accessibility\n///\n\n/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
-      "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
-      "line": {
-        "start": 779,
-        "end": 841
+        "end": 829
       }
     },
     "access": "public",
@@ -24392,12 +24313,12 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 774,
-      "end": 774
+      "start": 770,
+      "end": 770
     },
     "context": {
       "type": "css",
-      "name": "/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "name": "//\n// Accessibility\n///\n\n/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
       "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
       "line": {
         "start": 779,
