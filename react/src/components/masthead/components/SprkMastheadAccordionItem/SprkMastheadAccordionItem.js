@@ -70,7 +70,7 @@ class SprkMastheadAccordionItem extends Component {
               <SprkIcon
                 additionalClasses={
                   classNames(
-                    'sprk-c-MastheadAccordion__summaryIcon',
+                    'sprk-c-MastheadAccordion__icon',
                     { 'sprk-c-Icon--open': isOpen }
                   )
                 }
