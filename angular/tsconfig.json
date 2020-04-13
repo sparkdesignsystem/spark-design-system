@@ -34,10 +34,12 @@
     "strictInjectionParameters": true,
     "enableIvy": false
   },
-  "files": [
-    "src/polyfills.ts"
-  ],
   "include": [
-    "**/*.d.ts"
+    "**/*.d.ts",
+    "projects/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
   ]
 }
