@@ -258,7 +258,6 @@ SprkMasthead.propTypes = {
   additionalClasses: PropTypes.string,
   /**
    * Assigned to the id and the `aria-controls` attributes of the corresponding narrow menu toggle icon and content.
-   * Will be assigned a uniqueID if not provided.
    */
   narrowNavId: PropTypes.string,
   /**
