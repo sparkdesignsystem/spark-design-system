@@ -1954,7 +1954,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-centered-column-width",
-      "value": "64rem",
+      "value": "1232px",
       "scope": "default",
       "line": {
         "start": 169,
