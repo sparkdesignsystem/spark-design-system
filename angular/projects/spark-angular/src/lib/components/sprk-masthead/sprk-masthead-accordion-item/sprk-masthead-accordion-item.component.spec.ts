@@ -29,7 +29,7 @@ describe('SprkMastheadAccordionItemComponent', () => {
     fixture = TestBed.createComponent(SprkMastheadAccordionItemComponent);
     component = fixture.componentInstance;
     accordionItemElement = fixture.nativeElement.querySelector('li');
-    accordionItemLinkElement = fixture.nativeElement.querySelector('a');
+    accordionItemLinkElement = fixture.nativeElement.querySelector('button');
     accordionHeadingElement = fixture.nativeElement.querySelector('span');
     accordionDetailsElement = fixture.nativeElement.querySelector('div');
   });
@@ -70,6 +70,22 @@ describe('SprkMastheadAccordionItemComponent', () => {
         'sprk-c-MastheadAccordion__item--open'
       )
     ).toEqual(false);
+  });
+
+  it('should be aria-expanded=false if closed', () => {
+    component.isOpen = false;
+    fixture.detectChanges();
+    expect(
+      accordionItemLinkElement.getAttribute('aria-expanded')
+    ).toEqual("false");
+  });
+
+  it('should be aria-expanded=true if open', () => {
+    component.isOpen = true;
+    fixture.detectChanges();
+    expect(
+      accordionItemLinkElement.getAttribute('aria-expanded')
+    ).toEqual("true");
   });
 
   it('should be open if isOpen is true', () => {
