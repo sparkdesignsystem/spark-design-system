@@ -8,7 +8,7 @@ import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMasthe
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 import SprkLink from '../../base/links/SprkLink';
 import throttle from 'lodash/throttle';
-import { uniqueId } from 'lodash';
+import uniqueId from 'lodash/uniqueId';
 
 class SprkMasthead extends Component {
   constructor() {
