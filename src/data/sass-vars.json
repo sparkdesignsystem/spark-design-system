@@ -15896,35 +15896,10 @@
     }
   },
   {
-    "description": "The color of the accordion icon in the\nnavigation links when masthead is on narrow viewports.\n",
-    "commentRange": {
-      "start": 1682,
-      "end": 1683
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-masthead-accordion-item-summary-icon-color",
-      "value": "$sprk-link-has-icon-color-icon",
-      "scope": "default",
-      "line": {
-        "start": 1684,
-        "end": 1684
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
     "description": "The height and width of Spinners.\n",
     "commentRange": {
-      "start": 1690,
-      "end": 1690
+      "start": 1687,
+      "end": 1687
     },
     "context": {
       "type": "variable",
@@ -15932,8 +15907,8 @@
       "value": "1.3rem",
       "scope": "default",
       "line": {
-        "start": 1691,
-        "end": 1691
+        "start": 1688,
+        "end": 1688
       }
     },
     "access": "public",
@@ -15948,8 +15923,8 @@
   {
     "description": "The height and width of large Spinners.\n",
     "commentRange": {
-      "start": 1692,
-      "end": 1692
+      "start": 1689,
+      "end": 1689
     },
     "context": {
       "type": "variable",
@@ -15957,8 +15932,8 @@
       "value": "3rem",
       "scope": "default",
       "line": {
-        "start": 1693,
-        "end": 1693
+        "start": 1690,
+        "end": 1690
       }
     },
     "access": "public",
@@ -15973,8 +15948,8 @@
   {
     "description": "The speed of the animation for Spinners.\n",
     "commentRange": {
-      "start": 1694,
-      "end": 1694
+      "start": 1691,
+      "end": 1691
     },
     "context": {
       "type": "variable",
@@ -15982,8 +15957,8 @@
       "value": "1s",
       "scope": "default",
       "line": {
-        "start": 1695,
-        "end": 1695
+        "start": 1692,
+        "end": 1692
       }
     },
     "access": "public",
@@ -15998,8 +15973,8 @@
   {
     "description": "The thickness of Spinners.\n",
     "commentRange": {
-      "start": 1696,
-      "end": 1696
+      "start": 1693,
+      "end": 1693
     },
     "context": {
       "type": "variable",
@@ -16007,8 +15982,8 @@
       "value": "0.18rem",
       "scope": "default",
       "line": {
-        "start": 1697,
-        "end": 1697
+        "start": 1694,
+        "end": 1694
       }
     },
     "access": "public",
@@ -16023,8 +15998,8 @@
   {
     "description": "The color of Spinners.\n",
     "commentRange": {
-      "start": 1698,
-      "end": 1698
+      "start": 1695,
+      "end": 1695
     },
     "context": {
       "type": "variable",
@@ -16032,8 +16007,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1699,
-        "end": 1699
+        "start": 1696,
+        "end": 1696
       }
     },
     "access": "public",
@@ -16048,8 +16023,8 @@
   {
     "description": "The color of the dark Spinner.\n",
     "commentRange": {
-      "start": 1700,
-      "end": 1700
+      "start": 1697,
+      "end": 1697
     },
     "context": {
       "type": "variable",
@@ -16057,8 +16032,8 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
-        "start": 1701,
-        "end": 1701
+        "start": 1698,
+        "end": 1698
       }
     },
     "access": "public",
@@ -16073,8 +16048,8 @@
   {
     "description": "The breakpoint at which the tabs\ngo from stacked layout to side by side in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1707,
-      "end": 1708
+      "start": 1704,
+      "end": 1705
     },
     "context": {
       "type": "variable",
@@ -16082,8 +16057,8 @@
       "value": "46rem",
       "scope": "default",
       "line": {
-        "start": 1709,
-        "end": 1709
+        "start": 1706,
+        "end": 1706
       }
     },
     "access": "public",
@@ -16098,8 +16073,8 @@
   {
     "description": "The tab button text color in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1710,
-      "end": 1710
+      "start": 1707,
+      "end": 1707
     },
     "context": {
       "type": "variable",
@@ -16107,8 +16082,8 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
-        "start": 1711,
-        "end": 1711
+        "start": 1708,
+        "end": 1708
       }
     },
     "access": "public",
@@ -16123,8 +16098,8 @@
   {
     "description": "The tab button background color in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1712,
-      "end": 1712
+      "start": 1709,
+      "end": 1709
     },
     "context": {
       "type": "variable",
@@ -16132,8 +16107,8 @@
       "value": "$sprk-gray",
       "scope": "default",
       "line": {
-        "start": 1713,
-        "end": 1713
+        "start": 1710,
+        "end": 1710
       }
     },
     "access": "public",
@@ -16148,13 +16123,38 @@
   {
     "description": "The border on the top of the button tabs in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1714,
-      "end": 1714
+      "start": 1711,
+      "end": 1711
     },
     "context": {
       "type": "variable",
       "name": "sprk-tab-navigation-btn-border-top",
       "value": "3px solid $sprk-gray",
+      "scope": "default",
+      "line": {
+        "start": 1712,
+        "end": 1712
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The border on the top of the\nbutton tabs on hover in Tabbed Navigation.\n",
+    "commentRange": {
+      "start": 1713,
+      "end": 1714
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-tab-navigation-btn-hover-border-top",
+      "value": "3px solid $sprk-red",
       "scope": "default",
       "line": {
         "start": 1715,
@@ -16171,15 +16171,15 @@
     }
   },
   {
-    "description": "The border on the top of the\nbutton tabs on hover in Tabbed Navigation.\n",
+    "description": "The button tab text color of the\ncurrently active tab in Tabbed Navigation.\n",
     "commentRange": {
       "start": 1716,
       "end": 1717
     },
     "context": {
       "type": "variable",
-      "name": "sprk-tab-navigation-btn-hover-border-top",
-      "value": "3px solid $sprk-red",
+      "name": "sprk-tab-navigation-btn-active-color",
+      "value": "$sprk-red",
       "scope": "default",
       "line": {
         "start": 1718,
@@ -16196,15 +16196,15 @@
     }
   },
   {
-    "description": "The button tab text color of the\ncurrently active tab in Tabbed Navigation.\n",
+    "description": "The button tab top border of the\ncurrently active tab in Tabbed Navigation.\n",
     "commentRange": {
       "start": 1719,
       "end": 1720
     },
     "context": {
       "type": "variable",
-      "name": "sprk-tab-navigation-btn-active-color",
-      "value": "$sprk-red",
+      "name": "sprk-tab-navigation-btn-active-border-top",
+      "value": "3px solid $sprk-red",
       "scope": "default",
       "line": {
         "start": 1721,
@@ -16221,15 +16221,15 @@
     }
   },
   {
-    "description": "The button tab top border of the\ncurrently active tab in Tabbed Navigation.\n",
+    "description": "The button tab background color\nof the currently active tab in Tabbed Navigation.\n",
     "commentRange": {
       "start": 1722,
       "end": 1723
     },
     "context": {
       "type": "variable",
-      "name": "sprk-tab-navigation-btn-active-border-top",
-      "value": "3px solid $sprk-red",
+      "name": "sprk-tab-navigation-btn-active-bg-color",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
         "start": 1724,
@@ -16246,19 +16246,19 @@
     }
   },
   {
-    "description": "The button tab background color\nof the currently active tab in Tabbed Navigation.\n",
+    "description": "The background color of the Stepper.\n",
     "commentRange": {
-      "start": 1725,
-      "end": 1726
+      "start": 1730,
+      "end": 1730
     },
     "context": {
       "type": "variable",
-      "name": "sprk-tab-navigation-btn-active-bg-color",
-      "value": "$sprk-white",
+      "name": "sprk-stepper-bg",
+      "value": "transparent",
       "scope": "default",
       "line": {
-        "start": 1727,
-        "end": 1727
+        "start": 1731,
+        "end": 1731
       }
     },
     "access": "public",
@@ -16271,15 +16271,15 @@
     }
   },
   {
-    "description": "The background color of the Stepper.\n",
+    "description": "The minimum width at which the Stepper\nswitches between narrow and wide layouts.\n",
     "commentRange": {
-      "start": 1733,
+      "start": 1732,
       "end": 1733
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-bg",
-      "value": "transparent",
+      "name": "sprk-stepper-breakpoint",
+      "value": "$sprk-split-breakpoint-xl",
       "scope": "default",
       "line": {
         "start": 1734,
@@ -16296,35 +16296,10 @@
     }
   },
   {
-    "description": "The minimum width at which the Stepper\nswitches between narrow and wide layouts.\n",
-    "commentRange": {
-      "start": 1735,
-      "end": 1736
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-breakpoint",
-      "value": "$sprk-split-breakpoint-xl",
-      "scope": "default",
-      "line": {
-        "start": 1737,
-        "end": 1737
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
     "description": "The maximum width of the Stepper.\n",
     "commentRange": {
-      "start": 1738,
-      "end": 1738
+      "start": 1735,
+      "end": 1735
     },
     "context": {
       "type": "variable",
@@ -16332,8 +16307,8 @@
       "value": "480px",
       "scope": "default",
       "line": {
-        "start": 1739,
-        "end": 1739
+        "start": 1736,
+        "end": 1736
       }
     },
     "access": "public",
@@ -16348,8 +16323,8 @@
   {
     "description": "The border width of the Stepper icons.\n",
     "commentRange": {
-      "start": 1740,
-      "end": 1740
+      "start": 1737,
+      "end": 1737
     },
     "context": {
       "type": "variable",
@@ -16357,8 +16332,8 @@
       "value": "2px",
       "scope": "default",
       "line": {
-        "start": 1741,
-        "end": 1741
+        "start": 1738,
+        "end": 1738
       }
     },
     "access": "public",
@@ -16373,8 +16348,8 @@
   {
     "description": "The color of the border around the Stepper icon.\n",
     "commentRange": {
-      "start": 1742,
-      "end": 1742
+      "start": 1739,
+      "end": 1739
     },
     "context": {
       "type": "variable",
@@ -16382,8 +16357,8 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
-        "start": 1743,
-        "end": 1743
+        "start": 1740,
+        "end": 1740
       }
     },
     "access": "public",
@@ -16398,8 +16373,8 @@
   {
     "description": "The color of the step icon when the step is selected in the Stepper.\n",
     "commentRange": {
-      "start": 1744,
-      "end": 1744
+      "start": 1741,
+      "end": 1741
     },
     "context": {
       "type": "variable",
@@ -16407,8 +16382,8 @@
       "value": "$sprk-green",
       "scope": "default",
       "line": {
-        "start": 1745,
-        "end": 1745
+        "start": 1742,
+        "end": 1742
       }
     },
     "access": "public",
@@ -16423,8 +16398,8 @@
   {
     "description": "The color of the icon border when the\nStepper is on a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
-      "start": 1746,
-      "end": 1748
+      "start": 1743,
+      "end": 1745
     },
     "context": {
       "type": "variable",
@@ -16432,8 +16407,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1749,
-        "end": 1749
+        "start": 1746,
+        "end": 1746
       }
     },
     "access": "public",
@@ -16448,8 +16423,8 @@
   {
     "description": "The height of the step icon in the Stepper.\n",
     "commentRange": {
-      "start": 1750,
-      "end": 1750
+      "start": 1747,
+      "end": 1747
     },
     "context": {
       "type": "variable",
@@ -16457,8 +16432,8 @@
       "value": "16px",
       "scope": "default",
       "line": {
-        "start": 1751,
-        "end": 1751
+        "start": 1748,
+        "end": 1748
       }
     },
     "access": "public",
@@ -16473,8 +16448,8 @@
   {
     "description": "The width of the step icon in the Stepper.\n",
     "commentRange": {
-      "start": 1752,
-      "end": 1752
+      "start": 1749,
+      "end": 1749
     },
     "context": {
       "type": "variable",
@@ -16482,8 +16457,8 @@
       "value": "16px",
       "scope": "default",
       "line": {
-        "start": 1753,
-        "end": 1753
+        "start": 1750,
+        "end": 1750
       }
     },
     "access": "public",
@@ -16498,13 +16473,38 @@
   {
     "description": "The color of the step icon in the Stepper.\n",
     "commentRange": {
-      "start": 1754,
-      "end": 1754
+      "start": 1751,
+      "end": 1751
     },
     "context": {
       "type": "variable",
       "name": "sprk-stepper-icon-color",
       "value": "$sprk-white",
+      "scope": "default",
+      "line": {
+        "start": 1752,
+        "end": 1752
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The color of the step icon\nin the Stepper when hovered.\n",
+    "commentRange": {
+      "start": 1753,
+      "end": 1754
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-icon-color-hover",
+      "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
         "start": 1755,
@@ -16521,19 +16521,19 @@
     }
   },
   {
-    "description": "The color of the step icon\nin the Stepper when hovered.\n",
+    "description": "The color of the Stepper step icon when the step is selected.\n",
     "commentRange": {
       "start": 1756,
-      "end": 1757
+      "end": 1756
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-color-hover",
-      "value": "$sprk-black-tint-50",
+      "name": "sprk-stepper-icon-color-selected",
+      "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1758,
-        "end": 1758
+        "start": 1757,
+        "end": 1757
       }
     },
     "access": "public",
@@ -16546,15 +16546,15 @@
     }
   },
   {
-    "description": "The color of the Stepper step icon when the step is selected.\n",
+    "description": "The color of the step icon when the\nStepper has a dark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
-      "start": 1759,
+      "start": 1758,
       "end": 1759
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-color-selected",
-      "value": "$sprk-white",
+      "name": "sprk-stepper-dark-icon-color",
+      "value": "$sprk-blue",
       "scope": "default",
       "line": {
         "start": 1760,
@@ -16571,35 +16571,10 @@
     }
   },
   {
-    "description": "The color of the step icon when the\nStepper has a dark background (sprk-c-Stepper--has-dark-bg).\n",
-    "commentRange": {
-      "start": 1761,
-      "end": 1762
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-dark-icon-color",
-      "value": "$sprk-blue",
-      "scope": "default",
-      "line": {
-        "start": 1763,
-        "end": 1763
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
     "description": "The color of the Stepper step icon when the step\nis selected and the Stepper has a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
-      "start": 1764,
-      "end": 1766
+      "start": 1761,
+      "end": 1763
     },
     "context": {
       "type": "variable",
@@ -16607,8 +16582,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1767,
-        "end": 1767
+        "start": 1764,
+        "end": 1764
       }
     },
     "access": "public",
@@ -16623,13 +16598,38 @@
   {
     "description": "The color of the step icon on hover\nwhen the Stepper has a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
-      "start": 1768,
-      "end": 1770
+      "start": 1765,
+      "end": 1767
     },
     "context": {
       "type": "variable",
       "name": "sprk-stepper-dark-icon-color-hover",
       "value": "$sprk-white",
+      "scope": "default",
+      "line": {
+        "start": 1768,
+        "end": 1768
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The transition of the Stepper step icon.\n",
+    "commentRange": {
+      "start": 1770,
+      "end": 1770
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-icon-transition",
+      "value": "0.3s all ease-in-out",
       "scope": "default",
       "line": {
         "start": 1771,
@@ -16646,19 +16646,19 @@
     }
   },
   {
-    "description": "The transition of the Stepper step icon.\n",
+    "description": "The z-index of the Stepper step icon.\n",
     "commentRange": {
-      "start": 1773,
-      "end": 1773
+      "start": 1772,
+      "end": 1772
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-transition",
-      "value": "0.3s all ease-in-out",
+      "name": "sprk-stepper-icon-z-index",
+      "value": "$sprk-layer-height-xs",
       "scope": "default",
       "line": {
-        "start": 1774,
-        "end": 1774
+        "start": 1773,
+        "end": 1773
       }
     },
     "access": "public",
@@ -16671,15 +16671,15 @@
     }
   },
   {
-    "description": "The z-index of the Stepper step icon.\n",
+    "description": "The spread value of the icon box\nshadow when the Stepper step is selected.\n",
     "commentRange": {
-      "start": 1775,
+      "start": 1774,
       "end": 1775
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-icon-z-index",
-      "value": "$sprk-layer-height-xs",
+      "name": "sprk-stepper-icon-box-shadow-selected-spread",
+      "value": "8px",
       "scope": "default",
       "line": {
         "start": 1776,
@@ -16696,35 +16696,10 @@
     }
   },
   {
-    "description": "The spread value of the icon box\nshadow when the Stepper step is selected.\n",
+    "description": "The box shadow of the Stepper step icon\nwhen the icon is selected.\n",
     "commentRange": {
       "start": 1777,
       "end": 1778
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-icon-box-shadow-selected-spread",
-      "value": "8px",
-      "scope": "default",
-      "line": {
-        "start": 1779,
-        "end": 1779
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
-    "description": "The box shadow of the Stepper step icon\nwhen the icon is selected.\n",
-    "commentRange": {
-      "start": 1780,
-      "end": 1781
     },
     "context": {
       "type": "variable",
@@ -16732,8 +16707,8 @@
       "value": "0 0 0\n  $sprk-stepper-icon-box-shadow-selected-spread\n  $sprk-stepper-icon-border-color-selected",
       "scope": "default",
       "line": {
-        "start": 1782,
-        "end": 1784
+        "start": 1779,
+        "end": 1781
       }
     },
     "access": "public",
@@ -16748,13 +16723,38 @@
   {
     "description": "The background color of the content in the Stepper step.\n",
     "commentRange": {
-      "start": 1785,
-      "end": 1785
+      "start": 1782,
+      "end": 1782
     },
     "context": {
       "type": "variable",
       "name": "sprk-stepper-step-content-bg",
       "value": "transparent",
+      "scope": "default",
+      "line": {
+        "start": 1783,
+        "end": 1783
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The border radius of the Stepper step\ncontent box when it has a description.\n",
+    "commentRange": {
+      "start": 1784,
+      "end": 1785
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-step-description-border-radius",
+      "value": "5px",
       "scope": "default",
       "line": {
         "start": 1786,
@@ -16771,15 +16771,15 @@
     }
   },
   {
-    "description": "The border radius of the Stepper step\ncontent box when it has a description.\n",
+    "description": "The box shadow of the Stepper step content\nbox when it has a description.\n",
     "commentRange": {
       "start": 1787,
       "end": 1788
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-description-border-radius",
-      "value": "5px",
+      "name": "sprk-stepper-step-description-box-shadow",
+      "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
         "start": 1789,
@@ -16796,15 +16796,15 @@
     }
   },
   {
-    "description": "The box shadow of the Stepper step content\nbox when it has a description.\n",
+    "description": "The spacing between the\nStepper step heading and description.\n",
     "commentRange": {
       "start": 1790,
       "end": 1791
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-description-box-shadow",
-      "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
+      "name": "sprk-stepper-step-description-top-spacing",
+      "value": "$sprk-space-m",
       "scope": "default",
       "line": {
         "start": 1792,
@@ -16821,35 +16821,10 @@
     }
   },
   {
-    "description": "The spacing between the\nStepper step heading and description.\n",
-    "commentRange": {
-      "start": 1793,
-      "end": 1794
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-step-description-top-spacing",
-      "value": "$sprk-space-m",
-      "scope": "default",
-      "line": {
-        "start": 1795,
-        "end": 1795
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
     "description": "The font weight of the Stepper step heading.\n",
     "commentRange": {
-      "start": 1796,
-      "end": 1796
+      "start": 1793,
+      "end": 1793
     },
     "context": {
       "type": "variable",
@@ -16857,8 +16832,8 @@
       "value": "400",
       "scope": "default",
       "line": {
-        "start": 1797,
-        "end": 1797
+        "start": 1794,
+        "end": 1794
       }
     },
     "access": "public",
@@ -16873,8 +16848,8 @@
   {
     "description": "The font size of the Stepper step heading.\n",
     "commentRange": {
-      "start": 1798,
-      "end": 1798
+      "start": 1795,
+      "end": 1795
     },
     "context": {
       "type": "variable",
@@ -16882,8 +16857,8 @@
       "value": "$sprk-font-size-display-six",
       "scope": "default",
       "line": {
-        "start": 1799,
-        "end": 1799
+        "start": 1796,
+        "end": 1796
       }
     },
     "access": "public",
@@ -16898,8 +16873,8 @@
   {
     "description": "The color of the Stepper step heading.\n",
     "commentRange": {
-      "start": 1800,
-      "end": 1800
+      "start": 1797,
+      "end": 1797
     },
     "context": {
       "type": "variable",
@@ -16907,8 +16882,8 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
-        "start": 1801,
-        "end": 1801
+        "start": 1798,
+        "end": 1798
       }
     },
     "access": "public",
@@ -16923,13 +16898,38 @@
   {
     "description": "The color of the Stepper step heading when\nthe Stepper is on a dark\nbackground (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
-      "start": 1802,
-      "end": 1804
+      "start": 1799,
+      "end": 1801
     },
     "context": {
       "type": "variable",
       "name": "sprk-stepper-dark-step-heading-color",
       "value": "$sprk-white",
+      "scope": "default",
+      "line": {
+        "start": 1802,
+        "end": 1802
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The color of the Stepper\nstep heading when the step is selected.\n",
+    "commentRange": {
+      "start": 1803,
+      "end": 1804
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-stepper-step-heading-color-selected",
+      "value": "$sprk-black",
       "scope": "default",
       "line": {
         "start": 1805,
@@ -16946,19 +16946,19 @@
     }
   },
   {
-    "description": "The color of the Stepper\nstep heading when the step is selected.\n",
+    "description": "The padding value for the Stepper step.\n",
     "commentRange": {
       "start": 1806,
-      "end": 1807
+      "end": 1806
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-heading-color-selected",
-      "value": "$sprk-black",
+      "name": "sprk-stepper-step-padding",
+      "value": "$sprk-space-misc-a",
       "scope": "default",
       "line": {
-        "start": 1808,
-        "end": 1808
+        "start": 1807,
+        "end": 1807
       }
     },
     "access": "public",
@@ -16971,15 +16971,15 @@
     }
   },
   {
-    "description": "The padding value for the Stepper step.\n",
+    "description": "The background color of the\nStepper step content box when the step is selected.\n",
     "commentRange": {
-      "start": 1809,
+      "start": 1808,
       "end": 1809
     },
     "context": {
       "type": "variable",
-      "name": "sprk-stepper-step-padding",
-      "value": "$sprk-space-misc-a",
+      "name": "sprk-stepper-step-content-bg-selected",
+      "value": "transparent",
       "scope": "default",
       "line": {
         "start": 1810,
@@ -16996,35 +16996,10 @@
     }
   },
   {
-    "description": "The background color of the\nStepper step content box when the step is selected.\n",
-    "commentRange": {
-      "start": 1811,
-      "end": 1812
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-stepper-step-content-bg-selected",
-      "value": "transparent",
-      "scope": "default",
-      "line": {
-        "start": 1813,
-        "end": 1813
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
     "description": "The background color of the Stepper step\ncontent box when it has a\ndescription and when the step is selected.\n",
     "commentRange": {
-      "start": 1814,
-      "end": 1816
+      "start": 1811,
+      "end": 1813
     },
     "context": {
       "type": "variable",
@@ -17032,8 +17007,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1817,
-        "end": 1817
+        "start": 1814,
+        "end": 1814
       }
     },
     "access": "public",
@@ -17048,8 +17023,8 @@
   {
     "description": "The text color of a selected Stepper step's\ncontent and header when it has a\ndescription. This applies to\nsteppers with the sprk-c-Stepper--has-dark-bg class.\n",
     "commentRange": {
-      "start": 1818,
-      "end": 1821
+      "start": 1815,
+      "end": 1818
     },
     "context": {
       "type": "variable",
@@ -17057,8 +17032,8 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
-        "start": 1822,
-        "end": 1822
+        "start": 1819,
+        "end": 1819
       }
     },
     "access": "public",
@@ -17073,8 +17048,8 @@
   {
     "description": "The color of the bar that connects the steps in the Stepper.\n",
     "commentRange": {
-      "start": 1823,
-      "end": 1823
+      "start": 1820,
+      "end": 1820
     },
     "context": {
       "type": "variable",
@@ -17082,8 +17057,8 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
-        "start": 1824,
-        "end": 1824
+        "start": 1821,
+        "end": 1821
       }
     },
     "access": "public",
@@ -17098,8 +17073,8 @@
   {
     "description": "The color of the bar that connects\nthe steps when the Stepper is on a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
-      "start": 1825,
-      "end": 1827
+      "start": 1822,
+      "end": 1824
     },
     "context": {
       "type": "variable",
@@ -17107,8 +17082,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1828,
-        "end": 1828
+        "start": 1825,
+        "end": 1825
       }
     },
     "access": "public",
@@ -17123,8 +17098,8 @@
   {
     "description": "The border value for the Carousel component.\n",
     "commentRange": {
-      "start": 1847,
-      "end": 1847
+      "start": 1844,
+      "end": 1844
     },
     "context": {
       "type": "variable",
@@ -17132,8 +17107,8 @@
       "value": "$sprk-stepper-icon-border-width solid\n  $sprk-stepper-dark-icon-border-color",
       "scope": "default",
       "line": {
-        "start": 1848,
-        "end": 1849
+        "start": 1845,
+        "end": 1846
       }
     },
     "access": "public",
@@ -17148,8 +17123,8 @@
   {
     "description": "The height of the dots in the Carousel component.\n",
     "commentRange": {
-      "start": 1850,
-      "end": 1850
+      "start": 1847,
+      "end": 1847
     },
     "context": {
       "type": "variable",
@@ -17157,8 +17132,8 @@
       "value": "10px",
       "scope": "default",
       "line": {
-        "start": 1851,
-        "end": 1851
+        "start": 1848,
+        "end": 1848
       }
     },
     "access": "public",
@@ -17173,8 +17148,8 @@
   {
     "description": "The width of the dots in the Carousel component.\n",
     "commentRange": {
-      "start": 1852,
-      "end": 1852
+      "start": 1849,
+      "end": 1849
     },
     "context": {
       "type": "variable",
@@ -17182,8 +17157,8 @@
       "value": "10px",
       "scope": "default",
       "line": {
-        "start": 1853,
-        "end": 1853
+        "start": 1850,
+        "end": 1850
       }
     },
     "access": "public",
@@ -17198,8 +17173,8 @@
   {
     "description": "The height of the dots in the Carousel component on wide viewports.\n",
     "commentRange": {
-      "start": 1854,
-      "end": 1854
+      "start": 1851,
+      "end": 1851
     },
     "context": {
       "type": "variable",
@@ -17207,8 +17182,8 @@
       "value": "10px",
       "scope": "default",
       "line": {
-        "start": 1855,
-        "end": 1855
+        "start": 1852,
+        "end": 1852
       }
     },
     "access": "public",
@@ -17223,8 +17198,8 @@
   {
     "description": "The width of the dots in the Carousel component on wide viewports.\n",
     "commentRange": {
-      "start": 1856,
-      "end": 1856
+      "start": 1853,
+      "end": 1853
     },
     "context": {
       "type": "variable",
@@ -17232,8 +17207,8 @@
       "value": "10px",
       "scope": "default",
       "line": {
-        "start": 1857,
-        "end": 1857
+        "start": 1854,
+        "end": 1854
       }
     },
     "access": "public",
@@ -17248,8 +17223,8 @@
   {
     "description": "The spacing between dots in the Carousel component.\n",
     "commentRange": {
-      "start": 1858,
-      "end": 1858
+      "start": 1855,
+      "end": 1855
     },
     "context": {
       "type": "variable",
@@ -17257,8 +17232,8 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
-        "start": 1859,
-        "end": 1859
+        "start": 1856,
+        "end": 1856
       }
     },
     "access": "public",
@@ -17273,8 +17248,8 @@
   {
     "description": "The spacing between dots in the Carousel component on wide viewports.\n",
     "commentRange": {
-      "start": 1860,
-      "end": 1860
+      "start": 1857,
+      "end": 1857
     },
     "context": {
       "type": "variable",
@@ -17282,8 +17257,8 @@
       "value": "$sprk-carousel-dot-spacing",
       "scope": "default",
       "line": {
-        "start": 1861,
-        "end": 1861
+        "start": 1858,
+        "end": 1858
       }
     },
     "access": "public",
@@ -17298,8 +17273,8 @@
   {
     "description": "The box shadow of the active dot in the Carousel component.\n",
     "commentRange": {
-      "start": 1862,
-      "end": 1862
+      "start": 1859,
+      "end": 1859
     },
     "context": {
       "type": "variable",
@@ -17307,8 +17282,8 @@
       "value": "$sprk-stepper-icon-box-shadow-selected",
       "scope": "default",
       "line": {
-        "start": 1863,
-        "end": 1863
+        "start": 1860,
+        "end": 1860
       }
     },
     "access": "public",
@@ -17323,8 +17298,8 @@
   {
     "description": "The color of the arrows in the Carousel component.\n",
     "commentRange": {
-      "start": 1864,
-      "end": 1864
+      "start": 1861,
+      "end": 1861
     },
     "context": {
       "type": "variable",
@@ -17332,8 +17307,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1865,
-        "end": 1865
+        "start": 1862,
+        "end": 1862
       }
     },
     "access": "public",
@@ -17348,8 +17323,8 @@
   {
     "description": "The spacing for the arrows in the Carousel component.\n",
     "commentRange": {
-      "start": 1866,
-      "end": 1866
+      "start": 1863,
+      "end": 1863
     },
     "context": {
       "type": "variable",
@@ -17357,8 +17332,8 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
-        "start": 1867,
-        "end": 1867
+        "start": 1864,
+        "end": 1864
       }
     },
     "access": "public",
@@ -17373,8 +17348,8 @@
   {
     "description": "The left and right values of the arrows in the Carousel component.\n",
     "commentRange": {
-      "start": 1868,
-      "end": 1868
+      "start": 1865,
+      "end": 1865
     },
     "context": {
       "type": "variable",
@@ -17382,8 +17357,8 @@
       "value": "0",
       "scope": "default",
       "line": {
-        "start": 1869,
-        "end": 1869
+        "start": 1866,
+        "end": 1866
       }
     },
     "access": "public",
@@ -17398,8 +17373,8 @@
   {
     "description": "The padding value of the arrows in the Carousel component.\n",
     "commentRange": {
-      "start": 1870,
-      "end": 1870
+      "start": 1867,
+      "end": 1867
     },
     "context": {
       "type": "variable",
@@ -17407,8 +17382,8 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
-        "start": 1871,
-        "end": 1871
+        "start": 1868,
+        "end": 1868
       }
     },
     "access": "public",
@@ -17423,8 +17398,8 @@
   {
     "description": "The maximum width of the image in the Carousel component.\n",
     "commentRange": {
-      "start": 1872,
-      "end": 1872
+      "start": 1869,
+      "end": 1869
     },
     "context": {
       "type": "variable",
@@ -17432,8 +17407,8 @@
       "value": "18.75rem",
       "scope": "default",
       "line": {
-        "start": 1873,
-        "end": 1873
+        "start": 1870,
+        "end": 1870
       }
     },
     "access": "public",
@@ -17448,8 +17423,8 @@
   {
     "description": "The breakpoint for the arrows in the Carousel component.\n",
     "commentRange": {
-      "start": 1874,
-      "end": 1874
+      "start": 1871,
+      "end": 1871
     },
     "context": {
       "type": "variable",
@@ -17457,8 +17432,8 @@
       "value": "31.25rem",
       "scope": "default",
       "line": {
-        "start": 1875,
-        "end": 1875
+        "start": 1872,
+        "end": 1872
       }
     },
     "access": "public",
@@ -17473,8 +17448,8 @@
   {
     "description": "The padding value for the dots container in the Carousel component.\n",
     "commentRange": {
-      "start": 1876,
-      "end": 1876
+      "start": 1873,
+      "end": 1873
     },
     "context": {
       "type": "variable",
@@ -17482,8 +17457,8 @@
       "value": "$sprk-space-xs",
       "scope": "default",
       "line": {
-        "start": 1877,
-        "end": 1877
+        "start": 1874,
+        "end": 1874
       }
     },
     "access": "public",
@@ -17498,8 +17473,8 @@
   {
     "description": "The breakpoint for the Carousel component.\n",
     "commentRange": {
-      "start": 1878,
-      "end": 1878
+      "start": 1875,
+      "end": 1875
     },
     "context": {
       "type": "variable",
@@ -17507,8 +17482,8 @@
       "value": "$sprk-split-breakpoint-xl",
       "scope": "default",
       "line": {
-        "start": 1879,
-        "end": 1879
+        "start": 1876,
+        "end": 1876
       }
     },
     "access": "public",
@@ -17523,8 +17498,8 @@
   {
     "description": "The maximum width of the Card.\n",
     "commentRange": {
-      "start": 1885,
-      "end": 1885
+      "start": 1882,
+      "end": 1882
     },
     "context": {
       "type": "variable",
@@ -17532,8 +17507,8 @@
       "value": "26.5625rem",
       "scope": "default",
       "line": {
-        "start": 1886,
-        "end": 1886
+        "start": 1883,
+        "end": 1883
       }
     },
     "access": "public",
@@ -17548,8 +17523,8 @@
   {
     "description": "The main Card breakpoint.\n",
     "commentRange": {
-      "start": 1887,
-      "end": 1887
+      "start": 1884,
+      "end": 1884
     },
     "context": {
       "type": "variable",
@@ -17557,8 +17532,8 @@
       "value": "$sprk-split-breakpoint-s",
       "scope": "default",
       "line": {
-        "start": 1888,
-        "end": 1888
+        "start": 1885,
+        "end": 1885
       }
     },
     "access": "public",
@@ -17573,8 +17548,8 @@
   {
     "description": "The box shadow of the Card on narrow viewports.\n",
     "commentRange": {
-      "start": 1889,
-      "end": 1889
+      "start": 1886,
+      "end": 1886
     },
     "context": {
       "type": "variable",
@@ -17582,8 +17557,8 @@
       "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
-        "start": 1890,
-        "end": 1890
+        "start": 1887,
+        "end": 1887
       }
     },
     "access": "public",
@@ -17598,8 +17573,8 @@
   {
     "description": "The box shadow of the Card on wide viewports.\n",
     "commentRange": {
-      "start": 1891,
-      "end": 1891
+      "start": 1888,
+      "end": 1888
     },
     "context": {
       "type": "variable",
@@ -17607,8 +17582,8 @@
       "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
-        "start": 1892,
-        "end": 1892
+        "start": 1889,
+        "end": 1889
       }
     },
     "access": "public",
@@ -17623,8 +17598,8 @@
   {
     "description": "The box shadow of the Standout Card variant on narrow viewports.\n",
     "commentRange": {
-      "start": 1893,
-      "end": 1893
+      "start": 1890,
+      "end": 1890
     },
     "context": {
       "type": "variable",
@@ -17632,8 +17607,8 @@
       "value": "0 4px 20px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
-        "start": 1894,
-        "end": 1894
+        "start": 1891,
+        "end": 1891
       }
     },
     "access": "public",
@@ -17648,8 +17623,8 @@
   {
     "description": "The box shadow of the Standout Card variant on wide viewports.\n",
     "commentRange": {
-      "start": 1895,
-      "end": 1895
+      "start": 1892,
+      "end": 1892
     },
     "context": {
       "type": "variable",
@@ -17657,8 +17632,8 @@
       "value": "0 4px 40px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
-        "start": 1896,
-        "end": 1896
+        "start": 1893,
+        "end": 1893
       }
     },
     "access": "public",
@@ -17673,8 +17648,8 @@
   {
     "description": "The border radius of the Card.\n",
     "commentRange": {
-      "start": 1897,
-      "end": 1897
+      "start": 1894,
+      "end": 1894
     },
     "context": {
       "type": "variable",
@@ -17682,8 +17657,8 @@
       "value": "8px",
       "scope": "default",
       "line": {
-        "start": 1898,
-        "end": 1898
+        "start": 1895,
+        "end": 1895
       }
     },
     "access": "public",
@@ -17698,8 +17673,8 @@
   {
     "description": "The padding of the content inside the Card.\n",
     "commentRange": {
-      "start": 1899,
-      "end": 1899
+      "start": 1896,
+      "end": 1896
     },
     "context": {
       "type": "variable",
@@ -17707,8 +17682,8 @@
       "value": "$sprk-space-misc-a",
       "scope": "default",
       "line": {
-        "start": 1900,
-        "end": 1900
+        "start": 1897,
+        "end": 1897
       }
     },
     "access": "public",
@@ -17723,8 +17698,8 @@
   {
     "description": "The background color of the header area for the Highlighted Header Card.\n",
     "commentRange": {
-      "start": 1901,
-      "end": 1901
+      "start": 1898,
+      "end": 1898
     },
     "context": {
       "type": "variable",
@@ -17732,8 +17707,8 @@
       "value": "$sprk-green",
       "scope": "default",
       "line": {
-        "start": 1902,
-        "end": 1902
+        "start": 1899,
+        "end": 1899
       }
     },
     "access": "public",
@@ -17748,8 +17723,8 @@
   {
     "description": "The text color for the Highlighted Header Card.\n",
     "commentRange": {
-      "start": 1903,
-      "end": 1903
+      "start": 1900,
+      "end": 1900
     },
     "context": {
       "type": "variable",
@@ -17757,8 +17732,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1904,
-        "end": 1904
+        "start": 1901,
+        "end": 1901
       }
     },
     "access": "public",
@@ -17773,8 +17748,8 @@
   {
     "description": "The border surrounding the Dictionary.\n",
     "commentRange": {
-      "start": 1910,
-      "end": 1910
+      "start": 1907,
+      "end": 1907
     },
     "context": {
       "type": "variable",
@@ -17782,8 +17757,8 @@
       "value": "1px solid $sprk-gray",
       "scope": "default",
       "line": {
-        "start": 1911,
-        "end": 1911
+        "start": 1908,
+        "end": 1908
       }
     },
     "access": "public",
@@ -17798,8 +17773,8 @@
   {
     "description": "The background color of the key value pairs in the striped Dictionary.\n",
     "commentRange": {
-      "start": 1912,
-      "end": 1912
+      "start": 1909,
+      "end": 1909
     },
     "context": {
       "type": "variable",
@@ -17807,8 +17782,8 @@
       "value": "$sprk-gray",
       "scope": "default",
       "line": {
-        "start": 1913,
-        "end": 1913
+        "start": 1910,
+        "end": 1910
       }
     },
     "access": "public",
@@ -17823,8 +17798,8 @@
   {
     "description": "The breakpoint of the Dictionary component.\n",
     "commentRange": {
-      "start": 1914,
-      "end": 1914
+      "start": 1911,
+      "end": 1911
     },
     "context": {
       "type": "variable",
@@ -17832,8 +17807,8 @@
       "value": "38.4375rem",
       "scope": "default",
       "line": {
-        "start": 1915,
-        "end": 1915
+        "start": 1912,
+        "end": 1912
       }
     },
     "access": "public",
@@ -17848,8 +17823,8 @@
   {
     "description": "The font size of the labels in the Dictionary.\n",
     "commentRange": {
-      "start": 1916,
-      "end": 1916
+      "start": 1913,
+      "end": 1913
     },
     "context": {
       "type": "variable",
@@ -17857,8 +17832,8 @@
       "value": "$sprk-font-size-body-one",
       "scope": "default",
       "line": {
-        "start": 1917,
-        "end": 1917
+        "start": 1914,
+        "end": 1914
       }
     },
     "access": "public",
@@ -17873,8 +17848,8 @@
   {
     "description": "The font weight of the labels in the Dictionary.\n",
     "commentRange": {
-      "start": 1918,
-      "end": 1918
+      "start": 1915,
+      "end": 1915
     },
     "context": {
       "type": "variable",
@@ -17882,8 +17857,8 @@
       "value": "$sprk-font-weight-body-one",
       "scope": "default",
       "line": {
-        "start": 1919,
-        "end": 1919
+        "start": 1916,
+        "end": 1916
       }
     },
     "access": "public",
@@ -17898,8 +17873,8 @@
   {
     "description": "The line height of the labels in the Dictionary.\n",
     "commentRange": {
-      "start": 1920,
-      "end": 1920
+      "start": 1917,
+      "end": 1917
     },
     "context": {
       "type": "variable",
@@ -17907,8 +17882,8 @@
       "value": "$sprk-line-height-body-one",
       "scope": "default",
       "line": {
-        "start": 1921,
-        "end": 1921
+        "start": 1918,
+        "end": 1918
       }
     },
     "access": "public",
@@ -17923,12 +17898,37 @@
   {
     "description": "The Highlight Board breakpoint at which styles change\nfor padding, font size and button width.\n",
     "commentRange": {
+      "start": 1924,
+      "end": 1925
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-highlight-board-breakpoint",
+      "value": "30rem",
+      "scope": "default",
+      "line": {
+        "start": 1926,
+        "end": 1926
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The maximum width of the content\nfor the Highlight Board when it has an image.\n",
+    "commentRange": {
       "start": 1927,
       "end": 1928
     },
     "context": {
       "type": "variable",
-      "name": "sprk-highlight-board-breakpoint",
+      "name": "sprk-highlight-board-content-width",
       "value": "30rem",
       "scope": "default",
       "line": {
@@ -17946,15 +17946,15 @@
     }
   },
   {
-    "description": "The maximum width of the content\nfor the Highlight Board when it has an image.\n",
+    "description": "Percentage reduction value for the\nfont size in the Highlight Board in narrow viewports.\n",
     "commentRange": {
       "start": 1930,
       "end": 1931
     },
     "context": {
       "type": "variable",
-      "name": "sprk-highlight-board-content-width",
-      "value": "30rem",
+      "name": "sprk-highlight-board-type-reduction-percentage",
+      "value": "0.8",
       "scope": "default",
       "line": {
         "start": 1932,
@@ -17971,35 +17971,10 @@
     }
   },
   {
-    "description": "Percentage reduction value for the\nfont size in the Highlight Board in narrow viewports.\n",
-    "commentRange": {
-      "start": 1933,
-      "end": 1934
-    },
-    "context": {
-      "type": "variable",
-      "name": "sprk-highlight-board-type-reduction-percentage",
-      "value": "0.8",
-      "scope": "default",
-      "line": {
-        "start": 1935,
-        "end": 1935
-      }
-    },
-    "access": "public",
-    "group": [
-      "undefined"
-    ],
-    "file": {
-      "path": "_settings.scss",
-      "name": "_settings.scss"
-    }
-  },
-  {
     "description": "The height of the Highlight Board image.\n",
     "commentRange": {
-      "start": 1936,
-      "end": 1936
+      "start": 1933,
+      "end": 1933
     },
     "context": {
       "type": "variable",
@@ -18007,8 +17982,8 @@
       "value": "31.25rem",
       "scope": "default",
       "line": {
-        "start": 1937,
-        "end": 1937
+        "start": 1934,
+        "end": 1934
       }
     },
     "access": "public",
@@ -18023,8 +17998,8 @@
   {
     "description": "The background color of the Highlight Board.\n",
     "commentRange": {
-      "start": 1938,
-      "end": 1938
+      "start": 1935,
+      "end": 1935
     },
     "context": {
       "type": "variable",
@@ -18032,8 +18007,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1939,
-        "end": 1939
+        "start": 1936,
+        "end": 1936
       }
     },
     "access": "public",
@@ -18048,8 +18023,8 @@
   {
     "description": "The background color of\nthe content box in the Highlight Board.\n",
     "commentRange": {
-      "start": 1940,
-      "end": 1941
+      "start": 1937,
+      "end": 1938
     },
     "context": {
       "type": "variable",
@@ -18057,8 +18032,8 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
-        "start": 1942,
-        "end": 1942
+        "start": 1939,
+        "end": 1939
       }
     },
     "access": "public",
