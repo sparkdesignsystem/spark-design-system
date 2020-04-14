@@ -44,7 +44,6 @@ export const defaultStory = () => ({
     <sprk-modal
       [(isVisible)]="choiceVisible"
       title="Are you sure?"
-      (hide)="toggleChoiceModal($event)"
       modalType="choice"
       idString="modal-choice-1"
       (confirmClick)="confirmClick($event)"
@@ -70,7 +69,6 @@ export const info = () => ({
     <sprk-modal
       [(isVisible)]="infoVisible"
       title="Info Modal"
-      (hide)="toggleInfoModal($event)"
       modalType="info"
       idString="modal-info-1"
     >
