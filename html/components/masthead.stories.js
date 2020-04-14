@@ -253,7 +253,6 @@ export const defaultStory = () => {
               class="sprk-c-MastheadAccordion__summary"
               data-sprk-toggle="trigger"
               data-sprk-toggle-type="masthead-accordion"
-              href="#nogo"
             >
               <span
                 class="
@@ -1041,7 +1040,6 @@ export const extended = () => {
               class="sprk-c-MastheadAccordion__summary"
               data-sprk-toggle="trigger"
               data-sprk-toggle-type="masthead-accordion"
-              href="#nogo"
               aria-expanded="false"
             >
               <span class="sprk-c-MastheadAccordion__heading">
