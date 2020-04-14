@@ -72,6 +72,22 @@ describe('SprkMastheadAccordionItemComponent', () => {
     ).toEqual(false);
   });
 
+  it('should be aria-expanded=false if closed', () => {
+    component.isOpen = false;
+    fixture.detectChanges();
+    expect(
+      accordionItemLinkElement.getAttribute('aria-expanded')
+    ).toEqual("false");
+  });
+
+  it('should be aria-expanded=true if open', () => {
+    component.isOpen = true;
+    fixture.detectChanges();
+    expect(
+      accordionItemLinkElement.getAttribute('aria-expanded')
+    ).toEqual("true");
+  });
+
   it('should be open if isOpen is true', () => {
     component.isOpen = true;
     fixture.detectChanges();
