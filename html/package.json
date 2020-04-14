@@ -10,7 +10,8 @@
     "coverage": "jest --coverage --config ./jest-config.js",
     "build": "webpack",
     "prepublishOnly": "npm run build",
-    "prebuild:storybook": "npm run test:generate-output",
+    "sassdocmodifiers": "sassdoc '../html/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
+    "prebuild:storybook": "npm run sassdocmodifiers && npm run test:generate-output",
     "storybook": "npm run prebuild:storybook && start-storybook -p 7006 -s ../storybook-utilities/favicon",
     "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon"
   },
@@ -53,6 +54,7 @@
     "promise-polyfill": "^8.1.0",
     "proxyquire": "^2.1.0",
     "sass-loader": "^7.1.0",
+    "sassdoc": "^2.7.1",
     "sinon": "^7.2.2",
     "style-loader": "^0.23.1",
     "webpack": "^4.41.2",
