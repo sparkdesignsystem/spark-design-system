@@ -29,7 +29,7 @@ describe('SprkMastheadAccordionItemComponent', () => {
     fixture = TestBed.createComponent(SprkMastheadAccordionItemComponent);
     component = fixture.componentInstance;
     accordionItemElement = fixture.nativeElement.querySelector('li');
-    accordionItemLinkElement = fixture.nativeElement.querySelector('a');
+    accordionItemLinkElement = fixture.nativeElement.querySelector('button');
     accordionHeadingElement = fixture.nativeElement.querySelector('span');
     accordionDetailsElement = fixture.nativeElement.querySelector('div');
   });
