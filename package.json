@@ -9,12 +9,14 @@
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "npm run prebuild && gatsby build",
+    "develop": "npm run prebuild && gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "prebuild": "npm run sassdoc && npm run sassdocmodifiers && npm run sassdocutilities",
     "sassdoc": "sassdoc './html/settings/**/*.scss' --parse > ./src/data/sass-vars.json",
-    "sassdocmodifiers": "sassdoc './html/**/_*.scss' --parse > ./src/data/sass-modifiers.json"
+    "sassdocmodifiers": "sassdoc './html/**/_*.scss' --parse > ./src/data/sass-modifiers.json",
+    "sassdocutilities": "sassdoc './html/utilities/_*.scss' --parse > ./src/data/sass-utilities.json"
   },
   "author": "Quicken Loans",
   "bugs": {
