@@ -249,8 +249,7 @@ export const defaultStory = () => {
             class="sprk-c-MastheadAccordion__item"
             data-sprk-toggle="container"
           >
-            <a
-              aria-controls="details1"
+            <button
               class="sprk-c-MastheadAccordion__summary"
               data-sprk-toggle="trigger"
               data-sprk-toggle-type="masthead-accordion"
@@ -276,10 +275,9 @@ export const defaultStory = () => {
               >
                 <use xlink:href="#chevron-down"></use>
               </svg>
-            </a>
+            </button>
 
             <ul
-              id="details1"
               class="
                 sprk-b-List
                 sprk-b-List--bare
@@ -1039,8 +1037,7 @@ export const extended = () => {
             class="sprk-c-MastheadAccordion__item"
             data-sprk-toggle="container"
           >
-            <a
-              aria-controls="details1"
+            <button
               class="sprk-c-MastheadAccordion__summary"
               data-sprk-toggle="trigger"
               data-sprk-toggle-type="masthead-accordion"
@@ -1064,10 +1061,9 @@ export const extended = () => {
               >
                 <use xlink:href="#chevron-down"></use>
               </svg>
-            </a>
+            </button>
 
             <ul
-              id="details1"
               class="
                 sprk-b-List
                 sprk-b-List--bare
