@@ -10,10 +10,10 @@
     "coverage": "jest --coverage --config ./jest-config.js",
     "build": "webpack",
     "prepublishOnly": "npm run build",
-    "prebuild:storybook": "npm run test:generate-output",
+    "sassdocmodifiers": "sassdoc '../html/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
+    "prebuild:storybook": "npm run sassdocmodifiers && npm run test:generate-output",
     "storybook": "npm run prebuild:storybook && start-storybook -p 7006 -s ../storybook-utilities/favicon",
-    "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon",
-    "sassdocmodifiers": "sassdoc '../html/**/_*.scss' --parse > ../src/data/sass-modifiers.json"
+    "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon"
   },
   "repository": {
     "type": "git",
