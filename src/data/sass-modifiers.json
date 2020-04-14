@@ -1794,12 +1794,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 18,
-      "end": 20
+      "start": 22,
+      "end": 24
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
+      "name": ".sprk-u-Display--none",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -1818,12 +1818,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 22,
-      "end": 24
+      "start": 18,
+      "end": 20
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-Display--none",
+      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -2635,14 +2635,14 @@
     }
   },
   {
-    "description": "Adds styles for small filled Icons.\n",
+    "description": "Adds the fill and stroke properties\nset to the current color of its container.\n",
     "commentRange": {
-      "start": 74,
-      "end": 75
+      "start": 77,
+      "end": 78
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Icon--filled-small",
+      "name": ".sprk-c-Icon--stroke-current-color",
       "value": "stroke: currentColor;",
       "line": {
         "start": 79,
@@ -2659,14 +2659,14 @@
     }
   },
   {
-    "description": "Adds the fill and stroke properties\nset to the current color of its container.\n",
+    "description": "Adds styles for small filled Icons.\n",
     "commentRange": {
-      "start": 77,
-      "end": 78
+      "start": 74,
+      "end": 75
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Icon--stroke-current-color",
+      "name": ".sprk-c-Icon--filled-small",
       "value": "stroke: currentColor;",
       "line": {
         "start": 79,
@@ -3174,7 +3174,7 @@
       "value": "position: fixed;\n  left: 0;\n  right: 0;\n  height: 100%;\n\n  @media all and (min-width: $sprk-masthead-breakpoint) {\n    position: sticky;\n    height: auto;\n  }",
       "line": {
         "start": 22,
-        "end": 424
+        "end": 423
       }
     },
     "group": [
@@ -3198,7 +3198,7 @@
       "value": "box-shadow: $sprk-masthead-shadow-scroll;",
       "line": {
         "start": 35,
-        "end": 424
+        "end": 423
       }
     },
     "group": [
@@ -3222,7 +3222,7 @@
       "value": "transform: $sprk-masthead-translateY;\n  transition: $sprk-masthead-transition;",
       "line": {
         "start": 41,
-        "end": 424
+        "end": 423
       }
     },
     "group": [
@@ -3246,7 +3246,7 @@
       "value": "display: block;\n  font-weight: $sprk-big-nav-link-font-weight;\n  padding: $sprk-big-nav-link-padding;\n\n  &:hover,\n  &:active,\n  &:focus {\n    color: $sprk-big-nav-link-color;\n  }",
       "line": {
         "start": 205,
-        "end": 424
+        "end": 423
       }
     },
     "group": [
@@ -3270,7 +3270,7 @@
       "value": "color: $sprk-big-nav-active-color;\n  font-weight: $sprk-big-nav-link-font-weight;",
       "line": {
         "start": 249,
-        "end": 424
+        "end": 423
       }
     },
     "group": [
@@ -3294,7 +3294,7 @@
       "value": "@include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 100%, $sprk-hoverline-height: 2px);",
       "line": {
         "start": 258,
-        "end": 424
+        "end": 423
       }
     },
     "group": [
@@ -3309,16 +3309,16 @@
   {
     "description": "Adds top divider when open.\n",
     "commentRange": {
-      "start": 371,
-      "end": 372
+      "start": 370,
+      "end": 371
     },
     "context": {
       "type": "css",
       "name": ".sprk-c-MastheadAccordion__item--open",
       "value": "background-color: $sprk-masthead-accordion-item-open-line-background-color;\n  content: '';\n  display: block;\n  height: $sprk-masthead-accordion-item-open-line-height;\n  margin: 0 auto;\n  width: 100%;",
       "line": {
-        "start": 373,
-        "end": 424
+        "start": 372,
+        "end": 423
       }
     },
     "group": [
@@ -3333,16 +3333,16 @@
   {
     "description": "Adds selected item background highlight and left color bar.\n",
     "commentRange": {
-      "start": 382,
-      "end": 383
+      "start": 381,
+      "end": 382
     },
     "context": {
       "type": "css",
       "name": ".sprk-c-MastheadAccordion__item--active",
       "value": "background-color: $sprk-masthead-accordion-active-background-color;\n  border-left: $sprk-masthead-accordion-active-left-border;",
       "line": {
-        "start": 385,
-        "end": 424
+        "start": 384,
+        "end": 423
       }
     },
     "group": [
@@ -4494,14 +4494,14 @@
     }
   },
   {
-    "description": "Sets the left and right padding to `16px`\n",
+    "description": "Sets the bottom margin to `0px`\n",
     "commentRange": {
-      "start": 9,
-      "end": 11
+      "start": 5,
+      "end": 7
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-phm",
+      "name": ".sprk-u-mbn",
       "value": "padding-top: 0 !important;",
       "line": {
         "start": 19,
@@ -4518,6 +4518,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4552,12 +4553,16 @@
 =======
     "description": "Sets the bottom margin to `0px`\n",
 >>>>>>> Correct documentation
+=======
+    "description": "Sets the margin on all sides to `64px`\n",
+>>>>>>> remove variable and update sass to match prod
     "commentRange": {
-      "start": 5,
-      "end": 7
+      "start": 13,
+      "end": 15
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "name": ".sprk-u-mbn",
@@ -4577,6 +4582,9 @@
 =======
       "name": ".sprk-u-mbn",
 >>>>>>> Correct documentation
+=======
+      "name": ".sprk-u-mah",
+>>>>>>> remove variable and update sass to match prod
       "value": "padding-top: 0 !important;",
       "line": {
         "start": 19,
@@ -4593,14 +4601,14 @@
     }
   },
   {
-    "description": "Sets the margin on all sides to `64px`\n",
+    "description": "Sets the left and right padding to `16px`\n",
     "commentRange": {
-      "start": 13,
-      "end": 15
+      "start": 9,
+      "end": 11
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-mah",
+      "name": ".sprk-u-phm",
       "value": "padding-top: 0 !important;",
       "line": {
         "start": 19,
@@ -4942,6 +4950,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 =======
     "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
@@ -4999,13 +5008,16 @@
 =======
     "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 >>>>>>> Correct documentation
+=======
+    "description": "of its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> remove variable and update sass to match prod
     "commentRange": {
-      "start": 313,
-      "end": 316
+      "start": 309,
+      "end": 311
     },
     "context": {
       "type": "css",
-      "name": ".sprk-o-Stack__item--half@xxs",
+      "name": ".sprk-o-Stack__item--third@xxs",
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5022,13 +5034,14 @@
     }
   },
   {
-    "description": "of its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
-      "start": 309,
-      "end": 311
+      "start": 313,
+      "end": 316
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5043,6 +5056,9 @@
 =======
       "name": ".sprk-o-Stack__item--third@xxs",
 >>>>>>> Correct documentation
+=======
+      "name": ".sprk-o-Stack__item--half@xxs",
+>>>>>>> remove variable and update sass to match prod
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5059,6 +5075,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5117,12 +5134,16 @@
 =======
     "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 >>>>>>> Correct documentation
+=======
+    "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> remove variable and update sass to match prod
     "commentRange": {
-      "start": 303,
-      "end": 306
+      "start": 318,
+      "end": 321
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5137,6 +5158,9 @@
 =======
       "name": ".sprk-o-Stack__item--fourth@xxs",
 >>>>>>> Correct documentation
+=======
+      "name": ".sprk-o-Stack__item--three-fourths@xxs",
+>>>>>>> remove variable and update sass to match prod
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5153,14 +5177,14 @@
     }
   },
   {
-    "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "description": "When placed on an item, its width will be 2/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
-      "start": 298,
-      "end": 301
+      "start": 323,
+      "end": 326
     },
     "context": {
       "type": "css",
-      "name": ".sprk-o-Stack__item--fifth@xxs",
+      "name": ".sprk-o-Stack__item--two-fifths@xxs",
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5177,14 +5201,14 @@
     }
   },
   {
-    "description": "When placed on an item, its width will be 1/6\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
-      "start": 293,
-      "end": 296
+      "start": 303,
+      "end": 306
     },
     "context": {
       "type": "css",
-      "name": ".sprk-o-Stack__item--sixth@xxs",
+      "name": ".sprk-o-Stack__item--fourth@xxs",
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5201,6 +5225,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5267,12 +5292,16 @@
 =======
     "description": "When placed on an item, its width will be 2/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 >>>>>>> Correct documentation
+=======
+    "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> remove variable and update sass to match prod
     "commentRange": {
-      "start": 323,
-      "end": 326
+      "start": 298,
+      "end": 301
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5287,6 +5316,9 @@
 =======
       "name": ".sprk-o-Stack__item--two-fifths@xxs",
 >>>>>>> Correct documentation
+=======
+      "name": ".sprk-o-Stack__item--fifth@xxs",
+>>>>>>> remove variable and update sass to match prod
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5303,6 +5335,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5326,12 +5359,16 @@
 =======
     "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
 >>>>>>> Correct documentation
+=======
+    "description": "When placed on an item, its width will be 3/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+>>>>>>> remove variable and update sass to match prod
     "commentRange": {
-      "start": 318,
-      "end": 321
+      "start": 333,
+      "end": 336
     },
     "context": {
       "type": "css",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5346,6 +5383,9 @@
 =======
       "name": ".sprk-o-Stack__item--three-fourths@xxs",
 >>>>>>> Correct documentation
+=======
+      "name": ".sprk-o-Stack__item--three-tenths@xxs",
+>>>>>>> remove variable and update sass to match prod
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5362,6 +5402,7 @@
     }
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5445,6 +5486,16 @@
 =======
       "name": ".sprk-o-Stack__item--three-tenths@xxs",
 >>>>>>> Correct documentation
+=======
+    "description": "When placed on an item, its width will be 1/6\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 293,
+      "end": 296
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--sixth@xxs",
+>>>>>>> remove variable and update sass to match prod
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5999,14 +6050,14 @@
     }
   },
   {
-    "description": "Adds the selected styles to the step that\nis selected.\n",
+    "description": "Adds the needed styles for\nwhen the Stepper has\na dark background color.\n",
     "commentRange": {
-      "start": 44,
-      "end": 46
+      "start": 48,
+      "end": 50
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Stepper__step--selected",
+      "name": ".sprk-c-Stepper--has-dark-bg",
       "value": ".sprk-c-Stepper__step-heading,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-heading-color;\n  }\n\n  .sprk-c-Stepper__step::before {\n    background-color: $sprk-stepper-dark-bar-color;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color;\n    border-color: $sprk-stepper-dark-icon-border-color;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--has-description\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-description-selected;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-icon,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-selected;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-hover;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
       "line": {
         "start": 51,
@@ -6023,14 +6074,14 @@
     }
   },
   {
-    "description": "Adds the needed styles for\nwhen the Stepper has\na dark background color.\n",
+    "description": "Adds the selected styles to the step that\nis selected.\n",
     "commentRange": {
-      "start": 48,
-      "end": 50
+      "start": 44,
+      "end": 46
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Stepper--has-dark-bg",
+      "name": ".sprk-c-Stepper__step--selected",
       "value": ".sprk-c-Stepper__step-heading,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-heading-color;\n  }\n\n  .sprk-c-Stepper__step::before {\n    background-color: $sprk-stepper-dark-bar-color;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color;\n    border-color: $sprk-stepper-dark-icon-border-color;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--has-description\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-description-selected;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-icon,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-selected;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-hover;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
       "line": {
         "start": 51,
@@ -26736,6 +26787,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "description": "The color of the accordion icon in the\nnavigation links when masthead is on narrow viewports.\n",
     "commentRange": {
 <<<<<<< HEAD
@@ -26854,6 +26906,12 @@
       "start": 1690,
       "end": 1690
 >>>>>>> Generate new variables and modifiers files
+=======
+    "description": "The height and width of Spinners.\n",
+    "commentRange": {
+      "start": 1687,
+      "end": 1687
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -26861,6 +26919,7 @@
       "value": "1.3rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26893,6 +26952,10 @@
         "start": 1691,
         "end": 1691
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1688,
+        "end": 1688
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -26907,6 +26970,7 @@
   {
     "description": "The height and width of large Spinners.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26939,6 +27003,10 @@
       "start": 1692,
       "end": 1692
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1689,
+      "end": 1689
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -26946,6 +27014,7 @@
       "value": "3rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26978,6 +27047,10 @@
         "start": 1693,
         "end": 1693
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1690,
+        "end": 1690
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -26992,6 +27065,7 @@
   {
     "description": "The speed of the animation for Spinners.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27024,6 +27098,10 @@
       "start": 1694,
       "end": 1694
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1691,
+      "end": 1691
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27031,6 +27109,7 @@
       "value": "1s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27063,6 +27142,10 @@
         "start": 1695,
         "end": 1695
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1692,
+        "end": 1692
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27077,6 +27160,7 @@
   {
     "description": "The thickness of Spinners.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27108,6 +27192,10 @@
 >>>>>>> Generate new variables and modifiers files
       "end": 1696
 >>>>>>> update sassdoc jsons
+=======
+      "start": 1693,
+      "end": 1693
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27115,6 +27203,7 @@
       "value": "0.18rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27142,6 +27231,10 @@
         "start": 1697,
         "end": 1697
 >>>>>>> update sassdoc jsons
+=======
+        "start": 1694,
+        "end": 1694
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27156,6 +27249,7 @@
   {
     "description": "The color of Spinners.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27183,6 +27277,10 @@
       "start": 1698,
       "end": 1698
 >>>>>>> update sassdoc jsons
+=======
+      "start": 1695,
+      "end": 1695
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27190,6 +27288,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27217,6 +27316,10 @@
         "start": 1699,
         "end": 1699
 >>>>>>> update sassdoc jsons
+=======
+        "start": 1696,
+        "end": 1696
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27231,6 +27334,7 @@
   {
     "description": "The color of the dark Spinner.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27258,6 +27362,10 @@
       "start": 1700,
       "end": 1700
 >>>>>>> update sassdoc jsons
+=======
+      "start": 1697,
+      "end": 1697
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27265,6 +27373,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27292,6 +27401,10 @@
         "start": 1701,
         "end": 1701
 >>>>>>> update sassdoc jsons
+=======
+        "start": 1698,
+        "end": 1698
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27306,6 +27419,7 @@
   {
     "description": "The breakpoint at which the tabs\ngo from stacked layout to side by side in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27337,6 +27451,10 @@
 =======
       "start": 1707,
       "end": 1708
+=======
+      "start": 1704,
+      "end": 1705
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27344,8 +27462,8 @@
       "value": "46rem",
       "scope": "default",
       "line": {
-        "start": 1709,
-        "end": 1709
+        "start": 1706,
+        "end": 1706
       }
     },
     "access": "public",
@@ -27360,8 +27478,8 @@
   {
     "description": "The tab button text color in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1710,
-      "end": 1710
+      "start": 1707,
+      "end": 1707
     },
     "context": {
       "type": "variable",
@@ -27369,8 +27487,8 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
-        "start": 1711,
-        "end": 1711
+        "start": 1708,
+        "end": 1708
       }
     },
     "access": "public",
@@ -27385,8 +27503,8 @@
   {
     "description": "The tab button background color in Tabbed Navigation.\n",
     "commentRange": {
-      "start": 1712,
-      "end": 1712
+      "start": 1709,
+      "end": 1709
     },
     "context": {
       "type": "variable",
@@ -27394,8 +27512,8 @@
       "value": "$sprk-gray",
       "scope": "default",
       "line": {
-        "start": 1713,
-        "end": 1713
+        "start": 1710,
+        "end": 1710
       }
     },
     "access": "public",
@@ -27410,9 +27528,14 @@
   {
     "description": "The border on the top of the button tabs in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
       "start": 1714,
       "end": 1714
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1711,
+      "end": 1711
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27420,6 +27543,7 @@
       "value": "3px solid $sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27452,6 +27576,10 @@
         "start": 1715,
         "end": 1715
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1712,
+        "end": 1712
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27466,6 +27594,7 @@
   {
     "description": "The border on the top of the\nbutton tabs on hover in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27498,6 +27627,10 @@
       "start": 1716,
       "end": 1717
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1713,
+      "end": 1714
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27505,6 +27638,7 @@
       "value": "3px solid $sprk-red",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27537,6 +27671,10 @@
         "start": 1718,
         "end": 1718
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1715,
+        "end": 1715
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27551,6 +27689,7 @@
   {
     "description": "The button tab text color of the\ncurrently active tab in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27583,6 +27722,10 @@
       "start": 1719,
       "end": 1720
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1716,
+      "end": 1717
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27590,6 +27733,7 @@
       "value": "$sprk-red",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27622,6 +27766,10 @@
         "start": 1721,
         "end": 1721
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1718,
+        "end": 1718
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27636,6 +27784,7 @@
   {
     "description": "The button tab top border of the\ncurrently active tab in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27668,6 +27817,10 @@
       "start": 1722,
       "end": 1723
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1719,
+      "end": 1720
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27675,6 +27828,7 @@
       "value": "3px solid $sprk-red",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27707,6 +27861,10 @@
         "start": 1724,
         "end": 1724
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1721,
+        "end": 1721
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27721,6 +27879,7 @@
   {
     "description": "The button tab background color\nof the currently active tab in Tabbed Navigation.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27753,6 +27912,10 @@
       "start": 1725,
       "end": 1726
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1722,
+      "end": 1723
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27760,6 +27923,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27792,6 +27956,10 @@
         "start": 1727,
         "end": 1727
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1724,
+        "end": 1724
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27806,6 +27974,7 @@
   {
     "description": "The background color of the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27838,6 +28007,10 @@
       "start": 1733,
       "end": 1733
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1730,
+      "end": 1730
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27845,6 +28018,7 @@
       "value": "transparent",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27877,6 +28051,10 @@
         "start": 1734,
         "end": 1734
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1731,
+        "end": 1731
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27891,6 +28069,7 @@
   {
     "description": "The minimum width at which the Stepper\nswitches between narrow and wide layouts.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27923,6 +28102,10 @@
       "start": 1735,
       "end": 1736
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1732,
+      "end": 1733
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -27930,6 +28113,7 @@
       "value": "$sprk-split-breakpoint-xl",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27962,6 +28146,10 @@
         "start": 1737,
         "end": 1737
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1734,
+        "end": 1734
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -27976,6 +28164,7 @@
   {
     "description": "The maximum width of the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28008,6 +28197,10 @@
       "start": 1738,
       "end": 1738
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1735,
+      "end": 1735
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28015,6 +28208,7 @@
       "value": "480px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28047,6 +28241,10 @@
         "start": 1739,
         "end": 1739
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1736,
+        "end": 1736
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28061,6 +28259,7 @@
   {
     "description": "The border width of the Stepper icons.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28093,6 +28292,10 @@
       "start": 1740,
       "end": 1740
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1737,
+      "end": 1737
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28100,6 +28303,7 @@
       "value": "2px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28132,6 +28336,10 @@
         "start": 1741,
         "end": 1741
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1738,
+        "end": 1738
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28146,6 +28354,7 @@
   {
     "description": "The color of the border around the Stepper icon.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28178,6 +28387,10 @@
       "start": 1742,
       "end": 1742
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1739,
+      "end": 1739
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28185,6 +28398,7 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28217,6 +28431,10 @@
         "start": 1743,
         "end": 1743
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1740,
+        "end": 1740
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28231,6 +28449,7 @@
   {
     "description": "The color of the step icon when the step is selected in the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28263,6 +28482,10 @@
       "start": 1744,
       "end": 1744
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1741,
+      "end": 1741
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28270,6 +28493,7 @@
       "value": "$sprk-green",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28302,6 +28526,10 @@
         "start": 1745,
         "end": 1745
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1742,
+        "end": 1742
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28316,6 +28544,7 @@
   {
     "description": "The color of the icon border when the\nStepper is on a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28348,6 +28577,10 @@
       "start": 1746,
       "end": 1748
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1743,
+      "end": 1745
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28355,6 +28588,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28387,6 +28621,10 @@
         "start": 1749,
         "end": 1749
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1746,
+        "end": 1746
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28401,6 +28639,7 @@
   {
     "description": "The height of the step icon in the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28433,6 +28672,10 @@
       "start": 1750,
       "end": 1750
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1747,
+      "end": 1747
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28440,6 +28683,7 @@
       "value": "16px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28472,6 +28716,10 @@
         "start": 1751,
         "end": 1751
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1748,
+        "end": 1748
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28486,6 +28734,7 @@
   {
     "description": "The width of the step icon in the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28518,6 +28767,10 @@
       "start": 1752,
       "end": 1752
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1749,
+      "end": 1749
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28525,6 +28778,7 @@
       "value": "16px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28557,6 +28811,10 @@
         "start": 1753,
         "end": 1753
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1750,
+        "end": 1750
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28571,6 +28829,7 @@
   {
     "description": "The color of the step icon in the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28603,6 +28862,10 @@
       "start": 1754,
       "end": 1754
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1751,
+      "end": 1751
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28610,6 +28873,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28642,6 +28906,10 @@
         "start": 1755,
         "end": 1755
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1752,
+        "end": 1752
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28656,6 +28924,7 @@
   {
     "description": "The color of the step icon\nin the Stepper when hovered.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28688,6 +28957,10 @@
       "start": 1756,
       "end": 1757
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1753,
+      "end": 1754
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28695,6 +28968,7 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28727,6 +29001,10 @@
         "start": 1758,
         "end": 1758
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1755,
+        "end": 1755
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28741,6 +29019,7 @@
   {
     "description": "The color of the Stepper step icon when the step is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28773,6 +29052,10 @@
       "start": 1759,
       "end": 1759
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1756,
+      "end": 1756
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28780,6 +29063,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28812,6 +29096,10 @@
         "start": 1760,
         "end": 1760
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1757,
+        "end": 1757
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28826,6 +29114,7 @@
   {
     "description": "The color of the step icon when the\nStepper has a dark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28858,6 +29147,10 @@
       "start": 1761,
       "end": 1762
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1758,
+      "end": 1759
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28865,6 +29158,7 @@
       "value": "$sprk-blue",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28897,6 +29191,10 @@
         "start": 1763,
         "end": 1763
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1760,
+        "end": 1760
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28911,6 +29209,7 @@
   {
     "description": "The color of the Stepper step icon when the step\nis selected and the Stepper has a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28943,6 +29242,10 @@
       "start": 1764,
       "end": 1766
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1761,
+      "end": 1763
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -28950,6 +29253,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28982,6 +29286,10 @@
         "start": 1767,
         "end": 1767
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1764,
+        "end": 1764
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -28996,6 +29304,7 @@
   {
     "description": "The color of the step icon on hover\nwhen the Stepper has a dark background\n(sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29028,6 +29337,10 @@
       "start": 1768,
       "end": 1770
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1765,
+      "end": 1767
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29035,6 +29348,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29067,6 +29381,10 @@
         "start": 1771,
         "end": 1771
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1768,
+        "end": 1768
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29081,6 +29399,7 @@
   {
     "description": "The transition of the Stepper step icon.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29113,6 +29432,10 @@
       "start": 1773,
       "end": 1773
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1770,
+      "end": 1770
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29120,6 +29443,7 @@
       "value": "0.3s all ease-in-out",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29152,6 +29476,10 @@
         "start": 1774,
         "end": 1774
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1771,
+        "end": 1771
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29166,6 +29494,7 @@
   {
     "description": "The z-index of the Stepper step icon.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29198,6 +29527,10 @@
       "start": 1775,
       "end": 1775
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1772,
+      "end": 1772
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29205,6 +29538,7 @@
       "value": "$sprk-layer-height-xs",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29237,6 +29571,10 @@
         "start": 1776,
         "end": 1776
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1773,
+        "end": 1773
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29251,6 +29589,7 @@
   {
     "description": "The spread value of the icon box\nshadow when the Stepper step is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29283,6 +29622,10 @@
       "start": 1777,
       "end": 1778
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1774,
+      "end": 1775
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29290,6 +29633,7 @@
       "value": "8px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29322,6 +29666,10 @@
         "start": 1779,
         "end": 1779
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1776,
+        "end": 1776
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29336,6 +29684,7 @@
   {
     "description": "The box shadow of the Stepper step icon\nwhen the icon is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29368,6 +29717,10 @@
       "start": 1780,
       "end": 1781
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1777,
+      "end": 1778
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29375,6 +29728,7 @@
       "value": "0 0 0\n  $sprk-stepper-icon-box-shadow-selected-spread\n  $sprk-stepper-icon-border-color-selected",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29407,6 +29761,10 @@
         "start": 1782,
         "end": 1784
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1779,
+        "end": 1781
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29421,6 +29779,7 @@
   {
     "description": "The background color of the content in the Stepper step.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29453,6 +29812,10 @@
       "start": 1785,
       "end": 1785
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1782,
+      "end": 1782
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29460,6 +29823,7 @@
       "value": "transparent",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29492,6 +29856,10 @@
         "start": 1786,
         "end": 1786
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1783,
+        "end": 1783
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29506,6 +29874,7 @@
   {
     "description": "The border radius of the Stepper step\ncontent box when it has a description.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29538,6 +29907,10 @@
       "start": 1787,
       "end": 1788
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1784,
+      "end": 1785
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29545,6 +29918,7 @@
       "value": "5px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29577,6 +29951,10 @@
         "start": 1789,
         "end": 1789
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1786,
+        "end": 1786
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29591,6 +29969,7 @@
   {
     "description": "The box shadow of the Stepper step content\nbox when it has a description.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29623,6 +30002,10 @@
       "start": 1790,
       "end": 1791
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1787,
+      "end": 1788
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29630,6 +30013,7 @@
       "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29662,6 +30046,10 @@
         "start": 1792,
         "end": 1792
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1789,
+        "end": 1789
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29676,6 +30064,7 @@
   {
     "description": "The spacing between the\nStepper step heading and description.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29708,6 +30097,10 @@
       "start": 1793,
       "end": 1794
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1790,
+      "end": 1791
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29715,6 +30108,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29747,6 +30141,10 @@
         "start": 1795,
         "end": 1795
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1792,
+        "end": 1792
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29761,6 +30159,7 @@
   {
     "description": "The font weight of the Stepper step heading.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29793,6 +30192,10 @@
       "start": 1796,
       "end": 1796
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1793,
+      "end": 1793
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29800,6 +30203,7 @@
       "value": "400",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29832,6 +30236,10 @@
         "start": 1797,
         "end": 1797
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1794,
+        "end": 1794
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29846,6 +30254,7 @@
   {
     "description": "The font size of the Stepper step heading.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29878,6 +30287,10 @@
       "start": 1798,
       "end": 1798
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1795,
+      "end": 1795
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29885,6 +30298,7 @@
       "value": "$sprk-font-size-display-six",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29917,6 +30331,10 @@
         "start": 1799,
         "end": 1799
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1796,
+        "end": 1796
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -29931,6 +30349,7 @@
   {
     "description": "The color of the Stepper step heading.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29963,6 +30382,10 @@
       "start": 1800,
       "end": 1800
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1797,
+      "end": 1797
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -29970,6 +30393,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30002,6 +30426,10 @@
         "start": 1801,
         "end": 1801
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1798,
+        "end": 1798
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30016,6 +30444,7 @@
   {
     "description": "The color of the Stepper step heading when\nthe Stepper is on a dark\nbackground (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30048,6 +30477,10 @@
       "start": 1802,
       "end": 1804
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1799,
+      "end": 1801
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30055,6 +30488,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30087,6 +30521,10 @@
         "start": 1805,
         "end": 1805
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1802,
+        "end": 1802
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30101,6 +30539,7 @@
   {
     "description": "The color of the Stepper\nstep heading when the step is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30133,6 +30572,10 @@
       "start": 1806,
       "end": 1807
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1803,
+      "end": 1804
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30140,6 +30583,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30172,6 +30616,10 @@
         "start": 1808,
         "end": 1808
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1805,
+        "end": 1805
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30186,6 +30634,7 @@
   {
     "description": "The padding value for the Stepper step.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30218,6 +30667,10 @@
       "start": 1809,
       "end": 1809
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1806,
+      "end": 1806
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30225,6 +30678,7 @@
       "value": "$sprk-space-misc-a",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30257,6 +30711,10 @@
         "start": 1810,
         "end": 1810
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1807,
+        "end": 1807
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30271,6 +30729,7 @@
   {
     "description": "The background color of the\nStepper step content box when the step is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30303,6 +30762,10 @@
       "start": 1811,
       "end": 1812
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1808,
+      "end": 1809
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30310,6 +30773,7 @@
       "value": "transparent",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30342,6 +30806,10 @@
         "start": 1813,
         "end": 1813
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1810,
+        "end": 1810
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30356,6 +30824,7 @@
   {
     "description": "The background color of the Stepper step\ncontent box when it has a\ndescription and when the step is selected.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30388,6 +30857,10 @@
       "start": 1814,
       "end": 1816
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1811,
+      "end": 1813
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30395,6 +30868,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30427,6 +30901,10 @@
         "start": 1817,
         "end": 1817
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1814,
+        "end": 1814
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30441,6 +30919,7 @@
   {
     "description": "The text color of a selected Stepper step's\ncontent and header when it has a\ndescription. This applies to\nsteppers with the sprk-c-Stepper--has-dark-bg class.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30473,6 +30952,10 @@
       "start": 1818,
       "end": 1821
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1815,
+      "end": 1818
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30480,6 +30963,7 @@
       "value": "$sprk-black",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30512,6 +30996,10 @@
         "start": 1822,
         "end": 1822
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1819,
+        "end": 1819
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30526,6 +31014,7 @@
   {
     "description": "The color of the bar that connects the steps in the Stepper.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30558,6 +31047,10 @@
       "start": 1823,
       "end": 1823
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1820,
+      "end": 1820
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30565,6 +31058,7 @@
       "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30597,6 +31091,10 @@
         "start": 1824,
         "end": 1824
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1821,
+        "end": 1821
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30611,6 +31109,7 @@
   {
     "description": "The color of the bar that connects\nthe steps when the Stepper is on a\ndark background (sprk-c-Stepper--has-dark-bg).\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30643,6 +31142,10 @@
       "start": 1825,
       "end": 1827
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1822,
+      "end": 1824
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30650,6 +31153,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30682,6 +31186,10 @@
         "start": 1828,
         "end": 1828
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1825,
+        "end": 1825
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30696,6 +31204,7 @@
   {
     "description": "The border value for the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30728,6 +31237,10 @@
       "start": 1847,
       "end": 1847
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1844,
+      "end": 1844
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30735,6 +31248,7 @@
       "value": "$sprk-stepper-icon-border-width solid\n  $sprk-stepper-dark-icon-border-color",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30841,6 +31355,10 @@
         "start": 1851,
         "end": 1851
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1845,
+        "end": 1846
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30855,6 +31373,7 @@
   {
     "description": "The height of the dots in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30882,6 +31401,10 @@
       "start": 1852,
       "end": 1852
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1847,
+      "end": 1847
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30889,6 +31412,7 @@
       "value": "10px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30916,6 +31440,10 @@
         "start": 1853,
         "end": 1853
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1848,
+        "end": 1848
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -30930,6 +31458,7 @@
   {
     "description": "The width of the dots in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30957,6 +31486,10 @@
       "start": 1854,
       "end": 1854
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1849,
+      "end": 1849
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -30964,6 +31497,7 @@
       "value": "10px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30991,6 +31525,10 @@
         "start": 1855,
         "end": 1855
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1850,
+        "end": 1850
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31005,6 +31543,7 @@
   {
     "description": "The height of the dots in the Carousel component on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31032,6 +31571,10 @@
       "start": 1856,
       "end": 1856
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1851,
+      "end": 1851
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31039,6 +31582,7 @@
       "value": "10px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31066,6 +31610,10 @@
         "start": 1857,
         "end": 1857
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1852,
+        "end": 1852
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31080,6 +31628,7 @@
   {
     "description": "The width of the dots in the Carousel component on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31107,6 +31656,10 @@
       "start": 1858,
       "end": 1858
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1853,
+      "end": 1853
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31114,6 +31667,7 @@
       "value": "10px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31141,6 +31695,10 @@
         "start": 1859,
         "end": 1859
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1854,
+        "end": 1854
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31155,6 +31713,7 @@
   {
     "description": "The spacing between dots in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31182,6 +31741,10 @@
       "start": 1860,
       "end": 1860
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1855,
+      "end": 1855
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31189,6 +31752,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31216,6 +31780,10 @@
         "start": 1861,
         "end": 1861
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1856,
+        "end": 1856
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31230,6 +31798,7 @@
   {
     "description": "The spacing between dots in the Carousel component on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31257,6 +31826,10 @@
       "start": 1862,
       "end": 1862
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1857,
+      "end": 1857
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31264,6 +31837,7 @@
       "value": "$sprk-carousel-dot-spacing",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31291,6 +31865,10 @@
         "start": 1863,
         "end": 1863
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1858,
+        "end": 1858
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31305,6 +31883,7 @@
   {
     "description": "The box shadow of the active dot in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31332,6 +31911,10 @@
       "start": 1864,
       "end": 1864
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1859,
+      "end": 1859
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31339,6 +31922,7 @@
       "value": "$sprk-stepper-icon-box-shadow-selected",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31366,6 +31950,10 @@
         "start": 1865,
         "end": 1865
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1860,
+        "end": 1860
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31380,6 +31968,7 @@
   {
     "description": "The color of the arrows in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31407,6 +31996,10 @@
       "start": 1866,
       "end": 1866
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1861,
+      "end": 1861
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31414,6 +32007,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31441,6 +32035,10 @@
         "start": 1867,
         "end": 1867
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1862,
+        "end": 1862
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31455,6 +32053,7 @@
   {
     "description": "The spacing for the arrows in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31482,6 +32081,10 @@
       "start": 1868,
       "end": 1868
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1863,
+      "end": 1863
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31489,6 +32092,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31516,6 +32120,10 @@
         "start": 1869,
         "end": 1869
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1864,
+        "end": 1864
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31530,6 +32138,7 @@
   {
     "description": "The left and right values of the arrows in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31557,6 +32166,10 @@
       "start": 1870,
       "end": 1870
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1865,
+      "end": 1865
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31564,6 +32177,7 @@
       "value": "0",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31591,6 +32205,10 @@
         "start": 1871,
         "end": 1871
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1866,
+        "end": 1866
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31605,6 +32223,7 @@
   {
     "description": "The padding value of the arrows in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31632,6 +32251,10 @@
       "start": 1872,
       "end": 1872
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1867,
+      "end": 1867
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31639,6 +32262,7 @@
       "value": "$sprk-space-m",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31666,6 +32290,10 @@
         "start": 1873,
         "end": 1873
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1868,
+        "end": 1868
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31680,6 +32308,7 @@
   {
     "description": "The maximum width of the image in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31707,6 +32336,10 @@
       "start": 1874,
       "end": 1874
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1869,
+      "end": 1869
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31714,6 +32347,7 @@
       "value": "18.75rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31741,6 +32375,10 @@
         "start": 1875,
         "end": 1875
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1870,
+        "end": 1870
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31755,6 +32393,7 @@
   {
     "description": "The breakpoint for the arrows in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31782,6 +32421,10 @@
       "start": 1876,
       "end": 1876
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1871,
+      "end": 1871
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31789,6 +32432,7 @@
       "value": "31.25rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31816,6 +32460,10 @@
         "start": 1877,
         "end": 1877
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1872,
+        "end": 1872
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31830,6 +32478,7 @@
   {
     "description": "The padding value for the dots container in the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31857,6 +32506,10 @@
       "start": 1878,
       "end": 1878
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1873,
+      "end": 1873
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31864,6 +32517,7 @@
       "value": "$sprk-space-xs",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31891,6 +32545,10 @@
         "start": 1879,
         "end": 1879
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1874,
+        "end": 1874
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31905,6 +32563,7 @@
   {
     "description": "The breakpoint for the Carousel component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31937,6 +32596,10 @@
       "start": 1885,
       "end": 1885
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1875,
+      "end": 1875
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -31944,6 +32607,7 @@
       "value": "$sprk-split-breakpoint-xl",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31976,6 +32640,10 @@
         "start": 1886,
         "end": 1886
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1876,
+        "end": 1876
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -31990,6 +32658,7 @@
   {
     "description": "The maximum width of the Card.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32017,6 +32686,10 @@
       "start": 1887,
       "end": 1887
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1882,
+      "end": 1882
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32024,6 +32697,7 @@
       "value": "26.5625rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32051,6 +32725,10 @@
         "start": 1888,
         "end": 1888
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1883,
+        "end": 1883
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32065,6 +32743,7 @@
   {
     "description": "The main Card breakpoint.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32092,6 +32771,10 @@
       "start": 1889,
       "end": 1889
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1884,
+      "end": 1884
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32099,6 +32782,7 @@
       "value": "$sprk-split-breakpoint-s",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32126,6 +32810,10 @@
         "start": 1890,
         "end": 1890
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1885,
+        "end": 1885
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32140,6 +32828,7 @@
   {
     "description": "The box shadow of the Card on narrow viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32167,6 +32856,10 @@
       "start": 1891,
       "end": 1891
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1886,
+      "end": 1886
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32174,6 +32867,7 @@
       "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32201,6 +32895,10 @@
         "start": 1892,
         "end": 1892
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1887,
+        "end": 1887
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32215,6 +32913,7 @@
   {
     "description": "The box shadow of the Card on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32242,6 +32941,10 @@
       "start": 1893,
       "end": 1893
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1888,
+      "end": 1888
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32249,6 +32952,7 @@
       "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32276,6 +32980,10 @@
         "start": 1894,
         "end": 1894
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1889,
+        "end": 1889
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32290,6 +32998,7 @@
   {
     "description": "The box shadow of the Standout Card variant on narrow viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32317,6 +33026,10 @@
       "start": 1895,
       "end": 1895
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1890,
+      "end": 1890
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32324,6 +33037,7 @@
       "value": "0 4px 20px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32351,6 +33065,10 @@
         "start": 1896,
         "end": 1896
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1891,
+        "end": 1891
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32365,6 +33083,7 @@
   {
     "description": "The box shadow of the Standout Card variant on wide viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32392,6 +33111,10 @@
       "start": 1897,
       "end": 1897
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1892,
+      "end": 1892
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32399,6 +33122,7 @@
       "value": "0 4px 40px 2px rgba(0, 0, 0, 0.1)",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32426,6 +33150,10 @@
         "start": 1898,
         "end": 1898
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1893,
+        "end": 1893
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32440,6 +33168,7 @@
   {
     "description": "The border radius of the Card.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32467,6 +33196,10 @@
       "start": 1899,
       "end": 1899
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1894,
+      "end": 1894
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32474,6 +33207,7 @@
       "value": "8px",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32501,6 +33235,10 @@
         "start": 1900,
         "end": 1900
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1895,
+        "end": 1895
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32515,6 +33253,7 @@
   {
     "description": "The padding of the content inside the Card.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32542,6 +33281,10 @@
       "start": 1901,
       "end": 1901
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1896,
+      "end": 1896
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32549,6 +33292,7 @@
       "value": "$sprk-space-misc-a",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32576,6 +33320,10 @@
         "start": 1902,
         "end": 1902
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1897,
+        "end": 1897
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32590,6 +33338,7 @@
   {
     "description": "The background color of the header area for the Highlighted Header Card.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32617,6 +33366,10 @@
       "start": 1903,
       "end": 1903
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1898,
+      "end": 1898
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32624,6 +33377,7 @@
       "value": "$sprk-green",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32651,6 +33405,10 @@
         "start": 1904,
         "end": 1904
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1899,
+        "end": 1899
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32665,6 +33423,7 @@
   {
     "description": "The text color for the Highlighted Header Card.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32697,6 +33456,10 @@
       "start": 1910,
       "end": 1910
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1900,
+      "end": 1900
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32704,6 +33467,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32736,6 +33500,10 @@
         "start": 1911,
         "end": 1911
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1901,
+        "end": 1901
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32750,6 +33518,7 @@
   {
     "description": "The border surrounding the Dictionary.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32777,6 +33546,10 @@
       "start": 1912,
       "end": 1912
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1907,
+      "end": 1907
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32784,6 +33557,7 @@
       "value": "1px solid $sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32811,6 +33585,10 @@
         "start": 1913,
         "end": 1913
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1908,
+        "end": 1908
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32825,6 +33603,7 @@
   {
     "description": "The background color of the key value pairs in the striped Dictionary.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32852,6 +33631,10 @@
       "start": 1914,
       "end": 1914
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1909,
+      "end": 1909
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32859,6 +33642,7 @@
       "value": "$sprk-gray",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32886,6 +33670,10 @@
         "start": 1915,
         "end": 1915
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1910,
+        "end": 1910
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32900,6 +33688,7 @@
   {
     "description": "The breakpoint of the Dictionary component.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32927,6 +33716,10 @@
       "start": 1916,
       "end": 1916
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1911,
+      "end": 1911
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -32934,6 +33727,7 @@
       "value": "38.4375rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32961,6 +33755,10 @@
         "start": 1917,
         "end": 1917
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1912,
+        "end": 1912
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -32975,6 +33773,7 @@
   {
     "description": "The font size of the labels in the Dictionary.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33002,6 +33801,10 @@
       "start": 1918,
       "end": 1918
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1913,
+      "end": 1913
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -33009,6 +33812,7 @@
       "value": "$sprk-font-size-body-one",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33032,6 +33836,10 @@
         "start": 1907,
         "end": 1907
 >>>>>>> update sassdoc jsons
+=======
+        "start": 1914,
+        "end": 1914
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -33050,6 +33858,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1875,
       "end": 1875
 =======
@@ -33064,6 +33873,10 @@
       "start": 1918,
       "end": 1918
 >>>>>>> Generate sass vars
+=======
+      "start": 1915,
+      "end": 1915
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -33071,6 +33884,7 @@
       "value": "$sprk-font-weight-body-one",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33088,6 +33902,10 @@
         "start": 1919,
         "end": 1919
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1916,
+        "end": 1916
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -33103,6 +33921,7 @@
     "description": "The line height of the labels in the Dictionary.\n",
     "commentRange": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start": 1914,
       "end": 1914
 =======
@@ -33113,6 +33932,10 @@
       "start": 1920,
       "end": 1920
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1917,
+      "end": 1917
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -33120,6 +33943,7 @@
       "value": "$sprk-line-height-body-one",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "start": 1915,
@@ -33136,6 +33960,10 @@
         "start": 1921,
         "end": 1921
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1918,
+        "end": 1918
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -33150,6 +33978,7 @@
   {
     "description": "The Highlight Board breakpoint at which styles change\nfor padding, font size and button width.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33182,6 +34011,10 @@
       "start": 1927,
       "end": 1928
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1924,
+      "end": 1925
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -33189,6 +34022,7 @@
       "value": "30rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33221,6 +34055,10 @@
         "start": 1929,
         "end": 1929
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1926,
+        "end": 1926
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -33235,6 +34073,7 @@
   {
     "description": "The maximum width of the content\nfor the Highlight Board when it has an image.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33267,6 +34106,10 @@
       "start": 1930,
       "end": 1931
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1927,
+      "end": 1928
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -33274,6 +34117,7 @@
       "value": "30rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33306,6 +34150,10 @@
         "start": 1932,
         "end": 1932
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1929,
+        "end": 1929
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -33320,6 +34168,7 @@
   {
     "description": "Percentage reduction value for the\nfont size in the Highlight Board in narrow viewports.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33352,6 +34201,10 @@
       "start": 1933,
       "end": 1934
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1930,
+      "end": 1931
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -33359,6 +34212,7 @@
       "value": "0.8",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33391,6 +34245,10 @@
         "start": 1935,
         "end": 1935
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1932,
+        "end": 1932
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -33405,6 +34263,7 @@
   {
     "description": "The height of the Highlight Board image.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33437,6 +34296,10 @@
       "start": 1936,
       "end": 1936
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1933,
+      "end": 1933
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -33444,6 +34307,7 @@
       "value": "31.25rem",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33476,6 +34340,10 @@
         "start": 1937,
         "end": 1937
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1934,
+        "end": 1934
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -33490,6 +34358,7 @@
   {
     "description": "The background color of the Highlight Board.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33522,6 +34391,10 @@
       "start": 1938,
       "end": 1938
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1935,
+      "end": 1935
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -33529,6 +34402,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33561,6 +34435,10 @@
         "start": 1939,
         "end": 1939
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1936,
+        "end": 1936
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -33575,6 +34453,7 @@
   {
     "description": "The background color of\nthe content box in the Highlight Board.\n",
     "commentRange": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33607,6 +34486,10 @@
       "start": 1940,
       "end": 1941
 >>>>>>> Generate new variables and modifiers files
+=======
+      "start": 1937,
+      "end": 1938
+>>>>>>> remove variable and update sass to match prod
     },
     "context": {
       "type": "variable",
@@ -33614,6 +34497,7 @@
       "value": "$sprk-white",
       "scope": "default",
       "line": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33646,6 +34530,10 @@
         "start": 1942,
         "end": 1942
 >>>>>>> Generate new variables and modifiers files
+=======
+        "start": 1939,
+        "end": 1939
+>>>>>>> remove variable and update sass to match prod
       }
     },
     "access": "public",
@@ -34007,12 +34895,12 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 770,
-      "end": 770
+      "start": 774,
+      "end": 774
     },
     "context": {
       "type": "css",
-      "name": "//\n// Accessibility\n///\n\n/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "name": "/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
       "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
       "line": {
         "start": 779,
@@ -34031,12 +34919,12 @@
   {
     "description": "\n",
     "commentRange": {
-      "start": 774,
-      "end": 774
+      "start": 770,
+      "end": 770
     },
     "context": {
       "type": "css",
-      "name": "/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "name": "//\n// Accessibility\n///\n\n/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
       "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
       "line": {
         "start": 779,
