@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
 import SprkIcon from '../../../icons/SprkIcon';
-import SprkLink from '../../../../base/links/SprkLink';
 
 class SprkMastheadAccordionItem extends Component {
   constructor(props) {
