@@ -76,7 +76,7 @@ const date = new Date();
 const year = date.getFullYear();
 const paragraphs = [
   {
-    text: `©2000 – ${year} Quicken Loans Inc. All rights reserved.`,
+    text: `©2000 – ${year} Quicken Loans LLC. All rights reserved.`,
   },
 ];
 

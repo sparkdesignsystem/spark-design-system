@@ -5,93 +5,82 @@
 
 # Getting Started with Spark Icons
 
-The Spark Design System supports two methods
-for including SVG icons. Icons can either be
-built into your site at **compile time** or
-dynamically loaded at **run time**. Each
-method has advantages and disadvantages,
-detailed below.
+Spark makes it possible for you to include SVG
+icons right into your project using two basic
+methods, **Compile Time** and **Run Time**. 
 
 For more information on working with SVG icons, check out
 [this guide](https://css-tricks.com/svg-sprites-use-better-icon-fonts/).
 
-## At Compile Time
+## Compile Time
 
-This method involves downloading the latest
-SVG from the correct CDN URL as part of your
-build/development process, and then embedding
-that SVG directly into your compiled site.
-This way, all the SVGs are already included
-in your site when the page loads and an additional
-request is not necessary. All the load time for
-downloading the SVG from the CDN takes place
-during development, not while the user is using
-the page.
+The first method includes building SVG icons right
+into your site at compile time. This method involves
+downloading the latest SVG, from the correct CDN URL,
+as part of your build process. That way, you’ll be
+able to embed the SVG directly into your compiled site.
 
-The big advantage of this method is performance
-and reliability. Since the SVG has already been
-downloaded as part of the build process, the user
-does not need to wait for the CDN to serve the SVG.
-That makes this method ideal for production
+### Pros:
+- The main advantages of this method are performance
+and reliability. The user avoids waiting for the CDN
+to serve the SVG, making this method ideal for production
 environments where load times are critical.
+- Gives development teams more control over which SVGs
+are included in the site. Since the SVG file is downloaded
+during development, developers can review the SVG file
+before publishing and include only the versions they’ve tested.
 
-This method also gives development teams more
-control over which SVGs are included in the site.
-Since the SVG file is downloaded during development,
-developers can review the SVG file before publishing,
-and can include only the SVG versions they’ve tested.
+### Cons:
+- However, this method does require more development work
+at the beginning for building and maintaining the connection
+to the CDN over the long term.
 
-The downside of this method is more development work
-up front setting up the build and maintaining the
-connection to the CDN over the long term.
+You can find additional examples by using these helpful 
+[Gulp](https://github.com/sparkdesignsystem/spark-starter-html/blob/master/gulpfile.js#L11)
+and
+[Gatsby](https://github.com/sparkdesignsystem/spark-design-system/blob/staging/plugins/gatsby-symbol-set-fetch/gatsby-node.js)
+files.
 
 >***Note***: If you use this method you must not put
 the SVG file in your source control repository.
 The SVG file should only be hosted on the official CDN.
 
-### Examples
+## Run Time
 
-- Using [Gulp](https://github.com/sparkdesignsystem/spark-starter-html/blob/master/gulpfile.js#L11)
-- Using [Gatsby](https://github.com/sparkdesignsystem/spark-design-system/blob/staging/plugins/gatsby-symbol-set-fetch/gatsby-node.js)
+The second method includes dynamically loading the SVG
+icons at run time. This method involves adding the full SVG
+and entire icon set, as a separate HTTP request, while the
+page loads using an
+[AJAX request](https://github.com/sparkdesignsystem/spark-design-system/blob/staging/storybook-utilities/icon-utilities/icon-loader.js).
+That way, the full SVG and
+icons are automatically embedded at the top of your page making
+them available to use within the body.
 
-## At Run Time
+### Pros:
+- The primary advantage of this method is that the least amount of
+setup and additional tooling needed. It’s ideal for quick,
+non-production projects.
 
-Using this method, the full SVG including the entire icon
-set is injected into your site as a separate HTTP request
-while the page is loading. This is typically done with an
-AJAX request that executes on page load. The full SVG
-containing all the icons is embedded at the top of the
-page so that they are available to be used in the body
-of the page.
+### Cons:
+- This method mainly lacks performance. You can easily end up
+downloading the icons more than once on subsequent page loads
+and having to wait for multiple downloads to complete.
+- Icons are not visible while you’re still waiting for the
+download to complete separate from the main site download.
+- If the SVG file within the CDN changes, you’ll see the
+update immediately without a chance for review.
 
-The big downside of this method is performance. You can
-easily end up downloading the icons more than once on
-subsequent page loads (making the user wait for multiple
-downloads), and even if you’re only downloading them once,
-the user still needs to wait for that download to complete
-separate from the main site download, during which time
-the page has loaded but the icons are not visible.
+You can find additional examples by using these environment
+[Angular](https://github.com/sparkdesignsystem/spark-starter-angular/blob/kitchen-sink/src/app/spark-docs/icon-set/icon-set.component.ts)
+and [React](https://github.com/sparkdesignsystem/spark-starter-react/blob/kitchen-sink/src/components/IconSet/IconSet.js) 
+component files.
 
-The big advantage of this method is that it requires the
-least amount of setup and additional tooling. This makes
-it ideal for quick, non-production projects.
-
-Another potential side-effect of this method is that if
-the SVG file on the CDN changes, you’ll get the update
-immediately without a chance for review.
-
-### Examples
-
-- Using an [AJAX call on page load](https://github.com/sparkdesignsystem/spark-design-system/blob/staging/storybook-utilities/icon-utilities/icon-loader.js)
-- Using an [Angular component](https://github.com/sparkdesignsystem/spark-starter-angular/blob/kitchen-sink/src/app/spark-docs/icon-set/icon-set.component.ts)
-- Using a [React component](https://github.com/sparkdesignsystem/spark-starter-react/blob/kitchen-sink/src/components/IconSet/IconSet.js)
-
-## Tips
-- The Icon SVG must be included in the page before the
-first icon is used, typically at the top of the page,
+## Troubleshooting
+- Make sure the icon SVG is included at the top of your page,
 directly after the `<body>` element.
-- To use your own icon set with the Spark components,
-you must make sure your icons have the exact same names
-as the icons listed [here](/using-spark/components/icon).
-- For internal users, you can access a directory of
-our CDN resources [here](http://shorty/sparkassetcdn).
+- To use your own icon set with the Spark components, your
+icons must have the exact same names as the icons listed
+[here](/using-spark/components/icon).
+
+Internal users can access a directory of
+our CDN resources by clicking [this link](http://shorty/sparkassetcdn).
