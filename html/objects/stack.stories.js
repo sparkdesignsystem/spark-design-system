@@ -10,6 +10,11 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('stack')}
+- The item spacing classes are not compatible with
+stack items with specific-column classes such
+as \`sprk-o-Stack__item--half@xs\`. Use padding
+instead. See the "Stack/Split - Two Column With Padding"
+for an example.
     `,
     docs: { iframeHeight: 230 },
   },
@@ -58,6 +63,28 @@ export const stackSplitTwoCol = () => (
 
 stackSplitTwoCol.story = {
   name: 'Stack/Split - Two Column',
+};
+
+export const stackSplitTwoColWithPadding = () => (
+  `
+    <div class="sprk-o-Stack sprk-o-Stack--split@xs">
+      <div class="sprk-o-Stack__item sprk-o-Stack__item--half@xs sprk-o-Box">
+         <p class="sprk-b-TypeBodyTwo">
+          Example paragraph text inside item 1.
+         <p>
+      </div>
+
+      <div class="sprk-o-Stack__item sprk-o-Stack__item--half@xs sprk-o-Box">
+        <p class="sprk-b-TypeBodyTwo">
+          Example paragraph text inside item 2.
+        <p>
+      </div>
+    </div>
+  `
+);
+
+stackSplitTwoColWithPadding.story = {
+  name: 'Stack/Split - Two Column With Padding',
 };
 
 export const stackSplitThreeCol = () => (
