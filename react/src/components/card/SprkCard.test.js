@@ -47,7 +47,7 @@ describe('SprkCard:', () => {
             mediaLinkElement: 'a',
             imgAlt: 'placeholder image',
             imgSrc:
-              'https://spark-assets.netlify.com/desktop.jpg',
+              'https://spark-assets.netlify.app/desktop.jpg',
             mediaAnalyticsString: 'Card:teaser-link',
             mediaVariant: 'img',
           },
@@ -78,7 +78,7 @@ describe('SprkCard:', () => {
             mediaLinkElement: 'a',
             imgAlt: 'placeholder image',
             imgSrc:
-              'https://spark-assets.netlify.com/desktop.jpg',
+              'https://spark-assets.netlify.app/desktop.jpg',
             mediaAnalyticsString: 'Card:teaser-link',
             mediaVariant: 'img',
           },

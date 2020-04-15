@@ -2,10 +2,10 @@ $sprk-masthead-breakpoint: 57rem;
 $sprk-masthead-narrow-height: 198px;
 $sprk-using-webfonts: true;
 $sprk-webfonts:
-  ((url('https://spark-assets.netlify.com/RocketSans-Bold.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Bold.woff') format('woff')), RocketSans, 700),
-  ((url('https://spark-assets.netlify.com/RocketSans-Medium.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Medium.woff') format('woff')), RocketSans, 500),
-  ((url('https://spark-assets.netlify.com/RocketSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Regular.woff') format('woff')), RocketSans, 400),
-  ((url('https://spark-assets.netlify.com/RocketSans-Light.woff2') format('woff2'), url('https://spark-assets.netlify.com/RocketSans-Light.woff') format('woff')), RocketSans, 300);
+  ((url('https://spark-assets.netlify.app/RocketSans-Bold.woff2') format('woff2'), url('https://spark-assets.netlify.app/RocketSans-Bold.woff') format('woff')), RocketSans, 700),
+  ((url('https://spark-assets.netlify.app/RocketSans-Medium.woff2') format('woff2'), url('https://spark-assets.netlify.app/RocketSans-Medium.woff') format('woff')), RocketSans, 500),
+  ((url('https://spark-assets.netlify.app/RocketSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.app/RocketSans-Regular.woff') format('woff')), RocketSans, 400),
+  ((url('https://spark-assets.netlify.app/RocketSans-Light.woff2') format('woff2'), url('https://spark-assets.netlify.app/RocketSans-Light.woff') format('woff')), RocketSans, 300);
 
 /* stylelint-disable selector-class-pattern */
 // SprkTables only allow
