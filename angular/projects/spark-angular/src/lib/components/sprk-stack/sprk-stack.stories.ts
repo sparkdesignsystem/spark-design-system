@@ -4,7 +4,7 @@ import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { SprkTextModule } from 'spark-angular/public-api';
+import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
 
 export default {
   title: 'Components/Stack',
