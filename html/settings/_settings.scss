@@ -813,6 +813,9 @@ $sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
 $sprk-input-container-narrow-max-width: 6.5rem !default;
 /// The value used as a maximum width for Input containers.
 $sprk-input-max-width: 27.5rem !default;
+/// The value used for the maximum width of an Input
+/// container using the .sprk-b-InputContainer--full modifier.
+$sprk-input-max-width-full: 100% !default;
 
 //
 // Huge Inputs

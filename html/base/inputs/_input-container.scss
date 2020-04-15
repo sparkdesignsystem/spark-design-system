@@ -12,6 +12,11 @@
   position: relative;
 }
 
+/// Increases the max-width of the input container to 100%.
+.sprk-b-InputContainer--full {
+  max-width: $sprk-input-max-width-full;
+}
+
 .sprk-b-InputContainer__visibility-toggle {
   margin: $sprk-visibility-control-margin;
 }
