@@ -70,7 +70,7 @@ export const stackSplitTwoColWithPadding = () => (
     <div class="sprk-o-Stack sprk-o-Stack--split@xs">
       <div class="sprk-o-Stack__item sprk-o-Stack__item--half@xs sprk-o-Box">
          <p class="sprk-b-TypeBodyTwo">
-          Example paragraph text inside item 1.
+           Example paragraph text inside item 1.
          <p>
       </div>
 
