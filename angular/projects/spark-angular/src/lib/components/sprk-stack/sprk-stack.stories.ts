@@ -3,8 +3,8 @@ import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
-import { SprkTextDirective } from '../../directives/sprk-text/sprk-text.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { SprkTextModule } from 'spark-angular/public-api';
 
 export default {
   title: 'Components/Stack',
@@ -36,7 +36,7 @@ const modules = {
   imports: [
     SprkStackModule,
     SprkStackItemModule,
-    SprkTextDirective,
+    SprkTextModule,
   ],
 };
 
