@@ -39,14 +39,14 @@ export const defaultStory = () => {
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
           alt="Spark placeholder image"
-          src="https://spark-assets.netlify.com/spark-logo-updated.svg" />
+          src="https://spark-assets.netlify.app/spark-logo-updated.svg" />
       </a>
 
       <a class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack" href="#nogo">
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
           alt="Spark placeholder image"
-          src="https://spark-assets.netlify.com/spark-logo-updated.svg" />
+          src="https://spark-assets.netlify.app/spark-logo-updated.svg" />
       </a>
     </div>
 

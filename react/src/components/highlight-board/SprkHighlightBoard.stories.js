@@ -23,7 +23,7 @@ then they should be \`<button>\` elements with \`aria-role=button\`.
 
 export const defaultStory = () => (
   <SprkHighlightBoard
-    imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+    imgSrc="https://spark-assets.netlify.app/desktop.jpg"
     imgAlt="desktop"
     heading="Hello, Welcome To Spark Design System"
     ctaText="Designers"
@@ -57,7 +57,7 @@ noImage.story = {
 export const stacked = () => (
   <SprkHighlightBoard
     variant="stacked"
-    imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+    imgSrc="https://spark-assets.netlify.app/desktop.jpg"
     imgAlt="desktop"
     heading="Hello, Welcome To Spark Design System"
     ctaText="Designers"

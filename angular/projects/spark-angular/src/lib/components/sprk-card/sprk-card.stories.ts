@@ -136,7 +136,7 @@ export const teaser = () => ({
       cardType="teaser"
       title="Teaser Card Title"
       body="Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua."
-      imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+      imgSrc="https://spark-assets.netlify.app/desktop.jpg"
       imgAlt="Placeholder Image"
       imgHref="#nogo"
       ctaType="button"
@@ -174,7 +174,7 @@ export const twoUpCards = () => ({
          cardType="teaser"
          media="img"
          idString="card-two-up-1"
-         imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+         imgSrc="https://spark-assets.netlify.app/desktop.jpg"
          body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
            Facilisi perpetua an pri, errem commune mea at, mei prima tantas
            signiferumque at. Numquam."
@@ -193,7 +193,7 @@ export const twoUpCards = () => ({
           cardType="teaser"
           media="img"
           idString="card-two-up-2"
-          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
           body="This Lorem ipsum dolor sit amet, doctus invenire vix
             te. Facilisi perpetua an pri, errem commune mea at, mei
             prima tantas signiferumque at. Numquam."
@@ -232,7 +232,7 @@ export const threeUpCards = () => ({
          cardType="teaser"
          idString="card-three-up-1"
          media="img"
-         imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+         imgSrc="https://spark-assets.netlify.app/desktop.jpg"
          body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
            Facilisi perpetua an pri, errem commune mea at, mei prima
            tantas signiferumque at. Numquam."
@@ -251,7 +251,7 @@ export const threeUpCards = () => ({
           cardType="teaser"
           media="img"
           idString="card-three-up-2"
-          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
           body="This Lorem ipsum dolor sit amet, doctus invenire vix
             te. Facilisi perpetua an pri, errem commune mea at, mei
             prima tantas signiferumque at. Numquam."
@@ -271,7 +271,7 @@ export const threeUpCards = () => ({
           additionalCtaClasses="sprk-c-Button--secondary"
           media="img"
           idString="card-three-up-3"
-          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
           body="This Lorem ipsum dolor sit amet, doctus invenire vix
             te. Facilisi perpetua an pri, errem commune mea at, mei
             prima tantas signiferumque at. Numquam."
@@ -310,7 +310,7 @@ export const fourUpCards = () => ({
          additionalCtaClasses="sprk-c-Button--secondary"
          media="img"
          idString="card-four-up-1"
-         imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+         imgSrc="https://spark-assets.netlify.app/desktop.jpg"
          body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
            Facilisi perpetua an pri, errem commune mea at, mei prima
            tantas signiferumque at. Numquam."
@@ -329,7 +329,7 @@ export const fourUpCards = () => ({
           additionalCtaClasses="sprk-c-Button--secondary"
           media="img"
           idString="card-four-up-2"
-          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
           body="This Lorem ipsum dolor sit amet, doctus invenire vix
             te. Facilisi perpetua an pri, errem commune mea at, mei
             prima tantas signiferumque at. Numquam."
@@ -348,7 +348,7 @@ export const fourUpCards = () => ({
           additionalCtaClasses="sprk-c-Button--secondary"
           media="img"
           idString="card-four-up-3"
-          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
           body="This Lorem ipsum dolor sit amet, doctus invenire vix
             te. Facilisi perpetua an pri, errem commune mea at, mei
             prima tantas signiferumque at. Numquam."
@@ -367,7 +367,7 @@ export const fourUpCards = () => ({
           additionalCtaClasses="sprk-c-Button--secondary"
           media="img"
           idString="card-four-up-4"
-          imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
           body="This Lorem ipsum dolor sit amet, doctus invenire vix
             te. Facilisi perpetua an pri, errem commune mea at, mei
             prima tantas signiferumque at. Numquam."

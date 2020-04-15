@@ -41,7 +41,7 @@ export const defaultStory = () => ({
       ctaHref="#nogo"
       ctaText2="Developers"
       ctaHref2="#nogo"
-      imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+      imgSrc="https://spark-assets.netlify.app/desktop.jpg"
       imgAlt="placeholder"
       idString="highlightboard-1"
     >
@@ -84,7 +84,7 @@ export const stacked = () => ({
       heading="Hello, Welcome To Spark Design System"
       ctaText="Learn More"
       type="stacked"
-      imgSrc="https://spark-assets.netlify.com/desktop.jpg"
+      imgSrc="https://spark-assets.netlify.app/desktop.jpg"
       imgAlt="placeholder"
       idString="highlightboard-4"
     >
