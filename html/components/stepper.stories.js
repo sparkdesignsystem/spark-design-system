@@ -486,16 +486,16 @@ export const withCarousel = () => {
             <div class="sprk-c-Carousel__frame">
               <ul class="sprk-c-Carousel__slides">
                 <li class="sprk-c-Carousel__frame-item">
-                  <img src="https://spark-assets.netlify.com/phone-shadow.png" alt="Cell phone with a blank screen.">
+                  <img src="https://spark-assets.netlify.app/phone-shadow.png" alt="Cell phone with a blank screen.">
                 </li>
                 <li class="sprk-c-Carousel__frame-item">
-                  <img src="https://spark-assets.netlify.com/phone-shadow.png" alt="Cell phone with a blank screen.">
+                  <img src="https://spark-assets.netlify.app/phone-shadow.png" alt="Cell phone with a blank screen.">
                 </li>
                 <li class="sprk-c-Carousel__frame-item">
-                  <img src="https://spark-assets.netlify.com/phone-shadow.png" alt="Cell phone with a blank screen.">
+                  <img src="https://spark-assets.netlify.app/phone-shadow.png" alt="Cell phone with a blank screen.">
                 </li>
                 <li class="sprk-c-Carousel__frame-item">
-                  <img src="https://spark-assets.netlify.com/phone-shadow.png" alt="Cell phone with a blank screen.">
+                  <img src="https://spark-assets.netlify.app/phone-shadow.png" alt="Cell phone with a blank screen.">
                 </li>
               </ul>
               <div

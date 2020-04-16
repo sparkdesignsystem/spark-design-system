@@ -39,7 +39,7 @@ defaultStory.story = {
 export const flag = () => (
   <SprkPromo
     additionalClasses="sprk-o-Stack--split@s"
-    imgSrc="https://spark-assets.netlify.com/spark-logo-updated.svg"
+    imgSrc="https://spark-assets.netlify.app/spark-logo-updated.svg"
     imgAlt="Spark Design System Logo"
     imgLinkHref="#nogo"
     imgLinkAnalytics="promo-3-img-link-analytics"
@@ -68,7 +68,7 @@ export const withImage = () => (
     ctaAnalytics="promo-cta-5-analytics"
     ctaIdString="promo-cta-5"
     imgAlt="placeholder"
-    imgSrc="https://spark-assets.netlify.com/house.jpg"
+    imgSrc="https://spark-assets.netlify.app/house.jpg"
     imgLinkAnalytics="promo-5-img-link-analytics"
     imgLinkIdString="promo-5-img-link"
     idString="promo-5"
@@ -94,7 +94,7 @@ export const withReversedImage = () => (
     ctaAnalytics="promo-cta-6-analytics"
     ctaIdString="promo-cta-6"
     imgAlt="placeholder"
-    imgSrc="https://spark-assets.netlify.com/house.jpg"
+    imgSrc="https://spark-assets.netlify.app/house.jpg"
     imgLinkHref="https://sparkdesignsystem.com"
     imgLinkAnalytics="promo-6-img-link-analytics"
     imgLinkIdString="promo-6-img-link"

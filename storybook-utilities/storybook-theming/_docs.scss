@@ -118,6 +118,10 @@ body {
   height: 4rem;
 }
 
+.sb-show-main .sb-decorate .sprk-o-Stack__item.sprk-o-Box {
+  height: auto;
+}
+
 .sbdocs.sbdocs-content {
   max-width: $sprk-centered-column-width;
 }

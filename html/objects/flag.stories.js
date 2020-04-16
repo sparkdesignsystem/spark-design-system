@@ -19,7 +19,7 @@ export const defaultStory = () => (
       <div class="sprk-o-Flag__figure">
         <img
           alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          src="https://spark-assets.netlify.app/spark-logo-mark.svg"
         />
       </div>
       <div class="sprk-o-Flag__body">
@@ -42,7 +42,7 @@ export const reversed = () => (
       <div class="sprk-o-Flag__figure">
         <img
           alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          src="https://spark-assets.netlify.app/spark-logo-mark.svg"
         />
       </div>
       <div class="sprk-o-Flag__body">
@@ -67,7 +67,7 @@ export const stacked = () => (
       <div class="sprk-o-Flag__figure">
         <img
           alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          src="https://spark-assets.netlify.app/spark-logo-mark.svg"
         />
       </div>
     </div>
