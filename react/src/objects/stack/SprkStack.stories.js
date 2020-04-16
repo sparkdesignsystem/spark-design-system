@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkStack from './SprkStack';
 import SprkStackItem from './components/SprkStackItem/SprkStackItem';
+import SprkText from '../../base/typography/SprkText/SprkText';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -14,7 +15,14 @@ export default {
       SprkStackItem,
     },
     jest: ['SprkStack', 'SprkStackItem'],
-    info: `${markdownDocumentationLinkBuilder('stack')}`,
+    info: `
+      ${markdownDocumentationLinkBuilder('stack')}
+- The \`itemSpacing\` prop is not compatible with
+stack items with specific-column classes such
+as \`sprk-o-Stack__item--half@xs\`. Use padding
+instead. See the "Stack/Split - Two Column With Padding"
+for an example.
+`,
   },
 };
 
@@ -49,6 +57,30 @@ export const stackSplitTwoCol = () => (
 
 stackSplitTwoCol.story = {
   name: 'Stack/Split - Two Column',
+};
+
+export const stackSplitTwoColWithPadding = () => (
+  <SprkStack splitAt="tiny">
+    <SprkStackItem
+      additionalClasses="sprk-o-Stack__item--half@xs sprk-o-Box"
+    >
+      <SprkText variant="bodyTwo">
+        Example paragraph text inside item 1.
+      </SprkText>
+    </SprkStackItem>
+
+    <SprkStackItem
+      additionalClasses="sprk-o-Stack__item--half@xs sprk-o-Box"
+    >
+      <SprkText variant="bodyTwo">
+        Example paragraph text inside item 2.
+      </SprkText>
+    </SprkStackItem>
+  </SprkStack>
+);
+
+stackSplitTwoColWithPadding.story = {
+  name: 'Stack/Split - Two Column With Padding',
 };
 
 export const stackSplitThreeCol = () => (

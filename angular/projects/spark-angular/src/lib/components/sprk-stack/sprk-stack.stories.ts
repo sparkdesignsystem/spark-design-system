@@ -4,6 +4,7 @@ import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
 
 export default {
   title: 'Components/Stack',
@@ -19,7 +20,14 @@ export default {
     subcomponents: {
       SprkStackItemDirective,
     },
-    info: `${markdownDocumentationLinkBuilder('stack')}`,
+    info: `
+${markdownDocumentationLinkBuilder('stack')}
+- The \`itemSpacing\` @Input is not compatible with
+stack items with specific-column classes such
+as \`sprk-o-Stack__item--half@xs\`. Use padding
+instead. See the "Stack/Split - Two Column With Padding"
+for an example.
+`,
     docs: { iframeHeight: 180 },
   },
 };
@@ -28,6 +36,7 @@ const modules = {
   imports: [
     SprkStackModule,
     SprkStackItemModule,
+    SprkTextModule,
   ],
 };
 
@@ -92,6 +101,40 @@ export const stackSplitTwoCol = () => ({
 
 stackSplitTwoCol.story = {
   name: 'Stack/Split - Two Column',
+  parameters: {
+    jest: [
+      'sprk-stack.component',
+      'sprk-stack-item.directive',
+    ],
+  },
+};
+
+export const stackSplitTwoColWithPadding = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-stack splitAt='tiny'>
+      <div
+        sprkStackItem
+        class='sprk-o-Stack__item--half@xs sprk-o-Box'
+      >
+        <p sprkText variant="bodyTwo">
+          Example paragraph text inside item 1.
+        <p>
+      </div>
+      <div
+        sprkStackItem
+        class='sprk-o-Stack__item--half@xs sprk-o-Box'
+      >
+        <p sprkText variant="bodyTwo">
+          Example paragraph text inside item 2.
+        <p>
+      </div>
+    </sprk-stack>
+  `,
+});
+
+stackSplitTwoColWithPadding.story = {
+  name: 'Stack/Split - Two Column With Padding',
   parameters: {
     jest: [
       'sprk-stack.component',

@@ -36,7 +36,7 @@ export const defaultStory = () => {
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.com/rocket_by_ql.svg" alt="Rocket Mortgage by Quicken Loans Logo">
+                  <img src="https://spark-assets.netlify.app/rocket_by_ql.svg" alt="Rocket Mortgage by Quicken Loans Logo">
                 </a>
               </div>
 
@@ -49,7 +49,7 @@ export const defaultStory = () => {
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.com/rocket_loans.svg" alt="Rocket Loans Logo">
+                  <img src="https://spark-assets.netlify.app/rocket_loans.svg" alt="Rocket Loans Logo">
                 </a>
               </div>
 
@@ -62,7 +62,7 @@ export const defaultStory = () => {
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.com/rocket_homes.svg" alt="Rocket Homes Logo">
+                  <img src="https://spark-assets.netlify.app/rocket_homes.svg" alt="Rocket Homes Logo">
                 </a>
               </div>
 
@@ -75,7 +75,7 @@ export const defaultStory = () => {
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.com/rocket_hq.svg" alt="Rocket HQ Logo">
+                  <img src="https://spark-assets.netlify.app/rocket_hq.svg" alt="Rocket HQ Logo">
                 </a>
               </div>
 
@@ -248,7 +248,7 @@ export const defaultStory = () => {
               <div class="sprk-o-Stack__item">
                 <a href="#nogo">
                   <img
-                    src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+                    src="https://spark-assets.netlify.app/spark-logo-mark.svg"
                     alt="spark logo">
                 </a>
               </div>
@@ -256,7 +256,7 @@ export const defaultStory = () => {
               <div class="sprk-o-Stack__item">
                 <a href="#nogo">
                   <img
-                    src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+                    src="https://spark-assets.netlify.app/spark-logo-mark.svg"
                     alt="spark logo">
                 </a>
               </div>
