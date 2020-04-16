@@ -23,7 +23,7 @@ export const defaultStory = () => (
     media={
       <img
           alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          src="https://spark-assets.netlify.app/spark-logo-mark.svg"
       />
     }
   >
@@ -45,7 +45,7 @@ export const reversed = () => (
     media={
       <img
           alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          src="https://spark-assets.netlify.app/spark-logo-mark.svg"
       />
     }
   >
@@ -62,7 +62,7 @@ export const stacked = () => (
     media={
       <img
           alt="Provide useful alternative text"
-          src="https://spark-assets.netlify.com/spark-logo-mark.svg"
+          src="https://spark-assets.netlify.app/spark-logo-mark.svg"
       />
     }
   >

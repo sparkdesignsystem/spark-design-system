@@ -35,7 +35,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.com/rocket_by_ql.svg',
+            'https://spark-assets.netlify.app/rocket_by_ql.svg',
           altText: 'Rocket Mortgage by Quicken Loans Logo',
           description: 'Buy a home, refinance, or manage your mortgage online with America\'s largest mortgage lender',
           element: 'a',
@@ -44,7 +44,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.com/rocket_loans.svg',
+            'https://spark-assets.netlify.app/rocket_loans.svg',
           altText: 'Rocket Loans Logo',
           description: 'Get a personal loan to consolidate debt, renovate your home and more',
           element: 'a',
@@ -53,7 +53,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.com/rocket_homes.svg',
+            'https://spark-assets.netlify.app/rocket_homes.svg',
           altText: 'Rocket Homes Logo',
           description: 'Get a real estate agent handpicked for you and search the latest home listings',
           element: 'a',
@@ -62,7 +62,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.com/rocket_hq.svg',
+            'https://spark-assets.netlify.app/rocket_hq.svg',
           altText: 'Rocket HQ Logo',
           description: 'Access tools and articles that can help you reach your financial goals',
           element: 'a',
@@ -188,14 +188,14 @@ export const defaultStory = () => (
         {
           href: '#nogo',
           src:
-            'https://spark-assets.netlify.com/spark-logo-mark.svg',
+            'https://spark-assets.netlify.app/spark-logo-mark.svg',
           altText: 'Spark Logo',
           element: 'a',
         },
         {
           href: '#nogo',
           src:
-            'https://spark-assets.netlify.com/spark-logo-mark.svg',
+            'https://spark-assets.netlify.app/spark-logo-mark.svg',
           altText: 'Spark Logo',
           element: 'a',
         },
