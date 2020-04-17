@@ -1,0 +1,182 @@
+// CHECKBOX PROTOTYPE #1 
+// Maintains Screen reader and SPACE button functionality
+// https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3
+
+.sprk-b-Checkbox-1 {
+
+}
+
+.sprk-b-Checkbox__input-1 {
+  opacity: 0;
+}
+
+.sprk-b-Checkbox__label-1 {
+  position: relative;
+}
+
+.sprk-b-Checkbox__label-1::before,
+.sprk-b-Checkbox__label-1::after {
+  transition: all 0.2s ease-in-out;
+}
+
+.sprk-b-Checkbox__label-1::before {
+  position: absolute;
+
+  content: "";
+  display: inline-block;
+  
+  height: 16px;
+  width: 16px;
+  
+  border: 1px solid;   
+  top: -2px;
+  left: -22px;
+}
+
+.sprk-b-Checkbox__label-1::after {
+  position: absolute;
+
+  content: none;
+  color: white;
+  display: inline-block;
+  height: 6px;
+  width: 9px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  
+  transform: rotate(-45deg);
+  left: -19px;
+  top: 2px;
+}
+
+.sprk-b-Checkbox__input-1:checked + label::after {
+  content: "";
+}
+.sprk-b-Checkbox__input-1:checked + label::before {
+  background-color: $sprk-green;
+}
+.sprk-b-Checkbox__input-1:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+// CHECKBOX PROTOTYPE #2
+// Definitely a breaking change for HTML
+// Requires restructuring the mark up
+// https://levelup.gitconnected.com/css-stylish-custom-checkbox-and-radio-input-9b465f193355
+
+.sprk-b-Checkbox-2 {
+
+}
+
+.sprk-b-Checkbox__input-2 {
+  opacity: 0;
+}
+
+.sprk-b-Checkbox__label-2 {
+  display: inline-block;
+  position: relative;
+}
+
+.sprk-b-Checkbox__label-2::before,
+.sprk-b-Checkbox__label-2::after {
+  transition: all 0.2s ease-in-out;
+}
+
+.sprk-b-Checkbox__label-2::before {
+  position: absolute;
+  content: "";
+  display: block;
+  transform: rotate(0deg) scale(1);
+  height: 16px;
+  width: 16px;
+  border: 1px solid;
+  top: 5px;
+  left: -25px;
+}
+
+.sprk-b-Checkbox__label-2::after {
+  position: absolute;
+  color: white;
+  content: none;
+  display: inline-block;
+  height: 6px;
+  width: 9px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  
+  transform: rotate(-45deg);
+  left: -22px;
+  top: 8px;
+}
+
+
+.sprk-b-Checkbox__input-2:checked + .sprk-b-Checkbox__label-2::after {
+  content: "";
+}
+.sprk-b-Checkbox__input-2:checked + .sprk-b-Checkbox__label-2::before {
+  background-color: $sprk-green;
+}
+
+.sprk-b-Checkbox__label-2:hover::before {
+  border-color: $sprk-green;
+}
+
+.sprk-b-Checkbox__input-2:focus + .sprk-b-Checkbox__label-2::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+// CHECKBOX PROTOTYPE #3 
+// Maintains Screen reader and SPACE button functionality
+// No HTML markup changes
+
+.sprk-b-SelectionContainer {
+  input[type=checkbox] {
+    opacity: 0;
+  }
+
+  input[type=checkbox] + label {
+    position: relative;
+
+    &::before,
+    &::after {
+      transition: all 0.2s ease-in-out;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      border: 1px solid;   
+      top: -2px;
+      left: -22px;
+    }
+
+    &::after {
+      position: absolute;
+      content: none;
+      color: white;
+      display: inline-block;
+      height: 6px;
+      width: 9px;
+      border-left: 2px solid;
+      border-bottom: 2px solid;
+      transform: rotate(-45deg);
+      left: -19px;
+      top: 2px;
+    }
+  }
+  input[type=checkbox]:checked + label::after {
+    content: "";
+  }
+  input[type=checkbox]:checked + label::before {
+    background-color: $sprk-green;
+  }
+  input[type=checkbox]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+  }
+}
+
+// Appearance None is NOT supported by IE
+// https://caniuse.com/#search=appearance
