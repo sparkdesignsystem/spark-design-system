@@ -1004,6 +1004,65 @@ $sprk-textarea-margin: $sprk-space-stack-m !default;
 $sprk-textarea-padding: $sprk-space-m !default;
 
 //
+// Checkbox
+///
+
+/// The opacity of the native control checkbox.
+$sprk-checkbox-input-opacity: 0 !default;
+/// The transition for the checkbox
+/// when the input is checked or unchecked.
+$sprk-checkbox-transition: all 0.2s ease-in-out !default;
+// The height of the custom checkbox input.
+$sprk-checkbox-custom-input-height: 1rem !default;
+// The width of the custom checkbox input.
+$sprk-checkbox-custom-input-width: 1rem !default;
+// The border of the custom checkbox input.
+$sprk-checkbox-custom-input-border: 1px solid $sprk-black-tint-25 !default;
+// The border radius of the custom checkbox input.
+$sprk-checkbox-custom-input-border-radius: 3px !default;
+// The top positioning of the custom checkbox input.
+$sprk-checkbox-custom-input-top: -2px !default;
+// The left positioning of the custom checkbox input.
+$sprk-checkbox-custom-input-left: -22px !default;
+// The height of the checkmark icon.
+$sprk-checkbox-checkmark-icon-height: .4rem !default;
+// The width of the checkmark icon.
+$sprk-checkbox-checkmark-icon-width: .5rem !default;
+// The left positioning of the checkmark icon.
+$sprk-checkbox-checkmark-icon-left: -18px !default;
+// The top positioning of the checkmark icon.
+$sprk-checkbox-checkmark-icon-top: 2px !default;
+// The background image url for the checkmark icon.
+// TODO: UPDATE TO CORRECT SVG URL
+$sprk-checkbox-checkmark-url: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='9' height='6' fill='white' stroke='none'><path d='M0,0 L30,40 L60,0 L0,0 Z'></path></svg>" !default;
+// The background settings for the checkmark icon.
+$sprk-checkbox-checkmark-background: url($sprk-checkbox-checkmark-url) no-repeat !default;
+// The border of the custom checkbox input when focused.
+$sprk-checkbox-custom-input-border-focus: 2px solid $sprk-green !default;
+// The background color of the custom checkbox input when focused.
+$sprk-checkbox-custom-input-background-color-focus: $sprk-gray !default;
+// The border of the custom checkbox input when it is checked and focused.
+$sprk-checkbox-custom-input-border-focus-checked: 2px solid $sprk-black !default;
+// The background color of the custom checkbox input when hovered.
+$sprk-checkbox-custom-input-background-color-hover: $sprk-gray !default;
+// The border color of the custom checkbox input when hovered.
+$sprk-checkbox-custom-input-border-color-hover: $sprk-black-tint-75 !default;
+// The background color of the custom checkbox input when checked.
+$sprk-checkbox-custom-input-background-color-checked: $sprk-green !default;
+// The border color of the custom checkbox input when checked.
+$sprk-checkbox-custom-input-border-color-checked: $sprk-green !default;
+// The border color of the custom checkbox input when disabled.
+$sprk-checkbox-custom-input-border-color-disabled: $sprk-gray-dark !default;
+// The border color of the checkbox label when disabled.
+$sprk-checkbox-input-label-color-disabled: $sprk-gray-dark !default;
+// The cursor when hovering the custom checkbox input when disabled.
+$sprk-checkbox-custom-input-cursor-disabled-hover: not-allowed !default;
+// The background color when hovering the custom checkbox input when disabled.
+$sprk-checkbox-custom-input-background-color-disabled-hover: transparent !default;
+// The cursor when hovering the checkbox label when disabled.
+$sprk-checkbox-input-label-cursor-disabled-hover: not-allowed !default;
+
+//
 // Input Errors
 ///
 
