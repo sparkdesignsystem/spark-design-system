@@ -18941,7 +18941,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-label-font-size",
-      "value": "0.875rem",
+      "value": "1rem",
       "scope": "default",
       "line": {
         "start": 1185,
