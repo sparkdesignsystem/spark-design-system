@@ -129,54 +129,123 @@
 // Maintains Screen reader and SPACE button functionality
 // No HTML markup changes
 
-.sprk-b-SelectionContainer {
-  input[type=checkbox] {
-    opacity: 0;
-  }
+// .sprk-b-SelectionContainer {
+//   input[type=checkbox] {
+//     opacity: 0;
+//   }
 
-  input[type=checkbox] + label {
-    position: relative;
+//   input[type=checkbox] + label {
+//     position: relative;
 
-    &::before,
-    &::after {
-      transition: all 0.2s ease-in-out;
-    }
+//     &::before,
+//     &::after {
+//       transition: all 0.2s ease-in-out;
+//     }
 
-    &::before {
-      position: absolute;
-      content: "";
-      display: inline-block;
-      height: 16px;
-      width: 16px;
-      border: 1px solid;   
-      top: -2px;
-      left: -22px;
-    }
+//     &::before {
+//       position: absolute;
+//       content: "";
+//       display: inline-block;
+//       height: 16px;
+//       width: 16px;
+//       border: 1px solid;   
+//       top: -2px;
+//       left: -22px;
+//     }
 
-    &::after {
-      position: absolute;
-      content: none;
-      color: white;
-      display: inline-block;
-      height: 6px;
-      width: 9px;
-      border-left: 2px solid;
-      border-bottom: 2px solid;
-      transform: rotate(-45deg);
-      left: -19px;
-      top: 2px;
-    }
-  }
-  input[type=checkbox]:checked + label::after {
-    content: "";
-  }
-  input[type=checkbox]:checked + label::before {
-    background-color: $sprk-green;
-  }
-  input[type=checkbox]:focus + label::before {
-    outline: rgb(59, 153, 252) auto 5px;
-  }
-}
+//     &::after {
+//       position: absolute;
+//       content: none;
+//       color: white;
+//       display: inline-block;
+//       height: 6px;
+//       width: 9px;
+//       border-left: 2px solid;
+//       border-bottom: 2px solid;
+//       transform: rotate(-45deg);
+//       left: -19px;
+//       top: 2px;
+//     }
+//   }
+//   input[type=checkbox]:checked + label::after {
+//     content: "";
+//   }
+//   input[type=checkbox]:checked + label::before {
+//     background-color: $sprk-green;
+//   }
+//   input[type=checkbox]:focus + label::before {
+//     outline: rgb(59, 153, 252) auto 5px;
+//   }
+// }
 
 // Appearance None is NOT supported by IE
 // https://caniuse.com/#search=appearance
+
+// CHECKBOX PROTOTYPE #4 
+// Based on Material Design
+// https://material-components.github.io/material-components-web-catalog/#/component/checkbox
+
+.sprk-b-Checkbox-4 {
+  display: inline-block;
+  position: relative;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  line-height: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+  padding: 11px;
+}
+
+.sprk-b-Checkbox__native-control-4 {
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.sprk-b-Checkbox__native-control-4:checked ~ .sprk-b-Checkbox__background-4 {
+ border-color: $sprk-green;
+ background-color: $sprk-green;
+}
+
+.sprk-b-Checkbox__background-4 {
+  background-color: transparent;
+  top: 2px;
+  left: 0px;
+  display: inline-flex;
+  position: absolute;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(0,0,0,.54);
+  border-radius: 2px;
+  line-height: 0;
+}
+
+.sprk-b-Checkbox__checkmark-4 {
+
+}
+
+.sprk-b-Checkbox__checkmark-path-4 {
+  
+}
+
+.sprk-b-Checkbox__mixedmark-4 {
+
+}
+
+.sprk-b-Checkbox__ripple-4 {
+
+}
+
+.sprk-b-Checkbox__label-4 {
+
+}

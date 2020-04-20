@@ -29,6 +29,7 @@ export const checkbox = () => `
             data-id="checkbox-1"
             type="checkbox"
             aria-describedby="checkbox--error-container"
+            role="checkbox"
           >
 
           <label
@@ -47,6 +48,7 @@ export const checkbox = () => `
               data-id="checkbox-2"
               type="checkbox" 
               aria-describedby="checkbox--error-container"
+              role="checkbox"
             />
             <span class="sprk-b-Checkbox__label-2">Default checkbox state</span>
           </label>
@@ -59,6 +61,7 @@ export const checkbox = () => `
             data-id="checkbox-3"
             type="checkbox"
             aria-describedby="checkbox--error-container"
+            role="checkbox"
           >
 
           <label
@@ -69,16 +72,33 @@ export const checkbox = () => `
           </label>
         </div>
         <div class="sprk-b-SelectionContainer">
-          <input
-            id="checkbox-4"
-            data-id="checkbox-4"
-            type="checkbox"
-            aria-describedby="checkbox--error-container"
-          >
-
+          <div class="sprk-b-Checkbox-4">
+            <input
+              class="sprk-b-Checkbox__native-control-4"
+              id="checkbox-4"
+              data-id="checkbox-4"
+              type="checkbox"
+              aria-describedby="checkbox--error-container"
+              role="checkbox"
+            >
+            <div
+              class="sprk-b-Checkbox__background-4"
+            >
+              <svg
+                class="sprk-b-Checkbox__checkmark-4 sprk-c-Icon sprk-c-Icon--stroke-current-color"
+                viewBox="0 0 24 24"
+              >
+                <path class="sprk-b-Checkbox__checkmark-path-4"
+                  fill="none"
+                  d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+              </svg>
+              <div class="sprk-b-Checkbox__mixedmark-4"></div>
+            </div>
+            <div class="sprk-b-Checkbox__ripple-4"></div>
+          </div>
           <label
             for="checkbox-4"
-            class="sprk-b-Label sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label-4"
           >
             Checkbox Item 4
           </label>
