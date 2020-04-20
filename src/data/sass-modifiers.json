@@ -1794,12 +1794,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 22,
-      "end": 24
+      "start": 18,
+      "end": 20
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-Display--none",
+      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -1818,12 +1818,12 @@
   {
     "description": "Turns off the display of an element so that it has no effect on layout.\n",
     "commentRange": {
-      "start": 18,
-      "end": 20
+      "start": 22,
+      "end": 24
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
+      "name": ".sprk-u-Display--none",
       "value": "display: none !important;",
       "line": {
         "start": 26,
@@ -2260,7 +2260,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-green",
-      "value": "rgb(19, 164, 142)",
+      "value": "rgb(0, 132, 115)",
       "scope": "private",
       "line": {
         "start": 37,
@@ -2270,7 +2270,7 @@
     "group": [
       "green"
     ],
-    "type": "#13A48E",
+    "type": "#008473",
     "access": "public",
     "file": {
       "path": "settings/_colors.scss",
@@ -2286,7 +2286,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-green-dark",
-      "value": "rgb(1, 148, 126)",
+      "value": "rgb(0, 118, 103)",
       "scope": "private",
       "line": {
         "start": 41,
@@ -2296,7 +2296,7 @@
     "group": [
       "green"
     ],
-    "type": "#01947E",
+    "type": "#007667",
     "access": "public",
     "file": {
       "path": "settings/_colors.scss",
@@ -2406,6 +2406,30 @@
     }
   },
   {
+    "description": "Adds the styles for the Stacked Highlight Board variant.\n",
+    "commentRange": {
+      "start": 49,
+      "end": 50
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-HighlightBoard--stacked",
+      "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
+      "line": {
+        "start": 59,
+        "end": 67
+      }
+    },
+    "group": [
+      "highlight board"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_highlight-board.scss",
+      "name": "_highlight-board.scss"
+    }
+  },
+  {
     "description": "A Spark utility class that can be used on\nthe Highlight Board to make it become 100% width.\n",
     "commentRange": {
       "start": 52,
@@ -2454,30 +2478,6 @@
     }
   },
   {
-    "description": "Adds the styles for the Stacked Highlight Board variant.\n",
-    "commentRange": {
-      "start": 49,
-      "end": 50
-    },
-    "context": {
-      "type": "css",
-      "name": ".sprk-c-HighlightBoard--stacked",
-      "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
-      "line": {
-        "start": 59,
-        "end": 67
-      }
-    },
-    "group": [
-      "highlight board"
-    ],
-    "access": "public",
-    "file": {
-      "path": "components/_highlight-board.scss",
-      "name": "_highlight-board.scss"
-    }
-  },
-  {
     "description": "Adds styles for filled Icons.\n",
     "commentRange": {
       "start": 66,
@@ -2502,14 +2502,14 @@
     }
   },
   {
-    "description": "Adds the fill and stroke properties\nset to the current color of its container.\n",
+    "description": "Adds styles for small filled Icons.\n",
     "commentRange": {
-      "start": 77,
-      "end": 78
+      "start": 74,
+      "end": 75
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Icon--stroke-current-color",
+      "name": ".sprk-c-Icon--filled-small",
       "value": "stroke: currentColor;",
       "line": {
         "start": 79,
@@ -2526,14 +2526,14 @@
     }
   },
   {
-    "description": "Adds styles for small filled Icons.\n",
+    "description": "Adds the fill and stroke properties\nset to the current color of its container.\n",
     "commentRange": {
-      "start": 74,
-      "end": 75
+      "start": 77,
+      "end": 78
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Icon--filled-small",
+      "name": ".sprk-c-Icon--stroke-current-color",
       "value": "stroke: currentColor;",
       "line": {
         "start": 79,
@@ -3246,14 +3246,14 @@
     }
   },
   {
-    "description": "Sets the bottom margin to the current value of\n`$sprk-space-misc-a` (`24px`).\n",
+    "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
     "commentRange": {
-      "start": 560,
-      "end": 563
+      "start": 570,
+      "end": 573
     },
     "context": {
       "type": "css",
-      "name": "sprk-u-MarginBottom--a",
+      "name": "sprk-u-MarginAll--d",
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
         "start": 579,
@@ -3294,14 +3294,14 @@
     }
   },
   {
-    "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
+    "description": "Sets the bottom margin to the current value of\n`$sprk-space-misc-a` (`24px`).\n",
     "commentRange": {
-      "start": 570,
-      "end": 573
+      "start": 560,
+      "end": 563
     },
     "context": {
       "type": "css",
-      "name": "sprk-u-MarginAll--d",
+      "name": "sprk-u-MarginBottom--a",
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
         "start": 579,
