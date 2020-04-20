@@ -1,3 +1,5 @@
+import { useEffect } from '@storybook/client-api';
+import { checkbox } from './checkbox';
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -13,7 +15,13 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const checkbox = () => `
+// TODO: UPDATE GATSBY COMPONENT PREVIEW NAMES & REACT/ANGULAR NAMES
+export const defaultStory = () => {
+  useEffect(() => {
+    checkbox();
+  }, []);
+
+  return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
@@ -22,85 +30,54 @@ export const checkbox = () => `
           </label>
         </legend>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox-1">
+        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
           <input
-            class="sprk-b-Checkbox__input-1"
+            class="sprk-b-Checkbox__input"
             id="checkbox-1"
             data-id="checkbox-1"
             type="checkbox"
             aria-describedby="checkbox--error-container"
-            role="checkbox"
           >
 
           <label
             for="checkbox-1"
-            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label-1"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
           >
             Checkbox Item 1
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox-2">
-          <label for="checkbox-2" class="">
-            <input
-              class="sprk-b-Checkbox__input-2"
-              id="checkbox-2"
-              data-id="checkbox-2"
-              type="checkbox" 
-              aria-describedby="checkbox--error-container"
-              role="checkbox"
-            />
-            <span class="sprk-b-Checkbox__label-2">Default checkbox state</span>
+        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
+          <input
+            class="sprk-b-Checkbox__input"
+            id="checkbox-2"
+            data-id="checkbox-2"
+            type="checkbox"
+            aria-describedby="checkbox--error-container"
+          >
+
+          <label
+            for="checkbox-2"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+          >
+            Checkbox Item 2
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox-3">
+        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
           <input
-            class="sprk-b-Checkbox__input-3"
+            class="sprk-b-Checkbox__input"
             id="checkbox-3"
             data-id="checkbox-3"
             type="checkbox"
             aria-describedby="checkbox--error-container"
-            role="checkbox"
           >
 
           <label
             for="checkbox-3"
-            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label-3"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
           >
             Checkbox Item 3
-          </label>
-        </div>
-        <div class="sprk-b-SelectionContainer">
-          <div class="sprk-b-Checkbox-4">
-            <input
-              class="sprk-b-Checkbox__native-control-4"
-              id="checkbox-4"
-              data-id="checkbox-4"
-              type="checkbox"
-              aria-describedby="checkbox--error-container"
-              role="checkbox"
-            >
-            <div
-              class="sprk-b-Checkbox__background-4"
-            >
-              <svg
-                class="sprk-b-Checkbox__checkmark-4 sprk-c-Icon sprk-c-Icon--stroke-current-color"
-                viewBox="0 0 24 24"
-              >
-                <path class="sprk-b-Checkbox__checkmark-path-4"
-                  fill="none"
-                  d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-              </svg>
-              <div class="sprk-b-Checkbox__mixedmark-4"></div>
-            </div>
-            <div class="sprk-b-Checkbox__ripple-4"></div>
-          </div>
-          <label
-            for="checkbox-4"
-            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label-4"
-          >
-            Checkbox Item 4
           </label>
         </div>
       </fieldset>
@@ -112,8 +89,9 @@ export const checkbox = () => `
       </div>
     </div>
   `;
+};
 
-checkbox.story = {
+defaultStory.story = {
   name: 'Default',
 };
 
@@ -126,8 +104,9 @@ export const invalidCheckbox = () => `
           </label>
         </legend>
 
-        <div class="sprk-b-SelectionContainer">
+        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
           <input
+            class="sprk-b-Checkbox__input"
             id="checkbox-1"
             data-id="checkbox-1"
             type="checkbox"
@@ -136,14 +115,15 @@ export const invalidCheckbox = () => `
 
           <label
             for="checkbox-1"
-            class="sprk-b-Label sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
           >
             Checkbox Item 1
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer">
+        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
           <input
+            class="sprk-b-Checkbox__input"
             id="checkbox-2"
             data-id="checkbox-2"
             type="checkbox"
@@ -152,14 +132,15 @@ export const invalidCheckbox = () => `
 
           <label
             for="checkbox-2"
-            class="sprk-b-Label sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
           >
             Checkbox Item 2
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer">
+        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
           <input
+            class="sprk-b-Checkbox__input"
             id="checkbox-3"
             data-id="checkbox-3"
             type="checkbox"
@@ -168,7 +149,7 @@ export const invalidCheckbox = () => `
 
           <label
             for="checkbox-3"
-            class="sprk-b-Label sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
           >
             Checkbox Item 3
           </label>
@@ -205,8 +186,9 @@ export const disabledCheckbox = () => `
           </label>
         </legend>
 
-        <div class="sprk-b-SelectionContainer">
+        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
           <input
+            class="sprk-b-Checkbox__input"
             id="checkbox-1"
             data-id="checkbox-1"
             type="checkbox"
@@ -216,14 +198,15 @@ export const disabledCheckbox = () => `
 
           <label
             for="checkbox-1"
-            class="sprk-b-Label sprk-b-Label--inline sprk-b-Label--disabled"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Label--disabled sprk-b-Checkbox__label"
           >
             Checkbox Item 1
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer">
+        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
           <input
+            class="sprk-b-Checkbox__input"
             id="checkbox-2"
             data-id="checkbox-2"
             type="checkbox"
@@ -233,14 +216,15 @@ export const disabledCheckbox = () => `
 
           <label
             for="checkbox-2"
-            class="sprk-b-Label sprk-b-Label--inline sprk-b-Label--disabled"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Label--disabled sprk-b-Checkbox__label"
           >
             Checkbox Item 2
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer">
+        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
           <input
+            class="sprk-b-Checkbox__input"
             id="checkbox-3"
             data-id="checkbox-3"
             type="checkbox"
@@ -250,7 +234,7 @@ export const disabledCheckbox = () => `
 
           <label
             for="checkbox-3"
-            class="sprk-b-Label sprk-b-Label--inline sprk-b-Label--disabled"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Label--disabled sprk-b-Checkbox__label"
           >
             Checkbox Item 3
           </label>
