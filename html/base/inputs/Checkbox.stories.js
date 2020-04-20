@@ -15,7 +15,6 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-// TODO: UPDATE GATSBY COMPONENT PREVIEW NAMES & REACT/ANGULAR NAMES
 export const defaultStory = () => {
   useEffect(() => {
     checkbox();
