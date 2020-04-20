@@ -1,40 +1,18 @@
-// 1. role="checkbox"
-
-// Could this be a utility? checkElementRole with parameter passed in to check?
-const checkRoleEqualsCheckbox = () => {
-  /**
-   * Get array of checkbox inputs
-   * map through array
-   * if item has role=checkbox, great
-   * if not, add it
-   *  */ 
-}
-
-// 2. aria-checked="true || false"
-
-// Should these be two separate functions? Initial and Updating?
-const isAriaChecked = () => {
-  /**
-   * on load:
-   * get array of checkbox inputs
-   * map through array
-   * if item is checked add aria-checked="true"
-   * it not, add aria-checked="false"
-   * 
-   * on change:
-   * update current checkbox aria-checked to true or false
-   */
-}
-
-// 3. id of input matches for of label
+import getElements from '../../utilities/getElements';
+import { uniqueId } from 'lodash';
 
 // Need some help naming this one.
-const generateIdForCheckbox = () => {
+const generateIdForCheckbox = (element) => {
+
+  // This is going to change based on the structure we decide to go with - currently accounts for prototypes 1-3
+  const labelElement = (element.nextElementSibling.tagName === 'LABEL') ? element.nextElementSibling : element.previousElementSibling;
+  let inputId = element.getAttribute('id');
+  if(labelElement) {
+    let labelFor = labelElement.htmlFor;
+  }
   /**
    * Using the same idea as the generateAriaControls function:
    * 
-   * Get array of checkbox inputs
-   * map through array
    * get id of input
    * get for of sibling label
    * 
@@ -48,6 +26,14 @@ const generateIdForCheckbox = () => {
    */
 }
 
-// Get the array of checkbox inputs one time
-// When mapping, do each of these checks on each item
-// Separate function to update aria-checked on change 
+const bindCheckboxUIEvents = (element) => {
+  generateIdForCheckbox(element);
+}
+
+const checkbox = () => {
+  getElements('.sprk-b-SelectionContainer input[type="checkbox"]', bindCheckboxUIEvents);
+}
+
+export {
+  checkbox, generateIdForCheckbox, bindCheckboxUIEvents,
+};
