@@ -52,6 +52,15 @@ describe('SprkHighlightBoard:', () => {
     expect(contentDiv.length).toBe(2);
   });
 
+  it('should not allow a secondary CTA without a primary CTA', () => {
+    const wrapper = shallow(
+      <SprkHighlightBoard ctaText2="so is this" />,
+    );
+    const contentDiv = wrapper.find('div.sprk-c-HighlightBoard__cta');
+
+    expect(contentDiv.length).toBe(0);
+  });
+
   it('should error if imgSrc is provided without imgAlt', () => {
     const wrapper = shallow(<SprkHighlightBoard imgSrc="foo" />);
     const actual = stub.getCall(0).args[0];
