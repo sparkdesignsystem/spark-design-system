@@ -12,13 +12,13 @@ const generateIdForCheckbox = (element) => {
 
   // Warn if 'for' exists but the 'id' does not
   if (labelFor && !inputId) {
-    console.warn(`Spark Design System Warning - The value of 'for' on ${labelElement} expects a matching 'id' on ${element}.`);
+    console.warn(`Spark Design System Warning - The value of 'for' (${labelFor}) on the label expects a matching 'id' on the input.`);
     return;
   }
 
   // Warn if 'for' and 'id' both exist but don't match
   if (inputId && labelFor && inputId !== labelFor) {
-    console.warn(`Spark Design System Warning - The value of 'for' on ${labelElement} should match the 'id' on ${element}.`);
+    console.warn(`Spark Design System Warning - The value of 'for' (${labelFor}) on the label should match the 'id' on the input (${inputId}).`);
     return;
   }
 
