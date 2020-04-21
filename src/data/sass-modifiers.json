@@ -2260,7 +2260,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-green",
-      "value": "rgb(19, 164, 142)",
+      "value": "rgb(0, 132, 115)",
       "scope": "private",
       "line": {
         "start": 37,
@@ -2270,7 +2270,7 @@
     "group": [
       "green"
     ],
-    "type": "#13A48E",
+    "type": "#008473",
     "access": "public",
     "file": {
       "path": "settings/_colors.scss",
@@ -2286,7 +2286,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-green-dark",
-      "value": "rgb(1, 148, 126)",
+      "value": "rgb(0, 118, 103)",
       "scope": "private",
       "line": {
         "start": 41,
@@ -2296,7 +2296,7 @@
     "group": [
       "green"
     ],
-    "type": "#01947E",
+    "type": "#007667",
     "access": "public",
     "file": {
       "path": "settings/_colors.scss",
