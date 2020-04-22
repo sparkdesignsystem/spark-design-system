@@ -75,17 +75,8 @@
 }
 
 // Disabled styles for checkbox and label
-.sprk-b-Checkbox__input:disabled {
-  + .sprk-b-Checkbox__label {
-    &:hover {
-      cursor: $sprk-checkbox-input-label-cursor-disabled-hover;
-    }
-  }
-
-  &:hover {
-    + .sprk-b-Checkbox__label::before {
-      border-color: $sprk-checkbox-custom-input-border-color-disabled;
-      background-color: $sprk-checkbox-custom-input-background-color-disabled-hover;
-    }
-  }
+.sprk-b-Checkbox__input:disabled:hover + .sprk-b-Checkbox__label::before {
+  cursor: $sprk-checkbox-custom-input-cursor-disabled-hover;
+  border-color: $sprk-checkbox-custom-input-border-color-disabled;
+  background-color: $sprk-checkbox-custom-input-background-color-disabled-hover;
 }
