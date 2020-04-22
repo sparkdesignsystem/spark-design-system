@@ -29,7 +29,10 @@ export const defaultStory = () => {
           </label>
         </legend>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          data-sprk-input="checkbox"
+        >
           <input
             class="sprk-b-Checkbox__input"
             id="checkbox-1"
@@ -46,7 +49,10 @@ export const defaultStory = () => {
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          data-sprk-input="checkbox"
+        >
           <input
             class="sprk-b-Checkbox__input"
             id="checkbox-2"
@@ -63,7 +69,10 @@ export const defaultStory = () => {
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          data-sprk-input="checkbox"
+        >
           <input
             class="sprk-b-Checkbox__input"
             id="checkbox-3"
@@ -103,7 +112,10 @@ export const invalidCheckbox = () => `
           </label>
         </legend>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          data-sprk-input="checkbox"
+        >
           <input
             class="sprk-b-Checkbox__input"
             id="checkbox-1"
@@ -120,7 +132,10 @@ export const invalidCheckbox = () => `
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          data-sprk-input="checkbox"
+        >
           <input
             class="sprk-b-Checkbox__input"
             id="checkbox-2"
@@ -137,7 +152,10 @@ export const invalidCheckbox = () => `
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          data-sprk-input="checkbox"
+        >
           <input
             class="sprk-b-Checkbox__input"
             id="checkbox-3"
@@ -185,7 +203,10 @@ export const disabledCheckbox = () => `
           </label>
         </legend>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          data-sprk-input="checkbox"
+        >
           <input
             class="sprk-b-Checkbox__input"
             id="checkbox-1"
@@ -203,7 +224,10 @@ export const disabledCheckbox = () => `
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          data-sprk-input="checkbox"
+        >
           <input
             class="sprk-b-Checkbox__input"
             id="checkbox-2"
@@ -221,7 +245,10 @@ export const disabledCheckbox = () => `
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Checkbox">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          data-sprk-input="checkbox"
+        >
           <input
             class="sprk-b-Checkbox__input"
             id="checkbox-3"
