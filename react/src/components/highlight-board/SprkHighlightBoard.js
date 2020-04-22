@@ -31,7 +31,7 @@ const SprkHighlightBoard = (props) => {
   );
 
   warning(
-    !(ctaText2 != null && ctaText === null),
+    !(ctaText2 !== null && ctaText === null),
     `SprkHighlightBoard: A secondary call-to-action (CTA) should not exist without
     a primary CTA. If there is only one CTA, it must be set on ctaText and ctaHref.
     `,
