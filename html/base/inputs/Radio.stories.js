@@ -1,4 +1,5 @@
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { useEffect } from '@storybook/client-api';
 
 export default {
   title: 'Components/Input/Radio',
@@ -13,9 +14,11 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
+export const defaultStory = () => {
+  useEffect(() => {
+  }, []);
 
-
-export const defaultStory = () => `
+  return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
@@ -24,7 +27,10 @@ export const defaultStory = () => `
           </label>
         </legend>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Radio">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Radio"
+          data-sprk-input="radio"
+        >
           <input
             class="sprk-b-Radio__input"
             id="radio-1"
@@ -42,7 +48,10 @@ export const defaultStory = () => `
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Radio">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Radio"
+          data-sprk-input="radio"
+        >
           <input
             class="sprk-b-Radio__input"
             id="radio-2"
@@ -60,7 +69,10 @@ export const defaultStory = () => `
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer sprk-b-Radio">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Radio"
+          data-sprk-input="radio"
+        >
           <input
             class="sprk-b-Radio__input"
             id="radio-3"
@@ -83,13 +95,18 @@ export const defaultStory = () => `
         id="radio--error-container"
       ></div>
     </div>
-  `;
+  `
+};
 
 defaultStory.story = {
   name: 'Default',
 };
 
-export const invalidRadioButton = () => `
+export const invalidRadioButton = () => {
+  useEffect(() => {
+  }, []);
+
+  return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
@@ -98,7 +115,10 @@ export const invalidRadioButton = () => `
           </label>
         </legend>
 
-        <div class="sprk-b-SelectionContainer">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Radio"
+          data-sprk-input="radio"
+        >
           <input
             class="sprk-b-Radio__input"
             id="radio-1"
@@ -116,7 +136,10 @@ export const invalidRadioButton = () => `
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Radio"
+          data-sprk-input="radio"
+        >
           <input
             class="sprk-b-Radio__input"
             id="radio-2"
@@ -134,7 +157,10 @@ export const invalidRadioButton = () => `
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Radio"
+          data-sprk-input="radio"
+        >
           <input
             class="sprk-b-Radio__input"
             id="radio-3"
@@ -167,13 +193,18 @@ export const invalidRadioButton = () => `
         </div>
       </div>
     </div>
-  `;
+  `
+};
 
 invalidRadioButton.story = {
   name: 'Invalid',
 };
 
-export const disabledRadioButton = () => `
+export const disabledRadioButton = () => {
+  useEffect(() => {
+  }, []);
+
+  return`
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
@@ -182,7 +213,10 @@ export const disabledRadioButton = () => `
           </label>
         </legend>
 
-        <div class="sprk-b-SelectionContainer">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Radio"
+          data-sprk-input="radio"
+        >
           <input
             class="sprk-b-Radio__input"
             id="radio-1"
@@ -201,7 +235,10 @@ export const disabledRadioButton = () => `
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Radio"
+          data-sprk-input="radio"
+        >
           <input
             class="sprk-b-Radio__input"
             id="radio-2"
@@ -220,7 +257,10 @@ export const disabledRadioButton = () => `
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer">
+        <div
+          class="sprk-b-SelectionContainer sprk-b-Radio"
+          data-sprk-input="radio"
+        >
           <input
             class="sprk-b-Radio__input"
             id="radio-3"
@@ -244,7 +284,8 @@ export const disabledRadioButton = () => `
         id="radio--error-container"
       ></div>
     </div>
-  `;
+  `
+};
 
 disabledRadioButton.story = {
   name: 'Disabled',
