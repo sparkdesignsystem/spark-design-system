@@ -4,10 +4,6 @@ import {
   bindCheckboxUIEvents
 } from '../base/inputs/checkbox';
 
-// global.console = {
-//   warn: jest.fn(),
-// }
-
 describe('Checkbox tests', () => {
   let container;
   let inputElement;
