@@ -13,7 +13,9 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const radioButton = () => `
+
+
+export const defaultStory = () => `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
@@ -22,8 +24,9 @@ export const radioButton = () => `
           </label>
         </legend>
 
-        <div class="sprk-b-SelectionContainer">
+        <div class="sprk-b-SelectionContainer sprk-b-Radio">
           <input
+            class="sprk-b-Radio__input"
             id="radio-1"
             data-id="radio-1"
             type="radio"
@@ -33,14 +36,15 @@ export const radioButton = () => `
 
           <label
             for="radio-1"
-            class="sprk-b-Label sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
           >
             Radio Item 1
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer">
+        <div class="sprk-b-SelectionContainer sprk-b-Radio">
           <input
+            class="sprk-b-Radio__input"
             id="radio-2"
             data-id="radio-2"
             type="radio"
@@ -50,14 +54,15 @@ export const radioButton = () => `
 
           <label
             for="radio-2"
-            class="sprk-b-Label sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
           >
             Radio Item 2
           </label>
         </div>
 
-        <div class="sprk-b-SelectionContainer">
+        <div class="sprk-b-SelectionContainer sprk-b-Radio">
           <input
+            class="sprk-b-Radio__input"
             id="radio-3"
             data-id="radio-3"
             type="radio"
@@ -66,7 +71,7 @@ export const radioButton = () => `
           >
           <label
             for="radio-3"
-            class="sprk-b-Label sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
           >
             Radio Item 3
           </label>
@@ -80,7 +85,7 @@ export const radioButton = () => `
     </div>
   `;
 
-radioButton.story = {
+defaultStory.story = {
   name: 'Default',
 };
 
@@ -95,6 +100,7 @@ export const invalidRadioButton = () => `
 
         <div class="sprk-b-SelectionContainer">
           <input
+            class="sprk-b-Radio__input"
             id="radio-1"
             data-id="radio-1"
             type="radio"
@@ -104,7 +110,7 @@ export const invalidRadioButton = () => `
 
           <label
             for="radio-1"
-            class="sprk-b-Label sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
           >
             Radio Item 1
           </label>
@@ -112,6 +118,7 @@ export const invalidRadioButton = () => `
 
         <div class="sprk-b-SelectionContainer">
           <input
+            class="sprk-b-Radio__input"
             id="radio-2"
             data-id="radio-2"
             type="radio"
@@ -121,7 +128,7 @@ export const invalidRadioButton = () => `
 
           <label
             for="radio-2"
-            class="sprk-b-Label sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
           >
             Radio Item 2
           </label>
@@ -129,6 +136,7 @@ export const invalidRadioButton = () => `
 
         <div class="sprk-b-SelectionContainer">
           <input
+            class="sprk-b-Radio__input"
             id="radio-3"
             data-id="radio-3"
             type="radio"
@@ -137,7 +145,7 @@ export const invalidRadioButton = () => `
           >
           <label
             for="radio-3"
-            class="sprk-b-Label sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
           >
             Radio Item 3
           </label>
@@ -176,6 +184,7 @@ export const disabledRadioButton = () => `
 
         <div class="sprk-b-SelectionContainer">
           <input
+            class="sprk-b-Radio__input"
             id="radio-1"
             data-id="radio-1"
             type="radio"
@@ -186,7 +195,7 @@ export const disabledRadioButton = () => `
 
           <label
             for="radio-1"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
           >
             Radio Item 1
           </label>
@@ -194,6 +203,7 @@ export const disabledRadioButton = () => `
 
         <div class="sprk-b-SelectionContainer">
           <input
+            class="sprk-b-Radio__input"
             id="radio-2"
             data-id="radio-2"
             type="radio"
@@ -204,7 +214,7 @@ export const disabledRadioButton = () => `
 
           <label
             for="radio-2"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
           >
             Radio Item 2
           </label>
@@ -212,6 +222,7 @@ export const disabledRadioButton = () => `
 
         <div class="sprk-b-SelectionContainer">
           <input
+            class="sprk-b-Radio__input"
             id="radio-3"
             data-id="radio-3"
             type="radio"
@@ -221,7 +232,7 @@ export const disabledRadioButton = () => `
           >
           <label
             for="radio-3"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline"
+            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
           >
             Radio Item 3
           </label>
