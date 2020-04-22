@@ -103,7 +103,12 @@ defaultStory.story = {
   name: 'Default',
 };
 
-export const invalidCheckbox = () => `
+export const invalidCheckbox = () => {
+  useEffect(() => {
+    checkbox();
+  }, []);
+
+  return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
@@ -189,12 +194,18 @@ export const invalidCheckbox = () => `
       </div>
     </div>
   `;
+};
 
 invalidCheckbox.story = {
   name: 'Invalid',
 };
 
-export const disabledCheckbox = () => `
+export const disabledCheckbox = () => {
+  useEffect(() => {
+    checkbox();
+  }, []);
+
+  return`
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
@@ -274,6 +285,7 @@ export const disabledCheckbox = () => `
       </div>
     </div>
   `;
+};
 
 disabledCheckbox.story = {
   name: 'Disabled',
