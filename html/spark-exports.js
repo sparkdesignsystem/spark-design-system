@@ -143,8 +143,8 @@ import scrollYDirection from './utilities/scrollYDirection';
 import {
   checkbox,
   bindCheckboxUIEvents,
-  generateIdForCheckbox,
 }  from './base/inputs/checkbox';
+import { generateIdForInput } from './utilities/generateIdForInput';
 
 export {
   dateInput,
@@ -254,5 +254,5 @@ export {
   generateAriaControls,
   checkbox,
   bindCheckboxUIEvents,
-  generateIdForCheckbox,
+  generateIdForInput,
 };
