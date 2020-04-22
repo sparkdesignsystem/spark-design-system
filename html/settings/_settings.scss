@@ -1021,7 +1021,7 @@ $sprk-checkbox-custom-input-border: 1px solid $sprk-black-tint-25 !default;
 // The border radius of the custom checkbox input.
 $sprk-checkbox-custom-input-border-radius: 3px !default;
 // The top positioning of the custom checkbox input.
-$sprk-checkbox-custom-input-top: -2px !default;
+$sprk-checkbox-custom-input-top: 0px !default;
 // The left positioning of the custom checkbox input.
 $sprk-checkbox-custom-input-left: -22px !default;
 // The height of the checkmark icon.
@@ -1031,7 +1031,7 @@ $sprk-checkbox-checkmark-icon-width: .7rem !default;
 // The left positioning of the checkmark icon.
 $sprk-checkbox-checkmark-icon-left: -19px !default;
 // The top positioning of the checkmark icon.
-$sprk-checkbox-checkmark-icon-top: 2px !default;
+$sprk-checkbox-checkmark-icon-top: 4px !default;
 // The background image url for the checkmark icon.
 // TODO: UPDATE TO CORRECT SVG URL
 $sprk-checkbox-checkmark-url: "https://spark-assets.netlify.app/checkmark-clicked.svg" !default;
