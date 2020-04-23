@@ -140,6 +140,11 @@ import { toggleAriaExpanded as toggleAriaExpandedAttribute } from './utilities/t
 import { generateAriaControls } from './utilities/generateAriaControls';
 import isElementVisible from './utilities/isElementVisible';
 import scrollYDirection from './utilities/scrollYDirection';
+import {
+  checkbox,
+  bindCheckboxUIEvents,
+}  from './base/inputs/checkbox';
+import { generateIdForInput } from './utilities/generateIdForInput';
 
 export {
   dateInput,
@@ -247,4 +252,7 @@ export {
   toggleClassWithValue,
   toggleAriaExpandedAttribute,
   generateAriaControls,
+  checkbox,
+  bindCheckboxUIEvents,
+  generateIdForInput,
 };
