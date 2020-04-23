@@ -1285,15 +1285,17 @@ $sprk-radio-input-outer-circle-width: 1rem !default;
 /// The top value of the outer circle in the radio input.
 $sprk-radio-input-outer-circle-top: 0 !default;
 /// The left value of the outer circle in the radio input.
-$sprk-radio-input-outer-circle-left: -22px !default;
+$sprk-radio-input-outer-circle-left: -1.375rem !default;
 /// The height of the inner circle in the radio input.
-$sprk-radio-input-inner-circle-height: 0.625rem !default;
+$sprk-radio-input-inner-circle-height: 0.5rem !default;
 /// The width of the inner circle in the radio input.
-$sprk-radio-input-inner-circle-width: 0.625rem !default;
+$sprk-radio-input-inner-circle-width: 0.5rem !default;
 /// The top value of the inner circle in the radio input.
-$sprk-radio-input-inner-circle-top: 3px !default;
+$sprk-radio-input-inner-circle-top: 0.25rem !default;
 /// The left value of the inner circle in the radio input.
-$sprk-radio-input-inner-circle-left: -19px !default;
+$sprk-radio-input-inner-circle-left: -1.125rem !default;
+// The cursor style of the disabled radio on hover.
+$sprk-radio-input-cursor-hover-disabled: default !default;
 
 //
 // Tables
