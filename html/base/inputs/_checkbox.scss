@@ -39,7 +39,9 @@
   width: $sprk-checkbox-checkmark-icon-width;
   left: $sprk-checkbox-checkmark-icon-left;
   top: $sprk-checkbox-checkmark-icon-top;
-  background: $sprk-checkbox-checkmark-background;
+  border-left: $sprk-checkbox-checkmark-border-left;
+  border-bottom: $sprk-checkbox-checkmark-border-bottom;
+  transform: $sprk-checkbox-checkmark-transform;
 }
 
 // Focus styles for unchecked checkbox
