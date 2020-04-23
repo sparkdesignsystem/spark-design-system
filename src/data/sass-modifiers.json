@@ -3294,14 +3294,14 @@
     }
   },
   {
-    "description": "Sets the padding on the left and right (horizontal)\nto `$sprk-space-misc-b` (`40px`).\n",
+    "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
     "commentRange": {
-      "start": 565,
-      "end": 568
+      "start": 570,
+      "end": 573
     },
     "context": {
       "type": "css",
-      "name": "sprk-u-PaddingHorizontal--b",
+      "name": "sprk-u-MarginAll--d",
       "value": "padding-top: $sprk-space-misc-a !important;",
       "line": {
         "start": 579,
@@ -4578,14 +4578,14 @@
     }
   },
   {
-    "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "description": "When placed on an item, its width will be 3/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
-      "start": 313,
-      "end": 316
+      "start": 333,
+      "end": 336
     },
     "context": {
       "type": "css",
-      "name": ".sprk-o-Stack__item--half@xxs",
+      "name": ".sprk-o-Stack__item--three-tenths@xxs",
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4602,134 +4602,14 @@
     }
   },
   {
-    "description": "When placed on an item, its width will be 1/6\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
-      "start": 293,
-      "end": 296
+      "start": 338,
+      "end": 341
     },
     "context": {
       "type": "css",
-      "name": ".sprk-o-Stack__item--sixth@xxs",
-      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
-      "line": {
-        "start": 344,
-        "end": 1397
-      }
-    },
-    "group": [
-      "stack"
-    ],
-    "access": "public",
-    "file": {
-      "path": "objects/_stack.scss",
-      "name": "_stack.scss"
-    }
-  },
-  {
-    "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
-    "commentRange": {
-      "start": 298,
-      "end": 301
-    },
-    "context": {
-      "type": "css",
-      "name": ".sprk-o-Stack__item--fifth@xxs",
-      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
-      "line": {
-        "start": 344,
-        "end": 1397
-      }
-    },
-    "group": [
-      "stack"
-    ],
-    "access": "public",
-    "file": {
-      "path": "objects/_stack.scss",
-      "name": "_stack.scss"
-    }
-  },
-  {
-    "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
-    "commentRange": {
-      "start": 303,
-      "end": 306
-    },
-    "context": {
-      "type": "css",
-      "name": ".sprk-o-Stack__item--fourth@xxs",
-      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
-      "line": {
-        "start": 344,
-        "end": 1397
-      }
-    },
-    "group": [
-      "stack"
-    ],
-    "access": "public",
-    "file": {
-      "path": "objects/_stack.scss",
-      "name": "_stack.scss"
-    }
-  },
-  {
-    "description": "of its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
-    "commentRange": {
-      "start": 309,
-      "end": 311
-    },
-    "context": {
-      "type": "css",
-      "name": ".sprk-o-Stack__item--third@xxs",
-      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
-      "line": {
-        "start": 344,
-        "end": 1397
-      }
-    },
-    "group": [
-      "stack"
-    ],
-    "access": "public",
-    "file": {
-      "path": "objects/_stack.scss",
-      "name": "_stack.scss"
-    }
-  },
-  {
-    "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
-    "commentRange": {
-      "start": 318,
-      "end": 321
-    },
-    "context": {
-      "type": "css",
-      "name": ".sprk-o-Stack__item--three-fourths@xxs",
-      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
-      "line": {
-        "start": 344,
-        "end": 1397
-      }
-    },
-    "group": [
-      "stack"
-    ],
-    "access": "public",
-    "file": {
-      "path": "objects/_stack.scss",
-      "name": "_stack.scss"
-    }
-  },
-  {
-    "description": "When placed on an item, its width will be 2/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
-    "commentRange": {
-      "start": 323,
-      "end": 326
-    },
-    "context": {
-      "type": "css",
-      "name": ".sprk-o-Stack__item--two-fifths@xxs",
+      "name": ".sprk-o-Stack__item--seven-tenths@xxs",
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4770,14 +4650,14 @@
     }
   },
   {
-    "description": "When placed on an item, its width will be 3/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
-      "start": 333,
-      "end": 336
+      "start": 298,
+      "end": 301
     },
     "context": {
       "type": "css",
-      "name": ".sprk-o-Stack__item--three-tenths@xxs",
+      "name": ".sprk-o-Stack__item--fifth@xxs",
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -4794,14 +4674,134 @@
     }
   },
   {
-    "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "description": "When placed on an item, its width will be 1/6\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
     "commentRange": {
-      "start": 338,
-      "end": 341
+      "start": 293,
+      "end": 296
     },
     "context": {
       "type": "css",
-      "name": ".sprk-o-Stack__item--seven-tenths@xxs",
+      "name": ".sprk-o-Stack__item--sixth@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 318,
+      "end": 321
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--three-fourths@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 318,
+      "end": 321
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--three-fourths@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 313,
+      "end": 316
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--half@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "of its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 309,
+      "end": 311
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--third@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 303,
+      "end": 306
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--fourth@xxs",
       "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
       "line": {
         "start": 344,
@@ -5202,14 +5202,14 @@
     }
   },
   {
-    "description": "Adds the selected styles to the step that\nis selected.\n",
+    "description": "Adds the needed styles for\nwhen the Stepper has\na dark background color.\n",
     "commentRange": {
-      "start": 44,
-      "end": 46
+      "start": 48,
+      "end": 50
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Stepper__step--selected",
+      "name": ".sprk-c-Stepper--has-dark-bg",
       "value": ".sprk-c-Stepper__step-heading,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-heading-color;\n  }\n\n  .sprk-c-Stepper__step::before {\n    background-color: $sprk-stepper-dark-bar-color;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color;\n    border-color: $sprk-stepper-dark-icon-border-color;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--has-description\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-description-selected;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-icon,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-selected;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-hover;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
       "line": {
         "start": 51,
@@ -5226,14 +5226,14 @@
     }
   },
   {
-    "description": "Adds the needed styles for\nwhen the Stepper has\na dark background color.\n",
+    "description": "Adds the selected styles to the step that\nis selected.\n",
     "commentRange": {
-      "start": 48,
-      "end": 50
+      "start": 44,
+      "end": 46
     },
     "context": {
       "type": "css",
-      "name": ".sprk-c-Stepper--has-dark-bg",
+      "name": ".sprk-c-Stepper__step--selected",
       "value": ".sprk-c-Stepper__step-heading,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-heading-color;\n  }\n\n  .sprk-c-Stepper__step::before {\n    background-color: $sprk-stepper-dark-bar-color;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color;\n    border-color: $sprk-stepper-dark-icon-border-color;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--has-description\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-description-selected;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-icon,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-selected;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-hover;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
       "line": {
         "start": 51,

@@ -30,6 +30,13 @@ const SprkHighlightBoard = (props) => {
     (and vice versa).`,
   );
 
+  warning(
+    !(ctaText2 !== null && ctaText === null),
+    `SprkHighlightBoard: A secondary call-to-action (CTA) should not exist without
+    a primary CTA. If there is only one CTA, it must be set on ctaText and ctaHref.
+    `,
+  );
+
   const classNames = classnames(
     'sprk-c-HighlightBoard',
     'sprk-u-mbm',
@@ -61,7 +68,7 @@ const SprkHighlightBoard = (props) => {
           </h1>
         )}
 
-        {(ctaText || ctaText2) && (
+        {ctaText && (
           <div
             className={classnames(
               'sprk-o-Stack__item',
@@ -75,19 +82,17 @@ const SprkHighlightBoard = (props) => {
               },
             )}
           >
-            {ctaText && (
-              <div className="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-                <SprkButton
-                  element="a"
-                  href={ctaHref}
-                  analyticsString={ctaAnalytics}
-                  idString={ctaIdString}
-                  additionalClasses="sprk-c-Button--full@s"
-                >
-                  {ctaText}
-                </SprkButton>
-              </div>
-            )}
+            <div className="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
+              <SprkButton
+                element="a"
+                href={ctaHref}
+                analyticsString={ctaAnalytics}
+                idString={ctaIdString}
+                additionalClasses="sprk-c-Button--full@s"
+              >
+                {ctaText}
+              </SprkButton>
+            </div>
 
             {ctaText2 && (
               <div className="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
