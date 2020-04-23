@@ -17,7 +17,7 @@ export default {
   },
 };
 
-export const checkbox = () => (
+export const defaultStory = () => (
   <SprkSelectionInput
     groupLabel="Checkbox Input"
     choices={[
@@ -41,7 +41,7 @@ export const checkbox = () => (
   />
 );
 
-checkbox.story = {
+defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: [
