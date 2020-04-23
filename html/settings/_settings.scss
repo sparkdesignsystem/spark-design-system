@@ -1743,7 +1743,8 @@ $sprk-stepper-icon-border-width: 2px !default;
 $sprk-stepper-icon-border-color: $sprk-black-tint-50 !default;
 /// The color of the step icon when the step is selected in the Stepper.
 $sprk-stepper-icon-border-color-selected: $sprk-green !default;
-/// The color of the step icon when the step is selected in the Stepper.
+/// The color of the step icon in front of a dark background
+/// when the step is selected in the Stepper.
 $sprk-stepper-icon-border-color-selected-dark-bg: $sprk-green-tint-75 !default;
 /// The color of the icon border when the
 /// Stepper is on a dark background
@@ -1784,7 +1785,7 @@ $sprk-stepper-icon-box-shadow-selected-spread: 8px !default;
 $sprk-stepper-icon-box-shadow-selected: 0 0 0
   $sprk-stepper-icon-box-shadow-selected-spread
   $sprk-stepper-icon-border-color-selected !default;
-/// The box shadow of the Stepper step icon in a dark bg
+/// The box shadow of the Stepper step icon on a dark background.
 /// when the icon is selected.
 $sprk-stepper-icon-box-shadow-selected-dark-bg: 0 0 0
   $sprk-stepper-icon-box-shadow-selected-spread
