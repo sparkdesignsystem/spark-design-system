@@ -76,6 +76,7 @@
   .sprk-c-Stepper__step-header:hover
   .sprk-c-Stepper__step-icon {
     background-color: $sprk-stepper-dark-icon-color-selected;
+    box-shadow: $sprk-stepper-icon-box-shadow-selected-dark-bg;
   }
 
   .sprk-c-Stepper__step-header:hover
@@ -173,6 +174,7 @@
     color: $sprk-stepper-step-heading-color-selected;
   }
 
+  /// HERE
   .sprk-c-Stepper__step-icon {
     background-color: $sprk-stepper-icon-color-selected;
     border-color: $sprk-stepper-icon-border-color-selected;
