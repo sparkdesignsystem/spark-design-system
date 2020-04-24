@@ -10,12 +10,16 @@ describe('SprkLink:', () => {
     + ' is not unstyled', () => {
     const wrapper = shallow(<SprkLink />);
     expect(wrapper.find('a.sprk-b-Link').length).toBe(1);
+    expect(wrapper.find('a').hasClass('sprk-b-Link--simple')).toBe(false);
+    expect(wrapper.find('a').hasClass('sprk-b-Link--has-icon')).toBe(false);
   });
 
   it('should display a link element without the sprk-b-Link class if the'
     + ' variant is unstyled', () => {
     const wrapper = shallow(<SprkLink variant="unstyled" />);
     expect(wrapper.find('a').hasClass('sprk-b-Link')).toBe(false);
+    expect(wrapper.find('a').hasClass('sprk-b-Link--simple')).toBe(false);
+    expect(wrapper.find('a').hasClass('sprk-b-Link--has-icon')).toBe(false);
   });
 
   it('should display a link element with correct classes when variant'
@@ -23,6 +27,7 @@ describe('SprkLink:', () => {
     const wrapper = shallow(<SprkLink variant="simple" />);
     expect(wrapper.find('a').hasClass('sprk-b-Link')).toBe(true);
     expect(wrapper.find('a').hasClass('sprk-b-Link--simple')).toBe(true);
+    expect(wrapper.find('a').hasClass('sprk-b-Link--has-icon')).toBe(false);
   });
 
   it('should display a link element with correct classes when variant is '
@@ -46,6 +51,8 @@ describe('SprkLink:', () => {
     const wrapper = shallow(<SprkLink variant="plain" />);
     expect(wrapper.find('a').hasClass('sprk-b-Link')).toBe(true);
     expect(wrapper.find('a').hasClass('sprk-b-Link--plain')).toBe(true);
+    expect(wrapper.find('a').hasClass('sprk-b-Link--simple')).toBe(false);
+    expect(wrapper.find('a').hasClass('sprk-b-Link--has-icon')).toBe(false);
   });
 
   it('should display a link element with correct classes when variant is'
