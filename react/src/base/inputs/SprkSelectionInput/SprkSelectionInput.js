@@ -102,6 +102,7 @@ class SprkSelectionInput extends React.Component {
                     className={classNames('sprk-b-Label sprk-b-Label--inline', {
                       'sprk-b-Checkbox__label': variant === 'checkbox',
                       'sprk-b-Radio__label': variant === 'radio',
+                      'sprk-b-Label--disabled': disabled,
                     })} 
                   >
                     {innerLabel}
