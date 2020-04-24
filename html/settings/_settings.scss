@@ -1054,12 +1054,10 @@ $sprk-checkbox-custom-input-background-color-checked: $sprk-green !default;
 $sprk-checkbox-custom-input-border-color-checked: $sprk-green !default;
 // The border color of the custom checkbox input when disabled.
 $sprk-checkbox-custom-input-border-color-disabled: $sprk-gray-dark !default;
-// The border color of the checkbox label when disabled.
-$sprk-checkbox-input-label-color-disabled: $sprk-gray-dark !default;
-// The cursor when hovering the custom checkbox input when disabled.
-$sprk-checkbox-custom-input-cursor-disabled-hover: default !default;
-// The background color when hovering the custom checkbox input when disabled.
-$sprk-checkbox-custom-input-background-color-disabled-hover: transparent !default;
+// The cursor when the custom checkbox input when disabled.
+$sprk-checkbox-custom-input-cursor-disabled: default !default;
+// The background color when the custom checkbox input when disabled.
+$sprk-checkbox-custom-input-background-color-disabled: transparent !default;
 
 //
 // Input Errors
