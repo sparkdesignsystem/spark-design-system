@@ -211,6 +211,7 @@ invalidRadioButton.story = {
 
 export const disabledRadioButton = () => {
   useEffect(() => {
+    radioInput();
   }, []);
 
   return`
