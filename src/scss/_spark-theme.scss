@@ -49,4 +49,20 @@ body {
   visibility: hidden;
 }
 
+#skip_nav {
+  position:absolute;
+  left: 0;
+  top: 0;
+  z-index: 5000;
+
+  a {
+    display: block;
+    opacity: 0;
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
+
 /* stylelint-enable */
