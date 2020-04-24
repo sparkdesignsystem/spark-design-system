@@ -80,6 +80,7 @@ describe('masthead init', () => {
     expect(iconContainer.getAttribute('aria-expanded')).toEqual('false');
   });
 
+  it('should init aria-expanded as open correctly', () => {
     expect(iconContainer.getAttribute('aria-expanded')).toBe(null);
     nav.classList.remove('sprk-u-Display--none');
 
@@ -90,6 +91,7 @@ describe('masthead init', () => {
   });
 
   it('should generate a content id and add it to aria-controls when both values are missing', () => {
+    expect(nav.getAttribute('id')).toBe(null);
     expect(iconContainer.getAttribute('aria-controls')).toBe(null);
 
     masthead();
