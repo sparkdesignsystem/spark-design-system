@@ -379,4 +379,26 @@ describe('SprkSelectionInput:', () => {
         .classList.contains('sprk-b-Radio__label'),
     ).toBe(true);
   });
+
+  it('should add disabled class to label if input is disabled', () => {
+    const wrapper = mount(
+      <SprkSelectionInput 
+        disabled
+        choices={[
+          {
+            name: 'item-choice',
+            label: 'Item 1',
+            value: '1',
+          },
+        ]}
+        variant="radio"
+      />,
+    );
+    expect(
+      wrapper
+        .find('label')
+        .getDOMNode()
+        .classList.contains('sprk-b-Label--disabled'),
+    ).toBe(true);
+  });
 });
