@@ -54,7 +54,7 @@ const modules = {
   ],
 };
 
-export const checkbox = () => ({
+export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-selection-container>
@@ -132,7 +132,7 @@ export const checkbox = () => ({
   },
 });
 
-checkbox.story = {
+defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: [
