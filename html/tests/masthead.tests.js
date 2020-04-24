@@ -91,7 +91,6 @@ describe('masthead init', () => {
   });
 
   it('should generate a content id and add it to aria-controls when both values are missing', () => {
-
     expect(nav.getAttribute('id')).toBe(null);
     expect(iconContainer.getAttribute('aria-controls')).toBe(null);
 

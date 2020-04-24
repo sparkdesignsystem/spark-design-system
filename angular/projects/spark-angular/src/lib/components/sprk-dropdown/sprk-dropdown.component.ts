@@ -232,6 +232,7 @@ export class SprkDropdownComponent {
    * @ignore
    */
   toggle(event): void {
+    event.preventDefault();
     this.isOpen = !this.isOpen;
   }
 
