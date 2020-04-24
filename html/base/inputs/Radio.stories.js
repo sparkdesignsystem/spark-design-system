@@ -1,5 +1,6 @@
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { useEffect } from '@storybook/client-api';
+import { radioInput } from './radioInput';
 
 export default {
   title: 'Components/Input/Radio',
@@ -16,6 +17,7 @@ ${markdownDocumentationLinkBuilder('input')}
 
 export const defaultStory = () => {
   useEffect(() => {
+    radioInput();
   }, []);
 
   return `
@@ -100,10 +102,14 @@ export const defaultStory = () => {
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['radioInput'],
+  }
 };
 
 export const invalidRadioButton = () => {
   useEffect(() => {
+    radioInput();
   }, []);
 
   return `
@@ -198,6 +204,9 @@ export const invalidRadioButton = () => {
 
 invalidRadioButton.story = {
   name: 'Invalid',
+  parameters: {
+    jest: ['radioInput'],
+  }
 };
 
 export const disabledRadioButton = () => {
@@ -289,4 +298,7 @@ export const disabledRadioButton = () => {
 
 disabledRadioButton.story = {
   name: 'Disabled',
+  parameters: {
+    jest: ['radioInput'],
+  }
 };
