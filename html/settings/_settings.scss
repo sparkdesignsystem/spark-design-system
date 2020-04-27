@@ -1253,6 +1253,49 @@ $sprk-visibility-control-label-font-size: $sprk-label-font-size !default;
 $sprk-label-disabled-color: $sprk-gray-dark !default;
 
 //
+// Radio
+///
+
+/// The opacity value for the radio input.
+$sprk-radio-input-opacity: 0 !default;
+/// The transition for the radio input.
+$sprk-radio-input-transition: all 0.2s ease-in-out !default;
+/// The border of the outer circle in the radio input on hover.
+$sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-75 !default;
+/// The border of the outer circle in the radio input on focus.
+$sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-green !default;
+/// The border of the outer circle in the disabled radio input on focus.
+$sprk-radio-input-outer-circle-focus-border-disabled: 2px solid $sprk-gray-dark !default;
+/// The border radius of the circle in the radio input.
+$sprk-radio-input-border-radius: 50% !default;
+/// The background color of the inner circle in the radio input.
+$sprk-radio-input-inner-circle-background-color: $sprk-green !default;
+/// The border of the outer circle in the radio input when checked.
+$sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-green !default;
+/// The border of the outer circle in the radio input.
+$sprk-radio-input-outer-circle-border: 2px solid $sprk-gray-dark !default;
+/// The border of the outer circle in the disabled radio input on hover.
+$sprk-radio-input-outer-circle-border-hover-disabled: 2px solid $sprk-gray-dark !default;
+/// The height of the outer circle in the radio input.
+$sprk-radio-input-outer-circle-height: 1rem !default;
+/// The width of the outer circle in the radio input.
+$sprk-radio-input-outer-circle-width: 1rem !default;
+/// The top value of the outer circle in the radio input.
+$sprk-radio-input-outer-circle-top: 0 !default;
+/// The left value of the outer circle in the radio input.
+$sprk-radio-input-outer-circle-left: -1.375rem !default;
+/// The height of the inner circle in the radio input.
+$sprk-radio-input-inner-circle-height: 0.5rem !default;
+/// The width of the inner circle in the radio input.
+$sprk-radio-input-inner-circle-width: 0.5rem !default;
+/// The top value of the inner circle in the radio input.
+$sprk-radio-input-inner-circle-top: 0.25rem !default;
+/// The left value of the inner circle in the radio input.
+$sprk-radio-input-inner-circle-left: -1.125rem !default;
+// The cursor style of the disabled radio on hover.
+$sprk-radio-input-cursor-hover-disabled: default !default;
+
+//
 // Tables
 ///
 

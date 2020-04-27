@@ -17,7 +17,7 @@ export default {
   },
 };
 
-export const radioButton = () => (
+export const defaultStory = () => (
   <SprkSelectionInput
     groupLabel="Radio Group Label"
     choices={[
@@ -41,7 +41,7 @@ export const radioButton = () => (
   />
 );
 
-radioButton.story = {
+defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: [

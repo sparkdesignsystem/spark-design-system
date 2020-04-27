@@ -58,7 +58,7 @@ const modules = {
   ],
 };
 
-export const radioButton = () => ({
+export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-selection-container>
@@ -131,8 +131,7 @@ export const radioButton = () => ({
   }
 });
 
-
-radioButton.story = {
+defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: [
