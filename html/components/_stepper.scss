@@ -76,6 +76,7 @@
   .sprk-c-Stepper__step-header:hover
   .sprk-c-Stepper__step-icon {
     background-color: $sprk-stepper-dark-icon-color-selected;
+    box-shadow: $sprk-stepper-icon-box-shadow-selected-dark-bg;
   }
 
   .sprk-c-Stepper__step-header:hover
