@@ -10,4 +10,4 @@ const toggleAriaExpanded = (toggleTrigger) => {
   }
 };
 
-export { toggleAriaExpanded };
+export { toggleAriaExpanded as default };

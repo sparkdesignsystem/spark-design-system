@@ -2,7 +2,7 @@ import 'dom-slider';
 import 'focus-visible';
 const { slideToggle } = window.domSlider;
 import getElements from '../utilities/getElements';
-import { generateAriaControls } from '../utilities/generateAriaControls';
+import generateAriaControls from '../utilities/generateAriaControls';
 
 /**
  *  Toggle JS

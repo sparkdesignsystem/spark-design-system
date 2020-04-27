@@ -1,5 +1,5 @@
 /* global document describe it */
-import { toggleAriaExpanded } from '../utilities/toggleAriaExpanded';
+import toggleAriaExpanded from '../utilities/toggleAriaExpanded';
 
 describe('toggleAriaExpanded tests', () => {
   let element;
