@@ -79,7 +79,7 @@ export class SprkSelectionItemContainerComponent implements OnInit {
     if (this.label && this.input) {
       this.renderer.setAttribute(this.label.ref.nativeElement, 'for', this.input_id);
       this.renderer.setProperty(this.input.ref.nativeElement, 'id', this.input_id);
+      this.addInputTypeClasses();
     }
-    this.addInputTypeClasses();
   }
 }

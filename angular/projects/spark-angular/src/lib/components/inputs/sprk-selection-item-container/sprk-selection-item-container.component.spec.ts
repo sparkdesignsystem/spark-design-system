@@ -10,7 +10,11 @@ import { SprkSelectionItemContainerComponent } from './sprk-selection-item-conta
   template: `
     <sprk-selection-item-container>
       <input type="checkbox" sprkSelectionInput />
-      <label sprkSelectionLabel>Item 1</label>
+      <label sprkSelectionLabel id="item-1">Item 1</label>
+    </sprk-selection-item-container>
+    <sprk-selection-item-container>
+      <input type="radio" sprkSelectionInput />
+      <label sprkSelectionLabel id="item-2">Item 2</label>
     </sprk-selection-item-container>
   `
 })
@@ -53,9 +57,9 @@ describe('SprkSelectionItemContainerComponent', () => {
     selectionItemContainerElement = selectionItemContainerFixture.nativeElement.querySelector(
       'div'
     );
-    selectionInputElement = fixture.debugElement.query(By.css('input'))
+    selectionInputElement = fixture.debugElement.query(By.css('input[type="checkbox"]'))
       .nativeElement;
-    selectionLabelElement = fixture.debugElement.query(By.css('label'))
+    selectionLabelElement = fixture.debugElement.query(By.css('#item-1'))
       .nativeElement;
   });
 
@@ -75,5 +79,24 @@ describe('SprkSelectionItemContainerComponent', () => {
     expect(selectionLabelElement.getAttribute('for')).toEqual(
       selectionInputElement.id
     );
+  });
+
+  it('should add the checkbox classes to the input and the label if the type is checkbox', () => {
+    expect(selectionInputElement.classList.contains('sprk-b-Checkbox__input'))
+      .toBe(true);
+    expect(selectionLabelElement.classList.contains('sprk-b-Checkbox__label'))
+      .toBe(true);
+  });
+
+  it('should add the radio classes to the input and the label if the type is radio', () => {
+    selectionInputElement = fixture.debugElement.query(By.css('input[type="radio"]'))
+      .nativeElement;
+    selectionLabelElement = fixture.debugElement.query(By.css('#item-2'))
+      .nativeElement;
+    fixture.detectChanges();
+    expect(selectionInputElement.classList.contains('sprk-b-Radio__input'))
+      .toBe(true);
+    expect(selectionLabelElement.classList.contains('sprk-b-Radio__label'))
+      .toBe(true);
   });
 });
