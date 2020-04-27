@@ -27,7 +27,7 @@ const teaserDesigners = {
   media: {
     href: '/principles/design-principles',
     mediaLinkElement: 'a',
-    imgAlt: 'An illustration of a computer with a paintbrush.',
+    imgAlt: 'An illustration of someone hands drawing on a tablet.',
     imgSrc: designersMedia,
     mediaVariant: 'img',
   },
@@ -147,7 +147,7 @@ const teaserNews = {
   media: {
     href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
     mediaLinkElement: 'a',
-    imgAlt: 'Decorative illustration of a clipboard.',
+    imgAlt: 'Decorative illustrations of mail and notifications.',
     imgSrc: newsMedia,
     mediaVariant: 'img',
   },
