@@ -145,7 +145,10 @@ import {
   bindCheckboxUIEvents,
 }  from './base/inputs/checkbox';
 import { generateIdForInput } from './utilities/generateIdForInput';
-
+import {
+  radioInput,
+  bindRadioUIEvents,
+} from './base/inputs/radioInput';
 export {
   dateInput,
   formatDate,
@@ -255,4 +258,6 @@ export {
   checkbox,
   bindCheckboxUIEvents,
   generateIdForInput,
+  radioInput,
+  bindRadioUIEvents,
 };
