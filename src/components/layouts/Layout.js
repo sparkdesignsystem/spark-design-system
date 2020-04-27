@@ -64,7 +64,7 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
     `}
       render={data => (
         <>
-          <div className="sprk-o-Box docs-b-SkipNav">
+          <div className="sprk-o-Box docs-c-SkipNav">
             <a
               className="sprk-b-Link"
               href="#main_content"

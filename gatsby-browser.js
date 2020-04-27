@@ -26,7 +26,7 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
 
   if (prevLocation !== null) {
     // put focus on the first skip nav on the page
-    const skipNav = document.querySelector(".docs-b-SkipNav");
+    const skipNav = document.querySelector(".docs-c-SkipNav");
     if (skipNav) {
       skipNav.focus()
     }
