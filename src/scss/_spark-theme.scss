@@ -50,7 +50,21 @@ body {
 }
 
 .docs-b-SkipNav {
+  position: absolute;
+  top: 0;
   z-index: 5000;
+
+  a {
+    display: block;
+    opacity: 0;
+    left: -500px;
+    transition: none;
+
+    &:focus {
+      opacity: 1;
+      left: 0;
+    }
+  }
 }
 
 /* stylelint-enable */
