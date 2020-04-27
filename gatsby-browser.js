@@ -25,7 +25,8 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
   document.getElementsByTagName('html')[0].classList.add('sprk-u-JavaScript');
 
   if (prevLocation !== null) {
-    const skipNav = document.querySelector("#skip_nav")
+    // put focus on the first skip nav on the page
+    const skipNav = document.querySelector(".docs-b-SkipNav");
     if (skipNav) {
       skipNav.focus()
     }
