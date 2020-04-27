@@ -325,4 +325,80 @@ describe('SprkSelectionInput:', () => {
     );
     expect(wrapper.find('optgroup').length).toBe(1);
   });
+
+  it('should add checkbox class to input and label if variant is checkbox', () => {
+    const wrapper = mount(
+      <SprkSelectionInput
+        choices={[
+          {
+            name: 'item-choice',
+            label: 'Item 1',
+            value: '1',
+          },
+        ]}
+        variant="checkbox"
+      />,
+    );
+    expect(
+      wrapper
+        .find('input')
+        .getDOMNode()
+        .classList.contains('sprk-b-Checkbox__input'),
+    ).toBe(true);
+    expect(
+      wrapper
+        .find('label')
+        .getDOMNode()
+        .classList.contains('sprk-b-Checkbox__label'),
+    ).toBe(true);
+  });
+
+  it('should add radio class to input and label if variant is radio', () => {
+    const wrapper = mount(
+      <SprkSelectionInput
+        choices={[
+          {
+            name: 'item-choice',
+            label: 'Item 1',
+            value: '1',
+          },
+        ]}
+        variant="radio"
+      />,
+    );
+    expect(
+      wrapper
+        .find('input')
+        .getDOMNode()
+        .classList.contains('sprk-b-Radio__input'),
+    ).toBe(true);
+    expect(
+      wrapper
+        .find('label')
+        .getDOMNode()
+        .classList.contains('sprk-b-Radio__label'),
+    ).toBe(true);
+  });
+
+  it('should add disabled class to label if input is disabled', () => {
+    const wrapper = mount(
+      <SprkSelectionInput 
+        disabled
+        choices={[
+          {
+            name: 'item-choice',
+            label: 'Item 1',
+            value: '1',
+          },
+        ]}
+        variant="radio"
+      />,
+    );
+    expect(
+      wrapper
+        .find('label')
+        .getDOMNode()
+        .classList.contains('sprk-b-Label--disabled'),
+    ).toBe(true);
+  });
 });
