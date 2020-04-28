@@ -2825,7 +2825,7 @@
       "value": "",
       "line": {
         "start": 6,
-        "end": 71
+        "end": 85
       }
     },
     "group": [
@@ -5852,16 +5852,16 @@
   {
     "description": "A toggle with a smaller font.\n",
     "commentRange": {
-      "start": 42,
-      "end": 43
+      "start": 40,
+      "end": 41
     },
     "context": {
       "type": "css",
       "name": ".sprk-c-Toggle__trigger--small",
       "value": "font-size: $sprk-toggle-trigger-font-size-small;\n  font-weight: $sprk-toggle-trigger-font-weight-small;",
       "line": {
-        "start": 44,
-        "end": 47
+        "start": 42,
+        "end": 46
       }
     },
     "group": [
@@ -14628,7 +14628,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-text-input-border",
-      "value": "2px solid $sprk-gray-dark",
+      "value": "2px solid $sprk-black-tint-50",
       "scope": "default",
       "line": {
         "start": 920,
@@ -14778,7 +14778,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-text-input-disabled-border-color",
-      "value": "$sprk-gray-dark",
+      "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
         "start": 932,
@@ -14878,7 +14878,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-text-input-readonly-border-color",
-      "value": "$sprk-black-tint-25",
+      "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
         "start": 940,
@@ -14903,7 +14903,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-text-input-readonly-color",
-      "value": "$sprk-gray",
+      "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
         "start": 942,
@@ -17353,7 +17353,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-label-font-size",
-      "value": "1rem",
+      "value": "0.875rem",
       "scope": "default",
       "line": {
         "start": 1241,
@@ -17503,7 +17503,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-label-disabled-color",
-      "value": "$sprk-gray-dark",
+      "value": "$sprk-black-tint-50",
       "scope": "default",
       "line": {
         "start": 1253,
@@ -17628,7 +17628,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-radio-input-outer-circle-focus-border-disabled",
-      "value": "2px solid $sprk-gray-dark",
+      "value": "2px solid $sprk-black-tint-50",
       "scope": "default",
       "line": {
         "start": 1268,
@@ -17728,7 +17728,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-radio-input-outer-circle-border",
-      "value": "2px solid $sprk-gray-dark",
+      "value": "2px solid $sprk-black-tint-50",
       "scope": "default",
       "line": {
         "start": 1276,
@@ -17753,7 +17753,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-radio-input-outer-circle-border-hover-disabled",
-      "value": "2px solid $sprk-gray-dark",
+      "value": "2px solid $sprk-black-tint-50",
       "scope": "default",
       "line": {
         "start": 1278,
@@ -21970,7 +21970,7 @@
     }
   },
   {
-    "description": "The left border of the active item\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The left border of the active item\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1736,
       "end": 1737
@@ -21995,7 +21995,7 @@
     }
   },
   {
-    "description": "The font weight of the active item\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The font weight of the active item\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1739,
       "end": 1740
@@ -22020,7 +22020,7 @@
     }
   },
   {
-    "description": "The color of the active item\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The color of the active item\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1742,
       "end": 1743
@@ -22045,7 +22045,7 @@
     }
   },
   {
-    "description": "The color of the heading\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The color of the heading\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1745,
       "end": 1746
@@ -22070,7 +22070,7 @@
     }
   },
   {
-    "description": "The font weight of the heading\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The font weight of the heading\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1748,
       "end": 1749
@@ -22095,7 +22095,7 @@
     }
   },
   {
-    "description": "The font weight of the details\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The font weight of the details\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1751,
       "end": 1752
@@ -22120,7 +22120,7 @@
     }
   },
   {
-    "description": "The font color of the details\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The font color of the details\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1754,
       "end": 1755
@@ -22145,7 +22145,7 @@
     }
   },
   {
-    "description": "The background color of the active\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The background color of the active\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1757,
       "end": 1758
@@ -22170,7 +22170,7 @@
     }
   },
   {
-    "description": "The font color of the active\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The font color of the active\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1760,
       "end": 1761
@@ -22195,7 +22195,7 @@
     }
   },
   {
-    "description": "The font color of the text\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The font color of the text\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1763,
       "end": 1764
@@ -22220,7 +22220,7 @@
     }
   },
   {
-    "description": "The color of the line on open items\nin the naviation links when masthead is on narrow viewports.\n",
+    "description": "The color of the line on open items\nin the navigation links when masthead is on narrow viewports.\n",
     "commentRange": {
       "start": 1766,
       "end": 1767
@@ -25056,14 +25056,14 @@
     }
   },
   {
-    "description": "Changes the width of the element to 25 percent.\n",
+    "description": "Changes the width of the element to 50 percent.\n",
     "commentRange": {
-      "start": 16,
-      "end": 18
+      "start": 20,
+      "end": 22
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-Width-25",
+      "name": ".sprk-u-Width-50",
       "value": ".sprk-u-Width-#{$width} {\n    width: unquote($string:'#{$width}%') !important;\n  }\n\n  $width: $width + $width-step-value;",
       "line": {
         "start": 30,
@@ -25080,14 +25080,14 @@
     }
   },
   {
-    "description": "Changes the width of the element to 50 percent.\n",
+    "description": "Changes the width of the element to 25 percent.\n",
     "commentRange": {
-      "start": 20,
-      "end": 22
+      "start": 16,
+      "end": 18
     },
     "context": {
       "type": "css",
-      "name": ".sprk-u-Width-50",
+      "name": ".sprk-u-Width-25",
       "value": ".sprk-u-Width-#{$width} {\n    width: unquote($string:'#{$width}%') !important;\n  }\n\n  $width: $width + $width-step-value;",
       "line": {
         "start": 30,
