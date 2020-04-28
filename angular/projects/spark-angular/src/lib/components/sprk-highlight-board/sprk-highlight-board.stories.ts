@@ -37,8 +37,6 @@ export const defaultStory = () => ({
   template: `
     <sprk-highlight-board
       heading="Hello, Welcome To Spark Design System"
-      ctaText="Designers"
-      ctaHref="#nogo"
       ctaText2="Developers"
       ctaHref2="#nogo"
       imgSrc="https://spark-assets.netlify.app/desktop.jpg"

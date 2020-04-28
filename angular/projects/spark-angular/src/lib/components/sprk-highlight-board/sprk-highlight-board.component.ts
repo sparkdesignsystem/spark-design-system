@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sprk-highlight-board',
@@ -66,7 +66,7 @@ import { Component, Input } from '@angular/core';
     </div>
   `
 })
-export class SprkHighlightBoardComponent {
+export class SprkHighlightBoardComponent implements OnInit {
   /**
    * The value supplied will be rendered as the heading.
    */
@@ -151,11 +151,21 @@ export class SprkHighlightBoardComponent {
   @Input()
   idString: string;
 
+  ngOnInit() {
+    if (!this.ctaText && this.ctaText2) {
+      console.warn(`
+        sprk-highlight-board: A secondary call-to-action (CTA)
+        should not exist without a primary CTA.
+        If there is only one CTA, it must be set on
+        ctaText and ctaHref.
+      `);
+    }
+  }
+
   /**
    * @ignore
    */
   public centerBtns = '';
-
   /**
    * @ignore
    */
