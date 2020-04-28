@@ -7,6 +7,7 @@ import Header from '../Header';
 import Menu from '../Menu';
 import Footer from '../Footer';
 import '../../scss/main.scss';
+import { SprkLink } from '@sparkdesignsystem/spark-react';
 
 import SEO from '../seo';
 import H1 from '../markdown-render/h1';
@@ -64,6 +65,13 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
     `}
       render={data => (
         <>
+          <div className="sprk-o-Box docs-c-SkipNav">
+            <SprkLink
+              href="#main_content" additionalClasses="docs-c-SkipNav__link"
+            >
+              Skip to Main Content
+            </SprkLink>
+          </div>
           <Header
             context={context}
             setContext={setContext}
@@ -74,7 +82,7 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
           <div className="docs-layout sprk-o-CenteredColumn">
             <div
               className="sprk-u-Display--none"
-                // eslint-disable-next-line react/no-danger
+              // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{
                 __html: data.allSparkIconSet.edges[0].node.internal.content,
               }}
@@ -82,24 +90,25 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
 
             {hasSideBar
               && (
-              <div className={classnames({
-                'docs-layout__side-bar': true,
-              })}
-              >
-                <Menu
-                  components={{}}
-                  context={context}
-                  setContext={setContext}
-                  menuVisible={menuVisible}
-                  setMenuVisible={setMenuVisible}
-                />
-              </div>
+                <div className={classnames({
+                  'docs-layout__side-bar': true,
+                })}
+                >
+                  <Menu
+                    components={{}}
+                    context={context}
+                    setContext={setContext}
+                    menuVisible={menuVisible}
+                    setMenuVisible={setMenuVisible}
+                  />
+                </div>
               )
             }
 
             <div className="docs-layout__content sprk-o-Box sprk-o-Box--large">
               <MDXProvider components={components}>
-                { children }
+                <div id="main_content"></div>
+                {children}
               </MDXProvider>
             </div>
           </div>
@@ -107,7 +116,7 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
           <Footer />
         </>
       )
-    }
+      }
     />
   );
 };
