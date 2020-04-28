@@ -1037,7 +1037,7 @@ $sprk-checkbox-checkmark-border-left: 2px solid $sprk-white !default;
 // The border settings to create the right portion of the checkmark.
 $sprk-checkbox-checkmark-border-bottom: 2px solid $sprk-white !default;
 // The rotation setting to create the checkmark.
-$sprk-checkbox-checkmark-transform: rotate(-45deg);
+$sprk-checkbox-checkmark-transform: rotate(-45deg) !default;
 // The border of the custom checkbox input when focused.
 $sprk-checkbox-custom-input-border-focus: 2px solid $sprk-green !default;
 // The background color of the custom checkbox input when focused.
@@ -1734,37 +1734,37 @@ $sprk-big-nav-active-color: $sprk-big-nav-link-color !default;
 $sprk-big-nav-item-line-height: 53px !default;
 // Masthead Accordion
 /// The left border of the active item
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-left-border: 3px solid $sprk-black !default;
 /// The font weight of the active item
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-heading-font-weight: 400 !default;
 /// The color of the active item
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-heading-color: $sprk-black !default;
 /// The color of the heading
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-heading-color: $sprk-black !default;
 /// The font weight of the heading
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-heading-font-weight: 400 !default;
 /// The font weight of the details
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-details-font-weight: 300 !default;
 /// The font color of the details
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-details-font-color: $sprk-black !default;
 /// The background color of the active
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-background-color: $sprk-gray !default;
 /// The font color of the active
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-font-color: $sprk-black !default;
 /// The font color of the text
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-font-color: $sprk-black !default;
 /// The color of the line on open items
-/// in the naviation links when masthead is on narrow viewports.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-item-open-line-background-color: $sprk-black-tint-25 !default;
 /// The height of the line on open
 /// navigation links when masthead is on narrow viewports.
@@ -1842,6 +1842,9 @@ $sprk-stepper-icon-border-width: 2px !default;
 $sprk-stepper-icon-border-color: $sprk-black-tint-50 !default;
 /// The color of the step icon when the step is selected in the Stepper.
 $sprk-stepper-icon-border-color-selected: $sprk-green !default;
+/// The color of the step icon in front of a dark background
+/// when the step is selected in the Stepper.
+$sprk-stepper-icon-border-color-selected-dark-bg: $sprk-green-tint-75 !default;
 /// The color of the icon border when the
 /// Stepper is on a dark background
 /// (sprk-c-Stepper--has-dark-bg).
@@ -1881,6 +1884,11 @@ $sprk-stepper-icon-box-shadow-selected-spread: 8px !default;
 $sprk-stepper-icon-box-shadow-selected: 0 0 0
   $sprk-stepper-icon-box-shadow-selected-spread
   $sprk-stepper-icon-border-color-selected !default;
+/// The box shadow of the Stepper step icon on a dark background.
+/// when the icon is selected.
+$sprk-stepper-icon-box-shadow-selected-dark-bg: 0 0 0
+  $sprk-stepper-icon-box-shadow-selected-spread
+  $sprk-stepper-icon-border-color-selected-dark-bg !default;
 /// The background color of the content in the Stepper step.
 $sprk-stepper-step-content-bg: transparent !default;
 /// The border radius of the Stepper step
@@ -1959,7 +1967,7 @@ $sprk-carousel-dot-spacing: $sprk-space-m !default;
 /// The spacing between dots in the Carousel component on wide viewports.
 $sprk-carousel-wide-dot-spacing: $sprk-carousel-dot-spacing !default;
 /// The box shadow of the active dot in the Carousel component.
-$sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected !default;
+$sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected-dark-bg !default;
 /// The color of the arrows in the Carousel component.
 $sprk-carousel-arrow-color: $sprk-white !default;
 /// The spacing for the arrows in the Carousel component.

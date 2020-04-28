@@ -101,6 +101,9 @@ export const defaultStory = () => {
 
 defaultStory.story = {
   name: 'Default',
+  parameters: {
+    jest: ['checkbox'],
+  }
 };
 
 export const invalidCheckbox = () => {
@@ -198,6 +201,9 @@ export const invalidCheckbox = () => {
 
 invalidCheckbox.story = {
   name: 'Invalid',
+  parameters: {
+    jest: ['checkbox'],
+  }
 };
 
 export const disabledCheckbox = () => {
@@ -289,4 +295,7 @@ export const disabledCheckbox = () => {
 
 disabledCheckbox.story = {
   name: 'Disabled',
+  parameters: {
+    jest: ['checkbox'],
+  }
 };
