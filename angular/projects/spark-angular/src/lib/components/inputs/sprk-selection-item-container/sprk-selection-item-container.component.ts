@@ -39,15 +39,6 @@ export class SprkSelectionItemContainerComponent implements OnInit {
   /**
    * @ignore
    */
-  id = uniqueId();
-  /**
-   * @ignore
-   */
-  input_id = `input_${this.id}`;
-
-  /**
-   * @ignore
-   */
   getClasses(): string {
     const classArray: string[] = ['sprk-b-SelectionContainer'];
 
@@ -75,10 +66,38 @@ export class SprkSelectionItemContainerComponent implements OnInit {
     }
   }
 
+  /**
+   * @ignore
+   */
+  generateIdForInput(): void {
+    let inputId = this.input.ref.nativeElement.id;
+    const labelFor = this.label.ref.nativeElement.htmlFor;
+
+    // Warn if 'for' exists but the 'id' does not
+    if (labelFor && !inputId) {
+      console.warn(`Spark Design System Warning - The value of 'for' (${labelFor}) on the label expects a matching 'id' on the input.`);
+      return;
+    }
+
+    // Warn if 'for' and 'id' both exist but don't match
+    if (inputId && labelFor && inputId !== labelFor) {
+      console.warn(
+        `Spark Design System Warning - The value of 'for' (${labelFor}) on the label should match the 'id' on the input (${inputId}).`
+      );
+      return;
+    }
+
+    // If we don't have a valid id, generate one with lodash
+    if (!inputId) {
+      inputId = uniqueId(`sprk_input_`);
+      this.renderer.setProperty(this.input.ref.nativeElement, 'id', inputId);
+      this.renderer.setAttribute(this.label.ref.nativeElement, 'for', inputId);
+    }
+  }
+
   ngOnInit(): void {
     if (this.label && this.input) {
-      this.renderer.setAttribute(this.label.ref.nativeElement, 'for', this.input_id);
-      this.renderer.setProperty(this.input.ref.nativeElement, 'id', this.input_id);
+      this.generateIdForInput();
       this.addInputTypeClasses();
     }
   }
