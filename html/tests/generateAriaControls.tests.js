@@ -1,5 +1,5 @@
 /* global document describe it */
-import { generateAriaControls } from '../utilities/generateAriaControls';
+import generateAriaControls from '../utilities/generateAriaControls';
 
 describe('generateAriaControls tests', () => {
   let triggerElement;

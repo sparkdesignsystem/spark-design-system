@@ -29,4 +29,4 @@ const generateAriaControls = (triggerElement, contentElement, componentName) => 
   triggerElement.setAttribute('aria-controls', contentId);
 };
 
-export { generateAriaControls };
+export { generateAriaControls as default };
