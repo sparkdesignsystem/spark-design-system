@@ -154,7 +154,8 @@ export class SprkHighlightBoardComponent implements OnInit {
   ngOnInit() {
     if (!this.ctaText && this.ctaText2) {
       console.warn(`
-        sprk-highlight-board: A secondary call-to-action (CTA)
+        Spark Design System Warning - <sprk-highlight-board> Component:
+        A secondary call-to-action (CTA)
         should not exist without a primary CTA.
         If there is only one CTA, it must be set on
         ctaText and ctaHref.
