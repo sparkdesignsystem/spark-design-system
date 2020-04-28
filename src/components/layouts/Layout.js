@@ -7,6 +7,7 @@ import Header from '../Header';
 import Menu from '../Menu';
 import Footer from '../Footer';
 import '../../scss/main.scss';
+import { SprkLink } from '@sparkdesignsystem/spark-react';
 
 import SEO from '../seo';
 import H1 from '../markdown-render/h1';
@@ -65,12 +66,11 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
       render={data => (
         <>
           <div className="sprk-o-Box docs-c-SkipNav">
-            <a
-              className="sprk-b-Link"
-              href="#main_content"
+            <SprkLink
+              href="#main_content" additionalClasses="docs-c-SkipNav__link"
             >
               Skip to Main Content
-            </a>
+            </SprkLink>
           </div>
           <Header
             context={context}
