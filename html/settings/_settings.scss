@@ -917,7 +917,7 @@ $sprk-text-input-outline: 0 !default;
 /// The color setting for Inputs.
 $sprk-text-input-color: $sprk-black !default;
 /// The border setting for Inputs.
-$sprk-text-input-border: 2px solid $sprk-gray-dark !default;
+$sprk-text-input-border: 2px solid $sprk-black-tint-50 !default;
 /// The border radius for Inputs.
 $sprk-text-input-border-radius: 4px !default;
 /// The box shadow for Inputs.
@@ -929,7 +929,7 @@ $sprk-text-input-focus-border-color: $sprk-green !default;
 /// The border color on Inputs when there is an error.
 $sprk-text-input-error-border-color: $sprk-yellow !default;
 /// The border color on disabled Inputs.
-$sprk-text-input-disabled-border-color: $sprk-gray-dark !default;
+$sprk-text-input-disabled-border-color: $sprk-black-tint-50 !default;
 /// The background color on disabled Inputs.
 $sprk-text-input-disabled-background-color: $sprk-gray-dark !default;
 /// The box shadow on disabled Inputs.
@@ -937,9 +937,9 @@ $sprk-text-input-disabled-box-shadow: none !default;
 /// The color setting on disabled Inputs.
 $sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
 /// The border color setting on readonly Inputs.
-$sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
+$sprk-text-input-readonly-border-color: $sprk-black-tint-50 !default;
 /// The color setting on readonly Inputs.
-$sprk-text-input-readonly-color: $sprk-gray !default;
+$sprk-text-input-readonly-color: $sprk-black-tint-50 !default;
 /// The transition setting Inputs.
 $sprk-text-input-transition: border-color 0.15s ease !default;
 
@@ -1017,17 +1017,17 @@ $sprk-checkbox-custom-input-height: 1rem !default;
 // The width of the custom checkbox input.
 $sprk-checkbox-custom-input-width: 1rem !default;
 // The border of the custom checkbox input.
-$sprk-checkbox-custom-input-border: 2px solid $sprk-black-tint-25 !default;
+$sprk-checkbox-custom-input-border: 2px solid $sprk-black-tint-50 !default;
 // The border radius of the custom checkbox input.
 $sprk-checkbox-custom-input-border-radius: 3px !default;
 // The top positioning of the custom checkbox input.
-$sprk-checkbox-custom-input-top: 0px !default;
+$sprk-checkbox-custom-input-top: 0 !default;
 // The left positioning of the custom checkbox input.
 $sprk-checkbox-custom-input-left: -22px !default;
 // The height of the checkmark icon.
-$sprk-checkbox-checkmark-icon-height: .45rem !default;
+$sprk-checkbox-checkmark-icon-height: 0.45rem !default;
 // The width of the checkmark icon.
-$sprk-checkbox-checkmark-icon-width: .65rem !default;
+$sprk-checkbox-checkmark-icon-width: 0.65rem !default;
 // The left positioning of the checkmark icon.
 $sprk-checkbox-checkmark-icon-left: -19px !default;
 // The top positioning of the checkmark icon.
@@ -1053,7 +1053,7 @@ $sprk-checkbox-custom-input-background-color-checked: $sprk-green !default;
 // The border color of the custom checkbox input when checked.
 $sprk-checkbox-custom-input-border-color-checked: $sprk-green !default;
 // The border color of the custom checkbox input when disabled.
-$sprk-checkbox-custom-input-border-color-disabled: $sprk-gray-dark !default;
+$sprk-checkbox-custom-input-border-color-disabled: $sprk-black-tint-50 !default;
 // The cursor for the custom checkbox input when disabled.
 $sprk-checkbox-custom-input-cursor-disabled: default !default;
 // The background color for the custom checkbox input when disabled.
@@ -1250,7 +1250,7 @@ $sprk-visibility-control-margin: 6px 0 0 0 !default;
 /// The font size used for visibility controls.
 $sprk-visibility-control-label-font-size: $sprk-label-font-size !default;
 /// The color of the disabled Input labels.
-$sprk-label-disabled-color: $sprk-gray-dark !default;
+$sprk-label-disabled-color: $sprk-black-tint-50 !default;
 
 //
 // Radio
@@ -1265,7 +1265,7 @@ $sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-75 !defa
 /// The border of the outer circle in the radio input on focus.
 $sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-green !default;
 /// The border of the outer circle in the disabled radio input on focus.
-$sprk-radio-input-outer-circle-focus-border-disabled: 2px solid $sprk-gray-dark !default;
+$sprk-radio-input-outer-circle-focus-border-disabled: 2px solid $sprk-black-tint-50 !default;
 /// The border radius of the circle in the radio input.
 $sprk-radio-input-border-radius: 50% !default;
 /// The background color of the inner circle in the radio input.
@@ -1273,9 +1273,9 @@ $sprk-radio-input-inner-circle-background-color: $sprk-green !default;
 /// The border of the outer circle in the radio input when checked.
 $sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-green !default;
 /// The border of the outer circle in the radio input.
-$sprk-radio-input-outer-circle-border: 2px solid $sprk-gray-dark !default;
+$sprk-radio-input-outer-circle-border: 2px solid $sprk-black-tint-50 !default;
 /// The border of the outer circle in the disabled radio input on hover.
-$sprk-radio-input-outer-circle-border-hover-disabled: 2px solid $sprk-gray-dark !default;
+$sprk-radio-input-outer-circle-border-hover-disabled: 2px solid $sprk-black-tint-50 !default;
 /// The height of the outer circle in the radio input.
 $sprk-radio-input-outer-circle-height: 1rem !default;
 /// The width of the outer circle in the radio input.
