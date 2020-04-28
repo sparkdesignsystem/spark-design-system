@@ -67,6 +67,14 @@ describe('SprkHighlightBoardComponent', () => {
     expect(link[0].getAttribute('data-analytics')).toEqual(str);
   });
 
+  it('should not render any CTAs if only ctaText2 is present', () => {
+    component.ctaText = null;
+    component.ctaText2 = 'test123';
+    fixture.detectChanges();
+    const ctaCount = element.querySelectorAll('.sprk-c-HighlightBoard__cta').length;
+    expect(ctaCount).toEqual(0);
+  });
+
   it('should set the data-analytics attribute given a value in the analyticsStringCta2 Input', () => {
     const cats = 'Cats';
     component.ctaText = cats;
