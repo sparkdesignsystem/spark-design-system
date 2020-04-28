@@ -47,6 +47,20 @@
   border: $sprk-radio-input-outer-circle-border-checked;
 }
 
+.sprk-b-Radio__input:checked {
+  &:hover {
+    + .sprk-b-Radio__label::before {
+      border: $sprk-radio-input-outer-circle-hover-border;
+    }
+  }
+
+  &:focus {
+    + .sprk-b-Radio__label::before {
+      border: $sprk-radio-input-outer-circle-hover-border;
+    }
+  }
+}
+
 .sprk-b-Radio__input:checked + .sprk-b-Radio__label::after {
   width: $sprk-radio-input-inner-circle-width;
   height: $sprk-radio-input-inner-circle-height;
