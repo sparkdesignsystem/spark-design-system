@@ -554,7 +554,7 @@
     "context": {
       "type": "variable",
       "name": "sprk-selection-bg-color",
-      "value": "$sprk-green",
+      "value": "$sprk-green-tint-50",
       "scope": "default",
       "line": {
         "start": 11,
