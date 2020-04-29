@@ -4,5 +4,9 @@
   "lib": {
     "entryFile": "src/public-api.ts"
   },
-  "whitelistedNonPeerDependencies": ["lodash", "tiny-date-picker"]
+  "whitelistedNonPeerDependencies": [
+    "lodash",
+    "tiny-date-picker",
+    "focus-visible"
+  ]
 }
