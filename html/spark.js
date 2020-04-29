@@ -20,6 +20,8 @@ import { dropdowns } from './components/dropdown';
 import { stepper } from './components/stepper';
 import { highlightBoard } from './components/highlight-board';
 import versionCheck from './utilities/versionCheck';
+import { checkbox } from './base/inputs/checkbox';
+import { radioInput } from './base/inputs/radioInput';
 
 const Spark = ({ datePickerConfig = {} } = {}) => {
   requiredSelect();
@@ -43,6 +45,8 @@ const Spark = ({ datePickerConfig = {} } = {}) => {
   highlightBoard();
   hugeInput();
   versionCheck();
+  checkbox();
+  radioInput();
 };
 
 export { Spark as default };

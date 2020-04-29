@@ -522,8 +522,6348 @@
   {
     "description": "Color value for red at 25%.\n",
     "commentRange": {
+      "start": 97,
+      "end": 98
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Box--inset-short-large",
+      "value": "padding: $sprk-space-inset-short-l;",
+      "line": {
+        "start": 99,
+        "end": 138
+      }
+    },
+    "group": [
+      "box"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_box.scss",
+      "name": "_box.scss"
+    }
+  },
+  {
+    "description": "Inset Short Huge Box - Extra large inset short padding\n(Default 32px 64px 32px 64px)\n",
+    "commentRange": {
+      "start": 103,
+      "end": 104
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Box--inset-short-huge",
+      "value": "padding: $sprk-space-inset-short-xl;",
+      "line": {
+        "start": 105,
+        "end": 138
+      }
+    },
+    "group": [
+      "box"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_box.scss",
+      "name": "_box.scss"
+    }
+  },
+  {
+    "description": "Inset Tall Tiny Box - Extra small inset tall padding\n(Default 6px 4px 6px 4px)\n",
+    "commentRange": {
+      "start": 109,
+      "end": 110
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Box--inset-tall-tiny",
+      "value": "padding: $sprk-space-inset-tall-xs;",
+      "line": {
+        "start": 111,
+        "end": 138
+      }
+    },
+    "group": [
+      "box"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_box.scss",
+      "name": "_box.scss"
+    }
+  },
+  {
+    "description": "Inset Tall Small Box - Small inset tall padding\n(Default 12px 8px 12px 8px)\n",
+    "commentRange": {
+      "start": 115,
+      "end": 116
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Box--inset-tall-small",
+      "value": "padding: $sprk-space-inset-tall-s;",
+      "line": {
+        "start": 117,
+        "end": 138
+      }
+    },
+    "group": [
+      "box"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_box.scss",
+      "name": "_box.scss"
+    }
+  },
+  {
+    "description": "Inset Tall Medium Box - Medium inset tall padding\n(Default 24px 16px 24px 16px)\n",
+    "commentRange": {
+      "start": 121,
+      "end": 122
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Box--inset-tall-medium",
+      "value": "padding: $sprk-space-inset-tall-m;",
+      "line": {
+        "start": 123,
+        "end": 138
+      }
+    },
+    "group": [
+      "box"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_box.scss",
+      "name": "_box.scss"
+    }
+  },
+  {
+    "description": "Inset Tall Large Box - Large inset tall padding\n(Default 48px 32px 48px 32px)\n",
+    "commentRange": {
+      "start": 127,
+      "end": 128
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Box--inset-tall-large",
+      "value": "padding: $sprk-space-inset-tall-l;",
+      "line": {
+        "start": 129,
+        "end": 138
+      }
+    },
+    "group": [
+      "box"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_box.scss",
+      "name": "_box.scss"
+    }
+  },
+  {
+    "description": "Inset Tall Huge Box - Extra large inset short padding\n(Default 96px 64px 96px 64px)\n",
+    "commentRange": {
+      "start": 133,
+      "end": 134
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Box--inset-tall-huge",
+      "value": "padding: $sprk-space-inset-tall-xl;",
+      "line": {
+        "start": 135,
+        "end": 138
+      }
+    },
+    "group": [
+      "box"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_box.scss",
+      "name": "_box.scss"
+    }
+  },
+  {
+    "description": "Reduces the padding of the normal button\nto $space-inset-short-m.\n",
+    "commentRange": {
+      "start": 49,
+      "end": 50
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Button--compact",
+      "value": "padding: $sprk-space-inset-short-m;",
+      "line": {
+        "start": 51,
+        "end": 186
+      }
+    },
+    "group": [
+      "button"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_buttons.scss",
+      "name": "_buttons.scss"
+    }
+  },
+  {
+    "description": "Makes the button full width of its parent container until it flips\nto normal width at the $sprk-btn-breakpoint-xs breakpoint.\n",
+    "commentRange": {
+      "start": 55,
+      "end": 57
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Button--full@xs",
+      "value": "width: 100%;\n\n  @media screen and (min-width: $sprk-btn-breakpoint-xs) {\n    width: auto;\n  }",
+      "line": {
+        "start": 58,
+        "end": 186
+      }
+    },
+    "group": [
+      "button"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_buttons.scss",
+      "name": "_buttons.scss"
+    }
+  },
+  {
+    "description": "Makes the button full width of its parent container until it flips\nto normal width at the $sprk-btn-breakpoint-s breakpoint.\n",
+    "commentRange": {
+      "start": 66,
+      "end": 68
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Button--full@s",
+      "value": "width: 100%;\n\n  @media screen and (min-width: $sprk-btn-breakpoint-s) {\n    width: auto;\n  }",
+      "line": {
+        "start": 70,
+        "end": 186
+      }
+    },
+    "group": [
+      "button"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_buttons.scss",
+      "name": "_buttons.scss"
+    }
+  },
+  {
+    "description": "Styles the button as the secondary variant.\n",
+    "commentRange": {
+      "start": 78,
+      "end": 78
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Button--secondary",
+      "value": "background-color: $sprk-btn-secondary-background-color;\n  border: $sprk-btn-border-width $sprk-btn-border-style\n    $sprk-btn-secondary-border-color;\n  color: $sprk-btn-secondary-text-color;\n  letter-spacing: $sprk-btn-secondary-letter-spacing;\n\n  &:visited {\n    color: $sprk-btn-secondary-text-color;\n  }\n\n  &:hover,\n  &:active,\n  &:focus {\n    box-shadow: $sprk-btn-secondary-hover-shadow;\n    background-color: $sprk-btn-secondary-hover-background-color;\n    border: $sprk-btn-border-width $sprk-btn-border-style\n      $sprk-btn-secondary-hover-border-color;\n    color: $sprk-btn-secondary-hover-text-color;\n  }",
+      "line": {
+        "start": 79,
+        "end": 186
+      }
+    },
+    "group": [
+      "button"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_buttons.scss",
+      "name": "_buttons.scss"
+    }
+  },
+  {
+    "description": "Styles the button as the tertiary variant.\n",
+    "commentRange": {
+      "start": 101,
+      "end": 101
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Button--tertiary",
+      "value": "background-color: $sprk-btn-tertiary-background-color;\n  box-shadow: none;\n  border: $sprk-btn-tertiary-border;\n  color: $sprk-btn-tertiary-text-color;\n  letter-spacing: $sprk-btn-tertiary-letter-spacing;\n\n  &:hover,\n  &:active,\n  &:focus {\n    background-color: $sprk-btn-tertiary-hover-background-color;\n    color: $sprk-btn-tertiary-hover-text-color;\n    box-shadow: $sprk-btn-tertiary-hover-shadow;\n  }\n\n  &:visited {\n    color: $sprk-btn-tertiary-text-color;\n  }\n\n  &::after {\n    content: '';\n    border-bottom: $sprk-btn-tertiary-underline-width solid\n      $sprk-btn-tertiary-underline-color;\n    display: block;\n    width: 100%;\n    padding-top: $sprk-btn-tertiary-underline-padding-top;\n    margin: 0 auto;\n  }\n\n  &:hover::after,\n  &:active::after,\n  &:focus::after {\n    border-color: $sprk-btn-tertiary-hover-underline-color;\n    transition: border $sprk-btn-transition-speed ease-in-out;\n  }",
+      "line": {
+        "start": 102,
+        "end": 186
+      }
+    },
+    "group": [
+      "button"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_buttons.scss",
+      "name": "_buttons.scss"
+    }
+  },
+  {
+    "description": "Use on cards that you would like to standout from the rest.\n",
+    "commentRange": {
+      "start": 19,
+      "end": 19
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Card--standout",
+      "value": "box-shadow: $sprk-card-shadow-standout;\n\n  @media all and (min-width: $sprk-card-breakpoint) {\n    box-shadow: $sprk-card-shadow-standout-wide-viewport;\n  }",
+      "line": {
+        "start": 20,
+        "end": 90
+      }
+    },
+    "group": [
+      "card"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_card.scss",
+      "name": "_card.scss"
+    }
+  },
+  {
+    "description": "Sets `max-width` to 100%, allowing card to fill\nthe entire width of it's container. Best used\nwith base cards.\n",
+    "commentRange": {
+      "start": 84,
+      "end": 86
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Card--full",
+      "value": "max-width: 100%;",
+      "line": {
+        "start": 87,
+        "end": 90
+      }
+    },
+    "group": [
+      "card"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_card.scss",
+      "name": "_card.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to black.\n",
+    "commentRange": {
+      "start": 342,
+      "end": 343
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--black",
+      "value": "color: $sprk-black !important;",
+      "line": {
+        "start": 344,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to blue.\n",
+    "commentRange": {
+      "start": 349,
+      "end": 350
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--blue",
+      "value": "color: $sprk-blue !important;",
+      "line": {
+        "start": 351,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to gray.\n",
+    "commentRange": {
+      "start": 356,
+      "end": 357
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--gray",
+      "value": "color: $sprk-gray !important;",
+      "line": {
+        "start": 358,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to green.\n",
+    "commentRange": {
+      "start": 363,
+      "end": 364
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--green",
+      "value": "color: $sprk-green !important;",
+      "line": {
+        "start": 365,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to red.\n",
+    "commentRange": {
+      "start": 370,
+      "end": 371
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--red",
+      "value": "color: $sprk-red !important;",
+      "line": {
+        "start": 372,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to red tinted at 75%.\n",
+    "commentRange": {
+      "start": 376,
+      "end": 377
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--red-tint-75",
+      "value": "color: $sprk-red-tint-75 !important;",
+      "line": {
+        "start": 378,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to red tinted at 50%.\n",
+    "commentRange": {
+      "start": 382,
+      "end": 383
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--red-tint-50",
+      "value": "color: $sprk-red-tint-50 !important;",
+      "line": {
+        "start": 384,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to red tinted at 25%.\n",
+    "commentRange": {
+      "start": 388,
+      "end": 389
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--red-tint-25",
+      "value": "color: $sprk-red-tint-25 !important;",
+      "line": {
+        "start": 390,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to white.\n",
+    "commentRange": {
+      "start": 395,
+      "end": 396
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--white",
+      "value": "color: $sprk-white !important;",
+      "line": {
+        "start": 397,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font color to yellow.\n",
+    "commentRange": {
+      "start": 402,
+      "end": 403
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Color--yellow",
+      "value": "color: $sprk-yellow !important;",
+      "line": {
+        "start": 404,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to black.\n",
+    "commentRange": {
+      "start": 410,
+      "end": 411
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--black",
+      "value": "background-color: $sprk-black !important;",
+      "line": {
+        "start": 412,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to black tinted at 75%.\n",
+    "commentRange": {
+      "start": 416,
+      "end": 417
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--black-tint-75",
+      "value": "background-color: $sprk-black-tint-75 !important;",
+      "line": {
+        "start": 418,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to black tinted at 50%.\n",
+    "commentRange": {
+      "start": 422,
+      "end": 423
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--black-tint-50",
+      "value": "background-color: $sprk-black-tint-50 !important;",
+      "line": {
+        "start": 424,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to black tinted at 25%.\n",
+    "commentRange": {
+      "start": 428,
+      "end": 429
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--black-tint-25",
+      "value": "background-color: $sprk-black-tint-25 !important;",
+      "line": {
+        "start": 430,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to dark gray.\n",
+    "commentRange": {
+      "start": 434,
+      "end": 435
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--gray-dark",
+      "value": "background-color: $sprk-gray-dark !important;",
+      "line": {
+        "start": 436,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to blue.\n",
+    "commentRange": {
+      "start": 440,
+      "end": 441
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--blue",
+      "value": "background-color: $sprk-blue !important;",
+      "line": {
+        "start": 442,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to blue tinted at 75%.\n",
+    "commentRange": {
+      "start": 446,
+      "end": 447
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--blue-tint-75",
+      "value": "background-color: $sprk-blue-tint-75 !important;",
+      "line": {
+        "start": 448,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to blue tinted at 50%.\n",
+    "commentRange": {
+      "start": 452,
+      "end": 453
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--blue-tint-50",
+      "value": "background-color: $sprk-blue-tint-50 !important;",
+      "line": {
+        "start": 454,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to blue tinted at 25%.\n",
+    "commentRange": {
+      "start": 458,
+      "end": 459
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--blue-tint-25",
+      "value": "background-color: $sprk-blue-tint-25 !important;",
+      "line": {
+        "start": 460,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to gray.\n",
+    "commentRange": {
+      "start": 464,
+      "end": 465
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--gray",
+      "value": "background-color: $sprk-gray !important;",
+      "line": {
+        "start": 466,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to red.\n",
+    "commentRange": {
+      "start": 470,
+      "end": 471
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--red",
+      "value": "background-color: $sprk-red !important;",
+      "line": {
+        "start": 472,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to red tinted at 75%.\n",
+    "commentRange": {
+      "start": 476,
+      "end": 477
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--red-tint-75",
+      "value": "background-color: $sprk-red-tint-75 !important;",
+      "line": {
+        "start": 478,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to red tinted at 50%.\n",
+    "commentRange": {
+      "start": 482,
+      "end": 483
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--red-tint-50",
+      "value": "background-color: $sprk-red-tint-50 !important;",
+      "line": {
+        "start": 484,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to red tinted at 25%.\n",
+    "commentRange": {
+      "start": 488,
+      "end": 489
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--red-tint-25",
+      "value": "background-color: $sprk-red-tint-25 !important;",
+      "line": {
+        "start": 490,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to green.\n",
+    "commentRange": {
+      "start": 494,
+      "end": 495
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--green",
+      "value": "background-color: $sprk-green !important;",
+      "line": {
+        "start": 496,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to dark green.\n",
+    "commentRange": {
+      "start": 500,
+      "end": 501
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--green-dark",
+      "value": "background-color: $sprk-green-dark !important;",
+      "line": {
+        "start": 502,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to green tinted at 75%.\n",
+    "commentRange": {
+      "start": 506,
+      "end": 507
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--green-tint-75",
+      "value": "background-color: $sprk-green-tint-75 !important;",
+      "line": {
+        "start": 508,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to green tinted at 50%.\n",
+    "commentRange": {
+      "start": 512,
+      "end": 513
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--green-tint-50",
+      "value": "background-color: $sprk-green-tint-50 !important;",
+      "line": {
+        "start": 514,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to green tinted at 25%.\n",
+    "commentRange": {
+      "start": 518,
+      "end": 519
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--green-tint-25",
+      "value": "background-color: $sprk-green-tint-25 !important;",
+      "line": {
+        "start": 520,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to white.\n",
+    "commentRange": {
+      "start": 524,
+      "end": 525
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--white",
+      "value": "background-color: $sprk-white !important;",
+      "line": {
+        "start": 526,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to yellow.\n",
+    "commentRange": {
+      "start": 530,
+      "end": 531
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--yellow",
+      "value": "background-color: $sprk-yellow !important;",
+      "line": {
+        "start": 532,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to yellow tinted at 75%.\n",
+    "commentRange": {
+      "start": 536,
+      "end": 537
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--yellow-tint-75",
+      "value": "background-color: $sprk-yellow-tint-75 !important;",
+      "line": {
+        "start": 538,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to yellow tinted at 50%.\n",
+    "commentRange": {
+      "start": 542,
+      "end": 543
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--yellow-tint-50",
+      "value": "background-color: $sprk-yellow-tint-50 !important;",
+      "line": {
+        "start": 544,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the background color to yellow tinted at 25%.\n",
+    "commentRange": {
+      "start": 548,
+      "end": 549
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-BackgroundColor--yellow-tint-25",
+      "value": "background-color: $sprk-yellow-tint-25 !important;",
+      "line": {
+        "start": 550,
+        "end": 839
+      }
+    },
+    "group": [
+      "color"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Adds a background color to every\neven-numbered row in the dictionary.\n",
+    "commentRange": {
+      "start": 30,
+      "end": 32
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Dictionary--striped",
+      "value": "background-color: $sprk-dictionary-stripe-color;",
+      "line": {
+        "start": 35,
+        "end": 61
+      }
+    },
+    "group": [
+      "dictionary"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_dictionary.scss",
+      "name": "_dictionary.scss"
+    }
+  },
+  {
+    "description": "Turns off the display of an element so that it has no effect on layout.\n",
+    "commentRange": {
+      "start": 18,
+      "end": 20
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-JavaScript, .sprk-u-HideWhenJs",
+      "value": "display: none !important;",
+      "line": {
+        "start": 26,
+        "end": 839
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Turns off the display of an element so that it has no effect on layout.\n",
+    "commentRange": {
+      "start": 22,
+      "end": 24
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Display--none",
+      "value": "display: none !important;",
+      "line": {
+        "start": 26,
+        "end": 839
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element generates a block element box.\n",
+    "commentRange": {
+      "start": 31,
+      "end": 32
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Display--block",
+      "value": "display: block !important;",
+      "line": {
+        "start": 33,
+        "end": 839
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element generates one or more inline element boxes.\n",
+    "commentRange": {
+      "start": 37,
+      "end": 38
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Display--inline",
+      "value": "display: inline !important;",
+      "line": {
+        "start": 39,
+        "end": 839
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element generates a block element box that will be flowed with\nsurrounding content as if it were a single inline box.\n",
+    "commentRange": {
+      "start": 43,
+      "end": 45
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Display--inline-block",
+      "value": "display: inline-block !important;",
+      "line": {
+        "start": 46,
+        "end": 839
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element box is invisible, but still affects layout as normal.\nScreen readers will still announce this element.\n",
+    "commentRange": {
+      "start": 50,
+      "end": 52
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Visibility--hidden",
+      "value": "visibility: hidden !important;",
+      "line": {
+        "start": 53,
+        "end": 839
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is visible.\n",
+    "commentRange": {
+      "start": 57,
+      "end": 58
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Visibility--visible",
+      "value": "visibility: visible !important;",
+      "line": {
+        "start": 59,
+        "end": 839
+      }
+    },
+    "group": [
+      "display"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Adds styles to indicate that the dropdown\nlink is currently active. \n",
+    "commentRange": {
+      "start": 72,
+      "end": 73
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Dropdown__link--active",
+      "value": "box-shadow: $sprk-dropdown-active-box-shadow;\n  border-left: $sprk-dropdown-active-border;\n  background-color: $sprk-dropdown-active-background-color;",
+      "line": {
+        "start": 74,
+        "end": 79
+      }
+    },
+    "group": [
+      "dropdown"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_dropdown.scss",
+      "name": "_dropdown.scss"
+    }
+  },
+  {
+    "description": "Reverses the flag and places the\nimage on the right of the body content.\n",
+    "commentRange": {
+      "start": 28,
+      "end": 29
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Flag--rev",
+      "value": "flex-direction: row-reverse;\n\n  > .sprk-o-Flag__figure {\n    padding-right: 0;\n    padding-left: $sprk-flag-gutter;\n  }",
+      "line": {
+        "start": 30,
+        "end": 180
+      }
+    },
+    "group": [
+      "flag"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_flag.scss",
+      "name": "_flag.scss"
+    }
+  },
+  {
+    "description": "Removes gutter.\n",
+    "commentRange": {
+      "start": 39,
+      "end": 39
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Flag--flush",
+      "value": "> .sprk-o-Flag__figure {\n    padding-right: 0;\n    padding-left: 0;\n  }",
+      "line": {
+        "start": 40,
+        "end": 180
+      }
+    },
+    "group": [
+      "flag"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_flag.scss",
+      "name": "_flag.scss"
+    }
+  },
+  {
+    "description": "Adds extra small gutter. (Default 4px)\n",
+    "commentRange": {
+      "start": 47,
+      "end": 47
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Flag--tiny",
+      "value": "> .sprk-o-Flag__figure {\n    padding-right: $sprk-flag-gutter-tiny;\n  }\n\n  &.sprk-o-Flag--rev {\n    > .sprk-o-Flag__figure {\n      padding-right: 0;\n      padding-left: $sprk-flag-gutter-tiny;\n    }\n  }",
+      "line": {
+        "start": 48,
+        "end": 180
+      }
+    },
+    "group": [
+      "flag"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_flag.scss",
+      "name": "_flag.scss"
+    }
+  },
+  {
+    "description": "Adds small gutter. (Default 8px)\n",
+    "commentRange": {
+      "start": 61,
+      "end": 61
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Flag--small",
+      "value": "> .sprk-o-Flag__figure {\n    padding-right: $sprk-flag-gutter-small;\n  }\n\n  &.sprk-o-Flag--rev {\n    > .sprk-o-Flag__figure {\n      padding-right: 0;\n      padding-left: $sprk-flag-gutter-small;\n    }\n  }",
+      "line": {
+        "start": 62,
+        "end": 180
+      }
+    },
+    "group": [
+      "flag"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_flag.scss",
+      "name": "_flag.scss"
+    }
+  },
+  {
+    "description": "Adds large gutter. (Default 32px)\n",
+    "commentRange": {
+      "start": 75,
+      "end": 75
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Flag--large",
+      "value": "> .sprk-o-Flag__figure {\n    padding-right: $sprk-flag-gutter-large;\n  }\n\n  &.sprk-o-Flag--rev {\n    > .sprk-o-Flag__figure {\n      padding-right: 0;\n      padding-left: $sprk-flag-gutter-large;\n    }\n  }",
+      "line": {
+        "start": 76,
+        "end": 180
+      }
+    },
+    "group": [
+      "flag"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_flag.scss",
+      "name": "_flag.scss"
+    }
+  },
+  {
+    "description": "Adds extra large gutter. (Default 64px)\n",
+    "commentRange": {
+      "start": 89,
+      "end": 89
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Flag--huge",
+      "value": "> .sprk-o-Flag__figure {\n    padding-right: $sprk-flag-gutter-huge;\n  }\n\n  &.sprk-o-Flag--rev {\n    > .sprk-o-Flag__figure {\n      padding-right: 0;\n      padding-left: $sprk-flag-gutter-huge;\n    }\n  }",
+      "line": {
+        "start": 90,
+        "end": 180
+      }
+    },
+    "group": [
+      "flag"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_flag.scss",
+      "name": "_flag.scss"
+    }
+  },
+  {
+    "description": "Vertically align content to the middle.\n",
+    "commentRange": {
+      "start": 103,
+      "end": 103
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Flag--middle",
+      "value": "align-items: center;\n\n  @media all and (max-width: $sprk-flag-stacked-breakpoint) {\n    &.sprk-o-Flag--stacked {\n      align-items: stretch;\n    }\n  }",
+      "line": {
+        "start": 104,
+        "end": 180
+      }
+    },
+    "group": [
+      "flag"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_flag.scss",
+      "name": "_flag.scss"
+    }
+  },
+  {
+    "description": "Vertically align content to the bottom.\n",
+    "commentRange": {
+      "start": 114,
+      "end": 114
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Flag--bottom",
+      "value": "align-items: flex-end;\n\n  @media all and (max-width: $sprk-flag-stacked-breakpoint) {\n    &.sprk-o-Flag--stacked {\n      align-items: stretch;\n    }\n  }",
+      "line": {
+        "start": 115,
+        "end": 180
+      }
+    },
+    "group": [
+      "flag"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_flag.scss",
+      "name": "_flag.scss"
+    }
+  },
+  {
+    "description": "Stacked flag at smaller screen width.\n",
+    "commentRange": {
+      "start": 126,
+      "end": 126
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Flag--stacked",
+      "value": "flex-direction: column;\n\n    > .sprk-o-Flag__figure {\n      padding-right: 0;\n      padding-left: 0;\n      margin-bottom: $sprk-flag-gutter;\n    }\n\n    //\n    // Tiny stacked flag\n    //\n    &.sprk-o-Flag--tiny {\n      > .sprk-o-Flag__figure {\n        padding-right: 0;\n        padding-left: 0;\n        margin-bottom: $sprk-flag-gutter-tiny;\n      }\n    }\n\n    //\n    // Small stacked flag\n    //\n    &.sprk-o-Flag--small {\n      > .sprk-o-Flag__figure {\n        padding-right: 0;\n        padding-left: 0;\n        margin-bottom: $sprk-flag-gutter-small;\n      }\n    }\n\n    //\n    // Large stacked flag\n    //\n    &.sprk-o-Flag--large {\n      > .sprk-o-Flag__figure {\n        padding-right: 0;\n        padding-left: 0;\n        margin-bottom: $sprk-flag-gutter-large;\n      }\n    }\n\n    //\n    // Huge stacked flag\n    //\n    &.sprk-o-Flag--huge {\n      > .sprk-o-Flag__figure {\n        padding-right: 0;\n        padding-left: 0;\n        margin-bottom: $sprk-flag-gutter-huge;\n      }\n    }",
+      "line": {
+        "start": 127,
+        "end": 180
+      }
+    },
+    "group": [
+      "flag"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_flag.scss",
+      "name": "_flag.scss"
+    }
+  },
+  {
+    "description": "Color value for gray.\n",
+    "commentRange": {
+      "start": 26,
+      "end": 28
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-gray",
+      "value": "rgb(247, 247, 247)",
+      "scope": "private",
+      "line": {
+        "start": 29,
+        "end": 29
+      }
+    },
+    "group": [
+      "gray"
+    ],
+    "type": "#F7F7F7",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for dark gray.\n",
+    "commentRange": {
+      "start": 30,
+      "end": 32
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-gray-dark",
+      "value": "rgb(207, 207, 207)",
+      "scope": "private",
+      "line": {
+        "start": 33,
+        "end": 33
+      }
+    },
+    "group": [
+      "gray"
+    ],
+    "type": "#CFCFCF",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for green.\n",
+    "commentRange": {
+      "start": 34,
+      "end": 36
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-green",
+      "value": "rgb(0, 132, 115)",
+      "scope": "private",
+      "line": {
+        "start": 37,
+        "end": 37
+      }
+    },
+    "group": [
+      "green"
+    ],
+    "type": "#008473",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for dark green.\n",
+    "commentRange": {
+      "start": 38,
+      "end": 40
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-green-dark",
+      "value": "rgb(0, 118, 103)",
+      "scope": "private",
+      "line": {
+        "start": 41,
+        "end": 41
+      }
+    },
+    "group": [
+      "green"
+    ],
+    "type": "#007667",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for green at 75%.\n",
+    "commentRange": {
+      "start": 80,
+      "end": 82
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-green-tint-75",
+      "value": "rgb(64, 198, 178)",
+      "scope": "private",
+      "line": {
+        "start": 83,
+        "end": 83
+      }
+    },
+    "group": [
+      "green"
+    ],
+    "type": "#40C6B2",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for green at 50%.\n",
+    "commentRange": {
+      "start": 84,
+      "end": 86
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-green-tint-50",
+      "value": "rgb(128, 217, 203)",
+      "scope": "private",
+      "line": {
+        "start": 87,
+        "end": 87
+      }
+    },
+    "group": [
+      "green"
+    ],
+    "type": "#80D9CB",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for green at 25%.\n",
+    "commentRange": {
+      "start": 88,
+      "end": 90
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-green-tint-25",
+      "value": "rgb(191, 236, 229)",
+      "scope": "private",
+      "line": {
+        "start": 91,
+        "end": 91
+      }
+    },
+    "group": [
+      "green"
+    ],
+    "type": "#BFECE5",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Changes the height of the element to 100 percent.\n",
+    "commentRange": {
+      "start": 148,
+      "end": 149
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Height--100",
+      "value": "height: 100% !important;",
+      "line": {
+        "start": 150,
+        "end": 839
+      }
+    },
+    "group": [
+      "height"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "A Spark utility class that can be used on\nthe Highlight Board to make it become 100% width.\n",
+    "commentRange": {
+      "start": 52,
+      "end": 54
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FullWidth",
+      "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
+      "line": {
+        "start": 59,
+        "end": 67
+      }
+    },
+    "group": [
+      "highlight board"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_highlight-board.scss",
+      "name": "_highlight-board.scss"
+    }
+  },
+  {
+    "description": "Adds the styles for the Stacked Highlight Board variant.\n",
+    "commentRange": {
+      "start": 49,
+      "end": 50
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-HighlightBoard--stacked",
+      "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
+      "line": {
+        "start": 59,
+        "end": 67
+      }
+    },
+    "group": [
+      "highlight board"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_highlight-board.scss",
+      "name": "_highlight-board.scss"
+    }
+  },
+  {
+    "description": "Adds the styles for Highlight Boards with an image.\n",
+    "commentRange": {
+      "start": 56,
+      "end": 57
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-HighlightBoard--has-image",
+      "value": "position: absolute;\n  bottom: $sprk-space-l;\n  left: $sprk-space-l;\n  max-width: $sprk-highlight-board-content-width;\n  right: $sprk-space-l;\n  text-align: left;",
+      "line": {
+        "start": 59,
+        "end": 67
+      }
+    },
+    "group": [
+      "highlight board"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_highlight-board.scss",
+      "name": "_highlight-board.scss"
+    }
+  },
+  {
+    "description": "Adds styles for filled Icons.\n",
+    "commentRange": {
+      "start": 66,
+      "end": 67
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Icon--filled",
+      "value": "stroke: $sprk-icon-filled-stroke-color;\n  fill: $sprk-icon-filled-fill-color;",
+      "line": {
+        "start": 69,
+        "end": 129
+      }
+    },
+    "group": [
+      "icons"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_icons.scss",
+      "name": "_icons.scss"
+    }
+  },
+  {
+    "description": "Adds the fill and stroke properties\nset to the current color of its container.\n",
+    "commentRange": {
+      "start": 77,
+      "end": 78
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Icon--stroke-current-color",
+      "value": "stroke: currentColor;",
+      "line": {
+        "start": 79,
+        "end": 129
+      }
+    },
+    "group": [
+      "icons"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_icons.scss",
+      "name": "_icons.scss"
+    }
+  },
+  {
+    "description": "Adds styles for small filled Icons.\n",
+    "commentRange": {
+      "start": 74,
+      "end": 75
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Icon--filled-small",
+      "value": "stroke: currentColor;",
+      "line": {
+        "start": 79,
+        "end": 129
+      }
+    },
+    "group": [
+      "icons"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_icons.scss",
+      "name": "_icons.scss"
+    }
+  },
+  {
+    "description": "Adds the fill property set\nto the current color of its container.\n",
+    "commentRange": {
+      "start": 83,
+      "end": 84
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Icon--filled-current-color",
+      "value": "fill: currentColor;",
+      "line": {
+        "start": 85,
+        "end": 129
+      }
+    },
+    "group": [
+      "icons"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_icons.scss",
+      "name": "_icons.scss"
+    }
+  },
+  {
+    "description": "Adds the Icon height and width\nto $sprk-icon-l and stroke-width\nto $icon-custom-stroke-width-l.\n",
+    "commentRange": {
+      "start": 89,
+      "end": 91
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Icon--l",
+      "value": "height: $sprk-icon-l;\n  width: $sprk-icon-l;\n  stroke-width: $sprk-icon-custom-stroke-width-l;",
+      "line": {
+        "start": 92,
+        "end": 129
+      }
+    },
+    "group": [
+      "icons"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_icons.scss",
+      "name": "_icons.scss"
+    }
+  },
+  {
+    "description": "Adds the Icon height and width to\n$icon-xl and stroke-width to\n$icon-custom-stroke-width-m.\n",
+    "commentRange": {
+      "start": 98,
+      "end": 100
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Icon--xl",
+      "value": "height: $sprk-icon-xl;\n  width: $sprk-icon-xl;\n  stroke-width: $sprk-icon-custom-stroke-width-m;",
+      "line": {
+        "start": 101,
+        "end": 129
+      }
+    },
+    "group": [
+      "icons"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_icons.scss",
+      "name": "_icons.scss"
+    }
+  },
+  {
+    "description": "Adds the Icon height and\nwidth to $icon-xxl and\nstroke-width to $icon-custom-stroke-width-s.\n",
+    "commentRange": {
+      "start": 107,
+      "end": 109
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Icon--xxl",
+      "value": "height: $sprk-icon-xxl;\n  width: $sprk-icon-xxl;\n  stroke-width: $sprk-icon-custom-stroke-width-s;",
+      "line": {
+        "start": 110,
+        "end": 129
+      }
+    },
+    "group": [
+      "icons"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_icons.scss",
+      "name": "_icons.scss"
+    }
+  },
+  {
+    "description": "Adds styles for\nIcons that serve as toggle controls.\n",
+    "commentRange": {
+      "start": 116,
+      "end": 117
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Icon--toggle",
+      "value": "transform-origin: center;\n  transition: transform $sprk-toggle-transition-timing;",
+      "line": {
+        "start": 118,
+        "end": 129
+      }
+    },
+    "group": [
+      "icons"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_icons.scss",
+      "name": "_icons.scss"
+    }
+  },
+  {
+    "description": "Rotates Icon -180 degrees.\nShould be used in conjunction\nwith .sprk-c-Icon--toggle.\n",
+    "commentRange": {
+      "start": 123,
+      "end": 125
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Icon--open",
+      "value": "transform: rotate(-180deg);",
+      "line": {
+        "start": 126,
+        "end": 129
+      }
+    },
+    "group": [
+      "icons"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_icons.scss",
+      "name": "_icons.scss"
+    }
+  },
+  {
+    "description": "Increases the max-width of the input container to 100%.\n",
+    "commentRange": {
+      "start": 15,
+      "end": 15
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-InputContainer--full",
+      "value": "max-width: $sprk-input-max-width-full;",
+      "line": {
+        "start": 16,
+        "end": 366
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_input-container.scss",
+      "name": "_input-container.scss"
+    }
+  },
+  {
+    "description": "Trigger the floating label state on huge inputs.\n",
+    "commentRange": {
+      "start": 53,
+      "end": 54
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Input--has-floating-label",
+      "value": "font-size: $sprk-input-huge-font-size;",
+      "line": {
+        "start": 62,
+        "end": 366
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_input-container.scss",
+      "name": "_input-container.scss"
+    }
+  },
+  {
+    "description": "Adjust styling and hide label on huge inputs.\n",
+    "commentRange": {
+      "start": 110,
+      "end": 111
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-TextInput--label-hidden",
+      "value": "opacity: $sprk-input-huge-placeholder-active-opacity;\n  transition-delay: $sprk-input-huge-placeholder-transition-delay;\n  transition-property: $sprk-input-huge-placeholder-transition-property;",
+      "line": {
+        "start": 124,
+        "end": 366
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_input-container.scss",
+      "name": "_input-container.scss"
+    }
+  },
+  {
+    "description": "Apply when a label is used without an input.\n",
+    "commentRange": {
+      "start": 19,
+      "end": 19
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Label--no-input",
+      "value": "padding: 0;\n  transform: none;",
+      "line": {
+        "start": 20,
+        "end": 33
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_labels.scss",
+      "name": "_labels.scss"
+    }
+  },
+  {
+    "description": "Used for inline labels.\n",
+    "commentRange": {
+      "start": 25,
+      "end": 25
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Label--inline",
+      "value": "display: inline-block;",
+      "line": {
+        "start": 26,
+        "end": 33
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_labels.scss",
+      "name": "_labels.scss"
+    }
+  },
+  {
+    "description": "Added for potential future use.\n",
+    "commentRange": {
+      "start": 5,
+      "end": 5
+    },
+    "context": {
+      "type": "css",
+      "name": "// .sprk-b-Radio",
+      "value": "",
+      "line": {
+        "start": 6,
+        "end": 85
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_radio.scss",
+      "name": "_radio.scss"
+    }
+  },
+  {
+    "description": "Adds select error styles.\n",
+    "commentRange": {
+      "start": 56,
+      "end": 57
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Select--error",
+      "value": "border-color: $sprk-select-error-border-color;",
+      "line": {
+        "start": 59,
+        "end": 62
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_select.scss",
+      "name": "_select.scss"
+    }
+  },
+  {
+    "description": "Limits the max-width of the input icon container.\n",
+    "commentRange": {
+      "start": 10,
+      "end": 10
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-InputContainer__icon-container--narrow",
+      "value": "max-width: $sprk-input-container-narrow-max-width;",
+      "line": {
+        "start": 11,
+        "end": 43
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_svg-icon-input.scss",
+      "name": "_svg-icon-input.scss"
+    }
+  },
+  {
+    "description": "For a SVG icon inside of input that is positioned to the right.\n",
+    "commentRange": {
+      "start": 27,
+      "end": 28
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-InputContainer__icon--right",
+      "value": "top: $sprk-input-has-icon-right-top;\n  left: $sprk-input-has-icon-right-left;\n  margin: 0;\n  stroke-width: $sprk-icon-custom-stroke-width-s;\n  fill: $sprk-icon-filled-fill-color;",
+      "line": {
+        "start": 29,
+        "end": 43
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_svg-icon-input.scss",
+      "name": "_svg-icon-input.scss"
+    }
+  },
+  {
+    "description": "Text inputs with icons.\n",
+    "commentRange": {
+      "start": 5,
+      "end": 5
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-TextInputIconContainer--has-text-icon",
+      "value": "&::before {\n    content: $sprk-monetary-symbol;\n    display: block;\n    font-size: $sprk-input-text-icon-font-size;\n    font-weight: $sprk-input-text-icon-font-weight;\n    line-height: 1;\n    margin-left: $sprk-input-text-icon-offset-x;\n    position: absolute;\n    top: calc(100% - #{$sprk-input-text-icon-offset-y});\n    z-index: $sprk-input-text-icon-z-index;\n  }",
+      "line": {
+        "start": 6,
+        "end": 19
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_text-icon-input.scss",
+      "name": "_text-icon-input.scss"
+    }
+  },
+  {
+    "description": "For an input that contains a SVG that is positioned to the right.\n",
+    "commentRange": {
+      "start": 50,
+      "end": 50
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-InputContainer__input--has-icon-right",
+      "value": "padding: $sprk-input-has-icon-padding-right;",
+      "line": {
+        "start": 51,
+        "end": 100
+      }
+    },
+    "group": [
+      "input"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/inputs/_text-input.scss",
+      "name": "_text-input.scss"
+    }
+  },
+  {
+    "description": "Simple links have no underline until hovered.\n",
+    "commentRange": {
+      "start": 31,
+      "end": 31
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Link--simple",
+      "value": "color: $sprk-link-simple-color;\n  border-bottom: $sprk-link-simple-border-bottom;\n  font-weight: $sprk-link-simple-font-weight;\n\n  &:visited {\n    border-bottom: $sprk-link-simple-visited-border-bottom;\n  }\n\n  &:hover,\n  &:active,\n  &:focus {\n    transition: $sprk-link-transition;\n    color: $sprk-link-simple-hover-color;\n    border-bottom: $sprk-link-simple-hover-border-bottom;\n  }",
+      "line": {
+        "start": 32,
+        "end": 102
+      }
+    },
+    "group": [
+      "link"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_links.scss",
+      "name": "_links.scss"
+    }
+  },
+  {
+    "description": "Used when a link is next to an icon. There will not be an underline.\n",
+    "commentRange": {
+      "start": 50,
+      "end": 50
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Link--has-icon",
+      "value": "border-bottom: $sprk-link-has-icon-border-bottom;\n  font-weight: $sprk-link-has-icon-font-weight;\n\n  &:hover,\n  &:active,\n  &:focus,\n  &:visited {\n    border-bottom: $sprk-link-has-icon-hover-border-bottom;\n    color: $sprk-link-has-icon-hover-color-text;\n  }",
+      "line": {
+        "start": 51,
+        "end": 102
+      }
+    },
+    "group": [
+      "link"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_links.scss",
+      "name": "_links.scss"
+    }
+  },
+  {
+    "description": "Disabled links have a muted color and cannot be interacted with.\n",
+    "commentRange": {
+      "start": 70,
+      "end": 71
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Link--disabled",
+      "value": "color: $sprk-link-disabled-color;\n  stroke: $sprk-link-disabled-color;\n  fill: $sprk-link-has-icon-fill;\n  pointer-events: none;\n  border-bottom: $sprk-link-disabled-border-bottom;\n  font-weight: $sprk-link-disabled-font-weight;\n\n  &:visited,\n  &:hover,\n  &:active,\n  &:focus {\n    border-bottom: $sprk-link-disabled-hover-border-bottom;\n    color: $sprk-link-disabled-color;\n  }",
+      "line": {
+        "start": 73,
+        "end": 102
+      }
+    },
+    "group": [
+      "link"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_links.scss",
+      "name": "_links.scss"
+    }
+  },
+  {
+    "description": "Removes the underline from links on initial state\nand on hover, active, focus, and visited states.\n",
+    "commentRange": {
+      "start": 90,
+      "end": 91
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Link--plain",
+      "value": "border: $sprk-link-plain-border;\n\n  &:hover,\n  &:active,\n  &:focus,\n  &:visited {\n    border: $sprk-link-plain-visited-border;\n  }",
+      "line": {
+        "start": 92,
+        "end": 102
+      }
+    },
+    "group": [
+      "link"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_links.scss",
+      "name": "_links.scss"
+    }
+  },
+  {
+    "description": "Adds extended indentation on the list.\n",
+    "commentRange": {
+      "start": 17,
+      "end": 17
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-List--indented",
+      "value": "margin-left: $sprk-list-indented-margin-left;",
+      "line": {
+        "start": 18,
+        "end": 21
+      }
+    },
+    "group": [
+      "list"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_lists.scss",
+      "name": "_lists.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the Masthead when it is open.\n",
+    "commentRange": {
+      "start": 21,
+      "end": 21
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Masthead--open",
+      "value": "position: fixed;\n  left: 0;\n  right: 0;\n  height: 100%;\n\n  @media all and (min-width: $sprk-masthead-breakpoint) {\n    position: sticky;\n    height: auto;\n  }",
+      "line": {
+        "start": 22,
+        "end": 423
+      }
+    },
+    "group": [
+      "masthead"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_masthead.scss",
+      "name": "_masthead.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the Masthead when the user scrolls past it.\n",
+    "commentRange": {
+      "start": 34,
+      "end": 34
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Masthead--scroll",
+      "value": "box-shadow: $sprk-masthead-shadow-scroll;",
+      "line": {
+        "start": 35,
+        "end": 423
+      }
+    },
+    "group": [
+      "masthead"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_masthead.scss",
+      "name": "_masthead.scss"
+    }
+  },
+  {
+    "description": "Adds styles to hide the Masthead\nwhen a user scrolls on a narrow screen.\n",
+    "commentRange": {
+      "start": 39,
+      "end": 40
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Masthead--hidden",
+      "value": "transform: $sprk-masthead-translateY;\n  transition: $sprk-masthead-transition;",
+      "line": {
+        "start": 41,
+        "end": 423
+      }
+    },
+    "group": [
+      "masthead"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_masthead.scss",
+      "name": "_masthead.scss"
+    }
+  },
+  {
+    "description": "Adds an underline on links used in\nthe big navigation bar.\n",
+    "commentRange": {
+      "start": 203,
+      "end": 204
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Masthead__link--big-nav",
+      "value": "display: block;\n  font-weight: $sprk-big-nav-link-font-weight;\n  padding: $sprk-big-nav-link-padding;\n\n  &:hover,\n  &:active,\n  &:focus {\n    color: $sprk-big-nav-link-color;\n  }",
+      "line": {
+        "start": 205,
+        "end": 423
+      }
+    },
+    "group": [
+      "masthead"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_masthead.scss",
+      "name": "_masthead.scss"
+    }
+  },
+  {
+    "description": "Adds an active state color and bold\nfont weight to active big navigation items.\n",
+    "commentRange": {
+      "start": 246,
+      "end": 248
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Masthead__big-nav-item--active",
+      "value": "color: $sprk-big-nav-active-color;\n  font-weight: $sprk-big-nav-link-font-weight;",
+      "line": {
+        "start": 249,
+        "end": 423
+      }
+    },
+    "group": [
+      "masthead"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_masthead.scss",
+      "name": "_masthead.scss"
+    }
+  },
+  {
+    "description": "Adds open styles to open big navigation items.\n",
+    "commentRange": {
+      "start": 254,
+      "end": 255
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Masthead__big-nav-item--open",
+      "value": "@include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 100%, $sprk-hoverline-height: 2px);",
+      "line": {
+        "start": 258,
+        "end": 423
+      }
+    },
+    "group": [
+      "masthead"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_masthead.scss",
+      "name": "_masthead.scss"
+    }
+  },
+  {
+    "description": "Adds top divider when open.\n",
+    "commentRange": {
+      "start": 370,
+      "end": 371
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-MastheadAccordion__item--open",
+      "value": "background-color: $sprk-masthead-accordion-item-open-line-background-color;\n  content: '';\n  display: block;\n  height: $sprk-masthead-accordion-item-open-line-height;\n  margin: 0 auto;\n  width: 100%;",
+      "line": {
+        "start": 372,
+        "end": 423
+      }
+    },
+    "group": [
+      "masthead"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_masthead.scss",
+      "name": "_masthead.scss"
+    }
+  },
+  {
+    "description": "Adds selected item background highlight and left color bar.\n",
+    "commentRange": {
+      "start": 381,
+      "end": 382
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-MastheadAccordion__item--active",
+      "value": "background-color: $sprk-masthead-accordion-active-background-color;\n  border-left: $sprk-masthead-accordion-active-left-border;",
+      "line": {
+        "start": 384,
+        "end": 423
+      }
+    },
+    "group": [
+      "masthead"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_masthead.scss",
+      "name": "_masthead.scss"
+    }
+  },
+  {
+    "description": "Sets the bottom margin to the current value of\n`$sprk-space-misc-a` (`24px`).\n",
+    "commentRange": {
+      "start": 560,
+      "end": 563
+    },
+    "context": {
+      "type": "css",
+      "name": "sprk-u-MarginBottom--a",
+      "value": "padding-top: $sprk-space-misc-a !important;",
+      "line": {
+        "start": 579,
+        "end": 839
+      }
+    },
+    "group": [
+      "misc-spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the margin on all sides to the current value\nof `$sprk-space-misc-d` (`80px`).\n",
+    "commentRange": {
+      "start": 570,
+      "end": 573
+    },
+    "context": {
+      "type": "css",
+      "name": "sprk-u-MarginAll--d",
+      "value": "padding-top: $sprk-space-misc-a !important;",
+      "line": {
+        "start": 579,
+        "end": 839
+      }
+    },
+    "group": [
+      "misc-spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the padding on the left and right (horizontal)\nto `$sprk-space-misc-b` (`40px`).\n",
+    "commentRange": {
+      "start": 565,
+      "end": 568
+    },
+    "context": {
+      "type": "css",
+      "name": "sprk-u-PaddingHorizontal--b",
+      "value": "padding-top: $sprk-space-misc-a !important;",
+      "line": {
+        "start": 579,
+        "end": 839
+      }
+    },
+    "group": [
+      "misc-spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the Wait Modal\nvariant. Applies center alignment.\n",
+    "commentRange": {
+      "start": 46,
+      "end": 47
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Modal--wait",
+      "value": "text-align: center;",
+      "line": {
+        "start": 48,
+        "end": 78
+      }
+    },
+    "group": [
+      "modal"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_modals.scss",
+      "name": "_modals.scss"
+    }
+  },
+  {
+    "description": "Makes content invisible while still being read by a\nscreen reader.\n",
+    "commentRange": {
+      "start": 786,
+      "end": 788
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-ScreenReaderText",
+      "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
+      "line": {
+        "start": 789,
+        "end": 839
+      }
+    },
+    "group": [
+      "multi-accessibility"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "When combined with `.sprk-u-ScreenReaderText` the element\nwill become visible on focus.\n",
+    "commentRange": {
+      "start": 798,
+      "end": 800
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-ShowOnFocus:focus",
+      "value": "position: static;\n  width: auto;\n  height: auto;",
+      "line": {
+        "start": 801,
+        "end": 839
+      }
+    },
+    "group": [
+      "multi-accessibility"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Clearfix is a method of float containment. When applied to a container\nwith floated children it forces the container to span the entire vertical\nextent of the children as if they weren't pulled out of the document flow\nby the floats. Elements that come after the Clearfixed element will no\nlonger wrap around the floated children. The primary way to use `Clearfix`\nin Spark is by extending the placeholder in your Sass (e.g.\n`@extend %ClearFix;`). It can also be used by applying the class directly\nto the parent element, typically only used for debugging.\n",
+    "commentRange": {
+      "start": 12,
+      "end": 20
+    },
+    "context": {
+      "type": "placeholder",
+      "name": "ClearFix",
+      "code": "\n  &::after {\n    content: '';\n    display: table;\n    clear: both;\n  }\n",
+      "line": {
+        "start": 21,
+        "end": 28
+      }
+    },
+    "group": [
+      "multi-layout"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_clearfix.scss",
+      "name": "_clearfix.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will align\nin the absolute center (vertically and horizontally)\nof the box.\n",
+    "commentRange": {
+      "start": 809,
+      "end": 812
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-AbsoluteCenter",
+      "value": "display: flex;\n  align-items: center;\n  justify-content: center;",
+      "line": {
+        "start": 813,
+        "end": 839
+      }
+    },
+    "group": [
+      "multi-layout"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, it will cause it to fill\nthe viewport, even if it's inside a limiting container\n(such as `sprk-o-CenteredColumn`).\n",
+    "commentRange": {
+      "start": 819,
+      "end": 822
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FullWidth",
+      "value": "width: 100vw;\n  left: 50%;\n  right: 50%;\n  margin-left: -50vw;\n  margin-right: -50vw;",
+      "line": {
+        "start": 823,
+        "end": 839
+      }
+    },
+    "group": [
+      "multi-layout"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "When placed on an element that contains text or any of\nthe typography classes, it will remove the text cropping\nand the negative margins applied by the crop.\n",
+    "commentRange": {
+      "start": 268,
+      "end": 271
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextCrop--none",
+      "value": "&::before,\n  &::after {\n    content: none !important;\n    margin-bottom: 0 !important;\n    margin-top: 0 !important;\n  }",
+      "line": {
+        "start": 272,
+        "end": 839
+      }
+    },
+    "group": [
+      "multi-typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "When placed on an element that contains text, it will\nlimit the text to one line and adds an ellipsis when\nit overflows.\n",
+    "commentRange": {
+      "start": 831,
+      "end": 834
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Truncate",
+      "value": "white-space: nowrap !important;\n  overflow: hidden !important;\n  text-overflow: ellipsis !important;",
+      "line": {
+        "start": 835,
+        "end": 839
+      }
+    },
+    "group": [
+      "multi-typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Content is not clipped and may be rendered outside\nthe padding box.\n",
+    "commentRange": {
+      "start": 311,
+      "end": 313
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Overflow--visible",
+      "value": "overflow: visible !important;",
+      "line": {
+        "start": 314,
+        "end": 839
+      }
+    },
+    "group": [
+      "overflow"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Content is clipped if necessary to fit the padding\nbox. No scrollbars are provided.\n",
+    "commentRange": {
+      "start": 318,
+      "end": 320
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Overflow--hidden",
+      "value": "overflow: hidden !important;",
+      "line": {
+        "start": 321,
+        "end": 839
+      }
+    },
+    "group": [
+      "overflow"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Content is clipped if necessary to fit the padding\nbox. Browsers display scrollbars whether or not any\ncontent is actually clipped.\n",
+    "commentRange": {
+      "start": 325,
+      "end": 328
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Overflow--scroll",
+      "value": "overflow: scroll !important;",
+      "line": {
+        "start": 329,
+        "end": 839
+      }
+    },
+    "group": [
+      "overflow"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "If content fits inside the padding box, it looks the\nsame as visible, but still establishes a new\nblock-formatting context.\n",
+    "commentRange": {
+      "start": 333,
+      "end": 336
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Overflow--auto",
+      "value": "overflow: auto !important;",
+      "line": {
+        "start": 337,
+        "end": 839
+      }
+    },
+    "group": [
+      "overflow"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the\ncurrently selected pagination link.\n",
+    "commentRange": {
+      "start": 49,
+      "end": 50
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Pagination__link--current",
+      "value": "background-color: $sprk-pag-selection-color;\n  color: $sprk-pag-selection-link-color;\n  font-weight: $sprk-pag-current-link-font-weight;\n\n  &:hover,\n  &:focus,\n  &:active,\n  &:visited {\n    color: $sprk-pag-selection-link-color-hover;\n  }",
+      "line": {
+        "start": 51,
+        "end": 91
+      }
+    },
+    "group": [
+      "pagination"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_pagination.scss",
+      "name": "_pagination.scss"
+    }
+  },
+  {
+    "description": "The element is not floated.\n",
+    "commentRange": {
+      "start": 67,
+      "end": 68
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Float--none",
+      "value": "float: none !important;",
+      "line": {
+        "start": 69,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Floats an element to the left.\n",
+    "commentRange": {
+      "start": 73,
+      "end": 74
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Float--left",
+      "value": "float: left !important;",
+      "line": {
+        "start": 75,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Floats an element to the right.\n",
+    "commentRange": {
+      "start": 79,
+      "end": 80
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Float--right",
+      "value": "float: right !important;",
+      "line": {
+        "start": 81,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is positioned according to the normal flow of the\ndocument, and then offset relative to itself.\n",
+    "commentRange": {
+      "start": 89,
+      "end": 91
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Position--relative",
+      "value": "position: relative !important;",
+      "line": {
+        "start": 92,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is removed from the normal document flow, and no\nspace is created for the element in the page layout. It is\npositioned relative to its closest positioned ancestor.\n",
+    "commentRange": {
+      "start": 96,
+      "end": 99
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Position--absolute",
+      "value": "position: absolute !important;",
+      "line": {
+        "start": 100,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is removed from the normal document flow, and no\nspace is created for the element in the page layout. It is\npositioned relative to the initial containing block established\nby the viewport.\n",
+    "commentRange": {
+      "start": 104,
+      "end": 108
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Position--fixed",
+      "value": "position: fixed !important;",
+      "line": {
+        "start": 109,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "The element is positioned according to the normal flow of the\ndocument.\n",
+    "commentRange": {
+      "start": 113,
+      "end": 115
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Position--static",
+      "value": "position: static !important;",
+      "line": {
+        "start": 116,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Resets an element's top offset back to zero.\n",
+    "commentRange": {
+      "start": 120,
+      "end": 121
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Top--zero",
+      "value": "top: 0 !important;",
+      "line": {
+        "start": 122,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Resets an element's bottom offset back to zero.\n",
+    "commentRange": {
+      "start": 126,
+      "end": 127
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Bottom--zero",
+      "value": "bottom: 0 !important;",
+      "line": {
+        "start": 128,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Resets an element's left offset back to zero.\n",
+    "commentRange": {
+      "start": 132,
+      "end": 133
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Left--zero",
+      "value": "left: 0 !important;",
+      "line": {
+        "start": 134,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Resets an element's right offset back to zero.\n",
+    "commentRange": {
+      "start": 138,
+      "end": 139
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Right--zero",
+      "value": "right: 0 !important;",
+      "line": {
+        "start": 140,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns text to the left of the container.\n",
+    "commentRange": {
+      "start": 170,
+      "end": 171
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextAlign--left",
+      "value": "text-align: left !important;",
+      "line": {
+        "start": 172,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns text to the right of the container.\n",
+    "commentRange": {
+      "start": 176,
+      "end": 177
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextAlign--right",
+      "value": "text-align: right !important;",
+      "line": {
+        "start": 178,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns text in the horizontal center of the container.\n",
+    "commentRange": {
+      "start": 182,
+      "end": 183
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextAlign--center",
+      "value": "text-align: center !important;",
+      "line": {
+        "start": 184,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns the contents of a box to the top if it's display\nproperty is `inline` or `table-cell`.\n",
+    "commentRange": {
+      "start": 188,
+      "end": 190
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-VerticalAlign--top",
+      "value": "vertical-align: top !important;",
+      "line": {
+        "start": 191,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns the contents of a box to the vertical middle if\nit's display property is `inline` or `table-cell`.\n",
+    "commentRange": {
+      "start": 195,
+      "end": 197
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-VerticalAlign--middle",
+      "value": "vertical-align: middle !important;",
+      "line": {
+        "start": 198,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns the contents of a box to the bottom if it's\ndisplay property is `inline` or `table-cell`.\n",
+    "commentRange": {
+      "start": 202,
+      "end": 204
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-VerticalAlign--bottom",
+      "value": "vertical-align: bottom !important;",
+      "line": {
+        "start": 205,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Aligns the contents of a box to the baseline if it's\ndisplay property is `inline` or `table-cell`.\n",
+    "commentRange": {
+      "start": 209,
+      "end": 211
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-VerticalAlign--baseline",
+      "value": "vertical-align: baseline !important;",
+      "line": {
+        "start": 212,
+        "end": 839
+      }
+    },
+    "group": [
+      "position"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Adds a border around the Promo.\n",
+    "commentRange": {
+      "start": 13,
+      "end": 13
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Promo--bordered",
+      "value": "border: $sprk-promo-border;",
+      "line": {
+        "start": 14,
+        "end": 59
+      }
+    },
+    "group": [
+      "promo"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_promo.scss",
+      "name": "_promo.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the image\nin the Flag Promo variant.\n",
+    "commentRange": {
+      "start": 28,
+      "end": 29
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Promo__image--flag",
+      "value": "object-fit: cover;\n  padding: $sprk-space-inset-m;\n\n  @media (max-width: $sprk-promo-breakpoint) {\n    max-width: $sprk-promo-image-narrow-max-width;\n    max-height: $sprk-promo-image-narrow-max-height;\n  }",
+      "line": {
+        "start": 30,
+        "end": 59
+      }
+    },
+    "group": [
+      "promo"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_promo.scss",
+      "name": "_promo.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the Flag Promo variant.\n",
+    "commentRange": {
+      "start": 54,
+      "end": 55
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Promo--flag",
+      "value": "padding: $sprk-space-inset-m;",
+      "line": {
+        "start": 56,
+        "end": 59
+      }
+    },
+    "group": [
+      "promo"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_promo.scss",
+      "name": "_promo.scss"
+    }
+  },
+  {
+    "description": "Color value for red.\n",
+    "commentRange": {
+      "start": 6,
+      "end": 8
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-red",
+      "value": "rgb(200, 16, 46)",
+      "scope": "private",
+      "line": {
+        "start": 9,
+        "end": 9
+      }
+    },
+    "group": [
+      "red"
+    ],
+    "type": "#C8102E",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for mid red.\n",
+    "commentRange": {
+      "start": 10,
+      "end": 12
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-mid-red",
+      "value": "rgb(157,34,53)",
+      "scope": "private",
+      "line": {
+        "start": 13,
+        "end": 13
+      }
+    },
+    "group": [
+      "red"
+    ],
+    "type": "#9D2235",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for deep red.\n",
+    "commentRange": {
+      "start": 14,
+      "end": 16
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-deep-red",
+      "value": "rgb(118,35,47)",
+      "scope": "private",
+      "line": {
+        "start": 17,
+        "end": 17
+      }
+    },
+    "group": [
+      "red"
+    ],
+    "type": "#76232F",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for red 75%.\n",
+    "commentRange": {
+      "start": 94,
+      "end": 96
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-red-tint-75",
+      "value": "rgb(214, 76, 98)",
+      "scope": "private",
+      "line": {
+        "start": 97,
+        "end": 97
+      }
+    },
+    "group": [
+      "red"
+    ],
+    "type": "#D64C62",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for red at 50%.\n",
+    "commentRange": {
+      "start": 98,
+      "end": 100
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-red-tint-50",
+      "value": "rgb(227, 135, 150)",
+      "scope": "private",
+      "line": {
+        "start": 101,
+        "end": 101
+      }
+    },
+    "group": [
+      "red"
+    ],
+    "type": "#E38796",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Color value for red at 25%.\n",
+    "commentRange": {
       "start": 102,
       "end": 104
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-red-tint-25",
+      "value": "rgb(241, 195, 203)",
+      "scope": "private",
+      "line": {
+        "start": 105,
+        "end": 105
+      }
+    },
+    "group": [
+      "red"
+    ],
+    "type": "#F1C3CB",
+    "access": "public",
+    "file": {
+      "path": "settings/_colors.scss",
+      "name": "_colors.scss"
+    }
+  },
+  {
+    "description": "Sets the margin on all sides to `64px`\n",
+    "commentRange": {
+      "start": 13,
+      "end": 15
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-mah",
+      "value": "padding-top: 0 !important;",
+      "line": {
+        "start": 19,
+        "end": 255
+      }
+    },
+    "group": [
+      "spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_spacing.scss",
+      "name": "_spacing.scss"
+    }
+  },
+  {
+    "description": "Sets the bottom margin to `0px`\n",
+    "commentRange": {
+      "start": 5,
+      "end": 7
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-mbn",
+      "value": "padding-top: 0 !important;",
+      "line": {
+        "start": 19,
+        "end": 255
+      }
+    },
+    "group": [
+      "spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_spacing.scss",
+      "name": "_spacing.scss"
+    }
+  },
+  {
+    "description": "Sets the left and right padding to `16px`\n",
+    "commentRange": {
+      "start": 9,
+      "end": 11
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-phm",
+      "value": "padding-top: 0 !important;",
+      "line": {
+        "start": 19,
+        "end": 255
+      }
+    },
+    "group": [
+      "spacing"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_spacing.scss",
+      "name": "_spacing.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will be\ncentered along the main-axis of the container.\n",
+    "commentRange": {
+      "start": 18,
+      "end": 19
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--center-row",
+      "value": "justify-content: center;",
+      "line": {
+        "start": 20,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will be\naligned to the end of the container when flex-direction is row.\nYou can choose for this to be constant or add a responsive\nmodifier and have it start at a specific breakpoint\nex. sprk-o-Stack--end-row@xs (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 24,
+      "end": 28
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--end-row",
+      "value": "justify-content: flex-end;",
+      "line": {
+        "start": 29,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will be aligned\nto the end of the container when flex-direction is column.\nYou can choose for this to be constant or add a responsive\nmodifier and have it start at a specific breakpoint\nex. sprk-o-Stack--end-row@xs (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 69,
+      "end": 73
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--end-column",
+      "value": "align-items: flex-end;",
+      "line": {
+        "start": 74,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will be centered\nalong the cross axis of the container.\n",
+    "commentRange": {
+      "start": 114,
+      "end": 115
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--center-column",
+      "value": "align-items: center;",
+      "line": {
+        "start": 116,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "This is used for spacing out items in the Stack container.\nWhen placed on a container, its children will have \"tiny\"\nspace on the bottom (on the side if they are in \"split\" position).\nThe last item will not have space.\n",
+    "commentRange": {
+      "start": 125,
+      "end": 129
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--tiny",
+      "value": "margin-bottom: $sprk-stack-spacing-tiny;",
+      "line": {
+        "start": 130,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "This is used for spacing out items in the Stack container.\nWhen placed on a container, its children will have \"small\"\nspace on the bottom (on the side if they are in \"split\" position).\nThe last item will not have space.\n",
+    "commentRange": {
+      "start": 133,
+      "end": 137
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--small",
+      "value": "margin-bottom: $sprk-stack-spacing-small;",
+      "line": {
+        "start": 138,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "This is used for spacing out items in the Stack container.\nWhen placed on a container, its children will have \"medium\"\nspace on the bottom (on the side if they are in \"split\" position).\nThe last item will not have space.\n",
+    "commentRange": {
+      "start": 142,
+      "end": 146
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--medium",
+      "value": "margin-bottom: $sprk-stack-spacing-medium;",
+      "line": {
+        "start": 147,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "This is used for spacing out items in the Stack container.\nWhen placed on a container, its children will have \"large\"\nspace on the bottom (on the side if they are in \"split\" position).\nThe last item will not have space.\n",
+    "commentRange": {
+      "start": 151,
+      "end": 155
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--large",
+      "value": "margin-bottom: $sprk-stack-spacing-large;",
+      "line": {
+        "start": 156,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "This is used for spacing out items in the Stack container.\nWhen placed on a container, its children will have \"huge\"\nspace on the bottom (on the side if they are in \"split\" position).\nThe last item will not have space.\n",
+    "commentRange": {
+      "start": 160,
+      "end": 164
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--huge",
+      "value": "margin-bottom: $sprk-stack-spacing-huge;",
+      "line": {
+        "start": 165,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 1/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 303,
+      "end": 306
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--fourth@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 1/6\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 293,
+      "end": 296
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--sixth@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "of its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 309,
+      "end": 311
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--third@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 1/2\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 313,
+      "end": 316
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--half@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 3/4\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 318,
+      "end": 321
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--three-fourths@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 2/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 323,
+      "end": 326
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--two-fifths@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 3/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 328,
+      "end": 331
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--three-fifths@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 3/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 333,
+      "end": 336
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--three-tenths@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 7/10\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 338,
+      "end": 341
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--seven-tenths@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, its width will be 1/5\nof its container starting at the breakpoint\nspecified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 298,
+      "end": 301
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--fifth@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // At extra small breakpoint we switch from column to row\n    flex-direction: row;\n\n    // Remove bottom margin in new row formation\n    > .sprk-o-Stack__item {\n      margin-bottom: 0;\n    }\n\n    // Add spacing between items based on spacing size class\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-tiny;\n    }\n\n    &.sprk-o-Stack--small > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-small;\n    }\n\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-medium;\n    }\n\n    &.sprk-o-Stack--large > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-large;\n    }\n\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-huge;\n    }\n\n    /* stylelint-disable selector-class-pattern */\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-a;\n    }\n\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-b;\n    }\n\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-c;\n    }\n\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {\n      margin-right: $sprk-stack-spacing-misc-d;\n    }\n    \n    /* stylelint-enable selector-class-pattern */\n    > .sprk-o-Stack__item--sixth\\@xxs {\n      flex: 0 0 16.666666667%;\n      max-width: 16.666666667%;\n    }\n\n    > .sprk-o-Stack__item--fifth\\@xxs {\n      flex: 0 0 20%;\n      max-width: 20%;\n    }\n\n    > .sprk-o-Stack__item--fourth\\@xxs {\n      flex: 0 0 25%;\n      max-width: 25%;\n    }\n\n    > .sprk-o-Stack__item--third\\@xxs {\n      flex: 0 0 33.333333333%;\n      max-width: 33.333333333%;\n    }\n\n    > .sprk-o-Stack__item--half\\@xxs {\n      flex: 0 0 50%;\n      max-width: 50%;\n    }\n\n    > .sprk-o-Stack__item--three-fourths\\@xxs {\n      flex: 0 0 75%;\n      max-width: 75%;\n    }\n\n    > .sprk-o-Stack__item--three-fifths\\@xxs {\n      flex: 0 0 60%;\n      max-width: 60%;\n    }\n\n    > .sprk-o-Stack__item--three-tenths\\@xxs {\n      flex: 0 0 30%;\n      max-width: 30%;\n    }\n\n    > .sprk-o-Stack__item--seven-tenths\\@xxs {\n      flex: 0 0 70%;\n      max-width: 70%;\n    }\n\n    > .sprk-o-Stack__item--two-fifths\\@xxs {\n      flex: 0 0 40%;\n      max-width: 40%;\n    }\n  }",
+      "line": {
+        "start": 344,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will go from a\nstacked layout to a side by side layout at the extra extra\nsmall split breakpoint.\n",
+    "commentRange": {
+      "start": 445,
+      "end": 448
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    // We want the last item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 449,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will go from a\nstacked layout to a side by side layout at the extra\nsmall split breakpoint.\n",
+    "commentRange": {
+      "start": 571,
+      "end": 574
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split@xs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xs) {\n    // We want the last item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 575,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will go from a\nstacked layout to a side by side layout at the\nsmall split breakpoint.\n",
+    "commentRange": {
+      "start": 697,
+      "end": 700
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split@s",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-s) {\n    // We want the last item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 701,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will go from a\nstacked layout to a side by side layout at the\nmedium split breakpoint.\n",
+    "commentRange": {
+      "start": 823,
+      "end": 826
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split@m",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-m) {\n    // We want the last item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 827,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will go from a\nstacked layout to a side by side layout at the\nlarge split breakpoint.\n",
+    "commentRange": {
+      "start": 949,
+      "end": 952
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split@l",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-l) {\n    // We want the last item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 953,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children will go from a\nstacked layout to a side by side layout at the extra\nlarge split breakpoint.\n",
+    "commentRange": {
+      "start": 1075,
+      "end": 1078
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split@xl",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xl) {\n    // We want the last item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:last-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:last-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 1079,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on an item, it will flex to take up the remaining space\nin its container starting at the split breakpoint specified (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 1096,
+      "end": 1098
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--flex@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    flex: 1;\n  }",
+      "line": {
+        "start": 1099,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a specific item, it will be aligned to the end\nof the container when flex-direction is column. You can also add\na responsive suffix to have it start at a breakpoint that you specify\n(xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 1135,
+      "end": 1138
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--end-column",
+      "value": "align-self: flex-end;",
+      "line": {
+        "start": 1139,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a specific item, it will be aligned to the\nstart of the container when flex-direction is column. You can\nalso add a responsive suffix to have it start at a breakpoint\nthat you specify (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 1179,
+      "end": 1182
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--start-column",
+      "value": "align-self: flex-start;",
+      "line": {
+        "start": 1183,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a specific item, it will be centered\nalong the cross axis of the container. You can also add a\nresponsive suffix to have it start at a breakpoint that\nyou specify (xxs, xs, s, m, l, xl).\n",
+    "commentRange": {
+      "start": 1223,
+      "end": 1226
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack__item--center-column",
+      "value": "align-self: center;",
+      "line": {
+        "start": 1227,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children's position in\nthe row will be reversed at the extra extra small split breakpoint.\n",
+    "commentRange": {
+      "start": 1267,
+      "end": 1269
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split-reverse@xxs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xxs) {\n    flex-direction: row-reverse;\n\n    // We want the last positioned item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 1270,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children's position in\nthe row will be reversed at the extra small split breakpoint.\n",
+    "commentRange": {
+      "start": 1289,
+      "end": 1291
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split-reverse@xs",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xs) {\n    flex-direction: row-reverse;\n\n    // We want the last positioned item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 1292,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children's position in\nthe row will be reversed at the small split breakpoint.\n",
+    "commentRange": {
+      "start": 1311,
+      "end": 1313
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split-reverse@s",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-s) {\n    flex-direction: row-reverse;\n\n    // We want the last positioned item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 1314,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children's position in\nthe row will be reversed at the medium split breakpoint.\n",
+    "commentRange": {
+      "start": 1333,
+      "end": 1335
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split-reverse@m",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-m) {\n    flex-direction: row-reverse;\n\n    // We want the last positioned item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 1336,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children's position in\nthe row will be reversed at the large split breakpoint.\n",
+    "commentRange": {
+      "start": 1355,
+      "end": 1357
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split-reverse@l",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-l) {\n    flex-direction: row-reverse;\n\n    // We want the last positioned item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 1358,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "When placed on a container, its children's position in\nthe row will be reversed at the extra large split breakpoint.\n",
+    "commentRange": {
+      "start": 1377,
+      "end": 1379
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-Stack--split-reverse@xl",
+      "value": "@media all and (min-width: $sprk-split-breakpoint-xl) {\n    flex-direction: row-reverse;\n\n    // We want the last positioned item to have zero margin on the right\n    &.sprk-o-Stack--tiny > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--small > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--medium > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--large > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--huge > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-a > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-b > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-c > .sprk-o-Stack__item:first-child,\n    &.sprk-o-Stack--misc-d > .sprk-o-Stack__item:first-child {\n      margin-right: 0;\n    }\n  }",
+      "line": {
+        "start": 1380,
+        "end": 1397
+      }
+    },
+    "group": [
+      "stack"
+    ],
+    "access": "public",
+    "file": {
+      "path": "objects/_stack.scss",
+      "name": "_stack.scss"
+    }
+  },
+  {
+    "description": "Adds the selected styles to the step that\nis selected.\n",
+    "commentRange": {
+      "start": 44,
+      "end": 46
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Stepper__step--selected",
+      "value": ".sprk-c-Stepper__step-heading,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-heading-color;\n  }\n\n  .sprk-c-Stepper__step::before {\n    background-color: $sprk-stepper-dark-bar-color;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color;\n    border-color: $sprk-stepper-dark-icon-border-color;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--has-description\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-description-selected;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-icon,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-selected;\n    box-shadow: $sprk-stepper-icon-box-shadow-selected-dark-bg;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-hover;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
+      "line": {
+        "start": 51,
+        "end": 262
+      }
+    },
+    "group": [
+      "stepper"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_stepper.scss",
+      "name": "_stepper.scss"
+    }
+  },
+  {
+    "description": "Adds the needed styles for\nwhen the Stepper has\na dark background color.\n",
+    "commentRange": {
+      "start": 48,
+      "end": 50
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Stepper--has-dark-bg",
+      "value": ".sprk-c-Stepper__step-heading,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-heading-color;\n  }\n\n  .sprk-c-Stepper__step::before {\n    background-color: $sprk-stepper-dark-bar-color;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color;\n    border-color: $sprk-stepper-dark-icon-border-color;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--has-description\n  .sprk-c-Stepper__step-heading {\n    color: $sprk-stepper-dark-step-description-selected;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-icon,\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-selected;\n    box-shadow: $sprk-stepper-icon-box-shadow-selected-dark-bg;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-dark-icon-color-hover;\n  }\n\n  .sprk-c-Stepper__step--selected\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
+      "line": {
+        "start": 51,
+        "end": 262
+      }
+    },
+    "group": [
+      "stepper"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_stepper.scss",
+      "name": "_stepper.scss"
+    }
+  },
+  {
+    "description": "Adds styles to the step that are\nrequired when the Stepper has a slider.\n",
+    "commentRange": {
+      "start": 114,
+      "end": 116
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Stepper__step--has-slider",
+      "value": "height: 50%;",
+      "line": {
+        "start": 120,
+        "end": 262
+      }
+    },
+    "group": [
+      "stepper"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_stepper.scss",
+      "name": "_stepper.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the last step in the Stepper.\n",
+    "commentRange": {
+      "start": 124,
+      "end": 125
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Stepper__step--last",
+      "value": "top: 0;",
+      "line": {
+        "start": 127,
+        "end": 262
+      }
+    },
+    "group": [
+      "stepper"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_stepper.scss",
+      "name": "_stepper.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the first step in the Stepper.\n",
+    "commentRange": {
+      "start": 131,
+      "end": 132
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Stepper__step--first",
+      "value": "bottom: 0;",
+      "line": {
+        "start": 134,
+        "end": 262
+      }
+    },
+    "group": [
+      "stepper"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_stepper.scss",
+      "name": "_stepper.scss"
+    }
+  },
+  {
+    "description": "Goes on the step content when the step\nhas a description in addition to the step heading.\n",
+    "commentRange": {
+      "start": 158,
+      "end": 159
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Stepper__step-content--has-description",
+      "value": "border-radius: $sprk-stepper-step-description-border-radius;",
+      "line": {
+        "start": 160,
+        "end": 262
+      }
+    },
+    "group": [
+      "stepper"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_stepper.scss",
+      "name": "_stepper.scss"
+    }
+  },
+  {
+    "description": "Adds the active state styles to the slider.\n",
+    "commentRange": {
+      "start": 164,
+      "end": 165
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Stepper__slider--active",
+      "value": ".sprk-c-Stepper__step-description {\n    display: block;\n  }\n\n  .sprk-c-Stepper__step-heading {\n    font-weight: $sprk-stepper-step-heading-font-weight;\n    color: $sprk-stepper-step-heading-color-selected;\n  }\n\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-icon-color-selected;\n    border-color: $sprk-stepper-icon-border-color-selected;\n    box-shadow: $sprk-stepper-icon-box-shadow-selected;\n  }\n\n  .sprk-c-Stepper__step-header:hover\n  .sprk-c-Stepper__step-icon {\n    background-color: $sprk-stepper-icon-color-selected;\n  }\n\n  &.sprk-c-Stepper__step--first::before,\n  &.sprk-c-Stepper__step--has-slider.sprk-c-Stepper__step--first::before {\n    height: 100%;\n    top: ($sprk-stepper-step-padding + $sprk-stepper-icon-box-shadow-selected-spread) + ($sprk-stepper-icon-height / 2);\n  }\n\n  &.sprk-c-Stepper__step--last::before,\n  &.sprk-c-Stepper__step--has-slider.sprk-c-Stepper__step--last::before {\n    height: ($sprk-stepper-step-padding + $sprk-stepper-icon-box-shadow-selected-spread);\n  }\n\n  .sprk-c-Stepper__step-content {\n    background-color: $sprk-stepper-step-content-bg-selected;\n  }\n\n  .sprk-c-Stepper__step-content--has-description {\n    background-color: $sprk-stepper-step-description-bg-selected;\n    box-shadow: $sprk-stepper-step-description-box-shadow;\n  }\n  /// Adds styles to hide the step content.\n  .sprk-c-Stepper__step-content--hidden {\n    background-color: transparent;\n    box-shadow: none;\n  }",
+      "line": {
+        "start": 167,
+        "end": 262
+      }
+    },
+    "group": [
+      "stepper"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_stepper.scss",
+      "name": "_stepper.scss"
+    }
+  },
+  {
+    "description": "Adds styles to hide the step content.\n",
+    "commentRange": {
+      "start": 207,
+      "end": 207
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Stepper__step-content--hidden",
+      "value": "background-color: transparent;\n    box-shadow: none;",
+      "line": {
+        "start": 208,
+        "end": 262
+      }
+    },
+    "group": [
+      "stepper"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_stepper.scss",
+      "name": "_stepper.scss"
+    }
+  },
+  {
+    "description": "Use this when the Stepper\nis paired with a Carousel.\n",
+    "commentRange": {
+      "start": 235,
+      "end": 236
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Stepper--has-carousel",
+      "value": ".sprk-c-Stepper__slider {\n    position: static;\n\n    @media (min-width: $sprk-stepper-breakpoint) {\n      position: absolute;\n    }\n  }\n\n  .sprk-c-Stepper__step {\n    display: none;\n\n    @media (min-width: $sprk-stepper-breakpoint) {\n      display: flex;\n    }\n  }\n\n  .sprk-c-Stepper__step-content {\n    margin-left: 0;\n\n    @media (min-width: $sprk-stepper-breakpoint) {\n      margin-left: $sprk-stepper-step-content-margin-left;\n    }\n  }",
+      "line": {
+        "start": 237,
+        "end": 262
+      }
+    },
+    "group": [
+      "stepper"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_stepper.scss",
+      "name": "_stepper.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the secondary table variant.\n",
+    "commentRange": {
+      "start": 51,
+      "end": 52
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--secondary",
+      "value": "text-align: $sprk-table-secondary-cell-text-alignment;",
+      "line": {
+        "start": 53,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the grouped table variant.\n",
+    "commentRange": {
+      "start": 72,
+      "end": 73
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--grouped-columns",
+      "value": "border: 0;\n  background-color: $sprk-table-grouped-header-background-color;\n  font-size: $sprk-table-grouped-header-font-size;\n  font-weight: $sprk-table-grouped-header-font-weight;",
+      "line": {
+        "start": 74,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the row comparison table variant.\n",
+    "commentRange": {
+      "start": 81,
+      "end": 82
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--row-comparison",
+      "value": "background-color: $sprk-table-empty-heading-background-color;",
+      "line": {
+        "start": 83,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds styles for the secondary row comparison table variant.\n",
+    "commentRange": {
+      "start": 87,
+      "end": 87
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--secondary-row-comparison",
+      "value": "border-collapse: separate;\n  border-top: 0;\n  border-bottom: 0;\n  border-spacing: $sprk-table-secondary-row-comp-row-spacing;\n  margin-top: -$sprk-table-secondary-row-comp-row-spacing;\n  margin-bottom: -$sprk-table-secondary-row-comp-row-spacing;",
+      "line": {
+        "start": 88,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Forces Table cells to be equal width.\n",
+    "commentRange": {
+      "start": 112,
+      "end": 112
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--fixed",
+      "value": "table-layout: fixed;",
+      "line": {
+        "start": 113,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds stripes to even rows.\n",
+    "commentRange": {
+      "start": 117,
+      "end": 117
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--striped-even",
+      "value": "tbody tr:nth-child(even) {\n    background-color: $sprk-table-stripe-color;\n  }",
+      "line": {
+        "start": 118,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Removes outside column borders.\n",
+    "commentRange": {
+      "start": 124,
+      "end": 124
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--bordered-columns-inside",
+      "value": "border-left-width: 0;\n\n  th,\n  td {\n    &:last-child {\n      border-right-width: 0;\n    }\n  }",
+      "line": {
+        "start": 125,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds stripes to odd rows.\n",
+    "commentRange": {
+      "start": 136,
+      "end": 137
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--striped-odd",
+      "value": "tbody tr:nth-child(odd) {\n    background-color: $sprk-table-stripe-color;\n  }",
+      "line": {
+        "start": 139,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds large spacing to the Table items.\n",
+    "commentRange": {
+      "start": 145,
+      "end": 145
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--spacing-large",
+      "value": "th,\n  td {\n    padding: $sprk-table-padding-large;\n  }",
+      "line": {
+        "start": 146,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds medium spacing to the Table items.\n",
+    "commentRange": {
+      "start": 153,
+      "end": 153
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--spacing-medium",
+      "value": "th,\n  td {\n    padding: $sprk-table-padding-medium;\n  }",
+      "line": {
+        "start": 154,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds small spacing to the Table items.\n",
+    "commentRange": {
+      "start": 161,
+      "end": 161
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--spacing-small",
+      "value": "th,\n  td {\n    padding: $sprk-table-padding-small;\n  }",
+      "line": {
+        "start": 162,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds a borders around all sides of the Table.\n",
+    "commentRange": {
+      "start": 169,
+      "end": 169
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--bordered",
+      "value": "border-top: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;\n  border-right: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;\n\n  tr {\n    border-bottom: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;\n  }\n\n  th,\n  td {\n    border-left: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;\n  }",
+      "line": {
+        "start": 170,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Removes outside Table borders.\n",
+    "commentRange": {
+      "start": 184,
+      "end": 184
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--bordered-inside",
+      "value": "border-top-width: 0;\n  border-right-width: 0;\n\n  tbody tr:last-child {\n    border-bottom-width: 0;\n  }\n\n  th,\n  td {\n    &:first-child {\n      border-left-width: 0;\n    }\n  }",
+      "line": {
+        "start": 185,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds bottom borders on Table rows.\n",
+    "commentRange": {
+      "start": 201,
+      "end": 201
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--bordered-rows",
+      "value": "th,\n  td {\n    border-bottom: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;\n  }",
+      "line": {
+        "start": 202,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Removes outside row borders.\n",
+    "commentRange": {
+      "start": 209,
+      "end": 209
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--bordered-rows-inside",
+      "value": "tbody tr:last-child {\n    th,\n    td {\n      border-bottom-width: 0;\n    }\n  }",
+      "line": {
+        "start": 210,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds borders on just the columns.\n",
+    "commentRange": {
+      "start": 219,
+      "end": 219
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-Table--bordered-columns",
+      "value": "border-left: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;\n\n  th,\n  td {\n    border-right: $sprk-table-border-width $sprk-table-border-style $sprk-table-border-color;\n  }",
+      "line": {
+        "start": 220,
+        "end": 239
+      }
+    },
+    "group": [
+      "table"
+    ],
+    "access": "public",
+    "file": {
+      "path": "base/_tables.scss",
+      "name": "_tables.scss"
+    }
+  },
+  {
+    "description": "Adds active state styles to the Tab button.\n",
+    "commentRange": {
+      "start": 39,
+      "end": 40
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Tabs__button--active",
+      "value": "background-color: $sprk-white;\n  border-top: $sprk-tab-navigation-btn-active-border-top;\n  color: $sprk-tab-navigation-btn-active-color;",
+      "line": {
+        "start": 42,
+        "end": 51
+      }
+    },
+    "group": [
+      "tabs"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_tabs.scss",
+      "name": "_tabs.scss"
+    }
+  },
+  {
+    "description": "A toggle with a smaller font.\n",
+    "commentRange": {
+      "start": 40,
+      "end": 41
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-c-Toggle__trigger--small",
+      "value": "font-size: $sprk-toggle-trigger-font-size-small;\n  font-weight: $sprk-toggle-trigger-font-weight-small;",
+      "line": {
+        "start": 42,
+        "end": 46
+      }
+    },
+    "group": [
+      "toggle"
+    ],
+    "access": "public",
+    "file": {
+      "path": "components/_toggle.scss",
+      "name": "_toggle.scss"
+    }
+  },
+  {
+    "description": "Sets the font weight to bold.\n",
+    "commentRange": {
+      "start": 220,
+      "end": 221
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FontWeight--bold",
+      "value": "font-weight: bold !important;",
+      "line": {
+        "start": 222,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font weight to normal.\n",
+    "commentRange": {
+      "start": 226,
+      "end": 227
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FontWeight--normal",
+      "value": "font-weight: normal !important;",
+      "line": {
+        "start": 228,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font style to italic.\n",
+    "commentRange": {
+      "start": 232,
+      "end": 233
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FontStyle--italic",
+      "value": "font-style: italic !important;",
+      "line": {
+        "start": 234,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the font style to normal.\n",
+    "commentRange": {
+      "start": 238,
+      "end": 239
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-FontStyle--normal",
+      "value": "font-style: normal !important;",
+      "line": {
+        "start": 240,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the text decoration to underline.\n",
+    "commentRange": {
+      "start": 244,
+      "end": 245
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextDecoration--underline",
+      "value": "text-decoration: underline !important;",
+      "line": {
+        "start": 246,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets the text decoration to none.\n",
+    "commentRange": {
+      "start": 250,
+      "end": 251
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextDecoration--none",
+      "value": "text-decoration: none !important;",
+      "line": {
+        "start": 252,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Transforms text to uppercase.\n",
+    "commentRange": {
+      "start": 256,
+      "end": 257
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextTransform--uppercase",
+      "value": "text-transform: uppercase !important;",
+      "line": {
+        "start": 258,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Removes text transformation for text.\n",
+    "commentRange": {
+      "start": 262,
+      "end": 263
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-TextTransform--none",
+      "value": "text-transform: none !important;",
+      "line": {
+        "start": 264,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets `word-wrap` to `break-word`.\n",
+    "commentRange": {
+      "start": 281,
+      "end": 282
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-WordWrap--break-word",
+      "value": "word-wrap: break-word !important;",
+      "line": {
+        "start": 283,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets `white-space` to `nowrap`.\n",
+    "commentRange": {
+      "start": 287,
+      "end": 288
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-WhiteSpace--nowrap",
+      "value": "white-space: nowrap !important;",
+      "line": {
+        "start": 289,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets a `max-width`, intended for text. Default value is\n`40 rem`.\n",
+    "commentRange": {
+      "start": 293,
+      "end": 295
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Measure",
+      "value": "max-width: $sprk-measure !important;",
+      "line": {
+        "start": 296,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "Sets a narrow `max-width`, intended for text. Default\nvalue is `25 rem`.\n",
+    "commentRange": {
+      "start": 300,
+      "end": 302
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-u-Measure--narrow",
+      "value": "max-width: $sprk-narrow-measure !important;",
+      "line": {
+        "start": 303,
+        "end": 839
+      }
+    },
+    "group": [
+      "typography"
+    ],
+    "access": "public",
+    "file": {
+      "path": "utilities/_utilities.scss",
+      "name": "_utilities.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 7,
+      "end": 7
+    },
+    "context": {
+      "type": "css",
+      "name": "img",
+      "value": "max-width: 100%;\n  font-style: italic;\n  vertical-align: middle;",
+      "line": {
+        "start": 9,
+        "end": 22
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "base/_images.scss",
+      "name": "_images.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 17,
+      "end": 17
+    },
+    "context": {
+      "type": "css",
+      "name": "img[width],\nimg[height]",
+      "value": "max-width: none;",
+      "line": {
+        "start": 19,
+        "end": 22
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "base/_images.scss",
+      "name": "_images.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 10,
+      "end": 10
+    },
+    "context": {
+      "type": "css",
+      "name": "//\n// Inheriting box-sizing Probably Slightly Better Best-Practice\n// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice\n///\nhtml",
+      "value": "box-sizing: border-box;",
+      "line": {
+        "start": 16,
+        "end": 189
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "generic/_reset.scss",
+      "name": "_reset.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 15,
+      "end": 15
+    },
+    "context": {
+      "type": "css",
+      "name": "html",
+      "value": "box-sizing: border-box;",
+      "line": {
+        "start": 16,
+        "end": 189
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "generic/_reset.scss",
+      "name": "_reset.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 28,
+      "end": 28
+    },
+    "context": {
+      "type": "css",
+      "name": "blockquote,\ncaption,\ndd,\ndl,\nfieldset,\nform,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nlegend,\nol,\np,\npre,\ntable,\ntd,\nth,\nul",
+      "value": "margin: 0;\n  padding: 0;",
+      "line": {
+        "start": 49,
+        "end": 189
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "generic/_reset.scss",
+      "name": "_reset.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 56,
+      "end": 56
+    },
+    "context": {
+      "type": "css",
+      "name": "// Add border collapse to tables.\ntable",
+      "value": "border-collapse: $sprk-table-border-collapse;",
+      "line": {
+        "start": 59,
+        "end": 189
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "generic/_reset.scss",
+      "name": "_reset.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 79,
+      "end": 79
+    },
+    "context": {
+      "type": "css",
+      "name": "abbr[title],\ndfn[title]",
+      "value": "cursor: help;",
+      "line": {
+        "start": 81,
+        "end": 189
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "generic/_reset.scss",
+      "name": "_reset.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 87,
+      "end": 87
+    },
+    "context": {
+      "type": "css",
+      "name": "img",
+      "value": "font-style: italic;",
+      "line": {
+        "start": 88,
+        "end": 189
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "generic/_reset.scss",
+      "name": "_reset.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 96,
+      "end": 96
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-b-TextInput,\n[type='date'],\n[type='datetime'],\n[type='email'],\n[type='month'],\n[type='number'],\n[type='password'],\n[type='search'],\n[type='tel'],\n[type='text'],\n[type='time'],\n[type='url'],\n[type='week'],\ntextarea",
+      "value": "-webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  font-size: 100%;\n  line-height: inherit;\n  padding: 0;\n  margin: 0;\n  background: none;\n  border: 0;",
+      "line": {
+        "start": 110,
+        "end": 189
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "generic/_reset.scss",
+      "name": "_reset.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 134,
+      "end": 134
+    },
+    "context": {
+      "type": "css",
+      "name": "button,\nlabel,\noption,\nselect",
+      "value": "cursor: pointer;",
+      "line": {
+        "start": 138,
+        "end": 189
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "generic/_reset.scss",
+      "name": "_reset.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 14,
+      "end": 14
+    },
+    "context": {
+      "type": "mixin",
+      "name": "HorizontalList",
+      "code": "\n  display: flex;\n  flex-wrap: wrap;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n\n  > li {\n    margin-right: $spacing;\n  }\n\n  > li:last-child {\n    margin-right: 0;\n  }\n",
+      "line": {
+        "start": 16,
+        "end": 30
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "require": [],
+    "file": {
+      "path": "objects/_horizontal-list.scss",
+      "name": "_horizontal-list.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 81,
+      "end": 81
+    },
+    "context": {
+      "type": "mixin",
+      "name": "DelimitedHorizonalList",
+      "code": "\n  > li {\n    margin-right: 0;\n\n    &::after {\n      @if ($distribution == 'split') {\n        margin-left: $spacing / 2;\n        margin-right: $spacing / 2;\n      }\n\n      @else if ($distribution == 'left') {\n        margin-left: $spacing;\n      } @else if ($distribution == 'right') {\n        margin-right: $spacing;\n      }\n\n      content: '#{$sprk-horizontal-list-delimiter}';\n    }\n\n    &:last-child::after {\n      content: '';\n    }\n  }\n",
+      "line": {
+        "start": 83,
+        "end": 106
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "require": [
+      {
+        "type": "variable",
+        "name": "sprk-horizontal-list-delimiter"
+      }
+    ],
+    "file": {
+      "path": "objects/_horizontal-list.scss",
+      "name": "_horizontal-list.scss"
+    }
+  },
+  {
+    "description": "\n",
+    "commentRange": {
+      "start": 21,
+      "end": 21
+    },
+    "context": {
+      "type": "css",
+      "name": ".sprk-o-VerticalList--delimited",
+      "value": "> li {\n    &::after {\n      content: '#{$sprk-vertical-list-delimiter}';\n    }\n\n    &:last-child::after {\n      content: '';\n    }\n  }",
+      "line": {
+        "start": 22,
+        "end": 39
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "objects/_vertical-list.scss",
+      "name": "_vertical-list.scss"
+    }
+  },
+  {
+    "description": "Setting for the background\ncolor of any text when selected.\n",
+    "commentRange": {
+      "start": 9,
+      "end": 10
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-selection-bg-color",
+      "value": "$sprk-green",
+      "scope": "default",
+      "line": {
+        "start": 11,
+        "end": 11
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Setting for the\ncolor of any text when selected.\n",
+    "commentRange": {
+      "start": 12,
+      "end": 13
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-selection-text-color",
+      "value": "$sprk-black",
+      "scope": "default",
+      "line": {
+        "start": 14,
+        "end": 14
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Reset for the overflow property on pre elements.\n",
+    "commentRange": {
+      "start": 15,
+      "end": 15
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-pre-overflow",
+      "value": "auto",
+      "scope": "default",
+      "line": {
+        "start": 16,
+        "end": 16
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "The content property value of the\nbefore pseudo-element on the Blockquote component.\n",
+    "commentRange": {
+      "start": 22,
+      "end": 23
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-blockquote-source-prefix",
+      "value": "'-'",
+      "scope": "default",
+      "line": {
+        "start": 24,
+        "end": 24
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the margin property on Blockquote component.\n",
+    "commentRange": {
+      "start": 25,
+      "end": 25
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-blockquote-margin",
+      "value": "0",
+      "scope": "default",
+      "line": {
+        "start": 26,
+        "end": 26
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the margin property on the quote in the Blockquote component.\n",
+    "commentRange": {
+      "start": 27,
+      "end": 27
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-blockquote-quote-margin",
+      "value": "0",
+      "scope": "default",
+      "line": {
+        "start": 28,
+        "end": 28
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the margin property on the\nlast quote in in the Blockquote component.\n",
+    "commentRange": {
+      "start": 29,
+      "end": 30
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-blockquote-quote-last-margin",
+      "value": "0",
+      "scope": "default",
+      "line": {
+        "start": 31,
+        "end": 31
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the extra small inset space.\n",
+    "commentRange": {
+      "start": 37,
+      "end": 37
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-xs",
+      "value": "4px 4px 4px 4px",
+      "scope": "default",
+      "line": {
+        "start": 38,
+        "end": 38
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the small inset space.\n",
+    "commentRange": {
+      "start": 39,
+      "end": 39
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-s",
+      "value": "8px 8px 8px 8px",
+      "scope": "default",
+      "line": {
+        "start": 40,
+        "end": 40
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the medium inset space.\n",
+    "commentRange": {
+      "start": 41,
+      "end": 41
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-m",
+      "value": "16px 16px 16px 16px",
+      "scope": "default",
+      "line": {
+        "start": 42,
+        "end": 42
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the large inset space.\n",
+    "commentRange": {
+      "start": 43,
+      "end": 43
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-l",
+      "value": "32px 32px 32px 32px",
+      "scope": "default",
+      "line": {
+        "start": 44,
+        "end": 44
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the extra large inset space.\n",
+    "commentRange": {
+      "start": 45,
+      "end": 45
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-xl",
+      "value": "64px 64px 64px 64px",
+      "scope": "default",
+      "line": {
+        "start": 46,
+        "end": 46
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the extra small inset short space.\n",
+    "commentRange": {
+      "start": 50,
+      "end": 50
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-short-xs",
+      "value": "2px 4px 2px 4px",
+      "scope": "default",
+      "line": {
+        "start": 51,
+        "end": 51
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the small inset short space.\n",
+    "commentRange": {
+      "start": 52,
+      "end": 52
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-short-s",
+      "value": "4px 8px 4px 8px",
+      "scope": "default",
+      "line": {
+        "start": 53,
+        "end": 53
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the medium inset short space.\n",
+    "commentRange": {
+      "start": 54,
+      "end": 54
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-short-m",
+      "value": "8px 16px 8px 16px",
+      "scope": "default",
+      "line": {
+        "start": 55,
+        "end": 55
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the large inset short space.\n",
+    "commentRange": {
+      "start": 56,
+      "end": 56
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-short-l",
+      "value": "16px 32px 16px 32px",
+      "scope": "default",
+      "line": {
+        "start": 57,
+        "end": 57
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the extra large inset short space.\n",
+    "commentRange": {
+      "start": 58,
+      "end": 58
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-short-xl",
+      "value": "32px 64px 32px 64px",
+      "scope": "default",
+      "line": {
+        "start": 59,
+        "end": 59
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the extra small inset tall space.\n",
+    "commentRange": {
+      "start": 61,
+      "end": 61
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-tall-xs",
+      "value": "6px 4px 6px 4px",
+      "scope": "default",
+      "line": {
+        "start": 62,
+        "end": 62
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the small inset tall space.\n",
+    "commentRange": {
+      "start": 63,
+      "end": 63
+    },
+    "context": {
+      "type": "variable",
+      "name": "sprk-space-inset-tall-s",
+      "value": "12px 8px 12px 8px",
+      "scope": "default",
+      "line": {
+        "start": 64,
+        "end": 64
+      }
+    },
+    "access": "public",
+    "group": [
+      "undefined"
+    ],
+    "file": {
+      "path": "settings/_settings.scss",
+      "name": "_settings.scss"
+    }
+  },
+  {
+    "description": "Value for the medium inset tall space.\n",
+    "commentRange": {
+      "start": 65,
+      "end": 65
     },
     "context": {
       "type": "variable",
@@ -18448,14 +24788,13 @@
   {
     "description": "The line height of the labels in the Dictionary.\n",
     "commentRange": {
-      "start": 2027,
-      "end": 2027
+      "start": 780,
+      "end": 780
     },
     "context": {
-      "type": "variable",
-      "name": "sprk-dictionary-label-line-height",
-      "value": "$sprk-line-height-body-one",
-      "scope": "default",
+      "type": "css",
+      "name": "//\n// Accessibility\n///\n\n/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
       "line": {
         "start": 2028,
         "end": 2028
@@ -18473,14 +24812,13 @@
   {
     "description": "The Highlight Board breakpoint at which styles change\nfor padding, font size and button width.\n",
     "commentRange": {
-      "start": 2034,
-      "end": 2035
+      "start": 784,
+      "end": 784
     },
     "context": {
-      "type": "variable",
-      "name": "sprk-highlight-board-breakpoint",
-      "value": "30rem",
-      "scope": "default",
+      "type": "css",
+      "name": "/// Makes content invisible while still being read by a\n/// screen reader.\n/// @group multi-accessibility\n.sprk-u-ScreenReaderText",
+      "value": "position: absolute;\n  left: -10000px;\n  top: auto;\n  width: 1px;\n  height: 1px;\n  overflow: hidden;",
       "line": {
         "start": 2036,
         "end": 2036
@@ -18596,16 +24934,15 @@
     }
   },
   {
-    "description": "The background color of\nthe content box in the Highlight Board.\n",
+    "description": "Changes the width of the element to 25 percent.\n",
     "commentRange": {
-      "start": 2047,
-      "end": 2048
+      "start": 16,
+      "end": 18
     },
     "context": {
-      "type": "variable",
-      "name": "sprk-highlight-board-content-box-color",
-      "value": "$sprk-white",
-      "scope": "default",
+      "type": "css",
+      "name": ".sprk-u-Width-25",
+      "value": ".sprk-u-Width-#{$width} {\n    width: unquote($string:'#{$width}%') !important;\n  }\n\n  $width: $width + $width-step-value;",
       "line": {
         "start": 2049,
         "end": 2049
@@ -18621,16 +24958,15 @@
     }
   },
   {
-    "description": "Color value for white.\n",
+    "description": "Changes the width of the element to 50 percent.\n",
     "commentRange": {
-      "start": 22,
-      "end": 24
+      "start": 20,
+      "end": 22
     },
     "context": {
-      "type": "variable",
-      "name": "sprk-white",
-      "value": "rgb(255, 255, 255)",
-      "scope": "private",
+      "type": "css",
+      "name": ".sprk-u-Width-50",
+      "value": ".sprk-u-Width-#{$width} {\n    width: unquote($string:'#{$width}%') !important;\n  }\n\n  $width: $width + $width-step-value;",
       "line": {
         "start": 25,
         "end": 25
