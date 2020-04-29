@@ -43,6 +43,6 @@ chrome-profiler-events*.json
 speed-measure-plugin*.json
 
 #sassdoc files generated on build
-**/sass-vars.json
-**/sass-modifiers.json
-**/sass-utilities.json
+sass-vars.json
+sass-modifiers.json
+sass-utilities.json
