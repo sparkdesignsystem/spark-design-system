@@ -4,7 +4,7 @@
   "lib": {
     "umdModuleIds": {
       "lodash": "lodash",
-      "lodash/uniqueId": "lodash/uniqueId",
+      "lodash/uniqueId": "lodash",
       "tiny-date-picker": "tiny-date-picker",
       "focus-visible": "focus-visible"
     },
