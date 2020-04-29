@@ -443,7 +443,7 @@ export class SprkMastheadComponent implements AfterContentInit {
    * @ignore
    */
   isElementVisible(selector) {
-    if (typeof window === undefined) { return; }
+    if (typeof window === 'undefined') { return; }
     const element = document.querySelector(selector);
     if (!element) {
       return;
