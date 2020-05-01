@@ -1,8 +1,21 @@
 /* global document beforeEach afterEach describe it window */
 const proxyquireStrict = require('proxyquire').noCallThru();
-const mockDOMSliderStub = {};
 
+// when something tries to import dom-slider,
+// return an empty object
+const mockDOMSliderStub = {};
 jest.mock('dom-slider', () => mockDOMSliderStub);
+
+// when a test tries to access window.domSlider.slideToggle,
+// return a Promise that resolves immediately so we can test
+// the .then()
+const mockDOMSliderWindow = {
+  slideToggle : () => {
+    return new Promise((resolve) => { resolve() })
+  }
+};
+
+window.domSlider = mockDOMSliderWindow;
 
 describe('Toggle init', () => {
   const { toggle } = require('../components/toggle');
@@ -46,14 +59,13 @@ describe('Toggle tests', () => {
     containerAccordion.setAttribute('data-sprk-toggle', 'container');
     containerAccordion.classList.add('sprk-c-Accordion__item');
 
-    trigger = document.createElement('a');
+    trigger = document.createElement('button');
     trigger.setAttribute('data-sprk-toggle', 'trigger');
     trigger.setAttribute('aria-expanded', 'false');
+    trigger.setAttribute('aria-controls', 'toggle-1');
     trigger.textContent = 'My Toggle Link Text';
     trigger.classList.add(
-      'sprk-b-TypeBodyThree',
-      'sprk-b-Link',
-      'sprk-b-Link--simple',
+      'sprk-c-Toggle__trigger',
     );
 
     triggerAccordion = document.createElement('a');
@@ -69,6 +81,7 @@ describe('Toggle tests', () => {
 
     content = document.createElement('div');
     content.setAttribute('data-sprk-toggle', 'content');
+    content.setAttribute('id', 'toggle-1');
     content.textContent = 'This is the toggle content..';
     content.classList.add('sprk-b-TypeBodyFour', 'sprk-u-pts');
     content.slideToggle = () => new Promise((resolve) => {
@@ -106,6 +119,17 @@ describe('Toggle tests', () => {
     triggerAccordion.append(iconAccordion);
     containerAccordion.append(triggerAccordion);
     containerAccordion.append(contentAccordion);
+    document.body.appendChild(container);
+  });
+
+  it('should apply focus-visible class to trigger when focused', () => {
+    trigger.focus();
+    expect(trigger.classList.contains('focus-visible')).toBe(true);
+  });
+
+  it('should not apply focus-visible class to trigger when clicked', () => {
+    trigger.click();
+    expect(trigger.classList.contains('focus-visible')).toBe(false);
   });
 
   it('should toggle aria-expanded attribute for toggles', () => {
@@ -207,7 +231,7 @@ describe('Toggle tests', () => {
   });
 
   it('should not add Accordion__item class if toggle is not an'
-    + 'accordion', () => {
+    + ' accordion', () => {
     handleToggleClick(content, null, null, trigger);
     expect(container.classList.contains('sprk-c-Accordion__item--open')).toBe(false);
   });

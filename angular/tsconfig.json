@@ -31,6 +31,15 @@
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+    "strictInjectionParameters": true,
+    "enableIvy": false
+  },
+  "include": [
+    "**/*.d.ts",
+    "projects/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }

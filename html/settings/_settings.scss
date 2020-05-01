@@ -8,7 +8,7 @@
 
 /// Setting for the background
 /// color of any text when selected.
-$sprk-selection-bg-color: $sprk-green !default;
+$sprk-selection-bg-color: $sprk-green-tint-50 !default;
 /// Setting for the
 /// color of any text when selected.
 $sprk-selection-text-color: $sprk-black !default;
@@ -166,7 +166,7 @@ $sprk-icon-custom-stroke-width-xl: 3px !default;
 ///
 
 /// Width value for the Centered Column layout container.
-$sprk-centered-column-width: 64rem !default;
+$sprk-centered-column-width: 1232px !default;
 
 //
 // Layers
@@ -813,6 +813,9 @@ $sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
 $sprk-input-container-narrow-max-width: 6.5rem !default;
 /// The value used as a maximum width for Input containers.
 $sprk-input-max-width: 27.5rem !default;
+/// The value used for the maximum width of an Input
+/// container using the .sprk-b-InputContainer--full modifier.
+$sprk-input-max-width-full: 100% !default;
 
 //
 // Huge Inputs
@@ -914,7 +917,7 @@ $sprk-text-input-outline: 0 !default;
 /// The color setting for Inputs.
 $sprk-text-input-color: $sprk-black !default;
 /// The border setting for Inputs.
-$sprk-text-input-border: 2px solid $sprk-gray-dark !default;
+$sprk-text-input-border: 2px solid $sprk-black-tint-50 !default;
 /// The border radius for Inputs.
 $sprk-text-input-border-radius: 4px !default;
 /// The box shadow for Inputs.
@@ -926,7 +929,7 @@ $sprk-text-input-focus-border-color: $sprk-green !default;
 /// The border color on Inputs when there is an error.
 $sprk-text-input-error-border-color: $sprk-yellow !default;
 /// The border color on disabled Inputs.
-$sprk-text-input-disabled-border-color: $sprk-gray-dark !default;
+$sprk-text-input-disabled-border-color: $sprk-black-tint-50 !default;
 /// The background color on disabled Inputs.
 $sprk-text-input-disabled-background-color: $sprk-gray-dark !default;
 /// The box shadow on disabled Inputs.
@@ -934,9 +937,9 @@ $sprk-text-input-disabled-box-shadow: none !default;
 /// The color setting on disabled Inputs.
 $sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
 /// The border color setting on readonly Inputs.
-$sprk-text-input-readonly-border-color: $sprk-black-tint-25 !default;
+$sprk-text-input-readonly-border-color: $sprk-black-tint-50 !default;
 /// The color setting on readonly Inputs.
-$sprk-text-input-readonly-color: $sprk-gray !default;
+$sprk-text-input-readonly-color: $sprk-black-tint-50 !default;
 /// The transition setting Inputs.
 $sprk-text-input-transition: border-color 0.15s ease !default;
 
@@ -999,6 +1002,62 @@ $sprk-textarea-min-height: 125px !default;
 $sprk-textarea-margin: $sprk-space-stack-m !default;
 /// The padding inside Textarea.
 $sprk-textarea-padding: $sprk-space-m !default;
+
+//
+// Checkbox
+///
+
+/// The opacity of the native control checkbox.
+$sprk-checkbox-input-opacity: 0 !default;
+/// The transition for the checkbox
+/// when the input is checked or unchecked.
+$sprk-checkbox-transition: all 0.2s ease-in-out !default;
+// The height of the custom checkbox input.
+$sprk-checkbox-custom-input-height: 1rem !default;
+// The width of the custom checkbox input.
+$sprk-checkbox-custom-input-width: 1rem !default;
+// The border of the custom checkbox input.
+$sprk-checkbox-custom-input-border: 2px solid $sprk-black-tint-50 !default;
+// The border radius of the custom checkbox input.
+$sprk-checkbox-custom-input-border-radius: 3px !default;
+// The top positioning of the custom checkbox input.
+$sprk-checkbox-custom-input-top: 0 !default;
+// The left positioning of the custom checkbox input.
+$sprk-checkbox-custom-input-left: -22px !default;
+// The height of the checkmark icon.
+$sprk-checkbox-checkmark-icon-height: 0.45rem !default;
+// The width of the checkmark icon.
+$sprk-checkbox-checkmark-icon-width: 0.65rem !default;
+// The left positioning of the checkmark icon.
+$sprk-checkbox-checkmark-icon-left: -19px !default;
+// The top positioning of the checkmark icon.
+$sprk-checkbox-checkmark-icon-top: 3px !default;
+// The border settings to create the bottom portion of the checkmark.
+$sprk-checkbox-checkmark-border-left: 2px solid $sprk-white !default;
+// The border settings to create the right portion of the checkmark.
+$sprk-checkbox-checkmark-border-bottom: 2px solid $sprk-white !default;
+// The rotation setting to create the checkmark.
+$sprk-checkbox-checkmark-transform: rotate(-45deg) !default;
+// The border of the custom checkbox input when focused.
+$sprk-checkbox-custom-input-border-focus: 2px solid $sprk-green !default;
+// The background color of the custom checkbox input when focused.
+$sprk-checkbox-custom-input-background-color-focus: $sprk-gray !default;
+// The border of the custom checkbox input when it is checked and focused.
+$sprk-checkbox-custom-input-border-focus-checked: 2px solid $sprk-black !default;
+// The background color of the custom checkbox input when hovered.
+$sprk-checkbox-custom-input-background-color-hover: $sprk-gray !default;
+// The border color of the custom checkbox input when hovered.
+$sprk-checkbox-custom-input-border-color-hover: $sprk-black-tint-75 !default;
+// The background color of the custom checkbox input when checked.
+$sprk-checkbox-custom-input-background-color-checked: $sprk-green !default;
+// The border color of the custom checkbox input when checked.
+$sprk-checkbox-custom-input-border-color-checked: $sprk-green !default;
+// The border color of the custom checkbox input when disabled.
+$sprk-checkbox-custom-input-border-color-disabled: $sprk-black-tint-50 !default;
+// The cursor for the custom checkbox input when disabled.
+$sprk-checkbox-custom-input-cursor-disabled: default !default;
+// The background color for the custom checkbox input when disabled.
+$sprk-checkbox-custom-input-background-color-disabled: transparent !default;
 
 //
 // Input Errors
@@ -1191,7 +1250,50 @@ $sprk-visibility-control-margin: 6px 0 0 0 !default;
 /// The font size used for visibility controls.
 $sprk-visibility-control-label-font-size: $sprk-label-font-size !default;
 /// The color of the disabled Input labels.
-$sprk-label-disabled-color: $sprk-gray-dark !default;
+$sprk-label-disabled-color: $sprk-black-tint-50 !default;
+
+//
+// Radio
+///
+
+/// The opacity value for the radio input.
+$sprk-radio-input-opacity: 0 !default;
+/// The transition for the radio input.
+$sprk-radio-input-transition: all 0.2s ease-in-out !default;
+/// The border of the outer circle in the radio input on hover.
+$sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-75 !default;
+/// The border of the outer circle in the radio input on focus.
+$sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-green !default;
+/// The border of the outer circle in the disabled radio input on focus.
+$sprk-radio-input-outer-circle-focus-border-disabled: 2px solid $sprk-black-tint-50 !default;
+/// The border radius of the circle in the radio input.
+$sprk-radio-input-border-radius: 50% !default;
+/// The background color of the inner circle in the radio input.
+$sprk-radio-input-inner-circle-background-color: $sprk-green !default;
+/// The border of the outer circle in the radio input when checked.
+$sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-green !default;
+/// The border of the outer circle in the radio input.
+$sprk-radio-input-outer-circle-border: 2px solid $sprk-black-tint-50 !default;
+/// The border of the outer circle in the disabled radio input on hover.
+$sprk-radio-input-outer-circle-border-hover-disabled: 2px solid $sprk-black-tint-50 !default;
+/// The height of the outer circle in the radio input.
+$sprk-radio-input-outer-circle-height: 1rem !default;
+/// The width of the outer circle in the radio input.
+$sprk-radio-input-outer-circle-width: 1rem !default;
+/// The top value of the outer circle in the radio input.
+$sprk-radio-input-outer-circle-top: 0 !default;
+/// The left value of the outer circle in the radio input.
+$sprk-radio-input-outer-circle-left: -1.375rem !default;
+/// The height of the inner circle in the radio input.
+$sprk-radio-input-inner-circle-height: 0.5rem !default;
+/// The width of the inner circle in the radio input.
+$sprk-radio-input-inner-circle-width: 0.5rem !default;
+/// The top value of the inner circle in the radio input.
+$sprk-radio-input-inner-circle-top: 0.25rem !default;
+/// The left value of the inner circle in the radio input.
+$sprk-radio-input-inner-circle-left: -1.125rem !default;
+// The cursor style of the disabled radio on hover.
+$sprk-radio-input-cursor-hover-disabled: default !default;
 
 //
 // Tables
@@ -1367,6 +1469,12 @@ $sprk-accordion-max-width: 53.125rem !default;
 $sprk-accordion-border: $sprk-divider-border !default;
 /// The font color of the Accordion item summary.
 $sprk-accordion-summary-color: $sprk-black !default;
+/// The background color of the Accordion item summary.
+$sprk-accordion-summary-background-color: transparent !default;
+/// The text-align value of the Accordion item summary.
+$sprk-accordion-summary-text-align: left !default;
+/// The border of the Accordion item summary.
+$sprk-accordion-summary-border: none !default;
 /// The color of the icon in the summary when the
 /// Accordion item is open or hovered.
 $sprk-accordion-summary-active-color: $sprk-green !default;
@@ -1377,10 +1485,47 @@ $sprk-accordion-content-padding: 0 0 $sprk-space-l !default;
 /// The background color used for hover
 /// and active on items in the Accordion.
 $sprk-accordion-active-background-color: $sprk-gray !default;
+/// The text decoration of the Accordion item summary.
+$sprk-accordion-summary-text-decoration: none;
+/// The text decoration of the Accordion item summary when active.
+$sprk-accordion-summary-active-text-decoration: none;
 
 //
 // Toggle
 ///
+
+/// The top border style for Toggle Trigger.
+$sprk-toggle-trigger-border-top: none !default;
+/// The right border style for Toggle Trigger.
+$sprk-toggle-trigger-border-right: none !default;
+/// The bottom border style for Toggle Trigger.
+$sprk-toggle-trigger-border-bottom: $sprk-link-has-icon-border-bottom !default;
+/// The left border style for Toggle Trigger.
+$sprk-toggle-trigger-border-left: none !default;
+/// The text decoration style Toggle Trigger.
+$sprk-toggle-trigger-text-decoration: $sprk-link-text-decoration !default;
+/// The transition for Toggle Trigger.
+$sprk-toggle-trigger-transition: $sprk-link-transition !default;
+/// The hover border bottom style for Toggle Trigger.
+$sprk-toggle-trigger-hover-border-bottom: $sprk-link-has-icon-hover-border-bottom !default;
+/// The hover text color for Toggle Trigger.
+$sprk-toggle-trigger-hover-color: $sprk-link-has-icon-hover-color-text !default;
+/// The background color for Toggle Trigger.
+$sprk-toggle-trigger-background-color: transparent !default;
+/// The padding top for Toggle Trigger.
+$sprk-toggle-trigger-padding-top: 0 !default;
+/// The padding right for Toggle Trigger.
+$sprk-toggle-trigger-padding-right: 0 !default;
+/// The padding bottom for Toggle Trigger.
+$sprk-toggle-trigger-padding-bottom: 0 !default;
+/// The padding left for Toggle Trigger.
+$sprk-toggle-trigger-padding-left: 0 !default;
+/// The text alignment for Toggle Trigger.
+$sprk-toggle-trigger-text-align: left !default;
+/// The font size for small Toggle Trigger.
+$sprk-toggle-trigger-font-size-small: $sprk-font-size-body-four !default;
+/// The font weight for small Toggle Trigger.
+$sprk-toggle-trigger-font-weight-small: normal !default;
 
 /// The transition timing for the
 /// rotation of the icon when the Toggle is opened.
@@ -1589,44 +1734,53 @@ $sprk-big-nav-active-color: $sprk-big-nav-link-color !default;
 $sprk-big-nav-item-line-height: 53px !default;
 // Masthead Accordion
 /// The left border of the active item
-/// in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-left-border: 3px solid $sprk-black !default;
 /// The font weight of the active item
-/// in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-heading-font-weight: 400 !default;
 /// The color of the active item
-/// in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-heading-color: $sprk-black !default;
 /// The color of the heading
-/// in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-heading-color: $sprk-black !default;
 /// The font weight of the heading
-/// in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-heading-font-weight: 400 !default;
 /// The font weight of the details
-/// in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-details-font-weight: 300 !default;
 /// The font color of the details
-/// in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-details-font-color: $sprk-black !default;
 /// The background color of the active
-/// item in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-background-color: $sprk-gray !default;
 /// The font color of the active
-/// item in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-font-color: $sprk-black !default;
 /// The font color of the text
-/// in items in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-font-color: $sprk-black !default;
 /// The color of the line on open items
-/// in the narrow viewport Masthead Accordion.
+/// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-item-open-line-background-color: $sprk-black-tint-25 !default;
 /// The height of the line on open
-/// items in the narrow viewport Masthead Accordion.
+/// navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-item-open-line-height: 2px !default;
 /// The padding of the items in the
-/// narrow viewport Masthead Accordion.
+/// navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-item-padding: $sprk-space-m !default;
+/// The text alignment of an item in the
+/// navigation links when masthead is on narrow viewports.
+$sprk-masthead-accordion-item-text-align: left !default;
+/// The border of an item in the
+/// navigation links when masthead is on narrow viewports.
+$sprk-masthead-accordion-item-border: 0 !default;
+/// The background of an item in the
+/// navigation links when masthead is on narrow viewports.
+$sprk-masthead-accordion-item-background: transparent !default;
 
 //
 // Spinners
@@ -1688,6 +1842,9 @@ $sprk-stepper-icon-border-width: 2px !default;
 $sprk-stepper-icon-border-color: $sprk-black-tint-50 !default;
 /// The color of the step icon when the step is selected in the Stepper.
 $sprk-stepper-icon-border-color-selected: $sprk-green !default;
+/// The color of the step icon in front of a dark background
+/// when the step is selected in the Stepper.
+$sprk-stepper-icon-border-color-selected-dark-bg: $sprk-green-tint-75 !default;
 /// The color of the icon border when the
 /// Stepper is on a dark background
 /// (sprk-c-Stepper--has-dark-bg).
@@ -1727,6 +1884,11 @@ $sprk-stepper-icon-box-shadow-selected-spread: 8px !default;
 $sprk-stepper-icon-box-shadow-selected: 0 0 0
   $sprk-stepper-icon-box-shadow-selected-spread
   $sprk-stepper-icon-border-color-selected !default;
+/// The box shadow of the Stepper step icon on a dark background.
+/// when the icon is selected.
+$sprk-stepper-icon-box-shadow-selected-dark-bg: 0 0 0
+  $sprk-stepper-icon-box-shadow-selected-spread
+  $sprk-stepper-icon-border-color-selected-dark-bg !default;
 /// The background color of the content in the Stepper step.
 $sprk-stepper-step-content-bg: transparent !default;
 /// The border radius of the Stepper step
@@ -1805,7 +1967,7 @@ $sprk-carousel-dot-spacing: $sprk-space-m !default;
 /// The spacing between dots in the Carousel component on wide viewports.
 $sprk-carousel-wide-dot-spacing: $sprk-carousel-dot-spacing !default;
 /// The box shadow of the active dot in the Carousel component.
-$sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected !default;
+$sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected-dark-bg !default;
 /// The color of the arrows in the Carousel component.
 $sprk-carousel-arrow-color: $sprk-white !default;
 /// The spacing for the arrows in the Carousel component.

@@ -136,9 +136,19 @@ import {
 } from './components/stepper';
 import { carousel } from './components/carousel';
 import { highlightBoard } from './components/highlight-board';
+import toggleAriaExpandedAttribute from './utilities/toggleAriaExpanded';
+import generateAriaControls from './utilities/generateAriaControls';
 import isElementVisible from './utilities/isElementVisible';
 import scrollYDirection from './utilities/scrollYDirection';
-
+import {
+  checkbox,
+  bindCheckboxUIEvents,
+}  from './base/inputs/checkbox';
+import generateIdForInput from './utilities/generateIdForInput';
+import {
+  radioInput,
+  bindRadioUIEvents,
+} from './base/inputs/radioInput';
 export {
   dateInput,
   formatDate,
@@ -243,4 +253,11 @@ export {
   bindUIEventsHugeInputOld,
   addClassIfNotEmpty,
   toggleClassWithValue,
+  toggleAriaExpandedAttribute,
+  generateAriaControls,
+  checkbox,
+  bindCheckboxUIEvents,
+  generateIdForInput,
+  radioInput,
+  bindRadioUIEvents,
 };

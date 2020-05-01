@@ -194,4 +194,21 @@ describe('SprkMastheadComponent', () => {
     window.dispatchEvent(resizeEvent);
     expect(spyOnResize).toHaveBeenCalled();
   });
+
+  it('should add aria-controls and id to narrowNav if narrowNavId is not passed', () => {
+    component.isNarrowNavOpen = true;
+    fixture.detectChanges();
+    narrowNavElement = fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav');
+    expect(narrowNavElement.getAttribute('id')).toMatch(/sprk_masthead_narrow_nav_\d/);
+    expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(narrowNavElement.getAttribute('id'));
+  });
+
+  it('should add correct aria-controls and id to narrowNav if narrowNavId is passed', () => {
+    component.isNarrowNavOpen = true;
+    component.narrowNavId = 'test_controls';
+    fixture.detectChanges();
+    narrowNavElement = fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav');
+    expect(narrowNavElement.getAttribute('id')).toEqual('test_controls');
+    expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(narrowNavElement.getAttribute('id'));
+  });
 });

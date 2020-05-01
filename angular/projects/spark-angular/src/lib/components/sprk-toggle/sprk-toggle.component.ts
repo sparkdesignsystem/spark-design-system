@@ -1,21 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, AfterViewInit } from '@angular/core';
 import { toggleAnimations } from './sprk-toggle-animations';
+import { uniqueId } from 'lodash';
+import 'focus-visible';
 
 @Component({
   selector: 'sprk-toggle',
   template: `
     <div
-      class="sprk-u-Overflow--hidden {{ additionalClasses }}"
+      class="sprk-c-Toggle {{ additionalClasses }}"
       [attr.data-id]="idString"
     >
-      <a
-        sprkLink
+      <button
         variant="icon"
         [ngClass]="getClasses()"
         (click)="toggle($event)"
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
-        [analyticsString]="analyticsString"
-        href="#"
+        [attr.data-analytics]="analyticsString"
+        [attr.aria-controls]="contentId"
       >
         <sprk-icon
           iconType="chevron-down-circle-two-color"
@@ -24,16 +25,22 @@ import { toggleAnimations } from './sprk-toggle-animations';
           }} sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
         ></sprk-icon>
         {{ title }}
-      </a>
+      </button>
 
-      <div [@toggleContent]="animState">
-        <div class="sprk-u-pts sprk-u-pbs"><ng-content></ng-content></div>
+      <div
+        [@toggleContent]="animState"
+        [id]="contentId"
+      >
+        <div class="sprk-u-pts sprk-u-pbs sprk-c-Toggle__content">
+          <ng-content></ng-content>
+        </div>
       </div>
     </div>
   `,
   animations: [toggleAnimations.toggleContent]
 })
-export class SprkToggleComponent implements OnInit {
+export class SprkToggleComponent implements AfterViewInit {
+
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
@@ -79,6 +86,12 @@ export class SprkToggleComponent implements OnInit {
    */
   @Input()
   idString: string;
+  /**
+   * A string that is used to set the `id` on the content
+   * and the `aria-controls` for the toggle trigger button.
+   */
+  @Input()
+  contentId = uniqueId(`sprk_toggle_content_`);
 
   /**
    * @ignore
@@ -120,13 +133,13 @@ export class SprkToggleComponent implements OnInit {
    */
   getClasses(): string {
     const classArray: string[] = [
+      'sprk-c-Toggle__trigger sprk-u-TextCrop--none',
       this.titleFontClass,
-      'sprk-u-TextCrop--none',
     ];
     return classArray.join(' ');
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.toggleState();
   }
 }

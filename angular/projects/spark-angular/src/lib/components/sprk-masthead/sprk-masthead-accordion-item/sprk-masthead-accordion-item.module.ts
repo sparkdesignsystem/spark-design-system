@@ -4,10 +4,9 @@ import { SprkIconModule } from '../../sprk-icon/sprk-icon.module';
 import {
   SprkMastheadAccordionItemComponent
 } from './sprk-masthead-accordion-item.component';
-import { SprkLinkDirectiveModule } from '../../../directives/sprk-link/sprk-link.module';
 
 @NgModule({
-  imports: [CommonModule, SprkIconModule, SprkLinkDirectiveModule],
+  imports: [CommonModule, SprkIconModule],
   declarations: [SprkMastheadAccordionItemComponent],
   exports: [SprkMastheadAccordionItemComponent]
 })

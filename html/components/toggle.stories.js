@@ -26,15 +26,9 @@ export const defaultStory = () => {
       data-sprk-toggle="container"
       data-id="toggle-1"
     >
-      <a
-        class="
-          sprk-b-TypeBodyThree
-          sprk-b-Link
-          sprk-b-Link--has-icon
-          sprk-b-Link--simple
-        "
+     <button
+        class="sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none"
         data-sprk-toggle="trigger"
-        href="#"
       >
         <svg
           class="
@@ -49,7 +43,7 @@ export const defaultStory = () => {
         </svg>
 
         My Disclaimer
-      </a>
+      </button>
 
       <div data-sprk-toggle="content">
         <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">

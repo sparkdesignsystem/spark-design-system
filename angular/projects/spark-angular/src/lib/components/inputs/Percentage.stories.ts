@@ -93,12 +93,11 @@ export const invalidPercentageInput = () => ({
       <sprk-icon
         iconType="percent"
         additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
-        class="sprk-b-TextInput--error"
         aria-invalid="true"
         sprk-input-icon
       ></sprk-icon>
       <input
-        class="sprk-b-InputContainer__input--has-icon-right"
+        class="sprk-b-InputContainer__input--has-icon-right sprk-b-TextInput--error"
         name="percentage"
         type="tel"
         sprkInput

@@ -84,6 +84,10 @@ class SprkSelectionInput extends React.Component {
               ({ label: innerLabel, id: innerId, name, value, ...rest }) => (
                 <div className="sprk-b-SelectionContainer" key={innerId}>
                   <input
+                    className={classNames({
+                      'sprk-b-Checkbox__input': variant === 'checkbox',
+                      'sprk-b-Radio__input': variant === 'radio',
+                    })}                    
                     disabled={disabled}
                     id={innerId}
                     type={variant}
@@ -95,7 +99,11 @@ class SprkSelectionInput extends React.Component {
                   />
                   <label
                     htmlFor={innerId}
-                    className="sprk-b-Label sprk-b-Label--inline"
+                    className={classNames('sprk-b-Label sprk-b-Label--inline', {
+                      'sprk-b-Checkbox__label': variant === 'checkbox',
+                      'sprk-b-Radio__label': variant === 'radio',
+                      'sprk-b-Label--disabled': disabled,
+                    })} 
                   >
                     {innerLabel}
                   </label>

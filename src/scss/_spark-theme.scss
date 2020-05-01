@@ -7,6 +7,10 @@ $sprk-webfonts:
   ((url('https://spark-assets.netlify.app/RocketSans-Regular.woff2') format('woff2'), url('https://spark-assets.netlify.app/RocketSans-Regular.woff') format('woff')), RocketSans, 400),
   ((url('https://spark-assets.netlify.app/RocketSans-Light.woff2') format('woff2'), url('https://spark-assets.netlify.app/RocketSans-Light.woff') format('woff')), RocketSans, 300);
 
+body {
+  background-color: white;
+}
+
 /* stylelint-disable selector-class-pattern */
 // SprkTables only allow
 // class to be added on table container
@@ -43,6 +47,24 @@ $sprk-webfonts:
   position: relative;
   top: -170px;
   visibility: hidden;
+}
+
+.docs-c-SkipNav {
+  position: absolute;
+  top: 0;
+  z-index: 5000;
+
+  .docs-c-SkipNav__link {
+    display: block;
+    opacity: 0;
+    left: -500px;
+    transition: none;
+
+    &:focus {
+      opacity: 1;
+      left: 0;
+    }
+  }
 }
 
 /* stylelint-enable */

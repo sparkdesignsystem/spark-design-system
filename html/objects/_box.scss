@@ -91,7 +91,7 @@
 /// Inset Short Medium Box - Medium inset short padding
 /// (Default 8px 16px 8px 16px)
 .sprk-o-Box--inset-short-medium {
-  padding: $sprk-space-inset-short-s;
+  padding: $sprk-space-inset-short-m;
 }
 
 /// Inset Short Large Box - Large inset short padding
@@ -121,13 +121,13 @@
 /// Inset Tall Medium Box - Medium inset tall padding
 /// (Default 24px 16px 24px 16px)
 .sprk-o-Box--inset-tall-medium {
-  padding: $sprk-space-inset-tall-s;
+  padding: $sprk-space-inset-tall-m;
 }
 
 /// Inset Tall Large Box - Large inset tall padding
 /// (Default 48px 32px 48px 32px)
 .sprk-o-Box--inset-tall-large {
-  padding: $sprk-space-inset-short-l;
+  padding: $sprk-space-inset-tall-l;
 }
 
 /// Inset Tall Huge Box - Extra large inset short padding

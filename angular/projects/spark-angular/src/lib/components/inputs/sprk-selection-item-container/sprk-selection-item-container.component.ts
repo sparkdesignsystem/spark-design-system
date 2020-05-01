@@ -1,5 +1,5 @@
-import { Component, ContentChild, Input, OnInit } from '@angular/core';
-import * as _ from 'lodash';
+import { Component, ContentChild, Input, OnInit, Renderer2 } from '@angular/core';
+import uniqueId from 'lodash/uniqueId';
 import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 
@@ -14,6 +14,7 @@ import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-sel
   `
 })
 export class SprkSelectionItemContainerComponent implements OnInit {
+  constructor( private renderer: Renderer2) {}
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -38,15 +39,6 @@ export class SprkSelectionItemContainerComponent implements OnInit {
   /**
    * @ignore
    */
-  id = _.uniqueId();
-  /**
-   * @ignore
-   */
-  input_id = `input_${this.id}`;
-
-  /**
-   * @ignore
-   */
   getClasses(): string {
     const classArray: string[] = ['sprk-b-SelectionContainer'];
 
@@ -59,10 +51,54 @@ export class SprkSelectionItemContainerComponent implements OnInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
+  addInputTypeClasses(): void {
+    const inputType = this.input.ref.nativeElement.type;
+    if (inputType === 'checkbox') {
+      this.renderer.addClass(this.input.ref.nativeElement, 'sprk-b-Checkbox__input');
+      this.renderer.addClass(this.label.ref.nativeElement, 'sprk-b-Checkbox__label');
+    }
+    if (inputType === 'radio') {
+      this.renderer.addClass(this.input.ref.nativeElement, 'sprk-b-Radio__input');
+      this.renderer.addClass(this.label.ref.nativeElement, 'sprk-b-Radio__label');
+    }
+  }
+
+  /**
+   * @ignore
+   */
+  generateIdForInput(): void {
+    let inputId = this.input.ref.nativeElement.id;
+    const labelFor = this.label.ref.nativeElement.htmlFor;
+
+    // Warn if 'for' exists but the 'id' does not
+    if (labelFor && !inputId) {
+      console.warn(`Spark Design System Warning - The value of 'for' (${labelFor}) on the label expects a matching 'id' on the input.`);
+      return;
+    }
+
+    // Warn if 'for' and 'id' both exist but don't match
+    if (inputId && labelFor && inputId !== labelFor) {
+      console.warn(
+        `Spark Design System Warning - The value of 'for' (${labelFor}) on the label should match the 'id' on the input (${inputId}).`
+      );
+      return;
+    }
+
+    // If we don't have a valid id, generate one with lodash
+    if (!inputId) {
+      inputId = uniqueId(`sprk_input_`);
+      this.renderer.setProperty(this.input.ref.nativeElement, 'id', inputId);
+      this.renderer.setAttribute(this.label.ref.nativeElement, 'for', inputId);
+    }
+  }
+
   ngOnInit(): void {
     if (this.label && this.input) {
-      this.label.ref.nativeElement.setAttribute('for', this.input_id);
-      this.input.ref.nativeElement.id = this.input_id;
+      this.generateIdForInput();
+      this.addInputTypeClasses();
     }
   }
 }

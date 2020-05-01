@@ -25,7 +25,12 @@ class SprkMastheadAccordion extends React.Component {
         )}
       >
         {links.map(link => (
-          <SprkMastheadAccordionItem clickFunction={linkSelectionFunction} {...link} key={link.id} />
+          <SprkMastheadAccordionItem
+            clickFunction={linkSelectionFunction}
+            key={link.id}
+            itemId={link.itemId}
+            {...link}
+          />
         ))}
       </ul>
     );

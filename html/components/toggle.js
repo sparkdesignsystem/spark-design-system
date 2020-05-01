@@ -1,5 +1,8 @@
 import 'dom-slider';
+import 'focus-visible';
+const { slideToggle } = window.domSlider;
 import getElements from '../utilities/getElements';
+import generateAriaControls from '../utilities/generateAriaControls';
 
 /**
  *  Toggle JS
@@ -22,6 +25,7 @@ const toggleIconType = (toggleIcon, toggleIconUse, openIcon, closeIcon) => {
 };
 
 // Toggle the aria expanded attribute
+// TODO - deprecate this and use the one in html/utilities
 const toggleAriaExpanded = (toggleTrigger) => {
   // If the trigger has the attr then determine toggle state
   if (toggleTrigger.hasAttribute('aria-expanded')) {
@@ -59,7 +63,7 @@ const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) =>
   if (isAccordion && !isMastheadAccordion) toggleContent.parentElement.classList.toggle('sprk-c-Accordion__item--open');
   if (isMastheadAccordion) toggleContent.parentElement.classList.toggle('sprk-c-MastheadAccordion__item--open');
 
-  toggleContent.slideToggle(300).then(() => {
+  slideToggle({ element: toggleContent }).then(() => {
     // Enable clicks after animation runs
     trigger.style.pointerEvents = 'auto';
   });
@@ -74,6 +78,8 @@ const bindToggleUIEvents = (element) => {
   const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
   const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
   const toggleIconUse = element.querySelector('[data-sprk-toggle="accordionIconUseElement"]');
+
+  generateAriaControls(toggleTrigger, toggleContent, 'toggle');
 
   // Hide details content, initially shown for no-JS scenarios
   toggleContent.style.display = 'none';

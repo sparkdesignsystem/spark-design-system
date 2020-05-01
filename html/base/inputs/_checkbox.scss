@@ -1,0 +1,84 @@
+////
+/// @group input
+////
+
+// Added for potential future use.
+// .sprk-b-Checkbox { }
+
+// Hide the native control
+.sprk-b-Checkbox__input {
+  opacity: $sprk-checkbox-input-opacity;
+}
+
+.sprk-b-Checkbox__label {
+  position: relative;
+}
+
+.sprk-b-Checkbox__label::before,
+.sprk-b-Checkbox__label::after {
+  transition: $sprk-checkbox-transition;
+  position: absolute;
+  display: inline-block;
+}
+
+// Custom checkbox styles
+.sprk-b-Checkbox__label::before {
+  content: "";
+  height: $sprk-checkbox-custom-input-height;
+  width: $sprk-checkbox-custom-input-width;
+  border: $sprk-checkbox-custom-input-border;  
+  border-radius: $sprk-checkbox-custom-input-border-radius; 
+  top: $sprk-checkbox-custom-input-top;
+  left: $sprk-checkbox-custom-input-left;
+}
+
+// Custom checkmark icon styles
+.sprk-b-Checkbox__label::after {
+  content: none;
+  height: $sprk-checkbox-checkmark-icon-height;
+  width: $sprk-checkbox-checkmark-icon-width;
+  left: $sprk-checkbox-checkmark-icon-left;
+  top: $sprk-checkbox-checkmark-icon-top;
+  border-left: $sprk-checkbox-checkmark-border-left;
+  border-bottom: $sprk-checkbox-checkmark-border-bottom;
+  transform: $sprk-checkbox-checkmark-transform;
+}
+
+// Focus styles for unchecked checkbox
+.sprk-b-Checkbox__input:focus + .sprk-b-Checkbox__label::before {
+  border: $sprk-checkbox-custom-input-border-focus;
+  background-color: $sprk-checkbox-custom-input-background-color-focus;
+}
+
+// Hover styles for unchecked checkbox
+.sprk-b-Checkbox__input:hover + .sprk-b-Checkbox__label::before {
+  background-color: $sprk-checkbox-custom-input-background-color-hover;
+  border-color: $sprk-checkbox-custom-input-border-color-hover;
+}
+
+// Checked styles for checkbox and label 
+.sprk-b-Checkbox__input:checked {
+  // Show checkmark icon when checked
+  + .sprk-b-Checkbox__label::after {
+    content: "";
+  }
+
+  + .sprk-b-Checkbox__label::before {
+    background-color: $sprk-checkbox-custom-input-background-color-checked;
+    border-color: $sprk-checkbox-custom-input-border-color-checked;
+  }
+
+  &:focus {
+    // Override focus border color if its checked
+    + .sprk-b-Checkbox__label::before {
+      border: $sprk-checkbox-custom-input-border-focus-checked;
+    }
+  }
+}
+
+// Disabled styles for checkbox and label
+.sprk-b-Checkbox__input:disabled + .sprk-b-Checkbox__label::before {
+  cursor: $sprk-checkbox-custom-input-cursor-disabled;
+  border-color: $sprk-checkbox-custom-input-border-color-disabled;
+  background-color: $sprk-checkbox-custom-input-background-color-disabled;
+}

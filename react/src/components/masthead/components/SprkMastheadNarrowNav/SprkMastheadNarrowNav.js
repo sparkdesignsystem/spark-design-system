@@ -9,6 +9,7 @@ const SprkMastheadNarrowNav = ({
   isOpen,
   links,
   selector,
+  narrowNavId,
   ...rest
 }) => (
   <React.Fragment>
@@ -17,6 +18,7 @@ const SprkMastheadNarrowNav = ({
         className="sprk-c-Masthead__narrow-nav"
         role="navigation"
         data-id={idString}
+        id={narrowNavId}
         {...rest}
       >
         {selector.items && <SprkMastheadSelector isFlush choices={selector} />}
@@ -56,6 +58,10 @@ SprkMastheadNarrowNav.propTypes = {
        * Text of the link
        */
       text: PropTypes.string,
+      /**
+       * `id` of the link item
+       */
+      itemId: PropTypes.string,
       /**
        * Expects an array containing link objects.
        * Will be treated as a subnav to the link.

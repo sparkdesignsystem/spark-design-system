@@ -9,7 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('SprkStack:', () => {
   it('should display a div element with the correct base class', () => {
     const wrapper = shallow(<SprkStack />);
-    expect(wrapper.find('div.sprk-o-Stack').length).toBe(1);
+    expect(wrapper.html()).toEqual('<div class="sprk-o-Stack" data-id=""></div>');
   });
 
   it('should set the tiny spacing class in addition to the base class when'

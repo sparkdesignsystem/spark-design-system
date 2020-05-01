@@ -2,7 +2,17 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/spark-angular",
   "lib": {
+    "umdModuleIds": {
+      "lodash": "lodash",
+      "lodash/uniqueId": "lodash",
+      "tiny-date-picker": "tiny-date-picker",
+      "focus-visible": "focus-visible"
+    },
     "entryFile": "src/public-api.ts"
   },
-  "whitelistedNonPeerDependencies": ["lodash", "tiny-date-picker"]
+  "whitelistedNonPeerDependencies": [
+    "lodash",
+    "tiny-date-picker",
+    "focus-visible"
+  ]
 }

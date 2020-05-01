@@ -20,7 +20,15 @@ describe('SprkTabsButton:', () => {
   });
 
   it('should focus if isFocused is updated to true', () => {
-    const wrapper = mount(<SprkTabsButton tabBtnChildren="Tab 1" isFocused={false} tabBtnId="tab-52">Test Content 1</SprkTabsButton>);
+    const wrapper = mount(
+      <SprkTabsButton
+        tabBtnChildren="Tab 1"
+        isFocused={false}
+        tabindex="0"
+        tabBtnId="tab-52">
+          Test Content 1
+      </SprkTabsButton>
+    );
     expect(document.activeElement.classList.contains('sprk-c-Tabs__button')).toBe(false);
     wrapper.setProps({ isFocused: true });
     expect(document.activeElement.classList.contains('sprk-c-Tabs__button')).toBe(true);

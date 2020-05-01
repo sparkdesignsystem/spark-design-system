@@ -1,0 +1,45 @@
+// ==================================================================
+// Toggle
+// ==================================================================
+
+////
+/// @group Toggle
+////
+
+// Future proofing classes that don't have styles right now but might later.
+// .sprk-c-Toggle
+// .sprk-c-Toggle__content
+.sprk-c-Toggle__trigger {
+  border-bottom: $sprk-toggle-trigger-border-bottom;
+  text-decoration: $sprk-toggle-trigger-text-decoration;
+  transition: $sprk-toggle-trigger-transition;
+
+  // Button User Agent Resets
+  background-color: $sprk-toggle-trigger-background-color;
+  border-top: $sprk-toggle-trigger-border-top;
+  border-left: $sprk-toggle-trigger-border-left;
+  border-right: $sprk-toggle-trigger-border-right;
+  padding-top: $sprk-toggle-trigger-padding-top;
+  padding-right: $sprk-toggle-trigger-padding-right;
+  padding-bottom: $sprk-toggle-trigger-padding-bottom;
+  padding-left: $sprk-toggle-trigger-padding-left;
+  text-align: $sprk-toggle-trigger-text-align;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom: $sprk-toggle-trigger-hover-border-bottom;
+    color: $sprk-toggle-trigger-hover-color;
+  }
+
+  &:focus:not(.focus-visible) {
+    outline: none;
+  }
+}
+
+/// A toggle with a smaller font.
+/// @name .sprk-c-Toggle__trigger--small
+.sprk-c-Toggle__trigger--small {
+  font-size: $sprk-toggle-trigger-font-size-small;
+  font-weight: $sprk-toggle-trigger-font-weight-small;
+}

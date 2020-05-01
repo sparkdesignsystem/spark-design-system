@@ -1,0 +1,84 @@
+////
+/// @group input
+////
+
+// Added for potential future use.
+// .sprk-b-Radio {}
+.sprk-b-Radio__label {
+  position: relative;
+}
+
+// Hide native input visually
+.sprk-b-Radio__input {
+  opacity: $sprk-radio-input-opacity;
+
+  &:hover {
+    + .sprk-b-Radio__label::before {
+      border: $sprk-radio-input-outer-circle-hover-border;
+    }
+  }
+
+  &:focus {
+    + .sprk-b-Radio__label::before {
+      border: $sprk-radio-input-outer-circle-focus-border;
+    }
+  }
+}
+
+.sprk-b-Radio__label::before,
+.sprk-b-Radio__input:checked + .sprk-b-Radio__label::after {
+  border-radius: $sprk-radio-input-border-radius;
+  content: '';
+  position: absolute;
+  transition: $sprk-radio-input-transition;
+  display: inline-block;
+}
+
+// will be the circle
+.sprk-b-Radio__label::before {
+  width: $sprk-radio-input-outer-circle-width;
+  height: $sprk-radio-input-outer-circle-height;
+  border: $sprk-radio-input-outer-circle-border;
+  top: $sprk-radio-input-outer-circle-top;
+  left: $sprk-radio-input-outer-circle-left;
+}
+
+.sprk-b-Radio__input:checked + .sprk-b-Radio__label::before {
+  border: $sprk-radio-input-outer-circle-border-checked;
+}
+
+.sprk-b-Radio__input:checked {
+  &:hover {
+    + .sprk-b-Radio__label::before {
+      border: $sprk-radio-input-outer-circle-hover-border;
+    }
+  }
+
+  &:focus {
+    + .sprk-b-Radio__label::before {
+      border: $sprk-radio-input-outer-circle-hover-border;
+    }
+  }
+}
+
+.sprk-b-Radio__input:checked + .sprk-b-Radio__label::after {
+  width: $sprk-radio-input-inner-circle-width;
+  height: $sprk-radio-input-inner-circle-height;
+  background-color: $sprk-radio-input-inner-circle-background-color;
+  left: $sprk-radio-input-inner-circle-left;
+  top: $sprk-radio-input-inner-circle-top;
+}
+
+.sprk-b-Radio__input:disabled {
+  &:hover {
+    + .sprk-b-Radio__label::before {
+      border: $sprk-radio-input-outer-circle-border-hover-disabled;
+    }
+  }
+
+  &:focus {
+    + .sprk-b-Radio__label::before {
+      border: $sprk-radio-input-outer-circle-focus-border-disabled;
+    }
+  }
+}

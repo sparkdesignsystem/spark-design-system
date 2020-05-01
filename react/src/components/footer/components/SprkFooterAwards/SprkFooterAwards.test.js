@@ -58,7 +58,8 @@ describe('SprkFooterAwards:', () => {
     };
 
     const wrapper = mount(<SprkFooterAwards awards={awards} />);
-    expect(wrapper.find('a').length).toBe(3);
+    expect(wrapper.find('a').length).toBe(2);
+    expect(wrapper.find('button').length).toBe(1);
   });
 
   it('should render the href as nogo if not defined', () => {
