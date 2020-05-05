@@ -4,9 +4,7 @@
 
 Welcome to the Spark Design System, a product of [Quicken Loans](https://github.com/quickenloans).
 
-Spark Design System is a system of patterns and components used to
-create the user interface for the Quicken Loans family of Fintech
-products.
+Spark Design System is where we collect our best solutions for how to design and build unified digital experiences for the Rocket brands.
 
 * [Spark](https://www.npmjs.com/package/@sparkdesignsystem/spark) contains the basic patterns and components that make up
   the visual and interaction design of the Quicken Loans family of
@@ -43,32 +41,29 @@ also that your project has a Javascript build step that will transpile ES6+ and 
 ### Code Organization
 
 Spark is managed as a monorepo. All of the Spark source code lives in a
-single repo, but is released as separate packages using
-[Lerna](https://github.com/lerna/lerna).
+single repo, but is released as separate packages.
 
 This repo consists of the design system packages, wrapped in an instance
-of [Drizzle](https://github.com/cloudfour/drizzle), a tool built
-by [cloudfour](https://github.com/cloudfour), for displaying pattern
-libraries. Spark uses Drizzle for documentation and plain html code examples.
+of [Gatsby](https://www.gatsbyjs.org). Spark uses Gatsby for our main documentation site and
+[Storybook](https://storybook.js.org) for our component previews and developer documentation.
 
-In the packages folder are Spark. These are the files
+In the root there are three directories, `react`, `angular` and `html`. These house the files
 that are published to npm.
 
 ### Dev Environment
 
-If you want to run a copy of Drizzle locally:
+If you want to run a copy of Gatsby locally:
 
 1. Run `npm install`.
-2. Run `gulp --dev`.
-3. Open your browser to `http://localhost:3000/`.
+2. Run `npm start`.
+3. Open your browser to `http://localhost:8000/`.
 
 ### Unit Tests
 
-Spark uses the [Mocha](http://https://mochajs.org/.chaijs.com/) test
-framework with the [Chai](http://www.chaijs.com/) assertion library
-for unit tests. To run unit tests in Spark:
+Spark uses the [Jest](https://jestjs.io) test
+framework for unit tests. To run unit tests in Spark:
 
-1. Navigate to the root of the Spark repository.
+1. Navigate to the framework directory of your choice from the root `cd react`, `cd angular`, or `cd html`.
 2. Run `npm install` if you have not already.
 3. Run `npm test`.
 4. See test output in terminal to determine number of passing or failed tests.
@@ -77,11 +72,6 @@ for unit tests. To run unit tests in Spark:
 
 Spark follows specific coding styles for HTML, CSS and
 JavaScript to ensure maintainability and scalability.
-To successfully make a commit in this repo the code
-must pass the pre-commit hooks that will run
-automatically on commit. The pre-commit hooks run
-[ESLint](https://eslint.org/), [Stylelint](https://github.com/stylelint/stylelint)
-and an additional code formatter, [prettier](https://github.com/prettier/prettier).
 
 #### HTML
 
@@ -115,5 +105,5 @@ and an additional code formatter, [prettier](https://github.com/prettier/prettie
 
 ## Credit
 
-[Drizzle](https://github.com/cloudfour/drizzle)
-[Drizzle Documentation](docs)
+[Gatsby](https://www.gatsbyjs.org)
+[StorybookJS](https://storybook.js.org)
