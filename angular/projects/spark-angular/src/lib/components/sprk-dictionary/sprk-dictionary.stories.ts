@@ -62,7 +62,7 @@ export const striped = () => ({
        'Work Phone': '(555) 555-5555',
        'Work Extension': '55555'
      }"
-     idString="dictionary-1"
+     idString="dictionary-2"
     ></sprk-dictionary>
   `
 });
