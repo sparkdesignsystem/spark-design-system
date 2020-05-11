@@ -69,6 +69,7 @@
     "jest-preset-angular": "^8.1.2",
     "ng-packagr": "^9.0.0",
     "node-sass": "^4.13.1",
+    "parse5": "^5.0.0",
     "protractor": "~5.4.0",
     "sass-loader": "^7.1.0",
     "sassdoc": "^2.7.1",
