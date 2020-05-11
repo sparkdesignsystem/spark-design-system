@@ -2,6 +2,21 @@
 
 This is where we configure Angular CLI Schematics for Spark Design System.
 
+## Utilize Schematics
+
+```shell
+ng add @sparkdesignsystem/spark-design-system
+```
+
+This single command will:
+
+- Install `@sparkdesignsystem/spark-angular` as a dev dependency.
+- Install `@sparkdesignsystem/spark` as a dev dependency.
+- Import the `SparkAngularModule` into your root module.
+- Import the `BrowserAnimationsModule` into your root module.
+- Import the Spark stylesheet in your styles file.
+- Add the `sprk-u-JavaScript` class in your index file.
+
 ## Local Testing
 
 Start by doing a normal build from the `angular` folder:
@@ -28,8 +43,8 @@ npm link dist/spark-angular
 Finally, go into an Angular project where you want to test the schematics:
 
 ```shell
-npm link @sparkdesignsystem/spark-design-system
-ng add @sparkdesignsystem/spark-design-system
+npm link @sparkdesignsystem/spark-angular
+ng add @sparkdesignsystem/spark-angular
 ```
 
 At this point, the schematics should run, install the Spark dependencies, and make the necessary code changes automatically.
