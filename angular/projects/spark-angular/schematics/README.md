@@ -4,6 +4,14 @@ This is where we configure Angular CLI Schematics for Spark Design System.
 
 ## Utilize Schematics
 
+Schematics are a feature of the Angular CLI. First, you should have the CLI installed globally so you can reference `ng` commands:
+
+```shell
+npm install -g @angular/cli
+```
+
+Then you can install Spark using the schematics:
+
 ```shell
 ng add @sparkdesignsystem/spark-angular
 ```
