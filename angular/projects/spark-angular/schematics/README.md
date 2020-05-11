@@ -4,7 +4,7 @@ This is where we configure Angular CLI Schematics for Spark Design System.
 
 ## Utilize Schematics
 
-Schematics are a feature of the Angular CLI. First, you should have the CLI installed globally so you can reference `ng` commands:
+Schematics are a feature of the Angular CLI. First, you should already have the CLI installed globally:
 
 ```shell
 npm install -g @angular/cli
