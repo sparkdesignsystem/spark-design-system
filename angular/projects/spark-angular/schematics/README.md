@@ -5,7 +5,7 @@ This is where we configure Angular CLI Schematics for Spark Design System.
 ## Utilize Schematics
 
 ```shell
-ng add @sparkdesignsystem/spark-design-system
+ng add @sparkdesignsystem/spark-angular
 ```
 
 This single command will:
