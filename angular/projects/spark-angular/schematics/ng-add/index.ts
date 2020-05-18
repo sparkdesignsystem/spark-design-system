@@ -1,6 +1,16 @@
-import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
-import { NodePackageInstallTask, RunSchematicTask } from '@angular-devkit/schematics/tasks';
-
+import {
+  addBodyClass,
+  addModuleImportToRootModule,
+  getAppModulePath,
+  getProjectFromWorkspace,
+  getProjectIndexFiles,
+  getProjectMainFile,
+  getProjectStyleFile,
+  hasNgModuleImport,
+} from '@angular/cdk/schematics';
+import { chain, Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
+import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
+import { getWorkspace } from '@schematics/angular/utility/config';
 import {
   addPackageJsonDependency,
   NodeDependency,
@@ -8,29 +18,163 @@ import {
   removePackageJsonDependency,
 } from '@schematics/angular/utility/dependencies';
 
-export function ngAdd(_options: any): Rule {
-  return (tree: Tree, _context: SchematicContext) => {
+import { Schema } from './schema';
+
+/**
+ * Constants
+ */
+const sparkAngularModuleName = 'SparkAngularModule';
+const sparkAngularModuleImport = '@sparkdesignsystem/spark-angular';
+const sparkAngularJavaScriptClass = 'sprk-u-JavaScript';
+const browserAnimationsModuleName = 'BrowserAnimationsModule';
+const browserAnimationsModuleImport = '@angular/platform-browser/animations';
+const noopAnimationsModuleName = 'NoopAnimationsModule';
+
+/**
+ * Scaffolds the basics of a Spark Angular application, this includes:
+ *  - Adds the spark and spark-angular dependencies to package.json
+ *  - Adds the SparkAngularModule to the root module of the specified project
+ *  - Adds the BrowserAnimationsModule to the root module of the specified project
+ *  - Adds the Spark stylesheets to the project style file
+ *  - Adds the Spark class to the project body tag
+ */
+export function ngAdd(options: Schema): Rule {
+  return chain([
+    addSparkDependencies(options),
+    addSparkModule(options),
+    addAnimationsModule(options),
+    addSparkStyles(options),
+    addSparkClass(options),
+  ]);
+}
+
+/**
+ * Adds the spark and spark-angular dependencies to package.json
+ */
+function addSparkDependencies(_options: Schema): Rule {
+  return (tree: Tree, context: SchematicContext) => {
     // Schematics automatically adds to "dependencies" but it should be "devDependencies"
     removePackageJsonDependency(tree, '@sparkdesignsystem/spark-angular');
-    addDependencies(tree);
 
-    // Since the Spark schematics depend on the schematic utility functions from the
-    // CDK, we need to install the CDK before loading the schematic files that import from the CDK.
-    const installTaskId = _context.addTask(new NodePackageInstallTask());
+    const dependencies: NodeDependency[] = [
+      { name: '@sparkdesignsystem/spark', overwrite: true, type: NodeDependencyType.Dev, version: '^13.0.0' },
+      { name: '@sparkdesignsystem/spark-angular', overwrite: true, type: NodeDependencyType.Dev, version: '^10.0.0' },
+    ];
 
-    _context.addTask(new RunSchematicTask('ng-add-setup-project', _options), [installTaskId]);
+    dependencies.forEach((dependency) => addPackageJsonDependency(tree, dependency));
+
+    context.addTask(new NodePackageInstallTask());
 
     return tree;
   };
 }
 
-function addDependencies(tree: Tree): Tree {
-  const dependencies: NodeDependency[] = [
-    { name: '@sparkdesignsystem/spark', overwrite: true, type: NodeDependencyType.Dev, version: '^13.0.0' },
-    { name: '@sparkdesignsystem/spark-angular', overwrite: true, type: NodeDependencyType.Dev, version: '^10.0.0' },
-  ];
+/**
+ * Adds the SparkAngularModule to the root module of the specified project
+ */
+function addSparkModule(options: Schema): Rule {
+  return (tree: Tree, _context: SchematicContext) => {
+    const workspace = getWorkspace(tree);
+    const project = getProjectFromWorkspace(workspace, options.project);
 
-  dependencies.forEach((dependency) => addPackageJsonDependency(tree, dependency));
+    addModuleImportToRootModule(tree, sparkAngularModuleName, sparkAngularModuleImport, project);
 
-  return tree;
+    return tree;
+  };
+}
+
+/**
+ * Adds the BrowserAnimationsModule to the root module of the specified project
+ */
+function addAnimationsModule(options: Schema): Rule {
+  return (tree: Tree, context: SchematicContext) => {
+    const workspace = getWorkspace(tree);
+    const project = getProjectFromWorkspace(workspace, options.project);
+    const appModulePath = getAppModulePath(tree, getProjectMainFile(project));
+
+    // In case the project explicitly uses the NoopAnimationsModule, we should print a warning
+    // message that makes the user aware of the fact that we won't automatically set up
+    // animations. If we would add the BrowserAnimationsModule while the NoopAnimationsModule
+    // is already configured, we would cause unexpected behavior and runtime exceptions.
+    if (hasNgModuleImport(tree, appModulePath, noopAnimationsModuleName)) {
+      context.logger.error(
+        `Could not set up "${browserAnimationsModuleName}" ` +
+        `because "${noopAnimationsModuleName}" is already imported.`,
+      );
+      context.logger.info(`Please manually set up browser animations.`);
+      return;
+    }
+
+    addModuleImportToRootModule(tree, browserAnimationsModuleName, browserAnimationsModuleImport, project);
+
+    return tree;
+  };
+}
+
+/**
+ * Adds the Spark stylesheets to the project style file
+ */
+function addSparkStyles(options: Schema): Rule {
+  return (tree: Tree, context: SchematicContext) => {
+    const workspace = getWorkspace(tree);
+    const project = getProjectFromWorkspace(workspace, options.project);
+    const styleFilePath = getProjectStyleFile(project);
+    const logger = context.logger;
+
+    if (!styleFilePath) {
+      logger.error(`Could not find the default style file for this project.`);
+      logger.info(`Please manually import the Spark stylesheet in your CSS.`);
+      return;
+    }
+
+    const buffer = tree.read(styleFilePath);
+
+    if (!buffer) {
+      logger.error(`Could not read the default style file within the project (${styleFilePath})`);
+      logger.info(`Please manually import the Spark stylesheet in your CSS.`);
+      return;
+    }
+
+    const htmlContent = buffer.toString();
+
+    const insertion = `
+@import "node_modules/@sparkdesignsystem/spark/spark.scss"
+`;
+
+    if (htmlContent.includes(insertion)) {
+      return;
+    }
+
+    const recorder = tree.beginUpdate(styleFilePath);
+
+    recorder.insertLeft(htmlContent.length, insertion);
+    tree.commitUpdate(recorder);
+
+    return tree;
+  };
+}
+
+/**
+ * Adds the Spark class to the project body tag
+ */
+function addSparkClass(options: Schema): Rule {
+  return (tree: Tree, context: SchematicContext) => {
+    const workspace = getWorkspace(tree);
+    const project = getProjectFromWorkspace(workspace, options.project);
+    const projectIndexFiles = getProjectIndexFiles(project);
+    const logger = context.logger;
+
+    if (!projectIndexFiles.length) {
+      logger.error(`Could not find the index file for this project.`);
+      logger.info(`Please manually add the "${sparkAngularJavaScriptClass}" class to your HTML tag.`);
+      return;
+    }
+
+    projectIndexFiles.forEach((indexFilePath) => {
+      // This should go on <html> but it is easier for now to just use body
+      addBodyClass(tree, indexFilePath, sparkAngularJavaScriptClass);
+    });
+
+    return tree;
+  };
 }
