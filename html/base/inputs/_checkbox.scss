@@ -2,8 +2,60 @@
 /// @group input
 ////
 
-// Added for potential future use.
-// .sprk-b-Checkbox { }
+.sprk-b-Checkbox--huge {
+
+  .sprk-b-Checkbox__label {
+    transition: $sprk-checkbox-transition;
+    border: 2px $sprk-black-tint-50 solid;
+    border-radius: 4px;
+
+    padding: 18px 14px 18px 51px;
+    flex-basis: 100%;
+    line-height: 1rem;
+
+    &::before {
+      height: 1.5rem;
+      width: 1.5rem;
+      top: 14px;
+      left: 14px;
+    }
+
+    &::after {
+      content: none;
+      height: 0.53125rem;
+      // 0.76736rem -- 1.444444 is the ratio
+      width: 0.53125rem * 1.44444444444444;
+      left: 20px;
+      top: 19px;
+    }
+
+    &:hover {
+      border-color: $sprk-black;
+      box-shadow: $sprk-input-huge-box-shadow;
+    }
+  }
+
+  .sprk-b-Checkbox__input {
+    position: absolute;
+
+    &:focus + .sprk-b-Checkbox__label {
+      border-color: $sprk-green;
+      background-color: $sprk-green-tint-25;
+      &::before {
+        border-color: $sprk-black-tint-50;
+      }
+    }
+
+    &:checked + .sprk-b-Checkbox__label {
+      border-color: $sprk-black;
+      &::before {
+        border-color: $sprk-green;
+      }
+    }
+  }
+
+
+}
 
 // Hide the native control
 .sprk-b-Checkbox__input {
@@ -26,8 +78,8 @@
   content: "";
   height: $sprk-checkbox-custom-input-height;
   width: $sprk-checkbox-custom-input-width;
-  border: $sprk-checkbox-custom-input-border;  
-  border-radius: $sprk-checkbox-custom-input-border-radius; 
+  border: $sprk-checkbox-custom-input-border;
+  border-radius: $sprk-checkbox-custom-input-border-radius;
   top: $sprk-checkbox-custom-input-top;
   left: $sprk-checkbox-custom-input-left;
 }
@@ -56,7 +108,7 @@
   border-color: $sprk-checkbox-custom-input-border-color-hover;
 }
 
-// Checked styles for checkbox and label 
+// Checked styles for checkbox and label
 .sprk-b-Checkbox__input:checked {
   // Show checkmark icon when checked
   + .sprk-b-Checkbox__label::after {
