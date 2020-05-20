@@ -1,0 +1,41 @@
+---
+  title: Tooltips
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Tooltips
+
+The tooltip component appears as a popup design providing a short text description of information about a feature when the user hovers over the item.
+
+<ComponentPreview
+  componentName="tooltip--default-story"
+  hasHTML
+/>
+
+### Usage
+
+Use tooltips when the feature needs to be explained in furhter detail to walk users through a specific action. I thelps to draw the users' attention to a feature without interrupting their workflow. They can only be used on icons.
+
+### Guidelines
+
+- Appears when a user hovers over a feature.
+- Remains in veiw until the user actively dismisses it.
+- Infrmation should be discrete, short and concise.
+- Do not use a warning or alert.
+- Do not include links or modals.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Anatomy
+
+Tooltips must be discoverable and operable by users that rely on a diverse set of establish navigational means.
+- Must be accessible by mouse, pointer devices, keyboard-only, screen reader, zoom software, and any other assistive technology.
+- Allow the mouse to easily move over the tooltip without dismissing it.
+- Complex content should be browsable line by line using screen readers.
+- Always include a visible label within UI controls.
+- Interactive elements must be reachable using keyboard.
+- Users should hide tooltips by pressing the Escape key on the keyboard.
