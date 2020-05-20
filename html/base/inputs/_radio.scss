@@ -82,3 +82,40 @@
     }
   }
 }
+
+// Huge Styles for Radio
+.sprk-b-Radio--huge {
+  .sprk-b-Radio__input {
+    position: absolute;
+  }
+
+  .sprk-b-Radio__label {
+    border: 2px #808080 solid;
+    border-radius: 4px;
+    padding: 18px 14px 18px 51px;
+    flex-basis: 100%;
+    line-height: 1rem;
+
+    &:hover {
+      border-color: #404040;
+    }
+  }
+
+  .sprk-b-Radio__input:checked + .sprk-b-Radio__label,
+  .sprk-b-Radio__input:focus + .sprk-b-Radio__label {
+    border-color: $sprk-green;
+  }
+
+  .sprk-b-Radio__label::before {
+    height: 1.5rem;
+    width: 1.5rem;
+    top: 14px;
+    left: 14px;
+  }
+  .sprk-b-Radio__input:checked + .sprk-b-Radio__label::after {
+    height: 1rem;
+    width: 1rem;
+    left: 18px;
+    top: 18px;
+  }
+}
