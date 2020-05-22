@@ -28,12 +28,6 @@ export const defaultStory = () => {
             Checkbox Group Label
           </label>
         </legend>
-
-        <label>
-
-        </label>
-
-
         <div
           class="sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge"
           data-sprk-input="checkbox"
@@ -45,7 +39,6 @@ export const defaultStory = () => {
             type="checkbox"
             aria-describedby="checkbox--error-container"
           >
-
           <label
             for="checkbox-1"
             class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
@@ -53,7 +46,6 @@ export const defaultStory = () => {
             Checkbox Item 1
           </label>
         </div>
-
         <div
           class="sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge"
           data-sprk-input="checkbox"
@@ -65,7 +57,6 @@ export const defaultStory = () => {
             type="checkbox"
             aria-describedby="checkbox--error-container"
           >
-
           <label
             for="checkbox-2"
             class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
@@ -73,7 +64,6 @@ export const defaultStory = () => {
             Checkbox Item 2
           </label>
         </div>
-
         <div
           class="sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge"
           data-sprk-input="checkbox"
@@ -94,7 +84,6 @@ export const defaultStory = () => {
           </label>
         </div>
       </fieldset>
-
       <div
         class="sprk-b-ErrorContainer"
         id="checkbox--error-container"
@@ -126,7 +115,7 @@ export const invalidCheckbox = () => {
         </legend>
 
         <div
-          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          class="sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge"
           data-sprk-input="checkbox"
         >
           <input
@@ -146,7 +135,7 @@ export const invalidCheckbox = () => {
         </div>
 
         <div
-          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          class="sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge"
           data-sprk-input="checkbox"
         >
           <input
@@ -166,7 +155,7 @@ export const invalidCheckbox = () => {
         </div>
 
         <div
-          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          class="sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge"
           data-sprk-input="checkbox"
         >
           <input
@@ -226,7 +215,7 @@ export const disabledCheckbox = () => {
         </legend>
 
         <div
-          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          class="sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge"
           data-sprk-input="checkbox"
         >
           <input
@@ -247,7 +236,7 @@ export const disabledCheckbox = () => {
         </div>
 
         <div
-          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          class="sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge"
           data-sprk-input="checkbox"
         >
           <input
@@ -268,7 +257,7 @@ export const disabledCheckbox = () => {
         </div>
 
         <div
-          class="sprk-b-SelectionContainer sprk-b-Checkbox"
+          class="sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge"
           data-sprk-input="checkbox"
         >
           <input

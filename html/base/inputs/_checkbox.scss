@@ -141,40 +141,68 @@
   .sprk-b-Checkbox__input {
     position: absolute;
 
-    &:focus + .sprk-b-Checkbox__label {
-      // Container's border color when focused through keyboard
-      // border-color: $sprk-huge-checkbox-container-border-color;
-      border-color: $sprk-green;
+    &:disabled {
+      & + .sprk-b-Checkbox__label {
+        // border-color: $sprk-huge-checkbox-disabled-container-border-color;
+        border-color: $sprk-black-tint-25;
+        // background: $sprk-huge-checkbox-disabled-container-background;
+        background: $sprk-gray;
+        // cursor: $sprk-huge-checkbox-disabled-container-cursor;
+        cursor: not-allowed;
 
-      // Custom checkbox element border color when focused through keyboard
-      // border-color: $sprk-huge-checkbox-custom-input-border-color;
-      &:hover {
-        border-color: $sprk-black;
+        &::before {
+          // border-color: $sprk-huge-checkbox-disabled-custom-checkbox-element-border-color;
+          border-color: $sprk-black-tint-25;
+        }
+      }
+
+      &:hover + .sprk-b-Checkbox__label {
+        // box-shadow: $sprk-huge-checkbox-disabled-custom-checkbox-element-box-shadow;
+        box-shadow: none;
       }
     }
 
-    // Container's border color when checkbox is checked and focused through keyboard
-    &:focus:checked + .sprk-b-Checkbox__label {
-      // border-color: $sprk-huge-checkbox-container-focus-checked-border-color;
-      border-color: $sprk-black;
+    // Styles for container when focused by keyboard
+    &:focus {
+      & + .sprk-b-Checkbox__label {
+        // Container's border color when focused through keyboard
+        // border-color: $sprk-huge-checkbox-container-focus-border-color;
+        border-color: $sprk-green;
+
+        // Custom checkbox element border color when focused through keyboard
+        &:hover {
+          // border-color: $sprk-huge-checkbox-custom-focus-hover-input-border-color;
+          border-color: $sprk-black;
+        }
+      }
     }
 
-    &:checked + .sprk-b-Checkbox__label {
-      // Container's border color when checked
-      // border-color: $sprk-huge-checkbox-container-checked-border-color;
-      border-color: $sprk-green;
 
-      // Container's border color when checked and hovered
-      &:hover {
-        // border-color: $sprk-huge-checkbox-container-hover-checked-border-color;
-        border-color: $sprk-black;
-      }
-
-      // Custom checkbox element's border color when checked
-      &::before {
+    &:checked  {
+      & + .sprk-b-Checkbox__label {
+        // Container's border color when checked
         // border-color: $sprk-huge-checkbox-container-checked-border-color;
         border-color: $sprk-green;
+
+        // Container's border color when checked and hovered
+        &:hover {
+          // border-color: $sprk-huge-checkbox-container-checked-hover-border-color;
+          border-color: $sprk-black;
+        }
+
+        // Custom checkbox element's border color when checked
+        &::before {
+          // border-color: $sprk-huge-checkbox-container-custom-checkbox-element-checked-border-color;
+          border-color: $sprk-green;
+        }
+      }
+
+      // Styles for container when checkbox is focused on while being checked
+      &:focus + .sprk-b-Checkbox__label {
+        // border-color: $sprk-huge-checkbox-container-focus-checked-border-color;
+        border-color: $sprk-black;
       }
     }
+
   }
 }
