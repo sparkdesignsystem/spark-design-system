@@ -6,7 +6,40 @@ import getElements from '../utilities/getElements';
  *  todo - should use toggleAriaExpanded
  */
 
-function showTooltip(trigger, stickOpen) {
+function calculatePositionClass(trigger){
+  const elemX = trigger.getBoundingClientRect().left;
+  const elemY = trigger.getBoundingClientRect().top;
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+
+  if (elemX > viewportWidth / 2) {
+    if (elemY > viewportHeight / 2) {
+      return 'sprk-c-Tooltip--top_left';
+    } else {
+      return 'sprk-c-Tooltip--bottom_left';
+    }
+  } else {
+    if (elemY > viewportHeight / 2) {
+      return 'sprk-c-Tooltip--top_right';
+    } else {
+      return 'sprk-c-Tooltip--bottom_right';
+    }
+  }
+}
+
+function addPositioningClass(trigger, tooltip) {
+  tooltip.classList.remove('sprk-c-Tooltip--bottom_right');
+  tooltip.classList.remove('sprk-c-Tooltip--bottom_left');
+  tooltip.classList.remove('sprk-c-Tooltip--top_right');
+  tooltip.classList.remove('sprk-c-Tooltip--top_left');
+
+  // determine the positioning class
+  tooltip.classList.add(calculatePositionClass(trigger));
+}
+
+function showTooltip(trigger, tooltip, stickOpen) {
+  addPositioningClass(trigger, tooltip);
+
   trigger.setAttribute('aria-expanded', 'true');
 
   if (stickOpen) {
@@ -14,16 +47,16 @@ function showTooltip(trigger, stickOpen) {
   }
 }
 
-function hideTooltip(trigger) {
+function hideTooltip(trigger, tooltip) {
   trigger.setAttribute('aria-expanded', 'false');
   trigger.classList.remove('sprk-c-Tooltip--toggled');
 }
 
-function toggleTooltip(trigger) {
+function toggleTooltip(trigger, tooltip) {
   if (trigger.classList.contains('sprk-c-Tooltip--toggled')) {
-    hideTooltip(trigger);
+    hideTooltip(trigger, tooltip);
   } else {
-    showTooltip(trigger, true);
+    showTooltip(trigger, tooltip, true);
   }
 }
 
@@ -34,19 +67,27 @@ const bindTooltipUIEvents = (tooltipContainer) => {
   trigger.setAttribute('aria-role', 'button');
   trigger.setAttribute('aria-expanded', 'false');
 
-  trigger.addEventListener('click', (e) => { toggleTooltip(trigger) }, false);
+  trigger.addEventListener('click', (e) => { toggleTooltip(trigger, tooltip) }, false);
 
   trigger.addEventListener('keydown', function (e) {
     var key = e.key || e.keyCode;
 
-    console.log("key is: " + key);
     if (key === 32 || key === ' ') {
-      toggleTooltip(trigger);
+      e.preventDefault();
+      toggleTooltip(trigger, tooltip);
     }
 
     if (key === 13 || key === 'Enter') {
-      toggleTooltip(trigger);
+      toggleTooltip(trigger, tooltip);
     }
+  });
+
+  trigger.addEventListener('mouseover', (e) => {
+    addPositioningClass(trigger, tooltip);
+  });
+
+  trigger.addEventListener('focus', (e) => {
+    addPositioningClass(trigger, tooltip);
   });
 
   document.addEventListener('keydown', function(e) {
@@ -54,13 +95,13 @@ const bindTooltipUIEvents = (tooltipContainer) => {
 
     // TODO use utility function, add new ones for Space and Enter?
     if (key === 'Escape' || key === 'Esc' || key === 27) {
-      hideTooltip(trigger);
+      hideTooltip(trigger, tooltip);
     }
   });
 
   document.addEventListener('click', (e) => {
     if (!(tooltip.contains(e.target) || trigger.contains(e.target))) {
-      hideTooltip(trigger);
+      hideTooltip(trigger, tooltip);
     }
   });
 };
@@ -74,5 +115,6 @@ export {
   bindTooltipUIEvents,
   showTooltip,
   hideTooltip,
-  toggleTooltip
+  toggleTooltip,
+  calculatePositionClass,
 };

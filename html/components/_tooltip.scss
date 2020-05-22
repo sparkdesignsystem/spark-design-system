@@ -17,15 +17,23 @@
   position: relative;
 
   .sprk-c-Tooltip {
-    padding: .5rem;
     background-color: $sprk-black;
-    color: $sprk-black-tint-25;
+    color: $sprk-white;
+
+    padding: 12px $sprk-space-m;
+
     border-radius: 4px;
     font-size: 0.75rem;
-    width: 12rem;
+
+    // max-width: 328px;
+
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 
     position: absolute;
-    top: -3.5rem;
+    bottom: 1.5rem;
     left: -1rem;
 
     &:after {
@@ -33,12 +41,74 @@
       position: absolute;
       display: inline-block;
       left: 1rem;
-      top: 2.75rem;
+      bottom: -0.5rem;
       width: 1rem;
       height: 1rem;
       background-color: $sprk-black;
       transform: rotateY(0deg) rotate(45deg);
       content: " ";
+    }
+
+    &.sprk-c-Tooltip--top_left {
+      top: auto;
+      bottom: 1.5rem;
+      left: auto;
+      right: -1rem;
+
+      &:after {
+        left: auto;
+        right: 1rem;
+        top: auto;
+        bottom: -0.5rem;
+      }
+    }
+
+    &.sprk-c-Tooltip--top_right {
+      top: auto;
+      bottom: 1.5rem;
+      left: -1rem;
+      right: auto;
+
+      &:after {
+        left: 1rem;
+        right: auto;
+        top: auto;
+        bottom: -0.5rem;
+      }
+    }
+
+    &.sprk-c-Tooltip--bottom_left {
+      top: 2rem;
+      bottom: auto;
+      right: -1rem;
+      left: auto;
+
+      &:after {
+        left: auto;
+        top: -.5rem;
+        right: 1rem;
+        bottom: auto;
+      }
+    }
+
+    &.sprk-c-Tooltip--bottom_right {
+      top: 2rem;
+      bottom: auto;
+      right: auto;
+      left: -1rem;
+
+      &:after {
+        left: 1rem;
+        top: -.5rem;
+        right: auto;
+        bottom: auto;
+      }
+    }
+
+    .sprk-c-Tooltip__content-wrapper {
+      position: relative;
+      display: inline-block;
+      // max-width: 328px;
     }
   }
 
@@ -54,6 +124,6 @@
   .sprk-c-Icon:hover + .sprk-c-Tooltip,
   .sprk-c-Icon:focus + .sprk-c-Tooltip,
   .sprk-c-Icon.sprk-c-Tooltip--toggled + .sprk-c-Tooltip {
-    display: block;
+    display: inline-block;
   }
 }
