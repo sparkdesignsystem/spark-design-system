@@ -47,7 +47,7 @@ export const defaultStory = () => {
     </span>
 
   </span>
-  <button class="sprk-c-Button sprk-u-mtm">Focus Target</button>
+  <div tabIndex="0" class=" sprk-u-mtm">Focus Target</tab>
   `;
 };
 

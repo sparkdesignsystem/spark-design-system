@@ -3,25 +3,26 @@ import getElements from '../utilities/getElements';
 
 /**
  *  Tooltip JS
+ *  todo - should use toggleAriaExpanded
  */
 
 function showTooltip(trigger, stickOpen) {
-  // trigger.setAttribute("aria-expanded", "true");
+  trigger.setAttribute('aria-expanded', 'true');
 
-  if (stickOpen){
-    trigger.classList.add("sprk-c-Tooltip--toggled");
+  if (stickOpen) {
+    trigger.classList.add('sprk-c-Tooltip--toggled');
   }
 }
 
 function hideTooltip(trigger) {
-  // trigger.setAttribute("aria-expanded", "false");
-  trigger.classList.remove("sprk-c-Tooltip--toggled");
+  trigger.setAttribute('aria-expanded', 'false');
+  trigger.classList.remove('sprk-c-Tooltip--toggled');
 }
 
-function toggleTooltip (trigger) {
+function toggleTooltip(trigger) {
   if (trigger.classList.contains('sprk-c-Tooltip--toggled')) {
     hideTooltip(trigger);
-	} else {
+  } else {
     showTooltip(trigger, true);
   }
 }
@@ -30,18 +31,30 @@ const bindTooltipUIEvents = (tooltipContainer) => {
   var trigger = tooltipContainer.querySelector('[data-sprk-tooltip="trigger"]');
   var tooltip = tooltipContainer.querySelector('[data-sprk-tooltip="content"]');
 
-  // trigger.setAttribute('aria-role', 'button');
+  trigger.setAttribute('aria-role', 'button');
+  trigger.setAttribute('aria-expanded', 'false');
 
-  // bind events
-  trigger.addEventListener("click", (e) => {toggleTooltip(trigger)}, false);
+  trigger.addEventListener('click', (e) => { toggleTooltip(trigger) }, false);
 
-  document.addEventListener('keyup', function (e) {
-    if (e.keyCode == 27) {
-      hideTooltip(trigger);
+  trigger.addEventListener('keydown', function (e) {
+    var key = e.key || e.keyCode;
+
+    console.log("key is: " + key);
+    if (key === 32 || key === ' ') {
+      toggleTooltip(trigger);
     }
 
-    if (e.keyCode == 13 || e.keyCode == 32){
+    if (key === 13 || key === 'Enter') {
       toggleTooltip(trigger);
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    var key = e.key || e.keyCode;
+
+    // TODO use utility function, add new ones for Space and Enter?
+    if (key === 'Escape' || key === 'Esc' || key === 27) {
+      hideTooltip(trigger);
     }
   });
 
@@ -57,5 +70,9 @@ const tooltip = () => {
 };
 
 export {
-  tooltip, bindTooltipUIEvents,
+  tooltip,
+  bindTooltipUIEvents,
+  showTooltip,
+  hideTooltip,
+  toggleTooltip
 };
