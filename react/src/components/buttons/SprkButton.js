@@ -36,14 +36,14 @@ const SprkButton = ({
       role={element !== 'button' ? 'button' : undefined}
       data-id={idString}
       data-analytics={analyticsString}
-      disabled={disabled}
+      disabled={TagName !== 'a' ? disabled : undefined}
       href={TagName !== 'button' ? href : undefined}
       {...rest}
       {...loading && { 'aria-label': spinningAriaLabel }}
     >
       {(loading &&
-        <SprkSpinner lightness={variant === 'secondary' ? 'dark' : undefined}/>)
-      || children}
+        <SprkSpinner lightness={variant === 'secondary' ? 'dark' : undefined} />)
+        || children}
     </TagName>
   );
 };
