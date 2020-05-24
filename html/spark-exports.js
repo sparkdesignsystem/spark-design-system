@@ -127,7 +127,7 @@ import {
   isActiveElement,
 } from './utilities/elementState';
 import getElements from './utilities/getElements';
-import { isTabPressed, isEscPressed } from './utilities/keypress';
+import { isTabPressed, isEscPressed, isEnterPressed, isSpacePressed } from './utilities/keypress';
 import toggleValue from './utilities/toggleValue';
 import {
   dropdowns,
@@ -240,6 +240,8 @@ export {
   getElements,
   isTabPressed,
   isEscPressed,
+  isEnterPressed,
+  isSpacePressed,
   toggleValue,
   dropdowns,
   bindDropdownUIEvents,

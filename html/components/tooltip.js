@@ -1,5 +1,11 @@
 import 'focus-visible';
 import getElements from '../utilities/getElements';
+import {
+  isTabPressed,
+  isEscPressed,
+  isEnterPressed,
+  isSpacePressed,
+} from '../utilities/keypress';
 
 /**
  *  Tooltip JS
@@ -70,14 +76,17 @@ const bindTooltipUIEvents = (tooltipContainer) => {
   trigger.addEventListener('click', (e) => { toggleTooltip(trigger, tooltip) }, false);
 
   trigger.addEventListener('keydown', function (e) {
-    var key = e.key || e.keyCode;
+    console.log('keyCode: ' + e.keyCode);
+    console.log('key: ' + e.key);
 
-    if (key === 32 || key === ' ') {
+
+    if (isSpacePressed(e)) {
       e.preventDefault();
       toggleTooltip(trigger, tooltip);
     }
 
-    if (key === 13 || key === 'Enter') {
+    if (isEnterPressed(e)) {
+      e.preventDefault();
       toggleTooltip(trigger, tooltip);
     }
   });
@@ -91,10 +100,7 @@ const bindTooltipUIEvents = (tooltipContainer) => {
   });
 
   document.addEventListener('keydown', function(e) {
-    var key = e.key || e.keyCode;
-
-    // TODO use utility function, add new ones for Space and Enter?
-    if (key === 'Escape' || key === 'Esc' || key === 27) {
+    if (isEscPressed(e)) {
       hideTooltip(trigger, tooltip);
     }
   });
