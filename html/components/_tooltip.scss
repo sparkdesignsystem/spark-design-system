@@ -9,28 +9,28 @@
   padding-bottom: $sprk-toggle-trigger-padding-bottom;
   padding-left: $sprk-toggle-trigger-padding-left;
   text-align: $sprk-toggle-trigger-text-align;
-  display: inline-block;
+
+  display: flex;
 }
 
 .sprk-c-Tooltip__container {
   position: relative;
+  display: inline-flex;
 
   .sprk-c-Tooltip {
     background-color: $sprk-tooltip-background-color;
     color: $sprk-tooltip-font-color;
-
     padding: $sprk-tooltip-padding;
-
     border-radius: $sprk-tooltip-border-radius;
     font-size: $sprk-tooltip-font-size;
-
-    // max-width: 328px;
-
     overflow-wrap: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
 
+    display: flex;
+    max-width: 328px;
+    width: max-content;
     position: absolute;
     bottom: 1.5rem;
     left: -1rem;
@@ -103,12 +103,6 @@
         bottom: auto;
       }
     }
-
-    .sprk-c-Tooltip__content-wrapper {
-      position: relative;
-      display: inline-block;
-      // max-width: 328px;
-    }
   }
 
   .sprk-c-Icon.sprk-c-Tooltip--toggled {
@@ -125,4 +119,8 @@
   .sprk-c-Icon.sprk-c-Tooltip--toggled + .sprk-c-Tooltip {
     display: inline-block;
   }
+}
+
+.container_wrapper_wrapper {
+  display: inline;
 }
