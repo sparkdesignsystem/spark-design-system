@@ -22,10 +22,6 @@ export const defaultStory = () => {
   }, []);
 
   return `
-  <button class="sprk-c-Button sprk-u-mbm">Focus Target</button>
-  <span class="sprk-b-TypeBodyTwo">
-    We take your privacy seriously.
-
     <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
       <svg
         data-sprk-tooltip="trigger"
@@ -42,14 +38,9 @@ export const defaultStory = () => {
         id="tooltip_1"
         role="tooltip"
       >
-        <span class="sprk-c-Tooltip__content-wrapper">
-          We may share your email with our partners.
-        </span>
+        Tooltips provide additional information about the context.
       </span>
     </span>
-
-  </span>
-  <div tabIndex="0" class=" sprk-u-mtm">Focus Target</div>
   `;
 };
 
