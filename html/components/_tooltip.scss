@@ -23,17 +23,15 @@
     padding: $sprk-tooltip-padding;
     border-radius: $sprk-tooltip-border-radius;
     font-size: $sprk-tooltip-font-size;
-    overflow-wrap: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
 
     display: flex;
-    max-width: 328px;
+    max-width: $sprk-tooltip-max-width;
+    min-width: $sprk-tooltip-min-width;
     width: max-content;
     position: absolute;
     bottom: 1.5rem;
     left: -1rem;
+    z-index: $sprk-tooltip-height;
 
     &:after {
       box-sizing: inherit;

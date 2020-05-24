@@ -1550,6 +1550,12 @@ $sprk-tooltip-font-size: 0.75rem !default;
 $sprk-tooltip-caret-background-color: $sprk-black !default;
 /// The background color for the tooltip icon while toggled.
 $sprk-tooltip-toggled-icon-background-color: $sprk-green !default;
+/// The z-index of the tooltip.
+$sprk-tooltip-height: $sprk-layer-height-xs !default;
+/// The max-width of the tooltip.
+$sprk-tooltip-max-width: 328px !default;
+/// The min-width of the tooltip.
+$sprk-tooltip-min-width: 60px !default;
 
 //
 // Dropdown
