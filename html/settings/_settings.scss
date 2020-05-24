@@ -1533,6 +1533,25 @@ $sprk-toggle-transition-timing: 0.3s ease !default;
 $sprk-toggle-transistion-timing: $sprk-toggle-transition-timing; //TODO: deprecate
 
 //
+// Tooltip
+///
+
+/// The background color for the tooltip.
+$sprk-tooltip-background-color: $sprk-black !default;
+/// The font color for the tooltip.
+$sprk-tooltip-font-color: $sprk-white !default;
+/// The padding for the tooltip.
+$sprk-tooltip-padding: 12px $sprk-space-m !default;
+/// The border radius for the tooltip.
+$sprk-tooltip-border-radius: 4px !default;
+/// The font size for the tooltip.
+$sprk-tooltip-font-size: 0.75rem !default;
+/// The background color for the tooltip caret.
+$sprk-tooltip-caret-background-color: $sprk-black !default;
+/// The background color for the tooltip icon while toggled.
+$sprk-tooltip-toggled-icon-background-color: $sprk-green !default;
+
+//
 // Dropdown
 ///
 

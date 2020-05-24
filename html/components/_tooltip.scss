@@ -17,13 +17,13 @@
   position: relative;
 
   .sprk-c-Tooltip {
-    background-color: $sprk-black;
-    color: $sprk-white;
+    background-color: $sprk-tooltip-background-color;
+    color: $sprk-tooltip-font-color;
 
-    padding: 12px $sprk-space-m;
+    padding: $sprk-tooltip-padding;
 
-    border-radius: 4px;
-    font-size: 0.75rem;
+    border-radius: $sprk-tooltip-border-radius;
+    font-size: $sprk-tooltip-font-size;
 
     // max-width: 328px;
 
@@ -44,7 +44,7 @@
       bottom: -0.5rem;
       width: 1rem;
       height: 1rem;
-      background-color: $sprk-black;
+      background-color: $sprk-tooltip-caret-background-color;
       transform: rotateY(0deg) rotate(45deg);
       content: " ";
     }
@@ -113,7 +113,7 @@
   }
 
   .sprk-c-Icon.sprk-c-Tooltip--toggled {
-    fill: $sprk-green;
+    fill: $sprk-tooltip-toggled-icon-background-color;
   }
 
   /* Show/hide the tooltip on focus and hover */
