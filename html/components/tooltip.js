@@ -1,7 +1,5 @@
-import 'focus-visible';
 import getElements from '../utilities/getElements';
 import {
-  isTabPressed,
   isEscPressed,
   isEnterPressed,
   isSpacePressed,
@@ -39,7 +37,6 @@ function addPositioningClass(trigger, tooltip) {
   tooltip.classList.remove('sprk-c-Tooltip--top_right');
   tooltip.classList.remove('sprk-c-Tooltip--top_left');
 
-  // determine the positioning class
   tooltip.classList.add(calculatePositionClass(trigger));
 }
 
@@ -76,10 +73,6 @@ const bindTooltipUIEvents = (tooltipContainer) => {
   trigger.addEventListener('click', (e) => { toggleTooltip(trigger, tooltip) }, false);
 
   trigger.addEventListener('keydown', function (e) {
-    console.log('keyCode: ' + e.keyCode);
-    console.log('key: ' + e.key);
-
-
     if (isSpacePressed(e)) {
       e.preventDefault();
       toggleTooltip(trigger, tooltip);
