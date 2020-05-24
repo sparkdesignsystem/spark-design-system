@@ -1,30 +1,4 @@
-/* global document beforeEach afterEach describe it window */
-// const proxyquireStrict = require('proxyquire').noCallThru();
-
-// when something tries to import dom-slider,
-// return an empty object
-// const mockDOMSliderStub = {};
-// jest.mock('dom-slider', () => mockDOMSliderStub);
-
-// when a test tries to access window.domSlider.slideToggle,
-// return a Promise that resolves immediately so we can test
-// the .then()
-// const mockDOMSliderWindow = {
-//   slideToggle : () => {
-//     return new Promise((resolve) => { resolve() })
-//   }
-// };
-
-// window.domSlider = mockDOMSliderWindow;
-
 describe('Tooltip tests', () => {
-  // const {
-  //   tooltip,
-  //   bindTooltipUIEvents,
-  //   showTooltip,
-  //   hideTooltip,
-  //   toggleTooltip
-  // } = require('../components/tooltip');
   const tooltip = require('../components/tooltip');
   let container;
   let trigger;
@@ -55,10 +29,6 @@ describe('Tooltip tests', () => {
     container.append(tooltip_element);
 
     document.body.appendChild(container);
-  });
-
-  afterEach(() => {
-    // document.querySelectorAll.restore();
   });
 
   it('should call getElements once with the correct selector', () => {

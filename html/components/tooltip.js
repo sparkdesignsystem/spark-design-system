@@ -4,10 +4,10 @@ import {
   isEnterPressed,
   isSpacePressed,
 } from '../utilities/keypress';
+import toggleAriaExpanded from '../utilities/toggleAriaExpanded';
 
 /**
  *  Tooltip JS
- *  todo - should use toggleAriaExpanded
  */
 
 function calculatePositionClass(trigger){
@@ -43,7 +43,7 @@ function addPositioningClass(trigger, tooltip) {
 function showTooltip(trigger, tooltip, stickOpen) {
   addPositioningClass(trigger, tooltip);
 
-  trigger.setAttribute('aria-expanded', 'true');
+  toggleAriaExpanded(trigger);
 
   if (stickOpen) {
     trigger.classList.add('sprk-c-Tooltip--toggled');
@@ -51,7 +51,7 @@ function showTooltip(trigger, tooltip, stickOpen) {
 }
 
 function hideTooltip(trigger, tooltip) {
-  trigger.setAttribute('aria-expanded', 'false');
+  toggleAriaExpanded(trigger);
   trigger.classList.remove('sprk-c-Tooltip--toggled');
 }
 
