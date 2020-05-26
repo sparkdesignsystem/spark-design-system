@@ -102,10 +102,6 @@ import {
 } from './components/toggle';
 import {
   tooltip,
-  // toggleIconType,
-  // toggleAriaExpanded,
-  // handleToggleClick,
-  // bindToggleUIEvents,
 } from './components/tooltip';
 import isValidDate from './utilities/validation/isValidDate';
 import isValidMonetary from './utilities/validation/isValidMonetary';
