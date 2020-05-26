@@ -23,14 +23,14 @@ export const defaultStory = () => {
 
   return `
     <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
-      <svg
-        data-sprk-tooltip="trigger"
-        class="sprk-c-Icon sprk-c-Icon--filled"
-        aria-labelledby="tooltip_1"
-        tabIndex="0"
-      >
-        <use xlink:href="#information-filled-small" aria-hidden='true' />
-      </svg>
+      <button data-sprk-tooltip="trigger" class="sprk-c-Tooltip__trigger" aria-labelledby="tooltip_1">
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--filled"
+          aria-hidden='true'
+        >
+          <use xlink:href="#information-filled-small" />
+        </svg>
+      </button>
       <span
         data-sprk-tooltip="content"
         class="sprk-c-Tooltip"

@@ -1,21 +1,21 @@
-.sprk-c-Tooltip__trigger {
-  // Button User Agent Resets
-  background-color: $sprk-toggle-trigger-background-color;
-  border-top: $sprk-toggle-trigger-border-top;
-  border-left: $sprk-toggle-trigger-border-left;
-  border-right: $sprk-toggle-trigger-border-right;
-  padding-top: $sprk-toggle-trigger-padding-top;
-  padding-right: $sprk-toggle-trigger-padding-right;
-  padding-bottom: $sprk-toggle-trigger-padding-bottom;
-  padding-left: $sprk-toggle-trigger-padding-left;
-  text-align: $sprk-toggle-trigger-text-align;
-
-  display: flex;
-}
-
 .sprk-c-Tooltip__container {
   position: relative;
   display: inline-flex;
+
+  .sprk-c-Tooltip__trigger {
+    // Button User Agent Resets
+    background-color: $sprk-toggle-trigger-background-color;
+    border-top: $sprk-toggle-trigger-border-top;
+    border-bottom: 0;
+    border-left: $sprk-toggle-trigger-border-left;
+    border-right: $sprk-toggle-trigger-border-right;
+    padding-top: $sprk-toggle-trigger-padding-top;
+    padding-right: $sprk-toggle-trigger-padding-right;
+    padding-bottom: $sprk-toggle-trigger-padding-bottom;
+    padding-left: $sprk-toggle-trigger-padding-left;
+    text-align: $sprk-toggle-trigger-text-align;
+    display: flex;
+  }
 
   .sprk-c-Tooltip {
     background-color: $sprk-tooltip-background-color;
@@ -82,7 +82,7 @@
 
       &:after {
         left: auto;
-        top: -.5rem;
+        top: -0.5rem;
         right: 1rem;
         bottom: auto;
       }
@@ -96,14 +96,14 @@
 
       &:after {
         left: 1rem;
-        top: -.5rem;
+        top: -0.5rem;
         right: auto;
         bottom: auto;
       }
     }
   }
 
-  .sprk-c-Icon.sprk-c-Tooltip--toggled {
+  .sprk-c-Tooltip--toggled svg {
     fill: $sprk-tooltip-toggled-icon-background-color;
   }
 
@@ -112,13 +112,9 @@
     display: none;
   }
 
-  .sprk-c-Icon:hover + .sprk-c-Tooltip,
-  .sprk-c-Icon:focus + .sprk-c-Tooltip,
-  .sprk-c-Icon.sprk-c-Tooltip--toggled + .sprk-c-Tooltip {
+  .sprk-c-Tooltip__trigger:hover + .sprk-c-Tooltip,
+  .sprk-c-Tooltip__trigger:focus + .sprk-c-Tooltip,
+  .sprk-c-Tooltip__trigger.sprk-c-Tooltip--toggled + .sprk-c-Tooltip {
     display: inline-block;
   }
-}
-
-.container_wrapper_wrapper {
-  display: inline;
 }

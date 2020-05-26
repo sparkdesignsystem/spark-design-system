@@ -67,7 +67,6 @@ const bindTooltipUIEvents = (tooltipContainer) => {
   var trigger = tooltipContainer.querySelector('[data-sprk-tooltip="trigger"]');
   var tooltip = tooltipContainer.querySelector('[data-sprk-tooltip="content"]');
 
-  trigger.setAttribute('aria-role', 'button');
   trigger.setAttribute('aria-expanded', 'false');
 
   trigger.addEventListener('click', (e) => { toggleTooltip(trigger, tooltip) }, false);

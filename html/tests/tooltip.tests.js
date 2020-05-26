@@ -9,12 +9,9 @@ describe('Tooltip tests', () => {
     container.setAttribute('data-sprk-tooltip', 'container');
     container.classList.add('sprk-c-Tooltip__container');
 
-    trigger = document.createElement('svg');
+    trigger = document.createElement('button');
     trigger.setAttribute('data-sprk-tooltip', 'trigger');
-    trigger.classList.add('sprk-c-Icon');
-    trigger.classList.add('sprk-c-Icon--filled');
     trigger.setAttribute('aria-labelledby', 'tooltip_1');
-    trigger.setAttribute('tabIndex', '0');
 
     tooltip_element = document.createElement('span');
     tooltip_element.setAttribute('data-sprk-tooltip', 'content');
@@ -38,12 +35,6 @@ describe('Tooltip tests', () => {
       .getCall(0).args[0]).toBe('[data-sprk-tooltip="container"]');
 
     document.querySelectorAll.restore();
-  });
-
-  it('should add button role', () => {
-    expect(trigger.getAttribute('aria-role')).toBe(null);
-    tooltip.tooltip();
-    expect(trigger.getAttribute('aria-role')).toBe('button');
   });
 
   it('should add aria expanded', () => {
