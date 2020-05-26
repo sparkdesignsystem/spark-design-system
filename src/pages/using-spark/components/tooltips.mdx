@@ -34,7 +34,7 @@ Use tooltips when the feature needs to be explained in further detail to walk us
 ## Anatomy
 
 - Content within tooltips must be text based with a max character count of 140.
-- Width of tooltips box must be 290 px.
+- The maximum width of tooltips must be 290 px.
 - Position of design changes based on how close the feature is to the screen’s edge such as:
 
 ## Accessibility
@@ -46,6 +46,6 @@ Tooltips must be discoverable and [operable](https://www.w3.org/TR/WCAG20/#ope
 - Always include a visible label within UI controls.
 - Interactive elements must be reachable using keyboard.
 - Users should hide tooltips by pressing the Escape key on the keyboard.
-- Trigger tooltips by using `aria-describedby` and id.
-- Hide tooltips when it’s unreachable by using `aria-hidden`.
+- Tooltips use `aria-describedby` and `id` to establish a relationship between the trigger and content for screen readers and other assistive technology.
+- Tooltips use `aria-hidden` so they are unreachable by screen readers when the tooltip is not expanded.
 - Add text alternatives to icon buttons to express action user is taking.

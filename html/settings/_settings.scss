@@ -1545,7 +1545,7 @@ $sprk-tooltip-padding: 12px $sprk-space-m !default;
 /// The border radius for the tooltip.
 $sprk-tooltip-border-radius: 4px !default;
 /// The font size for the tooltip.
-$sprk-tooltip-font-size: 0.75rem !default;
+$sprk-tooltip-font-size: $sprk-font-size-body-four !default;
 /// The background color for the tooltip caret.
 $sprk-tooltip-caret-background-color: $sprk-black !default;
 /// The background color for the tooltip icon while toggled.
