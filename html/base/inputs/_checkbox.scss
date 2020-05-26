@@ -83,57 +83,40 @@
 
 
 .sprk-b-Checkbox--huge {
-
+// sprk-checkbox-huge-elementaffected-state(if applicable)-cssStyle
   .sprk-b-Checkbox__label {
-    // transition: $sprk-huge-checkbox-label-transition;
-    transition: $sprk-checkbox-transition;
-    // border: $sprk-huge-checkbox-label-border;
-    border: 2px $sprk-black-tint-50 solid;
-    // border-radius: $sprk-huge-checkbox-label-border-radius;
-    border-radius: 4px;
+    transition: $sprk-checkbox-huge-container-transition;
+    border: $sprk-checkbox-huge-container-border;
+    border-radius: $sprk-checkbox-huge-container-border-radius;
 
-    // padding: $sprk-huge-checkbox-label-padding;
-    padding: 18px 14px 18px 51px;
-    // flex-basis: $sprk-huge-checkbox-label-flex-basis;
-    flex-basis: 100%;
-    // line-height: $sprk-huge-checkbox-label-line-height;
-    line-height: 1rem;
+    padding: $sprk-checkbox-huge-container-padding;
+    flex-basis: $sprk-checkbox-huge-container-flex-basis;
+    line-height: $sprk-checkbox-huge-container-line-height;
 
     // The custom checkbox element
     &::before {
-      // height: $sprk-huge-checkbox-custom-input-height;
-      height: 1.5rem;
-      // width: $sprk-huge-checkbox-custom-input-weight;
-      width: 1.5rem;
-      // top: $sprk-huge-checkbox-custom-input-top;
-      top: 14px;
-      // left: $sprk-huge-checkbox-custom-input-left;
-      left: 14px;
+      height: $sprk-checkbox-huge-custom-input-height;
+      width: $sprk-checkbox-huge-custom-input-weight;
+      top: $sprk-checkbox-huge-custom-input-top;
+      left: $sprk-checkbox-huge-custom-input-left;
     }
 
     // The checkmark that shows up in the box
     &::after {
       content: none;
-      // height: $sprk-huge-checkbox-checkmark-icon-height;
-      height: 0.53125rem;
+      height: $sprk-checkbox-huge-checkmark-icon-height;
       // 0.76736rem -- 1.444444 is the ratio
-      // width: $sprk-huge-checkbox-checkmark-icon-width;
-      width: 0.53125rem * 1.44444444444444;
-      // left: $sprk-huge-checkbox-checkmark-icon-left;
-      left: 20px;
-      // top: $sprk-huge-checkbox-checkmark-icon-top;
-      top: 19px;
+      width: $sprk-checkbox-huge-checkmark-icon-width;
+      left: $sprk-checkbox-huge-checkmark-icon-left;
+      top: $sprk-checkbox-huge-checkmark-icon-top;
     }
 
     &:hover {
-      // border-color: $sprk-huge-checkbox-container-hover-border-color;
-      border-color: $sprk-black;
-      // box-shadow: $sprk-huge-checkbox-container-hover-box-shadow;
-      box-shadow: $sprk-input-huge-box-shadow;
+      border-color: $sprk-checkbox-huge-container-hover-border-color;
+      box-shadow: $sprk-checkbox-huge-container-hover-box-shadow;
 
       &::before {
-        // border-color: $sprk-huge-checkbox-custom-input-hover-border-color;
-        border-color: $sprk-black;
+        border-color: $sprk-checkbox-huge-custom-input-hover-border-color;
       }
     }
   }
@@ -143,22 +126,17 @@
 
     &:disabled {
       & + .sprk-b-Checkbox__label {
-        // border-color: $sprk-huge-checkbox-disabled-container-border-color;
-        border-color: $sprk-black-tint-25;
-        // background: $sprk-huge-checkbox-disabled-container-background;
-        background: $sprk-gray;
-        // cursor: $sprk-huge-checkbox-disabled-container-cursor;
-        cursor: not-allowed;
+        border-color: $sprk-checkbox-huge-container-disabled-border-color;
+        background: $sprk-checkbox-huge-container-disabled-background;
+        cursor: $sprk-checkbox-huge-container-disabled-cursor;
 
         &::before {
-          // border-color: $sprk-huge-checkbox-disabled-custom-checkbox-element-border-color;
-          border-color: $sprk-black-tint-25;
+          border-color: $sprk-checkbox-huge-custom-input-disabled-border-color;
         }
       }
 
       &:hover + .sprk-b-Checkbox__label {
-        // box-shadow: $sprk-huge-checkbox-disabled-custom-checkbox-element-box-shadow;
-        box-shadow: none;
+        box-shadow: $sprk-checkbox-huge-container-disabled-box-shadow;
       }
     }
 
@@ -166,41 +144,34 @@
     &:focus {
       & + .sprk-b-Checkbox__label {
         // Container's border color when focused through keyboard
-        // border-color: $sprk-huge-checkbox-container-focus-border-color;
-        border-color: $sprk-green;
+        border-color: $sprk-checkbox-huge-container-focus-border-color;
 
         // Custom checkbox element border color when focused through keyboard
         &:hover {
-          // border-color: $sprk-huge-checkbox-custom-focus-hover-input-border-color;
-          border-color: $sprk-black;
+          border-color: $sprk-checkbox-huge-container-focus-hover-border-color;
         }
       }
     }
 
-
     &:checked  {
       & + .sprk-b-Checkbox__label {
         // Container's border color when checked
-        // border-color: $sprk-huge-checkbox-container-checked-border-color;
-        border-color: $sprk-green;
+        border-color: $sprk-checkbox-huge-container-checked-border-color;
 
         // Container's border color when checked and hovered
         &:hover {
-          // border-color: $sprk-huge-checkbox-container-checked-hover-border-color;
-          border-color: $sprk-black;
+          border-color: $sprk-checkbox-huge-container-checked-hover-border-color;
         }
 
         // Custom checkbox element's border color when checked
         &::before {
-          // border-color: $sprk-huge-checkbox-container-custom-checkbox-element-checked-border-color;
-          border-color: $sprk-green;
+          border-color: $sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color;
         }
       }
 
       // Styles for container when checkbox is focused on while being checked
       &:focus + .sprk-b-Checkbox__label {
-        // border-color: $sprk-huge-checkbox-container-focus-checked-border-color;
-        border-color: $sprk-black;
+        border-color: $sprk-checkbox-huge-container-focus-checked-border-color;
       }
     }
 

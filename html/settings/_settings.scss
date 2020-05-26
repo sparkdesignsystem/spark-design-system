@@ -1060,6 +1060,42 @@ $sprk-checkbox-custom-input-cursor-disabled: default !default;
 $sprk-checkbox-custom-input-background-color-disabled: transparent !default;
 
 //
+// Huge Checkbox
+///
+$sprk-checkbox-huge-container-transition: $sprk-checkbox-transition !default;
+$sprk-checkbox-huge-container-border: 2px $sprk-black-tint-50 solid !default;
+$sprk-checkbox-huge-container-border-radius: 4px !default;
+$sprk-checkbox-huge-container-padding: 20px 16px 20px 63px !default;
+$sprk-checkbox-huge-container-flex-basis: 100% !default;
+$sprk-checkbox-huge-container-line-height: 1rem !default;
+$sprk-checkbox-huge-container-disabled-box-shadow: none !default;
+$sprk-checkbox-huge-container-hover-border-color: $sprk-black !default;
+$sprk-checkbox-huge-container-hover-box-shadow: $sprk-input-huge-box-shadow !default;
+$sprk-checkbox-huge-container-disabled-border-color: $sprk-black-tint-25 !default;
+$sprk-checkbox-huge-container-disabled-background: $sprk-gray !default;
+$sprk-checkbox-huge-container-disabled-cursor: not-allowed !default;
+$sprk-checkbox-huge-container-focus-border-color: $sprk-green !default;
+$sprk-checkbox-huge-container-focus-hover-border-color: $sprk-black !default;
+$sprk-checkbox-huge-container-checked-border-color: $sprk-green !default;
+$sprk-checkbox-huge-container-checked-hover-border-color: $sprk-black !default;
+$sprk-checkbox-huge-container-focus-checked-border-color: $sprk-black !default;
+
+$sprk-checkbox-huge-custom-input-height: 1.5rem !default;
+$sprk-checkbox-huge-custom-input-weight: 1.5rem !default;
+$sprk-checkbox-huge-custom-input-top: 14px !default;
+$sprk-checkbox-huge-custom-input-left: 14px !default;
+$sprk-checkbox-huge-custom-input-hover-border-color: $sprk-black !default;
+$sprk-checkbox-huge-custom-input-disabled-border-color: $sprk-black-tint-25 !default;
+$sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color: $sprk-green !default;
+
+$sprk-checkbox-huge-checkmark-icon-height: 0.53125rem !default;
+$sprk-checkbox-huge-checkmark-icon-width: 0.53125rem * 1.44444444444444 !default;
+$sprk-checkbox-huge-checkmark-icon-left: 20px !default;
+$sprk-checkbox-huge-checkmark-icon-top: 19px !default;
+
+
+
+//
 // Input Errors
 ///
 
