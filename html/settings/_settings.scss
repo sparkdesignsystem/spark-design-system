@@ -1536,6 +1536,14 @@ $sprk-toggle-transistion-timing: $sprk-toggle-transition-timing; //TODO: depreca
 // Tooltip
 ///
 
+/// The border for the tooltip trigger.
+$sprk-tooltip-trigger-border: none !default;
+/// The background color for the tooltip trigger.
+$sprk-tooltip-trigger-background-color: transparent !default;
+/// The padding for the tooltip trigger.
+$sprk-tooltip-trigger-padding: none !default;
+/// The text align for the tooltip trigger.
+$sprk-tooltip-trigger-text-align: left !default;
 /// The background color for the tooltip.
 $sprk-tooltip-background-color: $sprk-black !default;
 /// The font color for the tooltip.
