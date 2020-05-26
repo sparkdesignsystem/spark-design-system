@@ -6,7 +6,7 @@ import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Tooltips
 
-The tooltip component appears as a popup design providing a short text description of information about a feature when the user hovers over the item.
+The tooltips component appears as a popup design providing a short text description of information about a feature when the user hovers over the item.
 
 <ComponentPreview
   componentName="tooltip--default-story"
@@ -15,15 +15,16 @@ The tooltip component appears as a popup design providing a short text descripti
 
 ### Usage
 
-Use tooltips when the feature needs to be explained in furhter detail to walk users through a specific action. I thelps to draw the users' attention to a feature without interrupting their workflow. They can only be used on icons.
+Use tooltips when the feature needs to be explained in further detail to walk users through a specific action. It helps to draw the users' attention to a feature without interrupting their workflow.
 
 ### Guidelines
 
-- Appears when a user hovers over a feature.
-- Remains in veiw until the user actively dismisses it.
-- Infrmation should be discrete, short and concise.
-- Do not use a warning or alert.
-- Do not include links or modals.
+- Appears when a user hovers over or clicks on the tooltips icon.
+- Remains in view until the user actively dismisses.
+- Located above other content on the page, but below a modal or masthead.
+- Information should be discrete, short and concise.
+- Do not use as a warning or alert.
+- Do not include in links or modals.
 
 <SprkDivider
  element="span"
@@ -32,10 +33,19 @@ Use tooltips when the feature needs to be explained in furhter detail to walk us
 
 ## Anatomy
 
-Tooltips must be discoverable and operable by users that rely on a diverse set of establish navigational means.
+- Content within tooltips must be text based with a max character count of 140.
+- Width of tooltips box must be 290 px.
+- Position of design changes based on how close the feature is to the screen’s edge such as:
+
+## Accessibility
+Tooltips must be discoverable and [operable](https://www.w3.org/TR/WCAG20/#operable) by users that rely on a diverse set of established navigational means. Also, in compliance with [1.4.13: Content on Hover or Focus](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html) WCAG rules, make sure that any content appearing on hover or focus is dismissible, hoverable, and persistent.
+
 - Must be accessible by mouse, pointer devices, keyboard-only, screen reader, zoom software, and any other assistive technology.
 - Allow the mouse to easily move over the tooltip without dismissing it.
 - Complex content should be browsable line by line using screen readers.
 - Always include a visible label within UI controls.
 - Interactive elements must be reachable using keyboard.
 - Users should hide tooltips by pressing the Escape key on the keyboard.
+- Trigger tooltips by using `aria-describedby` and id.
+- Hide tooltips when it’s unreachable by using `aria-hidden`.
+- Add text alternatives to icon buttons to express action user is taking.
