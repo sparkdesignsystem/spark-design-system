@@ -1549,7 +1549,7 @@ $sprk-tooltip-background-color: $sprk-black !default;
 /// The font color for the tooltip.
 $sprk-tooltip-font-color: $sprk-white !default;
 /// The padding for the tooltip.
-$sprk-tooltip-padding: 12px $sprk-space-m !default;
+$sprk-tooltip-padding: $sprk-space-inset-short-m;
 /// The border radius for the tooltip.
 $sprk-tooltip-border-radius: 4px !default;
 /// The font size for the tooltip.
@@ -1559,7 +1559,7 @@ $sprk-tooltip-caret-background-color: $sprk-black !default;
 /// The background color for the tooltip icon while toggled.
 $sprk-tooltip-toggled-icon-background-color: $sprk-green !default;
 /// The z-index of the tooltip.
-$sprk-tooltip-height: $sprk-layer-height-xs !default;
+$sprk-tooltip-z-index: $sprk-layer-height-xs !default;
 /// The max-width of the tooltip.
 $sprk-tooltip-max-width: 328px !default;
 /// The min-width of the tooltip.
