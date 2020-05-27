@@ -8,6 +8,16 @@
     padding: $sprk-tooltip-trigger-padding;
     text-align: $sprk-tooltip-trigger-text-align;
     display: flex;
+
+    /* Increase hoverable area of trigger */
+    &:after {
+      position: absolute;
+      top: -1rem;
+      left: -1rem;
+      width: 3rem;
+      height: 3rem;
+      content: " ";
+    }
   }
 
   .sprk-c-Tooltip {
@@ -18,20 +28,18 @@
     font-size: $sprk-tooltip-font-size;
 
     display: flex;
+    position: absolute;
     max-width: $sprk-tooltip-max-width;
     min-width: $sprk-tooltip-min-width;
     width: max-content;
-    position: absolute;
     bottom: 1.5rem;
     left: -1rem;
     z-index: $sprk-tooltip-height;
 
-    &:after {
-      box-sizing: inherit;
+    &:before {
       position: absolute;
-      display: inline-block;
-      left: 1rem;
       bottom: -0.5rem;
+      left: 1rem;
       width: 1rem;
       height: 1rem;
       background-color: $sprk-tooltip-caret-background-color;
@@ -41,57 +49,57 @@
 
     &.sprk-c-Tooltip--top_left {
       top: auto;
-      bottom: 1.5rem;
-      left: auto;
       right: -1rem;
+      bottom: 2rem;
+      left: auto;
 
-      &:after {
-        left: auto;
-        right: 1rem;
+      &:before {
         top: auto;
+        right: 1rem;
         bottom: -0.5rem;
+        left: auto;
       }
     }
 
     &.sprk-c-Tooltip--top_right {
       top: auto;
-      bottom: 1.5rem;
-      left: -1rem;
       right: auto;
+      bottom: 2rem;
+      left: -1rem;
 
-      &:after {
-        left: 1rem;
-        right: auto;
+      &:before {
         top: auto;
+        right: auto;
         bottom: -0.5rem;
+        left: 1rem;
       }
     }
 
     &.sprk-c-Tooltip--bottom_left {
       top: 2rem;
-      bottom: auto;
       right: -1rem;
+      bottom: auto;
       left: auto;
 
-      &:after {
-        left: auto;
+      &:before {
         top: -0.5rem;
         right: 1rem;
         bottom: auto;
+        left: auto;
       }
     }
 
     &.sprk-c-Tooltip--bottom_right {
       top: 2rem;
-      bottom: auto;
       right: auto;
+      bottom: auto;
       left: -1rem;
 
-      &:after {
-        left: 1rem;
+      &:before {
         top: -0.5rem;
         right: auto;
         bottom: auto;
+        left: 1rem;
       }
     }
   }
@@ -100,14 +108,14 @@
     fill: $sprk-tooltip-toggled-icon-background-color;
   }
 
-  /* Show/hide the tooltip on focus and hover */
   .sprk-c-Tooltip {
     display: none;
   }
 
   .sprk-c-Tooltip__trigger:hover + .sprk-c-Tooltip,
   .sprk-c-Tooltip__trigger:focus + .sprk-c-Tooltip,
-  .sprk-c-Tooltip__trigger.sprk-c-Tooltip--toggled + .sprk-c-Tooltip {
+  .sprk-c-Tooltip__trigger.sprk-c-Tooltip--toggled + .sprk-c-Tooltip,
+  .sprk-c-Tooltip:hover {
     display: inline-block;
   }
 }
