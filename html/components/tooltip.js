@@ -10,7 +10,7 @@ import toggleAriaExpanded from '../utilities/toggleAriaExpanded';
  *  Tooltip JS
  */
 
-function calculatePositionClass(trigger){
+const calculatePositionClass = (trigger) => {
   const elemX = trigger.getBoundingClientRect().left;
   const elemY = trigger.getBoundingClientRect().top;
   const viewportWidth = window.innerWidth;
@@ -31,7 +31,7 @@ function calculatePositionClass(trigger){
   }
 }
 
-function addPositioningClass(trigger, tooltip) {
+const addPositioningClass = (trigger, tooltip) => {
   tooltip.classList.remove('sprk-c-Tooltip--bottom-right');
   tooltip.classList.remove('sprk-c-Tooltip--bottom-left');
   tooltip.classList.remove('sprk-c-Tooltip--top-right');
@@ -40,7 +40,7 @@ function addPositioningClass(trigger, tooltip) {
   tooltip.classList.add(calculatePositionClass(trigger));
 }
 
-function showTooltip(trigger, tooltip, stickOpen) {
+const showTooltip = (trigger, tooltip, stickOpen) => {
   addPositioningClass(trigger, tooltip);
 
   toggleAriaExpanded(trigger);
@@ -50,14 +50,14 @@ function showTooltip(trigger, tooltip, stickOpen) {
   }
 }
 
-function hideTooltip(trigger, tooltip) {
+const hideTooltip = (trigger) => {
   toggleAriaExpanded(trigger);
   trigger.classList.remove('sprk-c-Tooltip--toggled');
 }
 
-function toggleTooltip(trigger, tooltip) {
+const toggleTooltip = (trigger, tooltip) => {
   if (trigger.classList.contains('sprk-c-Tooltip--toggled')) {
-    hideTooltip(trigger, tooltip);
+    hideTooltip(trigger);
   } else {
     showTooltip(trigger, tooltip, true);
   }
@@ -93,13 +93,13 @@ const bindTooltipUIEvents = (tooltipContainer) => {
 
   document.addEventListener('keydown', function(e) {
     if (isEscPressed(e)) {
-      hideTooltip(trigger, tooltip);
+      hideTooltip(trigger);
     }
   });
 
   document.addEventListener('click', (e) => {
     if (!(tooltip.contains(e.target) || trigger.contains(e.target))) {
-      hideTooltip(trigger, tooltip);
+      hideTooltip(trigger);
     }
   });
 };

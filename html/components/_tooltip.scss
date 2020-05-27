@@ -27,7 +27,6 @@
     border-radius: $sprk-tooltip-border-radius;
     font-size: $sprk-tooltip-font-size;
 
-    display: flex;
     position: absolute;
     max-width: $sprk-tooltip-max-width;
     min-width: $sprk-tooltip-min-width;
@@ -35,6 +34,8 @@
     bottom: 1.5rem;
     left: -1rem;
     z-index: $sprk-tooltip-height;
+
+    display: none;
 
     &::selection {
       color: $sprk-white;
@@ -108,12 +109,8 @@
     }
   }
 
-  .sprk-c-Tooltip--toggled svg {
+  .sprk-c-Tooltip--toggled .sprk-c-Icon {
     fill: $sprk-tooltip-toggled-icon-background-color;
-  }
-
-  .sprk-c-Tooltip {
-    display: none;
   }
 
   .sprk-c-Tooltip__trigger:hover + .sprk-c-Tooltip,

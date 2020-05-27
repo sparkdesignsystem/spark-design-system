@@ -10,7 +10,7 @@ export default {
   ],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('toggle')}
+${markdownDocumentationLinkBuilder('tooltips')}
     `,
     docs: { iframeHeight: 160 },
   },
@@ -38,7 +38,7 @@ export const defaultStory = () => {
         id="tooltip_1"
         role="tooltip"
       >
-        Tooltips provide additional information about the context.
+        Tooltips provide a short text description of information about a feature.
       </span>
     </span>
   `;
