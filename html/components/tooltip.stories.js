@@ -26,7 +26,7 @@ export const defaultStory = () => {
       <button data-sprk-tooltip="trigger" class="sprk-c-Tooltip__trigger" aria-labelledby="tooltip_1">
         <svg
           class="sprk-c-Icon sprk-c-Icon--filled"
-          aria-hidden='true'
+          aria-hidden="true"
         >
           <use xlink:href="#information-filled-small" />
         </svg>
