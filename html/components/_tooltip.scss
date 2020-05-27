@@ -10,7 +10,7 @@
     display: flex;
 
     /* Increase hoverable area of trigger */
-    &:after {
+    &:hover:after {
       position: absolute;
       top: -1rem;
       left: -1rem;
