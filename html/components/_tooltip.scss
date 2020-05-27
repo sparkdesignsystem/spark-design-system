@@ -1,6 +1,7 @@
 .sprk-c-Tooltip__container {
   position: relative;
   display: inline-flex;
+  vertical-align: middle;
 
   .sprk-c-Tooltip__trigger {
     background-color: $sprk-tooltip-trigger-background-color;
