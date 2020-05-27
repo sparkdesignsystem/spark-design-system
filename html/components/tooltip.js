@@ -18,24 +18,24 @@ function calculatePositionClass(trigger){
 
   if (elemX > viewportWidth / 2) {
     if (elemY > viewportHeight / 2) {
-      return 'sprk-c-Tooltip--top_left';
+      return 'sprk-c-Tooltip--top-left';
     } else {
-      return 'sprk-c-Tooltip--bottom_left';
+      return 'sprk-c-Tooltip--bottom-left';
     }
   } else {
     if (elemY > viewportHeight / 2) {
-      return 'sprk-c-Tooltip--top_right';
+      return 'sprk-c-Tooltip--top-right';
     } else {
-      return 'sprk-c-Tooltip--bottom_right';
+      return 'sprk-c-Tooltip--bottom-right';
     }
   }
 }
 
 function addPositioningClass(trigger, tooltip) {
-  tooltip.classList.remove('sprk-c-Tooltip--bottom_right');
-  tooltip.classList.remove('sprk-c-Tooltip--bottom_left');
-  tooltip.classList.remove('sprk-c-Tooltip--top_right');
-  tooltip.classList.remove('sprk-c-Tooltip--top_left');
+  tooltip.classList.remove('sprk-c-Tooltip--bottom-right');
+  tooltip.classList.remove('sprk-c-Tooltip--bottom-left');
+  tooltip.classList.remove('sprk-c-Tooltip--top-right');
+  tooltip.classList.remove('sprk-c-Tooltip--top-left');
 
   tooltip.classList.add(calculatePositionClass(trigger));
 }

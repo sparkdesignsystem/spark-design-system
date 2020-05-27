@@ -163,7 +163,7 @@ describe('Tooltip tests', () => {
       }
 
       trigger.click();
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top_left')).toBe(true);
+      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
     });
 
     it('should add the top right positioning class', () => {
@@ -175,7 +175,7 @@ describe('Tooltip tests', () => {
       }
 
       trigger.click();
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top_right')).toBe(true);
+      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top-right')).toBe(true);
     });
 
     it('should add the bottom left positioning class', () => {
@@ -187,7 +187,7 @@ describe('Tooltip tests', () => {
       }
 
       trigger.click();
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--bottom_left')).toBe(true);
+      expect(tooltip_element.classList.contains('sprk-c-Tooltip--bottom-left')).toBe(true);
     });
 
     it('should add the bottom right positioning class', () => {
@@ -199,7 +199,7 @@ describe('Tooltip tests', () => {
       }
 
       trigger.click();
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--bottom_right')).toBe(true);
+      expect(tooltip_element.classList.contains('sprk-c-Tooltip--bottom-right')).toBe(true);
     });
 
     it('should add positioning class on hover', () => {
@@ -213,7 +213,7 @@ describe('Tooltip tests', () => {
       const event = new window.Event('mouseover');
       trigger.dispatchEvent(event);
 
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top_left')).toBe(true);
+      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
     })
 
     it('should add positioning class on focus', () => {
@@ -227,7 +227,7 @@ describe('Tooltip tests', () => {
       const event = new window.Event('focus');
       trigger.dispatchEvent(event);
 
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top_left')).toBe(true);
+      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
     })
   })
 });

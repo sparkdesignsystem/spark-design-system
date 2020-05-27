@@ -36,6 +36,10 @@
     left: -1rem;
     z-index: $sprk-tooltip-height;
 
+    &::selection {
+      color: $sprk-white;
+    }
+
     &:before {
       position: absolute;
       bottom: -0.5rem;
@@ -47,7 +51,7 @@
       content: " ";
     }
 
-    &.sprk-c-Tooltip--top_left {
+    &.sprk-c-Tooltip--top-left {
       top: auto;
       right: -1rem;
       bottom: 2rem;
@@ -61,7 +65,7 @@
       }
     }
 
-    &.sprk-c-Tooltip--top_right {
+    &.sprk-c-Tooltip--top-right {
       top: auto;
       right: auto;
       bottom: 2rem;
@@ -75,7 +79,7 @@
       }
     }
 
-    &.sprk-c-Tooltip--bottom_left {
+    &.sprk-c-Tooltip--bottom-left {
       top: 2rem;
       right: -1rem;
       bottom: auto;
@@ -89,7 +93,7 @@
       }
     }
 
-    &.sprk-c-Tooltip--bottom_right {
+    &.sprk-c-Tooltip--bottom-right {
       top: 2rem;
       right: auto;
       bottom: auto;
