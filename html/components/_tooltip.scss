@@ -40,8 +40,8 @@
       position: absolute;
       bottom: -0.5rem;
       left: 1rem;
-      width: 1rem;
-      height: 1rem;
+      width: $sprk-tooltip-caret-width;
+      height: $sprk-tooltip-caret-width;
       background-color: $sprk-tooltip-caret-background-color;
       transform: rotateY(0deg) rotate(45deg);
       content: " ";
