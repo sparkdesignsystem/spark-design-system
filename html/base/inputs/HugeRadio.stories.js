@@ -348,6 +348,399 @@ layoutFour.story = {
   }
 };
 
+export const layoutFive = () => {
+  useEffect(() => {
+    radioInput();
+  }, []);
+
+  return `
+    <div class="sprk-b-InputContainer sprk-u-MaxWidth--100">
+      <fieldset class="sprk-b-Fieldset">
+        <legend class="sprk-b-Legend">
+          <label class="sprk-b-Label">
+            Radio Group Label
+          </label>
+        </legend>
+
+        <div class="
+          sprk-o-Stack
+          sprk-o-Stack--split@s
+        "  
+        >
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-1"
+                data-id="radio-1"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-1"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 1
+              </label>
+            </div>
+          </div>
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-2"
+                data-id="radio-2"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-2"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 2
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="
+          sprk-o-Stack
+          sprk-o-Stack--split@s"
+        >
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-3"
+                data-id="radio-3"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-3"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 3
+              </label>
+            </div>
+          </div>
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-4"
+                data-id="radio-4"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-4"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 4
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="
+          sprk-o-Stack
+          sprk-o-Stack--split@s
+          sprk-o-Stack--center-row
+          "
+        >
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--half@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-5"
+                data-id="radio-5"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-5"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 5
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="radio--error-container"
+      ></div>
+    </div>
+  `
+};
+
+layoutFive.story = {
+  name: 'Layout - Five',
+  parameters: {
+    jest: ['radioInput'],
+  }
+};
+
+export const layoutSix = () => {
+  useEffect(() => {
+    radioInput();
+  }, []);
+
+  return `
+    <div class="sprk-b-InputContainer sprk-u-MaxWidth--100">
+      <fieldset class="sprk-b-Fieldset">
+        <legend class="sprk-b-Legend">
+          <label class="sprk-b-Label">
+            Radio Group Label
+          </label>
+        </legend>
+
+        <div class="
+          sprk-o-Stack
+          sprk-o-Stack--split@s
+        "  
+        >
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-1"
+                data-id="radio-1"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-1"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 1
+              </label>
+            </div>
+          </div>
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-2"
+                data-id="radio-2"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-2"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 2
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="
+          sprk-o-Stack
+          sprk-o-Stack--split@s"
+        >
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-3"
+                data-id="radio-3"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-3"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 3
+              </label>
+            </div>
+          </div>
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-4"
+                data-id="radio-4"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-4"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 4
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="
+          sprk-o-Stack
+          sprk-o-Stack--split@s"
+        >
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-5"
+                data-id="radio-5"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-5"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 5
+              </label>
+            </div>
+          </div>
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Radio
+                sprk-b-Radio--huge
+                sprk-u-phs
+              "
+              data-sprk-input="radio"
+            >
+              <input
+                class="sprk-b-Radio__input"
+                id="radio-6"
+                data-id="radio-6"
+                type="radio"
+                name="radio"
+                aria-describedby="radio--error-container"
+              >
+
+              <label
+                for="radio-6"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+              >
+                Radio Item 6
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <div
+        class="sprk-b-ErrorContainer"
+        id="radio--error-container"
+      ></div>
+    </div>
+  `
+};
+
+layoutSix.story = {
+  name: 'Layout - Six',
+  parameters: {
+    jest: ['radioInput'],
+  }
+};
+
 export const invalidRadioButton = () => {
   useEffect(() => {
     radioInput();
