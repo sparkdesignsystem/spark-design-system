@@ -11,7 +11,6 @@ export default {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
     `,
-    docs: { iframeHeight: 140 },
   },
 };
 
@@ -104,6 +103,7 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['radioInput'],
+    docs: { iframeHeight: 300 },
   }
 };
 
@@ -192,6 +192,7 @@ layoutTwo.story = {
   name: 'Layout - Two',
   parameters: {
     jest: ['radioInput'],
+    docs: { iframeHeight: 250 },
   }
 };
 
@@ -336,6 +337,7 @@ layoutFour.story = {
   name: 'Layout - Four',
   parameters: {
     jest: ['radioInput'],
+    docs: { iframeHeight: 420 },
   }
 };
 
@@ -818,6 +820,7 @@ invalidRadioButton.story = {
   name: 'Invalid',
   parameters: {
     jest: ['radioInput'],
+    docs: { iframeHeight: 300 },
   }
 };
 
@@ -913,5 +916,6 @@ disabledRadioButton.story = {
   name: 'Disabled',
   parameters: {
     jest: ['radioInput'],
+    docs: { iframeHeight: 300 },
   }
 };
