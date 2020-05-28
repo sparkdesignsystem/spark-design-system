@@ -1,3 +1,7 @@
+////
+/// @group tooltip
+////
+
 .sprk-c-Tooltip__container {
   position: relative;
   display: inline-flex;
@@ -113,6 +117,8 @@
   }
 }
 
+/// Applied when the tooltip is toggled.
+/// @name .sprk-c-Tooltip--toggled
 .sprk-c-Tooltip--toggled .sprk-c-Icon {
   fill: $sprk-tooltip-toggled-icon-background-color;
 }
