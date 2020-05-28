@@ -1,3 +1,4 @@
+/* global document beforeEach afterEach describe it window */
 describe('Tooltip tests', () => {
   const tooltip = require('../components/tooltip');
   let container;
