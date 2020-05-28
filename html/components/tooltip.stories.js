@@ -38,7 +38,7 @@ export const defaultStory = () => {
         id="tooltip_1"
         role="tooltip"
       >
-        Tooltips provide a short text description of information about a feature.
+        Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id dee doo da fauxet la gigman roo.
       </span>
     </span>
   `;
