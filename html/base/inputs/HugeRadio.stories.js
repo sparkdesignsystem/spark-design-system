@@ -106,7 +106,7 @@ layoutTwo.story = {
   }
 };
 
-export const defaultStory = () => {
+export const layoutThree = () => {
   useEffect(() => {
     radioInput();
   }, []);
@@ -191,7 +191,7 @@ export const defaultStory = () => {
   `
 };
 
-defaultStory.story = {
+layoutThree.story = {
   name: 'Layout - Three',
   parameters: {
     jest: ['radioInput'],
