@@ -1304,7 +1304,7 @@ $sprk-radio-input-huge-label-border: 2px $sprk-black-tint-50 solid !default;
 /// The border-radius for the huge radio input label.
 $sprk-radio-input-huge-label-border-radius: 4px !default;
 /// The padding for the huge radio input label.
-$sprk-radio-input-huge-label-padding: 20px 16px 20px 55px !default;
+$sprk-radio-input-huge-label-padding: 1.25rem 1rem 1.25rem 3.4375rem !default;
 /// The flex-basis for the huge radio input label.
 $sprk-radio-input-huge-label-flex-basis: 100% !default;
 /// The line-height for the huge radio input label.
@@ -1338,9 +1338,9 @@ $sprk-radio-input-huge-inner-circle-height: 1rem !default;
 /// The width of the inner circle of the huge radio input.
 $sprk-radio-input-huge-inner-circle-width: 1rem !default;
 /// The left value of the inner circle of the huge radio input.
-$sprk-radio-input-huge-inner-circle-left: 20px !default;
+$sprk-radio-input-huge-inner-circle-left: 1.25rem !default;
 /// The top value of the inner circle of the huge radio input.
-$sprk-radio-input-huge-inner-circle-top: 20px !default;
+$sprk-radio-input-huge-inner-circle-top: 1.25rem !default;
 /// The border of the outer circle of the huge radio input when it is disabled and hovered.
 $sprk-radio-input-huge-outer-circle-border-hover-disabled: $sprk-radio-input-outer-circle-border-hover-disabled !default;
 /// The box shadow of the outer circle of the huge radio input when it is disabled and hovered.
