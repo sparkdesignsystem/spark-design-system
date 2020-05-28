@@ -121,61 +121,59 @@ export const layoutTwo = () => {
           </label>
         </legend>
 
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">        
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Radio
-                sprk-b-Radio--huge
-                sprk-u-phs
-              "
-              data-sprk-input="radio"
+        <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div
+            class="
+              sprk-b-SelectionContainer
+              sprk-b-Radio
+              sprk-b-Radio--huge
+              sprk-o-Stack__item
+              sprk-o-Stack__item--flex@s
+            "
+            data-sprk-input="radio"
+          >
+            <input
+              class="sprk-b-Radio__input"
+              id="radio-1"
+              data-id="radio-1"
+              type="radio"
+              name="radio"
+              aria-describedby="radio--error-container"
             >
-              <input
-                class="sprk-b-Radio__input"
-                id="radio-1"
-                data-id="radio-1"
-                type="radio"
-                name="radio"
-                aria-describedby="radio--error-container"
-              >
 
-              <label
-                for="radio-1"
-                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
-              >
-                Radio Item 1
-              </label>
-            </div>
+            <label
+              for="radio-1"
+              class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+            >
+              Radio Item 1
+            </label>
           </div>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Radio
-                sprk-b-Radio--huge
-                sprk-u-phs
-              "
-              data-sprk-input="radio"
+          <div
+            class="
+              sprk-b-SelectionContainer
+              sprk-b-Radio
+              sprk-b-Radio--huge
+              sprk-o-Stack__item
+              sprk-o-Stack__item--flex@s
+            "
+            data-sprk-input="radio"
+          >
+            <input
+              class="sprk-b-Radio__input"
+              id="radio-2"
+              data-id="radio-2"
+              type="radio"
+              name="radio"
+              aria-describedby="radio--error-container"
             >
-              <input
-                class="sprk-b-Radio__input"
-                id="radio-2"
-                data-id="radio-2"
-                type="radio"
-                name="radio"
-                aria-describedby="radio--error-container"
-              >
 
-              <label
-                for="radio-2"
-                class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
-              >
-                Radio Item 2
-              </label>
-            </div>
+            <label
+              for="radio-2"
+              class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+            >
+              Radio Item 2
+            </label>
           </div>
         </div>
       </fieldset>
@@ -210,14 +208,15 @@ export const layoutFour = () => {
           </label>
         </legend>
 
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+        <div class="sprk-o-Stack sprk-o-Stack--medium">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -237,14 +236,13 @@ export const layoutFour = () => {
                 Radio Item 1
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -265,16 +263,15 @@ export const layoutFour = () => {
               </label>
             </div>
           </div>
-        </div>
 
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -294,14 +291,13 @@ export const layoutFour = () => {
                 Radio Item 3
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -354,15 +350,15 @@ export const layoutFive = () => {
             Radio Group Label
           </label>
         </legend>
-
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+        <div class="sprk-o-Stack sprk-o-Stack--medium">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -382,14 +378,13 @@ export const layoutFive = () => {
                 Radio Item 1
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -410,16 +405,15 @@ export const layoutFive = () => {
               </label>
             </div>
           </div>
-        </div>
 
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -439,14 +433,13 @@ export const layoutFive = () => {
                 Radio Item 3
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -467,21 +460,22 @@ export const layoutFive = () => {
               </label>
             </div>
           </div>
-        </div>
-        
-        <div class="
-          sprk-o-Stack
-          sprk-o-Stack--split@s
-          sprk-o-Stack--center-row
-          "
-        >
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--half@s">
+          
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s
+            sprk-o-Stack--center-row
+            "
+          >
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--half@s
               "
               data-sprk-input="radio"
             >
@@ -534,14 +528,15 @@ export const layoutSix = () => {
           </label>
         </legend>
 
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+        <div class="sprk-o-Stack sprk-o-Stack--medium">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -561,14 +556,13 @@ export const layoutSix = () => {
                 Radio Item 1
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -589,16 +583,15 @@ export const layoutSix = () => {
               </label>
             </div>
           </div>
-        </div>
 
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -618,14 +611,13 @@ export const layoutSix = () => {
                 Radio Item 3
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -646,16 +638,15 @@ export const layoutSix = () => {
               </label>
             </div>
           </div>
-        </div>
 
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
@@ -675,14 +666,13 @@ export const layoutSix = () => {
                 Radio Item 5
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
                 sprk-b-SelectionContainer
                 sprk-b-Radio
                 sprk-b-Radio--huge
-                sprk-u-phs
+                sprk-o-Stack__item
+                sprk-o-Stack__item--flex@s
               "
               data-sprk-input="radio"
             >
