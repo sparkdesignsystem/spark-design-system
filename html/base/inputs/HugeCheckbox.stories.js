@@ -15,90 +15,6 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const twoUp = () => {
-  useEffect(() => {
-    checkbox();
-  }, []);
-
-  return `
-    <div class="sprk-b-InputContainer sprk-u-MaxWidth--100">
-      <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Two Up Huge Checkbox Group Label
-          </label>
-        </legend>
-        <div class="sprk-o-Stack sprk-o-Stack--tiny sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
-              <input
-                class="sprk-b-Checkbox__input"
-                id="checkbox-1"
-                data-id="checkbox-1"
-                type="checkbox"
-                aria-describedby="checkbox--error-container"
-              >
-              <label
-                for="checkbox-1"
-                class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
-              >
-                Checkbox Item 1
-              </label>
-            </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
-              <input
-                class="sprk-b-Checkbox__input"
-                id="checkbox-2"
-                data-id="checkbox-2"
-                type="checkbox"
-                aria-describedby="checkbox--error-container"
-              >
-              <label
-                for="checkbox-2"
-                class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
-              >
-                Checkbox Item 2
-              </label>
-            </div>
-          </div>
-        </div>
-
-      </fieldset>
-      <div
-        class="sprk-b-ErrorContainer"
-        id="checkbox--error-container"
-      >
-      </div>
-    </div>
-  `;
-};
-
-twoUp.story = {
-  name: 'Layout - Two',
-  parameters: {
-    jest: ['checkbox'],
-  }
-
-};
-
 export const threeUp = () => {
   useEffect(() => {
     checkbox();
@@ -178,7 +94,89 @@ export const threeUp = () => {
 };
 
 threeUp.story = {
-  name: 'Layout - Three',
+  name: 'Default',
+  parameters: {
+    jest: ['checkbox'],
+  }
+};
+
+export const twoUp = () => {
+  useEffect(() => {
+    checkbox();
+  }, []);
+
+  return `
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
+      <fieldset class="sprk-b-Fieldset">
+        <legend class="sprk-b-Legend">
+          <label class="sprk-b-Label">
+            Huge Checkbox Group Label
+          </label>
+        </legend>
+        <div class="sprk-o-Stack sprk-o-Stack--tiny sprk-o-Stack--split@s">
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Checkbox
+                sprk-b-Checkbox--huge
+                sprk-u-phs
+              "
+              data-sprk-input="checkbox"
+            >
+              <input
+                class="sprk-b-Checkbox__input"
+                id="checkbox-1"
+                data-id="checkbox-1"
+                type="checkbox"
+                aria-describedby="checkbox--error-container"
+              >
+              <label
+                for="checkbox-1"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+              >
+                Checkbox Item 1
+              </label>
+            </div>
+          </div>
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Checkbox
+                sprk-b-Checkbox--huge
+                sprk-u-phs
+              "
+              data-sprk-input="checkbox"
+            >
+              <input
+                class="sprk-b-Checkbox__input"
+                id="checkbox-2"
+                data-id="checkbox-2"
+                type="checkbox"
+                aria-describedby="checkbox--error-container"
+              >
+              <label
+                for="checkbox-2"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+              >
+                Checkbox Item 2
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div
+        class="sprk-b-ErrorContainer"
+        id="checkbox--error-container"
+      >
+      </div>
+    </div>
+  `;
+};
+
+twoUp.story = {
+  name: 'Layout - Two',
   parameters: {
     jest: ['checkbox'],
   }
@@ -190,11 +188,11 @@ export const fourUp = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-u-MaxWidth--100">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
-            Two Up Huge Checkbox Group Label
+            Huge Checkbox Group Label
           </label>
         </legend>
         <div class="sprk-o-Stack sprk-o-Stack--tiny sprk-o-Stack--split@s">
@@ -325,11 +323,11 @@ export const fiveUp = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-u-MaxWidth--100">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
-            Two Up Huge Checkbox Group Label
+            Huge Checkbox Group Label
           </label>
         </legend>
         <div class="sprk-o-Stack sprk-o-Stack--tiny sprk-o-Stack--split@s">
@@ -486,6 +484,196 @@ fiveUp.story = {
     jest: ['checkbox'],
   }
 };
+export const sixUp = () => {
+  useEffect(() => {
+    checkbox();
+  }, []);
+
+  return `
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
+      <fieldset class="sprk-b-Fieldset">
+        <legend class="sprk-b-Legend">
+          <label class="sprk-b-Label">
+            Checkbox Group Label
+          </label>
+        </legend>
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Checkbox
+                sprk-b-Checkbox--huge
+                sprk-u-phs
+                "
+              data-sprk-input="checkbox"
+            >
+              <input
+                class="sprk-b-Checkbox__input"
+                id="checkbox-1"
+                data-id="checkbox-1"
+                type="checkbox"
+                aria-describedby="checkbox--error-container"
+              >
+              <label
+                for="checkbox-1"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+              >
+                Checkbox Item 1
+              </label>
+            </div>
+          </div>
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Checkbox
+                sprk-b-Checkbox--huge
+                sprk-u-phs
+                "
+              data-sprk-input="checkbox"
+            >
+              <input
+                class="sprk-b-Checkbox__input"
+                id="checkbox-2"
+                data-id="checkbox-2"
+                type="checkbox"
+                aria-describedby="checkbox--error-container"
+              >
+              <label
+                for="checkbox-2"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+              >
+                Checkbox Item 2
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Checkbox
+                sprk-b-Checkbox--huge
+                sprk-u-phs
+                "
+              data-sprk-input="checkbox"
+            >
+              <input
+                class="sprk-b-Checkbox__input"
+                id="checkbox-3"
+                data-id="checkbox-3"
+                type="checkbox"
+                aria-describedby="checkbox--error-container"
+              >
+
+              <label
+                for="checkbox-3"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+              >
+                Checkbox Item 3
+              </label>
+            </div>
+          </div>
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Checkbox
+                sprk-b-Checkbox--huge
+                sprk-u-phs
+              "
+              data-sprk-input="checkbox"
+            >
+              <input
+                class="sprk-b-Checkbox__input"
+                id="checkbox-4"
+                data-id="checkbox-4"
+                type="checkbox"
+                aria-describedby="checkbox--error-container"
+              >
+
+              <label
+                for="checkbox-4"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+              >
+                Checkbox Item 4
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Checkbox
+                sprk-b-Checkbox--huge
+                sprk-u-phs
+              "
+              data-sprk-input="checkbox"
+            >
+              <input
+                class="sprk-b-Checkbox__input"
+                id="checkbox-5"
+                data-id="checkbox-5"
+                type="checkbox"
+                aria-describedby="checkbox--error-container"
+              >
+
+              <label
+                for="checkbox-5"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+              >
+                Checkbox Item 5
+              </label>
+            </div>
+          </div>
+          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
+            <div
+              class="
+                sprk-b-SelectionContainer
+                sprk-b-Checkbox
+                sprk-b-Checkbox--huge
+                sprk-u-phs
+              "
+              data-sprk-input="checkbox"
+            >
+              <input
+                class="sprk-b-Checkbox__input"
+                id="checkbox-6"
+                data-id="checkbox-6"
+                type="checkbox"
+                aria-describedby="checkbox--error-container"
+              >
+
+              <label
+                for="checkbox-6"
+                class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+              >
+                Checkbox Item 6
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div
+        class="sprk-b-ErrorContainer"
+        id="checkbox--error-container"
+      >
+      </div>
+    </div>
+  `;
+};
+
+sixUp.story = {
+  name: 'Layout - Six',
+  parameters: {
+    jest: ['checkbox'],
+  }
+};
+
 
 export const invalidCheckbox = () => {
   useEffect(() => {
