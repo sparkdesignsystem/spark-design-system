@@ -71,7 +71,7 @@ const bindTooltipUIEvents = (tooltipContainer) => {
 
   trigger.addEventListener('click', (e) => { toggleTooltip(trigger, tooltip) }, false);
 
-  trigger.addEventListener('keydown', function (e) {
+  trigger.addEventListener('keydown', (e) => {
     if (isSpacePressed(e)) {
       e.preventDefault();
       toggleTooltip(trigger, tooltip);
@@ -91,7 +91,7 @@ const bindTooltipUIEvents = (tooltipContainer) => {
     addPositioningClass(trigger, tooltip);
   });
 
-  document.addEventListener('keydown', function(e) {
+  document.addEventListener('keydown', (e) => {
     if (isEscPressed(e)) {
       hideTooltip(trigger);
     }
