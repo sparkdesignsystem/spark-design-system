@@ -29,10 +29,7 @@ export const layoutTwo = () => {
           </label>
         </legend>
 
-        <div class="
-          sprk-o-Stack
-          sprk-o-Stack--split@s"
-        >
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">        
             <div
               class="
@@ -212,11 +209,7 @@ export const layoutFour = () => {
           </label>
         </legend>
 
-        <div class="
-          sprk-o-Stack
-          sprk-o-Stack--split@s
-        "  
-        >
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
@@ -272,10 +265,8 @@ export const layoutFour = () => {
             </div>
           </div>
         </div>
-        <div class="
-          sprk-o-Stack
-          sprk-o-Stack--split@s"
-        >
+
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
@@ -362,11 +353,7 @@ export const layoutFive = () => {
           </label>
         </legend>
 
-        <div class="
-          sprk-o-Stack
-          sprk-o-Stack--split@s
-        "  
-        >
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
@@ -422,10 +409,8 @@ export const layoutFive = () => {
             </div>
           </div>
         </div>
-        <div class="
-          sprk-o-Stack
-          sprk-o-Stack--split@s"
-        >
+
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
@@ -481,6 +466,7 @@ export const layoutFive = () => {
             </div>
           </div>
         </div>
+        
         <div class="
           sprk-o-Stack
           sprk-o-Stack--split@s
@@ -546,11 +532,7 @@ export const layoutSix = () => {
           </label>
         </legend>
 
-        <div class="
-          sprk-o-Stack
-          sprk-o-Stack--split@s
-        "  
-        >
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
@@ -606,10 +588,8 @@ export const layoutSix = () => {
             </div>
           </div>
         </div>
-        <div class="
-          sprk-o-Stack
-          sprk-o-Stack--split@s"
-        >
+
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
@@ -665,10 +645,8 @@ export const layoutSix = () => {
             </div>
           </div>
         </div>
-        <div class="
-          sprk-o-Stack
-          sprk-o-Stack--split@s"
-        >
+
+        <div class="sprk-o-Stack sprk-o-Stack--split@s">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
             <div
               class="
