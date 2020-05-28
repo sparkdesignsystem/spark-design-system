@@ -21,7 +21,7 @@ export const layoutTwo = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-u-MaxWidth--100">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
@@ -201,7 +201,7 @@ export const layoutFour = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-u-MaxWidth--100">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
@@ -345,7 +345,7 @@ export const layoutFive = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-u-MaxWidth--100">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
@@ -524,7 +524,7 @@ export const layoutSix = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-u-MaxWidth--100">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
