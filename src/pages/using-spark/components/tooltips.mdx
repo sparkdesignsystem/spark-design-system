@@ -19,12 +19,15 @@ The tooltips component appears as a popup design providing a short text descript
 
 Use tooltips when the feature needs to be explained in further detail to walk users through a specific action. It helps to draw the users' attention to a feature without interrupting their workflow.
 
+- Appears when a user hovers or focuses on the tooltip icon.
+- Remains visible if the user hovers off of the icon onto the tooltip.
+- Can be toggled open by clicking or tapping on the tooltip icon, or with the Enter or Space keys.
+- Remains in view until the component is no longer hovered or focused.
+- Can be dismissed with the Escape key on the keyboard.
+
 ### Guidelines
 
-- Appears when a user hovers over or clicks on the tooltip icon.
-- Remains in view until the user actively dismisses.
-- Located above other content on the page, but below a modal or masthead.
-- Information should be discrete, short and concise.
+- Content within tooltips must be text-based with a maximum character count of 140.
 - Do not use as a warning or alert.
 - Do not include in links or modals.
 
@@ -35,9 +38,7 @@ Use tooltips when the feature needs to be explained in further detail to walk us
 
 ## Anatomy
 
-- Content within tooltips must be text based with a max character count of 140.
-- The maximum width of tooltips must be 290px.
-- Position of design changes based on how close the feature is to the screen’s edge such as:
+- The tooltip will automatically orient itself according to the available screen space.
 
 <img
   class="sprk-u-mbm"
@@ -45,14 +46,9 @@ Use tooltips when the feature needs to be explained in further detail to walk us
   alt="The Spark Tooltip component depicted in four different orientations."/>
 
 ## Accessibility
-Tooltips must be discoverable and [operable](https://www.w3.org/TR/WCAG20/#operable) by users that rely on a diverse set of established navigational means. Also, in compliance with [1.4.13: Content on Hover or Focus](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html) WCAG rules, make sure that any content appearing on hover or focus is dismissible, hoverable, and persistent.
+Tooltips are discoverable and [operable](https://www.w3.org/TR/WCAG20/#operable) by users that rely on a diverse set of established navigational means. Also, in compliance with [1.4.13: Content on Hover or Focus](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html) WCAG rules, we make sure that any content appearing on hover or focus is dismissible and persistent.
 
-- Must be accessible by mouse, pointer devices, keyboard-only, screen reader, zoom software, and any other assistive technology.
-- Allow the mouse to easily move over the tooltip without dismissing it.
-- Complex content should be browsable line by line using screen readers.
-- Always include a visible label within UI controls.
-- Interactive elements must be reachable using keyboard.
-- Users should hide tooltips by pressing the Escape key on the keyboard.
+- Accessible by mouse, pointer devices, keyboard-only, screen reader, zoom software, and any other assistive technology.
 - Tooltips use `aria-describedby` and `id` to establish a relationship between the trigger and content for screen readers and other assistive technology.
 - Tooltips use `aria-hidden` so they are unreachable by screen readers when the tooltip is not expanded.
 - Add text alternatives to icon buttons to express action user is taking.
