@@ -28,7 +28,7 @@ export const defaultStory = () => {
           class="sprk-c-Icon sprk-c-Icon--filled"
           aria-hidden="true"
         >
-          <use xlink:href="#information-filled-small" />
+          <use xlink:href="#question-filled" />
         </svg>
       </button>
       <span
