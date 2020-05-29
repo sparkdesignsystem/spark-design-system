@@ -83,7 +83,8 @@
 
 
 .sprk-b-Checkbox--huge {
-// sprk-checkbox-huge-elementaffected-state(if applicable)-cssStyle
+  max-width: $sprk-checkbox-input-huge-max-width;
+
   .sprk-b-Checkbox__label {
     transition: $sprk-checkbox-huge-container-transition;
     border: $sprk-checkbox-huge-container-border;
