@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { SprkLink } from '@sparkdesignsystem/spark-react';
 
-function ContextSubMenu({ heading, collection, directory }) {
+function ContextSubMenu({heading, collection, directory}) {
   return (
     <div className="docs-sub-menu">
       <h4 className="docs-menu__subheading">
@@ -23,7 +23,6 @@ function ContextSubMenu({ heading, collection, directory }) {
               variant='simple'
               to={`/using-spark/${directory}/${item.node.parent.name}`}
               activeClassName="isActive"
-                // additionalClasses={typeof location !== 'undefined' && location.pathname === `/using-spark/${directory}/${item.node.parent.name}` ? 'isActive' : ''}
             >
               {item.node.frontmatter.title || item.node.parent.name}
             </SprkLink>

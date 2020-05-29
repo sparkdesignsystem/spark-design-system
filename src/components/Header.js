@@ -22,7 +22,6 @@ const Header = ({ setContext }) => {
         }
         activeClassName="isActive"
         additionalClasses={'sprk-c-Masthead__link'}
-        // additionalClasses={typeof location !== 'undefined' && location.pathname.indexOf(`/installing-spark`) > -1 ? 'isActive sprk-c-Masthead__link' : ''}
         variant="plain"
         element={Link}
         to="/installing-spark"
@@ -39,7 +38,6 @@ const Header = ({ setContext }) => {
         }
         activeClassName="isActive"
         additionalClasses={'sprk-c-Masthead__link'}
-        // additionalClasses={typeof location !== 'undefined' && location.pathname.indexOf(`/using-spark`) > -1 ? 'isActive sprk-c-Masthead__link' : ''}
         variant="plain"
         element={Link}
         to="/using-spark"
@@ -56,7 +54,6 @@ const Header = ({ setContext }) => {
         }
         activeClassName="isActive"
         additionalClasses={'sprk-c-Masthead__link'}
-        // additionalClasses={typeof location !== 'undefined' && location.pathname.indexOf(`/principles/`) > -1 ? 'isActive sprk-c-Masthead__link' : ''}
         variant="plain"
         element={Link}
         to="/principles/design-principles"

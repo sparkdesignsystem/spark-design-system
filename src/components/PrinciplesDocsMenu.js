@@ -20,7 +20,6 @@ const PrinciplesSparkDocsMenu = () => {
                 variant="simple"
                 to={`/principles/${page.node.parent.name}`}
                 activeClassName="isActive"
-                // additionalClasses={typeof location !== 'undefined' && location.pathname === `/principles/${page.node.parent.name}` ? 'isActive' : ''}
               >
                 { page.node.frontmatter.title || page.node.parent.name }
               </SprkLink>
