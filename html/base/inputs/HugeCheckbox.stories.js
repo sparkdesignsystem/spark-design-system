@@ -106,24 +106,16 @@ export const twoUp = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
             Huge Checkbox Group Label
           </label>
         </legend>
-        <div class="sprk-o-Stack sprk-o-Stack--tiny sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+        <div class="sprk-o-Stack sprk-o-Stack--medium">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-1"
@@ -138,17 +130,7 @@ export const twoUp = () => {
                 Checkbox Item 1
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-2"
@@ -166,12 +148,12 @@ export const twoUp = () => {
           </div>
         </div>
       </fieldset>
-      <div
-        class="sprk-b-ErrorContainer"
-        id="checkbox--error-container"
-      >
-      </div>
+    <div
+      class="sprk-b-ErrorContainer"
+      id="checkbox--error-container"
+    >
     </div>
+  </div>
   `;
 };
 
@@ -188,24 +170,16 @@ export const fourUp = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
             Huge Checkbox Group Label
           </label>
         </legend>
-        <div class="sprk-o-Stack sprk-o-Stack--tiny sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+        <div class="sprk-o-Stack sprk-o-Stack--medium">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-1"
@@ -220,17 +194,7 @@ export const fourUp = () => {
                 Checkbox Item 1
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-2"
@@ -246,18 +210,8 @@ export const fourUp = () => {
               </label>
             </div>
           </div>
-        </div>
-        <div class="sprk-o-Stack sprk-o-Stack--tiny sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-3"
@@ -272,17 +226,7 @@ export const fourUp = () => {
                 Checkbox Item 3
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-4"
@@ -300,12 +244,12 @@ export const fourUp = () => {
           </div>
         </div>
       </fieldset>
-      <div
-        class="sprk-b-ErrorContainer"
-        id="checkbox--error-container"
-      >
-      </div>
+    <div
+      class="sprk-b-ErrorContainer"
+      id="checkbox--error-container"
+    >
     </div>
+  </div>
   `;
 };
 
@@ -323,24 +267,16 @@ export const fiveUp = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
             Huge Checkbox Group Label
           </label>
         </legend>
-        <div class="sprk-o-Stack sprk-o-Stack--tiny sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+        <div class="sprk-o-Stack sprk-o-Stack--medium">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-1"
@@ -355,17 +291,7 @@ export const fiveUp = () => {
                 Checkbox Item 1
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-2"
@@ -381,19 +307,8 @@ export const fiveUp = () => {
               </label>
             </div>
           </div>
-        </div>
-
-        <div class="sprk-o-Stack sprk-o-Stack--tiny sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-3"
@@ -408,17 +323,7 @@ export const fiveUp = () => {
                 Checkbox Item 3
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-4"
@@ -434,23 +339,8 @@ export const fiveUp = () => {
               </label>
             </div>
           </div>
-        </div>
-        <div class="
-          sprk-o-Stack
-          sprk-o-Stack--split@s
-          sprk-o-Stack--center-row
-          "
-        >
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--half@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--center-row sprk-o-Stack--split@s">
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack__item--half@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-5"
@@ -468,12 +358,12 @@ export const fiveUp = () => {
           </div>
         </div>
       </fieldset>
-      <div
-        class="sprk-b-ErrorContainer"
-        id="checkbox--error-container"
-      >
-      </div>
+    <div
+      class="sprk-b-ErrorContainer"
+      id="checkbox--error-container"
+    >
     </div>
+  </div>
   `;
 };
 
@@ -490,24 +380,16 @@ export const sixUp = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
-            Checkbox Group Label
+            Huge Checkbox Group Label
           </label>
         </legend>
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-                "
-              data-sprk-input="checkbox"
-            >
+        <div class="sprk-o-Stack sprk-o-Stack--medium">
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-1"
@@ -522,17 +404,7 @@ export const sixUp = () => {
                 Checkbox Item 1
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-                "
-              data-sprk-input="checkbox"
-            >
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-2"
@@ -548,18 +420,8 @@ export const sixUp = () => {
               </label>
             </div>
           </div>
-        </div>
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-                "
-              data-sprk-input="checkbox"
-            >
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-3"
@@ -567,7 +429,6 @@ export const sixUp = () => {
                 type="checkbox"
                 aria-describedby="checkbox--error-container"
               >
-
               <label
                 for="checkbox-3"
                 class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
@@ -575,17 +436,7 @@ export const sixUp = () => {
                 Checkbox Item 3
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-4"
@@ -593,7 +444,6 @@ export const sixUp = () => {
                 type="checkbox"
                 aria-describedby="checkbox--error-container"
               >
-
               <label
                 for="checkbox-4"
                 class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
@@ -602,18 +452,8 @@ export const sixUp = () => {
               </label>
             </div>
           </div>
-        </div>
-        <div class="sprk-o-Stack sprk-o-Stack--split@s">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-5"
@@ -621,7 +461,6 @@ export const sixUp = () => {
                 type="checkbox"
                 aria-describedby="checkbox--error-container"
               >
-
               <label
                 for="checkbox-5"
                 class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
@@ -629,17 +468,7 @@ export const sixUp = () => {
                 Checkbox Item 5
               </label>
             </div>
-          </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s">
-            <div
-              class="
-                sprk-b-SelectionContainer
-                sprk-b-Checkbox
-                sprk-b-Checkbox--huge
-                sprk-u-phs
-              "
-              data-sprk-input="checkbox"
-            >
+            <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-Checkbox--huge" data-sprk-input="checkbox">
               <input
                 class="sprk-b-Checkbox__input"
                 id="checkbox-6"
@@ -647,7 +476,6 @@ export const sixUp = () => {
                 type="checkbox"
                 aria-describedby="checkbox--error-container"
               >
-
               <label
                 for="checkbox-6"
                 class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
@@ -658,12 +486,12 @@ export const sixUp = () => {
           </div>
         </div>
       </fieldset>
-      <div
-        class="sprk-b-ErrorContainer"
-        id="checkbox--error-container"
-      >
-      </div>
+    <div
+      class="sprk-b-ErrorContainer"
+      id="checkbox--error-container"
+    >
     </div>
+  </div>
   `;
 };
 
