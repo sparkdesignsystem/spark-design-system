@@ -61,7 +61,7 @@ const toggleTooltip = (trigger, tooltip) => {
   } else {
     showTooltip(trigger, tooltip, true);
   }
-}
+};
 
 const bindTooltipUIEvents = (tooltipContainer) => {
   var trigger = tooltipContainer.querySelector('[data-sprk-tooltip="trigger"]');
