@@ -38,7 +38,7 @@ const addPositioningClass = (trigger, tooltip) => {
   tooltip.classList.remove('sprk-c-Tooltip--top-left');
 
   tooltip.classList.add(calculatePositionClass(trigger));
-}
+};
 
 const showTooltip = (trigger, tooltip, stickOpen) => {
   addPositioningClass(trigger, tooltip);
