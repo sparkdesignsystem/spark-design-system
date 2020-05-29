@@ -77,6 +77,7 @@ const Header = ({ setContext }) => {
       text: page.node.frontmatter.title,
       to: `/installing-spark/${page.node.parent.name}`,
       element: Link,
+      activeClassName:"isActive"
     }
   ));
 
@@ -85,6 +86,7 @@ const Header = ({ setContext }) => {
       text: page.node.frontmatter.title,
       to: `/using-spark/components/${page.node.parent.name}`,
       element: Link,
+      activeClassName:"isActive"
     }
   ));
 
@@ -93,6 +95,7 @@ const Header = ({ setContext }) => {
       text: page.node.frontmatter.title,
       to: `/using-spark/examples/${page.node.parent.name}`,
       element: Link,
+      activeClassName:"isActive"
     }
   ));
 
@@ -101,6 +104,7 @@ const Header = ({ setContext }) => {
       text: page.node.frontmatter.title,
       to: `/using-spark/foundations/${page.node.parent.name}`,
       element: Link,
+      activeClassName:"isActive"
     }
   ));
 
@@ -114,6 +118,7 @@ const Header = ({ setContext }) => {
       text: page.node.frontmatter.title,
       to: `/principles/${page.node.parent.name}`,
       element: Link,
+      activeClassName:"isActive"
     }
   ));
 
@@ -126,6 +131,7 @@ const Header = ({ setContext }) => {
         setContext('installing-spark');
       },
       subNavLinks: installingSparkPages,
+      activeClassName:"isActive",
     },
     {
       element: Link,
@@ -135,6 +141,7 @@ const Header = ({ setContext }) => {
         setContext('using-spark');
       },
       subNavLinks: usingSparkPages,
+      activeClassName:"isActive",
     },
     {
       element: Link,
@@ -144,6 +151,7 @@ const Header = ({ setContext }) => {
         setContext('principles');
       },
       subNavLinks: principlePages,
+      activeClassName:"isActive",
     },
   ];
 

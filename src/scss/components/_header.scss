@@ -27,6 +27,18 @@
  */
 .docs-masthead .sprk-c-Masthead__narrow-nav {
   height: auto;
+
+  .sprk-c-Masthead__link{
+
+    &:hover, &:focus {
+      background-color: $sprk-gray;
+    }
+
+    &.isActive {
+      border-left: 0.25rem solid $sprk-red !important;
+      background-color: $sprk-gray;
+    }
+  }
 }
 
 .docs-masthead .sprk-c-Masthead__little-nav a {
