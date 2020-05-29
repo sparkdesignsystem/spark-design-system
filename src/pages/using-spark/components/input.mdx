@@ -96,17 +96,27 @@ than one option from a list.
 ### Huge Checkbox
 [Back to Variants](#variants)
 
-Huge Checkbox was designed for a multi-step
-form flow that presents a single Input per page.
+The Huge Checkbox component is intended for flows
+that present single questions in a step by step process
 For this reason, Huge Checkbox should only be
 used for stand-alone question flows.
 
 #### Guidelines
-- Ensure that options are short and concise.
-- Requires at least two options, but no more than 6.
+- Ensure list is in logical order for inputs (groups will stack).
+- Options are short and concise.
+- Recommend content to not exceed 40 characters.
+- The inputs become stacked in a grid. Stacking will
+take place automatically based on options presented.
+- Up to 6 options can be presented, an alternative
+to use is the Select Box for greater than 6 options.
+
+### Anatomy
+- Must have an associated question.
+- Must contain concise body text for each option.
+- Width of each Huge Radio should be the same size.
 
 <ComponentPreview
-  componentName="input-huge-checkbox--three-up"
+  componentName="input-huge-checkbox--default-story"
   hasReact
   hasAngular
   hasHTML

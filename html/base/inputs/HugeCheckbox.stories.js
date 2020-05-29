@@ -15,7 +15,7 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const threeUp = () => {
+export const defaultStory = () => {
   useEffect(() => {
     checkbox();
   }, []);
@@ -93,14 +93,14 @@ export const threeUp = () => {
   `;
 };
 
-threeUp.story = {
+defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['checkbox'],
   }
 };
 
-export const twoUp = () => {
+export const layoutTwo = () => {
   useEffect(() => {
     checkbox();
   }, []);
@@ -157,14 +157,14 @@ export const twoUp = () => {
   `;
 };
 
-twoUp.story = {
+layoutTwo.story = {
   name: 'Layout - Two',
   parameters: {
     jest: ['checkbox'],
   }
 };
 
-export const fourUp = () => {
+export const layoutFour = () => {
   useEffect(() => {
     checkbox();
   }, []);
@@ -254,14 +254,14 @@ export const fourUp = () => {
 };
 
 
-fourUp.story = {
+layoutFour.story = {
   name: 'Layout - Four',
   parameters: {
     jest: ['checkbox'],
   }
 };
 
-export const fiveUp = () => {
+export const layoutFive = () => {
   useEffect(() => {
     checkbox();
   }, []);
@@ -368,13 +368,13 @@ export const fiveUp = () => {
 };
 
 
-fiveUp.story = {
+layoutFive.story = {
   name: 'Layout - Five',
   parameters: {
     jest: ['checkbox'],
   }
 };
-export const sixUp = () => {
+export const layoutSix = () => {
   useEffect(() => {
     checkbox();
   }, []);
@@ -495,7 +495,7 @@ export const sixUp = () => {
   `;
 };
 
-sixUp.story = {
+layoutSix.story = {
   name: 'Layout - Six',
   parameters: {
     jest: ['checkbox'],
