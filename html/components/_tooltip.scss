@@ -1,0 +1,134 @@
+////
+/// @group tooltip
+////
+
+.sprk-c-Tooltip__container {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.sprk-c-Tooltip__trigger {
+  background-color: $sprk-tooltip-trigger-background-color;
+  border: $sprk-tooltip-trigger-border;
+  padding: $sprk-tooltip-trigger-padding;
+  text-align: $sprk-tooltip-trigger-text-align;
+  display: flex;
+
+  /* Increase hoverable area of trigger */
+  &:hover:after {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 3rem;
+    height: 3rem;
+    content: " ";
+  }
+}
+
+.sprk-c-Tooltip {
+  background-color: $sprk-tooltip-background-color;
+  color: $sprk-tooltip-font-color;
+  padding: $sprk-tooltip-padding;
+  border-radius: $sprk-tooltip-border-radius;
+  font-size: $sprk-tooltip-font-size;
+  text-align: $sprk-tooltip-text-align;
+  font-weight: $sprk-tooltip-font-weight;
+
+  position: absolute;
+  max-width: $sprk-tooltip-max-width;
+  min-width: $sprk-tooltip-min-width;
+
+  width: $sprk-tooltip-max-width;
+  width: max-content; /* IE will ignore this line and use the previous */
+
+  bottom: 1.5rem;
+  left: -1rem;
+  z-index: $sprk-tooltip-z-index;
+
+  display: none;
+
+  &::selection {
+    color: $sprk-white;
+  }
+
+  &:before {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 1rem;
+    width: $sprk-tooltip-caret-width;
+    height: $sprk-tooltip-caret-width;
+    background-color: $sprk-tooltip-caret-background-color;
+    transform: rotateY(0deg) rotate(45deg);
+    content: " ";
+  }
+
+  &.sprk-c-Tooltip--top-left {
+    top: auto;
+    right: -1rem;
+    bottom: 2rem;
+    left: auto;
+
+    &:before {
+      top: auto;
+      right: 1rem;
+      bottom: -0.5rem;
+      left: auto;
+    }
+  }
+
+  &.sprk-c-Tooltip--top-right {
+    top: auto;
+    right: auto;
+    bottom: 2rem;
+    left: -1rem;
+
+    &:before {
+      top: auto;
+      right: auto;
+      bottom: -0.5rem;
+      left: 1rem;
+    }
+  }
+
+  &.sprk-c-Tooltip--bottom-left {
+    top: 2rem;
+    right: -1rem;
+    bottom: auto;
+    left: auto;
+
+    &:before {
+      top: -0.5rem;
+      right: 1rem;
+      bottom: auto;
+      left: auto;
+    }
+  }
+
+  &.sprk-c-Tooltip--bottom-right {
+    top: 2rem;
+    right: auto;
+    bottom: auto;
+    left: -1rem;
+
+    &:before {
+      top: -0.5rem;
+      right: auto;
+      bottom: auto;
+      left: 1rem;
+    }
+  }
+}
+
+/// Applied when the tooltip is toggled.
+/// @name .sprk-c-Tooltip--toggled
+.sprk-c-Tooltip--toggled .sprk-c-Icon {
+  fill: $sprk-tooltip-toggled-icon-background-color;
+}
+
+.sprk-c-Tooltip__trigger:hover + .sprk-c-Tooltip,
+.sprk-c-Tooltip__trigger:focus + .sprk-c-Tooltip,
+.sprk-c-Tooltip__trigger.sprk-c-Tooltip--toggled + .sprk-c-Tooltip,
+.sprk-c-Tooltip:hover {
+  display: inline-block;
+}
