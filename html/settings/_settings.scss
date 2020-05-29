@@ -1586,6 +1586,45 @@ $sprk-toggle-transition-timing: 0.3s ease !default;
 $sprk-toggle-transistion-timing: $sprk-toggle-transition-timing; //TODO: deprecate
 
 //
+// Tooltip
+///
+
+/// The border for the tooltip trigger.
+$sprk-tooltip-trigger-border: none !default;
+/// The background color for the tooltip trigger.
+$sprk-tooltip-trigger-background-color: transparent !default;
+/// The padding for the tooltip trigger.
+$sprk-tooltip-trigger-padding: 0 !default;
+/// The text align for the tooltip trigger.
+$sprk-tooltip-trigger-text-align: left !default;
+/// The background color for the tooltip.
+$sprk-tooltip-background-color: $sprk-black !default;
+/// The font color for the tooltip.
+$sprk-tooltip-font-color: $sprk-white !default;
+/// The text align for the tooltip.
+$sprk-tooltip-text-align: left !default;
+/// The font weight for the tooltip
+$sprk-tooltip-font-weight: 300 !default;
+/// The padding for the tooltip.
+$sprk-tooltip-padding: $sprk-space-inset-short-m;
+/// The border radius for the tooltip.
+$sprk-tooltip-border-radius: 4px !default;
+/// The font size for the tooltip.
+$sprk-tooltip-font-size: $sprk-font-size-body-four !default;
+/// The background color for the tooltip caret.
+$sprk-tooltip-caret-background-color: $sprk-black !default;
+/// The background color for the tooltip icon while toggled.
+$sprk-tooltip-toggled-icon-background-color: $sprk-green !default;
+/// The z-index of the tooltip.
+$sprk-tooltip-z-index: $sprk-layer-height-xs !default;
+/// The max-width of the tooltip.
+$sprk-tooltip-max-width: 328px !default;
+/// The min-width of the tooltip.
+$sprk-tooltip-min-width: 60px !default;
+/// The width of the tooltip caret.
+$sprk-tooltip-caret-width: 17px !default;
+
+//
 // Dropdown
 ///
 

@@ -100,6 +100,9 @@ import {
   handleToggleClick,
   bindToggleUIEvents,
 } from './components/toggle';
+import {
+  tooltip,
+} from './components/tooltip';
 import isValidDate from './utilities/validation/isValidDate';
 import isValidMonetary from './utilities/validation/isValidMonetary';
 import isValidPhone from './utilities/validation/isValidPhone';
@@ -120,7 +123,7 @@ import {
   isActiveElement,
 } from './utilities/elementState';
 import getElements from './utilities/getElements';
-import { isTabPressed, isEscPressed } from './utilities/keypress';
+import { isTabPressed, isEscPressed, isEnterPressed, isSpacePressed } from './utilities/keypress';
 import toggleValue from './utilities/toggleValue';
 import {
   dropdowns,
@@ -214,6 +217,7 @@ export {
   toggleAriaExpanded,
   handleToggleClick,
   bindToggleUIEvents,
+  tooltip,
   isValidDate,
   isValidMonetary,
   isValidPhone,
@@ -232,6 +236,8 @@ export {
   getElements,
   isTabPressed,
   isEscPressed,
+  isEnterPressed,
+  isSpacePressed,
   toggleValue,
   dropdowns,
   bindDropdownUIEvents,
