@@ -18,6 +18,31 @@
 .docs-menu__collection {
   list-style-type: none;
   padding-left: 1rem;
+
+  .sprk-b-Link {
+    width: 100%;
+    color: $sprk-black;
+    border-left: .25rem solid transparent;
+    border-bottom: 0;
+    padding-left: .25rem;
+
+    &:visited {
+      color: $sprk-black;
+    }
+
+    &:hover, &:focus {
+      color: $sprk-black;
+      border-left: .25rem solid $sprk-red;
+      padding-left: .25rem;
+      text-decoration: none;
+    }
+
+    &.isActive {
+      font-weight: 600;
+      border-left: .25rem solid $sprk-red;
+      padding-left: .25rem;
+    }
+  }
 }
 
 .docs-menu__select {

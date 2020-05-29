@@ -28,3 +28,22 @@
 .docs-masthead .sprk-c-Masthead__narrow-nav {
   height: auto;
 }
+
+.docs-masthead .sprk-c-Masthead__little-nav a {
+  width: 100%;
+  color: $sprk-black;
+  border-bottom: .25rem solid transparent;
+
+  &:visited {
+    color: $sprk-black;
+  }
+
+  &:hover, &:focus {
+    color: $sprk-black;
+    border-bottom: .25rem solid $sprk-red;
+  }
+
+  &.isActive {
+    border-bottom: 0.25rem solid $sprk-red;
+  }
+}
