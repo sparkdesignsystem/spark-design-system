@@ -20,7 +20,7 @@ export const defaultStory = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
@@ -113,7 +113,7 @@ export const layoutTwo = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
@@ -200,7 +200,7 @@ export const layoutFour = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
@@ -343,7 +343,7 @@ export const layoutFive = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
@@ -520,7 +520,7 @@ export const layoutSix = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer sprk-b-InputContainer--full">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
