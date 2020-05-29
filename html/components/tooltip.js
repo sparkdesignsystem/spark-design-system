@@ -35,7 +35,7 @@ const calculatePositionClass = (trigger) => {
       return 'sprk-c-Tooltip--bottom-right';
     }
   }
-}
+};
 
 const addPositioningClass = (trigger, tooltip) => {
   tooltip.classList.remove('sprk-c-Tooltip--bottom-right');
@@ -44,7 +44,7 @@ const addPositioningClass = (trigger, tooltip) => {
   tooltip.classList.remove('sprk-c-Tooltip--top-left');
 
   tooltip.classList.add(calculatePositionClass(trigger));
-}
+};
 
 const showTooltip = (trigger, tooltip, stickOpen) => {
   addPositioningClass(trigger, tooltip);
@@ -54,12 +54,12 @@ const showTooltip = (trigger, tooltip, stickOpen) => {
   if (stickOpen) {
     trigger.classList.add('sprk-c-Tooltip--toggled');
   }
-}
+};
 
 const hideTooltip = (trigger) => {
   toggleAriaExpanded(trigger);
   trigger.classList.remove('sprk-c-Tooltip--toggled');
-}
+};
 
 const toggleTooltip = (trigger, tooltip) => {
   if (trigger.classList.contains('sprk-c-Tooltip--toggled')) {
@@ -67,7 +67,7 @@ const toggleTooltip = (trigger, tooltip) => {
   } else {
     showTooltip(trigger, tooltip, true);
   }
-}
+};
 
 const bindTooltipUIEvents = (tooltipContainer) => {
   var trigger = tooltipContainer.querySelector('[data-sprk-tooltip="trigger"]');
