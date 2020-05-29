@@ -53,7 +53,7 @@ const showTooltip = (trigger, tooltip, stickOpen) => {
 const hideTooltip = (trigger) => {
   toggleAriaExpanded(trigger);
   trigger.classList.remove('sprk-c-Tooltip--toggled');
-}
+};
 
 const toggleTooltip = (trigger, tooltip) => {
   if (trigger.classList.contains('sprk-c-Tooltip--toggled')) {
