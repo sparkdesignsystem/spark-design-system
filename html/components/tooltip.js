@@ -29,7 +29,7 @@ const calculatePositionClass = (trigger) => {
       return 'sprk-c-Tooltip--bottom-right';
     }
   }
-}
+};
 
 const addPositioningClass = (trigger, tooltip) => {
   tooltip.classList.remove('sprk-c-Tooltip--bottom-right');
