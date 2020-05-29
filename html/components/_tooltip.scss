@@ -38,7 +38,10 @@
   position: absolute;
   max-width: $sprk-tooltip-max-width;
   min-width: $sprk-tooltip-min-width;
-  width: max-content;
+
+  width: $sprk-tooltip-max-width;
+  width: max-content; /* IE will ignore this line and use the previous */
+
   bottom: 1.5rem;
   left: -1rem;
   z-index: $sprk-tooltip-z-index;
