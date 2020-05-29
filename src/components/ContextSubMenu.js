@@ -22,7 +22,8 @@ function ContextSubMenu({ heading, collection, directory }) {
               element={Link}
               variant='simple'
               to={`/using-spark/${directory}/${item.node.parent.name}`}
-              additionalClasses={location && location.pathname === `/using-spark/${directory}/${item.node.parent.name}` ? 'isActive' : ''}
+              activeClassName="isActive"
+                // additionalClasses={typeof location !== 'undefined' && location.pathname === `/using-spark/${directory}/${item.node.parent.name}` ? 'isActive' : ''}
             >
               {item.node.frontmatter.title || item.node.parent.name}
             </SprkLink>

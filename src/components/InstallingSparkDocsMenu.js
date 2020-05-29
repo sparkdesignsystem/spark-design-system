@@ -20,7 +20,8 @@ const InstallingSparkDocsMenu = () => {
                 element={Link}
                 variant="simple"
                 to={`/installing-spark/${page.node.parent.name}`}
-                additionalClasses={location && location.pathname === `/installing-spark/${page.node.parent.name}` ? 'isActive' : ''}
+                activeClassName="isActive"
+                // additionalClasses={location && location.pathname === `/installing-spark/${page.node.parent.name}` ? 'isActive' : ''}
               >
                 {page.node.frontmatter.title || page.node.parent.name }
               </SprkLink>
