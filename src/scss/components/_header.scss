@@ -33,6 +33,7 @@
     &.isActive {
       border-left: 0.25rem solid $sprk-red !important;
       background-color: $sprk-gray;
+      font-weight: 400;
     }
   }
 }
