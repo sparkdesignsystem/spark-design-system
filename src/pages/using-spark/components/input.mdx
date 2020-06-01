@@ -97,28 +97,24 @@ than one option from a list.
 [Back to Variants](#variants)
 
 The Huge Checkbox component is intended for flows
-that present single questions in a step by step process
+that present single questions in a step by step process.
 For this reason, Huge Checkbox should only be
 used for stand-alone question flows.
 
 #### Guidelines
 - Ensure list is in logical order for inputs (groups will stack).
-- Options are short and concise.
-- Recommend content to not exceed 40 characters.
-- The inputs become stacked in a grid. Stacking will
-take place automatically based on options presented.
-- Up to 6 options can be presented, an alternative
-to use is the Select Box for greater than 6 options.
+- Options should be short and concise. Content should not exceed 40 characters.
+- There should be at least two options, but no more than six.
+- To see layout configurations with two, three, four, five, or six options, see the [Storybook page](https://html.sparkdesignsystem.com/?path=/docs/components-input-huge-checkbox-default-story).
+- This component cannot have more than six options. If your design needs more, consider using a [Huge Select Box](#huge-select-box) instead.
 
-### Anatomy
+#### Anatomy
 - Must have an associated question.
 - Must contain concise body text for each option.
 - Width of each Huge Checkbox should be the same size.
 
 <ComponentPreview
   componentName="input-huge-checkbox--default-story"
-  hasReact
-  hasAngular
   hasHTML
 />
 
