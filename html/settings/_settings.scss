@@ -1071,7 +1071,7 @@ $sprk-checkbox-huge-container-border: 2px $sprk-black-tint-50 solid !default;
 /// The border-radius of the huge checkbox input.
 $sprk-checkbox-huge-container-border-radius: 4px !default;
 /// The padding of the huge checkbox input.
-$sprk-checkbox-huge-container-padding: 20px 16px 20px 55px !default;
+$sprk-checkbox-huge-container-padding: 20px $sprk-space-m 20px 55px !default;
 /// The flex-basis of the huge checkbox input.
 $sprk-checkbox-huge-container-flex-basis: 100% !default;
 /// The line height of the huge checkbox input.
@@ -1098,14 +1098,14 @@ $sprk-checkbox-huge-container-checked-border-color: $sprk-green !default;
 $sprk-checkbox-huge-container-checked-hover-border-color: $sprk-black !default;
 /// The border color of the huge checkbox input when checked and focused.
 $sprk-checkbox-huge-container-focus-checked-border-color: $sprk-black !default;
-/// The width of the custom checkbox element of the huge checkbox input.
-$sprk-checkbox-huge-custom-input-height: 1.5rem !default;
 /// The height of the custom checkbox element of the huge checkbox input.
-$sprk-checkbox-huge-custom-input-weight: 1.5rem !default;
+$sprk-checkbox-huge-custom-input-height: 1.5rem !default;
+/// The width of the custom checkbox element of the huge checkbox input.
+$sprk-checkbox-huge-custom-input-width: 1.5rem !default;
 /// The top value of the custom checkbox element of the huge checkbox input.
-$sprk-checkbox-huge-custom-input-top: 16px !default;
+$sprk-checkbox-huge-custom-input-top: $sprk-space-m !default;
 /// The left value of the custom checkbox element of the huge checkbox input.
-$sprk-checkbox-huge-custom-input-left: 16px !default;
+$sprk-checkbox-huge-custom-input-left: $sprk-space-m !default;
 /// The border color of the custom checkbox element of the huge checkbox input when hovered.
 $sprk-checkbox-huge-custom-input-hover-border-color: $sprk-black !default;
 /// The border color of the custom checkbox element of the huge checkbox input when disabled.
