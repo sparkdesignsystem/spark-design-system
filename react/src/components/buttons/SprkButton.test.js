@@ -70,7 +70,7 @@ describe('SprkButton:', () => {
   });
 
   it('if loading is set and variant is secondary, should render the secondary spinner', () => {
-    const wrapper = mount(<SprkButton loading variant="secondary"/>);
+    const wrapper = mount(<SprkButton loading variant="secondary" />);
     expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(1);
   });
 
@@ -104,4 +104,12 @@ describe('SprkButton:', () => {
     expect(wrapper.find('button[href="#"]').length).toBe(0);
     expect(wrapper.find('button').length).toBe(1);
   });
+
+  it('should not apply the disabled attribute if the element is an anchor "a"', () => {
+    const wrapper = mount(<SprkButton href="#" />);
+    const link = wrapper.find('a');
+    expect(link.length).toBe(1);
+    expect(link.getDOMNode().hasAttribute('disabled')).toBe(false);
+  });
+
 });
