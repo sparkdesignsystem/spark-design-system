@@ -112,4 +112,11 @@ describe('SprkButton:', () => {
     expect(link.getDOMNode().hasAttribute('disabled')).toBe(false);
   });
 
+  it('it should apply the disabled attribute if the element is a button and disabled is true', () => {
+    const wrapper = mount(<SprkButton disabled="true" />);
+    const button = wrapper.find('button');
+    expect(button.length).toBe(1);
+    expect(button.getDOMNode().hasAttribute('disabled')).toBe(true);
+  });
+
 });
