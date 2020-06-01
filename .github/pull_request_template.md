@@ -5,8 +5,7 @@ A clear and concise description of what this PR does.
 Fixes (Issue Number that this PR is closing out)
 
 ## Please check off completed items as you work.
-If a checklist item or section does not apply to your PR
-then please remove it.
+If a checklist item or section does not apply to your PR then please remove it.
 
 ### Documentation
  - [ ] Update Spark Docs
@@ -19,9 +18,6 @@ then please remove it.
  - [ ] Unit Testing in Angular with `npm run test` in `angular/` (100% coverage, 100% passing)
  - [ ] Unit Testing in React with `npm run test` in `react/` (100% coverage, 100% passing)
 
-### Accessibility
-- [ ] New changes abide by [accessibility requirements](https://sparkdesignsystem.com/docs/accessibility)
-
 ### Browser Testing (current version and 1 prior)
   - [ ] Google Chrome
   - [ ] Google Chrome (Mobile)
@@ -32,8 +28,9 @@ then please remove it.
   - [ ] Apple Safari
   - [ ] Apple Safari (Mobile)
 
-### Design Review
- - [ ] Design reviewed and approved
+### Deploy Preview Reviewed and Approved
+ - [ ] Design Team
+ - [ ] Accessibility Team
 
 ### Screenshots
 Add screenshots to help explain your PR if you'd like. However, this is not
