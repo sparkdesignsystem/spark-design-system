@@ -18,7 +18,7 @@ If a checklist item or section does not apply to your PR then please remove it.
  - [ ] Unit Testing in Angular with `npm run test` in `angular/` (100% coverage, 100% passing)
  - [ ] Unit Testing in React with `npm run test` in `react/` (100% coverage, 100% passing)
 
-### Browser Testing (current version and 1 prior [as available on Sauce Labs])
+### Browser Testing (current version and 1 prior)
   - [ ] Google Chrome
   - [ ] Google Chrome (Mobile)
   - [ ] Mozilla Firefox
