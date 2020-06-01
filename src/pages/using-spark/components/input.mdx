@@ -71,6 +71,7 @@ Jump to:
 - [Percentage Input](#percentage-input)
 - [Phone Input](#phone-input)
 - [Radio Button](#radio-button)
+- [Huge Radio Button](#huge-radio-button)
 - [Search Input](#search-input)
 - [Select Box](#select-box)
 - [Huge Select Box](#huge-select-box)
@@ -295,8 +296,11 @@ functionality, see guidelines in the Text Huge Inputs section.
 ### Radio Button
 [Back to Variants](#variants)
 
-Radio Button allows a user to
-choose one option from a list.
+Radio buttons present a list of valid options.
+Each option allows the user to select one
+option at a time. Radio buttons are mutually
+exclusive, meaning if one radio button is
+selected the other is deselected.
 
 #### Guidelines
 
@@ -307,6 +311,39 @@ consider using a Select Box instead.
   componentName="input-radio--default-story"
   hasReact
   hasAngular
+  hasHTML
+/>
+
+<a id="huge-radio-button" class="docs-b-Link--anchor"/>
+
+### Huge Radio Button
+[Back to Variants](#variants)
+
+The Huge Radio component is often used when the question is the
+core focus of the page in a step by step process.
+Once an option is selected the next step in the flow
+is determined.
+
+#### Guidelines
+
+- Ensure list is in logical order for inputs (groups will stack).
+- Options are short and concise.
+- It is recommended that content is not to exceed 40 characters.
+- The inputs become stacked in a grid. [Stacking](/using-spark/components/stack) will
+take place automatically based on options presented.
+- This component cannot have more than six options.
+Consider using a [Huge Select Box](#huge-select-box) instead.
+- To see layout configurations, see the
+[Storybook page](https://html.sparkdesignsystem.com/?path=/docs/components-input-huge-radio--default-story).
+
+#### Anatomy
+
+- Must have an associated question.
+- Must contain concise body text for each option.
+- Width of each Huge Radio should be the same size.
+
+<ComponentPreview
+  componentName="input-huge-radio--default-story"
   hasHTML
 />
 
