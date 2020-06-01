@@ -106,7 +106,7 @@ describe('SprkButton:', () => {
   });
 
   it('should not apply the disabled attribute if the element is an anchor "a"', () => {
-    const wrapper = mount(<SprkButton href="#" />);
+    const wrapper = mount(<SprkButton href="#" disabled="true" />);
     const link = wrapper.find('a');
     expect(link.length).toBe(1);
     expect(link.getDOMNode().hasAttribute('disabled')).toBe(false);
