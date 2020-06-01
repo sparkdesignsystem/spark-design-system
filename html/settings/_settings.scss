@@ -822,7 +822,7 @@ $sprk-input-max-width-full: 100% !default;
 ///
 
 /// The max-width setting for Huge Inputs.
-$sprk-input-container-huge-max-width: 31.25rem !default;
+$sprk-input-container-huge-max-width: 37.5rem !default;
 $sprk-text-input-huge-height: 64px !default; // Todo deprecate
 /// The height value for Huge Inputs.
 $sprk-input-huge-height: $sprk-text-input-huge-height !default;
@@ -1298,7 +1298,7 @@ $sprk-radio-input-cursor-hover-disabled: default !default;
 // Radio - Huge
 
 /// The max-width of the huge radio input.
-$sprk-radio-input-huge-max-width: $sprk-input-container-huge-max-width !default;
+$sprk-radio-input-huge-max-width: 31.25rem !default;
 /// The transition for the huge radio input.
 $sprk-radio-input-huge-transition: $sprk-radio-input-transition !default;
 /// The border for the huge radio input label.
