@@ -1083,11 +1083,9 @@ $sprk-checkbox-huge-container-hover-box-shadow: $sprk-input-huge-box-shadow !def
 /// The box shadow of the huge checkbox input when disabled.
 $sprk-checkbox-huge-container-disabled-box-shadow: none !default;
 /// The border color of the huge checkbox input when disabled.
-$sprk-checkbox-huge-container-disabled-border-color: $sprk-black-tint-25 !default;
+$sprk-checkbox-huge-container-disabled-border-color: $sprk-text-input-disabled-border-color !default;
 /// The background of the huge checkbox input when disabled.
-$sprk-checkbox-huge-container-disabled-background: $sprk-gray !default;
-/// The cursor of the huge checkbox input when disabled.
-$sprk-checkbox-huge-container-disabled-cursor: not-allowed !default;
+$sprk-checkbox-huge-container-disabled-background: $sprk-text-input-disabled-background-color !default;
 /// The border color of the huge checkbox input when focused.
 $sprk-checkbox-huge-container-focus-border-color: $sprk-green !default;
 /// The border color of the huge checkbox input when focused and hovered.
