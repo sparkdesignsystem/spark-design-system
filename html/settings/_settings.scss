@@ -1406,6 +1406,8 @@ $sprk-radio-input-huge-inner-circle-width: 1rem !default;
 $sprk-radio-input-huge-inner-circle-left: 1.25rem !default;
 /// The top value of the inner circle of the huge radio input.
 $sprk-radio-input-huge-inner-circle-top: 1.25rem !default;
+// The background color of the huge radio input when it is disabled.
+$sprk-radio-input-huge-disabled-background-color: $sprk-text-input-disabled-background-color !default;
 /// The border of the outer circle of the huge radio input when it is disabled and hovered.
 $sprk-radio-input-huge-outer-circle-border-hover-disabled: $sprk-radio-input-outer-circle-border-hover-disabled !default;
 /// The box shadow of the outer circle of the huge radio input when it is disabled and hovered.
