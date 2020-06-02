@@ -21,7 +21,7 @@ export const defaultStory = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
@@ -509,7 +509,7 @@ export const invalidCheckbox = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label">
@@ -609,7 +609,7 @@ export const disabledCheckbox = () => {
   }, []);
 
   return`
-    <div class="sprk-b-InputContainer">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
           <label class="sprk-b-Label sprk-b-Label--disabled">
