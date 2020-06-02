@@ -61,6 +61,7 @@ Each input has an error and disabled state.
 
 Jump to:
 - [Checkbox](#checkbox)
+- [Huge Checkbox](#huge-checkbox)
 - [Date Input](#date-input)
 - [Date Picker](#date-picker)
 - [Helper Text](#helper-text)
@@ -90,6 +91,31 @@ than one option from a list.
   componentName="input-checkbox--default-story"
   hasReact
   hasAngular
+  hasHTML
+/>
+
+### Huge Checkbox
+[Back to Variants](#variants)
+
+The Huge Checkbox component is intended for flows
+that present single questions in a step by step process.
+For this reason, Huge Checkbox should only be
+used for stand-alone question flows.
+
+#### Guidelines
+- Ensure list is in logical order for inputs (groups will stack).
+- Options should be short and concise. Content should not exceed 40 characters.
+- There should be at least two options, but no more than six.
+- To see layout configurations with two, three, four, five, or six options, see the [Storybook page](https://html.sparkdesignsystem.com/?path=/docs/components-input-huge-checkbox-default-story).
+- This component cannot have more than six options. If your design needs more, consider using a [Huge Select Box](#huge-select-box) instead.
+
+#### Anatomy
+- Must have an associated question.
+- Must contain concise body text for each option.
+- Width of each Huge Checkbox should be the same size.
+
+<ComponentPreview
+  componentName="input-huge-checkbox--default-story"
   hasHTML
 />
 
