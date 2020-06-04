@@ -49,6 +49,7 @@ export const cornersStory = () => ({
     <div style="position:absolute; top: 5%; left:5%">
       <sprk-tooltip icon="question">Top Left</sprk-tooltip>
     </div>
+    <button>hi</button>
     <div style="position:absolute; top: 5%; left:55%">
       <sprk-tooltip icon="question">Top Right</sprk-tooltip>
     </div>

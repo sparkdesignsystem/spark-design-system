@@ -1,13 +1,20 @@
-import { Component, Input, AfterViewInit } from '@angular/core';
-// import { toggleAnimations } from './sprk-toggle-animations';
-// import { uniqueId } from 'lodash';
-// import 'focus-visible';
+import { Component, HostListener, Input, AfterViewInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'sprk-tooltip',
   template: `
   <span class="sprk-c-Tooltip__container">
-    <button class="sprk-c-Tooltip__trigger" aria-labelledby="tooltip_1">
+    <button
+      class="sprk-c-Tooltip__trigger"
+      [ngClass]="{
+        'sprk-c-Tooltip__trigger' : true,
+        'sprk-c-Tooltip--toggled' : isOpen
+      }"
+      aria-labelledby="tooltip_1"
+      [attr.aria-expanded]="isOpen ? 'true' : 'false'"
+      (click)="toggle($event)"
+      #triggerElement
+    >
       <svg
         class="sprk-c-Icon sprk-c-Icon--filled"
         aria-hidden="true"
@@ -16,10 +23,14 @@ import { Component, Input, AfterViewInit } from '@angular/core';
       </svg>
     </button>
     <span
+      [ngClass]="{
+        'sprk-c-Tooltip': true
+      }"
       class="sprk-c-Tooltip"
       aria-hidden="true"
       id="tooltip_1"
       role="tooltip"
+      #tooltipElement
     >
       <ng-content></ng-content>
     </span>
@@ -58,6 +69,30 @@ export class SprkTooltipComponent implements AfterViewInit {
    * and the `aria-controls` for the toggle trigger button.
    */
 
+  @ViewChild('triggerElement') triggerElement;
+  @ViewChild('tooltipElement') tooltipElement;
+
+  /**
+   * @ignore
+   */
+  @HostListener('document:keydown', ['$event'])
+  onKeydown($event) {
+    if ($event.key === 'Escape' || $event.key === 'Esc' || $event.keyCode === 27){
+      this.isOpen = false;
+    }
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClick(event): void {
+    if (
+      // TODO - doesn't work. This lets me click onto other tooltips
+      !event.target.classList.contains('sprk-c-Tooltip__trigger') &&
+      !event.target.classList.contains('sprk-c-Tooltip')
+    ) {
+      this.isOpen = false;
+    }
+  }
+
   /**
    * @ignore
    */
@@ -66,23 +101,42 @@ export class SprkTooltipComponent implements AfterViewInit {
   /**
    * @ignore
    */
-  toggleState(): void {
-    // this.isOpen === false
-    //   ? (this.animState = 'closed')
-    //   : (this.animState = 'open');
+  calculatePositionClass(trigger): string {
+    const elemX = trigger.getBoundingClientRect().left;
+    const elemY = trigger.getBoundingClientRect().top;
 
-    // this.isOpen === false
-    //   ? (this.iconStateClass = '')
-    //   : (this.iconStateClass = 'sprk-c-Icon--open');
-  }
+    let viewportWidth = 0;
+    let viewportHeight = 0;
+
+    if (window){
+      viewportWidth = window.innerWidth ? window.innerWidth : 0;
+      viewportHeight = window.innerHeight ? window.innerHeight : 0;
+    }
+
+    if (elemX > viewportWidth / 2) {
+      if (elemY > viewportHeight / 2) {
+        return 'sprk-c-Tooltip--top-left';
+      } else {
+        return 'sprk-c-Tooltip--bottom-left';
+      }
+    } else {
+      if (elemY > viewportHeight / 2) {
+        return 'sprk-c-Tooltip--top-right';
+      } else {
+        return 'sprk-c-Tooltip--bottom-right';
+      }
+    }
+  };
 
   /**
    * @ignore
    */
   toggle(event): void {
     event.preventDefault();
+    // should calc it and save it in a variable like isOpen
+    // then use that variable in ngClass
+    // this.addPositioningClass(this.triggerElement, this.tooltipElement);
     this.isOpen = !this.isOpen;
-    this.toggleState();
   }
 
   /**
@@ -97,6 +151,6 @@ export class SprkTooltipComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.toggleState();
+    // this.toggleState();
   }
 }

@@ -2,7 +2,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
+// import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkTooltipComponent } from './sprk-tooltip.component';
 import { IterableDiffers } from '@angular/core';
 
@@ -19,7 +19,7 @@ describe('SprkTooltipComponent', () => {
       declarations: [
         SprkTooltipComponent,
         SprkIconComponent,
-        SprkLinkDirective
+        // SprkLinkDirective
       ]
     }).compileComponents();
   }));
@@ -29,16 +29,29 @@ describe('SprkTooltipComponent', () => {
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('span');
     triggerElement = element.querySelector('.sprk-c-Tooltip__trigger');
-    contentElement = element.querySelector('sprk-c-Tooltip');
+    contentElement = element.querySelector('.sprk-c-Tooltip');
   });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should project content', () => {
-    
-  })
+  it('should toggle aria-expanded on activation', () => {
+    fixture.detectChanges();
+    expect(triggerElement.getAttribute('aria-expanded')).toEqual('false');
+    triggerElement.click();
+    fixture.detectChanges();
+    expect(triggerElement.getAttribute('aria-expanded')).toEqual('true');
+  });
+
+  // it('should add additionalClasses', () => {
+  // });
+
+  // it('should project content', () => {
+    // set the contents
+    // render the component
+    // verify the contents
+  // })
 
   // it('clicking should show body text', () => {
   //   element.querySelector('button').click();
