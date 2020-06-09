@@ -61,6 +61,7 @@ Each input has an error and disabled state.
 
 Jump to:
 - [Checkbox](#checkbox)
+- [Huge Checkbox](#huge-checkbox)
 - [Date Input](#date-input)
 - [Date Picker](#date-picker)
 - [Helper Text](#helper-text)
@@ -71,6 +72,7 @@ Jump to:
 - [Percentage Input](#percentage-input)
 - [Phone Input](#phone-input)
 - [Radio Button](#radio-button)
+- [Huge Radio Button](#huge-radio-button)
 - [Search Input](#search-input)
 - [Select Box](#select-box)
 - [Huge Select Box](#huge-select-box)
@@ -89,6 +91,31 @@ than one option from a list.
   componentName="input-checkbox--default-story"
   hasReact
   hasAngular
+  hasHTML
+/>
+
+### Huge Checkbox
+[Back to Variants](#variants)
+
+The Huge Checkbox component is intended for flows
+that present single questions in a step by step process.
+For this reason, Huge Checkbox should only be
+used for stand-alone question flows.
+
+#### Guidelines
+- Ensure list is in logical order for inputs (groups will stack).
+- Options should be short and concise. Content should not exceed 40 characters.
+- There should be at least two options, but no more than six.
+- To see layout configurations with two, three, four, five, or six options, see the [Storybook page](https://html.sparkdesignsystem.com/?path=/docs/components-input-huge-checkbox-default-story).
+- This component cannot have more than six options. If your design needs more, consider using a [Huge Select Box](#huge-select-box) instead.
+
+#### Anatomy
+- Must have an associated question.
+- Must contain concise body text for each option.
+- Width of each Huge Checkbox should be the same size.
+
+<ComponentPreview
+  componentName="input-huge-checkbox--default-story"
   hasHTML
 />
 
@@ -295,8 +322,11 @@ functionality, see guidelines in the Text Huge Inputs section.
 ### Radio Button
 [Back to Variants](#variants)
 
-Radio Button allows a user to
-choose one option from a list.
+Radio buttons present a list of valid options.
+Each option allows the user to select one
+option at a time. Radio buttons are mutually
+exclusive, meaning if one radio button is
+selected the other is deselected.
 
 #### Guidelines
 
@@ -307,6 +337,39 @@ consider using a Select Box instead.
   componentName="input-radio--default-story"
   hasReact
   hasAngular
+  hasHTML
+/>
+
+<a id="huge-radio-button" class="docs-b-Link--anchor"/>
+
+### Huge Radio Button
+[Back to Variants](#variants)
+
+The Huge Radio component is often used when the question is the
+core focus of the page in a step by step process.
+Once an option is selected the next step in the flow
+is determined.
+
+#### Guidelines
+
+- Ensure list is in logical order for inputs (groups will stack).
+- Options are short and concise.
+- It is recommended that content is not to exceed 40 characters.
+- The inputs become stacked in a grid. [Stacking](/using-spark/components/stack) will
+take place automatically based on options presented.
+- This component cannot have more than six options.
+Consider using a [Huge Select Box](#huge-select-box) instead.
+- To see layout configurations, see the
+[Storybook page](https://html.sparkdesignsystem.com/?path=/docs/components-input-huge-radio--default-story).
+
+#### Anatomy
+
+- Must have an associated question.
+- Must contain concise body text for each option.
+- Width of each Huge Radio should be the same size.
+
+<ComponentPreview
+  componentName="input-huge-radio--default-story"
   hasHTML
 />
 

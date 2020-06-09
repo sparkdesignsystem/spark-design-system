@@ -1060,6 +1060,67 @@ $sprk-checkbox-custom-input-cursor-disabled: default !default;
 $sprk-checkbox-custom-input-background-color-disabled: transparent !default;
 
 //
+// Huge Checkbox
+///
+/// The max-width of the huge checkbox input.
+$sprk-checkbox-input-huge-max-width: 500px !default;
+/// The transition of the huge checkbox input.
+$sprk-checkbox-huge-container-transition: $sprk-checkbox-transition !default;
+/// The border settings of the huge checkbox input.
+$sprk-checkbox-huge-container-border: 2px $sprk-black-tint-50 solid !default;
+/// The border-radius of the huge checkbox input.
+$sprk-checkbox-huge-container-border-radius: 4px !default;
+/// The padding of the huge checkbox input.
+$sprk-checkbox-huge-container-padding: 20px $sprk-space-m 20px 55px !default;
+/// The flex-basis of the huge checkbox input.
+$sprk-checkbox-huge-container-flex-basis: 100% !default;
+/// The line height of the huge checkbox input.
+$sprk-checkbox-huge-container-line-height: 1rem !default;
+/// The border color of the huge checkbox input when hovered.
+$sprk-checkbox-huge-container-hover-border-color: $sprk-black !default;
+/// The box shadow of the huge checkbox input when hovered.
+$sprk-checkbox-huge-container-hover-box-shadow: $sprk-input-huge-box-shadow !default;
+/// The box shadow of the huge checkbox input when disabled.
+$sprk-checkbox-huge-container-disabled-box-shadow: none !default;
+/// The border color of the huge checkbox input when disabled.
+$sprk-checkbox-huge-container-disabled-border-color: $sprk-text-input-disabled-border-color !default;
+/// The background of the huge checkbox input when disabled.
+$sprk-checkbox-huge-container-disabled-background: $sprk-text-input-disabled-background-color !default;
+/// The border color of the huge checkbox input when focused.
+$sprk-checkbox-huge-container-focus-border-color: $sprk-green !default;
+/// The border color of the huge checkbox input when focused and hovered.
+$sprk-checkbox-huge-container-focus-hover-border-color: $sprk-black !default;
+/// The border color of the huge checkbox input when checked.
+$sprk-checkbox-huge-container-checked-border-color: $sprk-green !default;
+/// The border color of the huge checkbox input when checked and hovered.
+$sprk-checkbox-huge-container-checked-hover-border-color: $sprk-black !default;
+/// The border color of the huge checkbox input when checked and focused.
+$sprk-checkbox-huge-container-focus-checked-border-color: $sprk-black !default;
+/// The height of the custom checkbox element of the huge checkbox input.
+$sprk-checkbox-huge-custom-input-height: 1.5rem !default;
+/// The width of the custom checkbox element of the huge checkbox input.
+$sprk-checkbox-huge-custom-input-width: 1.5rem !default;
+/// The top value of the custom checkbox element of the huge checkbox input.
+$sprk-checkbox-huge-custom-input-top: $sprk-space-m !default;
+/// The left value of the custom checkbox element of the huge checkbox input.
+$sprk-checkbox-huge-custom-input-left: $sprk-space-m !default;
+/// The border color of the custom checkbox element of the huge checkbox input when hovered.
+$sprk-checkbox-huge-custom-input-hover-border-color: $sprk-black !default;
+/// The border color of the custom checkbox element of the huge checkbox input when disabled.
+$sprk-checkbox-huge-custom-input-disabled-border-color: $sprk-black-tint-50 !default;
+/// The border color of the custom checkbox element of the huge checkbox input when checked.
+$sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color: $sprk-green !default;
+
+/// The height of the checkmark inside of the huge checkbox input.
+$sprk-checkbox-huge-checkmark-icon-height: 0.5rem !default;
+/// The width of the checkmark inside of the huge checkbox input.
+$sprk-checkbox-huge-checkmark-icon-width: .75rem !default;
+/// The left value of the checkmark inside of the huge checkbox input.
+$sprk-checkbox-huge-checkmark-icon-left: 22px !default;
+/// The top value of the checkmark inside of the huge checkbox input.
+$sprk-checkbox-huge-checkmark-icon-top: 22px !default;
+
+//
 // Input Errors
 ///
 
@@ -1294,6 +1355,61 @@ $sprk-radio-input-inner-circle-top: 0.25rem !default;
 $sprk-radio-input-inner-circle-left: -1.125rem !default;
 // The cursor style of the disabled radio on hover.
 $sprk-radio-input-cursor-hover-disabled: default !default;
+
+// Radio - Huge
+
+/// The max-width of the huge radio input.
+$sprk-radio-input-huge-max-width: 31.25rem !default;
+/// The transition for the huge radio input.
+$sprk-radio-input-huge-transition: $sprk-radio-input-transition !default;
+/// The border for the huge radio input label.
+$sprk-radio-input-huge-label-border: 2px $sprk-black-tint-50 solid !default;
+/// The border-radius for the huge radio input label.
+$sprk-radio-input-huge-label-border-radius: 4px !default;
+/// The padding for the huge radio input label.
+$sprk-radio-input-huge-label-padding: 1.25rem 1rem 1.25rem 3.4375rem !default;
+/// The flex-basis for the huge radio input label.
+$sprk-radio-input-huge-label-flex-basis: 100% !default;
+/// The line-height for the huge radio input label.
+$sprk-radio-input-huge-label-line-height: 1rem !default;
+/// The border color of the huge radio input label on hover.
+$sprk-radio-input-huge-label-hover-border-color: $sprk-black !default;
+/// The box shadow of the huge radio input label on hover.
+$sprk-radio-input-huge-label-hover-box-shadow: $sprk-input-huge-box-shadow !default;
+/// The background color of the outer circle of the huge radio input on hover.
+$sprk-radio-input-huge-outer-circle-border-hover-background-color: $sprk-gray !default;
+/// The width of the outer circle of the huge radio input.
+$sprk-radio-input-huge-outer-circle-width: 1.5rem !default;
+/// The height of the outer circle of the huge radio input.
+$sprk-radio-input-huge-outer-circle-height: 1.5rem !default;
+/// The top value of the outer circle of the huge radio input.
+$sprk-radio-input-huge-outer-circle-top: 1rem !default;
+/// The left value of the outer circle of the huge radio input.
+$sprk-radio-input-huge-outer-circle-left: 1rem !default;
+/// The border color of the huge radio input label when it has focus.
+$sprk-radio-input-huge-focused-label-border: $sprk-green !default;
+/// The background color of the outer circle of the huge radio input when it has focus.
+$sprk-radio-input-huge-focused-outer-circle-border-background-color: $sprk-gray !default;
+/// The border color of the huge radio input label when it is selected.
+$sprk-radio-input-huge-checked-label-border: $sprk-green !default;
+/// The border color of the huge radio input label when it is selected and hovered.
+$sprk-radio-input-huge-checked-hover-label-border-color: $sprk-black !default;
+/// The border color of the outer circle of the huge when it is selected and hovered.
+$sprk-radio-input-huge-checked-hover-outer-circle-border-color: $sprk-green !default;
+/// The height of the inner circle of the huge radio input.
+$sprk-radio-input-huge-inner-circle-height: 1rem !default;
+/// The width of the inner circle of the huge radio input.
+$sprk-radio-input-huge-inner-circle-width: 1rem !default;
+/// The left value of the inner circle of the huge radio input.
+$sprk-radio-input-huge-inner-circle-left: 1.25rem !default;
+/// The top value of the inner circle of the huge radio input.
+$sprk-radio-input-huge-inner-circle-top: 1.25rem !default;
+// The background color of the huge radio input when it is disabled.
+$sprk-radio-input-huge-disabled-background-color: $sprk-text-input-disabled-background-color !default;
+/// The border of the outer circle of the huge radio input when it is disabled and hovered.
+$sprk-radio-input-huge-outer-circle-border-hover-disabled: $sprk-radio-input-outer-circle-border-hover-disabled !default;
+/// The box shadow of the outer circle of the huge radio input when it is disabled and hovered.
+$sprk-radio-input-huge-outer-circle-box-shadow-hover-disabled: none !default;
 
 //
 // Tables
