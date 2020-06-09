@@ -30,7 +30,14 @@ const modules = {
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-  <sprk-tooltip icon="question">I am the tooltip content</sprk-tooltip>
+    <sprk-tooltip
+      triggerIconType="question-filled"
+      additionalClassesIcon="sprk-c-Icon--filled"
+      idString='idstring-1'
+      analyticsString='analyticsString-1'
+    >
+      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id dee doo da fauxet la gigman roo.
+    </sprk-tooltip>
   `,
 });
 
@@ -38,35 +45,7 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: [
-      'sprk-toggle.component',
-    ],
-  },
-};
-
-export const cornersStory = () => ({
-  moduleMetadata: modules,
-  template: `
-    <div style="position:absolute; top: 5%; left:5%">
-      <sprk-tooltip icon="question">Top Left</sprk-tooltip>
-    </div>
-    <button>hi</button>
-    <div style="position:absolute; top: 5%; left:55%">
-      <sprk-tooltip icon="question">Top Right</sprk-tooltip>
-    </div>
-    <div style="position:absolute; top: 55%; left:5%">
-      <sprk-tooltip icon="question">Bottom Left</sprk-tooltip>
-    </div>
-    <div style="position:absolute; top: 55%; left:55%">
-      <sprk-tooltip icon="question">Bottom Right</sprk-tooltip>
-    </div>
-  `,
-});
-
-cornersStory.story = {
-  name: 'Corners',
-  parameters: {
-    jest: [
-      'sprk-toggle.component',
+      'sprk-tooltip.component',
     ],
   },
 };

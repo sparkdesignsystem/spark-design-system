@@ -1,34 +1,39 @@
-import { Component, HostListener, Input, AfterViewInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Input,
+  Output,
+  OnInit,
+  ViewChild,
+  EventEmitter
+} from '@angular/core';
+import { uniqueId } from 'lodash';
 
 @Component({
   selector: 'sprk-tooltip',
   template: `
-  <span class="sprk-c-Tooltip__container">
+  <span class="sprk-c-Tooltip__container" #containerElement>
     <button
       class="sprk-c-Tooltip__trigger"
       [ngClass]="{
         'sprk-c-Tooltip__trigger' : true,
         'sprk-c-Tooltip--toggled' : isOpen
       }"
-      aria-labelledby="tooltip_1"
       [attr.aria-expanded]="isOpen ? 'true' : 'false'"
-      (click)="toggle($event)"
+      [attr.data-analytics]="analyticsString"
+      [attr.data-id]="idString"
       #triggerElement
     >
-      <svg
-        class="sprk-c-Icon sprk-c-Icon--filled"
+      <sprk-icon
+        [iconType]="triggerIconType"
+        [additionalClasses]="additionalClassesIcon"
         aria-hidden="true"
-      >
-        <use xlink:href="#question-filled" />
-      </svg>
+      ></sprk-icon>
     </button>
     <span
-      [ngClass]="{
-        'sprk-c-Tooltip': true
-      }"
+      [ngClass]="getTooltipClasses()"
       class="sprk-c-Tooltip"
       aria-hidden="true"
-      id="tooltip_1"
       role="tooltip"
       #tooltipElement
     >
@@ -37,8 +42,13 @@ import { Component, HostListener, Input, AfterViewInit, ViewChild } from '@angul
   </span>
   `
 })
-export class SprkTooltipComponent implements AfterViewInit {
+export class SprkTooltipComponent implements OnInit {
 
+  /**
+   * The name of the icon to use
+   */
+  @Input()
+  triggerIconType: string;
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
@@ -50,10 +60,17 @@ export class SprkTooltipComponent implements AfterViewInit {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * component.
+   * component container.
    */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * svg icon.
+   */
+  @Input()
+  additionalClassesIcon: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -65,31 +82,72 @@ export class SprkTooltipComponent implements AfterViewInit {
   @Input()
   idString: string;
   /**
-   * A string that is used to set the `id` on the content
-   * and the `aria-controls` for the toggle trigger button.
+  * Optional: the unique ID to use for the tooltip element
+  */
+  @Input()
+  id: string = uniqueId(`sprk_tooltip_`);
+
+  /**
+   * Emitted when the tooltip is toggled open
    */
+  @Output()
+  openedEvent = new EventEmitter<any>();
+
+  /**
+   * Emitted when the tooltip is toggled closed
+   */
+  @Output()
+  closedEvent = new EventEmitter<any>();
 
   @ViewChild('triggerElement') triggerElement;
   @ViewChild('tooltipElement') tooltipElement;
+  @ViewChild('containerElement') containerElement;
 
   /**
    * @ignore
    */
   @HostListener('document:keydown', ['$event'])
   onKeydown($event) {
-    if ($event.key === 'Escape' || $event.key === 'Esc' || $event.keyCode === 27){
-      this.isOpen = false;
+    if ($event.key === 'Escape' || $event.key === 'Esc' || $event.keyCode === 27) {
+      if (this.isOpen) {
+        this.isOpen = false;
+        this.closedEvent.emit();
+      }
     }
   }
 
-  @HostListener('document:click', ['$event'])
-  onClick(event): void {
-    if (
-      // TODO - doesn't work. This lets me click onto other tooltips
-      !event.target.classList.contains('sprk-c-Tooltip__trigger') &&
-      !event.target.classList.contains('sprk-c-Tooltip')
-    ) {
-      this.isOpen = false;
+  /**
+   * @ignore
+   */
+  @HostListener('document:click', ['$event']) onDocumentClick(event): void {
+    if (!this.containerElement.nativeElement.contains(event.target)) {
+      if (this.isOpen) {
+        this.isOpen = false;
+        this.closedEvent.emit();
+      }
+    }
+  }
+
+  /**
+   * @ignore
+   */
+  @HostListener('focusin') onFocusIn() {
+    this.positioningClass = this.calculatePositioningClass();
+  }
+
+  /**
+   * @ignore
+   */
+  @HostListener('mouseover') onMouseOver() {
+    this.positioningClass = this.calculatePositioningClass();
+  }
+
+  /**
+   * @ignore
+   */
+  @HostListener('click', ['$event']) onClick(event) {
+    if (this.triggerElement && this.triggerElement.nativeElement.contains(event.target)) {
+      this.toggle()
     }
   }
 
@@ -97,18 +155,27 @@ export class SprkTooltipComponent implements AfterViewInit {
    * @ignore
    */
   public isOpen = false;
+  /**
+   * @ignore
+   */
+  public positioningClass = 'sprk-c-Tooltip--bottom-right';
 
   /**
    * @ignore
    */
-  calculatePositionClass(trigger): string {
+  calculatePositioningClass(): string {
+    // for virtual DOM environments like unit tests
+    if (this.triggerElement === undefined) return 'sprk-c-Tooltip--bottom-right';
+
+    var trigger = this.triggerElement.nativeElement;
+
     const elemX = trigger.getBoundingClientRect().left;
     const elemY = trigger.getBoundingClientRect().top;
 
     let viewportWidth = 0;
     let viewportHeight = 0;
 
-    if (window){
+    if (window) {
       viewportWidth = window.innerWidth ? window.innerWidth : 0;
       viewportHeight = window.innerHeight ? window.innerHeight : 0;
     }
@@ -131,26 +198,40 @@ export class SprkTooltipComponent implements AfterViewInit {
   /**
    * @ignore
    */
-  toggle(event): void {
-    event.preventDefault();
-    // should calc it and save it in a variable like isOpen
-    // then use that variable in ngClass
-    // this.addPositioningClass(this.triggerElement, this.tooltipElement);
+  toggle(): void {
+    this.positioningClass = this.calculatePositioningClass();
     this.isOpen = !this.isOpen;
+
+    if (this.isOpen)
+      this.openedEvent.emit();
+    else
+      this.closedEvent.emit();
   }
 
   /**
    * @ignore
    */
-  getClasses(): string {
+  getTooltipClasses(): string {
     const classArray: string[] = [
-      // 'sprk-c-Toggle__trigger sprk-u-TextCrop--none',
-      // this.titleFontClass,
+      'sprk-c-Tooltip',
+      this.positioningClass,
     ];
+
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach(className => {
+        classArray.push(className);
+      });
+    }
+
     return classArray.join(' ');
   }
 
-  ngAfterViewInit() {
-    // this.toggleState();
+  ngOnInit() {
+    if (this.triggerElement && this.tooltipElement) {
+      this.triggerElement.nativeElement.setAttribute('aria-labelledby', this.id);
+      this.tooltipElement.nativeElement.id = this.id;
+    }
+
+    this.positioningClass = this.calculatePositioningClass();
   }
 }
