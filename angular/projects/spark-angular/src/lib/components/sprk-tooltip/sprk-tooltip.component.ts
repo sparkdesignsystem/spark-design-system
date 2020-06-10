@@ -14,7 +14,6 @@ import { uniqueId } from 'lodash';
   template: `
   <span class="sprk-c-Tooltip__container" #containerElement>
     <button
-      class="sprk-c-Tooltip__trigger"
       [ngClass]="{
         'sprk-c-Tooltip__trigger' : true,
         'sprk-c-Tooltip--toggled' : isOpen
@@ -26,13 +25,12 @@ import { uniqueId } from 'lodash';
     >
       <sprk-icon
         [iconType]="triggerIconType"
-        [additionalClasses]="additionalClassesIcon"
+        [additionalClasses]="iconAdditionalClasses"
         aria-hidden="true"
       ></sprk-icon>
     </button>
     <span
       [ngClass]="getTooltipClasses()"
-      class="sprk-c-Tooltip"
       aria-hidden="true"
       role="tooltip"
       #tooltipElement
@@ -48,7 +46,7 @@ export class SprkTooltipComponent implements OnInit {
    * The name of the icon to use
    */
   @Input()
-  triggerIconType: string;
+  triggerIconType: string = 'question-filled';
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
@@ -70,7 +68,7 @@ export class SprkTooltipComponent implements OnInit {
    * svg icon.
    */
   @Input()
-  additionalClassesIcon: string;
+  iconAdditionalClasses: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -108,8 +106,8 @@ export class SprkTooltipComponent implements OnInit {
    */
   @HostListener('document:keydown', ['$event'])
   onKeydown($event) {
-    if ($event.key === 'Escape' || $event.key === 'Esc' || $event.keyCode === 27) {
-      if (this.isOpen) {
+    if (this.isOpen) {
+      if ($event.key === 'Escape' || $event.key === 'Esc' || $event.keyCode === 27) {
         this.isOpen = false;
         this.closedEvent.emit();
       }
@@ -120,7 +118,7 @@ export class SprkTooltipComponent implements OnInit {
    * @ignore
    */
   @HostListener('document:click', ['$event']) onDocumentClick(event): void {
-    if (!this.containerElement.nativeElement.contains(event.target)) {
+    if (this.containerElement && !this.containerElement.nativeElement.contains(event.target)) {
       if (this.isOpen) {
         this.isOpen = false;
         this.closedEvent.emit();
@@ -155,6 +153,7 @@ export class SprkTooltipComponent implements OnInit {
    * @ignore
    */
   public isOpen = false;
+
   /**
    * @ignore
    */
