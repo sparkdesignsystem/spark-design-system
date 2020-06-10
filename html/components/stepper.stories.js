@@ -154,7 +154,7 @@ export const withStepDescriptions = () => {
       >
         <span
           class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-          aria-controls="one-target-1"
+          aria-controls="one-descriptions-target-1"
           id="one-step-descriptions-1"
           aria-selected="true"
         >
