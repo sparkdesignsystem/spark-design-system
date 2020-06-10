@@ -188,7 +188,7 @@ export const withStepDescriptions = () => {
       >
         <span
           class="sprk-c-Stepper__step-header sprk-b-Link sprk-b-Link--plain"
-          aria-controls="one-target-2"
+          aria-controls="one-descriptions-target-2"
           id="one-step-descriptions-2"
         >
           <span class="sprk-c-Stepper__step-icon"></span>
