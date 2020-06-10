@@ -1,25 +1,20 @@
 /* global document beforeEach afterEach describe it window */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-// import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkTooltipComponent } from './sprk-tooltip.component';
-import { IterableDiffers } from '@angular/core';
 
 describe('SprkTooltipComponent', () => {
   let component: SprkTooltipComponent;
   let fixture: ComponentFixture<SprkTooltipComponent>;
-  let element: HTMLElement;
+  let containerElement: HTMLElement;
   let triggerElement;
-  let contentElement;
+  let tooltipElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
       declarations: [
         SprkTooltipComponent,
         SprkIconComponent,
-        // SprkLinkDirective
       ]
     }).compileComponents();
   }));
@@ -27,54 +22,64 @@ describe('SprkTooltipComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkTooltipComponent);
     component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelector('span');
-    triggerElement = element.querySelector('.sprk-c-Tooltip__trigger');
-    contentElement = element.querySelector('.sprk-c-Tooltip');
+    containerElement = fixture.nativeElement.querySelector('span');
+    triggerElement = containerElement.querySelector('button');
+    tooltipElement = containerElement.querySelector('span');
+    fixture.detectChanges();
   });
-
-  afterEach(() => {
-    if (element.querySelectorAll('.sprk-c-Tooltip--toggled').length !== 0){
-      triggerElement.click();
-      fixture.detectChanges();
-    }
-  })
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should toggle aria-expanded on activation', () => {
-  //   // expect(triggerElement.getAttribute('aria-expanded')).toEqual('false');
-  //   triggerElement.click();
-  //   fixture.detectChanges();
-  //   expect(triggerElement.getAttribute('aria-expanded')).toEqual('true');
+  it('should toggle aria-expanded on activation', () => {
+    expect(triggerElement.getAttribute('aria-expanded')).toEqual('false');
+    triggerElement.click();
+    fixture.detectChanges();
+    expect(triggerElement.getAttribute('aria-expanded')).toEqual('true');
+  });
+
+  it('should toggle on activation', () => {
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+    triggerElement.click();
+    fixture.detectChanges();
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
+  });
+
+  it('should close on document click', () => {
+    triggerElement.click();
+    fixture.detectChanges();
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
+    containerElement.ownerDocument.dispatchEvent(new Event('click'));
+    fixture.detectChanges();
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+  });
+
+  it('should close on Escape key', () => {
+    triggerElement.click();
+    fixture.detectChanges();
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
+    document.dispatchEvent(new KeyboardEvent('keydown', {
+      key: 'Escape'
+    }));
+    fixture.detectChanges();
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+  });
+
+  it('should add additional classes', () => {
+    expect(tooltipElement.classList.contains('sprk-test')).toEqual(false);
+    component.additionalClasses = 'sprk-test';
+    fixture.detectChanges();
+    expect(tooltipElement.classList.contains('sprk-test')).toEqual(true);
+  });
+
+  // it('should emit an open event when toggled', () => {
   // });
 
-  // it('should toggle on activation', () => {
-  //   expect(element.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
-  //   triggerElement.click();
-  //   fixture.detectChanges();
-  //   expect(element.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
+  // it('should emit a closed event when toggled', () => {
   // });
 
-  // it('should close on document click', () => {
-  //   triggerElement.click();
-  //   fixture.detectChanges();
-  //   expect(element.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
-  //   element.ownerDocument.dispatchEvent(new Event('click'));
-  //   fixture.detectChanges();
-  //   expect(element.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
-  // });
-
-  // it('should close on Escape key', () => {
-  //   triggerElement.click();
-  //   fixture.detectChanges();
-  //   expect(element.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
-  //   document.dispatchEvent(new KeyboardEvent('keydown', {
-  //     key: 'Escape'
-  //   }));
-  //   fixture.detectChanges();
-  //   expect(element.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+  // it('should generate and add aria-labelledby', () => {
   // });
 
   // it('should recalculate position on hover', () => {
@@ -83,10 +88,6 @@ describe('SprkTooltipComponent', () => {
   // it('should recalculate position on focus', () => {
   // });
 
-  // it('should emit an event when toggled by click', () => {
-  // });
-
   // it('should emit an event when toggled by Enter', () => {
   // });
-
 });
