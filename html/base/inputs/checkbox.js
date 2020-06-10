@@ -11,6 +11,4 @@ const checkbox = () => {
   getElements('[data-sprk-input="checkbox"]', bindCheckboxUIEvents);
 };
 
-export {
-  checkbox, bindCheckboxUIEvents
-};
+export { checkbox, bindCheckboxUIEvents };
