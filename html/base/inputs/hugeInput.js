@@ -7,11 +7,11 @@ import addClassIfNotEmpty from '../../utilities/addClassIfNotEmpty';
  * that adds the class of `sprk-b-TextInput--float-label`
  * in favor of the more universal `sprk-b-Input--has-floating-label`.
  */
-const bindUIEvents = element => {
+const bindUIEvents = (element) => {
   toggleClassWithValue(element, 'sprk-b-TextInput--float-label', 'input');
 };
 
-const bindUIEventsHugeInput = element => {
+const bindUIEventsHugeInput = (element) => {
   if (element.tagName === 'SELECT') {
     toggleClassWithValue(element, 'sprk-b-Input--has-floating-label', 'change');
   } else {
@@ -26,10 +26,10 @@ const hugeInput = () => {
   const newClassName = 'sprk-b-Input--has-floating-label';
 
   window.addEventListener('load', () => {
-    getElements(oldSelector, element => {
+    getElements(oldSelector, (element) => {
       addClassIfNotEmpty(element, oldClassName);
     });
-    getElements(newSelector, element => {
+    getElements(newSelector, (element) => {
       addClassIfNotEmpty(element, newClassName);
     });
   });
