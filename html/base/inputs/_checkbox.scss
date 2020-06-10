@@ -2,7 +2,6 @@
 /// @group input
 ////
 
-
 // Hide the native control
 .sprk-b-Checkbox__input {
   opacity: $sprk-checkbox-input-opacity;
@@ -21,7 +20,7 @@
 
 // Custom checkbox styles
 .sprk-b-Checkbox__label::before {
-  content: "";
+  content: '';
   height: $sprk-checkbox-custom-input-height;
   width: $sprk-checkbox-custom-input-width;
   border: $sprk-checkbox-custom-input-border;
@@ -58,7 +57,7 @@
 .sprk-b-Checkbox__input:checked {
   // Show checkmark icon when checked
   + .sprk-b-Checkbox__label::after {
-    content: "";
+    content: '';
   }
 
   + .sprk-b-Checkbox__label::before {
@@ -81,7 +80,6 @@
   background-color: $sprk-checkbox-custom-input-background-color-disabled;
 }
 
-
 .sprk-b-Checkbox--huge {
   max-width: $sprk-checkbox-input-huge-max-width;
 
@@ -89,7 +87,6 @@
     transition: $sprk-checkbox-huge-container-transition;
     border: $sprk-checkbox-huge-container-border;
     border-radius: $sprk-checkbox-huge-container-border-radius;
-
     padding: $sprk-checkbox-huge-container-padding;
     flex-basis: $sprk-checkbox-huge-container-flex-basis;
     line-height: $sprk-checkbox-huge-container-line-height;
@@ -116,9 +113,12 @@
       border-color: $sprk-checkbox-huge-container-hover-border-color;
       box-shadow: $sprk-checkbox-huge-container-hover-box-shadow;
 
+      /* stylelint-disable max-nesting-depth */
       &::before {
         border-color: $sprk-checkbox-huge-custom-input-hover-border-color;
       }
+
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
@@ -126,7 +126,8 @@
     position: absolute;
 
     &:disabled {
-      & + .sprk-b-Checkbox__label {
+      /* stylelint-disable max-nesting-depth */
+      + .sprk-b-Checkbox__label {
         border-color: $sprk-checkbox-huge-container-disabled-border-color;
         background: $sprk-checkbox-huge-container-disabled-background;
 
@@ -138,11 +139,14 @@
       &:hover + .sprk-b-Checkbox__label {
         box-shadow: $sprk-checkbox-huge-container-disabled-box-shadow;
       }
+
+      /* stylelint-enable max-nesting-depth */
     }
 
     // Styles for container when focused by keyboard
     &:focus {
-      & + .sprk-b-Checkbox__label {
+      /* stylelint-disable max-nesting-depth */
+      + .sprk-b-Checkbox__label {
         // Container's border color when focused through keyboard
         border-color: $sprk-checkbox-huge-container-focus-border-color;
 
@@ -151,10 +155,13 @@
           border-color: $sprk-checkbox-huge-container-focus-hover-border-color;
         }
       }
+
+      /* stylelint-enable max-nesting-depth */
     }
 
-    &:checked  {
-      & + .sprk-b-Checkbox__label {
+    &:checked {
+      /* stylelint-disable max-nesting-depth */
+      + .sprk-b-Checkbox__label {
         // Container's border color when checked
         border-color: $sprk-checkbox-huge-container-checked-border-color;
 
@@ -173,6 +180,8 @@
       &:focus + .sprk-b-Checkbox__label {
         border-color: $sprk-checkbox-huge-container-focus-checked-border-color;
       }
+
+      /* stylelint-enable max-nesting-depth */
     }
   }
 }
