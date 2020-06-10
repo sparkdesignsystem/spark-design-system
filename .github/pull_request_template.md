@@ -27,6 +27,11 @@ If a checklist item or section does not apply to your PR then please remove it.
   - [ ] Microsoft Edge
   - [ ] Apple Safari
   - [ ] Apple Safari (Mobile)
+  
+### Accessibility Testing
+  - [ ] Axe browser extension
+  - [ ] Jaws Inspect
+  - [ ] VoiceOver (iOS) or Talkback (Android)
 
 ### Deploy Preview Reviewed and Approved
  - [ ] Design Team
