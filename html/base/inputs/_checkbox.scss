@@ -113,10 +113,12 @@
       border-color: $sprk-checkbox-huge-container-hover-border-color;
       box-shadow: $sprk-checkbox-huge-container-hover-box-shadow;
 
+      /* stylelint-disable max-nesting-depth */
       &::before {
-        /* stylelint-disable-line max-nesting-depth */
         border-color: $sprk-checkbox-huge-custom-input-hover-border-color;
       }
+
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
