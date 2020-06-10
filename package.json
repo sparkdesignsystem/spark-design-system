@@ -20,7 +20,7 @@
   },
   "lint-staged": {
     "*.scss": [
-      "stylelint --syntax scss",
+      "stylelint --fix",
       "prettier --write"
     ],
     "*.js": [
