@@ -618,3 +618,9 @@ export {
 export {
   SprkBoxModule
 } from './lib/directives/sprk-box/sprk-box.module';
+export {
+  SprkTooltipComponent
+} from './lib/components/sprk-tooltip/sprk-tooltip.component';
+export {
+  SprkTooltipModule
+} from './lib/components/sprk-tooltip/sprk-tooltip.module';
