@@ -6,12 +6,16 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 export default {
   title: 'Components/Accordion',
   component: SprkAccordion,
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
     subcomponents: { SprkAccordionItem },
-  }
+    info: `
+${markdownDocumentationLinkBuilder('accordion')}
+- If your instance only has accordion item,
+consider using
+the [Toggle Component](/docs/components-toggle--default-story) instead.
+`,
+  },
 };
 
 export const defaultStory = () => (
@@ -23,22 +27,16 @@ export const defaultStory = () => (
       analyticsString="analytics_string_goes_here"
     >
       <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-        This is an example of multiple HTML elements
-        used for the content in an accordion item.
+        This is an example of multiple HTML elements used for the content in an
+        accordion item.
       </p>
 
       <ul className="sprk-b-List sprk-b-List--indented sprk-o-Stack__item">
-        <li>
-          List Item One
-        </li>
+        <li>List Item One</li>
 
-        <li>
-          List Item Two
-        </li>
+        <li>List Item Two</li>
 
-        <li>
-          List Item Three
-        </li>
+        <li>List Item Three</li>
       </ul>
     </SprkAccordionItem>
 
@@ -48,9 +46,9 @@ export const defaultStory = () => (
       analyticsString="analytics_string_goes_here"
     >
       <p className="sprk-b-TypeBodyTwo">
-        This is an example of accordion content. This is an
-        example of accordion content. This is an example of
-        accordion content. This is an example of accordion content.
+        This is an example of accordion content. This is an example of accordion
+        content. This is an example of accordion content. This is an example of
+        accordion content.
       </p>
     </SprkAccordionItem>
 
@@ -60,9 +58,9 @@ export const defaultStory = () => (
       analyticsString="analytics_string_goes_here"
     >
       <p className="sprk-b-TypeBodyTwo">
-        This is an example of accordion content. This is an
-        example of accordion content. This is an example of
-        accordion content. This is an example of accordion content.
+        This is an example of accordion content. This is an example of accordion
+        content. This is an example of accordion content. This is an example of
+        accordion content.
       </p>
     </SprkAccordionItem>
   </SprkAccordion>
@@ -71,7 +69,6 @@ export const defaultStory = () => (
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkAccordion', 'SprkAccordionItem'] ,
-    info: `${markdownDocumentationLinkBuilder('accordion')}`,
+    jest: ['SprkAccordion', 'SprkAccordionItem'],
   },
 };
