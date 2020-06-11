@@ -1,5 +1,5 @@
 # These owners will be the default owners for everything in
 # the repo. Unless a later match takes precedence,
-# @RCopeland and @afebbraro will be requested for
+# @RCopeland and @afebbraro and @guern1kn will be requested for
 # review when someone opens a pull request.
-*       @afebbraro @RCopeland @yodasw16
+*       @afebbraro @RCopeland @guern1kn @yodasw16
