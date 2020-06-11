@@ -83,7 +83,11 @@ stylesheet. This file can be found in `your-app/src`.
 
 > Note: Importing Spark SCSS at the component level can lead to unexpected behavior.
 
-4. Back on the command line, build
+4. Then, add the `sprk-u-JavaScript` CSS class to the root `<html>` element
+in your application. Usually, the `<html>`
+element is in the `index.html` file.
+
+5. Back on the command line, build
 and run your new application by running
 `npm run start` and opening `http://localhost:4200/`
 in your web browser. When Angular builds,
@@ -140,7 +144,7 @@ cropped, but that’s OK. It’s
 because we don’t yet have
 any layout on the page.
 
-6. Now let’s add some TypeScript
+7. Now, let’s add some TypeScript
 to trigger the Spinner
 behavior. Copy this code into
 the `AppComponent` class inside
@@ -160,7 +164,7 @@ export class AppComponent {
 }
 ```
 
-7. Finally, import the `setSpinning`
+8. Finally, import the `setSpinning`
 utility function from the Spark
 library. This goes at the top
 of your component’s `.ts` file,
@@ -170,7 +174,7 @@ in our case `app.component.ts`.
 import { setSpinning } from '@sparkdesignsystem/spark';
 ```
 
-8. Head back to your web browser and
+9. Head back to your web browser and
 click the Spark Button that you
 added earlier. If everything's
 working correctly, the text
