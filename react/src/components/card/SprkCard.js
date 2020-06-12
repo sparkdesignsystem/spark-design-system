@@ -45,7 +45,7 @@ const SprkCard = (props) => {
     <div
       className={cx('sprk-c-Card sprk-o-Stack', additionalClasses, {
         'sprk-c-Card--standout': isStandout,
-        'sprk-u-TextAlign--center': teaserConfig.mediaType === 'icon',
+        'sprk-u-TextAlign--center': teaserConfig.media.mediaVariant === 'icon',
       })}
       data-id={idString}
     >
@@ -56,7 +56,8 @@ const SprkCard = (props) => {
 
 SprkCard.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to
+   * add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
@@ -66,23 +67,23 @@ SprkCard.propTypes = {
   /** Content to render inside of SprkCard. */
   children: PropTypes.node,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
    * Determines if card style has a deeper shadow.
    */
   isStandout: PropTypes.bool,
-  // TODO: Turn this prop into a oneOf type and include the possible possibilities. It could also need a default/base variant style. Issue #2496
+  // TODO: Turn this prop into a oneOf type and include
+  // the possible possibilities.It could also need a
+  // default/base variant style. Issue #2496
   /**
    * Determines the type of card.
    * If none provided, it defaults to
    * the base card style.
-   *
-   * Expects either `highlightedHeader`
-   * or `teaser`.
    */
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(['highlightedHeader', 'teaser']),
   /**
    * Configurations that
    * populate the content of SprkCard
@@ -123,7 +124,7 @@ SprkCard.propTypes = {
        * `data-analytics` attribute on the Call to Action.
        * Intended for an outside
        * library to capture data.
-      */
+       */
       ctaAnalytics: PropTypes.string,
       /**
        * Determines what icon `SprkIcon` renders next to the Call to Action.
@@ -135,7 +136,7 @@ SprkCard.propTypes = {
       ctaLinkElement: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
-        PropTypes.elementType
+        PropTypes.elementType,
       ]),
       /**
        * Determinds if the CTA is a link or a button.
@@ -179,11 +180,13 @@ SprkCard.propTypes = {
       /** The source link for the media. */
       imgSrc: PropTypes.string,
       /**
-       * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+       * Assigned to the `data-analytics` attribute serving
+       * as a unique selector for outside libraries to capture data.
        */
       mediaAnalyticsString: PropTypes.string,
       /**
-       * Determines which type of media renders. Defaults to `img` if none provided.
+       * Determines which type of media renders.
+       * Defaults to `img` if none provided.
        */
       mediaVariant: PropTypes.oneOf(['img', 'icon']),
     }),
