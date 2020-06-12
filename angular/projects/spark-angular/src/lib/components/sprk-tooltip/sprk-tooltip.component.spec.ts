@@ -66,6 +66,37 @@ describe('SprkTooltipComponent', () => {
     expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
   });
 
+  it('should not close on Escape key if it is not open', (done) => {
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+
+    let closedEventEmitted = false;
+
+    component.closedEvent.subscribe(g => {
+      closedEventEmitted = true;
+      done();
+    });
+
+    document.dispatchEvent(new KeyboardEvent('keydown', {
+      key: 'a'
+    }));
+
+    fixture.detectChanges();
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+    expect(closedEventEmitted).toEqual(false);
+    done();
+  });
+
+  it('should not close on non-Escape key', () => {
+    triggerElement.click();
+    fixture.detectChanges();
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
+    document.dispatchEvent(new KeyboardEvent('keydown', {
+      key: 'a'
+    }));
+    fixture.detectChanges();
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
+  });
+
   it('should add additional classes', () => {
     expect(tooltipElement.classList.contains('sprk-test')).toEqual(false);
     component.additionalClasses = 'sprk-test';
@@ -73,21 +104,186 @@ describe('SprkTooltipComponent', () => {
     expect(tooltipElement.classList.contains('sprk-test')).toEqual(true);
   });
 
-  // it('should emit an open event when toggled', () => {
-  // });
+  it('should generate an id if needed', () => {
+    const foundLabelledBy = triggerElement.getAttribute('aria-labelledby');
+    const foundId = tooltipElement.id;
 
-  // it('should emit a closed event when toggled', () => {
-  // });
+    expect(foundLabelledBy.length > 0).toBeTruthy();
+    expect(foundId.length > 0).toBeTruthy();
+    expect(foundLabelledBy).toEqual(foundId);
+  });
 
-  // it('should generate and add aria-labelledby', () => {
-  // });
+  it('should not generate an id if one is provided', () => {
+    component.id = 'test_string';
+    fixture.detectChanges();
 
-  // it('should recalculate position on hover', () => {
-  // });
+    expect(triggerElement.getAttribute('aria-labelledby')).toEqual('test_string');
+    expect(tooltipElement.id).toEqual('test_string');
+  });
 
-  // it('should recalculate position on focus', () => {
-  // });
+  it('should emit an open event when toggled', done => {
+    let eventEmitted = false;
 
-  // it('should emit an event when toggled by Enter', () => {
-  // });
+    component.openedEvent.subscribe(g => {
+      eventEmitted = true;
+      done();
+    });
+
+    triggerElement.click();
+
+    expect(eventEmitted).toEqual(true);
+  });
+
+  it('should emit a closed event when toggled', done => {
+    let eventEmitted = false;
+
+    component.closedEvent.subscribe(g => {
+      eventEmitted = true;
+      done();
+    });
+
+    triggerElement.click();
+    expect(eventEmitted).toEqual(false);
+
+    triggerElement.click();
+    expect(eventEmitted).toEqual(true);
+  });
+
+  it('should recalculate position on hover', () => {
+    window.resizeTo = function resizeTo(width, height) {
+      Object.assign(this, {
+        innerWidth: width,
+        innerHeight: height,
+        outerWidth: width,
+        outerHeight: height,
+      }).dispatchEvent(new this.Event('resize'))
+    }
+
+    window.resizeTo(100,100);
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 75, left: 75 }
+    }
+
+    const mouseover = new MouseEvent('mouseover');
+    fixture.nativeElement.dispatchEvent(mouseover);
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
+  });
+
+  it('should recalculate position on focus', () => {
+    window.resizeTo = function resizeTo(width, height) {
+      Object.assign(this, {
+        innerWidth: width,
+        innerHeight: height,
+        outerWidth: width,
+        outerHeight: height,
+      }).dispatchEvent(new this.Event('resize'))
+    }
+
+    window.resizeTo(100,100);
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 75, left: 75 }
+    }
+
+    const focusin = new Event('focusin');
+    fixture.nativeElement.dispatchEvent(focusin);
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
+  });
+
+  it('should calculate position for top left quadrant', () => {
+    window.resizeTo = function resizeTo(width, height) {
+      Object.assign(this, {
+        innerWidth: width,
+        innerHeight: height,
+        outerWidth: width,
+        outerHeight: height,
+      }).dispatchEvent(new this.Event('resize'))
+    }
+
+    window.resizeTo(100,100);
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 25, left: 25 }
+    }
+
+    const focusin = new Event('focusin');
+    fixture.nativeElement.dispatchEvent(focusin);
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--bottom-right')).toBe(true);
+  });
+
+  it('should calculate position for top right quadrant', () => {
+    window.resizeTo = function resizeTo(width, height) {
+      Object.assign(this, {
+        innerWidth: width,
+        innerHeight: height,
+        outerWidth: width,
+        outerHeight: height,
+      }).dispatchEvent(new this.Event('resize'))
+    }
+
+    window.resizeTo(100,100);
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 25, left: 75 }
+    }
+
+    const focusin = new Event('focusin');
+    fixture.nativeElement.dispatchEvent(focusin);
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--bottom-left')).toBe(true);
+  });
+
+  it('should calculate position for bottom left quadrant', () => {
+    window.resizeTo = function resizeTo(width, height) {
+      Object.assign(this, {
+        innerWidth: width,
+        innerHeight: height,
+        outerWidth: width,
+        outerHeight: height,
+      }).dispatchEvent(new this.Event('resize'))
+    }
+
+    window.resizeTo(100,100);
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 75, left: 25 }
+    }
+
+    const focusin = new Event('focusin');
+    fixture.nativeElement.dispatchEvent(focusin);
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-right')).toBe(true);
+  });
+
+  it('should calculate position for bottom right quadrant', () => {
+    window.resizeTo = function resizeTo(width, height) {
+      Object.assign(this, {
+        innerWidth: width,
+        innerHeight: height,
+        outerWidth: width,
+        outerHeight: height,
+      }).dispatchEvent(new this.Event('resize'))
+    }
+
+    window.resizeTo(100,100);
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 75, left: 75 }
+    }
+
+    const focusin = new Event('focusin');
+    fixture.nativeElement.dispatchEvent(focusin);
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
+  });
 });

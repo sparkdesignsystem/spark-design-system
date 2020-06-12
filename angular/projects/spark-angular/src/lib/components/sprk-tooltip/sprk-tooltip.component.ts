@@ -3,7 +3,6 @@ import {
   HostListener,
   Input,
   Output,
-  OnInit,
   ViewChild,
   EventEmitter
 } from '@angular/core';
@@ -16,11 +15,12 @@ import { uniqueId } from 'lodash';
     <button
       [ngClass]="{
         'sprk-c-Tooltip__trigger' : true,
-        'sprk-c-Tooltip--toggled' : isOpen
+        'sprk-c-Tooltip--toggled' : isToggled
       }"
-      [attr.aria-expanded]="isOpen ? 'true' : 'false'"
+      [attr.aria-expanded]="isToggled ? 'true' : 'false'"
       [attr.data-analytics]="analyticsString"
       [attr.data-id]="idString"
+      [attr.aria-labelledby]="id"
       #triggerElement
     >
       <sprk-icon
@@ -30,18 +30,24 @@ import { uniqueId } from 'lodash';
       ></sprk-icon>
     </button>
     <span
-      [ngClass]="getTooltipClasses()"
-      aria-hidden="true"
-      role="tooltip"
-      #tooltipElement
+    [ngClass]="getTooltipClasses()"
+    [attr.id]="id"
+    aria-hidden="true"
+    role="tooltip"
+    #tooltipElement
     >
-      <ng-content></ng-content>
+    <ng-content></ng-content>
     </span>
-  </span>
-  `
+    </span>
+    `
 })
-export class SprkTooltipComponent implements OnInit {
+export class SprkTooltipComponent {
 
+  /**
+   * Whether or not the tooltip is toggled open.
+   */
+  @Input()
+  isToggled = false;
   /**
    * The name of the icon to use
    */
@@ -80,10 +86,10 @@ export class SprkTooltipComponent implements OnInit {
   @Input()
   idString: string;
   /**
-  * Optional: the unique ID to use for the tooltip element
-  */
+   * Optional: the unique ID to use for the tooltip element
+   */
   @Input()
-  id: string = uniqueId(`sprk_tooltip_`);
+  id = uniqueId(`sprk_tooltip_`);
 
   /**
    * Emitted when the tooltip is toggled open
@@ -106,9 +112,9 @@ export class SprkTooltipComponent implements OnInit {
    */
   @HostListener('document:keydown', ['$event'])
   onKeydown($event) {
-    if (this.isOpen) {
+    if (this.isToggled) {
       if ($event.key === 'Escape' || $event.key === 'Esc' || $event.keyCode === 27) {
-        this.isOpen = false;
+        this.isToggled = false;
         this.closedEvent.emit();
       }
     }
@@ -117,10 +123,11 @@ export class SprkTooltipComponent implements OnInit {
   /**
    * @ignore
    */
-  @HostListener('document:click', ['$event']) onDocumentClick(event): void {
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event): void {
     if (this.containerElement && !this.containerElement.nativeElement.contains(event.target)) {
-      if (this.isOpen) {
-        this.isOpen = false;
+      if (this.isToggled) {
+        this.isToggled = false;
         this.closedEvent.emit();
       }
     }
@@ -129,30 +136,31 @@ export class SprkTooltipComponent implements OnInit {
   /**
    * @ignore
    */
-  @HostListener('focusin') onFocusIn() {
+  @HostListener('focusin')
+  onFocusIn() {
     this.positioningClass = this.calculatePositioningClass();
   }
 
   /**
    * @ignore
    */
-  @HostListener('mouseover') onMouseOver() {
+  @HostListener('mouseover')
+  onMouseOver() {
     this.positioningClass = this.calculatePositioningClass();
   }
 
   /**
    * @ignore
    */
-  @HostListener('click', ['$event']) onClick(event) {
-    if (this.triggerElement && this.triggerElement.nativeElement.contains(event.target)) {
+  @HostListener('click', ['$event'])
+  onClick(event) {
+    if (
+      this.triggerElement &&
+      this.triggerElement.nativeElement.contains(event.target)
+    ) {
       this.toggle()
     }
   }
-
-  /**
-   * @ignore
-   */
-  public isOpen = false;
 
   /**
    * @ignore
@@ -163,9 +171,6 @@ export class SprkTooltipComponent implements OnInit {
    * @ignore
    */
   calculatePositioningClass(): string {
-    // for virtual DOM environments like unit tests
-    if (this.triggerElement === undefined) return 'sprk-c-Tooltip--bottom-right';
-
     var trigger = this.triggerElement.nativeElement;
 
     const elemX = trigger.getBoundingClientRect().left;
@@ -198,10 +203,9 @@ export class SprkTooltipComponent implements OnInit {
    * @ignore
    */
   toggle(): void {
-    this.positioningClass = this.calculatePositioningClass();
-    this.isOpen = !this.isOpen;
+    this.isToggled = !this.isToggled;
 
-    if (this.isOpen)
+    if (this.isToggled)
       this.openedEvent.emit();
     else
       this.closedEvent.emit();
@@ -223,14 +227,5 @@ export class SprkTooltipComponent implements OnInit {
     }
 
     return classArray.join(' ');
-  }
-
-  ngOnInit() {
-    if (this.triggerElement && this.tooltipElement) {
-      this.triggerElement.nativeElement.setAttribute('aria-labelledby', this.id);
-      this.tooltipElement.nativeElement.id = this.id;
-    }
-
-    this.positioningClass = this.calculatePositioningClass();
   }
 }
