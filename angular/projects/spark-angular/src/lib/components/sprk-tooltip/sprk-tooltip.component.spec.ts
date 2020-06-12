@@ -55,6 +55,24 @@ describe('SprkTooltipComponent', () => {
     expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
   });
 
+  it('should not close on document click if its not open', (done) => {
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+
+    let closedEventEmitted = false;
+
+    component.closedEvent.subscribe(g => {
+      closedEventEmitted = true;
+      done();
+    });
+
+    containerElement.ownerDocument.dispatchEvent(new Event('click'));
+    fixture.detectChanges();
+
+    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+    expect(closedEventEmitted).toEqual(false);
+    done();
+  });
+
   it('should close on Escape key', () => {
     triggerElement.click();
     fixture.detectChanges();
