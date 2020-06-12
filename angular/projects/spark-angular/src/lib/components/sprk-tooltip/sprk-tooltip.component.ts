@@ -176,13 +176,8 @@ export class SprkTooltipComponent {
     const elemX = trigger.getBoundingClientRect().left;
     const elemY = trigger.getBoundingClientRect().top;
 
-    let viewportWidth = 0;
-    let viewportHeight = 0;
-
-    if (window) {
-      viewportWidth = window.innerWidth ? window.innerWidth : 0;
-      viewportHeight = window.innerHeight ? window.innerHeight : 0;
-    }
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
 
     if (elemX > viewportWidth / 2) {
       if (elemY > viewportHeight / 2) {
