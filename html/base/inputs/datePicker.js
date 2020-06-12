@@ -1,3 +1,4 @@
+/* eslint-disable-next-line no-unused-vars */
 /* global window */
 import TinyDatePicker from 'tiny-date-picker';
 import getElements from '../../utilities/getElements';
@@ -10,7 +11,7 @@ const setupTDP = (input, config) => {
     },
     min: '01/1/2008',
     max: '01/1/2068',
-    format: date =>
+    format: (date) =>
       date
         .toLocaleDateString('en-US', {
           month: '2-digit',
@@ -43,8 +44,8 @@ const bindUIEvents = (element, config) => {
   setupTDP(input, config);
 };
 
-const datePicker = config => {
-  getElements('[data-sprk-datepicker]', element => {
+const datePicker = (config) => {
+  getElements('[data-sprk-datepicker]', (element) => {
     bindUIEvents(element, config);
   });
 };

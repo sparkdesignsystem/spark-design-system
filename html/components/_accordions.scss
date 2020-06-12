@@ -5,7 +5,6 @@
 ////
 /// @group accordion
 ////
-
 .sprk-c-Accordion {
   border-top: $sprk-accordion-border;
   max-width: $sprk-accordion-max-width;
@@ -52,7 +51,7 @@
   }
 
   &:focus:not(.focus-visible) {
-    outline: none;
+    outline: none; /* stylelint-disable-line selector-class-pattern */
   }
 }
 
