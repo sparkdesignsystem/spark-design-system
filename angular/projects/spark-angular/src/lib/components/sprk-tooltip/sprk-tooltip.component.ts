@@ -138,7 +138,7 @@ export class SprkTooltipComponent {
    */
   @HostListener('focusin')
   onFocusIn() {
-    this.positioningClass = this.calculatePositioningClass();
+    this.setPositioningClass();
   }
 
   /**
@@ -146,7 +146,7 @@ export class SprkTooltipComponent {
    */
   @HostListener('mouseover')
   onMouseOver() {
-    this.positioningClass = this.calculatePositioningClass();
+    this.setPositioningClass();
   }
 
   /**
@@ -170,7 +170,7 @@ export class SprkTooltipComponent {
   /**
    * @ignore
    */
-  calculatePositioningClass(): string {
+  setPositioningClass(): void {
     var trigger = this.triggerElement.nativeElement;
 
     const elemX = trigger.getBoundingClientRect().left;
@@ -181,15 +181,15 @@ export class SprkTooltipComponent {
 
     if (elemX > viewportWidth / 2) {
       if (elemY > viewportHeight / 2) {
-        return 'sprk-c-Tooltip--top-left';
+        this.positioningClass = 'sprk-c-Tooltip--top-left';
       } else {
-        return 'sprk-c-Tooltip--bottom-left';
+        this.positioningClass = 'sprk-c-Tooltip--bottom-left';
       }
     } else {
       if (elemY > viewportHeight / 2) {
-        return 'sprk-c-Tooltip--top-right';
+        this.positioningClass = 'sprk-c-Tooltip--top-right';
       } else {
-        return 'sprk-c-Tooltip--bottom-right';
+        this.positioningClass = 'sprk-c-Tooltip--bottom-right';
       }
     }
   };
