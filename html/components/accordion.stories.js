@@ -18,7 +18,7 @@ automated tools. If you have multiple instances of the
 same variant of a component on the same page, make
 sure each instance has a unique \`data-id\` property
 ("accordion-primary-1", "accordion-primary-2", "accordion-secondary-1", etc).
-- If your instance only has accordion item,
+- If your instance only has one item,
 consider using
 the [Toggle Component](/docs/components-toggle--default-story) instead.
 `,

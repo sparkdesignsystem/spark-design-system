@@ -11,7 +11,7 @@ export default {
     subcomponents: { SprkAccordionItem },
     info: `
 ${markdownDocumentationLinkBuilder('accordion')}
-- If your instance only has accordion item,
+- If your instance only has one item,
 consider using
 the [Toggle Component](/docs/components-toggle--default-story) instead.
 `,
