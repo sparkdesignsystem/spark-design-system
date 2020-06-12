@@ -154,12 +154,7 @@ export class SprkTooltipComponent {
    */
   @HostListener('click', ['$event'])
   onClick(event) {
-    // if (
-    //   this.triggerElement &&
-    //   this.triggerElement.nativeElement.contains(event.target)
-    // ) {
-      this.toggle()
-    // }
+    this.toggle()
   }
 
   /**

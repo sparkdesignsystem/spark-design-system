@@ -94,9 +94,7 @@ describe('SprkTooltipComponent', () => {
       done();
     });
 
-    document.dispatchEvent(new KeyboardEvent('keydown', {
-      key: 'a'
-    }));
+    document.dispatchEvent(new KeyboardEvent('keydown'));
 
     fixture.detectChanges();
     expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
