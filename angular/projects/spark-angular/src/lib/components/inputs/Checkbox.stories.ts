@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
