@@ -26,6 +26,9 @@
     "*.js": [
       "eslint --fix",
       "prettier --write"
+    ],
+    "*.ts": [
+      "prettier --write"
     ]
   },
   "husky": {
