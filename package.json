@@ -20,11 +20,14 @@
   },
   "lint-staged": {
     "*.scss": [
-      "stylelint --syntax scss",
+      "stylelint --fix",
       "prettier --write"
     ],
     "*.js": [
       "eslint --fix",
+      "prettier --write"
+    ],
+    "*.ts": [
       "prettier --write"
     ]
   },

@@ -3,7 +3,7 @@ import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.m
 import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
 import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
 import { SprkSelectionItemContainerComponent } from './sprk-selection-item-container/sprk-selection-item-container.component';
-import { SprkSelectionContainerComponent} from './sprk-selection-container/sprk-selection-container.component';
+import { SprkSelectionContainerComponent } from './sprk-selection-container/sprk-selection-container.component';
 import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
@@ -20,26 +20,25 @@ export default {
   },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
-    onSubmit(event): void {
+    onSubmit(): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
     `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
@@ -50,7 +49,7 @@ const modules = {
     SprkFieldErrorModule,
     SprkIconModule,
     SprkSelectionLabelModule,
-    SprkSelectionInputModule
+    SprkSelectionInputModule,
   ],
 };
 
@@ -125,10 +124,8 @@ export const defaultStory = () => ({
   `,
   props: {
     onSelect() {
-      this.checkbox_input1 === true
-        ? (this.isChecked = true)
-        : (this.isChecked = false);
-    }
+      this.isChecked = this.checkbox_input1 === true;
+    },
   },
 });
 
@@ -223,10 +220,8 @@ export const invalidCheckbox = () => ({
   `,
   props: {
     onSelect() {
-      this.checkbox_input1 === true
-        ? (this.isChecked = true)
-        : (this.isChecked = false);
-    }
+      this.isChecked = this.checkbox_input1 === true;
+    },
   },
 });
 
@@ -321,10 +316,8 @@ export const disabledCheckbox = () => ({
   `,
   props: {
     onSelect() {
-      this.checkbox_input1 === true
-        ? (this.isChecked = true)
-        : (this.isChecked = false);
-    }
+      this.isChecked = this.checkbox_input1 === true;
+    },
   },
 });
 
