@@ -49,13 +49,13 @@ export class SprkTooltipComponent {
   @Input()
   isToggled = false;
   /**
-   * The name of the icon to use
+   * The icon to use for the trigger element.
    */
   @Input()
   triggerIconType: string = 'question-filled';
   /**
    * The value supplied will be assigned to the
-   * `data-analytics` attribute on the component.
+   * `data-analytics` attribute on the trigger element.
    * Intended for an outside
    * library to capture data.
    */
@@ -64,7 +64,7 @@ export class SprkTooltipComponent {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * component container.
+   * tooltip element.
    */
   @Input()
   additionalClasses: string;
@@ -78,7 +78,7 @@ export class SprkTooltipComponent {
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
-   * component. This is intended to be
+   * trigger element. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
    * per page.
@@ -86,25 +86,38 @@ export class SprkTooltipComponent {
   @Input()
   idString: string;
   /**
-   * Optional: the unique ID to use for the tooltip element
+   * Optional: the unique ID to use for the tooltip element.
+   * If an ID is not provided, a unique ID will be created
+   * automatically.
    */
   @Input()
   id = uniqueId(`sprk_tooltip_`);
 
   /**
-   * Emitted when the tooltip is toggled open
+   * Emitted when the tooltip is toggled open.
    */
   @Output()
   openedEvent = new EventEmitter<any>();
 
   /**
-   * Emitted when the tooltip is toggled closed
+   * Emitted when the tooltip is toggled closed.
    */
   @Output()
   closedEvent = new EventEmitter<any>();
 
+  /**
+   * @ignore
+   */
   @ViewChild('triggerElement') triggerElement;
+
+  /**
+   * @ignore
+   */
   @ViewChild('tooltipElement') tooltipElement;
+
+  /**
+   * @ignore
+   */
   @ViewChild('containerElement') containerElement;
 
   /**
