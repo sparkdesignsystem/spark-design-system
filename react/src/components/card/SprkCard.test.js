@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 /* global it expect beforeEach afterEach */
 import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
@@ -46,8 +47,7 @@ describe('SprkCard:', () => {
             href: 'https://sparkdesignsystem.com/',
             mediaLinkElement: 'a',
             imgAlt: 'placeholder image',
-            imgSrc:
-              'https://spark-assets.netlify.app/desktop.jpg',
+            imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
             mediaAnalyticsString: 'Card:teaser-link',
             mediaVariant: 'img',
           },
@@ -56,11 +56,12 @@ describe('SprkCard:', () => {
         }}
       />,
     );
-    const loadsTeaserComponent = wrapper.find('GetCardContent SprkCardTeaser').length === 1;
+    const loadsTeaserComponent =
+      wrapper.find('GetCardContent SprkCardTeaser').length === 1;
     expect(loadsTeaserComponent).toBe(true);
   });
 
-  it('should apply the correct button variant to cta button in teaser card', () => {
+  it('should apply the correct class if mediaVariant is icon', () => {
     const wrapper = mount(
       <SprkCard
         variant="teaser"
@@ -77,21 +78,24 @@ describe('SprkCard:', () => {
             href: 'https://sparkdesignsystem.com/',
             mediaLinkElement: 'a',
             imgAlt: 'placeholder image',
-            imgSrc:
-              'https://spark-assets.netlify.app/desktop.jpg',
+            imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
             mediaAnalyticsString: 'Card:teaser-link',
-            mediaVariant: 'img',
+            mediaVariant: 'icon',
+            iconName: 'bell',
           },
           title: 'Teaser Card Title',
           titleFirst: false,
         }}
       />,
     );
-    expect(wrapper.find('.sprk-c-Button--tertiary')).length === 1;
+    expect(
+      wrapper.find('.sprk-c-Card').hasClass('sprk-u-TextAlign--center'),
+    ).toBe(true);
   });
 
   // If highlighted header, should load teaser card
-  it('should load highlighted header if there is highlightedHeaderConfig', () => {
+  it(`should load highlighted header
+      if there is highlightedHeaderConfig`, () => {
     const wrapper = mount(
       <SprkCard
         variant="highlightedHeader"
@@ -105,7 +109,8 @@ describe('SprkCard:', () => {
         }}
       />,
     );
-    const loadsHighlightedHeaderComponent = wrapper.find('GetCardContent SprkCardHighlightedHeader').length === 1;
+    const loadsHighlightedHeaderComponent =
+      wrapper.find('GetCardContent SprkCardHighlightedHeader').length === 1;
     expect(loadsHighlightedHeaderComponent).toBe(true);
   });
 });
