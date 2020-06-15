@@ -8,10 +8,8 @@ export default {
   component: SprkButtonDirective,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -44,12 +42,10 @@ receive interaction.
 `,
     docs: { iframeHeight: 100 },
   },
- };
+};
 
 const modules = {
-  imports: [
-    SprkButtonModule,
-  ],
+  imports: [SprkButtonModule],
 };
 
 export const primary = () => ({
@@ -66,9 +62,7 @@ export const primary = () => ({
 
 primary.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -87,9 +81,7 @@ export const secondary = () => ({
 
 secondary.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -108,9 +100,7 @@ export const tertiary = () => ({
 
 tertiary.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -129,9 +119,47 @@ export const disabled = () => ({
 
 disabled.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const disabledSecondary = () => ({
+  moduleMetadata: modules,
+  template: `
+    <button
+      disabled
+      idString="button-disabled-secondary"
+      sprkButton
+      variant="secondary"
+    >
+      Button
+    </button>
+  `,
+});
+
+disabledSecondary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const disabledTertiary = () => ({
+  moduleMetadata: modules,
+  template: `
+    <button
+      disabled
+      idString="button-disabled-tertiary"
+      sprkButton
+      variant="tertiary"
+    >
+      Button
+    </button>
+  `,
+});
+
+disabledTertiary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -153,9 +181,7 @@ export const loading = () => {
 
 loading.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -177,9 +203,29 @@ export const loadingSecondary = () => {
 
 loadingSecondary.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const loadingTertiary = () => {
+  return {
+    moduleMetadata: modules,
+    template: `
+      <button
+        variant="tertiary"
+        idString="button-loading-tertiary"
+        sprkButton
+        [isSpinning]="true"
+      >
+        Button
+      </button>
+    `,
+  };
+};
+
+loadingTertiary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -201,9 +247,7 @@ export const fullWidthAtSmallViewport = () => {
 fullWidthAtSmallViewport.story = {
   name: 'Full Width at Small Viewport',
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -225,8 +269,6 @@ export const fullWidthAtExtraSmallViewport = () => {
 fullWidthAtExtraSmallViewport.story = {
   name: 'Full Width at Extra Small Viewport',
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };

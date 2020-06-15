@@ -1,4 +1,5 @@
 /* global it expect */
+/* eslint-disable max-len */
 import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -26,7 +27,9 @@ describe('SprkButton:', () => {
 
   it('should display a button element with correct classes when variant is tertiary', () => {
     const wrapper = shallow(<SprkButton variant="tertiary" />);
-    expect(wrapper.find('button').hasClass('sprk-c-Button--tertiary')).toBe(true);
+    expect(wrapper.find('button').hasClass('sprk-c-Button--tertiary')).toBe(
+      true,
+    );
   });
 
   it('if loading is not set, should not render the spinner', () => {
@@ -60,7 +63,7 @@ describe('SprkButton:', () => {
   });
 
   it('it should overwrite aria-label if loading=true', () => {
-    const wrapper = mount(<SprkButton aria-label="initial" loading={true} />);
+    const wrapper = mount(<SprkButton aria-label="initial" loading />);
     expect(wrapper.find('button[aria-label="Loading"]').length).toBe(1);
   });
 
@@ -69,8 +72,8 @@ describe('SprkButton:', () => {
     expect(wrapper.find('button[aria-label]').length).toBe(0);
   });
 
-  it('if loading is set and variant is secondary, should render the secondary spinner', () => {
-    const wrapper = mount(<SprkButton loading variant="secondary" />);
+  it('if loading is set and variant is tertiary, should render the dark spinner', () => {
+    const wrapper = mount(<SprkButton loading variant="tertiary" />);
     expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(1);
   });
 
@@ -118,5 +121,4 @@ describe('SprkButton:', () => {
     expect(button.length).toBe(1);
     expect(button.getDOMNode().hasAttribute('disabled')).toBe(true);
   });
-
 });

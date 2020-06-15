@@ -4,9 +4,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Button',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkButton,
   parameters: {
     jest: ['SprkButton'],
@@ -38,7 +36,7 @@ Instead use \`<button type=”submit”>\`
 in addition to the \`sprk-is-Disabled\` class so that it doesn’t
 receive interaction.
 `,
-   },
+  },
 };
 
 export const primary = () => (
@@ -84,9 +82,10 @@ export const disabled = () => (
   </SprkButton>
 );
 
-export const loading = () => (
+export const disabledSecondary = () => (
   <SprkButton
-    loading={true}
+    disabled
+    variant="secondary"
     element="button"
     idString="button-5"
     analyticsString="button-5-analytics"
@@ -95,10 +94,10 @@ export const loading = () => (
   </SprkButton>
 );
 
-export const loadingSecondary = () => (
+export const disabledTertiary = () => (
   <SprkButton
-    loading={true}
-    variant="secondary"
+    disabled
+    variant="tertiary"
     element="button"
     idString="button-6"
     analyticsString="button-6-analytics"
@@ -107,11 +106,46 @@ export const loadingSecondary = () => (
   </SprkButton>
 );
 
-export const fullWidthAtSmallViewport = () => (
+export const loading = () => (
   <SprkButton
+    loading
     element="button"
     idString="button-7"
     analyticsString="button-7-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const loadingSecondary = () => (
+  <SprkButton
+    loading
+    variant="secondary"
+    element="button"
+    idString="button-8"
+    analyticsString="button-8-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const loadingTertiary = () => (
+  <SprkButton
+    loading
+    variant="tertiary"
+    element="button"
+    idString="button-9"
+    analyticsString="button-9-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const fullWidthAtSmallViewport = () => (
+  <SprkButton
+    element="button"
+    idString="button-10"
+    analyticsString="button-10-analytics"
     additionalClasses="sprk-c-Button--full@s"
   >
     Button
@@ -121,8 +155,8 @@ export const fullWidthAtSmallViewport = () => (
 export const fullWidthAtExtraSmallViewport = () => (
   <SprkButton
     element="button"
-    idString="button-8"
-    analyticsString="button-8-analytics"
+    idString="button-11"
+    analyticsString="button-11-analytics"
     additionalClasses="sprk-c-Button--full@xs"
   >
     Button
@@ -133,8 +167,8 @@ export const asALinkElement = () => (
   <SprkButton
     element="a"
     href="#nogo"
-    idString="button-9"
-    analyticsString="button-9-analytics"
+    idString="button-12"
+    analyticsString="button-12-analytics"
   >
     Button
   </SprkButton>

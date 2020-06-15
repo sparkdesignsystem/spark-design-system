@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Button',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     docs: { iframeHeight: 100 },
     info: `
@@ -43,39 +41,69 @@ receive interaction.
   },
 };
 
-export const primary = () => (
+export const primary = () =>
   `
     <button class="sprk-c-Button" data-id="button-primary">
       Button
     </button>
-  `
-);
+  `;
 
-export const secondary = () => (
+export const secondary = () =>
   `
-    <button class="sprk-c-Button sprk-c-Button--secondary" type="button" data-id="button-secondary">
+    <button
+      class="sprk-c-Button sprk-c-Button--secondary"
+      type="button"
+      data-id="button-secondary"
+    >
       Button
     </button>
-  `
-);
+  `;
 
-export const tertiary = () => (
+export const tertiary = () =>
   `
-    <button class="sprk-c-Button sprk-c-Button--tertiary" type="button" data-id="button-tertiary">
+    <button
+      class="sprk-c-Button sprk-c-Button--tertiary"
+      type="button"
+      data-id="button-tertiary"
+    >
       Button
     </button>
-  `
-);
+  `;
 
-export const disabled = () => (
+export const disabled = () =>
   `
-  <button class="sprk-c-Button sprk-is-Disabled" data-id="button-disabled" disabled>
+  <button
+    class="sprk-c-Button sprk-is-Disabled"
+    data-id="button-disabled"
+    disabled
+  >
     Button
   </button>
-  `
-);
+  `;
 
-export const loading = () => (
+export const disabledSecondary = () =>
+  `
+  <button
+    class="sprk-c-Button sprk-c-Button--secondary sprk-is-Disabled"
+    data-id="button-disabled-secondary"
+    disabled
+  >
+    Button
+  </button>
+  `;
+
+export const disabledTertiary = () =>
+  `
+  <button
+    class="sprk-c-Button sprk-c-Button--tertiary sprk-is-Disabled"
+    data-id="button-disabled-tertiary"
+    disabled
+  >
+    Button
+  </button>
+  `;
+
+export const loading = () =>
   `
   <button
     class="sprk-c-Button"
@@ -85,60 +113,84 @@ export const loading = () => (
   >
     <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
   </button>
-  `
-);
+  `;
 
 loading.story = {
   parameters: {
     jest: ['spinners'],
-  }
+  },
 };
 
-export const loadingSecondary = () => (
+export const loadingSecondary = () =>
   `
   <button
     class="sprk-c-Button sprk-c-Button--secondary"
     data-sprk-spinner="click"
-    data-sprk-spinner-lightness="dark"
-    data-id="button-spinner-dark"
+    data-id="button-spinner-secondary"
     aria-label="Loading"
   >
-    <div class="sprk-c-Spinner sprk-c-Spinner--dark sprk-c-Spinner--circle"></div>
+    <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
   </button>
-  `
-);
+  `;
 
 loadingSecondary.story = {
   parameters: {
     jest: ['spinners'],
-  }
+  },
 };
 
-export const fullWidthAtSmallViewport = () => (
+export const loadingTertiary = () =>
   `
-  <button class="sprk-c-Button sprk-c-Button--full@s" type="button" data-id="button-full-smv">
+  <button
+    class="sprk-c-Button sprk-c-Button--tertiary"
+    data-sprk-spinner="click"
+    data-id="button-spinner-tertiary"
+    aria-label="Loading"
+    data-sprk-spinner-lightness="dark"
+  >
+    <div
+      class="sprk-c-Spinner sprk-c-Spinner--dark sprk-c-Spinner--circle"
+    ></div>
+  </button>
+  `;
+
+loadingTertiary.story = {
+  parameters: {
+    jest: ['spinners'],
+  },
+};
+
+export const fullWidthAtSmallViewport = () =>
+  `
+  <button
+    class="sprk-c-Button sprk-c-Button--full@s"
+    type="button"
+    data-id="button-full-smv"
+  >
     Button
   </button>
-  `
-);
+  `;
 
 fullWidthAtSmallViewport.story = {
   name: 'Full Width at Small Viewport',
 };
 
-export const fullWidthAtExtraSmallViewport = () => (
+export const fullWidthAtExtraSmallViewport = () =>
   `
-  <button class="sprk-c-Button sprk-c-Button--full@xs" type="button" data-id="button-full-xsmv">
+  <button
+    class="sprk-c-Button sprk-c-Button--full@xs"
+    type="button"
+    data-id="button-full-xsmv"
+  >
     Button
   </button>
-  `
-);
+  `;
 
 fullWidthAtExtraSmallViewport.story = {
   name: 'Full Width at Extra Small Viewport',
 };
 
-export const asALinkElement = () => (
+export const asALinkElement = () =>
   `
     <a
       class="sprk-c-Button"
@@ -147,5 +199,4 @@ export const asALinkElement = () => (
     >
       Button
     </a>
-  `
-);
+  `;

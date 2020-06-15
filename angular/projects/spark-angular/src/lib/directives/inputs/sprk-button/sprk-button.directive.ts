@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[sprkButton]'
+  selector: '[sprkButton]',
 })
 export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   /**
@@ -35,7 +35,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   /**
    *  Determines the coresponding button style.
    */
-  @Input() variant: 'primary'| 'secondary' | 'tertiary' = 'primary';
+  @Input() variant: 'primary' | 'secondary' | 'tertiary' = 'primary';
 
   // Always set the button class on the element
   @HostBinding('class.sprk-c-Button') true;
@@ -49,7 +49,8 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    * per page.
    */
   @HostBinding('attr.data-id')
-  @Input() idString: string;
+  @Input()
+  idString: string;
 
   /**
    * The value supplied will be assigned to the
@@ -58,20 +59,18 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    * library to capture data.
    */
   @HostBinding('attr.data-analytics')
-  @Input() analyticsString: string;
+  @Input()
+  analyticsString: string;
 
   ngOnInit(): void {
     if (this.variant === 'secondary') {
       this.renderer.addClass(
         this.ref.nativeElement,
-        'sprk-c-Button--secondary'
+        'sprk-c-Button--secondary',
       );
     }
     if (this.variant === 'tertiary') {
-      this.renderer.addClass(
-        this.ref.nativeElement,
-        'sprk-c-Button--tertiary'
-      );
+      this.renderer.addClass(this.ref.nativeElement, 'sprk-c-Button--tertiary');
     }
   }
 
@@ -102,31 +101,16 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     const ariaLabel = this.spinningAriaLabel;
     let spinnerClass = 'sprk-c-Spinner sprk-c-Spinner--circle';
     if (
-        el.classList.contains('sprk-c-Button--secondary') ||
-        this.variant === 'secondary') {
+      el.classList.contains('sprk-c-Button--tertiary') ||
+      this.variant === 'tertiary'
+    ) {
       spinnerClass += ' sprk-c-Spinner--dark';
     }
-    this.renderer.setAttribute(
-      el,
-      'data-sprk-spinner-text',
-      el.textContent,
-    );
-    this.renderer.setAttribute(
-      el,
-      'aria-label',
-      ariaLabel,
-    );
+    this.renderer.setAttribute(el, 'data-sprk-spinner-text', el.textContent);
+    this.renderer.setAttribute(el, 'aria-label', ariaLabel);
     el.innerHTML = `<div class="${spinnerClass}"></div>`;
     el.setAttribute('data-sprk-has-spinner', 'true');
-    this.renderer.setAttribute(
-      el,
-      'data-sprk-has-spinner',
-      'true',
-    );
-    this.renderer.setAttribute(
-      el,
-      'style',
-      `width: ${width}px`,
-    );
-  }
+    this.renderer.setAttribute(el, 'data-sprk-has-spinner', 'true');
+    this.renderer.setAttribute(el, 'style', `width: ${width}px`);
+  };
 }

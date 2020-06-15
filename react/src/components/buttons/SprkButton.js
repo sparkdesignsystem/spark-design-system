@@ -39,11 +39,12 @@ const SprkButton = ({
       disabled={TagName !== 'a' ? disabled : undefined}
       href={TagName !== 'button' ? href : undefined}
       {...rest}
-      {...loading && { 'aria-label': spinningAriaLabel }}
+      {...(loading && { 'aria-label': spinningAriaLabel })}
     >
-      {(loading &&
-        <SprkSpinner lightness={variant === 'secondary' ? 'dark' : undefined} />)
-        || children}
+      {(loading && (
+        <SprkSpinner lightness={variant === 'tertiary' ? 'dark' : undefined} />
+      )) ||
+        children}
     </TagName>
   );
 };
@@ -95,7 +96,7 @@ SprkButton.propTypes = {
    */
   spinningAriaLabel: PropTypes.string,
   /**
-   *  Determines the coresponding button style.
+   *  Determines the corresponding button style.
    */
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   /**
