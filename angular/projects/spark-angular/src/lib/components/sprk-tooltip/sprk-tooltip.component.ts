@@ -1,5 +1,6 @@
 import {
   Component,
+  AfterViewInit,
   HostListener,
   Input,
   Output,
@@ -41,7 +42,7 @@ import { uniqueId } from 'lodash';
     </span>
     `
 })
-export class SprkTooltipComponent {
+export class SprkTooltipComponent implements AfterViewInit {
 
   /**
    * Whether or not the tooltip is toggled open.
@@ -230,5 +231,9 @@ export class SprkTooltipComponent {
     }
 
     return classArray.join(' ');
+  }
+
+  ngAfterViewInit(): void {
+    this.setPositioningClass();
   }
 }
