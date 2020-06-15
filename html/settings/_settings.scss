@@ -199,7 +199,7 @@ $sprk-horizontal-list-spacing-medium: $sprk-space-m !default;
 $sprk-horizontal-list-spacing-large: $sprk-space-l !default;
 /// The huge spacing value for huge Horizontal List components.
 $sprk-horizontal-list-spacing-huge: $sprk-space-xl !default;
-/// The delimiter between delimited items in Horizonatal List components.
+/// The delimiter between delimited items in Horizontal List components.
 $sprk-horizontal-list-delimiter: ',' !default;
 
 //
@@ -522,9 +522,9 @@ $sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m
 $sprk-alert-dismiss-padding: $sprk-space-m 24px $sprk-space-m $sprk-space-m !default;
 /// The margin for the icon in the Alert component.
 $sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0 !default;
-/// The color of the dimiss icon in the Alert component.
+/// The color of the dismiss icon in the Alert component.
 $sprk-alert-dismiss-icon-color: $sprk-black !default;
-/// The size of the dimiss icon in the Alert component.
+/// The size of the dismiss icon in the Alert component.
 $sprk-alert-dismiss-icon-size: $sprk-space-m !default;
 // Info
 /// The icon color of the Information Alert component.
@@ -585,7 +585,7 @@ $sprk-promo-subtitle-font-weight: $sprk-font-weight-body-one !default;
 ///
 
 /// The background color of the Button component.
-$sprk-btn-background-color: $sprk-green !default;
+$sprk-btn-background-color: $sprk-red !default;
 /// The box shadow value of the Button component.
 $sprk-btn-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 /// The border style of the Button component.
@@ -608,7 +608,7 @@ $sprk-btn-text-color: $sprk-white !default;
 $sprk-btn-border-radius: 4px !default;
 /// The background color of the
 /// Button component on hover.
-$sprk-btn-hover-background-color: $sprk-green-dark !default;
+$sprk-btn-hover-background-color: $sprk-mid-red !default;
 /// The text color of the Button component on hover.
 $sprk-btn-hover-text-color: $sprk-white !default;
 /// The padding of the Button component.
@@ -630,7 +630,7 @@ $sprk-btn-disabled-border-width: $sprk-btn-border-width !default;
 /// The border style of the Disabled Button component.
 $sprk-btn-disabled-border-style: $sprk-btn-border-style !default;
 /// The background color of the Disabled Button component.
-$sprk-btn-disabled-background-color: $sprk-gray-dark !default;
+$sprk-btn-disabled-background-color: $sprk-black-tint-50 !default;
 /// The text color of the Disabled Button component.
 $sprk-btn-disabled-text-color: $sprk-white !default;
 /// The border color of the Disabled Button component.
@@ -638,31 +638,31 @@ $sprk-btn-disabled-border-color: transparent !default;
 /// The box shadow of the Disabled Button component.
 $sprk-btn-disabled-shadow: none !default;
 /// The background color of the Disabled Button component.
-$sprk-btn-secondary-disabled-background-color: transparent !default;
+$sprk-btn-secondary-disabled-background-color: $sprk-black-tint-50 !default;
 /// The text color of the Secondary Button component when disabled.
-$sprk-btn-secondary-disabled-text-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-disabled-text-color: $sprk-white !default;
 /// The border color of the Secondary Button component when disabled.
-$sprk-btn-secondary-disabled-border-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-disabled-border-color: $sprk-btn-secondary-disabled-background-color !default;
 /// The box shadow of the Secondary Button component when disabled.
 $sprk-btn-secondary-disabled-shadow: none !default;
 /// The box shadow of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-shadow: none !default;
 /// The border value of the Tertiary Button component when disabled.
-$sprk-btn-tertiary-disabled-border: none !default;
+$sprk-btn-tertiary-disabled-border-color: $sprk-black-tint-50 !default;
 
 // Secondary
 /// The background color of the Secondary Button component.
-$sprk-btn-secondary-background-color: $sprk-white !default;
+$sprk-btn-secondary-background-color: $sprk-dark-purple !default;
 /// The border color of the Secondary Button component.
-$sprk-btn-secondary-border-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-border-color: $sprk-btn-secondary-background-color !default;
 /// The text color of the Secondary Button component.
-$sprk-btn-secondary-text-color: $sprk-black !default;
+$sprk-btn-secondary-text-color: $sprk-white !default;
 /// The hover text color of the Secondary Button component.
-$sprk-btn-secondary-hover-text-color: $sprk-black !default;
+$sprk-btn-secondary-hover-text-color: $sprk-white !default;
 /// The background color of the Secondary Button component on hover.
-$sprk-btn-secondary-hover-background-color: $sprk-white !default;
+$sprk-btn-secondary-hover-background-color: $sprk-purple !default;
 /// The border color of the Secondary Button component on hover.
-$sprk-btn-secondary-hover-border-color: $sprk-black !default;
+$sprk-btn-secondary-hover-border-color: $sprk-btn-secondary-hover-background-color !default;
 /// The box shadow of the Secondary Button component on hover.
 $sprk-btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 /// The letter spacing of the Secondary Button component.
@@ -672,30 +672,23 @@ $sprk-btn-secondary-letter-spacing: 0.62px !default;
 /// The background color of the Tertiary Button component.
 $sprk-btn-tertiary-background-color: transparent !default;
 /// The border of the Tertiary Button component.
-$sprk-btn-tertiary-border: none !default;
+$sprk-btn-tertiary-border-color: $sprk-dark-purple !default;
 /// The text color of the Tertiary Button component.
 $sprk-btn-tertiary-text-color: $sprk-black !default;
-/// The underline width of the Tertiary Button component.
-$sprk-btn-tertiary-underline-width: 0.125em !default;
-/// The vertical distance between the
-/// underline and the text for the Tertiary Button component.
-$sprk-btn-tertiary-underline-padding-top: 0.125em !default;
-/// The color of the underline for the Tertiary Button component.
-$sprk-btn-tertiary-underline-color: $sprk-gray-dark !default;
+/// The border color of the Tertiary Button component on hover.
+$sprk-btn-tertiary-hover-border-color: $sprk-purple !default;
 /// The text color of the Tertiary Button component on hover.
-$sprk-btn-tertiary-hover-text-color: $sprk-black !default;
-/// The underline color of the Tertiary Button component on hover.
-$sprk-btn-tertiary-hover-underline-color: $sprk-black !default;
+$sprk-btn-tertiary-hover-text-color: $sprk-purple !default;
 /// The background color of the Tertiary Button component on hover.
-$sprk-btn-tertiary-hover-background-color: transparent !default;
+$sprk-btn-tertiary-hover-background-color: $sprk-lightest-purple !default;
 /// The box shadow of the Tertiary Button component on hover.
-$sprk-btn-tertiary-hover-shadow: none !default;
+$sprk-btn-tertiary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
 /// The background color of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-background-color: transparent !default;
 /// The text color of the Tertiary Button component when disabled.
-$sprk-btn-tertiary-disabled-text-color: $sprk-gray-dark !default;
+$sprk-btn-tertiary-disabled-text-color: $sprk-black-tint-50 !default;
 /// The letter spacing of the Tertiary Button component.
-$sprk-btn-tertiary-letter-spacing: normal !default;
+$sprk-btn-tertiary-letter-spacing: 0.62px !default;
 
 //
 // Links
@@ -893,8 +886,8 @@ $sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
 $sprk-input-huge-icon-offset-top: 50% !default;
 /// The margin-top value for icons in Huge Select Inputs.
 $sprk-select-input-huge-icon-margin-top: -((
-  $sprk-input-huge-height - $sprk-icon-m
-) / 2 + $sprk-icon-m) !default;
+        $sprk-input-huge-height - $sprk-icon-m
+      ) / 2 + $sprk-icon-m) !default;
 /// The padding value for Huge Inputs with icons.
 $sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 
@@ -1114,7 +1107,7 @@ $sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color: $sprk-gr
 /// The height of the checkmark inside of the huge checkbox input.
 $sprk-checkbox-huge-checkmark-icon-height: 0.5rem !default;
 /// The width of the checkmark inside of the huge checkbox input.
-$sprk-checkbox-huge-checkmark-icon-width: .75rem !default;
+$sprk-checkbox-huge-checkmark-icon-width: 0.75rem !default;
 /// The left value of the checkmark inside of the huge checkbox input.
 $sprk-checkbox-huge-checkmark-icon-left: 22px !default;
 /// The top value of the checkmark inside of the huge checkbox input.
@@ -1326,7 +1319,8 @@ $sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-75 !defa
 /// The border of the outer circle in the radio input on focus.
 $sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-green !default;
 /// The border of the outer circle in the disabled radio input on focus.
-$sprk-radio-input-outer-circle-focus-border-disabled: 2px solid $sprk-black-tint-50 !default;
+$sprk-radio-input-outer-circle-focus-border-disabled: 2px solid
+  $sprk-black-tint-50 !default;
 /// The border radius of the circle in the radio input.
 $sprk-radio-input-border-radius: 50% !default;
 /// The background color of the inner circle in the radio input.
@@ -1336,7 +1330,8 @@ $sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-green !default;
 /// The border of the outer circle in the radio input.
 $sprk-radio-input-outer-circle-border: 2px solid $sprk-black-tint-50 !default;
 /// The border of the outer circle in the disabled radio input on hover.
-$sprk-radio-input-outer-circle-border-hover-disabled: 2px solid $sprk-black-tint-50 !default;
+$sprk-radio-input-outer-circle-border-hover-disabled: 2px solid
+  $sprk-black-tint-50 !default;
 /// The height of the outer circle in the radio input.
 $sprk-radio-input-outer-circle-height: 1rem !default;
 /// The width of the outer circle in the radio input.
@@ -2097,7 +2092,7 @@ $sprk-stepper-bar-left-inset: $sprk-space-l;
 $sprk-stepper-step-content-margin-left: ($sprk-stepper-bar-left-inset * 2) +
   $sprk-stepper-bar-width;
 $sprk-stepper-icon-left: -(($sprk-stepper-bar-left-inset +
-$sprk-stepper-icon-radius));
+        $sprk-stepper-icon-radius));
 $sprk-stepper-slide-timing: 0.3s;
 $sprk-stepper-slider-text-fade-in-timing: 0.6s;
 $sprk-stepper-slider-text-fade-in-delay: 0.2s;

@@ -5,7 +5,6 @@
 ////
 /// @group button
 ////
-
 .sprk-c-Button {
   -webkit-appearance: none;
   background-color: $sprk-btn-background-color;
@@ -45,13 +44,13 @@
   }
 }
 
-
 /// Reduces the padding of the normal button
 /// to $space-inset-short-m.
 .sprk-c-Button--compact {
   padding: $sprk-space-inset-short-m;
 }
 
+/* stylelint-disable selector-class-pattern */
 /// Makes the button full width of its parent container until it flips
 /// to normal width at the $sprk-btn-breakpoint-xs breakpoint.
 /// @name .sprk-c-Button--full@xs
@@ -74,6 +73,8 @@
     width: auto;
   }
 }
+
+/* stylelint-enable selector-class-pattern */
 
 /// Styles the button as the secondary variant.
 .sprk-c-Button--secondary {
@@ -102,7 +103,8 @@
 .sprk-c-Button--tertiary {
   background-color: $sprk-btn-tertiary-background-color;
   box-shadow: none;
-  border: $sprk-btn-tertiary-border;
+  border: $sprk-btn-border-width $sprk-btn-border-style
+    $sprk-btn-tertiary-border-color;
   color: $sprk-btn-tertiary-text-color;
   letter-spacing: $sprk-btn-tertiary-letter-spacing;
 
@@ -112,33 +114,18 @@
     background-color: $sprk-btn-tertiary-hover-background-color;
     color: $sprk-btn-tertiary-hover-text-color;
     box-shadow: $sprk-btn-tertiary-hover-shadow;
+    border-color: $sprk-btn-tertiary-hover-border-color;
   }
 
   &:visited {
     color: $sprk-btn-tertiary-text-color;
-  }
-
-  &::after {
-    content: '';
-    border-bottom: $sprk-btn-tertiary-underline-width solid
-      $sprk-btn-tertiary-underline-color;
-    display: block;
-    width: 100%;
-    padding-top: $sprk-btn-tertiary-underline-padding-top;
-    margin: 0 auto;
-  }
-
-  &:hover::after,
-  &:active::after,
-  &:focus::after {
-    border-color: $sprk-btn-tertiary-hover-underline-color;
-    transition: border $sprk-btn-transition-speed ease-in-out;
   }
 }
 
 /*
 Removes extra padding and border in Firefox when using `input type="submit"`
 */
+
 .sprk-b-Button::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -179,7 +166,7 @@ Removes extra padding and border in Firefox when using `input type="submit"`
 .sprk-c-Button--tertiary.sprk-is-Disabled,
 .sprk-c-Button--tertiary[disabled] {
   box-shadow: $sprk-btn-tertiary-disabled-shadow;
-  border: $sprk-btn-tertiary-disabled-border;
+  border-color: $sprk-btn-tertiary-disabled-border-color;
   color: $sprk-btn-tertiary-disabled-text-color;
   background-color: $sprk-btn-tertiary-disabled-background-color;
 }

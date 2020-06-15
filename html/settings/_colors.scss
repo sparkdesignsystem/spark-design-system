@@ -4,29 +4,108 @@
 
 // Primary
 /// Color value for red.
-/// @group red
+/// @group primary
 /// @type #C8102E
 $sprk-red: rgb(200, 16, 46);
-/// Color value for mid red.
-/// @group red
-/// @type #9D2235
-$sprk-mid-red: rgb(157,34,53);
 /// Color value for deep red.
-/// @group red
+/// @group primary
 /// @type #76232F
-$sprk-deep-red: rgb(118,35,47);
-/// Color value for black.
-/// @group black
-/// @type #333333
-$sprk-black: rgb(51, 51, 51);
+$sprk-deep-red: rgb(118, 35, 47);
+/// Color value for mid red.
+/// @group primary
+/// @type #9D2235
+$sprk-mid-red: rgb(157, 34, 53);
+
+// Secondary
+/// Color value for purple.
+/// @group secondary
+/// @type #603AA1
+$sprk-purple: rgb(96, 58, 161);
+/// Color value for dark purple.
+/// @group secondary
+/// @type #3C3174
+$sprk-dark-purple: rgb(60, 49, 116);
+/// Color value for deep purple.
+/// @group secondary
+/// @type #2E1166
+$sprk-deep-purple: rgb(46, 17, 102);
+/// Color value for light purple.
+/// @group secondary
+/// @type #9265D3
+$sprk-light-purple: rgb(146, 101, 211);
+/// Color value for lightest purple.
+/// @group secondary
+/// @type #E7E2F2
+$sprk-lightest-purple: rgb(231, 226, 242);
+
+// Semantic
+/// Color value for indicating a success.
+/// @group semantic
+/// @type #298540
+$sprk-success: rgb(41, 133, 64);
+/// Color value for indicating information.
+/// @group semantic
+/// @type #1C6EF2
+$sprk-information: rgb(28, 110, 242);
+/// Color value for indicating an error.
+/// @group semantic
+/// @type #E50158
+$sprk-error: rgb(229, 1, 88);
+/// Color value for indicating a warning.
+/// @group semantic
+/// @type #EDA302
+$sprk-warning: rgb(237, 163, 2);
+
+// Neutrals
 /// Color value for white.
-/// @group white
+/// @group neutral
 /// @type #FFFFFF
 $sprk-white: rgb(255, 255, 255);
+/// Color value for black.
+/// @group neutral
+/// @type #1C1B1A
+$sprk-black: rgb(28, 27, 26);
+/// Color value for black at 90%.
+/// @group neutral
+/// @type #323130
+$sprk-black-tint-90: rgb(50, 49, 48);
+/// Color value for black at 80%.
+/// @group neutral
+/// @type #494948
+$sprk-black-tint-80: rgb(73, 73, 72);
+/// Color value for black at 70%.
+/// @group neutral
+/// @type #605F5E
+$sprk-black-tint-70: rgb(96, 95, 94);
+/// Color value for black at 60%.
+/// @group neutral
+/// @type #777676
+$sprk-black-tint-60: rgb(119, 118, 118);
+/// Color value for black at 50%.
+/// @group neutral
+/// @type #8D8D8C
+$sprk-black-tint-50: rgb(141, 141, 140);
+/// Color value for black at 40%.
+/// @group neutral
+/// @type #A4A4A3
+$sprk-black-tint-40: rgb(164, 164, 163);
+/// Color value for black at 30%.
+/// @group neutral
+/// @type #BABABA
+$sprk-black-tint-30: rgb(186, 186, 186);
+/// Color value for black at 20%.
+/// @group neutral
+/// @type #D2D1D1
+$sprk-black-tint-20: rgb(210, 209, 209);
+/// Color value for black at 10%.
+/// @group neutral
+/// @type #E8E8E8
+$sprk-black-tint-10: rgb(232, 232, 232);
 /// Color value for gray.
 /// @group gray
 /// @type #F7F7F7
 $sprk-gray: rgb(247, 247, 247);
+
 /// Color value for dark gray.
 /// @group gray
 /// @type #CFCFCF
@@ -53,10 +132,7 @@ $sprk-blue: rgb(0, 125, 186);
 /// @group black
 /// @type #404040
 $sprk-black-tint-75: rgb(64, 64, 64);
-/// Color value for black at 50%.
-/// @group black
-/// @type #808080
-$sprk-black-tint-50: rgb(128, 128, 128);
+
 /// Color value for black at 25%.
 /// @group black
 /// @type #BEBEBE
