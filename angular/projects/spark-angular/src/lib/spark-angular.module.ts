@@ -6,9 +6,7 @@ if (typeof window !== 'undefined') {
 import { NgModule } from '@angular/core';
 import { SprkFormatterDateModule } from './directives/inputs/formatters/sprk-formatter-date/sprk-formatter-date.module';
 import { SprkFormatterMonetaryModule } from './directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.module';
-import {
-  SprkFormatterPhoneNumberModule
-} from './directives/inputs/formatters/sprk-formatter-phone-number/sprk-formatter-phone-number.module';
+import { SprkFormatterPhoneNumberModule } from './directives/inputs/formatters/sprk-formatter-phone-number/sprk-formatter-phone-number.module';
 import { SprkFormatterSsnModule } from './directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.module';
 import { SprkDatepickerModule } from './directives/inputs/sprk-datepicker/sprk-datepicker.module';
 import { SprkFieldErrorModule } from './directives/inputs/sprk-field-error/sprk-field-error.module';
@@ -22,9 +20,7 @@ import { SprkTableEmptyHeadingModule } from './directives/sprk-table-empty-headi
 import { SprkTableGroupedColumnModule } from './directives/sprk-table-grouped-column/sprk-table-grouped-column.module';
 import { SprkTableHeadModule } from './directives/sprk-table-head/sprk-table-head.module';
 import { SprkTableRowHeadingModule } from './directives/sprk-table-row-heading/sprk-table-row-heading.module';
-import {
-  SprkTabbedNavigationPanelModule
-} from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.module';
+import { SprkTabbedNavigationPanelModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.module';
 import { SprkTabbedNavigationTabModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 import { SparkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
 import { SprkHugeInputContainerModule } from './components/inputs/sprk-huge-input-container/sprk-huge-input-container.module';
@@ -62,6 +58,8 @@ import { SprkHeadingModule } from './directives/sprk-heading/sprk-heading.module
 import { SprkLinkDirectiveModule } from './directives/sprk-link/sprk-link.module';
 import { SprkFlagModule } from './components/sprk-flag/sprk-flag.module';
 import { SprkCenteredColumnModule } from './directives/sprk-centered-column/sprk-centered-column.module';
+import { SprkRadioGroupModule } from './components/inputs/sprk-radio-group/sprk-radio-group.module';
+import { SprkRadioModule } from './components/inputs/sprk-radio/sprk-radio.module';
 
 @NgModule({
   exports: [
@@ -119,6 +117,8 @@ import { SprkCenteredColumnModule } from './directives/sprk-centered-column/sprk
     SprkLinkDirectiveModule,
     SprkFlagModule,
     SprkCenteredColumnModule,
-  ]
+    SprkRadioModule,
+    SprkRadioGroupModule,
+  ],
 })
 export class SparkAngularModule {}
