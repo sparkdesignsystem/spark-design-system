@@ -36,7 +36,6 @@ const SprkTooltip = (props) => {
 
   const handleKeydown = e =>{
     if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
-      console.log('hey')
       setIsToggled(false);
     }
 
@@ -50,8 +49,6 @@ const SprkTooltip = (props) => {
       console.log('sup')
     }
   }
-
-
 
   const toggle = e => {
     setIsToggled(!isToggled);
@@ -67,11 +64,16 @@ const SprkTooltip = (props) => {
         })}
         aria-expanded={isToggled ? 'true' : 'false'}
         aria-labelledby={id}
+        data-analytics={analyticsString}
+        data-id={idString}
       >
         <SprkIcon iconName={triggerIconType} additionalClasses={iconAdditionalClasses} />
       </button>
       <span
-        className='sprk-c-Tooltip sprk-c-Tooltip--bottom-right'
+        className={classnames(
+          'sprk-c-Tooltip',
+          additionalClasses
+        )}
         id={id}
       >
         {children}
@@ -83,24 +85,35 @@ const SprkTooltip = (props) => {
 SprkTooltip.defaultProps = {
   triggerIconType: 'question-filled',
   id: uniqueId('sprk_tooltip_'),
+  triggerIconType: 'question-filled',
   isDefaultToggled: false,
 };
 
 SprkTooltip.propTypes = {
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * trigger element. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
    */
   idString: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
-  */
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the trigger element.
+   * Intended for an outside
+   * library to capture data.
+   */
   analyticsString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * Expects a space separated string
+   * of classes to be added to the
+   * tooltip element.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Toggles the tooltip open by default
+   * Whether or not the tooltip is toggled open when the component renders.
    */
   isDefaultToggled: PropTypes.bool,
 };
