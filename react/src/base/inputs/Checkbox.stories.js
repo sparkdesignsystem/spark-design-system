@@ -11,11 +11,18 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 export default {
   title: 'Components/Input/Checkbox',
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
-  component: SprkSelectionInput,
+  component: SprkCheckboxGroup,
   parameters: {
+    subcomponents: {
+      SprkCheckbox,
+      SprkErrorContainer,
+      SprkFieldset,
+      SprkLegend,
+      SprkHelperText,
+      SprkSelectionInput,
+    },
     jest: [
       'SprkErrorContainer',
-      'SprkInputIconCheck',
       'SprkCheckboxGroup',
       'SprkCheckbox',
       'SprkFieldset',
