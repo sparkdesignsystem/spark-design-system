@@ -1,102 +1,153 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import SprkIcon from '../icons/SprkIcon';
 import uniqueId from 'lodash/uniqueId';
 
-const SprkTooltip = (props) => {
-  const [isToggled, setIsToggled] = useState(false);
+class SprkTooltip extends Component {
+  constructor(props) {
+    super(props);
 
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeydown);
-    // ref to trigger???.addEventListener('keydown', handleTriggerKeydown);
-
-    return() => {
-      window.removeEventListener('keydown', handleKeydown);
-      // triggerIconType.removeEventListener('keydown', handleTriggerKeydown);
-    }
-  }, [])
-  useEffect(() => {
-    if (props.isDefaultToggled) {
-      setIsToggled(true);
-    }
-  }, [])
-
-  const {
-    children,
-    idString,
-    triggerIconType,
-    iconAdditionalClasses,
-    additionalClasses,
-    analyticsString,
-    isDefaultToggled,
-    id,
-    ...other
-  } = props;
-
-  const handleKeydown = e =>{
-    if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
-      setIsToggled(false);
+    this.state = {
+      isToggled: this.props.isDefaultToggled || false
     }
 
-    if (e.key === 'Enter'){
-      console.log('sup')
-    }
+    this.toggle = this.toggle.bind(this);
+    this.handleWindowKeydown = this.handleWindowKeydown.bind(this);
+    this.handleWindowClick = this.handleWindowClick.bind(this);
+
+    this.triggerRef = React.createRef();
+    this.tooltipRef = React.createRef();
   }
 
-  const handleTriggerKeydown = e =>{
-    if (e.key === 'Enter'){
-      console.log('sup')
-    }
+  componentDidMount() {
+    window.addEventListener('keydown', this.handleWindowKeydown);
+    window.addEventListener('click', this.handleWindowClick);
+
+    this.triggerRef.current.addEventListener('mouseover', (e) => {
+      this.setPositioningClass();
+    });
+
+    this.triggerRef.current.addEventListener('focus', (e) => {
+      this.setPositioningClass();
+    });
+
+    this.setPositioningClass();
   }
 
-  const toggle = e => {
-    setIsToggled(!isToggled);
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleWindowKeydown);
+    window.removeEventListener('click', this.handleWindowClick);
   }
 
-  return (
-    <span {...other} className='sprk-c-Tooltip__container'>
-      <button
-        onClick={toggle}
-        className={classnames({
-          'sprk-c-Tooltip__trigger': true,
-          'sprk-c-Tooltip--toggled': isToggled,
-        })}
-        aria-expanded={isToggled ? 'true' : 'false'}
-        aria-labelledby={id}
-        data-analytics={analyticsString}
-        data-id={idString}
-      >
-        <SprkIcon iconName={triggerIconType} additionalClasses={iconAdditionalClasses} />
-      </button>
-      <span
-        className={classnames(
-          'sprk-c-Tooltip',
-          additionalClasses
-        )}
-        id={id}
-      >
-        {children}
+  setPositioningClass() {
+    // var trigger = this.triggerRef.current;
+    // var tooltip = this.tooltipRef.current;
+
+    // const elemX = trigger.getBoundingClientRect().left;
+    // const elemY = trigger.getBoundingClientRect().top;
+
+    // const viewportWidth = window.innerWidth;
+    // const viewportHeight = window.innerHeight;
+
+    // tooltip.classList.remove('sprk-c-Tooltip--top-left')
+    // tooltip.classList.remove('sprk-c-Tooltip--top-right')
+    // tooltip.classList.remove('sprk-c-Tooltip--bottom-left')
+    // tooltip.classList.remove('sprk-c-Tooltip--bottom-right')
+
+    // if (elemX > viewportWidth / 2) {
+    //   if (elemY > viewportHeight / 2) {
+    //     tooltip.classList.add('sprk-c-Tooltip--top-left');
+    //   } else {
+    //     tooltip.classList.add('sprk-c-Tooltip--bottom-left');
+    //   }
+    // } else {
+    //   if (elemY > viewportHeight / 2) {
+    //     tooltip.classList.add('sprk-c-Tooltip--top-right');
+    //   } else {
+    //     tooltip.classList.add('sprk-c-Tooltip--bottom-right');
+    //   }
+    // }
+  }
+
+  handleWindowKeydown(e) {
+    // if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
+    //   this.setState({
+    //     isToggled: false
+    //   })
+    // }
+  }
+
+  handleWindowClick(e){
+    // if (this.state.isToggled){
+    //   if (
+    //     !(this.tooltipRef.current.contains(e.target) ||
+    //     this.triggerRef.current.contains(e.target))) {
+    //       this.setState({
+    //         isToggled: false
+    //       })
+    //   }
+    // }
+  }
+
+  toggle() {
+    this.setState(prevState => ({
+      isToggled: !prevState.isToggled
+    }))
+  }
+
+  render() {
+    const {
+      children,
+      idString,
+      triggerIconType,
+      iconAdditionalClasses,
+      additionalClasses,
+      analyticsString,
+      isDefaultToggled,
+      id,
+      ...other
+    } = this.props;
+
+    return (
+      <span {...other} className='sprk-c-Tooltip__container'>
+        <button
+          ref={this.triggerRef}
+          onClick={this.toggle}
+          className={classnames({
+            'sprk-c-Tooltip__trigger': true,
+            'sprk-c-Tooltip--toggled': this.state.isToggled,
+          })}
+          aria-expanded={this.state.isToggled ? 'true' : 'false'}
+          aria-labelledby={id}
+          data-analytics={analyticsString}
+          data-id={idString}
+        >
+          <SprkIcon iconName={triggerIconType} additionalClasses={iconAdditionalClasses} />
+        </button>
+        <span
+          ref={this.tooltipRef}
+          className={classnames(
+            'sprk-c-Tooltip',
+            additionalClasses
+          )}
+          id={id}
+        >
+          {children}
+        </span>
       </span>
-    </span>
-  );
+    );
+  }
 }
 
 SprkTooltip.defaultProps = {
   triggerIconType: 'question-filled',
   id: uniqueId('sprk_tooltip_'),
-  triggerIconType: 'question-filled',
-  isDefaultToggled: false,
 };
 
 SprkTooltip.propTypes = {
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * trigger element. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -116,6 +167,7 @@ SprkTooltip.propTypes = {
    * Whether or not the tooltip is toggled open when the component renders.
    */
   isDefaultToggled: PropTypes.bool,
+
 };
 
 export default SprkTooltip;
