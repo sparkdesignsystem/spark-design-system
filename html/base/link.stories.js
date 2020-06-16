@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Link',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     docs: { iframeHeight: 80 },
     info: `
@@ -20,7 +18,7 @@ make sure each instance has a unique \`data-id\` property
   },
 };
 
-export const defaultStory = () => (
+export const defaultStory = () =>
   `
     <a
       class="sprk-b-Link"
@@ -30,14 +28,13 @@ export const defaultStory = () => (
     >
       Default Link
     </a>
-  `
-);
+  `;
 
 defaultStory.story = {
   name: 'Default',
 };
 
-export const simple = () => (
+export const simple = () =>
   `
     <a
       class="sprk-b-Link sprk-b-Link--simple"
@@ -47,35 +44,120 @@ export const simple = () => (
     >
       Simple Link
     </a>
-  `
-);
+  `;
 
-export const iconWithTextLink = () => (
+export const iconWithTextLink = () =>
   `
     <a
-      class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--simple"
+      class="sprk-b-Link sprk-b-Link--has-icon"
       href="#nogo"
       data-id="link-3"
       data-analytics="object.action.event"
     >
-      <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--stroke-current-color" viewBox="0 0 100 100">
-        <use xlink:href="#communication" />
+      <svg
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--l
+          sprk-u-mrs
+          sprk-c-Icon--stroke-current-color
+        "
+        viewBox="0 0 100 100"
+      >
+        <use xlink:href="#chevron-left" />
       </svg>
 
-      Message Us
+      Back
     </a>
-  `
-);
-
-export const disabled = () => (
-  `
     <a
-      class="sprk-b-Link sprk-b-Link--disabled"
+      class="sprk-b-Link sprk-b-Link--has-icon"
       href="#nogo"
       data-id="link-4"
       data-analytics="object.action.event"
     >
+      Forward
+      <svg
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--l
+          sprk-u-mls
+          sprk-c-Icon--stroke-current-color
+        "
+        viewBox="0 0 100 100">
+        <use xlink:href="#chevron-right" />
+      </svg>
+    </a>
+  `;
+
+export const disabled = () =>
+  `
+    <a
+      class="sprk-b-Link sprk-b-Link--disabled"
+      href="#nogo"
+      data-id="link-5"
+      data-analytics="object.action.event"
+    >
       Disabled Link
     </a>
+  `;
+
+export const disabledSimple = () =>
   `
-);
+    <a
+      class="sprk-b-Link sprk-b-Link--simple sprk-b-Link--disabled"
+      href="#nogo"
+      data-id="link-6"
+      data-analytics="object.action.event"
+    >
+      Disabled Link
+    </a>
+  `;
+
+disabledSimple.story = {
+  name: 'Disabled - Simple',
+};
+
+export const disabledIconWithTextLink = () =>
+  `
+    <a
+      class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
+      href="#nogo"
+      data-id="link-7"
+      data-analytics="object.action.event"
+    >
+      <svg
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--l
+          sprk-u-mrs
+          sprk-c-Icon--stroke-current-color
+        "
+        viewBox="0 0 100 100"
+      >
+        <use xlink:href="#chevron-left" />
+      </svg>
+
+      Back
+    </a>
+    <a
+      class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
+      href="#nogo"
+      data-id="link-8"
+      data-analytics="object.action.event"
+    >
+      Forward
+      <svg
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--l
+          sprk-u-mls
+          sprk-c-Icon--stroke-current-color
+        "
+        viewBox="0 0 100 100">
+        <use xlink:href="#chevron-right" />
+      </svg>
+    </a>
+  `;
+
+disabledIconWithTextLink.story = {
+  name: 'Disabled - Icon With Text Link',
+};

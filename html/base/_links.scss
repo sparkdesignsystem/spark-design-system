@@ -6,7 +6,6 @@
 ////
 /// @group link
 ////
-
 .sprk-b-Link {
   color: $sprk-link-color;
   border-bottom: $sprk-link-border-bottom;
@@ -67,16 +66,36 @@
   fill: $sprk-link-has-icon-fill;
 }
 
+.sprk-b-Link--has-icon:hover .sprk-c-Icon {
+  color: $sprk-link-has-icon-hover-color-text;
+  stroke: $sprk-link-has-icon-hover-color-text;
+  fill: $sprk-link-has-icon-fill;
+}
+
 /// Disabled links have a muted color and cannot be interacted with.
 /// @name .sprk-b-Link--disabled
-.sprk-b-Link--disabled,
+.sprk-b-Link--disabled {
+  pointer-events: none;
+  color: $sprk-link-disabled-color;
+  stroke: $sprk-link-disabled-color;
+  border-color: $sprk-link-disabled-border-bottom-color;
+
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: $sprk-link-disabled-border-bottom-color;
+    color: $sprk-link-disabled-color;
+  }
+}
+
+.sprk-b-Link--simple.sprk-b-Link--disabled,
 .sprk-b-Link--disabled .sprk-c-Icon {
   color: $sprk-link-disabled-color;
   stroke: $sprk-link-disabled-color;
   fill: $sprk-link-has-icon-fill;
   pointer-events: none;
   border-bottom: $sprk-link-disabled-border-bottom;
-  font-weight: $sprk-link-disabled-font-weight;
 
   &:visited,
   &:hover,

@@ -6,13 +6,17 @@ import { SprkLinkModule } from '../../components/sprk-link/sprk-link.module';
 import { SprkLinkComponent } from '../../components/sprk-link/sprk-link.component';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Link',
   component: SprkLinkDirective,
-  decorators: [storyWrapper(storyContent => `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`)],
+  decorators: [
+    storyWrapper(
+      (storyContent) =>
+        `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`,
+    ),
+  ],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('link')}
@@ -33,12 +37,14 @@ const modules = {
     SprkLinkDirectiveModule,
     SprkIconModule,
     SprkLinkModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkLinkComponent,
-    }]),
+    RouterModule.forRoot([
+      {
+        path: 'iframe.html',
+        component: SprkLinkComponent,
+      },
+    ]),
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 };
 
 export const defaultStory = () => ({
@@ -58,9 +64,7 @@ export const defaultStory = () => ({
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'sprk-link.directive',
-    ],
+    jest: ['sprk-link.directive'],
   },
 };
 
@@ -81,9 +85,7 @@ export const simple = () => ({
 
 simple.story = {
   parameters: {
-    jest: [
-      'sprk-link.directive',
-    ],
+    jest: ['sprk-link.directive'],
   },
 };
 
@@ -94,24 +96,36 @@ export const iconWithTextLink = () => ({
       href="#"
       sprkLink
       variant="icon"
-      idString="icon-link"
-      analyticsString="icon-link"
+      idString="icon-link-1"
+      analyticsString="icon-link-1"
     >
       <sprk-icon
-        iconType="communication"
+        iconType="chevron-left"
         additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-mrs"
       >
       </sprk-icon>
-      Message Us
+      Back
+    </a>
+    <a
+      href="#"
+      sprkLink
+      variant="icon"
+      idString="icon-link-2"
+      analyticsString="icon-link-2"
+    >
+      Forward
+      <sprk-icon
+        iconType="chevron-right"
+        additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-mls"
+      >
+      </sprk-icon>
     </a>
   `,
 });
 
 iconWithTextLink.story = {
   parameters: {
-    jest: [
-      'sprk-link.directive',
-    ],
+    jest: ['sprk-link.directive'],
   },
 };
 
@@ -133,7 +147,73 @@ export const disabled = () => ({
 disabled.story = {
   parameters: {
     jest: ['sprk-link.directive'],
-  }
+  },
+};
+
+export const disabledSimple = () => ({
+  moduleMetadata: modules,
+  template: `
+    <a
+      href="#"
+      sprkLink
+      variant="simple"
+      isDisabled="true"
+      idString="disabled-link-simple"
+      analyticsString="disabled-link-simple"
+    >
+      Disabled Link
+    </a>
+  `,
+});
+
+disabledSimple.story = {
+  name: 'Disabled - Simple',
+  parameters: {
+    jest: ['sprk-link.directive'],
+  },
+};
+
+export const disabledIconWithTextLink = () => ({
+  moduleMetadata: modules,
+  template: `
+    <a
+      href="#"
+      sprkLink
+      variant="icon"
+      isDisabled="true"
+      idString="disabled-icon-link-1"
+      analyticsString="disabled-icon-link-1"
+    >
+      <sprk-icon
+        iconType="chevron-left"
+        additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-mrs"
+      >
+      </sprk-icon>
+      Back
+    </a>
+    <a
+      href="#"
+      sprkLink
+      variant="icon"
+      isDisabled="true"
+      idString="disabled-icon-link-2"
+      analyticsString="disabled-icon-link-2"
+    >
+      Forward
+      <sprk-icon
+        iconType="chevron-right"
+        additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-mls"
+      >
+      </sprk-icon>
+    </a>
+  `,
+});
+
+disabledIconWithTextLink.story = {
+  name: 'Disabled - Icon With Text Link',
+  parameters: {
+    jest: ['sprk-link.directive'],
+  },
 };
 
 export const deprecated = () => ({
@@ -153,6 +233,5 @@ deprecated.story = {
   name: 'Component (Deprecated)',
   parameters: {
     jest: ['sprk-link.component'],
-  }
+  },
 };
-

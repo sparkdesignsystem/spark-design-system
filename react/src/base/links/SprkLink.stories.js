@@ -5,9 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Link',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkLink,
   parameters: {
     jest: ['SprkLink'],
@@ -47,22 +45,40 @@ export const simple = () => (
 );
 
 export const iconWithTextLink = () => (
-  <SprkLink
-    element="a"
-    analyticsString="link-icon"
-    href="#nogo"
-    variant="has-icon"
-    idString="link-3"
-  >
-    <SprkIcon
-      additionalClasses="
+  <>
+    <SprkLink
+      element="a"
+      analyticsString="link-icon"
+      href="#nogo"
+      variant="has-icon"
+      idString="link-3"
+    >
+      <SprkIcon
+        additionalClasses="
         sprk-c-Icon--l
         sprk-u-mrs
         sprk-c-Icon--stroke-current-color"
-      iconName="communication"
-    />
-    Message Us
-  </SprkLink>
+        iconName="chevron-left"
+      />
+      Back
+    </SprkLink>
+    <SprkLink
+      element="a"
+      analyticsString="link-icon"
+      href="#nogo"
+      variant="has-icon"
+      idString="link-4"
+    >
+      Forward
+      <SprkIcon
+        additionalClasses="
+        sprk-c-Icon--l
+        sprk-u-mls
+        sprk-c-Icon--stroke-current-color"
+        iconName="chevron-right"
+      />
+    </SprkLink>
+  </>
 );
 
 iconWithTextLink.story = {
@@ -74,9 +90,69 @@ export const disabled = () => (
     element="a"
     analyticsString="link-disabled"
     variant="disabled"
-    idString="link-4"
+    idString="link-5"
     href="#nogo"
   >
     Disabled Link
   </SprkLink>
 );
+
+export const disabledSimple = () => (
+  <SprkLink
+    element="a"
+    analyticsString="link-disabled"
+    variant="disabled"
+    idString="link-6"
+    href="#nogo"
+    additionalClasses="sprk-b-Link--simple"
+  >
+    Disabled Link
+  </SprkLink>
+);
+
+disabledSimple.story = {
+  name: 'Disabled - Simple',
+};
+
+export const disabledIconWithTextLink = () => (
+  <>
+    <SprkLink
+      element="a"
+      analyticsString="link-icon"
+      href="#nogo"
+      variant="disabled"
+      idString="link-7"
+      additionalClasses="sprk-b-Link--has-icon"
+    >
+      <SprkIcon
+        additionalClasses="
+        sprk-c-Icon--l
+        sprk-u-mrs
+        sprk-c-Icon--stroke-current-color"
+        iconName="chevron-left"
+      />
+      Back
+    </SprkLink>
+    <SprkLink
+      element="a"
+      analyticsString="link-icon"
+      href="#nogo"
+      variant="disabled"
+      idString="link-8"
+      additionalClasses="sprk-b-Link--has-icon"
+    >
+      Forward
+      <SprkIcon
+        additionalClasses="
+        sprk-c-Icon--l
+        sprk-u-mls
+        sprk-c-Icon--stroke-current-color"
+        iconName="chevron-right"
+      />
+    </SprkLink>
+  </>
+);
+
+disabledIconWithTextLink.story = {
+  name: 'Disabled - Icon With Text Link',
+};

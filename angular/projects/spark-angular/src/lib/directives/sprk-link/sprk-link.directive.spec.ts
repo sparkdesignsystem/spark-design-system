@@ -13,9 +13,9 @@ import { RouterTestingModule } from '@angular/router/testing';
     <a href="#nogo" sprkLink variant="icon">Link</a>
     <a href="#nogo" sprkLink variant="simple">Simple Link</a>
     <a href="#nogo" sprkLink variant="unstyled">Link</a>
-  `
+  `,
 })
-class TestComponent { }
+class TestComponent {}
 
 describe('SprkLink Directive', () => {
   let component: TestComponent;
@@ -31,7 +31,7 @@ describe('SprkLink Directive', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [SprkLinkDirective, TestComponent]
+      declarations: [SprkLinkDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
@@ -45,7 +45,6 @@ describe('SprkLink Directive', () => {
     linkIcon = fixture.nativeElement.querySelectorAll('a')[4];
     linkSimple = fixture.nativeElement.querySelectorAll('a')[5];
     linkUnstyled = fixture.nativeElement.querySelectorAll('a')[6];
-
   }));
 
   it('should create itself', () => {
@@ -63,9 +62,8 @@ describe('SprkLink Directive', () => {
 
   it('should apply correct Spark classes for icon variant', () => {
     expect(linkIcon.classList.contains('sprk-b-Link')).toBe(true);
-    expect(linkIcon.classList.contains('sprk-b-Link--simple')).toBe(true);
+    expect(linkIcon.classList.contains('sprk-b-Link--simple')).toBe(false);
     expect(linkIcon.classList.contains('sprk-b-Link--has-icon')).toBe(true);
-
   });
 
   it('should apply correct Spark classes for unstyled variant', () => {
@@ -79,7 +77,9 @@ describe('SprkLink Directive', () => {
 
   it('should apply correct Spark classes for disabled links', () => {
     expect(linkElDisabled.classList.contains('sprk-b-Link')).toBe(true);
-    expect(linkElDisabled.classList.contains('sprk-b-Link--disabled')).toBe(true);
+    expect(linkElDisabled.classList.contains('sprk-b-Link--disabled')).toBe(
+      true,
+    );
   });
 
   it('should set the value of analyticsString to data-analytics', () => {

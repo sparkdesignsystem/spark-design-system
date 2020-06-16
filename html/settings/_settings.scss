@@ -697,22 +697,22 @@ $sprk-btn-tertiary-letter-spacing: 0.62px !default;
 /// The transition timing for hover, active and focus styles on Links.
 $sprk-link-transition: 0.3s !default;
 /// The default color on Links.
-$sprk-link-color: $sprk-black !default;
+$sprk-link-color: $sprk-purple !default;
 /// The font weight on Links.
 $sprk-link-font-weight: $sprk-font-weight-body-one !default;
 /// The text decoration on Links.
 $sprk-link-text-decoration: none !default;
 /// The color of the underline on Links.
-$sprk-link-underline-color: $sprk-gray-dark !default;
+$sprk-link-underline-color: $sprk-purple !default;
 /// The underline width on Links.
-$sprk-link-underline-width: 0.09375rem !default;
+$sprk-link-underline-width: 0.125rem !default;
 /// The border style of the underline on Links.
 $sprk-link-border-bottom-style: solid !default;
 /// The style of the underline on Links.
 $sprk-link-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-underline-color !default;
 /// The color of Links on hover.
-$sprk-link-hover-color: $sprk-black !default;
+$sprk-link-hover-color: $sprk-dark-purple !default;
 /// The underline style of Links on hover.
 $sprk-link-hover-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-hover-color !default;
@@ -734,9 +734,9 @@ $sprk-link-simple-font-weight: $sprk-font-weight-body-two !default;
 /// The color of Simple Links on hover.
 $sprk-link-simple-hover-color: $sprk-black !default;
 /// The underline width of Simple Links on hover.
-$sprk-link-simple-hover-underline-width: 0.0625rem !default;
+$sprk-link-simple-hover-underline-width: 0.125rem !default;
 /// The underline color of Simple Links on hover.
-$sprk-link-simple-hover-underline-color: $sprk-black !default;
+$sprk-link-simple-hover-underline-color: $sprk-red !default;
 /// The underline style of Simple Links.
 $sprk-link-simple-border-bottom: $sprk-link-simple-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-underline-color !default;
@@ -747,7 +747,7 @@ $sprk-link-simple-visited-border-bottom: $sprk-link-simple-underline-width
 $sprk-link-simple-hover-border-bottom: $sprk-link-simple-hover-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-hover-underline-color !default;
 /// The color of icons in Links containing icons.
-$sprk-link-has-icon-color-icon: $sprk-green !default;
+$sprk-link-has-icon-color-icon: $sprk-purple !default;
 /// The font weight of Links containing icons.
 $sprk-link-has-icon-font-weight: $sprk-font-weight-body-one !default;
 /// The underline width of Links containing icons.
@@ -763,15 +763,15 @@ $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
 $sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
 /// The color value for Links with icons in the hover state.
-$sprk-link-has-icon-hover-color-text: $sprk-green !default;
+$sprk-link-has-icon-hover-color-text: $sprk-dark-purple !default;
 /// The border settings for Plain Links.
 $sprk-link-plain-border: none !default;
 /// The border settings for Plain Links in the visited state
 $sprk-link-plain-visited-border: none !default;
 /// The disabled Link color.
-$sprk-link-disabled-color: $sprk-gray-dark !default;
-/// The disabled Link font weight.
-$sprk-link-disabled-font-weight: $sprk-font-weight-body-one !default;
+$sprk-link-disabled-color: $sprk-black-tint-50 !default;
+/// The disabled Link border-bottom color.
+$sprk-link-disabled-border-bottom-color: $sprk-link-disabled-color !default;
 /// The underline width for the disabled Link.
 $sprk-link-disabled-underline-width: 0 !default;
 /// The underline settings for the disabled Link.
@@ -884,10 +884,14 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 $sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
 /// The top value for icons in Huge Inputs.
 $sprk-input-huge-icon-offset-top: 50% !default;
+
+/* stylelint-disable indentation */
 /// The margin-top value for icons in Huge Select Inputs.
 $sprk-select-input-huge-icon-margin-top: -((
         $sprk-input-huge-height - $sprk-icon-m
       ) / 2 + $sprk-icon-m) !default;
+
+/* stylelint-enable indentation */
 /// The padding value for Huge Inputs with icons.
 $sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 
@@ -2092,7 +2096,7 @@ $sprk-stepper-bar-left-inset: $sprk-space-l;
 $sprk-stepper-step-content-margin-left: ($sprk-stepper-bar-left-inset * 2) +
   $sprk-stepper-bar-width;
 $sprk-stepper-icon-left: -(($sprk-stepper-bar-left-inset +
-        $sprk-stepper-icon-radius));
+        $sprk-stepper-icon-radius)); /* stylelint-disable-line indentation */
 $sprk-stepper-slide-timing: 0.3s;
 $sprk-stepper-slider-text-fade-in-timing: 0.6s;
 $sprk-stepper-slider-text-fade-in-delay: 0.2s;
