@@ -19,7 +19,7 @@ describe('SprkCheckbox:', () => {
     expect(
       wrapper
         .find('.sprk-b-SelectionContainer')
-        .hasClass('sprk-b-InputContainer--huge'),
+        .hasClass('sprk-b-Checkbox--huge'),
     ).toBe(true);
   });
 
@@ -31,6 +31,25 @@ describe('SprkCheckbox:', () => {
         .find('label')
         .hasClass('sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label'),
     ).toBe(true);
+  });
+
+  it('should apply ariaDescribedBy', () => {
+    const expected = 'test-aria';
+    const wrapper = shallow(<SprkCheckbox ariaDescribedBy={expected} />);
+    expect(
+      wrapper.find('.sprk-b-Checkbox__input').prop('aria-describedby'),
+    ).toEqual(expected);
+  });
+
+  it('should apply id', () => {
+    const expected = 'testId';
+    const wrapper = shallow(<SprkCheckbox id={expected} />);
+    expect(wrapper.find('.sprk-b-Checkbox__label').prop('htmlFor')).toEqual(
+      expected,
+    );
+    expect(wrapper.find('.sprk-b-Checkbox__input').prop('id')).toEqual(
+      expected,
+    );
   });
 
   it('should run the supplied onChangeFunc function for checkboxes', () => {

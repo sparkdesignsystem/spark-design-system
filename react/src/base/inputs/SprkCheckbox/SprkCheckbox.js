@@ -3,72 +3,66 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
 
-class SprkCheckbox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: uniqueId(),
-    };
-  }
-
-  render() {
-    const {
-      children,
-      variant,
-      idString,
-      additionalClasses,
-      analyticsString,
-      additionalCheckboxClasses,
-      additionalLabelClasses,
-      name,
-      value,
-      disabled,
-      onChangeFunc,
-      ...rest
-    } = this.props;
-    const { id } = this.state;
-    return (
-      <div
+const SprkCheckbox = (props) => {
+  const {
+    children,
+    variant,
+    idString,
+    additionalClasses,
+    analyticsString,
+    additionalCheckboxClasses,
+    additionalLabelClasses,
+    name,
+    value,
+    disabled,
+    onChangeFunc,
+    id,
+    ariaDescribedBy,
+    ...rest
+  } = props;
+  return (
+    <div
+      className={classnames(
+        'sprk-b-SelectionContainer sprk-b-Checkbox',
+        additionalClasses,
+        {
+          'sprk-b-Checkbox--huge': variant === 'huge',
+        },
+      )}
+      data-analytics={analyticsString}
+      data-id={idString}
+      data-sprk-input="checkbox"
+    >
+      <input
+        aria-describedby={ariaDescribedBy}
         className={classnames(
-          'sprk-b-SelectionContainer sprk-b-Checkbox',
-          additionalClasses,
+          'sprk-b-Checkbox__input',
+          additionalCheckboxClasses,
+        )}
+        data-id={idString}
+        disabled={disabled}
+        id={id}
+        name={name}
+        onChange={onChangeFunc}
+        type="checkbox"
+        value={value}
+        {...rest}
+      />
+      <label
+        className={classnames(
+          'sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label',
+          additionalLabelClasses,
           {
-            'sprk-b-Checkbox--huge': variant === 'huge',
+            'sprk-b-Label--disabled': disabled,
           },
         )}
-        data-analytics={analyticsString}
-        data-id={idString}
+        htmlFor={id}
       >
-        <input
-          className={classnames(
-            'sprk-b-Checkbox__input',
-            additionalCheckboxClasses,
-          )}
-          disabled={disabled}
-          id={id}
-          type="checkbox"
-          aria-describedby={`errorcontainer-${id}`}
-          name={name}
-          value={value}
-          onChange={onChangeFunc}
-          {...rest}
-        />
-        <label
-          htmlFor={id}
-          className={classnames(
-            'sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label',
-            additionalLabelClasses,
-            {
-              'sprk-b-Label--disabled': disabled,
-            },
-          )}
-        >
-          {children}
-        </label>
-      </div>
-    );
-  }
-}
+        {children}
+      </label>
+    </div>
+  );
+};
 
 SprkCheckbox.propTypes = {
   children: PropTypes.node,
@@ -82,6 +76,16 @@ SprkCheckbox.propTypes = {
    * a unique selector for automated tools.
    */
   idString: PropTypes.string,
+  /**
+   * Assigned to the `aria-describedby` attribute of the input used
+   * to create relationships between the input and error container.
+   */
+  ariaDescribedBy: PropTypes.string,
+  /**
+   * Assigned to the `id` attribute of the input that will connect
+   * relationships between the label and input.
+   */
+  id: PropTypes.string,
   /**
    * Assigned to the `data-analytics` attribute
    * serving as a unique selector for outside libraries to capture data.
@@ -113,11 +117,6 @@ SprkCheckbox.propTypes = {
    */
   errorMessage: PropTypes.string,
   /**
-   * Determines whether to render
-   * the component in the valid or the error state.
-   */
-  valid: PropTypes.bool,
-  /**
    * Assigned to the `name` attribute
    * of the rendered input element.
    */
@@ -135,6 +134,10 @@ SprkCheckbox.propTypes = {
    * Passes in a function that handles the onChange of the input.
    */
   onChangeFunc: PropTypes.func,
+};
+
+SprkCheckbox.defaultProps = {
+  id: uniqueId('sprk-checkbox-'),
 };
 
 export default SprkCheckbox;

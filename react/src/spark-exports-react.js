@@ -12,6 +12,7 @@ export { default as SprkTextInput } from './base/inputs/SprkTextInput/SprkTextIn
 export { default as SprkRevealInput } from './base/inputs/SprkRevealInput/SprkRevealInput';
 export { default as SprkSelectionInput } from './base/inputs/SprkSelectionInput/SprkSelectionInput';
 export { default as SprkCheckboxGroup } from './base/inputs/SprkCheckboxGroup/SprkCheckboxGroup';
+export { default as SprkHelperText } from './base/inputs/SprkHelperText/SprkHelperText';
 export { default as SprkCheckbox } from './base/inputs/SprkCheckbox/SprkCheckbox';
 export { default as SprkLink } from './base/links/SprkLink';
 export { default as SprkTable } from './base/tables/SprkTable';

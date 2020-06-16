@@ -1,9 +1,11 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
+import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import SprkCheckboxGroup from './SprkCheckboxGroup/SprkCheckboxGroup';
 import SprkCheckbox from './SprkCheckbox/SprkCheckbox';
 import SprkFieldset from './SprkFieldset/SprkFieldset';
 import SprkLegend from './SprkLegend/SprkLegend';
+import SprkHelperText from './SprkHelperText/SprkHelperText';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -18,6 +20,7 @@ export default {
       'SprkCheckbox',
       'SprkFieldset',
       'SprkLegend',
+      'SprkHelperText',
     ],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
@@ -26,9 +29,9 @@ export const defaultStory = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckbox>default</SprkCheckbox>
-      <SprkCheckbox>default</SprkCheckbox>
-      <SprkCheckbox>default</SprkCheckbox>
+      <SprkCheckbox>Checkbox Item 1</SprkCheckbox>
+      <SprkCheckbox>Checkbox Item 2</SprkCheckbox>
+      <SprkCheckbox>Checkbox Item 3</SprkCheckbox>
     </SprkFieldset>
   </SprkCheckboxGroup>
 );
@@ -40,14 +43,42 @@ defaultStory.story = {
   },
 };
 
+export const helperText = () => (
+  <SprkCheckboxGroup>
+    <SprkFieldset>
+      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkCheckbox>Checkbox Item 1</SprkCheckbox>
+      <SprkCheckbox>Checkbox Item 2</SprkCheckbox>
+      <SprkCheckbox>Checkbox Item 3</SprkCheckbox>
+    </SprkFieldset>
+    <SprkHelperText>Input Helper Text</SprkHelperText>
+  </SprkCheckboxGroup>
+);
+
+helperText.story = {
+  name: 'Helper Text',
+  parameters: {
+    jest: ['SprkCheckboxGroup'],
+  },
+};
+
 export const invalidCheckbox = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckbox>default</SprkCheckbox>
-      <SprkCheckbox>default</SprkCheckbox>
-      <SprkCheckbox>default</SprkCheckbox>
-      {/* <SprkErrorContainer></SprkErrorContainer> */}
+      <SprkCheckbox ariaDescribedBy="checkbox-error-container">
+        Checkbox Item 1
+      </SprkCheckbox>
+      <SprkCheckbox ariaDescribedBy="checkbox-error-container">
+        Checkbox Item 2
+      </SprkCheckbox>
+      <SprkCheckbox ariaDescribedBy="checkbox-error-container">
+        Checkbox Item 3
+      </SprkCheckbox>
+      <SprkErrorContainer
+        id="checkbox-error-container"
+        message="There is an error on this field"
+      />
     </SprkFieldset>
   </SprkCheckboxGroup>
 );
@@ -63,9 +94,9 @@ export const disabledCheckbox = () => (
   <SprkCheckboxGroup disabled>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckbox>default</SprkCheckbox>
-      <SprkCheckbox>default</SprkCheckbox>
-      <SprkCheckbox>default</SprkCheckbox>
+      <SprkCheckbox disabled>Checkbox Item 1</SprkCheckbox>
+      <SprkCheckbox disabled>Checkbox Item 2</SprkCheckbox>
+      <SprkCheckbox disabled>Checkbox Item 3</SprkCheckbox>
     </SprkFieldset>
   </SprkCheckboxGroup>
 );
@@ -73,6 +104,24 @@ export const disabledCheckbox = () => (
 disabledCheckbox.story = {
   name: 'Disabled',
   paramteres: {
+    jest: ['SprkCheckboxGroup'],
+  },
+};
+
+export const huge = () => (
+  <SprkCheckboxGroup variant="huge">
+    <SprkFieldset>
+      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkCheckbox variant="huge">Checkbox Item 1</SprkCheckbox>
+      <SprkCheckbox variant="huge">Checkbox Item 2</SprkCheckbox>
+      <SprkCheckbox variant="huge">Checkbox Item 3</SprkCheckbox>
+    </SprkFieldset>
+  </SprkCheckboxGroup>
+);
+
+huge.story = {
+  name: 'Huge',
+  parameters: {
     jest: ['SprkCheckboxGroup'],
   },
 };
