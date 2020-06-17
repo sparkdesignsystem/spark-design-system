@@ -24,13 +24,13 @@ class SprkTooltip extends Component {
     window.addEventListener('keydown', this.handleWindowKeydown);
     window.addEventListener('click', this.handleWindowClick);
 
-    this.triggerRef.current.addEventListener('mouseover', (e) => {
-      this.setPositioningClass();
-    });
+    // this.triggerRef.current.addEventListener('mouseover', (e) => {
+    //   this.setPositioningClass();
+    // });
 
-    this.triggerRef.current.addEventListener('focus', (e) => {
-      this.setPositioningClass();
-    });
+    // this.triggerRef.current.addEventListener('focus', (e) => {
+    //   this.setPositioningClass();
+    // });
 
     this.setPositioningClass();
   }
@@ -41,53 +41,55 @@ class SprkTooltip extends Component {
   }
 
   setPositioningClass() {
-    // var trigger = this.triggerRef.current;
-    // var tooltip = this.tooltipRef.current;
+    console.log('pos');
+    var trigger = this.triggerRef.current;
+    var tooltip = this.tooltipRef.current;
 
-    // const elemX = trigger.getBoundingClientRect().left;
-    // const elemY = trigger.getBoundingClientRect().top;
+    const elemX = trigger.getBoundingClientRect().left;
+    const elemY = trigger.getBoundingClientRect().top;
 
-    // const viewportWidth = window.innerWidth;
-    // const viewportHeight = window.innerHeight;
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
 
-    // tooltip.classList.remove('sprk-c-Tooltip--top-left')
-    // tooltip.classList.remove('sprk-c-Tooltip--top-right')
-    // tooltip.classList.remove('sprk-c-Tooltip--bottom-left')
-    // tooltip.classList.remove('sprk-c-Tooltip--bottom-right')
+    tooltip.classList.remove('sprk-c-Tooltip--top-left')
+    tooltip.classList.remove('sprk-c-Tooltip--top-right')
+    tooltip.classList.remove('sprk-c-Tooltip--bottom-left')
+    tooltip.classList.remove('sprk-c-Tooltip--bottom-right')
 
-    // if (elemX > viewportWidth / 2) {
-    //   if (elemY > viewportHeight / 2) {
-    //     tooltip.classList.add('sprk-c-Tooltip--top-left');
-    //   } else {
-    //     tooltip.classList.add('sprk-c-Tooltip--bottom-left');
-    //   }
-    // } else {
-    //   if (elemY > viewportHeight / 2) {
-    //     tooltip.classList.add('sprk-c-Tooltip--top-right');
-    //   } else {
-    //     tooltip.classList.add('sprk-c-Tooltip--bottom-right');
-    //   }
-    // }
+    if (elemX > viewportWidth / 2) {
+      if (elemY > viewportHeight / 2) {
+        tooltip.classList.add('sprk-c-Tooltip--top-left');
+      } else {
+        tooltip.classList.add('sprk-c-Tooltip--bottom-left');
+      }
+    } else {
+      if (elemY > viewportHeight / 2) {
+        tooltip.classList.add('sprk-c-Tooltip--top-right');
+      } else {
+        tooltip.classList.add('sprk-c-Tooltip--bottom-right');
+      }
+    }
   }
 
   handleWindowKeydown(e) {
-    // if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
-    //   this.setState({
-    //     isToggled: false
-    //   })
-    // }
+    if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
+      this.setState({
+        isToggled: false
+      })
+    }
   }
 
   handleWindowClick(e){
-    // if (this.state.isToggled){
-    //   if (
-    //     !(this.tooltipRef.current.contains(e.target) ||
-    //     this.triggerRef.current.contains(e.target))) {
-    //       this.setState({
-    //         isToggled: false
-    //       })
-    //   }
-    // }
+    if (this.state.isToggled){
+      console.log(this.tooltipRef.current)
+      if (
+        !(this.tooltipRef.current.contains(e.target) ||
+        this.triggerRef.current.contains(e.target))) {
+          this.setState({
+            isToggled: false
+          })
+      }
+    }
   }
 
   toggle() {
@@ -114,6 +116,8 @@ class SprkTooltip extends Component {
         <button
           ref={this.triggerRef}
           onClick={this.toggle}
+          onMouseOver={this.setPositioningClass}
+          onFocus={this.setPositioningClass}
           className={classnames({
             'sprk-c-Tooltip__trigger': true,
             'sprk-c-Tooltip--toggled': this.state.isToggled,

@@ -1,9 +1,8 @@
 /* global it expect */
 import React from 'react';
-import Enzyme, { shallow, mount } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkTooltip from './SprkTooltip';
-import { act } from 'react-dom/test-utils';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -58,45 +57,6 @@ describe('SprkTooltip:', () => {
     expect(wrapper.find('[data-analytics="spork"]').length).toBe(1);
   });
 
-  // it('should toggle on Enter', () => {
-  //   const wrapper = mount(<SprkTooltip />);
-  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
-  //   wrapper.find('.sprk-c-Tooltip__trigger').simulate('keydown', { keyCode: 13 });
-  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
-  // });
-
-  // it('should toggle on Space', () => {
-  //   const wrapper = mount(<SprkTooltip />);
-  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
-  //   wrapper.find('.sprk-c-Tooltip__trigger').simulate('keydown', { key: 'Enter' });
-  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
-  // });
-
-  // it('should close on Escape', () => {
-    // const wrapper = mount(<SprkTooltip isDefaultToggled={true} />);
-    // expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
-
-    // act(() => {
-    //   const event = new KeyboardEvent('keydown', {
-    //     key: 'Escape'
-    //   });
-    //   window.dispatchEvent(event);
-    // })
-    // expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
-  // });
-
-  // it('should close on document click', () => {
-    // const map = {};
-    // window.addEventListener = jest.genMockFn().mockImpl((event, cb) => {
-    //   map[event] = cb;
-    // });
-
-    // const wrapper = mount(<SprkTooltip isDefaultToggled={true} />);
-    // expect (wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
-    // map.click();
-    // expect (wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
-  // });
-
   it('should render with the correct icon additionalClasses', () => {
     const wrapper = mount(<SprkTooltip iconAdditionalClasses='spork' />);
     expect(wrapper.find('.sprk-c-Icon.spork').length).toBe(1);
@@ -112,5 +72,66 @@ describe('SprkTooltip:', () => {
     expect(triggerLabel).toEqual(tooltipId);
   })
 
-  // position classes
+  // it('should toggle on Enter', () => {
+  //   const wrapper = mount(<SprkTooltip />);
+  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
+  //   wrapper.find('.sprk-c-Tooltip__trigger').simulate('keydown', { keyCode: 13 });
+  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
+  // });
+
+  // it('should toggle on Space', () => {
+  //   const wrapper = mount(<SprkTooltip />);
+  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
+  //   wrapper.find('.sprk-c-Tooltip__trigger').simulate('keydown', { key: 'Enter' });
+  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
+  // });
+
+  // it('should close on Escape', () => {
+
+  //   const map = {};
+  //   window.addEventListener = jest.fn((event, cb) => {
+  //     map[event] = cb;
+  //   });
+
+  //   const wrapper = mount(<SprkTooltip isDefaultToggled={true} />);
+  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
+
+
+  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
+  // });
+
+  it('should close on document click', () => {
+    // const map = {};
+    // window.addEventListener = jest.fn((event, cb) => {
+    //   map[event] = cb;
+    // });
+
+    // const wrapper = mount(<SprkTooltip isDefaultToggled={true} />);
+    // expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
+    // map.click({target: window});
+    // expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
+  });
+
+  it('should render correctly in the top left quadrant', () => {
+
+  })
+
+  it('should render correctly in the top right quadrant', () => {
+
+  })
+
+  it('should render correctly in the bottom left quadrant', () => {
+
+  })
+
+  it('should render correctly in the bottom right quadrant', () => {
+
+  })
+
+  // it('should unmount without error', () => {
+  //   const wrapper = mount(<SprkTooltip />);
+  //   expect(wrapper.find('.sprk-c-Tooltip').length).toBe(1);
+  //   wrapper.unmount();
+  //   expect(wrapper.find('.sprk-c-Tooltip').length).toBe(0);
+  // });
 });
