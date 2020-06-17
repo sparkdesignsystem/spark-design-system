@@ -40,9 +40,18 @@
   &:hover,
   &:active,
   &:focus {
-    transition: $sprk-link-transition;
     color: $sprk-link-simple-hover-color;
-    border-bottom: $sprk-link-simple-hover-border-bottom;
+    border-bottom: $sprk-link-simple-underline-color;
+
+    &::after {
+      content: '';
+      transition: $sprk-link-transition;
+      position: absolute;
+      display: block;
+      left: $sprk-link-simple-hover-after-left;
+      width: $sprk-link-simple-hover-after-width;
+      border-bottom: $sprk-link-simple-hover-border-bottom;
+    }
   }
 }
 

@@ -728,7 +728,7 @@ $sprk-link-simple-color: $sprk-black !default;
 /// The underline color of Simple Links.
 $sprk-link-simple-underline-color: transparent !default;
 /// The underline width of Simple Links.
-$sprk-link-simple-underline-width: 0.0625rem !default;
+$sprk-link-simple-underline-width: 0.125rem !default;
 /// The font weight of Simple Links.
 $sprk-link-simple-font-weight: $sprk-font-weight-body-two !default;
 /// The color of Simple Links on hover.
@@ -737,6 +737,10 @@ $sprk-link-simple-hover-color: $sprk-black !default;
 $sprk-link-simple-hover-underline-width: 0.125rem !default;
 /// The underline color of Simple Links on hover.
 $sprk-link-simple-hover-underline-color: $sprk-red !default;
+/// The left position of the after element of Simple Links on hover.
+$sprk-link-simple-hover-after-left: 10% !default;
+/// The width of the after element of Simple Links on hover.
+$sprk-link-simple-hover-after-width: 80% !default;
 /// The underline style of Simple Links.
 $sprk-link-simple-border-bottom: $sprk-link-simple-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-underline-color !default;
