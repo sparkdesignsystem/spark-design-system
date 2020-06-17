@@ -210,7 +210,7 @@ export const wait = () => {
               sprk-c-Spinner
               sprk-c-Spinner--circle
               sprk-c-Spinner--large
-              sprk-c-Spinner--purple"
+              sprk-c-Spinner--red"
           ></div>
           <p
             class="sprk-o-Stack__item sprk-b-TypeBodyTwo sprk-c-Modal__content"

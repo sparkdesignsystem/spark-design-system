@@ -276,7 +276,7 @@ class SprkModal extends Component {
                     size="large"
                     additionalClasses="
                       sprk-o-Stack__item
-                      sprk-c-Spinner--purple
+                      sprk-c-Spinner--red
                     "
                   />
                 )}
