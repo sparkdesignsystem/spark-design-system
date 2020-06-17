@@ -29,7 +29,16 @@ export default {
       'SprkLegend',
       'SprkHelperText',
     ],
-    info: `${markdownDocumentationLinkBuilder('input')}`,
+    info: `
+    ${markdownDocumentationLinkBuilder('input')}
+- Spark checkboxes have been refactored into a compositional style component.
+The version that uses <SprkSelectionInput> will be permanently removed
+in our Fall 2020 release.
+- To update to the new version, replace checkboxes implemented by
+the <code>SprkSelectionInput</code> component with our
+new implementation using <code>SprkCheckboxGroup</code>
+and <code>SprkCheckbox</code> components.
+    `,
   },
 };
 export const defaultStory = () => (
