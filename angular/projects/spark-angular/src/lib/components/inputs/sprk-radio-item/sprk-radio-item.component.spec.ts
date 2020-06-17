@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SprkRadioComponent } from './sprk-radio.component';
+import { SprkRadioItemComponent } from './sprk-radio-item.component';
 
-describe('SprkRadioComponent', () => {
-  let component: SprkRadioComponent;
-  let fixture: ComponentFixture<SprkRadioComponent>;
+describe('SprkRadioItemComponent', () => {
+  let component: SprkRadioItemComponent;
+  let fixture: ComponentFixture<SprkRadioItemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkRadioComponent],
+      declarations: [SprkRadioItemComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SprkRadioComponent);
+    fixture = TestBed.createComponent(SprkRadioItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

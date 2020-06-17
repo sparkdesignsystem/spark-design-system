@@ -59,7 +59,7 @@ import { SprkLinkDirectiveModule } from './directives/sprk-link/sprk-link.module
 import { SprkFlagModule } from './components/sprk-flag/sprk-flag.module';
 import { SprkCenteredColumnModule } from './directives/sprk-centered-column/sprk-centered-column.module';
 import { SprkRadioGroupModule } from './components/inputs/sprk-radio-group/sprk-radio-group.module';
-import { SprkRadioModule } from './components/inputs/sprk-radio/sprk-radio.module';
+import { SprkRadioItemModule } from './components/inputs/sprk-radio-item/sprk-radio-item.module';
 
 @NgModule({
   exports: [
@@ -117,7 +117,7 @@ import { SprkRadioModule } from './components/inputs/sprk-radio/sprk-radio.modul
     SprkLinkDirectiveModule,
     SprkFlagModule,
     SprkCenteredColumnModule,
-    SprkRadioModule,
+    SprkRadioItemModule,
     SprkRadioGroupModule,
   ],
 })

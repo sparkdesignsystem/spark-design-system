@@ -7,7 +7,7 @@ import {
   QueryList,
 } from '@angular/core';
 import { uniqueId } from 'lodash';
-import { SprkRadioComponent } from '../sprk-radio/sprk-radio.component';
+import { SprkRadioItemComponent } from '../sprk-radio-item/sprk-radio-item.component';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 
@@ -15,6 +15,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
   selector: 'sprk-radio-group',
   template: `
     <div [ngClass]="getClasses()">
+      <ng-content select="[beforeSprkRadios]"></ng-content>
       <fieldset *ngIf="label; else sprkRadios" class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend" sprkLabel>
           <ng-content select="[sprkLabel]"></ng-content>
@@ -23,12 +24,12 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
       </fieldset>
 
       <ng-template #sprkRadios>
-        <ng-content select="sprk-radio"></ng-content>
+        <ng-content></ng-content>
       </ng-template>
 
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
-      <ng-content></ng-content>
+      <ng-content select="[afterSprkRadios]"></ng-content>
     </div>
   `,
 })
@@ -42,8 +43,14 @@ export class SprkRadioGroupComponent implements AfterContentInit {
   additionalClasses: string;
 
   /**
-   * This component expects a child element
-   * with the `sprkFieldError` directive.
+   *
+   */
+  @Input()
+  variant: string;
+
+  /**
+   * This component can have an optional child element
+   * with the `sprkLabel` directive for the legend.
    */
   @ContentChild(SprkLabelDirective, { static: false })
   label: SprkLabelDirective;
@@ -57,10 +64,10 @@ export class SprkRadioGroupComponent implements AfterContentInit {
 
   /**
    * This component expects children
-   * `<sprk-radio>` components.
+   * `<sprk-radio-item>` components.
    */
-  @ContentChildren(SprkRadioComponent)
-  radios: QueryList<SprkRadioComponent>;
+  @ContentChildren(SprkRadioItemComponent)
+  radios: QueryList<SprkRadioItemComponent>;
 
   /**
    * @ignore
@@ -84,19 +91,22 @@ export class SprkRadioGroupComponent implements AfterContentInit {
       });
     }
 
+    if (this.variant === 'huge') {
+      classArray.push('sprk-b-InputContainer--huge');
+    }
+
     return classArray.join(' ');
   }
   /**
    * @ignore
    */
   ngAfterContentInit(): void {
-    console.log(this.error, 'error');
     if (this.radios && this.error) {
       this.radios.forEach((radio) => {
-        // radio.input.ref.nativeElement.setAttribute(
-        //   'aria-describedby',
-        //   this.error_id
-        // );
+        radio.input.ref.nativeElement.setAttribute(
+          'aria-describedby',
+          this.error_id
+        );
       });
       this.error.ref.nativeElement.id = this.error_id;
     }

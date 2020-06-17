@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SprkRadioComponent } from './sprk-radio.component';
+import { SprkRadioItemComponent } from './sprk-radio-item.component';
 import { SprkSelectionLabelModule } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 
 @NgModule({
   imports: [CommonModule, SprkSelectionLabelModule],
-  declarations: [SprkRadioComponent],
-  exports: [SprkRadioComponent],
+  declarations: [SprkRadioItemComponent],
+  exports: [SprkRadioItemComponent],
 })
-export class SprkRadioModule {}
+export class SprkRadioItemModule {}
