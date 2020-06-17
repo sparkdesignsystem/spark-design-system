@@ -79,15 +79,15 @@ class SprkTooltip extends Component {
     }
   }
 
-  handleWindowClick(e){
-    if (this.state.isToggled){
+  handleWindowClick(e) {
+    if (this.state.isToggled) {
       console.log(this.tooltipRef.current)
       if (
         !(this.tooltipRef.current.contains(e.target) ||
-        this.triggerRef.current.contains(e.target))) {
-          this.setState({
-            isToggled: false
-          })
+          this.triggerRef.current.contains(e.target))) {
+        this.setState({
+          isToggled: false
+        });
       }
     }
   }
@@ -151,9 +151,11 @@ SprkTooltip.defaultProps = {
 
 SprkTooltip.propTypes = {
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Expects a space separated string
+   * of classes to be added to the
+   * tooltip element.
    */
-  idString: PropTypes.string,
+  additionalClasses: PropTypes.string,
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the trigger element.
@@ -164,14 +166,27 @@ SprkTooltip.propTypes = {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * tooltip element.
+   * svg icon.
    */
-  additionalClasses: PropTypes.string,
+  iconAdditionalClasses: PropTypes.string,
+  /**
+   * Optional: the unique ID to use for the tooltip element.
+   * If an ID is not provided, a unique ID will be created
+   * automatically.
+   */
+  id: PropTypes.string,
+  /**
+   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   */
+  idString: PropTypes.string,
   /**
    * Whether or not the tooltip is toggled open when the component renders.
    */
   isDefaultToggled: PropTypes.bool,
-
+  /**
+   * The icon to use for the trigger element.
+   */
+  triggerIconType: PropTypes.string,
 };
 
 export default SprkTooltip;
