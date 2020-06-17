@@ -6,6 +6,8 @@ import SprkCheckbox from './SprkCheckbox/SprkCheckbox';
 import SprkFieldset from './SprkFieldset/SprkFieldset';
 import SprkLegend from './SprkLegend/SprkLegend';
 import SprkHelperText from './SprkHelperText/SprkHelperText';
+import SprkStack from '../../objects/stack/SprkStack';
+import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -137,6 +139,227 @@ export const huge = () => (
 
 huge.story = {
   name: 'Huge',
+  parameters: {
+    jest: ['SprkCheckboxGroup'],
+  },
+};
+
+export const hugeInvalid = () => (
+  <SprkCheckboxGroup variant="huge">
+    <SprkFieldset>
+      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkCheckbox variant="huge" ariaDescribedBy="checkbox-error-container">
+        Checkbox Item 1
+      </SprkCheckbox>
+      <SprkCheckbox variant="huge" ariaDescribedBy="checkbox-error-container">
+        Checkbox Item 2
+      </SprkCheckbox>
+      <SprkCheckbox variant="huge" ariaDescribedBy="checkbox-error-container">
+        Checkbox Item 3
+      </SprkCheckbox>
+      <SprkErrorContainer
+        id="checkbox-error-container"
+        message="There is an error on this field"
+      />
+    </SprkFieldset>
+  </SprkCheckboxGroup>
+);
+
+hugeInvalid.story = {
+  name: 'Huge Invalid',
+  parameters: {
+    jest: ['SprkCheckboxGroup'],
+  },
+};
+
+export const hugeDisabled = () => (
+  <SprkCheckboxGroup variant="huge" disabled>
+    <SprkFieldset>
+      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkCheckbox
+        variant="huge"
+        ariaDescribedBy="checkbox-error-container"
+        disabled
+      >
+        Checkbox Item 1
+      </SprkCheckbox>
+      <SprkCheckbox
+        variant="huge"
+        ariaDescribedBy="checkbox-error-container"
+        disabled
+      >
+        Checkbox Item 2
+      </SprkCheckbox>
+      <SprkCheckbox
+        variant="huge"
+        ariaDescribedBy="checkbox-error-container"
+        disabled
+      >
+        Checkbox Item 3
+      </SprkCheckbox>
+      <SprkErrorContainer
+        id="checkbox-error-container"
+        message="There is an error on this field"
+      />
+    </SprkFieldset>
+  </SprkCheckboxGroup>
+);
+
+hugeDisabled.story = {
+  name: 'Huge Invalid',
+  parameters: {
+    jest: ['SprkCheckboxGroup'],
+  },
+};
+
+export const layoutTwo = () => (
+  <SprkCheckboxGroup variant="huge">
+    <SprkFieldset>
+      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkStack itemSpacing="medium">
+        <SprkStackItem>
+          <SprkStack splitAt="small" itemSpacing="medium">
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 1</SprkCheckbox>
+            </SprkStackItem>
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 2</SprkCheckbox>
+            </SprkStackItem>
+          </SprkStack>
+        </SprkStackItem>
+      </SprkStack>
+    </SprkFieldset>
+  </SprkCheckboxGroup>
+);
+
+layoutTwo.story = {
+  name: 'Huge Layout - Two',
+  parameters: {
+    jest: ['SprkCheckboxGroup'],
+  },
+};
+
+export const layoutFour = () => (
+  <SprkCheckboxGroup variant="huge">
+    <SprkFieldset>
+      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkStack itemSpacing="medium">
+        <SprkStackItem>
+          <SprkStack splitAt="small" itemSpacing="medium">
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 1</SprkCheckbox>
+            </SprkStackItem>
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 2</SprkCheckbox>
+            </SprkStackItem>
+          </SprkStack>
+          <SprkStack splitAt="small" itemSpacing="medium">
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 3</SprkCheckbox>
+            </SprkStackItem>
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 4</SprkCheckbox>
+            </SprkStackItem>
+          </SprkStack>
+        </SprkStackItem>
+      </SprkStack>
+    </SprkFieldset>
+  </SprkCheckboxGroup>
+);
+
+layoutFour.story = {
+  name: 'Huge Layout - Four',
+  parameters: {
+    jest: ['SprkCheckboxGroup'],
+  },
+};
+export const layoutFive = () => (
+  <SprkCheckboxGroup variant="huge">
+    <SprkFieldset>
+      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkStack itemSpacing="medium">
+        <SprkStackItem>
+          <SprkStack splitAt="small" itemSpacing="medium">
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 1</SprkCheckbox>
+            </SprkStackItem>
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 2</SprkCheckbox>
+            </SprkStackItem>
+          </SprkStack>
+          <SprkStack splitAt="small" itemSpacing="medium">
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 3</SprkCheckbox>
+            </SprkStackItem>
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 4</SprkCheckbox>
+            </SprkStackItem>
+          </SprkStack>
+          <SprkStack
+            splitAt="small"
+            itemSpacing="medium"
+            additionalClasses="sprk-o-Stack--center-row "
+          >
+            <SprkStackItem
+              additionalClasses="
+                sprk-o-Stack__item--flex@s
+                sprk-o-Stack__item--half@s
+              "
+            >
+              <SprkCheckbox variant="huge">Checkbox Item 5</SprkCheckbox>
+            </SprkStackItem>
+          </SprkStack>
+        </SprkStackItem>
+      </SprkStack>
+    </SprkFieldset>
+  </SprkCheckboxGroup>
+);
+
+layoutFive.story = {
+  name: 'Huge Layout - Five',
+  parameters: {
+    jest: ['SprkCheckboxGroup'],
+  },
+};
+
+export const layoutSix = () => (
+  <SprkCheckboxGroup variant="huge">
+    <SprkFieldset>
+      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkStack itemSpacing="medium">
+        <SprkStackItem>
+          <SprkStack splitAt="small" itemSpacing="medium">
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 1</SprkCheckbox>
+            </SprkStackItem>
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 2</SprkCheckbox>
+            </SprkStackItem>
+          </SprkStack>
+          <SprkStack splitAt="small" itemSpacing="medium">
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 3</SprkCheckbox>
+            </SprkStackItem>
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 4</SprkCheckbox>
+            </SprkStackItem>
+          </SprkStack>
+          <SprkStack splitAt="small" itemSpacing="medium">
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 5</SprkCheckbox>
+            </SprkStackItem>
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
+              <SprkCheckbox variant="huge">Checkbox Item 6</SprkCheckbox>
+            </SprkStackItem>
+          </SprkStack>
+        </SprkStackItem>
+      </SprkStack>
+    </SprkFieldset>
+  </SprkCheckboxGroup>
+);
+
+layoutSix.story = {
+  name: 'Huge Layout - Six',
   parameters: {
     jest: ['SprkCheckboxGroup'],
   },

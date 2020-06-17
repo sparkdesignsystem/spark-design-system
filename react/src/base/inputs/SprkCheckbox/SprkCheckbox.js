@@ -20,6 +20,7 @@ const SprkCheckbox = (props) => {
     ariaDescribedBy,
     ...rest
   } = props;
+  const internalId = uniqueId('sprk-checkbox-');
   return (
     <div
       className={classnames(
@@ -41,7 +42,7 @@ const SprkCheckbox = (props) => {
         )}
         data-id={idString}
         disabled={disabled}
-        id={id}
+        id={id || internalId}
         name={name}
         onChange={onChangeFunc}
         type="checkbox"
@@ -56,7 +57,7 @@ const SprkCheckbox = (props) => {
             'sprk-b-Label--disabled': disabled,
           },
         )}
-        htmlFor={id}
+        htmlFor={id || internalId}
       >
         {children}
       </label>
@@ -134,10 +135,6 @@ SprkCheckbox.propTypes = {
    * Passes in a function that handles the onChange of the input.
    */
   onChangeFunc: PropTypes.func,
-};
-
-SprkCheckbox.defaultProps = {
-  id: uniqueId('sprk-checkbox-'),
 };
 
 export default SprkCheckbox;
