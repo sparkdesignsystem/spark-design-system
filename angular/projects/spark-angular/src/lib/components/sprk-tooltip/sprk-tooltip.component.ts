@@ -12,7 +12,11 @@ import { uniqueId } from 'lodash';
 @Component({
   selector: 'sprk-tooltip',
   template: `
-  <span class="sprk-c-Tooltip__container" #containerElement>
+  <span
+    class="sprk-c-Tooltip__container"
+    [attr.data-id]="idString"
+    #containerElement
+  >
     <button
       [ngClass]="{
         'sprk-c-Tooltip__trigger' : true,
@@ -20,7 +24,6 @@ import { uniqueId } from 'lodash';
       }"
       [attr.aria-expanded]="isToggled ? 'true' : 'false'"
       [attr.data-analytics]="analyticsString"
-      [attr.data-id]="idString"
       [attr.aria-labelledby]="id"
       #triggerElement
     >
@@ -31,19 +34,18 @@ import { uniqueId } from 'lodash';
       ></sprk-icon>
     </button>
     <span
-    [ngClass]="getTooltipClasses()"
-    [attr.id]="id"
-    aria-hidden="true"
-    role="tooltip"
-    #tooltipElement
+      [ngClass]="getTooltipClasses()"
+      [attr.id]="id"
+      aria-hidden="true"
+      role="tooltip"
+      #tooltipElement
     >
-    <ng-content></ng-content>
+      <ng-content></ng-content>
     </span>
-    </span>
-    `
+  </span>
+  `
 })
 export class SprkTooltipComponent implements AfterViewInit {
-
   /**
    * Whether or not the tooltip is toggled open.
    */
@@ -79,7 +81,7 @@ export class SprkTooltipComponent implements AfterViewInit {
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
-   * trigger element. This is intended to be
+   * container element. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
    * per page.

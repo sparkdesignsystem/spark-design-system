@@ -166,7 +166,7 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should recalculate position on hover', () => {
-    window.resizeTo = function resizeTo(width, height) {
+    window.resizeTo = (width, height) => {
       Object.assign(this, {
         innerWidth: width,
         innerHeight: height,
@@ -189,7 +189,7 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should recalculate position on focus', () => {
-    window.resizeTo = function resizeTo(width, height) {
+    window.resizeTo = (width, height) => {
       Object.assign(this, {
         innerWidth: width,
         innerHeight: height,
@@ -235,7 +235,7 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should calculate position for top right quadrant', () => {
-    window.resizeTo = function resizeTo(width, height) {
+    window.resizeTo = (width, height) => {
       Object.assign(this, {
         innerWidth: width,
         innerHeight: height,
@@ -258,7 +258,7 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should calculate position for bottom left quadrant', () => {
-    window.resizeTo = function resizeTo(width, height) {
+    window.resizeTo = (width, height) => {
       Object.assign(this, {
         innerWidth: width,
         innerHeight: height,
@@ -281,7 +281,7 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should calculate position for bottom right quadrant', () => {
-    window.resizeTo = function resizeTo(width, height) {
+    window.resizeTo = (width, height) => {
       Object.assign(this, {
         innerWidth: width,
         innerHeight: height,

@@ -31,13 +31,10 @@ export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-tooltip
-      triggerIconType="question-filled"
       iconAdditionalClasses="sprk-c-Icon--filled"
-      idString='idstring-1'
-      analyticsString='analyticsString-1'
-      additionalClasses='spark-example'
     >
-      Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id dee doo da fauxet la gigman roo.
+      Sit nulla est ex deserunt exercitation anim occaecat.
+      Nostrud ullamco deserunt aute id dee doo da fauxet la gigman roo.
     </sprk-tooltip>
   `,
 });
