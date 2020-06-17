@@ -712,14 +712,14 @@ $sprk-link-border-bottom-style: solid !default;
 $sprk-link-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-underline-color !default;
 /// The color of Links on hover.
-$sprk-link-hover-color: $sprk-dark-purple !default;
+$sprk-link-hover-color: $sprk-deep-purple !default;
 /// The underline style of Links on hover.
 $sprk-link-hover-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-hover-color !default;
 /// The color of visited Links.
-$sprk-link-visited-color: $sprk-black-tint-75 !default;
+$sprk-link-visited-color: $sprk-black-tint-70 !default;
 /// The color of the underline on visited Links.
-$sprk-link-underline-visited-color: $sprk-gray-dark !default;
+$sprk-link-underline-visited-color: $sprk-black-tint-50 !default;
 /// The style of the underline on visited Links.
 $sprk-link-visited-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-underline-visited-color !default;
@@ -763,7 +763,7 @@ $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
 $sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
 /// The color value for Links with icons in the hover state.
-$sprk-link-has-icon-hover-color-text: $sprk-dark-purple !default;
+$sprk-link-has-icon-hover-color-text: $sprk-deep-purple !default;
 /// The border settings for Plain Links.
 $sprk-link-plain-border: none !default;
 /// The border settings for Plain Links in the visited state
