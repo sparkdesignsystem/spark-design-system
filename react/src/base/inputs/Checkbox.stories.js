@@ -197,16 +197,12 @@ export const hugeDisabled = () => (
       >
         Checkbox Item 3
       </SprkCheckbox>
-      <SprkErrorContainer
-        id="checkbox-error-container"
-        message="There is an error on this field"
-      />
     </SprkFieldset>
   </SprkCheckboxGroup>
 );
 
 hugeDisabled.story = {
-  name: 'Huge Invalid',
+  name: 'Huge Disabled',
   parameters: {
     jest: ['SprkCheckboxGroup'],
   },
