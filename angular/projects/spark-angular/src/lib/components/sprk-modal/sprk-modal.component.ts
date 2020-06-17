@@ -51,7 +51,7 @@ import * as _ from 'lodash';
         >
           <div
             *ngIf="modalType == 'wait'"
-            class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"
+            class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--purple"
           ></div>
           <ng-content></ng-content>
         </div>

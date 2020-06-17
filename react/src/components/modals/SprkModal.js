@@ -70,21 +70,21 @@ class SprkModal extends Component {
   isTabPressed(e) {
     e.key === 'Tab' || e.keyCode === 9;
   }
-
+  
   isEscPressed(e) {
     e.key === 'Escape' || e.keyCode === 27;
   }
 
-  getFocusableEls (containerRef) {
+  getFocusableEls(containerRef) {
     const focusEls = containerRef.querySelectorAll(
-      'a[href], area[href],'
-      + 'input:not([disabled]),'
-      + 'select:not([disabled]),'
-      + 'textarea:not([disabled]),'
-      + 'button:not([disabled]), [tabindex="0"]',
+      'a[href], area[href],' +
+        'input:not([disabled]),' +
+        'select:not([disabled]),' +
+        'textarea:not([disabled]),' +
+        'button:not([disabled]), [tabindex="0"]',
     );
     return focusEls;
-  };
+  }
 
   isActiveElement(elementRef) {
     document.activeElement === elementRef;
@@ -263,14 +263,21 @@ class SprkModal extends Component {
 
             <div>
               <div
-                className="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium"
+                className="
+                  sprk-o-Stack__item
+                  sprk-c-Modal__body
+                  sprk-o-Stack
+                  sprk-o-Stack--medium
+                "
                 id={'modalContent_' + this.aria_id}
               >
                 {isWait && (
                   <SprkSpinner
                     size="large"
-                    lightness="dark"
-                    additionalClasses="sprk-o-Stack__item"
+                    additionalClasses="
+                      sprk-o-Stack__item
+                      sprk-c-Spinner--purple
+                    "
                   />
                 )}
                 <div className="sprk-b-TypeBodyTwo sprk-c-Modal__content">
@@ -317,43 +324,52 @@ SprkModal.propTypes = {
   /**
    * The function that runs when the cancel choice is clicked.
    * Cancel choices include clicking the x icon, Mask, or pressing Esc.
-  */
+   */
   cancelClick: PropTypes.func,
   /**
-   * 	If true, focus will automatically be returned to the last-focused item when the modal is closed.
+   * 	If true, focus will automatically be returned
+   * to the last-focused item when the modal is closed.
    */
   shouldReturnFocusOnClose: PropTypes.bool,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add
+   * to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   // TODO: Actually give this a default
   /**
-   * The icon name to use for the close button in the modal. Defaults to "close".
+   * The icon name to use for the close button
+   * in the modal. Defaults to "close".
    */
   closeIcon: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving
+   * as a unique selector for outside libraries to capture data.
    */
   closeAnalyticsString: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving
+   * as a unique selector for outside libraries to capture data.
    */
   maskAnalyticsString: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside libraries to capture data.
    */
   confirmAnalyticsString: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside libraries to capture data.
    */
   cancelAnalyticsString: PropTypes.string,
 };

@@ -5,7 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Components/Modal',
   decorators: [
-    story => `<div class="sprk-o-Box" data-sprk-main>${story()}</div>`,
+    (story) => `<div class="sprk-o-Box" data-sprk-main>${story()}</div>`,
   ],
   parameters: {
     docs: { iframeHeight: 450 },
@@ -105,7 +105,7 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['modals'],
-  }
+  },
 };
 
 export const info = () => {
@@ -152,8 +152,9 @@ export const info = () => {
 
         <div class="sprk-o-Stack__item sprk-c-Modal__body">
           <p class="sprk-b-TypeBodyTwo" id="modalInfoContent">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
       </div>
@@ -169,7 +170,7 @@ export const info = () => {
 info.story = {
   parameters: {
     jest: ['modals'],
-  }
+  },
 };
 
 export const wait = () => {
@@ -204,8 +205,12 @@ export const wait = () => {
             sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium"
         >
           <div
-            class="sprk-o-Stack__item sprk-c-Spinner
-              sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"
+            class="
+              sprk-o-Stack__item
+              sprk-c-Spinner
+              sprk-c-Spinner--circle
+              sprk-c-Spinner--large
+              sprk-c-Spinner--purple"
           ></div>
           <p
             class="sprk-o-Stack__item sprk-b-TypeBodyTwo sprk-c-Modal__content"
@@ -229,5 +234,5 @@ export const wait = () => {
 wait.story = {
   parameters: {
     jest: ['modals'],
-  }
+  },
 };
