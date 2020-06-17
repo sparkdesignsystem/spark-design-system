@@ -9,7 +9,7 @@ class SprkTooltip extends Component {
     super(props);
 
     this.state = {
-      isToggled: this.props.isDefaultToggled || false
+      isToggled: this.props.isDefaultOpen || false
     }
 
     this.toggle = this.toggle.bind(this);
@@ -106,7 +106,7 @@ class SprkTooltip extends Component {
       iconAdditionalClasses,
       additionalClasses,
       analyticsString,
-      isDefaultToggled,
+      isDefaultOpen,
       id,
       ...other
     } = this.props;
@@ -182,7 +182,7 @@ SprkTooltip.propTypes = {
   /**
    * Whether or not the tooltip is toggled open when the component renders.
    */
-  isDefaultToggled: PropTypes.bool,
+  isDefaultOpen: PropTypes.bool,
   /**
    * The icon to use for the trigger element.
    */

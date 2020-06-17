@@ -93,7 +93,7 @@ describe('SprkTooltip:', () => {
   //     map[event] = cb;
   //   });
 
-  //   const wrapper = mount(<SprkTooltip isDefaultToggled={true} />);
+  //   const wrapper = mount(<SprkTooltip isDefaultOpen={true} />);
   //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
 
 
@@ -106,7 +106,7 @@ describe('SprkTooltip:', () => {
     //   map[event] = cb;
     // });
 
-    // const wrapper = mount(<SprkTooltip isDefaultToggled={true} />);
+    // const wrapper = mount(<SprkTooltip isDefaultOpen={true} />);
     // expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
     // map.click({target: window});
     // expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
