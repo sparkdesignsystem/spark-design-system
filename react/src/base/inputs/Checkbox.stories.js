@@ -74,7 +74,7 @@ export const helperText = () => (
 );
 
 helperText.story = {
-  name: 'Helper Text',
+  name: 'Default Helper Text',
   parameters: {
     jest: ['SprkCheckboxGroup'],
   },
@@ -249,6 +249,8 @@ export const layoutFour = () => (
               <SprkCheckbox variant="huge">Checkbox Item 2</SprkCheckbox>
             </SprkStackItem>
           </SprkStack>
+        </SprkStackItem>
+        <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
               <SprkCheckbox variant="huge">Checkbox Item 3</SprkCheckbox>
@@ -283,6 +285,8 @@ export const layoutFive = () => (
               <SprkCheckbox variant="huge">Checkbox Item 2</SprkCheckbox>
             </SprkStackItem>
           </SprkStack>
+        </SprkStackItem>
+        <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
               <SprkCheckbox variant="huge">Checkbox Item 3</SprkCheckbox>
@@ -291,6 +295,8 @@ export const layoutFive = () => (
               <SprkCheckbox variant="huge">Checkbox Item 4</SprkCheckbox>
             </SprkStackItem>
           </SprkStack>
+        </SprkStackItem>
+        <SprkStackItem>
           <SprkStack
             splitAt="small"
             itemSpacing="medium"
@@ -332,6 +338,8 @@ export const layoutSix = () => (
               <SprkCheckbox variant="huge">Checkbox Item 2</SprkCheckbox>
             </SprkStackItem>
           </SprkStack>
+        </SprkStackItem>
+        <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
               <SprkCheckbox variant="huge">Checkbox Item 3</SprkCheckbox>
@@ -340,6 +348,8 @@ export const layoutSix = () => (
               <SprkCheckbox variant="huge">Checkbox Item 4</SprkCheckbox>
             </SprkStackItem>
           </SprkStack>
+        </SprkStackItem>
+        <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
               <SprkCheckbox variant="huge">Checkbox Item 5</SprkCheckbox>
