@@ -52,7 +52,6 @@ export const secondary = () =>
   `
     <button
       class="sprk-c-Button sprk-c-Button--secondary"
-      type="button"
       data-id="button-secondary"
     >
       Button
@@ -63,7 +62,6 @@ export const tertiary = () =>
   `
     <button
       class="sprk-c-Button sprk-c-Button--tertiary"
-      type="button"
       data-id="button-tertiary"
     >
       Button
@@ -164,7 +162,6 @@ export const fullWidthAtSmallViewport = () =>
   `
   <button
     class="sprk-c-Button sprk-c-Button--full@s"
-    type="button"
     data-id="button-full-smv"
   >
     Button
@@ -179,7 +176,6 @@ export const fullWidthAtExtraSmallViewport = () =>
   `
   <button
     class="sprk-c-Button sprk-c-Button--full@xs"
-    type="button"
     data-id="button-full-xsmv"
   >
     Button
