@@ -34,7 +34,7 @@ export default {
     SprkRadioLabelDirective,
     SprkFieldErrorDirective,
     SprkHelperTextDirective,
-    SprkRadioInputDirective
+    SprkRadioInputDirective,
   },
   decorators: [
     storyWrapper(
@@ -235,7 +235,7 @@ invalidRadio.story = {
   },
 };
 
-export const disabledRadioButton = () => ({
+export const disabledRadio = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-radio-group>
@@ -302,7 +302,7 @@ export const disabledRadioButton = () => ({
   `,
 });
 
-disabledRadioButton.story = {
+disabledRadio.story = {
   name: 'Disabled',
   parameters: {
     jest: ['sprk-radio.directive', 'sprk-label.directive'],
