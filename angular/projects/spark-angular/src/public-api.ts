@@ -88,8 +88,12 @@ export { SprkLabelDirective } from './lib/directives/inputs/sprk-label/sprk-labe
 export { SprkLabelModule } from './lib/directives/inputs/sprk-label/sprk-label.module';
 export { SprkSelectionInputDirective } from './lib/directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 export { SprkSelectionInputModule } from './lib/directives/inputs/sprk-selection-input/sprk-selection-input.module';
+export { SprkRadioInputDirective } from './lib/directives/inputs/sprk-radio-input/sprk-radio-input.directive';
+export { SprkRadioInputModule } from './lib/directives/inputs/sprk-radio-input/sprk-radio-input.module';
 export { SprkSelectionLabelDirective } from './lib/directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 export { SprkSelectionLabelModule } from './lib/directives/inputs/sprk-selection-label/sprk-selection-label.module';
+export { SprkRadioLabelDirective } from './lib/directives/inputs/sprk-radio-label/sprk-radio-label.directive';
+export { SprkRadioLabelModule } from './lib/directives/inputs/sprk-radio-label/sprk-radio-label.module';
 export { SprkStackItemDirective } from './lib/directives/sprk-stack-item/sprk-stack-item.directive';
 export { SprkStackItemModule } from './lib/directives/sprk-stack-item/sprk-stack-item.module';
 export { SprkTableEmptyHeadingDirective } from './lib/directives/sprk-table-empty-heading/sprk-table-empty-heading.directive';
