@@ -643,12 +643,20 @@ $sprk-btn-secondary-disabled-background-color: $sprk-black-tint-50 !default;
 $sprk-btn-secondary-disabled-text-color: $sprk-white !default;
 /// The border color of the Secondary Button component when disabled.
 $sprk-btn-secondary-disabled-border-color: $sprk-btn-secondary-disabled-background-color !default;
+/// The border style of the Secondary Button component when disabled.
+$sprk-btn-secondary-disabled-border-style: $sprk-btn-disabled-border-style !default;
+/// The border width of the Secondary Button component when disabled.
+$sprk-btn-secondary-disabled-border-width: $sprk-btn-disabled-border-width !default;
 /// The box shadow of the Secondary Button component when disabled.
 $sprk-btn-secondary-disabled-shadow: none !default;
 /// The box shadow of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-shadow: none !default;
 /// The border value of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-border-color: $sprk-black-tint-50 !default;
+/// The border style of the Tertiary Button component when disabled.
+$sprk-btn-tertiary-disabled-border-style: $sprk-btn-disabled-border-style !default;
+/// The border width of the Tertiary Button component when disabled.
+$sprk-btn-tertiary-disabled-border-width: $sprk-btn-disabled-border-width !default;
 
 // Secondary
 /// The background color of the Secondary Button component.

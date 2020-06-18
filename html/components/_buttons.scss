@@ -137,16 +137,16 @@ Removes extra padding and border in Firefox when using `input type="submit"`
   pointer-events: none;
   box-shadow: $sprk-btn-disabled-shadow;
   background-color: $sprk-btn-disabled-background-color;
-  border-width: $sprk-btn-disabled-border-width;
-  border-color: $sprk-btn-disabled-border-color;
-  border-style: $sprk-btn-disabled-border-style;
+  border: $sprk-btn-disabled-border-width $sprk-btn-disabled-border-style
+    $sprk-btn-disabled-border-color;
   color: $sprk-btn-disabled-text-color;
 
   &:hover,
   &:active,
   &:focus {
     background-color: $sprk-btn-disabled-background-color;
-    border-color: $sprk-btn-disabled-border-color;
+    border: $sprk-btn-disabled-border-width $sprk-btn-disabled-border-style
+      $sprk-btn-disabled-border-color;
     color: $sprk-btn-disabled-text-color;
   }
 
@@ -159,14 +159,16 @@ Removes extra padding and border in Firefox when using `input type="submit"`
 .sprk-c-Button--secondary[disabled] {
   box-shadow: $sprk-btn-secondary-disabled-shadow;
   background-color: $sprk-btn-secondary-disabled-background-color;
-  border-color: $sprk-btn-secondary-disabled-border-color;
+  border: $sprk-btn-secondary-disabled-border-width $sprk-btn-secondary-disabled-border-style
+    $sprk-btn-secondary-disabled-border-color;
   color: $sprk-btn-secondary-disabled-text-color;
 }
 
 .sprk-c-Button--tertiary.sprk-is-Disabled,
 .sprk-c-Button--tertiary[disabled] {
   box-shadow: $sprk-btn-tertiary-disabled-shadow;
-  border-color: $sprk-btn-tertiary-disabled-border-color;
+  border: $sprk-btn-tertiary-disabled-border-width $sprk-btn-tertiary-disabled-border-style
+    $sprk-btn-tertiary-disabled-border-color;
   color: $sprk-btn-tertiary-disabled-text-color;
   background-color: $sprk-btn-tertiary-disabled-background-color;
 }
