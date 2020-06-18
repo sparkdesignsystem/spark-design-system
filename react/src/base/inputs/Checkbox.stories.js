@@ -208,7 +208,7 @@ hugeDisabled.story = {
   },
 };
 
-export const layoutTwo = () => (
+export const hugeLayoutTwo = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
@@ -228,14 +228,14 @@ export const layoutTwo = () => (
   </SprkCheckboxGroup>
 );
 
-layoutTwo.story = {
+hugeLayoutTwo.story = {
   name: 'Huge Layout - Two',
   parameters: {
     jest: ['SprkCheckboxGroup'],
   },
 };
 
-export const layoutFour = () => (
+export const hugeLayoutFour = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
@@ -265,13 +265,13 @@ export const layoutFour = () => (
   </SprkCheckboxGroup>
 );
 
-layoutFour.story = {
+hugeLayoutFour.story = {
   name: 'Huge Layout - Four',
   parameters: {
     jest: ['SprkCheckboxGroup'],
   },
 };
-export const layoutFive = () => (
+export const hugeLayoutFive = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
@@ -317,14 +317,14 @@ export const layoutFive = () => (
   </SprkCheckboxGroup>
 );
 
-layoutFive.story = {
+hugeLayoutFive.story = {
   name: 'Huge Layout - Five',
   parameters: {
     jest: ['SprkCheckboxGroup'],
   },
 };
 
-export const layoutSix = () => (
+export const hugeLayoutSix = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
@@ -364,7 +364,7 @@ export const layoutSix = () => (
   </SprkCheckboxGroup>
 );
 
-layoutSix.story = {
+hugeLayoutSix.story = {
   name: 'Huge Layout - Six',
   parameters: {
     jest: ['SprkCheckboxGroup'],
