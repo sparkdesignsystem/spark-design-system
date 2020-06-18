@@ -212,7 +212,7 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should calculate position for top left quadrant', () => {
-    window.resizeTo = function resizeTo(width, height) {
+    window.resizeTo = (width, height) => {
       Object.assign(this, {
         innerWidth: width,
         innerHeight: height,
