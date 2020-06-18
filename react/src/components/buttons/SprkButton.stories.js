@@ -40,11 +40,7 @@ receive interaction.
 };
 
 export const primary = () => (
-  <SprkButton
-    element="button"
-    idString="button-1"
-    analyticsString="button-1-analytics"
-  >
+  <SprkButton idString="button-1" analyticsString="button-1-analytics">
     Button
   </SprkButton>
 );
@@ -52,7 +48,6 @@ export const primary = () => (
 export const secondary = () => (
   <SprkButton
     variant="secondary"
-    element="button"
     idString="button-2"
     analyticsString="button-2-analytics"
   >
@@ -63,7 +58,6 @@ export const secondary = () => (
 export const tertiary = () => (
   <SprkButton
     variant="tertiary"
-    element="button"
     idString="button-3"
     analyticsString="button-3-analytics"
   >
@@ -72,12 +66,7 @@ export const tertiary = () => (
 );
 
 export const disabled = () => (
-  <SprkButton
-    disabled
-    element="button"
-    idString="button-4"
-    analyticsString="button-4-analytics"
-  >
+  <SprkButton disabled idString="button-4" analyticsString="button-4-analytics">
     Button
   </SprkButton>
 );
@@ -86,7 +75,6 @@ export const disabledSecondary = () => (
   <SprkButton
     disabled
     variant="secondary"
-    element="button"
     idString="button-5"
     analyticsString="button-5-analytics"
   >
@@ -98,7 +86,6 @@ export const disabledTertiary = () => (
   <SprkButton
     disabled
     variant="tertiary"
-    element="button"
     idString="button-6"
     analyticsString="button-6-analytics"
   >
@@ -107,12 +94,7 @@ export const disabledTertiary = () => (
 );
 
 export const loading = () => (
-  <SprkButton
-    loading
-    element="button"
-    idString="button-7"
-    analyticsString="button-7-analytics"
-  >
+  <SprkButton loading idString="button-7" analyticsString="button-7-analytics">
     Button
   </SprkButton>
 );
@@ -121,7 +103,6 @@ export const loadingSecondary = () => (
   <SprkButton
     loading
     variant="secondary"
-    element="button"
     idString="button-8"
     analyticsString="button-8-analytics"
   >
@@ -133,7 +114,6 @@ export const loadingTertiary = () => (
   <SprkButton
     loading
     variant="tertiary"
-    element="button"
     idString="button-9"
     analyticsString="button-9-analytics"
   >
@@ -143,7 +123,6 @@ export const loadingTertiary = () => (
 
 export const fullWidthAtSmallViewport = () => (
   <SprkButton
-    element="button"
     idString="button-10"
     analyticsString="button-10-analytics"
     additionalClasses="sprk-c-Button--full@s"
@@ -154,7 +133,6 @@ export const fullWidthAtSmallViewport = () => (
 
 export const fullWidthAtExtraSmallViewport = () => (
   <SprkButton
-    element="button"
     idString="button-11"
     analyticsString="button-11-analytics"
     additionalClasses="sprk-c-Button--full@xs"
