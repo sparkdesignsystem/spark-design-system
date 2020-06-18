@@ -1978,13 +1978,8 @@ $sprk-tab-navigation-breakpoint: 46rem !default;
 $sprk-tab-navigation-btn-color: $sprk-black !default;
 /// The tab button background color in Tabbed Navigation.
 $sprk-tab-navigation-btn-bg-color: $sprk-gray !default;
-/// The border on the top of the button tabs in Tabbed Navigation.
-$sprk-tab-navigation-btn-border-top: none !default;
 /// The border on the bottom of the button tabs in Tabbed Navigation.
 $sprk-tab-navigation-btn-border-bottom: 3px solid $sprk-gray !default;
-/// The border on the top of the
-/// button tabs on hover in Tabbed Navigation.
-$sprk-tab-navigation-btn-hover-border-top: none !default;
 /// The border on the bottom of the
 /// button tabs on hover in Tabbed Navigation.
 $sprk-tab-navigation-btn-hover-border-bottom: 3px solid $sprk-purple !default;
@@ -1994,9 +1989,6 @@ $sprk-tab-navigation-btn-active-color: $sprk-red !default;
 /// The button tab text color of the
 /// button tabs on hover in Tabbed Navigation.
 $sprk-tab-navigation-btn-hover-color: $sprk-purple !default;
-/// The button tab top border of the
-/// currently active tab in Tabbed Navigation.
-$sprk-tab-navigation-btn-active-border-top: none !default;
 /// The button tab bottom border of the
 /// currently active tab in Tabbed Navigation.
 $sprk-tab-navigation-btn-active-border-bottom: 3px solid $sprk-red !default;
