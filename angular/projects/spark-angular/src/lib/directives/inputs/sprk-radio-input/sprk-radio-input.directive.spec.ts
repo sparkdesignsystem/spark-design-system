@@ -12,7 +12,16 @@ import { SprkRadioInputDirective } from './sprk-radio-input.directive';
       placeholder="Enter some text."
       sprkRadioInput
     />
-  `
+
+    <input
+      value="test"
+      type="radio"
+      id="test"
+      placeholder="Enter some text."
+      sprkRadioInput
+      variant="huge"
+    />
+  `,
 })
 class TestComponent {}
 
@@ -20,10 +29,11 @@ describe('SprkRadioInputDirective', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let inputElement: DebugElement;
+  let itemElement: HTMLElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkRadioInputDirective, TestComponent]
+      declarations: [SprkRadioInputDirective, TestComponent],
     });
   });
 
@@ -31,20 +41,19 @@ describe('SprkRadioInputDirective', () => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     inputElement = fixture.debugElement.query(By.css('input'));
+    itemElement = fixture.nativeElement.querySelectorAll('input')[1];
     fixture.detectChanges();
   });
 
   it('should add the correct classes to the applied element', () => {
     expect(inputElement.nativeElement.classList.toString()).toEqual(
-      'ssprk-b-SelectionInput sprk-b-Radio__input'
+      'sprk-b-SelectionInput sprk-b-Radio__input',
     );
   });
 
   it('should add the correct classes to the applied element when variant is huge', () => {
-    component.variant = 'huge';
-    fixture.detectChanges();
-    expect(inputElement.nativeElement.classList.toString()).toEqual(
-      'ssprk-b-SelectionInput sprk-b-Radio__input'
+    expect(itemElement.classList.contains('sprk-b-Radio__input--huge')).toBe(
+      true,
     );
   });
 });
