@@ -14,6 +14,24 @@ describe('SprkCheckbox:', () => {
     );
   });
 
+  it('should apply additional checkbox classes', () => {
+    const expected = 'test-class';
+    const wrapper = shallow(
+      <SprkCheckbox checkboxAdditionalClasses={expected} />,
+    );
+    expect(wrapper.find('.sprk-b-Checkbox__input').hasClass(expected)).toBe(
+      true,
+    );
+  });
+
+  it('should apply additional label classes', () => {
+    const expected = 'test-class';
+    const wrapper = shallow(<SprkCheckbox labelAdditionalClasses={expected} />);
+    expect(wrapper.find('.sprk-b-Checkbox__label').hasClass(expected)).toBe(
+      true,
+    );
+  });
+
   it('should apply huge container class', () => {
     const wrapper = shallow(<SprkCheckbox variant="huge" />);
     expect(

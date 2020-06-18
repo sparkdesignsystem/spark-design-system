@@ -10,8 +10,8 @@ const SprkCheckbox = (props) => {
     idString,
     additionalClasses,
     analyticsString,
-    additionalCheckboxClasses,
-    additionalLabelClasses,
+    checkboxAdditionalClasses,
+    labelAdditionalClasses,
     name,
     value,
     disabled,
@@ -32,13 +32,12 @@ const SprkCheckbox = (props) => {
       )}
       data-analytics={analyticsString}
       data-id={idString}
-      data-sprk-input="checkbox"
     >
       <input
         aria-describedby={ariaDescribedBy}
         className={classnames(
           'sprk-b-Checkbox__input',
-          additionalCheckboxClasses,
+          checkboxAdditionalClasses,
         )}
         data-id={idString}
         disabled={disabled}
@@ -52,7 +51,7 @@ const SprkCheckbox = (props) => {
       <label
         className={classnames(
           'sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label',
-          additionalLabelClasses,
+          labelAdditionalClasses,
           {
             'sprk-b-Label--disabled': disabled,
           },
@@ -101,12 +100,12 @@ SprkCheckbox.propTypes = {
    * A space-separated string of classes
    * to add to the checkbox label of the component.
    */
-  additionalLabelClasses: PropTypes.string,
+  labelAdditionalClasses: PropTypes.string,
   /**
    * A space-separated string of classes
    * to add to the checkbox input of the component.
    */
-  additionalCheckboxClasses: PropTypes.string,
+  checkboxAdditionalClasses: PropTypes.string,
   /**
    * 	Text that appears below the input,
    * intended to provide more information to a user.
