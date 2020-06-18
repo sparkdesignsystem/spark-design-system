@@ -39,22 +39,22 @@ $sprk-light-purple: rgb(146, 101, 211);
 $sprk-lightest-purple: rgb(231, 226, 242);
 
 // Semantic
-/// Color value for indicating a success.
+/// Color value for green. Intended to indicate a success.
 /// @group semantic
 /// @type #298540
-$sprk-success: rgb(41, 133, 64);
-/// Color value for indicating information.
+$sprk-green: rgb(41, 133, 64);
+/// Color value for blue. Intended to indicate information.
 /// @group semantic
 /// @type #1C6EF2
-$sprk-information: rgb(28, 110, 242);
-/// Color value for indicating an error.
+$sprk-blue: rgb(28, 110, 242);
+/// Color value for pink. Intended to indicate an error.
 /// @group semantic
 /// @type #E50158
-$sprk-error: rgb(229, 1, 88);
-/// Color value for indicating a warning.
+$sprk-pink: rgb(229, 1, 88);
+/// Color value for yellow. Intended to indicate a warning.
 /// @group semantic
 /// @type #EDA302
-$sprk-warning: rgb(237, 163, 2);
+$sprk-yellow: rgb(237, 163, 2);
 
 // Neutrals
 /// Color value for white.
@@ -102,7 +102,7 @@ $sprk-black-tint-20: rgb(210, 209, 209);
 /// @type #E8E8E8
 $sprk-black-tint-10: rgb(232, 232, 232);
 /// Color value for gray.
-/// @group gray
+/// @group neutral
 /// @type #F7F7F7
 $sprk-gray: rgb(247, 247, 247);
 
@@ -110,22 +110,11 @@ $sprk-gray: rgb(247, 247, 247);
 /// @group gray
 /// @type #CFCFCF
 $sprk-gray-dark: rgb(207, 207, 207);
-/// Color value for green.
-/// @group green
-/// @type #008473
-$sprk-green: rgb(0, 132, 115);
+
 /// Color value for dark green.
 /// @group green
 /// @type #007667
 $sprk-green-dark: rgb(0, 118, 103);
-/// Color value for yellow.
-/// @group yellow
-/// @type #F5BE40
-$sprk-yellow: rgb(245, 190, 64);
-/// Color value for blue.
-/// @group blue
-/// @type #007DBA
-$sprk-blue: rgb(0, 125, 186);
 
 // Black Tints
 /// Color value for black at 75%.
