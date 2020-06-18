@@ -26,6 +26,7 @@ const SprkPromo = (props) => {
     mediaRev,
     hasBorder,
     children,
+    buttonVariant,
     ...other
   } = props;
 
@@ -117,6 +118,7 @@ const SprkPromo = (props) => {
         {cta === 'button' && (
           <div className="sprk-o-Stack__item">
             <SprkButton
+              variant={buttonVariant}
               element="a"
               href={ctaHref}
               analyticsString={ctaAnalytics}
@@ -204,6 +206,11 @@ SprkPromo.propTypes = {
    * content container of the component.
    */
   additionalClassesContent: PropTypes.string,
+  /**
+   * If the `cta` is set to `button` then
+   * this is the variant for the button.
+   */
+  buttonVariant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   /**
    * The type of element to use
    * for the Promo Call to Action. If this property
