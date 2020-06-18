@@ -18,12 +18,7 @@ Images that are links should not use Spark classes.
 };
 
 export const defaultStory = () => (
-  <SprkLink
-    element="a"
-    href="#nogo"
-    idString="link-1"
-    analyticsString="link-default"
-  >
+  <SprkLink href="#nogo" idString="link-1" analyticsString="link-default">
     Default Link
   </SprkLink>
 );
@@ -34,7 +29,6 @@ defaultStory.story = {
 
 export const simple = () => (
   <SprkLink
-    element="a"
     variant="simple"
     analyticsString="link-simple"
     idString="link-2"
@@ -47,7 +41,6 @@ export const simple = () => (
 export const iconWithTextLink = () => (
   <>
     <SprkLink
-      element="a"
       analyticsString="link-icon"
       href="#nogo"
       variant="has-icon"
@@ -63,7 +56,6 @@ export const iconWithTextLink = () => (
       Back
     </SprkLink>
     <SprkLink
-      element="a"
       analyticsString="link-icon"
       href="#nogo"
       variant="has-icon"
@@ -87,7 +79,6 @@ iconWithTextLink.story = {
 
 export const disabled = () => (
   <SprkLink
-    element="a"
     analyticsString="link-disabled"
     variant="disabled"
     idString="link-5"
@@ -99,7 +90,6 @@ export const disabled = () => (
 
 export const disabledSimple = () => (
   <SprkLink
-    element="a"
     analyticsString="link-disabled"
     variant="disabled"
     idString="link-6"
@@ -117,7 +107,6 @@ disabledSimple.story = {
 export const disabledIconWithTextLink = () => (
   <>
     <SprkLink
-      element="a"
       analyticsString="link-icon"
       href="#nogo"
       variant="disabled"
@@ -134,7 +123,6 @@ export const disabledIconWithTextLink = () => (
       Back
     </SprkLink>
     <SprkLink
-      element="a"
       analyticsString="link-icon"
       href="#nogo"
       variant="disabled"
