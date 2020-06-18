@@ -61,7 +61,7 @@ defaultStory.story = {
   },
 };
 
-export const helperText = () => (
+export const defaultHelperText = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
@@ -73,7 +73,7 @@ export const helperText = () => (
   </SprkCheckboxGroup>
 );
 
-helperText.story = {
+defaultHelperText.story = {
   name: 'Default Helper Text',
   parameters: {
     jest: ['SprkCheckboxGroup'],
