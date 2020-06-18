@@ -41,11 +41,11 @@
   &:active,
   &:focus {
     color: $sprk-link-simple-hover-color;
+    font-weight: $sprk-link-simple-hover-font-weight;
     border-bottom: $sprk-link-simple-underline-color;
 
     &::after {
       content: '';
-      transition: $sprk-link-transition;
       position: absolute;
       display: block;
       left: $sprk-link-simple-hover-after-left;
