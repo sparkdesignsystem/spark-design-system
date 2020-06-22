@@ -17,7 +17,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
     <div [ngClass]="getClasses()">
       <ng-content select="[beforeSprkRadios]"></ng-content>
       <fieldset *ngIf="label; else sprkRadios" class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend" sprkLabel>
+        <legend class="sprk-b-Legend">
           <ng-content select="[sprkLabel]"></ng-content>
         </legend>
         <ng-container *ngTemplateOutlet="sprkRadios"></ng-container>
@@ -105,7 +105,7 @@ export class SprkRadioGroupComponent implements AfterContentInit {
       this.radios.forEach((radio) => {
         radio.input.ref.nativeElement.setAttribute(
           'aria-describedby',
-          this.error_id
+          this.error_id,
         );
       });
       this.error.ref.nativeElement.id = this.error_id;
