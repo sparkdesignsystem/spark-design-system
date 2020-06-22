@@ -14,6 +14,7 @@
   padding: $sprk-tooltip-trigger-padding;
   text-align: $sprk-tooltip-trigger-text-align;
   display: flex;
+  transition: all 1s;
 
   /* Increase hoverable area of trigger */
   &:hover:after {
@@ -46,7 +47,8 @@
   left: -1rem;
   z-index: $sprk-tooltip-z-index;
 
-  display: none;
+  transition: all 1s;
+  // display: none;
 
   &::selection {
     color: $sprk-white;
@@ -106,7 +108,7 @@
   }
 
   &.sprk-c-Tooltip--bottom-right {
-    top: 2rem;
+    top: 3rem;
     right: auto;
     bottom: auto;
     left: -1rem;
@@ -131,4 +133,33 @@
 .sprk-c-Tooltip__trigger.sprk-c-Tooltip--toggled + .sprk-c-Tooltip,
 .sprk-c-Tooltip:hover {
   display: inline-block;
+  transition: all 1s;
+
+  &.sprk-c-Tooltip--top-left {
+    top: auto;
+    right: -1rem;
+    bottom: 2rem;
+    left: auto;
+  }
+
+  &.sprk-c-Tooltip--top-right {
+    top: auto;
+    right: auto;
+    bottom: 2rem;
+    left: -1rem;
+  }
+
+  &.sprk-c-Tooltip--bottom-left {
+    top: 2rem;
+    right: -1rem;
+    bottom: auto;
+    left: auto;
+  }
+
+  &.sprk-c-Tooltip--bottom-right {
+    top: 2rem;
+    right: auto;
+    bottom: auto;
+    left: -1rem;
+  }
 }
