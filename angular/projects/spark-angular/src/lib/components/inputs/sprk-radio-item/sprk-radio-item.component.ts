@@ -1,4 +1,10 @@
-import { Component, Input, Renderer2, ContentChild, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  Renderer2,
+  ContentChild,
+  OnInit,
+} from '@angular/core';
 import uniqueId from 'lodash/uniqueId';
 import { SprkRadioInputDirective } from '../../../directives/inputs/sprk-radio-input/sprk-radio-input.directive';
 import { SprkRadioLabelDirective } from '../../../directives/inputs/sprk-radio-label/sprk-radio-label.directive';
@@ -12,7 +18,8 @@ import { SprkRadioLabelDirective } from '../../../directives/inputs/sprk-radio-l
   `,
 })
 export class SprkRadioItemComponent implements OnInit {
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2) {}
+
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -27,18 +34,21 @@ export class SprkRadioItemComponent implements OnInit {
    */
   @ContentChild(SprkRadioLabelDirective, { static: true })
   label: SprkRadioLabelDirective;
+
   /**
-   * This component expects a child selection input
+   * This component expects a child radio input
    * with the `sprkRadioInput` directive.
    */
   @ContentChild(SprkRadioInputDirective, { static: true })
   input: SprkRadioInputDirective;
 
   /**
-   *
+   * This will be used to determine the variant of
+   * the radio item.
    */
   @Input()
-  variant: string;
+  variant: 'huge' | undefined;
+
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -78,14 +88,16 @@ export class SprkRadioItemComponent implements OnInit {
 
     // Warn if 'for' exists but the 'id' does not
     if (labelFor && !inputId) {
-      console.warn(`Spark Design System Warning - The value of 'for' (${labelFor}) on the label expects a matching 'id' on the input.`);
+      console.warn(
+        `Spark Design System Warning - The value of 'for' (${labelFor}) on the label expects a matching 'id' on the input.`,
+      );
       return;
     }
 
     // Warn if 'for' and 'id' both exist but don't match
     if (inputId && labelFor && inputId !== labelFor) {
       console.warn(
-        `Spark Design System Warning - The value of 'for' (${labelFor}) on the label should match the 'id' on the input (${inputId}).`
+        `Spark Design System Warning - The value of 'for' (${labelFor}) on the label should match the 'id' on the input (${inputId}).`,
       );
       return;
     }

@@ -1,12 +1,17 @@
 import { Directive, Input, HostBinding, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[sprkRadioInput]'
+  selector: '[sprkRadioInput]',
 })
 export class SprkRadioInputDirective {
-  constructor(public ref: ElementRef) { }
+  constructor(public ref: ElementRef) {}
 
-  @Input() variant: string;
+  /**
+   * This will be used to determine the variant of
+   * the radio input.
+   */
+  @Input()
+  variant: 'huge' | undefined;
   @HostBinding('class.sprk-b-SelectionInput') selectClass = true;
   @HostBinding('class.sprk-b-Radio__input') radioClass = true;
   @HostBinding('class.sprk-b-Radio__input--huge')

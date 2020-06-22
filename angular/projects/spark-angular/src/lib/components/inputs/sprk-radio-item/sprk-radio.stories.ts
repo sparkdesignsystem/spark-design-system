@@ -448,7 +448,14 @@ export const huge = () => ({
 
 huge.story = {
   parameters: {
-    jest: ['sprk-radio-item.component', 'sprk-label.directive'],
+    docs: { iframeHeight: 300 },
+    jest: [
+      'sprk-radio-item.component',
+      'sprk-radio-label.directive',
+      'sprk-radio-group.component',
+      'sprk-radio-input.directive',
+      'sprk-field-error.directive',
+    ],
   },
 };
 
@@ -530,6 +537,7 @@ export const hugeInvalid = () => ({
 
 hugeInvalid.story = {
   parameters: {
+    docs: { iframeHeight: 300 },
     jest: [
       'sprk-radio-item.component',
       'sprk-radio-label.directive',
@@ -614,6 +622,7 @@ export const hugeDisabled = () => ({
 
 hugeDisabled.story = {
   parameters: {
+    docs: { iframeHeight: 300 },
     jest: [
       'sprk-radio-item.component',
       'sprk-radio-label.directive',
@@ -680,6 +689,7 @@ export const hugeLayoutTwo = () => ({
 hugeLayoutTwo.story = {
   name: 'Huge Layout - Two',
   parameters: {
+    docs: { iframeHeight: 600 },
     jest: [
       'sprk-radio-item.component',
       'sprk-radio-label.directive',
@@ -796,6 +806,7 @@ export const hugeLayoutFour = () => ({
 hugeLayoutFour.story = {
   name: 'Huge Layout - Four',
   parameters: {
+    docs: { iframeHeight: 600 },
     jest: [
       'sprk-radio-item.component',
       'sprk-radio-label.directive',
@@ -809,7 +820,7 @@ hugeLayoutFour.story = {
 export const hugeLayoutFive = () => ({
   moduleMetadata: modules,
   template: `
-<sprk-radio-group variant="huge">
+  <sprk-radio-group variant="huge">
     <label sprkLabel>Radio Group Label</label>
     <sprk-stack itemSpacing="medium">
       <div sprkStackItem class="sprk-o-Stack__item--flex@s">
@@ -937,6 +948,7 @@ export const hugeLayoutFive = () => ({
 hugeLayoutFive.story = {
   name: 'Huge Layout - Five',
   parameters: {
+    docs: { iframeHeight: 600 },
     jest: [
       'sprk-radio-item.component',
       'sprk-radio-label.directive',
@@ -950,7 +962,7 @@ hugeLayoutFive.story = {
 export const hugeLayoutSix = () => ({
   moduleMetadata: modules,
   template: `
- <sprk-radio-group variant="huge">
+   <sprk-radio-group variant="huge">
     <label sprkLabel>Radio Group Label</label>
     <sprk-stack itemSpacing="medium">
       <div sprkStackItem class="sprk-o-Stack__item--flex@s">
@@ -1099,6 +1111,7 @@ export const hugeLayoutSix = () => ({
 hugeLayoutSix.story = {
   name: 'Huge Layout - Six',
   parameters: {
+    docs: { iframeHeight: 600 },
     jest: [
       'sprk-radio-item.component',
       'sprk-radio-label.directive',

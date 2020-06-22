@@ -43,10 +43,11 @@ export class SprkRadioGroupComponent implements AfterContentInit {
   additionalClasses: string;
 
   /**
-   *
+   * This will be used to determine the variant of
+   * the radio group.
    */
   @Input()
-  variant: string;
+  variant: 'huge' | undefined;
 
   /**
    * This component can have an optional child element
@@ -97,6 +98,7 @@ export class SprkRadioGroupComponent implements AfterContentInit {
 
     return classArray.join(' ');
   }
+
   /**
    * @ignore
    */
