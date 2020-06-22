@@ -17,7 +17,7 @@ export default {
   parameters: {
     subcomponents: {
       SprkCheckbox,
-      SprkErrorContainer,
+      SprkCheckboxGroup,
       SprkFieldset,
       SprkLegend,
       SprkHelperText,
