@@ -20,6 +20,7 @@ import { SprkRadioInputDirective } from './sprk-radio-input.directive';
       placeholder="Enter some text."
       sprkRadioInput
       variant="huge"
+      idString="test-id-str"
     />
   `,
 })
@@ -55,5 +56,9 @@ describe('SprkRadioInputDirective', () => {
     expect(itemElement.classList.contains('sprk-b-Radio__input--huge')).toBe(
       true,
     );
+  });
+
+  it('should add the value of idString to data-id on the element', () => {
+    expect(itemElement.getAttribute('data-id')).toBe('test-id-str');
   });
 });

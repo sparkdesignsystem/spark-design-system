@@ -5,7 +5,7 @@ import { SprkRadioLabelDirective } from './sprk-radio-label.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <label sprkRadioLabel>Label</label>
+    <label sprkRadioLabel idString="test-id-str">Label</label>
     <label sprkRadioLabel variant="huge">Label</label>
     <label sprkRadioLabel isDisabled="true">Label</label>
   `,
@@ -46,5 +46,9 @@ describe('Spark Helper Text Directive', () => {
     expect(disabledElement.classList.contains('sprk-b-Label--disabled')).toBe(
       true,
     );
+  });
+
+  it('should add the value of idString to data-id on the element', () => {
+    expect(labelElement.getAttribute('data-id')).toBe('test-id-str');
   });
 });
