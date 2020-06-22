@@ -882,7 +882,7 @@ $sprk-input-huge-label-active-top: $sprk-text-input-huge-label-active-top !defau
 $sprk-text-input-huge-active-padding-top: $sprk-input-huge-height / 4 !default; // Todo deprecate
 /// The padding top value of active Huge Inputs.
 $sprk-input-huge-active-padding-top: $sprk-text-input-huge-active-padding-top !default;
-$sprk-text-input-huge-focus-label-color: $sprk-green !default; // Todo deprecate
+$sprk-text-input-huge-focus-label-color: $sprk-purple !default; // Todo deprecate
 /// The label color value of Huge Inputs on focus.
 $sprk-input-huge-focus-label-color: $sprk-text-input-huge-focus-label-color !default;
 $sprk-text-input-huge-error-focus-label-color: $sprk-black !default; // Todo deprecate
@@ -936,9 +936,9 @@ $sprk-text-input-box-shadow: none !default;
 /// The padding for Inputs.
 $sprk-text-input-padding: 0 $sprk-space-m !default;
 /// The border color on Inputs when focused.
-$sprk-text-input-focus-border-color: $sprk-green !default;
+$sprk-text-input-focus-border-color: $sprk-purple !default;
 /// The border color on Inputs when there is an error.
-$sprk-text-input-error-border-color: $sprk-yellow !default;
+$sprk-text-input-error-border-color: $sprk-pink !default;
 /// The border color on disabled Inputs.
 $sprk-text-input-disabled-border-color: $sprk-black-tint-50 !default;
 /// The background color on disabled Inputs.
@@ -1050,7 +1050,7 @@ $sprk-checkbox-checkmark-border-bottom: 2px solid $sprk-white !default;
 // The rotation setting to create the checkmark.
 $sprk-checkbox-checkmark-transform: rotate(-45deg) !default;
 // The border of the custom checkbox input when focused.
-$sprk-checkbox-custom-input-border-focus: 2px solid $sprk-green !default;
+$sprk-checkbox-custom-input-border-focus: 2px solid $sprk-purple !default;
 // The background color of the custom checkbox input when focused.
 $sprk-checkbox-custom-input-background-color-focus: $sprk-gray !default;
 // The border of the custom checkbox input when it is checked and focused.
@@ -1060,9 +1060,9 @@ $sprk-checkbox-custom-input-background-color-hover: $sprk-gray !default;
 // The border color of the custom checkbox input when hovered.
 $sprk-checkbox-custom-input-border-color-hover: $sprk-black-tint-75 !default;
 // The background color of the custom checkbox input when checked.
-$sprk-checkbox-custom-input-background-color-checked: $sprk-green !default;
+$sprk-checkbox-custom-input-background-color-checked: $sprk-purple !default;
 // The border color of the custom checkbox input when checked.
-$sprk-checkbox-custom-input-border-color-checked: $sprk-green !default;
+$sprk-checkbox-custom-input-border-color-checked: $sprk-purple !default;
 // The border color of the custom checkbox input when disabled.
 $sprk-checkbox-custom-input-border-color-disabled: $sprk-black-tint-50 !default;
 // The cursor for the custom checkbox input when disabled.
@@ -1098,11 +1098,11 @@ $sprk-checkbox-huge-container-disabled-border-color: $sprk-text-input-disabled-b
 /// The background of the huge checkbox input when disabled.
 $sprk-checkbox-huge-container-disabled-background: $sprk-text-input-disabled-background-color !default;
 /// The border color of the huge checkbox input when focused.
-$sprk-checkbox-huge-container-focus-border-color: $sprk-green !default;
+$sprk-checkbox-huge-container-focus-border-color: $sprk-purple !default;
 /// The border color of the huge checkbox input when focused and hovered.
 $sprk-checkbox-huge-container-focus-hover-border-color: $sprk-black !default;
 /// The border color of the huge checkbox input when checked.
-$sprk-checkbox-huge-container-checked-border-color: $sprk-green !default;
+$sprk-checkbox-huge-container-checked-border-color: $sprk-purple !default;
 /// The border color of the huge checkbox input when checked and hovered.
 $sprk-checkbox-huge-container-checked-hover-border-color: $sprk-black !default;
 /// The border color of the huge checkbox input when checked and focused.
@@ -1120,7 +1120,7 @@ $sprk-checkbox-huge-custom-input-hover-border-color: $sprk-black !default;
 /// The border color of the custom checkbox element of the huge checkbox input when disabled.
 $sprk-checkbox-huge-custom-input-disabled-border-color: $sprk-black-tint-50 !default;
 /// The border color of the custom checkbox element of the huge checkbox input when checked.
-$sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color: $sprk-green !default;
+$sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color: $sprk-purple !default;
 
 /// The height of the checkmark inside of the huge checkbox input.
 $sprk-checkbox-huge-checkmark-icon-height: 0.5rem !default;
@@ -1136,7 +1136,7 @@ $sprk-checkbox-huge-checkmark-icon-top: 22px !default;
 ///
 
 /// Color setting for Inputs with errors.
-$sprk-text-input-error-color: $sprk-yellow !default;
+$sprk-text-input-error-color: $sprk-pink !default;
 /// Value for color on Inputs with errors.
 $sprk-input-error-text-color: $sprk-black !default;
 /// The font family used for Input error text.
@@ -1220,7 +1220,7 @@ $sprk-date-picker-font-size: 1rem !default;
 /// The font weight of the Date Picker popup.
 $sprk-date-picker-font-weight: 300 !default;
 /// Color used internally by Date Picker to highlight elements
-$sprk-date-picker-day-interact-color: $sprk-green !default;
+$sprk-date-picker-day-interact-color: $sprk-purple !default;
 /// Font weight used by the currently selected day in the Date Picker popup.
 $sprk-date-picker-selected-day-font-weight: 500 !default;
 /// The value for background in the Date Picker.
@@ -1335,16 +1335,16 @@ $sprk-radio-input-transition: all 0.2s ease-in-out !default;
 /// The border of the outer circle in the radio input on hover.
 $sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-75 !default;
 /// The border of the outer circle in the radio input on focus.
-$sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-green !default;
+$sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-purple !default;
 /// The border of the outer circle in the disabled radio input on focus.
 $sprk-radio-input-outer-circle-focus-border-disabled: 2px solid
   $sprk-black-tint-50 !default;
 /// The border radius of the circle in the radio input.
 $sprk-radio-input-border-radius: 50% !default;
 /// The background color of the inner circle in the radio input.
-$sprk-radio-input-inner-circle-background-color: $sprk-green !default;
+$sprk-radio-input-inner-circle-background-color: $sprk-purple !default;
 /// The border of the outer circle in the radio input when checked.
-$sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-green !default;
+$sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-purple !default;
 /// The border of the outer circle in the radio input.
 $sprk-radio-input-outer-circle-border: 2px solid $sprk-black-tint-50 !default;
 /// The border of the outer circle in the disabled radio input on hover.
@@ -1400,15 +1400,15 @@ $sprk-radio-input-huge-outer-circle-top: 1rem !default;
 /// The left value of the outer circle of the huge radio input.
 $sprk-radio-input-huge-outer-circle-left: 1rem !default;
 /// The border color of the huge radio input label when it has focus.
-$sprk-radio-input-huge-focused-label-border: $sprk-green !default;
+$sprk-radio-input-huge-focused-label-border: $sprk-purple !default;
 /// The background color of the outer circle of the huge radio input when it has focus.
 $sprk-radio-input-huge-focused-outer-circle-border-background-color: $sprk-gray !default;
 /// The border color of the huge radio input label when it is selected.
-$sprk-radio-input-huge-checked-label-border: $sprk-green !default;
+$sprk-radio-input-huge-checked-label-border: $sprk-purple !default;
 /// The border color of the huge radio input label when it is selected and hovered.
 $sprk-radio-input-huge-checked-hover-label-border-color: $sprk-black !default;
 /// The border color of the outer circle of the huge when it is selected and hovered.
-$sprk-radio-input-huge-checked-hover-outer-circle-border-color: $sprk-green !default;
+$sprk-radio-input-huge-checked-hover-outer-circle-border-color: $sprk-purple !default;
 /// The height of the inner circle of the huge radio input.
 $sprk-radio-input-huge-inner-circle-height: 1rem !default;
 /// The width of the inner circle of the huge radio input.
