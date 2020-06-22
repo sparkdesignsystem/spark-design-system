@@ -70,68 +70,108 @@ describe('SprkTooltip:', () => {
     const tooltipId = wrapper.find('.sprk-c-Tooltip').getDOMNode().id;
 
     expect(triggerLabel).toEqual(tooltipId);
-  })
+  });
 
-  // it('should toggle on Enter', () => {
-  //   const wrapper = mount(<SprkTooltip />);
-  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
-  //   wrapper.find('.sprk-c-Tooltip__trigger').simulate('keydown', { keyCode: 13 });
-  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
-  // });
-
-  // it('should toggle on Space', () => {
-  //   const wrapper = mount(<SprkTooltip />);
-  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
-  //   wrapper.find('.sprk-c-Tooltip__trigger').simulate('keydown', { key: 'Enter' });
-  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
-  // });
-
-  // it('should close on Escape', () => {
-
-  //   const map = {};
-  //   window.addEventListener = jest.fn((event, cb) => {
-  //     map[event] = cb;
-  //   });
-
-  //   const wrapper = mount(<SprkTooltip isDefaultOpen={true} />);
-  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
-
-
-  //   expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
-  // });
+  it('should close on Escape', () => {
+    const wrapper = mount(<SprkTooltip isDefaultOpen={true} />);
+    expect(wrapper.state().isToggled).toBe(true);
+    wrapper.instance().handleWindowKeydown({ key: 'Delete' });
+    expect(wrapper.state().isToggled).toBe(true);
+    wrapper.instance().handleWindowKeydown({ key: 'Escape' });
+    expect(wrapper.state().isToggled).toBe(false);
+  });
 
   it('should close on document click', () => {
-    // const map = {};
-    // window.addEventListener = jest.fn((event, cb) => {
-    //   map[event] = cb;
-    // });
+    const wrapper = mount(<SprkTooltip isDefaultOpen={true} />);
+    expect(wrapper.state().isToggled).toBe(true);
+    wrapper.instance().handleWindowClick({});
+    expect(wrapper.state().isToggled).toBe(false);
+  });
 
-    // const wrapper = mount(<SprkTooltip isDefaultOpen={true} />);
-    // expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(1);
-    // map.click({target: window});
-    // expect(wrapper.find('.sprk-c-Tooltip--toggled').length).toBe(0);
+  it('should not close on document click if it is not toggled', () => {
+    const wrapper = mount(<SprkTooltip isDefaultOpen={false} />);
+    expect(wrapper.state().isToggled).toBe(false);
+    wrapper.instance().handleWindowClick({});
+    expect(wrapper.state().isToggled).toBe(false);
+  });
+
+  it('should not close when clicking the tooltip', () => {
+    const wrapper = mount(<SprkTooltip isDefaultOpen={true} />);
+    expect(wrapper.state().isToggled).toBe(true);
+    wrapper.instance().handleWindowClick({ target: wrapper.find('button').instance() });
+    expect(wrapper.state().isToggled).toBe(true);
+  });
+
+  it('should render correctly in the bottom right quadrant', () => {
+    window.innerWidth = 100;
+    window.innerHeight = 100;
+
+    const wrapper = mount(<SprkTooltip />);
+    const trigger = wrapper.find('button');
+
+    trigger.instance().getBoundingClientRect = jest.fn(() => ({
+      top: 75, left: 75
+    }));
+
+    wrapper.instance().setPositioningClass();
+
+    expect(wrapper.state().position).toBe('topleft');
+  });
+
+  it('should render correctly in the bottom left quadrant', () => {
+    window.innerWidth = 100;
+    window.innerHeight = 100;
+
+    const wrapper = mount(<SprkTooltip />);
+    const trigger = wrapper.find('button');
+
+    trigger.instance().getBoundingClientRect = jest.fn(() => ({
+      top: 75, left: 25
+    }));
+
+    wrapper.instance().setPositioningClass();
+
+    expect(wrapper.state().position).toBe('topright');
+  });
+
+  it('should render correctly in the top right quadrant', () => {
+    window.innerWidth = 100;
+    window.innerHeight = 100;
+
+    const wrapper = mount(<SprkTooltip />);
+    const trigger = wrapper.find('button');
+
+    trigger.instance().getBoundingClientRect = jest.fn(() => ({
+      top: 25, left: 75
+    }));
+
+    wrapper.instance().setPositioningClass();
+
+    expect(wrapper.state().position).toBe('bottomleft');
   });
 
   it('should render correctly in the top left quadrant', () => {
+    window.innerWidth = 100;
+    window.innerHeight = 100;
 
-  })
+    const wrapper = mount(<SprkTooltip />);
+    const trigger = wrapper.find('button');
 
-  it('should render correctly in the top right quadrant', () => {
+    trigger.instance().getBoundingClientRect = jest.fn(() => ({
+      top: 25, left: 25
+    }));
 
-  })
+    wrapper.instance().setPositioningClass();
 
-  it('should render correctly in the bottom left quadrant', () => {
+    expect(wrapper.state().position).toBe('bottomright');
+  });
 
-  })
+  it('should unmount without error', () => {
+    const wrapper = mount(<SprkTooltip />);
+    expect(wrapper.find('.sprk-c-Tooltip').length).toBe(1);
+    wrapper.unmount();
+    expect(wrapper.find('.sprk-c-Tooltip').length).toBe(0);
+  });
 
-  it('should render correctly in the bottom right quadrant', () => {
-
-  })
-
-  // it('should unmount without error', () => {
-  //   const wrapper = mount(<SprkTooltip />);
-  //   expect(wrapper.find('.sprk-c-Tooltip').length).toBe(1);
-  //   wrapper.unmount();
-  //   expect(wrapper.find('.sprk-c-Tooltip').length).toBe(0);
-  // });
+  // should calculate position on hover and focus
 });

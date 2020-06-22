@@ -24,13 +24,13 @@ class SprkTooltip extends Component {
     window.addEventListener('keydown', this.handleWindowKeydown);
     window.addEventListener('click', this.handleWindowClick);
 
-    // this.triggerRef.current.addEventListener('mouseover', (e) => {
-    //   this.setPositioningClass();
-    // });
+    this.triggerRef.current.addEventListener('mouseover', (e) => {
+      this.setPositioningClass();
+    });
 
-    // this.triggerRef.current.addEventListener('focus', (e) => {
-    //   this.setPositioningClass();
-    // });
+    this.triggerRef.current.addEventListener('focus', (e) => {
+      this.setPositioningClass();
+    });
 
     this.setPositioningClass();
   }
@@ -41,9 +41,7 @@ class SprkTooltip extends Component {
   }
 
   setPositioningClass() {
-    console.log('pos');
     var trigger = this.triggerRef.current;
-    var tooltip = this.tooltipRef.current;
 
     const elemX = trigger.getBoundingClientRect().left;
     const elemY = trigger.getBoundingClientRect().top;
@@ -51,22 +49,17 @@ class SprkTooltip extends Component {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
-    tooltip.classList.remove('sprk-c-Tooltip--top-left')
-    tooltip.classList.remove('sprk-c-Tooltip--top-right')
-    tooltip.classList.remove('sprk-c-Tooltip--bottom-left')
-    tooltip.classList.remove('sprk-c-Tooltip--bottom-right')
-
     if (elemX > viewportWidth / 2) {
       if (elemY > viewportHeight / 2) {
-        tooltip.classList.add('sprk-c-Tooltip--top-left');
+        this.setState({ position: 'topleft' })
       } else {
-        tooltip.classList.add('sprk-c-Tooltip--bottom-left');
+        this.setState({ position: 'bottomleft' })
       }
     } else {
       if (elemY > viewportHeight / 2) {
-        tooltip.classList.add('sprk-c-Tooltip--top-right');
+        this.setState({ position: 'topright' })
       } else {
-        tooltip.classList.add('sprk-c-Tooltip--bottom-right');
+        this.setState({ position: 'bottomright' })
       }
     }
   }
@@ -81,10 +74,8 @@ class SprkTooltip extends Component {
 
   handleWindowClick(e) {
     if (this.state.isToggled) {
-      console.log(this.tooltipRef.current)
-      if (
-        !(this.tooltipRef.current.contains(e.target) ||
-          this.triggerRef.current.contains(e.target))) {
+      if (!this.tooltipRef.current.contains(e.target)
+        && !this.triggerRef.current.contains(e.target)) {
         this.setState({
           isToggled: false
         });
@@ -116,8 +107,6 @@ class SprkTooltip extends Component {
         <button
           ref={this.triggerRef}
           onClick={this.toggle}
-          onMouseOver={this.setPositioningClass}
-          onFocus={this.setPositioningClass}
           className={classnames({
             'sprk-c-Tooltip__trigger': true,
             'sprk-c-Tooltip--toggled': this.state.isToggled,
@@ -133,7 +122,13 @@ class SprkTooltip extends Component {
           ref={this.tooltipRef}
           className={classnames(
             'sprk-c-Tooltip',
-            additionalClasses
+            additionalClasses,
+            {
+              'sprk-c-Tooltip--top-left': this.state.position === 'topleft',
+              'sprk-c-Tooltip--top-right': this.state.position === 'topright',
+              'sprk-c-Tooltip--bottom-left': this.state.position === 'bottomleft',
+              'sprk-c-Tooltip--bottom-right': this.state.position === 'bottomright',
+            }
           )}
           id={id}
         >
