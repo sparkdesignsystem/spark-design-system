@@ -215,11 +215,6 @@ export const invalidRadio = () => ({
           There is an error on this field.
         </div>
       </span>
-
-      <p sprkHelperText>
-        Optional helper text, used to clarify the
-        field's intent.
-      </p>
     </sprk-radio-group>
   `,
 });
@@ -235,11 +230,86 @@ invalidRadio.story = {
   },
 };
 
-export const disabledRadio = () => ({
+export const defaultHelperText = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-radio-group>
       <label sprkLabel>Radio Group Label</label>
+      <sprk-radio-item>
+       <input
+          type="radio"
+          value="1"
+          name="radio_input_invalid"
+          [(ngModel)]="radio_input"
+          sprkRadioInput
+          #radioInput="ngModel"
+          id="invalid-radio-1"
+        >
+        <label
+          for="invalid-radio-1"
+          sprkRadioLabel
+        >
+          Item 1
+        </label>
+     </sprk-radio-item>
+     <sprk-radio-item>
+       <input
+          type="radio"
+          value="2"
+          name="radio_input_invalid"
+          [(ngModel)]="radio_input"
+          sprkRadioInput
+          #radioInput="ngModel"
+          id="invalid-radio-2"
+        >
+        <label
+          for="invalid-radio-2"
+          sprkRadioLabel
+        >
+          Item 2
+        </label>
+     </sprk-radio-item>
+     <sprk-radio-item>
+       <input
+          type="radio"
+          value="3"
+          name="radio_input_invalid"
+          [(ngModel)]="radio_input"
+          sprkRadioInput
+          #radioInput="ngModel"
+          data-id="radio-3"
+          id="invalid-radio-3"
+        >
+        <label
+          for="invalid-radio-3"
+          sprkRadioLabel
+        >
+          Item 3
+        </label>
+     </sprk-radio-item>
+      <p sprkHelperText>
+        Optional helper text, used to clarify the
+        field's intent.
+      </p>
+    </sprk-radio-group>
+  `,
+});
+
+defaultHelperText.story = {
+  parameters: {
+    jest: [
+      'sprk-radio.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
+};
+
+export const disabledRadio = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-radio-group>
+      <label class="sprk-b-Label--disabled" sprkLabel>Radio Group Label</label>
       <sprk-radio-item>
        <input
           type="radio"
@@ -386,6 +456,7 @@ export const hugeInvalid = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-radio-group variant="huge">
+      <label sprkLabel>Radio Group Label</label>
       <sprk-radio-item variant="huge">
        <input
          type="radio"
