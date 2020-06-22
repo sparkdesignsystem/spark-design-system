@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const SprkLegend = (props) => {
+const SprkFieldset = (props) => {
   const {
     children,
     idString,
@@ -23,7 +23,7 @@ const SprkLegend = (props) => {
   );
 };
 
-SprkLegend.propTypes = {
+SprkFieldset.propTypes = {
   /** Content to render inside of the component. */
   children: PropTypes.node,
   /**
@@ -43,4 +43,4 @@ SprkLegend.propTypes = {
   additionalClasses: PropTypes.string,
 };
 
-export default SprkLegend;
+export default SprkFieldset;
