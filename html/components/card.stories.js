@@ -278,7 +278,6 @@ export const twoUpCards = () => (
             class="
               sprk-o-Stack__item
               sprk-b-Link
-              sprk-b-Link--simple
               sprk-b-Link--has-icon
             "
           >
@@ -330,7 +329,6 @@ export const twoUpCards = () => (
           class="
             sprk-o-Stack__item
             sprk-b-Link
-            sprk-b-Link--simple
             sprk-b-Link--has-icon
           "
         >
@@ -407,7 +405,6 @@ export const threeUpCards = () => (
             class="
               sprk-o-Stack__item
               sprk-b-Link
-              sprk-b-Link--simple
               sprk-b-Link--has-icon
             "
           >
@@ -462,7 +459,7 @@ export const threeUpCards = () => (
             href="#nogo"
             class="
               sprk-o-Stack__item
-              sprk-b-Link sprk-b-Link--simple
+              sprk-b-Link
               sprk-b-Link--has-icon
             "
           >
@@ -517,7 +514,6 @@ export const threeUpCards = () => (
             class="
               sprk-o-Stack__item
               sprk-b-Link
-              sprk-b-Link--simple
               sprk-b-Link--has-icon
             "
           >
