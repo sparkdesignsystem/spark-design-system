@@ -396,7 +396,7 @@ export const legacy = () => (
 );
 
 legacy.story = {
-  name: 'Legacy (Depracated)',
+  name: 'Legacy (Deprecated)',
   parameters: {
     jest: ['SprkSelectionInput'],
   },
@@ -429,7 +429,7 @@ export const legacyInvalidCheckbox = () => (
 );
 
 legacyInvalidCheckbox.story = {
-  name: 'Legacy Invalid (Depracated)',
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
     jest: ['SprkSelectionInput'],
   },
@@ -461,7 +461,7 @@ export const legacyDisabledCheckbox = () => (
 );
 
 legacyDisabledCheckbox.story = {
-  name: 'Legacy Disabled (Depracated)',
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
     jest: ['SprkSelectionInput'],
   },
