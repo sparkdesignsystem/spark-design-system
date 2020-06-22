@@ -1,15 +1,15 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
-import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
-import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
-import { SprkSelectionItemContainerComponent } from './sprk-selection-item-container/sprk-selection-item-container.component';
-import { SprkSelectionContainerComponent } from './sprk-selection-container/sprk-selection-container.component';
-import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
-import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
-import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
-import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
-import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
+import { SprkLabelModule } from '../../../directives/inputs/sprk-label/sprk-label.module';
+import { SprkSelectionContainerModule } from '../sprk-selection-container/sprk-selection-container.module';
+import { SprkSelectionItemContainerModule } from '../sprk-selection-item-container/sprk-selection-item-container.module';
+import { SprkSelectionItemContainerComponent } from '../sprk-selection-item-container/sprk-selection-item-container.component';
+import { SprkSelectionContainerComponent } from '../sprk-selection-container/sprk-selection-container.component';
+import { SprkSelectionLabelModule } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
+import { SprkSelectionInputModule } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
+import { SprkFieldErrorModule } from '../../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { SprkIconModule } from '../../sprk-icon/sprk-icon.module';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Checkbox',
@@ -53,7 +53,7 @@ const modules = {
   ],
 };
 
-export const defaultStory = () => ({
+export const legacy = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-selection-container>
@@ -129,8 +129,8 @@ export const defaultStory = () => ({
   },
 });
 
-defaultStory.story = {
-  name: 'Default',
+legacy.story = {
+  name: 'Legacy (Deprecated)',
   parameters: {
     jest: [
       'sprk-selection-container.component',
@@ -142,7 +142,7 @@ defaultStory.story = {
   },
 };
 
-export const invalidCheckbox = () => ({
+export const legacyInvalidCheckbox = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-selection-container>
@@ -225,8 +225,8 @@ export const invalidCheckbox = () => ({
   },
 });
 
-invalidCheckbox.story = {
-  name: 'Invalid',
+legacyInvalidCheckbox.story = {
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
     jest: [
       'sprk-selection-container.component',
@@ -239,7 +239,7 @@ invalidCheckbox.story = {
   },
 };
 
-export const disabledCheckbox = () => ({
+export const legacyDisabledCheckbox = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-selection-container>
@@ -321,8 +321,8 @@ export const disabledCheckbox = () => ({
   },
 });
 
-disabledCheckbox.story = {
-  name: 'Disabled',
+legacyDisabledCheckbox.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
     jest: [
       'sprk-selection-container.component',
