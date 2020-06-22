@@ -495,7 +495,7 @@ $sprk-border-radius: 5px !default;
 /// Value for border-radius on the Alert component.
 $sprk-alert-border-radius: 4px !default;
 /// Value for border on the Alert component.
-$sprk-alert-border: 1px solid $sprk-gray !default;
+$sprk-alert-border: 2px solid $sprk-gray !default;
 /// Value for shadow on the Alert component.
 $sprk-alert-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 /// Value for color of the Alert component.
@@ -530,27 +530,27 @@ $sprk-alert-dismiss-icon-size: $sprk-space-m !default;
 /// The icon color of the Information Alert component.
 $sprk-alert-icon-color-info: $sprk-blue !default;
 /// The border value of the Information Alert component.
-$sprk-alert-border-info: 1px solid $sprk-blue !default;
+$sprk-alert-border-info: 2px solid $sprk-blue !default;
 /// The background color of the Information Alert component.
-$sprk-alert-bg-color-info: rgb(241, 250, 255) !default;
+$sprk-alert-bg-color-info: $sprk-alert-bg-color !default;
 /// The value for the color property in the Information Alert component.
 $sprk-alert-text-color-info: $sprk-black !default;
 // Success
 /// The icon color of the Success Alert component.
 $sprk-alert-icon-color-success: $sprk-green !default;
 /// The border value of the Success Alert component.
-$sprk-alert-border-success: 1px solid $sprk-green !default;
+$sprk-alert-border-success: 2px solid $sprk-green !default;
 /// The background color of the Success Alert component.
-$sprk-alert-bg-color-success: rgb(237, 253, 251) !default;
+$sprk-alert-bg-color-success: $sprk-alert-bg-color !default;
 /// The value for the color property in the Success Alert component.
 $sprk-alert-text-color-success: $sprk-black !default;
 // Fail
 /// The icon color of the Fail Alert component.
-$sprk-alert-icon-color-fail: $sprk-yellow !default;
+$sprk-alert-icon-color-fail: $sprk-pink !default;
 /// The border value of the Fail Alert component.
-$sprk-alert-border-fail: 1px solid $sprk-yellow !default;
+$sprk-alert-border-fail: 2px solid $sprk-pink !default;
 /// The background color of the Fail Alert component.
-$sprk-alert-bg-color-fail: rgb(255, 248, 232) !default;
+$sprk-alert-bg-color-fail: $sprk-alert-bg-color !default;
 /// The value for the color property in the Fail Alert component.
 $sprk-alert-text-color-fail: $sprk-black !default;
 
