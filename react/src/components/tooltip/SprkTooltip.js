@@ -103,7 +103,7 @@ class SprkTooltip extends Component {
     } = this.props;
 
     return (
-      <span {...other} className='sprk-c-Tooltip__container'>
+      <span {...other} className='sprk-c-Tooltip__container' data-id={idString}>
         <button
           ref={this.triggerRef}
           onClick={this.toggle}
@@ -114,7 +114,6 @@ class SprkTooltip extends Component {
           aria-expanded={this.state.isToggled ? 'true' : 'false'}
           aria-labelledby={id}
           data-analytics={analyticsString}
-          data-id={idString}
         >
           <SprkIcon iconName={triggerIconType} additionalClasses={iconAdditionalClasses} />
         </button>
