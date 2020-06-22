@@ -443,17 +443,17 @@ export const hugeInvalid = () => ({
           Item 3
         </label>
      </sprk-radio-item>
-   </sprk-radio-group>
 
-    <span sprkFieldError>
-      <sprk-icon
-        iconType="exclamation-filled-small"
-        additionalClasses="sprk-b-ErrorIcon"
-      ></sprk-icon>
-      <div class="sprk-b-ErrorText">
-        There is an error on this field.
-      </div>
-    </span>
+     <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">
+          There is an error on this field.
+        </div>
+     </span>
+   </sprk-radio-group>
   `,
 });
 
@@ -461,7 +461,9 @@ hugeInvalid.story = {
   parameters: {
     jest: [
       'sprk-radio-item.component',
-      'sprk-label.directive',
+      'sprk-radio-label.directive',
+      'sprk-radio-group.component',
+      'sprk-radio-input.directive',
       'sprk-field-error.directive',
     ],
   },
@@ -541,7 +543,13 @@ export const hugeDisabled = () => ({
 
 hugeDisabled.story = {
   parameters: {
-    jest: ['sprk-radio.directive', 'sprk-label.directive'],
+    jest: [
+      'sprk-radio-item.component',
+      'sprk-radio-label.directive',
+      'sprk-radio-group.component',
+      'sprk-radio-input.directive',
+      'sprk-field-error.directive',
+    ],
   },
 };
 
@@ -601,7 +609,13 @@ export const hugeLayoutTwo = () => ({
 hugeLayoutTwo.story = {
   name: 'Huge Layout - Two',
   parameters: {
-    jest: ['sprk-radio.directive', 'sprk-label.directive'],
+    jest: [
+      'sprk-radio-item.component',
+      'sprk-radio-label.directive',
+      'sprk-radio-group.component',
+      'sprk-radio-input.directive',
+      'sprk-field-error.directive',
+    ],
   },
 };
 
@@ -711,7 +725,13 @@ export const hugeLayoutFour = () => ({
 hugeLayoutFour.story = {
   name: 'Huge Layout - Four',
   parameters: {
-    jest: ['sprk-radio.directive', 'sprk-label.directive'],
+    jest: [
+      'sprk-radio-item.component',
+      'sprk-radio-label.directive',
+      'sprk-radio-group.component',
+      'sprk-radio-input.directive',
+      'sprk-field-error.directive',
+    ],
   },
 };
 
@@ -846,7 +866,13 @@ export const hugeLayoutFive = () => ({
 hugeLayoutFive.story = {
   name: 'Huge Layout - Five',
   parameters: {
-    jest: ['sprk-radio.directive', 'sprk-label.directive'],
+    jest: [
+      'sprk-radio-item.component',
+      'sprk-radio-label.directive',
+      'sprk-radio-group.component',
+      'sprk-radio-input.directive',
+      'sprk-field-error.directive',
+    ],
   },
 };
 
@@ -1002,7 +1028,13 @@ export const hugeLayoutSix = () => ({
 hugeLayoutSix.story = {
   name: 'Huge Layout - Six',
   parameters: {
-    jest: ['sprk-radio.directive', 'sprk-label.directive'],
+    jest: [
+      'sprk-radio-item.component',
+      'sprk-radio-label.directive',
+      'sprk-radio-group.component',
+      'sprk-radio-input.directive',
+      'sprk-field-error.directive',
+    ],
   },
 };
 

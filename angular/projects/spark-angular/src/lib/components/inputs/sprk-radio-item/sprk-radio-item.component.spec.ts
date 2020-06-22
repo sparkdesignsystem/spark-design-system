@@ -184,11 +184,10 @@ describe('SprkRadioItemComponent', () => {
     );
   });
 
-  it('should add the radio classes to the input and the label if the type is radio', () => {
-    expect(radioInputElement2.classList.contains('sprk-b-Radio__input')).toBe(
-      true,
-    );
-    expect(radioLabelElement2.classList.contains('sprk-b-Radio__label')).toBe(
+  it('should add the huge variant class if variant is huge', () => {
+    radioItemComponent1.variant = 'huge';
+    radioItemFixture1.detectChanges();
+    expect(radioItemElement1.classList.contains('sprk-b-Radio--huge')).toBe(
       true,
     );
   });
