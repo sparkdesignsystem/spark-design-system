@@ -14,7 +14,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
     <sprk-radio-group>
       <label sprkLabel>Label</label>
       <sprk-radio-item>
-        <input type="checkbox" sprkRadioInput />
+        <input type="radio" sprkRadioInput />
         <label sprkRadioLabel>Item 1</label>
       </sprk-radio-item>
       <p sprkHelperText>Helper Text!</p>
