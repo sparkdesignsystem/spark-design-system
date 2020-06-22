@@ -49,18 +49,31 @@ class SprkTooltip extends Component {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
+    // 328 is the default max-width
+    var maxWidth = 328;
+    var calculatedWidth = maxWidth;
+
     if (elemX > viewportWidth / 2) {
+      // the left edge of the button + the width of the button + the border
+      calculatedWidth = elemX + 16 + 16;
       if (elemY > viewportHeight / 2) {
         this.setState({ position: 'topleft' })
       } else {
         this.setState({ position: 'bottomleft' })
       }
     } else {
+      // the width of the viewport less the left edge of the button + the border
+      calculatedWidth = viewportWidth - elemX + 16;
       if (elemY > viewportHeight / 2) {
         this.setState({ position: 'topright' })
       } else {
         this.setState({ position: 'bottomright' })
       }
+    }
+
+    if (calculatedWidth < maxWidth){
+      // overwrite the width if there's not enough room to display it
+      this.tooltipRef.current.setAttribute('style', 'width:' + calculatedWidth + "px");
     }
   }
 
