@@ -69,7 +69,9 @@ export const defaultHelperText = () => (
       <SprkCheckbox>Checkbox Item 2</SprkCheckbox>
       <SprkCheckbox>Checkbox Item 3</SprkCheckbox>
     </SprkFieldset>
-    <SprkHelperText>Input Helper Text</SprkHelperText>
+    <SprkHelperText>
+      Optional helper text, used to clarify the field&#x27;s intent
+    </SprkHelperText>
   </SprkCheckboxGroup>
 );
 
@@ -139,6 +141,26 @@ export const huge = () => (
 
 huge.story = {
   name: 'Huge',
+  parameters: {
+    jest: ['SprkCheckboxGroup'],
+  },
+};
+export const hugeHelperText = () => (
+  <SprkCheckboxGroup variant="huge">
+    <SprkFieldset>
+      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkCheckbox variant="huge">Checkbox Item 1</SprkCheckbox>
+      <SprkCheckbox variant="huge">Checkbox Item 2</SprkCheckbox>
+      <SprkCheckbox variant="huge">Checkbox Item 3</SprkCheckbox>
+    </SprkFieldset>
+    <SprkHelperText>
+      Optional helper text, used to clarify the field&#x27;s intent
+    </SprkHelperText>
+  </SprkCheckboxGroup>
+);
+
+hugeHelperText.story = {
+  name: 'Huge Helper Text',
   parameters: {
     jest: ['SprkCheckboxGroup'],
   },

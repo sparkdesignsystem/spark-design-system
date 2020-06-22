@@ -503,6 +503,106 @@ huge.story = {
   },
 };
 
+export const hugeHelperText = () => {
+  useEffect(() => {
+    checkbox();
+  }, []);
+
+  return `
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
+      <fieldset class="sprk-b-Fieldset">
+        <legend class="sprk-b-Legend">
+          <label class="sprk-b-Label">
+            Checkbox Group Label
+          </label>
+        </legend>
+        <div
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Checkbox
+            sprk-b-Checkbox--huge
+          "
+          data-sprk-input="checkbox"
+        >
+          <input
+            class="sprk-b-Checkbox__input"
+            id="checkbox-1"
+            data-id="checkbox-1"
+            type="checkbox"
+            aria-describedby="checkbox--error-container"
+          >
+          <label
+            for="checkbox-1"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+          >
+            Checkbox Item 1
+          </label>
+        </div>
+        <div
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Checkbox
+            sprk-b-Checkbox--huge
+          "
+          data-sprk-input="checkbox"
+        >
+          <input
+            class="sprk-b-Checkbox__input"
+            id="checkbox-2"
+            data-id="checkbox-2"
+            type="checkbox"
+            aria-describedby="checkbox--error-container"
+          >
+          <label
+            for="checkbox-2"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+          >
+            Checkbox Item 2
+          </label>
+        </div>
+        <div
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Checkbox
+            sprk-b-Checkbox--huge
+          "
+          data-sprk-input="checkbox"
+        >
+          <input
+            class="sprk-b-Checkbox__input"
+            id="checkbox-3"
+            data-id="checkbox-3"
+            type="checkbox"
+            aria-describedby="checkbox--error-container"
+          >
+
+          <label
+            for="checkbox-3"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+          >
+            Checkbox Item 3
+          </label>
+        </div>
+      </fieldset>
+      <div class="sprk-b-HelperText">
+        Optional helper text, used to clarify the field&#x27;s intent.
+      </div>
+      <div
+        class="sprk-b-ErrorContainer"
+        id="checkbox--error-container"
+      >
+      </div>
+    </div>
+  `;
+};
+
+hugeHelperText.story = {
+  name: 'Huge Helper Text',
+  parameters: {
+    jest: ['checkbox'],
+  },
+};
+
 export const hugeInvalid = () => {
   useEffect(() => {
     checkbox();
