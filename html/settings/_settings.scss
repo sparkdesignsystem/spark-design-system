@@ -942,7 +942,7 @@ $sprk-text-input-error-border-color: $sprk-pink !default;
 /// The border color on disabled Inputs.
 $sprk-text-input-disabled-border-color: $sprk-black-tint-50 !default;
 /// The background color on disabled Inputs.
-$sprk-text-input-disabled-background-color: $sprk-gray-dark !default;
+$sprk-text-input-disabled-background-color: $sprk-black-tint-40 !default;
 /// The box shadow on disabled Inputs.
 $sprk-text-input-disabled-box-shadow: none !default;
 /// The color setting on disabled Inputs.
@@ -1333,7 +1333,7 @@ $sprk-radio-input-opacity: 0 !default;
 /// The transition for the radio input.
 $sprk-radio-input-transition: all 0.2s ease-in-out !default;
 /// The border of the outer circle in the radio input on hover.
-$sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-75 !default;
+$sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-70 !default;
 /// The border of the outer circle in the radio input on focus.
 $sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-purple !default;
 /// The border of the outer circle in the disabled radio input on focus.
