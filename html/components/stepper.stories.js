@@ -293,7 +293,7 @@ export const withDarkBackground = () => {
   }, []);
 
   return `
-  <div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+  <div class="sprk-u-BackgroundColor--dark-purple sprk-o-Box sprk-o-Box--large">
     <ol
       class="sprk-c-Stepper sprk-c-Stepper--has-dark-bg "
       data-sprk-stepper="container"
