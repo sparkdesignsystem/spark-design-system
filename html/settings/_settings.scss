@@ -1058,7 +1058,7 @@ $sprk-checkbox-custom-input-border-focus-checked: 2px solid $sprk-black !default
 // The background color of the custom checkbox input when hovered.
 $sprk-checkbox-custom-input-background-color-hover: $sprk-gray !default;
 // The border color of the custom checkbox input when hovered.
-$sprk-checkbox-custom-input-border-color-hover: $sprk-black-tint-75 !default;
+$sprk-checkbox-custom-input-border-color-hover: $sprk-black-tint-70 !default;
 // The background color of the custom checkbox input when checked.
 $sprk-checkbox-custom-input-background-color-checked: $sprk-purple !default;
 // The border color of the custom checkbox input when checked.
@@ -1690,7 +1690,7 @@ $sprk-tooltip-font-size: $sprk-font-size-body-four !default;
 /// The background color for the tooltip caret.
 $sprk-tooltip-caret-background-color: $sprk-black !default;
 /// The background color for the tooltip icon while toggled.
-$sprk-tooltip-toggled-icon-background-color: $sprk-green !default;
+$sprk-tooltip-toggled-icon-background-color: $sprk-purple !default;
 /// The z-index of the tooltip.
 $sprk-tooltip-z-index: $sprk-layer-height-xs !default;
 /// The max-width of the tooltip.
@@ -1708,9 +1708,9 @@ $sprk-tooltip-caret-width: 17px !default;
 /// are active or hovered.
 $sprk-dropdown-active-background-color: $sprk-gray !default;
 /// The left border of the Dropdown item that is active.
-$sprk-dropdown-active-border: 2.5px solid $sprk-green !default;
+$sprk-dropdown-active-border: 2.5px solid $sprk-purple !default;
 /// The box-shadow of the Dropdown item that is active.
-$sprk-dropdown-active-box-shadow: -1px 0 0 0 $sprk-green !default;
+$sprk-dropdown-active-box-shadow: -1px 0 0 0 $sprk-purple !default;
 /// The border of the Dropdown.
 $sprk-dropdown-border: 1px solid $sprk-gray !default;
 /// The font size of the Dropdown.
@@ -1729,7 +1729,7 @@ $sprk-dropdown-padding: $sprk-space-misc-a !default;
 /// The box shadow of the Dropdown.
 $sprk-dropdown-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1) !default;
 /// The color of the Dropdown title.
-$sprk-dropdown-title-color: $sprk-black-tint-25 !default;
+$sprk-dropdown-title-color: $sprk-black-tint-30 !default;
 /// The font size of the Dropdown title.
 $sprk-dropdown-title-font-size: $sprk-dropdown-font-size !default;
 /// The font weight of the Dropdown title.
@@ -1802,7 +1802,7 @@ $sprk-masthead-content-item-padding-left-wide: $sprk-space-m !default;
 /// The visited state color of Masthead links.
 $sprk-masthead-link-visited-color: $sprk-black !default;
 /// The hover state color of Masthead links.
-$sprk-masthead-link-hover-color: $sprk-green !default;
+$sprk-masthead-link-hover-color: $sprk-red !default;
 /// The font weight for Masthead links.
 $sprk-masthead-link-font-weight: 500 !default;
 /// The size of the bottom border on the Masthead.
@@ -1812,7 +1812,7 @@ $sprk-masthead-border-bottom: $sprk-masthead-border-bottom-size solid $sprk-gray
 /// The bottom border on the Masthead on wide viewports.
 $sprk-masthead-border-bottom-wide: 0 !default;
 /// The right border on the site links in the Masthead.
-$sprk-masthead-site-links-border-right: 2px solid $sprk-black-tint-25 !default;
+$sprk-masthead-site-links-border-right: 2px solid $sprk-black-tint-30 !default;
 /// The point at which the Masthead navigation switches
 /// from narrow viewport style to large viewport
 /// style.
@@ -1830,7 +1830,7 @@ $sprk-masthead-shadow-wide: none !default;
 /// The Masthead shadow that gets applied when the page is scrolled.
 $sprk-masthead-shadow-scroll: 0 0 40px rgba(0, 0, 0, 0.1) !default;
 /// The border of the selector in the Masthead with Extended Navigation.
-$sprk-masthead-selector-border: 2px solid $sprk-black-tint-25 !default;
+$sprk-masthead-selector-border: 2px solid $sprk-black-tint-30 !default;
 $sprk-masthead-selector-font-weight: 300 !default;
 /// The border radius of the selector in the Masthead with Extended Navigation.
 $sprk-masthead-selector-border-radius: 5px !default;
@@ -1933,7 +1933,7 @@ $sprk-masthead-accordion-active-font-color: $sprk-black !default;
 $sprk-masthead-accordion-font-color: $sprk-black !default;
 /// The color of the line on open items
 /// in the navigation links when masthead is on narrow viewports.
-$sprk-masthead-accordion-item-open-line-background-color: $sprk-black-tint-25 !default;
+$sprk-masthead-accordion-item-open-line-background-color: $sprk-black-tint-30 !default;
 /// The height of the line on open
 /// navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-item-open-line-height: 2px !default;
@@ -2014,10 +2014,10 @@ $sprk-stepper-icon-border-width: 2px !default;
 /// The color of the border around the Stepper icon.
 $sprk-stepper-icon-border-color: $sprk-black-tint-50 !default;
 /// The color of the step icon when the step is selected in the Stepper.
-$sprk-stepper-icon-border-color-selected: $sprk-green !default;
+$sprk-stepper-icon-border-color-selected: $sprk-purple !default;
 /// The color of the step icon in front of a dark background
 /// when the step is selected in the Stepper.
-$sprk-stepper-icon-border-color-selected-dark-bg: $sprk-green-tint-75 !default;
+$sprk-stepper-icon-border-color-selected-dark-bg: $sprk-lightest-purple !default;
 /// The color of the icon border when the
 /// Stepper is on a dark background
 /// (sprk-c-Stepper--has-dark-bg).
@@ -2035,7 +2035,7 @@ $sprk-stepper-icon-color-hover: $sprk-black-tint-50 !default;
 $sprk-stepper-icon-color-selected: $sprk-white !default;
 /// The color of the step icon when the
 /// Stepper has a dark background (sprk-c-Stepper--has-dark-bg).
-$sprk-stepper-dark-icon-color: $sprk-blue !default;
+$sprk-stepper-dark-icon-color: $sprk-dark-purple !default;
 /// The color of the Stepper step icon when the step
 /// is selected and the Stepper has a
 /// dark background (sprk-c-Stepper--has-dark-bg).
@@ -2179,7 +2179,7 @@ $sprk-card-border-radius: 8px !default;
 /// The padding of the content inside the Card.
 $sprk-card-content-padding: $sprk-space-misc-a !default;
 /// The background color of the header area for the Highlighted Header Card.
-$sprk-card-header-bg-color: $sprk-green !default;
+$sprk-card-header-bg-color: $sprk-purple !default;
 /// The text color for the Highlighted Header Card.
 $sprk-card-header-text-color: $sprk-white !default;
 
