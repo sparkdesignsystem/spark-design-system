@@ -11,7 +11,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
 @Component({
   selector: 'sprk-test',
   template: `
-    <sprk-radio-group variant="huge">
+    <sprk-radio-group>
       <label sprkLabel>Label</label>
       <sprk-radio-item>
         <input type="checkbox" sprkRadioInput />
@@ -24,7 +24,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
 })
 class TestComponent {}
 
-describe('SprkSelectionContainerComponent', () => {
+describe('SprkRadioGroupComponent', () => {
   let component: TestComponent;
   let radioContainerComponent: SprkRadioGroupComponent;
   let fixture: ComponentFixture<TestComponent>;
@@ -81,6 +81,14 @@ describe('SprkSelectionContainerComponent', () => {
     expect(radioContainerElement.classList.toString()).toContain(
       'sprk-b-InputContainer--huge',
     );
+  });
+
+  it('should not add huge variant class when variant is not huge', () => {
+    radioContainerComponent.variant = undefined;
+    radioContainerFixture.detectChanges();
+    expect(
+      radioContainerElement.classList.contains('sprk-b-InputContainer--huge'),
+    ).toBe(false);
   });
 
   it('should map any inputs inside radio-items to the field-error', () => {
