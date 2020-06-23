@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
 
-const SprkCheckbox = (props) => {
+const SprkCheckboxItem = (props) => {
   const {
     children,
     variant,
@@ -64,7 +64,7 @@ const SprkCheckbox = (props) => {
   );
 };
 
-SprkCheckbox.propTypes = {
+SprkCheckboxItem.propTypes = {
   children: PropTypes.node,
   /**
    * Determines the style of checkbox.
@@ -136,4 +136,4 @@ SprkCheckbox.propTypes = {
   onChangeFunc: PropTypes.func,
 };
 
-export default SprkCheckbox;
+export default SprkCheckboxItem;

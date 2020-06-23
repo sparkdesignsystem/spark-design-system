@@ -1,14 +1,14 @@
 import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import SprkCheckbox from './SprkCheckbox';
+import SprkCheckboxItem from './SprkCheckboxItem';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkCheckbox:', () => {
+describe('SprkCheckboxItem:', () => {
   it('should apply additional classes', () => {
     const expected = 'test-class';
-    const wrapper = shallow(<SprkCheckbox additionalClasses={expected} />);
+    const wrapper = shallow(<SprkCheckboxItem additionalClasses={expected} />);
     expect(wrapper.find('.sprk-b-SelectionContainer').hasClass(expected)).toBe(
       true,
     );
@@ -17,7 +17,7 @@ describe('SprkCheckbox:', () => {
   it('should apply additional checkbox classes', () => {
     const expected = 'test-class';
     const wrapper = shallow(
-      <SprkCheckbox checkboxAdditionalClasses={expected} />,
+      <SprkCheckboxItem checkboxAdditionalClasses={expected} />,
     );
     expect(wrapper.find('.sprk-b-Checkbox__input').hasClass(expected)).toBe(
       true,
@@ -26,14 +26,16 @@ describe('SprkCheckbox:', () => {
 
   it('should apply additional label classes', () => {
     const expected = 'test-class';
-    const wrapper = shallow(<SprkCheckbox labelAdditionalClasses={expected} />);
+    const wrapper = shallow(
+      <SprkCheckboxItem labelAdditionalClasses={expected} />,
+    );
     expect(wrapper.find('.sprk-b-Checkbox__label').hasClass(expected)).toBe(
       true,
     );
   });
 
   it('should apply huge container class', () => {
-    const wrapper = shallow(<SprkCheckbox variant="huge" />);
+    const wrapper = shallow(<SprkCheckboxItem variant="huge" />);
     expect(
       wrapper
         .find('.sprk-b-SelectionContainer')
@@ -42,7 +44,7 @@ describe('SprkCheckbox:', () => {
   });
 
   it('should render label', () => {
-    const wrapper = shallow(<SprkCheckbox>Label</SprkCheckbox>);
+    const wrapper = shallow(<SprkCheckboxItem>Label</SprkCheckboxItem>);
     expect(wrapper.find('label').text()).toEqual('Label');
     expect(
       wrapper
@@ -53,7 +55,7 @@ describe('SprkCheckbox:', () => {
 
   it('should apply ariaDescribedBy', () => {
     const expected = 'test-aria';
-    const wrapper = shallow(<SprkCheckbox ariaDescribedBy={expected} />);
+    const wrapper = shallow(<SprkCheckboxItem ariaDescribedBy={expected} />);
     expect(
       wrapper.find('.sprk-b-Checkbox__input').prop('aria-describedby'),
     ).toEqual(expected);
@@ -61,7 +63,7 @@ describe('SprkCheckbox:', () => {
 
   it('should apply id', () => {
     const expected = 'testId';
-    const wrapper = shallow(<SprkCheckbox id={expected} />);
+    const wrapper = shallow(<SprkCheckboxItem id={expected} />);
     expect(wrapper.find('.sprk-b-Checkbox__label').prop('htmlFor')).toEqual(
       expected,
     );
@@ -72,7 +74,9 @@ describe('SprkCheckbox:', () => {
 
   it('should run the supplied onChangeFunc function for checkboxes', () => {
     const onCheckboxChangeMock = jest.fn();
-    const wrapper = mount(<SprkCheckbox onChangeFunc={onCheckboxChangeMock} />);
+    const wrapper = mount(
+      <SprkCheckboxItem onChangeFunc={onCheckboxChangeMock} />,
+    );
     const checkbox = wrapper.find('input[type="checkbox"]');
     checkbox.simulate('change', { target: { value: 'test-value' } });
     expect(onCheckboxChangeMock.mock.calls.length).toBe(1);

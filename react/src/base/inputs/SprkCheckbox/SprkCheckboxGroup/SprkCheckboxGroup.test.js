@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkCheckboxGroup from './SprkCheckboxGroup';
-import SprkCheckbox from '../SprkCheckbox/SprkCheckbox';
+import SprkCheckboxItem from '../SprkCheckboxItem/SprkCheckboxItem';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -10,12 +10,12 @@ describe('SprkCheckboxGroup:', () => {
   it('should render SprkCheckbox inside of it', () => {
     const wrapper = shallow(
       <SprkCheckboxGroup>
-        <SprkCheckbox>Label</SprkCheckbox>
-        <SprkCheckbox>Label</SprkCheckbox>
-        <SprkCheckbox>Label</SprkCheckbox>
+        <SprkCheckboxItem>Label</SprkCheckboxItem>
+        <SprkCheckboxItem>Label</SprkCheckboxItem>
+        <SprkCheckboxItem>Label</SprkCheckboxItem>
       </SprkCheckboxGroup>,
     );
-    expect(wrapper.find('SprkCheckbox').length).toBe(3);
+    expect(wrapper.find('SprkCheckboxItem').length).toBe(3);
   });
 
   it('should have container styles', () => {
