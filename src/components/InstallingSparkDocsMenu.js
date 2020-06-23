@@ -9,7 +9,7 @@ const InstallingSparkDocsMenu = () => {
   return (
     <>
       <h3 className="docs-menu__heading">Installing Spark</h3>
-      <nav>
+      <nav aria-label="Installing Spark">
         <ul className="docs-menu__collection">
           {pages.map(page => (
             <li
