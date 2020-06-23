@@ -21,10 +21,8 @@ export const defaultStory = () => {
   return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label">
+          Checkbox Group Label
         </legend>
 
         <div
@@ -112,10 +110,8 @@ export const defaultHelperText = () => {
   return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label">
+          Checkbox Group Label
         </legend>
 
         <div
@@ -205,10 +201,8 @@ export const invalidCheckbox = () => {
   return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label">
+          Checkbox Group Label
         </legend>
 
         <div
@@ -305,10 +299,8 @@ export const disabledCheckbox = () => {
   return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label sprk-b-Label--disabled">
-            Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label sprk-b-Label--disabled">
+          Checkbox Group Label
         </legend>
 
         <div
@@ -414,10 +406,8 @@ export const huge = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label">
+          Checkbox Group Label
         </legend>
         <div
           class="
@@ -511,10 +501,8 @@ export const hugeHelperText = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label">
+          Checkbox Group Label
         </legend>
         <div
           class="
@@ -611,10 +599,8 @@ export const hugeInvalid = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label">
+          Checkbox Group Label
         </legend>
 
         <div
@@ -723,10 +709,8 @@ export const hugeDisabled = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label sprk-b-Label--disabled">
-            Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label sprk-b-Label--disabled">
+          Checkbox Group Label
         </legend>
 
         <div
@@ -841,10 +825,8 @@ export const hugeLayoutTwo = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Huge Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label">
+          Huge Checkbox Group Label
         </legend>
         <div class="sprk-o-Stack sprk-o-Stack--medium">
           <div
@@ -925,10 +907,8 @@ export const hugeLayoutFour = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Huge Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label">
+          Huge Checkbox Group Label
         </legend>
         <div class="sprk-o-Stack sprk-o-Stack--medium">
           <div
@@ -1063,10 +1043,8 @@ export const hugeLayoutFive = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Huge Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label">
+          Huge Checkbox Group Label
         </legend>
         <div class="sprk-o-Stack sprk-o-Stack--medium">
           <div
@@ -1239,10 +1217,8 @@ export const hugeLayoutSix = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Huge Checkbox Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label">
+          Huge Checkbox Group Label
         </legend>
         <div class="sprk-o-Stack sprk-o-Stack--medium">
           <div
