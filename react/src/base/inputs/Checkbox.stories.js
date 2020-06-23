@@ -113,7 +113,7 @@ invalidCheckbox.story = {
 export const disabledCheckbox = () => (
   <SprkCheckboxGroup disabled>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend disabled>Group Label Name</SprkLegend>
       <SprkCheckbox disabled>Checkbox Item 1</SprkCheckbox>
       <SprkCheckbox disabled>Checkbox Item 2</SprkCheckbox>
       <SprkCheckbox disabled>Checkbox Item 3</SprkCheckbox>
@@ -197,7 +197,7 @@ hugeInvalid.story = {
 export const hugeDisabled = () => (
   <SprkCheckboxGroup variant="huge" disabled>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend disabled>Group Label Name</SprkLegend>
       <SprkCheckbox
         variant="huge"
         ariaDescribedBy="checkbox-error-container"
