@@ -1,12 +1,10 @@
-import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { useEffect } from '@storybook/client-api';
+import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { radioInput } from './radioInput';
 
 export default {
   title: 'Components/Input/Huge Radio',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
@@ -23,9 +21,7 @@ export const defaultStory = () => {
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div
@@ -96,7 +92,7 @@ export const defaultStory = () => {
         id="radio--error-container"
       ></div>
     </div>
-  `
+  `;
 };
 
 defaultStory.story = {
@@ -104,7 +100,7 @@ defaultStory.story = {
   parameters: {
     jest: ['radioInput'],
     docs: { iframeHeight: 300 },
-  }
+  },
 };
 
 export const layoutTwo = () => {
@@ -116,9 +112,7 @@ export const layoutTwo = () => {
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
@@ -183,7 +177,7 @@ export const layoutTwo = () => {
         id="radio--error-container"
       ></div>
     </div>
-  `
+  `;
 };
 
 layoutTwo.story = {
@@ -191,7 +185,7 @@ layoutTwo.story = {
   parameters: {
     jest: ['radioInput'],
     docs: { iframeHeight: 250 },
-  }
+  },
 };
 
 export const layoutFour = () => {
@@ -203,13 +197,15 @@ export const layoutFour = () => {
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div class="sprk-o-Stack sprk-o-Stack--medium">
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -264,7 +260,11 @@ export const layoutFour = () => {
             </div>
           </div>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -326,7 +326,7 @@ export const layoutFour = () => {
         id="radio--error-container"
       ></div>
     </div>
-  `
+  `;
 };
 
 layoutFour.story = {
@@ -334,7 +334,7 @@ layoutFour.story = {
   parameters: {
     jest: ['radioInput'],
     docs: { iframeHeight: 420 },
-  }
+  },
 };
 
 export const layoutFive = () => {
@@ -346,12 +346,14 @@ export const layoutFive = () => {
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
         <div class="sprk-o-Stack sprk-o-Stack--medium">
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -406,7 +408,11 @@ export const layoutFive = () => {
             </div>
           </div>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -460,7 +466,7 @@ export const layoutFive = () => {
               </label>
             </div>
           </div>
-          
+
           <div class="
             sprk-o-Stack__item
             sprk-o-Stack
@@ -504,14 +510,14 @@ export const layoutFive = () => {
         id="radio--error-container"
       ></div>
     </div>
-  `
+  `;
 };
 
 layoutFive.story = {
   name: 'Layout - Five',
   parameters: {
     jest: ['radioInput'],
-  }
+  },
 };
 
 export const layoutSix = () => {
@@ -523,13 +529,15 @@ export const layoutSix = () => {
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div class="sprk-o-Stack sprk-o-Stack--medium">
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -584,7 +592,11 @@ export const layoutSix = () => {
             </div>
           </div>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -639,7 +651,11 @@ export const layoutSix = () => {
             </div>
           </div>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -701,14 +717,14 @@ export const layoutSix = () => {
         id="radio--error-container"
       ></div>
     </div>
-  `
+  `;
 };
 
 layoutSix.story = {
   name: 'Layout - Six',
   parameters: {
     jest: ['radioInput'],
-  }
+  },
 };
 
 export const invalidRadioButton = () => {
@@ -720,9 +736,7 @@ export const invalidRadioButton = () => {
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div
@@ -803,7 +817,7 @@ export const invalidRadioButton = () => {
         </div>
       </div>
     </div>
-  `
+  `;
 };
 
 invalidRadioButton.story = {
@@ -811,7 +825,7 @@ invalidRadioButton.story = {
   parameters: {
     jest: ['radioInput'],
     docs: { iframeHeight: 300 },
-  }
+  },
 };
 
 export const disabledRadioButton = () => {
@@ -819,13 +833,11 @@ export const disabledRadioButton = () => {
     radioInput();
   }, []);
 
-  return`
+  return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label sprk-b-Label--disabled">
-            Radio Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Legend--disabled">
+          Radio Group Label
         </legend>
 
         <div
@@ -844,7 +856,11 @@ export const disabledRadioButton = () => {
 
           <label
             for="radio-1"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
+            class="
+              sprk-b-Label
+              sprk-b-Label--disabled
+              sprk-b-Label--inline
+              sprk-b-Radio__label"
           >
             Radio Item 1
           </label>
@@ -866,7 +882,11 @@ export const disabledRadioButton = () => {
 
           <label
             for="radio-2"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
+            class="
+              sprk-b-Label
+              sprk-b-Label--disabled
+              sprk-b-Label--inline
+              sprk-b-Radio__label"
           >
             Radio Item 2
           </label>
@@ -887,7 +907,11 @@ export const disabledRadioButton = () => {
           >
           <label
             for="radio-3"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
+            class="
+              sprk-b-Label
+              sprk-b-Label--disabled
+              sprk-b-Label--inline
+              sprk-b-Radio__label"
           >
             Radio Item 3
           </label>
@@ -899,7 +923,7 @@ export const disabledRadioButton = () => {
         id="radio--error-container"
       ></div>
     </div>
-  `
+  `;
 };
 
 disabledRadioButton.story = {
@@ -907,5 +931,5 @@ disabledRadioButton.story = {
   parameters: {
     jest: ['radioInput'],
     docs: { iframeHeight: 300 },
-  }
+  },
 };

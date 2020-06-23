@@ -8,12 +8,17 @@ const SprkLegend = (props) => {
     idString,
     analyticsString,
     additionalClasses,
+    disabled,
     ...other
   } = props;
 
   return (
     <legend
-      className={classnames('sprk-b-Legend sprk-b-Label', additionalClasses)}
+      className={classnames({
+        'sprk-b-Legend': true,
+        'sprk-b-Legend--disabled': disabled,
+        additionalClasses: true,
+      })}
       data-analytics={analyticsString}
       data-id={idString}
       {...other}
@@ -41,6 +46,10 @@ SprkLegend.propTypes = {
    * to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
+  /**
+   * Will render the component in its disabled state.
+   */
+  disabled: PropTypes.bool,
 };
 
 export default SprkLegend;

@@ -1,6 +1,7 @@
 ////
 /// @group input
 ////
+.sprk-b-Legend,
 .sprk-b-Label {
   display: block;
   font-family: $sprk-label-font-family;
@@ -11,6 +12,7 @@
   margin: $sprk-label-margin;
 }
 
+.sprk-b-Legend--disabled,
 .sprk-b-Label--disabled {
   color: $sprk-label-disabled-color;
 }
@@ -29,3 +31,5 @@
 .sprk-b-InputContainer__visibility-toggle .sprk-b-Label--inline {
   font-size: $sprk-visibility-control-label-font-size;
 }
+
+
