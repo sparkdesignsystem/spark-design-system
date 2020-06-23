@@ -14,7 +14,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
 @Component({
   selector: 'sprk-radio-group',
   template: `
-    <div [ngClass]="getClasses()">
+    <div [ngClass]="getClasses()" [attr.data-id]="idString">
       <ng-content select="[beforeSprkRadios]"></ng-content>
       <fieldset *ngIf="label; else sprkRadios" class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
@@ -48,6 +48,17 @@ export class SprkRadioGroupComponent implements AfterContentInit {
    */
   @Input()
   variant: 'huge' | undefined;
+
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
+  @Input()
+  idString: string;
 
   /**
    * This component can have an optional child element

@@ -11,7 +11,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
 @Component({
   selector: 'sprk-test',
   template: `
-    <sprk-radio-group>
+    <sprk-radio-group idString="test-id-str">
       <label sprkLabel>Label</label>
       <sprk-radio-item>
         <input type="radio" sprkRadioInput />
@@ -89,6 +89,10 @@ describe('SprkRadioGroupComponent', () => {
     expect(
       radioContainerElement.classList.contains('sprk-b-InputContainer--huge'),
     ).toBe(false);
+  });
+
+  it('should add the value of idString to data-id on the element', () => {
+    expect(radioContainerElement.getAttribute('data-id')).toBe('test-id-str');
   });
 
   it('should map any inputs inside radio-items to the field-error', () => {
