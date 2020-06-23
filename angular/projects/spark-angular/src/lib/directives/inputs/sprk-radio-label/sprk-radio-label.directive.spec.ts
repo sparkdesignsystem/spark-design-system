@@ -7,7 +7,9 @@ import { SprkRadioLabelDirective } from './sprk-radio-label.directive';
   template: `
     <label sprkRadioLabel idString="test-id-str">Label</label>
     <label sprkRadioLabel variant="huge">Label</label>
-    <label sprkRadioLabel isDisabled="true">Label</label>
+    <label sprkRadioLabel isDisabled="true" analyticsString="test-analytics-str"
+      >Label</label
+    >
   `,
 })
 class TestComponent {}
@@ -50,5 +52,11 @@ describe('Spark Helper Text Directive', () => {
 
   it('should add the value of idString to data-id on the element', () => {
     expect(labelElement.getAttribute('data-id')).toBe('test-id-str');
+  });
+
+  it('should add the value of analyticsString to data-analytics on the element', () => {
+    expect(disabledElement.getAttribute('data-analytics')).toBe(
+      'test-analytics-str',
+    );
   });
 });

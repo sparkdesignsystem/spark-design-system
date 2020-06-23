@@ -23,6 +23,14 @@ export class SprkRadioInputDirective {
   @Input()
   idString: string;
 
+  /**
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside
+   * libraries to capture data.
+   */
+  @Input()
+  analyticsString: string;
+
   @HostBinding('class.sprk-b-SelectionInput') selectClass = true;
   @HostBinding('class.sprk-b-Radio__input') radioClass = true;
   @HostBinding('class.sprk-b-Radio__input--huge')
@@ -32,5 +40,9 @@ export class SprkRadioInputDirective {
   @HostBinding('attr.data-id')
   get idStr() {
     return this.idString;
+  }
+  @HostBinding('attr.data-analytics')
+  get analyticsStr() {
+    return this.analyticsString;
   }
 }

@@ -21,6 +21,7 @@ import { SprkRadioInputDirective } from './sprk-radio-input.directive';
       sprkRadioInput
       variant="huge"
       idString="test-id-str"
+      analyticsString="test-analytics-str"
     />
   `,
 })
@@ -60,5 +61,11 @@ describe('SprkRadioInputDirective', () => {
 
   it('should add the value of idString to data-id on the element', () => {
     expect(itemElement.getAttribute('data-id')).toBe('test-id-str');
+  });
+
+  it('should add the value of analyticsString to data-analytics on the element', () => {
+    expect(itemElement.getAttribute('data-analytics')).toBe(
+      'test-analytics-str',
+    );
   });
 });

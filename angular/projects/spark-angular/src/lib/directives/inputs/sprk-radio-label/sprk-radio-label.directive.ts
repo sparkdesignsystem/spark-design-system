@@ -30,6 +30,14 @@ export class SprkRadioLabelDirective {
   @Input()
   idString: string;
 
+  /**
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside
+   * libraries to capture data.
+   */
+  @Input()
+  analyticsString: string;
+
   @HostBinding('attr.data-id')
   get idStr() {
     return this.idString;
@@ -43,5 +51,9 @@ export class SprkRadioLabelDirective {
   @HostBinding('class.sprk-b-Label--disabled')
   get disabled() {
     return this.isDisabled;
+  }
+  @HostBinding('attr.data-analytics')
+  get analyticsStr() {
+    return this.analyticsString;
   }
 }
