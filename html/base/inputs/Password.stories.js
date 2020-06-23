@@ -43,11 +43,13 @@ export const passwordInput = () => `
 
       <div
         class="
+          sprk-b-Checkbox
           sprk-b-SelectionContainer
           sprk-b-InputContainer__visibility-toggle
         "
       >
         <input
+          class="sprk-b-Checkbox__input"
           id="password-show-password"
           type="checkbox"
           data-id="password-show-password"
@@ -55,7 +57,7 @@ export const passwordInput = () => `
 
         <label
           for="password-show-password"
-          class="sprk-b-Label sprk-b-Label--inline"
+          class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
         >
           Show Password
         </label>
@@ -98,11 +100,13 @@ export const invalidPasswordInput = () => `
 
       <div
         class="
+          sprk-b-Checkbox
           sprk-b-SelectionContainer
           sprk-b-InputContainer__visibility-toggle
         "
       >
         <input
+          class="sprk-b-Checkbox__input"
           id="password-show-password"
           type="checkbox"
           data-id="password-show-password"
@@ -110,7 +114,7 @@ export const invalidPasswordInput = () => `
 
         <label
           for="password-show-password"
-          class="sprk-b-Label sprk-b-Label--inline"
+          class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
         >
           Show Password
         </label>
@@ -119,7 +123,17 @@ export const invalidPasswordInput = () => `
       <div
         class="sprk-b-ErrorContainer"
         id="password--error-container"
-      ></div>
+      >
+        <svg
+        class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
+        viewBox="0 0 64 64"
+        >
+          <use xlink:href="#exclamation-filled-small" />
+        </svg>
+        <div class="sprk-b-ErrorText">
+          There is an error on this field.
+        </div>
+      </div>
     </div>
   `;
 
@@ -150,11 +164,13 @@ export const disabledPasswordInput = () => `
 
       <div
         class="
+          sprk-b-Checkbox
           sprk-b-SelectionContainer
           sprk-b-InputContainer__visibility-toggle
         "
       >
         <input
+          class="sprk-b-Checkbox__input"
           id="password-show-password"
           type="checkbox"
           data-id="password-show-password"
@@ -163,7 +179,12 @@ export const disabledPasswordInput = () => `
 
         <label
           for="password-show-password"
-          class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline"
+          class="
+            sprk-b-Label
+            sprk-b-Label--disabled
+            sprk-b-Label--inline
+            sprk-b-Checkbox__label
+          "
         >
           Show Password
         </label>

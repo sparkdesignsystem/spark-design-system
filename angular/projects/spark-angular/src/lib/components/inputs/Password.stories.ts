@@ -15,6 +15,8 @@ import { SprkSelectionItemContainerComponent } from './sprk-selection-item-conta
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
+import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 
 export default {
   title: 'Components/Input/Password',
@@ -64,6 +66,8 @@ const modules = {
     SprkFieldErrorModule,
     SprkSelectionContainerModule,
     SprkSelectionItemContainerModule,
+    SprkSelectionInputModule,
+    SprkSelectionLabelModule,
   ],
 };
 

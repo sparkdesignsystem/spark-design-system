@@ -54,11 +54,13 @@ export const SSNInput = () => `
 
       <div
         class="
+          sprk-b-Checkbox
           sprk-b-SelectionContainer
           sprk-b-InputContainer__visibility-toggle
         "
       >
         <input
+          class="sprk-b-Checkbox__input"
           id="ssn-show-ssn"
           type="checkbox"
           data-id="ssn-show-ssn"
@@ -66,7 +68,7 @@ export const SSNInput = () => `
 
         <label
           for="ssn-show-ssn"
-          class="sprk-b-Label sprk-b-Label--inline"
+          class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
         >
           Show SSN
         </label>
@@ -107,11 +109,13 @@ export const invalidSSNInput = () => `
 
       <div
         class="
+          sprk-b-Checkbox
           sprk-b-SelectionContainer
           sprk-b-InputContainer__visibility-toggle
         "
       >
         <input
+          class="sprk-b-Checkbox__input"
           id="ssn-show-ssn"
           type="checkbox"
           data-id="ssn-show-ssn"
@@ -119,7 +123,7 @@ export const invalidSSNInput = () => `
 
         <label
           for="ssn-show-ssn"
-          class="sprk-b-Label sprk-b-Label--inline"
+          class="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
         >
           Show SSN
         </label>
@@ -171,11 +175,13 @@ export const disabledSSNInput = () => `
 
       <div
         class="
+          sprk-b-Checkbox
           sprk-b-SelectionContainer
           sprk-b-InputContainer__visibility-toggle
         "
       >
         <input
+          class="sprk-b-Checkbox__input"
           id="ssn-show-ssn"
           type="checkbox"
           data-id="ssn-show-ssn"
@@ -184,7 +190,12 @@ export const disabledSSNInput = () => `
 
         <label
           for="ssn-show-ssn"
-          class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline"
+          class="
+            sprk-b-Label
+            sprk-b-Label--disabled
+            sprk-b-Label--inline
+            sprk-b-Checkbox__label
+          "
         >
           Show SSN
         </label>
