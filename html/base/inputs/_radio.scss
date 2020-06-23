@@ -107,7 +107,7 @@
       }
     }
   }
-  
+
   .sprk-b-Radio__label::before {
     height: $sprk-radio-input-huge-outer-circle-width;
     width: $sprk-radio-input-huge-outer-circle-height;
@@ -152,4 +152,10 @@
       background-color: $sprk-radio-input-huge-disabled-background-color;
     }
   }
+}
+
+// Anytime we have a huge radio
+// inside a stack, we remove the margin bottom.
+.sprk-o-Stack__item .sprk-b-Radio--huge {
+  margin-bottom: 0;
 }

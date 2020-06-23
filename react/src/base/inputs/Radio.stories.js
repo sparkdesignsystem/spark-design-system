@@ -39,8 +39,8 @@ The version that uses <SprkSelectionInput> will be permanently removed
 in our Fall 2020 release.
 - To update to the new version, replace radios implemented by
 the <code>SprkSelectionInput</code> component with our
-new implementation using <code>SprkCheckboxGroup</code>
-and <code>SprkCheckbox</code> components.
+new implementation using <code>SprkRadioGroup</code>
+and <code>SprkRadio</code> components.
     `,
   },
 };
@@ -111,9 +111,9 @@ invalidRadio.story = {
 };
 
 export const disabledRadio = () => (
-  <SprkRadioGroup disabled>
+  <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend disabled>Group Label Name</SprkLegend>
       <SprkRadio name="radio" disabled>
         Radio Item 1
       </SprkRadio>
@@ -153,6 +153,33 @@ export const huge = () => (
 
 huge.story = {
   name: 'Huge',
+  parameters: {
+    jest: ['SprkRadioGroup'],
+  },
+};
+
+export const hugeHelperText = () => (
+  <SprkRadioGroup variant="huge">
+    <SprkFieldset>
+      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkRadio name="radio" variant="huge">
+        Radio Item 1
+      </SprkRadio>
+      <SprkRadio name="radio" variant="huge">
+        Radio Item 2
+      </SprkRadio>
+      <SprkRadio name="radio" variant="huge">
+        Radio Item 3
+      </SprkRadio>
+    </SprkFieldset>
+    <SprkHelperText>
+      Optional helper text, used to clarify the field&#x27;s intent
+    </SprkHelperText>
+  </SprkRadioGroup>
+);
+
+hugeHelperText.story = {
+  name: 'Huge Helper Text',
   parameters: {
     jest: ['SprkRadioGroup'],
   },
