@@ -218,5 +218,7 @@ export { SprkHeadingDirective } from './lib/directives/sprk-heading/sprk-heading
 export { SprkHeadingModule } from './lib/directives/sprk-heading/sprk-heading.module';
 export { SprkBoxDirective } from './lib/directives/sprk-box/sprk-box.directive';
 export { SprkBoxModule } from './lib/directives/sprk-box/sprk-box.module';
+export { SprkRadioItemComponent } from './lib/components/inputs/sprk-radio-item/sprk-radio-item.component';
 export { SprkRadioItemModule } from './lib/components/inputs/sprk-radio-item/sprk-radio-item.module';
 export { SprkRadioGroupModule } from './lib/components/inputs/sprk-radio-group/sprk-radio-group.module';
+export { SprkRadioGroupComponent } from './lib/components/inputs/sprk-radio-group/sprk-radio-group.component';
