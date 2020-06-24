@@ -115,7 +115,7 @@ import {
               <div *ngIf="link.subNav">
                 <sprk-dropdown
                   [choices]="link.subNav"
-                  additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                  additionalTriggerClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   additionalClasses="sprk-u-TextAlign--left"
                   triggerIconType="chevron-down"
                   [analyticsString]="link.analyticsString"
@@ -125,7 +125,7 @@ import {
               <div *ngIf="!link.subNav">
                 <a
                   sprkLink
-                  variant="plain"
+                  variant="simple"
                   [analyticsString]="link.analyticsString"
                   class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   [attr.href]="link.href"

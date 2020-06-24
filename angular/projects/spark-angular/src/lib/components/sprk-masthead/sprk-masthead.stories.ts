@@ -193,7 +193,7 @@ export const defaultStory = () => ({
       <a
         sprkLink
         navItem-slot
-        variant="plain"
+        variant="simple"
         class="sprk-c-Masthead__link"
         href="#nogo"
       >
@@ -210,7 +210,7 @@ export const defaultStory = () => ({
           <li>
             <a
               sprkLink
-              variant="plain"
+              variant="simple"
               href="#nogo"
               class="sprk-c-Masthead__link"
             >
@@ -220,7 +220,7 @@ export const defaultStory = () => ({
           <li>
             <a
               sprkLink
-              variant="plain"
+              variant="simple"
               href="#nogo"
               class="sprk-c-Masthead__link"
             >
@@ -236,7 +236,7 @@ export const defaultStory = () => ({
         <li>
           <a
             sprkLink
-            variant="plain"
+            variant="simple"
             href="#nogo"
             class="sprk-c-Masthead__link"
           >
@@ -246,7 +246,7 @@ export const defaultStory = () => ({
         <li>
           <a
             sprkLink
-            variant="plain"
+            variant="simple"
             href="#nogo"
             class="sprk-c-Masthead__link"
           >
@@ -257,7 +257,7 @@ export const defaultStory = () => ({
           <a
             sprkLink
             href="#nogo"
-            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+            class="sprk-c-Button sprk-c-Button--quaternary sprk-c-Button--compact"
           >
             Sign In
           </a>
@@ -439,7 +439,7 @@ export const extended = () => ({
       <a
         sprkLink
         navItem-slot
-        variant="plain"
+        variant="simple"
         class="sprk-c-Masthead__link"
         href="#nogo"
       >
@@ -486,7 +486,7 @@ export const extended = () => ({
         <li>
           <a
             sprkLink
-            variant="plain"
+            variant="simple"
             class="sprk-c-Masthead__link"
             href="#nogo"
           >
@@ -499,7 +499,7 @@ export const extended = () => ({
             dropdownType="simple"
             title="My Account"
             triggerIconType="user-account"
-            additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+            additionalTriggerClasses="sprk-b-Link--simple sprk-c-Masthead__link"
             additionalIconClasses="sprk-c-Icon--l"
             additionalClasses="sprk-u-Right--zero sprk-u-mrm"
             screenReaderText="User Account"
