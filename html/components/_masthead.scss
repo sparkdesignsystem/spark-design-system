@@ -210,7 +210,8 @@
   &:hover,
   &:active,
   &:focus {
-    color: $sprk-big-nav-link-color;
+    font-weight: $sprk-big-nav-link-font-weight;
+    color: $sprk-masthead-link-hover-color;
   }
 }
 
@@ -231,16 +232,6 @@
   position: relative;
   text-align: center;
   white-space: nowrap;
-
-  @include HoverLine($sprk-hoverline-color: transparent, $sprk-hoverline-width: 100%, $sprk-hoverline-height: 2px);
-
-  display: block;
-
-  &:active,
-  &:focus,
-  &:hover {
-    @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 100%, $sprk-hoverline-height: 2px);
-  }
 }
 
 /// Adds an active state color and bold
@@ -256,7 +247,17 @@
 .sprk-c-Masthead__big-nav-item:focus-within,
 .sprk-c-Masthead__big-nav-item--open,
 .sprk-c-Masthead__big-nav-item--active {
-  @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 100%, $sprk-hoverline-height: 2px);
+  .sprk-c-Masthead__link--big-nav {
+    color: $sprk-big-nav-active-color;
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: $sprk-link-simple-hover-after-left;
+      width: $sprk-link-simple-hover-after-width;
+      border-bottom: $sprk-link-simple-hover-border-bottom;
+    }
+  }
 }
 
 // Fixed container that covers entire page

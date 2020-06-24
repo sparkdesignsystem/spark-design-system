@@ -7,9 +7,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Masthead',
-  decorators: [
-    story => `<div>${story()}</div><div data-sprk-main></div>`,
-  ],
+  decorators: [(story) => `<div>${story()}</div><div data-sprk-main></div>`],
   parameters: {
     docs: { iframeHeight: 300 },
     info: `
@@ -133,7 +131,7 @@ export const defaultStory = () => {
           <a
             class="
               sprk-b-Link
-              sprk-b-Link--plain
+              sprk-b-Link--simple
               sprk-c-Masthead__link
             "
             href="#nogo"
@@ -167,7 +165,7 @@ export const defaultStory = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                 "
                 href="#nogo"
@@ -180,7 +178,7 @@ export const defaultStory = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                 "
                 href="#nogo"
@@ -202,7 +200,7 @@ export const defaultStory = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                 "
                 href="tel:555-555-5555"
@@ -215,7 +213,7 @@ export const defaultStory = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                 "
                 href="#nogo"
@@ -228,7 +226,7 @@ export const defaultStory = () => {
               <a
                 class="
                     sprk-c-Button
-                    sprk-c-Button--secondary
+                    sprk-c-Button--quaternary
                     sprk-c-Button--compact
                   "
                   href="#nogo"
@@ -495,7 +493,7 @@ export const extended = () => {
           <a
             class="
               sprk-b-Link
-              sprk-b-Link--plain
+              sprk-b-Link--simple
               sprk-c-Masthead__link
             "
             href="#nogo"
@@ -654,7 +652,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                 "
                 href="#nogo"
@@ -665,7 +663,7 @@ export const extended = () => {
 
             <li>
               <a
-                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+                class="sprk-b-Link sprk-b-Link--simple sprk-c-Masthead__link"
                 href="#nogo"
                 data-sprk-dropdown-trigger="dropdown02"
                 aria-haspopup="true"
@@ -748,7 +746,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                   sprk-c-Masthead__link--big-nav
                 "
@@ -805,7 +803,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                   sprk-c-Masthead__link--big-nav
                 "
@@ -819,7 +817,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                   sprk-c-Masthead__link--big-nav
                 "
@@ -833,7 +831,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                   sprk-c-Masthead__link--big-nav
                 "
@@ -890,7 +888,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                   sprk-c-Masthead__link--big-nav
                 "
