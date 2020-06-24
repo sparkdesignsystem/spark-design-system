@@ -104,6 +104,25 @@ tertiary.story = {
   },
 };
 
+export const quaternary = () => ({
+  moduleMetadata: modules,
+  template: `
+    <button
+      variant="quaternary"
+      idString="button-quaternary"
+      sprkButton
+    >
+      Button
+    </button>
+  `,
+});
+
+quaternary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
+  },
+};
+
 export const disabled = () => ({
   moduleMetadata: modules,
   template: `
@@ -158,6 +177,26 @@ export const disabledTertiary = () => ({
 });
 
 disabledTertiary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const disabledQuaternary = () => ({
+  moduleMetadata: modules,
+  template: `
+    <button
+      disabled
+      idString="button-disabled-quaternary"
+      sprkButton
+      variant="quaternary"
+    >
+      Button
+    </button>
+  `,
+});
+
+disabledQuaternary.story = {
   parameters: {
     jest: ['sprk-button.directive'],
   },
@@ -224,6 +263,28 @@ export const loadingTertiary = () => {
 };
 
 loadingTertiary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const loadingQuaternary = () => {
+  return {
+    moduleMetadata: modules,
+    template: `
+      <button
+        variant="quaternary"
+        idString="button-loading-quaternary"
+        sprkButton
+        [isSpinning]="true"
+      >
+        Button
+      </button>
+    `,
+  };
+};
+
+loadingQuaternary.story = {
   parameters: {
     jest: ['sprk-button.directive'],
   },

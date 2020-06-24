@@ -32,6 +32,13 @@ describe('SprkButton:', () => {
     );
   });
 
+  it('should display a button element with correct classes when variant is quaternary', () => {
+    const wrapper = shallow(<SprkButton variant="quaternary" />);
+    expect(wrapper.find('button').hasClass('sprk-c-Button--quaternary')).toBe(
+      true,
+    );
+  });
+
   it('if loading is not set, should not render the spinner', () => {
     const wrapper = mount(<SprkButton />);
     expect(wrapper.find('.sprk-c-Spinner').length).toBe(0);
@@ -74,6 +81,11 @@ describe('SprkButton:', () => {
 
   it('if loading is set and variant is tertiary, should render the dark spinner', () => {
     const wrapper = mount(<SprkButton loading variant="tertiary" />);
+    expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(1);
+  });
+
+  it('if loading is set and variant is quaternary, should render the dark spinner', () => {
+    const wrapper = mount(<SprkButton loading variant="quaternary" />);
     expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(1);
   });
 
