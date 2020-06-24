@@ -122,6 +122,28 @@
   }
 }
 
+.sprk-c-Button--quaternary {
+  background-color: $sprk-btn-quaternary-background-color;
+  box-shadow: none;
+  border: $sprk-btn-border-width $sprk-btn-border-style
+    $sprk-btn-quaternary-border-color;
+  color: $sprk-btn-quaternary-text-color;
+  letter-spacing: $sprk-btn-quaternary-letter-spacing;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $sprk-btn-quaternary-hover-background-color;
+    color: $sprk-btn-quaternary-hover-text-color;
+    box-shadow: $sprk-btn-quaternary-hover-shadow;
+    border-color: $sprk-btn-quaternary-hover-border-color;
+  }
+
+  &:visited {
+    color: $sprk-btn-quaternary-text-color;
+  }
+}
+
 /*
 Removes extra padding and border in Firefox when using `input type="submit"`
 */
@@ -171,4 +193,13 @@ Removes extra padding and border in Firefox when using `input type="submit"`
     $sprk-btn-tertiary-disabled-border-color;
   color: $sprk-btn-tertiary-disabled-text-color;
   background-color: $sprk-btn-tertiary-disabled-background-color;
+}
+
+.sprk-c-Button--quaternary.sprk-is-Disabled,
+.sprk-c-Button--quaternary[disabled] {
+  box-shadow: $sprk-btn-quaternary-disabled-shadow;
+  border: $sprk-btn-quaternary-disabled-border-width $sprk-btn-quaternary-disabled-border-style
+    $sprk-btn-quaternary-disabled-border-color;
+  color: $sprk-btn-quaternary-disabled-text-color;
+  background-color: $sprk-btn-quaternary-disabled-background-color;
 }

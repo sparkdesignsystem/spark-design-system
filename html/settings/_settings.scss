@@ -659,6 +659,14 @@ $sprk-btn-tertiary-disabled-border-color: $sprk-black-tint-50 !default;
 $sprk-btn-tertiary-disabled-border-style: $sprk-btn-disabled-border-style !default;
 /// The border width of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-border-width: $sprk-btn-disabled-border-width !default;
+/// The box shadow of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-shadow: none !default;
+/// The border value of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-border-color: $sprk-black-tint-50 !default;
+/// The border style of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-border-style: $sprk-btn-disabled-border-style !default;
+/// The border width of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-border-width: $sprk-btn-disabled-border-width !default;
 
 // Secondary
 /// The background color of the Secondary Button component.
@@ -676,7 +684,7 @@ $sprk-btn-secondary-hover-border-color: $sprk-btn-secondary-hover-background-col
 /// The box shadow of the Secondary Button component on hover.
 $sprk-btn-secondary-hover-shadow: $sprk-btn-shadow !default;
 /// The letter spacing of the Secondary Button component.
-$sprk-btn-secondary-letter-spacing: 0.62px !default;
+$sprk-btn-secondary-letter-spacing: $sprk-btn-letter-spacing !default;
 
 // Tertiary
 /// The background color of the Tertiary Button component.
@@ -698,7 +706,29 @@ $sprk-btn-tertiary-disabled-background-color: transparent !default;
 /// The text color of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-text-color: $sprk-black-tint-50 !default;
 /// The letter spacing of the Tertiary Button component.
-$sprk-btn-tertiary-letter-spacing: 0.62px !default;
+$sprk-btn-tertiary-letter-spacing: $sprk-btn-letter-spacing !default;
+
+// Quaternary
+/// The background color of the Quaternary Button component.
+$sprk-btn-quaternary-background-color: transparent !default;
+/// The border of the Quaternary Button component.
+$sprk-btn-quaternary-border-color: $sprk-black-tint-50 !default;
+/// The text color of the Quaternary Button component.
+$sprk-btn-quaternary-text-color: $sprk-black !default;
+/// The border color of the Quaternary Button component on hover.
+$sprk-btn-quaternary-hover-border-color: $sprk-black !default;
+/// The text color of the Quaternary Button component on hover.
+$sprk-btn-quaternary-hover-text-color: $sprk-black !default;
+/// The background color of the Quaternary Button component on hover.
+$sprk-btn-quaternary-hover-background-color: transparent !default;
+/// The box shadow of the Quaternary Button component on hover.
+$sprk-btn-quaternary-hover-shadow: $sprk-btn-shadow !default;
+/// The background color of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-background-color: transparent !default;
+/// The text color of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-text-color: $sprk-black-tint-50 !default;
+/// The letter spacing of the Quaternary Button component.
+$sprk-btn-quaternary-letter-spacing: $sprk-btn-letter-spacing !default;
 
 //
 // Links
