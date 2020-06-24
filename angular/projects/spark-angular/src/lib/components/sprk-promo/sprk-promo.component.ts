@@ -289,6 +289,7 @@ export class SprkPromoComponent {
     const buttonClasses: object = {
       secondary: 'sprk-c-Button--secondary',
       tertiary: 'sprk-c-Button--tertiary',
+      quaternary: 'sprk-c-Button--quaternary',
     };
 
     if (this.buttonVariant) {

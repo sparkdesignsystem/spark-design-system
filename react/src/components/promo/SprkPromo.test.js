@@ -242,6 +242,12 @@ describe('SprkPromo:', () => {
     expect(button.hasClass('sprk-c-Button--tertiary')).toBe(true);
   });
 
+  it('should render a button with the correct class when buttonVariant is quaternary', () => {
+    const wrapper = mount(<SprkPromo cta="button" buttonVariant="quaternary" />);
+    const button = wrapper.find('a.sprk-c-Button');
+    expect(button.hasClass('sprk-c-Button--quaternary')).toBe(true);
+  });
+
   // Link CTA
 
   it('should render a link when cta is set to link', () => {

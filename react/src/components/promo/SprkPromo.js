@@ -210,7 +210,12 @@ SprkPromo.propTypes = {
    * If the `cta` is set to `button` then
    * this is the variant for the button.
    */
-  buttonVariant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  buttonVariant: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary',
+    'quaternary',
+  ]),
   /**
    * The type of element to use
    * for the Promo Call to Action. If this property

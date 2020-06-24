@@ -111,6 +111,16 @@ describe('SprkPromoComponent', () => {
     ).toEqual('sprk-c-Button sprk-c-Button--tertiary');
   });
 
+
+  it('should add correct additional class to button when buttonVariant is quaternary', () => {
+    component.cta = 'button';
+    component.buttonVariant = 'quaternary';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Button').classList.toString(),
+    ).toEqual('sprk-c-Button sprk-c-Button--quaternary');
+  });
+
   it('should not add additional classes to button when buttonVariant has no value', () => {
     component.cta = 'button';
     fixture.detectChanges();
