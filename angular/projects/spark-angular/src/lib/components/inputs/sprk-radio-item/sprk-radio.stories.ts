@@ -24,6 +24,10 @@ import { SprkRadioLabelDirective } from '../../../directives/inputs/sprk-radio-l
 import { SprkIconModule } from '../../sprk-icon/sprk-icon.module';
 import { SprkStackItemModule } from '../../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkStackModule } from '../../sprk-stack/sprk-stack.module';
+import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.directive';
+import { SprkLegendDirective } from '../../../directives/inputs/sprk-legend/sprk-legend.directive';
+import { SprkFieldsetModule } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.module';
+import { SprkLegendModule } from '../../../directives/inputs/sprk-legend/sprk-legend.module';
 
 export default {
   title: 'Components/Input/Radio',
@@ -31,6 +35,8 @@ export default {
   subcomponents: {
     SprkRadioGroupComponent,
     SprkLabelDirective,
+    SprkLegendDirective,
+    SprkFieldsetDirective,
     SprkRadioLabelDirective,
     SprkFieldErrorDirective,
     SprkHelperTextDirective,
@@ -65,6 +71,8 @@ const modules = {
     SprkRadioItemModule,
     SprkRadioInputModule,
     SprkRadioLabelModule,
+    SprkFieldsetModule,
+    SprkLegendModule,
     SprkLabelModule,
     SprkFieldErrorModule,
     SprkHelperTextModule,
@@ -82,61 +90,65 @@ export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-radio-group>
-     <label sprkLabel>Radio Group Label</label>
-     <sprk-radio-item>
-       <input
-          type="radio"
-          value="1"
-          name="radio_input"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          data-id="radio-1"
-          id="radio-1"
-        >
-        <label
-          for="radio-1"
-          sprkRadioLabel
-        >
-          Item 1
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item>
-       <input
-          type="radio"
-          value="2"
-          name="radio_input"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          data-id="radio-2"
-          id="radio-2"
-        >
-        <label
-          for="radio-2"
-          sprkRadioLabel
-        >
+     <fieldset sprkFieldset>
+       <legend sprkLegend>
+         Radio Group Label
+       </legend>
+       <sprk-radio-item>
+         <input
+            type="radio"
+            value="1"
+            name="radio_input"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            data-id="radio-1"
+            id="radio-1"
+          >
+          <label
+            for="radio-1"
+            sprkRadioLabel
+          >
+            Item 1
+          </label>
+       </sprk-radio-item>
+       <sprk-radio-item>
+         <input
+           type="radio"
+           value="2"
+           name="radio_input"
+           [(ngModel)]="radio_input"
+           sprkRadioInput
+           #radioInput="ngModel"
+           data-id="radio-2"
+           id="radio-2"
+         >
+         <label
+           for="radio-2"
+           sprkRadioLabel
+         >
           Item 2
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item>
-       <input
-          type="radio"
-          value="3"
-          name="radio_input"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          data-id="radio-3"
-          id="radio-3"
-        >
-        <label
-          for="radio-3"
-          sprkRadioLabel
-        >
-          Item 3
-        </label>
-     </sprk-radio-item>
+         </label>
+       </sprk-radio-item>
+       <sprk-radio-item>
+         <input
+           type="radio"
+           value="3"
+           name="radio_input"
+           [(ngModel)]="radio_input"
+           sprkRadioInput
+           #radioInput="ngModel"
+           data-id="radio-3"
+           id="radio-3"
+         >
+         <label
+           for="radio-3"
+           sprkRadioLabel
+         >
+           Item 3
+         </label>
+       </sprk-radio-item>
+     </fieldset>
    </sprk-radio-group>
   `,
 });
@@ -147,6 +159,8 @@ defaultStory.story = {
     jest: [
       'sprk-radio-input.directive',
       'sprk-radio-label.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
       'sprk-label.directive',
       'sprk-radio-item.component',
       'sprk-radio-group.component',
@@ -158,60 +172,63 @@ export const invalidRadio = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-radio-group>
-      <label sprkLabel>Radio Group Label</label>
-      <sprk-radio-item>
-       <input
-          type="radio"
-          value="1"
-          name="radio_input_invalid"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          id="invalid-radio-1"
-        >
-        <label
-          for="invalid-radio-1"
-          sprkRadioLabel
-        >
-          Item 1
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item>
-       <input
-          type="radio"
-          value="2"
-          name="radio_input_invalid"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          id="invalid-radio-2"
-        >
-        <label
-          for="invalid-radio-2"
-          sprkRadioLabel
-        >
-          Item 2
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item>
-       <input
-          type="radio"
-          value="3"
-          name="radio_input_invalid"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          data-id="radio-3"
-          id="invalid-radio-3"
-        >
-        <label
-          for="invalid-radio-3"
-          sprkRadioLabel
-        >
-          Item 3
-        </label>
-     </sprk-radio-item>
-
+     <fieldset sprkFieldset>
+       <legend sprkLegend>
+         Radio Group Label
+       </legend>
+       <sprk-radio-item>
+         <input
+            type="radio"
+            value="1"
+            name="radio_input_invalid"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            id="invalid-radio-1"
+          >
+          <label
+            for="invalid-radio-1"
+            sprkRadioLabel
+          >
+            Item 1
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item>
+          <input
+            type="radio"
+            value="2"
+            name="radio_input_invalid"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            id="invalid-radio-2"
+          >
+          <label
+            for="invalid-radio-2"
+            sprkRadioLabel
+          >
+            Item 2
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item>
+          <input
+            type="radio"
+            value="3"
+            name="radio_input_invalid"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            data-id="radio-3"
+            id="invalid-radio-3"
+          >
+          <label
+            for="invalid-radio-3"
+            sprkRadioLabel
+          >
+            Item 3
+          </label>
+        </sprk-radio-item>
+      </fieldset>
       <span sprkFieldError>
         <sprk-icon
           iconType="exclamation-filled-small"
@@ -231,6 +248,8 @@ invalidRadio.story = {
     jest: [
       'sprk-radio-input.directive',
       'sprk-radio-label.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
       'sprk-label.directive',
       'sprk-radio-item.component',
       'sprk-radio-group.component',
@@ -243,59 +262,63 @@ export const defaultHelperText = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-radio-group>
-      <label sprkLabel>Radio Group Label</label>
-      <sprk-radio-item>
-       <input
-          type="radio"
-          value="1"
-          name="radio_input_invalid"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          id="invalid-radio-1"
-        >
-        <label
-          for="invalid-radio-1"
-          sprkRadioLabel
-        >
-          Item 1
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item>
-       <input
-          type="radio"
-          value="2"
-          name="radio_input_invalid"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          id="invalid-radio-2"
-        >
-        <label
-          for="invalid-radio-2"
-          sprkRadioLabel
-        >
-          Item 2
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item>
-       <input
-          type="radio"
-          value="3"
-          name="radio_input_invalid"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          data-id="radio-3"
-          id="invalid-radio-3"
-        >
-        <label
-          for="invalid-radio-3"
-          sprkRadioLabel
-        >
-          Item 3
-        </label>
-     </sprk-radio-item>
+      <fieldset sprkFieldset>
+        <legend sprkLegend>
+          Radio Group Label
+        </legend>
+        <sprk-radio-item>
+          <input
+              type="radio"
+              value="1"
+              name="radio_input_invalid"
+              [(ngModel)]="radio_input"
+              sprkRadioInput
+              #radioInput="ngModel"
+              id="invalid-radio-1"
+            >
+          <label
+            for="invalid-radio-1"
+            sprkRadioLabel
+          >
+            Item 1
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item>
+          <input
+            type="radio"
+            value="2"
+            name="radio_input_invalid"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            id="invalid-radio-2"
+          >
+          <label
+            for="invalid-radio-2"
+            sprkRadioLabel
+          >
+            Item 2
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item>
+          <input
+            type="radio"
+            value="3"
+            name="radio_input_invalid"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            data-id="radio-3"
+            id="invalid-radio-3"
+          >
+          <label
+            for="invalid-radio-3"
+            sprkRadioLabel
+          >
+            Item 3
+          </label>
+        </sprk-radio-item>
+      </fieldset>
       <p sprkHelperText>
         Optional helper text, used to clarify the
         field's intent.
@@ -321,65 +344,69 @@ export const disabledRadio = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-radio-group>
-      <label class="sprk-b-Label--disabled" sprkLabel>Radio Group Label</label>
+      <fieldset sprkFieldset>
+        <legend sprkLegend isDisabled="true">
+          Radio Group Label
+        </legend>
+        <sprk-radio-item>
+          <input
+            type="radio"
+            value="1"
+            name="radio_input"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            id="invalid-radio-1"
+            disabled
+          >
+          <label
+            for="disabled-radio-1"
+            sprkRadioLabel
+            isDisabled="true"
+          >
+            Item 1
+          </label>
+      </sprk-radio-item>
       <sprk-radio-item>
-       <input
-          type="radio"
-          value="1"
-          name="radio_input"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          id="invalid-radio-1"
-          disabled
-        >
-        <label
-          for="disabled-radio-1"
-          sprkRadioLabel
-          isDisabled="true"
-        >
-          Item 1
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item>
-       <input
-          type="radio"
-          value="2"
-          name="radio_input"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          id="disabled-radio-2"
-          disabled
-        >
-        <label
-          for="disabled-radio-2"
-          sprkRadioLabel
-          isDisabled="true"
-        >
-          Item 2
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item>
-       <input
-          type="radio"
-          value="3"
-          name="radio_input"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          #radioInput="ngModel"
-          data-id="radio-3"
-          id="disabled-radio-3"
-          disabled
-        >
-        <label
-          for="disabled-radio-3"
-          sprkRadioLabel
-          isDisabled="true"
-        >
-          Item 3
-        </label>
-     </sprk-radio-item>
+        <input
+            type="radio"
+            value="2"
+            name="radio_input"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            id="disabled-radio-2"
+            disabled
+          >
+          <label
+            for="disabled-radio-2"
+            sprkRadioLabel
+            isDisabled="true"
+          >
+            Item 2
+          </label>
+      </sprk-radio-item>
+      <sprk-radio-item>
+        <input
+            type="radio"
+            value="3"
+            name="radio_input"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            data-id="radio-3"
+            id="disabled-radio-3"
+            disabled
+          >
+          <label
+            for="disabled-radio-3"
+            sprkRadioLabel
+            isDisabled="true"
+          >
+            Item 3
+          </label>
+        </sprk-radio-item>
+      </fieldset>
     </sprk-radio-group>
   `,
 });
@@ -390,6 +417,8 @@ disabledRadio.story = {
     jest: [
       'sprk-radio-input.directive',
       'sprk-radio-label.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
       'sprk-label.directive',
       'sprk-radio-item.component',
       'sprk-radio-group.component',
@@ -401,65 +430,69 @@ export const huge = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-radio-group variant="huge">
-      <label sprkLabel>Radio Group Label</label>
-      <sprk-radio-item variant="huge">
-       <input
-          type="radio"
-          value="1"
-          name="radio_input_huge"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          variant="huge"
-          #radioInput="ngModel"
-          id="huge-radio-1"
-        >
-        <label
-          for="huge-radio-1"
-          sprkRadioLabel
-          variant="huge"
-        >
-          Item 1
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item variant="huge">
-       <input
-         type="radio"
-         value="2"
-         name="radio_input_huge"
-         [(ngModel)]="radio_input"
-         sprkRadioInput
-         variant="huge"
-         #radioInput="ngModel"
-         id="huge-radio-2"
-       >
-        <label
-          for="huge-radio-2"
-          sprkRadioLabel
-          variant="huge"
-        >
-          Item 2
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item variant="huge">
-       <input
-          type="radio"
-          value="3"
-          name="huge"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          variant="huge"
-          #radioInput="ngModel"
-          data-id="radio-3"
-          id="huge-radio-3"
-        >
-        <label
-          for="huge-radio-3"
-          sprkRadioLabel
-          variant="huge"
-        >
-          Item 3
-        </label>
-     </sprk-radio-item>
+      <fieldset sprkFieldset>
+        <legend sprkLegend>
+          Radio Group Label
+        </legend>
+        <sprk-radio-item variant="huge">
+          <input
+            type="radio"
+            value="1"
+            name="radio_input_huge"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            variant="huge"
+            #radioInput="ngModel"
+            id="huge-radio-1"
+          >
+          <label
+            for="huge-radio-1"
+            sprkRadioLabel
+            variant="huge"
+          >
+            Item 1
+          </label>
+       </sprk-radio-item>
+       <sprk-radio-item variant="huge">
+         <input
+           type="radio"
+           value="2"
+           name="radio_input_huge"
+           [(ngModel)]="radio_input"
+           sprkRadioInput
+           variant="huge"
+           #radioInput="ngModel"
+           id="huge-radio-2"
+         >
+         <label
+           for="huge-radio-2"
+           sprkRadioLabel
+           variant="huge"
+         >
+            Item 2
+         </label>
+       </sprk-radio-item>
+       <sprk-radio-item variant="huge">
+        <input
+            type="radio"
+            value="3"
+            name="huge"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            variant="huge"
+            #radioInput="ngModel"
+            data-id="radio-3"
+            id="huge-radio-3"
+          >
+          <label
+            for="huge-radio-3"
+            sprkRadioLabel
+            variant="huge"
+          >
+            Item 3
+          </label>
+       </sprk-radio-item>
+     </fieldset>
    </sprk-radio-group>
   `,
 });
@@ -470,6 +503,8 @@ huge.story = {
     jest: [
       'sprk-radio-input.directive',
       'sprk-radio-label.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
       'sprk-label.directive',
       'sprk-radio-item.component',
       'sprk-radio-group.component',
@@ -481,64 +516,68 @@ export const hugeInvalid = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-radio-group variant="huge">
-      <label sprkLabel>Radio Group Label</label>
-      <sprk-radio-item variant="huge">
-       <input
-         type="radio"
-         value="1"
-         name="radio_input_huge-invalid"
-         [(ngModel)]="radio_input"
-         sprkRadioInput
-         variant="huge"
-         #radioInput="ngModel"
-         id="huge-invalid-radio-1"
-        >
-        <label
-          for="huge-invalid-radio-1"
-          sprkRadioLabel
-          variant="huge"
-        >
-          Item 1
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item variant="huge">
-       <input
-          type="radio"
-          value="2"
-          name="radio_input_huge-invalid"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          variant="huge"
-          #radioInput="ngModel"
-          id="huge-invalid-radio-2"
-        >
-        <label
-          for="huge-invalid-radio-2"
-          sprkRadioLabel
-          variant="huge"
-        >
-          Item 2
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item variant="huge">
-       <input
-          type="radio"
-          value="3"
-          name="huge"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          variant="huge"
-          #radioInput="ngModel"
-          data-id="radio-3"
-          id="huge-invalid-radio-3"
-        >
-        <label
-          sprkRadioLabel
-          variant="huge"
-        >
-          Item 3
-        </label>
-     </sprk-radio-item>
+      <fieldset sprkFieldset>
+        <legend sprkLegend>
+          Radio Group Label
+        </legend>
+        <sprk-radio-item variant="huge">
+          <input
+            type="radio"
+            value="1"
+            name="radio_input_huge-invalid"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            variant="huge"
+            #radioInput="ngModel"
+            id="huge-invalid-radio-1"
+          >
+          <label
+            for="huge-invalid-radio-1"
+            sprkRadioLabel
+            variant="huge"
+          >
+            Item 1
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item variant="huge">
+          <input
+            type="radio"
+            value="2"
+            name="radio_input_huge-invalid"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            variant="huge"
+            #radioInput="ngModel"
+            id="huge-invalid-radio-2"
+          >
+          <label
+            for="huge-invalid-radio-2"
+            sprkRadioLabel
+            variant="huge"
+          >
+            Item 2
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item variant="huge">
+          <input
+            type="radio"
+            value="3"
+            name="huge"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            variant="huge"
+            #radioInput="ngModel"
+            data-id="radio-3"
+            id="huge-invalid-radio-3"
+          >
+          <label
+            sprkRadioLabel
+            variant="huge"
+          >
+            Item 3
+          </label>
+        </sprk-radio-item>
+      </fieldset>
 
      <span sprkFieldError>
         <sprk-icon
@@ -559,6 +598,8 @@ hugeInvalid.story = {
     jest: [
       'sprk-radio-input.directive',
       'sprk-radio-label.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
       'sprk-label.directive',
       'sprk-radio-item.component',
       'sprk-radio-group.component',
@@ -570,70 +611,74 @@ export const hugeDisabled = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-radio-group variant="huge">
-      <label sprkLabel>Radio Group Label</label>
-      <sprk-radio-item variant="huge">
-       <input
-          type="radio"
-          value="1"
-          name="radio_input"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          variant="huge"
-          #radioInput="ngModel"
-          id="huge-invalid-radio-1"
-          disabled
-        >
-        <label
-          for="huge-invalid-radio-1"
-          sprkRadioLabel
-          isDisabled="true"
-          variant="huge"
-        >
-          Item 1
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item variant="huge">
-       <input
-          type="radio"
-          value="2"
-          name="radio_input_huge"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          variant="huge"
-          #radioInput="ngModel"
-          id="huge-invalid-radio-2"
-          disabled
-        >
-        <label
-          for="huge-invalid-radio-2"
-          sprkRadioLabel
-          isDisabled="true"
-          variant="huge"
-        >
-          Item 2
-        </label>
-     </sprk-radio-item>
-     <sprk-radio-item variant="huge">
-       <input
-          type="radio"
-          value="3"
-          name="huge"
-          [(ngModel)]="radio_input"
-          sprkRadioInput
-          variant="huge"
-          #radioInput="ngModel"
-          id="huge-disabled-radio-3"
-          disabled
-        >
-        <label
-          for="huge-disabled-radio-3"
-          sprkRadioLabel
-          isDisabled="true"
-          variant="huge"
-        >
-          Item 3
-        </label>
-     </sprk-radio-item>
+      <fieldset sprkFieldset>
+        <legend sprkLegend isDisabled="true">
+          Radio Group Label
+        </legend>
+        <sprk-radio-item variant="huge">
+          <input
+            type="radio"
+            value="1"
+            name="radio_input"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            variant="huge"
+            #radioInput="ngModel"
+            id="huge-invalid-radio-1"
+            disabled
+          >
+          <label
+            for="huge-invalid-radio-1"
+            sprkRadioLabel
+            isDisabled="true"
+            variant="huge"
+          >
+            Item 1
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item variant="huge">
+          <input
+            type="radio"
+            value="2"
+            name="radio_input_huge"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            variant="huge"
+            #radioInput="ngModel"
+            id="huge-invalid-radio-2"
+            disabled
+          >
+          <label
+            for="huge-invalid-radio-2"
+            sprkRadioLabel
+            isDisabled="true"
+            variant="huge"
+          >
+            Item 2
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item variant="huge">
+          <input
+            type="radio"
+            value="3"
+            name="huge"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            variant="huge"
+            #radioInput="ngModel"
+            id="huge-disabled-radio-3"
+            disabled
+          >
+          <label
+            for="huge-disabled-radio-3"
+            sprkRadioLabel
+            isDisabled="true"
+            variant="huge"
+          >
+            Item 3
+          </label>
+        </sprk-radio-item>
+     </fieldset>
    </sprk-radio-group>
   `,
 });
@@ -644,6 +689,8 @@ hugeDisabled.story = {
     jest: [
       'sprk-radio-input.directive',
       'sprk-radio-label.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
       'sprk-label.directive',
       'sprk-radio-item.component',
       'sprk-radio-group.component',
@@ -655,51 +702,55 @@ export const hugeLayoutTwo = () => ({
   moduleMetadata: modules,
   template: `
   <sprk-radio-group variant="huge">
-    <label sprkLabel>Radio Group Label</label>
-    <sprk-stack itemSpacing="medium" splitAt="small">
-      <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-        <sprk-radio-item variant="huge">
-          <input
-            type="radio"
-            value="1"
-            name="huge"
-            [(ngModel)]="radio_input"
-            sprkRadioInput
-            variant="huge"
-            #radioInput="ngModel"
-            id="huge-layout-radio-1"
-          >
-          <label
-            for="huge-layout-radio-1"
-            sprkRadioLabel
-            variant="huge"
-          >
-            Item 1
-          </label>
-        </sprk-radio-item>
-      </div>
-      <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-        <sprk-radio-item variant="huge">
-          <input
-            type="radio"
-            value="2"
-            name="huge"
-            [(ngModel)]="radio_input"
-            sprkRadioInput
-            variant="huge"
-            #radioInput="ngModel"
-            id="huge-layout-radio-2"
-          >
-          <label
-            for="huge-layout-radio-2"
-            sprkRadioLabel
-            variant="huge"
-          >
-            Item 2
-          </label>
-        </sprk-radio-item>
-      </div>
-    </sprk-stack>
+    <fieldset sprkFieldset>
+      <legend sprkLegend>
+        Radio Group Label
+      </legend>
+      <sprk-stack itemSpacing="medium" splitAt="small">
+        <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+          <sprk-radio-item variant="huge">
+            <input
+              type="radio"
+              value="1"
+              name="huge"
+              [(ngModel)]="radio_input"
+              sprkRadioInput
+              variant="huge"
+              #radioInput="ngModel"
+              id="huge-layout-radio-1"
+            >
+            <label
+              for="huge-layout-radio-1"
+              sprkRadioLabel
+              variant="huge"
+            >
+              Item 1
+            </label>
+          </sprk-radio-item>
+        </div>
+        <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+          <sprk-radio-item variant="huge">
+            <input
+              type="radio"
+              value="2"
+              name="huge"
+              [(ngModel)]="radio_input"
+              sprkRadioInput
+              variant="huge"
+              #radioInput="ngModel"
+              id="huge-layout-radio-2"
+            >
+            <label
+              for="huge-layout-radio-2"
+              sprkRadioLabel
+              variant="huge"
+            >
+              Item 2
+            </label>
+          </sprk-radio-item>
+        </div>
+      </sprk-stack>
+    </fieldset>
   </sprk-radio-group>
   `,
 });
@@ -711,6 +762,8 @@ hugeLayoutTwo.story = {
     jest: [
       'sprk-radio-input.directive',
       'sprk-radio-label.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
       'sprk-label.directive',
       'sprk-radio-item.component',
       'sprk-radio-group.component',
@@ -722,101 +775,105 @@ export const hugeLayoutFour = () => ({
   moduleMetadata: modules,
   template: `
   <sprk-radio-group variant="huge">
-    <label sprkLabel>Radio Group Label</label>
-    <sprk-stack itemSpacing="medium">
-      <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-        <sprk-stack itemSpacing="medium" splitAt="small">
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-            <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="1"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-four-radio-1"
-              >
-              <label
-                for="huge-layout-four-radio-1"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 1
-              </label>
-            </sprk-radio-item>
-          </div>
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-            <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="2"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-four-radio-2"
-              >
-              <label
-                for="huge-layout-four-radio-2"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 2
-              </label>
-            </sprk-radio-item>
-          </div>
-        </sprk-stack>
-      </div>
-      <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-        <sprk-stack itemSpacing="medium" splitAt="small">
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-            <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="3"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-four-radio-3"
-              >
-              <label
-                for="huge-layout-four-radio-3"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 3
-              </label>
-            </sprk-radio-item>
-          </div>
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-            <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="4"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-four-radio-4"
-              >
-              <label
-                for="huge-layout-four-radio-4"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 4
-              </label>
-            </sprk-radio-item>
-          </div>
-        </sprk-stack>
-      </div>
-    </sprk-stack>
+    <fieldset sprkFieldset>
+      <legend sprkLegend>
+        Radio Group Label
+      </legend>
+      <sprk-stack itemSpacing="medium">
+        <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+          <sprk-stack itemSpacing="medium" splitAt="small">
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="1"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-four-radio-1"
+                >
+                <label
+                  for="huge-layout-four-radio-1"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 1
+                </label>
+              </sprk-radio-item>
+            </div>
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="2"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-four-radio-2"
+                >
+                <label
+                  for="huge-layout-four-radio-2"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 2
+                </label>
+              </sprk-radio-item>
+            </div>
+          </sprk-stack>
+        </div>
+        <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+          <sprk-stack itemSpacing="medium" splitAt="small">
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="3"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-four-radio-3"
+                >
+                <label
+                  for="huge-layout-four-radio-3"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 3
+                </label>
+              </sprk-radio-item>
+            </div>
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="4"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-four-radio-4"
+                >
+                <label
+                  for="huge-layout-four-radio-4"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 4
+                </label>
+              </sprk-radio-item>
+            </div>
+          </sprk-stack>
+        </div>
+      </sprk-stack>
+    </fieldset>
   </sprk-radio-group>
   `,
 });
@@ -828,6 +885,8 @@ hugeLayoutFour.story = {
     jest: [
       'sprk-radio-input.directive',
       'sprk-radio-label.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
       'sprk-label.directive',
       'sprk-radio-item.component',
       'sprk-radio-group.component',
@@ -839,126 +898,130 @@ export const hugeLayoutFive = () => ({
   moduleMetadata: modules,
   template: `
   <sprk-radio-group variant="huge">
-    <label sprkLabel>Radio Group Label</label>
-    <sprk-stack itemSpacing="medium">
-      <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-        <sprk-stack itemSpacing="medium" splitAt="small">
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-            <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="1"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-five-radio-1"
-              >
-              <label
-                for="huge-layout-five-radio-1"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 1
-              </label>
-            </sprk-radio-item>
-          </div>
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-            <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="2"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-five-radio-2"
-              >
-              <label
-                for="huge-layout-five-radio-2"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 2
-              </label>
-            </sprk-radio-item>
-          </div>
-        </sprk-stack>
-      </div>
-      <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-        <sprk-stack itemSpacing="medium" splitAt="small">
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-            <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="3"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-five-radio-3"
-              >
-              <label
-                for="huge-layout-five-radio-3"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 3
-              </label>
-            </sprk-radio-item>
-          </div>
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-            <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="4"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-five-radio-4"
-              >
-              <label
-                for="huge-layout-five-radio-4"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 4
-              </label>
-            </sprk-radio-item>
-          </div>
-        </sprk-stack>
-      </div>
-      <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-        <sprk-stack itemSpacing="medium" splitAt="small" additionalClasses="sprk-o-Stack--center-row">
-          <div sprkStackItem class="sprk-o-Stack__item--half@s">
-            <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="5"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-five-radio-5"
-              >
-              <label
-                for="huge-layout-five-radio-5"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 5
-              </label>
-            </sprk-radio-item>
-          </div>
-        </sprk-stack>
-      </div>
-    </sprk-stack>
+    <fieldset sprkFieldset>
+      <legend sprkLegend>
+        Radio Group Label
+      </legend>
+      <sprk-stack itemSpacing="medium">
+        <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+          <sprk-stack itemSpacing="medium" splitAt="small">
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="1"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-five-radio-1"
+                >
+                <label
+                  for="huge-layout-five-radio-1"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 1
+                </label>
+              </sprk-radio-item>
+            </div>
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="2"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-five-radio-2"
+                >
+                <label
+                  for="huge-layout-five-radio-2"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 2
+                </label>
+              </sprk-radio-item>
+            </div>
+          </sprk-stack>
+        </div>
+        <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+          <sprk-stack itemSpacing="medium" splitAt="small">
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="3"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-five-radio-3"
+                >
+                <label
+                  for="huge-layout-five-radio-3"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 3
+                </label>
+              </sprk-radio-item>
+            </div>
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="4"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-five-radio-4"
+                >
+                <label
+                  for="huge-layout-five-radio-4"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 4
+                </label>
+              </sprk-radio-item>
+            </div>
+          </sprk-stack>
+        </div>
+        <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+          <sprk-stack itemSpacing="medium" splitAt="small" additionalClasses="sprk-o-Stack--center-row">
+            <div sprkStackItem class="sprk-o-Stack__item--half@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="5"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-five-radio-5"
+                >
+                <label
+                  for="huge-layout-five-radio-5"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 5
+                </label>
+              </sprk-radio-item>
+            </div>
+          </sprk-stack>
+        </div>
+      </sprk-stack>
+    </fieldset>
   </sprk-radio-group>
   `,
 });
@@ -970,6 +1033,8 @@ hugeLayoutFive.story = {
     jest: [
       'sprk-radio-input.directive',
       'sprk-radio-label.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
       'sprk-label.directive',
       'sprk-radio-item.component',
       'sprk-radio-group.component',
@@ -981,147 +1046,151 @@ export const hugeLayoutSix = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-radio-group variant="huge">
-    <label sprkLabel>Radio Group Label</label>
-    <sprk-stack itemSpacing="medium">
-      <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-        <sprk-stack itemSpacing="medium" splitAt="small">
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+    <fieldset sprkFieldset>
+      <legend sprkLegend>
+        Radio Group Label
+      </legend>
+      <sprk-stack itemSpacing="medium">
+        <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+          <sprk-stack itemSpacing="medium" splitAt="small">
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="1"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-six-radio-1"
+                >
+                <label
+                  for="huge-layout-six-radio-1"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 1
+                </label>
+              </sprk-radio-item>
+            </div>
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
             <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="1"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-six-radio-1"
-              >
-              <label
-                for="huge-layout-six-radio-1"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 1
-              </label>
-            </sprk-radio-item>
-          </div>
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-           <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="2"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-six-radio-2"
-              >
-              <label
-                for="huge-layout-six-radio-2"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 2
-              </label>
-            </sprk-radio-item>
-          </div>
-        </sprk-stack>
-      </div>
-      <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-        <sprk-stack itemSpacing="medium" splitAt="small">
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+                <input
+                  type="radio"
+                  value="2"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-six-radio-2"
+                >
+                <label
+                  for="huge-layout-six-radio-2"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 2
+                </label>
+              </sprk-radio-item>
+            </div>
+          </sprk-stack>
+        </div>
+        <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+          <sprk-stack itemSpacing="medium" splitAt="small">
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="3"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-six-radio-3"
+                >
+                <label
+                  for="huge-layout-six-radio-3"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 3
+                </label>
+              </sprk-radio-item>
+            </div>
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+              <sprk-radio-item variant="huge">
+                <input
+                  type="radio"
+                  value="4"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-six-radio-4"
+                >
+                <label
+                  for="huge-layout-six-radio-4"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 4
+                </label>
+              </sprk-radio-item>
+            </div>
+          </sprk-stack>
+        </div>
+        <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+          <sprk-stack itemSpacing="medium" splitAt="small">
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
             <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="3"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-six-radio-3"
-              >
-              <label
-                for="huge-layout-six-radio-3"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 3
-              </label>
-            </sprk-radio-item>
-          </div>
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
+                <input
+                  type="radio"
+                  value="5"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-six-radio-5"
+                >
+                <label
+                  for="huge-layout-six-radio-5"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 5
+                </label>
+              </sprk-radio-item>
+            </div>
+            <div sprkStackItem class="sprk-o-Stack__item--flex@s">
             <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="4"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-six-radio-4"
-              >
-              <label
-                for="huge-layout-six-radio-4"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 4
-              </label>
-            </sprk-radio-item>
-          </div>
-        </sprk-stack>
-      </div>
-       <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-        <sprk-stack itemSpacing="medium" splitAt="small">
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-           <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="5"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-six-radio-5"
-              >
-              <label
-                for="huge-layout-six-radio-5"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 5
-              </label>
-            </sprk-radio-item>
-          </div>
-          <div sprkStackItem class="sprk-o-Stack__item--flex@s">
-           <sprk-radio-item variant="huge">
-              <input
-                type="radio"
-                value="6"
-                name="huge"
-                [(ngModel)]="radio_input"
-                sprkRadioInput
-                variant="huge"
-                #radioInput="ngModel"
-                id="huge-layout-six-radio-6"
-              >
-              <label
-                for="huge-layout-six-radio-6"
-                sprkRadioLabel
-                variant="huge"
-              >
-                Item 6
-              </label>
-            </sprk-radio-item>
-          </div>
-        </sprk-stack>
-      </div>
-    </sprk-stack>
+                <input
+                  type="radio"
+                  value="6"
+                  name="huge"
+                  [(ngModel)]="radio_input"
+                  sprkRadioInput
+                  variant="huge"
+                  #radioInput="ngModel"
+                  id="huge-layout-six-radio-6"
+                >
+                <label
+                  for="huge-layout-six-radio-6"
+                  sprkRadioLabel
+                  variant="huge"
+                >
+                  Item 6
+                </label>
+              </sprk-radio-item>
+            </div>
+          </sprk-stack>
+        </div>
+      </sprk-stack>
+    </fieldset>
   </sprk-radio-group>
   `,
 });
@@ -1132,6 +1201,8 @@ hugeLayoutSix.story = {
     docs: { iframeHeight: 400 },
     jest: [
       'sprk-radio-input.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
       'sprk-radio-label.directive',
       'sprk-label.directive',
       'sprk-radio-item.component',
