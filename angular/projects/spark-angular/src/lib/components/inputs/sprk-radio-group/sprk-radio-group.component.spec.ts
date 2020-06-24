@@ -22,8 +22,8 @@ import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/
           <label sprkRadioLabel>Item 1</label>
         </sprk-radio-item>
         <p sprkHelperText>Helper Text!</p>
-        <span sprkFieldError>Error Message!</span>
       </fieldset>
+      <span sprkFieldError id="foo">Error Message!</span>
     </sprk-radio-group>
   `,
 })

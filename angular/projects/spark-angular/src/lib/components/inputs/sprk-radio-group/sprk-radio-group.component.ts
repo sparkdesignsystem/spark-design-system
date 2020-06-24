@@ -96,13 +96,24 @@ export class SprkRadioGroupComponent implements AfterContentInit {
    */
   ngAfterContentInit(): void {
     if (this.radios && this.error) {
-      this.radios.forEach((radio) => {
-        radio.input.ref.nativeElement.setAttribute(
-          'aria-describedby',
-          this.error_id,
-        );
-      });
-      this.error.ref.nativeElement.id = this.error_id;
+      const hasExistingErrorID = this.error.ref.nativeElement.id;
+
+      if (hasExistingErrorID) {
+        this.radios.forEach((radio) => {
+          radio.input.ref.nativeElement.setAttribute(
+            'aria-describedby',
+            hasExistingErrorID,
+          );
+        });
+      } else {
+        this.radios.forEach((radio) => {
+          radio.input.ref.nativeElement.setAttribute(
+            'aria-describedby',
+            this.error_id,
+          );
+        });
+        this.error.ref.nativeElement.id = this.error_id;
+      }
     }
   }
 }
