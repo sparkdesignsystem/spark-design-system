@@ -586,8 +586,10 @@ $sprk-promo-subtitle-font-weight: $sprk-font-weight-body-one !default;
 
 /// The background color of the Button component.
 $sprk-btn-background-color: $sprk-red !default;
+/// The box shadow color value for the Button component;
+$sprk-btn-shadow-color: rgba(20, 20, 20, 0.08) !default;
 /// The box shadow value of the Button component.
-$sprk-btn-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+$sprk-btn-shadow: 0 3px 10px $sprk-btn-shadow-color !default;
 /// The border style of the Button component.
 $sprk-btn-border-style: solid !default;
 /// The border color of the Button component.
@@ -672,7 +674,7 @@ $sprk-btn-secondary-hover-background-color: $sprk-purple !default;
 /// The border color of the Secondary Button component on hover.
 $sprk-btn-secondary-hover-border-color: $sprk-btn-secondary-hover-background-color !default;
 /// The box shadow of the Secondary Button component on hover.
-$sprk-btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+$sprk-btn-secondary-hover-shadow: $sprk-btn-shadow !default;
 /// The letter spacing of the Secondary Button component.
 $sprk-btn-secondary-letter-spacing: 0.62px !default;
 
@@ -690,7 +692,7 @@ $sprk-btn-tertiary-hover-text-color: $sprk-purple !default;
 /// The background color of the Tertiary Button component on hover.
 $sprk-btn-tertiary-hover-background-color: $sprk-lightest-purple !default;
 /// The box shadow of the Tertiary Button component on hover.
-$sprk-btn-tertiary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+$sprk-btn-tertiary-hover-shadow: $sprk-btn-shadow !default;
 /// The background color of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-background-color: transparent !default;
 /// The text color of the Tertiary Button component when disabled.
