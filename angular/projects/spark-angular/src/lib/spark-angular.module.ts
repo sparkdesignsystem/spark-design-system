@@ -15,6 +15,8 @@ import { SprkInputModule } from './directives/inputs/sprk-input/sprk-input.modul
 import { SprkRadioInputModule } from './directives/inputs/sprk-radio-input/sprk-radio-input.module';
 import { SprkLabelModule } from './directives/inputs/sprk-label/sprk-label.module';
 import { SprkRadioLabelModule } from './directives/inputs/sprk-radio-label/sprk-radio-label.module';
+import { SprkFieldsetModule } from './directives/inputs/sprk-fieldset/sprk-fieldset.module';
+import { SprkLegendModule } from './directives/inputs/sprk-legend/sprk-legend.module';
 import { SprkSelectionInputModule } from './directives/inputs/sprk-selection-input/sprk-selection-input.module';
 import { SprkSelectionLabelModule } from './directives/inputs/sprk-selection-label/sprk-selection-label.module';
 import { SprkStackItemModule } from './directives/sprk-stack-item/sprk-stack-item.module';
@@ -123,6 +125,8 @@ import { SprkRadioItemModule } from './components/inputs/sprk-radio-item/sprk-ra
     SprkRadioGroupModule,
     SprkRadioInputModule,
     SprkRadioLabelModule,
+    SprkFieldsetModule,
+    SprkLegendModule,
   ],
 })
 export class SparkAngularModule {}

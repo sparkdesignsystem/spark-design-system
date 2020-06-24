@@ -9,24 +9,12 @@ import {
 import { uniqueId } from 'lodash';
 import { SprkRadioItemComponent } from '../sprk-radio-item/sprk-radio-item.component';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
-import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 
 @Component({
   selector: 'sprk-radio-group',
   template: `
     <div [ngClass]="getClasses()" [attr.data-id]="idString">
-      <ng-content select="[beforeSprkRadios]"></ng-content>
-      <fieldset *ngIf="label; else sprkRadios" class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <ng-content select="[sprkLabel]"></ng-content>
-        </legend>
-        <ng-container *ngTemplateOutlet="sprkRadios"></ng-container>
-      </fieldset>
-
-      <ng-template #sprkRadios>
-        <ng-content></ng-content>
-      </ng-template>
-
+      <ng-content></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
       <ng-content select="[afterSprkRadios]"></ng-content>
@@ -61,13 +49,6 @@ export class SprkRadioGroupComponent implements AfterContentInit {
   idString: string;
 
   /**
-   * This component can have an optional child element
-   * with the `sprkLabel` directive for the legend.
-   */
-  @ContentChild(SprkLabelDirective, { static: false })
-  label: SprkLabelDirective;
-
-  /**
    * This component expects a child element
    * with the `sprkFieldError` directive.
    */
@@ -78,7 +59,7 @@ export class SprkRadioGroupComponent implements AfterContentInit {
    * This component expects children
    * `<sprk-radio-item>` components.
    */
-  @ContentChildren(SprkRadioItemComponent)
+  @ContentChildren(SprkRadioItemComponent, { descendants: true })
   radios: QueryList<SprkRadioItemComponent>;
 
   /**

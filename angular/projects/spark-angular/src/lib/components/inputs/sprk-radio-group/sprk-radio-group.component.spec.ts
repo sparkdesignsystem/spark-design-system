@@ -6,52 +6,36 @@ import { SprkRadioInputDirective } from '../../../directives/inputs/sprk-radio-i
 import { SprkRadioLabelDirective } from '../../../directives/inputs/sprk-radio-label/sprk-radio-label.directive';
 import { SprkRadioItemComponent } from '../sprk-radio-item/sprk-radio-item.component';
 import { SprkRadioGroupComponent } from './sprk-radio-group.component';
-import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkLegendDirective } from '../../../directives/inputs/sprk-legend/sprk-legend.directive';
+import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.directive';
 
 @Component({
   selector: 'sprk-test',
   template: `
     <sprk-radio-group>
-      <label sprkLabel>Label</label>
-      <sprk-radio-item>
-        <input type="radio" sprkRadioInput />
-        <label sprkRadioLabel>Item 1</label>
-      </sprk-radio-item>
-      <p sprkHelperText>Helper Text!</p>
-      <span sprkFieldError>Error Message!</span>
+      <fieldset sprkFieldset>
+        <legend sprkLegend>
+          Radio Group Label
+        </legend>
+        <sprk-radio-item>
+          <input type="radio" sprkRadioInput />
+          <label sprkRadioLabel>Item 1</label>
+        </sprk-radio-item>
+        <p sprkHelperText>Helper Text!</p>
+        <span sprkFieldError>Error Message!</span>
+      </fieldset>
     </sprk-radio-group>
   `,
 })
 class TestComponent {}
 
-@Component({
-  selector: 'sprk-test',
-  template: `
-    <sprk-radio-group>
-      <sprk-radio-item>
-        <input type="radio" sprkRadioInput />
-        <label sprkRadioLabel>Item 1</label>
-      </sprk-radio-item>
-      <p sprkHelperText>Helper Text!</p>
-      <span sprkFieldError>Error Message!</span>
-    </sprk-radio-group>
-  `,
-})
-class TestComponent2 {}
-
 describe('SprkRadioGroupComponent', () => {
   let component: TestComponent;
-  let componentNoFieldset: TestComponent;
   let radioContainerComponent: SprkRadioGroupComponent;
-  let radioContainerComponentNoFieldset: SprkRadioGroupComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let fixtureNoFieldset: ComponentFixture<TestComponent>;
   let radioContainerFixture: ComponentFixture<SprkRadioGroupComponent>;
-  let radioContainerFixtureNoFieldset: ComponentFixture<SprkRadioGroupComponent>;
   let radioContainerElement: HTMLElement;
-  let radioContainerElementNoFieldset: HTMLElement;
   let radioItemContainerElements;
-  let radioItemContainerElementsNoFieldset;
   let errorElement: HTMLElement;
 
   beforeEach(async(() => {
@@ -60,43 +44,28 @@ describe('SprkRadioGroupComponent', () => {
         SprkRadioItemComponent,
         SprkRadioInputDirective,
         SprkRadioLabelDirective,
-        SprkLabelDirective,
+        SprkLegendDirective,
+        SprkFieldsetDirective,
         SprkFieldErrorDirective,
         SprkRadioGroupComponent,
         TestComponent,
-        TestComponent2,
       ],
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
-    fixtureNoFieldset = TestBed.createComponent(TestComponent2);
     component = fixture.componentInstance;
-    componentNoFieldset = fixtureNoFieldset.componentInstance;
 
     radioContainerFixture = TestBed.createComponent(SprkRadioGroupComponent);
     radioContainerComponent = radioContainerFixture.componentInstance;
     radioContainerComponent.ngAfterContentInit();
     fixture.detectChanges();
 
-    radioContainerFixtureNoFieldset = TestBed.createComponent(
-      SprkRadioGroupComponent,
-    );
-    radioContainerComponentNoFieldset = radioContainerFixture.componentInstance;
-    radioContainerComponentNoFieldset.ngAfterContentInit();
-    fixtureNoFieldset.detectChanges();
-
     radioContainerElement = radioContainerFixture.nativeElement.querySelector(
       'div',
     );
-    radioContainerElementNoFieldset = radioContainerFixtureNoFieldset.nativeElement.querySelector(
-      'div',
-    );
     radioItemContainerElements = fixture.debugElement.queryAll(
-      By.css('sprk-radio-item'),
-    );
-    radioItemContainerElementsNoFieldset = fixtureNoFieldset.debugElement.queryAll(
       By.css('sprk-radio-item'),
     );
     errorElement = fixture.debugElement.query(By.css('span')).nativeElement;
@@ -110,12 +79,6 @@ describe('SprkRadioGroupComponent', () => {
     radioContainerComponent.additionalClasses = 'sprk-u-man';
     radioContainerFixture.detectChanges();
     expect(radioContainerElement.classList.toString()).toContain('sprk-u-man');
-  });
-
-  it('should not render a fieldset if no sprkLabel is supplied', () => {
-    expect(radioContainerElementNoFieldset.querySelector('fieldset')).toBe(
-      null,
-    );
   });
 
   it('should add huge variant class when variant is huge', () => {

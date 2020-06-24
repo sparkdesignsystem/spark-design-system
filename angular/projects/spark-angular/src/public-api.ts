@@ -222,3 +222,7 @@ export { SprkRadioItemComponent } from './lib/components/inputs/sprk-radio-item/
 export { SprkRadioItemModule } from './lib/components/inputs/sprk-radio-item/sprk-radio-item.module';
 export { SprkRadioGroupModule } from './lib/components/inputs/sprk-radio-group/sprk-radio-group.module';
 export { SprkRadioGroupComponent } from './lib/components/inputs/sprk-radio-group/sprk-radio-group.component';
+export { SprkFieldsetDirective } from './lib/directives/inputs/sprk-fieldset/sprk-fieldset.directive';
+export { SprkFieldsetModule } from './lib/directives/inputs/sprk-fieldset/sprk-fieldset.module';
+export { SprkLegendDirective } from './lib/directives/inputs/sprk-legend/sprk-legend.directive';
+export { SprkLegendModule } from './lib/directives/inputs/sprk-legend/sprk-legend.module';
