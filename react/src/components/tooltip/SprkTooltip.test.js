@@ -173,5 +173,35 @@ describe('SprkTooltip:', () => {
     expect(wrapper.find('.sprk-c-Tooltip').length).toBe(0);
   });
 
-  // should calculate position on hover and focus
+  it('should calculate position on hover', () => {
+    window.innerWidth = 100;
+    window.innerHeight = 100;
+
+    const wrapper = mount(<SprkTooltip />);
+    const trigger = wrapper.find('button');
+
+    trigger.instance().getBoundingClientRect = jest.fn(() => ({
+      top: 75, left: 75
+    }));
+
+    wrapper.find('button').simulate('mouseover');
+
+    expect(wrapper.state().position).toBe('topleft');
+  });
+
+  it('should calculate position on focus', () => {
+    window.innerWidth = 100;
+    window.innerHeight = 100;
+
+    const wrapper = mount(<SprkTooltip />);
+    const trigger = wrapper.find('button');
+
+    trigger.instance().getBoundingClientRect = jest.fn(() => ({
+      top: 75, left: 75
+    }));
+
+    wrapper.find('button').simulate('focus');
+
+    expect(wrapper.state().position).toBe('topleft');
+  });
 });

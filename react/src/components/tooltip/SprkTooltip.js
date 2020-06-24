@@ -15,6 +15,7 @@ class SprkTooltip extends Component {
     this.toggle = this.toggle.bind(this);
     this.handleWindowKeydown = this.handleWindowKeydown.bind(this);
     this.handleWindowClick = this.handleWindowClick.bind(this);
+    this.setPositioningClass = this.setPositioningClass.bind(this);
 
     this.triggerRef = React.createRef();
     this.tooltipRef = React.createRef();
@@ -23,14 +24,6 @@ class SprkTooltip extends Component {
   componentDidMount() {
     window.addEventListener('keydown', this.handleWindowKeydown);
     window.addEventListener('click', this.handleWindowClick);
-
-    this.triggerRef.current.addEventListener('mouseover', (e) => {
-      this.setPositioningClass();
-    });
-
-    this.triggerRef.current.addEventListener('focus', (e) => {
-      this.setPositioningClass();
-    });
 
     this.setPositioningClass();
   }
@@ -41,7 +34,7 @@ class SprkTooltip extends Component {
   }
 
   setPositioningClass() {
-    var trigger = this.triggerRef.current;
+    let trigger = this.triggerRef.current;
 
     const elemX = trigger.getBoundingClientRect().left;
     const elemY = trigger.getBoundingClientRect().top;
@@ -50,8 +43,8 @@ class SprkTooltip extends Component {
     const viewportHeight = window.innerHeight;
 
     // 328 is the default max-width
-    var maxWidth = 328;
-    var calculatedWidth = maxWidth;
+    let maxWidth = 328;
+    let calculatedWidth = maxWidth;
 
     if (elemX > viewportWidth / 2) {
       // the left edge of the button + the width of the button + the border
@@ -120,6 +113,8 @@ class SprkTooltip extends Component {
         <button
           ref={this.triggerRef}
           onClick={this.toggle}
+          onMouseOver={this.setPositioningClass}
+          onFocus={this.setPositioningClass}
           className={classnames({
             'sprk-c-Tooltip__trigger': true,
             'sprk-c-Tooltip--toggled': this.state.isToggled,
