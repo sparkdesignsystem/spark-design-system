@@ -2,7 +2,6 @@ import React from 'react';
 import SprkMasthead from './SprkMasthead';
 import SprkButton from '../buttons/SprkButton';
 import SprkLink from '../../base/links/SprkLink';
-import SprkDropdown from '../dropdown/SprkDropdown';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkMastheadAccordion from './components/SprkMastheadAccordion/SprkMastheadAccordion';
 import SprkMastheadAccordionItem from './components/SprkMastheadAccordionItem/SprkMastheadAccordionItem';
@@ -33,7 +32,7 @@ export default {
       'SprkMastheadMenuIcon',
       'SprkMastheadNarrowNav',
     ],
-    info:`
+    info: `
 ${markdownDocumentationLinkBuilder('masthead')}
 - You should configure the size of your own logo.
 By default, the logo will be automatically sized
@@ -156,9 +155,9 @@ const selector = {
 };
 
 const utilityItems = [
-  <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>,
-  <SprkLink href="#nogo" variant="plain" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
-  <SprkButton element="a" href="#nogo" variant="secondary" additionalClasses="sprk-u-Right--zero sprk-u-mrm sprk-c-Button--compact">Sign In</SprkButton>,
+  <SprkLink href="#nogo" variant="simple" additionalClasses="sprk-c-Masthead__link">(555) 555-5555</SprkLink>,
+  <SprkLink href="#nogo" variant="simple" additionalClasses="sprk-c-Masthead__link">Talk To Us</SprkLink>,
+  <SprkButton element="a" href="#nogo" variant="quaternary" additionalClasses="sprk-u-Right--zero sprk-u-mrm sprk-c-Button--compact">Sign In</SprkButton>,
 ];
 
 export const defaultStory = () => (

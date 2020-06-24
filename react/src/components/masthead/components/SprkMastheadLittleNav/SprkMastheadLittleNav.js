@@ -59,7 +59,7 @@ class SprkMastheadLittleNav extends Component {
             return (
               <li key={link.id}>
                 <TagName
-                  className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+                  className="sprk-b-Link sprk-b-Link--simple sprk-c-Masthead__link"
                   href={TagName === 'a' ? href || '#nogo' : undefined}
                   {...rest}
                 >

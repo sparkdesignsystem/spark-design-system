@@ -16,7 +16,7 @@ class SprkMastheadBigNav extends Component {
     const { additionalClasses, analyticsString, idString } = this.props;
     const { links } = this.state;
     return (
-      <React.Fragment>
+      <>
         <div className="sprk-o-Stack__item">
           <nav
             className={classNames(
@@ -49,7 +49,7 @@ class SprkMastheadBigNav extends Component {
                     {!link.subNavLinks && (
                       <TagName
                         className={classNames(
-                          'sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav',
+                          'sprk-b-Link sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav',
                         )}
                         {...rest}
                       >
@@ -68,7 +68,7 @@ class SprkMastheadBigNav extends Component {
             </ul>
           </nav>
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
