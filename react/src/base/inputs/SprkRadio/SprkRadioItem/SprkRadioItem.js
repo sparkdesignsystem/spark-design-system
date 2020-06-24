@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
 
-const SprkRadio = (props) => {
+const SprkRadioItem = (props) => {
   const {
     children,
     variant,
@@ -61,7 +61,7 @@ const SprkRadio = (props) => {
   );
 };
 
-SprkRadio.propTypes = {
+SprkRadioItem.propTypes = {
   children: PropTypes.node,
   /**
    * Determines the style of radio.
@@ -133,4 +133,4 @@ SprkRadio.propTypes = {
   onChangeFunc: PropTypes.func,
 };
 
-export default SprkRadio;
+export default SprkRadioItem;

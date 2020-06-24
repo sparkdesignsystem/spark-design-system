@@ -2,20 +2,20 @@ import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkRadioGroup from './SprkRadioGroup';
-import SprkRadio from '../SprkRadio/SprkRadio';
+import SprkRadioItem from '../SprkRadioItem/SprkRadioItem';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkRadioGroup:', () => {
-  it('should render SprkRadio inside of it', () => {
+  it('should render SprkRadioItem inside of it', () => {
     const wrapper = shallow(
       <SprkRadioGroup>
-        <SprkRadio>Label</SprkRadio>
-        <SprkRadio>Label</SprkRadio>
-        <SprkRadio>Label</SprkRadio>
+        <SprkRadioItem>Label</SprkRadioItem>
+        <SprkRadioItem>Label</SprkRadioItem>
+        <SprkRadioItem>Label</SprkRadioItem>
       </SprkRadioGroup>,
     );
-    expect(wrapper.find('SprkRadio').length).toBe(3);
+    expect(wrapper.find('SprkRadioItem').length).toBe(3);
   });
 
   it('should have container styles', () => {
