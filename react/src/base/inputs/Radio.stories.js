@@ -1,8 +1,8 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
 import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
-import SprkRadioGroup from './SprkRadioGroup/SprkRadioGroup';
-import SprkRadio from './SprkRadio/SprkRadio';
+import SprkRadioGroup from './SprkRadio/SprkRadioGroup/SprkRadioGroup';
+import SprkRadioItem from './SprkRadio/SprkRadioItem/SprkRadioItem';
 import SprkFieldset from './SprkFieldset/SprkFieldset';
 import SprkLegend from './SprkLegend/SprkLegend';
 import SprkHelperText from './SprkHelperText/SprkHelperText';
@@ -18,7 +18,7 @@ export default {
     subcomponents: {
       SprkErrorContainer,
       SprkRadioGroup,
-      SprkRadio,
+      SprkRadioItem,
       SprkFieldset,
       SprkLegend,
       SprkHelperText,
@@ -49,9 +49,9 @@ export const defaultStory = () => (
   <SprkRadioGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadio name="radio">Radio Item 1</SprkRadio>
-      <SprkRadio name="radio">Radio Item 2</SprkRadio>
-      <SprkRadio name="radio">Radio Item 3</SprkRadio>
+      <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
     </SprkFieldset>
   </SprkRadioGroup>
 );
@@ -67,9 +67,9 @@ export const defaultHelperText = () => (
   <SprkRadioGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadio name="radio">Radio Item 1</SprkRadio>
-      <SprkRadio name="radio">Radio Item 2</SprkRadio>
-      <SprkRadio name="radio">Radio Item 3</SprkRadio>
+      <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
     </SprkFieldset>
     <SprkHelperText>Input Helper Text</SprkHelperText>
   </SprkRadioGroup>
@@ -86,15 +86,15 @@ export const invalidRadio = () => (
   <SprkRadioGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadio name="radio" ariaDescribedBy="radio-error-container">
+      <SprkRadioItem name="radio" ariaDescribedBy="radio-error-container">
         Radio Item 1
-      </SprkRadio>
-      <SprkRadio name="radio" ariaDescribedBy="radio-error-container">
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" ariaDescribedBy="radio-error-container">
         Radio Item 2
-      </SprkRadio>
-      <SprkRadio name="radio" ariaDescribedBy="radio-error-container">
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" ariaDescribedBy="radio-error-container">
         Radio Item 3
-      </SprkRadio>
+      </SprkRadioItem>
       <SprkErrorContainer
         id="radio-error-container"
         message="There is an error on this field"
@@ -114,15 +114,15 @@ export const disabledRadio = () => (
   <SprkRadioGroup>
     <SprkFieldset>
       <SprkLegend disabled>Group Label Name</SprkLegend>
-      <SprkRadio name="radio" disabled>
+      <SprkRadioItem name="radio" disabled>
         Radio Item 1
-      </SprkRadio>
-      <SprkRadio name="radio" disabled>
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" disabled>
         Radio Item 2
-      </SprkRadio>
-      <SprkRadio name="radio" disabled>
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" disabled>
         Radio Item 3
-      </SprkRadio>
+      </SprkRadioItem>
     </SprkFieldset>
   </SprkRadioGroup>
 );
@@ -138,15 +138,15 @@ export const huge = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadio name="radio" variant="huge">
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
-      </SprkRadio>
-      <SprkRadio name="radio" variant="huge">
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 2
-      </SprkRadio>
-      <SprkRadio name="radio" variant="huge">
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 3
-      </SprkRadio>
+      </SprkRadioItem>
     </SprkFieldset>
   </SprkRadioGroup>
 );
@@ -162,15 +162,15 @@ export const hugeHelperText = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadio name="radio" variant="huge">
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
-      </SprkRadio>
-      <SprkRadio name="radio" variant="huge">
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 2
-      </SprkRadio>
-      <SprkRadio name="radio" variant="huge">
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 3
-      </SprkRadio>
+      </SprkRadioItem>
     </SprkFieldset>
     <SprkHelperText>
       Optional helper text, used to clarify the field&#x27;s intent
@@ -189,27 +189,27 @@ export const hugeInvalid = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadio
+      <SprkRadioItem
         name="radio"
         variant="huge"
         ariaDescribedBy="radio-error-container"
       >
         Radio Item 1
-      </SprkRadio>
-      <SprkRadio
+      </SprkRadioItem>
+      <SprkRadioItem
         name="radio"
         variant="huge"
         ariaDescribedBy="radio-error-container"
       >
         Radio Item 2
-      </SprkRadio>
-      <SprkRadio
+      </SprkRadioItem>
+      <SprkRadioItem
         name="radio"
         variant="huge"
         ariaDescribedBy="radio-error-container"
       >
         Radio Item 3
-      </SprkRadio>
+      </SprkRadioItem>
       <SprkErrorContainer
         id="radio-error-container"
         message="There is an error on this field"
@@ -229,30 +229,30 @@ export const hugeDisabled = () => (
   <SprkRadioGroup variant="huge" disabled>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadio
+      <SprkRadioItem
         name="radio"
         variant="huge"
         ariaDescribedBy="radio-error-container"
         disabled
       >
         Radio Item 1
-      </SprkRadio>
-      <SprkRadio
+      </SprkRadioItem>
+      <SprkRadioItem
         name="radio"
         variant="huge"
         ariaDescribedBy="radio-error-container"
         disabled
       >
         Radio Item 2
-      </SprkRadio>
-      <SprkRadio
+      </SprkRadioItem>
+      <SprkRadioItem
         name="radio"
         variant="huge"
         ariaDescribedBy="radio-error-container"
         disabled
       >
         Radio Item 3
-      </SprkRadio>
+      </SprkRadioItem>
     </SprkFieldset>
   </SprkRadioGroup>
 );
@@ -272,14 +272,14 @@ export const hugeLayoutTwo = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 1
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 2
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
           </SprkStack>
         </SprkStackItem>
@@ -303,28 +303,28 @@ export const hugeLayoutFour = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 1
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 2
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
           </SprkStack>
         </SprkStackItem>
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 3
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 4
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
           </SprkStack>
         </SprkStackItem>
@@ -347,28 +347,28 @@ export const hugeLayoutFive = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 1
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 2
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
           </SprkStack>
         </SprkStackItem>
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 3
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 4
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
           </SprkStack>
         </SprkStackItem>
@@ -384,9 +384,9 @@ export const hugeLayoutFive = () => (
                 sprk-o-Stack__item--half@s
               "
             >
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 5
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
           </SprkStack>
         </SprkStackItem>
@@ -410,42 +410,42 @@ export const hugeLayoutSix = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 1
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 2
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
           </SprkStack>
         </SprkStackItem>
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 3
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 4
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
           </SprkStack>
         </SprkStackItem>
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 5
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkRadio name="radio" variant="huge">
+              <SprkRadioItem name="radio" variant="huge">
                 Radio Item 6
-              </SprkRadio>
+              </SprkRadioItem>
             </SprkStackItem>
           </SprkStack>
         </SprkStackItem>
