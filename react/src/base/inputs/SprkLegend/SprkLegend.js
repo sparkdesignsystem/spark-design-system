@@ -14,8 +14,8 @@ const SprkLegend = (props) => {
 
   return (
     <legend
-      className={classnames('sprk-b-Legend', additionalClasses, {
-        'sprk-b-Legend--disabled': disabled,
+      className={classnames('sprk-b-Legend sprk-b-Label', additionalClasses, {
+        'sprk-b-Label--disabled': disabled,
       })}
       data-analytics={analyticsString}
       data-id={idString}

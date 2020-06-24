@@ -18,6 +18,32 @@ describe('SprkRadioGroup:', () => {
     expect(wrapper.find('SprkRadioItem').length).toBe(3);
   });
 
+  it(`should render content in beforeRadios inside of
+    the group, before the radios.`, () => {
+    const wrapper = shallow(
+      <SprkRadioGroup beforeRadios={<p>Before</p>}>
+        <SprkRadioItem>Label</SprkRadioItem>
+        <SprkRadioItem>Label</SprkRadioItem>
+        <SprkRadioItem>Label</SprkRadioItem>
+      </SprkRadioGroup>,
+    );
+
+    expect(wrapper.childAt(0).type()).toBe('p');
+  });
+
+  it(`should render content in afterRadios inside of
+    the group, before the radios.`, () => {
+    const wrapper = shallow(
+      <SprkRadioGroup afterRadios={<p>After</p>}>
+        <SprkRadioItem>Label</SprkRadioItem>
+        <SprkRadioItem>Label</SprkRadioItem>
+        <SprkRadioItem>Label</SprkRadioItem>
+      </SprkRadioGroup>,
+    );
+
+    expect(wrapper.childAt(3).type()).toBe('p');
+  });
+
   it('should have container styles', () => {
     const wrapper = shallow(<SprkRadioGroup />);
     expect(

@@ -299,7 +299,7 @@ export const disabledRadioButton = () => {
   return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend sprk-b-Legend--disabled">
+        <legend class="sprk-b-Legend sprk-b-Label sprk-b-Label--disabled">
           Radio Group Label
         </legend>
 
