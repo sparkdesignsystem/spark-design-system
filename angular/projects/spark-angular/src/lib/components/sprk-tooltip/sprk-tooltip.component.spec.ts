@@ -164,4 +164,78 @@ describe('SprkTooltipComponent', () => {
     triggerElement.click();
     expect(eventEmitted).toEqual(true);
   });
+
+  it('should recalculate position on trigger focusin', () => {
+    const spy = jest.spyOn(component, 'setPositioningClass');
+
+    expect(spy).not.toHaveBeenCalled();
+
+    fixture.nativeElement.dispatchEvent(new Event('focusin'));
+    fixture.detectChanges();
+
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should recalculate position on trigger focusin', () => {
+    const spy = jest.spyOn(component, 'setPositioningClass');
+
+    expect(spy).not.toHaveBeenCalled();
+
+    fixture.nativeElement.dispatchEvent(new Event('mouseover'));
+    fixture.detectChanges();
+
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should add the top left positioning class', () => {
+    window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 75, left: 75 }
+    }
+
+    fixture.nativeElement.dispatchEvent(new Event('mouseover'));
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
+  });
+
+  it('should add the top right positioning class', () => {
+    window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 75, left: 25 }
+    }
+
+    fixture.nativeElement.dispatchEvent(new Event('mouseover'));
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-right')).toBe(true);
+  });
+
+  it('should add the bottom left positioning class', () => {
+    window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 25, left: 75 }
+    }
+
+    fixture.nativeElement.dispatchEvent(new Event('mouseover'));
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--bottom-left')).toBe(true);
+  });
+
+  it('should add the bottom right positioning class', () => {
+    window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 25, left: 25 }
+    }
+
+    fixture.nativeElement.dispatchEvent(new Event('mouseover'));
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--bottom-right')).toBe(true);
+  });
 });
