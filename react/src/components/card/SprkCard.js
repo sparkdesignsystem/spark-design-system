@@ -152,7 +152,12 @@ SprkCard.propTypes = {
       /**
        * The button variant to use for the call to action.
        */
-      buttonVariant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+      buttonVariant: PropTypes.oneOf([
+        'primary',
+        'secondary',
+        'tertiary',
+        'quaternary',
+      ]),
     }),
     /**
      * Configures the main media of the Teaser Card.
