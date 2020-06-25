@@ -23,8 +23,8 @@ const addPositioningClass = (trigger, tooltip) => {
   const viewportHeight = window.innerHeight;
 
   // 328 is the default max-width
-  var maxWidth = 328;
-  var calculatedWidth = maxWidth;
+  const maxWidth = 328;
+  let calculatedWidth = maxWidth;
 
   if (elemX > viewportWidth / 2) {
     // the left edge of the button + the width of the button + the border

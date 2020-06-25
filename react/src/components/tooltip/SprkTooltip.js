@@ -43,7 +43,7 @@ class SprkTooltip extends Component {
     const viewportHeight = window.innerHeight;
 
     // 328 is the default max-width
-    let maxWidth = 328;
+    const maxWidth = 328;
     let calculatedWidth = maxWidth;
 
     if (elemX > viewportWidth / 2) {
@@ -64,7 +64,7 @@ class SprkTooltip extends Component {
       }
     }
 
-    if (calculatedWidth < maxWidth){
+    if (calculatedWidth < maxWidth) {
       // overwrite the width if there's not enough room to display it
       this.tooltipRef.current.setAttribute('style', 'width:' + calculatedWidth + "px");
     }
@@ -115,11 +115,11 @@ class SprkTooltip extends Component {
           onClick={this.toggle}
           onMouseOver={this.setPositioningClass}
           onFocus={this.setPositioningClass}
-          className={classnames({
-            'sprk-c-Tooltip__trigger': true,
-            'sprk-c-Tooltip--toggled': this.state.isToggled,
-          })}
-          aria-expanded={this.state.isToggled ? 'true' : 'false'}
+          className={classnames(
+            'sprk-c-Tooltip__trigger',
+            {'sprk-c-Tooltip--toggled': this.state.isToggled}
+          )}
+          aria-expanded={this.state.isToggled}
           aria-labelledby={id}
           data-analytics={analyticsString}
         >
@@ -172,9 +172,7 @@ SprkTooltip.propTypes = {
    */
   iconAdditionalClasses: PropTypes.string,
   /**
-   * Optional: the unique ID to use for the tooltip element.
-   * If an ID is not provided, a unique ID will be created
-   * automatically.
+   * ID will be placed on the tooltip element and used for aria-labelledby on the trigger element.
    */
   id: PropTypes.string,
   /**

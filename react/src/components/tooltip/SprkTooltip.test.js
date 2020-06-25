@@ -34,11 +34,7 @@ describe('SprkTooltip:', () => {
 
   it('should add additionalClasses', () => {
     const wrapper = mount(
-      <SprkTooltip
-        additionalClasses='spork'
-      >
-        tootlip
-      </SprkTooltip>
+      <SprkTooltip additionalClasses='spork' />
     );
     expect(wrapper.find('.sprk-c-Tooltip.spork').length).toBe(1);
   });
