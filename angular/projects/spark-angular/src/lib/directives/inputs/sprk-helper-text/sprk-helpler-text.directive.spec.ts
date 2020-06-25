@@ -4,9 +4,7 @@ import { SprkHelperTextDirective } from './sprk-helper-text.directive';
 
 @Component({
   selector: 'sprk-test',
-  template: `
-    <span sprkHelperText>Helper Text</span>
-  `
+  template: ` <span sprkHelperText>Helper Text</span> `,
 })
 class TestComponent {}
 
@@ -17,7 +15,7 @@ describe('Spark Helper Text Directive', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkHelperTextDirective, TestComponent]
+      declarations: [SprkHelperTextDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
@@ -28,5 +26,9 @@ describe('Spark Helper Text Directive', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should add the correct classes to the applied element', () => {
+    expect(spanElement1.classList.contains('sprk-b-HelperText')).toEqual(true);
   });
 });
