@@ -10,40 +10,44 @@ import toggleAriaExpanded from '../utilities/toggleAriaExpanded';
  *  Tooltip JS
  */
 
-const calculatePositionClass = (trigger) => {
-  const elemX = trigger.getBoundingClientRect().left;
-  const elemY = trigger.getBoundingClientRect().top;
-
-  let viewportWidth = 0;
-  let viewportHeight = 0;
-
-  if (window){
-    viewportWidth = window.innerWidth ? window.innerWidth : 0;
-    viewportHeight = window.innerHeight ? window.innerHeight : 0;
-  }
-
-  if (elemX > viewportWidth / 2) {
-    if (elemY > viewportHeight / 2) {
-      return 'sprk-c-Tooltip--top-left';
-    } else {
-      return 'sprk-c-Tooltip--bottom-left';
-    }
-  } else {
-    if (elemY > viewportHeight / 2) {
-      return 'sprk-c-Tooltip--top-right';
-    } else {
-      return 'sprk-c-Tooltip--bottom-right';
-    }
-  }
-};
-
 const addPositioningClass = (trigger, tooltip) => {
   tooltip.classList.remove('sprk-c-Tooltip--bottom-right');
   tooltip.classList.remove('sprk-c-Tooltip--bottom-left');
   tooltip.classList.remove('sprk-c-Tooltip--top-right');
   tooltip.classList.remove('sprk-c-Tooltip--top-left');
 
-  tooltip.classList.add(calculatePositionClass(trigger));
+  const elemX = trigger.getBoundingClientRect().left;
+  const elemY = trigger.getBoundingClientRect().top;
+
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+
+  // 328 is the default max-width
+  const maxWidth = 328;
+  let calculatedWidth = maxWidth;
+
+  if (elemX > viewportWidth / 2) {
+    // the left edge of the button + the width of the button + the border
+    calculatedWidth = elemX + 16 + 16;
+    if (elemY > viewportHeight / 2) {
+      tooltip.classList.add('sprk-c-Tooltip--top-left');
+    } else {
+      tooltip.classList.add('sprk-c-Tooltip--bottom-left');
+    }
+  } else {
+    // the width of the viewport less the left edge of the button + the border
+    calculatedWidth = viewportWidth - elemX + 16;
+    if (elemY > viewportHeight / 2) {
+      tooltip.classList.add('sprk-c-Tooltip--top-right');
+    } else {
+      tooltip.classList.add('sprk-c-Tooltip--bottom-right');
+    }
+  }
+
+  if (calculatedWidth < maxWidth){
+    // overwrite the width if there's not enough room to display it
+    tooltip.setAttribute('style', 'width:' + calculatedWidth + "px");
+  }
 };
 
 const showTooltip = (trigger, tooltip, stickOpen) => {
@@ -120,5 +124,4 @@ export {
   showTooltip,
   hideTooltip,
   toggleTooltip,
-  calculatePositionClass,
 };
