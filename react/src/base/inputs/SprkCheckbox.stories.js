@@ -95,11 +95,11 @@ export const invalidCheckbox = () => (
       <SprkCheckboxItem ariaDescribedBy="checkbox-error-container">
         Checkbox Item 3
       </SprkCheckboxItem>
-      <SprkErrorContainer
-        id="checkbox-error-container"
-        message="There is an error on this field"
-      />
     </SprkFieldset>
+    <SprkErrorContainer
+      id="checkbox-error-container"
+      message="There is an error on this field"
+    />
   </SprkCheckboxGroup>
 );
 
@@ -188,11 +188,11 @@ export const hugeInvalid = () => (
       >
         Checkbox Item 3
       </SprkCheckboxItem>
-      <SprkErrorContainer
-        id="checkbox-error-container"
-        message="There is an error on this field"
-      />
     </SprkFieldset>
+    <SprkErrorContainer
+      id="checkbox-error-container"
+      message="There is an error on this field"
+    />
   </SprkCheckboxGroup>
 );
 
