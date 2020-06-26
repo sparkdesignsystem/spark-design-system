@@ -86,15 +86,9 @@ export const invalidCheckbox = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckboxItem ariaDescribedBy="checkbox-error-container">
-        Checkbox Item 1
-      </SprkCheckboxItem>
-      <SprkCheckboxItem ariaDescribedBy="checkbox-error-container">
-        Checkbox Item 2
-      </SprkCheckboxItem>
-      <SprkCheckboxItem ariaDescribedBy="checkbox-error-container">
-        Checkbox Item 3
-      </SprkCheckboxItem>
+      <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+      <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+      <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
     </SprkFieldset>
     <SprkErrorContainer
       id="checkbox-error-container"
@@ -170,27 +164,12 @@ export const hugeInvalid = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckboxItem
-        variant="huge"
-        ariaDescribedBy="checkbox-error-container"
-      >
-        Checkbox Item 1
-      </SprkCheckboxItem>
-      <SprkCheckboxItem
-        variant="huge"
-        ariaDescribedBy="checkbox-error-container"
-      >
-        Checkbox Item 2
-      </SprkCheckboxItem>
-      <SprkCheckboxItem
-        variant="huge"
-        ariaDescribedBy="checkbox-error-container"
-      >
-        Checkbox Item 3
-      </SprkCheckboxItem>
+      <SprkCheckboxItem variant="huge">Checkbox Item 1</SprkCheckboxItem>
+      <SprkCheckboxItem variant="huge">Checkbox Item 2</SprkCheckboxItem>
+      <SprkCheckboxItem variant="huge">Checkbox Item 3</SprkCheckboxItem>
     </SprkFieldset>
     <SprkErrorContainer
-      id="checkbox-error-container"
+      id="checkbox-huge-error-container"
       message="There is an error on this field"
     />
   </SprkCheckboxGroup>

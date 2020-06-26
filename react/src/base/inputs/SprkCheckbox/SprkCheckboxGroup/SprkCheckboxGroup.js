@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import uniqueId from 'lodash/uniqueId';
+import addPropsToMatchingChildren from '../../../../utilities/addPropsToMatchingChildren';
 
 const SprkCheckboxGroup = (props) => {
   const {
@@ -11,6 +13,36 @@ const SprkCheckboxGroup = (props) => {
     analyticsString,
   } = props;
 
+  // ✅ Get the id of SprkErrorContainer, if none, apply unique ID
+  // ✅ Set the ariaDescribedBy prop of
+  // SprkCheckboxItem to the id from SprkErrorContainer
+  // ✅ SprkErrorContainer.id = errorID;
+
+  // ❓ What happens if there's no fieldset?
+  // ✅ What happens if SprkErrorContainer doesn't have an id set?
+
+  let errorId = null;
+
+  const childrenArray = React.Children.toArray(children);
+
+  // Map through children, assign SprkErrorContainer with id/uniqueId
+  // Assign errorId which will determine the ariaDescribedBy of SprkCheckboxItem
+  const elementsToProcess = childrenArray.map((element) => {
+    if (element.type.displayName === 'SprkErrorContainer') {
+      errorId = element.props.id || uniqueId('sprk-error-container-');
+      return React.cloneElement(element, { id: errorId });
+    }
+    return React.cloneElement(element);
+  });
+
+  const elementsToRender = addPropsToMatchingChildren(
+    elementsToProcess,
+    'SprkCheckboxItem',
+    {
+      ariaDescribedBy: errorId,
+    },
+  );
+
   return (
     <div
       className={classnames('sprk-b-InputContainer', additionalClasses, {
@@ -19,7 +51,7 @@ const SprkCheckboxGroup = (props) => {
       data-analytics={analyticsString}
       data-id={idString}
     >
-      {children}
+      {elementsToRender}
     </div>
   );
 };
