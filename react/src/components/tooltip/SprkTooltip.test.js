@@ -25,11 +25,12 @@ describe('SprkTooltip:', () => {
 
   it('should toggle aria-expanded when clicked', () => {
     const wrapper = mount(<SprkTooltip />);
-    expect(wrapper.find('[aria-expanded="true"]').length).toBe(0);
+
+    expect(wrapper.find('button').prop('aria-expanded')).toEqual(false);
 
     wrapper.find('button').simulate('click');
 
-    expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
+    expect(wrapper.find('button').prop('aria-expanded')).toEqual(true);
   });
 
   it('should add additionalClasses', () => {
