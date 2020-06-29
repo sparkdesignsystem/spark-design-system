@@ -333,3 +333,98 @@ disabledCheckbox.story = {
     ],
   },
 };
+
+export const hugeCheckbox = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-selection-container>
+      <label class="sprk-b-Label--disabled" sprkLabel>
+        Huge Checkbox Group Label
+      </label>
+
+      <sprk-selection-item-container>
+        <input
+          type="checkbox"
+          name="checkbox_input"
+          [(ngModel)]="checkbox_input1"
+          sprkSelectionInput
+          #checkboxInput1="ngModel"
+          data-id="checkbox-1"
+          id="checkbox-1"
+          (change)="onSelect($event)"
+          disabled
+        >
+
+        <label
+          for="checkbox-1"
+          class="sprk-b-Label--disabled"
+          sprkSelectionLabel
+        >
+          Huge Checkbox Item 1
+        </label>
+      </sprk-selection-item-container>
+
+      <sprk-selection-item-container>
+        <input
+          type="checkbox"
+          name="checkbox_input"
+          [(ngModel)]="checkbox_input2"
+          sprkSelectionInput
+          #checkboxInput2="ngModel"
+          data-id="checkbox-2"
+          id="checkbox-2"
+          (change)="onSelect($event)"
+          disabled
+        >
+
+        <label
+          for="checkbox-2"
+          class="sprk-b-Label--disabled"
+          sprkSelectionLabel
+        >
+          Huge Checkbox Item 2
+        </label>
+      </sprk-selection-item-container>
+
+      <sprk-selection-item-container>
+        <input
+          type="checkbox"
+          name="checkbox_input"
+          [(ngModel)]="checkbox_input3"
+          sprkSelectionInput
+          #checkboxInput3="ngModel"
+          data-id="checkbox-3"
+          id="checkbox-3"
+          (change)="onSelect($event)"
+          disabled
+        >
+
+        <label
+          for="checkbox-3"
+          class="sprk-b-Label--disabled"
+          sprkSelectionLabel
+        >
+          Huge Checkbox Item 3
+        </label>
+      </sprk-selection-item-container>
+    </sprk-selection-container>
+  `,
+  props: {
+    onSelect() {
+      this.isChecked = this.checkbox_input1 === true;
+    },
+  },
+});
+
+hugeCheckbox.story = {
+  name: 'Huge',
+  parameters: {
+    jest: [
+      'sprk-selection-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-selection-input.directive',
+      'sprk-selection-label.directive',
+      'sprk-label.directive',
+    ],
+  },
+};
