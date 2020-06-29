@@ -8,14 +8,14 @@ const addPropsToMatchingChildren = (
   const elements = React.Children.toArray(childElements);
 
   return elements.map((element) => {
-    // Assign props to matching grandchildren elements
+    // Assign props to matching grandchildren element
     if (element.props.children) {
       const grandChildren = React.Children.toArray(element.props.children);
       return grandChildren.map((grandchild) => {
         if (displayNames.includes(grandchild.type.displayName)) {
           return React.cloneElement(grandchild, propsToAssign);
         }
-        return React.cloneElement(grandchild);
+        return grandchild;
       });
     }
 
@@ -25,7 +25,7 @@ const addPropsToMatchingChildren = (
     }
 
     // Otherwise, just return it with no changes
-    return React.cloneElement(element);
+    return element;
   });
 };
 

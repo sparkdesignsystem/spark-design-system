@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
-import addPropsToMatchingChildren from '../../../../utilities/addPropsToMatchingChildren';
+import addPropsToMatchingChildren from '../../../../utilities/helpers/addPropstoMatchingChildren/addPropsToMatchingChildren';
 
 const SprkCheckboxGroup = (props) => {
   const {
@@ -12,14 +12,6 @@ const SprkCheckboxGroup = (props) => {
     additionalClasses,
     analyticsString,
   } = props;
-
-  // ✅ Get the id of SprkErrorContainer, if none, apply unique ID
-  // ✅ Set the ariaDescribedBy prop of
-  // SprkCheckboxItem to the id from SprkErrorContainer
-  // ✅ SprkErrorContainer.id = errorID;
-
-  // ❓ What happens if there's no fieldset?
-  // ✅ What happens if SprkErrorContainer doesn't have an id set?
 
   let errorId = null;
 
@@ -32,7 +24,7 @@ const SprkCheckboxGroup = (props) => {
       errorId = element.props.id || uniqueId('sprk-error-container-');
       return React.cloneElement(element, { id: errorId });
     }
-    return React.cloneElement(element);
+    return element;
   });
 
   const elementsToRender = addPropsToMatchingChildren(
