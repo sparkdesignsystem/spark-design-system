@@ -95,8 +95,6 @@ describe('SprkDropdownComponent', () => {
     dropdownTriggerElement.click();
     expect(component.isOpen).toEqual(true);
 
-    console.log('--testing--')
-    console.log(fixture.nativeElement.outerHTML);
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
     expect(component.choices[0]['active']).toEqual(true);
@@ -186,8 +184,6 @@ describe('SprkDropdownComponent', () => {
     fixture.autoDetectChanges();
     component.title = 'test';
     dropdownTriggerElement.click();
-
-    console.log(fixture.nativeElement.outerHTML)
 
     const listBoxAria = fixture.nativeElement.querySelector('.sprk-c-Dropdown__links').getAttribute('aria-label');
     expect(listBoxAria).toEqual('test');
