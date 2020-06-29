@@ -1832,8 +1832,6 @@ $sprk-masthead-content-item-padding-right-wide: $sprk-space-m !default;
 $sprk-masthead-content-item-padding-left-wide: $sprk-space-m !default;
 /// The visited state color of Masthead links.
 $sprk-masthead-link-visited-color: $sprk-black !default;
-/// The hover state color of Masthead links.
-$sprk-masthead-link-hover-color: $sprk-red !default;
 /// The font weight for Masthead links.
 $sprk-masthead-link-font-weight: 500 !default;
 /// The size of the bottom border on the Masthead.
@@ -1924,9 +1922,6 @@ $sprk-big-nav-link-font-weight: 400 !default;
 $sprk-big-nav-link-padding: 0 $sprk-space-s !default;
 /// The color of the big navigation link in the Masthead Extended.
 $sprk-big-nav-link-color: $sprk-black !default;
-/// The text and underline color of
-/// the active big navigation item in the Masthead Extended.
-$sprk-big-nav-active-color: $sprk-red !default;
 /// The line height
 /// of the big navigation items
 /// in the Masthead Extended.
