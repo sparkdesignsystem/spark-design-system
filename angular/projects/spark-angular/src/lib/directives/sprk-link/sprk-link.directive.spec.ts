@@ -13,6 +13,7 @@ import { RouterTestingModule } from '@angular/router/testing';
     <a href="#nogo" sprkLink variant="icon">Link</a>
     <a href="#nogo" sprkLink variant="simple">Simple Link</a>
     <a href="#nogo" sprkLink variant="unstyled">Link</a>
+    <a href="#nogo" sprkLink variant="light">Link</a>
   `,
 })
 class TestComponent {}
@@ -27,6 +28,7 @@ describe('SprkLink Directive', () => {
   let linkIcon: HTMLElement;
   let linkSimple: HTMLElement;
   let linkUnstyled: HTMLElement;
+  let linkLight: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -45,6 +47,7 @@ describe('SprkLink Directive', () => {
     linkIcon = fixture.nativeElement.querySelectorAll('a')[4];
     linkSimple = fixture.nativeElement.querySelectorAll('a')[5];
     linkUnstyled = fixture.nativeElement.querySelectorAll('a')[6];
+    linkLight = fixture.nativeElement.querySelectorAll('a')[7];
   }));
 
   it('should create itself', () => {
@@ -73,6 +76,11 @@ describe('SprkLink Directive', () => {
   it('should apply correct Spark classes for plain variant', () => {
     expect(linkPlain.classList.contains('sprk-b-Link')).toBe(true);
     expect(linkPlain.classList.contains('sprk-b-Link--plain')).toBe(true);
+  });
+
+  it('should apply correct Spark classes for light variant', () => {
+    expect(linkLight.classList.contains('sprk-b-Link')).toBe(true);
+    expect(linkLight.classList.contains('sprk-b-Link--light')).toBe(true);
   });
 
   it('should apply correct Spark classes for disabled links', () => {
