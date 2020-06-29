@@ -21,6 +21,7 @@ const SprkLink = (props) => {
     'sprk-b-Link--plain': variant === 'plain',
     'sprk-b-Link--disabled': variant === 'disabled',
     'sprk-b-Link--has-icon': variant === 'has-icon' || variant === 'hasIcon',
+    'sprk-b-Link--light': variant === 'light',
   });
 
   let link;
@@ -71,6 +72,7 @@ SprkLink.propTypes = {
     'plain',
     'disabled',
     'unstyled',
+    'light',
   ]),
   /**
    * Assigned to the `data-id` attribute serving as a

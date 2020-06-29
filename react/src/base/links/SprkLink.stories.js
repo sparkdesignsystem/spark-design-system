@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkLink from './SprkLink';
 import SprkIcon from '../../components/icons/SprkIcon';
+import SprkBox from '../../objects/box/SprkBox';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -36,6 +37,19 @@ export const simple = () => (
   >
     Simple Link
   </SprkLink>
+);
+
+export const light = () => (
+  <SprkBox style={{ backgroundColor: '#1c1b1a' }}>
+    <SprkLink
+      variant="light"
+      analyticsString="link-light"
+      idString="link-3"
+      href="#nogo"
+    >
+      Light Link
+    </SprkLink>
+  </SprkBox>
 );
 
 export const iconWithTextLink = () => (
@@ -102,6 +116,24 @@ export const disabledSimple = () => (
 
 disabledSimple.story = {
   name: 'Disabled - Simple',
+};
+
+export const disabledLight = () => (
+  <SprkBox style={{ backgroundColor: '#1c1b1a' }}>
+    <SprkLink
+      variant="disabled"
+      analyticsString="link-light"
+      idString="link-3"
+      href="#nogo"
+      additionalClasses="sprk-b-Link--light"
+    >
+      Disabled Link
+    </SprkLink>
+  </SprkBox>
+);
+
+disabledLight.story = {
+  name: 'Disabled - Light',
 };
 
 export const disabledIconWithTextLink = () => (
