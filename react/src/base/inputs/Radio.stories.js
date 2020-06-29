@@ -86,20 +86,14 @@ export const invalidRadio = () => (
   <SprkRadioGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem name="radio" ariaDescribedBy="radio-error-container">
-        Radio Item 1
-      </SprkRadioItem>
-      <SprkRadioItem name="radio" ariaDescribedBy="radio-error-container">
-        Radio Item 2
-      </SprkRadioItem>
-      <SprkRadioItem name="radio" ariaDescribedBy="radio-error-container">
-        Radio Item 3
-      </SprkRadioItem>
-      <SprkErrorContainer
-        id="radio-error-container"
-        message="There is an error on this field"
-      />
+      <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
     </SprkFieldset>
+    <SprkErrorContainer
+      id="radio-error-container"
+      message="There is an error on this field"
+    />
   </SprkRadioGroup>
 );
 
@@ -189,32 +183,14 @@ export const hugeInvalid = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-      >
-        Radio Item 1
-      </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-      >
-        Radio Item 2
-      </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-      >
-        Radio Item 3
-      </SprkRadioItem>
-      <SprkErrorContainer
-        id="radio-error-container"
-        message="There is an error on this field"
-      />
+      <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
     </SprkFieldset>
+    <SprkErrorContainer
+      id="radio-huge-error-container"
+      message="There is an error on this field"
+    />
   </SprkRadioGroup>
 );
 

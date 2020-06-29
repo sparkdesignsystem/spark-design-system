@@ -1,8 +1,9 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkRadioGroup from './SprkRadioGroup';
 import SprkRadioItem from '../SprkRadioItem/SprkRadioItem';
+import SprkErrorContainer from '../../SprkErrorContainer/SprkErrorContainer';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -81,6 +82,18 @@ describe('SprkRadioGroup:', () => {
     const wrapper = shallow(<SprkRadioGroup idString={expected} />);
     expect(wrapper.find('.sprk-b-InputContainer').prop('data-id')).toEqual(
       expected,
+    );
+  });
+
+  it(`should assign an id to SprkErrorContainer if it doesn't
+   already have one`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkErrorContainer message="Error" />
+      </SprkRadioGroup>,
+    );
+    expect(wrapper.find(SprkErrorContainer).props().id).toContain(
+      'sprk-error-container-',
     );
   });
 });

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import uniqueId from 'lodash/uniqueId';
+import addPropsToMatchingChildren from '../../../../utilities/helpers/addPropsToChildren';
 
 const SprkRadioGroup = (props) => {
   const {
@@ -13,6 +15,28 @@ const SprkRadioGroup = (props) => {
     analyticsString,
   } = props;
 
+  let errorId = null;
+
+  const childrenArray = React.Children.toArray(children);
+  // Map through children, assign SprkErrorContainer with id/uniqueId
+  // Assign errorId which will determine the ariaDescribedBy of SprkCheckboxItem
+  const elementsToProcess = childrenArray.map((element) => {
+    if (element.type.displayName === 'SprkErrorContainer') {
+      errorId = element.props.id || uniqueId('sprk-error-container-');
+      return React.cloneElement(element, { id: errorId });
+    }
+
+    return element;
+  });
+
+  const elementsToRender = addPropsToMatchingChildren(
+    elementsToProcess,
+    'SprkCheckboxItem',
+    {
+      ariaDescribedBy: errorId,
+    },
+  );
+
   return (
     <div
       className={classnames('sprk-b-InputContainer', additionalClasses, {
@@ -22,7 +46,7 @@ const SprkRadioGroup = (props) => {
       data-id={idString}
     >
       {beforeRadios}
-      {children}
+      {elementsToRender}
       {afterRadios}
     </div>
   );
