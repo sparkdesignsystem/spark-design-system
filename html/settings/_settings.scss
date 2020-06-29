@@ -792,6 +792,35 @@ $sprk-link-simple-visited-border-bottom: $sprk-link-simple-underline-width
 /// The underline style of visited Simple Links on hover.
 $sprk-link-simple-hover-border-bottom: $sprk-link-simple-hover-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-hover-underline-color !default;
+/// The color value of Light Links.
+$sprk-link-light-color: $sprk-white !default;
+/// The underline color of Light Links.
+$sprk-link-light-underline-color: transparent !default;
+/// The underline width of Light Links.
+$sprk-link-light-underline-width: 0.125rem !default;
+/// The font weight of Light Links.
+$sprk-link-light-font-weight: $sprk-font-weight-body-two !default;
+/// The color of Light Links on hover.
+$sprk-link-light-hover-color: $sprk-white !default;
+/// The font weight of Light Links on hover.
+$sprk-link-light-hover-font-weight: $sprk-font-weight-body-one !default;
+/// The underline width of Light Links on hover.
+$sprk-link-light-hover-underline-width: 0.125rem !default;
+/// The underline color of Light Links on hover.
+$sprk-link-light-hover-underline-color: $sprk-white !default;
+/// The left position of the after element of Light Links on hover.
+$sprk-link-light-hover-after-left: 0% !default;
+/// The width of the after element of Light Links on hover.
+$sprk-link-light-hover-after-width: 100% !default;
+/// The underline style of Light Links.
+$sprk-link-light-border-bottom: $sprk-link-light-underline-width
+  $sprk-link-border-bottom-style $sprk-link-light-underline-color !default;
+/// The underline style of visited Light Links.
+$sprk-link-light-visited-border-bottom: $sprk-link-light-underline-width
+  $sprk-link-border-bottom-style $sprk-link-light-underline-color !default;
+/// The underline style of visited Light Links on hover.
+$sprk-link-light-hover-border-bottom: $sprk-link-light-hover-underline-width
+  $sprk-link-border-bottom-style $sprk-link-light-hover-underline-color !default;
 /// The color of icons in Links containing icons.
 $sprk-link-has-icon-color-icon: $sprk-purple !default;
 /// The font weight of Links containing icons.

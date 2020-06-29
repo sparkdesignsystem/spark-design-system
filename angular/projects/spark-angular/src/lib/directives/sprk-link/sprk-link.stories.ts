@@ -4,6 +4,7 @@ import { SprkIconModule } from '../../components/sprk-icon/sprk-icon.module';
 import { SprkLinkDirectiveModule } from './sprk-link.module';
 import { SprkLinkModule } from '../../components/sprk-link/sprk-link.module';
 import { SprkLinkComponent } from '../../components/sprk-link/sprk-link.component';
+import { SprkBoxModule } from '../sprk-box/sprk-box.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -35,6 +36,7 @@ with the new Directive syntax.
 const modules = {
   imports: [
     SprkLinkDirectiveModule,
+    SprkBoxModule,
     SprkIconModule,
     SprkLinkModule,
     RouterModule.forRoot([
@@ -84,6 +86,29 @@ export const simple = () => ({
 });
 
 simple.story = {
+  parameters: {
+    jest: ['sprk-link.directive'],
+  },
+};
+
+export const light = () => ({
+  moduleMetadata: modules,
+  template: `
+    <div sprkBox [ngStyle]="{'background-color':'#1c1b1a'}">
+      <a
+        sprkLink
+        href="#"
+        variant="light"
+        idString="light-link"
+        analyticsString="light-link"
+      >
+        Light Link
+      </a>
+    </div>
+  `,
+});
+
+light.story = {
   parameters: {
     jest: ['sprk-link.directive'],
   },
@@ -168,6 +193,31 @@ export const disabledSimple = () => ({
 
 disabledSimple.story = {
   name: 'Disabled - Simple',
+  parameters: {
+    jest: ['sprk-link.directive'],
+  },
+};
+
+export const disabledLight = () => ({
+  moduleMetadata: modules,
+  template: `
+    <div sprkBox [ngStyle]="{'background-color':'#1c1b1a'}">
+      <a
+        isDisabled="true"
+        sprkLink
+        href="#"
+        variant="light"
+        idString="disabled-light-link"
+        analyticsString="disabled-light-link"
+      >
+        Disabled Link
+      </a>
+    </div>
+  `,
+});
+  
+disabledLight.story = {
+  name: 'Disabled - Light',
   parameters: {
     jest: ['sprk-link.directive'],
   },

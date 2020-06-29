@@ -19,7 +19,7 @@ export class SprkLinkDirective implements OnInit {
    * Will cause the appropriate variant type to render.
    * If omitted, the default Spark Link class is applied.
    */
-  @Input() variant: 'simple' | 'icon' | 'unstyled' | 'plain';
+  @Input() variant: 'simple' | 'icon' | 'unstyled' | 'plain' | 'light';
 
   /**
    * If `true`, will set disabled styles on the link.
@@ -49,17 +49,17 @@ export class SprkLinkDirective implements OnInit {
   idString: string;
 
   ngOnInit() {
+    const variants = {
+      'simple' : 'sprk-b-Link--simple',
+      'icon' : 'sprk-b-Link--has-icon',
+      'plain' : 'sprk-b-Link--plain',
+      'light' : 'sprk-b-Link--light'
+    }
     if (this.variant !== 'unstyled') {
       this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link');
     }
-    if (this.variant === 'simple') {
-      this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link--simple');
-    }
-    if (this.variant === 'icon') {
-      this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link--has-icon');
-    }
-    if (this.variant === 'plain') {
-      this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link--plain');
+    if(variants.hasOwnProperty(this.variant)) {
+      this.renderer.addClass(this.el.nativeElement, variants[this.variant]);
     }
   }
 }

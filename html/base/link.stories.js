@@ -46,12 +46,26 @@ export const simple = () =>
     </a>
   `;
 
+export const light = () =>
+  `
+    <div class="sprk-o-Box" style="background-color: #1C1B1A"> 
+      <a
+        class="sprk-b-Link sprk-b-Link--light"
+        href="#nogo"
+        data-id="link-3"
+        data-analytics="object.action.event"
+      >
+        Light Link
+      </a>
+    </div> 
+  `;
+
 export const iconWithTextLink = () =>
   `
     <a
       class="sprk-b-Link sprk-b-Link--has-icon"
       href="#nogo"
-      data-id="link-3"
+      data-id="link-4"
       data-analytics="object.action.event"
     >
       <svg
@@ -71,7 +85,7 @@ export const iconWithTextLink = () =>
     <a
       class="sprk-b-Link sprk-b-Link--has-icon"
       href="#nogo"
-      data-id="link-4"
+      data-id="link-5"
       data-analytics="object.action.event"
     >
       Forward
@@ -93,7 +107,7 @@ export const disabled = () =>
     <a
       class="sprk-b-Link sprk-b-Link--disabled"
       href="#nogo"
-      data-id="link-5"
+      data-id="link-6"
       data-analytics="object.action.event"
     >
       Disabled Link
@@ -105,7 +119,7 @@ export const disabledSimple = () =>
     <a
       class="sprk-b-Link sprk-b-Link--simple sprk-b-Link--disabled"
       href="#nogo"
-      data-id="link-6"
+      data-id="link-7"
       data-analytics="object.action.event"
     >
       Disabled Link
@@ -116,12 +130,31 @@ disabledSimple.story = {
   name: 'Disabled - Simple',
 };
 
+export const disabledLight = () =>
+  `
+    <div class="sprk-o-Box" style="background-color: #1C1B1A"> 
+      <a
+        class="sprk-b-Link sprk-b-Link--light sprk-b-Link--disabled"
+        href="#nogo"
+        data-id="link-8"
+        data-analytics="object.action.event"
+      >
+        Disabled Link
+      </a>
+    </div>
+  `;
+
+disabledLight.story = {
+  name: 'Disabled - Light',
+};
+
+
 export const disabledIconWithTextLink = () =>
   `
     <a
       class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
       href="#nogo"
-      data-id="link-7"
+      data-id="link-9"
       data-analytics="object.action.event"
     >
       <svg
@@ -141,7 +174,7 @@ export const disabledIconWithTextLink = () =>
     <a
       class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
       href="#nogo"
-      data-id="link-8"
+      data-id="link-10"
       data-analytics="object.action.event"
     >
       Forward

@@ -55,6 +55,34 @@
   }
 }
 
+/// Used when a link is on a dark background. There will be an underline on hover.
+.sprk-b-Link--light {
+  color: $sprk-link-light-color;
+  border-bottom: $sprk-link-light-border-bottom;
+  font-weight: $sprk-link-light-font-weight;
+
+  &:visited {
+    border-bottom: $sprk-link-light-visited-border-bottom;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sprk-link-light-hover-color;
+    font-weight: $sprk-link-light-hover-font-weight;
+    border-bottom: $sprk-link-light-underline-color;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: $sprk-link-light-hover-after-left;
+      width: $sprk-link-light-hover-after-width;
+      border-bottom: $sprk-link-light-hover-border-bottom;
+    }
+  }
+}
+
 /// Used when a link is next to an icon. There will not be an underline.
 .sprk-b-Link--has-icon {
   border-bottom: $sprk-link-has-icon-border-bottom;
@@ -99,6 +127,7 @@
 }
 
 .sprk-b-Link--simple.sprk-b-Link--disabled,
+.sprk-b-Link--light.sprk-b-Link--disabled,
 .sprk-b-Link--disabled .sprk-c-Icon {
   color: $sprk-link-disabled-color;
   stroke: $sprk-link-disabled-color;
