@@ -94,7 +94,6 @@ describe('SprkDropdownComponent', () => {
     ];
     dropdownTriggerElement.click();
     expect(component.isOpen).toEqual(true);
-
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
     expect(component.choices[0]['active']).toEqual(true);
