@@ -21,7 +21,7 @@ const SprkRadioGroup = (props) => {
   // Map through children, assign SprkErrorContainer with id/uniqueId
   // Assign errorId which will determine the ariaDescribedBy of SprkCheckboxItem
   const elementsToProcess = childrenArray.map((element) => {
-    if (element.type.displayName === 'SprkErrorContainer') {
+    if (element.type.name === 'SprkErrorContainer') {
       errorId = element.props.id || uniqueId('sprk-error-container-');
       return React.cloneElement(element, { id: errorId });
     }
@@ -43,7 +43,7 @@ const SprkRadioGroup = (props) => {
       );
     }
 
-    if (element.type.displayName === 'SprkRadioItem') {
+    if (element.type.name === 'SprkRadioItem') {
       return React.cloneElement(element, {
         ariaDescribedBy: errorId,
         key: `sprk-radio-item-${index}`,

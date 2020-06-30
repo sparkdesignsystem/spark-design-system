@@ -87,7 +87,10 @@ export const invalidRadio = () => (
     <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
     <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
     <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
-    <SprkErrorContainer message="There is an error on this field" />
+    <SprkErrorContainer
+      id="radio-error-container"
+      message="There is an error on this field"
+    />
   </SprkRadioGroup>
 );
 
@@ -177,11 +180,20 @@ export const hugeInvalid = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
-      <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
-      <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
+      <SprkRadioItem name="radio" variant="huge">
+        Radio Item 1
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" variant="huge">
+        Radio Item 2
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" variant="huge">
+        Radio Item 3
+      </SprkRadioItem>
     </SprkFieldset>
-    <SprkErrorContainer message="There is an error on this field" />
+    <SprkErrorContainer
+      id="radio-huge-error-container"
+      message="There is an error on this field"
+    />
   </SprkRadioGroup>
 );
 
