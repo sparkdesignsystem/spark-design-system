@@ -4,8 +4,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import SprkCheckboxGroup from './SprkCheckboxGroup';
 import SprkCheckboxItem from '../SprkCheckboxItem/SprkCheckboxItem';
 import SprkFieldset from '../../SprkFieldset/SprkFieldset';
-import SprkLegend from '../../SprkLegend/SprkLegend';
-// import SprkErrorContainer from '../../SprkErrorContainer/SprkErrorContainer';
+import SprkErrorContainer from '../../SprkErrorContainer/SprkErrorContainer';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -13,33 +12,13 @@ describe('SprkCheckboxGroup:', () => {
   it('should render SprkCheckbox inside of it', () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkFieldset>
-          <SprkLegend>Group Label Name</SprkLegend>
-          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
-        </SprkFieldset>
+        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
       </SprkCheckboxGroup>,
     );
     expect(wrapper.find('SprkCheckboxItem').length).toBe(3);
   });
-
-  // it('should assign aria described by based on error container', () => {
-  //   const expected = 'expectedId';
-  //   const wrapper = mount(
-  //     <SprkCheckboxGroup>
-  //       <SprkFieldset>
-  //         <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-  //       </SprkFieldset>
-  //       <SprkErrorContainer id={expected} />
-  //     </SprkCheckboxGroup>,
-  //   );
-  //   expect(wrapper.find('SprkCheckboxItem').prop('ariaDescribedBy')).toEqual(
-  //     expected,
-  //   );
-  // });
-
-  // If error containder doesn't have id
 
   it('should have container styles', () => {
     const wrapper = shallow(<SprkCheckboxGroup />);
@@ -79,5 +58,66 @@ describe('SprkCheckboxGroup:', () => {
     expect(wrapper.find('.sprk-b-InputContainer').prop('data-id')).toEqual(
       expected,
     );
+  });
+
+  it(`should assign an id to SprkErrorContainer if it doesn't
+      already have one`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <SprkErrorContainer message="Error" />
+      </SprkCheckboxGroup>,
+    );
+    expect(wrapper.find(SprkErrorContainer).prop('id')).toContain(
+      'sprk-error-container',
+    );
+  });
+
+  it(`should assign ariaDescribedBy to SprkCheckboxItem that matches the
+  supplied id on SprkErrorContainer`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <SprkFieldset>
+          <SprkCheckboxItem />
+          <SprkCheckboxItem />
+          <SprkCheckboxItem />
+        </SprkFieldset>
+        <SprkErrorContainer id="error-id" message="Error" />
+      </SprkCheckboxGroup>,
+    );
+    wrapper.find('SprkCheckboxItem').forEach((item) => {
+      expect(item.props().ariaDescribedBy).toContain('error-id');
+    });
+  });
+
+  it(`when no id is given to SprkErrorContainer, it should generate one and
+  put it on the SprkErrorContainer and on any SprkRadioItems`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <SprkCheckboxItem />
+        <SprkCheckboxItem />
+        <SprkCheckboxItem />
+        <SprkErrorContainer message="Error" />
+      </SprkCheckboxGroup>,
+    );
+
+    wrapper.find('SprkCheckboxItem').forEach((item) => {
+      expect(item.props().ariaDescribedBy).toContain('sprk-error-container');
+    });
+  });
+
+  it(`when no id is given to SprkErrorContainer, it should generate
+  one and put it on the SprkErrorContainer and on any
+  SprkRadioItems in the fieldset`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <SprkCheckboxItem />
+        <SprkCheckboxItem />
+        <SprkCheckboxItem />
+        <SprkErrorContainer id="id" message="Error" />
+      </SprkCheckboxGroup>,
+    );
+    wrapper.find('SprkCheckboxItem').forEach((item) => {
+      expect(item.props().ariaDescribedBy).toContain('sprk-error-container');
+    });
   });
 });

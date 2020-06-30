@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
-import addPropsToMatchingChildren from '../../../../utilities/helpers/addPropstoMatchingChildren/addPropsToMatchingChildren';
+import addPropsToMatchingComponents from '../../../../utilities/helpers/addPropstoMatchingComponents/addPropsToMatchingComponents';
 
 const SprkCheckboxGroup = (props) => {
   const {
@@ -20,20 +20,41 @@ const SprkCheckboxGroup = (props) => {
   // Map through children, assign SprkErrorContainer with id/uniqueId
   // Assign errorId which will determine the ariaDescribedBy of SprkCheckboxItem
   const elementsToProcess = childrenArray.map((element) => {
-    if (element.type.displayName === 'SprkErrorContainer') {
+    if (element.type.name === 'SprkErrorContainer') {
       errorId = element.props.id || uniqueId('sprk-error-container-');
       return React.cloneElement(element, { id: errorId });
     }
     return element;
   });
 
-  const elementsToRender = addPropsToMatchingChildren(
-    elementsToProcess,
-    'SprkCheckboxItem',
-    {
-      ariaDescribedBy: errorId,
-    },
-  );
+  // For each element, if it has granChildren, add ariaDescribedBY to those
+  let key = 0;
+  const elementsToRender = elementsToProcess.map((element) => {
+    key += 1;
+    let grandChildren = null;
+    if (element.props.children) {
+      grandChildren = addPropsToMatchingComponents(
+        element.props.children,
+        ['SprkCheckboxItem'],
+        {
+          ariaDescribedBy: errorId,
+        },
+      );
+    }
+
+    if (element.type.name === 'SprkCheckboxItem') {
+      return React.cloneElement(element, {
+        ariaDescribedBy: errorId,
+        key: `sprk-radio-item-${key}`,
+        children: grandChildren || element.children,
+      });
+    }
+
+    return React.cloneElement(element, {
+      key: `sprk-radio-outer-item-${key}`,
+      children: grandChildren || element.children,
+    });
+  });
 
   return (
     <div
