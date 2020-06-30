@@ -84,16 +84,10 @@ defaultHelperText.story = {
 
 export const invalidRadio = () => (
   <SprkRadioGroup>
-    <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
-      <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
-      <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
-    </SprkFieldset>
-    <SprkErrorContainer
-      id="radio-error-container"
-      message="There is an error on this field"
-    />
+    <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
+    <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
+    <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
+    <SprkErrorContainer message="There is an error on this field" />
   </SprkRadioGroup>
 );
 
@@ -187,10 +181,7 @@ export const hugeInvalid = () => (
       <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
     </SprkFieldset>
-    <SprkErrorContainer
-      id="radio-huge-error-container"
-      message="There is an error on this field"
-    />
+    <SprkErrorContainer message="There is an error on this field" />
   </SprkRadioGroup>
 );
 

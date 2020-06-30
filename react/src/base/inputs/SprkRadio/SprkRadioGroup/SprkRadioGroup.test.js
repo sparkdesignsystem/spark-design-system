@@ -85,15 +85,15 @@ describe('SprkRadioGroup:', () => {
     );
   });
 
-  it(`should assign an id to SprkErrorContainer if it doesn't
-   already have one`, () => {
-    const wrapper = mount(
-      <SprkRadioGroup>
-        <SprkErrorContainer message="Error" />
-      </SprkRadioGroup>,
-    );
-    expect(wrapper.find(SprkErrorContainer).props().id).toContain(
-      'sprk-error-container-',
-    );
-  });
+  // it(`should assign an id to SprkErrorContainer if it doesn't
+  //  already have one`, () => {
+  //   const wrapper = mount(
+  //     <SprkRadioGroup>
+  //       <SprkErrorContainer message="Error" />
+  //     </SprkRadioGroup>,
+  //   );
+  //   expect(wrapper.find(SprkErrorContainer).props().id).toContain(
+  //     'sprk-error-container-',
+  //   );
+  // });
 });
