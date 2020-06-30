@@ -42,14 +42,14 @@ class SprkFooter extends Component {
       paragraphsHasIds,
     } = this.state;
     const classNames = classnames(
-      'sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--gray',
+      'sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--black',
       additionalClasses,
     );
 
     return (
       <div className={classNames}>
         <footer
-          className="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b"
+          className="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-c-Footer sprk-c-Footer--has-dark-bg"
           role="contentinfo"
           data-id={idString}
         >
@@ -171,9 +171,10 @@ class SprkFooter extends Component {
                       >
                         <SprkIcon
                           iconName={name}
-                          additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${
-                            addClasses
-                          }`}
+                          additionalClasses={classnames(
+                            `sprk-c-Icon--stroke-current-color sprk-c-Icon--l`,
+                            addClasses,
+                          )}
                         />
                         <span className="sprk-u-ScreenReaderText">{screenReaderText}</span>
                       </TagName>

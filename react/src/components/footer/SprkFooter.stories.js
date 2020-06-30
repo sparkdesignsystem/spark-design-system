@@ -7,15 +7,13 @@ import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFo
 
 export default {
   title: 'Components/Footer',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkFooter,
   parameters: {
     subcomponents: {
       SprkFooterAwards,
       SprkFooterConnectIcons,
-      SprkFooterGlobalSection
+      SprkFooterGlobalSection,
     },
     jest: ['SprkFooter'],
     info: `

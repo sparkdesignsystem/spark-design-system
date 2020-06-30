@@ -1,0 +1,25 @@
+// ==================================================================
+// Footer
+// ==================================================================
+
+////
+/// @group Footer
+////
+.sprk-c-Footer--has-dark-bg {
+  .sprk-b-TypeDisplayOne,
+  .sprk-b-TypeDisplayTwo,
+  .sprk-b-TypeDisplayThree,
+  .sprk-b-TypeDisplayFour,
+  .sprk-b-TypeDisplayFive,
+  .sprk-b-TypeDisplaySix,
+  .sprk-b-TypeDisplaySeven,
+  .sprk-b-TypeBodyOne,
+  .sprk-b-TypeBodyTwo,
+  .sprk-b-TypeBodyThree,
+  .sprk-b-TypeBodyFour,
+  .sprk-c-Toggle__trigger,
+  .sprk-b-Link {
+    // TODO: Change this variable name
+    color: $sprk-footer-color-has-dark-background;
+  }
+}

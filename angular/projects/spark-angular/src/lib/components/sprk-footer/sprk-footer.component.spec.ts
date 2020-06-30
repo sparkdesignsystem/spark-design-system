@@ -40,7 +40,7 @@ describe('SprkFooterComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-u-pam sprk-u-man'
+      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-c-Footer sprk-c-Footer--has-dark-bg sprk-u-pam sprk-u-man'
     );
   });
 

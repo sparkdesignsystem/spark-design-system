@@ -12,7 +12,7 @@ import {
 @Component({
   selector: 'sprk-footer',
   template: `
-    <div class="sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--gray">
+    <div class="sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--black">
       <footer
         [ngClass]="getClasses()"
         role="contentinfo"
@@ -344,7 +344,7 @@ export class SprkFooterComponent {
    */
   getClasses(): string {
     const classArray: string[] = [
-      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b'
+      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-c-Footer sprk-c-Footer--has-dark-bg'
     ];
 
     if (this.additionalClasses) {
