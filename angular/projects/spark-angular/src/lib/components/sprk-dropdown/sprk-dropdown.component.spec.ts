@@ -10,15 +10,15 @@ describe('SprkDropdownComponent', () => {
   let dropdownTriggerElement: HTMLElement;
   let dropdownTriggerTextElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach( async () => {
+    await TestBed.configureTestingModule({
       declarations: [
         SprkDropdownComponent,
         SprkIconComponent,
-        SprkLinkDirective
-      ]
+        SprkLinkDirective,
+      ],
     }).compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkDropdownComponent);
