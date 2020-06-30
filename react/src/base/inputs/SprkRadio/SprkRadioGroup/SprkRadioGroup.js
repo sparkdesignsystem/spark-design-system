@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
-import addPropsToMatchingComponents from '../../../../utilities/helpers/addPropsToMatchingComponents';
+import addPropsToMatchingComponents from '../../../../utilities/helpers/addPropsToMatchingComponents/addPropsToMatchingComponents';
 
 const SprkRadioGroup = (props) => {
   const {
@@ -30,8 +30,9 @@ const SprkRadioGroup = (props) => {
   });
 
   // for each element, if it has grandChildren, add ariaDescribedBy to those
-  const elementsToRender = elementsToProcess.map((element, index) => {
-    // TODO: remove the index from keys
+  let key = 0;
+  const elementsToRender = elementsToProcess.map((element) => {
+    key += 1;
     let grandChildren = null;
     if (element.props.children) {
       grandChildren = addPropsToMatchingComponents(
@@ -46,13 +47,13 @@ const SprkRadioGroup = (props) => {
     if (element.type.name === 'SprkRadioItem') {
       return React.cloneElement(element, {
         ariaDescribedBy: errorId,
-        key: `sprk-radio-item-${index}`,
+        key: `sprk-radio-item-${key}`,
         children: grandChildren || element.children,
       });
     }
 
     return React.cloneElement(element, {
-      key: `sprk-radio-outer-item-${index}`,
+      key: `sprk-radio-outer-item-${key}`,
       children: grandChildren || element.children,
     });
   });
