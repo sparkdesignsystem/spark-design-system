@@ -5,7 +5,7 @@ import SprkRadioItem from './SprkRadioItem';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkRadio:', () => {
+describe('SprkRadioItem:', () => {
   it('should apply additional classes', () => {
     const expected = 'test-class';
     const wrapper = shallow(<SprkRadioItem additionalClasses={expected} />);

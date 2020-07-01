@@ -6,8 +6,6 @@ import addPropsToMatchingComponents from '../../../../utilities/helpers/addProps
 
 const SprkRadioGroup = (props) => {
   const {
-    afterRadios,
-    beforeRadios,
     children,
     variant,
     idString,
@@ -66,18 +64,12 @@ const SprkRadioGroup = (props) => {
       data-analytics={analyticsString}
       data-id={idString}
     >
-      {beforeRadios}
       {elementsToRender}
-      {afterRadios}
     </div>
   );
 };
 
 SprkRadioGroup.propTypes = {
-  /** Content to render inside of the component, after the children.. */
-  afterRadios: PropTypes.node,
-  /** Content to render inside of the component, before the children */
-  beforeRadios: PropTypes.node,
   /** Content to render inside of the component. */
   children: PropTypes.node,
   /**
