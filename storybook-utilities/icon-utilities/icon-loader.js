@@ -1,10 +1,10 @@
-var request = new XMLHttpRequest();
-request.open('GET', 'https://spark-assets.netlify.app/spark-core-icons.svg');
+const request = new XMLHttpRequest();
+request.open('GET', 'https://spark-assets.netlify.app/spark-icons.svg');
 request.send();
-request.onload = function () {
+request.onload = () => {
   document.querySelector('#sprk-icons').innerHTML = this.response;
   let event;
-  if (typeof (Event) === 'function') {
+  if (typeof Event === 'function') {
     event = new Event('sprk-icons-loaded');
   } else {
     event = document.createEvent('Event');
