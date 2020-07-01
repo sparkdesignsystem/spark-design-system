@@ -5,9 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Tooltip',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('tooltips')}
@@ -22,8 +20,15 @@ export const defaultStory = () => {
   }, []);
 
   return `
-    <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
-      <button data-sprk-tooltip="trigger" class="sprk-c-Tooltip__trigger" aria-labelledby="tooltip_1">
+    <span
+      data-sprk-tooltip="container"
+      class="sprk-c-Tooltip__container"
+      >
+      <button
+        data-sprk-tooltip="trigger"
+        class="sprk-c-Tooltip__trigger"
+        aria-labelledby="tooltip_1"
+        >
         <svg
           class="sprk-c-Icon sprk-c-Icon--filled"
           aria-hidden="true"
@@ -38,7 +43,8 @@ export const defaultStory = () => {
         id="tooltip_1"
         role="tooltip"
       >
-        Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id dee doo da fauxet la gigman roo.
+        Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
+        deserunt aute id dee doo da fauxet la gigman roo.
       </span>
     </span>
   `;
@@ -48,5 +54,5 @@ defaultStory.story = {
   name: 'Tooltip',
   parameters: {
     jest: ['tooltip'],
-  }
+  },
 };

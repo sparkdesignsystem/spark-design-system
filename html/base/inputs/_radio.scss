@@ -154,8 +154,8 @@
   }
 }
 
-// Anytime we have a huge radio
-// inside a stack, we remove the margin bottom.
+// Anytime that we have a huge radio
+// inside a stack item, we remove the margin bottom.
 .sprk-o-Stack__item .sprk-b-Radio--huge {
   margin-bottom: 0;
 }
