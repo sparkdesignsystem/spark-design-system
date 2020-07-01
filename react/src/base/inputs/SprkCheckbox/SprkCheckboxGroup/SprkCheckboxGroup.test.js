@@ -85,7 +85,7 @@ describe('SprkCheckboxGroup:', () => {
       </SprkCheckboxGroup>,
     );
     wrapper.find('SprkCheckboxItem').forEach((item) => {
-      expect(item.props().ariaDescribedBy).toContain('error-id');
+      expect(item.prop('ariaDescribedBy')).toContain('error-id');
     });
   });
 
@@ -99,25 +99,24 @@ describe('SprkCheckboxGroup:', () => {
         <SprkErrorContainer message="Error" />
       </SprkCheckboxGroup>,
     );
-
     wrapper.find('SprkCheckboxItem').forEach((item) => {
-      expect(item.props().ariaDescribedBy).toContain('sprk-error-container');
+      expect(item.prop('ariaDescribedBy')).toContain('sprk-error-container-');
     });
   });
 
   it(`when no id is given to SprkErrorContainer, it should generate
   one and put it on the SprkErrorContainer and on any
-  SprkRadioItems in the fieldset`, () => {
+  SprkCheckboxItems in the fieldset`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
         <SprkCheckboxItem />
         <SprkCheckboxItem />
         <SprkCheckboxItem />
-        <SprkErrorContainer id="id" message="Error" />
+        <SprkErrorContainer message="Error" />
       </SprkCheckboxGroup>,
     );
     wrapper.find('SprkCheckboxItem').forEach((item) => {
-      expect(item.props().ariaDescribedBy).toContain('sprk-error-container');
+      expect(item.prop('ariaDescribedBy')).toContain('sprk-error-container-');
     });
   });
 });
