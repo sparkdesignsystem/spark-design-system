@@ -45,6 +45,8 @@ export { default as SprkFooter }
   from './components/footer/SprkFooter';
 export { default as SprkToggle }
   from './components/toggle/SprkToggle';
+export { default as SprkTooltip}
+  from './components/tooltip/SprkTooltip';
 export { default as SprkAccordion }
   from './components/accordions/SprkAccordion';
 export { default as SprkAccordionItem }
