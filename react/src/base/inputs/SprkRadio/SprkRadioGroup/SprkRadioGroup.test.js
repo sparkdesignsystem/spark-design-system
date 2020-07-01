@@ -4,6 +4,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import SprkRadioGroup from './SprkRadioGroup';
 import SprkRadioItem from '../SprkRadioItem/SprkRadioItem';
 import SprkErrorContainer from '../../SprkErrorContainer/SprkErrorContainer';
+import SprkHelperText from '../../SprkHelperText/SprkHelperText';
 import SprkFieldset from '../../SprkFieldset/SprkFieldset';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -72,6 +73,18 @@ describe('SprkRadioGroup:', () => {
     );
   });
 
+  it(`should assign an id to SprkHelpText if it doesn't
+   already have one`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkHelperText>Helper Text</SprkHelperText>
+      </SprkRadioGroup>,
+    );
+    expect(wrapper.find(SprkHelperText).props().id).toContain(
+      'sprk-helper-text',
+    );
+  });
+
   it(`should assign ariaDescribedBy to SprkRadioItem that matches the
   supplied id on SprkErrorContainer`, () => {
     const wrapper = mount(
@@ -106,6 +119,22 @@ describe('SprkRadioGroup:', () => {
     });
   });
 
+  it(`when no id is given to SprkHelperText, it should generate one and
+  put it on the SprkHelperText and on any SprkRadioItems`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkRadioItem name="radio" />
+        <SprkRadioItem name="radio" />
+        <SprkRadioItem name="radio" />
+        <SprkHelperText>Helper Text</SprkHelperText>
+      </SprkRadioGroup>,
+    );
+
+    wrapper.find(SprkRadioItem).forEach((item) => {
+      expect(item.props().ariaDescribedBy).toContain('sprk-helper-text');
+    });
+  });
+
   it(`when no id is given to SprkErrorContainer, it should generate
   one and put it on the SprkErrorContainer and on any
   SprkRadioItems in the fieldset`, () => {
@@ -122,6 +151,25 @@ describe('SprkRadioGroup:', () => {
 
     wrapper.find(SprkRadioItem).forEach((item) => {
       expect(item.props().ariaDescribedBy).toContain('sprk-error-container');
+    });
+  });
+
+  it(`when no id is given to SprkHelperText, it should generate
+  one and put it on the SprkHelperText and on any
+  SprkRadioItems in the fieldset`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkFieldset>
+          <SprkRadioItem name="radio" />
+          <SprkRadioItem name="radio" />
+          <SprkRadioItem name="radio" />
+        </SprkFieldset>
+        <SprkHelperText>Helper Text</SprkHelperText>
+      </SprkRadioGroup>,
+    );
+
+    wrapper.find(SprkRadioItem).forEach((item) => {
+      expect(item.props().ariaDescribedBy).toContain('sprk-helper-text');
     });
   });
 });

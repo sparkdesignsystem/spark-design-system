@@ -14,6 +14,7 @@ const SprkRadioGroup = (props) => {
   } = props;
 
   let errorId = null;
+  let helperId = null;
 
   const childrenArray = React.Children.toArray(children);
   // Map through children, assign SprkErrorContainer with id/uniqueId
@@ -22,6 +23,11 @@ const SprkRadioGroup = (props) => {
     if (element.type.name === 'SprkErrorContainer') {
       errorId = element.props.id || uniqueId('sprk-error-container-');
       return React.cloneElement(element, { id: errorId });
+    }
+
+    if (element.type.name === 'SprkHelperText') {
+      helperId = element.props.id || uniqueId('sprk-helper-text-');
+      return React.cloneElement(element, { id: helperId });
     }
 
     return element;
@@ -37,14 +43,14 @@ const SprkRadioGroup = (props) => {
         element.props.children,
         ['SprkRadioItem'],
         {
-          ariaDescribedBy: errorId,
+          ariaDescribedBy: [helperId, errorId].join(' '),
         },
       );
     }
 
     if (element.type.name === 'SprkRadioItem') {
       return React.cloneElement(element, {
-        ariaDescribedBy: errorId,
+        ariaDescribedBy: [helperId, errorId].join(' '),
         key: `sprk-radio-item-${key}`,
         children: grandChildren || element.children,
       });
