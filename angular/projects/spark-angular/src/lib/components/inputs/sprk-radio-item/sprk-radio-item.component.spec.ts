@@ -192,7 +192,7 @@ describe('SprkRadioItemComponent', () => {
     );
   });
 
-  it('should console.warn if for and id both exist but don\'t match', () => {
+  it("should console.warn if for and id both exist but don't match", () => {
     expect(console.warn).toHaveBeenNthCalledWith(
       2,
       `Spark Design System Warning - The value of 'for' (item-test) on the label should match the 'id' on the input (item-1).`,
@@ -202,7 +202,7 @@ describe('SprkRadioItemComponent', () => {
   it('should console.warn if for exists but the id does not', () => {
     expect(console.warn).toHaveBeenNthCalledWith(
       1,
-      'Spark Design System Warning - The value of \'for\' (item-1) on the label expects a matching \'id\' on the input.',
+      "Spark Design System Warning - The value of 'for' (item-1) on the label expects a matching 'id' on the input.",
     );
   });
 });

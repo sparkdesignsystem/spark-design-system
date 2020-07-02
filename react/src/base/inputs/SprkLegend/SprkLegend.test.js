@@ -12,7 +12,7 @@ describe('SprkLegend:', () => {
     expect(wrapper.find('.sprk-b-Legend').hasClass(expected)).toBe(true);
   });
 
-  it('should apply disabled', () => {
+  it('should apply disabled classes', () => {
     const wrapper = shallow(<SprkLegend disabled />);
     expect(
       wrapper.find('.sprk-b-Legend').hasClass('sprk-b-Label--disabled'),

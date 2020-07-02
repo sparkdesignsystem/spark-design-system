@@ -893,8 +893,8 @@ $sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
 $sprk-input-huge-icon-offset-top: 50% !default;
 /// The margin-top value for icons in Huge Select Inputs.
 $sprk-select-input-huge-icon-margin-top: -((
-  $sprk-input-huge-height - $sprk-icon-m
-) / 2 + $sprk-icon-m) !default;
+        $sprk-input-huge-height - $sprk-icon-m
+      ) / 2 + $sprk-icon-m) !default;
 /// The padding value for Huge Inputs with icons.
 $sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 
@@ -1114,7 +1114,7 @@ $sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color: $sprk-gr
 /// The height of the checkmark inside of the huge checkbox input.
 $sprk-checkbox-huge-checkmark-icon-height: 0.5rem !default;
 /// The width of the checkmark inside of the huge checkbox input.
-$sprk-checkbox-huge-checkmark-icon-width: .75rem !default;
+$sprk-checkbox-huge-checkmark-icon-width: 0.75rem !default;
 /// The left value of the checkmark inside of the huge checkbox input.
 $sprk-checkbox-huge-checkmark-icon-left: 22px !default;
 /// The top value of the checkmark inside of the huge checkbox input.
@@ -1326,7 +1326,8 @@ $sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-75 !defa
 /// The border of the outer circle in the radio input on focus.
 $sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-green !default;
 /// The border of the outer circle in the disabled radio input on focus.
-$sprk-radio-input-outer-circle-focus-border-disabled: 2px solid $sprk-black-tint-50 !default;
+$sprk-radio-input-outer-circle-focus-border-disabled: 2px solid
+  $sprk-black-tint-50 !default;
 /// The border radius of the circle in the radio input.
 $sprk-radio-input-border-radius: 50% !default;
 /// The background color of the inner circle in the radio input.
@@ -1336,7 +1337,8 @@ $sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-green !default;
 /// The border of the outer circle in the radio input.
 $sprk-radio-input-outer-circle-border: 2px solid $sprk-black-tint-50 !default;
 /// The border of the outer circle in the disabled radio input on hover.
-$sprk-radio-input-outer-circle-border-hover-disabled: 2px solid $sprk-black-tint-50 !default;
+$sprk-radio-input-outer-circle-border-hover-disabled: 2px solid
+  $sprk-black-tint-50 !default;
 /// The height of the outer circle in the radio input.
 $sprk-radio-input-outer-circle-height: 1rem !default;
 /// The width of the outer circle in the radio input.
@@ -2097,7 +2099,7 @@ $sprk-stepper-bar-left-inset: $sprk-space-l;
 $sprk-stepper-step-content-margin-left: ($sprk-stepper-bar-left-inset * 2) +
   $sprk-stepper-bar-width;
 $sprk-stepper-icon-left: -(($sprk-stepper-bar-left-inset +
-$sprk-stepper-icon-radius));
+        $sprk-stepper-icon-radius));
 $sprk-stepper-slide-timing: 0.3s;
 $sprk-stepper-slider-text-fade-in-timing: 0.6s;
 $sprk-stepper-slider-text-fade-in-delay: 0.2s;

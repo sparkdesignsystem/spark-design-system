@@ -11,6 +11,8 @@ export { default as SprkIcon } from './components/icons/SprkIcon';
 export { default as SprkTextInput } from './base/inputs/SprkTextInput/SprkTextInput';
 export { default as SprkRevealInput } from './base/inputs/SprkRevealInput/SprkRevealInput';
 export { default as SprkSelectionInput } from './base/inputs/SprkSelectionInput/SprkSelectionInput';
+export { default as SprkCheckboxGroup } from './base/inputs/SprkCheckbox/SprkCheckboxGroup/SprkCheckboxGroup';
+export { default as SprkCheckboxItem } from './base/inputs/SprkCheckbox/SprkCheckboxItem/SprkCheckboxItem';
 export { default as SprkRadioGroup } from './base/inputs/SprkRadio/SprkRadioGroup/SprkRadioGroup';
 export { default as SprkRadioItem } from './base/inputs/SprkRadio/SprkRadioItem/SprkRadioItem';
 export { default as SprkHelperText } from './base/inputs/SprkHelperText/SprkHelperText';

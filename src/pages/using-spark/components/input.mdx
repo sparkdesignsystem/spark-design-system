@@ -97,6 +97,8 @@ than one option from a list.
 ### Huge Checkbox
 [Back to Variants](#variants)
 
+Huge checkboxes allow a user to select one or more options from a list.
+
 The Huge Checkbox component is intended for flows
 that present single questions in a step by step process.
 For this reason, Huge Checkbox should only be
@@ -105,18 +107,19 @@ used for stand-alone question flows.
 #### Guidelines
 - Ensure list is in logical order for inputs (groups will stack).
 - Options should be short and concise. Content should not exceed 40 characters.
+- If a concise label is not enough information for the user to make a reasonable choice, consider using a [tooltip](https://html.sparkdesignsystem.com/?path=/docs/components-tooltip--default-story) to provide more context.
 - There should be at least two options, but no more than six.
-- To see layout configurations with two, three, four, five, or six options, see the [Storybook page](https://html.sparkdesignsystem.com/?path=/docs/components-input-huge-checkbox-default-story).
+- To see layout configurations with two, three, four, five, or six options, see the [Storybook page](https://html.sparkdesignsystem.com/?path=/docs/components-input-checkbox--huge).
 - This component cannot have more than six options. If your design needs more, consider using a [Huge Select Box](#huge-select-box) instead.
 
 #### Anatomy
-- Must have an associated question.
-- Must contain concise body text for each option.
-- Width of each Huge Checkbox should be the same size.
+- A question related to the group of options.
+- A list of two to six options, each with a concise label, all the same size.
 
 <ComponentPreview
   componentName="input-huge-checkbox--default-story"
   hasHTML
+  hasReact
 />
 
 <a id="date-input" class="docs-b-Link--anchor"/>
@@ -345,27 +348,24 @@ consider using a Select Box instead.
 ### Huge Radio Button
 [Back to Variants](#variants)
 
-The Huge Radio component is often used when the question is the
-core focus of the page in a step by step process.
-Once an option is selected the next step in the flow
-is determined.
+Huge radio buttons present a list of valid options that are mutually exclusive. Only one can be selected at a time for any given question.
+
+The Huge radio component is intended for flows
+that present single questions in a step by step process.
+For this reason, Huge Checkbox should only be
+used for stand-alone question flows.
 
 #### Guidelines
-
 - Ensure list is in logical order for inputs (groups will stack).
-- Options are short and concise.
-- It is recommended that content is not to exceed 40 characters.
-- The inputs become stacked in a grid. [Stacking](/using-spark/components/stack) will
-take place automatically based on options presented.
-- This component cannot have more than six options.
-Consider using a [Huge Select Box](#huge-select-box) instead.
+- Options should be short and concise. Content should not exceed 40 characters.
+- If a concise label is not enough information for the user to make a reasonable choice, consider using a [tooltip](https://html.sparkdesignsystem.com/?path=/docs/components-tooltip--default-story) to provide more context.
+- There should be at least two options, but no more than six.
 - To see layout configurations with two, three, four, five, or six options, see the [Storybook page](https://html.sparkdesignsystem.com/?path=/docs/components-input-radio--huge).
+- This component cannot have more than six options. If your design needs more, consider using a [Huge Select Box](#huge-select-box) instead.
 
 #### Anatomy
-
-- Must have an associated question.
-- Must contain concise body text for each option.
-- Width of each Huge Radio should be the same size.
+- A question related to the group of options.
+- A list of two to six options, each with a concise label, all the same size.
 
 <ComponentPreview
   componentName="components-input-radio--huge"
