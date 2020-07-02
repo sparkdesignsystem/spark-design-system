@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
-import addPropsToMatchingComponents from '../../../../utilities/helpers/addPropstoMatchingComponents/addPropsToMatchingComponents';
+import addPropsToMatchingComponents from '../../../../utilities/helpers/addPropsToMatchingComponents/addPropsToMatchingComponents';
 
 const SprkCheckboxGroup = (props) => {
   const {
