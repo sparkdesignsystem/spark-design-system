@@ -35,8 +35,8 @@ export default {
     info: `
     ${markdownDocumentationLinkBuilder('input')}
 - Spark radios have been refactored into a compositional style component.
-The version that uses <SprkSelectionInput> will be permanently removed
-in our Fall 2020 release.
+The version that uses <code>SprkSelectionInput</code> will be permanently
+removed in our Fall 2020 release.
 - To update to the new version, replace radios implemented by
 the <code>SprkSelectionInput</code> component with our
 new implementation using <code>SprkRadioGroup</code>
@@ -164,7 +164,7 @@ export const hugeHelperText = () => (
       </SprkRadioItem>
     </SprkFieldset>
     <SprkHelperText>
-      Optional helper text, used to clarify the field&#x27;s intent
+      Optional helper text, used to clarify the field&#x27;s intent.
     </SprkHelperText>
   </SprkRadioGroup>
 );
@@ -359,7 +359,6 @@ export const hugeLayoutFive = () => (
           >
             <SprkStackItem
               additionalClasses="
-                sprk-o-Stack__item--flex@s
                 sprk-o-Stack__item--half@s
               "
             >

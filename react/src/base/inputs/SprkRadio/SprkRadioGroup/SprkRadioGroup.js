@@ -15,17 +15,21 @@ const SprkRadioGroup = (props) => {
 
   let errorId = null;
   let helperId = null;
+  let hasErrorContainer = false;
+  let hasHelperText = false;
 
   const childrenArray = React.Children.toArray(children);
   // Map through children, assign SprkErrorContainer with id/uniqueId
-  // Assign errorId which will determine the ariaDescribedBy of SprkCheckboxItem
+  // Assign errorId which will determine the ariaDescribedBy of SprkRadioItem
   const elementsToProcess = childrenArray.map((element) => {
     if (element.type.name === 'SprkErrorContainer') {
+      hasErrorContainer = true;
       errorId = element.props.id || uniqueId('sprk-error-container-');
       return React.cloneElement(element, { id: errorId });
     }
 
     if (element.type.name === 'SprkHelperText') {
+      hasHelperText = true;
       helperId = element.props.id || uniqueId('sprk-helper-text-');
       return React.cloneElement(element, { id: helperId });
     }
@@ -35,33 +39,35 @@ const SprkRadioGroup = (props) => {
 
   // for each element, if it has grandChildren, add ariaDescribedBy to those
   let key = 0;
-  const elementsToRender = elementsToProcess.map((element) => {
-    key += 1;
-    let grandChildren = null;
-    if (element.props.children) {
-      grandChildren = addPropsToMatchingComponents(
-        element.props.children,
-        ['SprkRadioItem'],
-        {
-          ariaDescribedBy: [helperId, errorId].join(' '),
-        },
-      );
-    }
+  let elementsToRender = elementsToProcess;
+  if (hasErrorContainer || hasHelperText) {
+    elementsToRender = elementsToProcess.map((element) => {
+      key += 1;
+      let grandChildren = null;
+      if (element.props.children) {
+        grandChildren = addPropsToMatchingComponents(
+          element.props.children,
+          ['SprkRadioItem'],
+          {
+            ariaDescribedBy: [helperId, errorId].join(' '),
+          },
+        );
+      }
 
-    if (element.type.name === 'SprkRadioItem') {
+      if (element.type.name === 'SprkRadioItem') {
+        return React.cloneElement(element, {
+          ariaDescribedBy: [helperId, errorId].join(' '),
+          key: `sprk-radio-item-${key}`,
+          children: grandChildren || element.children,
+        });
+      }
+
       return React.cloneElement(element, {
-        ariaDescribedBy: [helperId, errorId].join(' '),
-        key: `sprk-radio-item-${key}`,
+        key: `sprk-radio-outer-item-${key}`,
         children: grandChildren || element.children,
       });
-    }
-
-    return React.cloneElement(element, {
-      key: `sprk-radio-outer-item-${key}`,
-      children: grandChildren || element.children,
     });
-  });
-
+  }
   return (
     <div
       className={classnames('sprk-b-InputContainer', additionalClasses, {

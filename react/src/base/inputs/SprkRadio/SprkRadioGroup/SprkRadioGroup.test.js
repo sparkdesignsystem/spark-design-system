@@ -135,6 +135,21 @@ describe('SprkRadioGroup:', () => {
     });
   });
 
+  it(`should not add aria-describedby to RadioItems when there is no
+  ErrorContainer or HelperText`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkRadioItem name="radio" />
+        <SprkRadioItem name="radio" />
+        <SprkRadioItem name="radio" />
+      </SprkRadioGroup>,
+    );
+
+    wrapper.find(SprkRadioItem).forEach((item) => {
+      expect(typeof item.props().ariaDescribedBy === 'undefined').toEqual(true);
+    });
+  });
+
   it(`when no id is given to SprkErrorContainer, it should generate
   one and put it on the SprkErrorContainer and on any
   SprkRadioItems in the fieldset`, () => {
