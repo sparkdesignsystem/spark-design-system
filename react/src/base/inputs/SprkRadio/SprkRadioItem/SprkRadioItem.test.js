@@ -14,6 +14,24 @@ describe('SprkRadioItem:', () => {
     );
   });
 
+  it('should apply name to the input', () => {
+    const wrapper = shallow(<SprkRadioItem name="my-name" />);
+    expect(wrapper.find('.sprk-b-Radio__input').prop('name')).toBe('my-name');
+  });
+
+  it('should apply value to the input', () => {
+    const wrapper = shallow(<SprkRadioItem value="123" />);
+    expect(wrapper.find('.sprk-b-Radio__input').prop('value')).toBe('123');
+  });
+
+  it('should apply disabled to the input/label if supplied', () => {
+    const wrapper = shallow(<SprkRadioItem disabled />);
+    expect(wrapper.find('.sprk-b-Radio__input').prop('disabled')).toBe(true);
+    expect(
+      wrapper.find('.sprk-b-Label').hasClass('sprk-b-Label--disabled'),
+    ).toBe(true);
+  });
+
   it('should apply additional radio classes', () => {
     const expected = 'test-class';
     const wrapper = shallow(
@@ -64,7 +82,7 @@ describe('SprkRadioItem:', () => {
     expect(wrapper.find('.sprk-b-Radio__input').prop('id')).toEqual(expected);
   });
 
-  it('should run the supplied onChangeFunc function for radioes', () => {
+  it('should run the supplied onChangeFunc function for radios', () => {
     const onRadioChangeMock = jest.fn();
     const wrapper = mount(<SprkRadioItem onChangeFunc={onRadioChangeMock} />);
     const radio = wrapper.find('input[type="radio"]');

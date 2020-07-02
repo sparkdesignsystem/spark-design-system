@@ -62,6 +62,7 @@ const SprkRadioItem = (props) => {
 };
 
 SprkRadioItem.propTypes = {
+  /** Content to render inside of the component. */
   children: PropTypes.node,
   /**
    * Determines the style of radio.
@@ -103,16 +104,6 @@ SprkRadioItem.propTypes = {
    * to add to the radio input of the component.
    */
   radioAdditionalClasses: PropTypes.string,
-  /**
-   * 	Text that appears below the input,
-   * intended to provide more information to a user.
-   */
-  helperText: PropTypes.string,
-  /**
-   * The error message that will display
-   * while in its error state.
-   */
-  errorMessage: PropTypes.string,
   /**
    * Assigned to the `name` attribute
    * of the rendered input element.
