@@ -14,7 +14,7 @@ import { SprkRadioItemComponent } from './sprk-radio-item.component';
     </sprk-radio-item>
   `,
 })
-class TestComponent1 {}
+class Test1Component {}
 
 @Component({
   selector: 'sprk-test-2',
@@ -25,7 +25,7 @@ class TestComponent1 {}
     </sprk-radio-item>
   `,
 })
-class TestComponent2 {}
+class Test2Component {}
 
 @Component({
   selector: 'sprk-test-3',
@@ -38,7 +38,7 @@ class TestComponent2 {}
     </sprk-radio-item>
   `,
 })
-class TestComponent3 {}
+class Test3Component {}
 
 @Component({
   selector: 'sprk-test-4',
@@ -51,21 +51,21 @@ class TestComponent3 {}
     </sprk-radio-item>
   `,
 })
-class TestComponent4 {}
+class Test4Component {}
 
 describe('SprkRadioItemComponent', () => {
-  let component1: TestComponent1;
-  let component2: TestComponent2;
-  let component3: TestComponent3;
-  let component4: TestComponent4;
+  let component1: Test1Component;
+  let component2: Test2Component;
+  let component3: Test3Component;
+  let component4: Test4Component;
   let radioItemComponent1: SprkRadioItemComponent;
   let radioItemComponent2: SprkRadioItemComponent;
   let radioItemComponent3: SprkRadioItemComponent;
   let radioItemComponent4: SprkRadioItemComponent;
-  let fixture1: ComponentFixture<TestComponent1>;
-  let fixture2: ComponentFixture<TestComponent2>;
-  let fixture3: ComponentFixture<TestComponent3>;
-  let fixture4: ComponentFixture<TestComponent4>;
+  let fixture1: ComponentFixture<Test1Component>;
+  let fixture2: ComponentFixture<Test2Component>;
+  let fixture3: ComponentFixture<Test3Component>;
+  let fixture4: ComponentFixture<Test4Component>;
   let radioItemFixture1: ComponentFixture<SprkRadioItemComponent>;
   let radioItemFixture2: ComponentFixture<SprkRadioItemComponent>;
   let radioItemFixture3: ComponentFixture<SprkRadioItemComponent>;
@@ -91,10 +91,10 @@ describe('SprkRadioItemComponent', () => {
         SprkRadioLabelDirective,
         SprkRadioInputDirective,
         SprkRadioItemComponent,
-        TestComponent1,
-        TestComponent2,
-        TestComponent3,
-        TestComponent4,
+        Test1Component,
+        Test2Component,
+        Test3Component,
+        Test4Component,
       ],
     }).compileComponents();
   }));
@@ -103,10 +103,10 @@ describe('SprkRadioItemComponent', () => {
   beforeEach(() => {
     spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
 
-    fixture1 = TestBed.createComponent(TestComponent1);
-    fixture2 = TestBed.createComponent(TestComponent2);
-    fixture3 = TestBed.createComponent(TestComponent3);
-    fixture4 = TestBed.createComponent(TestComponent4);
+    fixture1 = TestBed.createComponent(Test1Component);
+    fixture2 = TestBed.createComponent(Test2Component);
+    fixture3 = TestBed.createComponent(Test3Component);
+    fixture4 = TestBed.createComponent(Test4Component);
 
     component1 = fixture1.componentInstance;
     component2 = fixture2.componentInstance;

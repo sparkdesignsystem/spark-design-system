@@ -12,7 +12,9 @@ export { default as SprkTextInput } from './base/inputs/SprkTextInput/SprkTextIn
 export { default as SprkRevealInput } from './base/inputs/SprkRevealInput/SprkRevealInput';
 export { default as SprkSelectionInput } from './base/inputs/SprkSelectionInput/SprkSelectionInput';
 export { default as SprkCheckboxGroup } from './base/inputs/SprkCheckbox/SprkCheckboxGroup/SprkCheckboxGroup';
-export { default as SprkCheckbox } from './base/inputs/SprkCheckbox/SprkCheckboxItem/SprkCheckboxItem';
+export { default as SprkCheckboxItem } from './base/inputs/SprkCheckbox/SprkCheckboxItem/SprkCheckboxItem';
+export { default as SprkRadioGroup } from './base/inputs/SprkRadio/SprkRadioGroup/SprkRadioGroup';
+export { default as SprkRadioItem } from './base/inputs/SprkRadio/SprkRadioItem/SprkRadioItem';
 export { default as SprkHelperText } from './base/inputs/SprkHelperText/SprkHelperText';
 export { default as SprkFieldset } from './base/inputs/SprkFieldset/SprkFieldset';
 export { default as SprkLegend } from './base/inputs/SprkLegend/SprkLegend';
@@ -28,8 +30,7 @@ export { default as SprkTabs } from './components/tabs/SprkTabs';
 export { default as SprkTabsPanel } from './components/tabs/components/SprkTabsPanel/SprkTabsPanel';
 export { default as SprkFooter } from './components/footer/SprkFooter';
 export { default as SprkToggle } from './components/toggle/SprkToggle';
-export { default as SprkTooltip}
-  from './components/tooltip/SprkTooltip';
+export { default as SprkTooltip } from './components/tooltip/SprkTooltip';
 export { default as SprkAccordion } from './components/accordions/SprkAccordion';
 export { default as SprkAccordionItem } from './components/accordions/components/SprkAccordionItem/SprkAccordionItem';
 export { default as SprkStack } from './objects/stack/SprkStack';

@@ -6,9 +6,9 @@ const SprkLegend = (props) => {
   const {
     children,
     idString,
-    disabled,
     analyticsString,
     additionalClasses,
+    disabled,
     ...other
   } = props;
 
