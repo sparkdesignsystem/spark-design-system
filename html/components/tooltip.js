@@ -24,7 +24,7 @@ const addPositioningClass = (trigger, tooltip) => {
 
   // 328 is the default max-width
   const maxWidth = 328;
-  let calculatedWidth = maxWidth;
+  let calculatedWidth;
 
   if (elemX > viewportWidth / 2) {
     // the left edge of the button + the width of the button + the border
@@ -44,9 +44,9 @@ const addPositioningClass = (trigger, tooltip) => {
     }
   }
 
-  if (calculatedWidth < maxWidth){
+  if (calculatedWidth < maxWidth) {
     // overwrite the width if there's not enough room to display it
-    tooltip.setAttribute('style', 'width:' + calculatedWidth + "px");
+    tooltip.setAttribute('style', `width:${calculatedWidth}px`);
   }
 };
 
@@ -74,12 +74,22 @@ const toggleTooltip = (trigger, tooltip) => {
 };
 
 const bindTooltipUIEvents = (tooltipContainer) => {
-  var trigger = tooltipContainer.querySelector('[data-sprk-tooltip="trigger"]');
-  var tooltip = tooltipContainer.querySelector('[data-sprk-tooltip="content"]');
+  const trigger = tooltipContainer.querySelector(
+    '[data-sprk-tooltip="trigger"]',
+  );
+  const tooltip = tooltipContainer.querySelector(
+    '[data-sprk-tooltip="content"]',
+  );
 
   trigger.setAttribute('aria-expanded', 'false');
 
-  trigger.addEventListener('click', (e) => { toggleTooltip(trigger, tooltip) }, false);
+  trigger.addEventListener(
+    'click',
+    () => {
+      toggleTooltip(trigger, tooltip);
+    },
+    false,
+  );
 
   trigger.addEventListener('keydown', (e) => {
     if (isSpacePressed(e)) {
@@ -93,11 +103,11 @@ const bindTooltipUIEvents = (tooltipContainer) => {
     }
   });
 
-  trigger.addEventListener('mouseover', (e) => {
+  trigger.addEventListener('mouseover', () => {
     addPositioningClass(trigger, tooltip);
   });
 
-  trigger.addEventListener('focus', (e) => {
+  trigger.addEventListener('focus', () => {
     addPositioningClass(trigger, tooltip);
   });
 
