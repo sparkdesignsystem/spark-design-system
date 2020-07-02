@@ -14,6 +14,26 @@ describe('SprkCheckboxItem:', () => {
     );
   });
 
+  it('should apply name to the input', () => {
+    const wrapper = shallow(<SprkCheckboxItem name="my-name" />);
+    expect(wrapper.find('.sprk-b-Checkbox__input').prop('name')).toBe(
+      'my-name',
+    );
+  });
+
+  it('should apply value to the input', () => {
+    const wrapper = shallow(<SprkCheckboxItem value="123" />);
+    expect(wrapper.find('.sprk-b-Checkbox__input').prop('value')).toBe('123');
+  });
+
+  it('should apply disabled to the input/label if supplied', () => {
+    const wrapper = shallow(<SprkCheckboxItem disabled />);
+    expect(wrapper.find('.sprk-b-Checkbox__input').prop('disabled')).toBe(true);
+    expect(
+      wrapper.find('.sprk-b-Label').hasClass('sprk-b-Label--disabled'),
+    ).toBe(true);
+  });
+
   it('should apply additional checkbox classes', () => {
     const expected = 'test-class';
     const wrapper = shallow(

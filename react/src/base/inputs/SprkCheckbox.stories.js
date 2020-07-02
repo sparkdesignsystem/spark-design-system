@@ -34,12 +34,14 @@ export default {
     info: `
     ${markdownDocumentationLinkBuilder('input')}
 - Spark checkboxes have been refactored into a compositional style component.
-The version that uses <SprkSelectionInput> will be permanently removed
+The version that uses <code>SprkSelectionInput</code>
+will be permanently removed
 in our Fall 2020 release.
-- To update to the new version, replace checkboxes implemented by
-the <code>SprkSelectionInput</code> component with our
+- To update to the new version, replace checkboxes implemented with our
 new implementation using <code>SprkCheckboxGroup</code>
-and <code>SprkCheckbox</code> components.
+and <code>SprkCheckboxItem</code> components.
+- Use <code>SprkCheckboxGroup</code>, <code>SprkFieldset</code>,
+and <code>SprkLegend</code> to group together all related choices.
     `,
   },
 };
@@ -70,7 +72,7 @@ export const defaultHelperText = () => (
       <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
     </SprkFieldset>
     <SprkHelperText>
-      Optional helper text, used to clarify the field&#x27;s intent
+      Optional helper text, used to clarify the field&#x27;s intent.
     </SprkHelperText>
   </SprkCheckboxGroup>
 );
@@ -332,12 +334,7 @@ export const hugeLayoutFive = () => (
             itemSpacing="medium"
             additionalClasses="sprk-o-Stack--center-row "
           >
-            <SprkStackItem
-              additionalClasses="
-                sprk-o-Stack__item--flex@s
-                sprk-o-Stack__item--half@s
-              "
-            >
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s">
               <SprkCheckboxItem variant="huge">
                 Checkbox Item 5
               </SprkCheckboxItem>

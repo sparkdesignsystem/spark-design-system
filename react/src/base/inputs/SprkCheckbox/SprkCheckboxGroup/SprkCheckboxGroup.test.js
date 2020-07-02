@@ -133,6 +133,22 @@ describe('SprkCheckboxGroup:', () => {
     });
   });
 
+  it(`should not add aria-describedby
+  to RadioItems when there is no
+  ErrorContainer or HelperText`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <SprkCheckboxItem />
+        <SprkCheckboxItem />
+        <SprkCheckboxItem />
+      </SprkCheckboxGroup>,
+    );
+
+    wrapper.find(SprkCheckboxItem).forEach((item) => {
+      expect(typeof item.prop('ariaDescribedBy') === 'undefined').toEqual(true);
+    });
+  });
+
   it(`when no id is given to SprkErrorContainer, it should generate
   one and put it on the SprkErrorContainer and on any
   SprkCheckboxItems in the fieldset`, () => {

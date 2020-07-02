@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { useEffect } from '@storybook/client-api';
 import { checkbox } from './checkbox';
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -8,6 +9,20 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- Elements containing role="checkbox" must also include the
+ aria-checked attribute to expose the checkbox's state to assistive technology.
+- Since a checkbox is an interactive control, it must be focusable
+and keyboard accessible. If the role is applied to a non-focusable element,
+use the tabindex attribute to change this.
+- Change the value of the aria-checked attribute
+dynamically when the checkbox is activated.
+
+###### Ensure all related checkboxes are grouped together using one of the following methods:
+
+- Fieldset and legend tags
+- ARIA groups role="group" and aria-label or aria-labelledby
+- aria-labelledby that points to the same
+ element for every checkbox in the group
     `,
     docs: { iframeHeight: 140 },
   },
