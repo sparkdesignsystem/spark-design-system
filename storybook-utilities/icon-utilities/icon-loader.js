@@ -1,7 +1,8 @@
 const request = new XMLHttpRequest();
 request.open('GET', 'https://spark-assets.netlify.app/spark-icons.svg');
 request.send();
-request.onload = () => {
+// eslint-disable-next-line func-names
+request.onload = function () {
   document.querySelector('#sprk-icons').innerHTML = this.response;
   let event;
   if (typeof Event === 'function') {
