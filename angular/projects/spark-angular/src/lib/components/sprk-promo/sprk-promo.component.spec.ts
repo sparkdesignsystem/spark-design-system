@@ -111,7 +111,6 @@ describe('SprkPromoComponent', () => {
     ).toEqual('sprk-c-Button sprk-c-Button--tertiary');
   });
 
-
   it('should add correct additional class to button when buttonVariant is quaternary', () => {
     component.cta = 'button';
     component.buttonVariant = 'quaternary';

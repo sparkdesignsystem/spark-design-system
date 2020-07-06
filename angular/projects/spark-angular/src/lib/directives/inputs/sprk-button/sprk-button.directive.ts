@@ -68,7 +68,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
       'tertiary': 'sprk-c-Button--tertiary',
       'quaternary': 'sprk-c-Button--quaternary',
     }
-    if(this.variant !== 'primary') {
+    if (this.variant !== 'primary') {
       this.renderer.addClass(
         this.ref.nativeElement,
         variants[this.variant],
