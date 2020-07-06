@@ -22,21 +22,20 @@ const addPositioningClass = (trigger, tooltip) => {
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
 
-  // 328 is the default max-width
   const maxWidth = 328;
+  const triggerWidth = 16;
+  const tooltipBorderWidth = 16;
   let calculatedWidth;
 
   if (elemX > viewportWidth / 2) {
-    // the left edge of the button + the width of the button + the border
-    calculatedWidth = elemX + 16 + 16;
+    calculatedWidth = elemX + triggerWidth + tooltipBorderWidth;
     if (elemY > viewportHeight / 2) {
       tooltip.classList.add('sprk-c-Tooltip--top-left');
     } else {
       tooltip.classList.add('sprk-c-Tooltip--bottom-left');
     }
   } else {
-    // the width of the viewport less the left edge of the button + the border
-    calculatedWidth = viewportWidth - elemX + 16;
+    calculatedWidth = viewportWidth - elemX + tooltipBorderWidth;
     if (elemY > viewportHeight / 2) {
       tooltip.classList.add('sprk-c-Tooltip--top-right');
     } else {

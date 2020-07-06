@@ -226,3 +226,5 @@ export { SprkFieldsetDirective } from './lib/directives/inputs/sprk-fieldset/spr
 export { SprkFieldsetModule } from './lib/directives/inputs/sprk-fieldset/sprk-fieldset.module';
 export { SprkLegendDirective } from './lib/directives/inputs/sprk-legend/sprk-legend.directive';
 export { SprkLegendModule } from './lib/directives/inputs/sprk-legend/sprk-legend.module';
+export { SprkTooltipComponent } from './lib/components/sprk-tooltip/sprk-tooltip.component';
+export { SprkTooltipModule } from './lib/components/sprk-tooltip/sprk-tooltip.module';
