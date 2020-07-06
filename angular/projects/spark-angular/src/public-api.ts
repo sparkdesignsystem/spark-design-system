@@ -1,7 +1,7 @@
 /*
  * Public API Surface of spark-angular
  */
-
+// tslint:disable:max-line-length
 export * from './lib/spark-angular.module';
 export { toggleAnimations } from './lib/components/sprk-toggle/sprk-toggle-animations';
 export { SprkHugeInputContainerComponent } from './lib/components/inputs/sprk-huge-input-container/sprk-huge-input-container.component';
@@ -226,3 +226,5 @@ export { SprkFieldsetDirective } from './lib/directives/inputs/sprk-fieldset/spr
 export { SprkFieldsetModule } from './lib/directives/inputs/sprk-fieldset/sprk-fieldset.module';
 export { SprkLegendDirective } from './lib/directives/inputs/sprk-legend/sprk-legend.directive';
 export { SprkLegendModule } from './lib/directives/inputs/sprk-legend/sprk-legend.module';
+export { SprkTooltipComponent } from './lib/components/sprk-tooltip/sprk-tooltip.component';
+export { SprkTooltipModule } from './lib/components/sprk-tooltip/sprk-tooltip.module';

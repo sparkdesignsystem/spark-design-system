@@ -3,6 +3,7 @@ if (typeof window !== 'undefined') {
   window['sprk'] = { version: { angular: environment.version } } || {};
 }
 
+// tslint:disable:max-line-length
 import { NgModule } from '@angular/core';
 import { SprkFormatterDateModule } from './directives/inputs/formatters/sprk-formatter-date/sprk-formatter-date.module';
 import { SprkFormatterMonetaryModule } from './directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.module';
@@ -50,6 +51,7 @@ import { SprkStackModule } from './components/sprk-stack/sprk-stack.module';
 import { SprkTabbedNavigationModule } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.module';
 import { SprkTableModule } from './components/sprk-table/sprk-table.module';
 import { SprkToggleModule } from './components/sprk-toggle/sprk-toggle.module';
+import { SprkTooltipModule } from './components/sprk-tooltip/sprk-tooltip.module';
 import { SprkUnorderedListModule } from './components/sprk-unordered-list/sprk-unordered-list.module';
 import { SprkButtonModule } from './directives/inputs/sprk-button/sprk-button.module';
 import { SprkAwardModule } from './components/sprk-award/sprk-award.module';
@@ -112,6 +114,7 @@ import { SprkRadioItemModule } from './components/inputs/sprk-radio-item/sprk-ra
     SprkStackModule,
     SprkStackItemModule,
     SprkToggleModule,
+    SprkTooltipModule,
     SprkIconModule,
     SprkFooterModule,
     SprkTabbedNavigationModule,

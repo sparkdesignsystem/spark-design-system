@@ -22,21 +22,20 @@ const addPositioningClass = (trigger, tooltip) => {
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
 
-  // 328 is the default max-width
   const maxWidth = 328;
-  let calculatedWidth = maxWidth;
+  const triggerWidth = 16;
+  const tooltipBorderWidth = 16;
+  let calculatedWidth;
 
   if (elemX > viewportWidth / 2) {
-    // the left edge of the button + the width of the button + the border
-    calculatedWidth = elemX + 16 + 16;
+    calculatedWidth = elemX + triggerWidth + tooltipBorderWidth;
     if (elemY > viewportHeight / 2) {
       tooltip.classList.add('sprk-c-Tooltip--top-left');
     } else {
       tooltip.classList.add('sprk-c-Tooltip--bottom-left');
     }
   } else {
-    // the width of the viewport less the left edge of the button + the border
-    calculatedWidth = viewportWidth - elemX + 16;
+    calculatedWidth = viewportWidth - elemX + tooltipBorderWidth;
     if (elemY > viewportHeight / 2) {
       tooltip.classList.add('sprk-c-Tooltip--top-right');
     } else {
@@ -44,9 +43,9 @@ const addPositioningClass = (trigger, tooltip) => {
     }
   }
 
-  if (calculatedWidth < maxWidth){
+  if (calculatedWidth < maxWidth) {
     // overwrite the width if there's not enough room to display it
-    tooltip.setAttribute('style', 'width:' + calculatedWidth + "px");
+    tooltip.setAttribute('style', `width:${calculatedWidth}px`);
   }
 };
 
@@ -74,12 +73,22 @@ const toggleTooltip = (trigger, tooltip) => {
 };
 
 const bindTooltipUIEvents = (tooltipContainer) => {
-  var trigger = tooltipContainer.querySelector('[data-sprk-tooltip="trigger"]');
-  var tooltip = tooltipContainer.querySelector('[data-sprk-tooltip="content"]');
+  const trigger = tooltipContainer.querySelector(
+    '[data-sprk-tooltip="trigger"]',
+  );
+  const tooltip = tooltipContainer.querySelector(
+    '[data-sprk-tooltip="content"]',
+  );
 
   trigger.setAttribute('aria-expanded', 'false');
 
-  trigger.addEventListener('click', (e) => { toggleTooltip(trigger, tooltip) }, false);
+  trigger.addEventListener(
+    'click',
+    () => {
+      toggleTooltip(trigger, tooltip);
+    },
+    false,
+  );
 
   trigger.addEventListener('keydown', (e) => {
     if (isSpacePressed(e)) {
@@ -93,11 +102,11 @@ const bindTooltipUIEvents = (tooltipContainer) => {
     }
   });
 
-  trigger.addEventListener('mouseover', (e) => {
+  trigger.addEventListener('mouseover', () => {
     addPositioningClass(trigger, tooltip);
   });
 
-  trigger.addEventListener('focus', (e) => {
+  trigger.addEventListener('focus', () => {
     addPositioningClass(trigger, tooltip);
   });
 
