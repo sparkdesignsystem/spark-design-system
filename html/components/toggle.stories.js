@@ -39,7 +39,7 @@ export const defaultStory = () => {
           data-sprk-toggle="icon"
           viewBox="0 0 64 64"
         >
-          <use xlink:href="#chevron-down-circle-two-color"></use>
+          <use xlink:href="#chevron-down"></use>
         </svg>
 
         My Disclaimer

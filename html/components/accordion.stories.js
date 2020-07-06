@@ -54,7 +54,7 @@ export const defaultStory = () => {
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
           <use
-            xlink:href="#chevron-up-circle-two-color"
+            xlink:href="#chevron-up-circle"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
     </button>
@@ -105,7 +105,7 @@ export const defaultStory = () => {
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
           <use
-            xlink:href="#chevron-up-circle-two-color"
+            xlink:href="#chevron-up-circle"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
     </button>
@@ -140,7 +140,7 @@ export const defaultStory = () => {
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
           <use
-            xlink:href="#chevron-up-circle-two-color"
+            xlink:href="#chevron-up-circle"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
     </button>

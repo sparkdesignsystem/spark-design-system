@@ -40,7 +40,7 @@ export const percentageInput = () => `
           "
           viewBox="0 0 64 64"
         >
-          <use xlink:href="#percent" />
+          <use xlink:href="#percentage" />
         </svg>
 
         <input
@@ -94,7 +94,7 @@ export const invalidPercentageInput = () => `
           "
           viewBox="0 0 64 64"
         >
-          <use xlink:href="#percent" />
+          <use xlink:href="#percentage" />
         </svg>
 
         <input
@@ -160,7 +160,7 @@ export const disabledPercentageInput = () => `
           "
           viewBox="0 0 64 64"
         >
-          <use xlink:href="#percent" />
+          <use xlink:href="#percentage" />
         </svg>
 
         <input

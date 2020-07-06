@@ -677,7 +677,7 @@ export const extended = () => {
                   "
                   viewBox="0 0 100 100"
                 >
-                  <use xlink:href="#user-account"></use>
+                  <use xlink:href="#user"></use>
                 </svg>
                 <span class="sprk-u-ScreenReaderText">User Account</span>
               </a>

@@ -31,9 +31,9 @@ export const info = () => {
     >
       <div class="sprk-c-Alert__content">
         <svg
-          class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
+          class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
           viewBox="0 0 64 64" aria-hidden="true" >
-          <use xlink:href="#bell"></use>
+          <use xlink:href="#bell-filled"></use>
         </svg>
         <p class="sprk-c-Alert__text"> This is important information.</p>
       </div>
@@ -68,8 +68,8 @@ export const success = () => {
       data-analytics="object.action.event"
     >
       <div class="sprk-c-Alert__content">
-        <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 512 512" aria-hidden="true" >
-          <use xlink:href="#check-mark"></use>
+        <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 512 512" aria-hidden="true" >
+          <use xlink:href="#check-mark-filled"></use>
         </svg>
         <p class="sprk-c-Alert__text">
           This is a success message.
@@ -109,8 +109,8 @@ export const fail = () => {
       data-analytics="object.action.event"
     >
       <div class="sprk-c-Alert__content">
-        <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 576 512" aria-hidden="true" >
-          <use xlink:href="#exclamation"></use>
+        <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 576 512" aria-hidden="true" >
+          <use xlink:href="#exclamation-filled"></use>
         </svg>
         <p class="sprk-c-Alert__text"> This is a failure message to alert that something was not successful.</p>
       </div>
@@ -149,11 +149,11 @@ export const noDismissButton = () => {
     >
       <div class="sprk-c-Alert__content">
         <svg
-          class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
+          class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
           viewBox="0 0 512 512"
           aria-hidden="true"
         >
-          <use xlink:href="#check-mark"></use>
+          <use xlink:href="#check-mark-filled"></use>
         </svg>
         <p class="sprk-c-Alert__text">
           This success alert has no dismiss button.

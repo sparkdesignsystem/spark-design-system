@@ -77,7 +77,7 @@ export const iconWithTextLink = () =>
         "
         viewBox="0 0 100 100"
       >
-        <use xlink:href="#chevron-left" />
+        <use xlink:href="#left-arrow" />
       </svg>
 
       Back
@@ -97,7 +97,7 @@ export const iconWithTextLink = () =>
           sprk-c-Icon--stroke-current-color
         "
         viewBox="0 0 100 100">
-        <use xlink:href="#chevron-right" />
+        <use xlink:href="#right-arrow" />
       </svg>
     </a>
   `;
@@ -166,7 +166,7 @@ export const disabledIconWithTextLink = () =>
         "
         viewBox="0 0 100 100"
       >
-        <use xlink:href="#chevron-left" />
+        <use xlink:href="#left-arrow" />
       </svg>
 
       Back
@@ -186,7 +186,7 @@ export const disabledIconWithTextLink = () =>
           sprk-c-Icon--stroke-current-color
         "
         viewBox="0 0 100 100">
-        <use xlink:href="#chevron-right" />
+        <use xlink:href="#right-arrow" />
       </svg>
     </a>
   `;
