@@ -79,7 +79,7 @@ describe('SprkDropdownComponent', () => {
   });
 
   it('should set active on click of a choice on an informational dropdown', () => {
-    fixture.autoDetectChanges();
+    fixture.detectChanges();
     component.dropdownType = 'informational';
     component.choices = [
       {
@@ -92,7 +92,9 @@ describe('SprkDropdownComponent', () => {
         active: false
       }
     ];
+    fixture.detectChanges();
     dropdownTriggerElement.click();
+    fixture.detectChanges();
     expect(component.isOpen).toEqual(true);
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
