@@ -34,43 +34,39 @@ describe('SprkTooltip:', () => {
   });
 
   it('should add additionalClasses', () => {
-    const wrapper = mount(
-      <SprkTooltip additionalClasses='spork' />
-    );
+    const wrapper = mount(<SprkTooltip additionalClasses="spork" />);
     expect(wrapper.find('.sprk-c-Tooltip.spork').length).toBe(1);
   });
 
   it('should add data-id', () => {
-    const wrapper = mount(
-      <SprkTooltip idString='spork' />
-    );
+    const wrapper = mount(<SprkTooltip idString="spork" />);
     expect(wrapper.find('[data-id="spork"]').length).toBe(1);
   });
 
   it('should add data-analytics', () => {
-    const wrapper = mount(
-      <SprkTooltip analyticsString='spork' />
-    );
+    const wrapper = mount(<SprkTooltip analyticsString="spork" />);
     expect(wrapper.find('[data-analytics="spork"]').length).toBe(1);
   });
 
   it('should render with the correct icon additionalClasses', () => {
-    const wrapper = mount(<SprkTooltip iconAdditionalClasses='spork' />);
+    const wrapper = mount(<SprkTooltip iconAdditionalClasses="spork" />);
     expect(wrapper.find('.sprk-c-Icon.spork').length).toBe(1);
   });
 
   it('should generate id when needed', () => {
     const wrapper = mount(<SprkTooltip />);
 
-    const triggerLabel = wrapper.find('.sprk-c-Tooltip__trigger')
-      .getDOMNode().getAttribute('aria-labelledby');
+    const triggerLabel = wrapper
+      .find('.sprk-c-Tooltip__trigger')
+      .getDOMNode()
+      .getAttribute('aria-labelledby');
     const tooltipId = wrapper.find('.sprk-c-Tooltip').getDOMNode().id;
 
     expect(triggerLabel).toEqual(tooltipId);
   });
 
   it('should close on Escape', () => {
-    const wrapper = mount(<SprkTooltip isDefaultOpen={true} />);
+    const wrapper = mount(<SprkTooltip isDefaultOpen />);
     expect(wrapper.state().isToggled).toBe(true);
     wrapper.instance().handleWindowKeydown({ key: 'Delete' });
     expect(wrapper.state().isToggled).toBe(true);
@@ -79,7 +75,7 @@ describe('SprkTooltip:', () => {
   });
 
   it('should close on document click', () => {
-    const wrapper = mount(<SprkTooltip isDefaultOpen={true} />);
+    const wrapper = mount(<SprkTooltip isDefaultOpen />);
     expect(wrapper.state().isToggled).toBe(true);
     wrapper.instance().handleWindowClick({});
     expect(wrapper.state().isToggled).toBe(false);
@@ -93,9 +89,11 @@ describe('SprkTooltip:', () => {
   });
 
   it('should not close when clicking the tooltip', () => {
-    const wrapper = mount(<SprkTooltip isDefaultOpen={true} />);
+    const wrapper = mount(<SprkTooltip isDefaultOpen />);
     expect(wrapper.state().isToggled).toBe(true);
-    wrapper.instance().handleWindowClick({ target: wrapper.find('button').instance() });
+    wrapper
+      .instance()
+      .handleWindowClick({ target: wrapper.find('button').instance() });
     expect(wrapper.state().isToggled).toBe(true);
   });
 
@@ -107,7 +105,8 @@ describe('SprkTooltip:', () => {
     const trigger = wrapper.find('button');
 
     trigger.instance().getBoundingClientRect = jest.fn(() => ({
-      top: 75, left: 75
+      top: 75,
+      left: 75,
     }));
 
     wrapper.instance().setPositioningClass();
@@ -123,7 +122,8 @@ describe('SprkTooltip:', () => {
     const trigger = wrapper.find('button');
 
     trigger.instance().getBoundingClientRect = jest.fn(() => ({
-      top: 75, left: 25
+      top: 75,
+      left: 25,
     }));
 
     wrapper.instance().setPositioningClass();
@@ -139,7 +139,8 @@ describe('SprkTooltip:', () => {
     const trigger = wrapper.find('button');
 
     trigger.instance().getBoundingClientRect = jest.fn(() => ({
-      top: 25, left: 75
+      top: 25,
+      left: 75,
     }));
 
     wrapper.instance().setPositioningClass();
@@ -155,7 +156,8 @@ describe('SprkTooltip:', () => {
     const trigger = wrapper.find('button');
 
     trigger.instance().getBoundingClientRect = jest.fn(() => ({
-      top: 25, left: 25
+      top: 25,
+      left: 25,
     }));
 
     wrapper.instance().setPositioningClass();
@@ -178,7 +180,8 @@ describe('SprkTooltip:', () => {
     const trigger = wrapper.find('button');
 
     trigger.instance().getBoundingClientRect = jest.fn(() => ({
-      top: 75, left: 75
+      top: 75,
+      left: 75,
     }));
 
     wrapper.find('button').simulate('mouseover');
@@ -194,7 +197,8 @@ describe('SprkTooltip:', () => {
     const trigger = wrapper.find('button');
 
     trigger.instance().getBoundingClientRect = jest.fn(() => ({
-      top: 75, left: 75
+      top: 75,
+      left: 75,
     }));
 
     wrapper.find('button').simulate('focus');

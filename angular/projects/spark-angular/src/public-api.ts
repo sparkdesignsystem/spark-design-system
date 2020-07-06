@@ -1,7 +1,7 @@
 /*
  * Public API Surface of spark-angular
  */
-
+// tslint:disable:max-line-length
 export * from './lib/spark-angular.module';
 export { toggleAnimations } from './lib/components/sprk-toggle/sprk-toggle-animations';
 export { SprkHugeInputContainerComponent } from './lib/components/inputs/sprk-huge-input-container/sprk-huge-input-container.component';

@@ -185,3 +185,9 @@
     }
   }
 }
+
+// Anytime we have a huge checkbox
+// inside a stack, we remove the margin bottom.
+.sprk-o-Stack__item .sprk-b-Checkbox--huge {
+  margin-bottom: 0;
+}

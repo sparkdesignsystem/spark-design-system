@@ -3,6 +3,7 @@ if (typeof window !== 'undefined') {
   window['sprk'] = { version: { angular: environment.version } } || {};
 }
 
+// tslint:disable:max-line-length
 import { NgModule } from '@angular/core';
 import { SprkFormatterDateModule } from './directives/inputs/formatters/sprk-formatter-date/sprk-formatter-date.module';
 import { SprkFormatterMonetaryModule } from './directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.module';
