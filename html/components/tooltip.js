@@ -10,40 +10,43 @@ import toggleAriaExpanded from '../utilities/toggleAriaExpanded';
  *  Tooltip JS
  */
 
-const calculatePositionClass = (trigger) => {
-  const elemX = trigger.getBoundingClientRect().left;
-  const elemY = trigger.getBoundingClientRect().top;
-
-  let viewportWidth = 0;
-  let viewportHeight = 0;
-
-  if (window){
-    viewportWidth = window.innerWidth ? window.innerWidth : 0;
-    viewportHeight = window.innerHeight ? window.innerHeight : 0;
-  }
-
-  if (elemX > viewportWidth / 2) {
-    if (elemY > viewportHeight / 2) {
-      return 'sprk-c-Tooltip--top-left';
-    } else {
-      return 'sprk-c-Tooltip--bottom-left';
-    }
-  } else {
-    if (elemY > viewportHeight / 2) {
-      return 'sprk-c-Tooltip--top-right';
-    } else {
-      return 'sprk-c-Tooltip--bottom-right';
-    }
-  }
-};
-
 const addPositioningClass = (trigger, tooltip) => {
   tooltip.classList.remove('sprk-c-Tooltip--bottom-right');
   tooltip.classList.remove('sprk-c-Tooltip--bottom-left');
   tooltip.classList.remove('sprk-c-Tooltip--top-right');
   tooltip.classList.remove('sprk-c-Tooltip--top-left');
 
-  tooltip.classList.add(calculatePositionClass(trigger));
+  const elemX = trigger.getBoundingClientRect().left;
+  const elemY = trigger.getBoundingClientRect().top;
+
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+
+  const maxWidth = 328;
+  const triggerWidth = 16;
+  const tooltipBorderWidth = 16;
+  let calculatedWidth;
+
+  if (elemX > viewportWidth / 2) {
+    calculatedWidth = elemX + triggerWidth + tooltipBorderWidth;
+    if (elemY > viewportHeight / 2) {
+      tooltip.classList.add('sprk-c-Tooltip--top-left');
+    } else {
+      tooltip.classList.add('sprk-c-Tooltip--bottom-left');
+    }
+  } else {
+    calculatedWidth = viewportWidth - elemX + tooltipBorderWidth;
+    if (elemY > viewportHeight / 2) {
+      tooltip.classList.add('sprk-c-Tooltip--top-right');
+    } else {
+      tooltip.classList.add('sprk-c-Tooltip--bottom-right');
+    }
+  }
+
+  if (calculatedWidth < maxWidth) {
+    // overwrite the width if there's not enough room to display it
+    tooltip.setAttribute('style', `width:${calculatedWidth}px`);
+  }
 };
 
 const showTooltip = (trigger, tooltip, stickOpen) => {
@@ -70,12 +73,22 @@ const toggleTooltip = (trigger, tooltip) => {
 };
 
 const bindTooltipUIEvents = (tooltipContainer) => {
-  var trigger = tooltipContainer.querySelector('[data-sprk-tooltip="trigger"]');
-  var tooltip = tooltipContainer.querySelector('[data-sprk-tooltip="content"]');
+  const trigger = tooltipContainer.querySelector(
+    '[data-sprk-tooltip="trigger"]',
+  );
+  const tooltip = tooltipContainer.querySelector(
+    '[data-sprk-tooltip="content"]',
+  );
 
   trigger.setAttribute('aria-expanded', 'false');
 
-  trigger.addEventListener('click', (e) => { toggleTooltip(trigger, tooltip) }, false);
+  trigger.addEventListener(
+    'click',
+    () => {
+      toggleTooltip(trigger, tooltip);
+    },
+    false,
+  );
 
   trigger.addEventListener('keydown', (e) => {
     if (isSpacePressed(e)) {
@@ -89,11 +102,11 @@ const bindTooltipUIEvents = (tooltipContainer) => {
     }
   });
 
-  trigger.addEventListener('mouseover', (e) => {
+  trigger.addEventListener('mouseover', () => {
     addPositioningClass(trigger, tooltip);
   });
 
-  trigger.addEventListener('focus', (e) => {
+  trigger.addEventListener('focus', () => {
     addPositioningClass(trigger, tooltip);
   });
 
@@ -120,5 +133,4 @@ export {
   showTooltip,
   hideTooltip,
   toggleTooltip,
-  calculatePositionClass,
 };
