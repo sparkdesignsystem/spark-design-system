@@ -498,7 +498,7 @@ export const extended = () => ({
             [choices]="simpleChoices"
             dropdownType="simple"
             title="My Account"
-            triggerIconType="user-account"
+            triggerIconType="user"
             additionalTriggerClasses="sprk-b-Link--simple sprk-c-Masthead__link"
             additionalIconClasses="sprk-c-Icon--l"
             additionalClasses="sprk-u-Right--zero sprk-u-mrm"

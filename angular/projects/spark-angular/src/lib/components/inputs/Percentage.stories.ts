@@ -60,7 +60,7 @@ export const percentageInput = () => ({
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
       <label sprkLabel>Percentage</label>
       <sprk-icon
-        iconType="percent"
+        iconType="percentage"
         additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
         sprk-input-icon
       ></sprk-icon>
@@ -91,7 +91,7 @@ export const invalidPercentageInput = () => ({
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
       <label sprkLabel>Percentage</label>
       <sprk-icon
-        iconType="percent"
+        iconType="percentage"
         additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
         aria-invalid="true"
         sprk-input-icon
@@ -131,7 +131,7 @@ export const disabledPercentageInput = () => ({
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
       <label class="sprk-b-Label--disabled" sprkLabel>Percentage</label>
       <sprk-icon
-        iconType="percent"
+        iconType="percentage"
         additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
         sprk-input-icon
       ></sprk-icon>

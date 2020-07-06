@@ -125,7 +125,7 @@ export const iconWithTextLink = () => ({
       analyticsString="icon-link-1"
     >
       <sprk-icon
-        iconType="chevron-left"
+        iconType="left-arrow"
         additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-mrs"
       >
       </sprk-icon>
@@ -140,7 +140,7 @@ export const iconWithTextLink = () => ({
     >
       Forward
       <sprk-icon
-        iconType="chevron-right"
+        iconType="right-arrow"
         additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-mls"
       >
       </sprk-icon>
@@ -235,7 +235,7 @@ export const disabledIconWithTextLink = () => ({
       analyticsString="disabled-icon-link-1"
     >
       <sprk-icon
-        iconType="chevron-left"
+        iconType="left-arrow"
         additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-mrs"
       >
       </sprk-icon>
@@ -251,7 +251,7 @@ export const disabledIconWithTextLink = () => ({
     >
       Forward
       <sprk-icon
-        iconType="chevron-right"
+        iconType="right-arrow"
         additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-mls"
       >
       </sprk-icon>

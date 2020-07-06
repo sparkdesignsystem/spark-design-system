@@ -95,15 +95,15 @@ export class SprkAlertComponent {
     switch (this.alertType) {
       case 'success':
         alertClassArray.push('sprk-c-Alert--success');
-        this.icon = 'check-mark';
+        this.icon = 'check-mark-filled';
         break;
       case 'info':
         alertClassArray.push('sprk-c-Alert--info');
-        this.icon = 'bell';
+        this.icon = 'bell-filled';
         break;
       case 'fail':
         alertClassArray.push('sprk-c-Alert--fail');
-        this.icon = 'exclamation';
+        this.icon = 'exclamation-filled';
         break;
       default:
         break;

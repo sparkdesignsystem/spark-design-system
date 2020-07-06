@@ -157,28 +157,28 @@ export const defaultStory = () => ({
       [socialLinks]="[
         {
           href: '#nogo',
-          icon: 'facebook-two-color',
+          icon: 'facebook-filled',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-1',
           iconScreenReaderText: 'facebook'
         },
         {
           href: '#nogo',
-          icon: 'instagram-two-color',
+          icon: 'instagram-filled',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-2',
           iconScreenReaderText: 'instagram'
         },
         {
           href: '#nogo',
-          icon: 'twitter-two-color',
+          icon: 'twitter-filled',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-3',
           iconScreenReaderText: 'twitter'
         },
         {
           href: '#nogo',
-          icon: 'youtube-two-color',
+          icon: 'youtube-filled',
           iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-4',
           iconScreenReaderText: 'youtube'
