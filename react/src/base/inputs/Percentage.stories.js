@@ -21,7 +21,7 @@ export const percentageInput = () => (
   <SprkTextInput
     label="Percentage"
     iconRight
-    leadingIcon="percent"
+    leadingIcon="percentage"
     narrowWidth
     name="percentage"
     type="tel"
@@ -41,7 +41,7 @@ export const invalidPercentageInput = () => (
   <SprkTextInput
     label="Percentage"
     iconRight
-    leadingIcon="percent"
+    leadingIcon="percentage"
     narrowWidth
     name="percentage"
     type="tel"
@@ -63,7 +63,7 @@ export const disabledPercentageInput = () => (
   <SprkTextInput
     label="Percentage"
     iconRight
-    leadingIcon="percent"
+    leadingIcon="percentage"
     narrowWidth
     name="percentage"
     type="tel"

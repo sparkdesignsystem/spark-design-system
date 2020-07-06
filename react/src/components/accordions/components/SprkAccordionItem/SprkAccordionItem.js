@@ -73,7 +73,7 @@ class SprkAccordionItem extends Component {
         >
           <h3 className={headingClassNames}>{heading}</h3>
           <SprkIcon
-            iconName="chevron-up-circle-two-color"
+            iconName="chevron-up-circle"
             additionalClasses={iconClasses}
           />
         </SprkLink>

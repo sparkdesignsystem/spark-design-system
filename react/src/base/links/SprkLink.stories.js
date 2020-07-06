@@ -65,7 +65,7 @@ export const iconWithTextLink = () => (
         sprk-c-Icon--l
         sprk-u-mrs
         sprk-c-Icon--stroke-current-color"
-        iconName="chevron-left"
+        iconName="left-arrow"
       />
       Back
     </SprkLink>
@@ -81,7 +81,7 @@ export const iconWithTextLink = () => (
         sprk-c-Icon--l
         sprk-u-mls
         sprk-c-Icon--stroke-current-color"
-        iconName="chevron-right"
+        iconName="right-arrow"
       />
     </SprkLink>
   </>
@@ -150,7 +150,7 @@ export const disabledIconWithTextLink = () => (
         sprk-c-Icon--l
         sprk-u-mrs
         sprk-c-Icon--stroke-current-color"
-        iconName="chevron-left"
+        iconName="left-arrow"
       />
       Back
     </SprkLink>
@@ -167,7 +167,7 @@ export const disabledIconWithTextLink = () => (
         sprk-c-Icon--l
         sprk-u-mls
         sprk-c-Icon--stroke-current-color"
-        iconName="chevron-right"
+        iconName="right-arrow"
       />
     </SprkLink>
   </>

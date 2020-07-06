@@ -125,10 +125,10 @@ SprkAlert.propTypes = {
 };
 
 SprkAlert.defaultProps = {
-  iconNameFail: 'exclamation',
+  iconNameFail: 'exclamation-filled',
   iconNameDismiss: 'close',
-  iconNameInfo: 'bell',
-  iconNameSuccess: 'check-mark',
+  iconNameInfo: 'bell-filled',
+  iconNameSuccess: 'check-mark-filled',
   isVisible: false,
   isDismissible: true,
 };

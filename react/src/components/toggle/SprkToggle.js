@@ -82,7 +82,7 @@ class SprkToggle extends Component {
 }
 
 SprkToggle.defaultProps = {
-  toggleIconName: 'chevron-down-circle-two-color',
+  toggleIconName: 'chevron-down-circle',
   contentId: uniqueId('sprk_toggle_content_'),
 };
 

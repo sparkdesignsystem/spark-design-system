@@ -45,7 +45,8 @@ class SprkFooterAwards extends Component {
 
         <SprkToggle
           additionalClasses="sprk-o-Stack__item"
-          toggleIconName="chevron-down-circle-two-color"
+          iconAddClasses="sprk-c-Icon--stroke-current-color"
+          toggleIconName="chevron-down-circle"
           title={awards.disclaimerTitle}
           titleAddClasses="sprk-b-TypeBodyFour sprk-u-FontWeight--normal"
           analyticsString={awards.disclaimerAnalytics}

@@ -156,25 +156,25 @@ export const defaultStory = () => (
       icons: [
         {
           href: '#nogo',
-          name: 'facebook',
+          name: 'facebook-filled',
           screenReaderText: 'Facebook',
           element: 'a',
         },
         {
           href: '#nogo',
-          name: 'instagram',
+          name: 'instagram-filled',
           screenReaderText: 'Instagram',
           element: 'a',
         },
         {
           href: '#nogo',
-          name: 'twitter',
+          name: 'twitter-filled',
           screenReaderText: 'Twitter',
           element: 'a',
         },
         {
           href: '#nogo',
-          name: 'youtube',
+          name: 'youtube-filled',
           screenReaderText: 'YouTube',
           element: 'a',
         },
@@ -205,19 +205,19 @@ export const defaultStory = () => (
     }}
     additionalIcons={[
       {
-        name: 'house',
+        name: 'home',
         href: '#nogo',
         screenReaderText: 'House',
         element: 'a',
       },
       {
-        name: 'house',
+        name: 'home',
         href: '#nogo',
         screenReaderText: 'House',
         element: 'a',
       },
       {
-        name: 'house',
+        name: 'home',
         href: '#nogo',
         screenReaderText: 'House',
         element: 'a',
