@@ -98,11 +98,12 @@ describe('SprkDropdownComponent', () => {
     expect(component.isOpen).toEqual(true);
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
+    fixture.detectChanges();
     expect(component.choices[0]['active']).toEqual(true);
   });
 
   it('should set active on click of a choice on a base dropdown if active isnt defined initially', () => {
-    fixture.autoDetectChanges();
+    fixture.detectChanges();
     component.dropdownType = 'informational';
     component.choices = [
       {
@@ -115,14 +116,16 @@ describe('SprkDropdownComponent', () => {
       }
     ];
     dropdownTriggerElement.click();
+    fixture.detectChanges();
     expect(component.isOpen).toEqual(true);
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
+    fixture.detectChanges();
     expect(component.choices[0]['active']).toEqual(true);
   });
 
   it('should not set active on click of a choice on a base dropdown', () => {
-    fixture.autoDetectChanges();
+    fixture.detectChanges();
     component.choices = [
       {
         text: 'Option 1',
@@ -134,9 +137,11 @@ describe('SprkDropdownComponent', () => {
       }
     ];
     dropdownTriggerElement.click();
+    fixture.detectChanges();
     expect(component.isOpen).toEqual(true);
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
+    fixture.detectChanges();
     expect(component.choices[0]['active']).toEqual(false);
   });
 
@@ -182,19 +187,21 @@ describe('SprkDropdownComponent', () => {
   });
 
   it('should apply an aria-label to listbox when title provided', () => {
-    fixture.autoDetectChanges();
+    fixture.detectChanges();
     component.title = 'test';
     dropdownTriggerElement.click();
 
+    fixture.detectChanges();
     const listBoxAria = fixture.nativeElement.querySelector('.sprk-c-Dropdown__links').getAttribute('aria-label');
     expect(listBoxAria).toEqual('test');
   });
 
   it('should apply an aria-label to listbox when screenReaderText is provided', () => {
-    fixture.autoDetectChanges();
+    fixture.detectChanges();
     component.screenReaderText = 'test';
     dropdownTriggerElement.click();
 
+    fixture.detectChanges();
     const listBoxAria = fixture.nativeElement.querySelector('.sprk-c-Dropdown__links').getAttribute('aria-label');
     expect(listBoxAria).toEqual('test');
   });
