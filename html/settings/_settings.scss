@@ -1648,7 +1648,6 @@ $sprk-toggle-trigger-font-weight-small: normal !default;
 /// The transition timing for the
 /// rotation of the icon when the Toggle is opened.
 $sprk-toggle-transition-timing: 0.3s ease !default;
-$sprk-toggle-transistion-timing: $sprk-toggle-transition-timing; //TODO: deprecate
 
 //
 // Tooltip
@@ -2028,7 +2027,6 @@ $sprk-stepper-dark-icon-color-selected: $sprk-white !default;
 /// when the Stepper has a dark background
 /// (sprk-c-Stepper--has-dark-bg).
 $sprk-stepper-dark-icon-color-hover: $sprk-white !default;
-$sprk-stepper-dark-icon-color-hoverg: $sprk-stepper-dark-icon-color-hover; // TODO: deprecate
 /// The transition of the Stepper step icon.
 $sprk-stepper-icon-transition: 0.3s all ease-in-out !default;
 /// The z-index of the Stepper step icon.
