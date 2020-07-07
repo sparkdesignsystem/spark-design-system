@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SprkIcon from '../icons/SprkIcon';
 import uniqueId from 'lodash/uniqueId';
+import SprkIcon from '../icons/SprkIcon';
 
 class SprkTooltip extends Component {
   constructor(props) {
     super(props);
+    const { isDefaultOpen } = props;
 
     this.state = {
-      isToggled: this.props.isDefaultOpen || false
-    }
+      isToggled: isDefaultOpen || false,
+    };
 
     this.toggle = this.toggle.bind(this);
     this.handleWindowKeydown = this.handleWindowKeydown.bind(this);
@@ -34,7 +35,7 @@ class SprkTooltip extends Component {
   }
 
   setPositioningClass() {
-    let trigger = this.triggerRef.current;
+    const trigger = this.triggerRef.current;
 
     const elemX = trigger.getBoundingClientRect().left;
     const elemY = trigger.getBoundingClientRect().top;
@@ -42,57 +43,63 @@ class SprkTooltip extends Component {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
-    // 328 is the default max-width
     const maxWidth = 328;
-    let calculatedWidth = maxWidth;
+    const triggerWidth = 16;
+    const tooltipBorderWidth = 16;
+    let calculatedWidth;
 
     if (elemX > viewportWidth / 2) {
-      // the left edge of the button + the width of the button + the border
-      calculatedWidth = elemX + 16 + 16;
+      calculatedWidth = elemX + triggerWidth + tooltipBorderWidth;
       if (elemY > viewportHeight / 2) {
-        this.setState({ position: 'topleft' })
+        this.setState({ position: 'topleft' });
       } else {
-        this.setState({ position: 'bottomleft' })
+        this.setState({ position: 'bottomleft' });
       }
     } else {
-      // the width of the viewport less the left edge of the button + the border
-      calculatedWidth = viewportWidth - elemX + 16;
+      calculatedWidth = viewportWidth - elemX + tooltipBorderWidth;
       if (elemY > viewportHeight / 2) {
-        this.setState({ position: 'topright' })
+        this.setState({ position: 'topright' });
       } else {
-        this.setState({ position: 'bottomright' })
+        this.setState({ position: 'bottomright' });
       }
     }
 
     if (calculatedWidth < maxWidth) {
       // overwrite the width if there's not enough room to display it
-      this.tooltipRef.current.setAttribute('style', 'width:' + calculatedWidth + "px");
+      this.tooltipRef.current.setAttribute(
+        'style',
+        `width:${calculatedWidth}px`,
+      );
     }
   }
 
   handleWindowKeydown(e) {
     if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
       this.setState({
-        isToggled: false
-      })
+        isToggled: false,
+      });
     }
   }
 
   handleWindowClick(e) {
-    if (this.state.isToggled) {
-      if (!this.tooltipRef.current.contains(e.target)
-        && !this.triggerRef.current.contains(e.target)) {
+    const { isToggled } = this.state;
+
+    if (isToggled) {
+      if (
+        !this.tooltipRef.current.contains(e.target) &&
+        !this.triggerRef.current.contains(e.target)
+      ) {
         this.setState({
-          isToggled: false
+          isToggled: false,
         });
       }
     }
   }
 
   toggle() {
-    this.setState(prevState => ({
-      isToggled: !prevState.isToggled
-    }))
+    this.setState((prevState) => ({
+      isToggled: !prevState.isToggled,
+    }));
   }
 
   render() {
@@ -108,35 +115,36 @@ class SprkTooltip extends Component {
       ...other
     } = this.props;
 
+    const { isToggled, position } = this.state;
+
     return (
-      <span {...other} className='sprk-c-Tooltip__container' data-id={idString}>
+      <span {...other} className="sprk-c-Tooltip__container" data-id={idString}>
         <button
+          type="button"
           ref={this.triggerRef}
           onClick={this.toggle}
           onMouseOver={this.setPositioningClass}
           onFocus={this.setPositioningClass}
-          className={classnames(
-            'sprk-c-Tooltip__trigger',
-            {'sprk-c-Tooltip--toggled': this.state.isToggled}
-          )}
-          aria-expanded={this.state.isToggled}
+          className={classnames('sprk-c-Tooltip__trigger', {
+            'sprk-c-Tooltip--toggled': isToggled,
+          })}
+          aria-expanded={isToggled}
           aria-labelledby={id}
           data-analytics={analyticsString}
         >
-          <SprkIcon iconName={triggerIconType} additionalClasses={iconAdditionalClasses} />
+          <SprkIcon
+            iconName={triggerIconType}
+            additionalClasses={iconAdditionalClasses}
+          />
         </button>
         <span
           ref={this.tooltipRef}
-          className={classnames(
-            'sprk-c-Tooltip',
-            additionalClasses,
-            {
-              'sprk-c-Tooltip--top-left': this.state.position === 'topleft',
-              'sprk-c-Tooltip--top-right': this.state.position === 'topright',
-              'sprk-c-Tooltip--bottom-left': this.state.position === 'bottomleft',
-              'sprk-c-Tooltip--bottom-right': this.state.position === 'bottomright',
-            }
-          )}
+          className={classnames('sprk-c-Tooltip', additionalClasses, {
+            'sprk-c-Tooltip--top-left': position === 'topleft',
+            'sprk-c-Tooltip--top-right': position === 'topright',
+            'sprk-c-Tooltip--bottom-left': position === 'bottomleft',
+            'sprk-c-Tooltip--bottom-right': position === 'bottomright',
+          })}
           id={id}
         >
           {children}
@@ -152,6 +160,8 @@ SprkTooltip.defaultProps = {
 };
 
 SprkTooltip.propTypes = {
+  /** Content to render inside of the component. */
+  children: PropTypes.node,
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -172,11 +182,13 @@ SprkTooltip.propTypes = {
    */
   iconAdditionalClasses: PropTypes.string,
   /**
-   * ID will be placed on the tooltip element and used for aria-labelledby on the trigger element.
+   * ID will be placed on the tooltip element and used for
+   * aria-labelledby on the trigger element.
    */
   id: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a
+   * unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**

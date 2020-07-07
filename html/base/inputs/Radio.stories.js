@@ -22,9 +22,7 @@ export const defaultStory = () => {
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div
@@ -114,11 +112,8 @@ export const defaultHelperText = () => {
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
-
         <div
           class="sprk-b-SelectionContainer sprk-b-Radio"
           data-sprk-input="radio"
@@ -131,7 +126,6 @@ export const defaultHelperText = () => {
             name="radio"
             aria-describedby="radio--error-container"
           >
-
           <label
             for="radio-1"
             class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
@@ -139,7 +133,6 @@ export const defaultHelperText = () => {
             Radio Item 1
           </label>
         </div>
-
         <div
           class="sprk-b-SelectionContainer sprk-b-Radio"
           data-sprk-input="radio"
@@ -152,7 +145,6 @@ export const defaultHelperText = () => {
             name="radio"
             aria-describedby="radio--error-container"
           >
-
           <label
             for="radio-2"
             class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
@@ -160,7 +152,6 @@ export const defaultHelperText = () => {
             Radio Item 2
           </label>
         </div>
-
         <div
           class="sprk-b-SelectionContainer sprk-b-Radio"
           data-sprk-input="radio"
@@ -181,15 +172,14 @@ export const defaultHelperText = () => {
           </label>
         </div>
       </fieldset>
-
       <div class="sprk-b-HelperText">
         Optional helper text, used to clarify the field&#x27;s intent.
       </div>
-
       <div
         class="sprk-b-ErrorContainer"
         id="radio--error-container"
-      ></div>
+      >
+      </div>
     </div>
   `;
 };
@@ -197,7 +187,7 @@ export const defaultHelperText = () => {
 defaultHelperText.story = {
   name: 'Default Helper Text',
   parameters: {
-    jest: ['radioInput'],
+    jest: ['radio'],
   },
 };
 
@@ -210,9 +200,7 @@ export const invalidRadioButton = () => {
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div
@@ -311,10 +299,8 @@ export const disabledRadioButton = () => {
   return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label sprk-b-Label--disabled">
-            Radio Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Label sprk-b-Label--disabled">
+          Radio Group Label
         </legend>
 
         <div
@@ -333,7 +319,11 @@ export const disabledRadioButton = () => {
 
           <label
             for="radio-1"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
+            class="
+              sprk-b-Label
+              sprk-b-Label--disabled
+              sprk-b-Label--inline
+              sprk-b-Radio__label"
           >
             Radio Item 1
           </label>
@@ -355,7 +345,11 @@ export const disabledRadioButton = () => {
 
           <label
             for="radio-2"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
+            class="
+              sprk-b-Label
+              sprk-b-Label--disabled
+              sprk-b-Label--inline
+              sprk-b-Radio__label"
           >
             Radio Item 2
           </label>
@@ -376,7 +370,11 @@ export const disabledRadioButton = () => {
           >
           <label
             for="radio-3"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
+            class="
+              sprk-b-Label
+              sprk-b-Label--disabled
+              sprk-b-Label--inline
+              sprk-b-Radio__label"
           >
             Radio Item 3
           </label>
@@ -407,9 +405,7 @@ export const huge = () => {
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div
@@ -491,22 +487,23 @@ huge.story = {
   },
 };
 
-export const hugeInvalid = () => {
+export const hugeHelperText = () => {
   useEffect(() => {
     radioInput();
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
-
         <div
-          class="sprk-b-SelectionContainer sprk-b-Radio sprk-b-Radio--huge"
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Radio
+            sprk-b-Radio--huge
+          "
           data-sprk-input="radio"
         >
           <input
@@ -517,7 +514,6 @@ export const hugeInvalid = () => {
             name="radio"
             aria-describedby="radio--error-container"
           >
-
           <label
             for="radio-1"
             class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
@@ -525,9 +521,12 @@ export const hugeInvalid = () => {
             Radio Item 1
           </label>
         </div>
-
         <div
-          class="sprk-b-SelectionContainer sprk-b-Radio sprk-b-Radio--huge"
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Radio
+            sprk-b-Radio--huge
+          "
           data-sprk-input="radio"
         >
           <input
@@ -538,7 +537,6 @@ export const hugeInvalid = () => {
             name="radio"
             aria-describedby="radio--error-container"
           >
-
           <label
             for="radio-2"
             class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
@@ -546,9 +544,12 @@ export const hugeInvalid = () => {
             Radio Item 2
           </label>
         </div>
-
         <div
-          class="sprk-b-SelectionContainer sprk-b-Radio sprk-b-Radio--huge"
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Radio
+            sprk-b-Radio--huge
+          "
           data-sprk-input="radio"
         >
           <input
@@ -567,7 +568,106 @@ export const hugeInvalid = () => {
           </label>
         </div>
       </fieldset>
+      <div class="sprk-b-HelperText">
+        Optional helper text, used to clarify the field&#x27;s intent.
+      </div>
+      <div
+        class="sprk-b-ErrorContainer"
+        id="radio--error-container"
+      >
+      </div>
+    </div>
+  `;
+};
 
+hugeHelperText.story = {
+  name: 'Huge Helper Text',
+  parameters: {
+    jest: ['radioInput'],
+  },
+};
+
+export const hugeInvalid = () => {
+  useEffect(() => {
+    radioInput();
+  }, []);
+
+  return `
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
+      <fieldset class="sprk-b-Fieldset">
+        <legend class="sprk-b-Legend">
+          Radio Group Label
+        </legend>
+        <div
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Radio
+            sprk-b-Radio--huge
+          "
+          data-sprk-input="radio"
+        >
+          <input
+            class="sprk-b-Radio__input"
+            id="radio-1"
+            data-id="radio-1"
+            type="radio"
+            name="radio"
+            aria-describedby="radio--error-container"
+          >
+          <label
+            for="radio-1"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+          >
+            Radio Item 1
+          </label>
+        </div>
+        <div
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Radio
+            sprk-b-Radio--huge
+          "
+          data-sprk-input="radio"
+        >
+          <input
+            class="sprk-b-Radio__input"
+            id="radio-2"
+            data-id="radio-2"
+            type="radio"
+            name="radio"
+            aria-describedby="radio--error-container"
+          >
+          <label
+            for="radio-2"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+          >
+            Radio Item 2
+          </label>
+        </div>
+        <div
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Radio
+            sprk-b-Radio--huge
+          "
+          data-sprk-input="radio"
+        >
+          <input
+            class="sprk-b-Radio__input"
+            id="radio-3"
+            data-id="radio-3"
+            type="radio"
+            name="radio"
+            aria-describedby="radio--error-container"
+          >
+          <label
+            for="radio-3"
+            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
+          >
+            Radio Item 3
+          </label>
+        </div>
+      </fieldset>
       <div
         class="sprk-b-ErrorContainer"
         id="radio--error-container"
@@ -590,7 +690,6 @@ hugeInvalid.story = {
   name: 'Huge Invalid',
   parameters: {
     jest: ['radioInput'],
-    docs: { iframeHeight: 300 },
   },
 };
 
@@ -600,16 +699,17 @@ export const hugeDisabled = () => {
   }, []);
 
   return `
-    <div class="sprk-b-InputContainer">
+    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label sprk-b-Label--disabled">
-            Radio Group Label
-          </label>
+        <legend class="sprk-b-Legend sprk-b-Legend--disabled">
+          Radio Group Label
         </legend>
-
         <div
-          class="sprk-b-SelectionContainer sprk-b-Radio sprk-b-Radio--huge"
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Radio
+            sprk-b-Radio--huge
+          "
           data-sprk-input="radio"
         >
           <input
@@ -617,21 +717,26 @@ export const hugeDisabled = () => {
             id="radio-1"
             data-id="radio-1"
             type="radio"
-            name="radio"
             aria-describedby="radio--error-container"
             disabled
           >
-
           <label
             for="radio-1"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
+            class="
+              sprk-b-Label
+              sprk-b-Label--inline
+              sprk-b-Label--disabled sprk-b-Radio__label
+            "
           >
             Radio Item 1
           </label>
         </div>
-
         <div
-          class="sprk-b-SelectionContainer sprk-b-Radio sprk-b-Radio--huge"
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Radio
+            sprk-b-Radio--huge
+          "
           data-sprk-input="radio"
         >
           <input
@@ -639,21 +744,26 @@ export const hugeDisabled = () => {
             id="radio-2"
             data-id="radio-2"
             type="radio"
-            name="radio"
             aria-describedby="radio--error-container"
             disabled
           >
-
           <label
             for="radio-2"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
+            class="
+              sprk-b-Label
+              sprk-b-Label--inline
+              sprk-b-Label--disabled sprk-b-Radio__label
+            "
           >
             Radio Item 2
           </label>
         </div>
-
         <div
-          class="sprk-b-SelectionContainer sprk-b-Radio sprk-b-Radio--huge"
+          class="
+            sprk-b-SelectionContainer
+            sprk-b-Radio
+            sprk-b-Radio--huge
+          "
           data-sprk-input="radio"
         >
           <input
@@ -661,23 +771,26 @@ export const hugeDisabled = () => {
             id="radio-3"
             data-id="radio-3"
             type="radio"
-            name="radio"
             aria-describedby="radio--error-container"
             disabled
           >
           <label
             for="radio-3"
-            class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--inline sprk-b-Radio__label"
+            class="
+              sprk-b-Label
+              sprk-b-Label--inline
+              sprk-b-Label--disabled sprk-b-Radio__label
+            "
           >
             Radio Item 3
           </label>
         </div>
       </fieldset>
-
       <div
         class="sprk-b-ErrorContainer"
         id="radio--error-container"
-      ></div>
+      >
+      </div>
     </div>
   `;
 };
@@ -686,104 +799,6 @@ hugeDisabled.story = {
   name: 'Huge Disabled',
   parameters: {
     jest: ['radioInput'],
-    docs: { iframeHeight: 300 },
-  },
-};
-
-export const hugeHelperText = () => {
-  useEffect(() => {
-    radioInput();
-  }, []);
-
-  return `
-    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
-      <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
-        </legend>
-
-        <div
-          class="sprk-b-SelectionContainer sprk-b-Radio sprk-b-Radio--huge"
-          data-sprk-input="radio"
-        >
-          <input
-            class="sprk-b-Radio__input"
-            id="radio-1"
-            data-id="radio-1"
-            type="radio"
-            name="radio"
-            aria-describedby="radio--error-container"
-          >
-
-          <label
-            for="radio-1"
-            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
-          >
-            Radio Item 1
-          </label>
-        </div>
-
-        <div
-          class="sprk-b-SelectionContainer sprk-b-Radio sprk-b-Radio--huge"
-          data-sprk-input="radio"
-        >
-          <input
-            class="sprk-b-Radio__input"
-            id="radio-2"
-            data-id="radio-2"
-            type="radio"
-            name="radio"
-            aria-describedby="radio--error-container"
-          >
-
-          <label
-            for="radio-2"
-            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
-          >
-            Radio Item 2
-          </label>
-        </div>
-
-        <div
-          class="sprk-b-SelectionContainer sprk-b-Radio sprk-b-Radio--huge"
-          data-sprk-input="radio"
-        >
-          <input
-            class="sprk-b-Radio__input"
-            id="radio-3"
-            data-id="radio-3"
-            type="radio"
-            name="radio"
-            aria-describedby="radio--error-container"
-          >
-          <label
-            for="radio-3"
-            class="sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label"
-          >
-            Radio Item 3
-          </label>
-        </div>
-      </fieldset>
-
-      <div class="sprk-b-HelperText">
-        Optional helper text, used to clarify the field&#x27;s intent.
-      </div>
-
-      <div
-        class="sprk-b-ErrorContainer"
-        id="radio--error-container"
-      ></div>
-    </div>
-  `;
-};
-
-hugeHelperText.story = {
-  name: 'Huge Helper Text',
-  parameters: {
-    jest: ['radioInput'],
-    docs: { iframeHeight: 300 },
   },
 };
 
@@ -796,9 +811,7 @@ export const hugeLayoutTwo = () => {
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
@@ -883,13 +896,15 @@ export const hugeLayoutFour = () => {
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div class="sprk-o-Stack sprk-o-Stack--medium">
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -944,7 +959,11 @@ export const hugeLayoutFour = () => {
             </div>
           </div>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -1026,12 +1045,14 @@ export const hugeLayoutFive = () => {
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
         <div class="sprk-o-Stack sprk-o-Stack--medium">
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -1086,7 +1107,11 @@ export const hugeLayoutFive = () => {
             </div>
           </div>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -1203,13 +1228,15 @@ export const hugeLayoutSix = () => {
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend">
-          <label class="sprk-b-Label">
-            Radio Group Label
-          </label>
+          Radio Group Label
         </legend>
 
         <div class="sprk-o-Stack sprk-o-Stack--medium">
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -1264,7 +1291,11 @@ export const hugeLayoutSix = () => {
             </div>
           </div>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
@@ -1319,7 +1350,11 @@ export const hugeLayoutSix = () => {
             </div>
           </div>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s">
             <div
               class="
                 sprk-b-SelectionContainer
