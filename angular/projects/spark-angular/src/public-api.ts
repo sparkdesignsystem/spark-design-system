@@ -88,10 +88,14 @@ export { SprkLabelDirective } from './lib/directives/inputs/sprk-label/sprk-labe
 export { SprkLabelModule } from './lib/directives/inputs/sprk-label/sprk-label.module';
 export { SprkSelectionInputDirective } from './lib/directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 export { SprkSelectionInputModule } from './lib/directives/inputs/sprk-selection-input/sprk-selection-input.module';
+export { SprkCheckboxInputDirective } from './lib/directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
+export { SprkCheckboxInputModule } from './lib/directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
 export { SprkRadioInputDirective } from './lib/directives/inputs/sprk-radio-input/sprk-radio-input.directive';
 export { SprkRadioInputModule } from './lib/directives/inputs/sprk-radio-input/sprk-radio-input.module';
 export { SprkSelectionLabelDirective } from './lib/directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 export { SprkSelectionLabelModule } from './lib/directives/inputs/sprk-selection-label/sprk-selection-label.module';
+export { SprkCheckboxLabelDirective } from './lib/directives/inputs/sprk-checkbox-label/sprk-checkbox-label.directive';
+export { SprkCheckboxLabelModule } from './lib/directives/inputs/sprk-checkbox-label/sprk-checkbox-label.module';
 export { SprkRadioLabelDirective } from './lib/directives/inputs/sprk-radio-label/sprk-radio-label.directive';
 export { SprkRadioLabelModule } from './lib/directives/inputs/sprk-radio-label/sprk-radio-label.module';
 export { SprkStackItemDirective } from './lib/directives/sprk-stack-item/sprk-stack-item.directive';
@@ -218,6 +222,10 @@ export { SprkHeadingDirective } from './lib/directives/sprk-heading/sprk-heading
 export { SprkHeadingModule } from './lib/directives/sprk-heading/sprk-heading.module';
 export { SprkBoxDirective } from './lib/directives/sprk-box/sprk-box.directive';
 export { SprkBoxModule } from './lib/directives/sprk-box/sprk-box.module';
+export { SprkCheckboxItemComponent } from './lib/components/inputs/sprk-checkbox-item/sprk-checkbox-item.component';
+export { SprkCheckboxItemModule } from './lib/components/inputs/sprk-checkbox-item/sprk-checkbox-item.module';
+export { SprkCheckboxGroupModule } from './lib/components/inputs/sprk-checkbox-group/sprk-checkbox-group.module';
+export { SprkCheckboxGroupComponent } from './lib/components/inputs/sprk-checkbox-group/sprk-checkbox-group.component';
 export { SprkRadioItemComponent } from './lib/components/inputs/sprk-radio-item/sprk-radio-item.component';
 export { SprkRadioItemModule } from './lib/components/inputs/sprk-radio-item/sprk-radio-item.module';
 export { SprkRadioGroupModule } from './lib/components/inputs/sprk-radio-group/sprk-radio-group.module';

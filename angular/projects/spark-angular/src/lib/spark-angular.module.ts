@@ -14,8 +14,10 @@ import { SprkFieldErrorModule } from './directives/inputs/sprk-field-error/sprk-
 import { SprkHelperTextModule } from './directives/inputs/sprk-helper-text/sprk-helper-text.module';
 import { SprkInputModule } from './directives/inputs/sprk-input/sprk-input.module';
 import { SprkRadioInputModule } from './directives/inputs/sprk-radio-input/sprk-radio-input.module';
+import { SprkCheckboxInputModule } from './directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
 import { SprkLabelModule } from './directives/inputs/sprk-label/sprk-label.module';
 import { SprkRadioLabelModule } from './directives/inputs/sprk-radio-label/sprk-radio-label.module';
+import { SprkCheckboxLabelModule } from './directives/inputs/sprk-checkbox-label/sprk-checkbox-label.module';
 import { SprkFieldsetModule } from './directives/inputs/sprk-fieldset/sprk-fieldset.module';
 import { SprkLegendModule } from './directives/inputs/sprk-legend/sprk-legend.module';
 import { SprkSelectionInputModule } from './directives/inputs/sprk-selection-input/sprk-selection-input.module';
@@ -66,6 +68,8 @@ import { SprkFlagModule } from './components/sprk-flag/sprk-flag.module';
 import { SprkCenteredColumnModule } from './directives/sprk-centered-column/sprk-centered-column.module';
 import { SprkRadioGroupModule } from './components/inputs/sprk-radio-group/sprk-radio-group.module';
 import { SprkRadioItemModule } from './components/inputs/sprk-radio-item/sprk-radio-item.module';
+import { SprkCheckboxGroupModule } from './components/inputs/sprk-checkbox-group/sprk-checkbox-group.module';
+import { SprkCheckboxItemModule } from './components/inputs/sprk-checkbox-item/sprk-checkbox-item.module';
 
 @NgModule({
   exports: [
@@ -128,6 +132,10 @@ import { SprkRadioItemModule } from './components/inputs/sprk-radio-item/sprk-ra
     SprkRadioGroupModule,
     SprkRadioInputModule,
     SprkRadioLabelModule,
+    SprkCheckboxItemModule,
+    SprkCheckboxGroupModule,
+    SprkCheckboxInputModule,
+    SprkCheckboxLabelModule,
     SprkFieldsetModule,
     SprkLegendModule,
   ],
