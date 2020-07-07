@@ -17,7 +17,7 @@ class SprkFooterGlobalSection extends Component {
     const { globalItemsHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh">
-        <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
+        <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
           {globalItems.heading}
         </h3>
         {globalItemsHasIds.map((item) => {
@@ -58,7 +58,7 @@ class SprkFooterGlobalSection extends Component {
                 </TagName>
               </div>
 
-              <p className="sprk-o-Stack__item sprk-b-TypeBodyFour">{description}</p>
+              <p className="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type">{description}</p>
             </div>
           );
         })}

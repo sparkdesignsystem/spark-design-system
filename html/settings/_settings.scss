@@ -134,8 +134,14 @@ $sprk-flag-stacked-breakpoint: 25em !default;
 // Footer
 ///
 
-/// Color of the text on a dark background.
-$sprk-footer-color-has-dark-background: $sprk-white !default;
+/// Background color of the Footer.
+$sprk-footer-background-color: $sprk-black !default;
+/// Type color on the Footer.
+$sprk-footer-type-color: $sprk-white !default;
+/// Link color on the Footer.
+$sprk-footer-link-color: $sprk-white !default;
+/// Icon color on the Footer.
+$sprk-footer-icon-color: $sprk-white !default;
 
 //
 // Icons

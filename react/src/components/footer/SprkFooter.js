@@ -42,14 +42,14 @@ class SprkFooter extends Component {
       paragraphsHasIds,
     } = this.state;
     const classNames = classnames(
-      'sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--black',
+      'sprk-o-Box sprk-o-Box--large sprk-c-Footer',
       additionalClasses,
     );
 
     return (
       <div className={classNames}>
         <footer
-          className="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-c-Footer sprk-c-Footer--has-dark-bg"
+          className="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b"
           role="contentinfo"
           data-id={idString}
         >
@@ -85,7 +85,7 @@ class SprkFooter extends Component {
                         sprk-o-Stack
                         sprk-o-Stack--large"
                     >
-                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
+                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
                         {column.heading}
                       </h3>
 
@@ -103,7 +103,7 @@ class SprkFooter extends Component {
                           return (
                             <li key={id} className="sprk-o-Stack__item">
                               <TagName
-                                className="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
+                                className="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal"
                                 href={TagName === 'a' ? href || '#nogo' : undefined}
                                 data-analytics={analyticsString}
                                 {...rest}
@@ -141,7 +141,7 @@ class SprkFooter extends Component {
               && paragraphsHasIds.map(p => (
                 <p
                   key={p.id}
-                  className="sprk-o-Stack__item sprk-b-TypeBodyFour"
+                  className="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type"
                 >
                   {p.text}
                 </p>
@@ -172,7 +172,7 @@ class SprkFooter extends Component {
                         <SprkIcon
                           iconName={name}
                           additionalClasses={classnames(
-                            `sprk-c-Icon--stroke-current-color sprk-c-Icon--l`,
+                            `sprk-c-Footer__icon sprk-c-Icon--l`,
                             addClasses,
                           )}
                         />
