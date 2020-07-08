@@ -27,7 +27,7 @@ describe('SprkCheckboxItem:', () => {
   });
 
   it('should apply disabled to the input/label if supplied', () => {
-    const wrapper = shallow(<SprkCheckboxItem disabled />);
+    const wrapper = shallow(<SprkCheckboxItem isDisabled />);
     expect(wrapper.find('.sprk-b-Checkbox__input').prop('disabled')).toBe(true);
     expect(
       wrapper.find('.sprk-b-Label').hasClass('sprk-b-Label--disabled'),

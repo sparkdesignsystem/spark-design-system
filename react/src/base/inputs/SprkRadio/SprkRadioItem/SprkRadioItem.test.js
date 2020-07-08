@@ -25,7 +25,7 @@ describe('SprkRadioItem:', () => {
   });
 
   it('should apply disabled to the input/label if supplied', () => {
-    const wrapper = shallow(<SprkRadioItem disabled />);
+    const wrapper = shallow(<SprkRadioItem isDisabled />);
     expect(wrapper.find('.sprk-b-Radio__input').prop('disabled')).toBe(true);
     expect(
       wrapper.find('.sprk-b-Label').hasClass('sprk-b-Label--disabled'),
