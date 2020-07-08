@@ -23,11 +23,31 @@ import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/
         </sprk-checkbox-item>
         <p sprkHelperText>Helper Text!</p>
       </fieldset>
-      <span sprkFieldError id="foo">Error Message!</span>
+      <span sprkFieldError>Error Message!</span>
     </sprk-checkbox-group>
   `,
 })
 class TestComponent {}
+
+@Component({
+  selector: 'sprk-test',
+  template: `
+    <sprk-checkbox-group>
+      <fieldset sprkFieldset>
+        <legend sprkLegend>
+          Checkbox Group Label
+        </legend>
+        <sprk-checkbox-item>
+          <input type="checkbox" sprkCheckboxInput />
+          <label sprkCheckboxLabel>Item 1</label>
+        </sprk-checkbox-item>
+        <p sprkHelperText>Helper Text!</p>
+      </fieldset>
+      <span sprkFieldError id="foo">Error Message!</span>
+    </sprk-checkbox-group>
+  `,
+})
+class TestComponent2 {}
 
 describe('SprkCheckboxGroupComponent', () => {
   let component: TestComponent;
@@ -37,6 +57,14 @@ describe('SprkCheckboxGroupComponent', () => {
   let checkboxContainerElement: HTMLElement;
   let checkboxItemContainerElements;
   let errorElement: HTMLElement;
+
+  let component2: TestComponent;
+  let checkboxContainerComponent2: SprkCheckboxGroupComponent;
+  let fixture2: ComponentFixture<TestComponent>;
+  let checkboxContainerFixture2: ComponentFixture<SprkCheckboxGroupComponent>;
+  let checkboxContainerElement2: HTMLElement;
+  let checkboxItemContainerElements2;
+  let errorElement2: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -49,6 +77,7 @@ describe('SprkCheckboxGroupComponent', () => {
         SprkFieldErrorDirective,
         SprkCheckboxGroupComponent,
         TestComponent,
+        TestComponent2,
       ],
     }).compileComponents();
   }));
@@ -69,6 +98,22 @@ describe('SprkCheckboxGroupComponent', () => {
       By.css('sprk-checkbox-item'),
     );
     errorElement = fixture.debugElement.query(By.css('span')).nativeElement;
+
+    fixture2 = TestBed.createComponent(TestComponent2);
+    component2 = fixture2.componentInstance;
+
+    checkboxContainerFixture2 = TestBed.createComponent(SprkCheckboxGroupComponent);
+    checkboxContainerComponent2 = checkboxContainerFixture2.componentInstance;
+    checkboxContainerComponent2.ngAfterContentInit();
+    fixture2.detectChanges();
+
+    checkboxContainerElement2 = checkboxContainerFixture2.nativeElement.querySelector(
+      'div',
+    );
+    checkboxItemContainerElements2 = fixture2.debugElement.queryAll(
+      By.css('sprk-checkbox-item'),
+    );
+    errorElement2 = fixture2.debugElement.query(By.css('span')).nativeElement;
   });
 
   it('should create itself', () => {
@@ -103,13 +148,27 @@ describe('SprkCheckboxGroupComponent', () => {
     expect(checkboxContainerElement.getAttribute('data-id')).toBe('test-id-str');
   });
 
-  it('should map any inputs inside checkbox-items to the field-error', () => {
+  it('should generate an error id if needed', () => {
+    expect(errorElement.id).not.toBe('foo');
+
     checkboxItemContainerElements.forEach((item) => {
       expect(
         item.nativeElement
           .querySelector('input')
           .getAttribute('aria-describedby'),
       ).toEqual(errorElement.id);
+    });
+  });
+
+  it('should not generate an error id if one is provided', () => {
+    expect(errorElement2.id).toEqual('foo');
+
+    checkboxItemContainerElements2.forEach((item) => {
+      expect(
+        item.nativeElement
+          .querySelector('input')
+          .getAttribute('aria-describedby'),
+      ).toEqual('foo');
     });
   });
 });

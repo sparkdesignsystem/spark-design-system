@@ -23,11 +23,26 @@ import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/
         </sprk-radio-item>
         <p sprkHelperText>Helper Text!</p>
       </fieldset>
+      <span sprkFieldError>Error Message!</span>
+    </sprk-radio-group>
+  `,
+})
+class TestComponent { }
+
+@Component({
+  selector: 'sprk-test-2',
+  template: `
+    <sprk-radio-group>
+      <sprk-radio-item>
+        <input type="radio" sprkRadioInput />
+        <label sprkRadioLabel>Item 1</label>
+      </sprk-radio-item>
+      <p sprkHelperText>Helper Text!</p>
       <span sprkFieldError id="foo">Error Message!</span>
     </sprk-radio-group>
   `,
 })
-class TestComponent {}
+class TestComponent2 { }
 
 describe('SprkRadioGroupComponent', () => {
   let component: TestComponent;
@@ -37,6 +52,14 @@ describe('SprkRadioGroupComponent', () => {
   let radioContainerElement: HTMLElement;
   let radioItemContainerElements;
   let errorElement: HTMLElement;
+
+  let component2: TestComponent;
+  let radioContainerComponent2: SprkRadioGroupComponent;
+  let fixture2: ComponentFixture<TestComponent>;
+  let radioContainerFixture2: ComponentFixture<SprkRadioGroupComponent>;
+  let radioContainerElement2: HTMLElement;
+  let radioItemContainerElements2;
+  let errorElement2: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -49,6 +72,7 @@ describe('SprkRadioGroupComponent', () => {
         SprkFieldErrorDirective,
         SprkRadioGroupComponent,
         TestComponent,
+        TestComponent2,
       ],
     }).compileComponents();
   }));
@@ -69,6 +93,22 @@ describe('SprkRadioGroupComponent', () => {
       By.css('sprk-radio-item'),
     );
     errorElement = fixture.debugElement.query(By.css('span')).nativeElement;
+
+    fixture2 = TestBed.createComponent(TestComponent2);
+    component2 = fixture2.componentInstance;
+
+    radioContainerFixture2 = TestBed.createComponent(SprkRadioGroupComponent);
+    radioContainerComponent2 = radioContainerFixture2.componentInstance;
+    radioContainerComponent2.ngAfterContentInit();
+    fixture2.detectChanges();
+
+    radioContainerElement2 = radioContainerFixture2.nativeElement.querySelector(
+      'div',
+    );
+    radioItemContainerElements2 = fixture2.debugElement.queryAll(
+      By.css('sprk-radio-item'),
+    );
+    errorElement2 = fixture2.debugElement.query(By.css('span')).nativeElement;
   });
 
   it('should create itself', () => {
@@ -103,13 +143,27 @@ describe('SprkRadioGroupComponent', () => {
     expect(radioContainerElement.getAttribute('data-id')).toBe('test-id-str');
   });
 
-  it('should map any inputs inside radio-items to the field-error', () => {
+  it('should generate an error id if needed', () => {
+    expect(errorElement.id).not.toBe('foo');
+
     radioItemContainerElements.forEach((item) => {
       expect(
         item.nativeElement
           .querySelector('input')
           .getAttribute('aria-describedby'),
       ).toEqual(errorElement.id);
+    });
+  });
+
+  it('should not generate an error id if one is provided', () => {
+    expect(errorElement2.id).toEqual('foo');
+
+    radioItemContainerElements2.forEach((item) => {
+      expect(
+        item.nativeElement
+          .querySelector('input')
+          .getAttribute('aria-describedby'),
+      ).toEqual('foo');
     });
   });
 });
