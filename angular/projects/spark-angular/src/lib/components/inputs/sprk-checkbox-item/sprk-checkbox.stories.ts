@@ -2,45 +2,43 @@ import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapp
 import { SprkLabelModule } from '../../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkSelectionContainerModule } from '../sprk-selection-container/sprk-selection-container.module';
 import { SprkSelectionItemContainerModule } from '../sprk-selection-item-container/sprk-selection-item-container.module';
-import { SprkSelectionItemContainerComponent } from '../sprk-selection-item-container/sprk-selection-item-container.component';
-import { SprkSelectionContainerComponent } from '../sprk-selection-container/sprk-selection-container.component';
 import { SprkSelectionLabelModule } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 import { SprkSelectionInputModule } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
 import { SprkFieldErrorModule } from '../../../directives/inputs/sprk-field-error/sprk-field-error.module';
-// import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkIconModule } from '../../sprk-icon/sprk-icon.module';
 import { SprkStackItemModule } from '../../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkStackModule } from '../../sprk-stack/sprk-stack.module';
-// import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.directive';
-// import { SprkLegendDirective } from '../../../directives/inputs/sprk-legend/sprk-legend.directive';
+import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.directive';
+import { SprkLegendDirective } from '../../../directives/inputs/sprk-legend/sprk-legend.directive';
 import { SprkFieldsetModule } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.module';
 import { SprkLegendModule } from '../../../directives/inputs/sprk-legend/sprk-legend.module';
 import { SprkCheckboxLabelModule } from '../../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.module';
-// import { SprkCheckboxLabelDirective } from '../../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.directive';
+import { SprkCheckboxLabelDirective } from '../../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.directive';
 import { SprkCheckboxInputModule } from '../../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
-// import { SprkCheckboxInputDirective } from '../../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
-// import { SprkCheckboxGroupComponent } from '../sprk-checkbox-group/sprk-checkbox-group.component';
-// import { SprkCheckboxItemComponent } from './sprk-checkbox-item.component';
+import { SprkCheckboxInputDirective } from '../../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
+import { SprkCheckboxGroupComponent } from '../sprk-checkbox-group/sprk-checkbox-group.component';
+import { SprkCheckboxItemComponent } from './sprk-checkbox-item.component';
 import { SprkCheckboxGroupModule } from '../sprk-checkbox-group/sprk-checkbox-group.module';
 import { SprkCheckboxItemModule } from './sprk-checkbox-item.module';
-// import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-// import { SprkHelperTextDirective } from '../../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
+import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkHelperTextDirective } from '../../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
 import { SprkHelperTextModule } from '../../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
 
 import { markdownDocumentationLinkBuilder } from '../../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Checkbox',
-  component: SprkSelectionContainerComponent,
+  component: SprkCheckboxItemComponent,
   subcomponents: {
-    // SprkCheckboxGroupComponent,
-    // SprkLabelDirective,
-    // SprkLegendDirective,
-    // SprkFieldsetDirective,
-    // SprkCheckboxLabelDirective,
-    // SprkFieldErrorDirective,
-    // SprkHelperTextDirective,
-    // SprkCheckboxInputDirective,
+    SprkCheckboxGroupComponent,
+    SprkLabelDirective,
+    SprkLegendDirective,
+    SprkFieldsetDirective,
+    SprkCheckboxLabelDirective,
+    SprkFieldErrorDirective,
+    SprkHelperTextDirective,
+    SprkCheckboxInputDirective,
   },
   decorators: [
     storyWrapper(
@@ -60,6 +58,12 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
+- Spark checkboxes have been refactored. The version that uses <sprk-selection-container> and <sprk-selection-item-container> will be permanently removed in our Fall 2020 release.
+- To update to the new version, replace checkboxes with our
+new implementation using <code>sprk-checkbox-group</code>
+and <code>sprk-checkbox-item</code> components.
+- Use <sprk-checkbox-group>, sprkFieldset directive,
+and sprkLegend directive to group together all related choices.
     `,
     docs: { iframeHeight: 200 },
   },
