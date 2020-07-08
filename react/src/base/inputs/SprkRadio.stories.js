@@ -104,14 +104,14 @@ invalidRadio.story = {
 export const disabledRadio = () => (
   <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend disabled>Group Label Name</SprkLegend>
-      <SprkRadioItem name="radio" disabled>
+      <SprkLegend isDisabled>Group Label Name</SprkLegend>
+      <SprkRadioItem name="radio" isDisabled>
         Radio Item 1
       </SprkRadioItem>
-      <SprkRadioItem name="radio" disabled>
+      <SprkRadioItem name="radio" isDisabled>
         Radio Item 2
       </SprkRadioItem>
-      <SprkRadioItem name="radio" disabled>
+      <SprkRadioItem name="radio" isDisabled>
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
@@ -205,14 +205,14 @@ hugeInvalid.story = {
 };
 
 export const hugeDisabled = () => (
-  <SprkRadioGroup variant="huge" disabled>
+  <SprkRadioGroup variant="huge" isDisabled>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
       <SprkRadioItem
         name="radio"
         variant="huge"
         ariaDescribedBy="radio-error-container"
-        disabled
+        isDisabled
       >
         Radio Item 1
       </SprkRadioItem>
@@ -220,7 +220,7 @@ export const hugeDisabled = () => (
         name="radio"
         variant="huge"
         ariaDescribedBy="radio-error-container"
-        disabled
+        isDisabled
       >
         Radio Item 2
       </SprkRadioItem>
@@ -228,7 +228,7 @@ export const hugeDisabled = () => (
         name="radio"
         variant="huge"
         ariaDescribedBy="radio-error-container"
-        disabled
+        isDisabled
       >
         Radio Item 3
       </SprkRadioItem>
