@@ -503,12 +503,7 @@ export const hugeCheckbox = () => ({
         </sprk-checkbox-item>
       </fieldset>
     </sprk-checkbox-group>
-  `,
-  props: {
-    onSelect() {
-      this.isChecked = this.checkbox_input1 === true;
-    },
-  },
+  `
 });
 
 hugeCheckbox.story = {
@@ -599,12 +594,7 @@ export const hugeHelperTextCheckbox = () => ({
         Optional helper text, used to clarify the field's intent.
       </div>
     </sprk-checkbox-group>
-  `,
-  props: {
-    onSelect() {
-      this.isChecked = this.checkbox_input1 === true;
-    },
-  },
+  `
 });
 
 hugeHelperTextCheckbox.story = {
@@ -701,12 +691,7 @@ export const hugeInvalidCheckbox = () => ({
         </div>
       </span>
     </sprk-checkbox-group>
-  `,
-  props: {
-    onSelect() {
-      this.isChecked = this.checkbox_input1 === true;
-    },
-  },
+  `
 });
 
 hugeInvalidCheckbox.story = {
@@ -800,12 +785,7 @@ export const hugeDisabledCheckbox = () => ({
         </sprk-checkbox-item>
       </fieldset>
     </sprk-checkbox-group>
-  `,
-  props: {
-    onSelect() {
-      this.isChecked = this.checkbox_input1 === true;
-    },
-  },
+  `
 });
 
 hugeDisabledCheckbox.story = {
@@ -1418,12 +1398,7 @@ export const legacyStory = () => ({
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>
-  `,
-  props: {
-    onSelect() {
-      this.isChecked = this.checkbox_input1 === true;
-    },
-  },
+  `
 });
 
 legacyStory.story = {
@@ -1514,12 +1489,7 @@ export const legacyInvalidStory = () => ({
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
     </sprk-selection-container>
-  `,
-  props: {
-    onSelect() {
-      this.isChecked = this.checkbox_input1 === true;
-    },
-  },
+  `
 });
 
 legacyInvalidStory.story = {
@@ -1610,12 +1580,7 @@ export const legacyDisabledStory = () => ({
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>
-  `,
-  props: {
-    onSelect() {
-      this.isChecked = this.checkbox_input1 === true;
-    },
-  },
+  `
 });
 
 legacyDisabledStory.story = {
