@@ -1,11 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'sprk-tab-duplicate',
   template: `
     <div>
-      <button (click)="changeMe()">Click Me to Change</button>
-      hello
+      <button (click)="changeMe()">Change Color</button>
       <sprk-tabbed-navigation idString="tabs-1" [additionalClasses]="newColor">
         <button
           sprkTabbedNavigationTab
@@ -47,30 +46,12 @@ import { Component, Input } from '@angular/core';
   `
 })
 export class SprkTabDuplicateComponent {
-  /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component container element.
-   */
-  @Input()
-  additionalClasses: string;
-  /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * `table` element.
-   */
-  @Input()
-  additionalTableClasses: string;
-  /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
-   */
-  @Input()
-  idString: string;
+  // constructor(public ref: ElementRef, public appRef: ChangeDetectorRef) {
+  //   setInterval(() => {
+  //     console.log('cats set interval')
+  //     this.appRef.markForCheck();
+  //   }, 1000);
+  // }
 
   newColor= "sprk-u-BackgroundColor--blue";
   changeMe(): void {
@@ -79,37 +60,4 @@ export class SprkTabDuplicateComponent {
     } else { this.newColor = "sprk-u-BackgroundColor--red"}
   }
 
-
-  /**
-   * @ignore
-   */
-  getClasses(): string {
-    const classArray: string[] = ['sprk-b-TableContainer'];
-
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray.join(' ');
-  }
-
-  /**
-   * @ignore
-   */
-  getTableClasses(): string {
-    const classArray: string[] = [
-      'sprk-b-Table',
-      'sprk-b-Table--spacing-medium',
-    ];
-
-    if (this.additionalTableClasses) {
-      this.additionalTableClasses.split(' ').forEach(className => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray.join(' ');
-  }
 }
