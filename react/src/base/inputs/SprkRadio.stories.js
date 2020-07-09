@@ -355,7 +355,7 @@ export const hugeLayoutFive = () => (
           <SprkStack
             splitAt="small"
             itemSpacing="medium"
-            additionalClasses="sprk-o-Stack--center-row "
+            additionalClasses="sprk-o-Stack--center-row"
           >
             <SprkStackItem
               additionalClasses="
