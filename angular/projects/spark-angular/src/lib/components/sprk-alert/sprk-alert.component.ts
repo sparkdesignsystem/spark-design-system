@@ -13,7 +13,7 @@ import { Component, Input } from '@angular/core';
       <div class="sprk-c-Alert__content">
         <sprk-icon
           iconType="{{ icon }}"
-          additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-c-Alert__icon sprk-c-Icon--stroke-current-color"
           aria-hidden="true"
         ></sprk-icon>
 

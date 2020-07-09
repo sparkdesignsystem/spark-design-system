@@ -43,7 +43,7 @@ class SprkFooterConnectIcons extends Component {
                   >
                     <SprkIcon
                       iconName={name}
-                      additionalClasses={`sprk-c-Footer__icon sprk-c-Icon--l ${
+                      additionalClasses={`sprk-c-Footer__icon ${
                         addClasses
                       }`}
                     />

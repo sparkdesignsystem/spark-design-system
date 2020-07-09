@@ -71,7 +71,6 @@ export const iconWithTextLink = () =>
       <svg
         class="
           sprk-c-Icon
-          sprk-c-Icon--l
           sprk-u-mrs
           sprk-c-Icon--stroke-current-color
         "
@@ -92,7 +91,6 @@ export const iconWithTextLink = () =>
       <svg
         class="
           sprk-c-Icon
-          sprk-c-Icon--l
           sprk-u-mls
           sprk-c-Icon--stroke-current-color
         "
@@ -160,7 +158,6 @@ export const disabledIconWithTextLink = () =>
       <svg
         class="
           sprk-c-Icon
-          sprk-c-Icon--l
           sprk-u-mrs
           sprk-c-Icon--stroke-current-color
         "
@@ -181,7 +178,6 @@ export const disabledIconWithTextLink = () =>
       <svg
         class="
           sprk-c-Icon
-          sprk-c-Icon--l
           sprk-u-mls
           sprk-c-Icon--stroke-current-color
         "

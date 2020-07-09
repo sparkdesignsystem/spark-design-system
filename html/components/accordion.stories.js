@@ -48,7 +48,6 @@ export const defaultStory = () => {
         <svg
           class="
             sprk-c-Icon sprk-c-Icon--toggle
-            sprk-c-Icon--l
             sprk-c-Accordion__icon
           "
           data-sprk-toggle="icon"
@@ -99,7 +98,6 @@ export const defaultStory = () => {
           class="
             sprk-c-Icon
             sprk-c-Icon--toggle
-            sprk-c-Icon--l
             sprk-c-Accordion__icon
           "
           data-sprk-toggle="icon"
@@ -135,7 +133,7 @@ export const defaultStory = () => {
         <svg
           class="
             sprk-c-Icon sprk-c-Icon--toggle
-            sprk-c-Icon--l sprk-c-Accordion__icon
+            sprk-c-Accordion__icon
           "
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">

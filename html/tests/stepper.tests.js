@@ -207,8 +207,8 @@ describe('steps UI Events tests, (descriptions)', () => {
             <span class="sprk-u-ScreenReaderText">Previous Slide</span>
             <svg class="
               sprk-c-Icon
-              sprk-c-Icon--stroke-current-color
-              sprk-c-Icon--l" viewBox="0 0 100 100">
+              sprk-c-Icon--stroke-current-color"
+              viewBox="0 0 100 100">
               <use xlink:href="#chevron-left-circle" />
             </svg>
           </button>
@@ -228,9 +228,8 @@ describe('steps UI Events tests, (descriptions)', () => {
             <svg
               class="
                 sprk-c-Icon
-                sprk-c-Icon--stroke-current-color
-                sprk-c-Icon--l"
-              viewBox="0 0 100 100">
+                sprk-c-Icon--stroke-current-color"
+                viewBox="0 0 100 100">
               <use xlink:href="#chevron-right-circle" />
             </svg>
           </button>

@@ -22,9 +22,9 @@ describe('SprkMastheadDropdown:', () => {
 
   it('should add classes to the icon when additionalIconClasses has a value', () => {
     const wrapper = mount(
-      <SprkMastheadDropdown additionalIconClasses="sprk-c-Icon--l" />,
+      <SprkMastheadDropdown additionalIconClasses="test-class" />,
     );
-    expect(wrapper.find('.sprk-c-Icon.sprk-c-Icon--l').length).toBe(1);
+    expect(wrapper.find('.sprk-c-Icon.test-class').length).toBe(1);
   });
 
   it('should add classes to the trigger when additionalTriggerClasses has a value', () => {

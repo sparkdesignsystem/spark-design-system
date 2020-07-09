@@ -172,7 +172,7 @@ class SprkFooter extends Component {
                         <SprkIcon
                           iconName={name}
                           additionalClasses={classnames(
-                            `sprk-c-Footer__icon sprk-c-Icon--l`,
+                            `sprk-c-Footer__icon`,
                             addClasses,
                           )}
                         />

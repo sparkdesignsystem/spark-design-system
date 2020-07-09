@@ -90,7 +90,7 @@ export const invalidDateInput = () => `
         id="date-input--error-container"
       >
         <svg
-          class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
+          class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
         >
           <use xlink:href="#exclamation-filled-small" />

@@ -147,14 +147,12 @@ $sprk-footer-icon-color: $sprk-white !default;
 // Icons
 ///
 
+/// Value for height and width of the small Icon component.
+$sprk-icon-s: 20px !default;
+/// Value for height and width of the medium Icon component.
+$sprk-icon-m: 28px !default;
 /// Value for height and width of the Icon component.
-$sprk-icon-m: 16px !default;
-/// Value for height and width of the large Icon component.
-$sprk-icon-l: 32px !default;
-/// Value for height and width of the extra large Icon component.
-$sprk-icon-xl: 64px !default;
-/// Value for height and width of the extra extra large Icon component.
-$sprk-icon-xxl: 128px !default;
+$sprk-icon: 32px !default;
 /// Value for the fill property of the Icon component.
 $sprk-icon-fill-color: none !default;
 /// Value for the stroke property of the Icon component.
@@ -166,13 +164,11 @@ $sprk-icon-filled-stroke-color: none !default;
 /// Boolean value for if a custom Icon stroke is desired.
 $sprk-icon-using-custom-stroke: true !default;
 /// Value for a small custom stroke width on the Icon component.
-$sprk-icon-custom-stroke-width-s: 1px !default;
+$sprk-icon-custom-stroke-width-s: 0.75px !default;
 /// Value for a medium custom stroke width on the Icon component.
-$sprk-icon-custom-stroke-width-m: 1.5px !default;
+$sprk-icon-custom-stroke-width-m: 0.75px !default;
 /// Value for a large custom stroke width on the Icon component.
-$sprk-icon-custom-stroke-width-l: 2px !default;
-/// Value for an extra large custom stroke width on the Icon component.
-$sprk-icon-custom-stroke-width-xl: 3px !default;
+$sprk-icon-custom-stroke-width-l: 1.5px !default;
 
 //
 // Layout
@@ -1838,9 +1834,9 @@ $sprk-modal-border-radius: 8px !default;
 ///
 
 /// The width of the menu icon on narrow viewports in the Masthead.
-$sprk-masthead-menu-icon-width: $sprk-icon-l !default;
+$sprk-masthead-menu-icon-width: $sprk-icon !default;
 /// The height of the menu icon on narrow viewports in the Masthead.
-$sprk-masthead-menu-icon-height: $sprk-icon-l !default;
+$sprk-masthead-menu-icon-height: $sprk-icon !default;
 /// The background color of the Masthead.
 $sprk-masthead-bg-color: $sprk-white !default;
 /// The padding of the Masthead content, menu, and branding sections.

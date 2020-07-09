@@ -43,7 +43,7 @@ class SprkAccordionItem extends Component {
     const { isOpen, height } = this.state;
 
     const iconClasses = classnames(
-      'sprk-c-Icon--l sprk-c-Icon--toggle sprk-c-Accordion__icon',
+      'sprk-c-Icon--toggle sprk-c-Accordion__icon',
       { 'sprk-c-Icon--open': isOpen },
       iconAddClasses,
     );

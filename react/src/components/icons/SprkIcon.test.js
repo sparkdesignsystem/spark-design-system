@@ -13,8 +13,8 @@ describe('SprkIcon:', () => {
   });
 
   it('should add classes when additionalClasses has a value', () => {
-    const wrapper = shallow(<SprkIcon iconName="settings" additionalClasses="sprk-c-Icon--l" />);
-    expect(wrapper.find('svg.sprk-c-Icon--l').length).toBe(1);
+    const wrapper = shallow(<SprkIcon iconName="settings" additionalClasses="test-class" />);
+    expect(wrapper.find('svg.test-class').length).toBe(1);
   });
 
   it('should set data-id when idString has a value', () => {

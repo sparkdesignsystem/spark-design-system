@@ -25,7 +25,7 @@ export const searchInput = () => `
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--m sprk-c-Icon--stroke-current-color"
+          class="sprk-c-Icon sprk-c-Icon--s sprk-c-Icon--stroke-current-color"
           viewBox="0 0 64 64"
         >
           <use xlink:href="#search" />
@@ -67,7 +67,7 @@ export const invalidSearchInput = () => `
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--m sprk-c-Icon--stroke-current-color"
+          class="sprk-c-Icon sprk-c-Icon--s sprk-c-Icon--stroke-current-color"
           viewBox="0 0 64 64"
         >
           <use xlink:href="#search" />
@@ -94,7 +94,7 @@ export const invalidSearchInput = () => `
         id="search--error-container"
       >
         <svg
-          class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
+          class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
         >
           <use xlink:href="#exclamation-filled-small" />
@@ -125,7 +125,7 @@ export const disabledSearchInput = () => `
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--m sprk-c-Icon--stroke-current-color"
+          class="sprk-c-Icon sprk-c-Icon--s sprk-c-Icon--stroke-current-color"
           viewBox="0 0 64 64"
         >
           <use xlink:href="#search" />

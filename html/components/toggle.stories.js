@@ -32,7 +32,7 @@ export const defaultStory = () => {
       >
         <svg
           class="
-            sprk-c-Icon sprk-c-Icon--l
+            sprk-c-Icon
             sprk-c-Icon--toggle
             sprk-u-mrs
           "

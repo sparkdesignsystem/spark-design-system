@@ -158,28 +158,28 @@ export const defaultStory = () => ({
         {
           href: '#nogo',
           icon: 'facebook-filled',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-1',
           iconScreenReaderText: 'facebook'
         },
         {
           href: '#nogo',
           icon: 'instagram-filled',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-2',
           iconScreenReaderText: 'instagram'
         },
         {
           href: '#nogo',
           icon: 'twitter-filled',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-3',
           iconScreenReaderText: 'twitter'
         },
         {
           href: '#nogo',
           icon: 'youtube-filled',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--stroke-current-color',
           analyticsString: 'social-link-4',
           iconScreenReaderText: 'youtube'
         }
@@ -189,21 +189,21 @@ export const defaultStory = () => ({
         {
           href: '#nogo',
           icon: 'townhouse',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--stroke-current-color',
           analyticsString: 'link-1',
           iconScreenReaderText: 'townhouse'
         },
         {
           href: '#nogo',
           icon: 'townhouse',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--stroke-current-color',
           analyticsString: 'link-2',
           iconScreenReaderText: 'townhouse'
         },
         {
           href: '#nogo',
           icon: 'townhouse',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--stroke-current-color',
           analyticsString: 'link-3',
           iconScreenReaderText: 'townhouse'
         }

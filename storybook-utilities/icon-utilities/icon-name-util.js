@@ -1,10 +1,11 @@
-function getIcons() {
-  const iconSymbols = Array
-    .from(document.querySelectorAll('#sprk-icons symbol'));
-  return iconSymbols.map(iconSymbol => iconSymbol.id);
+const getIcons = () => {
+  const iconSymbols = Array.from(
+    document.querySelectorAll('#sprk-icons symbol'),
+  );
+  return iconSymbols.map((iconSymbol) => iconSymbol.id);
 }
 
-function createIconExample(name) {
+const createIconExample = (name) => {
   const li = document.createElement('li');
   li.classList.add('sprk-o-Box');
   li.classList.add('sprk-o-Stack__item');
@@ -14,12 +15,16 @@ function createIconExample(name) {
 
   const svgElem = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   const useElem = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-  useElem.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', `#${name}`);
+  useElem.setAttributeNS(
+    'http://www.w3.org/1999/xlink',
+    'xlink:href',
+    `#${name}`,
+  );
   svgElem.appendChild(useElem);
   svgElem.classList.add('sprk-c-Icon');
 
-  if (!name.includes('small')) {
-    svgElem.classList.add('sprk-c-Icon--xl');
+  if (name.includes('small')) {
+    svgElem.classList.add('sprk-c-Icon--s');
   }
 
   if (name.includes('filled')) {
@@ -35,9 +40,9 @@ function createIconExample(name) {
 
   li.appendChild(galleryItem);
   return li;
-}
+};
 
-function attachIcons(iconNames) {
+const attachIcons = (iconNames) => {
   const container = document.querySelector('.sbdocs-gallery-container');
   if (container) {
     container.innerHTML = '';
@@ -45,6 +50,6 @@ function attachIcons(iconNames) {
       container.appendChild(createIconExample(iconName));
     });
   }
-}
+};
 
 export { getIcons, createIconExample, attachIcons };
