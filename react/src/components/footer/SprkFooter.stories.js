@@ -156,27 +156,31 @@ export const defaultStory = () => (
       icons: [
         {
           href: '#nogo',
-          name: 'facebook-filled',
+          name: 'facebook',
           screenReaderText: 'Facebook',
           element: 'a',
+          addClasses: 'sprk-c-Icon--filled-current-color',
         },
         {
           href: '#nogo',
-          name: 'instagram-filled',
+          name: 'instagram',
           screenReaderText: 'Instagram',
           element: 'a',
+          addClasses: 'sprk-c-Icon--filled-current-color',
         },
         {
           href: '#nogo',
-          name: 'twitter-filled',
+          name: 'twitter',
           screenReaderText: 'Twitter',
           element: 'a',
+          addClasses: 'sprk-c-Icon--filled-current-color',
         },
         {
           href: '#nogo',
-          name: 'youtube-filled',
+          name: 'youtube',
           screenReaderText: 'YouTube',
           element: 'a',
+          addClasses: 'sprk-c-Icon--filled-current-color',
         },
       ],
     }}

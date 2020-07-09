@@ -191,7 +191,7 @@ import {
               <sprk-toggle
                 title="{{ toggle.title }}"
                 analyticsString="{{ toggle.analytics || toggle.analyticsString }}"
-                iconClass="sprk-c-Icon--stroke-current-color"
+                iconClass="sprk-c-Footer__icon"
                 titleFontClass="sprk-b-TypeBodyFour sprk-c-Footer__type"
               >
                 <p class="sprk-b-TypeBodyFour sprk-c-Footer__type">{{ toggle.body }}</p>

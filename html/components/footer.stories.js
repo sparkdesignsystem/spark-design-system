@@ -203,8 +203,8 @@ export const defaultStory = () => {
                 <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
                   <li class="sprk-o-Stack__item">
                     <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                      <svg class="sprk-c-Footer__icon sprk-c-Icon" viewBox="0 0 64 64">
-                        <use xlink:href="#facebook-filled" />
+                      <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color" viewBox="0 0 64 64">
+                        <use xlink:href="#facebook" />
                       </svg>
                       <span class="sprk-u-ScreenReaderText">Facebook</span>
                     </a>
@@ -212,8 +212,8 @@ export const defaultStory = () => {
 
                   <li class="sprk-o-Stack__item">
                     <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                      <svg class="sprk-c-Footer__icon sprk-c-Icon" viewBox="0 0 64 64">
-                        <use xlink:href="#instagram-filled" />
+                      <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color" viewBox="0 0 64 64">
+                        <use xlink:href="#instagram" />
                       </svg>
                       <span class="sprk-u-ScreenReaderText">Instagram</span>
                     </a>
@@ -221,8 +221,8 @@ export const defaultStory = () => {
 
                   <li class="sprk-o-Stack__item">
                     <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                      <svg class="sprk-c-Footer__icon sprk-c-Icon" viewBox="0 0 64 64">
-                        <use xlink:href="#twitter-filled" />
+                      <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color" viewBox="0 0 64 64">
+                        <use xlink:href="#twitter" />
                       </svg>
                       <span class="sprk-u-ScreenReaderText">Twitter</span>
                     </a>
@@ -230,8 +230,8 @@ export const defaultStory = () => {
 
                   <li class="sprk-o-Stack__item">
                     <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                      <svg class="sprk-c-Footer__icon sprk-c-Icon" viewBox="0 0 64 64">
-                        <use xlink:href="#youtube-filled"/>
+                      <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color" viewBox="0 0 64 64">
+                        <use xlink:href="#youtube"/>
                       </svg>
                       <span class="sprk-u-ScreenReaderText">Youtube</span>
                     </a>
@@ -278,7 +278,7 @@ export const defaultStory = () => {
                   "
                     data-sprk-toggle="trigger"
                 >
-                  <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--toggle sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 64 64">
+                  <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--toggle sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 64 64">
                     <use xlink:href="#chevron-down-circle"></use>
                   </svg>
                   My Award Disclaimer
