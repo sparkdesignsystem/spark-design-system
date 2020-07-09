@@ -47,7 +47,7 @@ class TestComponent {}
     </sprk-checkbox-group>
   `,
 })
-class TestComponent2 {}
+class Test2Component {}
 
 describe('SprkCheckboxGroupComponent', () => {
   let component: TestComponent;
@@ -77,7 +77,7 @@ describe('SprkCheckboxGroupComponent', () => {
         SprkFieldErrorDirective,
         SprkCheckboxGroupComponent,
         TestComponent,
-        TestComponent2,
+        Test2Component,
       ],
     }).compileComponents();
   }));
@@ -99,7 +99,7 @@ describe('SprkCheckboxGroupComponent', () => {
     );
     errorElement = fixture.debugElement.query(By.css('span')).nativeElement;
 
-    fixture2 = TestBed.createComponent(TestComponent2);
+    fixture2 = TestBed.createComponent(Test2Component);
     component2 = fixture2.componentInstance;
 
     checkboxContainerFixture2 = TestBed.createComponent(SprkCheckboxGroupComponent);
