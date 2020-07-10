@@ -96,7 +96,7 @@ export const invalidRadio = () => (
 
 invalidRadio.story = {
   name: 'Invalid',
-  paramteres: {
+  parameters: {
     jest: ['SprkRadioGroup'],
   },
 };
@@ -120,7 +120,7 @@ export const disabledRadio = () => (
 
 disabledRadio.story = {
   name: 'Disabled',
-  paramteres: {
+  parameters: {
     jest: ['SprkRadioGroup'],
   },
 };
