@@ -915,7 +915,7 @@ hugeLayoutTwo.story = {
   name: 'Huge Layout - Two',
   parameters: {
     jest: ['checkbox'],
-    docs: { iframeHeight: 125 },
+    docs: { iframeHeight: 210 },
   },
 };
 
@@ -1052,7 +1052,7 @@ hugeLayoutFour.story = {
   name: 'Huge Layout - Four',
   parameters: {
     jest: ['checkbox'],
-    docs: { iframeHeight: 210 },
+    docs: { iframeHeight: 360 },
   },
 };
 
@@ -1227,7 +1227,7 @@ hugeLayoutFive.story = {
   name: 'Huge Layout - Five',
   parameters: {
     jest: ['checkbox'],
-    docs: { iframeHeight: 285 },
+    docs: { iframeHeight: 430 },
   },
 };
 
@@ -1426,6 +1426,6 @@ hugeLayoutSix.story = {
   name: 'Huge Layout - Six',
   parameters: {
     jest: ['checkbox'],
-    docs: { iframeHeight: 285 },
+    docs: { iframeHeight: 510 },
   },
 };
