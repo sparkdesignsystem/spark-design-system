@@ -12,10 +12,7 @@ describe('SprkTooltipComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SprkTooltipComponent,
-        SprkIconComponent,
-      ]
+      declarations: [SprkTooltipComponent, SprkIconComponent],
     }).compileComponents();
   }));
 
@@ -40,27 +37,37 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should toggle on activation', () => {
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(0);
     triggerElement.click();
     fixture.detectChanges();
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(1);
   });
 
   it('should close on document click', () => {
     triggerElement.click();
     fixture.detectChanges();
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(1);
     containerElement.ownerDocument.dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(0);
   });
 
   it('should not close on document click if its not open', (done) => {
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(0);
 
     let closedEventEmitted = false;
 
-    component.closedEvent.subscribe(g => {
+    component.closedEvent.subscribe((g) => {
       closedEventEmitted = true;
       done();
     });
@@ -68,7 +75,9 @@ describe('SprkTooltipComponent', () => {
     containerElement.ownerDocument.dispatchEvent(new Event('click'));
     fixture.detectChanges();
 
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(0);
     expect(closedEventEmitted).toEqual(false);
     done();
   });
@@ -76,20 +85,28 @@ describe('SprkTooltipComponent', () => {
   it('should close on Escape key', () => {
     triggerElement.click();
     fixture.detectChanges();
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
-    document.dispatchEvent(new KeyboardEvent('keydown', {
-      key: 'Escape'
-    }));
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(1);
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'Escape',
+      }),
+    );
     fixture.detectChanges();
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(0);
   });
 
   it('should not close on Escape key if it is not open', (done) => {
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(0);
 
     let closedEventEmitted = false;
 
-    component.closedEvent.subscribe(g => {
+    component.closedEvent.subscribe((g) => {
       closedEventEmitted = true;
       done();
     });
@@ -97,7 +114,9 @@ describe('SprkTooltipComponent', () => {
     document.dispatchEvent(new KeyboardEvent('keydown'));
 
     fixture.detectChanges();
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(0);
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(0);
     expect(closedEventEmitted).toEqual(false);
     done();
   });
@@ -105,12 +124,18 @@ describe('SprkTooltipComponent', () => {
   it('should not close on non-Escape key', () => {
     triggerElement.click();
     fixture.detectChanges();
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
-    document.dispatchEvent(new KeyboardEvent('keydown', {
-      key: 'a'
-    }));
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(1);
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'a',
+      }),
+    );
     fixture.detectChanges();
-    expect(containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length).toEqual(1);
+    expect(
+      containerElement.querySelectorAll('.sprk-c-Tooltip--toggled').length,
+    ).toEqual(1);
   });
 
   it('should add additional classes', () => {
@@ -133,14 +158,16 @@ describe('SprkTooltipComponent', () => {
     component.id = 'test_string';
     fixture.detectChanges();
 
-    expect(triggerElement.getAttribute('aria-labelledby')).toEqual('test_string');
+    expect(triggerElement.getAttribute('aria-labelledby')).toEqual(
+      'test_string',
+    );
     expect(tooltipElement.id).toEqual('test_string');
   });
 
-  it('should emit an open event when toggled', done => {
+  it('should emit an open event when toggled', (done) => {
     let eventEmitted = false;
 
-    component.openedEvent.subscribe(g => {
+    component.openedEvent.subscribe((g) => {
       eventEmitted = true;
       done();
     });
@@ -150,10 +177,10 @@ describe('SprkTooltipComponent', () => {
     expect(eventEmitted).toEqual(true);
   });
 
-  it('should emit a closed event when toggled', done => {
+  it('should emit a closed event when toggled', (done) => {
     let eventEmitted = false;
 
-    component.closedEvent.subscribe(g => {
+    component.closedEvent.subscribe((g) => {
       eventEmitted = true;
       done();
     });
@@ -191,51 +218,59 @@ describe('SprkTooltipComponent', () => {
     window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
 
     triggerElement.getBoundingClientRect = () => {
-      return { top: 75, left: 75 }
-    }
+      return { top: 75, left: 75 };
+    };
 
     fixture.nativeElement.dispatchEvent(new Event('mouseover'));
     fixture.detectChanges();
 
-    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-left')).toBe(
+      true,
+    );
   });
 
   it('should add the top right positioning class', () => {
     window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
 
     triggerElement.getBoundingClientRect = () => {
-      return { top: 75, left: 25 }
-    }
+      return { top: 75, left: 25 };
+    };
 
     fixture.nativeElement.dispatchEvent(new Event('mouseover'));
     fixture.detectChanges();
 
-    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-right')).toBe(true);
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-right')).toBe(
+      true,
+    );
   });
 
   it('should add the bottom left positioning class', () => {
     window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
 
     triggerElement.getBoundingClientRect = () => {
-      return { top: 25, left: 75 }
-    }
+      return { top: 25, left: 75 };
+    };
 
     fixture.nativeElement.dispatchEvent(new Event('mouseover'));
     fixture.detectChanges();
 
-    expect(tooltipElement.classList.contains('sprk-c-Tooltip--bottom-left')).toBe(true);
+    expect(
+      tooltipElement.classList.contains('sprk-c-Tooltip--bottom-left'),
+    ).toBe(true);
   });
 
   it('should add the bottom right positioning class', () => {
     window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
 
     triggerElement.getBoundingClientRect = () => {
-      return { top: 25, left: 25 }
-    }
+      return { top: 25, left: 25 };
+    };
 
     fixture.nativeElement.dispatchEvent(new Event('mouseover'));
     fixture.detectChanges();
 
-    expect(tooltipElement.classList.contains('sprk-c-Tooltip--bottom-right')).toBe(true);
+    expect(
+      tooltipElement.classList.contains('sprk-c-Tooltip--bottom-right'),
+    ).toBe(true);
   });
 });
