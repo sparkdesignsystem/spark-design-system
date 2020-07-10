@@ -101,7 +101,7 @@ export const invalidCheckbox = () => (
 
 invalidCheckbox.story = {
   name: 'Invalid',
-  paramteres: {
+  parameters: {
     jest: ['SprkCheckboxGroup'],
   },
 };
@@ -119,7 +119,7 @@ export const disabledCheckbox = () => (
 
 disabledCheckbox.story = {
   name: 'Disabled',
-  paramteres: {
+  parameters: {
     jest: ['SprkCheckboxGroup'],
   },
 };
