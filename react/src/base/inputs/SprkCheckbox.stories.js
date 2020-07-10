@@ -188,25 +188,13 @@ export const hugeDisabled = () => (
   <SprkCheckboxGroup variant="huge" isDisabled>
     <SprkFieldset>
       <SprkLegend isDisabled>Group Label Name</SprkLegend>
-      <SprkCheckboxItem
-        variant="huge"
-        ariaDescribedBy="checkbox-error-container"
-        isDisabled
-      >
+      <SprkCheckboxItem variant="huge" isDisabled>
         Checkbox Item 1
       </SprkCheckboxItem>
-      <SprkCheckboxItem
-        variant="huge"
-        ariaDescribedBy="checkbox-error-container"
-        isDisabled
-      >
+      <SprkCheckboxItem variant="huge" isDisabled>
         Checkbox Item 2
       </SprkCheckboxItem>
-      <SprkCheckboxItem
-        variant="huge"
-        ariaDescribedBy="checkbox-error-container"
-        isDisabled
-      >
+      <SprkCheckboxItem variant="huge" isDisabled>
         Checkbox Item 3
       </SprkCheckboxItem>
     </SprkFieldset>
