@@ -5,47 +5,49 @@ import {
   Input,
   Output,
   ViewChild,
-  EventEmitter
+  EventEmitter,
+  Renderer2,
 } from '@angular/core';
 import { uniqueId } from 'lodash';
 
 @Component({
   selector: 'sprk-tooltip',
   template: `
-  <span
-    class="sprk-c-Tooltip__container"
-    [attr.data-id]="idString"
-    #containerElement
-  >
-    <button
-      [ngClass]="{
-        'sprk-c-Tooltip__trigger' : true,
-        'sprk-c-Tooltip--toggled' : isToggled
-      }"
-      [attr.aria-expanded]="isToggled ? 'true' : 'false'"
-      [attr.data-analytics]="analyticsString"
-      [attr.aria-labelledby]="id"
-      #triggerElement
-    >
-      <sprk-icon
-        [iconType]="triggerIconType"
-        [additionalClasses]="iconAdditionalClasses"
-        aria-hidden="true"
-      ></sprk-icon>
-    </button>
     <span
-      [ngClass]="getTooltipClasses()"
-      [attr.id]="id"
-      aria-hidden="true"
-      role="tooltip"
-      #tooltipElement
+      class="sprk-c-Tooltip__container"
+      [attr.data-id]="idString"
+      #containerElement
     >
-      <ng-content></ng-content>
+      <button
+        [ngClass]="{
+          'sprk-c-Tooltip__trigger': true,
+          'sprk-c-Tooltip--toggled': isToggled
+        }"
+        [attr.aria-expanded]="isToggled ? 'true' : 'false'"
+        [attr.data-analytics]="analyticsString"
+        [attr.aria-labelledby]="id"
+        #triggerElement
+      >
+        <sprk-icon
+          [iconType]="triggerIconType"
+          [additionalClasses]="iconAdditionalClasses"
+          aria-hidden="true"
+        ></sprk-icon>
+      </button>
+      <span
+        [ngClass]="getTooltipClasses()"
+        [attr.id]="id"
+        aria-hidden="true"
+        role="tooltip"
+        #tooltipElement
+      >
+        <ng-content></ng-content>
+      </span>
     </span>
-  </span>
-  `
+  `,
 })
 export class SprkTooltipComponent implements AfterViewInit {
+  constructor(private renderer: Renderer2) {}
   /**
    * Whether or not the tooltip is toggled open.
    */
@@ -55,7 +57,7 @@ export class SprkTooltipComponent implements AfterViewInit {
    * The icon to use for the trigger element.
    */
   @Input()
-  triggerIconType: string = 'question-filled';
+  triggerIconType = 'question-filled';
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the trigger element.
@@ -129,7 +131,11 @@ export class SprkTooltipComponent implements AfterViewInit {
   @HostListener('document:keydown', ['$event'])
   onKeydown($event) {
     if (this.isToggled) {
-      if ($event.key === 'Escape' || $event.key === 'Esc' || $event.keyCode === 27) {
+      if (
+        $event.key === 'Escape' ||
+        $event.key === 'Esc' ||
+        $event.keyCode === 27
+      ) {
         this.isToggled = false;
         this.closedEvent.emit();
       }
@@ -141,7 +147,10 @@ export class SprkTooltipComponent implements AfterViewInit {
    */
   @HostListener('document:click', ['$event'])
   onDocumentClick(event): void {
-    if (this.containerElement && !this.containerElement.nativeElement.contains(event.target)) {
+    if (
+      this.containerElement &&
+      !this.containerElement.nativeElement.contains(event.target)
+    ) {
       if (this.isToggled) {
         this.isToggled = false;
         this.closedEvent.emit();
@@ -170,19 +179,15 @@ export class SprkTooltipComponent implements AfterViewInit {
    */
   @HostListener('click', ['$event'])
   onClick(event) {
-    this.toggle()
+    this.toggle();
   }
 
   /**
    * @ignore
    */
-  public positioningClass = 'sprk-c-Tooltip--bottom-right';
-
-  /**
-   * @ignore
-   */
   setPositioningClass(): void {
-    let trigger = this.triggerElement.nativeElement;
+    const trigger = this.triggerElement.nativeElement;
+    let positioningClass = 'sprk-c-Tooltip--bottom-right';
 
     const elemX = trigger.getBoundingClientRect().left;
     const elemY = trigger.getBoundingClientRect().top;
@@ -192,30 +197,55 @@ export class SprkTooltipComponent implements AfterViewInit {
 
     const maxWidth = 328;
     const triggerWidth = 16;
+    const tooltipSpacing = 16;
     const tooltipBorderWidth = 16;
     let calculatedWidth = maxWidth;
 
     if (elemX > viewportWidth / 2) {
-      calculatedWidth = elemX + triggerWidth + tooltipBorderWidth;
+      calculatedWidth =
+        elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
       if (elemY > viewportHeight / 2) {
-        this.positioningClass = 'sprk-c-Tooltip--top-left';
+        positioningClass = 'sprk-c-Tooltip--top-left';
       } else {
-        this.positioningClass = 'sprk-c-Tooltip--bottom-left';
+        positioningClass = 'sprk-c-Tooltip--bottom-left';
       }
     } else {
-      calculatedWidth = viewportWidth - elemX + tooltipBorderWidth;
+      calculatedWidth =
+        viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
       if (elemY > viewportHeight / 2) {
-        this.positioningClass = 'sprk-c-Tooltip--top-right';
+        positioningClass = 'sprk-c-Tooltip--top-right';
       } else {
-        this.positioningClass = 'sprk-c-Tooltip--bottom-right';
+        positioningClass = 'sprk-c-Tooltip--bottom-right';
       }
     }
 
-    if (calculatedWidth < maxWidth){
+    if (calculatedWidth < maxWidth) {
       // overwrite the width if there's not enough room to display it
-      this.tooltipElement.nativeElement.setAttribute('style', 'width:' + calculatedWidth + "px");
+      this.renderer.setAttribute(
+        this.tooltipElement.nativeElement,
+        'style',
+        'width:' + calculatedWidth + 'px',
+      );
     }
-  };
+
+    this.renderer.removeClass(
+      this.tooltipElement.nativeElement,
+      'sprk-c-Tooltip--top-left',
+    );
+    this.renderer.removeClass(
+      this.tooltipElement.nativeElement,
+      'sprk-c-Tooltip--top-right',
+    );
+    this.renderer.removeClass(
+      this.tooltipElement.nativeElement,
+      'sprk-c-Tooltip--bottom-right',
+    );
+    this.renderer.removeClass(
+      this.tooltipElement.nativeElement,
+      'sprk-c-Tooltip--bottom-left',
+    );
+    this.renderer.addClass(this.tooltipElement.nativeElement, positioningClass);
+  }
 
   /**
    * @ignore
@@ -223,10 +253,11 @@ export class SprkTooltipComponent implements AfterViewInit {
   toggle(): void {
     this.isToggled = !this.isToggled;
 
-    if (this.isToggled)
+    if (this.isToggled) {
       this.openedEvent.emit();
-    else
+    } else {
       this.closedEvent.emit();
+    }
   }
 
   /**
@@ -235,11 +266,11 @@ export class SprkTooltipComponent implements AfterViewInit {
   getTooltipClasses(): string {
     const classArray: string[] = [
       'sprk-c-Tooltip',
-      this.positioningClass,
+      'sprk-c-Tooltip--bottom-right',
     ];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
