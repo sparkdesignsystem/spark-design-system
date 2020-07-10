@@ -13,7 +13,6 @@ const H4 = (props) => {
           sprk-u-mbm
           sprk-u-Measure
         "
-        id={id}
         {...props}
       >
         {children}
