@@ -208,28 +208,13 @@ export const hugeDisabled = () => (
   <SprkRadioGroup variant="huge" isDisabled>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-        isDisabled
-      >
+      <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 1
       </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-        isDisabled
-      >
+      <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 2
       </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-        isDisabled
-      >
+      <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
