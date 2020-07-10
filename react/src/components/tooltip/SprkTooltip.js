@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
 import SprkIcon from '../icons/SprkIcon';
-import { tooltip } from '../../../../html/components/tooltip';
 
 class SprkTooltip extends Component {
   constructor(props) {
