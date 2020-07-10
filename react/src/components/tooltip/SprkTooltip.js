@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
 import SprkIcon from '../icons/SprkIcon';
+import { tooltip } from '../../../../html/components/tooltip';
 
 class SprkTooltip extends Component {
   constructor(props) {
@@ -46,17 +47,19 @@ class SprkTooltip extends Component {
     const maxWidth = 328;
     const triggerWidth = 16;
     const tooltipBorderWidth = 16;
+    const tooltipSpacing = 16;
+
     let calculatedWidth;
 
     if (elemX > viewportWidth / 2) {
-      calculatedWidth = elemX + triggerWidth + tooltipBorderWidth;
+      calculatedWidth = elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
       if (elemY > viewportHeight / 2) {
         this.setState({ position: 'topleft' });
       } else {
         this.setState({ position: 'bottomleft' });
       }
     } else {
-      calculatedWidth = viewportWidth - elemX + tooltipBorderWidth;
+      calculatedWidth = viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
       if (elemY > viewportHeight / 2) {
         this.setState({ position: 'topright' });
       } else {
