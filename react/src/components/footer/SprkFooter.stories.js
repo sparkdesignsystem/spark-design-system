@@ -33,7 +33,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.app/rocket_by_ql.svg',
+            'https://spark-assets.netlify.app/rocket_by_ql.png',
           altText: 'Rocket Mortgage by Quicken Loans Logo',
           description: 'Buy a home, refinance, or manage your mortgage online with America\'s largest mortgage lender',
           element: 'a',
@@ -42,7 +42,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.app/rocket_loans.svg',
+            'https://spark-assets.netlify.app/rocket_loans.png',
           altText: 'Rocket Loans Logo',
           description: 'Get a personal loan to consolidate debt, renovate your home and more',
           element: 'a',
@@ -51,7 +51,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.app/rocket_homes.svg',
+            'https://spark-assets.netlify.app/rocket_homes.png',
           altText: 'Rocket Homes Logo',
           description: 'Get a real estate agent handpicked for you and search the latest home listings',
           element: 'a',
@@ -60,7 +60,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.app/rocket_hq.svg',
+            'https://spark-assets.netlify.app/rocket_hq.png',
           altText: 'Rocket HQ Logo',
           description: 'Access tools and articles that can help you reach your financial goals',
           element: 'a',
