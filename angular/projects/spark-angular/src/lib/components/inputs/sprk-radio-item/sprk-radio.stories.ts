@@ -366,7 +366,7 @@ export const disabledRadioButton = () => ({
             disabled
           >
           <label
-            for="disabled-radio-1"
+            for="invalid-radio-1"
             sprkRadioLabel
             isDisabled="true"
           >
