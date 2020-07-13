@@ -43,8 +43,8 @@ export const defaultStory = () => {
         id="tooltip_1"
         role="tooltip"
       >
-        Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
-        deserunt aute id dee doo da fauxet la gigman roo.
+        Use Tooltips to provide info that’s not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
       </span>
     </span>
   `;
