@@ -124,7 +124,7 @@ export const defaultStory = () => ({
           text: 'Buy a home, refinance, or manage your mortgage online with America&#8217;s largest mortgage lender',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.app/rocket_by_ql.png',
+            'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
           analyticsString: 'link-1',
           imgAlt: 'Rocket Mortgage by Quicken Loans Logo'
         },
@@ -132,7 +132,7 @@ export const defaultStory = () => ({
           text: 'Get a personal loan to consolidate debt, renovate your home and more',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.app/rocket_loans.png',
+            'https://spark-assets.netlify.app/rocket-loans-white.svg',
           imgAlt: 'Rocket Loans Logo',
           analyticsString: 'link-2'
         },
@@ -140,7 +140,7 @@ export const defaultStory = () => ({
           text: 'Get a real estate agent handpicked for you and search the latest home listings',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.app/rocket_homes.png',
+            'https://spark-assets.netlify.app/rocket-homes-white.svg',
           imgAlt: 'Rocket Homes Logo',
           analyticsString: 'link-3'
         },
@@ -148,7 +148,7 @@ export const defaultStory = () => ({
           text: 'Access tools and articles that can help you reach your financial goals',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.app/rocket_hq.png',
+            'https://spark-assets.netlify.app/rocket-hq-white.svg',
           analyticsString: 'link-4',
           imgAlt: 'Rocket HQ Logo'
         }

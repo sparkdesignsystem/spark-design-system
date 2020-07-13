@@ -42,7 +42,7 @@ export const defaultStory = () => {
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.app/rocket_by_ql.png" alt="Rocket Mortgage by Quicken Loans Logo">
+                  <img src="https://spark-assets.netlify.app/rocket-by-ql-white.svg" alt="Rocket Mortgage by Quicken Loans Logo">
                 </a>
               </div>
 
@@ -55,7 +55,7 @@ export const defaultStory = () => {
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.app/rocket_loans.png" alt="Rocket Loans Logo">
+                  <img src="https://spark-assets.netlify.app/rocket-loans-white.svg" alt="Rocket Loans Logo">
                 </a>
               </div>
 
@@ -68,7 +68,7 @@ export const defaultStory = () => {
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.app/rocket_homes.png" alt="Rocket Homes Logo">
+                  <img src="https://spark-assets.netlify.app/rocket-homes-white.svg" alt="Rocket Homes Logo">
                 </a>
               </div>
 
@@ -81,7 +81,7 @@ export const defaultStory = () => {
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.app/rocket_hq.png" alt="Rocket HQ Logo">
+                  <img src="https://spark-assets.netlify.app/rocket-hq.svg" alt="Rocket HQ Logo">
                 </a>
               </div>
 
