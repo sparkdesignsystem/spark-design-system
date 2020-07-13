@@ -36,7 +36,7 @@ const SprkCheckboxGroup = (props) => {
     return element;
   });
 
-  // For each element, if it has granChildren, add ariaDescribedBY to those
+  // For each element, if it has grandChildren, add ariaDescribedBy to those
   let key = 0;
   let elementsToRender = elementsToProcess;
   if (hasErrorContainer || hasHelperText) {

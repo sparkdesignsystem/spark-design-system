@@ -1751,7 +1751,7 @@ $sprk-tooltip-text-align: left !default;
 /// The font weight for the tooltip
 $sprk-tooltip-font-weight: 300 !default;
 /// The padding for the tooltip.
-$sprk-tooltip-padding: $sprk-space-inset-short-m;
+$sprk-tooltip-padding: $sprk-space-inset-short-m !default;
 /// The border radius for the tooltip.
 $sprk-tooltip-border-radius: 4px !default;
 /// The font size for the tooltip.

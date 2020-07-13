@@ -24,7 +24,7 @@ dynamically when the checkbox is activated.
 - aria-labelledby that points to the same
  element for every checkbox in the group
     `,
-    docs: { iframeHeight: 140 },
+    docs: { iframeHeight: 180 },
   },
 };
 
@@ -505,6 +505,7 @@ huge.story = {
   name: 'Huge',
   parameters: {
     jest: ['checkbox'],
+    docs: { iframeHeight: 300 },
   },
 };
 
@@ -603,6 +604,7 @@ hugeHelperText.story = {
   name: 'Huge Helper Text',
   parameters: {
     jest: ['checkbox'],
+    docs: { iframeHeight: 320 },
   },
 };
 
@@ -713,6 +715,7 @@ hugeInvalid.story = {
   name: 'Huge Invalid',
   parameters: {
     jest: ['checkbox'],
+    docs: { iframeHeight: 320 },
   },
 };
 
@@ -829,6 +832,7 @@ hugeDisabled.story = {
   name: 'Huge Disabled',
   parameters: {
     jest: ['checkbox'],
+    docs: { iframeHeight: 300 },
   },
 };
 
@@ -911,6 +915,7 @@ hugeLayoutTwo.story = {
   name: 'Huge Layout - Two',
   parameters: {
     jest: ['checkbox'],
+    docs: { iframeHeight: 210 },
   },
 };
 
@@ -1047,6 +1052,7 @@ hugeLayoutFour.story = {
   name: 'Huge Layout - Four',
   parameters: {
     jest: ['checkbox'],
+    docs: { iframeHeight: 360 },
   },
 };
 
@@ -1221,6 +1227,7 @@ hugeLayoutFive.story = {
   name: 'Huge Layout - Five',
   parameters: {
     jest: ['checkbox'],
+    docs: { iframeHeight: 430 },
   },
 };
 
@@ -1419,5 +1426,6 @@ hugeLayoutSix.story = {
   name: 'Huge Layout - Six',
   parameters: {
     jest: ['checkbox'],
+    docs: { iframeHeight: 510 },
   },
 };

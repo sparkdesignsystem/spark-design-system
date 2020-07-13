@@ -59,6 +59,8 @@
     width: $sprk-tooltip-caret-width;
     height: $sprk-tooltip-caret-width;
     background-color: $sprk-tooltip-caret-background-color;
+    -webkit-transform: rotateY(0deg) rotate(45deg);
+    -ms-transform: rotateY(0deg) rotate(45deg);
     transform: rotateY(0deg) rotate(45deg);
     content: " ";
   }

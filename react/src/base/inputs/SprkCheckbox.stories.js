@@ -101,7 +101,7 @@ export const invalidCheckbox = () => (
 
 invalidCheckbox.story = {
   name: 'Invalid',
-  paramteres: {
+  parameters: {
     jest: ['SprkCheckboxGroup'],
   },
 };
@@ -110,16 +110,22 @@ export const disabledCheckbox = () => (
   <SprkCheckboxGroup isDisabled>
     <SprkFieldset>
       <SprkLegend isDisabled>Group Label Name</SprkLegend>
-      <SprkCheckboxItem isDisabled>Checkbox Item 1</SprkCheckboxItem>
-      <SprkCheckboxItem isDisabled>Checkbox Item 2</SprkCheckboxItem>
-      <SprkCheckboxItem isDisabled>Checkbox Item 3</SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" isDisabled>
+        Checkbox Item 1
+      </SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" isDisabled>
+        Checkbox Item 2
+      </SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" isDisabled>
+        Checkbox Item 3
+      </SprkCheckboxItem>
     </SprkFieldset>
   </SprkCheckboxGroup>
 );
 
 disabledCheckbox.story = {
   name: 'Disabled',
-  paramteres: {
+  parameters: {
     jest: ['SprkCheckboxGroup'],
   },
 };
@@ -128,9 +134,15 @@ export const huge = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckboxItem variant="huge">Checkbox Item 1</SprkCheckboxItem>
-      <SprkCheckboxItem variant="huge">Checkbox Item 2</SprkCheckboxItem>
-      <SprkCheckboxItem variant="huge">Checkbox Item 3</SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" variant="huge">
+        Checkbox Item 1
+      </SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" variant="huge">
+        Checkbox Item 2
+      </SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" variant="huge">
+        Checkbox Item 3
+      </SprkCheckboxItem>
     </SprkFieldset>
   </SprkCheckboxGroup>
 );
@@ -145,9 +157,15 @@ export const hugeHelperText = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckboxItem variant="huge">Checkbox Item 1</SprkCheckboxItem>
-      <SprkCheckboxItem variant="huge">Checkbox Item 2</SprkCheckboxItem>
-      <SprkCheckboxItem variant="huge">Checkbox Item 3</SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" variant="huge">
+        Checkbox Item 1
+      </SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" variant="huge">
+        Checkbox Item 2
+      </SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" variant="huge">
+        Checkbox Item 3
+      </SprkCheckboxItem>
     </SprkFieldset>
     <SprkHelperText>
       Optional helper text, used to clarify the field&#x27;s intent
@@ -166,9 +184,15 @@ export const hugeInvalid = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckboxItem variant="huge">Checkbox Item 1</SprkCheckboxItem>
-      <SprkCheckboxItem variant="huge">Checkbox Item 2</SprkCheckboxItem>
-      <SprkCheckboxItem variant="huge">Checkbox Item 3</SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" variant="huge">
+        Checkbox Item 1
+      </SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" variant="huge">
+        Checkbox Item 2
+      </SprkCheckboxItem>
+      <SprkCheckboxItem name="checkboxName" variant="huge">
+        Checkbox Item 3
+      </SprkCheckboxItem>
     </SprkFieldset>
     <SprkErrorContainer
       id="checkbox-huge-error-container"
@@ -188,25 +212,13 @@ export const hugeDisabled = () => (
   <SprkCheckboxGroup variant="huge" isDisabled>
     <SprkFieldset>
       <SprkLegend isDisabled>Group Label Name</SprkLegend>
-      <SprkCheckboxItem
-        variant="huge"
-        ariaDescribedBy="checkbox-error-container"
-        isDisabled
-      >
+      <SprkCheckboxItem name="checkboxName" variant="huge" isDisabled>
         Checkbox Item 1
       </SprkCheckboxItem>
-      <SprkCheckboxItem
-        variant="huge"
-        ariaDescribedBy="checkbox-error-container"
-        isDisabled
-      >
+      <SprkCheckboxItem name="checkboxName" variant="huge" isDisabled>
         Checkbox Item 2
       </SprkCheckboxItem>
-      <SprkCheckboxItem
-        variant="huge"
-        ariaDescribedBy="checkbox-error-container"
-        isDisabled
-      >
+      <SprkCheckboxItem name="checkboxName" variant="huge" isDisabled>
         Checkbox Item 3
       </SprkCheckboxItem>
     </SprkFieldset>
@@ -228,12 +240,12 @@ export const hugeLayoutTwo = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 1
               </SprkCheckboxItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 2
               </SprkCheckboxItem>
             </SprkStackItem>
@@ -259,12 +271,12 @@ export const hugeLayoutFour = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 1
               </SprkCheckboxItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 2
               </SprkCheckboxItem>
             </SprkStackItem>
@@ -273,12 +285,12 @@ export const hugeLayoutFour = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 3
               </SprkCheckboxItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 4
               </SprkCheckboxItem>
             </SprkStackItem>
@@ -303,12 +315,12 @@ export const hugeLayoutFive = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 1
               </SprkCheckboxItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 2
               </SprkCheckboxItem>
             </SprkStackItem>
@@ -317,12 +329,12 @@ export const hugeLayoutFive = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 3
               </SprkCheckboxItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 4
               </SprkCheckboxItem>
             </SprkStackItem>
@@ -335,7 +347,7 @@ export const hugeLayoutFive = () => (
             additionalClasses="sprk-o-Stack--center-row "
           >
             <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 5
               </SprkCheckboxItem>
             </SprkStackItem>
@@ -361,12 +373,12 @@ export const hugeLayoutSix = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 1
               </SprkCheckboxItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 2
               </SprkCheckboxItem>
             </SprkStackItem>
@@ -375,12 +387,12 @@ export const hugeLayoutSix = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 3
               </SprkCheckboxItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 4
               </SprkCheckboxItem>
             </SprkStackItem>
@@ -389,12 +401,12 @@ export const hugeLayoutSix = () => (
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 5
               </SprkCheckboxItem>
             </SprkStackItem>
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@s">
-              <SprkCheckboxItem variant="huge">
+              <SprkCheckboxItem name="checkboxName" variant="huge">
                 Checkbox Item 6
               </SprkCheckboxItem>
             </SprkStackItem>

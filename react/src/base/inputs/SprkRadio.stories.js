@@ -96,7 +96,7 @@ export const invalidRadio = () => (
 
 invalidRadio.story = {
   name: 'Invalid',
-  paramteres: {
+  parameters: {
     jest: ['SprkRadioGroup'],
   },
 };
@@ -120,7 +120,7 @@ export const disabledRadio = () => (
 
 disabledRadio.story = {
   name: 'Disabled',
-  paramteres: {
+  parameters: {
     jest: ['SprkRadioGroup'],
   },
 };
@@ -208,28 +208,13 @@ export const hugeDisabled = () => (
   <SprkRadioGroup variant="huge" isDisabled>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-        isDisabled
-      >
+      <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 1
       </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-        isDisabled
-      >
+      <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 2
       </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-        isDisabled
-      >
+      <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
@@ -355,7 +340,7 @@ export const hugeLayoutFive = () => (
           <SprkStack
             splitAt="small"
             itemSpacing="medium"
-            additionalClasses="sprk-o-Stack--center-row "
+            additionalClasses="sprk-o-Stack--center-row"
           >
             <SprkStackItem
               additionalClasses="

@@ -15,12 +15,13 @@ const SprkRadioItem = (props) => {
     name,
     value,
     isDisabled,
-    onChangeFunc,
+    onChange,
     id,
     ariaDescribedBy,
     ...rest
   } = props;
   const internalId = uniqueId('sprk-radio-');
+  const onChangeFunc = onChange;
   return (
     <div
       className={classnames(
@@ -121,7 +122,7 @@ SprkRadioItem.propTypes = {
   /**
    * Passes in a function that handles the onChange of the input.
    */
-  onChangeFunc: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 export default SprkRadioItem;

@@ -82,9 +82,9 @@ describe('SprkRadioItem:', () => {
     expect(wrapper.find('.sprk-b-Radio__input').prop('id')).toEqual(expected);
   });
 
-  it('should run the supplied onChangeFunc function for radios', () => {
+  it('should run the supplied onChange function for radios', () => {
     const onRadioChangeMock = jest.fn();
-    const wrapper = mount(<SprkRadioItem onChangeFunc={onRadioChangeMock} />);
+    const wrapper = mount(<SprkRadioItem onChange={onRadioChangeMock} />);
     const radio = wrapper.find('input[type="radio"]');
     radio.simulate('change', { target: { value: 'test-value' } });
     expect(onRadioChangeMock.mock.calls.length).toBe(1);

@@ -15,12 +15,14 @@ const SprkCheckboxItem = (props) => {
     name,
     value,
     isDisabled,
-    onChangeFunc,
+    onChange,
     id,
     ariaDescribedBy,
     ...rest
   } = props;
   const internalId = uniqueId('sprk-checkbox-');
+  const onChangeFunc = onChange;
+
   return (
     <div
       className={classnames(
@@ -133,7 +135,7 @@ SprkCheckboxItem.propTypes = {
   /**
    * Passes in a function that handles the onChange of the input.
    */
-  onChangeFunc: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 export default SprkCheckboxItem;
