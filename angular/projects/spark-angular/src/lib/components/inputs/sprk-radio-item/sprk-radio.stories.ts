@@ -362,11 +362,11 @@ export const disabledRadioButton = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
-            id="invalid-radio-1"
+            id="disabled-radio-1"
             disabled
           >
           <label
-            for="invalid-radio-1"
+            for="disabled-radio-1"
             sprkRadioLabel
             isDisabled="true"
           >
