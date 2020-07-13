@@ -48,6 +48,10 @@
       color: $sprk-accordion-summary-active-color;
       text-decoration: $sprk-accordion-summary-active-text-decoration;
     }
+
+    .sprk-c-Accordion__icon {
+      stroke: $sprk-accordion-summary-active-color;
+    }
   }
 
   &:focus:not(.focus-visible) {
