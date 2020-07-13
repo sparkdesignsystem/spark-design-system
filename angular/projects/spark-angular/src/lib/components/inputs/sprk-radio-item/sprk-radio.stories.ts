@@ -174,96 +174,6 @@ defaultStory.story = {
   },
 };
 
-export const invalidRadio = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-radio-group>
-     <fieldset sprkFieldset>
-       <legend sprkLegend>
-         Radio Group Label
-       </legend>
-       <sprk-radio-item>
-         <input
-            type="radio"
-            value="1"
-            name="radio_input_invalid"
-            [(ngModel)]="radio_input"
-            sprkRadioInput
-            #radioInput="ngModel"
-            id="invalid-radio-1"
-          >
-          <label
-            for="invalid-radio-1"
-            sprkRadioLabel
-          >
-            Item 1
-          </label>
-        </sprk-radio-item>
-        <sprk-radio-item>
-          <input
-            type="radio"
-            value="2"
-            name="radio_input_invalid"
-            [(ngModel)]="radio_input"
-            sprkRadioInput
-            #radioInput="ngModel"
-            id="invalid-radio-2"
-          >
-          <label
-            for="invalid-radio-2"
-            sprkRadioLabel
-          >
-            Item 2
-          </label>
-        </sprk-radio-item>
-        <sprk-radio-item>
-          <input
-            type="radio"
-            value="3"
-            name="radio_input_invalid"
-            [(ngModel)]="radio_input"
-            sprkRadioInput
-            #radioInput="ngModel"
-            data-id="radio-3"
-            id="invalid-radio-3"
-          >
-          <label
-            for="invalid-radio-3"
-            sprkRadioLabel
-          >
-            Item 3
-          </label>
-        </sprk-radio-item>
-      </fieldset>
-      <span sprkFieldError>
-        <sprk-icon
-          iconType="exclamation-filled-small"
-          additionalClasses="sprk-b-ErrorIcon"
-        ></sprk-icon>
-        <div class="sprk-b-ErrorText">
-          There is an error on this field.
-        </div>
-      </span>
-    </sprk-radio-group>
-  `,
-});
-
-invalidRadio.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-      'sprk-field-error.directive',
-    ],
-  },
-};
-
 export const defaultHelperText = () => ({
   moduleMetadata: modules,
   template: `
@@ -346,7 +256,97 @@ defaultHelperText.story = {
   },
 };
 
-export const disabledRadio = () => ({
+export const invalidRadioButton = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-radio-group>
+     <fieldset sprkFieldset>
+       <legend sprkLegend>
+         Radio Group Label
+       </legend>
+       <sprk-radio-item>
+         <input
+            type="radio"
+            value="1"
+            name="radio_input_invalid"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            id="invalid-radio-1"
+          >
+          <label
+            for="invalid-radio-1"
+            sprkRadioLabel
+          >
+            Item 1
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item>
+          <input
+            type="radio"
+            value="2"
+            name="radio_input_invalid"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            id="invalid-radio-2"
+          >
+          <label
+            for="invalid-radio-2"
+            sprkRadioLabel
+          >
+            Item 2
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item>
+          <input
+            type="radio"
+            value="3"
+            name="radio_input_invalid"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            data-id="radio-3"
+            id="invalid-radio-3"
+          >
+          <label
+            for="invalid-radio-3"
+            sprkRadioLabel
+          >
+            Item 3
+          </label>
+        </sprk-radio-item>
+      </fieldset>
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">
+          There is an error on this field.
+        </div>
+      </span>
+    </sprk-radio-group>
+  `,
+});
+
+invalidRadioButton.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-radio-input.directive',
+      'sprk-radio-label.directive',
+      'sprk-fieldset.directive',
+      'sprk-legend.directive',
+      'sprk-label.directive',
+      'sprk-radio-item.component',
+      'sprk-radio-group.component',
+      'sprk-field-error.directive',
+    ],
+  },
+};
+
+export const disabledRadioButton = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-radio-group>
@@ -417,7 +417,7 @@ export const disabledRadio = () => ({
   `,
 });
 
-disabledRadio.story = {
+disabledRadioButton.story = {
   name: 'Disabled',
   parameters: {
     jest: [
@@ -514,6 +514,94 @@ huge.story = {
       'sprk-label.directive',
       'sprk-radio-item.component',
       'sprk-radio-group.component',
+    ],
+  },
+};
+
+export const hugeHelperText = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-radio-group variant="huge">
+      <fieldset sprkFieldset>
+        <legend sprkLegend>
+          Radio Group Label
+        </legend>
+        <sprk-radio-item variant="huge">
+          <input
+              type="radio"
+              value="1"
+              name="radio_input_helper"
+              [(ngModel)]="radio_input"
+              sprkRadioInput
+              #radioInput="ngModel"
+              id="helper-radio-1"
+              variant="huge"
+            >
+          <label
+            for="helper-radio-1"
+            sprkRadioLabel
+            variant="huge"
+          >
+            Item 1
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item variant="huge">
+          <input
+            type="radio"
+            value="2"
+            name="radio_input_helper"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            id="helper-radio-2"
+            variant="huge"
+          >
+          <label
+            for="helper-radio-2"
+            sprkRadioLabel
+            variant="huge"
+          >
+            Item 2
+          </label>
+        </sprk-radio-item>
+        <sprk-radio-item variant="huge">
+          <input
+            type="radio"
+            value="3"
+            name="radio_input_helper"
+            [(ngModel)]="radio_input"
+            sprkRadioInput
+            #radioInput="ngModel"
+            data-id="radio-3"
+            id="helper-radio-3"
+            variant="huge"
+          >
+          <label
+            for="helper-radio-3"
+            sprkRadioLabel
+            variant="huge"
+          >
+            Item 3
+          </label>
+        </sprk-radio-item>
+      </fieldset>
+      <p sprkHelperText>
+        Optional helper text, used to clarify the
+        field's intent.
+      </p>
+    </sprk-radio-group>
+  `,
+});
+
+hugeHelperText.story = {
+  parameters: {
+    jest: [
+      'sprk-radio-input.directive',
+      'sprk-radio-label.directive',
+      'sprk-label.directive',
+      'sprk-radio-item.component',
+      'sprk-radio-group.component',
+      'sprk-helper-text.directive',
     ],
   },
 };
