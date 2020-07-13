@@ -15,7 +15,7 @@ export default {
 export const defaultStory = () => (
   <SprkTooltip iconAdditionalClasses="sprk-c-Icon--filled">
     Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco
-    deserunt aute id dee doo da fauxet la gigman roo.
+    deserunt aute id dee doo da fauxet la gigman.
   </SprkTooltip>
 );
 
