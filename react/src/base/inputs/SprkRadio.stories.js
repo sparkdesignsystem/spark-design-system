@@ -82,7 +82,7 @@ defaultHelperText.story = {
   },
 };
 
-export const invalidRadio = () => (
+export const invalidRadioButton = () => (
   <SprkRadioGroup>
     <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
     <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
@@ -94,14 +94,14 @@ export const invalidRadio = () => (
   </SprkRadioGroup>
 );
 
-invalidRadio.story = {
+invalidRadioButton.story = {
   name: 'Invalid',
   parameters: {
     jest: ['SprkRadioGroup'],
   },
 };
 
-export const disabledRadio = () => (
+export const disabledRadioButton = () => (
   <SprkRadioGroup>
     <SprkFieldset>
       <SprkLegend isDisabled>Group Label Name</SprkLegend>
@@ -118,7 +118,7 @@ export const disabledRadio = () => (
   </SprkRadioGroup>
 );
 
-disabledRadio.story = {
+disabledRadioButton.story = {
   name: 'Disabled',
   parameters: {
     jest: ['SprkRadioGroup'],
