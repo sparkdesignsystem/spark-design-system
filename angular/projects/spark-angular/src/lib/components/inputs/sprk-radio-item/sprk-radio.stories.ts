@@ -665,6 +665,7 @@ export const hugeInvalid = () => ({
             id="huge-invalid-radio-3"
           >
           <label
+            for="huge-invalid-radio-3"
             sprkRadioLabel
             variant="huge"
           >
