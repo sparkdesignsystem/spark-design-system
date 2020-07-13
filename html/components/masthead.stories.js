@@ -42,6 +42,8 @@ fit in one row, the Extended Masthead utilizes a second row,
 the big nav, to display the navigation items.
 - The Masthead is a navigation landmark for accessibility
 tools. The attribute \`role=”banner”\` must be present.
+- The Masthead will be "sticky" on small viewports in all browsers
+except for IE11.
 `,
   },
 };

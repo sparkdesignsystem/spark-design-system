@@ -28,6 +28,9 @@ ${markdownDocumentationLinkBuilder('accordion')}
 - \`sprk-accordion\` expects you to add \`sprk-accordion-item\`
 components as children. Any other content you add outside of a
 \`sprk-accordion-item\` will render, but may not be styled correctly.
+- If your instance only has one item,
+consider using
+the [Toggle Component](/docs/components-toggle--default-story) instead.
 `,
     docs: { iframeHeight: 420 },
   },

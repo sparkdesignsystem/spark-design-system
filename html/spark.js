@@ -13,6 +13,7 @@ import { requiredSelect } from './base/inputs/requiredSelect';
 import { pagination } from './components/pagination';
 import { tabs } from './components/tabs';
 import { toggle } from './components/toggle';
+import { tooltip } from './components/tooltip';
 import { spinners } from './components/spinners';
 import { masthead } from './components/masthead';
 import { alerts } from './components/alerts';
@@ -37,6 +38,7 @@ const Spark = ({ datePickerConfig = {} } = {}) => {
   pagination();
   tabs();
   toggle();
+  tooltip();
   spinners();
   masthead();
   alerts();

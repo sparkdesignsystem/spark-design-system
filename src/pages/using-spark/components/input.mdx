@@ -60,22 +60,135 @@ Each input has an error and disabled state.
 ## Variants
 
 Jump to:
-- [Text Input](#text-input)
-- [Huge Text Input](#huge-text-input)
 - [Checkbox](#checkbox)
-- [Radio Button](#radio-button)
-- [Select Box](#select-box)
-- [Huge Select Box](#huge-select-box)
-- [Textarea](#textarea)
-- [SSN Input](#ssn-input)
-- [Search Input](#search-input)
-- [Monetary Input](#monetary-input)
-- [Percentage Input](#percentage-input)
-- [Password Input](#password-input)
-- [Helper Text](#helper-text)
-- [Phone Input](#phone-input)
+- [Huge Checkbox](#huge-checkbox)
 - [Date Input](#date-input)
 - [Date Picker](#date-picker)
+- [Helper Text](#helper-text)
+- [Text Input](#text-input)
+- [Huge Text Input](#huge-text-input)
+- [Monetary Input](#monetary-input)
+- [Password Input](#password-input)
+- [Percentage Input](#percentage-input)
+- [Phone Input](#phone-input)
+- [Radio Button](#radio-button)
+- [Huge Radio Button](#huge-radio-button)
+- [Search Input](#search-input)
+- [Select Box](#select-box)
+- [Huge Select Box](#huge-select-box)
+- [SSN Input](#ssn-input)
+- [Textarea](#textarea)
+
+<a id="checkbox" class="docs-b-Link--anchor"/>
+
+### Checkbox
+[Back to Variants](#variants)
+
+Checkbox allows a user to choose more
+than one option from a list.
+
+<ComponentPreview
+  componentName="input-checkbox--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Huge Checkbox
+[Back to Variants](#variants)
+
+Huge checkboxes allow a user to select one or more options from a list.
+
+The Huge Checkbox component is intended for flows
+that present single questions in a step by step process.
+For this reason, Huge Checkbox should only be
+used for stand-alone question flows.
+
+#### Guidelines
+- Ensure list is in logical order for inputs (groups will stack).
+- Options should be short and concise. Content should not exceed 40 characters.
+- If a concise label is not enough information for the user to make a reasonable choice, consider using a [tooltip](https://html.sparkdesignsystem.com/?path=/docs/components-tooltip--default-story) to provide more context.
+- There should be at least two options, but no more than six.
+- To see layout configurations with two, three, four, five, or six options, see the [Storybook page](https://html.sparkdesignsystem.com/?path=/docs/components-input-checkbox--huge).
+- This component cannot have more than six options. If your design needs more, consider using a [Huge Select Box](#huge-select-box) instead.
+
+#### Anatomy
+- A question related to the group of options.
+- A list of two to six options, each with a concise label, all the same size.
+
+<ComponentPreview
+  componentName="input-huge-checkbox--default-story"
+  hasHTML
+  hasAngular
+  hasReact
+/>
+
+<a id="date-input" class="docs-b-Link--anchor"/>
+
+### Date Input
+[Back to Variants](#variants)
+
+Date Input is used for collecting a well-known date
+(e.g. birthdate) or a date in the far future or
+past (i.e. when did you move?). It does not include
+a date picker.
+- Additional engineering is required to reformat
+user input into a date pattern (MM/DD/YYYY).
+- After valid input, it should reformat to a two
+digit number month, followed by a forward slash,
+two digit number day, followed by another forward
+slash, and four digit number year.
+- Additional engineering is required for validation
+functionality.
+
+<ComponentPreview
+  componentName="input-date--date-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+<a id="date-picker" class="docs-b-Link--anchor"/>
+
+### Date Picker
+[Back to Variants](#variants)
+
+Date Picker is used for collecting a date around one
+year before or after the current date. We restrict
+the distance from the current date because it is more
+difficult for a user to find the date they need when
+they must page through dozens of months.
+- Additional engineering is required to reformat user
+input into a date pattern (MM/DD/YYYY).
+- After valid input, it should reformat to a two digit
+number month, followed by a forward slash, two digit
+number day, followed by another forward slash, and
+four digit number year.
+- Additional engineering is required for
+validation functionality.
+
+<ComponentPreview
+  componentName="input-date-picker--default-story"
+  hasReact
+  minHeight="30rem"
+  hasAngular
+  hasHTML
+/>
+
+<a id="helper-text" class="docs-b-Link--anchor"/>
+
+### Helper Text
+[Back to Variants](#variants)
+
+Helper Text provides additional guidance that helps
+the user understand what information the input requires.
+
+<ComponentPreview
+  componentName="input-helper-text--helper-text"
+  hasReact
+  hasAngular
+  hasHTML
+/>
 
 <a id="text-input" class="docs-b-Link--anchor" />
 
@@ -129,16 +242,80 @@ the Huge Text Input style:
   hasHTML
 />
 
-<a id="checkbox" class="docs-b-Link--anchor"/>
+<a id="monetary-input" class="docs-b-Link--anchor"/>
 
-### Checkbox
+### Monetary Input
 [Back to Variants](#variants)
 
-Checkbox allows a user to choose more
-than one option from a list.
+Monetary Input is used to collect a value in US dollars.
+- This field is automatically formatted to include commas,
+a decimal, and 2 zeros (If no decimal is entered) when focus
+is removed from the field (e.g. 1,000.00).
+- Additional engineering is required to reformat user
+input into a monetary pattern (##.##)
+  - After valid input, it should reformat to add commas
+  and decimals to the hundredth place.
+- Additional engineering is required for validation functionality.
 
 <ComponentPreview
-  componentName="input-checkbox--default-story"
+  componentName="input-monetary--monetary-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+<a id="password-input" class="docs-b-Link--anchor"/>
+
+### Password Input
+[Back to Variants](#variants)
+
+Password Input is used for collecting a password.
+- The value is masked by default.
+- Checking "Show Password" removes the mask and
+shows the entered value.
+- Password Input can also be a Huge Text Input.
+For full functionality, see guidelines in the
+[Huge Text Inputs](#huge-text-input) section.
+
+<ComponentPreview
+  componentName="input-password--password-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+<a id="percentage-input" class="docs-b-Link--anchor"/>
+
+### Percentage Input
+[Back to Variants](#variants)
+
+Percentage Input is used to collect a percent value.
+
+<ComponentPreview
+  componentName="input-percentage--percentage-input"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+<a id="phone-input" class="docs-b-Link--anchor"/>
+
+### Phone Input
+[Back to Variants](#variants)
+
+Phone Input is used to collect a phone number.
+- Additional engineering is required to reformat user
+input into a phone number pattern (###) ###-####.
+  - After valid input, it should reformat to have
+  the area code surrounded by parenthesis, a space
+  before the next three digits, and a dash before
+  the next four digits.
+- Additional engineering is required for validation functionality.
+- Phone Input can also be a Huge Text Input. For full
+functionality, see guidelines in the Text Huge Inputs section.
+
+<ComponentPreview
+  componentName="input-phone--phone-input"
   hasReact
   hasAngular
   hasHTML
@@ -149,8 +326,11 @@ than one option from a list.
 ### Radio Button
 [Back to Variants](#variants)
 
-Radio Button allows a user to
-choose one option from a list.
+Radio buttons present a list of valid options.
+Each option allows the user to select one
+option at a time. Radio buttons are mutually
+exclusive, meaning if one radio button is
+selected the other is deselected.
 
 #### Guidelines
 
@@ -159,6 +339,51 @@ consider using a Select Box instead.
 
 <ComponentPreview
   componentName="input-radio--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+<a id="huge-radio-button" class="docs-b-Link--anchor"/>
+
+### Huge Radio Button
+[Back to Variants](#variants)
+
+Huge radio buttons present a list of valid options that are mutually exclusive. Only one can be selected at a time for any given question.
+
+The Huge radio component is intended for flows
+that present single questions in a step by step process.
+For this reason, Huge Checkbox should only be
+used for stand-alone question flows.
+
+#### Guidelines
+- Ensure list is in logical order for inputs (groups will stack).
+- Options should be short and concise. Content should not exceed 40 characters.
+- If a concise label is not enough information for the user to make a reasonable choice, consider using a [tooltip](https://html.sparkdesignsystem.com/?path=/docs/components-tooltip--default-story) to provide more context.
+- There should be at least two options, but no more than six.
+- To see layout configurations with two, three, four, five, or six options, see the [Storybook page](https://html.sparkdesignsystem.com/?path=/docs/components-input-radio--huge).
+- This component cannot have more than six options. If your design needs more, consider using a [Huge Select Box](#huge-select-box) instead.
+
+#### Anatomy
+- A question related to the group of options.
+- A list of two to six options, each with a concise label, all the same size.
+
+<ComponentPreview
+  componentName="components-input-radio--huge"
+  hasHTML
+  hasReact
+  hasAngular
+/>
+
+<a id="search-input" class="docs-b-Link--anchor"/>
+
+### Search Input
+[Back to Variants](#variants)
+
+Search Input allows a user to make a search query.
+
+<ComponentPreview
+  componentName="input-search--search-input"
   hasReact
   hasAngular
   hasHTML
@@ -212,21 +437,6 @@ Input and cannot wrap to a second line.
   hasHTML
 />
 
-<a id="textarea" class="docs-b-Link--anchor"/>
-
-### Textarea
-[Back to Variants](#variants)
-
-Textarea allows a user to enter multiple
-lines of freeform text.
-
-<ComponentPreview
-  componentName="input-textarea--textarea"
-  hasReact
-  hasAngular
-  hasHTML
-/>
-
 <a id="ssn-input" class="docs-b-Link--anchor"/>
 
 ### SSN Input
@@ -259,162 +469,17 @@ validation functionality.
   hasHTML
 />
 
-<a id="search-input" class="docs-b-Link--anchor"/>
+<a id="textarea" class="docs-b-Link--anchor"/>
 
-### Search Input
+### Textarea
 [Back to Variants](#variants)
 
-Search Input allows a user to make a search query.
+Textarea allows a user to enter multiple
+lines of freeform text.
 
 <ComponentPreview
-  componentName="input-search--search-input"
+  componentName="input-textarea--textarea"
   hasReact
-  hasAngular
-  hasHTML
-/>
-
-<a id="monetary-input" class="docs-b-Link--anchor"/>
-
-### Monetary Input
-[Back to Variants](#variants)
-
-Monetary Input is used to collect a value in US dollars.
-- This field is automatically formatted to include commas,
-a decimal, and 2 zeros (If no decimal is entered) when focus
-is removed from the field (e.g. 1,000.00).
-- Additional engineering is required to reformat user
-input into a monetary pattern (##.##)
-  - After valid input, it should reformat to add commas
-  and decimals to the hundredth place.
-- Additional engineering is required for validation functionality.
-
-<ComponentPreview
-  componentName="input-monetary--monetary-input"
-  hasReact
-  hasAngular
-  hasHTML
-/>
-
-<a id="percentage-input" class="docs-b-Link--anchor"/>
-
-### Percentage Input
-[Back to Variants](#variants)
-
-Percentage Input is used to collect a percent value.
-
-<ComponentPreview
-  componentName="input-percentage--percentage-input"
-  hasReact
-  hasAngular
-  hasHTML
-/>
-
-<a id="password-input" class="docs-b-Link--anchor"/>
-
-### Password Input
-[Back to Variants](#variants)
-
-Password Input is used for collecting a password.
-- The value is masked by default.
-- Checking "Show Password" removes the mask and
-shows the entered value.
-- Password Input can also be a Huge Text Input.
-For full functionality, see guidelines in the
-[Huge Text Inputs](#huge-text-input) section.
-
-<ComponentPreview
-  componentName="input-password--password-input"
-  hasReact
-  hasAngular
-  hasHTML
-/>
-
-<a id="helper-text" class="docs-b-Link--anchor"/>
-
-### Helper Text
-[Back to Variants](#variants)
-
-Helper Text provides additional guidance that helps
-the user understand what information the input requires.
-
-<ComponentPreview
-  componentName="input-helper-text--helper-text"
-  hasReact
-  hasAngular
-  hasHTML
-/>
-
-<a id="phone-input" class="docs-b-Link--anchor"/>
-
-### Phone Input
-[Back to Variants](#variants)
-
-Phone Input is used to collect a phone number.
-- Additional engineering is required to reformat user
-input into a phone number pattern (###) ###-####.
-  - After valid input, it should reformat to have
-  the area code surrounded by parenthesis, a space
-  before the next three digits, and a dash before
-  the next four digits.
-- Additional engineering is required for validation functionality.
-- Phone Input can also be a Huge Text Input. For full
-functionality, see guidelines in the Text Huge Inputs section.
-
-<ComponentPreview
-  componentName="input-phone--phone-input"
-  hasReact
-  hasAngular
-  hasHTML
-/>
-
-<a id="date-input" class="docs-b-Link--anchor"/>
-
-### Date Input
-[Back to Variants](#variants)
-
-Date Input is used for collecting a well-known date
-(e.g. birthdate) or a date in the far future or
-past (i.e. when did you move?). It does not include
-a date picker.
-- Additional engineering is required to reformat
-user input into a date pattern (MM/DD/YYYY).
-- After valid input, it should reformat to a two
-digit number month, followed by a forward slash,
-two digit number day, followed by another forward
-slash, and four digit number year.
-- Additional engineering is required for validation
-functionality.
-
-<ComponentPreview
-  componentName="input-date--date-input"
-  hasReact
-  hasAngular
-  hasHTML
-/>
-
-<a id="date-picker" class="docs-b-Link--anchor"/>
-
-### Date Picker
-[Back to Variants](#variants)
-
-Date Picker is used for collecting a date around one
-year before or after the current date. We restrict
-the distance from the current date because it is more
-difficult for a user to find the date they need when
-they must page through dozens of months.
-- Additional engineering is required to reformat user
-input into a date pattern (MM/DD/YYYY).
-- After valid input, it should reformat to a two digit
-number month, followed by a forward slash, two digit
-number day, followed by another forward slash, and
-four digit number year.
-- Additional engineering is required for
-validation functionality.
-
-<ComponentPreview
-  componentName="input-date-picker--default-story"
-  hasReact
-  minHeight="30rem"
   hasAngular
   hasHTML
 />

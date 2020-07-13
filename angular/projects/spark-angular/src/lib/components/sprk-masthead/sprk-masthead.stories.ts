@@ -64,6 +64,8 @@ into the component template.
     of the mobile version of the masthead (typically a sign in link)
 - The Masthead is a navigation landmark for accessibility
 tools. The attribute \`role=”banner”\` must be present.
+- The Masthead will be "sticky" on small viewports in all browsers
+except for IE11.
 `,
     docs: { iframeHeight: 300 },
   },
