@@ -172,7 +172,7 @@ defaultStory.story = {
   },
 };
 
-export const defaultHelperTextStory = () => ({
+export const defaultHelperText = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-checkbox-group>
@@ -242,7 +242,7 @@ export const defaultHelperTextStory = () => ({
   `,
 });
 
-defaultHelperTextStory.story = {
+defaultHelperText.story = {
   name: 'Default Helper Text',
   parameters: {
     jest: [
@@ -437,7 +437,7 @@ disabledCheckbox.story = {
   },
 };
 
-export const hugeCheckbox = () => ({
+export const huge = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
@@ -507,10 +507,10 @@ export const hugeCheckbox = () => ({
         </sprk-checkbox-item>
       </fieldset>
     </sprk-checkbox-group>
-  `
+  `,
 });
 
-hugeCheckbox.story = {
+huge.story = {
   name: 'Huge',
   parameters: {
     jest: [
@@ -525,7 +525,7 @@ hugeCheckbox.story = {
   },
 };
 
-export const hugeHelperTextCheckbox = () => ({
+export const hugeHelperText = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
@@ -598,10 +598,10 @@ export const hugeHelperTextCheckbox = () => ({
         Optional helper text, used to clarify the field's intent.
       </div>
     </sprk-checkbox-group>
-  `
+  `,
 });
 
-hugeHelperTextCheckbox.story = {
+hugeHelperText.story = {
   name: 'Huge Helper Text',
   parameters: {
     jest: [
@@ -616,7 +616,7 @@ hugeHelperTextCheckbox.story = {
   },
 };
 
-export const hugeInvalidCheckbox = () => ({
+export const hugeInvalid = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
@@ -695,10 +695,10 @@ export const hugeInvalidCheckbox = () => ({
         </div>
       </span>
     </sprk-checkbox-group>
-  `
+  `,
 });
 
-hugeInvalidCheckbox.story = {
+hugeInvalid.story = {
   name: 'Huge Invalid',
   parameters: {
     jest: [
@@ -713,7 +713,7 @@ hugeInvalidCheckbox.story = {
   },
 };
 
-export const hugeDisabledCheckbox = () => ({
+export const hugeDisabled = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
@@ -789,10 +789,10 @@ export const hugeDisabledCheckbox = () => ({
         </sprk-checkbox-item>
       </fieldset>
     </sprk-checkbox-group>
-  `
+  `,
 });
 
-hugeDisabledCheckbox.story = {
+hugeDisabled.story = {
   name: 'Huge Disabled',
   parameters: {
     jest: [
@@ -1402,7 +1402,7 @@ export const legacyStory = () => ({
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>
-  `
+  `,
 });
 
 legacyStory.story = {
@@ -1493,7 +1493,7 @@ export const legacyInvalidStory = () => ({
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
     </sprk-selection-container>
-  `
+  `,
 });
 
 legacyInvalidStory.story = {
@@ -1584,7 +1584,7 @@ export const legacyDisabledStory = () => ({
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>
-  `
+  `,
 });
 
 legacyDisabledStory.story = {
