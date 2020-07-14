@@ -57,7 +57,7 @@ function addSparkDependencies(_options: Schema): Rule {
     removePackageJsonDependency(tree, '@sparkdesignsystem/spark-angular');
 
     const dependencies: NodeDependency[] = [
-      { name: '@sparkdesignsystem/spark', overwrite: true, type: NodeDependencyType.Dev, version: '^13.0.0' },
+      { name: '@sparkdesignsystem/spark', overwrite: true, type: NodeDependencyType.Dev, version: '^13.1.0' },
       { name: '@sparkdesignsystem/spark-angular', overwrite: true, type: NodeDependencyType.Dev, version: '^10.0.0' },
     ];
 
@@ -123,7 +123,7 @@ function addSparkStyles(options: Schema): Rule {
 
     if (!styleFilePath) {
       logger.error(`Could not find the default style file for this project.`);
-      logger.info(`Please manually import the Spark stylesheet in your CSS.`);
+      logger.info(`Please manually import the Spark stylesheet in your Sass.`);
       return;
     }
 
@@ -131,7 +131,7 @@ function addSparkStyles(options: Schema): Rule {
 
     if (!buffer) {
       logger.error(`Could not read the default style file within the project (${styleFilePath})`);
-      logger.info(`Please manually import the Spark stylesheet in your CSS.`);
+      logger.info(`Please manually import the Spark stylesheet in your Sass.`);
       return;
     }
 
