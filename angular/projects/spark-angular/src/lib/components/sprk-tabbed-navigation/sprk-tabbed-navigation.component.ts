@@ -160,14 +160,7 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     return classArray.join(' ');
   }
 
-  /**
-   * @ignore
-   */
-  ngAfterContentInit(): void {
-    this.tabs.changes.subscribe(() => {
-      console.log('tabs have changed!');
-    });
-
+  getContentRelationships(): void {
 
     let tabIDs = [];
     let panelIDs = [];
@@ -191,6 +184,21 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
         panel.ref.nativeElement.setAttribute('aria-labelledby', tabIDs.pop());
       });
     }
+  }
+
+  /**
+   * @ignore
+   */
+  ngAfterContentInit(): void {
+    // Make sure we don't have a race condition -- figure out by making a basic unit test for this solution
+    // If there is a race problem, most likely use the setTimeout solution / some other thing.
+
+    // We chose to subscribe to panels because tabs is before panel
+    this.panels.changes.subscribe(() => {
+      this.getContentRelationships();
+    });
+
+    this.getContentRelationships();
   }
 
   /**
