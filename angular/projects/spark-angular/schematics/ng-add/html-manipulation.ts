@@ -1,8 +1,26 @@
 import { SchematicsException, Tree } from '@angular-devkit/schematics';
 import { DefaultTreeDocument, DefaultTreeElement, parse as parseHtml } from 'parse5';
 
+/** Finds an element by its tag name. */
+const getElementByTagName = (tagName: string, htmlContent: string): DefaultTreeElement | null => {
+  const document = parseHtml(htmlContent, { sourceCodeLocationInfo: true }) as DefaultTreeDocument;
+  const nodeQueue = [...document.childNodes];
+
+  while (nodeQueue.length) {
+    const node = nodeQueue.shift() as DefaultTreeElement;
+
+    if (node.nodeName.toLowerCase() === tagName) {
+      return node;
+    } else if (node.childNodes) {
+      nodeQueue.push(...node.childNodes);
+    }
+  }
+
+  return null;
+};
+
 /** Adds a class to the html of the document. */
-export function addHtmlClass(host: Tree, htmlFilePath: string, className: string): void {
+export const addHtmlClass = (host: Tree, htmlFilePath: string, className: string): void => {
   const htmlFileBuffer = host.read(htmlFilePath);
 
   if (!htmlFileBuffer) {
@@ -36,22 +54,4 @@ export function addHtmlClass(host: Tree, htmlFilePath: string, className: string
       host.commitUpdate(recordedChange);
     }
   }
-}
-
-/** Finds an element by its tag name. */
-function getElementByTagName(tagName: string, htmlContent: string): DefaultTreeElement | null {
-  const document = parseHtml(htmlContent, { sourceCodeLocationInfo: true }) as DefaultTreeDocument;
-  const nodeQueue = [...document.childNodes];
-
-  while (nodeQueue.length) {
-    const node = nodeQueue.shift() as DefaultTreeElement;
-
-    if (node.nodeName.toLowerCase() === tagName) {
-      return node;
-    } else if (node.childNodes) {
-      nodeQueue.push(...node.childNodes);
-    }
-  }
-
-  return null;
-}
+};

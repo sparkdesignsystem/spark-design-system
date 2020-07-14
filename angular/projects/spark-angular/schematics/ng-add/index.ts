@@ -31,27 +31,9 @@ const browserAnimationsModuleImport = '@angular/platform-browser/animations';
 const noopAnimationsModuleName = 'NoopAnimationsModule';
 
 /**
- * Scaffolds the basics of a Spark Angular application, this includes:
- *  - Adds the spark and spark-angular dependencies to package.json
- *  - Adds the SparkAngularModule to the root module of the specified project
- *  - Adds the BrowserAnimationsModule to the root module of the specified project
- *  - Adds the Spark stylesheets to the project style file
- *  - Adds the Spark class to the project html tag
- */
-export function ngAdd(options: Schema): Rule {
-  return chain([
-    addSparkDependencies(options),
-    addSparkModule(options),
-    addAnimationsModule(options),
-    addSparkStyles(options),
-    addSparkClass(options),
-  ]);
-}
-
-/**
  * Adds the spark and spark-angular dependencies to package.json
  */
-function addSparkDependencies(_options: Schema): Rule {
+const addSparkDependencies = (_options: Schema): Rule => {
   return (tree: Tree, context: SchematicContext) => {
     // Schematics automatically adds to "dependencies" but it should be "devDependencies"
     removePackageJsonDependency(tree, '@sparkdesignsystem/spark-angular');
@@ -67,12 +49,12 @@ function addSparkDependencies(_options: Schema): Rule {
 
     return tree;
   };
-}
+};
 
 /**
  * Adds the SparkAngularModule to the root module of the specified project
  */
-function addSparkModule(options: Schema): Rule {
+const addSparkModule = (options: Schema): Rule => {
   return (tree: Tree, _context: SchematicContext) => {
     const workspace = getWorkspace(tree);
     const project = getProjectFromWorkspace(workspace, options.project);
@@ -81,12 +63,12 @@ function addSparkModule(options: Schema): Rule {
 
     return tree;
   };
-}
+};
 
 /**
  * Adds the BrowserAnimationsModule to the root module of the specified project
  */
-function addAnimationsModule(options: Schema): Rule {
+const addAnimationsModule = (options: Schema): Rule => {
   return (tree: Tree, context: SchematicContext) => {
     const workspace = getWorkspace(tree);
     const project = getProjectFromWorkspace(workspace, options.project);
@@ -109,12 +91,12 @@ function addAnimationsModule(options: Schema): Rule {
 
     return tree;
   };
-}
+};
 
 /**
  * Adds the Spark stylesheets to the project style file
  */
-function addSparkStyles(options: Schema): Rule {
+const addSparkStyles = (options: Schema): Rule => {
   return (tree: Tree, context: SchematicContext) => {
     const workspace = getWorkspace(tree);
     const project = getProjectFromWorkspace(workspace, options.project);
@@ -152,12 +134,12 @@ function addSparkStyles(options: Schema): Rule {
 
     return tree;
   };
-}
+};
 
 /**
  * Adds the Spark class to the project html tag
  */
-function addSparkClass(options: Schema): Rule {
+const addSparkClass = (options: Schema): Rule => {
   return (tree: Tree, context: SchematicContext) => {
     const workspace = getWorkspace(tree);
     const project = getProjectFromWorkspace(workspace, options.project);
@@ -176,4 +158,22 @@ function addSparkClass(options: Schema): Rule {
 
     return tree;
   };
+};
+
+/**
+ * Scaffolds the basics of a Spark Angular application, this includes:
+ *  - Adds the spark and spark-angular dependencies to package.json
+ *  - Adds the SparkAngularModule to the root module of the specified project
+ *  - Adds the BrowserAnimationsModule to the root module of the specified project
+ *  - Adds the Spark stylesheets to the project style file
+ *  - Adds the Spark class to the project html tag
+ */
+export function ngAdd(options: Schema): Rule {
+  return chain([
+    addSparkDependencies(options),
+    addSparkModule(options),
+    addAnimationsModule(options),
+    addSparkStyles(options),
+    addSparkClass(options),
+  ]);
 }
