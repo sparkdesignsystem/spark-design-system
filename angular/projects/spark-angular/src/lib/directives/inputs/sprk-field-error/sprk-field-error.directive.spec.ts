@@ -4,9 +4,7 @@ import { SprkFieldErrorDirective } from './sprk-field-error.directive';
 
 @Component({
   selector: 'sprk-test',
-  template: `
-    <span sprkFieldError>Error Message</span>
-  `
+  template: ` <span sprkFieldError>Error Message</span> `,
 })
 class TestComponent {}
 
@@ -17,7 +15,7 @@ describe('Spark Field Error Directive', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkFieldErrorDirective, TestComponent]
+      declarations: [SprkFieldErrorDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
@@ -28,5 +26,11 @@ describe('Spark Field Error Directive', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should add the correct classes to the applied element', () => {
+    expect(spanElement.classList.contains('sprk-b-ErrorContainer')).toEqual(
+      true,
+    );
   });
 });

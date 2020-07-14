@@ -40,8 +40,11 @@ const hideModal = (modal, mask, main) => {
   main.removeAttribute('aria-hidden');
   // Remove overflow hidden to allow scrolling again
   document.body.classList.remove('sprk-u-Overflow--hidden');
-  // Send focus back to last active element before modal was shown
-  modalTrigger.focus();
+  // Send focus back to last active element before modal was shown if
+  // modal trigger exists
+  if (modalTrigger) {
+    modalTrigger.focus();
+  }
 };
 
 const currentOpenModal = (modalsList) => {

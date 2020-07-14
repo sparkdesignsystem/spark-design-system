@@ -1,11 +1,12 @@
 {
-  "extends": ["airbnb", "plugin:jest/recommended"],
-  "plugins": ["jest", "import"],
+  "extends": ["airbnb", "plugin:jest/recommended", "plugin:prettier/recommended"],
+  "plugins": ["jest", "import", "prettier"],
   "env": {
     "browser": true,
     "jest/globals": true
   },
   "rules": {
+    "prettier/prettier": ["error"],
     "no-redeclare": "off",
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": "off",
@@ -16,6 +17,7 @@
     "object-curly-newline": "off",
     "react/require-default-props" : "off",
     "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
     "jsx-a11y/label-has-associated-control": [ 2, {
       "labelComponents": ["label"],
       "labelAttributes": ["htmlFor"],

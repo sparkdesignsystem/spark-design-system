@@ -2,10 +2,9 @@
 // Alerts
 // ==================================================================
 
-//// 
+////
 /// @group alert
 ////
-
 .sprk-c-Alert {
   align-items: center;
   background-color: $sprk-alert-bg-color;
@@ -46,7 +45,7 @@
   }
 }
 
-/// Styles the alert as a failure alert. 
+/// Styles the alert as a failure alert.
 .sprk-c-Alert--fail {
   background-color: $sprk-alert-bg-color-fail;
   border: $sprk-alert-border-fail;
