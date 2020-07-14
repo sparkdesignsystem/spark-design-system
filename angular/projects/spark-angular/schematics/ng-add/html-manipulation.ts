@@ -18,21 +18,23 @@ export function addHtmlClass(host: Tree, htmlFilePath: string, className: string
 
   const classAttribute = html.attrs.find((attribute) => attribute.name === 'class');
 
-  if (classAttribute) {
-    const hasClass = classAttribute.value.split(' ').map((part) => part.trim()).includes(className);
+  if (html.sourceCodeLocation) {
+    if (classAttribute) {
+      const hasClass = classAttribute.value.split(' ').map((part) => part.trim()).includes(className);
 
-    if (!hasClass) {
-      const classAttributeLocation = html.sourceCodeLocation.attrs.class;
+      if (!hasClass) {
+        const classAttributeLocation = html.sourceCodeLocation.attrs.class;
+        const recordedChange = host
+          .beginUpdate(htmlFilePath)
+          .insertRight(classAttributeLocation.endOffset - 1, ` ${className}`);
+        host.commitUpdate(recordedChange);
+      }
+    } else {
       const recordedChange = host
         .beginUpdate(htmlFilePath)
-        .insertRight(classAttributeLocation.endOffset - 1, ` ${className}`);
+        .insertRight(html.sourceCodeLocation.startTag.endOffset - 1, ` class="${className}"`);
       host.commitUpdate(recordedChange);
     }
-  } else {
-    const recordedChange = host
-      .beginUpdate(htmlFilePath)
-      .insertRight(html.sourceCodeLocation.startTag.endOffset - 1, ` class="${className}"`);
-    host.commitUpdate(recordedChange);
   }
 }
 
