@@ -7,6 +7,7 @@ import {
   Input,
   QueryList
 } from '@angular/core';
+import { Observable } from 'rxjs';
 import * as _ from 'lodash';
 import {
   SprkTabbedNavigationPanelDirective
@@ -163,6 +164,11 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    * @ignore
    */
   ngAfterContentInit(): void {
+    this.tabs.changes.subscribe(() => {
+      console.log('tabs have changed!');
+    });
+
+
     let tabIDs = [];
     let panelIDs = [];
 
