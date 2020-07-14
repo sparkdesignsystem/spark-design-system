@@ -58,7 +58,7 @@ function addSparkDependencies(_options: Schema): Rule {
 
     const dependencies: NodeDependency[] = [
       { name: '@sparkdesignsystem/spark', overwrite: true, type: NodeDependencyType.Dev, version: '^13.1.0' },
-      { name: '@sparkdesignsystem/spark-angular', overwrite: true, type: NodeDependencyType.Dev, version: '^10.0.0' },
+      { name: '@sparkdesignsystem/spark-angular', overwrite: true, type: NodeDependencyType.Dev, version: '^10.1.0' },
     ];
 
     dependencies.forEach((dependency) => addPackageJsonDependency(tree, dependency));
