@@ -1,5 +1,4 @@
 import {
-  addBodyClass,
   addModuleImportToRootModule,
   getAppModulePath,
   getProjectFromWorkspace,
@@ -19,6 +18,7 @@ import {
 } from '@schematics/angular/utility/dependencies';
 
 import { Schema } from './schema';
+import { addHtmlClass } from './html-manipulation';
 
 /**
  * Constants
@@ -36,7 +36,7 @@ const noopAnimationsModuleName = 'NoopAnimationsModule';
  *  - Adds the SparkAngularModule to the root module of the specified project
  *  - Adds the BrowserAnimationsModule to the root module of the specified project
  *  - Adds the Spark stylesheets to the project style file
- *  - Adds the Spark class to the project body tag
+ *  - Adds the Spark class to the project html tag
  */
 export function ngAdd(options: Schema): Rule {
   return chain([
@@ -155,7 +155,7 @@ function addSparkStyles(options: Schema): Rule {
 }
 
 /**
- * Adds the Spark class to the project body tag
+ * Adds the Spark class to the project html tag
  */
 function addSparkClass(options: Schema): Rule {
   return (tree: Tree, context: SchematicContext) => {
@@ -171,8 +171,7 @@ function addSparkClass(options: Schema): Rule {
     }
 
     projectIndexFiles.forEach((indexFilePath) => {
-      // This should go on <html> but it is easier for now to just use body
-      addBodyClass(tree, indexFilePath, sparkAngularJavaScriptClass);
+      addHtmlClass(tree, indexFilePath, sparkAngularJavaScriptClass);
     });
 
     return tree;
