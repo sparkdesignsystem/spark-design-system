@@ -1,26 +1,21 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import {
-  SprkTabbedNavigationPanelDirective
-} from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
-import {
-  SprkTabbedNavigationTabDirective
-} from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
+import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
+import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
 import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
-import { before } from 'lodash';
 
 @Component({
   selector: 'sprk-test',
   template: `
     <sprk-tabbed-navigation>
       <button sprkTabbedNavigationTab>Tab 1</button>
-      <button sprkTabbedNavigationTab [defaultActive]='true'>Tab 2</button>
+      <button sprkTabbedNavigationTab [defaultActive]="true">Tab 2</button>
       <button sprkTabbedNavigationTab>Tab 3</button>
       <div sprkTabbedNavigationPanel>Tab1 Content</div>
-      <div sprkTabbedNavigationPanel [defaultActive]='true'>Tab2 Content</div>
+      <div sprkTabbedNavigationPanel [defaultActive]="true">Tab2 Content</div>
       <div sprkTabbedNavigationPanel>Tab3 Content</div>
     </sprk-tabbed-navigation>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -30,26 +25,24 @@ class TestComponent {}
     <div>
       <button class="changeButton" (click)="changeMe()">Change Content</button>
       <sprk-tabbed-navigation idString="tabs-1" [additionalClasses]="newColor">
-        <button *ngFor="let item of list; let i = index"
+        <button
+          *ngFor="let item of list; let i = index"
           sprkTabbedNavigationTab
-          analyticsString="Tab: {{i}}"
+          analyticsString="Tab: {{ i }}"
         >
-          {{item}}
+          {{ item }}
         </button>
-        <div
-        sprkTabbedNavigationPanel
-        *ngFor="let item of list; let i = index"
-        >
-          <p>{{item}}</p>
+        <div sprkTabbedNavigationPanel *ngFor="let item of list; let i = index">
+          <p>{{ item }}</p>
         </div>
       </sprk-tabbed-navigation>
     </div>
-  `
+  `,
 })
 class DynamicComponent {
-  public list = ["Tab 33", "Tab 2"];
-  public newList = ["Tab 3"]
-  newColor= "sprk-u-BackgroundColor--blue";
+  public list = ['Tab 33', 'Tab 2'];
+  public newList = ['Tab 3'];
+  newColor = 'sprk-u-BackgroundColor--blue';
   changeMe(): void {
     this.list = this.newList;
   }
@@ -80,8 +73,8 @@ describe('SprkTabbedNavigationComponent', () => {
         TestComponent,
         DynamicComponent,
         SprkTabbedNavigationPanelDirective,
-        SprkTabbedNavigationTabDirective
-      ]
+        SprkTabbedNavigationTabDirective,
+      ],
     }).compileComponents();
   });
 
@@ -96,7 +89,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
     element = fixture.nativeElement.querySelector('div');
     testElement = testFixture.nativeElement.querySelector(
-      'sprk-tabbed-navigation'
+      'sprk-tabbed-navigation',
     );
 
     testTab1 = testElement.querySelectorAll('.sprk-c-Tabs__button')[0];
@@ -174,7 +167,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('should move focus into the active panel when tab is pressed and the target is a button', () => {
     testTab2.click();
-    jest.spyOn(testPanel2, 'focus').mockImplementation(() => { });
+    jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
     const event: Event = new Event('keydown');
     event['keyCode'] = 9;
     testElement.classList.add('sprk-c-Tabs__button');
@@ -185,7 +178,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('should not focus into the active panel when tab is pressed and the target is not a button', () => {
     testTab2.click();
-    jest.spyOn(testPanel2, 'focus').mockImplementation(() => { });
+    jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
     const event: Event = new Event('keydown');
     event['keyCode'] = 9;
     testElement.dispatchEvent(event);
@@ -194,7 +187,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('should do nothing if an unexpected key is pressed', () => {
     testTab2.click();
-    jest.spyOn(testPanel2, 'focus').mockImplementation(() => { });
+    jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
     const event: Event = new Event('keydown');
     event['keyCode'] = 8;
     testElement.dispatchEvent(event);
@@ -371,19 +364,24 @@ describe('SprkTabbedNavigationComponent', () => {
   });
 
   it('should assign relationships on subscribed content change', () => {
-    dynamicTestFixture.detectChanges()
+    dynamicTestFixture.detectChanges();
     let dynamicTestElement = dynamicTestFixture.nativeElement;
 
     const changeButton = dynamicTestElement.querySelector('.changeButton');
 
     changeButton.click();
-    dynamicTestFixture.detectChanges()
+    dynamicTestFixture.detectChanges();
 
-    const dynamicTab1 = dynamicTestElement.querySelectorAll('.sprk-c-Tabs__button')[0];
-    const dynamicPanel1 = dynamicTestElement.querySelectorAll('.sprk-c-Tabs__content')[0];
+    const dynamicTab1 = dynamicTestElement.querySelectorAll(
+      '.sprk-c-Tabs__button',
+    )[0];
+    const dynamicPanel1 = dynamicTestElement.querySelectorAll(
+      '.sprk-c-Tabs__content',
+    )[0];
 
-    expect(dynamicPanel1.getAttribute('aria-labelledby')).toEqual(dynamicTab1.id);
+    expect(dynamicPanel1.getAttribute('aria-labelledby')).toEqual(
+      dynamicTab1.id,
+    );
     expect(dynamicTab1.getAttribute('aria-controls')).toEqual(dynamicPanel1.id);
   });
-
 });
