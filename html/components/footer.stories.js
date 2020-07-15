@@ -81,7 +81,7 @@ export const defaultStory = () => {
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.app/rocket-hq.svg" alt="Rocket HQ Logo">
+                  <img src="https://spark-assets.netlify.app/rocket-hq-white.svg" alt="Rocket HQ Logo">
                 </a>
               </div>
 
