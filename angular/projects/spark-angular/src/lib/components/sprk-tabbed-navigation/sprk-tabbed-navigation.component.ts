@@ -5,16 +5,12 @@ import {
   ElementRef,
   HostListener,
   Input,
-  QueryList
+  QueryList,
 } from '@angular/core';
 import { Observable } from 'rxjs';
 import * as _ from 'lodash';
-import {
-  SprkTabbedNavigationPanelDirective
-} from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
-import {
-  SprkTabbedNavigationTabDirective
-} from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
+import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
+import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
 
 @Component({
   selector: 'sprk-tabbed-navigation',
@@ -26,7 +22,7 @@ import {
       <ng-content select="[sprkTabbedNavigationPane]"></ng-content>
       <ng-content></ng-content>
     </div>
-  `
+  `,
 })
 export class SprkTabbedNavigationComponent implements AfterContentInit {
   /**
@@ -75,7 +71,7 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   @HostListener('click', ['$event'])
   onClick($event) {
     if ($event.target.classList.contains('sprk-c-Tabs__button')) {
-      const activePanel = this.panels.find(panel => {
+      const activePanel = this.panels.find((panel) => {
         return (
           panel.ref.nativeElement.id ===
           $event.target.getAttribute('aria-controls')
@@ -83,15 +79,15 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
       });
 
       this.resetTabs(
-        this.tabs.map(tab => tab.ref.nativeElement),
-        this.panels.map(panel => panel.ref.nativeElement),
-        this.activeClass
+        this.tabs.map((tab) => tab.ref.nativeElement),
+        this.panels.map((panel) => panel.ref.nativeElement),
+        this.activeClass,
       );
 
       this.setActiveTab(
         $event.target,
         activePanel.ref.nativeElement,
-        this.activeClass
+        this.activeClass,
       );
     }
   }
@@ -109,7 +105,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    */
   @HostListener('keydown', ['$event'])
   onKeydown($event) {
-    const isTabsButton = $event.target.classList.contains('sprk-c-Tabs__button');
+    const isTabsButton = $event.target.classList.contains(
+      'sprk-c-Tabs__button',
+    );
     if (!isTabsButton) {
       return;
     }
@@ -121,11 +119,11 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
       up: 38,
       right: 39,
       down: 40,
-      tab: 9
+      tab: 9,
     };
 
-    const tabElements = this.tabs.map(tab => tab.ref.nativeElement);
-    const panelElements = this.panels.map(panel => panel.ref.nativeElement);
+    const tabElements = this.tabs.map((tab) => tab.ref.nativeElement);
+    const panelElements = this.panels.map((panel) => panel.ref.nativeElement);
 
     if ($event.keyCode === keys.left || $event.keyCode === keys.up) {
       this.incrementTab(tabElements, panelElements, this.activeClass, -1);
@@ -152,7 +150,7 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     const classArray: string[] = ['sprk-c-Tabs'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -161,7 +159,6 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   }
 
   getContentRelationships(): void {
-
     let tabIDs = [];
     let panelIDs = [];
 
@@ -179,7 +176,7 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
       tabIDs = tabIDs.reverse();
       panelIDs = panelIDs.reverse();
 
-      this.panels.forEach(panel => {
+      this.panels.forEach((panel) => {
         panel.ref.nativeElement.setAttribute('id', panelIDs.pop());
         panel.ref.nativeElement.setAttribute('aria-labelledby', tabIDs.pop());
       });
@@ -190,14 +187,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    * @ignore
    */
   ngAfterContentInit(): void {
-    // Make sure we don't have a race condition -- figure out by making a basic unit test for this solution
-    // If there is a race problem, most likely use the setTimeout solution / some other thing.
-
-    // We chose to subscribe to panels because tabs is before panel
+    // Accounting for dynamic changes in the component
     if (this.panels) {
-      // console.log(this.panels, 'PANELS');
       this.panels.changes.subscribe(() => {
-        // console.log(this.panels, 'changes');
         this.getContentRelationships();
       });
     }
@@ -237,11 +229,11 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    * @ignore
    */
   resetTabs(tabs, tabpanels, activeClass) {
-    tabs.forEach(tab => {
+    tabs.forEach((tab) => {
       tab.classList.remove(activeClass || 'sprk-c-Tabs__button--active');
       tab.removeAttribute('tabindex');
       tab.setAttribute('aria-selected', 'false');
-      tabpanels.forEach(panel => {
+      tabpanels.forEach((panel) => {
         panel.classList.add('sprk-u-HideWhenJs');
       });
     });
@@ -262,18 +254,17 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
         // loop to the end and keep looking
         activeIndex = tabs.length;
 
-      // if the next tab would be off the right of the tabstrip
+        // if the next tab would be off the right of the tabstrip
       } else if (activeIndex + direction >= tabs.length) {
         // loop back to the beginning and keep looking
         activeIndex = -1;
 
-      // If the next tab is not disabled
+        // If the next tab is not disabled
       } else if (!tabs[activeIndex + direction].hasAttribute('disabled')) {
         // move to the next tab
         activeIndex += direction;
         // stop looking for the correct tab
         foundNewIndex = true;
-
       } else {
         // move to the next tab and keep looking
         activeIndex += direction;
@@ -293,7 +284,7 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     if (direction > 0) {
       newActiveIndex = tabs.length - 1;
 
-    // else go to the left-most tab
+      // else go to the left-most tab
     } else {
       newActiveIndex = 0;
     }
@@ -302,21 +293,23 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
 
     // step through the tabs until we find one that isn't disabled
     while (foundNewIndex === false) {
-
       // if this tab is not disabled
       if (!tabs[newActiveIndex].hasAttribute('disabled')) {
-
         // stop looking for the correct tab
         foundNewIndex = true;
 
-      // else step one tab away from the end and keep looking
+        // else step one tab away from the end and keep looking
       } else {
         newActiveIndex -= direction;
       }
     }
 
     this.resetTabs(tabs, tabpanels, activeClass);
-    this.setActiveTab(tabs[newActiveIndex], tabpanels[newActiveIndex], activeClass);
+    this.setActiveTab(
+      tabs[newActiveIndex],
+      tabpanels[newActiveIndex],
+      activeClass,
+    );
   }
 
   /**
