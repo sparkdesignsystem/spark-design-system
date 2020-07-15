@@ -194,9 +194,13 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     // If there is a race problem, most likely use the setTimeout solution / some other thing.
 
     // We chose to subscribe to panels because tabs is before panel
-    this.panels.changes.subscribe(() => {
-      this.getContentRelationships();
-    });
+    if (this.panels) {
+      // console.log(this.panels, 'PANELS');
+      this.panels.changes.subscribe(() => {
+        // console.log(this.panels, 'changes');
+        this.getContentRelationships();
+      });
+    }
 
     this.getContentRelationships();
   }

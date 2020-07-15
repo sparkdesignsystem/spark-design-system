@@ -7,6 +7,7 @@ import {
   SprkTabbedNavigationTabDirective
 } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
 import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
+import { before } from 'lodash';
 
 @Component({
   selector: 'sprk-test',
@@ -23,10 +24,44 @@ import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.componen
 })
 class TestComponent {}
 
+@Component({
+  selector: 'sprk-dynamic-test',
+  template: `
+    <div>
+      <button class="changeButton" (click)="changeMe()">Change Content</button>
+      <sprk-tabbed-navigation idString="tabs-1" [additionalClasses]="newColor">
+        <button *ngFor="let item of list; let i = index"
+          sprkTabbedNavigationTab
+          analyticsString="Tab: {{i}}"
+        >
+          {{item}}
+        </button>
+        <div
+        sprkTabbedNavigationPanel
+        *ngFor="let item of list; let i = index"
+        >
+          <p>{{item}}</p>
+        </div>
+      </sprk-tabbed-navigation>
+    </div>
+  `
+})
+class DynamicComponent {
+  public list = ["Tab 33", "Tab 2"];
+  public newList = ["Tab 3"]
+  newColor= "sprk-u-BackgroundColor--blue";
+  changeMe(): void {
+    this.list = this.newList;
+  }
+}
+
 describe('SprkTabbedNavigationComponent', () => {
   let component: SprkTabbedNavigationComponent;
   let fixture: ComponentFixture<SprkTabbedNavigationComponent>;
   let element: HTMLElement;
+
+  let dynamicTestComponent;
+  let dynamicTestFixture;
 
   let testComponent: TestComponent;
   let testFixture: ComponentFixture<TestComponent>;
@@ -43,6 +78,7 @@ describe('SprkTabbedNavigationComponent', () => {
       declarations: [
         SprkTabbedNavigationComponent,
         TestComponent,
+        DynamicComponent,
         SprkTabbedNavigationPanelDirective,
         SprkTabbedNavigationTabDirective
       ]
@@ -69,6 +105,10 @@ describe('SprkTabbedNavigationComponent', () => {
     testPanel1 = testElement.querySelectorAll('.sprk-c-Tabs__content')[0];
     testPanel2 = testElement.querySelectorAll('.sprk-c-Tabs__content')[1];
     testPanel3 = testElement.querySelectorAll('.sprk-c-Tabs__content')[2];
+
+    // Dynamic Test Component
+    dynamicTestFixture = TestBed.createComponent(DynamicComponent);
+    dynamicTestComponent = dynamicTestFixture.componentInstance;
   });
 
   it('should create itself', () => {
@@ -117,6 +157,16 @@ describe('SprkTabbedNavigationComponent', () => {
     expect(testPanel2.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
   });
 
+  it('resizing should set the aria-orientation correctly when window is >= 736', () => {
+    component.ariaOrientation(800, testElement);
+    expect(testElement.getAttribute('aria-orientation')).toEqual('horizontal');
+  });
+
+  it('resizing should set the aria-orientation correctly when <= 736', () => {
+    component.ariaOrientation(700, testElement);
+    expect(testElement.getAttribute('aria-orientation')).toEqual('vertical');
+  });
+
   it('resizing should set the aria-orientation correctly', () => {
     window.dispatchEvent(new Event('resize'));
     expect(testElement.hasAttribute('aria-orientation')).toEqual(true);
@@ -124,7 +174,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('should move focus into the active panel when tab is pressed and the target is a button', () => {
     testTab2.click();
-    jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
+    jest.spyOn(testPanel2, 'focus').mockImplementation(() => { });
     const event: Event = new Event('keydown');
     event['keyCode'] = 9;
     testElement.classList.add('sprk-c-Tabs__button');
@@ -135,7 +185,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('should not focus into the active panel when tab is pressed and the target is not a button', () => {
     testTab2.click();
-    jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
+    jest.spyOn(testPanel2, 'focus').mockImplementation(() => { });
     const event: Event = new Event('keydown');
     event['keyCode'] = 9;
     testElement.dispatchEvent(event);
@@ -144,7 +194,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('should do nothing if an unexpected key is pressed', () => {
     testTab2.click();
-    jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
+    jest.spyOn(testPanel2, 'focus').mockImplementation(() => { });
     const event: Event = new Event('keydown');
     event['keyCode'] = 8;
     testElement.dispatchEvent(event);
@@ -319,4 +369,21 @@ describe('SprkTabbedNavigationComponent', () => {
     expect(testTab2.getAttribute('aria-selected')).toEqual('true');
     expect(testTab3.getAttribute('aria-selected')).toEqual('false');
   });
+
+  it('should assign relationships on subscribed content change', () => {
+    dynamicTestFixture.detectChanges()
+    let dynamicTestElement = dynamicTestFixture.nativeElement;
+
+    const changeButton = dynamicTestElement.querySelector('.changeButton');
+
+    changeButton.click();
+    dynamicTestFixture.detectChanges()
+
+    const dynamicTab1 = dynamicTestElement.querySelectorAll('.sprk-c-Tabs__button')[0];
+    const dynamicPanel1 = dynamicTestElement.querySelectorAll('.sprk-c-Tabs__content')[0];
+
+    expect(dynamicPanel1.getAttribute('aria-labelledby')).toEqual(dynamicTab1.id);
+    expect(dynamicTab1.getAttribute('aria-controls')).toEqual(dynamicPanel1.id);
+  });
+
 });
