@@ -54,34 +54,38 @@ export const light = () => (
 
 export const iconWithTextLink = () => (
   <>
-    <SprkLink
-      analyticsString="link-icon"
-      href="#nogo"
-      variant="has-icon"
-      idString="link-3"
-    >
-      <SprkIcon
-        additionalClasses="
-        sprk-u-mrs
-        sprk-c-Icon--stroke-current-color"
-        iconName="left-arrow"
-      />
-      Back
-    </SprkLink>
-    <SprkLink
-      analyticsString="link-icon"
-      href="#nogo"
-      variant="has-icon"
-      idString="link-4"
-    >
-      Forward
-      <SprkIcon
-        additionalClasses="
-        sprk-u-mls
-        sprk-c-Icon--stroke-current-color"
-        iconName="right-arrow"
-      />
-    </SprkLink>
+    <div>
+      <SprkLink
+        analyticsString="link-icon"
+        href="#nogo"
+        variant="has-icon"
+        idString="link-3"
+      >
+        <SprkIcon
+          additionalClasses="
+          sprk-u-mrs
+          sprk-c-Icon--stroke-current-color"
+          iconName="left-arrow"
+        />
+        Back
+      </SprkLink>
+    </div>
+    <div>
+      <SprkLink
+        analyticsString="link-icon"
+        href="#nogo"
+        variant="has-icon"
+        idString="link-4"
+      >
+        Forward
+        <SprkIcon
+          additionalClasses="
+          sprk-u-mls
+          sprk-c-Icon--stroke-current-color"
+          iconName="right-arrow"
+        />
+      </SprkLink>
+    </div>
   </>
 );
 
@@ -136,36 +140,40 @@ disabledLight.story = {
 
 export const disabledIconWithTextLink = () => (
   <>
-    <SprkLink
-      analyticsString="link-icon"
-      href="#nogo"
-      variant="disabled"
-      idString="link-7"
-      additionalClasses="sprk-b-Link--has-icon"
-    >
-      <SprkIcon
-        additionalClasses="
-\        sprk-u-mrs
-        sprk-c-Icon--stroke-current-color"
-        iconName="left-arrow"
-      />
-      Back
-    </SprkLink>
-    <SprkLink
-      analyticsString="link-icon"
-      href="#nogo"
-      variant="disabled"
-      idString="link-8"
-      additionalClasses="sprk-b-Link--has-icon"
-    >
-      Forward
-      <SprkIcon
-        additionalClasses="
-        sprk-u-mls
-        sprk-c-Icon--stroke-current-color"
-        iconName="right-arrow"
-      />
-    </SprkLink>
+    <div>
+      <SprkLink
+        analyticsString="link-icon"
+        href="#nogo"
+        variant="disabled"
+        idString="link-7"
+        additionalClasses="sprk-b-Link--has-icon"
+      >
+        <SprkIcon
+          additionalClasses="
+          sprk-u-mrs
+          sprk-c-Icon--stroke-current-color"
+          iconName="left-arrow"
+        />
+        Back
+      </SprkLink>
+    </div>
+    <div>
+      <SprkLink
+        analyticsString="link-icon"
+        href="#nogo"
+        variant="disabled"
+        idString="link-8"
+        additionalClasses="sprk-b-Link--has-icon"
+      >
+        Forward
+        <SprkIcon
+          additionalClasses="
+          sprk-u-mls
+          sprk-c-Icon--stroke-current-color"
+          iconName="right-arrow"
+        />
+      </SprkLink>
+    </div>
   </>
 );
 
