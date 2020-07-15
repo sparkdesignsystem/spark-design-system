@@ -1709,6 +1709,8 @@ $sprk-toggle-trigger-transition: $sprk-link-transition !default;
 $sprk-toggle-trigger-hover-border-bottom: $sprk-link-has-icon-hover-border-bottom !default;
 /// The hover text color for Toggle Trigger.
 $sprk-toggle-trigger-hover-color: $sprk-purple !default;
+/// The hover stroke color for Toggle icon.
+$sprk-toggle-icon-hover-stroke: $sprk-toggle-trigger-hover-color !default;
 /// The background color for Toggle Trigger.
 $sprk-toggle-trigger-background-color: transparent !default;
 /// The padding top for Toggle Trigger.

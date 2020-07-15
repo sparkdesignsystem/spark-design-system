@@ -30,6 +30,10 @@
   &:focus {
     border-bottom: $sprk-toggle-trigger-hover-border-bottom;
     color: $sprk-toggle-trigger-hover-color;
+
+    .sprk-c-Icon--toggle {
+      stroke: $sprk-toggle-icon-hover-stroke;
+    }
   }
 
   &:focus:not(.focus-visible) {
