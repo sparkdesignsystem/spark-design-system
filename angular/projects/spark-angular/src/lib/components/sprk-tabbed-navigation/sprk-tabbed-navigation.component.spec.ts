@@ -176,6 +176,25 @@ describe('SprkTabbedNavigationComponent', () => {
     expect(testPanel2.focus).toHaveBeenCalled();
   });
 
+  it('should return null if tab does not contain active class', () => {
+    const test = component.getActiveTabIndex(
+      [document.createElement('div')],
+      'hello',
+    );
+    expect(test).toBe(null);
+  });
+
+  it('should move focus into the active panel when tab is pressed and the target is not role=tab', () => {
+    testTab2.click();
+    jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
+    const event: Event = new Event('keydown');
+    event['keyCode'] = 9;
+    testElement.classList.add('sprk-c-Tabs__button');
+    testElement.setAttribute('role', 'test');
+    testElement.dispatchEvent(event);
+    expect(testPanel2.focus).toBeCalledTimes(0);
+  });
+
   it('should not focus into the active panel when tab is pressed and the target is not a button', () => {
     testTab2.click();
     jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
@@ -286,6 +305,18 @@ describe('SprkTabbedNavigationComponent', () => {
     fixture.detectChanges();
     expect(testTab3.getAttribute('aria-selected')).toEqual('true');
     expect(testPanel3.classList.contains('sprk-u-HideWhenJs')).toEqual(false);
+  });
+
+  it('should ignore key events that are not in the list of events', () => {
+    jest.spyOn(component, 'goToEndTab').mockImplementation(() => {});
+    jest.spyOn(component, 'incrementTab').mockImplementation(() => {});
+    testTab1.click();
+    fixture.detectChanges();
+    const event: Event = new Event('keydown', { bubbles: true });
+    event['keyCode'] = 10;
+    testElement.dispatchEvent(event);
+    expect(component.incrementTab).toBeCalledTimes(0);
+    expect(component.goToEndTab).toBeCalledTimes(0);
   });
 
   it('the right arrow key should skip disabled tabs', () => {
