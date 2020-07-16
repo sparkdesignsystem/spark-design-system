@@ -7,7 +7,6 @@ import {
   Input,
   QueryList,
 } from '@angular/core';
-import { Observable } from 'rxjs';
 import * as _ from 'lodash';
 import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
 import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
