@@ -24,7 +24,7 @@ class TestComponent {}
   template: `
     <div>
       <button class="changeButton" (click)="changeMe()">Change Content</button>
-      <sprk-tabbed-navigation idString="tabs-1" [additionalClasses]="newColor">
+      <sprk-tabbed-navigation idString="tabs-1">
         <button
           *ngFor="let item of list; let i = index"
           sprkTabbedNavigationTab
@@ -42,7 +42,6 @@ class TestComponent {}
 class DynamicComponent {
   public list = ['Tab 33', 'Tab 2'];
   public newList = ['Tab 3'];
-  newColor = 'sprk-u-BackgroundColor--blue';
   changeMe(): void {
     this.list = this.newList;
   }
@@ -192,6 +191,7 @@ describe('SprkTabbedNavigationComponent', () => {
     testElement.classList.add('sprk-c-Tabs__button');
     testElement.setAttribute('role', 'test');
     testElement.dispatchEvent(event);
+    fixture.detectChanges();
     expect(testPanel2.focus).toBeCalledTimes(0);
   });
 
