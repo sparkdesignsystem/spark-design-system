@@ -6,6 +6,7 @@ import {
   HostListener,
   Input,
   QueryList,
+  Renderer2,
 } from '@angular/core';
 import * as _ from 'lodash';
 import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
@@ -166,8 +167,12 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
         const tabID = `tabbed-navigation-${this.componentID}-tab-${index}`;
         const panelID = `tabbed-navigation-${this.componentID}-panel-${index}`;
 
-        tab.ref.nativeElement.setAttribute('id', tabID);
-        tab.ref.nativeElement.setAttribute('aria-controls', panelID);
+        this.renderer.setAttribute(tab.ref.nativeElement, 'id', tabID);
+        this.renderer.setAttribute(
+          tab.ref.nativeElement,
+          'aria-controls',
+          panelID,
+        );
         tabIDs.push(tabID);
         panelIDs.push(panelID);
       });
@@ -176,8 +181,16 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
       panelIDs = panelIDs.reverse();
 
       this.panels.forEach((panel) => {
-        panel.ref.nativeElement.setAttribute('id', panelIDs.pop());
-        panel.ref.nativeElement.setAttribute('aria-labelledby', tabIDs.pop());
+        this.renderer.setAttribute(
+          panel.ref.nativeElement,
+          'id',
+          panelIDs.pop(),
+        );
+        this.renderer.setAttribute(
+          panel.ref.nativeElement,
+          'aria-labelledby',
+          tabIDs.pop(),
+        );
       });
     }
   }
@@ -327,7 +340,7 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef) {
+  constructor(public ref: ElementRef, private renderer: Renderer2) {
     this.ariaOrientation(window.innerWidth, this.ref.nativeElement);
   }
 }
