@@ -83,7 +83,6 @@ describe('SprkTabbedNavigationComponent', () => {
 
     fixture = TestBed.createComponent(SprkTabbedNavigationComponent);
     component = fixture.componentInstance;
-    component.ngAfterContentInit();
     testFixture.detectChanges();
 
     element = fixture.nativeElement.querySelector('div');
@@ -396,8 +395,7 @@ describe('SprkTabbedNavigationComponent', () => {
 
   it('should assign relationships on subscribed content change', () => {
     dynamicTestFixture.detectChanges();
-    let dynamicTestElement = dynamicTestFixture.nativeElement;
-
+    const dynamicTestElement = dynamicTestFixture.nativeElement;
     const changeButton = dynamicTestElement.querySelector('.changeButton');
 
     changeButton.click();
