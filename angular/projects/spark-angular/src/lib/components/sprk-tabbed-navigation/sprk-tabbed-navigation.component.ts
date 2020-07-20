@@ -200,11 +200,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    */
   ngAfterContentInit(): void {
     // Accounting for dynamic changes in the component
-    if (this.panels) {
-      this.panels.changes.subscribe(() => {
-        this.getContentRelationships();
-      });
-    }
+    this.panels.changes.subscribe(() => {
+      this.getContentRelationships();
+    });
 
     this.getContentRelationships();
   }
