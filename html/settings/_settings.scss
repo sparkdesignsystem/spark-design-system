@@ -154,9 +154,9 @@ $sprk-icon-m: 28px !default;
 /// Value for height and width of the Icon component.
 $sprk-icon: 32px !default;
 /// Value for the fill property of the Icon component.
-$sprk-icon-fill-color: none !default;
+$sprk-icon-fill-color: $sprk-black !default;
 /// Value for the stroke property of the Icon component.
-$sprk-icon-stroke-color: $sprk-black !default;
+$sprk-icon-stroke-color: none !default;
 /// Value for the fill property of the Filled Icon component.
 $sprk-icon-filled-fill-color: $sprk-black !default;
 /// Value for the stroke property of the Filled Icon component.
