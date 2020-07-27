@@ -18,10 +18,12 @@ const SprkStack = (props) => {
     'sprk-o-Stack--medium': itemSpacing === 'medium',
     'sprk-o-Stack--large': itemSpacing === 'large',
     'sprk-o-Stack--huge': itemSpacing === 'huge',
+
     'sprk-o-Stack--misc-a': itemSpacing === 'miscA' || itemSpacing === 'misc-a',
     'sprk-o-Stack--misc-b': itemSpacing === 'miscB' || itemSpacing === 'misc-b',
     'sprk-o-Stack--misc-c': itemSpacing === 'miscC' || itemSpacing === 'misc-c',
     'sprk-o-Stack--misc-d': itemSpacing === 'miscD' || itemSpacing === 'misc-d',
+
     'sprk-o-Stack--split@xxs': splitAt === 'extraTiny',
     'sprk-o-Stack--split@xs': splitAt === 'tiny',
     'sprk-o-Stack--split@s': splitAt === 'small',
@@ -37,20 +39,11 @@ const SprkStack = (props) => {
   );
 };
 
-SprkStack.defaultProps = {
-  children: '',
-  splitAt: '',
-  itemSpacing: '',
-  idString: '',
-  additionalClasses: '',
-};
-
 SprkStack.propTypes = {
   children: PropTypes.node,
   /**
-   * Determines when the layout will switch
-   * `flex-direction` from `column` to `row` based on
-   * breakpoint.
+   * Determines when the layout will switch `flex-direction` from `column` to
+   * `row` based on breakpoint.
    */
   splitAt: PropTypes.oneOf([
     'extraTiny',
@@ -81,11 +74,13 @@ SprkStack.propTypes = {
     '',
   ]),
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a unique selector
+   * for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to the outermost
+   * container of the component.
    */
   additionalClasses: PropTypes.string,
 };

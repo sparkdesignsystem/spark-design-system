@@ -3,12 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 const SprkStackItem = (props) => {
-  const {
-    children,
-    additionalClasses,
-    idString,
-    ...other
-  } = props;
+  const { children, additionalClasses, idString, ...other } = props;
 
   return (
     <div
@@ -21,21 +16,17 @@ const SprkStackItem = (props) => {
   );
 };
 
-SprkStackItem.defaultProps = {
-  children: '',
-  idString: '',
-  additionalClasses: '',
-};
-
 SprkStackItem.propTypes = {
-  /**  Content to render inside of of SprkStackItem. */
+  /**  Content to render inside of SprkStackItem. */
   children: PropTypes.node,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a unique selector for
+   * automated tools.
    */
   idString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to the outermost container of
+   * the component.
    */
   additionalClasses: PropTypes.string,
 };
