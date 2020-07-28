@@ -18,7 +18,7 @@ import { Component, Input } from '@angular/core';
         </div>
       </dl>
     </div>
-  `
+  `,
 })
 export class SprkDictionaryComponent {
   /**
@@ -33,7 +33,7 @@ export class SprkDictionaryComponent {
    * Supplying no value will cause the base variant to be used.
    */
   @Input()
-  dictionaryType = 'base';
+  dictionaryType: string;
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -69,7 +69,7 @@ export class SprkDictionaryComponent {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
