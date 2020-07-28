@@ -19,12 +19,10 @@ const SprkStack = (props) => {
     'sprk-o-Stack--medium': itemSpacing === 'medium',
     'sprk-o-Stack--large': itemSpacing === 'large',
     'sprk-o-Stack--huge': itemSpacing === 'huge',
-
     'sprk-o-Stack--misc-a': itemSpacing === 'miscA' || itemSpacing === 'misc-a',
     'sprk-o-Stack--misc-b': itemSpacing === 'miscB' || itemSpacing === 'misc-b',
     'sprk-o-Stack--misc-c': itemSpacing === 'miscC' || itemSpacing === 'misc-c',
     'sprk-o-Stack--misc-d': itemSpacing === 'miscD' || itemSpacing === 'misc-d',
-
     'sprk-o-Stack--split@xxs': splitAt === 'extraTiny',
     'sprk-o-Stack--split@xs': splitAt === 'tiny',
     'sprk-o-Stack--split@s': splitAt === 'small',
