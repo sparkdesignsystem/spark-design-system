@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable react/self-closing-comp */
 import React from 'react';
 import SprkStack from './SprkStack';
 import SprkStackItem from './components/SprkStackItem/SprkStackItem';
@@ -28,8 +30,8 @@ for an example.
 
 export const defaultStory = () => (
   <SprkStack>
-    <SprkStackItem />
-    <SprkStackItem />
+    <SprkStackItem></SprkStackItem>
+    <SprkStackItem></SprkStackItem>
   </SprkStack>
 );
 
@@ -50,8 +52,8 @@ stackSplit.story = {
 
 export const stackSplitTwoCol = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs" />
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs"></SprkStackItem>
   </SprkStack>
 );
 
@@ -81,9 +83,9 @@ stackSplitTwoColWithPadding.story = {
 
 export const stackSplitThreeCol = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs" />
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--third@xs"></SprkStackItem>
   </SprkStack>
 );
 
@@ -93,10 +95,10 @@ stackSplitThreeCol.story = {
 
 export const stackSplitFourCol = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs" />
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs"></SprkStackItem>
   </SprkStack>
 );
 
@@ -106,11 +108,11 @@ stackSplitFourCol.story = {
 
 export const stackSplitFiveCol = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs" />
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs"></SprkStackItem>
   </SprkStack>
 );
 
@@ -120,12 +122,12 @@ stackSplitFiveCol.story = {
 
 export const stackSplitSixCol = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs" />
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs"></SprkStackItem>
   </SprkStack>
 );
 
@@ -135,8 +137,8 @@ stackSplitSixCol.story = {
 
 export const stackSplitLayoutThreeFourths = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs" />
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs"></SprkStackItem>
   </SprkStack>
 );
 
@@ -146,8 +148,8 @@ stackSplitLayoutThreeFourths.story = {
 
 export const stackSplitLayoutThreeFifths = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fifths@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@xs" />
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fifths@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@xs"></SprkStackItem>
   </SprkStack>
 );
 
@@ -157,8 +159,8 @@ stackSplitLayoutThreeFifths.story = {
 
 export const stackSplitLayoutThreeTenths = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-tenths@xs" />
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--seven-tenths@xs" />
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-tenths@xs"></SprkStackItem>
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--seven-tenths@xs"></SprkStackItem>
   </SprkStack>
 );
 
@@ -169,130 +171,64 @@ stackSplitLayoutThreeTenths.story = {
 export const stackSplitLayoutMixed = () => (
   <div>
     <SprkStack splitAt="tiny">
-      <SprkStackItem
-        additionalClasses="
-        sprk-o-Stack__item--fourth@xs
-        sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">fourth</p>
       </SprkStackItem>
-
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--half@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">half</p>
       </SprkStackItem>
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--fourth@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">fourth</p>
       </SprkStackItem>
     </SprkStack>
     <SprkStack splitAt="tiny">
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--sixth@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">sixth</p>
       </SprkStackItem>
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--sixth@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">sixth</p>
       </SprkStackItem>
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--sixth@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">sixth</p>
       </SprkStackItem>
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--flex@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">flex</p>
       </SprkStackItem>
     </SprkStack>
     <SprkStack splitAt="tiny">
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--two-fifths@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">two-fifths</p>
       </SprkStackItem>
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--fifth@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">fifth</p>
       </SprkStackItem>
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--fifth@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">fifth</p>
       </SprkStackItem>
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--fifth@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">fifth</p>
       </SprkStackItem>
     </SprkStack>
     <SprkStack splitAt="tiny">
       <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs">
         <SprkStack splitAt="tiny">
-          <SprkStackItem
-            additionalClasses="
-              sprk-o-Stack__item--flex@xs
-              sprk-u-AbsoluteCenter"
-          >
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter">
             <p className="sprk-b-TypeBodyOne">Nested Item (flex)</p>
           </SprkStackItem>
-          <SprkStackItem
-            additionalClasses="
-              sprk-o-Stack__item--flex@xs
-              sprk-u-AbsoluteCenter"
-          >
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter">
             <p className="sprk-b-TypeBodyOne">Nested Item (flex)</p>
           </SprkStackItem>
         </SprkStack>
       </SprkStackItem>
-
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--half@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">half</p>
       </SprkStackItem>
     </SprkStack>
     <SprkStack splitAt="tiny">
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--two-fifths@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">two-fifths</p>
       </SprkStackItem>
-      <SprkStackItem
-        additionalClasses="
-          sprk-o-Stack__item--three-fifths@xs
-          sprk-u-AbsoluteCenter"
-      >
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fifths@xs sprk-u-AbsoluteCenter">
         <p className="sprk-b-TypeBodyOne">three-fifths</p>
       </SprkStackItem>
     </SprkStack>
