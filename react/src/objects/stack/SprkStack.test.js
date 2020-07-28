@@ -58,7 +58,7 @@ describe('SprkStack:', () => {
 
   it(
     'should set the huge spacing class in addition to the base class when' +
-      'itemSpacing is "huge"',
+      ' itemSpacing is "huge"',
     () => {
       const wrapper = shallow(<SprkStack itemSpacing="huge" />);
       expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--huge').length).toBe(
@@ -69,7 +69,7 @@ describe('SprkStack:', () => {
 
   it(
     'should set the misc-a spacing class in addition to the base class when' +
-      'itemSpacing is "misc-a"',
+      ' itemSpacing is "misc-a"',
     () => {
       const wrapper = shallow(<SprkStack itemSpacing="misc-a" />);
       expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-a').length).toBe(
@@ -80,7 +80,7 @@ describe('SprkStack:', () => {
 
   it(
     'should set the misc-a spacing class in addition to the base class when' +
-      'itemSpacing is "miscA"',
+      ' itemSpacing is "miscA"',
     () => {
       const wrapper = shallow(<SprkStack itemSpacing="miscA" />);
       expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-a').length).toBe(
@@ -91,7 +91,7 @@ describe('SprkStack:', () => {
 
   it(
     'should set the misc-b spacing class in addition to the base class when' +
-      'itemSpacing is "misc-b"',
+      ' itemSpacing is "misc-b"',
     () => {
       const wrapper = shallow(<SprkStack itemSpacing="misc-b" />);
       expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-b').length).toBe(
@@ -102,7 +102,7 @@ describe('SprkStack:', () => {
 
   it(
     'should set the misc-b spacing class in addition to the base class when' +
-      'itemSpacing is "miscB"',
+      ' itemSpacing is "miscB"',
     () => {
       const wrapper = shallow(<SprkStack itemSpacing="miscB" />);
       expect(wrapper.find('div.sprk-o-Stack.sprk-o-Stack--misc-b').length).toBe(
@@ -220,4 +220,16 @@ describe('SprkStack:', () => {
       ).toBe(true);
     },
   );
+
+  it('should correctly add analyticsString', () => {
+    const wrapper = shallow(<SprkStack analyticsString="foo" />);
+    expect(wrapper.find('div.sprk-o-Stack[data-analytics="foo"]').length).toBe(
+      1,
+    );
+  });
+
+  it('should correctly add idString', () => {
+    const wrapper = shallow(<SprkStack idString="foo" />);
+    expect(wrapper.find('div.sprk-o-Stack[data-id="foo"]').length).toBe(1);
+  });
 });
