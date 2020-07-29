@@ -95,7 +95,8 @@ describe('SprkStackComponent', () => {
     );
   });
 
-  it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
+  it('should set the data-analytics attribute' +
+    ' given a value in the analyticsString Input', () => {
     component.analyticsString = 'Stack 1';
     fixture.detectChanges();
     expect(element.hasAttribute('data-analytics')).toEqual(true);
