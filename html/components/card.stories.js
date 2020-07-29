@@ -283,7 +283,7 @@ export const twoUpCards = () => (
           >
             Learn More
             <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-              <use xlink:href="#right-arrow" />
+              <use xlink:href="#arrow-right" />
             </svg>
           </a>
         </div>
@@ -334,7 +334,7 @@ export const twoUpCards = () => (
         >
           Learn More
           <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-            <use xlink:href="#right-arrow" />
+            <use xlink:href="#arrow-right" />
           </svg>
         </a>
       </div>
@@ -409,7 +409,7 @@ export const threeUpCards = () => (
           >
             Learn More
             <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-              <use xlink:href="#right-arrow" />
+              <use xlink:href="#arrow-right" />
             </svg>
           </a>
         </div>
@@ -464,7 +464,7 @@ export const threeUpCards = () => (
           >
             Learn More
             <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-              <use xlink:href="#right-arrow" />
+              <use xlink:href="#arrow-right" />
             </svg>
           </a>
         </div>
@@ -518,7 +518,7 @@ export const threeUpCards = () => (
           >
             Learn More
             <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-              <use xlink:href="#right-arrow" />
+              <use xlink:href="#arrow-right" />
             </svg>
           </a>
         </div>
