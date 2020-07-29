@@ -23,10 +23,6 @@ const createIconExample = (name) => {
   svgElem.appendChild(useElem);
   svgElem.classList.add('sprk-c-Icon');
 
-  if (name.includes('small')) {
-    svgElem.classList.add('sprk-c-Icon--s');
-  }
-
   if (name.includes('filled')) {
     svgElem.classList.add('sprk-c-Icon--filled');
   }
