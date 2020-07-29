@@ -14,7 +14,7 @@ import { Component, Input, AfterViewInit, ElementRef } from '@angular/core';
         <span class="sprk-c-Carousel__prev sprk-o-Stack__item">
           <sprk-icon
             iconType="chevron-left-circle"
-            additionalClasses="sprk-c-Icon--stroke-current-color"
+            additionalClasses="sprk-c-Icon--filled-current-color"
           >
           </sprk-icon>
         </span>
@@ -32,7 +32,7 @@ import { Component, Input, AfterViewInit, ElementRef } from '@angular/core';
         <span class="sprk-c-Carousel__next sprk-o-Stack__item">
           <sprk-icon
             iconType="chevron-right-circle"
-            additionalClasses="sprk-c-Icon--stroke-current-color"
+            additionalClasses="sprk-c-Icon--filled-current-color"
           >
           </sprk-icon>
         </span>

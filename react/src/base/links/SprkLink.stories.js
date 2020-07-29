@@ -64,7 +64,7 @@ export const iconWithTextLink = () => (
         <SprkIcon
           additionalClasses="
           sprk-u-mrs
-          sprk-c-Icon--stroke-current-color"
+          sprk-c-Icon--filled-current-color"
           iconName="arrow-left"
         />
         Back
@@ -81,7 +81,7 @@ export const iconWithTextLink = () => (
         <SprkIcon
           additionalClasses="
           sprk-u-mls
-          sprk-c-Icon--stroke-current-color"
+          sprk-c-Icon--filled-current-color"
           iconName="arrow-right"
         />
       </SprkLink>
@@ -151,7 +151,7 @@ export const disabledIconWithTextLink = () => (
         <SprkIcon
           additionalClasses="
           sprk-u-mrs
-          sprk-c-Icon--stroke-current-color"
+          sprk-c-Icon--filled-current-color"
           iconName="arrow-left"
         />
         Back
@@ -169,7 +169,7 @@ export const disabledIconWithTextLink = () => (
         <SprkIcon
           additionalClasses="
           sprk-u-mls
-          sprk-c-Icon--stroke-current-color"
+          sprk-c-Icon--filled-current-color"
           iconName="arrow-right"
         />
       </SprkLink>

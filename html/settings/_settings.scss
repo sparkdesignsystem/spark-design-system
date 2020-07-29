@@ -839,7 +839,9 @@ $sprk-link-has-icon-underline-width: 0 !default;
 /// The underline color of Links containing icons.
 $sprk-link-has-icon-underline-color: transparent !default;
 /// The fill color for icons contained in Links.
-$sprk-link-has-icon-fill: transparent !default;
+$sprk-link-has-icon-fill: $sprk-link-has-icon-color-icon !default;
+/// The stroke color for icons contained in Links.
+$sprk-link-has-icon-stroke: none !default;
 /// The border settings for Links with icons.
 $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
@@ -1709,8 +1711,8 @@ $sprk-toggle-trigger-transition: $sprk-link-transition !default;
 $sprk-toggle-trigger-hover-border-bottom: $sprk-link-has-icon-hover-border-bottom !default;
 /// The hover text color for Toggle Trigger.
 $sprk-toggle-trigger-hover-color: $sprk-purple !default;
-/// The hover stroke color for Toggle icon.
-$sprk-toggle-icon-hover-stroke: $sprk-toggle-trigger-hover-color !default;
+/// The hover fill color for Toggle icon.
+$sprk-toggle-icon-hover-fill: $sprk-toggle-trigger-hover-color !default;
 /// The background color for Toggle Trigger.
 $sprk-toggle-trigger-background-color: transparent !default;
 /// The padding top for Toggle Trigger.

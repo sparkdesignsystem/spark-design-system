@@ -20,7 +20,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
         <span [ngClass]="getHeadingClasses()">
           <sprk-icon
             [iconType]="leadingIcon"
-            additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mrs"
+            additionalClasses="sprk-c-Icon--filled-current-color sprk-u-mrs"
             *ngIf="leadingIcon"
           ></sprk-icon>
           {{ title }}

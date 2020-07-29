@@ -25,7 +25,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
           >
             <span class="sprk-u-ScreenReaderText">{{ prevLinkText }}</span>
             <sprk-icon
-              additionalClasses="sprk-c-Icon--stroke-current-color"
+              additionalClasses="sprk-c-Icon--filled-current-color"
               iconType="chevron-left"
             ></sprk-icon>
           </a>
@@ -123,7 +123,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
           >
             <span class="sprk-u-ScreenReaderText">{{ nextLinkText }}</span>
             <sprk-icon
-              additionalClasses="sprk-c-Icon--stroke-current-color"
+              additionalClasses="sprk-c-Icon--filled-current-color"
               iconType="chevron-right"
             ></sprk-icon>
           </a>

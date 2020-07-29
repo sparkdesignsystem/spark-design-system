@@ -42,7 +42,7 @@ export const info = () => {
         title="Dismiss"
         data-sprk-alert="dismiss"
       >
-        <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true" > <use xlink:href="#close"></use> </svg>
+        <svg class="sprk-c-Icon sprk-c-Icon--filled-current-color" viewBox="0 0 64 64" aria-hidden="true" > <use xlink:href="#close"></use> </svg>
       </button>
     </div>
   `;
@@ -81,7 +81,7 @@ export const success = () => {
         title="Dismiss"
         data-sprk-alert="dismiss"
       >
-        <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true" >
+        <svg class="sprk-c-Icon sprk-c-Icon--filled-current-color" viewBox="0 0 64 64" aria-hidden="true" >
           <use xlink:href="#close"></use>
         </svg>
       </button>
@@ -120,7 +120,7 @@ export const fail = () => {
         title="Dismiss"
         data-sprk-alert="dismiss"
       >
-        <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true" >
+        <svg class="sprk-c-Icon sprk-c-Icon--filled-current-color" viewBox="0 0 64 64" aria-hidden="true" >
           <use xlink:href="#close"></use>
         </svg>
       </button>

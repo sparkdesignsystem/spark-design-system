@@ -189,21 +189,21 @@ export const defaultStory = () => ({
         {
           href: '#nogo',
           icon: 'townhouse',
-          iconCSS: 'sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--filled-current-color',
           analyticsString: 'link-1',
           iconScreenReaderText: 'townhouse'
         },
         {
           href: '#nogo',
           icon: 'townhouse',
-          iconCSS: 'sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--filled-current-color',
           analyticsString: 'link-2',
           iconScreenReaderText: 'townhouse'
         },
         {
           href: '#nogo',
           icon: 'townhouse',
-          iconCSS: 'sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--filled-current-color',
           analyticsString: 'link-3',
           iconScreenReaderText: 'townhouse'
         }

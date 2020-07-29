@@ -75,7 +75,8 @@ export const defaultStory = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+        additionalClasses="sprk-c-Icon--filled
+        -current-color sprk-b-DatePicker__icon"
         sprk-input-icon
       ></sprk-icon>
       <input
@@ -115,7 +116,7 @@ export const invalidDatePicker = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-b-DatePicker__icon"
         sprk-input-icon
       ></sprk-icon>
       <input
@@ -132,7 +133,7 @@ export const invalidDatePicker = () => ({
       />
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -164,7 +165,7 @@ export const disabledDatePicker = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-b-DatePicker__icon"
         sprk-input-icon
       ></sprk-icon>
       <input

@@ -73,7 +73,7 @@ export const iconWithTextLink = () =>
           class="
             sprk-c-Icon
             sprk-u-mrs
-            sprk-c-Icon--stroke-current-color
+            sprk-c-Icon--filled-current-color
           "
           viewBox="0 0 100 100"
         >
@@ -95,7 +95,7 @@ export const iconWithTextLink = () =>
           class="
             sprk-c-Icon
             sprk-u-mls
-            sprk-c-Icon--stroke-current-color
+            sprk-c-Icon--filled-current-color
           "
           viewBox="0 0 100 100">
           <use xlink:href="#arrow-right" />
@@ -164,7 +164,7 @@ export const disabledIconWithTextLink = () =>
           class="
             sprk-c-Icon
             sprk-u-mrs
-            sprk-c-Icon--stroke-current-color
+            sprk-c-Icon--filled-current-color
           "
           viewBox="0 0 100 100"
         >
@@ -186,7 +186,7 @@ export const disabledIconWithTextLink = () =>
           class="
             sprk-c-Icon
             sprk-u-mls
-            sprk-c-Icon--stroke-current-color
+            sprk-c-Icon--filled-current-color
           "
           viewBox="0 0 100 100">
           <use xlink:href="#arrow-right" />

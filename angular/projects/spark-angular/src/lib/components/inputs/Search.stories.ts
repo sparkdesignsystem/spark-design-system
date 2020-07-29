@@ -68,7 +68,7 @@ export const searchInput = () => ({
       </label>
       <sprk-icon
         iconType="search"
-        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input
@@ -108,7 +108,7 @@ export const invalidSearchInput = () => ({
       </label>
       <sprk-icon
         iconType="search"
-        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input
@@ -124,7 +124,7 @@ export const invalidSearchInput = () => ({
       >
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -157,7 +157,7 @@ export const disabledSearchInput = () => ({
       </label>
       <sprk-icon
         iconType="search"
-        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input

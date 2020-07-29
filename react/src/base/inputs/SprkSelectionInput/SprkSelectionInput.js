@@ -180,7 +180,7 @@ class SprkSelectionInput extends React.Component {
             <SprkIcon
               iconName="chevron-down"
               additionalClasses="
-              sprk-c-Icon--stroke-current-color
+              sprk-c-Icon--filled-current-color
               sprk-b-SelectContainer__icon"
             />
           </>
