@@ -1,0 +1,9 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Add Spark Design System to an Angular project.",
+      "factory": "./ng-add/index#ngAdd"
+    }
+  }
+}
