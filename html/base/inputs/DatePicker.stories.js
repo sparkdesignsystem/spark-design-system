@@ -54,7 +54,7 @@ export const defaultStory = () => {
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+          class="sprk-c-Icon sprk-c-Icon--s sprk-c-Icon--filled-current-color"
           viewBox="0 0 64 64"
         >
           <use xlink:href="#calendar" />
@@ -109,7 +109,7 @@ export const invalidDatePicker = () => {
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+          class="sprk-c-Icon sprk-c-Icon--s sprk-c-Icon--filled-current-color"
           viewBox="0 0 64 64"
         >
           <use xlink:href="#calendar" />
@@ -176,7 +176,7 @@ export const disabledDatePicker = () => {
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+          class="sprk-c-Icon sprk-c-Icon--s sprk-c-Icon--filled-current-color"
           viewBox="0 0 64 64"
         >
           <use xlink:href="#calendar" />
