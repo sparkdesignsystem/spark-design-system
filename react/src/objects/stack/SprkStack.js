@@ -9,6 +9,7 @@ const SprkStack = (props) => {
     splitAt,
     additionalClasses,
     idString,
+    analyticsString,
     ...other
   } = props;
 
@@ -31,26 +32,22 @@ const SprkStack = (props) => {
   });
 
   return (
-    <div className={classNames} data-id={idString} {...other}>
+    <div
+      className={classNames}
+      data-id={idString}
+      data-analytics={analyticsString}
+      {...other}
+    >
       {children}
     </div>
   );
 };
 
-SprkStack.defaultProps = {
-  children: '',
-  splitAt: '',
-  itemSpacing: '',
-  idString: '',
-  additionalClasses: '',
-};
-
 SprkStack.propTypes = {
   children: PropTypes.node,
   /**
-   * Determines when the layout will switch
-   * `flex-direction` from `column` to `row` based on
-   * breakpoint.
+   * Determines when the layout will switch `flex-direction` from `column` to
+   * `row` based on breakpoint.
    */
   splitAt: PropTypes.oneOf([
     'extraTiny',
@@ -81,11 +78,18 @@ SprkStack.propTypes = {
     '',
   ]),
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a unique selector for
+   * automated tools.
    */
   idString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * Assigned to the `data-analytics` attribute serving as a unique selector
+   * for outside libraries to capture data.
+   */
+  analyticsString: PropTypes.string,
+  /**
+   * A space-separated string of classes to add to the outermost container of
+   * the component.
    */
   additionalClasses: PropTypes.string,
 };
