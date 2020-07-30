@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sprk-dictionary',
@@ -6,55 +6,66 @@ import { Component, Input } from '@angular/core';
     <div [ngClass]="getClasses()" [attr.data-id]="idString">
       <dl class="sprk-c-Dictionary__keyvaluepairs">
         <div
-          *ngFor="let key of objectKeys(data)"
+          *ngFor="let key of objectKeys(keyValuePairs)"
           class="sprk-c-Dictionary__keyvaluepair"
         >
-          <dt
-            class="sprk-c-Dictionary__key sprk-b-Label sprk-b-Label--no-input"
-          >
-            {{ key }}
-          </dt>
-          <dd class="sprk-c-Dictionary__value">{{ data[key] }}</dd>
+          <dt [ngClass]="getKeysClasses()">{{ key }}</dt>
+          <dd [ngClass]="getValuesClasses()">{{ keyValuePairs[key] }}</dd>
         </div>
       </dl>
     </div>
   `,
 })
-export class SprkDictionaryComponent {
+export class SprkDictionaryComponent implements OnInit {
   /**
-   * The collection of key-value pairs to be rendered
-   * into the component.
+   * The collection of key-value pairs to be rendered into the component.
    */
   @Input()
   data: object = {};
   /**
-   * Determines the variant of the dictionary component to render.
-   * The only available option is `striped`.
-   * Supplying no value will cause the base variant to be used.
+   * The collection of key-value pairs to be rendered into the component.
+   */
+  @Input()
+  keyValuePairs: object = {};
+  /**
+   * Determines the variant of the dictionary component to render. The only
+   * available option is `striped`. Supplying no value will cause the base
+   * variant to be used.
    */
   @Input()
   dictionaryType: string;
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * Determines the variant of the dictionary component to render. The only
+   * available option is `striped`. Supplying no value will cause the base
+   * variant to be used.
+   */
+  @Input()
+  variant: string;
+  /**
+   * Expects a space separated string of classes to be added to the component.
    */
   @Input()
   additionalClasses: string;
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * Expects a space separated string of classes to be added to the TODO.
+   */
+  @Input()
+  additionalKeysClasses: string;
+  /**
+   * Expects a space separated string of classes to be added to the TODO.
+   */
+  @Input()
+  additionalValuesClasses: string;
+  /**
+   * The value supplied will be assigned to the `data-id` attribute on the
+   * component. This is intended to be used as a selector for automated tools.
+   * This value should be unique per page.
    */
   @Input()
   idString: string;
   /**
    * @ignore
-   * Used to grab all the keys from
-   * objects.
+   * Used to grab all the keys from objects.
    */
   objectKeys = Object.keys;
 
@@ -64,7 +75,7 @@ export class SprkDictionaryComponent {
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Dictionary'];
 
-    if (this.dictionaryType === 'striped') {
+    if (this.variant === 'striped') {
       classArray.push('sprk-c-Dictionary--striped');
     }
 
@@ -75,5 +86,53 @@ export class SprkDictionaryComponent {
     }
 
     return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getKeysClasses(): string {
+    const classArray: string[] = [
+      'sprk-c-Dictionary__key',
+      'sprk-b-Label',
+      'sprk-b-Label--no-input',
+    ];
+
+    if (this.additionalKeysClasses) {
+      this.additionalKeysClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getValuesClasses(): string {
+    const classArray: string[] = ['sprk-c-Dictionary__value'];
+
+    if (this.additionalValuesClasses) {
+      this.additionalValuesClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  isEmpty = (obj) => {
+    return Object.keys(obj).length === 0;
+  };
+
+  ngOnInit(): void {
+    if (!this.isEmpty(this.data) && this.isEmpty(this.keyValuePairs)) {
+      this.keyValuePairs = this.data;
+    }
+
+    if (this.dictionaryType && !this.variant) {
+      this.variant = this.dictionaryType;
+    }
   }
 }
