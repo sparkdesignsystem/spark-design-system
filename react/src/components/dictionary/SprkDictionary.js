@@ -19,26 +19,22 @@ const SprkDictionary = (props) => {
     'sprk-c-Dictionary--striped': variant === 'striped',
   });
 
-  // const keysClassNames = classnames(
-  //   'sprk-c-Dictionary__key',
-  //   'sprk-b-Label',
-  //   'sprk-b-Label--no-input',
-  //   additionalKeysClasses,
-  // );
+  const keysClassNames = classnames(
+    'sprk-c-Dictionary__key',
+    'sprk-b-Label',
+    'sprk-b-Label--no-input',
+    additionalKeysClasses,
+  );
 
-  // const valuesClassNames = classnames(
-  //   'sprk-c-Dictionary__key',
-  //   'sprk-b-Label',
-  //   'sprk-b-Label--no-input',
-  //   additionalValuesClasses,
-  // );
+  const valuesClassNames = classnames(
+    'sprk-c-Dictionary__value',
+    additionalValuesClasses,
+  );
 
   const keyValuePairsMap = Object.keys(keyValuePairs).map((term) => (
     <div className="sprk-c-Dictionary__keyvaluepair" key={uniqueId('key-')}>
-      <dt className="sprk-c-Dictionary__key sprk-b-Label sprk-b-Label--no-input">
-        {term}
-      </dt>
-      <dd className="sprk-c-Dictionary__value">{keyValuePairs[term]}</dd>
+      <dt className={keysClassNames}>{term}</dt>
+      <dd className={valuesClassNames}>{keyValuePairs[term]}</dd>
     </div>
   ));
 
