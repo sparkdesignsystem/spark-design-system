@@ -12,7 +12,12 @@ import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook
 export default {
   title: 'Components/Link',
   component: SprkLinkDirective,
-  decorators: [storyWrapper(storyContent => `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`)],
+  decorators: [
+    storyWrapper(
+      (storyContent) =>
+        `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`,
+    ),
+  ],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('link')}
@@ -20,7 +25,7 @@ ${markdownDocumentationLinkBuilder('link')}
 use Spark classes.
 - Spark Link has been refactored to be an Angular Directive. The old Angular
 Component version has been deprecated. This version will be permanently
-removed from Spark in our Summer 2020 release. To update to the new version,
+removed from Spark in an upcoming release. To update to the new version,
 replace any instance of the <code><sprk-link></code> component in your codebase
 with the new Directive syntax.
 `,
@@ -33,12 +38,14 @@ const modules = {
     SprkLinkDirectiveModule,
     SprkIconModule,
     SprkLinkModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkLinkComponent,
-    }]),
+    RouterModule.forRoot([
+      {
+        path: 'iframe.html',
+        component: SprkLinkComponent,
+      },
+    ]),
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 };
 
 export const defaultStory = () => ({
@@ -58,9 +65,7 @@ export const defaultStory = () => ({
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'sprk-link.directive',
-    ],
+    jest: ['sprk-link.directive'],
   },
 };
 
@@ -81,9 +86,7 @@ export const simple = () => ({
 
 simple.story = {
   parameters: {
-    jest: [
-      'sprk-link.directive',
-    ],
+    jest: ['sprk-link.directive'],
   },
 };
 
@@ -109,9 +112,7 @@ export const iconWithTextLink = () => ({
 
 iconWithTextLink.story = {
   parameters: {
-    jest: [
-      'sprk-link.directive',
-    ],
+    jest: ['sprk-link.directive'],
   },
 };
 
@@ -133,7 +134,7 @@ export const disabled = () => ({
 disabled.story = {
   parameters: {
     jest: ['sprk-link.directive'],
-  }
+  },
 };
 
 export const deprecated = () => ({
@@ -153,6 +154,5 @@ deprecated.story = {
   name: 'Component (Deprecated)',
   parameters: {
     jest: ['sprk-link.component'],
-  }
+  },
 };
-
