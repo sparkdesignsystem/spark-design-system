@@ -56,7 +56,7 @@ describe('SprkToggleComponent', () => {
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString()
     ).toEqual(
-      'sprk-c-Icon sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open'
+      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open'
     );
   });
 
@@ -67,7 +67,7 @@ describe('SprkToggleComponent', () => {
     fixture.detectChanges();
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString()
-    ).toEqual('sprk-c-Icon sprk-u-mrs sprk-c-Icon--toggle');
+    ).toEqual('sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle');
   });
 
   it('should add the correct classes if additionalClasses have values', () => {

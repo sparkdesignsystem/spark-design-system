@@ -42,7 +42,6 @@ export const selectBox = () => `
       <svg
         class="
           sprk-c-Icon
-          sprk-c-Icon--s
           sprk-c-Icon--filled-current-color
           sprk-b-SelectContainer__icon
         "
@@ -92,7 +91,6 @@ export const invalidSelectBox = () => `
       <svg
         class="
           sprk-c-Icon
-          sprk-c-Icon--s
           sprk-c-Icon--filled-current-color
           sprk-b-SelectContainer__icon
         "

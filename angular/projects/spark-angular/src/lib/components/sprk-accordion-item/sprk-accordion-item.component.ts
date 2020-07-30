@@ -27,9 +27,11 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
         </span>
 
         <sprk-icon
-          additionalClasses="sprk-c-Accordion__icon sprk-c-Icon--toggle {{
-            iconStateClass
-          }}"
+          additionalClasses="
+            sprk-c-Accordion__icon
+            sprk-c-Icon--xl
+            sprk-c-Icon--toggle
+            {{iconStateClass}}"
           [iconType]="currentIconType"
         ></sprk-icon>
       </button>

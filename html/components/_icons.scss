@@ -53,8 +53,8 @@
 }
 
 .sprk-c-Icon {
-  height: $sprk-icon;
-  width: $sprk-icon;
+  height: $sprk-icon-m;
+  width: $sprk-icon-m;
   stroke: $sprk-icon-stroke-color;
   fill: $sprk-icon-fill-color;
 }
@@ -82,22 +82,25 @@
   fill: currentColor;
 }
 
-/// Adds the Icon height and width
-/// to $sprk-icon-s and stroke-width
-/// to $icon-custom-stroke-width-s.
-.sprk-c-Icon--s {
-  height: $sprk-icon-s;
-  width: $sprk-icon-s;
-  stroke-width: $sprk-icon-custom-stroke-width-s;
-}
-
 /// Adds the Icon height and width to
-/// $icon-m and stroke-width to
-/// $icon-custom-stroke-width-m.
+/// $icon-m.
 .sprk-c-Icon--m {
   height: $sprk-icon-m;
   width: $sprk-icon-m;
-  stroke-width: $sprk-icon-custom-stroke-width-m;
+}
+
+/// Adds the Icon height and width to
+/// $icon-l.
+.sprk-c-Icon--l {
+  height: $sprk-icon-l;
+  width: $sprk-icon-l;
+}
+
+/// Adds the Icon height and width to
+/// $icon-xl.
+.sprk-c-Icon--xl {
+  height: $sprk-icon-xl;
+  width: $sprk-icon-xl;
 }
 
 ///	Adds styles for

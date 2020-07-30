@@ -87,7 +87,7 @@ export const defaultStory = () => {
               Toggle Navigation
             </span>
             <svg
-              class="sprk-c-Icon sprk-c-Menu__icon"
+              class="sprk-c-Icon sprk-c-Icon--xl sprk-c-Menu__icon"
               aria-hidden="true"
               viewBox="0 0 64 64"
               xmlns="http://www.w3.org/2000/svg"
@@ -450,7 +450,7 @@ export const extended = () => {
             data-sprk-mobile-nav-trigger="mobileNav2"
           >
             <span class="sprk-u-ScreenReaderText">Toggle Navigation</span>
-            <svg class="sprk-c-Icon sprk-c-Menu__icon" aria-hidden="true" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <svg class="sprk-c-Icon sprk-c-Icon--xl sprk-c-Menu__icon" aria-hidden="true" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
               <g>
                 <path
                   class="sprk-c-Menu__line sprk-c-Menu__line--two"
@@ -1218,6 +1218,7 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
+                    sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
                     sprk-u-mrs
                   "
@@ -1236,6 +1237,7 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
+                    sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
                     sprk-u-mrs
                   "
@@ -1264,6 +1266,7 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
+                    sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
                     sprk-u-mrs
                   "

@@ -49,6 +49,7 @@ export const defaultStory = () => {
           class="
             sprk-c-Icon sprk-c-Icon--toggle
             sprk-c-Accordion__icon
+            sprk-c-Icon--xl
           "
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
@@ -99,6 +100,7 @@ export const defaultStory = () => {
             sprk-c-Icon
             sprk-c-Icon--toggle
             sprk-c-Accordion__icon
+            sprk-c-Icon--xl
           "
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
@@ -132,8 +134,10 @@ export const defaultStory = () => {
 
         <svg
           class="
-            sprk-c-Icon sprk-c-Icon--toggle
+            sprk-c-Icon
+            sprk-c-Icon--toggle
             sprk-c-Accordion__icon
+            sprk-c-Icon--xl
           "
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">

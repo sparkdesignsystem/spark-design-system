@@ -22,7 +22,7 @@ import 'focus-visible';
           iconType="chevron-down-circle"
           additionalClasses="{{
             iconClass
-          }} sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
+          }} sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
         ></sprk-icon>
         {{ title }}
       </button>
