@@ -30,6 +30,7 @@ function SprkMastheadMenuIcon({
         <svg
           className={classNames(
             'sprk-c-Icon',
+            'sprk-c-Icon--xl',
             'sprk-c-Menu__icon',
             { 'sprk-c-Menu__icon--open': isOpen },
           )}

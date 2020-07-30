@@ -144,7 +144,10 @@ export const iconWithTextLink = () => ({
         Forward
         <sprk-icon
           iconType="arrow-right"
-          additionalClasses="sprk-c-Icon--filled-current-color sprk-u-mls"
+          additionalClasses="
+            sprk-c-Icon--xl
+            sprk-c-Icon--filled-current-color
+            sprk-u-mls"
         >
         </sprk-icon>
       </a>

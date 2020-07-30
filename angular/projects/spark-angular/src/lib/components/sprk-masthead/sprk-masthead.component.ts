@@ -34,6 +34,7 @@ import {
             <svg
               [ngClass]="{
                 'sprk-c-Icon': true,
+                'sprk-c-Icon--xl': true,
                 'sprk-c-Menu__icon': true,
                 'sprk-c-Menu__icon--open': isNarrowNavOpen
               }"

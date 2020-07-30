@@ -459,7 +459,7 @@ export const extended = () => ({
             triggerIconType="chevron-down"
             [choices]="siteDropdownChoices"
             selector="Select One"
-            additionalIconClasses="sprk-c-Icon--filled-current-color sprk-Stack__item"
+            additionalIconClasses="sprk-c-Icon--xl sprk-c-Icon--filled-current-color sprk-Stack__item"
             additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
           >
             <div
@@ -500,6 +500,7 @@ export const extended = () => ({
             title="My Account"
             triggerIconType="user"
             additionalTriggerClasses="sprk-b-Link--simple sprk-c-Masthead__link"
+            additionalIconClasses="sprk-c-Icon--xl"
             additionalClasses="sprk-u-Right--zero sprk-u-mrm"
             screenReaderText="User Account"
           >

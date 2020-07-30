@@ -476,7 +476,7 @@ export const withCarousel = () => {
             <button class="sprk-o-Stack__item sprk-c-Carousel__prev">
               <span class="sprk-u-ScreenReaderText">Previous Slide</span>
               <svg
-                class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+                class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl"
                 viewBox="0 0 100 100"
               >
                 <use xlink:href="#chevron-left" />
@@ -507,7 +507,7 @@ export const withCarousel = () => {
             <button class="sprk-o-Stack__item sprk-c-Carousel__next">
               <span class="sprk-u-ScreenReaderText">Next Slide</span>
               <svg
-                class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+                class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl"
                 viewBox="0 0 100 100"
               >
                 <use xlink:href="#chevron-right" />

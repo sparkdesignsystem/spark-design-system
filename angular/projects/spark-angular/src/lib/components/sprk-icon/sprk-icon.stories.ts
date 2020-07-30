@@ -56,6 +56,7 @@ export const defaultStory = () => ({
   template: `
     <sprk-icon
       iconType="access"
+      additionalClasses="sprk-c-Icon--xl"
     >
     </sprk-icon>
   `,

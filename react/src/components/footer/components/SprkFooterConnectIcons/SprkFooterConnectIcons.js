@@ -43,11 +43,11 @@ class SprkFooterConnectIcons extends Component {
                   >
                     <SprkIcon
                       iconName={name}
-                      additionalClasses={`sprk-c-Footer__icon ${
-                        addClasses
-                      }`}
+                      additionalClasses={`sprk-c-Footer__icon sprk-c-Icon--xl ${addClasses}`}
                     />
-                    <span className="sprk-u-ScreenReaderText">{screenReaderText}</span>
+                    <span className="sprk-u-ScreenReaderText">
+                      {screenReaderText}
+                    </span>
                   </TagName>
                 </li>
               );

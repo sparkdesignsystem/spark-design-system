@@ -672,6 +672,7 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
+                    sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
                   "
                   viewBox="0 0 100 100"

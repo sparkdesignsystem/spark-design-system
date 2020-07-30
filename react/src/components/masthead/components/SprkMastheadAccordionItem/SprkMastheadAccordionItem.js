@@ -130,7 +130,10 @@ class SprkMastheadAccordionItem extends Component {
             >
               {leadingIcon && (
                 <SprkIcon
-                  additionalClasses="sprk-c-Icon--filled-current-color sprk-u-mrs"
+                  additionalClasses="
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--xl
+                    sprk-u-mrs"
                   iconName={leadingIcon}
                 />
               )}

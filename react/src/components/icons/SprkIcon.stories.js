@@ -40,7 +40,9 @@ communicate the Icon’s meaning.
   },
 };
 
-export const defaultStory = () => <SprkIcon iconName="access" />;
+export const defaultStory = () => (
+  <SprkIcon iconName="access" additionalClasses="sprk-c-Icon--xl" />
+);
 
 defaultStory.story = {
   name: 'Default',

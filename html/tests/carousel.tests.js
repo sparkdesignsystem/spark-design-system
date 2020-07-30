@@ -26,7 +26,8 @@ describe('Carousel tests', () => {
           <span class="sprk-c-Carousel__prev sprk-o-Stack__item">
             <svg class="
               sprk-c-Icon
-              sprk-c-Icon--filled-current-color"
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--xl"
               viewBox="0 0 100 100">
               <use xlink:href="#chevron-left-circle" />
             </svg>
@@ -54,7 +55,8 @@ describe('Carousel tests', () => {
           <span class="sprk-c-Carousel__next sprk-o-Stack__item">
             <svg class="
               sprk-c-Icon
-              sprk-c-Icon--filled-current-color"
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--xl"
               viewBox="0 0 100 100">
               <use xlink:href="#chevron-right-circle" />
             </svg>
