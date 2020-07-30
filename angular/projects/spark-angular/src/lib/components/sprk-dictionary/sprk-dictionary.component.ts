@@ -18,7 +18,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SprkDictionaryComponent implements OnInit {
   /**
-   * The collection of key-value pairs to be rendered into the component.
+   * Deprecated - Use `keyValuePairs` instead. The collection of key-value
+   * pairs to be rendered into the component.
    */
   @Input()
   data: object = {};
@@ -28,9 +29,9 @@ export class SprkDictionaryComponent implements OnInit {
   @Input()
   keyValuePairs: object = {};
   /**
-   * Determines the variant of the dictionary component to render. The only
-   * available option is `striped`. Supplying no value will cause the base
-   * variant to be used.
+   * Deprecated - Use `variant` instead.  Determines the variant of the
+   * dictionary component to render. The only available option is `striped`.
+   * Supplying no value will cause the base variant to be used.
    */
   @Input()
   dictionaryType: string;
@@ -47,12 +48,14 @@ export class SprkDictionaryComponent implements OnInit {
   @Input()
   additionalClasses: string;
   /**
-   * Expects a space separated string of classes to be added to the TODO.
+   * Expects a space separated string of classes to be added to each key
+   * element.
    */
   @Input()
   additionalKeysClasses: string;
   /**
-   * Expects a space separated string of classes to be added to the TODO.
+   * Expects a space separated string of classes to be added to each value
+   * element.
    */
   @Input()
   additionalValuesClasses: string;
@@ -122,6 +125,9 @@ export class SprkDictionaryComponent implements OnInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   isEmpty = (obj) => {
     return Object.keys(obj).length === 0;
   };
