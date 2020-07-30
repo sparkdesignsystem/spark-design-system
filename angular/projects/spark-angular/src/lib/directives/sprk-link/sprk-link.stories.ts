@@ -94,17 +94,15 @@ simple.story = {
 export const light = () => ({
   moduleMetadata: modules,
   template: `
-    <div sprkBox [ngStyle]="{'background-color':'#1c1b1a'}">
-      <a
-        sprkLink
-        href="#"
-        variant="light"
-        idString="light-link"
-        analyticsString="light-link"
-      >
-        Light Link
-      </a>
-    </div>
+    <a
+      sprkLink
+      href="#"
+      variant="light"
+      idString="light-link"
+      analyticsString="light-link"
+    >
+      Light Link
+    </a>
   `,
 });
 
@@ -112,6 +110,12 @@ light.story = {
   parameters: {
     jest: ['sprk-link.directive'],
   },
+  decorators: [
+    storyWrapper(
+      (storyContent) =>
+        `<div class="sprk-o-Box sprk-u-BackgroundColor--black sprk-u-pas">${storyContent}<div>`,
+    ),
+  ],
 };
 
 export const iconWithTextLink = () => ({
@@ -211,18 +215,16 @@ disabledSimple.story = {
 export const disabledLight = () => ({
   moduleMetadata: modules,
   template: `
-    <div sprkBox [ngStyle]="{'background-color':'#1c1b1a'}">
-      <a
-        isDisabled="true"
-        sprkLink
-        href="#"
-        variant="light"
-        idString="disabled-light-link"
-        analyticsString="disabled-light-link"
-      >
-        Disabled Link
-      </a>
-    </div>
+    <a
+      isDisabled="true"
+      sprkLink
+      href="#"
+      variant="light"
+      idString="disabled-light-link"
+      analyticsString="disabled-light-link"
+    >
+      Disabled Link
+    </a>
   `,
 });
   
@@ -231,6 +233,12 @@ disabledLight.story = {
   parameters: {
     jest: ['sprk-link.directive'],
   },
+  decorators: [
+    storyWrapper(
+      (storyContent) =>
+        `<div class="sprk-o-Box sprk-u-BackgroundColor--black sprk-u-pas">${storyContent}<div>`,
+    ),
+  ],
 };
 
 export const disabledIconWithTextLink = () => ({

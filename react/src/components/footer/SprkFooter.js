@@ -85,7 +85,7 @@ class SprkFooter extends Component {
                         sprk-o-Stack
                         sprk-o-Stack--large"
                     >
-                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
                         {column.heading}
                       </h3>
 
@@ -141,7 +141,7 @@ class SprkFooter extends Component {
               && paragraphsHasIds.map(p => (
                 <p
                   key={p.id}
-                  className="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type"
+                  className="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text"
                 >
                   {p.text}
                 </p>

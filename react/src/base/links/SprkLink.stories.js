@@ -40,17 +40,25 @@ export const simple = () => (
 );
 
 export const light = () => (
-  <SprkBox style={{ backgroundColor: '#1c1b1a' }}>
-    <SprkLink
-      variant="light"
-      analyticsString="link-light"
-      idString="link-3"
-      href="#nogo"
-    >
-      Light Link
-    </SprkLink>
-  </SprkBox>
+  <SprkLink
+    variant="light"
+    analyticsString="link-light"
+    idString="link-3"
+    href="#nogo"
+  >
+    Light Link
+  </SprkLink>
 );
+
+light.story = {
+  decorators: [
+    (storyFn) => (
+      <SprkBox className="sprk-u-BackgroundColor--black sprk-u-pas">
+        {storyFn()}
+      </SprkBox>
+    ),
+  ],
+};
 
 export const iconWithTextLink = () => (
   <>
@@ -123,21 +131,26 @@ disabledSimple.story = {
 };
 
 export const disabledLight = () => (
-  <SprkBox style={{ backgroundColor: '#1c1b1a' }}>
-    <SprkLink
-      variant="disabled"
-      analyticsString="link-light"
-      idString="link-3"
-      href="#nogo"
-      additionalClasses="sprk-b-Link--light"
-    >
-      Disabled Link
-    </SprkLink>
-  </SprkBox>
+  <SprkLink
+    variant="disabled"
+    analyticsString="link-light"
+    idString="link-3"
+    href="#nogo"
+    additionalClasses="sprk-b-Link--light"
+  >
+    Disabled Link
+  </SprkLink>
 );
 
 disabledLight.story = {
   name: 'Disabled - Light',
+  decorators: [
+    (storyFn) => (
+      <SprkBox className="sprk-u-BackgroundColor--black sprk-u-pas">
+        {storyFn()}
+      </SprkBox>
+    ),
+  ],
 };
 
 export const disabledIconWithTextLink = () => (

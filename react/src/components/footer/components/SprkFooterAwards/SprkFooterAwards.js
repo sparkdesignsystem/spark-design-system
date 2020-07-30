@@ -48,10 +48,10 @@ class SprkFooterAwards extends Component {
           iconAddClasses="sprk-c-Footer__icon"
           toggleIconName="chevron-down-circle"
           title={awards.disclaimerTitle}
-          titleAddClasses="sprk-b-TypeBodyFour sprk-u-FontWeight--normal sprk-c-Footer__type"
+          titleAddClasses="sprk-b-TypeBodyFour sprk-u-FontWeight--normal sprk-c-Footer__text"
           analyticsString={awards.disclaimerAnalytics}
         >
-          <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs sprk-c-Footer__type">{awards.disclaimerText}</p>
+          <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs sprk-c-Footer__text">{awards.disclaimerText}</p>
         </SprkToggle>
       </div>
     );

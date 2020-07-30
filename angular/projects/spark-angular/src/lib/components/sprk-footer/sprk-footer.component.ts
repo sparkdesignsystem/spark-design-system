@@ -25,7 +25,7 @@ import {
             *ngIf="globalLinks"
             class="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh"
           >
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
               {{ globalHeading }}
             </h3>
 
@@ -57,7 +57,7 @@ import {
                 </a>
               </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type">
+              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
                 {{ item.text }}
               </p>
             </div>
@@ -74,7 +74,7 @@ import {
                 *ngFor="let item of localLinks"
                 class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large"
               >
-                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
                   {{ item.heading }}
                 </h3>
 
@@ -103,7 +103,7 @@ import {
               *ngIf="socialLinks"
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box"
             >
-              <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+              <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
                 {{ connectHeading }}
               </h3>
 
@@ -159,7 +159,7 @@ import {
             *ngIf="awards"
             class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large"
           >
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
               {{ awardsHeading }}
             </h3>
 
@@ -192,9 +192,9 @@ import {
                 title="{{ toggle.title }}"
                 analyticsString="{{ toggle.analytics || toggle.analyticsString }}"
                 iconClass="sprk-c-Footer__icon"
-                titleFontClass="sprk-b-TypeBodyFour sprk-c-Footer__type"
+                titleFontClass="sprk-b-TypeBodyFour sprk-c-Footer__text"
               >
-                <p class="sprk-b-TypeBodyFour sprk-c-Footer__type">{{ toggle.body }}</p>
+                <p class="sprk-b-TypeBodyFour sprk-c-Footer__text">{{ toggle.body }}</p>
               </sprk-toggle>
             </div>
           </div>
@@ -205,7 +205,7 @@ import {
           >
             <p
               *ngFor="let disclaimer of disclaimerText"
-              class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type"
+              class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text"
             >
               {{ disclaimer.text }}
             </p>

@@ -48,17 +48,24 @@ export const simple = () =>
 
 export const light = () =>
   `
-    <div class="sprk-o-Box" style="background-color: #1C1B1A"> 
-      <a
-        class="sprk-b-Link sprk-b-Link--light"
-        href="#nogo"
-        data-id="link-3"
-        data-analytics="object.action.event"
-      >
-        Light Link
-      </a>
-    </div> 
+    <a
+      class="sprk-b-Link sprk-b-Link--light"
+      href="#nogo"
+      data-id="link-3"
+      data-analytics="object.action.event"
+    >
+      Light Link
+    </a>
   `;
+
+light.story = {
+  decorators: [
+    (story) =>
+      `<div class="sprk-o-Box sprk-u-BackgroundColor--black sprk-u-pas">
+        ${story()}
+      </div>`,
+  ],
+};
 
 export const iconWithTextLink = () =>
   `
@@ -136,22 +143,25 @@ disabledSimple.story = {
 
 export const disabledLight = () =>
   `
-    <div class="sprk-o-Box" style="background-color: #1C1B1A"> 
-      <a
-        class="sprk-b-Link sprk-b-Link--light sprk-b-Link--disabled"
-        href="#nogo"
-        data-id="link-8"
-        data-analytics="object.action.event"
-      >
-        Disabled Link
-      </a>
-    </div>
+    <a
+      class="sprk-b-Link sprk-b-Link--light sprk-b-Link--disabled"
+      href="#nogo"
+      data-id="link-8"
+      data-analytics="object.action.event"
+    >
+      Disabled Link
+    </a>
   `;
 
 disabledLight.story = {
   name: 'Disabled - Light',
+  decorators: [
+    (story) =>
+      `<div class="sprk-o-Box sprk-u-BackgroundColor--black sprk-u-pas">
+        ${story()}
+      </div>`,
+  ],
 };
-
 
 export const disabledIconWithTextLink = () =>
   `

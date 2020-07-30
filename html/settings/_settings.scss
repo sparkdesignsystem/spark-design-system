@@ -136,8 +136,8 @@ $sprk-flag-stacked-breakpoint: 25em !default;
 
 /// Background color of the Footer.
 $sprk-footer-background-color: $sprk-black !default;
-/// Type color on the Footer.
-$sprk-footer-type-color: $sprk-white !default;
+/// Text color on the Footer.
+$sprk-footer-text-color: $sprk-white !default;
 /// Link color on the Footer.
 $sprk-footer-link-color: $sprk-white !default;
 /// Icon color on the Footer.
@@ -718,6 +718,8 @@ $sprk-btn-quaternary-background-color: transparent !default;
 $sprk-btn-quaternary-border-color: $sprk-black-tint-50 !default;
 /// The text color of the Quaternary Button component.
 $sprk-btn-quaternary-text-color: $sprk-black !default;
+/// The box-shadow of the Quaternary Button component.
+$sprk-btn-quaternary-box-shadow: none !default;
 /// The border color of the Quaternary Button component on hover.
 $sprk-btn-quaternary-hover-border-color: $sprk-black !default;
 /// The text color of the Quaternary Button component on hover.

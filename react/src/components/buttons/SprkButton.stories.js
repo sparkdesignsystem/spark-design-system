@@ -114,13 +114,13 @@ export const disabledQuaternary = () => (
   </SprkButton>
 );
 
-export const loading = () => (
+export const spinning = () => (
   <SprkButton loading idString="button-9" analyticsString="button-9-analytics">
     Button
   </SprkButton>
 );
 
-export const loadingSecondary = () => (
+export const spinningSecondary = () => (
   <SprkButton
     loading
     variant="secondary"
@@ -131,7 +131,7 @@ export const loadingSecondary = () => (
   </SprkButton>
 );
 
-export const loadingTertiary = () => (
+export const spinningTertiary = () => (
   <SprkButton
     loading
     variant="tertiary"
@@ -142,7 +142,7 @@ export const loadingTertiary = () => (
   </SprkButton>
 );
 
-export const loadingQuaternary = () => (
+export const spinningQuaternary = () => (
   <SprkButton
     loading
     variant="quaternary"

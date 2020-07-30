@@ -35,7 +35,7 @@ export const defaultStory = () => {
       >
         <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
           <div class="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh">
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
               Our Sister Companies
             </h3>
 
@@ -46,7 +46,7 @@ export const defaultStory = () => {
                 </a>
               </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type">
+              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
                 Buy a home, refinance, or manage your mortgage online with
                 America's largest mortgage lender
               </p>
@@ -59,7 +59,7 @@ export const defaultStory = () => {
                 </a>
               </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type">
+              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
                 Get a personal loan to consolidate debt, renovate
                 your home and more
               </p>
@@ -72,7 +72,7 @@ export const defaultStory = () => {
                 </a>
               </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type">
+              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
                 Get a real estate agent handpicked for you and
                 search the latest home listings
               </p>
@@ -85,7 +85,7 @@ export const defaultStory = () => {
                 </a>
               </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type">
+              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
                 Access tools and articles that can help
                 you reach your financial goals
               </p>
@@ -95,7 +95,7 @@ export const defaultStory = () => {
           <div class="sprk-o-Stack__item sprk-o-Stack__item--seven-tenths@m sprk-o-Stack sprk-o-Stack--medium">
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
               <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large">
-                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
                   Site Links
                 </h3>
 
@@ -133,7 +133,7 @@ export const defaultStory = () => {
               </div>
 
               <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large">
-                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
                   Learn More
                 </h3>
 
@@ -165,7 +165,7 @@ export const defaultStory = () => {
               </div>
 
               <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large">
-                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
                   Support
                 </h3>
 
@@ -195,7 +195,7 @@ export const defaultStory = () => {
             </div>
 
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
-              <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+              <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
                 Connect With Us
               </h3>
 
@@ -246,7 +246,7 @@ export const defaultStory = () => {
 
         <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-PaddingTop--b">
           <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large" data-id="award-1">
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__type">
+            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
               Awards Heading Title
             </h3>
 
@@ -285,7 +285,7 @@ export const defaultStory = () => {
                 </button>
 
                 <div data-sprk-toggle="content">
-                  <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs sprk-c-Footer__type">
+                  <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs sprk-c-Footer__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
                     non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
                   </p>
@@ -294,18 +294,18 @@ export const defaultStory = () => {
             </div>
           </div>
 
-          <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type">
+          <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
             &#42;Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </p>
 
-          <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type">
+          <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
             Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
             Lorem ipsum dolor sit amet, consectetur.
           </p>
 
-          <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type">
+          <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
             &#42;&#42;Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
@@ -314,7 +314,7 @@ export const defaultStory = () => {
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </p>
 
-          <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__type">
+          <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
             Lorem ipsum dolor sit amet, consectetur.
           </p>
 

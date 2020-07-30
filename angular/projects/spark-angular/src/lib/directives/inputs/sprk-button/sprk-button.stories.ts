@@ -202,13 +202,13 @@ disabledQuaternary.story = {
   },
 };
 
-export const loading = () => {
+export const spinning = () => {
   return {
     moduleMetadata: modules,
     template: `
       <button
-        idString="button-loading"
-        analyticsString="loading"
+        idString="button-spinning"
+        analyticsString="spinning"
         sprkButton
         [isSpinning]="true"
       >
@@ -218,19 +218,19 @@ export const loading = () => {
   };
 };
 
-loading.story = {
+spinning.story = {
   parameters: {
     jest: ['sprk-button.directive'],
   },
 };
 
-export const loadingSecondary = () => {
+export const spinningSecondary = () => {
   return {
     moduleMetadata: modules,
     template: `
       <button
         variant="secondary"
-        idString="button-loading-secondary"
+        idString="button-spinning-secondary"
         sprkButton
         [isSpinning]="true"
       >
@@ -240,19 +240,19 @@ export const loadingSecondary = () => {
   };
 };
 
-loadingSecondary.story = {
+spinningSecondary.story = {
   parameters: {
     jest: ['sprk-button.directive'],
   },
 };
 
-export const loadingTertiary = () => {
+export const spinningTertiary = () => {
   return {
     moduleMetadata: modules,
     template: `
       <button
         variant="tertiary"
-        idString="button-loading-tertiary"
+        idString="button-spinning-tertiary"
         sprkButton
         [isSpinning]="true"
       >
@@ -262,19 +262,19 @@ export const loadingTertiary = () => {
   };
 };
 
-loadingTertiary.story = {
+spinningTertiary.story = {
   parameters: {
     jest: ['sprk-button.directive'],
   },
 };
 
-export const loadingQuaternary = () => {
+export const spinningQuaternary = () => {
   return {
     moduleMetadata: modules,
     template: `
       <button
         variant="quaternary"
-        idString="button-loading-quaternary"
+        idString="button-spinning-quaternary"
         sprkButton
         [isSpinning]="true"
       >
@@ -284,7 +284,7 @@ export const loadingQuaternary = () => {
   };
 };
 
-loadingQuaternary.story = {
+spinningQuaternary.story = {
   parameters: {
     jest: ['sprk-button.directive'],
   },

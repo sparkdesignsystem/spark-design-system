@@ -122,7 +122,7 @@ export const disabledQuaternary = () =>
   </button>
   `;
 
-export const loading = () =>
+export const spinning = () =>
   `
   <button
     class="sprk-c-Button"
@@ -134,13 +134,13 @@ export const loading = () =>
   </button>
   `;
 
-loading.story = {
+spinning.story = {
   parameters: {
     jest: ['spinners'],
   },
 };
 
-export const loadingSecondary = () =>
+export const spinningSecondary = () =>
   `
   <button
     class="sprk-c-Button sprk-c-Button--secondary"
@@ -152,13 +152,13 @@ export const loadingSecondary = () =>
   </button>
   `;
 
-loadingSecondary.story = {
+spinningSecondary.story = {
   parameters: {
     jest: ['spinners'],
   },
 };
 
-export const loadingTertiary = () =>
+export const spinningTertiary = () =>
   `
   <button
     class="sprk-c-Button sprk-c-Button--tertiary"
@@ -173,13 +173,13 @@ export const loadingTertiary = () =>
   </button>
   `;
 
-loadingTertiary.story = {
+spinningTertiary.story = {
   parameters: {
     jest: ['spinners'],
   },
 };
 
-export const loadingQuaternary = () =>
+export const spinningQuaternary = () =>
   `
   <button
     class="sprk-c-Button sprk-c-Button--quaternary"
@@ -194,7 +194,7 @@ export const loadingQuaternary = () =>
   </button>
   `;
 
-loadingQuaternary.story = {
+spinningQuaternary.story = {
   parameters: {
     jest: ['spinners'],
   },

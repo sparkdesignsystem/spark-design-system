@@ -125,7 +125,7 @@
 /// Styles the button as the quaternary variant.
 .sprk-c-Button--quaternary {
   background-color: $sprk-btn-quaternary-background-color;
-  box-shadow: none;
+  box-shadow: $sprk-btn-quaternary-box-shadow;
   border: $sprk-btn-border-width $sprk-btn-border-style
     $sprk-btn-quaternary-border-color;
   color: $sprk-btn-quaternary-text-color;
