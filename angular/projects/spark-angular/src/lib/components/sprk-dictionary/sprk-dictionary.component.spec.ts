@@ -67,12 +67,48 @@ describe('SprkAngularDictionaryComponent', () => {
     });
   });
 
-  it('should correctly add striped class with deprecated Input', () => {
-    component.dictionaryType = 'striped';
+  it('should correctly add striped class', () => {
+    component.variant = 'striped';
+
     fixture.detectChanges();
 
     expect(element.classList.toString()).toContain(
       'sprk-c-Dictionary--striped',
     );
+  });
+
+  it('should correctly add striped class with deprecated Input', () => {
+    component.dictionaryType = 'striped';
+    component.ngOnInit();
+    fixture.detectChanges();
+
+    expect(element.classList.toString()).toContain(
+      'sprk-c-Dictionary--striped',
+    );
+  });
+
+  it('should add data correctly', () => {
+    component.keyValuePairs = { key1: 'value1', key2: 'value2' };
+    fixture.detectChanges();
+
+    expect(
+      element.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(2);
+    expect(
+      element.getElementsByClassName('sprk-c-Dictionary__value').length,
+    ).toBe(2);
+  });
+
+  it('should add data correctly with deprecated Input', () => {
+    component.data = { key1: 'value1', key2: 'value2' };
+    component.ngOnInit();
+    fixture.detectChanges();
+
+    expect(
+      element.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(2);
+    expect(
+      element.getElementsByClassName('sprk-c-Dictionary__value').length,
+    ).toBe(2);
   });
 });
