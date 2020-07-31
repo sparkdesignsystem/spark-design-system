@@ -2,6 +2,8 @@ import React from 'react';
 import SprkLink from './SprkLink';
 import SprkIcon from '../../components/icons/SprkIcon';
 import SprkBox from '../../objects/box/SprkBox';
+import SprkStack from '../../objects/stack/SprkStack';
+import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -62,40 +64,44 @@ light.story = {
 
 export const iconWithTextLink = () => (
   <>
-    <div>
-      <SprkLink
-        analyticsString="link-icon"
-        href="#nogo"
-        variant="has-icon"
-        idString="link-3"
-      >
-        <SprkIcon
-          additionalClasses="
-            sprk-c-Icon--xl
-            sprk-u-mrs
-            sprk-c-Icon--filled-current-color"
-          iconName="arrow-left"
-        />
-        Back
-      </SprkLink>
-    </div>
-    <div>
-      <SprkLink
-        analyticsString="link-icon"
-        href="#nogo"
-        variant="has-icon"
-        idString="link-4"
-      >
-        Forward
-        <SprkIcon
-          additionalClasses="
-            sprk-c-Icon--xl
-            sprk-u-mls
-            sprk-c-Icon--filled-current-color"
-          iconName="arrow-right"
-        />
-      </SprkLink>
-    </div>
+    <SprkStack>
+      <SprkStackItem>
+        <SprkLink
+          analyticsString="link-icon"
+          href="#nogo"
+          variant="has-icon"
+          idString="link-3"
+        >
+          <SprkIcon
+            additionalClasses="
+              sprk-c-Icon--xl
+              sprk-u-mrs
+              sprk-c-Icon--filled-current-color"
+            iconName="arrow-left"
+          />
+          Back
+        </SprkLink>
+      </SprkStackItem>
+    </SprkStack>
+    <SprkStack>
+      <SprkStackItem>
+        <SprkLink
+          analyticsString="link-icon"
+          href="#nogo"
+          variant="has-icon"
+          idString="link-4"
+        >
+          Forward
+          <SprkIcon
+            additionalClasses="
+              sprk-c-Icon--xl
+              sprk-u-mls
+              sprk-c-Icon--filled-current-color"
+            iconName="arrow-right"
+          />
+        </SprkLink>
+      </SprkStackItem>
+    </SprkStack>
   </>
 );
 
@@ -155,42 +161,46 @@ disabledLight.story = {
 
 export const disabledIconWithTextLink = () => (
   <>
-    <div>
-      <SprkLink
-        analyticsString="link-icon"
-        href="#nogo"
-        variant="disabled"
-        idString="link-7"
-        additionalClasses="sprk-b-Link--has-icon"
-      >
-        <SprkIcon
-          additionalClasses="
-            sprk-c-Icon--xl
-            sprk-u-mrs
-            sprk-c-Icon--filled-current-color"
-          iconName="arrow-left"
-        />
-        Back
-      </SprkLink>
-    </div>
-    <div>
-      <SprkLink
-        analyticsString="link-icon"
-        href="#nogo"
-        variant="disabled"
-        idString="link-8"
-        additionalClasses="sprk-b-Link--has-icon"
-      >
-        Forward
-        <SprkIcon
-          additionalClasses="
-            sprk-c-Icon--xl
-            sprk-u-mls
-            sprk-c-Icon--filled-current-color"
-          iconName="arrow-right"
-        />
-      </SprkLink>
-    </div>
+    <SprkStack>
+      <SprkStackItem>
+        <SprkLink
+          analyticsString="link-icon"
+          href="#nogo"
+          variant="disabled"
+          idString="link-7"
+          additionalClasses="sprk-b-Link--has-icon"
+        >
+          <SprkIcon
+            additionalClasses="
+              sprk-c-Icon--xl
+              sprk-u-mrs
+              sprk-c-Icon--filled-current-color"
+            iconName="arrow-left"
+          />
+          Back
+        </SprkLink>
+      </SprkStackItem>
+    </SprkStack>
+    <SprkStack>
+      <SprkStackItem>
+        <SprkLink
+          analyticsString="link-icon"
+          href="#nogo"
+          variant="disabled"
+          idString="link-8"
+          additionalClasses="sprk-b-Link--has-icon"
+        >
+          Forward
+          <SprkIcon
+            additionalClasses="
+              sprk-c-Icon--xl
+              sprk-u-mls
+              sprk-c-Icon--filled-current-color"
+            iconName="arrow-right"
+          />
+        </SprkLink>
+      </SprkStackItem>
+    </SprkStack>
   </>
 );
 

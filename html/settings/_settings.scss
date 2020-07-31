@@ -846,6 +846,8 @@ $sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
 /// The color value for Links with icons in the hover state.
 $sprk-link-has-icon-hover-color-text: $sprk-deep-purple !default;
+/// The fill color for icons contained in Links on hover.
+$sprk-link-has-icon-hover-fill: $sprk-link-has-icon-hover-color-text !default;
 /// The border settings for Plain Links.
 $sprk-link-plain-border: none !default;
 /// The border settings for Plain Links in the visited state

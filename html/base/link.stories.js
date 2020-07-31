@@ -69,47 +69,51 @@ light.story = {
 
 export const iconWithTextLink = () =>
   `
-    <div>
-      <a
-        class="sprk-b-Link sprk-b-Link--has-icon"
-        href="#nogo"
-        data-id="link-4"
-        data-analytics="object.action.event"
-      >
-        <svg
-          class="
-            sprk-c-Icon
-            sprk-c-Icon--xl
-            sprk-u-mrs
-            sprk-c-Icon--filled-current-color
-          "
-          viewBox="0 0 100 100"
+    <div class="sprk-o-Stack">
+      <div class="sprk-o-Stack__item">
+        <a
+          class="sprk-b-Link sprk-b-Link--has-icon"
+          href="#nogo"
+          data-id="link-4"
+          data-analytics="object.action.event"
         >
-          <use xlink:href="#arrow-left" />
-        </svg>
+          <svg
+            class="
+              sprk-c-Icon
+              sprk-c-Icon--xl
+              sprk-u-mrs
+              sprk-c-Icon--filled-current-color
+            "
+            viewBox="0 0 100 100"
+          >
+            <use xlink:href="#arrow-left" />
+          </svg>
 
-        Back
-      </a>
+          Back
+        </a>
+      </div>
     </div>
-    <div>
-      <a
-        class="sprk-b-Link sprk-b-Link--has-icon"
-        href="#nogo"
-        data-id="link-5"
-        data-analytics="object.action.event"
-      >
-        Forward
-        <svg
-          class="
-            sprk-c-Icon
-            sprk-c-Icon--xl
-            sprk-u-mls
-            sprk-c-Icon--filled-current-color
-          "
-          viewBox="0 0 100 100">
-          <use xlink:href="#arrow-right" />
-        </svg>
-      </a>
+    <div class="sprk-o-Stack">
+      <div class="sprk-o-Stack__item">
+        <a
+          class="sprk-b-Link sprk-b-Link--has-icon"
+          href="#nogo"
+          data-id="link-5"
+          data-analytics="object.action.event"
+        >
+          Forward
+          <svg
+            class="
+              sprk-c-Icon
+              sprk-c-Icon--xl
+              sprk-u-mls
+              sprk-c-Icon--filled-current-color
+            "
+            viewBox="0 0 100 100">
+            <use xlink:href="#arrow-right" />
+          </svg>
+        </a>
+      </div>
     </div>
   `;
 
@@ -165,47 +169,51 @@ disabledLight.story = {
 
 export const disabledIconWithTextLink = () =>
   `
-    <div>
-      <a
-        class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
-        href="#nogo"
-        data-id="link-9"
-        data-analytics="object.action.event"
-      >
-        <svg
-          class="
-            sprk-c-Icon
-            sprk-c-Icon--xl
-            sprk-u-mrs
-            sprk-c-Icon--filled-current-color
-          "
-          viewBox="0 0 100 100"
+    <div class="sprk-o-Stack">
+      <div class="sprk-o-Stack__item">
+        <a
+          class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
+          href="#nogo"
+          data-id="link-9"
+          data-analytics="object.action.event"
         >
-          <use xlink:href="#arrow-left" />
-        </svg>
+          <svg
+            class="
+              sprk-c-Icon
+              sprk-c-Icon--xl
+              sprk-u-mrs
+              sprk-c-Icon--filled-current-color
+            "
+            viewBox="0 0 100 100"
+          >
+            <use xlink:href="#arrow-left" />
+          </svg>
 
-        Back
-      </a>
+          Back
+        </a>
+      </div>
     </div>
-    <div>
-      <a
-        class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
-        href="#nogo"
-        data-id="link-10"
-        data-analytics="object.action.event"
-      >
-        Forward
-        <svg
-          class="
-            sprk-c-Icon
-            sprk-c-Icon--xl
-            sprk-u-mls
-            sprk-c-Icon--filled-current-color
-          "
-          viewBox="0 0 100 100">
-          <use xlink:href="#arrow-right" />
-        </svg>
-      </a>
+    <div class="sprk-o-Stack">
+      <div class="sprk-o-Stack__item">
+        <a
+          class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
+          href="#nogo"
+          data-id="link-10"
+          data-analytics="object.action.event"
+        >
+          Forward
+          <svg
+            class="
+              sprk-c-Icon
+              sprk-c-Icon--xl
+              sprk-u-mls
+              sprk-c-Icon--filled-current-color
+            "
+            viewBox="0 0 100 100">
+            <use xlink:href="#arrow-right" />
+          </svg>
+        </a>
+      </div>
     </div>
   `;
 
