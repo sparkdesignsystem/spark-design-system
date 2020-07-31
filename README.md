@@ -100,7 +100,7 @@ JavaScript to ensure maintainability and scalability.
 * Data attributes on DOM elements is the chosen method for DOM selection.
 
 #### React and Angular
-* For `additionalClasses` properties use the naming convention `elementAddtionalClasses`
+* For `additionalClasses` properties use the naming convention `elementAddtionalClasses` for other elements that we offer additional classes support on besides the main element.
 
 ### Change Workflow
 
