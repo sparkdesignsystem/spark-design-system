@@ -48,7 +48,7 @@ describe('SprkAngularDictionaryComponent', () => {
     component.keyValuePairs = { key: 'value', key2: 'value2' };
     fixture.detectChanges();
 
-    let keys = element.getElementsByClassName('sprk-c-Dictionary__key');
+    const keys = element.getElementsByClassName('sprk-c-Dictionary__key');
 
     Array.prototype.forEach.call(keys, (key) => {
       expect(key.classList.toString()).toContain('keysClass');
@@ -60,7 +60,7 @@ describe('SprkAngularDictionaryComponent', () => {
     component.keyValuePairs = { key: 'value', key2: 'value2' };
     fixture.detectChanges();
 
-    let values = element.getElementsByClassName('sprk-c-Dictionary__value');
+    const values = element.getElementsByClassName('sprk-c-Dictionary__value');
 
     Array.prototype.forEach.call(values, (value) => {
       expect(value.classList.toString()).toContain('valuesClass');
