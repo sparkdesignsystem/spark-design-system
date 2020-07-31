@@ -52,13 +52,13 @@ export class SprkDictionaryComponent implements OnInit {
    * element.
    */
   @Input()
-  additionalKeysClasses: string;
+  keysAdditionalClasses: string;
   /**
    * Expects a space separated string of classes to be added to each value
    * element.
    */
   @Input()
-  additionalValuesClasses: string;
+  valuesAdditionalClasses: string;
   /**
    * The value supplied will be assigned to the `data-id` attribute on the
    * component. This is intended to be used as a selector for automated tools.
@@ -101,8 +101,8 @@ export class SprkDictionaryComponent implements OnInit {
       'sprk-b-Label--no-input',
     ];
 
-    if (this.additionalKeysClasses) {
-      this.additionalKeysClasses.split(' ').forEach((className) => {
+    if (this.keysAdditionalClasses) {
+      this.keysAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -116,8 +116,8 @@ export class SprkDictionaryComponent implements OnInit {
   getValuesClasses(): string {
     const classArray: string[] = ['sprk-c-Dictionary__value'];
 
-    if (this.additionalValuesClasses) {
-      this.additionalValuesClasses.split(' ').forEach((className) => {
+    if (this.valuesAdditionalClasses) {
+      this.valuesAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }

@@ -43,8 +43,8 @@ describe('SprkAngularDictionaryComponent', () => {
     expect(element.classList.toString()).toContain('design');
   });
 
-  it('should add additionalKeysClasses', () => {
-    component.additionalKeysClasses = 'keysClass';
+  it('should add keysAdditionalClasses', () => {
+    component.keysAdditionalClasses = 'keysClass';
     component.keyValuePairs = { key: 'value', key2: 'value2' };
     fixture.detectChanges();
 
@@ -55,8 +55,8 @@ describe('SprkAngularDictionaryComponent', () => {
     });
   });
 
-  it('should add additionalValuesClasses', () => {
-    component.additionalValuesClasses = 'valuesClass';
+  it('should add valuesAdditionalClasses', () => {
+    component.valuesAdditionalClasses = 'valuesClass';
     component.keyValuePairs = { key: 'value', key2: 'value2' };
     fixture.detectChanges();
 

@@ -10,8 +10,8 @@ const SprkDictionary = (props) => {
     variant,
     idString,
     additionalClasses,
-    additionalKeysClasses,
-    additionalValuesClasses,
+    keysAdditionalClasses,
+    valuesAdditionalClasses,
     ...other
   } = props;
 
@@ -23,12 +23,12 @@ const SprkDictionary = (props) => {
     'sprk-c-Dictionary__key',
     'sprk-b-Label',
     'sprk-b-Label--no-input',
-    additionalKeysClasses,
+    keysAdditionalClasses,
   );
 
   const valuesClassNames = classnames(
     'sprk-c-Dictionary__value',
-    additionalValuesClasses,
+    valuesAdditionalClasses,
   );
 
   const keyValuePairsMap = Object.keys(keyValuePairs).map((term) => (
@@ -66,12 +66,12 @@ SprkDictionary.propTypes = {
    * Expects a space separated string of classes to be added to each key
    * element.
    */
-  additionalKeysClasses: PropTypes.string,
+  keysAdditionalClasses: PropTypes.string,
   /**
    * Expects a space separated string of classes to be added to each value
    * element.
    */
-  additionalValuesClasses: PropTypes.string,
+  valuesAdditionalClasses: PropTypes.string,
   /**
    * Expects a space separated string of classes to be added to the component.
    */

@@ -84,7 +84,7 @@ describe('SprkDictionary:', () => {
     expect(wrapper.find('div.sprk-c-Dictionary').hasClass('asdf')).toBe(true);
   });
 
-  it('should add additionalKeysClasses', () => {
+  it('should add keysAdditionalClasses', () => {
     const testKeyValuePairs = {
       'Email Address': 'sparkdesignsystem@quickenloans.com',
       'Mailing Address': '123 Main Street, Detroit, MI, 48216',
@@ -96,7 +96,7 @@ describe('SprkDictionary:', () => {
     const wrapper = shallow(
       <SprkDictionary
         keyValuePairs={testKeyValuePairs}
-        additionalKeysClasses="asdf"
+        keysAdditionalClasses="asdf"
       />,
     );
 
@@ -105,7 +105,7 @@ describe('SprkDictionary:', () => {
     });
   });
 
-  it('should add additionalValuesClasses', () => {
+  it('should add valuesAdditionalClasses', () => {
     const testKeyValuePairs = {
       'Email Address': 'sparkdesignsystem@quickenloans.com',
       'Mailing Address': '123 Main Street, Detroit, MI, 48216',
@@ -117,7 +117,7 @@ describe('SprkDictionary:', () => {
     const wrapper = shallow(
       <SprkDictionary
         keyValuePairs={testKeyValuePairs}
-        additionalValuesClasses="asdf"
+        valuesAdditionalClasses="asdf"
       />,
     );
 
