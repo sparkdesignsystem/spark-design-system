@@ -271,4 +271,21 @@ describe('SprkTooltip:', () => {
       expect(myMock.mock.calls.length).toBe(2);
     },
   );
+
+  it('should use the deprecated icon property if it has a value', () => {
+    const wrapper = mount(
+      <SprkTooltip
+        // deprecated prop
+        triggerIconType="access"
+        // new prop
+        triggerIconName="message"
+      />,
+    );
+
+    expect(
+      wrapper.find('use').filterWhere((item) => {
+        return item.prop('xlinkHref') === '#access';
+      }).length,
+    ).toBe(1);
+  });
 });

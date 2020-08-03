@@ -126,6 +126,7 @@ class SprkTooltip extends Component {
       children,
       idString,
       triggerIconType,
+      triggerIconName,
       iconAdditionalClasses,
       additionalClasses,
       analyticsString,
@@ -135,6 +136,15 @@ class SprkTooltip extends Component {
     } = this.props;
 
     const { isToggled, position } = this.state;
+
+    let iconName = '';
+    if (triggerIconType !== 'question-filled') {
+      // Use the deprecated prop if it has a non-default value
+      iconName = triggerIconType;
+    } else {
+      // otherwise use the new prop, whether or not it has a non-default value
+      iconName = triggerIconName;
+    }
 
     return (
       <span {...other} className="sprk-c-Tooltip__container" data-id={idString}>
@@ -152,7 +162,7 @@ class SprkTooltip extends Component {
           data-analytics={analyticsString}
         >
           <SprkIcon
-            iconName={triggerIconType}
+            iconName={iconName}
             additionalClasses={iconAdditionalClasses}
           />
         </button>
@@ -175,6 +185,7 @@ class SprkTooltip extends Component {
 
 SprkTooltip.defaultProps = {
   triggerIconType: 'question-filled',
+  triggerIconName: 'question-filled',
   id: uniqueId('sprk_tooltip_'),
 };
 
@@ -210,9 +221,14 @@ SprkTooltip.propTypes = {
    */
   isDefaultOpen: PropTypes.bool,
   /**
-   * The icon to use for the trigger element.
+   * Deprecated - Use `triggerIconName` instead. The icon to use for the
+   * trigger element.
    */
   triggerIconType: PropTypes.string,
+  /**
+   * The icon to use for the trigger element.
+   */
+  triggerIconName: PropTypes.string,
   /**
    * A function to be called when the tooltip is toggled.
    */
