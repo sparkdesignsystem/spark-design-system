@@ -272,7 +272,7 @@ export const defaultStory = () => {
               <div data-sprk-toggle="container">
                 <button
                   class="
-                    sprk-c-Footer__link
+                    sprk-c-Footer__trigger
                     sprk-c-Toggle__trigger
                     sprk-c-Toggle__trigger--small
                   "

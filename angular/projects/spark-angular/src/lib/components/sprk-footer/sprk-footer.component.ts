@@ -192,7 +192,7 @@ import {
                 title="{{ toggle.title }}"
                 analyticsString="{{ toggle.analytics || toggle.analyticsString }}"
                 iconClass="sprk-c-Footer__icon"
-                titleFontClass="sprk-b-TypeBodyFour sprk-c-Footer__text"
+                titleFontClass="sprk-b-TypeBodyFour sprk-c-Footer__trigger"
               >
                 <p class="sprk-b-TypeBodyFour sprk-c-Footer__text">{{ toggle.body }}</p>
               </sprk-toggle>

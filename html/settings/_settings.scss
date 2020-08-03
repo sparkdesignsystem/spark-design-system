@@ -142,8 +142,12 @@ $sprk-footer-text-color: $sprk-white !default;
 $sprk-footer-link-color: $sprk-white !default;
 /// Icon color on the Footer.
 $sprk-footer-icon-color: $sprk-white !default;
-// Toggle hover color on the Footer.
-$sprk-footer-toggle-hover-color: $sprk-light-purple !default;
+// Toggle trigger color on the Footer.
+$sprk-footer-trigger-color: $sprk-white !default;
+// Toggle trigger hover color on the Footer.
+$sprk-footer-trigger-hover-color: $sprk-light-purple !default;
+// Toggle transition timing on the Footer.
+$sprk-footer-toggle-transition: 0.3s !default;
 
 //
 // Icons

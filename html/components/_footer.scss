@@ -21,3 +21,19 @@
   fill: $sprk-footer-icon-color;
   color: $sprk-footer-icon-color;
 }
+
+.sprk-c-Footer .sprk-c-Footer__trigger {
+  color: $sprk-footer-trigger-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sprk-footer-trigger-hover-color;
+    transition: $sprk-footer-toggle-transition;
+
+    .sprk-c-Footer__icon {
+      fill: $sprk-footer-trigger-hover-color;
+      transition: $sprk-footer-toggle-transition;
+    }
+  }
+}
