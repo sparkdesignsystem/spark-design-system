@@ -5,8 +5,8 @@ import { SprkCenteredColumnDirective } from './sprk-centered-column.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <div sprkCenteredColumn idString='asdf'></div>
-  `
+    <div sprkCenteredColumn idString="asdf" analyticsString="test"></div>
+  `,
 })
 class TestComponent {}
 
@@ -17,7 +17,7 @@ describe('Spark Centered Column Directive', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkCenteredColumnDirective, TestComponent]
+      declarations: [SprkCenteredColumnDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
@@ -37,5 +37,9 @@ describe('Spark Centered Column Directive', () => {
 
   it('should apply correct idString value to data-id', () => {
     expect(element.getAttribute('data-id') === 'asdf').toBe(true);
+  });
+
+  it('should add the value of analyticsString to data-analytics', () => {
+    expect(element.getAttribute('data-analytics')).toBe('test');
   });
 });

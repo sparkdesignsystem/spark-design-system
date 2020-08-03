@@ -12,12 +12,21 @@ describe('SprkCenteredColumn:', () => {
   });
 
   it('should add data-id correctly', () => {
-    const wrapper = shallow(<SprkCenteredColumn idString={'foo'} />);
-    expect(wrapper.find('div.sprk-o-CenteredColumn[data-id="foo"]').length).toBe(1);
-  })
+    const wrapper = shallow(<SprkCenteredColumn idString="foo" />);
+    expect(
+      wrapper.find('div.sprk-o-CenteredColumn[data-id="foo"]').length,
+    ).toBe(1);
+  });
+
+  it('should add data-analytics correctly', () => {
+    const wrapper = shallow(<SprkCenteredColumn analyticsString="foo" />);
+    expect(
+      wrapper.find('div.sprk-o-CenteredColumn[data-analytics="foo"]').length,
+    ).toBe(1);
+  });
 
   it('should render with a custom element correctly', () => {
-    const wrapper = shallow(<SprkCenteredColumn element={'main'} />);
+    const wrapper = shallow(<SprkCenteredColumn element="main" />);
     expect(wrapper.find('main.sprk-o-CenteredColumn').length).toBe(1);
-  })
+  });
 });
