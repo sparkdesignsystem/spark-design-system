@@ -142,6 +142,8 @@ $sprk-footer-text-color: $sprk-white !default;
 $sprk-footer-link-color: $sprk-white !default;
 /// Icon color on the Footer.
 $sprk-footer-icon-color: $sprk-white !default;
+// Toggle hover color on the Footer.
+$sprk-footer-toggle-hover-color: $sprk-light-purple !default;
 
 //
 // Icons
@@ -564,7 +566,7 @@ $sprk-alert-text-color-fail: $sprk-black !default;
 /// The background color of the Promo component.
 $sprk-promo-background-color: $sprk-white !default;
 /// The border of the Promo component.
-$sprk-promo-border: 1px solid $sprk-gray !default;
+$sprk-promo-border: 1px solid $sprk-black-tint-40 !default;
 /// The maximum width of the Promo component.
 $sprk-promo-max-width: 42.5rem !default;
 /// The Promo component breakpoint at which large viewport styles begin.
@@ -761,8 +763,6 @@ $sprk-link-hover-color: $sprk-deep-purple !default;
 /// The underline style of Links on hover.
 $sprk-link-hover-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-hover-color !default;
-/// The color of visited Links.
-$sprk-link-visited-color: $sprk-black-tint-70 !default;
 /// The color of the underline on visited Links.
 $sprk-link-underline-visited-color: $sprk-black-tint-50 !default;
 /// The style of the underline on visited Links.
@@ -778,8 +778,6 @@ $sprk-link-simple-underline-width: 0.125rem !default;
 $sprk-link-simple-font-weight: $sprk-font-weight-body-two !default;
 /// The color of Simple Links on hover.
 $sprk-link-simple-hover-color: $sprk-black !default;
-/// The font weight of Simple Links on hover.
-$sprk-link-simple-hover-font-weight: $sprk-font-weight-body-one !default;
 /// The underline width of Simple Links on hover.
 $sprk-link-simple-hover-underline-width: 0.125rem !default;
 /// The underline color of Simple Links on hover.
@@ -2192,6 +2190,9 @@ $sprk-stepper-slider-text-fade-in-delay: 0.2s;
 /// The border value for the Carousel component.
 $sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid
   $sprk-stepper-dark-icon-border-color !default;
+/// The border value for the Carousel component.
+$sprk-carousel-dot-border-dark-bg: $sprk-stepper-icon-border-width solid
+  $sprk-deep-purple !default;
 /// The height of the dots in the Carousel component.
 $sprk-carousel-dot-height: 10px !default;
 /// The width of the dots in the Carousel component.
@@ -2206,6 +2207,10 @@ $sprk-carousel-dot-spacing: $sprk-space-m !default;
 $sprk-carousel-wide-dot-spacing: $sprk-carousel-dot-spacing !default;
 /// The box shadow of the active dot in the Carousel component.
 $sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected-dark-bg !default;
+/// The background color of the active dot in the Carousel component.
+$sprk-carousel-dot-selected-bg-color: $sprk-white !default;
+/// The background color of the active dot in the Carousel component on a dark background.
+$sprk-carousel-dot-selected-bg-color-dark-bg: $sprk-deep-purple !default;
 /// The color of the arrows in the Carousel component.
 $sprk-carousel-arrow-color: $sprk-white !default;
 /// The spacing for the arrows in the Carousel component.

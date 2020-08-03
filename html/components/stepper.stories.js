@@ -468,7 +468,7 @@ export const withCarousel = () => {
     <div class="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--center-column sprk-o-Stack--split-reverse@xl">
       <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xl">
         <div
-          class="sprk-c-Carousel"
+          class="sprk-c-Carousel sprk-c-Carousel--has-dark-bg"
           data-sprk-carousel="stepper-carousel-01"
         >
           <div class="sprk-c-Carousel__controls sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-row sprk-o-Stack--center-column">

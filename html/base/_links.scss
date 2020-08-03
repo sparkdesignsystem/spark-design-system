@@ -15,7 +15,6 @@
   transition: $sprk-link-transition;
 
   &:visited {
-    color: $sprk-link-visited-color;
     border-bottom: $sprk-link-visited-border-bottom;
   }
 
@@ -41,7 +40,6 @@
   &:active,
   &:focus {
     color: $sprk-link-simple-hover-color;
-    font-weight: $sprk-link-simple-hover-font-weight;
     border-bottom: $sprk-link-simple-underline-color;
 
     &::after {
