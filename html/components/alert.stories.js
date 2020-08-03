@@ -68,7 +68,7 @@ export const success = () => {
       data-analytics="object.action.event"
     >
       <div class="sprk-c-Alert__content">
-        <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--filled-current-color" viewBox="0 0 512 512" aria-hidden="true" >
+        <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--filled-current-color" viewBox="0 0 64 64" aria-hidden="true" >
           <use xlink:href="#check-mark-filled"></use>
         </svg>
         <p class="sprk-c-Alert__text">
@@ -109,7 +109,7 @@ export const fail = () => {
       data-analytics="object.action.event"
     >
       <div class="sprk-c-Alert__content">
-        <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--filled-current-color" viewBox="0 0 576 512" aria-hidden="true" >
+        <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--filled-current-color" viewBox="0 0 64 64" aria-hidden="true" >
           <use xlink:href="#exclamation-filled"></use>
         </svg>
         <p class="sprk-c-Alert__text"> This is a failure message to alert that something was not successful.</p>
@@ -150,7 +150,7 @@ export const noDismissButton = () => {
       <div class="sprk-c-Alert__content">
         <svg
           class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--filled sprk-c-Icon--filled-current-color"
-          viewBox="0 0 512 512"
+          viewBox="0 0 64 64"
           aria-hidden="true"
         >
           <use xlink:href="#check-mark-filled"></use>
