@@ -51,14 +51,16 @@ class SprkTooltip extends Component {
     let calculatedWidth;
 
     if (elemX > viewportWidth / 2) {
-      calculatedWidth = elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
+      calculatedWidth =
+        elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
       if (elemY > viewportHeight / 2) {
         this.setState({ position: 'topleft' });
       } else {
         this.setState({ position: 'bottomleft' });
       }
     } else {
-      calculatedWidth = viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
+      calculatedWidth =
+        viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
       if (elemY > viewportHeight / 2) {
         this.setState({ position: 'topright' });
       } else {
@@ -77,6 +79,12 @@ class SprkTooltip extends Component {
 
   handleWindowKeydown(e) {
     if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
+      const { onToggle } = this.props;
+      const { isToggled } = this.state;
+
+      if (onToggle && isToggled) {
+        onToggle();
+      }
       this.setState({
         isToggled: false,
       });
@@ -85,12 +93,16 @@ class SprkTooltip extends Component {
 
   handleWindowClick(e) {
     const { isToggled } = this.state;
+    const { onToggle } = this.props;
 
     if (isToggled) {
       if (
         !this.tooltipRef.current.contains(e.target) &&
         !this.triggerRef.current.contains(e.target)
       ) {
+        if (onToggle) {
+          onToggle();
+        }
         this.setState({
           isToggled: false,
         });
@@ -99,6 +111,11 @@ class SprkTooltip extends Component {
   }
 
   toggle() {
+    const { onToggle } = this.props;
+
+    if (onToggle) {
+      onToggle();
+    }
     this.setState((prevState) => ({
       isToggled: !prevState.isToggled,
     }));
@@ -165,32 +182,27 @@ SprkTooltip.propTypes = {
   /** Content to render inside of the component. */
   children: PropTypes.node,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * tooltip element.
+   * Expects a space separated string of classes to be added to the tooltip
+   * element.
    */
   additionalClasses: PropTypes.string,
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the trigger element.
-   * Intended for an outside
-   * library to capture data.
+   * The value supplied will be assigned to the `data-analytics` attribute on
+   * the trigger element. Intended for an outside library to capture data.
    */
   analyticsString: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * svg icon.
+   * Expects a space separated string of classes to be added to the svg icon.
    */
   iconAdditionalClasses: PropTypes.string,
   /**
-   * ID will be placed on the tooltip element and used for
-   * aria-labelledby on the trigger element.
+   * ID will be placed on the tooltip element and used for aria-labelledby on
+   * the trigger element.
    */
   id: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a
-   * unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a unique selector for
+   * automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -201,6 +213,10 @@ SprkTooltip.propTypes = {
    * The icon to use for the trigger element.
    */
   triggerIconType: PropTypes.string,
+  /**
+   * A function to be called when the tooltip is toggled.
+   */
+  onToggle: PropTypes.func,
 };
 
 export default SprkTooltip;

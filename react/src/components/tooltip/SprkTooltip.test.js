@@ -205,4 +205,70 @@ describe('SprkTooltip:', () => {
 
     expect(wrapper.state().position).toBe('topleft');
   });
+
+  it('should call onToggle when the button is clicked', () => {
+    const myMock = jest.fn();
+
+    const wrapper = mount(<SprkTooltip onToggle={myMock} />);
+
+    wrapper.find('button').simulate('click');
+
+    expect(myMock.mock.calls.length).toBe(1);
+  });
+
+  it(
+    'should not call onToggle when Escape is pressed if the tooltip is not' +
+      ' already toggled',
+    () => {
+      const myMock = jest.fn();
+
+      const wrapper = mount(<SprkTooltip onToggle={myMock} />);
+
+      wrapper.instance().handleWindowKeydown({ key: 'Escape' });
+
+      expect(myMock.mock.calls.length).toBe(0);
+    },
+  );
+
+  it(
+    'should call onToggle when Escape is pressed if the tooltip is ' +
+      ' already toggled',
+    () => {
+      const myMock = jest.fn();
+
+      const wrapper = mount(<SprkTooltip onToggle={myMock} />);
+      wrapper.find('button').simulate('click');
+      expect(myMock.mock.calls.length).toBe(1);
+      wrapper.instance().handleWindowKeydown({ key: 'Escape' });
+      expect(myMock.mock.calls.length).toBe(2);
+    },
+  );
+
+  it(
+    'should not call onToggle when the document is clicked if the tooltip' +
+      ' is not already toggled',
+    () => {
+      const myMock = jest.fn();
+
+      const wrapper = mount(<SprkTooltip onToggle={myMock} />);
+
+      wrapper.instance().handleWindowClick({});
+
+      expect(myMock.mock.calls.length).toBe(0);
+    },
+  );
+
+  it(
+    'should call onToggle when the document is clicked if the tooltip is ' +
+      ' already toggled',
+    () => {
+      const myMock = jest.fn();
+
+      const wrapper = mount(<SprkTooltip onToggle={myMock} />);
+      wrapper.find('button').simulate('click');
+      expect(myMock.mock.calls.length).toBe(1);
+      wrapper.instance().handleWindowClick({});
+      expect(myMock.mock.calls.length).toBe(2);
+    },
+  );
 });
