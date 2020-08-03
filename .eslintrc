@@ -18,6 +18,7 @@
     "react/require-default-props" : "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
+    "react/jsx-wrap-multilines": "off",
     "jsx-a11y/label-has-associated-control": [ 2, {
       "labelComponents": ["label"],
       "labelAttributes": ["htmlFor"],

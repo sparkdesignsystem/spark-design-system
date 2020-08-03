@@ -4,8 +4,8 @@ import classnames from 'classnames';
 
 const SprkFlag = (props) => {
   const {
-    additionalBodyClasses,
-    additionalMediaClasses,
+    bodyAdditionalClasses,
+    mediaAdditionalClasses,
     children,
     media,
     isReversed,
@@ -17,39 +17,25 @@ const SprkFlag = (props) => {
     ...other
   } = props;
 
-  const flagClassNames = classnames(
-    'sprk-o-Flag',
-    additionalClasses,
-    {
-      'sprk-o-Flag--stacked': isStacked,
-      'sprk-o-Flag--rev': isReversed,
-      'sprk-o-Flag--middle': verticalAlignment === 'middle',
-      'sprk-o-Flag--bottom': verticalAlignment === 'bottom',
-      'sprk-o-Flag--tiny': spacing === 'tiny',
-      'sprk-o-Flag--small': spacing === 'small',
-      'sprk-o-Flag--large': spacing === 'large',
-      'sprk-o-Flag--huge': spacing === 'huge',
-    },
-  );
+  const flagClassNames = classnames('sprk-o-Flag', additionalClasses, {
+    'sprk-o-Flag--stacked': isStacked,
+    'sprk-o-Flag--rev': isReversed,
+    'sprk-o-Flag--middle': verticalAlignment === 'middle',
+    'sprk-o-Flag--bottom': verticalAlignment === 'bottom',
+    'sprk-o-Flag--tiny': spacing === 'tiny',
+    'sprk-o-Flag--small': spacing === 'small',
+    'sprk-o-Flag--large': spacing === 'large',
+    'sprk-o-Flag--huge': spacing === 'huge',
+  });
 
   return (
     <div className={flagClassNames} data-id={idString} {...other}>
       <div
-        className={
-          classnames(
-            'sprk-o-Flag__figure',
-            additionalMediaClasses
-          )}
+        className={classnames('sprk-o-Flag__figure', mediaAdditionalClasses)}
       >
         {media}
       </div>
-      <div
-        className={
-          classnames(
-            'sprk-o-Flag__body',
-            additionalBodyClasses
-          )}
-      >
+      <div className={classnames('sprk-o-Flag__body', bodyAdditionalClasses)}>
         {children}
       </div>
     </div>
@@ -57,8 +43,11 @@ const SprkFlag = (props) => {
 };
 
 SprkFlag.propTypes = {
+  /** Content to render inside of the component. */
+  children: PropTypes.node,
   /**
-   * Recieves a component that will render media into the Flag component. Required.
+   * Receives a component that will
+   * render media into the Flag component. Required.
    */
   media: PropTypes.element.isRequired,
   /**
@@ -72,25 +61,29 @@ SprkFlag.propTypes = {
   /**
    * Determines how much space between the figure and the body.
    */
-  spacing: PropTypes.oneOf(['tiny', 'small','medium', 'large', 'huge']),
+  spacing: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Determines the vertical alignment of content.
    */
   verticalAlignment: PropTypes.oneOf(['top', 'middle', 'bottom']),
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as
+   * a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the media container of the component.
+   * A space-separated string of classes to add to
+   * the media container of the component.
    */
-  additionalMediaClasses: PropTypes.string,
+  mediaAdditionalClasses: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the body container of the component.
+   * A space-separated string of classes to add to
+   * the body container of the component.
    */
-  additionalBodyClasses: PropTypes.string,
+  bodyAdditionalClasses: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to
+   * the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
 };
