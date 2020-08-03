@@ -3,7 +3,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Components/Card',
   decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
+    story => `<div class="sprk-o-Box sprk-o-Box--large">${story()}</div>`,
   ],
   parameters: {
     info: `
@@ -168,7 +168,7 @@ export const teaser = () => (
 
 teaser.story = {
   parameters: {
-    docs: { iframeHeight: 500 },
+    docs: { iframeHeight: 550 },
   },
 };
 
@@ -221,7 +221,7 @@ export const teaserWithDifferentElementOrder = () => (
 teaserWithDifferentElementOrder.story = {
   name: 'Teaser With Different Element Order',
   parameters: {
-    docs: { iframeHeight: 500 },
+    docs: { iframeHeight: 550 },
   },
 };
 
