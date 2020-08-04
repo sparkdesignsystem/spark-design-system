@@ -1,10 +1,9 @@
 import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[sprkCenteredColumn]'
+  selector: '[sprkCenteredColumn]',
 })
 export class SprkCenteredColumnDirective {
-
   @HostBinding('class.sprk-o-CenteredColumn') true;
 
   /**
@@ -16,5 +15,15 @@ export class SprkCenteredColumnDirective {
    * per page.
    */
   @HostBinding('attr.data-id')
-  @Input() idString: string;
+  @Input()
+  idString: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the element.
+   * Intended for an outside
+   * library to capture data.
+   */
+  @HostBinding('attr.data-analytics')
+  @Input()
+  analyticsString: string;
 }
