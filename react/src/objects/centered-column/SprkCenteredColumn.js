@@ -8,6 +8,7 @@ const SprkCenteredColumn = (props) => {
     additionalClasses,
     idString,
     element,
+    analyticsString,
     ...other
   } = props;
 
@@ -15,7 +16,12 @@ const SprkCenteredColumn = (props) => {
   const TagName = element;
 
   return (
-    <TagName className={classNames} {...other} data-id={idString}>
+    <TagName
+      className={classNames}
+      {...other}
+      data-id={idString}
+      data-analytics={analyticsString}
+    >
       {children}
     </TagName>
   );
@@ -24,11 +30,19 @@ const SprkCenteredColumn = (props) => {
 SprkCenteredColumn.propTypes = {
   children: PropTypes.node,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add
+   * to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * The text that will be applied to the `data-analytics`
+   * attribute on the elements.
+   * Intended for an outside library to capture data.
+   */
+  analyticsString: PropTypes.string,
+  /**
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -41,7 +55,7 @@ SprkCenteredColumn.defaultProps = {
   /**
    * Determines what element to render.
    */
-  element: 'div'
-}
+  element: 'div',
+};
 
 export default SprkCenteredColumn;
