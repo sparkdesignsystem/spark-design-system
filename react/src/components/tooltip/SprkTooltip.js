@@ -79,11 +79,11 @@ class SprkTooltip extends Component {
 
   handleWindowKeydown(e) {
     if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
-      const { onToggle } = this.props;
+      const { closedEvent } = this.props;
       const { isToggled } = this.state;
 
-      if (onToggle && isToggled) {
-        onToggle();
+      if (closedEvent && isToggled) {
+        closedEvent();
       }
       this.setState({
         isToggled: false,
@@ -93,15 +93,15 @@ class SprkTooltip extends Component {
 
   handleWindowClick(e) {
     const { isToggled } = this.state;
-    const { onToggle } = this.props;
+    const { closedEvent } = this.props;
 
     if (isToggled) {
       if (
         !this.tooltipRef.current.contains(e.target) &&
         !this.triggerRef.current.contains(e.target)
       ) {
-        if (onToggle) {
-          onToggle();
+        if (closedEvent) {
+          closedEvent();
         }
         this.setState({
           isToggled: false,
@@ -111,14 +111,24 @@ class SprkTooltip extends Component {
   }
 
   toggle() {
-    const { onToggle } = this.props;
+    const { openedEvent, closedEvent } = this.props;
+    const { isToggled } = this.state;
 
-    if (onToggle) {
-      onToggle();
+    if (isToggled) {
+      if (closedEvent) {
+        closedEvent();
+      }
+      this.setState({
+        isToggled: false,
+      });
+    } else {
+      if (openedEvent) {
+        openedEvent();
+      }
+      this.setState({
+        isToggled: true,
+      });
     }
-    this.setState((prevState) => ({
-      isToggled: !prevState.isToggled,
-    }));
   }
 
   render() {
@@ -132,6 +142,8 @@ class SprkTooltip extends Component {
       analyticsString,
       isDefaultOpen,
       id,
+      openedEvent,
+      closedEvent,
       ...other
     } = this.props;
 
@@ -233,9 +245,13 @@ SprkTooltip.propTypes = {
    */
   triggerIconName: PropTypes.string,
   /**
-   * A function to be called when the tooltip is toggled.
+   * A function to be called when the tooltip is toggled open.
    */
-  onToggle: PropTypes.func,
+  openedEvent: PropTypes.func,
+  /**
+   * A function to be called when the tooltip is toggled closed.
+   */
+  closedEvent: PropTypes.func,
 };
 
 export default SprkTooltip;

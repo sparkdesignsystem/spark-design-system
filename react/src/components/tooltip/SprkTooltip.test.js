@@ -29,8 +29,9 @@ describe('SprkTooltip:', () => {
     expect(wrapper.find('button').prop('aria-expanded')).toEqual(false);
 
     wrapper.find('button').simulate('click');
-
     expect(wrapper.find('button').prop('aria-expanded')).toEqual(true);
+    wrapper.find('button').simulate('click');
+    expect(wrapper.find('button').prop('aria-expanded')).toEqual(false);
   });
 
   it('should add additionalClasses', () => {
@@ -206,23 +207,34 @@ describe('SprkTooltip:', () => {
     expect(wrapper.state().position).toBe('topleft');
   });
 
-  it('should call onToggle when the button is clicked', () => {
+  it('should call openEvent the first time button is clicked', () => {
     const myMock = jest.fn();
 
-    const wrapper = mount(<SprkTooltip onToggle={myMock} />);
+    const wrapper = mount(<SprkTooltip openedEvent={myMock} />);
 
     wrapper.find('button').simulate('click');
 
     expect(myMock.mock.calls.length).toBe(1);
   });
 
+  it('should call closedEvent the second time button is clicked', () => {
+    const myMock = jest.fn();
+
+    const wrapper = mount(<SprkTooltip closedEvent={myMock} />);
+
+    wrapper.find('button').simulate('click');
+    expect(myMock.mock.calls.length).toBe(0);
+    wrapper.find('button').simulate('click');
+    expect(myMock.mock.calls.length).toBe(1);
+  });
+
   it(
-    'should not call onToggle when Escape is pressed if the tooltip is not' +
-      ' already toggled',
+    'should not call closedEvent when Escape is pressed if the tooltip is' +
+      ' not already toggled',
     () => {
       const myMock = jest.fn();
 
-      const wrapper = mount(<SprkTooltip onToggle={myMock} />);
+      const wrapper = mount(<SprkTooltip closedEvent={myMock} />);
 
       wrapper.instance().handleWindowKeydown({ key: 'Escape' });
 
@@ -231,26 +243,26 @@ describe('SprkTooltip:', () => {
   );
 
   it(
-    'should call onToggle when Escape is pressed if the tooltip is ' +
+    'should call closedEvent when Escape is pressed if the tooltip is ' +
       ' already toggled',
     () => {
       const myMock = jest.fn();
 
-      const wrapper = mount(<SprkTooltip onToggle={myMock} />);
+      const wrapper = mount(<SprkTooltip closedEvent={myMock} />);
       wrapper.find('button').simulate('click');
-      expect(myMock.mock.calls.length).toBe(1);
+      expect(myMock.mock.calls.length).toBe(0);
       wrapper.instance().handleWindowKeydown({ key: 'Escape' });
-      expect(myMock.mock.calls.length).toBe(2);
+      expect(myMock.mock.calls.length).toBe(1);
     },
   );
 
   it(
-    'should not call onToggle when the document is clicked if the tooltip' +
+    'should not call closedEvent when the document is clicked if the tooltip' +
       ' is not already toggled',
     () => {
       const myMock = jest.fn();
 
-      const wrapper = mount(<SprkTooltip onToggle={myMock} />);
+      const wrapper = mount(<SprkTooltip closedEvent={myMock} />);
 
       wrapper.instance().handleWindowClick({});
 
@@ -259,16 +271,16 @@ describe('SprkTooltip:', () => {
   );
 
   it(
-    'should call onToggle when the document is clicked if the tooltip is ' +
+    'should call closedEvent when the document is clicked if the tooltip is ' +
       ' already toggled',
     () => {
       const myMock = jest.fn();
 
-      const wrapper = mount(<SprkTooltip onToggle={myMock} />);
+      const wrapper = mount(<SprkTooltip closedEvent={myMock} />);
       wrapper.find('button').simulate('click');
-      expect(myMock.mock.calls.length).toBe(1);
+      expect(myMock.mock.calls.length).toBe(0);
       wrapper.instance().handleWindowClick({});
-      expect(myMock.mock.calls.length).toBe(2);
+      expect(myMock.mock.calls.length).toBe(1);
     },
   );
 
