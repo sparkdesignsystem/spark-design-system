@@ -39,16 +39,19 @@ export class SprkFlagComponent {
   bodyAdditionalClasses: string;
 
   /**
-   * Deprecated: Expects a space separated string
+   * Deprecated and to be removed next release.
+   * Replaced with `mediaAdditionalClasses`.
+   * Expects a space separated string
    * of classes to be added to the
    * container of the media-slot.
-   * To be removed next release.
    */
   @Input()
   additionalMediaClasses: string;
 
   /**
-   * Deprecated: Expects a space separated string
+   * Deprecated and to be removed next release.
+   * Replaced with `bodyAdditionalClasses`.
+   * Expects a space separated string
    * of classes to be added to the
    * container of the body-slot.
    * To be removed next release.

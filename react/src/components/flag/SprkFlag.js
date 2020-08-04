@@ -82,7 +82,9 @@ SprkFlag.propTypes = {
    */
   idString: PropTypes.string,
   /**
-   * Deprecated: A space-separated string of classes to add to
+   * Deprecated and to be removed next release.
+   * Replaced with `mediaAdditionalClasses`.
+   * A space-separated string of classes to add to
    * the media container of the component.
    * Will be removed at next release.
    */
@@ -93,7 +95,9 @@ SprkFlag.propTypes = {
    */
   mediaAdditionalClasses: PropTypes.string,
   /**
-   * Deprecated: A space-separated string of classes to add to
+   * Deprecated and to be removed next release.
+   * Replaced with `bodyAdditionalClasses`.
+   * A space-separated string of classes to add to
    * the body container of the component.
    * Will be removed at next release.
    */
