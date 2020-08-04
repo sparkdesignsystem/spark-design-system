@@ -24,7 +24,7 @@ import { Router } from '@angular/router';
     >
       <ng-content></ng-content>
     </a>
-  `
+  `,
 })
 /**
  * @deprecate This component will be removed in
@@ -166,16 +166,16 @@ export class SprkLinkComponent implements OnInit {
   isExternal = false;
 
   ngOnInit() {
-
     // This message is split up like this so that we can keep the line
     // length down in the editor while also logging a single unformatted
     // line of text in the console.
-    const message = 'Spark Design System Warning: Spark Link has been ' +
-    'refactored to be an Angular Directive. The old Angular Component ' +
-    'version has been deprecated. This version will be permanently removed ' +
-    'from Spark in our Summer 2020 release. To update to the new version, ' +
-    'replace any instance of the <sprk-link> component in your codebase with ' +
-    'the new Directive syntax.';
+    const message =
+      'Spark Design System Warning: Spark Link has been ' +
+      'refactored to be an Angular Directive. The old Angular Component ' +
+      'version has been deprecated. This version will be permanently removed ' +
+      'from Spark in an upcoming release. To update to the new version, ' +
+      'replace any instance of the <sprk-link> component in your codebase with ' +
+      'the new Directive syntax.';
 
     console.warn(message);
 
@@ -274,7 +274,7 @@ export class SprkLinkComponent implements OnInit {
         break;
       case 'icon':
         classArray.push(
-          'sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon'
+          'sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon',
         );
         break;
       default:
@@ -287,7 +287,7 @@ export class SprkLinkComponent implements OnInit {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
