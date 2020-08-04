@@ -4,6 +4,8 @@ import classnames from 'classnames';
 
 const SprkFlag = (props) => {
   const {
+    additionalMediaClasses,
+    additionalBodyClasses,
     bodyAdditionalClasses,
     mediaAdditionalClasses,
     children,
@@ -31,11 +33,19 @@ const SprkFlag = (props) => {
   return (
     <div className={flagClassNames} data-id={idString} {...other}>
       <div
-        className={classnames('sprk-o-Flag__figure', mediaAdditionalClasses)}
+        className={classnames(
+          'sprk-o-Flag__figure',
+          mediaAdditionalClasses || additionalMediaClasses,
+        )}
       >
         {media}
       </div>
-      <div className={classnames('sprk-o-Flag__body', bodyAdditionalClasses)}>
+      <div
+        className={classnames(
+          'sprk-o-Flag__body',
+          bodyAdditionalClasses || additionalBodyClasses,
+        )}
+      >
         {children}
       </div>
     </div>
@@ -72,10 +82,22 @@ SprkFlag.propTypes = {
    */
   idString: PropTypes.string,
   /**
+   * Deprecated: A space-separated string of classes to add to
+   * the media container of the component.
+   * Will be removed at next release.
+   */
+  additionalMediaClasses: PropTypes.string,
+  /**
    * A space-separated string of classes to add to
    * the media container of the component.
    */
   mediaAdditionalClasses: PropTypes.string,
+  /**
+   * Deprecated: A space-separated string of classes to add to
+   * the body container of the component.
+   * Will be removed at next release.
+   */
+  additionalBodyClasses: PropTypes.string,
   /**
    * A space-separated string of classes to add to
    * the body container of the component.

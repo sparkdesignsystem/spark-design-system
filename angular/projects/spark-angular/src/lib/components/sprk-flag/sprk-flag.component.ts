@@ -39,6 +39,24 @@ export class SprkFlagComponent {
   bodyAdditionalClasses: string;
 
   /**
+   * Deprecated: Expects a space separated string
+   * of classes to be added to the
+   * container of the media-slot.
+   * To be removed next release.
+   */
+  @Input()
+  additionalMediaClasses: string;
+
+  /**
+   * Deprecated: Expects a space separated string
+   * of classes to be added to the
+   * container of the body-slot.
+   * To be removed next release.
+   */
+  @Input()
+  additionalBodyClasses: string;
+
+  /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
    * component. This is intended to be
@@ -134,6 +152,13 @@ export class SprkFlagComponent {
       });
     }
 
+    // TO DEPRECATE ON NEXT RELEASE
+    if (this.additionalMediaClasses) {
+      this.additionalMediaClasses.split(' ').forEach((className) => {
+        mediaClassArray.push(className);
+      });
+    }
+
     return mediaClassArray.join(' ');
   }
   /**
@@ -144,6 +169,13 @@ export class SprkFlagComponent {
 
     if (this.bodyAdditionalClasses) {
       this.bodyAdditionalClasses.split(' ').forEach((className) => {
+        bodyClassArray.push(className);
+      });
+    }
+
+    // TO DEPRECATE ON NEXT RELEASE
+    if (this.additionalBodyClasses) {
+      this.additionalBodyClasses.split(' ').forEach((className) => {
         bodyClassArray.push(className);
       });
     }

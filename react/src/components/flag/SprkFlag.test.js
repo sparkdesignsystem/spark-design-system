@@ -84,6 +84,42 @@ describe('SprkFlag:', () => {
     expect(wrapper.find('.sprk-o-Flag__body').hasClass(testClass)).toBe(true);
   });
 
+  // TO DEPRECATE ON NEXT RELEASE
+  it('should apply deprecated additional media classes', () => {
+    const testClass = 'testMedia';
+    const wrapper = shallow(
+      <SprkFlag
+        additionalMediaClasses={testClass}
+        media={
+          <img
+            alt="Provide useful alternative text"
+            src="https://spark-assets.netlify.app/spark-logo-mark.svg"
+          />
+        }
+        additionalClasses={testClass}
+      />,
+    );
+    expect(wrapper.find('.sprk-o-Flag__figure').hasClass(testClass)).toBe(true);
+  });
+
+  // TO DEPRECATE ON NEXT RELEASE
+  it('should apply deprecated additional body classes', () => {
+    const testClass = 'testBody';
+    const wrapper = shallow(
+      <SprkFlag
+        additionalBodyClasses={testClass}
+        media={
+          <img
+            alt="Provide useful alternative text"
+            src="https://spark-assets.netlify.app/spark-logo-mark.svg"
+          />
+        }
+        additionalClasses={testClass}
+      />,
+    );
+    expect(wrapper.find('.sprk-o-Flag__body').hasClass(testClass)).toBe(true);
+  });
+
   it('should apply additional classes', () => {
     const testClass = 'test';
     const wrapper = shallow(
