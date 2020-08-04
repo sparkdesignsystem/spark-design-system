@@ -29,7 +29,7 @@ import { uniqueId } from 'lodash';
         #triggerElement
       >
         <sprk-icon
-          [iconType]="triggerIconType"
+          [iconType]="triggerIconName"
           [additionalClasses]="iconAdditionalClasses"
           aria-hidden="true"
         ></sprk-icon>
@@ -54,46 +54,43 @@ export class SprkTooltipComponent implements AfterViewInit {
   @Input()
   isToggled = false;
   /**
-   * The icon to use for the trigger element.
+   * Deprecated - use `triggerIconName` instead. The icon to use for the
+   * trigger element.
    */
   @Input()
   triggerIconType = 'question-filled';
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the trigger element.
-   * Intended for an outside
-   * library to capture data.
+   * The icon to use for the trigger element.
+   */
+  @Input()
+  triggerIconName = 'question-filled';
+  /**
+   * The value supplied will be assigned to the `data-analytics` attribute on
+   * the trigger element. Intended for an outside library to capture data.
    */
   @Input()
   analyticsString: string;
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * tooltip element.
+   * Expects a space separated string of classes to be added to the tooltip
+   * element.
    */
   @Input()
   additionalClasses: string;
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * svg icon.
+   * Expects a space separated string of classes to be added to the svg icon.
    */
   @Input()
   iconAdditionalClasses: string;
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * container element. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * The value supplied will be assigned to the `data-id` attribute on the
+   * container element. This is intended to be used as a selector for
+   * automated tools. This value should be unique per page.
    */
   @Input()
   idString: string;
   /**
-   * Optional: the unique ID to use for the tooltip element.
-   * If an ID is not provided, a unique ID will be created
-   * automatically.
+   * Optional: the unique ID to use for the tooltip element. If an ID is not
+   * provided, a unique ID will be created automatically.
    */
   @Input()
   id = uniqueId(`sprk_tooltip_`);
@@ -280,5 +277,12 @@ export class SprkTooltipComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.setPositioningClass();
+
+    if (
+      this.triggerIconType !== 'question-filled' &&
+      this.triggerIconName === 'question-filled'
+    ) {
+      this.triggerIconName = this.triggerIconType;
+    }
   }
 }

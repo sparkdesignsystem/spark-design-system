@@ -273,4 +273,25 @@ describe('SprkTooltipComponent', () => {
       tooltipElement.classList.contains('sprk-c-Tooltip--bottom-right'),
     ).toBe(true);
   });
+
+  it('should use the deprecated icon property if it has a value', () => {
+    component.triggerIconType = 'access';
+    component.ngAfterViewInit();
+    fixture.detectChanges();
+
+    expect(
+      triggerElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#access');
+  });
+
+  it('should prefer the new property over the deprecated property', () => {
+    component.triggerIconType = 'access';
+    component.triggerIconName = 'email';
+    component.ngAfterViewInit();
+    fixture.detectChanges();
+
+    expect(
+      triggerElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#email');
+  });
 });

@@ -138,7 +138,10 @@ class SprkTooltip extends Component {
     const { isToggled, position } = this.state;
 
     let iconName = '';
-    if (triggerIconType !== 'question-filled') {
+    if (
+      triggerIconType !== 'question-filled' &&
+      triggerIconName === 'question-filled'
+    ) {
       // Use the deprecated prop if it has a non-default value
       iconName = triggerIconType;
     } else {

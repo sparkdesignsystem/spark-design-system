@@ -272,13 +272,28 @@ describe('SprkTooltip:', () => {
     },
   );
 
-  it('should use the deprecated icon property if it has a value', () => {
+  it('should prefer the new property over the deprecated property', () => {
     const wrapper = mount(
       <SprkTooltip
         // deprecated prop
         triggerIconType="access"
         // new prop
         triggerIconName="message"
+      />,
+    );
+
+    expect(
+      wrapper.find('use').filterWhere((item) => {
+        return item.prop('xlinkHref') === '#message';
+      }).length,
+    ).toBe(1);
+  });
+
+  it('should use the deprecated property if new prop is not used', () => {
+    const wrapper = mount(
+      <SprkTooltip
+        // deprecated prop
+        triggerIconType="access"
       />,
     );
 
