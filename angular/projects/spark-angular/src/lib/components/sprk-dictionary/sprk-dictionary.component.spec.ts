@@ -8,7 +8,7 @@ describe('SprkAngularDictionaryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkDictionaryComponent]
+      declarations: [SprkDictionaryComponent],
     }).compileComponents();
   }));
 
@@ -34,5 +34,81 @@ describe('SprkAngularDictionaryComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(element.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should add additionalClasses', () => {
+    component.additionalClasses = 'spark design';
+    fixture.detectChanges();
+    expect(element.classList.toString()).toContain('spark');
+    expect(element.classList.toString()).toContain('design');
+  });
+
+  it('should add keysAdditionalClasses', () => {
+    component.keysAdditionalClasses = 'keysClass';
+    component.keyValuePairs = { key: 'value', key2: 'value2' };
+    fixture.detectChanges();
+
+    const keys = element.getElementsByClassName('sprk-c-Dictionary__key');
+
+    Array.prototype.forEach.call(keys, (key) => {
+      expect(key.classList.toString()).toContain('keysClass');
+    });
+  });
+
+  it('should add valuesAdditionalClasses', () => {
+    component.valuesAdditionalClasses = 'valuesClass';
+    component.keyValuePairs = { key: 'value', key2: 'value2' };
+    fixture.detectChanges();
+
+    const values = element.getElementsByClassName('sprk-c-Dictionary__value');
+
+    Array.prototype.forEach.call(values, (value) => {
+      expect(value.classList.toString()).toContain('valuesClass');
+    });
+  });
+
+  it('should correctly add striped class', () => {
+    component.variant = 'striped';
+
+    fixture.detectChanges();
+
+    expect(element.classList.toString()).toContain(
+      'sprk-c-Dictionary--striped',
+    );
+  });
+
+  it('should correctly add striped class with deprecated Input', () => {
+    component.dictionaryType = 'striped';
+    component.ngOnInit();
+    fixture.detectChanges();
+
+    expect(element.classList.toString()).toContain(
+      'sprk-c-Dictionary--striped',
+    );
+  });
+
+  it('should add data correctly', () => {
+    component.keyValuePairs = { key1: 'value1', key2: 'value2' };
+    fixture.detectChanges();
+
+    expect(
+      element.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(2);
+    expect(
+      element.getElementsByClassName('sprk-c-Dictionary__value').length,
+    ).toBe(2);
+  });
+
+  it('should add data correctly with deprecated Input', () => {
+    component.data = { key1: 'value1', key2: 'value2' };
+    component.ngOnInit();
+    fixture.detectChanges();
+
+    expect(
+      element.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(2);
+    expect(
+      element.getElementsByClassName('sprk-c-Dictionary__value').length,
+    ).toBe(2);
   });
 });
