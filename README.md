@@ -99,6 +99,9 @@ JavaScript to ensure maintainability and scalability.
 * We follow JS recommendations from the [Quicken Loans JS Concord Group](https://github.com/QuickenLoans/js-concord/blob/master/rfc/cgr-0001-style-and-lint.md).
 * Data attributes on DOM elements is the chosen method for DOM selection.
 
+#### React and Angular
+* For `additionalClasses` properties use the naming convention `elementAddtionalClasses` for other elements that we offer additional classes support on besides the main element.
+
 ### Change Workflow
 
 `Coming Soon`

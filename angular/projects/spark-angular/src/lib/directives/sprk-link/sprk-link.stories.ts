@@ -27,7 +27,7 @@ ${markdownDocumentationLinkBuilder('link')}
 use Spark classes.
 - Spark Link has been refactored to be an Angular Directive. The old Angular
 Component version has been deprecated. This version will be permanently
-removed from Spark in our Summer 2020 release. To update to the new version,
+removed from Spark in an upcoming release. To update to the new version,
 replace any instance of the <code><sprk-link></code> component in your codebase
 with the new Directive syntax.
 `,
