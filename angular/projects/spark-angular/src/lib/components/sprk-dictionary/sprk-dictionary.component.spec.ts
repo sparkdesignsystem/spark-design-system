@@ -111,4 +111,20 @@ describe('SprkAngularDictionaryComponent', () => {
       element.getElementsByClassName('sprk-c-Dictionary__value').length,
     ).toBe(2);
   });
+
+  it('should correctly respond to changes to data Input', () => {
+    component.data = { key1: 'value1', key2: 'value2' };
+    fixture.detectChanges();
+
+    expect(
+      element.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(2);
+
+    component.data = { key1: 'value1', key2: 'value2', key3: 'value3' };
+    fixture.detectChanges();
+
+    expect(
+      element.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(3);
+  });
 });
