@@ -81,6 +81,7 @@ SprkFlag.propTypes = {
    * a unique selector for automated tools.
    */
   idString: PropTypes.string,
+  // TODO: Deprecate on next release
   /**
    * Deprecated and to be removed next release.
    * Replaced with `mediaAdditionalClasses`.
@@ -94,6 +95,7 @@ SprkFlag.propTypes = {
    * the media container of the component.
    */
   mediaAdditionalClasses: PropTypes.string,
+  // TODO: Deprecate on next release
   /**
    * Deprecated and to be removed next release.
    * Replaced with `bodyAdditionalClasses`.

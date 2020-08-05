@@ -38,6 +38,7 @@ export class SprkFlagComponent {
   @Input()
   bodyAdditionalClasses: string;
 
+  // TODO: Deprecate on next release
   /**
    * Deprecated and to be removed next release.
    * Replaced with `mediaAdditionalClasses`.
@@ -48,6 +49,7 @@ export class SprkFlagComponent {
   @Input()
   additionalMediaClasses: string;
 
+  // TODO: Deprecate on next release
   /**
    * Deprecated and to be removed next release.
    * Replaced with `bodyAdditionalClasses`.
@@ -155,7 +157,7 @@ export class SprkFlagComponent {
       });
     }
 
-    // TO DEPRECATE ON NEXT RELEASE
+    // TODO: ON NEXT RELEASE
     if (this.additionalMediaClasses) {
       this.additionalMediaClasses.split(' ').forEach((className) => {
         mediaClassArray.push(className);
@@ -176,7 +178,7 @@ export class SprkFlagComponent {
       });
     }
 
-    // TO DEPRECATE ON NEXT RELEASE
+    // TODO: ON NEXT RELEASE
     if (this.additionalBodyClasses) {
       this.additionalBodyClasses.split(' ').forEach((className) => {
         bodyClassArray.push(className);

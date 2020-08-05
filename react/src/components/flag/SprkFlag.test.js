@@ -84,7 +84,7 @@ describe('SprkFlag:', () => {
     expect(wrapper.find('.sprk-o-Flag__body').hasClass(testClass)).toBe(true);
   });
 
-  // TO DEPRECATE ON NEXT RELEASE
+  // TODO: ON NEXT RELEASE
   it('should apply deprecated additional media classes', () => {
     const testClass = 'testMedia';
     const wrapper = shallow(
@@ -102,7 +102,7 @@ describe('SprkFlag:', () => {
     expect(wrapper.find('.sprk-o-Flag__figure').hasClass(testClass)).toBe(true);
   });
 
-  // TO DEPRECATE ON NEXT RELEASE
+  // TODO: ON NEXT RELEASE
   it('should apply deprecated additional body classes', () => {
     const testClass = 'testBody';
     const wrapper = shallow(
