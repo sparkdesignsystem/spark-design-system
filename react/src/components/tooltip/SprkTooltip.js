@@ -149,6 +149,7 @@ class SprkTooltip extends Component {
 
     const { isToggled, position } = this.state;
 
+    // TODO - remove triggerIconType as part of Issue 1166
     let iconName = '';
     if (
       triggerIconType !== 'question-filled' &&

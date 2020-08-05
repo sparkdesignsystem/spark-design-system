@@ -133,6 +133,7 @@ export class SprkDictionaryComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    // TODO - remove data and dictionaryType as part of Issue 1167
     if (!this.isEmpty(this.data) && this.isEmpty(this.keyValuePairs)) {
       this.keyValuePairs = this.data;
     }

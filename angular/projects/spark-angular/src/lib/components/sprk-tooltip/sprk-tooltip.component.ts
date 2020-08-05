@@ -278,6 +278,7 @@ export class SprkTooltipComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.setPositioningClass();
 
+    // TODO - remove triggerIconType as part of Issue 1166
     if (
       this.triggerIconType !== 'question-filled' &&
       this.triggerIconName === 'question-filled'
