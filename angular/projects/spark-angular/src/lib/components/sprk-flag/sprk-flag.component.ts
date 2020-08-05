@@ -157,7 +157,7 @@ export class SprkFlagComponent {
       });
     }
 
-    // TODO: ON NEXT RELEASE
+    // TODO: REMOVE ON NEXT RELEASE
     if (this.additionalMediaClasses) {
       this.additionalMediaClasses.split(' ').forEach((className) => {
         mediaClassArray.push(className);
@@ -178,7 +178,7 @@ export class SprkFlagComponent {
       });
     }
 
-    // TODO: ON NEXT RELEASE
+    // TODO: REMOVE ON NEXT RELEASE
     if (this.additionalBodyClasses) {
       this.additionalBodyClasses.split(' ').forEach((className) => {
         bodyClassArray.push(className);

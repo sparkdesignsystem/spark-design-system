@@ -41,7 +41,7 @@ describe('SprkFlagComponent', () => {
     );
   });
 
-  // TODO: NEXT RELEASE
+  // TODO: REMOVE ON NEXT RELEASE
   it('should add the correct classes if additionalMediaClasses are supplied', () => {
     component.additionalMediaClasses = 'sprk-u-pam sprk-u-man';
     expect(component.getMediaClasses()).toEqual(
@@ -49,7 +49,7 @@ describe('SprkFlagComponent', () => {
     );
   });
 
-  // TODO: NEXT RELEASE
+  // TODO: REMOVE ON NEXT RELEASE
   it('should add the correct classes if additionalBodyClasses are supplied', () => {
     component.additionalBodyClasses = 'sprk-u-pam sprk-u-man';
     expect(component.getBodyClasses()).toEqual(
