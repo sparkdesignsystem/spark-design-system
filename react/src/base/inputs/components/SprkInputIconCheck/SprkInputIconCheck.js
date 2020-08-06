@@ -24,7 +24,7 @@ const SprkInputIconCheck = ({
             iconName={leadingIcon}
             additionalClasses={classnames({
               'sprk-b-InputContainer__icon': true,
-              'sprk-c-Icon--m sprk-c-Icon--filled-current-color': true,
+              'sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color': true,
               'sprk-b-InputContainer__icon--right': iconRight,
             })}
           />

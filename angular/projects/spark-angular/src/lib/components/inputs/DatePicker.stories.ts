@@ -75,7 +75,7 @@ export const defaultStory = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--filled-current-color"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input
@@ -115,7 +115,7 @@ export const invalidDatePicker = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--filled-current-color"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input
@@ -164,7 +164,7 @@ export const disabledDatePicker = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--filled-current-color"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input

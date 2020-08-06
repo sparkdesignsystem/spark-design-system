@@ -93,7 +93,9 @@ class SprkMastheadDropdown extends Component {
           </span>
           <SprkIcon
             additionalClasses={classNames(
-              'sprk-c-Icon--filled-current-color sprk-u-mls',
+              `sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+              sprk-u-mls`,
               additionalIconClasses,
             )}
             iconName={iconName}

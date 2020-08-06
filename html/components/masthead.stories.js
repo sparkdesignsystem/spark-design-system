@@ -267,6 +267,7 @@ export const defaultStory = () => {
                 class="
                   sprk-c-Icon
                   sprk-c-Icon--filled-current-color
+                  sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
                 "
                 data-sprk-toggle="icon"
@@ -350,6 +351,7 @@ export const defaultStory = () => {
                     class="
                       sprk-c-Icon
                       sprk-c-Icon--filled-current-color
+                      sprk-c-Icon--stroke-current-color
                       sprk-u-mrs
                     "
                     viewBox="0 0 64 64"
@@ -376,6 +378,7 @@ export const defaultStory = () => {
                     class="
                       sprk-c-Icon
                       sprk-c-Icon--filled-current-color
+                      sprk-c-Icon--stroke-current-color
                       sprk-u-mrs
                     "
                     viewBox="0 0 64 64"
@@ -547,6 +550,7 @@ export const extended = () => {
                   class="
                     sprk-c-Icon
                     sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
                     sprk-Stack__item
                   "
                   viewBox="0 0 100 100"
@@ -590,6 +594,7 @@ export const extended = () => {
                       class="
                         sprk-c-Icon
                         sprk-c-Icon--filled-current-color
+                        sprk-c-Icon--stroke-current-color
                         sprk-c-Icon--toggle
                         sprk-Stack__item
                       "
@@ -761,6 +766,7 @@ export const extended = () => {
                   class="
                     sprk-c-Icon
                     sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
                     sprk-u-mls
                   "
                   viewBox="0 0 64 64"
@@ -846,6 +852,7 @@ export const extended = () => {
                   class="
                     sprk-c-Icon
                     sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
                     sprk-u-mls
                   "
                   viewBox="0 0 64 64"
@@ -936,6 +943,7 @@ export const extended = () => {
                 class="
                   sprk-c-Icon
                   sprk-c-Icon--filled-current-color
+                  sprk-c-Icon--stroke-current-color
                   sprk-c-Icon--toggle
                   sprk-Stack__item
                 "
@@ -982,6 +990,7 @@ export const extended = () => {
                   class="
                     sprk-c-Icon
                     sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--toggle
                     sprk-Stack__item
                   "
@@ -1051,6 +1060,7 @@ export const extended = () => {
                   sprk-c-Icon
                   sprk-c-Icon--toggle
                   sprk-c-Icon--filled-current-color
+                  sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
                   sprk-u-mls
                 "
@@ -1141,6 +1151,7 @@ export const extended = () => {
                   sprk-c-Icon
                   sprk-c-Icon--toggle
                   sprk-c-Icon--filled-current-color
+                  sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
                 "
                 data-sprk-toggle="icon"
@@ -1282,7 +1293,8 @@ export const extended = () => {
                 class="
                   sprk-c-Icon
                   sprk-c-Icon--toggle
-                  sprk-c-Icon--filled-current-color
+                  sprk-c-Icon--filled-current-
+                  sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
                 "
                 data-sprk-toggle="icon"

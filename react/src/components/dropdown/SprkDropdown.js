@@ -118,7 +118,10 @@ class SprkDropdown extends Component {
                 {triggerText}
               </span>
               <SprkIcon
-                additionalClasses="sprk-c-Icon--filled-current-color sprk-u-mls"
+                additionalClasses="
+                  sprk-c-Icon--filled-current-color
+                  sprk-c-Icon--stroke-current-color
+                  sprk-u-mls"
                 iconName="chevron-down"
               />
             </React.Fragment>

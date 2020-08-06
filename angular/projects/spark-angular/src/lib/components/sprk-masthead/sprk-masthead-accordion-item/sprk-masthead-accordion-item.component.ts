@@ -27,7 +27,7 @@ import { toggleAnimations } from '../../sprk-toggle/sprk-toggle-animations';
           </span>
 
           <sprk-icon
-            additionalClasses="sprk-c-MastheadAccordion__icon sprk-c-Icon--filled-current-color sprk-c-Icon--toggle {{
+            additionalClasses="sprk-c-MastheadAccordion__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-c-Icon--toggle {{
               iconStateClass
             }}"
             [iconType]="currentIconType"

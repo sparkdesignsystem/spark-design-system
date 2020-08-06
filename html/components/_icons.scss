@@ -56,19 +56,16 @@
   height: $sprk-icon-m;
   width: $sprk-icon-m;
   stroke: $sprk-icon-stroke-color;
+  stroke-width: $sprk-icon-stroke-width;
   fill: $sprk-icon-fill-color;
 }
 
 /// Adds styles for filled Icons.
 /// @name .sprk-c-Icon--filled
-.sprk-c-Icon--filled,
-.sprk-c-Icon--filled-small {
+.sprk-c-Icon--filled {
   stroke: $sprk-icon-filled-stroke-color;
   fill: $sprk-icon-filled-fill-color;
 }
-
-/// Adds styles for small filled Icons.
-/// @name .sprk-c-Icon--filled-small
 
 /// Adds the fill and stroke properties
 /// set to the current color of its container.
@@ -94,6 +91,7 @@
 .sprk-c-Icon--l {
   height: $sprk-icon-l;
   width: $sprk-icon-l;
+  stroke: $sprk-icon-l-stroke;
 }
 
 /// Adds the Icon height and width to
@@ -101,6 +99,7 @@
 .sprk-c-Icon--xl {
   height: $sprk-icon-xl;
   width: $sprk-icon-xl;
+  stroke: $sprk-icon-xl-stroke;
 }
 
 ///	Adds styles for

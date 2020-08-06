@@ -64,6 +64,7 @@ export const hugeSelectBox = () => {
         class="
           sprk-c-Icon
           sprk-c-Icon--filled-current-color
+          sprk-c-Icon--stroke-current-color
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"
@@ -128,6 +129,7 @@ export const invalidHugeSelectBox = () => {
         class="
           sprk-c-Icon
           sprk-c-Icon--filled-current-color
+          sprk-c-Icon--stroke-current-color
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"
@@ -202,6 +204,7 @@ export const disabledHugeSelectBox = () => {
         class="
           sprk-c-Icon
           sprk-c-Icon--filled-current-color
+          sprk-c-Icon--stroke-current-color
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"

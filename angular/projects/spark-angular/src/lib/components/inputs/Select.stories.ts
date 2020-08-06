@@ -77,7 +77,7 @@ export const selectBox = () => ({
       </select>
       <sprk-icon
         iconType="chevron-down"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-b-SelectContainer__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
       <label sprkLabel for="select-normal-1">Select Box Label</label>
@@ -120,7 +120,7 @@ export const invalidSelectBox = () => ({
       </select>
       <sprk-icon
         iconType="chevron-down"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-b-SelectContainer__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
       <label sprkLabel for="select-normal-1">Select Box Label</label>
@@ -170,7 +170,7 @@ export const disabledSelectBox = () => ({
       </select>
       <sprk-icon
         iconType="chevron-down"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-b-SelectContainer__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
       <label class="sprk-b-Label--disabled" sprkLabel for="select-normal-1">Select Box Label</label>

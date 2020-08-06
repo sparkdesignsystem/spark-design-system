@@ -153,16 +153,22 @@ $sprk-footer-toggle-transition: 0.3s !default;
 // Icons
 ///
 
-/// Value for height and width of the small Icon component.
-$sprk-icon-m: 16px !default;
-/// Value for height and width of the medium Icon component.
-$sprk-icon-l: 24px !default;
 /// Value for height and width of the Icon component.
+$sprk-icon-m: 16px !default;
+/// Value for height and width of the large Icon component.
+$sprk-icon-l: 24px !default;
+/// Value for height and width of the extra-large Icon component.
 $sprk-icon-xl: 32px !default;
 /// Value for the fill property of the Icon component.
 $sprk-icon-fill-color: $sprk-black !default;
 /// Value for the stroke property of the Icon component.
-$sprk-icon-stroke-color: none !default;
+$sprk-icon-stroke-color: $sprk-black !default;
+/// Value for the stroke-width property of the Icon component.
+$sprk-icon-stroke-width: 1.25 !default;
+/// Value for the stroke property of the large Icon component.
+$sprk-icon-l-stroke: none !default;
+/// Value for the stroke property of the extra large Icon component.
+$sprk-icon-xl-stroke: none !default;
 /// Value for the fill property of the Filled Icon component.
 $sprk-icon-filled-fill-color: $sprk-black !default;
 /// Value for the stroke property of the Filled Icon component.

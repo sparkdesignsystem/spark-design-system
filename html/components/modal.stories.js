@@ -60,7 +60,7 @@ export const defaultStory = () => {
             aria-label="Close Modal"
           >
             <svg
-              class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+              class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
               viewBox="0 0 64 64"
               aria-hidden="true"
               focusable="false"
@@ -140,7 +140,7 @@ export const info = () => {
             aria-label="Close Modal"
           >
             <svg
-              class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+              class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
               viewBox="0 0 64 64"
               aria-hidden="true"
               focusable="false"

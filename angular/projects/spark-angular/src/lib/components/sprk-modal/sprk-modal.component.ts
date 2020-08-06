@@ -41,7 +41,7 @@ import * as _ from 'lodash';
           >
             <sprk-icon
               iconType="close"
-              additionalClasses="sprk-c-Icon--filled-current-color"
+              additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
             ></sprk-icon>
           </button>
         </header>

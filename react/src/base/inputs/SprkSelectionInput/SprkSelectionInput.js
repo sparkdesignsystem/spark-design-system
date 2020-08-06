@@ -181,6 +181,7 @@ class SprkSelectionInput extends React.Component {
               iconName="chevron-down"
               additionalClasses="
               sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
               sprk-b-SelectContainer__icon"
             />
           </>

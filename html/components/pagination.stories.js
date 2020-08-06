@@ -57,7 +57,7 @@ export const defaultStory = () => {
           data-sprk-pagination="prev">
           <span class="sprk-u-ScreenReaderText">Prev</span>
           <svg
-            class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+            class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
             viewBox="0 0 64 64"
           >
             <use xlink:href="#chevron-left"></use>
@@ -100,7 +100,7 @@ export const defaultStory = () => {
           data-sprk-pagination="next">
           <span class="sprk-u-ScreenReaderText">Next</span>
           <svg
-            class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+            class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
             viewBox="0 0 64 64"
           >
             <use xlink:href="#chevron-right"></use>
@@ -135,7 +135,7 @@ export const pager = () => {
           href="#nogo"
         >
           <svg
-            class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+            class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
             viewBox="0 0 64 64"
           >
             <use xlink:href="#chevron-left"></use>
@@ -150,7 +150,7 @@ export const pager = () => {
           href="#nogo"
         >
           <svg
-            class="sprk-c-Icon sprk-c-Icon--filled-current-color"
+            class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
             viewBox="0 0 64 64"
           >
             <use xlink:href="#chevron-right"></use>

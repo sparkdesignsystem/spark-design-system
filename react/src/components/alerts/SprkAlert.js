@@ -67,7 +67,9 @@ const SprkAlert = (props) => {
         >
           <SprkIcon
             iconName={iconNameDismiss}
-            additionalClasses="sprk-c-Icon--filled-current-color"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color"
             aria-hidden="true"
           />
         </button>

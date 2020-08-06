@@ -89,7 +89,7 @@ export const hugeSelectBox = () => ({
       <label sprkLabel for="select-huge-1">Huge Select Box Label</label>
       <sprk-icon
         iconType="chevron-down"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-b-SelectContainer__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
     </sprk-huge-input-container>
@@ -138,7 +138,7 @@ export const invalidHugeSelectBox = () => ({
       <label sprkLabel for="select-huge-1">Huge Select Box Label</label>
       <sprk-icon
         iconType="chevron-down"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-b-SelectContainer__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
       <span sprkFieldError>
@@ -194,7 +194,7 @@ export const disabledHugeSelectBox = () => ({
       <label sprkLabel class="sprk-b-Label--disabled" for="select-huge-1">Huge Select Box Label</label>
       <sprk-icon
         iconType="chevron-down"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-b-SelectContainer__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
     </sprk-huge-input-container>

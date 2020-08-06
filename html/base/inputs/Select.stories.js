@@ -43,6 +43,7 @@ export const selectBox = () => `
         class="
           sprk-c-Icon
           sprk-c-Icon--filled-current-color
+          sprk-c-Icon--stroke-current-color
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"
@@ -92,6 +93,7 @@ export const invalidSelectBox = () => `
         class="
           sprk-c-Icon
           sprk-c-Icon--filled-current-color
+          sprk-c-Icon--stroke-current-color
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"
@@ -151,6 +153,7 @@ export const disabledSelectBox = () => `
         class="
           sprk-c-Icon
           sprk-c-Icon--filled-current-color
+          sprk-c-Icon--stroke-current-color
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"

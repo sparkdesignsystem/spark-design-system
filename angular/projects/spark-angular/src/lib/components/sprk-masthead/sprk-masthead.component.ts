@@ -205,7 +205,7 @@ import {
                     >
                       <sprk-icon
                         [iconType]="subNavLink.leadingIcon"
-                        additionalClasses="sprk-c-Icon--filled-current-color sprk-u-mrs"
+                        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-u-mrs"
                         *ngIf="subNavLink.leadingIcon"
                       ></sprk-icon>
                       {{ subNavLink.text }}
@@ -231,7 +231,7 @@ import {
                   <span class="sprk-c-MastheadAccordion__heading">
                     <sprk-icon
                       [iconType]="narrowLink.leadingIcon"
-                      additionalClasses="sprk-c-Icon--filled-current-color sprk-u-mrs"
+                      additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-u-mrs"
                       *ngIf="narrowLink.leadingIcon"
                     ></sprk-icon>
                     {{ narrowLink.text }}
