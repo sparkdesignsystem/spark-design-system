@@ -22,7 +22,7 @@ const createIconExample = (name) => {
   );
   svgElem.appendChild(useElem);
   svgElem.classList.add('sprk-c-Icon');
-  // svgElem.classList.add('sprk-c-Icon--xl');
+  svgElem.classList.add('sprk-c-Icon--xl');
 
   if (name.includes('filled')) {
     svgElem.classList.add('sprk-c-Icon--filled');

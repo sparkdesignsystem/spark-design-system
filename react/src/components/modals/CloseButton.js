@@ -31,13 +31,7 @@ class CloseButton extends Component {
         ref={this.buttonRef}
         data-analytics={analyticsString}
       >
-        <SprkIcon
-          icontype="close"
-          iconName={iconName}
-          additionalClasses="
-            sprk-c-Icon--filled-current-color
-            sprk-c-Icon--stroke-current-color"
-        />
+        <SprkIcon icontype="close" iconName={iconName} />
       </button>
     );
   }

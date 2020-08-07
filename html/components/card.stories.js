@@ -374,6 +374,7 @@ export const threeUpCards = () => (
             <svg
               class="
                 sprk-c-Icon
+                sprk-c-Icon--xl
               "
               height="75"
               viewBox="0 0 220.63 197.62"
@@ -435,7 +436,9 @@ export const threeUpCards = () => (
         >
           <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
             <svg
-              class="sprk-c-Icon"
+              class="
+                sprk-c-Icon
+                sprk-c-Icon--xl"
               height="75"
               viewBox="0 0 220.63 197.62"
             >
@@ -491,7 +494,9 @@ export const threeUpCards = () => (
             href="#nogo"
             class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
             <svg
-              class="sprk-c-Icon"
+              class="
+                sprk-c-Icon
+                sprk-c-Icon--xl"
               height="75" viewBox="0 0 220.63 197.62">
               <use xlink:href="#call-team-member" />
             </svg>
