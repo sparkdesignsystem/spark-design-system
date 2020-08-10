@@ -1,14 +1,31 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkDictionaryComponent } from './sprk-dictionary.component';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: `sprk-test`,
+  template: `<sprk-dictionary
+    [dictionaryType]="dictionaryType"
+    [data]="data"
+  ></sprk-dictionary>`,
+})
+class TestComponent {
+  data = {};
+  dictionaryType = '';
+}
 
 describe('SprkAngularDictionaryComponent', () => {
   let component: SprkDictionaryComponent;
   let fixture: ComponentFixture<SprkDictionaryComponent>;
   let element: HTMLElement;
 
+  let wrappedComponent: TestComponent;
+  let wrappedFixture: ComponentFixture<TestComponent>;
+  let wrappedElement: HTMLElement;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkDictionaryComponent],
+      declarations: [SprkDictionaryComponent, TestComponent],
     }).compileComponents();
   }));
 
@@ -17,6 +34,11 @@ describe('SprkAngularDictionaryComponent', () => {
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');
     fixture.detectChanges();
+
+    wrappedFixture = TestBed.createComponent(TestComponent);
+    wrappedComponent = wrappedFixture.componentInstance;
+    wrappedElement = wrappedFixture.nativeElement.querySelector('div');
+    wrappedFixture.detectChanges();
   });
 
   it('should create', () => {
@@ -71,18 +93,17 @@ describe('SprkAngularDictionaryComponent', () => {
     component.variant = 'striped';
 
     fixture.detectChanges();
-
     expect(element.classList.toString()).toContain(
       'sprk-c-Dictionary--striped',
     );
   });
 
   it('should correctly add striped class with deprecated Input', () => {
-    component.dictionaryType = 'striped';
-    component.ngOnInit();
-    fixture.detectChanges();
+    wrappedComponent.dictionaryType = 'striped';
+    wrappedFixture.detectChanges();
+    console.log(wrappedFixture.nativeElement.innerHTML);
 
-    expect(element.classList.toString()).toContain(
+    expect(wrappedElement.classList.toString()).toContain(
       'sprk-c-Dictionary--striped',
     );
   });
@@ -100,31 +121,44 @@ describe('SprkAngularDictionaryComponent', () => {
   });
 
   it('should add data correctly with deprecated Input', () => {
-    component.data = { key1: 'value1', key2: 'value2' };
-    component.ngOnInit();
-    fixture.detectChanges();
+    wrappedComponent.data = { key1: 'value1', key2: 'value2' };
+    wrappedFixture.detectChanges();
 
     expect(
-      element.getElementsByClassName('sprk-c-Dictionary__key').length,
+      wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
     ).toBe(2);
     expect(
-      element.getElementsByClassName('sprk-c-Dictionary__value').length,
+      wrappedElement.getElementsByClassName('sprk-c-Dictionary__value').length,
     ).toBe(2);
   });
 
   it('should correctly respond to changes to data Input', () => {
-    component.data = { key1: 'value1', key2: 'value2' };
-    fixture.detectChanges();
+    wrappedComponent.data = { key1: 'value1', key2: 'value2' };
+    wrappedFixture.detectChanges();
 
     expect(
-      element.getElementsByClassName('sprk-c-Dictionary__key').length,
+      wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
     ).toBe(2);
 
-    component.data = { key1: 'value1', key2: 'value2', key3: 'value3' };
-    fixture.detectChanges();
+    wrappedComponent.data = { key1: 'value1', key2: 'value2', key3: 'value3' };
+    wrappedFixture.detectChanges();
 
     expect(
-      element.getElementsByClassName('sprk-c-Dictionary__key').length,
+      wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
     ).toBe(3);
+  });
+
+  it('should correctly respond to changes to dictionaryType Input', () => {
+    wrappedComponent.dictionaryType = '';
+    wrappedFixture.detectChanges();
+
+    expect(wrappedElement.classList.toString()).toBe('sprk-c-Dictionary');
+
+    wrappedComponent.dictionaryType = 'striped';
+    wrappedFixture.detectChanges();
+
+    expect(wrappedElement.classList.toString()).toContain(
+      'sprk-c-Dictionary--striped',
+    );
   });
 });

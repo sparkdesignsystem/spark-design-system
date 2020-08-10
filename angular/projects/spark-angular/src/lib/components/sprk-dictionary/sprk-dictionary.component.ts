@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'sprk-dictionary',
@@ -16,7 +22,7 @@ import { Component, Input, OnInit } from '@angular/core';
     </div>
   `,
 })
-export class SprkDictionaryComponent implements OnInit {
+export class SprkDictionaryComponent implements OnInit, OnChanges {
   /**
    * Deprecated - Use `keyValuePairs` instead. The collection of key-value
    * pairs to be rendered into the component.
@@ -140,6 +146,16 @@ export class SprkDictionaryComponent implements OnInit {
 
     if (this.dictionaryType && !this.variant) {
       this.variant = this.dictionaryType;
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['data']) {
+      this.keyValuePairs = changes['data'].currentValue;
+    }
+
+    if (changes['dictionaryType']) {
+      this.variant = changes['dictionaryType'].currentValue;
     }
   }
 }
