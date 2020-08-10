@@ -33,6 +33,9 @@ describe('SprkDatePickerDirective', () => {
 
   it('should add correct classes to the element', () => {
     expect(inputElement.classList.contains('sprk-b-TextInput')).toEqual(true);
-    expect(inputElement.classList.contains('sprk-u-Width-100')).toEqual(true);
+    expect(inputElement.classList.contains('sprk-b-TextInput')).toEqual(true);
+    expect(
+      inputElement.classList.contains('sprk-b-TextInput--has-svg-icon'),
+    ).toEqual(true);
   });
 });

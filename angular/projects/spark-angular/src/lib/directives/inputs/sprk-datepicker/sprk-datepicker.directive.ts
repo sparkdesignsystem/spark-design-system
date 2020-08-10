@@ -39,6 +39,10 @@ export class SprkDatepickerDirective implements OnInit {
 
     this.renderer.addClass(this.ref.nativeElement, 'sprk-b-TextInput');
     this.renderer.addClass(this.ref.nativeElement, 'sprk-u-Width-100');
+    this.renderer.addClass(
+      this.ref.nativeElement,
+      'sprk-b-TextInput--has-svg-icon',
+    );
 
     if (TinyDatePicker) {
       TinyDatePicker(input, {

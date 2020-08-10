@@ -68,27 +68,35 @@ const modules = {
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-icon-input-container>
-      <label class="sprk-b-Label--with-icon" sprkLabel>
-        Date Input
-      </label>
-      <sprk-icon
-        iconType="calendar"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
-        sprk-input-icon
-      ></sprk-icon>
-      <input
-        name="datepicker_input"
-        class="sprk-b-TextInput--has-svg-icon"
-        type="text"
-        placeholder="MM/DD/YYYY"
-        [(ngModel)]="datepicker_input"
-        #datepickerInput="ngModel"
-        [sprkDatePickerConfig]="dpConfig"
-        sprkDatepicker
-        sprkInput
-      />
-    </sprk-icon-input-container>
+    <sprk-input-container>
+      <div class="sprk-b-InputContainer__icon-container">
+        <label hasIcon="true" sprkLabel>
+          Date Input
+        </label>
+        <sprk-icon
+          iconType="calendar"
+          additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+          sprk-input-icon
+        ></sprk-icon>
+        <input
+          name="datepicker_input"
+          type="text"
+          placeholder="MM/DD/YYYY"
+          [(ngModel)]="datepicker_input"
+          #datepickerInput="ngModel"
+          [sprkDatePickerConfig]="dpConfig"
+          aria-invalid="true"
+          sprkDatepicker
+        />
+      </div>
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
   `,
 });
 
