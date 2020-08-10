@@ -3,7 +3,11 @@ import * as _ from 'lodash';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-
+/**
+ * TODO: #3329
+ * This component will be removed in a future release.
+ * Please use the sprk-input-container.
+ */
 @Component({
   selector: 'sprk-icon-input-container',
   template: `
@@ -17,7 +21,7 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
     </div>
-  `
+  `,
 })
 export class SprkIconInputContainerComponent implements OnInit {
   /**
@@ -73,7 +77,7 @@ export class SprkIconInputContainerComponent implements OnInit {
     const classArray: string[] = ['sprk-b-InputContainer__icon-container'];
 
     if (this.iconContainerClasses) {
-      this.iconContainerClasses.split(' ').forEach(className => {
+      this.iconContainerClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -88,7 +92,7 @@ export class SprkIconInputContainerComponent implements OnInit {
     const classArray: string[] = ['sprk-b-InputContainer'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -104,7 +108,7 @@ export class SprkIconInputContainerComponent implements OnInit {
     if (this.input && this.error) {
       this.input.ref.nativeElement.setAttribute(
         'aria-describedby',
-        this.error_id
+        this.error_id,
       );
       this.error.ref.nativeElement.id = this.error_id;
     }
