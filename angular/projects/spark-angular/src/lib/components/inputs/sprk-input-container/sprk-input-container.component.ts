@@ -101,6 +101,11 @@ export class SparkInputContainerComponent implements OnInit {
         classArray.push(className);
       });
     }
+
+    if (this.variant === 'huge') {
+      classArray.push('sprk-b-InputContainer--huge');
+    }
+
     return classArray.join(' ');
   }
 

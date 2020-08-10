@@ -93,4 +93,12 @@ describe('SparkInputContainerComponent', () => {
     inputContainerFixture.detectChanges();
     expect(inputContainerElement.getAttribute('data-id')).toBe('test-id-str');
   });
+
+  it('should add the huge input class to the container if the variant is huge', () => {
+    inputContainerComponent.variant = 'huge';
+    inputContainerFixture.detectChanges();
+    expect(
+      inputContainerElement.classList.contains('sprk-b-InputContainer--huge'),
+    ).toEqual(true);
+  });
 });
