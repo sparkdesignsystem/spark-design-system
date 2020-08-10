@@ -4,18 +4,23 @@ import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-e
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 
+/**
+ *
+ */
 @Component({
   selector: 'sprk-input-container',
   template: `
-    <div [ngClass]="getClasses()">
-      <ng-content select="[sprkLabel]"></ng-content>
-      <ng-content select="[sprkInput]"></ng-content>
+    <div [ngClass]="getClasses()" [attr.data-id]="idString">
+      <ng-content></ng-content>
       <ng-content select="[sprk-select-icon]"></ng-content>
+      <ng-content select="[sprk-input-icon]"></ng-content>
       <ng-content select="sprk-selection-item-container"></ng-content>
+      <ng-content select="sprk-checkbox-item"></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
+      <ng-content select="[afterSprkInput]"></ng-content>
     </div>
-  `
+  `,
 })
 export class SparkInputContainerComponent implements OnInit {
   /**
@@ -25,6 +30,24 @@ export class SparkInputContainerComponent implements OnInit {
    */
   @Input()
   additionalClasses: string;
+  /**
+   * This will be used to determine the variant of
+   * the checkbox item.
+   */
+  @Input()
+  variant: 'huge' | undefined;
+
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
+  @Input()
+  idString: string;
+
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -39,12 +62,14 @@ export class SparkInputContainerComponent implements OnInit {
    */
   @ContentChild(SprkLabelDirective, { static: true })
   label: SprkLabelDirective;
+
   /**
    * This component expects a child input element
    * with the `sprkInput` directive.
    */
   @ContentChild(SprkInputDirective, { static: true })
   input: SprkInputDirective;
+
   /**
    * This component expects a child element
    * with the `sprkFieldError` directive.
@@ -72,7 +97,7 @@ export class SparkInputContainerComponent implements OnInit {
     const classArray: string[] = ['sprk-b-InputContainer'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -87,7 +112,7 @@ export class SparkInputContainerComponent implements OnInit {
     if (this.input && this.error) {
       this.input.ref.nativeElement.setAttribute(
         'aria-describedby',
-        this.error_id
+        this.error_id,
       );
       this.error.ref.nativeElement.id = this.error_id;
     }
