@@ -23,19 +23,18 @@ export default {
   },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
     onSubmit(event): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
@@ -52,7 +51,7 @@ the Inputs table below for available customization options.
   decimals to the hundredth place.
 `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
@@ -103,7 +102,7 @@ defaultStory.story = {
       'sprk-label.directive',
       'sprk-datepicker.directive',
     ],
-  }
+  },
 };
 
 export const invalidDatePicker = () => ({
@@ -152,7 +151,7 @@ invalidDatePicker.story = {
       'sprk-datepicker.directive',
       'sprk-field-error.directive',
     ],
-  }
+  },
 };
 
 export const disabledDatePicker = () => ({
@@ -193,5 +192,135 @@ disabledDatePicker.story = {
       'sprk-label.directive',
       'sprk-datepicker.directive',
     ],
-  }
+  },
+};
+
+export const legacyStory = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container>
+      <label class="sprk-b-Label--with-icon" sprkLabel>
+        Date Input
+      </label>
+      <sprk-icon
+        iconType="calendar"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+        sprk-input-icon
+      ></sprk-icon>
+      <input
+        name="datepicker_input"
+        class="sprk-b-TextInput--has-svg-icon"
+        type="text"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="datepicker_input"
+        #datepickerInput="ngModel"
+        [sprkDatePickerConfig]="dpConfig"
+        sprkDatepicker
+        sprkInput
+      />
+    </sprk-icon-input-container>
+  `,
+});
+
+legacyStory.story = {
+  name: 'Legacy (Deprecated)',
+  parameters: {
+    docs: { iframeHeight: 400 },
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-datepicker.directive',
+    ],
+  },
+};
+
+export const legacyInvalidDatePicker = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container>
+      <label class="sprk-b-Label--with-icon" sprkLabel>
+        Date Input
+      </label>
+      <sprk-icon
+        iconType="calendar"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+        sprk-input-icon
+      ></sprk-icon>
+      <input
+        name="datepicker_input"
+        class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
+        type="text"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="datepicker_input"
+        #datepickerInput="ngModel"
+        [sprkDatePickerConfig]="dpConfig"
+        aria-invalid="true"
+        sprkDatepicker
+        sprkInput
+      />
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled-small"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-icon-input-container>
+  `,
+});
+
+legacyInvalidDatePicker.story = {
+  name: 'Legacy Invalid (Deprecated)',
+  parameters: {
+    docs: { iframeHeight: 400 },
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-datepicker.directive',
+      'sprk-field-error.directive',
+    ],
+  },
+};
+
+export const legacyDisabledDatePicker = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-icon-input-container>
+      <label class="sprk-b-Label--with-icon sprk-b-Label--disabled" sprkLabel>
+        Date Input
+      </label>
+      <sprk-icon
+        iconType="calendar"
+        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+        sprk-input-icon
+      ></sprk-icon>
+      <input
+        disabled
+        name="datepicker_input"
+        class="sprk-b-TextInput--has-svg-icon"
+        type="text"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="datepicker_input"
+        #datepickerInput="ngModel"
+        [sprkDatePickerConfig]="dpConfig"
+        sprkDatepicker
+        sprkInput
+      />
+    </sprk-icon-input-container>
+  `,
+});
+
+legacyDisabledDatePicker.story = {
+  name: 'Legacy Disabled (Deprecated)',
+  parameters: {
+    docs: { iframeHeight: 400 },
+    jest: [
+      'sprk-icon-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-datepicker.directive',
+    ],
+  },
 };
