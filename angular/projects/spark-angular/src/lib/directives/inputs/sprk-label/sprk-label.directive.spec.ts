@@ -1,5 +1,5 @@
 import { Component, DebugElement } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkLabelDirective } from './sprk-label.directive';
 
@@ -9,31 +9,40 @@ import { SprkLabelDirective } from './sprk-label.directive';
     <label sprkLabel>
       Label!
     </label>
-  `
+    <label sprkLabel hasIcon="true">
+      Label!
+    </label>
+  `,
 })
 class TestComponent {}
 
 describe('SprkLabelDirective', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let inputElement: DebugElement;
+  let label: DebugElement;
+  let labelHasIcon: HTMLElement;
 
-  beforeEach(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkLabelDirective, TestComponent]
-    });
-  });
+      declarations: [SprkLabelDirective, TestComponent],
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
-    inputElement = fixture.debugElement.query(By.css('label'));
     fixture.detectChanges();
-  });
+    label = fixture.debugElement.query(By.css('label'));
+    labelHasIcon = fixture.nativeElement.querySelectorAll('label')[1];
+  }));
 
   it('should add the correct label classes to the applied element', () => {
-    expect(
-      inputElement.nativeElement.classList.contains('sprk-b-Label')
-    ).toEqual(true);
+    expect(label.nativeElement.classList.contains('sprk-b-Label')).toEqual(
+      true,
+    );
+  });
+
+  it('should add the icon label class if hasIcon is true', () => {
+    expect(labelHasIcon.classList.contains('sprk-b-Label--with-icon')).toEqual(
+      true,
+    );
   });
 });

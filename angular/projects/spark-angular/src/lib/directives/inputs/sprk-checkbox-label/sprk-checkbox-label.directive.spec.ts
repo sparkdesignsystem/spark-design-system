@@ -7,14 +7,17 @@ import { SprkCheckboxLabelDirective } from './sprk-checkbox-label.directive';
   template: `
     <label sprkCheckboxLabel idString="test-id-str">Label</label>
     <label sprkCheckboxLabel variant="huge">Label</label>
-    <label sprkCheckboxLabel isDisabled="true" analyticsString="test-analytics-str"
+    <label
+      sprkCheckboxLabel
+      isDisabled="true"
+      analyticsString="test-analytics-str"
       >Label</label
     >
   `,
 })
 class TestComponent {}
 
-describe('Spark Helper Text Directive', () => {
+describe('SprkCheckboxLabelDirective', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let labelElement: HTMLElement;
