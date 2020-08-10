@@ -15,7 +15,7 @@ import { SparkInputContainerComponent } from './sprk-input-container.component';
       <p sprkHelperText>Helper Text!</p>
       <span sprkFieldError>Error Message!</span>
     </sprk-input-container>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -38,8 +38,8 @@ describe('SparkInputContainerComponent', () => {
         SprkInputDirective,
         SprkFieldErrorDirective,
         TestComponent,
-        SparkInputContainerComponent
-      ]
+        SparkInputContainerComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -48,12 +48,12 @@ describe('SparkInputContainerComponent', () => {
     component = testFixture.componentInstance;
 
     inputContainerFixture = TestBed.createComponent(
-      SparkInputContainerComponent
+      SparkInputContainerComponent,
     );
     inputContainerComponent = inputContainerFixture.componentInstance;
 
     inputContainerElement = inputContainerFixture.nativeElement.querySelector(
-      'div'
+      'div',
     );
 
     labelElement = testFixture.debugElement.query(By.css('label'))
@@ -74,7 +74,7 @@ describe('SparkInputContainerComponent', () => {
     inputContainerComponent.additionalClasses = 'sprk-u-man';
     inputContainerFixture.detectChanges();
     expect(inputContainerElement.classList.toString()).toEqual(
-      'sprk-b-InputContainer sprk-u-man'
+      'sprk-b-InputContainer sprk-u-man',
     );
   });
 
@@ -84,7 +84,13 @@ describe('SparkInputContainerComponent', () => {
 
   it('should set the aria-describedby attribute on the input to match the id on the error field', () => {
     expect(inputElement.getAttribute('aria-describedby')).toEqual(
-      errorElement.id
+      errorElement.id,
     );
+  });
+
+  it('should add the value of idString to data-id on the element', () => {
+    inputContainerComponent.idString = 'test-id-str';
+    inputContainerFixture.detectChanges();
+    expect(inputContainerElement.getAttribute('data-id')).toBe('test-id-str');
   });
 });
