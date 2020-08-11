@@ -101,7 +101,6 @@ describe('SprkAngularDictionaryComponent', () => {
   it('should correctly add striped class with deprecated Input', () => {
     wrappedComponent.dictionaryType = 'striped';
     wrappedFixture.detectChanges();
-    console.log(wrappedFixture.nativeElement.innerHTML);
 
     expect(wrappedElement.classList.toString()).toContain(
       'sprk-c-Dictionary--striped',
