@@ -108,7 +108,7 @@ describe('SprkAngularDictionaryComponent', () => {
     );
   });
 
-  it('should add data correctly', () => {
+  it('should add keyValuePairs correctly', () => {
     component.keyValuePairs = { key1: 'value1', key2: 'value2' };
     fixture.detectChanges();
 
