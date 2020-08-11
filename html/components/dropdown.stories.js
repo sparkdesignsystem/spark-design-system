@@ -31,7 +31,7 @@ export const defaultStory = () => {
       aria-haspopup="listbox"
       aria-label="Dropdown example description"
     >
-      <svg class="sprk-c-Icon sprk-u-mls" viewBox="0 0 100 100">
+      <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mls" viewBox="0 0 100 100">
         <use xlink:href="#settings" />
       </svg>
     </a>

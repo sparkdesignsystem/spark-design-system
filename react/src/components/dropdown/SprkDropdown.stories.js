@@ -50,6 +50,7 @@ export const defaultStory = () => (
       ],
     }}
     iconName="settings"
+    additionalIconClasses="sprk-c-Icon--l"
   />
 );
 
