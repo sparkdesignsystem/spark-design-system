@@ -3,16 +3,46 @@ import {
   ElementRef,
   OnInit,
   HostListener,
+  Input,
+  HostBinding,
 } from '@angular/core';
 
 @Directive({
-  selector: '[sprkInput]'
+  selector: '[sprkInput]',
 })
 export class SprkInputDirective implements OnInit {
   /**
    * @ignore
    */
   constructor(public ref: ElementRef) {}
+
+  /**
+   * If set to `false`, then
+   * the error styles will be applied
+   * to the input.
+   */
+  @Input()
+  isValid: boolean;
+
+  // /**
+  //  * If set to `true`, then
+  //  * the icon styles will be applied
+  //  * to the input.
+  //  */
+  // @Input()
+  // hasIcon: boolean;
+
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * element. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
+  @HostBinding('attr.data-id')
+  @Input()
+  idString: string;
 
   /**
    * @ignore
@@ -23,7 +53,9 @@ export class SprkInputDirective implements OnInit {
     if (value.length > 0) {
       this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
     } else {
-      this.ref.nativeElement.classList.remove('sprk-b-Input--has-floating-label');
+      this.ref.nativeElement.classList.remove(
+        'sprk-b-Input--has-floating-label',
+      );
     }
   }
 
@@ -37,7 +69,7 @@ export class SprkInputDirective implements OnInit {
       this.ref.nativeElement.classList.add('sprk-b-TextInput');
     }
 
-    if ((this.ref.nativeElement as HTMLInputElement).value.length > 0 ) {
+    if ((this.ref.nativeElement as HTMLInputElement).value.length > 0) {
       this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
     }
     this.ref.nativeElement.classList.add('sprk-u-Width-100');

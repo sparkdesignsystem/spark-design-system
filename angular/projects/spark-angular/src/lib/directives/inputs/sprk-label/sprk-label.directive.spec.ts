@@ -12,6 +12,9 @@ import { SprkLabelDirective } from './sprk-label.directive';
     <label sprkLabel hasIcon="true">
       Label!
     </label>
+    <label sprkLabel isDisabled="true">
+      Label!
+    </label>
   `,
 })
 class TestComponent {}
@@ -21,6 +24,7 @@ describe('SprkLabelDirective', () => {
   let fixture: ComponentFixture<TestComponent>;
   let label: DebugElement;
   let labelHasIcon: HTMLElement;
+  let labelDisabled: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -32,6 +36,7 @@ describe('SprkLabelDirective', () => {
     fixture.detectChanges();
     label = fixture.debugElement.query(By.css('label'));
     labelHasIcon = fixture.nativeElement.querySelectorAll('label')[1];
+    labelDisabled = fixture.nativeElement.querySelectorAll('label')[2];
   }));
 
   it('should add the correct label classes to the applied element', () => {
@@ -42,6 +47,12 @@ describe('SprkLabelDirective', () => {
 
   it('should add the icon label class if hasIcon is true', () => {
     expect(labelHasIcon.classList.contains('sprk-b-Label--with-icon')).toEqual(
+      true,
+    );
+  });
+
+  it('should add the disabled class if isDisabled is true', () => {
+    expect(labelDisabled.classList.contains('sprk-b-Label--disabled')).toEqual(
       true,
     );
   });

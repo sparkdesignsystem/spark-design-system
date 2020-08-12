@@ -7,7 +7,7 @@ import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-inpu
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
-import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
+import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -56,7 +56,7 @@ the Inputs table below for available customization options.
 
 const modules = {
   imports: [
-    SprkIconInputContainerModule,
+    SparkInputContainerModule,
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,
@@ -89,6 +89,47 @@ export const defaultStory = () => ({
           sprkDatepicker
         />
       </div>
+    </sprk-input-container>
+  `,
+});
+
+defaultStory.story = {
+  name: 'Default',
+  parameters: {
+    docs: { iframeHeight: 400 },
+    jest: [
+      'sprk-input-container.component',
+      'sprk-label.directive',
+      'sprk-datepicker.directive',
+    ],
+  },
+};
+
+export const invalidDatePicker = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <div class="sprk-b-InputContainer__icon-container">
+        <label hasIcon="true" sprkLabel>
+          Date Input
+        </label>
+        <sprk-icon
+          iconType="calendar"
+          additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+          sprk-input-icon
+        ></sprk-icon>
+        <input
+          name="datepicker_input"
+          type="text"
+          isValid="false"
+          placeholder="MM/DD/YYYY"
+          [(ngModel)]="datepicker_input"
+          #datepickerInput="ngModel"
+          [sprkDatePickerConfig]="dpConfig"
+          aria-invalid="true"
+          sprkDatepicker
+        />
+      </div>
       <span sprkFieldError>
         <sprk-icon
           iconType="exclamation-filled-small"
@@ -100,61 +141,12 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-    ],
-  },
-};
-
-export const invalidDatePicker = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-icon-input-container>
-      <label class="sprk-b-Label--with-icon" sprkLabel>
-        Date Input
-      </label>
-      <sprk-icon
-        iconType="calendar"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
-        sprk-input-icon
-      ></sprk-icon>
-      <input
-        name="datepicker_input"
-        class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
-        type="text"
-        placeholder="MM/DD/YYYY"
-        [(ngModel)]="datepicker_input"
-        #datepickerInput="ngModel"
-        [sprkDatePickerConfig]="dpConfig"
-        aria-invalid="true"
-        sprkDatepicker
-        sprkInput
-      />
-      <span sprkFieldError>
-        <sprk-icon
-          iconType="exclamation-filled-small"
-          additionalClasses="sprk-b-ErrorIcon"
-        ></sprk-icon>
-        <div class="sprk-b-ErrorText">There is an error on this field.</div>
-      </span>
-    </sprk-icon-input-container>
-  `,
-});
-
 invalidDatePicker.story = {
   name: 'Invalid',
   parameters: {
     docs: { iframeHeight: 400 },
     jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
+      'sprk-input-container.component',
       'sprk-label.directive',
       'sprk-datepicker.directive',
       'sprk-field-error.directive',
@@ -165,28 +157,29 @@ invalidDatePicker.story = {
 export const disabledDatePicker = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-icon-input-container>
-      <label class="sprk-b-Label--with-icon sprk-b-Label--disabled" sprkLabel>
-        Date Input
-      </label>
-      <sprk-icon
-        iconType="calendar"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
-        sprk-input-icon
-      ></sprk-icon>
-      <input
-        disabled
-        name="datepicker_input"
-        class="sprk-b-TextInput--has-svg-icon"
-        type="text"
-        placeholder="MM/DD/YYYY"
-        [(ngModel)]="datepicker_input"
-        #datepickerInput="ngModel"
-        [sprkDatePickerConfig]="dpConfig"
-        sprkDatepicker
-        sprkInput
-      />
-    </sprk-icon-input-container>
+    <sprk-input-container>
+      <div class="sprk-b-InputContainer__icon-container">
+        <label hasIcon="true" sprkLabel isDisabled="true">
+          Date Input
+        </label>
+        <sprk-icon
+          iconType="calendar"
+          additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
+          sprk-input-icon
+        ></sprk-icon>
+        <input
+          name="datepicker_input"
+          type="text"
+          disabled
+          placeholder="MM/DD/YYYY"
+          [(ngModel)]="datepicker_input"
+          #datepickerInput="ngModel"
+          [sprkDatePickerConfig]="dpConfig"
+          aria-invalid="true"
+          sprkDatepicker
+        />
+      </div>
+    </sprk-input-container>
   `,
 });
 
@@ -195,8 +188,7 @@ disabledDatePicker.story = {
   parameters: {
     docs: { iframeHeight: 400 },
     jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
+      'sprk-input-container.component',
       'sprk-label.directive',
       'sprk-datepicker.directive',
     ],

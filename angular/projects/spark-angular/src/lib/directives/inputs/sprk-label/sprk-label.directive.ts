@@ -10,10 +10,18 @@ export class SprkLabelDirective implements OnInit {
   constructor(public ref: ElementRef) {}
   /**
    * If `true`, this will add
-   * styles to the label.
+   * styles to the label to make it work
+   * with an icon.
    */
   @Input()
   hasIcon: boolean;
+
+  /**
+   * If `true`, this will add
+   * disabled styles to the label.
+   */
+  @Input()
+  isDisabled: boolean;
 
   /**
    * @ignore
@@ -22,6 +30,9 @@ export class SprkLabelDirective implements OnInit {
     const classArray: string[] = ['sprk-b-Label'];
     if (this.hasIcon) {
       classArray.push('sprk-b-Label--with-icon');
+    }
+    if (this.isDisabled) {
+      classArray.push('sprk-b-Label--disabled');
     }
     return classArray;
   }
