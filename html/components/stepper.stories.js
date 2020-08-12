@@ -293,7 +293,7 @@ export const withDarkBackground = () => {
   }, []);
 
   return `
-  <div class="sprk-u-BackgroundColor--dark-purple sprk-o-Box sprk-o-Box--large">
+  <div class="sprk-u-BackgroundColor--purple-dark sprk-o-Box sprk-o-Box--large">
     <ol
       class="sprk-c-Stepper sprk-c-Stepper--has-dark-bg "
       data-sprk-stepper="container"
@@ -464,7 +464,7 @@ export const withCarousel = () => {
   }, []);
 
   return `
-  <div class="sprk-u-BackgroundColor--dark-purple sprk-o-Box sprk-o-Box--large">
+  <div class="sprk-u-BackgroundColor--purple-dark sprk-o-Box sprk-o-Box--large">
     <div class="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--center-column sprk-o-Stack--split-reverse@xl">
       <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xl">
         <div
