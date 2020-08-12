@@ -105,3 +105,35 @@ $sprk-black-tint-10: rgb(232, 232, 232);
 /// @group neutral
 /// @type #F7F7F7
 $sprk-gray: rgb(247, 247, 247);
+
+// Positive to Negative
+/// Color value for Twilight.
+/// @group scale
+/// @type #802F92
+$sprk-twilight: rgb(128,47,146);
+/// Color value for Sunset.
+/// @group scale
+/// @type #A0247E
+$sprk-sunset: rgb(160,36,126);
+/// Color value for Supernova Pink.
+/// @group scale
+/// @type #C0176A
+$sprk-supernova: rgb(192,23,106);
+
+// Charts and Graphs
+/// Color value for Navy Purple.
+/// @group charts
+/// @type #1C0152
+$sprk-navy-purple: rgb(28,1,82);
+/// Color value for Lavender.
+/// @group charts
+/// @type #BE84F7
+$sprk-lavender: rgb(190,132,247);
+/// Color value for Wisteria.
+/// @group charts
+/// @type #DEB1FD
+$sprk-wisteria: rgb(222,177,253);
+/// Color value for Magnolia.
+/// @group charts
+/// @type #F0DAFF
+$sprk-magnolia: rgb(240,218,255);
