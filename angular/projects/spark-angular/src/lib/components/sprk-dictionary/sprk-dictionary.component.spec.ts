@@ -4,14 +4,22 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: `sprk-test`,
-  template: `<sprk-dictionary
-    [dictionaryType]="dictionaryType"
+  template: ` <sprk-dictionary
+    [keyValuePairs]="keyValuePairs"
     [data]="data"
+    [dictionaryType]="dictionaryType"
+    [variant]="variant"
+    [keysAdditionalClasses]="keysAdditionalClasses"
+    [valuesAdditionalClasses]="valuesAdditionalClasses"
   ></sprk-dictionary>`,
 })
-class TestComponent {
-  data = {};
-  dictionaryType = '';
+class WrappedDictionaryComponent {
+  data: object = {};
+  keyValuePairs: object = {};
+  dictionaryType: string = '';
+  variant: string = '';
+  keysAdditionalClasses: string = '';
+  valuesAdditionalClasses: string = '';
 }
 
 describe('SprkAngularDictionaryComponent', () => {
@@ -19,13 +27,13 @@ describe('SprkAngularDictionaryComponent', () => {
   let fixture: ComponentFixture<SprkDictionaryComponent>;
   let element: HTMLElement;
 
-  let wrappedComponent: TestComponent;
-  let wrappedFixture: ComponentFixture<TestComponent>;
+  let wrappedComponent: WrappedDictionaryComponent;
+  let wrappedFixture: ComponentFixture<WrappedDictionaryComponent>;
   let wrappedElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkDictionaryComponent, TestComponent],
+      declarations: [SprkDictionaryComponent, WrappedDictionaryComponent],
     }).compileComponents();
   }));
 
@@ -35,7 +43,7 @@ describe('SprkAngularDictionaryComponent', () => {
     element = fixture.nativeElement.querySelector('div');
     fixture.detectChanges();
 
-    wrappedFixture = TestBed.createComponent(TestComponent);
+    wrappedFixture = TestBed.createComponent(WrappedDictionaryComponent);
     wrappedComponent = wrappedFixture.componentInstance;
     wrappedElement = wrappedFixture.nativeElement.querySelector('div');
     wrappedFixture.detectChanges();
@@ -66,36 +74,54 @@ describe('SprkAngularDictionaryComponent', () => {
   });
 
   it('should add keysAdditionalClasses', () => {
-    component.keysAdditionalClasses = 'keysClass';
-    component.keyValuePairs = { key: 'value', key2: 'value2' };
-    fixture.detectChanges();
+    wrappedComponent.keysAdditionalClasses = 'spark keysClass';
+    wrappedComponent.keyValuePairs = { key: 'value', key2: 'value2' };
+    wrappedFixture.detectChanges();
 
-    const keys = element.getElementsByClassName('sprk-c-Dictionary__key');
+    const keys = wrappedElement.getElementsByClassName(
+      'sprk-c-Dictionary__key',
+    );
 
     Array.prototype.forEach.call(keys, (key) => {
+      expect(key.classList.toString()).toContain('spark');
       expect(key.classList.toString()).toContain('keysClass');
     });
   });
 
   it('should add valuesAdditionalClasses', () => {
-    component.valuesAdditionalClasses = 'valuesClass';
-    component.keyValuePairs = { key: 'value', key2: 'value2' };
-    fixture.detectChanges();
+    wrappedComponent.valuesAdditionalClasses = 'spark valuesClass';
+    wrappedComponent.keyValuePairs = { key: 'value', key2: 'value2' };
+    wrappedFixture.detectChanges();
 
-    const values = element.getElementsByClassName('sprk-c-Dictionary__value');
+    const values = wrappedElement.getElementsByClassName(
+      'sprk-c-Dictionary__value',
+    );
 
     Array.prototype.forEach.call(values, (value) => {
+      expect(value.classList.toString()).toContain('spark');
       expect(value.classList.toString()).toContain('valuesClass');
     });
   });
 
   it('should correctly add striped class', () => {
-    component.variant = 'striped';
+    wrappedComponent.variant = 'striped';
 
-    fixture.detectChanges();
-    expect(element.classList.toString()).toContain(
+    wrappedFixture.detectChanges();
+    expect(wrappedElement.classList.toString()).toContain(
       'sprk-c-Dictionary--striped',
     );
+  });
+
+  it('should add keyValuePairs correctly', () => {
+    wrappedComponent.keyValuePairs = { key1: 'value1', key2: 'value2' };
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(2);
+    expect(
+      wrappedElement.getElementsByClassName('sprk-c-Dictionary__value').length,
+    ).toBe(2);
   });
 
   it('should correctly add striped class with deprecated Input', () => {
@@ -105,18 +131,6 @@ describe('SprkAngularDictionaryComponent', () => {
     expect(wrappedElement.classList.toString()).toContain(
       'sprk-c-Dictionary--striped',
     );
-  });
-
-  it('should add keyValuePairs correctly', () => {
-    component.keyValuePairs = { key1: 'value1', key2: 'value2' };
-    fixture.detectChanges();
-
-    expect(
-      element.getElementsByClassName('sprk-c-Dictionary__key').length,
-    ).toBe(2);
-    expect(
-      element.getElementsByClassName('sprk-c-Dictionary__value').length,
-    ).toBe(2);
   });
 
   it('should add data correctly with deprecated Input', () => {
@@ -147,6 +161,26 @@ describe('SprkAngularDictionaryComponent', () => {
     ).toBe(3);
   });
 
+  it('should correctly respond to changes to keyValuePairs Input', () => {
+    wrappedComponent.keyValuePairs = { key1: 'value1', key2: 'value2' };
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(2);
+
+    wrappedComponent.keyValuePairs = {
+      key1: 'value1',
+      key2: 'value2',
+      key3: 'value3',
+    };
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(3);
+  });
+
   it('should correctly respond to changes to dictionaryType Input', () => {
     wrappedComponent.dictionaryType = '';
     wrappedFixture.detectChanges();
@@ -159,5 +193,23 @@ describe('SprkAngularDictionaryComponent', () => {
     expect(wrappedElement.classList.toString()).toContain(
       'sprk-c-Dictionary--striped',
     );
+  });
+
+  it('should prefer keyValuePairs over data', () => {
+    wrappedComponent.keyValuePairs = { key1: 'value1', key2: 'value2' };
+    wrappedComponent.data = { key1: 'value1', key2: 'value2', key3: 'value3' };
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(2);
+
+    wrappedComponent.keyValuePairs = { key1: 'value1' };
+    wrappedComponent.data = { key1: 'value1', key2: 'value2' };
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
+    ).toBe(1);
   });
 });

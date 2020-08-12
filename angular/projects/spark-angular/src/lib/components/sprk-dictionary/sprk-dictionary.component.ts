@@ -1,10 +1,4 @@
-import {
-  Component,
-  Input,
-  OnInit,
-  OnChanges,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'sprk-dictionary',
@@ -12,17 +6,17 @@ import {
     <div [ngClass]="getClasses()" [attr.data-id]="idString">
       <dl class="sprk-c-Dictionary__keyvaluepairs">
         <div
-          *ngFor="let key of objectKeys(keyValuePairs)"
+          *ngFor="let key of objectKeys(dataToUse)"
           class="sprk-c-Dictionary__keyvaluepair"
         >
           <dt [ngClass]="getKeysClasses()">{{ key }}</dt>
-          <dd [ngClass]="getValuesClasses()">{{ keyValuePairs[key] }}</dd>
+          <dd [ngClass]="getValuesClasses()">{{ dataToUse[key] }}</dd>
         </div>
       </dl>
     </div>
   `,
 })
-export class SprkDictionaryComponent implements OnInit, OnChanges {
+export class SprkDictionaryComponent implements OnChanges {
   /**
    * Deprecated - Use `keyValuePairs` instead. The collection of key-value
    * pairs to be rendered into the component.
@@ -77,6 +71,14 @@ export class SprkDictionaryComponent implements OnInit, OnChanges {
    * Used to grab all the keys from objects.
    */
   objectKeys = Object.keys;
+  /**
+   * @ignore
+   */
+  dataToUse: object = {};
+  /**
+   * @ignore
+   */
+  variantToUse: string;
 
   /**
    * @ignore
@@ -84,7 +86,7 @@ export class SprkDictionaryComponent implements OnInit, OnChanges {
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Dictionary'];
 
-    if (this.variant === 'striped') {
+    if (this.variantToUse === 'striped') {
       classArray.push('sprk-c-Dictionary--striped');
     }
 
@@ -131,31 +133,17 @@ export class SprkDictionaryComponent implements OnInit, OnChanges {
     return classArray.join(' ');
   }
 
-  /**
-   * @ignore
-   */
-  isEmpty = (obj) => {
-    return Object.keys(obj).length === 0;
-  };
-
-  ngOnInit(): void {
-    // TODO - remove data and dictionaryType as part of Issue 1167
-    if (!this.isEmpty(this.data) && this.isEmpty(this.keyValuePairs)) {
-      this.keyValuePairs = this.data;
-    }
-
-    if (this.dictionaryType && !this.variant) {
-      this.variant = this.dictionaryType;
-    }
-  }
-
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['data']) {
-      this.keyValuePairs = changes['data'].currentValue;
+    if (changes['keyValuePairs']) {
+      this.dataToUse = changes['keyValuePairs'].currentValue;
+    } else if (changes['data']) {
+      this.dataToUse = changes['data'].currentValue;
     }
 
-    if (changes['dictionaryType']) {
-      this.variant = changes['dictionaryType'].currentValue;
+    if (changes['variant']) {
+      this.variantToUse = changes['variant'].currentValue;
+    } else if (changes['dictionaryType']) {
+      this.variantToUse = changes['dictionaryType'].currentValue;
     }
   }
 }
