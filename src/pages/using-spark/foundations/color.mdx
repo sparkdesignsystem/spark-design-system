@@ -2,117 +2,158 @@
   title: Color
 ---
 import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
-import colorsOnDark from '../../../images/colors-on-dark.png';
-import colorsOnDark2x from '../../../images/colors-on-dark@2x.png';
-import colorsOnDark3x from '../../../images/colors-on-dark@3x.png';
-import colorsOnLight from '../../../images/colors-on-light.png';
-import colorsOnLight2x from '../../../images/colors-on-light@2x.png';
-import colorsOnLight3x from '../../../images/colors-on-light@3x.png';
-
-import doNotMixColors from '../../../images/do-not-mix-colors.png';
-import doNotOveruseRed from '../../../images/do-not-overuse-red.png';
-import doNotUseAccentsLarge from '../../../images/do-not-use-accents-in-large-amounts.png';
-import doNotUseDarkBgsForText from '../../../images/do-not-use-dark-bgs-for-text.png';
-import doNotUseGradients from '../../../images/do-not-use-gradients.png';
-import doNotMakeTextIllegible from '../../../images/legibility.png';
-
 import {
   SprkStack,
-  SprkStackItem
+  SprkStackItem,
+  SprkButton,
+  SprkLink
 } from '@sparkdesignsystem/spark-react';
-export const colorsLightSrcSet = `${colorsOnLight} 560w, ${colorsOnLight2x} 1120w, ${colorsOnLight3x} 1680w`;
-export const colorsDarkSrcSet = `${colorsOnDark} 560w, ${colorsOnDark2x} 1120w, ${colorsOnDark3x} 1680w`;
 
 # Color
-Our objective is to achieve human-centered design in everything we do.
+The Rocket Orbit color palette received an update in August 2020. Please review this guide carefully so that you can apply the colors correctly. Our objective is to achieve human-centered design in everything we do.
 
 Having a consistent color palette is one of the foundations of a unified user experience.
 
 We take accessibility seriously and comply with WCAG 2.0 contrast guidelines, and we do our best to account for the needs of all people.
 
-<SprkStack
-  splitAt="huge"
-  itemSpacing="medium"
-  additionalClasses="sprk-u-mbl sprk-u-ptm sprk-u-pbm"
->
-  <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@m">
-    <img
-      srcset={colorsLightSrcSet}
-      src={colorsOnLight}
-      sizes="(min-width: 1120px) 1120px,
-            (min-width: 1680px) 1680px,
-            560px"
-      alt="The brand colors on a light background."/>
-  </SprkStackItem>
+## Our Color Story
+From one of our designers:
 
-  <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@m">
-  <img
-    srcset={colorsDarkSrcSet}
-    src={colorsOnDark}
-    sizes="(min-width: 1120px) 1120px,
-          (min-width: 1680px) 1680px,
-          560px"
-    alt="The brand colors on a dark background."/>
+"It reminded me of when Felix Baumgartner jumped from the edge of space. I watched the live stream while at work in Australia. It took him 2 hours and 21 minutes in a helium capsule to get there. But the thing I remember the most when watching it, as he ascended and the curvature of the earth became more pronounced, it created this beautiful tapestry of color as he moved through the atmospheres and how the light would reflect and as your perspective changed.
+
+So as not to lean too heavily in a literal sense on our name, it provided me with a source of inspiration as to how we can approach one of the most fundamental elements of light, which is color."
+
+The Orbit palette is designed to be modern and approachable and fit our brand character and highlight color psychology attributes.
+
+## How to Use These Colors
+Color is an important part of our brand. When color is applied correctly it tells a story and helps users navigate a page.
+
+ Color is meant to be applied minimally and intentionally to draw focus. The page should feel minimalistic and color should be conveying brand meaning, interaction, and data and graphs.
+
+ We recommend taking a look at the page and asking:
+
+ - What am I communicating?
+ - Do the red and purple feel like they are used appropriately?
+ - Is there too much color in one area that my eye is drawn there? Should users be focused in this area?
+
+Color should not be used as the only way to communicate information (Do not only show a red error or a green success message without using a label).
+
+### Floods of Color
+<img src="https://via.placeholder.com/1000x250/0000FF/808080 ?Text=FloodCOLOR" class="sprk-u-mbm" />
+
+Floods of colors indicate areas of focus in the interface but content should mainly be on white backgrounds.
+Floods of color should be reserved for the below colors only:
+
+#### Dark
+<ColorSwatchGrid color="flood-dark" additionalClasses="sprk-u-mbl"/>
+
+#### Light
+<ColorSwatchGrid color="flood-light" additionalClasses="sprk-u-mbl"/>
+
+### Semantic Colors
+Semantic colors are used to depict noteworty information, such as success or urgency. They should not be used outside of their intended context.
+<ColorSwatchGrid color="semantic" additionalClasses="sprk-u-mbl"/>
+
+### Button and Link Hierarchy
+
+<SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
+    <SprkButton>Button</SprkButton>
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
+    Primary Button: Rocket Red Buttons - This is used for a primary action on the page. We do not recommend using more than 1-2 primary buttons on the page and instead to differentiate buttons with other button types.
   </SprkStackItem>
 </SprkStack>
 
+<SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
+    <SprkButton variant="secondary">Button</SprkButton>
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
+    Secondary Button: Filled Purple Buttons - this is used for the secondary button on pages. Differentiate secondary actions on the page. Secondary actions can be placed directly next to a primary button.
+  </SprkStackItem>
+</SprkStack>
+
+<SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
+    <SprkButton variant="tertiary">Button</SprkButton>
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
+    Tertiary Button: Outlined Purple Buttons - Pair a tertiary button next to a primary or secondary button. Do not overuse this button type.
+  </SprkStackItem>
+</SprkStack>
+
+<SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
+    <SprkButton variant="quaternary">Button</SprkButton>
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
+    Quaternary Buttons: 4th level buttons are used for the login buttons in the top navigation. They can be used on the page for the least important actions.
+  </SprkStackItem>
+</SprkStack>
+
+<SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
+    <SprkLink href="#nogo">Default Link</SprkLink>
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
+    Default Links: purple with an underline - this link style should be used inline for text links. It can also be used. Purple is intended to show interaction and highlight information.
+  </SprkStackItem>
+</SprkStack>
+
+<SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
+    <SprkLink variant="simple" href="#nogo">Simple Link</SprkLink>
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
+    Simple Links - These are to be used in navigation in the header and footer.
+  </SprkStackItem>
+</SprkStack>
+
+#### Charts and Graphs
+Charts and graphs use shades of purple to represent different parts of the graphs.
+
+Pink can be used to call out something negative, or a semantic color can be used to call out a positive or negative action.
+Do not mix multiple semantic colors within one chart. They are only an accent to the purple gradient pallete.
+## ⚠️Missing Colors⚠️
+- #1C0152
+- #BE84F8
+- #DEB1FD
+- #F0DAFF
+<ColorSwatchGrid color="charts-graphs"/>
+
+#### Credit Store
+To show credit score we show it go from Pink to Purple. Pink is a negative color while purple is a positive color. Permutations of credit score get these colors applied like this:
+<img src="https://via.placeholder.com/1000x250/0000FF/808080 ?Text=CreditScoreImage" class="sprk-u-mbm" />
+
+## ⚠️Missing Colors⚠️
+- #802F92
+- #A0247E
+- #C0176A
+<ColorSwatchGrid color="positive-negative" />
+
 ## Color Palette
-### Red
-<ColorSwatchGrid color="red" />
+### Primary
+<ColorSwatchGrid color="primary"/>
 
-### Blue
-<ColorSwatchGrid color="blue" />
+### Secondary
+<ColorSwatchGrid color="secondary" />
 
-### Green
-<ColorSwatchGrid color="green" />
+### Semantic
+<ColorSwatchGrid color="semantic" />
 
-### Yellow
-<ColorSwatchGrid color="yellow" />
+### Neutral
+<ColorSwatchGrid color="neutral" />
 
-### Black
-<ColorSwatchGrid color="black" />
+### Colors from Positive to Negative
+## ⚠️Missing Colors⚠️
+<ColorSwatchGrid color="positive-negative" />
 
-### White
-<ColorSwatchGrid
-  color="white"
-  additionalClasses="sprk-u-mbl"
-  />
+### Charts and Graphs
+## ⚠️Missing Colors⚠️
+<ColorSwatchGrid color="charts-graphs"/>
 
-## Color Restrictions
-Follow these rules for our color palette to
-look best.
-
-### Do Not Mix Colors
-<img
-  class="sprk-u-mbm"
-  src={doNotMixColors}
-  alt="Placeholder alt text for this image."/>
-
-### Do Not Overuse Red
-<img
-  class="sprk-u-mbm"
-  src={doNotOveruseRed}
-  alt="Placeholder alt text for this image."/>
-
-### Do Not Use Accent Colors In Large Amounts
-<img
-  class="sprk-u-mbm"
-  src={doNotUseAccentsLarge}
-  alt="Placeholder alt text for this image."/>
-
-### Do Not Use Dark Backgrounds For Text
-<img
-  class="sprk-u-mbm"
-  src={doNotUseDarkBgsForText}
-  alt="Placeholder alt text for this image."/>
-
-### Do Not Use Gradients
-<img
-  class="sprk-u-mbm"
-  src={doNotUseGradients}
-  alt="Placeholder alt text for this image."/>
-
-### Do Not Make Text Illegible
-<img
-  src={doNotMakeTextIllegible}
-  alt="Placeholder alt text for this image."/>
+## Contrast Accessibility Charts
+<img src="https://via.placeholder.com/950x950/0000FF/808080 ?Text=FloodCOLOR" class="sprk-u-mbm" />
+<img src="https://via.placeholder.com/950x950/0000FF/808080 ?Text=FloodCOLOR" class="sprk-u-mbm" />
+<img src="https://via.placeholder.com/950x950/0000FF/808080 ?Text=FloodCOLOR" class="sprk-u-mbm" />

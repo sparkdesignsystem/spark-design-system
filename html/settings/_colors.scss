@@ -3,7 +3,7 @@
 // ==================================================================
 
 // Primary
-/// Color value for red.
+/// This red is the main shade in the primary palette.
 /// @group primary
 /// @type #C8102E
 $sprk-red: rgb(200, 16, 46);
@@ -17,52 +17,54 @@ $sprk-deep-red: rgb(118, 35, 47);
 $sprk-mid-red: rgb(157, 34, 53);
 
 // Secondary
-/// Color value for purple.
-/// @group secondary
+/// This purple is the main shade in the secondary palette.
+/// @group secondary positive-negative charts-graphs
 /// @type #603AA1
 $sprk-purple: rgb(96, 58, 161);
 /// Color value for dark purple.
-/// @group secondary
+/// @group secondary flood-dark charts-graphs
 /// @type #3C3174
 $sprk-dark-purple: rgb(60, 49, 116);
 /// Color value for deep purple.
-/// @group secondary
+/// @group secondary flood-dark charts-graphs
 /// @type #2E1166
 $sprk-deep-purple: rgb(46, 17, 102);
 /// Color value for light purple.
-/// @group secondary
+/// @group secondary charts-graphs
 /// @type #9265D3
 $sprk-light-purple: rgb(146, 101, 211);
 /// Color value for lightest purple.
-/// @group secondary
+/// @group secondary flood-light
 /// @type #E7E2F2
 $sprk-lightest-purple: rgb(231, 226, 242);
 
 // Semantic
-/// Color value for green. Intended to indicate a success.
+/// Indicates success.
 /// @group semantic
 /// @type #298540
 $sprk-green: rgb(41, 133, 64);
-/// Color value for blue. Intended to indicate information.
+/// Indicates informational content.
 /// @group semantic
 /// @type #1C6EF2
 $sprk-blue: rgb(28, 110, 242);
-/// Color value for pink. Intended to indicate an error.
-/// @group semantic
+/// Indicates error or something that needs
+/// urgent attention.
+/// @group semantic positive-negative
 /// @type #E50158
 $sprk-pink: rgb(229, 1, 88);
-/// Color value for yellow. Intended to indicate a warning.
+/// Indicates a warning.
+/// Pay attention to contrast accessibility when using.
 /// @group semantic
 /// @type #EDA302
 $sprk-yellow: rgb(237, 163, 2);
 
 // Neutrals
 /// Color value for white.
-/// @group neutral
+/// @group neutral flood-light
 /// @type #FFFFFF
 $sprk-white: rgb(255, 255, 255);
 /// Color value for black.
-/// @group neutral
+/// @group neutral flood-dark
 /// @type #1C1B1A
 $sprk-black: rgb(28, 27, 26);
 /// Color value for black at 90%.
@@ -102,6 +104,6 @@ $sprk-black-tint-20: rgb(210, 209, 209);
 /// @type #E8E8E8
 $sprk-black-tint-10: rgb(232, 232, 232);
 /// Color value for gray.
-/// @group neutral
+/// @group neutral flood-light
 /// @type #F7F7F7
 $sprk-gray: rgb(247, 247, 247);

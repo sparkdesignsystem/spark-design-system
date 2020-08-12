@@ -1,32 +1,38 @@
 import React from 'react';
-import InlineCode from '../components/markdown-render/inlineCode';
+import PropTypes from 'prop-types';
 import theme from 'prism-react-renderer/themes/github';
+import InlineCode from './markdown-render/inlineCode';
 
-const ColorSwatch = ({ name, description, hexValue, rgbValue, sassVar, swatchHeight }) => (
+const ColorSwatch = ({
+  name,
+  description,
+  hexValue,
+  rgbValue,
+  sassVar,
+  swatchHeight,
+}) => (
   <div className="sprk-c-Card sprk-o-Stack">
     <div className="sprk-o-Stack__item">
       <div
         style={{
           minHeight: swatchHeight || '140px',
-          backgroundColor: rgbValue
+          backgroundColor: rgbValue,
         }}
-        className="sprk-c-Card__media"></div>
+        className="sprk-c-Card__media"
+      />
     </div>
 
-    <div className="
+    <div
+      className="
       sprk-o-Stack__item
       sprk-c-Card__content
       sprk-o-Stack
       sprk-o-Stack--large
       "
     >
-      <h3 className="sprk-b-TypeDisplayFive sprk-o-Stack__item">
-        {name}
-      </h3>
+      <h3 className="sprk-b-TypeDisplayFive sprk-o-Stack__item">{name}</h3>
 
-      <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-        {description}
-      </p>
+      <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">{description}</p>
 
       <div className="sprk-o-Stack sprk-o-Stack--medium">
         {hexValue && (
@@ -76,5 +82,14 @@ const ColorSwatch = ({ name, description, hexValue, rgbValue, sassVar, swatchHei
     </div>
   </div>
 );
+
+ColorSwatch.propTypes = {
+  name: PropTypes.string,
+  description: PropTypes.string,
+  hexValue: PropTypes.string,
+  rgbValue: PropTypes.string,
+  sassVar: PropTypes.string,
+  swatchHeight: PropTypes.string,
+};
 
 export default ColorSwatch;
