@@ -7,6 +7,8 @@ import {
   ViewChild,
   EventEmitter,
   Renderer2,
+  OnChanges,
+  SimpleChanges,
 } from '@angular/core';
 import { uniqueId } from 'lodash';
 
@@ -29,7 +31,7 @@ import { uniqueId } from 'lodash';
         #triggerElement
       >
         <sprk-icon
-          [iconType]="triggerIconName"
+          [iconType]="iconNameToUse"
           [additionalClasses]="iconAdditionalClasses"
           aria-hidden="true"
         ></sprk-icon>
@@ -46,7 +48,7 @@ import { uniqueId } from 'lodash';
     </span>
   `,
 })
-export class SprkTooltipComponent implements AfterViewInit {
+export class SprkTooltipComponent implements AfterViewInit, OnChanges {
   constructor(private renderer: Renderer2) {}
   /**
    * Whether or not the tooltip is toggled open.
@@ -125,6 +127,11 @@ export class SprkTooltipComponent implements AfterViewInit {
   /**
    * @ignore
    */
+  iconNameToUse: string = 'question-filled';
+
+  /**
+   * @ignore
+   */
   @HostListener('document:keydown', ['$event'])
   onKeydown($event) {
     if (this.isToggled) {
@@ -146,12 +153,11 @@ export class SprkTooltipComponent implements AfterViewInit {
   onDocumentClick(event): void {
     if (
       this.containerElement &&
-      !this.containerElement.nativeElement.contains(event.target)
+      !this.containerElement.nativeElement.contains(event.target) &&
+      this.isToggled
     ) {
-      if (this.isToggled) {
-        this.isToggled = false;
-        this.closedEvent.emit();
-      }
+      this.isToggled = false;
+      this.closedEvent.emit();
     }
   }
 
@@ -277,13 +283,17 @@ export class SprkTooltipComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.setPositioningClass();
+  }
 
+  ngOnChanges(changes: SimpleChanges) {
+    // triggerIconName should always be preferred over triggerIconType
     // TODO - remove triggerIconType as part of Issue 1166
-    if (
-      this.triggerIconType !== 'question-filled' &&
-      this.triggerIconName === 'question-filled'
-    ) {
-      this.triggerIconName = this.triggerIconType;
+    if (changes['triggerIconName']) {
+      this.iconNameToUse = changes['triggerIconName'].currentValue;
+    }
+
+    if (changes['triggerIconType'] && !changes['triggerIconName']) {
+      this.iconNameToUse = changes['triggerIconType'].currentValue;
     }
   }
 }

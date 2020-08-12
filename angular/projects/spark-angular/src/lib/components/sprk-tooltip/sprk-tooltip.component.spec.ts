@@ -2,6 +2,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkTooltipComponent } from './sprk-tooltip.component';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: `sprk-test`,
+  template: ` <sprk-tooltip
+    [triggerIconName]="triggerIconName"
+    [triggerIconType]="triggerIconType"
+    >"tooltipText"</sprk-tooltip
+  >`,
+})
+class WrappedTooltipComponent {
+  triggerIconName: string;
+  triggerIconType: string;
+  tooltipText: string = 'tooltip content';
+}
 
 describe('SprkTooltipComponent', () => {
   let component: SprkTooltipComponent;
@@ -10,9 +25,18 @@ describe('SprkTooltipComponent', () => {
   let triggerElement;
   let tooltipElement;
 
+  let wrappedComponent: WrappedTooltipComponent;
+  let wrappedFixture: ComponentFixture<WrappedTooltipComponent>;
+  let wrappedContainerElement: HTMLElement;
+  let wrappedTriggerElement;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkTooltipComponent, SprkIconComponent],
+      declarations: [
+        SprkTooltipComponent,
+        SprkIconComponent,
+        WrappedTooltipComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -23,6 +47,14 @@ describe('SprkTooltipComponent', () => {
     triggerElement = containerElement.querySelector('button');
     tooltipElement = containerElement.querySelector('span');
     fixture.detectChanges();
+
+    wrappedFixture = TestBed.createComponent(WrappedTooltipComponent);
+    wrappedComponent = wrappedFixture.componentInstance;
+    wrappedContainerElement = wrappedFixture.nativeElement.querySelector(
+      'span',
+    );
+    wrappedTriggerElement = wrappedContainerElement.querySelector('button');
+    wrappedFixture.detectChanges();
   });
 
   it('should create itself', () => {
@@ -274,24 +306,55 @@ describe('SprkTooltipComponent', () => {
     ).toBe(true);
   });
 
-  it('should use the deprecated icon property if it has a value', () => {
-    component.triggerIconType = 'access';
-    component.ngAfterViewInit();
-    fixture.detectChanges();
+  it('should correctly use the deprecated icon property', () => {
+    wrappedComponent.triggerIconType = 'access';
+    wrappedFixture.detectChanges();
 
     expect(
-      triggerElement.querySelector('use').getAttribute('xlink:href'),
+      wrappedTriggerElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#access');
   });
 
+  it('should correctly use the new icon property', () => {
+    wrappedComponent.triggerIconName = 'email';
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedTriggerElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#email');
+  });
+
   it('should prefer the new property over the deprecated property', () => {
-    component.triggerIconType = 'access';
-    component.triggerIconName = 'email';
-    component.ngAfterViewInit();
+    wrappedComponent.triggerIconName = 'email';
+    wrappedComponent.triggerIconType = 'access';
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedTriggerElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#email');
+  });
+
+  it('should use the correct default icon', () => {
     fixture.detectChanges();
 
     expect(
       triggerElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#question-filled');
+  });
+
+  it('should not change the icon if the input has not changed', () => {
+    wrappedComponent.triggerIconName = 'email';
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedTriggerElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#email');
+
+    wrappedComponent.tooltipText = 'asdf';
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedTriggerElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#email');
   });
 });
