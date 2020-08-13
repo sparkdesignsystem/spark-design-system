@@ -162,9 +162,7 @@ const IndexPage = () => (
   <Layout hasSideBar={false}>
     <SprkStack itemSpacing={spacingBtwSections}>
       <SprkStackItem>
-        <SprkStack
-          itemSpacing={spacingBtwHeadingAndContent}
-        >
+        <SprkStack itemSpacing={spacingBtwHeadingAndContent}>
           <SprkStackItem>
             <h1 className="sprk-b-TypeDisplayOne sprk-u-Color--red">
               Spark Design System
@@ -173,9 +171,9 @@ const IndexPage = () => (
 
           <SprkStackItem>
             <p className="sprk-b-TypeBodyTwo sprk-u-Measure">
-              Spark Design System is where we collect our best
-              solutions for how to design and build unified
-              digital experiences for the Rocket brands.
+              Spark Design System is where we collect our best solutions for how
+              to design and build unified digital experiences for the Rocket
+              brands.
             </p>
           </SprkStackItem>
         </SprkStack>
