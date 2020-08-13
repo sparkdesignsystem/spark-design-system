@@ -2,12 +2,39 @@
   title: Color
 ---
 import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
+
+import stepperExample from '../../../images/stepper-example.png';
+import stepperExample2x from '../../../images/stepper-example@2x.png';
+import stepperExample3x from '../../../images/stepper-example@3x.png';
+
+import creditScore from '../../../images/credit-score.png';
+import creditScore2x from '../../../images/credit-score@2x.png';
+import creditScore3x from '../../../images/credit-score@3x.png';
+
+import accessibilityKey from '../../../images/accessibility-key.png';
+import accessibilityKey2x from '../../../images/accessibility-key@2x.png';
+import accessibilityKey3x from '../../../images/accessibility-key@3x.png';
+
+import accessibilityChart1 from '../../../images/accessibility-chart-1.png';
+import accessibilityChart12x from '../../../images/accessibility-chart-1@2x.png';
+import accessibilityChart13x from '../../../images/accessibility-chart-1@3x.png';
+
+import accessibilityChart2 from '../../../images/accessibility-chart-2.png';
+import accessibilityChart22x from '../../../images/accessibility-chart-2@2x.png';
+import accessibilityChart23x from '../../../images/accessibility-chart-2@3x.png';
+
 import {
   SprkStack,
   SprkStackItem,
   SprkButton,
   SprkLink
 } from '@sparkdesignsystem/spark-react';
+
+export const stepperExampleSet = `${stepperExample} 560w, ${stepperExample2x} 1120w, ${stepperExample3x} 1680w`;
+export const creditScoreSet = `${creditScore} 560w, ${creditScore2x} 1120w, ${creditScore3x} 1680w`;
+export const accessibilityKeySet = `${accessibilityKey} 560w, ${accessibilityKey2x} 1120w, ${accessibilityKey3x} 1680w`;
+export const accessibilityChart1Set= `${accessibilityChart1} 560w, ${accessibilityChart12x} 1120w, ${accessibilityChart13x} 1680w`;
+export const accessibilityChart2Set= `${accessibilityChart2} 560w, ${accessibilityChart22x} 1120w, ${accessibilityChart23x} 1680w`;
 
 # Color
 The Rocket Orbit color palette received an update in August 2020. Please review this guide carefully so that you can apply the colors correctly. Our objective is to achieve human-centered design in everything we do.
@@ -39,9 +66,16 @@ Color is an important part of our brand. When color is applied correctly it tell
 Color should not be used as the only way to communicate information (Do not only show a red error or a green success message without using a label).
 
 ### Floods of Color
-<img src="https://via.placeholder.com/1000x250/0000FF/808080 ?Text=FloodCOLOR" class="sprk-u-mbm" />
-
 Floods of colors indicate areas of focus in the interface but content should mainly be on white backgrounds.
+<img
+  srcset={stepperExampleSet}
+  src={stepperExample}
+  sizes="(min-width: 1120px) 1120px,
+        (min-width: 1680px) 1680px,
+        560px"
+  class="sprk-u-mbm"
+  alt="The brand colors on a dark background."/>
+
 Floods of color should be reserved for the below colors only:
 
 #### Dark
@@ -114,46 +148,66 @@ Semantic colors are used to depict noteworty information, such as success or urg
 Charts and graphs use shades of purple to represent different parts of the graphs.
 
 Pink can be used to call out something negative, or a semantic color can be used to call out a positive or negative action.
-Do not mix multiple semantic colors within one chart. They are only an accent to the purple gradient pallete.
-## ⚠️Missing Colors⚠️
-- #1C0152
-- #BE84F8
-- #DEB1FD
-- #F0DAFF
-<ColorSwatchGrid color="charts-graphs"/>
+Do not mix multiple semantic colors within one chart. They are only an accent to the purple gradient palette.
 
-#### Credit Store
+<ColorSwatchGrid color="charts-graphs" additionalClasses="sprk-u-mbl"/>
+
+#### Credit Score
 To show credit score we show it go from Pink to Purple. Pink is a negative color while purple is a positive color. Permutations of credit score get these colors applied like this:
-<img src="https://via.placeholder.com/1000x250/0000FF/808080 ?Text=CreditScoreImage" class="sprk-u-mbm" />
+<img
+  srcset={creditScoreSet}
+  src={creditScore}
+  sizes="(min-width: 1120px) 1120px,
+        (min-width: 1680px) 1680px,
+        560px"
+  class="sprk-u-mbm"
+  alt="The brand colors relating to levels of credit score."/>
 
-## ⚠️Missing Colors⚠️
-- #802F92
-- #A0247E
-- #C0176A
-<ColorSwatchGrid color="positive-negative" />
+<ColorSwatchGrid color="positive-negative" additionalClasses="sprk-u-mbh"/>
 
 ## Color Palette
 ### Primary
-<ColorSwatchGrid color="primary"/>
+<ColorSwatchGrid color="primary" additionalClasses="sprk-u-mbl"/>
 
 ### Secondary
-<ColorSwatchGrid color="secondary" />
+<ColorSwatchGrid color="secondary" additionalClasses="sprk-u-mbl"/>
 
 ### Semantic
-<ColorSwatchGrid color="semantic" />
+<ColorSwatchGrid color="semantic" additionalClasses="sprk-u-mbl" />
 
 ### Neutral
-<ColorSwatchGrid color="neutral" />
+<ColorSwatchGrid color="neutral" additionalClasses="sprk-u-mbl"/>
 
 ### Colors from Positive to Negative
-## ⚠️Missing Colors⚠️
-<ColorSwatchGrid color="positive-negative" />
+<ColorSwatchGrid color="positive-negative" additionalClasses="sprk-u-mbl"/>
 
 ### Charts and Graphs
-## ⚠️Missing Colors⚠️
-<ColorSwatchGrid color="charts-graphs"/>
+<ColorSwatchGrid color="charts-graphs" additionalClasses="sprk-u-mbh"/>
 
 ## Contrast Accessibility Charts
-<img src="https://via.placeholder.com/950x950/0000FF/808080 ?Text=FloodCOLOR" class="sprk-u-mbm" />
-<img src="https://via.placeholder.com/950x950/0000FF/808080 ?Text=FloodCOLOR" class="sprk-u-mbm" />
-<img src="https://via.placeholder.com/950x950/0000FF/808080 ?Text=FloodCOLOR" class="sprk-u-mbm" />
+<img
+  srcset={accessibilityKeySet}
+  src={accessibilityKey}
+  sizes="(min-width: 1120px) 1120px,
+        (min-width: 1680px) 1680px,
+        560px"
+  class="sprk-u-mbm"
+  alt="The legend for contrast accessibility."/>
+
+<img
+  srcset={accessibilityChart1Set}
+  src={accessibilityChart1}
+  sizes="(min-width: 1120px) 1120px,
+        (min-width: 1680px) 1680px,
+        560px"
+  class="sprk-u-mbm"
+  alt="A chart of colors comparing contrast accessibility."/>
+
+<img
+  srcset={accessibilityChart2Set}
+  src={accessibilityChart2}
+  sizes="(min-width: 1120px) 1120px,
+        (min-width: 1680px) 1680px,
+        560px"
+  class="sprk-u-mbm"
+  alt="A chart of colors comparing contrast accessibility."/>
