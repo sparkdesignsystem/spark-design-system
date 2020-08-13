@@ -7,11 +7,9 @@ const SprkText = ({
   element,
   variant,
   idString,
-  isPageTitle,
   additionalClasses,
   ...other
 }) => {
-
   const classNames = classnames(additionalClasses, {
     'sprk-b-TypeBodyOne': variant === 'bodyOne',
     'sprk-b-TypeBodyTwo': variant === 'bodyTwo',
@@ -22,14 +20,10 @@ const SprkText = ({
   const TagName = element;
 
   return (
-    <TagName
-      className={classNames}
-      data-id={idString}
-      {...other}
-    >
+    <TagName className={classNames} data-id={idString} {...other}>
       {children}
     </TagName>
-  )
+  );
 };
 
 SprkText.defaultProps = {
@@ -47,28 +41,22 @@ SprkText.propTypes = {
   element: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func,
-    PropTypes.elementType
+    PropTypes.elementType,
   ]),
   /**
    * The text style to render.
    * See [Typography](https://www.sparkdesignsystem.com/using-spark/foundations/typography)
    * for more information on the design styles.
    */
-  variant: PropTypes.oneOf([
-    'bodyOne',
-    'bodyTwo',
-    'bodyThree',
-    'bodyFour',
-  ]),
+  variant: PropTypes.oneOf(['bodyOne', 'bodyTwo', 'bodyThree', 'bodyFour']),
   /**
-   * Assigned to the `data-id` attribute
-   * serving as a unique selector for
+   * Assigned to the `data-id` attribute serving as a unique selector for
    * automated tools.
    */
   idString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the
-   * outermost container of the component.
+   * A space-separated string of classes to add to the outermost container
+   * of the component.
    */
   additionalClasses: PropTypes.string,
 };
