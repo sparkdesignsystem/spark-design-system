@@ -362,23 +362,23 @@
 }
 /// Sets the font color to dark purple.
 /// @group color
-.sprk-u-Color--dark-purple {
-  color: $sprk-dark-purple !important;
+.sprk-u-Color--purple-dark {
+  color: $sprk-purple-dark !important;
 }
 /// Sets the font color to deep purple.
 /// @group color
-.sprk-u-Color--deep-purple {
-  color: $sprk-deep-purple !important;
+.sprk-u-Color--purple-deep {
+  color: $sprk-purple-deep !important;
 }
 /// Sets the font color to light purple.
 /// @group color
-.sprk-u-Color--light-purple {
-  color: $sprk-light-purple !important;
+.sprk-u-Color--purple-light {
+  color: $sprk-purple-light !important;
 }
 /// Sets the font color to lightest purple.
 /// @group color
-.sprk-u-Color--lightest-purple {
-  color: $sprk-lightest-purple !important;
+.sprk-u-Color--purple-lightest {
+  color: $sprk-purple-lightest !important;
 }
 /// Sets the font color to green.
 /// @group color
@@ -416,6 +416,48 @@
   color: $sprk-black !important;
 }
 
+/// Sets the font color to Twilight.
+/// @group color
+.sprk-u-Color--twilight {
+  color: $sprk-twilight !important;
+}
+
+/// Sets the font color to Sunset.
+/// @group color
+.sprk-u-Color--sunset {
+  color: $sprk-sunset !important;
+}
+
+/// Sets the font color to Supernova.
+/// @group color
+.sprk-u-Color--supernova {
+  color: $sprk-supernova !important;
+}
+
+/// Sets the font color to Purple Navy.
+/// @group color
+.sprk-u-Color--purple-navy {
+  color: $sprk-purple-navy !important;
+}
+
+/// Sets the font color to Lavender.
+/// @group color
+.sprk-u-Color--lavender {
+  color: $sprk-lavender !important;
+}
+
+/// Sets the font color to Wisteria.
+/// @group color
+.sprk-u-Color--wisteria {
+  color: $sprk-wisteria !important;
+}
+
+/// Sets the font color to Magnolia.
+/// @group color
+.sprk-u-Color--magnolia {
+  color: $sprk-magnolia !important;
+}
+
 // Background color
 /// Sets the background color to red.
 /// @group color
@@ -439,23 +481,23 @@
 }
 /// Sets the background color to dark purple.
 /// @group color
-.sprk-u-BackgroundColor--dark-purple {
-  background-color: $sprk-dark-purple !important;
+.sprk-u-BackgroundColor--purple-dark {
+  background-color: $sprk-purple-dark !important;
 }
 /// Sets the background color to deep purple.
 /// @group color
-.sprk-u-BackgroundColor--deep-purple {
-  background-color: $sprk-deep-purple !important;
+.sprk-u-BackgroundColor--purple-deep {
+  background-color: $sprk-purple-deep !important;
 }
 /// Sets the background color to light purple.
 /// @group color
-.sprk-u-BackgroundColor--light-purple {
-  background-color: $sprk-light-purple !important;
+.sprk-u-BackgroundColor--purple-light {
+  background-color: $sprk-purple-light !important;
 }
 /// Sets the background color to lightest purple.
 /// @group color
-.sprk-u-BackgroundColor--lightest-purple {
-  background-color: $sprk-lightest-purple !important;
+.sprk-u-BackgroundColor--purple-lightest {
+  background-color: $sprk-purple-lightest !important;
 }
 /// Sets the background color to green.
 /// @group color
@@ -536,6 +578,41 @@
 /// @group color
 .sprk-u-BackgroundColor--gray {
   background-color: $sprk-gray !important;
+}
+/// Sets the background color to Twilight.
+/// @group color
+.sprk-u-BackgroundColor--twilight {
+  background-color: $sprk-twilight !important;
+}
+/// Sets the background color to Sunset.
+/// @group color
+.sprk-u-BackgroundColor--sunset {
+  background-color: $sprk-sunset !important;
+}
+/// Sets the background color to Supernova.
+/// @group color
+.sprk-u-BackgroundColor--supernova {
+  background-color: $sprk-supernova !important;
+}
+/// Sets the background color to Purple Navy.
+/// @group color
+.sprk-u-BackgroundColor--purple-navy {
+  background-color: $sprk-purple-navy !important;
+}
+/// Sets the background color to Lavender.
+/// @group color
+.sprk-u-BackgroundColor--lavender {
+  background-color: $sprk-lavender !important;
+}
+/// Sets the background color to Wisteria.
+/// @group color
+.sprk-u-BackgroundColor--wisteria {
+  background-color: $sprk-wisteria !important;
+}
+/// Sets the background color to Magnolia.
+/// @group color
+.sprk-u-BackgroundColor--magnolia {
+  background-color: $sprk-magnolia !important;
 }
 
 /* stylelint-enable selector-class-pattern */

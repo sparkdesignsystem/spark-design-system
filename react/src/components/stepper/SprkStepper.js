@@ -200,7 +200,7 @@ class SprkStepper extends Component {
       return (
         <div
           className={classnames(
-            'sprk-u-BackgroundColor--dark-purple sprk-o-Box sprk-o-Box--large',
+            'sprk-u-BackgroundColor--purple-dark sprk-o-Box sprk-o-Box--large',
             additionalClasses,
           )}
         >

@@ -8,7 +8,7 @@
 
 /// Setting for the background
 /// color of any text when selected.
-$sprk-selection-bg-color: $sprk-light-purple !default;
+$sprk-selection-bg-color: $sprk-purple-light !default;
 /// Setting for the
 /// color of any text when selected.
 $sprk-selection-text-color: $sprk-black !default;
@@ -145,7 +145,7 @@ $sprk-footer-icon-color: $sprk-white !default;
 // Toggle trigger color on the Footer.
 $sprk-footer-trigger-color: $sprk-white !default;
 // Toggle trigger hover color on the Footer.
-$sprk-footer-trigger-hover-color: $sprk-light-purple !default;
+$sprk-footer-trigger-hover-color: $sprk-purple-light !default;
 // Toggle transition timing on the Footer.
 $sprk-footer-toggle-transition: 0.3s !default;
 
@@ -685,7 +685,7 @@ $sprk-btn-quaternary-disabled-border-width: $sprk-btn-disabled-border-width !def
 
 // Secondary
 /// The background color of the Secondary Button component.
-$sprk-btn-secondary-background-color: $sprk-dark-purple !default;
+$sprk-btn-secondary-background-color: $sprk-purple-dark !default;
 /// The border color of the Secondary Button component.
 $sprk-btn-secondary-border-color: $sprk-btn-secondary-background-color !default;
 /// The text color of the Secondary Button component.
@@ -705,15 +705,15 @@ $sprk-btn-secondary-letter-spacing: $sprk-btn-letter-spacing !default;
 /// The background color of the Tertiary Button component.
 $sprk-btn-tertiary-background-color: transparent !default;
 /// The border of the Tertiary Button component.
-$sprk-btn-tertiary-border-color: $sprk-dark-purple !default;
+$sprk-btn-tertiary-border-color: $sprk-purple-dark !default;
 /// The text color of the Tertiary Button component.
-$sprk-btn-tertiary-text-color: $sprk-dark-purple !default;
+$sprk-btn-tertiary-text-color: $sprk-purple-dark !default;
 /// The border color of the Tertiary Button component on hover.
 $sprk-btn-tertiary-hover-border-color: $sprk-purple !default;
 /// The text color of the Tertiary Button component on hover.
 $sprk-btn-tertiary-hover-text-color: $sprk-purple !default;
 /// The background color of the Tertiary Button component on hover.
-$sprk-btn-tertiary-hover-background-color: $sprk-lightest-purple !default;
+$sprk-btn-tertiary-hover-background-color: $sprk-purple-lightest !default;
 /// The box shadow of the Tertiary Button component on hover.
 $sprk-btn-tertiary-hover-shadow: $sprk-btn-shadow !default;
 /// The background color of the Tertiary Button component when disabled.
@@ -769,7 +769,7 @@ $sprk-link-border-bottom-style: solid !default;
 $sprk-link-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-underline-color !default;
 /// The color of Links on hover.
-$sprk-link-hover-color: $sprk-deep-purple !default;
+$sprk-link-hover-color: $sprk-purple-deep !default;
 /// The underline style of Links on hover.
 $sprk-link-hover-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-hover-color !default;
@@ -853,7 +853,7 @@ $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
 $sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
 /// The color value for Links with icons in the hover state.
-$sprk-link-has-icon-hover-color-text: $sprk-deep-purple !default;
+$sprk-link-has-icon-hover-color-text: $sprk-purple-deep !default;
 /// The fill color for icons contained in Links on hover.
 $sprk-link-has-icon-hover-fill: $sprk-link-has-icon-hover-color-text !default;
 /// The border settings for Plain Links.
@@ -2088,10 +2088,10 @@ $sprk-stepper-icon-border-width: 2px !default;
 /// The color of the border around the Stepper icon.
 $sprk-stepper-icon-border-color: $sprk-black-tint-50 !default;
 /// The color of the step icon when the step is selected in the Stepper.
-$sprk-stepper-icon-border-color-selected: $sprk-dark-purple !default;
+$sprk-stepper-icon-border-color-selected: $sprk-purple-dark !default;
 /// The color of the step icon in front of a dark background
 /// when the step is selected in the Stepper.
-$sprk-stepper-icon-border-color-selected-dark-bg: $sprk-lightest-purple !default;
+$sprk-stepper-icon-border-color-selected-dark-bg: $sprk-purple-lightest !default;
 /// The color of the icon border when the
 /// Stepper is on a dark background
 /// (sprk-c-Stepper--has-dark-bg).
@@ -2109,11 +2109,11 @@ $sprk-stepper-icon-color-hover: $sprk-black-tint-50 !default;
 $sprk-stepper-icon-color-selected: $sprk-white !default;
 /// The color of the step icon when the
 /// Stepper has a dark background (sprk-c-Stepper--has-dark-bg).
-$sprk-stepper-dark-icon-color: $sprk-dark-purple !default;
+$sprk-stepper-dark-icon-color: $sprk-purple-dark !default;
 /// The color of the Stepper step icon when the step
 /// is selected and the Stepper has a
 /// dark background (sprk-c-Stepper--has-dark-bg).
-$sprk-stepper-dark-icon-color-selected: $sprk-dark-purple !default;
+$sprk-stepper-dark-icon-color-selected: $sprk-purple-dark !default;
 /// The color of the step icon on hover
 /// when the Stepper has a dark background
 /// (sprk-c-Stepper--has-dark-bg).
@@ -2202,7 +2202,7 @@ $sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid
   $sprk-stepper-dark-icon-border-color !default;
 /// The border value for the Carousel component.
 $sprk-carousel-dot-border-dark-bg: $sprk-stepper-icon-border-width solid
-  $sprk-deep-purple !default;
+  $sprk-purple-deep !default;
 /// The height of the dots in the Carousel component.
 $sprk-carousel-dot-height: 10px !default;
 /// The width of the dots in the Carousel component.
@@ -2220,7 +2220,7 @@ $sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected-dark-bg !def
 /// The background color of the active dot in the Carousel component.
 $sprk-carousel-dot-selected-bg-color: $sprk-white !default;
 /// The background color of the active dot in the Carousel component on a dark background.
-$sprk-carousel-dot-selected-bg-color-dark-bg: $sprk-deep-purple !default;
+$sprk-carousel-dot-selected-bg-color-dark-bg: $sprk-purple-deep !default;
 /// The color of the arrows in the Carousel component.
 $sprk-carousel-arrow-color: $sprk-white !default;
 /// The spacing for the arrows in the Carousel component.
