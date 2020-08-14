@@ -8,7 +8,7 @@ const PrinciplesSparkDocsMenu = () => {
   return (
     <>
       <h3 className="docs-menu__heading">Principles</h3>
-      <nav>
+      <nav aria-label="Principles">
         <ul className="docs-menu__collection">
           {pages.map(page => (
             <li

@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable react/self-closing-comp */
 import React from 'react';
 import SprkStack from './SprkStack';
 import SprkStackItem from './components/SprkStackItem/SprkStackItem';
@@ -8,7 +10,7 @@ export default {
   title: 'Components/Stack',
   component: SprkStack,
   decorators: [
-    story => <div className="sprk-o-Box sb-decorate">{story()}</div>
+    (story) => <div className="sprk-o-Box sb-decorate">{story()}</div>,
   ],
   parameters: {
     subcomponents: {
@@ -61,17 +63,13 @@ stackSplitTwoCol.story = {
 
 export const stackSplitTwoColWithPadding = () => (
   <SprkStack splitAt="tiny">
-    <SprkStackItem
-      additionalClasses="sprk-o-Stack__item--half@xs sprk-o-Box"
-    >
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs sprk-o-Box">
       <SprkText variant="bodyTwo">
         Example paragraph text inside item 1.
       </SprkText>
     </SprkStackItem>
 
-    <SprkStackItem
-      additionalClasses="sprk-o-Stack__item--half@xs sprk-o-Box"
-    >
+    <SprkStackItem additionalClasses="sprk-o-Stack__item--half@xs sprk-o-Box">
       <SprkText variant="bodyTwo">
         Example paragraph text inside item 2.
       </SprkText>

@@ -14,13 +14,15 @@ const SprkCheckboxItem = (props) => {
     labelAdditionalClasses,
     name,
     value,
-    disabled,
-    onChangeFunc,
+    isDisabled,
+    onChange,
     id,
     ariaDescribedBy,
     ...rest
   } = props;
   const internalId = uniqueId('sprk-checkbox-');
+  const onChangeFunc = onChange;
+
   return (
     <div
       className={classnames(
@@ -40,7 +42,7 @@ const SprkCheckboxItem = (props) => {
           checkboxAdditionalClasses,
         )}
         data-id={idString}
-        disabled={disabled}
+        disabled={isDisabled}
         id={id || internalId}
         name={name}
         onChange={onChangeFunc}
@@ -53,7 +55,7 @@ const SprkCheckboxItem = (props) => {
           'sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label',
           labelAdditionalClasses,
           {
-            'sprk-b-Label--disabled': disabled,
+            'sprk-b-Label--disabled': isDisabled,
           },
         )}
         htmlFor={id || internalId}
@@ -129,11 +131,11 @@ SprkCheckboxItem.propTypes = {
   /**
    * Will render the component in its disabled state.
    */
-  disabled: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   /**
    * Passes in a function that handles the onChange of the input.
    */
-  onChangeFunc: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 export default SprkCheckboxItem;

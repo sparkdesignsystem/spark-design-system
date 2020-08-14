@@ -3,10 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-flag',
   template: `
-    <div
-      [ngClass]="getClasses()"
-      [attr.data-id]="idString"
-    >
+    <div [ngClass]="getClasses()" [attr.data-id]="idString">
       <div [ngClass]="getMediaClasses()">
         <ng-content select="[media-slot]"></ng-content>
       </div>
@@ -14,9 +11,8 @@ import { Component, Input } from '@angular/core';
         <ng-content select="[body-slot]"></ng-content>
       </div>
     </div>
-  `
+  `,
 })
-
 export class SprkFlagComponent {
   /**
    * Expects a space separated string
@@ -32,12 +28,35 @@ export class SprkFlagComponent {
    * container of the media-slot.
    */
   @Input()
-  additionalMediaClasses: string;
+  mediaAdditionalClasses: string;
 
   /**
    * Expects a space separated string
    * of classes to be added to the
    * container of the body-slot.
+   */
+  @Input()
+  bodyAdditionalClasses: string;
+
+  // TODO: Deprecate on next release
+  /**
+   * Deprecated and to be removed next release.
+   * Replaced with `mediaAdditionalClasses`.
+   * Expects a space separated string
+   * of classes to be added to the
+   * container of the media-slot.
+   */
+  @Input()
+  additionalMediaClasses: string;
+
+  // TODO: Deprecate on next release
+  /**
+   * Deprecated and to be removed next release.
+   * Replaced with `bodyAdditionalClasses`.
+   * Expects a space separated string
+   * of classes to be added to the
+   * container of the body-slot.
+   * To be removed next release.
    */
   @Input()
   additionalBodyClasses: string;
@@ -119,7 +138,7 @@ export class SprkFlagComponent {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -132,8 +151,15 @@ export class SprkFlagComponent {
   getMediaClasses(): string {
     const mediaClassArray: string[] = ['sprk-o-Flag__figure'];
 
+    if (this.mediaAdditionalClasses) {
+      this.mediaAdditionalClasses.split(' ').forEach((className) => {
+        mediaClassArray.push(className);
+      });
+    }
+
+    // TODO: REMOVE ON NEXT RELEASE
     if (this.additionalMediaClasses) {
-      this.additionalMediaClasses.split(' ').forEach(className => {
+      this.additionalMediaClasses.split(' ').forEach((className) => {
         mediaClassArray.push(className);
       });
     }
@@ -146,8 +172,15 @@ export class SprkFlagComponent {
   getBodyClasses(): string {
     const bodyClassArray: string[] = ['sprk-o-Flag__body'];
 
+    if (this.bodyAdditionalClasses) {
+      this.bodyAdditionalClasses.split(' ').forEach((className) => {
+        bodyClassArray.push(className);
+      });
+    }
+
+    // TODO: REMOVE ON NEXT RELEASE
     if (this.additionalBodyClasses) {
-      this.additionalBodyClasses.split(' ').forEach(className => {
+      this.additionalBodyClasses.split(' ').forEach((className) => {
         bodyClassArray.push(className);
       });
     }

@@ -14,13 +14,14 @@ const SprkRadioItem = (props) => {
     labelAdditionalClasses,
     name,
     value,
-    disabled,
-    onChangeFunc,
+    isDisabled,
+    onChange,
     id,
     ariaDescribedBy,
     ...rest
   } = props;
   const internalId = uniqueId('sprk-radio-');
+  const onChangeFunc = onChange;
   return (
     <div
       className={classnames(
@@ -37,7 +38,7 @@ const SprkRadioItem = (props) => {
         aria-describedby={ariaDescribedBy}
         className={classnames('sprk-b-Radio__input', radioAdditionalClasses)}
         data-id={idString}
-        disabled={disabled}
+        disabled={isDisabled}
         id={id || internalId}
         name={name}
         onChange={onChangeFunc}
@@ -50,7 +51,7 @@ const SprkRadioItem = (props) => {
           'sprk-b-Label sprk-b-Label--inline sprk-b-Radio__label',
           labelAdditionalClasses,
           {
-            'sprk-b-Label--disabled': disabled,
+            'sprk-b-Label--disabled': isDisabled,
           },
         )}
         htmlFor={id || internalId}
@@ -117,11 +118,11 @@ SprkRadioItem.propTypes = {
   /**
    * Will render the component in its disabled state.
    */
-  disabled: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   /**
    * Passes in a function that handles the onChange of the input.
    */
-  onChangeFunc: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 export default SprkRadioItem;

@@ -13,7 +13,7 @@ describe('SprkLegend:', () => {
   });
 
   it('should apply disabled classes', () => {
-    const wrapper = shallow(<SprkLegend disabled />);
+    const wrapper = shallow(<SprkLegend isDisabled />);
     expect(
       wrapper.find('.sprk-b-Legend').hasClass('sprk-b-Label--disabled'),
     ).toEqual(true);

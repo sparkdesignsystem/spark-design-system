@@ -82,7 +82,7 @@ defaultHelperText.story = {
   },
 };
 
-export const invalidRadio = () => (
+export const invalidRadioButton = () => (
   <SprkRadioGroup>
     <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
     <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
@@ -94,33 +94,33 @@ export const invalidRadio = () => (
   </SprkRadioGroup>
 );
 
-invalidRadio.story = {
+invalidRadioButton.story = {
   name: 'Invalid',
-  paramteres: {
+  parameters: {
     jest: ['SprkRadioGroup'],
   },
 };
 
-export const disabledRadio = () => (
+export const disabledRadioButton = () => (
   <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend disabled>Group Label Name</SprkLegend>
-      <SprkRadioItem name="radio" disabled>
+      <SprkLegend isDisabled>Group Label Name</SprkLegend>
+      <SprkRadioItem name="radio" isDisabled>
         Radio Item 1
       </SprkRadioItem>
-      <SprkRadioItem name="radio" disabled>
+      <SprkRadioItem name="radio" isDisabled>
         Radio Item 2
       </SprkRadioItem>
-      <SprkRadioItem name="radio" disabled>
+      <SprkRadioItem name="radio" isDisabled>
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
   </SprkRadioGroup>
 );
 
-disabledRadio.story = {
+disabledRadioButton.story = {
   name: 'Disabled',
-  paramteres: {
+  parameters: {
     jest: ['SprkRadioGroup'],
   },
 };
@@ -205,31 +205,16 @@ hugeInvalid.story = {
 };
 
 export const hugeDisabled = () => (
-  <SprkRadioGroup variant="huge" disabled>
+  <SprkRadioGroup variant="huge" isDisabled>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-        disabled
-      >
+      <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 1
       </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-        disabled
-      >
+      <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 2
       </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="radio-error-container"
-        disabled
-      >
+      <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
@@ -355,7 +340,7 @@ export const hugeLayoutFive = () => (
           <SprkStack
             splitAt="small"
             itemSpacing="medium"
-            additionalClasses="sprk-o-Stack--center-row "
+            additionalClasses="sprk-o-Stack--center-row"
           >
             <SprkStackItem
               additionalClasses="
