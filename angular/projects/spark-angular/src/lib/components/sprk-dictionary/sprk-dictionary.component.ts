@@ -134,6 +134,24 @@ export class SprkDictionaryComponent implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
+    if (changes['keyValuePairs'] && changes['data']) {
+      const deprecatedInputValue = changes['data'].currentValue;
+      console.warn(
+        `Spark Design System - conflicting Inputs found in sprk-dictionary. data has been deprecated; please use keyValuePairs instead. Deprecated Input with value "` +
+          JSON.stringify(deprecatedInputValue) +
+          `" will be ignored.`,
+      );
+    }
+
+    if (changes['variant'] && changes['dictionaryType']) {
+      const deprecatedInputValue = changes['dictionaryType'].currentValue;
+      console.warn(
+        `Spark Design System - conflicting Inputs found in sprk-dictionary. dictionaryType has been deprecated; please use variant instead. Deprecated Input with value "` +
+          deprecatedInputValue +
+          `" will be ignored.`,
+      );
+    }
+
     if (changes['keyValuePairs']) {
       this.dataToUse = changes['keyValuePairs'].currentValue;
     } else if (changes['data']) {

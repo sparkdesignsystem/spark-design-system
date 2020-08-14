@@ -31,10 +31,13 @@ describe('SprkAngularDictionaryComponent', () => {
   let wrappedFixture: ComponentFixture<WrappedDictionaryComponent>;
   let wrappedElement: HTMLElement;
 
+  let spy;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SprkDictionaryComponent, WrappedDictionaryComponent],
     }).compileComponents();
+
+    spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
   }));
 
   beforeEach(() => {
@@ -47,6 +50,10 @@ describe('SprkAngularDictionaryComponent', () => {
     wrappedComponent = wrappedFixture.componentInstance;
     wrappedElement = wrappedFixture.nativeElement.querySelector('div');
     wrappedFixture.detectChanges();
+  });
+
+  afterEach(() => {
+    spy.mockRestore();
   });
 
   it('should create', () => {
@@ -143,6 +150,8 @@ describe('SprkAngularDictionaryComponent', () => {
     expect(
       wrappedElement.getElementsByClassName('sprk-c-Dictionary__value').length,
     ).toBe(2);
+
+    expect(console.warn).toHaveBeenCalledTimes(2);
   });
 
   it('should correctly respond to changes to data Input', () => {
@@ -159,6 +168,8 @@ describe('SprkAngularDictionaryComponent', () => {
     expect(
       wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
     ).toBe(3);
+
+    expect(console.warn).toHaveBeenCalledTimes(2);
   });
 
   it('should correctly respond to changes to keyValuePairs Input', () => {
@@ -179,6 +190,8 @@ describe('SprkAngularDictionaryComponent', () => {
     expect(
       wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
     ).toBe(3);
+
+    expect(console.warn).toHaveBeenCalledTimes(2);
   });
 
   it('should correctly respond to changes to dictionaryType Input', () => {
@@ -193,12 +206,16 @@ describe('SprkAngularDictionaryComponent', () => {
     expect(wrappedElement.classList.toString()).toContain(
       'sprk-c-Dictionary--striped',
     );
+
+    expect(console.warn).toHaveBeenCalledTimes(2);
   });
 
   it('should prefer keyValuePairs over data', () => {
     wrappedComponent.keyValuePairs = { key1: 'value1', key2: 'value2' };
     wrappedComponent.data = { key1: 'value1', key2: 'value2', key3: 'value3' };
     wrappedFixture.detectChanges();
+
+    expect(console.warn).toHaveBeenCalledTimes(3);
 
     expect(
       wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
@@ -211,5 +228,19 @@ describe('SprkAngularDictionaryComponent', () => {
     expect(
       wrappedElement.getElementsByClassName('sprk-c-Dictionary__key').length,
     ).toBe(1);
+
+    expect(console.warn).toHaveBeenCalledTimes(4);
+  });
+
+  it('should prefer variant over dictionaryType', () => {
+    wrappedComponent.variant = 'striped';
+    wrappedComponent.dictionaryType = '';
+    wrappedFixture.detectChanges();
+
+    expect(console.warn).toHaveBeenCalledTimes(2);
+
+    expect(wrappedElement.classList.toString()).toContain(
+      'sprk-c-Dictionary--striped',
+    );
   });
 });
