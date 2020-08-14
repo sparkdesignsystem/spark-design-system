@@ -288,6 +288,15 @@ export class SprkTooltipComponent implements AfterViewInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     // triggerIconName should always be preferred over triggerIconType
     // TODO - remove triggerIconType as part of Issue 1166
+    if (changes['triggerIconName'] && changes['triggerIconType']) {
+      const deprecatedInputValue = changes['triggerIconType'].currentValue;
+      console.warn(
+        `Spark Design System - conflicting Inputs found in sprk-tooltip. triggerIconType has been deprecated; please use triggerIconName instead. Deprecated Input with value "` +
+          deprecatedInputValue +
+          `" will be ignored.`,
+      );
+    }
+
     if (changes['triggerIconName']) {
       this.iconNameToUse = changes['triggerIconName'].currentValue;
     }

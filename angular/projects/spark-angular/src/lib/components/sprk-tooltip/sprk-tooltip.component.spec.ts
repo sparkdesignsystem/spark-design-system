@@ -30,6 +30,7 @@ describe('SprkTooltipComponent', () => {
   let wrappedContainerElement: HTMLElement;
   let wrappedTriggerElement;
 
+  let spy;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -38,6 +39,8 @@ describe('SprkTooltipComponent', () => {
         WrappedTooltipComponent,
       ],
     }).compileComponents();
+
+    spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
   }));
 
   beforeEach(() => {
@@ -55,6 +58,10 @@ describe('SprkTooltipComponent', () => {
     );
     wrappedTriggerElement = wrappedContainerElement.querySelector('button');
     wrappedFixture.detectChanges();
+  });
+
+  afterEach(() => {
+    spy.mockRestore();
   });
 
   it('should create itself', () => {
@@ -313,6 +320,8 @@ describe('SprkTooltipComponent', () => {
     expect(
       wrappedTriggerElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#access');
+
+    expect(console.warn).toHaveBeenCalledTimes(1);
   });
 
   it('should correctly use the new icon property', () => {
@@ -322,6 +331,8 @@ describe('SprkTooltipComponent', () => {
     expect(
       wrappedTriggerElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#email');
+
+    expect(console.warn).toHaveBeenCalledTimes(1);
   });
 
   it('should prefer the new property over the deprecated property', () => {
@@ -332,6 +343,8 @@ describe('SprkTooltipComponent', () => {
     expect(
       wrappedTriggerElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#email');
+
+    expect(console.warn).toHaveBeenCalledTimes(2);
   });
 
   it('should use the correct default icon', () => {
@@ -356,5 +369,7 @@ describe('SprkTooltipComponent', () => {
     expect(
       wrappedTriggerElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#email');
+
+    expect(console.warn).toHaveBeenCalledTimes(1);
   });
 });
