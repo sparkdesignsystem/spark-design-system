@@ -2,6 +2,7 @@
   title: Color
 ---
 import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
+import ColorSwatch from '../../../components/ColorSwatch';
 
 import stepperExample from '../../../images/stepper-example.png';
 import stepperExample2x from '../../../images/stepper-example@2x.png';
@@ -79,7 +80,14 @@ Floods of colors indicate areas of focus in the interface but content should mai
 Floods of color should be reserved for the below colors only:
 
 #### Dark
-<ColorSwatchGrid color="flood-dark" additionalClasses="sprk-u-mbl"/>
+LOADED COLOR SWATCH GRID HERE
+<ColorSwatchGrid>
+  <ColorSwatch
+    variableName="sprk-purple"
+    colorData
+  />
+</ColorSwatchGrid>
+
 
 #### Light
 <ColorSwatchGrid color="flood-light" additionalClasses="sprk-u-mbl"/>
@@ -160,7 +168,8 @@ To show credit score we show it go from Pink to Purple. Pink is a negative color
   sizes="(min-width: 1120px) 1120px,
         (min-width: 1680px) 1680px,
         560px"
-  class="sprk-u-mbm"
+  class="sprk-u-mbl"
+  style="max-width:300px"
   alt="The brand colors relating to levels of credit score."/>
 
 <ColorSwatchGrid color="positive-negative" additionalClasses="sprk-u-mbh"/>
