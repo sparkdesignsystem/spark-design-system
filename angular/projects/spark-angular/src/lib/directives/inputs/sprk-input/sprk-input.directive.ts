@@ -5,6 +5,7 @@ import {
   HostListener,
   Input,
   HostBinding,
+  Renderer2,
 } from '@angular/core';
 
 @Directive({
@@ -14,7 +15,7 @@ export class SprkInputDirective implements OnInit {
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef) {}
+  constructor(public ref: ElementRef, private renderer: Renderer2) {}
 
   // /**
   //  * If set to `true`, then
@@ -23,6 +24,14 @@ export class SprkInputDirective implements OnInit {
   //  */
   // @Input()
   // hasIcon: boolean;
+
+  /**
+   * If set to `huge`, then
+   * the huge styles will be applied
+   * to the input.
+   */
+  @Input()
+  variant: 'huge' | undefined;
 
   /**
    * The value supplied will be assigned
@@ -47,37 +56,44 @@ export class SprkInputDirective implements OnInit {
   analyticsString: string;
 
   /**
+   * Add the floating label class if the element
+   * has a value.
+   * @param element the nativeElement
+   */
+  floatLabelWhenValue(element: HTMLInputElement) {
+    const value = (element as HTMLInputElement).value;
+    value.length > 0
+      ? this.renderer.addClass(element, 'sprk-b-Input--has-floating-label')
+      : this.renderer.removeClass(element, 'sprk-b-Input--has-floating-label');
+  }
+  /**
    * @ignore
    */
   @HostListener('change', ['$event'])
-  OnChange($event) {
-    const value = (this.ref.nativeElement as HTMLInputElement).value;
-    if (value.length > 0) {
-      this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
-    } else {
-      this.ref.nativeElement.classList.remove(
-        'sprk-b-Input--has-floating-label',
-      );
+  OnChange() {
+    if (this.variant === 'huge') {
+      this.floatLabelWhenValue(this.ref.nativeElement);
     }
   }
 
   /**
    * TODO: Remove the code in this file that is related
-   * to selects in favor of new sprkSelect directive.
+   * to `SELECT` and `TEXTAREA` in favor of new
+   * `sprkSelect` and `sprkTextarea` directives.
    */
   ngOnInit(): void {
     if (this.ref.nativeElement.nodeName === 'SELECT') {
-      this.ref.nativeElement.classList.add('sprk-b-Select');
+      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Select');
     } else if (this.ref.nativeElement.nodeName === 'TEXTAREA') {
-      this.ref.nativeElement.classList.add('sprk-b-TextInput');
-      this.ref.nativeElement.classList.add('sprk-b-TextArea');
+      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-TextInput');
+      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-TextArea');
     } else {
-      this.ref.nativeElement.classList.add('sprk-b-TextInput');
+      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-TextInput');
     }
 
-    if ((this.ref.nativeElement as HTMLInputElement).value.length > 0) {
-      this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
+    if (this.variant === 'huge') {
+      this.floatLabelWhenValue(this.ref.nativeElement);
     }
-    this.ref.nativeElement.classList.add('sprk-u-Width-100');
+    this.renderer.addClass(this.ref.nativeElement, 'sprk-u-Width-100');
   }
 }

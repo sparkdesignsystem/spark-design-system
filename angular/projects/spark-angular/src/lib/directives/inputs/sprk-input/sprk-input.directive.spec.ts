@@ -9,6 +9,13 @@ import { SprkInputDirective } from './sprk-input.directive';
     <input sprkInput id="with-value" value="Initial Value" />
     <input
       sprkInput
+      id="huge-input-value"
+      variant="huge"
+      value="Initial Value"
+    />
+    <input sprkInput id="huge-input-no-value" variant="huge" />
+    <input
+      sprkInput
       id="no-value"
       idString="test-str"
       analyticsString="test-str"
@@ -25,6 +32,8 @@ describe('Spark Input Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let inputElementWithValue: DebugElement;
+  let hugeInputElementWithValue: DebugElement;
+  let hugeInputElementNoValue: DebugElement;
   let inputElementNoValue: DebugElement;
   let selectElement: DebugElement;
   let textareaElement: DebugElement;
@@ -39,6 +48,12 @@ describe('Spark Input Directive', () => {
 
     fixture.detectChanges();
     inputElementWithValue = fixture.debugElement.query(By.css('#with-value'));
+    hugeInputElementWithValue = fixture.debugElement.query(
+      By.css('#huge-input-value'),
+    );
+    hugeInputElementNoValue = fixture.debugElement.query(
+      By.css('#huge-input-no-value'),
+    );
     inputElementNoValue = fixture.debugElement.query(By.css('#no-value'));
     selectElement = fixture.debugElement.query(By.css('#select'));
     textareaElement = fixture.debugElement.query(By.css('#textarea'));
@@ -49,22 +64,22 @@ describe('Spark Input Directive', () => {
   });
 
   it('should add the has-floating-label class on change if the input value is not empty', () => {
-    inputElementWithValue.nativeElement.value = 'Test Value!';
-    inputElementWithValue.nativeElement.dispatchEvent(new Event('change'));
+    hugeInputElementWithValue.nativeElement.value = 'Test Value!';
+    hugeInputElementWithValue.nativeElement.dispatchEvent(new Event('change'));
     fixture.detectChanges();
     expect(
-      inputElementWithValue.nativeElement.classList.contains(
+      hugeInputElementWithValue.nativeElement.classList.contains(
         'sprk-b-Input--has-floating-label',
       ),
     ).toEqual(true);
   });
 
   it('should not add the has-floating-label class on change if the input value is empty', () => {
-    inputElementWithValue.nativeElement.value = '';
-    inputElementWithValue.nativeElement.dispatchEvent(new Event('change'));
+    hugeInputElementWithValue.nativeElement.value = '';
+    hugeInputElementWithValue.nativeElement.dispatchEvent(new Event('change'));
     fixture.detectChanges();
     expect(
-      inputElementWithValue.nativeElement.classList.contains(
+      hugeInputElementWithValue.nativeElement.classList.contains(
         'sprk-b-Input--has-floating-label',
       ),
     ).toEqual(false);
@@ -72,7 +87,7 @@ describe('Spark Input Directive', () => {
 
   it('should add the has-floating-label class on load if the input value is not empty', () => {
     expect(
-      inputElementWithValue.nativeElement.classList.contains(
+      hugeInputElementWithValue.nativeElement.classList.contains(
         'sprk-b-Input--has-floating-label',
       ),
     ).toEqual(true);
@@ -80,7 +95,15 @@ describe('Spark Input Directive', () => {
 
   it('should not add the has-floating-label class on load if the input value is empty', () => {
     expect(
-      inputElementNoValue.nativeElement.classList.contains(
+      hugeInputElementNoValue.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(false);
+  });
+
+  it('should not add the has-floating-label class to inputs that are not huge', () => {
+    expect(
+      inputElementWithValue.nativeElement.classList.contains(
         'sprk-b-Input--has-floating-label',
       ),
     ).toEqual(false);
