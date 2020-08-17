@@ -6,7 +6,7 @@ export default {
   title: 'Components/Box',
   component: SprkBox,
   decorators: [
-    story => <div className="sprk-o-Box sb-decorate">{story()}</div>
+    (story) => <div className="sprk-o-Box sb-decorate">{story()}</div>,
   ],
   parameters: {
     jest: ['SprkBox'],
@@ -15,9 +15,7 @@ export default {
   },
 };
 
-export const defaultBox = () => (
-  <SprkBox></SprkBox>
-);
+export const defaultBox = () => <SprkBox />;
 
 defaultBox.story = {
   name: 'Default',

@@ -3,13 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 const SprkBox = (props) => {
-  const {
-    children,
-    spacing,
-    additionalClasses,
-    idString,
-    ...other
-  } = props;
+  const { children, spacing, additionalClasses, idString, ...other } = props;
 
   const classNames = classnames('sprk-o-Box', additionalClasses, {
     'sprk-o-Box--flush': spacing === 'flush',
@@ -67,11 +61,13 @@ SprkBox.propTypes = {
     'miscD',
   ]),
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute
+   * serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to
+   * add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
 };
