@@ -84,6 +84,8 @@ export { SprkHelperTextDirective } from './lib/directives/inputs/sprk-helper-tex
 export { SprkHelperTextModule } from './lib/directives/inputs/sprk-helper-text/sprk-helper-text.module';
 export { SprkInputDirective } from './lib/directives/inputs/sprk-input/sprk-input.directive';
 export { SprkInputModule } from './lib/directives/inputs/sprk-input/sprk-input.module';
+export { SprkSelectDirective } from './lib/directives/inputs/sprk-select/sprk-select.directive';
+export { SprkSelectModule } from './lib/directives/inputs/sprk-select/sprk-select.module';
 export { SprkLabelDirective } from './lib/directives/inputs/sprk-label/sprk-label.directive';
 export { SprkLabelModule } from './lib/directives/inputs/sprk-label/sprk-label.module';
 export { SprkSelectionInputDirective } from './lib/directives/inputs/sprk-selection-input/sprk-selection-input.directive';

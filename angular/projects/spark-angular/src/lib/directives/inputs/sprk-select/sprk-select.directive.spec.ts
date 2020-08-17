@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkInputDirective } from './sprk-input.directive';
+import { SprkSelectDirective } from './sprk-select.directive';
 
-/**
- * TODO: Remove this file in favor of the new
- * sprkSelect directive and its test file.
- */
 @Component({
   selector: 'sprk-test-select',
   template: ` <select sprkInput></select> `,
 })
 class TestSelectComponent {}
 
-describe('Spark Input Directive', () => {
+describe('Spark Select Directive', () => {
   let component: TestSelectComponent;
   let selectComponent: TestSelectComponent;
   let selectFixture: ComponentFixture<TestSelectComponent>;
@@ -20,7 +16,7 @@ describe('Spark Input Directive', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkInputDirective, TestSelectComponent],
+      declarations: [SprkSelectDirective, TestSelectComponent],
     }).compileComponents();
 
     selectFixture = TestBed.createComponent(TestSelectComponent);

@@ -5,16 +5,17 @@ import {
   HostListener,
   Input,
   HostBinding,
+  Renderer2,
 } from '@angular/core';
 
 @Directive({
-  selector: '[sprkInput]',
+  selector: '[sprkSelect]',
 })
-export class SprkInputDirective implements OnInit {
+export class SprkSelectDirective implements OnInit {
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef) {}
+  constructor(public ref: ElementRef, private renderer: Renderer2) {}
 
   // /**
   //  * If set to `true`, then
@@ -46,6 +47,9 @@ export class SprkInputDirective implements OnInit {
   @Input()
   analyticsString: string;
 
+  @HostBinding('class.sprk-b-Select') selectClass: true;
+  @HostBinding('class.sprk-u-Width-100') true: boolean;
+
   /**
    * @ignore
    */
@@ -61,23 +65,12 @@ export class SprkInputDirective implements OnInit {
     }
   }
 
-  /**
-   * TODO: Remove the code in this file that is related
-   * to selects in favor of new sprkSelect directive.
-   */
   ngOnInit(): void {
-    if (this.ref.nativeElement.nodeName === 'SELECT') {
-      this.ref.nativeElement.classList.add('sprk-b-Select');
-    } else if (this.ref.nativeElement.nodeName === 'TEXTAREA') {
-      this.ref.nativeElement.classList.add('sprk-b-TextInput');
-      this.ref.nativeElement.classList.add('sprk-b-TextArea');
-    } else {
-      this.ref.nativeElement.classList.add('sprk-b-TextInput');
-    }
+    this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Select');
+    this.renderer.addClass(this.ref.nativeElement, 'sprk-u-Width-100');
 
     if ((this.ref.nativeElement as HTMLInputElement).value.length > 0) {
       this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
     }
-    this.ref.nativeElement.classList.add('sprk-u-Width-100');
   }
 }
