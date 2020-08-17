@@ -5,16 +5,16 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 export default {
   title: 'Components/Divider',
   component: SprkDivider,
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
     jest: ['SprkDivider'],
     info: `${markdownDocumentationLinkBuilder('divider')}`,
   },
 };
 
-export const defaultStory = () => <SprkDivider idString="divider-1" element="span" />;
+export const defaultStory = () => (
+  <SprkDivider idString="divider-1" element="span" />
+);
 
 defaultStory.story = {
   name: 'Default',
