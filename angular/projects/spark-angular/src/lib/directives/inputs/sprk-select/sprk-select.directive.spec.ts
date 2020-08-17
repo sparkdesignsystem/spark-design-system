@@ -4,7 +4,7 @@ import { SprkSelectDirective } from './sprk-select.directive';
 
 @Component({
   selector: 'sprk-test-select',
-  template: ` <select sprkInput></select> `,
+  template: ` <select sprkSelect></select> `,
 })
 class TestSelectComponent {}
 

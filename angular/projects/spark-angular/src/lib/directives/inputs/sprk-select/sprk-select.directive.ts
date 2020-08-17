@@ -47,9 +47,6 @@ export class SprkSelectDirective implements OnInit {
   @Input()
   analyticsString: string;
 
-  @HostBinding('class.sprk-b-Select') selectClass: true;
-  @HostBinding('class.sprk-u-Width-100') true: boolean;
-
   /**
    * @ignore
    */
