@@ -121,7 +121,7 @@ export const invalidDatePicker = () => ({
         <input
           name="datepicker_input"
           type="text"
-          isValid="false"
+          class="sprk-b-TextInput--error"
           placeholder="MM/DD/YYYY"
           [(ngModel)]="datepicker_input"
           #datepickerInput="ngModel"

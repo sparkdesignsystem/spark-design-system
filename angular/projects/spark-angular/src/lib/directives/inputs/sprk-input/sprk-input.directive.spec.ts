@@ -7,7 +7,14 @@ import { SprkInputDirective } from './sprk-input.directive';
   selector: 'sprk-test',
   template: `
     <input sprkInput id="with-value" value="Initial Value" />
-    <input sprkInput id="no-value" idString="test-str" hasIcon="true" />
+    <input
+      sprkInput
+      id="no-value"
+      idString="test-str"
+      analyticsString="test-str"
+      hasIcon="true"
+      isValid="false"
+    />
     <select sprkInput id="select"></select>
     <textarea sprkInput id="textarea"></textarea>
   `,
@@ -97,18 +104,10 @@ describe('Spark Input Directive', () => {
     ).toEqual(true);
   });
 
-  it('should set the data-analytics attribute to the value of idString', () => {
+  it('should set the data-analytics attribute to the value of analyticsString', () => {
     expect(
       inputElementNoValue.nativeElement.getAttribute('data-analytics'),
     ).toEqual('test-str');
-  });
-
-  it('should add the error CSS class when isValid is false', () => {
-    expect(
-      inputElementNoValue.nativeElement.classList.contains(
-        'sprk-b-TextInput--error',
-      ),
-    ).toEqual(true);
   });
 
   // it('should add the icon CSS class when hasIcon is true', () => {

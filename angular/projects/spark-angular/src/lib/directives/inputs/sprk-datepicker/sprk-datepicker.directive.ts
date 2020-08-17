@@ -5,15 +5,13 @@ import {
   OnInit,
   Renderer2,
   HostBinding,
-  OnChanges,
 } from '@angular/core';
 import TinyDatePicker from 'tiny-date-picker';
-import { has } from 'lodash';
 
 @Directive({
   selector: '[sprkDatepicker]',
 })
-export class SprkDatepickerDirective implements OnInit, OnChanges {
+export class SprkDatepickerDirective implements OnInit {
   /**
    * @ignore
    */
@@ -28,14 +26,6 @@ export class SprkDatepickerDirective implements OnInit, OnChanges {
   sprkDatePickerConfig: object;
 
   /**
-   * If set to `false`, then
-   * the error styles will be applied
-   * to the input.
-   */
-  @Input()
-  isValid: true;
-
-  /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
    * element. This is intended to be
@@ -48,29 +38,14 @@ export class SprkDatepickerDirective implements OnInit, OnChanges {
   idString: string;
 
   /**
-   * @ignore
-   * If the input is invalid and does not have the
-   * error class, then add it. If the input
-   * is valid and has the error class, remove it.
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the element.
+   * Intended for an outside
+   * library to capture data.
    */
-  handleErrorStyles() {
-    const hasErrorClass = this.ref.nativeElement.classList.contains(
-      'sprk-b-TextInput--error',
-    );
-
-    if (!this.isValid && !hasErrorClass) {
-      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-TextInput--error');
-    } else if (this.isValid && hasErrorClass) {
-      this.renderer.removeClass(
-        this.ref.nativeElement,
-        'sprk-b-TextInput--error',
-      );
-    }
-  }
-
-  ngOnChanges() {
-    this.handleErrorStyles();
-  }
+  @HostBinding('attr.data-analytics')
+  @Input()
+  analyticsString: string;
 
   ngOnInit(): void {
     const input = this.ref.nativeElement;

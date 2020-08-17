@@ -16,14 +16,6 @@ export class SprkInputDirective implements OnInit {
    */
   constructor(public ref: ElementRef) {}
 
-  /**
-   * If set to `false`, then
-   * the error styles will be applied
-   * to the input.
-   */
-  @Input()
-  isValid: boolean;
-
   // /**
   //  * If set to `true`, then
   //  * the icon styles will be applied
@@ -43,6 +35,16 @@ export class SprkInputDirective implements OnInit {
   @HostBinding('attr.data-id')
   @Input()
   idString: string;
+
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the element.
+   * Intended for an outside
+   * library to capture data.
+   */
+  @HostBinding('attr.data-analytics')
+  @Input()
+  analyticsString: string;
 
   /**
    * @ignore
