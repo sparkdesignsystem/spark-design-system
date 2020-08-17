@@ -5,13 +5,13 @@ import { SprkTextDirective } from './sprk-text.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <p sprkText variant="bodyOne">Text One</p>
+    <p sprkText variant="bodyOne" idString="foo">Text One</p>
     <h1 sprkText variant="bodyTwo">Text Two</h1>
     <cite sprkText variant="bodyThree">Text Three</cite>
     <small sprkText variant="bodyFour">Text Four</small>
-  `
+  `,
 })
-class TestComponent { }
+class TestComponent {}
 
 describe('Spark Text Directive', () => {
   let component: TestComponent;
@@ -23,7 +23,7 @@ describe('Spark Text Directive', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkTextDirective, TestComponent]
+      declarations: [SprkTextDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
@@ -53,5 +53,9 @@ describe('Spark Text Directive', () => {
 
   it('should add the display four class if variant is bodyFour', () => {
     expect(el4.classList.contains('sprk-b-TypeBodyFour')).toBe(true);
+  });
+
+  it('should apply correct idString value to data-id', () => {
+    expect(el1.getAttribute('data-id')).toBe('foo');
   });
 });

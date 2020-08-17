@@ -29,8 +29,9 @@ describe('SprkTooltip:', () => {
     expect(wrapper.find('button').prop('aria-expanded')).toEqual(false);
 
     wrapper.find('button').simulate('click');
-
     expect(wrapper.find('button').prop('aria-expanded')).toEqual(true);
+    wrapper.find('button').simulate('click');
+    expect(wrapper.find('button').prop('aria-expanded')).toEqual(false);
   });
 
   it('should add additionalClasses', () => {
@@ -204,5 +205,114 @@ describe('SprkTooltip:', () => {
     wrapper.find('button').simulate('focus');
 
     expect(wrapper.state().position).toBe('topleft');
+  });
+
+  it('should call openEvent the first time button is clicked', () => {
+    const myMock = jest.fn();
+
+    const wrapper = mount(<SprkTooltip openedEvent={myMock} />);
+
+    wrapper.find('button').simulate('click');
+
+    expect(myMock.mock.calls.length).toBe(1);
+  });
+
+  it('should call closedEvent the second time button is clicked', () => {
+    const myMock = jest.fn();
+
+    const wrapper = mount(<SprkTooltip closedEvent={myMock} />);
+
+    wrapper.find('button').simulate('click');
+    expect(myMock.mock.calls.length).toBe(0);
+    wrapper.find('button').simulate('click');
+    expect(myMock.mock.calls.length).toBe(1);
+  });
+
+  it(
+    'should not call closedEvent when Escape is pressed if the tooltip is' +
+      ' not already toggled',
+    () => {
+      const myMock = jest.fn();
+
+      const wrapper = mount(<SprkTooltip closedEvent={myMock} />);
+
+      wrapper.instance().handleWindowKeydown({ key: 'Escape' });
+
+      expect(myMock.mock.calls.length).toBe(0);
+    },
+  );
+
+  it(
+    'should call closedEvent when Escape is pressed if the tooltip is ' +
+      ' already toggled',
+    () => {
+      const myMock = jest.fn();
+
+      const wrapper = mount(<SprkTooltip closedEvent={myMock} />);
+      wrapper.find('button').simulate('click');
+      expect(myMock.mock.calls.length).toBe(0);
+      wrapper.instance().handleWindowKeydown({ key: 'Escape' });
+      expect(myMock.mock.calls.length).toBe(1);
+    },
+  );
+
+  it(
+    'should not call closedEvent when the document is clicked if the tooltip' +
+      ' is not already toggled',
+    () => {
+      const myMock = jest.fn();
+
+      const wrapper = mount(<SprkTooltip closedEvent={myMock} />);
+
+      wrapper.instance().handleWindowClick({});
+
+      expect(myMock.mock.calls.length).toBe(0);
+    },
+  );
+
+  it(
+    'should call closedEvent when the document is clicked if the tooltip is ' +
+      ' already toggled',
+    () => {
+      const myMock = jest.fn();
+
+      const wrapper = mount(<SprkTooltip closedEvent={myMock} />);
+      wrapper.find('button').simulate('click');
+      expect(myMock.mock.calls.length).toBe(0);
+      wrapper.instance().handleWindowClick({});
+      expect(myMock.mock.calls.length).toBe(1);
+    },
+  );
+
+  it('should prefer the new property over the deprecated property', () => {
+    const wrapper = mount(
+      <SprkTooltip
+        // deprecated prop
+        triggerIconType="access"
+        // new prop
+        triggerIconName="message"
+      />,
+    );
+
+    expect(
+      wrapper.find('use').filterWhere((item) => {
+        return item.prop('xlinkHref') === '#message';
+      }).length,
+    ).toBe(1);
+  });
+
+  it('should use the deprecated property if new prop is not used', () => {
+    const wrapper = mount(
+      <SprkTooltip
+        // deprecated prop
+        triggerIconType="access"
+      />,
+    );
+
+    expect(
+      wrapper.find('use').filterWhere((item) => {
+        return item.prop('xlinkHref') === '#access';
+      }).length,
+    ).toBe(1);
   });
 });

@@ -1,23 +1,25 @@
-import {
-  Directive,
-  Input,
-  HostBinding
-} from '@angular/core';
+import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[sprkText]'
+  selector: '[sprkText]',
 })
-
 export class SprkTextDirective {
   /**
    * @ignore
    */
-  constructor() { }
+  constructor() {}
+
+  /**
+   * The value supplied will be assigned to the `data-id` attribute on the
+   * component. This is intended to be used as a selector for automated
+   * tools. This value should be unique per page.
+   */
+  @HostBinding('attr.data-id')
+  @Input()
+  idString: string;
 
   @Input()
-  variant: 'bodyOne' |
-    'bodyTwo' | 'bodyThree' |
-    'bodyFour';
+  variant: 'bodyOne' | 'bodyTwo' | 'bodyThree' | 'bodyFour';
 
   @HostBinding('class.sprk-b-TypeBodyOne')
   get textOne() {
@@ -36,5 +38,3 @@ export class SprkTextDirective {
     return this.variant === 'bodyFour';
   }
 }
-
-
