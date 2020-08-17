@@ -1,7 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
-import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkSelectDirective } from '../../directives/inputs/sprk-select/sprk-select.directive';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
@@ -15,33 +15,32 @@ export default {
   title: 'Components/Input/Select',
   component: SparkInputContainerComponent,
   subcomponents: {
-    SprkInputDirective,
+    SprkSelectDirective,
     SprkLabelDirective,
     SprkIconComponent,
     SprkFieldErrorDirective,
   },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
     onSubmit(event): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
     `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
@@ -50,7 +49,7 @@ const modules = {
     SprkIconInputContainerModule,
     SprkLabelModule,
     SprkIconModule,
-    SprkFieldErrorModule
+    SprkFieldErrorModule,
   ],
 };
 
@@ -59,11 +58,10 @@ export const selectBox = () => ({
   template: `
     <sprk-input-container>
       <select
-        class="sprk-b-Select"
         id="select-normal-1"
         aria-describedby="select-normal--error-container"
         data-id="select-1"
-        sprkInput
+        sprkSelect
       >
         <option value="none">Please choose...</option>
         <option value="1">Option 1</option>
@@ -90,7 +88,7 @@ selectBox.story = {
   parameters: {
     jest: [
       'sprk-input-container.component',
-      'sprk-input.directive',
+      'sprk-select.directive',
       'sprk-label.directive',
     ],
   },
@@ -101,11 +99,11 @@ export const invalidSelectBox = () => ({
   template: `
     <sprk-input-container>
       <select
-        class="sprk-b-Select sprk-b-Select--error"
+        class="sprk-b-Select--error"
         id="select-normal-1"
         aria-describedby="select-normal--error-container"
         data-id="select-1"
-        sprkInput
+        sprkSelect
         aria-invalid="true"
       >
         <option value="none">Please choose...</option>
@@ -140,7 +138,7 @@ invalidSelectBox.story = {
   parameters: {
     jest: [
       'sprk-input-container.component',
-      'sprk-input.directive',
+      'sprk-select.directive',
       'sprk-label.directive',
     ],
   },
@@ -151,11 +149,10 @@ export const disabledSelectBox = () => ({
   template: `
     <sprk-input-container>
       <select
-        class="sprk-b-Select"
         id="select-normal-1"
         aria-describedby="select-normal--error-container"
         data-id="select-1"
-        sprkInput
+        sprkSelect
         disabled
       >
         <option value="none">Please choose...</option>
@@ -183,7 +180,7 @@ disabledSelectBox.story = {
   parameters: {
     jest: [
       'sprk-input-container.component',
-      'sprk-input.directive',
+      'sprk-select.directive',
       'sprk-label.directive',
     ],
   },
