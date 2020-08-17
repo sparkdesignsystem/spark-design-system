@@ -15,7 +15,8 @@ export default {
   },
 };
 
-export const defaultBox = () => <SprkBox />;
+// eslint-disable-next-line react/self-closing-comp
+export const defaultBox = () => <SprkBox></SprkBox>;
 
 defaultBox.story = {
   name: 'Default',
