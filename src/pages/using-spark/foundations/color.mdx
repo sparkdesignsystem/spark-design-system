@@ -1,6 +1,33 @@
 ---
   title: Color
 ---
+import { useStaticQuery, graphql } from "gatsby";
+export const useSassColors = () => {
+  const { color } = useStaticQuery(
+    graphql`
+      query SassColors {
+        allSassVarsJson {
+          edges {
+            node {
+              description
+              context {
+                name
+                value
+              }
+              file {
+                name
+              }
+              group
+              type
+            }
+          }
+        }
+      }
+    `
+  )
+  return color.allSassVarsJson
+}
+
 import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
 import ColorSwatch from '../../../components/ColorSwatch';
 
@@ -80,12 +107,11 @@ Floods of colors indicate areas of focus in the interface but content should mai
 Floods of color should be reserved for the below colors only:
 
 #### Dark
-LOADED COLOR SWATCH GRID HERE
-<ColorSwatchGrid>
+<ColorSwatchGrid hello={useSassColors()}>
   <ColorSwatch
     variableName="sprk-purple"
-    colorData
   />
+  <SprkButton>HI</SprkButton>
 </ColorSwatchGrid>
 
 
