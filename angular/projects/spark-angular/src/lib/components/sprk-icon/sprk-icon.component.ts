@@ -3,13 +3,21 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'sprk-icon',
   template: `
-    <svg [ngClass]="getClasses()" viewBox="0 0 64 64" [attr.data-id]="idString">
+    <svg
+      [ngClass]="getClasses()"
+      [attr.viewBox]="getViewBox()"
+      [attr.aria-labelledby]="ariaLabelledby"
+      [attr.data-id]="idString"
+    >
       <use [attr.xlink:href]="icon" />
     </svg>
   `,
-  styles: [':host { line-height: 1; }']
+  styles: [':host { line-height: 1; }'],
 })
 export class SprkIconComponent {
+  /** The viewbox of the svg containing the symbol. */
+  @Input()
+  viewBox: string;
   /**
    * Determines which icon is rendered.
    * Expects the value to match the exact name
@@ -17,7 +25,24 @@ export class SprkIconComponent {
    * (i.e. `chevron-down`, instead of `chevron down`).
    */
   @Input()
+  iconName: string;
+  // TODO: Deprecate on next release
+  /**
+   * Deprecated and to be removed next release.
+   * Use `iconName` instead.
+   * Determines which icon is rendered.
+   * Expects the value to match the exact name
+   * of the icon found in the docs
+   * (i.e. `chevron-down`, instead of `chevron down`).
+   */
+  @Input()
   iconType: string;
+  /**
+   * Expects a value to assign to
+   * the `aria-labelledby` attribute of the link.
+   */
+  @Input()
+  ariaLabelledby: string;
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -44,13 +69,21 @@ export class SprkIconComponent {
   /**
    * @ignore
    */
+  getViewBox(): string {
+    return this.viewBox || '0 0 64 64';
+  }
+
+  /**
+   * @ignore
+   */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Icon'];
 
-    this.icon = `#${this.iconType}`;
+    // TODO: Deprecate iconType
+    this.icon = `#${this.iconName || this.iconType}`;
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }

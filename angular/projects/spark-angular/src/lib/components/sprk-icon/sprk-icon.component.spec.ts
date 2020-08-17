@@ -8,7 +8,7 @@ describe('SprkIconComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkIconComponent]
+      declarations: [SprkIconComponent],
     }).compileComponents();
   }));
 
@@ -32,14 +32,49 @@ describe('SprkIconComponent', () => {
   });
 
   it('should add the correct icon based on the icon type set', () => {
+    component.iconName = 'bell';
+    fixture.detectChanges();
+    expect(
+      iconElement.querySelector('use').hasAttribute('xlink:href'),
+    ).toBeTruthy();
+    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#bell',
+    );
+  });
+
+  // TODO: deprecate iconType
+  it('should add the correct icon based on the icon type set', () => {
     component.iconType = 'bell';
     fixture.detectChanges();
     expect(
-      iconElement.querySelector('use').hasAttribute('xlink:href')
+      iconElement.querySelector('use').hasAttribute('xlink:href'),
     ).toBeTruthy();
     expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
-      '#bell'
+      '#bell',
     );
+  });
+
+  it('should add the default viewBox if not set', () => {
+    component.iconType = 'bell';
+    fixture.detectChanges();
+    expect(iconElement.hasAttribute('viewBox')).toBeTruthy();
+    expect(iconElement.getAttribute('viewBox')).toEqual('0 0 64 64');
+  });
+
+  it('should add the default viewBox if not set', () => {
+    component.iconType = 'bell';
+    component.viewBox = '0 0 26 26';
+    fixture.detectChanges();
+    expect(iconElement.hasAttribute('viewBox')).toBeTruthy();
+    expect(iconElement.getAttribute('viewBox')).toEqual('0 0 26 26');
+  });
+
+  it('should add aria-labelledby', () => {
+    component.iconType = 'bell';
+    component.ariaLabelledby = 'test';
+    fixture.detectChanges();
+    expect(iconElement.hasAttribute('aria-labelledby')).toBeTruthy();
+    expect(iconElement.getAttribute('aria-labelledby')).toEqual('test');
   });
 
   it('should add the correct classes if iconType has no value, but additionalClasses does', () => {
