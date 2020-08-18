@@ -27,11 +27,11 @@ describe('SprkIconComponent', () => {
     expect(iconElement.classList.toString()).toEqual(component.getClasses());
   });
 
-  it('should add the correct class if iconType is not set', () => {
+  it('should add the correct class if iconName is not set', () => {
     expect(component.getClasses()).toEqual('sprk-c-Icon');
   });
 
-  it('should add the correct icon based on the icon type set', () => {
+  it('should add the correct icon based on the iconName set', () => {
     component.iconName = 'bell';
     fixture.detectChanges();
     expect(
@@ -42,7 +42,7 @@ describe('SprkIconComponent', () => {
     );
   });
 
-  // TODO: deprecate iconType
+  // TODO: deprecate iconType on next release
   it('should add the correct icon based on the icon type set', () => {
     component.iconType = 'bell';
     fixture.detectChanges();
@@ -55,14 +55,14 @@ describe('SprkIconComponent', () => {
   });
 
   it('should add the default viewBox if not set', () => {
-    component.iconType = 'bell';
+    component.iconName = 'bell';
     fixture.detectChanges();
     expect(iconElement.hasAttribute('viewBox')).toBeTruthy();
     expect(iconElement.getAttribute('viewBox')).toEqual('0 0 64 64');
   });
 
   it('should add viewBox', () => {
-    component.iconType = 'bell';
+    component.iconName = 'bell';
     component.viewBox = '0 0 26 26';
     fixture.detectChanges();
     expect(iconElement.hasAttribute('viewBox')).toBeTruthy();
@@ -70,21 +70,21 @@ describe('SprkIconComponent', () => {
   });
 
   it('should add aria-labelledby', () => {
-    component.iconType = 'bell';
+    component.iconName = 'bell';
     component.ariaLabelledby = 'test';
     fixture.detectChanges();
     expect(iconElement.hasAttribute('aria-labelledby')).toBeTruthy();
     expect(iconElement.getAttribute('aria-labelledby')).toEqual('test');
   });
 
-  it('should add the correct classes if iconType has no value, but additionalClasses does', () => {
+  it('should add the correct classes if iconName has no value, but additionalClasses does', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-c-Icon sprk-u-pam sprk-u-man');
   });
 
-  it('should add the correct classes if iconType and additionalClasses have values', () => {
-    component.iconType = 'bell';
+  it('should add the correct classes if iconName and additionalClasses have values', () => {
+    component.iconName = 'bell';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-c-Icon sprk-u-pam sprk-u-man');
