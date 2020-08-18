@@ -33,7 +33,7 @@ const SprkButton = ({
         { 'sprk-is-Disabled': disabled },
         additionalClasses,
       )}
-      role={element !== 'button' ? 'button' : undefined}
+      role={TagName !== 'button' ? 'button' : undefined}
       data-id={idString}
       data-analytics={analyticsString}
       disabled={TagName !== 'a' ? disabled : undefined}
