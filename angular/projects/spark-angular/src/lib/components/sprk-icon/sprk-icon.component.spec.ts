@@ -54,14 +54,14 @@ describe('SprkIconComponent', () => {
     );
   });
 
-  it('should add viewBox', () => {
+  it('should add the default viewBox if not set', () => {
     component.iconType = 'bell';
     fixture.detectChanges();
     expect(iconElement.hasAttribute('viewBox')).toBeTruthy();
     expect(iconElement.getAttribute('viewBox')).toEqual('0 0 64 64');
   });
 
-  it('should add the default viewBox if not set', () => {
+  it('should add viewBox', () => {
     component.iconType = 'bell';
     component.viewBox = '0 0 26 26';
     fixture.detectChanges();
