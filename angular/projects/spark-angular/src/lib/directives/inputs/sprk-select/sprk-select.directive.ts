@@ -26,6 +26,14 @@ export class SprkSelectDirective implements OnInit {
   // hasIcon: boolean;
 
   /**
+   * If set to `huge`, then
+   * the huge styles will be applied
+   * to the input.
+   */
+  @Input()
+  variant: 'huge' | undefined;
+
+  /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
    * element. This is intended to be
@@ -48,17 +56,24 @@ export class SprkSelectDirective implements OnInit {
   analyticsString: string;
 
   /**
+   * Add the floating label class if the element
+   * has a value.
+   * @param element the nativeElement
+   */
+  floatLabelWhenValue(element: HTMLSelectElement) {
+    const value = (element as HTMLSelectElement).value;
+    value.length > 0
+      ? this.renderer.addClass(element, 'sprk-b-Input--has-floating-label')
+      : this.renderer.removeClass(element, 'sprk-b-Input--has-floating-label');
+  }
+
+  /**
    * @ignore
    */
   @HostListener('change', ['$event'])
-  OnChange($event) {
-    const value = (this.ref.nativeElement as HTMLInputElement).value;
-    if (value.length > 0) {
-      this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
-    } else {
-      this.ref.nativeElement.classList.remove(
-        'sprk-b-Input--has-floating-label',
-      );
+  OnChange() {
+    if (this.variant === 'huge') {
+      this.floatLabelWhenValue(this.ref.nativeElement);
     }
   }
 
@@ -66,8 +81,8 @@ export class SprkSelectDirective implements OnInit {
     this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Select');
     this.renderer.addClass(this.ref.nativeElement, 'sprk-u-Width-100');
 
-    if ((this.ref.nativeElement as HTMLInputElement).value.length > 0) {
-      this.ref.nativeElement.classList.add('sprk-b-Input--has-floating-label');
+    if (this.variant === 'huge') {
+      this.floatLabelWhenValue(this.ref.nativeElement);
     }
   }
 }

@@ -1,32 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { SprkSelectDirective } from './sprk-select.directive';
 
 @Component({
   selector: 'sprk-test-select',
-  template: ` <select sprkSelect></select> `,
+  template: `
+    <select sprkSelect id="default"></select>
+    <select sprkSelect variant="huge" id="huge"></select>
+  `,
 })
-class TestSelectComponent {}
+class TestComponent {}
 
 describe('Spark Select Directive', () => {
-  let component: TestSelectComponent;
-  let selectComponent: TestSelectComponent;
-  let selectFixture: ComponentFixture<TestSelectComponent>;
-  let selectElement: HTMLElement;
+  let component: TestComponent;
+  let fixture: ComponentFixture<TestComponent>;
+  let selectElement: DebugElement;
+  let hugeSelectElement: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkSelectDirective, TestSelectComponent],
+      declarations: [SprkSelectDirective, TestComponent],
     }).compileComponents();
 
-    selectFixture = TestBed.createComponent(TestSelectComponent);
-    component = selectFixture.componentInstance;
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
 
-    selectFixture = TestBed.createComponent(TestSelectComponent);
-    selectComponent = selectFixture.componentInstance;
-
-    selectFixture.detectChanges();
-    selectElement = selectFixture.nativeElement.querySelector('select');
+    fixture.detectChanges();
+    selectElement = fixture.debugElement.query(By.css('#default'));
+    hugeSelectElement = fixture.debugElement.query(By.css('#huge'));
   }));
 
   it('should create itself', () => {
@@ -34,9 +36,56 @@ describe('Spark Select Directive', () => {
   });
 
   it('should add the correct class if a select element is used', () => {
-    selectFixture.detectChanges();
-    expect(selectElement.classList.toString()).toEqual(
+    fixture.detectChanges();
+    expect(selectElement.nativeElement.classList.toString()).toEqual(
       'sprk-b-Select sprk-u-Width-100',
     );
+  });
+
+  // it('should add the floating label class on change if the select has a value', () => {
+  //   hugeSelectElement.nativeElement.value = 'Test Value!';
+  //   hugeSelectElement.nativeElement.dispatchEvent(new Event('change'));
+  //   fixture.detectChanges();
+  //   console.log(hugeSelectElement.nativeElement.value, 'debug value')
+  //   expect(
+  //     hugeSelectElement.nativeElement.classList.contains(
+  //       'sprk-b-Input--has-floating-label',
+  //     ),
+  //   ).toEqual(true);
+  // });
+
+  it('should not add the floating label class on change if the select value is empty', () => {
+    hugeSelectElement.nativeElement.value = '';
+    hugeSelectElement.nativeElement.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+    expect(
+      hugeSelectElement.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(false);
+  });
+
+  // it('should add the floating label class on load if the select has a value', () => {
+  //   expect(
+  //     hugeSelectElement.nativeElement.classList.contains(
+  //       'sprk-b-Input--has-floating-label',
+  //     ),
+  //   ).toEqual(true);
+  // });
+
+  it('should not add the floating label class on load if the select value is empty', () => {
+    expect(
+      hugeSelectElement.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(false);
+  });
+
+  it('should not add the floating label class to selects that are not huge', () => {
+    expect(
+      selectElement.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(false);
   });
 });

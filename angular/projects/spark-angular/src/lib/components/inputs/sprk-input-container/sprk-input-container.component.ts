@@ -49,14 +49,6 @@ export class SparkInputContainerComponent implements OnInit {
   idString: string;
 
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * icon container.
-   */
-  @Input()
-  iconContainerClasses: string;
-
-  /**
    * This component expects a child label element
    * with the `sprkLabel` directive.
    */
