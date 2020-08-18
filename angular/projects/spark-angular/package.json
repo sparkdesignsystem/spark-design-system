@@ -19,7 +19,7 @@
     "@angular/platform-browser": ">=7.0.0 < 9.2.0",
     "@angular/platform-browser-dynamic": ">=7.0.0 < 9.2.0",
     "@angular/router": ">=7.0.0 < 9.2.0",
-    "@sparkdesignsystem/spark": "^13.1.1"
+    "@sparkdesignsystem/spark": "^13.1.2"
   },
   "dependencies": {
     "focus-visible": "5.0.2",
