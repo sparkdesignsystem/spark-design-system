@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <svg
       [ngClass]="getClasses()"
-      [attr.viewBox]="getViewBox()"
+      [attr.viewBox]="viewBox"
       [attr.aria-labelledby]="ariaLabelledby"
       [attr.data-id]="idString"
     >
@@ -17,7 +17,7 @@ import { Component, Input } from '@angular/core';
 export class SprkIconComponent {
   /** The viewbox of the svg containing the symbol. */
   @Input()
-  viewBox: string;
+  viewBox = '0 0 64 64';
   /**
    * Determines which icon is rendered.
    * Expects the value to match the exact name
@@ -39,7 +39,7 @@ export class SprkIconComponent {
   iconType: string;
   /**
    * Expects a value to assign to
-   * the `aria-labelledby` attribute of the link.
+   * the `aria-labelledby` attribute of the icon.
    */
   @Input()
   ariaLabelledby: string;
@@ -65,13 +65,6 @@ export class SprkIconComponent {
    * @ignore
    */
   public icon: string;
-
-  /**
-   * @ignore
-   */
-  getViewBox(): string {
-    return this.viewBox || '0 0 64 64';
-  }
 
   /**
    * @ignore
