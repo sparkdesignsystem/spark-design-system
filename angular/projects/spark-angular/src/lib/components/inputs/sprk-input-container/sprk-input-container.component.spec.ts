@@ -101,4 +101,18 @@ describe('SparkInputContainerComponent', () => {
       inputContainerElement.classList.contains('sprk-b-InputContainer--huge'),
     ).toEqual(true);
   });
+
+  it('should not change the for and id if one is existing', () => {
+    inputElement.id = 'test-id';
+    inputContainerFixture.detectChanges();
+    expect(inputElement.getAttribute('id')).toBe('test-id');
+    expect(labelElement.getAttribute('for')).toBe('test-id');
+  });
+
+  it('should not change the error container id if one is existing', () => {
+    errorElement.id = 'error-id-test';
+    inputContainerFixture.detectChanges();
+    expect(inputElement.getAttribute('aria-describedby')).toBe('error-id-test');
+    expect(errorElement.getAttribute('id')).toBe('error-id-test');
+  });
 });
