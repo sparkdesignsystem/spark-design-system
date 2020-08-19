@@ -6,9 +6,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../../storybook-utili
 
 export default {
   title: 'Foundations/Typography',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkHeading,
   subcomponents: {
     SprkText,
@@ -53,71 +51,43 @@ export const pageTitle = () => (
 );
 
 export const displayOne = () => (
-  <SprkHeading
-    element="h1"
-    variant="displayOne"
-    idString="heading-one"
-  >
+  <SprkHeading element="h1" variant="displayOne" idString="heading-one">
     The Quick Brown Fox Jumps Over the Lazy Dog
   </SprkHeading>
 );
 
 export const displayTwo = () => (
-  <SprkHeading
-    element="h2"
-    variant="displayTwo"
-    idString="heading-two"
-  >
+  <SprkHeading element="h2" variant="displayTwo" idString="heading-two">
     The Quick Brown Fox Jumps Over the Lazy Dog
   </SprkHeading>
 );
 
 export const displayThree = () => (
-  <SprkHeading
-    element="h3"
-    variant="displayThree"
-    idString="heading-three"
-  >
+  <SprkHeading element="h3" variant="displayThree" idString="heading-three">
     The Quick Brown Fox Jumps Over the Lazy Dog
   </SprkHeading>
 );
 
 export const displayFour = () => (
-  <SprkHeading
-    element="h4"
-    variant="displayFour"
-    idString="heading-four"
-  >
+  <SprkHeading element="h4" variant="displayFour" idString="heading-four">
     The Quick Brown Fox Jumps Over the Lazy Dog
   </SprkHeading>
 );
 
 export const displayFive = () => (
-  <SprkHeading
-    element="h5"
-    variant="displayFive"
-    idString="heading-five"
-  >
+  <SprkHeading element="h5" variant="displayFive" idString="heading-five">
     The Quick Brown Fox Jumps Over the Lazy Dog
   </SprkHeading>
 );
 
 export const displaySix = () => (
-  <SprkHeading
-    element="h6"
-    variant="displaySix"
-    idString="heading-six"
-  >
+  <SprkHeading element="h6" variant="displaySix" idString="heading-six">
     The Quick Brown Fox Jumps Over the Lazy Dog
   </SprkHeading>
 );
 
 export const displaySeven = () => (
-  <SprkHeading
-    element="h6"
-    variant="displaySeven"
-    idString="heading-seven"
-  >
+  <SprkHeading element="h6" variant="displaySeven" idString="heading-seven">
     The Quick Brown Fox Jumps Over the Lazy Dog
   </SprkHeading>
 );
