@@ -41,8 +41,10 @@
   bottom: 1.5rem;
   left: -1rem;
   z-index: $sprk-tooltip-z-index;
-  transition: all 200ms ease-out;
+  transition: all 1000ms ease-out;
   opacity: 0;
+  // display: none;
+  visibility: hidden;
 
   &::selection {
     color: $sprk-white;
@@ -129,7 +131,9 @@
 .sprk-c-Tooltip__trigger.sprk-c-Tooltip--toggled + .sprk-c-Tooltip,
 .sprk-c-Tooltip:hover {
   opacity: 1;
-  pointer-events: none;
+  // display: inline-block;
+  visibility: visible;
+  // pointer-events: none;
 
   &.sprk-c-Tooltip--top-left {
     top: auto;
