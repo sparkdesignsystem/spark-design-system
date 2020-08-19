@@ -5,17 +5,19 @@ import { SprkHeadingDirective } from './sprk-heading.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <h1 sprkHeading variant="displayOne">Heading One</h1>
+    <h1 sprkHeading idString="test" variant="displayOne">Heading One</h1>
     <h2 sprkHeading variant="displayTwo">Heading Two</h2>
     <h3 sprkHeading variant="displayThree">Heading Three</h3>
     <h4 sprkHeading variant="displayFour">Heading Four</h4>
     <h5 sprkHeading variant="displayFive">Heading Five</h5>
     <h6 sprkHeading variant="displaySix">Heading Six</h6>
     <h1 sprkHeading variant="displaySeven">Heading Seven</h1>
-    <h1 sprkHeading variant="displayOne" isPageTitle="true">Heading One with page title</h1>
-  `
+    <h1 sprkHeading variant="displayOne" isPageTitle="true">
+      Heading One with page title
+    </h1>
+  `,
 })
-class TestComponent { }
+class TestComponent {}
 
 describe('Spark Heading Directive', () => {
   let component: TestComponent;
@@ -31,7 +33,7 @@ describe('Spark Heading Directive', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkHeadingDirective, TestComponent]
+      declarations: [SprkHeadingDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
@@ -49,6 +51,10 @@ describe('Spark Heading Directive', () => {
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should apply correct idString value to data-id', () => {
+    expect(el1.getAttribute('data-id') === 'test').toBe(true);
   });
 
   it('should add the display one class if variant is displayOne', () => {

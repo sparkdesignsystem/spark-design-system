@@ -25,11 +25,7 @@ const SprkHeading = ({
   const TagName = element;
 
   return (
-    <TagName
-      className={classNames}
-      data-id={idString}
-      {...other}
-    >
+    <TagName className={classNames} data-id={idString} {...other}>
       {children}
     </TagName>
   );
@@ -38,14 +34,14 @@ const SprkHeading = ({
 SprkHeading.defaultProps = {
   /**
    * If `false`, the heading will not have Page Title styles.
-   * If `true`, the heading will have Page Title stles.
+   * If `true`, the heading will have Page Title styles.
    */
   isPageTitle: false,
   /**
    * Determines what element to render.
    */
   element: 'h1',
-}
+};
 
 SprkHeading.propTypes = {
   /**
@@ -58,7 +54,7 @@ SprkHeading.propTypes = {
   element: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func,
-    PropTypes.elementType
+    PropTypes.elementType,
   ]),
   /**
    * The heading style to render.
@@ -72,7 +68,7 @@ SprkHeading.propTypes = {
     'displayFour',
     'displayFive',
     'displaySix',
-    'displaySeven'
+    'displaySeven',
   ]),
   /**
    * Assigned to the `data-id` attribute
@@ -82,11 +78,12 @@ SprkHeading.propTypes = {
   idString: PropTypes.string,
   /**
    * If `false`, the heading will not have Page Title styles.
-   * If `true`, the heading will have Page Title stles.
+   * If `true`, the heading will have Page Title styles.
    */
   isPageTitle: PropTypes.bool,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to the
+   * outermost container of the component.
    */
   additionalClasses: PropTypes.string,
 };
