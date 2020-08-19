@@ -28,7 +28,8 @@ export const defaultStory = () => {
         data-sprk-tooltip="trigger"
         class="sprk-c-Tooltip__trigger"
         aria-labelledby="tooltip_1"
-        >
+        type="button"
+      >
         <svg
           class="sprk-c-Icon sprk-c-Icon--filled"
           aria-hidden="true"

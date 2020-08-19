@@ -28,6 +28,7 @@ import { uniqueId } from 'lodash';
         [attr.aria-expanded]="isToggled ? 'true' : 'false'"
         [attr.data-analytics]="analyticsString"
         [attr.aria-labelledby]="id"
+        type="button"
         #triggerElement
       >
         <sprk-icon
