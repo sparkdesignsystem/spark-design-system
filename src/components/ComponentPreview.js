@@ -35,6 +35,7 @@ class ComponentPreview extends React.Component {
             title="Component Preview"
             className="docs-c-ComponentPreview sprk-o-Box"
             src={iframeURL}
+            loading="lazy"
           />
         </div>
 
@@ -50,7 +51,7 @@ class ComponentPreview extends React.Component {
       </div>
     );
   }
-};
+}
 
 ComponentPreview.propTypes = {
   componentName: PropTypes.string,
