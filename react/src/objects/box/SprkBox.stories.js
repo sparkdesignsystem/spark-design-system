@@ -6,7 +6,7 @@ export default {
   title: 'Components/Box',
   component: SprkBox,
   decorators: [
-    story => <div className="sprk-o-Box sb-decorate">{story()}</div>
+    (story) => <div className="sprk-o-Box sb-decorate">{story()}</div>,
   ],
   parameters: {
     jest: ['SprkBox'],
@@ -15,9 +15,8 @@ export default {
   },
 };
 
-export const defaultBox = () => (
-  <SprkBox></SprkBox>
-);
+// eslint-disable-next-line react/self-closing-comp
+export const defaultBox = () => <SprkBox></SprkBox>;
 
 defaultBox.story = {
   name: 'Default',
