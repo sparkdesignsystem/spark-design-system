@@ -1,7 +1,6 @@
 ////
 /// @group tooltip
 ////
-
 .sprk-c-Tooltip__container {
   position: relative;
   display: inline-flex;
@@ -14,16 +13,15 @@
   padding: $sprk-tooltip-trigger-padding;
   text-align: $sprk-tooltip-trigger-text-align;
   display: flex;
-  transition: all 1s;
 
   /* Increase hoverable area of trigger */
-  &:hover:after {
+  &:hover::after {
     position: absolute;
     top: -1rem;
     left: -1rem;
     width: 3rem;
     height: 3rem;
-    content: " ";
+    content: ' ';
   }
 }
 
@@ -35,26 +33,22 @@
   font-size: $sprk-tooltip-font-size;
   text-align: $sprk-tooltip-text-align;
   font-weight: $sprk-tooltip-font-weight;
-
   position: absolute;
   max-width: $sprk-tooltip-max-width;
   min-width: $sprk-tooltip-min-width;
-
   width: $sprk-tooltip-max-width;
   width: max-content; /* IE will ignore this line and use the previous */
-
   bottom: 1.5rem;
   left: -1rem;
   z-index: $sprk-tooltip-z-index;
-
-  transition: all 1s;
-  // display: none;
+  transition: all 200ms ease-out;
+  opacity: 0;
 
   &::selection {
     color: $sprk-white;
   }
 
-  &:before {
+  &::before {
     position: absolute;
     bottom: -0.5rem;
     left: 1rem;
@@ -64,16 +58,16 @@
     -webkit-transform: rotateY(0deg) rotate(45deg);
     -ms-transform: rotateY(0deg) rotate(45deg);
     transform: rotateY(0deg) rotate(45deg);
-    content: " ";
+    content: ' ';
   }
 
   &.sprk-c-Tooltip--top-left {
     top: auto;
     right: -1rem;
-    bottom: 2rem;
+    bottom: 2.5rem;
     left: auto;
 
-    &:before {
+    &::before {
       top: auto;
       right: 1rem;
       bottom: -0.5rem;
@@ -84,10 +78,10 @@
   &.sprk-c-Tooltip--top-right {
     top: auto;
     right: auto;
-    bottom: 2rem;
+    bottom: 2.5rem;
     left: -1rem;
 
-    &:before {
+    &::before {
       top: auto;
       right: auto;
       bottom: -0.5rem;
@@ -96,12 +90,12 @@
   }
 
   &.sprk-c-Tooltip--bottom-left {
-    top: 2rem;
+    top: 2.5rem;
     right: -1rem;
     bottom: auto;
     left: auto;
 
-    &:before {
+    &::before {
       top: -0.5rem;
       right: 1rem;
       bottom: auto;
@@ -110,12 +104,12 @@
   }
 
   &.sprk-c-Tooltip--bottom-right {
-    top: 3rem;
+    top: 2.5rem;
     right: auto;
     bottom: auto;
     left: -1rem;
 
-    &:before {
+    &::before {
       top: -0.5rem;
       right: auto;
       bottom: auto;
@@ -134,8 +128,8 @@
 .sprk-c-Tooltip__trigger:focus + .sprk-c-Tooltip,
 .sprk-c-Tooltip__trigger.sprk-c-Tooltip--toggled + .sprk-c-Tooltip,
 .sprk-c-Tooltip:hover {
-  display: inline-block;
-  transition: all 1s;
+  opacity: 1;
+  pointer-events: none;
 
   &.sprk-c-Tooltip--top-left {
     top: auto;
