@@ -17,19 +17,44 @@ import { SparkInputContainerComponent } from './sprk-input-container.component';
     </sprk-input-container>
   `,
 })
-class TestComponent {}
+class Test1Component {}
+
+@Component({
+  selector: 'sprk-test',
+  template: `
+    <sprk-input-container>
+      <label sprkLabel for="example-for">Label!</label>
+      <input sprkInput id="example-id" />
+      <p sprkHelperText>Helper Text!</p>
+      <span sprkFieldError id="example-error">Error Message!</span>
+    </sprk-input-container>
+  `,
+})
+class Test2Component {}
 
 describe('SparkInputContainerComponent', () => {
-  let testFixture: ComponentFixture<TestComponent>;
-  let component: TestComponent;
+  let component: Test1Component;
+  let component2: Test2Component;
+
+  let testFixture: ComponentFixture<Test1Component>;
+  let testFixture2: ComponentFixture<Test2Component>;
+
+  let inputContainerComponent: SparkInputContainerComponent;
+  let inputContainerComponent2: SparkInputContainerComponent;
 
   let inputContainerFixture: ComponentFixture<SparkInputContainerComponent>;
-  let inputContainerComponent: SparkInputContainerComponent;
+  let inputContainerFixture2: ComponentFixture<SparkInputContainerComponent>;
+
   let inputContainerElement: HTMLElement;
+  let inputContainerElement2: HTMLElement;
 
   let labelElement: HTMLElement;
   let inputElement: HTMLElement;
   let errorElement: HTMLElement;
+
+  let labelElement2: HTMLElement;
+  let inputElement2: HTMLElement;
+  let errorElement2: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -37,37 +62,64 @@ describe('SparkInputContainerComponent', () => {
         SprkLabelDirective,
         SprkInputDirective,
         SprkFieldErrorDirective,
-        TestComponent,
+        Test1Component,
+        Test2Component,
         SparkInputContainerComponent,
       ],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    testFixture = TestBed.createComponent(TestComponent);
+    testFixture = TestBed.createComponent(Test1Component);
+    testFixture2 = TestBed.createComponent(Test2Component);
+
     component = testFixture.componentInstance;
+    component2 = testFixture2.componentInstance;
 
     inputContainerFixture = TestBed.createComponent(
       SparkInputContainerComponent,
     );
+
+    inputContainerFixture2 = TestBed.createComponent(
+      SparkInputContainerComponent,
+    );
+
     inputContainerComponent = inputContainerFixture.componentInstance;
+    inputContainerComponent2 = inputContainerFixture2.componentInstance;
+
+    inputContainerComponent.ngOnInit();
+    inputContainerComponent2.ngOnInit();
+
+    testFixture.detectChanges();
+    testFixture2.detectChanges();
+    inputContainerFixture.detectChanges();
+    inputContainerFixture2.detectChanges();
 
     inputContainerElement = inputContainerFixture.nativeElement.querySelector(
+      'div',
+    );
+    inputContainerElement2 = inputContainerFixture2.nativeElement.querySelector(
       'div',
     );
 
     labelElement = testFixture.debugElement.query(By.css('label'))
       .nativeElement;
+    labelElement2 = testFixture2.debugElement.query(By.css('label'))
+      .nativeElement;
+
     inputElement = testFixture.debugElement.query(By.css('input'))
       .nativeElement;
-    errorElement = testFixture.debugElement.query(By.css('span')).nativeElement;
+    inputElement2 = testFixture2.debugElement.query(By.css('input'))
+      .nativeElement;
 
-    inputContainerComponent.ngOnInit();
-    testFixture.detectChanges();
+    errorElement = testFixture.debugElement.query(By.css('span')).nativeElement;
+    errorElement2 = testFixture2.debugElement.query(By.css('span'))
+      .nativeElement;
   });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
+    expect(component2).toBeTruthy();
   });
 
   it('should add classes when additionalClasses has a value', () => {
@@ -102,17 +154,21 @@ describe('SparkInputContainerComponent', () => {
     ).toEqual(true);
   });
 
-  it('should not change the for and id if one is existing', () => {
-    inputElement.id = 'test-id';
+  it('should not change the id if one is existing', () => {
+    inputElement.setAttribute('id', 'test-id');
     inputContainerFixture.detectChanges();
     expect(inputElement.getAttribute('id')).toBe('test-id');
-    expect(labelElement.getAttribute('for')).toBe('test-id');
   });
 
-  it('should not change the error container id if one is existing', () => {
-    errorElement.id = 'error-id-test';
-    inputContainerFixture.detectChanges();
-    expect(inputElement.getAttribute('aria-describedby')).toBe('error-id-test');
-    expect(errorElement.getAttribute('id')).toBe('error-id-test');
+  it('should use the id value for the "for" value if mismatching', () => {
+    expect(inputElement2.getAttribute('id')).toBe('example-id');
+    expect(labelElement2.getAttribute('for')).toBe('example-id');
+  });
+
+  it('should allow custom error container id', () => {
+    expect(inputElement2.getAttribute('aria-describedby')).toBe(
+      'example-error',
+    );
+    expect(errorElement2.getAttribute('id')).toBe('example-error');
   });
 });
