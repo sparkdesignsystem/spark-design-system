@@ -8,7 +8,7 @@ export default {
   decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
-${markdownDocumentationLinkBuilder('toggle')}
+${markdownDocumentationLinkBuilder('tooltips')}
     `,
     docs: { iframeHeight: 160 },
   },
