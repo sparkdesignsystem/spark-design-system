@@ -131,7 +131,7 @@ SprkAward.propTypes = {
       element: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
-        PropTypes.element,
+        PropTypes.elementType,
       ]),
       /** The image src. */
       src: PropTypes.string.isRequired,
