@@ -26,11 +26,7 @@ export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-tooltip
-      triggerIconType="question-filled"
       iconAdditionalClasses="sprk-c-Icon--filled"
-      idString='idstring-1'
-      analyticsString='analyticsString-1'
-      additionalClasses='spark-example'
     >
       Use Tooltips to provide info that’s not vital to completing the task.
       Keep the text short and stick to what’s helpful and relevant.
