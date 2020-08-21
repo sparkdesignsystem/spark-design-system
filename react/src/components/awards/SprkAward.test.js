@@ -1,6 +1,7 @@
-/* global it expect describe */
+/* global it expect */
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import { Link } from 'react-router-dom';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkAward from './SprkAward';
 
@@ -23,7 +24,11 @@ describe('SprkAward:', () => {
       },
     ];
     const wrapper = mount(<SprkAward images={images} />);
-    expect(wrapper.find('div.sprk-o-Stack.sprk-o-CenteredColumn.sprk-o-Stack--medium').length).toBe(1);
+    expect(
+      wrapper.find(
+        'div.sprk-o-Stack.sprk-o-CenteredColumn.sprk-o-Stack--medium',
+      ).length,
+    ).toBe(1);
   });
 
   it('should display the award component with the images section', () => {
@@ -63,7 +68,11 @@ describe('SprkAward:', () => {
       },
     ];
     const wrapper = mount(<SprkAward images={images} splitAt="large" />);
-    expect(wrapper.find('div.sprk-o-Stack--medium.sprk-o-Stack__item--center-column').hasClass('sprk-o-Stack--split@l')).toBe(true);
+    expect(
+      wrapper
+        .find('div.sprk-o-Stack--medium.sprk-o-Stack__item--center-column')
+        .hasClass('sprk-o-Stack--split@l'),
+    ).toBe(true);
   });
 
   it('should add the correct item spacing class', () => {
@@ -84,4 +93,29 @@ describe('SprkAward:', () => {
     const wrapper = mount(<SprkAward images={images} itemSpacing="large" />);
     expect(wrapper.find('.sprk-o-Stack--large').length).toBe(2);
   });
+
+  it(
+    'should not render an href if none is provided and element passed is a' +
+      ' router link',
+    () => {
+      const images = [
+        {
+          to: 'button',
+          src: 'https://spark-assets.netlify.app/spark-placeholder.jpg',
+          alt: 'Spark Placeholder Logo',
+          analyticsString: 'award-1',
+          element: Link,
+        },
+        {
+          to: 'button',
+          src: 'https://spark-assets.netlify.app/spark-placeholder.jpg',
+          alt: 'Spark Placeholder Logo',
+          analyticsString: 'award-2',
+          element: Link,
+        },
+      ];
+      const wrapper = shallow(<SprkAward images={images} />);
+      expect(wrapper.find('a[href="#nogo"]').length).toBe(0);
+    },
+  );
 });
