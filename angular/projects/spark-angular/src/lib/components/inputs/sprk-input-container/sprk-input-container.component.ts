@@ -118,11 +118,11 @@ export class SparkInputContainerComponent implements OnInit {
   }
 
   hasID(element): boolean {
-    return element.id && element.id !== null;
+    return element.id.length > 0;
   }
 
   hasFor(element): boolean {
-    return element.htmlFor && element.htmlFor !== null;
+    return element.htmlFor.length > 0;
   }
 
   hasMatchingForAndID(label, input): boolean {
@@ -186,7 +186,7 @@ export class SparkInputContainerComponent implements OnInit {
       this.renderer.setAttribute(
         inputEl.ref.nativeElement,
         'id',
-        this.label.ref.nativeElement.for,
+        this.label.ref.nativeElement.htmlFor,
       );
     }
 
@@ -204,8 +204,6 @@ export class SparkInputContainerComponent implements OnInit {
         inputEl.ref.nativeElement,
       )
     ) {
-      console.log('cats');
-
       this.renderer.setAttribute(
         this.label.ref.nativeElement,
         'for',
