@@ -167,8 +167,12 @@ $sprk-icon-stroke-color: $sprk-black !default;
 $sprk-icon-stroke-width: 1.25 !default;
 /// Value for the stroke property of the large Icon component.
 $sprk-icon-l-stroke: none !default;
+/// Value for the stroke-width property of the large Icon component.
+$sprk-icon-custom-stroke-width-l: 0 !default;
 /// Value for the stroke property of the extra large Icon component.
 $sprk-icon-xl-stroke: none !default;
+/// Value for the stroke-width property of the extra large Icon component.
+$sprk-icon-custom-stroke-width-xl: 0 !default;
 /// Value for the fill property of the Filled Icon component.
 $sprk-icon-filled-fill-color: $sprk-black !default;
 /// Value for the stroke property of the Filled Icon component.

@@ -91,6 +91,7 @@
 .sprk-c-Icon--l {
   height: $sprk-icon-l;
   width: $sprk-icon-l;
+  stroke-width: $sprk-icon-custom-stroke-width-l;
   stroke: $sprk-icon-l-stroke;
 }
 
@@ -99,6 +100,7 @@
 .sprk-c-Icon--xl {
   height: $sprk-icon-xl;
   width: $sprk-icon-xl;
+  stroke-width: $sprk-icon-custom-stroke-width-xl;
   stroke: $sprk-icon-xl-stroke;
 }
 
