@@ -140,10 +140,14 @@ $sprk-footer-background-color: $sprk-black !default;
 $sprk-footer-text-color: $sprk-white !default;
 /// Link color on the Footer.
 $sprk-footer-link-color: $sprk-white !default;
+/// Link font-weight on the Footer.
+$sprk-footer-link-font-weight: normal !default;
 /// Icon color on the Footer.
 $sprk-footer-icon-color: $sprk-white !default;
 // Toggle trigger color on the Footer.
 $sprk-footer-trigger-color: $sprk-white !default;
+// Toggle trigger font-weight on the Footer.
+$sprk-footer-trigger-font-weight: normal !default;
 // Toggle trigger hover color on the Footer.
 $sprk-footer-trigger-hover-color: $sprk-purple-light !default;
 // Toggle transition timing on the Footer.
