@@ -110,15 +110,14 @@
 .sprk-b-Link--disabled {
   pointer-events: none;
   color: $sprk-link-disabled-color;
-  stroke: $sprk-link-disabled-color;
   border-color: $sprk-link-disabled-border-bottom-color;
 
   &:visited,
   &:hover,
   &:active,
   &:focus {
-    border-color: $sprk-link-disabled-border-bottom-color;
-    color: $sprk-link-disabled-color;
+    border-color: $sprk-link-disabled-hover-border-bottom-color;
+    color: $sprk-link-disabled-hover-color;
   }
 }
 

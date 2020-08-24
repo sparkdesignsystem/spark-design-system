@@ -1293,7 +1293,7 @@ export const extended = () => {
                 class="
                   sprk-c-Icon
                   sprk-c-Icon--toggle
-                  sprk-c-Icon--filled-current-
+                  sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
                 "

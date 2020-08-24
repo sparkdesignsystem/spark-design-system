@@ -181,8 +181,6 @@ $sprk-icon-custom-stroke-width-xl: 0 !default;
 $sprk-icon-filled-fill-color: $sprk-black !default;
 /// Value for the stroke property of the Filled Icon component.
 $sprk-icon-filled-stroke-color: none !default;
-/// Boolean value for if a custom Icon stroke is desired.
-$sprk-icon-using-custom-stroke: true !default;
 
 //
 // Layout
@@ -619,6 +617,8 @@ $sprk-btn-border-style: solid !default;
 $sprk-btn-border-color: $sprk-btn-background-color !default;
 /// The border width of the Button component.
 $sprk-btn-border-width: 2px !default;
+/// The border of the Button component.
+$sprk-btn-border: $sprk-btn-border-width $sprk-btn-border-style $sprk-btn-border-color !default;
 /// The font weight of the Button component.
 $sprk-btn-font-weight: 500 !default;
 /// The font size of the Button component.
@@ -629,6 +629,8 @@ $sprk-btn-font-family: inherit !default;
 $sprk-btn-line-height: normal !default;
 /// The text color of the Button component.
 $sprk-btn-text-color: $sprk-white !default;
+/// The text color of the Button component when visited.
+$sprk-btn-visited-text-color: $sprk-white !default;
 /// The border radius of the Button component.
 $sprk-btn-border-radius: 4px !default;
 /// The background color of the
@@ -660,6 +662,9 @@ $sprk-btn-disabled-background-color: $sprk-black-tint-50 !default;
 $sprk-btn-disabled-text-color: $sprk-white !default;
 /// The border color of the Disabled Button component.
 $sprk-btn-disabled-border-color: transparent !default;
+/// The border of the Disabled Button component.
+$sprk-btn-disabled-border: $sprk-btn-disabled-border-width $sprk-btn-disabled-border-style
+  $sprk-btn-disabled-border-color !default;
 /// The box shadow of the Disabled Button component.
 $sprk-btn-disabled-shadow: none !default;
 /// The background color of the Disabled Button component.
@@ -690,20 +695,40 @@ $sprk-btn-quaternary-disabled-border-color: $sprk-black-tint-50 !default;
 $sprk-btn-quaternary-disabled-border-style: $sprk-btn-disabled-border-style !default;
 /// The border width of the Quaternary Button component when disabled.
 $sprk-btn-quaternary-disabled-border-width: $sprk-btn-disabled-border-width !default;
+/// The border of the Button component when disabled on hover.
+$sprk-btn-disabled-hover-border: $sprk-btn-disabled-border-width $sprk-btn-disabled-border-style
+  $sprk-btn-disabled-border-color !default;
+/// The border of the Secondary Button component when disabled on hover.
+$sprk-btn-secondary-disabled-hover-border: $sprk-btn-secondary-disabled-border-width $sprk-btn-secondary-disabled-border-style
+  $sprk-btn-secondary-disabled-border-color !default;
+/// The border of the Tertiary Button component when disabled on hover.
+$sprk-btn-tertiary-disabled-hover-border: $sprk-btn-tertiary-disabled-border-width $sprk-btn-tertiary-disabled-border-style
+  $sprk-btn-tertiary-disabled-border-color !default;
+/// The border of the Quaternary Button component when disabled on hover.
+$sprk-btn-quaternary-disabled-hover-border: $sprk-btn-quaternary-disabled-border-width $sprk-btn-quaternary-disabled-border-style
+  $sprk-btn-quaternary-disabled-border-color !default;
 
 // Secondary
 /// The background color of the Secondary Button component.
 $sprk-btn-secondary-background-color: $sprk-purple-dark !default;
 /// The border color of the Secondary Button component.
 $sprk-btn-secondary-border-color: $sprk-btn-secondary-background-color !default;
+/// The border of the Secondary Button component.
+$sprk-btn-secondary-border: $sprk-btn-border-width $sprk-btn-border-style
+  $sprk-btn-secondary-border-color !default;
 /// The text color of the Secondary Button component.
 $sprk-btn-secondary-text-color: $sprk-white !default;
+/// The text color of the Secondary Button component when visited.
+$sprk-btn-secondary-visited-text-color: $sprk-white !default;
 /// The hover text color of the Secondary Button component.
 $sprk-btn-secondary-hover-text-color: $sprk-white !default;
 /// The background color of the Secondary Button component on hover.
 $sprk-btn-secondary-hover-background-color: $sprk-purple !default;
 /// The border color of the Secondary Button component on hover.
 $sprk-btn-secondary-hover-border-color: $sprk-btn-secondary-hover-background-color !default;
+// The border of the Secondary Button component on hover.
+$sprk-btn-secondary-hover-border: $sprk-btn-border-width $sprk-btn-border-style
+  $sprk-btn-secondary-hover-border-color !default;
 /// The box shadow of the Secondary Button component on hover.
 $sprk-btn-secondary-hover-shadow: $sprk-btn-shadow !default;
 /// The letter spacing of the Secondary Button component.
@@ -712,10 +737,15 @@ $sprk-btn-secondary-letter-spacing: $sprk-btn-letter-spacing !default;
 // Tertiary
 /// The background color of the Tertiary Button component.
 $sprk-btn-tertiary-background-color: transparent !default;
-/// The border of the Tertiary Button component.
+/// The border color of the Tertiary Button component.
 $sprk-btn-tertiary-border-color: $sprk-purple-dark !default;
+/// The border of the Tertiary Button component.
+$sprk-btn-tertiary-border: $sprk-btn-border-width $sprk-btn-border-style
+  $sprk-btn-tertiary-border-color !default;
 /// The text color of the Tertiary Button component.
 $sprk-btn-tertiary-text-color: $sprk-purple-dark !default;
+/// The text color of the Tertiary Button component when visited.
+$sprk-btn-tertiary-visited-text-color: $sprk-purple-dark !default;
 /// The border color of the Tertiary Button component on hover.
 $sprk-btn-tertiary-hover-border-color: $sprk-purple !default;
 /// The text color of the Tertiary Button component on hover.
@@ -734,10 +764,15 @@ $sprk-btn-tertiary-letter-spacing: $sprk-btn-letter-spacing !default;
 // Quaternary
 /// The background color of the Quaternary Button component.
 $sprk-btn-quaternary-background-color: transparent !default;
-/// The border of the Quaternary Button component.
+/// The border color of the Quaternary Button component.
 $sprk-btn-quaternary-border-color: $sprk-black-tint-50 !default;
+/// The border of the Quaternary Button component.
+$sprk-btn-quaternary-border: $sprk-btn-border-width $sprk-btn-border-style
+  $sprk-btn-quaternary-border-color !default;
 /// The text color of the Quaternary Button component.
 $sprk-btn-quaternary-text-color: $sprk-black !default;
+/// The text color of the Quaternary Button component when visited.
+$sprk-btn-quaternary-visited-text-color: $sprk-black !default;
 /// The box-shadow of the Quaternary Button component.
 $sprk-btn-quaternary-box-shadow: none !default;
 /// The border color of the Quaternary Button component on hover.
@@ -870,8 +905,12 @@ $sprk-link-plain-border: none !default;
 $sprk-link-plain-visited-border: none !default;
 /// The disabled Link color.
 $sprk-link-disabled-color: $sprk-black-tint-50 !default;
+/// The disabled Link hover color.
+$sprk-link-disabled-hover-color: $sprk-black-tint-50 !default;
 /// The disabled Link border-bottom color.
 $sprk-link-disabled-border-bottom-color: $sprk-link-disabled-color !default;
+/// The disabled Link hover border-bottom color.
+$sprk-link-disabled-hover-border-bottom-color: $sprk-link-disabled-color !default;
 /// The underline width for the disabled Link.
 $sprk-link-disabled-underline-width: 0 !default;
 /// The underline settings for the disabled Link.
@@ -1691,6 +1730,9 @@ $sprk-accordion-summary-border: none !default;
 /// The color of the icon in the summary when the
 /// Accordion item is open or hovered.
 $sprk-accordion-summary-active-color: $sprk-purple !default;
+/// The fill color of the icon when the
+/// Accordion item is hovered.
+$sprk-accordion-summary-hover-icon-fill: $sprk-accordion-summary-active-color !default;
 /// The padding of the Accordion summary.
 $sprk-accordion-summary-padding: $sprk-space-misc-a 0 !default;
 /// The padding of the Accordion content.
@@ -1974,8 +2016,6 @@ $sprk-big-nav-link-font-weight: 400 !default;
 /// The padding of the big navigation
 /// link in the Masthead Extended.
 $sprk-big-nav-link-padding: 0 $sprk-space-s !default;
-/// The color of the big navigation link in the Masthead Extended.
-$sprk-big-nav-link-color: $sprk-black !default;
 /// The line height
 /// of the big navigation items
 /// in the Masthead Extended.

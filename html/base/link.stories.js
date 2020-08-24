@@ -61,7 +61,7 @@ export const light = () =>
 light.story = {
   decorators: [
     (story) =>
-      `<div class="sprk-o-Box sprk-u-BackgroundColor--black sprk-u-pas">
+      `<div class="sprk-o-Box sprk-o-Box--small sprk-u-BackgroundColor--black">
         ${story()}
       </div>`,
   ],
@@ -69,52 +69,26 @@ light.story = {
 
 export const iconWithTextLink = () =>
   `
-    <div class="sprk-o-Stack">
-      <div class="sprk-o-Stack__item">
-        <a
-          class="sprk-b-Link sprk-b-Link--has-icon"
-          href="#nogo"
-          data-id="link-4"
-          data-analytics="object.action.event"
-        >
-          <svg
-            class="
-              sprk-c-Icon
-              sprk-c-Icon--xl
-              sprk-u-mrs
-              sprk-c-Icon--filled-current-color
-            "
-            viewBox="0 0 100 100"
-          >
-            <use xlink:href="#arrow-left" />
-          </svg>
+    <a
+      class="sprk-b-Link sprk-b-Link--has-icon"
+      href="#nogo"
+      data-id="link-4"
+      data-analytics="object.action.event"
+    >
+      <svg
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--xl
+          sprk-u-mrs
+          sprk-c-Icon--filled-current-color
+        "
+        viewBox="0 0 100 100"
+      >
+        <use xlink:href="#arrow-left" />
+      </svg>
 
-          Back
-        </a>
-      </div>
-    </div>
-    <div class="sprk-o-Stack">
-      <div class="sprk-o-Stack__item">
-        <a
-          class="sprk-b-Link sprk-b-Link--has-icon"
-          href="#nogo"
-          data-id="link-5"
-          data-analytics="object.action.event"
-        >
-          Forward
-          <svg
-            class="
-              sprk-c-Icon
-              sprk-c-Icon--xl
-              sprk-u-mls
-              sprk-c-Icon--filled-current-color
-            "
-            viewBox="0 0 100 100">
-            <use xlink:href="#arrow-right" />
-          </svg>
-        </a>
-      </div>
-    </div>
+      Back
+    </a>
   `;
 
 export const disabled = () =>
@@ -161,7 +135,7 @@ disabledLight.story = {
   name: 'Disabled - Light',
   decorators: [
     (story) =>
-      `<div class="sprk-o-Box sprk-u-BackgroundColor--black sprk-u-pas">
+      `<div class="sprk-o-Box sprk-o-Box--small sprk-u-BackgroundColor--black">
         ${story()}
       </div>`,
   ],
@@ -169,52 +143,26 @@ disabledLight.story = {
 
 export const disabledIconWithTextLink = () =>
   `
-    <div class="sprk-o-Stack">
-      <div class="sprk-o-Stack__item">
-        <a
-          class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
-          href="#nogo"
-          data-id="link-9"
-          data-analytics="object.action.event"
-        >
-          <svg
-            class="
-              sprk-c-Icon
-              sprk-c-Icon--xl
-              sprk-u-mrs
-              sprk-c-Icon--filled-current-color
-            "
-            viewBox="0 0 100 100"
-          >
-            <use xlink:href="#arrow-left" />
-          </svg>
+    <a
+      class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
+      href="#nogo"
+      data-id="link-9"
+      data-analytics="object.action.event"
+    >
+      <svg
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--xl
+          sprk-u-mrs
+          sprk-c-Icon--filled-current-color
+        "
+        viewBox="0 0 100 100"
+      >
+        <use xlink:href="#arrow-left" />
+      </svg>
 
-          Back
-        </a>
-      </div>
-    </div>
-    <div class="sprk-o-Stack">
-      <div class="sprk-o-Stack__item">
-        <a
-          class="sprk-b-Link sprk-b-Link--has-icon sprk-b-Link--disabled"
-          href="#nogo"
-          data-id="link-10"
-          data-analytics="object.action.event"
-        >
-          Forward
-          <svg
-            class="
-              sprk-c-Icon
-              sprk-c-Icon--xl
-              sprk-u-mls
-              sprk-c-Icon--filled-current-color
-            "
-            viewBox="0 0 100 100">
-            <use xlink:href="#arrow-right" />
-          </svg>
-        </a>
-      </div>
-    </div>
+      Back
+    </a>
   `;
 
 disabledIconWithTextLink.story = {
