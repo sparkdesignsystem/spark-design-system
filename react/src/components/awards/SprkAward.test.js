@@ -115,7 +115,7 @@ describe('SprkAward:', () => {
         },
       ];
       const wrapper = shallow(<SprkAward images={images} />);
-      expect(wrapper.find('a[href="#nogo"]').length).toBe(0);
+      expect(wrapper.find('a[href=""]').length).toBe(0);
     },
   );
 });
