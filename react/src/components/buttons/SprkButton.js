@@ -86,6 +86,7 @@ SprkButton.propTypes = {
     PropTypes.string,
     PropTypes.node,
     PropTypes.func,
+    PropTypes.elementType,
   ]),
   /**
    * Assigned to the `data-id` attribute serving as a
