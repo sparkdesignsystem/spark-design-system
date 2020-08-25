@@ -888,7 +888,7 @@ $sprk-link-has-icon-underline-color: transparent !default;
 /// The fill color for icons contained in Links.
 $sprk-link-has-icon-fill: $sprk-link-has-icon-color-icon !default;
 /// The stroke color for icons contained in Links.
-$sprk-link-has-icon-stroke: none !default;
+$sprk-link-has-icon-stroke: $sprk-link-has-icon-color-icon !default;
 /// The border settings for Links with icons.
 $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
@@ -899,6 +899,8 @@ $sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
 $sprk-link-has-icon-hover-color-text: $sprk-purple-deep !default;
 /// The fill color for icons contained in Links on hover.
 $sprk-link-has-icon-hover-fill: $sprk-link-has-icon-hover-color-text !default;
+/// The stroke color for icons contained in Links on hover.
+$sprk-link-has-icon-hover-stroke: $sprk-link-has-icon-hover-color-text !default;
 /// The border settings for Plain Links.
 $sprk-link-plain-border: none !default;
 /// The border settings for Plain Links in the visited state

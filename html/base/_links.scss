@@ -98,11 +98,13 @@
 .sprk-b-Link--has-icon .sprk-c-Icon {
   color: $sprk-link-has-icon-color-icon;
   fill: $sprk-link-has-icon-fill;
+  stroke: $sprk-link-has-icon-stroke;
 }
 
 .sprk-b-Link--has-icon:hover .sprk-c-Icon {
   color: $sprk-link-has-icon-hover-color-text;
   fill: $sprk-link-has-icon-hover-fill;
+  stroke: $sprk-link-has-icon-hover-stroke;
 }
 
 /// Disabled links have a muted color and cannot be interacted with.
