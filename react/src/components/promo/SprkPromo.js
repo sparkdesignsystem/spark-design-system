@@ -108,9 +108,9 @@ const SprkPromo = (props) => {
 
         <div
           className="
-          sprk-b-TypeBodyTwo
-          sprk-o-Stack__item
-          sprk-c-Promo__childrenContainer"
+            sprk-b-TypeBodyTwo
+            sprk-o-Stack__item
+          "
         >
           {children}
         </div>
