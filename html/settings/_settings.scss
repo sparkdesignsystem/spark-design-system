@@ -1681,12 +1681,19 @@ $sprk-tooltip-caret-background-color: $sprk-black !default;
 $sprk-tooltip-toggled-icon-background-color: $sprk-green !default;
 /// The z-index of the tooltip.
 $sprk-tooltip-z-index: $sprk-layer-height-xs !default;
-/// The max-width of the tooltip.
+/// The max-width of the tooltip. This is used as a fallback if
+/// the preferred width is invalid, e.g. for IE 11
 $sprk-tooltip-max-width: 328px !default;
+/// The preferred width of the tooltip.
+$sprk-tooltip-preferred-width: max-content !default;
 /// The min-width of the tooltip.
 $sprk-tooltip-min-width: 60px !default;
 /// The width of the tooltip caret.
-$sprk-tooltip-caret-width: 17px !default;
+$sprk-tooltip-caret-width: 16px !default;
+/// The transition applied to the tooltip.
+$sprk-tooltip-transition: all 200ms ease-out !default;
+/// The distance the tooltip should move during its animation.
+$sprk-tooltip-animation-offset: 0.5rem !default;
 
 //
 // Dropdown
