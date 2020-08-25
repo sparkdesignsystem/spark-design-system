@@ -1,6 +1,11 @@
 ////
 /// @group tooltip
 ////
+
+// TODO make these configurable
+$sprk-trigger-height: 1rem;
+$sprk-trigger-width: 1rem;
+
 .sprk-c-Tooltip__container {
   position: relative;
   display: inline-flex;
@@ -17,10 +22,10 @@
   /* Increase hoverable area of trigger */
   &:hover::after {
     position: absolute;
-    top: -1rem;
-    left: -1rem;
-    width: 3rem;
-    height: 3rem;
+    top: calc(-#{$sprk-trigger-height});
+    left: calc(-#{$sprk-trigger-width});
+    width: calc(3 * #{$sprk-trigger-height});
+    height: calc(3 * #{$sprk-trigger-width});
     content: ' ';
   }
 }
@@ -40,8 +45,6 @@
 
   /* By default, IE will ignore this line and use the previous */
   width: $sprk-tooltip-preferred-width;
-  bottom: 1.5rem;
-  left: -1rem;
   z-index: $sprk-tooltip-z-index;
   transition: $sprk-tooltip-transition;
   opacity: 0;
@@ -51,10 +54,9 @@
     color: $sprk-white;
   }
 
+  /* The caret */
   &::before {
     position: absolute;
-    bottom: -0.5rem;
-    left: 1rem;
     width: $sprk-tooltip-caret-width;
     height: $sprk-tooltip-caret-width;
     background-color: $sprk-tooltip-caret-background-color;
@@ -66,14 +68,16 @@
 
   &.sprk-c-Tooltip--top-left {
     top: auto;
-    right: -1rem;
-    bottom: 2.5rem;
+    right: calc(-#{$sprk-trigger-width});
+    bottom: calc(
+      #{$sprk-trigger-height} + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
+    );
     left: auto;
 
     &::before {
       top: auto;
-      right: 1rem;
-      bottom: -0.5rem;
+      right: $sprk-trigger-width;
+      bottom: calc(-#{$sprk-tooltip-caret-width} / 2);
       left: auto;
     }
   }
@@ -81,42 +85,48 @@
   &.sprk-c-Tooltip--top-right {
     top: auto;
     right: auto;
-    bottom: 2.5rem;
-    left: -1rem;
+    bottom: calc(
+      #{$sprk-trigger-height} + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
+    );
+    left: calc(-#{$sprk-trigger-width});
 
     &::before {
       top: auto;
       right: auto;
-      bottom: -0.5rem;
-      left: 1rem;
+      bottom: calc(-#{$sprk-tooltip-caret-width} / 2);
+      left: $sprk-trigger-width;
     }
   }
 
   &.sprk-c-Tooltip--bottom-left {
-    top: 2.5rem;
-    right: -1rem;
+    top: calc(
+      #{$sprk-trigger-height} + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
+    );
+    right: calc(-#{$sprk-trigger-width});
     bottom: auto;
     left: auto;
 
     &::before {
-      top: -0.5rem;
-      right: 1rem;
+      top: calc(-#{$sprk-tooltip-caret-width} / 2);
+      right: $sprk-trigger-width;
       bottom: auto;
       left: auto;
     }
   }
 
   &.sprk-c-Tooltip--bottom-right {
-    top: 2.5rem;
+    top: calc(
+      #{$sprk-trigger-height} + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
+    );
     right: auto;
     bottom: auto;
-    left: -1rem;
+    left: calc(-#{$sprk-trigger-width});
 
     &::before {
-      top: -0.5rem;
+      top: calc(-#{$sprk-tooltip-caret-width} / 2);
       right: auto;
       bottom: auto;
-      left: 1rem;
+      left: $sprk-trigger-width;
     }
   }
 }
@@ -136,29 +146,29 @@
 
   &.sprk-c-Tooltip--top-left {
     top: auto;
-    right: -1rem;
-    bottom: 2rem;
+    right: calc(-#{sprk-trigger-width});
+    bottom: calc(#{$sprk-trigger-height} + #{$sprk-tooltip-caret-width});
     left: auto;
   }
 
   &.sprk-c-Tooltip--top-right {
     top: auto;
     right: auto;
-    bottom: 2rem;
-    left: -1rem;
+    bottom: calc(#{$sprk-trigger-height} + #{$sprk-tooltip-caret-width});
+    left: calc(-#{sprk-trigger-width});
   }
 
   &.sprk-c-Tooltip--bottom-left {
-    top: 2rem;
-    right: -1rem;
+    top: calc(#{$sprk-trigger-height} + #{$sprk-tooltip-caret-width});
+    right: calc(-#{sprk-trigger-width});
     bottom: auto;
     left: auto;
   }
 
   &.sprk-c-Tooltip--bottom-right {
-    top: 2rem;
+    top: calc(#{$sprk-trigger-height} + #{$sprk-tooltip-caret-width});
     right: auto;
     bottom: auto;
-    left: -1rem;
+    left: calc(-#{sprk-trigger-width});
   }
 }

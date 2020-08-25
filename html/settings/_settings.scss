@@ -1689,9 +1689,11 @@ $sprk-tooltip-preferred-width: max-content !default;
 /// The min-width of the tooltip.
 $sprk-tooltip-min-width: 60px !default;
 /// The width of the tooltip caret.
-$sprk-tooltip-caret-width: 17px !default;
+$sprk-tooltip-caret-width: 16px !default;
 /// The transition applied to the tooltip.
 $sprk-tooltip-transition: all 200ms ease-out !default;
+/// The distance the tooltip should move during its animation.
+$sprk-tooltip-animation-offset: 0.5rem !default;
 
 //
 // Dropdown
