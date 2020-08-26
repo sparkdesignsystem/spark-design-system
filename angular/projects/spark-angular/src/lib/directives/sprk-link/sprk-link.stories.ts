@@ -5,8 +5,6 @@ import { SprkLinkDirectiveModule } from './sprk-link.module';
 import { SprkLinkModule } from '../../components/sprk-link/sprk-link.module';
 import { SprkLinkComponent } from '../../components/sprk-link/sprk-link.component';
 import { SprkBoxModule } from '../sprk-box/sprk-box.module';
-import { SprkStackModule } from '../../components/sprk-stack/sprk-stack.module';
-import { SprkStackItemModule } from '../sprk-stack-item/sprk-stack-item.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -41,8 +39,6 @@ const modules = {
     SprkBoxModule,
     SprkIconModule,
     SprkLinkModule,
-    SprkStackModule,
-    SprkStackItemModule,
     RouterModule.forRoot([
       {
         path: 'iframe.html',
@@ -117,7 +113,7 @@ light.story = {
   decorators: [
     storyWrapper(
       (storyContent) =>
-        `<div class="sprk-o-Box sprk-u-BackgroundColor--black sprk-u-pas">${storyContent}<div>`,
+        `<div class="sprk-o-Box sprk-o-Box--small sprk-u-BackgroundColor--black">${storyContent}<div>`,
     ),
   ],
 };
@@ -125,48 +121,23 @@ light.story = {
 export const iconWithTextLink = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-stack>
-      <div sprkStackItem>
-        <a
-          href="#"
-          sprkLink
-          variant="icon"
-          idString="icon-link-1"
-          analyticsString="icon-link-1"
-        >
-          <sprk-icon
-            iconType="arrow-left"
-            additionalClasses="
-              sprk-c-Icon--xl
-              sprk-c-Icon--filled-current-color
-              sprk-u-mrs"
-          >
-          </sprk-icon>
-          Back
-        </a>
-      </div>
-    </sprk-stack>
-    <sprk-stack>
-      <div sprkStackItem>
-        <a
-          href="#"
-          sprkLink
-          variant="icon"
-          idString="icon-link-2"
-          analyticsString="icon-link-2"
-        >
-          Forward
-          <sprk-icon
-            iconType="arrow-right"
-            additionalClasses="
-              sprk-c-Icon--xl
-              sprk-c-Icon--filled-current-color
-              sprk-u-mls"
-          >
-          </sprk-icon>
-        </a>
-      </div>
-    </sprk-stack>
+    <a
+      href="#"
+      sprkLink
+      variant="icon"
+      idString="icon-link-1"
+      analyticsString="icon-link-1"
+    >
+      <sprk-icon
+        iconType="arrow-left"
+        additionalClasses="
+          sprk-c-Icon--l
+          sprk-c-Icon--filled-current-color
+          sprk-u-mrs"
+      >
+      </sprk-icon>
+      Back
+    </a>
   `,
 });
 
@@ -244,7 +215,7 @@ disabledLight.story = {
   decorators: [
     storyWrapper(
       (storyContent) =>
-        `<div class="sprk-o-Box sprk-u-BackgroundColor--black sprk-u-pas">${storyContent}<div>`,
+        `<div class="sprk-o-Box sprk-o-Box--small sprk-u-BackgroundColor--black">${storyContent}<div>`,
     ),
   ],
 };
@@ -252,50 +223,24 @@ disabledLight.story = {
 export const disabledIconWithTextLink = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-stack>
-      <div sprkStackItem>
-        <a
-          href="#"
-          sprkLink
-          variant="icon"
-          isDisabled="true"
-          idString="disabled-icon-link-1"
-          analyticsString="disabled-icon-link-1"
-        >
-          <sprk-icon
-            iconType="arrow-left"
-            additionalClasses="
-              sprk-c-Icon--xl
-              sprk-c-Icon--filled-current-color
-              sprk-u-mrs"
-          >
-          </sprk-icon>
-          Back
-        </a>
-      </div>
-    </sprk-stack>
-    <sprk-stack>
-      <div sprkStackItem>
-        <a
-          href="#"
-          sprkLink
-          variant="icon"
-          isDisabled="true"
-          idString="disabled-icon-link-2"
-          analyticsString="disabled-icon-link-2"
-        >
-          Forward
-          <sprk-icon
-            iconType="arrow-right"
-            additionalClasses="
-              sprk-c-Icon--xl
-              sprk-c-Icon--filled-current-color
-              sprk-u-mls"
-          >
-          </sprk-icon>
-        </a>
-      </div>
-    </sprk-stack>
+    <a
+      href="#"
+      sprkLink
+      variant="icon"
+      isDisabled="true"
+      idString="disabled-icon-link-1"
+      analyticsString="disabled-icon-link-1"
+    >
+      <sprk-icon
+        iconType="arrow-left"
+        additionalClasses="
+          sprk-c-Icon--xl
+          sprk-c-Icon--filled-current-color
+          sprk-u-mrs"
+      >
+      </sprk-icon>
+      Back
+    </a>
   `,
 });
 

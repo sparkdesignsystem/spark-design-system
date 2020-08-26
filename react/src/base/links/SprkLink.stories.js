@@ -2,8 +2,6 @@ import React from 'react';
 import SprkLink from './SprkLink';
 import SprkIcon from '../../components/icons/SprkIcon';
 import SprkBox from '../../objects/box/SprkBox';
-import SprkStack from '../../objects/stack/SprkStack';
-import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -55,7 +53,10 @@ export const light = () => (
 light.story = {
   decorators: [
     (storyFn) => (
-      <SprkBox className="sprk-u-BackgroundColor--black sprk-u-pas">
+      <SprkBox
+        spacing="small"
+        additionalClasses="sprk-u-BackgroundColor--black"
+      >
         {storyFn()}
       </SprkBox>
     ),
@@ -63,46 +64,21 @@ light.story = {
 };
 
 export const iconWithTextLink = () => (
-  <>
-    <SprkStack>
-      <SprkStackItem>
-        <SprkLink
-          analyticsString="link-icon"
-          href="#nogo"
-          variant="has-icon"
-          idString="link-3"
-        >
-          <SprkIcon
-            additionalClasses="
-              sprk-c-Icon--xl
-              sprk-u-mrs
-              sprk-c-Icon--filled-current-color"
-            iconName="arrow-left"
-          />
-          Back
-        </SprkLink>
-      </SprkStackItem>
-    </SprkStack>
-    <SprkStack>
-      <SprkStackItem>
-        <SprkLink
-          analyticsString="link-icon"
-          href="#nogo"
-          variant="has-icon"
-          idString="link-4"
-        >
-          Forward
-          <SprkIcon
-            additionalClasses="
-              sprk-c-Icon--xl
-              sprk-u-mls
-              sprk-c-Icon--filled-current-color"
-            iconName="arrow-right"
-          />
-        </SprkLink>
-      </SprkStackItem>
-    </SprkStack>
-  </>
+  <SprkLink
+    analyticsString="link-icon"
+    href="#nogo"
+    variant="has-icon"
+    idString="link-3"
+  >
+    <SprkIcon
+      additionalClasses="
+            sprk-c-Icon--xl
+            sprk-u-mrs
+            sprk-c-Icon--filled-current-color"
+      iconName="arrow-left"
+    />
+    Back
+  </SprkLink>
 );
 
 iconWithTextLink.story = {
@@ -152,7 +128,10 @@ disabledLight.story = {
   name: 'Disabled - Light',
   decorators: [
     (storyFn) => (
-      <SprkBox className="sprk-u-BackgroundColor--black sprk-u-pas">
+      <SprkBox
+        spacing="small"
+        additionalClasses="sprk-u-BackgroundColor--black"
+      >
         {storyFn()}
       </SprkBox>
     ),
@@ -160,48 +139,22 @@ disabledLight.story = {
 };
 
 export const disabledIconWithTextLink = () => (
-  <>
-    <SprkStack>
-      <SprkStackItem>
-        <SprkLink
-          analyticsString="link-icon"
-          href="#nogo"
-          variant="disabled"
-          idString="link-7"
-          additionalClasses="sprk-b-Link--has-icon"
-        >
-          <SprkIcon
-            additionalClasses="
+  <SprkLink
+    analyticsString="link-icon"
+    href="#nogo"
+    variant="disabled"
+    idString="link-7"
+    additionalClasses="sprk-b-Link--has-icon"
+  >
+    <SprkIcon
+      additionalClasses="
               sprk-c-Icon--xl
               sprk-u-mrs
               sprk-c-Icon--filled-current-color"
-            iconName="arrow-left"
-          />
-          Back
-        </SprkLink>
-      </SprkStackItem>
-    </SprkStack>
-    <SprkStack>
-      <SprkStackItem>
-        <SprkLink
-          analyticsString="link-icon"
-          href="#nogo"
-          variant="disabled"
-          idString="link-8"
-          additionalClasses="sprk-b-Link--has-icon"
-        >
-          Forward
-          <SprkIcon
-            additionalClasses="
-              sprk-c-Icon--xl
-              sprk-u-mls
-              sprk-c-Icon--filled-current-color"
-            iconName="arrow-right"
-          />
-        </SprkLink>
-      </SprkStackItem>
-    </SprkStack>
-  </>
+      iconName="arrow-left"
+    />
+    Back
+  </SprkLink>
 );
 
 disabledIconWithTextLink.story = {

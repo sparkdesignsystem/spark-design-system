@@ -14,10 +14,6 @@
 .sprk-o-StrokeIconSymbol rect {
   fill: inherit;
   stroke: inherit;
-
-  @if ($sprk-icon-using-custom-stroke) {
-    stroke-width: inherit;
-  }
 }
 
 .sprk-o-FilledIconSymbol circle,
@@ -30,10 +26,6 @@
 .sprk-o-FilledIconSymbol rect {
   fill: inherit;
   stroke: inherit;
-
-  @if ($sprk-icon-using-custom-stroke) {
-    stroke-width: inherit;
-  }
 }
 
 .sprk-o-FilledSmallIconSymbol circle,
@@ -46,10 +38,6 @@
 .sprk-o-FilledSmallIconSymbol rect {
   fill: inherit;
   stroke: inherit;
-
-  @if ($sprk-icon-using-custom-stroke) {
-    stroke-width: inherit;
-  }
 }
 
 .sprk-c-Icon {
@@ -79,26 +67,19 @@
   fill: currentColor;
 }
 
-/// Adds the Icon height and width to
-/// $icon-m.
-.sprk-c-Icon--m {
-  height: $sprk-icon-m;
-  width: $sprk-icon-m;
-}
-
-/// Adds the Icon height and width to
-/// $icon-l.
+/// Adds the styles for a large Icon.
 .sprk-c-Icon--l {
   height: $sprk-icon-l;
   width: $sprk-icon-l;
+  stroke-width: $sprk-icon-custom-stroke-width-l;
   stroke: $sprk-icon-l-stroke;
 }
 
-/// Adds the Icon height and width to
-/// $icon-xl.
+/// Adds the styles for an extra-large Icon.
 .sprk-c-Icon--xl {
   height: $sprk-icon-xl;
   width: $sprk-icon-xl;
+  stroke-width: $sprk-icon-custom-stroke-width-xl;
   stroke: $sprk-icon-xl-stroke;
 }
 

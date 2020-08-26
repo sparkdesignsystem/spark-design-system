@@ -58,7 +58,7 @@ export class SprkLinkDirective implements OnInit {
     if (this.variant !== 'unstyled') {
       this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link');
     }
-    if(variants.hasOwnProperty(this.variant)) {
+    if (variants.hasOwnProperty(this.variant)) {
       this.renderer.addClass(this.el.nativeElement, variants[this.variant]);
     }
   }

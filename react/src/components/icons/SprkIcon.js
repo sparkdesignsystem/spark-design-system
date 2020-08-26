@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function SprkIcon({
+const SprkIcon = ({
   additionalClasses,
-  children,
   iconName,
   idString,
   viewBox,
   ...rest
-}) {
+}) => {
   return (
     <svg
       className={classNames('sprk-c-Icon', additionalClasses)}
@@ -20,11 +19,12 @@ function SprkIcon({
       <use xlinkHref={`#${iconName}`} />
     </svg>
   );
-}
+};
 
 SprkIcon.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add
+   * to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /** Incoming children. */
@@ -32,7 +32,8 @@ SprkIcon.propTypes = {
   /** The id of the symbol to use for the icon. */
   iconName: PropTypes.string.isRequired,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /** The viewbox of the svg containing the symbol. */
@@ -40,9 +41,6 @@ SprkIcon.propTypes = {
 };
 
 SprkIcon.defaultProps = {
-  additionalClasses: '',
-  children: [],
-  idString: '',
   viewBox: '0 0 64 64',
 };
 

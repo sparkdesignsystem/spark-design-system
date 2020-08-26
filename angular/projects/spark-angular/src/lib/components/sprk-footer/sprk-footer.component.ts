@@ -88,7 +88,7 @@ import {
                     <a
                       sprkLink
                       variant="light"
-                      class="sprk-u-FontWeight--normal sprk-c-Footer__link"
+                      class="sprk-c-Footer__link"
                       href="{{ link.href }}"
                       analyticsString="{{ link.analyticsString || link.analytics }}"
                     >
@@ -344,7 +344,7 @@ export class SprkFooterComponent {
    */
   getClasses(): string {
     const classArray: string[] = [
-      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-c-Footer sprk-c-Footer--has-dark-bg'
+      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-c-Footer'
     ];
 
     if (this.additionalClasses) {

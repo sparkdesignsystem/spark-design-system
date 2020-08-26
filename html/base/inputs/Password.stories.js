@@ -125,8 +125,8 @@ export const invalidPasswordInput = () => `
         id="password--error-container"
       >
         <svg
-        class="sprk-c-Icon sprk-b-ErrorIcon"
-        viewBox="0 0 64 64"
+          class="sprk-c-Icon sprk-b-ErrorIcon"
+          viewBox="0 0 64 64"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>

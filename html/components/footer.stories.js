@@ -101,31 +101,31 @@ export const defaultStory = () => {
 
                 <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       About This
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       About This Other Thing
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       About That
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       Link Item
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       This Link Item
                     </a>
                   </li>
@@ -139,25 +139,25 @@ export const defaultStory = () => {
 
                 <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       About This Other Thing
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       About This
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       About That
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       Link Item
                     </a>
                   </li>
@@ -171,22 +171,22 @@ export const defaultStory = () => {
 
                 <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       Share Your Screen
                     </a>
                   </li>
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       Opt Out
                     </a>
                   </li>
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       Disclosures and Other Things
                     </a>
                   </li>
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal" href="#nogo">
+                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
                       We Want Your Feedback
                     </a>
                   </li>

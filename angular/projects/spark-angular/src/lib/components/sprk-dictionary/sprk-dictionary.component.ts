@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'sprk-dictionary',
@@ -6,17 +6,17 @@ import { Component, Input, OnInit } from '@angular/core';
     <div [ngClass]="getClasses()" [attr.data-id]="idString">
       <dl class="sprk-c-Dictionary__keyvaluepairs">
         <div
-          *ngFor="let key of objectKeys(keyValuePairs)"
+          *ngFor="let key of objectKeys(dataToUse)"
           class="sprk-c-Dictionary__keyvaluepair"
         >
           <dt [ngClass]="getKeysClasses()">{{ key }}</dt>
-          <dd [ngClass]="getValuesClasses()">{{ keyValuePairs[key] }}</dd>
+          <dd [ngClass]="getValuesClasses()">{{ dataToUse[key] }}</dd>
         </div>
       </dl>
     </div>
   `,
 })
-export class SprkDictionaryComponent implements OnInit {
+export class SprkDictionaryComponent implements OnChanges {
   /**
    * Deprecated - Use `keyValuePairs` instead. The collection of key-value
    * pairs to be rendered into the component.
@@ -71,6 +71,14 @@ export class SprkDictionaryComponent implements OnInit {
    * Used to grab all the keys from objects.
    */
   objectKeys = Object.keys;
+  /**
+   * @ignore
+   */
+  dataToUse: object = {};
+  /**
+   * @ignore
+   */
+  variantToUse: string;
 
   /**
    * @ignore
@@ -78,7 +86,7 @@ export class SprkDictionaryComponent implements OnInit {
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Dictionary'];
 
-    if (this.variant === 'striped') {
+    if (this.variantToUse === 'striped') {
       classArray.push('sprk-c-Dictionary--striped');
     }
 
@@ -125,20 +133,35 @@ export class SprkDictionaryComponent implements OnInit {
     return classArray.join(' ');
   }
 
-  /**
-   * @ignore
-   */
-  isEmpty = (obj) => {
-    return Object.keys(obj).length === 0;
-  };
-
-  ngOnInit(): void {
-    if (!this.isEmpty(this.data) && this.isEmpty(this.keyValuePairs)) {
-      this.keyValuePairs = this.data;
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['keyValuePairs'] && changes['data']) {
+      const deprecatedInputValue = changes['data'].currentValue;
+      console.warn(
+        `Spark Design System - conflicting Inputs found in sprk-dictionary. data has been deprecated; please use keyValuePairs instead. Deprecated Input with value "` +
+          JSON.stringify(deprecatedInputValue) +
+          `" will be ignored.`,
+      );
     }
 
-    if (this.dictionaryType && !this.variant) {
-      this.variant = this.dictionaryType;
+    if (changes['variant'] && changes['dictionaryType']) {
+      const deprecatedInputValue = changes['dictionaryType'].currentValue;
+      console.warn(
+        `Spark Design System - conflicting Inputs found in sprk-dictionary. dictionaryType has been deprecated; please use variant instead. Deprecated Input with value "` +
+          deprecatedInputValue +
+          `" will be ignored.`,
+      );
+    }
+
+    if (changes['keyValuePairs']) {
+      this.dataToUse = changes['keyValuePairs'].currentValue;
+    } else if (changes['data']) {
+      this.dataToUse = changes['data'].currentValue;
+    }
+
+    if (changes['variant']) {
+      this.variantToUse = changes['variant'].currentValue;
+    } else if (changes['dictionaryType']) {
+      this.variantToUse = changes['dictionaryType'].currentValue;
     }
   }
 }

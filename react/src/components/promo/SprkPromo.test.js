@@ -187,16 +187,6 @@ describe('SprkPromo:', () => {
     expect(subtitle.text()).toEqual('foo');
   });
 
-  it('should render children content when provided', () => {
-    const wrapper = shallow(<SprkPromo>foo</SprkPromo>);
-    const childrenContainer = wrapper.find(
-      'div.sprk-c-Promo__childrenContainer',
-    );
-
-    expect(childrenContainer.length).toBe(1);
-    expect(childrenContainer.text()).toEqual('foo');
-  });
-
   // Button CTA
 
   it('should render a button when cta is set to button', () => {

@@ -23,7 +23,14 @@ describe('SprkIcon:', () => {
   });
 
   it('should override viewBox when viewBox has a value', () => {
-    const wrapper = shallow(<SprkIcon iconName="settings" viewBox="0 0 128 128" />);
+    const wrapper = shallow(
+      <SprkIcon iconName="settings" viewBox="0 0 128 128" />,
+    );
     expect(wrapper.find('[viewBox="0 0 128 128"]').length).toBe(1);
+  });
+
+  it('should default viewBox when not provided', () => {
+    const wrapper = shallow(<SprkIcon iconName="settings" />);
+    expect(wrapper.find('[viewBox="0 0 64 64"]').length).toBe(1);
   });
 });

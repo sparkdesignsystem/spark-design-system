@@ -103,7 +103,7 @@ class SprkFooter extends Component {
                           return (
                             <li key={id} className="sprk-o-Stack__item">
                               <TagName
-                                className="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light sprk-u-FontWeight--normal"
+                                className="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light"
                                 href={TagName === 'a' ? href || '#nogo' : undefined}
                                 data-analytics={analyticsString}
                                 {...rest}

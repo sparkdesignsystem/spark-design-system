@@ -8,10 +8,8 @@
 .sprk-c-Button {
   -webkit-appearance: none;
   background-color: $sprk-btn-background-color;
-  border-color: $sprk-btn-border-color;
+  border: $sprk-btn-border;
   border-radius: $sprk-btn-border-radius;
-  border-style: $sprk-btn-border-style;
-  border-width: $sprk-btn-border-width;
   color: $sprk-btn-text-color;
   cursor: pointer;
   display: inline-block;
@@ -40,7 +38,7 @@
   }
 
   &:visited {
-    color: $sprk-btn-text-color;
+    color: $sprk-btn-visited-text-color;
   }
 }
 
@@ -79,13 +77,12 @@
 /// Styles the button as the secondary variant.
 .sprk-c-Button--secondary {
   background-color: $sprk-btn-secondary-background-color;
-  border: $sprk-btn-border-width $sprk-btn-border-style
-    $sprk-btn-secondary-border-color;
+  border: $sprk-btn-secondary-border;
   color: $sprk-btn-secondary-text-color;
   letter-spacing: $sprk-btn-secondary-letter-spacing;
 
   &:visited {
-    color: $sprk-btn-secondary-text-color;
+    color: $sprk-btn-secondary-visited-text-color;
   }
 
   &:hover,
@@ -93,8 +90,7 @@
   &:focus {
     box-shadow: $sprk-btn-secondary-hover-shadow;
     background-color: $sprk-btn-secondary-hover-background-color;
-    border: $sprk-btn-border-width $sprk-btn-border-style
-      $sprk-btn-secondary-hover-border-color;
+    border: $sprk-btn-secondary-hover-border;
     color: $sprk-btn-secondary-hover-text-color;
   }
 }
@@ -103,8 +99,7 @@
 .sprk-c-Button--tertiary {
   background-color: $sprk-btn-tertiary-background-color;
   box-shadow: none;
-  border: $sprk-btn-border-width $sprk-btn-border-style
-    $sprk-btn-tertiary-border-color;
+  border: $sprk-btn-tertiary-border;
   color: $sprk-btn-tertiary-text-color;
   letter-spacing: $sprk-btn-tertiary-letter-spacing;
 
@@ -118,7 +113,7 @@
   }
 
   &:visited {
-    color: $sprk-btn-tertiary-text-color;
+    color: $sprk-btn-tertiary-visited-text-color;
   }
 }
 
@@ -126,8 +121,7 @@
 .sprk-c-Button--quaternary {
   background-color: $sprk-btn-quaternary-background-color;
   box-shadow: $sprk-btn-quaternary-box-shadow;
-  border: $sprk-btn-border-width $sprk-btn-border-style
-    $sprk-btn-quaternary-border-color;
+  border: $sprk-btn-quaternary-border;
   color: $sprk-btn-quaternary-text-color;
   letter-spacing: $sprk-btn-quaternary-letter-spacing;
 
@@ -141,7 +135,7 @@
   }
 
   &:visited {
-    color: $sprk-btn-quaternary-text-color;
+    color: $sprk-btn-quaternary-visited-text-color;
   }
 }
 
@@ -160,16 +154,14 @@ Removes extra padding and border in Firefox when using `input type="submit"`
   pointer-events: none;
   box-shadow: $sprk-btn-disabled-shadow;
   background-color: $sprk-btn-disabled-background-color;
-  border: $sprk-btn-disabled-border-width $sprk-btn-disabled-border-style
-    $sprk-btn-disabled-border-color;
+  border: $sprk-btn-disabled-border;
   color: $sprk-btn-disabled-text-color;
 
   &:hover,
   &:active,
   &:focus {
     background-color: $sprk-btn-disabled-background-color;
-    border: $sprk-btn-disabled-border-width $sprk-btn-disabled-border-style
-      $sprk-btn-disabled-border-color;
+    border: $sprk-btn-disabled-hover-border;
     color: $sprk-btn-disabled-text-color;
   }
 
@@ -182,16 +174,14 @@ Removes extra padding and border in Firefox when using `input type="submit"`
 .sprk-c-Button--secondary[disabled] {
   box-shadow: $sprk-btn-secondary-disabled-shadow;
   background-color: $sprk-btn-secondary-disabled-background-color;
-  border: $sprk-btn-secondary-disabled-border-width $sprk-btn-secondary-disabled-border-style
-    $sprk-btn-secondary-disabled-border-color;
+  border: $sprk-btn-secondary-disabled-hover-border;
   color: $sprk-btn-secondary-disabled-text-color;
 }
 
 .sprk-c-Button--tertiary.sprk-is-Disabled,
 .sprk-c-Button--tertiary[disabled] {
   box-shadow: $sprk-btn-tertiary-disabled-shadow;
-  border: $sprk-btn-tertiary-disabled-border-width $sprk-btn-tertiary-disabled-border-style
-    $sprk-btn-tertiary-disabled-border-color;
+  border: $sprk-btn-tertiary-disabled-hover-border;
   color: $sprk-btn-tertiary-disabled-text-color;
   background-color: $sprk-btn-tertiary-disabled-background-color;
 }
@@ -199,8 +189,7 @@ Removes extra padding and border in Firefox when using `input type="submit"`
 .sprk-c-Button--quaternary.sprk-is-Disabled,
 .sprk-c-Button--quaternary[disabled] {
   box-shadow: $sprk-btn-quaternary-disabled-shadow;
-  border: $sprk-btn-quaternary-disabled-border-width $sprk-btn-quaternary-disabled-border-style
-    $sprk-btn-quaternary-disabled-border-color;
+  border: $sprk-btn-quaternary-disabled-hover-border;
   color: $sprk-btn-quaternary-disabled-text-color;
   background-color: $sprk-btn-quaternary-disabled-background-color;
 }

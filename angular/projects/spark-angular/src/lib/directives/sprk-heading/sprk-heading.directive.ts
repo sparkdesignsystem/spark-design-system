@@ -1,24 +1,34 @@
-import {
-  Directive,
-  Input,
-  HostBinding
-} from '@angular/core';
+import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[sprkHeading]'
+  selector: '[sprkHeading]',
 })
-
 export class SprkHeadingDirective {
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
+  @HostBinding('attr.data-id')
+  @Input()
+  idString: string;
   /**
    * @ignore
    */
-  constructor() { }
+  constructor() {}
 
   @Input()
-  variant: 'displayOne' |
-    'displayTwo' | 'displayThree' |
-    'displayFour' | 'displayFive' |
-    'displaySix' | 'displaySeven';
+  variant:
+    | 'displayOne'
+    | 'displayTwo'
+    | 'displayThree'
+    | 'displayFour'
+    | 'displayFive'
+    | 'displaySix'
+    | 'displaySeven';
 
   @HostBinding('class.sprk-b-TypeDisplayOne')
   get headingOne() {
@@ -54,5 +64,6 @@ export class SprkHeadingDirective {
    * Value will be used to select
    * the heading style.
    */
-  @Input() isPageTitle = false;
+  @Input()
+  isPageTitle = false;
 }
