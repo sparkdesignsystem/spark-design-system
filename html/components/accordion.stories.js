@@ -61,24 +61,12 @@ export const defaultStory = () => {
 
     <div data-sprk-toggle="content">
       <div class="sprk-c-Accordion__content sprk-o-Stack sprk-o-Stack--medium">
-        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          This is an example of multiple HTML
-          elements used for the content in an accordion item.
+        <p>
+          This is an example of accordion content.
+          This is an example of accordion content.
+          This is an example of accordion content.
+          This is an example of accordion content.
         </p>
-
-        <ul class="sprk-b-List sprk-b-List--indented sprk-o-Stack__item">
-          <li>
-            List Item One
-          </li>
-
-          <li>
-            List Item Two
-          </li>
-
-          <li>
-            List Item Three
-          </li>
-        </ul>
       </div>
     </div>
   </li>
