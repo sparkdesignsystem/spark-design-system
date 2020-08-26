@@ -1,32 +1,6 @@
 ---
   title: Color
 ---
-import { useStaticQuery, graphql } from "gatsby";
-export const useSassColors = () => {
-  const { color } = useStaticQuery(
-    graphql`
-      query SassColors {
-        allSassVarsJson {
-          edges {
-            node {
-              description
-              context {
-                name
-                value
-              }
-              file {
-                name
-              }
-              group
-              type
-            }
-          }
-        }
-      }
-    `
-  )
-  return color.allSassVarsJson
-}
 
 import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
 import ColorSwatch from '../../../components/ColorSwatch';
@@ -65,6 +39,12 @@ export const accessibilityChart1Set= `${accessibilityChart1} 560w, ${accessibili
 export const accessibilityChart2Set= `${accessibilityChart2} 560w, ${accessibilityChart22x} 1120w, ${accessibilityChart23x} 1680w`;
 
 # Color
+
+<ColorSwatchGrid>
+  <ColorSwatch variableName="sprk-red" />
+  <ColorSwatch variableName="sprk-deep-red" />
+</ColorSwatchGrid>
+
 The Rocket Orbit color palette received an update in August 2020. Please review this guide carefully so that you can apply the colors correctly. Our objective is to achieve human-centered design in everything we do.
 
 Having a consistent color palette is one of the foundations of a unified user experience.
@@ -107,78 +87,19 @@ Floods of colors indicate areas of focus in the interface but content should mai
 Floods of color should be reserved for the below colors only:
 
 #### Dark
-<ColorSwatchGrid hello={useSassColors()}>
-  <ColorSwatch
-    variableName="sprk-purple"
-  />
-  <SprkButton>HI</SprkButton>
-</ColorSwatchGrid>
+
 
 
 #### Light
-<ColorSwatchGrid color="flood-light" additionalClasses="sprk-u-mbl"/>
+<!-- <ColorSwatchGrid color="flood-light" additionalClasses="sprk-u-mbl"/> -->
 
 ### Semantic Colors
 Semantic colors are used to depict noteworty information, such as success or urgency. They should not be used outside of their intended context.
-<ColorSwatchGrid color="semantic" additionalClasses="sprk-u-mbl"/>
+<!-- <ColorSwatchGrid color="semantic" additionalClasses="sprk-u-mbl"/> -->
 
 ### Button and Link Hierarchy
 
-<div class="sprk-u-Measure">
-  <SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
-      <SprkButton>Button</SprkButton>
-    </SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
-      Primary Button: Rocket Red Buttons - This is used for a primary action on the page. We do not recommend using more than 1-2 primary buttons on the page and instead to differentiate buttons with other button types.
-    </SprkStackItem>
-  </SprkStack>
 
-  <SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
-      <SprkButton variant="secondary">Button</SprkButton>
-    </SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
-      Secondary Button: Filled Purple Buttons - this is used for the secondary button on pages. Differentiate secondary actions on the page. Secondary actions can be placed directly next to a primary button.
-    </SprkStackItem>
-  </SprkStack>
-
-  <SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
-      <SprkButton variant="tertiary">Button</SprkButton>
-    </SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
-      Tertiary Button: Outlined Purple Buttons - Pair a tertiary button next to a primary or secondary button. Do not overuse this button type.
-    </SprkStackItem>
-  </SprkStack>
-
-  <SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
-      <SprkButton variant="quaternary">Button</SprkButton>
-    </SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
-      Quaternary Buttons: 4th level buttons are used for the login buttons in the top navigation. They can be used on the page for the least important actions.
-    </SprkStackItem>
-  </SprkStack>
-
-  <SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
-      <SprkLink href="#nogo">Default Link</SprkLink>
-    </SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
-      Default Links: purple with an underline - this link style should be used inline for text links. It can also be used. Purple is intended to show interaction and highlight information.
-    </SprkStackItem>
-  </SprkStack>
-
-  <SprkStack splitAt="tiny" additionalClasses="sprk-u-mbl">
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
-      <SprkLink variant="simple" href="#nogo">Simple Link</SprkLink>
-    </SprkStackItem>
-    <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-u-plm">
-      Simple Links - These are to be used in navigation in the header and footer.
-    </SprkStackItem>
-  </SprkStack>
-</div>
 
 #### Charts and Graphs
 Charts and graphs use shades of purple to represent different parts of the graphs.
@@ -186,7 +107,7 @@ Charts and graphs use shades of purple to represent different parts of the graph
 Pink can be used to call out something negative, or a semantic color can be used to call out a positive or negative action.
 Do not mix multiple semantic colors within one chart. They are only an accent to the purple gradient palette.
 
-<ColorSwatchGrid color="charts-graphs" additionalClasses="sprk-u-mbl"/>
+<!-- <ColorSwatchGrid color="charts-graphs" additionalClasses="sprk-u-mbl"/> -->
 
 #### Credit Score
 To show credit score we show it go from Pink to Purple. Pink is a negative color while purple is a positive color. Permutations of credit score get these colors applied like this:
@@ -200,26 +121,26 @@ To show credit score we show it go from Pink to Purple. Pink is a negative color
   style="max-width:300px"
   alt="The brand colors relating to levels of credit score."/>
 
-<ColorSwatchGrid color="positive-negative" additionalClasses="sprk-u-mbh"/>
+<!-- <ColorSwatchGrid color="positive-negative" additionalClasses="sprk-u-mbh"/> -->
 
 ## Color Palette
 ### Primary
-<ColorSwatchGrid color="primary" additionalClasses="sprk-u-mbl"/>
+<!-- <ColorSwatchGrid color="primary" additionalClasses="sprk-u-mbl"/> -->
 
 ### Secondary
-<ColorSwatchGrid color="secondary" additionalClasses="sprk-u-mbl"/>
+<!-- <ColorSwatchGrid color="secondary" additionalClasses="sprk-u-mbl"/> -->
 
 ### Semantic
-<ColorSwatchGrid color="semantic" additionalClasses="sprk-u-mbl" />
+<!-- <ColorSwatchGrid color="semantic" additionalClasses="sprk-u-mbl" /> -->
 
 ### Neutral
-<ColorSwatchGrid color="neutral" additionalClasses="sprk-u-mbl"/>
+<!-- <ColorSwatchGrid color="neutral" additionalClasses="sprk-u-mbl"/> -->
 
 ### Colors from Positive to Negative
-<ColorSwatchGrid color="positive-negative" additionalClasses="sprk-u-mbl"/>
+<!-- <ColorSwatchGrid color="positive-negative" additionalClasses="sprk-u-mbl"/> -->
 
 ### Charts and Graphs
-<ColorSwatchGrid color="charts-graphs" additionalClasses="sprk-u-mbh"/>
+<!-- <ColorSwatchGrid color="charts-graphs" additionalClasses="sprk-u-mbh"/> -->
 
 ## Contrast Accessibility Charts
 <img

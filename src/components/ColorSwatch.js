@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import theme from 'prism-react-renderer/themes/github';
 import InlineCode from './markdown-render/inlineCode';
+import useColorData from '../util/useColorData';
 
 const nameFormatter = (name) => {
   return name
@@ -12,17 +13,19 @@ const nameFormatter = (name) => {
     .join(' ');
 };
 
-const ColorSwatch = ({ swatchHeight, colorData, variableName }) => {
+const ColorSwatch = ({ swatchHeight, variableName }) => {
+  const colorData = useColorData();
+
   // return a single object containing data for one color
   const colorNode = colorData.filter((item) => {
     return item.node.context.name === variableName;
   })[0];
 
-  const rgbValue = colorNode.context.value;
-  const { name } = nameFormatter(colorNode.context.name);
-  const { description } = colorNode;
-  const hexValue = colorNode.type;
-  const sassVar = `$${colorNode.context.name}`;
+  const rgbValue = colorNode.node.context.value;
+  const { name } = nameFormatter(colorNode.node.context.name);
+  const { description } = colorNode.node;
+  const hexValue = colorNode.node.type;
+  const sassVar = `$${colorNode.node.context.name}`;
 
   return (
     <div className="sprk-c-Card sprk-o-Stack">
@@ -104,7 +107,6 @@ const ColorSwatch = ({ swatchHeight, colorData, variableName }) => {
 ColorSwatch.propTypes = {
   variableName: PropTypes.string,
   swatchHeight: PropTypes.string,
-  colorData: PropTypes.arrayOf,
 };
 
 export default ColorSwatch;
