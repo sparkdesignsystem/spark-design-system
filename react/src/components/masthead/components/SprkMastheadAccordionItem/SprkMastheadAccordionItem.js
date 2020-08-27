@@ -12,13 +12,13 @@ class SprkMastheadAccordionItem extends Component {
     this.state = {
       isOpen: defaultOpen || false,
       height: defaultOpen ? 'auto' : 0,
-      subNavLinks: subNavLinks.map(link => ({ id: uniqueId(), ...link })),
+      subNavLinks: subNavLinks.map((link) => ({ id: uniqueId(), ...link })),
     };
     this.toggleAccordionOpen = this.toggleAccordionOpen.bind(this);
   }
 
   toggleAccordionOpen() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
       height: !prevState.isOpen ? 'auto' : 0,
     }));
@@ -133,8 +133,10 @@ class SprkMastheadAccordionItem extends Component {
                 <SprkIcon
                   additionalClasses="
                     sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs"
+                    sprk-u-mrs
+                  "
                   iconName={leadingIcon}
                 />
               )}
