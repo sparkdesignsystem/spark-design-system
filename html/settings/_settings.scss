@@ -2109,8 +2109,10 @@ $sprk-spinner-thickness: 0.18rem !default;
 $sprk-spinner-color: $sprk-white !default;
 /// The color of the dark Spinner.
 $sprk-spinner-color-dark: $sprk-black !default;
-/// The color of the purple Spinner.
+/// The color of the primary Spinner.
 $sprk-spinner-color-primary: $sprk-red !default;
+/// The color of the secondary Spinner.
+$sprk-spinner-color-secondary: $sprk-purple !default;
 
 //
 // Tabbed Navigation

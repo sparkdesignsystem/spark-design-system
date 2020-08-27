@@ -24,6 +24,15 @@ const SprkButton = ({
   } else {
     TagName = 'button';
   }
+  let spinnerVariant;
+  if (loading) {
+    if (variant === 'tertiary') {
+      spinnerVariant = 'secondary';
+    }
+    if (variant === 'quaternary') {
+      spinnerVariant = 'dark';
+    }
+  }
   return (
     <TagName
       className={classnames(
@@ -42,16 +51,7 @@ const SprkButton = ({
       {...rest}
       {...(loading && { 'aria-label': spinningAriaLabel })}
     >
-      {(loading && (
-        <SprkSpinner
-          lightness={
-            variant === 'tertiary' || variant === 'quaternary'
-              ? 'dark'
-              : undefined
-          }
-        />
-      )) ||
-        children}
+      {(loading && <SprkSpinner variant={spinnerVariant} />) || children}
     </TagName>
   );
 };

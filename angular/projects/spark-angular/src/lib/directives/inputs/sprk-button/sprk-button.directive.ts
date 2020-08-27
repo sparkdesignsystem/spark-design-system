@@ -104,7 +104,11 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     let spinnerClass = 'sprk-c-Spinner sprk-c-Spinner--circle';
     if (
       el.classList.contains('sprk-c-Button--tertiary') ||
-      this.variant === 'tertiary' ||
+      this.variant === 'tertiary'
+    ) {
+      spinnerClass += ' sprk-c-Spinner--secondary';
+    }
+    if (
       el.classList.contains('sprk-c-Button--quaternary') ||
       this.variant === 'quaternary'
     ) {
