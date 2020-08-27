@@ -168,7 +168,7 @@ export const spinningTertiary = () =>
     data-sprk-spinner-lightness="dark"
   >
     <div
-      class="sprk-c-Spinner sprk-c-Spinner--dark sprk-c-Spinner--circle"
+      class="sprk-c-Spinner sprk-c-Spinner--secondary sprk-c-Spinner--circle"
     ></div>
   </button>
   `;
