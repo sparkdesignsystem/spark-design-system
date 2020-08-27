@@ -75,15 +75,18 @@ class SprkMastheadBigNav extends Component {
 
 SprkMastheadBigNav.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add
+   * to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
- /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+  /**
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /** Used to render navigation inside. */
@@ -95,7 +98,7 @@ SprkMastheadBigNav.propTypes = {
       element: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
-        PropTypes.elementType
+        PropTypes.elementType,
       ]),
       /**
        * A space-separated string of classes to add to the link item.
