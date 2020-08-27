@@ -13,7 +13,7 @@ import { Component, Input } from '@angular/core';
       <div class="sprk-c-Alert__content">
         <sprk-icon
           iconType="{{ icon }}"
-          additionalClasses="sprk-c-Alert__icon sprk-c-Icon--xl sprk-c-Icon--filled-current-color"
+          additionalClasses="sprk-c-Alert__icon sprk-c-Icon--xl sprk-c-Icon--filled sprk-c-Icon--filled-current-color"
           aria-hidden="true"
         ></sprk-icon>
 
@@ -34,7 +34,7 @@ import { Component, Input } from '@angular/core';
         ></sprk-icon>
       </button>
     </div>
-  `
+  `,
 })
 export class SprkAlertComponent {
   /**
@@ -110,7 +110,7 @@ export class SprkAlertComponent {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         alertClassArray.push(className);
       });
     }
