@@ -28,7 +28,7 @@ SprkSpinner.propTypes = {
   /**
    *  Determines the corresponding spinner style.
    */
-  variant: PropTypes.oneOf(['light', 'dark', 'primary', 'secondary']),
+  variant: PropTypes.oneOf(['dark', 'primary', 'secondary']),
   /**
    * Determines shade of spinner.
    */
@@ -48,7 +48,6 @@ SprkSpinner.propTypes = {
 SprkSpinner.defaultProps = {
   size: 'small',
   lightness: 'light',
-  variant: 'light',
 };
 
 export default SprkSpinner;
