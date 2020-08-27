@@ -3,7 +3,7 @@ import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkPagination from './SprkPagination';
-import SprkIcon from '../../components/icons/SprkIcon';
+import SprkIcon from '../icons/SprkIcon';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -61,7 +61,9 @@ describe('SprkPagination:', () => {
       />,
     );
 
-    const currentPageLink = wrapper.find('li a.sprk-c-Pagination__link--current');
+    const currentPageLink = wrapper.find(
+      'li a.sprk-c-Pagination__link--current',
+    );
     expect(currentPageLink.length).toBe(1);
     expect(currentPageLink.text()).toEqual('2');
   });
@@ -79,7 +81,7 @@ describe('SprkPagination:', () => {
     expect(paginationItems.length).toBe(5); // < 1 2 3 >
     expect(paginationItems.find('a.sprk-c-Pagination__icon').length).toBe(2); // two chevrons
     expect(paginationItems.find('a.sprk-c-Pagination__link').length).toBe(3); // three pages
-    expect(paginationItems.findWhere(x => x.text() === '...').length).toBe(0); // zero ellipses
+    expect(paginationItems.findWhere((x) => x.text() === '...').length).toBe(0); // zero ellipses
   });
 
   it('renders ellipses with more than 3 pages', () => {
@@ -96,7 +98,10 @@ describe('SprkPagination:', () => {
     expect(paginationItems.length).toBe(7); // < 1 ... 3 ... 5 >
     expect(paginationItems.find('a.sprk-c-Pagination__icon').length).toBe(2); // two chevrons
     expect(paginationItems.find('a.sprk-c-Pagination__link').length).toBe(3); // three pages
-    expect(paginationItems.findWhere(x => x.type() === 'li' && x.text() === '...').length).toBe(2); // two ellipses
+    expect(
+      paginationItems.findWhere((x) => x.type() === 'li' && x.text() === '...')
+        .length,
+    ).toBe(2); // two ellipses
   });
 
   it('navigates back one page when you click the first chevron', () => {
@@ -142,7 +147,10 @@ describe('SprkPagination:', () => {
         onChangeCallback={spyFunc}
       />,
     );
-    wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.type() === 'a' && x.text() === '1').simulate('click');
+    wrapper
+      .find('a.sprk-c-Pagination__link')
+      .findWhere((x) => x.type() === 'a' && x.text() === '1')
+      .simulate('click');
     // first param of the first call
     expect(spyFunc.mock.calls[0][0].newPage).toBe(1); // expect it to have "1" as arg.newPage
   });
@@ -156,7 +164,10 @@ describe('SprkPagination:', () => {
         onChangeCallback={spyFunc}
       />,
     );
-    wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.type() === 'a' && x.text() === '2').simulate('click');
+    wrapper
+      .find('a.sprk-c-Pagination__link')
+      .findWhere((x) => x.type() === 'a' && x.text() === '2')
+      .simulate('click');
     // first param of the first call
     expect(spyFunc.mock.calls[0][0].newPage).toBe(2); // expect it to have "2" as arg.newPage
   });
@@ -170,7 +181,10 @@ describe('SprkPagination:', () => {
         onChangeCallback={spyFunc}
       />,
     );
-    wrapper.find('a.sprk-c-Pagination__link').findWhere(x => x.type() === 'a' && x.text() === '3').simulate('click');
+    wrapper
+      .find('a.sprk-c-Pagination__link')
+      .findWhere((x) => x.type() === 'a' && x.text() === '3')
+      .simulate('click');
     // first param of the first call
     expect(spyFunc.mock.calls[0][0].newPage).toBe(3); // expect it to have "3" as arg.newPage
   });
@@ -185,7 +199,11 @@ describe('SprkPagination:', () => {
         onChangeCallback={spyFunc}
       />,
     );
-    wrapper.findWhere((x) => {return x.type() == "a" && x.text() === "9"}).simulate('click');
+    wrapper
+      .findWhere((x) => {
+        return x.type() == 'a' && x.text() === '9';
+      })
+      .simulate('click');
     // first param of the first call
     expect(spyFunc.mock.calls[0][0].newPage).toBe(9); // expect it to have "9" as arg.newPage
   });
@@ -200,7 +218,11 @@ describe('SprkPagination:', () => {
         onChangeCallback={spyFunc}
       />,
     );
-    wrapper.findWhere((x) => { return x.type() == "a" && x.text() === "3"}).simulate('click');
+    wrapper
+      .findWhere((x) => {
+        return x.type() == 'a' && x.text() === '3';
+      })
+      .simulate('click');
     // first param of the first call
     expect(spyFunc.mock.calls[0][0].newPage).toBe(3); // expect it to have "3" as arg.newPage
   });
@@ -239,7 +261,7 @@ describe('SprkPagination:', () => {
         totalItems={50}
         itemsPerPage={10}
         onChangeCallback={() => {}}
-        analyticsStringPage='foo'
+        analyticsStringPage="foo"
       />,
     );
 
@@ -267,7 +289,9 @@ describe('SprkPagination:', () => {
         onChangeCallback={() => {}}
       />,
     );
-    expect(wrapper.find(SprkIcon).first().prop('iconName')).toBe('chevron-left');
+    expect(wrapper.find(SprkIcon).first().prop('iconName')).toBe(
+      'chevron-left',
+    );
   });
 
   it('should render the correct nextIcon name if one is passed', () => {
@@ -290,6 +314,8 @@ describe('SprkPagination:', () => {
         onChangeCallback={() => {}}
       />,
     );
-    expect(wrapper.find(SprkIcon).last().prop('iconName')).toBe('chevron-right');
+    expect(wrapper.find(SprkIcon).last().prop('iconName')).toBe(
+      'chevron-right',
+    );
   });
 });
