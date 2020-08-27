@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import theme from 'prism-react-renderer/themes/github';
 import InlineCode from './markdown-render/inlineCode';
-import useColorData from '../util/useColorData';
+import useColorData from '../hooks/use-color-data';
 
 const nameFormatter = (name) => {
   return name
