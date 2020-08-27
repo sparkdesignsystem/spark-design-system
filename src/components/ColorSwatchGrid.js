@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SwatchGrid = ({ children }) => {
-  return <div>{children}</div>;
+const SwatchGrid = ({ children, additionalClasses }) => {
+  return (
+    <div className={['docs-o-ColorSwatchGrid', additionalClasses].join(' ')}>
+      {children}
+    </div>
+  );
 };
 
 SwatchGrid.propTypes = {
   children: PropTypes.node,
+  additionalClasses: PropTypes.string,
 };
 
 export default SwatchGrid;
