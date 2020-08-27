@@ -618,7 +618,8 @@ $sprk-btn-border-color: $sprk-btn-background-color !default;
 /// The border width of the Button component.
 $sprk-btn-border-width: 2px !default;
 /// The border of the Button component.
-$sprk-btn-border: $sprk-btn-border-width $sprk-btn-border-style $sprk-btn-border-color !default;
+$sprk-btn-border: $sprk-btn-border-width $sprk-btn-border-style
+  $sprk-btn-border-color !default;
 /// The font weight of the Button component.
 $sprk-btn-font-weight: 500 !default;
 /// The font size of the Button component.
@@ -663,8 +664,8 @@ $sprk-btn-disabled-text-color: $sprk-white !default;
 /// The border color of the Disabled Button component.
 $sprk-btn-disabled-border-color: transparent !default;
 /// The border of the Disabled Button component.
-$sprk-btn-disabled-border: $sprk-btn-disabled-border-width $sprk-btn-disabled-border-style
-  $sprk-btn-disabled-border-color !default;
+$sprk-btn-disabled-border: $sprk-btn-disabled-border-width
+  $sprk-btn-disabled-border-style $sprk-btn-disabled-border-color !default;
 /// The box shadow of the Disabled Button component.
 $sprk-btn-disabled-shadow: none !default;
 /// The background color of the Disabled Button component.
@@ -696,16 +697,19 @@ $sprk-btn-quaternary-disabled-border-style: $sprk-btn-disabled-border-style !def
 /// The border width of the Quaternary Button component when disabled.
 $sprk-btn-quaternary-disabled-border-width: $sprk-btn-disabled-border-width !default;
 /// The border of the Button component when disabled on hover.
-$sprk-btn-disabled-hover-border: $sprk-btn-disabled-border-width $sprk-btn-disabled-border-style
-  $sprk-btn-disabled-border-color !default;
+$sprk-btn-disabled-hover-border: $sprk-btn-disabled-border-width
+  $sprk-btn-disabled-border-style $sprk-btn-disabled-border-color !default;
 /// The border of the Secondary Button component when disabled on hover.
-$sprk-btn-secondary-disabled-hover-border: $sprk-btn-secondary-disabled-border-width $sprk-btn-secondary-disabled-border-style
+$sprk-btn-secondary-disabled-hover-border: $sprk-btn-secondary-disabled-border-width
+  $sprk-btn-secondary-disabled-border-style
   $sprk-btn-secondary-disabled-border-color !default;
 /// The border of the Tertiary Button component when disabled on hover.
-$sprk-btn-tertiary-disabled-hover-border: $sprk-btn-tertiary-disabled-border-width $sprk-btn-tertiary-disabled-border-style
+$sprk-btn-tertiary-disabled-hover-border: $sprk-btn-tertiary-disabled-border-width
+  $sprk-btn-tertiary-disabled-border-style
   $sprk-btn-tertiary-disabled-border-color !default;
 /// The border of the Quaternary Button component when disabled on hover.
-$sprk-btn-quaternary-disabled-hover-border: $sprk-btn-quaternary-disabled-border-width $sprk-btn-quaternary-disabled-border-style
+$sprk-btn-quaternary-disabled-hover-border: $sprk-btn-quaternary-disabled-border-width
+  $sprk-btn-quaternary-disabled-border-style
   $sprk-btn-quaternary-disabled-border-color !default;
 
 // Secondary
@@ -2003,6 +2007,25 @@ $sprk-masthead-transition: all 0.3s ease-in !default;
 /// The transform length that gets applied
 /// when the Masthead scrolls out of view on narrow screens.
 $sprk-masthead-translateY: translateY(-100%) !default;
+
+// Menu
+/// The background color of the menu icon.
+$sprk-menu-icon-bg-color: $sprk-white !default;
+/// The stroke width of the menu icon.
+$sprk-menu-icon-stroke-width: 2px !default;
+/// The stroke of the menu icon.
+$sprk-menu-icon-stroke: $sprk-black !default;
+/// The transition on the menu icon that turns the
+/// menu icon into an "X".
+$sprk-menu-icon-transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out !default;
+/// The transform origin of the "X" state of the menu for the
+/// first menu line. Only
+/// needs to be changed if using a custom width and height.
+$sprk-menu-icon-line-one-transform-origin: 1rem 1.5rem !default;
+/// The transform origin of the "X" state of the menu for the
+/// third menu line. Only
+/// needs to be changed if using a custom width and height.
+$sprk-menu-icon-line-three-transform-origin: 1rem 2.5rem !default;
 
 // Big Nav
 /// The maximum width of the
