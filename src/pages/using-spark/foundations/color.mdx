@@ -1,10 +1,8 @@
 ---
   title: Color
 ---
-
 import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
 import ColorSwatch from '../../../components/ColorSwatch';
-
 import stepperExample from '../../../images/stepper-example.png';
 import stepperExample2x from '../../../images/stepper-example@2x.png';
 import stepperExample3x from '../../../images/stepper-example@3x.png';
@@ -25,25 +23,240 @@ import accessibilityChart2 from '../../../images/accessibility-chart-2.png';
 import accessibilityChart22x from '../../../images/accessibility-chart-2@2x.png';
 import accessibilityChart23x from '../../../images/accessibility-chart-2@3x.png';
 
-import {
-  SprkStack,
-  SprkStackItem,
-  SprkButton,
-  SprkLink
-} from '@sparkdesignsystem/spark-react';
-
 export const stepperExampleSet = `${stepperExample} 560w, ${stepperExample2x} 1120w, ${stepperExample3x} 1680w`;
 export const creditScoreSet = `${creditScore} 560w, ${creditScore2x} 1120w, ${creditScore3x} 1680w`;
 export const accessibilityKeySet = `${accessibilityKey} 560w, ${accessibilityKey2x} 1120w, ${accessibilityKey3x} 1680w`;
 export const accessibilityChart1Set= `${accessibilityChart1} 560w, ${accessibilityChart12x} 1120w, ${accessibilityChart13x} 1680w`;
 export const accessibilityChart2Set= `${accessibilityChart2} 560w, ${accessibilityChart22x} 1120w, ${accessibilityChart23x} 1680w`;
+import {
+  SprkStack,
+  SprkStackItem,
+  SprkButton,
+  SprkLink,
+  SprkDivider,
+} from '@sparkdesignsystem/spark-react';
+import SprkTabs from '../../../../react/src/components/tabs/SprkTabs';
 
-# Color
 
-<ColorSwatchGrid>
-  <ColorSwatch variableName="sprk-red" />
-  <ColorSwatch variableName="sprk-deep-red" />
-</ColorSwatchGrid>
+
+
+
+# Colors
+<SprkTabs idString="tabs-1">
+  <SprkTabsPanel
+    isDefaultActive
+    tabBtnChildren="Usage"
+    tabBtnAnalyticsString="tab-1"
+    tabBtnDataId="tab-1"
+  >
+  <p>
+    Following the August 2020 update to the Rocket Orbit color palette, it’s important to review this guide carefully so you can apply color correctly.9
+  </p>
+  <p>
+    Our objective is to achieve human-centered design in everything we do and having a consistent and WCAG AA accessible color palette is just one of the foundations in creating this unified user experience.
+  </p>
+  <h2>Table of Contents</h2>
+  <ul>
+    <li>
+      <a href="#our-color-story">
+        Our Color Story
+      </a>
+    </li>
+    <li>
+      How To Apply Color
+      <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mbn">
+        <li>
+          <a href="#rocket-red">
+            Rocket Red
+          </a>
+        </li>
+        <li>
+          <a href="#orbit-purple">
+            Orbit Purple
+          </a>
+        </li>
+        <li>
+          <a href="#neutral-colors">
+            Neutral Colors
+          </a>
+        </li>
+        <li>
+          <a href="#semantic-colors">
+            Semantic Colors
+          </a>
+        </li>
+        <li>
+          <a href="#floods-of-color">
+            Floods of Color
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#button-and-link-hierarchy">
+        Button and Link Hierarchy
+      </a>
+    </li>
+    <li>
+      <a href="#charts-and-graphs">
+        Charts and Graphs
+      </a>
+    </li>
+  </ul>
+  <SprkDivider element="span"/>
+  <h2>Our Color Story</h2>
+  <p>
+    We designed the Orbit palette to be modern and approachable, while fitting our brand character and highlighting color psychology attributes.
+  </p>
+  <p>
+    One of our designers said, "[The color palette] reminded me of when Felix Baumgartner jumped from the edge of space. The thing I remember most when watching it, as he ascended and the curvature of the earth became more pronounced, it created this beautiful tapestry of color as he moved through the atmospheres and how the light would reflect and your perspective changed."
+  </p>
+  <SprkDivider element="span"/>
+  <h2>How to Apply Color</h2>
+  <h3>Rocket Red</h3>
+  <p>
+    As our primary color, use Rocket Red for primary actions, like buttons and key elements in illustrations. Take care to not overuse any shades of red.
+  </p>
+  <p>
+    🖼VISUAL: When using Rocket Red to indicate primary actions, always balance colors by including a secondary or tertiary option.
+  </p>
+  <p>
+    🖼VISUAL:
+    Don’t overuse Rocket Red, especially in buttons.
+  </p>
+  <SprkDivider element="span"/>
+  <h3>Orbit Purple</h3>
+  <p>
+    As our secondary color, use Purple to highlight secondary actions, like buttons, in-page links and active form fields. Use for highlighting important information and followed links.
+
+  </p>
+  <span>🖼button🖼link🖼input</span>
+  <SprkDivider element="span"/>
+  <h3>Neutral Colors</h3>
+  <p>
+    Often used for text, borders, and system icons.
+  </p>
+  <p>
+  For example: always use shades of grey when working with text, where different color types should not be mixed.
+  </p>
+  <p>
+    🖼VISUAL:
+    Use shades of grey when necessary to create additional content hierarchy.
+  </p>
+  <p>
+    🖼VISUAL:
+    Don’t mix brand or semantic colors in text.
+  </p>
+  <SprkDivider element="span"/>
+  <h3>Semantic Colors</h3>
+  <p>
+    Semantic colors should be used to communicate the status of messages.
+  </p>
+  <ul>
+    <li>Green: Success</li>
+    <li>Blue: Informational</li>
+    <li>Pink: Error, Urgent or Attention Needed</li>
+    <li>Yellow: Warning</li>
+  </ul>
+  <p>
+    Do not use semantic colors for large accents.
+  </p>
+  <p>
+    For example: Use the Error semantic color to present negative information instead of using Rocket Red, which is reserved for positive brand interactions.
+  </p>
+  <p>
+    🖼VISUAL:
+    Use appropriate semantic colors for indicate the status of messages, like an urgent alert.
+  </p>
+  <p>
+    🖼VISUAL:
+    Don’t use semantic colors as accents or outside their intended use.
+  </p>
+  <SprkDivider element="span"/>
+  <h3>Floods of Color</h3>
+  <p>
+    Floods of color indicate areas of focus in the interface, but content should mainly be on white backgrounds.
+  </p>
+  <p>
+    Floods of color should be reserved for the below colors only:
+  </p>
+  <h4>Dark</h4>
+  <h4>Light</h4>
+  <SprkDivider element="span"/>
+  <h3>Button and Link Hierarchy</h3>
+  <p>
+    Buttons are one of the biggest changes within the update to the Orbit color palette. To see how this affects button guidelines, learn more on the buttons page...
+  </p>
+  <p>
+    Floods of color should be reserved for the below colors only:
+  </p>
+  <h4>Dark</h4>
+  <h4>Light</h4>
+  <h3>Charts and Graphs</h3>
+  <p>
+    Charts and graphs use shades of purple to represent the correct information hierarchy.
+  </p>
+  <p>
+    When presenting something negative to the user, pink – or the semantic Error color – should be used.
+  </p>
+  <p>
+    While semantic colors can be used to display both positive and negative information, we strongly recommend not mixing multiple semantic colors within one chart. These colors should only be used as accents on the Purple gradient palette.
+  </p>
+  <p>
+    🖼TWO CHARTS HERE🖼
+  </p>
+  </SprkTabsPanel>
+  <SprkTabsPanel tabBtnChildren="Color Codes" tabBtnAnalyticsString="tab-2" tabBtnDataId="tab-2">
+    <p>
+      COLOR CODES HERE
+    </p>
+    <ColorSwatchGrid>
+      <ColorSwatch variableName="sprk-red" />
+      <ColorSwatch variableName="sprk-deep-red" />
+    </ColorSwatchGrid>
+  </SprkTabsPanel>
+  <SprkTabsPanel tabBtnChildren="Accessibility" tabBtnAnalyticsString="tab-3" tabBtnDataId="tab-3">
+    <p>
+      Accessibility is always a top priority. In accordance to this standard, we comply with WCAG 2.0 contrast guidelines, in order to account for the needs of all people.
+    </p>
+    <h2>Contrast Accessibility Charts</h2>
+    <img
+      srcset={accessibilityKeySet}
+      src={accessibilityKey}
+      sizes="(min-width: 1120px) 1120px,
+            (min-width: 1680px) 1680px,
+            560px"
+      class="sprk-u-mbm sprk-u-Measure"
+      alt="The legend for contrast accessibility."/>
+    <img
+      srcset={accessibilityChart1Set}
+      src={accessibilityChart1}
+      sizes="(min-width: 1120px) 1120px,
+            (min-width: 1680px) 1680px,
+            560px"
+      class="sprk-u-mbm sprk-u-Measure"
+      alt="A chart of colors comparing contrast accessibility."/>
+    <img
+      srcset={accessibilityChart2Set}
+      src={accessibilityChart2}
+      sizes="(min-width: 1120px) 1120px,
+            (min-width: 1680px) 1680px,
+            560px"
+      class="sprk-u-mbm sprk-u-Measure"
+      alt="A chart of colors comparing contrast accessibility."/>
+  </SprkTabsPanel>
+</SprkTabs>
+
+
+
+
+
+
+
+
+
+
+
 
 The Rocket Orbit color palette received an update in August 2020. Please review this guide carefully so that you can apply the colors correctly. Our objective is to achieve human-centered design in everything we do.
 
@@ -142,30 +355,4 @@ To show credit score we show it go from Pink to Purple. Pink is a negative color
 ### Charts and Graphs
 <!-- <ColorSwatchGrid color="charts-graphs" additionalClasses="sprk-u-mbh"/> -->
 
-## Contrast Accessibility Charts
-<img
-  srcset={accessibilityKeySet}
-  src={accessibilityKey}
-  sizes="(min-width: 1120px) 1120px,
-        (min-width: 1680px) 1680px,
-        560px"
-  class="sprk-u-mbm sprk-u-Measure"
-  alt="The legend for contrast accessibility."/>
 
-<img
-  srcset={accessibilityChart1Set}
-  src={accessibilityChart1}
-  sizes="(min-width: 1120px) 1120px,
-        (min-width: 1680px) 1680px,
-        560px"
-  class="sprk-u-mbm sprk-u-Measure"
-  alt="A chart of colors comparing contrast accessibility."/>
-
-<img
-  srcset={accessibilityChart2Set}
-  src={accessibilityChart2}
-  sizes="(min-width: 1120px) 1120px,
-        (min-width: 1680px) 1680px,
-        560px"
-  class="sprk-u-mbm sprk-u-Measure"
-  alt="A chart of colors comparing contrast accessibility."/>

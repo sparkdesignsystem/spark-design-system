@@ -15,6 +15,7 @@
     "serve": "gatsby serve",
     "prebuild": "npm run sassdoc && npm run sassdocmodifiers && npm run sassdocutilities",
     "sassdoc": "sassdoc './html/settings/**/*.scss' --parse > ./src/data/sass-vars.json",
+    "clean": "gatsby clean",
     "sassdocmodifiers": "sassdoc './html/**/_*.scss' --parse > ./src/data/sass-modifiers.json",
     "sassdocutilities": "sassdoc './html/utilities/_*.scss' --parse > ./src/data/sass-utilities.json"
   },
