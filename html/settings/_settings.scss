@@ -1928,6 +1928,10 @@ $sprk-masthead-content-item-padding-right-wide: $sprk-space-m !default;
 /// The padding left of the content
 /// items in the content section in the Masthead on wide viewports.
 $sprk-masthead-content-item-padding-left-wide: $sprk-space-m !default;
+/// The color of Masthead links.
+$sprk-masthead-link-color: $sprk-black !default;
+/// The color of Masthead Icon Links on hover.
+$sprk-masthead-link-icon-hover-color: $sprk-purple !default;
 /// The visited state color of Masthead links.
 $sprk-masthead-link-visited-color: $sprk-black !default;
 /// The font weight for Masthead links.

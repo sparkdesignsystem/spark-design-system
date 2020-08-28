@@ -158,10 +158,17 @@
 }
 
 .sprk-c-Masthead__link {
+  color: $sprk-masthead-link-color;
   font-weight: $sprk-masthead-link-font-weight;
 
   &:visited {
     color: $sprk-masthead-link-visited-color;
+  }
+
+  &:hover {
+    .sprk-c-Icon {
+      color: $sprk-masthead-link-icon-hover-color;
+    }
   }
 }
 
