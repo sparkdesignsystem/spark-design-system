@@ -19,6 +19,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
       <div [ngClass]="{ 'sprk-o-Box': dropdownType === 'mastheadSelector' }">
         <a
           sprkLink
+          variant="plain"
           [ngClass]="getTriggerClasses()"
           (click)="toggle($event)"
           [idString]="idString"
@@ -31,7 +32,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
             [iconType]="triggerIconType"
-            additionalClasses="sprk-u-mls sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color {{
+            additionalClasses="sprk-u-mls {{
               additionalIconClasses
             }}"
           ></sprk-icon>
@@ -62,9 +63,14 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             >
             <sprk-icon
               [iconType]="triggerIconType"
-              additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-u-mls sprk-c-Icon--toggle sprk-Stack__item {{
-                additionalIconClasses
-              }}"
+              additionalClasses="
+                sprk-c-Icon--filled-current-color
+                sprk-c-Icon--stroke-current-color
+                sprk-u-mls
+                sprk-c-Icon--toggle
+                sprk-Stack__item
+                {{ additionalIconClasses }}
+              "
             ></sprk-icon>
           </a>
         </div>
@@ -329,7 +335,7 @@ export class SprkDropdownComponent {
    * @ignore
    */
   getTriggerClasses(): string {
-    const classArray: string[] = [];
+    const classArray: string[] = ['sprk-c-Dropdown__trigger'];
 
     if (this.additionalTriggerClasses) {
       this.additionalTriggerClasses.split(' ').forEach(className => {

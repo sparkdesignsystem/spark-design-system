@@ -8,7 +8,7 @@
 
 /// Setting for the background
 /// color of any text when selected.
-$sprk-selection-bg-color: $sprk-purple-light !default;
+$sprk-selection-bg-color: $sprk-purple-lightest !default;
 /// Setting for the
 /// color of any text when selected.
 $sprk-selection-text-color: $sprk-black !default;
@@ -1863,6 +1863,14 @@ $sprk-dropdown-title-color: $sprk-black-tint-30 !default;
 $sprk-dropdown-title-font-size: $sprk-dropdown-font-size !default;
 /// The font weight of the Dropdown title.
 $sprk-dropdown-title-font-weight: 300 !default;
+/// The color of the Dropdown links.
+$sprk-dropdown-link-color: $sprk-black !default;
+/// The color of the Dropdown trigger.
+$sprk-dropdown-trigger-color: $sprk-black !default;
+/// The color of the Dropdown trigger on hover, active, focus.
+$sprk-dropdown-trigger-color-active: $sprk-black !default;
+/// The color of the Dropdown trigger for the visited state.
+$sprk-dropdown-trigger-color-visited: $sprk-black !default;
 
 //
 // Modals
