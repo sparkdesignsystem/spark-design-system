@@ -50,11 +50,11 @@ export class SprkLinkDirective implements OnInit {
 
   ngOnInit() {
     const variants = {
-      'simple' : 'sprk-b-Link--simple',
-      'icon' : 'sprk-b-Link--has-icon',
-      'plain' : 'sprk-b-Link--plain',
-      'light' : 'sprk-b-Link--light'
-    }
+      simple : 'sprk-b-Link--simple',
+      icon : 'sprk-b-Link--has-icon',
+      plain : 'sprk-b-Link--plain',
+      light : 'sprk-b-Link--light'
+    };
     if (this.variant !== 'unstyled') {
       this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link');
     }

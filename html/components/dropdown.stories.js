@@ -4,9 +4,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Dropdown',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('dropdown')}
@@ -25,7 +23,7 @@ export const defaultStory = () => {
 
   return `
     <a
-      class="sprk-b-Link sprk-b-Link--plain"
+      class="sprk-c-Dropdown__trigger sprk-b-Link sprk-b-Link--plain"
       href="#nogo"
       data-sprk-dropdown-trigger="dropdown01"
       aria-haspopup="listbox"
@@ -76,7 +74,7 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['dropdown'],
-  }
+  },
 };
 
 export const informational = () => {
@@ -86,7 +84,7 @@ export const informational = () => {
 
   return `
     <a
-      class="sprk-b-Link sprk-b-Link--plain sprk-u-mrs"
+      class="sprk-c-Dropdown__trigger sprk-b-Link sprk-b-Link--plain sprk-u-mrs"
       href="#nogo"
       data-sprk-dropdown-trigger="dropdown02"
       aria-haspopup="listbox"
@@ -171,5 +169,5 @@ informational.story = {
   name: 'Informational',
   parameters: {
     jest: ['dropdown'],
-  }
+  },
 };
