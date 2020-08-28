@@ -350,6 +350,7 @@ export const defaultStory = () => {
                   <svg
                     class="
                       sprk-c-Icon
+                      sprk-c-Icon--xl
                       sprk-c-Icon--filled-current-color
                       sprk-c-Icon--stroke-current-color
                       sprk-u-mrs
@@ -377,6 +378,7 @@ export const defaultStory = () => {
                   <svg
                     class="
                       sprk-c-Icon
+                      sprk-c-Icon--xl
                       sprk-c-Icon--filled-current-color
                       sprk-c-Icon--stroke-current-color
                       sprk-u-mrs

@@ -8,10 +8,8 @@ export default {
   component: SprkAlertComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -57,7 +55,7 @@ export const success = () => ({
     >
       This is a success message.
     </sprk-alert>
-  `
+  `,
 });
 
 success.story = {
@@ -77,7 +75,7 @@ export const fail = () => ({
       This is a failure message to alert
       that something was not successful.
     </sprk-alert>
-  `
+  `,
 });
 
 fail.story = {
@@ -96,9 +94,9 @@ export const noDismissButton = () => ({
       idString="alert-success-2"
       analyticsString="object.action.event"
     >
-      This success alert has no dismiss button.
+      This Success Alert has no dismiss button.
     </sprk-alert>
-  `
+  `,
 });
 
 noDismissButton.story = {
@@ -106,4 +104,3 @@ noDismissButton.story = {
     jest: ['sprk-alert.component'],
   },
 };
-

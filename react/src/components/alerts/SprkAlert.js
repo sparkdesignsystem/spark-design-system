@@ -50,7 +50,12 @@ const SprkAlert = (props) => {
         {variant && (
           <SprkIcon
             iconName={icon}
-            additionalClasses="sprk-c-Alert__icon sprk-c-Icon--filled-current-color"
+            additionalClasses="
+              sprk-c-Alert__icon
+              sprk-c-Icon--xl
+              sprk-c-Icon--filled
+              sprk-c-Icon--filled-current-color
+            "
             aria-hidden="true"
           />
         )}
@@ -94,7 +99,8 @@ SprkAlert.propTypes = {
    */
   variant: PropTypes.oneOf(['info', 'success', 'fail']),
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute
+   * serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -105,11 +111,13 @@ SprkAlert.propTypes = {
    */
   isDismissible: PropTypes.bool,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to
+   * add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
