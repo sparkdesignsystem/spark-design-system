@@ -20,6 +20,7 @@ export const defaultStory = () => {
   }, []);
 
   return `
+    <div>
     <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
       <button
         data-sprk-tooltip="trigger"
@@ -45,6 +46,32 @@ export const defaultStory = () => {
         Keep the text short and stick to what’s helpful and relevant.
       </span>
     </span>
+    <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
+      <button
+        data-sprk-tooltip="trigger"
+        class="sprk-c-Tooltip__trigger"
+        aria-labelledby="tooltip_1"
+        type="button"
+      >
+        <svg
+          class="sprk-c-Icon sprk-c-Icon--xxl sprk-c-Icon--filled"
+          aria-hidden="true"
+        >
+          <use xlink:href="#question-filled" />
+        </svg>
+      </button>
+      <span
+        data-sprk-tooltip="content"
+        class="sprk-c-Tooltip"
+        aria-hidden="true"
+        id="tooltip_1"
+        role="tooltip"
+      >
+        Use Tooltips to provide info that’s not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </span>
+    </span>
+    </div>
   `;
 };
 
