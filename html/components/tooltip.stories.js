@@ -25,6 +25,7 @@ export const defaultStory = () => {
       class="sprk-c-Tooltip__container"
       >
       <button
+        type="button"
         data-sprk-tooltip="trigger"
         class="sprk-c-Tooltip__trigger"
         aria-labelledby="tooltip_1"
