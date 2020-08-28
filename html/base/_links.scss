@@ -39,17 +39,9 @@
   &:hover,
   &:active,
   &:focus {
+    transition: $sprk-link-transition;
     color: $sprk-link-simple-hover-color;
-    border-bottom: $sprk-link-simple-underline-color;
-
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      left: $sprk-link-simple-hover-after-left;
-      width: $sprk-link-simple-hover-after-width;
-      border-bottom: $sprk-link-simple-hover-border-bottom;
-    }
+    border-bottom: $sprk-link-simple-hover-border-bottom;
   }
 }
 
@@ -66,18 +58,10 @@
   &:hover,
   &:active,
   &:focus {
+    transition: $sprk-link-transition;
     color: $sprk-link-light-hover-color;
     font-weight: $sprk-link-light-hover-font-weight;
-    border-bottom: $sprk-link-light-underline-color;
-
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      left: $sprk-link-light-hover-after-left;
-      width: $sprk-link-light-hover-after-width;
-      border-bottom: $sprk-link-light-hover-border-bottom;
-    }
+    border-bottom: $sprk-link-light-hover-border-bottom;
   }
 }
 
@@ -98,11 +82,13 @@
 .sprk-b-Link--has-icon .sprk-c-Icon {
   color: $sprk-link-has-icon-color-icon;
   fill: $sprk-link-has-icon-fill;
+  stroke: $sprk-link-has-icon-stroke;
 }
 
 .sprk-b-Link--has-icon:hover .sprk-c-Icon {
   color: $sprk-link-has-icon-hover-color-text;
   fill: $sprk-link-has-icon-hover-fill;
+  stroke: $sprk-link-has-icon-hover-stroke;
 }
 
 /// Disabled links have a muted color and cannot be interacted with.
@@ -126,7 +112,7 @@
 .sprk-b-Link--disabled .sprk-c-Icon {
   color: $sprk-link-disabled-color;
   stroke: $sprk-link-disabled-color;
-  fill: $sprk-link-has-icon-fill;
+  fill: $sprk-link-disabled-color;
   pointer-events: none;
   border-bottom: $sprk-link-disabled-border-bottom;
 

@@ -6,9 +6,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 export default {
   title: 'Components/Dropdown',
   component: SprkDropdown,
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
     jest: ['SprkDropdown'],
     info: `
@@ -24,7 +22,7 @@ export const defaultStory = () => (
   <SprkDropdown
     screenReaderText="Description of default dropdown."
     choices={{
-      choiceFunction: choiceText => {
+      choiceFunction: (choiceText) => {
         console.log(choiceText);
       },
       items: [
@@ -35,13 +33,6 @@ export const defaultStory = () => (
           href: '#nogo',
           idString: 'option-1',
         },
-        // TODO - when we build knobs, make sure this story demos multiple kinds of dropdown items
-        // {
-        //   text: 'Option 2',
-        //   value: 'option-2',
-        //   element: Link,
-        //   to: '/link',
-        // },
         {
           text: 'Option 2',
           value: 'option-2',
@@ -50,6 +41,7 @@ export const defaultStory = () => (
       ],
     }}
     iconName="settings"
+    title="My Choices"
     additionalIconClasses="sprk-c-Icon--l"
   />
 );
@@ -63,7 +55,7 @@ export const informational = () => (
     variant="informational"
     title="My Choices"
     choices={{
-      choiceFunction: choiceText => {
+      choiceFunction: (choiceText) => {
         console.log(choiceText);
       },
       footer: (
@@ -80,26 +72,24 @@ export const informational = () => (
       items: [
         {
           content: {
-            title: 'Choice Title',
+            title: 'Choice Title 1',
             infoLine1: 'Information about this choice',
             infoLine2: 'More Information',
           },
           value: 'choice-title-1',
           isActive: false,
-          href: '#nogo'
+          href: '#nogo',
         },
-        // TODO - when we build knobs, make sure this story demos multiple kinds of dropdown items
-        // {
-        //   element: Link,
-        //   content: {
-        //     title: 'Choice Title',
-        //     infoLine1: 'Information about this choice',
-        //     infoLine2: 'More Information',
-        //   },
-        //   to: '/button',
-        //   value: 'choice-title-2',
-        //   isActive: true,
-        // },
+        {
+          content: {
+            title: 'Choice Title 2',
+            infoLine1: 'Information about this choice',
+            infoLine2: 'More Information',
+          },
+          value: 'choice-title-2',
+          isActive: false,
+          href: '#nogo',
+        },
       ],
     }}
     defaultTriggerText="Make a selection..."

@@ -8,7 +8,7 @@
 
 /// Setting for the background
 /// color of any text when selected.
-$sprk-selection-bg-color: $sprk-purple-light !default;
+$sprk-selection-bg-color: $sprk-purple-lightest !default;
 /// Setting for the
 /// color of any text when selected.
 $sprk-selection-text-color: $sprk-black !default;
@@ -839,10 +839,6 @@ $sprk-link-simple-hover-color: $sprk-black !default;
 $sprk-link-simple-hover-underline-width: 0.125rem !default;
 /// The underline color of Simple Links on hover.
 $sprk-link-simple-hover-underline-color: $sprk-red !default;
-/// The left position of the after element of Simple Links on hover.
-$sprk-link-simple-hover-after-left: 10% !default;
-/// The width of the after element of Simple Links on hover.
-$sprk-link-simple-hover-after-width: 80% !default;
 /// The underline style of Simple Links.
 $sprk-link-simple-border-bottom: $sprk-link-simple-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-underline-color !default;
@@ -892,7 +888,7 @@ $sprk-link-has-icon-underline-color: transparent !default;
 /// The fill color for icons contained in Links.
 $sprk-link-has-icon-fill: $sprk-link-has-icon-color-icon !default;
 /// The stroke color for icons contained in Links.
-$sprk-link-has-icon-stroke: none !default;
+$sprk-link-has-icon-stroke: $sprk-link-has-icon-color-icon !default;
 /// The border settings for Links with icons.
 $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
@@ -903,6 +899,8 @@ $sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
 $sprk-link-has-icon-hover-color-text: $sprk-purple-deep !default;
 /// The fill color for icons contained in Links on hover.
 $sprk-link-has-icon-hover-fill: $sprk-link-has-icon-hover-color-text !default;
+/// The stroke color for icons contained in Links on hover.
+$sprk-link-has-icon-hover-stroke: $sprk-link-has-icon-hover-color-text !default;
 /// The border settings for Plain Links.
 $sprk-link-plain-border: none !default;
 /// The border settings for Plain Links in the visited state
@@ -1824,12 +1822,19 @@ $sprk-tooltip-caret-background-color: $sprk-black !default;
 $sprk-tooltip-toggled-icon-background-color: $sprk-purple !default;
 /// The z-index of the tooltip.
 $sprk-tooltip-z-index: $sprk-layer-height-xs !default;
-/// The max-width of the tooltip.
+/// The max-width of the tooltip. This is used as a fallback if
+/// the preferred width is invalid, e.g. for IE 11
 $sprk-tooltip-max-width: 328px !default;
+/// The preferred width of the tooltip.
+$sprk-tooltip-preferred-width: max-content !default;
 /// The min-width of the tooltip.
 $sprk-tooltip-min-width: 60px !default;
 /// The width of the tooltip caret.
-$sprk-tooltip-caret-width: 17px !default;
+$sprk-tooltip-caret-width: 16px !default;
+/// The transition applied to the tooltip.
+$sprk-tooltip-transition: all 200ms ease-out !default;
+/// The distance the tooltip should move during its animation.
+$sprk-tooltip-animation-offset: 0.5rem !default;
 
 //
 // Dropdown
@@ -1865,6 +1870,14 @@ $sprk-dropdown-title-color: $sprk-black-tint-30 !default;
 $sprk-dropdown-title-font-size: $sprk-dropdown-font-size !default;
 /// The font weight of the Dropdown title.
 $sprk-dropdown-title-font-weight: 300 !default;
+/// The color of the Dropdown links.
+$sprk-dropdown-link-color: $sprk-black !default;
+/// The color of the Dropdown trigger.
+$sprk-dropdown-trigger-color: $sprk-black !default;
+/// The color of the Dropdown trigger on hover, active, focus.
+$sprk-dropdown-trigger-color-active: $sprk-black !default;
+/// The color of the Dropdown trigger for the visited state.
+$sprk-dropdown-trigger-color-visited: $sprk-black !default;
 
 //
 // Modals
@@ -1930,6 +1943,10 @@ $sprk-masthead-content-item-padding-right-wide: $sprk-space-m !default;
 /// The padding left of the content
 /// items in the content section in the Masthead on wide viewports.
 $sprk-masthead-content-item-padding-left-wide: $sprk-space-m !default;
+/// The color of Masthead links.
+$sprk-masthead-link-color: $sprk-black !default;
+/// The color of Masthead Icon Links on hover.
+$sprk-masthead-link-icon-hover-color: $sprk-purple !default;
 /// The visited state color of Masthead links.
 $sprk-masthead-link-visited-color: $sprk-black !default;
 /// The font weight for Masthead links.
@@ -2109,8 +2126,10 @@ $sprk-spinner-thickness: 0.18rem !default;
 $sprk-spinner-color: $sprk-white !default;
 /// The color of the dark Spinner.
 $sprk-spinner-color-dark: $sprk-black !default;
-/// The color of the purple Spinner.
+/// The color of the primary Spinner.
 $sprk-spinner-color-primary: $sprk-red !default;
+/// The color of the secondary Spinner.
+$sprk-spinner-color-secondary: $sprk-purple !default;
 
 //
 // Tabbed Navigation

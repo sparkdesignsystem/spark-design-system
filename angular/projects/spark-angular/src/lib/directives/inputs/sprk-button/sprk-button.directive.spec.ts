@@ -72,13 +72,14 @@ describe('Spark Button Directive', () => {
     expect(button2Element.querySelectorAll('.sprk-c-Spinner').length).toBe(1);
   });
 
-  it('should add the dark spinner class when isSpinning is true on a tertiary button', () => {
+  it('should add the secondary spinner class when isSpinning is true on a tertiary button', () => {
     const spinnerNotThere = button5Element.querySelector('.sprk-c-Spinner');
     expect(spinnerNotThere).toBeNull();
     component.spinnerVal = true;
     fixture.detectChanges();
     const spinner = button5Element.querySelector('.sprk-c-Spinner');
-    expect(spinner.classList.contains('sprk-c-Spinner--dark')).toBe(true);
+    expect(spinner.classList.contains('sprk-c-Spinner--secondary')).toBe(true);
+    expect(spinner.classList.contains('sprk-c-Spinner--dark')).toBe(false);
   });
 
   it('should add the dark spinner class when isSpinning is true on a quaternary button', () => {
@@ -88,28 +89,33 @@ describe('Spark Button Directive', () => {
     fixture.detectChanges();
     const spinner = button6Element.querySelector('.sprk-c-Spinner');
     expect(spinner.classList.contains('sprk-c-Spinner--dark')).toBe(true);
+    expect(spinner.classList.contains('sprk-c-Spinner--secondary')).toBe(false);
   });
 
   it('should add the default button class when variant is not set', () => {
     expect(button1Element.classList.contains('sprk-c-Button')).toBe(true);
+    expect(button1Element.classList.length).toBe(1);
   });
 
   it('should add the secondary button class when variant is secondary', () => {
     expect(button3Element.classList.contains('sprk-c-Button--secondary')).toBe(
       true,
     );
+    expect(button3Element.classList.length).toBe(2);
   });
 
   it('should add the tertiary button class when variant is tertiary', () => {
     expect(button5Element.classList.contains('sprk-c-Button--tertiary')).toBe(
       true,
     );
+    expect(button5Element.classList.length).toBe(2);
   });
 
   it('should add the quaternary button class when variant is quaternary', () => {
     expect(button6Element.classList.contains('sprk-c-Button--quaternary')).toBe(
       true,
     );
+    expect(button6Element.classList.length).toBe(2);
   });
 
   it('should add the value of analyticsString to data-analytics', () => {
@@ -144,6 +150,7 @@ describe('Spark Button Directive', () => {
     expect(button4Element.classList.contains('sprk-c-Button--tertiary')).toBe(
       true,
     );
+    expect(button4Element.classList.length).toBe(2);
   });
 
   it('should fire setSpinning if isSpinning input is changed after first load', () => {

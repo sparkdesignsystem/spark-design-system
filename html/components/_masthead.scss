@@ -158,10 +158,17 @@
 }
 
 .sprk-c-Masthead__link {
+  color: $sprk-masthead-link-color;
   font-weight: $sprk-masthead-link-font-weight;
 
   &:visited {
     color: $sprk-masthead-link-visited-color;
+  }
+
+  &:hover {
+    .sprk-c-Icon {
+      color: $sprk-masthead-link-icon-hover-color;
+    }
   }
 }
 
@@ -232,23 +239,6 @@
 /// @name .sprk-c-Masthead__big-nav-item--active
 .sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
   font-weight: $sprk-big-nav-link-font-weight;
-}
-
-/// Adds open styles to open big navigation items.
-/// @name .sprk-c-Masthead__big-nav-item--open
-.sprk-c-Masthead__big-nav-item:focus-within,
-.sprk-c-Masthead__big-nav-item--open,
-.sprk-c-Masthead__big-nav-item--active {
-  .sprk-c-Masthead__link--big-nav {
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      left: $sprk-link-simple-hover-after-left;
-      width: $sprk-link-simple-hover-after-width;
-      border-bottom: $sprk-link-simple-hover-border-bottom;
-    }
-  }
 }
 
 // Fixed container that covers entire page
