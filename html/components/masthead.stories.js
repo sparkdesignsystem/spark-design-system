@@ -1,7 +1,7 @@
 import { useEffect } from '@storybook/client-api';
 import { masthead, toggleScrollEvent } from './masthead';
-import { toggle } from '../components/toggle';
-import { dropdowns } from '../components/dropdown';
+import { toggle } from './toggle';
+import { dropdowns } from './dropdown';
 import isElementVisible from '../utilities/isElementVisible';
 import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
@@ -670,7 +670,7 @@ export const extended = () => {
 
             <li>
               <a
-                class="sprk-b-Link sprk-b-Link--simple sprk-c-Masthead__link"
+                class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
                 href="#nogo"
                 data-sprk-dropdown-trigger="dropdown02"
                 aria-haspopup="true"
@@ -1355,4 +1355,4 @@ extended.story = {
     docs: { iframeHeight: 450 },
     jest: ['masthead'],
   },
-}
+};
