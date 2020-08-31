@@ -21,6 +21,7 @@ import { uniqueId } from 'lodash';
       #containerElement
     >
       <button
+        type="button"
         [ngClass]="{
           'sprk-c-Tooltip__trigger': true,
           'sprk-c-Tooltip--toggled': isToggled
