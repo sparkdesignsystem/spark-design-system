@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const SwatchGrid = ({ children, additionalClasses }) => {
   return (
     <div className={['docs-o-ColorSwatchGrid', additionalClasses].join(' ')}>
+      {/* // todo convert this to SprkStack */}
       {children}
     </div>
   );
