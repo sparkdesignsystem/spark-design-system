@@ -8,10 +8,8 @@ export default {
   component: SprkPromoComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${storyContent}<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `${markdownDocumentationLinkBuilder('promo')}`,
@@ -20,9 +18,7 @@ export default {
 };
 
 const modules = {
-  imports: [
-    SprkPromoModule,
-  ],
+  imports: [SprkPromoModule],
 };
 
 export const defaultStory = () => ({
@@ -47,9 +43,7 @@ export const defaultStory = () => ({
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'sprk-promo.component',
-    ],
+    jest: ['sprk-promo.component'],
   },
 };
 
@@ -62,6 +56,7 @@ export const flag = () => ({
       imgAlt="Spark Design System Logo"
       imgHref="#"
       idString="promo-2"
+      hasBorder="true"
     >
       Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
       inventore integer eum non enim diam habitant. Maecenas nunc per lacus
@@ -73,9 +68,7 @@ export const flag = () => ({
 flag.story = {
   parameters: {
     docs: { iframeHeight: 300 },
-    jest: [
-      'sprk-promo.component',
-    ],
+    jest: ['sprk-promo.component'],
   },
 };
 
@@ -92,6 +85,7 @@ export const withImage = () => ({
       ctaText="Learn More"
       buttonHref="#"
       idString="promo-3"
+      hasBorder="true"
     >
       Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
       inventore integer eum non enim diam habitant. Maecenas nunc per lacus
@@ -102,9 +96,7 @@ export const withImage = () => ({
 
 withImage.story = {
   parameters: {
-    jest: [
-      'sprk-promo.component',
-    ],
+    jest: ['sprk-promo.component'],
   },
 };
 
@@ -122,6 +114,7 @@ export const withReversedImage = () => ({
       ctaText="Learn More"
       buttonHref="#"
       idString="promo-4"
+      hasBorder="true"
     >
       Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
       inventore integer eum non enim diam habitant. Maecenas nunc per lacus
@@ -132,9 +125,6 @@ export const withReversedImage = () => ({
 
 withReversedImage.story = {
   parameters: {
-    jest: [
-      'sprk-promo.component',
-    ],
+    jest: ['sprk-promo.component'],
   },
 };
-
