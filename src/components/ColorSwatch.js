@@ -1,8 +1,13 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
-import theme from 'prism-react-renderer/themes/github';
-import { SprkStack, SprkStackItem } from '@sparkdesignsystem/spark-react';
-import InlineCode from './markdown-render/inlineCode';
+import {
+  SprkStack,
+  SprkStackItem,
+  SprkDivider,
+  SprkHeading,
+  SprkText,
+} from '@sparkdesignsystem/spark-react';
 import useColorData from '../hooks/use-color-data';
 
 const nameFormatter = (name) => {
@@ -46,70 +51,62 @@ const ColorSwatch = (props) => {
     );
   }
   return (
-    <SprkStack additionalClasses="docs-c-ColorSwatch" splitAt="small">
-      <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@s">
-        <SprkStack splitAt="tiny">
-          <SprkStackItem
-            style={{
-              // todo these change based on layout
-              height: '85px',
-              width: '85px',
-              marginRight: '10px',
-              backgroundColor: hexValue,
-              border: hasOutline ? '1px solid black' : 'none',
-            }}
-          />
-          {!isCompact && (
-            <SprkStackItem>
-              <div>{colorName || calculatedName}</div>
-              <div
-                style={
-                  {
-                    // maxWidth: '40%',
-                  }
-                }
-              >
-                {description}
-              </div>
+    <>
+      <SprkStack additionalClasses="docs-c-ColorSwatch" splitAt="small">
+        <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@s">
+          <SprkStack splitAt="tiny">
+            <SprkStackItem
+              style={{
+                // todo these change based on layout
+                height: '85px',
+                width: '85px',
+                marginRight: '10px',
+                backgroundColor: hexValue,
+                border: hasOutline ? '1px solid black' : 'none',
+              }}
+              additionalClasses="sprk-u-mbs"
+            />
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs">
+              <SprkHeading element="span" variant="displaySeven">
+                {colorName || calculatedName}
+              </SprkHeading>
+              <SprkText variant="bodyFour">{description}</SprkText>
             </SprkStackItem>
-          )}
-        </SprkStack>
-      </SprkStackItem>
-      {!isCompact && (
-        <>
-          <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
-            <div className="colorSwatchLabel">Hex</div>
-            <InlineCode
-              className="css"
-              theme={theme}
-              additionalPreClasses="sprk-u-pas sprk-u-man"
-            >
-              {hexValue}
-            </InlineCode>
-          </SprkStackItem>
-          <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
-            <div className="colorSwatchLabel">RGB</div>
-            <InlineCode
-              className="css"
-              theme={theme}
-              additionalPreClasses="sprk-u-pas sprk-u-man"
-            >
-              {rgbValue}
-            </InlineCode>
-          </SprkStackItem>
-          <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
-            <div className="colorSwatchLabel">Sass</div>
-            <InlineCode
-              className="css"
-              theme={theme}
-              additionalPreClasses="sprk-u-pas sprk-u-man"
-            >
-              {sassVar}
-            </InlineCode>
-          </SprkStackItem>
-        </>
-      )}
-    </SprkStack>
+          </SprkStack>
+        </SprkStackItem>
+        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
+          <span className="colorSwatchLabel sprk-u-pas">HEX</span>
+          <SprkText
+            additionalClasses="sprk-u-pas"
+            element="span"
+            variant="bodyFour"
+          >
+            {hexValue}
+          </SprkText>
+        </SprkStackItem>
+        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
+          <SprkStack splitAt="extraTiny">
+            <SprkStackItem additionalClasses="colorSwatchLabel sprk-u-pas">
+              RGB
+            </SprkStackItem>
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs sprk-u-pas">
+              <SprkText variant="bodyFour">{rgbValue}</SprkText>
+            </SprkStackItem>
+          </SprkStack>
+        </SprkStackItem>
+        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
+          <SprkStack splitAt="extraTiny">
+            <SprkStackItem additionalClasses="colorSwatchLabel sprk-u-pas">
+              SASS
+            </SprkStackItem>
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs sprk-u-pas">
+              <SprkText variant="bodyFour">{sassVar}</SprkText>
+            </SprkStackItem>
+          </SprkStack>
+        </SprkStackItem>
+      </SprkStack>
+      <SprkDivider element="hr" />
+    </>
   );
 };
 

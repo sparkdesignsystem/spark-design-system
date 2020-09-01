@@ -109,9 +109,15 @@ body {
 }
 
 .colorSwatchLabel {
-  // TODO visible at narrow widths and
-  // TODO can this be done with sprk stack?
-  display: none;
+  // display: none;
+  background-color: $sprk-black-tint-10;
+  color: $sprk-black-tint-80;
+  border-radius: 3px;
+  font-size: 0.8rem;
+
+  @media (max-width: 680px) {
+    // display: block;
+  }
 }
 
 /* stylelint-enable */
