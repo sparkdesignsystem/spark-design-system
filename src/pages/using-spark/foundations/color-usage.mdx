@@ -4,22 +4,6 @@
 import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
 import ColorSwatch from '../../../components/ColorSwatch';
 
-import accessibilityKey from '../../../images/accessibility-key.png';
-import accessibilityKey2x from '../../../images/accessibility-key@2x.png';
-import accessibilityKey3x from '../../../images/accessibility-key@3x.png';
-
-import accessibilityChart1 from '../../../images/accessibility-chart-1.png';
-import accessibilityChart12x from '../../../images/accessibility-chart-1@2x.png';
-import accessibilityChart13x from '../../../images/accessibility-chart-1@3x.png';
-
-import accessibilityChart2 from '../../../images/accessibility-chart-2.png';
-import accessibilityChart22x from '../../../images/accessibility-chart-2@2x.png';
-import accessibilityChart23x from '../../../images/accessibility-chart-2@3x.png';
-
-export const accessibilityKeySet = `${accessibilityKey} 560w, ${accessibilityKey2x} 1120w, ${accessibilityKey3x} 1680w`;
-export const accessibilityChart1Set= `${accessibilityChart1} 560w, ${accessibilityChart12x} 1120w, ${accessibilityChart13x} 1680w`;
-export const accessibilityChart2Set= `${accessibilityChart2} 560w, ${accessibilityChart22x} 1120w, ${accessibilityChart23x} 1680w`;
-
 import doRed from '../../../images/do-red.png';
 import doRed2x from '../../../images/do-red@2x.png';
 export const doRedSet = `${doRed} 560w, ${doRed2x} 1120w`;
@@ -56,6 +40,14 @@ import stepperExample from '../../../images/stepper-example.png';
 import stepperExample2x from '../../../images/stepper-example@2x.png';
 import stepperExample3x from '../../../images/stepper-example@3x.png';
 export const stepperExampleSet = `${stepperExample} 560w, ${stepperExample2x} 1120w, ${stepperExample3x} 1680w`;
+
+import chart1 from '../../../images/chart-1.png';
+import chart12x from '../../../images/chart-1@2x.png';
+export const chart1Set = `${chart1} 560w, ${chart12x} 1120w`;
+
+import chart2 from '../../../images/chart-2.png';
+import chart22x from '../../../images/chart-2@2x.png';
+export const chart2Set = `${chart2} 560w, ${chart22x} 1120w`;
 
 import {
   SprkStack,
@@ -139,7 +131,11 @@ Our objective is to achieve human-centered design in everything we do and having
 <SprkDivider element="span"/>
 <h2>How to Apply Color</h2>
 <h3>Rocket Red</h3>
-<h3>🟥🟥🟥🟥🟥🟥🟥🟥🟥</h3>
+<ColorSwatchGrid additionalClasses="sprk-u-mbm">
+  <ColorSwatch isCompact variableName="sprk-red" />
+  <ColorSwatch isCompact variableName="sprk-deep-red" />
+  <ColorSwatch isCompact variableName="sprk-mid-red" />
+</ColorSwatchGrid>
 <p>
   As our primary color, use Rocket Red for primary actions, like buttons and key elements in illustrations. Take care to not overuse any shades of red.
 </p>
@@ -214,7 +210,13 @@ Our objective is to achieve human-centered design in everything we do and having
 </SprkStack>
 <SprkDivider element="span"/>
 <h3>Orbit Purple</h3>
-<h3>🟥🟥🟥🟥🟥🟥🟥🟥🟥</h3>
+<ColorSwatchGrid additionalClasses="sprk-u-mbm">
+  <ColorSwatch isCompact variableName="sprk-purple" />
+  <ColorSwatch isCompact variableName="sprk-purple-dark" />
+  <ColorSwatch isCompact variableName="sprk-purple-deep" />
+  <ColorSwatch isCompact variableName="sprk-purple-light" />
+  <ColorSwatch isCompact variableName="sprk-purple-lightest" />
+</ColorSwatchGrid>
 <p>
   As our secondary color, use Purple to highlight secondary actions, like buttons, in-page links and active form fields. Use for highlighting important information and followed links.
 
@@ -245,7 +247,7 @@ Our objective is to achieve human-centered design in everything we do and having
     />
   </SprkStackItem>
 </SprkStack>
-  <SprkStack itemSpacing="medium" splitAt="small">
+<SprkStack itemSpacing="medium" splitAt="small">
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
     <SprkStack>
       <SprkStackItem additionalClasses="sprk-u-mbm">
@@ -315,7 +317,18 @@ Our objective is to achieve human-centered design in everything we do and having
 </SprkStack>
 <SprkDivider element="span"/>
 <h3>Neutral Colors</h3>
-<h3>🟥🟥🟥🟥🟥🟥🟥🟥🟥</h3>
+<ColorSwatchGrid additionalClasses="sprk-u-mbm">
+  <ColorSwatch isCompact variableName="sprk-black" />
+  <ColorSwatch isCompact variableName="sprk-black-tint-80" />
+  <ColorSwatch isCompact variableName="sprk-black-tint-70" />
+  <ColorSwatch isCompact variableName="sprk-black-tint-60" />
+  <ColorSwatch isCompact variableName="sprk-black-tint-50" />
+  <ColorSwatch isCompact variableName="sprk-black-tint-40" />
+  <ColorSwatch isCompact variableName="sprk-black-tint-30" />
+  <ColorSwatch isCompact variableName="sprk-black-tint-20" />
+  <ColorSwatch isCompact variableName="sprk-black-tint-10" />
+  <ColorSwatch isCompact variableName="sprk-gray" />
+</ColorSwatchGrid>
 <p>
   Often used for text, borders, and system icons.
 </p>
@@ -421,7 +434,12 @@ For example: always use shades of grey when working with text, where different c
 </SprkStack>
 <SprkDivider element="span"/>
 <h3>Semantic Colors</h3>
-<h3>🟥🟥🟥🟥🟥🟥🟥🟥🟥</h3>
+<ColorSwatchGrid additionalClasses="sprk-u-mbm">
+  <ColorSwatch isCompact variableName="sprk-green" />
+  <ColorSwatch isCompact variableName="sprk-blue" />
+  <ColorSwatch isCompact variableName="sprk-pink" />
+  <ColorSwatch isCompact variableName="sprk-yellow" />
+</ColorSwatchGrid>
 <p>
   Semantic colors should be used to communicate the status of messages.
 </p>
@@ -522,29 +540,64 @@ For example: always use shades of grey when working with text, where different c
   Floods of color should be reserved for the below colors only:
 </p>
 <h4>Dark</h4>
-<h3>🟥🟥🟥🟥🟥🟥🟥🟥🟥</h3>
+<ColorSwatchGrid additionalClasses="sprk-u-mbm">
+  <ColorSwatch isCompact variableName="sprk-black" />
+  <ColorSwatch isCompact variableName="sprk-purple-dark" />
+  <ColorSwatch isCompact variableName="sprk-purple-deep" />
+</ColorSwatchGrid>
 <h4>Light</h4>
-<h3>🟥🟥🟥🟥🟥🟥🟥🟥🟥</h3>
+<ColorSwatchGrid additionalClasses="sprk-u-mbm">
+  <ColorSwatch isCompact hasOutline variableName="sprk-white" />
+  <ColorSwatch isCompact hasOutline variableName="sprk-purple-lightest" />
+  <ColorSwatch isCompact hasOutline variableName="sprk-gray" />
+</ColorSwatchGrid>
 <SprkDivider element="span"/>
 <h3>Button and Link Hierarchy</h3>
 <p>
-  Buttons and links are one of the biggest changes within the update to the Orbit color palette. To see how this affects buttons and link guidelines, see the corresponding pages.
+  Button and link guidelines are one of the largest updates with the Orbit Color palette, specifically how color now has a further impact on the way we use and pair these components. To see more details, learn more on the Buttons and Links pages. .
 </p>
 <SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-Measure">
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
     <SprkCard>
       <h4>Buttons</h4>
       <p>
-        NEED CONTENT
+        View updates to our stanard for effective button usage.
       </p>
+      <SprkLink
+        element="a"
+        analyticsString="link-icon"
+        href="/using-spark/components/button"
+        variant="has-icon"
+      >
+        Button Guidelines
+        <SprkIcon
+          additionalClasses="
+            sprk-c-Icon--m
+            sprk-c-Icon--stroke-current-color"
+          iconName="chevron-right"
+        />
+      </SprkLink>
     </SprkCard>
   </SprkStackItem>
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
     <SprkCard>
-      <h4>Buttons</h4>
+      <h4>Links</h4>
       <p>
-        NEED CONTENT
+        View updates to our standard for effective link usage.
       </p>
+      <SprkLink
+        element="a"
+        href="/using-spark/components/link"
+        variant="has-icon"
+      >
+        Link Guidelines
+        <SprkIcon
+          additionalClasses="
+            sprk-c-Icon--m
+            sprk-c-Icon--stroke-current-color"
+          iconName="chevron-right"
+        />
+      </SprkLink>
     </SprkCard>
   </SprkStackItem>
 </SprkStack>
@@ -552,13 +605,42 @@ For example: always use shades of grey when working with text, where different c
 <p>
   Charts and graphs use shades of purple to represent the correct information hierarchy.
 </p>
-<h3>🟥🟥🟥🟥🟥🟥🟥🟥🟥</h3>
+<ColorSwatchGrid additionalClasses="sprk-u-mbm">
+  <ColorSwatch isCompact variableName="sprk-purple-navy" />
+  <ColorSwatch isCompact variableName="sprk-purple-deep" />
+  <ColorSwatch isCompact variableName="sprk-purple-dark" />
+  <ColorSwatch isCompact variableName="sprk-purple" />
+  <ColorSwatch isCompact variableName="sprk-purple-light" />
+  <ColorSwatch isCompact variableName="sprk-lavender" />
+  <ColorSwatch isCompact variableName="sprk-wisteria" />
+  <ColorSwatch isCompact variableName="sprk-magnolia" />
+</ColorSwatchGrid>
 <p>
   When presenting something negative to the user, pink – or the semantic Error color – should be used.
 </p>
 <p>
   While semantic colors can be used to display both positive and negative information, we strongly recommend not mixing multiple semantic colors within one chart. These colors should only be used as accents on the Purple gradient palette.
 </p>
-<p>
-  🖼TWO CHARTS HERE🖼
-</p>
+
+<SprkStack itemSpacing="medium" splitAt="small">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
+    <img
+      srcset={chart1Set}
+      src={chart1}
+      sizes="(min-width: 1120px) 1120px,
+            (min-width: 1680px) 1680px,
+            560px"
+      class="sprk-u-mbm"
+      alt="Orbit Purple Screen that fills majority of space, paired with a step-by-step navigation bar and blank iPhone screen."/>
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
+    <img
+      srcset={chart2Set}
+      src={chart2}
+      sizes="(min-width: 1120px) 1120px,
+            (min-width: 1680px) 1680px,
+            560px"
+      class="sprk-u-mbm"
+      alt="Orbit Purple Screen that fills majority of space, paired with a step-by-step navigation bar and blank iPhone screen."/>
+  </SprkStackItem>
+</SprkStack>
