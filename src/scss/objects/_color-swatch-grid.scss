@@ -1,17 +1,6 @@
+/* stylelint-disable selector-class-pattern */
 .docs-o-ColorSwatchGrid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width));
-  gap: $sprk-space-m;
-
-  @media (max-width: $docs-color-swatch-three-column-breakpoint) {
-    grid-template-columns: repeat(3, minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width));
-  }
-
-  @media (max-width: $docs-color-swatch-two-column-breakpoint) {
-    grid-template-columns: repeat(2, minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width));
-  }
-
-  @media (max-width: $docs-color-swatch-one-column-breakpoint) {
-    grid-template-columns: minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width);
+  .docs-c-ColorSwatch {
+    margin-bottom: 10px;
   }
 }

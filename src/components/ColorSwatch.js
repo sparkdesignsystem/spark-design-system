@@ -1,80 +1,123 @@
 import React from 'react';
-import InlineCode from '../components/markdown-render/inlineCode';
+import PropTypes from 'prop-types';
 import theme from 'prism-react-renderer/themes/github';
+import { SprkStack, SprkStackItem } from '@sparkdesignsystem/spark-react';
+import InlineCode from './markdown-render/inlineCode';
+import useColorData from '../hooks/use-color-data';
 
-const ColorSwatch = ({ name, description, hexValue, rgbValue, sassVar, swatchHeight }) => (
-  <div className="sprk-c-Card sprk-o-Stack">
-    <div className="sprk-o-Stack__item">
+const nameFormatter = (name) => {
+  return name
+    .replace(/-/g, ' ')
+    .replace('sprk', '')
+    .split(' ')
+    .map((word) => word.substring(0, 1).toUpperCase() + word.substring(1))
+    .join(' ');
+};
+
+const ColorSwatch = (props) => {
+  const colorData = useColorData();
+
+  const { variableName, colorName, isCompact, hasOutline } = props;
+
+  // return a single object containing data for one color
+  const colorNode = colorData.filter((item) => {
+    return item.node.context.name === variableName;
+  })[0];
+
+  const calculatedName = nameFormatter(colorNode.node.context.name);
+  const rgbValue = colorNode.node.context.value;
+  const { description } = colorNode.node;
+  const hexValue = colorNode.node.type;
+  const sassVar = `$${colorNode.node.context.name}`;
+
+  if (isCompact) {
+    return (
       <div
         style={{
-          minHeight: swatchHeight || '140px',
-          backgroundColor: rgbValue
+          // todo these change based on layout
+          height: '85px',
+          width: '85px',
+          marginRight: '10px',
+          backgroundColor: hexValue,
+          display: 'inline-block',
+          border: hasOutline ? '1px solid black' : 'none',
         }}
-        className="sprk-c-Card__media"></div>
-    </div>
-
-    <div className="
-      sprk-o-Stack__item
-      sprk-c-Card__content
-      sprk-o-Stack
-      sprk-o-Stack--large
-      "
-    >
-      <h3 className="sprk-b-TypeDisplayFive sprk-o-Stack__item">
-        {name}
-      </h3>
-
-      <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-        {description}
-      </p>
-
-      <div className="sprk-o-Stack sprk-o-Stack--medium">
-        {hexValue && (
-          <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
-            <h4 className="sprk-b-TypeDisplaySeven sprk-o-Stack__item">
-              Hex Value
-            </h4>
-
+      />
+    );
+  }
+  return (
+    <SprkStack additionalClasses="docs-c-ColorSwatch" splitAt="small">
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@s">
+        <SprkStack splitAt="tiny">
+          <SprkStackItem
+            style={{
+              // todo these change based on layout
+              height: '85px',
+              width: '85px',
+              marginRight: '10px',
+              backgroundColor: hexValue,
+              border: hasOutline ? '1px solid black' : 'none',
+            }}
+          />
+          {!isCompact && (
+            <SprkStackItem>
+              <div>{colorName || calculatedName}</div>
+              <div
+                style={
+                  {
+                    // maxWidth: '40%',
+                  }
+                }
+              >
+                {description}
+              </div>
+            </SprkStackItem>
+          )}
+        </SprkStack>
+      </SprkStackItem>
+      {!isCompact && (
+        <>
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
+            <div className="colorSwatchLabel">Hex</div>
             <InlineCode
               className="css"
               theme={theme}
-              additionalPreClasses="sprk-u-pas sprk-u-man sprk-o-Stack__item"
+              additionalPreClasses="sprk-u-pas sprk-u-man"
             >
               {hexValue}
             </InlineCode>
-          </div>
-        )}
+          </SprkStackItem>
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
+            <div className="colorSwatchLabel">RGB</div>
+            <InlineCode
+              className="css"
+              theme={theme}
+              additionalPreClasses="sprk-u-pas sprk-u-man"
+            >
+              {rgbValue}
+            </InlineCode>
+          </SprkStackItem>
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
+            <div className="colorSwatchLabel">Sass</div>
+            <InlineCode
+              className="css"
+              theme={theme}
+              additionalPreClasses="sprk-u-pas sprk-u-man"
+            >
+              {sassVar}
+            </InlineCode>
+          </SprkStackItem>
+        </>
+      )}
+    </SprkStack>
+  );
+};
 
-        <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
-          <h4 className="sprk-b-TypeDisplaySeven sprk-o-Stack__item">
-            RGB Value
-          </h4>
-
-          <InlineCode
-            className="css"
-            theme={theme}
-            additionalPreClasses="sprk-u-pas sprk-u-man sprk-o-Stack__item"
-          >
-            {rgbValue}
-          </InlineCode>
-        </div>
-
-        <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
-          <h4 className="sprk-b-TypeDisplaySeven sprk-o-Stack__item">
-            Sass Variable
-          </h4>
-
-          <InlineCode
-            className="css"
-            theme={theme}
-            additionalPreClasses="sprk-u-pas sprk-u-man sprk-o-Stack__item"
-          >
-            {sassVar}
-          </InlineCode>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+ColorSwatch.propTypes = {
+  variableName: PropTypes.string,
+  isCompact: PropTypes.bool,
+  hasOutline: PropTypes.bool,
+  colorName: PropTypes.string,
+};
 
 export default ColorSwatch;
