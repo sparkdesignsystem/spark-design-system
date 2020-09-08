@@ -52,8 +52,8 @@ const ColorSwatch = (props) => {
   }
   return (
     <>
-      <SprkStack additionalClasses="docs-c-ColorSwatch" splitAt="small">
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@s">
+      <SprkStack additionalClasses="docs-c-ColorSwatch" splitAt="large">
+        <SprkStackItem additionalClasses="sprk-o-Stack__item--two-fifths@l">
           <SprkStack splitAt="tiny">
             <SprkStackItem
               style={{
@@ -66,44 +66,54 @@ const ColorSwatch = (props) => {
               }}
               additionalClasses="sprk-u-mbs"
             />
-            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs">
+            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs sprk-u-mrs">
               <SprkHeading element="span" variant="displaySeven">
                 {colorName || calculatedName}
               </SprkHeading>
-              <SprkText variant="bodyFour">{description}</SprkText>
+              <SprkText additionalClasses="sprk-u-mbm" variant="bodyFour">
+                {description}
+              </SprkText>
             </SprkStackItem>
           </SprkStack>
         </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
-          <span className="colorSwatchLabel sprk-u-pas">HEX</span>
-          <SprkText
-            additionalClasses="sprk-u-pas"
-            element="span"
-            variant="bodyFour"
-          >
-            {hexValue}
-          </SprkText>
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
-          <SprkStack splitAt="extraTiny">
-            <SprkStackItem additionalClasses="colorSwatchLabel sprk-u-pas">
-              RGB
-            </SprkStackItem>
-            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs sprk-u-pas">
-              <SprkText variant="bodyFour">{rgbValue}</SprkText>
-            </SprkStackItem>
-          </SprkStack>
-        </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@s">
-          <SprkStack splitAt="extraTiny">
-            <SprkStackItem additionalClasses="colorSwatchLabel sprk-u-pas">
-              SASS
-            </SprkStackItem>
-            <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs sprk-u-pas">
-              <SprkText variant="bodyFour">{sassVar}</SprkText>
-            </SprkStackItem>
-          </SprkStack>
-        </SprkStackItem>
+        <SprkStack splitAt="small">
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@l sprk-o-Stack__item--third@s">
+            <div className="colorSwatchLabelContainer">
+              <span className="colorSwatchLabel sprk-u-pas">HEX</span>
+            </div>
+            <SprkText
+              additionalClasses="sprk-u-pas colorSwatchVariableValue"
+              element="div"
+              variant="bodyFour"
+            >
+              {hexValue}
+            </SprkText>
+          </SprkStackItem>
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@l sprk-o-Stack__item--third@s">
+            <div className="colorSwatchLabelContainer">
+              <span className="colorSwatchLabel sprk-u-pas">RGB</span>
+            </div>
+            <SprkText
+              additionalClasses="sprk-u-pas colorSwatchVariableValue"
+              element="div"
+              variant="bodyFour"
+            >
+              {rgbValue}
+            </SprkText>
+          </SprkStackItem>
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@l sprk-o-Stack__item--third@s">
+            <div className="colorSwatchLabelContainer">
+              <span className="colorSwatchLabel sprk-u-pas">Sass</span>
+            </div>
+            <SprkText
+              additionalClasses="sprk-u-pas colorSwatchVariableValue"
+              element="div"
+              variant="bodyFour"
+            >
+              {sassVar}
+            </SprkText>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStack>
       <SprkDivider element="hr" />
     </>

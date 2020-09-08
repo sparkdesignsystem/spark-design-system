@@ -115,9 +115,23 @@ body {
   border-radius: 3px;
   font-size: 0.8rem;
 
-  @media (max-width: 680px) {
+  @media (max-width: 1080px) {
     // display: block;
   }
+}
+
+.colorSwatchLabelContainer {
+  width: 25%;
+  display: inline-block;
+
+  @media (max-width: 1080px) {
+    margin-bottom: 10px;
+  }
+}
+
+.colorSwatchVariableValue {
+  width: 75%;
+  display: inline-block;
 }
 
 /* stylelint-enable */
