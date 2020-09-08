@@ -77,7 +77,7 @@ module.exports = {
       options: {
         url:
           'https://www.rockomni.com/mcds/assets/GlobalContent/NonStockImages' +
-          '/Icons/spark-core-icons-V14.svg',
+          '/Icons/spark-icons-v14.svg',
       },
     },
     {
