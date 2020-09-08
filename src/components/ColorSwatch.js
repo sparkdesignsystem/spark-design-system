@@ -39,7 +39,7 @@ const ColorSwatch = (props) => {
     return (
       <div
         style={{
-          // todo these change based on layout
+          // todo move this to scss
           height: '85px',
           width: '85px',
           marginRight: '10px',
@@ -67,7 +67,7 @@ const ColorSwatch = (props) => {
               additionalClasses="sprk-u-mbs"
             />
             <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs sprk-u-mrs">
-              <SprkHeading element="span" variant="displaySeven">
+              <SprkHeading element="h3" variant="displaySeven">
                 {colorName || calculatedName}
               </SprkHeading>
               <SprkText additionalClasses="sprk-u-mbm" variant="bodyFour">
@@ -78,11 +78,11 @@ const ColorSwatch = (props) => {
         </SprkStackItem>
         <SprkStack splitAt="small">
           <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@l sprk-o-Stack__item--third@s">
-            <div className="colorSwatchLabelContainer">
-              <span className="colorSwatchLabel sprk-u-pas">HEX</span>
+            <div className="docs-c-ColorSwatch__label_container">
+              <span className="docs-c-ColorSwatch__label sprk-u-pas">HEX</span>
             </div>
             <SprkText
-              additionalClasses="sprk-u-pas colorSwatchVariableValue"
+              additionalClasses="sprk-u-pas docs-c-ColorSwatch__variable"
               element="div"
               variant="bodyFour"
             >
@@ -90,11 +90,11 @@ const ColorSwatch = (props) => {
             </SprkText>
           </SprkStackItem>
           <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@l sprk-o-Stack__item--third@s">
-            <div className="colorSwatchLabelContainer">
-              <span className="colorSwatchLabel sprk-u-pas">RGB</span>
+            <div className="docs-c-ColorSwatch__label_container">
+              <span className="docs-c-ColorSwatch__label sprk-u-pas">RGB</span>
             </div>
             <SprkText
-              additionalClasses="sprk-u-pas colorSwatchVariableValue"
+              additionalClasses="sprk-u-pas docs-c-ColorSwatch__variable"
               element="div"
               variant="bodyFour"
             >
@@ -102,11 +102,11 @@ const ColorSwatch = (props) => {
             </SprkText>
           </SprkStackItem>
           <SprkStackItem additionalClasses="sprk-o-Stack__item--fifth@l sprk-o-Stack__item--third@s">
-            <div className="colorSwatchLabelContainer">
-              <span className="colorSwatchLabel sprk-u-pas">Sass</span>
+            <div className="docs-c-ColorSwatch__label_container">
+              <span className="docs-c-ColorSwatch__label sprk-u-pas">Sass</span>
             </div>
             <SprkText
-              additionalClasses="sprk-u-pas colorSwatchVariableValue"
+              additionalClasses="sprk-u-pas docs-c-ColorSwatch__variable"
               element="div"
               variant="bodyFour"
             >
