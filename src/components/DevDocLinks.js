@@ -4,7 +4,7 @@ import {
   SprkLink,
   SprkList,
   SprkListItem,
-  SprkIcon
+  SprkIcon,
 } from '@sparkdesignsystem/spark-react';
 
 class DevDocLinks extends React.Component {
