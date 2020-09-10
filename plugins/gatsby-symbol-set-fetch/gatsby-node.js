@@ -2,7 +2,6 @@ const fetch = require('node-fetch');
 
 exports.sourceNodes = ({ actions, createContentDigest }, configOptions) => {
   const { createNode } = actions;
-  console.log(configOptions, 'config options');
   return (
     // Fetch a response from the apiUrl
     fetch(configOptions.url)
@@ -13,7 +12,7 @@ exports.sourceNodes = ({ actions, createContentDigest }, configOptions) => {
         createNode({
           id: '1',
           internal: {
-            type: 'SparkIconSet',
+            type: 'SparkIconSetV14',
             content: data,
             contentDigest: createContentDigest(data),
           },
