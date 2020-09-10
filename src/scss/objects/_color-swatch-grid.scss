@@ -1,6 +1,40 @@
 /* stylelint-disable selector-class-pattern */
-.docs-o-ColorSwatchGrid {
-  .docs-c-ColorSwatch {
-    margin-bottom: 10px;
+.docs-c-ColorSwatch__swatch {
+  height: 85px;
+  width: 85px;
+}
+
+.docs-c-ColorSwatch__swatch--compact {
+  display: inline-block;
+}
+
+.docs-c-ColorSwatch__swatch--hasOutline {
+  border: 1px solid $sprk-black;
+}
+
+.docs-c-ColorSwatch__heading {
+  &::before {
+    // spark override
+    margin-bottom: 0;
   }
+}
+
+.docs-c-ColorSwatch__label_container {
+  width: 25%;
+  display: inline-block;
+
+  @media (max-width: $sprk-split-breakpoint-l) {
+    margin-bottom: $sprk-space-m;
+  }
+}
+
+.docs-c-ColorSwatch__label {
+  background-color: $sprk-black-tint-10;
+  color: $sprk-black-tint-80;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.docs-c-ColorSwatch__variable {
+  display: inline-block;
 }

@@ -104,34 +104,4 @@ body {
   }
 }
 
-.docs-c-ColorSwatch {
-  // width: 100%;
-}
-
-.colorSwatchLabel {
-  // display: none;
-  background-color: $sprk-black-tint-10;
-  color: $sprk-black-tint-80;
-  border-radius: 3px;
-  font-size: 0.8rem;
-
-  @media (max-width: 1080px) {
-    // display: block;
-  }
-}
-
-.colorSwatchLabelContainer {
-  width: 25%;
-  display: inline-block;
-
-  @media (max-width: 1080px) {
-    margin-bottom: 10px;
-  }
-}
-
-.colorSwatchVariableValue {
-  width: 75%;
-  display: inline-block;
-}
-
 /* stylelint-enable */
