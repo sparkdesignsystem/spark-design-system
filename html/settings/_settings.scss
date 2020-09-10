@@ -1794,6 +1794,10 @@ $sprk-toggle-transition-timing: 0.3s ease !default;
 // Tooltip
 ///
 
+/// The space that the Tooltip's caret is offset from the edge.
+$sprk-tooltip-caret-offset: 1rem;
+/// The surrounding hover area around the trigger when the Tooltip is visible.
+$sprk-tooltip-trigger-hover-offset: 1rem;
 /// The border for the tooltip trigger.
 $sprk-tooltip-trigger-border: none !default;
 /// The background color for the tooltip trigger.
@@ -2129,7 +2133,7 @@ $sprk-spinner-color-dark: $sprk-black !default;
 /// The color of the primary Spinner.
 $sprk-spinner-color-primary: $sprk-red !default;
 /// The color of the secondary Spinner.
-$sprk-spinner-color-secondary: $sprk-purple !default;
+$sprk-spinner-color-secondary: $sprk-purple-dark !default;
 
 //
 // Tabbed Navigation

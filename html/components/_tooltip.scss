@@ -2,10 +2,6 @@
 /// @group tooltip
 ////
 
-// TODO make these configurable
-$sprk-trigger-height: 1rem;
-$sprk-trigger-width: 1rem;
-
 .sprk-c-Tooltip__container {
   position: relative;
   display: inline-flex;
@@ -22,10 +18,10 @@ $sprk-trigger-width: 1rem;
   /* Increase hoverable area of trigger */
   &:hover::after {
     position: absolute;
-    top: calc(-#{$sprk-trigger-height});
-    left: calc(-#{$sprk-trigger-width});
-    width: calc(3 * #{$sprk-trigger-height});
-    height: calc(3 * #{$sprk-trigger-width});
+    top: calc(-#{$sprk-tooltip-trigger-hover-offset});
+    left: calc(-#{$sprk-tooltip-trigger-hover-offset});
+    width: calc(3 * #{$sprk-tooltip-trigger-hover-offset});
+    height: calc(3 * #{$sprk-tooltip-trigger-hover-offset});
     content: ' ';
   }
 }
@@ -68,15 +64,13 @@ $sprk-trigger-width: 1rem;
 
   &.sprk-c-Tooltip--top-left {
     top: auto;
-    right: calc(-#{$sprk-trigger-width});
-    bottom: calc(
-      #{$sprk-trigger-height} + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
-    );
     left: auto;
+    bottom: calc(100% + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset});
+    right: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
 
     &::before {
       top: auto;
-      right: $sprk-trigger-width;
+      right: $sprk-tooltip-caret-offset;
       bottom: calc(-#{$sprk-tooltip-caret-width} / 2);
       left: auto;
     }
@@ -85,48 +79,42 @@ $sprk-trigger-width: 1rem;
   &.sprk-c-Tooltip--top-right {
     top: auto;
     right: auto;
-    bottom: calc(
-      #{$sprk-trigger-height} + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
-    );
-    left: calc(-#{$sprk-trigger-width});
+    bottom: calc(100% + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset});
+    left: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
 
     &::before {
       top: auto;
       right: auto;
       bottom: calc(-#{$sprk-tooltip-caret-width} / 2);
-      left: $sprk-trigger-width;
+      left: $sprk-tooltip-caret-offset;
     }
   }
 
   &.sprk-c-Tooltip--bottom-left {
-    top: calc(
-      #{$sprk-trigger-height} + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
-    );
-    right: calc(-#{$sprk-trigger-width});
+    top: calc(100% + #{$sprk-tooltip-caret-width} +  #{$sprk-tooltip-animation-offset});
+    right: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
     bottom: auto;
     left: auto;
 
     &::before {
       top: calc(-#{$sprk-tooltip-caret-width} / 2);
-      right: $sprk-trigger-width;
+      right: $sprk-tooltip-caret-offset;
       bottom: auto;
       left: auto;
     }
   }
 
   &.sprk-c-Tooltip--bottom-right {
-    top: calc(
-      #{$sprk-trigger-height} + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
-    );
+    top: calc(100% + #{$sprk-tooltip-caret-width} +  #{$sprk-tooltip-animation-offset});
     right: auto;
     bottom: auto;
-    left: calc(-#{$sprk-trigger-width});
+    left: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
 
     &::before {
       top: calc(-#{$sprk-tooltip-caret-width} / 2);
       right: auto;
       bottom: auto;
-      left: $sprk-trigger-width;
+      left: $sprk-tooltip-caret-offset;
     }
   }
 }
@@ -146,29 +134,29 @@ $sprk-trigger-width: 1rem;
 
   &.sprk-c-Tooltip--top-left {
     top: auto;
-    right: calc(-#{sprk-trigger-width});
-    bottom: calc(#{$sprk-trigger-height} + #{$sprk-tooltip-caret-width});
     left: auto;
+    bottom: calc(100% + #{$sprk-tooltip-caret-width});
+    right: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
   }
 
   &.sprk-c-Tooltip--top-right {
     top: auto;
     right: auto;
-    bottom: calc(#{$sprk-trigger-height} + #{$sprk-tooltip-caret-width});
-    left: calc(-#{sprk-trigger-width});
+    bottom: calc(100% + #{$sprk-tooltip-caret-width});
+    left: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
   }
 
   &.sprk-c-Tooltip--bottom-left {
-    top: calc(#{$sprk-trigger-height} + #{$sprk-tooltip-caret-width});
-    right: calc(-#{sprk-trigger-width});
+    top: calc(100% + #{$sprk-tooltip-caret-width});
+    right: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
     bottom: auto;
     left: auto;
   }
 
   &.sprk-c-Tooltip--bottom-right {
-    top: calc(#{$sprk-trigger-height} + #{$sprk-tooltip-caret-width});
+    top: calc(100% + #{$sprk-tooltip-caret-width});
     right: auto;
     bottom: auto;
-    left: calc(-#{sprk-trigger-width});
+    left: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
   }
 }

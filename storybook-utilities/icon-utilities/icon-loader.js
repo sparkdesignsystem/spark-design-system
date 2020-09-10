@@ -1,5 +1,5 @@
 const request = new XMLHttpRequest();
-request.open('GET', 'https://spark-assets.netlify.app/spark-icons.svg');
+request.open('GET', 'https://spark-assets.netlify.app/spark-icons-v14.svg');
 request.send();
 // eslint-disable-next-line func-names
 request.onload = function () {

@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-react",
-  "version": "2.1.1",
+  "version": "3.0.0-alpha.0",
   "description": "A collection of Spark Design System components in React 16+",
   "main": "dist/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "peerDependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "@sparkdesignsystem/spark": "^13.1.1"
+    "@sparkdesignsystem/spark": "^14.0.0-alpha.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",

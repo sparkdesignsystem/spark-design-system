@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: 'Spark Design System',
-    description: 'Spark Design System is a system of patterns and components '
-      + 'used to create the user interface for the Quicken Loans family of '
-      + 'Fintech products.',
+    description:
+      'Spark Design System is a system of patterns and components ' +
+      'used to create the user interface for the Quicken Loans family of ' +
+      'Fintech products.',
     author: '@sparkQL',
   },
   plugins: [
@@ -74,20 +75,33 @@ module.exports = {
     {
       resolve: 'gatsby-symbol-set-fetch',
       options: {
-        url: 'https://www.rockomni.com/mcds/assets/GlobalContent/NonStockImages'
-          + '/Icons/spark-core-icons-V10.svg',
+        url:
+          'https://www.rockomni.com/mcds/assets/GlobalContent/NonStockImages' +
+          '/Icons/spark-icons-v14.svg',
       },
     },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          'homepage-pages': require.resolve('./src/components/layouts/HomepageLayout.js'),
-          'installing-spark-pages': require.resolve('./src/components/layouts/InstallingSparkLayout.js'),
-          'installing-spark-page': require.resolve('./src/components/layouts/InstallingSparkLayout.js'),
-          'using-spark-pages': require.resolve('./src/components/layouts/UsingSparkLayout.js'),
-          'using-spark-page': require.resolve('./src/components/layouts/UsingSparkLayout.js'),
-          'principles-pages': require.resolve('./src/components/layouts/PrinciplesLayout.js'),
+          'homepage-pages': require.resolve(
+            './src/components/layouts/HomepageLayout.js',
+          ),
+          'installing-spark-pages': require.resolve(
+            './src/components/layouts/InstallingSparkLayout.js',
+          ),
+          'installing-spark-page': require.resolve(
+            './src/components/layouts/InstallingSparkLayout.js',
+          ),
+          'using-spark-pages': require.resolve(
+            './src/components/layouts/UsingSparkLayout.js',
+          ),
+          'using-spark-page': require.resolve(
+            './src/components/layouts/UsingSparkLayout.js',
+          ),
+          'principles-pages': require.resolve(
+            './src/components/layouts/PrinciplesLayout.js',
+          ),
           default: require.resolve('./src/components/layouts/Layout.js'),
         },
       },
@@ -95,6 +109,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
+        // eslint-disable-next-line global-require
         postCssPlugins: [require('postcss-preset-env')({ stage: 0 })],
       },
     },
@@ -103,7 +118,8 @@ module.exports = {
       options: {
         // The property ID; the tracking code won't be generated without it
         trackingId: 'UA-113915182-1',
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        // Defines where to place the tracking
+        /// script - `true` in the head and `false` in the body
         head: false,
         // Setting this parameter is also optional
         respectDNT: true,
