@@ -75,7 +75,9 @@ module.exports = {
     {
       resolve: 'gatsby-symbol-set-fetch',
       options: {
-        url: 'https://spark-assets.netlify.app/spark-icons-v14.svg',
+        url:
+          'https://www.rockomni.com/mcds/assets/GlobalContent/NonStockImages' +
+          '/Icons/spark-icons-v14.svg',
       },
     },
     {
