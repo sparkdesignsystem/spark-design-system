@@ -10,7 +10,6 @@ exports.sourceNodes = ({ actions, createContentDigest }, configOptions) => {
       .then((response) => response.text())
       // Process the JSON data into a node
       .then((data) => {
-        console.log(data, 'THIS ONE WORKS');
         createNode({
           id: '1',
           internal: {
