@@ -2,8 +2,6 @@ const fetch = require('node-fetch');
 
 exports.sourceNodes = ({ actions, createContentDigest }, configOptions) => {
   const { createNode } = actions;
-  // eslint-disable-next-line no-unused-vars
-  const amber = 'a,mber';
 
   return (
     // Fetch a response from the apiUrl
