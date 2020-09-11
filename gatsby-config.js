@@ -75,9 +75,7 @@ module.exports = {
     {
       resolve: 'gatsby-symbol-set-fetch',
       options: {
-        url:
-          'https://www.rockomni.com/mcds/assets/GlobalContent/NonStockImages' +
-          '/Icons/spark-icons-v14.svg',
+        url: 'https://spark-assets.netlify.app/spark-icons-v14.svg',
       },
     },
     {
@@ -118,8 +116,7 @@ module.exports = {
       options: {
         // The property ID; the tracking code won't be generated without it
         trackingId: 'UA-113915182-1',
-        // Defines where to place the tracking
-        /// script - `true` in the head and `false` in the body
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
         // Setting this parameter is also optional
         respectDNT: true,
