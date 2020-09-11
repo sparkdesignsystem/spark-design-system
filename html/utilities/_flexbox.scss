@@ -1,0 +1,160 @@
+/// Utility to add flexbox to elements based upon breakpoints.
+/// You can choose for this to be constant or add a responsive
+/// modifier and have it start at a specific breakpoint
+/// ex. sprk-u-Flexbox@xs (xxs, xs, s, m, l, xl).
+/// @group multi-layout
+.sprk-u-FlexBox {
+    display: flex !important;
+
+    &\@xxs {
+        @media all and (min-width: $sprk-split-breakpoint-xxs) {
+            display: flex !important;
+        }
+    }
+
+    &\@xs {
+        @media all and (min-width: $sprk-split-breakpoint-xs) {
+            display: flex !important;
+        }
+    }
+
+    &\@s {
+        @media all and (min-width: $sprk-split-breakpoint-s) {
+            display: flex !important;
+        }
+    }
+
+    &\@m {
+        @media all and (min-width: $sprk-split-breakpoint-m) {
+            display: flex !important;
+        }
+    }
+
+    &\@l {
+        @media all and (min-width: $sprk-split-breakpoint-l) {
+            display: flex !important;
+        }
+    }
+
+    &\@xl {
+        @media all and (min-width: $sprk-split-breakpoint-xl) {
+            display: flex !important;
+        }
+    }
+}
+
+/// Utility to add flexbox to elements based upon breakpoints.
+/// You can choose for this to be constant or add a responsive
+/// modifier and have it start at a specific breakpoint.
+/// ex. sprk-u-Flexbox--inline@xs (xxs, xs, s, m, l, xl).
+/// @group multi-layout
+.sprk-u-FlexBox--inline {
+    display: inline-flex !important;
+
+    &\@xxs {
+        @media all and (min-width: $sprk-split-breakpoint-xxs) {
+            display: inline-flex !important;
+        }
+    }
+
+    &\@xs {
+        @media all and (min-width: $sprk-split-breakpoint-xs) {
+            display: inline-flex !important;
+        }
+    }
+
+    &\@s {
+        @media all and (min-width: $sprk-split-breakpoint-s) {
+            display: inline-flex !important;
+        }
+    }
+
+    &\@m {
+        @media all and (min-width: $sprk-split-breakpoint-m) {
+            display: inline-flex !important;
+        }
+    }
+
+    &\@l {
+        @media all and (min-width: $sprk-split-breakpoint-l) {
+            display: inline-flex !important;
+        }
+    }
+
+    &\@xl {
+        @media all and (min-width: $sprk-split-breakpoint-xl) {
+            display: inline-flex !important;
+        }
+    }
+}
+
+/// Flexbox direction to row or column.
+/// Used to modify an element displayed as flex or inline-flex.
+/// ex. sprk-u-Flexbox-direction--column.
+/// @group multi-layout
+.sprk-u-FlexBox-direction {
+    &--row {
+        flex-direction: row !important;
+    }
+
+    &--column {
+        flex-direction: column !important;
+    }
+}
+
+/// Flexbox element grow.
+/// Used to modify an element inside a flex or inline-flex element.
+/// ex. sprk-u-Flexbox--grow.
+/// @group multi-layout
+.sprk-u-FlexBox--grow {
+    flex-grow: 1 !important;
+}
+
+/// Flexbox item alignment.
+/// Used to modify an element displayed as flex or inline-flex.
+/// Suports center, start, end, baseline, and stretch.
+/// ex. sprk-u-Flexbox-direction-align-items--center.
+/// @group multi-layout
+.sprk-u-FlexBox-align-items {
+    &--start {
+        align-items: flex-start !important;
+    }
+    &--end {
+        align-items: flex-end !important;
+    }
+    &--center {
+        align-items: center !important;
+    }
+    &--baseline {
+        align-items: baseline !important;
+    }
+    &--stretch {
+        align-items: stretch !important;
+    }
+}
+
+/// Flexbox content justification.
+/// Used to modify an element displayed as flex or inline-flex.
+/// Suports start, end, center, between, around, and evenly.
+/// ex. sprk-u-Flexbox-direction-justify-content--center.
+/// @group multi-layout
+.sprk-u-FlexBox-justify-content {
+    &--start {
+        justify-content: flex-start !important;
+    }
+    &--end {
+        justify-content: flex-end !important;
+    }
+    &--center {
+        justify-content: center !important;
+    }
+    &--between {
+        justify-content: space-between !important;
+    }
+    &--around {
+        justify-content: space-around !important;
+    }
+    &--evenly {
+        justify-content: space-evenly !important;
+    }
+}
