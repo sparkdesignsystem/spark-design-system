@@ -9,11 +9,11 @@ class SprkMastheadLittleNav extends Component {
     super(props);
     const { links, utilityContents } = props;
     this.state = {
-      utilityContents: utilityContents.map(item => ({
+      utilityContents: utilityContents.map((item) => ({
         id: uniqueId(),
         ...item,
       })),
-      links: links.map(link => ({ id: uniqueId(), ...link })),
+      links: links.map((link) => ({ id: uniqueId(), ...link })),
     };
   }
 
@@ -54,12 +54,12 @@ class SprkMastheadLittleNav extends Component {
           )}
         >
           {links.map((link) => {
-            const { element, href, text, ...rest } = link;
+            const { element, href, isActive, text, ...rest } = link;
             const TagName = element || 'a';
             return (
               <li key={link.id}>
                 <TagName
-                  className="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
+                  className="sprk-b-Link sprk-b-Link--simple sprk-c-Masthead__link"
                   href={TagName === 'a' ? href || '#nogo' : undefined}
                   {...rest}
                 >
@@ -78,7 +78,7 @@ class SprkMastheadLittleNav extends Component {
             'sprk-o-Stack--center-column',
           )}
         >
-          {utilityContents.map(item => (
+          {utilityContents.map((item) => (
             <li key={item.id}>{item}</li>
           ))}
         </ul>
@@ -93,26 +93,34 @@ SprkMastheadLittleNav.propTypes = {
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics`
+   * attribute serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id`
+   * attribute serving as a unique
+   * selector for automated tools.
    */
   idString: PropTypes.string,
-  /** Used to render navigation links inside the little nav */
+  /**
+   * Used to render navigation links
+   * inside the little nav.
+   */
   links: PropTypes.arrayOf(
     PropTypes.shape({
       /**
-       * Determines if link renders as an anchor tag, or router link.
+       * Determines if link renders as an
+       * anchor tag, or router link.
        */
       element: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
-        PropTypes.elementType
+        PropTypes.elementType,
       ]),
       /**
-       * A space-separated string of classes to add to the link item.
+       * A space-separated string of classes
+       * to add to the link item.
        */
       additionalContainerClasses: PropTypes.string,
       /** Adds a class if the link is active */
@@ -139,7 +147,7 @@ SprkMastheadLittleNav.propTypes = {
         element: PropTypes.oneOfType([
           PropTypes.string,
           PropTypes.func,
-          PropTypes.elementType
+          PropTypes.elementType,
         ]),
         /** Assigned to href if the element is an anchor */
         href: PropTypes.string,
@@ -148,7 +156,10 @@ SprkMastheadLittleNav.propTypes = {
       }),
     ),
   }),
-  /** Determines the spacing between little nav items */
+  /**
+   * Determines the spacing between
+   * little nav items
+   */
   spacing: PropTypes.oneOf(['medium', 'large']),
   /**
    * Expects an array containing components

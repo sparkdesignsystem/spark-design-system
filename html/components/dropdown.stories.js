@@ -4,9 +4,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Dropdown',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('dropdown')}
@@ -25,13 +23,13 @@ export const defaultStory = () => {
 
   return `
     <a
-      class="sprk-b-Link sprk-b-Link--plain"
+      class="sprk-c-Dropdown__trigger sprk-b-Link sprk-b-Link--plain"
       href="#nogo"
       data-sprk-dropdown-trigger="dropdown01"
       aria-haspopup="listbox"
       aria-label="Dropdown example description"
     >
-      <svg class="sprk-c-Icon sprk-u-mls" viewBox="0 0 100 100">
+      <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mls" viewBox="0 0 100 100">
         <use xlink:href="#settings" />
       </svg>
     </a>
@@ -76,7 +74,7 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['dropdown'],
-  }
+  },
 };
 
 export const informational = () => {
@@ -86,7 +84,7 @@ export const informational = () => {
 
   return `
     <a
-      class="sprk-b-Link sprk-b-Link--plain sprk-u-mrs"
+      class="sprk-c-Dropdown__trigger sprk-b-Link sprk-b-Link--plain sprk-u-mrs"
       href="#nogo"
       data-sprk-dropdown-trigger="dropdown02"
       aria-haspopup="listbox"
@@ -96,7 +94,7 @@ export const informational = () => {
           data-sprk-dropdown-trigger-text-container=""
           >Make a selection...</span>
         <svg
-          class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-u-mls"
+          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-u-mls"
           viewBox="0 0 100 100">
           <use xlink:href="#chevron-down" />
         </svg>
@@ -171,5 +169,5 @@ informational.story = {
   name: 'Informational',
   parameters: {
     jest: ['dropdown'],
-  }
+  },
 };

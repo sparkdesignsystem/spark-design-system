@@ -55,7 +55,7 @@ import { Component, Input, OnInit } from '@angular/core';
               sprkLink
               variant="unstyled"
               [attr.href]="ctaHref2"
-              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
+              class="sprk-c-Button sprk-c-Button--tertiary sprk-c-Button--full@sm"
               [analyticsString]="analyticsStringCta2"
             >
               {{ ctaText2 }}

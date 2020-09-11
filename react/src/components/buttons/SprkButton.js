@@ -24,12 +24,22 @@ const SprkButton = ({
   } else {
     TagName = 'button';
   }
+  let spinnerVariant;
+  if (loading) {
+    if (variant === 'tertiary') {
+      spinnerVariant = 'secondary';
+    }
+    if (variant === 'quaternary') {
+      spinnerVariant = 'dark';
+    }
+  }
   return (
     <TagName
       className={classnames(
         'sprk-c-Button',
         { 'sprk-c-Button--secondary': variant === 'secondary' },
         { 'sprk-c-Button--tertiary': variant === 'tertiary' },
+        { 'sprk-c-Button--quaternary': variant === 'quaternary' },
         { 'sprk-is-Disabled': disabled },
         additionalClasses,
       )}
@@ -41,10 +51,7 @@ const SprkButton = ({
       {...rest}
       {...(loading && { 'aria-label': spinningAriaLabel })}
     >
-      {(loading && (
-        <SprkSpinner lightness={variant === 'secondary' ? 'dark' : undefined} />
-      )) ||
-        children}
+      {(loading && <SprkSpinner variant={spinnerVariant} />) || children}
     </TagName>
   );
 };
@@ -99,7 +106,7 @@ SprkButton.propTypes = {
   /**
    *  Determines the corresponding button style.
    */
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   /**
    * If an href is provided and no element is provided,
    * an anchor tag will be rendered.

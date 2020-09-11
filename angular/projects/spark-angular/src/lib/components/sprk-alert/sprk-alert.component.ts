@@ -13,7 +13,7 @@ import { Component, Input } from '@angular/core';
       <div class="sprk-c-Alert__content">
         <sprk-icon
           iconType="{{ icon }}"
-          additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-c-Alert__icon sprk-c-Icon--xl sprk-c-Icon--filled sprk-c-Icon--filled-current-color"
           aria-hidden="true"
         ></sprk-icon>
 
@@ -29,12 +29,12 @@ import { Component, Input } from '@angular/core';
       >
         <sprk-icon
           iconType="close"
-          additionalClasses="sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           aria-hidden="true"
         ></sprk-icon>
       </button>
     </div>
-  `
+  `,
 })
 export class SprkAlertComponent {
   /**
@@ -95,22 +95,22 @@ export class SprkAlertComponent {
     switch (this.alertType) {
       case 'success':
         alertClassArray.push('sprk-c-Alert--success');
-        this.icon = 'check-mark';
+        this.icon = 'check-mark-filled';
         break;
       case 'info':
         alertClassArray.push('sprk-c-Alert--info');
-        this.icon = 'bell';
+        this.icon = 'bell-filled';
         break;
       case 'fail':
         alertClassArray.push('sprk-c-Alert--fail');
-        this.icon = 'exclamation';
+        this.icon = 'exclamation-filled';
         break;
       default:
         break;
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         alertClassArray.push(className);
       });
     }

@@ -47,7 +47,10 @@ class DevDocLinks extends React.Component {
                 HTML
                 <SprkIcon
                   iconName="chevron-right"
-                  additionalClasses="sprk-u-mls sprk-c-Icon--stroke-current-color"
+                  additionalClasses="
+                    sprk-u-mls
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color"
                 />
               </SprkLink>
             </SprkListItem>
@@ -63,7 +66,10 @@ class DevDocLinks extends React.Component {
                 React
                 <SprkIcon
                   iconName="chevron-right"
-                  additionalClasses="sprk-u-mls sprk-c-Icon--stroke-current-color" />
+                  additionalClasses="
+                    sprk-u-mls
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color" />
               </SprkLink>
             </SprkListItem>
           )}
@@ -78,7 +84,10 @@ class DevDocLinks extends React.Component {
                 Angular
                 <SprkIcon
                   iconName="chevron-right"
-                  additionalClasses="sprk-u-mls sprk-c-Icon--stroke-current-color" />
+                  additionalClasses="
+                    sprk-u-mls
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color" />
               </SprkLink>
             </SprkListItem>
           )}

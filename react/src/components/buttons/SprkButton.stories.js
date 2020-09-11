@@ -4,9 +4,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Button',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkButton,
   parameters: {
     jest: ['SprkButton'],
@@ -38,15 +36,11 @@ Instead use \`<button type=”submit”>\`
 in addition to the \`sprk-is-Disabled\` class so that it doesn’t
 receive interaction.
 `,
-   },
+  },
 };
 
 export const primary = () => (
-  <SprkButton
-    element="button"
-    idString="button-1"
-    analyticsString="button-1-analytics"
-  >
+  <SprkButton idString="button-1" analyticsString="button-1-analytics">
     Button
   </SprkButton>
 );
@@ -54,7 +48,6 @@ export const primary = () => (
 export const secondary = () => (
   <SprkButton
     variant="secondary"
-    element="button"
     idString="button-2"
     analyticsString="button-2-analytics"
   >
@@ -65,7 +58,6 @@ export const secondary = () => (
 export const tertiary = () => (
   <SprkButton
     variant="tertiary"
-    element="button"
     idString="button-3"
     analyticsString="button-3-analytics"
   >
@@ -73,10 +65,9 @@ export const tertiary = () => (
   </SprkButton>
 );
 
-export const disabled = () => (
+export const quaternary = () => (
   <SprkButton
-    disabled
-    element="button"
+    variant="quaternary"
     idString="button-4"
     analyticsString="button-4-analytics"
   >
@@ -84,22 +75,16 @@ export const disabled = () => (
   </SprkButton>
 );
 
-export const loading = () => (
-  <SprkButton
-    loading={true}
-    element="button"
-    idString="button-5"
-    analyticsString="button-5-analytics"
-  >
+export const disabled = () => (
+  <SprkButton disabled idString="button-5" analyticsString="button-5-analytics">
     Button
   </SprkButton>
 );
 
-export const loadingSecondary = () => (
+export const disabledSecondary = () => (
   <SprkButton
-    loading={true}
+    disabled
     variant="secondary"
-    element="button"
     idString="button-6"
     analyticsString="button-6-analytics"
   >
@@ -107,11 +92,71 @@ export const loadingSecondary = () => (
   </SprkButton>
 );
 
-export const fullWidthAtSmallViewport = () => (
+export const disabledTertiary = () => (
   <SprkButton
-    element="button"
+    disabled
+    variant="tertiary"
     idString="button-7"
     analyticsString="button-7-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const disabledQuaternary = () => (
+  <SprkButton
+    disabled
+    variant="quaternary"
+    idString="button-8"
+    analyticsString="button-8-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const spinning = () => (
+  <SprkButton loading idString="button-9" analyticsString="button-9-analytics">
+    Button
+  </SprkButton>
+);
+
+export const spinningSecondary = () => (
+  <SprkButton
+    loading
+    variant="secondary"
+    idString="button-10"
+    analyticsString="button-10-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const spinningTertiary = () => (
+  <SprkButton
+    loading
+    variant="tertiary"
+    idString="button-11"
+    analyticsString="button-11-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const spinningQuaternary = () => (
+  <SprkButton
+    loading
+    variant="quaternary"
+    idString="button-12"
+    analyticsString="button-12-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const fullWidthAtSmallViewport = () => (
+  <SprkButton
+    idString="button-13"
+    analyticsString="button-13-analytics"
     additionalClasses="sprk-c-Button--full@s"
   >
     Button
@@ -120,9 +165,8 @@ export const fullWidthAtSmallViewport = () => (
 
 export const fullWidthAtExtraSmallViewport = () => (
   <SprkButton
-    element="button"
-    idString="button-8"
-    analyticsString="button-8-analytics"
+    idString="button-14"
+    analyticsString="button-14-analytics"
     additionalClasses="sprk-c-Button--full@xs"
   >
     Button
@@ -133,8 +177,8 @@ export const asALinkElement = () => (
   <SprkButton
     element="a"
     href="#nogo"
-    idString="button-9"
-    analyticsString="button-9-analytics"
+    idString="button-15"
+    analyticsString="button-15-analytics"
   >
     Button
   </SprkButton>

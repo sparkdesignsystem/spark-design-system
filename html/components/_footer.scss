@@ -1,0 +1,42 @@
+// ==================================================================
+// Footer
+// ==================================================================
+
+////
+/// @group Footer
+////
+.sprk-c-Footer {
+  background-color: $sprk-footer-background-color;
+}
+
+.sprk-c-Footer__text {
+  color: $sprk-footer-text-color;
+}
+
+.sprk-c-Footer__link {
+  color: $sprk-footer-link-color;
+  font-weight: $sprk-footer-link-font-weight;
+}
+
+.sprk-c-Footer__icon {
+  fill: $sprk-footer-icon-color;
+  color: $sprk-footer-icon-color;
+}
+
+// Override toggle trigger styles to work on a dark background.
+.sprk-c-Footer .sprk-c-Footer__trigger {
+  color: $sprk-footer-trigger-color;
+  font-weight: $sprk-footer-trigger-font-weight;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sprk-footer-trigger-hover-color;
+    transition: $sprk-footer-toggle-transition;
+
+    .sprk-c-Footer__icon {
+      fill: $sprk-footer-trigger-hover-color;
+      transition: $sprk-footer-toggle-transition;
+    }
+  }
+}

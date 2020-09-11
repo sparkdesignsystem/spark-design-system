@@ -159,7 +159,7 @@ describe('Toggle tests', () => {
     );
     expect(containerAccordion.classList
       .contains('sprk-c-Accordion__item--open')).toBe(true);
-    expect(iconAccordionUseElement.getAttribute('xlink:href')).toBe('#chevron-up-circle-two-color');
+    expect(iconAccordionUseElement.getAttribute('xlink:href')).toBe('#chevron-up-circle');
   });
 
   it('should toggle accordion open', () => {
@@ -174,17 +174,17 @@ describe('Toggle tests', () => {
     expect(containerAccordion.classList
       .contains('sprk-c-MastheadAccordion__item--open')).toBe(true);
     expect(iconAccordionUseElement
-      .getAttribute('xlink:href')).toBe('#chevron-up-circle-two-color');
+      .getAttribute('xlink:href')).toBe('#chevron-up-circle');
   });
 
   it('should toggle accordion icon open', () => {
     toggleIconType(
       iconAccordion,
       iconAccordionUseElement,
-      'chevron-up-circle-two-color',
-      'chevron-down-circle-two-color',
+      'chevron-up-circle',
+      'chevron-down-circle',
     );
-    expect(iconAccordionUseElement.getAttribute('xlink:href')).toBe('#chevron-down-circle-two-color');
+    expect(iconAccordionUseElement.getAttribute('xlink:href')).toBe('#chevron-down-circle');
   });
 
   it('should add listener to toggle trigger', () => {

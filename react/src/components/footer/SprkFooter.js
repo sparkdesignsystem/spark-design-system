@@ -42,7 +42,7 @@ class SprkFooter extends Component {
       paragraphsHasIds,
     } = this.state;
     const classNames = classnames(
-      'sprk-o-Box sprk-o-Box--large sprk-u-BackgroundColor--gray',
+      'sprk-o-Box sprk-o-Box--large sprk-c-Footer',
       additionalClasses,
     );
 
@@ -85,7 +85,7 @@ class SprkFooter extends Component {
                         sprk-o-Stack
                         sprk-o-Stack--large"
                     >
-                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">
+                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
                         {column.heading}
                       </h3>
 
@@ -103,7 +103,7 @@ class SprkFooter extends Component {
                           return (
                             <li key={id} className="sprk-o-Stack__item">
                               <TagName
-                                className="sprk-b-Link sprk-b-Link--simple sprk-u-FontWeight--normal"
+                                className="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light"
                                 href={TagName === 'a' ? href || '#nogo' : undefined}
                                 data-analytics={analyticsString}
                                 {...rest}
@@ -141,7 +141,7 @@ class SprkFooter extends Component {
               && paragraphsHasIds.map(p => (
                 <p
                   key={p.id}
-                  className="sprk-o-Stack__item sprk-b-TypeBodyFour"
+                  className="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text"
                 >
                   {p.text}
                 </p>
@@ -171,9 +171,11 @@ class SprkFooter extends Component {
                       >
                         <SprkIcon
                           iconName={name}
-                          additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${
-                            addClasses
-                          }`}
+                          additionalClasses={classnames(
+                            `sprk-c-Footer__icon`,
+                            `sprk-c-Icon--xl`,
+                            addClasses,
+                          )}
                         />
                         <span className="sprk-u-ScreenReaderText">{screenReaderText}</span>
                       </TagName>

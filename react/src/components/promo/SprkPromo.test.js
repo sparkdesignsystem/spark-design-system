@@ -187,14 +187,6 @@ describe('SprkPromo:', () => {
     expect(subtitle.text()).toEqual('foo');
   });
 
-  it('should render children content when provided', () => {
-    const wrapper = shallow(<SprkPromo>foo</SprkPromo>);
-    const childrenContainer = wrapper.find('div.sprk-c-Promo__childrenContainer');
-
-    expect(childrenContainer.length).toBe(1);
-    expect(childrenContainer.text()).toEqual('foo');
-  });
-
   // Button CTA
 
   it('should render a button when cta is set to button', () => {
@@ -226,6 +218,26 @@ describe('SprkPromo:', () => {
     // expect(button.find('[data-analytics="bar"]').length).toBe(1);
     expect(button.find('[data-id="baz"]').length).toBe(1);
     expect(button.text()).toEqual('foobar');
+  });
+
+  it('should render a button with the correct class when buttonVariant is secondary', () => {
+    const wrapper = mount(<SprkPromo cta="button" buttonVariant="secondary" />);
+    const button = wrapper.find('a.sprk-c-Button');
+    expect(button.hasClass('sprk-c-Button--secondary')).toBe(true);
+  });
+
+  it('should render a button with the correct class when buttonVariant is tertiary', () => {
+    const wrapper = mount(<SprkPromo cta="button" buttonVariant="tertiary" />);
+    const button = wrapper.find('a.sprk-c-Button');
+    expect(button.hasClass('sprk-c-Button--tertiary')).toBe(true);
+  });
+
+  it('should render a button with the correct class when buttonVariant is quaternary', () => {
+    const wrapper = mount(
+      <SprkPromo cta="button" buttonVariant="quaternary" />,
+    );
+    const button = wrapper.find('a.sprk-c-Button');
+    expect(button.hasClass('sprk-c-Button--quaternary')).toBe(true);
   });
 
   // Link CTA
@@ -353,7 +365,11 @@ describe('SprkPromo:', () => {
 
   it('should render a link with the correct classes when imgSrc and additionalClassesImgLink are provided in the reversed variant', () => {
     const wrapper = mount(
-      <SprkPromo additionalClassesImgLink="bobsClass" imgSrc="foobar" mediaRev />,
+      <SprkPromo
+        additionalClassesImgLink="bobsClass"
+        imgSrc="foobar"
+        mediaRev
+      />,
     );
     const link = wrapper.find('a.sprk-b-Link--plain');
 

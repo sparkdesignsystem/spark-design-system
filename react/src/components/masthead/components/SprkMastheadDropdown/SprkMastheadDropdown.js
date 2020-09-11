@@ -11,7 +11,7 @@ class SprkMastheadDropdown extends Component {
     super(props);
     this.state = {
       isOpen: false,
-      choiceItems: props.choices.items.map(item => ({
+      choiceItems: props.choices.items.map((item) => ({
         id: uniqueId(),
         ...item,
       })),
@@ -54,7 +54,7 @@ class SprkMastheadDropdown extends Component {
   }
 
   toggleDropdownOpen() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
     }));
   }
@@ -93,7 +93,9 @@ class SprkMastheadDropdown extends Component {
           </span>
           <SprkIcon
             additionalClasses={classNames(
-              'sprk-c-Icon--stroke-current-color sprk-u-mls',
+              `sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+              sprk-u-mls`,
               additionalIconClasses,
             )}
             iconName={iconName}
@@ -137,7 +139,8 @@ class SprkMastheadDropdown extends Component {
 
 SprkMastheadDropdown.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to
+   * add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
@@ -153,7 +156,8 @@ SprkMastheadDropdown.propTypes = {
    */
   additionalTriggerTextClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
@@ -171,7 +175,7 @@ SprkMastheadDropdown.propTypes = {
         element: PropTypes.oneOfType([
           PropTypes.string,
           PropTypes.node,
-          PropTypes.elementType
+          PropTypes.elementType,
         ]),
         /** Assigned to `href` of the dropdown item. */
         href: PropTypes.string,
@@ -182,13 +186,17 @@ SprkMastheadDropdown.propTypes = {
   }),
   /** The text set as the default of the trigger link. */
   triggerText: PropTypes.string,
-  /** The icon type of the trigger icon .*/
+  /** The icon type of the trigger icon . */
   iconName: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: PropTypes.string,
-  /** The headline text of the optional header above the choices in the dropdown. */
+  /**
+   * The headline text of the optional
+   * header above the choices in the dropdown.
+   */
   title: PropTypes.string,
   /** Determines the type of SprkMastheadDropdown to render. */
   variant: PropTypes.oneOf(['base', 'informational']),

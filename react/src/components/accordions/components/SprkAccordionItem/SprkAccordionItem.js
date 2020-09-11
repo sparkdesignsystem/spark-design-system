@@ -43,7 +43,7 @@ class SprkAccordionItem extends Component {
     const { isOpen, height } = this.state;
 
     const iconClasses = classnames(
-      'sprk-c-Icon--l sprk-c-Icon--toggle sprk-c-Accordion__icon',
+      'sprk-c-Icon--toggle sprk-c-Accordion__icon sprk-c-Icon--xl',
       { 'sprk-c-Icon--open': isOpen },
       iconAddClasses,
     );
@@ -73,7 +73,7 @@ class SprkAccordionItem extends Component {
         >
           <h3 className={headingClassNames}>{heading}</h3>
           <SprkIcon
-            iconName="chevron-up-circle-two-color"
+            iconName="chevron-up-circle"
             additionalClasses={iconClasses}
           />
         </SprkLink>

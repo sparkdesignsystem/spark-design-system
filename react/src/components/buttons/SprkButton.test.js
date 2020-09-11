@@ -1,4 +1,5 @@
 /* global it expect */
+/* eslint-disable max-len */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Enzyme, { mount, shallow } from 'enzyme';
@@ -18,27 +19,26 @@ describe('SprkButton:', () => {
     expect(wrapper.find('a[href].sprk-c-Button').length).toBe(1);
   });
 
-  it(
-    'should display a button element with correct classes' +
-      ' when variant is secondary',
-    () => {
-      const wrapper = shallow(<SprkButton variant="secondary" />);
-      expect(wrapper.find('button').hasClass('sprk-c-Button--secondary')).toBe(
-        true,
-      );
-    },
-  );
+  it('should display a button element with correct classes when variant is secondary', () => {
+    const wrapper = shallow(<SprkButton variant="secondary" />);
+    expect(wrapper.find('button').hasClass('sprk-c-Button--secondary')).toBe(
+      true,
+    );
+  });
 
-  it(
-    'should display a button element with correct classes when variant' +
-      ' is tertiary',
-    () => {
-      const wrapper = shallow(<SprkButton variant="tertiary" />);
-      expect(wrapper.find('button').hasClass('sprk-c-Button--tertiary')).toBe(
-        true,
-      );
-    },
-  );
+  it('should display a button element with correct classes when variant is tertiary', () => {
+    const wrapper = shallow(<SprkButton variant="tertiary" />);
+    expect(wrapper.find('button').hasClass('sprk-c-Button--tertiary')).toBe(
+      true,
+    );
+  });
+
+  it('should display a button element with correct classes when variant is quaternary', () => {
+    const wrapper = shallow(<SprkButton variant="quaternary" />);
+    expect(wrapper.find('button').hasClass('sprk-c-Button--quaternary')).toBe(
+      true,
+    );
+  });
 
   it('if loading is not set, should not render the spinner', () => {
     const wrapper = mount(<SprkButton />);
@@ -92,14 +92,15 @@ describe('SprkButton:', () => {
     expect(wrapper.find('button[aria-label]').length).toBe(0);
   });
 
-  it(
-    'if loading is set and variant is secondary, should' +
-      ' render the secondary spinner',
-    () => {
-      const wrapper = mount(<SprkButton loading variant="secondary" />);
-      expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(1);
-    },
-  );
+  it('if loading is set and variant is tertiary, should render the dark spinner', () => {
+    const wrapper = mount(<SprkButton loading variant="tertiary" />);
+    expect(wrapper.find('.sprk-c-Spinner--secondary').length).toBe(1);
+  });
+
+  it('if loading is set and variant is quaternary, should render the dark spinner', () => {
+    const wrapper = mount(<SprkButton loading variant="quaternary" />);
+    expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(1);
+  });
 
   it('should add role=button if an anchor is rendered', () => {
     const wrapper = mount(<SprkButton element="a" href="#nogo" />);

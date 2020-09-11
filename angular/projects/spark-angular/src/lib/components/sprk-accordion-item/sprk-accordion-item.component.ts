@@ -20,16 +20,18 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
         <span [ngClass]="getHeadingClasses()">
           <sprk-icon
             [iconType]="leadingIcon"
-            additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l sprk-u-mrs"
+            additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--xl sprk-u-mrs"
             *ngIf="leadingIcon"
           ></sprk-icon>
           {{ title }}
         </span>
 
         <sprk-icon
-          additionalClasses="sprk-c-Accordion__icon sprk-c-Icon--toggle sprk-c-Icon--l {{
-            iconStateClass
-          }}"
+          additionalClasses="
+            sprk-c-Accordion__icon
+            sprk-c-Icon--xl
+            sprk-c-Icon--toggle
+            {{iconStateClass}}"
           [iconType]="currentIconType"
         ></sprk-icon>
       </button>
@@ -103,13 +105,13 @@ export class SprkAccordionItemComponent implements OnInit {
    * a closed Accordion item.
    */
   @Input()
-  iconTypeClosed = 'chevron-up-circle-two-color';
+  iconTypeClosed = 'chevron-up-circle';
   /**
    * The name of the icon to use for
    * an open Accordion item.
    */
   @Input()
-  iconTypeOpen = 'chevron-up-circle-two-color';
+  iconTypeOpen = 'chevron-up-circle';
   /**
    * The name of the icon to use before
    * the title in the Accordion item.

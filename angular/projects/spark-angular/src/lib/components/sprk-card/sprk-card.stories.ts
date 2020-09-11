@@ -11,7 +11,7 @@ export default {
   decorators: [
     storyWrapper(
       storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
+        `<div class="sprk-o-Box sprk-o-Box--large">${ storyContent }<div>`
       )
     )
   ],
@@ -153,7 +153,7 @@ export const teaser = () => ({
 teaser.story = {
   name: 'Teaser',
   parameters: {
-    docs: { iframeHeight: 500 },
+    docs: { iframeHeight: 550 },
     jest: ['sprk-card.component'],
   },
 };

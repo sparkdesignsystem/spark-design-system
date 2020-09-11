@@ -8,25 +8,18 @@ import ModalFooter from './ModalFooter';
 export default {
   title: 'Components/Modal',
   component: SprkModal,
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
     docs: {
       inlineStories: false,
-      iframeHeight: 450
+      iframeHeight: 450,
     },
     subcomponents: {
       Mask,
       ModalFooter,
       CloseButton,
     },
-    jest: [
-      'SprkModal',
-      'CloseButton',
-      'Mask',
-      'ModalFooter',
-    ],
+    jest: ['SprkModal', 'CloseButton', 'Mask', 'ModalFooter'],
     info: `
 ${markdownDocumentationLinkBuilder('modal')}
 - There are two parts to a Modal
@@ -42,13 +35,12 @@ Each instance should have a unique \`data-id\` property.
 that sets the value of the \`isVisible\` property.
 `,
   },
-
 };
 
 export const defaultStory = () => (
   <SprkModal
     title="Are you sure?"
-    isVisible={true}
+    isVisible
     confirmText="Confirm"
     cancelText="Cancel"
   >
@@ -62,11 +54,7 @@ defaultStory.story = {
 };
 
 export const info = () => (
-  <SprkModal
-    title="Info Modal"
-    isVisible={true}
-    variant="info"
-  >
+  <SprkModal title="Info Modal" isVisible variant="info">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua.
   </SprkModal>
@@ -77,11 +65,7 @@ info.story = {
 };
 
 export const wait = () => (
-  <SprkModal
-    title="Wait Modal"
-    isVisible={true}
-    variant="wait"
-  >
+  <SprkModal title="Wait Modal" isVisible variant="wait">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua.
   </SprkModal>

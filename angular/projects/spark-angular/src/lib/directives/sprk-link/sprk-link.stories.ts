@@ -4,9 +4,9 @@ import { SprkIconModule } from '../../components/sprk-icon/sprk-icon.module';
 import { SprkLinkDirectiveModule } from './sprk-link.module';
 import { SprkLinkModule } from '../../components/sprk-link/sprk-link.module';
 import { SprkLinkComponent } from '../../components/sprk-link/sprk-link.component';
+import { SprkBoxModule } from '../sprk-box/sprk-box.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -15,7 +15,7 @@ export default {
   decorators: [
     storyWrapper(
       (storyContent) =>
-        `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`,
+        `<div class="sprk-o-Box">${storyContent}<div>`,
     ),
   ],
   parameters: {
@@ -36,6 +36,7 @@ with the new Directive syntax.
 const modules = {
   imports: [
     SprkLinkDirectiveModule,
+    SprkBoxModule,
     SprkIconModule,
     SprkLinkModule,
     RouterModule.forRoot([
@@ -90,6 +91,33 @@ simple.story = {
   },
 };
 
+export const light = () => ({
+  moduleMetadata: modules,
+  template: `
+    <a
+      sprkLink
+      href="#"
+      variant="light"
+      idString="light-link"
+      analyticsString="light-link"
+    >
+      Light Link
+    </a>
+  `,
+});
+
+light.story = {
+  parameters: {
+    jest: ['sprk-link.directive'],
+  },
+  decorators: [
+    storyWrapper(
+      (storyContent) =>
+        `<div class="sprk-o-Box sprk-o-Box--small sprk-u-BackgroundColor--black">${storyContent}<div>`,
+    ),
+  ],
+};
+
 export const iconWithTextLink = () => ({
   moduleMetadata: modules,
   template: `
@@ -97,15 +125,18 @@ export const iconWithTextLink = () => ({
       href="#"
       sprkLink
       variant="icon"
-      idString="icon-link"
-      analyticsString="icon-link"
+      idString="icon-link-1"
+      analyticsString="icon-link-1"
     >
       <sprk-icon
-        iconType="communication"
-        additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-mrs"
+        iconType="arrow-left"
+        additionalClasses="
+          sprk-c-Icon--l
+          sprk-c-Icon--filled-current-color
+          sprk-u-mrs"
       >
       </sprk-icon>
-      Message Us
+      Back
     </a>
   `,
 });
@@ -132,6 +163,89 @@ export const disabled = () => ({
 });
 
 disabled.story = {
+  parameters: {
+    jest: ['sprk-link.directive'],
+  },
+};
+
+export const disabledSimple = () => ({
+  moduleMetadata: modules,
+  template: `
+    <a
+      href="#"
+      sprkLink
+      variant="simple"
+      isDisabled="true"
+      idString="disabled-link-simple"
+      analyticsString="disabled-link-simple"
+    >
+      Disabled Link
+    </a>
+  `,
+});
+
+disabledSimple.story = {
+  name: 'Disabled - Simple',
+  parameters: {
+    jest: ['sprk-link.directive'],
+  },
+};
+
+export const disabledLight = () => ({
+  moduleMetadata: modules,
+  template: `
+    <a
+      isDisabled="true"
+      sprkLink
+      href="#"
+      variant="light"
+      idString="disabled-light-link"
+      analyticsString="disabled-light-link"
+    >
+      Disabled Link
+    </a>
+  `,
+});
+  
+disabledLight.story = {
+  name: 'Disabled - Light',
+  parameters: {
+    jest: ['sprk-link.directive'],
+  },
+  decorators: [
+    storyWrapper(
+      (storyContent) =>
+        `<div class="sprk-o-Box sprk-o-Box--small sprk-u-BackgroundColor--black">${storyContent}<div>`,
+    ),
+  ],
+};
+
+export const disabledIconWithTextLink = () => ({
+  moduleMetadata: modules,
+  template: `
+    <a
+      href="#"
+      sprkLink
+      variant="icon"
+      isDisabled="true"
+      idString="disabled-icon-link-1"
+      analyticsString="disabled-icon-link-1"
+    >
+      <sprk-icon
+        iconType="arrow-left"
+        additionalClasses="
+          sprk-c-Icon--xl
+          sprk-c-Icon--filled-current-color
+          sprk-u-mrs"
+      >
+      </sprk-icon>
+      Back
+    </a>
+  `,
+});
+
+disabledIconWithTextLink.story = {
+  name: 'Disabled - Icon With Text Link',
   parameters: {
     jest: ['sprk-link.directive'],
   },

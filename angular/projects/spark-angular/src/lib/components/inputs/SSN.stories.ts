@@ -14,6 +14,8 @@ import { SprkSelectionInputDirective } from '../../directives/inputs/sprk-select
 import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
+import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 
 export default {
   title: 'Components/Input/SSN',
@@ -68,6 +70,8 @@ const modules = {
     SprkFieldErrorModule,
     SprkSelectionContainerModule,
     SprkSelectionItemContainerModule,
+    SprkSelectionInputModule,
+    SprkSelectionLabelModule,
   ],
 };
 
@@ -145,7 +149,7 @@ export const invalidSSNInput = () => ({
       </sprk-selection-item-container>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -200,7 +204,7 @@ export const disabledSSNInput = () => ({
         sprkFieldError
       >
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         >
         </sprk-icon>

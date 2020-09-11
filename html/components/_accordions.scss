@@ -48,6 +48,10 @@
       color: $sprk-accordion-summary-active-color;
       text-decoration: $sprk-accordion-summary-active-text-decoration;
     }
+
+    .sprk-c-Accordion__icon {
+      fill: $sprk-accordion-summary-hover-icon-fill;
+    }
   }
 
   &:focus:not(.focus-visible) {

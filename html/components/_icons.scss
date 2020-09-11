@@ -14,10 +14,6 @@
 .sprk-o-StrokeIconSymbol rect {
   fill: inherit;
   stroke: inherit;
-
-  @if ($sprk-icon-using-custom-stroke) {
-    stroke-width: inherit;
-  }
 }
 
 .sprk-o-FilledIconSymbol circle,
@@ -30,10 +26,6 @@
 .sprk-o-FilledIconSymbol rect {
   fill: inherit;
   stroke: inherit;
-
-  @if ($sprk-icon-using-custom-stroke) {
-    stroke-width: inherit;
-  }
 }
 
 .sprk-o-FilledSmallIconSymbol circle,
@@ -46,33 +38,22 @@
 .sprk-o-FilledSmallIconSymbol rect {
   fill: inherit;
   stroke: inherit;
-
-  @if ($sprk-icon-using-custom-stroke) {
-    stroke-width: inherit;
-  }
 }
 
 .sprk-c-Icon {
   height: $sprk-icon-m;
   width: $sprk-icon-m;
   stroke: $sprk-icon-stroke-color;
+  stroke-width: $sprk-icon-stroke-width;
   fill: $sprk-icon-fill-color;
-
-  @if ($sprk-icon-using-custom-stroke) {
-    stroke-width: $sprk-icon-custom-stroke-width-xl;
-  }
 }
 
 /// Adds styles for filled Icons.
 /// @name .sprk-c-Icon--filled
-.sprk-c-Icon--filled,
-.sprk-c-Icon--filled-small {
+.sprk-c-Icon--filled {
   stroke: $sprk-icon-filled-stroke-color;
   fill: $sprk-icon-filled-fill-color;
 }
-
-/// Adds styles for small filled Icons.
-/// @name .sprk-c-Icon--filled-small
 
 /// Adds the fill and stroke properties
 /// set to the current color of its container.
@@ -86,31 +67,20 @@
   fill: currentColor;
 }
 
-/// Adds the Icon height and width
-/// to $sprk-icon-l and stroke-width
-/// to $icon-custom-stroke-width-l.
+/// Adds the styles for a large Icon.
 .sprk-c-Icon--l {
   height: $sprk-icon-l;
   width: $sprk-icon-l;
   stroke-width: $sprk-icon-custom-stroke-width-l;
+  stroke: $sprk-icon-l-stroke;
 }
 
-/// Adds the Icon height and width to
-/// $icon-xl and stroke-width to
-/// $icon-custom-stroke-width-m.
+/// Adds the styles for an extra-large Icon.
 .sprk-c-Icon--xl {
   height: $sprk-icon-xl;
   width: $sprk-icon-xl;
-  stroke-width: $sprk-icon-custom-stroke-width-m;
-}
-
-/// Adds the Icon height and
-/// width to $icon-xxl and
-/// stroke-width to $icon-custom-stroke-width-s.
-.sprk-c-Icon--xxl {
-  height: $sprk-icon-xxl;
-  width: $sprk-icon-xxl;
-  stroke-width: $sprk-icon-custom-stroke-width-s;
+  stroke-width: $sprk-icon-custom-stroke-width-xl;
+  stroke: $sprk-icon-xl-stroke;
 }
 
 ///	Adds styles for

@@ -65,10 +65,10 @@ export const invalidTextarea = () => (
         id="textarea--error-container"
       >
         <svg
-         class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
+         class="sprk-c-Icon sprk-b-ErrorIcon"
          viewBox="0 0 64 64"
         >
-          <use xlink:href="#exclamation-filled-small" />
+          <use xlink:href="#exclamation-filled" />
         </svg>
         <div class="sprk-b-ErrorText">
           There is an error on this field.

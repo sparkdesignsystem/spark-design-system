@@ -74,15 +74,23 @@ similar or different actions.
 
 ### Tertiary Button
 
-A Tertiary Button represents the lowest prioritized
-action on a page. They are typically used in a
-[Modal](/using-spark/components/modal)
-to cancel a choice. They look like a text
-[Link](/using-spark/components/link)
-but have the same padding and focus rules as other Buttons.
+A Tertiary Button represents a lower prioritized
+action on a page.
 
 <ComponentPreview
   componentName="button--tertiary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Quaternary Button
+
+A Quaternary Button represents the lowest prioritized
+action on a page.
+
+<ComponentPreview
+  componentName="button--quaternary"
   hasReact
   hasAngular
   hasHTML
@@ -100,6 +108,7 @@ this button, consider if it’s necessary to show the
 disabled button at all. Otherwise, make it clear
 in the interface why a button is Disabled.
 
+#### Disabled - Primary
 <ComponentPreview
   componentName="button--disabled"
   hasReact
@@ -107,25 +116,46 @@ in the interface why a button is Disabled.
   hasHTML
 />
 
-### Loading
-
-When data is being saved or submitted, a loading
-indicator may replace the Button text.
-
+#### Disabled - Secondary
 <ComponentPreview
-  componentName="button--loading"
+  componentName="button--disabled-secondary"
   hasReact
   hasAngular
   hasHTML
 />
 
-### Secondary Button Loading
+#### Disabled - Tertiary
+<ComponentPreview
+  componentName="button--disabled-tertiary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
 
-When data is being saved or submitted, a loading
+### Spinning
+
+When data is being saved or submitted, a spinning
 indicator may replace the Button text.
 
+#### Spinning - Primary
 <ComponentPreview
-  componentName="button--loading-secondary"
+  componentName="button--spinning"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+#### Spinning - Secondary
+<ComponentPreview
+  componentName="button--spinning-secondary"
+  hasHTML
+  hasReact
+  hasAngular
+/>
+
+#### Spinning - Tertiary
+<ComponentPreview
+  componentName="button--spinning-tertiary"
   hasHTML
   hasReact
   hasAngular
