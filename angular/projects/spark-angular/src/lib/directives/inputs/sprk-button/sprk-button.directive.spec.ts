@@ -12,6 +12,7 @@ import { SprkButtonDirective } from './sprk-button.directive';
       variant="secondary"
       analyticsString="test"
       idString="id-test"
+      [isSpinning]="spinnerVal"
     >
       Test 3
     </button>
@@ -24,11 +25,7 @@ import { SprkButtonDirective } from './sprk-button.directive';
     >
       Test 5
     </button>
-    <button
-      sprkButton
-      variant="quaternary"
-      [isSpinning]="spinnerVal"
-    >
+    <button sprkButton variant="quaternary" [isSpinning]="spinnerVal">
       Test 6
     </button>
   `,
@@ -70,6 +67,17 @@ describe('Spark Button Directive', () => {
 
   it('should contain a spinner if isSpinning is true', () => {
     expect(button2Element.querySelectorAll('.sprk-c-Spinner').length).toBe(1);
+  });
+
+  it('should add the primary spinner class when isSpinning is true on a secondary button', () => {
+    const spinnerNotThere = button3Element.querySelector('.sprk-c-Spinner');
+    expect(spinnerNotThere).toBeNull();
+    component.spinnerVal = true;
+    fixture.detectChanges();
+    const spinner = button3Element.querySelector('.sprk-c-Spinner');
+    expect(spinner.classList.contains('sprk-c-Spinner--primary')).toBe(true);
+    expect(spinner.classList.contains('sprk-c-Spinner--secondary')).toBe(false);
+    expect(spinner.classList.contains('sprk-c-Spinner--dark')).toBe(false);
   });
 
   it('should add the secondary spinner class when isSpinning is true on a tertiary button', () => {

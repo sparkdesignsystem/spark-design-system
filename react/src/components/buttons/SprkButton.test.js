@@ -92,13 +92,24 @@ describe('SprkButton:', () => {
     expect(wrapper.find('button[aria-label]').length).toBe(0);
   });
 
-  it('if loading is set and variant is tertiary, should render the dark spinner', () => {
+  it('if loading is set and variant is secondary, should render the primary spinner', () => {
+    const wrapper = mount(<SprkButton loading variant="secondary" />);
+    expect(wrapper.find('.sprk-c-Spinner--primary').length).toBe(1);
+    expect(wrapper.find('.sprk-c-Spinner--secondary').length).toBe(0);
+    expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(0);
+  });
+
+  it('if loading is set and variant is tertiary, should render the secondary spinner', () => {
     const wrapper = mount(<SprkButton loading variant="tertiary" />);
+    expect(wrapper.find('.sprk-c-Spinner--primary').length).toBe(0);
     expect(wrapper.find('.sprk-c-Spinner--secondary').length).toBe(1);
+    expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(0);
   });
 
   it('if loading is set and variant is quaternary, should render the dark spinner', () => {
     const wrapper = mount(<SprkButton loading variant="quaternary" />);
+    expect(wrapper.find('.sprk-c-Spinner--primary').length).toBe(0);
+    expect(wrapper.find('.sprk-c-Spinner--secondary').length).toBe(0);
     expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(1);
   });
 
