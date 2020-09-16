@@ -232,7 +232,6 @@
   position: relative;
   text-align: center;
   white-space: nowrap;
-  border-bottom: transparent;
 
   &:active,
   &:focus,
@@ -276,9 +275,11 @@
     $sprk-masthead-content-item-padding-top +
     $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height +
     $sprk-masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
+
   top: $sprk-masthead-narrow-height + $sprk-masthead-content-item-padding-top +
     $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height +
     $sprk-masthead-border-bottom-size; // Adds extra space to account for logo dropping under menu<320px
+
   width: 100%;
 
   @media (min-width: $sprk-split-breakpoint-xxs) {
