@@ -56,7 +56,7 @@ const ColorSwatch = (props) => {
           <SprkStack splitAt="tiny">
             <SprkStackItem
               className={classnames(
-                'docs-c-ColorSwatch__swatch sprk-u-mrs',
+                'docs-c-ColorSwatch__swatch sprk-u-mrs sprk-u-mbs',
                 // eslint-disable-next-line prettier/prettier
                 { 'docs-c-ColorSwatch__swatch--hasOutline': hasOutline },
               )}
