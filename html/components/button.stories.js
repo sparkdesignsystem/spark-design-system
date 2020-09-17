@@ -148,7 +148,9 @@ export const spinningSecondary = () =>
     data-id="button-spinner-secondary"
     aria-label="Loading"
   >
-    <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
+    <div
+      class="sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--primary"
+    ></div>
   </button>
   `;
 

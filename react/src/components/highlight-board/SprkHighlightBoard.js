@@ -101,7 +101,7 @@ const SprkHighlightBoard = (props) => {
             {ctaText2 && (
               <div className="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
                 <SprkButton
-                  variant="tertiary"
+                  variant="secondary"
                   element="a"
                   href={ctaHref2}
                   analyticsString={ctaAnalytics2}
