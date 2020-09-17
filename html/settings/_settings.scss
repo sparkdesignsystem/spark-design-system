@@ -2060,10 +2060,26 @@ $sprk-big-nav-link-font-weight: 400 !default;
 /// The padding of the big navigation
 /// link in the Masthead Extended.
 $sprk-big-nav-link-padding: 0 $sprk-space-s !default;
+/// The underline color of
+/// the active big navigation item in the Masthead Extended.
+$sprk-big-nav-active-color: $sprk-red !default;
 /// The line height
 /// of the big navigation items
 /// in the Masthead Extended.
 $sprk-big-nav-item-line-height: 53px !default;
+/// The active border-bottom
+/// of the big navigation items
+/// in the Masthead Extended.
+$sprk-big-nav-item-active-border-bottom: 0.125rem solid $sprk-red !default;
+/// The border-bottom
+/// of the open big navigation items
+/// in the Masthead Extended.
+$sprk-big-nav-item-open-border-bottom: $sprk-big-nav-item-active-border-bottom !default;
+/// The border-bottom
+/// of the links in the big nav item
+/// when the big nav item is hovered
+/// in the Masthead Extended.
+$sprk-big-nav-link-hover-border-bottom: transparent !default;
 // Masthead Accordion
 /// The left border of the active item
 /// in the navigation links when masthead is on narrow viewports.
