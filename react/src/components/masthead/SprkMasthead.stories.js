@@ -80,6 +80,17 @@ const links = [
     text: 'Item 2',
     to: '#nogo',
   },
+  {
+    element: 'SprkLink',
+    text: 'Item 3',
+    subNavLinks: [
+      {
+        element: 'a',
+        text: 'Placeholder',
+        to: '#nogo',
+      },
+    ],
+  },
 ];
 
 const addedNarrowNavLinks = [

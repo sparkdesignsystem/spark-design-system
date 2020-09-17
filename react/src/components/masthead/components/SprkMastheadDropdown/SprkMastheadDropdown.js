@@ -76,9 +76,11 @@ class SprkMastheadDropdown extends Component {
     return (
       <div ref={this.myRef}>
         <SprkLink
-          variant="plain"
+          variant="simple"
           additionalClasses={classNames(
             { 'sprk-u-mrs': variant === 'informational' },
+            'sprk-c-Masthead__link',
+            'sprk-c-Masthead__link--big-nav',
             additionalTriggerClasses,
           )}
           href="#nogo"
