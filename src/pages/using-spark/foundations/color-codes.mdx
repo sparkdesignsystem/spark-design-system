@@ -3,6 +3,11 @@
 ---
 import ColorSwatchGrid from '../../../components/ColorSwatchGrid';
 import ColorSwatch from '../../../components/ColorSwatch';
+import {
+  SprkLink,
+  SprkIcon,
+  SprkDivider,
+} from '@sparkdesignsystem/spark-react';
 
 # Color Codes
 <h2>
@@ -13,7 +18,6 @@ import ColorSwatch from '../../../components/ColorSwatch';
   <ColorSwatch variableName="sprk-deep-red" />
   <ColorSwatch variableName="sprk-mid-red" />
 </ColorSwatchGrid>
-<SprkDivider element="span"/>
 <h2>
   Orbit Purple
 </h2>
@@ -24,7 +28,6 @@ import ColorSwatch from '../../../components/ColorSwatch';
   <ColorSwatch variableName="sprk-purple-light" />
   <ColorSwatch variableName="sprk-purple-lightest" hasOutline={true} />
 </ColorSwatchGrid>
-<SprkDivider element="span"/>
 <h2>
   Neutral Colors
 </h2>
@@ -41,7 +44,6 @@ import ColorSwatch from '../../../components/ColorSwatch';
   <ColorSwatch variableName="sprk-black-tint-10" hasOutline={true} />
   <ColorSwatch variableName="sprk-gray" hasOutline={true} />
 </ColorSwatchGrid>
-<SprkDivider element="span"/>
 <h2>
   Semantic Colors
 </h2>
@@ -51,6 +53,17 @@ import ColorSwatch from '../../../components/ColorSwatch';
   <ColorSwatch variableName="sprk-pink" />
   <ColorSwatch variableName="sprk-yellow" />
 </ColorSwatchGrid>
-<SprkDivider element="span"/>
-
-
+<SprkLink
+  element="a"
+  href="/using-spark/foundations/color-accessibility"
+  variant="has-icon"
+>
+  Next: Color Accessibility
+  <SprkIcon
+    additionalClasses="
+      sprk-u-mls
+      sprk-c-Icon--m
+      sprk-c-Icon--stroke-current-color"
+    iconName="arrow-right"
+  />
+</SprkLink>

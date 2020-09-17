@@ -49,6 +49,10 @@ import chart2 from '../../../images/chart-2.png';
 import chart22x from '../../../images/chart-2@2x.png';
 export const chart2Set = `${chart2} 560w, ${chart22x} 1120w`;
 
+import howToApplyColorProportionally from '../../../images/how-to-apply-color-proportionally.png';
+import howToApplyColorProportionally2x from '../../../images/how-to-apply-color-proportionally@2x.png';
+export const howToApplyColorProportionallySet = `${howToApplyColorProportionally} 560w, ${howToApplyColorProportionally2x} 1120w`;
+
 import {
   SprkStack,
   SprkStackItem,
@@ -80,7 +84,9 @@ Our objective is to achieve human-centered design in everything we do and having
     </a>
   </li>
   <li>
-    How To Apply Color
+    <a href="#how-to-apply-color">
+      How To Apply Color
+    </a>
     <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mbn">
       <li>
         <a href="#rocket-red">
@@ -110,11 +116,6 @@ Our objective is to achieve human-centered design in everything we do and having
     </ul>
   </li>
   <li>
-    <a href="#button-and-link-hierarchy">
-      Button and Link Hierarchy
-    </a>
-  </li>
-  <li>
     <a href="#charts-and-graphs">
       Charts and Graphs
     </a>
@@ -130,6 +131,14 @@ Our objective is to achieve human-centered design in everything we do and having
 </p>
 <SprkDivider element="span"/>
 <h2>How to Apply Color</h2>
+<p>
+  When using color in any application, it’s important to be mindful of proportions. Using not just the right color, but the right amount of that color, creates a consistent balance in a user experience.
+</p>
+<img
+  srcset={howToApplyColorProportionallySet}
+  src={howToApplyColorProportionally}
+  sizes="550px"
+  alt="Scale showing correct balance and proportions when using color."/>
 <h3>Rocket Red</h3>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
   <ColorSwatch isCompact variableName="sprk-red" />
@@ -139,7 +148,10 @@ Our objective is to achieve human-centered design in everything we do and having
 <p>
   As our primary color, use Rocket Red for primary actions, like buttons and key elements in illustrations. Take care to not overuse any shades of red.
 </p>
-<SprkButton additionalClasses="sprk-u-mbm">Button</SprkButton>
+<div class="sprk-u-mbm">
+  <SprkButton additionalClasses="sprk-u-mrm">Button</SprkButton>
+  <SprkButton variant="secondary">Button</SprkButton>
+</div>
 <SprkStack itemSpacing="medium" splitAt="small">
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
     <SprkStack>
@@ -147,7 +159,7 @@ Our objective is to achieve human-centered design in everything we do and having
         <SprkFlag
           additionalClasses="sprk-o-Flag--middle"
           media={
-            <SprkIcon iconName="check-mark" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-Color--green" />
+            <SprkIcon iconName="check-mark" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--green" />
           }
         >
           <SprkHeading
@@ -180,7 +192,7 @@ Our objective is to achieve human-centered design in everything we do and having
         <SprkFlag
           additionalClasses="sprk-o-Flag--middle"
           media={
-            <SprkIcon iconName="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-Color--red" />
+            <SprkIcon iconName="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--red" />
           }
         >
           <SprkHeading
@@ -254,7 +266,7 @@ Our objective is to achieve human-centered design in everything we do and having
         <SprkFlag
           additionalClasses="sprk-o-Flag--middle"
           media={
-            <SprkIcon iconName="check-mark" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-Color--green" />
+            <SprkIcon iconName="check-mark" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--green" />
           }
         >
           <SprkHeading
@@ -287,7 +299,7 @@ Our objective is to achieve human-centered design in everything we do and having
         <SprkFlag
           additionalClasses="sprk-o-Flag--middle"
           media={
-            <SprkIcon iconName="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-Color--red" />
+            <SprkIcon iconName="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--red" />
           }
         >
           <SprkHeading
@@ -371,7 +383,7 @@ For example: always use shades of grey when working with text, where different c
         <SprkFlag
           additionalClasses="sprk-o-Flag--middle"
           media={
-            <SprkIcon iconName="check-mark" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-Color--green" />
+            <SprkIcon iconName="check-mark" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--green" />
           }
         >
           <SprkHeading
@@ -404,7 +416,7 @@ For example: always use shades of grey when working with text, where different c
         <SprkFlag
           additionalClasses="sprk-o-Flag--middle"
           media={
-            <SprkIcon iconName="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-Color--red" />
+            <SprkIcon iconName="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--red" />
           }
         >
           <SprkHeading
@@ -462,7 +474,7 @@ For example: always use shades of grey when working with text, where different c
         <SprkFlag
           additionalClasses="sprk-o-Flag--middle"
           media={
-            <SprkIcon iconName="check-mark" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-Color--green" />
+            <SprkIcon iconName="check-mark" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--green" />
           }
         >
           <SprkHeading
@@ -495,7 +507,7 @@ For example: always use shades of grey when working with text, where different c
         <SprkFlag
           additionalClasses="sprk-o-Flag--middle"
           media={
-            <SprkIcon iconName="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-u-Color--red" />
+            <SprkIcon iconName="close-circle" additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--red" />
           }
         >
           <SprkHeading
@@ -531,9 +543,7 @@ For example: always use shades of grey when working with text, where different c
 <img
   srcset={stepperExampleSet}
   src={stepperExample}
-  sizes="(min-width: 1120px) 1120px,
-        (min-width: 1680px) 1680px,
-        560px"
+  sizes="550px"
   class="sprk-u-mbm"
   alt="Orbit Purple Screen that fills majority of space, paired with a step-by-step navigation bar and blank iPhone screen."/>
 <p>
@@ -552,55 +562,6 @@ For example: always use shades of grey when working with text, where different c
   <ColorSwatch isCompact hasOutline variableName="sprk-gray" />
 </ColorSwatchGrid>
 <SprkDivider element="span"/>
-<h3>Button and Link Hierarchy</h3>
-<p>
-  Button and link guidelines are one of the largest updates with the Orbit Color palette, specifically how color now has a further impact on the way we use and pair these components. To see more details, learn more on the Buttons and Links pages.
-</p>
-<SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-Measure">
-  <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
-    <SprkCard>
-      <h4>Buttons</h4>
-      <p>
-        View updates to our standards for effective button usage.
-      </p>
-      <SprkLink
-        element="a"
-        analyticsString="link-icon"
-        href="/using-spark/components/button"
-        variant="has-icon"
-      >
-        Button Guidelines
-        <SprkIcon
-          additionalClasses="
-            sprk-c-Icon--m
-            sprk-c-Icon--stroke-current-color"
-          iconName="chevron-right"
-        />
-      </SprkLink>
-    </SprkCard>
-  </SprkStackItem>
-  <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
-    <SprkCard>
-      <h4>Links</h4>
-      <p>
-        View updates to our standard for effective link usage.
-      </p>
-      <SprkLink
-        element="a"
-        href="/using-spark/components/link"
-        variant="has-icon"
-      >
-        Link Guidelines
-        <SprkIcon
-          additionalClasses="
-            sprk-c-Icon--m
-            sprk-c-Icon--stroke-current-color"
-          iconName="chevron-right"
-        />
-      </SprkLink>
-    </SprkCard>
-  </SprkStackItem>
-</SprkStack>
 <h3>Charts and Graphs</h3>
 <p>
   Charts and graphs use shades of purple to represent the correct information hierarchy.
@@ -622,14 +583,12 @@ For example: always use shades of grey when working with text, where different c
   While semantic colors can be used to display both positive and negative information, we strongly recommend not mixing multiple semantic colors within one chart. These colors should only be used as accents on the Purple gradient palette.
 </p>
 
-<SprkStack itemSpacing="medium" splitAt="small">
+<SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-Measure">
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
     <img
       srcset={chart1Set}
       src={chart1}
-      sizes="(min-width: 1120px) 1120px,
-            (min-width: 1680px) 1680px,
-            560px"
+      sizes="300px"
       class="sprk-u-mbm"
       alt="Orbit Purple Screen that fills majority of space, paired with a step-by-step navigation bar and blank iPhone screen."/>
   </SprkStackItem>
@@ -637,10 +596,23 @@ For example: always use shades of grey when working with text, where different c
     <img
       srcset={chart2Set}
       src={chart2}
-      sizes="(min-width: 1120px) 1120px,
-            (min-width: 1680px) 1680px,
-            560px"
+      sizes="300px"
       class="sprk-u-mbm"
       alt="Orbit Purple Screen that fills majority of space, paired with a step-by-step navigation bar and blank iPhone screen."/>
   </SprkStackItem>
 </SprkStack>
+<SprkDivider element="span"/>
+<SprkLink
+  element="a"
+  href="/using-spark/foundations/color-codes"
+  variant="has-icon"
+>
+  Next: Color Codes
+  <SprkIcon
+    additionalClasses="
+      sprk-u-mls
+      sprk-c-Icon--m
+      sprk-c-Icon--stroke-current-color"
+    iconName="arrow-right"
+  />
+</SprkLink>

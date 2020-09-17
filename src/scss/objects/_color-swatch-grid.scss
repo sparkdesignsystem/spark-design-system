@@ -22,6 +22,7 @@
 .docs-c-ColorSwatch__label_container {
   width: 25%;
   display: inline-block;
+  margin-top: $sprk-space-m;
 
   @media (max-width: $sprk-split-breakpoint-l) {
     margin-bottom: $sprk-space-m;

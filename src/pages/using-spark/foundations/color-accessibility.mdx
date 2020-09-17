@@ -18,6 +18,11 @@ export const accessibilityKeySet = `${accessibilityKey} 560w, ${accessibilityKey
 export const accessibilityChart1Set= `${accessibilityChart1} 560w, ${accessibilityChart12x} 1120w, ${accessibilityChart13x} 1680w`;
 export const accessibilityChart2Set= `${accessibilityChart2} 560w, ${accessibilityChart22x} 1120w, ${accessibilityChart23x} 1680w`;
 
+import {
+  SprkLink,
+  SprkIcon,
+  SprkDivider,
+} from '@sparkdesignsystem/spark-react';
 
 # Color Accessibility
   Accessibility is always a top priority. In accordance to this standard, we comply with WCAG 2.0 contrast guidelines, in order to account for the needs of all people.
@@ -28,7 +33,7 @@ export const accessibilityChart2Set= `${accessibilityChart2} 560w, ${accessibili
   sizes="(min-width: 1120px) 1120px,
         (min-width: 1680px) 1680px,
         560px"
-  class="sprk-u-mbm sprk-u-Measure"
+  class="sprk-u-mbm"
   alt="The legend for contrast accessibility."/>
 <img
   srcset={accessibilityChart1Set}
@@ -36,7 +41,7 @@ export const accessibilityChart2Set= `${accessibilityChart2} 560w, ${accessibili
   sizes="(min-width: 1120px) 1120px,
         (min-width: 1680px) 1680px,
         560px"
-  class="sprk-u-mbm sprk-u-Measure"
+  class="sprk-u-mbm"
   alt="A chart of colors comparing contrast accessibility."/>
 <img
   srcset={accessibilityChart2Set}
@@ -44,9 +49,20 @@ export const accessibilityChart2Set= `${accessibilityChart2} 560w, ${accessibili
   sizes="(min-width: 1120px) 1120px,
         (min-width: 1680px) 1680px,
         560px"
-  class="sprk-u-mbm sprk-u-Measure"
+  class="sprk-u-mbm"
   alt="A chart of colors comparing contrast accessibility."/>
-
-
-
-
+<SprkDivider element="span"/>
+<SprkLink
+  element="a"
+  href="/using-spark/foundations/color-codes"
+  variant="has-icon"
+>
+  <SprkIcon
+    additionalClasses="
+      sprk-u-mrs
+      sprk-c-Icon--m
+      sprk-c-Icon--stroke-current-color"
+    iconName="arrow-left"
+  />
+  Previous: Color Codes
+</SprkLink>

@@ -26,6 +26,9 @@ const SprkButton = ({
   }
   let spinnerVariant;
   if (loading) {
+    if (variant === 'secondary') {
+      spinnerVariant = 'primary';
+    }
     if (variant === 'tertiary') {
       spinnerVariant = 'secondary';
     }
