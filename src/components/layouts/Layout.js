@@ -68,13 +68,27 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
       `}
       render={(data) => (
         <>
-          <div className="sprk-o-Box docs-c-SkipNav">
+          <div className="sprk-o-Box docs-c-SkipNav sprk-u-BackgroundColor--white">
             <SprkLink
               href="#main_content"
               additionalClasses="docs-c-SkipNav__link"
             >
               Skip to Main Content
             </SprkLink>
+          </div>
+          <div
+            className="sprk-u-BackgroundColor--black
+            sprk-u-Color--white
+            sprk-u-pvm
+            sprk-u-AbsoluteCenter"
+          >
+            Looking for the previous version of Spark?
+            <a
+              href="https://v13--spark-design-system.netlify.app/"
+              className="docs-c-Banner--link sprk-u-mlm"
+            >
+              Take a Look!
+            </a>
           </div>
           <Header
             context={context}
