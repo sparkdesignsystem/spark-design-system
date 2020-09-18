@@ -23,6 +23,11 @@ on the page and are essential to submitting forms,
 beginning a new task, or navigating to the next
 step in a process.
 
+When designing actions, Button variants imply hierarchy.
+Use Primary Buttons first, then use Secondary,
+Tertiary and Quaternary variants for other
+actions accordingly.
+
 ### Guidelines
 
 - Effective Button text uses precise, task-specific
@@ -47,9 +52,7 @@ instead of Button.
 
 ### Primary Button
 
-The most important action on the page should
-use Primary Button. Effective action flows
-contain one Primary Button per page.
+Use for the most important action, with no more than two primary buttons per page. Use other button types and visually create a digestible content flow and hierarchy.
 
 <ComponentPreview
   componentName="button--primary"
@@ -60,10 +63,7 @@ contain one Primary Button per page.
 
 ### Secondary Button
 
-A Secondary Button typically represents the
-highest priority alternative to the Primary Button.
-There can be more than one on a page and can depict
-similar or different actions.
+Typically represents the second highest priority, following the Primary Button. There can be more than one on a page and can depict similar or different actions.
 
 <ComponentPreview
   componentName="button--secondary"
@@ -74,8 +74,7 @@ similar or different actions.
 
 ### Tertiary Button
 
-A Tertiary Button represents a lower prioritized
-action on a page.
+Can be paired with Primary and Secondary Buttons, and often represents the third priority on the page.
 
 <ComponentPreview
   componentName="button--tertiary"
@@ -86,8 +85,7 @@ action on a page.
 
 ### Quaternary Button
 
-A Quaternary Button represents the lowest prioritized
-action on a page.
+Use for the sign in buttons in the top navigation, or sometimes on a page for the least important actions.
 
 <ComponentPreview
   componentName="button--quaternary"
@@ -100,13 +98,7 @@ action on a page.
 
 ### Disabled
 
-A Disabled Button represents an action that is not
-currently available for the user. They imply that
-the Button would be available, given a certain set
-of circumstances. Since a user cannot interact with
-this button, consider if it’s necessary to show the
-disabled button at all. Otherwise, make it clear
-in the interface why a button is Disabled.
+Represents an action that’s not currently available to the user. A disabled button implies that the Button would be available given a certain set of circumstances. Since a user can’t interact with this Button, consider if it’s necessary to show the Disabled Button at all.
 
 #### Disabled - Primary
 <ComponentPreview

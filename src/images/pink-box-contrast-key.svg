@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="74px" viewBox="0 0 72 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pink_error</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Accessibility-Charts-" transform="translate(-946.000000, -259.000000)">
+            <g id="Accessibility-Chart-Legend" transform="translate(304.000000, 207.000000)">
+                <g id="pink_error" transform="translate(642.000000, 52.000000)">
+                    <g id="Group-4" fill="#E50158" stroke="#B4B3B3">
+                        <rect id="Rectangle" x="0.5" y="0.5" width="71" height="73"></rect>
+                    </g>
+                    <g id="NonStock-Icon-Error-0.75px-16x16-#1C1B1A-P1609044" transform="translate(16.000000, 20.000000)">
+                        <path d="M20,3.85 L36.75,33 L3.25,33 L20,3.85 M20,0.1 L0,34.75 L40,34.75 L20,0.1 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        <line x1="20.3" y1="24.775" x2="20.3" y2="11" id="Path" stroke="#FFFFFF" stroke-width="1.875"></line>
+                        <path d="M20.3,27.45 C19.5406085,27.45 18.925,28.0656085 18.925,28.825 C18.9181434,29.1917317 19.0608062,29.5454663 19.32017,29.80483 C19.5795337,30.0641938 19.9332683,30.2068566 20.3,30.2 C21.0593915,30.2 21.675,29.5843915 21.675,28.825 C21.675,28.4603273 21.5301343,28.1105907 21.2722718,27.8527282 C21.0144093,27.5948657 20.6646727,27.45 20.3,27.45 L20.3,27.45 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
