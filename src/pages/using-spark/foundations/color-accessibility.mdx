@@ -22,12 +22,40 @@ import {
   SprkLink,
   SprkIcon,
   SprkDivider,
+  SprkStack,
+  SprkStackItem,
 } from '@sparkdesignsystem/spark-react';
 
 # Color Accessibility
-  Accessibility is always a top priority. In accordance to this standard, we comply with WCAG 2.0 contrast guidelines, in order to account for the needs of all people.
+  Accessibility is always a top priority. In accordance to this standard, we comply with [WCAG 2.1 (Level AA) contrast guidelines](https://www.w3.org/TR/WCAG21/) in order to account for the needs of all people.
 
-[View charts as a high resolution PDF.](/using-spark/components/link)
+## Contrast Charts
+Use these charts to discern contrast accessibility between two colors.
+The contrast outcomes between two colors can have three possibilities:
+<ul>
+  <li>
+    <span class="sprk-u-FontWeight--bold">Gray box</span> - Fails to meet contrast requirements. Do not combine these colors.
+  </li>
+  <li>
+    <span class="sprk-u-FontWeight--bold">Green box with a checkmark</span> - Indicates a 4.5:1 contrast ratio, and meets requirements for all text and graphical elements.
+    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mbn">
+      <li>
+        If text is smaller than 18px (or 14px bold) it must have 4.5:1 contrast ratio.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <span class="sprk-u-FontWeight--bold">Pink box with warning</span> - Indicates a 3:1 contrast ratio, and should only be used for large text and graphical elements
+    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mbn">
+      <li>
+         At least 18px (or 14px bold) is considered large text.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+<span class="sprk-u-FontWeight--bold sprk-u-mbl">Click each chart to view a high resolution version.</span>
 
 <img
   srcset={accessibilityKeySet}
@@ -53,6 +81,9 @@ import {
         560px"
   class="sprk-u-mbm"
   alt="A chart of colors comparing contrast accessibility."/>
+
+<span class="sprk-u-FontWeight--bold">Click each chart to view a high resolution version.</span>
+
 <SprkDivider element="span"/>
 <SprkLink
   element="a"
