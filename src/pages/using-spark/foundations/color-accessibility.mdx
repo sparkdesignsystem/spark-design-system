@@ -6,6 +6,14 @@ import accessibilityKey from '../../../images/accessibility-key.png';
 import accessibilityKey2x from '../../../images/accessibility-key@2x.png';
 import accessibilityKey3x from '../../../images/accessibility-key@3x.png';
 
+import chart1HighRes from '../../../images/contrast-chart-1-high-res.jpg';
+import chart2HighRes from '../../../images/contrast-chart-2-high-res.jpg';
+
+
+import grayBox from '../../../images/gray-box-contrast-key.svg';
+import greenBox from '../../../images/green-box-contrast-key.svg';
+import pinkBox from '../../../images/pink-box-contrast-key.svg';
+
 import accessibilityChart1 from '../../../images/accessibility-chart-1.png';
 import accessibilityChart12x from '../../../images/accessibility-chart-1@2x.png';
 import accessibilityChart13x from '../../../images/accessibility-chart-1@3x.png';
@@ -31,58 +39,74 @@ import {
 
 ## Contrast Charts
 Use these charts to discern contrast accessibility between two colors.
-The contrast outcomes between two colors can have three possibilities:
-<ul>
-  <li>
-    <span class="sprk-u-FontWeight--bold">Gray box</span> - Fails to meet contrast requirements. Do not combine these colors.
-  </li>
-  <li>
-    <span class="sprk-u-FontWeight--bold">Green box with a checkmark</span> - Indicates a 4.5:1 contrast ratio, and meets requirements for all text and graphical elements.
-    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mbn">
-      <li>
-        If text is smaller than 18px (or 14px bold) it must have 4.5:1 contrast ratio.
-      </li>
-    </ul>
-  </li>
-  <li>
-    <span class="sprk-u-FontWeight--bold">Pink box with warning</span> - Indicates a 3:1 contrast ratio, and should only be used for large text and graphical elements
-    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mbn">
-      <li>
-         At least 18px (or 14px bold) is considered large text.
-      </li>
-    </ul>
-  </li>
-</ul>
+
+<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+  The contrast outcomes between two colors can have three possibilities:
+</p>
 
 
-<span class="sprk-u-FontWeight--bold sprk-u-mbl">Click each chart to view a high resolution version.</span>
+<SprkStack splitAt="tiny" additionalClasses="sprk-u-mbm sprk-u-Measure">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
+    <img src={grayBox}  alt="A gray box indicating failed contrast"/>
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-o-Stack__item--center-column">
+    <span class="sprk-u-FontWeight--bold">Do Not Use</span> - Fails to meet contrast requirements. Do not combine these colors.
+  </SprkStackItem>
+</SprkStack>
+<SprkDivider element="span" additionalClasses="sprk-u-Measure sprk-u-mvl"/>
+<SprkStack splitAt="tiny" additionalClasses="sprk-u-mbm sprk-u-Measure">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
+    <img src={greenBox}  alt="A green box with a checkmark indicating successful contrast"/>
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-o-Stack__item--center-column">
+    <p>
+      <span class="sprk-u-FontWeight--bold">Successful Contrast</span> - Indicates a 4.5:1 contrast ratio, and meets requirements for all text and graphical elements.
+    </p>
+    <p class="sprk-b-TypeBodyTwo sprk-u-mbn sprk-u-Measure">
+      If text is smaller than 18px (or 14px bold) it must have 4.5:1 contrast ratio.
+    </p>
+  </SprkStackItem>
+</SprkStack>
+<SprkDivider element="span" additionalClasses="sprk-u-Measure sprk-u-mvl"/>
+<SprkStack splitAt="tiny" additionalClasses="sprk-u-mbm sprk-u-Measure">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@xs sprk-o-Stack__item--center-column sprk-u-TextAlign--center">
+    <img src={pinkBox}  alt="A pink error box warning to be be mindful of meeting contrast conditions."/>
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--three-fourths@xs sprk-o-Stack__item--center-column">
+    <p>
+      <span class="sprk-u-FontWeight--bold">Needs Consideration</span> - Indicates a 3:1 contrast ratio, and should only be used for large text and graphical elements
+    </p>
+    <p class="sprk-b-TypeBodyTwo sprk-u-mbn sprk-u-Measure">
+      At least 18px (or 14px bold) is considered large text.
+    </p>
+  </SprkStackItem>
+</SprkStack>
+<SprkDivider element="span" additionalClasses="sprk-u-Measure sprk-u-mvl"/>
 
-<img
-  srcset={accessibilityKeySet}
-  src={accessibilityKey}
-  sizes="(min-width: 1120px) 1120px,
-        (min-width: 1680px) 1680px,
-        560px"
-  class="sprk-u-mbm sprk-u-mtm"
-  alt="The legend for contrast accessibility."/>
-<img
-  srcset={accessibilityChart1Set}
-  src={accessibilityChart1}
-  sizes="(min-width: 1120px) 1120px,
-        (min-width: 1680px) 1680px,
-        560px"
-  class="sprk-u-mbm"
-  alt="A chart of colors comparing contrast accessibility."/>
-<img
-  srcset={accessibilityChart2Set}
-  src={accessibilityChart2}
-  sizes="(min-width: 1120px) 1120px,
-        (min-width: 1680px) 1680px,
-        560px"
-  class="sprk-u-mbm"
-  alt="A chart of colors comparing contrast accessibility."/>
+<p class="sprk-u-FontWeight--bold sprk-u-mvh sprk-u-Measure">Each chart image clicks through to view a high resolution version.</p>
 
-<span class="sprk-u-FontWeight--bold">Click each chart to view a high resolution version.</span>
+<a href={chart1HighRes} class="sbdocs-a sprk-u-Measure">
+  <img
+    srcset={accessibilityChart1Set}
+    src={accessibilityChart1}
+    sizes="(min-width: 1120px) 1120px,
+          (min-width: 1680px) 1680px,
+          560px"
+    class="sprk-u-mbm"
+    alt="A chart of colors comparing contrast accessibility."/>
+</a>
+<a href={chart2HighRes} class="sbdocs-a sprk-u-Measure">
+  <img
+    srcset={accessibilityChart2Set}
+    src={accessibilityChart2}
+    sizes="(min-width: 1120px) 1120px,
+          (min-width: 1680px) 1680px,
+          560px"
+    class="sprk-u-mbl"
+    alt="A chart of colors comparing contrast accessibility."/>
+</a>
+
+<p class="sprk-u-FontWeight--bold sprk-u-mbh sprk-u-Measure">Each chart image clicks through to view a high resolution version.</p>
 
 <SprkDivider element="span"/>
 <SprkLink
