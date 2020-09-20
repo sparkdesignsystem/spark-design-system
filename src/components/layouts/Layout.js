@@ -78,16 +78,14 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
           </div>
           <div
             className="sprk-u-BackgroundColor--black
-            sprk-u-Color--white
             sprk-u-pvm
             sprk-u-AbsoluteCenter"
           >
-            Looking for the previous version of Spark?
             <a
               href="https://v13--spark-design-system.netlify.app/"
               className="docs-c-Banner--link sprk-u-mlm"
             >
-              Take a Look!
+              View the previous release of Spark
             </a>
           </div>
           <Header
