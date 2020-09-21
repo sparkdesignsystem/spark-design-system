@@ -20,7 +20,7 @@ class ComponentPreview extends React.Component {
       maxWidth,
       allowScrolling,
     } = this.props;
-    const iframeURL = `https://html.sparkdesignsystem.com/iframe.html?id=${componentType}-${componentName}`;
+    const iframeURL = `https://v13--spark-sb-html.netlify.app/iframe.html?id=${componentType}-${componentName}`;
 
     return (
       <div
