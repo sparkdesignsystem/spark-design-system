@@ -23,7 +23,8 @@ class ComponentPreview extends React.Component {
     const iframeURL = `https://html.sparkdesignsystem.com/iframe.html?id=${componentType}-${componentName}`;
 
     return (
-      <div className="sprk-u-mbm sprk-u-ptl">
+      <div
+        className="sprk-u-mbm sprk-u-ptl">
         <div className="sprk-u-mbl">
           <IframeResizer
             style={{
@@ -50,7 +51,7 @@ class ComponentPreview extends React.Component {
       </div>
     );
   }
-};
+}
 
 ComponentPreview.propTypes = {
   componentName: PropTypes.string,
