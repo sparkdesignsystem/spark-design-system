@@ -65,12 +65,24 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
     `}
       render={data => (
         <>
-          <div className="sprk-o-Box docs-c-SkipNav">
+          <div className="sprk-o-Box docs-c-SkipNav sprk-u-BackgroundColor--white">
             <SprkLink
               href="#main_content" additionalClasses="docs-c-SkipNav__link"
             >
               Skip to Main Content
             </SprkLink>
+          </div>
+          <div
+            className="sprk-u-BackgroundColor--black sprk-u-Color--white
+            sprk-u-pvm
+            sprk-u-AbsoluteCenter"
+          >
+            <a
+              href="https://www.sparkdesignsystem.com/"
+              className="docs-c-Banner--link sprk-u-mlm"
+            >
+              View the latest release of Spark
+            </a>
           </div>
           <Header
             context={context}
