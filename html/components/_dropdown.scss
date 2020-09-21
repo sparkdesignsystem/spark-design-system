@@ -58,7 +58,7 @@
 }
 
 .sprk-c-Dropdown__link {
-  color: $sprk-black;
+  color: $sprk-dropdown-link-color;
   display: block;
   padding: ($sprk-dropdown-padding / 2) $sprk-dropdown-padding;
   text-decoration: none;
@@ -69,8 +69,22 @@
   }
 }
 
+.sprk-c-Dropdown__trigger {
+  color: $sprk-dropdown-trigger-color;
+
+  &:visited {
+    color: $sprk-dropdown-trigger-color-visited;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sprk-dropdown-trigger-color-active;
+  }
+}
+
 /// Adds styles to indicate that the dropdown
-/// link is currently active. 
+/// link is currently active.
 .sprk-c-Dropdown__link--active {
   box-shadow: $sprk-dropdown-active-box-shadow;
   border-left: $sprk-dropdown-active-border;

@@ -3,117 +3,123 @@
 // ==================================================================
 
 // Primary
-/// Color value for red.
-/// @group red
+/// Red for key branded moments throughout the product as our primary brand color.
+/// @group primary
 /// @type #C8102E
 $sprk-red: rgb(200, 16, 46);
-/// Color value for mid red.
-/// @group red
-/// @type #9D2235
-$sprk-mid-red: rgb(157,34,53);
-/// Color value for deep red.
-/// @group red
+/// Darkest red for key branded moments throughout the product.
+/// @group primary
 /// @type #76232F
-$sprk-deep-red: rgb(118,35,47);
-/// Color value for black.
-/// @group black
-/// @type #333333
-$sprk-black: rgb(51, 51, 51);
-/// Color value for white.
-/// @group white
+$sprk-deep-red: rgb(118, 35, 47);
+/// Mid red for key branded moments throughout the product.
+/// @group primary
+/// @type #9D2235
+$sprk-mid-red: rgb(157, 34, 53);
+
+// Secondary
+/// Main purple for secondary actions and brand elements.
+/// @group secondary positive-negative charts-graphs
+/// @type #603AA1
+$sprk-purple: rgb(96, 58, 161);
+/// Dark purple for interactive elements. Can also be used for limited floods of color.
+/// @group secondary flood-dark charts-graphs
+/// @type #3C3174
+$sprk-purple-dark: rgb(60, 49, 116);
+/// Deep purple for interactive elements. Can also be used for limited floods of color.
+/// @group secondary flood-dark charts-graphs
+/// @type #2E1166
+$sprk-purple-deep: rgb(46, 17, 102);
+/// Light purple for interactive elements.
+/// @group secondary charts-graphs
+/// @type #9265D3
+$sprk-purple-light: rgb(146, 101, 211);
+/// Lightest purple for interactive elements. Can also be used for limited floods of color.
+/// @group secondary flood-light
+/// @type #E7E2F2
+$sprk-purple-lightest: rgb(231, 226, 242);
+
+// Semantic
+/// Use to communicate a positive status or message.
+/// @group semantic
+/// @type #298540
+$sprk-green: rgb(41, 133, 64);
+/// Use to communicate an informative status or message.
+/// @group semantic
+/// @type #1C6EF2
+$sprk-blue: rgb(28, 110, 242);
+/// Use to communicate an error status or message.
+/// @group semantic positive-negative
+/// @type #E50158
+$sprk-pink: rgb(229, 1, 88);
+/// Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this color.
+/// @group semantic
+/// @type #EDA302
+$sprk-yellow: rgb(237, 163, 2);
+
+// Neutrals
+/// White for floods of color and accents, like backgrounds and cards.
+/// @group neutral flood-light
 /// @type #FFFFFF
 $sprk-white: rgb(255, 255, 255);
-/// Color value for gray.
-/// @group gray
+/// Black for main text color, specifically in headline and body copy.
+/// @group neutral flood-dark
+/// @type #1C1B1A
+$sprk-black: rgb(28, 27, 26);
+/// Black at 90%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.
+/// @group neutral
+/// @type #323130
+$sprk-black-tint-90: rgb(50, 49, 48);
+/// Black at 80%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.
+/// @group neutral
+/// @type #494948
+$sprk-black-tint-80: rgb(73, 73, 72);
+/// Black at 70%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.
+/// @group neutral
+/// @type #605F5E
+$sprk-black-tint-70: rgb(96, 95, 94);
+/// Black at 60%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.
+/// @group neutral
+/// @type #777676
+$sprk-black-tint-60: rgb(119, 118, 118);
+/// Black at 50%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.
+/// @group neutral
+/// @type #8D8D8C
+$sprk-black-tint-50: rgb(141, 141, 140);
+/// Black at 40%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.
+/// @group neutral
+/// @type #A4A4A3
+$sprk-black-tint-40: rgb(164, 164, 163);
+/// Black at 30%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.
+/// @group neutral
+/// @type #BABABA
+$sprk-black-tint-30: rgb(186, 186, 186);
+/// Black at 20%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.
+/// @group neutral
+/// @type #D2D1D1
+$sprk-black-tint-20: rgb(210, 209, 209);
+/// Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.
+/// @group neutral
+/// @type #E8E8E8
+$sprk-black-tint-10: rgb(232, 232, 232);
+/// Lightest gray. Use in combination with content hierarchy, font-weight and background color to create AA accessible text.
+/// @group neutral flood-light
 /// @type #F7F7F7
 $sprk-gray: rgb(247, 247, 247);
-/// Color value for dark gray.
-/// @group gray
-/// @type #CFCFCF
-$sprk-gray-dark: rgb(207, 207, 207);
-/// Color value for green.
-/// @group green
-/// @type #008473
-$sprk-green: rgb(0, 132, 115);
-/// Color value for dark green.
-/// @group green
-/// @type #007667
-$sprk-green-dark: rgb(0, 118, 103);
-/// Color value for yellow.
-/// @group yellow
-/// @type #F5BE40
-$sprk-yellow: rgb(245, 190, 64);
-/// Color value for blue.
-/// @group blue
-/// @type #007DBA
-$sprk-blue: rgb(0, 125, 186);
 
-// Black Tints
-/// Color value for black at 75%.
-/// @group black
-/// @type #404040
-$sprk-black-tint-75: rgb(64, 64, 64);
-/// Color value for black at 50%.
-/// @group black
-/// @type #808080
-$sprk-black-tint-50: rgb(128, 128, 128);
-/// Color value for black at 25%.
-/// @group black
-/// @type #BEBEBE
-$sprk-black-tint-25: rgb(190, 190, 190);
-
-// Blue Tints
-/// Color value for blue at 75%.
-/// @group blue
-/// @type #4990C3
-$sprk-blue-tint-75: rgb(73, 144, 195);
-/// Color value for blue at 50%.
-/// @group blue
-/// @type #76ACD2
-$sprk-blue-tint-50: rgb(118, 172, 210);
-/// Color value for blue at 25%.
-/// @group blue
-/// @type #A7C7E1
-$sprk-blue-tint-25: rgb(164, 199, 225);
-
-// Green Tints
-/// Color value for green at 75%.
-/// @group green
-/// @type #40C6B2
-$sprk-green-tint-75: rgb(64, 198, 178);
-/// Color value for green at 50%.
-/// @group green
-/// @type #80D9CB
-$sprk-green-tint-50: rgb(128, 217, 203);
-/// Color value for green at 25%.
-/// @group green
-/// @type #BFECE5
-$sprk-green-tint-25: rgb(191, 236, 229);
-
-// Red Tints
-/// Color value for red 75%.
-/// @group red
-/// @type #D64C62
-$sprk-red-tint-75: rgb(214, 76, 98);
-/// Color value for red at 50%.
-/// @group red
-/// @type #E38796
-$sprk-red-tint-50: rgb(227, 135, 150);
-/// Color value for red at 25%.
-/// @group red
-/// @type #F1C3CB
-$sprk-red-tint-25: rgb(241, 195, 203);
-
-// Yellow Tints
-/// Color value for yellow at 75%.
-/// @group yellow
-/// @type #EDA302
-$sprk-yellow-tint-75: rgb(237, 163, 2);
-/// Color value for yellow at 50%.
-/// @group yellow
-/// @type #F4C766
-$sprk-yellow-tint-50: rgb(244, 199, 102);
-/// Color value for yellow at 25%.
-/// @group yellow
-/// @type #F7DA9A
-$sprk-yellow-tint-25: rgb(247, 218, 154);
+// Charts and Graphs
+/// Color value for Purple Navy.
+/// @group charts-graphs
+/// @type #1C0152
+$sprk-purple-navy: rgb(28, 1, 82);
+/// Color value for Lavender.
+/// @group charts-graphs
+/// @type #BE84F7
+$sprk-lavender: rgb(190, 132, 247);
+/// Color value for Wisteria.
+/// @group charts-graphs
+/// @type #DEB1FD
+$sprk-wisteria: rgb(222, 177, 253);
+/// Color value for Magnolia.
+/// @group charts-graphs
+/// @type #F0DAFF
+$sprk-magnolia: rgb(240, 218, 255);

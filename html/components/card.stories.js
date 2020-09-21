@@ -3,7 +3,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Components/Card',
   decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
+    story => `<div class="sprk-o-Box sprk-o-Box--large">${story()}</div>`,
   ],
   parameters: {
     info: `
@@ -168,7 +168,7 @@ export const teaser = () => (
 
 teaser.story = {
   parameters: {
-    docs: { iframeHeight: 500 },
+    docs: { iframeHeight: 550 },
   },
 };
 
@@ -221,7 +221,7 @@ export const teaserWithDifferentElementOrder = () => (
 teaserWithDifferentElementOrder.story = {
   name: 'Teaser With Different Element Order',
   parameters: {
-    docs: { iframeHeight: 500 },
+    docs: { iframeHeight: 550 },
   },
 };
 
@@ -278,13 +278,12 @@ export const twoUpCards = () => (
             class="
               sprk-o-Stack__item
               sprk-b-Link
-              sprk-b-Link--simple
               sprk-b-Link--has-icon
             "
           >
             Learn More
             <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-              <use xlink:href="#chevron-right" />
+              <use xlink:href="#arrow-right" />
             </svg>
           </a>
         </div>
@@ -330,13 +329,12 @@ export const twoUpCards = () => (
           class="
             sprk-o-Stack__item
             sprk-b-Link
-            sprk-b-Link--simple
             sprk-b-Link--has-icon
           "
         >
           Learn More
           <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-            <use xlink:href="#chevron-right" />
+            <use xlink:href="#arrow-right" />
           </svg>
         </a>
       </div>
@@ -376,7 +374,7 @@ export const threeUpCards = () => (
             <svg
               class="
                 sprk-c-Icon
-                sprk-c-Icon--xxl
+                sprk-c-Icon--xl
               "
               height="75"
               viewBox="0 0 220.63 197.62"
@@ -407,13 +405,12 @@ export const threeUpCards = () => (
             class="
               sprk-o-Stack__item
               sprk-b-Link
-              sprk-b-Link--simple
               sprk-b-Link--has-icon
             "
           >
             Learn More
             <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-              <use xlink:href="#chevron-right" />
+              <use xlink:href="#arrow-right" />
             </svg>
           </a>
         </div>
@@ -439,7 +436,9 @@ export const threeUpCards = () => (
         >
           <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
             <svg
-              class="sprk-c-Icon sprk-c-Icon--xxl"
+              class="
+                sprk-c-Icon
+                sprk-c-Icon--xl"
               height="75"
               viewBox="0 0 220.63 197.62"
             >
@@ -462,13 +461,13 @@ export const threeUpCards = () => (
             href="#nogo"
             class="
               sprk-o-Stack__item
-              sprk-b-Link sprk-b-Link--simple
+              sprk-b-Link
               sprk-b-Link--has-icon
             "
           >
             Learn More
             <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-              <use xlink:href="#chevron-right" />
+              <use xlink:href="#arrow-right" />
             </svg>
           </a>
         </div>
@@ -495,7 +494,9 @@ export const threeUpCards = () => (
             href="#nogo"
             class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
             <svg
-              class="sprk-c-Icon sprk-c-Icon--xxl"
+              class="
+                sprk-c-Icon
+                sprk-c-Icon--xl"
               height="75" viewBox="0 0 220.63 197.62">
               <use xlink:href="#call-team-member" />
             </svg>
@@ -517,13 +518,12 @@ export const threeUpCards = () => (
             class="
               sprk-o-Stack__item
               sprk-b-Link
-              sprk-b-Link--simple
               sprk-b-Link--has-icon
             "
           >
             Learn More
             <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-              <use xlink:href="#chevron-right" />
+              <use xlink:href="#arrow-right" />
             </svg>
           </a>
         </div>

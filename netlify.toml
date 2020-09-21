@@ -134,5 +134,10 @@
   to = "/using-spark/components/input"
   status = 301
 
+[[redirects]]
+  from = "using-spark/foundations/color"
+  to = "/using-spark/foundations/color-usage"
+  status = 301
+
 
 

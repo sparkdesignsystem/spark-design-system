@@ -2,13 +2,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import throttle from 'lodash/throttle';
+import uniqueId from 'lodash/uniqueId';
 import SprkMastheadMenuIcon from './components/SprkMastheadMenuIcon/SprkMastheadMenuIcon';
 import SprkMastheadLittleNav from './components/SprkMastheadLittleNav/SprkMastheadLittleNav';
 import SprkMastheadNarrowNav from './components/SprkMastheadNarrowNav/SprkMastheadNarrowNav';
 import SprkMastheadBigNav from './components/SprkMastheadBigNav/SprkMastheadBigNav';
 import SprkLink from '../../base/links/SprkLink';
-import throttle from 'lodash/throttle';
-import uniqueId from 'lodash/uniqueId';
 
 class SprkMasthead extends Component {
   constructor() {
@@ -20,12 +20,15 @@ class SprkMasthead extends Component {
       isNarrowLayout: false,
       scrollDirection: 'up',
       currentLayout: false,
-      scrollPosition: 0
+      scrollPosition: 0,
     };
     this.toggleNarrowNav = this.toggleNarrowNav.bind(this);
     this.toggleScrollEvent = this.toggleScrollEvent.bind(this);
     this.checkScrollDirection = this.checkScrollDirection.bind(this);
-    this.throttledCheckScrollDirection = throttle(this.checkScrollDirection, 500);
+    this.throttledCheckScrollDirection = throttle(
+      this.checkScrollDirection,
+      500,
+    );
     this.toggleMenu = this.toggleMenu.bind(this);
     this.checkIfNarrowLayout = this.checkIfNarrowLayout.bind(this);
     this.checkLayoutOnResize = this.checkLayoutOnResize.bind(this);
@@ -38,7 +41,9 @@ class SprkMasthead extends Component {
   }
 
   componentDidMount() {
-    this.setState({ isNarrowLayout : this.isElementVisible('.sprk-c-Masthead__menu') });
+    this.setState({
+      isNarrowLayout: this.isElementVisible('.sprk-c-Masthead__menu'),
+    });
 
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', this.setIsScrolled);
@@ -50,41 +55,61 @@ class SprkMasthead extends Component {
   componentWillUnmount() {
     if (typeof window !== 'undefined') {
       window.removeEventListener('scroll', this.setIsScrolled, false);
-      window.removeEventListener('scroll', this.throttledCheckScrollDirection, false);
-      window.removeEventListener('orientationchange', this.closeNarrowNavMenu, false);
-      window.addEventListener('resize', this.throttledCheckLayoutOnResize, false);
+      window.removeEventListener(
+        'scroll',
+        this.throttledCheckScrollDirection,
+        false,
+      );
+      window.removeEventListener(
+        'orientationchange',
+        this.closeNarrowNavMenu,
+        false,
+      );
+      window.addEventListener(
+        'resize',
+        this.throttledCheckLayoutOnResize,
+        false,
+      );
     }
   }
 
   isElementVisible (selector) {
-    if(typeof window === 'undefined') {return;}
+    if (typeof window === 'undefined') {
+      return;
+    }
     const element = document.querySelector(selector);
     if (!element) return;
     const elementDisplayValue = window.getComputedStyle(element).display;
     const elementVisibilityValue = window.getComputedStyle(element).visibility;
-    const elementIsVisible = elementDisplayValue === 'none' || elementVisibilityValue === 'hidden' ? false : true;
+    const elementIsVisible =
+      elementDisplayValue === 'none' || elementVisibilityValue === 'hidden'
+        ? false
+        : true;
     return elementIsVisible;
-  };
+  }
 
   scrollYDirection() {
-    if(typeof window === 'undefined') {return;}
+    if (typeof window === 'undefined') {
+      return;
+    }
     const newScrollPos = window.scrollY;
     if (newScrollPos < 0) return;
     const diff = newScrollPos - this.state.scrollPosition;
     const direction = diff > 0 ? 'down' : 'up';
-    this.setState({scrollPosition: newScrollPos});
+    this.setState({ scrollPosition: newScrollPos });
     return direction;
-  };
+  }
 
   toggleNarrowNav() {
     document.body.classList.toggle('sprk-u-Overflow--hidden');
     document.documentElement.classList.toggle('sprk-u-Overflow--hidden');
 
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       narrowNavOpen: !prevState.narrowNavOpen,
     }));
 
-    // Don't add height: 100% if site's html & body el already have it (reapplying makes page jump)
+    // Don't add height: 100% if site's html &
+    // body el already have it (reapplying makes page jump)
     if (document.documentElement.style.height !== '100%') {
       document.documentElement.classList.toggle('sprk-u-Height--100');
     }
@@ -102,7 +127,9 @@ class SprkMasthead extends Component {
   }
 
   setIsScrolled() {
-    if(typeof window === 'undefined') {return;}
+    if (typeof window === 'undefined') {
+      return;
+    }
     if (window.scrollY >= 10) {
       this.setState({ isScrolled: true });
     } else {
@@ -111,7 +138,9 @@ class SprkMasthead extends Component {
   }
 
   getCurrentLayout() {
-    this.setState({ currentLayout : this.isElementVisible('.sprk-c-Masthead__menu')});
+    this.setState({
+      currentLayout: this.isElementVisible('.sprk-c-Masthead__menu'),
+    });
   }
 
   checkIfNarrowLayout() {
@@ -119,7 +148,7 @@ class SprkMasthead extends Component {
       this.setState({ isNarrowLayout : this.state.currentLayout });
       this.toggleScrollEvent();
       if (!this.state.isNarrowLayout) {
-        this.setState({ isHidden : false });
+        this.setState({ isHidden: false });
       }
     }
   }
@@ -131,26 +160,32 @@ class SprkMasthead extends Component {
 
   toggleMenu() {
     if (this.state.scrollDirection === 'down') {
-      this.setState({ isHidden : true });
+      this.setState({ isHidden: true });
     } else {
-      this.setState({ isHidden : false });
+      this.setState({ isHidden: false });
     }
   }
 
   checkScrollDirection() {
     const newDirection = this.scrollYDirection();
     if (this.state.scrollDirection !== newDirection) {
-      this.setState({ scrollDirection : newDirection });
+      this.setState({ scrollDirection: newDirection });
       this.toggleMenu();
     }
   }
 
   toggleScrollEvent() {
-    if(typeof window === 'undefined') {return;}
+    if (typeof window === 'undefined') {
+      return;
+    }
     if (this.state.isNarrowLayout) {
       window.addEventListener('scroll', this.throttledCheckScrollDirection);
     } else {
-      window.removeEventListener('scroll', this.throttledCheckScrollDirection, false);
+      window.removeEventListener(
+        'scroll',
+        this.throttledCheckScrollDirection,
+        false,
+      );
     }
   }
 
@@ -234,11 +269,11 @@ class SprkMasthead extends Component {
         {bigNavLinks.length > 0 && <SprkMastheadBigNav links={bigNavLinks} />}
         {narrowNavLinks.length > 0 && (
           <SprkMastheadNarrowNav
-            linkSelectionFunction={()=> {
-              if(narrowNavSelectionFunction) {
+            linkSelectionFunction={() => {
+              if (narrowNavSelectionFunction) {
                 narrowNavSelectionFunction();
               }
-              this.closeNarrowNavMenu()
+              this.closeNarrowNavMenu();
             }}
             selector={narrowSelector}
             links={narrowNavLinks}
@@ -253,15 +288,20 @@ class SprkMasthead extends Component {
 
 SprkMasthead.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to
+   * add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the id and the `aria-controls` attributes of the corresponding narrow menu toggle icon and content.
+   * Assigned to the id and the `aria-controls`
+   * attributes of the corresponding narrow
+   *  menu toggle icon and content.
    */
   narrowNavId: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside
+   *  libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
@@ -277,7 +317,7 @@ SprkMasthead.propTypes = {
       element: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
-        PropTypes.elementType
+        PropTypes.elementType,
       ]),
       /**
        * The text for the big nav item.
@@ -299,14 +339,15 @@ SprkMasthead.propTypes = {
           element: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.func,
-            PropTypes.elementType
+            PropTypes.elementType,
           ]),
         }),
       ),
     }),
   ),
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute
+   * serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -319,7 +360,7 @@ SprkMasthead.propTypes = {
       element: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
-        PropTypes.elementType
+        PropTypes.elementType,
       ]),
       /**
        * The text for the little nav item.
@@ -337,7 +378,7 @@ SprkMasthead.propTypes = {
           element: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.func,
-            PropTypes.elementType
+            PropTypes.elementType,
           ]),
           /**
            * The text for the little sub nav item.
@@ -348,7 +389,8 @@ SprkMasthead.propTypes = {
     }),
   ),
   /**
-   * Expects a function to be executed when a user clicks a navigating link in the narrow nav.
+   * Expects a function to be executed when a
+   * user clicks a navigating link in the narrow nav.
    */
   narrowNavSelectionFunction: PropTypes.func,
   /**
@@ -364,12 +406,17 @@ SprkMasthead.propTypes = {
       element: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
-        PropTypes.elementType
+        PropTypes.elementType,
       ]),
       /**
        * The text for the narrow nav item.
        */
       text: PropTypes.string,
+      /**
+       * Determines if the active styles
+       * are applied to the link.
+       */
+      isActive: PropTypes.bool,
       /**
        * Expects an array containing link objects.
        * Will be treated as a subnav to the link.
@@ -386,7 +433,7 @@ SprkMasthead.propTypes = {
           element: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.func,
-            PropTypes.elementType
+            PropTypes.elementType,
           ]),
         }),
       ),
@@ -416,13 +463,14 @@ SprkMasthead.propTypes = {
         element: PropTypes.oneOfType([
           PropTypes.string,
           PropTypes.func,
-          PropTypes.elementType
+          PropTypes.elementType,
         ]),
         /**
          * Additional text providing context for item.
          */
         information: PropTypes.string,
-        // TODO: get rid of this -- it does nothing but add a nonvalid "text" attribute on the item
+        // TODO: get rid of this -- it does
+        // nothing but add a nonvalid "text" attribute on the item
         text: PropTypes.string,
         /**
          * The main headline of the item
@@ -459,13 +507,14 @@ SprkMasthead.propTypes = {
         element: PropTypes.oneOfType([
           PropTypes.string,
           PropTypes.func,
-          PropTypes.elementType
+          PropTypes.elementType,
         ]),
         /**
          * Additional text providing context for item.
          */
         information: PropTypes.string,
-        // TODO: get rid of this -- it does nothing but add a nonvalid "text" attribute on the item
+        // TODO: get rid of this -- it does
+        /// nothing but add a nonvalid "text" attribute on the item
         text: PropTypes.string,
         /**
          * The main headline of the item
@@ -486,7 +535,7 @@ SprkMasthead.propTypes = {
    * Expects an array containing components
    * to render in the utility area of littleNav,
    * in the wide viewport version of the masthead.
-  */
+   */
   utilityContents: PropTypes.arrayOf(PropTypes.node),
   /** Determines the type of SprkMasthead to render.. */
   variant: PropTypes.oneOf(['default', 'extended']),
@@ -500,7 +549,7 @@ SprkMasthead.propTypes = {
   logoLinkElement: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func,
-    PropTypes.elementType
+    PropTypes.elementType,
   ]),
   /**
    * Expects a component to render in

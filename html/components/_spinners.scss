@@ -35,3 +35,15 @@
   border-left-color: $sprk-spinner-color-dark;
   border-bottom-color: $sprk-spinner-color-dark;
 }
+
+.sprk-c-Spinner--primary {
+  border-top-color: $sprk-spinner-color-primary;
+  border-left-color: $sprk-spinner-color-primary;
+  border-bottom-color: $sprk-spinner-color-primary;
+}
+
+.sprk-c-Spinner--secondary {
+  border-top-color: $sprk-spinner-color-secondary;
+  border-left-color: $sprk-spinner-color-secondary;
+  border-bottom-color: $sprk-spinner-color-secondary;
+}

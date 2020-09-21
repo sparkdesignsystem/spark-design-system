@@ -41,7 +41,7 @@ communicate the Icon’s meaning.
 
 export const defaultStory = () => (
   `
-  <svg class="sprk-c-Icon  sprk-c-Icon--xl" viewBox="0 0 100 100">
+  <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#access" />
   </svg>
   `

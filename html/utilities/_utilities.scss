@@ -339,216 +339,247 @@
 }
 
 // Colors
+
+/// Sets the font color to red.
+/// @group color
+.sprk-u-Color--red {
+  color: $sprk-red !important;
+}
+/// Sets the font color to deep red.
+/// @group color
+.sprk-u-Color--deep-red {
+  color: $sprk-deep-red !important;
+}
+/// Sets the font color to mid red.
+/// @group color
+.sprk-u-Color--mid-red {
+  color: $sprk-mid-red !important;
+}
+/// Sets the font color to purple.
+/// @group color
+.sprk-u-Color--purple {
+  color: $sprk-purple !important;
+}
+/// Sets the font color to purple dark.
+/// @group color
+.sprk-u-Color--purple-dark {
+  color: $sprk-purple-dark !important;
+}
+/// Sets the font color to purple deep.
+/// @group color
+.sprk-u-Color--purple-deep {
+  color: $sprk-purple-deep !important;
+}
+/// Sets the font color to purple light.
+/// @group color
+.sprk-u-Color--purple-light {
+  color: $sprk-purple-light !important;
+}
+/// Sets the font color to purple lightest.
+/// @group color
+.sprk-u-Color--purple-lightest {
+  color: $sprk-purple-lightest !important;
+}
+/// Sets the font color to green.
+/// @group color
+.sprk-u-Color--green {
+  color: $sprk-green !important;
+}
+/// Sets the font color to blue.
+/// @group color
+.sprk-u-Color--blue {
+  color: $sprk-blue !important;
+}
+/// Sets the font color to pink.
+/// @group color
+.sprk-u-Color--pink {
+  color: $sprk-pink !important;
+}
+/// Sets the font color to yellow.
+/// @group color
+.sprk-u-Color--yellow {
+  color: $sprk-yellow !important;
+}
+/// Sets the font color to white.
+/// @group color
+.sprk-u-Color--white {
+  color: $sprk-white !important;
+}
+/// Sets the font color to gray.
+/// @group color
+.sprk-u-Color--gray {
+  color: $sprk-gray !important;
+}
 /// Sets the font color to black.
 /// @group color
 .sprk-u-Color--black {
   color: $sprk-black !important;
 }
 
-// Colors
-/// Sets the font color to blue.
+/// Sets the font color to Purple Navy.
 /// @group color
-.sprk-u-Color--blue {
-  color: $sprk-blue !important;
+.sprk-u-Color--purple-navy {
+  color: $sprk-purple-navy !important;
 }
 
-// Colors
-/// Sets the font color to gray.
+/// Sets the font color to Lavender.
 /// @group color
-.sprk-u-Color--gray {
-  color: $sprk-gray !important;
+.sprk-u-Color--lavender {
+  color: $sprk-lavender !important;
 }
 
-// Colors
-/// Sets the font color to green.
+/// Sets the font color to Wisteria.
 /// @group color
-.sprk-u-Color--green {
-  color: $sprk-green !important;
+.sprk-u-Color--wisteria {
+  color: $sprk-wisteria !important;
 }
 
-// Colors
-/// Sets the font color to red.
+/// Sets the font color to Magnolia.
 /// @group color
-.sprk-u-Color--red {
-  color: $sprk-red !important;
-}
-
-/// Sets the font color to red tinted at 75%.
-/// @group color
-.sprk-u-Color--red-tint-75 {
-  color: $sprk-red-tint-75 !important;
-}
-
-/// Sets the font color to red tinted at 50%.
-/// @group color
-.sprk-u-Color--red-tint-50 {
-  color: $sprk-red-tint-50 !important;
-}
-
-/// Sets the font color to red tinted at 25%.
-/// @group color
-.sprk-u-Color--red-tint-25 {
-  color: $sprk-red-tint-25 !important;
-}
-
-// Colors
-/// Sets the font color to white.
-/// @group color
-.sprk-u-Color--white {
-  color: $sprk-white !important;
-}
-
-// Colors
-/// Sets the font color to yellow.
-/// @group color
-.sprk-u-Color--yellow {
-  color: $sprk-yellow !important;
+.sprk-u-Color--magnolia {
+  color: $sprk-magnolia !important;
 }
 
 // Background color
-
-/// Sets the background color to black.
-/// @group color
-.sprk-u-BackgroundColor--black {
-  background-color: $sprk-black !important;
-}
-
-/// Sets the background color to black tinted at 75%.
-/// @group color
-.sprk-u-BackgroundColor--black-tint-75 {
-  background-color: $sprk-black-tint-75 !important;
-}
-
-/// Sets the background color to black tinted at 50%.
-/// @group color
-.sprk-u-BackgroundColor--black-tint-50 {
-  background-color: $sprk-black-tint-50 !important;
-}
-
-/// Sets the background color to black tinted at 25%.
-/// @group color
-.sprk-u-BackgroundColor--black-tint-25 {
-  background-color: $sprk-black-tint-25 !important;
-}
-
-/// Sets the background color to dark gray.
-/// @group color
-.sprk-u-BackgroundColor--gray-dark {
-  background-color: $sprk-gray-dark !important;
-}
-
-/// Sets the background color to blue.
-/// @group color
-.sprk-u-BackgroundColor--blue {
-  background-color: $sprk-blue !important;
-}
-
-/// Sets the background color to blue tinted at 75%.
-/// @group color
-.sprk-u-BackgroundColor--blue-tint-75 {
-  background-color: $sprk-blue-tint-75 !important;
-}
-
-/// Sets the background color to blue tinted at 50%.
-/// @group color
-.sprk-u-BackgroundColor--blue-tint-50 {
-  background-color: $sprk-blue-tint-50 !important;
-}
-
-/// Sets the background color to blue tinted at 25%.
-/// @group color
-.sprk-u-BackgroundColor--blue-tint-25 {
-  background-color: $sprk-blue-tint-25 !important;
-}
-
-/// Sets the background color to gray.
-/// @group color
-.sprk-u-BackgroundColor--gray {
-  background-color: $sprk-gray !important;
-}
-
 /// Sets the background color to red.
 /// @group color
 .sprk-u-BackgroundColor--red {
   background-color: $sprk-red !important;
 }
-
-/// Sets the background color to red tinted at 75%.
+/// Sets the background color to deep red.
 /// @group color
-.sprk-u-BackgroundColor--red-tint-75 {
-  background-color: $sprk-red-tint-75 !important;
+.sprk-u-BackgroundColor--deep-red {
+  background-color: $sprk-deep-red !important;
 }
-
-/// Sets the background color to red tinted at 50%.
+/// Sets the background color to mid red.
 /// @group color
-.sprk-u-BackgroundColor--red-tint-50 {
-  background-color: $sprk-red-tint-50 !important;
+.sprk-u-BackgroundColor--mid-red {
+  background-color: $sprk-mid-red !important;
 }
-
-/// Sets the background color to red tinted at 25%.
+/// Sets the background color to purple.
 /// @group color
-.sprk-u-BackgroundColor--red-tint-25 {
-  background-color: $sprk-red-tint-25 !important;
+.sprk-u-BackgroundColor--purple {
+  background-color: $sprk-purple !important;
 }
-
+/// Sets the background color to purple dark.
+/// @group color
+.sprk-u-BackgroundColor--purple-dark {
+  background-color: $sprk-purple-dark !important;
+}
+/// Sets the background color to purple deep.
+/// @group color
+.sprk-u-BackgroundColor--purple-deep {
+  background-color: $sprk-purple-deep !important;
+}
+/// Sets the background color to purple light.
+/// @group color
+.sprk-u-BackgroundColor--purple-light {
+  background-color: $sprk-purple-light !important;
+}
+/// Sets the background color to purple lightest.
+/// @group color
+.sprk-u-BackgroundColor--purple-lightest {
+  background-color: $sprk-purple-lightest !important;
+}
 /// Sets the background color to green.
 /// @group color
 .sprk-u-BackgroundColor--green {
   background-color: $sprk-green !important;
 }
-
-/// Sets the background color to dark green.
+/// Sets the background color to blue.
 /// @group color
-.sprk-u-BackgroundColor--green-dark {
-  background-color: $sprk-green-dark !important;
+.sprk-u-BackgroundColor--blue {
+  background-color: $sprk-blue !important;
 }
-
-/// Sets the background color to green tinted at 75%.
+/// Sets the background color to pink.
 /// @group color
-.sprk-u-BackgroundColor--green-tint-75 {
-  background-color: $sprk-green-tint-75 !important;
+.sprk-u-BackgroundColor--pink {
+  background-color: $sprk-pink !important;
 }
-
-/// Sets the background color to green tinted at 50%.
-/// @group color
-.sprk-u-BackgroundColor--green-tint-50 {
-  background-color: $sprk-green-tint-50 !important;
-}
-
-/// Sets the background color to green tinted at 25%.
-/// @group color
-.sprk-u-BackgroundColor--green-tint-25 {
-  background-color: $sprk-green-tint-25 !important;
-}
-
-/// Sets the background color to white.
-/// @group color
-.sprk-u-BackgroundColor--white {
-  background-color: $sprk-white !important;
-}
-
 /// Sets the background color to yellow.
 /// @group color
 .sprk-u-BackgroundColor--yellow {
   background-color: $sprk-yellow !important;
 }
-
-/// Sets the background color to yellow tinted at 75%.
+/// Sets the background color to white.
 /// @group color
-.sprk-u-BackgroundColor--yellow-tint-75 {
-  background-color: $sprk-yellow-tint-75 !important;
+.sprk-u-BackgroundColor--white {
+  background-color: $sprk-white !important;
 }
-
-/// Sets the background color to yellow tinted at 50%.
+/// Sets the background color to black.
 /// @group color
-.sprk-u-BackgroundColor--yellow-tint-50 {
-  background-color: $sprk-yellow-tint-50 !important;
+.sprk-u-BackgroundColor--black {
+  background-color: $sprk-black !important;
 }
-
-/// Sets the background color to yellow tinted at 25%.
+/// Sets the background color to black tinted at 90%.
 /// @group color
-.sprk-u-BackgroundColor--yellow-tint-25 {
-  background-color: $sprk-yellow-tint-25 !important;
+.sprk-u-BackgroundColor--black-tint-90 {
+  background-color: $sprk-black-tint-90 !important;
+}
+/// Sets the background color to black tinted at 80%.
+/// @group color
+.sprk-u-BackgroundColor--black-tint-80 {
+  background-color: $sprk-black-tint-80 !important;
+}
+/// Sets the background color to black tinted at 70%.
+/// @group color
+.sprk-u-BackgroundColor--black-tint-70 {
+  background-color: $sprk-black-tint-70 !important;
+}
+/// Sets the background color to black tinted at 60%.
+/// @group color
+.sprk-u-BackgroundColor--black-tint-60 {
+  background-color: $sprk-black-tint-60 !important;
+}
+/// Sets the background color to black tinted at 50%.
+/// @group color
+.sprk-u-BackgroundColor--black-tint-50 {
+  background-color: $sprk-black-tint-50 !important;
+}
+/// Sets the background color to black tinted at 40%.
+/// @group color
+.sprk-u-BackgroundColor--black-tint-40 {
+  background-color: $sprk-black-tint-40 !important;
+}
+/// Sets the background color to black tinted at 30%.
+/// @group color
+.sprk-u-BackgroundColor--black-tint-30 {
+  background-color: $sprk-black-tint-30 !important;
+}
+/// Sets the background color to black tinted at 20%.
+/// @group color
+.sprk-u-BackgroundColor--black-tint-20 {
+  background-color: $sprk-black-tint-20 !important;
+}
+/// Sets the background color to black tinted at 10%.
+/// @group color
+.sprk-u-BackgroundColor--black-tint-10 {
+  background-color: $sprk-black-tint-10 !important;
+}
+/// Sets the background color to gray.
+/// @group color
+.sprk-u-BackgroundColor--gray {
+  background-color: $sprk-gray !important;
+}
+/// Sets the background color to Purple Navy.
+/// @group color
+.sprk-u-BackgroundColor--purple-navy {
+  background-color: $sprk-purple-navy !important;
+}
+/// Sets the background color to Lavender.
+/// @group color
+.sprk-u-BackgroundColor--lavender {
+  background-color: $sprk-lavender !important;
+}
+/// Sets the background color to Wisteria.
+/// @group color
+.sprk-u-BackgroundColor--wisteria {
+  background-color: $sprk-wisteria !important;
+}
+/// Sets the background color to Magnolia.
+/// @group color
+.sprk-u-BackgroundColor--magnolia {
+  background-color: $sprk-magnolia !important;
 }
 
 /* stylelint-enable selector-class-pattern */

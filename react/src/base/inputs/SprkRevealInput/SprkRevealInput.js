@@ -26,17 +26,19 @@ class SprkRevealInput extends Component {
       <SprkTextInput type={isRevealed ? 'text' : 'password'} {...rest}>
         <div
           className="
+          sprk-b-Checkbox
           sprk-b-SelectionContainer
           sprk-b-InputContainer__visibility-toggle"
         >
           <input
+            className="sprk-b-Checkbox__input"
             id={revealControlId}
             type="checkbox"
             onClick={this.toggleReveal}
           />
           <label
             htmlFor={revealControlId}
-            className="sprk-b-Label sprk-b-Label--inline"
+            className="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
           >
             {toggleLabel}
           </label>

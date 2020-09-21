@@ -5,9 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 export default {
   title: 'Components/Pagination',
   component: SprkPagination,
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
     jest: ['SprkPagination'],
     info: `${markdownDocumentationLinkBuilder('pagination')}`,

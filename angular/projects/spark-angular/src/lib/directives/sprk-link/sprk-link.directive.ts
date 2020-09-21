@@ -4,32 +4,29 @@ import {
   HostBinding,
   Renderer2,
   ElementRef,
-  OnInit
+  OnInit,
 } from '@angular/core';
 
 @Directive({
-  selector: '[sprkLink]'
+  selector: '[sprkLink]',
 })
 export class SprkLinkDirective implements OnInit {
   /**
    * @ignore
    */
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
   /**
    * Will cause the appropriate variant type to render.
    * If omitted, the default Spark Link class is applied.
    */
-  @Input() variant:
-    | 'simple'
-    | 'icon'
-    | 'unstyled'
-    | 'plain';
+  @Input() variant: 'simple' | 'icon' | 'unstyled' | 'plain' | 'light';
 
   /**
    * If `true`, will set disabled styles on the link.
    */
   @HostBinding('class.sprk-b-Link--disabled')
-  @Input() isDisabled: boolean;
+  @Input()
+  isDisabled: boolean;
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the element.
@@ -37,7 +34,8 @@ export class SprkLinkDirective implements OnInit {
    * library to capture data.
    */
   @HostBinding('attr.data-analytics')
-  @Input() analyticsString: string;
+  @Input()
+  analyticsString: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -47,21 +45,21 @@ export class SprkLinkDirective implements OnInit {
    * per page.
    */
   @HostBinding('attr.data-id')
-  @Input() idString: string;
+  @Input()
+  idString: string;
 
   ngOnInit() {
+    const variants = {
+      simple : 'sprk-b-Link--simple',
+      icon : 'sprk-b-Link--has-icon',
+      plain : 'sprk-b-Link--plain',
+      light : 'sprk-b-Link--light'
+    };
     if (this.variant !== 'unstyled') {
       this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link');
     }
-    if (this.variant === 'simple' || this.variant === 'icon') {
-      this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link--simple');
-    }
-    if (this.variant === 'icon') {
-      this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link--has-icon');
-    }
-    if (this.variant === 'plain') {
-      this.renderer.addClass(this.el.nativeElement, 'sprk-b-Link--plain');
+    if (variants.hasOwnProperty(this.variant)) {
+      this.renderer.addClass(this.el.nativeElement, variants[this.variant]);
     }
   }
-
 }

@@ -7,15 +7,13 @@ import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFo
 
 export default {
   title: 'Components/Footer',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkFooter,
   parameters: {
     subcomponents: {
       SprkFooterAwards,
       SprkFooterConnectIcons,
-      SprkFooterGlobalSection
+      SprkFooterGlobalSection,
     },
     jest: ['SprkFooter'],
     info: `
@@ -35,7 +33,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.app/rocket_by_ql.svg',
+            'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
           altText: 'Rocket Mortgage by Quicken Loans Logo',
           description: 'Buy a home, refinance, or manage your mortgage online with America\'s largest mortgage lender',
           element: 'a',
@@ -44,7 +42,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.app/rocket_loans.svg',
+            'https://spark-assets.netlify.app/rocket-loans-white.svg',
           altText: 'Rocket Loans Logo',
           description: 'Get a personal loan to consolidate debt, renovate your home and more',
           element: 'a',
@@ -53,7 +51,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.app/rocket_homes.svg',
+            'https://spark-assets.netlify.app/rocket-homes-white.svg',
           altText: 'Rocket Homes Logo',
           description: 'Get a real estate agent handpicked for you and search the latest home listings',
           element: 'a',
@@ -62,7 +60,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src:
-            'https://spark-assets.netlify.app/rocket_hq.svg',
+            'https://spark-assets.netlify.app/rocket-hq-white.svg',
           altText: 'Rocket HQ Logo',
           description: 'Access tools and articles that can help you reach your financial goals',
           element: 'a',
@@ -161,24 +159,28 @@ export const defaultStory = () => (
           name: 'facebook',
           screenReaderText: 'Facebook',
           element: 'a',
+          addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
         },
         {
           href: '#nogo',
           name: 'instagram',
           screenReaderText: 'Instagram',
           element: 'a',
+          addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
         },
         {
           href: '#nogo',
           name: 'twitter',
           screenReaderText: 'Twitter',
           element: 'a',
+          addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
         },
         {
           href: '#nogo',
           name: 'youtube',
           screenReaderText: 'YouTube',
           element: 'a',
+          addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
         },
       ],
     }}
@@ -207,19 +209,19 @@ export const defaultStory = () => (
     }}
     additionalIcons={[
       {
-        name: 'house',
+        name: 'home',
         href: '#nogo',
         screenReaderText: 'House',
         element: 'a',
       },
       {
-        name: 'house',
+        name: 'home',
         href: '#nogo',
         screenReaderText: 'House',
         element: 'a',
       },
       {
-        name: 'house',
+        name: 'home',
         href: '#nogo',
         screenReaderText: 'House',
         element: 'a',

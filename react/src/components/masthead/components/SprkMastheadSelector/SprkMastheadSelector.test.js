@@ -73,10 +73,10 @@ describe('SprkMastheadSelector:', () => {
     const wrapper = mount(
       <SprkMastheadSelector
         choices={choices}
-        additionalIconClasses="sprk-c-Icon--l"
+        additionalIconClasses="test-class"
       />,
     );
-    expect(wrapper.find('.sprk-c-Icon.sprk-c-Icon--l').length).toBe(1);
+    expect(wrapper.find('.sprk-c-Icon.test-class').length).toBe(1);
   });
 
   it('should add classes to the trigger when additionalTriggerClasses has a value', () => {

@@ -20,16 +20,14 @@ export const defaultStory = () => {
   }, []);
 
   return `
-    <span
-      data-sprk-tooltip="container"
-      class="sprk-c-Tooltip__container"
-      >
+    <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
       <button
         type="button"
         data-sprk-tooltip="trigger"
         class="sprk-c-Tooltip__trigger"
         aria-labelledby="tooltip_1"
-        >
+        type="button"
+      >
         <svg
           class="sprk-c-Icon sprk-c-Icon--filled"
           aria-hidden="true"

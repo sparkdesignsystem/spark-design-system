@@ -7,6 +7,8 @@ import {
   ViewChild,
   EventEmitter,
   Renderer2,
+  OnChanges,
+  SimpleChanges,
 } from '@angular/core';
 import { uniqueId } from 'lodash';
 
@@ -27,10 +29,11 @@ import { uniqueId } from 'lodash';
         [attr.aria-expanded]="isToggled ? 'true' : 'false'"
         [attr.data-analytics]="analyticsString"
         [attr.aria-labelledby]="id"
+        type="button"
         #triggerElement
       >
         <sprk-icon
-          [iconType]="triggerIconType"
+          [iconType]="iconNameToUse"
           [additionalClasses]="iconAdditionalClasses"
           aria-hidden="true"
         ></sprk-icon>
@@ -47,7 +50,7 @@ import { uniqueId } from 'lodash';
     </span>
   `,
 })
-export class SprkTooltipComponent implements AfterViewInit {
+export class SprkTooltipComponent implements AfterViewInit, OnChanges {
   constructor(private renderer: Renderer2) {}
   /**
    * Whether or not the tooltip is toggled open.
@@ -55,46 +58,43 @@ export class SprkTooltipComponent implements AfterViewInit {
   @Input()
   isToggled = false;
   /**
-   * The icon to use for the trigger element.
+   * Deprecated - use `triggerIconName` instead. The icon to use for the
+   * trigger element.
    */
   @Input()
   triggerIconType = 'question-filled';
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the trigger element.
-   * Intended for an outside
-   * library to capture data.
+   * The icon to use for the trigger element.
+   */
+  @Input()
+  triggerIconName = 'question-filled';
+  /**
+   * The value supplied will be assigned to the `data-analytics` attribute on
+   * the trigger element. Intended for an outside library to capture data.
    */
   @Input()
   analyticsString: string;
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * tooltip element.
+   * Expects a space separated string of classes to be added to the tooltip
+   * element.
    */
   @Input()
   additionalClasses: string;
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * svg icon.
+   * Expects a space separated string of classes to be added to the svg icon.
    */
   @Input()
   iconAdditionalClasses: string;
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * container element. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * The value supplied will be assigned to the `data-id` attribute on the
+   * container element. This is intended to be used as a selector for
+   * automated tools. This value should be unique per page.
    */
   @Input()
   idString: string;
   /**
-   * Optional: the unique ID to use for the tooltip element.
-   * If an ID is not provided, a unique ID will be created
-   * automatically.
+   * Optional: the unique ID to use for the tooltip element. If an ID is not
+   * provided, a unique ID will be created automatically.
    */
   @Input()
   id = uniqueId(`sprk_tooltip_`);
@@ -129,6 +129,11 @@ export class SprkTooltipComponent implements AfterViewInit {
   /**
    * @ignore
    */
+  iconNameToUse: string = 'question-filled';
+
+  /**
+   * @ignore
+   */
   @HostListener('document:keydown', ['$event'])
   onKeydown($event) {
     if (this.isToggled) {
@@ -150,12 +155,11 @@ export class SprkTooltipComponent implements AfterViewInit {
   onDocumentClick(event): void {
     if (
       this.containerElement &&
-      !this.containerElement.nativeElement.contains(event.target)
+      !this.containerElement.nativeElement.contains(event.target) &&
+      this.isToggled
     ) {
-      if (this.isToggled) {
-        this.isToggled = false;
-        this.closedEvent.emit();
-      }
+      this.isToggled = false;
+      this.closedEvent.emit();
     }
   }
 
@@ -281,5 +285,26 @@ export class SprkTooltipComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.setPositioningClass();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    // triggerIconName should always be preferred over triggerIconType
+    // TODO - remove triggerIconType as part of Issue 1166
+    if (changes['triggerIconName'] && changes['triggerIconType']) {
+      const deprecatedInputValue = changes['triggerIconType'].currentValue;
+      console.warn(
+        `Spark Design System - conflicting Inputs found in sprk-tooltip. triggerIconType has been deprecated; please use triggerIconName instead. Deprecated Input with value "` +
+          deprecatedInputValue +
+          `" will be ignored.`,
+      );
+    }
+
+    if (changes['triggerIconName']) {
+      this.iconNameToUse = changes['triggerIconName'].currentValue;
+    }
+
+    if (changes['triggerIconType'] && !changes['triggerIconName']) {
+      this.iconNameToUse = changes['triggerIconType'].currentValue;
+    }
   }
 }

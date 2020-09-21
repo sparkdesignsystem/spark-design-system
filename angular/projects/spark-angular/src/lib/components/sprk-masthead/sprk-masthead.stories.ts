@@ -193,7 +193,7 @@ export const defaultStory = () => ({
       <a
         sprkLink
         navItem-slot
-        variant="plain"
+        variant="simple"
         class="sprk-c-Masthead__link"
         href="#nogo"
       >
@@ -210,7 +210,7 @@ export const defaultStory = () => ({
           <li>
             <a
               sprkLink
-              variant="plain"
+              variant="simple"
               href="#nogo"
               class="sprk-c-Masthead__link"
             >
@@ -220,7 +220,7 @@ export const defaultStory = () => ({
           <li>
             <a
               sprkLink
-              variant="plain"
+              variant="simple"
               href="#nogo"
               class="sprk-c-Masthead__link"
             >
@@ -236,7 +236,7 @@ export const defaultStory = () => ({
         <li>
           <a
             sprkLink
-            variant="plain"
+            variant="simple"
             href="#nogo"
             class="sprk-c-Masthead__link"
           >
@@ -246,7 +246,7 @@ export const defaultStory = () => ({
         <li>
           <a
             sprkLink
-            variant="plain"
+            variant="simple"
             href="#nogo"
             class="sprk-c-Masthead__link"
           >
@@ -257,7 +257,7 @@ export const defaultStory = () => ({
           <a
             sprkLink
             href="#nogo"
-            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+            class="sprk-c-Button sprk-c-Button--quaternary sprk-c-Button--compact"
           >
             Sign In
           </a>
@@ -270,7 +270,7 @@ export const defaultStory = () => ({
         <a
           sprkLink
           href="#nogo"
-          class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@s"
+          class="sprk-c-Button sprk-c-Button--quaternary sprk-c-Button--compact sprk-c-Button--full@s"
         >
           Sign In
         </a>
@@ -439,7 +439,7 @@ export const extended = () => ({
       <a
         sprkLink
         navItem-slot
-        variant="plain"
+        variant="simple"
         class="sprk-c-Masthead__link"
         href="#nogo"
       >
@@ -459,7 +459,7 @@ export const extended = () => ({
             triggerIconType="chevron-down"
             [choices]="siteDropdownChoices"
             selector="Select One"
-            additionalIconClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-Stack__item"
+            additionalIconClasses="sprk-c-Icon--filled-current-color sprk-Stack__item"
             additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
           >
             <div
@@ -486,7 +486,7 @@ export const extended = () => ({
         <li>
           <a
             sprkLink
-            variant="plain"
+            variant="simple"
             class="sprk-c-Masthead__link"
             href="#nogo"
           >
@@ -498,9 +498,9 @@ export const extended = () => ({
             [choices]="simpleChoices"
             dropdownType="simple"
             title="My Account"
-            triggerIconType="user-account"
+            triggerIconType="user"
             additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
-            additionalIconClasses="sprk-c-Icon--l"
+            additionalIconClasses="sprk-c-Icon--xl"
             additionalClasses="sprk-u-Right--zero sprk-u-mrm"
             screenReaderText="User Account"
           >

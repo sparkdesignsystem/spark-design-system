@@ -63,6 +63,7 @@ export const hugeSelectBox = () => {
       <svg
         class="
           sprk-c-Icon
+          sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
           sprk-b-SelectContainer__icon
         "
@@ -127,6 +128,7 @@ export const invalidHugeSelectBox = () => {
       <svg
         class="
           sprk-c-Icon
+          sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
           sprk-b-SelectContainer__icon
         "
@@ -140,10 +142,10 @@ export const invalidHugeSelectBox = () => {
         id="select-huge--error-container"
       >
         <svg
-          class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
+          class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
         >
-          <use xlink:href="#exclamation-filled-small" />
+          <use xlink:href="#exclamation-filled" />
         </svg>
         <div class="sprk-b-ErrorText">
           There is an error on this field.
@@ -201,6 +203,7 @@ export const disabledHugeSelectBox = () => {
       <svg
         class="
           sprk-c-Icon
+          sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
           sprk-b-SelectContainer__icon
         "
