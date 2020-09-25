@@ -2,61 +2,150 @@
   title: CSS Utilities
 ---
 import CssUtilityTable from '../../../components/CssUtilityTable';
+import {
+  SprkDivider,
+} from '@sparkdesignsystem/spark-react';
 
 # CSS Utilities
 
-The Spark Design System includes many CSS utility classes for customizing and
- extending components. These utility classes are divided into two groups:
- [Single-Property Utilities](#single-prop) and [Multi-Property Utilities](#multi-prop).
+Use CSS utility classes to customize and extend Spark components.
 
-## Single-Property Utilities<a name="single-prop"></a>
+<SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
+<h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Table of Contents</h2>
 
-Single property utilities map directly to a single CSS property and value.
-They are most useful when you want to override a default value or in
-one-off situations. Be aware that all Single-Property Utilities include
-an `!important` flag in order to supersede an element's default styles.
+<ul>
+  <li>
+    <a href="#single-property-utilities">
+      Single-Property Utilities
+    </a>
+    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mvs">
+      <li>
+        <a href="#floats,-position,-and-alignment">
+          Floats, Position, and Alignment
+        </a>
+      </li>
+      <li>
+        <a href="#typography">
+          Typography
+        </a>
+      </li>
+      <li>
+        <a href="#overflow">
+          Overflow
+        </a>
+      </li>
+      <li>
+        <a href="#width">
+          Width
+        </a>
+      </li>
+      <li>
+        <a href="#spacing">
+          Spacing
+        </a>
+      </li>
+      <li>
+        <a href="#color">
+          Color
+        </a>
+      </li>
+      <li>
+        <a href="#height">
+          Height
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="#multi-property-utilities">
+      Multi-Property Utilities
+    </a>
+    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mvs">
+      <li>
+        <a href="#accessibility">
+          Accessibility
+        </a>
+      </li>
+      <li>
+        <a href="#layout">
+          Layout
+        </a>
+      </li>
+      <li>
+        <a href="#text">
+          Text
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
+
+## Single-Property Utilities
+
+These utilities change only one CSS property. Use one or more to override an element's default style.
+
+> All Single-Property Utilities override default styles with `!important` property.
 
 ### Display and Visibility
 
-These utilities control CSS properties related to display and visibility.
+These utilities change how elements render on the page, and can also affect screen reader output.
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="display"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
 ### Floats, Position, and Alignment
 
-These utilities control CSS properties related to floating, positioning, and alignment.
+These utilities change an element's position context as well as document flow.
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="position"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
 ### Typography
 
-These utilities control CSS properties related to typography.
+These utilities change text style and flow.
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="typography"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
 ### Overflow
 
-These utilities control CSS properties related to overflow, which specifies
- how to handle content that is too large for its container.
+These utilities change the outcomes of when elements are too large for their container.
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="overflow"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
 ### Width
 
-These utilities set the width of an element to a percentage value.
-The widths are in increments of 5 from 5% to 100%.
+These utilities affect the width of an element.
 
-<section>
+> In increments of 5, the number at the end of each utility class can be between 5 and 100.
+
+This table shows examples of a few possible widths.
+
+<section class="sprk-u-mbm">
   <CssUtilityTable group="width"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
 ### Spacing
 
@@ -83,9 +172,12 @@ These utilities override the padding and margin on an element. The class name
 
 #### Examples
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="spacing"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
 ### Miscellaneous Spacing
 
@@ -104,52 +196,68 @@ supplemental spacing sizes. The class name format is `.sprk-u-<Type><Location>--
 
 #### Examples
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="misc-spacing"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
 ### Color
 
-These utilities control CSS properties related to color and background color.
+These utilities change color and background color.
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="color"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
 ### Height
 
 This utility sets the height of an element to a percentage value.
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="height"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
-## Multi-Property Utilities<a name="multi-prop"></a>
+## Multi-Property Utilities
 
-Multi-Property Utilities combine several CSS properties and values to perform
- common actions. They are not meant to override default styles, but aid in
-  things like accessibility and layout.
+Multi-Property Utilities combine several CSS properties and values to perform common actions. These aid in accessibility and layout, and are not meant to override default styles.
 
 ### Accessibility
 
-These utilities are related to accessibility. These should be used to make the experience more accessible.
+These utilities affect how content will render for screen readers.
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="multi-accessibility"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
 ### Layout
 
-These utilities are related to layout.
+These utilities affect layout, and positioning.
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="multi-layout"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
 
-### Typography
+### Text
 
-These utilities are related to typography.
+These utilities are related to text and flow.
 
-<section>
+<section class="sprk-u-mbm">
   <CssUtilityTable group="multi-typography"/>
 </section>
+<a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+  Back to Table of Contents
+</a>
