@@ -6,23 +6,18 @@ import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Space
 
-The distance between elements and how
-these proportions affect design.
+The distance between elements and how these proportions interact in the design.
 
 ### Usage
+** Padding and margin are relative to the base size of `16px` or `1em`.**
 
-Spacing values are used for padding and margin
-throughout the design system and are relative to
-the standard type size of `1em/16px`. Applying one
-spacing size consistently throughout a page will
-help bring visual consistency to its layout and components.
+Establish visual cohesion by applying consistent spacing in layouts and components.
 
-In the examples below, the gray shows padding and
-margin. These colors will not appear
-in your application.
+Apply these proportions through:
+- [Box Component](/using-spark/components/box)
+- [Spacing Utilities](/using-spark/foundations/css-utilities#spacing)
 
 ### Guidelines
-
 - There are five built in spacing sizes:
     - Extra Small (`4px`, `.25rem`)
     - Small (`8px`, `.5rem`)
@@ -32,16 +27,64 @@ in your application.
 
 <SprkDivider
  element="span"
- additionalClasses="sprk-u-Measure"
+ additionalClasses="sprk-u-Measure sprk-u-mvn"
+></SprkDivider>
+
+### Table of Contents
+<ul>
+  <li>
+    Padding
+    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mvs">
+      <li>
+        <a href="#inset">
+          Inset
+        </a>
+      </li>
+      <li>
+        <a href="#inset-short">
+          Inset Short
+        </a>
+      </li>
+      <li>
+        <a href="#inset-tall">
+          Inset Tall
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Margin
+    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mvs">
+      <li>
+        <a href="#stack">
+          Stack
+        </a>
+      </li>
+      <li>
+        <a href="#inline">
+          Inline
+        </a>
+      </li>
+      <li>
+        <a href="#misc-sizes">
+          Misc Sizes
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure sprk-u-mvn"
 ></SprkDivider>
 
 ## Variants
 
 ### Inset
 
-Inset spacing adds equal padding to all
-four sides of an element. Our [Box component](/using-spark/components/box)
-is a convenient way to apply this spacing style.
+Adds equal padding to all four sides of an element.
+
+> For illustrative purposes, gray represents the padding of the element. It will not appear in your project.
 
 <ComponentPreview
   componentName="spacing--inset-spacing"
@@ -51,65 +94,99 @@ is a convenient way to apply this spacing style.
 
 ### Inset Short
 
-Inset Short behaves just like Inset, except the
-top and bottom padding is reduced by 50%. For
-example, Inset Short Small has `8px` of padding
+Similar to [Inset](#inset), except the
+top and bottom padding is reduced by 50%.
+
+For example, Inset Short Small has `8px` of padding
 on the left and right sides, but `4px` padding
 on the top and bottom.
+
+> For illustrative purposes, gray represents the padding of the element. It will not appear in your project.
 
 <ComponentPreview
   componentName="spacing--inset-spacing-short"
   componentType="foundations"
   hasHTML
 />
+<div class="sprk-u-Measure">
+  <a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 
 ### Inset Tall
 
-Inset Tall behaves just like Inset, except the
+Similar to [Inset](#inset), except the
 top and bottom padding is increased by 50%. For
 example, Inset Tall Small has `8px` padding on the
 left and right sides, but `12px` padding on the
 top and bottom.
+
+> For illustrative purposes, gray represents the padding of the element. It will not appear in your project.
 
 <ComponentPreview
   componentName="spacing--inset-spacing-tall"
   componentType="foundations"
   hasHTML
 />
+<div class="sprk-u-Measure">
+  <a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 
 ### Stack
 
-Stack spacing adds margin to the bottom of elements.
+Adds margin to the bottom of elements.
+
+> For illustrative purposes, gray represents the margin of the element. It will not appear in your project.
 
 <ComponentPreview
   componentName="spacing--stack-spacing"
   componentType="foundations"
   hasHTML
 />
+<div class="sprk-u-Measure">
+  <a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 
 ### Inline
 
-Inline spacing proportions create consistent right
-margins to elements. Note that this utility only creates
-horizontal space. Use the Stack utility to include vertical space.
+Adds right margin to inline elements.
+
+> For illustrative purposes, gray represents the margin of the element. It will not appear in your project.
 
 <ComponentPreview
   componentName="spacing--inline-spacing"
   componentType="foundations"
   hasHTML
 />
+<div class="sprk-u-Measure">
+  <a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 
 ### Misc Sizes
 
-These are additional sizing proportions to supplement our existing XS-XL sizes:
+Additional sizing proportions to supplement existing XS-XL sizes:
 
 - Misc A (`24px`, `1.5rem`)
 - Misc B (`40px`, `2.5rem`)
 - Misc C (`48px`, `3rem`)
 - Misc D (`80px`, `5rem`)
 
+> For illustrative purposes, gray represents the margin of the element. It will not appear in your project.
+
 <ComponentPreview
   componentName="spacing--inline-spacing-misc"
   componentType="foundations"
   hasHTML
 />
+<div class="sprk-u-Measure">
+  <a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
