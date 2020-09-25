@@ -66,10 +66,7 @@ describe('SprkTextInput:', () => {
 
   it('should add floating label class to huge text when there is defaultValue', () => {
     const wrapper = mount(
-      <SprkTextInput
-        defaultValue="default Value"
-        type="hugeTextInput"
-      />,
+      <SprkTextInput defaultValue="default Value" type="hugeTextInput" />,
     );
     expect(
       wrapper
@@ -107,7 +104,11 @@ describe('SprkTextInput:', () => {
     const formatter = jest.fn(() => true);
     const onChangeMock = jest.fn();
     mount(
-      <SprkTextInput type="text" formatter={formatter} onChange={onChangeMock} />,
+      <SprkTextInput
+        type="text"
+        formatter={formatter}
+        onChange={onChangeMock}
+      />,
     );
     expect(formatter.mock.calls.length).toBe(2);
   });
@@ -133,7 +134,9 @@ describe('SprkTextInput:', () => {
 
   it('should not run the formatter if the field is invalid (textarea)', () => {
     const formatter = jest.fn();
-    mount(<SprkTextInput type="textarea" formatter={formatter} valid={false} />);
+    mount(
+      <SprkTextInput type="textarea" formatter={formatter} valid={false} />,
+    );
     expect(formatter.mock.calls.length).toBe(0);
   });
 

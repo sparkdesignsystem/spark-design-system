@@ -6,14 +6,12 @@ import SprkStepperSlider from './components/SprkStepperSlider/SprkStepperSlider'
 
 export default {
   title: 'Components/Stepper',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkStepper,
   parameters: {
     subcomponents: {
       SprkStepperSlider,
-      SprkStepperStep
+      SprkStepperStep,
     },
     info: `
 ${markdownDocumentationLinkBuilder('stepper')}
@@ -25,22 +23,15 @@ the component so that it tracks the updated indexes.
 - The active step can be updated programmatically
 by changing the value of \`isSelected\` on the steps.
 `,
-    jest: [
-      'SprkStepper',
-      'SprkStepperSlider',
-      'SprkStepperStep'
-    ]
+    jest: ['SprkStepper', 'SprkStepperSlider', 'SprkStepperStep'],
   },
 };
 
 export const defaultStory = () => (
-  <SprkStepper
-    hasDarkBackground={false}
-    idString="stepper"
-  >
-    <SprkStepperStep title="Step One"></SprkStepperStep>
-    <SprkStepperStep title="Step Two"></SprkStepperStep>
-    <SprkStepperStep title="Step Three"></SprkStepperStep>
+  <SprkStepper hasDarkBackground={false} idString="stepper">
+    <SprkStepperStep title="Step One" />
+    <SprkStepperStep title="Step Two" />
+    <SprkStepperStep title="Step Three" />
   </SprkStepper>
 );
 
@@ -49,52 +40,35 @@ defaultStory.story = {
 };
 
 export const withStepDescriptions = () => (
-  <SprkStepper
-    hasDarkBackground={false}
-    idString="stepper-descriptions"
-  >
+  <SprkStepper hasDarkBackground={false} idString="stepper-descriptions">
     <SprkStepperStep title="Step One" isSelected>
-      Step 1 Lorem ipsum dolor sit amet
-      consectetur adipisicing elit.
+      Step 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
     </SprkStepperStep>
     <SprkStepperStep title="Step Two">
-      Step 2 Lorem ipsum dolor sit amet
-      consectetur adipisicing elit.
+      Step 2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
     </SprkStepperStep>
     <SprkStepperStep title="Step Three">
-      Step 3 Lorem ipsum dolor sit amet
-      consectetur adipisicing elit.
+      Step 3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
     </SprkStepperStep>
     <SprkStepperStep title="Step Four">
-      Step 4 Lorem ipsum dolor sit amet
-      consectetur adipisicing elit.
+      Step 4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
     </SprkStepperStep>
   </SprkStepper>
 );
 
 export const withDarkBackground = () => (
-  <SprkStepper
-    hasDarkBackground
-    idString="stepper-dark-bg"
-  >
+  <SprkStepper hasDarkBackground idString="stepper-dark-bg">
     <SprkStepperStep title="Step One">
-      Step 1 Lorem ipsum dolor sit amet
-      consectetur adipisicing elit.
-  </SprkStepperStep>
-    <SprkStepperStep
-      title="Step Two"
-      isSelected
-    >
-      Step 2 Lorem ipsum dolor sit
-      amet consectetur adipisicing elit.
-  </SprkStepperStep>
+      Step 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </SprkStepperStep>
+    <SprkStepperStep title="Step Two" isSelected>
+      Step 2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </SprkStepperStep>
     <SprkStepperStep title="Step Three">
-      Step 3 Lorem ipsum dolor sit
-      amet consectetur adipisicing elit.
-  </SprkStepperStep>
+      Step 3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </SprkStepperStep>
     <SprkStepperStep title="Step Four">
-      Step 4 Lorem ipsum dolor sit
-      amet consectetur adipisicing elit.
-  </SprkStepperStep>
+      Step 4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </SprkStepperStep>
   </SprkStepper>
 );

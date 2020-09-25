@@ -73,7 +73,7 @@ describe('SprkStepper:', () => {
     const wrapper = mount(
       <SprkStepper>
         <SprkStepperStep />
-        <SprkStepperStep additionalClasses='foo' onClick={expectedFunc} />
+        <SprkStepperStep additionalClasses="foo" onClick={expectedFunc} />
         <SprkStepperStep />
       </SprkStepper>,
     );
@@ -101,9 +101,9 @@ describe('SprkStepper:', () => {
   it('should correctly advance the tab when a key is pressed', () => {
     const wrapper = mount(
       <SprkStepper>
-        <SprkStepperStep additionalClasses='first' />
-        <SprkStepperStep additionalClasses='second' isSelected />
-        <SprkStepperStep additionalClasses='third' />
+        <SprkStepperStep additionalClasses="first" />
+        <SprkStepperStep additionalClasses="second" isSelected />
+        <SprkStepperStep additionalClasses="third" />
       </SprkStepper>,
     );
 
@@ -127,9 +127,9 @@ describe('SprkStepper:', () => {
   it('should correctly retreat the tab when a key is pressed', () => {
     const wrapper = mount(
       <SprkStepper>
-        <SprkStepperStep additionalClasses='first' />
-        <SprkStepperStep additionalClasses='second' isSelected />
-        <SprkStepperStep additionalClasses='third' />
+        <SprkStepperStep additionalClasses="first" />
+        <SprkStepperStep additionalClasses="second" isSelected />
+        <SprkStepperStep additionalClasses="third" />
       </SprkStepper>,
     );
 
@@ -153,9 +153,9 @@ describe('SprkStepper:', () => {
   it('should correctly jump to first step when Home is pressed', () => {
     const wrapper = mount(
       <SprkStepper>
-        <SprkStepperStep additionalClasses='first' />
-        <SprkStepperStep additionalClasses='second' isSelected />
-        <SprkStepperStep additionalClasses='third' />
+        <SprkStepperStep additionalClasses="first" />
+        <SprkStepperStep additionalClasses="second" isSelected />
+        <SprkStepperStep additionalClasses="third" />
       </SprkStepper>,
     );
 
@@ -179,9 +179,9 @@ describe('SprkStepper:', () => {
   it('should correctly jump to last step when End is pressed', () => {
     const wrapper = mount(
       <SprkStepper>
-        <SprkStepperStep additionalClasses='first' />
-        <SprkStepperStep additionalClasses='second' isSelected />
-        <SprkStepperStep additionalClasses='third' />
+        <SprkStepperStep additionalClasses="first" />
+        <SprkStepperStep additionalClasses="second" isSelected />
+        <SprkStepperStep additionalClasses="third" />
       </SprkStepper>,
     );
 
@@ -205,9 +205,9 @@ describe('SprkStepper:', () => {
   it('should correctly advance and overflow the selected item with keyboard', () => {
     const wrapper = mount(
       <SprkStepper>
-        <SprkStepperStep additionalClasses='first' />
-        <SprkStepperStep additionalClasses='second' />
-        <SprkStepperStep additionalClasses='third' isSelected/>
+        <SprkStepperStep additionalClasses="first" />
+        <SprkStepperStep additionalClasses="second" />
+        <SprkStepperStep additionalClasses="third" isSelected />
       </SprkStepper>,
     );
 
@@ -231,9 +231,9 @@ describe('SprkStepper:', () => {
   it('should correctly retreat and underflow the selected item with keyboard', () => {
     const wrapper = mount(
       <SprkStepper>
-        <SprkStepperStep additionalClasses='first' isSelected/>
-        <SprkStepperStep additionalClasses='second' />
-        <SprkStepperStep additionalClasses='third' />
+        <SprkStepperStep additionalClasses="first" isSelected />
+        <SprkStepperStep additionalClasses="second" />
+        <SprkStepperStep additionalClasses="third" />
       </SprkStepper>,
     );
 
@@ -257,9 +257,9 @@ describe('SprkStepper:', () => {
   it('should not change state for unexpected keypresses', () => {
     const wrapper = mount(
       <SprkStepper>
-        <SprkStepperStep additionalClasses='first' isSelected/>
-        <SprkStepperStep additionalClasses='second' />
-        <SprkStepperStep additionalClasses='third' />
+        <SprkStepperStep additionalClasses="first" isSelected />
+        <SprkStepperStep additionalClasses="second" />
+        <SprkStepperStep additionalClasses="third" />
       </SprkStepper>,
     );
 

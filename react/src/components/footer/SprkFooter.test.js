@@ -13,9 +13,9 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('SprkFooter:', () => {
   it('should display a Footer element with the correct base class', () => {
     const wrapper = mount(<SprkFooter />);
-    expect(wrapper.find('.sprk-o-Box.sprk-o-Box--large.sprk-c-Footer').length).toBe(
-      1,
-    );
+    expect(
+      wrapper.find('.sprk-o-Box.sprk-o-Box--large.sprk-c-Footer').length,
+    ).toBe(1);
   });
 
   it('should display a Footer element with the global section', () => {

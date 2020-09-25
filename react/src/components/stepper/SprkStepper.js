@@ -145,7 +145,7 @@ class SprkStepper extends Component {
       );
     }
 
-    let stepper = (
+    const stepper = (
       <ol
         className={classnames(
           'sprk-c-Stepper',
@@ -183,7 +183,7 @@ class SprkStepper extends Component {
                 childNode.props.additionalClasses,
               )}
               onKeyDown={this.handleKeyEvents}
-              onClick={event => {
+              onClick={(event) => {
                 childNode.props.onClick();
                 this.handleStepClick(event, index);
               }}
@@ -218,7 +218,7 @@ SprkStepper.propTypes = {
    * If true, the Stepper will be
    * rendered on a dark background.
    * `($sprk-blue)`
-  */
+   */
   hasDarkBackground: PropTypes.bool,
   /**
    * A space-separated string of classes to add to the outermost container of the component.

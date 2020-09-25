@@ -12,7 +12,7 @@ class SprkDropdown extends Component {
     this.state = {
       triggerText: props.defaultTriggerText,
       isOpen: false,
-      choiceItems: props.choices.items.map(item => ({
+      choiceItems: props.choices.items.map((item) => ({
         id: uniqueId(),
         ...item,
       })),
@@ -57,7 +57,7 @@ class SprkDropdown extends Component {
 
   toggleDropdownOpen(e) {
     e.preventDefault();
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
     }));
   }

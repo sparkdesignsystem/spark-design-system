@@ -35,7 +35,9 @@ describe('SprkFooterConnectIcons:', () => {
       ],
     };
 
-    const wrapper = mount(<SprkFooterConnectIcons connectIcons={connectIcons} />);
+    const wrapper = mount(
+      <SprkFooterConnectIcons connectIcons={connectIcons} />,
+    );
     expect(wrapper.find(SprkIcon).length).toBe(4);
   });
 
@@ -67,7 +69,9 @@ describe('SprkFooterConnectIcons:', () => {
       ],
     };
 
-    const wrapper = mount(<SprkFooterConnectIcons connectIcons={connectIcons} />);
+    const wrapper = mount(
+      <SprkFooterConnectIcons connectIcons={connectIcons} />,
+    );
     expect(
       wrapper
         .find('[data-analytics="test-link"]')
@@ -104,7 +108,9 @@ describe('SprkFooterConnectIcons:', () => {
       ],
     };
 
-    const wrapper = mount(<SprkFooterConnectIcons connectIcons={connectIcons} />);
+    const wrapper = mount(
+      <SprkFooterConnectIcons connectIcons={connectIcons} />,
+    );
     expect(
       wrapper
         .find('[data-analytics="test-link"]')

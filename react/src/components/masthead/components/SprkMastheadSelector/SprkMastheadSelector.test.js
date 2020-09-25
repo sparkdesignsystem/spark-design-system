@@ -160,10 +160,7 @@ describe('SprkMastheadSelector:', () => {
     };
     const wrapper = mount(<SprkMastheadSelector choices={choices} />);
     wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
+    wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
     expect(spyFunc.mock.calls.length).toBe(1);
   });
 
@@ -171,16 +168,15 @@ describe('SprkMastheadSelector:', () => {
     const spyFunc = jest.fn();
     const choices = {
       choiceFunction: spyFunc,
-      items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
+      items: [
+        { text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } },
+      ],
     };
     const wrapper = mount(
       <SprkMastheadSelector choices={choices} variant="informational" />,
     );
     wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
+    wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
     expect(spyFunc.mock.calls.length).toBe(1);
   });
 
@@ -194,25 +190,21 @@ describe('SprkMastheadSelector:', () => {
     };
     const wrapper = mount(<SprkMastheadSelector choices={choices} />);
     wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
+    wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
   });
 
   it('should not error if the choiceFunction is supplied, but undefined with the list of choices (informational)', () => {
     const choices = {
       choiceFunction: undefined,
-      items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
+      items: [
+        { text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } },
+      ],
     };
     const wrapper = mount(
       <SprkMastheadSelector choices={choices} variant="informational" />,
     );
     wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
+    wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
   });
 
   it('should close the dropdown on click outside', () => {

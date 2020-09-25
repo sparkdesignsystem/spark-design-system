@@ -29,7 +29,9 @@ describe('SprkCardHighlightedHeader:', () => {
     const testVariable = 'test';
     testHighlightedHeaderConfig.bodyText = testVariable;
     const wrapper = shallow(
-      <SprkCardHighlightedHeader highlightedHeaderConfig={testHighlightedHeaderConfig} />,
+      <SprkCardHighlightedHeader
+        highlightedHeaderConfig={testHighlightedHeaderConfig}
+      />,
     );
     const hasBodyText = wrapper.contains(testVariable);
     expect(hasBodyText).toBe(true);
@@ -39,7 +41,9 @@ describe('SprkCardHighlightedHeader:', () => {
     const testVariable = 'test';
     testHighlightedHeaderConfig.title = testVariable;
     const wrapper = shallow(
-      <SprkCardHighlightedHeader highlightedHeaderConfig={testHighlightedHeaderConfig} />,
+      <SprkCardHighlightedHeader
+        highlightedHeaderConfig={testHighlightedHeaderConfig}
+      />,
     );
     const hasTitleText = wrapper.contains(testVariable);
     expect(hasTitleText).toBe(true);
@@ -49,7 +53,9 @@ describe('SprkCardHighlightedHeader:', () => {
     const testVariable = 'test';
     testHighlightedHeaderConfig.description = testVariable;
     const wrapper = shallow(
-      <SprkCardHighlightedHeader highlightedHeaderConfig={testHighlightedHeaderConfig} />,
+      <SprkCardHighlightedHeader
+        highlightedHeaderConfig={testHighlightedHeaderConfig}
+      />,
     );
     const hasDescriptionText = wrapper.contains(testVariable);
     expect(hasDescriptionText).toBe(true);

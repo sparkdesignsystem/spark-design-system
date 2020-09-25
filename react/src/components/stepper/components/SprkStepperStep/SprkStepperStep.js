@@ -4,11 +4,9 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 class SprkStepperStep extends Component {
-
   componentDidMount() {
     const { renderCallback, isSelected } = this.props;
     if (isSelected) {
-
       const top = ReactDOM.findDOMNode(this).offsetTop;
       // call our parent and let them know what our top is so they can pass that
       // to the slider component
@@ -19,7 +17,6 @@ class SprkStepperStep extends Component {
   componentDidUpdate(prevProps, prevState) {
     const { renderCallback, isSelected } = this.props;
     if (isSelected && !prevProps.isSelected) {
-
       const top = ReactDOM.findDOMNode(this).offsetTop;
       // call our parent and let them know what our top is so they can pass that
       // to the slider component
@@ -62,7 +59,9 @@ class SprkStepperStep extends Component {
         <div
           className={classnames(
             'sprk-c-Stepper__step-content',
-            hasDescription ? 'sprk-c-Stepper__step-content--has-description' : '',
+            hasDescription
+              ? 'sprk-c-Stepper__step-content--has-description'
+              : '',
             isSelected ? 'sprk-c-Stepper__step-content--hidden' : '',
           )}
         >
@@ -73,7 +72,7 @@ class SprkStepperStep extends Component {
             <span className="sprk-c-Stepper__step-icon" />
             <h3
               className={classnames(
-                "sprk-c-Stepper__step-heading",
+                'sprk-c-Stepper__step-heading',
                 hasDescription && isSelected ? 'sprk-u-Visibility--hidden' : '',
               )}
             >
@@ -81,23 +80,25 @@ class SprkStepperStep extends Component {
             </h3>
           </span>
 
-          { hasDescription &&
+          {hasDescription && (
             <div
               className={classnames(
-                "sprk-c-Stepper__step-description",
-                isSelected ? 'sprk-u-Visibility--hidden' : 'sprk-u-Display--none',
+                'sprk-c-Stepper__step-description',
+                isSelected
+                  ? 'sprk-u-Visibility--hidden'
+                  : 'sprk-u-Display--none',
               )}
-
             >
-              {/* desc is only ever displayed in the slider. This is just for spacing. */}
+              {/* desc is only ever displayed in the slider. 
+              This is just for spacing. */}
               <p className="sprk-b-TypeBodyTwo">{children}</p>
             </div>
-          }
+          )}
         </div>
       </li>
     );
   }
-};
+}
 
 SprkStepperStep.propTypes = {
   /**

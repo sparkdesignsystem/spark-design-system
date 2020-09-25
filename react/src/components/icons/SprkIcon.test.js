@@ -13,7 +13,9 @@ describe('SprkIcon:', () => {
   });
 
   it('should add classes when additionalClasses has a value', () => {
-    const wrapper = shallow(<SprkIcon iconName="settings" additionalClasses="test-class" />);
+    const wrapper = shallow(
+      <SprkIcon iconName="settings" additionalClasses="test-class" />,
+    );
     expect(wrapper.find('svg.test-class').length).toBe(1);
   });
 

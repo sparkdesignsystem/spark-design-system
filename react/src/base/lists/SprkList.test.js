@@ -47,7 +47,9 @@ describe('SprkList:', () => {
   });
 
   it('should add data-id to ul element if idString has a value', () => {
-    const wrapper = shallow(<SprkList element="ul" idString="unorderedlist-1" />);
+    const wrapper = shallow(
+      <SprkList element="ul" idString="unorderedlist-1" />,
+    );
     expect(wrapper.find('ul[data-id="unorderedlist-1"]').length).toBe(1);
   });
 });

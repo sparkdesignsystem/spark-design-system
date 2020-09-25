@@ -94,9 +94,7 @@ describe('SprkCheckboxItem:', () => {
 
   it('should run the supplied onChange function for checkboxes', () => {
     const onCheckboxChangeMock = jest.fn();
-    const wrapper = mount(
-      <SprkCheckboxItem onChange={onCheckboxChangeMock} />,
-    );
+    const wrapper = mount(<SprkCheckboxItem onChange={onCheckboxChangeMock} />);
     const checkbox = wrapper.find('input[type="checkbox"]');
     checkbox.simulate('change', { target: { value: 'test-value' } });
     expect(onCheckboxChangeMock.mock.calls.length).toBe(1);

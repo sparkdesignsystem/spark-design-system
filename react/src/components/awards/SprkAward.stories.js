@@ -5,11 +5,9 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 export default {
   title: 'Components/Award',
   component: SprkAward,
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
-    jest: ['SprkAward'] ,
+    jest: ['SprkAward'],
     info: `${markdownDocumentationLinkBuilder('award')}`,
   },
 };

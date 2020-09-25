@@ -7,19 +7,13 @@ import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 export default {
   title: 'Components/Tabs',
   component: SprkTabs,
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
     subcomponents: {
       SprkTabsButton,
       SprkTabsPanel,
     },
-    jest: [
-      'SprkTabs',
-      'SprkTabsPanel',
-      'SprkTabsButton',
-    ],
+    jest: ['SprkTabs', 'SprkTabsPanel', 'SprkTabsButton'],
     info: `
 ${markdownDocumentationLinkBuilder('tabs')}
 - The Tabs component makes use of the
@@ -31,7 +25,6 @@ all Tabs panels will be visible. If \`sprk-u-JavaScript\`
 is present, only one content panel will be visible at a time. 
 `,
   },
-
 };
 
 export const defaultStory = () => (
@@ -43,26 +36,34 @@ export const defaultStory = () => (
       tabBtnDataId="tab-1"
     >
       <p>
-        Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus
-        ipsum. Nulla euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at
-        ornare. Nam nec dapibus nibh. Integer venenatis ex eu mi euismod, non ultricies l acus
-        venenatis.
+        Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed quis rhoncus ipsum. Nulla euismod nisi est, vel consequat ante
+        consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
+        Integer venenatis ex eu mi euismod, non ultricies l acus venenatis.
       </p>
     </SprkTabsPanel>
-    <SprkTabsPanel tabBtnChildren="Tab 2" tabBtnAnalyticsString="tab-2" tabBtnDataId="tab-2">
+    <SprkTabsPanel
+      tabBtnChildren="Tab 2"
+      tabBtnAnalyticsString="tab-2"
+      tabBtnDataId="tab-2"
+    >
       <p>
-        Tab 2 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus
-        ipsum. Nulla euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at
-        ornare. Nam nec dapibus nibh. Integer venenatis ex eu mi euismod, non ultricies l acus
-        venenatis.
+        Tab 2 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed quis rhoncus ipsum. Nulla euismod nisi est, vel consequat ante
+        consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
+        Integer venenatis ex eu mi euismod, non ultricies l acus venenatis.
       </p>
     </SprkTabsPanel>
-    <SprkTabsPanel tabBtnChildren="Tab 3" tabBtnAnalyticsString="tab-3" tabBtnDataId="tab-3">
+    <SprkTabsPanel
+      tabBtnChildren="Tab 3"
+      tabBtnAnalyticsString="tab-3"
+      tabBtnDataId="tab-3"
+    >
       <p>
-        Tab 3 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus
-        ipsum. Nulla euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at
-        ornare. Nam nec dapibus nibh. Integer venenatis ex eu mi euismod, non ultricies l acus
-        venenatis.
+        Tab 3 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed quis rhoncus ipsum. Nulla euismod nisi est, vel consequat ante
+        consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
+        Integer venenatis ex eu mi euismod, non ultricies l acus venenatis.
       </p>
     </SprkTabsPanel>
   </SprkTabs>

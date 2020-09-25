@@ -165,7 +165,7 @@ SprkTextInput.defaultProps = {
   analyticsString: '',
   children: [],
   errorMessage: '',
-  formatter: value => value,
+  formatter: (value) => value,
   forwardedRef: React.createRef(),
   helperText: '',
   hiddenLabel: false,

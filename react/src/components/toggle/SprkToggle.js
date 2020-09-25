@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SprkIcon from '../icons/SprkIcon';
 import uniqueId from 'lodash/uniqueId';
+import SprkIcon from '../icons/SprkIcon';
 import 'focus-visible';
 
 class SprkToggle extends Component {
@@ -19,7 +19,7 @@ class SprkToggle extends Component {
 
   toggleOpen(e) {
     e.preventDefault();
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
       height: !prevState.isOpen ? 'auto' : 0,
     }));
@@ -40,10 +40,7 @@ class SprkToggle extends Component {
     } = this.props;
     const { isOpen, height } = this.state;
 
-    const containerClasses = classnames(
-      'sprk-c-Toggle',
-      additionalClasses
-    );
+    const containerClasses = classnames('sprk-c-Toggle', additionalClasses);
 
     const titleClasses = classnames(
       'sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none',
@@ -71,7 +68,7 @@ class SprkToggle extends Component {
         <AnimateHeight
           duration={300}
           height={height}
-          className='sprk-c-Toggle__content'
+          className="sprk-c-Toggle__content"
           id={contentId}
         >
           <div>{children}</div>
@@ -103,7 +100,7 @@ SprkToggle.propTypes = {
   idString: PropTypes.string,
   /**
    * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
-  */
+   */
   analyticsString: PropTypes.string,
   /**
    * A space-separated string of classes to add to the outermost container of the component.

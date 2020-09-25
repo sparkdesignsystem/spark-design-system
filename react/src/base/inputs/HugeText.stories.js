@@ -4,15 +4,10 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Input/Huge Text',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkTextInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
@@ -30,9 +25,7 @@ hugeTextInput.story = {
   name: 'Default',
   component: SprkTextInput,
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
@@ -51,9 +44,7 @@ invalidHugeTextInput.story = {
   name: 'Invalid',
   component: SprkTextInput,
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
@@ -71,9 +62,6 @@ disabledHugeTextInput.story = {
   name: 'Disabled',
   component: SprkTextInput,
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
-

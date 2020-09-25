@@ -4,15 +4,10 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Input/Huge Select',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkSelectionInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
@@ -60,9 +55,7 @@ export const hugeSelectBox = () => (
 hugeSelectBox.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkSelectionInput',
-    ]
+    jest: ['SprkSelectionInput'],
   },
 };
 
@@ -111,9 +104,7 @@ export const invalidHugeSelectBox = () => (
 invalidHugeSelectBox.story = {
   name: 'Invalid',
   parameters: {
-    jest: [
-      'SprkSelectionInput',
-    ]
+    jest: ['SprkSelectionInput'],
   },
 };
 
@@ -161,9 +152,6 @@ export const disabledHugeSelectBox = () => (
 disabledHugeSelectBox.story = {
   name: 'Disabled',
   parameters: {
-    jest: [
-      'SprkSelectionInput',
-    ]
+    jest: ['SprkSelectionInput'],
   },
 };
-

@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
 import SprkIcon from './SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { getIcons, attachIcons, createIconExample } from "../../../../storybook-utilities/icon-utilities/icon-name-util";
+import {
+  getIcons,
+  attachIcons,
+  createIconExample,
+} from '../../../../storybook-utilities/icon-utilities/icon-name-util';
 
 export default {
   title: 'Components/Icons',
   component: SprkIcon,
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
     jest: ['SprkIcon'],
     info: `
@@ -57,10 +59,14 @@ export const gallery = () => {
     attachIcons(getIcons());
   });
 
-  return (<ul className="
+  return (
+    <ul
+      className="
     sbdocs-gallery-container
     sprk-o-Stack
-    sprk-o-Stack--split@xs"></ul>);
+    sprk-o-Stack--split@xs"
+    />
+  );
 };
 
 gallery.story = {
@@ -68,9 +74,7 @@ gallery.story = {
   parameters: {
     docs: {
       inlineStories: false,
-      iframeHeight: 1000
+      iframeHeight: 1000,
     },
-  }
+  },
 };
-
-

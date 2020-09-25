@@ -32,14 +32,14 @@ describe('SprkDropdown:', () => {
   });
 
   it('should add classes to the icon when additionalIconClasses has a value', () => {
-    const wrapper = mount(
-      <SprkDropdown additionalIconClasses="test-class" />,
-    );
+    const wrapper = mount(<SprkDropdown additionalIconClasses="test-class" />);
     expect(wrapper.find('.sprk-c-Icon.test-class').length).toBe(1);
   });
 
   it('should add classes to the trigger when additionalTriggerClasses has a value', () => {
-    const wrapper = mount(<SprkDropdown additionalTriggerClasses="sprk-u-man" />);
+    const wrapper = mount(
+      <SprkDropdown additionalTriggerClasses="sprk-u-man" />,
+    );
     expect(wrapper.find('.sprk-b-Link.sprk-u-man').length).toBe(1);
   });
 
@@ -94,10 +94,7 @@ describe('SprkDropdown:', () => {
     };
     const wrapper = mount(<SprkDropdown choices={choices} />);
     wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
+    wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
     expect(spyFunc.mock.calls.length).toBe(1);
   });
 
@@ -111,42 +108,37 @@ describe('SprkDropdown:', () => {
     };
     const wrapper = mount(<SprkDropdown choices={choices} />);
     wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
+    wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
   });
 
   it('should run the choiceFunction supplied with the list of choices (informational)', () => {
     const spyFunc = jest.fn();
     const choices = {
       choiceFunction: spyFunc,
-      items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
+      items: [
+        { text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } },
+      ],
     };
     const wrapper = mount(
       <SprkDropdown choices={choices} variant="informational" />,
     );
     wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
+    wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
     expect(spyFunc.mock.calls.length).toBe(1);
   });
 
   it('should not error if choiceFunction is supplied but undefined (informational)', () => {
     const choices = {
       choiceFunction: undefined,
-      items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
+      items: [
+        { text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } },
+      ],
     };
     const wrapper = mount(
       <SprkDropdown choices={choices} variant="informational" />,
     );
     wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
+    wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
   });
 
   it('should close the dropdown on click outside', () => {
@@ -236,17 +228,12 @@ describe('SprkDropdown:', () => {
         defaultTriggerText="test"
         variant="informational"
         choices={{
-          items: [
-            { content: { title: 'Item 1' } },
-          ],
+          items: [{ content: { title: 'Item 1' } }],
         }}
       />,
     );
     expect(
-      wrapper
-        .find('.sprk-b-Link')
-        .instance()
-        .getAttribute('aria-label'),
+      wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
     ).toBe('test');
   });
 
@@ -255,85 +242,66 @@ describe('SprkDropdown:', () => {
       <SprkDropdown
         variant="informational"
         choices={{
-          items: [
-            { content: { title: 'Item 1' } },
-          ],
+          items: [{ content: { title: 'Item 1' } }],
         }}
       />,
     );
     wrapper.find('.sprk-b-Link').simulate('click');
     expect(
-      wrapper
-        .find('.sprk-b-Link')
-        .instance()
-        .getAttribute('aria-label'),
+      wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
     ).toBe('Choose One...');
   });
 
   it('should default to correct aria-label if screenReaderText is provided.', () => {
     const choices = {
-      items: [
-        { text: 'Item 1', value: 'item-1' },
-      ],
+      items: [{ text: 'Item 1', value: 'item-1' }],
     };
 
-    const wrapper = mount(<SprkDropdown choices={choices} screenReaderText="Dropdown description"/>);
+    const wrapper = mount(
+      <SprkDropdown
+        choices={choices}
+        screenReaderText="Dropdown description"
+      />,
+    );
 
     expect(
-      wrapper
-        .find('.sprk-b-Link')
-        .instance()
-        .getAttribute('aria-label'),
+      wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
     ).toBe('Dropdown description');
   });
 
   it('should default to correct aria-label if screenReaderText is not provided.', () => {
     const choices = {
-      items: [
-        { text: 'Item 1', value: 'item-1' },
-      ],
+      items: [{ text: 'Item 1', value: 'item-1' }],
     };
 
     const wrapper = mount(<SprkDropdown choices={choices} />);
 
     expect(
-      wrapper
-        .find('.sprk-b-Link')
-        .instance()
-        .getAttribute('aria-label'),
+      wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
     ).toBe('Choose One...');
   });
 
   it('should apply aria-label to listbox when title is provided', () => {
-    const wrapper = mount(<SprkDropdown title="test"/>);
+    const wrapper = mount(<SprkDropdown title="test" />);
     wrapper.find('.sprk-b-Link').simulate('click');
-    expect(
-      wrapper
-        .find('ul')
-        .instance()
-        .getAttribute('aria-label'),
-    ).toBe('test');
+    expect(wrapper.find('ul').instance().getAttribute('aria-label')).toBe(
+      'test',
+    );
   });
 
   it('should apply aria-label to listbox when there is no title but screenReaderText is provided', () => {
-    const wrapper = mount(<SprkDropdown screenReaderText="test"/>);
+    const wrapper = mount(<SprkDropdown screenReaderText="test" />);
     wrapper.find('.sprk-b-Link').simulate('click');
-    expect(
-      wrapper
-        .find('ul')
-        .instance()
-        .getAttribute('aria-label'),
-    ).toBe('test');
+    expect(wrapper.find('ul').instance().getAttribute('aria-label')).toBe(
+      'test',
+    );
   });
 
   it('should apply default aria-label to listbox when neither title nor screenReaderText is provided', () => {
     const wrapper = mount(<SprkDropdown />);
     wrapper.find('.sprk-b-Link').simulate('click');
-    expect(
-      wrapper
-        .find('ul')
-        .instance()
-        .getAttribute('aria-label'),
-    ).toBe('My Choices');
+    expect(wrapper.find('ul').instance().getAttribute('aria-label')).toBe(
+      'My Choices',
+    );
   });
 });

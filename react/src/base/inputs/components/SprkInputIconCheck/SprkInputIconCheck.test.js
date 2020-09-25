@@ -8,7 +8,9 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('SprkInputIconCheck:', () => {
   it('should render base class', () => {
     const wrapper = mount(<SprkInputIconCheck leadingIcon="percent" />);
-    expect(wrapper.find('.sprk-b-InputContainer__icon-container').length).toBe(1);
+    expect(wrapper.find('.sprk-b-InputContainer__icon-container').length).toBe(
+      1,
+    );
   });
 
   it('should render as narrow', () => {
@@ -21,7 +23,9 @@ describe('SprkInputIconCheck:', () => {
   });
 
   it('should render with icon right class', () => {
-    const wrapper = mount(<SprkInputIconCheck leadingIcon="percent" iconRight />);
+    const wrapper = mount(
+      <SprkInputIconCheck leadingIcon="percent" iconRight />,
+    );
     expect(
       wrapper.find(
         '.sprk-b-InputContainer__icon.sprk-b-InputContainer__icon--right',

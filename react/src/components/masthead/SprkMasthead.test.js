@@ -137,71 +137,71 @@ describe('SprkMasthead:', () => {
   });
 
   it('should add the hidden class when state isHidden is true', () => {
-    const wrapper = mount(<SprkMasthead/>);
-    wrapper.setState({ isHidden : true });
+    const wrapper = mount(<SprkMasthead />);
+    wrapper.setState({ isHidden: true });
     expect(wrapper.find('header.sprk-c-Masthead--hidden').length).toBe(1);
   });
 
   it('should update state isHidden to true when scrollDirection is equal to down', () => {
-    const wrapper = mount(<SprkMasthead/>);
+    const wrapper = mount(<SprkMasthead />);
     const instance = wrapper.instance();
     expect(wrapper.state('isHidden')).toEqual(false);
-    wrapper.setState({ scrollDirection : 'down' });
+    wrapper.setState({ scrollDirection: 'down' });
     instance.toggleMenu();
     expect(wrapper.state('isHidden')).toEqual(true);
   });
 
   it('should update state isHidden to false when scrollDirection is equal to up', () => {
-    const wrapper = mount(<SprkMasthead/>);
+    const wrapper = mount(<SprkMasthead />);
     const instance = wrapper.instance();
-    wrapper.setState({ isHidden : true });
+    wrapper.setState({ isHidden: true });
     expect(wrapper.state('isHidden')).toEqual(true);
-    wrapper.setState({ scrollDirection : 'up' });
+    wrapper.setState({ scrollDirection: 'up' });
     instance.toggleMenu();
     expect(wrapper.state('isHidden')).toEqual(false);
   });
 
   it('should update narrowNavOpen to false when closeNarrowNavMenu is called', () => {
-    const wrapper = mount(<SprkMasthead/>);
+    const wrapper = mount(<SprkMasthead />);
     const instance = wrapper.instance();
-    wrapper.setState({ narrowNavOpen : true });
+    wrapper.setState({ narrowNavOpen: true });
     expect(wrapper.state('narrowNavOpen')).toEqual(true);
     instance.closeNarrowNavMenu();
     expect(wrapper.state('narrowNavOpen')).toEqual(false);
   });
 
   it('should update state of isNarrowLayout if isNarrowLayout !== newMenuVisibility', () => {
-    const wrapper = mount(<SprkMasthead/>);
+    const wrapper = mount(<SprkMasthead />);
     const instance = wrapper.instance();
-    wrapper.setState({ currentLayout : true });
-    wrapper.setState({ isNarrowLayout : false });
+    wrapper.setState({ currentLayout: true });
+    wrapper.setState({ isNarrowLayout: false });
     instance.checkIfNarrowLayout();
     expect(wrapper.state('isNarrowLayout')).toEqual(true);
   });
 
   it('should update state of isHidden if isNarrowLayout is false', () => {
-    const wrapper = mount(<SprkMasthead/>);
+    const wrapper = mount(<SprkMasthead />);
     const instance = wrapper.instance();
-    wrapper.setState({ currentLayout : false });
-    wrapper.setState({ isNarrowLayout : true });
-    wrapper.setState({ isHidden : true });
+    wrapper.setState({ currentLayout: false });
+    wrapper.setState({ isNarrowLayout: true });
+    wrapper.setState({ isHidden: true });
     instance.checkIfNarrowLayout();
     expect(wrapper.state('isHidden')).toEqual(false);
   });
 
   it('should call getCurrentLayout when checkLayoutOnResize is called', () => {
-    const wrapper = mount(<SprkMasthead/>);
+    const wrapper = mount(<SprkMasthead />);
     const instance = wrapper.instance();
-    const spy  = jest.spyOn(wrapper.instance(), "getCurrentLayout");
+    const spy = jest.spyOn(wrapper.instance(), 'getCurrentLayout');
     wrapper.update();
     instance.checkLayoutOnResize();
     expect(spy).toHaveBeenCalled();
   });
 
   it('should call checkIfNarrowLayout when checkLayoutOnResize is called', () => {
-    const wrapper = mount(<SprkMasthead/>);
+    const wrapper = mount(<SprkMasthead />);
     const instance = wrapper.instance();
-    const spy  = jest.spyOn(wrapper.instance(), "checkIfNarrowLayout");
+    const spy = jest.spyOn(wrapper.instance(), 'checkIfNarrowLayout');
     wrapper.update();
     instance.checkLayoutOnResize();
     expect(spy).toHaveBeenCalled();
@@ -213,26 +213,30 @@ describe('SprkMasthead:', () => {
     hamburgerIcon.simulate('click');
     const narrowNavElement = wrapper.find('.sprk-c-Masthead__narrow-nav');
     const narrowNavElementId = narrowNavElement.getDOMNode().getAttribute('id');
-    const hamburgerIconAriaControls = hamburgerIcon.getDOMNode().getAttribute('aria-controls');
+    const hamburgerIconAriaControls = hamburgerIcon
+      .getDOMNode()
+      .getAttribute('aria-controls');
 
     expect(narrowNavElementId).toMatch(/sprk_masthead_narrow_nav_\d/);
     expect(hamburgerIconAriaControls).toEqual(narrowNavElementId);
   });
 
   it('should add correct aria-controls and id to narrowNav if narrowNavId is passed', () => {
-    const testNarrowNavId = "test1234"
+    const testNarrowNavId = 'test1234';
     const wrapper = mount(
-      <SprkMasthead i
+      <SprkMasthead
+        i
         narrowNavId={testNarrowNavId}
         narrowNavLinks={[{ text: 'Hi' }]}
-      />
+      />,
     );
     const hamburgerIcon = wrapper.find('.sprk-c-Menu');
     hamburgerIcon.simulate('click');
     const narrowNavElement = wrapper.find('.sprk-c-Masthead__narrow-nav');
     const narrowNavElementId = narrowNavElement.getDOMNode().getAttribute('id');
-    const hamburgerIconAriaControls = hamburgerIcon.getDOMNode().getAttribute('aria-controls');
-
+    const hamburgerIconAriaControls = hamburgerIcon
+      .getDOMNode()
+      .getAttribute('aria-controls');
 
     expect(narrowNavElementId).toEqual(testNarrowNavId);
     expect(hamburgerIconAriaControls).toEqual(testNarrowNavId);

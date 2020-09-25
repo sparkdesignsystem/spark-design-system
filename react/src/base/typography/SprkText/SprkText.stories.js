@@ -4,9 +4,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../../storybook-utili
 
 export default {
   title: 'Foundations/Typography',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkText,
   parameters: {
     jest: ['SprkText'],
@@ -37,93 +35,45 @@ correct type classes applied.
 };
 
 export const bodyOne = () => (
-  <SprkText
-    variant="bodyOne"
-    idString="body-one"
-  >
-    Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.
-    Sed gravida urna quis nulla
-    ultrices, sed efficitur risus
-    elementum. Vivamus semper ex
-    a lorem sodales, rhoncus
-    rhoncus augue cursus. Sed
-    vestibulum felis vel euismod
-    aliquet. Suspendisse sit amet
-    euismod nibh, eget fermentum
-    arcu. Aliquam lacinia,
-    sem eu ultricies auctor,
-    velit nunc commodo sapien,
-    pharetra maximus augue
-    dui eget dui.
+  <SprkText variant="bodyOne" idString="body-one">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna
+    quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a
+    lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel
+    euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu.
+    Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien,
+    pharetra maximus augue dui eget dui.
   </SprkText>
 );
 
 export const bodyTwo = () => (
-  <SprkText
-    variant="bodyTwo"
-    idString="body-two"
-  >
-    Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.
-    Sed gravida urna quis nulla
-    ultrices, sed efficitur risus
-    elementum. Vivamus semper ex
-    a lorem sodales, rhoncus
-    rhoncus augue cursus. Sed
-    vestibulum felis vel euismod
-    aliquet. Suspendisse sit amet
-    euismod nibh, eget fermentum
-    arcu. Aliquam lacinia,
-    sem eu ultricies auctor,
-    velit nunc commodo sapien,
-    pharetra maximus augue
-    dui eget dui.
+  <SprkText variant="bodyTwo" idString="body-two">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna
+    quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a
+    lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel
+    euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu.
+    Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien,
+    pharetra maximus augue dui eget dui.
   </SprkText>
 );
 
 export const bodyThree = () => (
-  <SprkText
-    variant="bodyThree"
-    idString="body-three"
-  >
-    Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.
-    Sed gravida urna quis nulla
-    ultrices, sed efficitur risus
-    elementum. Vivamus semper ex
-    a lorem sodales, rhoncus
-    rhoncus augue cursus. Sed
-    vestibulum felis vel euismod
-    aliquet. Suspendisse sit amet
-    euismod nibh, eget fermentum
-    arcu. Aliquam lacinia,
-    sem eu ultricies auctor,
-    velit nunc commodo sapien,
-    pharetra maximus augue
-    dui eget dui.
+  <SprkText variant="bodyThree" idString="body-three">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna
+    quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a
+    lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel
+    euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu.
+    Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien,
+    pharetra maximus augue dui eget dui.
   </SprkText>
 );
 
 export const bodyFour = () => (
-  <SprkText
-    variant="bodyFour"
-    idString="body-four"
-  >
-    Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.
-    Sed gravida urna quis nulla
-    ultrices, sed efficitur risus
-    elementum. Vivamus semper ex
-    a lorem sodales, rhoncus
-    rhoncus augue cursus. Sed
-    vestibulum felis vel euismod
-    aliquet. Suspendisse sit amet
-    euismod nibh, eget fermentum
-    arcu. Aliquam lacinia,
-    sem eu ultricies auctor,
-    velit nunc commodo sapien,
-    pharetra maximus augue
-    dui eget dui.
+  <SprkText variant="bodyFour" idString="body-four">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna
+    quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a
+    lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel
+    euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu.
+    Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien,
+    pharetra maximus augue dui eget dui.
   </SprkText>
 );

@@ -14,7 +14,7 @@ class SprkRevealInput extends Component {
   }
 
   toggleReveal() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isRevealed: !prevState.isRevealed,
     }));
   }
@@ -107,7 +107,7 @@ SprkRevealInput.propTypes = {
 SprkRevealInput.defaultProps = {
   additionalClasses: '',
   analyticsString: '',
-  formatter: value => value,
+  formatter: (value) => value,
   helperText: '',
   hiddenLabel: false,
   idString: '',

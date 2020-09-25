@@ -4,15 +4,10 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Input/Select',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkSelectionInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
@@ -59,9 +54,7 @@ export const selectBox = () => (
 selectBox.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkSelectionInput',
-    ]
+    jest: ['SprkSelectionInput'],
   },
 };
 
@@ -109,9 +102,7 @@ export const invalidSelectBox = () => (
 invalidSelectBox.story = {
   name: 'Invalid',
   parameters: {
-    jest: [
-      'SprkSelectionInput',
-    ]
+    jest: ['SprkSelectionInput'],
   },
 };
 
@@ -158,9 +149,6 @@ export const disabledSelectBox = () => (
 disabledSelectBox.story = {
   name: 'Disabled',
   parameters: {
-    jest: [
-      'SprkSelectionInput',
-    ]
+    jest: ['SprkSelectionInput'],
   },
 };
-

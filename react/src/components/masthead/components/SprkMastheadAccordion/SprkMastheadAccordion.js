@@ -8,7 +8,7 @@ class SprkMastheadAccordion extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      links: props.links.map(item => ({ id: uniqueId(), ...item })),
+      links: props.links.map((item) => ({ id: uniqueId(), ...item })),
     };
   }
 

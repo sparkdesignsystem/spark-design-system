@@ -53,9 +53,7 @@ describe('SprkHighlightBoard:', () => {
   });
 
   it('should not allow a secondary CTA without a primary CTA', () => {
-    const wrapper = shallow(
-      <SprkHighlightBoard ctaText2="so is this" />,
-    );
+    const wrapper = shallow(<SprkHighlightBoard ctaText2="so is this" />);
     const contentDiv = wrapper.find('div.sprk-c-HighlightBoard__cta');
 
     expect(contentDiv.length).toBe(0);

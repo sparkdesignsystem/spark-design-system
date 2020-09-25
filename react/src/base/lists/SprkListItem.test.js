@@ -11,7 +11,9 @@ describe('SprkListItem:', () => {
   });
 
   it('should add classes to li element if additionalClasses has a value', () => {
-    const wrapper = shallow(<SprkListItem additionalClasses="additionalClass" />);
+    const wrapper = shallow(
+      <SprkListItem additionalClasses="additionalClass" />,
+    );
     expect(wrapper.find('li').hasClass('additionalClass')).toBe(true);
   });
 

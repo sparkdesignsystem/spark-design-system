@@ -12,7 +12,9 @@ describe('SprkDatePickerInput:', () => {
   });
 
   it('should add classes when additionalClasses has a value', () => {
-    const wrapper = mount(<SprkDatePickerInput additionalClasses="sprk-u-man" />);
+    const wrapper = mount(
+      <SprkDatePickerInput additionalClasses="sprk-u-man" />,
+    );
     expect(wrapper.find('.sprk-u-man').length).toBe(1);
   });
 
@@ -30,10 +32,7 @@ describe('SprkDatePickerInput:', () => {
     const wrapper = mount(<SprkDatePickerInput idString="321" />);
     const date = new Date('December 17, 1995 03:24:00');
     expect(
-      wrapper
-        .find(SprkDatePickerInput)
-        .instance()
-        .tdpConfig.format(date),
+      wrapper.find(SprkDatePickerInput).instance().tdpConfig.format(date),
     ).toBe('12/17/1995');
   });
 });

@@ -18,22 +18,16 @@ describe('SprkAccordion:', () => {
           analyticsString="analytics_string_goes_here"
         >
           <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-            This is an example of multiple HTML elements
-            used for the content in an accordion item.
+            This is an example of multiple HTML elements used for the content in
+            an accordion item.
           </p>
 
           <ul className="sprk-b-List sprk-b-List--indented sprk-o-Stack__item">
-            <li>
-              List Item One
-            </li>
+            <li>List Item One</li>
 
-            <li>
-              List Item Two
-            </li>
+            <li>List Item Two</li>
 
-            <li>
-              List Item Three
-            </li>
+            <li>List Item Three</li>
           </ul>
         </SprkAccordionItem>
 
@@ -44,22 +38,16 @@ describe('SprkAccordion:', () => {
           analyticsString="analytics_string_goes_here"
         >
           <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-            This is an example of multiple HTML elements
-            used for the content in an accordion item.
+            This is an example of multiple HTML elements used for the content in
+            an accordion item.
           </p>
 
           <ul className="sprk-b-List sprk-b-List--indented sprk-o-Stack__item">
-            <li>
-              List Item One
-            </li>
+            <li>List Item One</li>
 
-            <li>
-              List Item Two
-            </li>
+            <li>List Item Two</li>
 
-            <li>
-              List Item Three
-            </li>
+            <li>List Item Three</li>
           </ul>
         </SprkAccordionItem>
 
@@ -70,27 +58,23 @@ describe('SprkAccordion:', () => {
           analyticsString="analytics_string_goes_here"
         >
           <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-            This is an example of multiple HTML elements
-            used for the content in an accordion item.
+            This is an example of multiple HTML elements used for the content in
+            an accordion item.
           </p>
 
           <ul className="sprk-b-List sprk-b-List--indented sprk-o-Stack__item">
-            <li>
-              List Item One
-            </li>
+            <li>List Item One</li>
 
-            <li>
-              List Item Two
-            </li>
+            <li>List Item Two</li>
 
-            <li>
-              List Item Three
-            </li>
+            <li>List Item Three</li>
           </ul>
         </SprkAccordionItem>
       </SprkAccordion>,
     );
-    expect(wrapper.find('ul.sprk-c-Accordion.sprk-o-VerticalList').length).toBe(1);
+    expect(wrapper.find('ul.sprk-c-Accordion.sprk-o-VerticalList').length).toBe(
+      1,
+    );
   });
 
   it('should display not render out an accordion item for elements that are not SprkAccordionItem', () => {
@@ -104,22 +88,16 @@ describe('SprkAccordion:', () => {
           analyticsString="analytics_string_goes_here"
         >
           <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-            This is an example of multiple HTML elements
-            used for the content in an accordion item.
+            This is an example of multiple HTML elements used for the content in
+            an accordion item.
           </p>
 
           <ul className="sprk-b-List sprk-b-List--indented sprk-o-Stack__item">
-            <li>
-              List Item One
-            </li>
+            <li>List Item One</li>
 
-            <li>
-              List Item Two
-            </li>
+            <li>List Item Two</li>
 
-            <li>
-              List Item Three
-            </li>
+            <li>List Item Three</li>
           </ul>
         </SprkAccordionItem>
 
@@ -130,22 +108,16 @@ describe('SprkAccordion:', () => {
           analyticsString="analytics_string_goes_here"
         >
           <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-            This is an example of multiple HTML elements
-            used for the content in an accordion item.
+            This is an example of multiple HTML elements used for the content in
+            an accordion item.
           </p>
 
           <ul className="sprk-b-List sprk-b-List--indented sprk-o-Stack__item">
-            <li>
-              List Item One
-            </li>
+            <li>List Item One</li>
 
-            <li>
-              List Item Two
-            </li>
+            <li>List Item Two</li>
 
-            <li>
-              List Item Three
-            </li>
+            <li>List Item Three</li>
           </ul>
         </SprkAccordionItem>
 
@@ -156,22 +128,16 @@ describe('SprkAccordion:', () => {
           analyticsString="analytics_string_goes_here"
         >
           <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-            This is an example of multiple HTML elements
-            used for the content in an accordion item.
+            This is an example of multiple HTML elements used for the content in
+            an accordion item.
           </p>
 
           <ul className="sprk-b-List sprk-b-List--indented sprk-o-Stack__item">
-            <li>
-              List Item One
-            </li>
+            <li>List Item One</li>
 
-            <li>
-              List Item Two
-            </li>
+            <li>List Item Two</li>
 
-            <li>
-              List Item Three
-            </li>
+            <li>List Item Three</li>
           </ul>
         </SprkAccordionItem>
       </SprkAccordion>,

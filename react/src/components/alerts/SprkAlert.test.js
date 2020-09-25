@@ -9,29 +9,50 @@ describe('SprkAlert:', () => {
   });
 
   it('should display a div element with correct classes when variant is info', () => {
-    const wrapper = shallow(<SprkAlert variant="info" message="test" isVisible />);
-    expect(wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert--info')).toBe(true);
+    const wrapper = shallow(
+      <SprkAlert variant="info" message="test" isVisible />,
+    );
+    expect(
+      wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert--info'),
+    ).toBe(true);
   });
 
   it('should display a div element with correct classes when variant is success', () => {
-    const wrapper = shallow(<SprkAlert variant="success" message="test" isVisible />);
-    expect(wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert--success')).toBe(true);
+    const wrapper = shallow(
+      <SprkAlert variant="success" message="test" isVisible />,
+    );
+    expect(
+      wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert--success'),
+    ).toBe(true);
   });
 
   it('should display a div element with correct classes when variant is fail', () => {
-    const wrapper = shallow(<SprkAlert variant="fail" message="test" isVisible />);
-    expect(wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert--fail')).toBe(true);
+    const wrapper = shallow(
+      <SprkAlert variant="fail" message="test" isVisible />,
+    );
+    expect(
+      wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert--fail'),
+    ).toBe(true);
   });
 
   it('should hide the dismiss button when isDismissible is set to false', () => {
-    const wrapper = shallow(<SprkAlert isDismissible={false} message="test" isVisible />);
-    expect(wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert')).toBe(true);
-    expect(wrapper.find('button.sprk-c-Alert__icon.sprk-c-Alert__icon--dismiss').length).toBe(0);
+    const wrapper = shallow(
+      <SprkAlert isDismissible={false} message="test" isVisible />,
+    );
+    expect(wrapper.find('div.sprk-c-Alert').hasClass('sprk-c-Alert')).toBe(
+      true,
+    );
+    expect(
+      wrapper.find('button.sprk-c-Alert__icon.sprk-c-Alert__icon--dismiss')
+        .length,
+    ).toBe(0);
   });
 
   it('should run onDismiss when the dismiss button is clicked', () => {
     const spyFunc = jest.fn();
-    const wrapper = mount(<SprkAlert message="test" isVisible onDismiss={spyFunc} />);
+    const wrapper = mount(
+      <SprkAlert message="test" isVisible onDismiss={spyFunc} />,
+    );
     wrapper
       .find('button.sprk-c-Alert__icon.sprk-c-Alert__icon--dismiss')
       .simulate('click');
@@ -105,7 +126,12 @@ describe('SprkAlert:', () => {
 
   it('should display custom alert icon when iconNameFail has value', () => {
     const wrapper = mount(
-      <SprkAlert variant="fail" message="test" isVisible iconNameFail="camera" />,
+      <SprkAlert
+        variant="fail"
+        message="test"
+        isVisible
+        iconNameFail="camera"
+      />,
     );
     expect(
       wrapper

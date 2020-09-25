@@ -4,15 +4,10 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Input/SSN',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkRevealInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
@@ -42,9 +37,7 @@ export const SSNInput = () => (
 SSNInput.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkRevealInput',
-    ]
+    jest: ['SprkRevealInput'],
   },
 };
 
@@ -61,9 +54,7 @@ export const invalidSSNInput = () => (
 invalidSSNInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: [
-      'SprkRevealInput',
-    ]
+    jest: ['SprkRevealInput'],
   },
 };
 
@@ -79,8 +70,6 @@ export const disabledSSNInput = () => (
 disabledSSNInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: [
-      'SprkRevealInput',
-    ]
+    jest: ['SprkRevealInput'],
   },
 };

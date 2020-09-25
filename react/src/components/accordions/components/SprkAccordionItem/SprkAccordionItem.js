@@ -19,7 +19,7 @@ class SprkAccordionItem extends Component {
   toggle(e) {
     const { onToggle } = this.props;
     e.preventDefault();
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
       height: !prevState.isOpen ? 'auto' : 0,
     }));

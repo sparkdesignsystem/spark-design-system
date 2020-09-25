@@ -8,7 +8,7 @@ class SprkInputElement extends Component {
     const { defaultValue } = props;
     super(props);
 
-    if( value || defaultValue ) {
+    if (value || defaultValue) {
       this.state = {
         hasValue: true,
       };
@@ -75,7 +75,7 @@ class SprkInputElement extends Component {
         aria-invalid={!valid}
         aria-describedby={errorContainerId}
         value={valid && formatter(value) ? formatter(value) : value}
-        onBlur={e => handleOnBlur(e)}
+        onBlur={(e) => handleOnBlur(e)}
         {...rest}
       >
         {children}

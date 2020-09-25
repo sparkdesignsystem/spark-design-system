@@ -8,7 +8,7 @@ class SprkAccordion extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: props.children.map(item => ({
+      items: props.children.map((item) => ({
         id: uniqueId('accordion-item-'),
         ...item,
       })),

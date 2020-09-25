@@ -4,15 +4,10 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Input/Date',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkTextInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters (/)
@@ -31,19 +26,13 @@ which you may need to remove before submitting the form.
 };
 
 export const dateInput = () => (
-  <SprkTextInput
-    label="Date"
-    name="date"
-    placeholder="01/01/2019"
-  />
+  <SprkTextInput label="Date" name="date" placeholder="01/01/2019" />
 );
 
 dateInput.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
@@ -60,26 +49,17 @@ export const invalidDateInput = () => (
 invalidDateInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
 export const disabledDateInput = () => (
-  <SprkTextInput
-    label="Date"
-    name="date"
-    placeholder="01/01/2019"
-    disabled
-  />
+  <SprkTextInput label="Date" name="date" placeholder="01/01/2019" disabled />
 );
 
 disabledDateInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };

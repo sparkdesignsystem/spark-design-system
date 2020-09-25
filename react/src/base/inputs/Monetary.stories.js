@@ -4,15 +4,10 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Input/Monetary',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkTextInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field may contain special characters
@@ -37,16 +32,15 @@ export const monetaryInput = () => (
 monetaryInput.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
 export const invalidMonetaryInput = () => (
   <SprkTextInput
     label="Payment"
-    textIcon name="monetary"
+    textIcon
+    name="monetary"
     placeholder="0.00"
     valid={false}
     errorMessage="There is an error on this field."
@@ -56,16 +50,15 @@ export const invalidMonetaryInput = () => (
 invalidMonetaryInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
 export const disabledMonetaryInput = () => (
   <SprkTextInput
     label="Payment"
-    textIcon name="monetary"
+    textIcon
+    name="monetary"
     placeholder="0.00"
     disabled
   />
@@ -74,8 +67,6 @@ export const disabledMonetaryInput = () => (
 disabledMonetaryInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };

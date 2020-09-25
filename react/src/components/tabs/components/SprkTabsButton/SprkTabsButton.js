@@ -29,11 +29,9 @@ class SprkTabsButton extends Component {
     } = this.props;
     return (
       <button
-        className={classnames(
-          'sprk-c-Tabs__button',
-          tabBtnAddClasses,
-          { 'sprk-c-Tabs__button--active': isActive },
-        )}
+        className={classnames('sprk-c-Tabs__button', tabBtnAddClasses, {
+          'sprk-c-Tabs__button--active': isActive,
+        })}
         role="tab"
         onClick={onTabClick}
         aria-controls={ariaControls}

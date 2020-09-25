@@ -8,7 +8,10 @@ class SprkFooterGlobalSection extends Component {
     super(props);
 
     this.state = {
-      globalItemsHasIds: props.globalItems.items.map(item => ({ id: uniqueId(), ...item })),
+      globalItemsHasIds: props.globalItems.items.map((item) => ({
+        id: uniqueId(),
+        ...item,
+      })),
     };
   }
 
@@ -37,7 +40,10 @@ class SprkFooterGlobalSection extends Component {
           } = item;
           const TagName = element || 'a';
           return (
-            <div key={id} className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
+            <div
+              key={id}
+              className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium"
+            >
               <div className="sprk-o-Stack__item">
                 <TagName
                   className="sprk-b-Link sprk-b-Link--plain"
@@ -49,7 +55,10 @@ class SprkFooterGlobalSection extends Component {
                     <img className={mediaAddClasses} src={src} alt={altText} />
                   )}
                   {mediaType === 'SprkIcon' && (
-                    <SprkIcon iconName={iconName} additionalClasses={mediaAddClasses} />
+                    <SprkIcon
+                      iconName={iconName}
+                      additionalClasses={mediaAddClasses}
+                    />
                   )}
                   {mediaType === 'svg' && <div>{svg}</div>}
                   {mediaType !== 'image' && (
@@ -58,7 +67,9 @@ class SprkFooterGlobalSection extends Component {
                 </TagName>
               </div>
 
-              <p className="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">{description}</p>
+              <p className="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
+                {description}
+              </p>
             </div>
           );
         })}

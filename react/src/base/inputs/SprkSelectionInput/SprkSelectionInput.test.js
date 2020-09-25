@@ -65,7 +65,9 @@ describe('SprkSelectionInput:', () => {
     select.value = '1';
     select.simulate('change', { target: { value: 'test-value' } });
     expect(
-      select.getDOMNode().classList.contains('sprk-b-Input--has-floating-label'),
+      select
+        .getDOMNode()
+        .classList.contains('sprk-b-Input--has-floating-label'),
     ).toBe(true);
   });
 
@@ -77,7 +79,9 @@ describe('SprkSelectionInput:', () => {
     select.value = '1';
     select.simulate('change', { target: { value: 'test-value' } });
     expect(
-      select.getDOMNode().classList.contains('sprk-b-Input--has-floating-label'),
+      select
+        .getDOMNode()
+        .classList.contains('sprk-b-Input--has-floating-label'),
     ).toBe(false);
   });
 
@@ -87,7 +91,9 @@ describe('SprkSelectionInput:', () => {
     );
     const select = wrapper.find('.sprk-b-Select');
     expect(
-      select.getDOMNode().classList.contains('sprk-b-Input--has-floating-label'),
+      select
+        .getDOMNode()
+        .classList.contains('sprk-b-Input--has-floating-label'),
     ).toBe(false);
   });
 
@@ -95,7 +101,7 @@ describe('SprkSelectionInput:', () => {
     const onCheckboxChangeMock = jest.fn();
     const wrapper = mount(
       <SprkSelectionInput
-        onChange= {onCheckboxChangeMock}
+        onChange={onCheckboxChangeMock}
         choices={[
           {
             name: 'item-choice',
@@ -219,7 +225,11 @@ describe('SprkSelectionInput:', () => {
 
   it('should assign data-id when idString has a value to checkboxes', () => {
     const wrapper = mount(
-      <SprkSelectionInput choices={choices} idString="321" variant="checkbox" />,
+      <SprkSelectionInput
+        choices={choices}
+        idString="321"
+        variant="checkbox"
+      />,
     );
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
   });
@@ -240,7 +250,9 @@ describe('SprkSelectionInput:', () => {
       />,
     );
     expect(wrapper.find('.sprk-b-HelperText').length).toBe(1);
-    expect(wrapper.find('.sprk-b-HelperText').text()).toBe('Sample helper text.');
+    expect(wrapper.find('.sprk-b-HelperText').text()).toBe(
+      'Sample helper text.',
+    );
   });
 
   it('should not render helper text when not supplied', () => {
@@ -289,15 +301,12 @@ describe('SprkSelectionInput:', () => {
         variant="select"
         disabled
         errorMessage="error message"
-        valid={true}
+        valid
       />,
     );
-    expect(
-      wrapper
-        .find('select')
-        .getDOMNode()
-        .hasAttribute('disabled'),
-    ).toBe(true);
+    expect(wrapper.find('select').getDOMNode().hasAttribute('disabled')).toBe(
+      true,
+    );
     expect(
       wrapper
         .find('label')
@@ -382,7 +391,7 @@ describe('SprkSelectionInput:', () => {
 
   it('should add disabled class to label if input is disabled', () => {
     const wrapper = mount(
-      <SprkSelectionInput 
+      <SprkSelectionInput
         disabled
         choices={[
           {

@@ -6,7 +6,7 @@ export default {
   title: 'Components/Centered Column',
   component: SprkCenteredColumn,
   decorators: [
-    story => <div className="sprk-o-Box sb-decorate">{story()}</div>
+    (story) => <div className="sprk-o-Box sb-decorate">{story()}</div>,
   ],
   parameters: {
     jest: ['SprkCenteredColumn'],
@@ -17,11 +17,11 @@ any parent element that
 is being used to contain the application contents within
 a maximum width.
     `,
-  }
+  },
 };
 
 export const defaultStory = () => (
-  <SprkCenteredColumn idString="centered-column"></SprkCenteredColumn>
+  <SprkCenteredColumn idString="centered-column" />
 );
 
 defaultStory.story = {

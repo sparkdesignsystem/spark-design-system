@@ -11,7 +11,7 @@ class SprkSelectionInput extends React.Component {
     super(props);
     this.state = {
       id: uniqueId(),
-      choiceItems: props.choices.map(item => ({ id: uniqueId(), ...item })),
+      choiceItems: props.choices.map((item) => ({ id: uniqueId(), ...item })),
     };
     this.handleChange = this.handleChange.bind(this);
     this.selectRef = React.createRef();
@@ -33,10 +33,10 @@ class SprkSelectionInput extends React.Component {
   }
 
   /*
- * Runs optional onChangeFunc prop.
- * Updates state if huge selects have
- * a value.
- */
+   * Runs optional onChangeFunc prop.
+   * Updates state if huge selects have
+   * a value.
+   */
   handleChange(e, variant, onChangeFunc) {
     const isHugeSelect = variant === 'hugeSelect';
 
@@ -88,7 +88,7 @@ class SprkSelectionInput extends React.Component {
                     className={classNames({
                       'sprk-b-Checkbox__input': variant === 'checkbox',
                       'sprk-b-Radio__input': variant === 'radio',
-                    })}                    
+                    })}
                     disabled={disabled}
                     id={innerId}
                     type={variant}
@@ -104,7 +104,7 @@ class SprkSelectionInput extends React.Component {
                       'sprk-b-Checkbox__label': variant === 'checkbox',
                       'sprk-b-Radio__label': variant === 'radio',
                       'sprk-b-Label--disabled': disabled,
-                    })} 
+                    })}
                   >
                     {innerLabel}
                   </label>

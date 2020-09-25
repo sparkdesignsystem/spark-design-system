@@ -70,7 +70,7 @@ class SprkModal extends Component {
   isTabPressed(e) {
     e.key === 'Tab' || e.keyCode === 9;
   }
-  
+
   isEscPressed(e) {
     e.key === 'Escape' || e.keyCode === 27;
   }

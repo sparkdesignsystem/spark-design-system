@@ -8,19 +8,20 @@ const SprkErrorContainer = ({
   analyticsString,
   idString,
   message,
-  id }) => (
-    <div
-      className={classNames('sprk-b-ErrorContainer', additionalClasses)}
-      data-analytics={analyticsString}
-      data-id={idString}
-      id={id}
-    >
-      <SprkIcon
-        additionalClasses="sprk-b-ErrorIcon"
-        iconName="exclamation-filled"
-      />
-      <div className="sprk-b-ErrorText">{message}</div>
-    </div>
+  id,
+}) => (
+  <div
+    className={classNames('sprk-b-ErrorContainer', additionalClasses)}
+    data-analytics={analyticsString}
+    data-id={idString}
+    id={id}
+  >
+    <SprkIcon
+      additionalClasses="sprk-b-ErrorIcon"
+      iconName="exclamation-filled"
+    />
+    <div className="sprk-b-ErrorText">{message}</div>
+  </div>
 );
 
 SprkErrorContainer.propTypes = {

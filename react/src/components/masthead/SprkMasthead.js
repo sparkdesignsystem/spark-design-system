@@ -73,7 +73,7 @@ class SprkMasthead extends Component {
     }
   }
 
-  isElementVisible (selector) {
+  isElementVisible(selector) {
     if (typeof window === 'undefined') {
       return;
     }
@@ -81,10 +81,9 @@ class SprkMasthead extends Component {
     if (!element) return;
     const elementDisplayValue = window.getComputedStyle(element).display;
     const elementVisibilityValue = window.getComputedStyle(element).visibility;
-    const elementIsVisible =
+    const elementIsVisible = !(
       elementDisplayValue === 'none' || elementVisibilityValue === 'hidden'
-        ? false
-        : true;
+    );
     return elementIsVisible;
   }
 
@@ -145,7 +144,7 @@ class SprkMasthead extends Component {
 
   checkIfNarrowLayout() {
     if (this.state.isNarrowLayout !== this.state.currentLayout) {
-      this.setState({ isNarrowLayout : this.state.currentLayout });
+      this.setState({ isNarrowLayout: this.state.currentLayout });
       this.toggleScrollEvent();
       if (!this.state.isNarrowLayout) {
         this.setState({ isHidden: false });

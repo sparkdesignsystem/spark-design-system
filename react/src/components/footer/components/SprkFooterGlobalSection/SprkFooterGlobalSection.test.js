@@ -26,8 +26,13 @@ describe('SprkFooterGlobalSection:', () => {
       ],
     };
 
-    const wrapper = mount(<SprkFooterGlobalSection globalItems={globalItems} />);
-    expect(wrapper.find('div.sprk-o-Stack__item.sprk-o-Stack.sprk-o-Stack--medium').length).toBe(2);
+    const wrapper = mount(
+      <SprkFooterGlobalSection globalItems={globalItems} />,
+    );
+    expect(
+      wrapper.find('div.sprk-o-Stack__item.sprk-o-Stack.sprk-o-Stack--medium')
+        .length,
+    ).toBe(2);
   });
 
   it('should render a SprkIcon if mediaType is SprkIcon', () => {
@@ -48,7 +53,9 @@ describe('SprkFooterGlobalSection:', () => {
       ],
     };
 
-    const wrapper = mount(<SprkFooterGlobalSection globalItems={globalItems} />);
+    const wrapper = mount(
+      <SprkFooterGlobalSection globalItems={globalItems} />,
+    );
     expect(wrapper.find(SprkIcon).length).toBe(1);
   });
 
@@ -67,7 +74,8 @@ describe('SprkFooterGlobalSection:', () => {
           description: 'Lorem ipsum dolor sit amet, consectetur.',
           svg: (
             <svg
-              width="398px" height="109.812px"
+              width="398px"
+              height="109.812px"
               viewBox="0 0 303 274"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -111,7 +119,9 @@ describe('SprkFooterGlobalSection:', () => {
       ],
     };
 
-    const wrapper = mount(<SprkFooterGlobalSection globalItems={globalItems} />);
+    const wrapper = mount(
+      <SprkFooterGlobalSection globalItems={globalItems} />,
+    );
     expect(wrapper.find('svg').length).toBe(1);
   });
 
@@ -135,7 +145,9 @@ describe('SprkFooterGlobalSection:', () => {
       ],
     };
 
-    const wrapper = mount(<SprkFooterGlobalSection globalItems={globalItems} />);
+    const wrapper = mount(
+      <SprkFooterGlobalSection globalItems={globalItems} />,
+    );
     expect(
       wrapper
         .find('[data-analytics="test-link"]')
@@ -164,7 +176,9 @@ describe('SprkFooterGlobalSection:', () => {
       ],
     };
 
-    const wrapper = mount(<SprkFooterGlobalSection globalItems={globalItems} />);
+    const wrapper = mount(
+      <SprkFooterGlobalSection globalItems={globalItems} />,
+    );
     expect(
       wrapper
         .find('[data-analytics="test-link"]')

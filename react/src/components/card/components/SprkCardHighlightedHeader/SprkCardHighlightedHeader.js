@@ -6,7 +6,7 @@ const SprkCardHighlightedHeader = (props) => {
   const { description, title, bodyText } = highlightedHeaderConfig;
 
   return (
-    <React.Fragment>
+    <>
       <div
         className="
           sprk-o-Stack__item
@@ -44,7 +44,7 @@ const SprkCardHighlightedHeader = (props) => {
       >
         <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">{bodyText}</p>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

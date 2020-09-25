@@ -8,7 +8,7 @@ class SprkMastheadBigNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      links: props.links.map(link => ({ id: uniqueId(), ...link })),
+      links: props.links.map((link) => ({ id: uniqueId(), ...link })),
     };
   }
 

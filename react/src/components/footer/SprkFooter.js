@@ -12,16 +12,16 @@ class SprkFooter extends Component {
     super(props);
     const { linkColumns, additionalIcons, paragraphs } = props;
     this.state = {
-      linkColumnsHasIds: linkColumns.map(item => ({
+      linkColumnsHasIds: linkColumns.map((item) => ({
         heading: item.heading,
         id: uniqueId(),
-        links: item.links.map(link => ({ id: uniqueId(), ...link })),
+        links: item.links.map((link) => ({ id: uniqueId(), ...link })),
       })),
-      additionalIconsHasIds: additionalIcons.map(icon => ({
+      additionalIconsHasIds: additionalIcons.map((icon) => ({
         id: uniqueId(),
         ...icon,
       })),
-      paragraphsHasIds: paragraphs.map(p => ({ id: uniqueId(), ...p })),
+      paragraphsHasIds: paragraphs.map((p) => ({ id: uniqueId(), ...p })),
     };
   }
 
@@ -74,8 +74,8 @@ class SprkFooter extends Component {
                   sprk-o-Stack--medium
                   sprk-o-Stack--split@m"
               >
-                {linkColumnsHasIds.length > 0
-                  && linkColumnsHasIds.map(column => (
+                {linkColumnsHasIds.length > 0 &&
+                  linkColumnsHasIds.map((column) => (
                     <div
                       key={column.id}
                       className="sprk-o-Stack__item
@@ -104,7 +104,9 @@ class SprkFooter extends Component {
                             <li key={id} className="sprk-o-Stack__item">
                               <TagName
                                 className="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light"
-                                href={TagName === 'a' ? href || '#nogo' : undefined}
+                                href={
+                                  TagName === 'a' ? href || '#nogo' : undefined
+                                }
                                 data-analytics={analyticsString}
                                 {...rest}
                               >
@@ -137,8 +139,8 @@ class SprkFooter extends Component {
               <SprkFooterAwards awards={awards} />
             )}
 
-            {paragraphs.length > 0
-              && paragraphsHasIds.map(p => (
+            {paragraphs.length > 0 &&
+              paragraphsHasIds.map((p) => (
                 <p
                   key={p.id}
                   className="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text"
@@ -177,7 +179,9 @@ class SprkFooter extends Component {
                             addClasses,
                           )}
                         />
-                        <span className="sprk-u-ScreenReaderText">{screenReaderText}</span>
+                        <span className="sprk-u-ScreenReaderText">
+                          {screenReaderText}
+                        </span>
                       </TagName>
                     </li>
                   );
@@ -261,7 +265,7 @@ SprkFooter.propTypes = {
         PropTypes.shape({
           /**
            * The link `href`.
-          */
+           */
           href: PropTypes.string,
           /**
            * The link text.
@@ -329,9 +333,9 @@ SprkFooter.propTypes = {
          * classes to be added to the award image.
          */
         addClasses: PropTypes.string,
-       /**
-        * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
-        */
+        /**
+         * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+         */
         analyticsString: PropTypes.string,
       }),
     ),

@@ -12,7 +12,7 @@ class SprkMastheadSelector extends Component {
     this.state = {
       isOpen: false,
       triggerText: props.defaultTriggerText,
-      choiceItems: props.choices.items.map(item => ({
+      choiceItems: props.choices.items.map((item) => ({
         id: uniqueId(),
         ...item,
       })),
@@ -236,7 +236,7 @@ SprkMastheadSelector.propTypes = {
          * The `href` value assigned the logo's link.
          */
         href: PropTypes.string,
-        /** The text for the masthead selector item.*/
+        /** The text for the masthead selector item. */
         text: PropTypes.string,
       }),
     ).isRequired,

@@ -37,10 +37,10 @@ const SprkTable = (props) => {
       <div className={wrapperClassNames} data-id={idString}>
         <table className={tableClassNames} {...other}>
           <thead className="sprk-b-Table__head">
-            {columns.length > 0
-              && columns.map(row => (
+            {columns.length > 0 &&
+              columns.map((row) => (
                 <tr key={uniqueId('row_')}>
-                  {row.map(col => (
+                  {row.map((col) => (
                     <th
                       key={uniqueId('th')}
                       rowSpan={col.rowspan}
@@ -55,9 +55,9 @@ const SprkTable = (props) => {
 
           {rows.length > 0 && (
             <tbody>
-              {rows.map(row => (
+              {rows.map((row) => (
                 <tr key={uniqueId('row_')}>
-                  {row.map(item => (
+                  {row.map((item) => (
                     <td key={uniqueId('td_')}>{item}</td>
                   ))}
                 </tr>
@@ -76,7 +76,7 @@ const SprkTable = (props) => {
             {columns.length > 0 && (
               <tr>
                 <th className="sprk-b-Table__empty-heading" />
-                {columns.map(col => (
+                {columns.map((col) => (
                   <th key={uniqueId('th_')}>{col.header}</th>
                 ))}
               </tr>
@@ -85,11 +85,11 @@ const SprkTable = (props) => {
 
           {rows.length > 0 && (
             <tbody>
-              {rows.map(row => (
+              {rows.map((row) => (
                 <tr key={uniqueId('row_')}>
                   <th>{row.rowHeading}</th>
-                  {columns.length > 0
-                    && columns.map(col => (
+                  {columns.length > 0 &&
+                    columns.map((col) => (
                       <td key={uniqueId('td_')}>{row[col.name]}</td>
                     ))}
                 </tr>
@@ -106,11 +106,11 @@ const SprkTable = (props) => {
         <table className={tableClassNames} {...other}>
           {rows.length > 0 && (
             <tbody>
-              {rows.map(row => (
+              {rows.map((row) => (
                 <tr key={uniqueId('row_')}>
                   <th>{row.rowHeading}</th>
-                  {columns.length > 0
-                    && columns.map(col => (
+                  {columns.length > 0 &&
+                    columns.map((col) => (
                       <td key={uniqueId('td_')}>{row[col.name]}</td>
                     ))}
                   {row.button && <td>{row.button}</td>}
@@ -138,7 +138,7 @@ const SprkTable = (props) => {
         <thead className="sprk-b-Table__head">
           {columns.length > 0 && (
             <tr>
-              {columns.map(col => (
+              {columns.map((col) => (
                 <th key={uniqueId('th_')}>{col.header}</th>
               ))}
             </tr>
@@ -147,10 +147,10 @@ const SprkTable = (props) => {
 
         {rows.length > 0 && (
           <tbody>
-            {rows.map(row => (
+            {rows.map((row) => (
               <tr key={uniqueId('row_')}>
-                {columns.length > 0
-                  && columns.map(col => (
+                {columns.length > 0 &&
+                  columns.map((col) => (
                     <td key={uniqueId('td_')}>{row[col.name]}</td>
                   ))}
               </tr>

@@ -8,7 +8,10 @@ class SprkFooterConnectIcons extends Component {
     super(props);
 
     this.state = {
-      connectIconsHasIds: props.connectIcons.icons.map(icon => ({ id: uniqueId(), ...icon })),
+      connectIconsHasIds: props.connectIcons.icons.map((icon) => ({
+        id: uniqueId(),
+        ...icon,
+      })),
     };
   }
 
@@ -17,7 +20,9 @@ class SprkFooterConnectIcons extends Component {
     const { connectIconsHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
-        <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">{connectIcons.heading}</h3>
+        <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+          {connectIcons.heading}
+        </h3>
 
         <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@m">
           <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">

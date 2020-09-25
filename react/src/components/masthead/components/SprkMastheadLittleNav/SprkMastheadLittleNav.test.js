@@ -35,7 +35,9 @@ describe('SprkMastheadLittleNav:', () => {
 
   it('should assign data-id when idString has a value', () => {
     const links = [{ text: 'Item 1' }];
-    const wrapper = mount(<SprkMastheadLittleNav links={links} idString="321" />);
+    const wrapper = mount(
+      <SprkMastheadLittleNav links={links} idString="321" />,
+    );
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
   });
 
@@ -73,10 +75,7 @@ describe('SprkMastheadLittleNav:', () => {
       />,
     );
     expect(
-      wrapper
-        .find('.sprk-c-Masthead__link')
-        .instance()
-        .getAttribute('href'),
+      wrapper.find('.sprk-c-Masthead__link').instance().getAttribute('href'),
     ).toBe('https://www.google.com');
   });
 
@@ -85,10 +84,7 @@ describe('SprkMastheadLittleNav:', () => {
       <SprkMastheadLittleNav links={[{ text: 'Item 1', element: 'span' }]} />,
     );
     expect(
-      wrapper
-        .find('.sprk-c-Masthead__link')
-        .instance()
-        .getAttribute('href'),
+      wrapper.find('.sprk-c-Masthead__link').instance().getAttribute('href'),
     ).toBe(null);
   });
 
@@ -97,10 +93,7 @@ describe('SprkMastheadLittleNav:', () => {
       <SprkMastheadLittleNav links={[{ text: 'Item 1', element: 'a' }]} />,
     );
     expect(
-      wrapper
-        .find('.sprk-c-Masthead__link')
-        .instance()
-        .getAttribute('href'),
+      wrapper.find('.sprk-c-Masthead__link').instance().getAttribute('href'),
     ).toBe('#nogo');
   });
 
