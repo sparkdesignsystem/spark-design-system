@@ -125,12 +125,15 @@ import {
   The Orbit palette is inspired by the colors seen from a rocket as it enters the edge of space.
 </p>
 <p class="sprk-u-mbl sprk-b-TypeBodyTwo sprk-u-Measure">
-  We've curated this palette with color psychology and user testing in mind. We've designed it to be modern, human-centered, and <a href="/using-spark/foundations/color-accessibility">WCAG AA accessible</a>.
+  We've curated this palette with color psychology and user testing in mind. We've designed it to be modern, human-centered, and <a href="/using-spark/foundations/color-accessibility">WCAG 2.1 (Level AA) accessible</a>.
 </p>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
 <h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">How to Apply Color</h2>
 <p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
-  Proportions are important when applying color. Create a consistent balance by using the right color at the right amounts.
+  When observing the amounts of colors used in a project, it should look similar to the color bar below.
+</p>
+<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+  A well balanced color proportion leans towards primarily white backgrounds with black text, followed by intentionally placed interaction and brand colors.
 </p>
 <img
   srcset={howToApplyColorProportionallySet}
@@ -342,7 +345,7 @@ import {
   Use for text, borders, and system icons.
 </p>
 <p class="sprk-b-TypeBodyTwo sprk-u-mbm sprk-u-Measure">
-  Text must use these shades of gray, and cannot use other colors.
+  Most text should be black, with some additional shades of dark gray for content hierarchy. Follow <a href="/using-spark/foundations/color-accessibility">contrast accessibility standards</a> when considering anything but black text on white backgrounds.
 </p>
 <SprkStack splitAt="small" itemSpacing="huge" additionalClasses="sprk-o-Stack--end-column@s sprk-u-mbl">
   <SprkStackItem additionalClasses="sprk-u-mbh sprk-u-mtl">
@@ -402,7 +405,7 @@ import {
       </SprkStackItem>
       <SprkStackItem>
         <p>
-          Use shades of grey to create additional content hierarchy.
+          Most text should be black, with some additional darker shades of gray for content hierarchy.
         </p>
       </SprkStackItem>
     </SprkStack>
@@ -435,7 +438,7 @@ import {
       </SprkStackItem>
       <SprkStackItem>
         <p>
-          Only use shades of gray for text. Don't use shades of red, purple or semantic colors.
+          Don't use any other colors for text like shades of red, purple or semantic colors.
         </p>
       </SprkStackItem>
     </SprkStack>
@@ -535,7 +538,7 @@ import {
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
 <h3>Floods of Color</h3>
 <p>
-  Most content should have a white background. To create other sections of focus (for example for a stepper or footer), use only these dark and light colors.
+  Most content should have a white background. To create other sections of focus (for example for a <a href="/using-spark/components/stepper">Stepper</a> or <a href="/using-spark/components/footer">Footer</a>), use only these dark and light colors.
 </p>
 <img
   srcset={stepperExampleSet}
