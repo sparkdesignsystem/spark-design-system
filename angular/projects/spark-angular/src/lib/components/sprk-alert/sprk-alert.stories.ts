@@ -30,7 +30,7 @@ export const info = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-alert
-      alertType="info"
+      variant="info"
       idString="alert-info-1"
       analyticsString="test"
     >
@@ -49,7 +49,7 @@ export const success = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-alert
-      alertType="success"
+      variant="success"
       idString="alert-success-1"
       analyticsString="object.action.event"
     >
@@ -68,7 +68,7 @@ export const fail = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-alert
-      alertType="fail"
+      variant="fail"
       idString="alert-fail-1"
       analyticsString="object.action.event"
     >
@@ -89,7 +89,7 @@ export const noDismissButton = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-alert
-      alertType="success"
+      variant="success"
       [dismissible]="false"
       idString="alert-success-2"
       analyticsString="object.action.event"

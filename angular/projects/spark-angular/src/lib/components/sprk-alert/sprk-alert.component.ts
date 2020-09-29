@@ -39,10 +39,17 @@ import { Component, Input } from '@angular/core';
 export class SprkAlertComponent {
   /**
    * The type of Alert variant to render.
-   * 	Can be `info`, `fail`, or `success`.
+   * Can be `info`, `fail`, or `success`.
    */
   @Input()
-  alertType: string;
+  variant: 'success' | 'fail' | 'info';
+  /**
+   * Deprecated - Use `variant` instead.
+   * The type of Alert variant to render.
+   * Can be `info`, `fail`, or `success`.
+   */
+  @Input()
+  alertType: 'success' | 'fail' | 'info';
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
@@ -90,9 +97,10 @@ export class SprkAlertComponent {
    * @ignore
    */
   getClassesAlertContainer(): string {
+    const variantToUse = this.variant || this.alertType;
     const alertClassArray: string[] = ['sprk-c-Alert'];
 
-    switch (this.alertType) {
+    switch (variantToUse) {
       case 'success':
         alertClassArray.push('sprk-c-Alert--success');
         this.icon = 'check-mark-filled';
@@ -120,7 +128,7 @@ export class SprkAlertComponent {
 
   /**
    * When the dismiss button is clicked
-   * this method sets the visable state to `false`
+   * this method sets the visible state to `false`
    * and hides the Alert component.
    */
   alertDismiss(event): void {
