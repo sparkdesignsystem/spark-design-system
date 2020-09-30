@@ -4,7 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
   selector: 'sprk-alert',
   template: `
     <div
-      *ngIf="visible"
+      *ngIf="isVisible"
       [ngClass]="getClassesAlertContainer()"
       role="alert"
       [attr.data-analytics]="analyticsString"
@@ -12,7 +12,7 @@ import { Component, Input, OnInit } from '@angular/core';
     >
       <div class="sprk-c-Alert__content">
         <sprk-icon
-          iconType="{{ icon }}"
+          [iconName]="getIconName()"
           additionalClasses="sprk-c-Alert__icon sprk-c-Icon--xl sprk-c-Icon--filled sprk-c-Icon--filled-current-color"
           aria-hidden="true"
         ></sprk-icon>
@@ -28,7 +28,7 @@ import { Component, Input, OnInit } from '@angular/core';
         (click)="alertDismiss($event)"
       >
         <sprk-icon
-          iconType="close"
+          iconName="{{ dismissIconName }}"
           additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           aria-hidden="true"
         ></sprk-icon>
@@ -104,15 +104,20 @@ export class SprkAlertComponent implements OnInit {
    */
   @Input()
   iconName: string;
-
   /**
-   * @ignore
+   * Determines what dismiss icon is rendered.
+   * Expects the value to match the exact name
+   * of the icon found in the docs.
+   * (i.e. `chevron-down`, instead of `chevron down`).
    */
-  public icon: string;
+  @Input()
+  dismissIconName: string = 'close';
   /**
-   * @ignore
+   * If `true`, the Alert will be shown.
+   * If `false`, the Alert will not be shown.
    */
-  public visible = true;
+  @Input()
+  isVisible: boolean = true;
 
   /**
    * @ignore
@@ -120,24 +125,13 @@ export class SprkAlertComponent implements OnInit {
   getClassesAlertContainer(): string {
     // TODO: Remove `alertType` and update variantToUse to `variant`.
     const variantToUse = this.variant || this.alertType;
+    const variantClasses = {
+      success: 'sprk-c-Alert--success',
+      info: 'sprk-c-Alert--info',
+      fail: 'sprk-c-Alert--fail',
+    };
     const alertClassArray: string[] = ['sprk-c-Alert'];
-
-    switch (variantToUse) {
-      case 'success':
-        alertClassArray.push('sprk-c-Alert--success');
-        this.icon = 'check-mark-filled';
-        break;
-      case 'info':
-        alertClassArray.push('sprk-c-Alert--info');
-        this.icon = 'bell-filled';
-        break;
-      case 'fail':
-        alertClassArray.push('sprk-c-Alert--fail');
-        this.icon = 'exclamation-filled';
-        break;
-      default:
-        break;
-    }
+    alertClassArray.push(variantClasses[variantToUse]);
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
@@ -149,12 +143,28 @@ export class SprkAlertComponent implements OnInit {
   }
 
   /**
+   * @ignore
+   */
+  getIconName(): string {
+    const variantToUse = this.variant || this.alertType;
+    const variantIcons = {
+      success: 'check-mark-filled',
+      info: 'bell-filled',
+      fail: 'exclamation-filled',
+    };
+    const icon =
+      this.iconName !== undefined ? this.iconName : variantIcons[variantToUse];
+
+    return icon;
+  }
+
+  /**
    * When the dismiss button is clicked
-   * this method sets the visible state to `false`
+   * this method sets `isVisible` to `false`
    * and hides the Alert component.
    */
   alertDismiss(event): void {
-    this.visible = false;
+    this.isVisible = false;
   }
 
   // TODO: Remove when `dismissible` is deprecated.
