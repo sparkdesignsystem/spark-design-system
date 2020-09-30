@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sprk-alert',
@@ -21,7 +21,7 @@ import { Component, Input } from '@angular/core';
       </div>
 
       <button
-        *ngIf="dismissible !== false"
+        *ngIf="isDismissible !== false"
         class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss"
         type="button"
         title="Dismiss"
@@ -36,7 +36,7 @@ import { Component, Input } from '@angular/core';
     </div>
   `,
 })
-export class SprkAlertComponent {
+export class SprkAlertComponent implements OnInit {
   /**
    * The type of Alert variant to render.
    * Can be `info`, `fail`, or `success`.
@@ -48,8 +48,9 @@ export class SprkAlertComponent {
    * The type of Alert variant to render.
    * Can be `info`, `fail`, or `success`.
    */
+  // TODO: Remove `alertType` and update variant default to be info.
   @Input()
-  alertType: 'success' | 'fail' | 'info';
+  alertType: 'success' | 'fail' | 'info' = 'info';
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
@@ -82,7 +83,27 @@ export class SprkAlertComponent {
    * the Alert will be dismissible.
    */
   @Input()
+  isDismissible: boolean;
+  /**
+   * Deprecated - Use `isDismissible` instead.
+   * If `false`, the dismiss button will not be rendered and
+   * the Alert will not dismissible.
+   * If `true`, the dismiss button will be rendered and
+   * the Alert will be dismissible.
+   */
+  @Input()
   dismissible: boolean;
+  /**
+   * Determines which icon is rendered.
+   * Expects the value to match the exact name
+   * of the icon found in the docs.
+   * (i.e. `chevron-down`, instead of `chevron down`).
+   * A Success Alert will use `check-mark-filled` as a default.
+   * An Info Alert will use `bell-filled` as a default.
+   * A Fail Alert will use `exclamation-filled` as a default.
+   */
+  @Input()
+  iconName: string;
 
   /**
    * @ignore
@@ -97,6 +118,7 @@ export class SprkAlertComponent {
    * @ignore
    */
   getClassesAlertContainer(): string {
+    // TODO: Remove `alertType` and update variantToUse to `variant`.
     const variantToUse = this.variant || this.alertType;
     const alertClassArray: string[] = ['sprk-c-Alert'];
 
@@ -133,5 +155,12 @@ export class SprkAlertComponent {
    */
   alertDismiss(event): void {
     this.visible = false;
+  }
+
+  // TODO: Remove when `dismissible` is deprecated.
+  ngOnInit(): void {
+    if (this.isDismissible === undefined && this.dismissible !== undefined) {
+      this.isDismissible = this.dismissible;
+    }
   }
 }

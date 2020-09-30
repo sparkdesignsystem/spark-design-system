@@ -90,7 +90,7 @@ export const noDismissButton = () => ({
   template: `
     <sprk-alert
       variant="success"
-      [dismissible]="false"
+      [isDismissible]="false"
       idString="alert-success-2"
       analyticsString="object.action.event"
     >
