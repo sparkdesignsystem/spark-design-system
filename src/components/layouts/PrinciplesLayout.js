@@ -7,4 +7,8 @@ function PrinciplesLayout({ children, location }) {
   );
 }
 
+PrinciplesLayout.propTypes = {
+  children: PropTypes.node,
+};
+
 export default PrinciplesLayout;
