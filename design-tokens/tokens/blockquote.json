@@ -1,0 +1,24 @@
+{
+  "blockquote": {
+    "source-prefix": {
+      "comment": "Before pseudo-element on the Blockquote component.",
+      "value": "-",
+      "type": "settings"
+    },
+    "margin": {
+      "comment": "Value for the margin property on Blockquote component.",
+      "value": "0",
+      "type": "settings"
+    },
+    "quote-margin": {
+      "comment": "Value for the margin property on the quote in the Blockquote component.",
+      "value": "0",
+      "type": "settings"
+    },
+    "quote-last-margin": {
+      "comment": "Value for the margin property on the last quote in the Blockquote component.",
+      "value": "0",
+      "type": "settings"
+    }
+  }
+}
