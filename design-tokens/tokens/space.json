@@ -1,0 +1,29 @@
+{
+  "space": {
+    "inset-xs": {
+      "comment": "Value for the extra small inset space.",
+      "value": "4px 4px 4px 4px",
+      "type": "settings"
+    },
+    "inset-s": {
+      "comment": "Value for the small inset space.",
+      "value": "8px 8px 8px 8px",
+      "type": "settings"
+    },
+    "inset-m": {
+      "comment": "Value for the medium inset space.",
+      "value": "16px 16px 16px 16px",
+      "type": "settings"
+    },
+    "inset-l": {
+      "comment": "Value for the large inset space.",
+      "value": "32px 32px 32px 32px",
+      "type": "settings"
+    },
+    "inset-xl": {
+      "comment": "Value for the extra large inset space.",
+      "value": "64px 64px 64px 64px",
+      "type": "settings"
+    }
+  }
+}
