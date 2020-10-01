@@ -1,0 +1,147 @@
+{
+  "colors": {
+    "red": {
+      "comment": "Red for key branded moments throughout the product as our primary brand color.",
+      "value": "rgb(200, 16, 46)",
+      "group": "primary"
+    },
+    "deep-red": {
+      "comment": "Darkest red for key branded moments throughout the product.",
+      "value": "rgb(118, 35, 47)",
+      "group": "primary"
+    },
+    "mid-red": {
+      "comment": "Mid red for key branded moments throughout the product.",
+      "value": "rgb(157, 34, 53)",
+      "group": "primary"
+    },
+    "purple": {
+      "comment": "Main purple for secondary actions and brand elements.",
+      "value": "rgb(96, 58, 161)",
+      "group": "secondary"
+    },
+    "purple-dark": {
+      "comment": "Dark purple for interactive elements. Can also be used for limited floods of color.",
+      "value": "rgb(60, 49, 116)",
+      "group": "secondary"
+    },
+    "purple-deep": {
+      "comment": "Deep purple for interactive elements. Can also be used for limited floods of color.",
+      "value": "rgb(46, 17, 102)",
+      "group": "secondary"
+    },
+    "purple-light": {
+      "comment": "Light purple for interactive elements.",
+      "value": "rgb(146, 101, 211)",
+      "group": "secondary"
+    },
+    "purple-lightest": {
+      "comment": "Lightest purple for interactive elements. Can also be used for limited floods of color.",
+      "value": "rgb(231, 226, 242)",
+      "group": "secondary"
+    },
+    "green": {
+      "comment": "Use to communicate a positive status or message.",
+      "value": "rgb(41, 133, 64)",
+      "group": "semantic"
+    },
+    "blue": {
+      "comment": "Use to communicate an informative status or message.",
+      "value": "rgb(28, 110, 242)",
+      "group": "semantic"
+    },
+    "pink": {
+      "comment": "Use to communicate an error status or message.",
+      "value": "rgb(229, 1, 88)",
+      "group": "semantic"
+    },
+    "yellow": {
+      "comment": "Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this color.",
+      "value": "rgb(237, 163, 2)",
+      "group": "semantic"
+    },
+    "white": {
+      "comment": "White for floods of color and accents, like backgrounds and cards.",
+      "value": "rgb(255, 255, 255)",
+      "group": "neutral"
+    },
+    "black": {
+      "comment": "Black for main text color, specifically in headline and body copy.",
+      "value": "rgb(28, 27, 26)",
+      "group": "neutral"
+    },
+    "black-tint": {
+      "90": {
+        "comment": "Black at 90%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(50, 49, 48)",
+        "group": "neutral"
+      },
+      "80": {
+        "comment": "Black at 80%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(73, 73, 72)",
+        "group": "neutral"
+      },
+      "70": {
+        "comment": "Black at 70%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(96, 95, 94)",
+        "group": "neutral"
+      },
+      "60": {
+        "comment": "Black at 60%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(119, 118, 118)",
+        "group": "neutral"
+      },
+      "50": {
+        "comment": "Black at 50%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(141, 141, 140)",
+        "group": "neutral"
+      },
+      "40": {
+        "comment": "Black at 40%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(164, 164, 163)",
+        "group": "neutral"
+      },
+      "30": {
+        "comment": "Black at 30%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(186, 186, 186)",
+        "group": "neutral"
+      },
+      "20": {
+        "comment": "Black at 20%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(210, 209, 209)",
+        "group": "neutral"
+      },
+      "10": {
+        "comment": "Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(232, 232, 232)",
+        "group": "neutral"
+      }
+    },
+    "gray": {
+      "comment": "Lightest gray. Use in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(247, 247, 247)",
+      "group": "neutral"
+    },
+    "purple-navy": {
+      "comment": "Color value for Purple Navy.",
+      "value": "rgb(28, 1, 82)",
+      "group": "charts-graphs"
+    },
+    "lavender": {
+      "comment": "Color value for Lavender.",
+      "value": "rgb(190, 132, 247)",
+      "group": "charts-graphs"
+    },
+    "wisteria": {
+      "comment": "Color value for Wisteria.",
+      "value": "rgb(222, 177, 253)",
+      "group": "charts-graphs"
+    },
+    "magnolia": {
+      "comment": "Color value for Magnolia.",
+      "value": "rgb(240, 218, 255)",
+      "group": "charts-graphs"
+    }
+  }
+}
+
