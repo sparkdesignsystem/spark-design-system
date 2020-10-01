@@ -24,6 +24,31 @@
       "comment": "Value for the extra large inset space.",
       "value": "64px 64px 64px 64px",
       "type": "settings"
+    },
+    "xs": {
+      "comment": "Value for the extra small space setting.",
+      "value": "4px",
+      "type": "settings"
+    },
+    "s": {
+      "comment": "Value for the small space setting.",
+      "value": "8px",
+      "type": "settings"
+    },
+    "m": {
+      "comment": "Value for the medium space setting.",
+      "value": "16px",
+      "type": "settings"
+    },
+    "l": {
+      "comment": "Value for the large space setting.",
+      "value": "32px",
+      "type": "settings"
+    },
+    "xl": {
+      "comment": "Value for the extra large space setting.",
+      "value": "64px",
+      "type": "settings"
     }
   }
 }
