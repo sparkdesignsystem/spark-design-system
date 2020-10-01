@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'sprk-alert',
@@ -118,6 +118,12 @@ export class SprkAlertComponent implements OnInit {
    */
   @Input()
   isVisible: boolean = true;
+  /**
+   * Accepts a function to run when the
+   * Alert is dismissed.
+   */
+  @Output()
+  dismissEvent = new EventEmitter<any>();
 
   /**
    * @ignore
@@ -165,6 +171,7 @@ export class SprkAlertComponent implements OnInit {
    */
   alertDismiss(event): void {
     this.isVisible = false;
+    this.dismissEvent.emit();
   }
 
   // TODO: Remove when `dismissible` is deprecated.
