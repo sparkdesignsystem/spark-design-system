@@ -1,9 +1,7 @@
 import React from 'react';
 
-function A(props) {
-  return (
+const A = props => (
     <a className="sprk-b-Link" {...props}/>
   );
-}
 
 export default A;
