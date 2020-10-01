@@ -1,0 +1,9 @@
+{
+  "settings": {
+    "selection-bg-color": {
+      "comment": "Background color of any text when selected.",
+      "value": "{colors.purple-lightest.value}",
+      "type": "settings"
+    }
+  }
+}

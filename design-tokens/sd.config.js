@@ -1,5 +1,5 @@
 module.exports = {
-  source: ['*.json'],
+  source: ['./tokens/**/*.json'],
   platforms: {
     web: {
       transformGroup: 'scss',
@@ -9,10 +9,30 @@ module.exports = {
         {
           format: 'scss/variables',
           destination: '_settings.scss',
+          filter: {
+            type: 'settings',
+          },
         },
         {
-          format: `json`,
-          destination: `settings.json`,
+          format: 'scss/variables',
+          destination: '_colors.scss',
+          filter: {
+            type: 'colors',
+          },
+        },
+        {
+          format: 'json',
+          destination: 'settings.json',
+          filter: {
+            type: 'settings',
+          },
+        },
+        {
+          format: 'json',
+          destination: 'colors.json',
+          filter: {
+            type: 'colors',
+          },
         },
       ],
     },
