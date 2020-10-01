@@ -27,7 +27,7 @@
     },
     "stacked-breakpoint": {
       "comment": "Value for the gutters between body and figure in the Stacked Flag component.",
-      "value": "25em}",
+      "value": "25em",
       "type": "settings"
     }
   }
