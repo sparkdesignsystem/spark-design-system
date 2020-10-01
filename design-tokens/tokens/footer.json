@@ -1,0 +1,49 @@
+{
+  "footer": {
+    "background-color": {
+      "comment": "Background color of the Footer",
+      "value": "{colors.black.value}",
+      "type": "settings"
+    },
+    "text-color": {
+      "comment": "Text color on the Footer.",
+      "value": "{colors.white.value}",
+      "type": "settings"
+    },
+    "link-color": {
+      "comment": "Link color on the Footer.",
+      "value": "{colors.white.value}",
+      "type": "settings"
+    },
+    "link-font-weight": {
+      "comment": "Link font-weight on the Footer.",
+      "value": "normal",
+      "type": "settings"
+    },
+    "icon-color": {
+      "comment": "Icon color on the Footer.",
+      "value": "{colors.white.value}",
+      "type": "settings"
+    },
+    "trigger-color": {
+      "comment": "Toggle trigger color on the Footer.",
+      "value": "{colors.white.value}",
+      "type": "settings"
+    },
+    "trigger-font-weight": {
+      "comment": "Toggle trigger font-weight on the Footer.",
+      "value": "normal",
+      "type": "settings"
+    },
+    "trigger-hover-color": {
+      "comment": "Toggle trigger hover color on the Footer.",
+      "value": "{colors.purple-light.value}",
+      "type": "settings"
+    },
+    "toggle-transition": {
+      "comment": "Toggle transition timing on the Footer.",
+      "value": "0.3s",
+      "type": "settings"
+    }
+  }
+}
