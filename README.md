@@ -1,5 +1,4 @@
-design-system)
-
+[![Build Status](https://travis-ci.org/sparkdesignsystem/spark-design-system.svg?branch=staging)](https://travis-ci.org/sparkdesignsystem/spark-design-system)
 # Spark Design System
 
 Welcome to the Spark Design System, a product of [Quicken Loans](https://github.com/quickenloans).
