@@ -222,7 +222,7 @@ const IndexPage = () => (
       <SprkStackItem>
         <SprkStack itemSpacing={spacingBtwHeadingAndContent}>
           <SprkStackItem>
-            <h2 className="sprk-b-TypeDisplayTwo sprk-u-Color--red">
+            <h2 className="sprk-b-TypeDisplayTwo sprk-u-Color--black">
               Want To Contribute?
             </h2>
           </SprkStackItem>
