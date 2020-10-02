@@ -7,6 +7,6 @@ const setValidTextInput = (inputContainer) => {
   if (errorContainer) {
     errorContainer.innerHTML = '';
   }
-}
+};
 
 export { setValidTextInput as default };
