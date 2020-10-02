@@ -10,12 +10,21 @@ class SprkDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      triggerText: props.defaultTriggerText,
+      triggerText: this.getDefaultOptionText(),
       isOpen: false,
-      choiceItems: props.choices.items.map(item => ({
-        id: uniqueId(),
-        ...item,
-      })),
+      choiceItems: props.choices.items.map((item) =>
+        item.default
+          ? {
+              id: uniqueId(),
+              ...item,
+              isActive: true,
+            }
+          : {
+              id: uniqueId(),
+              ...item,
+              isActive: false,
+            },
+      ),
     };
     this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
@@ -48,6 +57,20 @@ class SprkDropdown extends Component {
     });
   }
 
+  getDefaultOptionText() {
+    const { props } = this;
+    const { choices, defaultTriggerText } = props;
+    const { items } = choices;
+
+    if (props.variant !== 'informational' || items.length === 0) {
+      return defaultTriggerText;
+    }
+
+    const defaultOption = items.find((item) => item.default);
+
+    return defaultOption ? defaultOption.content.title : defaultTriggerText;
+  }
+
   selectChoice(id, text) {
     this.setState({
       triggerText: text,
@@ -57,7 +80,7 @@ class SprkDropdown extends Component {
 
   toggleDropdownOpen(e) {
     e.preventDefault();
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
     }));
   }
@@ -165,7 +188,6 @@ class SprkDropdown extends Component {
                   isActive,
                   text,
                   value,
-                  idString,
                   ...rest
                 } = choice;
                 const TagName = element || 'a';
@@ -282,8 +304,14 @@ SprkDropdown.propTypes = {
         href: PropTypes.string,
         /** The text inside the choice item. */
         text: PropTypes.string,
+        /**
+         * If set to true, current option will be set as default selected option
+         *  */
+        default: PropTypes.bool,
       }),
     ),
+    footer: PropTypes.node,
+    choiceFunction: PropTypes.func,
   }),
   /** The text set as the default of the trigger link. */
   defaultTriggerText: PropTypes.string,
