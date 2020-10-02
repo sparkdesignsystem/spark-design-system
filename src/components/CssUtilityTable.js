@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { SprkTable } from '@sparkdesignsystem/spark-react';
 
@@ -57,5 +58,9 @@ const CssUtilityTable = ({ group }) => (
     }}
   />
 );
+
+CssUtilityTable.propTypes = {
+  group: PropTypes.string
+}
 
 export default CssUtilityTable;
