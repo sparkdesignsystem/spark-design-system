@@ -1,4 +1,4 @@
-function setValidTick(inputContainer) {
+const setValidTick = (inputContainer) => {
   const errorContainer = inputContainer.querySelector('.sprk-b-ErrorContainer');
 
   if (errorContainer) {
