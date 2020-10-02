@@ -5,45 +5,50 @@ import { SprkFooter } from '@sparkdesignsystem/spark-react';
 const linkColumns = [
   {
     heading: 'Support',
-    links: [{
-      href: 'https://github.com/sparkdesignsystem/spark-design-system/blob/staging/CONTRIBUTING.md',
-      text: 'Contributing',
-      element: 'a',
-    },
-    {
-      href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
-      text: 'Release Notes',
-      element: 'a',
-    },
-    {
-      href: 'https://github.com/sparkdesignsystem/spark-design-system',
-      text: 'Github',
-      element: 'a',
-    },
-    {
-      href: 'https://github.com/sparkdesignsystem/spark-design-system/issues/new/choose',
-      text: 'File An Issue',
-      element: 'a',
-    },
+    links: [
+      {
+        href:
+          'https://github.com/sparkdesignsystem/spark-design-system/blob/staging/CONTRIBUTING.md',
+        text: 'Contributing',
+        element: 'a',
+      },
+      {
+        href:
+          'https://github.com/sparkdesignsystem/spark-design-system/releases',
+        text: 'Release Notes',
+        element: 'a',
+      },
+      {
+        href: 'https://github.com/sparkdesignsystem/spark-design-system',
+        text: 'Github',
+        element: 'a',
+      },
+      {
+        href:
+          'https://github.com/sparkdesignsystem/spark-design-system/issues/new/choose',
+        text: 'File An Issue',
+        element: 'a',
+      },
     ],
   },
   {
     heading: 'Available Packages',
-    links: [{
-      href: 'https://www.npmjs.com/package/@sparkdesignsystem/spark-angular',
-      text: 'Angular',
-      element: 'a',
-    },
-    {
-      href: 'https://www.npmjs.com/package/@sparkdesignsystem/spark-react',
-      text: 'React',
-      element: 'a',
-    },
-    {
-      href: 'https://www.npmjs.com/package/@sparkdesignsystem/spark',
-      text: 'HTML',
-      element: 'a',
-    },
+    links: [
+      {
+        href: 'https://www.npmjs.com/package/@sparkdesignsystem/spark-angular',
+        text: 'Angular',
+        element: 'a',
+      },
+      {
+        href: 'https://www.npmjs.com/package/@sparkdesignsystem/spark-react',
+        text: 'React',
+        element: 'a',
+      },
+      {
+        href: 'https://www.npmjs.com/package/@sparkdesignsystem/spark',
+        text: 'HTML',
+        element: 'a',
+      },
     ],
   },
 ];
