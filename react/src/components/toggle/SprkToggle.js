@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SprkIcon from '../icons/SprkIcon';
 import uniqueId from 'lodash/uniqueId';
+import SprkIcon from '../icons/SprkIcon';
 import 'focus-visible';
 
 class SprkToggle extends Component {
@@ -14,12 +14,13 @@ class SprkToggle extends Component {
       isOpen: isDefaultOpen || false,
       height: isDefaultOpen ? 'auto' : 0,
     };
+
     this.toggleOpen = this.toggleOpen.bind(this);
   }
 
   toggleOpen(e) {
     e.preventDefault();
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
       height: !prevState.isOpen ? 'auto' : 0,
     }));
@@ -35,15 +36,15 @@ class SprkToggle extends Component {
       titleAddClasses,
       iconAddClasses,
       toggleIconName,
-      contentId,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
 
-    const containerClasses = classnames(
-      'sprk-c-Toggle',
-      additionalClasses
-    );
+    const contentId = other.contentId
+      ? other.contentId
+      : uniqueId('sprk_toggle_content_');
+
+    const containerClasses = classnames('sprk-c-Toggle', additionalClasses);
 
     const titleClasses = classnames(
       'sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none',
@@ -64,6 +65,7 @@ class SprkToggle extends Component {
           onClick={this.toggleOpen}
           aria-expanded={isOpen ? 'true' : 'false'}
           aria-controls={contentId}
+          type="button"
         >
           <SprkIcon iconName={toggleIconName} additionalClasses={iconClasses} />
           {title}
@@ -71,7 +73,7 @@ class SprkToggle extends Component {
         <AnimateHeight
           duration={300}
           height={height}
-          className='sprk-c-Toggle__content'
+          className="sprk-c-Toggle__content"
           id={contentId}
         >
           <div>{children}</div>
@@ -83,7 +85,6 @@ class SprkToggle extends Component {
 
 SprkToggle.defaultProps = {
   toggleIconName: 'chevron-down-circle',
-  contentId: uniqueId('sprk_toggle_content_'),
 };
 
 SprkToggle.propTypes = {
@@ -105,7 +106,9 @@ SprkToggle.propTypes = {
    * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
   */
   analyticsString: PropTypes.string,
-  /**
+  /** Whether if the toggle is open or not */
+  isDefaultOpen: PropTypes.bool,
+   /**
    * A space-separated string of classes to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,

@@ -38,11 +38,11 @@ class SprkMastheadAccordionItem extends Component {
       leadingIcon,
       subNavLinks,
       text,
-      itemId,
       ...rest
     } = this.props;
     const { isOpen, height, subNavLinks: stateLinks } = this.state;
     const TagName = element;
+    const itemId = rest.itemId ? rest.itemId : uniqueId('sprk_accordion_item_');
     return (
       <li
         className={classNames(
@@ -195,6 +195,8 @@ SprkMastheadAccordionItem.propTypes = {
   isActive: PropTypes.bool,
   /** Will render the element as a button with correct style. */
   isButton: PropTypes.bool,
+  /* The unique item `id` */
+  itemId: PropTypes.string,
   /**
    * The name of the icon to the left of the link text.
    * Will render in compatible components like narrowNav.
@@ -236,7 +238,6 @@ SprkMastheadAccordionItem.defaultProps = {
   isButton: false,
   subNavLinks: [],
   href: '#nogo',
-  itemId: uniqueId('sprk_accordion_item_'),
 };
 
 export default SprkMastheadAccordionItem;

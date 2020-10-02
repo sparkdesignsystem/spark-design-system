@@ -64,7 +64,7 @@ describe('SprkToggle:', () => {
     const wrapper = mount(
       <SprkToggle title="Toggle title">Body text</SprkToggle>,
     );
-    expect(wrapper.find('[aria-controls="sprk_toggle_content_1"]').length).toBe(1);
-    expect(wrapper.find('div#sprk_toggle_content_1').length).toBe(1);
+    expect(wrapper.find('button').prop('aria-controls')).toMatch(/sprk_toggle_content_\d/);
+    expect(wrapper.find('div').at(1).prop('id')).toMatch(/sprk_toggle_content_\d/);
   });
 });
