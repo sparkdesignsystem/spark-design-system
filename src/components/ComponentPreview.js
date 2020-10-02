@@ -3,12 +3,7 @@ import PropTypes from 'prop-types';
 import IframeResizer from 'iframe-resizer-react';
 import DevDocLinks from './DevDocLinks';
 
-class ComponentPreview extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+const ComponentPreview=(props)=>  {
     const {
       componentName,
       hasReact,
@@ -51,7 +46,7 @@ class ComponentPreview extends React.Component {
       </div>
     );
   }
-}
+
 
 ComponentPreview.propTypes = {
   componentName: PropTypes.string,
