@@ -23,7 +23,7 @@ import * as _ from 'lodash';
       [attr.aria-describedby]="content_id"
       [attr.data-id]="idString"
     >
-      <div class="sprk-o-Stack sprk-o-Stack--large">
+      <div class="sprk-o-Stack sprk-o-Stack--large" cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
         <header class="sprk-o-Stack__item sprk-c-Modal__header">
           <h2
             class="sprk-c-Modal__heading sprk-b-TypeDisplayFour"

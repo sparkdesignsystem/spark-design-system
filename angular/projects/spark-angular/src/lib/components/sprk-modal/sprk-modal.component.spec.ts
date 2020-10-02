@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { A11yModule } from '@angular/cdk/a11y';
+
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkModalComponent } from './sprk-modal.component';
 
@@ -11,6 +13,7 @@ describe('SprkModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ A11yModule ],
       declarations: [SprkModalComponent, SprkIconComponent]
     }).compileComponents();
   }));
