@@ -1,4 +1,4 @@
-function setValidTextInput(inputContainer) {
+const setValidTextInput = (inputContainer) => {
   const input = inputContainer.querySelector('input');
   const errorContainer = inputContainer.querySelector('.sprk-b-ErrorContainer');
 
