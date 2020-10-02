@@ -13,106 +13,82 @@ import { usePrincipleSparkData } from '../hooks/use-principle-spark';
 
 const Header = ({ setContext }) => {
   const utilityItems = [
-    (
-      <SprkLink
-        onClick={
-          () => {
-            setContext('installing-spark');
-          }
-        }
-        additionalClasses="sprk-c-Masthead__link"
-        variant="plain"
-        element={Link}
-        to="/installing-spark"
-      >
-        Installing Spark
-      </SprkLink>
-    ),
-    (
-      <SprkLink
-        onClick={
-          () => {
-            setContext('using-spark');
-          }
-        }
-        additionalClasses="sprk-c-Masthead__link"
-        variant="plain"
-        element={Link}
-        to="/using-spark"
-      >
-        Using Spark
-      </SprkLink>
-    ),
-    (
-      <SprkLink
-        onClick={
-          () => {
-            setContext('principles');
-          }
-        }
-        additionalClasses="sprk-c-Masthead__link"
-        variant="plain"
-        element={Link}
-        to="/principles/design-principles"
-      >
-        Principles
-      </SprkLink>
-    ),
-    (
-      <SprkTextInput
-        additionalClasses="docs-header-search--wide sprk-u-mbn"
-        leadingIcon="search"
-        hiddenLabel
-        name="InlineSearch"
-        placeholder="Search"
-      />
-    ),
+    <SprkLink
+      onClick={() => {
+        setContext('installing-spark');
+      }}
+      additionalClasses="sprk-c-Masthead__link"
+      variant="plain"
+      element={Link}
+      to="/installing-spark"
+    >
+      Installing Spark
+    </SprkLink>,
+    <SprkLink
+      onClick={() => {
+        setContext('using-spark');
+      }}
+      additionalClasses="sprk-c-Masthead__link"
+      variant="plain"
+      element={Link}
+      to="/using-spark"
+    >
+      Using Spark
+    </SprkLink>,
+    <SprkLink
+      onClick={() => {
+        setContext('principles');
+      }}
+      additionalClasses="sprk-c-Masthead__link"
+      variant="plain"
+      element={Link}
+      to="/principles/design-principles"
+    >
+      Principles
+    </SprkLink>,
+    <SprkTextInput
+      additionalClasses="docs-header-search--wide sprk-u-mbn"
+      leadingIcon="search"
+      hiddenLabel
+      name="InlineSearch"
+      placeholder="Search"
+    />,
   ];
 
-  const installingSparkPages = useInstallingSparkData().map(page => (
-    {
-      text: page.node.frontmatter.title,
-      to: `/installing-spark/${page.node.parent.name}`,
-      element: Link,
-    }
-  ));
+  const installingSparkPages = useInstallingSparkData().map((page) => ({
+    text: page.node.frontmatter.title,
+    to: `/installing-spark/${page.node.parent.name}`,
+    element: Link,
+  }));
 
-  const usingSparkComponents = useUsingSparkData().components.map(page => (
-    {
-      text: page.node.frontmatter.title,
-      to: `/using-spark/components/${page.node.parent.name}`,
-      element: Link,
-    }
-  ));
+  const usingSparkComponents = useUsingSparkData().components.map((page) => ({
+    text: page.node.frontmatter.title,
+    to: `/using-spark/components/${page.node.parent.name}`,
+    element: Link,
+  }));
 
-  const usingSparkExamples = useUsingSparkData().examples.map(page => (
-    {
-      text: page.node.frontmatter.title,
-      to: `/using-spark/examples/${page.node.parent.name}`,
-      element: Link,
-    }
-  ));
+  const usingSparkExamples = useUsingSparkData().examples.map((page) => ({
+    text: page.node.frontmatter.title,
+    to: `/using-spark/examples/${page.node.parent.name}`,
+    element: Link,
+  }));
 
-  const usingSparkFoundations = useUsingSparkData().foundations.map(page => (
-    {
-      text: page.node.frontmatter.title,
-      to: `/using-spark/foundations/${page.node.parent.name}`,
-      element: Link,
-    }
-  ));
+  const usingSparkFoundations = useUsingSparkData().foundations.map((page) => ({
+    text: page.node.frontmatter.title,
+    to: `/using-spark/foundations/${page.node.parent.name}`,
+    element: Link,
+  }));
 
   const usingSparkPages = usingSparkComponents.concat(
     usingSparkExamples,
     usingSparkFoundations,
   );
 
-  const principlePages = usePrincipleSparkData().map(page => (
-    {
-      text: page.node.frontmatter.title,
-      to: `/principles/${page.node.parent.name}`,
-      element: Link,
-    }
-  ));
+  const principlePages = usePrincipleSparkData().map((page) => ({
+    text: page.node.frontmatter.title,
+    to: `/principles/${page.node.parent.name}`,
+    element: Link,
+  }));
 
   const narrowNavLinks = [
     {
@@ -146,12 +122,16 @@ const Header = ({ setContext }) => {
 
   return (
     <SprkMasthead
-      siteLogo={(
-        <SiteLogo onClick={() => { setContext('homepage'); }} />
-      )}
+      siteLogo={
+        <SiteLogo
+          onClick={() => {
+            setContext('homepage');
+          }}
+        />
+      }
       additionalClasses="docs-masthead"
       utilityContents={utilityItems}
-      navLink={(
+      navLink={
         <SprkTextInput
           additionalClasses="docs-header-search sprk-u-Width-100"
           leadingIcon="search"
@@ -159,7 +139,7 @@ const Header = ({ setContext }) => {
           name="InlineSearch"
           placeholder="Search"
         />
-      )}
+      }
       narrowNavLinks={narrowNavLinks}
     />
   );
