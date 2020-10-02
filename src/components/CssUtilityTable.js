@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { SprkTable } from '@sparkdesignsystem/spark-react';
 
@@ -22,12 +23,10 @@ const CssUtilityTable = ({ group }) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const cssUtilData = data.allSassUtilitiesJson.edges
-        .filter(item => (
-          item.node.group[0] === group
-        ))
-        .map(item => ({
+        .filter((item) => item.node.group[0] === group)
+        .map((item) => ({
           name: item.node.context.name,
           description: item.node.description,
           group: item.node.group[0],
@@ -49,7 +48,7 @@ const CssUtilityTable = ({ group }) => (
             {
               name: 'description',
               header: 'Description',
-            }
+            },
           ]}
           rows={cssUtilData}
         />
@@ -57,5 +56,9 @@ const CssUtilityTable = ({ group }) => (
     }}
   />
 );
+
+CssUtilityTable.propTypes = {
+  group: PropTypes.string,
+};
 
 export default CssUtilityTable;
