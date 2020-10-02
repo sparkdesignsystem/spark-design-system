@@ -1,0 +1,64 @@
+{
+  "icon": {
+    "m": {
+      "comment": "Value for height and width of the Icon component",
+      "value": "16px",
+      "type": "settings"
+    },
+    "l": {
+      "comment": "Value for height and width of the large Icon component..",
+      "value": "24px",
+      "type": "settings"
+    },
+    "xl": {
+      "comment": "Value for height and width of the extra-large Icon component.",
+      "value": "32px",
+      "type": "settings"
+    },
+    "fill-color": {
+      "comment": "Value for the fill property of the Icon component.",
+      "value": "{colors.black.value}",
+      "type": "settings"
+    },
+    "stroke-color": {
+      "comment": "Value for the stroke property of the Icon component.",
+      "value": "{colors.black.value}",
+      "type": "settings"
+    },
+    "stroke-width": {
+      "comment": "Value for the stroke-width property of the Icon component.",
+      "value": "1.25",
+      "type": "settings"
+    },
+    "l-stroke": {
+      "comment": "Value for the stroke property of the large Icon component.",
+      "value": "none",
+      "type": "settings"
+    },
+    "custom-stroke-width-l": {
+      "comment": "Value for the stroke-width property of the large Icon component.",
+      "value": "0",
+      "type": "settings"
+    },
+    "xl-stroke": {
+      "comment": "Value for the stroke property of the extra large Icon component.",
+      "value": "none",
+      "type": "settings"
+    },
+    "custom-stroke-width-xl": {
+      "comment": "Value for the stroke-width property of the extra large Icon component.",
+      "value": "0",
+      "type": "settings"
+    },
+    "filled-fill-color": {
+      "comment": "Value for the fill property of the Filled Icon component.",
+      "value": "{colors.black.value}",
+      "type": "settings"
+    },
+    "filled-stroke-color": {
+      "comment": "Value for the stroke property of the Filled Icon component..",
+      "value": "none",
+      "type": "settings"
+    }
+  }
+}
