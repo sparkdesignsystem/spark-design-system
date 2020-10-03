@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import IframeResizer from 'iframe-resizer-react';
 import DevDocLinks from './DevDocLinks';
 
-const ComponentPreview = (props) => {
-  const {
+const ComponentPreview = ({
     componentName,
     hasReact,
     hasAngular,
@@ -14,7 +13,7 @@ const ComponentPreview = (props) => {
     maxHeight,
     maxWidth,
     allowScrolling,
-  } = props;
+  }) => {
   const iframeURL = `https://html.sparkdesignsystem.com/iframe.html?id=${componentType}-${componentName}`;
 
   return (
