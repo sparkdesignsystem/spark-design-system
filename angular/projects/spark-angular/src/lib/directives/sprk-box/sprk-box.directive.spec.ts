@@ -5,7 +5,7 @@ import { SprkBoxDirective } from './sprk-box.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <div sprkBox></div>
+    <div sprkBox idString="test"></div>
     <div sprkBox spacing="flush"></div>
     <div sprkBox spacing="tiny"></div>
     <div sprkBox spacing="small"></div>
@@ -26,7 +26,7 @@ import { SprkBoxDirective } from './sprk-box.directive';
     <div sprkBox spacing="miscB"></div>
     <div sprkBox spacing="miscC"></div>
     <div sprkBox spacing="miscD"></div>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -57,7 +57,7 @@ describe('Spark Box Directive', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkBoxDirective, TestComponent]
+      declarations: [SprkBoxDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
@@ -95,6 +95,10 @@ describe('Spark Box Directive', () => {
     expect(item0Element.classList.contains('sprk-o-Box')).toBe(true);
   });
 
+  it('should apply correct idString value to data-id', () => {
+    expect(item0Element.getAttribute('data-id') === 'test').toBe(true);
+  });
+
   it('should apply correct spacing classes for flush spacing', () => {
     expect(item1Element.classList.contains('sprk-o-Box--flush')).toBe(true);
   });
@@ -120,43 +124,63 @@ describe('Spark Box Directive', () => {
   });
 
   it('should apply correct spacing classes for inset-short-tiny spacing', () => {
-    expect(item7Element.classList.contains('sprk-o-Box--inset-short-tiny')).toBe(true);
+    expect(
+      item7Element.classList.contains('sprk-o-Box--inset-short-tiny'),
+    ).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-short-small spacing', () => {
-    expect(item8Element.classList.contains('sprk-o-Box--inset-short-small')).toBe(true);
+    expect(
+      item8Element.classList.contains('sprk-o-Box--inset-short-small'),
+    ).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-short-medium spacing', () => {
-    expect(item9Element.classList.contains('sprk-o-Box--inset-short-medium')).toBe(true);
+    expect(
+      item9Element.classList.contains('sprk-o-Box--inset-short-medium'),
+    ).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-short-large spacing', () => {
-    expect(item10Element.classList.contains('sprk-o-Box--inset-short-large')).toBe(true);
+    expect(
+      item10Element.classList.contains('sprk-o-Box--inset-short-large'),
+    ).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-short-huge spacing', () => {
-    expect(item11Element.classList.contains('sprk-o-Box--inset-short-huge')).toBe(true);
+    expect(
+      item11Element.classList.contains('sprk-o-Box--inset-short-huge'),
+    ).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-tall-tiny spacing', () => {
-    expect(item12Element.classList.contains('sprk-o-Box--inset-tall-tiny')).toBe(true);
+    expect(
+      item12Element.classList.contains('sprk-o-Box--inset-tall-tiny'),
+    ).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-tall-small spacing', () => {
-    expect(item13Element.classList.contains('sprk-o-Box--inset-tall-small')).toBe(true);
+    expect(
+      item13Element.classList.contains('sprk-o-Box--inset-tall-small'),
+    ).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-tall-medium spacing', () => {
-    expect(item14Element.classList.contains('sprk-o-Box--inset-tall-medium')).toBe(true);
+    expect(
+      item14Element.classList.contains('sprk-o-Box--inset-tall-medium'),
+    ).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-tall-large spacing', () => {
-    expect(item15Element.classList.contains('sprk-o-Box--inset-tall-large')).toBe(true);
+    expect(
+      item15Element.classList.contains('sprk-o-Box--inset-tall-large'),
+    ).toBe(true);
   });
 
   it('should apply correct spacing classes for inset-tall-huge spacing', () => {
-    expect(item16Element.classList.contains('sprk-o-Box--inset-tall-huge')).toBe(true);
+    expect(
+      item16Element.classList.contains('sprk-o-Box--inset-tall-huge'),
+    ).toBe(true);
   });
 
   it('should apply correct spacing classes for misc-a spacing', () => {

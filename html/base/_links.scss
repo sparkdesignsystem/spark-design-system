@@ -6,7 +6,6 @@
 ////
 /// @group link
 ////
-
 .sprk-b-Link {
   color: $sprk-link-color;
   border-bottom: $sprk-link-border-bottom;
@@ -16,7 +15,6 @@
   transition: $sprk-link-transition;
 
   &:visited {
-    color: $sprk-link-visited-color;
     border-bottom: $sprk-link-visited-border-bottom;
   }
 
@@ -47,6 +45,26 @@
   }
 }
 
+/// Used when a link is on a dark background. There will be an underline on hover.
+.sprk-b-Link--light {
+  color: $sprk-link-light-color;
+  border-bottom: $sprk-link-light-border-bottom;
+  font-weight: $sprk-link-light-font-weight;
+
+  &:visited {
+    border-bottom: $sprk-link-light-visited-border-bottom;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    transition: $sprk-link-transition;
+    color: $sprk-link-light-hover-color;
+    font-weight: $sprk-link-light-hover-font-weight;
+    border-bottom: $sprk-link-light-hover-border-bottom;
+  }
+}
+
 /// Used when a link is next to an icon. There will not be an underline.
 .sprk-b-Link--has-icon {
   border-bottom: $sprk-link-has-icon-border-bottom;
@@ -63,20 +81,40 @@
 
 .sprk-b-Link--has-icon .sprk-c-Icon {
   color: $sprk-link-has-icon-color-icon;
-  stroke: $sprk-link-has-icon-color-icon;
   fill: $sprk-link-has-icon-fill;
+  stroke: $sprk-link-has-icon-stroke;
+}
+
+.sprk-b-Link--has-icon:hover .sprk-c-Icon {
+  color: $sprk-link-has-icon-hover-color-text;
+  fill: $sprk-link-has-icon-hover-fill;
+  stroke: $sprk-link-has-icon-hover-stroke;
 }
 
 /// Disabled links have a muted color and cannot be interacted with.
 /// @name .sprk-b-Link--disabled
-.sprk-b-Link--disabled,
+.sprk-b-Link--disabled {
+  pointer-events: none;
+  color: $sprk-link-disabled-color;
+  border-color: $sprk-link-disabled-border-bottom-color;
+
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: $sprk-link-disabled-hover-border-bottom-color;
+    color: $sprk-link-disabled-hover-color;
+  }
+}
+
+.sprk-b-Link--simple.sprk-b-Link--disabled,
+.sprk-b-Link--light.sprk-b-Link--disabled,
 .sprk-b-Link--disabled .sprk-c-Icon {
   color: $sprk-link-disabled-color;
   stroke: $sprk-link-disabled-color;
-  fill: $sprk-link-has-icon-fill;
+  fill: $sprk-link-disabled-color;
   pointer-events: none;
   border-bottom: $sprk-link-disabled-border-bottom;
-  font-weight: $sprk-link-disabled-font-weight;
 
   &:visited,
   &:hover,

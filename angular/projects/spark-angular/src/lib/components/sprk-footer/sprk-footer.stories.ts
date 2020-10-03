@@ -124,7 +124,7 @@ export const defaultStory = () => ({
           text: 'Buy a home, refinance, or manage your mortgage online with America&#8217;s largest mortgage lender',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.app/rocket_by_ql.svg',
+            'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
           analyticsString: 'link-1',
           imgAlt: 'Rocket Mortgage by Quicken Loans Logo'
         },
@@ -132,7 +132,7 @@ export const defaultStory = () => ({
           text: 'Get a personal loan to consolidate debt, renovate your home and more',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.app/rocket_loans.svg',
+            'https://spark-assets.netlify.app/rocket-loans-white.svg',
           imgAlt: 'Rocket Loans Logo',
           analyticsString: 'link-2'
         },
@@ -140,7 +140,7 @@ export const defaultStory = () => ({
           text: 'Get a real estate agent handpicked for you and search the latest home listings',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.app/rocket_homes.svg',
+            'https://spark-assets.netlify.app/rocket-homes-white.svg',
           imgAlt: 'Rocket Homes Logo',
           analyticsString: 'link-3'
         },
@@ -148,7 +148,7 @@ export const defaultStory = () => ({
           text: 'Access tools and articles that can help you reach your financial goals',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.app/rocket_hq.svg',
+            'https://spark-assets.netlify.app/rocket-hq-white.svg',
           analyticsString: 'link-4',
           imgAlt: 'Rocket HQ Logo'
         }
@@ -157,29 +157,29 @@ export const defaultStory = () => ({
       [socialLinks]="[
         {
           href: '#nogo',
-          icon: 'facebook-two-color',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          icon: 'facebook',
+          iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--filled-current-color',
           analyticsString: 'social-link-1',
           iconScreenReaderText: 'facebook'
         },
         {
           href: '#nogo',
-          icon: 'instagram-two-color',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          icon: 'instagram',
+          iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--filled-current-color',
           analyticsString: 'social-link-2',
           iconScreenReaderText: 'instagram'
         },
         {
           href: '#nogo',
-          icon: 'twitter-two-color',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          icon: 'twitter',
+          iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--filled-current-color',
           analyticsString: 'social-link-3',
           iconScreenReaderText: 'twitter'
         },
         {
           href: '#nogo',
-          icon: 'youtube-two-color',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          icon: 'youtube',
+          iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--filled-current-color',
           analyticsString: 'social-link-4',
           iconScreenReaderText: 'youtube'
         }
@@ -189,21 +189,21 @@ export const defaultStory = () => ({
         {
           href: '#nogo',
           icon: 'townhouse',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--filled-current-color',
           analyticsString: 'link-1',
           iconScreenReaderText: 'townhouse'
         },
         {
           href: '#nogo',
           icon: 'townhouse',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--filled-current-color',
           analyticsString: 'link-2',
           iconScreenReaderText: 'townhouse'
         },
         {
           href: '#nogo',
           icon: 'townhouse',
-          iconCSS: 'sprk-c-Icon--l sprk-c-Icon--stroke-current-color',
+          iconCSS: 'sprk-c-Icon--xl sprk-c-Icon--filled-current-color',
           analyticsString: 'link-3',
           iconScreenReaderText: 'townhouse'
         }

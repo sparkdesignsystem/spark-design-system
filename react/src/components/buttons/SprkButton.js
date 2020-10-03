@@ -24,26 +24,37 @@ const SprkButton = ({
   } else {
     TagName = 'button';
   }
+  let spinnerVariant;
+  if (loading) {
+    if (variant === 'secondary') {
+      spinnerVariant = 'primary';
+    }
+    if (variant === 'tertiary') {
+      spinnerVariant = 'secondary';
+    }
+    if (variant === 'quaternary') {
+      spinnerVariant = 'dark';
+    }
+  }
   return (
     <TagName
       className={classnames(
         'sprk-c-Button',
         { 'sprk-c-Button--secondary': variant === 'secondary' },
         { 'sprk-c-Button--tertiary': variant === 'tertiary' },
+        { 'sprk-c-Button--quaternary': variant === 'quaternary' },
         { 'sprk-is-Disabled': disabled },
         additionalClasses,
       )}
-      role={element !== 'button' ? 'button' : undefined}
+      role={TagName !== 'button' ? 'button' : undefined}
       data-id={idString}
       data-analytics={analyticsString}
       disabled={TagName !== 'a' ? disabled : undefined}
       href={TagName !== 'button' ? href : undefined}
       {...rest}
-      {...loading && { 'aria-label': spinningAriaLabel }}
+      {...(loading && { 'aria-label': spinningAriaLabel })}
     >
-      {(loading &&
-        <SprkSpinner lightness={variant === 'secondary' ? 'dark' : undefined} />)
-        || children}
+      {(loading && <SprkSpinner variant={spinnerVariant} />) || children}
     </TagName>
   );
 };
@@ -78,6 +89,7 @@ SprkButton.propTypes = {
     PropTypes.string,
     PropTypes.node,
     PropTypes.func,
+    PropTypes.elementType,
   ]),
   /**
    * Assigned to the `data-id` attribute serving as a
@@ -95,9 +107,9 @@ SprkButton.propTypes = {
    */
   spinningAriaLabel: PropTypes.string,
   /**
-   *  Determines the coresponding button style.
+   *  Determines the corresponding button style.
    */
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   /**
    * If an href is provided and no element is provided,
    * an anchor tag will be rendered.

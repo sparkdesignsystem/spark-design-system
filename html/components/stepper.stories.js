@@ -293,7 +293,7 @@ export const withDarkBackground = () => {
   }, []);
 
   return `
-  <div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+  <div class="sprk-u-BackgroundColor--purple-dark sprk-o-Box sprk-o-Box--large">
     <ol
       class="sprk-c-Stepper sprk-c-Stepper--has-dark-bg "
       data-sprk-stepper="container"
@@ -464,11 +464,11 @@ export const withCarousel = () => {
   }, []);
 
   return `
-  <div class="sprk-u-BackgroundColor--blue sprk-o-Box sprk-o-Box--large">
+  <div class="sprk-u-BackgroundColor--purple-dark sprk-o-Box sprk-o-Box--large">
     <div class="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--center-column sprk-o-Stack--split-reverse@xl">
       <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xl">
         <div
-          class="sprk-c-Carousel"
+          class="sprk-c-Carousel sprk-c-Carousel--has-dark-bg"
           data-sprk-carousel="stepper-carousel-01"
         >
           <div class="sprk-c-Carousel__controls sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-row sprk-o-Stack--center-column">
@@ -476,7 +476,7 @@ export const withCarousel = () => {
             <button class="sprk-o-Stack__item sprk-c-Carousel__prev">
               <span class="sprk-u-ScreenReaderText">Previous Slide</span>
               <svg
-                class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l"
+                class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl"
                 viewBox="0 0 100 100"
               >
                 <use xlink:href="#chevron-left" />
@@ -507,7 +507,7 @@ export const withCarousel = () => {
             <button class="sprk-o-Stack__item sprk-c-Carousel__next">
               <span class="sprk-u-ScreenReaderText">Next Slide</span>
               <svg
-                class="sprk-c-Icon sprk-c-Icon--stroke-current-color sprk-c-Icon--l"
+                class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl"
                 viewBox="0 0 100 100"
               >
                 <use xlink:href="#chevron-right" />

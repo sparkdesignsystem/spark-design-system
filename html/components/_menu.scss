@@ -3,7 +3,7 @@
 // ==================================================================
 .sprk-c-Menu {
   border: 0;
-  background-color: $sprk-white;
+  background-color: $sprk-menu-icon-bg-color;
   display: inline-block;
   padding-top: 0;
   padding-bottom: 0;
@@ -12,22 +12,27 @@
 }
 
 .sprk-c-Menu__icon {
-  stroke: $sprk-black;
+  stroke: $sprk-menu-icon-stroke;
+  stroke-width: $sprk-menu-icon-stroke-width;
 }
 
 .sprk-c-Menu__line {
   opacity: 1;
-  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  transition: $sprk-menu-icon-transition;
 }
 
 .sprk-c-Menu__line--one {
-  transform-origin: 1rem 1.5rem;
+  transform-origin: $sprk-menu-icon-line-one-transform-origin;
 }
 
 .sprk-c-Menu__line--three {
-  transform-origin: 1rem 2.5rem;
+  transform-origin: $sprk-menu-icon-line-three-transform-origin;
 }
 
+// Styles to turn the menu into
+// an "X" when open.
+// Not configurable because the "X" needs to be
+// exact.
 .sprk-c-Menu__icon--open .sprk-c-Menu__line--one {
   transform: rotate(45deg);
 }

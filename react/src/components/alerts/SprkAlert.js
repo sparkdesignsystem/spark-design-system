@@ -50,7 +50,12 @@ const SprkAlert = (props) => {
         {variant && (
           <SprkIcon
             iconName={icon}
-            additionalClasses="sprk-c-Alert__icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
+            additionalClasses="
+              sprk-c-Alert__icon
+              sprk-c-Icon--xl
+              sprk-c-Icon--filled
+              sprk-c-Icon--filled-current-color
+            "
             aria-hidden="true"
           />
         )}
@@ -67,7 +72,9 @@ const SprkAlert = (props) => {
         >
           <SprkIcon
             iconName={iconNameDismiss}
-            additionalClasses="sprk-c-Icon--stroke-current-color"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color"
             aria-hidden="true"
           />
         </button>
@@ -92,7 +99,8 @@ SprkAlert.propTypes = {
    */
   variant: PropTypes.oneOf(['info', 'success', 'fail']),
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute
+   * serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -103,11 +111,13 @@ SprkAlert.propTypes = {
    */
   isDismissible: PropTypes.bool,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to
+   * add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
@@ -125,10 +135,10 @@ SprkAlert.propTypes = {
 };
 
 SprkAlert.defaultProps = {
-  iconNameFail: 'exclamation',
+  iconNameFail: 'exclamation-filled',
   iconNameDismiss: 'close',
-  iconNameInfo: 'bell',
-  iconNameSuccess: 'check-mark',
+  iconNameInfo: 'bell-filled',
+  iconNameSuccess: 'check-mark-filled',
   isVisible: false,
   isDismissible: true,
 };

@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Promo',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('promo')}
@@ -13,14 +11,22 @@ ${markdownDocumentationLinkBuilder('promo')}
   },
 };
 
-export const defaultStory = () => (`
+export const defaultStory = () => `
   <div
-    class="sprk-c-Promo  sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
+    class="
+      sprk-c-Promo
+      sprk-c-Promo--bordered
+      sprk-o-Stack sprk-o-Stack--split@s
+    "
     data-id="promo-1"
   >
 
     <div
-      class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large"
+      class="
+        sprk-c-Promo__content
+        sprk-o-Stack__item sprk-o-Stack
+        sprk-o-Stack--large
+      "
     >
 
       <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
@@ -45,15 +51,21 @@ export const defaultStory = () => (`
     </div>
 
   </div>
-`);
+`;
 
 defaultStory.story = {
   name: 'Default',
 };
 
-export const flag = () => (`
+export const flag = () => `
   <div
-    class="sprk-c-Promo sprk-c-Promo--flag  sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
+    class="
+      sprk-c-Promo
+      sprk-c-Promo--flag
+      sprk-c-Promo--bordered
+      sprk-o-Stack
+      sprk-o-Stack--split@s
+    "
     data-id="promo-2"
   >
 
@@ -66,7 +78,13 @@ export const flag = () => (`
     </a>
 
     <div
-      class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack__item--three-fourths@s sprk-o-Stack sprk-o-Stack--large"
+      class="
+        sprk-c-Promo__content
+        sprk-o-Stack__item
+        sprk-o-Stack__item--three-fourths@s
+        sprk-o-Stack
+        sprk-o-Stack--large
+      "
     >
       <div class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
         Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse
@@ -76,7 +94,7 @@ export const flag = () => (`
     </div>
 
   </div>
-`);
+`;
 
 flag.story = {
   parameters: {
@@ -84,9 +102,14 @@ flag.story = {
   },
 };
 
-export const withImage = () => (`
+export const withImage = () => `
   <div
-    class="sprk-c-Promo sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
+    class="
+      sprk-c-Promo
+      sprk-c-Promo--bordered
+      sprk-o-Stack
+      sprk-o-Stack--split@s
+    "
     data-id="promo-3"
   >
 
@@ -98,7 +121,13 @@ export const withImage = () => (`
       />
     </a>
 
-    <div class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-o-Stack sprk-o-Stack--large">
+    <div class="
+      sprk-c-Promo__content
+      sprk-o-Stack__item
+      sprk-o-Stack__item--half@s
+      sprk-o-Stack
+      sprk-o-Stack--large"
+    >
 
       <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
         Title
@@ -122,15 +151,27 @@ export const withImage = () => (`
     </div>
 
   </div>
-  `);
+  `;
 
-export const withReversedImage = () => (`
+export const withReversedImage = () => `
   <div
-    class="sprk-c-Promo sprk-c-Promo--bordered sprk-o-Stack sprk-o-Stack--split@s"
+    class="
+      sprk-c-Promo
+      sprk-c-Promo--bordered
+      sprk-o-Stack
+      sprk-o-Stack--split@s
+    "
     data-id="promo-4"
   >
 
-    <div class="sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-o-Stack sprk-o-Stack--large">
+    <div
+      class="
+        sprk-c-Promo__content
+        sprk-o-Stack__item
+        sprk-o-Stack__item--half@s
+        sprk-o-Stack sprk-o-Stack--large
+      "
+    >
 
       <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
         Title
@@ -161,4 +202,4 @@ export const withReversedImage = () => (`
       />
     </a>
   </div>
-`);
+`;

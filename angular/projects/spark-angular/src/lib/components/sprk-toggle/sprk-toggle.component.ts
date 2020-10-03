@@ -19,10 +19,10 @@ import 'focus-visible';
         [attr.aria-controls]="contentId"
       >
         <sprk-icon
-          iconType="chevron-down-circle-two-color"
+          iconType="chevron-down-circle"
           additionalClasses="{{
             iconClass
-          }} sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
+          }} sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
         ></sprk-icon>
         {{ title }}
       </button>

@@ -116,10 +116,10 @@ const SprkCardTeaser = (props) => {
     return (
       <TagName
         data-analytics={ctaAnalytics}
-        className="sprk-c-Button"
         className={cx('sprk-c-Button', {
           'sprk-c-Button--secondary': buttonVariant === 'secondary',
           'sprk-c-Button--tertiary': buttonVariant === 'tertiary',
+          'sprk-c-Button--quaternary': buttonVariant === 'quaternary',
         })}
         href={href}
         element="a"
@@ -141,7 +141,7 @@ const SprkCardTeaser = (props) => {
     if (titleFirst) {
       // with image
       return (
-        <React.Fragment>
+        <>
           <Title />
           <Media />
           <div
@@ -158,14 +158,14 @@ const SprkCardTeaser = (props) => {
             <BodyText />
             <CallToAction />
           </div>
-        </React.Fragment>
+        </>
       );
     }
 
     // Icon at top
     if (media.mediaVariant === 'icon') {
       return (
-        <React.Fragment>
+        <>
           <div
             className="
               sprk-o-Stack__item
@@ -179,13 +179,13 @@ const SprkCardTeaser = (props) => {
             <BodyText />
             <CallToAction />
           </div>
-        </React.Fragment>
+        </>
       );
     }
 
     // Image at top
     return (
-      <React.Fragment>
+      <>
         <Media />
         <div
           className="
@@ -198,7 +198,7 @@ const SprkCardTeaser = (props) => {
           <BodyText />
           <CallToAction />
         </div>
-      </React.Fragment>
+      </>
     );
   };
 
@@ -241,7 +241,7 @@ SprkCardTeaser.propTypes = {
       ctaLinkElement: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
-        PropTypes.elementType
+        PropTypes.elementType,
       ]),
       /**
        * Determines if the call to action is a link or a button.
@@ -257,7 +257,12 @@ SprkCardTeaser.propTypes = {
       /**
        * The variant to use for the call-to-action button.
        */
-      buttonVariant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+      buttonVariant: PropTypes.oneOf([
+        'primary',
+        'secondary',
+        'tertiary',
+        'quaternary',
+      ]),
     }),
     /**
      * Configures the main media of the Teaser Card.
@@ -277,7 +282,7 @@ SprkCardTeaser.propTypes = {
       mediaLinkElement: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
-        PropTypes.elementType
+        PropTypes.elementType,
       ]),
       /**
        * Determines what icon `SprkIcon` renders

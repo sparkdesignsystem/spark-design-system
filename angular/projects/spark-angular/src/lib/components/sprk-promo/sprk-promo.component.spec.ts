@@ -10,11 +10,7 @@ describe('SprkPromoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        SprkPromoComponent,
-        SprkIconComponent,
-        SprkLinkDirective
-      ]
+      declarations: [SprkPromoComponent, SprkIconComponent, SprkLinkDirective],
     }).compileComponents();
   }));
 
@@ -32,7 +28,7 @@ describe('SprkPromoComponent', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(element.classList.toString()).toEqual(
-      'sprk-c-Promo sprk-o-Stack sprk-o-Stack--split@s sprk-u-man'
+      'sprk-c-Promo sprk-o-Stack sprk-o-Stack--split@s sprk-u-man',
     );
   });
 
@@ -47,7 +43,7 @@ describe('SprkPromoComponent', () => {
     component.additionalClassesImgLink = 'sprk-u-man';
     fixture.detectChanges();
     expect(element.querySelector('a').classList.toString()).toEqual(
-      'sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-u-man'
+      'sprk-o-Stack__item sprk-o-Stack__item--half@s sprk-u-man',
     );
   });
 
@@ -55,7 +51,7 @@ describe('SprkPromoComponent', () => {
     component.imgSrc = 'www.example.com/image.jpg';
     fixture.detectChanges();
     expect(element.querySelector('a').classList.toString()).toEqual(
-      'sprk-o-Stack__item sprk-o-Stack__item--half@s'
+      'sprk-o-Stack__item sprk-o-Stack__item--half@s',
     );
   });
 
@@ -65,7 +61,7 @@ describe('SprkPromoComponent', () => {
     component.additionalClassesFlagLink = 'sprk-u-man';
     fixture.detectChanges();
     expect(element.querySelector('a').classList.toString()).toEqual(
-      'sprk-o-Stack__item--fourth@s sprk-o-Stack__item sprk-u-man'
+      'sprk-o-Stack__item--fourth@s sprk-o-Stack__item sprk-u-man',
     );
   });
 
@@ -74,7 +70,7 @@ describe('SprkPromoComponent', () => {
     component.isFlag = true;
     fixture.detectChanges();
     expect(element.querySelector('a').classList.toString()).toEqual(
-      'sprk-o-Stack__item--fourth@s sprk-o-Stack__item'
+      'sprk-o-Stack__item--fourth@s sprk-o-Stack__item',
     );
   });
 
@@ -82,19 +78,54 @@ describe('SprkPromoComponent', () => {
     component.additionalClassesContent = 'sprk-u-man';
     fixture.detectChanges();
     expect(
-      element.querySelector('.sprk-c-Promo__content').classList.toString()
+      element.querySelector('.sprk-c-Promo__content').classList.toString(),
     ).toEqual(
-      'sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-u-man'
+      'sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-u-man',
     );
   });
 
   it('should not add additional classes to content div when additionalClassesContent has no value', () => {
     fixture.detectChanges();
     expect(
-      element.querySelector('.sprk-c-Promo__content').classList.toString()
+      element.querySelector('.sprk-c-Promo__content').classList.toString(),
     ).toEqual(
-      'sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large'
+      'sprk-c-Promo__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large',
     );
+  });
+
+  it('should add correct additional class to button when buttonVariant is secondary', () => {
+    component.cta = 'button';
+    component.buttonVariant = 'secondary';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Button').classList.toString(),
+    ).toEqual('sprk-c-Button sprk-c-Button--secondary');
+  });
+
+  it('should add correct additional class to button when buttonVariant is tertiary', () => {
+    component.cta = 'button';
+    component.buttonVariant = 'tertiary';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Button').classList.toString(),
+    ).toEqual('sprk-c-Button sprk-c-Button--tertiary');
+  });
+
+  it('should add correct additional class to button when buttonVariant is quaternary', () => {
+    component.cta = 'button';
+    component.buttonVariant = 'quaternary';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Button').classList.toString(),
+    ).toEqual('sprk-c-Button sprk-c-Button--quaternary');
+  });
+
+  it('should not add additional classes to button when buttonVariant has no value', () => {
+    component.cta = 'button';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Button').classList.toString(),
+    ).toEqual('sprk-c-Button');
   });
 
   it('should add data-id when idString has a value', () => {

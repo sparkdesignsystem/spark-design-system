@@ -22,13 +22,14 @@ Use a Link when you want the user to
 navigate to another page, a specific
 location on a page, or to download a document.
 
+
 ### Guidelines
 
 - Link text should clearly describe where
 the Link will take the user. It must answer,
 “what will the user get when they interact
 with this?”
-- Avoid ambiguous Link text like “Click Here”.
+- Do not use ambiguous Link text like “Click Here”.
 - Don’t use a Link if you aren’t navigating
 somewhere or downloading a document unless
 the proper accessibility considerations are met.
@@ -56,14 +57,24 @@ should be used for most hyperlinks.
 
 ### Simple Link
 
-Simple Link is a more subtle styles which
-looks more like regular body copy. It is
-perfect inside menus, footers, and other
-elements where context implies an ability
-to interact with the text.
+A more subtle Link style which looks more like regular body copy.
+Use Simple Links in navigation, or in the header and footer of a page,
+where context implies an ability to interact with the text.
 
 <ComponentPreview
   componentName="link--simple"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Light Link
+
+A link style for dark backgrounds.
+Light links are mainly used in [Footer](/using-spark/components/footer).
+
+<ComponentPreview
+  componentName="link--light"
   hasReact
   hasAngular
   hasHTML
@@ -84,11 +95,8 @@ text and shouldn’t be used in a sentence.
 
 ### Disabled
 
-Disabled Link represents a link that is not
-currently available for interaction. Using
-this variation helps screen readers and other
-assistive technologies understand that the
-Link can’t be interacted with.
+Represents a Link that’s not currently available for interaction.
+Using this variation helps screen readers and other assistive technologies understand that the Link can’t be interacted with.
 
 <ComponentPreview
   componentName="link--disabled"

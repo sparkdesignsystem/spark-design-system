@@ -4,9 +4,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Alert',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     docs: { iframeHeight: 120 },
     info: `
@@ -31,9 +29,13 @@ export const info = () => {
     >
       <div class="sprk-c-Alert__content">
         <svg
-          class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
+          class="
+            sprk-c-Alert__icon
+            sprk-c-Icon sprk-c-Icon--xl
+            sprk-c-Icon--filled sprk-c-Icon--filled-current-color
+          "
           viewBox="0 0 64 64" aria-hidden="true" >
-          <use xlink:href="#bell"></use>
+          <use xlink:href="#bell-filled"></use>
         </svg>
         <p class="sprk-c-Alert__text"> This is important information.</p>
       </div>
@@ -42,7 +44,16 @@ export const info = () => {
         title="Dismiss"
         data-sprk-alert="dismiss"
       >
-        <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true" > <use xlink:href="#close"></use> </svg>
+        <svg
+          class="
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
+          "
+          viewBox="0 0 64 64"
+          aria-hidden="true">
+            <use xlink:href="#close"></use>
+          </svg>
       </button>
     </div>
   `;
@@ -68,8 +79,17 @@ export const success = () => {
       data-analytics="object.action.event"
     >
       <div class="sprk-c-Alert__content">
-        <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 512 512" aria-hidden="true" >
-          <use xlink:href="#check-mark"></use>
+        <svg
+          class="
+            sprk-c-Alert__icon
+            sprk-c-Icon
+            sprk-c-Icon--filled
+            sprk-c-Icon--filled-current-color
+          "
+          viewBox="0 0 64 64"
+          aria-hidden="true"
+        >
+          <use xlink:href="#check-mark-filled"></use>
         </svg>
         <p class="sprk-c-Alert__text">
           This is a success message.
@@ -81,12 +101,20 @@ export const success = () => {
         title="Dismiss"
         data-sprk-alert="dismiss"
       >
-        <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true" >
+        <svg
+          class="
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
+          "
+          viewBox="0 0 64 64"
+          aria-hidden="true"
+        >
           <use xlink:href="#close"></use>
         </svg>
       </button>
     </div>
-  `
+  `;
 };
 
 success.story = {
@@ -109,10 +137,22 @@ export const fail = () => {
       data-analytics="object.action.event"
     >
       <div class="sprk-c-Alert__content">
-        <svg class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color" viewBox="0 0 576 512" aria-hidden="true" >
-          <use xlink:href="#exclamation"></use>
+        <svg
+          class="
+            sprk-c-Alert__icon
+            sprk-c-Icon
+            sprk-c-Icon--filled
+            sprk-c-Icon--filled-current-color
+          "
+          viewBox="0 0 64 64"
+          aria-hidden="true"
+        >
+          <use xlink:href="#exclamation-filled"></use>
         </svg>
-        <p class="sprk-c-Alert__text"> This is a failure message to alert that something was not successful.</p>
+        <p class="sprk-c-Alert__text">
+          This is a failure message to alert that
+          something was not successful.
+        </p>
       </div>
       <button
         class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss"
@@ -120,12 +160,20 @@ export const fail = () => {
         title="Dismiss"
         data-sprk-alert="dismiss"
       >
-        <svg class="sprk-c-Icon sprk-c-Icon--stroke-current-color" viewBox="0 0 64 64" aria-hidden="true" >
+        <svg
+          class="
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
+          "
+          viewBox="0 0 64 64"
+          aria-hidden="true"
+        >
           <use xlink:href="#close"></use>
         </svg>
       </button>
     </div>
-  `
+  `;
 };
 
 fail.story = {
@@ -149,18 +197,23 @@ export const noDismissButton = () => {
     >
       <div class="sprk-c-Alert__content">
         <svg
-          class="sprk-c-Alert__icon sprk-c-Icon sprk-c-Icon--l sprk-c-Icon--stroke-current-color"
-          viewBox="0 0 512 512"
+          class="
+            sprk-c-Alert__icon
+            sprk-c-Icon
+            sprk-c-Icon--filled
+            sprk-c-Icon--filled-current-color
+          "
+          viewBox="0 0 64 64"
           aria-hidden="true"
         >
-          <use xlink:href="#check-mark"></use>
+          <use xlink:href="#check-mark-filled"></use>
         </svg>
         <p class="sprk-c-Alert__text">
-          This success alert has no dismiss button.
+          This Success Alert has no dismiss button.
         </p>
       </div>
     </div>
-  `
+  `;
 };
 
 noDismissButton.story = {

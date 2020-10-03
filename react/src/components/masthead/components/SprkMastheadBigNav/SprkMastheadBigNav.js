@@ -16,7 +16,7 @@ class SprkMastheadBigNav extends Component {
     const { additionalClasses, analyticsString, idString } = this.props;
     const { links } = this.state;
     return (
-      <React.Fragment>
+      <>
         <div className="sprk-o-Stack__item">
           <nav
             className={classNames(
@@ -49,7 +49,7 @@ class SprkMastheadBigNav extends Component {
                     {!link.subNavLinks && (
                       <TagName
                         className={classNames(
-                          'sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav',
+                          'sprk-b-Link sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav',
                         )}
                         {...rest}
                       >
@@ -68,22 +68,25 @@ class SprkMastheadBigNav extends Component {
             </ul>
           </nav>
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
 
 SprkMastheadBigNav.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add
+   * to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute
+   * serving as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
- /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+  /**
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /** Used to render navigation inside. */
@@ -95,7 +98,7 @@ SprkMastheadBigNav.propTypes = {
       element: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
-        PropTypes.elementType
+        PropTypes.elementType,
       ]),
       /**
        * A space-separated string of classes to add to the link item.

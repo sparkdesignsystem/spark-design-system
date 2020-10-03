@@ -34,7 +34,7 @@ import {
             <svg
               [ngClass]="{
                 'sprk-c-Icon': true,
-                'sprk-c-Icon--l': true,
+                'sprk-c-Icon--xl': true,
                 'sprk-c-Menu__icon': true,
                 'sprk-c-Menu__icon--open': isNarrowNavOpen
               }"
@@ -115,7 +115,7 @@ import {
               <div *ngIf="link.subNav">
                 <sprk-dropdown
                   [choices]="link.subNav"
-                  additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                  additionalTriggerClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   additionalClasses="sprk-u-TextAlign--left"
                   triggerIconType="chevron-down"
                   [analyticsString]="link.analyticsString"
@@ -125,7 +125,7 @@ import {
               <div *ngIf="!link.subNav">
                 <a
                   sprkLink
-                  variant="plain"
+                  variant="simple"
                   [analyticsString]="link.analyticsString"
                   class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   [attr.href]="link.href"
@@ -205,7 +205,12 @@ import {
                     >
                       <sprk-icon
                         [iconType]="subNavLink.leadingIcon"
-                        additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mrs"
+                        additionalClasses="
+                          sprk-c-Icon--filled-current-color
+                          sprk-c-Icon--stroke-current-color
+                          sprk-c-Icon--xl
+                          sprk-u-mrs
+                        "
                         *ngIf="subNavLink.leadingIcon"
                       ></sprk-icon>
                       {{ subNavLink.text }}
@@ -231,7 +236,12 @@ import {
                   <span class="sprk-c-MastheadAccordion__heading">
                     <sprk-icon
                       [iconType]="narrowLink.leadingIcon"
-                      additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mrs"
+                      additionalClasses="
+                        sprk-c-Icon--filled-current-color
+                        sprk-c-Icon--stroke-current-color
+                        sprk-c-Icon--xl
+                        sprk-u-mrs
+                      "
                       *ngIf="narrowLink.leadingIcon"
                     ></sprk-icon>
                     {{ narrowLink.text }}

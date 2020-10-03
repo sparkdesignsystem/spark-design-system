@@ -4,9 +4,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Promo',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkPromo,
   parameters: {
     jest: ['SprkPromo'],
@@ -27,8 +25,9 @@ export const defaultStory = () => (
     hasBorder
     idString="promo-1"
   >
-    Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim
-    diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+    Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore
+    integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas.
+    Diam quod curabitur.
   </SprkPromo>
 );
 
@@ -48,8 +47,9 @@ export const flag = () => (
     isFlag
     hasBorder
   >
-    Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim
-    diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+    Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore
+    integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas.
+    Diam quod curabitur.
   </SprkPromo>
 );
 
@@ -74,8 +74,9 @@ export const withImage = () => (
     idString="promo-5"
     hasBorder
   >
-    Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim
-    diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+    Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore
+    integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas.
+    Diam quod curabitur.
   </SprkPromo>
 );
 
@@ -102,8 +103,9 @@ export const withReversedImage = () => (
     mediaRev
     hasBorder
   >
-    Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore integer eum non enim
-    diam habitant. Maecenas nunc per lacus neque egestas. Diam quod curabitur.
+    Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id inventore
+    integer eum non enim diam habitant. Maecenas nunc per lacus neque egestas.
+    Diam quod curabitur.
   </SprkPromo>
 );
 

@@ -51,7 +51,7 @@ class SprkToggle extends Component {
     );
 
     const iconClasses = classnames(
-      'sprk-c-Icon--l sprk-c-Icon--toggle sprk-u-mrs',
+      'sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs',
       { 'sprk-c-Icon--open': isOpen },
       iconAddClasses,
     );
@@ -82,7 +82,7 @@ class SprkToggle extends Component {
 }
 
 SprkToggle.defaultProps = {
-  toggleIconName: 'chevron-down-circle-two-color',
+  toggleIconName: 'chevron-down-circle',
   contentId: uniqueId('sprk_toggle_content_'),
 };
 

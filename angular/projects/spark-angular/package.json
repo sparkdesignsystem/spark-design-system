@@ -1,7 +1,14 @@
 {
   "name": "@sparkdesignsystem/spark-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
-  "version": "10.1.2",
+  "version": "11.0.0",
+  "scripts": {
+    "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
+    "copy:schemas": "cp schematics/ng-add/schema.json ../../dist/spark-angular/schematics/ng-add/schema.json",
+    "copy:collection": "cp schematics/collection.json ../../dist/spark-angular/schematics/collection.json",
+    "postbuild": "npm run copy:schemas && npm run copy:collection"
+  },
+  "schematics": "./schematics/collection.json",
   "peerDependencies": {
     "@angular/animations": ">=7.0.0 < 9.2.0",
     "@angular/common": ">=7.0.0 < 9.2.0",
@@ -12,7 +19,7 @@
     "@angular/platform-browser": ">=7.0.0 < 9.2.0",
     "@angular/platform-browser-dynamic": ">=7.0.0 < 9.2.0",
     "@angular/router": ">=7.0.0 < 9.2.0",
-    "@sparkdesignsystem/spark": "^13.1.2"
+    "@sparkdesignsystem/spark": "^14.0.0"
   },
   "dependencies": {
     "focus-visible": "5.0.2",

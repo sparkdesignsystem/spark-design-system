@@ -101,7 +101,7 @@ export const invalidHugeTextInput = () => ({
       <label sprkLabel>Huge Text Input</label>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>

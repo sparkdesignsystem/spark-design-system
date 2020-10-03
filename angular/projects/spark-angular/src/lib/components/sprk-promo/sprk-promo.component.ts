@@ -54,7 +54,7 @@ import { Component, Input } from '@angular/core';
             sprkLink
             variant="unstyled"
             [attr.href]="buttonHref"
-            class="sprk-c-Button"
+            [ngClass]="getClassesButton()"
             [analyticsString]="buttonLinkAnalytics"
           >
             {{ ctaText }}
@@ -103,7 +103,7 @@ import { Component, Input } from '@angular/core';
         />
       </a>
     </div>
-  `
+  `,
 })
 export class SprkPromoComponent {
   /**
@@ -142,6 +142,12 @@ export class SprkPromoComponent {
    */
   @Input()
   buttonLinkAnalytics: string;
+  /**
+   * If the `cta` is set to `button` then
+   * this is the variant for the button.
+   */
+  @Input()
+  buttonVariant: string;
   /**
    * This will be the href for the the link if `cta` is set to `link`.
    */
@@ -255,7 +261,7 @@ export class SprkPromoComponent {
     const classArray: string[] = [
       'sprk-c-Promo',
       'sprk-o-Stack',
-      'sprk-o-Stack--split@s'
+      'sprk-o-Stack--split@s',
     ];
 
     if (this.isFlag) {
@@ -267,9 +273,27 @@ export class SprkPromoComponent {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
+    }
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getClassesButton(): string {
+    const classArray: string[] = ['sprk-c-Button'];
+
+    const buttonClasses: object = {
+      secondary: 'sprk-c-Button--secondary',
+      tertiary: 'sprk-c-Button--tertiary',
+      quaternary: 'sprk-c-Button--quaternary',
+    };
+
+    if (this.buttonVariant) {
+      classArray.push(buttonClasses[this.buttonVariant]);
     }
     return classArray.join(' ');
   }
@@ -280,11 +304,11 @@ export class SprkPromoComponent {
   getClassesFlag(): string {
     const classArray: string[] = [
       'sprk-o-Stack__item--fourth@s',
-      'sprk-o-Stack__item'
+      'sprk-o-Stack__item',
     ];
 
     if (this.additionalClassesFlagLink) {
-      this.additionalClassesFlagLink.split(' ').forEach(className => {
+      this.additionalClassesFlagLink.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -297,11 +321,11 @@ export class SprkPromoComponent {
   getClassesImg(): string {
     const classArray: string[] = [
       'sprk-o-Stack__item',
-      'sprk-o-Stack__item--half@s'
+      'sprk-o-Stack__item--half@s',
     ];
 
     if (this.additionalClassesImgLink) {
-      this.additionalClassesImgLink.split(' ').forEach(className => {
+      this.additionalClassesImgLink.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -316,7 +340,7 @@ export class SprkPromoComponent {
       'sprk-c-Promo__content',
       'sprk-o-Stack__item',
       'sprk-o-Stack',
-      'sprk-o-Stack--large'
+      'sprk-o-Stack--large',
     ];
 
     if (this.isFlag) {
@@ -328,7 +352,7 @@ export class SprkPromoComponent {
     }
 
     if (this.additionalClassesContent) {
-      this.additionalClassesContent.split(' ').forEach(className => {
+      this.additionalClassesContent.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }

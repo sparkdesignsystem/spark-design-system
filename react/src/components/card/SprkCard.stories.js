@@ -7,7 +7,7 @@ import SprkCardTeaser from './components/SprkCardTeaser/SprkCardTeaser';
 export default {
   title: 'Components/Card',
   decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
+    story => <div className="sprk-o-Box sprk-o-Box--large">{story()}</div>
   ],
   component: SprkCard,
   parameters: {
