@@ -1,4 +1,4 @@
-function toggleValue(currentValue, value1, value2) {
+const toggleValue = (currentValue, value1, value2) => {
   if (currentValue === value1) {
     return value2;
   }
