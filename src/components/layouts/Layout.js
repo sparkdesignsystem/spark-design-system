@@ -85,7 +85,7 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
               href="https://v13--spark-design-system.netlify.app/"
               className="docs-c-Banner--link sprk-u-mlm"
             >
-              View the previous release of Spark
+              View the previous major release of Spark
             </a>
           </div>
           <Header
