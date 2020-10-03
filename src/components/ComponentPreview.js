@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import IframeResizer from 'iframe-resizer-react';
 import DevDocLinks from './DevDocLinks';
 
-function ComponentPreview(props) {
+const ComponentPreview = (props) => {
   const {
     componentName,
     hasReact,
@@ -45,7 +45,7 @@ function ComponentPreview(props) {
       )}
     </div>
   );
-}
+};
 
 ComponentPreview.propTypes = {
   componentName: PropTypes.string,
