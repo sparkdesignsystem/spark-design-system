@@ -6,6 +6,7 @@ Thumbs.db
 npm-debug.log
 
 # Dependencies
+package-lock.json
 node_modules/
 
 dist/
