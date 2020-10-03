@@ -4,6 +4,6 @@ const setValidTick = (inputContainer) => {
   if (errorContainer) {
     errorContainer.innerHTML = '';
   }
-}
+};
 
 export { setValidTick as default };
