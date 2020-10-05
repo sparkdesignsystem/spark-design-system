@@ -7,6 +7,8 @@ describe('SprkAlertComponent', () => {
   let fixture: ComponentFixture<SprkAlertComponent>;
   let alertElement: HTMLElement;
   let dismissElement: HTMLElement;
+  let iconElement: HTMLElement;
+  let dismissIconElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -21,6 +23,12 @@ describe('SprkAlertComponent', () => {
     fixture.detectChanges();
     alertElement = fixture.nativeElement.querySelector('div');
     dismissElement = fixture.nativeElement.querySelector('button');
+    iconElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Alert__content .sprk-c-Alert__icon',
+    );
+    dismissIconElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Alert__icon--dismiss',
+    );
   });
 
   it('should create itself', () => {
@@ -40,6 +48,9 @@ describe('SprkAlertComponent', () => {
     expect(component.alertType).toEqual('info');
     expect(component.getClassesAlertContainer()).toEqual(
       'sprk-c-Alert sprk-c-Alert--info',
+    );
+    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#bell-filled',
     );
   });
 
@@ -64,6 +75,9 @@ describe('SprkAlertComponent', () => {
     expect(component.getClassesAlertContainer()).toEqual(
       'sprk-c-Alert sprk-c-Alert--success',
     );
+    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#check-mark-filled',
+    );
   });
 
   it('should add the correct class if variant is success', () => {
@@ -74,6 +88,9 @@ describe('SprkAlertComponent', () => {
     );
     expect(component.getClassesAlertContainer()).toEqual(
       'sprk-c-Alert sprk-c-Alert--success',
+    );
+    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#check-mark-filled',
     );
   });
 
@@ -86,6 +103,9 @@ describe('SprkAlertComponent', () => {
     expect(component.getClassesAlertContainer()).toEqual(
       'sprk-c-Alert sprk-c-Alert--fail',
     );
+    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#exclamation-filled',
+    );
   });
 
   it('should add the correct class if variant is fail', () => {
@@ -96,6 +116,9 @@ describe('SprkAlertComponent', () => {
     );
     expect(component.getClassesAlertContainer()).toEqual(
       'sprk-c-Alert sprk-c-Alert--fail',
+    );
+    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#exclamation-filled',
     );
   });
 
@@ -108,6 +131,9 @@ describe('SprkAlertComponent', () => {
     expect(component.getClassesAlertContainer()).toEqual(
       'sprk-c-Alert sprk-c-Alert--info',
     );
+    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#bell-filled',
+    );
   });
 
   it('should add the correct class if variant is info', () => {
@@ -118,6 +144,9 @@ describe('SprkAlertComponent', () => {
     );
     expect(component.getClassesAlertContainer()).toEqual(
       'sprk-c-Alert sprk-c-Alert--info',
+    );
+    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#bell-filled',
     );
   });
 
@@ -196,7 +225,30 @@ describe('SprkAlertComponent', () => {
     expect(alertElement.getAttribute('data-id')).toBeNull();
   });
 
-  //TODO: TEST TO SEE IF dismissElement IS THERE WHEN isDismissible IS FALSE - Should be false
-  //TODO: TEST TO SEE IF dismissElement IS THERE WHEN dismissible IS FALSE - Should be false
-  //TODO: TEST TO SEE IF dismissElement IS THERE WHEN dismissible IS FALSE and isDismissible IS TRUE - Should be true
+  it('should render a close icon if no value is set for dismissIconName', () => {
+    fixture.detectChanges();
+    expect(
+      dismissIconElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#close');
+  });
+
+  it('should render a custom icon if a value is set for dismissIconName', () => {
+    component.dismissIconName = 'arrow-right';
+    fixture.detectChanges();
+    expect(
+      dismissIconElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#arrow-right');
+  });
+
+  it('should render a custom icon if a value is set for iconName', () => {
+    component.iconName = 'arrow-right';
+    fixture.detectChanges();
+    expect(iconElement.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#arrow-right',
+    );
+  });
+
+  // TODO: TEST TO SEE IF dismissElement IS THERE WHEN isDismissible IS FALSE - Should be false
+  // TODO: TEST TO SEE IF dismissElement IS THERE WHEN dismissible IS FALSE - Should be false
+  // TODO: TEST TO SEE IF dismissElement IS THERE WHEN dismissible IS FALSE and isDismissible IS TRUE - Should be true
 });
