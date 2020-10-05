@@ -587,18 +587,19 @@ $sprk-promo-border: 1px solid $sprk-black-tint-40 !default;
 $sprk-promo-max-width: 42.5rem !default;
 /// The Promo component breakpoint at which large viewport styles begin.
 $sprk-promo-breakpoint: 42.5rem !default;
-/// The maximum width of the image in the
+/// The maximum height of the image in the
 /// Promo component on narrow viewports.
 $sprk-promo-image-narrow-max-height: 20rem !default;
-/// The background color of the Promo component.
+/// The maximum width of the image in the
+/// Promo component on narrow viewports.
 $sprk-promo-image-narrow-max-width: 50% !default;
 /// The background color of the Promo component.
 $sprk-promo-title-font-color: $sprk-black !default;
-/// The background color of the Promo component.
+/// The title font weight of the Promo component.
 $sprk-promo-title-font-weight: $sprk-font-weight-display-four !default;
-/// The background color of the Promo component.
+/// The subtitle font color of the Promo component
 $sprk-promo-subtitle-font-color: $sprk-black !default;
-/// The background color of the Promo component.
+/// The subtitle font weight of the Promo component.
 $sprk-promo-subtitle-font-weight: $sprk-font-weight-body-one !default;
 
 //
