@@ -9,10 +9,9 @@ export default {
   component: SprkAwardComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box sprk-o-CenteredColumn">${ storyContent }<div>`
-      )
-    )
+      (storyContent) =>
+        `<div class="sprk-o-Box sprk-o-CenteredColumn">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `${markdownDocumentationLinkBuilder('award')}`,
@@ -21,10 +20,7 @@ export default {
 };
 
 const modules = {
-  imports: [
-    SprkAwardModule,
-    BrowserAnimationsModule,
-  ],
+  imports: [SprkAwardModule, BrowserAnimationsModule],
 };
 
 export const defaultStory = () => ({
@@ -39,8 +35,15 @@ export const defaultStory = () => ({
       imgOneHref="#nogo"
       imgTwoHref="#nogo"
       imgTwoAlt="placeholder!"
-      disclaimerCopy="This is some copy for the disclaimer about disclaimer things."
-      disclaimerTitle="My disclaimer title"
+      disclaimerCopy="This is an example of disclaimer content.
+        The aria-expanded='true' attribute will be
+        viewable in the DOM on the toggle link when
+        this content is shown. When this content is
+        hidden the aria-expanded attribute will have
+        the value of false. This helps accessibilty
+        devices in understanding that the link is a
+        control for expandable content."
+      disclaimerTitle="My Disclaimer"
       analyticsStringImgOne="Foo"
       analyticsStringImgTwo="Test"
       idString="award-1"
