@@ -124,4 +124,12 @@ describe('SprkAward:', () => {
       0,
     );
   });
+
+  it('should not render the Toggle if props are empty', () => {
+    let wrapper = mount(<SprkAward images={[]} />);
+    expect(wrapper.find('div.sprk-c-Toggle').length).toBe(0);
+
+    wrapper = mount(<SprkAward images={[]} disclaimerTitle="Title" />);
+    expect(wrapper.find('div.sprk-c-Toggle').length).toBe(1);
+  });
 });

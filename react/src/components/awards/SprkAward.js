@@ -78,15 +78,17 @@ const SprkAward = (props) => {
         })}
       </SprkStack>
 
-      <SprkToggle
-        title={disclaimerTitle}
-        analyticsString={disclaimerAnalytics}
-        additionalClasses="sprk-o-Stack__item"
-      >
-        <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
-          {disclaimerText}
-        </p>
-      </SprkToggle>
+      {(disclaimerTitle || disclaimerText) && (
+        <SprkToggle
+          title={disclaimerTitle}
+          analyticsString={disclaimerAnalytics}
+          additionalClasses="sprk-o-Stack__item"
+        >
+          <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
+            {disclaimerText}
+          </p>
+        </SprkToggle>
+      )}
     </SprkStack>
   );
 };
