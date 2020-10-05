@@ -1,0 +1,9 @@
+{
+  "vertical-list": {
+    "delimiter": {
+      "comment": "The delimiter between delimited items in Vertical List components.",
+      "value": ",",
+      "type": "settings"
+    }
+  }
+}
