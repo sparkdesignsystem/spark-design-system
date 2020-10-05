@@ -248,7 +248,27 @@ describe('SprkAlertComponent', () => {
     );
   });
 
-  // TODO: TEST TO SEE IF dismissElement IS THERE WHEN isDismissible IS FALSE - Should be false
-  // TODO: TEST TO SEE IF dismissElement IS THERE WHEN dismissible IS FALSE - Should be false
-  // TODO: TEST TO SEE IF dismissElement IS THERE WHEN dismissible IS FALSE and isDismissible IS TRUE - Should be true
+  it('should not be dismissible if dismissible is set to false', () => {
+    component.dismissible = false;
+    fixture.detectChanges();
+    expect(component.getIsAlertDismissible()).toEqual(false);
+  });
+
+  it('should not be dismissible if isDismissible is set to false', () => {
+    component.isDismissible = false;
+    fixture.detectChanges();
+    expect(component.getIsAlertDismissible()).toEqual(false);
+  });
+
+  it('should be dismissible if isDismissible and dismissible are not set', () => {
+    fixture.detectChanges();
+    expect(component.getIsAlertDismissible()).toEqual(true);
+  });
+
+  it('should prefer isDismissible to dismissible if both are set', () => {
+    component.isDismissible = false;
+    component.dismissible = true;
+    fixture.detectChanges();
+    expect(component.getIsAlertDismissible()).toEqual(false);
+  });
 });

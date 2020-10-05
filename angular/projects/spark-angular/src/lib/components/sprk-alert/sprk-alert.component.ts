@@ -21,7 +21,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
       </div>
 
       <button
-        *ngIf="isDismissible !== false"
+        *ngIf="isAlertDismissible !== false"
         class="sprk-c-Alert__icon sprk-c-Alert__icon--dismiss"
         type="button"
         title="Dismiss"
@@ -124,6 +124,10 @@ export class SprkAlertComponent implements OnInit {
    */
   @Output()
   dismissEvent = new EventEmitter<any>();
+  /**
+   * @ignore
+   */
+  isAlertDismissible: boolean;
 
   /**
    * @ignore
@@ -165,6 +169,21 @@ export class SprkAlertComponent implements OnInit {
   }
 
   /**
+   * @ignore
+   */
+  // TODO: Remove when `dismissible` is deprecated.
+  getIsAlertDismissible(): boolean {
+    if (this.isDismissible === undefined && this.dismissible !== undefined) {
+      this.isAlertDismissible = this.dismissible;
+    } else if (this.isDismissible !== undefined) {
+      this.isAlertDismissible = this.isDismissible;
+    } else {
+      this.isAlertDismissible = true;
+    }
+    return this.isAlertDismissible;
+  }
+
+  /**
    * When the dismiss button is clicked
    * this method sets `isVisible` to `false`
    * and hides the Alert component.
@@ -176,8 +195,6 @@ export class SprkAlertComponent implements OnInit {
 
   // TODO: Remove when `dismissible` is deprecated.
   ngOnInit(): void {
-    if (this.isDismissible === undefined && this.dismissible !== undefined) {
-      this.isDismissible = this.dismissible;
-    }
+    this.getIsAlertDismissible();
   }
 }
