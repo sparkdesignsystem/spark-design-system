@@ -1,0 +1,69 @@
+{
+  "accordion": {
+    "max-width": {
+      "comment": "The maximum width of Accordions.",
+      "value": "53.125rem",
+      "type": "settings"
+    },
+    "border": {
+      "comment": "The value of border for Dividers.",
+      "value": "{divider.border.value}",
+      "type": "settings"
+    },
+    "summary-color": {
+      "comment": "The font color of the Accordion item summary.",
+      "value": "{colors.black.value}",
+      "type": "settings"
+    },
+    "summary-background-color": {
+      "comment": "The background color of the Accordion item summary.",
+      "value": "transparent",
+      "type": "settings"
+    },
+    "summary-text-align": {
+      "comment": "The text-align value of the Accordion item summary.",
+      "value": "left",
+      "type": "settings"
+    },
+    "summary-border": {
+      "comment": "The border of the Accordion item summary.",
+      "value": "none",
+      "type": "settings"
+    },
+    "summary-active-color": {
+      "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
+      "value": "{colors.purple.value}",
+      "type": "settings"
+    },
+    "summary-hover-icon-fill": {
+      "comment": "The fill color of the icon when the Accordion item is hovered.",
+      "value": "{accordion.summary-active-color.value}",
+      "type": "settings"
+    },
+    "summary-padding": {
+      "comment": "The padding of the Accordion summary.",
+      "value": "{space.misc-a.value} 0",
+      "type": "settings"
+    },
+    "content-padding": {
+      "comment": "The padding of the Accordion content.",
+      "value": "0 0 {space.l.value}",
+      "type": "settings"
+    },
+    "active-background-color": {
+      "comment": "The background color used for hover and active on items in the Accordion.",
+      "value": "{colors.gray.value}",
+      "type": "settings"
+    },
+    "summary-text-decoration": {
+      "comment": "The text decoration of the Accordion item summary.",
+      "value": "none",
+      "type": "settings"
+    },
+    "summary-active-text-decoration": {
+      "comment": "The text decoration of the Accordion item summary when active.",
+      "value": "none",
+      "type": "settings"
+    }
+  }
+}
