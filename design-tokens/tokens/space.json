@@ -49,6 +49,26 @@
       "comment": "Value for the extra large space setting.",
       "value": "64px",
       "type": "settings"
+    },
+    "misc-a": {
+      "comment": "Value for the misc a space setting.",
+      "value": "24px",
+      "type": "settings"
+    },
+    "misc-b": {
+      "comment": "Value for the misc b space setting.",
+      "value": "40px",
+      "type": "settings"
+    },
+    "misc-c": {
+      "comment": "Value for the misc c space setting.",
+      "value": "48px",
+      "type": "settings"
+    },
+    "misc-d": {
+      "comment": "Value for the misc d large space setting.",
+      "value": "80px",
+      "type": "settings"
     }
   }
 }
