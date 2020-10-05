@@ -38,11 +38,12 @@ class SprkMastheadAccordionItem extends Component {
       leadingIcon,
       subNavLinks,
       text,
+      itemId,
       ...rest
     } = this.props;
     const { isOpen, height, subNavLinks: stateLinks } = this.state;
     const TagName = element;
-    const itemId = rest.itemId ? rest.itemId : uniqueId('sprk_accordion_item_');
+    const uniqueIdentifier = itemId || uniqueId('sprk_accordion_item_');
     return (
       <li
         className={classNames(
@@ -61,7 +62,7 @@ class SprkMastheadAccordionItem extends Component {
               className="sprk-c-MastheadAccordion__summary"
               onClick={this.toggleAccordionOpen}
               aria-expanded={isOpen ? 'true' : 'false'}
-              aria-controls={itemId}
+              aria-controls={uniqueIdentifier}
               type="button"
             >
               <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
@@ -78,7 +79,7 @@ class SprkMastheadAccordionItem extends Component {
             <AnimateHeight duration={300} height={height}>
               <ul
                 className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
-                id={itemId}
+                id={uniqueIdentifier}
               >
                 {stateLinks.map((subnavlink) => {
                   const {

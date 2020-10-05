@@ -36,13 +36,12 @@ class SprkToggle extends Component {
       titleAddClasses,
       iconAddClasses,
       toggleIconName,
+      contentId,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
 
-    const contentId = other.contentId
-      ? other.contentId
-      : uniqueId('sprk_toggle_content_');
+    const uniqueIdentifier = contentId || uniqueId('sprk_toggle_content_');
 
     const containerClasses = classnames('sprk-c-Toggle', additionalClasses);
 
@@ -64,7 +63,7 @@ class SprkToggle extends Component {
           data-analytics={analyticsString}
           onClick={this.toggleOpen}
           aria-expanded={isOpen ? 'true' : 'false'}
-          aria-controls={contentId}
+          aria-controls={uniqueIdentifier}
           type="button"
         >
           <SprkIcon iconName={toggleIconName} additionalClasses={iconClasses} />
@@ -74,7 +73,7 @@ class SprkToggle extends Component {
           duration={300}
           height={height}
           className="sprk-c-Toggle__content"
-          id={contentId}
+          id={uniqueIdentifier}
         >
           <div>{children}</div>
         </AnimateHeight>
@@ -106,7 +105,7 @@ SprkToggle.propTypes = {
    * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
   */
   analyticsString: PropTypes.string,
-  /** Whether if the toggle is open or not */
+  /** Determines if the toggle is open upon loading on the page. */
   isDefaultOpen: PropTypes.bool,
    /**
    * A space-separated string of classes to add to the outermost container of the component.
