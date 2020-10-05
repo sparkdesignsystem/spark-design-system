@@ -102,12 +102,35 @@ SprkAward.defaultProps = {
 
 SprkAward.propTypes = {
   /** Determines the spacing between the items. */
-  itemSpacing: PropTypes.string,
+  itemSpacing: PropTypes.oneOf([
+    'tiny',
+    'small',
+    'medium',
+    'large',
+    'huge',
+    'misc-a',
+    'misc-b',
+    'misc-c',
+    'misc-d',
+    'miscA',
+    'miscB',
+    'miscC',
+    'miscD',
+    '',
+  ]),
   /**
    * Determines when the flex-direction should
    * change to row from column for the images.
    */
-  splitAt: PropTypes.string,
+  splitAt: PropTypes.oneOf([
+    'extraTiny',
+    'tiny',
+    'small',
+    'medium',
+    'large',
+    'huge',
+    '',
+  ]),
   /**
    * A space-separated string of classes to add
    * to the outermost container of the component.
