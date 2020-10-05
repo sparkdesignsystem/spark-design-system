@@ -7,7 +7,7 @@
     },
     "border": {
       "comment": "The border of the Promo component.",
-      "value": "1px solid {colors-sprk-black-tint-40.value}",
+      "value": "1px solid {colors.black-tint.40.value}",
       "type": "settings"
     },
     "max-width": {
@@ -37,7 +37,7 @@
     },
     "title-font-weight": {
       "comment": "The title font weight of the Promo component.",
-      "value": "{typography.font-weight-display-four.value}",
+      "value": "{font-weight-display-four.value}",
       "type": "settings"
     },
     "subtitle-font-color": {
@@ -47,7 +47,7 @@
     },
     "subtitle-font-weight": {
       "comment": "The subtitle font weight of the Promo component.",
-      "value": "{typography.font-weight-body-one.value}",
+      "value": "font-weight-body-one.value}",
       "type": "settings"
     }
   }
