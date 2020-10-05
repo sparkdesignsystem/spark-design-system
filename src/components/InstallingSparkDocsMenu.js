@@ -11,7 +11,7 @@ const InstallingSparkDocsMenu = () => {
       <h3 className="docs-menu__heading">Installing Spark</h3>
       <nav aria-label="Installing Spark">
         <ul className="docs-menu__collection">
-          {pages.map(page => (
+          {pages.map((page) => (
             <li
               key={page.node.parent.name}
               className="docs-menu__collection-item sprk-u-pbs"
@@ -21,7 +21,7 @@ const InstallingSparkDocsMenu = () => {
                 variant="simple"
                 to={`/installing-spark/${page.node.parent.name}`}
               >
-                {page.node.frontmatter.title || page.node.parent.name }
+                {page.node.frontmatter.title || page.node.parent.name}
               </SprkLink>
             </li>
           ))}
