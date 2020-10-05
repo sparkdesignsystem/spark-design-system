@@ -165,7 +165,7 @@ describe('SprkMastheadAccordionItem:', () => {
 
     expect(menuItemContentId).toMatch(/sprk_accordion_item_\d/);
     expect(menuItemToggleAriaControls).toEqual(menuItemContentId);
-    expect(wrapper.find(`div#${menuItemContentId}`).length).toBe(1);
+    expect(wrapper.find(`#${menuItemContentId}`).length).toBe(1);
   });
 
   it('should add correct aria-controls and id to narrowNav if narrowNavId is passed', () => {
