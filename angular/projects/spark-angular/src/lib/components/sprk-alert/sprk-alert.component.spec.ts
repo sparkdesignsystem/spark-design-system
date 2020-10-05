@@ -6,19 +6,21 @@ describe('SprkAlertComponent', () => {
   let component: SprkAlertComponent;
   let fixture: ComponentFixture<SprkAlertComponent>;
   let alertElement: HTMLElement;
+  let dismissElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkAlertComponent, SprkIconComponent]
+      declarations: [SprkAlertComponent, SprkIconComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkAlertComponent);
     component = fixture.componentInstance;
-    component.visible = true;
+    component.isVisible = true;
     fixture.detectChanges();
     alertElement = fixture.nativeElement.querySelector('div');
+    dismissElement = fixture.nativeElement.querySelector('button');
   });
 
   it('should create itself', () => {
@@ -28,72 +30,142 @@ describe('SprkAlertComponent', () => {
   it('getClassesAlertContainer should match what gets set on the container', () => {
     fixture.detectChanges();
     expect(alertElement.classList.toString()).toEqual(
-      component.getClassesAlertContainer()
+      component.getClassesAlertContainer(),
     );
   });
 
-  it('should add the correct class if alertType is not set', () => {
-    component.alertType = '';
+  it('should default to info alertType if alertType and variant are not set', () => {
     fixture.detectChanges();
-    expect(component.getClassesAlertContainer()).toEqual('sprk-c-Alert');
+    expect(component.variant).toEqual(undefined);
+    expect(component.alertType).toEqual('info');
+    expect(component.getClassesAlertContainer()).toEqual(
+      'sprk-c-Alert sprk-c-Alert--info',
+    );
+  });
+
+  it('should prefer variant if both variant and alertType are set', () => {
+    component.alertType = 'success';
+    component.variant = 'fail';
+    fixture.detectChanges();
+    expect(alertElement.classList.contains('sprk-c-Alert--success')).toEqual(
+      false,
+    );
+    expect(component.getClassesAlertContainer()).toEqual(
+      'sprk-c-Alert sprk-c-Alert--fail',
+    );
   });
 
   it('should add the correct class if alertType is success', () => {
     component.alertType = 'success';
     fixture.detectChanges();
+    expect(alertElement.classList.contains('sprk-c-Alert--info')).toEqual(
+      false,
+    );
     expect(component.getClassesAlertContainer()).toEqual(
-      'sprk-c-Alert sprk-c-Alert--success'
+      'sprk-c-Alert sprk-c-Alert--success',
+    );
+  });
+
+  it('should add the correct class if variant is success', () => {
+    component.variant = 'success';
+    fixture.detectChanges();
+    expect(alertElement.classList.contains('sprk-c-Alert--info')).toEqual(
+      false,
+    );
+    expect(component.getClassesAlertContainer()).toEqual(
+      'sprk-c-Alert sprk-c-Alert--success',
     );
   });
 
   it('should add the correct class if alertType is fail', () => {
     component.alertType = 'fail';
     fixture.detectChanges();
+    expect(alertElement.classList.contains('sprk-c-Alert--info')).toEqual(
+      false,
+    );
     expect(component.getClassesAlertContainer()).toEqual(
-      'sprk-c-Alert sprk-c-Alert--fail'
+      'sprk-c-Alert sprk-c-Alert--fail',
+    );
+  });
+
+  it('should add the correct class if variant is fail', () => {
+    component.variant = 'fail';
+    fixture.detectChanges();
+    expect(alertElement.classList.contains('sprk-c-Alert--info')).toEqual(
+      false,
+    );
+    expect(component.getClassesAlertContainer()).toEqual(
+      'sprk-c-Alert sprk-c-Alert--fail',
     );
   });
 
   it('should add the correct class if alertType is info', () => {
     component.alertType = 'info';
     fixture.detectChanges();
+    expect(alertElement.classList.contains('sprk-c-Alert--success')).toEqual(
+      false,
+    );
     expect(component.getClassesAlertContainer()).toEqual(
-      'sprk-c-Alert sprk-c-Alert--info'
+      'sprk-c-Alert sprk-c-Alert--info',
     );
   });
 
-  it('should add the correct classes if alertType has no value, but additionalClasses does', () => {
+  it('should add the correct class if variant is info', () => {
+    component.variant = 'info';
+    fixture.detectChanges();
+    expect(alertElement.classList.contains('sprk-c-Alert--success')).toEqual(
+      false,
+    );
+    expect(component.getClassesAlertContainer()).toEqual(
+      'sprk-c-Alert sprk-c-Alert--info',
+    );
+  });
+
+  it('should add the correct classes if alertType and variant have no values, but additionalClasses does', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
+    expect(component.variant).toEqual(undefined);
+    expect(component.alertType).toEqual('info');
     expect(component.getClassesAlertContainer()).toEqual(
-      'sprk-c-Alert sprk-u-pam sprk-u-man'
+      'sprk-c-Alert sprk-c-Alert--info sprk-u-pam sprk-u-man',
     );
   });
 
   it('should add the correct classes if alertType and additionalClasses have values', () => {
-    component.alertType = 'info';
+    component.alertType = 'success';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
+    expect(component.variant).toEqual(undefined);
+    expect(alertElement.classList.contains('sprk-c-Alert--info')).toEqual(
+      false,
+    );
     expect(component.getClassesAlertContainer()).toEqual(
-      'sprk-c-Alert sprk-c-Alert--info sprk-u-pam sprk-u-man'
+      'sprk-c-Alert sprk-c-Alert--success sprk-u-pam sprk-u-man',
     );
   });
 
-  it('should add the correct classes if alertType and dismissible have values', () => {
-    component.alertType = 'info';
-    component.dismissible = false;
+  it('should add the correct classes if variant and additionalClasses have values', () => {
+    component.variant = 'success';
+    component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
+    expect(component.alertType).toEqual('info');
+    expect(alertElement.classList.contains('sprk-c-Alert--info')).toEqual(
+      false,
+    );
     expect(component.getClassesAlertContainer()).toEqual(
-      'sprk-c-Alert sprk-c-Alert--info'
+      'sprk-c-Alert sprk-c-Alert--success sprk-u-pam sprk-u-man',
     );
   });
 
-  it('should add the correct classes if additionalClasses is set on container', () => {
-    component.additionalClasses = 'sprk-u-pam';
+  it('should emit dismissEvent when dismiss button is clicked', (done) => {
+    let called = false;
     fixture.detectChanges();
-    expect(component.getClassesAlertContainer()).toEqual(
-      'sprk-c-Alert sprk-u-pam'
-    );
+    component.dismissEvent.subscribe((g) => {
+      called = true;
+      done();
+    });
+    dismissElement.click();
+    expect(called).toEqual(true);
   });
 
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
@@ -104,11 +176,11 @@ describe('SprkAlertComponent', () => {
   });
 
   it('should hide the alert if the dismiss button is clicked', () => {
-    component.dismissible = true;
+    component.isDismissible = true;
     fixture.detectChanges();
-    alertElement.querySelector('button').click();
+    dismissElement.click();
     fixture.detectChanges();
-    expect(component.visible).toBe(false);
+    expect(component.isVisible).toBe(false);
   });
 
   it('should add data-id when idString has a value', () => {
@@ -123,4 +195,8 @@ describe('SprkAlertComponent', () => {
     fixture.detectChanges();
     expect(alertElement.getAttribute('data-id')).toBeNull();
   });
+
+  //TODO: TEST TO SEE IF dismissElement IS THERE WHEN isDismissible IS FALSE - Should be false
+  //TODO: TEST TO SEE IF dismissElement IS THERE WHEN dismissible IS FALSE - Should be false
+  //TODO: TEST TO SEE IF dismissElement IS THERE WHEN dismissible IS FALSE and isDismissible IS TRUE - Should be true
 });
