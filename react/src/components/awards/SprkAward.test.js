@@ -132,4 +132,42 @@ describe('SprkAward:', () => {
     wrapper = mount(<SprkAward images={[]} disclaimerTitle="Title" />);
     expect(wrapper.find('div.sprk-c-Toggle').length).toBe(1);
   });
+
+  it('should render with deprecated props', () => {
+    const images = [
+      {
+        href: '#nogo',
+        src: 'https://spark-assets.netlify.app/spark-placeholder.jpg',
+        alt: 'Spark Placeholder Logo',
+        analyticsString: 'award-1',
+        addClasses: 'oldImageClass',
+        linkAddClasses: 'oldLinkClass',
+      },
+    ];
+    const wrapper = mount(<SprkAward images={images} />);
+
+    expect(wrapper.find('.oldImageClass').length).toBe(1);
+    expect(wrapper.find('.oldLinkClass').length).toBe(1);
+  });
+
+  it('should prefer new props over deprecated props', () => {
+    const images = [
+      {
+        href: '#nogo',
+        src: 'https://spark-assets.netlify.app/spark-placeholder.jpg',
+        alt: 'Spark Placeholder Logo',
+        analyticsString: 'award-1',
+        addClasses: 'oldImageClass',
+        imageAdditionalClasses: 'newImageClass',
+        linkAddClasses: 'oldLinkClass',
+        linkAdditionalClasses: 'newLinkClass',
+      },
+    ];
+    const wrapper = mount(<SprkAward images={images} />);
+
+    expect(wrapper.find('.newImageClass').length).toBe(1);
+    expect(wrapper.find('.oldImageClass').length).toBe(0);
+    expect(wrapper.find('.newLinkClass').length).toBe(1);
+    expect(wrapper.find('.oldLinkClass').length).toBe(0);
+  });
 });

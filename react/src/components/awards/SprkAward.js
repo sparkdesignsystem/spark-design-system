@@ -48,6 +48,8 @@ const SprkAward = (props) => {
             href,
             linkAddClasses,
             addClasses,
+            imageAdditionalClasses,
+            linkAdditionalClasses,
             alt,
             src,
             element,
@@ -58,7 +60,7 @@ const SprkAward = (props) => {
             <TagName
               className={classnames(
                 'sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack',
-                linkAddClasses,
+                linkAdditionalClasses || linkAddClasses,
               )}
               href={TagName === 'a' ? href || '#nogo' : undefined}
               data-analytics={analyticsString}
@@ -68,7 +70,7 @@ const SprkAward = (props) => {
               <img
                 className={classnames(
                   'sprk-o-Stack__item sprk-o-Stack__item--center-column',
-                  addClasses,
+                  imageAdditionalClasses || addClasses,
                 )}
                 alt={alt}
                 src={src}
@@ -133,10 +135,17 @@ SprkAward.propTypes = {
       src: PropTypes.string.isRequired,
       /** The alt text for the image, icon, or SprkIcon. */
       alt: PropTypes.string.isRequired,
-      /** Additional classes for the image. */
+      /** Deprecated - Use `imageAdditionalClasses` instead.
+       * Additional classes for the image. */
       addClasses: PropTypes.string,
-      /** Additional classes for the link wrapping the image. */
+      /** Deprecated - Use `linkAdditionalClasses` instead.
+       * Additional classes for the link wrapping the image. */
       linkAddClasses: PropTypes.string,
+      /** Additional classes for the image. */
+      imageAdditionalClasses: PropTypes.string,
+      /** Additional classes for the link wrapping the image. */
+      linkAdditionalClasses: PropTypes.string,
+
       /**
        * Assigned to the `data-analytics` attribute
        * serving as a unique selector for outside libraries to capture data.
