@@ -2,7 +2,7 @@
   "promo": {
     "background-color": {
       "comment": "The background color of the Promo component.",
-      "value": "{colors.white.value",
+      "value": "{colors.white.value}",
       "type": "settings"
     },
     "border": {
@@ -37,7 +37,7 @@
     },
     "title-font-weight": {
       "comment": "The title font weight of the Promo component.",
-      "value": "{font-weight-display-four.value}",
+      "value": "{font-weight.display-four.value}",
       "type": "settings"
     },
     "subtitle-font-color": {
@@ -47,7 +47,7 @@
     },
     "subtitle-font-weight": {
       "comment": "The subtitle font weight of the Promo component.",
-      "value": "font-weight-body-one.value}",
+      "value": "{font-weight.body-one.value}",
       "type": "settings"
     }
   }
