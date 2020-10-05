@@ -133,6 +133,7 @@ describe('SprkAward:', () => {
     expect(wrapper.find('div.sprk-c-Toggle').length).toBe(1);
   });
 
+  // TODO - Remove linkAddClasses and addClasses as part of Issue 1279
   it('should render with deprecated props', () => {
     const images = [
       {
@@ -150,6 +151,7 @@ describe('SprkAward:', () => {
     expect(wrapper.find('.oldLinkClass').length).toBe(1);
   });
 
+  // TODO - Remove linkAddClasses and addClasses as part of Issue 1279
   it('should prefer new props over deprecated props', () => {
     const images = [
       {

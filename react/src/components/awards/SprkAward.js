@@ -42,6 +42,8 @@ const SprkAward = (props) => {
         splitAt={splitAt}
         itemSpacing={itemSpacing}
       >
+        {/* TODO - Remove linkAddClasses and addClasses
+        as part of Issue 1279 */}
         {images.map((image) => {
           const {
             analyticsString,
