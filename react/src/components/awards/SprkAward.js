@@ -17,7 +17,7 @@ const SprkAward = (props) => {
     splitAt,
     itemSpacing,
   } = props;
-  const classNames = classnames('sprk-o-CenteredColumn', additionalClasses);
+  const classNames = classnames(additionalClasses);
 
   return (
     <SprkStack

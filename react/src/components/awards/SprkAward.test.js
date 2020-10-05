@@ -8,7 +8,7 @@ import SprkAward from './SprkAward';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkAward:', () => {
-  it('should display a SprkAward with the correct base class', () => {
+  it('should display a SprkAward with the correct base classes', () => {
     const images = [
       {
         href: '#nogo',
@@ -24,11 +24,10 @@ describe('SprkAward:', () => {
       },
     ];
     const wrapper = mount(<SprkAward images={images} />);
-    expect(
-      wrapper.find(
-        'div.sprk-o-Stack.sprk-o-CenteredColumn.sprk-o-Stack--medium',
-      ).length,
-    ).toBe(1);
+    expect(wrapper.find('div').first().hasClass('sprk-o-Stack')).toBe(true);
+    expect(wrapper.find('div').first().hasClass('sprk-o-Stack--medium')).toBe(
+      true,
+    );
   });
 
   it('should display the award component with the images section', () => {
@@ -118,4 +117,11 @@ describe('SprkAward:', () => {
       expect(wrapper.find('a[href=""]').length).toBe(0);
     },
   );
+
+  it('should not add centered column class by default', () => {
+    const wrapper = mount(<SprkAward images={[]} />);
+    expect(wrapper.find('div.sprk-o-Stack.sprk-o-CenteredColumn').length).toBe(
+      0,
+    );
+  });
 });
