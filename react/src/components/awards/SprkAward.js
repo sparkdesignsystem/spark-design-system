@@ -94,12 +94,6 @@ const SprkAward = (props) => {
 SprkAward.defaultProps = {
   splitAt: 'small',
   itemSpacing: 'medium',
-  additionalClasses: '',
-  idString: '',
-  heading: '',
-  disclaimerText: '',
-  disclaimerAnalytics: '',
-  disclaimerTitle: '',
 };
 
 SprkAward.propTypes = {
