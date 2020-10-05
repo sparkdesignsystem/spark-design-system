@@ -1,0 +1,14 @@
+{
+  "divider": {
+    "color": {
+      "comment": "The value for color of Dividers.",
+      "value": "rgb(230, 230, 230)",
+      "type": "settings"
+    },
+    "border": {
+      "comment": "The value of border for Dividers.",
+      "value": "2px solid {divider.color.value}",
+      "type": "settings"
+    }
+  }
+}
