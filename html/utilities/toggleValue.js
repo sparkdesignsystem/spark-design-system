@@ -4,6 +4,6 @@ const toggleValue = (currentValue, value1, value2) => {
   }
 
   return value1;
-}
+};
 
 export { toggleValue as default };
