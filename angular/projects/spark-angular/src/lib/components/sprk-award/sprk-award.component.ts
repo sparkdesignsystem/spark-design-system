@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'sprk-award',
   template: `
     <sprk-stack
-      itemSpacing="medium"
+      itemSpacing="{{ itemSpacing }}"
       additionalClasses="{{ additionalClasses }}"
     >
       <h2
@@ -81,7 +81,7 @@ export class SprkAwardComponent {
    * The value supplied can be `tiny`, `small`, `medium`, `large`, or `huge`.
    */
   @Input()
-  itemSpacing: string;
+  itemSpacing: 'tiny' | 'small' | 'medium' | 'large' | 'huge' = 'medium';
   /**
    * The `alt` text that will be applied to the first image.
    */
@@ -180,11 +180,17 @@ export class SprkAwardComponent {
   @Input()
   imgTwoAdditionalClasses: string;
   /**
+   * Deprecated - use `heading` instead. The text that appears above the
+   * images and serves as the heading for the Award.
+   */
+  @Input()
+  title: string;
+  /**
    * The text that appears above the images and serves as the heading
    * for the Award.
    */
   @Input()
-  title: string;
+  heading: string;
   /**
    * The text that will be the clickable title of the disclaimer toggle.
    */
