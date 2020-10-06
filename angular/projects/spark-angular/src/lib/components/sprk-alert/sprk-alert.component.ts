@@ -48,7 +48,7 @@ export class SprkAlertComponent implements OnInit {
    * The type of Alert variant to render.
    * Can be `info`, `fail`, or `success`.
    */
-  // TODO: Remove `alertType` and update variant default to be info.
+  // TODO: Remove `alertType` and update variant default to be info - issue #1281.
   @Input()
   alertType: 'success' | 'fail' | 'info' = 'info';
   /**
@@ -133,7 +133,7 @@ export class SprkAlertComponent implements OnInit {
    * @ignore
    */
   getClassesAlertContainer(): string {
-    // TODO: Remove `alertType` and update variantToUse to `variant`.
+    // TODO: Remove `alertType` and update variantToUse to `variant` - issue #1281.
     const variantToUse = this.variant || this.alertType;
     const variantClasses = {
       success: 'sprk-c-Alert--success',
@@ -171,7 +171,7 @@ export class SprkAlertComponent implements OnInit {
   /**
    * @ignore
    */
-  // TODO: Remove when `dismissible` is deprecated.
+  // TODO: Remove when `dismissible` is deprecated - issue #1281.
   getIsAlertDismissible(): boolean {
     if (this.isDismissible === undefined && this.dismissible !== undefined) {
       this.isAlertDismissible = this.dismissible;
@@ -193,7 +193,7 @@ export class SprkAlertComponent implements OnInit {
     this.dismissEvent.emit();
   }
 
-  // TODO: Remove when `dismissible` is deprecated.
+  // TODO: Remove when `dismissible` is deprecated - issue #1281.
   ngOnInit(): void {
     this.getIsAlertDismissible();
   }
