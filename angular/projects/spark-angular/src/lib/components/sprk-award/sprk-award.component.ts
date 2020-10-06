@@ -75,7 +75,7 @@ export class SprkAwardComponent {
    * be `tiny`, `small`, `medium`, `large` or `huge`.
    */
   @Input()
-  splitAt: string;
+  splitAt: 'tiny' | 'small' | 'medium' | 'large' | 'huge';
   /**
    * This is used as the amount of spacing between the elements in the Award.
    * The value supplied can be `tiny`, `small`, `medium`, `large`, or `huge`.
