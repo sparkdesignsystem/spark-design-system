@@ -43,6 +43,7 @@ class SprkMastheadAccordionItem extends Component {
     } = this.props;
     const { isOpen, height, subNavLinks: stateLinks } = this.state;
     const TagName = element;
+    const uniqueIdentifier = itemId || uniqueId('sprk_accordion_item_');
     return (
       <li
         className={classNames(
@@ -61,7 +62,7 @@ class SprkMastheadAccordionItem extends Component {
               className="sprk-c-MastheadAccordion__summary"
               onClick={this.toggleAccordionOpen}
               aria-expanded={isOpen ? 'true' : 'false'}
-              aria-controls={itemId}
+              aria-controls={uniqueIdentifier}
               type="button"
             >
               <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
@@ -78,7 +79,7 @@ class SprkMastheadAccordionItem extends Component {
             <AnimateHeight duration={300} height={height}>
               <ul
                 className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
-                id={itemId}
+                id={uniqueIdentifier}
               >
                 {stateLinks.map((subnavlink) => {
                   const {
@@ -195,6 +196,8 @@ SprkMastheadAccordionItem.propTypes = {
   isActive: PropTypes.bool,
   /** Will render the element as a button with correct style. */
   isButton: PropTypes.bool,
+  /* The unique item `id` */
+  itemId: PropTypes.string,
   /**
    * The name of the icon to the left of the link text.
    * Will render in compatible components like narrowNav.
@@ -236,7 +239,6 @@ SprkMastheadAccordionItem.defaultProps = {
   isButton: false,
   subNavLinks: [],
   href: '#nogo',
-  itemId: uniqueId('sprk_accordion_item_'),
 };
 
 export default SprkMastheadAccordionItem;
