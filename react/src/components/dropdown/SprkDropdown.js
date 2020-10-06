@@ -10,7 +10,7 @@ class SprkDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      triggerText: props.defaultTriggerText,
+      triggerText: this.getTriggerText(),
       isOpen: false,
       choiceItems: props.choices.items.map(item => ({
         id: uniqueId(),
@@ -36,6 +36,18 @@ class SprkDropdown extends Component {
     window.removeEventListener('keydown', this.closeOnEsc);
     window.removeEventListener('focusin', this.closeOnClickOutside);
     window.removeEventListener('click', this.closeOnClickOutside);
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.choices !== prevProps.choices) {
+      const triggerText = this.getTriggerText();
+
+      if (this.state.triggerText !== triggerText) {
+        this.setState({
+          triggerText,
+        });
+      }
+    }
   }
 
   setSelectedChoice(componentToUpdateId) {
@@ -78,6 +90,18 @@ class SprkDropdown extends Component {
     this.setState({
       isOpen: false,
     });
+  }
+
+  getTriggerText() {
+    if (this.props.variant !== 'informational') {
+      return this.props.defaultTriggerText;
+    }
+
+    const defaultItem = this.props.choices?.items?.find((item) => item.default);
+
+    return defaultItem
+      ? defaultItem.text
+      : this.props.defaultTriggerText;
   }
 
   render() {
@@ -282,6 +306,11 @@ SprkDropdown.propTypes = {
         href: PropTypes.string,
         /** The text inside the choice item. */
         text: PropTypes.string,
+        /**
+         * If `default` is set to `true` and `dropdownType` is set to `informational`
+         * then `triggerText` will be automatically changed to this choice `value`
+         */
+        default: PropTypes.bool,
       }),
     ),
   }),

@@ -336,4 +336,88 @@ describe('SprkDropdown:', () => {
         .getAttribute('aria-label'),
     ).toBe('My Choices');
   });
+
+  it('should not change trigger text if default choice option was not set', () => {
+    const wrapper = mount(
+      <SprkDropdown
+        defaultTriggerText={'Make a selection'}
+        choices={{
+          items: [
+            { text: 'Item 1', value: 'item-1' },
+            { text: 'Item 2', value: 'item-2' },
+          ],
+        }}
+      />,
+    );
+
+    expect(wrapper.state('triggerText')).toBe('Make a selection');
+  });
+
+  it('should not change trigger text if default choice option specified, but variant is not "informational"', () => {
+    const wrapper = mount(
+      <SprkDropdown
+        defaultTriggerText={'Make a selection'}
+        choices={{
+          items: [
+            { text: 'Item 1', value: 'item-1' },
+            { text: 'Item 2', value: 'item-2', default: true },
+          ],
+        }}
+      />,
+    );
+
+    expect(wrapper.state('triggerText')).toBe('Make a selection');
+  });
+
+  it('should change trigger text if default choice option specified and variant equals "informational"', () => {
+    const wrapper = mount(
+      <SprkDropdown
+        defaultTriggerText={'Make a selection'}
+        variant={'informational'}
+        choices={{
+          items: [
+            { text: 'Item 1', value: 'item-1' },
+            { text: 'Item 2', value: 'item-2', default: true },
+          ],
+        }}
+      />,
+    );
+
+    expect(wrapper.state('triggerText')).toBe('Item 2');
+  });
+
+  it('should change trigger text when choices change', () => {
+    const wrapper = mount(
+      <SprkDropdown
+        defaultTriggerText={'Make a selection'}
+        variant={'informational'}
+        choices={{
+          items: [
+            { text: 'Item 1', value: 'item-1' },
+            { text: 'Item 2', value: 'item-2', default: true },
+          ],
+        }}
+      />,
+    );
+
+    wrapper.setProps({
+      choices: {
+        items: [
+          { text: 'Item First', value: 'item-11', default: true },
+          { text: 'Item Second', value: 'item-22' },
+        ]
+      }
+    })
+    expect(wrapper.state('triggerText')).toBe('Item First');
+
+    wrapper.setProps({
+      choices: {
+        items: [
+          { text: 'Item 5', value: 'item-5'},
+          { text: 'Item 6', value: 'item-6' },
+        ]
+      }
+    })
+    expect(wrapper.state('triggerText')).toBe('Make a selection');
+  })
 });
