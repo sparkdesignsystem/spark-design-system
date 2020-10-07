@@ -131,4 +131,28 @@ describe('SprkAwardComponent', () => {
     element = fixture.nativeElement.querySelector('h2');
     expect(element.getAttribute('data-id')).toBeNull();
   });
+
+  it('should respond to updates to title', () => {});
+
+  it('should prefer heading over title', () => {});
+
+  it('should respond to updates to analyticsStringImgOne', () => {});
+
+  it('should prefer imgOneAnalyticsString over analyticsStringImgOne', () => {});
+
+  it('should respond to updates to analyticsStringImgTwo', () => {});
+
+  it('should prefer imgTwoAnalyticsString over analyticsStringImgTwo', () => {});
+
+  it('should respond to updates to analyticsStringDisclaimer', () => {});
+
+  it('should prefer disclaimerAnalyticsString over analyticsStringDisclaimer', () => {});
+
+  it('should respond to updates to additionalClassesImgOne', () => {});
+
+  it('should prefer imgOneAdditionalClasses over additionalClassesImgOne', () => {});
+
+  it('should respond to updates to additionalClassesImgTwo', () => {});
+
+  it('should prefer imgTwoAdditionalClasses over additionalClassesImgTwo', () => {});
 });
