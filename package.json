@@ -14,10 +14,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "prebuild": "npm run clean && npm run sassdoc && npm run sassdocmodifiers && npm run sassdocutilities",
-    "sassdoc": "sassdoc './html/settings/**/*.scss' --parse > ./src/data/sass-vars.json",
+    "sassdoc": "sassdoc './styles/settings/**/*.scss' --parse > ./src/data/sass-vars.json",
     "clean": "gatsby clean",
-    "sassdocmodifiers": "sassdoc './html/**/_*.scss' --parse > ./src/data/sass-modifiers.json",
-    "sassdocutilities": "sassdoc './html/utilities/_*.scss' --parse > ./src/data/sass-utilities.json"
+    "sassdocmodifiers": "sassdoc './styles/**/_*.scss' --parse > ./src/data/sass-modifiers.json",
+    "sassdocutilities": "sassdoc './styles/utilities/_*.scss' --parse > ./src/data/sass-utilities.json"
   },
   "lint-staged": {
     "*.scss": [
