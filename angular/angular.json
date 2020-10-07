@@ -30,6 +30,7 @@
               }
             ],
             "styles": [
+              "../storybook-utilities/storybook-theming/scss/_spark-angular-manifest.scss",
               "../storybook-utilities/storybook-theming/_docs.scss"
             ],
             "scripts": []
