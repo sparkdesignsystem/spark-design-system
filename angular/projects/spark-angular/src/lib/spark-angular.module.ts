@@ -55,7 +55,7 @@ import { SprkTableModule } from './components/sprk-table/sprk-table.module';
 import { SprkToggleModule } from './components/sprk-toggle/sprk-toggle.module';
 import { SprkTooltipModule } from './components/sprk-tooltip/sprk-tooltip.module';
 import { SprkUnorderedListModule } from './components/sprk-unordered-list/sprk-unordered-list.module';
-import { SprkButtonModule } from './directives/inputs/sprk-button/sprk-button.module';
+import { SprkButtonModule } from './directives/sprk-button/sprk-button.module';
 import { SprkAwardModule } from './components/sprk-award/sprk-award.module';
 import { SprkCardModule } from './components/sprk-card/sprk-card.module';
 import { SprkDictionaryModule } from './components/sprk-dictionary/sprk-dictionary.module';

@@ -1,7 +1,7 @@
 import { SprkButtonModule } from './sprk-button.module';
-import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkButtonDirective } from './sprk-button.directive';
-import { markdownDocumentationLinkBuilder } from '../../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Button',
