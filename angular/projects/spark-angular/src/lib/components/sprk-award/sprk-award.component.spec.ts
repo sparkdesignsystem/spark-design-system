@@ -5,27 +5,12 @@ import { SprkAwardComponent } from './sprk-award.component';
 import { SprkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
-import { Component } from '@angular/core';
-
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-
-// @Component({
-//   selector: `sprk-test`,
-//   template: ` <sprk-award [title]="title" [heading]="heading"></sprk-award>`,
-// })
-// class WrappedAwardComponent {
-//   title: string; // = '';
-//   heading: string; // = '';
-// }
 
 describe('SprkAwardComponent', () => {
   let component: SprkAwardComponent;
   let fixture: ComponentFixture<SprkAwardComponent>;
   let element: HTMLElement;
-
-  // let wrappedComponent: WrappedAwardComponent;
-  // let wrappedFixture: ComponentFixture<WrappedAwardComponent>;
-  // let wrappedElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -37,7 +22,6 @@ describe('SprkAwardComponent', () => {
         SprkStackComponent,
         SprkStackItemDirective,
         SprkIconComponent,
-        // WrappedAwardComponent,
       ],
     }).compileComponents();
   }));
@@ -47,11 +31,6 @@ describe('SprkAwardComponent', () => {
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');
     fixture.detectChanges();
-
-    // wrappedFixture = TestBed.createComponent(WrappedAwardComponent);
-    // wrappedComponent = wrappedFixture.componentInstance;
-    // wrappedElement = wrappedFixture.nativeElement.querySelector('div');
-    // wrappedFixture.detectChanges();
   });
 
   it('should create itself', () => {
@@ -202,34 +181,63 @@ describe('SprkAwardComponent', () => {
     );
   });
 
-  // it('should prefer imgOneAnalyticsString over analyticsStringImgOne', () => {
-  //   component.imgOneAnalyticsString = 'testNewInput';
-  //   component.analyticsStringImgOne = 'testOldInput';
-  //   fixture.detectChanges;
-  //   console.log(element.outerHTML)
-  //   expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(
-  //     'testNewInput',
-  //   );
-  // });
+  it('should prefer imgOneAnalyticsString over analyticsStringImgOne', () => {
+    component.imgOneAnalyticsString = 'testNewInput';
+    component.analyticsStringImgOne = 'testOldInput';
+    fixture.detectChanges();
+    expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(
+      'testNewInput',
+    );
+  });
 
-  it('should respond to updates to analyticsStringImgTwo', () => {});
+  it('should respond to updates to analyticsStringImgTwo', () => {
+    let testString = 'test1';
+    component.analyticsStringImgTwo = testString;
+    fixture.detectChanges();
+    expect(
+      element.querySelectorAll('a')[1].getAttribute('data-analytics'),
+    ).toEqual(testString);
 
-  it('should prefer imgTwoAnalyticsString over analyticsStringImgTwo', () => {});
+    testString = 'test2';
+    component.analyticsStringImgTwo = testString;
+    fixture.detectChanges();
+    expect(
+      element.querySelectorAll('a')[1].getAttribute('data-analytics'),
+    ).toEqual(testString);
+  });
 
-  // it('should respond to updates to analyticsStringDisclaimer', () => {
-  //   let testString = "testDisclaimer";
-  //   // disclaimer inputs aren't showing up?
-  //   component.disclaimerCopy="foo";
-  //   component.disclaimerTitle="bar";
-  //   component.analyticsStringDisclaimer = testString;
-  //   fixture.detectChanges;
-  //   console.log(element.outerHTML);
-  //   expect(element.querySelector('button').getAttribute('data-analytics')).toEqual(
-  //     testString,
-  //   );
-  // });
+  it('should prefer imgTwoAnalyticsString over analyticsStringImgTwo', () => {
+    component.imgTwoAnalyticsString = 'testNewInput';
+    component.analyticsStringImgTwo = 'testOldInput';
+    fixture.detectChanges();
+    expect(
+      element.querySelectorAll('a')[1].getAttribute('data-analytics'),
+    ).toEqual('testNewInput');
+  });
 
-  it('should prefer disclaimerAnalyticsString over analyticsStringDisclaimer', () => {});
+  it('should respond to updates to analyticsStringDisclaimer', () => {
+    let testString = 'testDisclaimer';
+    component.disclaimerCopy = 'foo';
+    component.disclaimerTitle = 'bar';
+    component.analyticsStringDisclaimer = testString;
+    fixture.detectChanges();
+    expect(
+      element.querySelector('button').getAttribute('data-analytics'),
+    ).toEqual(testString);
+  });
+
+  it('should prefer disclaimerAnalyticsString over analyticsStringDisclaimer', () => {
+    const testOldProp = 'oldTest';
+    const testNewProp = 'newTest';
+    component.disclaimerCopy = 'foo';
+    component.disclaimerTitle = 'bar';
+    component.analyticsStringDisclaimer = testOldProp;
+    component.disclaimerAnalyticsString = testNewProp;
+    fixture.detectChanges();
+    expect(
+      element.querySelector('button').getAttribute('data-analytics'),
+    ).toEqual(testNewProp);
+  });
 
   it('should respond to updates to additionalClassesImgOne', () => {
     let testString = 'testClass';

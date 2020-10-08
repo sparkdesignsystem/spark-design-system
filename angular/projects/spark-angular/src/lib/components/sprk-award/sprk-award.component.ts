@@ -43,7 +43,7 @@ import { Component, Input } from '@angular/core';
             variant="unstyled"
             class="sprk-o-Stack"
             [attr.href]="imgTwoHref"
-            [analyticsString]="analyticsStringImgTwo"
+            [analyticsString]="imgTwoAnalyticsString || analyticsStringImgTwo"
           >
             <img
               [ngClass]="getClassesImgTwo()"
@@ -64,7 +64,9 @@ import { Component, Input } from '@angular/core';
         additionalClasses="sprk-o-Stack__item--start-column"
         toggleType="base"
         title="{{ disclaimerTitle }}"
-        analyticsString="{{ analyticsStringDisclaimer }}"
+        analyticsString="{{
+          disclaimerAnalyticsString || analyticsStringDisclaimer
+        }}"
       >
         <p class="sprk-b-TypeBodyFour">{{ disclaimerCopy }}</p>
       </sprk-toggle>
