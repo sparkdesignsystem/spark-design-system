@@ -13,7 +13,7 @@ class SprkDropdown extends Component {
       triggerText: this.getDefaultOptionText(),
       isOpen: false,
       choiceItems: props.choices.items.map((item) =>
-        item.default
+        item.isDefault
           ? {
               id: uniqueId(),
               ...item,
@@ -66,7 +66,7 @@ class SprkDropdown extends Component {
       return defaultTriggerText;
     }
 
-    const defaultOption = items.find((item) => item.default);
+    const defaultOption = items.find((item) => item.isDefault);
 
     return defaultOption ? defaultOption.content.title : defaultTriggerText;
   }
@@ -307,7 +307,7 @@ SprkDropdown.propTypes = {
         /**
          * If set to true, current option will be set as default selected option
          *  */
-        default: PropTypes.bool,
+        isDefault: PropTypes.bool,
       }),
     ),
     footer: PropTypes.node,

@@ -192,10 +192,10 @@ describe('SprkDropdown:', () => {
 
   it(
     'should set state with default choice option' +
-      ' having isActive as true, when default true attribute is provided',
+      ' having isActive as true, when isDefault true attribute is provided',
     () => {
       const choices = {
-        items: [{ text: 'Item 1', value: 'item-1', default: true }],
+        items: [{ text: 'Item 1', value: 'item-1', isDefault: true }],
       };
 
       const wrapper = mount(<SprkDropdown choices={choices} />);
@@ -205,10 +205,10 @@ describe('SprkDropdown:', () => {
 
   it(
     'should set state with default choice option' +
-      ' having isActive as true, when default true attribute is provided',
+      ' having isActive as true, when isDefault true attribute is provided',
     () => {
       const choices = {
-        items: [{ text: 'Item 1', value: 'item-1', default: true }],
+        items: [{ text: 'Item 1', value: 'item-1', isDefault: true }],
       };
 
       const wrapper = mount(<SprkDropdown choices={choices} />);
@@ -218,10 +218,10 @@ describe('SprkDropdown:', () => {
 
   it(
     'should set state with default choice option' +
-      ' having isActive as true, when default true attribute is provided',
+      ' having isActive as true, when isDefault true attribute is provided',
     () => {
       const choices = {
-        items: [{ text: 'Item 1', value: 'item-1', default: true }],
+        items: [{ text: 'Item 1', value: 'item-1', isDefault: true }],
       };
 
       const wrapper = mount(<SprkDropdown choices={choices} />);
@@ -258,7 +258,7 @@ describe('SprkDropdown:', () => {
     () => {
       const choices = {
         items: [
-          { content: { title: 'Item 1' }, value: 'item-1', default: true },
+          { content: { title: 'Item 1' }, value: 'item-1', isDefault: true },
         ],
       };
 
@@ -361,7 +361,7 @@ describe('SprkDropdown:', () => {
 
   it(
     'should choose aria-label text as default choice item title' +
-      ' if defaultTriggerText is provided and default is true for a choice' +
+      ' if defaultTriggerText is provided and isDefault is true for a choice' +
       ' and variant is informational',
     () => {
       const wrapper = mount(
@@ -369,7 +369,7 @@ describe('SprkDropdown:', () => {
           defaultTriggerText="test"
           variant="informational"
           choices={{
-            items: [{ content: { title: 'Item 1' }, default: true }],
+            items: [{ content: { title: 'Item 1' }, isDefault: true }],
           }}
         />,
       );
