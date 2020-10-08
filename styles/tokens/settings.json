@@ -3,17 +3,20 @@
     "selection-bg-color": {
       "comment": "Background color of any text when selected.",
       "value": "{colors.purple-lightest.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "selection-text-color": {
       "comment": "Text color of any text when selected.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "pre-overflow": {
       "comment": "Text color of any text when selected.",
       "value": "auto",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   }
 }

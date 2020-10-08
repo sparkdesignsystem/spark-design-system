@@ -3,72 +3,86 @@
     "inset-xs": {
       "comment": "Value for the extra small inset space.",
       "value": "4px 4px 4px 4px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "inset-s": {
       "comment": "Value for the small inset space.",
       "value": "8px 8px 8px 8px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "inset-m": {
       "comment": "Value for the medium inset space.",
       "value": "16px 16px 16px 16px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "inset-l": {
       "comment": "Value for the large inset space.",
       "value": "32px 32px 32px 32px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "inset-xl": {
       "comment": "Value for the extra large inset space.",
       "value": "64px 64px 64px 64px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "xs": {
       "comment": "Value for the extra small space setting.",
       "value": "4px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "s": {
       "comment": "Value for the small space setting.",
       "value": "8px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "m": {
       "comment": "Value for the medium space setting.",
       "value": "16px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "l": {
       "comment": "Value for the large space setting.",
       "value": "32px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "xl": {
       "comment": "Value for the extra large space setting.",
       "value": "64px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "misc-a": {
       "comment": "Value for the misc a space setting.",
       "value": "24px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "misc-b": {
       "comment": "Value for the misc b space setting.",
       "value": "40px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "misc-c": {
       "comment": "Value for the misc c space setting.",
       "value": "48px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "misc-d": {
       "comment": "Value for the misc d large space setting.",
       "value": "80px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   }
 }

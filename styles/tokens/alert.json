@@ -3,132 +3,158 @@
     "border-radius": {
       "comment": "Value for border-radius on the Alert component",
       "value": "4px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "border": {
       "comment": "Value for border on the Alert component.",
       "value": " 2px solid {colors.gray.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "shadow": {
       "comment": "Value for shadow on the Alert component.",
       "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "color": {
       "comment": "Value for color of the Alert component.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "bg-color": {
       "comment": "The background color of the default Alert component.",
       "value": "{colors.white.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "icon-size": {
       "comment": "Sets the height and width of the two icons used in the Alert component.",
       "value": "32px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "font-size": {
       "comment": "The font size of the text in the content area of the Alert component.",
       "value": "1rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "font-weight": {
       "comment": "The font weight of the text in the content area of the Alert component.",
       "value": "400",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "line-height": {
       "comment": "The line height of the text in the content area of the Alert component.",
       "value": "1.5",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "content-padding": {
       "comment": "The padding around the main content icon and message in the Alert component.",
       "value": "{space.m.value} {space.m.value} {space.m.value} {space.misc-a.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "dismiss-padding": {
       "comment": "The padding around the dismiss icon in the Alert component",
       "value": "{space.m.value} {space.misc-a.value} {space.m.value} {space.m.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "icon-margin": {
       "comment": "The margin for the icon in the Alert component.",
       "value": "0 {space.misc-a.value} 0 0",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "dismiss-icon-color": {
       "comment": "The color of the dismiss icon in the Alert component.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "dimiss-icon-size": {
       "comment": "The size of the dismiss icon in the Alert component.",
       "value": "{space.m.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "icon-color-info": {
       "comment": "The icon color of the Information Alert component.",
       "value": "{colors.blue.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "border-info": {
       "comment": "The border value of the Information Alert component.",
       "value": "2px solid {colors.blue.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "bg-color-info": {
       "comment": "The background color of the Information Alert component.",
       "value": "{alert.bg-color.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "text-color-info": {
       "comment": "The value for the color property in the Information Alert component.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "icon-color-success": {
       "comment": "The icon color of the Success Alert component.",
       "value": "{colors.green.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "border-success": {
       "comment": "The border value of the Success Alert component.",
       "value": "2px solid {colors.green.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "bg-color-success": {
       "comment": "The background color of the Success Alert component.",
       "value": "{alert.bg-color.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "text-color-success": {
       "comment": "The value for the color property in the Success Alert component.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "icon-color-fail": {
       "comment": "The icon color of the Fail Alert component.",
-      "value": "",
-      "type": "settings"
+      "value": "{colors.pink.value}",
+      "type": "settings",
+      "themable": true
     },
     "border-fail": {
       "comment": "The border value of the Fail Alert component.",
       "value": "2px solid {colors.pink.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "bg-color-fail": {
       "comment": "The background color of the Fail Alert component.",
       "value": "{alert.bg-color.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "text-color-fail": {
       "comment": "The value for the color property in the Fail Alert component.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   }
 }

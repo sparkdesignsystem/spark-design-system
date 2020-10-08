@@ -2,7 +2,7 @@ module.exports = {
   source: ['./tokens/**/*.json'],
   platforms: {
     web: {
-      transformGroup: 'scss',
+      transformGroup: ['themable/web'],
       prefix: 'sprk',
       buildPath: 'dist/design-tokens/web/',
       files: [

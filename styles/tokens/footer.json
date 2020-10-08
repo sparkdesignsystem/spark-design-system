@@ -3,47 +3,56 @@
     "background-color": {
       "comment": "Background color of the Footer",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "text-color": {
       "comment": "Text color on the Footer.",
       "value": "{colors.white.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "link-color": {
       "comment": "Link color on the Footer.",
       "value": "{colors.white.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "link-font-weight": {
       "comment": "Link font-weight on the Footer.",
       "value": "normal",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "icon-color": {
       "comment": "Icon color on the Footer.",
       "value": "{colors.white.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "trigger-color": {
       "comment": "Toggle trigger color on the Footer.",
       "value": "{colors.white.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "trigger-font-weight": {
       "comment": "Toggle trigger font-weight on the Footer.",
       "value": "normal",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "trigger-hover-color": {
       "comment": "Toggle trigger hover color on the Footer.",
       "value": "{colors.purple-light.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "toggle-transition": {
       "comment": "Toggle transition timing on the Footer.",
       "value": "0.3s",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   }
 }
