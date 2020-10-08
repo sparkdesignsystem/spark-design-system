@@ -14,6 +14,7 @@ import { RouterTestingModule } from '@angular/router/testing';
     <a href="#nogo" sprkLink variant="simple">Simple Link</a>
     <a href="#nogo" sprkLink variant="unstyled">Link</a>
     <a href="#nogo" sprkLink variant="light">Link</a>
+    <a href="#nogo" sprkLink variant="hasIcon">Link</a>
   `,
 })
 class TestComponent {}
@@ -25,10 +26,12 @@ describe('SprkLink Directive', () => {
   let linkElDisabled: HTMLElement;
   let linkRouter: HTMLElement;
   let linkPlain: HTMLElement;
+  // TODO: Remove 'icon' in issue #1293
   let linkIcon: HTMLElement;
   let linkSimple: HTMLElement;
   let linkUnstyled: HTMLElement;
   let linkLight: HTMLElement;
+  let linkHasIcon: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -44,10 +47,12 @@ describe('SprkLink Directive', () => {
     linkElDisabled = fixture.nativeElement.querySelectorAll('a')[1];
     linkRouter = fixture.nativeElement.querySelectorAll('a')[2];
     linkPlain = fixture.nativeElement.querySelectorAll('a')[3];
+    // TODO: Remove 'icon' in issue #1293
     linkIcon = fixture.nativeElement.querySelectorAll('a')[4];
     linkSimple = fixture.nativeElement.querySelectorAll('a')[5];
     linkUnstyled = fixture.nativeElement.querySelectorAll('a')[6];
     linkLight = fixture.nativeElement.querySelectorAll('a')[7];
+    linkHasIcon = fixture.nativeElement.querySelectorAll('a')[8];
   }));
 
   it('should create itself', () => {
@@ -63,10 +68,17 @@ describe('SprkLink Directive', () => {
     expect(linkSimple.classList.contains('sprk-b-Link--simple')).toBe(true);
   });
 
+  // TODO: Remove 'icon' in issue #1293
   it('should apply correct Spark classes for icon variant', () => {
     expect(linkIcon.classList.contains('sprk-b-Link')).toBe(true);
     expect(linkIcon.classList.contains('sprk-b-Link--simple')).toBe(false);
     expect(linkIcon.classList.contains('sprk-b-Link--has-icon')).toBe(true);
+  });
+
+  it('should apply correct Spark classes for hasIcon variant', () => {
+    expect(linkHasIcon.classList.contains('sprk-b-Link')).toBe(true);
+    expect(linkHasIcon.classList.contains('sprk-b-Link--simple')).toBe(false);
+    expect(linkHasIcon.classList.contains('sprk-b-Link--has-icon')).toBe(true);
   });
 
   it('should apply correct Spark classes for unstyled variant', () => {
