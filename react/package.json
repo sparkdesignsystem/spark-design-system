@@ -19,7 +19,7 @@
   "peerDependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "@sparkdesignsystem/spark": "^14.0.1"
+    "@sparkdesignsystem/spark": "^14.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
