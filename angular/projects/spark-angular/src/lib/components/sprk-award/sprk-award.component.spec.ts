@@ -157,33 +157,33 @@ describe('SprkAwardComponent', () => {
     let testString = 'initTitle';
     component.title = testString;
     fixture.detectChanges();
-    expect(element.querySelector('h2').textContent).toEqual(testString);
+    expect(element.querySelector('h2').textContent.trim()).toEqual(testString);
 
     testString = 'updatedTitle';
 
     component.title = testString;
     fixture.detectChanges();
-    expect(element.querySelector('h2').textContent).toEqual(testString);
+    expect(element.querySelector('h2').textContent.trim()).toEqual(testString);
   });
 
   it('should respond to updates to heading', () => {
     let testString = 'initHeading';
     component.heading = testString;
     fixture.detectChanges();
-    expect(element.querySelector('h2').textContent).toEqual(testString);
+    expect(element.querySelector('h2').textContent.trim()).toEqual(testString);
 
     testString = 'updatedHeading';
 
     component.heading = testString;
     fixture.detectChanges();
-    expect(element.querySelector('h2').textContent).toEqual(testString);
+    expect(element.querySelector('h2').textContent.trim()).toEqual(testString);
   });
 
   it('should prefer heading over title', () => {
     component.title = 'title2';
     component.heading = 'heading2';
     fixture.detectChanges();
-    expect(element.querySelector('h2').textContent).toEqual('heading2');
+    expect(element.querySelector('h2').textContent.trim()).toEqual('heading2');
   });
 
   it('should respond to updates to analyticsStringImgOne', () => {
