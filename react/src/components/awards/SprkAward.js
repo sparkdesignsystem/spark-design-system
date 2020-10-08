@@ -82,7 +82,7 @@ const SprkAward = (props) => {
         })}
       </SprkStack>
 
-      {(disclaimerTitle || disclaimerText) && (
+      {disclaimerTitle && disclaimerText && (
         <SprkToggle
           title={disclaimerTitle}
           analyticsString={disclaimerAnalytics}
