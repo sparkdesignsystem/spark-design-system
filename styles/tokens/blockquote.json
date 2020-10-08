@@ -3,22 +3,26 @@
     "source-prefix": {
       "comment": "Before pseudo-element on the Blockquote component.",
       "value": "-",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "margin": {
       "comment": "Value for the margin property on Blockquote component.",
       "value": "0",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "quote-margin": {
       "comment": "Value for the margin property on the quote in the Blockquote component.",
       "value": "0",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "quote-last-margin": {
       "comment": "Value for the margin property on the last quote in the Blockquote component.",
       "value": "0",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   }
 }

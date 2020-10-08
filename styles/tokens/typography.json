@@ -2,405 +2,483 @@
   "typography-breakpoint": {
     "comment": "The breakpoint used for typography.",
     "value": "54rem",
-    "type": "settings"
+    "type": "settings",
+      "themable": true
   },
   "measure": {
     "comment": "The max-width value for the .sprk-u-Measure class.",
     "value": "40rem",
-    "type": "settings"
+    "type": "settings",
+      "themable": true
   },
   "narrow-measure": {
     "comment": "The max-width value for the .sprk-u-Measure--narrow class.",
     "value": "25rem",
-    "type": "settings"
+    "type": "settings",
+      "themable": true
   },
   "webfonts": {
     "comment": "Expects a Sass List containing one or more nested Sass Lists. The nested lists should each contain: A List of urls to download a font, the name of the font and the weight of the font.",
-    "value": "",
-    "type": "settings"
+    "value": "''",
+    "type": "settings",
+      "themable": true
   },
   "font-display": {
     "comment": "The supplied value will be set on all generated Font-face calls, as font-display. The default is 'swap.'",
     "value": "swap",
-    "type": "settings"
+    "type": "settings",
+      "themable": true
   },
   "using-webfonts": {
     "comment": "Boolean value for if the app is using webfonts.",
     "value": "false",
-    "type": "settings"
+    "type": "settings",
+      "themable": true
   },
   "page-title": {
     "mark-color": {
       "comment": "The color of the Page Title mark",
       "value": "{colors.red.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "mark-width": {
       "comment": "The width of the Page Title mark",
       "value": "32px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "mark-height": {
       "comment": "The height of the Page Title mark",
       "value": "5px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "mark-height-wide-viewport": {
       "comment": "The height of the mark on a large viewport (using $sprk-typography-breakpoint)",
       "value": "6px",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "mark-padding": {
       "comment": "Amount of padding between the mark and the text on the page title mark.",
       "value": "0 0 {space.misc-a.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "mark-padding-wide-viewport": {
       "comment": "Amount of padding between the mark and the text on a large viewport (using $sprk-typography-breakpoint).",
       "value": "0 0 {space.m.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   },
   "font-family": {
     "display-one": {
       "comment": "The font-family, including fallbacks of TypeDisplayOne.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-two": {
       "comment": "The font-family, including fallbacks of TypeDisplayTwo.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-three": {
       "comment": "The font-family, including fallbacks of TypeDisplayThree.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-four": {
       "comment": "The font-family, including fallbacks of TypeDisplayFour.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-five": {
       "comment": "The font-family, including fallbacks of TypeDisplayFive.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-six": {
       "comment": "The font-family, including fallbacks of TypeDisplaySix.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-seven": {
       "comment": "The font-family, including fallbacks of TypeDisplaySeven.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-one": {
       "comment": "The font-family, including fallbacks of TypeBodyOne.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-two": {
       "comment": "The font-family, including fallbacks of TypeBodyTwo.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-three": {
       "comment": "The font-family, including fallbacks of TypeBodyThree.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-four": {
       "comment": "The font-family, including fallbacks of TypeBodyFour.",
       "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   },
   "font-size": {
     "display-one": {
       "comment": "The size of TypeDisplayOne when the viewport is narrower than $sprk-font-size-display-one-breakpoint.",
       "value": "2.75rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-one-wide": {
       "comment": "The size of TypeDisplayOne when the viewport is wider than $sprk-font-size-display-one-breakpoint.",
       "value": "3.375rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-two": {
       "comment": "The size of TypeDisplayTwo when the viewport is narrower than $sprk-font-size-display-two-breakpoint.",
       "value": "2rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-two-wide": {
       "comment": "The size of TypeDisplayTwo when the viewport is wider than $sprk-font-size-display-two-breakpoint.",
       "value": "2.5rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-three": {
       "comment": "The size of TypeDisplayThree when the viewport is narrower than $sprk-font-size-display-three-breakpoint.",
       "value": "1.75rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-three-wide": {
       "comment": "The size of TypeDisplayThree when the viewport is wider than $sprk-font-size-display-three-breakpoint.",
       "value": "2.125rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-four": {
       "comment": "The size of TypeDisplayFour.",
       "value": "1.625rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-five": {
       "comment": "The size of TypeDisplayFive.",
       "value": "1.25rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-six": {
       "comment": "The size of TypeDisplaySix.",
       "value": "1.25rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-seven": {
       "comment": "The size of TypeDisplaySeven.",
       "value": "1rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-one": {
       "comment": "The size of TypeBodyOne.",
       "value": "1rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-two": {
       "comment": "The size of TypeBodyTwo.",
       "value": "1rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-three": {
       "comment": "The font size of TypeBodyThree.",
       "value": "1rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-four": {
       "comment": "The font size of TypeBodyFour.",
       "value": "0.8125rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   },
   "font-weight": {
     "display-one": {
       "comment": "The weight of the TypeDisplayOne font.",
       "value": "bold",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-two": {
       "comment": "The weight of the TypeDisplayTwo font.",
       "value": "bold",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-three": {
       "comment": "The weight of the TypeDisplayThree font.",
       "value": "300",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-four": {
       "comment": "The weight of the TypeDisplayFour font.",
       "value": "bold",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-five": {
       "comment": "The weight of the TypeDisplayFive font.",
       "value": "500",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-six": {
       "comment": "The weight of the TypeDisplaySix font.",
       "value": "300",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-seven": {
       "comment": "The weight of the TypeDisplaySeven font.",
       "value": "500",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-one": {
       "comment": "The weight of the TypeBodyOne font.",
       "value": "500",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-two": {
       "comment": "The weight of the TypeBodyTwo font.",
       "value": "300",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-three": {
       "comment": "The weight of the TypeBodyThree font.",
       "value": "300",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-four": {
       "comment": "The weight of the TypeBodyFour font.",
       "value": "300",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   },
   "color": {
     "display-one": {
       "comment": "The color of TypeDisplayOne.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-two": {
       "comment": "The color of TypeDisplayTwo.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-three": {
       "comment": "The color of TypeDisplayThree.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-four": {
       "comment": "The color of TypeDisplayFour.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-five": {
       "comment": "The color of TypeDisplayFive.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-six": {
       "comment": "The color of TypeDisplaySix.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-seven": {
       "comment": "The color of TypeDisplaySeven.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-one": {
       "comment": "The color of TypeBodyOne.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-two": {
       "comment": "The color of TypeBodyTwo.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-three": {
       "comment": "The color of TypeBodyThree.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-four": {
       "comment": "The color of TypeBodyFour.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   },
   "line-height": {
     "display-one": {
       "comment": "The line-height of the TypeDisplayOne font when the viewport is narrower than $sprk-font-size-display-one-breakpoint.",
       "value": "1.27",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-one-wide": {
       "comment": "The line-height of the TypeDisplayOne font when the viewport is wider than $sprk-font-size-display-one-breakpoint.",
       "value": "1.03",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-two": {
       "comment": "The line-height of the TypeDisplayTwo font when the viewport is narrower than $sprk-font-size-display-two-breakpoint.",
       "value": "1",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-two-wide": {
       "comment": "The line-height of the TypeDisplayTwo font when the viewport is wider than $sprk-font-size-display-two-breakpoint.",
       "value": "1",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-three": {
       "comment": "The line-height of the TypeDisplayThree font when the viewport is narrower than $sprk-font-size-display-three-breakpoint.",
       "value": "1.6",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-three-wide": {
       "comment": "The line-height of the TypeDisplayThree font when the viewport is wider than $sprk-font-size-display-three-breakpoint.",
       "value": "1.32",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-four": {
       "comment": "The line-height of the TypeDisplayFour.",
       "value": "1.23",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-five": {
       "comment": "The line-height of the TypeDisplayFive.",
       "value": "1.2",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-six": {
       "comment": "The line-height of the TypeDisplaySix.",
       "value": "1.2",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "display-seven": {
       "comment": "The line-height of the TypeDisplaySeven.",
       "value": "1",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-one": {
       "comment": "The line-height of the TypeBodyOne.",
       "value": "1.6",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-two": {
       "comment": "The line-height of the TypeBodyTwo.",
       "value": "1.6",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-three": {
       "comment": "The line-height of the TypeBodyThree.",
       "value": "2",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "body-four": {
       "comment": "The line-height of the TypeBodyFour.",
       "value": "1.84",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "collision-top-crop": {
       "comment": "The top crop value for line height collision correction.",
       "value": "5",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "collision-bottom-crop": {
       "comment": "The bottom crop value for line height collision correction.",
       "value": "5",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   },
   "type-display": {
     "one-breakpoint": {
       "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-one to $sprk-font-size-display-one-wide.",
       "value": "43.75rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "two-breakpoint": {
       "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-two to $sprk-font-size-display-two-wide.",
       "value": "43.75rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "three-breakpoint": {
       "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-three to $sprk-font-size-display-three-wide.",
       "value": "43.75rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   }
 }

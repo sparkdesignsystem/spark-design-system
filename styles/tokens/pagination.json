@@ -3,47 +3,56 @@
     "max-width": {
       "comment": "The maximum width of the Pagination component.",
       "value": "26rem",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "pag-current-link-font-weight": {
       "comment": "The font weight of the current pagination link in the Pagination component.",
       "value": "500",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "link-color": {
       "comment": "The color of the pagination links in the Pagination component.",
       "value": "{colors.black.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "link-font-weight": {
       "comment": "The font weight of the pagination links in the Pagination component.",
       "value": "400",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "link-color-hover": {
       "comment": "The color of the pagination links on hover in the Pagination component.",
       "value": "{pag.link-color.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "selection-color": {
       "comment": "The accent color for selected pagination links in the Pagination component.",
       "value": "{colors.purple.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "selection-link-color": {
       "comment": "The text color of the currently selected pagination link in the Pagination component.",
       "value": "{colors.white.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "selection-link-color-hover": {
       "comment": "The text color of the currently selected pagination link on hover in the Pagination component.",
       "value": "{colors.white.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "circle-size": {
       "comment": "The width and height setting of the circle around the currently selected pagination link in the Pagination component.",
       "value": "2em",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   }
 }

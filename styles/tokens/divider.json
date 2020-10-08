@@ -3,12 +3,14 @@
     "color": {
       "comment": "The value for color of Dividers.",
       "value": "rgb(230, 230, 230)",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     },
     "border": {
       "comment": "The value of border for Dividers.",
       "value": "2px solid {divider.color.value}",
-      "type": "settings"
+      "type": "settings",
+      "themable": true
     }
   }
 }
