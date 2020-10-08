@@ -5,13 +5,27 @@ import { SprkAwardComponent } from './sprk-award.component';
 import { SprkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
+import { Component } from '@angular/core';
 
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
+
+@Component({
+  selector: `sprk-test`,
+  template: ` <sprk-award [title]="title" [heading]="heading"></sprk-award>`,
+})
+class WrappedAwardComponent {
+  title: string; // = '';
+  heading: string; // = '';
+}
 
 describe('SprkAwardComponent', () => {
   let component: SprkAwardComponent;
   let fixture: ComponentFixture<SprkAwardComponent>;
   let element: HTMLElement;
+
+  let wrappedComponent: WrappedAwardComponent;
+  let wrappedFixture: ComponentFixture<WrappedAwardComponent>;
+  let wrappedElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -23,6 +37,7 @@ describe('SprkAwardComponent', () => {
         SprkStackComponent,
         SprkStackItemDirective,
         SprkIconComponent,
+        WrappedAwardComponent,
       ],
     }).compileComponents();
   }));
@@ -31,6 +46,12 @@ describe('SprkAwardComponent', () => {
     fixture = TestBed.createComponent(SprkAwardComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');
+    fixture.detectChanges();
+
+    wrappedFixture = TestBed.createComponent(WrappedAwardComponent);
+    wrappedComponent = wrappedFixture.componentInstance;
+    wrappedElement = wrappedFixture.nativeElement.querySelector('div');
+    wrappedFixture.detectChanges();
   });
 
   it('should create itself', () => {
@@ -132,9 +153,25 @@ describe('SprkAwardComponent', () => {
     expect(element.getAttribute('data-id')).toBeNull();
   });
 
-  it('should respond to updates to title', () => {});
+  it('should respond to updates to title', () => {
+    let testString = 'initTitle';
+    wrappedComponent.title = testString;
+    wrappedFixture.detectChanges();
+    expect(wrappedElement.querySelector('h2').textContent).toEqual(testString);
 
-  it('should prefer heading over title', () => {});
+    testString = 'updatedTitle';
+
+    wrappedComponent.title = testString;
+    wrappedFixture.detectChanges();
+    expect(wrappedElement.querySelector('h2').textContent).toEqual(testString);
+  });
+
+  it('should prefer heading over title', () => {
+    wrappedComponent.title = 'title';
+    wrappedComponent.heading = 'heading';
+    wrappedFixture.detectChanges();
+    expect(wrappedElement.querySelector('h2').textContent).toEqual('heading');
+  });
 
   it('should respond to updates to analyticsStringImgOne', () => {});
 

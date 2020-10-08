@@ -18,7 +18,7 @@ import { Component, Input } from '@angular/core';
           sprk-o-Stack__item--center-column
         "
       >
-        {{ title }}
+        {{ heading || title }}
       </h2>
 
       <div sprkStackItem [ngClass]="getClasses()">
