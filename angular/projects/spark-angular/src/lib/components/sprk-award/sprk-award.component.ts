@@ -28,7 +28,7 @@ import { Component, Input } from '@angular/core';
             variant="unstyled"
             class="sprk-o-Stack"
             [attr.href]="imgOneHref"
-            [analyticsString]="analyticsStringImgOne"
+            [analyticsString]="imgOneAnalyticsString || analyticsStringImgOne"
           >
             <img
               [ngClass]="getClassesImgOne()"
@@ -57,7 +57,8 @@ import { Component, Input } from '@angular/core';
       <sprk-toggle
         *ngIf="
           disclaimer !== 'false' &&
-          disclaimerTitle !== undefined && disclaimerCopy !== undefined
+          disclaimerTitle !== undefined &&
+          disclaimerCopy !== undefined
         "
         sprkStackItem
         additionalClasses="sprk-o-Stack__item--start-column"
@@ -288,7 +289,11 @@ export class SprkAwardComponent {
       'sprk-o-Stack__item sprk-o-Stack__item--center-column',
     ];
 
-    if (this.additionalClassesImgOne) {
+    if (this.imgOneAdditionalClasses) {
+      this.imgOneAdditionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    } else if (this.additionalClassesImgOne) {
       this.additionalClassesImgOne.split(' ').forEach((className) => {
         classArray.push(className);
       });
@@ -304,7 +309,11 @@ export class SprkAwardComponent {
       'sprk-o-Stack__item sprk-o-Stack__item--center-column',
     ];
 
-    if (this.additionalClassesImgTwo) {
+    if (this.imgTwoAdditionalClasses) {
+      this.imgTwoAdditionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    } else if (this.additionalClassesImgTwo) {
       this.additionalClassesImgTwo.split(' ').forEach((className) => {
         classArray.push(className);
       });
