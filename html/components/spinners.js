@@ -8,7 +8,7 @@ const getSpinnerClasses = (options) => {
     classes.push('sprk-c-Spinner--large');
   }
 
-  // TODO: Deprecate lightness option in favor of variant
+  // TODO: Deprecate lightness option in favor of variant - issue #1292
   if (options.lightness === 'dark' || options.variant === 'dark') {
     classes.push('sprk-c-Spinner--dark');
   }
@@ -48,7 +48,7 @@ const spinners = () => {
   getElements('[data-sprk-spinner="click"]', (spinnerContainer) => {
     const options = {};
     options.size = spinnerContainer.getAttribute('data-sprk-spinner-size');
-    // TODO: Deprecate lightness option in favor of variant
+    // TODO: Deprecate lightness option in favor of variant - issue #1292
     options.lightness = spinnerContainer.getAttribute(
       'data-sprk-spinner-lightness',
     );
