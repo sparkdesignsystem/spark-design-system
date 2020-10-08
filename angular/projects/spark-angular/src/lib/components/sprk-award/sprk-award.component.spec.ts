@@ -153,25 +153,25 @@ describe('SprkAwardComponent', () => {
     expect(element.getAttribute('data-id')).toBeNull();
   });
 
-  it('should respond to updates to title', () => {
-    let testString = 'initTitle';
-    wrappedComponent.title = testString;
-    wrappedFixture.detectChanges();
-    expect(wrappedElement.querySelector('h2').textContent).toEqual(testString);
+  // it('should respond to updates to title', () => {
+  //   let testString = 'initTitle';
+  //   wrappedComponent.title = testString;
+  //   wrappedFixture.detectChanges();
+  //   expect(wrappedElement.querySelector('h2').textContent).toEqual(testString);
 
-    testString = 'updatedTitle';
+  //   testString = 'updatedTitle';
 
-    wrappedComponent.title = testString;
-    wrappedFixture.detectChanges();
-    expect(wrappedElement.querySelector('h2').textContent).toEqual(testString);
-  });
+  //   wrappedComponent.title = testString;
+  //   wrappedFixture.detectChanges();
+  //   expect(wrappedElement.querySelector('h2').textContent).toEqual(testString);
+  // });
 
-  it('should prefer heading over title', () => {
-    wrappedComponent.title = 'title';
-    wrappedComponent.heading = 'heading';
-    wrappedFixture.detectChanges();
-    expect(wrappedElement.querySelector('h2').textContent).toEqual('heading');
-  });
+  // it('should prefer heading over title', () => {
+  //   wrappedComponent.title = 'title';
+  //   wrappedComponent.heading = 'heading';
+  //   wrappedFixture.detectChanges();
+  //   expect(wrappedElement.querySelector('h2').textContent).toEqual('heading');
+  // });
 
   it('should respond to updates to analyticsStringImgOne', () => {});
 
@@ -192,4 +192,18 @@ describe('SprkAwardComponent', () => {
   it('should respond to updates to additionalClassesImgTwo', () => {});
 
   it('should prefer imgTwoAdditionalClasses over additionalClassesImgTwo', () => {});
+
+  it('should only display the toggle if both Inputs are provided', () => {
+    fixture.detectChanges();
+    expect(element.querySelectorAll('.sprk-c-Toggle').length).toEqual(0);
+
+    component.disclaimerCopy = 'copy';
+    fixture.detectChanges();
+    expect(element.querySelectorAll('.sprk-c-Toggle').length).toEqual(0);
+
+    component.disclaimerCopy = 'copy';
+    component.disclaimerTitle = 'title';
+    fixture.detectChanges();
+    expect(element.querySelectorAll('.sprk-c-Toggle').length).toEqual(1);
+  });
 });

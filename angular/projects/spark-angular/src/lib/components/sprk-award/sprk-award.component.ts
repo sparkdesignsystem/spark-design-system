@@ -57,7 +57,7 @@ import { Component, Input } from '@angular/core';
       <sprk-toggle
         *ngIf="
           disclaimer !== 'false' &&
-          (disclaimerTitle !== undefined || disclaimerCopy !== undefined)
+          disclaimerTitle !== undefined && disclaimerCopy !== undefined
         "
         sprkStackItem
         additionalClasses="sprk-o-Stack__item--start-column"
