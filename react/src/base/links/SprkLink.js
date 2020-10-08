@@ -12,6 +12,7 @@ const SprkLink = (props) => {
     analyticsString,
     onClick,
     href,
+    isDisabled,
     ...other
   } = props;
   const TagName = element || 'a';
@@ -19,7 +20,8 @@ const SprkLink = (props) => {
     'sprk-b-Link': variant !== 'unstyled',
     'sprk-b-Link--simple': variant === 'simple',
     'sprk-b-Link--plain': variant === 'plain',
-    'sprk-b-Link--disabled': variant === 'disabled',
+    // TODO: Remove the disabled variant in issue #{issueNumber}
+    'sprk-b-Link--disabled': variant === 'disabled' || isDisabled,
     'sprk-b-Link--has-icon': variant === 'has-icon' || variant === 'hasIcon',
     'sprk-b-Link--light': variant === 'light',
   });
@@ -63,9 +65,10 @@ SprkLink.propTypes = {
   /**
    * Will cause the appropriate variant
    * type to render.
+   * The `disabled` variant is deprecated. Use `isDisabled` instead.
    */
+  // TODO: Remove the disabled prop in issue #{issueNumber}
   variant: PropTypes.oneOf([
-    'base',
     'simple',
     'has-icon',
     'hasIcon',
@@ -101,10 +104,10 @@ SprkLink.propTypes = {
   ]),
   /** The event that will fire when the link is clicked. */
   onClick: PropTypes.func,
-};
-
-SprkLink.defaultProps = {
-  variant: 'base',
+  /**
+   * Will render the component in its disabled state.
+   */
+  isDisabled: PropTypes.bool,
 };
 
 export default SprkLink;
