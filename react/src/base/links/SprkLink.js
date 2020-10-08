@@ -20,7 +20,7 @@ const SprkLink = (props) => {
     'sprk-b-Link': variant !== 'unstyled',
     'sprk-b-Link--simple': variant === 'simple',
     'sprk-b-Link--plain': variant === 'plain',
-    // TODO: Remove the disabled variant in issue #{issueNumber}
+    // TODO: Remove the disabled variant in issue #1293
     'sprk-b-Link--disabled': variant === 'disabled' || isDisabled,
     'sprk-b-Link--has-icon': variant === 'has-icon' || variant === 'hasIcon',
     'sprk-b-Link--light': variant === 'light',
@@ -67,7 +67,7 @@ SprkLink.propTypes = {
    * type to render.
    * The `disabled` variant is deprecated. Use `isDisabled` instead.
    */
-  // TODO: Remove the disabled prop in issue #{issueNumber}
+  // TODO: Remove the disabled prop in issue #1293
   variant: PropTypes.oneOf([
     'simple',
     'has-icon',
