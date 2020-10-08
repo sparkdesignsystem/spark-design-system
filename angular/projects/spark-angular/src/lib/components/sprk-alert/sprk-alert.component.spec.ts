@@ -1,7 +1,23 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkAlertComponent } from './sprk-alert.component';
+import { Component } from '@angular/core';
 
+@Component({
+  selector: `sprk-test`,
+  template: `<sprk-alert
+    [variant]="variant"
+    [isDismissible]="isDismissible"
+    [dismissible]="dismissible"
+    [isVisible]="isVisible"
+  ></sprk-alert>`,
+})
+class WrappedAlertComponent {
+  variant: string;
+  isDismissible: boolean = undefined;
+  dismissible: boolean = undefined;
+  isVisible: boolean = true;
+}
 describe('SprkAlertComponent', () => {
   let component: SprkAlertComponent;
   let fixture: ComponentFixture<SprkAlertComponent>;
@@ -10,9 +26,16 @@ describe('SprkAlertComponent', () => {
   let iconElement: HTMLElement;
   let dismissIconElement: HTMLElement;
 
+  let wrappedComponent: WrappedAlertComponent;
+  let wrappedFixture: ComponentFixture<WrappedAlertComponent>;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkAlertComponent, SprkIconComponent],
+      declarations: [
+        SprkAlertComponent,
+        SprkIconComponent,
+        WrappedAlertComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -29,6 +52,11 @@ describe('SprkAlertComponent', () => {
     dismissIconElement = fixture.nativeElement.querySelector(
       '.sprk-c-Alert__icon--dismiss',
     );
+
+    wrappedFixture = TestBed.createComponent(WrappedAlertComponent);
+    wrappedComponent = wrappedFixture.componentInstance;
+    wrappedComponent.isVisible = true;
+    wrappedFixture.detectChanges();
   });
 
   it('should create itself', () => {
@@ -249,26 +277,56 @@ describe('SprkAlertComponent', () => {
   });
 
   it('should not be dismissible if dismissible is set to false', () => {
-    component.dismissible = false;
-    fixture.detectChanges();
-    expect(component.getIsAlertDismissible()).toEqual(false);
+    wrappedComponent.dismissible = true;
+    wrappedFixture.detectChanges();
+    expect(
+      wrappedFixture.nativeElement.querySelectorAll('button').length,
+    ).toEqual(1);
+    wrappedComponent.dismissible = false;
+    wrappedFixture.detectChanges();
+    expect(
+      wrappedFixture.nativeElement.querySelectorAll('button').length,
+    ).toEqual(0);
   });
 
   it('should not be dismissible if isDismissible is set to false', () => {
-    component.isDismissible = false;
-    fixture.detectChanges();
-    expect(component.getIsAlertDismissible()).toEqual(false);
+    wrappedComponent.isDismissible = true;
+    wrappedFixture.detectChanges();
+    expect(
+      wrappedFixture.nativeElement.querySelectorAll('button').length,
+    ).toEqual(1);
+    wrappedComponent.isDismissible = false;
+    wrappedFixture.detectChanges();
+    expect(
+      wrappedFixture.nativeElement.querySelectorAll('button').length,
+    ).toEqual(0);
   });
 
-  it('should be dismissible if isDismissible and dismissible are not set', () => {
-    fixture.detectChanges();
-    expect(component.getIsAlertDismissible()).toEqual(true);
+  it('should prefer isDismissible over dismissible', () => {
+    wrappedComponent.isDismissible = true;
+    wrappedComponent.dismissible = false;
+    wrappedFixture.detectChanges();
+    expect(
+      wrappedFixture.nativeElement.querySelectorAll('button').length,
+    ).toEqual(1);
+    wrappedComponent.isDismissible = false;
+    wrappedComponent.dismissible = true;
+    wrappedFixture.detectChanges();
+    expect(
+      wrappedFixture.nativeElement.querySelectorAll('button').length,
+    ).toEqual(0);
   });
 
-  it('should prefer isDismissible to dismissible if both are set', () => {
-    component.isDismissible = false;
-    component.dismissible = true;
-    fixture.detectChanges();
-    expect(component.getIsAlertDismissible()).toEqual(false);
+  it('should not change dismissible if another Input is changed', () => {
+    wrappedComponent.variant = 'fail';
+    wrappedFixture.detectChanges();
+    expect(
+      wrappedFixture.nativeElement.querySelectorAll('button').length,
+    ).toEqual(1);
+    wrappedComponent.variant = 'success';
+    wrappedFixture.detectChanges();
+    expect(
+      wrappedFixture.nativeElement.querySelectorAll('button').length,
+    ).toEqual(1);
   });
 });

@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'sprk-alert',
@@ -36,7 +43,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
     </div>
   `,
 })
-export class SprkAlertComponent implements OnInit {
+export class SprkAlertComponent implements OnChanges {
   /**
    * The type of Alert variant to render.
    * Can be `info`, `fail`, or `success`.
@@ -169,21 +176,6 @@ export class SprkAlertComponent implements OnInit {
   }
 
   /**
-   * @ignore
-   */
-  // TODO: Remove when `dismissible` is deprecated - issue #1281.
-  getIsAlertDismissible(): boolean {
-    if (this.isDismissible === undefined && this.dismissible !== undefined) {
-      this.isAlertDismissible = this.dismissible;
-    } else if (this.isDismissible !== undefined) {
-      this.isAlertDismissible = this.isDismissible;
-    } else {
-      this.isAlertDismissible = true;
-    }
-    return this.isAlertDismissible;
-  }
-
-  /**
    * When the dismiss button is clicked
    * this method sets `isVisible` to `false`
    * and hides the Alert component.
@@ -194,7 +186,11 @@ export class SprkAlertComponent implements OnInit {
   }
 
   // TODO: Remove when `dismissible` is deprecated - issue #1281.
-  ngOnInit(): void {
-    this.getIsAlertDismissible();
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['isDismissible']) {
+      this.isAlertDismissible = changes['isDismissible'].currentValue;
+    } else if (changes['dismissible']) {
+      this.isAlertDismissible = changes['dismissible'].currentValue;
+    }
   }
 }
