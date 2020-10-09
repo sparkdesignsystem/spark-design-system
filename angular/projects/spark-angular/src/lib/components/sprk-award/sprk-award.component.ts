@@ -6,10 +6,10 @@ import { Component, Input } from '@angular/core';
     <sprk-stack
       itemSpacing="{{ itemSpacing }}"
       additionalClasses="{{ additionalClasses }}"
+      idString="{{ idString }}"
     >
       <h2
         sprkStackItem
-        [attr.data-id]="idString"
         class="
           sprk-o-Stack__item
           sprk-b-TypeDisplayFive
