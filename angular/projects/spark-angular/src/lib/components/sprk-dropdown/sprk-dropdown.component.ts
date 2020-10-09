@@ -382,6 +382,11 @@ export class SprkDropdownComponent implements OnChanges {
     const defaultChoice = this._lookupDefaultChoice();
 
     if (defaultChoice) {
+      // Deactivate previously activated choices
+      this.clearActiveChoices();
+      // Mark default choice as active
+      defaultChoice.active = true;
+      // Update trigger text
       this.triggerText = defaultChoice.value;
     }
   }

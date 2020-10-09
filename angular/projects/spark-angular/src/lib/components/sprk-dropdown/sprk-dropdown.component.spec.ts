@@ -320,6 +320,29 @@ describe('SprkDropdownComponent', () => {
     const triggerTextElement = fixture.nativeElement.getElementsByTagName('a')[0].firstElementChild;
     expect(triggerTextElement.textContent).toEqual(wrapperComponent.choices[1].value);
   });
+
+  it('should set active: true for default choice', () => {
+    wrapperComponent.dropdownType = 'informational';
+    wrapperComponent.choices = [
+      {
+        text: 'Option 1',
+        value: 'Option 1',
+        active: true
+      },
+      {
+        text: 'Option 2',
+        value: 'Option 2',
+        active: false,
+        isDefault: true
+      }
+    ];
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+
+
+    const triggerTextElement = fixture.nativeElement.querySelector('[aria-selected="true"]');
+    expect(triggerTextElement.textContent.trim()).toEqual(wrapperComponent.choices[1].value);
+  });
 });
 
 
