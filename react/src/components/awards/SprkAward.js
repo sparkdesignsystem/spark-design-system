@@ -103,7 +103,11 @@ SprkAward.defaultProps = {
 };
 
 SprkAward.propTypes = {
-  /** Determines the spacing between the items. */
+  /**
+   * Determines the spacing between the items.
+   * `misc-a`, `misc-b`, etc are deprecated. Use `miscA`, `miscB`, etc
+   * instead.
+   */
   itemSpacing: PropTypes.oneOf([
     'tiny',
     'small',
