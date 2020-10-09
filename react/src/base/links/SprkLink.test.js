@@ -96,6 +96,16 @@ describe('SprkLink:', () => {
     },
   );
 
+  it(
+    'should display a link element with correct classes when' +
+      ' isDisabled is true',
+    () => {
+      const wrapper = shallow(<SprkLink isDisabled />);
+      expect(wrapper.find('a').hasClass('sprk-b-Link')).toBe(true);
+      expect(wrapper.find('a').hasClass('sprk-b-Link--disabled')).toBe(true);
+    },
+  );
+
   it('href should equal # if not provided', () => {
     const wrapper = shallow(<SprkLink />);
     expect(wrapper.find('a[href="#"]').length).toBe(1);
