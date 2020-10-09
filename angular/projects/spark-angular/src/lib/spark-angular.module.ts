@@ -71,6 +71,7 @@ import { SprkRadioItemModule } from './components/inputs/sprk-radio-item/sprk-ra
 import { SprkCheckboxGroupModule } from './components/inputs/sprk-checkbox-group/sprk-checkbox-group.module';
 import { SprkCheckboxItemModule } from './components/inputs/sprk-checkbox-item/sprk-checkbox-item.module';
 import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divider.module';
+import { SprkSpinnerDirectiveModule } from './directives/sprk-spinner/sprk-spinner.module';
 @NgModule({
   exports: [
     SprkAlertModule,
