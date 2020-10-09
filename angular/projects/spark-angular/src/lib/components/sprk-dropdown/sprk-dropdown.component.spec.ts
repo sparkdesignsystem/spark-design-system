@@ -259,7 +259,7 @@ describe('SprkDropdownComponent', () => {
       {
         text: 'Option 2',
         value: 'Option 2',
-        default: true
+        isDefault: true
       }
     ];
     fixture.detectChanges();
@@ -278,7 +278,7 @@ describe('SprkDropdownComponent', () => {
       {
         text: 'Option 2',
         value: 'Option 2',
-        default: true
+        isDefault: true
       }
     ];
 
@@ -298,7 +298,7 @@ describe('SprkDropdownComponent', () => {
       {
         text: 'Option 2',
         value: 'Option 2',
-        default: true
+        isDefault: true
       }
     ];
     fixture.detectChanges();
@@ -311,7 +311,7 @@ describe('SprkDropdownComponent', () => {
       {
         text: 'Second Option',
         value: 'Second Option',
-        default: true
+        isDefault: true
       }
     ];
 

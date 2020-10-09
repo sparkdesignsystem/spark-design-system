@@ -89,7 +89,7 @@ export const informational = () => ({
         },
         value: 'Choice Title 2',
         active: true,
-        default: true
+        isDefault: true
       }
     ]"
     >

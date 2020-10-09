@@ -387,9 +387,9 @@ export class SprkDropdownComponent implements OnChanges {
   }
 
   /**
-   * Lookup choice with specified `default: true` field
+   * Lookup choice with specified `isDefault: true` field
    */
   protected _lookupDefaultChoice(): ISprkDropdownChoice | null {
-    return this.choices.find((choice) => choice.default) || null;
+    return this.choices.find((choice) => choice.isDefault) || null;
   }
 }
