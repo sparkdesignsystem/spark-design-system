@@ -84,4 +84,46 @@ describe('SprkAccordionItem:', () => {
       wrapper.find('button').getDOMNode().getAttribute('aria-controls'),
     ).toEqual('test-id');
   });
+
+  it('should prefer headingAdditionalClasses over headingAddClasses', () => {
+    let wrapper = mount(
+      <SprkAccordionItem
+        headingAdditionalClasses="test"
+        headingAddClasses="test2"
+      />,
+    );
+    expect(wrapper.find('.sprk-c-Accordion__heading.test').length).toBe(1);
+    expect(wrapper.find('.sprk-c-Accordion__heading.test2').length).toBe(0);
+
+    wrapper = mount(<SprkAccordionItem headingAddClasses="test2" />);
+    expect(wrapper.find('.sprk-c-Accordion__heading.test').length).toBe(0);
+    expect(wrapper.find('.sprk-c-Accordion__heading.test2').length).toBe(1);
+  });
+
+  it('should prefer contentAdditionalClasses over contentAddClasses', () => {
+    let wrapper = mount(
+      <SprkAccordionItem
+        contentAdditionalClasses="test"
+        contentAddClasses="test2"
+      />,
+    );
+    expect(wrapper.find('.sprk-c-Accordion__content.test').length).toBe(1);
+    expect(wrapper.find('.sprk-c-Accordion__content.test2').length).toBe(0);
+
+    wrapper = mount(<SprkAccordionItem contentAddClasses="test2" />);
+    expect(wrapper.find('.sprk-c-Accordion__content.test').length).toBe(0);
+    expect(wrapper.find('.sprk-c-Accordion__content.test2').length).toBe(1);
+  });
+
+  it('should prefer iconAdditionalClasses over iconAddClasses', () => {
+    let wrapper = mount(
+      <SprkAccordionItem iconAdditionalClasses="test" iconAddClasses="test2" />,
+    );
+    expect(wrapper.find('.sprk-c-Icon--toggle.test').length).toBe(1);
+    expect(wrapper.find('.sprk-c-Icon--toggle.test2').length).toBe(0);
+
+    wrapper = mount(<SprkAccordionItem iconAddClasses="test2" />);
+    expect(wrapper.find('.sprk-c-Icon--toggle.test').length).toBe(0);
+    expect(wrapper.find('.sprk-c-Icon--toggle.test2').length).toBe(1);
+  });
 });

@@ -33,9 +33,12 @@ class SprkAccordionItem extends Component {
       children,
       heading,
       headingAddClasses,
+      headingAdditionalClasses,
       additionalClasses,
       contentAddClasses,
+      contentAdditionalClasses,
       iconAddClasses,
+      iconAdditionalClasses,
       isDefaultOpen,
       id,
       ...other
@@ -45,7 +48,7 @@ class SprkAccordionItem extends Component {
     const iconClasses = classnames(
       'sprk-c-Icon--toggle sprk-c-Accordion__icon sprk-c-Icon--xl',
       { 'sprk-c-Icon--open': isOpen },
-      iconAddClasses,
+      iconAdditionalClasses || iconAddClasses,
     );
 
     const itemClassNames = classnames(
@@ -57,7 +60,7 @@ class SprkAccordionItem extends Component {
     const headingClassNames = classnames(
       'sprk-c-Accordion__heading',
       'sprk-b-TypeDisplaySeven',
-      headingAddClasses,
+      headingAdditionalClasses || headingAddClasses,
     );
 
     return (
@@ -82,7 +85,7 @@ class SprkAccordionItem extends Component {
           <div
             className={classnames(
               'sprk-c-Accordion__content',
-              contentAddClasses,
+              contentAdditionalClasses || contentAddClasses,
             )}
             id={id}
           >
@@ -112,10 +115,16 @@ SprkAccordionItem.propTypes = {
    * The text for the item heading.
    */
   heading: PropTypes.string.isRequired,
+  // TODO remove as part of Issue XXXX
+  /**
+   * Deprecated - use `headingAdditionalClasses` instead. Expects a space
+   * separated string of classes to be added to the heading.
+   */
+  headingAddClasses: PropTypes.string,
   /**
    * Expects a space separated string of classes to be added to the heading.
    */
-  headingAddClasses: PropTypes.string,
+  headingAdditionalClasses: PropTypes.string,
   /**
    * A space-separated string of classes to add to the outermost container of
    * the component.
@@ -130,15 +139,27 @@ SprkAccordionItem.propTypes = {
    * Used to specify whether the item should be open by default.
    */
   isDefaultOpen: PropTypes.bool,
+  // TODO remove as part of Issue XXXX
+  /**
+   * Deprecated - use `iconAdditionalClasses` instead. Expects a space
+   * separated string of classes to be added to the icon.
+   */
+  iconAddClasses: PropTypes.string,
   /**
    * Expects a space separated string of classes to be added to the icon.
    */
-  iconAddClasses: PropTypes.string,
+  iconAdditionalClasses: PropTypes.string,
+  // TODO remove as part of Issue XXXX
+  /**
+   * Deprecated - use `contentAdditionalClasses` instead. Expects a space
+   * separated string of classes to be added to the toggle content.
+   */
+  contentAddClasses: PropTypes.string,
   /**
    * Expects a space separated string of classes to be added to the toggle
    * content.
    */
-  contentAddClasses: PropTypes.string,
+  contentAdditionalClasses: PropTypes.string,
   /**
    * A unique ID for the accordion item.
    */
