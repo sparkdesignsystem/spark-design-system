@@ -28,7 +28,7 @@ export const defaultStory = () => ({
   template: `
     <sprk-award
       splitAt="tiny"
-      title="Award Component Heading"
+      heading="Award Component Heading"
       imgOneSrc="https://spark-assets.netlify.app/spark-logo-updated.svg"
       imgTwoSrc="https://spark-assets.netlify.app/spark-logo-updated.svg"
       imgOneAlt="placeholder!"
@@ -44,9 +44,8 @@ export const defaultStory = () => ({
         devices in understanding that the link is a
         control for expandable content."
       disclaimerTitle="My Disclaimer"
-      analyticsStringImgOne="Foo"
-      analyticsStringImgTwo="Test"
-      idString="award-1"
+      imgOneAnalyticsString="Foo"
+      imgTwoAnalyticsString="Test"
     >
     </sprk-award>
   `,
