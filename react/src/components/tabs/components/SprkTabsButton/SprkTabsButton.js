@@ -20,18 +20,20 @@ class SprkTabsButton extends Component {
       tabBtnChildren,
       tabBtnId,
       tabBtnAddClasses,
+      tabBtnAdditionalClasses,
       ariaControls,
       ariaSelected,
       isActive,
       onTabClick,
       tabBtnDataId,
       tabBtnAnalytics,
+      tabBtnAnalyticsString,
     } = this.props;
     return (
       <button
         className={classnames(
           'sprk-c-Tabs__button',
-          tabBtnAddClasses,
+          tabBtnAdditionalClasses || tabBtnAddClasses,
           // eslint-disable-next-line prettier/prettier
           { 'sprk-c-Tabs__button--active': isActive },
         )}
@@ -44,7 +46,7 @@ class SprkTabsButton extends Component {
         tabIndex={isActive ? undefined : '-1'}
         ref={this.tabBtnRef}
         data-id={tabBtnDataId}
-        data-analytics={tabBtnAnalytics}
+        data-analytics={tabBtnAnalyticsString || tabBtnAnalytics}
       >
         {tabBtnChildren}
       </button>
@@ -55,12 +57,8 @@ class SprkTabsButton extends Component {
 SprkTabsButton.defaultProps = {
   isActive: false,
   isFocused: false,
-  ariaControls: '',
-  tabBtnAddClasses: '',
   ariaSelected: false,
   onTabClick: () => {},
-  tabBtnAnalytics: '',
-  tabBtnDataId: '',
 };
 
 SprkTabsButton.propTypes = {
@@ -69,11 +67,12 @@ SprkTabsButton.propTypes = {
    */
   tabBtnChildren: PropTypes.node.isRequired,
   /**
-   * Value that determines
-   * if button is active.
+   * Value that determines if button is active.
    */
   isActive: PropTypes.bool,
-  /** A unique ID for each tab button. */
+  /**
+   * A unique ID for each tab button.
+   */
   tabBtnId: PropTypes.string.isRequired,
   /**
    * Determines if tab is focused.
@@ -83,17 +82,21 @@ SprkTabsButton.propTypes = {
    * The aria ID to use for each tab panel so it corresponds to the button
    */
   ariaControls: PropTypes.string,
+  // TODO remove as part of Issue XXXX
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * tab panel.
+   * Deprecated - use `tabBtnAdditionalClasses` instead. Expects a space
+   * separated string of classes to be added to the tab panel.
    */
   tabBtnAddClasses: PropTypes.string,
+  /**
+   * Expects a space separated string of classes to be added to the
+   * tab panel.
+   */
+  tabBtnAdditionalClasses: PropTypes.string,
   /**
    * Toggles the aria selected state for accessibility.
    */
   ariaSelected: PropTypes.bool,
-  // The click handler for the Tab
   /**
    * The function that runs upon  clicking a tab.
    */
@@ -102,11 +105,16 @@ SprkTabsButton.propTypes = {
    * The id used for the data-id attribute
    */
   tabBtnDataId: PropTypes.string,
+  // TODO remove as part of Issue XXXX
   /**
-   *
-   The value used for the data-analytics attribute
+   * Deprecated - use `tabBtnAnalyticsString` instead. The value used for
+   * the data-analytics attribute
    */
   tabBtnAnalytics: PropTypes.string,
+  /**
+   * The value used for the data-analytics attribute
+   */
+  tabBtnAnalyticsString: PropTypes.string,
 };
 
 export default SprkTabsButton;

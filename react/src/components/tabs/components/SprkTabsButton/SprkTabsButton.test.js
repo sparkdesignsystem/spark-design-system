@@ -53,7 +53,7 @@ describe('SprkTabsButton:', () => {
         tabBtnChildren="Tab 1"
         isFocused
         tabBtnId="tab-52"
-        tabBtnAddClasses="test"
+        tabBtnAdditionalClasses="test"
       >
         Test Content 1
       </SprkTabsButton>,
@@ -68,13 +68,13 @@ describe('SprkTabsButton:', () => {
     expect(document.activeElement.classList.contains('test')).toBe(false);
   });
 
-  it('should add classes when tabBtnAddClasses has a value', () => {
+  it('should add classes when tabBtnAdditionalClasses has a value', () => {
     const wrapper = mount(
       <SprkTabsButton
         tabBtnChildren="Tab 1"
         isFocused
         tabBtnId="tab-52"
-        tabBtnAddClasses="test"
+        tabBtnAdditionalClasses="test"
       >
         Test Content 1
       </SprkTabsButton>,
@@ -83,30 +83,51 @@ describe('SprkTabsButton:', () => {
     expect(wrapper.find('.sprk-c-Tabs__button.test').length).toBe(1);
   });
 
-  it(
-    // eslint-disable-next-line prettier/prettier
-    'should focus the next Tab Button when the right arrow key' + ' is pressed',
-    () => {
-      const wrapper = mount(
-        <SprkTabs>
-          <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 1">
-            Test Content 1
-          </SprkTabsPanel>
-          <SprkTabsPanel tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
-        </SprkTabs>,
-      );
-      // First, tab into the Tab Button area
-      wrapper
-        .find('div.sprk-c-Tabs__buttons')
-        .simulate('keydown', { keyCode: 9 });
-      // Second, hit the right arrow key
-      wrapper
-        .find('div.sprk-c-Tabs__buttons')
-        .simulate('keydown', { keyCode: 39 });
-      const button = wrapper.find(SprkTabsButton).last();
-      expect(
-        button.getDOMNode().classList.contains('sprk-c-Tabs__button--active'),
-      ).toBe(true);
-    },
-  );
+  it(`should focus the next Tab Button when the right arrow key
+  is pressed`, () => {
+    const wrapper = mount(
+      <SprkTabs>
+        <SprkTabsPanel isDefaultActive tabBtnChildren="Tab 1">
+          Test Content 1
+        </SprkTabsPanel>
+        <SprkTabsPanel tabBtnChildren="Tab 2">Test Content 2</SprkTabsPanel>
+      </SprkTabs>,
+    );
+    // First, tab into the Tab Button area
+    wrapper
+      .find('div.sprk-c-Tabs__buttons')
+      .simulate('keydown', { keyCode: 9 });
+    // Second, hit the right arrow key
+    wrapper
+      .find('div.sprk-c-Tabs__buttons')
+      .simulate('keydown', { keyCode: 39 });
+    const button = wrapper.find(SprkTabsButton).last();
+    expect(
+      button.getDOMNode().classList.contains('sprk-c-Tabs__button--active'),
+    ).toBe(true);
+  });
+
+  it('should prefer tabBtnAdditionalClasses over tabBtnAddClasses', () => {
+    const wrapper = mount(
+      <SprkTabsButton tabBtnAdditionalClasses="test" tabBtnAddClasses="test2">
+        Test Content 1
+      </SprkTabsButton>,
+    );
+    expect(wrapper.find('.sprk-c-Tabs__button.test').length).toBe(1);
+    expect(wrapper.find('.sprk-c-Tabs__button.test2').length).toBe(0);
+  });
+
+  it('should prefer tabBtnAnalyticsString over tabBtnAnalytics', () => {
+    const wrapper = mount(
+      <SprkTabsButton tabBtnAnalyticsString="test" tabBtnAnalytics="test2">
+        Test Content 1
+      </SprkTabsButton>,
+    );
+    expect(
+      wrapper.find('.sprk-c-Tabs__button[data-analytics="test"]').length,
+    ).toBe(1);
+    expect(
+      wrapper.find('.sprk-c-Tabs__button[data-analytics="test2"]').length,
+    ).toBe(0);
+  });
 });
