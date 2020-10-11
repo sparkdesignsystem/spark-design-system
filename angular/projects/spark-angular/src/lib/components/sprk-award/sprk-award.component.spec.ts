@@ -120,7 +120,7 @@ describe('SprkAwardComponent', () => {
     const testString = 'element-id';
     component.idString = testString;
     fixture.detectChanges();
-    element = fixture.nativeElement.querySelector('h2');
+    element = fixture.nativeElement.querySelector('div');
     expect(element.getAttribute('data-id')).toEqual(testString);
   });
 
@@ -128,7 +128,7 @@ describe('SprkAwardComponent', () => {
     const testString = null;
     component.idString = testString;
     fixture.detectChanges();
-    element = fixture.nativeElement.querySelector('h2');
+    element = fixture.nativeElement.querySelector('div');
     expect(element.getAttribute('data-id')).toBeNull();
   });
 

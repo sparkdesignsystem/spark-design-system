@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
     <sprk-stack
       itemSpacing="{{ itemSpacing }}"
       additionalClasses="{{ additionalClasses }}"
-      idString="{{ idString }}"
+      [idString]="idString"
     >
       <h2
         sprkStackItem
@@ -218,7 +218,7 @@ export class SprkAwardComponent {
    * This value should be unique per page.
    */
   @Input()
-  idString: string;
+  idString: string = null;
 
   /**
    * @ignore
