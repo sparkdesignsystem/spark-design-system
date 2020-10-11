@@ -32,6 +32,7 @@ class SprkTabsButton extends Component {
         className={classnames(
           'sprk-c-Tabs__button',
           tabBtnAddClasses,
+          // eslint-disable-next-line prettier/prettier
           { 'sprk-c-Tabs__button--active': isActive },
         )}
         role="tab"
