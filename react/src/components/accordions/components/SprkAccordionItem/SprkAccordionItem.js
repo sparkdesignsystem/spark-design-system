@@ -19,7 +19,7 @@ class SprkAccordionItem extends Component {
   toggle(e) {
     const { onToggle } = this.props;
     e.preventDefault();
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
       height: !prevState.isOpen ? 'auto' : 0,
     }));
@@ -104,23 +104,26 @@ SprkAccordionItem.propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector
+   * for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
-  /** The text for the item heading. */
+  /**
+   * The text for the item heading.
+   */
   heading: PropTypes.string.isRequired,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * heading.
+   * Expects a space separated string of classes to be added to the heading.
    */
   headingAddClasses: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to the outermost container of
+   * the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a unique selector for
+   * automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -128,17 +131,22 @@ SprkAccordionItem.propTypes = {
    */
   isDefaultOpen: PropTypes.bool,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * icon.
+   * Expects a space separated string of classes to be added to the icon.
    */
   iconAddClasses: PropTypes.string,
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * toggle content.
+   * Expects a space separated string of classes to be added to the toggle
+   * content.
    */
   contentAddClasses: PropTypes.string,
+  /**
+   * A unique ID for the accordion item.
+   */
+  id: PropTypes.string,
+  /**
+   * An function to be called when the accordion item is toggled.
+   */
+  onToggle: PropTypes.func,
 };
 
 export default SprkAccordionItem;
