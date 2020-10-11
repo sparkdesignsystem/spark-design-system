@@ -67,7 +67,7 @@ export const iconWithTextLink = () => (
   <SprkLink
     analyticsString="link-icon"
     href="#nogo"
-    variant="has-icon"
+    variant="hasIcon"
     idString="link-3"
   >
     <SprkIcon
@@ -88,7 +88,7 @@ iconWithTextLink.story = {
 export const disabled = () => (
   <SprkLink
     analyticsString="link-disabled"
-    variant="disabled"
+    isDisabled
     idString="link-5"
     href="#nogo"
   >
@@ -99,10 +99,10 @@ export const disabled = () => (
 export const disabledSimple = () => (
   <SprkLink
     analyticsString="link-disabled"
-    variant="disabled"
+    isDisabled
+    variant="simple"
     idString="link-6"
     href="#nogo"
-    additionalClasses="sprk-b-Link--simple"
   >
     Disabled Link
   </SprkLink>
@@ -114,11 +114,11 @@ disabledSimple.story = {
 
 export const disabledLight = () => (
   <SprkLink
-    variant="disabled"
+    isDisabled
     analyticsString="link-light"
     idString="link-3"
     href="#nogo"
-    additionalClasses="sprk-b-Link--light"
+    variant="light"
   >
     Disabled Link
   </SprkLink>
@@ -142,9 +142,9 @@ export const disabledIconWithTextLink = () => (
   <SprkLink
     analyticsString="link-icon"
     href="#nogo"
-    variant="disabled"
+    variant="hasIcon"
     idString="link-7"
-    additionalClasses="sprk-b-Link--has-icon"
+    isDisabled
   >
     <SprkIcon
       additionalClasses="
