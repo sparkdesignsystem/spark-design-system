@@ -118,6 +118,7 @@ export class SprkAwardComponent {
    */
   @Input()
   imgTwoSrc: string;
+  // TODO - Remove as part of Issue 1279
   /**
    * Deprecated - use ` imgOneAnalyticsString` instead. The string that
    * will be assigned to the `data-analytics` attribute of the first image.
@@ -130,6 +131,7 @@ export class SprkAwardComponent {
    */
   @Input()
   imgOneAnalyticsString: string;
+  // TODO - Remove as part of Issue 1279
   /**
    * Deprecated - use ` imgTwoAnalyticsString` instead. The string that
    * will be assigned to the `data-analytics` attribute of the second image.
@@ -142,6 +144,7 @@ export class SprkAwardComponent {
    */
   @Input()
   imgTwoAnalyticsString: string;
+  // TODO - Remove as part of Issue 1279
   /**
    * Deprecated - use `disclaimerAnalyticsString` instead. The string that
    * will be assigned to the `data-analytics` attribute of the clickable
@@ -161,12 +164,14 @@ export class SprkAwardComponent {
    */
   @Input()
   additionalClasses: string;
+  // TODO - Remove as part of Issue 1279
   /**
    * Deprecated - use `imgOneAdditionalClasses` instead. Expects a space
    * separated string of classes to be added to the second image.
    */
   @Input()
   additionalClassesImgOne: string;
+  // TODO - Remove as part of Issue 1279
   /**
    * Deprecated - use `imgTwoAdditionalClasses` instead. Expects a space
    * separated string of classes to be added to the second image.
@@ -185,6 +190,7 @@ export class SprkAwardComponent {
    */
   @Input()
   imgTwoAdditionalClasses: string;
+  // TODO - Remove as part of Issue 1279
   /**
    * Deprecated - use `heading` instead. The text that appears above the
    * images and serves as the heading for the Award.
