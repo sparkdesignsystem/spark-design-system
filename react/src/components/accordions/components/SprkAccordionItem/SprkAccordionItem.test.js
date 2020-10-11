@@ -70,25 +70,18 @@ describe('SprkAccordionItem:', () => {
 
   it('should have aria-controls attribute value equal to content value', () => {
     const wrapper = mount(
-      <SprkAccordionItem
-        heading="test"
-        id="test-id">
-          test
+      <SprkAccordionItem heading="test" id="test-id">
+        test
       </SprkAccordionItem>,
     );
 
     wrapper.find('button').simulate('click');
-    expect(
-      wrapper
-      .find('.sprk-c-Accordion__content')
-      .getDOMNode().id
-    ).toEqual('test-id');
+    expect(wrapper.find('.sprk-c-Accordion__content').getDOMNode().id).toEqual(
+      'test-id',
+    );
 
     expect(
-      wrapper
-        .find('button')
-        .getDOMNode()
-        .getAttribute('aria-controls')
+      wrapper.find('button').getDOMNode().getAttribute('aria-controls'),
     ).toEqual('test-id');
   });
 });
