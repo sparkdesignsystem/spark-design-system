@@ -88,4 +88,80 @@ describe('SprkToggle:', () => {
     const toggleContent = wrapper.find('.sprk-c-Toggle__content').at(1);
     expect(toggleContent.hasClass('test')).toBe(true);
   });
+
+  it(`should add classes to the icon if iconAdditionalClasses 
+  are set`, () => {
+    const wrapper = mount(
+      <SprkToggle titleText="Toggle title" iconAdditionalClasses="test">
+        Body text
+      </SprkToggle>,
+    );
+    const toggleIcon = wrapper.find('.sprk-c-Icon--toggle');
+    expect(toggleIcon.hasClass('test')).toBe(true);
+  });
+
+  it(`should add classes to the icon if iconAddClasses 
+  are set`, () => {
+    const wrapper = mount(
+      <SprkToggle titleText="Toggle title" iconAddClasses="test">
+        Body text
+      </SprkToggle>,
+    );
+    const toggleIcon = wrapper.find('.sprk-c-Icon--toggle');
+    expect(toggleIcon.hasClass('test')).toBe(true);
+  });
+
+  it(`should prefer iconAdditionalClasses to iconAddClasses if both
+  are set`, () => {
+    const wrapper = mount(
+      <SprkToggle
+        titleText="Toggle title"
+        iconAddClasses="test"
+        iconAdditionalClasses="newTest"
+      >
+        Body text
+      </SprkToggle>,
+    );
+    const toggleIcon = wrapper.find('.sprk-c-Icon--toggle');
+    expect(toggleIcon.hasClass('newTest')).toBe(true);
+    expect(toggleIcon.hasClass('test')).toBe(false);
+  });
+
+  it(`should add classes to the title if titleAdditionalClasses 
+  are set`, () => {
+    const wrapper = mount(
+      <SprkToggle titleText="Toggle title" titleAdditionalClasses="test">
+        Body text
+      </SprkToggle>,
+    );
+    const toggleTitle = wrapper.find('.sprk-c-Toggle__trigger');
+    expect(toggleTitle.hasClass('test')).toBe(true);
+  });
+
+  it(`should add classes to the title if titleAddClasses 
+  are set`, () => {
+    const wrapper = mount(
+      <SprkToggle titleText="Toggle title" titleAddClasses="test">
+        Body text
+      </SprkToggle>,
+    );
+    const toggleTitle = wrapper.find('.sprk-c-Toggle__trigger');
+    expect(toggleTitle.hasClass('test')).toBe(true);
+  });
+
+  it(`should prefer titleAdditionalClasses to titleAddClasses if both 
+  are set`, () => {
+    const wrapper = mount(
+      <SprkToggle
+        titleText="Toggle title"
+        titleAddClasses="test"
+        titleAdditionalClasses="newTest"
+      >
+        Body text
+      </SprkToggle>,
+    );
+    const toggleTitle = wrapper.find('.sprk-c-Toggle__trigger');
+    expect(toggleTitle.hasClass('newTest')).toBe(true);
+    expect(toggleTitle.hasClass('test')).toBe(false);
+  });
 });

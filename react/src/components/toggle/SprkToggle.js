@@ -26,6 +26,7 @@ class SprkToggle extends Component {
     }));
   }
 
+  // TODO: Remove title, titleAddClasses, iconAddClasses in issue #{issueNumber}
   render() {
     const {
       children,
@@ -49,15 +50,16 @@ class SprkToggle extends Component {
 
     const containerClasses = classnames('sprk-c-Toggle', additionalClasses);
 
+    // TODO: Remove titleAddClasses in issue #{issueNumber}
     const titleClasses = classnames(
       'sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none',
-      titleAddClasses,
+      titleAdditionalClasses || titleAddClasses,
     );
-
+    // TODO: Remove iconAddClasses in issue #{issueNumber}
     const iconClasses = classnames(
       'sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs',
       { 'sprk-c-Icon--open': isOpen },
-      iconAddClasses,
+      iconAdditionalClasses || iconAddClasses,
     );
 
     const contentClasses = classnames(
@@ -76,6 +78,7 @@ class SprkToggle extends Component {
           type="button"
         >
           <SprkIcon iconName={toggleIconName} additionalClasses={iconClasses} />
+          {/* TODO: Remove title in issue #issueNumber */}
           {titleText || title}
         </button>
         <AnimateHeight
@@ -104,6 +107,7 @@ SprkToggle.propTypes = {
    * Deprecated - use titleText instead.
    * The title text for the toggle.
    */
+  // TODO: Remove title is issue #issueNumber
   title: PropTypes.string,
   /**
    * Deprecated - use titleText instead.
@@ -131,11 +135,13 @@ SprkToggle.propTypes = {
   additionalClasses: PropTypes.string,
   /** Deprecated - Use `titleAdditionalClasses` instead.
    * Additional classes for the title text. */
+  // TODO: Remove titleAddClasses is issue #issueNumber
   titleAddClasses: PropTypes.string,
   /** Additional classes for the title text. */
   titleAdditionalClasses: PropTypes.string,
   /** Deprecated - Use `iconAdditionalClasses` instead.
    * Additional classes for the toggle icon. */
+  // TODO: Remove iconAddClasses is issue #issueNumber
   iconAddClasses: PropTypes.string,
   /** Additional classes for the toggle icon. */
   iconAdditionalClasses: PropTypes.string,
