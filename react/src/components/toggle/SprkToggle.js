@@ -33,6 +33,7 @@ class SprkToggle extends Component {
       additionalClasses,
       analyticsString,
       title,
+      titleText,
       titleAddClasses,
       titleAdditionalClasses,
       iconAddClasses,
@@ -75,7 +76,7 @@ class SprkToggle extends Component {
           type="button"
         >
           <SprkIcon iconName={toggleIconName} additionalClasses={iconClasses} />
-          {title}
+          {titleText || title}
         </button>
         <AnimateHeight
           duration={300}
@@ -100,9 +101,15 @@ SprkToggle.propTypes = {
    */
   toggleIconName: PropTypes.string,
   /**
+   * Deprecated - use titleText instead.
    * The title text for the toggle.
    */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  /**
+   * Deprecated - use titleText instead.
+   * The title text for the toggle.
+   */
+  titleText: PropTypes.string.isRequired,
   /** The content that will show up when the toggle opens. */
   children: PropTypes.node.isRequired,
   /**
