@@ -41,6 +41,8 @@ class SprkAccordionItem extends Component {
       iconAdditionalClasses,
       isDefaultOpen,
       id,
+      iconTypeOpen,
+      iconTypeClosed,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
@@ -76,7 +78,7 @@ class SprkAccordionItem extends Component {
         >
           <h3 className={headingClassNames}>{heading}</h3>
           <SprkIcon
-            iconName="chevron-up-circle"
+            iconName={isOpen ? iconTypeOpen : iconTypeClosed}
             additionalClasses={iconClasses}
           />
         </SprkLink>
@@ -99,6 +101,8 @@ class SprkAccordionItem extends Component {
 
 SprkAccordionItem.defaultProps = {
   isDefaultOpen: false,
+  iconTypeOpen: 'chevron-up-circle',
+  iconTypeClosed: 'chevron-up-circle',
 };
 
 SprkAccordionItem.propTypes = {
@@ -168,6 +172,14 @@ SprkAccordionItem.propTypes = {
    * An function to be called when the accordion item is toggled.
    */
   onToggle: PropTypes.func,
+  /**
+   * The name of the icon to use when the Accordion item is open
+   */
+  iconTypeOpen: PropTypes.string,
+  /**
+   * The name of the icon to use when the Accordion item is closed
+   */
+  iconTypeClosed: PropTypes.string,
 };
 
 export default SprkAccordionItem;

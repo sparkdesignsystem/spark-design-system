@@ -77,7 +77,7 @@ describe('SprkAccordion:', () => {
     );
   });
 
-  it(`should display not render out an accordion item for elements that are
+  it(`should not render out an accordion item for elements that are
   not SprkAccordionItem`, () => {
     const wrapper = mount(
       <SprkAccordion>
@@ -144,5 +144,39 @@ describe('SprkAccordion:', () => {
       </SprkAccordion>,
     );
     expect(wrapper.find(SprkAccordionItem).length).toBe(3);
+  });
+
+  it('should use custom open icon when open', () => {
+    const wrapper = mount(
+      <SprkAccordion>
+        <SprkAccordionItem
+          heading="title"
+          iconTypeOpen="pinterest"
+          isDefaultOpen
+        >
+          content
+        </SprkAccordionItem>
+        <SprkAccordionItem heading="title2">content</SprkAccordionItem>
+      </SprkAccordion>,
+    );
+
+    expect(
+      wrapper.find('use').first().getDOMNode().getAttribute('xlink:href'),
+    ).toBe('#pinterest');
+  });
+
+  it('should use custom closed icon when closed', () => {
+    const wrapper = mount(
+      <SprkAccordion>
+        <SprkAccordionItem heading="title" iconTypeClosed="facebook">
+          content
+        </SprkAccordionItem>
+        <SprkAccordionItem heading="title2">content</SprkAccordionItem>
+      </SprkAccordion>,
+    );
+
+    expect(
+      wrapper.find('use').first().getDOMNode().getAttribute('xlink:href'),
+    ).toBe('#facebook');
   });
 });
