@@ -98,17 +98,20 @@ SprkToggle.propTypes = {
   /** The content that will show up when the toggle opens. */
   children: PropTypes.node.isRequired,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as
+   * a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
-  */
+   * Assigned to the `data-analytics` attribute serving as
+   * a unique selector for outside libraries to capture data.
+   */
   analyticsString: PropTypes.string,
   /** Determines if the toggle is open upon loading on the page. */
   isDefaultOpen: PropTypes.bool,
-   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+  /**
+   * A space-separated string of classes to add to the
+   * outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /** Additional classes for the title text. */
