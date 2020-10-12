@@ -1,4 +1,4 @@
-/* global window document beforeEach afterEach describe it */
+/* global window document beforeEach afterEach describe it sinon */
 import {
   spinners,
   getSpinnerClasses,
@@ -14,7 +14,9 @@ describe('spinners init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     spinners();
-    expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-spinner="click"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-spinner="click"]',
+    );
   });
 });
 
@@ -25,13 +27,33 @@ describe('getSpinnerClasses tests', () => {
   });
 
   it('should add the large class if the option is set', () => {
-    const expected = 'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large';
+    const expected =
+      'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large';
     expect(getSpinnerClasses({ size: 'large' })).toEqual(expected);
   });
 
   it('should add the dark class if the option is set', () => {
-    const expected = 'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--dark';
+    const expected =
+      'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--dark';
     expect(getSpinnerClasses({ lightness: 'dark' })).toEqual(expected);
+  });
+
+  it('should add the dark class if the variant option is set', () => {
+    const expected =
+      'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--dark';
+    expect(getSpinnerClasses({ variant: 'dark' })).toEqual(expected);
+  });
+
+  it('should add the primary class if the variant option is set', () => {
+    const expected =
+      'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--primary';
+    expect(getSpinnerClasses({ variant: 'primary' })).toEqual(expected);
+  });
+
+  it('should add the secondary class if the variant option is set', () => {
+    const expected =
+      'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--secondary';
+    expect(getSpinnerClasses({ variant: 'secondary' })).toEqual(expected);
   });
 });
 
@@ -70,7 +92,11 @@ describe('spinners UI tests', () => {
 
   it('should start the spinning if its clicked', () => {
     spinnerContainer.click();
-    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
+    expect(
+      spinnerContainer
+        .querySelector('div')
+        .classList.contains('sprk-c-Spinner--circle'),
+    ).toBe(true);
   });
 
   it('should add the loading aria label if spinner is clicked', () => {
@@ -78,42 +104,65 @@ describe('spinners UI tests', () => {
     expect(spinnerContainer.getAttribute('aria-label')).toBe('Loading');
   });
 
-  it('should add the custom aria label if spinner is clicked and it is present', () => {
-    expect(spinnerContainer2.getAttribute('data-sprk-spinner-aria-label')).toBe('custom');
+  it(`should add the custom aria label if spinner is 
+    clicked and it is present`, () => {
+    expect(spinnerContainer2.getAttribute('data-sprk-spinner-aria-label')).toBe(
+      'custom',
+    );
     spinnerContainer2.click();
     expect(spinnerContainer2.getAttribute('aria-label')).toBe('custom');
   });
 
-  it('should remove the loading aria label if the sprk-cancel-spinners event is triggered on window', () => {
+  it(`should remove the loading aria label if the sprk-cancel-spinners
+  event is triggered on window`, () => {
     spinnerContainer.click();
-    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
+    expect(
+      spinnerContainer
+        .querySelector('div')
+        .classList.contains('sprk-c-Spinner--circle'),
+    ).toBe(true);
     event = new window.Event('sprk-cancel-spinners');
     window.dispatchEvent(event);
     expect(spinnerContainer.getAttribute('aria-label')).toBe(null);
   });
 
-  it('should remove spinners if the sprk-cancel-spinners event is triggered on window', () => {
+  it(`should remove spinners if the sprk-cancel-spinners
+  event is triggered on window`, () => {
     spinnerContainer.click();
-    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
+    expect(
+      spinnerContainer
+        .querySelector('div')
+        .classList.contains('sprk-c-Spinner--circle'),
+    ).toBe(true);
     event = new window.Event('sprk-cancel-spinners');
     window.dispatchEvent(event);
     expect(spinnerContainer.querySelector('div')).toBe(null);
   });
 
-  it('should use no text when removing spinners if the sprk-cancel-spinners event is triggered on window and there was no text saved', () => {
+  it(`should use no text when removing spinners if the sprk-cancel-spinners
+  event is triggered on window and there was no text saved`, () => {
     spinnerContainer.click();
     spinnerContainer.removeAttribute('data-sprk-spinner-text');
-    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
+    expect(
+      spinnerContainer
+        .querySelector('div')
+        .classList.contains('sprk-c-Spinner--circle'),
+    ).toBe(true);
     event = new window.Event('sprk-cancel-spinners');
     window.dispatchEvent(event);
     expect(spinnerContainer.querySelector('div')).toBe(null);
     expect(spinnerContainer.textContent).toBe('');
   });
 
-  it('should not try to start spinning something thats already spinning', () => {
+  it(`should not try to start spinning something that's
+  already spinning`, () => {
     spinnerContainer.click();
     expect(spinnerContainer.setAttribute.getCalls().length).toBe(4);
-    expect(spinnerContainer.querySelector('div').classList.contains('sprk-c-Spinner--circle')).toBe(true);
+    expect(
+      spinnerContainer
+        .querySelector('div')
+        .classList.contains('sprk-c-Spinner--circle'),
+    ).toBe(true);
     spinnerContainer.click();
     expect(spinnerContainer.setAttribute.getCalls().length).toBe(4);
   });
@@ -129,17 +178,23 @@ describe('setSpinning tests', () => {
 
   it('should replace the content with a spinner', () => {
     setSpinning(spinnerContainer, {});
-    expect(spinnerContainer.firstChild.classList.contains('sprk-c-Spinner')).toBe(true);
+    expect(
+      spinnerContainer.firstChild.classList.contains('sprk-c-Spinner'),
+    ).toBe(true);
   });
 
   it('should set the original text to a data-sprk-spinner-text attr', () => {
     setSpinning(spinnerContainer, {});
-    expect(spinnerContainer.getAttribute('data-sprk-spinner-text') === 'Submit').toBe(true);
+    expect(
+      spinnerContainer.getAttribute('data-sprk-spinner-text') === 'Submit',
+    ).toBe(true);
   });
 
   it('should set the data-sprk-has-spinner attr to true', () => {
     setSpinning(spinnerContainer, {});
-    expect(spinnerContainer.getAttribute('data-sprk-has-spinner') === 'true').toBe(true);
+    expect(
+      spinnerContainer.getAttribute('data-sprk-has-spinner') === 'true',
+    ).toBe(true);
   });
 
   it('should set the original width to the style attr', () => {
@@ -163,9 +218,12 @@ describe('cancelSpinning tests', () => {
     expect(spinnerContainer.innerHTML).toBe('Submit');
   });
 
-  it('should replace the content with the contents of data-sprk-spinner-text', () => {
+  it(`should replace the content with the contents of
+  data-sprk-spinner-text`, () => {
     cancelSpinning(spinnerContainer);
-    expect(spinnerContainer.textContent).toEqual(spinnerContainer.getAttribute('data-sprk-spinner-text'));
+    expect(spinnerContainer.textContent).toEqual(
+      spinnerContainer.getAttribute('data-sprk-spinner-text'),
+    );
   });
 
   it('should remove the data-sprk-has-spinner attr', () => {
