@@ -14,8 +14,7 @@ export default {
   component: SprkLinkDirective,
   decorators: [
     storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">${storyContent}<div>`,
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
     ),
   ],
   parameters: {
@@ -124,7 +123,7 @@ export const iconWithTextLink = () => ({
     <a
       href="#"
       sprkLink
-      variant="icon"
+      variant="hasIcon"
       idString="icon-link-1"
       analyticsString="icon-link-1"
     >
@@ -206,7 +205,7 @@ export const disabledLight = () => ({
     </a>
   `,
 });
-  
+
 disabledLight.story = {
   name: 'Disabled - Light',
   parameters: {
@@ -226,7 +225,7 @@ export const disabledIconWithTextLink = () => ({
     <a
       href="#"
       sprkLink
-      variant="icon"
+      variant="hasIcon"
       isDisabled="true"
       idString="disabled-icon-link-1"
       analyticsString="disabled-icon-link-1"
