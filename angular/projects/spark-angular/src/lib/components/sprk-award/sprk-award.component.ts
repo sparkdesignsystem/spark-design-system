@@ -28,7 +28,6 @@ import { Component, Input } from '@angular/core';
             variant="unstyled"
             class="sprk-o-Stack"
             [attr.href]="imgOneHref"
-            [attr.routerLink]="imgOneRouterLink"
             [analyticsString]="imgOneAnalyticsString || analyticsStringImgOne"
           >
             <img
@@ -44,7 +43,6 @@ import { Component, Input } from '@angular/core';
             variant="unstyled"
             class="sprk-o-Stack"
             [attr.href]="imgTwoHref"
-            [attr.routerLink]="imgTwoRouterLink"
             [analyticsString]="imgTwoAnalyticsString || analyticsStringImgTwo"
           >
             <img
@@ -192,16 +190,6 @@ export class SprkAwardComponent {
    */
   @Input()
   imgTwoAdditionalClasses: string;
-  /**
-   * The routerLink attribute to use for the first image.
-   */
-  @Input()
-  imgOneRouterLink: string;
-  /**
-   * The routerLink attribute to use for the second image.
-   */
-  @Input()
-  imgTwoRouterLink: string;
   // TODO - Remove as part of Issue 1279
   /**
    * Deprecated - use `heading` instead. The text that appears above the
