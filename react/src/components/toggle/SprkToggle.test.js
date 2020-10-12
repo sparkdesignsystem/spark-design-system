@@ -25,6 +25,24 @@ describe('SprkToggle:', () => {
     expect(wrapper.state().isOpen).toBe(true);
   });
 
+  it('should default to open if isOpen is true', () => {
+    const wrapper = shallow(
+      <SprkToggle isOpen titleText="Toggle title">
+        Body text
+      </SprkToggle>,
+    );
+    expect(wrapper.state().isOpen).toBe(true);
+  });
+
+  it('should prefer isOpen to isDefaultOpen if both are set', () => {
+    const wrapper = shallow(
+      <SprkToggle isOpen isDefaultOpen={false} titleText="Toggle title">
+        Body text
+      </SprkToggle>,
+    );
+    expect(wrapper.state().isOpen).toBe(true);
+  });
+
   it('should toggle open on click', () => {
     const wrapper = mount(
       <SprkToggle titleText="Toggle title">Body text</SprkToggle>,

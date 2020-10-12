@@ -9,10 +9,15 @@ import 'focus-visible';
 class SprkToggle extends Component {
   constructor(props) {
     super(props);
+    // TODO: isDefaultOpen in issue #{issueNumber}
     const { isDefaultOpen } = this.props;
+    let { isOpen } = this.props;
+    if (isDefaultOpen !== undefined && isOpen === undefined) {
+      isOpen = isDefaultOpen;
+    }
     this.state = {
-      isOpen: isDefaultOpen || false,
-      height: isDefaultOpen ? 'auto' : 0,
+      isOpen: isOpen || false,
+      height: isOpen ? 'auto' : 0,
     };
 
     this.toggleOpen = this.toggleOpen.bind(this);
@@ -125,8 +130,14 @@ SprkToggle.propTypes = {
    * a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
-  /** Determines if the toggle is open upon loading on the page. */
+  /**
+   * Deprecated - Use `isOpen` instead.
+   * Determines if the toggle is open upon loading on the page.
+   */
+  // TODO: isDefaultOpen in issue #{issueNumber}
   isDefaultOpen: PropTypes.bool,
+  /** Determines if the toggle is open upon loading on the page. */
+  isOpen: PropTypes.bool,
   /**
    * A space-separated string of classes to add to the
    * outermost container of the component.
