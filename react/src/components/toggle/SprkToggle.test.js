@@ -77,4 +77,13 @@ describe('SprkToggle:', () => {
     expect(toggleContentId).toEqual(ButtonAriaControls);
     expect(wrapper.find(`div#${toggleContentId}`).length).toBe(1);
   });
+
+  it(`should add classes to the content if contentAdditionalClasses 
+  are set`, () => {
+    const wrapper = mount(
+      <SprkToggle contentAdditionalClasses="test">Body text</SprkToggle>,
+    );
+    const toggleContent = wrapper.find('.sprk-c-Toggle__content').at(1);
+    expect(toggleContent.hasClass('test')).toBe(true);
+  });
 });

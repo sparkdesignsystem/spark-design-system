@@ -34,9 +34,12 @@ class SprkToggle extends Component {
       analyticsString,
       title,
       titleAddClasses,
+      titleAdditionalClasses,
       iconAddClasses,
+      iconAdditionalClasses,
       toggleIconName,
       contentId,
+      contentAdditionalClasses,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
@@ -56,6 +59,11 @@ class SprkToggle extends Component {
       iconAddClasses,
     );
 
+    const contentClasses = classnames(
+      'sprk-c-Toggle__content',
+      contentAdditionalClasses,
+    );
+
     return (
       <div data-id={idString} {...other} className={containerClasses}>
         <button
@@ -72,7 +80,7 @@ class SprkToggle extends Component {
         <AnimateHeight
           duration={300}
           height={height}
-          className="sprk-c-Toggle__content"
+          className={contentClasses}
           id={uniqueIdentifier}
         >
           <div>{children}</div>
@@ -114,10 +122,18 @@ SprkToggle.propTypes = {
    * outermost container of the component.
    */
   additionalClasses: PropTypes.string,
-  /** Additional classes for the title text. */
+  /** Deprecated - Use `titleAdditionalClasses` instead.
+   * Additional classes for the title text. */
   titleAddClasses: PropTypes.string,
-  /** Additional classes for the toggle icon. */
+  /** Additional classes for the title text. */
+  titleAdditionalClasses: PropTypes.string,
+  /** Deprecated - Use `iconAdditionalClasses` instead.
+   * Additional classes for the toggle icon. */
   iconAddClasses: PropTypes.string,
+  /** Additional classes for the toggle icon. */
+  iconAdditionalClasses: PropTypes.string,
+  /** Additional classes for the content. */
+  contentAdditionalClasses: PropTypes.string,
   /**
    * A string that is used to set the `id` on the content
    * and the `aria-controls` for the toggle trigger button.
