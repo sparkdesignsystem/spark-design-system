@@ -1,4 +1,4 @@
-function setValidSelect(inputContainer) {
+const setValidSelect = (inputContainer) => {
   const select = inputContainer.querySelector('select');
   const errorContainer = inputContainer.querySelector('.sprk-b-ErrorContainer');
 
@@ -7,6 +7,6 @@ function setValidSelect(inputContainer) {
   if (errorContainer) {
     errorContainer.innerHTML = '';
   }
-}
+};
 
 export { setValidSelect as default };
