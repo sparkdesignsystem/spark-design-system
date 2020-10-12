@@ -110,7 +110,6 @@ SprkToggle.propTypes = {
   // TODO: Remove title is issue #issueNumber
   title: PropTypes.string,
   /**
-   * Deprecated - use titleText instead.
    * The title text for the toggle.
    */
   titleText: PropTypes.string.isRequired,
