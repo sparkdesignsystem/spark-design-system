@@ -9,7 +9,7 @@ import 'focus-visible';
 class SprkToggle extends Component {
   constructor(props) {
     super(props);
-    // TODO: isDefaultOpen in issue #{issueNumber}
+    // TODO: isDefaultOpen in issue #1296
     const { isDefaultOpen } = this.props;
     let { isOpen } = this.props;
     if (isDefaultOpen !== undefined && isOpen === undefined) {
@@ -31,7 +31,7 @@ class SprkToggle extends Component {
     }));
   }
 
-  // TODO: Remove title, titleAddClasses, iconAddClasses in issue #{issueNumber}
+  // TODO: Remove title, titleAddClasses, iconAddClasses in issue #1296
   render() {
     const {
       children,
@@ -55,12 +55,12 @@ class SprkToggle extends Component {
 
     const containerClasses = classnames('sprk-c-Toggle', additionalClasses);
 
-    // TODO: Remove titleAddClasses in issue #{issueNumber}
+    // TODO: Remove titleAddClasses in issue #1296
     const titleClasses = classnames(
       'sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none',
       titleAdditionalClasses || titleAddClasses,
     );
-    // TODO: Remove iconAddClasses in issue #{issueNumber}
+    // TODO: Remove iconAddClasses in issue #1296
     const iconClasses = classnames(
       'sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs',
       { 'sprk-c-Icon--open': isOpen },
@@ -83,7 +83,7 @@ class SprkToggle extends Component {
           type="button"
         >
           <SprkIcon iconName={toggleIconName} additionalClasses={iconClasses} />
-          {/* TODO: Remove title in issue #issueNumber */}
+          {/* TODO: Remove title in issue #1296 */}
           {titleText || title}
         </button>
         <AnimateHeight
@@ -112,7 +112,7 @@ SprkToggle.propTypes = {
    * Deprecated - use titleText instead.
    * The title text for the toggle.
    */
-  // TODO: Remove title is issue #issueNumber
+  // TODO: Remove title is issue #1296
   title: PropTypes.string,
   /**
    * The title text for the toggle.
@@ -134,7 +134,7 @@ SprkToggle.propTypes = {
    * Deprecated - Use `isOpen` instead.
    * Determines if the toggle is open upon loading on the page.
    */
-  // TODO: isDefaultOpen in issue #{issueNumber}
+  // TODO: isDefaultOpen in issue #1296
   isDefaultOpen: PropTypes.bool,
   /** Determines if the toggle is open upon loading on the page. */
   isOpen: PropTypes.bool,
@@ -145,13 +145,13 @@ SprkToggle.propTypes = {
   additionalClasses: PropTypes.string,
   /** Deprecated - Use `titleAdditionalClasses` instead.
    * Additional classes for the title text. */
-  // TODO: Remove titleAddClasses is issue #issueNumber
+  // TODO: Remove titleAddClasses is issue #1296
   titleAddClasses: PropTypes.string,
   /** Additional classes for the title text. */
   titleAdditionalClasses: PropTypes.string,
   /** Deprecated - Use `iconAdditionalClasses` instead.
    * Additional classes for the toggle icon. */
-  // TODO: Remove iconAddClasses is issue #issueNumber
+  // TODO: Remove iconAddClasses is issue #1296
   iconAddClasses: PropTypes.string,
   /** Additional classes for the toggle icon. */
   iconAdditionalClasses: PropTypes.string,
@@ -162,6 +162,8 @@ SprkToggle.propTypes = {
    * and the `aria-controls` for the toggle trigger button.
    */
   contentId: PropTypes.string,
+  /** The event that will fire when the toggle trigger is clicked. */
+  onClick: PropTypes.func,
 };
 
 export default SprkToggle;
