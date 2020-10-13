@@ -111,7 +111,7 @@ describe('SprkDropdownComponent', () => {
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    expect(wrapperComponent.choices[0]['active']).toEqual(true);
+    expect(dropDownComponent.choices[0]['active']).toEqual(true);
   });
 
   it('should set active on click of a choice on a base dropdown if active isnt defined initially', () => {
@@ -133,7 +133,7 @@ describe('SprkDropdownComponent', () => {
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    expect(wrapperComponent.choices[0]['active']).toEqual(true);
+    expect(dropDownComponent.choices[0]['active']).toEqual(true);
   });
 
   it('should not set active on click of a choice on a base dropdown', () => {
@@ -154,7 +154,7 @@ describe('SprkDropdownComponent', () => {
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    expect(wrapperComponent.choices[0]['active']).toEqual(false);
+    expect(dropDownComponent.choices[0]['active']).toEqual(false);
   });
 
   it('should set a value if additionalTriggerClasses has a value', () => {
@@ -265,7 +265,7 @@ describe('SprkDropdownComponent', () => {
     fixture.detectChanges();
 
     const triggerTextElement = fixture.nativeElement.getElementsByTagName('a')[0].firstElementChild;
-    expect(triggerTextElement.textContent).not.toEqual(wrapperComponent.choices[1].value);
+    expect(triggerTextElement.textContent).not.toEqual(dropDownComponent.choices[1].value);
   });
 
   it('should change trigger text if default choice option specified', () => {
@@ -285,7 +285,7 @@ describe('SprkDropdownComponent', () => {
     fixture.detectChanges();
 
     const triggerTextElement = fixture.nativeElement.getElementsByTagName('a')[0].firstElementChild;
-    expect(triggerTextElement.textContent).toEqual(wrapperComponent.choices[1].value);
+    expect(triggerTextElement.textContent).toEqual(dropDownComponent.choices[1].value);
   });
 
   it('should change trigger text if choices changed', () => {
@@ -318,7 +318,7 @@ describe('SprkDropdownComponent', () => {
     fixture.detectChanges();
 
     const triggerTextElement = fixture.nativeElement.getElementsByTagName('a')[0].firstElementChild;
-    expect(triggerTextElement.textContent).toEqual(wrapperComponent.choices[1].value);
+    expect(triggerTextElement.textContent).toEqual(dropDownComponent.choices[1].value);
   });
 
   it('should set active: true for default choice', () => {
@@ -341,7 +341,7 @@ describe('SprkDropdownComponent', () => {
 
 
     const triggerTextElement = fixture.nativeElement.querySelector('[aria-selected="true"]');
-    expect(triggerTextElement.textContent.trim()).toEqual(wrapperComponent.choices[1].value);
+    expect(triggerTextElement.textContent.trim()).toEqual(dropDownComponent.choices[1].value);
   });
 });
 

@@ -243,7 +243,7 @@ export class SprkDropdownComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.choices) {
       if (this.dropdownType === 'informational') {
-        this._updateTriggetTextWithDefaultValue();
+        this._updateTriggerTextWithDefaultValue();
       }
     }
   }
@@ -378,7 +378,7 @@ export class SprkDropdownComponent implements OnChanges {
   /**
    * Update trigger text with default choice value
    */
-  protected _updateTriggetTextWithDefaultValue(): void {
+  protected _updateTriggerTextWithDefaultValue(): void {
     const defaultChoice = this._lookupDefaultChoice();
 
     if (defaultChoice) {
