@@ -1,4 +1,4 @@
-import { AfterViewInit, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterViewInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
 
@@ -14,12 +14,7 @@ export class SprkSpinnerDirective implements AfterViewInit {
   /**
    *  Determines the spinner style.
    */
-  @Input() variant: 'secondary' | 'tertiary' | 'dark';
-
-  /**
-   *  Determines the size of the spinner.
-   */
-  @Input() size: 'large';
+  @Input() variant: 'primary' | 'secondary' | 'dark';
 
   ngAfterViewInit() {
     const el = this.el.nativeElement;

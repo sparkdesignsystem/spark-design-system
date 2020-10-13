@@ -211,6 +211,7 @@ export const spinning = () => {
     template: `
       <button
         idString="button-spinning"
+        analyticsString="spinning"
         sprkButton
       >
         <div sprkSpinner></div>
