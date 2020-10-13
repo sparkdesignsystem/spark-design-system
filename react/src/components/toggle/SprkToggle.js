@@ -47,6 +47,7 @@ class SprkToggle extends Component {
       toggleIconName,
       contentId,
       contentAdditionalClasses,
+      onClick,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
@@ -71,13 +72,17 @@ class SprkToggle extends Component {
       'sprk-c-Toggle__content',
       contentAdditionalClasses,
     );
-
     return (
       <div data-id={idString} {...other} className={containerClasses}>
         <button
           className={titleClasses}
           data-analytics={analyticsString}
-          onClick={this.toggleOpen}
+          onClick={(e) => {
+            if (onClick) {
+              onClick();
+            }
+            this.toggleOpen(e);
+          }}
           aria-expanded={isOpen ? 'true' : 'false'}
           aria-controls={uniqueIdentifier}
           type="button"
