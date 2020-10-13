@@ -44,8 +44,8 @@ export const defaultStory = () => ({
         devices in understanding that the link is a
         control for expandable content."
       disclaimerTitle="My Disclaimer"
-      imgOneAnalyticsString="Foo"
-      imgTwoAnalyticsString="Test"
+      imgOneAnalyticsString="image-one-data-analytics"
+      imgTwoAnalyticsString="image-two-data-analytics"
     >
     </sprk-award>
   `,

@@ -104,7 +104,7 @@ export class SprkAwardComponent {
   @Input()
   imgTwoHref: string;
   /**
-   * The `alt` text that will be applied 'to the second image.
+   * The `alt` text that will be applied to the second image.
    */
   @Input()
   imgTwoAlt: string;
@@ -167,7 +167,7 @@ export class SprkAwardComponent {
   // TODO - Remove as part of Issue 1279
   /**
    * Deprecated - use `imgOneAdditionalClasses` instead. Expects a space
-   * separated string of classes to be added to the second image.
+   * separated string of classes to be added to the first image.
    */
   @Input()
   additionalClassesImgOne: string;
