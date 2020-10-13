@@ -114,7 +114,7 @@ SprkToggle.propTypes = {
    */
   toggleIconName: PropTypes.string,
   /**
-   * Deprecated - use titleText instead.
+   * Deprecated - use `titleText` instead.
    * The title text for the toggle.
    */
   // TODO: Remove title is issue #1296
