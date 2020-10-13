@@ -79,7 +79,7 @@ class SprkToggle extends Component {
           data-analytics={analyticsString}
           onClick={(e) => {
             if (onClick) {
-              onClick();
+              onClick(e);
             }
             this.toggleOpen(e);
           }}
