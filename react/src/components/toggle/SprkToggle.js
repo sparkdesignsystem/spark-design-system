@@ -135,7 +135,7 @@ SprkToggle.propTypes = {
    */
   // TODO: isDefaultOpen in issue #1296
   isDefaultOpen: PropTypes.bool,
-  /** Determines if the toggle is open upon loading on the page. */
+  /** Determines if the toggle is open or closed. */
   isOpen: PropTypes.bool,
   /**
    * A space-separated string of classes to add to the
