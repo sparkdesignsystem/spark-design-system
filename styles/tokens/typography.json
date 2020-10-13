@@ -37,25 +37,25 @@
   },
   "page-title": {
     "mark-color": {
-      "comment": "The color of the Page Title mark",
+      "comment": "The color of the Page Title mark.",
       "value": "{colors.red.value}",
       "type": "settings",
       "themable": true
     },
     "mark-width": {
-      "comment": "The width of the Page Title mark",
+      "comment": "The width of the Page Title mark.",
       "value": "32px",
       "type": "settings",
       "themable": true
     },
     "mark-height": {
-      "comment": "The height of the Page Title mark",
+      "comment": "The height of the Page Title mark.",
       "value": "5px",
       "type": "settings",
       "themable": true
     },
     "mark-height-wide-viewport": {
-      "comment": "The height of the mark on a large viewport (using $sprk-typography-breakpoint)",
+      "comment": "The height of the mark on a large viewport (using $sprk-typography-breakpoint).",
       "value": "6px",
       "type": "settings",
       "themable": true
