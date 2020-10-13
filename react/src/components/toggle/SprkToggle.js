@@ -10,11 +10,8 @@ class SprkToggle extends Component {
   constructor(props) {
     super(props);
     // TODO: Remove isDefaultOpen in issue #1296
-    const { isDefaultOpen } = this.props;
-    let { isOpen } = this.props;
-    if (isDefaultOpen !== undefined && isOpen === undefined) {
-      isOpen = isDefaultOpen;
-    }
+    const { isDefaultOpen, isOpen = isDefaultOpen } = this.props;
+
     this.state = {
       isOpen: isOpen || false,
       height: isOpen ? 'auto' : 0,
@@ -39,11 +36,11 @@ class SprkToggle extends Component {
       additionalClasses,
       analyticsString,
       title,
-      triggerText,
+      triggerText = title,
       titleAddClasses,
-      titleAdditionalClasses,
+      titleAdditionalClasses = titleAddClasses,
       iconAddClasses,
-      iconAdditionalClasses,
+      iconAdditionalClasses = iconAddClasses,
       toggleIconName,
       contentId,
       contentAdditionalClasses,
@@ -56,16 +53,14 @@ class SprkToggle extends Component {
 
     const containerClasses = classnames('sprk-c-Toggle', additionalClasses);
 
-    // TODO: Remove titleAddClasses in issue #1296
     const titleClasses = classnames(
       'sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none',
-      titleAdditionalClasses || titleAddClasses,
+      titleAdditionalClasses,
     );
-    // TODO: Remove iconAddClasses in issue #1296
     const iconClasses = classnames(
       'sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs',
       { 'sprk-c-Icon--open': isOpen },
-      iconAdditionalClasses || iconAddClasses,
+      iconAdditionalClasses,
     );
 
     const contentClasses = classnames(
@@ -88,8 +83,7 @@ class SprkToggle extends Component {
           type="button"
         >
           <SprkIcon iconName={toggleIconName} additionalClasses={iconClasses} />
-          {/* TODO: Remove title in issue #1296 */}
-          {triggerText || title}
+          {triggerText}
         </button>
         <AnimateHeight
           duration={300}
