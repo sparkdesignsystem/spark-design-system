@@ -9,7 +9,7 @@ import 'focus-visible';
 class SprkToggle extends Component {
   constructor(props) {
     super(props);
-    // TODO: isDefaultOpen in issue #1296
+    // TODO: Remove isDefaultOpen in issue #1296
     const { isDefaultOpen } = this.props;
     let { isOpen } = this.props;
     if (isDefaultOpen !== undefined && isOpen === undefined) {
@@ -117,7 +117,7 @@ SprkToggle.propTypes = {
    * Deprecated - use `titleText` instead.
    * The title text for the toggle.
    */
-  // TODO: Remove title is issue #1296
+  // TODO: Remove title in issue #1296
   title: PropTypes.string,
   /**
    * The title text for the toggle.
@@ -150,13 +150,13 @@ SprkToggle.propTypes = {
   additionalClasses: PropTypes.string,
   /** Deprecated - Use `titleAdditionalClasses` instead.
    * Additional classes for the title text. */
-  // TODO: Remove titleAddClasses is issue #1296
+  // TODO: Remove titleAddClasses in issue #1296
   titleAddClasses: PropTypes.string,
   /** Additional classes for the title text. */
   titleAdditionalClasses: PropTypes.string,
   /** Deprecated - Use `iconAdditionalClasses` instead.
    * Additional classes for the toggle icon. */
-  // TODO: Remove iconAddClasses is issue #1296
+  // TODO: Remove iconAddClasses in issue #1296
   iconAddClasses: PropTypes.string,
   /** Additional classes for the toggle icon. */
   iconAdditionalClasses: PropTypes.string,
