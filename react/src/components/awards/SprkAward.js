@@ -122,7 +122,6 @@ SprkAward.propTypes = {
     'miscB',
     'miscC',
     'miscD',
-    '',
   ]),
   /**
    * Determines when the flex-direction should
@@ -135,7 +134,6 @@ SprkAward.propTypes = {
     'medium',
     'large',
     'huge',
-    '',
   ]),
   /**
    * A space-separated string of classes to add
