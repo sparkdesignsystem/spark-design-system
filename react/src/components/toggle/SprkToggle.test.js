@@ -1,6 +1,7 @@
 /* global it expect */
 import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
+import sinon from 'sinon';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkToggle from './SprkToggle';
 
@@ -52,6 +53,22 @@ describe('SprkToggle:', () => {
     expect(wrapper.state().isOpen).toBe(true);
     wrapper.find('button').simulate('click');
     expect(wrapper.state().isOpen).toBe(false);
+  });
+
+  it('should run additional onClick function and toggle on click', () => {
+    const expectedFunc = sinon.spy();
+    const wrapper = mount(
+      <SprkToggle titleText="Toggle title" onClick={expectedFunc}>
+        Body text
+      </SprkToggle>,
+    );
+    expect(wrapper.state().isOpen).toBe(false);
+    wrapper.find('button').simulate('click');
+    expect(wrapper.state().isOpen).toBe(true);
+    expect(expectedFunc.called).toBe(true);
+    wrapper.find('button').simulate('click');
+    expect(wrapper.state().isOpen).toBe(false);
+    expect(expectedFunc.called).toBe(true);
   });
 
   it('should add a class to icon when opened', () => {
