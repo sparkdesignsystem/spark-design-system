@@ -1,20 +1,17 @@
 const StyleDictionary = require('style-dictionary').extend('./sd.config.js');
 
-StyleDictionary.registerTransform({
-  name: 'themable',
-  type: 'value',
-  transformer: (prop) => {
-    if (prop.themable === true) {
-      return `${prop.original.value.toString()} !default`;
-    }
-    return prop.original.value;
+StyleDictionary.registerFormat({
+  name: 'themable-scss/web',
+  formatter: (tokens) => {
+    const formattedTokens = tokens.allProperties.map((token) => {
+      if (token.themable === true) {
+        // eslint-disable-next-line max-len
+        return `/// ${token.comment} \n$${token.name}: ${token.value} !default;`;
+      }
+      return `/// ${token.comment} \n$${token.name}: ${token.value};`;
+    });
+    return formattedTokens.join('\n');
   },
-});
-
-StyleDictionary.registerTransformGroup({
-  name: 'themable/web',
-  // eslint-disable-next-line dot-notation
-  transforms: StyleDictionary.transformGroup['scss'].concat(['themable']),
 });
 
 StyleDictionary.buildAllPlatforms();
