@@ -2,19 +2,19 @@ module.exports = {
   source: ['./tokens/**/*.json'],
   platforms: {
     web: {
-      transformGroup: ['themable/web'],
+      transformGroup: ['scss'],
       prefix: 'sprk',
       buildPath: 'dist/design-tokens/web/',
       files: [
         {
-          format: 'scss/variables',
+          format: 'themable-scss/web',
           destination: '_settings.scss',
           filter: {
             type: 'settings',
           },
         },
         {
-          format: 'scss/variables',
+          format: 'themable-scss/web',
           destination: '_colors.scss',
           filter: {
             type: 'colors',
