@@ -1,14 +1,14 @@
 {
   "alert": {
     "border-radius": {
-      "comment": "Value for border-radius on the Alert component",
+      "comment": "Value for border-radius on the Alert component.",
       "value": "4px",
       "type": "settings",
       "themable": true
     },
     "border": {
       "comment": "Value for border on the Alert component.",
-      "value": " 2px solid {colors.gray.value}",
+      "value": "2px solid {colors.gray.value}",
       "type": "settings",
       "themable": true
     },
@@ -61,7 +61,7 @@
       "themable": true
     },
     "dismiss-padding": {
-      "comment": "The padding around the dismiss icon in the Alert component",
+      "comment": "The padding around the dismiss icon in the Alert component.",
       "value": "{space.m.value} {space.misc-a.value} {space.m.value} {space.m.value}",
       "type": "settings",
       "themable": true

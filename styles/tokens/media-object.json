@@ -19,13 +19,13 @@
       "themable": true
     },
     "gutter-large": {
-      "comment": "he gutter of the large Media object.",
+      "comment": "The gutter of the large Media object.",
       "value": "{space.l.value}",
       "type": "settings",
       "themable": true
     },
     "gutter-huge": {
-      "comment": "he gutter of the huge Media object.",
+      "comment": "The gutter of the huge Media object.",
       "value": "{space.xl.value}",
       "type": "settings",
       "themable": true

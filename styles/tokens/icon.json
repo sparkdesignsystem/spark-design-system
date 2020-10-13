@@ -1,13 +1,13 @@
 {
   "icon": {
     "m": {
-      "comment": "Value for height and width of the Icon component",
+      "comment": "Value for height and width of the Icon component.",
       "value": "16px",
       "type": "settings",
       "themable": true
     },
     "l": {
-      "comment": "Value for height and width of the large Icon component..",
+      "comment": "Value for height and width of the large Icon component.",
       "value": "24px",
       "type": "settings",
       "themable": true

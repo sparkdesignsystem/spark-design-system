@@ -2,7 +2,7 @@
   "blockquote": {
     "source-prefix": {
       "comment": "Before pseudo-element on the Blockquote component.",
-      "value": "-",
+      "value": "'-'",
       "type": "settings",
       "themable": true
     },
