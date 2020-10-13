@@ -9,7 +9,7 @@
     "test:generate-output": "jest --config ./src/jest-config.js --json --outputFile=./src/.jest-test-results.json",
     "build": "rollup -c rollup.config.js",
     "storybook": "npm run prebuild:storybook && start-storybook -p 6006 -s ../storybook-utilities/favicon",
-    "sassdocmodifiers": "sassdoc '../html/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
+    "sassdocmodifiers": "sassdoc '../styles/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
     "prebuild:storybook": "npm run sassdocmodifiers && npm run test:generate-output",
     "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon",
     "prepublishOnly": "npm run build"
@@ -18,8 +18,7 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "@sparkdesignsystem/spark": "^14.0.0"
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -61,6 +60,7 @@
     "prop-types": "^15.6.2",
     "react-animate-height": "^2.0.20",
     "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9",
-    "warning": "^4.0.3"
+    "warning": "^4.0.3",
+    "@sparkdesignsystem/spark-styles": "^1.0.0-alpha.0"
   }
 }
