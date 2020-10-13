@@ -1,6 +1,7 @@
 import { SprkButtonModule } from './sprk-button.module';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkButtonDirective } from './sprk-button.directive';
+import { SprkSpinnerDirectiveModule } from '../../directives/sprk-spinner/sprk-spinner.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -24,12 +25,14 @@ for accessibility to choose the correct element.
 an action, such as: “Submit”, “Add”, “Join”,” etc.
 - A Button that does not go to a new page will almost
 always use a \`<button>\` element.
+- Spinner requires additional engineering. Use app state to conditionally render button text and spinner. (For example, use \`ngIf\` to to switch to spinner.)
 
 ##### Accessibility
 - If a Button is using an \`<a>\` element, you
 must include a \`title=””\` attribute.
 - If a Button only includes an Icon with no text,
 alternative text must be provided.
+- If Button has a spinner, use \`ariaLabel\` input to provide additional context.
 
 ##### Guidelines
 - If a Button is in a form, but is not intended to
@@ -45,7 +48,7 @@ receive interaction.
 };
 
 const modules = {
-  imports: [SprkButtonModule],
+  imports: [SprkButtonModule, SprkSpinnerDirectiveModule],
 };
 
 export const primary = () => ({
@@ -208,11 +211,9 @@ export const spinning = () => {
     template: `
       <button
         idString="button-spinning"
-        analyticsString="spinning"
         sprkButton
-        [isSpinning]="true"
       >
-        Button
+        <div sprkSpinner></div>
       </button>
     `,
   };
@@ -232,9 +233,9 @@ export const spinningSecondary = () => {
         variant="secondary"
         idString="button-spinning-secondary"
         sprkButton
-        [isSpinning]="true"
+
       >
-        Button
+        <div sprkSpinner variant="primary"></div>
       </button>
     `,
   };
@@ -254,9 +255,8 @@ export const spinningTertiary = () => {
         variant="tertiary"
         idString="button-spinning-tertiary"
         sprkButton
-        [isSpinning]="true"
       >
-        Button
+        <div sprkSpinner variant="secondary"></div>
       </button>
     `,
   };
@@ -276,9 +276,8 @@ export const spinningQuaternary = () => {
         variant="quaternary"
         idString="button-spinning-quaternary"
         sprkButton
-        [isSpinning]="true"
       >
-        Button
+        <div sprkSpinner variant="dark"></div>
       </button>
     `,
   };

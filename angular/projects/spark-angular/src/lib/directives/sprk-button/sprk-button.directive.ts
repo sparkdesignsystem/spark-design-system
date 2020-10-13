@@ -19,12 +19,14 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    */
   constructor(public ref: ElementRef, private renderer: Renderer2) {}
 
+  // TODO: Remove spinning functionality from button on next release #3561
   /**
    * Will show a spinner inside the
    * button if set to `true`.
    */
   @Input() isSpinning = false;
 
+  // TODO: Remove spinning functionality from button on next release #3561
   /**
    * Optional string value that is
    * set for the `aria-label`
@@ -74,6 +76,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     }
   }
 
+  // TODO: Remove spinning functionality from button on next release #3561
   /**
    * Add spinner only after view has loaded.
    * This is to allow time for the text
@@ -86,12 +89,14 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     }
   }
 
+  // TODO: Remove spinning functionality from button on next release #3561
   ngOnChanges(changes: SimpleChanges) {
     if (this.isSpinning && !changes['isSpinning'].isFirstChange()) {
       this.setSpinning(this.ref.nativeElement);
     }
   }
 
+  // TODO: Remove spinning functionality from button on next release #3561
   /**
    * @ignore
    */

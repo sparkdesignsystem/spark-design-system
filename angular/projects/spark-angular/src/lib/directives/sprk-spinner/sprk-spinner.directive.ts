@@ -26,14 +26,13 @@ export class SprkSpinnerDirective implements AfterViewInit {
     const variantLookup = {
       primary: 'sprk-c-Spinner--primary',
       secondary: 'sprk-c-Spinner--secondary',
-      dark: ' sprk-c-Spinner--secondary',
+      dark: 'sprk-c-Spinner--dark',
     };
     this.renderer.addClass(el, 'sprk-c-Spinner');
     this.renderer.addClass(el, 'sprk-c-Spinner--circle');
 
     if (variantLookup.hasOwnProperty(this.variant)) {
       this.renderer.addClass(el, variantLookup[this.variant]);
-      this.renderer.setAttribute(el, 'data-sprk-has-spinner', 'true');
     }
   }
 }

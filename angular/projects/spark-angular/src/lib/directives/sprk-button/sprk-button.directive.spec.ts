@@ -6,7 +6,9 @@ import { SprkButtonDirective } from './sprk-button.directive';
   selector: 'sprk-test',
   template: `
     <button sprkButton>Test 1</button>
+    <!-- TODO: Remove spinning functionality from button on next release #3561 -->
     <button sprkButton [isSpinning]="true">Test 2</button>
+    <!-- TODO: Remove spinning functionality from button on next release #3561 -->
     <button
       sprkButton
       variant="secondary"
@@ -17,6 +19,7 @@ import { SprkButtonDirective } from './sprk-button.directive';
       Test 3
     </button>
     <button class="sprk-c-Button--tertiary" sprkButton>Test 4</button>
+    <!-- TODO: Remove spinning functionality from button on next release #3561 -->
     <button
       sprkButton
       variant="tertiary"
@@ -25,6 +28,7 @@ import { SprkButtonDirective } from './sprk-button.directive';
     >
       Test 5
     </button>
+    <!-- TODO: Remove spinning functionality from button on next release #3561 -->
     <button sprkButton variant="quaternary" [isSpinning]="spinnerVal">
       Test 6
     </button>
@@ -65,10 +69,12 @@ describe('Spark Button Directive', () => {
     expect(component).toBeTruthy();
   });
 
+  // TODO: Remove spinning functionality from button on next release #3561
   it('should contain a spinner if isSpinning is true', () => {
     expect(button2Element.querySelectorAll('.sprk-c-Spinner').length).toBe(1);
   });
 
+  // TODO: Remove spinning functionality from button on next release #3561
   it('should add the primary spinner class when isSpinning is true on a secondary button', () => {
     const spinnerNotThere = button3Element.querySelector('.sprk-c-Spinner');
     expect(spinnerNotThere).toBeNull();
@@ -80,6 +86,7 @@ describe('Spark Button Directive', () => {
     expect(spinner.classList.contains('sprk-c-Spinner--dark')).toBe(false);
   });
 
+  // TODO: Remove spinning functionality from button on next release #3561
   it('should add the secondary spinner class when isSpinning is true on a tertiary button', () => {
     const spinnerNotThere = button5Element.querySelector('.sprk-c-Spinner');
     expect(spinnerNotThere).toBeNull();
@@ -90,6 +97,7 @@ describe('Spark Button Directive', () => {
     expect(spinner.classList.contains('sprk-c-Spinner--dark')).toBe(false);
   });
 
+  // TODO: Remove spinning functionality from button on next release #3561
   it('should add the dark spinner class when isSpinning is true on a quaternary button', () => {
     const spinnerNotThere = button6Element.querySelector('.sprk-c-Spinner');
     expect(spinnerNotThere).toBeNull();
@@ -134,6 +142,7 @@ describe('Spark Button Directive', () => {
     expect(button3Element.getAttribute('data-id')).toBe('id-test');
   });
 
+  // TODO: Remove spinning functionality from button on next release #3561
   it('should add the value of spinningAriaLabel to aria-label when isSpinning=true', () => {
     const spinnerEl = button5Element.querySelector('.sprk-c-Spinner');
     expect(spinnerEl).toBeNull();
@@ -144,10 +153,12 @@ describe('Spark Button Directive', () => {
     expect(button5Element.getAttribute('aria-label')).toBe('custom');
   });
 
+  // TODO: Remove spinning functionality from button on next release #3561
   it('should add the value of "Loading" to aria-label when isSpinning=true', () => {
     expect(button2Element.getAttribute('aria-label')).toBe('Loading');
   });
 
+  // TODO: Remove spinning functionality from button on next release #3561
   it('should not add the spinning aria-label when isSpinning=false', () => {
     expect(button1Element.hasAttribute('aria-label')).toBe(false);
   });
@@ -161,6 +172,7 @@ describe('Spark Button Directive', () => {
     expect(button4Element.classList.length).toBe(2);
   });
 
+  // TODO: Remove spinning functionality from button on next release #3561
   it('should fire setSpinning if isSpinning input is changed after first load', () => {
     const spinnerEl = button5Element.querySelector('.sprk-c-Spinner');
     expect(spinnerEl).toBeNull();
