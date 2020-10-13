@@ -10,7 +10,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('SprkToggle:', () => {
   it('should display one element with the correct additional classes', () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title" additionalClasses="sprk-o-Stack">
+      <SprkToggle triggerText="Toggle title" additionalClasses="sprk-o-Stack">
         Body text
       </SprkToggle>,
     );
@@ -19,7 +19,7 @@ describe('SprkToggle:', () => {
 
   it('should default to open if defaultOpen is true', () => {
     const wrapper = shallow(
-      <SprkToggle isDefaultOpen titleText="Toggle title">
+      <SprkToggle isDefaultOpen triggerText="Toggle title">
         Body text
       </SprkToggle>,
     );
@@ -28,7 +28,7 @@ describe('SprkToggle:', () => {
 
   it('should default to open if isOpen is true', () => {
     const wrapper = shallow(
-      <SprkToggle isOpen titleText="Toggle title">
+      <SprkToggle isOpen triggerText="Toggle title">
         Body text
       </SprkToggle>,
     );
@@ -37,7 +37,7 @@ describe('SprkToggle:', () => {
 
   it('should prefer isOpen to isDefaultOpen if both are set', () => {
     const wrapper = shallow(
-      <SprkToggle isOpen isDefaultOpen={false} titleText="Toggle title">
+      <SprkToggle isOpen isDefaultOpen={false} triggerText="Toggle title">
         Body text
       </SprkToggle>,
     );
@@ -46,7 +46,7 @@ describe('SprkToggle:', () => {
 
   it('should toggle open on click', () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title">Body text</SprkToggle>,
+      <SprkToggle triggerText="Toggle title">Body text</SprkToggle>,
     );
     expect(wrapper.state().isOpen).toBe(false);
     wrapper.find('button').simulate('click');
@@ -58,7 +58,7 @@ describe('SprkToggle:', () => {
   it('should run additional onClick function and toggle on click', () => {
     const expectedFunc = sinon.spy();
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title" onClick={expectedFunc}>
+      <SprkToggle triggerText="Toggle title" onClick={expectedFunc}>
         Body text
       </SprkToggle>,
     );
@@ -73,7 +73,7 @@ describe('SprkToggle:', () => {
 
   it('should add a class to icon when opened', () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title">Body text</SprkToggle>,
+      <SprkToggle triggerText="Toggle title">Body text</SprkToggle>,
     );
     wrapper.find('button').simulate('click');
     expect(wrapper.find('.sprk-c-Icon--open').length).toBe(1);
@@ -81,7 +81,7 @@ describe('SprkToggle:', () => {
 
   it('should add aria-expanded="true" when the toggle is open', () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title">Body text</SprkToggle>,
+      <SprkToggle triggerText="Toggle title">Body text</SprkToggle>,
     );
     wrapper.find('button').simulate('click');
     expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
@@ -90,7 +90,7 @@ describe('SprkToggle:', () => {
   it(`should add aria-controls="custom_control" and id="custom_control" 
     when the contentId is passed`, () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title" contentId="custom_control">
+      <SprkToggle triggerText="Toggle title" contentId="custom_control">
         Body text
       </SprkToggle>,
     );
@@ -100,7 +100,7 @@ describe('SprkToggle:', () => {
 
   it('should add aria-controls and id when the contentId is not passed', () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title">Body text</SprkToggle>,
+      <SprkToggle triggerText="Toggle title">Body text</SprkToggle>,
     );
     const ButtonAriaControls = wrapper.find('button').prop('aria-controls');
     const toggleContentId = wrapper
@@ -116,7 +116,7 @@ describe('SprkToggle:', () => {
   it(`should add classes to the content if contentAdditionalClasses 
   are set`, () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title" contentAdditionalClasses="test">
+      <SprkToggle triggerText="Toggle title" contentAdditionalClasses="test">
         Body text
       </SprkToggle>,
     );
@@ -127,7 +127,7 @@ describe('SprkToggle:', () => {
   it(`should add classes to the icon if iconAdditionalClasses 
   are set`, () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title" iconAdditionalClasses="test">
+      <SprkToggle triggerText="Toggle title" iconAdditionalClasses="test">
         Body text
       </SprkToggle>,
     );
@@ -138,7 +138,7 @@ describe('SprkToggle:', () => {
   it(`should add classes to the icon if iconAddClasses 
   are set`, () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title" iconAddClasses="test">
+      <SprkToggle triggerText="Toggle title" iconAddClasses="test">
         Body text
       </SprkToggle>,
     );
@@ -150,7 +150,7 @@ describe('SprkToggle:', () => {
   are set`, () => {
     const wrapper = mount(
       <SprkToggle
-        titleText="Toggle title"
+        triggerText="Toggle title"
         iconAddClasses="test"
         iconAdditionalClasses="newTest"
       >
@@ -165,7 +165,7 @@ describe('SprkToggle:', () => {
   it(`should add classes to the title if titleAdditionalClasses 
   are set`, () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title" titleAdditionalClasses="test">
+      <SprkToggle triggerText="Toggle title" titleAdditionalClasses="test">
         Body text
       </SprkToggle>,
     );
@@ -176,7 +176,7 @@ describe('SprkToggle:', () => {
   it(`should add classes to the title if titleAddClasses 
   are set`, () => {
     const wrapper = mount(
-      <SprkToggle titleText="Toggle title" titleAddClasses="test">
+      <SprkToggle triggerText="Toggle title" titleAddClasses="test">
         Body text
       </SprkToggle>,
     );
@@ -188,7 +188,7 @@ describe('SprkToggle:', () => {
   are set`, () => {
     const wrapper = mount(
       <SprkToggle
-        titleText="Toggle title"
+        triggerText="Toggle title"
         titleAddClasses="test"
         titleAdditionalClasses="newTest"
       >
