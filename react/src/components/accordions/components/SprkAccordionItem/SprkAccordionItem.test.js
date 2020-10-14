@@ -169,4 +169,11 @@ describe('SprkAccordionItem:', () => {
     expect(wrapper.find('.sprk-c-Icon--toggle.test').length).toBe(0);
     expect(wrapper.find('.sprk-c-Icon--toggle.test2').length).toBe(1);
   });
+
+  it('should add a leadingIcon if one is provided', () => {
+    let wrapper = mount(<SprkAccordionItem />);
+    expect(wrapper.find('.sprk-c-Icon').length).toBe(1);
+    wrapper = mount(<SprkAccordionItem leadingIcon="exclamation" />);
+    expect(wrapper.find('.sprk-c-Icon').length).toBe(2);
+  });
 });

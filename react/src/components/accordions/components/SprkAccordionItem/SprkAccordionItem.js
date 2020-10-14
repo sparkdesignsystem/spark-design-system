@@ -42,6 +42,7 @@ class SprkAccordionItem extends Component {
       id,
       iconNameOpen,
       iconNameClosed,
+      leadingIcon,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
@@ -75,6 +76,14 @@ class SprkAccordionItem extends Component {
           onClick={this.toggle}
           aria-expanded={isOpen ? 'true' : 'false'}
         >
+          {leadingIcon && (
+            <SprkIcon
+              iconName={leadingIcon}
+              additionalClasses="
+                      sprk-c-Icon--filled-current-color
+                      sprk-c-Icon--xl sprk-u-mrs"
+            />
+          )}
           <h3 className={headingClassNames}>{heading}</h3>
           <SprkIcon
             iconName={isOpen ? iconNameOpen : iconNameClosed}
@@ -183,6 +192,12 @@ SprkAccordionItem.propTypes = {
    * The name of the icon to use when the Accordion item is closed
    */
   iconNameClosed: PropTypes.string,
+  /**
+   * The name of the icon to use before
+   * the title in the Accordion item.
+   * This is optional.
+   */
+  leadingIcon: PropTypes.string,
 };
 
 export default SprkAccordionItem;
