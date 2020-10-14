@@ -11,29 +11,44 @@ describe('SprkSpinner:', () => {
     expect(wrapper.find('div.sprk-c-Spinner').length).toBe(1);
   });
 
-  it('should display the correct class if the size prop is set to large', () => {
+  it(`should display the correct class
+      if the size prop is set to large`, () => {
     const wrapper = shallow(<SprkSpinner size="large" />);
-    expect(wrapper.find('.sprk-c-Spinner').hasClass('sprk-c-Spinner--large')).toBe(true);
+    expect(
+      wrapper.find('.sprk-c-Spinner').hasClass('sprk-c-Spinner--large'),
+    ).toBe(true);
   });
 
-  it('should display the correct class if the lightness prop is set to dark', () => {
+  it(`should display the correct class
+      if the lightness prop is set to dark`, () => {
     const wrapper = shallow(<SprkSpinner lightness="dark" />);
-    expect(wrapper.find('.sprk-c-Spinner').hasClass('sprk-c-Spinner--dark')).toBe(true);
+    expect(
+      wrapper.find('.sprk-c-Spinner').hasClass('sprk-c-Spinner--dark'),
+    ).toBe(true);
   });
 
-  it('should display the correct class if the variant prop is set to dark', () => {
+  it(`should display the correct class
+      if the variant prop is set to dark`, () => {
     const wrapper = shallow(<SprkSpinner variant="dark" />);
-    expect(wrapper.find('.sprk-c-Spinner').hasClass('sprk-c-Spinner--dark')).toBe(true);
+    expect(
+      wrapper.find('.sprk-c-Spinner').hasClass('sprk-c-Spinner--dark'),
+    ).toBe(true);
   });
 
-  it('should display the correct class if the variant prop is set to secondary', () => {
+  it(`should display the correct class if
+      the variant prop is set to secondary`, () => {
     const wrapper = shallow(<SprkSpinner variant="secondary" />);
-    expect(wrapper.find('.sprk-c-Spinner').hasClass('sprk-c-Spinner--secondary')).toBe(true);
+    expect(
+      wrapper.find('.sprk-c-Spinner').hasClass('sprk-c-Spinner--secondary'),
+    ).toBe(true);
   });
 
-  it('should display the correct class if the variant prop is set to primary', () => {
+  it(`should display the correct class if
+      the variant prop is set to primary`, () => {
     const wrapper = shallow(<SprkSpinner variant="primary" />);
-    expect(wrapper.find('.sprk-c-Spinner').hasClass('sprk-c-Spinner--primary')).toBe(true);
+    expect(
+      wrapper.find('.sprk-c-Spinner').hasClass('sprk-c-Spinner--primary'),
+    ).toBe(true);
   });
 
   it('should apply any unknown props as attributes on the element', () => {

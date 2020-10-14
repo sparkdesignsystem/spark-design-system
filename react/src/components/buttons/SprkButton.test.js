@@ -40,16 +40,19 @@ describe('SprkButton:', () => {
     );
   });
 
+  // TODO: Remove anything related to spinner from button on next release #3557
   it('if loading is not set, should not render the spinner', () => {
     const wrapper = mount(<SprkButton />);
     expect(wrapper.find('.sprk-c-Spinner').length).toBe(0);
   });
 
+  // TODO: Remove anything related to spinner from button on next release #3557
   it('if loading is set, should render the spinner', () => {
     const wrapper = mount(<SprkButton loading />);
     expect(wrapper.find('.sprk-c-Spinner').length).toBe(1);
   });
 
+  // TODO: Remove anything related to spinner from button on next release #3557
   it(
     'if loading is set, should render the spinner' +
       ' and add aria-label to element',
@@ -59,6 +62,7 @@ describe('SprkButton:', () => {
     },
   );
 
+  // TODO: Remove anything related to spinner from button on next release #3557
   it(
     'if loading is set with spinningAriaLabel it' +
       ' should add custom aria-label',
@@ -152,6 +156,18 @@ describe('SprkButton:', () => {
     'should not apply the disabled attribute if the' +
       ' element is an anchor "a"',
     () => {
+      const wrapper = mount(<SprkButton href="#" isDisabled="true" />);
+      const link = wrapper.find('a');
+      expect(link.length).toBe(1);
+      expect(link.getDOMNode().hasAttribute('disabled')).toBe(false);
+    },
+  );
+
+  // TODO: Remove deprecated disabled on next release #3557
+  it(
+    'should not apply the disabled attribute if the' +
+      ' element is an anchor "a"',
+    () => {
       const wrapper = mount(<SprkButton href="#" disabled="true" />);
       const link = wrapper.find('a');
       expect(link.length).toBe(1);
@@ -159,6 +175,18 @@ describe('SprkButton:', () => {
     },
   );
 
+  it(
+    'it should apply the disabled attribute if the element is a button' +
+      ' and disabled is true',
+    () => {
+      const wrapper = mount(<SprkButton isDisabled="true" />);
+      const button = wrapper.find('button');
+      expect(button.length).toBe(1);
+      expect(button.getDOMNode().hasAttribute('disabled')).toBe(true);
+    },
+  );
+
+  // TODO: Remove deprecated disabled on next release #3557
   it(
     'it should apply the disabled attribute if the element is a button' +
       ' and disabled is true',
