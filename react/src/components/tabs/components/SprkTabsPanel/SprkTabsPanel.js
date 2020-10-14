@@ -56,7 +56,7 @@ SprkTabsPanel.propTypes = {
    * A string of additional classes to be applied to the tab panel.
    */
   tabPanelAdditionalClasses: PropTypes.string,
-  // TODO remove as part of Issue XXXX
+  // TODO remove as part of Issue 3566
   /**
    * Deprecated - use `tabBtnAnalyticsString` instead. A string of additional
    * classes to be applied to the tab panel.

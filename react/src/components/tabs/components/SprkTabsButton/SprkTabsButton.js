@@ -82,7 +82,7 @@ SprkTabsButton.propTypes = {
    * The aria ID to use for each tab panel so it corresponds to the button
    */
   ariaControls: PropTypes.string,
-  // TODO remove as part of Issue XXXX
+  // TODO remove as part of Issue 3566
   /**
    * Deprecated - use `tabBtnAdditionalClasses` instead. Expects a space
    * separated string of classes to be added to the tab panel.
@@ -105,7 +105,7 @@ SprkTabsButton.propTypes = {
    * The id used for the data-id attribute
    */
   tabBtnDataId: PropTypes.string,
-  // TODO remove as part of Issue XXXX
+  // TODO remove as part of Issue 3566
   /**
    * Deprecated - use `tabBtnAnalyticsString` instead. The value used for
    * the data-analytics attribute
