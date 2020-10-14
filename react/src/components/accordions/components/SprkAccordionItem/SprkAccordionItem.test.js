@@ -4,6 +4,9 @@ import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkAccordionItem from './SprkAccordionItem';
 
+/* TODO: Remove isDefaultOpen, headingAddClasses, contentAddClasses,
+iconAddClasses in future issue #1299 */
+
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkAccordionItem:', () => {

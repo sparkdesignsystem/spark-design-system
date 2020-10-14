@@ -22,7 +22,7 @@ export const defaultStory = () => (
   <SprkAccordion>
     <SprkAccordionItem
       heading="This is an accordion heading"
-      contentAddClasses="sprk-o-Stack sprk-o-Stack--medium"
+      contentAdditionalClasses="sprk-o-Stack sprk-o-Stack--medium"
     >
       <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
         This is an example of accordion content. This is an example of accordion

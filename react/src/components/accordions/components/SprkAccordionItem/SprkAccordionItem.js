@@ -8,6 +8,7 @@ import SprkLink from '../../../../base/links/SprkLink';
 class SprkAccordionItem extends Component {
   constructor(props) {
     super(props);
+    // TODO: Remove isDefaultOpen in future issue #1299
     const { isDefaultOpen, isOpen = isDefaultOpen } = this.props;
     this.state = {
       isOpen: isOpen || false,
@@ -26,6 +27,8 @@ class SprkAccordionItem extends Component {
     if (onToggle) onToggle(e);
   }
 
+  /* TODO: Remove headingAddClasses, contentAddClasses,
+  iconAddClasses in future issue #1299 */
   render() {
     const {
       analyticsString,
@@ -126,7 +129,7 @@ SprkAccordionItem.propTypes = {
    * The text for the item heading.
    */
   heading: PropTypes.string.isRequired,
-  // TODO remove as part of Issue XXXX
+  // TODO remove as part of Issue 1299
   /**
    * Deprecated - use `headingAdditionalClasses` instead. Expects a space
    * separated string of classes to be added to the heading.
@@ -146,6 +149,7 @@ SprkAccordionItem.propTypes = {
    * automated tools.
    */
   idString: PropTypes.string,
+  // TODO remove as part of Issue 1299
   /**
    * Deprecated - Use `isOpen` instead.
    * Used to specify whether the item should be open by default.
@@ -155,7 +159,7 @@ SprkAccordionItem.propTypes = {
    * Used to specify whether the item is opened or closed.
    */
   isOpen: PropTypes.bool,
-  // TODO remove as part of Issue XXXX
+  // TODO remove as part of Issue 1299
   /**
    * Deprecated - use `iconAdditionalClasses` instead. Expects a space
    * separated string of classes to be added to the icon.
@@ -165,7 +169,7 @@ SprkAccordionItem.propTypes = {
    * Expects a space separated string of classes to be added to the icon.
    */
   iconAdditionalClasses: PropTypes.string,
-  // TODO remove as part of Issue XXXX
+  // TODO remove as part of Issue 1299
   /**
    * Deprecated - use `contentAdditionalClasses` instead. Expects a space
    * separated string of classes to be added to the toggle content.
@@ -181,7 +185,7 @@ SprkAccordionItem.propTypes = {
    */
   id: PropTypes.string,
   /**
-   * An function to be called when the Accordion item is toggled.
+   * A function to be called when the Accordion item is toggled.
    */
   onToggle: PropTypes.func,
   /**
