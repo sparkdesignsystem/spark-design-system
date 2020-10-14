@@ -189,11 +189,11 @@ SprkAccordionItem.propTypes = {
    */
   onToggle: PropTypes.func,
   /**
-   * The name of the icon to use when the Accordion item is open
+   * The name of the icon to use when the Accordion item is open.
    */
   iconNameOpen: PropTypes.string,
   /**
-   * The name of the icon to use when the Accordion item is closed
+   * The name of the icon to use when the Accordion item is closed.
    */
   iconNameClosed: PropTypes.string,
   /**
