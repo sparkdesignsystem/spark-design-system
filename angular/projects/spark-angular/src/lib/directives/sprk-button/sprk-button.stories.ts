@@ -25,7 +25,7 @@ for accessibility to choose the correct element.
 an action, such as: “Submit”, “Add”, “Join”,” etc.
 - A Button that does not go to a new page will almost
 always use a \`<button>\` element.
-- Spinner requires additional engineering. Use app state to conditionally render button text and spinner. (For example, use \`ngIf\` to to switch to spinner.)
+- Spinner requires additional engineering. Conditionally render between button text and spinner. (For example, use \`ngIf\` to switch to spinner.)
 
 ##### Accessibility
 - If a Button is using an \`<a>\` element, you

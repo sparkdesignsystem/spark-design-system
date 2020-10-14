@@ -5,10 +5,12 @@ import { SprkSpinnerDirective } from './sprk-spinner.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <div sprkSpinner></div>
+    <div sprkSpinner analyticsString="spinner-1" idString="spinner-1"></div>
     <div sprkSpinner variant="primary"></div>
     <div sprkSpinner variant="secondary"></div>
     <div sprkSpinner variant="dark"></div>
+    <div sprkSpinner size="large"></div>
+    <div sprkSpinner additionalClasses="class1"></div>
   `,
 })
 class TestComponent {}
@@ -20,6 +22,8 @@ describe('Spark Spinner Directive', () => {
   let spinner2Element: HTMLElement;
   let spinner3Element: HTMLElement;
   let spinner4Element: HTMLElement;
+  let spinner5Element: HTMLElement;
+  let spinner6Element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -34,10 +38,16 @@ describe('Spark Spinner Directive', () => {
     spinner2Element = fixture.nativeElement.querySelectorAll('div')[1];
     spinner3Element = fixture.nativeElement.querySelectorAll('div')[2];
     spinner4Element = fixture.nativeElement.querySelectorAll('div')[3];
+    spinner5Element = fixture.nativeElement.querySelectorAll('div')[4];
+    spinner6Element = fixture.nativeElement.querySelectorAll('div')[5];
   }));
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('add additional classes', () => {
+    expect(spinner6Element.classList.contains('class1')).toBe(true);
   });
 
   it('add the correct default classes', () => {
@@ -45,6 +55,14 @@ describe('Spark Spinner Directive', () => {
       true,
     );
     expect(spinner1Element.classList.contains('sprk-c-Spinner')).toBe(true);
+  });
+
+  it('add the id string', () => {
+    expect(spinner1Element.getAttribute('data-id')).toBe('spinner-1');
+  });
+
+  it('add the analytics attribute', () => {
+    expect(spinner1Element.getAttribute('data-analytics')).toBe('spinner-1');
   });
 
   it('add the correct classes if primary variant', () => {
@@ -62,6 +80,12 @@ describe('Spark Spinner Directive', () => {
   it('add the correct classes if dark variant', () => {
     expect(spinner4Element.classList.toString()).toContain(
       'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--dark',
+    );
+  });
+
+  it('add the correct classes if size is large', () => {
+    expect(spinner5Element.classList.toString()).toContain(
+      'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large',
     );
   });
 });

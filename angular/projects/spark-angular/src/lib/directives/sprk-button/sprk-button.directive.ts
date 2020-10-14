@@ -21,6 +21,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
 
   // TODO: Remove spinning functionality from button on next release #3561
   /**
+   * Deprecated: Conditionally render a div with sprkSpinner directive instead
    * Will show a spinner inside the
    * button if set to `true`.
    */
@@ -28,6 +29,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
 
   // TODO: Remove spinning functionality from button on next release #3561
   /**
+   * Deprecated: Conditionally render a div with sprkSpinner directive instead
    * Optional string value that is
    * set for the `aria-label`
    * when `isSpinning` is `true`.
