@@ -20,20 +20,20 @@ class SprkTabsButton extends Component {
       tabBtnChildren,
       tabBtnId,
       tabBtnAddClasses,
-      tabBtnAdditionalClasses,
+      tabBtnAdditionalClasses = tabBtnAddClasses,
       ariaControls,
       ariaSelected,
       isActive,
       onTabClick,
       tabBtnDataId,
       tabBtnAnalytics,
-      tabBtnAnalyticsString,
+      tabBtnAnalyticsString = tabBtnAnalytics,
     } = this.props;
     return (
       <button
         className={classnames(
           'sprk-c-Tabs__button',
-          tabBtnAdditionalClasses || tabBtnAddClasses,
+          tabBtnAdditionalClasses,
           // eslint-disable-next-line prettier/prettier
           { 'sprk-c-Tabs__button--active': isActive },
         )}
@@ -46,7 +46,7 @@ class SprkTabsButton extends Component {
         tabIndex={isActive ? undefined : '-1'}
         ref={this.tabBtnRef}
         data-id={tabBtnDataId}
-        data-analytics={tabBtnAnalyticsString || tabBtnAnalytics}
+        data-analytics={tabBtnAnalyticsString}
       >
         {tabBtnChildren}
       </button>
@@ -108,11 +108,11 @@ SprkTabsButton.propTypes = {
   // TODO remove as part of Issue 3566
   /**
    * Deprecated - use `tabBtnAnalyticsString` instead. The value used for
-   * the data-analytics attribute
+   * the data-analytics attribute.
    */
   tabBtnAnalytics: PropTypes.string,
   /**
-   * The value used for the data-analytics attribute
+   * The value used for the data-analytics attribute.
    */
   tabBtnAnalyticsString: PropTypes.string,
 };
