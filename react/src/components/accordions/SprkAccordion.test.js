@@ -149,11 +149,7 @@ describe('SprkAccordion:', () => {
   it('should use custom open icon when open', () => {
     const wrapper = mount(
       <SprkAccordion>
-        <SprkAccordionItem
-          heading="title"
-          iconTypeOpen="pinterest"
-          isDefaultOpen
-        >
+        <SprkAccordionItem heading="title" iconNameOpen="pinterest" isOpen>
           content
         </SprkAccordionItem>
         <SprkAccordionItem heading="title2">content</SprkAccordionItem>
@@ -168,7 +164,7 @@ describe('SprkAccordion:', () => {
   it('should use custom closed icon when closed', () => {
     const wrapper = mount(
       <SprkAccordion>
-        <SprkAccordionItem heading="title" iconTypeClosed="facebook">
+        <SprkAccordionItem heading="title" iconNameClosed="facebook">
           content
         </SprkAccordionItem>
         <SprkAccordionItem heading="title2">content</SprkAccordionItem>

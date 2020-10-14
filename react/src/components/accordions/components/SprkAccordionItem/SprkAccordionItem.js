@@ -40,8 +40,8 @@ class SprkAccordionItem extends Component {
       iconAddClasses,
       iconAdditionalClasses = iconAddClasses,
       id,
-      iconTypeOpen,
-      iconTypeClosed,
+      iconNameOpen,
+      iconNameClosed,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
@@ -77,7 +77,7 @@ class SprkAccordionItem extends Component {
         >
           <h3 className={headingClassNames}>{heading}</h3>
           <SprkIcon
-            iconName={isOpen ? iconTypeOpen : iconTypeClosed}
+            iconName={isOpen ? iconNameOpen : iconNameClosed}
             additionalClasses={iconClasses}
           />
         </SprkLink>
@@ -99,9 +99,8 @@ class SprkAccordionItem extends Component {
 }
 
 SprkAccordionItem.defaultProps = {
-  isOpen: false,
-  iconTypeOpen: 'chevron-up-circle',
-  iconTypeClosed: 'chevron-up-circle',
+  iconNameOpen: 'chevron-up-circle',
+  iconNameClosed: 'chevron-up-circle',
 };
 
 SprkAccordionItem.propTypes = {
@@ -179,11 +178,11 @@ SprkAccordionItem.propTypes = {
   /**
    * The name of the icon to use when the Accordion item is open
    */
-  iconTypeOpen: PropTypes.string,
+  iconNameOpen: PropTypes.string,
   /**
    * The name of the icon to use when the Accordion item is closed
    */
-  iconTypeClosed: PropTypes.string,
+  iconNameClosed: PropTypes.string,
 };
 
 export default SprkAccordionItem;

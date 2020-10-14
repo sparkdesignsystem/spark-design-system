@@ -14,7 +14,16 @@ describe('SprkAccordionItem:', () => {
     expect(wrapper.find('li.sprk-c-Accordion__item').length).toBe(1);
   });
 
-  it('should default to open if defaultOpen is true', () => {
+  it('should default to open if isOpen is true', () => {
+    const wrapper = mount(
+      <SprkAccordionItem heading="test" isOpen>
+        test
+      </SprkAccordionItem>,
+    );
+    expect(wrapper.state().isOpen).toBe(true);
+  });
+
+  it('should default to open if isDefaultOpen is true', () => {
     const wrapper = mount(
       <SprkAccordionItem heading="test" isDefaultOpen>
         test
@@ -85,6 +94,18 @@ describe('SprkAccordionItem:', () => {
     ).toEqual('test-id');
   });
 
+  it('should add classes to heading if headingAdditionalClasses is set', () => {
+    const wrapper = mount(
+      <SprkAccordionItem headingAdditionalClasses="test" />,
+    );
+    expect(wrapper.find('.sprk-c-Accordion__heading.test').length).toBe(1);
+  });
+
+  it('should add classes to heading if headingAddClasses is set', () => {
+    const wrapper = mount(<SprkAccordionItem headingAddClasses="test" />);
+    expect(wrapper.find('.sprk-c-Accordion__heading.test').length).toBe(1);
+  });
+
   it('should prefer headingAdditionalClasses over headingAddClasses', () => {
     let wrapper = mount(
       <SprkAccordionItem
@@ -100,6 +121,18 @@ describe('SprkAccordionItem:', () => {
     expect(wrapper.find('.sprk-c-Accordion__heading.test2').length).toBe(1);
   });
 
+  it('should add classes to content if contentAdditionalClasses is set', () => {
+    const wrapper = mount(
+      <SprkAccordionItem contentAdditionalClasses="test" />,
+    );
+    expect(wrapper.find('.sprk-c-Accordion__content.test').length).toBe(1);
+  });
+
+  it('should add classes to content if contentAddClasses is set', () => {
+    const wrapper = mount(<SprkAccordionItem contentAddClasses="test" />);
+    expect(wrapper.find('.sprk-c-Accordion__content.test').length).toBe(1);
+  });
+
   it('should prefer contentAdditionalClasses over contentAddClasses', () => {
     let wrapper = mount(
       <SprkAccordionItem
@@ -113,6 +146,16 @@ describe('SprkAccordionItem:', () => {
     wrapper = mount(<SprkAccordionItem contentAddClasses="test2" />);
     expect(wrapper.find('.sprk-c-Accordion__content.test').length).toBe(0);
     expect(wrapper.find('.sprk-c-Accordion__content.test2').length).toBe(1);
+  });
+
+  it('should add classes to icon if iconAdditionalClasses is set', () => {
+    const wrapper = mount(<SprkAccordionItem iconAdditionalClasses="test" />);
+    expect(wrapper.find('.sprk-c-Icon--toggle.test').length).toBe(1);
+  });
+
+  it('should add classes to icon if iconAddClasses is set', () => {
+    const wrapper = mount(<SprkAccordionItem iconAddClasses="test" />);
+    expect(wrapper.find('.sprk-c-Icon--toggle.test').length).toBe(1);
   });
 
   it('should prefer iconAdditionalClasses over iconAddClasses', () => {
