@@ -32,7 +32,6 @@ always use a \`<button>\` element.
 must include a \`title=””\` attribute.
 - If a Button only includes an Icon with no text,
 alternative text must be provided.
-- If Button has a spinner, use \`ariaLabel\` input to provide additional context.
 
 ##### Guidelines
 - If a Button is in a form, but is not intended to
