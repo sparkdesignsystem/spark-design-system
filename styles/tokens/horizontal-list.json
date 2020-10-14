@@ -38,7 +38,7 @@
     },
     "delimiter": {
       "comment": "The delimiter between delimited items in Horizontal List components.",
-      "value": ",",
+      "value": "','",
       "type": "settings",
       "themable": true
     }
