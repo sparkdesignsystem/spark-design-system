@@ -43,6 +43,7 @@ export const defaultStory = () => (
         element: 'a',
       },
     ]}
+    additionalClasses="sprk-o-CenteredColumn"
   />
 );
 
