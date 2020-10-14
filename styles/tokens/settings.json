@@ -1,22 +1,32 @@
 {
-  "settings": {
-    "selection-bg-color": {
-      "comment": "Background color of any text when selected.",
-      "value": "{colors.purple-lightest.value}",
-      "type": "settings",
-      "themable": true
-    },
-    "selection-text-color": {
-      "comment": "Text color of any text when selected.",
-      "value": "{colors.black.value}",
-      "type": "settings",
-      "themable": true
-    },
-    "pre-overflow": {
-      "comment": "Text color of any text when selected.",
-      "value": "auto",
-      "type": "settings",
-      "themable": true
-    }
+  "selection-bg-color": {
+    "comment": "Background color of any text when selected.",
+    "value": "{colors.purple-lightest.value}",
+    "type": "settings",
+    "themable": true
+  },
+  "selection-text-color": {
+    "comment": "Text color of any text when selected.",
+    "value": "{colors.black.value}",
+    "type": "settings",
+    "themable": true
+  },
+  "pre-overflow": {
+    "comment": "Text color of any text when selected.",
+    "value": "auto",
+    "type": "settings",
+    "themable": true
+  },
+  "pre-overflow": {
+    "comment": "Text color of any text when selected.",
+    "value": "auto",
+    "type": "settings",
+    "themable": true
+  },
+  "border-radius": {
+    "comment": "Value used for border-radius across the system.",
+    "value": "5px",
+    "type": "settings",
+    "themable": true
   }
 }

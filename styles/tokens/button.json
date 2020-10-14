@@ -1,0 +1,524 @@
+{
+  "btn": {
+    "background-color": {
+      "comment": "The background color of the Button component.",
+      "value": "{colors.red.value}",
+      "type": "settings",
+      "themable": true
+    },
+    "shadow-color": {
+      "comment": "The box shadow color value for the Button component",
+      "value": "rgba(20, 20, 20, 0.08)",
+      "type": "settings",
+      "themable": true
+    },
+    "shadow": {
+      "comment": "The box shadow value of the Button component.",
+      "value": "0 3px 10px {btn.shadow-color.value}",
+      "type": "settings",
+      "themable": true
+    },
+    "border-style": {
+      "comment": "The border style of the Button component.",
+      "value": "solid",
+      "type": "settings",
+      "themable": true
+    },
+    "border-color": {
+      "comment": "The border color of the Button component.",
+      "value": "{btn.background-color.value}",
+      "type": "settings",
+      "themable": true
+    },
+    "border-width": {
+      "comment": "The border width of the Button component.",
+      "value": "2px",
+      "type": "settings",
+      "themable": true
+    },
+    "border": {
+      "comment": "The border of the Button component.",
+      "value": "{btn.border-width.value} {btn.border-style.value} {btn.border-color.value}",
+      "type": "settings",
+      "themable": true
+    },
+    "font": {
+      "weight": {
+        "comment": "The font weight of the Button component.",
+        "value": "500",
+        "type": "settings",
+        "themable": true
+      },
+      "size": {
+        "comment": "The font size of the Button component.",
+        "value": "inherit",
+        "type": "settings",
+        "themable": true
+      },
+      "family": {
+        "comment": "The font family of the Button component.",
+        "value": "inherit",
+        "type": "settings",
+        "themable": true
+      }
+    },
+    "line-height": {
+      "comment": "The line height of the Button component.",
+      "value": "normal",
+      "type": "settings",
+      "themable": true
+    },
+    "text-color": {
+      "comment": "The text color of the Button component.",
+      "value": "{colors.white.value}",
+      "type": "settings",
+      "themable": true
+    },
+    "visited-text-color": {
+      "comment": "The visited text color of the Button component.",
+      "value": "{colors.white.value}",
+      "type": "settings",
+      "themable": true
+    },
+    "border-radius": {
+      "comment": "The border radius of the Button component.",
+      "value": "4px",
+      "type": "settings",
+      "themable": true
+    },
+    "hover-background-color": {
+      "comment": "The background color of the Button component on hover.",
+      "value": "{colors.mid-red.value}",
+      "type": "settings",
+      "themable": true
+    },
+    "hover-text-color": {
+      "comment": "The text color of the Button component on hover.",
+      "value": "{colors.white.value}",
+      "type": "settings",
+      "themable": true
+    },
+    "padding": {
+      "comment": "The padding of the Button component.",
+      "value": "{space.m.value} 24px",
+      "type": "settings",
+      "themable": true
+    },
+    "breakpoint-xs": {
+      "comment": "The extra small breakpoint at which Full Width Buttons switch to normal width.",
+      "value": "30rem",
+      "type": "settings",
+      "themable": true
+    },
+    "breakpoint-s": {
+      "comment": "The small breakpoint at which Full Width Buttons switch to normal width.",
+      "value": "42.5rem",
+      "type": "settings",
+      "themable": true
+    },
+    "transition-speed": {
+      "comment": "The transition speed setting for transitions on the Button component.",
+      "value": "0.3s",
+      "type": "settings",
+      "themable": true
+    },
+    "letter-spacing": {
+      "comment": "The letter spacing value of the Button component.",
+      "value": "0.62px",
+      "type": "settings",
+      "themable": true
+    },
+    "disabled": {
+      "opacity": {
+        "comment": "The opacity value of the disabled Button component.",
+        "value": "1",
+        "type": "settings",
+        "themable": true
+      },
+      "border-width": {
+        "comment": "The border width of the Disabled Button component.",
+        "value": "{btn.border-width.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "border-style": {
+        "comment": "The border style of the Disabled Button component.",
+        "value": "{btn.border-style.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "background-color": {
+        "comment": "The background color of the Disabled Button component.",
+        "value": "{colors.black-tint.50.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "text-color": {
+        "comment": "The text color of the Disabled Button component.",
+        "value": "{colors.white.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "border-color": {
+        "comment": "The border color of the Disabled Button component.",
+        "value": "none",
+        "type": "transparent",
+        "themable": true
+      },
+      "border": {
+        "comment": "The border of the Disabled Button component.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      },
+      "shadow": {
+        "comment": "The shadow color of the Disabled Button component.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      },
+      "hover-border": {
+        "comment": "The hover border color of the Disabled Button component.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      }
+    },
+    "secondary": {
+      "disabled": {
+        "border-width": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "border-style": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "background-color": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "text-color": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "hover-border": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "background-color": {
+        "comment": "The background color of the Button component.",
+        "value": "{colors.red.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "border-color": {
+        "comment": "The border color of the Button component.",
+        "value": "{btn.background-color.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "border": {
+        "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
+        "value": "{colors.purple.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "text-color": {
+        "comment": "The text decoration of the Accordion item summary.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      },
+      "visited-text-color": {
+        "comment": "The text decoration of the Accordion item summary when active.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      },
+      "hover": {
+        "text-color": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "background-color": {
+          "comment": "The padding of the Accordion content.",
+          "value": "0 0 {space.l.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "border": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "letter-spacing": {
+        "comment": "The text decoration of the Accordion item summary when active.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      }
+    },
+    "tertiary": {
+      "disabled": {
+        "border-width": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "border-style": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "hover-border": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "text-color": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "background-color": {
+        "comment": "The background color of the Button component.",
+        "value": "{colors.red.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "border-color": {
+        "comment": "The border color of the Button component.",
+        "value": "{btn.background-color.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "border": {
+        "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
+        "value": "{colors.purple.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "text-color": {
+        "comment": "The text decoration of the Accordion item summary.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      },
+      "visited-text-color": {
+        "comment": "The text decoration of the Accordion item summary when active.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      },
+      "hover": {
+        "text-color": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "background-color": {
+          "comment": "The padding of the Accordion content.",
+          "value": "0 0 {space.l.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "border": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "letter-spacing": {
+        "comment": "The text decoration of the Accordion item summary when active.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      }
+    },
+    "quaternary": {
+      "disabled": {
+        "border-width": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "border-style": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "text-color": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "background-color": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        },
+        "hover-border": {
+          "comment": "The text decoration of the Accordion item summary when active.",
+          "value": "none",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "background-color": {
+        "comment": "The background color of the Button component.",
+        "value": "{colors.red.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "border-color": {
+        "comment": "The border color of the Button component.",
+        "value": "{btn.background-color.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "border": {
+        "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
+        "value": "{colors.purple.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "text-color": {
+        "comment": "The text decoration of the Accordion item summary.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      },
+      "visited-text-color": {
+        "comment": "The text decoration of the Accordion item summary when active.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      },
+      "box-shadow": {
+        "comment": "The text decoration of the Accordion item summary when active.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      },
+      "hover": {
+        "text-color": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "background-color": {
+          "comment": "The padding of the Accordion content.",
+          "value": "0 0 {space.l.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The background color used for hover and active on items in the Accordion.",
+          "value": "{colors.gray.value}",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "letter-spacing": {
+        "comment": "The text decoration of the Accordion item summary when active.",
+        "value": "none",
+        "type": "settings",
+        "themable": true
+      }
+    }
+  }
+}
