@@ -9,10 +9,11 @@
     "test:watch": "jest -o --watch --config ./jest-config.js",
     "coverage": "jest --coverage --config ./jest-config.js",
     "build": "webpack",
+    "build-styles": "cd '../styles/' && node build.js",
     "prepublishOnly": "npm run build",
     "sassdocmodifiers": "sassdoc '../styles/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
     "prebuild:storybook": "npm run sassdocmodifiers && npm run test:generate-output",
-    "storybook": "npm run prebuild:storybook && start-storybook -p 7006 -s ../storybook-utilities/favicon",
+    "storybook": "npm run build-styles && npm run prebuild:storybook && start-storybook -p 7006 -s ../storybook-utilities/favicon",
     "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon"
   },
   "repository": {
