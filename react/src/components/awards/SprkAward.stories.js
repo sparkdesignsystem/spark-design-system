@@ -8,7 +8,11 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
     jest: ['SprkAward'],
-    info: `${markdownDocumentationLinkBuilder('award')}`,
+    info: `
+${markdownDocumentationLinkBuilder('award')}
+- If you do not want the Award component centered, be sure to remove the
+sprk-o-CenteredColumn class from additionalClasses.
+`,
   },
 };
 
