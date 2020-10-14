@@ -24,7 +24,7 @@ describe('SprkTabsPanel:', () => {
     expect(wrapper.find('.sprk-c-Tabs__content.test').length).toBe(1);
   });
 
-  it('should prefer tabPanelAdditionalClasses over SprkTabsPanel', () => {
+  it('should prefer tabPanelAdditionalClasses over tabPanelAddClasses', () => {
     const wrapper = mount(
       <SprkTabsPanel
         tabPanelAdditionalClasses="test"
