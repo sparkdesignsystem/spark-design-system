@@ -65,15 +65,16 @@ import {
   SprkIcon,
   SprkDivider,
 } from '@sparkdesignsystem/spark-react';
-import SprkTabs from '../../../../react/src/components/tabs/SprkTabs';
 
 
-# Color Usage
-Following the August 2020 update to the Rocket Orbit color palette, it’s important to review this guide carefully so you can apply color correctly.
+<h1 class="docs-b-h1 sprk-b-PageTitle sprk-b-TypeDisplayOne sprk-u-mbl sprk-u-Measure">
+  Color Usage
+</h1>
+<blockquote class="docs-b-Blockquote sprk-u-mvl sprk-u-Measure">
+  We've upgraded to the Orbit color palette in August 2020!
+  Review this guide for new color guidelines.
+</blockquote>
 
-<p class="sprk-u-mbl sprk-b-TypeBodyTwo sprk-u-Measure">
-  Our objective is to achieve human-centered design in everything we do and having a consistent and <a href="/using-spark/foundations/color-accessibility">WCAG AA accessible color palette</a> is just one of the foundations in creating this unified user experience.
-</p>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
 <h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Table of Contents</h2>
 <ul>
@@ -123,15 +124,26 @@ Following the August 2020 update to the Rocket Orbit color palette, it’s impor
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
 <h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Our Color Story</h2>
 <p>
-  We designed the Orbit palette to be modern and approachable, while fitting our brand character and highlighting color psychology attributes.
+  The Orbit palette conveys the tapestry of colors seen from a rocket as it ascends into space. Our color choices capture the evolving hue and brilliance of the earth's atmospheres.
 </p>
-<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
-  One of our designers said, "[The color palette] reminded me of when Felix Baumgartner jumped from the edge of space. The thing I remember most when watching it, as he ascended and the curvature of the earth became more pronounced, it created this beautiful tapestry of color as he moved through the atmospheres and how the light would reflect and your perspective changed."
+<p>
+  We've employed color psychology and user testing to develop this palette. It's built for modern, human-centered, and accessible experiences.
 </p>
+<blockquote class="docs-b-Blockquote sprk-u-mvl sprk-u-Measure">
+  Our color usage guidelines follow <a href="/using-spark/foundations/color-accessibility">WCAG 2.1 (Level AA)</a> contrast standards.
+</blockquote>
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
 <h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">How to Apply Color</h2>
 <p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
-  When using color in any application, it’s important to be mindful of proportions. Using not just the right color, but the right amount of that color, creates a consistent balance in a user experience.
+  When observing the amounts of colors used in a project, it should look similar to the color bar below.
+</p>
+<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+  A well balanced color proportion leans towards primarily white backgrounds with black text, followed by intentionally placed interaction and brand colors.
 </p>
 <img
   srcset={howToApplyColorProportionallySet}
@@ -145,7 +157,7 @@ Following the August 2020 update to the Rocket Orbit color palette, it’s impor
   <ColorSwatch isCompact variableName="sprk-mid-red" />
 </ColorSwatchGrid>
 <p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
-  As our primary color, use Rocket Red for primary actions, like buttons and key elements in illustrations. Take care to not overuse any shades of red.
+  Use Rocket Red for primary actions, like buttons and key elements. This primary color highlights the main actions on the page.
 </p>
 <div class="sprk-u-mbh sprk-u-mtl">
   <SprkButton additionalClasses="sprk-u-mrm">Button</SprkButton>
@@ -180,7 +192,7 @@ Following the August 2020 update to the Rocket Orbit color palette, it’s impor
       </SprkStackItem>
       <SprkStackItem>
         <p>
-          When using Rocket Red to indicate primary actions, always balance colors by including a secondary or tertiary option.
+          After placing a primary button, use secondary or tertiary buttons to maintain a clear hierarchy between actions.
         </p>
       </SprkStackItem>
     </SprkStack>
@@ -213,12 +225,17 @@ Following the August 2020 update to the Rocket Orbit color palette, it’s impor
       </SprkStackItem>
       <SprkStackItem>
         <p>
-          Don’t overuse Rocket Red, especially in buttons.
+          Overusing Rocket Red causes distraction from the main action. It's especially distracting when two primary buttons are close to each other.
         </p>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
 </SprkStack>
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
 <h3>Orbit Purple</h3>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
@@ -229,7 +246,7 @@ Following the August 2020 update to the Rocket Orbit color palette, it’s impor
   <ColorSwatch hasOutline isCompact variableName="sprk-purple-lightest" />
 </ColorSwatchGrid>
 <p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
-  As our secondary color, use Purple to highlight secondary actions, like buttons, in-page links and active form fields. Use for highlighting important information and followed links.
+  Use Purple to highlight interactive elements, like buttons, links, and active form fields. It can also spotlight important information.
 </p>
 <SprkStack splitAt="small" itemSpacing="huge" additionalClasses="sprk-o-Stack--end-column@s sprk-u-mbh">
   <SprkStackItem >
@@ -319,12 +336,17 @@ Following the August 2020 update to the Rocket Orbit color palette, it’s impor
       </SprkStackItem>
       <SprkStackItem>
         <p>
-          Don’t overuse Purple.
+          Overusing Purple distracts from interactive elements on the page.
         </p>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
 </SprkStack>
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
 <h3>Neutral Colors</h3>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
@@ -340,40 +362,11 @@ Following the August 2020 update to the Rocket Orbit color palette, it’s impor
   <ColorSwatch hasOutline isCompact variableName="sprk-gray" />
 </ColorSwatchGrid>
 <p>
-  Often used for text, borders, and system icons.
+  Use for text, borders, and system icons.
 </p>
 <p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
-For example: always use shades of grey when working with text, where different color types should not be mixed.
+  Most text should be black, with some additional shades of dark gray for content hierarchy. Follow <a href="/using-spark/foundations/color-accessibility">contrast accessibility standards</a> when considering anything but black text on white backgrounds.
 </p>
-<SprkStack splitAt="small" itemSpacing="huge" additionalClasses="sprk-o-Stack--end-column@s sprk-u-mbl">
-  <SprkStackItem additionalClasses="sprk-u-mbh sprk-u-mtl">
-    <SprkButton variant="quaternary">Button</SprkButton>
-  </SprkStackItem>
-  <SprkStackItem>
-    <SprkLink
-      element="a"
-      href="#nogo"
-    >
-      link
-    </SprkLink>
-  </SprkStackItem>
-  <SprkStackItem>
-    <label
-      for="text-input"
-      class="sprk-b-Label"
-    >
-      Focus to see style
-    </label>
-    <input
-      class="sprk-b-TextInput sprk-u-Width-100"
-      id="text-input"
-      data-id="text-input"
-      type="text"
-      value=""
-      aria-describedby="text-input--error-container"
-    />
-  </SprkStackItem>
-</SprkStack>
 <SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-mbl">
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
     <SprkStack>
@@ -403,7 +396,7 @@ For example: always use shades of grey when working with text, where different c
       </SprkStackItem>
       <SprkStackItem>
         <p>
-          Use shades of grey when necessary to create additional content hierarchy.
+          Most text should be black, with some additional darker shades of gray for content hierarchy.
         </p>
       </SprkStackItem>
     </SprkStack>
@@ -436,12 +429,17 @@ For example: always use shades of grey when working with text, where different c
       </SprkStackItem>
       <SprkStackItem>
         <p>
-          Don’t mix brand or semantic colors in text.
+          Don't use any other colors for text like shades of red, purple or semantic colors.
         </p>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
 </SprkStack>
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
 <h3>Semantic Colors</h3>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
@@ -451,7 +449,7 @@ For example: always use shades of grey when working with text, where different c
   <ColorSwatch isCompact variableName="sprk-yellow" />
 </ColorSwatchGrid>
 <p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
-  Semantic colors should be used to communicate the status of messages.
+  Use to communicate the status of messages.
 </p>
 <ul>
   <li>Green: Success</li>
@@ -463,7 +461,7 @@ For example: always use shades of grey when working with text, where different c
   Do not use semantic colors for large accents.
 </p>
 <p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
-  For example: Use the Error semantic color to present negative information instead of using Rocket Red, which is reserved for positive brand interactions.
+  Use the Error semantic color to present negative information and reserve Rocket Red for positive brand interactions.
 </p>
 <SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-mbl">
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
@@ -494,7 +492,7 @@ For example: always use shades of grey when working with text, where different c
       </SprkStackItem>
       <SprkStackItem>
         <p>
-          Use appropriate semantic colors for indicate the status of messages, like an urgent alert.
+          Use appropriate semantic colors to indicate the status of messages, like an urgent alert.
         </p>
       </SprkStackItem>
     </SprkStack>
@@ -527,16 +525,21 @@ For example: always use shades of grey when working with text, where different c
       </SprkStackItem>
       <SprkStackItem>
         <p>
-          Don’t use semantic colors as accents or outside their intended use.
+          Use semantic colors to communicate status. Using them in other places, distracts users from focusing on vital information. Don't use them as accents or action colors.
         </p>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
 </SprkStack>
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
 <h3>Floods of Color</h3>
 <p>
-  Floods of color indicate areas of focus in the interface, but content should mainly be on white backgrounds.
+  Most content should have a white background. To create other sections of focus (for example for a <a href="/using-spark/components/stepper">Stepper</a> or <a href="/using-spark/components/footer">Footer</a>), use only these dark and light colors.
 </p>
 <img
   srcset={stepperExampleSet}
@@ -544,9 +547,6 @@ For example: always use shades of grey when working with text, where different c
   sizes="550px"
   class="sprk-u-mbm"
   alt="Orbit Purple Screen that fills majority of space, paired with a step-by-step navigation bar and blank iPhone screen."/>
-<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
-  Floods of color should be reserved for the below colors only:
-</p>
 <h4>Dark</h4>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
   <ColorSwatch isCompact variableName="sprk-black" />
@@ -559,10 +559,15 @@ For example: always use shades of grey when working with text, where different c
   <ColorSwatch isCompact hasOutline variableName="sprk-purple-lightest" />
   <ColorSwatch isCompact hasOutline variableName="sprk-gray" />
 </ColorSwatchGrid>
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
 <h3>Charts and Graphs</h3>
 <p>
-  Charts and graphs use shades of purple to represent the correct information hierarchy.
+  Use these shades of purple to communicate information hierarchy in charts and graphs.
 </p>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
   <ColorSwatch isCompact variableName="sprk-purple-navy" />
@@ -575,10 +580,10 @@ For example: always use shades of grey when working with text, where different c
   <ColorSwatch hasOutline isCompact variableName="sprk-magnolia" />
 </ColorSwatchGrid>
 <p>
-  When presenting something negative to the user, pink – or the semantic Error color – should be used.
+  Use the <a href="#semantic-colors">pink semantic error color</a> to represent a negative element in the chart.
 </p>
 <p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
-  While semantic colors can be used to display both positive and negative information, we strongly recommend not mixing multiple semantic colors within one chart. These colors should only be used as accents on the Purple gradient palette.
+  Only use other semantic colors as accents to the Purple gradient palette.
 </p>
 
 <SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-Measure sprk-u-mbl">
@@ -599,6 +604,11 @@ For example: always use shades of grey when working with text, where different c
       alt="Orbit Purple Screen that fills majority of space, paired with a step-by-step navigation bar and blank iPhone screen."/>
   </SprkStackItem>
 </SprkStack>
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
 <SprkDivider element="span" additionalClasses="sprk-u-mbl"/>
 <SprkLink
   element="a"
