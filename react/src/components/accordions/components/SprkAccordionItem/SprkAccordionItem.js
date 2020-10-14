@@ -8,10 +8,10 @@ import SprkLink from '../../../../base/links/SprkLink';
 class SprkAccordionItem extends Component {
   constructor(props) {
     super(props);
-    const { isDefaultOpen } = this.props;
+    const { isDefaultOpen, isOpen = isDefaultOpen } = this.props;
     this.state = {
-      isOpen: isDefaultOpen || false,
-      height: isDefaultOpen ? 'auto' : 0,
+      isOpen: isOpen || false,
+      height: isOpen ? 'auto' : 0,
     };
     this.toggle = this.toggle.bind(this);
   }
@@ -33,13 +33,12 @@ class SprkAccordionItem extends Component {
       children,
       heading,
       headingAddClasses,
-      headingAdditionalClasses,
+      headingAdditionalClasses = headingAddClasses,
       additionalClasses,
       contentAddClasses,
-      contentAdditionalClasses,
+      contentAdditionalClasses = contentAddClasses,
       iconAddClasses,
-      iconAdditionalClasses,
-      isDefaultOpen,
+      iconAdditionalClasses = iconAddClasses,
       id,
       iconTypeOpen,
       iconTypeClosed,
@@ -50,7 +49,7 @@ class SprkAccordionItem extends Component {
     const iconClasses = classnames(
       'sprk-c-Icon--toggle sprk-c-Accordion__icon sprk-c-Icon--xl',
       { 'sprk-c-Icon--open': isOpen },
-      iconAdditionalClasses || iconAddClasses,
+      iconAdditionalClasses,
     );
 
     const itemClassNames = classnames(
@@ -62,7 +61,7 @@ class SprkAccordionItem extends Component {
     const headingClassNames = classnames(
       'sprk-c-Accordion__heading',
       'sprk-b-TypeDisplaySeven',
-      headingAdditionalClasses || headingAddClasses,
+      headingAdditionalClasses,
     );
 
     return (
@@ -87,7 +86,7 @@ class SprkAccordionItem extends Component {
           <div
             className={classnames(
               'sprk-c-Accordion__content',
-              contentAdditionalClasses || contentAddClasses,
+              contentAdditionalClasses,
             )}
             id={id}
           >
@@ -100,7 +99,7 @@ class SprkAccordionItem extends Component {
 }
 
 SprkAccordionItem.defaultProps = {
-  isDefaultOpen: false,
+  isOpen: false,
   iconTypeOpen: 'chevron-up-circle',
   iconTypeClosed: 'chevron-up-circle',
 };
@@ -140,9 +139,14 @@ SprkAccordionItem.propTypes = {
    */
   idString: PropTypes.string,
   /**
+   * Deprecated - Use `isOpen` instead.
    * Used to specify whether the item should be open by default.
    */
   isDefaultOpen: PropTypes.bool,
+  /**
+   * Used to specify whether the item is opened or closed.
+   */
+  isOpen: PropTypes.bool,
   // TODO remove as part of Issue XXXX
   /**
    * Deprecated - use `iconAdditionalClasses` instead. Expects a space
@@ -169,7 +173,7 @@ SprkAccordionItem.propTypes = {
    */
   id: PropTypes.string,
   /**
-   * An function to be called when the accordion item is toggled.
+   * An function to be called when the Accordion item is toggled.
    */
   onToggle: PropTypes.func,
   /**
