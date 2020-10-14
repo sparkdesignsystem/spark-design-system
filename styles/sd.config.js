@@ -4,7 +4,7 @@ module.exports = {
     web: {
       transformGroup: ['scss'],
       prefix: 'sprk',
-      buildPath: 'dist/design-tokens/web/',
+      buildPath: 'web/',
       files: [
         {
           format: 'themable-scss/web',
@@ -38,7 +38,7 @@ module.exports = {
     },
     js: {
       transformGroup: `js`,
-      buildPath: `dist/design-tokens/web/`,
+      buildPath: `web/`,
       files: [
         {
           destination: `settings.js`,
@@ -48,7 +48,7 @@ module.exports = {
     },
     android: {
       transformGroup: 'android',
-      buildPath: 'dist/design-tokens/android/',
+      buildPath: 'android/',
       files: [
         {
           destination: 'spark_colors.xml',
@@ -75,7 +75,7 @@ module.exports = {
 
     ios: {
       transformGroup: `ios-swift`,
-      buildPath: `dist/design-tokens/ios/`,
+      buildPath: `ios/`,
       files: [
         {
           destination: `SparkDesignTokens.swift`,
