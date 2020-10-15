@@ -46,14 +46,14 @@
     },
     "content-padding": {
       "comment": "The padding around the main content icon and message in the Alert component.",
-      "value": "{space.m.value} {space.m.value} {space.m.value} {space.misc-a.value}",
+      "value": "{space.m.value} {space.m.value} {space.m.value} {space.misc.a.value}",
       "type": "settings",
       "themable": true
     },
     "dismiss": {
       "padding": {
         "comment": "The padding around the dismiss icon in the Alert component.",
-        "value": "{space.m.value} {space.misc-a.value} {space.m.value} {space.m.value}",
+        "value": "{space.m.value} {space.misc.a.value} {space.m.value} {space.m.value}",
         "type": "settings",
         "themable": true
       },
@@ -73,7 +73,7 @@
     "icon": {
       "margin": {
         "comment": "The margin for the icon in the Alert component.",
-        "value": "0 {space.misc-a.value} 0 0",
+        "value": "0 {space.misc.a.value} 0 0",
         "type": "settings",
         "themable": true
       },

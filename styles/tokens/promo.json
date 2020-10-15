@@ -47,7 +47,7 @@
       },
       "font-weight": {
         "comment": "The title font weight of the Promo component.",
-        "value": "{font-weight.display-four.value}",
+        "value": "{font-weight.display.four.value}",
         "type": "settings",
         "themable": true
       }
@@ -61,7 +61,7 @@
       },
       "font-weight": {
         "comment": "The subtitle font weight of the Promo component.",
-        "value": "{font-weight.body-one.value}",
+        "value": "{font-weight.body.one.value}",
         "type": "settings",
         "themable": true
       }
