@@ -2,7 +2,7 @@
   "btn": {
     "background-color": {
       "comment": "The background color of the Button component.",
-      "value": "{colors.red.value}",
+      "value": "{color.red.value}",
       "type": "settings",
       "themable": true
     },
@@ -70,13 +70,13 @@
     },
     "text-color": {
       "comment": "The text color of the Button component.",
-      "value": "{colors.white.value}",
+      "value": "{color.white.value}",
       "type": "settings",
       "themable": true
     },
     "visited-text-color": {
       "comment": "The visited text color of the Button component.",
-      "value": "{colors.white.value}",
+      "value": "{color.white.value}",
       "type": "settings",
       "themable": true
     },
@@ -86,17 +86,19 @@
       "type": "settings",
       "themable": true
     },
-    "hover-background-color": {
-      "comment": "The background color of the Button component on hover.",
-      "value": "{colors.mid-red.value}",
-      "type": "settings",
-      "themable": true
-    },
-    "hover-text-color": {
-      "comment": "The text color of the Button component on hover.",
-      "value": "{colors.white.value}",
-      "type": "settings",
-      "themable": true
+    "hover": {
+      "background-color": {
+        "comment": "The background color of the Button component on hover.",
+        "value": "{color.mid-red.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "text-color": {
+        "comment": "The text color of the Button component on hover.",
+        "value": "{color.white.value}",
+        "type": "settings",
+        "themable": true
+      }
     },
     "padding": {
       "comment": "The padding of the Button component.",
@@ -104,17 +106,19 @@
       "type": "settings",
       "themable": true
     },
-    "breakpoint-xs": {
-      "comment": "The extra small breakpoint at which Full Width Buttons switch to normal width.",
-      "value": "30rem",
-      "type": "settings",
-      "themable": true
-    },
-    "breakpoint-s": {
-      "comment": "The small breakpoint at which Full Width Buttons switch to normal width.",
-      "value": "42.5rem",
-      "type": "settings",
-      "themable": true
+    "breakpoint": {
+      "xs": {
+        "comment": "The extra small breakpoint at which Full Width Buttons switch to normal width.",
+        "value": "30rem",
+        "type": "settings",
+        "themable": true
+      },
+      "s": {
+        "comment": "The small breakpoint at which Full Width Buttons switch to normal width.",
+        "value": "42.5rem",
+        "type": "settings",
+        "themable": true
+      }
     },
     "transition-speed": {
       "comment": "The transition speed setting for transitions on the Button component.",
@@ -130,7 +134,7 @@
     },
     "disabled": {
       "opacity": {
-        "comment": "The opacity value of the disabled Button component.",
+        "comment": "The opacity value of the Disabled Button component.",
         "value": "1",
         "type": "settings",
         "themable": true
@@ -149,25 +153,25 @@
       },
       "background-color": {
         "comment": "The background color of the Disabled Button component.",
-        "value": "{colors.black-tint.50.value}",
+        "value": "{color.black-tint.50.value}",
         "type": "settings",
         "themable": true
       },
       "text-color": {
         "comment": "The text color of the Disabled Button component.",
-        "value": "{colors.white.value}",
+        "value": "{color.white.value}",
         "type": "settings",
         "themable": true
       },
       "border-color": {
         "comment": "The border color of the Disabled Button component.",
-        "value": "none",
-        "type": "transparent",
+        "value": "transparent",
+        "type": "settings",
         "themable": true
       },
       "border": {
         "comment": "The border of the Disabled Button component.",
-        "value": "none",
+        "value": "{btn.disabled.border-width.value} {btn.disabled.border-style.value} {btn.disabled.border-color.value}",
         "type": "settings",
         "themable": true
       },
@@ -178,8 +182,8 @@
         "themable": true
       },
       "hover-border": {
-        "comment": "The hover border color of the Disabled Button component.",
-        "value": "none",
+        "comment": "The border of the Button component when disabled on hover.",
+        "value": "{btn.disabled.border-width.value} {btn.disabled.border-style.value} {btn.disabled.border-color.value}",
         "type": "settings",
         "themable": true
       }
@@ -187,221 +191,227 @@
     "secondary": {
       "disabled": {
         "border-width": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border width of the Secondary Button component when disabled.",
+          "value": "{btn.disabled.border-style.value}",
           "type": "settings",
           "themable": true
         },
         "border-style": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border style of the Secondary Button component when disabled.",
+          "value": "{btn.disabled.border-style.value}",
           "type": "settings",
           "themable": true
         },
         "background-color": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The background color of the Disabled Button component.",
+          "value": "transparent",
           "type": "settings",
           "themable": true
         },
         "text-color": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The text color of the Secondary Button component when disabled.",
+          "value": "{color.black-tint.50.value}",
           "type": "settings",
           "themable": true
         },
         "border-color": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border color of the Secondary Button component when disabled.",
+          "value": "{btn.secondary.disabled.text-color.value}",
           "type": "settings",
           "themable": true
         },
         "shadow": {
-          "comment": "The text decoration of the Accordion item summary when active.",
+          "comment": "The box shadow of the Secondary Button component when disabled.",
           "value": "none",
           "type": "settings",
           "themable": true
         },
         "hover-border": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border of the Secondary Button component when disabled on hover.",
+          "value": "{btn.secondary.disabled.border-width.value} {btn.secondary.disabled.border-style.value} {btn.secondary.disabled.border-color.value}",
           "type": "settings",
           "themable": true
         }
       },
       "background-color": {
-        "comment": "The background color of the Button component.",
-        "value": "{colors.red.value}",
+        "comment": "The background color of the Secondary Button component.",
+        "value": "transparent",
         "type": "settings",
         "themable": true
       },
       "border-color": {
-        "comment": "The border color of the Button component.",
-        "value": "{btn.background-color.value}",
+        "comment": "The border color of the Secondary Button component.",
+        "value": "{color.red.value}",
         "type": "settings",
         "themable": true
       },
       "border": {
-        "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
-        "value": "{colors.purple.value}",
+        "comment": "The border of the Secondary Button component.",
+        "value": "{btn.border-width.value} {btn.border-style.value} {btn.border-color.value}",
         "type": "settings",
         "themable": true
       },
       "text-color": {
-        "comment": "The text decoration of the Accordion item summary.",
-        "value": "none",
+        "comment": "The text color of the Secondary Button component.",
+        "value": "{color.red.value}",
         "type": "settings",
         "themable": true
       },
       "visited-text-color": {
-        "comment": "The text decoration of the Accordion item summary when active.",
-        "value": "none",
+        "comment": "The text color of the Secondary Button component when visited.",
+        "value": "{color.red.value}",
         "type": "settings",
         "themable": true
       },
       "hover": {
         "text-color": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The hover text color of the Secondary Button component.",
+          "value": "{color.red.value}",
           "type": "settings",
           "themable": true
         },
         "background-color": {
-          "comment": "The padding of the Accordion content.",
-          "value": "0 0 {space.l.value}",
+          "comment": "The background color of the Secondary Button component on hover.",
+          "value": "#f9e7ea",
           "type": "settings",
           "themable": true
         },
         "border-color": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The border color of the Secondary Button component on hover.",
+          "value": "{color.red.value}",
           "type": "settings",
           "themable": true
         },
         "shadow": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The box shadow of the Secondary Button component on hover.",
+          "value": "{btn.shadow.value}",
           "type": "settings",
           "themable": true
         },
         "border": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The border of the Secondary Button component on hover.",
+          "value": "{btn.border-width.value} {btn.border-style.value} {btn.secondary.hover.border-color.value}",
           "type": "settings",
           "themable": true
         }
       },
       "letter-spacing": {
-        "comment": "The text decoration of the Accordion item summary when active.",
-        "value": "none",
+        "comment": "The letter spacing of the Secondary Button component.",
+        "value": "{btn.letter-spacing.value}",
         "type": "settings",
         "themable": true
       }
     },
     "tertiary": {
       "disabled": {
+        "background-color": {
+          "comment": "The background color of the Tertiary Button component when disabled.",
+          "value": "transparent",
+          "type": "settings",
+          "themable": true
+        },
         "border-width": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border width of the Tertiary Button component when disabled.",
+          "value": "{btn.disabled.border-width.value}",
           "type": "settings",
           "themable": true
         },
         "border-style": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border style of the Tertiary Button component when disabled.",
+          "value": "{btn.disabled.border-style.value}",
           "type": "settings",
           "themable": true
         },
         "border-color": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border color of the Tertiary Button component when disabled.",
+          "value": "{color.black-tint.50.value}",
           "type": "settings",
           "themable": true
         },
         "shadow": {
-          "comment": "The text decoration of the Accordion item summary when active.",
+          "comment": "The box shadow of the Tertiary Button component when disabled.",
           "value": "none",
           "type": "settings",
           "themable": true
         },
         "hover-border": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border of the Tertiary Button component when disabled on hover.",
+          "value": "{btn.tertiary.disabled.border-width.value} {btn.tertiary.disabled.border-style.value} {btn.tertiary.disabled.border-color.value}",
           "type": "settings",
           "themable": true
         },
         "text-color": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The text color of the Tertiary Button component when disabled.",
+          "value": "{color.black-tint.50.value}",
           "type": "settings",
           "themable": true
         }
       },
       "background-color": {
-        "comment": "The background color of the Button component.",
-        "value": "{colors.red.value}",
+        "comment": "The background color of the Tertiary Button component.",
+        "value": "transparent",
         "type": "settings",
         "themable": true
       },
       "border-color": {
-        "comment": "The border color of the Button component.",
-        "value": "{btn.background-color.value}",
+        "comment": "The border color of the Tertiary Button component.",
+        "value": "{color.purple-dark.value}",
         "type": "settings",
         "themable": true
       },
       "border": {
-        "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
-        "value": "{colors.purple.value}",
+        "comment": "The border of the Tertiary Button component.",
+        "value": "{btn.border-width.value} {btn.border-style.value} {btn.tertiary.border-color.value}",
         "type": "settings",
         "themable": true
       },
       "text-color": {
-        "comment": "The text decoration of the Accordion item summary.",
-        "value": "none",
+        "comment": "The text color of the Tertiary Button component.",
+        "value": "{color.purple-dark.value}",
         "type": "settings",
         "themable": true
       },
       "visited-text-color": {
-        "comment": "The text decoration of the Accordion item summary when active.",
-        "value": "none",
+        "comment": "The text color of the Tertiary Button component when visited.",
+        "value": "{color.purple-dark.value}",
         "type": "settings",
         "themable": true
       },
       "hover": {
         "text-color": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The text color of the Tertiary Button component on hover.",
+          "value": "{color.purple.value}",
           "type": "settings",
           "themable": true
         },
         "background-color": {
-          "comment": "The padding of the Accordion content.",
-          "value": "0 0 {space.l.value}",
+          "comment": "The background color of the Tertiary Button component on hover.",
+          "value": "{color.purple-lightest.value}",
           "type": "settings",
           "themable": true
         },
         "border-color": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The border color of the Tertiary Button component on hover.",
+          "value": "{color.purple.value}",
           "type": "settings",
           "themable": true
         },
         "shadow": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The box shadow of the Tertiary Button component on hover",
+          "value": "{btn.shadow.value}",
           "type": "settings",
           "themable": true
         },
         "border": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The border of the Tertiary Button component when disabled on hover.",
+          "value": "{btn.tertiary.disabled.border-width.value} {btn.tertiary.disabled.border-style.value} {btn.tertiary.disabled.border-color.value}",
           "type": "settings",
           "themable": true
         }
       },
       "letter-spacing": {
-        "comment": "The text decoration of the Accordion item summary when active.",
-        "value": "none",
+        "comment": "The letter spacing of the Tertiary Button component.",
+        "value": "{btn.letter-spacing.value}",
         "type": "settings",
         "themable": true
       }
@@ -409,113 +419,113 @@
     "quaternary": {
       "disabled": {
         "border-width": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border width of the Quaternary Button component when disabled.",
+          "value": "{btn.disabled.border-width.value}",
           "type": "settings",
           "themable": true
         },
         "border-style": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border style of the Quaternary Button component when disabled.",
+          "value": "{btn.disabled.border-style.value}",
           "type": "settings",
           "themable": true
         },
         "border-color": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border color of the Quaternary Button component when disabled.",
+          "value": "{color.black-tint.50.value}",
           "type": "settings",
           "themable": true
         },
         "text-color": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The text color of the Quaternary Button component when disabled.",
+          "value": "{color.black-tint.50.value}",
           "type": "settings",
           "themable": true
         },
         "background-color": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The background color of the Quaternary Button component when disabled.",
+          "value": "transparent",
           "type": "settings",
           "themable": true
         },
         "shadow": {
-          "comment": "The text decoration of the Accordion item summary when active.",
+          "comment": "The box shadow of the Quaternary Button component when disabled.",
           "value": "none",
           "type": "settings",
           "themable": true
         },
         "hover-border": {
-          "comment": "The text decoration of the Accordion item summary when active.",
-          "value": "none",
+          "comment": "The border of the Quaternary Button component when disabled on hover.",
+          "value": "{btn.quaternary.disabled.border-width.value} {btn.quaternary.disabled.border-style.value} {btn.quaternary.disabled.border-color.value}",
           "type": "settings",
           "themable": true
         }
       },
       "background-color": {
-        "comment": "The background color of the Button component.",
-        "value": "{colors.red.value}",
+        "comment": "The background color of the Quaternary Button component.",
+        "value": "transparent",
         "type": "settings",
         "themable": true
       },
       "border-color": {
-        "comment": "The border color of the Button component.",
-        "value": "{btn.background-color.value}",
+        "comment": "The border color of the Quaternary Button component.",
+        "value": "{color.black-tint.50.value}",
         "type": "settings",
         "themable": true
       },
       "border": {
-        "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
-        "value": "{colors.purple.value}",
+        "comment": "The border of the Quaternary Button component.",
+        "value": "{btn.border-width.value} {btn.border-style.value} {btn.quaternary.border-color.value}",
         "type": "settings",
         "themable": true
       },
       "text-color": {
-        "comment": "The text decoration of the Accordion item summary.",
-        "value": "none",
+        "comment": "The text color of the Quaternary Button component",
+        "value": "{color.black.value}",
         "type": "settings",
         "themable": true
       },
       "visited-text-color": {
-        "comment": "The text decoration of the Accordion item summary when active.",
-        "value": "none",
+        "comment": "The text color of the Quaternary Button component when visited.",
+        "value": "{color.black.value}",
         "type": "settings",
         "themable": true
       },
       "box-shadow": {
-        "comment": "The text decoration of the Accordion item summary when active.",
+        "comment": "The box-shadow of the Quaternary Button component.",
         "value": "none",
         "type": "settings",
         "themable": true
       },
       "hover": {
         "text-color": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The text color of the Quaternary Button component on hover.",
+          "value": "{color.black.value}",
           "type": "settings",
           "themable": true
         },
         "background-color": {
-          "comment": "The padding of the Accordion content.",
-          "value": "0 0 {space.l.value}",
+          "comment": "The background color of the Quaternary Button component on hover.",
+          "value": "transparent",
           "type": "settings",
           "themable": true
         },
         "border-color": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The border color of the Quaternary Button component on hover.",
+          "value": "{color.black.value}",
           "type": "settings",
           "themable": true
         },
         "shadow": {
-          "comment": "The background color used for hover and active on items in the Accordion.",
-          "value": "{colors.gray.value}",
+          "comment": "The box shadow of the Quaternary Button component on hover.",
+          "value": "{btn.shadow.value}",
           "type": "settings",
           "themable": true
         }
       },
       "letter-spacing": {
-        "comment": "The text decoration of the Accordion item summary when active.",
-        "value": "none",
+        "comment": "The letter spacing of the Quaternary Button component.",
+        "value": "{btn.letter-spacing.value}",
         "type": "settings",
         "themable": true
       }

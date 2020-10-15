@@ -14,7 +14,7 @@
     },
     "link-color": {
       "comment": "The color of the pagination links in the Pagination component.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
@@ -32,19 +32,19 @@
     },
     "selection-color": {
       "comment": "The accent color for selected pagination links in the Pagination component.",
-      "value": "{colors.purple.value}",
+      "value": "{color.purple.value}",
       "type": "settings",
       "themable": true
     },
     "selection-link-color": {
       "comment": "The text color of the currently selected pagination link in the Pagination component.",
-      "value": "{colors.white.value}",
+      "value": "{color.white.value}",
       "type": "settings",
       "themable": true
     },
     "selection-link-color-hover": {
       "comment": "The text color of the currently selected pagination link on hover in the Pagination component.",
-      "value": "{colors.white.value}",
+      "value": "{color.white.value}",
       "type": "settings",
       "themable": true
     },
