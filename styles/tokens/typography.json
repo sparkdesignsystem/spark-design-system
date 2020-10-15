@@ -38,7 +38,7 @@
   "page-title": {
     "mark-color": {
       "comment": "The color of the Page Title mark.",
-      "value": "{colors.red.value}",
+      "value": "{color.red.value}",
       "type": "settings",
       "themable": true
     },
@@ -298,67 +298,67 @@
   "color": {
     "display-one": {
       "comment": "The color of TypeDisplayOne.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "display-two": {
       "comment": "The color of TypeDisplayTwo.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "display-three": {
       "comment": "The color of TypeDisplayThree.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "display-four": {
       "comment": "The color of TypeDisplayFour.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "display-five": {
       "comment": "The color of TypeDisplayFive.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "display-six": {
       "comment": "The color of TypeDisplaySix.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "display-seven": {
       "comment": "The color of TypeDisplaySeven.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "body-one": {
       "comment": "The color of TypeBodyOne.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "body-two": {
       "comment": "The color of TypeBodyTwo.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "body-three": {
       "comment": "The color of TypeBodyThree.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "body-four": {
       "comment": "The color of TypeBodyFour.",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     }

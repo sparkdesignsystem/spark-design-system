@@ -1,13 +1,13 @@
 {
   "selection-bg-color": {
     "comment": "Background color of any text when selected.",
-    "value": "{colors.purple-lightest.value}",
+    "value": "{color.purple-lightest.value}",
     "type": "settings",
     "themable": true
   },
   "selection-text-color": {
     "comment": "Text color of any text when selected.",
-    "value": "{colors.black.value}",
+    "value": "{color.black.value}",
     "type": "settings",
     "themable": true
   },

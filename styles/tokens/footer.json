@@ -2,19 +2,19 @@
   "footer": {
     "background-color": {
       "comment": "Background color of the Footer",
-      "value": "{colors.black.value}",
+      "value": "{color.black.value}",
       "type": "settings",
       "themable": true
     },
     "text-color": {
       "comment": "Text color on the Footer.",
-      "value": "{colors.white.value}",
+      "value": "{color.white.value}",
       "type": "settings",
       "themable": true
     },
     "link-color": {
       "comment": "Link color on the Footer.",
-      "value": "{colors.white.value}",
+      "value": "{color.white.value}",
       "type": "settings",
       "themable": true
     },
@@ -26,13 +26,13 @@
     },
     "icon-color": {
       "comment": "Icon color on the Footer.",
-      "value": "{colors.white.value}",
+      "value": "{color.white.value}",
       "type": "settings",
       "themable": true
     },
     "trigger-color": {
       "comment": "Toggle trigger color on the Footer.",
-      "value": "{colors.white.value}",
+      "value": "{color.white.value}",
       "type": "settings",
       "themable": true
     },
@@ -44,7 +44,7 @@
     },
     "trigger-hover-color": {
       "comment": "Toggle trigger hover color on the Footer.",
-      "value": "{colors.purple-light.value}",
+      "value": "{color.purple-light.value}",
       "type": "settings",
       "themable": true
     },
