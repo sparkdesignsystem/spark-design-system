@@ -1,34 +1,100 @@
 {
   "space": {
-    "inset-xs": {
-      "comment": "Value for the extra small inset space.",
-      "value": "4px 4px 4px 4px",
-      "type": "settings",
-      "themable": true
-    },
-    "inset-s": {
-      "comment": "Value for the small inset space.",
-      "value": "8px 8px 8px 8px",
-      "type": "settings",
-      "themable": true
-    },
-    "inset-m": {
-      "comment": "Value for the medium inset space.",
-      "value": "16px 16px 16px 16px",
-      "type": "settings",
-      "themable": true
-    },
-    "inset-l": {
-      "comment": "Value for the large inset space.",
-      "value": "32px 32px 32px 32px",
-      "type": "settings",
-      "themable": true
-    },
-    "inset-xl": {
-      "comment": "Value for the extra large inset space.",
-      "value": "64px 64px 64px 64px",
-      "type": "settings",
-      "themable": true
+    "inset": {
+      "xs": {
+        "comment": "Value for the extra small inset space.",
+        "value": "4px 4px 4px 4px",
+        "type": "settings",
+        "themable": true
+      },
+      "s": {
+        "comment": "Value for the small inset space.",
+        "value": "8px 8px 8px 8px",
+        "type": "settings",
+        "themable": true
+      },
+      "m": {
+        "comment": "Value for the medium inset space.",
+        "value": "16px 16px 16px 16px",
+        "type": "settings",
+        "themable": true
+      },
+      "l": {
+        "comment": "Value for the large inset space.",
+        "value": "32px 32px 32px 32px",
+        "type": "settings",
+        "themable": true
+      },
+      "xl": {
+        "comment": "Value for the extra large inset space.",
+        "value": "64px 64px 64px 64px",
+        "type": "settings",
+        "themable": true
+      },
+      "short": {
+        "xs": {
+          "comment": "Value for the extra small inset short space.",
+          "value": "2px 4px 2px 4px",
+          "type": "settings",
+          "themable": true
+        },
+        "s": {
+          "comment": "Value for the small inset short space.",
+          "value": "4px 8px 4px 8px",
+          "type": "settings",
+          "themable": true
+        },
+        "m": {
+          "comment": "Value for the medium inset short space.",
+          "value": "8px 16px 8px 16px",
+          "type": "settings",
+          "themable": true
+        },
+        "l": {
+          "comment": "Value for the large inset short space.",
+          "value": "16px 32px 16px 32px",
+          "type": "settings",
+          "themable": true
+        },
+        "xl": {
+          "comment": "Value for the extra large inset short space.",
+          "value": "32px 64px 32px 64px",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "tall": {
+        "xs": {
+          "comment": "Value for the extra small inset tall space.",
+          "value": "6px 4px 6px 4px",
+          "type": "settings",
+          "themable": true
+        },
+        "s": {
+          "comment": "Value for the small inset tall space.",
+          "value": "12px 8px 12px 8px",
+          "type": "settings",
+          "themable": true
+        },
+        "m": {
+          "comment": "Value for the medium inset tall space.",
+          "value": "24px 16px 24px 16px",
+          "type": "settings",
+          "themable": true
+        },
+        "l": {
+          "comment": "Value for the large inset tall space.",
+          "value": "48px 32px 48px 32px",
+          "type": "settings",
+          "themable": true
+        },
+        "xl": {
+          "comment": "Value for the extra large inset tall space.",
+          "value": "96px 64px 96px 64px",
+          "type": "settings",
+          "themable": true
+        }
+      }
     },
     "xs": {
       "comment": "Value for the extra small space setting.",
@@ -60,29 +126,63 @@
       "type": "settings",
       "themable": true
     },
-    "misc-a": {
-      "comment": "Value for the misc a space setting.",
-      "value": "24px",
-      "type": "settings",
-      "themable": true
+    "misc": {
+      "a": {
+        "comment": "Value for the misc a space setting.",
+        "value": "24px",
+        "type": "settings",
+        "themable": true
+      },
+      "b": {
+        "comment": "Value for the misc b space setting.",
+        "value": "40px",
+        "type": "settings",
+        "themable": true
+      },
+      "c": {
+        "comment": "Value for the misc c space setting.",
+        "value": "48px",
+        "type": "settings",
+        "themable": true
+      },
+      "d": {
+        "comment": "Value for the misc d large space setting.",
+        "value": "80px",
+        "type": "settings",
+        "themable": true
+      }
     },
-    "misc-b": {
-      "comment": "Value for the misc b space setting.",
-      "value": "40px",
-      "type": "settings",
-      "themable": true
-    },
-    "misc-c": {
-      "comment": "Value for the misc c space setting.",
-      "value": "48px",
-      "type": "settings",
-      "themable": true
-    },
-    "misc-d": {
-      "comment": "Value for the misc d large space setting.",
-      "value": "80px",
-      "type": "settings",
-      "themable": true
+    "stack": {
+      "xs": {
+        "comment": "Value for the extra small inset short space.",
+        "value": "0 0 4px 0",
+        "type": "settings",
+        "themable": true
+      },
+      "s": {
+        "comment": "Value for the small inset short space.",
+        "value": "0 0 8px 0",
+        "type": "settings",
+        "themable": true
+      },
+      "m": {
+        "comment": "Value for the medium inset short space.",
+        "value": "0 0 16px 0",
+        "type": "settings",
+        "themable": true
+      },
+      "l": {
+        "comment": "Value for the large inset short space.",
+        "value": "0 0 32px 0",
+        "type": "settings",
+        "themable": true
+      },
+      "xl": {
+        "comment": "Value for the extra large inset short space.",
+        "value": "0 0 64px 0",
+        "type": "settings",
+        "themable": true
+      }
     }
   }
 }

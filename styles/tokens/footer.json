@@ -12,17 +12,19 @@
       "type": "settings",
       "themable": true
     },
-    "link-color": {
-      "comment": "Link color on the Footer.",
-      "value": "{color.white.value}",
-      "type": "settings",
-      "themable": true
-    },
-    "link-font-weight": {
-      "comment": "Link font-weight on the Footer.",
-      "value": "normal",
-      "type": "settings",
-      "themable": true
+    "link": {
+      "color": {
+        "comment": "Link color on the Footer.",
+        "value": "{color.white.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "font-weight": {
+        "comment": "Link font-weight on the Footer.",
+        "value": "normal",
+        "type": "settings",
+        "themable": true
+      }
     },
     "icon-color": {
       "comment": "Icon color on the Footer.",
@@ -30,23 +32,25 @@
       "type": "settings",
       "themable": true
     },
-    "trigger-color": {
-      "comment": "Toggle trigger color on the Footer.",
-      "value": "{color.white.value}",
-      "type": "settings",
-      "themable": true
-    },
-    "trigger-font-weight": {
-      "comment": "Toggle trigger font-weight on the Footer.",
-      "value": "normal",
-      "type": "settings",
-      "themable": true
-    },
-    "trigger-hover-color": {
-      "comment": "Toggle trigger hover color on the Footer.",
-      "value": "{color.purple-light.value}",
-      "type": "settings",
-      "themable": true
+    "trigger": {
+      "color": {
+        "comment": "Toggle trigger color on the Footer.",
+        "value": "{color.white.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "font-weight": {
+        "comment": "Toggle trigger font-weight on the Footer.",
+        "value": "normal",
+        "type": "settings",
+        "themable": true
+      },
+      "hover-color": {
+        "comment": "Toggle trigger hover color on the Footer.",
+        "value": "{color.purple-light.value}",
+        "type": "settings",
+        "themable": true
+      }
     },
     "toggle-transition": {
       "comment": "Toggle transition timing on the Footer.",
