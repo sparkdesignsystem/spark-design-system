@@ -27,7 +27,7 @@
       },
       "color-hover": {
         "comment": "The color of the pagination links on hover in the Pagination component.",
-        "value": "{pag.link-color.value}",
+        "value": "{pag.link.color.value}",
         "type": "settings",
         "themable": true
       }
