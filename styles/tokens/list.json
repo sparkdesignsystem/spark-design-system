@@ -2,13 +2,13 @@
   "list": {
     "margin-left": {
       "comment": "The default margin left indentation on Lists.",
-      "value": "{space.m.value",
+      "value": "{space.m.value}",
       "type": "settings",
       "themable": true
     },
     "indented-margin-left": {
       "comment": "The default margin left indentation on Lists.",
-      "value": "{space.l.value",
+      "value": "{space.l.value}",
       "type": "settings",
       "themable": true
     }
