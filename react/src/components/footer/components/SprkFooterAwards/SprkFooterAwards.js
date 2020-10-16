@@ -50,10 +50,10 @@ class SprkFooterAwards extends Component {
 
         <SprkToggle
           additionalClasses="sprk-o-Stack__item"
-          iconAddClasses="sprk-c-Footer__icon"
+          iconAdditionalClasses="sprk-c-Footer__icon"
           toggleIconName="chevron-down-circle"
-          title={awards.disclaimerTitle}
-          titleAddClasses="sprk-b-TypeBodyFour sprk-c-Footer__trigger"
+          triggerText={awards.disclaimerTitle}
+          titleAdditionalClasses="sprk-b-TypeBodyFour sprk-c-Footer__trigger"
           analyticsString={awards.disclaimerAnalytics}
         >
           <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs sprk-c-Footer__text">

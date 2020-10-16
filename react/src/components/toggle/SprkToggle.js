@@ -9,10 +9,12 @@ import 'focus-visible';
 class SprkToggle extends Component {
   constructor(props) {
     super(props);
-    const { isDefaultOpen } = this.props;
+    // TODO: Remove isDefaultOpen in issue #1296
+    const { isDefaultOpen, isOpen = isDefaultOpen } = this.props;
+
     this.state = {
-      isOpen: isDefaultOpen || false,
-      height: isDefaultOpen ? 'auto' : 0,
+      isOpen: isOpen || false,
+      height: isOpen ? 'auto' : 0,
     };
 
     this.toggleOpen = this.toggleOpen.bind(this);
@@ -26,6 +28,7 @@ class SprkToggle extends Component {
     }));
   }
 
+  // TODO: Remove title, titleAddClasses, iconAddClasses in issue #1296
   render() {
     const {
       children,
@@ -33,10 +36,15 @@ class SprkToggle extends Component {
       additionalClasses,
       analyticsString,
       title,
+      triggerText = title,
       titleAddClasses,
+      titleAdditionalClasses = titleAddClasses,
       iconAddClasses,
+      iconAdditionalClasses = iconAddClasses,
       toggleIconName,
       contentId,
+      contentAdditionalClasses,
+      onClick,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
@@ -47,32 +55,40 @@ class SprkToggle extends Component {
 
     const titleClasses = classnames(
       'sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none',
-      titleAddClasses,
+      titleAdditionalClasses,
     );
-
     const iconClasses = classnames(
       'sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs',
       { 'sprk-c-Icon--open': isOpen },
-      iconAddClasses,
+      iconAdditionalClasses,
     );
 
+    const contentClasses = classnames(
+      'sprk-c-Toggle__content',
+      contentAdditionalClasses,
+    );
     return (
       <div data-id={idString} {...other} className={containerClasses}>
         <button
           className={titleClasses}
           data-analytics={analyticsString}
-          onClick={this.toggleOpen}
+          onClick={(e) => {
+            if (onClick) {
+              onClick(e);
+            }
+            this.toggleOpen(e);
+          }}
           aria-expanded={isOpen ? 'true' : 'false'}
           aria-controls={uniqueIdentifier}
           type="button"
         >
           <SprkIcon iconName={toggleIconName} additionalClasses={iconClasses} />
-          {title}
+          {triggerText}
         </button>
         <AnimateHeight
           duration={300}
           height={height}
-          className="sprk-c-Toggle__content"
+          className={contentClasses}
           id={uniqueIdentifier}
         >
           <div>{children}</div>
@@ -92,34 +108,61 @@ SprkToggle.propTypes = {
    */
   toggleIconName: PropTypes.string,
   /**
+   * Deprecated - use `triggerText` instead.
    * The title text for the toggle.
    */
-  title: PropTypes.string.isRequired,
+  // TODO: Remove title in issue #1296
+  title: PropTypes.string,
+  /**
+   * The title text for the toggle.
+   */
+  triggerText: PropTypes.string.isRequired,
   /** The content that will show up when the toggle opens. */
   children: PropTypes.node.isRequired,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as
+   * a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
-  */
+   * Assigned to the `data-analytics` attribute serving as
+   * a unique selector for outside libraries to capture data.
+   */
   analyticsString: PropTypes.string,
-  /** Determines if the toggle is open upon loading on the page. */
+  /**
+   * Deprecated - Use `isOpen` instead.
+   * Determines if the toggle is open upon loading on the page.
+   */
+  // TODO: isDefaultOpen in issue #1296
   isDefaultOpen: PropTypes.bool,
-   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+  /** Determines if the toggle is open or closed. */
+  isOpen: PropTypes.bool,
+  /**
+   * A space-separated string of classes to add to the
+   * outermost container of the component.
    */
   additionalClasses: PropTypes.string,
-  /** Additional classes for the title text. */
+  /** Deprecated - Use `titleAdditionalClasses` instead.
+   * A space-separated string of classes to add to the title text. */
+  // TODO: Remove titleAddClasses in issue #1296
   titleAddClasses: PropTypes.string,
-  /** Additional classes for the toggle icon. */
+  /** A space-separated string of classes to add to the title text. */
+  titleAdditionalClasses: PropTypes.string,
+  /** Deprecated - Use `iconAdditionalClasses` instead.
+   * A space-separated string of classes to add to the toggle icon. */
+  // TODO: Remove iconAddClasses in issue #1296
   iconAddClasses: PropTypes.string,
+  /** A space-separated string of classes to add to the toggle icon. */
+  iconAdditionalClasses: PropTypes.string,
+  /** A space-separated string of classes to add to the content. */
+  contentAdditionalClasses: PropTypes.string,
   /**
    * A string that is used to set the `id` on the content
    * and the `aria-controls` for the toggle trigger button.
    */
   contentId: PropTypes.string,
+  /** The event that will fire when the toggle trigger is clicked. */
+  onClick: PropTypes.func,
 };
 
 export default SprkToggle;
