@@ -1,3 +1,52 @@
   {
-    "spinner": {}
+    "spinner": {
+      "size": {
+        "comment": "The height and width of Spinners.",
+        "value": "1.2rem",
+        "type": "settings",
+        "themable": true
+      },
+      "size-large": {
+        "comment": "The height and width of large Spinners.",
+        "value": "3rem",
+        "type": "settings",
+        "themable": true
+      },
+      "speed": {
+        "comment": "The speed of the animation for Spinners.",
+        "value": "1s",
+        "type": "settings",
+        "themable": true
+      },
+      "thickness": {
+        "comment": "The thickness of Spinners.",
+        "value": "0.18rem",
+        "type": "settings",
+        "themable": true
+      },
+      "color": {
+        "comment": "The color of Spinners.",
+        "value": "{color.white.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "color-dark": {
+        "comment": "The color of the dark Spinner.",
+        "value": "{color.black.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "color-primary": {
+        "comment": "The color of the primary Spinner.",
+        "value": "{color.red.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "color-secondary": {
+        "comment": "The color of the secondary Spinner.",
+        "value": "{color.purple.value}",
+        "type": "settings",
+        "themable": true
+      }
+    }
   }
