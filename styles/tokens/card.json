@@ -1,3 +1,64 @@
   {
-    "card": {}
+    "card": {
+      "max-width": {
+        "comment": "The maximum width of the Card.",
+        "value": "26.5625rem",
+        "type": "settings",
+        "themable": true
+      },
+      "breakpoint": {
+        "comment": "The main Card breakpoint.",
+        "value": "{split.breakpoint.s.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "shadow": {
+        "comment": "The box shadow of the Card on narrow viewports.",
+        "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
+        "type": "settings",
+        "themable": true
+      },
+      "shadow-wide-viewport": {
+        "comment": "The box shadow of the Card on wide viewports.",
+        "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
+        "type": "settings",
+        "themable": true
+      },
+      "shadow-standout": {
+        "comment": "The box shadow of the Standout Card variant on narrow viewports.",
+        "value": "0 4px 20px 2px rgba(0, 0, 0, 0.1)",
+        "type": "settings",
+        "themable": true
+      },
+      "shadow-standout-wide-viewport": {
+        "comment": "The box shadow of the Standout Card variant on wide viewports.",
+        "value": "0 4px 40px 2px rgba(0, 0, 0, 0.1)",
+        "type": "settings",
+        "themable": true
+      },
+      "border-radius": {
+        "comment": "The border radius of the Card.",
+        "value": "8px",
+        "type": "settings",
+        "themable": true
+      },
+      "content-padding": {
+        "comment": "The padding of the content inside the Card.",
+        "value": "{space.misc.a.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "header-bg-color": {
+        "comment": "The background color of the header area for the Highlighted Header Card.",
+        "value": "{color.purple.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "header-text-color": {
+        "comment": "The text color for the Highlighted Header Card.",
+        "value": "{color.white.value}",
+        "type": "settings",
+        "themable": true
+      }
+    }
   }
