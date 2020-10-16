@@ -1,3 +1,42 @@
   {
-    "dictionary": {}
+    "dictionary": {
+      "border": {
+        "comment": "The border surrounding the Dictionary.",
+        "value": "1px solid {color.gray.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "stripe-color": {
+        "comment": "The background color of the key value pairs in the striped Dictionary.",
+        "value": "{color.gray.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "breakpoint": {
+        "comment": "The breakpoint of the Dictionary component.",
+        "value": "38.4375rem",
+        "type": "settings",
+        "themable": true
+      },
+      "label": {
+        "font-size": {
+          "comment": "The font size of the labels in the Dictionary.",
+          "value": "{font-size.body.one.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "font-weight": {
+          "comment": "The font weight of the labels in the Dictionary.",
+          "value": "{font-weight.body.one.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "line-height": {
+          "comment": "The line height of the labels in the Dictionary.",
+          "value": "{line-height.body.one.value}",
+          "type": "settings",
+          "themable": true
+        }
+      }
+    }
   }
