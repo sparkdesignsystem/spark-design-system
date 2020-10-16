@@ -143,18 +143,18 @@ SprkToggle.propTypes = {
    */
   additionalClasses: PropTypes.string,
   /** Deprecated - Use `titleAdditionalClasses` instead.
-   * Additional classes for the title text. */
+   * A space-separated string of classes to add to the title text. */
   // TODO: Remove titleAddClasses in issue #1296
   titleAddClasses: PropTypes.string,
-  /** Additional classes for the title text. */
+  /** A space-separated string of classes to add to the title text. */
   titleAdditionalClasses: PropTypes.string,
   /** Deprecated - Use `iconAdditionalClasses` instead.
-   * Additional classes for the toggle icon. */
+   * A space-separated string of classes to add to the toggle icon. */
   // TODO: Remove iconAddClasses in issue #1296
   iconAddClasses: PropTypes.string,
-  /** Additional classes for the toggle icon. */
+  /** A space-separated string of classes to add to the toggle icon. */
   iconAdditionalClasses: PropTypes.string,
-  /** Additional classes for the content. */
+  /** A space-separated string of classes to add to the content. */
   contentAdditionalClasses: PropTypes.string,
   /**
    * A string that is used to set the `id` on the content
