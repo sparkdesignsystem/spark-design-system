@@ -1,3 +1,64 @@
   {
-    "tab-navigation": {}
+    "tab-navigation": {
+      "btn": {
+        "active": {
+          "color": {
+            "comment": "The button tab text color of the currently active tab in Tabbed Navigation.",
+            "value": "{color.red.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "border-botom": {
+            "comment": "The button tab bottom border of the currently active tab in Tabbed Navigation.",
+            "value": "3px solid {color.red.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "bg-color": {
+            "comment": "The button tab background color of the currently active tab in Tabbed Navigation.",
+            "value": "{color.white.value}",
+            "type": "settings",
+            "themable": true
+          }
+        },
+        "color": {
+          "comment": "The tab button text color in Tabbed Navigation.",
+          "value": "{color.black.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "bg-color": {
+          "comment": "The tab button background color in Tabbed Navigation.",
+          "value": "{color.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "border-botom": {
+          "comment": "The border on the bottom of the button tabs in Tabbed Navigation.",
+          "value": "3px solid {color.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "hover": {
+          "border-botom": {
+            "comment": "The border on the bottom of the button tabs on hover in Tabbed Navigation.",
+            "value": "3px solid {color.purple.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "color": {
+            "comment": "The button tab text color of the button tabs on hover in Tabbed Navigation.",
+            "value": "{color.purple.value}",
+            "type": "settings",
+            "themable": true
+          }
+        }
+      },
+      "breakpoint": {
+        "comment": "The breakpoint at which the tabs go from stacked layout to side by side in Tabbed Navigation.",
+        "value": "46rem",
+        "type": "settings",
+        "themable": true
+      }
+    }
   }
