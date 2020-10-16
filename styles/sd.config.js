@@ -72,7 +72,6 @@ module.exports = {
         },
       ],
     },
-
     ios: {
       transformGroup: `ios-swift`,
       buildPath: `ios/`,
