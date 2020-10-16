@@ -990,7 +990,7 @@
     },
     "margin": {
       "comment": "The margin of the helper text for Inputs.",
-      "value": "{error-container.margin.value}",
+      "value": "{error-container-margin.value}",
       "type": "settings",
       "themable": true
     },
@@ -1003,7 +1003,7 @@
       },
       "weight": {
         "comment": "The font weight of the helper text for Inputs",
-        "value": "{text-input.font.family.weight.value}",
+        "value": "{text-input.font.weight.value}",
         "type": "settings",
         "themable": true
       },
@@ -1031,7 +1031,7 @@
       },
       "weight": {
         "comment": "The font weight of the placeholder for Inputs",
-        "value": "{text-input.font.family.weight.value}",
+        "value": "{text-input.font.weight.value}",
         "type": "settings",
         "themable": true
       },
@@ -1084,6 +1084,6 @@
 
   },
   "radio-input": {
-    "huge":{},
-  },
+    "huge": {}
+  }
 }
