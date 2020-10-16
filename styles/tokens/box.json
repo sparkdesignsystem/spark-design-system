@@ -1,3 +1,34 @@
   {
-    "box": {}
+    "box": {
+      "padding-tiny": {
+        "comment": "The padding of the tiny Box object.",
+        "value": "{space.inset.xs.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "padding-small": {
+        "comment": "The padding of the small Box object.",
+        "value": "{space.inset.s.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "padding": {
+        "comment": "The padding of the default (medium) Box object.",
+        "value": "{space.inset.m.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "padding-large": {
+        "comment": "The padding of the large Box object.",
+        "value": "{space.inset.l.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "padding-huge": {
+        "comment": "The padding of the huge Box object.",
+        "value": "{space.inset.xl.value}",
+        "type": "settings",
+        "themable": true
+      }
+    }
   }
