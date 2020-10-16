@@ -179,4 +179,17 @@ describe('SprkAccordionItem:', () => {
     wrapper = mount(<SprkAccordionItem leadingIcon="exclamation" />);
     expect(wrapper.find('.sprk-c-Icon').length).toBe(2);
   });
+
+  it(`should add a leading icon classes if 
+  leadingIconAdditionalClasses is provided`, () => {
+    const wrapper = mount(
+      <SprkAccordionItem
+        leadingIcon="exclamation"
+        leadingIconAdditionalClasses="test"
+      />,
+    );
+    const leadingIcon = wrapper.find('.sprk-c-Icon').at(0);
+    expect(wrapper.find('.sprk-c-Icon').length).toBe(2);
+    expect(leadingIcon.hasClass('test')).toBe(true);
+  });
 });

@@ -46,6 +46,7 @@ class SprkAccordionItem extends Component {
       iconNameOpen,
       iconNameClosed,
       leadingIcon,
+      leadingIconAdditionalClasses,
       ...other
     } = this.props;
     const { isOpen, height } = this.state;
@@ -68,6 +69,13 @@ class SprkAccordionItem extends Component {
       headingAdditionalClasses,
     );
 
+    const leadingIconClasses = classnames(
+      'sprk-c-Icon--filled-current-color',
+      'sprk-c-Icon--xl',
+      'sprk-u-mrs',
+      leadingIconAdditionalClasses,
+    );
+
     return (
       <li className={itemClassNames} data-id={idString} {...other}>
         <SprkLink
@@ -82,9 +90,7 @@ class SprkAccordionItem extends Component {
           {leadingIcon && (
             <SprkIcon
               iconName={leadingIcon}
-              additionalClasses="
-                      sprk-c-Icon--filled-current-color
-                      sprk-c-Icon--xl sprk-u-mrs"
+              additionalClasses={leadingIconClasses}
             />
           )}
           <h3 className={headingClassNames}>{heading}</h3>
@@ -202,6 +208,11 @@ SprkAccordionItem.propTypes = {
    * This is optional.
    */
   leadingIcon: PropTypes.string,
+  /**
+   * Expects a space separated string of classes to be added to the leading
+   * icon.
+   */
+  leadingIconAdditionalClasses: PropTypes.string,
 };
 
 export default SprkAccordionItem;
