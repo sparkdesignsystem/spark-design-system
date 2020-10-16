@@ -1,3 +1,232 @@
   {
-    "table": {}
+    "table": {
+      "padding": {
+        "small": {
+          "comment": "The small Table padding.",
+          "value": "{space.inset.s.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "medium": {
+          "comment": "The medium Table padding.",
+          "value": "{space.inset.m.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "large": {
+          "comment": "The large Table padding.",
+          "value": "{space.inset.l.value}",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "cell-alignment": {
+        "comment": "The Table cell alignment.",
+        "value": "center",
+        "type": "settings",
+        "themable": true
+      },
+      "stripe-color": {
+        "comment": "The stripe color or the striped Table.",
+        "value": "{color.gray.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "highlight-color": {
+        "comment": "The highlight background color of the sprk-b-TableHighlight.",
+        "value": "{color.red.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "highlight-text-color": {
+        "comment": "The highlight text color of the sprk-b-TableHighlight.",
+        "value": "{color.white.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "heading-alignment": {
+        "comment": "The heading alignment of in Tables.",
+        "value": "center",
+        "type": "settings",
+        "themable": true
+      },
+      "border": {
+        "width": {
+          "comment": "The border width on Tables.",
+          "value": "1px",
+          "type": "settings",
+          "themable": true
+        },
+        "style": {
+          "comment": "The border style on Tables.",
+          "value": "solid",
+          "type": "settings",
+          "themable": true
+        },
+        "color": {
+          "comment": "The border color on Tables.",
+          "value": "{color.black.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "collapse": {
+          "comment": "The border collapse setting on Tables.",
+          "value": "collapse",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "row": {
+        "border-width": {
+          "comment": "The border width on Table rows.",
+          "value": "1px",
+          "type": "settings",
+          "themable": true
+        },
+        "border-style": {
+          "comment": "The border style on Table rows.",
+          "value": "solid",
+          "type": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The border color on Table rows.",
+          "value": "{color.gray.value}",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "header": {
+        "background-color": {
+          "comment": "The background color of the Table header.",
+          "value": "{color.black.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "font-color": {
+          "comment": "The font color of the Table header.",
+          "value": "{color.white.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "font-size": {
+          "comment": "The font size of the Table header.",
+          "value": "{font-size.body.one.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "font-weight": {
+          "comment": "The font weight of the Table header.",
+          "value": "{font-weight.body.one.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "border-spacing": {
+          "comment": "The width of the right border on the Table header.",
+          "value": "2px",
+          "type": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The color of the right border on the Table header.",
+          "value": "{color.white.value}",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "empty-heading-background-color": {
+        "comment": "The background color of empty Table headers.",
+        "value": "{color.white.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "secondary": {
+        "header": {
+          "background-color": {
+            "comment": "The background color of Secondary Table headers.",
+            "value": "{color.black.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "font-color": {
+            "comment": "The font color of Secondary Table headers.",
+            "value": "{color.black.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "text-alignment": {
+            "comment": "The text alignment of Secondary Table headers.",
+            "value": "left",
+            "type": "settings",
+            "themable": true
+          },
+          "border-spacing": {
+            "comment": "The width of the right border on the Secondary Table header.",
+            "value": "0",
+            "type": "settings",
+            "themable": true
+          },
+          "border-color": {
+            "comment": "The color of the right border on the Secondary Table header.",
+            "value": "{color.white.value}",
+            "type": "settings",
+            "themable": true
+          }
+        },
+        "cell-text-alignment": {
+          "comment": "The text alignment of Secondary Table cells.",
+          "value": "left",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "grouped": {
+        "header": {
+          "background-color": {
+            "comment": "The background color of the header in the Grouped Columns Table variant.",
+            "value": "{color.black.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "font-size": {
+            "comment": "The font size of the header in the Grouped Columns Table variant.",
+            "value": "{font-size.body.four.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "font-weight": {
+            "comment": "The font weight of the header in the Grouped Columns Table variant.",
+            "value": "normal",
+            "type": "settings",
+            "themable": true
+          }
+        }
+      },
+      "secondary-row-comp": {
+        "row-spacing": {
+          "comment": "The distance between the borders of adjacent cells in the Secondary Row Comparison Table (horizontal | vertical).",
+          "value": "0 15px",
+          "type": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The color of the borders in the Secondary Row Comparison Table cells",
+          "value": "{color.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "border-width": {
+          "comment": "The width of the borders in the Secondary Row Comparison Table cells",
+          "value": "1px",
+          "type": "settings",
+          "themable": true
+        },
+        "border-style": {
+          "comment": "The style of the borders in the Secondary Row Comparison Table cells",
+          "value": "solid",
+          "type": "settings",
+          "themable": true
+        }
+      }
+    }
   }
