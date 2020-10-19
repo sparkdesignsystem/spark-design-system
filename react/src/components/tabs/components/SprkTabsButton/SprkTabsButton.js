@@ -98,21 +98,24 @@ SprkTabsButton.propTypes = {
    */
   ariaSelected: PropTypes.bool,
   /**
-   * The function that runs upon  clicking a tab.
+   * The function that runs upon clicking a tab.
    */
   onTabClick: PropTypes.func,
   /**
-   * The id used for the data-id attribute
+   * Assigned to the `data-id` attribute serving as a unique selector
+   * for automated tools.
    */
   tabBtnDataId: PropTypes.string,
   // TODO remove as part of Issue 3566
   /**
-   * Deprecated - use `tabBtnAnalyticsString` instead. The value used for
-   * the data-analytics attribute.
+   * Deprecated - use `tabBtnAnalyticsString` instead. Assigned to the
+   * `data-analytics` attribute serving as a unique selector for outside
+   * libraries to capture data.
    */
   tabBtnAnalytics: PropTypes.string,
   /**
-   * The value used for the data-analytics attribute.
+   * Assigned to the `data-analytics` attribute serving as a unique selector
+   * for outside libraries to capture data.
    */
   tabBtnAnalyticsString: PropTypes.string,
 };
