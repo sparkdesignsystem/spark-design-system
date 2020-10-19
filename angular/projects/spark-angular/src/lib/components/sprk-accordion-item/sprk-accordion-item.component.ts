@@ -31,7 +31,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
             sprk-c-Accordion__icon
             sprk-c-Icon--xl
             sprk-c-Icon--toggle
-            {{iconStateClass}}"
+            {{ iconStateClass }}"
           [iconType]="currentIconType"
         ></sprk-icon>
       </button>
@@ -46,7 +46,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
       </div>
     </li>
   `,
-  animations: [toggleAnimations.toggleContent]
+  animations: [toggleAnimations.toggleContent],
 })
 export class SprkAccordionItemComponent implements OnInit {
   /**
@@ -173,19 +173,15 @@ export class SprkAccordionItemComponent implements OnInit {
   getClasses(): string {
     const classArray: string[] = [
       'sprk-c-Accordion__item',
-      'sprk-u-Overflow--hidden'
+      'sprk-u-Overflow--hidden',
     ];
 
     if (this.isOpen) {
       classArray.push('sprk-c-Accordion__item--open');
     }
 
-    if (this.isActive) {
-      classArray.push('sprk-c-Accordion__item--active');
-    }
-
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -200,7 +196,7 @@ export class SprkAccordionItemComponent implements OnInit {
     const classArray: string[] = ['sprk-c-Accordion__heading'];
 
     if (this.additionalHeadingClasses) {
-      this.additionalHeadingClasses.split(' ').forEach(className => {
+      this.additionalHeadingClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }

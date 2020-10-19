@@ -18,8 +18,8 @@ describe('SprkAccordionItemComponent', () => {
       declarations: [
         SprkAccordionItemComponent,
         SprkIconComponent,
-        SprkLinkDirective
-      ]
+        SprkLinkDirective,
+      ],
     }).compileComponents();
   }));
 
@@ -40,7 +40,7 @@ describe('SprkAccordionItemComponent', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(accordionItemElement.classList.toString()).toContain(
-      'sprk-c-Accordion__item sprk-u-Overflow--hidden sprk-u-man'
+      'sprk-c-Accordion__item sprk-u-Overflow--hidden sprk-u-man',
     );
   });
 
@@ -48,7 +48,7 @@ describe('SprkAccordionItemComponent', () => {
     component.additionalHeadingClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(accordionHeadingElement.classList.contains('sprk-u-man')).toEqual(
-      true
+      true,
     );
   });
 
@@ -56,7 +56,7 @@ describe('SprkAccordionItemComponent', () => {
     component.analyticsString = 'Link Action';
     fixture.detectChanges();
     expect(accordionItemTriggerElement.getAttribute('data-analytics')).toEqual(
-      'Link Action'
+      'Link Action',
     );
   });
 
@@ -64,7 +64,7 @@ describe('SprkAccordionItemComponent', () => {
     component.isOpen = false;
     fixture.detectChanges();
     expect(
-      accordionItemElement.classList.contains('sprk-c-Accordion__item--open')
+      accordionItemElement.classList.contains('sprk-c-Accordion__item--open'),
     ).toEqual(false);
   });
 
@@ -72,7 +72,7 @@ describe('SprkAccordionItemComponent', () => {
     component.isOpen = true;
     fixture.detectChanges();
     expect(
-      accordionItemElement.classList.contains('sprk-c-Accordion__item--open')
+      accordionItemElement.classList.contains('sprk-c-Accordion__item--open'),
     ).toEqual(true);
   });
 
@@ -87,7 +87,7 @@ describe('SprkAccordionItemComponent', () => {
     component.title = 'This is a title';
     fixture.detectChanges();
     expect(accordionHeadingElement.textContent.trim()).toEqual(
-      'This is a title'
+      'This is a title',
     );
   });
 
@@ -102,7 +102,7 @@ describe('SprkAccordionItemComponent', () => {
     component.idString = testString;
     fixture.detectChanges();
     expect(accordionItemTriggerElement.getAttribute('data-id')).toEqual(
-      testString
+      testString,
     );
   });
 
@@ -110,14 +110,6 @@ describe('SprkAccordionItemComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(accordionItemElement.getAttribute('data-id')).toBeNull();
-  });
-
-  it('should set the active class if isActive is true', () => {
-    component.isActive = true;
-    fixture.detectChanges();
-    expect(
-      accordionItemElement.classList.contains('sprk-c-Accordion__item--active')
-    ).toEqual(true);
   });
 
   it('should render with a button element', () => {
@@ -128,11 +120,15 @@ describe('SprkAccordionItemComponent', () => {
   it('should have the aria-controls attribute', () => {
     fixture.detectChanges();
 
-    const ariaControls = accordionItemTriggerElement.getAttribute('aria-controls');
+    const ariaControls = accordionItemTriggerElement.getAttribute(
+      'aria-controls',
+    );
 
     expect(ariaControls).toBeTruthy();
 
-    const contentId = fixture.nativeElement.querySelector('.sprk-c-Accordion__content').getAttribute('id');
+    const contentId = fixture.nativeElement
+      .querySelector('.sprk-c-Accordion__content')
+      .getAttribute('id');
     expect(contentId).toBeTruthy();
 
     expect(ariaControls).toEqual(contentId);
@@ -142,16 +138,22 @@ describe('SprkAccordionItemComponent', () => {
     component.isOpen = false;
     fixture.detectChanges();
 
-    expect(accordionItemTriggerElement.getAttribute('aria-expanded')).toEqual('false');
+    expect(accordionItemTriggerElement.getAttribute('aria-expanded')).toEqual(
+      'false',
+    );
 
     accordionItemTriggerElement.click();
     fixture.detectChanges();
 
-    expect(accordionItemTriggerElement.getAttribute('aria-expanded')).toEqual('true');
+    expect(accordionItemTriggerElement.getAttribute('aria-expanded')).toEqual(
+      'true',
+    );
 
     accordionItemTriggerElement.click();
     fixture.detectChanges();
 
-    expect(accordionItemTriggerElement.getAttribute('aria-expanded')).toEqual('false');
+    expect(accordionItemTriggerElement.getAttribute('aria-expanded')).toEqual(
+      'false',
+    );
   });
 });
