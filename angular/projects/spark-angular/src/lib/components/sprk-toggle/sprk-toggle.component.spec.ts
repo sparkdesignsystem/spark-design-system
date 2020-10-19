@@ -198,4 +198,25 @@ describe('SprkToggleComponent', () => {
       '#exclamation',
     );
   });
+
+  it('should emit open and closed events when toggled', (done) => {
+    let openEventEmitted = false;
+    let closedEventEmitted = false;
+
+    component.openedEvent.subscribe((g) => {
+      openEventEmitted = true;
+      done();
+    });
+    component.closedEvent.subscribe((g) => {
+      closedEventEmitted = true;
+      done();
+    });
+
+    element.querySelector('button').click();
+    expect(openEventEmitted).toEqual(true);
+    expect(closedEventEmitted).toEqual(false);
+
+    element.querySelector('button').click();
+    expect(closedEventEmitted).toEqual(true);
+  });
 });

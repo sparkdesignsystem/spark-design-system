@@ -1,4 +1,10 @@
-import { Component, Input, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  AfterViewInit,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { toggleAnimations } from './sprk-toggle-animations';
 import { uniqueId } from 'lodash';
 import 'focus-visible';
@@ -131,6 +137,16 @@ export class SprkToggleComponent implements AfterViewInit {
    */
   @Input()
   contentId = uniqueId(`sprk_toggle_content_`);
+  /**
+   * When the toggle is opened this event will be emitted.
+   */
+  @Output()
+  openedEvent = new EventEmitter<any>();
+  /**
+   * When the toggle is closed this event will be emitted.
+   */
+  @Output()
+  closedEvent = new EventEmitter<any>();
 
   /**
    * @ignore
@@ -164,6 +180,11 @@ export class SprkToggleComponent implements AfterViewInit {
   toggle(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      this.openedEvent.emit();
+    } else {
+      this.closedEvent.emit();
+    }
     this.toggleState();
   }
 
