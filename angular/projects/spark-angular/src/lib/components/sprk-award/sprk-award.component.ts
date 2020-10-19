@@ -140,7 +140,7 @@ export class SprkAwardComponent {
   analyticsStringImgTwo: string;
   /**
    * The string that will be assigned to the `data-analytics` attribute of
-   * the first image.
+   * the second image.
    */
   @Input()
   imgTwoAnalyticsString: string;
