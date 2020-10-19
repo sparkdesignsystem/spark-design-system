@@ -17,7 +17,7 @@ const SprkAward = (props) => {
     splitAt,
     itemSpacing,
   } = props;
-  const classNames = classnames('sprk-o-CenteredColumn', additionalClasses);
+  const classNames = classnames(additionalClasses);
 
   return (
     <SprkStack
@@ -42,12 +42,16 @@ const SprkAward = (props) => {
         splitAt={splitAt}
         itemSpacing={itemSpacing}
       >
+        {/* TODO - Remove linkAddClasses and addClasses
+        as part of Issue 1279 */}
         {images.map((image) => {
           const {
             analyticsString,
             href,
             linkAddClasses,
             addClasses,
+            imageAdditionalClasses,
+            linkAdditionalClasses,
             alt,
             src,
             element,
@@ -58,7 +62,7 @@ const SprkAward = (props) => {
             <TagName
               className={classnames(
                 'sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack',
-                linkAddClasses,
+                linkAdditionalClasses || linkAddClasses,
               )}
               href={TagName === 'a' ? href || '#nogo' : undefined}
               data-analytics={analyticsString}
@@ -68,7 +72,7 @@ const SprkAward = (props) => {
               <img
                 className={classnames(
                   'sprk-o-Stack__item sprk-o-Stack__item--center-column',
-                  addClasses,
+                  imageAdditionalClasses || addClasses,
                 )}
                 alt={alt}
                 src={src}
@@ -78,15 +82,17 @@ const SprkAward = (props) => {
         })}
       </SprkStack>
 
-      <SprkToggle
-        triggerText={disclaimerTitle}
-        analyticsString={disclaimerAnalytics}
-        additionalClasses="sprk-o-Stack__item"
-      >
-        <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
-          {disclaimerText}
-        </p>
-      </SprkToggle>
+      {disclaimerTitle && disclaimerText && (
+        <SprkToggle
+          triggerText={disclaimerTitle}
+          analyticsString={disclaimerAnalytics}
+          additionalClasses="sprk-o-Stack__item"
+        >
+          <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
+            {disclaimerText}
+          </p>
+        </SprkToggle>
+      )}
     </SprkStack>
   );
 };
@@ -94,22 +100,41 @@ const SprkAward = (props) => {
 SprkAward.defaultProps = {
   splitAt: 'small',
   itemSpacing: 'medium',
-  additionalClasses: '',
-  idString: '',
-  heading: '',
-  disclaimerText: '',
-  disclaimerAnalytics: '',
-  disclaimerTitle: '',
 };
 
 SprkAward.propTypes = {
-  /** Determines the spacing between the items. */
-  itemSpacing: PropTypes.string,
+  /**
+   * Determines the spacing between the items.
+   * `misc-a`, `misc-b`, etc are deprecated. Use `miscA`, `miscB`, etc
+   * instead.
+   */
+  itemSpacing: PropTypes.oneOf([
+    'tiny',
+    'small',
+    'medium',
+    'large',
+    'huge',
+    'misc-a',
+    'misc-b',
+    'misc-c',
+    'misc-d',
+    'miscA',
+    'miscB',
+    'miscC',
+    'miscD',
+  ]),
   /**
    * Determines when the flex-direction should
    * change to row from column for the images.
    */
-  splitAt: PropTypes.string,
+  splitAt: PropTypes.oneOf([
+    'extraTiny',
+    'tiny',
+    'small',
+    'medium',
+    'large',
+    'huge',
+  ]),
   /**
    * A space-separated string of classes to add
    * to the outermost container of the component.
@@ -137,10 +162,26 @@ SprkAward.propTypes = {
       src: PropTypes.string.isRequired,
       /** The alt text for the image, icon, or SprkIcon. */
       alt: PropTypes.string.isRequired,
-      /** Additional classes for the image. */
+      /** Deprecated - Use `imageAdditionalClasses` instead.
+       * A space-separated string of classes to add to each of the images in
+       * the component. */
       addClasses: PropTypes.string,
-      /** Additional classes for the link wrapping the image. */
+      /** Deprecated - Use `linkAdditionalClasses` instead.
+       * A space-separated string of classes to add to the links wrapping each
+       * of the images in the component.
+       */
       linkAddClasses: PropTypes.string,
+      /**
+       * A space-separated string of classes to add to each of the images in
+       * the component.
+       */
+      imageAdditionalClasses: PropTypes.string,
+      /**
+       * A space-separated string of classes to add to the links wrapping each
+       * of the images in the component.
+       */
+      linkAdditionalClasses: PropTypes.string,
+
       /**
        * Assigned to the `data-analytics` attribute
        * serving as a unique selector for outside libraries to capture data.
