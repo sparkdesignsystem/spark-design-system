@@ -17,30 +17,29 @@ import 'focus-visible';
         [attr.aria-expanded]="isOpen ? 'true' : 'false'"
         [attr.data-analytics]="analyticsString"
         [attr.aria-controls]="contentId"
+        type="button"
       >
         <sprk-icon
           iconType="chevron-down-circle"
           additionalClasses="{{
             iconClass
-          }} sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle {{ iconStateClass }}"
+          }} sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle {{
+            iconStateClass
+          }}"
         ></sprk-icon>
         {{ title }}
       </button>
 
-      <div
-        [@toggleContent]="animState"
-        [id]="contentId"
-      >
+      <div [@toggleContent]="animState" [id]="contentId">
         <div class="sprk-u-pts sprk-u-pbs sprk-c-Toggle__content">
           <ng-content></ng-content>
         </div>
       </div>
     </div>
   `,
-  animations: [toggleAnimations.toggleContent]
+  animations: [toggleAnimations.toggleContent],
 })
 export class SprkToggleComponent implements AfterViewInit {
-
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
