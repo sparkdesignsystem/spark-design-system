@@ -107,6 +107,24 @@ describe('SprkTabsButton:', () => {
     ).toBe(true);
   });
 
+  // TODO remove as part of Issue 3566
+  it('should add additional classes from deprecated tabBtnAddClasses', () => {
+    const wrapper = mount(
+      <SprkTabsButton tabBtnAddClasses="test">Test Content 1</SprkTabsButton>,
+    );
+    expect(wrapper.find('.sprk-c-Tabs__button.test').length).toBe(1);
+  });
+
+  it('should add additional classes from tabBtnAdditionalClasses', () => {
+    const wrapper = mount(
+      <SprkTabsButton tabBtnAdditionalClasses="test">
+        Test Content 1
+      </SprkTabsButton>,
+    );
+    expect(wrapper.find('.sprk-c-Tabs__button.test').length).toBe(1);
+  });
+
+  // TODO remove as part of Issue 3566
   it('should prefer tabBtnAdditionalClasses over tabBtnAddClasses', () => {
     const wrapper = mount(
       <SprkTabsButton tabBtnAdditionalClasses="test" tabBtnAddClasses="test2">
