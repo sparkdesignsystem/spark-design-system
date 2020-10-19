@@ -21,11 +21,7 @@ import 'focus-visible';
       >
         <sprk-icon
           iconType="chevron-down-circle"
-          additionalClasses="{{
-            iconClass
-          }} sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle {{
-            iconStateClass
-          }}"
+          [additionalClasses]="getIconClasses()"
         ></sprk-icon>
         {{ title }}
       </button>
@@ -62,12 +58,20 @@ export class SprkToggleComponent implements AfterViewInit {
   @Input()
   title: string;
   /**
+   * Deprecated - Use `iconAdditionalClasses` instead.
    * The value supplied will be assigned as a
    * CSS class on the icon used in the Toggle.
    * This is intended for overrides.
    */
   @Input()
   iconClass: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon.
+   */
+  @Input()
+  iconAdditionalClasses: string;
   /**
    * The value supplied will be assigned as a CSS class
    * on the clickable title text used in the Toggle.
@@ -135,6 +139,23 @@ export class SprkToggleComponent implements AfterViewInit {
       'sprk-c-Toggle__trigger sprk-u-TextCrop--none',
       this.titleFontClass,
     ];
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getIconClasses(): string {
+    const additionalClasses = this.iconAdditionalClasses || this.iconClass;
+    const classArray: string[] = [
+      'sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle',
+      this.iconStateClass,
+    ];
+    if (additionalClasses) {
+      additionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
     return classArray.join(' ');
   }
 
