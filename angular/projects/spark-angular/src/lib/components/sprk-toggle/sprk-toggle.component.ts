@@ -147,11 +147,12 @@ export class SprkToggleComponent implements AfterViewInit {
    */
   @Output()
   closedEvent = new EventEmitter<any>();
-
   /**
-   * @ignore
+   * If `true`, the Toggle will be open when rendered.
    */
-  public isOpen = false;
+  @Input()
+  isOpen = false;
+
   /**
    * @ignore
    */
@@ -165,13 +166,13 @@ export class SprkToggleComponent implements AfterViewInit {
    * @ignore
    */
   toggleState(): void {
-    this.isOpen === false
-      ? (this.animState = 'closed')
-      : (this.animState = 'open');
-
-    this.isOpen === false
-      ? (this.iconStateClass = '')
-      : (this.iconStateClass = 'sprk-c-Icon--open');
+    if (this.isOpen) {
+      this.animState = 'open';
+      this.iconStateClass = 'sprk-c-Icon--open';
+    } else {
+      this.animState = 'closed';
+      this.iconStateClass = '';
+    }
   }
 
   /**
