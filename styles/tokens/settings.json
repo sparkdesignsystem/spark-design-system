@@ -12,13 +12,7 @@
     "themable": true
   },
   "pre-overflow": {
-    "comment": "Text color of any text when selected.",
-    "value": "auto",
-    "type": "settings",
-    "themable": true
-  },
-  "pre-overflow": {
-    "comment": "Text color of any text when selected.",
+    "comment": "Reset for the overflow property on pre elements.",
     "value": "auto",
     "type": "settings",
     "themable": true
