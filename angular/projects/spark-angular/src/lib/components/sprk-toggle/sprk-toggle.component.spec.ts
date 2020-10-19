@@ -153,4 +153,12 @@ describe('SprkToggleComponent', () => {
     fixture.detectChanges();
     expect(triggerElement.innerHTML).toContain('Test Title');
   });
+
+  it('should add the correct classes if contentAdditionalClasses is set', () => {
+    component.contentAdditionalClasses = 'test-1 test-2';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Toggle__content').classList.toString(),
+    ).toContain('sprk-u-pts sprk-u-pbs sprk-c-Toggle__content test-1 test-2');
+  });
 });

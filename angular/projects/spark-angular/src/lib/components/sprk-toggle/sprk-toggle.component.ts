@@ -28,7 +28,7 @@ import 'focus-visible';
       </button>
 
       <div [@toggleContent]="animState" [id]="contentId">
-        <div class="sprk-u-pts sprk-u-pbs sprk-c-Toggle__content">
+        <div [ngClass]="getContentClasses()">
           <ng-content></ng-content>
         </div>
       </div>
@@ -82,6 +82,13 @@ export class SprkToggleComponent implements AfterViewInit {
    */
   @Input()
   iconAdditionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * content.
+   */
+  @Input()
+  contentAdditionalClasses: string;
   /**
    * The value supplied will be assigned as a CSS class
    * on the clickable title text used in the Toggle.
@@ -164,6 +171,21 @@ export class SprkToggleComponent implements AfterViewInit {
     ];
     if (additionalClasses) {
       additionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getContentClasses(): string {
+    const classArray: string[] = [
+      'sprk-u-pts sprk-u-pbs sprk-c-Toggle__content',
+    ];
+    if (this.contentAdditionalClasses) {
+      this.contentAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
