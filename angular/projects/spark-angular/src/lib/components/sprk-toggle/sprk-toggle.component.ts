@@ -75,9 +75,9 @@ export class SprkToggleComponent implements AfterContentInit {
   // TODO: Remove `iconClass` in issue #issueNumber
   /**
    * Deprecated - Use `iconAdditionalClasses` instead.
-   * The value supplied will be assigned as a
-   * CSS class on the icon used in the Toggle.
-   * This is intended for overrides.
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon.
    */
   @Input()
   iconClass: string;
@@ -106,9 +106,9 @@ export class SprkToggleComponent implements AfterContentInit {
   // TODO: Remove `titleFontClass` in future issue #issueNumber.
   /**
    * Deprecated - Use `titleAdditionalClasses` instead.
-   * The value supplied will be assigned as a CSS class
-   * on the clickable title text used in the Toggle.
-   * This is intended for overrides.
+   * Expects a space separated string
+   * of classes to be added to the
+   * trigger text.
    */
   @Input()
   titleFontClass = 'sprk-b-TypeBodyThree';
