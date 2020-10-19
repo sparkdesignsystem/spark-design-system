@@ -24,6 +24,15 @@ describe('SprkTabsPanel:', () => {
     expect(wrapper.find('.sprk-c-Tabs__content.test').length).toBe(1);
   });
 
+  it('should add classes when tabPanelAddClasses has a value', () => {
+    const wrapper = mount(
+      <SprkTabsPanel tabBtnChildren="Tab 1" tabPanelAddClasses="test">
+        Test Content 1
+      </SprkTabsPanel>,
+    );
+    expect(wrapper.find('.sprk-c-Tabs__content.test').length).toBe(1);
+  });
+
   it('should prefer tabPanelAdditionalClasses over tabPanelAddClasses', () => {
     const wrapper = mount(
       <SprkTabsPanel
