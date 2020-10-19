@@ -180,16 +180,16 @@ describe('SprkToggleComponent', () => {
     );
   });
 
-  it('should add the correct classes if triggerTextAdditionalClasses is set', () => {
-    component.triggerTextAdditionalClasses = 'test-1 test-2';
+  it('should add the correct classes if titleAdditionalClasses is set', () => {
+    component.titleAdditionalClasses = 'test-1 test-2';
     fixture.detectChanges();
     expect(triggerElement.classList.toString()).toContain(
       'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
     );
   });
 
-  it('should prefer triggerTextAdditionalClasses over titleFontClass if both are set', () => {
-    component.triggerTextAdditionalClasses = 'test-1 test-2';
+  it('should prefer titleAdditionalClasses over titleFontClass if both are set', () => {
+    component.titleAdditionalClasses = 'test-1 test-2';
     component.titleFontClass = 'test-3 test-4';
     fixture.detectChanges();
     expect(triggerElement.classList.toString()).toContain(
