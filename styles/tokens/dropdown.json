@@ -26,25 +26,97 @@
         "type": "settings",
         "themable": true
       },
-      "padding": {},
-      "link-color": {},
-      "line-height": {},
-      "shadow": {},
+      "padding": {
+        "comment": "The padding around the Dropdown items.",
+        "value": "{space.misc.a.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "footer-padding": {
+        "comment": "The padding around the Informational Dropdown footer.",
+        "value": "{space.inset.short.l.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "max-width": {
+        "comment": "The max-width of the Dropdown.",
+        "value": "24rem",
+        "type": "settings",
+        "themable": true
+      },
+      "link-color": {
+        "comment": "The color of the Dropdown links.",
+        "value": "{color.black.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "line-height": {
+        "comment": "The line height of the Dropdown.",
+        "value": "1",
+        "type": "settings",
+        "themable": true
+      },
+      "shadow": {
+        "comment": "The box shadow of the Dropdown.",
+        "value": "0 0 40px 2px rgba(0, 0, 0, 0.1)",
+        "type": "settings",
+        "themable": true
+      },
       "font": {
-        "size": {},
-        "weight": {},
+        "size": {
+          "comment": "The font size of the Dropdown.",
+          "value": "{font-size.body.one.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "weight": {
+          "comment": "The font weight of the Dropdown.",
+          "value": "400",
+          "type": "settings",
+          "themable": true
+        }
       },
       "trigger": {
-        "color": {},
-        "color-active": {},
-        "color-visited": {}
+        "color": {
+          "comment": "The color of the Dropdown trigger.",
+          "value": "{color.black.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "color-active": {
+          "comment": "The color of the Dropdown trigger on hover, active, focus.",
+          "value": "{color.black.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "color-visited": {
+          "comment": "The color of the Dropdown trigger for the visited state.",
+          "value": "{color.black.value}",
+          "type": "settings",
+          "themable": true
+        }
       },
       "title": {
         "font": {
-          "size": {},
-          "weight": {},
+          "size": {
+            "comment": "The font size of the Dropdown title.",
+            "value": "{dropdown.font.size.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "weight": {
+            "comment": "The font weight of the Dropdown title.",
+            "value": "300",
+            "type": "settings",
+            "themable": true
+          }
         },
-        "color": {}
-      },
+        "color": {
+          "comment": "The color of the Dropdown title.",
+          "value": "{color.black-tint.30.value}",
+          "type": "settings",
+          "themable": true
+        }
+      }
     }
   }
