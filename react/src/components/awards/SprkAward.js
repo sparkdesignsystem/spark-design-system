@@ -84,7 +84,7 @@ const SprkAward = (props) => {
 
       {disclaimerTitle && disclaimerText && (
         <SprkToggle
-          title={disclaimerTitle}
+          triggerText={disclaimerTitle}
           analyticsString={disclaimerAnalytics}
           additionalClasses="sprk-o-Stack__item"
         >
