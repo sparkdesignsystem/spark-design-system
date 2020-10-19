@@ -94,7 +94,7 @@
         "font": {
           "size-small": {
             "comment": "The font size for small Toggle Trigger.",
-            "value": "{typography.font-size.body.four.value}",
+            "value": "{font-size.body.four.value}",
             "type": "settings",
             "themable": true
           },

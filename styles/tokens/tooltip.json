@@ -86,7 +86,7 @@
         },
         "size": {
           "comment": "The font size for the tooltip.",
-          "value": "{typography.font-size.body.four.value}",
+          "value": "{font-size.body.four.value}",
           "type": "settings",
           "themable": true
         }
