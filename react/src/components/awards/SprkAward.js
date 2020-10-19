@@ -163,14 +163,23 @@ SprkAward.propTypes = {
       /** The alt text for the image, icon, or SprkIcon. */
       alt: PropTypes.string.isRequired,
       /** Deprecated - Use `imageAdditionalClasses` instead.
-       * Additional classes for the image. */
+       * A space-separated string of classes to add to each of the images in
+       * the component. */
       addClasses: PropTypes.string,
       /** Deprecated - Use `linkAdditionalClasses` instead.
-       * Additional classes for the link wrapping the image. */
+       * A space-separated string of classes to add to the links wrapping each
+       * of the images in the component.
+       */
       linkAddClasses: PropTypes.string,
-      /** Additional classes for the image. */
+      /**
+       * A space-separated string of classes to add to each of the images in
+       * the component.
+       */
       imageAdditionalClasses: PropTypes.string,
-      /** Additional classes for the link wrapping the image. */
+      /**
+       * A space-separated string of classes to add to the links wrapping each
+       * of the images in the component.
+       */
       linkAdditionalClasses: PropTypes.string,
 
       /**
