@@ -1,3 +1,50 @@
   {
-    "dropdown": {}
+    "dropdown": {
+      "active": {
+        "background-color": {
+          "comment": "Background color of the Dropdown items that are active or hovered.",
+          "value": "{color.gray.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "border": {
+          "comment": "The left border of the Dropdown item that is active.",
+          "value": "2.5px solid {color.purple.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "box-shadow": {
+          "comment": "The box-shadow of the Dropdown item that is active.",
+          "value": "-1px 0 0 0 {color.purple.value}",
+          "type": "settings",
+          "themable": true
+        }
+      },
+      "border": {
+        "comment": "The border of the Dropdown.",
+        "value": "1px solid $sprk-gray",
+        "type": "settings",
+        "themable": true
+      },
+      "padding": {},
+      "link-color": {},
+      "line-height": {},
+      "shadow": {},
+      "font": {
+        "size": {},
+        "weight": {},
+      },
+      "trigger": {
+        "color": {},
+        "color-active": {},
+        "color-visited": {}
+      },
+      "title": {
+        "font": {
+          "size": {},
+          "weight": {},
+        },
+        "color": {}
+      },
+    }
   }
