@@ -1,3 +1,122 @@
   {
-    "toggle": {}
+    "toggle": {
+      "trigger": {
+        "border": {
+          "top": {
+            "comment": "The top border style for Toggle Trigger.",
+            "value": "none",
+            "type": "settings",
+            "themable": true
+          },
+          "right": {
+            "comment": "The right border style for Toggle Trigger.",
+            "value": "none",
+            "type": "settings",
+            "themable": true
+          },
+          "bottom": {
+            "comment": "The bottom border style for Toggle Trigger.",
+            "value": "{link.has-icon.border-bottom.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "left": {
+            "comment": "The left border style for Toggle Trigger.",
+            "value": "none",
+            "type": "settings",
+            "themable": true
+          }
+        },
+        "text-decoration": {
+          "comment": "The text decoration style Toggle Trigger.",
+          "value": "{link.text-decoration.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "transition": {
+          "comment": "The transition for Toggle Trigger.",
+          "value": "{link.transition.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "hover": {
+          "border-bottom": {
+            "comment": "The hover border bottom style for Toggle Trigger.",
+            "value": "{link.has-icon.hover.border.bottom.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "color": {
+            "comment": "The hover text color for Toggle Trigger.",
+            "value": "{color.purple.value}",
+            "type": "settings",
+            "themable": true
+          }
+        },
+        "background-color": {
+          "comment": "The background color for Toggle Trigger.",
+          "value": "transparent",
+          "type": "settings",
+          "themable": true
+        },
+        "padding": {
+          "top": {
+            "comment": "The padding top for Toggle Trigger.",
+            "value": "0",
+            "type": "settings",
+            "themable": true
+          },
+          "right": {
+            "comment": "The padding right for Toggle Trigger.",
+            "value": "0",
+            "type": "settings",
+            "themable": true
+          },
+          "bottom": {
+            "comment": "The padding bottom for Toggle Trigger.",
+            "value": "0",
+            "type": "settings",
+            "themable": true
+          },
+          "left": {
+            "comment": "The padding left for Toggle Trigger.",
+            "value": "0",
+            "type": "settings",
+            "themable": true
+          }
+        },
+        "text-align": {
+          "comment": "The text alignment for Toggle Trigger.",
+          "value": "left",
+          "type": "settings",
+          "themable": true
+        },
+        "font": {
+          "size-small": {
+            "comment": "The font size for small Toggle Trigger.",
+            "value": "{font-size.body.four.value}",
+            "type": "settings",
+            "themable": true
+          },
+          "weight-small": {
+            "comment": "The font weight for small Toggle Trigger.",
+            "value": "normal",
+            "type": "settings",
+            "themable": true
+          }
+        }
+      },
+      "icon-hover-fill": {
+        "comment": "The hover fill color for Toggle icon.",
+        "value": "{toggle.trigger.hover.color.value}",
+        "type": "settings",
+        "themable": true
+      },
+      "transition-timing": {
+        "comment": "The transition timing for the rotation of the icon when the Toggle is opened.",
+        "value": "0.3s ease",
+        "type": "settings",
+        "themable": true
+      }
+    }
   }
