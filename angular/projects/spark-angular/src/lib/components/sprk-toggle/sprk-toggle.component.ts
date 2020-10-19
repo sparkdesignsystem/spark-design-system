@@ -1,7 +1,7 @@
 import {
   Component,
   Input,
-  AfterViewInit,
+  AfterContentInit,
   Output,
   EventEmitter,
 } from '@angular/core';
@@ -42,7 +42,7 @@ import 'focus-visible';
   `,
   animations: [toggleAnimations.toggleContent],
 })
-export class SprkToggleComponent implements AfterViewInit {
+export class SprkToggleComponent implements AfterContentInit {
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
@@ -236,7 +236,7 @@ export class SprkToggleComponent implements AfterViewInit {
     return classArray.join(' ');
   }
 
-  ngAfterViewInit() {
+  ngAfterContentInit() {
     this.toggleState();
   }
 }

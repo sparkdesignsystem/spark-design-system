@@ -66,6 +66,16 @@ describe('SprkToggleComponent', () => {
     ).toEqual('sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle');
   });
 
+  it('should render open if isOpen is set to true', () => {
+    component.isOpen = true;
+    fixture.detectChanges();
+    expect(
+      element.querySelector('button .sprk-c-Icon').classList.toString(),
+    ).toEqual(
+      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open',
+    );
+  });
+
   it('should add the correct classes if iconClass have values', () => {
     component.iconClass = 'test';
     fixture.detectChanges();
