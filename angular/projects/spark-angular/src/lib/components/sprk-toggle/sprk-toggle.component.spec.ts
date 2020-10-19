@@ -46,7 +46,7 @@ describe('SprkToggleComponent', () => {
   });
 
   it('should add icon classes to icon when toggle is opened', () => {
-    component.title = 'placeholder';
+    component.triggerText = 'placeholder';
     element.querySelector('button').click();
     fixture.detectChanges();
     expect(
@@ -57,7 +57,7 @@ describe('SprkToggleComponent', () => {
   });
 
   it('should add icon classes to icon when the toggle is opened and then closed', () => {
-    component.title = 'placeholder';
+    component.triggerText = 'placeholder';
     element.querySelector('button').click();
     element.querySelector('button').click();
     fixture.detectChanges();
@@ -133,5 +133,24 @@ describe('SprkToggleComponent', () => {
     expect(triggerElement.getAttribute('aria-controls')).toEqual(
       contentElement.getAttribute('id'),
     );
+  });
+
+  it('should add the correct title when set', () => {
+    component.title = 'Test Title';
+    fixture.detectChanges();
+    expect(triggerElement.innerHTML).toContain('Test Title');
+  });
+
+  it('should add the correct triggerText when set', () => {
+    component.triggerText = 'Test Title';
+    fixture.detectChanges();
+    expect(triggerElement.innerHTML).toContain('Test Title');
+  });
+
+  it('should prefer triggerText over title if both are set', () => {
+    component.triggerText = 'Test Title';
+    component.title = 'Should not be the title';
+    fixture.detectChanges();
+    expect(triggerElement.innerHTML).toContain('Test Title');
   });
 });

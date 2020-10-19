@@ -3,6 +3,7 @@ import { toggleAnimations } from './sprk-toggle-animations';
 import { uniqueId } from 'lodash';
 import 'focus-visible';
 
+// TODO: Remove `title` in issue #issueNumber
 @Component({
   selector: 'sprk-toggle',
   template: `
@@ -23,7 +24,7 @@ import 'focus-visible';
           iconType="chevron-down-circle"
           [additionalClasses]="getIconClasses()"
         ></sprk-icon>
-        {{ title }}
+        {{ triggerText || title }}
       </button>
 
       <div [@toggleContent]="animState" [id]="contentId">
@@ -51,12 +52,21 @@ export class SprkToggleComponent implements AfterViewInit {
    */
   @Input()
   additionalClasses: string;
+  // TODO: Remove `title` in issue #issueNumber
   /**
+   * Deprecated - Use `triggerText` instead.
    * The value supplied will be
    * rendered as the main Toggle link text.
    */
   @Input()
   title: string;
+  /**
+   * The value supplied will be
+   * rendered as the main Toggle link text.
+   */
+  @Input()
+  triggerText: string;
+  // TODO: Remove `iconClass` in issue #issueNumber
   /**
    * Deprecated - Use `iconAdditionalClasses` instead.
    * The value supplied will be assigned as a
@@ -146,6 +156,7 @@ export class SprkToggleComponent implements AfterViewInit {
    * @ignore
    */
   getIconClasses(): string {
+    // TODO: Remove `iconClass` in issue #issueNumber
     const additionalClasses = this.iconAdditionalClasses || this.iconClass;
     const classArray: string[] = [
       'sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle',
