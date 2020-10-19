@@ -197,12 +197,12 @@ describe('SprkToggleComponent', () => {
     );
   });
 
-  it('should use correct iconName if it is set', () => {
+  it('should use correct toggleIconName if it is set', () => {
     fixture.detectChanges();
     expect(element.querySelector('use').getAttribute('xlink:href')).toEqual(
       '#chevron-down-circle',
     );
-    component.iconName = 'exclamation';
+    component.toggleIconName = 'exclamation';
     fixture.detectChanges();
     expect(element.querySelector('use').getAttribute('xlink:href')).toEqual(
       '#exclamation',
