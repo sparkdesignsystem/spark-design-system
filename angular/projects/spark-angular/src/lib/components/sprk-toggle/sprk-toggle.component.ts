@@ -89,13 +89,24 @@ export class SprkToggleComponent implements AfterViewInit {
    */
   @Input()
   contentAdditionalClasses: string;
+  // TODO: Remove `titleFontClass` in future issue #issueNumber.
   /**
+   * Deprecated - Use `triggerTextAdditionalClasses` instead.
    * The value supplied will be assigned as a CSS class
    * on the clickable title text used in the Toggle.
    * This is intended for overrides.
    */
   @Input()
   titleFontClass = 'sprk-b-TypeBodyThree';
+  // TODO: Move the default value from titleFontClass to
+  // triggerTextAdditionalClasses in future issue #issueNumber.
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * trigger text.
+   */
+  @Input()
+  triggerTextAdditionalClasses: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -151,10 +162,13 @@ export class SprkToggleComponent implements AfterViewInit {
   /**
    * @ignore
    */
+  // TODO: Remove `titleFontClass` in future issue #issueNumber.
   getClasses(): string {
+    const additionalClasses =
+      this.triggerTextAdditionalClasses || this.titleFontClass;
     const classArray: string[] = [
       'sprk-c-Toggle__trigger sprk-u-TextCrop--none',
-      this.titleFontClass,
+      additionalClasses,
     ];
     return classArray.join(' ');
   }

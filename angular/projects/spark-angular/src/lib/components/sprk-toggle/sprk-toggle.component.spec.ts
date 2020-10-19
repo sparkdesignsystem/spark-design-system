@@ -161,4 +161,29 @@ describe('SprkToggleComponent', () => {
       element.querySelector('.sprk-c-Toggle__content').classList.toString(),
     ).toContain('sprk-u-pts sprk-u-pbs sprk-c-Toggle__content test-1 test-2');
   });
+
+  it('should add the correct classes if titleFontClass is set', () => {
+    component.titleFontClass = 'test-1 test-2';
+    fixture.detectChanges();
+    expect(triggerElement.classList.toString()).toContain(
+      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+    );
+  });
+
+  it('should add the correct classes if triggerTextAdditionalClasses is set', () => {
+    component.triggerTextAdditionalClasses = 'test-1 test-2';
+    fixture.detectChanges();
+    expect(triggerElement.classList.toString()).toContain(
+      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+    );
+  });
+
+  it('should prefer triggerTextAdditionalClasses over titleFontClass if both are set', () => {
+    component.triggerTextAdditionalClasses = 'test-1 test-2';
+    component.titleFontClass = 'test-3 test-4';
+    fixture.detectChanges();
+    expect(triggerElement.classList.toString()).toContain(
+      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+    );
+  });
 });
