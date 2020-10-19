@@ -21,7 +21,7 @@ import 'focus-visible';
         type="button"
       >
         <sprk-icon
-          iconType="chevron-down-circle"
+          [iconName]="iconName"
           [additionalClasses]="getIconClasses()"
         ></sprk-icon>
         {{ triggerText || title }}
@@ -82,6 +82,14 @@ export class SprkToggleComponent implements AfterViewInit {
    */
   @Input()
   iconAdditionalClasses: string;
+  /**
+   * Determines which icon is rendered.
+   * Expects the value to match the exact name
+   * of the icon found in the docs
+   * (i.e. `chevron-down`, instead of `chevron down`).
+   */
+  @Input()
+  iconName = 'chevron-down-circle';
   /**
    * Expects a space separated string
    * of classes to be added to the

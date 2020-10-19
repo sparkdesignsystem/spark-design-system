@@ -186,4 +186,16 @@ describe('SprkToggleComponent', () => {
       'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
     );
   });
+
+  it('should use correct iconName if it is set', () => {
+    fixture.detectChanges();
+    expect(element.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#chevron-down-circle',
+    );
+    component.iconName = 'exclamation';
+    fixture.detectChanges();
+    expect(element.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#exclamation',
+    );
+  });
 });
