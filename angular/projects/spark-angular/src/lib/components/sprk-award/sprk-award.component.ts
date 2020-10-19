@@ -224,7 +224,7 @@ export class SprkAwardComponent {
    * This value should be unique per page.
    */
   @Input()
-  idString: string = null;
+  idString: string;
 
   /**
    * @ignore
