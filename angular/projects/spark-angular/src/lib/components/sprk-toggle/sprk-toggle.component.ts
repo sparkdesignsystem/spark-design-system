@@ -68,7 +68,7 @@ export class SprkToggleComponent implements AfterContentInit {
   title: string;
   /**
    * The value supplied will be
-   * rendered as the main Toggle link text.
+   * rendered as the main Toggle button text.
    */
   @Input()
   triggerText: string;
