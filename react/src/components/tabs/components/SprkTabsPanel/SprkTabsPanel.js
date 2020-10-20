@@ -9,8 +9,9 @@ class SprkTabsPanel extends Component {
       isActive,
       tabBtnId,
       ariaControls,
+      // TODO remove as part of Issue 3566
       tabPanelAddClasses,
-      tabPanelAdditionalClasses,
+      tabPanelAdditionalClasses = tabPanelAddClasses,
     } = this.props;
 
     return (
@@ -20,7 +21,7 @@ class SprkTabsPanel extends Component {
           {
             'sprk-u-Display--none': !isActive,
           },
-          tabPanelAdditionalClasses || tabPanelAddClasses,
+          tabPanelAdditionalClasses,
         )}
         role="tabpanel"
         tabIndex="0"
@@ -45,11 +46,11 @@ SprkTabsPanel.propTypes = {
    */
   isActive: PropTypes.bool,
   /**
-   * A unique ID for each tab button
+   * A unique ID for each tab button.
    */
   tabBtnId: PropTypes.string,
   /**
-   * The aria ID to use for each tab panel so it corresponds to the button
+   * The aria ID to use for each tab panel so it corresponds to the button.
    */
   ariaControls: PropTypes.string,
   /**

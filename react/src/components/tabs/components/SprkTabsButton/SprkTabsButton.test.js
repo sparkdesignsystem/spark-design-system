@@ -135,6 +135,7 @@ describe('SprkTabsButton:', () => {
     expect(wrapper.find('.sprk-c-Tabs__button.test2').length).toBe(0);
   });
 
+  // TODO remove as part of Issue 3566
   it('should add data-analytics from tabBtnAnalytics', () => {
     const wrapper = mount(
       <SprkTabsButton tabBtnAnalytics="test">Test Content 1</SprkTabsButton>,
@@ -144,6 +145,18 @@ describe('SprkTabsButton:', () => {
     ).toBe(1);
   });
 
+  it('should add data-analytics from tabBtnAnalyticsString', () => {
+    const wrapper = mount(
+      <SprkTabsButton tabBtnAnalyticsString="test">
+        Test Content 1
+      </SprkTabsButton>,
+    );
+    expect(
+      wrapper.find('.sprk-c-Tabs__button[data-analytics="test"]').length,
+    ).toBe(1);
+  });
+
+  // TODO remove as part of Issue 3566
   it('should prefer tabBtnAnalyticsString over tabBtnAnalytics', () => {
     const wrapper = mount(
       <SprkTabsButton tabBtnAnalyticsString="test" tabBtnAnalytics="test2">

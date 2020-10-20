@@ -19,6 +19,7 @@ class SprkTabsButton extends Component {
     const {
       tabBtnChildren,
       tabBtnId,
+      // TODO remove as part of Issue 3566
       tabBtnAddClasses,
       tabBtnAdditionalClasses = tabBtnAddClasses,
       ariaControls,
@@ -26,17 +27,15 @@ class SprkTabsButton extends Component {
       isActive,
       onTabClick,
       tabBtnDataId,
+      // TODO remove as part of Issue 3566
       tabBtnAnalytics,
       tabBtnAnalyticsString = tabBtnAnalytics,
     } = this.props;
     return (
       <button
-        className={classnames(
-          'sprk-c-Tabs__button',
-          tabBtnAdditionalClasses,
-          // eslint-disable-next-line prettier/prettier
-          { 'sprk-c-Tabs__button--active': isActive },
-        )}
+        className={classnames('sprk-c-Tabs__button', tabBtnAdditionalClasses, {
+          'sprk-c-Tabs__button--active': isActive,
+        })}
         role="tab"
         onClick={onTabClick}
         aria-controls={ariaControls}
