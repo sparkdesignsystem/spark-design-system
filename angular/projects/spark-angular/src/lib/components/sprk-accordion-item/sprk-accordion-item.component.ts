@@ -193,7 +193,10 @@ export class SprkAccordionItemComponent implements OnInit {
    * @ignore
    */
   getHeadingClasses(): string {
-    const classArray: string[] = ['sprk-c-Accordion__heading'];
+    const classArray: string[] = [
+      'sprk-c-Accordion__heading',
+      'sprk-b-TypeDisplaySeven',
+    ];
 
     if (this.additionalHeadingClasses) {
       this.additionalHeadingClasses.split(' ').forEach((className) => {

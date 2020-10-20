@@ -156,4 +156,14 @@ describe('SprkAccordionItemComponent', () => {
       'false',
     );
   });
+
+  it('should render with correct default heading classes', () => {
+    fixture.detectChanges();
+    expect(
+      accordionHeadingElement.classList.contains('sprk-c-Accordion__heading'),
+    ).toEqual(true);
+    expect(
+      accordionHeadingElement.classList.contains('sprk-b-TypeDisplaySeven'),
+    ).toEqual(true);
+  });
 });

@@ -11,10 +11,8 @@ export default {
   component: SprkAccordionComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     subcomponents: {
@@ -51,7 +49,6 @@ export const defaultStory = () => ({
       <sprk-accordion-item
         title="This is an accordion heading"
         additionalClasses="sprk-u-mbs"
-        additionalHeadingClasses="sprk-b-TypeDisplaySeven"
         idString="accordion-item-1"
         analyticsString="object.action.event"
       >
@@ -67,7 +64,6 @@ export const defaultStory = () => ({
         title="This is an accordion heading"
         idString="accordion-item-2"
         analyticsString="object.action.event"
-        additionalHeadingClasses="sprk-b-TypeDisplaySeven"
       >
         <p>
           This is an example of accordion content.
@@ -81,7 +77,6 @@ export const defaultStory = () => ({
         title="This is an accordion heading"
         idString="accordion-item-3"
         analyticsString="object.action.event"
-        additionalHeadingClasses="sprk-b-TypeDisplaySeven"
       >
         <p>
           This is an example of accordion content.
