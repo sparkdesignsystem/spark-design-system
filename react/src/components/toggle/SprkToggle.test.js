@@ -87,7 +87,7 @@ describe('SprkToggle:', () => {
     expect(wrapper.find('[aria-expanded="true"]').length).toBe(1);
   });
 
-  it(`should add aria-controls="custom_control" and id="custom_control" 
+  it(`should add aria-controls="custom_control" and id="custom_control"
     when the contentId is passed`, () => {
     const wrapper = mount(
       <SprkToggle triggerText="Toggle title" contentId="custom_control">
@@ -113,7 +113,7 @@ describe('SprkToggle:', () => {
     expect(wrapper.find(`div#${toggleContentId}`).length).toBe(1);
   });
 
-  it(`should add classes to the content if contentAdditionalClasses 
+  it(`should add classes to the content if contentAdditionalClasses
   are set`, () => {
     const wrapper = mount(
       <SprkToggle triggerText="Toggle title" contentAdditionalClasses="test">
@@ -124,7 +124,7 @@ describe('SprkToggle:', () => {
     expect(toggleContent.hasClass('test')).toBe(true);
   });
 
-  it(`should add classes to the icon if iconAdditionalClasses 
+  it(`should add classes to the icon if iconAdditionalClasses
   are set`, () => {
     const wrapper = mount(
       <SprkToggle triggerText="Toggle title" iconAdditionalClasses="test">
@@ -135,7 +135,7 @@ describe('SprkToggle:', () => {
     expect(toggleIcon.hasClass('test')).toBe(true);
   });
 
-  it(`should add classes to the icon if iconAddClasses 
+  it(`should add classes to the icon if iconAddClasses
   are set`, () => {
     const wrapper = mount(
       <SprkToggle triggerText="Toggle title" iconAddClasses="test">
@@ -162,7 +162,7 @@ describe('SprkToggle:', () => {
     expect(toggleIcon.hasClass('test')).toBe(false);
   });
 
-  it(`should add classes to the title if titleAdditionalClasses 
+  it(`should add classes to the title if titleAdditionalClasses
   are set`, () => {
     const wrapper = mount(
       <SprkToggle triggerText="Toggle title" titleAdditionalClasses="test">
@@ -173,7 +173,7 @@ describe('SprkToggle:', () => {
     expect(toggleTitle.hasClass('test')).toBe(true);
   });
 
-  it(`should add classes to the title if titleAddClasses 
+  it(`should add classes to the title if titleAddClasses
   are set`, () => {
     const wrapper = mount(
       <SprkToggle triggerText="Toggle title" titleAddClasses="test">
@@ -184,7 +184,7 @@ describe('SprkToggle:', () => {
     expect(toggleTitle.hasClass('test')).toBe(true);
   });
 
-  it(`should prefer titleAdditionalClasses to titleAddClasses if both 
+  it(`should prefer titleAdditionalClasses to titleAddClasses if both
   are set`, () => {
     const wrapper = mount(
       <SprkToggle
@@ -198,5 +198,23 @@ describe('SprkToggle:', () => {
     const toggleTitle = wrapper.find('.sprk-c-Toggle__trigger');
     expect(toggleTitle.hasClass('newTest')).toBe(true);
     expect(toggleTitle.hasClass('test')).toBe(false);
+  });
+
+  it(`should add title (deprecated)`, () => {
+    const wrapper = mount(
+      <SprkToggle title="Toggle title">Body text</SprkToggle>,
+    );
+    const toggleTitle = wrapper.find('.sprk-c-Toggle__trigger');
+    expect(toggleTitle.text()).toEqual('Toggle title');
+  });
+
+  it(`should prefer triggerText over title`, () => {
+    const wrapper = mount(
+      <SprkToggle triggerText="Toggle title" title="old title">
+        Body text
+      </SprkToggle>,
+    );
+    const toggleTitle = wrapper.find('.sprk-c-Toggle__trigger');
+    expect(toggleTitle.text()).toEqual('Toggle title');
   });
 });

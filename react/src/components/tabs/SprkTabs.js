@@ -7,10 +7,10 @@ import SprkTabsPanel from './components/SprkTabsPanel/SprkTabsPanel';
 import SprkTabsButton from './components/SprkTabsButton/SprkTabsButton';
 
 /*
-* This component expects SprkTabsPanel children.
-* It loops through each provided SprkTabsPanel
-* and creates a SprkTabsButton for each tab.
-*/
+ * This component expects SprkTabsPanel children.
+ * It loops through each provided SprkTabsPanel
+ * and creates a SprkTabsButton for each tab.
+ */
 class SprkTabs extends Component {
   constructor(props) {
     super(props);
@@ -28,11 +28,11 @@ class SprkTabs extends Component {
   }
 
   /*
-  * Immediately invoke setDefaultActiveTab()
-  * when component is inserted into the tree
-  * and update state with the ID of the tab that's active by default.
-  * Update aria-orientation and listen for resizes for future updates.
-  */
+   * Immediately invoke setDefaultActiveTab()
+   * when component is inserted into the tree
+   * and update state with the ID of the tab that's active by default.
+   * Update aria-orientation and listen for resizes for future updates.
+   */
   componentDidMount() {
     const { breakpoint } = this.props;
 
@@ -44,10 +44,10 @@ class SprkTabs extends Component {
   }
 
   /*
-  * Find the SprkTabsButton that we want
-  * active by default (isDefaultActive would be set on tab panel)
-  * and update state with that tab button ID.
-  */
+   * Find the SprkTabsButton that we want
+   * active by default (isDefaultActive would be set on tab panel)
+   * and update state with that tab button ID.
+   */
   setDefaultActiveTab() {
     const { children } = this.props;
     const { btnIds } = this.state;
@@ -67,9 +67,9 @@ class SprkTabs extends Component {
   }
 
   /*
-  * Get the index of the active tab
-  * by finding it from our state array of btn IDs.
-  */
+   * Get the index of the active tab
+   * by finding it from our state array of btn IDs.
+   */
   getActiveTabIndex() {
     const { isActive, btnIds } = this.state;
     let tabIndex;
@@ -99,7 +99,7 @@ class SprkTabs extends Component {
 
   advanceTab() {
     const { btnIds } = this.state;
-    if ((this.getActiveTabIndex() + 1) < btnIds.length) {
+    if (this.getActiveTabIndex() + 1 < btnIds.length) {
       const newActiveTabIndex = this.getActiveTabIndex() + 1;
       this.setState({
         isActive: btnIds[newActiveTabIndex],
@@ -114,10 +114,10 @@ class SprkTabs extends Component {
   }
 
   /*
-  * Tabs uses arrow keys to move from tab to tab.
-  * Depending on the key pressed we need to
-  * set a new active tab.
-  */
+   * Tabs uses arrow keys to move from tab to tab.
+   * Depending on the key pressed we need to
+   * set a new active tab.
+   */
   handleKeyboardEvent(e) {
     const { btnIds } = this.state;
     const keys = {
@@ -152,9 +152,9 @@ class SprkTabs extends Component {
   }
 
   /*
-  * Switch aria-orientation to vertical on
-  * narrow viewports (based on _tabs.scss breakpoint).
-  */
+   * Switch aria-orientation to vertical on
+   * narrow viewports (based on _tabs.scss breakpoint).
+   */
   updateAriaOrientation(width, breakpoint) {
     const tabsContainer = this.tabsContainerRef;
 
@@ -166,31 +166,26 @@ class SprkTabs extends Component {
   }
 
   /*
-  * Get the ID of the clicked tab
-  * and update state with the active tab ID.
-  */
+   * Get the ID of the clicked tab
+   * and update state with the active tab ID.
+   */
   handleTabClick(e) {
     const btnTabId = e.currentTarget.id;
     this.setState({ isActive: btnTabId });
   }
 
   render() {
-    const {
-      children,
-      idString,
-      additionalClasses,
-      ...other
-    } = this.props;
+    const { children, idString, additionalClasses, ...other } = this.props;
 
     const buttons = [];
     const panels = [];
 
     /*
-    * Loop through all the SprkTabsPanels and
-    * generate a SprkTabsButton for each one.
-    * Don't render a SprkTabsButton
-    * for an element that is not a SprkTabsPanel.
-    */
+     * Loop through all the SprkTabsPanels and
+     * generate a SprkTabsButton for each one.
+     * Don't render a SprkTabsButton
+     * for an element that is not a SprkTabsPanel.
+     */
     const generateTabs = () => {
       children.forEach((tabPanel, index) => {
         const {
@@ -258,17 +253,15 @@ class SprkTabs extends Component {
           className="sprk-c-Tabs__buttons"
           role="tablist"
         >
-          { buttons }
+          {buttons}
         </div>
-        { panels }
+        {panels}
       </div>
     );
   }
 }
 
 SprkTabs.defaultProps = {
-  idString: '',
-  additionalClasses: '',
   breakpoint: 736,
 };
 
@@ -278,11 +271,13 @@ SprkTabs.propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a unique selector for
+   * automated tools.
    */
   idString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to the outermost container of
+   * the component.
    */
   additionalClasses: PropTypes.string,
   /** Breakpoint for the aria-orientation switch from y to x. */
