@@ -74,6 +74,10 @@ describe('SprkToggleComponent', () => {
     ).toEqual(
       'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open',
     );
+    expect(contentElement.getAttribute('style')).toContain(
+      'visibility:visible',
+    );
+    expect(triggerElement.getAttribute('aria-expanded')).toEqual('true');
   });
 
   // TODO: Remove `iconClass` in issue #1305
