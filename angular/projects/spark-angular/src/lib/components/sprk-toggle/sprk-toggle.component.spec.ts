@@ -76,6 +76,7 @@ describe('SprkToggleComponent', () => {
     );
   });
 
+  // TODO: Remove `iconClass` in issue #1305
   it('should add the correct classes if iconClass have values', () => {
     component.iconClass = 'test';
     fixture.detectChanges();
@@ -96,6 +97,7 @@ describe('SprkToggleComponent', () => {
     );
   });
 
+  // TODO: Remove `iconClass` in issue #1305
   it('should prefer iconAdditionalClasses if both iconClass and iconAdditionalClasses are set', () => {
     component.iconAdditionalClasses = 'should-add';
     component.iconClass = 'should-not-add';
@@ -145,6 +147,7 @@ describe('SprkToggleComponent', () => {
     );
   });
 
+  // TODO: Remove `title` in issue #1305
   it('should add the correct title when set', () => {
     component.title = 'Test Title';
     fixture.detectChanges();
@@ -157,6 +160,7 @@ describe('SprkToggleComponent', () => {
     expect(triggerElement.innerHTML).toContain('Test Title');
   });
 
+  // TODO: Remove `title` in issue #1305
   it('should prefer triggerText over title if both are set', () => {
     component.triggerText = 'Test Title';
     component.title = 'Should not be the title';
@@ -172,6 +176,7 @@ describe('SprkToggleComponent', () => {
     ).toContain('sprk-u-pts sprk-u-pbs sprk-c-Toggle__content test-1 test-2');
   });
 
+  // TODO: Remove `titleFontClass` in issue #1305
   it('should add the correct classes if titleFontClass is set', () => {
     component.titleFontClass = 'test-1 test-2';
     fixture.detectChanges();
@@ -188,6 +193,7 @@ describe('SprkToggleComponent', () => {
     );
   });
 
+  // TODO: Remove `titleFontClass` in issue #1305
   it('should prefer titleAdditionalClasses over titleFontClass if both are set', () => {
     component.titleAdditionalClasses = 'test-1 test-2';
     component.titleFontClass = 'test-3 test-4';
