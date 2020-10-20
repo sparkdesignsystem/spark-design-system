@@ -9,7 +9,7 @@ import { toggleAnimations } from './sprk-toggle-animations';
 import { uniqueId } from 'lodash';
 import 'focus-visible';
 
-// TODO: Remove `title` in issue #issueNumber
+// TODO: Remove `title` in issue #1305
 @Component({
   selector: 'sprk-toggle',
   template: `
@@ -58,7 +58,7 @@ export class SprkToggleComponent implements AfterContentInit {
    */
   @Input()
   additionalClasses: string;
-  // TODO: Remove `title` in issue #issueNumber
+  // TODO: Remove `title` in issue #1305
   /**
    * Deprecated - Use `triggerText` instead.
    * The value supplied will be
@@ -72,7 +72,7 @@ export class SprkToggleComponent implements AfterContentInit {
    */
   @Input()
   triggerText: string;
-  // TODO: Remove `iconClass` in issue #issueNumber
+  // TODO: Remove `iconClass` in issue #1305
   /**
    * Deprecated - Use `iconAdditionalClasses` instead.
    * Expects a space separated string
@@ -103,7 +103,7 @@ export class SprkToggleComponent implements AfterContentInit {
    */
   @Input()
   contentAdditionalClasses: string;
-  // TODO: Remove `titleFontClass` in future issue #issueNumber.
+  // TODO: Remove `titleFontClass` in future issue #1305.
   /**
    * Deprecated - Use `titleAdditionalClasses` instead.
    * Expects a space separated string
@@ -113,7 +113,7 @@ export class SprkToggleComponent implements AfterContentInit {
   @Input()
   titleFontClass = 'sprk-b-TypeBodyThree';
   // TODO: Move the default value from titleFontClass to
-  // titleAdditionalClasses in future issue #issueNumber.
+  // titleAdditionalClasses in future issue #1305.
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -192,7 +192,7 @@ export class SprkToggleComponent implements AfterContentInit {
   /**
    * @ignore
    */
-  // TODO: Remove `titleFontClass` in future issue #issueNumber.
+  // TODO: Remove `titleFontClass` in future issue #1305.
   getClasses(): string {
     const additionalClasses =
       this.titleAdditionalClasses || this.titleFontClass;
@@ -207,7 +207,7 @@ export class SprkToggleComponent implements AfterContentInit {
    * @ignore
    */
   getIconClasses(): string {
-    // TODO: Remove `iconClass` in issue #issueNumber
+    // TODO: Remove `iconClass` in issue #1305
     const additionalClasses = this.iconAdditionalClasses || this.iconClass;
     const classArray: string[] = [
       'sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle',
