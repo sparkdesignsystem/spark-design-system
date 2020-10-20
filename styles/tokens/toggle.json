@@ -48,7 +48,7 @@
           },
           "color": {
             "comment": "The hover text color for Toggle Trigger.",
-            "value": "{color.purple.value}",
+            "value": "{purple.value}",
             "type": "settings",
             "themable": true
           }
@@ -108,7 +108,7 @@
       },
       "icon-hover-fill": {
         "comment": "The hover fill color for Toggle icon.",
-        "value": "{toggle.trigger.hover.color.value}",
+        "value": "{toggle.trigger.hover.value}",
         "type": "settings",
         "themable": true
       },

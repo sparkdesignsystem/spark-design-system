@@ -2,13 +2,13 @@
   "promo": {
     "background-color": {
       "comment": "The background color of the Promo component.",
-      "value": "{color.white.value}",
+      "value": "{white.value}",
       "type": "settings",
       "themable": true
     },
     "border": {
       "comment": "The border of the Promo component.",
-      "value": "1px solid {color.black-tint.40.value}",
+      "value": "1px solid {black-tint.40.value}",
       "type": "settings",
       "themable": true
     },
@@ -41,7 +41,7 @@
     "title": {
       "font-color": {
         "comment": "The title font color of the Promo component.",
-        "value": "{color.black.value}",
+        "value": "{black.value}",
         "type": "settings",
         "themable": true
       },
@@ -55,7 +55,7 @@
     "subtitle": {
       "font-color": {
         "comment": "The subtitle font color of the Promo component.",
-        "value": "{color.black.value}",
+        "value": "{black.value}",
         "type": "settings",
         "themable": true
       },

@@ -3,19 +3,19 @@
       "active": {
         "background-color": {
           "comment": "Background color of the Dropdown items that are active or hovered.",
-          "value": "{color.gray.value}",
+          "value": "{gray.value}",
           "type": "settings",
           "themable": true
         },
         "border": {
           "comment": "The left border of the Dropdown item that is active.",
-          "value": "2.5px solid {color.purple.value}",
+          "value": "2.5px solid {purple.value}",
           "type": "settings",
           "themable": true
         },
         "box-shadow": {
           "comment": "The box-shadow of the Dropdown item that is active.",
-          "value": "-1px 0 0 0 {color.purple.value}",
+          "value": "-1px 0 0 0 {purple.value}",
           "type": "settings",
           "themable": true
         }
@@ -46,7 +46,7 @@
       },
       "link-color": {
         "comment": "The color of the Dropdown links.",
-        "value": "{color.black.value}",
+        "value": "{black.value}",
         "type": "settings",
         "themable": true
       },
@@ -79,19 +79,19 @@
       "trigger": {
         "color": {
           "comment": "The color of the Dropdown trigger.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "color-active": {
           "comment": "The color of the Dropdown trigger on hover, active, focus.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "color-visited": {
           "comment": "The color of the Dropdown trigger for the visited state.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         }
@@ -113,7 +113,7 @@
         },
         "color": {
           "comment": "The color of the Dropdown title.",
-          "value": "{color.black-tint.30.value}",
+          "value": "{black-tint.30.value}",
           "type": "settings",
           "themable": true
         }

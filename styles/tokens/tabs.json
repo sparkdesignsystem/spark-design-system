@@ -4,51 +4,51 @@
         "active": {
           "color": {
             "comment": "The button tab text color of the currently active tab in Tabbed Navigation.",
-            "value": "{color.red.value}",
+            "value": "{red.value}",
             "type": "settings",
             "themable": true
           },
           "border-botom": {
             "comment": "The button tab bottom border of the currently active tab in Tabbed Navigation.",
-            "value": "3px solid {color.red.value}",
+            "value": "3px solid {red.value}",
             "type": "settings",
             "themable": true
           },
           "bg-color": {
             "comment": "The button tab background color of the currently active tab in Tabbed Navigation.",
-            "value": "{color.white.value}",
+            "value": "{white.value}",
             "type": "settings",
             "themable": true
           }
         },
         "color": {
           "comment": "The tab button text color in Tabbed Navigation.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "bg-color": {
           "comment": "The tab button background color in Tabbed Navigation.",
-          "value": "{color.gray.value}",
+          "value": "{gray.value}",
           "type": "settings",
           "themable": true
         },
         "border-botom": {
           "comment": "The border on the bottom of the button tabs in Tabbed Navigation.",
-          "value": "3px solid {color.gray.value}",
+          "value": "3px solid {gray.value}",
           "type": "settings",
           "themable": true
         },
         "hover": {
           "border-botom": {
             "comment": "The border on the bottom of the button tabs on hover in Tabbed Navigation.",
-            "value": "3px solid {color.purple.value}",
+            "value": "3px solid {purple.value}",
             "type": "settings",
             "themable": true
           },
           "color": {
             "comment": "The button tab text color of the button tabs on hover in Tabbed Navigation.",
-            "value": "{color.purple.value}",
+            "value": "{purple.value}",
             "type": "settings",
             "themable": true
           }

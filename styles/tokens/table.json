@@ -28,19 +28,19 @@
       },
       "stripe-color": {
         "comment": "The stripe color or the striped Table.",
-        "value": "{color.gray.value}",
+        "value": "{gray.value}",
         "type": "settings",
         "themable": true
       },
       "highlight-color": {
         "comment": "The highlight background color of the sprk-b-TableHighlight.",
-        "value": "{color.red.value}",
+        "value": "{red.value}",
         "type": "settings",
         "themable": true
       },
       "highlight-text-color": {
         "comment": "The highlight text color of the sprk-b-TableHighlight.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },
@@ -65,7 +65,7 @@
         },
         "color": {
           "comment": "The border color on Tables.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
@@ -91,7 +91,7 @@
         },
         "border-color": {
           "comment": "The border color on Table rows.",
-          "value": "{color.gray.value}",
+          "value": "{gray.value}",
           "type": "settings",
           "themable": true
         }
@@ -99,13 +99,13 @@
       "header": {
         "background-color": {
           "comment": "The background color of the Table header.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "font-color": {
           "comment": "The font color of the Table header.",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },
@@ -129,14 +129,14 @@
         },
         "border-color": {
           "comment": "The color of the right border on the Table header.",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         }
       },
       "empty-heading-background-color": {
         "comment": "The background color of empty Table headers.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },
@@ -144,13 +144,13 @@
         "header": {
           "background-color": {
             "comment": "The background color of Secondary Table headers.",
-            "value": "{color.black.value}",
+            "value": "{black.value}",
             "type": "settings",
             "themable": true
           },
           "font-color": {
             "comment": "The font color of Secondary Table headers.",
-            "value": "{color.black.value}",
+            "value": "{black.value}",
             "type": "settings",
             "themable": true
           },
@@ -168,7 +168,7 @@
           },
           "border-color": {
             "comment": "The color of the right border on the Secondary Table header.",
-            "value": "{color.white.value}",
+            "value": "{white.value}",
             "type": "settings",
             "themable": true
           }
@@ -184,7 +184,7 @@
         "header": {
           "background-color": {
             "comment": "The background color of the header in the Grouped Columns Table variant.",
-            "value": "{color.black.value}",
+            "value": "{black.value}",
             "type": "settings",
             "themable": true
           },
@@ -211,7 +211,7 @@
         },
         "border-color": {
           "comment": "The color of the borders in the Secondary Row Comparison Table cells",
-          "value": "{color.gray.value}",
+          "value": "{gray.value}",
           "type": "settings",
           "themable": true
         },

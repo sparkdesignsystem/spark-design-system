@@ -21,19 +21,19 @@
         },
         "selected": {
           "comment": "The box shadow of the active dot in the Carousel component.",
-          "value": "{stepper.icon.box-shadow-selected-dark-bg.value}",
+          "value": "{stepper.icon.box-shadow.selected-dark-bg.value}",
           "type": "settings",
           "themable": true
         },
         "selected-bg-color": {
           "comment": "The background color of the active dot in the Carousel component.",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },
         "selected-bg-color-dark-bg": {
           "comment": "The background color of the active dot in the Carousel component on a dark background.",
-          "value": "{color.purple.value}",
+          "value": "{purple.value}",
           "type": "settings",
           "themable": true
         },
@@ -45,13 +45,13 @@
         },
         "border": {
           "comment": "The border value for the Carousel component.",
-          "value": "{stepper.icon.border-width.value} solid {stepper.dark.icon.border-color.value}",
+          "value": "{stepper.icon.border.width.value} solid {stepper.dark-icon.border-value}",
           "type": "settings",
           "themable": true
         },
         "border-dark-bg": {
           "comment": "The border value for the Carousel component on dark background.",
-          "value": "{stepper.icon.border-width.value} solid {color.purple-deep.value}",
+          "value": "{stepper.icon.border.width.value} solid {purple-deep.value}",
           "type": "settings",
           "themable": true
         }
@@ -99,7 +99,7 @@
         },
         "color": {
           "comment": "The color of the arrows in the Carousel component.",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },

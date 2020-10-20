@@ -28,19 +28,19 @@
           },
           "color": {
             "comment": "The color of the border around the Stepper icon.",
-            "value": "{color.black-tint.50.value",
+            "value": "{black-tint.50.value",
             "type": "settings",
             "themable": true
           },
           "color-selected": {
             "comment": "The color of the step icon when the step is selected in the Stepper.",
-            "value": "{color.purple-dark.value}",
+            "value": "{purple-dark.value}",
             "type": "settings",
             "themable": true
           },
           "color-selected-dark-bg": {
             "comment": "The color of the step icon in front of a dark background when the step is selected in the Stepper.",
-            "value": "{color.purple-lightest.value}",
+            "value": "{purple-lightest.value}",
             "type": "settings",
             "themable": true
           }
@@ -59,19 +59,19 @@
         },
         "color": {
           "comment": "The color of the step icon in the Stepper.",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },
         "color-hover": {
           "comment": "The color of the step icon in the Stepper when hovered.",
-          "value": "{color.black-tint.50.value}",
+          "value": "{black-tint.50.value}",
           "type": "settings",
           "themable": true
         },
         "color-selected": {
           "comment": "The color of the Stepper step icon when the step is selected.",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },
@@ -111,46 +111,46 @@
           "comment": "The diameter of the step icon in the Stepper.",
           "value": "{stepper.icon.width.value} + {stepper.icon.border.width.value}",
           "type": "settings",
-          "themable": false 
+          "themable": false
         },
         "radius": {
           "comment": "The radius of the step icon in the Stepper.",
           "value": "{stepper.icon.diameter.value} / 2",
           "type": "settings",
-          "themable": false 
+          "themable": false
         },
         "left": {
           "comment": "The left setting of the step icon in the Stepper.",
           "value": "-(({stepper.bar.left-inset.value} + {stepper.icon.radius.value}))",
           "type": "settings",
-          "themable": false 
+          "themable": false
         }
       },
       "dark-icon": {
         "border-color": {
           "comment": "The color of the icon border when the Stepper is on a dark background (sprk-c-Stepper--has-dark-bg).",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },
         "color": {
           "comment": "The color of the step icon when the Stepper has a dark background (sprk-c-Stepper--has-dark-bg).",
-          "value": "{color.purple-dark.value}",
+          "value": "{purple-dark.value}",
           "type": "settings",
           "themable": true
         },
         "color-selected": {
           "comment": "The color of the Stepper step icon when the step is selected and the Stepper has a dark background (sprk-c-Stepper--has-dark-bg).",
-          "value": "{color.purple-dark.value}",
+          "value": "{purple-dark.value}",
           "type": "settings",
           "themable": true
         },
         "color-hover": {
           "comment": "The color of the step icon on hover when the Stepper has a dark background (sprk-c-Stepper--has-dark-bg).",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
-        } 
+        }
       },
       "step": {
         "content": {
@@ -164,13 +164,13 @@
             "comment": "The background color of the Stepper step content box when the step is selected.",
             "value": "transparent",
             "type": "settings",
-            "themable": true 
+            "themable": true
           },
           "margin-left": {
             "comment": "The margin-left of the content in the Stepper step.",
             "value": "({stepper.bar.left-inset.value} * 2) + {stepper.bar.width.value}",
             "type": "settings",
-            "themable": false 
+            "themable": false
           }
         },
         "description": {
@@ -190,13 +190,13 @@
             "comment": "The spacing between the Stepper step heading and description.",
             "value": "{space.m.value}",
             "type": "settings",
-            "themable": true  
+            "themable": true
           },
           "bg-selected": {
             "comment": "The background color of the Stepper step content box when it has a description and when the step is selected.",
-            "value": "{color.white.value}",
+            "value": "{white.value}",
             "type": "settings",
-            "themable": true 
+            "themable": true
           }
         },
         "heading": {
@@ -204,94 +204,94 @@
             "comment": "The font weight of the Stepper step heading.",
             "value": "400",
             "type": "settings",
-            "themable": true 
+            "themable": true
           },
           "size": {
             "comment": "The font size of the Stepper step heading.",
             "value": "{font-size.display.six.value}",
             "type": "settings",
-            "themable": true 
+            "themable": true
           },
           "color": {
             "comment": "The color of the Stepper step heading.",
-            "value": "{color.black.value}",
+            "value": "{black.value}",
             "type": "settings",
-            "themable": true 
+            "themable": true
           },
           "color-selected": {
             "comment": "The color of the Stepper step heading when the step is selected.",
-            "value": "{color.black.value}",
+            "value": "{black.value}",
             "type": "settings",
-            "themable": true 
+            "themable": true
           }
         },
         "padding": {
           "comment": "The padding value for the Stepper step.",
           "value": "{space.misc.a.value}",
           "type": "settings",
-          "themable": true 
+          "themable": true
         }
       },
       "dark-step": {
         "heading-color": {
           "comment": "The color of the Stepper step heading when the Stepper is on a dark background (sprk-c-Stepper--has-dark-bg).",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
-          "themable": true 
+          "themable": true
         },
         "description-selected": {
           "comment": "The text color of a selected Stepper step's content and header when it has a description. This applies to steppers with the sprk-c-Stepper--has-dark-bg class.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
-          "themable": true 
+          "themable": true
         }
       },
       "bar": {
         "color": {
           "comment": "The color of the bar that connects the steps in the Stepper.",
-          "value": "{color.black-tint.50.value}",
+          "value": "{black-tint.50.value}",
           "type": "settings",
-          "themable": true 
+          "themable": true
         },
         "width": {
           "comment": "The width of the bar that connects the steps in the Stepper.",
           "value": "2px",
           "type": "settings",
-          "themable": false 
+          "themable": false
         },
         "left-inset": {
           "comment": "The left inset of the bar that connects the steps in the Stepper.",
           "value": "{space.l.value}",
           "type": "settings",
-          "themable": false 
+          "themable": false
         }
       },
       "dark-bar": {
         "color": {
           "comment": "The color of the bar that connects the steps when the Stepper is on a dark background (sprk-c-Stepper--has-dark-bg).",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
-          "themable": true 
+          "themable": true
         }
       },
       "slide-timing": {
         "comment": "The timing setting for the slides of the Stepper.",
         "value": "0.3s",
         "type": "settings",
-        "themable": false 
+        "themable": false
       },
       "slider-text-fade-in": {
         "timing": {
           "comment": "The text fade in timing for the Stepper.",
           "value": "0.6s",
           "type": "settings",
-          "themable": false 
+          "themable": false
         },
         "delay": {
           "comment": "The text fade in delay for the Stepper.",
           "value": "0.2s",
           "type": "settings",
-          "themable": false 
+          "themable": false
         }
       }
     }

@@ -10,7 +10,7 @@
         },
         "background-color": {
           "comment": "The background color for the tooltip caret.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
@@ -55,7 +55,7 @@
       },
       "background-color": {
         "comment": "The background color for the tooltip.",
-        "value": "{color.black.value}",
+        "value": "{black.value}",
         "type": "settings",
         "themable": true
       },
@@ -74,7 +74,7 @@
       "font": {
         "color": {
           "comment": "The font color for the tooltip.",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },
@@ -99,7 +99,7 @@
       },
       "toggled-icon-background-color": {
         "comment": "The background color for the tooltip icon while toggled.",
-        "value": "{color.purple.value}",
+        "value": "{purple.value}",
         "type": "settings",
         "themable": true
       },

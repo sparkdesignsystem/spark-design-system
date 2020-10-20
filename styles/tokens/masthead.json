@@ -16,7 +16,7 @@
       },
       "bg-color": {
         "comment": "The background color of the Masthead.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },
@@ -68,24 +68,24 @@
           "value": "{space.m.value}",
           "type": "settings",
           "themable": true
-        },
+        }
       },
       "link": {
         "color": {
           "comment": "The color of Masthead links.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "visited-color": {
           "comment": "The visited state color of Masthead links.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "icon-hover-color": {
           "comment": "The color of Masthead Icon Links on hover.",
-          "value": "{color.purple.value}",
+          "value": "{purple.value}",
           "type": "settings",
           "themable": true
         },
@@ -94,7 +94,7 @@
           "value": "500",
           "type": "settings",
           "themable": true
-        },
+        }
       },
       "border-bottom-size": {
         "comment": "The size of the bottom border on the Masthead.",
@@ -104,7 +104,7 @@
       },
       "border-bottom": {
         "comment": "The size of the bottom border on the Masthead.",
-        "value": "{masthead.border-bottom-size.value} solid {color.gray.value}",
+        "value": "{masthead.border-bottom-size.value} solid {gray.value}",
         "type": "settings",
         "themable": true
       },
@@ -116,7 +116,7 @@
       },
       "site-links-border-right": {
         "comment": "The right border on the site links in the Masthead.",
-        "value": "2px solid {color.black-tint.30.value}",
+        "value": "2px solid {black-tint.30.value}",
         "type": "settings",
         "themable": true
       },
@@ -165,7 +165,7 @@
       "selector": {
         "border": {
           "comment": "The border of the selector in the Masthead with Extended Navigation.",
-          "value": "2px solid {color.black-tint.30.value}",
+          "value": "2px solid {black-tint.30.value}",
           "type": "settings",
           "themable": true
         },
@@ -189,19 +189,19 @@
         },
         "font-color": {
           "comment": "The font color of the selector in the Masthead with Extended Navigation.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "bg-color": {
           "comment": "The background color of the selector in the Masthead with Extended Navigation.",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },
         "border-color-mask-open": {
           "comment": "The bottom color that gets applied to the selector dropdown when open in the Masthead with Extended Navigation.",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },
@@ -219,7 +219,7 @@
         },
         "dropdown-border-bottom-mask-open": {
           "comment": "The bottom border that gets applied to the selector dropdown when open in the Masthead with Extended Navigation.",
-          "value": "2px solid {color.gray.value}",
+          "value": "2px solid {gray.value}",
           "type": "settings",
           "themable": true
         },
@@ -258,13 +258,13 @@
         "active": {
           "left-border": {
             "comment": "The left border of the active item in the navigation links when masthead is on narrow viewports.",
-            "value": "3px solid {color.red.value}",
+            "value": "3px solid {red.value}",
             "type": "settings",
             "themable": true
           },
           "background-color": {
             "comment": "The background color of the active item in the navigation links when masthead is on narrow viewports.",
-            "value": "{color.gray.value}",
+            "value": "{gray.value}",
             "type": "settings",
             "themable": true
           },
@@ -276,27 +276,27 @@
           },
           "font-color": {
             "comment": "The font color of the active item in the navigation links when masthead is on narrow viewports.",
-            "value": "{color.black.value}",
+            "value": "{black.value}",
             "type": "settings",
             "themable": true
           },
           "heading-color": {
             "comment": "The font color of the active item in the navigation links when masthead is on narrow viewports.",
-            "value": "{color.black.value}",
+            "value": "{black.value}",
             "type": "settings",
             "themable": true
           }
         },
         "font-color": {
           "comment": "The font color of the navigation links when masthead is on narrow viewports.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "item": {
           "open-line-background-color": {
             "comment": "The color of the line on open items in the navigation links when masthead is on narrow viewports.",
-            "value": "{color.black-tint.30.value}",
+            "value": "{black-tint.30.value}",
             "type": "settings",
             "themable": true
           },
@@ -340,7 +340,7 @@
           },
           "color": {
             "comment": "The color of the heading in the navigation links when masthead is on narrow viewports.",
-            "value": "{color.black.value}",
+            "value": "{black.value}",
             "type": "settings",
             "themable": true
           }
@@ -354,7 +354,7 @@
           },
           "font-color": {
             "comment": "The font color of the details in the navigation links when masthead is on narrow viewports.",
-            "value": "{color.black.value}",
+            "value": "{black.value}",
             "type": "settings",
             "themable": true
           }
@@ -370,7 +370,7 @@
       },
       "bg": {
         "comment": "The background color of the big navigation bar in the Masthead Extended.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },
@@ -396,20 +396,20 @@
       },
       "active-color": {
         "comment": "The underline color of the active big navigation item in the Masthead Extended.",
-        "value": "{color.red.value}",
+        "value": "{red.value}",
         "type": "settings",
         "themable": true
       },
       "item": {
         "active-border-bottom": {
           "comment": "The border bottom of the active big navigation items in the Masthead Extended.",
-          "value": "0.125rem solid {color.red.value}",
+          "value": "0.125rem solid {red.value}",
           "type": "settings",
           "themable": true
         },
         "open-border-bottom": {
           "comment": "The border bottom of open big navigation items in the Masthead Extended.",
-          "value": "{big-nav.item-active-border-bottom.value}",
+          "value": "{big-nav.item.active-border-bottom.value}",
           "type": "settings",
           "themable": true
         },
