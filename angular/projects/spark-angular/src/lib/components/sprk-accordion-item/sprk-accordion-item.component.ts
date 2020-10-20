@@ -20,7 +20,10 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
         <span [ngClass]="getHeadingClasses()">
           <sprk-icon
             [iconType]="leadingIcon"
-            additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--xl sprk-u-mrs"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--xl
+              sprk-u-mrs"
             *ngIf="leadingIcon"
           ></sprk-icon>
           {{ title }}
@@ -43,79 +46,65 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 })
 export class SprkAccordionItemComponent implements OnInit {
   /**
-   * The value supplied will be rendered
-   * inside the title area of the Accordion item.
+   * The value supplied will be rendered inside the title area of the
+   * Accordion item.
    */
   @Input()
   title: string;
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the component.
-   * Intended for an outside
-   * library to capture data.
+   * The value supplied will be assigned to the `data-analytics` attribute
+   * on the component. Intended for an outside library to capture data.
    */
   @Input()
   analyticsString: string;
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * The value supplied will be assigned to the `data-id` attribute on the
+   * component. This is intended to be used as a selector for automated tools.
+   * This value should be unique per page.
    */
   @Input()
   idString: string;
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * Expects a space separated string of classes to be added to the component.
    */
   @Input()
   additionalClasses: string;
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * heading in the Accordion item.
+   * Expects a space separated string of classes to be added to the heading in
+   * the Accordion item.
    */
   @Input()
   additionalHeadingClasses: string;
   /**
-   * The Accordion item will use this to decide
-   * if it should be open or closed on first render.
-   * (Interacting with the toggle will override this input.)
+   * The Accordion item will use this to decide if it should be open or closed
+   * on first render. (Interacting with the toggle will override this input.)
    */
   @Input()
   isOpen = false;
   /**
-   * If `true`, the active CSS class
-   * will be applied to the item.
+   * If `true`, the active CSS class will be applied to the item.
    */
   @Input()
   isActive: boolean;
   /**
-   * The name of the icon to use for
-   * a closed Accordion item.
+   * The name of the icon to use for a closed Accordion item.
    */
   @Input()
   iconTypeClosed = 'chevron-up-circle';
   /**
-   * The name of the icon to use for
-   * an open Accordion item.
+   * The name of the icon to use for an open Accordion item.
    */
   @Input()
   iconTypeOpen = 'chevron-up-circle';
   /**
-   * The name of the icon to use before
-   * the title in the Accordion item.
+   * The name of the icon to use before the title in the Accordion item.
    * This is optional.
    */
   @Input()
   leadingIcon: string;
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * Expects a space separated string of classes to be added to the accordion
+   * item icon.
    */
   @Input()
   iconAdditionalClasses: string;
