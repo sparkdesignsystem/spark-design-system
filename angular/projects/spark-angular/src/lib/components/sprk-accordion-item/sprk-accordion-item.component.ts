@@ -37,10 +37,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
       </button>
 
       <div [@toggleContent]="animState">
-        <div
-          [id]="accordion_controls_id"
-          class="sprk-c-Accordion__content sprk-b-TypeBodyTwo"
-        >
+        <div [id]="accordion_controls_id" class="sprk-c-Accordion__content">
           <ng-content></ng-content>
         </div>
       </div>

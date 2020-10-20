@@ -52,7 +52,7 @@ export const defaultStory = () => ({
         idString="accordion-item-1"
         analyticsString="object.action.event"
       >
-        <p>
+        <p class="sprk-b-TypeBodyTwo">
           This is an example of accordion content.
           This is an example of accordion content.
           This is an example of accordion content.
@@ -65,7 +65,7 @@ export const defaultStory = () => ({
         idString="accordion-item-2"
         analyticsString="object.action.event"
       >
-        <p>
+        <p class="sprk-b-TypeBodyTwo">
           This is an example of accordion content.
           This is an example of accordion content.
           This is an example of accordion content.
@@ -78,7 +78,7 @@ export const defaultStory = () => ({
         idString="accordion-item-3"
         analyticsString="object.action.event"
       >
-        <p>
+        <p class="sprk-b-TypeBodyTwo">
           This is an example of accordion content.
           This is an example of accordion content.
           This is an example of accordion content.
