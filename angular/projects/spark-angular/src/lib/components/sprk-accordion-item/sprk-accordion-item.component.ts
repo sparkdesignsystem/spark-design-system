@@ -36,7 +36,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
       </button>
 
       <div [@toggleContent]="animState">
-        <div [id]="accordion_controls_id" class="sprk-c-Accordion__content">
+        <div [id]="accordion_controls_id" [ngClass]="getContentClasses()">
           <ng-content></ng-content>
         </div>
       </div>
@@ -108,6 +108,12 @@ export class SprkAccordionItemComponent implements OnInit {
    */
   @Input()
   iconAdditionalClasses: string;
+  /**
+   * Expects a space separated string of classes to be added to the accordion
+   * item content container.
+   */
+  @Input()
+  contentAdditionalClasses: string;
 
   /**
    * @ignore
@@ -209,6 +215,21 @@ export class SprkAccordionItemComponent implements OnInit {
 
     if (this.iconAdditionalClasses) {
       this.iconAdditionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getContentClasses(): string {
+    const classArray: string[] = ['sprk-c-Accordion__content'];
+
+    if (this.contentAdditionalClasses) {
+      this.contentAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }

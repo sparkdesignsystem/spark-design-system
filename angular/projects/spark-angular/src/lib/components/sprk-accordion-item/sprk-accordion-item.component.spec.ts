@@ -11,6 +11,7 @@ describe('SprkAccordionItemComponent', () => {
   let accordionItemTriggerElement: HTMLElement;
   let accordionHeadingElement: HTMLElement;
   let accordionDetailsElement: HTMLElement;
+  let accordionContentsElement: HTMLElement;
   let accordionSvgElement: HTMLElement;
 
   beforeEach(async(() => {
@@ -31,6 +32,7 @@ describe('SprkAccordionItemComponent', () => {
     accordionItemTriggerElement = fixture.nativeElement.querySelector('button');
     accordionHeadingElement = fixture.nativeElement.querySelector('span');
     accordionDetailsElement = fixture.nativeElement.querySelector('div');
+    accordionContentsElement = accordionDetailsElement.querySelector('div');
     accordionSvgElement = fixture.nativeElement.querySelector('svg');
   });
 
@@ -190,5 +192,20 @@ describe('SprkAccordionItemComponent', () => {
     component.iconAdditionalClasses = testString;
     fixture.detectChanges();
     expect(accordionSvgElement.classList.toString()).toContain(testString);
+  });
+
+  it('should correctly add default classes to the content container', () => {
+    fixture.detectChanges();
+
+    expect(accordionContentsElement.classList.toString()).toContain(
+      'sprk-c-Accordion__content',
+    );
+  });
+
+  it('should correctly add additional classes to the content container', () => {
+    const testString = 'test';
+    component.contentAdditionalClasses = testString;
+    fixture.detectChanges();
+    expect(accordionContentsElement.classList.toString()).toContain(testString);
   });
 });
