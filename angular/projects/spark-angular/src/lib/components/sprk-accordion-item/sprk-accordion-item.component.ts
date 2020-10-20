@@ -27,11 +27,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
         </span>
 
         <sprk-icon
-          additionalClasses="
-            sprk-c-Accordion__icon
-            sprk-c-Icon--xl
-            sprk-c-Icon--toggle
-            {{ iconStateClass }}"
+          [additionalClasses]="getIconClasses()"
           [iconType]="currentIconType"
         ></sprk-icon>
       </button>
@@ -116,6 +112,13 @@ export class SprkAccordionItemComponent implements OnInit {
    */
   @Input()
   leadingIcon: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
+  @Input()
+  iconAdditionalClasses: string;
 
   /**
    * @ignore
@@ -197,6 +200,26 @@ export class SprkAccordionItemComponent implements OnInit {
 
     if (this.additionalHeadingClasses) {
       this.additionalHeadingClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getIconClasses(): string {
+    const classArray: string[] = [
+      'sprk-c-Accordion__icon',
+      'sprk-c-Icon--xl',
+      'sprk-c-Icon--toggle',
+      this.iconStateClass,
+    ];
+
+    if (this.iconAdditionalClasses) {
+      this.iconAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }

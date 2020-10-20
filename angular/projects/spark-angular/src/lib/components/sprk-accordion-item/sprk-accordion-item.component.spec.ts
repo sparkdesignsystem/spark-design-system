@@ -11,6 +11,7 @@ describe('SprkAccordionItemComponent', () => {
   let accordionItemTriggerElement: HTMLElement;
   let accordionHeadingElement: HTMLElement;
   let accordionDetailsElement: HTMLElement;
+  let accordionSvgElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -30,6 +31,7 @@ describe('SprkAccordionItemComponent', () => {
     accordionItemTriggerElement = fixture.nativeElement.querySelector('button');
     accordionHeadingElement = fixture.nativeElement.querySelector('span');
     accordionDetailsElement = fixture.nativeElement.querySelector('div');
+    accordionSvgElement = fixture.nativeElement.querySelector('svg');
   });
 
   it('should create itself', () => {
@@ -165,5 +167,28 @@ describe('SprkAccordionItemComponent', () => {
     expect(
       accordionHeadingElement.classList.contains('sprk-b-TypeDisplaySeven'),
     ).toEqual(true);
+  });
+
+  it('should correctly add default classes to the svg', () => {
+    fixture.detectChanges();
+
+    expect(accordionSvgElement.classList.length).toBe(4);
+    expect(accordionSvgElement.classList.toString()).toContain('sprk-c-Icon');
+    expect(accordionSvgElement.classList.toString()).toContain(
+      'sprk-c-Accordion__icon',
+    );
+    expect(accordionSvgElement.classList.toString()).toContain(
+      'sprk-c-Icon--xl',
+    );
+    expect(accordionSvgElement.classList.toString()).toContain(
+      'sprk-c-Icon--toggle',
+    );
+  });
+
+  it('should correctly add additional classes to the svg', () => {
+    const testString = 'test';
+    component.iconAdditionalClasses = testString;
+    fixture.detectChanges();
+    expect(accordionSvgElement.classList.toString()).toContain(testString);
   });
 });
