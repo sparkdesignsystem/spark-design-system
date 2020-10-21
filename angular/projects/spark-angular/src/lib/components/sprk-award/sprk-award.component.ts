@@ -94,12 +94,12 @@ export class SprkAwardComponent {
   @Input()
   imgOneAlt: string;
   /**
-   * The image `href` value that will be applied to the first image.
+   * The `href` value that will be applied to the first image link.
    */
   @Input()
   imgOneHref: string;
   /**
-   * The image `href` value that will be applied to the second image.
+   * The `href` value that will be applied to the second image link.
    */
   @Input()
   imgTwoHref: string;
@@ -120,41 +120,46 @@ export class SprkAwardComponent {
   imgTwoSrc: string;
   // TODO - Remove as part of Issue 1279
   /**
-   * Deprecated - use ` imgOneAnalyticsString` instead. The string that
-   * will be assigned to the `data-analytics` attribute of the first image.
+   * Deprecated - use ` imgOneAnalyticsString` instead. The value supplied will
+   * be assigned to the `data-analytics` attribute on the first image link in
+   * the component. Intended for an outside library to capture data.
    */
   @Input()
   analyticsStringImgOne: string;
   /**
-   * The string that will be assigned to the `data-analytics` attribute of
-   * the first image.
+   * The value supplied will be assigned to the `data-analytics` attribute on
+   * the first image link in the component. Intended for an outside library to
+   * capture data.
    */
   @Input()
   imgOneAnalyticsString: string;
   // TODO - Remove as part of Issue 1279
   /**
-   * Deprecated - use ` imgTwoAnalyticsString` instead. The string that
-   * will be assigned to the `data-analytics` attribute of the second image.
+   * Deprecated - use ` imgTwoAnalyticsString` instead. The value supplied
+   * will be assigned to the `data-analytics` attribute on the second image
+   * link in the component. Intended for an outside library to capture data.
    */
   @Input()
   analyticsStringImgTwo: string;
   /**
-   * The string that will be assigned to the `data-analytics` attribute of
-   * the second image.
+   * The value supplied will be assigned to the `data-analytics` attribute
+   * on the second image link in the component. Intended for an outside
+   * library to capture data.
    */
   @Input()
   imgTwoAnalyticsString: string;
   // TODO - Remove as part of Issue 1279
   /**
-   * Deprecated - use `disclaimerAnalyticsString` instead. The string that
-   * will be assigned to the `data-analytics` attribute of the clickable
-   * disclaimer.
+   * Deprecated - use `disclaimerAnalyticsString` instead. The value supplied
+   * will be assigned to the `data-analytics` attribute on the toggle button
+   * in the component. Intended for an outside library to capture data.
    */
   @Input()
   analyticsStringDisclaimer: string;
   /**
-   * The string that will be assigned to the `data-analytics` attribute of
-   * the clickable disclaimer.
+   * The value supplied will be assigned to the `data-analytics` attribute on
+   * the  toggle button in the component. Intended for an outside library to
+   * capture data.
    */
   @Input()
   disclaimerAnalyticsString: string;
