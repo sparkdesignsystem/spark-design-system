@@ -69,7 +69,7 @@
         "type": "settings",
         "themable": true
       },
-      "active-label-top": {
+      "label-active-top": {
         "comment": "The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container.",
         "value": "{text-input.huge.active-label-top.value}",
         "type": "settings",
@@ -143,7 +143,7 @@
         "type": "settings",
         "themable": true
       },
-      "active-placeholder-opacity": {
+      "placeholder-active-opacity": {
         "comment": "The placeholder opacity value for Huge Inputs.",
         "value": "{text-input.huge.active-placeholder-opacity.value}",
         "type": "settings",
@@ -823,6 +823,12 @@
         "type": "settings",
         "themable": true
       },
+      "focus-checked-border-color": {
+        "comment": "The border color of the huge checkbox input when checked and focused.",
+        "value": "{black.value}",
+        "type": "settings",
+        "themable": true
+      },
       "checked-hover-border-color": {
         "comment": "The border color of the huge checkbox input when checked and hovered.",
         "value": "{black.value}",
@@ -1399,7 +1405,7 @@
     "type": "settings",
     "themable": true
   },
-  "visibility-control-label-margin": {
+  "visibility-control-margin": {
     "comment": "The margin surrounding visibility controls (Ex. 'Show SSN').",
     "value": "6px 0 0 0",
     "type": "settings",
@@ -1672,7 +1678,7 @@
         "themable": true
       }
     },
-    "opaciy": {
+    "opacity": {
       "comment": "The opacity value for the radio input.",
       "value": "0",
       "type": "settings",
