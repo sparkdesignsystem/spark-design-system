@@ -6,7 +6,7 @@
       "type": "settings",
       "themable": true
     },
-    "pag-current-link-font-weight": {
+    "current-link-font-weight": {
       "comment": "The font weight of the current pagination link in the Pagination component.",
       "value": "500",
       "type": "settings",

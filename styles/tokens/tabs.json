@@ -8,7 +8,7 @@
             "type": "settings",
             "themable": true
           },
-          "border-botom": {
+          "border-bottom": {
             "comment": "The button tab bottom border of the currently active tab in Tabbed Navigation.",
             "value": "3px solid {red.value}",
             "type": "settings",
@@ -33,14 +33,14 @@
           "type": "settings",
           "themable": true
         },
-        "border-botom": {
+        "border-bottom": {
           "comment": "The border on the bottom of the button tabs in Tabbed Navigation.",
           "value": "3px solid {gray.value}",
           "type": "settings",
           "themable": true
         },
         "hover": {
-          "border-botom": {
+          "border-bottom": {
             "comment": "The border on the bottom of the button tabs on hover in Tabbed Navigation.",
             "value": "3px solid {purple.value}",
             "type": "settings",

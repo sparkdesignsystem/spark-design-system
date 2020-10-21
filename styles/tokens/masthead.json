@@ -39,6 +39,12 @@
           "type": "settings",
           "themable": true
         },
+        "item-padding-top-wide": {
+          "comment": "The padding top around the content items in the content section of the Masthead in wide viewports..",
+          "value": "{space.s.value}",
+          "type": "settings",
+          "themable": true
+        },
         "item-padding-bottom": {
           "comment": "The padding bottom around the content items in the content section of the Masthead.",
           "value": "{space.s.value}",
@@ -60,6 +66,12 @@
         "item-padding-right-wide": {
           "comment": "The padding right around the content items in the content section of the Masthead in wide viewports.",
           "value": "{space.m.value}",
+          "type": "settings",
+          "themable": true
+        },
+        "item-padding-left": {
+          "comment": "The padding left around the content items in the content section of the Masthead",
+          "value": "{space.s.value}",
           "type": "settings",
           "themable": true
         },
