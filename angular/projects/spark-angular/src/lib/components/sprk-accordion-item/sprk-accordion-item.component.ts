@@ -26,7 +26,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
               sprk-u-mrs"
             *ngIf="leadingIcon"
           ></sprk-icon>
-          {{ title }}
+          {{ heading || title }}
         </span>
 
         <sprk-icon
@@ -46,11 +46,17 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 })
 export class SprkAccordionItemComponent implements OnInit {
   /**
-   * The value supplied will be rendered inside the title area of the
-   * Accordion item.
+   * Deprecated: use `heading` instead. The value supplied will be
+   * rendered inside the heading area of the Accordion item.
    */
   @Input()
   title: string;
+  /**
+   * The value supplied will be rendered inside the heading area of the
+   * Accordion item.
+   */
+  @Input()
+  heading: string;
   /**
    * The value supplied will be assigned to the `data-analytics` attribute
    * on the component. Intended for an outside library to capture data.
@@ -70,11 +76,18 @@ export class SprkAccordionItemComponent implements OnInit {
   @Input()
   additionalClasses: string;
   /**
+   * Deprecated - use `headingAdditionalClasses` instead. Expects a space
+   * separated string of classes to be added to the heading in the Accordion
+   * item.
+   */
+  @Input()
+  additionalHeadingClasses: string;
+  /**
    * Expects a space separated string of classes to be added to the heading in
    * the Accordion item.
    */
   @Input()
-  additionalHeadingClasses: string;
+  headingAdditionalClasses: string;
   /**
    * The Accordion item will use this to decide if it should be open or closed
    * on first render. (Interacting with the toggle will override this input.)
@@ -87,17 +100,29 @@ export class SprkAccordionItemComponent implements OnInit {
   @Input()
   isActive: boolean;
   /**
-   * The name of the icon to use for a closed Accordion item.
+   * Deprecated - use `iconNameClosed` instead. The name of the icon to use for
+   * a closed Accordion item.
    */
   @Input()
   iconTypeClosed = 'chevron-up-circle';
   /**
-   * The name of the icon to use for an open Accordion item.
+   * The name of the icon to use for a closed Accordion item.
+   */
+  @Input()
+  iconNameClosed = 'chevron-up-circle';
+  /**
+   * Deprecated - use `iconNameOpen` instead. The name of the icon to use for
+   * an open Accordion item.
    */
   @Input()
   iconTypeOpen = 'chevron-up-circle';
   /**
-   * The name of the icon to use before the title in the Accordion item.
+   * The name of the icon to use for an open Accordion item.
+   */
+  @Input()
+  iconNameOpen = 'chevron-up-circle';
+  /**
+   * The name of the icon to use before the heading in the Accordion item.
    * This is optional.
    */
   @Input()
