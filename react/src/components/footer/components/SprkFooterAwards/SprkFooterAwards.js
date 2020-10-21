@@ -59,7 +59,7 @@ class SprkFooterAwards extends Component {
           iconAdditionalClasses="sprk-c-Footer__icon"
           toggleIconName="chevron-down-circle"
           triggerText={awards.disclaimerTitle}
-          titleAdditionalClasses="sprk-b-TypeBodyFour sprk-c-Footer__trigger"
+          triggerTextAdditionalClasses="sprk-b-TypeBodyFour sprk-c-Footer__trigger"
           analyticsString={awards.disclaimerAnalytics}
         >
           <p
