@@ -59,7 +59,7 @@
       },
       "hover-icon-fill": {
         "comment": "The fill color of the icon when the Accordion item is hovered.",
-        "value": "{accordion.summary.active-value}",
+        "value": "{accordion.summary.active-color.value}",
         "type": "settings",
         "themable": true
       },

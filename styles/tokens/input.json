@@ -35,13 +35,13 @@
     "huge": {
       "error-focus-label-color": {
         "comment": "The label color value of Huge Inputs when they have an error.",
-        "value": "{text-input.huge.error-focus-label-value}",
+        "value": "{text-input.huge.error-focus-label-color.value}",
         "type": "settings",
         "themable": true
       },
       "complete-label-color": {
         "comment": "The label color when the Huge Input has a value and is not focused.",
-        "value": "{text-input.huge.complete-label-value}",
+        "value": "{text-input.huge.complete-label-color.value}",
         "type": "settings",
         "themable": true
       },
@@ -108,7 +108,7 @@
         },
         "label-color": {
           "comment": "The label color value of Huge Inputs on focus.",
-          "value": "{text-input.huge.focus.label-value}",
+          "value": "{text-input.huge.focus.label-color.value}",
           "type": "settings",
           "themable": true
         }
@@ -628,7 +628,7 @@
     },
     "color": {
       "comment": "The color setting for Selects.",
-      "value": "{text-input.value}",
+      "value": "{text-input.color.value}",
       "type": "settings",
       "themable": true
     },
@@ -658,25 +658,25 @@
     },
     "focus-border-color": {
       "comment": "The border color on Selects when focused.",
-      "value": "{text-input.focus-border-value}",
+      "value": "{text-input.focus-border-color.value}",
       "type": "settings",
       "themable": true
     },
     "error-border-color": {
       "comment": "The border color on Selects when there is an error.",
-      "value": "{text-input.error-border-value}",
+      "value": "{text-input.error-border-color.value}",
       "type": "settings",
       "themable": true
     },
     "disabled-border-color": {
       "comment": "The border color on disabled Selects.",
-      "value": "{text-input.disabled-border-value}",
+      "value": "{text-input.disabled-border-color.value}",
       "type": "settings",
       "themable": true
     },
     "disabled-color": {
       "comment": "The color on disabled Selects.",
-      "value": "{text-input.disabled-value}",
+      "value": "{text-input.disabled-color.value}",
       "type": "settings",
       "themable": true
     },
@@ -688,13 +688,13 @@
     },
     "moz-focusring-text-shadow": {
       "comment": "The value for the Firefox specific -moz-focusring text-shadow setting.",
-      "value": "0 0 0 {select.value}",
+      "value": "0 0 0 {select.color.value}",
       "type": "settings",
       "themable": true
     },
     "disabled-background-color": {
       "comment": "The background color on disabled Selects.",
-      "value": "{text-input.disabled-background-value}",
+      "value": "{text-input.disabled-background-color.value}",
       "type": "settings",
       "themable": true
     },
@@ -801,7 +801,7 @@
       },
       "disabled-background": {
         "comment": "The background of the huge checkbox input when disabled.",
-        "value": "{text-input.disabled-background-value}",
+        "value": "{text-input.disabled-background-color.value}",
         "type": "settings",
         "themable": true
       },
@@ -1573,7 +1573,7 @@
       },
       "disabled-background-color": {
         "comment": "The background color of the huge radio input when it is disabled.",
-        "value": "{text-input.disabled-background-value}",
+        "value": "{text-input.disabled-background-color.value}",
         "type": "settings",
         "themable": true
       }

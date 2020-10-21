@@ -290,7 +290,7 @@
         },
         "border": {
           "comment": "The border of the Secondary Button component on hover.",
-          "value": "{btn.border-width.value} {btn.border-style.value} {btn.secondary.hover.border-value}",
+          "value": "{btn.border-width.value} {btn.border-style.value} {btn.secondary.hover.border-color.value}",
           "type": "settings",
           "themable": true
         }
@@ -361,7 +361,7 @@
       },
       "border": {
         "comment": "The border of the Tertiary Button component.",
-        "value": "{btn.border-width.value} {btn.border-style.value} {btn.tertiary.border-value}",
+        "value": "{btn.border-width.value} {btn.border-style.value} {btn.tertiary.border-color.value}",
         "type": "settings",
         "themable": true
       },
@@ -456,7 +456,7 @@
         },
         "hover-border": {
           "comment": "The border of the Quaternary Button component when disabled on hover.",
-          "value": "{btn.quaternary.disabled.border-width.value} {btn.quaternary.disabled.border-style.value} {btn.quaternary.disabled.border-value}",
+          "value": "{btn.quaternary.disabled.border-width.value} {btn.quaternary.disabled.border-style.value} {btn.quaternary.disabled.border-color.value}",
           "type": "settings",
           "themable": true
         }
@@ -475,7 +475,7 @@
       },
       "border": {
         "comment": "The border of the Quaternary Button component.",
-        "value": "{btn.border-width.value} {btn.border-style.value} {btn.quaternary.border-value}",
+        "value": "{btn.border-width.value} {btn.border-style.value} {btn.quaternary.border-color.value}",
         "type": "settings",
         "themable": true
       },

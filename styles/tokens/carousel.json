@@ -45,7 +45,7 @@
         },
         "border": {
           "comment": "The border value for the Carousel component.",
-          "value": "{stepper.icon.border.width.value} solid {stepper.dark-icon.border-value}",
+          "value": "{stepper.icon.border.width.value} solid {stepper.dark-icon.border-color.value}",
           "type": "settings",
           "themable": true
         },

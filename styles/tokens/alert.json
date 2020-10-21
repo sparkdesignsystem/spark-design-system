@@ -131,7 +131,7 @@
       },
       "color-fail": {
         "comment": "The background color of the Fail Alert component.",
-        "value": "{alert.bg.value}",
+        "value": "{alert.bg.color.value}",
         "type": "settings",
         "themable": true
       },

@@ -2,7 +2,7 @@
   "link": {
     "visited-border-bottom": {
       "comment": "The style of the underline on visited Links.",
-      "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.value}",
+      "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.color.value}",
       "type": "settings",
       "themable": true
     },
@@ -55,7 +55,7 @@
     "border": {
       "bottom": {
         "comment": "The style of the underline on Links.",
-        "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.value}",
+        "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.color.value}",
         "type": "settings",
         "themable": true
       },
@@ -76,7 +76,7 @@
       "border": {
         "bottom": {
           "comment": "The underline style of Links on hover.",
-          "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.hover.value}",
+          "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.hover.color.value}",
           "type": "settings",
           "themable": true
         }
@@ -145,7 +145,7 @@
       },
       "visited-border-bottom": {
         "comment": "The underline style of visited Simple Links.",
-        "value": "{link.simple.underline.width.value} {link.border.bottom-style.value} {link.simple.underline.value}",
+        "value": "{link.simple.underline.width.value} {link.border.bottom-style.value} {link.simple.underline.color.value}",
         "type": "settings",
         "themable": true
       }
@@ -233,7 +233,7 @@
       },
       "visited-border-bottom": {
         "comment": "The underline style of visited Light Links.",
-        "value": "{link.light.underline.width.value} {link.border.bottom-style.value} {link.light.underline.value}",
+        "value": "{link.light.underline.width.value} {link.border.bottom-style.value} {link.light.underline.color.value}",
         "type": "settings",
         "themable": true
       }
@@ -275,7 +275,7 @@
         "border": {
           "bottom": {
             "comment": "The border settings for Links with icons in the hover state.",
-            "value": "{link.has-icon.underline.width.value} {link.border.bottom-style.value} {link.has-icon.underline.value}",
+            "value": "{link.has-icon.underline.width.value} {link.border.bottom-style.value} {link.has-icon.underline.color.value}",
             "type": "settings",
             "themable": true
           }
@@ -321,7 +321,7 @@
       },
       "border-bottom": {
         "comment": "The border settings for Links with icons.",
-        "value": "{link.has-icon.underline.width.value} {link.border.bottom-style.value} {link.has-icon.underline.value}",
+        "value": "{link.has-icon.underline.width.value} {link.border.bottom-style.value} {link.has-icon.underline.color.value}",
         "type": "settings",
         "themable": true
       }
@@ -335,7 +335,7 @@
       },
       "border-bottom-color": {
         "comment": "The Disabled Link border-bottom ",
-        "value": "{link.disabled.value}",
+        "value": "{link.disabled.color.value}",
         "type": "settings",
         "themable": true
       },
@@ -348,13 +348,13 @@
         },
         "border-bottom-color": {
           "comment": "The disabled Link hover border-bottom ",
-          "value": "{link.disabled.value}",
+          "value": "{link.disabled.color.value}",
           "type": "settings",
           "themable": true
         },
         "border-bottom": {
           "comment": "The underline settings for the disabled Link..",
-          "value": "{link.disabled.underline-width.value} {link.border.bottom-style.value} {link.disabled.value}",
+          "value": "{link.disabled.underline-width.value} {link.border.bottom-style.value} {link.disabled.color.value}",
           "type": "settings",
           "themable": true
         }
@@ -373,7 +373,7 @@
       },
       "border-bottom": {
         "comment": "The underline settings for the disabled Link..",
-        "value": "{link.disabled.underline-width.value} {link.border.bottom-style.value} {link.disabled.value}",
+        "value": "{link.disabled.underline-width.value} {link.border.bottom-style.value} {link.disabled.color.value}",
         "type": "settings",
         "themable": true
       }

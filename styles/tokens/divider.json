@@ -8,7 +8,7 @@
     },
     "border": {
       "comment": "The value of border for Dividers.",
-      "value": "2px solid {divider.value}",
+      "value": "2px solid {divider.color.value}",
       "type": "settings",
       "themable": true
     }
