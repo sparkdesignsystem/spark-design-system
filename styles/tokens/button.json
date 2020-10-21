@@ -2,7 +2,7 @@
   "btn": {
     "background-color": {
       "comment": "The background color of the Button component.",
-      "value": "{color.red.value}",
+      "value": "{red.value}",
       "type": "settings",
       "themable": true
     },
@@ -70,13 +70,13 @@
     },
     "text-color": {
       "comment": "The text color of the Button component.",
-      "value": "{color.white.value}",
+      "value": "{white.value}",
       "type": "settings",
       "themable": true
     },
     "visited-text-color": {
       "comment": "The visited text color of the Button component.",
-      "value": "{color.white.value}",
+      "value": "{white.value}",
       "type": "settings",
       "themable": true
     },
@@ -89,13 +89,13 @@
     "hover": {
       "background-color": {
         "comment": "The background color of the Button component on hover.",
-        "value": "{color.mid-red.value}",
+        "value": "{mid-red.value}",
         "type": "settings",
         "themable": true
       },
       "text-color": {
         "comment": "The text color of the Button component on hover.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       }
@@ -153,13 +153,13 @@
       },
       "background-color": {
         "comment": "The background color of the Disabled Button component.",
-        "value": "{color.black-tint.50.value}",
+        "value": "{black-tint.50.value}",
         "type": "settings",
         "themable": true
       },
       "text-color": {
         "comment": "The text color of the Disabled Button component.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },
@@ -210,7 +210,7 @@
         },
         "text-color": {
           "comment": "The text color of the Secondary Button component when disabled.",
-          "value": "{color.black-tint.50.value}",
+          "value": "{black-tint.50.value}",
           "type": "settings",
           "themable": true
         },
@@ -241,7 +241,7 @@
       },
       "border-color": {
         "comment": "The border color of the Secondary Button component.",
-        "value": "{color.red.value}",
+        "value": "{red.value}",
         "type": "settings",
         "themable": true
       },
@@ -253,20 +253,20 @@
       },
       "text-color": {
         "comment": "The text color of the Secondary Button component.",
-        "value": "{color.red.value}",
+        "value": "{red.value}",
         "type": "settings",
         "themable": true
       },
       "visited-text-color": {
         "comment": "The text color of the Secondary Button component when visited.",
-        "value": "{color.red.value}",
+        "value": "{red.value}",
         "type": "settings",
         "themable": true
       },
       "hover": {
         "text-color": {
           "comment": "The hover text color of the Secondary Button component.",
-          "value": "{color.red.value}",
+          "value": "{red.value}",
           "type": "settings",
           "themable": true
         },
@@ -278,7 +278,7 @@
         },
         "border-color": {
           "comment": "The border color of the Secondary Button component on hover.",
-          "value": "{color.red.value}",
+          "value": "{red.value}",
           "type": "settings",
           "themable": true
         },
@@ -324,7 +324,7 @@
         },
         "border-color": {
           "comment": "The border color of the Tertiary Button component when disabled.",
-          "value": "{color.black-tint.50.value}",
+          "value": "{black-tint.50.value}",
           "type": "settings",
           "themable": true
         },
@@ -342,7 +342,7 @@
         },
         "text-color": {
           "comment": "The text color of the Tertiary Button component when disabled.",
-          "value": "{color.black-tint.50.value}",
+          "value": "{black-tint.50.value}",
           "type": "settings",
           "themable": true
         }
@@ -355,7 +355,7 @@
       },
       "border-color": {
         "comment": "The border color of the Tertiary Button component.",
-        "value": "{color.purple-dark.value}",
+        "value": "{purple-dark.value}",
         "type": "settings",
         "themable": true
       },
@@ -367,32 +367,32 @@
       },
       "text-color": {
         "comment": "The text color of the Tertiary Button component.",
-        "value": "{color.purple-dark.value}",
+        "value": "{purple-dark.value}",
         "type": "settings",
         "themable": true
       },
       "visited-text-color": {
         "comment": "The text color of the Tertiary Button component when visited.",
-        "value": "{color.purple-dark.value}",
+        "value": "{purple-dark.value}",
         "type": "settings",
         "themable": true
       },
       "hover": {
         "text-color": {
           "comment": "The text color of the Tertiary Button component on hover.",
-          "value": "{color.purple.value}",
+          "value": "{purple.value}",
           "type": "settings",
           "themable": true
         },
         "background-color": {
           "comment": "The background color of the Tertiary Button component on hover.",
-          "value": "{color.purple-lightest.value}",
+          "value": "{purple-lightest.value}",
           "type": "settings",
           "themable": true
         },
         "border-color": {
           "comment": "The border color of the Tertiary Button component on hover.",
-          "value": "{color.purple.value}",
+          "value": "{purple.value}",
           "type": "settings",
           "themable": true
         },
@@ -432,13 +432,13 @@
         },
         "border-color": {
           "comment": "The border color of the Quaternary Button component when disabled.",
-          "value": "{color.black-tint.50.value}",
+          "value": "{black-tint.50.value}",
           "type": "settings",
           "themable": true
         },
         "text-color": {
           "comment": "The text color of the Quaternary Button component when disabled.",
-          "value": "{color.black-tint.50.value}",
+          "value": "{black-tint.50.value}",
           "type": "settings",
           "themable": true
         },
@@ -469,7 +469,7 @@
       },
       "border-color": {
         "comment": "The border color of the Quaternary Button component.",
-        "value": "{color.black-tint.50.value}",
+        "value": "{black-tint.50.value}",
         "type": "settings",
         "themable": true
       },
@@ -481,13 +481,13 @@
       },
       "text-color": {
         "comment": "The text color of the Quaternary Button component",
-        "value": "{color.black.value}",
+        "value": "{black.value}",
         "type": "settings",
         "themable": true
       },
       "visited-text-color": {
         "comment": "The text color of the Quaternary Button component when visited.",
-        "value": "{color.black.value}",
+        "value": "{black.value}",
         "type": "settings",
         "themable": true
       },
@@ -500,7 +500,7 @@
       "hover": {
         "text-color": {
           "comment": "The text color of the Quaternary Button component on hover.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
@@ -512,7 +512,7 @@
         },
         "border-color": {
           "comment": "The border color of the Quaternary Button component on hover.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },

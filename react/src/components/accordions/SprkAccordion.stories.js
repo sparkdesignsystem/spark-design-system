@@ -22,9 +22,7 @@ export const defaultStory = () => (
   <SprkAccordion>
     <SprkAccordionItem
       heading="This is an accordion heading"
-      contentAddClasses="sprk-o-Stack sprk-o-Stack--medium"
-      idString="accordion-item-1"
-      analyticsString="analytics_string_goes_here"
+      contentAdditionalClasses="sprk-o-Stack sprk-o-Stack--medium"
     >
       <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
         This is an example of accordion content. This is an example of accordion
@@ -33,11 +31,7 @@ export const defaultStory = () => (
       </p>
     </SprkAccordionItem>
 
-    <SprkAccordionItem
-      heading="This is an accordion heading"
-      idString="accordion-item-2"
-      analyticsString="analytics_string_goes_here"
-    >
+    <SprkAccordionItem heading="This is an accordion heading">
       <p className="sprk-b-TypeBodyTwo">
         This is an example of accordion content. This is an example of accordion
         content. This is an example of accordion content. This is an example of
@@ -45,11 +39,7 @@ export const defaultStory = () => (
       </p>
     </SprkAccordionItem>
 
-    <SprkAccordionItem
-      heading="This is an accordion heading"
-      idString="accordion-item-3"
-      analyticsString="analytics_string_goes_here"
-    >
+    <SprkAccordionItem heading="This is an accordion heading">
       <p className="sprk-b-TypeBodyTwo">
         This is an example of accordion content. This is an example of accordion
         content. This is an example of accordion content. This is an example of

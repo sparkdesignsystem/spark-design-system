@@ -6,7 +6,7 @@
       "type": "settings",
       "themable": true
     },
-    "pag-current-link-font-weight": {
+    "current-link-font-weight": {
       "comment": "The font weight of the current pagination link in the Pagination component.",
       "value": "500",
       "type": "settings",
@@ -15,7 +15,7 @@
     "link": {
       "color": {
         "comment": "The color of the pagination links in the Pagination component.",
-        "value": "{color.black.value}",
+        "value": "{black.value}",
         "type": "settings",
         "themable": true
       },
@@ -35,19 +35,19 @@
     "selection": {
       "color": {
         "comment": "The accent color for selected pagination links in the Pagination component.",
-        "value": "{color.purple.value}",
+        "value": "{purple.value}",
         "type": "settings",
         "themable": true
       },
       "link-color": {
         "comment": "The text color of the currently selected pagination link in the Pagination component.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },
       "link-color-hover": {
         "comment": "The text color of the currently selected pagination link on hover in the Pagination component.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       }

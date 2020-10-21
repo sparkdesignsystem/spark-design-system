@@ -22,7 +22,7 @@
       },
       "color": {
         "comment": "The background color of the Modal.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },

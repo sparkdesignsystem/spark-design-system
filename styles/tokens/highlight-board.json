@@ -26,13 +26,13 @@
       },
       "color": {
         "comment": "The background color of the Highlight Board.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },
       "content-box-color": {
         "comment": "The background color of the content box in the Highlight Board.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       }

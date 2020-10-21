@@ -3,7 +3,7 @@
       "icon": {
         "bg-color": {
           "comment": "The background color of the menu icon.",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },
@@ -15,7 +15,7 @@
         },
         "stroke": {
           "comment": "The stroke of the menu icon.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },

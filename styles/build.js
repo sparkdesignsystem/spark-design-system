@@ -4,7 +4,11 @@ StyleDictionary.registerFormat({
   name: 'themable-scss/web',
   formatter: (tokens) => {
     const formattedTokens = tokens.allProperties.map((token) => {
-      return `/// ${token.comment} \n$${token.name}: ${token.value}${
+      let tokenName = token.name;
+
+      if (tokenName === 'sprk-masthead-translate-y')
+        tokenName = 'sprk-masthead-translateY';
+      return `/// ${token.comment} \n$${tokenName}: ${token.value}${
         token.themable ? ' !default' : ''
       };`;
     });

@@ -2,13 +2,13 @@
     "dictionary": {
       "border": {
         "comment": "The border surrounding the Dictionary.",
-        "value": "1px solid {color.gray.value}",
+        "value": "1px solid {gray.value}",
         "type": "settings",
         "themable": true
       },
       "stripe-color": {
         "comment": "The background color of the key value pairs in the striped Dictionary.",
-        "value": "{color.gray.value}",
+        "value": "{gray.value}",
         "type": "settings",
         "themable": true
       },

@@ -20,13 +20,13 @@
     },
     "fill-color": {
       "comment": "Value for the fill property of the Icon component.",
-      "value": "{color.black.value}",
+      "value": "{black.value}",
       "type": "settings",
       "themable": true
     },
     "stroke-color": {
       "comment": "Value for the stroke property of the Icon component.",
-      "value": "{color.black.value}",
+      "value": "{black.value}",
       "type": "settings",
       "themable": true
     },
@@ -62,7 +62,7 @@
     },
     "filled-fill-color": {
       "comment": "Value for the fill property of the Filled Icon component.",
-      "value": "{color.black.value}",
+      "value": "{black.value}",
       "type": "settings",
       "themable": true
     },

@@ -14,14 +14,14 @@
     },
     "color": {
       "comment": "The default color on Links.",
-      "value": "{color.purple.value}",
+      "value": "{purple.value}",
       "type": "settings",
       "themable": true
     },
     "underline": {
       "color": {
         "comment": "The color of the underline on Links.",
-        "value": "{color.purple.value}",
+        "value": "{purple.value}",
         "type": "settings",
         "themable": true
       },
@@ -34,7 +34,7 @@
       "visited": {
         "color": {
           "comment": "The color of the underline on visited Links.",
-          "value": "{color.black-tint.50.value}",
+          "value": "{black-tint.50.value}",
           "type": "settings",
           "themable": true
         }
@@ -69,7 +69,7 @@
     "hover": {
       "color": {
         "comment": "The color of Links on hover.",
-        "value": "{color.purple-deep.value}",
+        "value": "{purple-deep.value}",
         "type": "settings",
         "themable": true
       },
@@ -85,21 +85,21 @@
     "simple": {
       "color": {
         "comment": "The color value of Simple Links.",
-        "value": "{color.black.value}",
+        "value": "{black.value}",
         "type": "settings",
         "themable": true
       },
       "hover": {
         "color": {
           "comment": "The color of Simple Links on hover",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "underline": {
           "color": {
             "comment": "The underline color value of Simple Links on hover.",
-            "value": "{color.red.value}",
+            "value": "{red.value}",
             "type": "settings",
             "themable": true
           },
@@ -153,7 +153,7 @@
     "light": {
       "color": {
         "comment": "The color value of Light Links.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },
@@ -166,14 +166,14 @@
         },
         "color": {
           "comment": "The color of Light Links on hover",
-          "value": "{color.white.value}",
+          "value": "{white.value}",
           "type": "settings",
           "themable": true
         },
         "underline": {
           "color": {
             "comment": "The underline color value of Light Links on hover.",
-            "value": "{color.white.value}",
+            "value": "{white.value}",
             "type": "settings",
             "themable": true
           },
@@ -256,7 +256,7 @@
       "hover": {
         "color-text": {
           "comment": "The color value for Links with icons in the hover state.",
-          "value": "{color.purple-deep.value}",
+          "value": "{purple-deep.value}",
           "type": "settings",
           "themable": true
         },
@@ -283,7 +283,7 @@
       },
       "color-icon": {
         "comment": "The color of icons in Links containing icons.",
-        "value": "{color.purple.value}",
+        "value": "{purple.value}",
         "type": "settings",
         "themable": true
       },
@@ -328,13 +328,13 @@
     },
     "disabled": {
       "color": {
-        "comment": "The disabled Link color.",
-        "value": "{color.black-tint.50.value}",
+        "comment": "The disabled Link ",
+        "value": "{black-tint.50.value}",
         "type": "settings",
         "themable": true
       },
       "border-bottom-color": {
-        "comment": "The Disabled Link border-bottom color.",
+        "comment": "The Disabled Link border-bottom ",
         "value": "{link.disabled.color.value}",
         "type": "settings",
         "themable": true
@@ -342,12 +342,12 @@
       "hover": {
         "color": {
           "comment": "The disabled Link color on hover.",
-          "value": "{color.black-tint.50.value}",
+          "value": "{black-tint.50.value}",
           "type": "settings",
           "themable": true
         },
         "border-bottom-color": {
-          "comment": "The disabled Link hover border-bottom color.",
+          "comment": "The disabled Link hover border-bottom ",
           "value": "{link.disabled.color.value}",
           "type": "settings",
           "themable": true

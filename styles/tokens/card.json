@@ -50,13 +50,13 @@
       },
       "header-bg-color": {
         "comment": "The background color of the header area for the Highlighted Header Card.",
-        "value": "{color.purple.value}",
+        "value": "{purple.value}",
         "type": "settings",
         "themable": true
       },
       "header-text-color": {
         "comment": "The text color for the Highlighted Header Card.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       }

@@ -26,25 +26,25 @@
       },
       "color": {
         "comment": "The color of Spinners.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },
       "color-dark": {
         "comment": "The color of the dark Spinner.",
-        "value": "{color.black.value}",
+        "value": "{black.value}",
         "type": "settings",
         "themable": true
       },
       "color-primary": {
         "comment": "The color of the primary Spinner.",
-        "value": "{color.red.value}",
+        "value": "{red.value}",
         "type": "settings",
         "themable": true
       },
       "color-secondary": {
         "comment": "The color of the secondary Spinner.",
-        "value": "{color.purple.value}",
+        "value": "{purple.value}",
         "type": "settings",
         "themable": true
       }

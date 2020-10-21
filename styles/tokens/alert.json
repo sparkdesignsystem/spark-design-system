@@ -8,7 +8,7 @@
     },
     "border": {
       "comment": "Value for border on the Alert component.",
-      "value": "2px solid {color.gray.value}",
+      "value": "2px solid {gray.value}",
       "type": "settings",
       "themable": true
     },
@@ -20,7 +20,7 @@
     },
     "color": {
       "comment": "Value for color of the Alert component.",
-      "value": "{color.black.value}",
+      "value": "{black.value}",
       "type": "settings",
       "themable": true
     },
@@ -59,7 +59,7 @@
       },
       "icon-color": {
         "comment": "The color of the dismiss icon in the Alert component.",
-        "value": "{color.black.value}",
+        "value": "{black.value}",
         "type": "settings",
         "themable": true
       },
@@ -86,19 +86,19 @@
       "color": {
         "info": {
           "comment": "The icon color of the Information Alert component.",
-          "value": "{color.blue.value}",
+          "value": "{blue.value}",
           "type": "settings",
           "themable": true
         },
         "success": {
           "comment": "The icon color of the Success Alert component.",
-          "value": "{color.green.value}",
+          "value": "{green.value}",
           "type": "settings",
           "themable": true
         },
         "fail": {
           "comment": "The icon color of the Fail Alert component.",
-          "value": "{color.pink.value}",
+          "value": "{pink.value}",
           "type": "settings",
           "themable": true
         }
@@ -106,26 +106,26 @@
     },
     "border-info": {
       "comment": "The border value of the Information Alert component.",
-      "value": "2px solid {color.blue.value}",
+      "value": "2px solid {blue.value}",
       "type": "settings",
       "themable": true
     },
     "border-success": {
       "comment": "The border value of the Success Alert component.",
-      "value": "2px solid {color.green.value}",
+      "value": "2px solid {green.value}",
       "type": "settings",
       "themable": true
     },
     "border-fail": {
       "comment": "The border value of the Fail Alert component.",
-      "value": "2px solid {color.pink.value}",
+      "value": "2px solid {pink.value}",
       "type": "settings",
       "themable": true
     },
     "bg": {
       "color": {
         "comment": "The background color of the default Alert component.",
-        "value": "{color.white.value}",
+        "value": "{white.value}",
         "type": "settings",
         "themable": true
       },
@@ -152,19 +152,19 @@
       "color": {
         "fail": {
           "comment": "The value for the color property in the Fail Alert component.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "success": {
           "comment": "The value for the color property in the Success Alert component.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         },
         "info": {
           "comment": "The value for the color property in the Information Alert component.",
-          "value": "{color.black.value}",
+          "value": "{black.value}",
           "type": "settings",
           "themable": true
         }
