@@ -38,7 +38,7 @@ class SprkToggle extends Component {
       title,
       triggerText = title,
       titleAddClasses,
-      titleAdditionalClasses = titleAddClasses,
+      triggerTextAdditionalClasses = titleAddClasses,
       iconAddClasses,
       iconAdditionalClasses = iconAddClasses,
       toggleIconName,
@@ -55,7 +55,7 @@ class SprkToggle extends Component {
 
     const titleClasses = classnames(
       'sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none',
-      titleAdditionalClasses,
+      triggerTextAdditionalClasses,
     );
     const iconClasses = classnames(
       'sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs',
@@ -142,12 +142,12 @@ SprkToggle.propTypes = {
    * outermost container of the component.
    */
   additionalClasses: PropTypes.string,
-  /** Deprecated - Use `titleAdditionalClasses` instead.
+  /** Deprecated - Use `triggerTextAdditionalClasses` instead.
    * A space-separated string of classes to add to the title text. */
   // TODO: Remove titleAddClasses in issue #1296
   titleAddClasses: PropTypes.string,
   /** A space-separated string of classes to add to the title text. */
-  titleAdditionalClasses: PropTypes.string,
+  triggerTextAdditionalClasses: PropTypes.string,
   /** Deprecated - Use `iconAdditionalClasses` instead.
    * A space-separated string of classes to add to the toggle icon. */
   // TODO: Remove iconAddClasses in issue #1296
