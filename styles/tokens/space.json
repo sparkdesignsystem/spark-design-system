@@ -126,6 +126,12 @@
       "type": "settings",
       "themable": true
     },
+    "h": {
+      "comment": "Value for the huge space setting.",
+      "value": "{space.xl.value}",
+      "type": "settings",
+      "themable": true
+    },
     "misc": {
       "a": {
         "comment": "Value for the misc a space setting.",
