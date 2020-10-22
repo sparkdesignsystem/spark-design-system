@@ -47,7 +47,7 @@ export const defaultStory = () => ({
   template: `
     <sprk-accordion>
       <sprk-accordion-item
-        title="This is an accordion heading"
+        heading="This is an accordion heading"
         additionalClasses="sprk-u-mbs"
         idString="accordion-item-1"
         analyticsString="object.action.event"
@@ -61,7 +61,7 @@ export const defaultStory = () => ({
       </sprk-accordion-item>
 
       <sprk-accordion-item
-        title="This is an accordion heading"
+        heading="This is an accordion heading"
         idString="accordion-item-2"
         analyticsString="object.action.event"
       >
@@ -74,7 +74,7 @@ export const defaultStory = () => ({
       </sprk-accordion-item>
 
       <sprk-accordion-item
-        title="This is an accordion heading"
+        heading="This is an accordion heading"
         idString="accordion-item-3"
         analyticsString="object.action.event"
       >
