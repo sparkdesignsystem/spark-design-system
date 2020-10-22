@@ -2,6 +2,8 @@ import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import * as _ from 'lodash';
 import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 
+// TODO Remove title, additionalHeadingClasses, iconTypeClosed, and
+// iconTypeOpen as part of Issue XXXX
 @Component({
   selector: 'sprk-accordion-item',
   template: `
@@ -19,12 +21,12 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
       >
         <span [ngClass]="getHeadingClasses()">
           <sprk-icon
+            *ngIf="leadingIcon"
             [iconType]="leadingIcon"
             additionalClasses="
               sprk-c-Icon--filled-current-color
               sprk-c-Icon--xl
               sprk-u-mrs"
-            *ngIf="leadingIcon"
           ></sprk-icon>
           {{ heading || title }}
         </span>
@@ -45,15 +47,16 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
   animations: [toggleAnimations.toggleContent],
 })
 export class SprkAccordionItemComponent implements OnInit {
+  // TODO
   /**
    * Deprecated: use `heading` instead. The value supplied will be
-   * rendered inside the heading area of the Accordion item.
+   * rendered inside the heading area of the Accordion Item.
    */
   @Input()
   title: string;
   /**
    * The value supplied will be rendered inside the heading area of the
-   * Accordion item.
+   * Accordion Item.
    */
   @Input()
   heading: string;
@@ -75,16 +78,17 @@ export class SprkAccordionItemComponent implements OnInit {
    */
   @Input()
   additionalClasses: string;
+  // TODO
   /**
    * Deprecated - use `headingAdditionalClasses` instead. Expects a space
    * separated string of classes to be added to the heading in the Accordion
-   * item.
+   * Item.
    */
   @Input()
   additionalHeadingClasses: string;
   /**
    * Expects a space separated string of classes to be added to the heading in
-   * the Accordion item.
+   * the Accordion Item.
    */
   @Input()
   headingAdditionalClasses: string;
@@ -103,12 +107,12 @@ export class SprkAccordionItemComponent implements OnInit {
   // as part of issue XXXX
   /**
    * Deprecated - use `iconNameClosed` instead. The name of the icon to use for
-   * a closed Accordion item.
+   * a closed Accordion Item.
    */
   @Input()
   iconTypeClosed = 'chevron-up-circle';
   /**
-   * The name of the icon to use for a closed Accordion item.
+   * The name of the icon to use for a closed Accordion Item.
    */
   @Input()
   iconNameClosed;
@@ -116,41 +120,41 @@ export class SprkAccordionItemComponent implements OnInit {
   // as part of issue XXXX
   /**
    * Deprecated - use `iconNameOpen` instead. The name of the icon to use for
-   * an open Accordion item.
+   * an open Accordion Item.
    */
   @Input()
   iconTypeOpen = 'chevron-up-circle';
   /**
-   * The name of the icon to use for an open Accordion item.
+   * The name of the icon to use for an open Accordion Item.
    */
   @Input()
   iconNameOpen;
   /**
-   * The name of the icon to use before the heading in the Accordion item.
+   * The name of the icon to use before the heading in the Accordion Item.
    * This is optional.
    */
   @Input()
   leadingIcon: string;
   /**
-   * Expects a space separated string of classes to be added to the accordion
-   * item icon.
+   * Expects a space separated string of classes to be added to the Accordion
+   * Item icon.
    */
   @Input()
   iconAdditionalClasses: string;
   /**
-   * Expects a space separated string of classes to be added to the accordion
-   * item content container.
+   * Expects a space separated string of classes to be added to the Accordion
+   * Item content container.
    */
   @Input()
   contentAdditionalClasses: string;
 
   /**
-   * This event will be emitted when the accordion item is opened.
+   * This event will be emitted when the Accordion Item is opened.
    */
   @Output()
   openedEvent = new EventEmitter<any>();
   /**
-   * This event will be emitted when the accordion item is closed.
+   * This event will be emitted when the Accordion Item is closed.
    */
   @Output()
   closedEvent = new EventEmitter<any>();
@@ -182,10 +186,12 @@ export class SprkAccordionItemComponent implements OnInit {
   toggleState(): void {
     if (this.isOpen) {
       this.animState = 'open';
+      // TODO
       this.currentIconType = this.iconNameOpen || this.iconTypeOpen;
       this.iconStateClass = 'sprk-c-Icon--open';
     } else {
       this.animState = 'closed';
+      // TODO
       this.currentIconType = this.iconNameClosed || this.iconTypeClosed;
       this.iconStateClass = '';
     }
@@ -236,6 +242,7 @@ export class SprkAccordionItemComponent implements OnInit {
       'sprk-b-TypeDisplaySeven',
     ];
 
+    // TODO
     const additionalClasses =
       this.headingAdditionalClasses || this.additionalHeadingClasses;
 
