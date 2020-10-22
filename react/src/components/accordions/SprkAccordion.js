@@ -8,7 +8,7 @@ class SprkAccordion extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: props.children.map(item => ({
+      items: props.children.map((item) => ({
         id: uniqueId('accordion-item-'),
         ...item,
       })),
@@ -40,7 +40,8 @@ class SprkAccordion extends Component {
 
 SprkAccordion.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to the outermost container
+   * of the component.
    */
   additionalClasses: PropTypes.string,
   /**
@@ -48,7 +49,8 @@ SprkAccordion.propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a unique selector for
+   * automated tools.
    */
   idString: PropTypes.string,
 };
