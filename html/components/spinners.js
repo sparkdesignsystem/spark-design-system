@@ -8,8 +8,17 @@ const getSpinnerClasses = (options) => {
     classes.push('sprk-c-Spinner--large');
   }
 
-  if (options.lightness === 'dark') {
+  // TODO: Deprecate lightness option in favor of variant - issue #1292
+  if (options.lightness === 'dark' || options.variant === 'dark') {
     classes.push('sprk-c-Spinner--dark');
+  }
+
+  if (options.variant === 'primary') {
+    classes.push('sprk-c-Spinner--primary');
+  }
+
+  if (options.variant === 'secondary') {
+    classes.push('sprk-c-Spinner--secondary');
   }
 
   return classes.join(' ');
@@ -39,13 +48,21 @@ const spinners = () => {
   getElements('[data-sprk-spinner="click"]', (spinnerContainer) => {
     const options = {};
     options.size = spinnerContainer.getAttribute('data-sprk-spinner-size');
-    options.lightness = spinnerContainer.getAttribute('data-sprk-spinner-lightness');
-    options.ariaLabel = spinnerContainer.getAttribute('data-sprk-spinner-aria-label');
+    // TODO: Deprecate lightness option in favor of variant - issue #1292
+    options.lightness = spinnerContainer.getAttribute(
+      'data-sprk-spinner-lightness',
+    );
+    options.ariaLabel = spinnerContainer.getAttribute(
+      'data-sprk-spinner-aria-label',
+    );
+    options.variant = spinnerContainer.getAttribute(
+      'data-sprk-spinner-variant',
+    );
 
     spinnerContainer.addEventListener('click', (e) => {
       if (
-        e.target.getAttribute('data-sprk-spinner')
-        && !e.target.getAttribute('data-sprk-has-spinner')
+        e.target.getAttribute('data-sprk-spinner') &&
+        !e.target.getAttribute('data-sprk-has-spinner')
       ) {
         setSpinning(e.target, options);
       }
@@ -59,6 +76,4 @@ window.addEventListener('sprk-cancel-spinners', () => {
   });
 });
 
-export {
-  spinners, getSpinnerClasses, setSpinning, cancelSpinning,
-};
+export { spinners, getSpinnerClasses, setSpinning, cancelSpinning };

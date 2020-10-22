@@ -52,6 +52,11 @@ export interface ISprkDropdownChoice {
    */
   value?: string;
   /**
+   * If `isDefault` is set to `true` and `dropdownType` is set to `informational`
+   * then `triggerText` will be automatically changed to this choice `value`
+   */
+  isDefault?: boolean;
+  /**
    * The dropdown choice can be a standard
    * link or it can be a link with optional
    * extra content. The `content` object

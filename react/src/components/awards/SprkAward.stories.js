@@ -5,12 +5,14 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 export default {
   title: 'Components/Award',
   component: SprkAward,
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
-    jest: ['SprkAward'] ,
-    info: `${markdownDocumentationLinkBuilder('award')}`,
+    jest: ['SprkAward'],
+    info: `
+${markdownDocumentationLinkBuilder('award')}
+- If you do not want the Award component centered, be sure to remove the
+sprk-o-CenteredColumn class from additionalClasses.
+`,
   },
 };
 
@@ -45,6 +47,7 @@ export const defaultStory = () => (
         element: 'a',
       },
     ]}
+    additionalClasses="sprk-o-CenteredColumn"
   />
 );
 

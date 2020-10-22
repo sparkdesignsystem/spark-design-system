@@ -19,10 +19,16 @@ class SprkFooterAwards extends Component {
     const { awardsImagesHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
-        <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+        <h3
+          className="
+          sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text"
+        >
           {awards.heading}
         </h3>
-        <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm">
+        <div
+          className="sprk-o-Stack__item
+          sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm"
+        >
           {awardsImagesHasIds.map((image) => {
             const {
               element,
@@ -50,13 +56,16 @@ class SprkFooterAwards extends Component {
 
         <SprkToggle
           additionalClasses="sprk-o-Stack__item"
-          iconAddClasses="sprk-c-Footer__icon"
+          iconAdditionalClasses="sprk-c-Footer__icon"
           toggleIconName="chevron-down-circle"
-          title={awards.disclaimerTitle}
-          titleAddClasses="sprk-b-TypeBodyFour sprk-c-Footer__trigger"
+          triggerText={awards.disclaimerTitle}
+          triggerTextAdditionalClasses="sprk-b-TypeBodyFour sprk-c-Footer__trigger"
           analyticsString={awards.disclaimerAnalytics}
         >
-          <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs sprk-c-Footer__text">
+          <p
+            className="
+            sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs sprk-c-Footer__text"
+          >
             {awards.disclaimerText}
           </p>
         </SprkToggle>
@@ -94,7 +103,8 @@ SprkFooterAwards.propTypes = {
          */
         addClasses: PropTypes.string,
         /**
-         * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+         * Assigned to the `data-analytics` attribute serving as a unique
+         * selector for outside libraries to capture data.
          */
         analyticsString: PropTypes.string,
       }),

@@ -9,10 +9,8 @@ export default {
   component: SprkToggleComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `${markdownDocumentationLinkBuilder('toggle')}`,
@@ -21,17 +19,14 @@ export default {
 };
 
 const modules = {
-  imports: [
-    SprkToggleModule,
-    BrowserAnimationsModule,
-  ],
+  imports: [SprkToggleModule, BrowserAnimationsModule],
 };
 
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-toggle
-      title="My Disclaimer"
+      triggerText="My Disclaimer"
       analyticsString="My Disclaimer"
       idString="toggle-1"
     >
@@ -54,8 +49,6 @@ export const defaultStory = () => ({
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'sprk-toggle.component',
-    ],
+    jest: ['sprk-toggle.component'],
   },
 };

@@ -145,6 +145,7 @@ export const spinningSecondary = () =>
   <button
     class="sprk-c-Button sprk-c-Button--secondary"
     data-sprk-spinner="click"
+    data-sprk-spinner-variant="primary"
     data-id="button-spinner-secondary"
     aria-label="Loading"
   >
@@ -167,7 +168,7 @@ export const spinningTertiary = () =>
     data-sprk-spinner="click"
     data-id="button-spinner-tertiary"
     aria-label="Loading"
-    data-sprk-spinner-lightness="dark"
+    data-sprk-spinner-variant="secondary"
   >
     <div
       class="sprk-c-Spinner sprk-c-Spinner--secondary sprk-c-Spinner--circle"
@@ -188,7 +189,7 @@ export const spinningQuaternary = () =>
     data-sprk-spinner="click"
     data-id="button-spinner-quaternary"
     aria-label="Loading"
-    data-sprk-spinner-lightness="dark"
+    data-sprk-spinner-variant="dark"
   >
     <div
       class="sprk-c-Spinner sprk-c-Spinner--dark sprk-c-Spinner--circle"
