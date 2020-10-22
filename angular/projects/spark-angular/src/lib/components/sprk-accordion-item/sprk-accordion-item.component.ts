@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import * as _ from 'lodash';
 import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 
@@ -145,6 +145,17 @@ export class SprkAccordionItemComponent implements OnInit {
   contentAdditionalClasses: string;
 
   /**
+   * This event will be emitted when the accordion item is opened.
+   */
+  @Output()
+  openedEvent = new EventEmitter<any>();
+  /**
+   * This event will be emitted when the accordion item is closed.
+   */
+  @Output()
+  closedEvent = new EventEmitter<any>();
+
+  /**
    * @ignore
    */
   componentID = _.uniqueId();
@@ -186,6 +197,11 @@ export class SprkAccordionItemComponent implements OnInit {
   toggleAccordion(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      this.openedEvent.emit();
+    } else {
+      this.closedEvent.emit();
+    }
     this.toggleState();
   }
 

@@ -307,4 +307,25 @@ describe('SprkAccordionItemComponent', () => {
       accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#exclamation');
   });
+
+  it('should emit open and closed events when toggled', (done) => {
+    let openEventEmitted = false;
+    let closedEventEmitted = false;
+
+    component.openedEvent.subscribe((g) => {
+      openEventEmitted = true;
+      done();
+    });
+    component.closedEvent.subscribe((g) => {
+      closedEventEmitted = true;
+      done();
+    });
+
+    accordionItemTriggerElement.click();
+    expect(openEventEmitted).toEqual(true);
+    expect(closedEventEmitted).toEqual(false);
+
+    accordionItemTriggerElement.click();
+    expect(closedEventEmitted).toEqual(true);
+  });
 });
