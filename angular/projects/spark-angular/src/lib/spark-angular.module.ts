@@ -140,6 +140,7 @@ import { SprkSpinnerDirectiveModule } from './directives/sprk-spinner/sprk-spinn
     SprkFieldsetModule,
     SprkLegendModule,
     SprkDividerDirectiveModule,
+    SprkSpinnerDirectiveModule,
   ],
 })
 export class SparkAngularModule {}
