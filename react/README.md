@@ -35,7 +35,7 @@ Spark Design System is where we collect our best solutions for how to design and
 
   `import { SprkButton } from '@sparkdesignsystem/spark-react';`
 
-  You can find code for all Spark components at react.sparkdesignsystem.com.
+  You can find code for all Spark components at [react.sparkdesignsystem.com](https://react.sparkdesignsystem.com).
 
 ### Installing Sass
 
