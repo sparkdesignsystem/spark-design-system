@@ -48,12 +48,34 @@ describe('SprkAccordionItemComponent', () => {
     );
   });
 
+  // TODO
   it('should add classes if additionalHeadingClasses has a value', () => {
     component.additionalHeadingClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(accordionHeadingElement.classList.contains('sprk-u-man')).toEqual(
       true,
     );
+  });
+
+  it('should add classes if headingAdditionalClasses has a value', () => {
+    component.headingAdditionalClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(accordionHeadingElement.classList.contains('sprk-u-man')).toEqual(
+      true,
+    );
+  });
+
+  // TODO
+  it('should prefer headingAdditionalClasses over additionalHeadingClasses', () => {
+    component.headingAdditionalClasses = 'should-add';
+    component.additionalHeadingClasses = 'should-not-add';
+    fixture.detectChanges();
+    expect(accordionHeadingElement.classList.contains('should-add')).toEqual(
+      true,
+    );
+    expect(
+      accordionHeadingElement.classList.contains('should-not-add'),
+    ).toEqual(false);
   });
 
   it('should add an analytics data attribute if analyticsString has a value', () => {

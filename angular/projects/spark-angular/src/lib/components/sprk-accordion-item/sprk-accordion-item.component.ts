@@ -218,8 +218,11 @@ export class SprkAccordionItemComponent implements OnInit {
       'sprk-b-TypeDisplaySeven',
     ];
 
-    if (this.additionalHeadingClasses) {
-      this.additionalHeadingClasses.split(' ').forEach((className) => {
+    const additionalClasses =
+      this.headingAdditionalClasses || this.additionalHeadingClasses;
+
+    if (additionalClasses) {
+      additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
