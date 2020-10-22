@@ -19,6 +19,7 @@ const SprkStack = (props) => {
     'sprk-o-Stack--medium': itemSpacing === 'medium',
     'sprk-o-Stack--large': itemSpacing === 'large',
     'sprk-o-Stack--huge': itemSpacing === 'huge',
+    // TODO deprecate hyphenated in favor of camelCase, Issue 1294
     'sprk-o-Stack--misc-a': itemSpacing === 'miscA' || itemSpacing === 'misc-a',
     'sprk-o-Stack--misc-b': itemSpacing === 'miscB' || itemSpacing === 'misc-b',
     'sprk-o-Stack--misc-c': itemSpacing === 'miscC' || itemSpacing === 'misc-c',
