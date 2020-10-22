@@ -247,4 +247,64 @@ describe('SprkAccordionItemComponent', () => {
     fixture.detectChanges();
     expect(accordionContentsElement.classList.toString()).toContain(testString);
   });
+
+  // TODO
+  it('should add closed icon from iconTypeClosed', () => {
+    component.isOpen = false;
+    component.iconTypeClosed = 'exclamation';
+    fixture.detectChanges();
+    expect(
+      accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#exclamation');
+  });
+
+  it('should add closed icon from iconNameClosed', () => {
+    component.isOpen = false;
+    component.iconNameClosed = 'exclamation';
+    fixture.detectChanges();
+    expect(
+      accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#exclamation');
+  });
+
+  // TODO
+  it('should prefer iconNameClosed over iconTypeClosed', () => {
+    component.isOpen = false;
+    component.iconTypeClosed = 'message';
+    component.iconNameClosed = 'exclamation';
+    fixture.detectChanges();
+    expect(
+      accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#exclamation');
+  });
+
+  // TODO
+  it('should add open icon from iconTypeOpen', () => {
+    component.isOpen = true;
+    component.iconTypeOpen = 'exclamation';
+    fixture.detectChanges();
+    expect(
+      accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#exclamation');
+  });
+
+  it('should add open icon from iconNameOpen', () => {
+    component.isOpen = true;
+    component.iconNameOpen = 'exclamation';
+    fixture.detectChanges();
+    expect(
+      accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#exclamation');
+  });
+
+  // TODO
+  it('should prefer iconNameOpen over iconTypeOpen', () => {
+    component.isOpen = true;
+    component.iconTypeOpen = 'message';
+    component.iconNameOpen = 'exclamation';
+    fixture.detectChanges();
+    expect(
+      accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
+    ).toEqual('#exclamation');
+  });
 });

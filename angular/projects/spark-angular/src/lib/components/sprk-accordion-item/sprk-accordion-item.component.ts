@@ -99,6 +99,8 @@ export class SprkAccordionItemComponent implements OnInit {
    */
   @Input()
   isActive: boolean;
+  // TODO - Remove this input and move the default value to iconNameClosed
+  // as part of issue XXXX
   /**
    * Deprecated - use `iconNameClosed` instead. The name of the icon to use for
    * a closed Accordion item.
@@ -109,7 +111,9 @@ export class SprkAccordionItemComponent implements OnInit {
    * The name of the icon to use for a closed Accordion item.
    */
   @Input()
-  iconNameClosed = 'chevron-up-circle';
+  iconNameClosed;
+  // TODO - Remove this input and move the default value to iconNameOpen
+  // as part of issue XXXX
   /**
    * Deprecated - use `iconNameOpen` instead. The name of the icon to use for
    * an open Accordion item.
@@ -120,7 +124,7 @@ export class SprkAccordionItemComponent implements OnInit {
    * The name of the icon to use for an open Accordion item.
    */
   @Input()
-  iconNameOpen = 'chevron-up-circle';
+  iconNameOpen;
   /**
    * The name of the icon to use before the heading in the Accordion item.
    * This is optional.
@@ -164,18 +168,16 @@ export class SprkAccordionItemComponent implements OnInit {
   /**
    * @ignore
    */
-  accordionState(): void {
-    this.isOpen === false
-      ? (this.animState = 'closed')
-      : (this.animState = 'open');
-
-    this.isOpen === false
-      ? (this.currentIconType = this.iconTypeClosed)
-      : (this.currentIconType = this.iconTypeOpen);
-
-    this.isOpen === false
-      ? (this.iconStateClass = '')
-      : (this.iconStateClass = 'sprk-c-Icon--open');
+  toggleState(): void {
+    if (this.isOpen) {
+      this.animState = 'open';
+      this.currentIconType = this.iconNameOpen || this.iconTypeOpen;
+      this.iconStateClass = 'sprk-c-Icon--open';
+    } else {
+      this.animState = 'closed';
+      this.currentIconType = this.iconNameClosed || this.iconTypeClosed;
+      this.iconStateClass = '';
+    }
   }
 
   /**
@@ -184,7 +186,7 @@ export class SprkAccordionItemComponent implements OnInit {
   toggleAccordion(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
-    this.accordionState();
+    this.toggleState();
   }
 
   /**
@@ -266,6 +268,6 @@ export class SprkAccordionItemComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.accordionState();
+    this.toggleState();
   }
 }
