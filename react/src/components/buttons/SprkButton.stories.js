@@ -12,18 +12,20 @@ export default {
     info: `
 ${markdownDocumentationLinkBuilder('button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
-SprkButton can either be a button (\`<button>\`)
+SprkButton can either render as a button (\`<button>\`)
 or an anchor (\`<a>\`) element. It is very important
 for accessibility to choose the correct HTML element.
 
-- SprkButton should use an \`<a>\` element if it navigates to a new page.
-- SprkButton should use a \`<button>\` element if it is performing
-an action, such as: “Submit”, “Add”, “Join”,” etc.
-- A SprkButton that does not go to a new page will almost
-always use a \`<button>\` element.
-- Spinner state requires additional engineering.
-  - Use app state to conditionally render between button text and spinner.
-  - Use \`isLoading\` on SprkButton when spinner is present.
+- Render as a link (\`<a>\`) element if the button navigates to a new page.
+  - Set by adding the \`element="a"\` prop to SprkButton.
+
+- Render as a button (\`<button>\`) element if
+it performs an action such as: “Submit”, “Add”, “Join”,” etc.
+They typically do not navigate to a new page.
+  - Set by adding the \`element="button"\` prop to SprkButton.
+
+- The \`element\` prop will default
+SprkButton to render as a \`button\` element..
 
 ##### Accessibility
 - If SprkButton is using an \`<a>\` element, include a \`title=””\` attribute.
@@ -35,6 +37,9 @@ This can change through the \`altText\` prop on SprkSpinner.
 ##### Guidelines
 - If SprkButton is in a form, but is not intended to
 submit the form, add \`type=”button”\` the attribute.
+- Spinner state requires additional engineering.
+  - Use app state to conditionally render between button text and spinner.
+  - Use \`isLoading\` on SprkButton when spinner is present.
 `,
   },
 };
