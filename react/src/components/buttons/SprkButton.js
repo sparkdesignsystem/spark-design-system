@@ -57,7 +57,7 @@ const SprkButton = ({
       data-analytics={analyticsString}
       // TODO: Remove disabled on next release #3557
       disabled={
-        TagName !== 'a' ? isDisabled || disabled || isLoading : undefined
+        TagName !== 'a' ? isDisabled || isLoading : undefined
       }
       href={TagName !== 'button' ? href : undefined}
       {...rest}
