@@ -23,12 +23,15 @@ an action, such as: “Submit”, “Add”, “Join”,” etc.
 always use a \`<button>\` element.
 - Spinner state requires additional engineering.
 Use app state to conditionally render between button text and spinner.
+Use \`isLoading\` on SprkButton when spinner is present.
 
 ##### Accessibility
 - If a Button is using an \`<a>\` element, you
 must include a \`title=””\` attribute.
 - If a Button only includes an Icon with no text,
 alternative text must be provided.
+- Screen readers will read SprkSpinner as "Loading" by default.
+Change to give further context for screen readers.
 
 ##### Guidelines
 - If a Button is in a form, but is not intended to
@@ -122,17 +125,21 @@ export const disabledQuaternary = () => (
 );
 
 export const spinning = () => (
-  <SprkButton idString="button-9" analyticsString="button-9-analytics">
+  <SprkButton
+    idString="button-9"
+    analyticsString="button-9-analytics"
+    isLoading
+  >
     <SprkSpinner />
   </SprkButton>
 );
 
 export const spinningSecondary = () => (
   <SprkButton
-    loading
     variant="secondary"
     idString="button-10"
     analyticsString="button-10-analytics"
+    isLoading
   >
     <SprkSpinner variant="primary" />
   </SprkButton>
@@ -143,6 +150,7 @@ export const spinningTertiary = () => (
     variant="tertiary"
     idString="button-11"
     analyticsString="button-11-analytics"
+    isLoading
   >
     <SprkSpinner variant="secondary" />
   </SprkButton>
@@ -153,6 +161,7 @@ export const spinningQuaternary = () => (
     variant="quaternary"
     idString="button-12"
     analyticsString="button-12-analytics"
+    isLoading
   >
     <SprkSpinner variant="dark" />
   </SprkButton>

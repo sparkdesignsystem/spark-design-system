@@ -12,6 +12,7 @@ const SprkButton = ({
   disabled,
   element,
   idString,
+  isLoading,
   loading,
   variant,
   href,
@@ -48,16 +49,21 @@ const SprkButton = ({
         { 'sprk-c-Button--tertiary': variant === 'tertiary' },
         { 'sprk-c-Button--quaternary': variant === 'quaternary' },
         { 'sprk-is-Disabled': isDisabled || disabled },
+        { 'sprk-c-Button--loading': isLoading },
         additionalClasses,
       )}
       role={TagName !== 'button' ? 'button' : undefined}
       data-id={idString}
       data-analytics={analyticsString}
       // TODO: Remove disabled on next release #3557
-      disabled={TagName !== 'a' ? isDisabled || disabled : undefined}
+      disabled={
+        TagName !== 'a' ? isDisabled || disabled || isLoading : undefined
+      }
       href={TagName !== 'button' ? href : undefined}
       {...rest}
+      // TODO: Remove loading on next release #3557
       {...(loading && { 'aria-label': spinningAriaLabel })}
+      {...(isLoading && { 'aria-live': 'polite' })}
     >
       {/* TODO: Remove anything related to spinner from button
       on next release #3557 */}
@@ -110,6 +116,13 @@ SprkButton.propTypes = {
    */
   idString: PropTypes.string,
   /**
+   * Adds the necessary attributes for accessible loading state.
+   */
+  isLoading: PropTypes.bool,
+  // TODO: Remove loading on next release #3557
+  /**
+   * Deprecated for more of a compositional layout.
+   * Render spinner conditionally inside of button instead.
    * Will cause a spinner to be
    * rendered in place of the button content.
    */

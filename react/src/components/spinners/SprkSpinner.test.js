@@ -55,4 +55,24 @@ describe('SprkSpinner:', () => {
     const wrapper = shallow(<SprkSpinner aria-labelledby="label-1" />);
     expect(wrapper.find('[aria-labelledby="label-1"]').length).toBe(1);
   });
+
+  it('should apply default role to element', () => {
+    const wrapper = shallow(<SprkSpinner />);
+    expect(wrapper.find('[role="progressbar"]').length).toBe(1);
+  });
+
+  it('should apply role to element', () => {
+    const wrapper = shallow(<SprkSpinner role="status" />);
+    expect(wrapper.find('[role="status"]').length).toBe(1);
+  });
+
+  it('should apply default aria-valuetext to element', () => {
+    const wrapper = shallow(<SprkSpinner />);
+    expect(wrapper.find('[aria-valuetext="Loading"]').length).toBe(1);
+  });
+
+  it('should apply aria-valuetext to element', () => {
+    const wrapper = shallow(<SprkSpinner altText="Sending" />);
+    expect(wrapper.find('[aria-valuetext="Sending"]').length).toBe(1);
+  });
 });

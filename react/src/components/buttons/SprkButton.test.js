@@ -156,7 +156,7 @@ describe('SprkButton:', () => {
     'should not apply the disabled attribute if the' +
       ' element is an anchor "a"',
     () => {
-      const wrapper = mount(<SprkButton href="#" isDisabled="true" />);
+      const wrapper = mount(<SprkButton href="#" isDisabled />);
       const link = wrapper.find('a');
       expect(link.length).toBe(1);
       expect(link.getDOMNode().hasAttribute('disabled')).toBe(false);
@@ -168,7 +168,7 @@ describe('SprkButton:', () => {
     'should not apply the disabled attribute if the' +
       ' element is an anchor "a"',
     () => {
-      const wrapper = mount(<SprkButton href="#" disabled="true" />);
+      const wrapper = mount(<SprkButton href="#" disabled />);
       const link = wrapper.find('a');
       expect(link.length).toBe(1);
       expect(link.getDOMNode().hasAttribute('disabled')).toBe(false);
@@ -179,7 +179,7 @@ describe('SprkButton:', () => {
     'it should apply the disabled attribute if the element is a button' +
       ' and disabled is true',
     () => {
-      const wrapper = mount(<SprkButton isDisabled="true" />);
+      const wrapper = mount(<SprkButton isDisabled />);
       const button = wrapper.find('button');
       expect(button.length).toBe(1);
       expect(button.getDOMNode().hasAttribute('disabled')).toBe(true);
@@ -191,7 +191,7 @@ describe('SprkButton:', () => {
     'it should apply the disabled attribute if the element is a button' +
       ' and disabled is true',
     () => {
-      const wrapper = mount(<SprkButton disabled="true" />);
+      const wrapper = mount(<SprkButton disabled />);
       const button = wrapper.find('button');
       expect(button.length).toBe(1);
       expect(button.getDOMNode().hasAttribute('disabled')).toBe(true);
@@ -206,4 +206,18 @@ describe('SprkButton:', () => {
       expect(wrapper.find('a[href=""]').length).toBe(0);
     },
   );
+
+  it('should apply loading class', () => {
+    const wrapper = shallow(<SprkButton isLoading />);
+    expect(wrapper.find('button').hasClass('sprk-c-Button--loading')).toBe(
+      true,
+    );
+  });
+
+  it('should apply disabled attribute when loading', () => {
+    const wrapper = mount(<SprkButton isLoading />);
+    const button = wrapper.find('button');
+    expect(button.length).toBe(1);
+    expect(button.getDOMNode().hasAttribute('disabled')).toBe(true);
+  });
 });
