@@ -3,32 +3,35 @@
     "max-width": {
       "comment": "The maximum width of the Pagination component.",
       "value": "26rem",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "current-link-font-weight": {
       "comment": "The font weight of the current pagination link in the Pagination component.",
       "value": "500",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "link": {
       "color": {
         "comment": "The color of the pagination links in the Pagination component.",
         "value": "{black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "font-weight": {
         "comment": "The font weight of the pagination links in the Pagination component.",
         "value": "400",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "color-hover": {
         "comment": "The color of the pagination links on hover in the Pagination component.",
         "value": "{pag.link.color.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
@@ -36,26 +39,29 @@
       "color": {
         "comment": "The accent color for selected pagination links in the Pagination component.",
         "value": "{purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "link-color": {
         "comment": "The text color of the currently selected pagination link in the Pagination component.",
         "value": "{white.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "link-color-hover": {
         "comment": "The text color of the currently selected pagination link on hover in the Pagination component.",
         "value": "{white.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
     "circle-size": {
       "comment": "The width and height setting of the circle around the currently selected pagination link in the Pagination component.",
       "value": "2em",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     }
   }

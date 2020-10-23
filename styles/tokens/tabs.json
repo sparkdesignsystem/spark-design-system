@@ -5,51 +5,51 @@
           "color": {
             "comment": "The button tab text color of the currently active tab in Tabbed Navigation.",
             "value": "{red.value}",
-            "type": "settings",
+            "file": "settings",
             "themable": true
           },
           "border-bottom": {
             "comment": "The button tab bottom border of the currently active tab in Tabbed Navigation.",
             "value": "3px solid {red.value}",
-            "type": "settings",
+            "file": "settings",
             "themable": true
           },
           "bg-color": {
             "comment": "The button tab background color of the currently active tab in Tabbed Navigation.",
             "value": "{white.value}",
-            "type": "settings",
+            "file": "settings",
             "themable": true
           }
         },
         "color": {
           "comment": "The tab button text color in Tabbed Navigation.",
           "value": "{black.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "bg-color": {
           "comment": "The tab button background color in Tabbed Navigation.",
           "value": "{gray.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "border-bottom": {
           "comment": "The border on the bottom of the button tabs in Tabbed Navigation.",
           "value": "3px solid {gray.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "hover": {
           "border-bottom": {
             "comment": "The border on the bottom of the button tabs on hover in Tabbed Navigation.",
             "value": "3px solid {purple.value}",
-            "type": "settings",
+            "file": "settings",
             "themable": true
           },
           "color": {
             "comment": "The button tab text color of the button tabs on hover in Tabbed Navigation.",
             "value": "{purple.value}",
-            "type": "settings",
+            "file": "settings",
             "themable": true
           }
         }
@@ -57,7 +57,10 @@
       "breakpoint": {
         "comment": "The breakpoint at which the tabs go from stacked layout to side by side in Tabbed Navigation.",
         "value": "46rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       }
     }

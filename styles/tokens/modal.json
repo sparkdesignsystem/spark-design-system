@@ -4,50 +4,68 @@
         "small": {
           "comment": "Determines how far down from the top of the page the Modal renders at the small breakpoint.",
           "value": "25rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "medium": {
           "comment": "Determines how far down from the top of the page the Modal renders at the medium breakpoint.",
           "value": "37.5rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         }
       },
       "mask-color": {
         "comment": "The color of the mask overlay that is shown behind the Modal.",
         "value": "rgba(34, 34, 34, 0.35)",
-        "type": "settings",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
         "themable": true
       },
       "color": {
         "comment": "The background color of the Modal.",
         "value": "{white.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "max-width": {
         "comment": "The maximum width of the Modal.",
-        "value": "43.75",
-        "type": "settings",
+        "value": "43.75rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "height": {
         "comment": "The maximum height of the Modal.",
         "value": "70%",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "shadow": {
         "comment": "The box shadow on the Modal.",
         "value": "0 4px 5px rgba(0, 0, 0, 0.6)",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-radius": {
         "comment": "The border radius on the Modal.",
         "value": "8px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       }
     }

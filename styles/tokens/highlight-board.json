@@ -3,37 +3,37 @@
       "breakpoint": {
         "comment": "The Highlight Board breakpoint at which styles change for padding, font size and button width.",
         "value": "30rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "content-width": {
         "comment": "The maximum width of the content for the Highlight Board when it has an image.",
         "value": "30rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "type-reduction-percentage": {
         "comment": "Percentage reduction value for the font size in the Highlight Board in narrow viewports.",
         "value": "0.8",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "height": {
         "comment": "The height of the Highlight Board image",
         "value": "31.25rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "color": {
         "comment": "The background color of the Highlight Board.",
         "value": "{white.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "content-box-color": {
         "comment": "The background color of the content box in the Highlight Board.",
         "value": "{white.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     }

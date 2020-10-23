@@ -5,7 +5,6 @@ StyleDictionary.registerFormat({
   formatter: (tokens) => {
     const formattedTokens = tokens.allProperties.map((token) => {
       let tokenName = token.name;
-
       if (tokenName === 'sprk-masthead-translate-y')
         tokenName = 'sprk-masthead-translateY';
       return `/// ${token.comment} \n$${tokenName}: ${token.value}${

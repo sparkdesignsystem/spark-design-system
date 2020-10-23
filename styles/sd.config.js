@@ -2,7 +2,12 @@ module.exports = {
   source: ['./tokens/**/*.json'],
   platforms: {
     web: {
-      transformGroup: ['scss'],
+      transforms: [
+        'attribute/cti',
+        'name/cti/kebab',
+        'time/seconds',
+        'content/icon',
+      ],
       prefix: 'sprk',
       buildPath: 'web/',
       files: [
@@ -10,28 +15,32 @@ module.exports = {
           format: 'themable-scss/web',
           destination: '_settings.scss',
           filter: {
-            type: 'settings',
+            file: 'settings',
           },
         },
         {
           format: 'themable-scss/web',
           destination: '_colors.scss',
           filter: {
-            type: 'colors',
+            attributes: {
+              category: 'color',
+            },
           },
         },
         {
           format: 'json',
           destination: 'settings.json',
           filter: {
-            type: 'settings',
+            file: 'settings',
           },
         },
         {
           format: 'json',
           destination: 'colors.json',
           filter: {
-            type: 'colors',
+            attributes: {
+              category: 'color',
+            },
           },
         },
       ],
@@ -74,6 +83,7 @@ module.exports = {
     },
     ios: {
       transformGroup: `ios-swift`,
+      prefix: 'sprk',
       buildPath: `ios/`,
       files: [
         {

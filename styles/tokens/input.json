@@ -4,167 +4,177 @@
       "margin": {
         "comment": "The value for padding applied to fieldset elements.",
         "value": "0 0 {space.l.value} 0",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "narrow-max-width": {
         "comment": "The value used for the maximum width of an icon container using the .sprk-b-InputContainer__icon-container--narrow modifier.",
         "value": "6.5rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "huge-max-width": {
         "comment": "The max-width setting for Huge Inputs.",
         "value": "37.5rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
     "max-width": {
       "comment": "The value used as a maximum width for Input containers.",
       "value": "27.5rem",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "max-width-full": {
       "comment": "The value used for the maximum width of an Input container using the .sprk-b-InputContainer--full modifier.",
       "value": "100%",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "huge": {
       "error-focus-label-color": {
         "comment": "The label color value of Huge Inputs when they have an error.",
         "value": "{text-input.huge.error-focus-label-color.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "complete-label-color": {
         "comment": "The label color when the Huge Input has a value and is not focused.",
         "value": "{text-input.huge.complete-label-color.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "height": {
         "comment": "The height value for Huge Inputs.",
         "value": "{text-input.huge.height.value}",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "font-size": {
         "comment": "The font size for Huge Inputs.",
         "value": "{text-input.huge.font-size.value}",
-        "type": "settings",
+        "attributes": {
+          "category": "size",
+          "type": "font"
+        },
+        "file": "settings",
         "themable": true
       },
       "label-font-size": {
         "comment": "The label font size for Huge Inputs.",
         "value": "{text-input.huge.label-font-size.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "label-top": {
         "comment": "The top value for Huge Input labels. This adjusts how far the label is from the top of the container.",
         "value": "{text-input.huge.label-top.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "label-active-top": {
         "comment": "The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container.",
         "value": "{text-input.huge.active-label-top.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "active-padding-top": {
         "comment": "The padding top value of active Huge Inputs.",
         "value": "{text-input.huge.active-padding-top.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-width": {
         "comment": "The border width for Huge Inputs.",
         "value": "{text-input.huge.border-width.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "padding": {
         "comment": "The padding for Huge Inputs.",
         "value": "{text-input.huge.padding.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "label-padding": {
         "comment": "The label padding for Huge Inputs.",
         "value": "0 ({space.misc.a.value} + {input.huge.border-width.value})",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "focus": {
         "border-width": {
           "comment": "The border width for Huge Inputs on focus.",
           "value": "{text-input.huge.focus.border-width.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "label-color": {
           "comment": "The label color value of Huge Inputs on focus.",
           "value": "{text-input.huge.focus.label-color.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         }
       },
       "transition": {
         "comment": "The transition value for Huge Inputs.",
         "value": "{text-input.huge.transition.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "transition-delay": {
         "comment": "The transition delay value for Huge Inputs.",
         "value": "{text-input.huge.transition-delay.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "placeholder-transition-delay": {
         "comment": "The transition delay placeholder value for Huge Inputs.",
         "value": "{text-input.huge.placeholder-transition-delay.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "placeholder-transition-property": {
         "comment": "The transition property placeholder value for Huge Inputs.",
         "value": "{text-input.huge.placeholder-transition-property.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "placeholder-opacity": {
         "comment": "The placeholder opacity value for Huge Inputs.",
         "value": "{text-input.huge.placeholder-opacity.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "placeholder-active-opacity": {
         "comment": "The placeholder opacity value for Huge Inputs.",
         "value": "{text-input.huge.active-placeholder-opacity.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "box-shadow": {
         "comment": "The box shadow value on Huge Inputs.",
         "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "icon-offset-y": {
         "comment": "The margin-top value for icons in Huge Inputs.",
         "value": "{space.misc.a.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "icon-offset-top": {
         "comment": "The top value for icons in Huge Inputs.",
         "value": "50%",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       }
     },
@@ -172,38 +182,45 @@
       "color": {
         "comment": "Value for color on Inputs with errors.",
         "value": "{black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "line-height": {
         "comment": "The line height used for Input error text.",
         "value": "1.4",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "margin": {
         "comment": "The margin used for Input error text.",
         "value": "0 0 0 6px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "font": {
         "family": {
           "comment": "The font family used for Input error text.",
-          "value": "{font-family.body.two.value}",
-          "type": "settings",
+          "value": "{font.family.body.two.value}",
+          "file": "settings",
           "themable": true
         },
         "size": {
           "comment": "The font size used for Input error text.",
           "value": "0.8125rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "file": "settings",
           "themable": true
         },
         "weight": {
           "comment": "The font weight used for Input error text.",
           "value": "400",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         }
       }
@@ -212,19 +229,28 @@
       "right-top": {
         "comment": "The top offset of the icon displayed on the right side of Inputs.",
         "value": "38px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "right-left": {
         "comment": "The top offset of the icon displayed on the left side of Inputs.",
         "value": "71px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "padding-right": {
         "comment": "The padding of the icon displayed inside of Inputs.",
         "value": "0 37px 1px 12px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       }
     },
@@ -232,31 +258,38 @@
       "z-index": {
         "comment": "The font size of text icons inside Inputs.",
         "value": "{layer.height.xs.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "offset-x": {
         "comment": "The X offset of text icons inside Inputs.",
         "value": "{space.m.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "offset-y": {
         "comment": "The XY offset of text icons inside Inputs.",
         "value": "2em",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "font-size": {
         "comment": "The font size of text icons inside Inputs.",
         "value": "1em",
-        "type": "settings",
+        "attributes": {
+          "category": "size",
+          "type": "font"
+        },
+        "file": "settings",
         "themable": true
       },
       "font-weight": {
         "comment": "The font weight of text icons inside Inputs.",
         "value": "700",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
@@ -264,19 +297,19 @@
       "offset-x": {
         "comment": "The X offset of icons inside Inputs.",
         "value": "{space.m.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "offset-y": {
         "comment": "The Y offset of icons inside Inputs.",
         "value": "{space.m.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "z-index": {
         "comment": "The z-index applied to the icon inside Inputs.",
         "value": "{layer.height.xs.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     }
@@ -284,38 +317,56 @@
   "error-container-margin": {
     "comment": "The margin for Input containers that have an error.",
     "value": "{space.s.value} 0 0 0",
-    "type": "settings",
+    "attributes": {
+      "category": "size"
+    },
+    "file": "settings",
     "themable": true
   },
   "error-icon-size": {
     "comment": "The Input error icon size.",
     "value": "1.25rem",
-    "type": "settings",
+    "attributes": {
+      "category": "size"
+    },
+    "file": "settings",
     "themable": true
   },
   "monetary-symbol": {
     "comment": "The symbol used to denote currency for Monetary Inputs.",
     "value": "'$'",
-    "type": "settings",
+    "attributes": {
+      "category": "content"
+    },
+    "file": "settings",
     "themable": true
   },
   "fieldset-padding": {
     "comment": "The value for padding applied to fieldset elements.",
     "value": "{space.m.value} 0 0 0",
-    "type": "settings",
+    "attributes": {
+      "category": "size"
+    },
+    "file": "settings",
     "themable": true
   },
   "text-input": {
     "has-text-icon-padding": {
       "comment": "The font size of text icons inside Inputs.",
       "value": "0 0 1px 37px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "has-icon-padding": {
       "comment": "The padding inside Inputs that contain icons.",
       "value": "12px 0 12px 40px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "huge": {
@@ -323,245 +374,282 @@
         "border-width": {
           "comment": "Todo deprecate, The border width for Huge Inputs on focus.",
           "value": "2px",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "label-color": {
           "comment": "Todo deprecate, The label color value of Huge Inputs on focus.",
           "value": "{purple.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         }
       },
       "has-text-icon-padding": {
         "comment": "The padding value for Huge Inputs with icons.",
         "value": "0 40px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "error-focus-label-color": {
         "comment": "Todo deprecate, The label color value of Huge Inputs when they have an error.",
         "value": "{black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "complete-label-color": {
         "comment": "Todo deprecate, The label color when the Huge Input has a value and is not focused.",
         "value": "{black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "height": {
         "comment": "Todo deprecate, The height value for Huge Inputs.",
         "value": "64px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "font-size": {
         "comment": "Todo deprecate, The font size for Huge Inputs.",
-        "value": "{font-size.display.five.value}",
-        "type": "settings",
+        "value": "{font.size.display.five.value}",
+        "file": "settings",
         "themable": true
       },
       "label-font-size": {
         "comment": "Todo deprecate, The label font size for Huge Inputs.",
-        "value": "{font-size.body.four.value}",
-        "type": "settings",
+        "value": "{font.size.body.four.value}",
+        "file": "settings",
         "themable": true
       },
       "label-top": {
         "comment": "Todo deprecate, The top value for Huge Input labels. This adjusts how far the label is from the top of the container.",
         "value": "{input.huge.height} / 3",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "active-label-top": {
         "comment": "Todo deprecate, The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container.",
         "value": "10px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "active-padding-top": {
         "comment": "Todo deprecate, The padding top value of active Huge Inputs.",
         "value": "{input.huge.height.value} / 4",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "border-width": {
         "comment": "Todo deprecate, The border width for Huge Inputs.",
         "value": "2px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "padding": {
         "comment": "Todo deprecate, The padding for Huge Inputs.",
         "value": "0 {space.misc.a.value}",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "transition": {
         "comment": "Todo deprecate, The transition value for Huge Inputs.",
         "value": "top 0.3s, color 0.3s, font-size 0.3s",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "transition-delay": {
         "comment": "Todo deprecate, The transition delay value for Huge Inputs.",
         "value": "0s",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "placeholder-transition-delay": {
         "comment": "Todo deprecate, The transition delay placeholder value for Huge Inputs.",
         "value": "100ms",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "placeholder-transition-property": {
         "comment": "Todo deprecate, The transition property placeholder value for Huge Inputs.",
         "value": "opacity",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "placeholder-opacity": {
         "comment": "Todo deprecate, The placeholder opacity value for Huge Inputs.",
         "value": "0",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "active-placeholder-opacity": {
         "comment": "Todo deprecate, The placeholder opacity value for Huge Inputs.",
         "value": "1",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
     "font": {
       "family": {
         "comment": "The font family for Inputs.",
-        "value": "{font-family.body.two}",
-        "type": "settings",
+        "value": "{font.family.body.two}",
+        "file": "settings",
         "themable": true
       },
       "size": {
         "comment": "The font size for Inputs.",
         "value": "1rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size",
+          "type": "font"
+        },
+        "file": "settings",
         "themable": true
       },
       "weight": {
         "comment": "The font weight for Inputs.",
         "value": "300",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
     "error-color": {
       "comment": "Color setting for Inputs with errors.",
       "value": "{pink.value}",
-      "type": "settings",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
       "themable": true
     },
     "height": {
       "comment": "The height setting for Inputs.",
       "value": "48px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "line-height": {
       "comment": "The line height setting for Inputs.",
       "value": "1.3",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "outline": {
       "comment": "The outline setting for Inputs.",
       "value": "0",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "color": {
       "comment": "The color setting for Inputs.",
       "value": "{black.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "border": {
       "comment": "The border setting for Inputs.",
       "value": "2px solid {black-tint.50.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "border-radius": {
       "comment": "The border radius setting for Inputs.",
       "value": "4px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "box-shadow": {
       "comment": "The box shadow setting for Inputs.",
       "value": "none",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "padding": {
       "comment": "The padding setting for Inputs.",
       "value": "0 {space.m.value}",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "focus-border-color": {
       "comment": "The border color on Inputs when focused.",
       "value": "{purple.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "error-border-color": {
       "comment": "The border color on Inputs when there is an error.",
       "value": "{pink.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "disabled-border-color": {
       "comment": "The border color on disabled Inputs.",
       "value": "{black-tint.50.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "disabled-color": {
       "comment": "The color on disabled Inputs.",
       "value": "{black-tint.50.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "readonly-border-color": {
       "comment": "The border color on readonly Inputs.",
       "value": "{black-tint.50.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "readonly-color": {
       "comment": "The color on readonly Inputs.",
       "value": "{black-tint.50.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "disabled-background-color": {
       "comment": "The background color on disabled Inputs.",
       "value": "{black-tint.40.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "disabled-box-shadow": {
       "comment": "The box shadow on disabled Inputs.",
       "value": "none",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "transition": {
       "comment": "The transition setting on Inputs.",
       "value": "border-color 0.15s ease",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     }
   },
@@ -570,13 +658,19 @@
       "padding-right": {
         "comment": "The padding right for Huge Inputs.",
         "value": "45px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "icon-margin-top": {
         "comment": "The margin-top value for icons in Huge Select Inputs.",
         "value": "-(({input.huge.height} - {icon.m.value}) / 2 + {icon.m.value})",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       }
     }
@@ -585,129 +679,138 @@
     "appearance": {
       "comment": "The value for the appearance property for Selects.",
       "value": "none",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "background": {
       "comment": "The background setting for Selects.",
       "value": "none",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "font": {
       "family": {
         "comment": "The font family for Selects.",
         "value": "{text-input.font.family.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "size": {
         "comment": "The font size for Selects.",
         "value": "{text-input.font.size.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "weight": {
         "comment": "The font weight for Selects.",
         "value": "{text-input.font.weight.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
     "line-height": {
       "comment": "The line height setting for Selects.",
       "value": "{text-input.line-height.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "outline": {
       "comment": "The outline setting for Selects.",
       "value": "{text-input.outline.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "color": {
       "comment": "The color setting for Selects.",
       "value": "{text-input.color.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "border": {
       "comment": "The border setting for Selects.",
       "value": "{text-input.border.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "border-radius": {
       "comment": "The border radius setting for Selects.",
       "value": "{text-input.border-radius.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "box-shadow": {
       "comment": "The box shadow setting for Selects.",
       "value": "{text-input.box-shadow.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "padding": {
       "comment": "The padding setting for Selects.",
       "value": "12px 45px 12px 13px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "focus-border-color": {
       "comment": "The border color on Selects when focused.",
       "value": "{text-input.focus-border-color.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "error-border-color": {
       "comment": "The border color on Selects when there is an error.",
       "value": "{text-input.error-border-color.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "disabled-border-color": {
       "comment": "The border color on disabled Selects.",
       "value": "{text-input.disabled-border-color.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "disabled-color": {
       "comment": "The color on disabled Selects.",
       "value": "{text-input.disabled-color.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "moz-focusring-color": {
       "comment": "The value for the Firefox specific -moz-focusring color setting.",
       "value": "transparent",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "moz-focusring-text-shadow": {
       "comment": "The value for the Firefox specific -moz-focusring text-shadow setting.",
       "value": "0 0 0 {select.color.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "disabled-background-color": {
       "comment": "The background color on disabled Selects.",
       "value": "{text-input.disabled-background-color.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "arrow-offset-y": {
       "comment": "The value for margin-top on the icon in Selects.",
       "value": "-31px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "arrow-offset-x": {
       "comment": "The value for margin-right on the icon in Selects.",
       "value": "19px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     }
   },
@@ -715,19 +818,28 @@
     "min-height": {
       "comment": "The minimum height of Textarea.",
       "value": "125px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "margin": {
       "comment": "The margin surrounding Textarea.",
       "value": "{space.stack.m.value}",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "padding": {
       "comment": "The padding insdie Textarea.",
       "value": "{space.m.value}",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     }
   },
@@ -735,214 +847,226 @@
     "input-opacity": {
       "comment": "The opacity of the native control checkbox.",
       "value": "0",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "huge-container": {
       "transition": {
         "comment": "The transition of the huge checkbox input.",
         "value": "{checkbox.transition.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border": {
         "comment": "The border settings of the huge checkbox input.",
         "value": "2px solid {black-tint.50.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-radius": {
-        "comment": "he border-radius of the huge checkbox input.",
+        "comment": "The border-radius of the huge checkbox input.",
         "value": "4px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "padding": {
         "comment": "The padding of the huge checkbox input.",
         "value": "20px {space.m.value} 20px 55px",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "flex-basis": {
         "comment": "The flex-basis of the huge checkbox input.",
         "value": "100%",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "line-height": {
         "comment": "The line height of the huge checkbox input.",
         "value": "1rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "hover-border-color": {
         "comment": "The border color of the huge checkbox input when hovered.",
         "value": "{black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "hover-box-shadow": {
         "comment": "The box shadow of the huge checkbox input when hovered.",
         "value": "{input.huge.box-shadow.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "disabled-border-color": {
         "comment": "The border color of the huge checkbox input when disabled.",
         "value": "{text-input.disabled-border-color}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "disabled-box-shadow": {
         "comment": "The box shadow of the huge checkbox input when disabled.",
         "value": "none",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "disabled-background": {
         "comment": "The background of the huge checkbox input when disabled.",
         "value": "{text-input.disabled-background-color.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "focus-border-color": {
         "comment": "The border color of the huge checkbox input when focused.",
         "value": "{purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "focus-hover-border-color": {
         "comment": "The border color of the huge checkbox input when focused and hovered.",
         "value": "{black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "checked-border-color": {
         "comment": "The border color of the huge checkbox input when checked.",
         "value": "{purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "focus-checked-border-color": {
         "comment": "The border color of the huge checkbox input when checked and focused.",
         "value": "{black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "checked-hover-border-color": {
         "comment": "The border color of the huge checkbox input when checked and hovered.",
         "value": "{black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
     "input-huge-max-width": {
       "comment": "The max-width of the huge checkbox input.",
       "value": "500px",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "transition": {
       "comment": "The transition for the checkbox when the input is checked or unchecked.",
       "value": "all 0.2s ease-in-out",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "custom-input": {
       "height": {
         "comment": "The height of the custom checkbox input.",
         "value": "1rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "width": {
         "comment": "The width of the custom checkbox input.",
         "value": "1rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "border": {
         "comment": "The border of the custom checkbox input.",
         "value": "2px solid {black-tint.50.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-focus": {
         "comment": "The border of the custom checkbox input when focused.",
         "value": "2px solid {purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-focus-checked": {
         "comment": "The border of the custom checkbox input when it is checked and focused.",
         "value": "2px solid {black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "background-color-focus": {
         "comment": "The background of the custom checkbox input when focused.",
         "value": "{gray.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "background-color-hover": {
         "comment": "The background color of the custom checkbox input when hovered.",
         "value": "{gray.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "background-color-checked": {
         "comment": "The background color of the custom checkbox input when checked.",
         "value": "{purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "background-color-disabled": {
         "comment": "The background color of the custom checkbox input when disabled.",
         "value": "transparent",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-color-checked": {
         "comment": "The border color of the custom checkbox input when checked.",
         "value": "{purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-color-hover": {
         "comment": "The border color of the custom checkbox input when hovered.",
         "value": "{black-tint.70.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-color-disabled": {
         "comment": "The border color of the custom checkbox input when disabled.",
         "value": "{black-tint.50.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "cursor-disabled": {
         "comment": "The cursor for the custom checkbox input when disabled..",
         "value": "default",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-radius": {
         "comment": "The border radius of the custom checkbox input.",
         "value": "3px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "top": {
         "comment": "The top positioning of the custom checkbox input.",
         "value": "0",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "left": {
         "comment": "The left positioning of the custom checkbox input.",
         "value": "-22px",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
@@ -950,43 +1074,49 @@
       "height": {
         "comment": "The height of the custom checkbox element of the huge checkbox input.",
         "value": "1.5rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "width": {
         "comment": "The width of the custom checkbox element of the huge checkbox input.",
         "value": "1.5rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "hover-border-color": {
         "comment": "The border color of the custom checkbox element of the huge checkbox input when hovered.",
         "value": "{black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "top": {
         "comment": "The top value of the custom checkbox element of the huge checkbox input..",
         "value": "{space.m.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "left": {
         "comment": "The left value of the custom checkbox element of the huge checkbox input..",
         "value": "{space.m.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "disabled-border-color": {
         "comment": "The border color of the custom checkbox element of the huge checkbox input when disabled.",
         "value": "{black-tint.50.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "checkbox-element-checked-border-color": {
         "comment": "The border color of the custom checkbox element of the huge checkbox input when checked.",
         "value": "{purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
@@ -995,25 +1125,37 @@
         "height": {
           "comment": "The height of the huge checkmark icon.",
           "value": "0.5rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "width": {
           "comment": "The width of the huge checkmark icon.",
           "value": "0.75rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "top": {
           "comment": "The top positioning of the huge checkmark icon.",
           "value": "22px",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "left": {
           "comment": "The left positioning of the huge checkmark icon.",
           "value": "22px",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         }
       }
@@ -1023,44 +1165,56 @@
         "height": {
           "comment": "The height of the checkmark icon.",
           "value": "0.45rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "width": {
           "comment": "The width of the checkmark icon.",
           "value": "0.65rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "top": {
           "comment": "The top positioning of the checkmark icon.",
           "value": "3px",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "left": {
           "comment": "The left positioning of the checkmark icon.",
           "value": "-19px",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         }
       },
       "border-left": {
         "comment": "The border settings to create the bottom portion of the checkmark.",
         "value": "2px solid {white.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-bottom": {
         "comment": "The border settings to create the right portion of the checkmark.",
         "value": "2px solid {white.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "transform": {
         "comment": "The rotation setting to create the checkmark.",
         "value": "rotate(-45deg)",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     }
@@ -1069,38 +1223,42 @@
     "color": {
       "comment": "The color of the helper text for Inputs.",
       "value": "{black-tint.70.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "line-height": {
       "comment": "The line height of the helper text for Inputs.",
       "value": "{text-input.line-height.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "margin": {
       "comment": "The margin of the helper text for Inputs.",
       "value": "{error-container-margin.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "font": {
       "size": {
         "comment": "The font size of the helper text for Inputs",
         "value": "0.8125rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size",
+          "type": "font"
+        },
+        "file": "settings",
         "themable": true
       },
       "weight": {
         "comment": "The font weight of the helper text for Inputs",
         "value": "{text-input.font.weight.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "family": {
         "comment": "The font family of the helper text for Inputs",
         "value": "{text-input.font.family.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     }
@@ -1109,26 +1267,26 @@
     "color": {
       "comment": "The color of the placeholder for Inputs",
       "value": "{black-tint.50.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "font": {
       "size": {
         "comment": "The font size of the placeholder for Inputs",
         "value": "{text-input.font.size.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "weight": {
         "comment": "The font weight of the placeholder for Inputs",
         "value": "{text-input.font.weight.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "family": {
         "comment": "The font family of the placeholder for Inputs",
         "value": "{text-input.font.family.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     }
@@ -1137,32 +1295,35 @@
     "margin": {
       "comment": "The margin of the selection container for Inputs.",
       "value": "0 {space.s.value} 0 0",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "label-font-weight": {
       "comment": "The font weight of the label in the selection container for Inputs.",
       "value": "300",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "input": {
       "height": {
         "comment": "The height of Input inside the selection container.",
         "value": "auto",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "width": {
         "comment": "The width of Input inside the selection container.",
         "value": "auto",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "margin": {
         "comment": "The margin of the Input inside the selection container.",
         "value": "0 {space.s.value} 0 0",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     }
@@ -1171,50 +1332,66 @@
     "max-width": {
       "comment": "The maximum width of the Date Picker popup.",
       "value": "20rem",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "border-radius": {
       "comment": "The border radius applied to the Date Picker popup.",
       "value": "4px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "button-size": {
       "comment": "The size of the buttons used internally by the Date Picker popup.",
       "value": "2.25rem",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "column-adjustment-x": {
       "comment": "The offset applied to columns used internally by the Date Picker.",
       "value": "0.25rem",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "box-shadow": {
       "comment": "The box shadow of the Date Picker.",
       "value": "0 4px 16px rgba(51, 51, 51, 0.1)",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "font": {
       "family": {
         "comment": "The font family in the Date Picker popup.",
-        "value": "{font-family.body.two.value}",
-        "type": "settings",
+        "value": "{font.family.body.two.value}",
+        "file": "settings",
         "themable": true
       },
       "size": {
         "comment": "The font size of the Date Picker popup.",
         "value": "1rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size",
+          "type": "font"
+        },
+        "file": "settings",
         "themable": true
       },
       "weight": {
         "comment": "The font weight of the Date Picker popup.",
         "value": "300",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
@@ -1222,126 +1399,138 @@
       "interact-color": {
         "comment": "Color used internally by Date Picker to highlight elements.",
         "value": "{purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "padding": {
         "comment": "The padding around the day in the Date Picker popup.",
         "value": "6px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "margin": {
         "comment": "The margin around the day in the Date Picker popup.",
         "value": "0 2px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "color": {
         "comment": "The color of the day in the Date Picker popup.",
         "value": "{white.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "hover-color": {
         "comment": "The color of the day in the Date Picker popup on hover.",
         "value": "{black.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "edge-day-color": {
         "comment": "The color of days in the Date Picker popup that are in the next month or disabled.",
         "value": "{black-tint.50.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
     "month-year-font-size": {
       "comment": "The font size of the month and year in the Date Picker popup.",
-      "value": "{font-size.display.six.value}",
-      "type": "settings",
+      "value": "{font.size.display.six.value}",
+      "file": "settings",
       "themable": true
     },
     "arrow-color": {
       "comment": "The color of the prev/next arrows in the Date Picker popup.",
       "value": "{black.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "modal": {
       "margin": {
         "comment": "The margin applied to the Date Picker popup.",
         "value": "{space.m.value} 0 0 0",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "margin-wide": {
         "comment": "The margin applied to the Date Picker popup on wide viewports.",
         "value": "2px",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "z-index": {
         "comment": "The z-index applied to the Date Picker popup.",
         "value": "{layer.height.m.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
     "years-modal-max-height": {
       "comment": "The value for max-height applied to the Date Picker popup.",
       "value": "500px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "selected-day-font-weight": {
       "comment": "Font weight used by the currently selected day in the Date Picker popup.",
       "value": "500",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "background": {
       "comment": "The value for background in the Date Picker.",
       "value": "{white.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "padding": {
       "comment": "The value for padding in the Date Picker.",
       "value": "{space.inset.s.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "padding-wide": {
       "comment": "The value for padding in the Date Picker on wide viewports.",
       "value": "{space.inset.m.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "header": {
       "border": {
         "comment": "The border setting for the header in the Date Picker.",
         "value": "1px solid {gray.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "padding": {
         "comment": "The padding setting for the header in the Date Picker.",
         "value": "0 0 {space.s.value} 0",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "font": {
         "weight": {
           "comment": "The font weight for the header in the Date Picker.",
           "value": "700",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "size": {
           "comment": "The font size for the header in the Date Picker.",
-          "value": "{font-size.body.three.value}",
-          "type": "settings",
+          "value": "{font.size.body.three.value}",
+          "file": "settings",
           "themable": true
         }
       }
@@ -1349,7 +1538,10 @@
     "col-header-padding": {
       "comment": "The padding around the month header in the Date Picker popup.",
       "value": "10px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     }
   },
@@ -1357,58 +1549,71 @@
     "padding": {
       "comment": "The padding applied to Input labels.",
       "value": "0",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "font": {
       "size": {
         "comment": "The font size applied to Input labels.",
         "value": "0.875rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size",
+          "type": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "weight": {
         "comment": "The font weight applied to Input labels.s.",
         "value": "400",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "family": {
         "comment": "The font family applied to Input labels.",
-        "value": "{font-family.body.two.value",
-        "type": "settings",
+        "value": "{font.family.body.two.value}",
+        "file": "settings",
         "themable": true
       }
     },
     "line-height": {
       "comment": "The line height applied to Input labels",
       "value": "1",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "margin": {
       "comment": "The margin applied to Input labels.",
       "value": "0 0 {space.s.value} 0",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "disabled-color": {
       "comment": "The color of the disabled Input labels.",
       "value": "{black-tint.50.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     }
   },
   "visibility-control-label-font-size": {
     "comment": "The font size used for visibility controls.",
     "value": "{label.font.size.value}",
-    "type": "settings",
+    "file": "settings",
     "themable": true
   },
   "visibility-control-margin": {
     "comment": "The margin surrounding visibility controls (Ex. 'Show SSN').",
     "value": "6px 0 0 0",
-    "type": "settings",
+    "attributes": {
+      "category": "size"
+    },
+    "file": "settings",
     "themable": true
   },
   "radio-input": {
@@ -1416,88 +1621,97 @@
       "max-width": {
         "comment": "The max-width of the huge radio input.",
         "value": "31.25rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "transition": {
         "comment": "The transition for the huge radio input.",
         "value": "{radio-input.transition.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "label": {
         "border": {
           "comment": "The border for the huge radio input label.",
           "value": "2px solid {black-tint.50.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "border-radius": {
           "comment": "The border-radius for the huge radio input label.",
           "value": "4px",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "padding": {
           "comment": "The padding for the huge radio input label.",
           "value": "1.25rem 1rem 1.25rem 3.4375rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "flex-basis": {
           "comment": "he flex-basis for the huge radio input label.",
           "value": "100%",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "line-height": {
           "comment": "The line-height for the huge radio input label.",
           "value": "1rem",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "hover-border-color": {
           "comment": "The border color of the huge radio input label on hover.",
           "value": "{black.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "hover-box-shadow": {
           "comment": "The box shadow of the huge radio input label on hover.",
           "value": "{input.huge.box-shadow.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         }
       },
       "focused-label-border": {
         "comment": "The border color of the huge radio input label when it has focus.",
         "value": "{gray.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "checked": {
         "label-border": {
           "comment": "The border color of the huge radio input label when it is selected.",
           "value": "{purple.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "hover-label-border": {
           "comment": "The margin surrounding visibility controls (Ex. 'Show SSN').",
           "value": "6px 0 0 0",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "hover-label-border-color": {
           "comment": "The border color of the huge radio input label when it is selected and hovered.",
           "value": "{black.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "hover-outer-circle-border-color": {
           "comment": "The border color of the outer circle of the huge when it is selected and hovered.",
           "value": "{purple.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         }
       },
@@ -1505,82 +1719,94 @@
         "height": {
           "comment": "The height of the inner circle of the huge radio input.",
           "value": "1rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "width": {
           "comment": "The width of the inner circle of the huge radio input.",
           "value": "1rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "left": {
           "comment": "The left value of the inner circle of the huge radio input.",
           "value": "1.25rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "top": {
           "comment": "The top value of the inner circle of the huge radio input.",
           "value": "1.25rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         }
       },
       "focused-outer-circle-border-background-color": {
         "comment": "The background color of the outer circle of the huge radio input when it has focus.",
         "value": "{gray.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "outer-circle": {
         "border-hover-background-color": {
           "comment": "The background color of the outer circle of the huge radio input on hover.",
           "value": "{gray.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "border-hover-disabled": {
           "comment": "The border of the outer circle of the huge radio input when it is disabled and hovered.",
           "value": "{radio-input.outer-circle.border-hover-disabled.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "width": {
           "comment": "The width of the outer circle of the huge radio input.",
           "value": "1.5rem",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "height": {
           "comment": "The height of the outer circle of the huge radio input.",
           "value": "1.5rem",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "top": {
           "comment": "The top value of the outer circle of the huge radio input.",
           "value": "1rem",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "left": {
           "comment": "The left value of the outer circle of the huge radio input.",
           "value": "1rem",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "box-shadow-hover-disabled": {
           "comment": "The box shadow of the outer circle of the huge radio input when it is disabled and hovered.",
           "value": "none",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         }
       },
       "disabled-background-color": {
         "comment": "The background color of the huge radio input when it is disabled.",
         "value": "{text-input.disabled-background-color.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
@@ -1588,61 +1814,61 @@
       "hover-border": {
         "comment": "The border of the outer circle in the radio input on hover.",
         "value": "2px solid {black-tint.70.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "focus-border": {
         "comment": "The border of the outer circle in the radio input on focus.",
         "value": "2px solid {purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "focus-border-disabled": {
         "comment": "The border of the outer circle in the disabled radio input on focus.",
         "value": "2px solid {black-tint.50.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-hover-disabled": {
         "comment": "The border of the outer circle in the disabled radio input on hover.",
         "value": "2px solid {black-tint.50.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border-checked": {
         "comment": "The border of the outer circle in the radio input when checked.",
         "value": "2px solid {purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "border": {
         "comment": "The border of the outer circle in the radio input.",
         "value": "2px solid {black-tint.50.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "width": {
         "comment": "The width of the outer circle in the radio input.",
         "value": "1rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "height": {
         "comment": "The height of the outer circle in the radio input.",
         "value": "1rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "top": {
         "comment": "The top value of the outer circle in the radio input.",
         "value": "0",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "left": {
         "comment": "The left value of the outer circle in the radio input.",
         "value": "-1.375rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
@@ -1650,56 +1876,59 @@
       "width": {
         "comment": "The width of the inner circle in the radio input.",
         "value": "0.5rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "background-color": {
         "comment": "The background color of the inner circle in the radio input.",
         "value": "{purple.value}",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "height": {
         "comment": "The height of the inner circle in the radio input.",
         "value": "0.5rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "top": {
         "comment": "The top value of the inner circle in the radio input.",
         "value": "0.25rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       },
       "left": {
         "comment": "The left value of the inner circle in the radio input.",
         "value": "-1.125rem",
-        "type": "settings",
+        "file": "settings",
         "themable": true
       }
     },
     "opacity": {
       "comment": "The opacity value for the radio input.",
       "value": "0",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "transition": {
       "comment": "The transition for the radio input.",
       "value": "all 0.2s ease-in-out",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "border-radius": {
       "comment": "The border radius of the circle in the radio input.",
       "value": "50%",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "cursor-hover-disabled": {
       "comment": "The cursor style of the disabled radio on hover.",
       "value": "default",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     }
   }

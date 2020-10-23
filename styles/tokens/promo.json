@@ -3,67 +3,83 @@
     "background-color": {
       "comment": "The background color of the Promo component.",
       "value": "{white.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "border": {
       "comment": "The border of the Promo component.",
       "value": "1px solid {black-tint.40.value}",
-      "type": "settings",
+      "file": "settings",
       "themable": true
     },
     "max-width": {
       "comment": "The maximum width of the Promo component.",
       "value": "42.5rem",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "breakpoint": {
       "comment": "The Promo component breakpoint at which large viewport styles begin.",
       "value": "42.5rem",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     },
     "image": {
       "narrow-max-height": {
         "comment": "The maximum height of the image in the Promo component on narrow viewports.",
         "value": "20rem",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       },
       "narrow-max-width": {
         "comment": "The maximum width of the image in the Promo component on narrow viewports.",
         "value": "50%",
-        "type": "settings",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
         "themable": true
       }
     },
     "title": {
-      "font-color": {
-        "comment": "The title font color of the Promo component.",
-        "value": "{black.value}",
-        "type": "settings",
-        "themable": true
-      },
-      "font-weight": {
-        "comment": "The title font weight of the Promo component.",
-        "value": "{font-weight.display.four.value}",
-        "type": "settings",
-        "themable": true
+      "font": {
+        "color": {
+          "comment": "The title font color of the Promo component.",
+          "value": "{black.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "weight": {
+          "comment": "The title font weight of the Promo component.",
+          "value": "{font.weight.display.four.value}",
+          "file": "settings",
+          "themable": true
+        }
       }
     },
     "subtitle": {
-      "font-color": {
-        "comment": "The subtitle font color of the Promo component.",
-        "value": "{black.value}",
-        "type": "settings",
-        "themable": true
-      },
-      "font-weight": {
-        "comment": "The subtitle font weight of the Promo component.",
-        "value": "{font-weight.body.one.value}",
-        "type": "settings",
-        "themable": true
+      "font": {
+      "color": {
+          "comment": "The subtitle font color of the Promo component.",
+          "value": "{black.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "weight": {
+          "comment": "The subtitle font weight of the Promo component.",
+          "value": "{font.weight.body.one.value}",
+          "file": "settings",
+          "themable": true
+        }
       }
     }
   }

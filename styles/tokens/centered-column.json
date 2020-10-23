@@ -3,7 +3,10 @@
     "width": {
       "comment": "Width value for the Centered Column layout container.",
       "value": "1232px",
-      "type": "settings",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
       "themable": true
     }
   }

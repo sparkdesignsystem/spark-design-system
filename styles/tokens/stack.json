@@ -4,56 +4,56 @@
         "tiny": {
           "comment": "The spacing of the tiny Stack object.",
           "value": "{space.xs.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "small": {
           "comment": "The spacing of the small Stack object.",
           "value": "{space.s.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "medium": {
           "comment": "The spacing of the medium Stack object.",
           "value": "{space.m.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "large": {
           "comment": "The spacing of the large Stack object.",
           "value": "{space.l.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "huge": {
           "comment": "The spacing of the huge Stack object.",
           "value": "{space.xl.value}",
-          "type": "settings",
+          "file": "settings",
           "themable": true
         },
         "misc": {
           "a": {
             "comment": "The spacing of the Misc A Stack object.",
             "value": "{space.misc.a.value}",
-            "type": "settings",
+            "file": "settings",
             "themable": true
           },
           "b": {
             "comment": "The spacing of the Misc B Stack object.",
             "value": "{space.misc.b.value}",
-            "type": "settings",
+            "file": "settings",
             "themable": true
           },
           "c": {
             "comment": "The spacing of the Misc C Stack object.",
             "value": "{space.misc.c.value}",
-            "type": "settings",
+            "file": "settings",
             "themable": true
           },
           "d": {
             "comment": "The spacing of the Misc D Stack object.",
             "value": "{space.misc.d.value}",
-            "type": "settings",
+            "file": "settings",
             "themable": true
           }
         }
@@ -64,37 +64,55 @@
         "xxs": {
           "comment": "The breakpoint for Stack objects that split at the extra extra small point.",
           "value": "20rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "xs": {
           "comment": "The breakpoint for Stack objects that split at the extra small point.",
           "value": "30rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "s": {
           "comment": "The breakpoint for Stack objects that split at the small point.",
           "value": "42.5rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "m": {
           "comment": "The breakpoint for Stack objects that split at the medium point.",
           "value": "55rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "l": {
           "comment": "The breakpoint for Stack objects that split at the large point.",
           "value": "67.5rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         },
         "xl": {
           "comment": "The breakpoint for Stack objects that split at the extra large point.",
           "value": "80rem",
-          "type": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
           "themable": true
         }
       }
