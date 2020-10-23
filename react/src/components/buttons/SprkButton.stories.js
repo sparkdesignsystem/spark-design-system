@@ -12,35 +12,29 @@ export default {
     info: `
 ${markdownDocumentationLinkBuilder('button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
-The Button component can use either a button (\`<button>\`)
-or anchor (\`<a>\`) HTML element. It is very important
-for accessibility to choose the correct element.
+SprkButton can either be a button (\`<button>\`)
+or an anchor (\`<a>\`) element. It is very important
+for accessibility to choose the correct HTML element.
 
-- Button should use an \`<a>\` element if it navigates to a new page.
-- Button should use a \`<button>\` element if it is performing
+- SprkButton should use an \`<a>\` element if it navigates to a new page.
+- SprkButton should use a \`<button>\` element if it is performing
 an action, such as: “Submit”, “Add”, “Join”,” etc.
-- A Button that does not go to a new page will almost
+- A SprkButton that does not go to a new page will almost
 always use a \`<button>\` element.
 - Spinner state requires additional engineering.
-Use app state to conditionally render between button text and spinner.
-Use \`isLoading\` on SprkButton when spinner is present.
+  - Use app state to conditionally render between button text and spinner.
+  - Use \`isLoading\` on SprkButton when spinner is present.
 
 ##### Accessibility
-- If a Button is using an \`<a>\` element, you
-must include a \`title=””\` attribute.
-- If a Button only includes an Icon with no text,
-alternative text must be provided.
-- Screen readers will read SprkSpinner as "Loading" by default.
-Change to give further context for screen readers.
+- If SprkButton is using an \`<a>\` element, include a \`title=””\` attribute.
+- If SprkButton contains an Icon with no text,
+provide alternative text for screen readers.
+- Screen readers read SprkSpinner as "Loading" by default.
+This can change through the \`altText\` prop on SprkSpinner.
 
 ##### Guidelines
-- If a Button is in a form, but is not intended to
-submit the form, the attribute \`type=”button”\` must be used.
-- If a Button submits a form, do not use \`<input type="submit">\`.
-Instead use \`<button type=”submit”>\`
-- If a Button is Disabled, you must add the \`isDisabled\` attribute
-in addition to the \`sprk-is-Disabled\` class so that it doesn’t
-receive interaction.
+- If SprkButton is in a form, but is not intended to
+submit the form, add \`type=”button”\` the attribute.
 `,
   },
 };
