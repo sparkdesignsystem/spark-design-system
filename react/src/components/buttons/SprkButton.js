@@ -48,7 +48,7 @@ const SprkButton = ({
         { 'sprk-c-Button--secondary': variant === 'secondary' },
         { 'sprk-c-Button--tertiary': variant === 'tertiary' },
         { 'sprk-c-Button--quaternary': variant === 'quaternary' },
-        { 'sprk-is-Disabled': isDisabled || disabled },
+        { 'sprk-is-Disabled': isDisabled },
         { 'sprk-c-Button--loading': isLoading },
         additionalClasses,
       )}
