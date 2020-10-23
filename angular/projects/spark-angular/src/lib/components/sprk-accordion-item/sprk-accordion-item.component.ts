@@ -98,8 +98,10 @@ export class SprkAccordionItemComponent implements OnInit {
    */
   @Input()
   isOpen = false;
+  // TODO remove as part of issue XXXX
   /**
-   * If `true`, the active CSS class will be applied to the item.
+   * Deprecated - use additionalClasses instead. If `true`, the active class
+   * will be applied to the item.
    */
   @Input()
   isActive: boolean;
@@ -222,6 +224,10 @@ export class SprkAccordionItemComponent implements OnInit {
 
     if (this.isOpen) {
       classArray.push('sprk-c-Accordion__item--open');
+    }
+
+    if (this.isActive) {
+      classArray.push('sprk-c-Accordion__item--active');
     }
 
     if (this.additionalClasses) {

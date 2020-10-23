@@ -155,6 +155,15 @@ describe('SprkAccordionItemComponent', () => {
     expect(accordionItemElement.getAttribute('data-id')).toBeNull();
   });
 
+  // TODO remove
+  it('should set the active class if isActive is true', () => {
+    component.isActive = true;
+    fixture.detectChanges();
+    expect(
+      accordionItemElement.classList.contains('sprk-c-Accordion__item--active'),
+    ).toEqual(true);
+  });
+
   it('should render with a button element', () => {
     fixture.detectChanges();
     expect(accordionItemTriggerElement).toBeTruthy();
