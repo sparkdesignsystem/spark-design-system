@@ -3,7 +3,7 @@ import * as _ from 'lodash';
 import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 
 // TODO Remove title, additionalHeadingClasses, iconTypeClosed, and
-// iconTypeOpen as part of Issue XXXX
+// iconTypeOpen as part of Issue 3597
 @Component({
   selector: 'sprk-accordion-item',
   template: `
@@ -47,7 +47,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
   animations: [toggleAnimations.toggleContent],
 })
 export class SprkAccordionItemComponent implements OnInit {
-  // TODO
+  // TODO - Remove as part of Issue 3597
   /**
    * Deprecated: use `heading` instead. The value supplied will be
    * rendered inside the heading area of the Accordion Item.
@@ -78,7 +78,7 @@ export class SprkAccordionItemComponent implements OnInit {
    */
   @Input()
   additionalClasses: string;
-  // TODO
+  // TODO - Remove as part of Issue 3597
   /**
    * Deprecated - use `headingAdditionalClasses` instead. Expects a space
    * separated string of classes to be added to the heading in the Accordion
@@ -98,7 +98,7 @@ export class SprkAccordionItemComponent implements OnInit {
    */
   @Input()
   isOpen = false;
-  // TODO remove as part of issue XXXX
+  // TODO - Remove as part of Issue 3597
   /**
    * Deprecated - use additionalClasses instead. If `true`, the active class
    * will be applied to the item.
@@ -106,7 +106,7 @@ export class SprkAccordionItemComponent implements OnInit {
   @Input()
   isActive: boolean;
   // TODO - Remove this input and move the default value to iconNameClosed
-  // as part of issue XXXX
+  // as part of issue 3597
   /**
    * Deprecated - use `iconNameClosed` instead. The name of the icon to use for
    * a closed Accordion Item.
@@ -119,7 +119,7 @@ export class SprkAccordionItemComponent implements OnInit {
   @Input()
   iconNameClosed;
   // TODO - Remove this input and move the default value to iconNameOpen
-  // as part of issue XXXX
+  // as part of issue 3597
   /**
    * Deprecated - use `iconNameOpen` instead. The name of the icon to use for
    * an open Accordion Item.
@@ -188,12 +188,12 @@ export class SprkAccordionItemComponent implements OnInit {
   toggleState(): void {
     if (this.isOpen) {
       this.animState = 'open';
-      // TODO
+      // TODO - Remove iconTypeOpen as part of Issue 3597
       this.currentIconType = this.iconNameOpen || this.iconTypeOpen;
       this.iconStateClass = 'sprk-c-Icon--open';
     } else {
       this.animState = 'closed';
-      // TODO
+      // TODO - Remove iconTypeClosed as part of Issue 3597
       this.currentIconType = this.iconNameClosed || this.iconTypeClosed;
       this.iconStateClass = '';
     }
@@ -248,7 +248,7 @@ export class SprkAccordionItemComponent implements OnInit {
       'sprk-b-TypeDisplaySeven',
     ];
 
-    // TODO
+    // TODO - Remove additionalHeadingClasses as part of Issue 3597
     const additionalClasses =
       this.headingAdditionalClasses || this.additionalHeadingClasses;
 

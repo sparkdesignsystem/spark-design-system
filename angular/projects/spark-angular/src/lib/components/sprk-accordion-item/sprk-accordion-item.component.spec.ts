@@ -48,7 +48,7 @@ describe('SprkAccordionItemComponent', () => {
     );
   });
 
-  // TODO
+  // TODO - Remove as part of Issue 3597
   it('should add classes if additionalHeadingClasses has a value', () => {
     component.additionalHeadingClasses = 'sprk-u-man';
     fixture.detectChanges();
@@ -65,7 +65,7 @@ describe('SprkAccordionItemComponent', () => {
     );
   });
 
-  // TODO
+  // TODO - Remove as part of Issue 3597
   it('should prefer headingAdditionalClasses over additionalHeadingClasses', () => {
     component.headingAdditionalClasses = 'should-add';
     component.additionalHeadingClasses = 'should-not-add';
@@ -109,7 +109,7 @@ describe('SprkAccordionItemComponent', () => {
     expect(component.isOpen).toEqual(false);
   });
 
-  // TODO
+  // TODO - Remove as part of Issue 3597
   it('should set the heading to title', () => {
     component.title = 'This is a title';
     fixture.detectChanges();
@@ -126,7 +126,7 @@ describe('SprkAccordionItemComponent', () => {
     );
   });
 
-  // TODO
+  // TODO - Remove as part of Issue 3597
   it('should prefer heading over title', () => {
     component.heading = 'heading';
     component.title = 'title';
@@ -155,7 +155,7 @@ describe('SprkAccordionItemComponent', () => {
     expect(accordionItemElement.getAttribute('data-id')).toBeNull();
   });
 
-  // TODO remove
+  // TODO - Remove as part of Issue 3597
   it('should set the active class if isActive is true', () => {
     component.isActive = true;
     fixture.detectChanges();
@@ -257,7 +257,7 @@ describe('SprkAccordionItemComponent', () => {
     expect(accordionContentsElement.classList.toString()).toContain(testString);
   });
 
-  // TODO
+  // TODO - Remove as part of Issue 3597
   it('should add closed icon from iconTypeClosed', () => {
     component.isOpen = false;
     component.iconTypeClosed = 'exclamation';
@@ -276,7 +276,7 @@ describe('SprkAccordionItemComponent', () => {
     ).toEqual('#exclamation');
   });
 
-  // TODO
+  // TODO - Remove as part of Issue 3597
   it('should prefer iconNameClosed over iconTypeClosed', () => {
     component.isOpen = false;
     component.iconTypeClosed = 'message';
@@ -287,7 +287,7 @@ describe('SprkAccordionItemComponent', () => {
     ).toEqual('#exclamation');
   });
 
-  // TODO
+  // TODO - Remove as part of Issue 3597
   it('should add open icon from iconTypeOpen', () => {
     component.isOpen = true;
     component.iconTypeOpen = 'exclamation';
@@ -306,7 +306,7 @@ describe('SprkAccordionItemComponent', () => {
     ).toEqual('#exclamation');
   });
 
-  // TODO
+  // TODO - Remove as part of Issue 3597
   it('should prefer iconNameOpen over iconTypeOpen', () => {
     component.isOpen = true;
     component.iconTypeOpen = 'message';
