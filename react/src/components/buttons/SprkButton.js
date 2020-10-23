@@ -8,8 +8,8 @@ const SprkButton = ({
   additionalClasses,
   analyticsString,
   children,
-  isDisabled,
   disabled,
+  isDisabled = disabled,
   element,
   idString,
   isLoading,
@@ -48,7 +48,7 @@ const SprkButton = ({
         { 'sprk-c-Button--secondary': variant === 'secondary' },
         { 'sprk-c-Button--tertiary': variant === 'tertiary' },
         { 'sprk-c-Button--quaternary': variant === 'quaternary' },
-        { 'sprk-is-Disabled': isDisabled || disabled },
+        { 'sprk-is-Disabled': isDisabled },
         { 'sprk-c-Button--loading': isLoading },
         additionalClasses,
       )}
@@ -57,7 +57,7 @@ const SprkButton = ({
       data-analytics={analyticsString}
       // TODO: Remove disabled on next release #3557
       disabled={
-        TagName !== 'a' ? isDisabled || disabled || isLoading : undefined
+        TagName !== 'a' ? isDisabled || isLoading : undefined
       }
       href={TagName !== 'button' ? href : undefined}
       {...rest}
