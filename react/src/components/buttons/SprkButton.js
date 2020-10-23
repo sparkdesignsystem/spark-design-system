@@ -56,9 +56,7 @@ const SprkButton = ({
       data-id={idString}
       data-analytics={analyticsString}
       // TODO: Remove disabled on next release #3557
-      disabled={
-        TagName !== 'a' ? isDisabled || isLoading : undefined
-      }
+      disabled={TagName !== 'a' ? isDisabled || isLoading : undefined}
       href={TagName !== 'button' ? href : undefined}
       {...rest}
       // TODO: Remove loading on next release #3557
@@ -148,8 +146,6 @@ SprkButton.propTypes = {
 
 // TODO: Remove disabled and spinningAriaLabel on next release #3557
 SprkButton.defaultProps = {
-  isDisabled: false,
-  disabled: false,
   variant: 'primary',
   loading: false,
   spinningAriaLabel: 'Loading',

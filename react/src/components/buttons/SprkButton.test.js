@@ -189,7 +189,7 @@ describe('SprkButton:', () => {
   // TODO: Remove deprecated disabled on next release #3557
   it(
     'it should apply the disabled attribute if the element is a button' +
-      ' and disabled is true',
+      ' and deprecated disabled is true',
     () => {
       const wrapper = mount(<SprkButton disabled />);
       const button = wrapper.find('button');
