@@ -2,8 +2,8 @@ import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import * as _ from 'lodash';
 import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 
-// TODO Remove title, additionalHeadingClasses, iconTypeClosed, and
-// iconTypeOpen as part of Issue 3597
+// TODO Remove title, additionalHeadingClasses, iconTypeClosed,
+// iconTypeOpen, isActive as part of Issue 3597
 @Component({
   selector: 'sprk-accordion-item',
   template: `
@@ -33,7 +33,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 
         <sprk-icon
           [additionalClasses]="getIconClasses()"
-          [iconName]="currentIconType"
+          [iconName]="currentIconName"
         ></sprk-icon>
       </button>
 
@@ -169,10 +169,11 @@ export class SprkAccordionItemComponent implements OnInit {
    * @ignore
    */
   accordion_controls_id = `accordionHeading__${this.componentID}`;
+  // TODO replace default value with iconNameClosed as part of issue 3597
   /**
    * @ignore
    */
-  public currentIconType = this.iconTypeClosed;
+  public currentIconName = this.iconTypeClosed;
   /**
    * @ignore
    */
@@ -189,12 +190,12 @@ export class SprkAccordionItemComponent implements OnInit {
     if (this.isOpen) {
       this.animState = 'open';
       // TODO - Remove iconTypeOpen as part of Issue 3597
-      this.currentIconType = this.iconNameOpen || this.iconTypeOpen;
+      this.currentIconName = this.iconNameOpen || this.iconTypeOpen;
       this.iconStateClass = 'sprk-c-Icon--open';
     } else {
       this.animState = 'closed';
       // TODO - Remove iconTypeClosed as part of Issue 3597
-      this.currentIconType = this.iconNameClosed || this.iconTypeClosed;
+      this.currentIconName = this.iconNameClosed || this.iconTypeClosed;
       this.iconStateClass = '';
     }
   }
