@@ -8,10 +8,11 @@ describe('SprkModalComponent', () => {
   let modalElement: HTMLElement;
   let confirmButtonElement: HTMLElement;
   let cancelElement: HTMLElement;
+  let closeElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkModalComponent, SprkIconComponent]
+      declarations: [SprkModalComponent, SprkIconComponent],
     }).compileComponents();
   }));
 
@@ -23,11 +24,12 @@ describe('SprkModalComponent', () => {
     fixture.detectChanges();
     modalElement = fixture.nativeElement.querySelector('.sprk-c-Modal');
     confirmButtonElement = fixture.nativeElement.querySelector(
-      'footer .sprk-c-Button'
+      'footer .sprk-c-Button',
     );
     cancelElement = fixture.nativeElement.querySelector(
-      'footer .sprk-c-Button.sprk-c-Button--tertiary'
+      'footer .sprk-c-Button.sprk-c-Button--tertiary',
     );
+    closeElement = fixture.nativeElement.querySelector('header button');
   });
 
   afterEach(() => {
@@ -61,13 +63,13 @@ describe('SprkModalComponent', () => {
     component.title = 'This is my title';
     fixture.detectChanges();
     expect(
-      modalElement.querySelector('.sprk-c-Modal__heading').textContent.trim()
+      modalElement.querySelector('.sprk-c-Modal__heading').textContent.trim(),
     ).toEqual('This is my title');
   });
 
-  it('should emit confirmClick when the confirm button is clicked', done => {
+  it('should emit confirmClick when the confirm button is clicked', (done) => {
     let called = false;
-    component.confirmClick.subscribe(g => {
+    component.confirmClick.subscribe((g) => {
       called = true;
       done();
     });
@@ -75,10 +77,10 @@ describe('SprkModalComponent', () => {
     expect(called).toEqual(true);
   });
 
-  it('should emit cancelClick when cancel is clicked', done => {
+  it('should emit cancelClick when cancel is clicked', (done) => {
     let called = false;
     fixture.detectChanges();
-    component.cancelClick.subscribe(g => {
+    component.cancelClick.subscribe((g) => {
       called = true;
       done();
     });
@@ -86,29 +88,29 @@ describe('SprkModalComponent', () => {
     expect(called).toEqual(true);
   });
 
-  it('should emit hide when Escape is pressed', done => {
+  it('should emit hide when Escape is pressed', (done) => {
     let called = false;
-    component.hide.subscribe(g => {
+    component.hide.subscribe((g) => {
       called = true;
       done();
     });
     const event = new KeyboardEvent('keydown', {
-      key: 'Escape'
+      key: 'Escape',
     });
     document.dispatchEvent(event);
     expect(called).toEqual(true);
   });
 
-  it('should not emit hide when Escape is pressed on a wait type', done => {
+  it('should not emit hide when Escape is pressed on a wait type', (done) => {
     let called = false;
     component.modalType = 'wait';
     fixture.detectChanges();
-    component.hide.subscribe(g => {
+    component.hide.subscribe((g) => {
       called = true;
       done();
     });
     const event = new KeyboardEvent('keydown', {
-      key: 'Escape'
+      key: 'Escape',
     });
     document.dispatchEvent(event);
     // wait for 500ms then go, the expected behavior causes a timeout
@@ -118,16 +120,16 @@ describe('SprkModalComponent', () => {
     }, 500);
   });
 
-  it('should do nothing when a key is pressed that is not Escape', done => {
+  it('should do nothing when a key is pressed that is not Escape', (done) => {
     let called = false;
     component.isVisible = false;
     fixture.detectChanges();
-    component.hide.subscribe(g => {
+    component.hide.subscribe((g) => {
       called = true;
       done();
     });
     const event = new KeyboardEvent('keydown', {
-      key: 'Control'
+      key: 'Control',
     });
     document.dispatchEvent(event);
     // wait for 500ms then go, the expected behavior causes a timeout
@@ -148,5 +150,20 @@ describe('SprkModalComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(modalElement.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should add analyticsString to close modal button when analyticsString has a value', () => {
+    const closeAnalyticsString = 'closeModal';
+    component.closeAnalyticsString = closeAnalyticsString;
+    fixture.detectChanges();
+    expect(closeElement.getAttribute('data-analytics')).toEqual(
+      closeAnalyticsString,
+    );
+  });
+
+  it('should not add analyticsString to close modal button when analyticsString has no value', () => {
+    component.closeAnalyticsString = null;
+    fixture.detectChanges();
+    expect(closeElement.getAttribute('data-analytics')).toBeNull();
   });
 });
