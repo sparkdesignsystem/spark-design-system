@@ -97,8 +97,8 @@ export class SprkAccordionItemComponent implements OnInit {
   isOpen = false;
   // TODO - Remove as part of Issue 3597
   /**
-   * Deprecated - use additionalClasses instead. If `true`, the active class
-   * will be applied to the item.
+   * Deprecated. If `true`, the active class will be applied to the Accordion
+   * Item.
    */
   @Input()
   isActive: boolean;
