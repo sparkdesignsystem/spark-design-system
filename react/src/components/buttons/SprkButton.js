@@ -147,7 +147,6 @@ SprkButton.propTypes = {
 // TODO: Remove disabled and spinningAriaLabel on next release #3557
 SprkButton.defaultProps = {
   variant: 'primary',
-  loading: false,
   spinningAriaLabel: 'Loading',
 };
 
