@@ -172,6 +172,12 @@
   }
 }
 
+.sprk-c-Masthead__link.sprk-b-Link--simple:hover {
+  .sprk-c-Icon {
+    color: $sprk-masthead-simple-link-icon-hover-color;
+  }
+}
+
 // Selector has 100% default width
 // then grows to size of content on larger views
 .sprk-c-Masthead__selector {
