@@ -12,8 +12,8 @@ const SprkButton = ({
   isDisabled = disabled,
   element,
   idString,
-  isLoading,
   loading,
+  isLoading = loading,
   variant,
   href,
   spinningAriaLabel,
@@ -30,7 +30,7 @@ const SprkButton = ({
 
   // TODO: Remove anything related to spinner from button on next release #3557
   let spinnerVariant;
-  if (loading) {
+  if (isLoading) {
     if (variant === 'secondary') {
       spinnerVariant = 'primary';
     }
@@ -60,12 +60,12 @@ const SprkButton = ({
       href={TagName !== 'button' ? href : undefined}
       {...rest}
       // TODO: Remove loading on next release #3557
-      {...(loading && { 'aria-label': spinningAriaLabel })}
+      {...(isLoading && { 'aria-label': spinningAriaLabel })}
       {...(isLoading && { 'aria-live': 'polite' })}
     >
       {/* TODO: Remove anything related to spinner from button
       on next release #3557 */}
-      {(loading && <SprkSpinner variant={spinnerVariant} />) || children}
+      {(isLoading && <SprkSpinner variant={spinnerVariant} />) || children}
     </TagName>
   );
 };
