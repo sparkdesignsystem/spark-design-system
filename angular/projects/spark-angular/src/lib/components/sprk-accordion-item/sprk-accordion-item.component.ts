@@ -22,7 +22,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
         <span [ngClass]="getHeadingClasses()">
           <sprk-icon
             *ngIf="leadingIcon"
-            [iconType]="leadingIcon"
+            [iconName]="leadingIcon"
             additionalClasses="
               sprk-c-Icon--filled-current-color
               sprk-c-Icon--xl
@@ -33,7 +33,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 
         <sprk-icon
           [additionalClasses]="getIconClasses()"
-          [iconType]="currentIconType"
+          [iconName]="currentIconType"
         ></sprk-icon>
       </button>
 
