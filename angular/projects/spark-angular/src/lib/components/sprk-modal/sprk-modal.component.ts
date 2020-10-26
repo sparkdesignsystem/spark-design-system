@@ -125,12 +125,10 @@ export class SprkModalComponent {
   @Input()
   cancelAnalyticsString: string;
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute
+   * on the close button. Intended
+   * for an outside library to capture data.
    */
   @Input()
   closeAnalyticsString: string;
