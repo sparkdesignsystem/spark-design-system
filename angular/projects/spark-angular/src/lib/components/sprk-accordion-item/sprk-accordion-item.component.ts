@@ -23,10 +23,7 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
           <sprk-icon
             *ngIf="leadingIcon"
             [iconName]="leadingIcon"
-            additionalClasses="
-              sprk-c-Icon--filled-current-color
-              sprk-c-Icon--xl
-              sprk-u-mrs"
+            [additionalClasses]="getLeadingIconClasses()"
           ></sprk-icon>
           {{ heading || title }}
         </span>
@@ -133,10 +130,15 @@ export class SprkAccordionItemComponent implements OnInit {
   iconNameOpen;
   /**
    * The name of the icon to use before the heading in the Accordion Item.
-   * This is optional.
    */
   @Input()
   leadingIcon: string;
+  /**
+   * Expects a space separated string of classes to be added to the leading
+   * icon before the heading in the Accordion Item.
+   */
+  @Input()
+  leadingIconAdditionalClasses: string;
   /**
    * Expects a space separated string of classes to be added to the Accordion
    * Item icon.
@@ -275,6 +277,25 @@ export class SprkAccordionItemComponent implements OnInit {
 
     if (this.iconAdditionalClasses) {
       this.iconAdditionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getLeadingIconClasses(): string {
+    const classArray: string[] = [
+      'sprk-c-Icon--filled-current-color',
+      'sprk-c-Icon--xl',
+      'sprk-u-mrs',
+    ];
+
+    if (this.leadingIconAdditionalClasses) {
+      this.leadingIconAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }

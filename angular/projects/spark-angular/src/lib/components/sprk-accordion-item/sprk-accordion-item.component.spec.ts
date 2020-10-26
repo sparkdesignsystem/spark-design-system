@@ -337,4 +337,25 @@ describe('SprkAccordionItemComponent', () => {
     accordionItemTriggerElement.click();
     expect(closedEventEmitted).toEqual(true);
   });
+
+  it('should correctly add leading icon', () => {
+    component.leadingIcon = 'exclamation';
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement
+        .querySelector('svg')
+        .querySelector('use')
+        .getAttribute('xlink:href'),
+    ).toEqual('#exclamation');
+  });
+
+  it('should correctly add additional classes to the leading icon', () => {
+    const testString = 'test';
+    component.leadingIcon = 'exclamation';
+    component.leadingIconAdditionalClasses = testString;
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('svg').classList.toString(),
+    ).toContain(testString);
+  });
 });
