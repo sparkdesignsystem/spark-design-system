@@ -72,10 +72,6 @@ module.exports = {
           format: 'android/dimens',
         },
         {
-          destination: 'spark_integers.xml',
-          format: 'android/integers',
-        },
-        {
           destination: 'spark_strings.xml',
           format: 'android/strings',
         },
@@ -90,7 +86,7 @@ module.exports = {
           destination: `SparkDesignTokens.swift`,
           className: `SparkDesignTokens`,
           format: ['ios-swift/class.swift'],
-          filter: 'filter-ios',
+          filter: 'filter-mobile',
         },
       ],
     },

@@ -16,7 +16,7 @@ StyleDictionary.registerFormat({
 });
 
 StyleDictionary.registerFilter({
-  name: 'filter-ios',
+  name: 'filter-mobile',
   // eslint-disable-next-line consistent-return
   matcher: (prop) => {
     if (prop.attributes) {
