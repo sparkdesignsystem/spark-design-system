@@ -56,6 +56,9 @@
       "shadow": {
         "comment": "The box shadow on the Modal.",
         "value": "0 4px 5px rgba(0, 0, 0, 0.6)",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },

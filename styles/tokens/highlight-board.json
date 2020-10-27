@@ -3,24 +3,36 @@
       "breakpoint": {
         "comment": "The Highlight Board breakpoint at which styles change for padding, font size and button width.",
         "value": "30rem",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       },
       "content-width": {
         "comment": "The maximum width of the content for the Highlight Board when it has an image.",
         "value": "30rem",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       },
       "type-reduction-percentage": {
         "comment": "Percentage reduction value for the font size in the Highlight Board in narrow viewports.",
         "value": "0.8",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       },
       "height": {
         "comment": "The height of the Highlight Board image",
         "value": "31.25rem",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       },

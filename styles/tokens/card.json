@@ -3,6 +3,9 @@
       "max-width": {
         "comment": "The maximum width of the Card.",
         "value": "26.5625rem",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       },
@@ -15,25 +18,64 @@
       "shadow": {
         "comment": "The box shadow of the Card on narrow viewports.",
         "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "shadow-color-wide-viewport": {
+        "comment": "The box shadow color of the Card on wide viewports.",
+        "value": "rgba(0, 0, 0, 0.08)",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
       "shadow-wide-viewport": {
         "comment": "The box shadow of the Card on wide viewports.",
-        "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
+        "value": "0 3px 18px {card.shadow-color-wide-viewport}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
+        "themable": true
+      },
+      "shadow-color-standout": {
+        "comment": "The box shadow color of the Standout Card variant on narrow viewports.",
+        "value": "rgba(0, 0, 0, 0.1)",
+        "file": "settings",
+        "attributes": {
+          "category": "color"
+        },
+        "themable": true
+      },
+      "shadow-color-standout-wide-viewport": {
+        "comment": "The box shadow color of the Standout Card variant on wide viewports.",
+        "value": "rgba(0, 0, 0, 0.1)",
+        "file": "settings",
+        "attributes": {
+          "category": "color"
+        },
         "themable": true
       },
       "shadow-standout": {
         "comment": "The box shadow of the Standout Card variant on narrow viewports.",
-        "value": "0 4px 20px 2px rgba(0, 0, 0, 0.1)",
+        "value": "0 4px 20px 2px {card.shadow-color-standout}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
       "shadow-standout-wide-viewport": {
         "comment": "The box shadow of the Standout Card variant on wide viewports.",
-        "value": "0 4px 40px 2px rgba(0, 0, 0, 0.1)",
+        "value": "0 4px 40px 2px {card.shadow-color-standout-wide-viewport}",
         "file": "settings",
+        "attributes": {
+          "category": "content"
+        },
         "themable": true
       },
       "border-radius": {
@@ -57,12 +99,18 @@
       "header-bg-color": {
         "comment": "The background color of the header area for the Highlighted Header Card.",
         "value": "{purple.value}",
+         "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
       "header-text-color": {
         "comment": "The text color for the Highlighted Header Card.",
         "value": "{white.value}",
+         "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       }

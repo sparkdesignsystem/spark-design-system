@@ -3,18 +3,27 @@
     "visited-border-bottom": {
       "comment": "The style of the underline on visited Links.",
       "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.color.value}",
+      "attributes": {
+        "category": "content"
+      },
       "file": "settings",
       "themable": true
     },
     "transition": {
       "comment": "The transition timing for hover, active and focus styles on Links.",
       "value": "0.3s",
+      "attributes": {
+        "category": "content"
+      },
       "file": "settings",
       "themable": true
     },
     "color": {
       "comment": "The default color on Links.",
       "value": "{purple.value}",
+      "attributes": {
+        "category": "color"
+      },
       "file": "settings",
       "themable": true
     },
@@ -22,12 +31,18 @@
       "color": {
         "comment": "The color of the underline on Links.",
         "value": "{purple.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
       "width": {
         "comment": "The width of the underline on Links.",
         "value": "0.125rem",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       },
@@ -35,6 +50,9 @@
         "color": {
           "comment": "The color of the underline on visited Links.",
           "value": "{black-tint.50.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         }
@@ -43,6 +61,9 @@
     "text-decoration": {
       "comment": "The text decoration on Links.",
       "value": "none",
+      "attributes": {
+        "category": "content"
+      },
       "file": "settings",
       "themable": true
     },
@@ -56,12 +77,18 @@
       "bottom": {
         "comment": "The style of the underline on Links.",
         "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.color.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
       "bottom-style": {
         "comment": "The border style of the underline on Links.",
         "value": "solid",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       }
@@ -70,6 +97,9 @@
       "color": {
         "comment": "The color of Links on hover.",
         "value": "{purple-deep.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
@@ -77,6 +107,9 @@
         "bottom": {
           "comment": "The underline style of Links on hover.",
           "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.hover.color.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -86,6 +119,9 @@
       "color": {
         "comment": "The color value of Simple Links.",
         "value": "{black.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
@@ -93,6 +129,9 @@
         "color": {
           "comment": "The color of Simple Links on hover",
           "value": "{black.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         },
@@ -100,12 +139,18 @@
           "color": {
             "comment": "The underline color value of Simple Links on hover.",
             "value": "{red.value}",
+            "attributes": {
+              "category": "color"
+            },
             "file": "settings",
             "themable": true
           },
           "width": {
             "comment": "The underline width value of Simple Links on hover.",
             "value": "0.125rem",
+            "attributes": {
+              "category": "size"
+            },
             "file": "settings",
             "themable": true
           }
@@ -113,6 +158,9 @@
         "border-bottom": {
           "comment": "The underline style of visited Simple Links on hover.",
           "value": "{link.simple.hover.underline.width.value} {link.border.bottom-style} {link.simple.hover.underline.color}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -121,6 +169,9 @@
         "color": {
           "comment": "The underline color value of Simple Links.",
           "value": "transparent",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -143,12 +194,18 @@
       "border-bottom": {
         "comment": "The underline style of Simple Links.",
         "value": "{link.simple.underline.width.value} {link.border.bottom-style} {link.simple.underline.color}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
       "visited-border-bottom": {
         "comment": "The underline style of visited Simple Links.",
         "value": "{link.simple.underline.width.value} {link.border.bottom-style.value} {link.simple.underline.color.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       }
@@ -157,6 +214,9 @@
       "color": {
         "comment": "The color value of Light Links.",
         "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
@@ -170,6 +230,9 @@
         "color": {
           "comment": "The color of Light Links on hover",
           "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         },
@@ -177,6 +240,9 @@
           "color": {
             "comment": "The underline color value of Light Links on hover.",
             "value": "{white.value}",
+            "attributes": {
+              "category": "color"
+            },
             "file": "settings",
             "themable": true
           },
@@ -194,6 +260,9 @@
           "left": {
             "comment": "The left position of the after element of Light Links on hover.",
             "value": "0%",
+            "attributes": {
+              "category": "size"
+            },
             "file": "settings",
             "themable": true
           },
@@ -210,6 +279,9 @@
         "border-bottom": {
           "comment": "The underline style of Light Links on hover.",
           "value": "{link.light.hover.underline.width.value} {link.border.bottom-style} {link.light.hover.underline.color}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -218,6 +290,9 @@
         "color": {
           "comment": "The underline color value of Light Links.",
           "value": "transparent",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -240,12 +315,18 @@
       "border-bottom": {
         "comment": "The underline style of Light Links.",
         "value": "{link.light.underline.width.value} {link.border.bottom-style} {link.light.underline.color}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
       "visited-border-bottom": {
         "comment": "The underline style of visited Light Links.",
         "value": "{link.light.underline.width.value} {link.border.bottom-style.value} {link.light.underline.color.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       }
@@ -254,12 +335,18 @@
       "border": {
         "comment": "The border settings for Plain Links.",
         "value": "none",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
       "visited-border": {
         "comment": "The border settings for Plain Links in the visited state.",
         "value": "none",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       }
@@ -269,6 +356,9 @@
         "color-text": {
           "comment": "The color value for Links with icons in the hover state.",
           "value": "{purple-deep.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         },
@@ -288,6 +378,9 @@
           "bottom": {
             "comment": "The border settings for Links with icons in the hover state.",
             "value": "{link.has-icon.underline.width.value} {link.border.bottom-style.value} {link.has-icon.underline.color.value}",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           }
@@ -296,6 +389,9 @@
       "color-icon": {
         "comment": "The color of icons in Links containing icons.",
         "value": "{purple.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
@@ -315,6 +411,9 @@
         "color": {
           "comment": "The underline color of Links containing icons.",
           "value": "transparent",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -337,6 +436,9 @@
       "border-bottom": {
         "comment": "The border settings for Links with icons.",
         "value": "{link.has-icon.underline.width.value} {link.border.bottom-style.value} {link.has-icon.underline.color.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       }
@@ -370,6 +472,9 @@
         "border-bottom": {
           "comment": "The underline settings for the disabled Link..",
           "value": "{link.disabled.underline-width.value} {link.border.bottom-style.value} {link.disabled.color.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -386,6 +491,9 @@
       "border-bottom": {
         "comment": "The underline settings for the disabled Link..",
         "value": "{link.disabled.underline-width.value} {link.border.bottom-style.value} {link.disabled.color.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       }

@@ -12,6 +12,9 @@
     "border": {
       "comment": "The value of border for Dividers.",
       "value": "2px solid {divider.color.value}",
+      "attributes": {
+        "category": "content"
+      },
       "file": "settings",
       "themable": true
     }

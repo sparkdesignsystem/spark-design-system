@@ -5,24 +5,36 @@
           "top": {
             "comment": "The top border style for Toggle Trigger.",
             "value": "none",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
           "right": {
             "comment": "The right border style for Toggle Trigger.",
             "value": "none",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
           "bottom": {
             "comment": "The bottom border style for Toggle Trigger.",
             "value": "{link.has-icon.border-bottom.value}",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
           "left": {
             "comment": "The left border style for Toggle Trigger.",
             "value": "none",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           }
@@ -36,6 +48,9 @@
         "transition": {
           "comment": "The transition for Toggle Trigger.",
           "value": "{link.transition.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -43,6 +58,9 @@
           "border-bottom": {
             "comment": "The hover border bottom style for Toggle Trigger.",
             "value": "{link.has-icon.hover.border.bottom.value}",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
@@ -56,6 +74,9 @@
         "background-color": {
           "comment": "The background color for Toggle Trigger.",
           "value": "transparent",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -100,6 +121,9 @@
         "text-align": {
           "comment": "The text alignment for Toggle Trigger.",
           "value": "left",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -113,6 +137,9 @@
           "weight-small": {
             "comment": "The font weight for small Toggle Trigger.",
             "value": "normal",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           }
@@ -127,6 +154,9 @@
       "transition-timing": {
         "comment": "The transition timing for the rotation of the icon when the Toggle is opened.",
         "value": "0.3s ease",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       }

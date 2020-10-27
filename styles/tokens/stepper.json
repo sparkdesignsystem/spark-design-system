@@ -3,6 +3,9 @@
       "bg": {
         "comment": "The background color of the Stepper.",
         "value": "transparent",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -34,7 +37,7 @@
           },
           "color": {
             "comment": "The color of the border around the Stepper icon.",
-            "value": "{black-tint.50.value",
+            "value": "{black-tint.50.value}",
             "file": "settings",
             "themable": true
           },
@@ -90,6 +93,9 @@
         "transition": {
           "comment": "The transition of the Stepper step icon.",
           "value": "0.3s all ease-in-out",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -112,12 +118,18 @@
           "selected": {
             "comment": "The box shadow of the Stepper step icon when the icon is selected.",
             "value": "0 0 0 {stepper.icon.box-shadow.selected-spread.value} {stepper.icon.border.color-selected.value}",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
           "selected-dark-bg": {
             "comment": "The box shadow of the Stepper step icon on a dark background when the icon is selected.",
             "value": "0 0 0 {stepper.icon.box-shadow.selected-spread.value} {stepper.icon.border.color-selected-dark-bg.value}",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           }
@@ -178,12 +190,18 @@
           "bg": {
             "comment": "The background color of the content in the Stepper step.",
             "value": "transparent",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
           "bg-selected": {
             "comment": "The background color of the Stepper step content box when the step is selected.",
             "value": "transparent",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
@@ -210,6 +228,9 @@
           "box-shadow": {
             "comment": "The box shadow of the Stepper step content box when it has a description.",
             "value": "0 3px 18px 1px rgba(0, 0, 0, 0.08)",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
@@ -307,6 +328,9 @@
       "slide-timing": {
         "comment": "The timing setting for the slides of the Stepper.",
         "value": "0.3s",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": false
       },
@@ -314,12 +338,18 @@
         "timing": {
           "comment": "The text fade in timing for the Stepper.",
           "value": "0.6s",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": false
         },
         "delay": {
           "comment": "The text fade in delay for the Stepper.",
           "value": "0.2s",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": false
         }

@@ -28,6 +28,9 @@
         "selected": {
           "comment": "The box shadow of the active dot in the Carousel component.",
           "value": "{stepper.icon.box-shadow.selected-dark-bg.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -46,18 +49,27 @@
         "container-padding": {
           "comment": "The padding value for the dots container in the Carousel component.",
           "value": "{space.xs.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "border": {
           "comment": "The border value for the Carousel component.",
           "value": "{stepper.icon.border.width.value} solid {stepper.dark-icon.border-color.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
         "border-dark-bg": {
           "comment": "The border value for the Carousel component on dark background.",
           "value": "{stepper.icon.border.width.value} solid {purple-deep.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -100,6 +112,9 @@
         "edge-spacing": {
           "comment": "The left and right values of the arrows in the Carousel component.",
           "value": "0",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
@@ -118,6 +133,9 @@
         "position-breakpoint": {
           "comment": "The breakpoint for the arrows in the Carousel component.",
           "value": "31.25rem",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         }
@@ -131,6 +149,9 @@
       "narrow-image-max-width": {
         "comment": "The maximum width of the image in the Carousel component.",
         "value": "18.75rem",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       }

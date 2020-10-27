@@ -4,12 +4,18 @@
         "width": {
           "comment": "The width of the menu icon on narrow viewports in the Masthead.",
           "value": "{icon.xl.value}",
+          "attributes": {
+          "category": "size"
+        },
           "file": "settings",
           "themable": true
         },
         "height": {
           "comment": "The height of the menu icon on narrow viewports in the Masthead.",
           "value": "{icon.xl.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         }
@@ -24,60 +30,90 @@
         "padding": {
           "comment": "The padding around the content section in the Masthead on wide viewports.",
           "value": "{space.s.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "padding-wide": {
           "comment": "The padding of the Masthead content, menu, and branding sections.",
           "value": "{space.m.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "item-padding-top": {
           "comment": "The padding top around the content items in the content section of the Masthead.",
           "value": "{space.s.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "item-padding-top-wide": {
           "comment": "The padding top around the content items in the content section of the Masthead in wide viewports..",
           "value": "{space.s.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "item-padding-bottom": {
           "comment": "The padding bottom around the content items in the content section of the Masthead.",
           "value": "{space.s.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "item-padding-bottom-wide": {
           "comment": "The padding bottom around the content items in the content section of the Masthead in wide viewports.",
           "value": "{space.m.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "item-padding-right": {
           "comment": "The padding right around the content items in the content section of the Masthead.",
           "value": "{space.s.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "item-padding-right-wide": {
           "comment": "The padding right around the content items in the content section of the Masthead in wide viewports.",
           "value": "{space.m.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "item-padding-left": {
           "comment": "The padding left around the content items in the content section of the Masthead",
           "value": "{space.s.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "item-padding-left-wide": {
           "comment": "The padding left around the content items in the content section of the Masthead in wide viewports.",
           "value": "{space.m.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         }
@@ -117,21 +153,39 @@
         "file": "settings",
         "themable": true
       },
+      "border-bottom-style": {
+        "comment": "The bottom border style on the Masthead.",
+        "value": "solid",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "border-bottom": {
-        "comment": "The size of the bottom border on the Masthead.",
-        "value": "{masthead.border-bottom-size.value} solid {gray.value}",
+        "comment": "The bottom border on the Masthead.",
+        "value": "{masthead.border-bottom-size.value} {masthead.border-bottom-style.value} {gray.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
       "border-bottom-wide": {
         "comment": "The bottom border on the Masthead on wide viewports.",
         "value": "0",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       },
       "site-links-border-right": {
         "comment": "The right border on the site links in the Masthead.",
         "value": "2px solid {black-tint.30.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -174,18 +228,27 @@
       "shadow": {
         "comment": "The box shadow of the Masthead.",
         "value": "none",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
       "shadow-wide": {
         "comment": "The box shadow of the Masthead in wide viewports.",
         "value": "none",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
       "shadow-scroll": {
         "comment": "The Masthead shadow that gets applied when the page is scrolled.",
         "value": "0 0 40px rgba(0, 0, 0, 0.1)",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -193,12 +256,18 @@
         "border": {
           "comment": "The border of the selector in the Masthead with Extended Navigation.",
           "value": "2px solid {black-tint.30.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
         "padding": {
           "comment": "The padding of the selector in the Masthead with Extended Navigation.",
           "value": "{space.inset.short.m.value}",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
@@ -256,12 +325,18 @@
         "dropdown-border-bottom-mask-open": {
           "comment": "The bottom border that gets applied to the selector dropdown when open in the Masthead with Extended Navigation.",
           "value": "2px solid {gray.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
         "dropdown-box-shadow-mask-open": {
           "comment": "The box shadow that gets applied to the selector dropdown when open in the Masthead with Extended Navigation.",
           "value": "0 5px 10px rgba(0, 0, 0, 0.1)",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -287,12 +362,18 @@
       "transition": {
         "comment": "The transition applied to the Masthead.",
         "value": "all 0.3s ease-in",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
       "translateY": {
         "comment": "The transform length that gets applied when the Masthead scrolls out of view on narrow screens.",
         "value": "translateY(-100%)",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -301,6 +382,9 @@
           "left-border": {
             "comment": "The left border of the active item in the navigation links when masthead is on narrow viewports.",
             "value": "3px solid {red.value}",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
@@ -360,6 +444,9 @@
           "text-align": {
             "comment": "The text alignment of the items in the navigation links when masthead is on narrow viewports.",
             "value": "left",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
@@ -372,6 +459,9 @@
           "background": {
             "comment": "The background of the items in the navigation links when masthead is on narrow viewports.",
             "value": "transparent",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           }
@@ -410,6 +500,9 @@
       "column-width": {
         "comment": "The maximum width of the big navigation items in the navigation bar in the Masthead Extended.",
         "value": "64rem",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       },
@@ -429,12 +522,18 @@
         "hover-border-bottom": {
           "comment": "The border-bottom of the links in the big nav item when the big nav item is hovered in the Masthead Extended.",
           "value": "transparent",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
         "padding": {
           "comment": "The padding of the big navigation links in the Masthead Extended.",
           "value": "0",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         }
@@ -449,18 +548,27 @@
         "active-border-bottom": {
           "comment": "The border bottom of the active big navigation items in the Masthead Extended.",
           "value": "0.125rem solid {red.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
         "open-border-bottom": {
           "comment": "The border bottom of open big navigation items in the Masthead Extended.",
           "value": "{big-nav.item.active-border-bottom.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
         "line-height": {
           "comment": "The line height of the big navigation items in the Masthead Extended.",
           "value": "53px",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         }

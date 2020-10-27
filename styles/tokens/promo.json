@@ -9,6 +9,9 @@
     "border": {
       "comment": "The border of the Promo component.",
       "value": "1px solid {black-tint.40.value}",
+      "attributes": {
+        "category": "content"
+      },
       "file": "settings",
       "themable": true
     },

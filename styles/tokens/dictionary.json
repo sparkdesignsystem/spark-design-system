@@ -3,6 +3,9 @@
       "border": {
         "comment": "The border surrounding the Dictionary.",
         "value": "1px solid {gray.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -15,6 +18,9 @@
       "breakpoint": {
         "comment": "The breakpoint of the Dictionary component.",
         "value": "38.4375rem",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       },

@@ -15,4 +15,14 @@ StyleDictionary.registerFormat({
   },
 });
 
+StyleDictionary.registerFilter({
+  name: 'filter-ios',
+  // eslint-disable-next-line consistent-return
+  matcher: (prop) => {
+    if (prop.attributes) {
+      return prop.attributes.category !== 'content';
+    }
+  },
+});
+
 StyleDictionary.buildAllPlatforms();

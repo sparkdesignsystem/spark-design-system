@@ -22,6 +22,9 @@
       "font-weight": {
         "comment": "Link font-weight on the Footer.",
         "value": "normal",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       }
@@ -42,6 +45,9 @@
       "font-weight": {
         "comment": "Toggle trigger font-weight on the Footer.",
         "value": "normal",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -55,6 +61,9 @@
     "toggle-transition": {
       "comment": "Toggle transition timing on the Footer.",
       "value": "0.3s",
+      "attributes": {
+        "category": "content"
+      },
       "file": "settings",
       "themable": true
     }

@@ -12,6 +12,9 @@
     "border": {
       "comment": "The value of border for Dividers.",
       "value": "{divider.border.value}",
+      "attributes": {
+        "category": "content"
+      },
       "file": "settings",
       "themable": true
     },
@@ -20,12 +23,18 @@
         "decoration": {
           "comment": "The text decoration of the Accordion item summary.",
           "value": "none",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
         "align": {
           "comment": "The text-align value of the Accordion item summary.",
           "value": "left",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -33,6 +42,9 @@
       "active-text-decoration": {
         "comment": "The text decoration of the Accordion item summary when active.",
         "value": "none",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -45,12 +57,18 @@
       "background-color": {
         "comment": "The background color of the Accordion item summary.",
         "value": "transparent",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
       "border": {
         "comment": "The border of the Accordion item summary.",
         "value": "none",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -69,6 +87,9 @@
       "padding": {
         "comment": "The padding of the Accordion summary.",
         "value": "{space.misc.a.value} 0",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       }
@@ -77,7 +98,7 @@
       "comment": "The padding of the Accordion content.",
       "value": "0 0 {space.l.value}",
       "attributes": {
-        "category": "size"
+        "category": "content"
       },
       "file": "settings",
       "themable": true

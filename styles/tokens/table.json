@@ -23,6 +23,9 @@
       "cell-alignment": {
         "comment": "The Table cell alignment.",
         "value": "center",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -47,6 +50,9 @@
       "heading-alignment": {
         "comment": "The heading alignment of in Tables.",
         "value": "center",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -63,6 +69,9 @@
         "style": {
           "comment": "The border style on Tables.",
           "value": "solid",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -75,6 +84,9 @@
         "collapse": {
           "comment": "The border collapse setting on Tables.",
           "value": "collapse",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -92,6 +104,9 @@
         "border-style": {
           "comment": "The border style on Table rows.",
           "value": "solid",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -172,6 +187,9 @@
           "text-alignment": {
             "comment": "The text alignment of Secondary Table headers.",
             "value": "left",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
@@ -179,6 +197,9 @@
             "spacing": {
               "comment": "The width of the right border on the Secondary Table header.",
               "value": "0",
+              "attributes": {
+                "category": "size"
+              },
               "file": "settings",
               "themable": true
             },
@@ -193,6 +214,9 @@
         "cell-text-alignment": {
           "comment": "The text alignment of Secondary Table cells.",
           "value": "left",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -219,6 +243,9 @@
             "weight": {
               "comment": "The font weight of the header in the Grouped Columns Table variant.",
               "value": "normal",
+              "attributes": {
+                "category": "content"
+              },
               "file": "settings",
               "themable": true
             }
@@ -254,6 +281,9 @@
           "style": {
             "comment": "The style of the borders in the Secondary Row Comparison Table cells",
             "value": "solid",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           }

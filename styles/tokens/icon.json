@@ -48,24 +48,36 @@
     "l-stroke": {
       "comment": "Value for the stroke property of the large Icon component.",
       "value": "none",
+      "attributes": {
+        "category": "content"
+      },
       "file": "settings",
       "themable": true
     },
     "custom-stroke-width-l": {
       "comment": "Value for the stroke-width property of the large Icon component.",
       "value": "0",
+      "attributes": {
+        "category": "size"
+      },
       "file": "settings",
       "themable": true
     },
     "xl-stroke": {
       "comment": "Value for the stroke property of the extra large Icon component.",
       "value": "none",
+      "attributes": {
+        "category": "content"
+      },
       "file": "settings",
       "themable": true
     },
     "custom-stroke-width-xl": {
       "comment": "Value for the stroke-width property of the extra large Icon component.",
       "value": "0",
+      "attributes": {
+        "category": "size"
+      },
       "file": "settings",
       "themable": true
     },
@@ -78,6 +90,9 @@
     "filled-stroke-color": {
       "comment": "Value for the stroke property of the Filled Icon component..",
       "value": "none",
+      "attributes": {
+        "category": "content"
+      },
       "file": "settings",
       "themable": true
     }

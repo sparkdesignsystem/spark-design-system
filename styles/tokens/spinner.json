@@ -21,6 +21,9 @@
       "speed": {
         "comment": "The speed of the animation for Spinners.",
         "value": "1s",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },

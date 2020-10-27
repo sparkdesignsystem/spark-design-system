@@ -11,6 +11,9 @@
           "border-bottom": {
             "comment": "The button tab bottom border of the currently active tab in Tabbed Navigation.",
             "value": "3px solid {red.value}",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },
@@ -36,6 +39,9 @@
         "border-bottom": {
           "comment": "The border on the bottom of the button tabs in Tabbed Navigation.",
           "value": "3px solid {gray.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
@@ -43,6 +49,9 @@
           "border-bottom": {
             "comment": "The border on the bottom of the button tabs on hover in Tabbed Navigation.",
             "value": "3px solid {purple.value}",
+            "attributes": {
+              "category": "content"
+            },
             "file": "settings",
             "themable": true
           },

@@ -40,24 +40,36 @@
         "border": {
           "comment": "The border for the tooltip trigger.",
           "value": "none",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
         "background-color": {
           "comment": "The background color for the tooltip trigger.",
           "value": "transparent",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
         "padding": {
           "comment": "The padding for the tooltip trigger.",
           "value": "0",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
         "text-align": {
           "comment": "The text align for the tooltip trigger.",
           "value": "left",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -71,6 +83,9 @@
       "text-align": {
         "comment": "The text align for the tooltip.",
         "value": "left",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -133,6 +148,9 @@
       "preferred-width": {
         "comment": "The preferred width of the tooltip.",
         "value": "max-content",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -148,6 +166,9 @@
       "transition": {
         "comment": "The transition applied to the tooltip.",
         "value": "all 200ms ease-out",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },

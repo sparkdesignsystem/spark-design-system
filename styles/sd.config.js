@@ -82,14 +82,15 @@ module.exports = {
       ],
     },
     ios: {
-      transformGroup: `ios-swift`,
+      transformGroup: 'ios-swift',
       prefix: 'sprk',
       buildPath: `ios/`,
       files: [
         {
           destination: `SparkDesignTokens.swift`,
           className: `SparkDesignTokens`,
-          format: `ios-swift/class.swift`,
+          format: ['ios-swift/class.swift'],
+          filter: 'filter-ios',
         },
       ],
     },
