@@ -5,7 +5,8 @@
 ////
 /// @group button
 ////
-.sprk-c-Button {
+.sprk-c-Button,
+.sprk-c-Button.sprk-c-Button--loading[disabled] {
   -webkit-appearance: none;
   background-color: $sprk-btn-background-color;
   border: $sprk-btn-border;
@@ -75,7 +76,8 @@
 /* stylelint-enable selector-class-pattern */
 
 /// Styles the button as the secondary variant.
-.sprk-c-Button--secondary {
+.sprk-c-Button--secondary,
+.sprk-c-Button--secondary.sprk-c-Button--loading[disabled] {
   background-color: $sprk-btn-secondary-background-color;
   border: $sprk-btn-secondary-border;
   color: $sprk-btn-secondary-text-color;
@@ -96,7 +98,8 @@
 }
 
 /// Styles the button as the tertiary variant.
-.sprk-c-Button--tertiary {
+.sprk-c-Button--tertiary,
+.sprk-c-Button--tertiary.sprk-c-Button--loading[disabled] {
   background-color: $sprk-btn-tertiary-background-color;
   box-shadow: none;
   border: $sprk-btn-tertiary-border;
@@ -118,7 +121,8 @@
 }
 
 /// Styles the button as the quaternary variant.
-.sprk-c-Button--quaternary {
+.sprk-c-Button--quaternary,
+.sprk-c-Button--quaternary.sprk-c-Button--loading[disabled] {
   background-color: $sprk-btn-quaternary-background-color;
   box-shadow: $sprk-btn-quaternary-box-shadow;
   border: $sprk-btn-quaternary-border;
