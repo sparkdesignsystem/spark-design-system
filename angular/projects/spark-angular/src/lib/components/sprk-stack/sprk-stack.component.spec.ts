@@ -8,7 +8,7 @@ describe('SprkStackComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkStackComponent]
+      declarations: [SprkStackComponent],
     }).compileComponents();
   }));
 
@@ -91,15 +91,25 @@ describe('SprkStackComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-o-Stack sprk-u-pam sprk-u-man'
+      'sprk-o-Stack sprk-u-pam sprk-u-man',
     );
   });
 
-  it('should set the data-analytics attribute' +
-    ' given a value in the analyticsString Input', () => {
-    component.analyticsString = 'Stack 1';
+  it(
+    'should set the data-analytics attribute' +
+      ' given a value in the analyticsString Input',
+    () => {
+      component.analyticsString = 'Stack 1';
+      fixture.detectChanges();
+      expect(element.hasAttribute('data-analytics')).toEqual(true);
+      expect(element.getAttribute('data-analytics')).toEqual('Stack 1');
+    },
+  );
+
+  it('should correctly apply data-id', () => {
+    component.idString = 'Stack 1';
     fixture.detectChanges();
-    expect(element.hasAttribute('data-analytics')).toEqual(true);
-    expect(element.getAttribute('data-analytics')).toEqual('Stack 1');
+    expect(element.hasAttribute('data-id')).toEqual(true);
+    expect(element.getAttribute('data-id')).toEqual('Stack 1');
   });
 });
