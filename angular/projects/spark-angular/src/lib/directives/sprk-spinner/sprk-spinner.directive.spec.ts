@@ -6,7 +6,12 @@ import { SprkSpinnerDirective } from './sprk-spinner.directive';
   selector: 'sprk-test',
   template: `
     <div sprkSpinner analyticsString="spinner-1" idString="spinner-1"></div>
-    <div sprkSpinner variant="primary"></div>
+    <div
+      sprkSpinner
+      variant="primary"
+      role="testrole"
+      altText="testvaluetext"
+    ></div>
     <div sprkSpinner variant="secondary"></div>
     <div sprkSpinner variant="dark"></div>
     <div sprkSpinner size="large"></div>
@@ -86,6 +91,24 @@ describe('Spark Spinner Directive', () => {
   it('add the correct classes if size is large', () => {
     expect(spinner5Element.classList.toString()).toContain(
       'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large',
+    );
+  });
+
+  it('apply a default role attribute', () => {
+    expect(spinner1Element.getAttribute('role')).toBe('progressbar');
+  });
+
+  it('apply a custom role attribute', () => {
+    expect(spinner2Element.getAttribute('role')).toBe('testrole');
+  });
+
+  it('apply a default aria-valueText attribute', () => {
+    expect(spinner1Element.getAttribute('aria-valuetext')).toBe('Loading');
+  });
+
+  it('apply a custom aria-valueText attribute', () => {
+    expect(spinner2Element.getAttribute('aria-valuetext')).toBe(
+      'testvaluetext',
     );
   });
 });

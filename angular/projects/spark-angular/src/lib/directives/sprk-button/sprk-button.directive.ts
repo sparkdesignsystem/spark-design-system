@@ -18,6 +18,19 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    * @ignore
    */
   constructor(public ref: ElementRef, private renderer: Renderer2) {}
+  /**
+   * Adds the necessary attributes for accessible loading state
+   */
+  @Input()
+  isLoading = false;
+
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * element.
+   */
+  @Input()
+  additionalClasses: string;
 
   // TODO: Remove spinning functionality from button on next release #3561
   /**
@@ -75,6 +88,17 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     };
     if (variants.hasOwnProperty(this.variant)) {
       this.renderer.addClass(this.ref.nativeElement, variants[this.variant]);
+    }
+
+    if (this.isLoading) {
+      this.renderer.addClass(this.ref.nativeElement, 'sprk-c-Button--loading');
+      this.renderer.setAttribute(this.ref.nativeElement, 'disabled', 'true');
+    }
+
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach((className) => {
+        this.renderer.addClass(this.ref.nativeElement, className);
+      });
     }
   }
 

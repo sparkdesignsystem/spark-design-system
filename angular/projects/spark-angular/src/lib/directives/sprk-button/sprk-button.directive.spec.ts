@@ -32,6 +32,9 @@ import { SprkButtonDirective } from './sprk-button.directive';
     <button sprkButton variant="quaternary" [isSpinning]="spinnerVal">
       Test 6
     </button>
+    <button sprkButton additionalClasses="testClass" [isLoading]="true">
+      Test 7
+    </button>
   `,
 })
 class TestComponent {
@@ -47,6 +50,7 @@ describe('Spark Button Directive', () => {
   let button4Element: HTMLElement;
   let button5Element: HTMLElement;
   let button6Element: HTMLElement;
+  let button7Element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -63,6 +67,7 @@ describe('Spark Button Directive', () => {
     button4Element = fixture.nativeElement.querySelectorAll('button')[3];
     button5Element = fixture.nativeElement.querySelectorAll('button')[4];
     button6Element = fixture.nativeElement.querySelectorAll('button')[5];
+    button7Element = fixture.nativeElement.querySelectorAll('button')[6];
   }));
 
   it('should create itself', () => {
@@ -132,6 +137,17 @@ describe('Spark Button Directive', () => {
       true,
     );
     expect(button6Element.classList.length).toBe(2);
+  });
+
+  it('should add the additionalClasses', () => {
+    expect(button7Element.classList.contains('testClass')).toBe(true);
+  });
+
+  it('should add loading state classes and attributes', () => {
+    expect(button7Element.getAttribute('disabled')).toBe('true');
+    expect(button7Element.classList.contains('sprk-c-Button--loading')).toBe(
+      true,
+    );
   });
 
   it('should add the value of analyticsString to data-analytics', () => {

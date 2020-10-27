@@ -16,16 +16,14 @@ export default {
     info: `
 ${markdownDocumentationLinkBuilder('button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
-The Button component can use either a button (\`<button>\`)
-or anchor (\`<a>\`) HTML element. It is very important
-for accessibility to choose the correct element.
+SprkButton can either render as a button (\`<button>\`)
+or an anchor (\`<a>\`) element. It is very important
+for accessibility to choose the correct HTML element.
 
-- Button should use an \`<a>\` element if it navigates to a new page.
-- Button should use a \`<button>\` element if it is performing
-an action, such as: “Submit”, “Add”, “Join”,” etc.
-- A Button that does not go to a new page will almost
-always use a \`<button>\` element.
-- Spinner requires additional engineering. Conditionally render between button text and spinner. (For example, use \`ngIf\` to switch to spinner.)
+- Render as a link (\`<a>\`) element if the button navigates to a new page.
+- Render as a button (\`<button>\`) element if
+it performs an action such as: “Submit”, “Add”, “Join”,” etc.
+They typically do not navigate to a new page.
 
 ##### Accessibility
 - If a Button is using an \`<a>\` element, you
@@ -41,6 +39,9 @@ Instead use \`<button type=”submit”>\`
 - If a Button is Disabled, you must add the \`disabled\` attribute
 in addition to the \`sprk-is-Disabled\` class so that it doesn’t
 receive interaction.
+- Spinner state requires additional engineering.
+  - Use app state to conditionally render between button text and spinner.
+  - Add \`isLoading\` on sprkButton directive when spinner is present
 `,
     docs: { iframeHeight: 100 },
   },
@@ -212,6 +213,7 @@ export const spinning = () => {
         idString="button-spinning"
         analyticsString="spinning"
         sprkButton
+        [isLoading]="true"
       >
         <div sprkSpinner></div>
       </button>
@@ -233,7 +235,7 @@ export const spinningSecondary = () => {
         variant="secondary"
         idString="button-spinning-secondary"
         sprkButton
-
+        [isLoading]="true"
       >
         <div sprkSpinner variant="primary"></div>
       </button>
@@ -255,6 +257,7 @@ export const spinningTertiary = () => {
         variant="tertiary"
         idString="button-spinning-tertiary"
         sprkButton
+        [isLoading]="true"
       >
         <div sprkSpinner variant="secondary"></div>
       </button>
@@ -276,6 +279,7 @@ export const spinningQuaternary = () => {
         variant="quaternary"
         idString="button-spinning-quaternary"
         sprkButton
+        [isLoading]="true"
       >
         <div sprkSpinner variant="dark"></div>
       </button>

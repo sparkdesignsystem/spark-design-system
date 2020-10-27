@@ -17,6 +17,18 @@ export class SprkSpinnerDirective implements OnInit {
   @Input() variant: 'primary' | 'secondary' | 'dark';
 
   /**
+   * Assigned to the `aria-valuetext` attribute serving as
+   * additional context for screen readers.
+   */
+  @Input() altText = 'Loading';
+
+  /**
+   * Assigned to the `role` attribute serving as
+   * additional accessibility context for screen readers.
+   */
+  @Input() role = 'progressbar';
+
+  /**
    *  Determines the spinner size.
    */
   @Input() size: 'large';
@@ -78,6 +90,19 @@ export class SprkSpinnerDirective implements OnInit {
 
     if (variantLookup.hasOwnProperty(this.variant)) {
       this.renderer.addClass(el, variantLookup[this.variant]);
+    }
+
+    this.renderer.setAttribute(this.el.nativeElement, 'role', this.role);
+    this.renderer.setAttribute(
+      this.el.nativeElement,
+      'aria-valuetext',
+      this.altText,
+    );
+
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach((className) => {
+        this.renderer.addClass(this.el.nativeElement, className);
+      });
     }
 
     const sizeLookup = { large: 'sprk-c-Spinner--large' };

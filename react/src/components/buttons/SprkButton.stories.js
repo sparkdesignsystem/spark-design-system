@@ -39,7 +39,7 @@ This can change through the \`altText\` prop on SprkSpinner.
 submit the form, add \`type=”button”\` the attribute.
 - Spinner state requires additional engineering.
   - Use app state to conditionally render between button text and spinner.
-  - Use \`isLoading\` on SprkButton when spinner is present.
+  - Add \`isLoading\` on SprkButton when spinner is present.
 `,
   },
 };
