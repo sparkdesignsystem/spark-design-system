@@ -1,0 +1,64 @@
+  {
+    "spinner": {
+      "size": {
+        "comment": "The height and width of Spinners.",
+        "value": "1.2rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "size-large": {
+        "comment": "The height and width of large Spinners.",
+        "value": "3rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "speed": {
+        "comment": "The speed of the animation for Spinners.",
+        "value": "1s",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "thickness": {
+        "comment": "The thickness of Spinners.",
+        "value": "0.18rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "color": {
+        "comment": "The color of Spinners.",
+        "value": "{white.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "color-dark": {
+        "comment": "The color of the dark Spinner.",
+        "value": "{black.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "color-primary": {
+        "comment": "The color of the primary Spinner.",
+        "value": "{red.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "color-secondary": {
+        "comment": "The color of the secondary Spinner.",
+        "value": "{purple.value}",
+        "file": "settings",
+        "themable": true
+      }
+    }
+  }
