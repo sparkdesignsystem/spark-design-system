@@ -1,7 +1,7 @@
 import { SprkButtonModule } from './sprk-button.module';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkButtonDirective } from './sprk-button.directive';
-import { SprkSpinnerDirectiveModule } from '../../directives/sprk-spinner/sprk-spinner.module';
+import { SprkSpinnerModule } from '../../directives/sprk-spinner/sprk-spinner.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -48,7 +48,7 @@ receive interaction.
 };
 
 const modules = {
-  imports: [SprkButtonModule, SprkSpinnerDirectiveModule],
+  imports: [SprkButtonModule, SprkSpinnerModule],
 };
 
 export const primary = () => ({

@@ -51,7 +51,7 @@ describe('Spark Spinner Directive', () => {
     expect(component).toBeTruthy();
   });
 
-  it('add additional classes', () => {
+  it('should add additional classes', () => {
     expect(spinner6Element.classList.contains('class1')).toBe(true);
   });
 
@@ -92,6 +92,7 @@ describe('Spark Spinner Directive', () => {
     expect(spinner5Element.classList.toString()).toContain(
       'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large',
     );
+    expect(spinner5Element.classList.length).toBe(3);
   });
 
   it('apply a default role attribute', () => {

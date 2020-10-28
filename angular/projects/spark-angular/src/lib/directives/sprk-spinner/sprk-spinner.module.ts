@@ -7,4 +7,4 @@ import { SprkSpinnerDirective } from './sprk-spinner.directive';
   declarations: [SprkSpinnerDirective],
   exports: [SprkSpinnerDirective],
 })
-export class SprkSpinnerDirectiveModule {}
+export class SprkSpinnerModule {}

@@ -76,6 +76,8 @@ export { SprkFormatterSsnDirective } from './lib/directives/inputs/formatters/sp
 export { SprkFormatterSsnModule } from './lib/directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.module';
 export { SprkButtonDirective } from './lib/directives/sprk-button/sprk-button.directive';
 export { SprkButtonModule } from './lib/directives/sprk-button/sprk-button.module';
+export { SprkSpinnerDirective } from './lib/directives/sprk-spinner/sprk-spinner.directive';
+export { SprkSpinnerModule } from './lib/directives/sprk-spinner/sprk-spinner.module';
 export { SprkDatepickerDirective } from './lib/directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 export { SprkDatepickerModule } from './lib/directives/inputs/sprk-datepicker/sprk-datepicker.module';
 export { SprkFieldErrorDirective } from './lib/directives/inputs/sprk-field-error/sprk-field-error.directive';
