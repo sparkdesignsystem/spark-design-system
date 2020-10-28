@@ -1,0 +1,49 @@
+{
+  "horizontal-list": {
+    "spacing": {
+      "comment": "The default spacing value for Horizontal List components.",
+      "value": "{space.m.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "spacing-tiny": {
+      "comment": "The default spacing value for the tiny Horizontal List components.",
+      "value": "{space.xs.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "spacing-small": {
+      "comment": "The default spacing value for the small Horizontal List components.",
+      "value": "{space.s.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "spacing-medium": {
+      "comment": "The default spacing value for the medium Horizontal List components.",
+      "value": "{space.m.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "spacing-large": {
+      "comment": "The default spacing value for the large Horizontal List components.",
+      "value": "{space.l.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "spacing-huge": {
+      "comment": "The default spacing value for the huge Horizontal List components.",
+      "value": "{space.xl.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "delimiter": {
+      "comment": "The delimiter between delimited items in Horizontal List components.",
+      "value": "','",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    }
+  }
+}
