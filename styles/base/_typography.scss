@@ -20,7 +20,7 @@ h1,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-display-one) * 16
+      strip-unit($sprk-font-size-display-one) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-display-one
   );
@@ -36,7 +36,7 @@ h1,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (
-        strip-unit($sprk-font-size-display-one-wide) * 16
+        strip-unit($sprk-font-size-display-one-wide) * 16,
       ),
       $sprk-text-crop-crop-line-height: $sprk-line-height-display-one-wide
     );
@@ -52,7 +52,7 @@ h2,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-display-two) * 16
+      strip-unit($sprk-font-size-display-two) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-display-two
   );
@@ -68,7 +68,7 @@ h2,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (
-        strip-unit($sprk-font-size-display-two-wide) * 16
+        strip-unit($sprk-font-size-display-two-wide) * 16,
       ),
       $sprk-text-crop-crop-line-height: $sprk-line-height-display-two-wide
     );
@@ -84,7 +84,7 @@ h3,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-display-three) * 16
+      strip-unit($sprk-font-size-display-three) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-display-three
   );
@@ -100,7 +100,7 @@ h3,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (
-        strip-unit($sprk-font-size-display-three-wide) * 16
+        strip-unit($sprk-font-size-display-three-wide) * 16,
       ),
       $sprk-text-crop-crop-line-height: $sprk-line-height-display-three
     );
@@ -116,7 +116,7 @@ h4,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-display-four) * 16
+      strip-unit($sprk-font-size-display-four) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-display-four
   );
@@ -134,7 +134,7 @@ h5,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-display-five) * 16
+      strip-unit($sprk-font-size-display-five) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-display-five
   );
@@ -152,7 +152,7 @@ h6,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-display-six) * 16
+      strip-unit($sprk-font-size-display-six) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-display-six
   );
@@ -170,7 +170,7 @@ h6,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-display-seven) * 16
+      strip-unit($sprk-font-size-display-seven) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-display-seven
   );
@@ -188,7 +188,7 @@ h6,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-body-one) * 16
+      strip-unit($sprk-font-size-body-one) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-body-one
   );
@@ -207,7 +207,7 @@ body,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-body-two) * 16
+      strip-unit($sprk-font-size-body-two) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-body-two
   );
@@ -224,7 +224,7 @@ body,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-body-three) * 16
+      strip-unit($sprk-font-size-body-three) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-body-three
   );
@@ -241,7 +241,7 @@ body,
     $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
     $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
     $sprk-text-crop-crop-font-size: (
-      strip-unit($sprk-font-size-body-four) * 16
+      strip-unit($sprk-font-size-body-four) * 16,
     ),
     $sprk-text-crop-crop-line-height: $sprk-line-height-body-four
   );
