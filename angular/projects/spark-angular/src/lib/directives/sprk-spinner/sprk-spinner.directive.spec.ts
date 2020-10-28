@@ -60,6 +60,7 @@ describe('Spark Spinner Directive', () => {
       true,
     );
     expect(spinner1Element.classList.contains('sprk-c-Spinner')).toBe(true);
+    expect(spinner5Element.classList.length).toBe(2);
   });
 
   it('add the id string', () => {
@@ -74,18 +75,21 @@ describe('Spark Spinner Directive', () => {
     expect(spinner2Element.classList.toString()).toContain(
       'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--primary',
     );
+    expect(spinner5Element.classList.length).toBe(3);
   });
 
   it('add the correct classes if secondary variant', () => {
     expect(spinner3Element.classList.toString()).toContain(
       'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--secondary',
     );
+    expect(spinner5Element.classList.length).toBe(3);
   });
 
   it('add the correct classes if dark variant', () => {
     expect(spinner4Element.classList.toString()).toContain(
       'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--dark',
     );
+    expect(spinner5Element.classList.length).toBe(3);
   });
 
   it('add the correct classes if size is large', () => {
