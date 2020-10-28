@@ -37,6 +37,7 @@ import * as _ from 'lodash';
             class="sprk-c-Modal__icon"
             type="button"
             aria-label="Close Modal"
+            [attr.data-analytics]="closeAnalyticsString"
             (click)="closeModal($event)"
           >
             <sprk-icon
@@ -123,6 +124,14 @@ export class SprkModalComponent {
    */
   @Input()
   cancelAnalyticsString: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute
+   * on the close button. Intended
+   * for an outside library to capture data.
+   */
+  @Input()
+  closeAnalyticsString: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
