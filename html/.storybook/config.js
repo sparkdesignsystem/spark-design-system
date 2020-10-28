@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/_spark.scss';
+import '../_spark.scss';
 import '../../storybook-utilities/storybook-theming/_docs.scss';
 import { configure, addParameters, addDecorator } from '@storybook/html';
 import { withA11y } from '@storybook/addon-a11y';

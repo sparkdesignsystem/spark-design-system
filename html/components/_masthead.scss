@@ -425,12 +425,3 @@
     background-color: $sprk-accordion-active-background-color;
   }
 }
-
-/* stylelint-disable selector-class-pattern */
-sprk-masthead {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  display: block;
-  z-index: $sprk-layer-height-m;
-}

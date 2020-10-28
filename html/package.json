@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark",
   "version": "14.0.0",
-  "description": "Spark is the main package for the Spark Design System. This package contains the JavaScript and components that make up the basic interfaces for Quicken Loans Fintech products.",
+  "description": "Spark is the main package for the Spark Design System. This package contains the style and components that make up the basic interfaces for Quicken Loans Fintech products.",
   "main": "es5/sparkExports.js",
   "scripts": {
     "test": "jest --config ./jest-config.js --verbose=false",
@@ -9,11 +9,10 @@
     "test:watch": "jest -o --watch --config ./jest-config.js",
     "coverage": "jest --coverage --config ./jest-config.js",
     "build": "webpack",
-    "build-styles": "cd '../styles/' && node build.js",
     "prepublishOnly": "npm run build",
-    "sassdocmodifiers": "sassdoc '../styles/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
+    "sassdocmodifiers": "sassdoc '../html/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
     "prebuild:storybook": "npm run sassdocmodifiers && npm run test:generate-output",
-    "storybook": "npm run build-styles && npm run prebuild:storybook && start-storybook -p 7006 -s ../storybook-utilities/favicon",
+    "storybook": "npm run prebuild:storybook && start-storybook -p 7006 -s ../storybook-utilities/favicon",
     "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon"
   },
   "repository": {
