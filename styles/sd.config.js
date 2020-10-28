@@ -78,7 +78,7 @@ module.exports = {
       ],
     },
     ios: {
-      transformGroup: 'ios-swift',
+      transformGroup: 'custom/ios',
       prefix: 'sprk',
       buildPath: `ios/`,
       files: [

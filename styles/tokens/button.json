@@ -75,7 +75,7 @@
         "comment": "The font size of the Button component.",
         "value": "inherit",
         "attributes": {
-          "category": "content"
+          "category": "font"
         },
         "file": "settings",
         "themable": true
@@ -84,7 +84,7 @@
         "comment": "The font family of the Button component.",
         "value": "inherit",
         "attributes": {
-          "category": "content"
+          "category": "font"
         },
         "file": "settings",
         "themable": true
@@ -145,9 +145,45 @@
     },
     "padding": {
       "comment": "The padding of the Button component.",
-      "value": "{space.m.value} 24px",
+      "value": "{space.m.value} {space.misc.a.value}",
       "attributes": {
         "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "padding-top": {
+      "comment": "The top padding of the Button component.",
+      "value": "{space.m.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "padding-bottom": {
+      "comment": "The bottom padding of the Button component.",
+      "value": "{space.m.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "padding-right": {
+      "comment": "The right padding of the Button component.",
+      "value": "{space.misc.a.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "padding-left": {
+      "comment": "The left padding of the Button component.",
+      "value": "{space.misc.a.value}",
+      "attributes": {
+        "category": "size"
       },
       "file": "settings",
       "themable": true
