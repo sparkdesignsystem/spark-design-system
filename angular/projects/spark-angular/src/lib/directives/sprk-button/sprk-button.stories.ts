@@ -22,7 +22,7 @@ for accessibility to choose the correct HTML element.
 
 - Render as a link (\`<a>\`) element if the button navigates to a new page.
 - Render as a button (\`<button>\`) element if
-it performs an action such as: “Submit”, “Add”, “Join”,” etc.
+it performs an action such as: “Submit”, “Add”, “Join”, etc.
 They typically do not navigate to a new page.
 
 ##### Accessibility

@@ -55,7 +55,7 @@ describe('Spark Spinner Directive', () => {
     expect(spinner6Element.classList.contains('class1')).toBe(true);
   });
 
-  it('add the correct default classes', () => {
+  it('should add the correct default classes', () => {
     expect(spinner1Element.classList.contains('sprk-c-Spinner--circle')).toBe(
       true,
     );
@@ -63,55 +63,55 @@ describe('Spark Spinner Directive', () => {
     expect(spinner1Element.classList.length).toBe(2);
   });
 
-  it('add the id string', () => {
+  it('should add the id string', () => {
     expect(spinner1Element.getAttribute('data-id')).toBe('spinner-1');
   });
 
-  it('add the analytics attribute', () => {
+  it('should add the analytics attribute', () => {
     expect(spinner1Element.getAttribute('data-analytics')).toBe('spinner-1');
   });
 
-  it('add the correct classes if primary variant', () => {
+  it('should add the correct classes if primary variant', () => {
     expect(spinner2Element.classList.toString()).toContain(
       'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--primary',
     );
     expect(spinner5Element.classList.length).toBe(3);
   });
 
-  it('add the correct classes if secondary variant', () => {
+  it('should add the correct classes if secondary variant', () => {
     expect(spinner3Element.classList.toString()).toContain(
       'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--secondary',
     );
     expect(spinner5Element.classList.length).toBe(3);
   });
 
-  it('add the correct classes if dark variant', () => {
+  it('should add the correct classes if dark variant', () => {
     expect(spinner4Element.classList.toString()).toContain(
       'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--dark',
     );
     expect(spinner5Element.classList.length).toBe(3);
   });
 
-  it('add the correct classes if size is large', () => {
+  it('should add the correct classes if size is large', () => {
     expect(spinner5Element.classList.toString()).toContain(
       'sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large',
     );
     expect(spinner5Element.classList.length).toBe(3);
   });
 
-  it('apply a default role attribute', () => {
+  it('should apply a default role attribute', () => {
     expect(spinner1Element.getAttribute('role')).toBe('progressbar');
   });
 
-  it('apply a custom role attribute', () => {
+  it('should apply a custom role attribute', () => {
     expect(spinner2Element.getAttribute('role')).toBe('testrole');
   });
 
-  it('apply a default aria-valueText attribute', () => {
+  it('should apply a default aria-valueText attribute', () => {
     expect(spinner1Element.getAttribute('aria-valuetext')).toBe('Loading');
   });
 
-  it('apply a custom aria-valueText attribute', () => {
+  it('should apply a custom aria-valueText attribute', () => {
     expect(spinner2Element.getAttribute('aria-valuetext')).toBe(
       'testvaluetext',
     );
