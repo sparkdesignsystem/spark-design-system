@@ -494,6 +494,12 @@
             "themable": true
           }
         }
+      },
+      "simple-link-icon-hover-color": {
+        "comment": "The color of Simple Masthead Icon Links on hover.",
+        "value": "{black.value}",
+        "file": "settings",
+        "themable": true
       }
     },
     "big-nav": {
