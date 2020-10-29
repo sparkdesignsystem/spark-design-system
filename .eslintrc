@@ -29,5 +29,19 @@
         "every": [ "id" ]
       }
     }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["html/**/*.js"],
+      "rules": {
+        "max-len": "off"
+      }
+    },
+    {
+      "files": ["html/tests/*.js"],
+      "rules": {
+        "global-require": "off"
+      }
+    }
+  ]
 }
