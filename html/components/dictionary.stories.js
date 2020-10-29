@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Dictionary',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('dictionary')}
@@ -13,7 +11,7 @@ ${markdownDocumentationLinkBuilder('dictionary')}
   },
 };
 
-export const defaultStory = () => (
+export const defaultStory = () =>
   `
   <div
     class="sprk-c-Dictionary sprk-b-TypeBodyTwo"
@@ -65,8 +63,7 @@ export const defaultStory = () => (
       <dd class="sprk-c-Dictionary__value">55555</dd>
     </div>
   </dl>
-</div>`
-);
+</div>`;
 
 defaultStory.story = {
   name: 'Default',

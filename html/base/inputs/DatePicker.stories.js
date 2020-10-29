@@ -5,9 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/m
 
 export default {
   title: 'Components/Input/Date Picker',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     docs: { iframeHeight: 320 },
     info: `

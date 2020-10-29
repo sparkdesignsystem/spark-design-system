@@ -1,4 +1,4 @@
-/* global window document describe it beforeEach afterEach */
+/* global window document describe it beforeEach afterEach sinon */
 import { dateInput, formatDate, bindUIEvents } from '../base/inputs/dateInput';
 
 describe('dateInput init', () => {
@@ -9,8 +9,9 @@ describe('dateInput init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     dateInput();
-    expect(document.querySelectorAll
-      .getCall(0).args[0]).toBe('[data-sprk-input="date"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-input="date"]',
+    );
   });
 });
 
@@ -25,10 +26,10 @@ describe('dateInput UI Events tests', () => {
     input.type = 'text';
     input.setAttribute(
       'pattern',
-      '^(((0[1358]|1[02])([\\/-]?)'
-      + '(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)'
-      + '(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))'
-      + '(\\4|\\7|\\9)[12]\\d{3})?$',
+      '^(((0[1358]|1[02])([\\/-]?)' +
+        '(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)' +
+        '(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))' +
+        '(\\4|\\7|\\9)[12]\\d{3})?$',
     );
     sinon.spy(input, 'addEventListener');
     inputContainer.appendChild(input);

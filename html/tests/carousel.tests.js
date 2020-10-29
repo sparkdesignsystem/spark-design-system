@@ -1,11 +1,7 @@
-/* global document describe beforeEach afterEach it window */
-import
-createElementFromString
-  from '../tests/_createElementFromString';
+/* global document describe beforeEach afterEach it sinon */
+import createElementFromString from './_createElementFromString';
 import {
-  carousel as regCarousel
-} from '../components/carousel';
-import {
+  carousel as regCarousel,
   beforeLoryInit,
   afterLoryInit,
   afterLorySlide,
@@ -85,7 +81,7 @@ describe('Carousel tests', () => {
     const dot = document.createElement('div');
     dotContainer.appendChild(dot);
     const instance = {
-      slideTo: () => { },
+      slideTo: () => {},
     };
     const instanceSpy = sinon.spy(instance, 'slideTo');
 

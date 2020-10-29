@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { useEffect } from '@storybook/client-api';
 import { checkbox } from './checkbox';
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';

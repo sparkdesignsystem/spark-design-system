@@ -3,7 +3,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Foundations/Typography',
   decorators: [
-    story => `
+    (story) => `
       <div class="sprk-o-Box sb-decorate">${story()}</div>
     `,
   ],

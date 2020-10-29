@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Flag',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('flag')}
@@ -13,7 +11,7 @@ ${markdownDocumentationLinkBuilder('flag')}
   },
 };
 
-export const defaultStory = () => (
+export const defaultStory = () =>
   `
     <div class="sprk-o-Flag">
       <div class="sprk-o-Flag__figure">
@@ -29,14 +27,13 @@ export const defaultStory = () => (
         </p>
       </div>
     </div>
-  `
-);
+  `;
 
 defaultStory.story = {
   name: 'Default',
 };
 
-export const reversed = () => (
+export const reversed = () =>
   `
     <div class="sprk-o-Flag sprk-o-Flag--rev">
       <div class="sprk-o-Flag__figure">
@@ -52,10 +49,9 @@ export const reversed = () => (
         </p>
       </div>
     </div>
-  `
-);
+  `;
 
-export const stacked = () => (
+export const stacked = () =>
   `
     <div class="sprk-o-Flag sprk-o-Flag--stacked">
       <div class="sprk-o-Flag__body">
@@ -71,5 +67,4 @@ export const stacked = () => (
         />
       </div>
     </div>
-  `
-);
+  `;

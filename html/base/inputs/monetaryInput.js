@@ -1,20 +1,15 @@
 /* global Number */
 import getElements from '../../utilities/getElements';
-import
-setValidTextInput
-  from '../../utilities/validation/setValidTextInput';
-import
-setInvalidTextInput
-  from '../../utilities/validation/setInvalidTextInput';
-import
-runValidation from '../../utilities/validation/validation-runner';
+import setValidTextInput from '../../utilities/validation/setValidTextInput';
+import setInvalidTextInput from '../../utilities/validation/setInvalidTextInput';
+import runValidation from '../../utilities/validation/validation-runner';
 
-const formatMonetary = value =>
+const formatMonetary = (value) =>
   Number(value.replace(/,/g, ''))
     .toLocaleString('en-US', { style: 'currency', currency: 'USD' })
     .replace(/\$/g, '');
 
-const bindUIEvents = element => {
+const bindUIEvents = (element) => {
   const field = element.querySelector('input');
 
   field.addEventListener('input', () => {

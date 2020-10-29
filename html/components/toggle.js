@@ -1,8 +1,9 @@
 import 'dom-slider';
 import 'focus-visible';
-const { slideToggle } = window.domSlider;
 import getElements from '../utilities/getElements';
 import generateAriaControls from '../utilities/generateAriaControls';
+
+const { slideToggle } = window.domSlider;
 
 /**
  *  Toggle JS
@@ -30,21 +31,32 @@ const toggleAriaExpanded = (toggleTrigger) => {
   // If the trigger has the attr then determine toggle state
   if (toggleTrigger.hasAttribute('aria-expanded')) {
     const isExpanded = toggleTrigger.getAttribute('aria-expanded');
-    toggleTrigger.setAttribute('aria-expanded', isExpanded === 'false' ? 'true' : 'false');
+    toggleTrigger.setAttribute(
+      'aria-expanded',
+      isExpanded === 'false' ? 'true' : 'false',
+    );
   } else {
     // If it doesn't have it then set it to false initially
     toggleTrigger.setAttribute('aria-expanded', 'false');
   }
 };
 
-const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) => {
+const handleToggleClick = (
+  toggleContent,
+  toggleIcon,
+  toggleIconUse,
+  element,
+) => {
   const trigger = element;
   let isAccordion;
   let isMastheadAccordion;
 
   if (trigger.hasAttribute('data-sprk-toggle-type')) {
-    isAccordion = trigger.getAttribute('data-sprk-toggle-type').includes('accordion');
-    isMastheadAccordion = trigger.getAttribute('data-sprk-toggle-type') === 'masthead-accordion';
+    isAccordion = trigger
+      .getAttribute('data-sprk-toggle-type')
+      .includes('accordion');
+    isMastheadAccordion =
+      trigger.getAttribute('data-sprk-toggle-type') === 'masthead-accordion';
   }
 
   // Rotate the Icon
@@ -60,8 +72,14 @@ const handleToggleClick = (toggleContent, toggleIcon, toggleIconUse, element) =>
     );
   }
 
-  if (isAccordion && !isMastheadAccordion) toggleContent.parentElement.classList.toggle('sprk-c-Accordion__item--open');
-  if (isMastheadAccordion) toggleContent.parentElement.classList.toggle('sprk-c-MastheadAccordion__item--open');
+  if (isAccordion && !isMastheadAccordion)
+    toggleContent.parentElement.classList.toggle(
+      'sprk-c-Accordion__item--open',
+    );
+  if (isMastheadAccordion)
+    toggleContent.parentElement.classList.toggle(
+      'sprk-c-MastheadAccordion__item--open',
+    );
 
   slideToggle({ element: toggleContent }).then(() => {
     // Enable clicks after animation runs
@@ -77,7 +95,9 @@ const bindToggleUIEvents = (element) => {
   const toggleTrigger = element.querySelector('[data-sprk-toggle="trigger"]');
   const toggleContent = element.querySelector('[data-sprk-toggle="content"]');
   const toggleIcon = element.querySelector('[data-sprk-toggle="icon"]');
-  const toggleIconUse = element.querySelector('[data-sprk-toggle="accordionIconUseElement"]');
+  const toggleIconUse = element.querySelector(
+    '[data-sprk-toggle="accordionIconUseElement"]',
+  );
 
   generateAriaControls(toggleTrigger, toggleContent, 'toggle');
 
@@ -92,7 +112,12 @@ const bindToggleUIEvents = (element) => {
     e.preventDefault();
     // Disable clicks till animation runs
     e.currentTarget.style.pointerEvents = 'none';
-    handleToggleClick(toggleContent, toggleIcon, toggleIconUse, e.currentTarget);
+    handleToggleClick(
+      toggleContent,
+      toggleIcon,
+      toggleIconUse,
+      e.currentTarget,
+    );
   });
 };
 
@@ -101,5 +126,9 @@ const toggle = () => {
 };
 
 export {
-  toggle, toggleIconType, toggleAriaExpanded, handleToggleClick, bindToggleUIEvents,
+  toggle,
+  toggleIconType,
+  toggleAriaExpanded,
+  handleToggleClick,
+  bindToggleUIEvents,
 };

@@ -1,8 +1,4 @@
-const mockDOMSliderStub = {};
-
-jest.mock('dom-slider', () => mockDOMSliderStub);
-
-/* global window beforeEach afterEach document describe before it */
+/* global window beforeEach afterEach document describe it sinon */
 import {
   masthead,
   bindUIEvents,
@@ -14,6 +10,10 @@ import {
   toggleScrollEvent,
 } from '../components/masthead';
 import { dropdowns } from '../components/dropdown';
+
+const mockDOMSliderStub = {};
+
+jest.mock('dom-slider', () => mockDOMSliderStub);
 
 describe('masthead init', () => {
   let main;
@@ -55,7 +55,7 @@ describe('masthead init', () => {
     mastheadDiv.appendChild(iconContainerDiv);
     main.appendChild(mastheadDiv);
     document.body.appendChild(main);
-  })
+  });
 
   afterEach(() => {
     if (document.querySelectorAll.restore) {
@@ -68,7 +68,9 @@ describe('masthead init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     masthead();
-    expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-mobile-nav-trigger]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-mobile-nav-trigger]',
+    );
   });
 
   it('should init aria-expanded as closed correctly', () => {
@@ -98,7 +100,9 @@ describe('masthead init', () => {
 
     expect(nav.hasAttribute('id')).toBeTruthy();
     expect(iconContainer.hasAttribute('aria-controls')).toBeTruthy();
-    expect(nav.getAttribute('id')).toEqual(iconContainer.getAttribute('aria-controls'));
+    expect(nav.getAttribute('id')).toEqual(
+      iconContainer.getAttribute('aria-controls'),
+    );
   });
 
   it('should NOT override aria-controls if the value doesnt match the id on the content', () => {
@@ -129,7 +133,7 @@ describe('masthead init', () => {
     masthead();
 
     expect(iconContainer.getAttribute('aria-controls')).toEqual('foo');
-  })
+  });
 
   it('should not change content id or aria-controls if both are valid', () => {
     nav.setAttribute('id', 'foo');
@@ -142,7 +146,7 @@ describe('masthead init', () => {
 
     expect(nav.getAttribute('id')).toEqual('foo');
     expect(iconContainer.getAttribute('aria-controls')).toEqual('foo');
-  })
+  });
 });
 
 describe('masthead UI Events tests', () => {
@@ -287,12 +291,16 @@ describe('masthead UI Events tests', () => {
   it('should close the dropdown box when selector is clicked and its opened already', () => {
     selectorDropdown.classList.add('sprk-c-Dropdown--open');
     selector.dispatchEvent(new window.Event('click'));
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
+      false,
+    );
   });
 
   it('should open the dropdown box when selector is clicked', () => {
     selector.dispatchEvent(new window.Event('click'));
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
+      true,
+    );
   });
 
   it('should open the wide dropdown box when selector is clicked', () => {
@@ -308,9 +316,13 @@ describe('masthead UI Events tests', () => {
 
   it('should open the dropdown box when selector in dropdown is clicked', () => {
     selectorTriggerInDropdown.dispatchEvent(new window.Event('click'));
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
+      true,
+    );
     selectorTriggerInDropdown.dispatchEvent(new window.Event('click'));
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
+      false,
+    );
   });
 
   it('should hide the masthead mask when esc is pressed', () => {
@@ -330,21 +342,27 @@ describe('masthead UI Events tests', () => {
     event = new window.Event('scroll');
     window.dispatchEvent(event);
     addClassOnScroll(mastheadDiv, 200, 150, 'sprk-c-Masthead--scroll');
-    expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).toBe(true);
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).toBe(
+      true,
+    );
   });
 
   it('should add class to masthead when the scrollDirection is down', () => {
     event = new window.Event('scroll');
     window.dispatchEvent(event);
     toggleMenu('down');
-    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).toBe(true);
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).toBe(
+      true,
+    );
   });
 
   it('should remove class to masthead when the scrollDirection is down', () => {
     event = new window.Event('scroll');
     window.dispatchEvent(event);
     toggleMenu('up');
-    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).toBe(false);
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).toBe(
+      false,
+    );
   });
 
   it('should add checkScrollDirection event listener if menu is visible', () => {
@@ -370,7 +388,9 @@ describe('masthead UI Events tests', () => {
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 26;
     document.dispatchEvent(escKeyEvent);
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
+      true,
+    );
   });
 
   it('should close the dropdown if an element outside the dropdown is focused', () => {
@@ -384,14 +404,18 @@ describe('masthead UI Events tests', () => {
   it('should not close the dropdown if an element inside the dropdown is focused', () => {
     selector.click();
     nav.focus();
-    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
+    expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
+      true,
+    );
   });
 
   it('should remove class from masthead when scrolled to the top', () => {
     event = new window.Event('scroll');
     window.dispatchEvent(event);
     addClassOnScroll(mastheadDiv, 0, 150, 'sprk-c-Masthead--scroll');
-    expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).toBe(false);
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--scroll')).toBe(
+      false,
+    );
   });
 
   it('should close the nav when clicked and the nav is already open', () => {

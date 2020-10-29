@@ -5,9 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Toggle',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('toggle')}
@@ -69,5 +67,5 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['toggle'],
-  }
+  },
 };

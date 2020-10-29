@@ -8,7 +8,7 @@ describe('generateAriaControls tests', () => {
   beforeEach(() => {
     triggerElement = document.createElement('button');
     contentElement = document.createElement('div');
-  })
+  });
 
   it('should generate values if neither aria-controls nor id is present', () => {
     triggerElement.removeAttribute('aria-controls');
@@ -17,7 +17,9 @@ describe('generateAriaControls tests', () => {
 
     expect(triggerElement.hasAttribute('aria-controls')).toEqual(true);
     expect(contentElement.hasAttribute('id')).toEqual(true);
-    expect(triggerElement.getAttribute('aria-controls')).toEqual(contentElement.getAttribute('id'));
+    expect(triggerElement.getAttribute('aria-controls')).toEqual(
+      contentElement.getAttribute('id'),
+    );
   });
 
   it('should not change values if aria-controls is provided but id is missing', () => {

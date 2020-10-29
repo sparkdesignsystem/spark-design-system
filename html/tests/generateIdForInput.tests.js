@@ -7,7 +7,7 @@ describe('generateIdForInput tests', () => {
 
   global.console = {
     warn: jest.fn(),
-  }
+  };
 
   beforeEach(() => {
     inputElement = document.createElement('input');
@@ -38,11 +38,11 @@ describe('generateIdForInput tests', () => {
 
     generateIdForInput(inputElement, labelElement, 'component');
     expect(global.console.warn).toHaveBeenCalledWith(
-      'Spark Design System Warning - The value of \'for\' (test) on the label expects a matching \'id\' on the input.'
-    )
+      "Spark Design System Warning - The value of 'for' (test) on the label expects a matching 'id' on the input.",
+    );
   });
 
-  it('should console.warn if for and id both exist but don\'t match', () => {
+  it("should console.warn if for and id both exist but don't match", () => {
     labelElement.htmlFor = 'test';
     inputElement.setAttribute('id', 'test-1');
     expect(labelElement.htmlFor).toMatch('test');
@@ -50,7 +50,7 @@ describe('generateIdForInput tests', () => {
 
     generateIdForInput(inputElement, labelElement, 'component');
     expect(global.console.warn).toHaveBeenCalledWith(
-      'Spark Design System Warning - The value of \'for\' (test) on the label should match the \'id\' on the input (test-1).'
+      "Spark Design System Warning - The value of 'for' (test) on the label should match the 'id' on the input (test-1).",
     );
   });
 });

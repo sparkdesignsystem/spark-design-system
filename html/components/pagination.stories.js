@@ -4,9 +4,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Pagination',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     docs: { iframeHeight: 70 },
     info: `
@@ -116,7 +114,7 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['pagination'],
-  }
+  },
 };
 
 export const pager = () => {
@@ -163,9 +161,8 @@ export const pager = () => {
   `;
 };
 
-
 pager.story = {
   parameters: {
     jest: ['pagination'],
-  }
+  },
 };

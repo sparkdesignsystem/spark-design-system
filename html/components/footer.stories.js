@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import { toggle } from '../components/toggle';
+import { toggle } from './toggle';
 import '../utilities/polyfills/classListSVG';
 import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 

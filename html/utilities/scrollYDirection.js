@@ -1,4 +1,4 @@
-/* global document */
+/* global */
 
 let scrollPosition = 0;
 const scrollYDirection = () => {

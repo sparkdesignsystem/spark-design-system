@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Table',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('table')}
@@ -13,7 +11,7 @@ ${markdownDocumentationLinkBuilder('table')}
   },
 };
 
-export const columnComparison = () => (
+export const columnComparison = () =>
   `<div class="sprk-b-TableContainer" data-id="table-1">
     <table class="sprk-b-Table sprk-b-Table--spacing-medium">
       <thead>
@@ -46,10 +44,9 @@ export const columnComparison = () => (
         </tr>
       </tbody>
     </table>
-  </div>`
-);
+  </div>`;
 
-export const secondary = () => (
+export const secondary = () =>
   `<div class="sprk-b-TableContainer" data-id="table-2">
     <table class="sprk-b-Table sprk-b-Table--secondary sprk-b-Table--spacing-medium">
       <thead>
@@ -82,10 +79,9 @@ export const secondary = () => (
         </tr>
       </tbody>
     </table>
-  </div>`
-);
+  </div>`;
 
-export const groupedColumns = () => (
+export const groupedColumns = () =>
   `<div class="sprk-b-TableContainer" data-id="table-3">
     <table class="sprk-b-Table sprk-b-Table--grouped-columns sprk-b-Table--spacing-medium">
       <thead>
@@ -131,10 +127,9 @@ export const groupedColumns = () => (
         </tr>
       </tbody>
     </table>
-  </div>`
-);
+  </div>`;
 
-export const rowComparison = () => (
+export const rowComparison = () =>
   `<div class="sprk-b-TableContainer" data-id="table-4">
     <table class="sprk-b-Table sprk-b-Table--row-comparison sprk-b-Table--spacing-medium">
       <thead>
@@ -172,10 +167,9 @@ export const rowComparison = () => (
         </tr>
       </tbody>
     </table>
-  </div>`
-);
+  </div>`;
 
-export const secondaryRowComparison = () => (
+export const secondaryRowComparison = () =>
   `<div class="sprk-b-TableContainer" data-id="table-5">
     <table class="sprk-b-Table sprk-b-Table--secondary-row-comparison sprk-b-Table--spacing-medium">
       <tbody>
@@ -211,5 +205,4 @@ export const secondaryRowComparison = () => (
         </tr>
       </tbody>
     </table>
-  </div>`
-);
+  </div>`;

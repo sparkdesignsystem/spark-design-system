@@ -8,7 +8,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Components/Stepper',
   decorators: [
-    story => `<div class="sprk-o-Box sprk-u-JavaScript">${story()}</div>`,
+    (story) => `<div class="sprk-o-Box sprk-u-JavaScript">${story()}</div>`,
   ],
   parameters: {
     docs: { iframeHeight: 300 },
@@ -454,9 +454,13 @@ export const withCarousel = () => {
     if (iframeWindow) {
       const event = document.createEvent('Event');
       event.initEvent('resize', true, true);
-      iframeWindow.addEventListener('resize', () => {
-        iframeWindow.resizeBy(0, 0);
-      }, false);
+      iframeWindow.addEventListener(
+        'resize',
+        () => {
+          iframeWindow.resizeBy(0, 0);
+        },
+        false,
+      );
       setTimeout(() => {
         iframeWindow.dispatchEvent(event);
       }, 500);

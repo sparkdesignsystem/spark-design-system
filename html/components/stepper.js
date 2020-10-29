@@ -95,8 +95,8 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
         activeClass,
       );
       if (
-        carouselInstance
-        && currentActiveIndex !== getActiveTabIndex(steps, activeClass)
+        carouselInstance &&
+        currentActiveIndex !== getActiveTabIndex(steps, activeClass)
       ) {
         carouselInstance.slideTo(getActiveTabIndex(steps, activeClass));
       }
@@ -151,8 +151,8 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
       const sliderBreakpoint = 1279;
 
       if (
-        windowWidth < sliderBreakpoint
-        && newViewportWidth > sliderBreakpoint
+        windowWidth < sliderBreakpoint &&
+        newViewportWidth > sliderBreakpoint
       ) {
         resetTabs(steps, descriptions, activeClass);
         setActiveTab(steps[activeStep], descriptions[activeStep], activeClass);
@@ -179,7 +179,7 @@ const bindUIEvents = (stepContainer, carouselContainer) => {
 
       // if the key pressed isnt in the list of keys, return
       if (
-        !Object.keys(keys).some(key => {
+        !Object.keys(keys).some((key) => {
           return keys[key] === event.keyCode;
         })
       ) {

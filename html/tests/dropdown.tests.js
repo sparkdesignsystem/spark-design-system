@@ -1,5 +1,10 @@
 /* global document describe beforeEach afterEach it  window  */
-import { dropdowns, hideDropDown, showDropDown, toggleDropDown } from '../components/dropdown';
+import {
+  dropdowns,
+  hideDropDown,
+  showDropDown,
+  toggleDropDown,
+} from '../components/dropdown';
 
 describe('Dropdown tests', () => {
   let trigger;
