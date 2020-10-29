@@ -60,7 +60,7 @@ describe('Spark Spinner Directive', () => {
       true,
     );
     expect(spinner1Element.classList.contains('sprk-c-Spinner')).toBe(true);
-    expect(spinner5Element.classList.length).toBe(2);
+    expect(spinner1Element.classList.length).toBe(2);
   });
 
   it('add the id string', () => {
