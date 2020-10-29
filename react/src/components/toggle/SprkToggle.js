@@ -51,8 +51,6 @@ class SprkToggle extends Component {
     } = this.props;
     const { isOpen, height, uniqueIdentifier } = this.state;
 
-    // const uniqueIdentifier = contentId || uniqueId('sprk_toggle_content_');
-
     const containerClasses = classnames('sprk-c-Toggle', additionalClasses);
 
     const titleClasses = classnames(

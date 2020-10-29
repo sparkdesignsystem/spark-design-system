@@ -76,8 +76,8 @@ class SprkMastheadAccordionItem extends Component {
             >
               <span
                 className="
-                sprk-b-TypeBodyOne
-                sprk-c-MastheadAccordion__heading"
+                  sprk-b-TypeBodyOne
+                  sprk-c-MastheadAccordion__heading"
               >
                 {text}
               </span>
