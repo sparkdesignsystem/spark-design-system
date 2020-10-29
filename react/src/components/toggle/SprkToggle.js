@@ -11,10 +11,12 @@ class SprkToggle extends Component {
     super(props);
     // TODO: Remove isDefaultOpen in issue #1296
     const { isDefaultOpen, isOpen = isDefaultOpen } = this.props;
+    const { contentId = uniqueId('sprk_toggle_content_') } = this.props;
 
     this.state = {
       isOpen: isOpen || false,
       height: isOpen ? 'auto' : 0,
+      uniqueIdentifier: contentId,
     };
 
     this.toggleOpen = this.toggleOpen.bind(this);
@@ -47,9 +49,9 @@ class SprkToggle extends Component {
       onClick,
       ...other
     } = this.props;
-    const { isOpen, height } = this.state;
+    const { isOpen, height, uniqueIdentifier } = this.state;
 
-    const uniqueIdentifier = contentId || uniqueId('sprk_toggle_content_');
+    // const uniqueIdentifier = contentId || uniqueId('sprk_toggle_content_');
 
     const containerClasses = classnames('sprk-c-Toggle', additionalClasses);
 

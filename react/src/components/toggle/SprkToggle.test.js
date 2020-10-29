@@ -165,7 +165,10 @@ describe('SprkToggle:', () => {
   it(`should add classes to the title if triggerTextAdditionalClasses
   are set`, () => {
     const wrapper = mount(
-      <SprkToggle triggerText="Toggle title" triggerTextAdditionalClasses="test">
+      <SprkToggle
+        triggerText="Toggle title"
+        triggerTextAdditionalClasses="test"
+      >
         Body text
       </SprkToggle>,
     );
