@@ -8,11 +8,16 @@ import SprkIcon from '../../../icons/SprkIcon';
 class SprkMastheadAccordionItem extends Component {
   constructor(props) {
     super(props);
-    const { defaultOpen, subNavLinks } = this.props;
+    const {
+      defaultOpen,
+      subNavLinks,
+      itemId = uniqueId('sprk_accordion_item_'),
+    } = this.props;
     this.state = {
       isOpen: defaultOpen || false,
       height: defaultOpen ? 'auto' : 0,
       subNavLinks: subNavLinks.map((link) => ({ id: uniqueId(), ...link })),
+      uniqueIdentifier: itemId,
     };
     this.toggleAccordionOpen = this.toggleAccordionOpen.bind(this);
   }
@@ -41,9 +46,13 @@ class SprkMastheadAccordionItem extends Component {
       itemId,
       ...rest
     } = this.props;
-    const { isOpen, height, subNavLinks: stateLinks } = this.state;
+    const {
+      isOpen,
+      height,
+      subNavLinks: stateLinks,
+      uniqueIdentifier,
+    } = this.state;
     const TagName = element;
-    const uniqueIdentifier = itemId || uniqueId('sprk_accordion_item_');
     return (
       <li
         className={classNames(
@@ -65,7 +74,11 @@ class SprkMastheadAccordionItem extends Component {
               aria-controls={uniqueIdentifier}
               type="button"
             >
-              <span className="sprk-b-TypeBodyOne sprk-c-MastheadAccordion__heading">
+              <span
+                className="
+                sprk-b-TypeBodyOne
+                sprk-c-MastheadAccordion__heading"
+              >
                 {text}
               </span>
               <SprkIcon
@@ -78,7 +91,10 @@ class SprkMastheadAccordionItem extends Component {
             </button>
             <AnimateHeight duration={300} height={height}>
               <ul
-                className="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
+                className="
+                  sprk-b-List
+                  sprk-b-List--bare
+                  sprk-c-MastheadAccordion__details"
                 id={uniqueIdentifier}
               >
                 {stateLinks.map((subnavlink) => {
@@ -100,7 +116,9 @@ class SprkMastheadAccordionItem extends Component {
                             : undefined
                         }
                         className={classNames(
-                          'sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link',
+                          `sprk-b-Link
+                          sprk-b-Link--plain
+                          sprk-c-Masthead__link`,
                         )}
                         {...innerRest}
                       >
@@ -119,6 +137,7 @@ class SprkMastheadAccordionItem extends Component {
             className={classNames(
               { 'sprk-c-MastheadAccordion__summary': !isButton },
               {
+                // eslint-disable-next-line max-len
                 'sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact sprk-c-Button--full@s': isButton,
               },
             )}
