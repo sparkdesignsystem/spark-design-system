@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sparkdesignsystem/spark-design-system"
+    "url": "git+https://github.com/sparkdesignsystem/spark-design-system.git"
   },
   "author": "Quicken Loans",
   "license": "MIT",
@@ -23,5 +23,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "dependencies": {}
 }
