@@ -166,6 +166,38 @@ describe('SprkMastheadAccordionItem:', () => {
     expect(wrapper.find(`#${menuItemContentId}`).length).toBe(1);
   });
 
+  it(`should not change id on toggle`, () => {
+    const wrapper = mount(
+      <SprkMastheadAccordionItem
+        text="Item 1"
+        subNavLinks={[{ text: 'Item 1' }]}
+      />,
+    );
+
+    const menuItemToggle = wrapper.find('.sprk-c-MastheadAccordion__summary');
+    menuItemToggle.simulate('click');
+
+    const menuItemContent = wrapper.find('.sprk-c-MastheadAccordion__details');
+    const menuItemContentId = menuItemContent.getDOMNode().getAttribute('id');
+    const menuItemToggleAriaControls = menuItemToggle
+      .getDOMNode()
+      .getAttribute('aria-controls');
+
+    expect(menuItemContentId).toMatch(/sprk_accordion_item_\d/);
+    expect(menuItemToggleAriaControls).toEqual(menuItemContentId);
+    expect(wrapper.find(`#${menuItemContentId}`).length).toBe(1);
+    expect(wrapper.state().isOpen).toBe(true);
+
+    menuItemToggle.simulate('click');
+
+    const postClickMenuItemContentId = menuItemContent
+      .getDOMNode()
+      .getAttribute('id');
+    expect(wrapper.state().isOpen).toBe(false);
+    expect(menuItemContentId).toMatch(postClickMenuItemContentId);
+    expect(menuItemToggleAriaControls).toEqual(postClickMenuItemContentId);
+  });
+
   it(`should add correct aria-controls and id to
   narrowNav if narrowNavId is passed`, () => {
     const testItemId = 'test12345';
