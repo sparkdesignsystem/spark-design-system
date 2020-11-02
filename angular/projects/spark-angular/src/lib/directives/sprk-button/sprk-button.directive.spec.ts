@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkButtonDirective } from './sprk-button.directive';
+import { SprkSpinnerDirective } from '../sprk-spinner/sprk-spinner.directive';
 
 @Component({
   selector: 'sprk-test',
@@ -32,8 +33,8 @@ import { SprkButtonDirective } from './sprk-button.directive';
     <button sprkButton variant="quaternary" [isSpinning]="spinnerVal">
       Test 6
     </button>
-    <button sprkButton additionalClasses="testClass" [isLoading]="true">
-      Test 7
+    <button sprkButton additionalClasses="testClass" [isSpinning]="true">
+      <div sprkSpinner></div>
     </button>
   `,
 })
@@ -54,7 +55,7 @@ describe('Spark Button Directive', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkButtonDirective, TestComponent],
+      declarations: [SprkButtonDirective, SprkSpinnerDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
@@ -196,5 +197,12 @@ describe('Spark Button Directive', () => {
     fixture.detectChanges();
     const spinner = button5Element.querySelector('.sprk-c-Spinner');
     expect(spinner).toBeTruthy();
+  });
+
+  // TODO: Remove. This is for checking if user is using new spinner directive #3561
+  it('should render new spinner if using sprk-spinner-directive', () => {
+    const spinnerEl = button7Element.querySelector('.sprk-c-Spinner');
+    expect(spinnerEl.getAttribute('role')).toBe('progressbar');
+    expect(spinnerEl.getAttribute('aria-valuetext')).toBe('Loading');
   });
 });

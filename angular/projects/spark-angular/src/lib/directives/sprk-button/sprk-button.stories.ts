@@ -213,7 +213,7 @@ export const spinning = () => {
         idString="button-spinning"
         analyticsString="spinning"
         sprkButton
-        [isLoading]="true"
+        [isSpinning]="true"
       >
         <div sprkSpinner></div>
       </button>
@@ -235,7 +235,7 @@ export const spinningSecondary = () => {
         variant="secondary"
         idString="button-spinning-secondary"
         sprkButton
-        [isLoading]="true"
+        [isSpinning]="true"
       >
         <div sprkSpinner variant="primary"></div>
       </button>
@@ -257,7 +257,7 @@ export const spinningTertiary = () => {
         variant="tertiary"
         idString="button-spinning-tertiary"
         sprkButton
-        [isLoading]="true"
+        [isSpinning]="true"
       >
         <div sprkSpinner variant="secondary"></div>
       </button>
@@ -279,7 +279,7 @@ export const spinningQuaternary = () => {
         variant="quaternary"
         idString="button-spinning-quaternary"
         sprkButton
-        [isLoading]="true"
+        [isSpinning]="true"
       >
         <div sprkSpinner variant="dark"></div>
       </button>

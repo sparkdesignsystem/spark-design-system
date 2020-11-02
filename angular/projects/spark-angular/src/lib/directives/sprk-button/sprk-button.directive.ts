@@ -1,3 +1,5 @@
+import { ContentChild } from '@angular/core';
+import { ViewChild } from '@angular/core';
 import {
   Directive,
   ElementRef,
@@ -9,6 +11,7 @@ import {
   AfterViewInit,
   SimpleChanges,
 } from '@angular/core';
+import { SprkSpinnerDirective } from '../sprk-spinner/sprk-spinner.directive';
 
 @Directive({
   selector: '[sprkButton]',
@@ -18,12 +21,10 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    * @ignore
    */
   constructor(public ref: ElementRef, private renderer: Renderer2) {}
-  /**
-   * Adds the necessary attributes for accessible loading state.
-   */
-  @Input()
-  isLoading = false;
 
+  // TODO: Remove this contentChild for newSpinner. It was for deprecation purposes only #3561
+  @ViewChild(SprkSpinnerDirective, { static: true })
+  newSpinner: SprkSpinnerDirective;
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -90,9 +91,10 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
       this.renderer.addClass(this.ref.nativeElement, variants[this.variant]);
     }
 
-    if (this.isLoading) {
+    if (this.isSpinning) {
       this.renderer.addClass(this.ref.nativeElement, 'sprk-c-Button--loading');
       this.renderer.setAttribute(this.ref.nativeElement, 'disabled', 'true');
+      this.renderer.setAttribute(this.ref.nativeElement, 'aria-live', 'polite');
     }
 
     if (this.additionalClasses) {
@@ -110,14 +112,21 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    * the width value accounts for that text.
    */
   ngAfterViewInit() {
-    if (this.isSpinning) {
+    // TODO: Remove this check for newSpinner. It was for deprecation purposes only #3561
+    console.log(this.newSpinner, 'NEW SPINNER');
+    if (this.isSpinning && !!this.newSpinner) {
+      console.log('should not run');
       this.setSpinning(this.ref.nativeElement);
     }
   }
 
-  // TODO: Remove spinning functionality from button on next release #3561
+  // TODO: Remove this check for newSpinner. It was for deprecation purposes only #3561
   ngOnChanges(changes: SimpleChanges) {
-    if (this.isSpinning && !changes['isSpinning'].isFirstChange()) {
+    if (
+      this.isSpinning &&
+      !changes['isSpinning'].isFirstChange() &&
+      !!this.newSpinner
+    ) {
       this.setSpinning(this.ref.nativeElement);
     }
   }
