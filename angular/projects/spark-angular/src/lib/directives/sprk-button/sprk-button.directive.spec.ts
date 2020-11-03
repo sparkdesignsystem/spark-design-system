@@ -149,9 +149,9 @@ describe('Spark Button Directive', () => {
 
   it('should add loading state classes and attributes', () => {
     expect(button7Element.getAttribute('disabled')).toBe('true');
-    expect(button7Element.classList.contains('sprk-c-Button--loading')).toBe(
-      true,
-    );
+    expect(
+      button7Element.classList.contains('sprk-c-Button--has-spinner'),
+    ).toBe(true);
   });
 
   it('should add the value of analyticsString to data-analytics', () => {

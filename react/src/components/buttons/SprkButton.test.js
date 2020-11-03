@@ -209,7 +209,7 @@ describe('SprkButton:', () => {
 
   it('should apply loading class', () => {
     const wrapper = shallow(<SprkButton isLoading />);
-    expect(wrapper.find('button').hasClass('sprk-c-Button--loading')).toBe(
+    expect(wrapper.find('button').hasClass('sprk-c-Button--has-spinner')).toBe(
       true,
     );
   });

@@ -91,7 +91,10 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     }
 
     if (this.isSpinning) {
-      this.renderer.addClass(this.ref.nativeElement, 'sprk-c-Button--loading');
+      this.renderer.addClass(
+        this.ref.nativeElement,
+        'sprk-c-Button--has-spinner',
+      );
       this.renderer.setAttribute(this.ref.nativeElement, 'disabled', 'true');
       this.renderer.setAttribute(this.ref.nativeElement, 'aria-live', 'polite');
     }

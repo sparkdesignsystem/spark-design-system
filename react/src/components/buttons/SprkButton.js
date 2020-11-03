@@ -49,7 +49,7 @@ const SprkButton = ({
         { 'sprk-c-Button--tertiary': variant === 'tertiary' },
         { 'sprk-c-Button--quaternary': variant === 'quaternary' },
         { 'sprk-is-Disabled': isDisabled },
-        { 'sprk-c-Button--loading': isLoading },
+        { 'sprk-c-Button--has-spinner': isLoading },
         additionalClasses,
       )}
       role={TagName !== 'button' ? 'button' : undefined}
