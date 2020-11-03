@@ -3,6 +3,9 @@
     "gutter": {
       "comment": "Value for the gutters between body and figure in the Flag component.",
       "value": "{space.m.value}",
+      "attributes": {
+        "category": "size"
+      },
       "file": "settings",
       "themable": true
     },

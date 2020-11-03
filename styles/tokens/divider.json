@@ -11,7 +11,25 @@
     },
     "border": {
       "comment": "The value of border for Dividers.",
-      "value": "2px solid {divider.color.value}",
+      "value": "{divider.border-width.value} {divider.border-style.value} {divider.color.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border-width": {
+      "comment": "The size value of border for Dividers.",
+      "value": "2px",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border-style": {
+      "comment": "The style value of border for Dividers.",
+      "value": "solid",
       "attributes": {
         "category": "content"
       },

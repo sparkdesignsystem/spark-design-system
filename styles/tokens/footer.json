@@ -3,12 +3,18 @@
     "background-color": {
       "comment": "Background color of the Footer",
       "value": "{black.value}",
+      "attributes": {
+        "category": "color"
+      },
       "file": "settings",
       "themable": true
     },
     "text-color": {
       "comment": "Text color on the Footer.",
       "value": "{white.value}",
+      "attributes": {
+        "category": "color"
+      },
       "file": "settings",
       "themable": true
     },
@@ -16,6 +22,9 @@
       "color": {
         "comment": "Link color on the Footer.",
         "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
@@ -32,6 +41,9 @@
     "icon-color": {
       "comment": "Icon color on the Footer.",
       "value": "{white.value}",
+      "attributes": {
+        "category": "color"
+      },
       "file": "settings",
       "themable": true
     },
@@ -39,6 +51,9 @@
       "color": {
         "comment": "Toggle trigger color on the Footer.",
         "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
@@ -54,6 +69,9 @@
       "hover-color": {
         "comment": "Toggle trigger hover color on the Footer.",
         "value": "{purple-light.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       }
