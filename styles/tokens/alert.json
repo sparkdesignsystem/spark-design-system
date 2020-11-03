@@ -161,7 +161,7 @@
       },
       "margin": {
         "comment": "The margin for the icon in the Alert component.",
-        "value": "{alert.icon.margin-top.value} {space.misc.a.value} {alert.icon.margin-bottom.value} alert.icon.margin-left.value}",
+        "value": "{alert.icon.margin-top.value} {space.misc.a.value} {alert.icon.margin-bottom.value} {alert.icon.margin-left.value}",
         "attributes": {
           "category": "content"
         },

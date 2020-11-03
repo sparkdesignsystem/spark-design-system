@@ -9,9 +9,6 @@ npm-debug.log
 node_modules/
 
 dist/
-android/
-ios/
-web/
 /public
 /react/public
 .cache/

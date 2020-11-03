@@ -1,0 +1,210 @@
+/// The color of the icon in the summary when the Accordion item is open or hovered. 
+$sprk-accordion-summary-active-color: rgb(96, 58, 161) !default;
+/// The background color used for hover and active on items in the Accordion. 
+$sprk-accordion-active-background-color: rgb(247, 247, 247) !default;
+/// Value for border color on the Alert component. 
+$sprk-alert-border-color: rgb(247, 247, 247) !default;
+/// Value for shadow color on the Alert component. 
+$sprk-alert-shadow-color: rgba(0, 0, 0, 0.08) !default;
+/// The color of the dismiss icon in the Alert component. 
+$sprk-alert-dismiss-icon-color: rgb(28, 27, 26) !default;
+/// The icon color of the Information Alert component. 
+$sprk-alert-icon-color-info: rgb(28, 110, 242) !default;
+/// The icon color of the Success Alert component. 
+$sprk-alert-icon-color-success: rgb(41, 133, 64) !default;
+/// The icon color of the Fail Alert component. 
+$sprk-alert-icon-color-fail: rgb(229, 1, 88) !default;
+/// The background color of the default Alert component. 
+$sprk-alert-bg-color: rgb(255, 255, 255) !default;
+/// The background color of the Fail Alert component. 
+$sprk-alert-bg-color-fail: rgb(255, 255, 255) !default;
+/// The background color of the Success Alert component. 
+$sprk-alert-bg-color-success: rgb(255, 255, 255) !default;
+/// The background color of the Information Alert component. 
+$sprk-alert-bg-color-info: rgb(255, 255, 255) !default;
+/// The value for the color property in the Fail Alert component. 
+$sprk-alert-text-color-fail: rgb(28, 27, 26) !default;
+/// The value for the color property in the Success Alert component. 
+$sprk-alert-text-color-success: rgb(28, 27, 26) !default;
+/// The value for the color property in the Information Alert component. 
+$sprk-alert-text-color-info: rgb(28, 27, 26) !default;
+/// The background color of the Button component. 
+$sprk-btn-background-color: rgb(200, 16, 46) !default;
+/// The box shadow color value for the Button component 
+$sprk-btn-shadow-color: rgba(20, 20, 20, 0.08) !default;
+/// The border color of the Button component. 
+$sprk-btn-border-color: rgb(200, 16, 46) !default;
+/// The text color of the Button component. 
+$sprk-btn-text-color: rgb(255, 255, 255) !default;
+/// The background color of the Button component on hover. 
+$sprk-btn-hover-background-color: rgb(157, 34, 53) !default;
+/// The text color of the Button component on hover. 
+$sprk-btn-hover-text-color: rgb(255, 255, 255) !default;
+/// The background color of the Secondary Button component on hover. 
+$sprk-btn-secondary-hover-background-color: #f9e7ea !default;
+/// The box shadow color of the Card on wide viewports. 
+$sprk-card-shadow-color-wide-viewport: rgba(0, 0, 0, 0.08) !default;
+/// The box shadow color of the Standout Card variant on narrow viewports. 
+$sprk-card-shadow-color-standout: rgba(0, 0, 0, 0.1) !default;
+/// The box shadow color of the Standout Card variant on wide viewports. 
+$sprk-card-shadow-color-standout-wide-viewport: rgba(0, 0, 0, 0.1) !default;
+/// The background color of the header area for the Highlighted Header Card. 
+$sprk-card-header-bg-color: rgb(96, 58, 161) !default;
+/// The text color for the Highlighted Header Card. 
+$sprk-card-header-text-color: rgb(255, 255, 255) !default;
+/// Red for key branded moments throughout the product as our primary brand  
+$sprk-red: rgb(200, 16, 46);
+/// Darkest red for key branded moments throughout the product. 
+$sprk-deep-red: rgb(118, 35, 47);
+/// Mid red for key branded moments throughout the product. 
+$sprk-mid-red: rgb(157, 34, 53);
+/// Main purple for secondary actions and brand elements. 
+$sprk-purple: rgb(96, 58, 161);
+/// Dark purple for interactive elements. Can also be used for limited floods of  
+$sprk-purple-dark: rgb(60, 49, 116);
+/// Deep purple for interactive elements. Can also be used for limited floods of  
+$sprk-purple-deep: rgb(46, 17, 102);
+/// Light purple for interactive elements. 
+$sprk-purple-light: rgb(146, 101, 211);
+/// Lightest purple for interactive elements. Can also be used for limited floods of  
+$sprk-purple-lightest: rgb(231, 226, 242);
+/// Use to communicate a positive status or message. 
+$sprk-green: rgb(41, 133, 64);
+/// Use to communicate an informative status or message. 
+$sprk-blue: rgb(28, 110, 242);
+/// Use to communicate an error status or message. 
+$sprk-pink: rgb(229, 1, 88);
+/// Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this  
+$sprk-yellow: rgb(237, 163, 2);
+/// White for floods of color and accents, like backgrounds and cards. 
+$sprk-white: rgb(255, 255, 255);
+/// Black for main text color, specifically in headline and body copy. 
+$sprk-black: rgb(28, 27, 26);
+/// Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text. 
+$sprk-black-tint-10: rgb(232, 232, 232);
+/// Black at 20%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text. 
+$sprk-black-tint-20: rgb(210, 209, 209);
+/// Black at 30%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text. 
+$sprk-black-tint-30: rgb(186, 186, 186);
+/// Black at 40%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text. 
+$sprk-black-tint-40: rgb(164, 164, 163);
+/// Black at 50%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text. 
+$sprk-black-tint-50: rgb(141, 141, 140);
+/// Black at 60%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text. 
+$sprk-black-tint-60: rgb(119, 118, 118);
+/// Black at 70%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text. 
+$sprk-black-tint-70: rgb(96, 95, 94);
+/// Black at 80%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text. 
+$sprk-black-tint-80: rgb(73, 73, 72);
+/// Black at 90%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text. 
+$sprk-black-tint-90: rgb(50, 49, 48);
+/// Lightest gray. Use in combination with content hierarchy, font-weight and background color to create AA accessible text. 
+$sprk-gray: rgb(247, 247, 247);
+/// Color value for Purple Navy. 
+$sprk-purple-navy: rgb(28, 1, 82);
+/// Color value for Lavender. 
+$sprk-lavender: rgb(190, 132, 247);
+/// Color value for Wisteria. 
+$sprk-wisteria: rgb(222, 177, 253);
+/// Color value for Magnolia. 
+$sprk-magnolia: rgb(240, 218, 255);
+/// The value for color of Dividers. 
+$sprk-divider-color: rgb(230, 230, 230) !default;
+/// Background color of the Dropdown items that are active or hovered. 
+$sprk-dropdown-active-background-color: rgb(247, 247, 247) !default;
+/// The border color of the Dropdown. 
+$sprk-dropdown-border-color: rgb(247, 247, 247) !default;
+/// The color of the Dropdown links. 
+$sprk-dropdown-link-color: rgb(28, 27, 26) !default;
+/// The color of the Dropdown trigger. 
+$sprk-dropdown-trigger-color: rgb(28, 27, 26) !default;
+/// The color of the Dropdown trigger on hover, active, focus. 
+$sprk-dropdown-trigger-color-active: rgb(28, 27, 26) !default;
+/// The color of the Dropdown trigger for the visited state. 
+$sprk-dropdown-trigger-color-visited: rgb(28, 27, 26) !default;
+/// Background color of the Footer 
+$sprk-footer-background-color: rgb(28, 27, 26) !default;
+/// Text color on the Footer. 
+$sprk-footer-text-color: rgb(255, 255, 255) !default;
+/// Link color on the Footer. 
+$sprk-footer-link-color: rgb(255, 255, 255) !default;
+/// Icon color on the Footer. 
+$sprk-footer-icon-color: rgb(255, 255, 255) !default;
+/// Toggle trigger color on the Footer. 
+$sprk-footer-trigger-color: rgb(255, 255, 255) !default;
+/// Toggle trigger hover color on the Footer. 
+$sprk-footer-trigger-hover-color: rgb(146, 101, 211) !default;
+/// The background color of the Highlight Board. 
+$sprk-highlight-board-color: rgb(255, 255, 255) !default;
+/// The background color of the content box in the Highlight Board. 
+$sprk-highlight-board-content-box-color: rgb(255, 255, 255) !default;
+/// Value for the fill property of the Icon component. 
+$sprk-icon-fill-color: rgb(28, 27, 26) !default;
+/// Value for the stroke property of the Icon component. 
+$sprk-icon-stroke-color: rgb(28, 27, 26) !default;
+/// Value for the fill property of the Filled Icon component. 
+$sprk-icon-filled-fill-color: rgb(28, 27, 26) !default;
+/// Color setting for Inputs with errors. 
+$sprk-text-input-error-color: rgb(229, 1, 88) !default;
+/// The default color on Links. 
+$sprk-link-color: rgb(96, 58, 161) !default;
+/// The color of the underline on Links. 
+$sprk-link-underline-color: rgb(96, 58, 161) !default;
+/// The color of the underline on visited Links. 
+$sprk-link-underline-visited-color: rgb(141, 141, 140) !default;
+/// The color of Links on hover. 
+$sprk-link-hover-color: rgb(46, 17, 102) !default;
+/// The color value of Simple Links. 
+$sprk-link-simple-color: rgb(28, 27, 26) !default;
+/// The color of Simple Links on hover 
+$sprk-link-simple-hover-color: rgb(28, 27, 26) !default;
+/// The underline color value of Simple Links on hover. 
+$sprk-link-simple-hover-underline-color: rgb(200, 16, 46) !default;
+/// The color value of Light Links. 
+$sprk-link-light-color: rgb(255, 255, 255) !default;
+/// The color of Light Links on hover 
+$sprk-link-light-hover-color: rgb(255, 255, 255) !default;
+/// The underline color value of Light Links on hover. 
+$sprk-link-light-hover-underline-color: rgb(255, 255, 255) !default;
+/// The color value for Links with icons in the hover state. 
+$sprk-link-has-icon-hover-color-text: rgb(46, 17, 102) !default;
+/// The color of icons in Links containing icons. 
+$sprk-link-has-icon-color-icon: rgb(96, 58, 161) !default;
+/// The color of the mask that gets applied when the Masthead selector dropdown is open on narrow screens. 
+$sprk-masthead-mask-color: rgba(0, 0, 0, 0.5) !default;
+/// The color of the mask overlay that is shown behind the Modal. 
+$sprk-modal-mask-color: rgba(34, 34, 34, 0.35) !default;
+/// The color of the border around the Stepper icon. 
+$sprk-stepper-icon-border-color: rgb(141, 141, 140) !default;
+/// The color of the step icon when the step is selected in the Stepper. 
+$sprk-stepper-icon-border-color-selected: rgb(60, 49, 116) !default;
+/// The color of the step icon in front of a dark background when the step is selected in the Stepper. 
+$sprk-stepper-icon-border-color-selected-dark-bg: rgb(231, 226, 242) !default;
+/// The color of the step icon in the Stepper. 
+$sprk-stepper-icon-color: rgb(255, 255, 255) !default;
+/// The color of the step icon in the Stepper when hovered. 
+$sprk-stepper-icon-color-hover: rgb(141, 141, 140) !default;
+/// The color of the Stepper step icon when the step is selected. 
+$sprk-stepper-icon-color-selected: rgb(255, 255, 255) !default;
+/// The color of TypeDisplayOne. 
+$sprk-color-display-one: rgb(28, 27, 26) !default;
+/// The color of TypeDisplayTwo. 
+$sprk-color-display-two: rgb(28, 27, 26) !default;
+/// The color of TypeDisplayThree. 
+$sprk-color-display-three: rgb(28, 27, 26) !default;
+/// The color of TypeDisplayFour. 
+$sprk-color-display-four: rgb(28, 27, 26) !default;
+/// The color of TypeDisplayFive. 
+$sprk-color-display-five: rgb(28, 27, 26) !default;
+/// The color of TypeDisplaySix. 
+$sprk-color-display-six: rgb(28, 27, 26) !default;
+/// The color of TypeDisplaySeven. 
+$sprk-color-display-seven: rgb(28, 27, 26) !default;
+/// The color of TypeBodyOne. 
+$sprk-color-body-one: rgb(28, 27, 26) !default;
+/// The color of TypeBodyTwo. 
+$sprk-color-body-two: rgb(28, 27, 26) !default;
+/// The color of TypeBodyThree. 
+$sprk-color-body-three: rgb(28, 27, 26) !default;
+/// The color of TypeBodyFour. 
+$sprk-color-body-four: rgb(28, 27, 26) !default;

@@ -1,0 +1,2673 @@
+{
+  "accordion": {
+    "summary": {
+      "active-color": {
+        "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
+        "value": "rgb(96, 58, 161)",
+        "attributes": {
+          "category": "color",
+          "type": "summary",
+          "item": "active-color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
+          "value": "{purple.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-accordion-summary-active-color",
+        "path": [
+          "accordion",
+          "summary",
+          "active-color"
+        ]
+      }
+    },
+    "active-background-color": {
+      "comment": "The background color used for hover and active on items in the Accordion.",
+      "value": "rgb(247, 247, 247)",
+      "attributes": {
+        "category": "color",
+        "type": "active-background-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The background color used for hover and active on items in the Accordion.",
+        "value": "{gray.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-accordion-active-background-color",
+      "path": [
+        "accordion",
+        "active-background-color"
+      ]
+    }
+  },
+  "alert": {
+    "border-color": {
+      "comment": "Value for border color on the Alert component.",
+      "value": "rgb(247, 247, 247)",
+      "attributes": {
+        "category": "color",
+        "type": "border-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "Value for border color on the Alert component.",
+        "value": "{gray.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-alert-border-color",
+      "path": [
+        "alert",
+        "border-color"
+      ]
+    },
+    "shadow-color": {
+      "comment": "Value for shadow color on the Alert component.",
+      "value": "rgba(0, 0, 0, 0.08)",
+      "attributes": {
+        "category": "color",
+        "type": "shadow-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "Value for shadow color on the Alert component.",
+        "value": "rgba(0, 0, 0, 0.08)",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-alert-shadow-color",
+      "path": [
+        "alert",
+        "shadow-color"
+      ]
+    },
+    "dismiss": {
+      "icon-color": {
+        "comment": "The color of the dismiss icon in the Alert component.",
+        "value": "rgb(28, 27, 26)",
+        "attributes": {
+          "category": "color",
+          "type": "dismiss",
+          "item": "icon-color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of the dismiss icon in the Alert component.",
+          "value": "{black.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-alert-dismiss-icon-color",
+        "path": [
+          "alert",
+          "dismiss",
+          "icon-color"
+        ]
+      }
+    },
+    "icon": {
+      "color": {
+        "info": {
+          "comment": "The icon color of the Information Alert component.",
+          "value": "rgb(28, 110, 242)",
+          "attributes": {
+            "category": "color",
+            "type": "icon",
+            "item": "color",
+            "subitem": "info"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The icon color of the Information Alert component.",
+            "value": "{blue.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-alert-icon-color-info",
+          "path": [
+            "alert",
+            "icon",
+            "color",
+            "info"
+          ]
+        },
+        "success": {
+          "comment": "The icon color of the Success Alert component.",
+          "value": "rgb(41, 133, 64)",
+          "attributes": {
+            "category": "color",
+            "type": "icon",
+            "item": "color",
+            "subitem": "success"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The icon color of the Success Alert component.",
+            "value": "{green.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-alert-icon-color-success",
+          "path": [
+            "alert",
+            "icon",
+            "color",
+            "success"
+          ]
+        },
+        "fail": {
+          "comment": "The icon color of the Fail Alert component.",
+          "value": "rgb(229, 1, 88)",
+          "attributes": {
+            "category": "color",
+            "type": "icon",
+            "item": "color",
+            "subitem": "fail"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The icon color of the Fail Alert component.",
+            "value": "{pink.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-alert-icon-color-fail",
+          "path": [
+            "alert",
+            "icon",
+            "color",
+            "fail"
+          ]
+        }
+      }
+    },
+    "bg": {
+      "color": {
+        "comment": "The background color of the default Alert component.",
+        "value": "rgb(255, 255, 255)",
+        "attributes": {
+          "category": "color",
+          "type": "bg",
+          "item": "color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The background color of the default Alert component.",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-alert-bg-color",
+        "path": [
+          "alert",
+          "bg",
+          "color"
+        ]
+      },
+      "color-fail": {
+        "comment": "The background color of the Fail Alert component.",
+        "value": "rgb(255, 255, 255)",
+        "attributes": {
+          "category": "color",
+          "type": "bg",
+          "item": "color-fail"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The background color of the Fail Alert component.",
+          "value": "{alert.bg.color.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-alert-bg-color-fail",
+        "path": [
+          "alert",
+          "bg",
+          "color-fail"
+        ]
+      },
+      "color-success": {
+        "comment": "The background color of the Success Alert component.",
+        "value": "rgb(255, 255, 255)",
+        "attributes": {
+          "category": "color",
+          "type": "bg",
+          "item": "color-success"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The background color of the Success Alert component.",
+          "value": "{alert.bg.color.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-alert-bg-color-success",
+        "path": [
+          "alert",
+          "bg",
+          "color-success"
+        ]
+      },
+      "color-info": {
+        "comment": "The background color of the Information Alert component.",
+        "value": "rgb(255, 255, 255)",
+        "attributes": {
+          "category": "color",
+          "type": "bg",
+          "item": "color-info"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The background color of the Information Alert component.",
+          "value": "{alert.bg.color.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-alert-bg-color-info",
+        "path": [
+          "alert",
+          "bg",
+          "color-info"
+        ]
+      }
+    },
+    "text": {
+      "color": {
+        "fail": {
+          "comment": "The value for the color property in the Fail Alert component.",
+          "value": "rgb(28, 27, 26)",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "color",
+            "subitem": "fail"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The value for the color property in the Fail Alert component.",
+            "value": "{black.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-alert-text-color-fail",
+          "path": [
+            "alert",
+            "text",
+            "color",
+            "fail"
+          ]
+        },
+        "success": {
+          "comment": "The value for the color property in the Success Alert component.",
+          "value": "rgb(28, 27, 26)",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "color",
+            "subitem": "success"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The value for the color property in the Success Alert component.",
+            "value": "{black.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-alert-text-color-success",
+          "path": [
+            "alert",
+            "text",
+            "color",
+            "success"
+          ]
+        },
+        "info": {
+          "comment": "The value for the color property in the Information Alert component.",
+          "value": "rgb(28, 27, 26)",
+          "attributes": {
+            "category": "color",
+            "type": "text",
+            "item": "color",
+            "subitem": "info"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The value for the color property in the Information Alert component.",
+            "value": "{black.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-alert-text-color-info",
+          "path": [
+            "alert",
+            "text",
+            "color",
+            "info"
+          ]
+        }
+      }
+    }
+  },
+  "btn": {
+    "background-color": {
+      "comment": "The background color of the Button component.",
+      "value": "rgb(200, 16, 46)",
+      "attributes": {
+        "category": "color",
+        "type": "background-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The background color of the Button component.",
+        "value": "{red.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-btn-background-color",
+      "path": [
+        "btn",
+        "background-color"
+      ]
+    },
+    "shadow-color": {
+      "comment": "The box shadow color value for the Button component",
+      "value": "rgba(20, 20, 20, 0.08)",
+      "attributes": {
+        "category": "color",
+        "type": "shadow-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The box shadow color value for the Button component",
+        "value": "rgba(20, 20, 20, 0.08)",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-btn-shadow-color",
+      "path": [
+        "btn",
+        "shadow-color"
+      ]
+    },
+    "border-color": {
+      "comment": "The border color of the Button component.",
+      "value": "rgb(200, 16, 46)",
+      "attributes": {
+        "category": "color",
+        "type": "border"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The border color of the Button component.",
+        "value": "{btn.background-color.value}",
+        "attributes": {
+          "category": "color",
+          "type": "border"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-btn-border-color",
+      "path": [
+        "btn",
+        "border-color"
+      ]
+    },
+    "text-color": {
+      "comment": "The text color of the Button component.",
+      "value": "rgb(255, 255, 255)",
+      "attributes": {
+        "category": "color",
+        "type": "text-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The text color of the Button component.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-btn-text-color",
+      "path": [
+        "btn",
+        "text-color"
+      ]
+    },
+    "hover": {
+      "background-color": {
+        "comment": "The background color of the Button component on hover.",
+        "value": "rgb(157, 34, 53)",
+        "attributes": {
+          "category": "color",
+          "type": "hover",
+          "item": "background-color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The background color of the Button component on hover.",
+          "value": "{mid-red.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-btn-hover-background-color",
+        "path": [
+          "btn",
+          "hover",
+          "background-color"
+        ]
+      },
+      "text-color": {
+        "comment": "The text color of the Button component on hover.",
+        "value": "rgb(255, 255, 255)",
+        "attributes": {
+          "category": "color",
+          "type": "hover",
+          "item": "text-color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The text color of the Button component on hover.",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-btn-hover-text-color",
+        "path": [
+          "btn",
+          "hover",
+          "text-color"
+        ]
+      }
+    },
+    "secondary": {
+      "hover": {
+        "background-color": {
+          "comment": "The background color of the Secondary Button component on hover.",
+          "value": "#f9e7ea",
+          "attributes": {
+            "category": "color",
+            "type": "secondary",
+            "item": "hover",
+            "subitem": "background-color"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The background color of the Secondary Button component on hover.",
+            "value": "#f9e7ea",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-btn-secondary-hover-background-color",
+          "path": [
+            "btn",
+            "secondary",
+            "hover",
+            "background-color"
+          ]
+        }
+      }
+    }
+  },
+  "card": {
+    "shadow-color-wide-viewport": {
+      "comment": "The box shadow color of the Card on wide viewports.",
+      "value": "rgba(0, 0, 0, 0.08)",
+      "attributes": {
+        "category": "color",
+        "type": "shadow-color-wide-viewport"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The box shadow color of the Card on wide viewports.",
+        "value": "rgba(0, 0, 0, 0.08)",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-card-shadow-color-wide-viewport",
+      "path": [
+        "card",
+        "shadow-color-wide-viewport"
+      ]
+    },
+    "shadow-color-standout": {
+      "comment": "The box shadow color of the Standout Card variant on narrow viewports.",
+      "value": "rgba(0, 0, 0, 0.1)",
+      "file": "settings",
+      "attributes": {
+        "category": "color",
+        "type": "shadow-color-standout"
+      },
+      "themable": true,
+      "original": {
+        "comment": "The box shadow color of the Standout Card variant on narrow viewports.",
+        "value": "rgba(0, 0, 0, 0.1)",
+        "file": "settings",
+        "attributes": {
+          "category": "color"
+        },
+        "themable": true
+      },
+      "name": "sprk-card-shadow-color-standout",
+      "path": [
+        "card",
+        "shadow-color-standout"
+      ]
+    },
+    "shadow-color-standout-wide-viewport": {
+      "comment": "The box shadow color of the Standout Card variant on wide viewports.",
+      "value": "rgba(0, 0, 0, 0.1)",
+      "file": "settings",
+      "attributes": {
+        "category": "color",
+        "type": "shadow-color-standout-wide-viewport"
+      },
+      "themable": true,
+      "original": {
+        "comment": "The box shadow color of the Standout Card variant on wide viewports.",
+        "value": "rgba(0, 0, 0, 0.1)",
+        "file": "settings",
+        "attributes": {
+          "category": "color"
+        },
+        "themable": true
+      },
+      "name": "sprk-card-shadow-color-standout-wide-viewport",
+      "path": [
+        "card",
+        "shadow-color-standout-wide-viewport"
+      ]
+    },
+    "header-bg-color": {
+      "comment": "The background color of the header area for the Highlighted Header Card.",
+      "value": "rgb(96, 58, 161)",
+      "attributes": {
+        "category": "color",
+        "type": "header-bg-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The background color of the header area for the Highlighted Header Card.",
+        "value": "{purple.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-card-header-bg-color",
+      "path": [
+        "card",
+        "header-bg-color"
+      ]
+    },
+    "header-text-color": {
+      "comment": "The text color for the Highlighted Header Card.",
+      "value": "rgb(255, 255, 255)",
+      "attributes": {
+        "category": "color",
+        "type": "header-text-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The text color for the Highlighted Header Card.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-card-header-text-color",
+      "path": [
+        "card",
+        "header-text-color"
+      ]
+    }
+  },
+  "red": {
+    "comment": "Red for key branded moments throughout the product as our primary brand ",
+    "value": "rgb(200, 16, 46)",
+    "group": "primary",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Red for key branded moments throughout the product as our primary brand ",
+      "value": "rgb(200, 16, 46)",
+      "group": "primary",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-red",
+    "path": [
+      "red"
+    ]
+  },
+  "deep-red": {
+    "comment": "Darkest red for key branded moments throughout the product.",
+    "value": "rgb(118, 35, 47)",
+    "group": "primary",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Darkest red for key branded moments throughout the product.",
+      "value": "rgb(118, 35, 47)",
+      "group": "primary",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-deep-red",
+    "path": [
+      "deep-red"
+    ]
+  },
+  "mid-red": {
+    "comment": "Mid red for key branded moments throughout the product.",
+    "value": "rgb(157, 34, 53)",
+    "group": "primary",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Mid red for key branded moments throughout the product.",
+      "value": "rgb(157, 34, 53)",
+      "group": "primary",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-mid-red",
+    "path": [
+      "mid-red"
+    ]
+  },
+  "purple": {
+    "comment": "Main purple for secondary actions and brand elements.",
+    "value": "rgb(96, 58, 161)",
+    "group": "secondary",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Main purple for secondary actions and brand elements.",
+      "value": "rgb(96, 58, 161)",
+      "group": "secondary",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-purple",
+    "path": [
+      "purple"
+    ]
+  },
+  "purple-dark": {
+    "comment": "Dark purple for interactive elements. Can also be used for limited floods of ",
+    "value": "rgb(60, 49, 116)",
+    "group": "secondary",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Dark purple for interactive elements. Can also be used for limited floods of ",
+      "value": "rgb(60, 49, 116)",
+      "group": "secondary",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-purple-dark",
+    "path": [
+      "purple-dark"
+    ]
+  },
+  "purple-deep": {
+    "comment": "Deep purple for interactive elements. Can also be used for limited floods of ",
+    "value": "rgb(46, 17, 102)",
+    "group": "secondary",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Deep purple for interactive elements. Can also be used for limited floods of ",
+      "value": "rgb(46, 17, 102)",
+      "group": "secondary",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-purple-deep",
+    "path": [
+      "purple-deep"
+    ]
+  },
+  "purple-light": {
+    "comment": "Light purple for interactive elements.",
+    "value": "rgb(146, 101, 211)",
+    "group": "secondary",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Light purple for interactive elements.",
+      "value": "rgb(146, 101, 211)",
+      "group": "secondary",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-purple-light",
+    "path": [
+      "purple-light"
+    ]
+  },
+  "purple-lightest": {
+    "comment": "Lightest purple for interactive elements. Can also be used for limited floods of ",
+    "value": "rgb(231, 226, 242)",
+    "group": "secondary",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Lightest purple for interactive elements. Can also be used for limited floods of ",
+      "value": "rgb(231, 226, 242)",
+      "group": "secondary",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-purple-lightest",
+    "path": [
+      "purple-lightest"
+    ]
+  },
+  "green": {
+    "comment": "Use to communicate a positive status or message.",
+    "value": "rgb(41, 133, 64)",
+    "group": "semantic",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Use to communicate a positive status or message.",
+      "value": "rgb(41, 133, 64)",
+      "group": "semantic",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-green",
+    "path": [
+      "green"
+    ]
+  },
+  "blue": {
+    "comment": "Use to communicate an informative status or message.",
+    "value": "rgb(28, 110, 242)",
+    "group": "semantic",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Use to communicate an informative status or message.",
+      "value": "rgb(28, 110, 242)",
+      "group": "semantic",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-blue",
+    "path": [
+      "blue"
+    ]
+  },
+  "pink": {
+    "comment": "Use to communicate an error status or message.",
+    "value": "rgb(229, 1, 88)",
+    "group": "semantic",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Use to communicate an error status or message.",
+      "value": "rgb(229, 1, 88)",
+      "group": "semantic",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-pink",
+    "path": [
+      "pink"
+    ]
+  },
+  "yellow": {
+    "comment": "Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this ",
+    "value": "rgb(237, 163, 2)",
+    "group": "semantic",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this ",
+      "value": "rgb(237, 163, 2)",
+      "group": "semantic",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-yellow",
+    "path": [
+      "yellow"
+    ]
+  },
+  "white": {
+    "comment": "White for floods of color and accents, like backgrounds and cards.",
+    "value": "rgb(255, 255, 255)",
+    "group": "neutral",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "White for floods of color and accents, like backgrounds and cards.",
+      "value": "rgb(255, 255, 255)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-white",
+    "path": [
+      "white"
+    ]
+  },
+  "black": {
+    "comment": "Black for main text color, specifically in headline and body copy.",
+    "value": "rgb(28, 27, 26)",
+    "group": "neutral",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Black for main text color, specifically in headline and body copy.",
+      "value": "rgb(28, 27, 26)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-black",
+    "path": [
+      "black"
+    ]
+  },
+  "black-tint": {
+    "10": {
+      "comment": "Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(232, 232, 232)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color",
+        "type": "10"
+      },
+      "type": "colors",
+      "original": {
+        "comment": "Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(232, 232, 232)",
+        "group": "neutral",
+        "attributes": {
+          "category": "color"
+        },
+        "type": "colors"
+      },
+      "name": "sprk-black-tint-10",
+      "path": [
+        "black-tint",
+        "10"
+      ]
+    },
+    "20": {
+      "comment": "Black at 20%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(210, 209, 209)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color",
+        "type": "20"
+      },
+      "type": "colors",
+      "original": {
+        "comment": "Black at 20%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(210, 209, 209)",
+        "group": "neutral",
+        "attributes": {
+          "category": "color"
+        },
+        "type": "colors"
+      },
+      "name": "sprk-black-tint-20",
+      "path": [
+        "black-tint",
+        "20"
+      ]
+    },
+    "30": {
+      "comment": "Black at 30%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(186, 186, 186)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color",
+        "type": "30"
+      },
+      "type": "colors",
+      "original": {
+        "comment": "Black at 30%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(186, 186, 186)",
+        "group": "neutral",
+        "attributes": {
+          "category": "color"
+        },
+        "type": "colors"
+      },
+      "name": "sprk-black-tint-30",
+      "path": [
+        "black-tint",
+        "30"
+      ]
+    },
+    "40": {
+      "comment": "Black at 40%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(164, 164, 163)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color",
+        "type": "40"
+      },
+      "type": "colors",
+      "original": {
+        "comment": "Black at 40%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(164, 164, 163)",
+        "group": "neutral",
+        "attributes": {
+          "category": "color"
+        },
+        "type": "colors"
+      },
+      "name": "sprk-black-tint-40",
+      "path": [
+        "black-tint",
+        "40"
+      ]
+    },
+    "50": {
+      "comment": "Black at 50%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(141, 141, 140)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color",
+        "type": "50"
+      },
+      "type": "colors",
+      "original": {
+        "comment": "Black at 50%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(141, 141, 140)",
+        "group": "neutral",
+        "attributes": {
+          "category": "color"
+        },
+        "type": "colors"
+      },
+      "name": "sprk-black-tint-50",
+      "path": [
+        "black-tint",
+        "50"
+      ]
+    },
+    "60": {
+      "comment": "Black at 60%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(119, 118, 118)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color",
+        "type": "60"
+      },
+      "type": "colors",
+      "original": {
+        "comment": "Black at 60%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(119, 118, 118)",
+        "group": "neutral",
+        "attributes": {
+          "category": "color"
+        },
+        "type": "colors"
+      },
+      "name": "sprk-black-tint-60",
+      "path": [
+        "black-tint",
+        "60"
+      ]
+    },
+    "70": {
+      "comment": "Black at 70%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(96, 95, 94)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color",
+        "type": "70"
+      },
+      "type": "colors",
+      "original": {
+        "comment": "Black at 70%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(96, 95, 94)",
+        "group": "neutral",
+        "attributes": {
+          "category": "color"
+        },
+        "type": "colors"
+      },
+      "name": "sprk-black-tint-70",
+      "path": [
+        "black-tint",
+        "70"
+      ]
+    },
+    "80": {
+      "comment": "Black at 80%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(73, 73, 72)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color",
+        "type": "80"
+      },
+      "type": "colors",
+      "original": {
+        "comment": "Black at 80%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(73, 73, 72)",
+        "group": "neutral",
+        "attributes": {
+          "category": "color"
+        },
+        "type": "colors"
+      },
+      "name": "sprk-black-tint-80",
+      "path": [
+        "black-tint",
+        "80"
+      ]
+    },
+    "90": {
+      "comment": "Black at 90%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(50, 49, 48)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color",
+        "type": "90"
+      },
+      "type": "colors",
+      "original": {
+        "comment": "Black at 90%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+        "value": "rgb(50, 49, 48)",
+        "group": "neutral",
+        "attributes": {
+          "category": "color"
+        },
+        "type": "colors"
+      },
+      "name": "sprk-black-tint-90",
+      "path": [
+        "black-tint",
+        "90"
+      ]
+    }
+  },
+  "gray": {
+    "comment": "Lightest gray. Use in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+    "value": "rgb(247, 247, 247)",
+    "group": "neutral",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Lightest gray. Use in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(247, 247, 247)",
+      "group": "neutral",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-gray",
+    "path": [
+      "gray"
+    ]
+  },
+  "purple-navy": {
+    "comment": "Color value for Purple Navy.",
+    "value": "rgb(28, 1, 82)",
+    "group": "charts-graphs",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Color value for Purple Navy.",
+      "value": "rgb(28, 1, 82)",
+      "group": "charts-graphs",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-purple-navy",
+    "path": [
+      "purple-navy"
+    ]
+  },
+  "lavender": {
+    "comment": "Color value for Lavender.",
+    "value": "rgb(190, 132, 247)",
+    "group": "charts-graphs",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Color value for Lavender.",
+      "value": "rgb(190, 132, 247)",
+      "group": "charts-graphs",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-lavender",
+    "path": [
+      "lavender"
+    ]
+  },
+  "wisteria": {
+    "comment": "Color value for Wisteria.",
+    "value": "rgb(222, 177, 253)",
+    "group": "charts-graphs",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Color value for Wisteria.",
+      "value": "rgb(222, 177, 253)",
+      "group": "charts-graphs",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-wisteria",
+    "path": [
+      "wisteria"
+    ]
+  },
+  "magnolia": {
+    "comment": "Color value for Magnolia.",
+    "value": "rgb(240, 218, 255)",
+    "group": "charts-graphs",
+    "attributes": {
+      "category": "color"
+    },
+    "original": {
+      "comment": "Color value for Magnolia.",
+      "value": "rgb(240, 218, 255)",
+      "group": "charts-graphs",
+      "attributes": {
+        "category": "color"
+      }
+    },
+    "name": "sprk-magnolia",
+    "path": [
+      "magnolia"
+    ]
+  },
+  "divider": {
+    "color": {
+      "comment": "The value for color of Dividers.",
+      "value": "rgb(230, 230, 230)",
+      "attributes": {
+        "category": "color",
+        "type": "color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The value for color of Dividers.",
+        "value": "rgb(230, 230, 230)",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-divider-color",
+      "path": [
+        "divider",
+        "color"
+      ]
+    }
+  },
+  "dropdown": {
+    "active": {
+      "background-color": {
+        "comment": "Background color of the Dropdown items that are active or hovered.",
+        "value": "rgb(247, 247, 247)",
+        "attributes": {
+          "category": "color",
+          "type": "active",
+          "item": "background-color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "Background color of the Dropdown items that are active or hovered.",
+          "value": "{gray.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-dropdown-active-background-color",
+        "path": [
+          "dropdown",
+          "active",
+          "background-color"
+        ]
+      }
+    },
+    "border-color": {
+      "comment": "The border color of the Dropdown.",
+      "value": "rgb(247, 247, 247)",
+      "attributes": {
+        "category": "color",
+        "type": "border-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The border color of the Dropdown.",
+        "value": "{gray.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-dropdown-border-color",
+      "path": [
+        "dropdown",
+        "border-color"
+      ]
+    },
+    "link-color": {
+      "comment": "The color of the Dropdown links.",
+      "value": "rgb(28, 27, 26)",
+      "attributes": {
+        "category": "color",
+        "type": "link-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The color of the Dropdown links.",
+        "value": "{black.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-dropdown-link-color",
+      "path": [
+        "dropdown",
+        "link-color"
+      ]
+    },
+    "trigger": {
+      "color": {
+        "comment": "The color of the Dropdown trigger.",
+        "value": "rgb(28, 27, 26)",
+        "attributes": {
+          "category": "color",
+          "type": "trigger",
+          "item": "color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of the Dropdown trigger.",
+          "value": "{black.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-dropdown-trigger-color",
+        "path": [
+          "dropdown",
+          "trigger",
+          "color"
+        ]
+      },
+      "color-active": {
+        "comment": "The color of the Dropdown trigger on hover, active, focus.",
+        "value": "rgb(28, 27, 26)",
+        "attributes": {
+          "category": "color",
+          "type": "trigger",
+          "item": "color-active"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of the Dropdown trigger on hover, active, focus.",
+          "value": "{black.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-dropdown-trigger-color-active",
+        "path": [
+          "dropdown",
+          "trigger",
+          "color-active"
+        ]
+      },
+      "color-visited": {
+        "comment": "The color of the Dropdown trigger for the visited state.",
+        "value": "rgb(28, 27, 26)",
+        "attributes": {
+          "category": "color",
+          "type": "trigger",
+          "item": "color-visited"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of the Dropdown trigger for the visited state.",
+          "value": "{black.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-dropdown-trigger-color-visited",
+        "path": [
+          "dropdown",
+          "trigger",
+          "color-visited"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "background-color": {
+      "comment": "Background color of the Footer",
+      "value": "rgb(28, 27, 26)",
+      "attributes": {
+        "category": "color",
+        "type": "background-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "Background color of the Footer",
+        "value": "{black.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-footer-background-color",
+      "path": [
+        "footer",
+        "background-color"
+      ]
+    },
+    "text-color": {
+      "comment": "Text color on the Footer.",
+      "value": "rgb(255, 255, 255)",
+      "attributes": {
+        "category": "color",
+        "type": "text-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "Text color on the Footer.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-footer-text-color",
+      "path": [
+        "footer",
+        "text-color"
+      ]
+    },
+    "link": {
+      "color": {
+        "comment": "Link color on the Footer.",
+        "value": "rgb(255, 255, 255)",
+        "attributes": {
+          "category": "color",
+          "type": "link",
+          "item": "color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "Link color on the Footer.",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-footer-link-color",
+        "path": [
+          "footer",
+          "link",
+          "color"
+        ]
+      }
+    },
+    "icon-color": {
+      "comment": "Icon color on the Footer.",
+      "value": "rgb(255, 255, 255)",
+      "attributes": {
+        "category": "color",
+        "type": "icon-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "Icon color on the Footer.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-footer-icon-color",
+      "path": [
+        "footer",
+        "icon-color"
+      ]
+    },
+    "trigger": {
+      "color": {
+        "comment": "Toggle trigger color on the Footer.",
+        "value": "rgb(255, 255, 255)",
+        "attributes": {
+          "category": "color",
+          "type": "trigger",
+          "item": "color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "Toggle trigger color on the Footer.",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-footer-trigger-color",
+        "path": [
+          "footer",
+          "trigger",
+          "color"
+        ]
+      },
+      "hover-color": {
+        "comment": "Toggle trigger hover color on the Footer.",
+        "value": "rgb(146, 101, 211)",
+        "attributes": {
+          "category": "color",
+          "type": "trigger",
+          "item": "hover-color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "Toggle trigger hover color on the Footer.",
+          "value": "{purple-light.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-footer-trigger-hover-color",
+        "path": [
+          "footer",
+          "trigger",
+          "hover-color"
+        ]
+      }
+    }
+  },
+  "highlight-board": {
+    "color": {
+      "comment": "The background color of the Highlight Board.",
+      "value": "rgb(255, 255, 255)",
+      "attributes": {
+        "category": "color",
+        "type": "color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The background color of the Highlight Board.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-highlight-board-color",
+      "path": [
+        "highlight-board",
+        "color"
+      ]
+    },
+    "content-box-color": {
+      "comment": "The background color of the content box in the Highlight Board.",
+      "value": "rgb(255, 255, 255)",
+      "attributes": {
+        "category": "color",
+        "type": "content-box-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The background color of the content box in the Highlight Board.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-highlight-board-content-box-color",
+      "path": [
+        "highlight-board",
+        "content-box-color"
+      ]
+    }
+  },
+  "icon": {
+    "fill-color": {
+      "comment": "Value for the fill property of the Icon component.",
+      "value": "rgb(28, 27, 26)",
+      "attributes": {
+        "category": "color",
+        "type": "fill-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "Value for the fill property of the Icon component.",
+        "value": "{black.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-icon-fill-color",
+      "path": [
+        "icon",
+        "fill-color"
+      ]
+    },
+    "stroke-color": {
+      "comment": "Value for the stroke property of the Icon component.",
+      "value": "rgb(28, 27, 26)",
+      "attributes": {
+        "category": "color",
+        "type": "stroke-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "Value for the stroke property of the Icon component.",
+        "value": "{black.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-icon-stroke-color",
+      "path": [
+        "icon",
+        "stroke-color"
+      ]
+    },
+    "filled-fill-color": {
+      "comment": "Value for the fill property of the Filled Icon component.",
+      "value": "rgb(28, 27, 26)",
+      "attributes": {
+        "category": "color",
+        "type": "filled-fill-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "Value for the fill property of the Filled Icon component.",
+        "value": "{black.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-icon-filled-fill-color",
+      "path": [
+        "icon",
+        "filled-fill-color"
+      ]
+    }
+  },
+  "text-input": {
+    "error-color": {
+      "comment": "Color setting for Inputs with errors.",
+      "value": "rgb(229, 1, 88)",
+      "attributes": {
+        "category": "color",
+        "type": "error-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "Color setting for Inputs with errors.",
+        "value": "{pink.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-text-input-error-color",
+      "path": [
+        "text-input",
+        "error-color"
+      ]
+    }
+  },
+  "link": {
+    "color": {
+      "comment": "The default color on Links.",
+      "value": "rgb(96, 58, 161)",
+      "attributes": {
+        "category": "color",
+        "type": "color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The default color on Links.",
+        "value": "{purple.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-link-color",
+      "path": [
+        "link",
+        "color"
+      ]
+    },
+    "underline": {
+      "color": {
+        "comment": "The color of the underline on Links.",
+        "value": "rgb(96, 58, 161)",
+        "attributes": {
+          "category": "color",
+          "type": "underline",
+          "item": "color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of the underline on Links.",
+          "value": "{purple.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-link-underline-color",
+        "path": [
+          "link",
+          "underline",
+          "color"
+        ]
+      },
+      "visited": {
+        "color": {
+          "comment": "The color of the underline on visited Links.",
+          "value": "rgb(141, 141, 140)",
+          "attributes": {
+            "category": "color",
+            "type": "underline",
+            "item": "visited",
+            "subitem": "color"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The color of the underline on visited Links.",
+            "value": "{black-tint.50.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-link-underline-visited-color",
+          "path": [
+            "link",
+            "underline",
+            "visited",
+            "color"
+          ]
+        }
+      }
+    },
+    "hover": {
+      "color": {
+        "comment": "The color of Links on hover.",
+        "value": "rgb(46, 17, 102)",
+        "attributes": {
+          "category": "color",
+          "type": "hover",
+          "item": "color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of Links on hover.",
+          "value": "{purple-deep.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-link-hover-color",
+        "path": [
+          "link",
+          "hover",
+          "color"
+        ]
+      }
+    },
+    "simple": {
+      "color": {
+        "comment": "The color value of Simple Links.",
+        "value": "rgb(28, 27, 26)",
+        "attributes": {
+          "category": "color",
+          "type": "simple",
+          "item": "color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color value of Simple Links.",
+          "value": "{black.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-link-simple-color",
+        "path": [
+          "link",
+          "simple",
+          "color"
+        ]
+      },
+      "hover": {
+        "color": {
+          "comment": "The color of Simple Links on hover",
+          "value": "rgb(28, 27, 26)",
+          "attributes": {
+            "category": "color",
+            "type": "simple",
+            "item": "hover",
+            "subitem": "color"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The color of Simple Links on hover",
+            "value": "{black.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-link-simple-hover-color",
+          "path": [
+            "link",
+            "simple",
+            "hover",
+            "color"
+          ]
+        },
+        "underline": {
+          "color": {
+            "comment": "The underline color value of Simple Links on hover.",
+            "value": "rgb(200, 16, 46)",
+            "attributes": {
+              "category": "color",
+              "type": "simple",
+              "item": "hover",
+              "subitem": "underline",
+              "state": "color"
+            },
+            "file": "settings",
+            "themable": true,
+            "original": {
+              "comment": "The underline color value of Simple Links on hover.",
+              "value": "{red.value}",
+              "attributes": {
+                "category": "color"
+              },
+              "file": "settings",
+              "themable": true
+            },
+            "name": "sprk-link-simple-hover-underline-color",
+            "path": [
+              "link",
+              "simple",
+              "hover",
+              "underline",
+              "color"
+            ]
+          }
+        }
+      }
+    },
+    "light": {
+      "color": {
+        "comment": "The color value of Light Links.",
+        "value": "rgb(255, 255, 255)",
+        "attributes": {
+          "category": "color",
+          "type": "light",
+          "item": "color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color value of Light Links.",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-link-light-color",
+        "path": [
+          "link",
+          "light",
+          "color"
+        ]
+      },
+      "hover": {
+        "color": {
+          "comment": "The color of Light Links on hover",
+          "value": "rgb(255, 255, 255)",
+          "attributes": {
+            "category": "color",
+            "type": "light",
+            "item": "hover",
+            "subitem": "color"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The color of Light Links on hover",
+            "value": "{white.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-link-light-hover-color",
+          "path": [
+            "link",
+            "light",
+            "hover",
+            "color"
+          ]
+        },
+        "underline": {
+          "color": {
+            "comment": "The underline color value of Light Links on hover.",
+            "value": "rgb(255, 255, 255)",
+            "attributes": {
+              "category": "color",
+              "type": "light",
+              "item": "hover",
+              "subitem": "underline",
+              "state": "color"
+            },
+            "file": "settings",
+            "themable": true,
+            "original": {
+              "comment": "The underline color value of Light Links on hover.",
+              "value": "{white.value}",
+              "attributes": {
+                "category": "color"
+              },
+              "file": "settings",
+              "themable": true
+            },
+            "name": "sprk-link-light-hover-underline-color",
+            "path": [
+              "link",
+              "light",
+              "hover",
+              "underline",
+              "color"
+            ]
+          }
+        }
+      }
+    },
+    "has-icon": {
+      "hover": {
+        "color-text": {
+          "comment": "The color value for Links with icons in the hover state.",
+          "value": "rgb(46, 17, 102)",
+          "attributes": {
+            "category": "color",
+            "type": "has-icon",
+            "item": "hover",
+            "subitem": "color-text"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The color value for Links with icons in the hover state.",
+            "value": "{purple-deep.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-link-has-icon-hover-color-text",
+          "path": [
+            "link",
+            "has-icon",
+            "hover",
+            "color-text"
+          ]
+        }
+      },
+      "color-icon": {
+        "comment": "The color of icons in Links containing icons.",
+        "value": "rgb(96, 58, 161)",
+        "attributes": {
+          "category": "color",
+          "type": "has-icon",
+          "item": "color-icon"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of icons in Links containing icons.",
+          "value": "{purple.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-link-has-icon-color-icon",
+        "path": [
+          "link",
+          "has-icon",
+          "color-icon"
+        ]
+      }
+    }
+  },
+  "masthead": {
+    "mask-color": {
+      "comment": "The color of the mask that gets applied when the Masthead selector dropdown is open on narrow screens.",
+      "value": "rgba(0, 0, 0, 0.5)",
+      "attributes": {
+        "category": "color",
+        "type": "mask-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The color of the mask that gets applied when the Masthead selector dropdown is open on narrow screens.",
+        "value": "rgba(0, 0, 0, 0.5)",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-masthead-mask-color",
+      "path": [
+        "masthead",
+        "mask-color"
+      ]
+    }
+  },
+  "modal": {
+    "mask-color": {
+      "comment": "The color of the mask overlay that is shown behind the Modal.",
+      "value": "rgba(34, 34, 34, 0.35)",
+      "attributes": {
+        "category": "color",
+        "type": "mask-color"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "The color of the mask overlay that is shown behind the Modal.",
+        "value": "rgba(34, 34, 34, 0.35)",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-modal-mask-color",
+      "path": [
+        "modal",
+        "mask-color"
+      ]
+    }
+  },
+  "stepper": {
+    "icon": {
+      "border": {
+        "color": {
+          "comment": "The color of the border around the Stepper icon.",
+          "value": "rgb(141, 141, 140)",
+          "attributes": {
+            "category": "color",
+            "type": "icon",
+            "item": "border",
+            "subitem": "color"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The color of the border around the Stepper icon.",
+            "value": "{black-tint.50.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-stepper-icon-border-color",
+          "path": [
+            "stepper",
+            "icon",
+            "border",
+            "color"
+          ]
+        },
+        "color-selected": {
+          "comment": "The color of the step icon when the step is selected in the Stepper.",
+          "value": "rgb(60, 49, 116)",
+          "attributes": {
+            "category": "color",
+            "type": "icon",
+            "item": "border",
+            "subitem": "color-selected"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The color of the step icon when the step is selected in the Stepper.",
+            "value": "{purple-dark.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-stepper-icon-border-color-selected",
+          "path": [
+            "stepper",
+            "icon",
+            "border",
+            "color-selected"
+          ]
+        },
+        "color-selected-dark-bg": {
+          "comment": "The color of the step icon in front of a dark background when the step is selected in the Stepper.",
+          "value": "rgb(231, 226, 242)",
+          "attributes": {
+            "category": "color",
+            "type": "icon",
+            "item": "border",
+            "subitem": "color-selected-dark-bg"
+          },
+          "file": "settings",
+          "themable": true,
+          "original": {
+            "comment": "The color of the step icon in front of a dark background when the step is selected in the Stepper.",
+            "value": "{purple-lightest.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "name": "sprk-stepper-icon-border-color-selected-dark-bg",
+          "path": [
+            "stepper",
+            "icon",
+            "border",
+            "color-selected-dark-bg"
+          ]
+        }
+      },
+      "color": {
+        "comment": "The color of the step icon in the Stepper.",
+        "value": "rgb(255, 255, 255)",
+        "attributes": {
+          "category": "color",
+          "type": "icon",
+          "item": "color"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of the step icon in the Stepper.",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-stepper-icon-color",
+        "path": [
+          "stepper",
+          "icon",
+          "color"
+        ]
+      },
+      "color-hover": {
+        "comment": "The color of the step icon in the Stepper when hovered.",
+        "value": "rgb(141, 141, 140)",
+        "attributes": {
+          "category": "color",
+          "type": "icon",
+          "item": "color-hover"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of the step icon in the Stepper when hovered.",
+          "value": "{black-tint.50.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-stepper-icon-color-hover",
+        "path": [
+          "stepper",
+          "icon",
+          "color-hover"
+        ]
+      },
+      "color-selected": {
+        "comment": "The color of the Stepper step icon when the step is selected.",
+        "value": "rgb(255, 255, 255)",
+        "attributes": {
+          "category": "color",
+          "type": "icon",
+          "item": "color-selected"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of the Stepper step icon when the step is selected.",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-stepper-icon-color-selected",
+        "path": [
+          "stepper",
+          "icon",
+          "color-selected"
+        ]
+      }
+    }
+  },
+  "color": {
+    "display": {
+      "one": {
+        "comment": "The color of TypeDisplayOne.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "display",
+          "item": "one"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeDisplayOne.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-display-one",
+        "path": [
+          "color",
+          "display",
+          "one"
+        ]
+      },
+      "two": {
+        "comment": "The color of TypeDisplayTwo.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "display",
+          "item": "two"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeDisplayTwo.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-display-two",
+        "path": [
+          "color",
+          "display",
+          "two"
+        ]
+      },
+      "three": {
+        "comment": "The color of TypeDisplayThree.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "display",
+          "item": "three"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeDisplayThree.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-display-three",
+        "path": [
+          "color",
+          "display",
+          "three"
+        ]
+      },
+      "four": {
+        "comment": "The color of TypeDisplayFour.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "display",
+          "item": "four"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeDisplayFour.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-display-four",
+        "path": [
+          "color",
+          "display",
+          "four"
+        ]
+      },
+      "five": {
+        "comment": "The color of TypeDisplayFive.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "display",
+          "item": "five"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeDisplayFive.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-display-five",
+        "path": [
+          "color",
+          "display",
+          "five"
+        ]
+      },
+      "six": {
+        "comment": "The color of TypeDisplaySix.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "display",
+          "item": "six"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeDisplaySix.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-display-six",
+        "path": [
+          "color",
+          "display",
+          "six"
+        ]
+      },
+      "seven": {
+        "comment": "The color of TypeDisplaySeven.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "display",
+          "item": "seven"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeDisplaySeven.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-display-seven",
+        "path": [
+          "color",
+          "display",
+          "seven"
+        ]
+      }
+    },
+    "body": {
+      "one": {
+        "comment": "The color of TypeBodyOne.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "body",
+          "item": "one"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeBodyOne.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-body-one",
+        "path": [
+          "color",
+          "body",
+          "one"
+        ]
+      },
+      "two": {
+        "comment": "The color of TypeBodyTwo.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "body",
+          "item": "two"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeBodyTwo.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-body-two",
+        "path": [
+          "color",
+          "body",
+          "two"
+        ]
+      },
+      "three": {
+        "comment": "The color of TypeBodyThree.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "body",
+          "item": "three"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeBodyThree.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-body-three",
+        "path": [
+          "color",
+          "body",
+          "three"
+        ]
+      },
+      "four": {
+        "comment": "The color of TypeBodyFour.",
+        "value": "rgb(28, 27, 26)",
+        "file": "settings",
+        "attributes": {
+          "category": "color",
+          "type": "body",
+          "item": "four"
+        },
+        "themable": true,
+        "original": {
+          "comment": "The color of TypeBodyFour.",
+          "value": "{black.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "color"
+          },
+          "themable": true
+        },
+        "name": "sprk-color-body-four",
+        "path": [
+          "color",
+          "body",
+          "four"
+        ]
+      }
+    }
+  }
+}
