@@ -238,3 +238,5 @@ export { SprkLegendDirective } from './lib/directives/inputs/sprk-legend/sprk-le
 export { SprkLegendModule } from './lib/directives/inputs/sprk-legend/sprk-legend.module';
 export { SprkTooltipComponent } from './lib/components/sprk-tooltip/sprk-tooltip.component';
 export { SprkTooltipModule } from './lib/components/sprk-tooltip/sprk-tooltip.module';
+export { SprkDividerDirectiveModule } from './lib/directives/sprk-divider/sprk-divider.module';
+export { SprkDividerDirective } from './lib/directives/sprk-divider/sprk-divider.directive';

@@ -9,10 +9,8 @@ export default {
   component: SprkTooltipComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${storyContent}<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `${markdownDocumentationLinkBuilder('tooltip')}`,
@@ -21,10 +19,7 @@ export default {
 };
 
 const modules = {
-  imports: [
-    SprkTooltipModule,
-    BrowserAnimationsModule,
-  ],
+  imports: [SprkTooltipModule, BrowserAnimationsModule],
 };
 
 export const defaultStory = () => ({
@@ -42,8 +37,6 @@ export const defaultStory = () => ({
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'sprk-tooltip.component',
-    ],
+    jest: ['sprk-tooltip.component'],
   },
 };

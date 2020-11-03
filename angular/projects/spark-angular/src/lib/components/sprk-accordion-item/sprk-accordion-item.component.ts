@@ -1,7 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import * as _ from 'lodash';
 import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
 
+// TODO Remove title, additionalHeadingClasses, iconTypeClosed,
+// iconTypeOpen, isActive as part of Issue 3597
 @Component({
   selector: 'sprk-accordion-item',
   template: `
@@ -19,104 +21,147 @@ import { toggleAnimations } from '../sprk-toggle/sprk-toggle-animations';
       >
         <span [ngClass]="getHeadingClasses()">
           <sprk-icon
-            [iconType]="leadingIcon"
-            additionalClasses="sprk-c-Icon--stroke-current-color sprk-c-Icon--l sprk-u-mrs"
             *ngIf="leadingIcon"
+            [iconName]="leadingIcon"
+            [additionalClasses]="getLeadingIconClasses()"
           ></sprk-icon>
-          {{ title }}
+          {{ heading || title }}
         </span>
 
         <sprk-icon
-          additionalClasses="sprk-c-Accordion__icon sprk-c-Icon--toggle sprk-c-Icon--l {{
-            iconStateClass
-          }}"
-          [iconType]="currentIconType"
+          [additionalClasses]="getIconClasses()"
+          [iconName]="currentIconName"
         ></sprk-icon>
       </button>
 
       <div [@toggleContent]="animState">
-        <div
-          [id]="accordion_controls_id"
-          class="sprk-c-Accordion__content sprk-b-TypeBodyTwo"
-        >
+        <div [id]="accordion_controls_id" [ngClass]="getContentClasses()">
           <ng-content></ng-content>
         </div>
       </div>
     </li>
   `,
-  animations: [toggleAnimations.toggleContent]
+  animations: [toggleAnimations.toggleContent],
 })
 export class SprkAccordionItemComponent implements OnInit {
+  // TODO - Remove as part of Issue 3597
   /**
-   * The value supplied will be rendered
-   * inside the title area of the Accordion item.
+   * Deprecated: use `heading` instead. The value supplied will be
+   * rendered inside the heading area of the Accordion Item.
    */
   @Input()
   title: string;
   /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the component.
-   * Intended for an outside
-   * library to capture data.
+   * The value supplied will be rendered inside the heading area of the
+   * Accordion Item.
+   */
+  @Input()
+  heading: string;
+  /**
+   * The value supplied will be assigned to the `data-analytics` attribute
+   * on the component. Intended for an outside library to capture data.
    */
   @Input()
   analyticsString: string;
   /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
+   * The value supplied will be assigned to the `data-id` attribute on the
+   * component. This is intended to be used as a selector for automated tools.
+   * This value should be unique per page.
    */
   @Input()
   idString: string;
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * Expects a space separated string of classes to be added to the component.
    */
   @Input()
   additionalClasses: string;
+  // TODO - Remove as part of Issue 3597
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * heading in the Accordion item.
+   * Deprecated - use `headingAdditionalClasses` instead. Expects a space
+   * separated string of classes to be added to the heading in the Accordion
+   * Item.
    */
   @Input()
   additionalHeadingClasses: string;
   /**
-   * The Accordion item will use this to decide
-   * if it should be open or closed on first render.
-   * (Interacting with the toggle will override this input.)
+   * Expects a space separated string of classes to be added to the heading in
+   * the Accordion Item.
+   */
+  @Input()
+  headingAdditionalClasses: string;
+  /**
+   * The Accordion item will use this to decide if it should be open or closed
+   * on first render. (Interacting with the toggle will override this input.)
    */
   @Input()
   isOpen = false;
+  // TODO - Remove as part of Issue 3597
   /**
-   * If `true`, the active CSS class
-   * will be applied to the item.
+   * Deprecated. If `true`, the active class will be applied to the Accordion
+   * Item.
    */
   @Input()
   isActive: boolean;
+  // TODO - Remove this input and move the default value to iconNameClosed
+  // as part of issue 3597
   /**
-   * The name of the icon to use for
-   * a closed Accordion item.
+   * Deprecated - use `iconNameClosed` instead. The name of the icon to use for
+   * a closed Accordion Item.
    */
   @Input()
-  iconTypeClosed = 'chevron-up-circle-two-color';
+  iconTypeClosed = 'chevron-up-circle';
   /**
-   * The name of the icon to use for
-   * an open Accordion item.
+   * The name of the icon to use for a closed Accordion Item.
    */
   @Input()
-  iconTypeOpen = 'chevron-up-circle-two-color';
+  iconNameClosed;
+  // TODO - Remove this input and move the default value to iconNameOpen
+  // as part of issue 3597
   /**
-   * The name of the icon to use before
-   * the title in the Accordion item.
-   * This is optional.
+   * Deprecated - use `iconNameOpen` instead. The name of the icon to use for
+   * an open Accordion Item.
+   */
+  @Input()
+  iconTypeOpen = 'chevron-up-circle';
+  /**
+   * The name of the icon to use for an open Accordion Item.
+   */
+  @Input()
+  iconNameOpen;
+  /**
+   * The name of the icon to use before the heading in the Accordion Item.
    */
   @Input()
   leadingIcon: string;
+  /**
+   * Expects a space separated string of classes to be added to the leading
+   * icon before the heading in the Accordion Item.
+   */
+  @Input()
+  leadingIconAdditionalClasses: string;
+  /**
+   * Expects a space separated string of classes to be added to the Accordion
+   * Item icon.
+   */
+  @Input()
+  iconAdditionalClasses: string;
+  /**
+   * Expects a space separated string of classes to be added to the Accordion
+   * Item content container.
+   */
+  @Input()
+  contentAdditionalClasses: string;
+
+  /**
+   * This event will be emitted when the Accordion Item is opened.
+   */
+  @Output()
+  openedEvent = new EventEmitter<any>();
+  /**
+   * This event will be emitted when the Accordion Item is closed.
+   */
+  @Output()
+  closedEvent = new EventEmitter<any>();
 
   /**
    * @ignore
@@ -126,10 +171,11 @@ export class SprkAccordionItemComponent implements OnInit {
    * @ignore
    */
   accordion_controls_id = `accordionHeading__${this.componentID}`;
+  // TODO replace default value with iconNameClosed as part of issue 3597
   /**
    * @ignore
    */
-  public currentIconType = this.iconTypeClosed;
+  public currentIconName = this.iconTypeClosed;
   /**
    * @ignore
    */
@@ -142,18 +188,18 @@ export class SprkAccordionItemComponent implements OnInit {
   /**
    * @ignore
    */
-  accordionState(): void {
-    this.isOpen === false
-      ? (this.animState = 'closed')
-      : (this.animState = 'open');
-
-    this.isOpen === false
-      ? (this.currentIconType = this.iconTypeClosed)
-      : (this.currentIconType = this.iconTypeOpen);
-
-    this.isOpen === false
-      ? (this.iconStateClass = '')
-      : (this.iconStateClass = 'sprk-c-Icon--open');
+  toggleState(): void {
+    if (this.isOpen) {
+      this.animState = 'open';
+      // TODO - Remove iconTypeOpen as part of Issue 3597
+      this.currentIconName = this.iconNameOpen || this.iconTypeOpen;
+      this.iconStateClass = 'sprk-c-Icon--open';
+    } else {
+      this.animState = 'closed';
+      // TODO - Remove iconTypeClosed as part of Issue 3597
+      this.currentIconName = this.iconNameClosed || this.iconTypeClosed;
+      this.iconStateClass = '';
+    }
   }
 
   /**
@@ -162,7 +208,12 @@ export class SprkAccordionItemComponent implements OnInit {
   toggleAccordion(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
-    this.accordionState();
+    if (this.isOpen) {
+      this.openedEvent.emit();
+    } else {
+      this.closedEvent.emit();
+    }
+    this.toggleState();
   }
 
   /**
@@ -171,7 +222,7 @@ export class SprkAccordionItemComponent implements OnInit {
   getClasses(): string {
     const classArray: string[] = [
       'sprk-c-Accordion__item',
-      'sprk-u-Overflow--hidden'
+      'sprk-u-Overflow--hidden',
     ];
 
     if (this.isOpen) {
@@ -183,7 +234,7 @@ export class SprkAccordionItemComponent implements OnInit {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -195,10 +246,71 @@ export class SprkAccordionItemComponent implements OnInit {
    * @ignore
    */
   getHeadingClasses(): string {
-    const classArray: string[] = ['sprk-c-Accordion__heading'];
+    const classArray: string[] = [
+      'sprk-c-Accordion__heading',
+      'sprk-b-TypeDisplaySeven',
+    ];
 
-    if (this.additionalHeadingClasses) {
-      this.additionalHeadingClasses.split(' ').forEach(className => {
+    // TODO - Remove additionalHeadingClasses as part of Issue 3597
+    const additionalClasses =
+      this.headingAdditionalClasses || this.additionalHeadingClasses;
+
+    if (additionalClasses) {
+      additionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getIconClasses(): string {
+    const classArray: string[] = [
+      'sprk-c-Accordion__icon',
+      'sprk-c-Icon--xl',
+      'sprk-c-Icon--toggle',
+      this.iconStateClass,
+    ];
+
+    if (this.iconAdditionalClasses) {
+      this.iconAdditionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getLeadingIconClasses(): string {
+    const classArray: string[] = [
+      'sprk-c-Icon--filled-current-color',
+      'sprk-c-Icon--xl',
+      'sprk-u-mrs',
+    ];
+
+    if (this.leadingIconAdditionalClasses) {
+      this.leadingIconAdditionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getContentClasses(): string {
+    const classArray: string[] = ['sprk-c-Accordion__content'];
+
+    if (this.contentAdditionalClasses) {
+      this.contentAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -207,6 +319,6 @@ export class SprkAccordionItemComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.accordionState();
+    this.toggleState();
   }
 }

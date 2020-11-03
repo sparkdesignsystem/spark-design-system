@@ -65,7 +65,8 @@ class SprkSelectionInput extends React.Component {
       ...other
     } = this.props;
     const { choiceItems, id, selectHugeHasValue } = this.state;
-    const onChangeFunc = onChange ? onChange : this.props.onChangeFunc;
+    // eslint-disable-next-line react/prop-types
+    const onChangeFunc = onChange || this.props.onChangeFunc;
 
     return (
       <div
@@ -179,6 +180,7 @@ class SprkSelectionInput extends React.Component {
             <SprkIcon
               iconName="chevron-down"
               additionalClasses="
+              sprk-c-Icon--filled-current-color
               sprk-c-Icon--stroke-current-color
               sprk-b-SelectContainer__icon"
             />

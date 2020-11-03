@@ -1,52 +1,51 @@
 import React from 'react';
 import SprkButton from './SprkButton';
+import SprkSpinner from '../spinners/SprkSpinner';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Button',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkButton,
   parameters: {
     jest: ['SprkButton'],
     info: `
 ${markdownDocumentationLinkBuilder('button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
-The Button component can use either a button (\`<button>\`)
-or anchor (\`<a>\`) HTML element. It is very important
-for accessibility to choose the correct element.
+SprkButton can either render as a button (\`<button>\`)
+or an anchor (\`<a>\`) element. It is very important
+for accessibility to choose the correct HTML element.
 
-- Button should use an \`<a>\` element if it navigates to a new page.
-- Button should use a \`<button>\` element if it is performing
-an action, such as: “Submit”, “Add”, “Join”,” etc.
-- A Button that does not go to a new page will almost
-always use a \`<button>\` element.
+- Render as a link (\`<a>\`) element if the button navigates to a new page.
+  - Set by adding the \`element="a"\` prop to SprkButton.
+
+- Render as a button (\`<button>\`) element if
+it performs an action such as: “Submit”, “Add”, “Join”,” etc.
+They typically do not navigate to a new page.
+  - Set by adding the \`element="button"\` prop to SprkButton.
+
+- The \`element\` prop will default
+SprkButton to render as a \`button\` element..
 
 ##### Accessibility
-- If a Button is using an \`<a>\` element, you
-must include a \`title=””\` attribute.
-- If a Button only includes an Icon with no text,
-alternative text must be provided.
+- If SprkButton is using an \`<a>\` element, include a \`title=””\` attribute.
+- If SprkButton contains an Icon with no text,
+provide alternative text for screen readers.
+- Screen readers read SprkSpinner as "Loading" by default.
+This can change through the \`altText\` prop on SprkSpinner.
 
 ##### Guidelines
-- If a Button is in a form, but is not intended to
-submit the form, the attribute \`type=”button”\` must be used.
-- If a Button submits a form, do not use \`<input type="submit">\`.
-Instead use \`<button type=”submit”>\`
-- If a Button is Disabled, you must add the \`disabled\` attribute
-in addition to the \`sprk-is-Disabled\` class so that it doesn’t
-receive interaction.
+- If SprkButton is in a form, but is not intended to
+submit the form, add \`type=”button”\` the attribute.
+- Spinner state requires additional engineering.
+  - Use app state to conditionally render between button text and spinner.
+  - Use \`isLoading\` on SprkButton when spinner is present.
 `,
-   },
+  },
 };
 
 export const primary = () => (
-  <SprkButton
-    element="button"
-    idString="button-1"
-    analyticsString="button-1-analytics"
-  >
+  <SprkButton idString="button-1" analyticsString="button-1-analytics">
     Button
   </SprkButton>
 );
@@ -54,7 +53,6 @@ export const primary = () => (
 export const secondary = () => (
   <SprkButton
     variant="secondary"
-    element="button"
     idString="button-2"
     analyticsString="button-2-analytics"
   >
@@ -65,7 +63,6 @@ export const secondary = () => (
 export const tertiary = () => (
   <SprkButton
     variant="tertiary"
-    element="button"
     idString="button-3"
     analyticsString="button-3-analytics"
   >
@@ -73,10 +70,9 @@ export const tertiary = () => (
   </SprkButton>
 );
 
-export const disabled = () => (
+export const quaternary = () => (
   <SprkButton
-    disabled
-    element="button"
+    variant="quaternary"
     idString="button-4"
     analyticsString="button-4-analytics"
   >
@@ -84,10 +80,9 @@ export const disabled = () => (
   </SprkButton>
 );
 
-export const loading = () => (
+export const disabled = () => (
   <SprkButton
-    loading={true}
-    element="button"
+    isDisabled
     idString="button-5"
     analyticsString="button-5-analytics"
   >
@@ -95,11 +90,10 @@ export const loading = () => (
   </SprkButton>
 );
 
-export const loadingSecondary = () => (
+export const disabledSecondary = () => (
   <SprkButton
-    loading={true}
+    isDisabled
     variant="secondary"
-    element="button"
     idString="button-6"
     analyticsString="button-6-analytics"
   >
@@ -107,11 +101,75 @@ export const loadingSecondary = () => (
   </SprkButton>
 );
 
-export const fullWidthAtSmallViewport = () => (
+export const disabledTertiary = () => (
   <SprkButton
-    element="button"
+    isDisabled
+    variant="tertiary"
     idString="button-7"
     analyticsString="button-7-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const disabledQuaternary = () => (
+  <SprkButton
+    isDisabled
+    variant="quaternary"
+    idString="button-8"
+    analyticsString="button-8-analytics"
+  >
+    Button
+  </SprkButton>
+);
+
+export const spinning = () => (
+  <SprkButton
+    idString="button-9"
+    analyticsString="button-9-analytics"
+    isLoading
+  >
+    <SprkSpinner />
+  </SprkButton>
+);
+
+export const spinningSecondary = () => (
+  <SprkButton
+    variant="secondary"
+    idString="button-10"
+    analyticsString="button-10-analytics"
+    isLoading
+  >
+    <SprkSpinner variant="primary" />
+  </SprkButton>
+);
+
+export const spinningTertiary = () => (
+  <SprkButton
+    variant="tertiary"
+    idString="button-11"
+    analyticsString="button-11-analytics"
+    isLoading
+  >
+    <SprkSpinner variant="secondary" />
+  </SprkButton>
+);
+
+export const spinningQuaternary = () => (
+  <SprkButton
+    variant="quaternary"
+    idString="button-12"
+    analyticsString="button-12-analytics"
+    isLoading
+  >
+    <SprkSpinner variant="dark" />
+  </SprkButton>
+);
+
+export const fullWidthAtSmallViewport = () => (
+  <SprkButton
+    idString="button-13"
+    analyticsString="button-13-analytics"
     additionalClasses="sprk-c-Button--full@s"
   >
     Button
@@ -120,9 +178,8 @@ export const fullWidthAtSmallViewport = () => (
 
 export const fullWidthAtExtraSmallViewport = () => (
   <SprkButton
-    element="button"
-    idString="button-8"
-    analyticsString="button-8-analytics"
+    idString="button-14"
+    analyticsString="button-14-analytics"
     additionalClasses="sprk-c-Button--full@xs"
   >
     Button
@@ -133,8 +190,8 @@ export const asALinkElement = () => (
   <SprkButton
     element="a"
     href="#nogo"
-    idString="button-9"
-    analyticsString="button-9-analytics"
+    idString="button-15"
+    analyticsString="button-15-analytics"
   >
     Button
   </SprkButton>

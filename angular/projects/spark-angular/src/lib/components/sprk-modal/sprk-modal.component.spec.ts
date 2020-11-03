@@ -8,6 +8,7 @@ describe('SprkModalComponent', () => {
   let modalElement: HTMLElement;
   let confirmButtonElement: HTMLElement;
   let cancelElement: HTMLElement;
+  let closeElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -28,6 +29,7 @@ describe('SprkModalComponent', () => {
     cancelElement = fixture.nativeElement.querySelector(
       'footer .sprk-c-Button.sprk-c-Button--tertiary'
     );
+    closeElement = fixture.nativeElement.querySelector('header button');
   });
 
   afterEach(() => {
@@ -148,5 +150,20 @@ describe('SprkModalComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(modalElement.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should add analyticsString to close modal button when analyticsString has a value', () => {
+    const closeAnalyticsString = 'closeModal';
+    component.closeAnalyticsString = closeAnalyticsString;
+    fixture.detectChanges();
+    expect(closeElement.getAttribute('data-analytics')).toEqual(
+      closeAnalyticsString,
+    );
+  });
+
+  it('should not add analyticsString to close modal button when analyticsString has no value', () => {
+    component.closeAnalyticsString = null;
+    fixture.detectChanges();
+    expect(closeElement.getAttribute('data-analytics')).toBeNull();
   });
 });

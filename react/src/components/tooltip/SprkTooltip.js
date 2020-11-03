@@ -184,6 +184,7 @@ class SprkTooltip extends Component {
         </button>
         <span
           ref={this.tooltipRef}
+          aria-hidden="true"
           className={classnames('sprk-c-Tooltip', additionalClasses, {
             'sprk-c-Tooltip--top-left': position === 'topleft',
             'sprk-c-Tooltip--top-right': position === 'topright',

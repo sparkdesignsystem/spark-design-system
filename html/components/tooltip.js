@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import getElements from '../utilities/getElements';
 import {
   isEscPressed,
@@ -11,10 +12,11 @@ import toggleAriaExpanded from '../utilities/toggleAriaExpanded';
  */
 
 const addPositioningClass = (trigger, tooltip) => {
-  tooltip.classList.remove('sprk-c-Tooltip--bottom-right');
-  tooltip.classList.remove('sprk-c-Tooltip--bottom-left');
-  tooltip.classList.remove('sprk-c-Tooltip--top-right');
-  tooltip.classList.remove('sprk-c-Tooltip--top-left');
+  const existingClasses = tooltip.className
+    .replace('sprk-c-Tooltip--bottom-right', '')
+    .replace('sprk-c-Tooltip--bottom-left', '')
+    .replace('sprk-c-Tooltip--top-right', '')
+    .replace('sprk-c-Tooltip--top-left', '');
 
   const elemX = trigger.getBoundingClientRect().left;
   const elemY = trigger.getBoundingClientRect().top;
@@ -29,18 +31,20 @@ const addPositioningClass = (trigger, tooltip) => {
   let calculatedWidth;
 
   if (elemX > viewportWidth / 2) {
-    calculatedWidth = elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
+    calculatedWidth =
+      elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
     if (elemY > viewportHeight / 2) {
-      tooltip.classList.add('sprk-c-Tooltip--top-left');
+      tooltip.className = `${existingClasses} sprk-c-Tooltip--top-left`;
     } else {
-      tooltip.classList.add('sprk-c-Tooltip--bottom-left');
+      tooltip.className = `${existingClasses} sprk-c-Tooltip--bottom-left`;
     }
   } else {
-    calculatedWidth = viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
+    calculatedWidth =
+      viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
     if (elemY > viewportHeight / 2) {
-      tooltip.classList.add('sprk-c-Tooltip--top-right');
+      tooltip.className = `${existingClasses} sprk-c-Tooltip--top-right`;
     } else {
-      tooltip.classList.add('sprk-c-Tooltip--bottom-right');
+      tooltip.className = `${existingClasses} sprk-c-Tooltip--bottom-right`;
     }
   }
 
@@ -80,6 +84,8 @@ const bindTooltipUIEvents = (tooltipContainer) => {
   const tooltip = tooltipContainer.querySelector(
     '[data-sprk-tooltip="content"]',
   );
+
+  addPositioningClass(trigger, tooltip);
 
   trigger.setAttribute('aria-expanded', 'false');
 

@@ -20,7 +20,7 @@
   -webkit-appearance: none;
   background-color: $sprk-tab-navigation-btn-bg-color;
   border: 0;
-  border-top: $sprk-tab-navigation-btn-border-top;
+  border-bottom: $sprk-tab-navigation-btn-border-bottom;
   display: block;
   font-size: $sprk-font-size-body-one;
   font-weight: $sprk-font-weight-body-one;
@@ -41,10 +41,11 @@
 .sprk-c-Tabs__button--active,
 .sprk-c-Tabs__button:focus {
   background-color: $sprk-white;
-  border-top: $sprk-tab-navigation-btn-active-border-top;
+  border-bottom: $sprk-tab-navigation-btn-active-border-bottom;
   color: $sprk-tab-navigation-btn-active-color;
 }
 
 .sprk-c-Tabs__button:hover:not([disabled]) {
-  border-top: $sprk-tab-navigation-btn-hover-border-top;
+  border-bottom: $sprk-tab-navigation-btn-hover-border-bottom;
+  color: $sprk-tab-navigation-btn-hover-color;
 }

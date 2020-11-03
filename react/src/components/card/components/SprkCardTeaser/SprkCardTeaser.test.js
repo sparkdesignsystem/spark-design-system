@@ -152,6 +152,15 @@ describe('SprkCardTeaser:', () => {
     ).toBe(true);
   });
 
+  it('should have the correct class if CTA is quaternary', () => {
+    testTeaserConfig.cta.ctaVariant = 'button';
+    testTeaserConfig.cta.buttonVariant = 'quaternary';
+    const wrapper = mount(<SprkCardTeaser teaserConfig={testTeaserConfig} />);
+    expect(
+      wrapper.find('.sprk-c-Button').hasClass('sprk-c-Button--quaternary'),
+    ).toBe(true);
+  });
+
   // TagNameLink
   it('should render media img inside react router link', () => {
     testTeaserConfig.media.mediaVariant = 'img';

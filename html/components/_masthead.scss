@@ -74,7 +74,7 @@
   }
 }
 
-// When open, adjust box shadown and border styles
+// When open, adjust box shadow and border styles
 .sprk-c-Masthead--open .sprk-c-Masthead__content {
   border-bottom: $sprk-masthead-border-bottom;
   box-shadow: $sprk-masthead-shadow;
@@ -141,7 +141,7 @@
   }
 }
 
-// If thre are too many little nav links they'll wrap
+// If there are too many little nav links they'll wrap
 .sprk-c-Masthead__little-nav {
   flex-wrap: wrap;
   position: relative;
@@ -158,16 +158,23 @@
 }
 
 .sprk-c-Masthead__link {
+  color: $sprk-masthead-link-color;
   font-weight: $sprk-masthead-link-font-weight;
 
   &:visited {
     color: $sprk-masthead-link-visited-color;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $sprk-masthead-link-hover-color;
+  &:hover {
+    .sprk-c-Icon {
+      color: $sprk-masthead-link-icon-hover-color;
+    }
+  }
+}
+
+.sprk-c-Masthead__link.sprk-b-Link--simple:hover {
+  .sprk-c-Icon {
+    color: $sprk-masthead-simple-link-icon-hover-color;
   }
 }
 
@@ -210,7 +217,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: $sprk-big-nav-link-color;
+    font-weight: $sprk-big-nav-link-font-weight;
   }
 }
 
@@ -232,14 +239,14 @@
   text-align: center;
   white-space: nowrap;
 
-  @include HoverLine($sprk-hoverline-color: transparent, $sprk-hoverline-width: 100%, $sprk-hoverline-height: 2px);
-
-  display: block;
-
   &:active,
   &:focus,
   &:hover {
-    @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 100%, $sprk-hoverline-height: 2px);
+    border-bottom: $sprk-big-nav-item-active-border-bottom;
+
+    .sprk-c-Masthead__link--big-nav {
+      border-bottom: $sprk-big-nav-link-hover-border-bottom;
+    }
   }
 }
 
@@ -247,7 +254,6 @@
 /// font weight to active big navigation items.
 /// @name .sprk-c-Masthead__big-nav-item--active
 .sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
-  color: $sprk-big-nav-active-color;
   font-weight: $sprk-big-nav-link-font-weight;
 }
 
@@ -256,7 +262,11 @@
 .sprk-c-Masthead__big-nav-item:focus-within,
 .sprk-c-Masthead__big-nav-item--open,
 .sprk-c-Masthead__big-nav-item--active {
-  @include HoverLine($sprk-hoverline-color: $sprk-big-nav-active-color, $sprk-hoverline-width: 100%, $sprk-hoverline-height: 2px);
+  border-bottom: $sprk-big-nav-item-open-border-bottom;
+
+  .sprk-c-Masthead__link--big-nav {
+    border-bottom: $sprk-big-nav-link-hover-border-bottom;
+  }
 }
 
 // Fixed container that covers entire page
@@ -267,15 +277,23 @@
   background-color: $sprk-white;
   height: 100%;
   overflow: auto;
-  padding-bottom: $sprk-masthead-narrow-height + $sprk-masthead-content-item-padding-top + $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height + $sprk-masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
-  top: $sprk-masthead-narrow-height + $sprk-masthead-content-item-padding-top + $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height + $sprk-masthead-border-bottom-size;   // Adds extra space to account for logo dropping under menu<320px
+  padding-bottom: $sprk-masthead-narrow-height +
+    $sprk-masthead-content-item-padding-top +
+    $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height +
+    $sprk-masthead-border-bottom-size; // So the scroll has enough room to reach the bottom item
+
+  top: $sprk-masthead-narrow-height + $sprk-masthead-content-item-padding-top +
+    $sprk-masthead-content-item-padding-top + $sprk-masthead-menu-icon-height +
+    $sprk-masthead-border-bottom-size; // Adds extra space to account for logo dropping under menu<320px
+
   width: 100%;
 
   @media (min-width: $sprk-split-breakpoint-xxs) {
     // Extra space for border included
     top: $sprk-masthead-narrow-height + $sprk-masthead-border-bottom-size;
     // Extra space for border included
-    padding-bottom: $sprk-masthead-narrow-height + $sprk-masthead-border-bottom-size;
+    padding-bottom: $sprk-masthead-narrow-height +
+      $sprk-masthead-border-bottom-size;
   }
   @media (min-width: $sprk-masthead-breakpoint) {
     // Hide narrow nav on larger views
@@ -290,8 +308,7 @@
   z-index: $sprk-layer-height-l;
 }
 
-.sprk-c-MastheadMask
-.sprk-c-Masthead__selector {
+.sprk-c-MastheadMask .sprk-c-Masthead__selector {
   border-color: $sprk-masthead-selector-border-color-mask-open;
 }
 
@@ -312,8 +329,7 @@
   padding: $sprk-masthead-selector-dropdown-padding;
 }
 
-.sprk-c-Masthead__selector-dropdown
-.sprk-c-Dropdown__link {
+.sprk-c-Masthead__selector-dropdown .sprk-c-Dropdown__link {
   padding: $sprk-space-m $sprk-space-misc-a;
 }
 
@@ -325,8 +341,7 @@
 }
 
 // Override the dropdown max-width
-.sprk-c-MastheadAccordion
-.sprk-c-Dropdown {
+.sprk-c-MastheadAccordion .sprk-c-Dropdown {
   max-width: 100%;
 }
 
@@ -344,7 +359,7 @@
   align-items: center;
   color: $sprk-masthead-accordion-font-color;
   display: flex;
-  min-height: $sprk-icon-xl;
+  min-height: $sprk-icon-m;
   padding: $sprk-masthead-accordion-item-padding;
   text-decoration: none;
 
@@ -363,7 +378,7 @@
 
   // Polyfill for focus-visible
   &:focus:not(.focus-visible) {
-    outline: none;
+    outline: none; /* stylelint-disable-line selector-class-pattern */
   }
 }
 
@@ -380,17 +395,14 @@
 
 /// Adds selected item background highlight and left color bar.
 /// @name .sprk-c-MastheadAccordion__item--active
-.sprk-c-MastheadAccordion__item--active
-.sprk-c-MastheadAccordion__summary {
+.sprk-c-MastheadAccordion__item--active .sprk-c-MastheadAccordion__summary {
   background-color: $sprk-masthead-accordion-active-background-color;
   border-left: $sprk-masthead-accordion-active-left-border;
 }
 
 // Set colors/font weight for heading when item is open or selected
-.sprk-c-MastheadAccordion__item--active
-.sprk-c-MastheadAccordion__heading,
-.sprk-c-MastheadAccordion__item--open
-.sprk-c-MastheadAccordion__heading {
+.sprk-c-MastheadAccordion__item--active .sprk-c-MastheadAccordion__heading,
+.sprk-c-MastheadAccordion__item--open .sprk-c-MastheadAccordion__heading {
   color: $sprk-masthead-accordion-active-heading-color;
   font-weight: $sprk-masthead-accordion-active-heading-font-weight;
 }
@@ -407,8 +419,7 @@
   }
 }
 
-.sprk-c-MastheadAccordion__details
-.sprk-c-Masthead__link {
+.sprk-c-MastheadAccordion__details .sprk-c-Masthead__link {
   color: $sprk-masthead-accordion-details-font-color;
   display: block;
   font-weight: $sprk-masthead-accordion-details-font-weight;

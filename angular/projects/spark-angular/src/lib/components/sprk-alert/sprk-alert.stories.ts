@@ -8,10 +8,8 @@ export default {
   component: SprkAlertComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -32,7 +30,7 @@ export const info = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-alert
-      alertType="info"
+      variant="info"
       idString="alert-info-1"
       analyticsString="test"
     >
@@ -51,13 +49,13 @@ export const success = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-alert
-      alertType="success"
+      variant="success"
       idString="alert-success-1"
       analyticsString="object.action.event"
     >
       This is a success message.
     </sprk-alert>
-  `
+  `,
 });
 
 success.story = {
@@ -70,14 +68,14 @@ export const fail = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-alert
-      alertType="fail"
+      variant="fail"
       idString="alert-fail-1"
       analyticsString="object.action.event"
     >
       This is a failure message to alert
       that something was not successful.
     </sprk-alert>
-  `
+  `,
 });
 
 fail.story = {
@@ -91,14 +89,14 @@ export const noDismissButton = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-alert
-      alertType="success"
-      [dismissible]="false"
+      variant="success"
+      [isDismissible]="false"
       idString="alert-success-2"
       analyticsString="object.action.event"
     >
-      This success alert has no dismiss button.
+      This Success Alert has no dismiss button.
     </sprk-alert>
-  `
+  `,
 });
 
 noDismissButton.story = {
@@ -106,4 +104,3 @@ noDismissButton.story = {
     jest: ['sprk-alert.component'],
   },
 };
-

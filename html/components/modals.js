@@ -4,7 +4,8 @@
  * Hides Modals, Shows Modals, Sets up Aria
  * Expects:
  * - main body content container to have attribute `data-sprk-main`
- * - modal container is outside of `data-sprk-main` and has `data-sprk-modal="customID"`
+ * - modal container is outside of
+ * `data-sprk-main` and has `data-sprk-modal="customID"`
  * - 'Wait' modal type to have `data-sprk-modal-type="wait"` in addition
  * - 'customID' should be unique identifier for each modal
  * - modal mask element to have `data-sprk-modal-mask="true"`
@@ -17,13 +18,12 @@ import {
   focusFirstEl,
   isActiveElement,
 } from '../utilities/elementState';
-import {
-  isTabPressed,
-  isEscPressed,
-} from '../utilities/keypress';
+import { isTabPressed, isEscPressed } from '../utilities/keypress';
 
-const isMaskClicked = e => e.target.getAttribute('data-sprk-modal-mask') === 'true';
-const isWaitModal = modal => modal.getAttribute('data-sprk-modal-type') === 'wait';
+const isMaskClicked = (e) =>
+  e.target.getAttribute('data-sprk-modal-mask') === 'true';
+const isWaitModal = (modal) =>
+  modal.getAttribute('data-sprk-modal-type') === 'wait';
 
 // Hide the modal, mask, remove aria-hidden on main and send focus back
 const hideModal = (modal, mask, main) => {
@@ -31,7 +31,9 @@ const hideModal = (modal, mask, main) => {
   // Grab value of modal data-attr to get the trigger's corresponding modal name
   const modalName = modal.getAttribute('data-sprk-modal');
   // Grab modal trigger so it can be focused once modal is closed
-  const modalTrigger = document.querySelector(`[data-sprk-modal-trigger="${modalName}"]`);
+  const modalTrigger = document.querySelector(
+    `[data-sprk-modal-trigger="${modalName}"]`,
+  );
   // If modal is hidden already or there are no mask and main els then exit
   if (isHidden || mask === null || main === null) return;
   modal.classList.add('sprk-u-Display--none');
@@ -123,7 +125,8 @@ const showModal = (modal, mask, main) => {
   // Prevent background body from scrolling
   document.body.classList.add('sprk-u-Overflow--hidden');
 
-  // When wait modal opens and has no focusable elements we apply focus to modal container
+  // When wait modal opens and has no
+  // focusable elements we apply focus to modal container
   if (isWaitModal(modal) && focusableEls.length === 0) {
     modal.focus();
   }
@@ -135,7 +138,10 @@ const bindUIEvents = (mask, main, modalTriggers, modalsList, cancels) => {
       // Get value of data-attr to get corresponding modal name
       const modalName = trigger.getAttribute('data-sprk-modal-trigger');
       const modal = document.querySelector(`[data-sprk-modal="${modalName}"]`);
-      if (trigger.getAttribute('data-sprk-modal-trigger-prevent-default') === 'true') {
+      if (
+        trigger.getAttribute('data-sprk-modal-trigger-prevent-default') ===
+        'true'
+      ) {
         e.preventDefault();
       }
       showModal(modal, mask, main);

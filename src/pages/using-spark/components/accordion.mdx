@@ -6,8 +6,7 @@ import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Accordion
 
-Accordion expands and collapses multiple
-sections of related content.
+Accordion holds sections that hide or reveal related information.
 
 <ComponentPreview
   componentName="accordion--default-story"
@@ -18,26 +17,16 @@ sections of related content.
 
 ### Usage
 
-Accordion is used when you have lower-priority
-content that needs to be broken up into digestible chunks.
+Use Accordion to separate supplementary (lower-priority) content into digestible pieces.
 
 ### Guidelines
 
-- By default, all section of an Accordion are
-collapsed, so high-priority content should be avoided.
-- Avoid complex interactions in Accordion.
-Things like forms, buttons, dropdowns, and nested
-Accordions weaken usability.
-- Keep Accordion titles short so the text
-stays on one line.
-- Accordion titles should be relevant to the content
-inside so the user can quickly decide if opening
-it will provide the information they need.
-- The width of the Accordion should be
-controlled by the layout of the page.
-- Expand/collapse is indicated by a chevron Icon,
-but the entire header area is clickable for the same action.
-- If your instance only has one item, consider using the [Toggle Component](https://sparkdesignsystem.com/using-spark/components/toggle) instead.
+- Accordion sections are collapsed by default. Because this hides content, only use this to augment information already on the page. Avoid high-priority content.
+- Avoid adding complex interactions like forms, buttons, and dropdowns. They complicate the user's experience.
+- Do not put an Accordion inside of another Accordion.
+- Keep Accordion titles succinct, clear, and short enough to be in one line.
+- Accordion titles should be relevant to the content it reveals. A user should know exactly what to expect when they expand a section.
+- If your Accordion only has one item, use the [Toggle Component](https://sparkdesignsystem.com/using-spark/components/toggle) instead.
 
 <SprkDivider
  element="span"
@@ -46,14 +35,13 @@ but the entire header area is clickable for the same action.
 
 ## Anatomy
 
+- An Accordion Item must have a clickable header that reveals or hides information.
 - An Accordion Item must have a left aligned title.
 - An Accordion Item must contain content.
-- An Accordion Item must have a right aligned
-Chevron-[Up/Down]-Circle-Two-Color Icon
+- An Accordion Item must have a right aligned Chevron-[Up/Down]-Circle-Two-Color Icon
 
 ## Accessibility
 
-- Can be accessed through the keyboard.
-TAB and SHIFT-TAB are used to navigate through
-Accordion titles and ENTER will expand or
-collapse each section.
+- Accessible through keyboard.
+  - `Tab` and `Shift` + `Tab` keys navigate through Accordion titles.
+  - `Enter` and `Space` keys expands or collapses each section.

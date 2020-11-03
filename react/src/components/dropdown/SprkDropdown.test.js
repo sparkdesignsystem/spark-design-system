@@ -25,30 +25,48 @@ describe('SprkDropdown:', () => {
     expect(wrapper.find('.sprk-c-Dropdown__footer').length).toBe(1);
   });
 
-  it('should add classes to the dropdown when additionalClasses has a value', () => {
-    const wrapper = mount(<SprkDropdown additionalClasses="sprk-u-man" />);
-    wrapper.find('.sprk-b-Link').simulate('click');
-    expect(wrapper.find('.sprk-c-Dropdown.sprk-u-man').length).toBe(1);
-  });
+  it(
+    'should add classes to the dropdown,' +
+      ' when additionalClasses has a value',
+    () => {
+      const wrapper = mount(<SprkDropdown additionalClasses="sprk-u-man" />);
+      wrapper.find('.sprk-b-Link').simulate('click');
+      expect(wrapper.find('.sprk-c-Dropdown.sprk-u-man').length).toBe(1);
+    },
+  );
 
-  it('should add classes to the icon when additionalIconClasses has a value', () => {
-    const wrapper = mount(
-      <SprkDropdown additionalIconClasses="sprk-c-Icon--l" />,
-    );
-    expect(wrapper.find('.sprk-c-Icon.sprk-c-Icon--l').length).toBe(1);
-  });
+  it(
+    'should add classes to the icon,' +
+      ' when additionalIconClasses has a value',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown additionalIconClasses="test-class" />,
+      );
+      expect(wrapper.find('.sprk-c-Icon.test-class').length).toBe(1);
+    },
+  );
 
-  it('should add classes to the trigger when additionalTriggerClasses has a value', () => {
-    const wrapper = mount(<SprkDropdown additionalTriggerClasses="sprk-u-man" />);
-    expect(wrapper.find('.sprk-b-Link.sprk-u-man').length).toBe(1);
-  });
+  it(
+    'should add classes to the trigger,' +
+      ' when additionalTriggerClasses has a value',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown additionalTriggerClasses="sprk-u-man" />,
+      );
+      expect(wrapper.find('.sprk-b-Link.sprk-u-man').length).toBe(1);
+    },
+  );
 
-  it('should add classes to the trigger text when additionalTriggerTextClasses has a value', () => {
-    const wrapper = mount(
-      <SprkDropdown additionalTriggerTextClasses="sprk-u-man" />,
-    );
-    expect(wrapper.find('span.sprk-u-man').length).toBe(1);
-  });
+  it(
+    'should add classes to the trigger text when,' +
+      'additionalTriggerTextClasses has a value',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown additionalTriggerTextClasses="sprk-u-man" />,
+      );
+      expect(wrapper.find('span.sprk-u-man').length).toBe(1);
+    },
+  );
 
   it('should assign data-analytics when analyticsString has a value', () => {
     const wrapper = mount(<SprkDropdown analyticsString="321" />);
@@ -60,7 +78,8 @@ describe('SprkDropdown:', () => {
     expect(wrapper.find('[data-id="321"]').length).toBe(2);
   });
 
-  it('should assign screen reader text to the trigger for base dropdowns', () => {
+  it(`should assign screen reader text
+      to the trigger for base dropdowns`, () => {
     const wrapper = mount(<SprkDropdown screenReaderText="test" />);
     expect(wrapper.find('.sprk-u-ScreenReaderText').text()).toBe('test');
   });
@@ -83,71 +102,79 @@ describe('SprkDropdown:', () => {
     expect(wrapper.find('.sprk-c-Dropdown__link').length).toBe(2);
   });
 
-  it('should run the choiceFunction supplied with the list of choices (base)', () => {
-    const spyFunc = jest.fn();
-    const choices = {
-      choiceFunction: spyFunc,
-      items: [
-        { text: 'Item 1', value: 'item-1' },
-        { text: 'Item 2', value: 'item-2' },
-      ],
-    };
-    const wrapper = mount(<SprkDropdown choices={choices} />);
-    wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
-    expect(spyFunc.mock.calls.length).toBe(1);
-  });
+  it(
+    'should run the choiceFunction supplied' +
+      ' with the list of choices (base)',
+    () => {
+      const spyFunc = jest.fn();
+      const choices = {
+        choiceFunction: spyFunc,
+        items: [
+          { text: 'Item 1', value: 'item-1' },
+          { text: 'Item 2', value: 'item-2' },
+        ],
+      };
+      const wrapper = mount(<SprkDropdown choices={choices} />);
+      wrapper.find('.sprk-b-Link').simulate('click');
+      wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
+      expect(spyFunc.mock.calls.length).toBe(1);
+    },
+  );
 
-  it('should not error if choiceFunction is supplied but undefined (base)', () => {
-    const choices = {
-      choiceFunction: undefined,
-      items: [
-        { text: 'Item 1', value: 'item-1' },
-        { text: 'Item 2', value: 'item-2' },
-      ],
-    };
-    const wrapper = mount(<SprkDropdown choices={choices} />);
-    wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
-  });
+  it(
+    'should not error, ' +
+      ' if choiceFunction is supplied but undefined (base)',
+    () => {
+      const choices = {
+        choiceFunction: undefined,
+        items: [
+          { text: 'Item 1', value: 'item-1' },
+          { text: 'Item 2', value: 'item-2' },
+        ],
+      };
+      const wrapper = mount(<SprkDropdown choices={choices} />);
+      wrapper.find('.sprk-b-Link').simulate('click');
+      wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
+    },
+  );
 
-  it('should run the choiceFunction supplied with the list of choices (informational)', () => {
-    const spyFunc = jest.fn();
-    const choices = {
-      choiceFunction: spyFunc,
-      items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
-    };
-    const wrapper = mount(
-      <SprkDropdown choices={choices} variant="informational" />,
-    );
-    wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
-    expect(spyFunc.mock.calls.length).toBe(1);
-  });
+  it(
+    'should run the choiceFunction supplied' +
+      'with the list of choices (informational)',
+    () => {
+      const spyFunc = jest.fn();
+      const choices = {
+        choiceFunction: spyFunc,
+        items: [
+          { text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } },
+        ],
+      };
+      const wrapper = mount(
+        <SprkDropdown choices={choices} variant="informational" />,
+      );
+      wrapper.find('.sprk-b-Link').simulate('click');
+      wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
+      expect(spyFunc.mock.calls.length).toBe(1);
+    },
+  );
 
-  it('should not error if choiceFunction is supplied but undefined (informational)', () => {
-    const choices = {
-      choiceFunction: undefined,
-      items: [{ text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } }],
-    };
-    const wrapper = mount(
-      <SprkDropdown choices={choices} variant="informational" />,
-    );
-    wrapper.find('.sprk-b-Link').simulate('click');
-    wrapper
-      .find('.sprk-c-Dropdown__link')
-      .first()
-      .simulate('click');
-  });
+  it(
+    'should not error' +
+      ' if choiceFunction is supplied but undefined (informational)',
+    () => {
+      const choices = {
+        choiceFunction: undefined,
+        items: [
+          { text: 'Item 1', value: 'item-1', content: { title: 'Item 1' } },
+        ],
+      };
+      const wrapper = mount(
+        <SprkDropdown choices={choices} variant="informational" />,
+      );
+      wrapper.find('.sprk-b-Link').simulate('click');
+      wrapper.find('.sprk-c-Dropdown__link').first().simulate('click');
+    },
+  );
 
   it('should close the dropdown on click outside', () => {
     const choices = {
@@ -162,6 +189,89 @@ describe('SprkDropdown:', () => {
     wrapper.instance().closeOnClickOutside({});
     expect(wrapper.state().isOpen).toBe(false);
   });
+
+  it(
+    'should set state with default choice option' +
+      ' having isActive as true, when isDefault true attribute is provided',
+    () => {
+      const choices = {
+        items: [{ text: 'Item 1', value: 'item-1', isDefault: true }],
+      };
+
+      const wrapper = mount(<SprkDropdown choices={choices} />);
+      expect(wrapper.state().choiceItems[0].isActive).toBe(true);
+    },
+  );
+
+  it(
+    'should set state with default choice option' +
+      ' having isActive as true, when isDefault true attribute is provided',
+    () => {
+      const choices = {
+        items: [{ text: 'Item 1', value: 'item-1', isDefault: true }],
+      };
+
+      const wrapper = mount(<SprkDropdown choices={choices} />);
+      expect(wrapper.state().choiceItems[0].isActive).toBe(true);
+    },
+  );
+
+  it(
+    'should set state with default choice option' +
+      ' having isActive as true, when isDefault true attribute is provided',
+    () => {
+      const choices = {
+        items: [{ text: 'Item 1', value: 'item-1', isDefault: true }],
+      };
+
+      const wrapper = mount(<SprkDropdown choices={choices} />);
+      expect(wrapper.state().choiceItems[0].isActive).toBe(true);
+    },
+  );
+
+  it(
+    'should set state with triggerText as Choose One...' +
+      ' when choice items are empty and defaultTriggerText is not provided',
+    () => {
+      const wrapper = mount(<SprkDropdown />);
+      expect(wrapper.state().triggerText).toBe('Choose One...');
+    },
+  );
+
+  it(
+    'should set state with triggerText as defaultTriggerText' +
+      ' when choice items are empty and defaultTriggerText is provided',
+    () => {
+      const choices = { items: [] };
+
+      const wrapper = mount(
+        <SprkDropdown choices={choices} defaultTriggerText="Default" />,
+      );
+      expect(wrapper.state().triggerText).toBe('Default');
+    },
+  );
+
+  it(
+    'should set state with triggerText as title of default choice' +
+      ' when choice items are not empty, defaultTriggerText is provided' +
+      ' and variant is informational',
+    () => {
+      const choices = {
+        items: [
+          { content: { title: 'Item 1' }, value: 'item-1', isDefault: true },
+        ],
+      };
+
+      const wrapper = mount(
+        <SprkDropdown
+          choices={choices}
+          defaultTriggerText="Default"
+          variant="informational"
+        />,
+      );
+      expect(wrapper.state().triggerText).toBe('Item 1');
+    },
+  );
 
   it('should close the dropdown on keydown (Escape)', () => {
     const choices = {
@@ -230,110 +340,127 @@ describe('SprkDropdown:', () => {
     ).toBe(null);
   });
 
-  it('should choose correct aria-label text if defaultTriggerText is provided.', () => {
-    const wrapper = mount(
-      <SprkDropdown
-        defaultTriggerText="test"
-        variant="informational"
-        choices={{
-          items: [
-            { content: { title: 'Item 1' } },
-          ],
-        }}
-      />,
-    );
-    expect(
-      wrapper
-        .find('.sprk-b-Link')
-        .instance()
-        .getAttribute('aria-label'),
-    ).toBe('test');
-  });
+  it(
+    'should choose correct aria-label text' +
+      ' if defaultTriggerText is provided.',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown
+          defaultTriggerText="test"
+          variant="informational"
+          choices={{
+            items: [{ content: { title: 'Item 1' } }],
+          }}
+        />,
+      );
+      expect(
+        wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
+      ).toBe('test');
+    },
+  );
 
-  it('should apply default aria-label if defaultTriggerText is not provided.', () => {
-    const wrapper = mount(
-      <SprkDropdown
-        variant="informational"
-        choices={{
-          items: [
-            { content: { title: 'Item 1' } },
-          ],
-        }}
-      />,
-    );
-    wrapper.find('.sprk-b-Link').simulate('click');
-    expect(
-      wrapper
-        .find('.sprk-b-Link')
-        .instance()
-        .getAttribute('aria-label'),
-    ).toBe('Choose One...');
-  });
+  it(
+    'should choose aria-label text as default choice item title' +
+      ' if defaultTriggerText is provided and isDefault is true for a choice' +
+      ' and variant is informational',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown
+          defaultTriggerText="test"
+          variant="informational"
+          choices={{
+            items: [{ content: { title: 'Item 1' }, isDefault: true }],
+          }}
+        />,
+      );
+      expect(
+        wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
+      ).toBe('Item 1');
+    },
+  );
 
-  it('should default to correct aria-label if screenReaderText is provided.', () => {
+  it(
+    'should apply default aria-label' +
+      ' if defaultTriggerText is not provided.',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown
+          variant="informational"
+          choices={{
+            items: [{ content: { title: 'Item 1' } }],
+          }}
+        />,
+      );
+      wrapper.find('.sprk-b-Link').simulate('click');
+      expect(
+        wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
+      ).toBe('Choose One...');
+    },
+  );
+
+  it(
+    'should default to correct aria-label' +
+      ' if screenReaderText is provided.',
+    () => {
+      const choices = {
+        items: [{ text: 'Item 1', value: 'item-1' }],
+      };
+
+      const wrapper = mount(
+        <SprkDropdown
+          choices={choices}
+          screenReaderText="Dropdown description"
+        />,
+      );
+
+      expect(
+        wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
+      ).toBe('Dropdown description');
+    },
+  );
+
+  it(`should default to correct aria-label,
+      if screenReaderText is not provided.`, () => {
     const choices = {
-      items: [
-        { text: 'Item 1', value: 'item-1' },
-      ],
-    };
-
-    const wrapper = mount(<SprkDropdown choices={choices} screenReaderText="Dropdown description"/>);
-
-    expect(
-      wrapper
-        .find('.sprk-b-Link')
-        .instance()
-        .getAttribute('aria-label'),
-    ).toBe('Dropdown description');
-  });
-
-  it('should default to correct aria-label if screenReaderText is not provided.', () => {
-    const choices = {
-      items: [
-        { text: 'Item 1', value: 'item-1' },
-      ],
+      items: [{ text: 'Item 1', value: 'item-1' }],
     };
 
     const wrapper = mount(<SprkDropdown choices={choices} />);
 
     expect(
-      wrapper
-        .find('.sprk-b-Link')
-        .instance()
-        .getAttribute('aria-label'),
+      wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
     ).toBe('Choose One...');
   });
 
   it('should apply aria-label to listbox when title is provided', () => {
-    const wrapper = mount(<SprkDropdown title="test"/>);
+    const wrapper = mount(<SprkDropdown title="test" />);
     wrapper.find('.sprk-b-Link').simulate('click');
-    expect(
-      wrapper
-        .find('ul')
-        .instance()
-        .getAttribute('aria-label'),
-    ).toBe('test');
+    expect(wrapper.find('ul').instance().getAttribute('aria-label')).toBe(
+      'test',
+    );
   });
 
-  it('should apply aria-label to listbox when there is no title but screenReaderText is provided', () => {
-    const wrapper = mount(<SprkDropdown screenReaderText="test"/>);
-    wrapper.find('.sprk-b-Link').simulate('click');
-    expect(
-      wrapper
-        .find('ul')
-        .instance()
-        .getAttribute('aria-label'),
-    ).toBe('test');
-  });
+  it(
+    'should apply aria-label to listbox,' +
+      'when there is no title but screenReaderText is provided',
+    () => {
+      const wrapper = mount(<SprkDropdown screenReaderText="test" />);
+      wrapper.find('.sprk-b-Link').simulate('click');
+      expect(wrapper.find('ul').instance().getAttribute('aria-label')).toBe(
+        'test',
+      );
+    },
+  );
 
-  it('should apply default aria-label to listbox when neither title nor screenReaderText is provided', () => {
-    const wrapper = mount(<SprkDropdown />);
-    wrapper.find('.sprk-b-Link').simulate('click');
-    expect(
-      wrapper
-        .find('ul')
-        .instance()
-        .getAttribute('aria-label'),
-    ).toBe('My Choices');
-  });
+  it(
+    'should apply default aria-label to listbox,' +
+      ' when neither title nor screenReaderText is provided',
+    () => {
+      const wrapper = mount(<SprkDropdown />);
+      wrapper.find('.sprk-b-Link').simulate('click');
+      expect(wrapper.find('ul').instance().getAttribute('aria-label')).toBe(
+        'My Choices',
+      );
+    },
+  );
 });

@@ -15,8 +15,8 @@ import { Component, Input, AfterViewInit, ElementRef } from '@angular/core';
           <sprk-icon
             iconType="chevron-left-circle"
             additionalClasses="
-              sprk-c-Icon--stroke-current-color
-              sprk-c-Icon--l"
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--xl"
           >
           </sprk-icon>
         </span>
@@ -35,8 +35,8 @@ import { Component, Input, AfterViewInit, ElementRef } from '@angular/core';
           <sprk-icon
             iconType="chevron-right-circle"
             additionalClasses="
-              sprk-c-Icon--stroke-current-color
-              sprk-c-Icon--l"
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--xl"
           >
           </sprk-icon>
         </span>

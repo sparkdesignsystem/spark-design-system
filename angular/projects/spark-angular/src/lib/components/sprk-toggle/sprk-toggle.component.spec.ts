@@ -14,11 +14,7 @@ describe('SprkToggleComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [BrowserAnimationsModule],
-      declarations: [
-        SprkToggleComponent,
-        SprkIconComponent,
-        SprkLinkDirective
-      ]
+      declarations: [SprkToggleComponent, SprkIconComponent, SprkLinkDirective],
     }).compileComponents();
   }));
 
@@ -44,37 +40,84 @@ describe('SprkToggleComponent', () => {
     const str = 'One';
     component.analyticsString = str;
     fixture.detectChanges();
-    expect(element.querySelector('button').getAttribute('data-analytics')).toEqual(
-      str
-    );
+    expect(
+      element.querySelector('button').getAttribute('data-analytics'),
+    ).toEqual(str);
   });
 
   it('should add icon classes to icon when toggle is opened', () => {
-    component.title = 'placeholder';
+    component.triggerText = 'placeholder';
     element.querySelector('button').click();
     fixture.detectChanges();
     expect(
-      element.querySelector('button .sprk-c-Icon').classList.toString()
+      element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open'
+      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open',
     );
   });
 
   it('should add icon classes to icon when the toggle is opened and then closed', () => {
-    component.title = 'placeholder';
+    component.triggerText = 'placeholder';
     element.querySelector('button').click();
     element.querySelector('button').click();
     fixture.detectChanges();
     expect(
-      element.querySelector('button .sprk-c-Icon').classList.toString()
-    ).toEqual('sprk-c-Icon sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--toggle');
+      element.querySelector('button .sprk-c-Icon').classList.toString(),
+    ).toEqual('sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle');
+  });
+
+  it('should render open if isOpen is set to true', () => {
+    component.isOpen = true;
+    fixture.detectChanges();
+    expect(
+      element.querySelector('button .sprk-c-Icon').classList.toString(),
+    ).toEqual(
+      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open',
+    );
+    expect(contentElement.getAttribute('style')).toContain(
+      'visibility:visible',
+    );
+    expect(triggerElement.getAttribute('aria-expanded')).toEqual('true');
+  });
+
+  // TODO: Remove `iconClass` in issue #1305
+  it('should add the correct classes if iconClass have values', () => {
+    component.iconClass = 'test';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('button .sprk-c-Icon').classList.toString(),
+    ).toEqual(
+      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle test',
+    );
+  });
+
+  it('should add the correct classes if iconAdditionalClasses have values', () => {
+    component.iconAdditionalClasses = 'test';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('button .sprk-c-Icon').classList.toString(),
+    ).toEqual(
+      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle test',
+    );
+  });
+
+  // TODO: Remove `iconClass` in issue #1305
+  it('should prefer iconAdditionalClasses if both iconClass and iconAdditionalClasses are set', () => {
+    component.iconAdditionalClasses = 'should-add';
+    component.iconClass = 'should-not-add';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('button .sprk-c-Icon').classList.toString(),
+    ).toEqual(
+      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle should-add',
+    );
   });
 
   it('should add the correct classes if additionalClasses have values', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(element.classList.toString()).toEqual(
-      'sprk-c-Toggle sprk-u-pam sprk-u-man'
+      'sprk-c-Toggle sprk-u-pam sprk-u-man',
     );
   });
 
@@ -94,13 +137,106 @@ describe('SprkToggleComponent', () => {
   it('should add aria-controls and id if contentId is not passed', () => {
     fixture.detectChanges();
     expect(contentElement.getAttribute('id')).toMatch(/sprk_toggle_content_\d/);
-    expect(triggerElement.getAttribute('aria-controls')).toEqual(contentElement.getAttribute('id'));
+    expect(triggerElement.getAttribute('aria-controls')).toEqual(
+      contentElement.getAttribute('id'),
+    );
   });
 
   it('should add correct aria-controls and id if contentId is passed', () => {
     component.contentId = 'test_id';
     fixture.detectChanges();
     expect(contentElement.getAttribute('id')).toEqual('test_id');
-    expect(triggerElement.getAttribute('aria-controls')).toEqual(contentElement.getAttribute('id'));
+    expect(triggerElement.getAttribute('aria-controls')).toEqual(
+      contentElement.getAttribute('id'),
+    );
+  });
+
+  // TODO: Remove `title` in issue #1305
+  it('should add the correct title when set', () => {
+    component.title = 'Test Title';
+    fixture.detectChanges();
+    expect(triggerElement.innerHTML).toContain('Test Title');
+  });
+
+  it('should add the correct triggerText when set', () => {
+    component.triggerText = 'Test Title';
+    fixture.detectChanges();
+    expect(triggerElement.innerHTML).toContain('Test Title');
+  });
+
+  // TODO: Remove `title` in issue #1305
+  it('should prefer triggerText over title if both are set', () => {
+    component.triggerText = 'Test Title';
+    component.title = 'Should not be the title';
+    fixture.detectChanges();
+    expect(triggerElement.innerHTML).toContain('Test Title');
+  });
+
+  it('should add the correct classes if contentAdditionalClasses is set', () => {
+    component.contentAdditionalClasses = 'test-1 test-2';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Toggle__content').classList.toString(),
+    ).toContain('sprk-u-pts sprk-u-pbs sprk-c-Toggle__content test-1 test-2');
+  });
+
+  // TODO: Remove `titleFontClass` in issue #1305
+  it('should add the correct classes if titleFontClass is set', () => {
+    component.titleFontClass = 'test-1 test-2';
+    fixture.detectChanges();
+    expect(triggerElement.classList.toString()).toContain(
+      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+    );
+  });
+
+  it('should add the correct classes if triggerTextAdditionalClasses is set', () => {
+    component.triggerTextAdditionalClasses = 'test-1 test-2';
+    fixture.detectChanges();
+    expect(triggerElement.classList.toString()).toContain(
+      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+    );
+  });
+
+  // TODO: Remove `titleFontClass` in issue #1305
+  it('should prefer triggerTextAdditionalClasses over titleFontClass if both are set', () => {
+    component.triggerTextAdditionalClasses = 'test-1 test-2';
+    component.titleFontClass = 'test-3 test-4';
+    fixture.detectChanges();
+    expect(triggerElement.classList.toString()).toContain(
+      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+    );
+  });
+
+  it('should use correct toggleIconName if it is set', () => {
+    fixture.detectChanges();
+    expect(element.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#chevron-down-circle',
+    );
+    component.toggleIconName = 'exclamation';
+    fixture.detectChanges();
+    expect(element.querySelector('use').getAttribute('xlink:href')).toEqual(
+      '#exclamation',
+    );
+  });
+
+  it('should emit open and closed events when toggled', (done) => {
+    let openEventEmitted = false;
+    let closedEventEmitted = false;
+
+    component.openedEvent.subscribe((g) => {
+      openEventEmitted = true;
+      done();
+    });
+    component.closedEvent.subscribe((g) => {
+      closedEventEmitted = true;
+      done();
+    });
+
+    element.querySelector('button').click();
+    expect(openEventEmitted).toEqual(true);
+    expect(closedEventEmitted).toEqual(false);
+
+    element.querySelector('button').click();
+    expect(closedEventEmitted).toEqual(true);
   });
 });

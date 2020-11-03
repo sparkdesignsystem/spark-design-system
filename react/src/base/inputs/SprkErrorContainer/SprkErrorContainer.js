@@ -16,8 +16,8 @@ const SprkErrorContainer = ({
       id={id}
     >
       <SprkIcon
-        additionalClasses="sprk-c-Icon--m sprk-b-ErrorIcon"
-        iconName="exclamation-filled-small"
+        additionalClasses="sprk-b-ErrorIcon"
+        iconName="exclamation-filled"
       />
       <div className="sprk-b-ErrorText">{message}</div>
     </div>

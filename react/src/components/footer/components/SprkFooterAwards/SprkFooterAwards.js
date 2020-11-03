@@ -7,7 +7,10 @@ class SprkFooterAwards extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      awardsImagesHasIds: props.awards.images.map(item => ({ id: uniqueId(), ...item })),
+      awardsImagesHasIds: props.awards.images.map((item) => ({
+        id: uniqueId(),
+        ...item,
+      })),
     };
   }
 
@@ -16,8 +19,16 @@ class SprkFooterAwards extends Component {
     const { awardsImagesHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
-        <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">{awards.heading}</h3>
-        <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm">
+        <h3
+          className="
+          sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text"
+        >
+          {awards.heading}
+        </h3>
+        <div
+          className="sprk-o-Stack__item
+          sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm"
+        >
           {awardsImagesHasIds.map((image) => {
             const {
               element,
@@ -45,12 +56,18 @@ class SprkFooterAwards extends Component {
 
         <SprkToggle
           additionalClasses="sprk-o-Stack__item"
-          toggleIconName="chevron-down-circle-two-color"
-          title={awards.disclaimerTitle}
-          titleAddClasses="sprk-b-TypeBodyFour sprk-u-FontWeight--normal"
+          iconAdditionalClasses="sprk-c-Footer__icon"
+          toggleIconName="chevron-down-circle"
+          triggerText={awards.disclaimerTitle}
+          triggerTextAdditionalClasses="sprk-b-TypeBodyFour sprk-c-Footer__trigger"
           analyticsString={awards.disclaimerAnalytics}
         >
-          <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">{awards.disclaimerText}</p>
+          <p
+            className="
+            sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs sprk-c-Footer__text"
+          >
+            {awards.disclaimerText}
+          </p>
         </SprkToggle>
       </div>
     );
@@ -85,9 +102,10 @@ SprkFooterAwards.propTypes = {
          * classes to be added to the award image.
          */
         addClasses: PropTypes.string,
-       /**
-        * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
-        */
+        /**
+         * Assigned to the `data-analytics` attribute serving as a unique
+         * selector for outside libraries to capture data.
+         */
         analyticsString: PropTypes.string,
       }),
     ).isRequired,

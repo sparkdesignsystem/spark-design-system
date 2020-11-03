@@ -319,7 +319,7 @@ export const invalidRadioButton = () => ({
       </fieldset>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">
@@ -676,7 +676,7 @@ export const hugeInvalid = () => ({
 
      <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">
@@ -1442,7 +1442,7 @@ export const legacyInvalidRadio = () => ({
       </sprk-selection-item-container>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>

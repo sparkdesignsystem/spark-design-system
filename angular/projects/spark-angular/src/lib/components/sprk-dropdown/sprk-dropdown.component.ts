@@ -4,7 +4,9 @@ import {
   Output,
   ElementRef,
   HostListener,
-  EventEmitter
+  EventEmitter,
+  OnChanges,
+  SimpleChanges,
 } from '@angular/core';
 import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
 
@@ -19,6 +21,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
       <div [ngClass]="{ 'sprk-o-Box': dropdownType === 'mastheadSelector' }">
         <a
           sprkLink
+          variant="plain"
           [ngClass]="getTriggerClasses()"
           (click)="toggle($event)"
           [idString]="idString"
@@ -31,7 +34,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
             [iconType]="triggerIconType"
-            additionalClasses="sprk-u-mls sprk-c-Icon--stroke-current-color {{
+            additionalClasses="sprk-u-mls {{
               additionalIconClasses
             }}"
           ></sprk-icon>
@@ -62,9 +65,14 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             >
             <sprk-icon
               [iconType]="triggerIconType"
-              additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mls sprk-c-Icon--toggle sprk-Stack__item {{
-                additionalIconClasses
-              }}"
+              additionalClasses="
+                sprk-c-Icon--filled-current-color
+                sprk-c-Icon--stroke-current-color
+                sprk-u-mls
+                sprk-c-Icon--toggle
+                sprk-Stack__item
+                {{ additionalIconClasses }}
+              "
             ></sprk-icon>
           </a>
         </div>
@@ -121,7 +129,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
     </div>
   `
 })
-export class SprkDropdownComponent {
+export class SprkDropdownComponent implements OnChanges {
   /**
    * The variant of the Dropdown to render.
    */
@@ -228,6 +236,18 @@ export class SprkDropdownComponent {
    * @ignore
    */
   constructor(public ref: ElementRef) {}
+
+  /**
+   * @ignore
+   */
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.choices) {
+      if (this.dropdownType === 'informational') {
+        this._updateTriggerTextWithDefaultValue();
+      }
+    }
+  }
+
   /**
    * @ignore
    */
@@ -329,7 +349,7 @@ export class SprkDropdownComponent {
    * @ignore
    */
   getTriggerClasses(): string {
-    const classArray: string[] = [];
+    const classArray: string[] = ['sprk-c-Dropdown__trigger'];
 
     if (this.additionalTriggerClasses) {
       this.additionalTriggerClasses.split(' ').forEach(className => {
@@ -353,5 +373,28 @@ export class SprkDropdownComponent {
     }
 
     return classArray.join(' ');
+  }
+
+  /**
+   * Update trigger text with default choice value
+   */
+  protected _updateTriggerTextWithDefaultValue(): void {
+    const defaultChoice = this._lookupDefaultChoice();
+
+    if (defaultChoice) {
+      // Deactivate previously activated choices
+      this.clearActiveChoices();
+      // Mark default choice as active
+      defaultChoice.active = true;
+      // Update trigger text
+      this.triggerText = defaultChoice.value;
+    }
+  }
+
+  /**
+   * Lookup choice with specified `isDefault: true` field
+   */
+  protected _lookupDefaultChoice(): ISprkDropdownChoice | null {
+    return this.choices.find((choice) => choice.isDefault) || null;
   }
 }

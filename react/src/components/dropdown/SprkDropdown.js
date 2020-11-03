@@ -10,12 +10,21 @@ class SprkDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      triggerText: props.defaultTriggerText,
+      triggerText: this.getDefaultOptionText(),
       isOpen: false,
-      choiceItems: props.choices.items.map(item => ({
-        id: uniqueId(),
-        ...item,
-      })),
+      choiceItems: props.choices.items.map((item) =>
+        item.isDefault
+          ? {
+              id: uniqueId(),
+              ...item,
+              isActive: true,
+            }
+          : {
+              id: uniqueId(),
+              ...item,
+              isActive: false,
+            },
+      ),
     };
     this.toggleDropdownOpen = this.toggleDropdownOpen.bind(this);
     this.closeOnEsc = this.closeOnEsc.bind(this);
@@ -48,6 +57,20 @@ class SprkDropdown extends Component {
     });
   }
 
+  getDefaultOptionText() {
+    const { props } = this;
+    const { choices, defaultTriggerText } = props;
+    const { items } = choices;
+
+    if (props.variant !== 'informational' || items.length === 0) {
+      return defaultTriggerText;
+    }
+
+    const defaultOption = items.find((item) => item.isDefault);
+
+    return defaultOption ? defaultOption.content.title : defaultTriggerText;
+  }
+
   selectChoice(id, text) {
     this.setState({
       triggerText: text,
@@ -57,7 +80,7 @@ class SprkDropdown extends Component {
 
   toggleDropdownOpen(e) {
     e.preventDefault();
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
     }));
   }
@@ -102,29 +125,34 @@ class SprkDropdown extends Component {
           element="a"
           variant="plain"
           additionalClasses={classNames(
+            'sprk-c-Dropdown__trigger',
             { 'sprk-u-mrs': variant === 'informational' },
             additionalTriggerClasses,
           )}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
-          aria-label={screenReaderText ? screenReaderText : triggerText}
+          aria-label={screenReaderText || triggerText}
           data-analytics={analyticsString || 'undefined'}
           data-id={idString || 'undefined'}
           onClick={this.toggleDropdownOpen}
         >
           {variant === 'informational' && (
-            <React.Fragment>
+            <>
               <span className={classNames(additionalTriggerTextClasses)}>
                 {triggerText}
               </span>
               <SprkIcon
-                additionalClasses="sprk-c-Icon--stroke-current-color sprk-u-mls"
+                additionalClasses="
+                  sprk-c-Icon--filled-current-color
+                  sprk-c-Icon--stroke-current-color
+                  sprk-u-mls
+                "
                 iconName="chevron-down"
               />
-            </React.Fragment>
+            </>
           )}
           {variant === 'base' && (
-            <React.Fragment>
+            <>
               <span
                 className={classNames(
                   'sprk-u-ScreenReaderText',
@@ -137,7 +165,7 @@ class SprkDropdown extends Component {
                 iconName={iconName}
                 additionalClasses={additionalIconClasses}
               />
-            </React.Fragment>
+            </>
           )}
         </SprkLink>
         {isOpen && (
@@ -149,7 +177,7 @@ class SprkDropdown extends Component {
             )}
             <ul
               className="sprk-c-Dropdown__links"
-              aria-label={title ? title : (screenReaderText || "My Choices")}
+              aria-label={title || screenReaderText || 'My Choices'}
               role="listbox"
             >
               {choiceItems.map((choice) => {
@@ -160,7 +188,6 @@ class SprkDropdown extends Component {
                   isActive,
                   text,
                   value,
-                  idString,
                   ...rest
                 } = choice;
                 const TagName = element || 'a';
@@ -190,7 +217,7 @@ class SprkDropdown extends Component {
                       </TagName>
                     )}
                     {variant === 'informational' && (
-                      <React.Fragment>
+                      <>
                         <TagName
                           className={classNames('sprk-c-Dropdown__link', {
                             'sprk-c-Dropdown__link--active': isActive,
@@ -214,7 +241,7 @@ class SprkDropdown extends Component {
                             {content.infoLine2}
                           </p>
                         </TagName>
-                      </React.Fragment>
+                      </>
                     )}
                   </li>
                 );
@@ -234,7 +261,9 @@ class SprkDropdown extends Component {
 
 SprkDropdown.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of
+   * classes to add to the outermost
+   * container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
@@ -242,15 +271,19 @@ SprkDropdown.propTypes = {
    */
   additionalIconClasses: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the trigger element.
+   * A space-separated string of classes
+   * to add to the trigger element.
    */
   additionalTriggerClasses: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the trigger text.
+   * A space-separated string of classes
+   * to add to the trigger text.
    */
   additionalTriggerTextClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics`
+   * attribute serving as a unique
+   * selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /** Content to render inside of the SprkDropdown */
@@ -271,8 +304,14 @@ SprkDropdown.propTypes = {
         href: PropTypes.string,
         /** The text inside the choice item. */
         text: PropTypes.string,
+        /**
+         * If set to true, current option will be set as default selected option
+         *  */
+        isDefault: PropTypes.bool,
       }),
     ),
+    footer: PropTypes.node,
+    choiceFunction: PropTypes.func,
   }),
   /** The text set as the default of the trigger link. */
   defaultTriggerText: PropTypes.string,
@@ -282,15 +321,17 @@ SprkDropdown.propTypes = {
    */
   iconName: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id`
+   * attribute serving as a unique
+   * selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-  * A value for screen readers when there isn't
-  * discernable text on the dropdown.
-  * Useful for when the `title` prop is empty
-  * and the Dropdown trigger is only an icon.
-  */
+   * A value for screen readers when there isn't
+   * discernable text on the dropdown.
+   * Useful for when the `title` prop is empty
+   * and the Dropdown trigger is only an icon.
+   */
   screenReaderText: PropTypes.string,
   /**
    * The text of the optional header above the

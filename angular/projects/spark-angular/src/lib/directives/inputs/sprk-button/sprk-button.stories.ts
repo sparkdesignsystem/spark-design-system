@@ -8,10 +8,8 @@ export default {
   component: SprkButtonDirective,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -44,12 +42,10 @@ receive interaction.
 `,
     docs: { iframeHeight: 100 },
   },
- };
+};
 
 const modules = {
-  imports: [
-    SprkButtonModule,
-  ],
+  imports: [SprkButtonModule],
 };
 
 export const primary = () => ({
@@ -66,9 +62,7 @@ export const primary = () => ({
 
 primary.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -87,9 +81,7 @@ export const secondary = () => ({
 
 secondary.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -108,9 +100,26 @@ export const tertiary = () => ({
 
 tertiary.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const quaternary = () => ({
+  moduleMetadata: modules,
+  template: `
+    <button
+      variant="quaternary"
+      idString="button-quaternary"
+      sprkButton
+    >
+      Button
+    </button>
+  `,
+});
+
+quaternary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -129,19 +138,77 @@ export const disabled = () => ({
 
 disabled.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };
 
-export const loading = () => {
+export const disabledSecondary = () => ({
+  moduleMetadata: modules,
+  template: `
+    <button
+      disabled
+      idString="button-disabled-secondary"
+      sprkButton
+      variant="secondary"
+    >
+      Button
+    </button>
+  `,
+});
+
+disabledSecondary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const disabledTertiary = () => ({
+  moduleMetadata: modules,
+  template: `
+    <button
+      disabled
+      idString="button-disabled-tertiary"
+      sprkButton
+      variant="tertiary"
+    >
+      Button
+    </button>
+  `,
+});
+
+disabledTertiary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const disabledQuaternary = () => ({
+  moduleMetadata: modules,
+  template: `
+    <button
+      disabled
+      idString="button-disabled-quaternary"
+      sprkButton
+      variant="quaternary"
+    >
+      Button
+    </button>
+  `,
+});
+
+disabledQuaternary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const spinning = () => {
   return {
     moduleMetadata: modules,
     template: `
       <button
-        idString="button-loading"
-        analyticsString="loading"
+        idString="button-spinning"
+        analyticsString="spinning"
         sprkButton
         [isSpinning]="true"
       >
@@ -151,21 +218,19 @@ export const loading = () => {
   };
 };
 
-loading.story = {
+spinning.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };
 
-export const loadingSecondary = () => {
+export const spinningSecondary = () => {
   return {
     moduleMetadata: modules,
     template: `
       <button
         variant="secondary"
-        idString="button-loading-secondary"
+        idString="button-spinning-secondary"
         sprkButton
         [isSpinning]="true"
       >
@@ -175,11 +240,53 @@ export const loadingSecondary = () => {
   };
 };
 
-loadingSecondary.story = {
+spinningSecondary.story = {
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const spinningTertiary = () => {
+  return {
+    moduleMetadata: modules,
+    template: `
+      <button
+        variant="tertiary"
+        idString="button-spinning-tertiary"
+        sprkButton
+        [isSpinning]="true"
+      >
+        Button
+      </button>
+    `,
+  };
+};
+
+spinningTertiary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
+  },
+};
+
+export const spinningQuaternary = () => {
+  return {
+    moduleMetadata: modules,
+    template: `
+      <button
+        variant="quaternary"
+        idString="button-spinning-quaternary"
+        sprkButton
+        [isSpinning]="true"
+      >
+        Button
+      </button>
+    `,
+  };
+};
+
+spinningQuaternary.story = {
+  parameters: {
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -201,9 +308,7 @@ export const fullWidthAtSmallViewport = () => {
 fullWidthAtSmallViewport.story = {
   name: 'Full Width at Small Viewport',
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };
 
@@ -225,8 +330,6 @@ export const fullWidthAtExtraSmallViewport = () => {
 fullWidthAtExtraSmallViewport.story = {
   name: 'Full Width at Extra Small Viewport',
   parameters: {
-    jest: [
-      'sprk-button.directive',
-    ],
+    jest: ['sprk-button.directive'],
   },
 };

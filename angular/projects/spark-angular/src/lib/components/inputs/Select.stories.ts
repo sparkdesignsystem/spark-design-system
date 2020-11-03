@@ -77,7 +77,7 @@ export const selectBox = () => ({
       </select>
       <sprk-icon
         iconType="chevron-down"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
     </sprk-input-container>
@@ -120,12 +120,12 @@ export const invalidSelectBox = () => ({
       </select>
       <sprk-icon
         iconType="chevron-down"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -168,7 +168,7 @@ export const disabledSelectBox = () => ({
       </select>
       <sprk-icon
         iconType="chevron-down"
-        additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
+        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
     </sprk-input-container>

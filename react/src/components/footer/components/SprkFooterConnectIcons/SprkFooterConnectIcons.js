@@ -17,7 +17,7 @@ class SprkFooterConnectIcons extends Component {
     const { connectIconsHasIds } = this.state;
     return (
       <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
-        <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne">{connectIcons.heading}</h3>
+        <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">{connectIcons.heading}</h3>
 
         <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@m">
           <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
@@ -43,11 +43,11 @@ class SprkFooterConnectIcons extends Component {
                   >
                     <SprkIcon
                       iconName={name}
-                      additionalClasses={`sprk-c-Icon--stroke-current-color sprk-c-Icon--l ${
-                        addClasses
-                      }`}
+                      additionalClasses={`sprk-c-Footer__icon sprk-c-Icon--xl ${addClasses}`}
                     />
-                    <span className="sprk-u-ScreenReaderText">{screenReaderText}</span>
+                    <span className="sprk-u-ScreenReaderText">
+                      {screenReaderText}
+                    </span>
                   </TagName>
                 </li>
               );

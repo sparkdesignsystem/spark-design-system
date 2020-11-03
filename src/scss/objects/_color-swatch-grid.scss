@@ -1,17 +1,41 @@
-.docs-o-ColorSwatchGrid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width));
-  gap: $sprk-space-m;
+/* stylelint-disable selector-class-pattern */
+.docs-c-ColorSwatch__swatch {
+  height: 85px;
+  width: 85px;
+}
 
-  @media (max-width: $docs-color-swatch-three-column-breakpoint) {
-    grid-template-columns: repeat(3, minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width));
-  }
+.docs-c-ColorSwatch__swatch--compact {
+  display: inline-block;
+}
 
-  @media (max-width: $docs-color-swatch-two-column-breakpoint) {
-    grid-template-columns: repeat(2, minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width));
-  }
+.docs-c-ColorSwatch__swatch--hasOutline {
+  border: 1px solid $sprk-black;
+}
 
-  @media (max-width: $docs-color-swatch-one-column-breakpoint) {
-    grid-template-columns: minmax($docs-color-swatch-min-width, $docs-color-swatch-max-width);
+.docs-c-ColorSwatch__heading {
+  &::before {
+    // spark override
+    margin-bottom: 0;
   }
+}
+
+.docs-c-ColorSwatch__label_container {
+  width: 25%;
+  display: inline-block;
+  margin-top: $sprk-space-m;
+
+  @media (max-width: $sprk-split-breakpoint-l) {
+    margin-bottom: $sprk-space-m;
+  }
+}
+
+.docs-c-ColorSwatch__label {
+  background-color: $sprk-black-tint-10;
+  color: $sprk-black-tint-80;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.docs-c-ColorSwatch__variable {
+  display: inline-block;
 }

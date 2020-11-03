@@ -13,7 +13,6 @@
   transition: $sprk-link-transition;
 
   &:visited {
-    color: $sprk-link-visited-color;
     border-bottom: $sprk-link-visited-border-bottom;
   }
 
@@ -113,7 +112,7 @@ body {
 .sb-show-main .sb-decorate .sprk-o-CenteredColumn,
 .sb-show-main .sb-decorate .sprk-o-Box,
 .sb-show-main .sb-decorate .sprk-o-Stack__item {
-  background-color: $sprk-gray-dark;
+  background-color: $sprk-black-tint-40;
   border: 2px solid $sprk-black;
   height: 4rem;
 }

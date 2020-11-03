@@ -71,7 +71,7 @@ import { SprkRadioGroupModule } from './components/inputs/sprk-radio-group/sprk-
 import { SprkRadioItemModule } from './components/inputs/sprk-radio-item/sprk-radio-item.module';
 import { SprkCheckboxGroupModule } from './components/inputs/sprk-checkbox-group/sprk-checkbox-group.module';
 import { SprkCheckboxItemModule } from './components/inputs/sprk-checkbox-item/sprk-checkbox-item.module';
-
+import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divider.module';
 @NgModule({
   exports: [
     SprkAlertModule,
@@ -140,6 +140,7 @@ import { SprkCheckboxItemModule } from './components/inputs/sprk-checkbox-item/s
     SprkFieldsetModule,
     SprkLegendModule,
     SprkSelectModule,
+    SprkDividerDirectiveModule,
   ],
 })
 export class SparkAngularModule {}

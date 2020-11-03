@@ -8,7 +8,7 @@
 
 /// Setting for the background
 /// color of any text when selected.
-$sprk-selection-bg-color: $sprk-green-tint-50 !default;
+$sprk-selection-bg-color: $sprk-purple-lightest !default;
 /// Setting for the
 /// color of any text when selected.
 $sprk-selection-text-color: $sprk-black !default;
@@ -131,35 +131,56 @@ $sprk-flag-gutter-huge: $sprk-space-xl !default;
 $sprk-flag-stacked-breakpoint: 25em !default;
 
 //
+// Footer
+///
+
+/// Background color of the Footer.
+$sprk-footer-background-color: $sprk-black !default;
+/// Text color on the Footer.
+$sprk-footer-text-color: $sprk-white !default;
+/// Link color on the Footer.
+$sprk-footer-link-color: $sprk-white !default;
+/// Link font-weight on the Footer.
+$sprk-footer-link-font-weight: normal !default;
+/// Icon color on the Footer.
+$sprk-footer-icon-color: $sprk-white !default;
+// Toggle trigger color on the Footer.
+$sprk-footer-trigger-color: $sprk-white !default;
+// Toggle trigger font-weight on the Footer.
+$sprk-footer-trigger-font-weight: normal !default;
+// Toggle trigger hover color on the Footer.
+$sprk-footer-trigger-hover-color: $sprk-purple-light !default;
+// Toggle transition timing on the Footer.
+$sprk-footer-toggle-transition: 0.3s !default;
+
+//
 // Icons
 ///
 
 /// Value for height and width of the Icon component.
 $sprk-icon-m: 16px !default;
 /// Value for height and width of the large Icon component.
-$sprk-icon-l: 32px !default;
-/// Value for height and width of the extra large Icon component.
-$sprk-icon-xl: 64px !default;
-/// Value for height and width of the extra extra large Icon component.
-$sprk-icon-xxl: 128px !default;
+$sprk-icon-l: 24px !default;
+/// Value for height and width of the extra-large Icon component.
+$sprk-icon-xl: 32px !default;
 /// Value for the fill property of the Icon component.
-$sprk-icon-fill-color: none !default;
+$sprk-icon-fill-color: $sprk-black !default;
 /// Value for the stroke property of the Icon component.
 $sprk-icon-stroke-color: $sprk-black !default;
+/// Value for the stroke-width property of the Icon component.
+$sprk-icon-stroke-width: 1.25 !default;
+/// Value for the stroke property of the large Icon component.
+$sprk-icon-l-stroke: none !default;
+/// Value for the stroke-width property of the large Icon component.
+$sprk-icon-custom-stroke-width-l: 0 !default;
+/// Value for the stroke property of the extra large Icon component.
+$sprk-icon-xl-stroke: none !default;
+/// Value for the stroke-width property of the extra large Icon component.
+$sprk-icon-custom-stroke-width-xl: 0 !default;
 /// Value for the fill property of the Filled Icon component.
 $sprk-icon-filled-fill-color: $sprk-black !default;
 /// Value for the stroke property of the Filled Icon component.
 $sprk-icon-filled-stroke-color: none !default;
-/// Boolean value for if a custom Icon stroke is desired.
-$sprk-icon-using-custom-stroke: true !default;
-/// Value for a small custom stroke width on the Icon component.
-$sprk-icon-custom-stroke-width-s: 1px !default;
-/// Value for a medium custom stroke width on the Icon component.
-$sprk-icon-custom-stroke-width-m: 1.5px !default;
-/// Value for a large custom stroke width on the Icon component.
-$sprk-icon-custom-stroke-width-l: 2px !default;
-/// Value for an extra large custom stroke width on the Icon component.
-$sprk-icon-custom-stroke-width-xl: 3px !default;
 
 //
 // Layout
@@ -199,7 +220,7 @@ $sprk-horizontal-list-spacing-medium: $sprk-space-m !default;
 $sprk-horizontal-list-spacing-large: $sprk-space-l !default;
 /// The huge spacing value for huge Horizontal List components.
 $sprk-horizontal-list-spacing-huge: $sprk-space-xl !default;
-/// The delimiter between delimited items in Horizonatal List components.
+/// The delimiter between delimited items in Horizontal List components.
 $sprk-horizontal-list-delimiter: ',' !default;
 
 //
@@ -229,7 +250,7 @@ $sprk-pag-link-color-hover: $sprk-pag-link-color !default;
 $sprk-pag-link-font-weight: 400 !default;
 /// The accent color for selected pagination links
 /// in the Pagination component.
-$sprk-pag-selection-color: $sprk-green !default;
+$sprk-pag-selection-color: $sprk-purple !default;
 /// The text color of the currently selected pagination link
 /// in the Pagination component.
 $sprk-pag-selection-link-color: $sprk-white !default;
@@ -495,7 +516,7 @@ $sprk-border-radius: 5px !default;
 /// Value for border-radius on the Alert component.
 $sprk-alert-border-radius: 4px !default;
 /// Value for border on the Alert component.
-$sprk-alert-border: 1px solid $sprk-gray !default;
+$sprk-alert-border: 2px solid $sprk-gray !default;
 /// Value for shadow on the Alert component.
 $sprk-alert-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 /// Value for color of the Alert component.
@@ -522,35 +543,35 @@ $sprk-alert-content-padding: $sprk-space-m $sprk-space-m $sprk-space-m
 $sprk-alert-dismiss-padding: $sprk-space-m 24px $sprk-space-m $sprk-space-m !default;
 /// The margin for the icon in the Alert component.
 $sprk-alert-icon-margin: 0 $sprk-space-misc-a 0 0 !default;
-/// The color of the dimiss icon in the Alert component.
+/// The color of the dismiss icon in the Alert component.
 $sprk-alert-dismiss-icon-color: $sprk-black !default;
-/// The size of the dimiss icon in the Alert component.
+/// The size of the dismiss icon in the Alert component.
 $sprk-alert-dismiss-icon-size: $sprk-space-m !default;
 // Info
 /// The icon color of the Information Alert component.
 $sprk-alert-icon-color-info: $sprk-blue !default;
 /// The border value of the Information Alert component.
-$sprk-alert-border-info: 1px solid $sprk-blue !default;
+$sprk-alert-border-info: 2px solid $sprk-blue !default;
 /// The background color of the Information Alert component.
-$sprk-alert-bg-color-info: rgb(241, 250, 255) !default;
+$sprk-alert-bg-color-info: $sprk-alert-bg-color !default;
 /// The value for the color property in the Information Alert component.
 $sprk-alert-text-color-info: $sprk-black !default;
 // Success
 /// The icon color of the Success Alert component.
 $sprk-alert-icon-color-success: $sprk-green !default;
 /// The border value of the Success Alert component.
-$sprk-alert-border-success: 1px solid $sprk-green !default;
+$sprk-alert-border-success: 2px solid $sprk-green !default;
 /// The background color of the Success Alert component.
-$sprk-alert-bg-color-success: rgb(237, 253, 251) !default;
+$sprk-alert-bg-color-success: $sprk-alert-bg-color !default;
 /// The value for the color property in the Success Alert component.
 $sprk-alert-text-color-success: $sprk-black !default;
 // Fail
 /// The icon color of the Fail Alert component.
-$sprk-alert-icon-color-fail: $sprk-yellow !default;
+$sprk-alert-icon-color-fail: $sprk-pink !default;
 /// The border value of the Fail Alert component.
-$sprk-alert-border-fail: 1px solid $sprk-yellow !default;
+$sprk-alert-border-fail: 2px solid $sprk-pink !default;
 /// The background color of the Fail Alert component.
-$sprk-alert-bg-color-fail: rgb(255, 248, 232) !default;
+$sprk-alert-bg-color-fail: $sprk-alert-bg-color !default;
 /// The value for the color property in the Fail Alert component.
 $sprk-alert-text-color-fail: $sprk-black !default;
 
@@ -561,7 +582,7 @@ $sprk-alert-text-color-fail: $sprk-black !default;
 /// The background color of the Promo component.
 $sprk-promo-background-color: $sprk-white !default;
 /// The border of the Promo component.
-$sprk-promo-border: 1px solid $sprk-gray !default;
+$sprk-promo-border: 1px solid $sprk-black-tint-40 !default;
 /// The maximum width of the Promo component.
 $sprk-promo-max-width: 42.5rem !default;
 /// The Promo component breakpoint at which large viewport styles begin.
@@ -585,15 +606,20 @@ $sprk-promo-subtitle-font-weight: $sprk-font-weight-body-one !default;
 ///
 
 /// The background color of the Button component.
-$sprk-btn-background-color: $sprk-green !default;
+$sprk-btn-background-color: $sprk-red !default;
+/// The box shadow color value for the Button component;
+$sprk-btn-shadow-color: rgba(20, 20, 20, 0.08) !default;
 /// The box shadow value of the Button component.
-$sprk-btn-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+$sprk-btn-shadow: 0 3px 10px $sprk-btn-shadow-color !default;
 /// The border style of the Button component.
 $sprk-btn-border-style: solid !default;
 /// The border color of the Button component.
 $sprk-btn-border-color: $sprk-btn-background-color !default;
 /// The border width of the Button component.
 $sprk-btn-border-width: 2px !default;
+/// The border of the Button component.
+$sprk-btn-border: $sprk-btn-border-width $sprk-btn-border-style
+  $sprk-btn-border-color !default;
 /// The font weight of the Button component.
 $sprk-btn-font-weight: 500 !default;
 /// The font size of the Button component.
@@ -604,11 +630,13 @@ $sprk-btn-font-family: inherit !default;
 $sprk-btn-line-height: normal !default;
 /// The text color of the Button component.
 $sprk-btn-text-color: $sprk-white !default;
+/// The text color of the Button component when visited.
+$sprk-btn-visited-text-color: $sprk-white !default;
 /// The border radius of the Button component.
 $sprk-btn-border-radius: 4px !default;
 /// The background color of the
 /// Button component on hover.
-$sprk-btn-hover-background-color: $sprk-green-dark !default;
+$sprk-btn-hover-background-color: $sprk-mid-red !default;
 /// The text color of the Button component on hover.
 $sprk-btn-hover-text-color: $sprk-white !default;
 /// The padding of the Button component.
@@ -630,72 +658,141 @@ $sprk-btn-disabled-border-width: $sprk-btn-border-width !default;
 /// The border style of the Disabled Button component.
 $sprk-btn-disabled-border-style: $sprk-btn-border-style !default;
 /// The background color of the Disabled Button component.
-$sprk-btn-disabled-background-color: $sprk-gray-dark !default;
+$sprk-btn-disabled-background-color: $sprk-black-tint-50 !default;
 /// The text color of the Disabled Button component.
 $sprk-btn-disabled-text-color: $sprk-white !default;
 /// The border color of the Disabled Button component.
 $sprk-btn-disabled-border-color: transparent !default;
+/// The border of the Disabled Button component.
+$sprk-btn-disabled-border: $sprk-btn-disabled-border-width
+  $sprk-btn-disabled-border-style $sprk-btn-disabled-border-color !default;
 /// The box shadow of the Disabled Button component.
 $sprk-btn-disabled-shadow: none !default;
 /// The background color of the Disabled Button component.
 $sprk-btn-secondary-disabled-background-color: transparent !default;
 /// The text color of the Secondary Button component when disabled.
-$sprk-btn-secondary-disabled-text-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-disabled-text-color: $sprk-black-tint-50 !default;
 /// The border color of the Secondary Button component when disabled.
-$sprk-btn-secondary-disabled-border-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-disabled-border-color: $sprk-btn-secondary-disabled-text-color !default;
+/// The border style of the Secondary Button component when disabled.
+$sprk-btn-secondary-disabled-border-style: $sprk-btn-disabled-border-style !default;
+/// The border width of the Secondary Button component when disabled.
+$sprk-btn-secondary-disabled-border-width: $sprk-btn-disabled-border-width !default;
 /// The box shadow of the Secondary Button component when disabled.
 $sprk-btn-secondary-disabled-shadow: none !default;
 /// The box shadow of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-shadow: none !default;
 /// The border value of the Tertiary Button component when disabled.
-$sprk-btn-tertiary-disabled-border: none !default;
+$sprk-btn-tertiary-disabled-border-color: $sprk-black-tint-50 !default;
+/// The border style of the Tertiary Button component when disabled.
+$sprk-btn-tertiary-disabled-border-style: $sprk-btn-disabled-border-style !default;
+/// The border width of the Tertiary Button component when disabled.
+$sprk-btn-tertiary-disabled-border-width: $sprk-btn-disabled-border-width !default;
+/// The box shadow of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-shadow: none !default;
+/// The border value of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-border-color: $sprk-black-tint-50 !default;
+/// The border style of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-border-style: $sprk-btn-disabled-border-style !default;
+/// The border width of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-border-width: $sprk-btn-disabled-border-width !default;
+/// The border of the Button component when disabled on hover.
+$sprk-btn-disabled-hover-border: $sprk-btn-disabled-border-width
+  $sprk-btn-disabled-border-style $sprk-btn-disabled-border-color !default;
+/// The border of the Secondary Button component when disabled on hover.
+$sprk-btn-secondary-disabled-hover-border: $sprk-btn-secondary-disabled-border-width
+  $sprk-btn-secondary-disabled-border-style
+  $sprk-btn-secondary-disabled-border-color !default;
+/// The border of the Tertiary Button component when disabled on hover.
+$sprk-btn-tertiary-disabled-hover-border: $sprk-btn-tertiary-disabled-border-width
+  $sprk-btn-tertiary-disabled-border-style
+  $sprk-btn-tertiary-disabled-border-color !default;
+/// The border of the Quaternary Button component when disabled on hover.
+$sprk-btn-quaternary-disabled-hover-border: $sprk-btn-quaternary-disabled-border-width
+  $sprk-btn-quaternary-disabled-border-style
+  $sprk-btn-quaternary-disabled-border-color !default;
 
 // Secondary
 /// The background color of the Secondary Button component.
-$sprk-btn-secondary-background-color: $sprk-white !default;
+$sprk-btn-secondary-background-color: transparent !default;
 /// The border color of the Secondary Button component.
-$sprk-btn-secondary-border-color: $sprk-gray-dark !default;
+$sprk-btn-secondary-border-color: $sprk-red !default;
+/// The border of the Secondary Button component.
+$sprk-btn-secondary-border: $sprk-btn-border-width $sprk-btn-border-style
+  $sprk-btn-secondary-border-color !default;
 /// The text color of the Secondary Button component.
-$sprk-btn-secondary-text-color: $sprk-black !default;
+$sprk-btn-secondary-text-color: $sprk-red !default;
+/// The text color of the Secondary Button component when visited.
+$sprk-btn-secondary-visited-text-color: $sprk-red !default;
 /// The hover text color of the Secondary Button component.
-$sprk-btn-secondary-hover-text-color: $sprk-black !default;
+$sprk-btn-secondary-hover-text-color: $sprk-red !default;
 /// The background color of the Secondary Button component on hover.
-$sprk-btn-secondary-hover-background-color: $sprk-white !default;
+$sprk-btn-secondary-hover-background-color: #f9e7ea !default;
 /// The border color of the Secondary Button component on hover.
-$sprk-btn-secondary-hover-border-color: $sprk-black !default;
+$sprk-btn-secondary-hover-border-color: $sprk-red !default;
+// The border of the Secondary Button component on hover.
+$sprk-btn-secondary-hover-border: $sprk-btn-border-width $sprk-btn-border-style
+  $sprk-btn-secondary-hover-border-color !default;
 /// The box shadow of the Secondary Button component on hover.
-$sprk-btn-secondary-hover-shadow: 0 3px 10px rgba(20, 20, 20, 0.08) !default;
+$sprk-btn-secondary-hover-shadow: $sprk-btn-shadow !default;
 /// The letter spacing of the Secondary Button component.
-$sprk-btn-secondary-letter-spacing: 0.62px !default;
+$sprk-btn-secondary-letter-spacing: $sprk-btn-letter-spacing !default;
 
 // Tertiary
 /// The background color of the Tertiary Button component.
 $sprk-btn-tertiary-background-color: transparent !default;
+/// The border color of the Tertiary Button component.
+$sprk-btn-tertiary-border-color: $sprk-purple-dark !default;
 /// The border of the Tertiary Button component.
-$sprk-btn-tertiary-border: none !default;
+$sprk-btn-tertiary-border: $sprk-btn-border-width $sprk-btn-border-style
+  $sprk-btn-tertiary-border-color !default;
 /// The text color of the Tertiary Button component.
-$sprk-btn-tertiary-text-color: $sprk-black !default;
-/// The underline width of the Tertiary Button component.
-$sprk-btn-tertiary-underline-width: 0.125em !default;
-/// The vertical distance between the
-/// underline and the text for the Tertiary Button component.
-$sprk-btn-tertiary-underline-padding-top: 0.125em !default;
-/// The color of the underline for the Tertiary Button component.
-$sprk-btn-tertiary-underline-color: $sprk-gray-dark !default;
+$sprk-btn-tertiary-text-color: $sprk-purple-dark !default;
+/// The text color of the Tertiary Button component when visited.
+$sprk-btn-tertiary-visited-text-color: $sprk-purple-dark !default;
+/// The border color of the Tertiary Button component on hover.
+$sprk-btn-tertiary-hover-border-color: $sprk-purple !default;
 /// The text color of the Tertiary Button component on hover.
-$sprk-btn-tertiary-hover-text-color: $sprk-black !default;
-/// The underline color of the Tertiary Button component on hover.
-$sprk-btn-tertiary-hover-underline-color: $sprk-black !default;
+$sprk-btn-tertiary-hover-text-color: $sprk-purple !default;
 /// The background color of the Tertiary Button component on hover.
-$sprk-btn-tertiary-hover-background-color: transparent !default;
+$sprk-btn-tertiary-hover-background-color: $sprk-purple-lightest !default;
 /// The box shadow of the Tertiary Button component on hover.
-$sprk-btn-tertiary-hover-shadow: none !default;
+$sprk-btn-tertiary-hover-shadow: $sprk-btn-shadow !default;
 /// The background color of the Tertiary Button component when disabled.
 $sprk-btn-tertiary-disabled-background-color: transparent !default;
 /// The text color of the Tertiary Button component when disabled.
-$sprk-btn-tertiary-disabled-text-color: $sprk-gray-dark !default;
+$sprk-btn-tertiary-disabled-text-color: $sprk-black-tint-50 !default;
 /// The letter spacing of the Tertiary Button component.
-$sprk-btn-tertiary-letter-spacing: normal !default;
+$sprk-btn-tertiary-letter-spacing: $sprk-btn-letter-spacing !default;
+
+// Quaternary
+/// The background color of the Quaternary Button component.
+$sprk-btn-quaternary-background-color: transparent !default;
+/// The border color of the Quaternary Button component.
+$sprk-btn-quaternary-border-color: $sprk-black-tint-50 !default;
+/// The border of the Quaternary Button component.
+$sprk-btn-quaternary-border: $sprk-btn-border-width $sprk-btn-border-style
+  $sprk-btn-quaternary-border-color !default;
+/// The text color of the Quaternary Button component.
+$sprk-btn-quaternary-text-color: $sprk-black !default;
+/// The text color of the Quaternary Button component when visited.
+$sprk-btn-quaternary-visited-text-color: $sprk-black !default;
+/// The box-shadow of the Quaternary Button component.
+$sprk-btn-quaternary-box-shadow: none !default;
+/// The border color of the Quaternary Button component on hover.
+$sprk-btn-quaternary-hover-border-color: $sprk-black !default;
+/// The text color of the Quaternary Button component on hover.
+$sprk-btn-quaternary-hover-text-color: $sprk-black !default;
+/// The background color of the Quaternary Button component on hover.
+$sprk-btn-quaternary-hover-background-color: transparent !default;
+/// The box shadow of the Quaternary Button component on hover.
+$sprk-btn-quaternary-hover-shadow: $sprk-btn-shadow !default;
+/// The background color of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-background-color: transparent !default;
+/// The text color of the Quaternary Button component when disabled.
+$sprk-btn-quaternary-disabled-text-color: $sprk-black-tint-50 !default;
+/// The letter spacing of the Quaternary Button component.
+$sprk-btn-quaternary-letter-spacing: $sprk-btn-letter-spacing !default;
 
 //
 // Links
@@ -704,29 +801,27 @@ $sprk-btn-tertiary-letter-spacing: normal !default;
 /// The transition timing for hover, active and focus styles on Links.
 $sprk-link-transition: 0.3s !default;
 /// The default color on Links.
-$sprk-link-color: $sprk-black !default;
+$sprk-link-color: $sprk-purple !default;
 /// The font weight on Links.
 $sprk-link-font-weight: $sprk-font-weight-body-one !default;
 /// The text decoration on Links.
 $sprk-link-text-decoration: none !default;
 /// The color of the underline on Links.
-$sprk-link-underline-color: $sprk-gray-dark !default;
+$sprk-link-underline-color: $sprk-purple !default;
 /// The underline width on Links.
-$sprk-link-underline-width: 0.09375rem !default;
+$sprk-link-underline-width: 0.125rem !default;
 /// The border style of the underline on Links.
 $sprk-link-border-bottom-style: solid !default;
 /// The style of the underline on Links.
 $sprk-link-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-underline-color !default;
 /// The color of Links on hover.
-$sprk-link-hover-color: $sprk-black !default;
+$sprk-link-hover-color: $sprk-purple-deep !default;
 /// The underline style of Links on hover.
 $sprk-link-hover-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-hover-color !default;
-/// The color of visited Links.
-$sprk-link-visited-color: $sprk-black-tint-75 !default;
 /// The color of the underline on visited Links.
-$sprk-link-underline-visited-color: $sprk-gray-dark !default;
+$sprk-link-underline-visited-color: $sprk-black-tint-50 !default;
 /// The style of the underline on visited Links.
 $sprk-link-visited-border-bottom: $sprk-link-underline-width
   $sprk-link-border-bottom-style $sprk-link-underline-visited-color !default;
@@ -735,15 +830,15 @@ $sprk-link-simple-color: $sprk-black !default;
 /// The underline color of Simple Links.
 $sprk-link-simple-underline-color: transparent !default;
 /// The underline width of Simple Links.
-$sprk-link-simple-underline-width: 0.0625rem !default;
+$sprk-link-simple-underline-width: 0.125rem !default;
 /// The font weight of Simple Links.
 $sprk-link-simple-font-weight: $sprk-font-weight-body-two !default;
 /// The color of Simple Links on hover.
 $sprk-link-simple-hover-color: $sprk-black !default;
 /// The underline width of Simple Links on hover.
-$sprk-link-simple-hover-underline-width: 0.0625rem !default;
+$sprk-link-simple-hover-underline-width: 0.125rem !default;
 /// The underline color of Simple Links on hover.
-$sprk-link-simple-hover-underline-color: $sprk-black !default;
+$sprk-link-simple-hover-underline-color: $sprk-red !default;
 /// The underline style of Simple Links.
 $sprk-link-simple-border-bottom: $sprk-link-simple-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-underline-color !default;
@@ -753,8 +848,37 @@ $sprk-link-simple-visited-border-bottom: $sprk-link-simple-underline-width
 /// The underline style of visited Simple Links on hover.
 $sprk-link-simple-hover-border-bottom: $sprk-link-simple-hover-underline-width
   $sprk-link-border-bottom-style $sprk-link-simple-hover-underline-color !default;
+/// The color value of Light Links.
+$sprk-link-light-color: $sprk-white !default;
+/// The underline color of Light Links.
+$sprk-link-light-underline-color: transparent !default;
+/// The underline width of Light Links.
+$sprk-link-light-underline-width: 0.125rem !default;
+/// The font weight of Light Links.
+$sprk-link-light-font-weight: $sprk-font-weight-body-two !default;
+/// The color of Light Links on hover.
+$sprk-link-light-hover-color: $sprk-white !default;
+/// The font weight of Light Links on hover.
+$sprk-link-light-hover-font-weight: $sprk-font-weight-body-one !default;
+/// The underline width of Light Links on hover.
+$sprk-link-light-hover-underline-width: 0.125rem !default;
+/// The underline color of Light Links on hover.
+$sprk-link-light-hover-underline-color: $sprk-white !default;
+/// The left position of the after element of Light Links on hover.
+$sprk-link-light-hover-after-left: 0% !default;
+/// The width of the after element of Light Links on hover.
+$sprk-link-light-hover-after-width: 100% !default;
+/// The underline style of Light Links.
+$sprk-link-light-border-bottom: $sprk-link-light-underline-width
+  $sprk-link-border-bottom-style $sprk-link-light-underline-color !default;
+/// The underline style of visited Light Links.
+$sprk-link-light-visited-border-bottom: $sprk-link-light-underline-width
+  $sprk-link-border-bottom-style $sprk-link-light-underline-color !default;
+/// The underline style of visited Light Links on hover.
+$sprk-link-light-hover-border-bottom: $sprk-link-light-hover-underline-width
+  $sprk-link-border-bottom-style $sprk-link-light-hover-underline-color !default;
 /// The color of icons in Links containing icons.
-$sprk-link-has-icon-color-icon: $sprk-green !default;
+$sprk-link-has-icon-color-icon: $sprk-purple !default;
 /// The font weight of Links containing icons.
 $sprk-link-has-icon-font-weight: $sprk-font-weight-body-one !default;
 /// The underline width of Links containing icons.
@@ -762,7 +886,9 @@ $sprk-link-has-icon-underline-width: 0 !default;
 /// The underline color of Links containing icons.
 $sprk-link-has-icon-underline-color: transparent !default;
 /// The fill color for icons contained in Links.
-$sprk-link-has-icon-fill: transparent !default;
+$sprk-link-has-icon-fill: $sprk-link-has-icon-color-icon !default;
+/// The stroke color for icons contained in Links.
+$sprk-link-has-icon-stroke: $sprk-link-has-icon-color-icon !default;
 /// The border settings for Links with icons.
 $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
@@ -770,15 +896,23 @@ $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width
 $sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width
   $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
 /// The color value for Links with icons in the hover state.
-$sprk-link-has-icon-hover-color-text: $sprk-green !default;
+$sprk-link-has-icon-hover-color-text: $sprk-purple-deep !default;
+/// The fill color for icons contained in Links on hover.
+$sprk-link-has-icon-hover-fill: $sprk-link-has-icon-hover-color-text !default;
+/// The stroke color for icons contained in Links on hover.
+$sprk-link-has-icon-hover-stroke: $sprk-link-has-icon-hover-color-text !default;
 /// The border settings for Plain Links.
 $sprk-link-plain-border: none !default;
 /// The border settings for Plain Links in the visited state
 $sprk-link-plain-visited-border: none !default;
 /// The disabled Link color.
-$sprk-link-disabled-color: $sprk-gray-dark !default;
-/// The disabled Link font weight.
-$sprk-link-disabled-font-weight: $sprk-font-weight-body-one !default;
+$sprk-link-disabled-color: $sprk-black-tint-50 !default;
+/// The disabled Link hover color.
+$sprk-link-disabled-hover-color: $sprk-black-tint-50 !default;
+/// The disabled Link border-bottom color.
+$sprk-link-disabled-border-bottom-color: $sprk-link-disabled-color !default;
+/// The disabled Link hover border-bottom color.
+$sprk-link-disabled-hover-border-bottom-color: $sprk-link-disabled-color !default;
 /// The underline width for the disabled Link.
 $sprk-link-disabled-underline-width: 0 !default;
 /// The underline settings for the disabled Link.
@@ -875,7 +1009,7 @@ $sprk-input-huge-label-active-top: $sprk-text-input-huge-label-active-top !defau
 $sprk-text-input-huge-active-padding-top: $sprk-input-huge-height / 4 !default; // Todo deprecate
 /// The padding top value of active Huge Inputs.
 $sprk-input-huge-active-padding-top: $sprk-text-input-huge-active-padding-top !default;
-$sprk-text-input-huge-focus-label-color: $sprk-green !default; // Todo deprecate
+$sprk-text-input-huge-focus-label-color: $sprk-purple !default; // Todo deprecate
 /// The label color value of Huge Inputs on focus.
 $sprk-input-huge-focus-label-color: $sprk-text-input-huge-focus-label-color !default;
 $sprk-text-input-huge-error-focus-label-color: $sprk-black !default; // Todo deprecate
@@ -891,10 +1025,14 @@ $sprk-input-huge-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08) !default;
 $sprk-input-huge-icon-offset-y: $sprk-space-misc-a !default;
 /// The top value for icons in Huge Inputs.
 $sprk-input-huge-icon-offset-top: 50% !default;
+
+/* stylelint-disable indentation */
 /// The margin-top value for icons in Huge Select Inputs.
 $sprk-select-input-huge-icon-margin-top: -((
         $sprk-input-huge-height - $sprk-icon-m
       ) / 2 + $sprk-icon-m) !default;
+
+/* stylelint-enable indentation */
 /// The padding value for Huge Inputs with icons.
 $sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
 
@@ -925,13 +1063,13 @@ $sprk-text-input-box-shadow: none !default;
 /// The padding for Inputs.
 $sprk-text-input-padding: 0 $sprk-space-m !default;
 /// The border color on Inputs when focused.
-$sprk-text-input-focus-border-color: $sprk-green !default;
+$sprk-text-input-focus-border-color: $sprk-purple !default;
 /// The border color on Inputs when there is an error.
-$sprk-text-input-error-border-color: $sprk-yellow !default;
+$sprk-text-input-error-border-color: $sprk-pink !default;
 /// The border color on disabled Inputs.
 $sprk-text-input-disabled-border-color: $sprk-black-tint-50 !default;
 /// The background color on disabled Inputs.
-$sprk-text-input-disabled-background-color: $sprk-gray-dark !default;
+$sprk-text-input-disabled-background-color: $sprk-black-tint-40 !default;
 /// The box shadow on disabled Inputs.
 $sprk-text-input-disabled-box-shadow: none !default;
 /// The color setting on disabled Inputs.
@@ -979,8 +1117,6 @@ $sprk-select-padding: 12px 45px 12px 13px !default;
 $sprk-select-arrow-offset-y: -31px !default;
 /// The value for margin-right on the icon in Selects.
 $sprk-select-arrow-offset-x: 19px !default;
-/// The stroke width of the icon in Selects.
-$sprk-select-arrow-stroke-width: 6px !default;
 /// The border color of disabled Selects.
 $sprk-select-disabled-border-color: $sprk-text-input-disabled-border-color !default;
 /// The background color of disabled Selects.
@@ -1039,7 +1175,7 @@ $sprk-checkbox-checkmark-border-bottom: 2px solid $sprk-white !default;
 // The rotation setting to create the checkmark.
 $sprk-checkbox-checkmark-transform: rotate(-45deg) !default;
 // The border of the custom checkbox input when focused.
-$sprk-checkbox-custom-input-border-focus: 2px solid $sprk-green !default;
+$sprk-checkbox-custom-input-border-focus: 2px solid $sprk-purple !default;
 // The background color of the custom checkbox input when focused.
 $sprk-checkbox-custom-input-background-color-focus: $sprk-gray !default;
 // The border of the custom checkbox input when it is checked and focused.
@@ -1047,11 +1183,11 @@ $sprk-checkbox-custom-input-border-focus-checked: 2px solid $sprk-black !default
 // The background color of the custom checkbox input when hovered.
 $sprk-checkbox-custom-input-background-color-hover: $sprk-gray !default;
 // The border color of the custom checkbox input when hovered.
-$sprk-checkbox-custom-input-border-color-hover: $sprk-black-tint-75 !default;
+$sprk-checkbox-custom-input-border-color-hover: $sprk-black-tint-70 !default;
 // The background color of the custom checkbox input when checked.
-$sprk-checkbox-custom-input-background-color-checked: $sprk-green !default;
+$sprk-checkbox-custom-input-background-color-checked: $sprk-purple !default;
 // The border color of the custom checkbox input when checked.
-$sprk-checkbox-custom-input-border-color-checked: $sprk-green !default;
+$sprk-checkbox-custom-input-border-color-checked: $sprk-purple !default;
 // The border color of the custom checkbox input when disabled.
 $sprk-checkbox-custom-input-border-color-disabled: $sprk-black-tint-50 !default;
 // The cursor for the custom checkbox input when disabled.
@@ -1087,11 +1223,11 @@ $sprk-checkbox-huge-container-disabled-border-color: $sprk-text-input-disabled-b
 /// The background of the huge checkbox input when disabled.
 $sprk-checkbox-huge-container-disabled-background: $sprk-text-input-disabled-background-color !default;
 /// The border color of the huge checkbox input when focused.
-$sprk-checkbox-huge-container-focus-border-color: $sprk-green !default;
+$sprk-checkbox-huge-container-focus-border-color: $sprk-purple !default;
 /// The border color of the huge checkbox input when focused and hovered.
 $sprk-checkbox-huge-container-focus-hover-border-color: $sprk-black !default;
 /// The border color of the huge checkbox input when checked.
-$sprk-checkbox-huge-container-checked-border-color: $sprk-green !default;
+$sprk-checkbox-huge-container-checked-border-color: $sprk-purple !default;
 /// The border color of the huge checkbox input when checked and hovered.
 $sprk-checkbox-huge-container-checked-hover-border-color: $sprk-black !default;
 /// The border color of the huge checkbox input when checked and focused.
@@ -1109,7 +1245,7 @@ $sprk-checkbox-huge-custom-input-hover-border-color: $sprk-black !default;
 /// The border color of the custom checkbox element of the huge checkbox input when disabled.
 $sprk-checkbox-huge-custom-input-disabled-border-color: $sprk-black-tint-50 !default;
 /// The border color of the custom checkbox element of the huge checkbox input when checked.
-$sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color: $sprk-green !default;
+$sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color: $sprk-purple !default;
 
 /// The height of the checkmark inside of the huge checkbox input.
 $sprk-checkbox-huge-checkmark-icon-height: 0.5rem !default;
@@ -1125,7 +1261,7 @@ $sprk-checkbox-huge-checkmark-icon-top: 22px !default;
 ///
 
 /// Color setting for Inputs with errors.
-$sprk-text-input-error-color: $sprk-yellow !default;
+$sprk-text-input-error-color: $sprk-pink !default;
 /// Value for color on Inputs with errors.
 $sprk-input-error-text-color: $sprk-black !default;
 /// The font family used for Input error text.
@@ -1148,7 +1284,7 @@ $sprk-error-icon-size: 1.25rem !default;
 ///
 
 /// The color of the helper text for Inputs.
-$sprk-helper-color: $sprk-black-tint-75 !default;
+$sprk-helper-color: $sprk-black-tint-70 !default;
 /// The font size of the helper text for Inputs.
 $sprk-helper-font-size: 0.8125rem !default;
 /// The font family of the helper text for Inputs.
@@ -1209,7 +1345,7 @@ $sprk-date-picker-font-size: 1rem !default;
 /// The font weight of the Date Picker popup.
 $sprk-date-picker-font-weight: 300 !default;
 /// Color used internally by Date Picker to highlight elements
-$sprk-date-picker-day-interact-color: $sprk-green !default;
+$sprk-date-picker-day-interact-color: $sprk-purple !default;
 /// Font weight used by the currently selected day in the Date Picker popup.
 $sprk-date-picker-selected-day-font-weight: 500 !default;
 /// The value for background in the Date Picker.
@@ -1322,18 +1458,18 @@ $sprk-radio-input-opacity: 0 !default;
 /// The transition for the radio input.
 $sprk-radio-input-transition: all 0.2s ease-in-out !default;
 /// The border of the outer circle in the radio input on hover.
-$sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-75 !default;
+$sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-70 !default;
 /// The border of the outer circle in the radio input on focus.
-$sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-green !default;
+$sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-purple !default;
 /// The border of the outer circle in the disabled radio input on focus.
 $sprk-radio-input-outer-circle-focus-border-disabled: 2px solid
   $sprk-black-tint-50 !default;
 /// The border radius of the circle in the radio input.
 $sprk-radio-input-border-radius: 50% !default;
 /// The background color of the inner circle in the radio input.
-$sprk-radio-input-inner-circle-background-color: $sprk-green !default;
+$sprk-radio-input-inner-circle-background-color: $sprk-purple !default;
 /// The border of the outer circle in the radio input when checked.
-$sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-green !default;
+$sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-purple !default;
 /// The border of the outer circle in the radio input.
 $sprk-radio-input-outer-circle-border: 2px solid $sprk-black-tint-50 !default;
 /// The border of the outer circle in the disabled radio input on hover.
@@ -1389,15 +1525,15 @@ $sprk-radio-input-huge-outer-circle-top: 1rem !default;
 /// The left value of the outer circle of the huge radio input.
 $sprk-radio-input-huge-outer-circle-left: 1rem !default;
 /// The border color of the huge radio input label when it has focus.
-$sprk-radio-input-huge-focused-label-border: $sprk-green !default;
+$sprk-radio-input-huge-focused-label-border: $sprk-purple !default;
 /// The background color of the outer circle of the huge radio input when it has focus.
 $sprk-radio-input-huge-focused-outer-circle-border-background-color: $sprk-gray !default;
 /// The border color of the huge radio input label when it is selected.
-$sprk-radio-input-huge-checked-label-border: $sprk-green !default;
+$sprk-radio-input-huge-checked-label-border: $sprk-purple !default;
 /// The border color of the huge radio input label when it is selected and hovered.
 $sprk-radio-input-huge-checked-hover-label-border-color: $sprk-black !default;
 /// The border color of the outer circle of the huge when it is selected and hovered.
-$sprk-radio-input-huge-checked-hover-outer-circle-border-color: $sprk-green !default;
+$sprk-radio-input-huge-checked-hover-outer-circle-border-color: $sprk-purple !default;
 /// The height of the inner circle of the huge radio input.
 $sprk-radio-input-huge-inner-circle-height: 1rem !default;
 /// The width of the inner circle of the huge radio input.
@@ -1595,7 +1731,10 @@ $sprk-accordion-summary-text-align: left !default;
 $sprk-accordion-summary-border: none !default;
 /// The color of the icon in the summary when the
 /// Accordion item is open or hovered.
-$sprk-accordion-summary-active-color: $sprk-green !default;
+$sprk-accordion-summary-active-color: $sprk-purple !default;
+/// The fill color of the icon when the
+/// Accordion item is hovered.
+$sprk-accordion-summary-hover-icon-fill: $sprk-accordion-summary-active-color !default;
 /// The padding of the Accordion summary.
 $sprk-accordion-summary-padding: $sprk-space-misc-a 0 !default;
 /// The padding of the Accordion content.
@@ -1627,7 +1766,9 @@ $sprk-toggle-trigger-transition: $sprk-link-transition !default;
 /// The hover border bottom style for Toggle Trigger.
 $sprk-toggle-trigger-hover-border-bottom: $sprk-link-has-icon-hover-border-bottom !default;
 /// The hover text color for Toggle Trigger.
-$sprk-toggle-trigger-hover-color: $sprk-link-has-icon-hover-color-text !default;
+$sprk-toggle-trigger-hover-color: $sprk-purple !default;
+/// The hover fill color for Toggle icon.
+$sprk-toggle-icon-hover-fill: $sprk-toggle-trigger-hover-color !default;
 /// The background color for Toggle Trigger.
 $sprk-toggle-trigger-background-color: transparent !default;
 /// The padding top for Toggle Trigger.
@@ -1653,6 +1794,10 @@ $sprk-toggle-transition-timing: 0.3s ease !default;
 // Tooltip
 ///
 
+/// The space that the Tooltip's caret is offset from the edge.
+$sprk-tooltip-caret-offset: 1rem;
+/// The surrounding hover area around the trigger when the Tooltip is visible.
+$sprk-tooltip-trigger-hover-offset: 1rem;
 /// The border for the tooltip trigger.
 $sprk-tooltip-trigger-border: none !default;
 /// The background color for the tooltip trigger.
@@ -1678,15 +1823,22 @@ $sprk-tooltip-font-size: $sprk-font-size-body-four !default;
 /// The background color for the tooltip caret.
 $sprk-tooltip-caret-background-color: $sprk-black !default;
 /// The background color for the tooltip icon while toggled.
-$sprk-tooltip-toggled-icon-background-color: $sprk-green !default;
+$sprk-tooltip-toggled-icon-background-color: $sprk-purple !default;
 /// The z-index of the tooltip.
 $sprk-tooltip-z-index: $sprk-layer-height-xs !default;
-/// The max-width of the tooltip.
+/// The max-width of the tooltip. This is used as a fallback if
+/// the preferred width is invalid, e.g. for IE 11
 $sprk-tooltip-max-width: 328px !default;
+/// The preferred width of the tooltip.
+$sprk-tooltip-preferred-width: max-content !default;
 /// The min-width of the tooltip.
 $sprk-tooltip-min-width: 60px !default;
 /// The width of the tooltip caret.
-$sprk-tooltip-caret-width: 17px !default;
+$sprk-tooltip-caret-width: 16px !default;
+/// The transition applied to the tooltip.
+$sprk-tooltip-transition: all 200ms ease-out !default;
+/// The distance the tooltip should move during its animation.
+$sprk-tooltip-animation-offset: 0.5rem !default;
 
 //
 // Dropdown
@@ -1696,9 +1848,9 @@ $sprk-tooltip-caret-width: 17px !default;
 /// are active or hovered.
 $sprk-dropdown-active-background-color: $sprk-gray !default;
 /// The left border of the Dropdown item that is active.
-$sprk-dropdown-active-border: 2.5px solid $sprk-green !default;
+$sprk-dropdown-active-border: 2.5px solid $sprk-purple !default;
 /// The box-shadow of the Dropdown item that is active.
-$sprk-dropdown-active-box-shadow: -1px 0 0 0 $sprk-green !default;
+$sprk-dropdown-active-box-shadow: -1px 0 0 0 $sprk-purple !default;
 /// The border of the Dropdown.
 $sprk-dropdown-border: 1px solid $sprk-gray !default;
 /// The font size of the Dropdown.
@@ -1717,11 +1869,19 @@ $sprk-dropdown-padding: $sprk-space-misc-a !default;
 /// The box shadow of the Dropdown.
 $sprk-dropdown-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.1) !default;
 /// The color of the Dropdown title.
-$sprk-dropdown-title-color: $sprk-black-tint-25 !default;
+$sprk-dropdown-title-color: $sprk-black-tint-30 !default;
 /// The font size of the Dropdown title.
 $sprk-dropdown-title-font-size: $sprk-dropdown-font-size !default;
 /// The font weight of the Dropdown title.
 $sprk-dropdown-title-font-weight: 300 !default;
+/// The color of the Dropdown links.
+$sprk-dropdown-link-color: $sprk-black !default;
+/// The color of the Dropdown trigger.
+$sprk-dropdown-trigger-color: $sprk-black !default;
+/// The color of the Dropdown trigger on hover, active, focus.
+$sprk-dropdown-trigger-color-active: $sprk-black !default;
+/// The color of the Dropdown trigger for the visited state.
+$sprk-dropdown-trigger-color-visited: $sprk-black !default;
 
 //
 // Modals
@@ -1753,9 +1913,9 @@ $sprk-modal-border-radius: 8px !default;
 ///
 
 /// The width of the menu icon on narrow viewports in the Masthead.
-$sprk-masthead-menu-icon-width: $sprk-icon-l !default;
+$sprk-masthead-menu-icon-width: $sprk-icon-xl !default;
 /// The height of the menu icon on narrow viewports in the Masthead.
-$sprk-masthead-menu-icon-height: $sprk-icon-l !default;
+$sprk-masthead-menu-icon-height: $sprk-icon-xl !default;
 /// The background color of the Masthead.
 $sprk-masthead-bg-color: $sprk-white !default;
 /// The padding of the Masthead content, menu, and branding sections.
@@ -1787,10 +1947,14 @@ $sprk-masthead-content-item-padding-right-wide: $sprk-space-m !default;
 /// The padding left of the content
 /// items in the content section in the Masthead on wide viewports.
 $sprk-masthead-content-item-padding-left-wide: $sprk-space-m !default;
+/// The color of Masthead links.
+$sprk-masthead-link-color: $sprk-black !default;
+/// The color of Masthead Icon Links on hover.
+$sprk-masthead-link-icon-hover-color: $sprk-purple !default;
+/// The color of Simple Masthead Icon Links on hover.
+$sprk-masthead-simple-link-icon-hover-color: $sprk-black !default;
 /// The visited state color of Masthead links.
 $sprk-masthead-link-visited-color: $sprk-black !default;
-/// The hover state color of Masthead links.
-$sprk-masthead-link-hover-color: $sprk-green !default;
 /// The font weight for Masthead links.
 $sprk-masthead-link-font-weight: 500 !default;
 /// The size of the bottom border on the Masthead.
@@ -1800,7 +1964,7 @@ $sprk-masthead-border-bottom: $sprk-masthead-border-bottom-size solid $sprk-gray
 /// The bottom border on the Masthead on wide viewports.
 $sprk-masthead-border-bottom-wide: 0 !default;
 /// The right border on the site links in the Masthead.
-$sprk-masthead-site-links-border-right: 2px solid $sprk-black-tint-25 !default;
+$sprk-masthead-site-links-border-right: 2px solid $sprk-black-tint-30 !default;
 /// The point at which the Masthead navigation switches
 /// from narrow viewport style to large viewport
 /// style.
@@ -1818,7 +1982,7 @@ $sprk-masthead-shadow-wide: none !default;
 /// The Masthead shadow that gets applied when the page is scrolled.
 $sprk-masthead-shadow-scroll: 0 0 40px rgba(0, 0, 0, 0.1) !default;
 /// The border of the selector in the Masthead with Extended Navigation.
-$sprk-masthead-selector-border: 2px solid $sprk-black-tint-25 !default;
+$sprk-masthead-selector-border: 2px solid $sprk-black-tint-30 !default;
 $sprk-masthead-selector-font-weight: 300 !default;
 /// The border radius of the selector in the Masthead with Extended Navigation.
 $sprk-masthead-selector-border-radius: 5px !default;
@@ -1865,6 +2029,25 @@ $sprk-masthead-transition: all 0.3s ease-in !default;
 /// when the Masthead scrolls out of view on narrow screens.
 $sprk-masthead-translateY: translateY(-100%) !default;
 
+// Menu
+/// The background color of the menu icon.
+$sprk-menu-icon-bg-color: $sprk-white !default;
+/// The stroke width of the menu icon.
+$sprk-menu-icon-stroke-width: 2px !default;
+/// The stroke of the menu icon.
+$sprk-menu-icon-stroke: $sprk-black !default;
+/// The transition on the menu icon that turns the
+/// menu icon into an "X".
+$sprk-menu-icon-transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out !default;
+/// The transform origin of the "X" state of the menu for the
+/// first menu line. Only
+/// needs to be changed if using a custom width and height.
+$sprk-menu-icon-line-one-transform-origin: 1rem 1.5rem !default;
+/// The transform origin of the "X" state of the menu for the
+/// third menu line. Only
+/// needs to be changed if using a custom width and height.
+$sprk-menu-icon-line-three-transform-origin: 1rem 2.5rem !default;
+
 // Big Nav
 /// The maximum width of the
 /// big navigation items in the
@@ -1879,19 +2062,30 @@ $sprk-big-nav-link-font-weight: 400 !default;
 /// The padding of the big navigation
 /// link in the Masthead Extended.
 $sprk-big-nav-link-padding: 0 $sprk-space-s !default;
-/// The color of the big navigation link in the Masthead Extended.
-$sprk-big-nav-link-color: $sprk-black !default;
-/// The text and underline color of
+/// The underline color of
 /// the active big navigation item in the Masthead Extended.
-$sprk-big-nav-active-color: $sprk-big-nav-link-color !default;
+$sprk-big-nav-active-color: $sprk-red !default;
 /// The line height
 /// of the big navigation items
 /// in the Masthead Extended.
 $sprk-big-nav-item-line-height: 53px !default;
+/// The active border-bottom
+/// of the big navigation items
+/// in the Masthead Extended.
+$sprk-big-nav-item-active-border-bottom: 0.125rem solid $sprk-red !default;
+/// The border-bottom
+/// of the open big navigation items
+/// in the Masthead Extended.
+$sprk-big-nav-item-open-border-bottom: $sprk-big-nav-item-active-border-bottom !default;
+/// The border-bottom
+/// of the links in the big nav item
+/// when the big nav item is hovered
+/// in the Masthead Extended.
+$sprk-big-nav-link-hover-border-bottom: transparent !default;
 // Masthead Accordion
 /// The left border of the active item
 /// in the navigation links when masthead is on narrow viewports.
-$sprk-masthead-accordion-active-left-border: 3px solid $sprk-black !default;
+$sprk-masthead-accordion-active-left-border: 3px solid $sprk-red !default;
 /// The font weight of the active item
 /// in the navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-active-heading-font-weight: 400 !default;
@@ -1921,7 +2115,7 @@ $sprk-masthead-accordion-active-font-color: $sprk-black !default;
 $sprk-masthead-accordion-font-color: $sprk-black !default;
 /// The color of the line on open items
 /// in the navigation links when masthead is on narrow viewports.
-$sprk-masthead-accordion-item-open-line-background-color: $sprk-black-tint-25 !default;
+$sprk-masthead-accordion-item-open-line-background-color: $sprk-black-tint-30 !default;
 /// The height of the line on open
 /// navigation links when masthead is on narrow viewports.
 $sprk-masthead-accordion-item-open-line-height: 2px !default;
@@ -1954,6 +2148,10 @@ $sprk-spinner-thickness: 0.18rem !default;
 $sprk-spinner-color: $sprk-white !default;
 /// The color of the dark Spinner.
 $sprk-spinner-color-dark: $sprk-black !default;
+/// The color of the primary Spinner.
+$sprk-spinner-color-primary: $sprk-red !default;
+/// The color of the secondary Spinner.
+$sprk-spinner-color-secondary: $sprk-purple-dark !default;
 
 //
 // Tabbed Navigation
@@ -1966,17 +2164,20 @@ $sprk-tab-navigation-breakpoint: 46rem !default;
 $sprk-tab-navigation-btn-color: $sprk-black !default;
 /// The tab button background color in Tabbed Navigation.
 $sprk-tab-navigation-btn-bg-color: $sprk-gray !default;
-/// The border on the top of the button tabs in Tabbed Navigation.
-$sprk-tab-navigation-btn-border-top: 3px solid $sprk-gray !default;
-/// The border on the top of the
+/// The border on the bottom of the button tabs in Tabbed Navigation.
+$sprk-tab-navigation-btn-border-bottom: 3px solid $sprk-gray !default;
+/// The border on the bottom of the
 /// button tabs on hover in Tabbed Navigation.
-$sprk-tab-navigation-btn-hover-border-top: 3px solid $sprk-red !default;
+$sprk-tab-navigation-btn-hover-border-bottom: 3px solid $sprk-purple !default;
 /// The button tab text color of the
 /// currently active tab in Tabbed Navigation.
 $sprk-tab-navigation-btn-active-color: $sprk-red !default;
-/// The button tab top border of the
+/// The button tab text color of the
+/// button tabs on hover in Tabbed Navigation.
+$sprk-tab-navigation-btn-hover-color: $sprk-purple !default;
+/// The button tab bottom border of the
 /// currently active tab in Tabbed Navigation.
-$sprk-tab-navigation-btn-active-border-top: 3px solid $sprk-red !default;
+$sprk-tab-navigation-btn-active-border-bottom: 3px solid $sprk-red !default;
 /// The button tab background color
 /// of the currently active tab in Tabbed Navigation.
 $sprk-tab-navigation-btn-active-bg-color: $sprk-white !default;
@@ -1997,10 +2198,10 @@ $sprk-stepper-icon-border-width: 2px !default;
 /// The color of the border around the Stepper icon.
 $sprk-stepper-icon-border-color: $sprk-black-tint-50 !default;
 /// The color of the step icon when the step is selected in the Stepper.
-$sprk-stepper-icon-border-color-selected: $sprk-green !default;
+$sprk-stepper-icon-border-color-selected: $sprk-purple-dark !default;
 /// The color of the step icon in front of a dark background
 /// when the step is selected in the Stepper.
-$sprk-stepper-icon-border-color-selected-dark-bg: $sprk-green-tint-75 !default;
+$sprk-stepper-icon-border-color-selected-dark-bg: $sprk-purple-lightest !default;
 /// The color of the icon border when the
 /// Stepper is on a dark background
 /// (sprk-c-Stepper--has-dark-bg).
@@ -2018,11 +2219,11 @@ $sprk-stepper-icon-color-hover: $sprk-black-tint-50 !default;
 $sprk-stepper-icon-color-selected: $sprk-white !default;
 /// The color of the step icon when the
 /// Stepper has a dark background (sprk-c-Stepper--has-dark-bg).
-$sprk-stepper-dark-icon-color: $sprk-blue !default;
+$sprk-stepper-dark-icon-color: $sprk-purple-dark !default;
 /// The color of the Stepper step icon when the step
 /// is selected and the Stepper has a
 /// dark background (sprk-c-Stepper--has-dark-bg).
-$sprk-stepper-dark-icon-color-selected: $sprk-white !default;
+$sprk-stepper-dark-icon-color-selected: $sprk-purple-dark !default;
 /// The color of the step icon on hover
 /// when the Stepper has a dark background
 /// (sprk-c-Stepper--has-dark-bg).
@@ -2097,7 +2298,7 @@ $sprk-stepper-bar-left-inset: $sprk-space-l;
 $sprk-stepper-step-content-margin-left: ($sprk-stepper-bar-left-inset * 2) +
   $sprk-stepper-bar-width;
 $sprk-stepper-icon-left: -(($sprk-stepper-bar-left-inset +
-        $sprk-stepper-icon-radius));
+        $sprk-stepper-icon-radius)); /* stylelint-disable-line indentation */
 $sprk-stepper-slide-timing: 0.3s;
 $sprk-stepper-slider-text-fade-in-timing: 0.6s;
 $sprk-stepper-slider-text-fade-in-delay: 0.2s;
@@ -2109,6 +2310,9 @@ $sprk-stepper-slider-text-fade-in-delay: 0.2s;
 /// The border value for the Carousel component.
 $sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid
   $sprk-stepper-dark-icon-border-color !default;
+/// The border value for the Carousel component.
+$sprk-carousel-dot-border-dark-bg: $sprk-stepper-icon-border-width solid
+  $sprk-purple-deep !default;
 /// The height of the dots in the Carousel component.
 $sprk-carousel-dot-height: 10px !default;
 /// The width of the dots in the Carousel component.
@@ -2123,6 +2327,10 @@ $sprk-carousel-dot-spacing: $sprk-space-m !default;
 $sprk-carousel-wide-dot-spacing: $sprk-carousel-dot-spacing !default;
 /// The box shadow of the active dot in the Carousel component.
 $sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected-dark-bg !default;
+/// The background color of the active dot in the Carousel component.
+$sprk-carousel-dot-selected-bg-color: $sprk-white !default;
+/// The background color of the active dot in the Carousel component on a dark background.
+$sprk-carousel-dot-selected-bg-color-dark-bg: $sprk-purple-deep !default;
 /// The color of the arrows in the Carousel component.
 $sprk-carousel-arrow-color: $sprk-white !default;
 /// The spacing for the arrows in the Carousel component.
@@ -2161,7 +2369,7 @@ $sprk-card-border-radius: 8px !default;
 /// The padding of the content inside the Card.
 $sprk-card-content-padding: $sprk-space-misc-a !default;
 /// The background color of the header area for the Highlighted Header Card.
-$sprk-card-header-bg-color: $sprk-green !default;
+$sprk-card-header-bg-color: $sprk-purple !default;
 /// The text color for the Highlighted Header Card.
 $sprk-card-header-text-color: $sprk-white !default;
 

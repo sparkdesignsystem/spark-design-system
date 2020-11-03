@@ -21,6 +21,7 @@ import { uniqueId } from 'lodash';
       #containerElement
     >
       <button
+        type="button"
         [ngClass]="{
           'sprk-c-Tooltip__trigger': true,
           'sprk-c-Tooltip--toggled': isToggled
@@ -28,6 +29,7 @@ import { uniqueId } from 'lodash';
         [attr.aria-expanded]="isToggled ? 'true' : 'false'"
         [attr.data-analytics]="analyticsString"
         [attr.aria-labelledby]="id"
+        type="button"
         #triggerElement
       >
         <sprk-icon

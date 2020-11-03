@@ -109,6 +109,14 @@
 }
 
 .sprk-c-Carousel__dot--active {
-  background-color: $sprk-white;
+  background-color: $sprk-carousel-dot-selected-bg-color;
   box-shadow: $sprk-carousel-dot-selected;
+}
+
+// Styles for the Carousel on a dark background.
+.sprk-c-Carousel--has-dark-bg {
+  .sprk-c-Carousel__dot--active {
+    background-color: $sprk-carousel-dot-selected-bg-color-dark-bg;
+    border: $sprk-carousel-dot-border-dark-bg;
+  }
 }

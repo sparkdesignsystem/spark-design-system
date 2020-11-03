@@ -35,7 +35,8 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   /**
    *  Determines the corresponding button style.
    */
-  @Input() variant: 'primary' | 'secondary' | 'tertiary' = 'primary';
+  @Input() variant: 'primary' | 'secondary' | 'tertiary' | 'quaternary' =
+    'primary';
 
   // Always set the button class on the element
   @HostBinding('class.sprk-c-Button') true;
@@ -63,14 +64,13 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   analyticsString: string;
 
   ngOnInit(): void {
-    if (this.variant === 'secondary') {
-      this.renderer.addClass(
-        this.ref.nativeElement,
-        'sprk-c-Button--secondary',
-      );
-    }
-    if (this.variant === 'tertiary') {
-      this.renderer.addClass(this.ref.nativeElement, 'sprk-c-Button--tertiary');
+    const variants = {
+      secondary: 'sprk-c-Button--secondary',
+      tertiary: 'sprk-c-Button--tertiary',
+      quaternary: 'sprk-c-Button--quaternary',
+    };
+    if (variants.hasOwnProperty(this.variant)) {
+      this.renderer.addClass(this.ref.nativeElement, variants[this.variant]);
     }
   }
 
@@ -103,6 +103,18 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     if (
       el.classList.contains('sprk-c-Button--secondary') ||
       this.variant === 'secondary'
+    ) {
+      spinnerClass += ' sprk-c-Spinner--primary';
+    }
+    if (
+      el.classList.contains('sprk-c-Button--tertiary') ||
+      this.variant === 'tertiary'
+    ) {
+      spinnerClass += ' sprk-c-Spinner--secondary';
+    }
+    if (
+      el.classList.contains('sprk-c-Button--quaternary') ||
+      this.variant === 'quaternary'
     ) {
       spinnerClass += ' sprk-c-Spinner--dark';
     }

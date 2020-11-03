@@ -21,7 +21,7 @@ const teaserDesigners = {
   cta: {
     text: 'Go To Designer Basics',
     ctaVariant: 'button',
-    buttonVariant: 'secondary',
+    buttonVariant: 'tertiary',
     href: '/principles/design-principles',
   },
   media: {
@@ -46,7 +46,7 @@ const teaserDevelopers = {
   cta: {
     text: 'Go To Developer Basics',
     ctaVariant: 'button',
-    buttonVariant: 'secondary',
+    buttonVariant: 'tertiary',
     href: '/installing-spark',
   },
   media: {
@@ -72,7 +72,7 @@ const teaserComponents = {
   cta: {
     text: 'Go To Components',
     ctaVariant: 'button',
-    buttonVariant: 'secondary',
+    buttonVariant: 'tertiary',
     href: '/using-spark/components/button',
   },
   media: {
@@ -96,7 +96,7 @@ const teaserFoundations = {
   cta: {
     text: 'Go To Foundations',
     ctaVariant: 'button',
-    buttonVariant: 'secondary',
+    buttonVariant: 'tertiary',
     href: '/using-spark/foundations/color',
   },
   media: {
@@ -119,7 +119,7 @@ const teaserUtils = {
   cta: {
     text: 'Go To Utilities',
     ctaVariant: 'button',
-    buttonVariant: 'secondary',
+    buttonVariant: 'tertiary',
     href: '/using-spark/foundations/css-utilities',
   },
   media: {
@@ -141,7 +141,7 @@ const teaserNews = {
   cta: {
     text: 'Go To News',
     ctaVariant: 'button',
-    buttonVariant: 'secondary',
+    buttonVariant: 'tertiary',
     href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
   },
   media: {
@@ -222,9 +222,7 @@ const IndexPage = () => (
       <SprkStackItem>
         <SprkStack itemSpacing={spacingBtwHeadingAndContent}>
           <SprkStackItem>
-            <h2 className="sprk-b-TypeDisplayTwo sprk-u-Color--red">
-              Want To Contribute?
-            </h2>
+            <h2 className="sprk-b-TypeDisplayTwo">Want To Contribute?</h2>
           </SprkStackItem>
 
           <SprkStackItem>

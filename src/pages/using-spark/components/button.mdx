@@ -6,7 +6,7 @@ import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Button
 
-A Button represents an action or choice for the user.
+An interactive element that represents an action or choice.
 
 <ComponentPreview
   componentName="button--primary"
@@ -17,26 +17,29 @@ A Button represents an action or choice for the user.
 
 ### Usage
 
-Buttons are the main actionable items on a page.
-Buttons typically trigger a new UI element to appear
-on the page and are essential to submitting forms,
-beginning a new task, or navigating to the next
-step in a process.
+Use Buttons to represent the main actions on a page.
+
+Examples of Button usage:
+- To trigger a new UI element to appear on the page.
+- To submit a form.
+- To begin a new task.
+- To navigate to the next step in a process.
 
 ### Guidelines
 
-- Effective Button text uses precise, task-specific
-action verbs like: “Add”, “Remove”, “Read Details”,
-and “Submit”. Avoid ambiguous words like “Yes”,
-“No”, “OK”, and “Click Here”.
-- Effective Button text is less than 20 characters.
-- All button text should be in title case
-(capitalize the first letter of each word).
-- Button text should never wrap to a second line.
+- Button Text
+  - Use precise, task-specific action verbs like: “Add”, “Remove”, “Read Details”, and “Submit”.
+  - Avoid ambiguous words like “Yes”, “No”, “OK”, and “Click Here”.
+  - Use title case (capitalize the first letter each word)
+  - Use less than 20 characters.
+  - Never wrap to a second line.
 - Button width should not exceed 280px.
-- For navigational actions that appear within
-a line of text, use [Link](/using-spark/components/link)
-instead of Button.
+- Do not use buttons in paragraphs or within a lines of text. Use [Link](/using-spark/components/link) instead.
+- Use Button variants to create action hierarchy within a page. Variant names imply their placement within that hierarchy.
+  - [Primary Button](#primary-button)
+  - [Secondary Button](#secondary-button)
+  - [Tertiary Button](#tertiary-button)
+  - [Quaternary Button](#quaternary-button)
 
 <SprkDivider
  element="span"
@@ -47,9 +50,7 @@ instead of Button.
 
 ### Primary Button
 
-The most important action on the page should
-use Primary Button. Effective action flows
-contain one Primary Button per page.
+Reserve for the most important action on the page. Use no more than two per page.
 
 <ComponentPreview
   componentName="button--primary"
@@ -60,10 +61,7 @@ contain one Primary Button per page.
 
 ### Secondary Button
 
-A Secondary Button typically represents the
-highest priority alternative to the Primary Button.
-There can be more than one on a page and can depict
-similar or different actions.
+Represents the second-highest priority, following the Primary Button. There can be more than one on a page.
 
 <ComponentPreview
   componentName="button--secondary"
@@ -74,15 +72,21 @@ similar or different actions.
 
 ### Tertiary Button
 
-A Tertiary Button represents the lowest prioritized
-action on a page. They are typically used in a
-[Modal](/using-spark/components/modal)
-to cancel a choice. They look like a text
-[Link](/using-spark/components/link)
-but have the same padding and focus rules as other Buttons.
+Represents the third-highest priority on the page. Pair with [Primary](#primary-button) and [Secondary](#secondary-button) Buttons.
 
 <ComponentPreview
   componentName="button--tertiary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Quaternary Button
+
+Represents the least important action on a page. Also used for the Sign In buttons at the top of navigation.
+
+<ComponentPreview
+  componentName="button--quaternary"
   hasReact
   hasAngular
   hasHTML
@@ -92,14 +96,11 @@ but have the same padding and focus rules as other Buttons.
 
 ### Disabled
 
-A Disabled Button represents an action that is not
-currently available for the user. They imply that
-the Button would be available, given a certain set
-of circumstances. Since a user cannot interact with
-this button, consider if it’s necessary to show the
-disabled button at all. Otherwise, make it clear
-in the interface why a button is Disabled.
+Represents an action that’s not currently available to the user. It implies that the Button would be available given a certain set of circumstances.
 
+Since a user can’t interact with this Button, consider if it’s necessary to show it at all.
+
+#### Disabled - Primary
 <ComponentPreview
   componentName="button--disabled"
   hasReact
@@ -107,25 +108,45 @@ in the interface why a button is Disabled.
   hasHTML
 />
 
-### Loading
-
-When data is being saved or submitted, a loading
-indicator may replace the Button text.
-
+#### Disabled - Secondary
 <ComponentPreview
-  componentName="button--loading"
+  componentName="button--disabled-secondary"
   hasReact
   hasAngular
   hasHTML
 />
 
-### Secondary Button Loading
-
-When data is being saved or submitted, a loading
-indicator may replace the Button text.
-
+#### Disabled - Tertiary
 <ComponentPreview
-  componentName="button--loading-secondary"
+  componentName="button--disabled-tertiary"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+### Spinning
+
+Use when data is being saved or submitted. The spinning indicator will replace the Button text.
+
+#### Spinning - Primary
+<ComponentPreview
+  componentName="button--spinning"
+  hasReact
+  hasAngular
+  hasHTML
+/>
+
+#### Spinning - Secondary
+<ComponentPreview
+  componentName="button--spinning-secondary"
+  hasHTML
+  hasReact
+  hasAngular
+/>
+
+#### Spinning - Tertiary
+<ComponentPreview
+  componentName="button--spinning-tertiary"
   hasHTML
   hasReact
   hasAngular

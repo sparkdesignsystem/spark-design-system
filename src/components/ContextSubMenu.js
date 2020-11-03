@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { SprkLink } from '@sparkdesignsystem/spark-react';
 
@@ -29,6 +30,12 @@ function ContextSubMenu({heading, collection, directory}) {
       </ul>
     </div>
   );
+}
+
+ContextSubMenu.propTypes = {
+  heading: PropTypes.string,
+  collection: PropTypes.array,
+  directory: PropTypes.string
 }
 
 export default ContextSubMenu;

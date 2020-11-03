@@ -37,11 +37,11 @@ import * as _ from 'lodash';
             class="sprk-c-Modal__icon"
             type="button"
             aria-label="Close Modal"
+            [attr.data-analytics]="closeAnalyticsString"
             (click)="closeModal($event)"
           >
             <sprk-icon
               iconType="close"
-              additionalClasses="sprk-c-Icon--stroke-current-color"
             ></sprk-icon>
           </button>
         </header>
@@ -51,7 +51,7 @@ import * as _ from 'lodash';
         >
           <div
             *ngIf="modalType == 'wait'"
-            class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"
+            class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--primary"
           ></div>
           <ng-content></ng-content>
         </div>
@@ -124,6 +124,14 @@ export class SprkModalComponent {
    */
   @Input()
   cancelAnalyticsString: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute
+   * on the close button. Intended
+   * for an outside library to capture data.
+   */
+  @Input()
+  closeAnalyticsString: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the

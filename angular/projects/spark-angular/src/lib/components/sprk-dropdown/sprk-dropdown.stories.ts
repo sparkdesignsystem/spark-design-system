@@ -41,6 +41,7 @@ export const defaultStory = () => ({
       title="My Choices"
       triggerIconType="settings"
       additionalTriggerClasses="sprk-b-Link--plain"
+      additionalIconClasses="sprk-c-Icon--l"
       [choices]="[{
           text: 'Option 1',
           value: 'Option 1'
@@ -87,7 +88,8 @@ export const informational = () => ({
           infoLine2: 'More Information'
         },
         value: 'Choice Title 2',
-        active: true
+        active: true,
+        isDefault: true
       }
     ]"
     >

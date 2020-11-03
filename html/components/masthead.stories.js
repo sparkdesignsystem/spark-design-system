@@ -1,15 +1,13 @@
 import { useEffect } from '@storybook/client-api';
 import { masthead, toggleScrollEvent } from './masthead';
-import { toggle } from '../components/toggle';
-import { dropdowns } from '../components/dropdown';
+import { toggle } from './toggle';
+import { dropdowns } from './dropdown';
 import isElementVisible from '../utilities/isElementVisible';
 import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Masthead',
-  decorators: [
-    story => `<div>${story()}</div><div data-sprk-main></div>`,
-  ],
+  decorators: [(story) => `<div>${story()}</div><div data-sprk-main></div>`],
   parameters: {
     docs: { iframeHeight: 300 },
     info: `
@@ -89,7 +87,7 @@ export const defaultStory = () => {
               Toggle Navigation
             </span>
             <svg
-              class="sprk-c-Icon sprk-c-Icon--l sprk-c-Menu__icon"
+              class="sprk-c-Icon sprk-c-Icon--xl sprk-c-Menu__icon"
               aria-hidden="true"
               viewBox="0 0 64 64"
               xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +131,7 @@ export const defaultStory = () => {
           <a
             class="
               sprk-b-Link
-              sprk-b-Link--plain
+              sprk-b-Link--simple
               sprk-c-Masthead__link
             "
             href="#nogo"
@@ -167,7 +165,7 @@ export const defaultStory = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                 "
                 href="#nogo"
@@ -180,7 +178,7 @@ export const defaultStory = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                 "
                 href="#nogo"
@@ -202,7 +200,7 @@ export const defaultStory = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                 "
                 href="tel:555-555-5555"
@@ -215,7 +213,7 @@ export const defaultStory = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                 "
                 href="#nogo"
@@ -228,7 +226,7 @@ export const defaultStory = () => {
               <a
                 class="
                     sprk-c-Button
-                    sprk-c-Button--secondary
+                    sprk-c-Button--quaternary
                     sprk-c-Button--compact
                   "
                   href="#nogo"
@@ -268,6 +266,7 @@ export const defaultStory = () => {
               <svg
                 class="
                   sprk-c-Icon
+                  sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
                 "
@@ -351,6 +350,8 @@ export const defaultStory = () => {
                   <svg
                     class="
                       sprk-c-Icon
+                      sprk-c-Icon--xl
+                      sprk-c-Icon--filled-current-color
                       sprk-c-Icon--stroke-current-color
                       sprk-u-mrs
                     "
@@ -377,6 +378,8 @@ export const defaultStory = () => {
                   <svg
                     class="
                       sprk-c-Icon
+                      sprk-c-Icon--xl
+                      sprk-c-Icon--filled-current-color
                       sprk-c-Icon--stroke-current-color
                       sprk-u-mrs
                     "
@@ -392,7 +395,7 @@ export const defaultStory = () => {
             <a
               class="
                 sprk-c-Button
-                sprk-c-Button--secondary
+                sprk-c-Button--quaternary
                 sprk-c-Button--compact sprk-c-Button--full@s
               "
               href="#nogo"
@@ -452,7 +455,7 @@ export const extended = () => {
             data-sprk-mobile-nav-trigger="mobileNav2"
           >
             <span class="sprk-u-ScreenReaderText">Toggle Navigation</span>
-            <svg class="sprk-c-Icon sprk-c-Icon--l sprk-c-Menu__icon" aria-hidden="true" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <svg class="sprk-c-Icon sprk-c-Icon--xl sprk-c-Menu__icon" aria-hidden="true" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
               <g>
                 <path
                   class="sprk-c-Menu__line sprk-c-Menu__line--two"
@@ -495,7 +498,7 @@ export const extended = () => {
           <a
             class="
               sprk-b-Link
-              sprk-b-Link--plain
+              sprk-b-Link--simple
               sprk-c-Masthead__link
             "
             href="#nogo"
@@ -548,6 +551,7 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
+                    sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-Stack__item
                   "
@@ -591,6 +595,7 @@ export const extended = () => {
                     <svg
                       class="
                         sprk-c-Icon
+                        sprk-c-Icon--filled-current-color
                         sprk-c-Icon--stroke-current-color
                         sprk-c-Icon--toggle
                         sprk-Stack__item
@@ -654,7 +659,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                 "
                 href="#nogo"
@@ -674,12 +679,12 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
-                    sprk-c-Icon--l
-                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--xl
+                    sprk-c-Icon--filled-current-color
                   "
                   viewBox="0 0 100 100"
                 >
-                  <use xlink:href="#user-account"></use>
+                  <use xlink:href="#user"></use>
                 </svg>
                 <span class="sprk-u-ScreenReaderText">User Account</span>
               </a>
@@ -748,7 +753,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                   sprk-c-Masthead__link--big-nav
                 "
@@ -762,6 +767,7 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
+                    sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-u-mls
                   "
@@ -805,7 +811,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                   sprk-c-Masthead__link--big-nav
                 "
@@ -819,7 +825,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                   sprk-c-Masthead__link--big-nav
                 "
@@ -833,7 +839,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                   sprk-c-Masthead__link--big-nav
                 "
@@ -847,6 +853,7 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
+                    sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-u-mls
                   "
@@ -890,7 +897,7 @@ export const extended = () => {
               <a
                 class="
                   sprk-b-Link
-                  sprk-b-Link--plain
+                  sprk-b-Link--simple
                   sprk-c-Masthead__link
                   sprk-c-Masthead__link--big-nav
                 "
@@ -937,6 +944,7 @@ export const extended = () => {
               <svg
                 class="
                   sprk-c-Icon
+                  sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
                   sprk-c-Icon--toggle
                   sprk-Stack__item
@@ -983,6 +991,7 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
+                    sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--toggle
                     sprk-Stack__item
@@ -1052,6 +1061,7 @@ export const extended = () => {
                 class="
                   sprk-c-Icon
                   sprk-c-Icon--toggle
+                  sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
                   sprk-u-mls
@@ -1142,6 +1152,7 @@ export const extended = () => {
                 class="
                   sprk-c-Icon
                   sprk-c-Icon--toggle
+                  sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
                 "
@@ -1221,8 +1232,8 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
-                    sprk-c-Icon--stroke-current-color
-                    sprk-c-Icon--l
+                    sprk-c-Icon--xl
+                    sprk-c-Icon--filled-current-color
                     sprk-u-mrs
                   "
                   viewBox="0 0 64 64"
@@ -1240,8 +1251,8 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
-                    sprk-c-Icon--stroke-current-color
-                    sprk-c-Icon--l
+                    sprk-c-Icon--xl
+                    sprk-c-Icon--filled-current-color
                     sprk-u-mrs
                   "
                   viewBox="0 0 64 64"
@@ -1269,8 +1280,8 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
-                    sprk-c-Icon--stroke-current-color
-                    sprk-c-Icon--l
+                    sprk-c-Icon--xl
+                    sprk-c-Icon--filled-current-color
                     sprk-u-mrs
                   "
                   viewBox="0 0 64 64"
@@ -1284,6 +1295,7 @@ export const extended = () => {
                 class="
                   sprk-c-Icon
                   sprk-c-Icon--toggle
+                  sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
                 "
@@ -1343,4 +1355,4 @@ extended.story = {
     docs: { iframeHeight: 450 },
     jest: ['masthead'],
   },
-}
+};

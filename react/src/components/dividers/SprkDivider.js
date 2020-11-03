@@ -9,22 +9,19 @@ const SprkDivider = (props) => {
   return <TagName className={classNames} data-id={idString} {...other} />;
 };
 
-SprkDivider.defaultProps = {
-  idString: undefined,
-  additionalClasses: undefined,
-};
-
 SprkDivider.propTypes = {
   /**
    * Determines if link renders as a `<span>` or `<hr>`.
    */
   element: PropTypes.oneOf(['span', 'hr']).isRequired,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to the
+   * outermost container of the component.
    */
   additionalClasses: PropTypes.string,
 };
