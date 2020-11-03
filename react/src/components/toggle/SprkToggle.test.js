@@ -102,14 +102,14 @@ describe('SprkToggle:', () => {
     const wrapper = mount(
       <SprkToggle triggerText="Toggle title">Body text</SprkToggle>,
     );
-    const ButtonAriaControls = wrapper.find('button').prop('aria-controls');
+    const buttonAriaControls = wrapper.find('button').prop('aria-controls');
     const toggleContentId = wrapper
       .find('.sprk-c-Toggle__content')
       .at(1)
       .prop('id');
 
     expect(toggleContentId).toMatch(/sprk_toggle_content_\d/);
-    expect(toggleContentId).toEqual(ButtonAriaControls);
+    expect(toggleContentId).toEqual(buttonAriaControls);
     expect(wrapper.find(`div#${toggleContentId}`).length).toBe(1);
   });
 
@@ -117,14 +117,14 @@ describe('SprkToggle:', () => {
     const wrapper = mount(
       <SprkToggle triggerText="Toggle title">Body text</SprkToggle>,
     );
-    const ButtonAriaControls = wrapper.find('button').prop('aria-controls');
+    const buttonAriaControls = wrapper.find('button').prop('aria-controls');
     const toggleContentId = wrapper
       .find('.sprk-c-Toggle__content')
       .at(1)
       .prop('id');
 
     expect(toggleContentId).toMatch(/sprk_toggle_content_\d/);
-    expect(toggleContentId).toEqual(ButtonAriaControls);
+    expect(toggleContentId).toEqual(buttonAriaControls);
     expect(wrapper.find(`div#${toggleContentId}`).length).toBe(1);
     expect(wrapper.state().isOpen).toBe(false);
 
@@ -137,7 +137,7 @@ describe('SprkToggle:', () => {
 
     expect(wrapper.state().isOpen).toBe(true);
     expect(toggleContentId).toMatch(postClickToggleContentId);
-    expect(ButtonAriaControls).toEqual(postClickToggleContentId);
+    expect(buttonAriaControls).toEqual(postClickToggleContentId);
   });
 
   it(`should add classes to the content if contentAdditionalClasses
