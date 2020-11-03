@@ -39,7 +39,7 @@ This can change through the \`altText\` prop on SprkSpinner.
 submit the form, add \`type=”button”\` the attribute.
 - Spinner state requires additional engineering.
   - Use app state to conditionally render between button text and spinner.
-  - Add \`isLoading\` on SprkButton when spinner is present.
+  - Add \`isSpinning\` on SprkButton when spinner is present.
 `,
   },
 };
@@ -127,7 +127,7 @@ export const spinning = () => (
   <SprkButton
     idString="button-9"
     analyticsString="button-9-analytics"
-    isLoading
+    isSpinning
   >
     <SprkSpinner />
   </SprkButton>
@@ -138,7 +138,7 @@ export const spinningSecondary = () => (
     variant="secondary"
     idString="button-10"
     analyticsString="button-10-analytics"
-    isLoading
+    isSpinning
   >
     <SprkSpinner variant="primary" />
   </SprkButton>
@@ -149,7 +149,7 @@ export const spinningTertiary = () => (
     variant="tertiary"
     idString="button-11"
     analyticsString="button-11-analytics"
-    isLoading
+    isSpinning
   >
     <SprkSpinner variant="secondary" />
   </SprkButton>
@@ -160,7 +160,7 @@ export const spinningQuaternary = () => (
     variant="quaternary"
     idString="button-12"
     analyticsString="button-12-analytics"
-    isLoading
+    isSpinning
   >
     <SprkSpinner variant="dark" />
   </SprkButton>
