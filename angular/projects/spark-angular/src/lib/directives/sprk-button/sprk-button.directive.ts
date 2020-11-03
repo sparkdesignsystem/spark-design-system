@@ -95,6 +95,10 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
         this.ref.nativeElement,
         'sprk-c-Button--has-spinner',
       );
+    }
+
+    // TODO: Remove this check for newSpinner. It was for deprecation purposes only #3561
+    if (this.isSpinning && this.newSpinner) {
       this.renderer.setAttribute(this.ref.nativeElement, 'disabled', 'true');
       this.renderer.setAttribute(this.ref.nativeElement, 'aria-live', 'polite');
     }
