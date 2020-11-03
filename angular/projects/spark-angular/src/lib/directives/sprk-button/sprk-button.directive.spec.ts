@@ -33,6 +33,7 @@ import { SprkSpinnerDirective } from '../sprk-spinner/sprk-spinner.directive';
     <button sprkButton variant="quaternary" [isSpinning]="spinnerVal">
       Test 6
     </button>
+    <!-- TODO: Change this test is for checking if new spinner directive is being used in the tests #3561 -->
     <button sprkButton additionalClasses="testClass" [isSpinning]="true">
       <div sprkSpinner></div>
     </button>
@@ -51,6 +52,7 @@ describe('Spark Button Directive', () => {
   let button4Element: HTMLElement;
   let button5Element: HTMLElement;
   let button6Element: HTMLElement;
+  // TODO: Remove this test is for checking if new spinner directive is being used #3561
   let button7Element: HTMLElement;
 
   beforeEach(async(() => {
@@ -68,6 +70,7 @@ describe('Spark Button Directive', () => {
     button4Element = fixture.nativeElement.querySelectorAll('button')[3];
     button5Element = fixture.nativeElement.querySelectorAll('button')[4];
     button6Element = fixture.nativeElement.querySelectorAll('button')[5];
+    // TODO: Remove this test is for checking if new spinner directive is being used #3561
     button7Element = fixture.nativeElement.querySelectorAll('button')[6];
   }));
 

@@ -1,7 +1,6 @@
-import { ContentChild } from '@angular/core';
-import { ViewChild } from '@angular/core';
 import {
   Directive,
+  ContentChild,
   ElementRef,
   OnInit,
   Input,
@@ -23,7 +22,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   constructor(public ref: ElementRef, private renderer: Renderer2) {}
 
   // TODO: Remove this contentChild for newSpinner. It was for deprecation purposes only #3561
-  @ViewChild(SprkSpinnerDirective, { static: true })
+  @ContentChild(SprkSpinnerDirective, { static: true })
   newSpinner: SprkSpinnerDirective;
   /**
    * Expects a space separated string
@@ -113,9 +112,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    */
   ngAfterViewInit() {
     // TODO: Remove this check for newSpinner. It was for deprecation purposes only #3561
-    console.log(this.newSpinner, 'NEW SPINNER');
-    if (this.isSpinning && !!this.newSpinner) {
-      console.log('should not run');
+    if (this.isSpinning && this.newSpinner === undefined) {
       this.setSpinning(this.ref.nativeElement);
     }
   }
@@ -125,7 +122,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     if (
       this.isSpinning &&
       !changes['isSpinning'].isFirstChange() &&
-      !!this.newSpinner
+      this.newSpinner === undefined
     ) {
       this.setSpinning(this.ref.nativeElement);
     }
