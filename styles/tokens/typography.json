@@ -20,7 +20,7 @@
     "themable": true
   },
   "narrow-measure": {
-    "comment": "The max-width value for the .sprk-u-Measure--narrow class.",
+    "comment": "The max-width value for the narrow measure.",
     "value": "25rem",
     "attributes": {
       "category": "size"

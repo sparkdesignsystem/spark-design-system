@@ -11,7 +11,7 @@
         "themable": true
       },
       "narrow-max-width": {
-        "comment": "The value used for the maximum width of an icon container using the .sprk-b-InputContainer__icon-container--narrow modifier.",
+        "comment": "The value used for the maximum width of an icon container using the icon container narrow modifier.",
         "value": "6.5rem",
         "attributes": {
           "category": "size"
@@ -39,7 +39,7 @@
       "themable": true
     },
     "max-width-full": {
-      "comment": "The value used for the maximum width of an Input container using the .sprk-b-InputContainer--full modifier.",
+      "comment": "The value used for the maximum width of an Input container using the Input Container full modifier.",
       "value": "100%",
       "attributes": {
         "category": "size"

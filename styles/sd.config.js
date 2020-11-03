@@ -56,23 +56,24 @@ module.exports = {
       ],
     },
     android: {
-      transformGroup: 'android',
+      transformGroup: 'custom/android',
+      prefix: 'sprk',
       buildPath: 'android/',
       files: [
         {
-          destination: 'spark_colors.xml',
+          destination: 'spark_design_tokens_colors.xml',
           format: 'android/colors',
         },
         {
-          destination: 'spark_font_dimens.xml',
+          destination: 'spark_design_tokens_font_dimens.xml',
           format: 'android/fontDimens',
         },
         {
-          destination: 'spark_dimens.xml',
+          destination: 'spark_design_tokens_dimens.xml',
           format: 'android/dimens',
         },
         {
-          destination: 'spark_strings.xml',
+          destination: 'spark_design_tokens_strings.xml',
           format: 'android/strings',
         },
       ],

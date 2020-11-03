@@ -45,9 +45,21 @@ StyleDictionary.registerTransformGroup({
   ],
 });
 
+StyleDictionary.registerTransformGroup({
+  name: 'custom/android',
+  transforms: [
+    'attribute/cti',
+    'name/cti/snake',
+    'color/hex8android',
+    'size/px-to-rem',
+    'size/remToSp',
+    'size/remToDp',
+  ],
+});
+
 StyleDictionary.registerFilter({
   name: 'filter-mobile',
-  // eslint-disable-next-line consistent-return
+  // eslint-disable-next-line consistent-returnd
   matcher: (prop) => {
     if (prop.attributes) {
       return prop.attributes.category !== 'content';
