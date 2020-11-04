@@ -85,7 +85,7 @@ export class SprkSpinnerDirective implements OnInit {
     };
 
     this.getClasses().forEach((className) => {
-      el.classList.add(className);
+      this.renderer.addClass(el, className);
     });
 
     if (variantLookup.hasOwnProperty(this.variant)) {

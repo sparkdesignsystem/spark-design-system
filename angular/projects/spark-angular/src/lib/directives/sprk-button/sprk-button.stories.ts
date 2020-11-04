@@ -16,7 +16,7 @@ export default {
     info: `
 ${markdownDocumentationLinkBuilder('button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
-SprkButton can either render as a button (\`<button>\`)
+\`sprkButton\` can either render as a button (\`<button>\`)
 or an anchor (\`<a>\`) element. It is very important
 for accessibility to choose the correct HTML element.
 
@@ -41,7 +41,7 @@ in addition to the \`sprk-is-Disabled\` class so that it doesn’t
 receive interaction.
 - Spinner state requires additional engineering.
   - Use app state to conditionally render between button text and spinner.
-  - Add \`isLoading\` on sprkButton directive when spinner is present
+  - Add \`isSpinning\` on sprkButton directive when spinner is present
 `,
     docs: { iframeHeight: 100 },
   },
