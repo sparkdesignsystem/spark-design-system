@@ -53,7 +53,6 @@ describe('SprkButton:', () => {
     expect(wrapper.find('.sprk-c-Spinner').length).toBe(1);
   });
 
-  // TODO: Remove internal spinner from button on next release #3557
   it(
     'if loading is set, should render the spinner' +
       ' and add aria-label to element',
@@ -63,7 +62,7 @@ describe('SprkButton:', () => {
     },
   );
 
-  // TODO: Remove internal spinner from button on next release #3557
+  // TODO: Remove loading spinner from button on next release #3557
   it(
     'if loading is set with spinningAriaLabel it' +
       ' should add custom aria-label',

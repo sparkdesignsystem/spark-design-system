@@ -20,7 +20,6 @@ import { SprkSpinnerDirective } from '../sprk-spinner/sprk-spinner.directive';
       Test 3
     </button>
     <button class="sprk-c-Button--tertiary" sprkButton>Test 4</button>
-    <!-- TODO: Remove spinning functionality from button on next release #3561 -->
     <button
       sprkButton
       variant="tertiary"
@@ -160,7 +159,6 @@ describe('Spark Button Directive', () => {
     expect(button3Element.getAttribute('data-id')).toBe('id-test');
   });
 
-  // TODO: Remove spinning functionality from button on next release #3561
   it('should add the value of spinningAriaLabel to aria-label when isSpinning=true', () => {
     const spinnerEl = button5Element.querySelector('.sprk-c-Spinner');
     expect(spinnerEl).toBeNull();

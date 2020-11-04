@@ -61,7 +61,7 @@ const SprkButton = ({
       href={TagName !== 'button' ? href : undefined}
       {...rest}
       // TODO: Remove loading on next release #3557
-      {...(loading && { 'aria-label': spinningAriaLabel })}
+      {...((loading || isSpinning) && { 'aria-label': spinningAriaLabel })}
       {...(isSpinning && { 'aria-live': 'polite' })}
     >
       {/* TODO: Remove anything related to spinner from button
@@ -126,9 +126,7 @@ SprkButton.propTypes = {
    * rendered in place of the button content.
    */
   loading: PropTypes.bool,
-  // TODO: Remove anything related to spinner from button on next release #3557
   /**
-   * Deprecated: This will be removed on next release.
    * Optional string value that is
    * set for the aria-label when `loading` is `true`.
    */

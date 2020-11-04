@@ -40,9 +40,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    */
   @Input() isSpinning = false;
 
-  // TODO: Remove spinning functionality from button on next release #3561
   /**
-   * Deprecated: Conditionally render a div with sprkSpinner directive instead.
    * Optional string value that is
    * set for the `aria-label`
    * when `isSpinning` is `true`.
@@ -90,22 +88,26 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
       this.renderer.addClass(this.ref.nativeElement, variants[this.variant]);
     }
 
+    const buttonElement = this.ref.nativeElement;
+
     if (this.isSpinning) {
-      this.renderer.addClass(
-        this.ref.nativeElement,
-        'sprk-c-Button--has-spinner',
-      );
+      this.renderer.addClass(buttonElement, 'sprk-c-Button--has-spinner');
     }
 
     // TODO: Remove this check for newSpinner. It was for deprecation purposes only #3561
     if (this.isSpinning && this.newSpinner) {
-      this.renderer.setAttribute(this.ref.nativeElement, 'disabled', 'true');
-      this.renderer.setAttribute(this.ref.nativeElement, 'aria-live', 'polite');
+      this.renderer.setAttribute(buttonElement, 'disabled', 'true');
+      this.renderer.setAttribute(buttonElement, 'aria-live', 'polite');
+      this.renderer.setAttribute(
+        buttonElement,
+        'aria-label',
+        this.spinningAriaLabel,
+      );
     }
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
-        this.renderer.addClass(this.ref.nativeElement, className);
+        this.renderer.addClass(buttonElement, className);
       });
     }
   }
