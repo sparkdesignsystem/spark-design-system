@@ -15,8 +15,7 @@ import utilitiesMedia from '../images/utilities.svg';
 
 const teaserDesigners = {
   bodyText: `
-    Get started with Design by reading the principles
-    that we use in Spark Design System.
+      This week is going to go great!~
   `,
   cta: {
     text: 'Go To Designer Basics',
