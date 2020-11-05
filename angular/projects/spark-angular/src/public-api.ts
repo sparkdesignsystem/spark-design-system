@@ -74,8 +74,10 @@ export { SprkFormatterPhoneNumberDirective } from './lib/directives/inputs/forma
 export { SprkFormatterPhoneNumberModule } from './lib/directives/inputs/formatters/sprk-formatter-phone-number/sprk-formatter-phone-number.module';
 export { SprkFormatterSsnDirective } from './lib/directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.directive';
 export { SprkFormatterSsnModule } from './lib/directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.module';
-export { SprkButtonDirective } from './lib/directives/inputs/sprk-button/sprk-button.directive';
-export { SprkButtonModule } from './lib/directives/inputs/sprk-button/sprk-button.module';
+export { SprkButtonDirective } from './lib/directives/sprk-button/sprk-button.directive';
+export { SprkButtonModule } from './lib/directives/sprk-button/sprk-button.module';
+export { SprkSpinnerDirective } from './lib/directives/sprk-spinner/sprk-spinner.directive';
+export { SprkSpinnerModule } from './lib/directives/sprk-spinner/sprk-spinner.module';
 export { SprkDatepickerDirective } from './lib/directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 export { SprkDatepickerModule } from './lib/directives/inputs/sprk-datepicker/sprk-datepicker.module';
 export { SprkFieldErrorDirective } from './lib/directives/inputs/sprk-field-error/sprk-field-error.directive';
@@ -182,8 +184,8 @@ export { SprkFormatterPhoneNumberDirective as ɵcp } from './lib/directives/inpu
 export { SprkFormatterPhoneNumberModule as ɵco } from './lib/directives/inputs/formatters/sprk-formatter-phone-number/sprk-formatter-phone-number.module';
 export { SprkFormatterSsnDirective as ɵcv } from './lib/directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.directive';
 export { SprkFormatterSsnModule as ɵcu } from './lib/directives/inputs/formatters/sprk-formatter-ssn/sprk-formatter-ssn.module';
-export { SprkButtonDirective as ɵt } from './lib/directives/inputs/sprk-button/sprk-button.directive';
-export { SprkButtonModule as ɵs } from './lib/directives/inputs/sprk-button/sprk-button.module';
+export { SprkButtonDirective as ɵt } from './lib/directives/sprk-button/sprk-button.directive';
+export { SprkButtonModule as ɵs } from './lib/directives/sprk-button/sprk-button.module';
 export { SprkDatepickerDirective as ɵcx } from './lib/directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 export { SprkDatepickerModule as ɵcw } from './lib/directives/inputs/sprk-datepicker/sprk-datepicker.module';
 export { SprkFieldErrorDirective as ɵbq } from './lib/directives/inputs/sprk-field-error/sprk-field-error.directive';

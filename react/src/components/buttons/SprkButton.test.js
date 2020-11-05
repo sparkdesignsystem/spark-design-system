@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkButton from './SprkButton';
+import SprkSpinner from '../spinners/SprkSpinner';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -40,19 +41,18 @@ describe('SprkButton:', () => {
     );
   });
 
-  // TODO: Remove anything related to spinner from button on next release #3557
+  // TODO: Remove internal spinner from button on next release #3557
   it('if loading is not set, should not render the spinner', () => {
     const wrapper = mount(<SprkButton />);
     expect(wrapper.find('.sprk-c-Spinner').length).toBe(0);
   });
 
-  // TODO: Remove anything related to spinner from button on next release #3557
+  // TODO: Remove internal spinner from button on next release #3557
   it('if loading is set, should render the spinner', () => {
     const wrapper = mount(<SprkButton loading />);
     expect(wrapper.find('.sprk-c-Spinner').length).toBe(1);
   });
 
-  // TODO: Remove anything related to spinner from button on next release #3557
   it(
     'if loading is set, should render the spinner' +
       ' and add aria-label to element',
@@ -62,7 +62,7 @@ describe('SprkButton:', () => {
     },
   );
 
-  // TODO: Remove anything related to spinner from button on next release #3557
+  // TODO: Remove loading spinner from button on next release #3557
   it(
     'if loading is set with spinningAriaLabel it' +
       ' should add custom aria-label',
@@ -208,16 +208,28 @@ describe('SprkButton:', () => {
   );
 
   it('should apply loading class', () => {
-    const wrapper = shallow(<SprkButton isLoading />);
-    expect(wrapper.find('button').hasClass('sprk-c-Button--loading')).toBe(
+    const wrapper = shallow(<SprkButton isSpinning />);
+    expect(wrapper.find('button').hasClass('sprk-c-Button--has-spinner')).toBe(
       true,
     );
   });
 
   it('should apply disabled attribute when loading', () => {
-    const wrapper = mount(<SprkButton isLoading />);
+    const wrapper = mount(<SprkButton isSpinning />);
     const button = wrapper.find('button');
     expect(button.length).toBe(1);
     expect(button.getDOMNode().hasAttribute('disabled')).toBe(true);
+  });
+
+  // TODO: Remove internal spinner from button on next release #3557
+  // Rewrite test based on new composition version
+  it('should load compositional spinner rather than internal spinner', () => {
+    const wrapper = mount(
+      <SprkButton isSpinning>
+        <SprkSpinner variant="secondary" />
+      </SprkButton>,
+    );
+    const spinner = wrapper.find('.sprk-c-Spinner');
+    expect(spinner.hasClass('sprk-c-Spinner--secondary')).toBe(true);
   });
 });

@@ -1,5 +1,6 @@
 import {
   Directive,
+  ContentChild,
   ElementRef,
   OnInit,
   Input,
@@ -9,6 +10,7 @@ import {
   AfterViewInit,
   SimpleChanges,
 } from '@angular/core';
+import { SprkSpinnerDirective } from '../sprk-spinner/sprk-spinner.directive';
 
 @Directive({
   selector: '[sprkButton]',
@@ -19,7 +21,20 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    */
   constructor(public ref: ElementRef, private renderer: Renderer2) {}
 
+  // TODO: Remove this contentChild for newSpinner. It was for deprecation purposes only #3561
+  @ContentChild(SprkSpinnerDirective, { static: true })
+  newSpinner: SprkSpinnerDirective;
   /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * element.
+   */
+  @Input()
+  additionalClasses: string;
+
+  // TODO: Remove spinning functionality from button on next release #3561
+  /**
+   * Deprecated: Conditionally render a div with sprkSpinner directive instead.
    * Will show a spinner inside the
    * button if set to `true`.
    */
@@ -72,8 +87,32 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     if (variants.hasOwnProperty(this.variant)) {
       this.renderer.addClass(this.ref.nativeElement, variants[this.variant]);
     }
+
+    const buttonElement = this.ref.nativeElement;
+
+    if (this.isSpinning) {
+      this.renderer.addClass(buttonElement, 'sprk-c-Button--has-spinner');
+    }
+
+    // TODO: Remove this check for newSpinner. It was for deprecation purposes only #3561
+    if (this.isSpinning && this.newSpinner) {
+      this.renderer.setAttribute(buttonElement, 'disabled', 'true');
+      this.renderer.setAttribute(buttonElement, 'aria-live', 'polite');
+      this.renderer.setAttribute(
+        buttonElement,
+        'aria-label',
+        this.spinningAriaLabel,
+      );
+    }
+
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach((className) => {
+        this.renderer.addClass(buttonElement, className);
+      });
+    }
   }
 
+  // TODO: Remove spinning functionality from button on next release #3561
   /**
    * Add spinner only after view has loaded.
    * This is to allow time for the text
@@ -81,17 +120,24 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
    * the width value accounts for that text.
    */
   ngAfterViewInit() {
-    if (this.isSpinning) {
+    // TODO: Remove this check for newSpinner. It was for deprecation purposes only #3561
+    if (this.isSpinning && this.newSpinner === undefined) {
       this.setSpinning(this.ref.nativeElement);
     }
   }
 
+  // TODO: Remove this check for newSpinner. It was for deprecation purposes only #3561
   ngOnChanges(changes: SimpleChanges) {
-    if (this.isSpinning && !changes['isSpinning'].isFirstChange()) {
+    if (
+      this.isSpinning &&
+      !changes['isSpinning'].isFirstChange() &&
+      this.newSpinner === undefined
+    ) {
       this.setSpinning(this.ref.nativeElement);
     }
   }
 
+  // TODO: Remove spinning functionality from button on next release #3561
   /**
    * @ignore
    */
