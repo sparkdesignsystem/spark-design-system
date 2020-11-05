@@ -1,5 +1,5 @@
 /* global document describe beforeEach afterEach it  window  */
-import { autocomplete, bindUIEvents } from '../components/autocomplete';
+import { bindUIEvents } from '../components/autocomplete';
 
 describe('Autocomplete tests', () => {
   let container;
@@ -18,6 +18,7 @@ describe('Autocomplete tests', () => {
     // input.setAttribute
 
     resultsList = document.createElement('ul');
+    resultsList.classList.add('sprk-u-Display--none');
     // resultsList.setAttribute
 
     container.appendChild(announcement);
@@ -30,12 +31,10 @@ describe('Autocomplete tests', () => {
   });
 
   it('should generate an id if needed', () => {
-    console.log(container.outerHTML);
     expect(resultsList.getAttribute('id')).toBe(null);
     expect(input.getAttribute('aria-controls')).toBe(null);
 
     bindUIEvents(container);
-    console.log(container.outerHTML);
     expect(resultsList.hasAttribute('id')).toBeTruthy();
     expect(input.hasAttribute('aria-controls')).toBeTruthy();
     expect(resultsList.getAttribute('id')).toEqual(
@@ -51,5 +50,54 @@ describe('Autocomplete tests', () => {
 
     expect(input.getAttribute('aria-controls')).toEqual(testString);
     expect(resultsList.id).toEqual(testString);
+  });
+
+  it('should display recent searches when it gets focus', () => {
+    expect(resultsList.classList.contains('sprk-u-Display--none')).toBe(true);
+    bindUIEvents(container);
+    input.dispatchEvent(new window.Event('focusin'));
+    expect(resultsList.classList.contains('sprk-u-Display--none')).toBe(false);
+  });
+
+  it('should close the search results if escape is pressed', () => {
+    bindUIEvents(container);
+    input.dispatchEvent(new window.Event('focusin'));
+    expect(resultsList.classList.contains('sprk-u-Display--none')).toBe(false);
+
+    const escKeyEvent = new window.Event('keydown');
+    escKeyEvent.keyCode = 27;
+    document.dispatchEvent(escKeyEvent);
+
+    expect(resultsList.classList.contains('sprk-u-Display--none')).toBe(true);
+  });
+
+  it('should close the search results if document is clicked', () => {
+    bindUIEvents(container);
+    input.dispatchEvent(new window.Event('focusin'));
+    expect(resultsList.classList.contains('sprk-u-Display--none')).toBe(false);
+
+    document.dispatchEvent(new window.Event('click'));
+
+    expect(resultsList.classList.contains('sprk-u-Display--none')).toBe(true);
+  });
+
+  it('it should not close the search results if search results are clicked', () => {
+    bindUIEvents(container);
+    input.dispatchEvent(new window.Event('focusin'));
+    expect(resultsList.classList.contains('sprk-u-Display--none')).toBe(false);
+
+    resultsList.dispatchEvent(new window.Event('click'));
+
+    expect(resultsList.classList.contains('sprk-u-Display--none')).toBe(false);
+  });
+
+  it('it should not close the search results if input is clicked', () => {
+    bindUIEvents(container);
+    input.dispatchEvent(new window.Event('focusin'));
+    expect(resultsList.classList.contains('sprk-u-Display--none')).toBe(false);
+
+    input.dispatchEvent(new window.Event('click'));
+
+    expect(resultsList.classList.contains('sprk-u-Display--none')).toBe(false);
   });
 });

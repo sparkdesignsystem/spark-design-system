@@ -21,9 +21,17 @@ export const defaultStory = () => {
 
   return `
     <div data-sprk-autocomplete>
-      <div></div>
-      <input/>
-      <ul></ul>
+      <div
+        class="sprk-c-Autocomplete__announcement"
+      ></div>
+
+      <input
+        sprk-c-Autocomplete__input
+      />
+
+      <ul
+        class="sprk-c-Autocomplete__results sprk-u-Display--none"
+      ></ul>
     </div>
   `;
 };
