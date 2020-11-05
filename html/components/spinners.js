@@ -30,12 +30,24 @@ const getSpinnerClasses = (options) => {
 const setSpinning = (element, options) => {
   const el = element;
   const width = element.offsetWidth;
+
   const spinningAriaLabel = options.ariaLabel || 'Loading';
-  el.setAttribute('data-sprk-spinner-text', el.textContent);
+  const ariaValueText = options.ariaValueText || 'Loading';
+  const role = options.role || 'progressbar';
+
+  el.classList.add('sprk-c-Button--has-spinner');
   el.setAttribute('aria-label', spinningAriaLabel);
-  el.innerHTML = `<div class="${getSpinnerClasses(options)}"></div>`;
+  el.setAttribute('data-sprk-spinner-text', el.textContent);
+  el.setAttribute('disabled', 'true');
   el.setAttribute('data-sprk-has-spinner', 'true');
   el.setAttribute('style', `width: ${width}px`);
+
+  el.innerHTML = `
+    <div
+      class="${getSpinnerClasses(options)}"
+      aria-valuetext="${ariaValueText}"
+      role="${role}"></div>
+  `;
 };
 
 const cancelSpinning = (element) => {
@@ -45,6 +57,8 @@ const cancelSpinning = (element) => {
   el.removeAttribute('data-sprk-has-spinner');
   el.removeAttribute('aria-label');
   el.removeAttribute('style');
+  el.removeAttribute('disabled');
+  el.classList.remove('sprk-c-Button--has-spinner');
 };
 
 const spinners = () => {
@@ -60,6 +74,10 @@ const spinners = () => {
     );
     options.variant = spinnerContainer.getAttribute(
       'data-sprk-spinner-variant',
+    );
+    options.role = spinnerContainer.getAttribute('data-sprk-spinner-role');
+    options.ariaValueText = spinnerContainer.getAttribute(
+      'data-sprk-aria-value-text',
     );
 
     spinnerContainer.addEventListener('click', (e) => {
