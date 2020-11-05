@@ -1,4 +1,7 @@
 /* global window */
+
+// TODO Deprecated old spinner for more compositional option.
+// Remove this whole file on next release. #1316
 import getElements from '../utilities/getElements';
 
 const getSpinnerClasses = (options) => {

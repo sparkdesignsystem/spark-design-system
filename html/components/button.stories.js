@@ -23,11 +23,14 @@ always use a \`<button>\` element.
 must include a \`title=””\` attribute.
 - If a Button only includes an Icon with no text,
 alternative text must be provided.
-- If the Button has a spinner setup, the \`aria-label\`
-will be set to 'Loading' when the button is
-clicked unless you supply a custom
-string value to the \`data-sprk-spinner-aria-label\`
-attribute.
+- Button's Spinner state requires additional engineering.
+  - Add these attributes when spinning, and remove them when not:
+    - \`sprk-c-Button--has-spinner\` class.
+    - \`aria-label="Loading"\`, or relevant label.
+    - \`aria-live="polite"\`, or whatever politeness setting.
+    - \`disabled\` attribute
+  - Programmatically replace Button text with a Spark spinner in code sample.
+  Button text would return after loading finishes.
 
 ##### Guidelines
 - If a Button is in a form, but is not intended to
@@ -125,12 +128,16 @@ export const disabledQuaternary = () =>
 export const spinning = () =>
   `
   <button
-    class="sprk-c-Button"
-    data-sprk-spinner="click"
+    class="sprk-c-Button sprk-c-Button--has-spinner"
     data-id="button-spinner"
     aria-label="Loading"
+    aria-live="polite"
+    disabled
   >
-    <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
+    <div
+      class="sprk-c-Spinner sprk-c-Spinner--circle"
+      role="progressbar"
+      aria-valuetext="Loading"></div>
   </button>
   `;
 
@@ -143,15 +150,16 @@ spinning.story = {
 export const spinningSecondary = () =>
   `
   <button
-    class="sprk-c-Button sprk-c-Button--secondary"
-    data-sprk-spinner="click"
-    data-sprk-spinner-variant="primary"
+    class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--has-spinner"
     data-id="button-spinner-secondary"
     aria-label="Loading"
+    aria-live="polite"
+    disabled
   >
     <div
       class="sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--primary"
-    ></div>
+      role="progressbar"
+      aria-valuetext="Loading"></div>
   </button>
   `;
 
@@ -164,15 +172,15 @@ spinningSecondary.story = {
 export const spinningTertiary = () =>
   `
   <button
-    class="sprk-c-Button sprk-c-Button--tertiary"
-    data-sprk-spinner="click"
+    class="sprk-c-Button sprk-c-Button--tertiary sprk-c-Button--has-spinner"
     data-id="button-spinner-tertiary"
     aria-label="Loading"
     data-sprk-spinner-variant="secondary"
   >
     <div
       class="sprk-c-Spinner sprk-c-Spinner--secondary sprk-c-Spinner--circle"
-    ></div>
+      role="progressbar"
+      aria-valuetext="Loading"></div>
   </button>
   `;
 
@@ -185,15 +193,17 @@ spinningTertiary.story = {
 export const spinningQuaternary = () =>
   `
   <button
-    class="sprk-c-Button sprk-c-Button--quaternary"
-    data-sprk-spinner="click"
+    class="sprk-c-Button sprk-c-Button--quaternary sprk-c-Button--has-spinner"
     data-id="button-spinner-quaternary"
     aria-label="Loading"
     data-sprk-spinner-variant="dark"
+    aria-live="polite"
+    disabled
   >
     <div
       class="sprk-c-Spinner sprk-c-Spinner--dark sprk-c-Spinner--circle"
-    ></div>
+      role="progressbar"
+      aria-valuetext="Loading"></div>
   </button>
   `;
 
