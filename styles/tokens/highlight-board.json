@@ -39,12 +39,17 @@
       "color": {
         "comment": "The background color of the Highlight Board.",
         "value": "{white.value}",
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
       "content-box-color": {
         "comment": "The background color of the content box in the Highlight Board.",
         "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       }

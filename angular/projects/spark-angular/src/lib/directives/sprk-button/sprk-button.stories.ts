@@ -1,7 +1,8 @@
 import { SprkButtonModule } from './sprk-button.module';
-import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkButtonDirective } from './sprk-button.directive';
-import { markdownDocumentationLinkBuilder } from '../../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { SprkSpinnerModule } from '../../directives/sprk-spinner/sprk-spinner.module';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Button',
@@ -15,15 +16,14 @@ export default {
     info: `
 ${markdownDocumentationLinkBuilder('button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
-The Button component can use either a button (\`<button>\`)
-or anchor (\`<a>\`) HTML element. It is very important
-for accessibility to choose the correct element.
+\`sprkButton\` can either render as a button (\`<button>\`)
+or an anchor (\`<a>\`) element. It is very important
+for accessibility to choose the correct HTML element.
 
-- Button should use an \`<a>\` element if it navigates to a new page.
-- Button should use a \`<button>\` element if it is performing
-an action, such as: “Submit”, “Add”, “Join”,” etc.
-- A Button that does not go to a new page will almost
-always use a \`<button>\` element.
+- Render as a link (\`<a>\`) element if the button navigates to a new page.
+- Render as a button (\`<button>\`) element if
+it performs an action such as: “Submit”, “Add”, “Join”, etc.
+They typically do not navigate to a new page.
 
 ##### Accessibility
 - If a Button is using an \`<a>\` element, you
@@ -39,13 +39,16 @@ Instead use \`<button type=”submit”>\`
 - If a Button is Disabled, you must add the \`disabled\` attribute
 in addition to the \`sprk-is-Disabled\` class so that it doesn’t
 receive interaction.
+- Spinner state requires additional engineering.
+  - Use app state to conditionally render between button text and spinner.
+  - Add \`isSpinning\` on sprkButton directive when spinner is present
 `,
     docs: { iframeHeight: 100 },
   },
 };
 
 const modules = {
-  imports: [SprkButtonModule],
+  imports: [SprkButtonModule, SprkSpinnerModule],
 };
 
 export const primary = () => ({
@@ -212,7 +215,7 @@ export const spinning = () => {
         sprkButton
         [isSpinning]="true"
       >
-        Button
+        <div sprkSpinner></div>
       </button>
     `,
   };
@@ -234,7 +237,7 @@ export const spinningSecondary = () => {
         sprkButton
         [isSpinning]="true"
       >
-        Button
+        <div sprkSpinner variant="primary"></div>
       </button>
     `,
   };
@@ -256,7 +259,7 @@ export const spinningTertiary = () => {
         sprkButton
         [isSpinning]="true"
       >
-        Button
+        <div sprkSpinner variant="secondary"></div>
       </button>
     `,
   };
@@ -278,7 +281,7 @@ export const spinningQuaternary = () => {
         sprkButton
         [isSpinning]="true"
       >
-        Button
+        <div sprkSpinner variant="dark"></div>
       </button>
     `,
   };

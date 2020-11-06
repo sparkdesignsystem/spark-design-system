@@ -4,56 +4,56 @@
         "tiny": {
           "comment": "The spacing of the tiny Stack object.",
           "value": "{space.xs.value}",
-          "file": "settings",
+          "file": "object",
           "themable": true
         },
         "small": {
           "comment": "The spacing of the small Stack object.",
           "value": "{space.s.value}",
-          "file": "settings",
+          "file": "object",
           "themable": true
         },
         "medium": {
           "comment": "The spacing of the medium Stack object.",
           "value": "{space.m.value}",
-          "file": "settings",
+          "file": "object",
           "themable": true
         },
         "large": {
           "comment": "The spacing of the large Stack object.",
           "value": "{space.l.value}",
-          "file": "settings",
+          "file": "object",
           "themable": true
         },
         "huge": {
           "comment": "The spacing of the huge Stack object.",
           "value": "{space.xl.value}",
-          "file": "settings",
+          "file": "object",
           "themable": true
         },
         "misc": {
           "a": {
             "comment": "The spacing of the Misc A Stack object.",
             "value": "{space.misc.a.value}",
-            "file": "settings",
+            "file": "object",
             "themable": true
           },
           "b": {
             "comment": "The spacing of the Misc B Stack object.",
             "value": "{space.misc.b.value}",
-            "file": "settings",
+            "file": "object",
             "themable": true
           },
           "c": {
             "comment": "The spacing of the Misc C Stack object.",
             "value": "{space.misc.c.value}",
-            "file": "settings",
+            "file": "object",
             "themable": true
           },
           "d": {
             "comment": "The spacing of the Misc D Stack object.",
             "value": "{space.misc.d.value}",
-            "file": "settings",
+            "file": "object",
             "themable": true
           }
         }
@@ -67,7 +67,7 @@
           "attributes": {
             "category": "size"
           },
-          "file": "settings",
+          "file": "object",
           "themable": true
         },
         "xs": {
@@ -76,7 +76,7 @@
           "attributes": {
             "category": "size"
           },
-          "file": "settings",
+          "file": "object",
           "themable": true
         },
         "s": {
@@ -85,7 +85,7 @@
           "attributes": {
             "category": "size"
           },
-          "file": "settings",
+          "file": "object",
           "themable": true
         },
         "m": {
@@ -94,7 +94,7 @@
           "attributes": {
             "category": "size"
           },
-          "file": "settings",
+          "file": "object",
           "themable": true
         },
         "l": {
@@ -103,7 +103,7 @@
           "attributes": {
             "category": "size"
           },
-          "file": "settings",
+          "file": "object",
           "themable": true
         },
         "xl": {
@@ -112,7 +112,7 @@
           "attributes": {
             "category": "size"
           },
-          "file": "settings",
+          "file": "object",
           "themable": true
         }
       }

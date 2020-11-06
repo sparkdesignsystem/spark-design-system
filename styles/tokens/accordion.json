@@ -10,8 +10,8 @@
       "themable": true
     },
     "border": {
-      "comment": "The value of border for Dividers.",
-      "value": "{divider.border.value}",
+      "comment": "The border of Accordions.",
+      "value": "2px solid rgb(230, 230, 230)",
       "attributes": {
         "category": "content"
       },
@@ -75,6 +75,9 @@
       "active-color": {
         "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
         "value": "{purple.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
@@ -106,6 +109,9 @@
     "active-background-color": {
       "comment": "The background color used for hover and active on items in the Accordion.",
       "value": "{gray.value}",
+      "attributes": {
+        "category": "color"
+      },
       "file": "settings",
       "themable": true
     }

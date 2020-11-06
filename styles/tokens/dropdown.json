@@ -29,9 +29,36 @@
           "themable": true
         }
       },
+      "border-width": {
+        "comment": "The border size of the Dropdown.",
+        "value": "1px",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "border-style": {
+        "comment": "The border style of the Dropdown.",
+        "value": "solid",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "border-color": {
+        "comment": "The border color of the Dropdown.",
+        "value": "{gray.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "border": {
         "comment": "The border of the Dropdown.",
-        "value": "1px solid $sprk-gray",
+        "value": "{dropdown.border-width.value} {dropdown.border-style.value} {dropdown.border-color.value}",
         "attributes": {
           "category": "content"
         },
@@ -62,6 +89,9 @@
       "link-color": {
         "comment": "The color of the Dropdown links.",
         "value": "{black.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },

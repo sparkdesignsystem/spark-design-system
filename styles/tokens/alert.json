@@ -9,9 +9,36 @@
       "file": "settings",
       "themable": true
     },
+    "border-color": {
+      "comment": "Value for border color on the Alert component.",
+      "value": "{gray.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border-width": {
+      "comment": "Value for border size on the Alert component.",
+      "value": "2px",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border-style": {
+      "comment": "Value for border style on the Alert component.",
+      "value": "solid",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "border": {
       "comment": "Value for border on the Alert component.",
-      "value": "2px solid {gray.value}",
+      "value": "{alert.border-width.value} {alert.border-style.value} {alert.border-color.value}",
       "attributes": {
         "category": "content"
       },
@@ -88,20 +115,53 @@
       "icon-color": {
         "comment": "The color of the dismiss icon in the Alert component.",
         "value": "{black.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
       "icon-size": {
         "comment": "The size of the dismiss icon in the Alert component.",
         "value": "{space.m.value}",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       }
     },
     "icon": {
+      "margin-top": {
+        "comment": "The margin top for the icon in the Alert component.",
+        "value": "0",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "margin-bottom": {
+        "comment": "The margin bottom for the icon in the Alert component.",
+        "value": "0",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "margin-left": {
+        "comment": "The margin left for the icon in the Alert component.",
+        "value": "0",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "margin": {
         "comment": "The margin for the icon in the Alert component.",
-        "value": "0 {space.misc.a.value} 0 0",
+        "value": "{alert.icon.margin-top.value} {space.misc.a.value} {alert.icon.margin-bottom.value} {alert.icon.margin-left.value}",
         "attributes": {
           "category": "content"
         },
@@ -121,18 +181,27 @@
         "info": {
           "comment": "The icon color of the Information Alert component.",
           "value": "{blue.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         },
         "success": {
           "comment": "The icon color of the Success Alert component.",
           "value": "{green.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         },
         "fail": {
           "comment": "The icon color of the Fail Alert component.",
           "value": "{pink.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         }
@@ -169,6 +238,9 @@
       "color": {
         "comment": "The background color of the default Alert component.",
         "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
@@ -184,12 +256,18 @@
       "color-success": {
         "comment": "The background color of the Success Alert component.",
         "value": "{alert.bg.color.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       },
       "color-info": {
         "comment": "The background color of the Information Alert component.",
         "value": "{alert.bg.color.value}",
+        "attributes": {
+          "category": "color"
+        },
         "file": "settings",
         "themable": true
       }
@@ -199,18 +277,27 @@
         "fail": {
           "comment": "The value for the color property in the Fail Alert component.",
           "value": "{black.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         },
         "success": {
           "comment": "The value for the color property in the Success Alert component.",
           "value": "{black.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         },
         "info": {
           "comment": "The value for the color property in the Information Alert component.",
           "value": "{black.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         }

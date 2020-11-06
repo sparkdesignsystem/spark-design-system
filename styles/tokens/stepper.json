@@ -12,6 +12,9 @@
       "breakpoint": {
         "comment": "The minimum width at which the Stepper switches between narrow and wide layouts.",
         "value": "{split.breakpoint.xl.value}",
+        "attributes": {
+          "category": "size"
+        },
         "file": "settings",
         "themable": true
       },
@@ -38,18 +41,27 @@
           "color": {
             "comment": "The color of the border around the Stepper icon.",
             "value": "{black-tint.50.value}",
+            "attributes": {
+              "category": "color"
+            },
             "file": "settings",
             "themable": true
           },
           "color-selected": {
             "comment": "The color of the step icon when the step is selected in the Stepper.",
             "value": "{purple-dark.value}",
+            "attributes": {
+              "category": "color"
+            },
             "file": "settings",
             "themable": true
           },
           "color-selected-dark-bg": {
             "comment": "The color of the step icon in front of a dark background when the step is selected in the Stepper.",
             "value": "{purple-lightest.value}",
+            "attributes": {
+              "category": "color"
+            },
             "file": "settings",
             "themable": true
           }
@@ -75,18 +87,27 @@
         "color": {
           "comment": "The color of the step icon in the Stepper.",
           "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         },
         "color-hover": {
           "comment": "The color of the step icon in the Stepper when hovered.",
           "value": "{black-tint.50.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         },
         "color-selected": {
           "comment": "The color of the Stepper step icon when the step is selected.",
           "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
           "file": "settings",
           "themable": true
         },

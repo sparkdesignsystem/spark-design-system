@@ -5,7 +5,8 @@
     "group": "primary",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "deep-red": {
     "comment": "Darkest red for key branded moments throughout the product.",
@@ -13,7 +14,8 @@
     "group": "primary",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "mid-red": {
     "comment": "Mid red for key branded moments throughout the product.",
@@ -21,7 +23,8 @@
     "group": "primary",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "purple": {
     "comment": "Main purple for secondary actions and brand elements.",
@@ -29,7 +32,8 @@
     "group": "secondary",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "purple-dark": {
     "comment": "Dark purple for interactive elements. Can also be used for limited floods of ",
@@ -37,7 +41,8 @@
     "group": "secondary",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "purple-deep": {
     "comment": "Deep purple for interactive elements. Can also be used for limited floods of ",
@@ -45,7 +50,8 @@
     "group": "secondary",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "purple-light": {
     "comment": "Light purple for interactive elements.",
@@ -53,7 +59,8 @@
     "group": "secondary",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "purple-lightest": {
     "comment": "Lightest purple for interactive elements. Can also be used for limited floods of ",
@@ -61,7 +68,8 @@
     "group": "secondary",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "green": {
     "comment": "Use to communicate a positive status or message.",
@@ -69,7 +77,8 @@
     "group": "semantic",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "blue": {
     "comment": "Use to communicate an informative status or message.",
@@ -77,7 +86,8 @@
     "group": "semantic",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "pink": {
     "comment": "Use to communicate an error status or message.",
@@ -85,7 +95,8 @@
     "group": "semantic",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "yellow": {
     "comment": "Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this ",
@@ -93,7 +104,8 @@
     "group": "semantic",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "white": {
     "comment": "White for floods of color and accents, like backgrounds and cards.",
@@ -101,7 +113,8 @@
     "group": "neutral",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "black": {
     "comment": "Black for main text color, specifically in headline and body copy.",
@@ -109,7 +122,8 @@
     "group": "neutral",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "black-tint": {
     "90": {
@@ -119,7 +133,7 @@
       "attributes": {
         "category": "color"
       },
-      "type": "colors"
+      "file": "color"
     },
     "80": {
       "comment": "Black at 80%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
@@ -128,7 +142,7 @@
       "attributes": {
         "category": "color"
       },
-      "type": "colors"
+      "file": "color"
     },
     "70": {
       "comment": "Black at 70%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
@@ -137,7 +151,7 @@
       "attributes": {
         "category": "color"
       },
-      "type": "colors"
+      "file": "color"
     },
     "60": {
       "comment": "Black at 60%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
@@ -146,7 +160,7 @@
       "attributes": {
         "category": "color"
       },
-      "type": "colors"
+      "file": "color"
     },
     "50": {
       "comment": "Black at 50%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
@@ -155,7 +169,7 @@
       "attributes": {
         "category": "color"
       },
-      "type": "colors"
+      "file": "color"
     },
     "40": {
       "comment": "Black at 40%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
@@ -164,7 +178,7 @@
       "attributes": {
         "category": "color"
       },
-      "type": "colors"
+      "file": "color"
     },
     "30": {
       "comment": "Black at 30%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
@@ -173,7 +187,7 @@
       "attributes": {
         "category": "color"
       },
-      "type": "colors"
+      "file": "color"
     },
     "20": {
       "comment": "Black at 20%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
@@ -182,7 +196,7 @@
       "attributes": {
         "category": "color"
       },
-      "type": "colors"
+      "file": "color"
     },
     "10": {
       "comment": "Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
@@ -191,7 +205,7 @@
       "attributes": {
         "category": "color"
       },
-      "type": "colors"
+      "file": "color"
     }
   },
   "gray": {
@@ -200,7 +214,8 @@
     "group": "neutral",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "purple-navy": {
     "comment": "Color value for Purple Navy.",
@@ -208,7 +223,8 @@
     "group": "charts-graphs",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "lavender": {
     "comment": "Color value for Lavender.",
@@ -216,7 +232,8 @@
     "group": "charts-graphs",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "wisteria": {
     "comment": "Color value for Wisteria.",
@@ -224,7 +241,8 @@
     "group": "charts-graphs",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   },
   "magnolia": {
     "comment": "Color value for Magnolia.",
@@ -232,7 +250,8 @@
     "group": "charts-graphs",
     "attributes": {
       "category": "color"
-    }
+    },
+    "file": "color"
   }
 }
 
