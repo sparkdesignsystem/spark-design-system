@@ -14,6 +14,7 @@
       "value": "{white.value}",
       "attributes": {
         "category": "color"
+      },
       "file": "settings",
       "themable": true
     },
