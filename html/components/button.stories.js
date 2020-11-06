@@ -169,7 +169,7 @@ export const spinningSecondary = () =>
     disabled
   >
     <div
-    class="sprk-c-Spinner sprk-c-Spinner--circle"
+    class="sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--primary"
     role="progressbar"
     aria-valuetext="Loading"></div>
   </button>
