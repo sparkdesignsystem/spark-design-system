@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 06 Nov 2020 21:26:28 GMT
+ * Generated on Fri, 06 Nov 2020 22:26:31 GMT
  */
 
 export const AccordionMaxWidth = "53.125rem"; // The maximum width of Accordions.
@@ -179,18 +179,18 @@ export const CarouselArrowPositionBreakpoint = "31.25rem"; // The breakpoint for
 export const CarouselBreakpoint = "80rem"; // The breakpoint for the Carousel component.
 export const CarouselNarrowImageMaxWidth = "18.75rem"; // The maximum width of the image in the Carousel component.
 export const CenteredColumnWidth = "1232rem"; // Width value for the Centered Column layout container.
-export const Red = "#c8102e"; // Red for key branded moments throughout the product as our primary brand 
+export const Red = "#c8102e"; // Red for key branded moments throughout the product as our primary brand color.
 export const DeepRed = "#76232f"; // Darkest red for key branded moments throughout the product.
 export const MidRed = "#9d2235"; // Mid red for key branded moments throughout the product.
 export const Purple = "#603aa1"; // Main purple for secondary actions and brand elements.
-export const PurpleDark = "#3c3174"; // Dark purple for interactive elements. Can also be used for limited floods of 
-export const PurpleDeep = "#2e1166"; // Deep purple for interactive elements. Can also be used for limited floods of 
+export const PurpleDark = "#3c3174"; // Dark purple for interactive elements. Can also be used for limited floods of color.
+export const PurpleDeep = "#2e1166"; // Deep purple for interactive elements. Can also be used for limited floods of color.
 export const PurpleLight = "#9265d3"; // Light purple for interactive elements.
-export const PurpleLightest = "#e7e2f2"; // Lightest purple for interactive elements. Can also be used for limited floods of 
+export const PurpleLightest = "#e7e2f2"; // Lightest purple for interactive elements. Can also be used for limited floods of color.
 export const Green = "#298540"; // Use to communicate a positive status or message.
 export const Blue = "#1c6ef2"; // Use to communicate an informative status or message.
 export const Pink = "#e50158"; // Use to communicate an error status or message.
-export const Yellow = "#eda302"; // Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this 
+export const Yellow = "#eda302"; // Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this color.
 export const White = "#ffffff"; // White for floods of color and accents, like backgrounds and cards.
 export const Black = "#1c1b1a"; // Black for main text color, specifically in headline and body copy.
 export const BlackTint10 = "#e8e8e8"; // Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.
