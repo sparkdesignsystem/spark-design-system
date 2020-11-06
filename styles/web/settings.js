@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 06 Nov 2020 17:45:51 GMT
+ * Generated on Fri, 06 Nov 2020 18:53:04 GMT
  */
 
 export const AccordionMaxWidth = "53.125rem"; // The maximum width of Accordions.

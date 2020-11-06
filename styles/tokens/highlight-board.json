@@ -39,6 +39,7 @@
       "color": {
         "comment": "The background color of the Highlight Board.",
         "value": "{white.value}",
+        "attributes": {
           "category": "color"
         },
         "file": "settings",

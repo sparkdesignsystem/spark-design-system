@@ -11,36 +11,30 @@ StyleDictionary.registerFormat({
         if (tokenName === 'sprk-masthead-translate-y')
           tokenName = 'sprk-masthead-translateY';
 
-        // /*
-        //  * Check if the value includes a reference
-        //  * so that we can format the ref to a Sass Var.
-        //  */
+        /*
+         * Check if the value includes a reference
+         * so that we can format the ref to a Sass Var.
+         */
         const regex = /\{(.*?)\}/;
 
-        while (tokenValue.match(regex)) {
-          tokenValue = tokenValue.replace(regex, convert(tokenValue.match(regex)[1]));
-        }
-
         /*
-        * Formats a reference back into a scss var.
-        * black.value -> $sprk-black
-        */
-        function convert(str) {
+         * Formats a reference back into a scss var.
+         * black.value -> $sprk-black
+         */
+        const convert = (str) => {
           const strArr = str.split('.');
-          return `\$sprk-${strArr.slice(0, strArr.length - 1).join('-')}`;
+          return `$sprk-${strArr.slice(0, strArr.length - 1).join('-')}`;
+        };
+
+        while (tokenValue.match(regex)) {
+          tokenValue = tokenValue.replace(
+            regex,
+            convert(tokenValue.match(regex)[1]),
+          );
         }
 
         // Return formatted Sass var with comment.
         return `/// ${token.comment} \n$${tokenName}: ${tokenValue}${
-          token.themable ? ' !default' : ''
-        };`;
-
-        /*
-         * This only runs if the token value does not
-         * include any references to other Spark vars.
-         * @return value with comment.
-         */
-        return `/// ${token.comment} \n$${tokenName}: ${token.value}${
           token.themable ? ' !default' : ''
         };`;
       })
