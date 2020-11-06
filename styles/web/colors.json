@@ -439,7 +439,7 @@
       ]
     },
     "shadow-color": {
-      "comment": "The box shadow color value for the Button component",
+      "comment": "The box shadow color value for the Button component.",
       "value": "rgba(20, 20, 20, 0.08)",
       "attributes": {
         "category": "color",
@@ -448,7 +448,7 @@
       "file": "settings",
       "themable": true,
       "original": {
-        "comment": "The box shadow color value for the Button component",
+        "comment": "The box shadow color value for the Button component.",
         "value": "rgba(20, 20, 20, 0.08)",
         "attributes": {
           "category": "color"
@@ -727,13 +727,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Red for key branded moments throughout the product as our primary brand ",
       "value": "rgb(200, 16, 46)",
       "group": "primary",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-red",
     "path": [
@@ -747,13 +749,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Darkest red for key branded moments throughout the product.",
       "value": "rgb(118, 35, 47)",
       "group": "primary",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-deep-red",
     "path": [
@@ -767,13 +771,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Mid red for key branded moments throughout the product.",
       "value": "rgb(157, 34, 53)",
       "group": "primary",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-mid-red",
     "path": [
@@ -787,13 +793,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Main purple for secondary actions and brand elements.",
       "value": "rgb(96, 58, 161)",
       "group": "secondary",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-purple",
     "path": [
@@ -807,13 +815,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Dark purple for interactive elements. Can also be used for limited floods of ",
       "value": "rgb(60, 49, 116)",
       "group": "secondary",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-purple-dark",
     "path": [
@@ -827,13 +837,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Deep purple for interactive elements. Can also be used for limited floods of ",
       "value": "rgb(46, 17, 102)",
       "group": "secondary",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-purple-deep",
     "path": [
@@ -847,13 +859,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Light purple for interactive elements.",
       "value": "rgb(146, 101, 211)",
       "group": "secondary",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-purple-light",
     "path": [
@@ -867,13 +881,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Lightest purple for interactive elements. Can also be used for limited floods of ",
       "value": "rgb(231, 226, 242)",
       "group": "secondary",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-purple-lightest",
     "path": [
@@ -887,13 +903,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Use to communicate a positive status or message.",
       "value": "rgb(41, 133, 64)",
       "group": "semantic",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-green",
     "path": [
@@ -907,13 +925,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Use to communicate an informative status or message.",
       "value": "rgb(28, 110, 242)",
       "group": "semantic",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-blue",
     "path": [
@@ -927,13 +947,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Use to communicate an error status or message.",
       "value": "rgb(229, 1, 88)",
       "group": "semantic",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-pink",
     "path": [
@@ -947,13 +969,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this ",
       "value": "rgb(237, 163, 2)",
       "group": "semantic",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-yellow",
     "path": [
@@ -967,13 +991,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "White for floods of color and accents, like backgrounds and cards.",
       "value": "rgb(255, 255, 255)",
       "group": "neutral",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-white",
     "path": [
@@ -987,13 +1013,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Black for main text color, specifically in headline and body copy.",
       "value": "rgb(28, 27, 26)",
       "group": "neutral",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-black",
     "path": [
@@ -1009,7 +1037,7 @@
         "category": "color",
         "type": "10"
       },
-      "type": "colors",
+      "file": "color",
       "original": {
         "comment": "Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(232, 232, 232)",
@@ -1017,7 +1045,7 @@
         "attributes": {
           "category": "color"
         },
-        "type": "colors"
+        "file": "color"
       },
       "name": "sprk-black-tint-10",
       "path": [
@@ -1033,7 +1061,7 @@
         "category": "color",
         "type": "20"
       },
-      "type": "colors",
+      "file": "color",
       "original": {
         "comment": "Black at 20%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(210, 209, 209)",
@@ -1041,7 +1069,7 @@
         "attributes": {
           "category": "color"
         },
-        "type": "colors"
+        "file": "color"
       },
       "name": "sprk-black-tint-20",
       "path": [
@@ -1057,7 +1085,7 @@
         "category": "color",
         "type": "30"
       },
-      "type": "colors",
+      "file": "color",
       "original": {
         "comment": "Black at 30%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(186, 186, 186)",
@@ -1065,7 +1093,7 @@
         "attributes": {
           "category": "color"
         },
-        "type": "colors"
+        "file": "color"
       },
       "name": "sprk-black-tint-30",
       "path": [
@@ -1081,7 +1109,7 @@
         "category": "color",
         "type": "40"
       },
-      "type": "colors",
+      "file": "color",
       "original": {
         "comment": "Black at 40%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(164, 164, 163)",
@@ -1089,7 +1117,7 @@
         "attributes": {
           "category": "color"
         },
-        "type": "colors"
+        "file": "color"
       },
       "name": "sprk-black-tint-40",
       "path": [
@@ -1105,7 +1133,7 @@
         "category": "color",
         "type": "50"
       },
-      "type": "colors",
+      "file": "color",
       "original": {
         "comment": "Black at 50%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(141, 141, 140)",
@@ -1113,7 +1141,7 @@
         "attributes": {
           "category": "color"
         },
-        "type": "colors"
+        "file": "color"
       },
       "name": "sprk-black-tint-50",
       "path": [
@@ -1129,7 +1157,7 @@
         "category": "color",
         "type": "60"
       },
-      "type": "colors",
+      "file": "color",
       "original": {
         "comment": "Black at 60%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(119, 118, 118)",
@@ -1137,7 +1165,7 @@
         "attributes": {
           "category": "color"
         },
-        "type": "colors"
+        "file": "color"
       },
       "name": "sprk-black-tint-60",
       "path": [
@@ -1153,7 +1181,7 @@
         "category": "color",
         "type": "70"
       },
-      "type": "colors",
+      "file": "color",
       "original": {
         "comment": "Black at 70%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(96, 95, 94)",
@@ -1161,7 +1189,7 @@
         "attributes": {
           "category": "color"
         },
-        "type": "colors"
+        "file": "color"
       },
       "name": "sprk-black-tint-70",
       "path": [
@@ -1177,7 +1205,7 @@
         "category": "color",
         "type": "80"
       },
-      "type": "colors",
+      "file": "color",
       "original": {
         "comment": "Black at 80%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(73, 73, 72)",
@@ -1185,7 +1213,7 @@
         "attributes": {
           "category": "color"
         },
-        "type": "colors"
+        "file": "color"
       },
       "name": "sprk-black-tint-80",
       "path": [
@@ -1201,7 +1229,7 @@
         "category": "color",
         "type": "90"
       },
-      "type": "colors",
+      "file": "color",
       "original": {
         "comment": "Black at 90%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(50, 49, 48)",
@@ -1209,7 +1237,7 @@
         "attributes": {
           "category": "color"
         },
-        "type": "colors"
+        "file": "color"
       },
       "name": "sprk-black-tint-90",
       "path": [
@@ -1225,13 +1253,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Lightest gray. Use in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(247, 247, 247)",
       "group": "neutral",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-gray",
     "path": [
@@ -1245,13 +1275,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Color value for Purple Navy.",
       "value": "rgb(28, 1, 82)",
       "group": "charts-graphs",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-purple-navy",
     "path": [
@@ -1265,13 +1297,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Color value for Lavender.",
       "value": "rgb(190, 132, 247)",
       "group": "charts-graphs",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-lavender",
     "path": [
@@ -1285,13 +1319,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Color value for Wisteria.",
       "value": "rgb(222, 177, 253)",
       "group": "charts-graphs",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-wisteria",
     "path": [
@@ -1305,13 +1341,15 @@
     "attributes": {
       "category": "color"
     },
+    "file": "color",
     "original": {
       "comment": "Color value for Magnolia.",
       "value": "rgb(240, 218, 255)",
       "group": "charts-graphs",
       "attributes": {
         "category": "color"
-      }
+      },
+      "file": "color"
     },
     "name": "sprk-magnolia",
     "path": [

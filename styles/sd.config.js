@@ -20,11 +20,16 @@ module.exports = {
         },
         {
           format: 'themable-scss/web',
+          destination: '_space.scss',
+          filter: {
+            file: 'space',
+          },
+        },
+        {
+          format: 'themable-scss/web',
           destination: '_colors.scss',
           filter: {
-            attributes: {
-              category: 'color',
-            },
+            file: 'color',
           },
         },
         {

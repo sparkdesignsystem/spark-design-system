@@ -10,7 +10,7 @@
       "themable": true
     },
     "shadow-color": {
-      "comment": "The box shadow color value for the Button component",
+      "comment": "The box shadow color value for the Button component.",
       "value": "rgba(20, 20, 20, 0.08)",
       "attributes": {
         "category": "color"

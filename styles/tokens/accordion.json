@@ -10,8 +10,8 @@
       "themable": true
     },
     "border": {
-      "comment": "The value of border for Dividers.",
-      "value": "{divider.border.value}",
+      "comment": "The border of Accordions.",
+      "value": "2px solid rgb(230, 230, 230)",
       "attributes": {
         "category": "content"
       },

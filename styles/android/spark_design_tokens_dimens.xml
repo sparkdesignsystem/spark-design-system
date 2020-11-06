@@ -2,7 +2,7 @@
 
 <!--
   Do not edit directly
-  Generated on Tue, 03 Nov 2020 20:20:11 GMT
+  Generated on Fri, 06 Nov 2020 05:08:38 GMT
 -->
 <resources>
   <dimen name="sprk_accordion_max_width">850.00dp</dimen><!-- The maximum width of Accordions. -->

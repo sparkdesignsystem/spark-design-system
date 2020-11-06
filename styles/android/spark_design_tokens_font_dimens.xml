@@ -2,7 +2,7 @@
 
 <!--
   Do not edit directly
-  Generated on Tue, 03 Nov 2020 20:20:11 GMT
+  Generated on Fri, 06 Nov 2020 05:08:38 GMT
 -->
 <resources>
   <dimen name="sprk_alert_font_size">16.00sp</dimen><!-- The font size of the text in the content area of the Alert component. -->

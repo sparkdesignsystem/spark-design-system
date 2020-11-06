@@ -2,7 +2,7 @@
 
 <!--
   Do not edit directly
-  Generated on Tue, 03 Nov 2020 20:20:11 GMT
+  Generated on Fri, 06 Nov 2020 05:08:38 GMT
 -->
 <resources>
   <color name="sprk_accordion_summary_active_color">#ff603aa1</color><!-- The color of the icon in the summary when the Accordion item is open or hovered. -->
@@ -21,7 +21,7 @@
   <color name="sprk_alert_text_color_success">#ff1c1b1a</color><!-- The value for the color property in the Success Alert component. -->
   <color name="sprk_alert_text_color_info">#ff1c1b1a</color><!-- The value for the color property in the Information Alert component. -->
   <color name="sprk_btn_background_color">#ffc8102e</color><!-- The background color of the Button component. -->
-  <color name="sprk_btn_shadow_color">#14141414</color><!-- The box shadow color value for the Button component -->
+  <color name="sprk_btn_shadow_color">#14141414</color><!-- The box shadow color value for the Button component. -->
   <color name="sprk_btn_border_color">#ffc8102e</color><!-- The border color of the Button component. -->
   <color name="sprk_btn_text_color">#ffffffff</color><!-- The text color of the Button component. -->
   <color name="sprk_btn_hover_background_color">#ff9d2235</color><!-- The background color of the Button component on hover. -->

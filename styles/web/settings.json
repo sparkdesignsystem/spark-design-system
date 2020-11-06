@@ -25,7 +25,7 @@
       ]
     },
     "border": {
-      "comment": "The value of border for Dividers.",
+      "comment": "The border of Accordions.",
       "value": "2px solid rgb(230, 230, 230)",
       "attributes": {
         "category": "content",
@@ -34,8 +34,8 @@
       "file": "settings",
       "themable": true,
       "original": {
-        "comment": "The value of border for Dividers.",
-        "value": "{divider.border.value}",
+        "comment": "The border of Accordions.",
+        "value": "2px solid rgb(230, 230, 230)",
         "attributes": {
           "category": "content"
         },
@@ -1422,7 +1422,7 @@
       ]
     },
     "shadow-color": {
-      "comment": "The box shadow color value for the Button component",
+      "comment": "The box shadow color value for the Button component.",
       "value": "rgba(20, 20, 20, 0.08)",
       "attributes": {
         "category": "color",
@@ -1431,7 +1431,7 @@
       "file": "settings",
       "themable": true,
       "original": {
-        "comment": "The box shadow color value for the Button component",
+        "comment": "The box shadow color value for the Button component.",
         "value": "rgba(20, 20, 20, 0.08)",
         "attributes": {
           "category": "color"
@@ -3747,30 +3747,7 @@
     },
     "shadow-wide-viewport": {
       "comment": "The box shadow of the Card on wide viewports.",
-      "value": {
-        "comment": "The box shadow color of the Card on wide viewports.",
-        "value": "rgba(0, 0, 0, 0.08)",
-        "attributes": {
-          "category": "color",
-          "type": "shadow-color-wide-viewport"
-        },
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The box shadow color of the Card on wide viewports.",
-          "value": "rgba(0, 0, 0, 0.08)",
-          "attributes": {
-            "category": "color"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-card-shadow-color-wide-viewport",
-        "path": [
-          "card",
-          "shadow-color-wide-viewport"
-        ]
-      },
+      "value": "0 3px 18px rgba(0, 0, 0, 0.08)",
       "attributes": {
         "category": "content",
         "type": "shadow-wide-viewport"
@@ -3779,7 +3756,7 @@
       "themable": true,
       "original": {
         "comment": "The box shadow of the Card on wide viewports.",
-        "value": "0 3px 18px {card.shadow-color-wide-viewport}",
+        "value": "0 3px 18px {card.shadow-color-wide-viewport.value}",
         "attributes": {
           "category": "content"
         },
@@ -3842,30 +3819,7 @@
     },
     "shadow-standout": {
       "comment": "The box shadow of the Standout Card variant on narrow viewports.",
-      "value": {
-        "comment": "The box shadow color of the Standout Card variant on narrow viewports.",
-        "value": "rgba(0, 0, 0, 0.1)",
-        "file": "settings",
-        "attributes": {
-          "category": "color",
-          "type": "shadow-color-standout"
-        },
-        "themable": true,
-        "original": {
-          "comment": "The box shadow color of the Standout Card variant on narrow viewports.",
-          "value": "rgba(0, 0, 0, 0.1)",
-          "file": "settings",
-          "attributes": {
-            "category": "color"
-          },
-          "themable": true
-        },
-        "name": "sprk-card-shadow-color-standout",
-        "path": [
-          "card",
-          "shadow-color-standout"
-        ]
-      },
+      "value": "0 4px 20px 2px rgba(0, 0, 0, 0.1)",
       "attributes": {
         "category": "content",
         "type": "shadow-standout"
@@ -3874,7 +3828,7 @@
       "themable": true,
       "original": {
         "comment": "The box shadow of the Standout Card variant on narrow viewports.",
-        "value": "0 4px 20px 2px {card.shadow-color-standout}",
+        "value": "0 4px 20px 2px {card.shadow-color-standout.value}",
         "attributes": {
           "category": "content"
         },
@@ -3889,30 +3843,7 @@
     },
     "shadow-standout-wide-viewport": {
       "comment": "The box shadow of the Standout Card variant on wide viewports.",
-      "value": {
-        "comment": "The box shadow color of the Standout Card variant on wide viewports.",
-        "value": "rgba(0, 0, 0, 0.1)",
-        "file": "settings",
-        "attributes": {
-          "category": "color",
-          "type": "shadow-color-standout-wide-viewport"
-        },
-        "themable": true,
-        "original": {
-          "comment": "The box shadow color of the Standout Card variant on wide viewports.",
-          "value": "rgba(0, 0, 0, 0.1)",
-          "file": "settings",
-          "attributes": {
-            "category": "color"
-          },
-          "themable": true
-        },
-        "name": "sprk-card-shadow-color-standout-wide-viewport",
-        "path": [
-          "card",
-          "shadow-color-standout-wide-viewport"
-        ]
-      },
+      "value": "0 4px 40px 2px rgba(0, 0, 0, 0.1)",
       "file": "settings",
       "attributes": {
         "category": "content",
@@ -3921,7 +3852,7 @@
       "themable": true,
       "original": {
         "comment": "The box shadow of the Standout Card variant on wide viewports.",
-        "value": "0 4px 40px 2px {card.shadow-color-standout-wide-viewport}",
+        "value": "0 4px 40px 2px {card.shadow-color-standout-wide-viewport.value}",
         "file": "settings",
         "attributes": {
           "category": "content"
@@ -6527,32 +6458,7 @@
       },
       "label-top": {
         "comment": "The top value for Huge Input labels. This adjusts how far the label is from the top of the container.",
-        "value": {
-          "comment": "The height value for Huge Inputs.",
-          "value": "64px",
-          "attributes": {
-            "category": "size",
-            "type": "huge",
-            "item": "height"
-          },
-          "file": "settings",
-          "themable": true,
-          "original": {
-            "comment": "The height value for Huge Inputs.",
-            "value": "{text-input.huge.height.value}",
-            "attributes": {
-              "category": "size"
-            },
-            "file": "settings",
-            "themable": true
-          },
-          "name": "sprk-input-huge-height",
-          "path": [
-            "input",
-            "huge",
-            "height"
-          ]
-        },
+        "value": "64px / 3",
         "attributes": {
           "category": "content",
           "type": "huge",
@@ -7736,32 +7642,7 @@
       },
       "label-top": {
         "comment": "Todo deprecate, The top value for Huge Input labels. This adjusts how far the label is from the top of the container.",
-        "value": {
-          "comment": "The height value for Huge Inputs.",
-          "value": "64px",
-          "attributes": {
-            "category": "size",
-            "type": "huge",
-            "item": "height"
-          },
-          "file": "settings",
-          "themable": true,
-          "original": {
-            "comment": "The height value for Huge Inputs.",
-            "value": "{text-input.huge.height.value}",
-            "attributes": {
-              "category": "size"
-            },
-            "file": "settings",
-            "themable": true
-          },
-          "name": "sprk-input-huge-height",
-          "path": [
-            "input",
-            "huge",
-            "height"
-          ]
-        },
+        "value": "64px / 3",
         "attributes": {
           "category": "content",
           "type": "huge",
@@ -7771,7 +7652,7 @@
         "themable": true,
         "original": {
           "comment": "Todo deprecate, The top value for Huge Input labels. This adjusts how far the label is from the top of the container.",
-          "value": "{input.huge.height} / 3",
+          "value": "{input.huge.height.value} / 3",
           "attributes": {
             "category": "content"
           },
@@ -8548,32 +8429,7 @@
       },
       "icon-margin-top": {
         "comment": "The margin-top value for icons in Huge Select Inputs.",
-        "value": {
-          "comment": "The height value for Huge Inputs.",
-          "value": "64px",
-          "attributes": {
-            "category": "size",
-            "type": "huge",
-            "item": "height"
-          },
-          "file": "settings",
-          "themable": true,
-          "original": {
-            "comment": "The height value for Huge Inputs.",
-            "value": "{text-input.huge.height.value}",
-            "attributes": {
-              "category": "size"
-            },
-            "file": "settings",
-            "themable": true
-          },
-          "name": "sprk-input-huge-height",
-          "path": [
-            "input",
-            "huge",
-            "height"
-          ]
-        },
+        "value": "-((64px - 16px) / 2 + 16px)",
         "attributes": {
           "category": "content",
           "type": "huge",
@@ -8583,7 +8439,7 @@
         "themable": true,
         "original": {
           "comment": "The margin-top value for icons in Huge Select Inputs.",
-          "value": "-(({input.huge.height} - {icon.m.value}) / 2 + {icon.m.value})",
+          "value": "-(({input.huge.height.value} - {icon.m.value}) / 2 + {icon.m.value})",
           "attributes": {
             "category": "content"
           },
@@ -13556,36 +13412,7 @@
         },
         "border-bottom": {
           "comment": "The underline style of visited Simple Links on hover.",
-          "value": {
-            "comment": "The underline color value of Simple Links on hover.",
-            "value": "rgb(200, 16, 46)",
-            "attributes": {
-              "category": "color",
-              "type": "simple",
-              "item": "hover",
-              "subitem": "underline",
-              "state": "color"
-            },
-            "file": "settings",
-            "themable": true,
-            "original": {
-              "comment": "The underline color value of Simple Links on hover.",
-              "value": "{red.value}",
-              "attributes": {
-                "category": "color"
-              },
-              "file": "settings",
-              "themable": true
-            },
-            "name": "sprk-link-simple-hover-underline-color",
-            "path": [
-              "link",
-              "simple",
-              "hover",
-              "underline",
-              "color"
-            ]
-          },
+          "value": "0.125rem solid rgb(200, 16, 46)",
           "attributes": {
             "category": "content",
             "type": "simple",
@@ -13596,7 +13423,7 @@
           "themable": true,
           "original": {
             "comment": "The underline style of visited Simple Links on hover.",
-            "value": "{link.simple.hover.underline.width.value} {link.border.bottom-style} {link.simple.hover.underline.color}",
+            "value": "{link.simple.hover.underline.width.value} {link.border.bottom-style.value} {link.simple.hover.underline.color.value}",
             "attributes": {
               "category": "content"
             },
@@ -13695,34 +13522,7 @@
       },
       "border-bottom": {
         "comment": "The underline style of Simple Links.",
-        "value": {
-          "comment": "The underline color value of Simple Links.",
-          "value": "transparent",
-          "attributes": {
-            "category": "content",
-            "type": "simple",
-            "item": "underline",
-            "subitem": "color"
-          },
-          "file": "settings",
-          "themable": true,
-          "original": {
-            "comment": "The underline color value of Simple Links.",
-            "value": "transparent",
-            "attributes": {
-              "category": "content"
-            },
-            "file": "settings",
-            "themable": true
-          },
-          "name": "sprk-link-simple-underline-color",
-          "path": [
-            "link",
-            "simple",
-            "underline",
-            "color"
-          ]
-        },
+        "value": "0.125rem solid transparent",
         "attributes": {
           "category": "content",
           "type": "simple",
@@ -13732,7 +13532,7 @@
         "themable": true,
         "original": {
           "comment": "The underline style of Simple Links.",
-          "value": "{link.simple.underline.width.value} {link.border.bottom-style} {link.simple.underline.color}",
+          "value": "{link.simple.underline.width.value} {link.border.bottom-style.value} {link.simple.underline.color.value}",
           "attributes": {
             "category": "content"
           },
@@ -13980,36 +13780,7 @@
         },
         "border-bottom": {
           "comment": "The underline style of Light Links on hover.",
-          "value": {
-            "comment": "The underline color value of Light Links on hover.",
-            "value": "rgb(255, 255, 255)",
-            "attributes": {
-              "category": "color",
-              "type": "light",
-              "item": "hover",
-              "subitem": "underline",
-              "state": "color"
-            },
-            "file": "settings",
-            "themable": true,
-            "original": {
-              "comment": "The underline color value of Light Links on hover.",
-              "value": "{white.value}",
-              "attributes": {
-                "category": "color"
-              },
-              "file": "settings",
-              "themable": true
-            },
-            "name": "sprk-link-light-hover-underline-color",
-            "path": [
-              "link",
-              "light",
-              "hover",
-              "underline",
-              "color"
-            ]
-          },
+          "value": "0.125rem solid rgb(255, 255, 255)",
           "attributes": {
             "category": "content",
             "type": "light",
@@ -14020,7 +13791,7 @@
           "themable": true,
           "original": {
             "comment": "The underline style of Light Links on hover.",
-            "value": "{link.light.hover.underline.width.value} {link.border.bottom-style} {link.light.hover.underline.color}",
+            "value": "{link.light.hover.underline.width.value} {link.border.bottom-style.value} {link.light.hover.underline.color.value}",
             "attributes": {
               "category": "content"
             },
@@ -14119,34 +13890,7 @@
       },
       "border-bottom": {
         "comment": "The underline style of Light Links.",
-        "value": {
-          "comment": "The underline color value of Light Links.",
-          "value": "transparent",
-          "attributes": {
-            "category": "content",
-            "type": "light",
-            "item": "underline",
-            "subitem": "color"
-          },
-          "file": "settings",
-          "themable": true,
-          "original": {
-            "comment": "The underline color value of Light Links.",
-            "value": "transparent",
-            "attributes": {
-              "category": "content"
-            },
-            "file": "settings",
-            "themable": true
-          },
-          "name": "sprk-link-light-underline-color",
-          "path": [
-            "link",
-            "light",
-            "underline",
-            "color"
-          ]
-        },
+        "value": "0.125rem solid transparent",
         "attributes": {
           "category": "content",
           "type": "light",
@@ -14156,7 +13900,7 @@
         "themable": true,
         "original": {
           "comment": "The underline style of Light Links.",
-          "value": "{link.light.underline.width.value} {link.border.bottom-style} {link.light.underline.color}",
+          "value": "{link.light.underline.width.value} {link.border.bottom-style.value} {link.light.underline.color.value}",
           "attributes": {
             "category": "content"
           },
@@ -17544,806 +17288,6 @@
       "border-radius"
     ]
   },
-  "space": {
-    "inset": {
-      "xs": {
-        "comment": "Value for the extra small inset space.",
-        "value": "4px 4px 4px 4px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "inset",
-          "item": "xs"
-        },
-        "original": {
-          "comment": "Value for the extra small inset space.",
-          "value": "4px 4px 4px 4px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-inset-xs",
-        "path": [
-          "space",
-          "inset",
-          "xs"
-        ]
-      },
-      "s": {
-        "comment": "Value for the small inset space.",
-        "value": "8px 8px 8px 8px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "inset",
-          "item": "s"
-        },
-        "original": {
-          "comment": "Value for the small inset space.",
-          "value": "8px 8px 8px 8px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-inset-s",
-        "path": [
-          "space",
-          "inset",
-          "s"
-        ]
-      },
-      "m": {
-        "comment": "Value for the medium inset space.",
-        "value": "16px 16px 16px 16px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "inset",
-          "item": "m"
-        },
-        "original": {
-          "comment": "Value for the medium inset space.",
-          "value": "16px 16px 16px 16px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-inset-m",
-        "path": [
-          "space",
-          "inset",
-          "m"
-        ]
-      },
-      "l": {
-        "comment": "Value for the large inset space.",
-        "value": "32px 32px 32px 32px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "inset",
-          "item": "l"
-        },
-        "original": {
-          "comment": "Value for the large inset space.",
-          "value": "32px 32px 32px 32px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-inset-l",
-        "path": [
-          "space",
-          "inset",
-          "l"
-        ]
-      },
-      "xl": {
-        "comment": "Value for the extra large inset space.",
-        "value": "64px 64px 64px 64px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "inset",
-          "item": "xl"
-        },
-        "original": {
-          "comment": "Value for the extra large inset space.",
-          "value": "64px 64px 64px 64px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-inset-xl",
-        "path": [
-          "space",
-          "inset",
-          "xl"
-        ]
-      },
-      "short": {
-        "xs": {
-          "comment": "Value for the extra small inset short space.",
-          "value": "2px 4px 2px 4px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size",
-            "type": "inset",
-            "item": "short",
-            "subitem": "xs"
-          },
-          "original": {
-            "comment": "Value for the extra small inset short space.",
-            "value": "2px 4px 2px 4px",
-            "file": "settings",
-            "themable": true,
-            "attributes": {
-              "category": "size"
-            }
-          },
-          "name": "sprk-space-inset-short-xs",
-          "path": [
-            "space",
-            "inset",
-            "short",
-            "xs"
-          ]
-        },
-        "s": {
-          "comment": "Value for the small inset short space.",
-          "value": "4px 8px 4px 8px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size",
-            "type": "inset",
-            "item": "short",
-            "subitem": "s"
-          },
-          "original": {
-            "comment": "Value for the small inset short space.",
-            "value": "4px 8px 4px 8px",
-            "file": "settings",
-            "themable": true,
-            "attributes": {
-              "category": "size"
-            }
-          },
-          "name": "sprk-space-inset-short-s",
-          "path": [
-            "space",
-            "inset",
-            "short",
-            "s"
-          ]
-        },
-        "m": {
-          "comment": "Value for the medium inset short space.",
-          "value": "8px 16px 8px 16px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size",
-            "type": "inset",
-            "item": "short",
-            "subitem": "m"
-          },
-          "original": {
-            "comment": "Value for the medium inset short space.",
-            "value": "8px 16px 8px 16px",
-            "file": "settings",
-            "themable": true,
-            "attributes": {
-              "category": "size"
-            }
-          },
-          "name": "sprk-space-inset-short-m",
-          "path": [
-            "space",
-            "inset",
-            "short",
-            "m"
-          ]
-        },
-        "l": {
-          "comment": "Value for the large inset short space.",
-          "value": "16px 32px 16px 32px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size",
-            "type": "inset",
-            "item": "short",
-            "subitem": "l"
-          },
-          "original": {
-            "comment": "Value for the large inset short space.",
-            "value": "16px 32px 16px 32px",
-            "file": "settings",
-            "themable": true,
-            "attributes": {
-              "category": "size"
-            }
-          },
-          "name": "sprk-space-inset-short-l",
-          "path": [
-            "space",
-            "inset",
-            "short",
-            "l"
-          ]
-        },
-        "xl": {
-          "comment": "Value for the extra large inset short space.",
-          "value": "32px 64px 32px 64px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size",
-            "type": "inset",
-            "item": "short",
-            "subitem": "xl"
-          },
-          "original": {
-            "comment": "Value for the extra large inset short space.",
-            "value": "32px 64px 32px 64px",
-            "file": "settings",
-            "themable": true,
-            "attributes": {
-              "category": "size"
-            }
-          },
-          "name": "sprk-space-inset-short-xl",
-          "path": [
-            "space",
-            "inset",
-            "short",
-            "xl"
-          ]
-        }
-      },
-      "tall": {
-        "xs": {
-          "comment": "Value for the extra small inset tall space.",
-          "value": "6px 4px 6px 4px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size",
-            "type": "inset",
-            "item": "tall",
-            "subitem": "xs"
-          },
-          "original": {
-            "comment": "Value for the extra small inset tall space.",
-            "value": "6px 4px 6px 4px",
-            "file": "settings",
-            "themable": true,
-            "attributes": {
-              "category": "size"
-            }
-          },
-          "name": "sprk-space-inset-tall-xs",
-          "path": [
-            "space",
-            "inset",
-            "tall",
-            "xs"
-          ]
-        },
-        "s": {
-          "comment": "Value for the small inset tall space.",
-          "value": "12px 8px 12px 8px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size",
-            "type": "inset",
-            "item": "tall",
-            "subitem": "s"
-          },
-          "original": {
-            "comment": "Value for the small inset tall space.",
-            "value": "12px 8px 12px 8px",
-            "file": "settings",
-            "themable": true,
-            "attributes": {
-              "category": "size"
-            }
-          },
-          "name": "sprk-space-inset-tall-s",
-          "path": [
-            "space",
-            "inset",
-            "tall",
-            "s"
-          ]
-        },
-        "m": {
-          "comment": "Value for the medium inset tall space.",
-          "value": "24px 16px 24px 16px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size",
-            "type": "inset",
-            "item": "tall",
-            "subitem": "m"
-          },
-          "original": {
-            "comment": "Value for the medium inset tall space.",
-            "value": "24px 16px 24px 16px",
-            "file": "settings",
-            "themable": true,
-            "attributes": {
-              "category": "size"
-            }
-          },
-          "name": "sprk-space-inset-tall-m",
-          "path": [
-            "space",
-            "inset",
-            "tall",
-            "m"
-          ]
-        },
-        "l": {
-          "comment": "Value for the large inset tall space.",
-          "value": "48px 32px 48px 32px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size",
-            "type": "inset",
-            "item": "tall",
-            "subitem": "l"
-          },
-          "original": {
-            "comment": "Value for the large inset tall space.",
-            "value": "48px 32px 48px 32px",
-            "file": "settings",
-            "themable": true,
-            "attributes": {
-              "category": "size"
-            }
-          },
-          "name": "sprk-space-inset-tall-l",
-          "path": [
-            "space",
-            "inset",
-            "tall",
-            "l"
-          ]
-        },
-        "xl": {
-          "comment": "Value for the extra large inset tall space.",
-          "value": "96px 64px 96px 64px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size",
-            "type": "inset",
-            "item": "tall",
-            "subitem": "xl"
-          },
-          "original": {
-            "comment": "Value for the extra large inset tall space.",
-            "value": "96px 64px 96px 64px",
-            "file": "settings",
-            "themable": true,
-            "attributes": {
-              "category": "size"
-            }
-          },
-          "name": "sprk-space-inset-tall-xl",
-          "path": [
-            "space",
-            "inset",
-            "tall",
-            "xl"
-          ]
-        }
-      }
-    },
-    "xs": {
-      "comment": "Value for the extra small space setting.",
-      "value": "4px",
-      "file": "settings",
-      "themable": true,
-      "attributes": {
-        "category": "size",
-        "type": "xs"
-      },
-      "original": {
-        "comment": "Value for the extra small space setting.",
-        "value": "4px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size"
-        }
-      },
-      "name": "sprk-space-xs",
-      "path": [
-        "space",
-        "xs"
-      ]
-    },
-    "s": {
-      "comment": "Value for the small space setting.",
-      "value": "8px",
-      "file": "settings",
-      "themable": true,
-      "attributes": {
-        "category": "size",
-        "type": "s"
-      },
-      "original": {
-        "comment": "Value for the small space setting.",
-        "value": "8px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size"
-        }
-      },
-      "name": "sprk-space-s",
-      "path": [
-        "space",
-        "s"
-      ]
-    },
-    "m": {
-      "comment": "Value for the medium space setting.",
-      "value": "16px",
-      "file": "settings",
-      "themable": true,
-      "attributes": {
-        "category": "size",
-        "type": "m"
-      },
-      "original": {
-        "comment": "Value for the medium space setting.",
-        "value": "16px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size"
-        }
-      },
-      "name": "sprk-space-m",
-      "path": [
-        "space",
-        "m"
-      ]
-    },
-    "l": {
-      "comment": "Value for the large space setting.",
-      "value": "32px",
-      "file": "settings",
-      "themable": true,
-      "attributes": {
-        "category": "size",
-        "type": "l"
-      },
-      "original": {
-        "comment": "Value for the large space setting.",
-        "value": "32px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size"
-        }
-      },
-      "name": "sprk-space-l",
-      "path": [
-        "space",
-        "l"
-      ]
-    },
-    "xl": {
-      "comment": "Value for the extra large space setting.",
-      "value": "64px",
-      "file": "settings",
-      "themable": true,
-      "attributes": {
-        "category": "size",
-        "type": "xl"
-      },
-      "original": {
-        "comment": "Value for the extra large space setting.",
-        "value": "64px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size"
-        }
-      },
-      "name": "sprk-space-xl",
-      "path": [
-        "space",
-        "xl"
-      ]
-    },
-    "h": {
-      "comment": "Value for the huge space setting.",
-      "value": "64px",
-      "file": "settings",
-      "themable": true,
-      "attributes": {
-        "category": "size",
-        "type": "h"
-      },
-      "original": {
-        "comment": "Value for the huge space setting.",
-        "value": "{space.xl.value}",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size"
-        }
-      },
-      "name": "sprk-space-h",
-      "path": [
-        "space",
-        "h"
-      ]
-    },
-    "misc": {
-      "a": {
-        "comment": "Value for the misc a space setting.",
-        "value": "24px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "misc",
-          "item": "a"
-        },
-        "original": {
-          "comment": "Value for the misc a space setting.",
-          "value": "24px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-misc-a",
-        "path": [
-          "space",
-          "misc",
-          "a"
-        ]
-      },
-      "b": {
-        "comment": "Value for the misc b space setting.",
-        "value": "40px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "misc",
-          "item": "b"
-        },
-        "original": {
-          "comment": "Value for the misc b space setting.",
-          "value": "40px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-misc-b",
-        "path": [
-          "space",
-          "misc",
-          "b"
-        ]
-      },
-      "c": {
-        "comment": "Value for the misc c space setting.",
-        "value": "48px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "misc",
-          "item": "c"
-        },
-        "original": {
-          "comment": "Value for the misc c space setting.",
-          "value": "48px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-misc-c",
-        "path": [
-          "space",
-          "misc",
-          "c"
-        ]
-      },
-      "d": {
-        "comment": "Value for the misc d large space setting.",
-        "value": "80px",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "misc",
-          "item": "d"
-        },
-        "original": {
-          "comment": "Value for the misc d large space setting.",
-          "value": "80px",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-misc-d",
-        "path": [
-          "space",
-          "misc",
-          "d"
-        ]
-      }
-    },
-    "stack": {
-      "xs": {
-        "comment": "Value for the extra small inset short space.",
-        "value": "0 0 4px 0",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "stack",
-          "item": "xs"
-        },
-        "original": {
-          "comment": "Value for the extra small inset short space.",
-          "value": "0 0 4px 0",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-stack-xs",
-        "path": [
-          "space",
-          "stack",
-          "xs"
-        ]
-      },
-      "s": {
-        "comment": "Value for the small inset short space.",
-        "value": "0 0 8px 0",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "stack",
-          "item": "s"
-        },
-        "original": {
-          "comment": "Value for the small inset short space.",
-          "value": "0 0 8px 0",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-stack-s",
-        "path": [
-          "space",
-          "stack",
-          "s"
-        ]
-      },
-      "m": {
-        "comment": "Value for the medium inset short space.",
-        "value": "0 0 16px 0",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "stack",
-          "item": "m"
-        },
-        "original": {
-          "comment": "Value for the medium inset short space.",
-          "value": "0 0 16px 0",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-stack-m",
-        "path": [
-          "space",
-          "stack",
-          "m"
-        ]
-      },
-      "l": {
-        "comment": "Value for the large inset short space.",
-        "value": "0 0 32px 0",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "stack",
-          "item": "l"
-        },
-        "original": {
-          "comment": "Value for the large inset short space.",
-          "value": "0 0 32px 0",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-stack-l",
-        "path": [
-          "space",
-          "stack",
-          "l"
-        ]
-      },
-      "xl": {
-        "comment": "Value for the extra large inset short space.",
-        "value": "0 0 64px 0",
-        "file": "settings",
-        "themable": true,
-        "attributes": {
-          "category": "size",
-          "type": "stack",
-          "item": "xl"
-        },
-        "original": {
-          "comment": "Value for the extra large inset short space.",
-          "value": "0 0 64px 0",
-          "file": "settings",
-          "themable": true,
-          "attributes": {
-            "category": "size"
-          }
-        },
-        "name": "sprk-space-stack-xl",
-        "path": [
-          "space",
-          "stack",
-          "xl"
-        ]
-      }
-    }
-  },
   "spinner": {
     "size": {
       "comment": "The height and width of Spinners.",
@@ -19414,12 +18358,12 @@
       },
       "left": {
         "comment": "The left setting of the step icon in the Stepper.",
-        "value": "-((32px + (16px + 2px / 2)))",
+        "value": "-((32px + 16px + 2px / 2))",
         "file": "settings",
         "themable": false,
         "original": {
           "comment": "The left setting of the step icon in the Stepper.",
-          "value": "-(({stepper.bar.left-inset.value} + ({stepper.icon.radius.value})))",
+          "value": "-(({stepper.bar.left-inset.value} + {stepper.icon.radius.value}))",
           "file": "settings",
           "themable": false
         },

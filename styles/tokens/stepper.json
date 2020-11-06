@@ -175,7 +175,7 @@
         },
         "left": {
           "comment": "The left setting of the step icon in the Stepper.",
-          "value": "-(({stepper.bar.left-inset.value} + ({stepper.icon.radius.value})))",
+          "value": "-(({stepper.bar.left-inset.value} + {stepper.icon.radius.value}))",
           "file": "settings",
           "themable": false
         }
