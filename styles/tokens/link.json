@@ -157,7 +157,7 @@
         },
         "border-bottom": {
           "comment": "The underline style of visited Simple Links on hover.",
-          "value": "{link.simple.hover.underline.width.value} {link.border.bottom-style} {link.simple.hover.underline.color}",
+          "value": "{link.simple.hover.underline.width.value} {link.border.bottom-style.value} {link.simple.hover.underline.color.value}",
           "attributes": {
             "category": "content"
           },
@@ -193,7 +193,7 @@
       },
       "border-bottom": {
         "comment": "The underline style of Simple Links.",
-        "value": "{link.simple.underline.width.value} {link.border.bottom-style} {link.simple.underline.color}",
+        "value": "{link.simple.underline.width.value} {link.border.bottom-style.value} {link.simple.underline.color.value}",
         "attributes": {
           "category": "content"
         },
@@ -278,7 +278,7 @@
         },
         "border-bottom": {
           "comment": "The underline style of Light Links on hover.",
-          "value": "{link.light.hover.underline.width.value} {link.border.bottom-style} {link.light.hover.underline.color}",
+          "value": "{link.light.hover.underline.width.value} {link.border.bottom-style.value} {link.light.hover.underline.color.value}",
           "attributes": {
             "category": "content"
           },
@@ -314,7 +314,7 @@
       },
       "border-bottom": {
         "comment": "The underline style of Light Links.",
-        "value": "{link.light.underline.width.value} {link.border.bottom-style} {link.light.underline.color}",
+        "value": "{link.light.underline.width.value} {link.border.bottom-style.value} {link.light.underline.color.value}",
         "attributes": {
           "category": "content"
         },

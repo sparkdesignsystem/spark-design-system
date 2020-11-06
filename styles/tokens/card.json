@@ -35,7 +35,7 @@
       },
       "shadow-wide-viewport": {
         "comment": "The box shadow of the Card on wide viewports.",
-        "value": "0 3px 18px {card.shadow-color-wide-viewport}",
+        "value": "0 3px 18px {card.shadow-color-wide-viewport.value}",
         "attributes": {
           "category": "content"
         },
@@ -62,7 +62,7 @@
       },
       "shadow-standout": {
         "comment": "The box shadow of the Standout Card variant on narrow viewports.",
-        "value": "0 4px 20px 2px {card.shadow-color-standout}",
+        "value": "0 4px 20px 2px {card.shadow-color-standout.value}",
         "attributes": {
           "category": "content"
         },
@@ -71,7 +71,7 @@
       },
       "shadow-standout-wide-viewport": {
         "comment": "The box shadow of the Standout Card variant on wide viewports.",
-        "value": "0 4px 40px 2px {card.shadow-color-standout-wide-viewport}",
+        "value": "0 4px 40px 2px {card.shadow-color-standout-wide-viewport.value}",
         "file": "settings",
         "attributes": {
           "category": "content"

@@ -465,7 +465,7 @@
       },
       "label-top": {
         "comment": "Todo deprecate, The top value for Huge Input labels. This adjusts how far the label is from the top of the container.",
-        "value": "{input.huge.height} / 3",
+        "value": "{input.huge.height.value} / 3",
         "attributes": {
           "category": "content"
         },
@@ -727,7 +727,7 @@
       },
       "icon-margin-top": {
         "comment": "The margin-top value for icons in Huge Select Inputs.",
-        "value": "-(({input.huge.height} - {icon.m.value}) / 2 + {icon.m.value})",
+        "value": "-(({input.huge.height.value} - {icon.m.value}) / 2 + {icon.m.value})",
         "attributes": {
           "category": "content"
         },
