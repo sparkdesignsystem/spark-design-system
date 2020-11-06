@@ -6,7 +6,7 @@
       "attributes": {
           "category": "size"
         },
-      "file": "settings",
+      "file": "typography",
       "themable": true
     }
   },
@@ -16,7 +16,7 @@
     "attributes": {
       "category": "size"
     },
-    "file": "settings",
+    "file": "typography",
     "themable": true
   },
   "narrow-measure": {
@@ -25,7 +25,7 @@
     "attributes": {
       "category": "size"
     },
-    "file": "settings",
+    "file": "typography",
     "themable": true
   },
   "webfonts": {
@@ -34,20 +34,20 @@
     "attributes": {
       "category": "content"
     },
-    "file": "settings",
+    "file": "typography",
     "themable": true
   },
   "using-webfonts": {
     "comment": "Boolean value for if the app is using webfonts.",
     "value": "false",
-    "file": "settings",
+    "file": "typography",
     "themable": true
   },
   "page-title-mark": {
     "color": {
       "comment": "The color of the Page Title mark.",
       "value": "{red.value}",
-      "file": "settings",
+      "file": "typography",
       "themable": true
     },
     "width": {
@@ -56,7 +56,7 @@
       "attributes": {
         "category": "size"
       },
-      "file": "settings",
+      "file": "typography",
       "themable": true
     },
     "height": {
@@ -65,7 +65,7 @@
       "attributes": {
         "category": "size"
       },
-      "file": "settings",
+      "file": "typography",
       "themable": true
     },
     "height-wide-viewport": {
@@ -74,7 +74,7 @@
       "attributes": {
         "category": "size"
       },
-      "file": "settings",
+      "file": "typography",
       "themable": true
     },
     "padding": {
@@ -83,7 +83,7 @@
       "attributes": {
         "category": "content"
       },
-      "file": "settings",
+      "file": "typography",
       "themable": true
     },
     "padding-wide-viewport": {
@@ -92,7 +92,7 @@
       "attributes": {
         "category": "content"
       },
-      "file": "settings",
+      "file": "typography",
       "themable": true
     }
   },
@@ -102,7 +102,7 @@
         "one": {
           "comment": "The font-family, including fallbacks of TypeDisplayOne.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -111,7 +111,7 @@
         "two": {
           "comment": "The font-family, including fallbacks of TypeDisplayTwo.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -120,7 +120,7 @@
         "three": {
           "comment": "The font-family, including fallbacks of TypeDisplayThree.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -129,7 +129,7 @@
         "four": {
           "comment": "The font-family, including fallbacks of TypeDisplayFour.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -138,7 +138,7 @@
         "five": {
           "comment": "The font-family, including fallbacks of TypeDisplayFive.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -147,7 +147,7 @@
         "six": {
           "comment": "The font-family, including fallbacks of TypeDisplaySix.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -156,7 +156,7 @@
         "seven": {
           "comment": "The font-family, including fallbacks of TypeDisplaySeven.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -167,7 +167,7 @@
         "one": {
           "comment": "The font-family, including fallbacks of TypeBodyOne.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -176,7 +176,7 @@
         "two": {
           "comment": "The font-family, including fallbacks of TypeBodyTwo.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -185,7 +185,7 @@
         "three": {
           "comment": "The font-family, including fallbacks of TypeBodyThree.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -194,7 +194,7 @@
         "four": {
           "comment": "The font-family, including fallbacks of TypeBodyFour.",
           "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "font"
           },
@@ -211,13 +211,13 @@
             "category": "size",
             "type": "font"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "one-wide": {
           "comment": "The size of TypeDisplayOne when the viewport is wider than $sprk-font-size-display-one-breakpoint.",
           "value": "3.375rem",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "size",
             "type": "font"
@@ -231,7 +231,7 @@
             "category": "size",
             "type": "font"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "two-wide": {
@@ -241,7 +241,7 @@
             "category": "size",
             "type": "font"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "three": {
@@ -251,7 +251,7 @@
             "category": "size",
             "type": "font"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "three-wide": {
@@ -261,7 +261,7 @@
             "category": "size",
             "type": "font"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "four": {
@@ -271,7 +271,7 @@
             "category": "size",
             "type": "font"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "five": {
@@ -281,7 +281,7 @@
             "category": "size",
             "type": "font"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "six": {
@@ -291,7 +291,7 @@
             "category": "size",
             "type": "font"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "seven": {
@@ -301,7 +301,7 @@
             "category": "size",
             "type": "font"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         }
       },
@@ -309,7 +309,7 @@
         "one": {
           "comment": "The size of TypeBodyOne.",
           "value": "1rem",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "size",
             "type": "font"
@@ -319,7 +319,7 @@
         "two": {
           "comment": "The size of TypeBodyTwo.",
           "value": "1rem",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "size",
             "type": "font"
@@ -329,7 +329,7 @@
         "three": {
           "comment": "The font size of TypeBodyThree.",
           "value": "1rem",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "size",
             "type": "font"
@@ -339,7 +339,7 @@
         "four": {
           "comment": "The font size of TypeBodyFour.",
           "value": "0.8125rem",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "size",
             "type": "font"
@@ -356,7 +356,7 @@
           "attributes": {
             "category": "content"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "two": {
@@ -365,13 +365,13 @@
           "attributes": {
             "category": "content"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "three": {
           "comment": "The weight of the TypeDisplayThree font.",
           "value": "300",
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "four": {
@@ -380,25 +380,25 @@
           "attributes": {
             "category": "content"
           },
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "five": {
           "comment": "The weight of the TypeDisplayFive font.",
           "value": "500",
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "six": {
           "comment": "The weight of the TypeDisplaySix font.",
           "value": "300",
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "seven": {
           "comment": "The weight of the TypeDisplaySeven font.",
           "value": "500",
-          "file": "settings",
+          "file": "typography",
           "themable": true
         }
       },
@@ -406,25 +406,25 @@
         "one": {
           "comment": "The weight of the TypeBodyOne font.",
           "value": "500",
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "two": {
           "comment": "The weight of the TypeBodyTwo font.",
           "value": "300",
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "three": {
           "comment": "The weight of the TypeBodyThree font.",
           "value": "300",
-          "file": "settings",
+          "file": "typography",
           "themable": true
         },
         "four": {
           "comment": "The weight of the TypeBodyFour font.",
           "value": "300",
-          "file": "settings",
+          "file": "typography",
           "themable": true
         }
       }
@@ -435,7 +435,7 @@
       "attributes": {
         "category": "content"
       },
-      "file": "settings",
+      "file": "typography",
       "themable": true
     }
   },
@@ -444,7 +444,7 @@
       "one": {
         "comment": "The color of TypeDisplayOne.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -453,7 +453,7 @@
       "two": {
         "comment": "The color of TypeDisplayTwo.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -462,7 +462,7 @@
       "three": {
         "comment": "The color of TypeDisplayThree.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -471,7 +471,7 @@
       "four": {
         "comment": "The color of TypeDisplayFour.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -480,7 +480,7 @@
       "five": {
         "comment": "The color of TypeDisplayFive.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -489,7 +489,7 @@
       "six": {
         "comment": "The color of TypeDisplaySix.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -498,7 +498,7 @@
       "seven": {
         "comment": "The color of TypeDisplaySeven.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -509,7 +509,7 @@
       "one": {
         "comment": "The color of TypeBodyOne.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -518,7 +518,7 @@
       "two": {
         "comment": "The color of TypeBodyTwo.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -527,7 +527,7 @@
       "three": {
         "comment": "The color of TypeBodyThree.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -536,7 +536,7 @@
       "four": {
         "comment": "The color of TypeBodyFour.",
         "value": "{black.value}",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color"
         },
@@ -552,13 +552,13 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "one-wide": {
         "comment": "The line-height of the TypeDisplayOne font when the viewport is wider than $sprk-font-size-display-one-breakpoint.",
         "value": "1.03",
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "two": {
@@ -567,7 +567,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "two-wide": {
@@ -576,7 +576,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "three": {
@@ -585,7 +585,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "three-wide": {
@@ -594,7 +594,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "four": {
@@ -603,7 +603,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "five": {
@@ -612,19 +612,19 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "six": {
         "comment": "The line-height of the TypeDisplaySix.",
         "value": "1.2",
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "seven": {
         "comment": "The line-height of the TypeDisplaySeven.",
         "value": "1",
-        "file": "settings",
+        "file": "typography",
         "themable": true
       }
     },
@@ -635,7 +635,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "two": {
@@ -644,13 +644,13 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "three": {
         "comment": "The line-height of the TypeBodyThree.",
         "value": "2",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "size"
         },
@@ -659,7 +659,7 @@
       "four": {
         "comment": "The line-height of the TypeBodyFour.",
         "value": "1.84",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "size"
         },
@@ -673,7 +673,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       },
       "bottom-crop": {
@@ -682,7 +682,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       }
     }
@@ -695,7 +695,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       }
     },
@@ -706,7 +706,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       }
     },
@@ -717,7 +717,7 @@
         "attributes": {
           "category": "size"
         },
-        "file": "settings",
+        "file": "typography",
         "themable": true
       }
     }

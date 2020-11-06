@@ -3,7 +3,7 @@
 // SparkDesignTokens.swift
 //
 // Do not edit directly
-// Generated on Fri, 06 Nov 2020 18:53:04 GMT
+// Generated on Fri, 06 Nov 2020 21:26:28 GMT
 //
 
 

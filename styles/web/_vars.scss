@@ -316,18 +316,12 @@ $sprk-carousel-dot-spacing: $sprk-space-m !default;
 $sprk-carousel-dot-width: 10px !default;
 /// The height of the dots in the Carousel component. 
 $sprk-carousel-dot-height: 10px !default;
-/// The box shadow of the active dot in the Carousel component. 
-$sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected-dark-bg !default;
 /// The background color of the active dot in the Carousel component. 
 $sprk-carousel-dot-selected-bg-color: $sprk-white !default;
 /// The background color of the active dot in the Carousel component on a dark background. 
 $sprk-carousel-dot-selected-bg-color-dark-bg: $sprk-purple !default;
 /// The padding value for the dots container in the Carousel component. 
 $sprk-carousel-dot-container-padding: $sprk-space-xs !default;
-/// The border value for the Carousel component. 
-$sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid $sprk-stepper-dark-icon-border-color !default;
-/// The border value for the Carousel component on dark background. 
-$sprk-carousel-dot-border-dark-bg: $sprk-stepper-icon-border-width solid $sprk-purple-deep !default;
 /// The spacing between the dots in the Carousel component. 
 $sprk-carousel-wide-dot-width: 10px !default;
 /// The spacing between the dots in the Carousel component. 
@@ -364,12 +358,12 @@ $sprk-dictionary-label-font-weight: $sprk-font-weight-body-one !default;
 $sprk-dictionary-label-line-height: $sprk-line-height-body-one !default;
 /// The value for color of Dividers. 
 $sprk-divider-color: rgb(230, 230, 230) !default;
-/// The value of border for Dividers. 
-$sprk-divider-border: $sprk-divider-border-width $sprk-divider-border-style $sprk-divider-color !default;
 /// The size value of border for Dividers. 
 $sprk-divider-border-width: 2px !default;
 /// The style value of border for Dividers. 
 $sprk-divider-border-style: solid !default;
+/// The value of border for Dividers. 
+$sprk-divider-border: $sprk-divider-border-width $sprk-divider-border-style $sprk-divider-color !default;
 /// Background color of the Dropdown items that are active or hovered. 
 $sprk-dropdown-active-background-color: $sprk-gray !default;
 /// The left border of the Dropdown item that is active. 
@@ -492,6 +486,92 @@ $sprk-icon-custom-stroke-width-xl: 0 !default;
 $sprk-icon-filled-fill-color: $sprk-black !default;
 /// Value for the stroke property of the Filled Icon component.. 
 $sprk-icon-filled-stroke-color: none !default;
+/// Todo deprecate, The height value for Huge Inputs. 
+$sprk-text-input-huge-height: 64px !default;
+/// The height value for Huge Inputs. 
+$sprk-input-huge-height: $sprk-text-input-huge-height !default;
+/// The font size of text icons inside Inputs. 
+$sprk-text-input-has-text-icon-padding: 0 0 1px 37px !default;
+/// The padding inside Inputs that contain icons. 
+$sprk-text-input-has-icon-padding: 12px 0 12px 40px !default;
+/// The font family for Inputs. 
+$sprk-text-input-font-family: $sprk-font-family-body-two !default;
+/// The font size for Inputs. 
+$sprk-text-input-font-size: 1rem !default;
+/// The font weight for Inputs. 
+$sprk-text-input-font-weight: 300 !default;
+/// Color setting for Inputs with errors. 
+$sprk-text-input-error-color: $sprk-pink !default;
+/// The height setting for Inputs. 
+$sprk-text-input-height: 48px !default;
+/// The line height setting for Inputs. 
+$sprk-text-input-line-height: 1.3 !default;
+/// The outline setting for Inputs. 
+$sprk-text-input-outline: 0 !default;
+/// The color setting for Inputs. 
+$sprk-text-input-color: $sprk-black !default;
+/// The border setting for Inputs. 
+$sprk-text-input-border: 2px solid $sprk-black-tint-50 !default;
+/// The border radius setting for Inputs. 
+$sprk-text-input-border-radius: 4px !default;
+/// The box shadow setting for Inputs. 
+$sprk-text-input-box-shadow: none !default;
+/// The padding setting for Inputs. 
+$sprk-text-input-padding: 0 $sprk-space-m !default;
+/// The border color on Inputs when focused. 
+$sprk-text-input-focus-border-color: $sprk-purple !default;
+/// The border color on Inputs when there is an error. 
+$sprk-text-input-error-border-color: $sprk-pink !default;
+/// The border color on disabled Inputs. 
+$sprk-text-input-disabled-border-color: $sprk-black-tint-50 !default;
+/// The color on disabled Inputs. 
+$sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
+/// The border color on readonly Inputs. 
+$sprk-text-input-readonly-border-color: $sprk-black-tint-50 !default;
+/// The color on readonly Inputs. 
+$sprk-text-input-readonly-color: $sprk-black-tint-50 !default;
+/// The background color on disabled Inputs. 
+$sprk-text-input-disabled-background-color: $sprk-black-tint-40 !default;
+/// The box shadow on disabled Inputs. 
+$sprk-text-input-disabled-box-shadow: none !default;
+/// The transition setting on Inputs. 
+$sprk-text-input-transition: border-color 0.15s ease !default;
+/// Todo deprecate, The border width for Huge Inputs on focus. 
+$sprk-text-input-huge-focus-border-width: 2px !default;
+/// Todo deprecate, The label color value of Huge Inputs on focus. 
+$sprk-text-input-huge-focus-label-color: $sprk-purple !default;
+/// The padding value for Huge Inputs with icons. 
+$sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
+/// Todo deprecate, The label color value of Huge Inputs when they have an error. 
+$sprk-text-input-huge-error-focus-label-color: $sprk-black !default;
+/// Todo deprecate, The label color when the Huge Input has a value and is not focused. 
+$sprk-text-input-huge-complete-label-color: $sprk-black !default;
+/// Todo deprecate, The font size for Huge Inputs. 
+$sprk-text-input-huge-font-size: $sprk-font-size-display-five !default;
+/// Todo deprecate, The label font size for Huge Inputs. 
+$sprk-text-input-huge-label-font-size: $sprk-font-size-body-four !default;
+/// Todo deprecate, The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container. 
+$sprk-text-input-huge-active-label-top: 10px !default;
+/// Todo deprecate, The border width for Huge Inputs. 
+$sprk-text-input-huge-border-width: 2px !default;
+/// Todo deprecate, The padding for Huge Inputs. 
+$sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default;
+/// Todo deprecate, The transition value for Huge Inputs. 
+$sprk-text-input-huge-transition: top 0.3s, color 0.3s, font-size 0.3s !default;
+/// Todo deprecate, The transition delay value for Huge Inputs. 
+$sprk-text-input-huge-transition-delay: 0s !default;
+/// Todo deprecate, The transition delay placeholder value for Huge Inputs. 
+$sprk-text-input-huge-placeholder-transition-delay: 100ms !default;
+/// Todo deprecate, The transition property placeholder value for Huge Inputs. 
+$sprk-text-input-huge-placeholder-transition-property: opacity !default;
+/// Todo deprecate, The placeholder opacity value for Huge Inputs. 
+$sprk-text-input-huge-placeholder-opacity: 0 !default;
+/// Todo deprecate, The placeholder opacity value for Huge Inputs. 
+$sprk-text-input-huge-active-placeholder-opacity: 1 !default;
+/// Todo deprecate, The top value for Huge Input labels. This adjusts how far the label is from the top of the container. 
+$sprk-text-input-huge-label-top: $sprk-input-huge-height / 3 !default;
+/// Todo deprecate, The padding top value of active Huge Inputs. 
+$sprk-text-input-huge-active-padding-top: $sprk-input-huge-height / 4 !default;
 /// The value for padding applied to fieldset elements. 
 $sprk-input-container-margin: 0 0 $sprk-space-l 0 !default;
 /// The value used for the maximum width of an icon container using the icon container narrow modifier. 
@@ -500,14 +580,12 @@ $sprk-input-container-narrow-max-width: 6.5rem !default;
 $sprk-input-container-huge-max-width: 37.5rem !default;
 /// The value used as a maximum width for Input containers. 
 $sprk-input-max-width: 27.5rem !default;
-/// The value used for the maximum width of an Input container using the Input Container full modifier. 
+/// The value used for the maximum width of an Input container using the .sprk-b-InputContainer--full modifier. 
 $sprk-input-max-width-full: 100% !default;
 /// The label color value of Huge Inputs when they have an error. 
 $sprk-input-huge-error-focus-label-color: $sprk-text-input-huge-error-focus-label-color !default;
 /// The label color when the Huge Input has a value and is not focused. 
 $sprk-input-huge-complete-label-color: $sprk-text-input-huge-complete-label-color !default;
-/// The height value for Huge Inputs. 
-$sprk-input-huge-height: $sprk-text-input-huge-height !default;
 /// The font size for Huge Inputs. 
 $sprk-input-huge-font-size: $sprk-text-input-huge-font-size !default;
 /// The label font size for Huge Inputs. 
@@ -588,94 +666,8 @@ $sprk-error-icon-size: 1.25rem !default;
 $sprk-monetary-symbol: '$' !default;
 /// The value for padding applied to fieldset elements. 
 $sprk-fieldset-padding: $sprk-space-m 0 0 0 !default;
-/// The font size of text icons inside Inputs. 
-$sprk-text-input-has-text-icon-padding: 0 0 1px 37px !default;
-/// The padding inside Inputs that contain icons. 
-$sprk-text-input-has-icon-padding: 12px 0 12px 40px !default;
-/// Todo deprecate, The border width for Huge Inputs on focus. 
-$sprk-text-input-huge-focus-border-width: 2px !default;
-/// Todo deprecate, The label color value of Huge Inputs on focus. 
-$sprk-text-input-huge-focus-label-color: $sprk-purple !default;
-/// The padding value for Huge Inputs with icons. 
-$sprk-text-input-huge-has-text-icon-padding: 0 40px !default;
-/// Todo deprecate, The label color value of Huge Inputs when they have an error. 
-$sprk-text-input-huge-error-focus-label-color: $sprk-black !default;
-/// Todo deprecate, The label color when the Huge Input has a value and is not focused. 
-$sprk-text-input-huge-complete-label-color: $sprk-black !default;
-/// Todo deprecate, The height value for Huge Inputs. 
-$sprk-text-input-huge-height: 64px !default;
-/// Todo deprecate, The font size for Huge Inputs. 
-$sprk-text-input-huge-font-size: $sprk-font-size-display-five !default;
-/// Todo deprecate, The label font size for Huge Inputs. 
-$sprk-text-input-huge-label-font-size: $sprk-font-size-body-four !default;
-/// Todo deprecate, The top value for Huge Input labels. This adjusts how far the label is from the top of the container. 
-$sprk-text-input-huge-label-top: $sprk-input-huge-height / 3 !default;
-/// Todo deprecate, The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container. 
-$sprk-text-input-huge-active-label-top: 10px !default;
-/// Todo deprecate, The padding top value of active Huge Inputs. 
-$sprk-text-input-huge-active-padding-top: $sprk-input-huge-height / 4 !default;
-/// Todo deprecate, The border width for Huge Inputs. 
-$sprk-text-input-huge-border-width: 2px !default;
-/// Todo deprecate, The padding for Huge Inputs. 
-$sprk-text-input-huge-padding: 0 $sprk-space-misc-a !default;
-/// Todo deprecate, The transition value for Huge Inputs. 
-$sprk-text-input-huge-transition: top 0.3s, color 0.3s, font-size 0.3s !default;
-/// Todo deprecate, The transition delay value for Huge Inputs. 
-$sprk-text-input-huge-transition-delay: 0s !default;
-/// Todo deprecate, The transition delay placeholder value for Huge Inputs. 
-$sprk-text-input-huge-placeholder-transition-delay: 100ms !default;
-/// Todo deprecate, The transition property placeholder value for Huge Inputs. 
-$sprk-text-input-huge-placeholder-transition-property: opacity !default;
-/// Todo deprecate, The placeholder opacity value for Huge Inputs. 
-$sprk-text-input-huge-placeholder-opacity: 0 !default;
-/// Todo deprecate, The placeholder opacity value for Huge Inputs. 
-$sprk-text-input-huge-active-placeholder-opacity: 1 !default;
-/// The font family for Inputs. 
-$sprk-text-input-font-family: $sprk-font-family-body-two !default;
-/// The font size for Inputs. 
-$sprk-text-input-font-size: 1rem !default;
-/// The font weight for Inputs. 
-$sprk-text-input-font-weight: 300 !default;
-/// Color setting for Inputs with errors. 
-$sprk-text-input-error-color: $sprk-pink !default;
-/// The height setting for Inputs. 
-$sprk-text-input-height: 48px !default;
-/// The line height setting for Inputs. 
-$sprk-text-input-line-height: 1.3 !default;
-/// The outline setting for Inputs. 
-$sprk-text-input-outline: 0 !default;
-/// The color setting for Inputs. 
-$sprk-text-input-color: $sprk-black !default;
-/// The border setting for Inputs. 
-$sprk-text-input-border: 2px solid $sprk-black-tint-50 !default;
-/// The border radius setting for Inputs. 
-$sprk-text-input-border-radius: 4px !default;
-/// The box shadow setting for Inputs. 
-$sprk-text-input-box-shadow: none !default;
-/// The padding setting for Inputs. 
-$sprk-text-input-padding: 0 $sprk-space-m !default;
-/// The border color on Inputs when focused. 
-$sprk-text-input-focus-border-color: $sprk-purple !default;
-/// The border color on Inputs when there is an error. 
-$sprk-text-input-error-border-color: $sprk-pink !default;
-/// The border color on disabled Inputs. 
-$sprk-text-input-disabled-border-color: $sprk-black-tint-50 !default;
-/// The color on disabled Inputs. 
-$sprk-text-input-disabled-color: $sprk-black-tint-50 !default;
-/// The border color on readonly Inputs. 
-$sprk-text-input-readonly-border-color: $sprk-black-tint-50 !default;
-/// The color on readonly Inputs. 
-$sprk-text-input-readonly-color: $sprk-black-tint-50 !default;
-/// The background color on disabled Inputs. 
-$sprk-text-input-disabled-background-color: $sprk-black-tint-40 !default;
-/// The box shadow on disabled Inputs. 
-$sprk-text-input-disabled-box-shadow: none !default;
-/// The transition setting on Inputs. 
-$sprk-text-input-transition: border-color 0.15s ease !default;
 /// The padding right for Huge Inputs. 
 $sprk-select-input-huge-padding-right: 45px !default;
-/// The margin-top value for icons in Huge Select Inputs. 
-$sprk-select-input-huge-icon-margin-top: -(($sprk-input-huge-height - $sprk-icon-m) / 2 + $sprk-icon-m) !default;
 /// The value for the appearance property for Selects. 
 $sprk-select-appearance: none !default;
 /// The background setting for Selects. 
@@ -724,112 +716,6 @@ $sprk-textarea-min-height: 125px !default;
 $sprk-textarea-margin: $sprk-space-stack-m !default;
 /// The padding insdie Textarea. 
 $sprk-textarea-padding: $sprk-space-m !default;
-/// The opacity of the native control checkbox. 
-$sprk-checkbox-input-opacity: 0 !default;
-/// The transition of the huge checkbox input. 
-$sprk-checkbox-huge-container-transition: $sprk-checkbox-transition !default;
-/// The border settings of the huge checkbox input. 
-$sprk-checkbox-huge-container-border: 2px solid $sprk-black-tint-50 !default;
-/// The border-radius of the huge checkbox input. 
-$sprk-checkbox-huge-container-border-radius: 4px !default;
-/// The padding of the huge checkbox input. 
-$sprk-checkbox-huge-container-padding: 20px $sprk-space-m 20px 55px !default;
-/// The flex-basis of the huge checkbox input. 
-$sprk-checkbox-huge-container-flex-basis: 100% !default;
-/// The line height of the huge checkbox input. 
-$sprk-checkbox-huge-container-line-height: 1rem !default;
-/// The border color of the huge checkbox input when hovered. 
-$sprk-checkbox-huge-container-hover-border-color: $sprk-black !default;
-/// The box shadow of the huge checkbox input when hovered. 
-$sprk-checkbox-huge-container-hover-box-shadow: $sprk-input-huge-box-shadow !default;
-/// The border color of the huge checkbox input when disabled. 
-$sprk-checkbox-huge-container-disabled-border-color: $sprk-text-input-disabled-border-color !default;
-/// The box shadow of the huge checkbox input when disabled. 
-$sprk-checkbox-huge-container-disabled-box-shadow: none !default;
-/// The background of the huge checkbox input when disabled. 
-$sprk-checkbox-huge-container-disabled-background: $sprk-text-input-disabled-background-color !default;
-/// The border color of the huge checkbox input when focused. 
-$sprk-checkbox-huge-container-focus-border-color: $sprk-purple !default;
-/// The border color of the huge checkbox input when focused and hovered. 
-$sprk-checkbox-huge-container-focus-hover-border-color: $sprk-black !default;
-/// The border color of the huge checkbox input when checked. 
-$sprk-checkbox-huge-container-checked-border-color: $sprk-purple !default;
-/// The border color of the huge checkbox input when checked and focused. 
-$sprk-checkbox-huge-container-focus-checked-border-color: $sprk-black !default;
-/// The border color of the huge checkbox input when checked and hovered. 
-$sprk-checkbox-huge-container-checked-hover-border-color: $sprk-black !default;
-/// The max-width of the huge checkbox input. 
-$sprk-checkbox-input-huge-max-width: 500px !default;
-/// The transition for the checkbox when the input is checked or unchecked. 
-$sprk-checkbox-transition: all 0.2s ease-in-out !default;
-/// The height of the custom checkbox input. 
-$sprk-checkbox-custom-input-height: 1rem !default;
-/// The width of the custom checkbox input. 
-$sprk-checkbox-custom-input-width: 1rem !default;
-/// The border of the custom checkbox input. 
-$sprk-checkbox-custom-input-border: 2px solid $sprk-black-tint-50 !default;
-/// The border of the custom checkbox input when focused. 
-$sprk-checkbox-custom-input-border-focus: 2px solid $sprk-purple !default;
-/// The border of the custom checkbox input when it is checked and focused. 
-$sprk-checkbox-custom-input-border-focus-checked: 2px solid $sprk-black !default;
-/// The background of the custom checkbox input when focused. 
-$sprk-checkbox-custom-input-background-color-focus: $sprk-gray !default;
-/// The background color of the custom checkbox input when hovered. 
-$sprk-checkbox-custom-input-background-color-hover: $sprk-gray !default;
-/// The background color of the custom checkbox input when checked. 
-$sprk-checkbox-custom-input-background-color-checked: $sprk-purple !default;
-/// The background color of the custom checkbox input when disabled. 
-$sprk-checkbox-custom-input-background-color-disabled: transparent !default;
-/// The border color of the custom checkbox input when checked. 
-$sprk-checkbox-custom-input-border-color-checked: $sprk-purple !default;
-/// The border color of the custom checkbox input when hovered. 
-$sprk-checkbox-custom-input-border-color-hover: $sprk-black-tint-70 !default;
-/// The border color of the custom checkbox input when disabled. 
-$sprk-checkbox-custom-input-border-color-disabled: $sprk-black-tint-50 !default;
-/// The cursor for the custom checkbox input when disabled.. 
-$sprk-checkbox-custom-input-cursor-disabled: default !default;
-/// The border radius of the custom checkbox input. 
-$sprk-checkbox-custom-input-border-radius: 3px !default;
-/// The top positioning of the custom checkbox input. 
-$sprk-checkbox-custom-input-top: 0 !default;
-/// The left positioning of the custom checkbox input. 
-$sprk-checkbox-custom-input-left: -22px !default;
-/// The height of the custom checkbox element of the huge checkbox input. 
-$sprk-checkbox-huge-custom-input-height: 1.5rem !default;
-/// The width of the custom checkbox element of the huge checkbox input. 
-$sprk-checkbox-huge-custom-input-width: 1.5rem !default;
-/// The border color of the custom checkbox element of the huge checkbox input when hovered. 
-$sprk-checkbox-huge-custom-input-hover-border-color: $sprk-black !default;
-/// The top value of the custom checkbox element of the huge checkbox input.. 
-$sprk-checkbox-huge-custom-input-top: $sprk-space-m !default;
-/// The left value of the custom checkbox element of the huge checkbox input.. 
-$sprk-checkbox-huge-custom-input-left: $sprk-space-m !default;
-/// The border color of the custom checkbox element of the huge checkbox input when disabled. 
-$sprk-checkbox-huge-custom-input-disabled-border-color: $sprk-black-tint-50 !default;
-/// The border color of the custom checkbox element of the huge checkbox input when checked. 
-$sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color: $sprk-purple !default;
-/// The height of the huge checkmark icon. 
-$sprk-checkbox-huge-checkmark-icon-height: 0.5rem !default;
-/// The width of the huge checkmark icon. 
-$sprk-checkbox-huge-checkmark-icon-width: 0.75rem !default;
-/// The top positioning of the huge checkmark icon. 
-$sprk-checkbox-huge-checkmark-icon-top: 22px !default;
-/// The left positioning of the huge checkmark icon. 
-$sprk-checkbox-huge-checkmark-icon-left: 22px !default;
-/// The height of the checkmark icon. 
-$sprk-checkbox-checkmark-icon-height: 0.45rem !default;
-/// The width of the checkmark icon. 
-$sprk-checkbox-checkmark-icon-width: 0.65rem !default;
-/// The top positioning of the checkmark icon. 
-$sprk-checkbox-checkmark-icon-top: 3px !default;
-/// The left positioning of the checkmark icon. 
-$sprk-checkbox-checkmark-icon-left: -19px !default;
-/// The border settings to create the bottom portion of the checkmark. 
-$sprk-checkbox-checkmark-border-left: 2px solid $sprk-white !default;
-/// The border settings to create the right portion of the checkmark. 
-$sprk-checkbox-checkmark-border-bottom: 2px solid $sprk-white !default;
-/// The rotation setting to create the checkmark. 
-$sprk-checkbox-checkmark-transform: rotate(-45deg) !default;
 /// The color of the helper text for Inputs. 
 $sprk-helper-color: $sprk-black-tint-70 !default;
 /// The line height of the helper text for Inputs. 
@@ -936,6 +822,44 @@ $sprk-label-disabled-color: $sprk-black-tint-50 !default;
 $sprk-visibility-control-label-font-size: $sprk-label-font-size !default;
 /// The margin surrounding visibility controls (Ex. 'Show SSN'). 
 $sprk-visibility-control-margin: 6px 0 0 0 !default;
+/// The border of the outer circle in the radio input on hover. 
+$sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-70 !default;
+/// The border of the outer circle in the radio input on focus. 
+$sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-purple !default;
+/// The border of the outer circle in the disabled radio input on focus. 
+$sprk-radio-input-outer-circle-focus-border-disabled: 2px solid $sprk-black-tint-50 !default;
+/// The border of the outer circle in the disabled radio input on hover. 
+$sprk-radio-input-outer-circle-border-hover-disabled: 2px solid $sprk-black-tint-50 !default;
+/// The border of the outer circle in the radio input when checked. 
+$sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-purple !default;
+/// The border of the outer circle in the radio input. 
+$sprk-radio-input-outer-circle-border: 2px solid $sprk-black-tint-50 !default;
+/// The width of the outer circle in the radio input. 
+$sprk-radio-input-outer-circle-width: 1rem !default;
+/// The height of the outer circle in the radio input. 
+$sprk-radio-input-outer-circle-height: 1rem !default;
+/// The top value of the outer circle in the radio input. 
+$sprk-radio-input-outer-circle-top: 0 !default;
+/// The left value of the outer circle in the radio input. 
+$sprk-radio-input-outer-circle-left: -1.375rem !default;
+/// The width of the inner circle in the radio input. 
+$sprk-radio-input-inner-circle-width: 0.5rem !default;
+/// The background color of the inner circle in the radio input. 
+$sprk-radio-input-inner-circle-background-color: $sprk-purple !default;
+/// The height of the inner circle in the radio input. 
+$sprk-radio-input-inner-circle-height: 0.5rem !default;
+/// The top value of the inner circle in the radio input. 
+$sprk-radio-input-inner-circle-top: 0.25rem !default;
+/// The left value of the inner circle in the radio input. 
+$sprk-radio-input-inner-circle-left: -1.125rem !default;
+/// The opacity value for the radio input. 
+$sprk-radio-input-opacity: 0 !default;
+/// The transition for the radio input. 
+$sprk-radio-input-transition: all 0.2s ease-in-out !default;
+/// The border radius of the circle in the radio input. 
+$sprk-radio-input-border-radius: 50% !default;
+/// The cursor style of the disabled radio on hover. 
+$sprk-radio-input-cursor-hover-disabled: default !default;
 /// The max-width of the huge radio input. 
 $sprk-radio-input-huge-max-width: 31.25rem !default;
 /// The transition for the huge radio input. 
@@ -990,56 +914,112 @@ $sprk-radio-input-huge-outer-circle-left: 1rem !default;
 $sprk-radio-input-huge-outer-circle-box-shadow-hover-disabled: none !default;
 /// The background color of the huge radio input when it is disabled. 
 $sprk-radio-input-huge-disabled-background-color: $sprk-text-input-disabled-background-color !default;
-/// The border of the outer circle in the radio input on hover. 
-$sprk-radio-input-outer-circle-hover-border: 2px solid $sprk-black-tint-70 !default;
-/// The border of the outer circle in the radio input on focus. 
-$sprk-radio-input-outer-circle-focus-border: 2px solid $sprk-purple !default;
-/// The border of the outer circle in the disabled radio input on focus. 
-$sprk-radio-input-outer-circle-focus-border-disabled: 2px solid $sprk-black-tint-50 !default;
-/// The border of the outer circle in the disabled radio input on hover. 
-$sprk-radio-input-outer-circle-border-hover-disabled: 2px solid $sprk-black-tint-50 !default;
-/// The border of the outer circle in the radio input when checked. 
-$sprk-radio-input-outer-circle-border-checked: 2px solid $sprk-purple !default;
-/// The border of the outer circle in the radio input. 
-$sprk-radio-input-outer-circle-border: 2px solid $sprk-black-tint-50 !default;
-/// The width of the outer circle in the radio input. 
-$sprk-radio-input-outer-circle-width: 1rem !default;
-/// The height of the outer circle in the radio input. 
-$sprk-radio-input-outer-circle-height: 1rem !default;
-/// The top value of the outer circle in the radio input. 
-$sprk-radio-input-outer-circle-top: 0 !default;
-/// The left value of the outer circle in the radio input. 
-$sprk-radio-input-outer-circle-left: -1.375rem !default;
-/// The width of the inner circle in the radio input. 
-$sprk-radio-input-inner-circle-width: 0.5rem !default;
-/// The background color of the inner circle in the radio input. 
-$sprk-radio-input-inner-circle-background-color: $sprk-purple !default;
-/// The height of the inner circle in the radio input. 
-$sprk-radio-input-inner-circle-height: 0.5rem !default;
-/// The top value of the inner circle in the radio input. 
-$sprk-radio-input-inner-circle-top: 0.25rem !default;
-/// The left value of the inner circle in the radio input. 
-$sprk-radio-input-inner-circle-left: -1.125rem !default;
-/// The opacity value for the radio input. 
-$sprk-radio-input-opacity: 0 !default;
-/// The transition for the radio input. 
-$sprk-radio-input-transition: all 0.2s ease-in-out !default;
-/// The border radius of the circle in the radio input. 
-$sprk-radio-input-border-radius: 50% !default;
-/// The cursor style of the disabled radio on hover. 
-$sprk-radio-input-cursor-hover-disabled: default !default;
-/// The extra small z-index value setting. 
-$sprk-layer-height-xs: 1 !default;
-/// The small z-index value setting. 
-$sprk-layer-height-s: 1000 !default;
-/// The medium z-index value setting. 
-$sprk-layer-height-m: 2000 !default;
-/// The large z-index value setting. 
-$sprk-layer-height-l: 3000 !default;
-/// The extra large z-index value setting. 
-$sprk-layer-height-xl: 9999 !default;
-/// The style of the underline on visited Links. 
-$sprk-link-visited-border-bottom: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-underline-visited-color !default;
+/// The opacity of the native control checkbox. 
+$sprk-checkbox-input-opacity: 0 !default;
+/// The transition for the checkbox when the input is checked or unchecked. 
+$sprk-checkbox-transition: all 0.2s ease-in-out !default;
+/// The transition of the huge checkbox input. 
+$sprk-checkbox-huge-container-transition: $sprk-checkbox-transition !default;
+/// The border settings of the huge checkbox input. 
+$sprk-checkbox-huge-container-border: 2px solid $sprk-black-tint-50 !default;
+/// The border-radius of the huge checkbox input. 
+$sprk-checkbox-huge-container-border-radius: 4px !default;
+/// The padding of the huge checkbox input. 
+$sprk-checkbox-huge-container-padding: 20px $sprk-space-m 20px 55px !default;
+/// The flex-basis of the huge checkbox input. 
+$sprk-checkbox-huge-container-flex-basis: 100% !default;
+/// The line height of the huge checkbox input. 
+$sprk-checkbox-huge-container-line-height: 1rem !default;
+/// The border color of the huge checkbox input when hovered. 
+$sprk-checkbox-huge-container-hover-border-color: $sprk-black !default;
+/// The box shadow of the huge checkbox input when hovered. 
+$sprk-checkbox-huge-container-hover-box-shadow: $sprk-input-huge-box-shadow !default;
+/// The border color of the huge checkbox input when disabled. 
+$sprk-checkbox-huge-container-disabled-border-color: $sprk-text-input-disabled-border-color !default;
+/// The box shadow of the huge checkbox input when disabled. 
+$sprk-checkbox-huge-container-disabled-box-shadow: none !default;
+/// The background of the huge checkbox input when disabled. 
+$sprk-checkbox-huge-container-disabled-background: $sprk-text-input-disabled-background-color !default;
+/// The border color of the huge checkbox input when focused. 
+$sprk-checkbox-huge-container-focus-border-color: $sprk-purple !default;
+/// The border color of the huge checkbox input when focused and hovered. 
+$sprk-checkbox-huge-container-focus-hover-border-color: $sprk-black !default;
+/// The border color of the huge checkbox input when checked. 
+$sprk-checkbox-huge-container-checked-border-color: $sprk-purple !default;
+/// The border color of the huge checkbox input when checked and focused. 
+$sprk-checkbox-huge-container-focus-checked-border-color: $sprk-black !default;
+/// The border color of the huge checkbox input when checked and hovered. 
+$sprk-checkbox-huge-container-checked-hover-border-color: $sprk-black !default;
+/// The max-width of the huge checkbox input. 
+$sprk-checkbox-input-huge-max-width: 500px !default;
+/// The height of the custom checkbox input. 
+$sprk-checkbox-custom-input-height: 1rem !default;
+/// The width of the custom checkbox input. 
+$sprk-checkbox-custom-input-width: 1rem !default;
+/// The border of the custom checkbox input. 
+$sprk-checkbox-custom-input-border: 2px solid $sprk-black-tint-50 !default;
+/// The border of the custom checkbox input when focused. 
+$sprk-checkbox-custom-input-border-focus: 2px solid $sprk-purple !default;
+/// The border of the custom checkbox input when it is checked and focused. 
+$sprk-checkbox-custom-input-border-focus-checked: 2px solid $sprk-black !default;
+/// The background of the custom checkbox input when focused. 
+$sprk-checkbox-custom-input-background-color-focus: $sprk-gray !default;
+/// The background color of the custom checkbox input when hovered. 
+$sprk-checkbox-custom-input-background-color-hover: $sprk-gray !default;
+/// The background color of the custom checkbox input when checked. 
+$sprk-checkbox-custom-input-background-color-checked: $sprk-purple !default;
+/// The background color of the custom checkbox input when disabled. 
+$sprk-checkbox-custom-input-background-color-disabled: transparent !default;
+/// The border color of the custom checkbox input when checked. 
+$sprk-checkbox-custom-input-border-color-checked: $sprk-purple !default;
+/// The border color of the custom checkbox input when hovered. 
+$sprk-checkbox-custom-input-border-color-hover: $sprk-black-tint-70 !default;
+/// The border color of the custom checkbox input when disabled. 
+$sprk-checkbox-custom-input-border-color-disabled: $sprk-black-tint-50 !default;
+/// The cursor for the custom checkbox input when disabled.. 
+$sprk-checkbox-custom-input-cursor-disabled: default !default;
+/// The border radius of the custom checkbox input. 
+$sprk-checkbox-custom-input-border-radius: 3px !default;
+/// The top positioning of the custom checkbox input. 
+$sprk-checkbox-custom-input-top: 0 !default;
+/// The left positioning of the custom checkbox input. 
+$sprk-checkbox-custom-input-left: -22px !default;
+/// The height of the custom checkbox element of the huge checkbox input. 
+$sprk-checkbox-huge-custom-input-height: 1.5rem !default;
+/// The width of the custom checkbox element of the huge checkbox input. 
+$sprk-checkbox-huge-custom-input-width: 1.5rem !default;
+/// The border color of the custom checkbox element of the huge checkbox input when hovered. 
+$sprk-checkbox-huge-custom-input-hover-border-color: $sprk-black !default;
+/// The top value of the custom checkbox element of the huge checkbox input.. 
+$sprk-checkbox-huge-custom-input-top: $sprk-space-m !default;
+/// The left value of the custom checkbox element of the huge checkbox input.. 
+$sprk-checkbox-huge-custom-input-left: $sprk-space-m !default;
+/// The border color of the custom checkbox element of the huge checkbox input when disabled. 
+$sprk-checkbox-huge-custom-input-disabled-border-color: $sprk-black-tint-50 !default;
+/// The border color of the custom checkbox element of the huge checkbox input when checked. 
+$sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color: $sprk-purple !default;
+/// The height of the huge checkmark icon. 
+$sprk-checkbox-huge-checkmark-icon-height: 0.5rem !default;
+/// The width of the huge checkmark icon. 
+$sprk-checkbox-huge-checkmark-icon-width: 0.75rem !default;
+/// The top positioning of the huge checkmark icon. 
+$sprk-checkbox-huge-checkmark-icon-top: 22px !default;
+/// The left positioning of the huge checkmark icon. 
+$sprk-checkbox-huge-checkmark-icon-left: 22px !default;
+/// The height of the checkmark icon. 
+$sprk-checkbox-checkmark-icon-height: 0.45rem !default;
+/// The width of the checkmark icon. 
+$sprk-checkbox-checkmark-icon-width: 0.65rem !default;
+/// The top positioning of the checkmark icon. 
+$sprk-checkbox-checkmark-icon-top: 3px !default;
+/// The left positioning of the checkmark icon. 
+$sprk-checkbox-checkmark-icon-left: -19px !default;
+/// The border settings to create the bottom portion of the checkmark. 
+$sprk-checkbox-checkmark-border-left: 2px solid $sprk-white !default;
+/// The border settings to create the right portion of the checkmark. 
+$sprk-checkbox-checkmark-border-bottom: 2px solid $sprk-white !default;
+/// The rotation setting to create the checkmark. 
+$sprk-checkbox-checkmark-transform: rotate(-45deg) !default;
 /// The transition timing for hover, active and focus styles on Links. 
 $sprk-link-transition: 0.3s !default;
 /// The default color on Links. 
@@ -1054,14 +1034,16 @@ $sprk-link-underline-visited-color: $sprk-black-tint-50 !default;
 $sprk-link-text-decoration: none !default;
 /// The font weight on Links. 
 $sprk-link-font-weight: $sprk-font-weight-body-one !default;
-/// The style of the underline on Links. 
-$sprk-link-border-bottom: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-underline-visited-color !default;
 /// The border style of the underline on Links. 
 $sprk-link-border-bottom-style: solid !default;
+/// The style of the underline on Links. 
+$sprk-link-border-bottom: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-underline-visited-color !default;
 /// The color of Links on hover. 
 $sprk-link-hover-color: $sprk-purple-deep !default;
 /// The underline style of Links on hover. 
 $sprk-link-hover-border-bottom: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-hover-color !default;
+/// The style of the underline on visited Links. 
+$sprk-link-visited-border-bottom: $sprk-link-underline-width $sprk-link-border-bottom-style $sprk-link-underline-visited-color !default;
 /// The color value of Simple Links. 
 $sprk-link-simple-color: $sprk-black !default;
 /// The color of Simple Links on hover 
@@ -1112,14 +1094,6 @@ $sprk-link-light-visited-border-bottom: $sprk-link-light-underline-width $sprk-l
 $sprk-link-plain-border: none !default;
 /// The border settings for Plain Links in the visited state. 
 $sprk-link-plain-visited-border: none !default;
-/// The color value for Links with icons in the hover state. 
-$sprk-link-has-icon-hover-color-text: $sprk-purple-deep !default;
-/// The fill color for icons contained in Links on hover. 
-$sprk-link-has-icon-hover-fill: $sprk-link-has-icon-hover-color-text !default;
-/// The stroke color for icons contained in Links on hover. 
-$sprk-link-has-icon-hover-stroke: $sprk-link-has-icon-hover-color-text !default;
-/// The border settings for Links with icons in the hover state. 
-$sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
 /// The color of icons in Links containing icons. 
 $sprk-link-has-icon-color-icon: $sprk-purple !default;
 /// The fill color for icons contained in Links. 
@@ -1134,20 +1108,28 @@ $sprk-link-has-icon-underline-width: 0 !default;
 $sprk-link-has-icon-font-weight: $sprk-font-weight-body-one !default;
 /// The border settings for Links with icons. 
 $sprk-link-has-icon-border-bottom: $sprk-link-has-icon-underline-width $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
+/// The color value for Links with icons in the hover state. 
+$sprk-link-has-icon-hover-color-text: $sprk-purple-deep !default;
+/// The fill color for icons contained in Links on hover. 
+$sprk-link-has-icon-hover-fill: $sprk-link-has-icon-hover-color-text !default;
+/// The stroke color for icons contained in Links on hover. 
+$sprk-link-has-icon-hover-stroke: $sprk-link-has-icon-hover-color-text !default;
+/// The border settings for Links with icons in the hover state. 
+$sprk-link-has-icon-hover-border-bottom: $sprk-link-has-icon-underline-width $sprk-link-border-bottom-style $sprk-link-has-icon-underline-color !default;
 /// The disabled Link  
 $sprk-link-disabled-color: $sprk-black-tint-50 !default;
 /// The Disabled Link border-bottom  
 $sprk-link-disabled-border-bottom-color: $sprk-link-disabled-color !default;
+/// The underline width for the disabled Link. 
+$sprk-link-disabled-underline-width: 0 !default;
+/// The underline settings for the disabled Link.. 
+$sprk-link-disabled-border-bottom: $sprk-link-disabled-underline-width $sprk-link-border-bottom-style $sprk-link-disabled-color !default;
 /// The disabled Link color on hover. 
 $sprk-link-disabled-hover-color: $sprk-black-tint-50 !default;
 /// The disabled Link hover border-bottom  
 $sprk-link-disabled-hover-border-bottom-color: $sprk-link-disabled-color !default;
 /// The underline settings for the disabled Link.. 
 $sprk-link-disabled-hover-border-bottom: $sprk-link-disabled-underline-width $sprk-link-border-bottom-style $sprk-link-disabled-color !default;
-/// The underline width for the disabled Link. 
-$sprk-link-disabled-underline-width: 0 !default;
-/// The underline settings for the disabled Link.. 
-$sprk-link-disabled-border-bottom: $sprk-link-disabled-underline-width $sprk-link-border-bottom-style $sprk-link-disabled-color !default;
 /// The default margin left indentation on Lists. 
 $sprk-list-margin-left: $sprk-space-m !default;
 /// The default margin left indentation on Lists. 
@@ -1398,6 +1380,14 @@ $sprk-stepper-bg: transparent !default;
 $sprk-stepper-breakpoint: $sprk-split-breakpoint-xl !default;
 /// The maximum width of the Stepper. 
 $sprk-stepper-max-width: 480px !default;
+/// The color of the bar that connects the steps in the Stepper. 
+$sprk-stepper-bar-color: $sprk-black-tint-50 !default;
+/// The width of the bar that connects the steps in the Stepper. 
+$sprk-stepper-bar-width: 2px;
+/// The left inset of the bar that connects the steps in the Stepper. 
+$sprk-stepper-bar-left-inset: $sprk-space-l;
+/// The color of the bar that connects the steps when the Stepper is on a dark background (sprk-c-Stepper--has-dark-bg). 
+$sprk-stepper-dark-bar-color: $sprk-white !default;
 /// The border width of the Stepper icons. 
 $sprk-stepper-icon-border-width: 2px !default;
 /// The color of the border around the Stepper icon. 
@@ -1468,14 +1458,6 @@ $sprk-stepper-step-padding: $sprk-space-misc-a !default;
 $sprk-stepper-dark-step-heading-color: $sprk-white !default;
 /// The text color of a selected Stepper step's content and header when it has a description. This applies to steppers with the sprk-c-Stepper--has-dark-bg class. 
 $sprk-stepper-dark-step-description-selected: $sprk-black !default;
-/// The color of the bar that connects the steps in the Stepper. 
-$sprk-stepper-bar-color: $sprk-black-tint-50 !default;
-/// The width of the bar that connects the steps in the Stepper. 
-$sprk-stepper-bar-width: 2px;
-/// The left inset of the bar that connects the steps in the Stepper. 
-$sprk-stepper-bar-left-inset: $sprk-space-l;
-/// The color of the bar that connects the steps when the Stepper is on a dark background (sprk-c-Stepper--has-dark-bg). 
-$sprk-stepper-dark-bar-color: $sprk-white !default;
 /// The timing setting for the slides of the Stepper. 
 $sprk-stepper-slide-timing: 0.3s;
 /// The text fade in timing for the Stepper. 
@@ -1650,161 +1632,5 @@ $sprk-tooltip-min-width: 60px !default;
 $sprk-tooltip-transition: all 200ms ease-out !default;
 /// The distance the tooltip should move during its animation. 
 $sprk-tooltip-animation-offset: 0.5rem !default;
-/// The breakpoint used for typography. 
-$sprk-typography-breakpoint: 54rem !default;
-/// The max-width value for the .sprk-u-Measure class. 
-$sprk-measure: 40rem !default;
-/// The max-width value for the narrow measure. 
-$sprk-narrow-measure: 25rem !default;
-/// Expects a Sass List containing one or more nested Sass Lists. The nested lists should each contain: A List of urls to download a font, the name of the font and the weight of the font. 
-$sprk-webfonts: '' !default;
-/// Boolean value for if the app is using webfonts. 
-$sprk-using-webfonts: false !default;
-/// The color of the Page Title mark. 
-$sprk-page-title-mark-color: $sprk-red !default;
-/// The width of the Page Title mark. 
-$sprk-page-title-mark-width: 32px !default;
-/// The height of the Page Title mark. 
-$sprk-page-title-mark-height: 5px !default;
-/// The height of the mark on a large viewport (using $sprk-typography-breakpoint). 
-$sprk-page-title-mark-height-wide-viewport: 6px !default;
-/// Amount of padding between the mark and the text on the page title mark. 
-$sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a !default;
-/// Amount of padding between the mark and the text on a large viewport (using $sprk-typography-breakpoint). 
-$sprk-page-title-mark-padding-wide-viewport: 0 0 $sprk-space-m !default;
-/// The font-family, including fallbacks of TypeDisplayOne. 
-$sprk-font-family-display-one: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The font-family, including fallbacks of TypeDisplayTwo. 
-$sprk-font-family-display-two: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The font-family, including fallbacks of TypeDisplayThree. 
-$sprk-font-family-display-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The font-family, including fallbacks of TypeDisplayFour. 
-$sprk-font-family-display-four: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The font-family, including fallbacks of TypeDisplayFive. 
-$sprk-font-family-display-five: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The font-family, including fallbacks of TypeDisplaySix. 
-$sprk-font-family-display-six: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The font-family, including fallbacks of TypeDisplaySeven. 
-$sprk-font-family-display-seven: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The font-family, including fallbacks of TypeBodyOne. 
-$sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The font-family, including fallbacks of TypeBodyTwo. 
-$sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The font-family, including fallbacks of TypeBodyThree. 
-$sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The font-family, including fallbacks of TypeBodyFour. 
-$sprk-font-family-body-four: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
-/// The size of TypeDisplayOne when the viewport is narrower than $sprk-font-size-display-one-breakpoint. 
-$sprk-font-size-display-one: 2.75rem !default;
-/// The size of TypeDisplayOne when the viewport is wider than $sprk-font-size-display-one-breakpoint. 
-$sprk-font-size-display-one-wide: 3.375rem !default;
-/// The size of TypeDisplayTwo when the viewport is narrower than $sprk-font-size-display-two-breakpoint. 
-$sprk-font-size-display-two: 2rem !default;
-/// The size of TypeDisplayTwo when the viewport is wider than $sprk-font-size-display-two-breakpoint. 
-$sprk-font-size-display-two-wide: 2.5rem !default;
-/// The size of TypeDisplayThree when the viewport is narrower than $sprk-font-size-display-three-breakpoint. 
-$sprk-font-size-display-three: 1.75rem !default;
-/// The size of TypeDisplayThree when the viewport is wider than $sprk-font-size-display-three-breakpoint. 
-$sprk-font-size-display-three-wide: 2.125rem !default;
-/// The size of TypeDisplayFour. 
-$sprk-font-size-display-four: 1.625rem !default;
-/// The size of TypeDisplayFive. 
-$sprk-font-size-display-five: 1.25rem !default;
-/// The size of TypeDisplaySix. 
-$sprk-font-size-display-six: 1.25rem !default;
-/// The size of TypeDisplaySeven. 
-$sprk-font-size-display-seven: 1rem !default;
-/// The size of TypeBodyOne. 
-$sprk-font-size-body-one: 1rem !default;
-/// The size of TypeBodyTwo. 
-$sprk-font-size-body-two: 1rem !default;
-/// The font size of TypeBodyThree. 
-$sprk-font-size-body-three: 1rem !default;
-/// The font size of TypeBodyFour. 
-$sprk-font-size-body-four: 0.8125rem !default;
-/// The weight of the TypeDisplayOne font. 
-$sprk-font-weight-display-one: bold !default;
-/// The weight of the TypeDisplayTwo font. 
-$sprk-font-weight-display-two: bold !default;
-/// The weight of the TypeDisplayThree font. 
-$sprk-font-weight-display-three: 300 !default;
-/// The weight of the TypeDisplayFour font. 
-$sprk-font-weight-display-four: bold !default;
-/// The weight of the TypeDisplayFive font. 
-$sprk-font-weight-display-five: 500 !default;
-/// The weight of the TypeDisplaySix font. 
-$sprk-font-weight-display-six: 300 !default;
-/// The weight of the TypeDisplaySeven font. 
-$sprk-font-weight-display-seven: 500 !default;
-/// The weight of the TypeBodyOne font. 
-$sprk-font-weight-body-one: 500 !default;
-/// The weight of the TypeBodyTwo font. 
-$sprk-font-weight-body-two: 300 !default;
-/// The weight of the TypeBodyThree font. 
-$sprk-font-weight-body-three: 300 !default;
-/// The weight of the TypeBodyFour font. 
-$sprk-font-weight-body-four: 300 !default;
-/// The supplied value will be set on all generated Font-face calls, as font-display. The default is 'swap.' 
-$sprk-font-display: swap !default;
-/// The color of TypeDisplayOne. 
-$sprk-color-display-one: $sprk-black !default;
-/// The color of TypeDisplayTwo. 
-$sprk-color-display-two: $sprk-black !default;
-/// The color of TypeDisplayThree. 
-$sprk-color-display-three: $sprk-black !default;
-/// The color of TypeDisplayFour. 
-$sprk-color-display-four: $sprk-black !default;
-/// The color of TypeDisplayFive. 
-$sprk-color-display-five: $sprk-black !default;
-/// The color of TypeDisplaySix. 
-$sprk-color-display-six: $sprk-black !default;
-/// The color of TypeDisplaySeven. 
-$sprk-color-display-seven: $sprk-black !default;
-/// The color of TypeBodyOne. 
-$sprk-color-body-one: $sprk-black !default;
-/// The color of TypeBodyTwo. 
-$sprk-color-body-two: $sprk-black !default;
-/// The color of TypeBodyThree. 
-$sprk-color-body-three: $sprk-black !default;
-/// The color of TypeBodyFour. 
-$sprk-color-body-four: $sprk-black !default;
-/// The line-height of the TypeDisplayOne font when the viewport is narrower than $sprk-font-size-display-one-breakpoint. 
-$sprk-line-height-display-one: 1.27 !default;
-/// The line-height of the TypeDisplayOne font when the viewport is wider than $sprk-font-size-display-one-breakpoint. 
-$sprk-line-height-display-one-wide: 1.03 !default;
-/// The line-height of the TypeDisplayTwo font when the viewport is narrower than $sprk-font-size-display-two-breakpoint. 
-$sprk-line-height-display-two: 1 !default;
-/// The line-height of the TypeDisplayTwo font when the viewport is wider than $sprk-font-size-display-two-breakpoint. 
-$sprk-line-height-display-two-wide: 1 !default;
-/// The line-height of the TypeDisplayThree font when the viewport is narrower than $sprk-font-size-display-three-breakpoint. 
-$sprk-line-height-display-three: 1.6 !default;
-/// The line-height of the TypeDisplayThree font when the viewport is wider than $sprk-font-size-display-three-breakpoint. 
-$sprk-line-height-display-three-wide: 1.32 !default;
-/// The line-height of the TypeDisplayFour. 
-$sprk-line-height-display-four: 1.23 !default;
-/// The line-height of the TypeDisplayFive. 
-$sprk-line-height-display-five: 1.2 !default;
-/// The line-height of the TypeDisplaySix. 
-$sprk-line-height-display-six: 1.2 !default;
-/// The line-height of the TypeDisplaySeven. 
-$sprk-line-height-display-seven: 1 !default;
-/// The line-height of the TypeBodyOne. 
-$sprk-line-height-body-one: 1.6 !default;
-/// The line-height of the TypeBodyTwo. 
-$sprk-line-height-body-two: 1.6 !default;
-/// The line-height of the TypeBodyThree. 
-$sprk-line-height-body-three: 2 !default;
-/// The line-height of the TypeBodyFour. 
-$sprk-line-height-body-four: 1.84 !default;
-/// The top crop value for line height collision correction. 
-$sprk-line-height-collision-top-crop: 5 !default;
-/// The bottom crop value for line height collision correction. 
-$sprk-line-height-collision-bottom-crop: 5 !default;
-/// The width of the viewport at which to switch the font size from $sprk-font-size-display-one to $sprk-font-size-display-one-wide. 
-$sprk-type-display-one-breakpoint: 43.75rem !default;
-/// The width of the viewport at which to switch the font size from $sprk-font-size-display-two to $sprk-font-size-display-two-wide. 
-$sprk-type-display-two-breakpoint: 43.75rem !default;
-/// The width of the viewport at which to switch the font size from $sprk-font-size-display-three to $sprk-font-size-display-three-wide. 
-$sprk-type-display-three-breakpoint: 43.75rem !default;
 /// The delimiter between delimited items in Vertical List components. 
 $sprk-vertical-list-delimiter: ',\00A0' !default;

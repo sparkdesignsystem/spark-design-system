@@ -2,15 +2,15 @@
 
 <!--
   Do not edit directly
-  Generated on Fri, 06 Nov 2020 18:53:04 GMT
+  Generated on Fri, 06 Nov 2020 21:26:28 GMT
 -->
 <resources>
   <dimen name="sprk_alert_font_size">16.00sp</dimen><!-- The font size of the text in the content area of the Alert component. -->
+  <dimen name="sprk_text_input_font_size">16.00sp</dimen><!-- The font size for Inputs. -->
   <dimen name="sprk_input_huge_font_size">20.00sp</dimen><!-- The font size for Huge Inputs. -->
   <dimen name="sprk_input_huge_label_font_size">13.00sp</dimen><!-- The label font size for Huge Inputs. -->
   <dimen name="sprk_input_error_text_font_size">13.00sp</dimen><!-- The font size used for Input error text. -->
   <dimen name="sprk_input_text_icon_font_size">16.00sp</dimen><!-- The font size of text icons inside Inputs. -->
-  <dimen name="sprk_text_input_font_size">16.00sp</dimen><!-- The font size for Inputs. -->
   <dimen name="sprk_helper_font_size">13.00sp</dimen><!-- The font size of the helper text for Inputs -->
   <dimen name="sprk_date_picker_font_size">16.00sp</dimen><!-- The font size of the Date Picker popup. -->
   <dimen name="sprk_table_grouped_header_font_size">13.00sp</dimen><!-- The font size of the header in the Grouped Columns Table variant. -->
