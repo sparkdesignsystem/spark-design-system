@@ -358,30 +358,6 @@
         "border-radius"
       ]
     },
-    "border": {
-      "comment": "Value for border on the Alert component.",
-      "value": "2px solid rgb(247, 247, 247)",
-      "attributes": {
-        "category": "content",
-        "type": "border"
-      },
-      "file": "settings",
-      "themable": true,
-      "original": {
-        "comment": "Value for border on the Alert component.",
-        "value": "{alert.border-width.value} {alert.border-style.value} {alert.border-color.value}",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "name": "sprk-alert-border",
-      "path": [
-        "alert",
-        "border"
-      ]
-    },
     "border-color": {
       "comment": "Value for border color on the Alert component.",
       "value": "rgb(247, 247, 247)",
@@ -452,6 +428,30 @@
       "path": [
         "alert",
         "border-style"
+      ]
+    },
+    "border": {
+      "comment": "Value for border on the Alert component.",
+      "value": "2px solid rgb(247, 247, 247)",
+      "attributes": {
+        "category": "content",
+        "type": "border"
+      },
+      "file": "settings",
+      "themable": true,
+      "original": {
+        "comment": "Value for border on the Alert component.",
+        "value": "{alert.border-width.value} {alert.border-style.value} {alert.border-color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "name": "sprk-alert-border",
+      "path": [
+        "alert",
+        "border"
       ]
     },
     "shadow-color": {
@@ -17468,387 +17468,6 @@
         "spinner",
         "color-secondary"
       ]
-    }
-  },
-  "stack": {
-    "spacing": {
-      "tiny": {
-        "comment": "The spacing of the tiny Stack object.",
-        "value": "4px",
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The spacing of the tiny Stack object.",
-          "value": "{space.xs.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-stack-spacing-tiny",
-        "attributes": {
-          "category": "stack",
-          "type": "spacing",
-          "item": "tiny"
-        },
-        "path": [
-          "stack",
-          "spacing",
-          "tiny"
-        ]
-      },
-      "small": {
-        "comment": "The spacing of the small Stack object.",
-        "value": "8px",
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The spacing of the small Stack object.",
-          "value": "{space.s.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-stack-spacing-small",
-        "attributes": {
-          "category": "stack",
-          "type": "spacing",
-          "item": "small"
-        },
-        "path": [
-          "stack",
-          "spacing",
-          "small"
-        ]
-      },
-      "medium": {
-        "comment": "The spacing of the medium Stack object.",
-        "value": "16px",
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The spacing of the medium Stack object.",
-          "value": "{space.m.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-stack-spacing-medium",
-        "attributes": {
-          "category": "stack",
-          "type": "spacing",
-          "item": "medium"
-        },
-        "path": [
-          "stack",
-          "spacing",
-          "medium"
-        ]
-      },
-      "large": {
-        "comment": "The spacing of the large Stack object.",
-        "value": "32px",
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The spacing of the large Stack object.",
-          "value": "{space.l.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-stack-spacing-large",
-        "attributes": {
-          "category": "stack",
-          "type": "spacing",
-          "item": "large"
-        },
-        "path": [
-          "stack",
-          "spacing",
-          "large"
-        ]
-      },
-      "huge": {
-        "comment": "The spacing of the huge Stack object.",
-        "value": "64px",
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The spacing of the huge Stack object.",
-          "value": "{space.xl.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-stack-spacing-huge",
-        "attributes": {
-          "category": "stack",
-          "type": "spacing",
-          "item": "huge"
-        },
-        "path": [
-          "stack",
-          "spacing",
-          "huge"
-        ]
-      },
-      "misc": {
-        "a": {
-          "comment": "The spacing of the Misc A Stack object.",
-          "value": "24px",
-          "file": "settings",
-          "themable": true,
-          "original": {
-            "comment": "The spacing of the Misc A Stack object.",
-            "value": "{space.misc.a.value}",
-            "file": "settings",
-            "themable": true
-          },
-          "name": "sprk-stack-spacing-misc-a",
-          "attributes": {
-            "category": "stack",
-            "type": "spacing",
-            "item": "misc",
-            "subitem": "a"
-          },
-          "path": [
-            "stack",
-            "spacing",
-            "misc",
-            "a"
-          ]
-        },
-        "b": {
-          "comment": "The spacing of the Misc B Stack object.",
-          "value": "40px",
-          "file": "settings",
-          "themable": true,
-          "original": {
-            "comment": "The spacing of the Misc B Stack object.",
-            "value": "{space.misc.b.value}",
-            "file": "settings",
-            "themable": true
-          },
-          "name": "sprk-stack-spacing-misc-b",
-          "attributes": {
-            "category": "stack",
-            "type": "spacing",
-            "item": "misc",
-            "subitem": "b"
-          },
-          "path": [
-            "stack",
-            "spacing",
-            "misc",
-            "b"
-          ]
-        },
-        "c": {
-          "comment": "The spacing of the Misc C Stack object.",
-          "value": "48px",
-          "file": "settings",
-          "themable": true,
-          "original": {
-            "comment": "The spacing of the Misc C Stack object.",
-            "value": "{space.misc.c.value}",
-            "file": "settings",
-            "themable": true
-          },
-          "name": "sprk-stack-spacing-misc-c",
-          "attributes": {
-            "category": "stack",
-            "type": "spacing",
-            "item": "misc",
-            "subitem": "c"
-          },
-          "path": [
-            "stack",
-            "spacing",
-            "misc",
-            "c"
-          ]
-        },
-        "d": {
-          "comment": "The spacing of the Misc D Stack object.",
-          "value": "80px",
-          "file": "settings",
-          "themable": true,
-          "original": {
-            "comment": "The spacing of the Misc D Stack object.",
-            "value": "{space.misc.d.value}",
-            "file": "settings",
-            "themable": true
-          },
-          "name": "sprk-stack-spacing-misc-d",
-          "attributes": {
-            "category": "stack",
-            "type": "spacing",
-            "item": "misc",
-            "subitem": "d"
-          },
-          "path": [
-            "stack",
-            "spacing",
-            "misc",
-            "d"
-          ]
-        }
-      }
-    }
-  },
-  "split": {
-    "breakpoint": {
-      "xxs": {
-        "comment": "The breakpoint for Stack objects that split at the extra extra small point.",
-        "value": "20rem",
-        "attributes": {
-          "category": "size",
-          "type": "breakpoint",
-          "item": "xxs"
-        },
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The breakpoint for Stack objects that split at the extra extra small point.",
-          "value": "20rem",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-split-breakpoint-xxs",
-        "path": [
-          "split",
-          "breakpoint",
-          "xxs"
-        ]
-      },
-      "xs": {
-        "comment": "The breakpoint for Stack objects that split at the extra small point.",
-        "value": "30rem",
-        "attributes": {
-          "category": "size",
-          "type": "breakpoint",
-          "item": "xs"
-        },
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The breakpoint for Stack objects that split at the extra small point.",
-          "value": "30rem",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-split-breakpoint-xs",
-        "path": [
-          "split",
-          "breakpoint",
-          "xs"
-        ]
-      },
-      "s": {
-        "comment": "The breakpoint for Stack objects that split at the small point.",
-        "value": "42.5rem",
-        "attributes": {
-          "category": "size",
-          "type": "breakpoint",
-          "item": "s"
-        },
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The breakpoint for Stack objects that split at the small point.",
-          "value": "42.5rem",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-split-breakpoint-s",
-        "path": [
-          "split",
-          "breakpoint",
-          "s"
-        ]
-      },
-      "m": {
-        "comment": "The breakpoint for Stack objects that split at the medium point.",
-        "value": "55rem",
-        "attributes": {
-          "category": "size",
-          "type": "breakpoint",
-          "item": "m"
-        },
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The breakpoint for Stack objects that split at the medium point.",
-          "value": "55rem",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-split-breakpoint-m",
-        "path": [
-          "split",
-          "breakpoint",
-          "m"
-        ]
-      },
-      "l": {
-        "comment": "The breakpoint for Stack objects that split at the large point.",
-        "value": "67.5rem",
-        "attributes": {
-          "category": "size",
-          "type": "breakpoint",
-          "item": "l"
-        },
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The breakpoint for Stack objects that split at the large point.",
-          "value": "67.5rem",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-split-breakpoint-l",
-        "path": [
-          "split",
-          "breakpoint",
-          "l"
-        ]
-      },
-      "xl": {
-        "comment": "The breakpoint for Stack objects that split at the extra large point.",
-        "value": "80rem",
-        "attributes": {
-          "category": "size",
-          "type": "breakpoint",
-          "item": "xl"
-        },
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The breakpoint for Stack objects that split at the extra large point.",
-          "value": "80rem",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-split-breakpoint-xl",
-        "path": [
-          "split",
-          "breakpoint",
-          "xl"
-        ]
-      }
     }
   },
   "stepper": {

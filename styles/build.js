@@ -23,9 +23,8 @@ const formatRefForSass = (reference) => {
       ? reference.split(/(\()/)
       : reference.split(/(\))/);
     // The Sass Var is last item in
-    // array for Open parens and last for Close.
+    // array for Open parens and first for Close.
     varRef = hasOpenParen ? refArr.pop() : refArr.shift();
-    console.log(reference, 'var ref')
     varRef = formatDashCase(varRef);
     // Replace reference with Sass var.
     if (hasOpenParen) refArr.push(`$sprk-${varRef}`);
@@ -50,7 +49,7 @@ const removeCurlyBraces = (property) => {
  * and formats the value to be in Sass syntax.
  * Allows us to preserve the ability for it
  * to be redeclared vs hard-coded.
- * @example replaces "{white.value}"" with "$sprk-white".
+ * @example replaces "{white.value}" with "$sprk-white".
  * @param {string} tokenValue
  * @return {string}
  */

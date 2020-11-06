@@ -2,7 +2,7 @@
 
 <!--
   Do not edit directly
-  Generated on Fri, 06 Nov 2020 05:08:38 GMT
+  Generated on Fri, 06 Nov 2020 17:45:51 GMT
 -->
 <resources>
   <string name="sprk_accordion_border">2px solid rgb(230, 230, 230)</string><!-- The border of Accordions. -->
@@ -13,8 +13,8 @@
   <string name="sprk_accordion_summary_border">none</string><!-- The border of the Accordion item summary. -->
   <string name="sprk_accordion_summary_padding">24.00dp 0</string><!-- The padding of the Accordion summary. -->
   <string name="sprk_accordion_content_padding">0 0 32.00dp</string><!-- The padding of the Accordion content. -->
-  <string name="sprk_alert_border">2.00dp solid #fff7f7f7</string><!-- Value for border on the Alert component. -->
   <string name="sprk_alert_border_style">solid</string><!-- Value for border style on the Alert component. -->
+  <string name="sprk_alert_border">2.00dp solid #fff7f7f7</string><!-- Value for border on the Alert component. -->
   <string name="sprk_alert_shadow">0 3px 10px 1px #14000000</string><!-- Value for shadow on the Alert component. -->
   <string name="sprk_alert_content_padding">16.00dp 16.00dp 16.00dp 24.00dp</string><!-- The padding around the main content icon and message in the Alert component. -->
   <string name="sprk_alert_dismiss_padding">16.00dp 24.00dp 16.00dp 16.00dp</string><!-- The padding around the dismiss icon in the Alert component. -->

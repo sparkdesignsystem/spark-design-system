@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 06 Nov 2020 05:08:38 GMT
+ * Generated on Fri, 06 Nov 2020 17:45:51 GMT
  */
 
 export const AccordionMaxWidth = "53.125rem"; // The maximum width of Accordions.
@@ -17,10 +17,10 @@ export const AccordionSummaryPadding = "24rem 0"; // The padding of the Accordio
 export const AccordionContentPadding = "0 0 32rem"; // The padding of the Accordion content.
 export const AccordionActiveBackgroundColor = "#f7f7f7"; // The background color used for hover and active on items in the Accordion.
 export const AlertBorderRadius = "4rem"; // Value for border-radius on the Alert component.
-export const AlertBorder = "2rem solid #f7f7f7"; // Value for border on the Alert component.
 export const AlertBorderColor = "#f7f7f7"; // Value for border color on the Alert component.
 export const AlertBorderWidth = "2rem"; // Value for border size on the Alert component.
 export const AlertBorderStyle = "solid"; // Value for border style on the Alert component.
+export const AlertBorder = "2rem solid #f7f7f7"; // Value for border on the Alert component.
 export const AlertShadowColor = "#000000"; // Value for shadow color on the Alert component.
 export const AlertShadow = "0 3px 10px 1px #000000"; // Value for shadow on the Alert component.
 export const AlertColor = "#1c1b1a"; // Value for color of the Alert component.

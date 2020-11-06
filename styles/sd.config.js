@@ -13,7 +13,7 @@ module.exports = {
       files: [
         {
           format: 'themable-scss/web',
-          destination: '_settings.scss',
+          destination: '_vars.scss',
           filter: {
             file: 'settings',
           },
@@ -23,6 +23,13 @@ module.exports = {
           destination: '_space.scss',
           filter: {
             file: 'space',
+          },
+        },
+        {
+          format: 'themable-scss/web',
+          destination: '_object.scss',
+          filter: {
+            file: 'object',
           },
         },
         {

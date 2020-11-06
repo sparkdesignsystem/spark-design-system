@@ -9,15 +9,6 @@
       "file": "settings",
       "themable": true
     },
-    "border": {
-      "comment": "Value for border on the Alert component.",
-      "value": "{alert.border-width.value} {alert.border-style.value} {alert.border-color.value}",
-      "attributes": {
-        "category": "content"
-      },
-      "file": "settings",
-      "themable": true
-    },
     "border-color": {
       "comment": "Value for border color on the Alert component.",
       "value": "{gray.value}",
@@ -39,6 +30,15 @@
     "border-style": {
       "comment": "Value for border style on the Alert component.",
       "value": "solid",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border": {
+      "comment": "Value for border on the Alert component.",
+      "value": "{alert.border-width.value} {alert.border-style.value} {alert.border-color.value}",
       "attributes": {
         "category": "content"
       },
