@@ -40,10 +40,10 @@ after Spark's Javascript functions run.
   - See Spark's [spinner.js](https://github.com/sparkdesignsystem/spark-design-system/blob/staging/html/components/spinners.js)
   for details.
 - The following data attributes configure spinning state.
-  - \`data-sprk-spinner-role=""\` - Defaults to "progressbar".
-  - \`data-sprk-spinner-aria-valuetext=""\` - Defaults to "Loading"
-  - \`data-sprk-spinner-aria-label=""\` - Defaults to "Loading"
-  - \`data-sprk-spinner-text=""\` - Text on the button before and after
+  - \`data-sprk-spinner-role=""\` – Defaults to "progressbar".
+  - \`data-sprk-spinner-aria-valuetext=""\` – Defaults to "Loading"
+  - \`data-sprk-spinner-aria-label=""\` – Defaults to "Loading"
+  - \`data-sprk-spinner-text=""\` – Text on the button before and after
   spinning. Defaults to empty string.
 
 
