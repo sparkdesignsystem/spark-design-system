@@ -77,7 +77,7 @@ describe('spinners UI tests', () => {
     spinnerContainer3.textContent = 'Submit';
     spinnerContainer3.setAttribute('data-sprk-spinner', 'click');
     spinnerContainer3.setAttribute('data-sprk-spinner-role', 'status');
-    spinnerContainer3.setAttribute('data-sprk-aria-value-text', 'Submitting');
+    spinnerContainer3.setAttribute('data-sprk-aria-valuetext', 'Submitting');
 
     sinon.spy(spinnerContainer, 'addEventListener');
     sinon.spy(spinnerContainer, 'setAttribute');
@@ -112,14 +112,14 @@ describe('spinners UI tests', () => {
     const spinnerDiv = spinnerContainer.querySelector('div');
     expect(spinnerDiv.getAttribute('aria-valuetext') === 'Loading').toBe(true);
     expect(spinnerDiv.getAttribute('role') === 'progressbar').toBe(true);
-    expect(spinnerContainer.getAttribute('disabled')).toBe('true');
+    expect(spinnerContainer.hasAttribute('disabled')).toBe(true);
   });
 
   it('should choose user choice instead of default', () => {
     spinnerContainer3.click();
     const spinnerDiv = spinnerContainer3.querySelector('div');
     expect(spinnerDiv.getAttribute('aria-valuetext')).toBe(
-      spinnerContainer3.getAttribute('data-sprk-aria-value-text'),
+      spinnerContainer3.getAttribute('data-sprk-aria-valuetext'),
     );
     expect(spinnerDiv.getAttribute('role')).toBe(
       spinnerContainer3.getAttribute('data-sprk-spinner-role'),

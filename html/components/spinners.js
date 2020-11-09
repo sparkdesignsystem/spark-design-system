@@ -36,7 +36,7 @@ const setSpinning = (element, options) => {
   el.classList.add('sprk-c-Button--has-spinner');
   el.setAttribute('aria-label', spinningAriaLabel);
   el.setAttribute('data-sprk-spinner-text', el.textContent);
-  el.setAttribute('disabled', 'true');
+  el.setAttribute('disabled', '');
   el.setAttribute('data-sprk-has-spinner', 'true');
   el.setAttribute('style', `width: ${width}px`);
 
@@ -75,7 +75,7 @@ const spinners = () => {
     );
     options.role = spinnerContainer.getAttribute('data-sprk-spinner-role');
     options.ariaValueText = spinnerContainer.getAttribute(
-      'data-sprk-aria-value-text',
+      'data-sprk-aria-valuetext',
     );
 
     spinnerContainer.addEventListener('click', (e) => {

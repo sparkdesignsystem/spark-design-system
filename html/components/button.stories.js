@@ -24,23 +24,39 @@ must include a \`title=””\` attribute.
 - If a Button only includes an Icon with no text,
 alternative text must be provided.
 
-##### Spinner State
-- Spinner state requires additional engineering.
-These stories only represent a spinner button after javascript intervention.
-- Add these attributes on buttons that will have a spinning state:
+##### Spinner State Setup
+- Our spinner button code sample solely represents the rendered state
+after Spark's Javascript functions run.
+- If your button will have a spinner state, it needs these attributes:
   - \`class="sprk-c-Button"\` as well as any class modifiers.
   - \`data-sprk-spinner="click"\`
-  - \`aria-live="polite"\`
-  - Other attributes seen in the story is
-  added after calling the \`setSpinning\` function.
-- Use \`setSpinning\` and \`cancelSpinning\` functions
-to stop start or stop a button from spinning.
-These functions adds other necessary classes,
-attributes and accessibility considerations.
-- The following data attributes override accessibility defaults.
+  - \`aria-live="polite"\` (Notifies screen readers of state changes.)
+  - See example to see implementation.
+- Available functions:
+  - \`setSpinning\` – Replaces button content with a spinner,
+  and adds classes and accessibility attributes.
+  - \`cancelSpinning\` – Removes spinner from button
+  content as well as button attributes added from \`setSpinning\`.
+  - See Spark's [spinner.js](https://github.com/sparkdesignsystem/spark-design-system/blob/staging/html/components/spinners.js)
+  for details.
+- The following data attributes configure spinning state.
   - \`data-sprk-spinner-role=""\` - Defaults to "progressbar".
   - \`data-sprk-spinner-aria-valuetext=""\` - Defaults to "Loading"
   - \`data-sprk-spinner-aria-label=""\` - Defaults to "Loading"
+  - \`data-sprk-spinner-text=""\` - Text on the button before and after
+  spinning. Defaults to empty string.
+
+
+###### Example Spinner Implementation
+\`\`\`
+<button
+  class="sprk-c-Button sprk-c-Button--has-spinner"
+  data-sprk-spinner="click"
+  aria-live="polite"
+  data-sprk-spinner-text="Submit"
+>
+</button>
+\`\`\`
 
 ##### Guidelines
 - If a Button is in a form, but is not intended to
