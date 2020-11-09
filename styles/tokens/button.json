@@ -145,7 +145,7 @@
     },
     "padding": {
       "comment": "The padding of the Button component.",
-      "value": "{space.m.value} {space.misc.a.value}",
+      "value": "{space.m.value} 24px",
       "attributes": {
         "category": "content"
       },
