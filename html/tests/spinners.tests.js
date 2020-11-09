@@ -61,6 +61,7 @@ describe('spinners UI tests', () => {
   let spinnerContainer;
   let spinnerContainer2;
   let spinnerContainer3;
+  let spinnerContainer4;
   let event;
 
   beforeEach(() => {
@@ -79,11 +80,19 @@ describe('spinners UI tests', () => {
     spinnerContainer3.setAttribute('data-sprk-spinner-role', 'status');
     spinnerContainer3.setAttribute('data-sprk-aria-valuetext', 'Submitting');
 
+    spinnerContainer4 = document.createElement('button');
+    spinnerContainer4.setAttribute('data-sprk-spinner', 'click');
+    spinnerContainer4.setAttribute('data-sprk-has-spinner', 'true');
+    const spinner = document.createElement('div');
+    spinner.classList.add('sprk-c-Spinner--circle');
+    spinnerContainer4.appendChild(spinner);
+
     sinon.spy(spinnerContainer, 'addEventListener');
     sinon.spy(spinnerContainer, 'setAttribute');
     document.body.append(spinnerContainer);
     document.body.append(spinnerContainer2);
     document.body.append(spinnerContainer3);
+    document.body.append(spinnerContainer4);
     spinners();
   });
 
@@ -182,16 +191,13 @@ describe('spinners UI tests', () => {
   });
 
   it(`should not try to start spinning something that's
-  already spinning`, () => {
-    spinnerContainer.click();
-    expect(spinnerContainer.setAttribute.getCalls().length).toBe(5);
+   already spinning`, () => {
+    spinnerContainer4.click();
     expect(
-      spinnerContainer
+      spinnerContainer4
         .querySelector('div')
         .classList.contains('sprk-c-Spinner--circle'),
     ).toBe(true);
-    spinnerContainer.click();
-    expect(spinnerContainer.setAttribute.getCalls().length).toBe(5);
   });
 });
 

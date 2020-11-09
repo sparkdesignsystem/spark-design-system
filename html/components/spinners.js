@@ -79,10 +79,7 @@ const spinners = () => {
     );
 
     spinnerContainer.addEventListener('click', (e) => {
-      if (
-        e.target.getAttribute('data-sprk-spinner') &&
-        !e.target.getAttribute('data-sprk-has-spinner')
-      ) {
+      if (!e.target.hasAttribute('data-sprk-has-spinner')) {
         setSpinning(e.target, options);
       }
     });
