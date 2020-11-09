@@ -9,15 +9,6 @@
       "file": "settings",
       "themable": true
     },
-    "border": {
-      "comment": "The value of border for Dividers.",
-      "value": "{divider.border-width.value} {divider.border-style.value} {divider.color.value}",
-      "attributes": {
-        "category": "content"
-      },
-      "file": "settings",
-      "themable": true
-    },
     "border-width": {
       "comment": "The size value of border for Dividers.",
       "value": "2px",
@@ -30,6 +21,15 @@
     "border-style": {
       "comment": "The style value of border for Dividers.",
       "value": "solid",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border": {
+      "comment": "The value of border for Dividers.",
+      "value": "{divider.border-width.value} {divider.border-style.value} {divider.color.value}",
       "attributes": {
         "category": "content"
       },

@@ -1,14 +1,5 @@
 {
   "link": {
-    "visited-border-bottom": {
-      "comment": "The style of the underline on visited Links.",
-      "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.color.value}",
-      "attributes": {
-        "category": "content"
-      },
-      "file": "settings",
-      "themable": true
-    },
     "transition": {
       "comment": "The transition timing for hover, active and focus styles on Links.",
       "value": "0.3s",
@@ -74,18 +65,18 @@
       "themable": true
     },
     "border": {
-      "bottom": {
-        "comment": "The style of the underline on Links.",
-        "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.color.value}",
+      "bottom-style": {
+        "comment": "The border style of the underline on Links.",
+        "value": "solid",
         "attributes": {
           "category": "content"
         },
         "file": "settings",
         "themable": true
       },
-      "bottom-style": {
-        "comment": "The border style of the underline on Links.",
-        "value": "solid",
+      "bottom": {
+        "comment": "The style of the underline on Links.",
+        "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.color.value}",
         "attributes": {
           "category": "content"
         },
@@ -114,6 +105,15 @@
           "themable": true
         }
       }
+    },
+    "visited-border-bottom": {
+      "comment": "The style of the underline on visited Links.",
+      "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.color.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
     },
     "simple": {
       "color": {
@@ -352,40 +352,6 @@
       }
     },
     "has-icon": {
-      "hover": {
-        "color-text": {
-          "comment": "The color value for Links with icons in the hover state.",
-          "value": "{purple-deep.value}",
-          "attributes": {
-            "category": "color"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "fill": {
-          "comment": "The fill color for icons contained in Links on hover.",
-          "value": "{link.has-icon.hover.color-text.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "stroke": {
-          "comment": "The stroke color for icons contained in Links on hover.",
-          "value": "{link.has-icon.hover.color-text.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "border": {
-          "bottom": {
-            "comment": "The border settings for Links with icons in the hover state.",
-            "value": "{link.has-icon.underline.width.value} {link.border.bottom-style.value} {link.has-icon.underline.color.value}",
-            "attributes": {
-              "category": "content"
-            },
-            "file": "settings",
-            "themable": true
-          }
-        }
-      },
       "color-icon": {
         "comment": "The color of icons in Links containing icons.",
         "value": "{purple.value}",
@@ -441,6 +407,40 @@
         },
         "file": "settings",
         "themable": true
+      },
+      "hover": {
+        "color-text": {
+          "comment": "The color value for Links with icons in the hover state.",
+          "value": "{purple-deep.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "fill": {
+          "comment": "The fill color for icons contained in Links on hover.",
+          "value": "{link.has-icon.hover.color-text.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "stroke": {
+          "comment": "The stroke color for icons contained in Links on hover.",
+          "value": "{link.has-icon.hover.color-text.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "border": {
+          "bottom": {
+            "comment": "The border settings for Links with icons in the hover state.",
+            "value": "{link.has-icon.underline.width.value} {link.border.bottom-style.value} {link.has-icon.underline.color.value}",
+            "attributes": {
+              "category": "content"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        }
       }
     },
     "disabled": {
@@ -453,6 +453,24 @@
       "border-bottom-color": {
         "comment": "The Disabled Link border-bottom ",
         "value": "{link.disabled.color.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "underline-width": {
+        "comment": "The underline width for the disabled Link.",
+        "value": "0",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "border-bottom": {
+        "comment": "The underline settings for the disabled Link..",
+        "value": "{link.disabled.underline-width.value} {link.border.bottom-style.value} {link.disabled.color.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -478,24 +496,6 @@
           "file": "settings",
           "themable": true
         }
-      },
-      "underline-width": {
-        "comment": "The underline width for the disabled Link.",
-        "value": "0",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "border-bottom": {
-        "comment": "The underline settings for the disabled Link..",
-        "value": "{link.disabled.underline-width.value} {link.border.bottom-style.value} {link.disabled.color.value}",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
       }
     }
   }

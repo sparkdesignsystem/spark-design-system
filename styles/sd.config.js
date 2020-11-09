@@ -27,6 +27,20 @@ module.exports = {
         },
         {
           format: 'themable-scss/web',
+          destination: '_layer.scss',
+          filter: {
+            file: 'layer',
+          },
+        },
+        {
+          format: 'themable-scss/web',
+          destination: '_typography.scss',
+          filter: {
+            file: 'typography',
+          },
+        },
+        {
+          format: 'themable-scss/web',
           destination: '_object.scss',
           filter: {
             file: 'object',
@@ -37,6 +51,13 @@ module.exports = {
           destination: '_colors.scss',
           filter: {
             file: 'color',
+          },
+        },
+        {
+          format: 'themable-scss/web',
+          destination: '_component.scss',
+          filter: {
+            file: 'component',
           },
         },
         {

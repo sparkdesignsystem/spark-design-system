@@ -721,17 +721,19 @@
     }
   },
   "red": {
-    "comment": "Red for key branded moments throughout the product as our primary brand ",
+    "comment": "Red for key branded moments throughout the product as our primary brand color.",
     "value": "rgb(200, 16, 46)",
     "group": "primary",
+    "type": "#C8102E",
     "attributes": {
       "category": "color"
     },
     "file": "color",
     "original": {
-      "comment": "Red for key branded moments throughout the product as our primary brand ",
+      "comment": "Red for key branded moments throughout the product as our primary brand color.",
       "value": "rgb(200, 16, 46)",
       "group": "primary",
+      "type": "#C8102E",
       "attributes": {
         "category": "color"
       },
@@ -746,6 +748,7 @@
     "comment": "Darkest red for key branded moments throughout the product.",
     "value": "rgb(118, 35, 47)",
     "group": "primary",
+    "type": "#76232F",
     "attributes": {
       "category": "color"
     },
@@ -754,6 +757,7 @@
       "comment": "Darkest red for key branded moments throughout the product.",
       "value": "rgb(118, 35, 47)",
       "group": "primary",
+      "type": "#76232F",
       "attributes": {
         "category": "color"
       },
@@ -768,6 +772,7 @@
     "comment": "Mid red for key branded moments throughout the product.",
     "value": "rgb(157, 34, 53)",
     "group": "primary",
+    "type": "#9D2235",
     "attributes": {
       "category": "color"
     },
@@ -776,6 +781,7 @@
       "comment": "Mid red for key branded moments throughout the product.",
       "value": "rgb(157, 34, 53)",
       "group": "primary",
+      "type": "#9D2235",
       "attributes": {
         "category": "color"
       },
@@ -790,6 +796,7 @@
     "comment": "Main purple for secondary actions and brand elements.",
     "value": "rgb(96, 58, 161)",
     "group": "secondary",
+    "type": "#603AA1",
     "attributes": {
       "category": "color"
     },
@@ -798,6 +805,7 @@
       "comment": "Main purple for secondary actions and brand elements.",
       "value": "rgb(96, 58, 161)",
       "group": "secondary",
+      "type": "#603AA1",
       "attributes": {
         "category": "color"
       },
@@ -809,17 +817,19 @@
     ]
   },
   "purple-dark": {
-    "comment": "Dark purple for interactive elements. Can also be used for limited floods of ",
+    "comment": "Dark purple for interactive elements. Can also be used for limited floods of color.",
     "value": "rgb(60, 49, 116)",
     "group": "secondary",
+    "type": "#3C3174",
     "attributes": {
       "category": "color"
     },
     "file": "color",
     "original": {
-      "comment": "Dark purple for interactive elements. Can also be used for limited floods of ",
+      "comment": "Dark purple for interactive elements. Can also be used for limited floods of color.",
       "value": "rgb(60, 49, 116)",
       "group": "secondary",
+      "type": "#3C3174",
       "attributes": {
         "category": "color"
       },
@@ -831,17 +841,19 @@
     ]
   },
   "purple-deep": {
-    "comment": "Deep purple for interactive elements. Can also be used for limited floods of ",
+    "comment": "Deep purple for interactive elements. Can also be used for limited floods of color.",
     "value": "rgb(46, 17, 102)",
     "group": "secondary",
+    "type": "#2E1166",
     "attributes": {
       "category": "color"
     },
     "file": "color",
     "original": {
-      "comment": "Deep purple for interactive elements. Can also be used for limited floods of ",
+      "comment": "Deep purple for interactive elements. Can also be used for limited floods of color.",
       "value": "rgb(46, 17, 102)",
       "group": "secondary",
+      "type": "#2E1166",
       "attributes": {
         "category": "color"
       },
@@ -856,6 +868,7 @@
     "comment": "Light purple for interactive elements.",
     "value": "rgb(146, 101, 211)",
     "group": "secondary",
+    "type": "#9265D3",
     "attributes": {
       "category": "color"
     },
@@ -864,6 +877,7 @@
       "comment": "Light purple for interactive elements.",
       "value": "rgb(146, 101, 211)",
       "group": "secondary",
+      "type": "#9265D3",
       "attributes": {
         "category": "color"
       },
@@ -875,17 +889,19 @@
     ]
   },
   "purple-lightest": {
-    "comment": "Lightest purple for interactive elements. Can also be used for limited floods of ",
+    "comment": "Lightest purple for interactive elements. Can also be used for limited floods of color.",
     "value": "rgb(231, 226, 242)",
     "group": "secondary",
+    "type": "#E7E2F2",
     "attributes": {
       "category": "color"
     },
     "file": "color",
     "original": {
-      "comment": "Lightest purple for interactive elements. Can also be used for limited floods of ",
+      "comment": "Lightest purple for interactive elements. Can also be used for limited floods of color.",
       "value": "rgb(231, 226, 242)",
       "group": "secondary",
+      "type": "#E7E2F2",
       "attributes": {
         "category": "color"
       },
@@ -900,6 +916,7 @@
     "comment": "Use to communicate a positive status or message.",
     "value": "rgb(41, 133, 64)",
     "group": "semantic",
+    "type": "#298540",
     "attributes": {
       "category": "color"
     },
@@ -908,6 +925,7 @@
       "comment": "Use to communicate a positive status or message.",
       "value": "rgb(41, 133, 64)",
       "group": "semantic",
+      "type": "#298540",
       "attributes": {
         "category": "color"
       },
@@ -922,6 +940,7 @@
     "comment": "Use to communicate an informative status or message.",
     "value": "rgb(28, 110, 242)",
     "group": "semantic",
+    "type": "#1C6EF2",
     "attributes": {
       "category": "color"
     },
@@ -930,6 +949,7 @@
       "comment": "Use to communicate an informative status or message.",
       "value": "rgb(28, 110, 242)",
       "group": "semantic",
+      "type": "#1C6EF2",
       "attributes": {
         "category": "color"
       },
@@ -944,6 +964,7 @@
     "comment": "Use to communicate an error status or message.",
     "value": "rgb(229, 1, 88)",
     "group": "semantic",
+    "type": "#E50158",
     "attributes": {
       "category": "color"
     },
@@ -952,6 +973,7 @@
       "comment": "Use to communicate an error status or message.",
       "value": "rgb(229, 1, 88)",
       "group": "semantic",
+      "type": "#E50158",
       "attributes": {
         "category": "color"
       },
@@ -963,17 +985,19 @@
     ]
   },
   "yellow": {
-    "comment": "Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this ",
+    "comment": "Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this color.",
     "value": "rgb(237, 163, 2)",
     "group": "semantic",
+    "type": "#EDA302",
     "attributes": {
       "category": "color"
     },
     "file": "color",
     "original": {
-      "comment": "Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this ",
+      "comment": "Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this color.",
       "value": "rgb(237, 163, 2)",
       "group": "semantic",
+      "type": "#EDA302",
       "attributes": {
         "category": "color"
       },
@@ -988,6 +1012,7 @@
     "comment": "White for floods of color and accents, like backgrounds and cards.",
     "value": "rgb(255, 255, 255)",
     "group": "neutral",
+    "type": "#FFFFFF",
     "attributes": {
       "category": "color"
     },
@@ -996,6 +1021,7 @@
       "comment": "White for floods of color and accents, like backgrounds and cards.",
       "value": "rgb(255, 255, 255)",
       "group": "neutral",
+      "type": "#FFFFFF",
       "attributes": {
         "category": "color"
       },
@@ -1010,6 +1036,7 @@
     "comment": "Black for main text color, specifically in headline and body copy.",
     "value": "rgb(28, 27, 26)",
     "group": "neutral",
+    "type": "#1C1B1A",
     "attributes": {
       "category": "color"
     },
@@ -1018,6 +1045,7 @@
       "comment": "Black for main text color, specifically in headline and body copy.",
       "value": "rgb(28, 27, 26)",
       "group": "neutral",
+      "type": "#1C1B1A",
       "attributes": {
         "category": "color"
       },
@@ -1033,6 +1061,7 @@
       "comment": "Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(232, 232, 232)",
       "group": "neutral",
+      "type": "#E8E8E8",
       "attributes": {
         "category": "color",
         "type": "10"
@@ -1042,6 +1071,7 @@
         "comment": "Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(232, 232, 232)",
         "group": "neutral",
+        "type": "#E8E8E8",
         "attributes": {
           "category": "color"
         },
@@ -1057,6 +1087,7 @@
       "comment": "Black at 20%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(210, 209, 209)",
       "group": "neutral",
+      "type": "#D2D1D1",
       "attributes": {
         "category": "color",
         "type": "20"
@@ -1066,6 +1097,7 @@
         "comment": "Black at 20%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(210, 209, 209)",
         "group": "neutral",
+        "type": "#D2D1D1",
         "attributes": {
           "category": "color"
         },
@@ -1081,6 +1113,7 @@
       "comment": "Black at 30%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(186, 186, 186)",
       "group": "neutral",
+      "type": "#BABABA",
       "attributes": {
         "category": "color",
         "type": "30"
@@ -1090,6 +1123,7 @@
         "comment": "Black at 30%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(186, 186, 186)",
         "group": "neutral",
+        "type": "#BABABA",
         "attributes": {
           "category": "color"
         },
@@ -1105,6 +1139,7 @@
       "comment": "Black at 40%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(164, 164, 163)",
       "group": "neutral",
+      "type": "#A4A4A3",
       "attributes": {
         "category": "color",
         "type": "40"
@@ -1114,6 +1149,7 @@
         "comment": "Black at 40%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(164, 164, 163)",
         "group": "neutral",
+        "type": "#A4A4A3",
         "attributes": {
           "category": "color"
         },
@@ -1129,6 +1165,7 @@
       "comment": "Black at 50%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(141, 141, 140)",
       "group": "neutral",
+      "type": "#8D8D8C",
       "attributes": {
         "category": "color",
         "type": "50"
@@ -1138,6 +1175,7 @@
         "comment": "Black at 50%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(141, 141, 140)",
         "group": "neutral",
+        "type": "#8D8D8C",
         "attributes": {
           "category": "color"
         },
@@ -1153,6 +1191,7 @@
       "comment": "Black at 60%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(119, 118, 118)",
       "group": "neutral",
+      "type": "#777676",
       "attributes": {
         "category": "color",
         "type": "60"
@@ -1162,6 +1201,7 @@
         "comment": "Black at 60%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(119, 118, 118)",
         "group": "neutral",
+        "type": "#777676",
         "attributes": {
           "category": "color"
         },
@@ -1177,6 +1217,7 @@
       "comment": "Black at 70%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(96, 95, 94)",
       "group": "neutral",
+      "type": "#605F5E",
       "attributes": {
         "category": "color",
         "type": "70"
@@ -1186,6 +1227,7 @@
         "comment": "Black at 70%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(96, 95, 94)",
         "group": "neutral",
+        "type": "#605F5E",
         "attributes": {
           "category": "color"
         },
@@ -1201,6 +1243,7 @@
       "comment": "Black at 80%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(73, 73, 72)",
       "group": "neutral",
+      "type": "#494948",
       "attributes": {
         "category": "color",
         "type": "80"
@@ -1210,6 +1253,7 @@
         "comment": "Black at 80%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(73, 73, 72)",
         "group": "neutral",
+        "type": "#494948",
         "attributes": {
           "category": "color"
         },
@@ -1225,6 +1269,7 @@
       "comment": "Black at 90%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(50, 49, 48)",
       "group": "neutral",
+      "type": "#323130",
       "attributes": {
         "category": "color",
         "type": "90"
@@ -1234,6 +1279,7 @@
         "comment": "Black at 90%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
         "value": "rgb(50, 49, 48)",
         "group": "neutral",
+        "type": "#323130",
         "attributes": {
           "category": "color"
         },
@@ -1250,6 +1296,7 @@
     "comment": "Lightest gray. Use in combination with content hierarchy, font-weight and background color to create AA accessible text.",
     "value": "rgb(247, 247, 247)",
     "group": "neutral",
+    "type": "#F7F7F7",
     "attributes": {
       "category": "color"
     },
@@ -1258,6 +1305,7 @@
       "comment": "Lightest gray. Use in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(247, 247, 247)",
       "group": "neutral",
+      "type": "#F7F7F7",
       "attributes": {
         "category": "color"
       },
@@ -1272,6 +1320,7 @@
     "comment": "Color value for Purple Navy.",
     "value": "rgb(28, 1, 82)",
     "group": "charts-graphs",
+    "type": "#1C0152",
     "attributes": {
       "category": "color"
     },
@@ -1280,6 +1329,7 @@
       "comment": "Color value for Purple Navy.",
       "value": "rgb(28, 1, 82)",
       "group": "charts-graphs",
+      "type": "#1C0152",
       "attributes": {
         "category": "color"
       },
@@ -1294,6 +1344,7 @@
     "comment": "Color value for Lavender.",
     "value": "rgb(190, 132, 247)",
     "group": "charts-graphs",
+    "type": "#BE84F7",
     "attributes": {
       "category": "color"
     },
@@ -1302,6 +1353,7 @@
       "comment": "Color value for Lavender.",
       "value": "rgb(190, 132, 247)",
       "group": "charts-graphs",
+      "type": "#BE84F7",
       "attributes": {
         "category": "color"
       },
@@ -1316,6 +1368,7 @@
     "comment": "Color value for Wisteria.",
     "value": "rgb(222, 177, 253)",
     "group": "charts-graphs",
+    "type": "#DEB1FD",
     "attributes": {
       "category": "color"
     },
@@ -1324,6 +1377,7 @@
       "comment": "Color value for Wisteria.",
       "value": "rgb(222, 177, 253)",
       "group": "charts-graphs",
+      "type": "#DEB1FD",
       "attributes": {
         "category": "color"
       },
@@ -1338,6 +1392,7 @@
     "comment": "Color value for Magnolia.",
     "value": "rgb(240, 218, 255)",
     "group": "charts-graphs",
+    "type": "#F0DAFF",
     "attributes": {
       "category": "color"
     },
@@ -1346,6 +1401,7 @@
       "comment": "Color value for Magnolia.",
       "value": "rgb(240, 218, 255)",
       "group": "charts-graphs",
+      "type": "#F0DAFF",
       "attributes": {
         "category": "color"
       },
@@ -2138,6 +2194,32 @@
       }
     },
     "has-icon": {
+      "color-icon": {
+        "comment": "The color of icons in Links containing icons.",
+        "value": "rgb(96, 58, 161)",
+        "attributes": {
+          "category": "color",
+          "type": "has-icon",
+          "item": "color-icon"
+        },
+        "file": "settings",
+        "themable": true,
+        "original": {
+          "comment": "The color of icons in Links containing icons.",
+          "value": "{purple.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "name": "sprk-link-has-icon-color-icon",
+        "path": [
+          "link",
+          "has-icon",
+          "color-icon"
+        ]
+      },
       "hover": {
         "color-text": {
           "comment": "The color value for Links with icons in the hover state.",
@@ -2167,32 +2249,6 @@
             "color-text"
           ]
         }
-      },
-      "color-icon": {
-        "comment": "The color of icons in Links containing icons.",
-        "value": "rgb(96, 58, 161)",
-        "attributes": {
-          "category": "color",
-          "type": "has-icon",
-          "item": "color-icon"
-        },
-        "file": "settings",
-        "themable": true,
-        "original": {
-          "comment": "The color of icons in Links containing icons.",
-          "value": "{purple.value}",
-          "attributes": {
-            "category": "color"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "name": "sprk-link-has-icon-color-icon",
-        "path": [
-          "link",
-          "has-icon",
-          "color-icon"
-        ]
       }
     }
   },
@@ -2421,7 +2477,7 @@
       "one": {
         "comment": "The color of TypeDisplayOne.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "display",
@@ -2431,7 +2487,7 @@
         "original": {
           "comment": "The color of TypeDisplayOne.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },
@@ -2447,7 +2503,7 @@
       "two": {
         "comment": "The color of TypeDisplayTwo.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "display",
@@ -2457,7 +2513,7 @@
         "original": {
           "comment": "The color of TypeDisplayTwo.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },
@@ -2473,7 +2529,7 @@
       "three": {
         "comment": "The color of TypeDisplayThree.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "display",
@@ -2483,7 +2539,7 @@
         "original": {
           "comment": "The color of TypeDisplayThree.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },
@@ -2499,7 +2555,7 @@
       "four": {
         "comment": "The color of TypeDisplayFour.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "display",
@@ -2509,7 +2565,7 @@
         "original": {
           "comment": "The color of TypeDisplayFour.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },
@@ -2525,7 +2581,7 @@
       "five": {
         "comment": "The color of TypeDisplayFive.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "display",
@@ -2535,7 +2591,7 @@
         "original": {
           "comment": "The color of TypeDisplayFive.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },
@@ -2551,7 +2607,7 @@
       "six": {
         "comment": "The color of TypeDisplaySix.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "display",
@@ -2561,7 +2617,7 @@
         "original": {
           "comment": "The color of TypeDisplaySix.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },
@@ -2577,7 +2633,7 @@
       "seven": {
         "comment": "The color of TypeDisplaySeven.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "display",
@@ -2587,7 +2643,7 @@
         "original": {
           "comment": "The color of TypeDisplaySeven.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },
@@ -2605,7 +2661,7 @@
       "one": {
         "comment": "The color of TypeBodyOne.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "body",
@@ -2615,7 +2671,7 @@
         "original": {
           "comment": "The color of TypeBodyOne.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },
@@ -2631,7 +2687,7 @@
       "two": {
         "comment": "The color of TypeBodyTwo.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "body",
@@ -2641,7 +2697,7 @@
         "original": {
           "comment": "The color of TypeBodyTwo.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },
@@ -2657,7 +2713,7 @@
       "three": {
         "comment": "The color of TypeBodyThree.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "body",
@@ -2667,7 +2723,7 @@
         "original": {
           "comment": "The color of TypeBodyThree.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },
@@ -2683,7 +2739,7 @@
       "four": {
         "comment": "The color of TypeBodyFour.",
         "value": "rgb(28, 27, 26)",
-        "file": "settings",
+        "file": "typography",
         "attributes": {
           "category": "color",
           "type": "body",
@@ -2693,7 +2749,7 @@
         "original": {
           "comment": "The color of TypeBodyFour.",
           "value": "{black.value}",
-          "file": "settings",
+          "file": "typography",
           "attributes": {
             "category": "color"
           },

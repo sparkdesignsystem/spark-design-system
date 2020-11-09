@@ -7,6 +7,8 @@ StyleDictionary.registerFormat({
       .map((token) => {
         let tokenName = token.name;
         let tokenValue = token.original.value;
+        const tokenGroup = token.group;
+        const tokenType = token.type;
 
         if (tokenName === 'sprk-masthead-translate-y')
           tokenName = 'sprk-masthead-translateY';
@@ -33,8 +35,14 @@ StyleDictionary.registerFormat({
           );
         }
 
+        if (tokenType && tokenGroup) {
+          // Return formatted Sass var with comment includes group and type.
+          return `/// ${token.comment}\n/// @group ${tokenGroup}\n/// @type ${tokenType}\n$${tokenName}: ${tokenValue}${
+            token.themable ? ' !default' : ''
+          };`;
+        }
         // Return formatted Sass var with comment.
-        return `/// ${token.comment} \n$${tokenName}: ${tokenValue}${
+        return `/// ${token.comment}\n$${tokenName}: ${tokenValue}${
           token.themable ? ' !default' : ''
         };`;
       })
