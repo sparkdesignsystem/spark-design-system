@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Do not edit directly
-  Generated on Mon, 09 Nov 2020 14:16:08 GMT
--->
+
 <resources>
   <dimen name="sprk_alert_font_size">16.00sp</dimen><!-- The font size of the text in the content area of the Alert component. -->
   <dimen name="sprk_text_input_font_size">16.00sp</dimen><!-- The font size for Inputs. -->

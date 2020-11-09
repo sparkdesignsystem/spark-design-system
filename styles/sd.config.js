@@ -85,6 +85,9 @@ module.exports = {
         {
           destination: `settings.js`,
           format: `javascript/es6`,
+          options: {
+            showFileHeader: false,
+          },
         },
       ],
     },
@@ -96,18 +99,30 @@ module.exports = {
         {
           destination: 'spark_design_tokens_colors.xml',
           format: 'android/colors',
+          options: {
+            showFileHeader: false,
+          },
         },
         {
           destination: 'spark_design_tokens_font_dimens.xml',
           format: 'android/fontDimens',
+          options: {
+            showFileHeader: false,
+          },
         },
         {
           destination: 'spark_design_tokens_dimens.xml',
           format: 'android/dimens',
+          options: {
+            showFileHeader: false,
+          },
         },
         {
           destination: 'spark_design_tokens_strings.xml',
           format: 'android/strings',
+          options: {
+            showFileHeader: false,
+          },
         },
       ],
     },
@@ -121,6 +136,9 @@ module.exports = {
           className: `SparkDesignTokens`,
           format: ['ios-swift/class.swift'],
           filter: 'filter-mobile',
+          options: {
+            showFileHeader: false,
+          },
         },
       ],
     },

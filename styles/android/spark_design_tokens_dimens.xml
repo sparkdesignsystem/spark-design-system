@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Do not edit directly
-  Generated on Mon, 09 Nov 2020 14:16:08 GMT
--->
+
 <resources>
   <dimen name="sprk_accordion_max_width">850.00dp</dimen><!-- The maximum width of Accordions. -->
   <dimen name="sprk_alert_border_radius">4.00dp</dimen><!-- Value for border-radius on the Alert component. -->

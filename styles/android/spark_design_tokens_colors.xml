@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Do not edit directly
-  Generated on Mon, 09 Nov 2020 14:16:08 GMT
--->
+
 <resources>
   <color name="sprk_accordion_summary_active_color">#ff603aa1</color><!-- The color of the icon in the summary when the Accordion item is open or hovered. -->
   <color name="sprk_accordion_active_background_color">#fff7f7f7</color><!-- The background color used for hover and active on items in the Accordion. -->

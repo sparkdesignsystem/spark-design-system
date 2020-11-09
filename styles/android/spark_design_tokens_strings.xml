@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Do not edit directly
-  Generated on Mon, 09 Nov 2020 14:16:08 GMT
--->
+
 <resources>
   <string name="sprk_accordion_border">2px solid rgb(230, 230, 230)</string><!-- The border of Accordions. -->
   <string name="sprk_accordion_summary_text_decoration">none</string><!-- The text decoration of the Accordion item summary. -->
@@ -27,7 +24,7 @@
   <string name="sprk_btn_border_style">solid</string><!-- The border style of the Button component. -->
   <string name="sprk_btn_border">2.00dp solid #ffc8102e</string><!-- The border of the Button component. -->
   <string name="sprk_btn_line_height">normal</string><!-- The line height of the Button component. -->
-  <string name="sprk_btn_padding">16.00dp 24.00dp</string><!-- The padding of the Button component. -->
+  <string name="sprk_btn_padding">16.00dp 24px</string><!-- The padding of the Button component. -->
   <string name="sprk_btn_transition_speed">0.3s</string><!-- The transition speed setting for transitions on the Button component. -->
   <string name="sprk_btn_disabled_border_style">solid</string><!-- The border style of the Disabled Button component. -->
   <string name="sprk_btn_disabled_border_color">transparent</string><!-- The border color of the Disabled Button component. -->
