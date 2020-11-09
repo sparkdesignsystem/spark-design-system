@@ -1,0 +1,284 @@
+{
+  "space": {
+    "inset": {
+      "xs": {
+        "comment": "Value for the extra small inset space.",
+        "value": "4px 4px 4px 4px",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "s": {
+        "comment": "Value for the small inset space.",
+        "value": "8px 8px 8px 8px",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "m": {
+        "comment": "Value for the medium inset space.",
+        "value": "16px 16px 16px 16px",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "l": {
+        "comment": "Value for the large inset space.",
+        "value": "32px 32px 32px 32px",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "xl": {
+        "comment": "Value for the extra large inset space.",
+        "value": "64px 64px 64px 64px",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "short": {
+        "xs": {
+          "comment": "Value for the extra small inset short space.",
+          "value": "2px 4px 2px 4px",
+          "file": "space",
+          "themable": true,
+          "attributes": {
+            "category": "size"
+          }
+        },
+        "s": {
+          "comment": "Value for the small inset short space.",
+          "value": "4px 8px 4px 8px",
+          "file": "space",
+          "themable": true,
+          "attributes": {
+            "category": "size"
+          }
+        },
+        "m": {
+          "comment": "Value for the medium inset short space.",
+          "value": "8px 16px 8px 16px",
+          "file": "space",
+          "themable": true,
+          "attributes": {
+            "category": "size"
+          }
+        },
+        "l": {
+          "comment": "Value for the large inset short space.",
+          "value": "16px 32px 16px 32px",
+          "file": "space",
+          "themable": true,
+          "attributes": {
+            "category": "size"
+          }
+        },
+        "xl": {
+          "comment": "Value for the extra large inset short space.",
+          "value": "32px 64px 32px 64px",
+          "file": "space",
+          "themable": true,
+          "attributes": {
+            "category": "size"
+          }
+        }
+      },
+      "tall": {
+        "xs": {
+          "comment": "Value for the extra small inset tall space.",
+          "value": "6px 4px 6px 4px",
+          "file": "space",
+          "themable": true,
+          "attributes": {
+            "category": "size"
+          }
+        },
+        "s": {
+          "comment": "Value for the small inset tall space.",
+          "value": "12px 8px 12px 8px",
+          "file": "space",
+          "themable": true,
+          "attributes": {
+            "category": "size"
+          }
+        },
+        "m": {
+          "comment": "Value for the medium inset tall space.",
+          "value": "24px 16px 24px 16px",
+          "file": "space",
+          "themable": true,
+          "attributes": {
+            "category": "size"
+          }
+        },
+        "l": {
+          "comment": "Value for the large inset tall space.",
+          "value": "48px 32px 48px 32px",
+          "file": "space",
+          "themable": true,
+          "attributes": {
+            "category": "size"
+          }
+        },
+        "xl": {
+          "comment": "Value for the extra large inset tall space.",
+          "value": "96px 64px 96px 64px",
+          "file": "space",
+          "themable": true,
+          "attributes": {
+            "category": "size"
+          }
+        }
+      }
+    },
+    "xs": {
+      "comment": "Value for the extra small space setting.",
+      "value": "4px",
+      "file": "space",
+      "themable": true,
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "s": {
+      "comment": "Value for the small space setting.",
+      "value": "8px",
+      "file": "space",
+      "themable": true,
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "m": {
+      "comment": "Value for the medium space setting.",
+      "value": "16px",
+      "file": "space",
+      "themable": true,
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "l": {
+      "comment": "Value for the large space setting.",
+      "value": "32px",
+      "file": "space",
+      "themable": true,
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "xl": {
+      "comment": "Value for the extra large space setting.",
+      "value": "64px",
+      "file": "space",
+      "themable": true,
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "h": {
+      "comment": "Value for the huge space setting.",
+      "value": "{space.xl.value}",
+      "file": "space",
+      "themable": true,
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "misc": {
+      "a": {
+        "comment": "Value for the misc a space setting.",
+        "value": "24px",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "b": {
+        "comment": "Value for the misc b space setting.",
+        "value": "40px",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "c": {
+        "comment": "Value for the misc c space setting.",
+        "value": "48px",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "d": {
+        "comment": "Value for the misc d large space setting.",
+        "value": "80px",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      }
+    },
+    "stack": {
+      "xs": {
+        "comment": "Value for the extra small inset short space.",
+        "value": "0 0 4px 0",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "s": {
+        "comment": "Value for the small inset short space.",
+        "value": "0 0 8px 0",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "m": {
+        "comment": "Value for the medium inset short space.",
+        "value": "0 0 16px 0",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "l": {
+        "comment": "Value for the large inset short space.",
+        "value": "0 0 32px 0",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "xl": {
+        "comment": "Value for the extra large inset short space.",
+        "value": "0 0 64px 0",
+        "file": "space",
+        "themable": true,
+        "attributes": {
+          "category": "size"
+        }
+      }
+    }
+  }
+}
