@@ -9,7 +9,11 @@ StyleDictionary.registerFormat({
         let tokenValue = token.original.value;
         const tokenGroup = token.group;
         const tokenType = token.type;
-
+        /*
+         * We have one variable name that
+         * doesn't follow our convention and
+         * so we have to transform it.
+         */
         if (tokenName === 'sprk-masthead-translate-y')
           tokenName = 'sprk-masthead-translateY';
 
@@ -50,6 +54,11 @@ StyleDictionary.registerFormat({
   },
 });
 
+/*
+ * Convert all px values to
+ * rems. Values need to be in rem
+ * for the mobile transforms.
+ */
 StyleDictionary.registerTransform({
   name: 'size/px-to-rem',
   type: 'value',
