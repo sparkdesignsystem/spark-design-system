@@ -24,10 +24,10 @@ must include a \`title=””\` attribute.
 - If a Button only includes an Icon with no text,
 alternative text must be provided.
 
-##### Spinner State Setup
-- Our spinner button code sample solely represents the rendered state
+##### Spinning State Setup
+- Our spinning button code sample solely represents the rendered state
 after Spark's Javascript functions run.
-- If your button will have a spinner state, it needs these attributes:
+- If your button will have a spinning state, it needs these attributes:
   - \`class="sprk-c-Button"\` as well as any class modifiers.
   - \`data-sprk-spinner="click"\`
   - \`aria-live="polite"\` (Notifies screen readers of state changes.)
