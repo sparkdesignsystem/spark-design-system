@@ -5,7 +5,6 @@
 ////
 /// @group input
 ////
-
 .sprk-b-TextInput,
 // TODO sprk-b-TextInput to be deprecated and replace with sprk-b-InputContainer__input
 .sprk-b-InputContainer__input {
@@ -96,4 +95,12 @@
   font-weight: $sprk-placeholder-font-weight;
   font-family: $sprk-placeholder-font-family;
   color: $sprk-placeholder-color;
+}
+
+/* stylelint-disable selector-class-pattern */
+.sprk-b-TextInput.ng-invalid:not(.ng-pristine)
+  ~ .sprk-b-InputContainer__input-border {
+  animation: none;
+  border-bottom: 3px solid $sprk-text-input-error-color;
+  width: 100%;
 }

@@ -6,13 +6,15 @@
       "lodash": "lodash",
       "lodash/uniqueId": "lodash",
       "tiny-date-picker": "tiny-date-picker",
-      "focus-visible": "focus-visible"
+      "focus-visible": "focus-visible",
+      "@sparkdesignsystem/spark-styles": "@sparkdesignsystem/spark-styles"
     },
     "entryFile": "src/public-api.ts"
   },
   "whitelistedNonPeerDependencies": [
     "lodash",
     "tiny-date-picker",
-    "focus-visible"
+    "focus-visible",
+    "@sparkdesignsystem/spark-styles"
   ]
 }
