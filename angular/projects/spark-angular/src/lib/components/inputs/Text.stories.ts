@@ -150,6 +150,104 @@ disabledTextInput.story = {
 export const hugeTextInput = () => ({
   moduleMetadata: modules,
   template: `
+    <sprk-input-container variant="huge">
+      <input
+        placeholder="Placeholder"
+        name="text_input_huge"
+        type="text"
+        [(ngModel)]="text_input_huge"
+        #textInput="ngModel"
+        sprkInput
+        variant="huge"
+      />
+      <label sprkLabel>Huge Text Input</label>
+    </sprk-input-container>
+  `,
+});
+
+hugeTextInput.story = {
+  name: 'Huge',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
+};
+
+export const invalidHugeTextInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container variant="huge">
+      <input
+        placeholder="Placeholder"
+        name="text_input_huge"
+        type="text"
+        [(ngModel)]="text_input_huge"
+        #textInput="ngModel"
+        class="sprk-b-TextInput--error"
+        aria-invalid="true"
+        sprkInput
+        variant="huge"
+      />
+      <label sprkLabel>Huge Text Input</label>
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+invalidHugeTextInput.story = {
+  name: 'Huge Invalid',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
+};
+
+export const disabledHugeTextInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container variant="huge">
+      <input
+        placeholder="Placeholder"
+        name="text_input_huge"
+        type="text"
+        [(ngModel)]="text_input_huge"
+        #textInput="ngModel"
+        sprkInput
+        variant="huge"
+        disabled
+      />
+      <label class="sprk-b-Label--disabled" sprkLabel>Huge Text Input</label>
+    </sprk-input-container>
+  `,
+});
+
+disabledHugeTextInput.story = {
+  name: 'Huge Disabled',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
+};
+
+export const legacyHugeTextInput = () => ({
+  moduleMetadata: modules,
+  template: `
     <sprk-huge-input-container>
       <input
         placeholder="Placeholder"
@@ -165,8 +263,8 @@ export const hugeTextInput = () => ({
   `,
 });
 
-hugeTextInput.story = {
-  name: 'Huge',
+legacyHugeTextInput.story = {
+  name: 'Legacy Huge (Deprecated)',
   parameters: {
     jest: [
       'sprk-huge-input-container.component',
@@ -176,7 +274,7 @@ hugeTextInput.story = {
   },
 };
 
-export const invalidHugeTextInput = () => ({
+export const legacyInvalidHugeTextInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
@@ -194,7 +292,7 @@ export const invalidHugeTextInput = () => ({
       <label sprkLabel>Huge Text Input</label>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -203,8 +301,8 @@ export const invalidHugeTextInput = () => ({
   `,
 });
 
-invalidHugeTextInput.story = {
-  name: 'Huge Invalid',
+legacyInvalidHugeTextInput.story = {
+  name: 'Legacy Huge Invalid (Deprecated)',
   parameters: {
     jest: [
       'sprk-huge-input-container.component',
@@ -215,7 +313,7 @@ invalidHugeTextInput.story = {
   },
 };
 
-export const disabledHugeTextInput = () => ({
+export const legacyDisabledHugeTextInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
@@ -234,8 +332,8 @@ export const disabledHugeTextInput = () => ({
   `,
 });
 
-disabledHugeTextInput.story = {
-  name: 'Huge Disabled',
+legacyDisabledHugeTextInput.story = {
+  name: 'Legacy Huge Disabled (Deprecated)',
   parameters: {
     jest: [
       'sprk-huge-input-container.component',
