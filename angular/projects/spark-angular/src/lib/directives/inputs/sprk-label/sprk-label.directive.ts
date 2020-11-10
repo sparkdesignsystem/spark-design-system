@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnInit, Input } from '@angular/core';
+import { Directive, ElementRef, OnInit, Input, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[sprkLabel]',
@@ -7,7 +7,7 @@ export class SprkLabelDirective implements OnInit {
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef) {}
+  constructor(public ref: ElementRef, private renderer: Renderer2) {}
   /**
    * If `true`, this will add
    * styles to the label to make it work
@@ -31,26 +31,16 @@ export class SprkLabelDirective implements OnInit {
   @Input()
   isHidden: boolean;
 
-  /**
-   * @ignore
-   */
-  getClasses(): string[] {
-    const classArray: string[] = ['sprk-b-Label'];
+  ngOnInit(): void {
+    this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Label');
     if (this.hasIcon) {
-      classArray.push('sprk-b-Label--with-icon');
+      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Label--with-icon');
     }
     if (this.isDisabled) {
-      classArray.push('sprk-b-Label--disabled');
+      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Label--disabled');
     }
     if (this.isHidden) {
-      classArray.push('sprk-u-ScreenReaderText');
+      this.renderer.addClass(this.ref.nativeElement, 'sprk-u-ScreenReaderText');
     }
-    return classArray;
-  }
-
-  ngOnInit(): void {
-    this.getClasses().forEach((item) => {
-      this.ref.nativeElement.classList.add(item);
-    });
   }
 }
