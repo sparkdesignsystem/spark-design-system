@@ -23,26 +23,25 @@ export default {
   },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
     onSubmit(event): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
     `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
@@ -52,11 +51,151 @@ const modules = {
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,
-    SprkFieldErrorModule
+    SprkFieldErrorModule,
   ],
 };
 
 export const searchInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <div class="sprk-b-InputContainer__icon-container">
+        <label
+          hasIcon="true"
+          isHidden="true"
+          sprkLabel
+        >
+          Search
+        </label>
+        <sprk-icon
+          iconType="search"
+          additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          sprk-input-icon
+        ></sprk-icon>
+        <input
+          name="inline_search_input"
+          class="sprk-b-TextInput--has-svg-icon"
+          type="search"
+          placeholder="Search"
+          [(ngModel)]="inline_search_input"
+          #inlineSearchInput="ngModel"
+          data-id="input-search-1"
+          sprkInput
+        >
+      </div>
+    </sprk-input-container>
+  `,
+});
+
+searchInput.story = {
+  name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
+};
+
+export const invalidSearchInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <div class="sprk-b-InputContainer__icon-container">
+        <label
+          hasIcon="true"
+          isHidden="true"
+          sprkLabel
+        >
+          Search
+        </label>
+        <sprk-icon
+          iconType="search"
+          additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          sprk-input-icon
+        ></sprk-icon>
+        <input
+          name="inline_search_input"
+          class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
+          type="search"
+          placeholder="Search"
+          [(ngModel)]="inline_search_input"
+          #inlineSearchInput="ngModel"
+          data-id="input-search-1"
+          sprkInput
+          aria-invalid="true"
+        >
+      </div>
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+invalidSearchInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
+};
+
+export const disabledSearchInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <div class="sprk-b-InputContainer__icon-container">
+        <label
+          hasIcon="true"
+          isHidden="true"
+          isDisabled="true"
+          sprkLabel
+        >
+          Search
+        </label>
+        <sprk-icon
+          iconType="search"
+          additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          sprk-input-icon
+        ></sprk-icon>
+        <input
+          name="inline_search_input"
+          class="sprk-b-TextInput--has-svg-icon"
+          type="search"
+          placeholder="Search"
+          [(ngModel)]="inline_search_input"
+          #inlineSearchInput="ngModel"
+          data-id="input-search-1"
+          sprkInput
+          disabled
+        >
+      </div>
+    </sprk-input-container>
+  `,
+});
+
+disabledSearchInput.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
+};
+
+export const legacyStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
@@ -85,8 +224,8 @@ export const searchInput = () => ({
   `,
 });
 
-searchInput.story = {
-  name: 'Default',
+legacyStory.story = {
+  name: 'Legacy (Deprecated)',
   parameters: {
     jest: [
       'sprk-icon-input-container.component',
@@ -96,7 +235,7 @@ searchInput.story = {
   },
 };
 
-export const invalidSearchInput = () => ({
+export const legacyInvalidSearchInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
@@ -133,8 +272,8 @@ export const invalidSearchInput = () => ({
   `,
 });
 
-invalidSearchInput.story = {
-  name: 'Invalid',
+legacyInvalidSearchInput.story = {
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
     jest: [
       'sprk-icon-input-container.component',
@@ -145,7 +284,7 @@ invalidSearchInput.story = {
   },
 };
 
-export const disabledSearchInput = () => ({
+export const legacyDisabledSearchInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
@@ -175,8 +314,8 @@ export const disabledSearchInput = () => ({
   `,
 });
 
-disabledSearchInput.story = {
-  name: 'Disabled',
+legacyDisabledSearchInput.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
     jest: [
       'sprk-icon-input-container.component',
@@ -185,5 +324,3 @@ disabledSearchInput.story = {
     ],
   },
 };
-
-
