@@ -61,6 +61,13 @@ export class SprkLabelDirective implements OnInit {
   @Input()
   isHidden: boolean;
 
+  /**
+   * If `true`, this will add
+   * monetary styles to the label.
+   */
+  @Input()
+  isMonetary: boolean;
+
   ngOnInit(): void {
     this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Label');
     if (this.hasIcon) {
@@ -71,6 +78,9 @@ export class SprkLabelDirective implements OnInit {
     }
     if (this.isHidden) {
       this.renderer.addClass(this.ref.nativeElement, 'sprk-u-ScreenReaderText');
+    }
+    if (this.isMonetary) {
+      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Label--monetary');
     }
   }
 }
