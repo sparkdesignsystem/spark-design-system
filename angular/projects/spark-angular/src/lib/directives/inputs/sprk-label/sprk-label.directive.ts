@@ -29,6 +29,16 @@ export class SprkLabelDirective implements OnInit {
   idString: string;
 
   /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the element.
+   * Intended for an outside
+   * library to capture data.
+   */
+  @HostBinding('attr.data-analytics')
+  @Input()
+  analyticsString: string;
+
+  /**
    * If `true`, this will add
    * styles to the label to make it work
    * with an icon.
