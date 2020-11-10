@@ -123,7 +123,7 @@ export const disabledTextInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label class="sprk-b-Label--disabled" sprkLabel>Text Input Label</label>
+      <label isDisabled="true" sprkLabel>Text Input Label</label>
       <input
         name="text_input"
         type="text"
@@ -229,7 +229,7 @@ export const disabledHugeTextInput = () => ({
         variant="huge"
         disabled
       />
-      <label class="sprk-b-Label--disabled" sprkLabel>Huge Text Input</label>
+      <label isDisabled="true" sprkLabel>Huge Text Input</label>
     </sprk-input-container>
   `,
 });

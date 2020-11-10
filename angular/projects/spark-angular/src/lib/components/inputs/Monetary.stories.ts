@@ -71,7 +71,7 @@ export const monetaryInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-TextInputIconContainer--has-text-icon"
       >
-        <label class="sprk-b-Label--monetary" sprkLabel>
+        <label isMonetary="true" sprkLabel>
           Payment
         </label>
         <input
@@ -106,7 +106,7 @@ export const invalidMonetaryInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-TextInputIconContainer--has-text-icon"
       >
-        <label class="sprk-b-Label--monetary" sprkLabel>
+        <label isMonetary="true" sprkLabel>
           Payment
         </label>
         <input
@@ -150,7 +150,7 @@ export const disabledMonetaryInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-TextInputIconContainer--has-text-icon"
       >
-        <label class="sprk-b-Label--monetary sprk-b-Label--disabled" sprkLabel>
+        <label isMonetary="true" isDisabled="true" sprkLabel>
           Payment
         </label>
         <input

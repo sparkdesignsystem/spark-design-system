@@ -32,19 +32,18 @@ export default {
   },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
     onSubmit(event): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
@@ -54,7 +53,7 @@ ${markdownDocumentationLinkBuilder('input')}
   the \`type\` attribute of the input between \`text\` and \`password\`.
     `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
@@ -155,7 +154,7 @@ export const disabledPasswordInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label class="sprk-b-Label--disabled" sprkLabel>Password</label>
+      <label isDisabled="true" sprkLabel>Password</label>
       <input type="password" name="password_input" sprkInput disabled />
       <sprk-selection-item-container
         additionalClasses="sprk-b-InputContainer__visibility-toggle"
@@ -166,7 +165,7 @@ export const disabledPasswordInput = () => ({
           id="show-password"
           disabled
         />
-        <label class="sprk-b-Label--disabled" for="show-password" sprkSelectionLabel>Show Password</label>
+        <label isDisabled="true" for="show-password" sprkSelectionLabel>Show Password</label>
       </sprk-selection-item-container>
     </sprk-input-container>
   `,

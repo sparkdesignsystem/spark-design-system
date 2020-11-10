@@ -314,7 +314,7 @@ export const disabledHugeSelectBox = () => ({
           <option value="g3">Grouped Option 3</option>
         </optgroup>
       </select>
-      <label sprkLabel class="sprk-b-Label--disabled" for="select-huge-disabled">Huge Select Box Label</label>
+      <label sprkLabel isDisabled="true" for="select-huge-disabled">Huge Select Box Label</label>
       <sprk-icon
         iconType="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"

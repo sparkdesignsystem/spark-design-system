@@ -144,7 +144,7 @@ export const disabledPercentageInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-InputContainer__icon-container--narrow"
       >
-        <label class="sprk-b-Label--disabled" sprkLabel>Percentage</label>
+        <label isDisabled="true" sprkLabel>Percentage</label>
         <sprk-icon
           iconType="percent"
           additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"

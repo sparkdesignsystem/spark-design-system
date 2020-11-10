@@ -30,19 +30,18 @@ export default {
   },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
     onSubmit(event): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
@@ -58,7 +57,7 @@ ${markdownDocumentationLinkBuilder('input')}
   a dash, the next two numbers, a dash, and the last four numbers.
     `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
@@ -174,7 +173,7 @@ export const disabledSSNInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label class="sprk-b-Label--disabled" for="ssn-input" sprkLabel>SSN Input</label>
+      <label isDisabled="true" for="ssn-input" sprkLabel>SSN Input</label>
       <input
         [type]="ssnType"
         placeholder="000-00-0000"
@@ -197,7 +196,7 @@ export const disabledSSNInput = () => ({
           id="show-ssn"
           disabled
         >
-        <label class="sprk-b-Label--disabled" for="show-ssn" sprkSelectionLabel>Show SSN</label>
+        <label isDisabled="true" for="show-ssn" sprkSelectionLabel>Show SSN</label>
       </sprk-selection-item-container>
       <div
         [hidden]="ssnInput.valid || ssnInput.pristine"

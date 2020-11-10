@@ -20,19 +20,18 @@ export default {
   },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
     onSubmit(event): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
@@ -48,7 +47,7 @@ need to remove before submitting the form.
   to the hundredth place.
     `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
@@ -131,7 +130,7 @@ export const disabledPhoneInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label class="sprk-b-Label--disabled" sprkLabel>Phone Number</label>
+      <label isDisabled="true" sprkLabel>Phone Number</label>
       <input
         name="phone_input"
         type="text"

@@ -16,29 +16,28 @@ export default {
   subcomponents: {
     SprkInputDirective,
     SprkLabelDirective,
-   },
+  },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
     onSubmit(event): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
     `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
@@ -48,7 +47,7 @@ const modules = {
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,
-    SprkFieldErrorModule
+    SprkFieldErrorModule,
   ],
 };
 
@@ -77,7 +76,7 @@ textarea.story = {
       'sprk-input.directive',
       'sprk-label.directive',
     ],
-  }
+  },
 };
 
 export const invalidTextarea = () => ({
@@ -115,7 +114,7 @@ invalidTextarea.story = {
       'sprk-input.directive',
       'sprk-label.directive',
     ],
-  }
+  },
 };
 
 export const disabledTextarea = () => ({
@@ -123,7 +122,7 @@ export const disabledTextarea = () => ({
   template: `
     <sprk-textarea-container>
       <label
-        class="sprk-b-Label--disabled"
+        isDisabled="true"
         for="textarea-1"
         sprkLabel>Description</label>
       <textarea
@@ -147,5 +146,5 @@ disabledTextarea.story = {
       'sprk-input.directive',
       'sprk-label.directive',
     ],
-  }
+  },
 };
