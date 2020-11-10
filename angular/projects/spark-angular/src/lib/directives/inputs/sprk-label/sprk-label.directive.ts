@@ -24,6 +24,14 @@ export class SprkLabelDirective implements OnInit {
   isDisabled: boolean;
 
   /**
+   * If `true`, this will add
+   * `sprk-u-ScreenReaderText` class
+   * to the label.
+   */
+  @Input()
+  isHidden: boolean;
+
+  /**
    * @ignore
    */
   getClasses(): string[] {
@@ -33,6 +41,9 @@ export class SprkLabelDirective implements OnInit {
     }
     if (this.isDisabled) {
       classArray.push('sprk-b-Label--disabled');
+    }
+    if (this.isHidden) {
+      classArray.push('sprk-u-ScreenReaderText');
     }
     return classArray;
   }

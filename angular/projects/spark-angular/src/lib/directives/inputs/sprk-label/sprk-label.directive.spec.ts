@@ -15,6 +15,9 @@ import { SprkLabelDirective } from './sprk-label.directive';
     <label sprkLabel isDisabled="true">
       Label!
     </label>
+    <label sprkLabel isHidden="true">
+      Label!
+    </label>
   `,
 })
 class TestComponent {}
@@ -25,6 +28,7 @@ describe('SprkLabelDirective', () => {
   let label: DebugElement;
   let labelHasIcon: HTMLElement;
   let labelDisabled: HTMLElement;
+  let labelHidden: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -37,6 +41,7 @@ describe('SprkLabelDirective', () => {
     label = fixture.debugElement.query(By.css('label'));
     labelHasIcon = fixture.nativeElement.querySelectorAll('label')[1];
     labelDisabled = fixture.nativeElement.querySelectorAll('label')[2];
+    labelHidden = fixture.nativeElement.querySelectorAll('label')[3];
   }));
 
   it('should add the correct label classes to the applied element', () => {
@@ -55,5 +60,12 @@ describe('SprkLabelDirective', () => {
     expect(labelDisabled.classList.contains('sprk-b-Label--disabled')).toEqual(
       true,
     );
+  });
+
+  it('should add the screen reader class if isHidden is true', () => {
+    expect(labelHidden.classList.contains('sprk-u-ScreenReaderText')).toEqual(
+      true,
+    );
+    expect(labelHidden.classList.length).toBe(2);
   });
 });
