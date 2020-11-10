@@ -1,4 +1,11 @@
-import { Directive, ElementRef, OnInit, Input, Renderer2 } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  OnInit,
+  Input,
+  Renderer2,
+  HostBinding,
+} from '@angular/core';
 
 @Directive({
   selector: '[sprkLabel]',
@@ -8,6 +15,19 @@ export class SprkLabelDirective implements OnInit {
    * @ignore
    */
   constructor(public ref: ElementRef, private renderer: Renderer2) {}
+
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * element. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
+  @HostBinding('attr.data-id')
+  @Input()
+  idString: string;
+
   /**
    * If `true`, this will add
    * styles to the label to make it work

@@ -6,7 +6,7 @@ import { SprkLabelDirective } from './sprk-label.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <label sprkLabel>
+    <label sprkLabel idString="test-str">
       Label!
     </label>
     <label sprkLabel hasIcon="true">
@@ -67,5 +67,9 @@ describe('SprkLabelDirective', () => {
       true,
     );
     expect(labelHidden.classList.length).toBe(2);
+  });
+
+  it('should set the data-id attribute to the value of idString', () => {
+    expect(label.nativeElement.getAttribute('data-id')).toEqual('test-str');
   });
 });
