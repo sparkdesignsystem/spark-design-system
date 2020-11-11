@@ -9,6 +9,7 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
 import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
 import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
@@ -62,6 +63,7 @@ const modules = {
     SprkIconModule,
     SprkFieldErrorModule,
     SprkDatepickerModule,
+    SprkIconInputContainerModule,
   ],
 };
 
@@ -132,7 +134,7 @@ export const invalidDatePicker = () => ({
       </div>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
