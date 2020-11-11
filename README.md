@@ -15,7 +15,7 @@ Spark Design System is where we collect our best solutions for how to design and
 ## Getting Started
 
 **Spark assumes your project is using [Sass](https://sass-lang.com/) for styling and
-also that your project has a Javascript build step that will transpile ES6+ and polyfill appropriately for browser support.**
+also that your project has a JavaScript build step that will transpile ES6+ and polyfill appropriately for browser support.**
 
 ### Spark
 
