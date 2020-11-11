@@ -4,7 +4,6 @@ import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-labe
 import { SprkSelectDirective } from '../../directives/inputs/sprk-select/sprk-select.directive';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
@@ -47,7 +46,6 @@ ${markdownDocumentationLinkBuilder('input')}
 const modules = {
   imports: [
     SparkInputContainerModule,
-    SprkIconInputContainerModule,
     SprkLabelModule,
     SprkIconModule,
     SprkSelectModule,
@@ -267,7 +265,7 @@ export const invalidHugeSelectBox = () => ({
       ></sprk-icon>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled-small"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>

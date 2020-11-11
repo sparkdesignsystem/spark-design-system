@@ -109,7 +109,7 @@
   <string name="sprk_select_moz_focusring_text_shadow">0 0 0 #ff1c1b1a</string><!-- The value for the Firefox specific -moz-focusring text-shadow setting. -->
   <string name="sprk_textarea_margin">0.00dp</string><!-- The margin surrounding Textarea. -->
   <string name="sprk_helper_margin">8.00dp 0 0 0</string><!-- The margin of the helper text for Inputs. -->
-  <string name="sprk_selection_container_margin">0 8.00dp 0 0</string><!-- The margin of the selection container for Inputs. -->
+  <string name="sprk_selection_container_margin">0 0 16.00dp 0</string><!-- The margin of the selection container for Inputs. -->
   <string name="sprk_selection_container_input_height">auto</string><!-- The height of Input inside the selection container. -->
   <string name="sprk_selection_container_input_width">auto</string><!-- The width of Input inside the selection container. -->
   <string name="sprk_selection_container_input_margin">0 8.00dp 0 0</string><!-- The margin of the Input inside the selection container. -->

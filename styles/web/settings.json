@@ -9127,7 +9127,7 @@
   "selection-container": {
     "margin": {
       "comment": "The margin of the selection container for Inputs.",
-      "value": "0 8px 0 0",
+      "value": "0 0 16px 0",
       "attributes": {
         "category": "content",
         "type": "margin"
@@ -9136,7 +9136,7 @@
       "themable": true,
       "original": {
         "comment": "The margin of the selection container for Inputs.",
-        "value": "0 {space.s.value} 0 0",
+        "value": "0 0 {space.m.value} 0",
         "attributes": {
           "category": "content"
         },
