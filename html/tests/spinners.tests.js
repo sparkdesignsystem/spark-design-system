@@ -60,6 +60,8 @@ describe('getSpinnerClasses tests', () => {
 describe('spinners UI tests', () => {
   let spinnerContainer;
   let spinnerContainer2;
+  let spinnerContainer3;
+  let spinnerContainer4;
   let event;
 
   beforeEach(() => {
@@ -72,10 +74,25 @@ describe('spinners UI tests', () => {
     spinnerContainer2.setAttribute('data-sprk-spinner-aria-label', 'custom');
     spinnerContainer2.textContent = 'Submit';
 
+    spinnerContainer3 = document.createElement('button');
+    spinnerContainer3.textContent = 'Submit';
+    spinnerContainer3.setAttribute('data-sprk-spinner', 'click');
+    spinnerContainer3.setAttribute('data-sprk-spinner-role', 'status');
+    spinnerContainer3.setAttribute('data-sprk-aria-valuetext', 'Submitting');
+
+    spinnerContainer4 = document.createElement('button');
+    spinnerContainer4.setAttribute('data-sprk-spinner', 'click');
+    spinnerContainer4.setAttribute('data-sprk-has-spinner', 'true');
+    const spinner = document.createElement('div');
+    spinner.classList.add('sprk-c-Spinner--circle');
+    spinnerContainer4.appendChild(spinner);
+
     sinon.spy(spinnerContainer, 'addEventListener');
     sinon.spy(spinnerContainer, 'setAttribute');
     document.body.append(spinnerContainer);
     document.body.append(spinnerContainer2);
+    document.body.append(spinnerContainer3);
+    document.body.append(spinnerContainer4);
     spinners();
   });
 
@@ -99,12 +116,31 @@ describe('spinners UI tests', () => {
     ).toBe(true);
   });
 
+  it('should add accessibility considerations if clicked', () => {
+    spinnerContainer.click();
+    const spinnerDiv = spinnerContainer.querySelector('div');
+    expect(spinnerDiv.getAttribute('aria-valuetext') === 'Loading').toBe(true);
+    expect(spinnerDiv.getAttribute('role') === 'progressbar').toBe(true);
+    expect(spinnerContainer.hasAttribute('disabled')).toBe(true);
+  });
+
+  it('should choose user choice instead of default', () => {
+    spinnerContainer3.click();
+    const spinnerDiv = spinnerContainer3.querySelector('div');
+    expect(spinnerDiv.getAttribute('aria-valuetext')).toBe(
+      spinnerContainer3.getAttribute('data-sprk-aria-valuetext'),
+    );
+    expect(spinnerDiv.getAttribute('role')).toBe(
+      spinnerContainer3.getAttribute('data-sprk-spinner-role'),
+    );
+  });
+
   it('should add the loading aria label if spinner is clicked', () => {
     spinnerContainer.click();
     expect(spinnerContainer.getAttribute('aria-label')).toBe('Loading');
   });
 
-  it(`should add the custom aria label if spinner is 
+  it(`should add the custom aria label if spinner is
     clicked and it is present`, () => {
     expect(spinnerContainer2.getAttribute('data-sprk-spinner-aria-label')).toBe(
       'custom',
@@ -155,16 +191,13 @@ describe('spinners UI tests', () => {
   });
 
   it(`should not try to start spinning something that's
-  already spinning`, () => {
-    spinnerContainer.click();
-    expect(spinnerContainer.setAttribute.getCalls().length).toBe(4);
+   already spinning`, () => {
+    spinnerContainer4.click();
     expect(
-      spinnerContainer
+      spinnerContainer4
         .querySelector('div')
         .classList.contains('sprk-c-Spinner--circle'),
     ).toBe(true);
-    spinnerContainer.click();
-    expect(spinnerContainer.setAttribute.getCalls().length).toBe(4);
   });
 });
 
@@ -178,9 +211,8 @@ describe('setSpinning tests', () => {
 
   it('should replace the content with a spinner', () => {
     setSpinning(spinnerContainer, {});
-    expect(
-      spinnerContainer.firstChild.classList.contains('sprk-c-Spinner'),
-    ).toBe(true);
+    const spinnerDiv = spinnerContainer.querySelector('div');
+    expect(spinnerDiv.classList.contains('sprk-c-Spinner')).toBe(true);
   });
 
   it('should set the original text to a data-sprk-spinner-text attr', () => {
@@ -201,6 +233,13 @@ describe('setSpinning tests', () => {
     setSpinning(spinnerContainer, {});
     const expected = 'width: 0px';
     expect(spinnerContainer.getAttribute('style')).toEqual(expected);
+  });
+
+  it('should add has-spinner modifier class', () => {
+    setSpinning(spinnerContainer, {});
+    expect(
+      spinnerContainer.classList.contains('sprk-c-Button--has-spinner'),
+    ).toBe(true);
   });
 });
 
@@ -234,5 +273,17 @@ describe('cancelSpinning tests', () => {
   it('should remove the style attr', () => {
     cancelSpinning(spinnerContainer, {});
     expect(spinnerContainer.getAttribute('style')).toBe(null);
+  });
+
+  it('should remove disabled attr', () => {
+    cancelSpinning(spinnerContainer, {});
+    expect(spinnerContainer.getAttribute('disabled')).toBe(null);
+  });
+
+  it('should remove has-spinner class modifier', () => {
+    cancelSpinning(spinnerContainer, {});
+    expect(
+      spinnerContainer.classList.contains('sprk-c-Button--has-spinner'),
+    ).toBe(false);
   });
 });

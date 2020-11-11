@@ -32,9 +32,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   @Input()
   additionalClasses: string;
 
-  // TODO: Remove spinning functionality from button on next release #3561
   /**
-   * Deprecated: Conditionally render a div with sprkSpinner directive instead.
    * Will show a spinner inside the
    * button if set to `true`.
    */
