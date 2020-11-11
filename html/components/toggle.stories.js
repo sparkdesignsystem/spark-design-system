@@ -19,6 +19,7 @@ export const defaultStory = () => {
     toggle();
   }, []);
 
+  /* eslint-disable max-len */
   return `
     <div
       data-sprk-toggle="container"
@@ -62,6 +63,7 @@ export const defaultStory = () => {
     </div>
   `;
 };
+/* eslint-enable max-len */
 
 defaultStory.story = {
   name: 'Default',

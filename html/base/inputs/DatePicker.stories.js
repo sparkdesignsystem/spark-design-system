@@ -36,7 +36,7 @@ export const defaultStory = () => {
   useEffect(() => {
     datePicker();
   }, []);
-
+  /* eslint-disable max-len */
   return `
     <div
       class="sprk-b-InputContainer"
@@ -79,6 +79,7 @@ export const defaultStory = () => {
     </div>
   `;
 };
+/* eslint-enable max-len */
 
 defaultStory.story = {
   name: 'Default',
@@ -91,7 +92,7 @@ export const invalidDatePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
-
+  /* eslint-disable max-len */
   return `
     <div
       class="sprk-b-InputContainer"
@@ -146,6 +147,7 @@ export const invalidDatePicker = () => {
     </div>
   `;
 };
+/* eslint-enable max-len */
 
 invalidDatePicker.story = {
   name: 'Invalid',
@@ -158,7 +160,7 @@ export const disabledDatePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
-
+  /* eslint-disable max-len */
   return `
     <div
       class="sprk-b-InputContainer"
@@ -202,6 +204,7 @@ export const disabledDatePicker = () => {
     </div>
   `;
 };
+/* eslint-enable max-len */
 
 disabledDatePicker.story = {
   name: 'Disabled',

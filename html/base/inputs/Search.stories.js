@@ -12,6 +12,7 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
+/* eslint-disable max-len */
 export const searchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
@@ -49,11 +50,13 @@ export const searchInput = () => `
       ></div>
     </div>
   `;
+/* eslint-enable max-len */
 
 searchInput.story = {
   name: 'Default',
 };
 
+/* eslint-disable max-len */
 export const invalidSearchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
@@ -103,11 +106,13 @@ export const invalidSearchInput = () => `
       </div>
     </div>
   `;
+/* eslint-enable max-len */
 
 invalidSearchInput.story = {
   name: 'Invalid',
 };
 
+/* eslint-disable max-len */
 export const disabledSearchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
@@ -150,6 +155,7 @@ export const disabledSearchInput = () => `
       ></div>
     </div>
   `;
+/* eslint-enable max-len */
 
 disabledSearchInput.story = {
   name: 'Disabled',

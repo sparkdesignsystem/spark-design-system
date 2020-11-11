@@ -5,6 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/m
 export default {
   title: 'Components/Input/Checkbox',
   decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
+  /* eslint-disable max-len */
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
@@ -26,6 +27,7 @@ dynamically when the checkbox is activated.
     docs: { iframeHeight: 180 },
   },
 };
+/* eslint-enable max-len */
 
 export const defaultStory = () => {
   useEffect(() => {

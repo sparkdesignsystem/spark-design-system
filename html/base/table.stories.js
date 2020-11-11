@@ -46,6 +46,7 @@ export const columnComparison = () =>
     </table>
   </div>`;
 
+/* eslint-disable max-len */
 export const secondary = () =>
   `<div class="sprk-b-TableContainer" data-id="table-2">
     <table class="sprk-b-Table sprk-b-Table--secondary sprk-b-Table--spacing-medium">
@@ -206,3 +207,4 @@ export const secondaryRowComparison = () =>
       </tbody>
     </table>
   </div>`;
+/* eslint-enable max-len */

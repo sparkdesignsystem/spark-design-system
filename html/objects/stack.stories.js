@@ -175,6 +175,7 @@ stackSplitLayoutThreeTenths.story = {
   name: 'Stack/Split - 30/70',
 };
 
+/* eslint-disable max-len */
 export const stackSplitLayoutMixed = () =>
   `
     <div class="sprk-o-Stack sprk-o-Stack--split@xs">
@@ -276,6 +277,7 @@ export const stackSplitLayoutMixed = () =>
       </div>
     </div>
   `;
+/* eslint-enable max-len */
 
 stackSplitLayoutMixed.story = {
   name: 'Stack/Split - Mixed Column',

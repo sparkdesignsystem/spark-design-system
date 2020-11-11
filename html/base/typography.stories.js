@@ -42,70 +42,87 @@ correct type classes applied.
   },
 };
 
+/* eslint-disable max-len */
 export const pageTitle = () => `
   <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">The Quick Brown Fox Jumps Over the Lazy Dog</h1>
 `;
+/* eslint-enable max-len */
 
 pageTitle.story = {
   name: 'Page Title',
 };
 
+/* eslint-disable max-len */
 export const displayOne = () => `
   <h1 class="sprk-b-TypeDisplayOne">The Quick Brown Fox Jumps Over the Lazy Dog</h1>
 `;
+/* eslint-enable max-len */
 
 displayOne.story = {
   name: 'Display One',
 };
 
+/* eslint-disable max-len */
 export const displayTwo = () => `
   <h1 class="sprk-b-TypeDisplayTwo">The Quick Brown Fox Jumps Over the Lazy Dog</h1>
 `;
+/* eslint-enable max-len */
 
 displayTwo.story = {
   name: 'Display Two',
 };
 
+/* eslint-disable max-len */
 export const displayThree = () => `
   <h2 class="sprk-b-TypeDisplayThree">The Quick Brown Fox Jumps Over the Lazy Dog</h2>
 `;
+/* eslint-enable max-len */
 
 displayThree.story = {
   name: 'Display Three',
 };
 
+/* eslint-disable max-len */
 export const displayFour = () => `
   <h3 class="sprk-b-TypeDisplayFour">The Quick Brown Fox Jumps Over the Lazy Dog</h3>
 `;
+/* eslint-enable max-len */
 
 displayFour.story = {
   name: 'Display Four',
 };
 
+/* eslint-disable max-len */
 export const displayFive = () => `
   <h4 class="sprk-b-TypeDisplayFive">The Quick Brown Fox Jumps Over the Lazy Dog</h4>
 `;
+/* eslint-enable max-len */
 
 displayFive.story = {
   name: 'Display Five',
 };
 
+/* eslint-disable max-len */
 export const displaySix = () => `
   <h5 class="sprk-b-TypeDisplaySix">The Quick Brown Fox Jumps Over the Lazy Dog</h5>
 `;
+/* eslint-enable max-len */
 
 displaySix.story = {
   name: 'Display Six',
 };
 
+/* eslint-disable max-len */
 export const displaySeven = () => `
   <h6 class="sprk-b-TypeDisplaySeven">The Quick Brown Fox Jumps Over the Lazy Dog</h6>
 `;
+/* eslint-enable max-len */
 
 displaySeven.story = {
   name: 'Display Seven',
 };
 
+/* eslint-disable max-len */
 export const bodyOne = () => `
   <p class="sprk-b-TypeBodyOne">Lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus
@@ -113,11 +130,13 @@ export const bodyOne = () => `
     aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
     ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
 `;
+/* eslint-enable max-len */
 
 bodyOne.story = {
   name: 'Body One',
 };
 
+/* eslint-disable max-len */
 export const bodyTwo = () => `
   <p class="sprk-b-TypeBodyTwo">Lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus
@@ -125,11 +144,13 @@ export const bodyTwo = () => `
     aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
     ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
 `;
+/* eslint-enable max-len */
 
 bodyTwo.story = {
   name: 'Body Two',
 };
 
+/* eslint-disable max-len */
 export const bodyThree = () => `
   <p class="sprk-b-TypeBodyThree">Lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus
@@ -137,11 +158,13 @@ export const bodyThree = () => `
     aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
     ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
 `;
+/* eslint-enable max-len */
 
 bodyThree.story = {
   name: 'Body Three',
 };
 
+/* eslint-disable max-len */
 export const bodyFour = () => `
   <p class="sprk-b-TypeBodyFour">Lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus
@@ -149,6 +172,7 @@ export const bodyFour = () => `
     aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
     ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
 `;
+/* eslint-enable max-len */
 
 bodyFour.story = {
   name: 'Body Four',

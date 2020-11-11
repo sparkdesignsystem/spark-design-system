@@ -60,8 +60,10 @@ export const Gallery = () => {
     attachIcons(getIcons());
   }, []);
 
+  /* eslint-disable max-len */
   return '<ul class="sbdocs-gallery-container sprk-o-Stack sprk-o-Stack--split@xs"></ul>';
 };
+/* eslint-enable max-len */
 
 Gallery.story = {
   name: 'Gallery',

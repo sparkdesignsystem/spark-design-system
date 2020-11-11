@@ -82,6 +82,7 @@ export const informational = () => {
     dropdowns();
   }, []);
 
+  /* eslint-disable max-len */
   return `
     <a
       class="sprk-c-Dropdown__trigger sprk-b-Link sprk-b-Link--plain sprk-u-mrs"
@@ -164,6 +165,7 @@ export const informational = () => {
     </div>
   `;
 };
+/* eslint-enable max-len */
 
 informational.story = {
   name: 'Informational',

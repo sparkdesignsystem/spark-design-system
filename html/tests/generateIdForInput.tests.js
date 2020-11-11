@@ -22,8 +22,9 @@ describe('generateIdForInput tests', () => {
     expect(inputElement.hasAttribute('id')).toEqual(true);
     expect(labelElement.htmlFor).toEqual(inputElement.getAttribute('id'));
   });
-
+  /* eslint-disable max-len */
   it('should not change values if for and id are both present and have correct values', () => {
+    /* eslint-enable max-len */
     inputElement.setAttribute('id', 'test');
     labelElement.htmlFor = 'test';
     generateIdForInput(inputElement, labelElement, 'component');
@@ -37,20 +38,25 @@ describe('generateIdForInput tests', () => {
     expect(labelElement.htmlFor).toMatch('test');
 
     generateIdForInput(inputElement, labelElement, 'component');
+    /* eslint-disable max-len */
     expect(global.console.warn).toHaveBeenCalledWith(
       "Spark Design System Warning - The value of 'for' (test) on the label expects a matching 'id' on the input.",
     );
+    /* eslint-enable max-len */
   });
-
+  /* eslint-disable max-len */
   it("should console.warn if for and id both exist but don't match", () => {
+    /* eslint-enable max-len */
     labelElement.htmlFor = 'test';
     inputElement.setAttribute('id', 'test-1');
     expect(labelElement.htmlFor).toMatch('test');
     expect(inputElement.id).toMatch('test-1');
 
     generateIdForInput(inputElement, labelElement, 'component');
+    /* eslint-disable max-len */
     expect(global.console.warn).toHaveBeenCalledWith(
       "Spark Design System Warning - The value of 'for' (test) on the label should match the 'id' on the input (test-1).",
     );
+    /* eslint-enable max-len */
   });
 });

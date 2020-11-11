@@ -20,6 +20,7 @@ then they should be \`<button>\` elements with \`aria-role=button\`.
   },
 };
 
+/* eslint-disable max-len */
 export const defaultStory = () => `
     <div
      class="sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image sprk-u-mbm"
@@ -116,7 +117,7 @@ export const noImage = () => `
     </div>
   </div>
 `;
-
+/* eslint-enable max-len */
 noImage.story = {
   name: 'No Image',
   parameters: {
