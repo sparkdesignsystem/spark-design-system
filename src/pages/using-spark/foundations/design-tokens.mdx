@@ -1,0 +1,23 @@
+---
+  title: Design Tokens
+---
+import SassVarTable from '../../../components/SassVarTable';
+
+# Design Tokens
+
+Spark provides design tokens that store our design decisions.
+These tokens can be retrieved in different formats for different devices.
+These variables provide global settings for components in the system.
+For web, almost every aspect of each Spark component is
+configurable with a Sass variable.
+
+** Override the Sass settings by: **
+1. Creating a new Sass file.
+2. Importing it before Spark's main Sass file.
+3. Assigning a new value to the variable you want to override.
+
+> These make global changes to your project. Changing a variable affects all instances of its relevant components. For one-off modifications, use [CSS utilities](/using-spark/foundations/css-utilities).
+
+<section>
+  <SassVarTable />
+</section>

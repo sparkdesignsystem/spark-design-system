@@ -23,11 +23,40 @@ always use a \`<button>\` element.
 must include a \`title=””\` attribute.
 - If a Button only includes an Icon with no text,
 alternative text must be provided.
-- If the Button has a spinner setup, the \`aria-label\`
-will be set to 'Loading' when the button is
-clicked unless you supply a custom
-string value to the \`data-sprk-spinner-aria-label\`
-attribute.
+
+##### Spinning State Setup
+- Our spinning button code sample solely represents the rendered state
+after Spark's JavaScript functions run.
+- If your button will have a spinning state, it needs these attributes:
+  - \`class="sprk-c-Button"\` as well as any class modifiers.
+  - \`data-sprk-spinner="click"\`
+  - \`aria-live="polite"\` (Notifies screen readers of state changes.)
+  - See example to see implementation.
+- Available functions:
+  - \`setSpinning\` – Replaces button content with a spinner,
+  and adds classes and accessibility attributes.
+  - \`cancelSpinning\` – Removes spinner from button
+  content as well as button attributes added from \`setSpinning\`.
+  - See Spark's [spinner.js](https://github.com/sparkdesignsystem/spark-design-system/blob/main/html/components/spinners.js)
+  for details.
+- The following data attributes configure spinning state.
+  - \`data-sprk-spinner-role=""\` – Defaults to "progressbar".
+  - \`data-sprk-spinner-aria-valuetext=""\` – Defaults to "Loading"
+  - \`data-sprk-spinner-aria-label=""\` – Defaults to "Loading"
+  - \`data-sprk-spinner-text=""\` – Text on the button before and after
+  spinning. Defaults to an empty string.
+
+
+###### Example Spinner Implementation
+\`\`\`
+<button
+  class="sprk-c-Button sprk-c-Button--has-spinner"
+  data-sprk-spinner="click"
+  aria-live="polite"
+  data-sprk-spinner-text="Submit"
+>
+</button>
+\`\`\`
 
 ##### Guidelines
 - If a Button is in a form, but is not intended to
@@ -125,12 +154,17 @@ export const disabledQuaternary = () =>
 export const spinning = () =>
   `
   <button
-    class="sprk-c-Button"
+    class="sprk-c-Button sprk-c-Button--has-spinner"
     data-sprk-spinner="click"
     data-id="button-spinner"
     aria-label="Loading"
+    aria-live="polite"
+    disabled
   >
-    <div class="sprk-c-Spinner sprk-c-Spinner--circle"></div>
+    <div
+      class="sprk-c-Spinner sprk-c-Spinner--circle"
+      role="progressbar"
+      aria-valuetext="Loading"></div>
   </button>
   `;
 
@@ -143,14 +177,17 @@ spinning.story = {
 export const spinningSecondary = () =>
   `
   <button
-    class="sprk-c-Button sprk-c-Button--secondary"
+    class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--has-spinner"
     data-sprk-spinner="click"
     data-id="button-spinner-secondary"
     aria-label="Loading"
+    aria-live="polite"
+    disabled
   >
     <div
-      class="sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--primary"
-    ></div>
+    class="sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--primary"
+    role="progressbar"
+    aria-valuetext="Loading"></div>
   </button>
   `;
 
@@ -163,15 +200,18 @@ spinningSecondary.story = {
 export const spinningTertiary = () =>
   `
   <button
-    class="sprk-c-Button sprk-c-Button--tertiary"
+    class="sprk-c-Button sprk-c-Button--tertiary sprk-c-Button--has-spinner"
     data-sprk-spinner="click"
     data-id="button-spinner-tertiary"
+    data-sprk-spinner-variant="secondary"
     aria-label="Loading"
-    data-sprk-spinner-lightness="dark"
+    aria-live="polite"
+    disabled
   >
     <div
       class="sprk-c-Spinner sprk-c-Spinner--secondary sprk-c-Spinner--circle"
-    ></div>
+      role="progressbar"
+      aria-valuetext="Loading"></div>
   </button>
   `;
 
@@ -184,15 +224,18 @@ spinningTertiary.story = {
 export const spinningQuaternary = () =>
   `
   <button
-    class="sprk-c-Button sprk-c-Button--quaternary"
+    class="sprk-c-Button sprk-c-Button--quaternary sprk-c-Button--has-spinner"
     data-sprk-spinner="click"
     data-id="button-spinner-quaternary"
+    data-sprk-spinner-variant="dark"
     aria-label="Loading"
-    data-sprk-spinner-lightness="dark"
+    aria-live="polite"
+    disabled
   >
     <div
       class="sprk-c-Spinner sprk-c-Spinner--dark sprk-c-Spinner--circle"
-    ></div>
+      role="progressbar"
+      aria-valuetext="Loading"></div>
   </button>
   `;
 

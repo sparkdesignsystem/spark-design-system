@@ -9,7 +9,7 @@ describe('SprkAccordionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkAccordionComponent, SprkIconComponent]
+      declarations: [SprkAccordionComponent, SprkIconComponent],
     }).compileComponents();
   }));
 
@@ -26,7 +26,7 @@ describe('SprkAccordionComponent', () => {
   it('should do nothing when additionalClasses has no value', () => {
     fixture.detectChanges();
     expect(accordionElement.classList.toString()).toEqual(
-      'sprk-c-Accordion sprk-o-VerticalList'
+      'sprk-c-Accordion sprk-o-VerticalList',
     );
   });
 
@@ -34,7 +34,14 @@ describe('SprkAccordionComponent', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(accordionElement.classList.toString()).toEqual(
-      'sprk-c-Accordion sprk-o-VerticalList sprk-u-man'
+      'sprk-c-Accordion sprk-o-VerticalList sprk-u-man',
     );
+  });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.idString = testString;
+    fixture.detectChanges();
+    expect(accordionElement.getAttribute('data-id')).toEqual(testString);
   });
 });

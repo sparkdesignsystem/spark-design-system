@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkButton from './SprkButton';
+import SprkSpinner from '../spinners/SprkSpinner';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -40,11 +41,13 @@ describe('SprkButton:', () => {
     );
   });
 
+  // TODO: Remove internal spinner from button on next release #3557
   it('if loading is not set, should not render the spinner', () => {
     const wrapper = mount(<SprkButton />);
     expect(wrapper.find('.sprk-c-Spinner').length).toBe(0);
   });
 
+  // TODO: Remove internal spinner from button on next release #3557
   it('if loading is set, should render the spinner', () => {
     const wrapper = mount(<SprkButton loading />);
     expect(wrapper.find('.sprk-c-Spinner').length).toBe(1);
@@ -59,6 +62,7 @@ describe('SprkButton:', () => {
     },
   );
 
+  // TODO: Remove loading spinner from button on next release #3557
   it(
     'if loading is set with spinningAriaLabel it' +
       ' should add custom aria-label',
@@ -152,7 +156,19 @@ describe('SprkButton:', () => {
     'should not apply the disabled attribute if the' +
       ' element is an anchor "a"',
     () => {
-      const wrapper = mount(<SprkButton href="#" disabled="true" />);
+      const wrapper = mount(<SprkButton href="#" isDisabled />);
+      const link = wrapper.find('a');
+      expect(link.length).toBe(1);
+      expect(link.getDOMNode().hasAttribute('disabled')).toBe(false);
+    },
+  );
+
+  // TODO: Remove deprecated disabled on next release #3557
+  it(
+    'should not apply the disabled attribute if the' +
+      ' element is an anchor "a"',
+    () => {
+      const wrapper = mount(<SprkButton href="#" disabled />);
       const link = wrapper.find('a');
       expect(link.length).toBe(1);
       expect(link.getDOMNode().hasAttribute('disabled')).toBe(false);
@@ -163,7 +179,19 @@ describe('SprkButton:', () => {
     'it should apply the disabled attribute if the element is a button' +
       ' and disabled is true',
     () => {
-      const wrapper = mount(<SprkButton disabled="true" />);
+      const wrapper = mount(<SprkButton isDisabled />);
+      const button = wrapper.find('button');
+      expect(button.length).toBe(1);
+      expect(button.getDOMNode().hasAttribute('disabled')).toBe(true);
+    },
+  );
+
+  // TODO: Remove deprecated disabled on next release #3557
+  it(
+    'it should apply the disabled attribute if the element is a button' +
+      ' and deprecated disabled is true',
+    () => {
+      const wrapper = mount(<SprkButton disabled />);
       const button = wrapper.find('button');
       expect(button.length).toBe(1);
       expect(button.getDOMNode().hasAttribute('disabled')).toBe(true);
@@ -178,4 +206,30 @@ describe('SprkButton:', () => {
       expect(wrapper.find('a[href=""]').length).toBe(0);
     },
   );
+
+  it('should apply loading class', () => {
+    const wrapper = shallow(<SprkButton isSpinning />);
+    expect(wrapper.find('button').hasClass('sprk-c-Button--has-spinner')).toBe(
+      true,
+    );
+  });
+
+  it('should apply disabled attribute when loading', () => {
+    const wrapper = mount(<SprkButton isSpinning />);
+    const button = wrapper.find('button');
+    expect(button.length).toBe(1);
+    expect(button.getDOMNode().hasAttribute('disabled')).toBe(true);
+  });
+
+  // TODO: Remove internal spinner from button on next release #3557
+  // Rewrite test based on new composition version
+  it('should load compositional spinner rather than internal spinner', () => {
+    const wrapper = mount(
+      <SprkButton isSpinning>
+        <SprkSpinner variant="secondary" />
+      </SprkButton>,
+    );
+    const spinner = wrapper.find('.sprk-c-Spinner');
+    expect(spinner.hasClass('sprk-c-Spinner--secondary')).toBe(true);
+  });
 });

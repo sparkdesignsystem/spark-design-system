@@ -1,4 +1,5 @@
 /* global window */
+
 import getElements from '../utilities/getElements';
 
 const getSpinnerClasses = (options) => {
@@ -8,8 +9,17 @@ const getSpinnerClasses = (options) => {
     classes.push('sprk-c-Spinner--large');
   }
 
-  if (options.lightness === 'dark') {
+  // TODO: Deprecate lightness option in favor of variant - issue #1292
+  if (options.lightness === 'dark' || options.variant === 'dark') {
     classes.push('sprk-c-Spinner--dark');
+  }
+
+  if (options.variant === 'primary') {
+    classes.push('sprk-c-Spinner--primary');
+  }
+
+  if (options.variant === 'secondary') {
+    classes.push('sprk-c-Spinner--secondary');
   }
 
   return classes.join(' ');
@@ -18,12 +28,24 @@ const getSpinnerClasses = (options) => {
 const setSpinning = (element, options) => {
   const el = element;
   const width = element.offsetWidth;
+
   const spinningAriaLabel = options.ariaLabel || 'Loading';
-  el.setAttribute('data-sprk-spinner-text', el.textContent);
+  const ariaValueText = options.ariaValueText || 'Loading';
+  const role = options.role || 'progressbar';
+
+  el.classList.add('sprk-c-Button--has-spinner');
   el.setAttribute('aria-label', spinningAriaLabel);
-  el.innerHTML = `<div class="${getSpinnerClasses(options)}"></div>`;
+  el.setAttribute('data-sprk-spinner-text', el.textContent);
+  el.setAttribute('disabled', '');
   el.setAttribute('data-sprk-has-spinner', 'true');
   el.setAttribute('style', `width: ${width}px`);
+
+  el.innerHTML = `
+    <div
+      class="${getSpinnerClasses(options)}"
+      aria-valuetext="${ariaValueText}"
+      role="${role}"></div>
+  `;
 };
 
 const cancelSpinning = (element) => {
@@ -33,20 +55,31 @@ const cancelSpinning = (element) => {
   el.removeAttribute('data-sprk-has-spinner');
   el.removeAttribute('aria-label');
   el.removeAttribute('style');
+  el.removeAttribute('disabled');
+  el.classList.remove('sprk-c-Button--has-spinner');
 };
 
 const spinners = () => {
   getElements('[data-sprk-spinner="click"]', (spinnerContainer) => {
     const options = {};
     options.size = spinnerContainer.getAttribute('data-sprk-spinner-size');
-    options.lightness = spinnerContainer.getAttribute('data-sprk-spinner-lightness');
-    options.ariaLabel = spinnerContainer.getAttribute('data-sprk-spinner-aria-label');
+    // TODO: Deprecate lightness option in favor of variant - issue #1292
+    options.lightness = spinnerContainer.getAttribute(
+      'data-sprk-spinner-lightness',
+    );
+    options.ariaLabel = spinnerContainer.getAttribute(
+      'data-sprk-spinner-aria-label',
+    );
+    options.variant = spinnerContainer.getAttribute(
+      'data-sprk-spinner-variant',
+    );
+    options.role = spinnerContainer.getAttribute('data-sprk-spinner-role');
+    options.ariaValueText = spinnerContainer.getAttribute(
+      'data-sprk-aria-valuetext',
+    );
 
     spinnerContainer.addEventListener('click', (e) => {
-      if (
-        e.target.getAttribute('data-sprk-spinner')
-        && !e.target.getAttribute('data-sprk-has-spinner')
-      ) {
+      if (!e.target.hasAttribute('data-sprk-has-spinner')) {
         setSpinning(e.target, options);
       }
     });
@@ -59,6 +92,4 @@ window.addEventListener('sprk-cancel-spinners', () => {
   });
 });
 
-export {
-  spinners, getSpinnerClasses, setSpinning, cancelSpinning,
-};
+export { spinners, getSpinnerClasses, setSpinning, cancelSpinning };

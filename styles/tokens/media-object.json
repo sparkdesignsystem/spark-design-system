@@ -1,0 +1,34 @@
+{
+  "media": {
+    "gutter-tiny": {
+      "comment": "The gutter of the tiny Media object.",
+      "value": "{space.xs.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "gutter-small": {
+      "comment": "The gutter of the small Media object.",
+      "value": "{space.s.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "gutter": {
+      "comment": "The gutter of the default (medium) Media object.",
+      "value": "{space.m.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "gutter-large": {
+      "comment": "The gutter of the large Media object.",
+      "value": "{space.l.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "gutter-huge": {
+      "comment": "The gutter of the huge Media object.",
+      "value": "{space.xl.value}",
+      "file": "settings",
+      "themable": true
+    }
+  }
+}
