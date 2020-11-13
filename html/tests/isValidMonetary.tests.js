@@ -75,8 +75,9 @@ describe('isValidMonetary tests', () => {
   it('should fail four leading digits, three commas, 2 digit change', () => {
     expect(isValidMonetary('1234,123,123,123.00')).toBe(false);
   });
-
+  /* eslint-disable max-len */
   it('should fail four digits in a segment, three commas, 2 digit change', () => {
+    /* eslint-enable max-len */
     expect(isValidMonetary('1,2345,123,123.00')).toBe(false);
   });
 

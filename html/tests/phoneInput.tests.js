@@ -62,7 +62,9 @@ describe('formatPhone tests', () => {
     expect(field.addEventListener.getCall(0).args[0]).toBe('input');
   });
 
+  /* eslint-disable max-len */
   it('should validate and format when input is triggered with valid input', () => {
+    /* eslint-enable max-len */
     bindUIEvents(element);
     event = new window.Event('input');
     field.dispatchEvent(event);

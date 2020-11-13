@@ -6,17 +6,21 @@ const generateIdForInput = (inputElement, labelElement, componentName) => {
 
   // Warn if 'for' exists but the 'id' does not
   if (labelFor && !inputId) {
+    /* eslint-disable max-len, no-console */
     console.warn(
       `Spark Design System Warning - The value of 'for' (${labelFor}) on the label expects a matching 'id' on the input.`,
     );
+    /* eslint-enable max-len, no-console */
     return;
   }
 
   // Warn if 'for' and 'id' both exist but don't match
   if (inputId && labelFor && inputId !== labelFor) {
+    /* eslint-disable max-len, no-console */
     console.warn(
       `Spark Design System Warning - The value of 'for' (${labelFor}) on the label should match the 'id' on the input (${inputId}).`,
     );
+    /* eslint-enable max-len, no-console */
     return;
   }
 
