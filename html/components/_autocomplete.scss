@@ -6,6 +6,35 @@
 /// @group autocomplete
 ////
 .sprk-c-Autocomplete__results {
-  background-color: $sprk-blue;
-  height: 50px;
+  list-style-type: none;
+  background-color: $sprk-white;
+  border: $sprk-dropdown-border;
+  border-radius: $sprk-border-radius;
+  box-shadow: $sprk-dropdown-shadow;
+  font-size: $sprk-dropdown-font-size;
+  max-width: $sprk-dropdown-max-width;
+  padding: ($sprk-dropdown-padding / 2) 0;
+  position: absolute;
+  // margin-top: $sprk-space-xs;
+  width: 100%;
+  z-index: $sprk-layer-height-m;
+
+  li {
+    padding: $sprk-space-m;
+    border-bottom: 1px solid $sprk-black-tint-20;
+
+    &:hover {
+      background-color: $sprk-black-tint-10;
+      cursor: pointer;
+    }
+  }
+
+  .sprk-c-Autocomplete__results_header {
+    font-weight: 500;
+    padding: $sprk-space-m;
+  }
+
+  .sprk-c-Autocomplete__results--active {
+    background-color: $sprk-black-tint-10;
+  }
 }

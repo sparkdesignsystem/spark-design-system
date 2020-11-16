@@ -5,7 +5,7 @@
 .sprk-c-Tooltip__container {
   position: relative;
   display: inline-flex;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 .sprk-c-Tooltip__trigger {
@@ -14,6 +14,7 @@
   padding: $sprk-tooltip-trigger-padding;
   text-align: $sprk-tooltip-trigger-text-align;
   display: flex;
+
 
   /* Increase hoverable area of trigger */
   &:hover::after {
