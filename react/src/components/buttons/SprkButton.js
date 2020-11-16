@@ -13,7 +13,7 @@ const SprkButton = ({
   element,
   idString,
   loading,
-  isLoading = loading,
+  isSpinning,
   variant,
   href,
   spinningAriaLabel,
@@ -28,9 +28,10 @@ const SprkButton = ({
     TagName = 'button';
   }
 
-  // TODO: Remove anything related to spinner from button on next release #3557
+  // TODO: Remove loader prop and
+  // internal spinner from button on next release #3557
   let spinnerVariant;
-  if (isLoading) {
+  if (isSpinning || loading) {
     if (variant === 'secondary') {
       spinnerVariant = 'primary';
     }
@@ -49,23 +50,23 @@ const SprkButton = ({
         { 'sprk-c-Button--tertiary': variant === 'tertiary' },
         { 'sprk-c-Button--quaternary': variant === 'quaternary' },
         { 'sprk-is-Disabled': isDisabled },
-        { 'sprk-c-Button--loading': isLoading },
+        { 'sprk-c-Button--has-spinner': isSpinning },
         additionalClasses,
       )}
       role={TagName !== 'button' ? 'button' : undefined}
       data-id={idString}
       data-analytics={analyticsString}
-      // TODO: Remove disabled on next release #3557
-      disabled={TagName !== 'a' ? isDisabled || isLoading : undefined}
+      // TODO: Remove disabled prop on next release #3557
+      disabled={TagName !== 'a' ? isDisabled || isSpinning : undefined}
       href={TagName !== 'button' ? href : undefined}
       {...rest}
       // TODO: Remove loading on next release #3557
-      {...(isLoading && { 'aria-label': spinningAriaLabel })}
-      {...(isLoading && { 'aria-live': 'polite' })}
+      {...((loading || isSpinning) && { 'aria-label': spinningAriaLabel })}
+      {...(isSpinning && { 'aria-live': 'polite' })}
     >
       {/* TODO: Remove anything related to spinner from button
       on next release #3557 */}
-      {(isLoading && <SprkSpinner variant={spinnerVariant} />) || children}
+      {(loading && <SprkSpinner variant={spinnerVariant} />) || children}
     </TagName>
   );
 };
@@ -116,7 +117,7 @@ SprkButton.propTypes = {
   /**
    * Adds the necessary attributes for accessible loading state.
    */
-  isLoading: PropTypes.bool,
+  isSpinning: PropTypes.bool,
   // TODO: Remove loading on next release #3557
   /**
    * Deprecated for more of a compositional layout.
@@ -125,9 +126,7 @@ SprkButton.propTypes = {
    * rendered in place of the button content.
    */
   loading: PropTypes.bool,
-  // TODO: Remove anything related to spinner from button on next release #3557
   /**
-   * Deprecated: This will be removed on next release.
    * Optional string value that is
    * set for the aria-label when `loading` is `true`.
    */

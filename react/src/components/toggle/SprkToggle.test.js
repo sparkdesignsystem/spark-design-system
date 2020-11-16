@@ -102,15 +102,42 @@ describe('SprkToggle:', () => {
     const wrapper = mount(
       <SprkToggle triggerText="Toggle title">Body text</SprkToggle>,
     );
-    const ButtonAriaControls = wrapper.find('button').prop('aria-controls');
+    const buttonAriaControls = wrapper.find('button').prop('aria-controls');
     const toggleContentId = wrapper
       .find('.sprk-c-Toggle__content')
       .at(1)
       .prop('id');
 
     expect(toggleContentId).toMatch(/sprk_toggle_content_\d/);
-    expect(toggleContentId).toEqual(ButtonAriaControls);
+    expect(toggleContentId).toEqual(buttonAriaControls);
     expect(wrapper.find(`div#${toggleContentId}`).length).toBe(1);
+  });
+
+  it('should not change id when toggled', () => {
+    const wrapper = mount(
+      <SprkToggle triggerText="Toggle title">Body text</SprkToggle>,
+    );
+    const buttonAriaControls = wrapper.find('button').prop('aria-controls');
+    const toggleContentId = wrapper
+      .find('.sprk-c-Toggle__content')
+      .at(1)
+      .prop('id');
+
+    expect(toggleContentId).toMatch(/sprk_toggle_content_\d/);
+    expect(toggleContentId).toEqual(buttonAriaControls);
+    expect(wrapper.find(`div#${toggleContentId}`).length).toBe(1);
+    expect(wrapper.state().isOpen).toBe(false);
+
+    wrapper.find('button').simulate('click');
+
+    const postClickToggleContentId = wrapper
+      .find('.sprk-c-Toggle__content')
+      .at(1)
+      .prop('id');
+
+    expect(wrapper.state().isOpen).toBe(true);
+    expect(toggleContentId).toMatch(postClickToggleContentId);
+    expect(buttonAriaControls).toEqual(postClickToggleContentId);
   });
 
   it(`should add classes to the content if contentAdditionalClasses
@@ -165,7 +192,10 @@ describe('SprkToggle:', () => {
   it(`should add classes to the title if triggerTextAdditionalClasses
   are set`, () => {
     const wrapper = mount(
-      <SprkToggle triggerText="Toggle title" triggerTextAdditionalClasses="test">
+      <SprkToggle
+        triggerText="Toggle title"
+        triggerTextAdditionalClasses="test"
+      >
         Body text
       </SprkToggle>,
     );

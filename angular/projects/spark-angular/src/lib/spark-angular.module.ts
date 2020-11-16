@@ -55,7 +55,7 @@ import { SprkTableModule } from './components/sprk-table/sprk-table.module';
 import { SprkToggleModule } from './components/sprk-toggle/sprk-toggle.module';
 import { SprkTooltipModule } from './components/sprk-tooltip/sprk-tooltip.module';
 import { SprkUnorderedListModule } from './components/sprk-unordered-list/sprk-unordered-list.module';
-import { SprkButtonModule } from './directives/inputs/sprk-button/sprk-button.module';
+import { SprkButtonModule } from './directives/sprk-button/sprk-button.module';
 import { SprkAwardModule } from './components/sprk-award/sprk-award.module';
 import { SprkCardModule } from './components/sprk-card/sprk-card.module';
 import { SprkDictionaryModule } from './components/sprk-dictionary/sprk-dictionary.module';
@@ -71,6 +71,7 @@ import { SprkRadioItemModule } from './components/inputs/sprk-radio-item/sprk-ra
 import { SprkCheckboxGroupModule } from './components/inputs/sprk-checkbox-group/sprk-checkbox-group.module';
 import { SprkCheckboxItemModule } from './components/inputs/sprk-checkbox-item/sprk-checkbox-item.module';
 import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divider.module';
+import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module';
 @NgModule({
   exports: [
     SprkAlertModule,
@@ -139,6 +140,7 @@ import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divid
     SprkFieldsetModule,
     SprkLegendModule,
     SprkDividerDirectiveModule,
+    SprkSpinnerModule,
   ],
 })
 export class SparkAngularModule {}

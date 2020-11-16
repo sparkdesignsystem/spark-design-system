@@ -1,0 +1,156 @@
+/// The breakpoint used for typography.
+$sprk-typography-breakpoint: 54rem !default;
+/// The max-width value for the .sprk-u-Measure class.
+$sprk-measure: 40rem !default;
+/// The max-width value for the narrow measure.
+$sprk-narrow-measure: 25rem !default;
+/// Expects a Sass List containing one or more nested Sass Lists. The nested lists should each contain: A List of urls to download a font, the name of the font and the weight of the font.
+$sprk-webfonts: '' !default;
+/// Boolean value for if the app is using webfonts.
+$sprk-using-webfonts: false !default;
+/// The color of the Page Title mark.
+$sprk-page-title-mark-color: $sprk-red !default;
+/// The width of the Page Title mark.
+$sprk-page-title-mark-width: 32px !default;
+/// The height of the Page Title mark.
+$sprk-page-title-mark-height: 5px !default;
+/// The height of the mark on a large viewport (using $sprk-typography-breakpoint).
+$sprk-page-title-mark-height-wide-viewport: 6px !default;
+/// Amount of padding between the mark and the text on the page title mark.
+$sprk-page-title-mark-padding: 0 0 $sprk-space-misc-a !default;
+/// Amount of padding between the mark and the text on a large viewport (using $sprk-typography-breakpoint).
+$sprk-page-title-mark-padding-wide-viewport: 0 0 $sprk-space-m !default;
+/// The font-family, including fallbacks of TypeDisplayOne.
+$sprk-font-family-display-one: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The font-family, including fallbacks of TypeDisplayTwo.
+$sprk-font-family-display-two: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The font-family, including fallbacks of TypeDisplayThree.
+$sprk-font-family-display-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The font-family, including fallbacks of TypeDisplayFour.
+$sprk-font-family-display-four: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The font-family, including fallbacks of TypeDisplayFive.
+$sprk-font-family-display-five: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The font-family, including fallbacks of TypeDisplaySix.
+$sprk-font-family-display-six: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The font-family, including fallbacks of TypeDisplaySeven.
+$sprk-font-family-display-seven: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The font-family, including fallbacks of TypeBodyOne.
+$sprk-font-family-body-one: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The font-family, including fallbacks of TypeBodyTwo.
+$sprk-font-family-body-two: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The font-family, including fallbacks of TypeBodyThree.
+$sprk-font-family-body-three: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The font-family, including fallbacks of TypeBodyFour.
+$sprk-font-family-body-four: RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+/// The size of TypeDisplayOne when the viewport is narrower than $sprk-font-size-display-one-breakpoint.
+$sprk-font-size-display-one: 2.75rem !default;
+/// The size of TypeDisplayOne when the viewport is wider than $sprk-font-size-display-one-breakpoint.
+$sprk-font-size-display-one-wide: 3.375rem !default;
+/// The size of TypeDisplayTwo when the viewport is narrower than $sprk-font-size-display-two-breakpoint.
+$sprk-font-size-display-two: 2rem !default;
+/// The size of TypeDisplayTwo when the viewport is wider than $sprk-font-size-display-two-breakpoint.
+$sprk-font-size-display-two-wide: 2.5rem !default;
+/// The size of TypeDisplayThree when the viewport is narrower than $sprk-font-size-display-three-breakpoint.
+$sprk-font-size-display-three: 1.75rem !default;
+/// The size of TypeDisplayThree when the viewport is wider than $sprk-font-size-display-three-breakpoint.
+$sprk-font-size-display-three-wide: 2.125rem !default;
+/// The size of TypeDisplayFour.
+$sprk-font-size-display-four: 1.625rem !default;
+/// The size of TypeDisplayFive.
+$sprk-font-size-display-five: 1.25rem !default;
+/// The size of TypeDisplaySix.
+$sprk-font-size-display-six: 1.25rem !default;
+/// The size of TypeDisplaySeven.
+$sprk-font-size-display-seven: 1rem !default;
+/// The size of TypeBodyOne.
+$sprk-font-size-body-one: 1rem !default;
+/// The size of TypeBodyTwo.
+$sprk-font-size-body-two: 1rem !default;
+/// The font size of TypeBodyThree.
+$sprk-font-size-body-three: 1rem !default;
+/// The font size of TypeBodyFour.
+$sprk-font-size-body-four: 0.8125rem !default;
+/// The weight of the TypeDisplayOne font.
+$sprk-font-weight-display-one: bold !default;
+/// The weight of the TypeDisplayTwo font.
+$sprk-font-weight-display-two: bold !default;
+/// The weight of the TypeDisplayThree font.
+$sprk-font-weight-display-three: 300 !default;
+/// The weight of the TypeDisplayFour font.
+$sprk-font-weight-display-four: bold !default;
+/// The weight of the TypeDisplayFive font.
+$sprk-font-weight-display-five: 500 !default;
+/// The weight of the TypeDisplaySix font.
+$sprk-font-weight-display-six: 300 !default;
+/// The weight of the TypeDisplaySeven font.
+$sprk-font-weight-display-seven: 500 !default;
+/// The weight of the TypeBodyOne font.
+$sprk-font-weight-body-one: 500 !default;
+/// The weight of the TypeBodyTwo font.
+$sprk-font-weight-body-two: 300 !default;
+/// The weight of the TypeBodyThree font.
+$sprk-font-weight-body-three: 300 !default;
+/// The weight of the TypeBodyFour font.
+$sprk-font-weight-body-four: 300 !default;
+/// The supplied value will be set on all generated Font-face calls, as font-display. The default is 'swap.'
+$sprk-font-display: swap !default;
+/// The color of TypeDisplayOne.
+$sprk-color-display-one: $sprk-black !default;
+/// The color of TypeDisplayTwo.
+$sprk-color-display-two: $sprk-black !default;
+/// The color of TypeDisplayThree.
+$sprk-color-display-three: $sprk-black !default;
+/// The color of TypeDisplayFour.
+$sprk-color-display-four: $sprk-black !default;
+/// The color of TypeDisplayFive.
+$sprk-color-display-five: $sprk-black !default;
+/// The color of TypeDisplaySix.
+$sprk-color-display-six: $sprk-black !default;
+/// The color of TypeDisplaySeven.
+$sprk-color-display-seven: $sprk-black !default;
+/// The color of TypeBodyOne.
+$sprk-color-body-one: $sprk-black !default;
+/// The color of TypeBodyTwo.
+$sprk-color-body-two: $sprk-black !default;
+/// The color of TypeBodyThree.
+$sprk-color-body-three: $sprk-black !default;
+/// The color of TypeBodyFour.
+$sprk-color-body-four: $sprk-black !default;
+/// The line-height of the TypeDisplayOne font when the viewport is narrower than $sprk-font-size-display-one-breakpoint.
+$sprk-line-height-display-one: 1.27 !default;
+/// The line-height of the TypeDisplayOne font when the viewport is wider than $sprk-font-size-display-one-breakpoint.
+$sprk-line-height-display-one-wide: 1.03 !default;
+/// The line-height of the TypeDisplayTwo font when the viewport is narrower than $sprk-font-size-display-two-breakpoint.
+$sprk-line-height-display-two: 1 !default;
+/// The line-height of the TypeDisplayTwo font when the viewport is wider than $sprk-font-size-display-two-breakpoint.
+$sprk-line-height-display-two-wide: 1 !default;
+/// The line-height of the TypeDisplayThree font when the viewport is narrower than $sprk-font-size-display-three-breakpoint.
+$sprk-line-height-display-three: 1.6 !default;
+/// The line-height of the TypeDisplayThree font when the viewport is wider than $sprk-font-size-display-three-breakpoint.
+$sprk-line-height-display-three-wide: 1.32 !default;
+/// The line-height of the TypeDisplayFour.
+$sprk-line-height-display-four: 1.23 !default;
+/// The line-height of the TypeDisplayFive.
+$sprk-line-height-display-five: 1.2 !default;
+/// The line-height of the TypeDisplaySix.
+$sprk-line-height-display-six: 1.2 !default;
+/// The line-height of the TypeDisplaySeven.
+$sprk-line-height-display-seven: 1 !default;
+/// The line-height of the TypeBodyOne.
+$sprk-line-height-body-one: 1.6 !default;
+/// The line-height of the TypeBodyTwo.
+$sprk-line-height-body-two: 1.6 !default;
+/// The line-height of the TypeBodyThree.
+$sprk-line-height-body-three: 2 !default;
+/// The line-height of the TypeBodyFour.
+$sprk-line-height-body-four: 1.84 !default;
+/// The top crop value for line height collision correction.
+$sprk-line-height-collision-top-crop: 5 !default;
+/// The bottom crop value for line height collision correction.
+$sprk-line-height-collision-bottom-crop: 5 !default;
+/// The width of the viewport at which to switch the font size from $sprk-font-size-display-one to $sprk-font-size-display-one-wide.
+$sprk-type-display-one-breakpoint: 43.75rem !default;
+/// The width of the viewport at which to switch the font size from $sprk-font-size-display-two to $sprk-font-size-display-two-wide.
+$sprk-type-display-two-breakpoint: 43.75rem !default;
+/// The width of the viewport at which to switch the font size from $sprk-font-size-display-three to $sprk-font-size-display-three-wide.
+$sprk-type-display-three-breakpoint: 43.75rem !default;
