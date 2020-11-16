@@ -4,52 +4,36 @@ import {
   isEscPressed,
   isUpPressed,
   isDownPressed,
-  isEnterPressed,
+  isTabPressed,
 } from '../utilities/keypress';
 import generateAriaControls from '../utilities/generateAriaControls';
 
 const activeClass = 'sprk-c-Autocomplete__results--active';
-const hiddenClass = 'sprk-c-Autocomplete__results--hidden';
 
-const showList = (list) => {
-  // dropdown.classList.add('sprk-c-Dropdown--open');
-  list.classList.remove('sprk-u-Display--none');
+const isListOpen = (list) => {
+  return !list.classList.contains('sprk-u-Display--none');
 };
-
-const hideList = (list) => {
-  // dropdown.classList.add('sprk-c-Dropdown--open');
-  list.classList.add('sprk-u-Display--none');
-};
-
-const setAnnouncement = (announceContainer, text) => {
-  announceContainer.innerText = text;
-}
 
 const resetResults = (resultList) => {
   resultList.forEach((result) => {
     result.classList.remove(activeClass);
-    // turn off aria-selected
+    result.removeAttribute('aria-selected');
   });
 };
 
-const selectResult = (result, resultList, input) => {
-  const selectedValue = result.getAttribute('data-sprk-autocomplete-value');
-  const selectedId = result.id;
-  const selectedText = result.getAttribute('data-sprk-autocomplete-text');
-
-  input.setAttribute('data-sprk-autocomplete-selected-value', selectedValue);
-  input.value = selectedText;
-
-  // reset the list
-  hideList(resultList);
-
-  input.removeAttribute('aria-activedescendant');
+const hideList = (list, input) => {
+  if (isListOpen(list)) {
+    resetResults(list.querySelectorAll('li'));
+    list.classList.add('sprk-u-Display--none');
+    input.removeAttribute('aria-activedescendant');
+    input.setAttribute('aria-expanded', false);
+  }
 };
 
 const highlightResult = (result, input) => {
   input.setAttribute('aria-activedescendant', result.id);
   result.classList.add(activeClass);
-  // set aria-selected
+  result.setAttribute('aria-selected', true);
 };
 
 const getActiveResultIndex = (results) => {
@@ -88,117 +72,47 @@ const retreatHighlightedResult = (results, input) => {
 };
 
 const bindUIEvents = (autocompleteContainer) => {
-  const announcement = autocompleteContainer.querySelector('div');
   const input = autocompleteContainer.querySelector('input');
-  const filteredList = autocompleteContainer.querySelector(
-    '[data-sprk-autocomplete="filtered"]',
+  const list = autocompleteContainer.querySelector('ul');
+
+  const selectableListItems = list.querySelectorAll(
+    'li:not([data-sprk-autocomplete-no-select])',
   );
-  const recentsList = autocompleteContainer.querySelector(
-    '[data-sprk-autocomplete="recents"]',
-  );
 
-  generateAriaControls(input, filteredList, 'autocomplete');
-
-  input.addEventListener('focusin', () => {
-    // if we have recent searches
-    showList(recentsList);
-  });
-
-  // Hide results if the input loses focus
-  input.addEventListener('blur', () => {
-    // hideList(recentsList);
-    // hideList(filteredList);
-  });
-
-  input.addEventListener('input', (e) => {
-    const inputValue = e.target.value;
-
-    if (inputValue.trim().length === 0) {
-      hideList(filteredList);
-      showList(recentsList);
-    } else {
-      // perform filter
-      showList(filteredList);
-      hideList(recentsList);
-    }
-  });
+  generateAriaControls(input, list, 'autocomplete');
 
   input.addEventListener('keydown', (e) => {
-    // todo put this in as narrow a scope as possible
-    // any item that isn't a 404 or pinned
-    const selectableRecentItems = recentsList.querySelectorAll('li');
-    // any item that isn't a 404 or pinned or filtered out
-    const selectableFilteredItems = filteredList.querySelectorAll('li');
-
     if (isUpPressed(e)) {
       e.stopPropagation();
       e.preventDefault();
 
-      if (!recentsList.classList.contains('sprk-u-Display--none')) {
-        retreatHighlightedResult(selectableRecentItems, input);
-      } else if (!filteredList.classList.contains('sprk-u-Display--none')) {
-        retreatHighlightedResult(selectableFilteredItems, input);
+      if (!list.classList.contains('sprk-u-Display--none')) {
+        retreatHighlightedResult(selectableListItems, input);
       }
     } else if (isDownPressed(e)) {
       e.stopPropagation();
       e.preventDefault();
 
-      if (!recentsList.classList.contains('sprk-u-Display--none')) {
-        advanceHighlightedResult(selectableRecentItems, input);
-      } else if (!filteredList.classList.contains('sprk-u-Display--none')) {
-        advanceHighlightedResult(selectableFilteredItems, input);
+      if (!list.classList.contains('sprk-u-Display--none')) {
+        advanceHighlightedResult(selectableListItems, input);
       }
-    } else if (isEnterPressed(e)) {
-      // if I have an aria-activedescendant that means a list is open
-      // and a value is highlighted
-      // find the item referenced by aria-activedescendant and select it
+    } else if (isTabPressed(e)) {
+      // hide results if we're tabbing out of the control
+      hideList(list, input);
     }
-  });
-
-  // any item that isn't a 404 or pinned
-  const selectableRecentItems = recentsList.querySelectorAll('li');
-  // any item that isn't a 404 or pinned or filtered out
-  const selectableFilteredItems = filteredList.querySelectorAll('li');
-
-  selectableRecentItems.forEach((listItem) => {
-    listItem.addEventListener('click', () => {
-      selectResult(listItem, recentsList, input);
-      setAnnouncement(
-        announcement,
-        `value: ${listItem.getAttribute('data-sprk-autocomplete-value')}`,
-      );
-    });
-  });
-
-  selectableFilteredItems.forEach((listItem) => {
-    listItem.addEventListener('click', () => {
-      selectResult(listItem, filteredList, input);
-      setAnnouncement(
-        announcement,
-        `value: ${listItem.getAttribute('data-sprk-autocomplete-value')}`,
-      );
-    });
   });
 
   // Hide results if Escape is pressed
   document.addEventListener('keydown', (e) => {
     if (isEscPressed(e)) {
-      hideList(filteredList);
-      hideList(recentsList);
+      hideList(list, input);
     }
   });
 
   // Hide results if the document body is clicked
   document.addEventListener('click', (e) => {
-    if (
-      !(
-        input.contains(e.target) ||
-        filteredList.contains(e.target) ||
-        recentsList.contains(e.target)
-      )
-    ) {
-      hideList(filteredList);
-      hideList(recentsList);
+    if (!(input.contains(e.target) || list.contains(e.target))) {
+      hideList(list, input);
     }
   });
 };
