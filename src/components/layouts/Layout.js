@@ -85,7 +85,9 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
               href="https://v13--spark-design-system.netlify.app/"
               className="docs-c-Banner--link sprk-u-mlm"
             >
-              View the previous major release of Spark
+              For designs launching BEFORE July 14, 2021, please reference
+              version 13 of Spark. Talk to your PO or Experience Director if
+              there are any questions.
             </a>
           </div>
           <Header
