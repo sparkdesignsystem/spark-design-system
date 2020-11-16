@@ -59,11 +59,37 @@ export const defaultStory = () => {
           data-sprk-autocomplete="filtered"
           class="sprk-c-Autocomplete__results sprk-u-Display--none"
         >
-          Filtered Results
-          <li id="filtered_1">Alaska</li>
-          <li id="filtered_2">Alabama</li>
-          <li id="filtered_3">Arkansas</li>
-          <li id="filtered_4">Michigan</li>
+          <span class="sprk-c-Autocomplete__results_header">
+            Filtered Results
+          </span>
+          <li
+            id="filtered_1"
+            data-sprk-autocomplete-value="AK"
+            data-sprk-autocomplete-text="Alaska"
+          >
+            Alaska
+          </li>
+          <li
+            id="filtered_2"
+            data-sprk-autocomplete-value="AL"
+            data-sprk-autocomplete-text="Alabama"
+          >
+            Alabama
+          </li>
+          <li
+            id="filtered_3"
+            data-sprk-autocomplete-value="AR"
+            data-sprk-autocomplete-text="Arkansas"
+          >
+            Arkansas
+          </li>
+          <li
+            id="filtered_4"
+            data-sprk-autocomplete-value="MI"
+            data-sprk-autocomplete-text="Michigan"
+          >
+            Michigan
+          </li>
         </ul>
 
         <ul
@@ -121,7 +147,6 @@ export const defaultStory = () => {
           </li>
           </span>
           <li
-            id="recents_1"
             data-sprk-autocomplete-value="bwise"
             data-sprk-autocomplete-text="Bob Wise"
           >

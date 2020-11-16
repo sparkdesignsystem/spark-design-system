@@ -173,6 +173,10 @@ const bindUIEvents = (autocompleteContainer) => {
   selectableFilteredItems.forEach((listItem) => {
     listItem.addEventListener('click', () => {
       selectResult(listItem, filteredList, input);
+      setAnnouncement(
+        announcement,
+        `value: ${listItem.getAttribute('data-sprk-autocomplete-value')}`,
+      );
     });
   });
 
