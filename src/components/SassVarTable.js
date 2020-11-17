@@ -4,30 +4,27 @@ import { SprkTable } from '@sparkdesignsystem/spark-react';
 
 const SassVarTable = () => (
   <StaticQuery
-    query={
-        graphql`
-          query SassVars {
-            allSassVarsJson {
-              edges {
-                node {
-                  description
-                  context {
-                    name
-                    value
-                  }
-                }
+    query={graphql`
+      query SassVars {
+        allSassVarsJson {
+          edges {
+            node {
+              description
+              context {
+                name
+                value
               }
             }
           }
+        }
+      }
     `}
     render={(data) => {
-      const sassVarData = data.allSassVarsJson.edges.map(item => (
-        {
-          name: item.node.context.name,
-          value: item.node.context.value,
-          description: item.node.description,
-        }
-      ));
+      const sassVarData = data.allSassVarsJson.edges.map((item) => ({
+        name: item.node.context.name,
+        value: item.node.context.value,
+        description: item.node.description,
+      }));
       return (
         <SprkTable
           additionalTableClasses="
@@ -36,9 +33,10 @@ const SassVarTable = () => (
             sprk-b-Table--striped-even
             sprk-u-TextAlign--right
           "
-          columns={[{
+          columns={[
+            {
               name: 'name',
-              header: 'Variable',
+              header: 'Token Name',
             },
             {
               name: 'value',
@@ -47,8 +45,8 @@ const SassVarTable = () => (
             {
               name: 'description',
               header: 'Description',
-            }]
-          }
+            },
+          ]}
           rows={sassVarData}
         />
       );
