@@ -23,6 +23,7 @@ import { highlightBoard } from './components/highlight-board';
 import versionCheck from './utilities/versionCheck';
 import { checkbox } from './base/inputs/checkbox';
 import { radioInput } from './base/inputs/radioInput';
+import { autocomplete } from './components/autocomplete';
 
 const Spark = ({ datePickerConfig = {} } = {}) => {
   requiredSelect();
@@ -49,6 +50,7 @@ const Spark = ({ datePickerConfig = {} } = {}) => {
   versionCheck();
   checkbox();
   radioInput();
+  autocomplete();
 };
 
 export { Spark as default };
