@@ -1,0 +1,99 @@
+---
+  title: Autocomplete
+---
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+
+# Autocomplete
+
+Autocomplete input fields allow the browser to predict information being
+entered by the user. The browser should display options based on
+previous information entered.
+
+<ComponentPreview
+  componentName="autocomplete--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="15rem"
+/>
+
+### Usage
+
+Autocomplete helps users search for options that are difficult to remember or
+commonly misspelled. They allow designers to include more options to choose
+from with less space.
+
+### Guidelines
+
+Autocomplete input fields should be used:
+
+- When information can be predicted from previously entered information.
+- When accuracy and speed are important to the user.
+- When the number of options is no longer convenient or efficient to display
+in a select box.
+- When a select box has too many options but can be predicted for the user
+(i.e. states, countries).
+
+Best practices for Autocomplete input fields:
+
+- Try to keep lists under 10 matching options so the user doesn't have to
+scroll.
+- Guide the user by highlighting the most relevant suggestion.
+- Use text wrapping for longer suggestions.
+- Order suggestions by relevancy for quick selection.
+- Ensure the autocomplete input field is not blocking other elements on mobile.
+
+<SprkDivider
+ element="span"
+ additionalClasses="sprk-u-Measure"
+></SprkDivider>
+
+## Variants
+
+### Base
+
+Autocomplete is commonly used for search bars where accurate, quick suggestions
+help the user choose the correct data format for a task.
+
+<ComponentPreview
+  componentName="autocomplete--default-story"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="15rem"
+/>
+
+### Huge
+
+Huge Autocomplete is a larger version of the Autocomplete field.
+
+They're commonly used as a standalone feature on the page (i.e. Google search
+bar).
+
+<ComponentPreview
+  componentName="autocomplete--huge"
+  hasReact
+  hasAngular
+  hasHTML
+  minHeight="27rem"
+/>
+
+## Anatomy
+
+- Must have a search icon.
+- Must show predictive suggestions in a dropdown.
+- Must have suggestions that can be selected.
+
+## Accessibility
+
+## Related Components
+
+To show a full list of options, use a Select Box (link).
+
+## Research
+
+The autocomplete pattern is based on the principle of recognition over recall.
+
+For more on the Autocomplete pattern see
+https://ui-patterns.com/patterns/Autocomplete
