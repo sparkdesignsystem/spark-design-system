@@ -8,10 +8,11 @@ import SassVarTable from '../../../components/SassVarTable';
 </h1>
 
 Our Design Tokens are a catalog from which we base all our visual and branding choices.
+It's a central database of our core style attributes.
 
-It's a central database of our core styles like colors, typography, spacing, sizing, and much more.
+These tokens describe branding decisions in color, typography, spacing, sizing, and much more.
 
-Spark Design Tokens currently generate style files for web, iOS, and Android platforms.
+Design Tokens are a future-friendly way to create visual consistency between platforms.
 
 ## Benefits
 Design Tokens allow more projects to incorporate our design decisions.
@@ -51,13 +52,24 @@ For example, the token `sprk-purple-deep` represents a specific shade of purple.
 
 For HTML, React, and Angular projects, follow our [install guides](/installing-spark). They show you how to import the correct Sass file.
 
-** How to Change Spark's Default Style Settings: **
-1. Create a new Sass file.
-2. Import it before Spark's main Sass file.
-3. Assign a new value to the variable you want to override.
+<h4 class="docs-b-h6 sprk-b-TypeDisplaySix sprk-u-mtl sprk-u-mbm sprk-u-Measure">
+  How to Change Spark's Default Style Settings:
+</h4>
+<ol class=" sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mbl">
+  <li class="sprk-u-mbs sprk-u-Measure">
+    Create a new Sass file.
+  </li>
+  <li class="sprk-u-mbs sprk-u-Measure">
+    Import it before Spark's main sass file.
+  </li>
+  <li class="sprk-u-mbs sprk-u-Measure">
+    Assign a new value to the variable you want to override.
+  </li>
+</ol>
 
 > These make global changes to your project. Changing a variable affects all instances of its relevant components. For one-off modifications, use [CSS utilities](/using-spark/foundations/css-utilities).
 
+For iOS and Android projects, please [email the Spark team](mailto:sparkdesignsystem@quickenloans.com) and we'll get you started.
 ### Design Token List
 <section>
   <SassVarTable />
