@@ -76,15 +76,12 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
               Skip to Main Content
             </SprkLink>
           </div>
-          <div
-            className="sprk-u-BackgroundColor--black
-            sprk-u-pvm
-            sprk-u-AbsoluteCenter"
-          >
-            <p className="sprk-u-Color--white sprk-u-pam">
-              Designs launching
-              <span className="sprk-u-FontWeight--bold sprk-u-mas">before</span>
-              July 14, 2021 should reference
+          <div className="sprk-u-BackgroundColor--black sprk-u-AbsoluteCenter sprk-u-pam">
+            <p className="sprk-u-Color--white">
+              <span className="sprk-u-FontWeight--bold sprk-u-mrs">
+                Designs launching before July 14, 2021
+              </span>
+              should reference
               <a
                 href="https://sparkdesignsystem.com/"
                 className="docs-c-Banner--link sprk-u-mls"
