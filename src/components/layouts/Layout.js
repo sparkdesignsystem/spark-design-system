@@ -87,11 +87,11 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
               July 14, 2021 should reference
               <a
                 href="https://sparkdesignsystem.com/"
-                className="docs-c-Banner--link sprk-u-mas"
+                className="docs-c-Banner--link sprk-u-mls"
               >
-                version 13 of Spark.
+                version 13 of Spark
               </a>
-              Questions? Please contact your Product Owner or Experience
+              . Questions? Please contact your Product Owner or Experience
               Director.
             </p>
           </div>
