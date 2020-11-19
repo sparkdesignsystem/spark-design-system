@@ -946,7 +946,7 @@
     },
     "font": {
       "size": {
-        "comment": "The font size of the helper text for Inputs",
+        "comment": "The font size of the helper text for Inputs.",
         "value": "0.8125rem",
         "attributes": {
           "category": "size",
@@ -956,13 +956,13 @@
         "themable": true
       },
       "weight": {
-        "comment": "The font weight of the helper text for Inputs",
+        "comment": "The font weight of the helper text for Inputs.",
         "value": "{text-input.font.weight.value}",
         "file": "settings",
         "themable": true
       },
       "family": {
-        "comment": "The font family of the helper text for Inputs",
+        "comment": "The font family of the helper text for Inputs.",
         "value": "{text-input.font.family.value}",
         "file": "settings",
         "themable": true
@@ -971,26 +971,26 @@
   },
   "placeholder": {
     "color": {
-      "comment": "The color of the placeholder for Inputs",
+      "comment": "The color of the placeholder for Inputs.",
       "value": "{black-tint.50.value}",
       "file": "settings",
       "themable": true
     },
     "font": {
       "size": {
-        "comment": "The font size of the placeholder for Inputs",
+        "comment": "The font size of the placeholder for Inputs.",
         "value": "{text-input.font.size.value}",
         "file": "settings",
         "themable": true
       },
       "weight": {
-        "comment": "The font weight of the placeholder for Inputs",
+        "comment": "The font weight of the placeholder for Inputs.",
         "value": "{text-input.font.weight.value}",
         "file": "settings",
         "themable": true
       },
       "family": {
-        "comment": "The font family of the placeholder for Inputs",
+        "comment": "The font family of the placeholder for Inputs.",
         "value": "{text-input.font.family.value}",
         "file": "settings",
         "themable": true
@@ -1985,7 +1985,7 @@
         "themable": true
       },
       "cursor-disabled": {
-        "comment": "The cursor for the custom checkbox input when disabled..",
+        "comment": "The cursor for the custom checkbox input when disabled.",
         "value": "default",
         "attributes": {
           "category": "content"
@@ -2047,13 +2047,13 @@
         "themable": true
       },
       "top": {
-        "comment": "The top value of the custom checkbox element of the huge checkbox input..",
+        "comment": "The top value of the custom checkbox element of the huge checkbox input.",
         "value": "{space.m.value}",
         "file": "settings",
         "themable": true
       },
       "left": {
-        "comment": "The left value of the custom checkbox element of the huge checkbox input..",
+        "comment": "The left value of the custom checkbox element of the huge checkbox input.",
         "value": "{space.m.value}",
         "file": "settings",
         "themable": true

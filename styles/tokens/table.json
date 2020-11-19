@@ -264,13 +264,13 @@
         },
         "border": {
           "color": {
-            "comment": "The color of the borders in the Secondary Row Comparison Table cells",
+            "comment": "The color of the borders in the Secondary Row Comparison Table cells.",
             "value": "{gray.value}",
             "file": "settings",
             "themable": true
           },
           "width": {
-            "comment": "The width of the borders in the Secondary Row Comparison Table cells",
+            "comment": "The width of the borders in the Secondary Row Comparison Table cells.",
             "value": "1px",
             "attributes": {
             "category": "size"
@@ -279,7 +279,7 @@
             "themable": true
           },
           "style": {
-            "comment": "The style of the borders in the Secondary Row Comparison Table cells",
+            "comment": "The style of the borders in the Secondary Row Comparison Table cells.",
             "value": "solid",
             "attributes": {
               "category": "content"
