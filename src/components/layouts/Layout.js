@@ -1,13 +1,14 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import { MDXProvider } from '@mdx-js/react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
+import { SprkLink } from '@sparkdesignsystem/spark-react';
 import Header from '../Header';
 import Menu from '../Menu';
 import Footer from '../Footer';
 import '../../scss/main.scss';
-import { SprkLink } from '@sparkdesignsystem/spark-react';
 
 import SEO from '../seo';
 import H1 from '../markdown-render/h1';
@@ -77,16 +78,21 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
           </div>
           <div
             className="sprk-u-BackgroundColor--black sprk-u-Color--white
-            sprk-u-pvm
+            sprk-u-pam
             sprk-u-AbsoluteCenter"
           >
-            <a
-              href="https://www.sparkdesignsystem.com/"
-              className="docs-c-Banner--link sprk-u-mlm"
-            >
-              For designs launching AFTER July 14, 2021, please reference the
-              latest release of Spark.
-            </a>
+            <p className="sprk-u-Color--white">
+              <span className="sprk-u-FontWeight--bold sprk-u-mrs">
+                Designs launching after July 14, 2021
+              </span>
+              should reference
+              <a
+                href="https://www.sparkdesignsystem.com/"
+                className="docs-c-Banner--link sprk-u-mls"
+              >
+                latest release of Spark.
+              </a>
+            </p>
           </div>
           <Header
             context={context}
@@ -723,6 +729,7 @@ Layout.defaultProps = {
 
 Layout.propTypes = {
   children: PropTypes.node,
+  location: PropTypes.string,
   hasSideBar: PropTypes.bool,
   initialContext: PropTypes.string,
 };
