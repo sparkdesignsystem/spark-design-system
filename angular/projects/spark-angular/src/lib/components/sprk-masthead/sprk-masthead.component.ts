@@ -3,14 +3,14 @@ import {
   HostListener,
   Input,
   Renderer2,
-  AfterContentInit
+  AfterContentInit,
 } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 import * as _ from 'lodash';
 import {
   ISprkNarrowNavLink,
   ISprkNarrowSelector,
-  ISprkBigNavLink
+  ISprkBigNavLink,
 } from './sprk-masthead.interfaces';
 
 @Component({
@@ -183,8 +183,6 @@ import {
           <div *ngFor="let narrowLink of narrowNavLinks">
             <div *ngIf="narrowLink.subNav">
               <sprk-masthead-accordion-item
-                iconTypeOpen="chevron-down"
-                iconTypeClosed="chevron-down"
                 [leadingIcon]="narrowLink.leadingIcon"
                 [isActive]="narrowLink.active"
                 [title]="narrowLink.text"
@@ -254,7 +252,7 @@ import {
         <ng-content select="[narrowNavFooter]"></ng-content>
       </nav>
     </header>
-  `
+  `,
 })
 export class SprkMastheadComponent implements AfterContentInit {
   /**
@@ -268,9 +266,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     });
   }
 
- /**
-  *  The `href` value of the logo.
-  */
+  /**
+   *  The `href` value of the logo.
+   */
   @Input()
   logoHref = '/';
   /**
@@ -453,7 +451,9 @@ export class SprkMastheadComponent implements AfterContentInit {
    * @ignore
    */
   isElementVisible(selector) {
-    if (typeof window === 'undefined') { return; }
+    if (typeof window === 'undefined') {
+      return;
+    }
     const element = document.querySelector(selector);
     if (!element) {
       return;
@@ -503,7 +503,7 @@ export class SprkMastheadComponent implements AfterContentInit {
     const classArray: string[] = ['sprk-c-Masthead', 'sprk-o-Stack'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -530,7 +530,7 @@ export class SprkMastheadComponent implements AfterContentInit {
     const classArray: string[] = [];
 
     if (this.additionalNarrowNavClasses) {
-      this.additionalNarrowNavClasses.split(' ').forEach(className => {
+      this.additionalNarrowNavClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -549,11 +549,11 @@ export class SprkMastheadComponent implements AfterContentInit {
       'sprk-o-Stack--center-row',
       'sprk-o-Stack--split@xxs',
       'sprk-b-List',
-      'sprk-b-List--bare'
+      'sprk-b-List--bare',
     ];
 
     if (this.additionalBigNavClasses) {
-      this.additionalBigNavClasses.split(' ').forEach(className => {
+      this.additionalBigNavClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -580,7 +580,7 @@ export class SprkMastheadComponent implements AfterContentInit {
     this.renderer.addClass(document.body, 'sprk-u-Overflow--hidden');
     this.renderer.addClass(
       document.body.parentElement,
-      'sprk-u-Overflow--hidden'
+      'sprk-u-Overflow--hidden',
     );
     this.renderer.addClass(document.body, 'sprk-u-Height--100');
     this.renderer.addClass(document.body.parentElement, 'sprk-u-Height--100');
@@ -594,12 +594,12 @@ export class SprkMastheadComponent implements AfterContentInit {
     this.renderer.removeClass(document.body, 'sprk-u-Overflow--hidden');
     this.renderer.removeClass(
       document.body.parentElement,
-      'sprk-u-Overflow--hidden'
+      'sprk-u-Overflow--hidden',
     );
     this.renderer.removeClass(document.body, 'sprk-u-Height--100');
     this.renderer.removeClass(
       document.body.parentElement,
-      'sprk-u-Height--100'
+      'sprk-u-Height--100',
     );
     this.isNarrowNavOpen = false;
   }

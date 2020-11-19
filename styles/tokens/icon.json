@@ -97,7 +97,7 @@
       "themable": true
     },
     "filled-stroke-color": {
-      "comment": "Value for the stroke property of the Filled Icon component..",
+      "comment": "Value for the stroke property of the Filled Icon component.",
       "value": "none",
       "attributes": {
         "category": "content"

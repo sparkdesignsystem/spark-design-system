@@ -664,7 +664,7 @@
         "themable": true
       },
       "text-color": {
-        "comment": "The text color of the Quaternary Button component",
+        "comment": "The text color of the Quaternary Button component.",
         "value": "{black.value}",
         "file": "settings",
         "themable": true
