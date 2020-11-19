@@ -116,7 +116,7 @@ SprkToggle.propTypes = {
   /**
    * The title text for the toggle.
    */
-  triggerText: PropTypes.string.isRequired,
+  triggerText: PropTypes.string,
   /** The content that will show up when the toggle opens. */
   children: PropTypes.node.isRequired,
   /**
