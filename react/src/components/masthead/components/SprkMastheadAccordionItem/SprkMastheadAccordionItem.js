@@ -215,7 +215,7 @@ SprkMastheadAccordionItem.propTypes = {
   isActive: PropTypes.bool,
   /** Will render the element as a button with correct style. */
   isButton: PropTypes.bool,
-  /* The unique item `id` */
+  /* The unique item `id`.  */
   itemId: PropTypes.string,
   /**
    * The name of the icon to the left of the link text.
