@@ -44,11 +44,11 @@ run the following commands from your application's root directory.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/c5zBjNYrxGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 1. Start by going to your project
-directory and installing `spark` and `spark-angular`
+directory and installing `spark-angular`
 by pasting the following line in a command line application.
 
 ``` bash
-npm install -save-dev @sparkdesignsystem/spark @sparkdesignsystem/spark-angular
+npm install @sparkdesignsystem/spark-angular --save-dev
 ```
 
 2. Edit `app.module.ts` to import the `spark-angular` library
@@ -87,7 +87,7 @@ export class AppModule { }
 stylesheet. This file can be found in `your-app/src`.
 
 ``` scss
-@import "node_modules/@sparkdesignsystem/spark/spark.scss"
+@import "node_modules/@sparkdesignsystem/spark-styles/spark.scss"
 ```
 
 > Note: Importing Spark SCSS at the component level can lead to unexpected behavior.
