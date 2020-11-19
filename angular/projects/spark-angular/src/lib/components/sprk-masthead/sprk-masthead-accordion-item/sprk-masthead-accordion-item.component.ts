@@ -94,13 +94,13 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
    * for the clickable close icon.
    */
   @Input()
-  iconTypeClosed = 'chevron-up-circle';
+  iconTypeClosed = 'chevron-down-circle';
   /**
    * The name of the icon to use
    * for the clickable open icon.
    */
   @Input()
-  iconTypeOpen = 'chevron-up-circle';
+  iconTypeOpen = 'chevron-down-circle';
   /**
    * Expects a name of an icon to use
    * as a leading icon for the Masthead accordion item.
