@@ -687,7 +687,7 @@ public class SparkDesignTokens {
     public static let sprkStepperDarkIconColorSelected = UIColor(red: 0.235, green: 0.192, blue: 0.455, alpha:1)
     public static let sprkStepperDarkStepDescriptionSelected = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkStepperDarkStepHeadingColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
-    public static let sprkStepperIconLeft = -((CGFloat(32.00) + CGFloat(16.00) + CGFloat(2.00) / 2))
+    public static let sprkStepperIconLeft = -((CGFloat(32.00)+CGFloat(16.00) + CGFloat(2.00) / 2))
     public static let sprkStepperIconZIndex = CGFloat(16.00)
     public static let sprkStepperStepDescriptionBgSelected = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkStepperStepDescriptionTopSpacing = CGFloat(16.00)

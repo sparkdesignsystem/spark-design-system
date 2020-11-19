@@ -1,7 +1,7 @@
 {
   "footer": {
     "background-color": {
-      "comment": "Background color of the Footer",
+      "comment": "Background color of the Footer.",
       "value": "{black.value}",
       "attributes": {
         "category": "color"

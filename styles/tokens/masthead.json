@@ -55,7 +55,7 @@
           "themable": true
         },
         "item-padding-top-wide": {
-          "comment": "The padding top around the content items in the content section of the Masthead in wide viewports..",
+          "comment": "The padding top around the content items in the content section of the Masthead in wide viewports.",
           "value": "{space.s.value}",
           "attributes": {
             "category": "size"
@@ -100,7 +100,7 @@
           "themable": true
         },
         "item-padding-left": {
-          "comment": "The padding left around the content items in the content section of the Masthead",
+          "comment": "The padding left around the content items in the content section of the Masthead.",
           "value": "{space.s.value}",
           "attributes": {
             "category": "size"
@@ -468,7 +468,7 @@
         },
         "heading": {
           "font-weight": {
-            "comment": "The font weight of the heading in the navigation links when masthead is on narrow viewports..",
+            "comment": "The font weight of the heading in the navigation links when masthead is on narrow viewports.",
             "value": "400",
             "file": "settings",
             "themable": true

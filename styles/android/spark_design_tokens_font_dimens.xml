@@ -8,7 +8,7 @@
   <dimen name="sprk_input_huge_label_font_size">13.00sp</dimen><!-- The label font size for Huge Inputs. -->
   <dimen name="sprk_input_error_text_font_size">13.00sp</dimen><!-- The font size used for Input error text. -->
   <dimen name="sprk_input_text_icon_font_size">16.00sp</dimen><!-- The font size of text icons inside Inputs. -->
-  <dimen name="sprk_helper_font_size">13.00sp</dimen><!-- The font size of the helper text for Inputs -->
+  <dimen name="sprk_helper_font_size">13.00sp</dimen><!-- The font size of the helper text for Inputs. -->
   <dimen name="sprk_date_picker_font_size">16.00sp</dimen><!-- The font size of the Date Picker popup. -->
   <dimen name="sprk_table_grouped_header_font_size">13.00sp</dimen><!-- The font size of the header in the Grouped Columns Table variant. -->
   <dimen name="sprk_font_size_display_one">44.00sp</dimen><!-- The size of TypeDisplayOne when the viewport is narrower than $sprk-font-size-display-one-breakpoint. -->

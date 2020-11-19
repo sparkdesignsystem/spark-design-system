@@ -20,12 +20,12 @@ Spark Design System is where we collect our best solutions for how to design and
 
 * Install the npm package.
 
-  `npm install --save-dev @sparkdesignsystem/spark @sparkdesignsystem/spark-react`
+  `npm install --save-dev @sparkdesignsystem/spark-react`
 
 * Import the Spark Sass file into the main Sass file (e.g., `App.scss`).
 
 
-  `@import '../node_modules/@sparkdesignsystem/spark/spark.scss';`
+  `@import '../node_modules/@sparkdesignsystem/spark-styles/spark.scss';`
 
   When you build and run your website, all the Spark CSS will now be bundled into your output. You can verify this by inspecting your site’s DOM and looking for the Spark CSS. There should be a `<style>` tag in the `<head>` of your page that includes Spark’s styles.
   The Spark classes

@@ -19,7 +19,7 @@
       "themable": true
     },
     "gutter-small": {
-      "comment": "Value for the gutters between body and figure in the Samll Flag component.",
+      "comment": "Value for the gutters between body and figure in the Small Flag component.",
       "value": "{space.s.value}",
       "attributes": {
         "category": "size"
