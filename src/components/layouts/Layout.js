@@ -82,15 +82,14 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
             sprk-u-AbsoluteCenter"
           >
             <p className="sprk-u-Color--white">
-              <span className="sprk-u-FontWeight--bold sprk-u-mrs">
-                Designs launching after July 14, 2021
-              </span>
-              should reference
+              Designs launching
+              <span className="sprk-u-FontWeight--bold sprk-u-mas">after</span>
+              July 14, 2021, please reference
               <a
                 href="https://www.sparkdesignsystem.com/"
                 className="docs-c-Banner--link sprk-u-mls"
               >
-                latest release of Spark.
+                the latest release of Spark.
               </a>
             </p>
           </div>
