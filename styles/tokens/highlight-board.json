@@ -28,7 +28,7 @@
         "themable": true
       },
       "height": {
-        "comment": "The height of the Highlight Board image",
+        "comment": "The height of the Highlight Board image.",
         "value": "31.25rem",
         "attributes": {
           "category": "size"

@@ -40,7 +40,7 @@ import { toggleAnimations } from '../../sprk-toggle/sprk-toggle-animations';
       </div>
     </li>
   `,
-  animations: [toggleAnimations.toggleContent]
+  animations: [toggleAnimations.toggleContent],
 })
 export class SprkMastheadAccordionItemComponent implements OnInit {
   @Input()
@@ -94,13 +94,13 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
    * for the clickable close icon.
    */
   @Input()
-  iconTypeClosed = 'chevron-up-circle-two-color';
+  iconTypeClosed = 'chevron-up-circle';
   /**
    * The name of the icon to use
    * for the clickable open icon.
    */
   @Input()
-  iconTypeOpen = 'chevron-up-circle-two-color';
+  iconTypeOpen = 'chevron-up-circle';
   /**
    * Expects a name of an icon to use
    * as a leading icon for the Masthead accordion item.
@@ -160,7 +160,7 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
   getClasses(): string {
     const classArray: string[] = [
       'sprk-c-MastheadAccordion__item',
-      'sprk-u-Overflow--hidden'
+      'sprk-u-Overflow--hidden',
     ];
 
     if (this.isOpen) {
@@ -172,7 +172,7 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -186,7 +186,7 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
     const classArray: string[] = ['sprk-c-MastheadAccordion__heading'];
 
     if (this.additionalHeadingClasses) {
-      this.additionalHeadingClasses.split(' ').forEach(className => {
+      this.additionalHeadingClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
