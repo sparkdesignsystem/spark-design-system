@@ -17,7 +17,7 @@ const isListOpen = (list) => {
 const resetResults = (resultList) => {
   resultList.forEach((result) => {
     result.classList.remove(activeClass);
-    result.removeAttribute('aria-selected');
+    result.setAttribute('aria-selected', false);
   });
 };
 
@@ -75,13 +75,16 @@ const bindUIEvents = (autocompleteContainer) => {
   const input = autocompleteContainer.querySelector('input');
   const list = autocompleteContainer.querySelector('ul');
 
-  const selectableListItems = list.querySelectorAll(
-    'li:not([data-sprk-autocomplete-no-select])',
-  );
-
   generateAriaControls(input, list, 'autocomplete');
 
+  // todo if the input has a value and the list is visible
+  // resetResults(list.querySelectorAll('li'));
+
   input.addEventListener('keydown', (e) => {
+    const selectableListItems = list.querySelectorAll(
+      'li:not([data-sprk-autocomplete-no-select])',
+    );
+
     if (isUpPressed(e)) {
       e.stopPropagation();
       e.preventDefault();
