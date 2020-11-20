@@ -3,21 +3,74 @@
 ---
 import SassVarTable from '../../../components/SassVarTable';
 
-# Design Tokens
+<h1 class="docs-b-h1 sprk-b-PageTitle sprk-b-TypeDisplayOne sprk-u-mbl sprk-u-Measure">
+  Design Tokens
+</h1>
 
-Spark provides design tokens that store our design decisions.
-These tokens can be retrieved in different formats for different devices.
-These variables provide global settings for components in the system.
-For web, almost every aspect of each Spark component is
-configurable with a Sass variable.
+Our Design Tokens are a catalog from which we base all our visual and branding choices.
+It's a central database of our core style attributes.
 
-** Override the Sass settings by: **
-1. Creating a new Sass file.
-2. Importing it before Spark's main Sass file.
-3. Assigning a new value to the variable you want to override.
+These tokens describe branding decisions in color, typography, spacing, sizing, and much more.
+
+Design Tokens are a future-friendly way to create visual consistency between platforms.
+
+## Benefits
+Design Tokens allow more projects to incorporate our design decisions.
+
+<h3 class="docs-b-h5 sprk-b-TypeDisplayFive sprk-u-mbm sprk-u-Measure">
+  Designer Perks
+</h3>
+
+- Encourages visual consistency and design consensus across products.
+- Creates easier syncing with brand guidelines.
+- Encourages better support for multi-platform projects.
+- Promotes clear communication with developers and other designers.
+
+<h3 class="docs-b-h5 sprk-b-TypeDisplayFive sprk-u-mbm sprk-u-Measure">
+  Developer Perks
+</h3>
+
+- Maintains sync with current style updates while minimizing impact to code.
+- Enables Android and iOS projects to access style variables from Spark.
+- Supports future-friendly development. Design Tokens can generate style files for any possible platform in the future.
+
+## How to Use Our Design Tokens
+
+<h3 class="docs-b-h5 sprk-b-TypeDisplayFive sprk-u-mbm sprk-u-Measure">
+ For Designers
+</h3>
+
+Use token names to communicate the specific style values of your design.
+
+Token names depict style choices that portray color, spacing, typography, and more.
+
+For example, the token `sprk-purple-deep` represents a specific shade of purple. Style consensus makes it clear to everyone which purple you mean.
+
+<h3 class="docs-b-h5 sprk-b-TypeDisplayFive sprk-u-mtl sprk-u-mbm sprk-u-Measure">
+ For Developers
+</h3>
+
+For HTML, React, and Angular projects, follow our [install guides](/installing-spark). They show you how to import the correct Sass file.
+
+<h4 class="docs-b-h6 sprk-b-TypeDisplaySix sprk-u-mtl sprk-u-mbm sprk-u-Measure">
+  How to Change Spark's Default Style Settings in Web (Sass):
+</h4>
+<ol class=" sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mbl">
+  <li class="sprk-u-mbs sprk-u-Measure">
+    Create a new Sass file.
+  </li>
+  <li class="sprk-u-mbs sprk-u-Measure">
+    Import it before Spark's main sass file.
+  </li>
+  <li class="sprk-u-mbs sprk-u-Measure">
+    Assign a new value to the variable you want to override.
+  </li>
+</ol>
 
 > These make global changes to your project. Changing a variable affects all instances of its relevant components. For one-off modifications, use [CSS utilities](/using-spark/foundations/css-utilities).
 
+For iOS and Android projects, please [email the Spark team](mailto:sparkdesignsystem@quickenloans.com) and we'll get you started.
+### Design Token List
 <section>
   <SassVarTable />
 </section>

@@ -139,5 +139,9 @@
   to = "/using-spark/foundations/color-usage"
   status = 301
 
+[[redirects]]
+  from = "/using-spark/foundations/sass-variables"
+  to = "/using-spark/foundations/design-tokens"
+  status = 301
 
 

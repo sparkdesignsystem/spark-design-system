@@ -1,8 +1,0 @@
-/// The box shadow of the active dot in the Carousel component.
-$sprk-carousel-dot-selected: $sprk-stepper-icon-box-shadow-selected-dark-bg !default;
-/// The border value for the Carousel component.
-$sprk-carousel-dot-border: $sprk-stepper-icon-border-width solid $sprk-stepper-dark-icon-border-color !default;
-/// The border value for the Carousel component on dark background.
-$sprk-carousel-dot-border-dark-bg: $sprk-stepper-icon-border-width solid $sprk-purple-deep !default;
-/// The margin-top value for icons in Huge Select Inputs.
-$sprk-select-input-huge-icon-margin-top: -(($sprk-input-huge-height - $sprk-icon-m) / 2 + $sprk-icon-m) !default;

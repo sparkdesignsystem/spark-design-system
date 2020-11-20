@@ -64,7 +64,7 @@
   <color name="sprk_dropdown_trigger_color">#ff1c1b1a</color><!-- The color of the Dropdown trigger. -->
   <color name="sprk_dropdown_trigger_color_active">#ff1c1b1a</color><!-- The color of the Dropdown trigger on hover, active, focus. -->
   <color name="sprk_dropdown_trigger_color_visited">#ff1c1b1a</color><!-- The color of the Dropdown trigger for the visited state. -->
-  <color name="sprk_footer_background_color">#ff1c1b1a</color><!-- Background color of the Footer -->
+  <color name="sprk_footer_background_color">#ff1c1b1a</color><!-- Background color of the Footer. -->
   <color name="sprk_footer_text_color">#ffffffff</color><!-- Text color on the Footer. -->
   <color name="sprk_footer_link_color">#ffffffff</color><!-- Link color on the Footer. -->
   <color name="sprk_footer_icon_color">#ffffffff</color><!-- Icon color on the Footer. -->
@@ -81,7 +81,7 @@
   <color name="sprk_link_underline_visited_color">#ff8d8d8c</color><!-- The color of the underline on visited Links. -->
   <color name="sprk_link_hover_color">#ff2e1166</color><!-- The color of Links on hover. -->
   <color name="sprk_link_simple_color">#ff1c1b1a</color><!-- The color value of Simple Links. -->
-  <color name="sprk_link_simple_hover_color">#ff1c1b1a</color><!-- The color of Simple Links on hover -->
+  <color name="sprk_link_simple_hover_color">#ff1c1b1a</color><!-- The color of Simple Links on hover. -->
   <color name="sprk_link_simple_hover_underline_color">#ffc8102e</color><!-- The underline color value of Simple Links on hover. -->
   <color name="sprk_link_light_color">#ffffffff</color><!-- The color value of Light Links. -->
   <color name="sprk_link_light_hover_color">#ffffffff</color><!-- The color of Light Links on hover -->

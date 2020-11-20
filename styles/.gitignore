@@ -8,7 +8,14 @@ npm-debug.log
 # Dependencies
 node_modules/
 
-web/
+web/scss/_colors.scss
+web/scss/_component.scss
+web/scss/_layer.scss
+web/scss/_object.scss
+web/scss/_space.scss
+web/scss/_typography.scss
+web/scss/_vars.scss
+web/js/
 dist/
 /public
 /react/public

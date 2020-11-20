@@ -75,7 +75,7 @@
   <string name="sprk_horizontal_list_delimiter">','</string><!-- The delimiter between delimited items in Horizontal List components. -->
   <string name="sprk_icon_l_stroke">none</string><!-- Value for the stroke property of the large Icon component. -->
   <string name="sprk_icon_xl_stroke">none</string><!-- Value for the stroke property of the extra large Icon component. -->
-  <string name="sprk_icon_filled_stroke_color">none</string><!-- Value for the stroke property of the Filled Icon component.. -->
+  <string name="sprk_icon_filled_stroke_color">none</string><!-- Value for the stroke property of the Filled Icon component. -->
   <string name="sprk_text_input_has_text_icon_padding">0 0 1px 37px</string><!-- The font size of text icons inside Inputs. -->
   <string name="sprk_text_input_has_icon_padding">12px 0 12px 40px</string><!-- The padding inside Inputs that contain icons. -->
   <string name="sprk_text_input_border">2px solid #ff8d8d8c</string><!-- The border setting for Inputs. -->
@@ -143,7 +143,7 @@
   <string name="sprk_checkbox_custom_input_border_focus">2px solid #ff603aa1</string><!-- The border of the custom checkbox input when focused. -->
   <string name="sprk_checkbox_custom_input_border_focus_checked">2px solid #ff1c1b1a</string><!-- The border of the custom checkbox input when it is checked and focused. -->
   <string name="sprk_checkbox_custom_input_background_color_disabled">transparent</string><!-- The background color of the custom checkbox input when disabled. -->
-  <string name="sprk_checkbox_custom_input_cursor_disabled">default</string><!-- The cursor for the custom checkbox input when disabled.. -->
+  <string name="sprk_checkbox_custom_input_cursor_disabled">default</string><!-- The cursor for the custom checkbox input when disabled. -->
   <string name="sprk_checkbox_checkmark_border_left">2px solid #ffffffff</string><!-- The border settings to create the bottom portion of the checkmark. -->
   <string name="sprk_checkbox_checkmark_border_bottom">2px solid #ffffffff</string><!-- The border settings to create the right portion of the checkmark. -->
   <string name="sprk_checkbox_checkmark_transform">rotate(-45deg)</string><!-- The rotation setting to create the checkmark. -->
@@ -166,8 +166,8 @@
   <string name="sprk_link_has_icon_underline_color">transparent</string><!-- The underline color of Links containing icons. -->
   <string name="sprk_link_has_icon_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons. -->
   <string name="sprk_link_has_icon_hover_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons in the hover state. -->
-  <string name="sprk_link_disabled_border_bottom">0.00dp solid #ff8d8d8c</string><!-- The underline settings for the disabled Link.. -->
-  <string name="sprk_link_disabled_hover_border_bottom">0.00dp solid #ff8d8d8c</string><!-- The underline settings for the disabled Link.. -->
+  <string name="sprk_link_disabled_border_bottom">0.00dp solid #ff8d8d8c</string><!-- The underline settings for the disabled Link. -->
+  <string name="sprk_link_disabled_hover_border_bottom">0.00dp solid #ff8d8d8c</string><!-- The underline settings for the disabled Link. -->
   <string name="sprk_masthead_border_bottom_style">solid</string><!-- The bottom border style on the Masthead. -->
   <string name="sprk_masthead_border_bottom">1.00dp solid #fff7f7f7</string><!-- The bottom border on the Masthead. -->
   <string name="sprk_masthead_site_links_border_right">2px solid #ffbababa</string><!-- The right border on the site links in the Masthead. -->
@@ -208,7 +208,7 @@
   <string name="sprk_table_secondary_header_text_alignment">left</string><!-- The text alignment of Secondary Table headers. -->
   <string name="sprk_table_secondary_cell_text_alignment">left</string><!-- The text alignment of Secondary Table cells. -->
   <string name="sprk_table_grouped_header_font_weight">normal</string><!-- The font weight of the header in the Grouped Columns Table variant. -->
-  <string name="sprk_table_secondary_row_comp_border_style">solid</string><!-- The style of the borders in the Secondary Row Comparison Table cells -->
+  <string name="sprk_table_secondary_row_comp_border_style">solid</string><!-- The style of the borders in the Secondary Row Comparison Table cells. -->
   <string name="sprk_tab_navigation_btn_active_border_bottom">3px solid #ffc8102e</string><!-- The button tab bottom border of the currently active tab in Tabbed Navigation. -->
   <string name="sprk_tab_navigation_btn_border_bottom">3px solid #fff7f7f7</string><!-- The border on the bottom of the button tabs in Tabbed Navigation. -->
   <string name="sprk_tab_navigation_btn_hover_border_bottom">3px solid #ff603aa1</string><!-- The border on the bottom of the button tabs on hover in Tabbed Navigation. -->
