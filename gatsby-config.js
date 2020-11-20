@@ -128,3 +128,13 @@ module.exports = {
     },
   ],
 };
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type allSassVarsJson implements Node {
+      joinedAt: Date
+    }
+  `;
+  createTypes(typeDefs);
+};

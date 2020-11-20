@@ -9,11 +9,13 @@
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
   "scripts": {
-    "build": "gatsby clean && npm run sassdoc && npm run sassdocmodifiers && npm run sassdocutilities && gatsby build",
-    "develop": "gatsby clean && npm run sassdoc && npm run sassdocmodifiers && npm run sassdocutilities && gatsby develop",
+    "build": "npm run prebuild && gatsby build",
+    "develop": "npm run prebuild && gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "prebuild": "npm run clean && npm run sassdoc && npm run sassdocmodifiers && npm run sassdocutilities",
     "sassdoc": "sassdoc './styles/web/**/_*.scss' --parse > ./src/data/sass-vars.json",
+    "clean": "gatsby clean",
     "sassdocmodifiers": "sassdoc './styles/**/_*.scss' --parse > ./src/data/sass-modifiers.json",
     "sassdocutilities": "sassdoc './styles/utilities/_*.scss' --parse > ./src/data/sass-utilities.json"
   },
