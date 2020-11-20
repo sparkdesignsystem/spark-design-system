@@ -9,7 +9,7 @@ module.exports = {
         'content/icon',
       ],
       prefix: 'sprk',
-      buildPath: 'web/',
+      buildPath: 'web/scss/',
       files: [
         {
           format: 'themable-scss/web',
@@ -60,31 +60,29 @@ module.exports = {
             file: 'component',
           },
         },
-        {
-          format: 'json',
-          destination: 'settings.json',
-          filter: {
-            file: 'settings',
-          },
-        },
-        {
-          format: 'json',
-          destination: 'colors.json',
-          filter: {
-            attributes: {
-              category: 'color',
-            },
-          },
-        },
       ],
     },
     js: {
       transformGroup: `js`,
-      buildPath: `web/`,
+      buildPath: `web/js/`,
+      prefix: 'sprk',
       files: [
         {
           destination: `settings.js`,
           format: `javascript/es6`,
+          filter: {
+            file: 'settings',
+          },
+          options: {
+            showFileHeader: false,
+          },
+        },
+        {
+          destination: `colors.js`,
+          format: `javascript/es6`,
+          filter: {
+            file: 'color',
+          },
           options: {
             showFileHeader: false,
           },
