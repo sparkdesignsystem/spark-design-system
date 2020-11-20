@@ -78,15 +78,22 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
           </div>
           <div
             className="sprk-u-BackgroundColor--black
-            sprk-u-pvm
+            sprk-u-pam
             sprk-u-AbsoluteCenter"
           >
-            <a
-              href="https://v13--spark-design-system.netlify.app/"
-              className="docs-c-Banner--link sprk-u-mlm"
-            >
-              View the previous major release of Spark
-            </a>
+            <p className="sprk-u-Color--white">
+              Designs launching
+              <span className="sprk-u-FontWeight--bold sprk-u-mas">before</span>
+              July 14, 2021, please reference
+              <a
+                href="https://v13--spark-design-system.netlify.app/"
+                className="docs-c-Banner--link sprk-u-mls"
+              >
+                version 13 of Spark
+              </a>
+              . Questions? Please contact your Product Owner or Experience
+              Director.
+            </p>
           </div>
           <Header
             context={context}
