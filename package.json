@@ -9,7 +9,7 @@
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
   "scripts": {
-    "build": "npm run prebuild && gatsby build",
+    "build": "cd styles && npm run build && cd .. &&npm run prebuild && gatsby build",
     "develop": "npm run prebuild && gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
