@@ -36,7 +36,7 @@ public class SparkDesignTokens {
     public static let sprkBtnSecondaryBorderColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkBtnSecondaryDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkBtnSecondaryDisabledBorderStyle = "solid"
-    public static let sprkBtnSecondaryDisabledBorderWidth = "solid"
+    public static let sprkBtnSecondaryDisabledBorderWidth = CGFloat(2.00)
     public static let sprkBtnSecondaryDisabledTextColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkBtnSecondaryHoverBorderColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkBtnSecondaryHoverTextColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
@@ -715,7 +715,7 @@ public class SparkDesignTokens {
     public static let sprkTablePaddingMedium = CGFloat(16.00)
     public static let sprkTablePaddingSmall = CGFloat(8.00)
     public static let sprkTableRowBorderColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
-    public static let sprkTableSecondaryHeaderBackgroundColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
+    public static let sprkTableSecondaryHeaderBackgroundColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkTableSecondaryHeaderBorderColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkTableSecondaryHeaderFontColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkTableSecondaryRowCompBorderColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
