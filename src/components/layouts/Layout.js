@@ -723,7 +723,9 @@ Layout.defaultProps = {
 
 Layout.propTypes = {
   children: PropTypes.node,
-  location: PropTypes.string,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }),
   hasSideBar: PropTypes.bool,
   initialContext: PropTypes.string,
 };
