@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "npm run prebuild && gatsby build",
-    "build-styles": "cd './styles/' && npm install && node build.js && cd ..",
+    "build-styles": "cd './styles/' && npm install && node build.js",
     "develop": "npm run prebuild && gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
