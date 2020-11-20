@@ -1000,7 +1000,7 @@
   "selection-container": {
     "margin": {
       "comment": "The margin of the selection container for Inputs.",
-      "value": "0 {space.s.value} 0 0",
+      "value": "0 {space.m.value} 0 0",
       "attributes": {
         "category": "content"
       },
