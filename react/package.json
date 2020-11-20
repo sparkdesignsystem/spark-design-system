@@ -8,10 +8,10 @@
     "test:watch": "jest --config ./src/jest-config.js --coverage --verbose --watch",
     "test:generate-output": "jest --config ./src/jest-config.js --json --outputFile=./src/.jest-test-results.json",
     "build": "rollup -c rollup.config.js",
-    "build-styles": "cd '../styles/' && node build.js",
-    "storybook": "npm run build-styles && npm run prebuild:storybook && start-storybook -p 6006 -s ../storybook-utilities/favicon",
+    "build-styles": "cd '../styles/' && npm install && node build.js",
+    "storybook": "npm run prebuild:storybook && npm run prebuild:storybook && start-storybook -p 6006 -s ../storybook-utilities/favicon",
     "sassdocmodifiers": "sassdoc '../styles/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
-    "prebuild:storybook": "npm run sassdocmodifiers && npm run test:generate-output",
+    "prebuild:storybook": "npm run build-styles && npm run sassdocmodifiers && npm run test:generate-output",
     "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon",
     "prepublishOnly": "npm run build"
   },
