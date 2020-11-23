@@ -19,7 +19,6 @@ export const defaultStory = () => {
     toggle();
   }, []);
 
-  /* eslint-disable max-len */
   return `
   <div
     class="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--medium"
@@ -82,7 +81,6 @@ export const defaultStory = () => {
   </div>
   `;
 };
-/* eslint-enable max-len */
 
 defaultStory.story = {
   name: 'Default',

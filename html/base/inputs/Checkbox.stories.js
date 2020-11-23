@@ -5,7 +5,6 @@ import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/m
 export default {
   title: 'Components/Input/Checkbox',
   decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
-  /* eslint-disable max-len */
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
@@ -17,7 +16,8 @@ use the tabindex attribute to change this.
 - Change the value of the aria-checked attribute
 dynamically when the checkbox is activated.
 
-###### Ensure all related checkboxes are grouped together using one of the following methods:
+###### Ensure all related checkboxes are grouped together using 
+one of the following methods:
 
 - Fieldset and legend tags
 - ARIA groups role="group" and aria-label or aria-labelledby
@@ -27,7 +27,6 @@ dynamically when the checkbox is activated.
     docs: { iframeHeight: 180 },
   },
 };
-/* eslint-enable max-len */
 
 export const defaultStory = () => {
   useEffect(() => {

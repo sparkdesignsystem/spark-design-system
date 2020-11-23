@@ -82,7 +82,6 @@ export const informational = () => {
     dropdowns();
   }, []);
 
-  /* eslint-disable max-len */
   return `
     <a
       class="sprk-c-Dropdown__trigger sprk-b-Link sprk-b-Link--plain sprk-u-mrs"
@@ -95,7 +94,12 @@ export const informational = () => {
           data-sprk-dropdown-trigger-text-container=""
           >Make a selection...</span>
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-u-mls"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color 
+            sprk-u-mls
+          "
           viewBox="0 0 100 100">
           <use xlink:href="#chevron-down" />
         </svg>
@@ -165,7 +169,6 @@ export const informational = () => {
     </div>
   `;
 };
-/* eslint-enable max-len */
 
 informational.story = {
   name: 'Informational',

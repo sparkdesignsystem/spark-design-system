@@ -22,7 +22,6 @@ export const defaultStory = () => {
     toggle();
   }, []);
 
-  /* eslint-disable max-len */
   return `
     <div class="sprk-o-Box sprk-o-Box--large sprk-c-Footer">
       <footer
@@ -352,7 +351,6 @@ export const defaultStory = () => {
     </div>
   `;
 };
-/* eslint-enable max-len */
 
 defaultStory.story = {
   name: 'Default',

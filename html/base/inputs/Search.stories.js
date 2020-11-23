@@ -12,7 +12,6 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-/* eslint-disable max-len */
 export const searchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
@@ -24,7 +23,11 @@ export const searchInput = () => `
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color
+          "
           viewBox="0 0 64 64"
         >
           <use xlink:href="#search" />
@@ -50,13 +53,11 @@ export const searchInput = () => `
       ></div>
     </div>
   `;
-/* eslint-enable max-len */
 
 searchInput.story = {
   name: 'Default',
 };
 
-/* eslint-disable max-len */
 export const invalidSearchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
@@ -68,7 +69,11 @@ export const invalidSearchInput = () => `
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color
+          "
           viewBox="0 0 64 64"
         >
           <use xlink:href="#search" />
@@ -106,13 +111,11 @@ export const invalidSearchInput = () => `
       </div>
     </div>
   `;
-/* eslint-enable max-len */
 
 invalidSearchInput.story = {
   name: 'Invalid',
 };
 
-/* eslint-disable max-len */
 export const disabledSearchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
@@ -128,7 +131,11 @@ export const disabledSearchInput = () => `
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color
+          "
           viewBox="0 0 64 64"
         >
           <use xlink:href="#search" />
@@ -155,7 +162,6 @@ export const disabledSearchInput = () => `
       ></div>
     </div>
   `;
-/* eslint-enable max-len */
 
 disabledSearchInput.story = {
   name: 'Disabled',

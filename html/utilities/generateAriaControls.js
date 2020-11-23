@@ -13,21 +13,21 @@ const generateAriaControls = (
 
   // Warn if aria-controls exists but the id does not
   if (triggerAriaControls && !contentId) {
-    /* eslint-disable max-len, no-console */
+    /* eslint-disable no-console */
     console.warn(
       `Spark Design System Warning - The component with aria-controls="${triggerAriaControls}" expects a matching id on the content element.`,
     );
-    /* eslint-enable max-len, no-console */
+    /* eslint-enable no-console */
     return;
   }
 
   // Warn if aria-controls and id both exist but don't match
   if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
-    /* eslint-disable max-len, no-console */
+    /* eslint-disable no-console */
     console.warn(
       `Spark Design System Warning - The value of aria-controls ("${triggerAriaControls}") should match the id of the content element ("${contentId}").`,
     );
-    /* eslint-enable max-len, no-console */
+    /* eslint-enable no-console */
     return;
   }
 

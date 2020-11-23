@@ -39,7 +39,6 @@ export const defaultStory = () => {
     pagination();
   }, []);
 
-  /* eslint-disable max-len */
   return `
   <nav
     aria-label="Pagination Navigation"
@@ -110,7 +109,6 @@ export const defaultStory = () => {
   </nav>
   `;
 };
-/* eslint-enable max-len */
 
 defaultStory.story = {
   name: 'Default',
@@ -124,7 +122,6 @@ export const pager = () => {
     pagination();
   }, []);
 
-  /* eslint-disable max-len */
   return `
   <nav aria-label="Pagination Navigation" data-id="pagination-3">
     <ul
@@ -163,7 +160,6 @@ export const pager = () => {
   </nav>
   `;
 };
-/* eslint-enable max-len */
 
 pager.story = {
   parameters: {

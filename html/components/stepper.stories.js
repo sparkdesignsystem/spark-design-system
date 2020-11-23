@@ -61,7 +61,6 @@ export const defaultStory = () => {
     stepper();
   }, []);
 
-  /* eslint-disable max-len */
   return `
   <ol
     class="sprk-c-Stepper"
@@ -124,7 +123,6 @@ export const defaultStory = () => {
   </ol>
   `;
 };
-/* eslint-enable max-len */
 
 defaultStory.story = {
   name: 'Default',
@@ -138,7 +136,6 @@ export const withStepDescriptions = () => {
     stepper();
   }, []);
 
-  /* eslint-disable max-len */
   return `
   <ol
     class="sprk-c-Stepper"
@@ -282,7 +279,6 @@ export const withStepDescriptions = () => {
   </ol>
   `;
 };
-/* eslint-enable max-len */
 
 withStepDescriptions.story = {
   parameters: {
@@ -296,7 +292,6 @@ export const withDarkBackground = () => {
     stepper();
   }, []);
 
-  /* eslint-disable max-len */
   return `
   <div class="sprk-u-BackgroundColor--purple-dark sprk-o-Box sprk-o-Box--large">
     <ol
@@ -435,7 +430,6 @@ export const withDarkBackground = () => {
   </div>
   `;
 };
-/* eslint-enable max-len */
 
 withDarkBackground.story = {
   parameters: {
@@ -473,7 +467,6 @@ export const withCarousel = () => {
     }
   }, []);
 
-  /* eslint-disable max-len */
   return `
   <div class="sprk-u-BackgroundColor--purple-dark sprk-o-Box sprk-o-Box--large">
     <div class="sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--center-column sprk-o-Stack--split-reverse@xl">
@@ -669,7 +662,6 @@ export const withCarousel = () => {
   </div>
   `;
 };
-/* eslint-enable max-len */
 
 withCarousel.story = {
   parameters: {

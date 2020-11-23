@@ -46,10 +46,14 @@ export const columnComparison = () =>
     </table>
   </div>`;
 
-/* eslint-disable max-len */
 export const secondary = () =>
   `<div class="sprk-b-TableContainer" data-id="table-2">
-    <table class="sprk-b-Table sprk-b-Table--secondary sprk-b-Table--spacing-medium">
+    <table 
+      class="
+        sprk-b-Table 
+        sprk-b-Table--secondary 
+        sprk-b-Table--spacing-medium
+      ">
       <thead>
         <tr>
           <th>Column Heading</th>
@@ -84,7 +88,12 @@ export const secondary = () =>
 
 export const groupedColumns = () =>
   `<div class="sprk-b-TableContainer" data-id="table-3">
-    <table class="sprk-b-Table sprk-b-Table--grouped-columns sprk-b-Table--spacing-medium">
+    <table 
+      class="
+        sprk-b-Table 
+        sprk-b-Table--grouped-columns 
+        sprk-b-Table--spacing-medium
+      ">
       <thead>
         <tr>
           <th rowspan="2">Column Heading</th>
@@ -132,7 +141,12 @@ export const groupedColumns = () =>
 
 export const rowComparison = () =>
   `<div class="sprk-b-TableContainer" data-id="table-4">
-    <table class="sprk-b-Table sprk-b-Table--row-comparison sprk-b-Table--spacing-medium">
+    <table 
+      class="
+        sprk-b-Table 
+        sprk-b-Table--row-comparison 
+        sprk-b-Table--spacing-medium
+      ">
       <thead>
         <tr>
           <th class="sprk-b-Table__empty-heading"></th>
@@ -172,7 +186,12 @@ export const rowComparison = () =>
 
 export const secondaryRowComparison = () =>
   `<div class="sprk-b-TableContainer" data-id="table-5">
-    <table class="sprk-b-Table sprk-b-Table--secondary-row-comparison sprk-b-Table--spacing-medium">
+    <table 
+      class="
+        sprk-b-Table 
+        sprk-b-Table--secondary-row-comparison 
+        sprk-b-Table--spacing-medium
+      ">
       <tbody>
         <tr>
           <th>Row Heading</th>
@@ -180,7 +199,12 @@ export const secondaryRowComparison = () =>
           <td>Data</td>
           <td class="sprk-o-Stack sprk-o-Stack--end-column">
             <div class="sprk-o-Stack__item">
-              <button class="sprk-c-Button sprk-c-Button--secondary" type="button">Learn More</button>
+              <button 
+                class="
+                  sprk-c-Button 
+                  sprk-c-Button--secondary
+                " 
+                type="button">Learn More</button>
             </div>
           </td>
         </tr>
@@ -190,7 +214,12 @@ export const secondaryRowComparison = () =>
           <td>Data</td>
           <td class="sprk-o-Stack sprk-o-Stack--end-column">
             <div class="sprk-o-Stack__item">
-              <button class="sprk-c-Button sprk-c-Button--secondary" type="button">Learn More</button>
+              <button 
+                class="
+                  sprk-c-Button 
+                  sprk-c-Button--secondary
+                " 
+                type="button">Learn More</button>
             </div>
           </td>
         </tr>
@@ -200,11 +229,15 @@ export const secondaryRowComparison = () =>
           <td>Data</td>
           <td class="sprk-o-Stack sprk-o-Stack--end-column">
             <div class="sprk-o-Stack__item">
-              <button class="sprk-c-Button sprk-c-Button--secondary" type="button">Learn More</button>
+              <button 
+                class="
+                  sprk-c-Button 
+                  sprk-c-Button--secondary
+                " 
+                type="button">Learn More</button>
             </div>
           </td>
         </tr>
       </tbody>
     </table>
   </div>`;
-/* eslint-enable max-len */

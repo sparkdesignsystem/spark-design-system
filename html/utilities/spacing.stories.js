@@ -51,7 +51,6 @@ insetSpacing.story = {
 };
 
 export const insetSpacingShort = () =>
-  /* eslint-disable max-len */
   `
     <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
@@ -79,7 +78,6 @@ export const insetSpacingShort = () =>
       </p>
     </div>
   `;
-/* eslint-enable max-len */
 
 insetSpacingShort.story = {
   name: 'Inset Short',

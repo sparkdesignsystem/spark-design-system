@@ -253,9 +253,7 @@ describe('Toggle tests', () => {
     ).toBe(true);
   });
 
-  /* eslint-disable max-len */
   it('should not add Accordion__item class if toggle is not an accordion', () => {
-    /* eslint-enable max-len */
     handleToggleClick(content, null, null, trigger);
     expect(container.classList.contains('sprk-c-Accordion__item--open')).toBe(
       false,

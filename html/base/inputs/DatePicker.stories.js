@@ -36,7 +36,6 @@ export const defaultStory = () => {
   useEffect(() => {
     datePicker();
   }, []);
-  /* eslint-disable max-len */
   return `
     <div
       class="sprk-b-InputContainer"
@@ -52,7 +51,11 @@ export const defaultStory = () => {
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color
+          "
           viewBox="0 0 64 64"
         >
           <use xlink:href="#calendar" />
@@ -79,7 +82,6 @@ export const defaultStory = () => {
     </div>
   `;
 };
-/* eslint-enable max-len */
 
 defaultStory.story = {
   name: 'Default',
@@ -92,7 +94,6 @@ export const invalidDatePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
-  /* eslint-disable max-len */
   return `
     <div
       class="sprk-b-InputContainer"
@@ -108,7 +109,11 @@ export const invalidDatePicker = () => {
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color
+          "
           viewBox="0 0 64 64"
         >
           <use xlink:href="#calendar" />
@@ -147,7 +152,6 @@ export const invalidDatePicker = () => {
     </div>
   `;
 };
-/* eslint-enable max-len */
 
 invalidDatePicker.story = {
   name: 'Invalid',
@@ -160,7 +164,6 @@ export const disabledDatePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
-  /* eslint-disable max-len */
   return `
     <div
       class="sprk-b-InputContainer"
@@ -176,7 +179,11 @@ export const disabledDatePicker = () => {
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color
+          "
           viewBox="0 0 64 64"
         >
           <use xlink:href="#calendar" />
@@ -204,7 +211,6 @@ export const disabledDatePicker = () => {
     </div>
   `;
 };
-/* eslint-enable max-len */
 
 disabledDatePicker.story = {
   name: 'Disabled',

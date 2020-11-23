@@ -92,9 +92,7 @@ describe('masthead init', () => {
     expect(iconContainer.getAttribute('aria-expanded')).toEqual('true');
   });
 
-  /* eslint-disable max-len */
   it('should generate a content id and add it to aria-controls when both values are missing', () => {
-    /* eslint-enable max-len */
     expect(nav.getAttribute('id')).toBe(null);
     expect(iconContainer.getAttribute('aria-controls')).toBe(null);
 
@@ -107,9 +105,7 @@ describe('masthead init', () => {
     );
   });
 
-  /* eslint-disable max-len */
   it('should NOT override aria-controls if the value doesnt match the id on the content', () => {
-    /* eslint-enable max-len */
     nav.setAttribute('id', 'foo');
     iconContainer.setAttribute('aria-controls', 'bar');
 
@@ -120,9 +116,7 @@ describe('masthead init', () => {
     expect(iconContainer.getAttribute('aria-controls')).toEqual('bar');
   });
 
-  /* eslint-disable max-len */
   it('should log a console warning if aria-controls has a value but content ID is blank', () => {
-    /* eslint-enable max-len */
     nav.removeAttribute('id');
     iconContainer.setAttribute('aria-controls', 'bar');
 
@@ -132,9 +126,7 @@ describe('masthead init', () => {
     expect(iconContainer.getAttribute('aria-controls')).toEqual('bar');
   });
 
-  /* eslint-disable max-len */
   it('should use the provided content id for aria-controls when aria-controls is missing and the id is available', () => {
-    /* eslint-enable max-len */
     nav.setAttribute('id', 'foo');
     expect(iconContainer.getAttribute('aria-conrols')).toBe(null);
 
@@ -296,9 +288,7 @@ describe('masthead UI Events tests', () => {
     expect(nav.classList.contains('sprk-u-Display--none')).toBe(false);
   });
 
-  /* eslint-disable max-len */
   it('should close the dropdown box when selector is clicked and its opened already', () => {
-    /* eslint-enable max-len */
     selectorDropdown.classList.add('sprk-c-Dropdown--open');
     selector.dispatchEvent(new window.Event('click'));
     expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
@@ -324,9 +314,7 @@ describe('masthead UI Events tests', () => {
     ).toBe(false);
   });
 
-  /* eslint-disable max-len */
   it('should open the dropdown box when selector in dropdown is clicked', () => {
-    /* eslint-enable max-len */
     selectorTriggerInDropdown.dispatchEvent(new window.Event('click'));
     expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
       true,
@@ -377,23 +365,17 @@ describe('masthead UI Events tests', () => {
     );
   });
 
-  /* eslint-disable max-len */
   it('should add checkScrollDirection event listener if menu is visible', () => {
-    /* eslint-enable max-len */
     const attached = toggleScrollEvent(true);
     expect(attached).toBe(true);
   });
 
-  /* eslint-disable max-len */
   it('should not add checkScrollDirection event listener if menu is not visible', () => {
-    /* eslint-enable max-len */
     const attached = toggleScrollEvent(false);
     expect(attached).toBe(false);
   });
 
-  /* eslint-disable max-len */
   it('should checkScrollDirection on resize and return true if menu visible', () => {
-    /* eslint-enable max-len */
     iconContainerDiv.setAttribute('style', 'display: none');
     event = new window.Event('resize');
     window.dispatchEvent(event);
@@ -401,9 +383,7 @@ describe('masthead UI Events tests', () => {
     expect(toggleScrollEvent(newMenuVisibility)).toBe(true);
   });
 
-  /* eslint-disable max-len */
   it('should not close the dropdown if a key that is not esc is pressed', () => {
-    /* eslint-enable max-len */
     selector.click();
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 26;
@@ -413,9 +393,7 @@ describe('masthead UI Events tests', () => {
     );
   });
 
-  /* eslint-disable max-len */
   it('should close the dropdown if an element outside the dropdown is focused', () => {
-    /* eslint-enable max-len */
     selectorWide.click();
     document.dispatchEvent(new window.Event('focusin'));
     expect(
@@ -423,9 +401,7 @@ describe('masthead UI Events tests', () => {
     ).toBe(false);
   });
 
-  /* eslint-disable max-len */
   it('should not close the dropdown if an element inside the dropdown is focused', () => {
-    /* eslint-enable max-len */
     selector.click();
     nav.focus();
     expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
@@ -449,9 +425,7 @@ describe('masthead UI Events tests', () => {
     expect(nav.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
-  /* eslint-disable max-len */
   it('should do nothing when focusin is triggered on a narrow viewport when the nav is closed', () => {
-    /* eslint-enable max-len */
     iconContainer.focus();
     nav.classList.add('sprk-c-Masthead__narrow-nav');
     nav.classList.add('sprk-u-HideWhenJs');
@@ -460,9 +434,7 @@ describe('masthead UI Events tests', () => {
     expect(document.activeElement).toEqual(iconContainer);
   });
 
-  /* eslint-disable max-len */
   it('should focus on the first nav item when focusin is triggered on a narrow viewport when the nav is open', () => {
-    /* eslint-enable max-len */
     iconContainer.focus();
     nav.classList.add('sprk-c-Masthead__narrow-nav');
     event = new window.Event('focusin');
@@ -510,9 +482,7 @@ describe('toggleMobileNav tests', () => {
     document.body.classList.remove('sprk-u-Height--100');
   });
 
-  /* eslint-disable max-len */
   it('should toggle the class sprk-u-Display--none on the nav element and the open class on the icon', () => {
-    /* eslint-enable max-len */
     toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(nav.classList.contains('sprk-u-Display--none')).toBe(false);
     expect(icon.classList.contains('sprk-c-Menu__icon--open')).toBe(true);
@@ -546,9 +516,7 @@ describe('toggleMobileNav tests', () => {
     ).toBe(true);
   });
 
-  /* eslint-disable max-len */
   it('should not add sprk-u-Height--100 to the html element if its already set to 100%', () => {
-    /* eslint-enable max-len */
     document.documentElement.style.height = '100%';
     toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(
@@ -561,17 +529,13 @@ describe('toggleMobileNav tests', () => {
     expect(document.body.classList.contains('sprk-u-Height--100')).toBe(true);
   });
 
-  /* eslint-disable max-len */
   it('should not add sprk-u-Height--100 to the body element if its already set to 100%', () => {
-    /* eslint-enable max-len */
     document.body.style.height = '100%';
     toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(document.body.classList.contains('sprk-u-Height--100')).toBe(false);
   });
 
-  /* eslint-disable max-len */
   it('should remove open class from masthead when hideMobileNavs is called', () => {
-    /* eslint-enable max-len */
     toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(mastheadDiv.classList.contains('sprk-c-Masthead--open')).toBe(true);
     hideMobileNavs();
@@ -601,9 +565,7 @@ describe('hideMobileNavs tests', () => {
     document.getElementsByTagName('body')[0].appendChild(main);
   });
 
-  /* eslint-disable max-len */
   it('should add the hide class to the nav element and remove the open class from the icon', () => {
-    /* eslint-enable max-len */
     hideMobileNavs();
     expect(
       document
@@ -635,9 +597,7 @@ describe('focus trap tests', () => {
     document.body.innerHTML = '';
   });
 
-  /* eslint-disable max-len */
   it('should set focus to the first element, if the first param is true', () => {
-    /* eslint-enable max-len */
     item2.focus();
     focusTrap(true, container);
     expect(document.activeElement.textContent).toBe('Button1');

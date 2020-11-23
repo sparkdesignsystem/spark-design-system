@@ -19,9 +19,7 @@ describe('validation runner', () => {
     expect(validFunction.calledOnce).toBe(true);
   });
 
-  /* eslint-disable max-len */
   it('should call the inValid function if the field is empty but required.', () => {
-    /* eslint-enable max-len */
     field.setAttribute('pattern', '(abc)?');
     field.setAttribute('required', null);
     field.value = '';
