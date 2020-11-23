@@ -12,7 +12,9 @@ function InstallingSparkLayout({ children, location }) {
 
 InstallingSparkLayout.propTypes = {
   children: PropTypes.node,
-  location: PropTypes.string,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }),
 };
 
 export default InstallingSparkLayout;

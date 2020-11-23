@@ -307,7 +307,7 @@
       "disabled": {
         "border-width": {
           "comment": "The border width of the Secondary Button component when disabled.",
-          "value": "{btn.disabled.border-style.value}",
+          "value": "{btn.disabled.border-width.value}",
           "file": "settings",
           "themable": true
         },
