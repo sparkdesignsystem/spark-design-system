@@ -8,7 +8,8 @@ const generateIdForInput = (inputElement, labelElement, componentName) => {
   if (labelFor && !inputId) {
     /* eslint-disable no-console */
     console.warn(
-      `Spark Design System Warning - The value of 'for' (${labelFor}) on the label expects a matching 'id' on the input.`,
+      `Spark Design System Warning - The value of 'for' (${labelFor}) on the 
+      label expects a matching 'id' on the input.`,
     );
     /* eslint-enable no-console */
     return;
@@ -18,7 +19,8 @@ const generateIdForInput = (inputElement, labelElement, componentName) => {
   if (inputId && labelFor && inputId !== labelFor) {
     /* eslint-disable no-console */
     console.warn(
-      `Spark Design System Warning - The value of 'for' (${labelFor}) on the label should match the 'id' on the input (${inputId}).`,
+      `Spark Design System Warning - The value of 'for' (${labelFor}) on the 
+      label should match the 'id' on the input (${inputId}).`,
     );
     /* eslint-enable no-console */
     return;

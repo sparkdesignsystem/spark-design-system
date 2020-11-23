@@ -74,7 +74,8 @@ export const insetSpacingShort = () =>
     </div>
     <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
-        The grey border shows the extra large inset short of 32px 64px 32px 64px.
+        The grey border shows the extra large inset short of 
+        32px 64px 32px 64px.
       </p>
     </div>
   `;
