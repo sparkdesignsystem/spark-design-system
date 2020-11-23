@@ -60,7 +60,15 @@ export const Gallery = () => {
     attachIcons(getIcons());
   }, []);
 
-  return '<ul class="sbdocs-gallery-container sprk-o-Stack sprk-o-Stack--split@xs"></ul>';
+  return `
+    <ul 
+      class="
+        sbdocs-gallery-container 
+        sprk-o-Stack 
+        sprk-o-Stack--split@xs
+      ">
+    </ul>
+  `;
 };
 
 Gallery.story = {

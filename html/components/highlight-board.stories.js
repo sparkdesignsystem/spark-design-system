@@ -58,7 +58,13 @@ export const defaultStory = () => `
           </div>
 
           <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-            <a class="sprk-c-Button sprk-c-Button--full@s sprk-c-Button--secondary" href="#nogo">
+            <a 
+              class="
+                sprk-c-Button 
+                sprk-c-Button--full@s 
+                sprk-c-Button--secondary
+              " 
+              href="#nogo">
               Developers
             </a>
           </div>
