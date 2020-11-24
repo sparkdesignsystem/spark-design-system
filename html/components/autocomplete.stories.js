@@ -33,8 +33,12 @@ export const defaultStory = () => {
 
         <div class="sprk-b-TextInputIconContainer">
           <svg
-            class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
-            viewBox="0 0 64 64"
+            class="
+              sprk-c-Icon
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+            "
+            viewBox="0 0 64 64" aria-hidden="true"
           >
             <use xlink:href="#search" />
           </svg>
@@ -54,11 +58,18 @@ export const defaultStory = () => {
         <ul
           class="sprk-c-Autocomplete__results"
         >
-          <li>Apples</li>
-          <li>Oranges</li>
-          <li>Bananas</li>
-          <li>Strawberries</li>
-          <li>Lemons</li>
+          <li>Apple</li>
+          <li>Apricot</li>
+          <li>Avocado</li>
+          <li>Banana</li>
+          <li>Blackberry</li>
+          <li>Blueberry</li>
+          <li>Clementine</li>
+          <li>Fig</li>
+          <li>Grape</li>
+          <li>Kumquat</li>
+          <li>Lemon</li>
+          <li>Papaya</li>
         </ul>
 
         <div
