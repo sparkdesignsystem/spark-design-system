@@ -62,7 +62,8 @@ describe('formatPhone tests', () => {
     expect(field.addEventListener.getCall(0).args[0]).toBe('input');
   });
 
-  it('should validate and format when input is triggered with valid input', () => {
+  it(`should validate and format when 
+      input is triggered with valid input`, () => {
     bindUIEvents(element);
     event = new window.Event('input');
     field.dispatchEvent(event);

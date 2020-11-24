@@ -178,17 +178,32 @@ stackSplitLayoutThreeTenths.story = {
 export const stackSplitLayoutMixed = () =>
   `
     <div class="sprk-o-Stack sprk-o-Stack--split@xs">
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--fourth@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--fourth@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           fourth
         </p>
       </div>
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--half@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--half@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           half
         </p>
       </div>
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--fourth@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--fourth@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           fourth
         </p>
@@ -196,22 +211,42 @@ export const stackSplitLayoutMixed = () =>
     </div>
 
     <div class="sprk-o-Stack sprk-o-Stack--split@xs">
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--sixth@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           sixth
         </p>
       </div>
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--sixth@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           sixth
         </p>
       </div>
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--sixth@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           sixth
         </p>
       </div>
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--flex@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           flex
         </p>
@@ -219,22 +254,42 @@ export const stackSplitLayoutMixed = () =>
     </div>
 
     <div class="sprk-o-Stack sprk-o-Stack--split@xs">
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--two-fifths@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--two-fifths@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           two-fifths
         </p>
       </div>
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--fifth@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           fifth
         </p>
       </div>
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--fifth@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           fifth
         </p>
       </div>
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--fifth@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           fifth
         </p>
@@ -244,19 +299,34 @@ export const stackSplitLayoutMixed = () =>
     <div class="sprk-o-Stack sprk-o-Stack--split@xs">
       <div class="sprk-o-Stack__item sprk-o-Stack__item--half@xs">
         <div class="sprk-o-Stack sprk-o-Stack--split@xs">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter">
+          <div 
+            class="
+              sprk-o-Stack__item 
+              sprk-o-Stack__item--flex@xs 
+              sprk-u-AbsoluteCenter
+            ">
             <p class="sprk-b-TypeBodyOne">
               Nested Item (flex)
             </p>
           </div>
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter">
+          <div 
+            class="
+              sprk-o-Stack__item 
+              sprk-o-Stack__item--flex@xs 
+              sprk-u-AbsoluteCenter
+            ">
             <p class="sprk-b-TypeBodyOne">
               Nested Item (flex)
             </p>
           </div>
         </div>
       </div>
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--half@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--half@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           half
         </p>
@@ -264,12 +334,22 @@ export const stackSplitLayoutMixed = () =>
     </div>
 
     <div class="sprk-o-Stack sprk-o-Stack--split@xs">
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--two-fifths@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--two-fifths@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           two-fifths
         </p>
       </div>
-      <div class="sprk-o-Stack__item sprk-o-Stack__item--three-fifths@xs sprk-u-AbsoluteCenter">
+      <div 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--three-fifths@xs 
+          sprk-u-AbsoluteCenter
+        ">
         <p class="sprk-b-TypeBodyOne">
           three-fifths
         </p>

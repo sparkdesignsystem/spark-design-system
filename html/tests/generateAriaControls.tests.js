@@ -10,7 +10,8 @@ describe('generateAriaControls tests', () => {
     contentElement = document.createElement('div');
   });
 
-  it('should generate values if neither aria-controls nor id is present', () => {
+  it(`should generate values if neither 
+      aria-controls nor id is present`, () => {
     triggerElement.removeAttribute('aria-controls');
     contentElement.removeAttribute('id');
     generateAriaControls(triggerElement, contentElement);
@@ -22,7 +23,8 @@ describe('generateAriaControls tests', () => {
     );
   });
 
-  it('should not change values if aria-controls is provided but id is missing', () => {
+  it(`should not change values if aria-controls is 
+      provided but id is missing`, () => {
     triggerElement.setAttribute('aria-controls', 'foo');
     contentElement.removeAttribute('id');
     generateAriaControls(triggerElement, contentElement);
@@ -31,7 +33,8 @@ describe('generateAriaControls tests', () => {
     expect(contentElement.hasAttribute('id')).toEqual(false);
   });
 
-  it('should use the provided value when aria-controls is missing but id is present', () => {
+  it(`should use the provided value when aria-controls 
+      is missing but id is present`, () => {
     triggerElement.removeAttribute('aria-controls');
     contentElement.setAttribute('id', 'foo');
     expect(triggerElement.hasAttribute('aria-controls')).toEqual(false);
@@ -43,7 +46,8 @@ describe('generateAriaControls tests', () => {
     expect(contentElement.getAttribute('id')).toEqual('foo');
   });
 
-  it('should not change values if aria-controls and are both present but have different values', () => {
+  it(`should not change values if aria-controls and are 
+      both present but have different values`, () => {
     triggerElement.setAttribute('aria-controls', 'foo');
     contentElement.setAttribute('id', 'bar');
     generateAriaControls(triggerElement, contentElement);
@@ -52,7 +56,8 @@ describe('generateAriaControls tests', () => {
     expect(contentElement.getAttribute('id')).toEqual('bar');
   });
 
-  it('should not change values if aria-controls and are both present and have correct values', () => {
+  it(`should not change values if aria-controls and are 
+      both present and have correct values`, () => {
     triggerElement.setAttribute('aria-controls', 'foo');
     contentElement.setAttribute('id', 'foo');
     generateAriaControls(triggerElement, contentElement);

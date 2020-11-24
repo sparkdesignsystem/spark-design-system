@@ -15,7 +15,9 @@ const generateAriaControls = (
   if (triggerAriaControls && !contentId) {
     /* eslint-disable no-console */
     console.warn(
-      `Spark Design System Warning - The component with aria-controls="${triggerAriaControls}" expects a matching id on the content element.`,
+      `Spark Design System Warning - The component with 
+      aria-controls="${triggerAriaControls}" expects a 
+      matching id on the content element.`,
     );
     /* eslint-enable no-console */
     return;
@@ -25,7 +27,9 @@ const generateAriaControls = (
   if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
     /* eslint-disable no-console */
     console.warn(
-      `Spark Design System Warning - The value of aria-controls ("${triggerAriaControls}") should match the id of the content element ("${contentId}").`,
+      `Spark Design System Warning - The value of aria-controls 
+      ("${triggerAriaControls}") should match the id of the 
+      content element ("${contentId}").`,
     );
     /* eslint-enable no-console */
     return;

@@ -19,7 +19,8 @@ describe('validation runner', () => {
     expect(validFunction.calledOnce).toBe(true);
   });
 
-  it('should call the inValid function if the field is empty but required.', () => {
+  it(`should call the inValid function if the field 
+      is empty but required.`, () => {
     field.setAttribute('pattern', '(abc)?');
     field.setAttribute('required', null);
     field.value = '';

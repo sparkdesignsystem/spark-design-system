@@ -92,7 +92,8 @@ describe('masthead init', () => {
     expect(iconContainer.getAttribute('aria-expanded')).toEqual('true');
   });
 
-  it('should generate a content id and add it to aria-controls when both values are missing', () => {
+  it(`should generate a content id and add it to aria-controls 
+      when both values are missing`, () => {
     expect(nav.getAttribute('id')).toBe(null);
     expect(iconContainer.getAttribute('aria-controls')).toBe(null);
 
@@ -105,7 +106,8 @@ describe('masthead init', () => {
     );
   });
 
-  it('should NOT override aria-controls if the value doesnt match the id on the content', () => {
+  it(`should NOT override aria-controls if the value 
+      doesn't match the id on the content`, () => {
     nav.setAttribute('id', 'foo');
     iconContainer.setAttribute('aria-controls', 'bar');
 
@@ -116,7 +118,8 @@ describe('masthead init', () => {
     expect(iconContainer.getAttribute('aria-controls')).toEqual('bar');
   });
 
-  it('should log a console warning if aria-controls has a value but content ID is blank', () => {
+  it(`should log a console warning if aria-controls has a 
+      value but content ID is blank`, () => {
     nav.removeAttribute('id');
     iconContainer.setAttribute('aria-controls', 'bar');
 
@@ -126,7 +129,8 @@ describe('masthead init', () => {
     expect(iconContainer.getAttribute('aria-controls')).toEqual('bar');
   });
 
-  it('should use the provided content id for aria-controls when aria-controls is missing and the id is available', () => {
+  it(`should use the provided content id for aria-controls when 
+      aria-controls is missing and the id is available`, () => {
     nav.setAttribute('id', 'foo');
     expect(iconContainer.getAttribute('aria-conrols')).toBe(null);
 
@@ -288,7 +292,8 @@ describe('masthead UI Events tests', () => {
     expect(nav.classList.contains('sprk-u-Display--none')).toBe(false);
   });
 
-  it('should close the dropdown box when selector is clicked and its opened already', () => {
+  it(`should close the dropdown box when selector 
+      is clicked and its opened already`, () => {
     selectorDropdown.classList.add('sprk-c-Dropdown--open');
     selector.dispatchEvent(new window.Event('click'));
     expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
@@ -314,7 +319,8 @@ describe('masthead UI Events tests', () => {
     ).toBe(false);
   });
 
-  it('should open the dropdown box when selector in dropdown is clicked', () => {
+  it(`should open the dropdown box when 
+      selector in dropdown is clicked`, () => {
     selectorTriggerInDropdown.dispatchEvent(new window.Event('click'));
     expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
       true,
@@ -365,17 +371,20 @@ describe('masthead UI Events tests', () => {
     );
   });
 
-  it('should add checkScrollDirection event listener if menu is visible', () => {
+  it(`should add checkScrollDirection event 
+      listener if menu is visible`, () => {
     const attached = toggleScrollEvent(true);
     expect(attached).toBe(true);
   });
 
-  it('should not add checkScrollDirection event listener if menu is not visible', () => {
+  it(`should not add checkScrollDirection event listener 
+      if menu is not visible`, () => {
     const attached = toggleScrollEvent(false);
     expect(attached).toBe(false);
   });
 
-  it('should checkScrollDirection on resize and return true if menu visible', () => {
+  it(`should checkScrollDirection on resize and 
+      return true if menu visible`, () => {
     iconContainerDiv.setAttribute('style', 'display: none');
     event = new window.Event('resize');
     window.dispatchEvent(event);
@@ -383,7 +392,8 @@ describe('masthead UI Events tests', () => {
     expect(toggleScrollEvent(newMenuVisibility)).toBe(true);
   });
 
-  it('should not close the dropdown if a key that is not esc is pressed', () => {
+  it(`should not close the dropdown if a key that 
+      is not esc is pressed`, () => {
     selector.click();
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 26;
@@ -393,7 +403,8 @@ describe('masthead UI Events tests', () => {
     );
   });
 
-  it('should close the dropdown if an element outside the dropdown is focused', () => {
+  it(`should close the dropdown if an element 
+      outside the dropdown is focused`, () => {
     selectorWide.click();
     document.dispatchEvent(new window.Event('focusin'));
     expect(
@@ -401,7 +412,8 @@ describe('masthead UI Events tests', () => {
     ).toBe(false);
   });
 
-  it('should not close the dropdown if an element inside the dropdown is focused', () => {
+  it(`should not close the dropdown if an element 
+      inside the dropdown is focused`, () => {
     selector.click();
     nav.focus();
     expect(selectorDropdown.classList.contains('sprk-c-Dropdown--open')).toBe(
@@ -425,7 +437,8 @@ describe('masthead UI Events tests', () => {
     expect(nav.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
-  it('should do nothing when focusin is triggered on a narrow viewport when the nav is closed', () => {
+  it(`should do nothing when focusin is triggered on a narrow 
+      viewport when the nav is closed`, () => {
     iconContainer.focus();
     nav.classList.add('sprk-c-Masthead__narrow-nav');
     nav.classList.add('sprk-u-HideWhenJs');
@@ -434,7 +447,8 @@ describe('masthead UI Events tests', () => {
     expect(document.activeElement).toEqual(iconContainer);
   });
 
-  it('should focus on the first nav item when focusin is triggered on a narrow viewport when the nav is open', () => {
+  it(`should focus on the first nav item when focusin is triggered 
+      on a narrow viewport when the nav is open`, () => {
     iconContainer.focus();
     nav.classList.add('sprk-c-Masthead__narrow-nav');
     event = new window.Event('focusin');
@@ -482,7 +496,8 @@ describe('toggleMobileNav tests', () => {
     document.body.classList.remove('sprk-u-Height--100');
   });
 
-  it('should toggle the class sprk-u-Display--none on the nav element and the open class on the icon', () => {
+  it(`should toggle the class sprk-u-Display--none on the 
+      nav element and the open class on the icon`, () => {
     toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(nav.classList.contains('sprk-u-Display--none')).toBe(false);
     expect(icon.classList.contains('sprk-c-Menu__icon--open')).toBe(true);
@@ -516,7 +531,8 @@ describe('toggleMobileNav tests', () => {
     ).toBe(true);
   });
 
-  it('should not add sprk-u-Height--100 to the html element if its already set to 100%', () => {
+  it(`should not add sprk-u-Height--100 to the html 
+      element if its already set to 100%`, () => {
     document.documentElement.style.height = '100%';
     toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(
@@ -529,13 +545,15 @@ describe('toggleMobileNav tests', () => {
     expect(document.body.classList.contains('sprk-u-Height--100')).toBe(true);
   });
 
-  it('should not add sprk-u-Height--100 to the body element if its already set to 100%', () => {
+  it(`should not add sprk-u-Height--100 to the body element 
+      if its already set to 100%`, () => {
     document.body.style.height = '100%';
     toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(document.body.classList.contains('sprk-u-Height--100')).toBe(false);
   });
 
-  it('should remove open class from masthead when hideMobileNavs is called', () => {
+  it(`should remove open class from masthead 
+      when hideMobileNavs is called`, () => {
     toggleMobileNav(iconContainer, nav, mastheadDiv);
     expect(mastheadDiv.classList.contains('sprk-c-Masthead--open')).toBe(true);
     hideMobileNavs();
@@ -565,7 +583,8 @@ describe('hideMobileNavs tests', () => {
     document.getElementsByTagName('body')[0].appendChild(main);
   });
 
-  it('should add the hide class to the nav element and remove the open class from the icon', () => {
+  it(`should add the hide class to the nav element and 
+      remove the open class from the icon`, () => {
     hideMobileNavs();
     expect(
       document
@@ -597,7 +616,8 @@ describe('focus trap tests', () => {
     document.body.innerHTML = '';
   });
 
-  it('should set focus to the first element, if the first param is true', () => {
+  it(`should set focus to the first element, 
+      if the first param is true`, () => {
     item2.focus();
     focusTrap(true, container);
     expect(document.activeElement.textContent).toBe('Button1');

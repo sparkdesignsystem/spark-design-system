@@ -253,7 +253,8 @@ describe('Toggle tests', () => {
     ).toBe(true);
   });
 
-  it('should not add Accordion__item class if toggle is not an accordion', () => {
+  it(`should not add Accordion__item class 
+      if toggle is not an accordion`, () => {
     handleToggleClick(content, null, null, trigger);
     expect(container.classList.contains('sprk-c-Accordion__item--open')).toBe(
       false,

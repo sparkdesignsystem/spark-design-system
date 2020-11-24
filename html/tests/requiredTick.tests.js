@@ -110,7 +110,8 @@ describe('requiredTextInput UI Events tests', () => {
     expect(inputContainer.addEventListener.getCall(0).args[0]).toBe('change');
   });
 
-  it('should mark error when change is triggered with no selected inputs', () => {
+  it(`should mark error when change is 
+      triggered with no selected inputs`, () => {
     event = new window.Event('change');
     inputContainer.dispatchEvent(event);
     expect(errorContainer.textContent).toBe('This field is required.');
