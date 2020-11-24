@@ -10,6 +10,9 @@
   <dimen name="sprk_alert_icon_margin_bottom">0.00sp</dimen><!-- The margin bottom for the icon in the Alert component. -->
   <dimen name="sprk_alert_icon_margin_left">0.00sp</dimen><!-- The margin left for the icon in the Alert component. -->
   <dimen name="sprk_alert_icon_size">32.00sp</dimen><!-- Sets the height and width of the two icons used in the Alert component. -->
+  <dimen name="sprk_autocomplete_results_border_width">1.00dp</dimen><!-- The border size of the Autocomplete results. -->
+  <dimen name="sprk_autocomplete_results_max_width">440.00dp</dimen><!-- The max-width of the Autocomplete results. -->
+  <dimen name="sprk_autocomplete_results_max_height">288.00dp</dimen><!-- The max-height of the Autocomplete results. -->
   <dimen name="sprk_blockquote_margin">0.00dp</dimen><!-- Value for the margin property on Blockquote component. -->
   <dimen name="sprk_blockquote_quote_margin">0.00dp</dimen><!-- Value for the margin property on the quote in the Blockquote component. -->
   <dimen name="sprk_blockquote_quote_last_margin">0.00dp</dimen><!-- Value for the margin property on the last quote in the Blockquote component. -->

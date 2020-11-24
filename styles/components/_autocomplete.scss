@@ -8,33 +8,27 @@
 .sprk-c-Autocomplete__results {
   list-style-type: none;
   background-color: $sprk-white;
-  border: $sprk-dropdown-border;
+  border: $sprk-autocomplete-results-border;
   border-radius: $sprk-border-radius;
-  box-shadow: $sprk-dropdown-shadow;
-  font-size: $sprk-dropdown-font-size;
-  max-width: $sprk-dropdown-max-width;
-  padding: ($sprk-dropdown-padding / 2) 0;
-  position: absolute;
-  // margin-top: $sprk-space-xs;
-  width: 100%;
-  z-index: $sprk-layer-height-m;
+  box-shadow: $sprk-autocomplete-results-shadow;
+  max-width: $sprk-autocomplete-results-max-width;
+  max-height: $sprk-autocomplete-results-max-height;
+  position: relative;
+  z-index: $sprk-autocomplete-results-z-index;
+  overflow-y: $sprk-autocomplete-results-overflow-y;
 
   li {
-    padding: $sprk-space-m;
-    border-bottom: 1px solid $sprk-black-tint-20;
+    padding: $sprk-autocomplete-results-items-padding;
+    border-bottom: $sprk-autocomplete-results-items-border-bottom;
+    font-size: $sprk-autocomplete-results-items-font-size;
 
     &:hover {
-      background-color: $sprk-black-tint-10;
-      cursor: pointer;
+      background-color: $sprk-autocomplete-results-items-hover-background-color;
+      cursor: $sprk-autocomplete-results-items-hover-cursor;
     }
   }
 
-  .sprk-c-Autocomplete__results_header {
-    font-weight: 500;
-    padding: $sprk-space-m;
-  }
-
   .sprk-c-Autocomplete__results--active {
-    background-color: $sprk-black-tint-10;
+    background-color: $sprk-autocomplete-results-active-background-color;
   }
 }
