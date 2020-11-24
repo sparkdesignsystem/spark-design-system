@@ -39,8 +39,8 @@ describe('generateIdForInput tests', () => {
     generateIdForInput(inputElement, labelElement, 'component');
 
     expect(global.console.warn).toHaveBeenCalledWith(
-      `Spark Design System Warning - The value of 'for' (test) on the label 
-      expects a matching 'id' on the input.`,
+      `Spark Design System Warning - The value of 'for' (test) on the 
+      label expects a matching 'id' on the input.`,
     );
   });
 
@@ -52,8 +52,8 @@ describe('generateIdForInput tests', () => {
     generateIdForInput(inputElement, labelElement, 'component');
 
     expect(global.console.warn).toHaveBeenCalledWith(
-      `Spark Design System Warning - The value of 'for' (test) on the label 
-      should match the 'id' on the input (test-1).`,
+      `Spark Design System Warning - The value of 'for' (test) on the 
+      label should match the 'id' on the input (test-1).`,
     );
   });
 });
