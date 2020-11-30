@@ -1,0 +1,727 @@
+{
+  "btn": {
+    "background-color": {
+      "comment": "The background color of the Button component.",
+      "value": "{red.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "shadow-color": {
+      "comment": "The box shadow color value for the Button component.",
+      "value": "rgba(20, 20, 20, 0.08)",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "shadow": {
+      "comment": "The box shadow value of the Button component.",
+      "value": "0 3px 10px {btn.shadow-color.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border-style": {
+      "comment": "The border style of the Button component.",
+      "value": "solid",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border-color": {
+      "comment": "The border color of the Button component.",
+      "value": "{btn.background-color.value}",
+      "attributes": {
+        "category": "color",
+        "type": "border"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border-width": {
+      "comment": "The border width of the Button component.",
+      "value": "2px",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border": {
+      "comment": "The border of the Button component.",
+      "value": "{btn.border-width.value} {btn.border-style.value} {btn.border-color.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "font": {
+      "weight": {
+        "comment": "The font weight of the Button component.",
+        "value": "500",
+        "file": "settings",
+        "themable": true
+      },
+      "size": {
+        "comment": "The font size of the Button component.",
+        "value": "inherit",
+        "attributes": {
+          "category": "font"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "family": {
+        "comment": "The font family of the Button component.",
+        "value": "inherit",
+        "attributes": {
+          "category": "font"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "line-height": {
+      "comment": "The line height of the Button component.",
+      "value": "normal",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "text-color": {
+      "comment": "The text color of the Button component.",
+      "value": "{white.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "visited-text-color": {
+      "comment": "The visited text color of the Button component.",
+      "value": "{white.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "border-radius": {
+      "comment": "The border radius of the Button component.",
+      "value": "4px",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "hover": {
+      "background-color": {
+        "comment": "The background color of the Button component on hover.",
+        "value": "{mid-red.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "text-color": {
+        "comment": "The text color of the Button component on hover.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "padding": {
+      "comment": "The padding of the Button component.",
+      "value": "{space.m.value} 24px",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "padding-top": {
+      "comment": "The top padding of the Button component.",
+      "value": "{space.m.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "padding-bottom": {
+      "comment": "The bottom padding of the Button component.",
+      "value": "{space.m.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "padding-right": {
+      "comment": "The right padding of the Button component.",
+      "value": "{space.misc.a.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "padding-left": {
+      "comment": "The left padding of the Button component.",
+      "value": "{space.misc.a.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "breakpoint": {
+      "xs": {
+        "comment": "The extra small breakpoint at which Full Width Buttons switch to normal width.",
+        "value": "30rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "s": {
+        "comment": "The small breakpoint at which Full Width Buttons switch to normal width.",
+        "value": "42.5rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "transition-speed": {
+      "comment": "The transition speed setting for transitions on the Button component.",
+      "value": "0.3s",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "letter-spacing": {
+      "comment": "The letter spacing value of the Button component.",
+      "value": "0.62px",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "disabled": {
+      "opacity": {
+        "comment": "The opacity value of the Disabled Button component.",
+        "value": "1",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "border-width": {
+        "comment": "The border width of the Disabled Button component.",
+        "value": "{btn.border-width.value}",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "border-style": {
+        "comment": "The border style of the Disabled Button component.",
+        "value": "{btn.border-style.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "background-color": {
+        "comment": "The background color of the Disabled Button component.",
+        "value": "{black-tint.50.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "text-color": {
+        "comment": "The text color of the Disabled Button component.",
+        "value": "{white.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border-color": {
+        "comment": "The border color of the Disabled Button component.",
+        "value": "transparent",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "border": {
+        "comment": "The border of the Disabled Button component.",
+        "value": "{btn.disabled.border-width.value} {btn.disabled.border-style.value} {btn.disabled.border-color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "shadow": {
+        "comment": "The shadow color of the Disabled Button component.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "hover-border": {
+        "comment": "The border of the Button component when disabled on hover.",
+        "value": "{btn.disabled.border-width.value} {btn.disabled.border-style.value} {btn.disabled.border-color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "secondary": {
+      "disabled": {
+        "border-width": {
+          "comment": "The border width of the Secondary Button component when disabled.",
+          "value": "{btn.disabled.border-width.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "border-style": {
+          "comment": "The border style of the Secondary Button component when disabled.",
+          "value": "{btn.disabled.border-style.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "background-color": {
+          "comment": "The background color of the Disabled Button component.",
+          "value": "transparent",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "text-color": {
+          "comment": "The text color of the Secondary Button component when disabled.",
+          "value": "{black-tint.50.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The border color of the Secondary Button component when disabled.",
+          "value": "{btn.secondary.disabled.text-color.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The box shadow of the Secondary Button component when disabled.",
+          "value": "none",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "hover-border": {
+          "comment": "The border of the Secondary Button component when disabled on hover.",
+          "value": "{btn.secondary.disabled.border-width.value} {btn.secondary.disabled.border-style.value} {btn.secondary.disabled.border-color.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "background-color": {
+        "comment": "The background color of the Secondary Button component.",
+        "value": "transparent",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "border-color": {
+        "comment": "The border color of the Secondary Button component.",
+        "value": "{red.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border": {
+        "comment": "The border of the Secondary Button component.",
+        "value": "{btn.border-width.value} {btn.border-style.value} {btn.border-color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "text-color": {
+        "comment": "The text color of the Secondary Button component.",
+        "value": "{red.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "visited-text-color": {
+        "comment": "The text color of the Secondary Button component when visited.",
+        "value": "{red.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "hover": {
+        "text-color": {
+          "comment": "The hover text color of the Secondary Button component.",
+          "value": "{red.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "background-color": {
+          "comment": "The background color of the Secondary Button component on hover.",
+          "value": "#f9e7ea",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The border color of the Secondary Button component on hover.",
+          "value": "{red.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The box shadow of the Secondary Button component on hover.",
+          "value": "{btn.shadow.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border": {
+          "comment": "The border of the Secondary Button component on hover.",
+          "value": "{btn.border-width.value} {btn.border-style.value} {btn.secondary.hover.border-color.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "letter-spacing": {
+        "comment": "The letter spacing of the Secondary Button component.",
+        "value": "{btn.letter-spacing.value}",
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "tertiary": {
+      "disabled": {
+        "background-color": {
+          "comment": "The background color of the Tertiary Button component when disabled.",
+          "value": "transparent",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border-width": {
+          "comment": "The border width of the Tertiary Button component when disabled.",
+          "value": "{btn.disabled.border-width.value}",
+          "file": "settings",
+          "attributes": {
+            "category": "size"
+          },
+          "themable": true
+        },
+        "border-style": {
+          "comment": "The border style of the Tertiary Button component when disabled.",
+          "value": "{btn.disabled.border-style.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The border color of the Tertiary Button component when disabled.",
+          "value": "{black-tint.50.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The box shadow of the Tertiary Button component when disabled.",
+          "value": "none",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "hover-border": {
+          "comment": "The border of the Tertiary Button component when disabled on hover.",
+          "value": "{btn.tertiary.disabled.border-width.value} {btn.tertiary.disabled.border-style.value} {btn.tertiary.disabled.border-color.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "text-color": {
+          "comment": "The text color of the Tertiary Button component when disabled.",
+          "value": "{black-tint.50.value}",
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "background-color": {
+        "comment": "The background color of the Tertiary Button component.",
+        "value": "transparent",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "border-color": {
+        "comment": "The border color of the Tertiary Button component.",
+        "value": "{purple-dark.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border": {
+        "comment": "The border of the Tertiary Button component.",
+        "value": "{btn.border-width.value} {btn.border-style.value} {btn.tertiary.border-color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "text-color": {
+        "comment": "The text color of the Tertiary Button component.",
+        "value": "{purple-dark.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "visited-text-color": {
+        "comment": "The text color of the Tertiary Button component when visited.",
+        "value": "{purple-dark.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "hover": {
+        "text-color": {
+          "comment": "The text color of the Tertiary Button component on hover.",
+          "value": "{purple.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "background-color": {
+          "comment": "The background color of the Tertiary Button component on hover.",
+          "value": "{purple-lightest.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The border color of the Tertiary Button component on hover.",
+          "value": "{purple.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The box shadow of the Tertiary Button component on hover",
+          "value": "{btn.shadow.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border": {
+          "comment": "The border of the Tertiary Button component when disabled on hover.",
+          "value": "{btn.tertiary.disabled.border-width.value} {btn.tertiary.disabled.border-style.value} {btn.tertiary.disabled.border-color.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "letter-spacing": {
+        "comment": "The letter spacing of the Tertiary Button component.",
+        "value": "{btn.letter-spacing.value}",
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "quaternary": {
+      "disabled": {
+        "border-width": {
+          "comment": "The border width of the Quaternary Button component when disabled.",
+          "value": "{btn.disabled.border-width.value}",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border-style": {
+          "comment": "The border style of the Quaternary Button component when disabled.",
+          "value": "{btn.disabled.border-style.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The border color of the Quaternary Button component when disabled.",
+          "value": "{black-tint.50.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "text-color": {
+          "comment": "The text color of the Quaternary Button component when disabled.",
+          "value": "{black-tint.50.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "background-color": {
+          "comment": "The background color of the Quaternary Button component when disabled.",
+          "value": "transparent",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The box shadow of the Quaternary Button component when disabled.",
+          "value": "none",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "hover-border": {
+          "comment": "The border of the Quaternary Button component when disabled on hover.",
+          "value": "{btn.quaternary.disabled.border-width.value} {btn.quaternary.disabled.border-style.value} {btn.quaternary.disabled.border-color.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "background-color": {
+        "comment": "The background color of the Quaternary Button component.",
+        "value": "transparent",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "border-color": {
+        "comment": "The border color of the Quaternary Button component.",
+        "value": "{black-tint.50.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border": {
+        "comment": "The border of the Quaternary Button component.",
+        "value": "{btn.border-width.value} {btn.border-style.value} {btn.quaternary.border-color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "text-color": {
+        "comment": "The text color of the Quaternary Button component.",
+        "value": "{black.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "visited-text-color": {
+        "comment": "The text color of the Quaternary Button component when visited.",
+        "value": "{black.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "box-shadow": {
+        "comment": "The box-shadow of the Quaternary Button component.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "hover": {
+        "text-color": {
+          "comment": "The text color of the Quaternary Button component on hover.",
+          "value": "{black.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "background-color": {
+          "comment": "The background color of the Quaternary Button component on hover.",
+          "value": "transparent",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The border color of the Quaternary Button component on hover.",
+          "value": "{black.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The box shadow of the Quaternary Button component on hover.",
+          "value": "{btn.shadow.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "letter-spacing": {
+        "comment": "The letter spacing of the Quaternary Button component.",
+        "value": "{btn.letter-spacing.value}",
+        "file": "settings",
+        "themable": true
+      }
+    }
+  }
+}

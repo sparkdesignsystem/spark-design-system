@@ -2,9 +2,19 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-function SprkSpinner({ size, lightness, variant, additionalClasses, ...rest }) {
+function SprkSpinner({
+  size,
+  lightness,
+  variant,
+  additionalClasses,
+  altText,
+  role,
+  ...rest
+}) {
   return (
     <div
+      role={role}
+      aria-valuetext={altText}
       className={classnames(
         'sprk-c-Spinner',
         'sprk-c-Spinner--circle',
@@ -43,11 +53,23 @@ SprkSpinner.propTypes = {
    * a unique selector for automated tools.
    */
   idString: PropTypes.string,
+  /**
+   * Assigned to the `role` attribute serving as
+   * additional accessibility context for screen readers.
+   */
+  role: PropTypes.string,
+  /**
+   * Assigned to the `aria-valuetext` attribute serving as
+   * additional context for screen readers.
+   */
+  altText: PropTypes.string,
 };
 
 SprkSpinner.defaultProps = {
   size: 'small',
   lightness: 'light',
+  altText: 'Loading',
+  role: 'progressbar',
 };
 
 export default SprkSpinner;

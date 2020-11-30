@@ -1,0 +1,119 @@
+{
+  "accordion": {
+    "max-width": {
+      "comment": "The maximum width of Accordions.",
+      "value": "53.125rem",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "border": {
+      "comment": "The border of Accordions.",
+      "value": "2px solid rgb(230, 230, 230)",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "summary": {
+      "text": {
+        "decoration": {
+          "comment": "The text decoration of the Accordion item summary.",
+          "value": "none",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "align": {
+          "comment": "The text-align value of the Accordion item summary.",
+          "value": "left",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "active-text-decoration": {
+        "comment": "The text decoration of the Accordion item summary when active.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "color": {
+        "comment": "The font color of the Accordion item summary.",
+        "value": "{black.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "background-color": {
+        "comment": "The background color of the Accordion item summary.",
+        "value": "transparent",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "border": {
+        "comment": "The border of the Accordion item summary.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "active-color": {
+        "comment": "The color of the icon in the summary when the Accordion item is open or hovered.",
+        "value": "{purple.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "hover-icon-fill": {
+        "comment": "The fill color of the icon when the Accordion item is hovered.",
+        "value": "{accordion.summary.active-color.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "padding": {
+        "comment": "The padding of the Accordion summary.",
+        "value": "{space.misc.a.value} 0",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "content-padding": {
+      "comment": "The padding of the Accordion content.",
+      "value": "0 0 {space.l.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "active-background-color": {
+      "comment": "The background color used for hover and active on items in the Accordion.",
+      "value": "{gray.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    }
+  }
+}

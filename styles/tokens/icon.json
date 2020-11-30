@@ -1,0 +1,109 @@
+{
+  "icon": {
+    "m": {
+      "comment": "Value for height and width of the Icon component.",
+      "value": "16px",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "l": {
+      "comment": "Value for height and width of the large Icon component.",
+      "value": "24px",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "xl": {
+      "comment": "Value for height and width of the extra-large Icon component.",
+      "value": "32px",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "fill-color": {
+      "comment": "Value for the fill property of the Icon component.",
+      "value": "{black.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "stroke-color": {
+      "comment": "Value for the stroke property of the Icon component.",
+      "value": "{black.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "stroke-width": {
+      "comment": "Value for the stroke-width property of the Icon component.",
+      "value": "1.25",
+      "file": "settings",
+      "themable": true
+    },
+    "l-stroke": {
+      "comment": "Value for the stroke property of the large Icon component.",
+      "value": "none",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "custom-stroke-width-l": {
+      "comment": "Value for the stroke-width property of the large Icon component.",
+      "value": "0",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "xl-stroke": {
+      "comment": "Value for the stroke property of the extra large Icon component.",
+      "value": "none",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "custom-stroke-width-xl": {
+      "comment": "Value for the stroke-width property of the extra large Icon component.",
+      "value": "0",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "filled-fill-color": {
+      "comment": "Value for the fill property of the Filled Icon component.",
+      "value": "{black.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "filled-stroke-color": {
+      "comment": "Value for the stroke property of the Filled Icon component.",
+      "value": "none",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    }
+  }
+}

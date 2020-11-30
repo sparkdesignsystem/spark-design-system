@@ -15,7 +15,7 @@ Spark Design System is where we collect our best solutions for how to design and
 ## Getting Started
 
 **Spark assumes your project is using [Sass](https://sass-lang.com/) for styling and
-also that your project has a Javascript build step that will transpile ES6+ and polyfill appropriately for browser support.**
+also that your project has a JavaScript build step that will transpile ES6+ and polyfill appropriately for browser support.**
 
 ### Spark
 
@@ -25,7 +25,7 @@ also that your project has a Javascript build step that will transpile ES6+ and 
 
 * Import the Sass setup file in your Sass build.
 
-  `@import "node_modules/@sparkdesignsystem/spark/spark";`
+  `@import "node_modules/@sparkdesignsystem/spark-styles/spark.scss";`
 
   This will bring all Spark Sass patterns into your build. The Spark classes
   are namespaced so they don't affect any existing CSS.

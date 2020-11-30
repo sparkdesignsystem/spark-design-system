@@ -1,0 +1,58 @@
+{
+  "flag": {
+    "gutter": {
+      "comment": "Value for the gutters between body and figure in the Flag component.",
+      "value": "{space.m.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "gutter-tiny": {
+      "comment": "Value for the gutters between body and figure in the Tiny Flag component.",
+      "value": "{space.xs.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "gutter-small": {
+      "comment": "Value for the gutters between body and figure in the Small Flag component.",
+      "value": "{space.s.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "gutter-large": {
+      "comment": "Value for the gutters between body and figure in the Large Flag component.",
+      "value": "{space.l.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "gutter-huge": {
+      "comment": "Value for the gutters between body and figure in the Huge Flag component.",
+      "value": "{space.xl.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "stacked-breakpoint": {
+      "comment": "Value for the gutters between body and figure in the Stacked Flag component.",
+      "value": "25em",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    }
+  }
+}

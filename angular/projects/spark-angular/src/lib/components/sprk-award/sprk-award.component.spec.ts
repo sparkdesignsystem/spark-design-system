@@ -5,7 +5,6 @@ import { SprkAwardComponent } from './sprk-award.component';
 import { SprkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
-
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 
 describe('SprkAwardComponent', () => {
@@ -22,8 +21,8 @@ describe('SprkAwardComponent', () => {
         SprkToggleComponent,
         SprkStackComponent,
         SprkStackItemDirective,
-        SprkIconComponent
-      ]
+        SprkIconComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -31,6 +30,7 @@ describe('SprkAwardComponent', () => {
     fixture = TestBed.createComponent(SprkAwardComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');
+    fixture.detectChanges();
   });
 
   it('should create itself', () => {
@@ -41,15 +41,7 @@ describe('SprkAwardComponent', () => {
     component.splitAt = 'huge';
     fixture.detectChanges();
     expect(element.querySelector('div').classList.toString()).toEqual(
-      component.getClasses()
-    );
-  });
-
-  it('should add the correct class if splitAt is not set', () => {
-    component.splitAt = '';
-    fixture.detectChanges();
-    expect(component.getClasses()).toEqual(
-      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column'
+      component.getClasses(),
     );
   });
 
@@ -57,7 +49,7 @@ describe('SprkAwardComponent', () => {
     component.splitAt = 'tiny';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack--split@xs'
+      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack--split@xs',
     );
   });
 
@@ -65,7 +57,7 @@ describe('SprkAwardComponent', () => {
     component.splitAt = 'small';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack--split@s'
+      'sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack--split@s',
     );
   });
 
@@ -73,7 +65,7 @@ describe('SprkAwardComponent', () => {
     component.additionalClassesImgOne = 'test-img-one';
     fixture.detectChanges();
     expect(element.querySelector('img').classList.toString()).toEqual(
-      component.getClassesImgOne()
+      component.getClassesImgOne(),
     );
   });
 
@@ -81,7 +73,7 @@ describe('SprkAwardComponent', () => {
     component.additionalClassesImgTwo = 'test-img-two';
     fixture.detectChanges();
     expect(element.querySelectorAll('img')[1].classList.toString()).toEqual(
-      component.getClassesImgTwo()
+      component.getClassesImgTwo(),
     );
   });
 
@@ -89,7 +81,7 @@ describe('SprkAwardComponent', () => {
     component.splitAt = 'small';
     fixture.detectChanges();
     expect(component.getImgContainerClasses()).toEqual(
-      'sprk-o-Stack__item sprk-o-Stack__item--flex@s'
+      'sprk-o-Stack__item sprk-o-Stack__item--flex@s',
     );
   });
 
@@ -105,7 +97,7 @@ describe('SprkAwardComponent', () => {
     component.analyticsStringImgOne = str;
     fixture.detectChanges();
     expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(
-      str
+      str,
     );
   });
 
@@ -128,7 +120,7 @@ describe('SprkAwardComponent', () => {
     const testString = 'element-id';
     component.idString = testString;
     fixture.detectChanges();
-    element = fixture.nativeElement.querySelector('h2');
+    element = fixture.nativeElement.querySelector('div');
     expect(element.getAttribute('data-id')).toEqual(testString);
   });
 
@@ -136,7 +128,188 @@ describe('SprkAwardComponent', () => {
     const testString = null;
     component.idString = testString;
     fixture.detectChanges();
-    element = fixture.nativeElement.querySelector('h2');
+    element = fixture.nativeElement.querySelector('div');
     expect(element.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should respond to updates to title', () => {
+    let testString = 'initTitle';
+    component.title = testString;
+    fixture.detectChanges();
+    expect(element.querySelector('h2').textContent.trim()).toEqual(testString);
+
+    testString = 'updatedTitle';
+
+    component.title = testString;
+    fixture.detectChanges();
+    expect(element.querySelector('h2').textContent.trim()).toEqual(testString);
+  });
+
+  it('should respond to updates to heading', () => {
+    let testString = 'initHeading';
+    component.heading = testString;
+    fixture.detectChanges();
+    expect(element.querySelector('h2').textContent.trim()).toEqual(testString);
+
+    testString = 'updatedHeading';
+
+    component.heading = testString;
+    fixture.detectChanges();
+    expect(element.querySelector('h2').textContent.trim()).toEqual(testString);
+  });
+
+  it('should prefer heading over title', () => {
+    component.title = 'title2';
+    component.heading = 'heading2';
+    fixture.detectChanges();
+    expect(element.querySelector('h2').textContent.trim()).toEqual('heading2');
+  });
+
+  it('should respond to updates to analyticsStringImgOne', () => {
+    let testString = 'test1';
+    component.analyticsStringImgOne = testString;
+    fixture.detectChanges();
+    expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(
+      testString,
+    );
+
+    testString = 'test2';
+    component.analyticsStringImgOne = testString;
+    fixture.detectChanges();
+    expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(
+      testString,
+    );
+  });
+
+  it('should prefer imgOneAnalyticsString over analyticsStringImgOne', () => {
+    component.imgOneAnalyticsString = 'testNewInput';
+    component.analyticsStringImgOne = 'testOldInput';
+    fixture.detectChanges();
+    expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(
+      'testNewInput',
+    );
+  });
+
+  it('should respond to updates to analyticsStringImgTwo', () => {
+    let testString = 'test1';
+    component.analyticsStringImgTwo = testString;
+    fixture.detectChanges();
+    expect(
+      element.querySelectorAll('a')[1].getAttribute('data-analytics'),
+    ).toEqual(testString);
+
+    testString = 'test2';
+    component.analyticsStringImgTwo = testString;
+    fixture.detectChanges();
+    expect(
+      element.querySelectorAll('a')[1].getAttribute('data-analytics'),
+    ).toEqual(testString);
+  });
+
+  it('should prefer imgTwoAnalyticsString over analyticsStringImgTwo', () => {
+    component.imgTwoAnalyticsString = 'testNewInput';
+    component.analyticsStringImgTwo = 'testOldInput';
+    fixture.detectChanges();
+    expect(
+      element.querySelectorAll('a')[1].getAttribute('data-analytics'),
+    ).toEqual('testNewInput');
+  });
+
+  it('should respond to updates to analyticsStringDisclaimer', () => {
+    let testString = 'testDisclaimer';
+    component.disclaimerCopy = 'foo';
+    component.disclaimerTitle = 'bar';
+    component.analyticsStringDisclaimer = testString;
+    fixture.detectChanges();
+    expect(
+      element.querySelector('button').getAttribute('data-analytics'),
+    ).toEqual(testString);
+  });
+
+  it('should prefer disclaimerAnalyticsString over analyticsStringDisclaimer', () => {
+    const testOldProp = 'oldTest';
+    const testNewProp = 'newTest';
+    component.disclaimerCopy = 'foo';
+    component.disclaimerTitle = 'bar';
+    component.analyticsStringDisclaimer = testOldProp;
+    component.disclaimerAnalyticsString = testNewProp;
+    fixture.detectChanges();
+    expect(
+      element.querySelector('button').getAttribute('data-analytics'),
+    ).toEqual(testNewProp);
+  });
+
+  it('should respond to updates to additionalClassesImgOne', () => {
+    let testString = 'testClass';
+    component.additionalClassesImgOne = testString;
+    fixture.detectChanges();
+    expect(element.querySelector('img').classList.contains(testString)).toBe(
+      true,
+    );
+
+    testString = 'anotherClass';
+    component.additionalClassesImgOne = testString;
+    fixture.detectChanges();
+    expect(element.querySelector('img').classList.contains(testString)).toBe(
+      true,
+    );
+  });
+
+  it('should prefer imgOneAdditionalClasses over additionalClassesImgOne', () => {
+    const testOldProp = 'testClass';
+    const testNewProp = 'testNewClass';
+    component.additionalClassesImgOne = testOldProp;
+    component.imgOneAdditionalClasses = testNewProp;
+    fixture.detectChanges();
+    expect(element.querySelector('img').classList.contains(testNewProp)).toBe(
+      true,
+    );
+    expect(element.querySelector('img').classList.contains(testOldProp)).toBe(
+      false,
+    );
+  });
+
+  it('should respond to updates to additionalClassesImgTwo', () => {
+    let testString = 'testClass';
+    component.additionalClassesImgTwo = testString;
+    fixture.detectChanges();
+    expect(
+      element.querySelectorAll('img')[1].classList.contains(testString),
+    ).toBe(true);
+
+    testString = 'anotherClass';
+    component.additionalClassesImgTwo = testString;
+    fixture.detectChanges();
+    expect(
+      element.querySelectorAll('img')[1].classList.contains(testString),
+    ).toBe(true);
+  });
+
+  it('should prefer imgTwoAdditionalClasses over additionalClassesImgTwo', () => {
+    const testOldProp = 'testClass';
+    const testNewProp = 'testNewClass';
+    component.additionalClassesImgTwo = testOldProp;
+    component.imgTwoAdditionalClasses = testNewProp;
+    fixture.detectChanges();
+    expect(
+      element.querySelectorAll('img')[1].classList.contains(testNewProp),
+    ).toBe(true);
+    expect(
+      element.querySelectorAll('img')[1].classList.contains(testOldProp),
+    ).toBe(false);
+  });
+
+  it('should only display the toggle if both Inputs are provided', () => {
+    fixture.detectChanges();
+    expect(element.querySelectorAll('.sprk-c-Toggle').length).toEqual(0);
+
+    component.disclaimerCopy = 'copy';
+    fixture.detectChanges();
+    expect(element.querySelectorAll('.sprk-c-Toggle').length).toEqual(0);
+
+    component.disclaimerCopy = 'copy';
+    component.disclaimerTitle = 'title';
+    fixture.detectChanges();
+    expect(element.querySelectorAll('.sprk-c-Toggle').length).toEqual(1);
   });
 });

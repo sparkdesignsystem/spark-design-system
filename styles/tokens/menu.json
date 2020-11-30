@@ -1,0 +1,54 @@
+  {
+    "menu": {
+      "icon": {
+        "bg-color": {
+          "comment": "The background color of the menu icon.",
+          "value": "{white.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "stroke-width": {
+          "comment": "The stroke width of the menu icon.",
+          "value": "2px",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "stroke": {
+          "comment": "The stroke of the menu icon.",
+          "value": "{black.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "transition": {
+          "comment": "The transition on the menu icon that turns the menu icon into an 'X'.",
+          "value": "transform 0.3s ease-in-out, opacity 0.2s ease-in-out",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "line-one-transform-origin": {
+          "comment": "The transform origin of the 'X' state of the menu for the first menu line. Only needs to be changed if using a custom width and height.",
+          "value": "1rem 1.5rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "line-three-transform-origin": {
+          "comment": "The transform origin of the 'X' state of the menu for the third menu line. Only needs to be changed if using a custom width and height.",
+          "value": "1rem 2.5rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      }
+    }
+  }

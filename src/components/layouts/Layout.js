@@ -76,11 +76,7 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
               Skip to Main Content
             </SprkLink>
           </div>
-          <div
-            className="sprk-u-BackgroundColor--black
-            sprk-u-pam
-            sprk-u-AbsoluteCenter"
-          >
+          <div className="sprk-u-BackgroundColor--black sprk-u-AbsoluteCenter sprk-u-pam">
             <p className="sprk-u-Color--white">
               Designs launching
               <span className="sprk-u-FontWeight--bold sprk-u-mas">before</span>
@@ -730,7 +726,9 @@ Layout.defaultProps = {
 
 Layout.propTypes = {
   children: PropTypes.node,
-  location: PropTypes.string,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }),
   hasSideBar: PropTypes.bool,
   initialContext: PropTypes.string,
 };

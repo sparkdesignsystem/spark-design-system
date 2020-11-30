@@ -68,11 +68,11 @@ class SprkModal extends Component {
   }
 
   isTabPressed(e) {
-    e.key === 'Tab' || e.keyCode === 9;
+    return e.key === 'Tab' || e.keyCode === 9;
   }
   
   isEscPressed(e) {
-    e.key === 'Escape' || e.keyCode === 27;
+    return e.key === 'Escape' || e.keyCode === 27;
   }
 
   getFocusableEls(containerRef) {
@@ -87,7 +87,7 @@ class SprkModal extends Component {
   }
 
   isActiveElement(elementRef) {
-    document.activeElement === elementRef;
+    return document.activeElement === elementRef;
   }
 
   setExternalFocus() {
@@ -164,7 +164,6 @@ class SprkModal extends Component {
         this.cancel();
       }
     }
-
     if (this.isTabPressed(e)) {
       if (variant === 'wait') {
         e.preventDefault();
