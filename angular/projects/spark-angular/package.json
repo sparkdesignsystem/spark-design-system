@@ -1,7 +1,9 @@
 {
   "name": "@sparkdesignsystem/spark-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
-  "version": "12.0.0",
+  "version": "12.0.1",
+  "author": "Quicken Loans",
+  "license": "MIT",
   "scripts": {
     "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
     "copy:schemas": "cp schematics/ng-add/schema.json ../../dist/spark-angular/schematics/ng-add/schema.json",
