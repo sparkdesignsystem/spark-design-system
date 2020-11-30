@@ -164,7 +164,6 @@ class SprkModal extends Component {
         this.cancel();
       }
     }
-    
     if (this.isTabPressed(e)) {
       if (variant === 'wait') {
         e.preventDefault();

@@ -19,7 +19,6 @@ ng add @sparkdesignsystem/spark-angular
 This single command will:
 
 - Install `@sparkdesignsystem/spark-angular` as a dev dependency.
-- Install `@sparkdesignsystem/spark` as a dev dependency.
 - Import the `SparkAngularModule` into your root module.
 - Import the `BrowserAnimationsModule` into your root module.
 - Import the Spark stylesheet in your styles file.

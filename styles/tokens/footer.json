@@ -1,0 +1,89 @@
+{
+  "footer": {
+    "background-color": {
+      "comment": "Background color of the Footer.",
+      "value": "{black.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "text-color": {
+      "comment": "Text color on the Footer.",
+      "value": "{white.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "link": {
+      "color": {
+        "comment": "Link color on the Footer.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "font-weight": {
+        "comment": "Link font-weight on the Footer.",
+        "value": "normal",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "icon-color": {
+      "comment": "Icon color on the Footer.",
+      "value": "{white.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "trigger": {
+      "color": {
+        "comment": "Toggle trigger color on the Footer.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "font-weight": {
+        "comment": "Toggle trigger font-weight on the Footer.",
+        "value": "normal",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "hover-color": {
+        "comment": "Toggle trigger hover color on the Footer.",
+        "value": "{purple-light.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "toggle-transition": {
+      "comment": "Toggle transition timing on the Footer.",
+      "value": "0.3s",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    }
+  }
+}

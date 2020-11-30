@@ -1,0 +1,51 @@
+{
+  "layer": {
+    "height":{
+      "xs": {
+        "comment": "The extra small z-index value setting.",
+        "value": "1",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "layer",
+        "themable": true
+      },
+      "s": {
+        "comment": "The small z-index value setting.",
+        "value": "1000",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "layer",
+        "themable": true
+      },
+      "m": {
+        "comment": "The medium z-index value setting.",
+        "value": "2000",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "layer",
+        "themable": true
+      },
+      "l": {
+        "comment": "The large z-index value setting.",
+        "value": "3000",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "layer",
+        "themable": true
+      },
+      "xl": {
+        "comment": "The extra large z-index value setting.",
+        "value": "9999",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "layer",
+        "themable": true
+      }
+    }
+  }
+}

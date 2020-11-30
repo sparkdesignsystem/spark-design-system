@@ -10,14 +10,15 @@
   },
   "scripts": {
     "build": "npm run prebuild && gatsby build",
+    "build-styles": "cd './styles/' && npm install && node build.js",
     "develop": "npm run prebuild && gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "prebuild": "npm run clean && npm run sassdoc && npm run sassdocmodifiers && npm run sassdocutilities",
-    "sassdoc": "sassdoc './html/settings/**/*.scss' --parse > ./src/data/sass-vars.json",
+    "prebuild": "npm run build-styles && npm run clean && npm run sassdoc && npm run sassdocmodifiers && npm run sassdocutilities",
+    "sassdoc": "sassdoc './styles/web/scss/**/_*.scss' --parse > ./src/data/sass-vars.json",
     "clean": "gatsby clean",
-    "sassdocmodifiers": "sassdoc './html/**/_*.scss' --parse > ./src/data/sass-modifiers.json",
-    "sassdocutilities": "sassdoc './html/utilities/_*.scss' --parse > ./src/data/sass-utilities.json"
+    "sassdocmodifiers": "sassdoc './styles/**/_*.scss' --parse > ./src/data/sass-modifiers.json",
+    "sassdocutilities": "sassdoc './styles/utilities/_*.scss' --parse > ./src/data/sass-utilities.json"
   },
   "lint-staged": {
     "*.scss": [
@@ -44,8 +45,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.0",
     "@mdx-js/react": "^1.5.0",
-    "@sparkdesignsystem/spark": "^14.0.0",
-    "@sparkdesignsystem/spark-react": "^3.0.0",
+    "@sparkdesignsystem/spark-react": "^4.0.0",
     "babel-plugin-react-docgen": "^3.1.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.20.24",

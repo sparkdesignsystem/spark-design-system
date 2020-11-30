@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkButton from './SprkButton';
+import SprkSpinner from '../spinners/SprkSpinner';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -11,30 +12,34 @@ export default {
     info: `
 ${markdownDocumentationLinkBuilder('button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
-The Button component can use either a button (\`<button>\`)
-or anchor (\`<a>\`) HTML element. It is very important
-for accessibility to choose the correct element.
+SprkButton can either render as a button (\`<button>\`)
+or an anchor (\`<a>\`) element. It is very important
+for accessibility to choose the correct HTML element.
 
-- Button should use an \`<a>\` element if it navigates to a new page.
-- Button should use a \`<button>\` element if it is performing
-an action, such as: “Submit”, “Add”, “Join”,” etc.
-- A Button that does not go to a new page will almost
-always use a \`<button>\` element.
+- Render as a link (\`<a>\`) element if the button navigates to a new page.
+  - Set by adding the \`element="a"\` prop to SprkButton.
+
+- Render as a button (\`<button>\`) element if
+it performs an action such as: “Submit”, “Add”, “Join”,” etc.
+They typically do not navigate to a new page.
+  - Set by adding the \`element="button"\` prop to SprkButton.
+
+- The \`element\` prop will default
+SprkButton to render as a \`button\` element..
 
 ##### Accessibility
-- If a Button is using an \`<a>\` element, you
-must include a \`title=””\` attribute.
-- If a Button only includes an Icon with no text,
-alternative text must be provided.
+- If SprkButton is using an \`<a>\` element, include a \`title=””\` attribute.
+- If SprkButton contains an Icon with no text,
+provide alternative text for screen readers.
+- Screen readers read SprkSpinner as "Loading" by default.
+This can change through the \`altText\` prop on SprkSpinner.
 
 ##### Guidelines
-- If a Button is in a form, but is not intended to
-submit the form, the attribute \`type=”button”\` must be used.
-- If a Button submits a form, do not use \`<input type="submit">\`.
-Instead use \`<button type=”submit”>\`
-- If a Button is Disabled, you must add the \`disabled\` attribute
-in addition to the \`sprk-is-Disabled\` class so that it doesn’t
-receive interaction.
+- If SprkButton is in a form, but is not intended to
+submit the form, add \`type=”button”\` the attribute.
+- Spinner state requires additional engineering.
+  - Use app state to conditionally render between button text and spinner.
+  - Add \`isSpinning\` on SprkButton when spinner is present.
 `,
   },
 };
@@ -76,14 +81,18 @@ export const quaternary = () => (
 );
 
 export const disabled = () => (
-  <SprkButton disabled idString="button-5" analyticsString="button-5-analytics">
+  <SprkButton
+    isDisabled
+    idString="button-5"
+    analyticsString="button-5-analytics"
+  >
     Button
   </SprkButton>
 );
 
 export const disabledSecondary = () => (
   <SprkButton
-    disabled
+    isDisabled
     variant="secondary"
     idString="button-6"
     analyticsString="button-6-analytics"
@@ -94,7 +103,7 @@ export const disabledSecondary = () => (
 
 export const disabledTertiary = () => (
   <SprkButton
-    disabled
+    isDisabled
     variant="tertiary"
     idString="button-7"
     analyticsString="button-7-analytics"
@@ -105,7 +114,7 @@ export const disabledTertiary = () => (
 
 export const disabledQuaternary = () => (
   <SprkButton
-    disabled
+    isDisabled
     variant="quaternary"
     idString="button-8"
     analyticsString="button-8-analytics"
@@ -115,41 +124,45 @@ export const disabledQuaternary = () => (
 );
 
 export const spinning = () => (
-  <SprkButton loading idString="button-9" analyticsString="button-9-analytics">
-    Button
+  <SprkButton
+    idString="button-9"
+    analyticsString="button-9-analytics"
+    isSpinning
+  >
+    <SprkSpinner />
   </SprkButton>
 );
 
 export const spinningSecondary = () => (
   <SprkButton
-    loading
     variant="secondary"
     idString="button-10"
     analyticsString="button-10-analytics"
+    isSpinning
   >
-    Button
+    <SprkSpinner variant="primary" />
   </SprkButton>
 );
 
 export const spinningTertiary = () => (
   <SprkButton
-    loading
     variant="tertiary"
     idString="button-11"
     analyticsString="button-11-analytics"
+    isSpinning
   >
-    Button
+    <SprkSpinner variant="secondary" />
   </SprkButton>
 );
 
 export const spinningQuaternary = () => (
   <SprkButton
-    loading
     variant="quaternary"
     idString="button-12"
     analyticsString="button-12-analytics"
+    isSpinning
   >
-    Button
+    <SprkSpinner variant="dark" />
   </SprkButton>
 );
 

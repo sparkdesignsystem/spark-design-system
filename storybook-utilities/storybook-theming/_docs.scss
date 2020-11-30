@@ -1,5 +1,7 @@
-@import '../html/settings/colors';
-@import '../html/settings/settings';
+/* stylelint-disable selector-class-pattern */
+
+@import '../../styles/web/scss/colors';
+@import '../../styles/web/scss/settings';
 @import './scss/spacing';
 
 .sbdocs .sbdocs-a {
