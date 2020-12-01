@@ -10,8 +10,11 @@ describe('toggle value tests', () => {
     expect(toggleValue('value2', 'value1', 'value2')).toBe('value1');
   });
 
-  it('if the current value is not equal to value 1 or value 2,'
-    + 'return value 1', () => {
-    expect(toggleValue('value000', 'value1', 'value2')).toBe('value1');
-  });
+  it(
+    'if the current value is not equal to value 1 or value 2,' +
+      'return value 1',
+    () => {
+      expect(toggleValue('value000', 'value1', 'value2')).toBe('value1');
+    },
+  );
 });

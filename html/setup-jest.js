@@ -1,4 +1,5 @@
 import sinon from 'sinon';
+
 global.sinon = sinon;
 global.document = window.document;
 global.window = window;

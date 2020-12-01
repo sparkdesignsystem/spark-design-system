@@ -1,12 +1,7 @@
 import getElements from '../../utilities/getElements';
-import
-setValidTextInput
-  from '../../utilities/validation/setValidTextInput';
-import
-setInvalidTextInput
-  from '../../utilities/validation/setInvalidTextInput';
-import
-runValidation from '../../utilities/validation/validation-runner';
+import setValidTextInput from '../../utilities/validation/setValidTextInput';
+import setInvalidTextInput from '../../utilities/validation/setInvalidTextInput';
+import runValidation from '../../utilities/validation/validation-runner';
 
 const formatPhone = (value) => {
   const newValue = `${value}`.replace(/\D/g, '');

@@ -7,7 +7,7 @@ describe('generateIdForInput tests', () => {
 
   global.console = {
     warn: jest.fn(),
-  }
+  };
 
   beforeEach(() => {
     inputElement = document.createElement('input');
@@ -23,7 +23,8 @@ describe('generateIdForInput tests', () => {
     expect(labelElement.htmlFor).toEqual(inputElement.getAttribute('id'));
   });
 
-  it('should not change values if for and id are both present and have correct values', () => {
+  it(`should not change values if for and id are both 
+      present and have correct values`, () => {
     inputElement.setAttribute('id', 'test');
     labelElement.htmlFor = 'test';
     generateIdForInput(inputElement, labelElement, 'component');
@@ -35,22 +36,24 @@ describe('generateIdForInput tests', () => {
     labelElement.htmlFor = 'test';
     expect(inputElement.hasAttribute('id')).toEqual(false);
     expect(labelElement.htmlFor).toMatch('test');
-
     generateIdForInput(inputElement, labelElement, 'component');
+
     expect(global.console.warn).toHaveBeenCalledWith(
-      'Spark Design System Warning - The value of \'for\' (test) on the label expects a matching \'id\' on the input.'
-    )
+      `Spark Design System Warning - The value of 'for' (test) on the 
+      label expects a matching 'id' on the input.`,
+    );
   });
 
-  it('should console.warn if for and id both exist but don\'t match', () => {
+  it("should console.warn if for and id both exist but don't match", () => {
     labelElement.htmlFor = 'test';
     inputElement.setAttribute('id', 'test-1');
     expect(labelElement.htmlFor).toMatch('test');
     expect(inputElement.id).toMatch('test-1');
-
     generateIdForInput(inputElement, labelElement, 'component');
+
     expect(global.console.warn).toHaveBeenCalledWith(
-      'Spark Design System Warning - The value of \'for\' (test) on the label should match the \'id\' on the input (test-1).'
+      `Spark Design System Warning - The value of 'for' (test) on the 
+      label should match the 'id' on the input (test-1).`,
     );
   });
 });

@@ -2,11 +2,10 @@ import { useEffect } from '@storybook/client-api';
 import { tabs } from './tabs';
 import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
-
 export default {
   title: 'Components/Tabs',
   decorators: [
-    story => `<div class="sprk-o-Box sprk-u-JavaScript">${story()}</div>`,
+    (story) => `<div class="sprk-o-Box sprk-u-JavaScript">${story()}</div>`,
   ],
   parameters: {
     docs: { iframeHeight: 300 },
@@ -134,5 +133,5 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['tabs'],
-  }
+  },
 };

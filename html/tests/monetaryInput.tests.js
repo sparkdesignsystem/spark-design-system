@@ -1,4 +1,4 @@
-/* global window document describe it beforeEach afterEach */
+/* global window document describe it beforeEach afterEach sinon */
 import {
   monetaryInput,
   formatMonetary,
@@ -20,8 +20,9 @@ describe('monetaryInput init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     monetaryInput();
-    expect(document.querySelectorAll.getCall(0)
-      .args[0]).toBe('[data-sprk-input="monetary"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-input="monetary"]',
+    );
   });
 });
 
@@ -66,11 +67,10 @@ describe('bindUIEvents', () => {
   beforeEach(() => {
     div = document.createElement('div');
     field = document.createElement('input');
-    field
-      .setAttribute(
-        'pattern',
-        '(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$',
-      );
+    field.setAttribute(
+      'pattern',
+      '(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$',
+    );
     field.value = '123';
     div.appendChild(field);
   });
@@ -94,7 +94,7 @@ describe('bindUIEvents', () => {
     expect(field.addEventListener.getCall(1).args[0]).toBe('blur');
   });
 
-  it('should format when blur is triggered with valid input', done => {
+  it('should format when blur is triggered with valid input', (done) => {
     sinon.spy(field, 'addEventListener');
     bindUIEvents(div);
     event = new window.Event('blur');
@@ -103,7 +103,7 @@ describe('bindUIEvents', () => {
     expect(field.value).toBe('123.00');
   });
 
-  it('should not format when blur is triggered with no value', done => {
+  it('should not format when blur is triggered with no value', (done) => {
     sinon.spy(field, 'addEventListener');
     bindUIEvents(div);
     field.value = '';
@@ -113,7 +113,7 @@ describe('bindUIEvents', () => {
     expect(field.value).toBe('');
   });
 
-  it('should not format when blur is triggered with invalid input', done => {
+  it('should not format when blur is triggered with invalid input', (done) => {
     sinon.spy(field, 'addEventListener');
     bindUIEvents(div);
     field.value = 'abc';

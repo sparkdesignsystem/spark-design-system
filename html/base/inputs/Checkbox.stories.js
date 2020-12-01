@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { useEffect } from '@storybook/client-api';
 import { checkbox } from './checkbox';
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -17,7 +16,8 @@ use the tabindex attribute to change this.
 - Change the value of the aria-checked attribute
 dynamically when the checkbox is activated.
 
-###### Ensure all related checkboxes are grouped together using one of the following methods:
+###### Ensure all related checkboxes are grouped together using 
+one of the following methods:
 
 - Fieldset and legend tags
 - ARIA groups role="group" and aria-label or aria-labelledby

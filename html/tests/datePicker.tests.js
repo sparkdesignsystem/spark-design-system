@@ -1,4 +1,4 @@
-/* global window document beforeEach describe it afterEach */
+/* global window document beforeEach describe it afterEach sinon */
 
 describe('datePicker tests', () => {
   let dp;
@@ -30,10 +30,10 @@ describe('datePicker tests', () => {
     input.type = 'text';
     input.setAttribute(
       'pattern',
-      '^(((0[1358]|1[02])([\\/-]?)'
-      + '(0[1-9]|[12]\\d|3[01])|(0[469]|11)'
-      + '([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)'
-      + '((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$',
+      '^(((0[1358]|1[02])([\\/-]?)' +
+        '(0[1-9]|[12]\\d|3[01])|(0[469]|11)' +
+        '([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)' +
+        '((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$',
     );
     sinon.spy(input, 'addEventListener');
     inputContainer.appendChild(input);

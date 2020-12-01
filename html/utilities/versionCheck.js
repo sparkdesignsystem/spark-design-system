@@ -1,3 +1,4 @@
+/* global SPRK_CURRENT_VERSION */
 const versionCheck = () => {
   if (window) {
     window.sprk = {

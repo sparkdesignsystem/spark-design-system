@@ -2,7 +2,7 @@
 const getElements = (selector, functionToCallOnEachItem) => {
   const elements = document.querySelectorAll(selector);
   if (elements.length > 0) {
-    elements.forEach(element => {
+    elements.forEach((element) => {
       functionToCallOnEachItem(element);
     });
   }

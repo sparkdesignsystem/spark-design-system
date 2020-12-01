@@ -1,4 +1,4 @@
-/* global document describe beforeEach afterEach it */
+/* global document describe beforeEach afterEach it sinon */
 import { pagination, setItemLabels } from '../components/pagination';
 
 describe('pagination init', () => {
@@ -21,7 +21,9 @@ describe('pagination init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     pagination();
-    expect(document.querySelectorAll.getCall(1).args[0]).toBe('a[data-sprk-pagination]');
+    expect(document.querySelectorAll.getCall(1).args[0]).toBe(
+      'a[data-sprk-pagination]',
+    );
   });
 });
 
@@ -45,6 +47,8 @@ describe('setItemLabels tests', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     setItemLabels();
-    expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-pagination="item"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-pagination="item"]',
+    );
   });
 });
