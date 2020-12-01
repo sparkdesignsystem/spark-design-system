@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node build.js && npm run build-css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass ./_spark.scss web/spark.min.css --output-style compressed",
+    "build-css": "node-sass ./_spark.scss web/css/spark.min.css --output-style compressed",
     "prepublishOnly": "npm run build"
   },
   "repository": {
