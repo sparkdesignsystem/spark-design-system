@@ -24,6 +24,13 @@ const TokenTable = () => {
     name: item.node.context.name,
     value: item.node.context.value,
     description: item.node.description,
+    flattenedData: [
+      item.node.context.name,
+      item.node.context.value,
+      item.node.description,
+    ]
+      .join(' ')
+      .toLowerCase(),
   }));
 
   const [filteredData, setFilteredData] = useState(sassVarData);
@@ -34,12 +41,9 @@ const TokenTable = () => {
       setFilteredData(sassVarData);
       return;
     }
-    const getFilteredData = sassVarData.filter(
-      ({ name, value, description }) => {
-        const joinedValue = [name, value, description].join(' ').toLowerCase();
-        return joinedValue.includes(query.toLowerCase());
-      },
-    );
+    const getFilteredData = sassVarData.filter(({ flattenedData }) => {
+      return flattenedData.includes(query.toLowerCase());
+    });
     setFilteredData(getFilteredData);
   }, [query]);
 
