@@ -1,4 +1,4 @@
-/* global document describe beforeEach afterEach it  window  */
+/* global document describe beforeEach afterEach it window sinon */
 import { dismissAlert, alerts, bindUIEvents } from '../components/alerts';
 
 describe('Alert tests', () => {
@@ -31,7 +31,9 @@ describe('Alert tests', () => {
 
   it('should call getElements once with the correct selector', () => {
     alerts();
-    expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-alert="container"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-alert="container"]',
+    );
   });
 
   it('should bind the click event if a dismiss button is present', () => {

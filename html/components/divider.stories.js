@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Divider',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('divider')}
@@ -13,12 +11,12 @@ ${markdownDocumentationLinkBuilder('divider')}
   },
 };
 
-export const defaultStory = () => (`
+export const defaultStory = () => `
   <span
     class="sprk-c-Divider"
     data-id="divider-1"
   ></span>
-`);
+`;
 
 defaultStory.story = {
   name: 'Default',

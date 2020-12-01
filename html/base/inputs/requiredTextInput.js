@@ -1,10 +1,6 @@
 import getElements from '../../utilities/getElements';
-import
-setValidTextInput
-  from '../../utilities/validation/setValidTextInput';
-import
-setInvalidTextInput
-  from '../../utilities/validation/setInvalidTextInput';
+import setValidTextInput from '../../utilities/validation/setValidTextInput';
+import setInvalidTextInput from '../../utilities/validation/setInvalidTextInput';
 
 const runValidation = (element) => {
   const field = element.querySelector('input');
@@ -32,10 +28,7 @@ const bindUIEvents = (element) => {
 };
 
 const requiredTextInput = () => {
-  getElements(
-    '[data-sprk-required-only="text"]',
-    bindUIEvents,
-  );
+  getElements('[data-sprk-required-only="text"]', bindUIEvents);
 };
 
 export { requiredTextInput, runValidation, bindUIEvents };

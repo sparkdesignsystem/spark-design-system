@@ -23,7 +23,7 @@ const addClassOnScroll = (element, scrollPos, scrollPoint, classToToggle) => {
  * on if the user is scrolling up or down
  */
 let direction = scrollYDirection();
-const toggleMenu = scrollDirection => {
+const toggleMenu = (scrollDirection) => {
   const masthead = document.querySelector('[data-sprk-masthead]');
   if (scrollDirection === 'down') {
     masthead.classList.add('sprk-c-Masthead--hidden');
@@ -50,7 +50,7 @@ const checkScrollDirection = throttle(() => {
  * add the check scroll event listener
  * otherwise remove it
  */
-const toggleScrollEvent = isMenuVisible => {
+const toggleScrollEvent = (isMenuVisible) => {
   let attached = false;
   if (!isMenuVisible) {
     const masthead = document.querySelector('[data-sprk-masthead]');
@@ -99,27 +99,27 @@ const hideMobileNavs = () => {
   document.documentElement.classList.remove('sprk-u-Overflow--hidden');
   document.body.classList.remove('sprk-u-Height--100');
   document.documentElement.classList.remove('sprk-u-Height--100');
-  getElements('[data-sprk-mobile-nav]', item => {
+  getElements('[data-sprk-mobile-nav]', (item) => {
     item.classList.add('sprk-u-Display--none');
   });
-  getElements('.sprk-c-Menu__icon--open', item => {
+  getElements('.sprk-c-Menu__icon--open', (item) => {
     item.classList.remove('sprk-c-Menu__icon--open');
   });
-  getElements('.sprk-c-Masthead--open', item => {
+  getElements('.sprk-c-Masthead--open', (item) => {
     item.classList.remove('sprk-c-Masthead--open');
   });
 };
 
-const hideSelectorMask = mastheadSelectorMask => {
+const hideSelectorMask = (mastheadSelectorMask) => {
   mastheadSelectorMask.classList.remove('sprk-c-MastheadMask');
 };
 
-const showSelectorMask = mastheadSelectorMask => {
+const showSelectorMask = (mastheadSelectorMask) => {
   mastheadSelectorMask.classList.add('sprk-c-MastheadMask');
 };
 
 const bindUIEvents = () => {
-  getElements('[data-sprk-mobile-nav-trigger]', element => {
+  getElements('[data-sprk-mobile-nav-trigger]', (element) => {
     const mainLayout = document.querySelector('[data-sprk-main]');
     const masthead = document.querySelector('[data-sprk-masthead]');
     const selectorDropdown = document.querySelector(
@@ -173,7 +173,7 @@ const bindUIEvents = () => {
       }, 500),
     );
 
-    element.addEventListener('click', e => {
+    element.addEventListener('click', (e) => {
       e.preventDefault();
       toggleMobileNav(element, nav, masthead);
     });
@@ -230,7 +230,7 @@ const bindUIEvents = () => {
         }
       });
 
-      selectorDropdownChoices.forEach(choice => {
+      selectorDropdownChoices.forEach((choice) => {
         choice.addEventListener('click', () => {
           hideSelectorMask(mastheadSelectorMask);
         });
@@ -248,7 +248,7 @@ const bindUIEvents = () => {
         }
       });
 
-      document.addEventListener('click', e => {
+      document.addEventListener('click', (e) => {
         if (
           !(
             selectorTrigger.contains(e.target) ||
@@ -259,7 +259,7 @@ const bindUIEvents = () => {
         }
       });
 
-      document.addEventListener('focusin', e => {
+      document.addEventListener('focusin', (e) => {
         /* istanbul ignore else: jsdom cant fire focusin on an element */
         if (!selectorDropdown.contains(e.target)) {
           hideSelectorMask(mastheadSelectorMask);
@@ -267,7 +267,7 @@ const bindUIEvents = () => {
         }
       });
 
-      document.addEventListener('keydown', e => {
+      document.addEventListener('keydown', (e) => {
         if (isEscPressed(e)) {
           hideSelectorMask(mastheadSelectorMask);
         }

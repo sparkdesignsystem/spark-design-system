@@ -1,4 +1,4 @@
-/* global document describe beforeEach it */
+/* global document describe beforeEach it sinon */
 import {
   hugeInput,
   bindUIEventsHugeInput,
@@ -51,7 +51,9 @@ describe('hugeInput tests', () => {
   it('should not add class to empty inputs', () => {
     input.value = '';
     hugeInput();
-    expect(input.classList.contains('sprk-b-TextInput--float-label')).toBe(false);
+    expect(input.classList.contains('sprk-b-TextInput--float-label')).toBe(
+      false,
+    );
   });
 
   it('should bind the input event to the new input elements', () => {
@@ -74,14 +76,18 @@ describe('hugeInput tests', () => {
     select.value = 'test-value';
     const event = new window.Event('change');
     select.dispatchEvent(event);
-    expect(select.classList.contains('sprk-b-Input--has-floating-label')).toBe(true);
+    expect(select.classList.contains('sprk-b-Input--has-floating-label')).toBe(
+      true,
+    );
   });
 
   it('should not add class when change event fires and has no value', () => {
     bindUIEventsHugeInput(select);
     const event = new window.Event('change');
     select.dispatchEvent(event);
-    expect(select.classList.contains('sprk-b-Input--has-floating-label')).toBe(false);
+    expect(select.classList.contains('sprk-b-Input--has-floating-label')).toBe(
+      false,
+    );
   });
 
   it('should add a class to old inputs with values on load event', () => {
@@ -89,7 +95,9 @@ describe('hugeInput tests', () => {
     input.value = 'test-value';
     const event = new window.Event('load');
     window.dispatchEvent(event);
-    expect(input.classList.contains('sprk-b-TextInput--float-label')).toBe(true);
+    expect(input.classList.contains('sprk-b-TextInput--float-label')).toBe(
+      true,
+    );
   });
 
   it('should add a class to new inputs with values on load event', () => {
@@ -97,7 +105,9 @@ describe('hugeInput tests', () => {
     inputNew.value = 'test-value';
     const event = new window.Event('load');
     window.dispatchEvent(event);
-    expect(inputNew.classList.contains('sprk-b-Input--has-floating-label')).toBe(true);
+    expect(
+      inputNew.classList.contains('sprk-b-Input--has-floating-label'),
+    ).toBe(true);
   });
 
   it('should add a class to selects with values on load event', () => {
@@ -105,6 +115,8 @@ describe('hugeInput tests', () => {
     select.value = 'test-value';
     const event = new window.Event('load');
     window.dispatchEvent(event);
-    expect(select.classList.contains('sprk-b-Input--has-floating-label')).toBe(true);
+    expect(select.classList.contains('sprk-b-Input--has-floating-label')).toBe(
+      true,
+    );
   });
 });

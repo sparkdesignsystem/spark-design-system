@@ -1,13 +1,14 @@
 import { useEffect } from '@storybook/client-api';
 import '../utilities/polyfills/classListSVG';
-import { getIcons, attachIcons } from '../../storybook-utilities/icon-utilities/icon-name-util';
+import {
+  getIcons,
+  attachIcons,
+} from '../../storybook-utilities/icon-utilities/icon-name-util';
 import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Icons',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('icon')}
@@ -39,13 +40,12 @@ communicate the Icon’s meaning.
   },
 };
 
-export const defaultStory = () => (
+export const defaultStory = () =>
   `
   <svg class="sprk-c-Icon sprk-c-Icon--xl" viewBox="0 0 100 100">
     <use xlink:href="#access" />
   </svg>
-  `
-);
+  `;
 
 defaultStory.story = {
   name: 'Default',
@@ -60,9 +60,15 @@ export const Gallery = () => {
     attachIcons(getIcons());
   }, []);
 
-  return (
-    '<ul class="sbdocs-gallery-container sprk-o-Stack sprk-o-Stack--split@xs"></ul>'
-  );
+  return `
+    <ul 
+      class="
+        sbdocs-gallery-container 
+        sprk-o-Stack 
+        sprk-o-Stack--split@xs
+      ">
+    </ul>
+  `;
 };
 
 Gallery.story = {
