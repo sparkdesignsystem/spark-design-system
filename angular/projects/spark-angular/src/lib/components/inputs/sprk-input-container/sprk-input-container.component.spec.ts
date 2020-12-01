@@ -7,7 +7,6 @@ import { SprkSelectDirective } from '../../../directives/inputs/sprk-select/sprk
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 import { SparkInputContainerComponent } from './sprk-input-container.component';
 import { SprkIconComponent } from '../../sprk-icon/sprk-icon.component';
-
 @Component({
   selector: 'sprk-test-1',
   template: `
@@ -79,31 +78,67 @@ class Test3Component {}
 })
 class Test4Component {}
 
+@Component({
+  selector: 'sprk-test-5',
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Label!</label>
+      <input sprkInput id="example-id" />
+      <p sprkHelperText>Helper Text!</p>
+      <span sprkFieldError>Error Message!</span>
+    </sprk-input-container>
+  `,
+})
+class Test5Component {}
+
+@Component({
+  selector: 'sprk-test-6',
+  template: `
+    <sprk-input-container>
+      <label sprkLabel for="example-for">Label!</label>
+      <input sprkInput />
+      <p sprkHelperText>Helper Text!</p>
+      <span sprkFieldError>Error Message!</span>
+    </sprk-input-container>
+  `,
+})
+class Test6Component {}
+
 describe('SparkInputContainerComponent', () => {
   let component1: Test1Component;
   let component2: Test2Component;
   let component3: Test3Component;
   let component4: Test4Component;
+  let component5: Test5Component;
+  let component6: Test6Component;
 
   let testFixture1: ComponentFixture<Test1Component>;
   let testFixture2: ComponentFixture<Test2Component>;
   let testFixture3: ComponentFixture<Test3Component>;
   let testFixture4: ComponentFixture<Test4Component>;
+  let testFixture5: ComponentFixture<Test5Component>;
+  let testFixture6: ComponentFixture<Test6Component>;
 
   let inputContainerComponent1: SparkInputContainerComponent;
   let inputContainerComponent2: SparkInputContainerComponent;
   let inputContainerComponent3: SparkInputContainerComponent;
   let inputContainerComponent4: SparkInputContainerComponent;
+  let inputContainerComponent5: SparkInputContainerComponent;
+  let inputContainerComponent6: SparkInputContainerComponent;
 
   let inputContainerFixture1: ComponentFixture<SparkInputContainerComponent>;
   let inputContainerFixture2: ComponentFixture<SparkInputContainerComponent>;
   let inputContainerFixture3: ComponentFixture<SparkInputContainerComponent>;
   let inputContainerFixture4: ComponentFixture<SparkInputContainerComponent>;
+  let inputContainerFixture5: ComponentFixture<SparkInputContainerComponent>;
+  let inputContainerFixture6: ComponentFixture<SparkInputContainerComponent>;
 
   let inputContainerElement1: HTMLElement;
   let inputContainerElement2: HTMLElement;
   let inputContainerElement3: HTMLElement;
   let inputContainerElement4: HTMLElement;
+  let inputContainerElement5: HTMLElement;
+  let inputContainerElement6: HTMLElement;
 
   let labelElement1: HTMLElement;
   let inputElement1: HTMLElement;
@@ -121,6 +156,14 @@ describe('SparkInputContainerComponent', () => {
   let inputElement4: HTMLElement;
   let errorElement4: HTMLElement;
 
+  let labelElement5: HTMLElement;
+  let inputElement5: HTMLElement;
+  let errorElement5: HTMLElement;
+
+  let labelElement6: HTMLElement;
+  let inputElement6: HTMLElement;
+  let errorElement6: HTMLElement;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -132,6 +175,8 @@ describe('SparkInputContainerComponent', () => {
         Test2Component,
         Test3Component,
         Test4Component,
+        Test5Component,
+        Test6Component,
         SparkInputContainerComponent,
         SprkIconComponent,
       ],
@@ -143,11 +188,15 @@ describe('SparkInputContainerComponent', () => {
     testFixture2 = TestBed.createComponent(Test2Component);
     testFixture3 = TestBed.createComponent(Test3Component);
     testFixture4 = TestBed.createComponent(Test4Component);
+    testFixture5 = TestBed.createComponent(Test5Component);
+    testFixture6 = TestBed.createComponent(Test6Component);
 
     component1 = testFixture1.componentInstance;
     component2 = testFixture2.componentInstance;
     component3 = testFixture3.componentInstance;
     component4 = testFixture4.componentInstance;
+    component5 = testFixture5.componentInstance;
+    component6 = testFixture6.componentInstance;
 
     inputContainerFixture1 = TestBed.createComponent(
       SparkInputContainerComponent,
@@ -161,26 +210,40 @@ describe('SparkInputContainerComponent', () => {
     inputContainerFixture4 = TestBed.createComponent(
       SparkInputContainerComponent,
     );
+    inputContainerFixture5 = TestBed.createComponent(
+      SparkInputContainerComponent,
+    );
+    inputContainerFixture6 = TestBed.createComponent(
+      SparkInputContainerComponent,
+    );
 
     inputContainerComponent1 = inputContainerFixture1.componentInstance;
     inputContainerComponent2 = inputContainerFixture2.componentInstance;
     inputContainerComponent3 = inputContainerFixture3.componentInstance;
     inputContainerComponent4 = inputContainerFixture4.componentInstance;
+    inputContainerComponent5 = inputContainerFixture5.componentInstance;
+    inputContainerComponent6 = inputContainerFixture6.componentInstance;
 
     inputContainerComponent1.ngOnInit();
     inputContainerComponent2.ngOnInit();
     inputContainerComponent3.ngOnInit();
     inputContainerComponent4.ngOnInit();
+    inputContainerComponent5.ngOnInit();
+    inputContainerComponent6.ngOnInit();
 
     testFixture1.detectChanges();
     testFixture2.detectChanges();
     testFixture3.detectChanges();
     testFixture4.detectChanges();
+    testFixture5.detectChanges();
+    testFixture6.detectChanges();
 
     inputContainerFixture1.detectChanges();
     inputContainerFixture2.detectChanges();
     inputContainerFixture3.detectChanges();
     inputContainerFixture4.detectChanges();
+    inputContainerFixture5.detectChanges();
+    inputContainerFixture6.detectChanges();
 
     inputContainerElement1 = inputContainerFixture1.nativeElement.querySelector(
       'div',
@@ -194,6 +257,12 @@ describe('SparkInputContainerComponent', () => {
     inputContainerElement4 = inputContainerFixture4.nativeElement.querySelector(
       'div',
     );
+    inputContainerElement5 = inputContainerFixture5.nativeElement.querySelector(
+      'div',
+    );
+    inputContainerElement6 = inputContainerFixture6.nativeElement.querySelector(
+      'div',
+    );
     labelElement1 = testFixture1.debugElement.query(By.css('label'))
       .nativeElement;
     labelElement2 = testFixture2.debugElement.query(By.css('label'))
@@ -201,6 +270,10 @@ describe('SparkInputContainerComponent', () => {
     labelElement3 = testFixture3.debugElement.query(By.css('label'))
       .nativeElement;
     labelElement4 = testFixture4.debugElement.query(By.css('label'))
+      .nativeElement;
+    labelElement5 = testFixture5.debugElement.query(By.css('label'))
+      .nativeElement;
+    labelElement6 = testFixture6.debugElement.query(By.css('label'))
       .nativeElement;
 
     inputElement1 = testFixture1.debugElement.query(By.css('input'))
@@ -211,6 +284,10 @@ describe('SparkInputContainerComponent', () => {
       .nativeElement;
     inputElement4 = testFixture4.debugElement.query(By.css('select'))
       .nativeElement;
+    inputElement5 = testFixture5.debugElement.query(By.css('input'))
+      .nativeElement;
+    inputElement6 = testFixture6.debugElement.query(By.css('input'))
+      .nativeElement;
 
     errorElement1 = testFixture1.debugElement.query(By.css('span'))
       .nativeElement;
@@ -220,6 +297,10 @@ describe('SparkInputContainerComponent', () => {
       .nativeElement;
     errorElement4 = testFixture4.debugElement.query(By.css('span'))
       .nativeElement;
+    errorElement5 = testFixture5.debugElement.query(By.css('span'))
+      .nativeElement;
+    errorElement6 = testFixture6.debugElement.query(By.css('span'))
+      .nativeElement;
   });
 
   it('should create itself', () => {
@@ -227,6 +308,8 @@ describe('SparkInputContainerComponent', () => {
     expect(component2).toBeTruthy();
     expect(component3).toBeTruthy();
     expect(component4).toBeTruthy();
+    expect(component5).toBeTruthy();
+    expect(component6).toBeTruthy();
   });
 
   it('should add classes to input when additionalClasses has a value', () => {
@@ -247,6 +330,14 @@ describe('SparkInputContainerComponent', () => {
 
   it('should set the for on the label to match the id on the input', () => {
     expect(labelElement1.getAttribute('for')).toEqual(inputElement1.id);
+  });
+
+  it('should set the for on the label to match the id on the input if there is no for', () => {
+    expect(labelElement5.getAttribute('for')).toEqual(inputElement5.id);
+  });
+
+  it('should set the for on the label to match the id on the input if there is a for but no id', () => {
+    expect(labelElement6.getAttribute('for')).toEqual(inputElement6.id);
   });
 
   it('should set the for on the label to match the id on the select', () => {
