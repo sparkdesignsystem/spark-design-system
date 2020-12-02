@@ -133,6 +133,22 @@ describe('Spark Input Directive', () => {
     ).toEqual('test-str');
   });
 
+  it("should not add the floating label class on change if the input value isn't empty and the variant is not huge", () => {
+    expect(
+      inputElementNoValue.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(false);
+    inputElementNoValue.nativeElement.value = 'now it has a value';
+    inputElementNoValue.nativeElement.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+    expect(
+      inputElementNoValue.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(false);
+  });
+
   // it('should add the icon CSS class when hasIcon is true', () => {
   //   expect(inputElementNoValue.nativeElement.classList.contains('sprk-b-TextInput--has-svg-icon')).toEqual(true);
   // });
