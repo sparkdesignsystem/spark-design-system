@@ -148,8 +148,4 @@ describe('Spark Input Directive', () => {
       ),
     ).toEqual(false);
   });
-
-  // it('should add the icon CSS class when hasIcon is true', () => {
-  //   expect(inputElementNoValue.nativeElement.classList.contains('sprk-b-TextInput--has-svg-icon')).toEqual(true);
-  // });
 });
