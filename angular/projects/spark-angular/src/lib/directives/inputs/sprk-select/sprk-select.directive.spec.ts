@@ -11,6 +11,10 @@ import { SprkSelectDirective } from './sprk-select.directive';
     <select sprkSelect variant="huge" id="huge-with-value">
       <option value="initial" selected>Initial</option>
     </select>
+    <select sprkSelect variant="huge" id="huge-with-no-value">
+      <option value="" disabled selected hidden id="hidden-option"></option>
+      <option value="1" id="option-1">Option 1</option>
+    </select>
   `,
 })
 class TestComponent {}
@@ -21,6 +25,9 @@ describe('Spark Select Directive', () => {
   let selectElement: DebugElement;
   let hugeSelectElement: DebugElement;
   let hugeSelectElementWithValue: DebugElement;
+  let hugeSelectElementWithNoValue: DebugElement;
+  let hugeSelectHiddenOptionElement: DebugElement;
+  let hugeSelectOptionOneElement: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -35,6 +42,15 @@ describe('Spark Select Directive', () => {
     hugeSelectElement = fixture.debugElement.query(By.css('#huge'));
     hugeSelectElementWithValue = fixture.debugElement.query(
       By.css('#huge-with-value'),
+    );
+    hugeSelectElementWithNoValue = fixture.debugElement.query(
+      By.css('#huge-with-no-value'),
+    );
+    hugeSelectHiddenOptionElement = fixture.debugElement.query(
+      By.css('#hidden-option'),
+    );
+    hugeSelectOptionOneElement = fixture.debugElement.query(
+      By.css('#option-1'),
     );
   }));
 
@@ -66,6 +82,25 @@ describe('Spark Select Directive', () => {
         'sprk-b-Input--has-floating-label',
       ),
     ).toEqual(false);
+  });
+
+  it("should add the floating label class on change if the select value isn't empty", () => {
+    expect(
+      hugeSelectElementWithNoValue.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(false);
+    hugeSelectHiddenOptionElement.nativeElement.selected = false;
+    hugeSelectOptionOneElement.nativeElement.selected = true;
+    hugeSelectElementWithNoValue.nativeElement.dispatchEvent(
+      new Event('change'),
+    );
+    fixture.detectChanges();
+    expect(
+      hugeSelectElementWithNoValue.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(true);
   });
 
   it('should not add the floating label class on load if the select value is empty', () => {
