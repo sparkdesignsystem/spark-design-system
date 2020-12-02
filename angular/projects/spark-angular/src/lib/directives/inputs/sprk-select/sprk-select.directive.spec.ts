@@ -8,6 +8,9 @@ import { SprkSelectDirective } from './sprk-select.directive';
   template: `
     <select sprkSelect id="default"></select>
     <select sprkSelect variant="huge" id="huge"></select>
+    <select sprkSelect variant="huge" id="huge-with-value">
+      <option value="initial" selected>Initial</option>
+    </select>
   `,
 })
 class TestComponent {}
@@ -17,6 +20,7 @@ describe('Spark Select Directive', () => {
   let fixture: ComponentFixture<TestComponent>;
   let selectElement: DebugElement;
   let hugeSelectElement: DebugElement;
+  let hugeSelectElementWithValue: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -29,6 +33,9 @@ describe('Spark Select Directive', () => {
     fixture.detectChanges();
     selectElement = fixture.debugElement.query(By.css('#default'));
     hugeSelectElement = fixture.debugElement.query(By.css('#huge'));
+    hugeSelectElementWithValue = fixture.debugElement.query(
+      By.css('#huge-with-value'),
+    );
   }));
 
   it('should create itself', () => {
@@ -42,17 +49,13 @@ describe('Spark Select Directive', () => {
     );
   });
 
-  // it('should add the floating label class on change if the select has a value', () => {
-  //   hugeSelectElement.nativeElement.value = 'Test Value!';
-  //   hugeSelectElement.nativeElement.dispatchEvent(new Event('change'));
-  //   fixture.detectChanges();
-  //   console.log(hugeSelectElement.nativeElement.value, 'debug value')
-  //   expect(
-  //     hugeSelectElement.nativeElement.classList.contains(
-  //       'sprk-b-Input--has-floating-label',
-  //     ),
-  //   ).toEqual(true);
-  // });
+  it('should add the has-floating-label class on load if the select has a value', () => {
+    expect(
+      hugeSelectElementWithValue.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(true);
+  });
 
   it('should not add the floating label class on change if the select value is empty', () => {
     hugeSelectElement.nativeElement.value = '';
@@ -64,14 +67,6 @@ describe('Spark Select Directive', () => {
       ),
     ).toEqual(false);
   });
-
-  // it('should add the floating label class on load if the select has a value', () => {
-  //   expect(
-  //     hugeSelectElement.nativeElement.classList.contains(
-  //       'sprk-b-Input--has-floating-label',
-  //     ),
-  //   ).toEqual(true);
-  // });
 
   it('should not add the floating label class on load if the select value is empty', () => {
     expect(
