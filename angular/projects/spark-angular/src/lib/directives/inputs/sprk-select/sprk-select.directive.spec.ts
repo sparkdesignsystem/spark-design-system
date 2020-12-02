@@ -6,7 +6,9 @@ import { SprkSelectDirective } from './sprk-select.directive';
 @Component({
   selector: 'sprk-test-select',
   template: `
-    <select sprkSelect id="default"></select>
+    <select sprkSelect id="default">
+      <option value="1" id="default-option-1">Option 1</option>
+    </select>
     <select sprkSelect variant="huge" id="huge"></select>
     <select sprkSelect variant="huge" id="huge-with-value">
       <option value="initial" selected>Initial</option>
@@ -23,6 +25,7 @@ describe('Spark Select Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let selectElement: DebugElement;
+  let selectOptionOneElement: DebugElement;
   let hugeSelectElement: DebugElement;
   let hugeSelectElementWithValue: DebugElement;
   let hugeSelectElementWithNoValue: DebugElement;
@@ -39,6 +42,9 @@ describe('Spark Select Directive', () => {
 
     fixture.detectChanges();
     selectElement = fixture.debugElement.query(By.css('#default'));
+    selectOptionOneElement = fixture.debugElement.query(
+      By.css('#default-option-1'),
+    );
     hugeSelectElement = fixture.debugElement.query(By.css('#huge'));
     hugeSelectElementWithValue = fixture.debugElement.query(
       By.css('#huge-with-value'),
@@ -101,6 +107,22 @@ describe('Spark Select Directive', () => {
         'sprk-b-Input--has-floating-label',
       ),
     ).toEqual(true);
+  });
+
+  it("should not add the floating label class on change if the select value isn't empty and the variant is not huge", () => {
+    expect(
+      selectElement.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(false);
+    selectOptionOneElement.nativeElement.selected = true;
+    selectElement.nativeElement.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+    expect(
+      selectElement.nativeElement.classList.contains(
+        'sprk-b-Input--has-floating-label',
+      ),
+    ).toEqual(false);
   });
 
   it('should not add the floating label class on load if the select value is empty', () => {
