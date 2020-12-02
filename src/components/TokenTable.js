@@ -50,7 +50,7 @@ const TokenTable = () => {
   return (
     <>
       <SprkTextInput
-        label="Filter through tokens"
+        label="Filter Through Token List:"
         name="text-input-label"
         value={query}
         onChange={(e) => {
@@ -58,8 +58,13 @@ const TokenTable = () => {
         }}
       />
       {filteredData.length <= 0 ? (
-        // MAKE THIS LOOK BETTER
-        `No results for '${query}'. Try another keyword.`
+        <p>
+          No results for
+          <span className="sprk-u-FontStyle--italic">
+            &nbsp;&lsquo;{query}&rsquo;
+          </span>
+          . Try another keyword.
+        </p>
       ) : (
         <SprkTable
           additionalTableClasses="
