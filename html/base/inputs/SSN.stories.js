@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/m
 
 export default {
   title: 'Components/Input/SSN',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}

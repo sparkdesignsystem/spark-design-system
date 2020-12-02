@@ -11,7 +11,4 @@ const radioInput = () => {
   getElements('[data-sprk-input="radio"]', bindRadioUIEvents);
 };
 
-export {
-  radioInput,
-  bindRadioUIEvents
-};
+export { radioInput, bindRadioUIEvents };

@@ -45,16 +45,18 @@ after Spark's JavaScript functions run.
   - \`data-sprk-spinner-aria-label=""\` – Defaults to "Loading"
   - \`data-sprk-spinner-text=""\` – Text on the button before and after
   spinning. Defaults to an empty string.
+  - \`data-sprk-spinner-variant="primary|secondary|dark"\` – The variant
+  for the spinning icon.
 
 
 ###### Example Spinner Implementation
 \`\`\`
 <button
-  class="sprk-c-Button sprk-c-Button--has-spinner"
+  class="sprk-c-Button"
   data-sprk-spinner="click"
   aria-live="polite"
-  data-sprk-spinner-text="Submit"
 >
+    Submit
 </button>
 \`\`\`
 

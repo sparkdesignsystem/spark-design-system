@@ -37,19 +37,25 @@ describe('Pagination tests', () => {
     navContainer.appendChild(longListContainer);
   });
 
-  it('should add/set the aria label to match the link text in the default'
-    + ' version', () => {
-    setAriaLabel(pagLink);
-    const pagNum = pagLink.textContent;
-    const pagLabel = `Page ${pagNum}`;
-    expect(pagLink.getAttribute('aria-label')).toEqual(pagLabel);
-  });
+  it(
+    'should add/set the aria label to match the link text in the default' +
+      ' version',
+    () => {
+      setAriaLabel(pagLink);
+      const pagNum = pagLink.textContent;
+      const pagLabel = `Page ${pagNum}`;
+      expect(pagLink.getAttribute('aria-label')).toEqual(pagLabel);
+    },
+  );
 
-  it('should add/set the aria label to match the link text in the long'
-    + ' version', () => {
-    setAriaLabel(longPagLink);
-    const longPagNum = longPagLink.textContent;
-    const longPagLabel = `Page ${longPagNum}`;
-    expect(longPagLink.getAttribute('aria-label')).toEqual(longPagLabel);
-  });
+  it(
+    'should add/set the aria label to match the link text in the long' +
+      ' version',
+    () => {
+      setAriaLabel(longPagLink);
+      const longPagNum = longPagLink.textContent;
+      const longPagLabel = `Page ${longPagNum}`;
+      expect(longPagLink.getAttribute('aria-label')).toEqual(longPagLabel);
+    },
+  );
 });

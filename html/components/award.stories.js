@@ -5,9 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Award',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     docs: { iframeHeight: 400 },
     info: `
@@ -27,11 +25,24 @@ export const defaultStory = () => {
     data-id="award-1"
   >
     <h2
-      class="sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-b-TypeDisplayFive sprk-b-Measure sprk-b-Measure--narrow sprk-u-TextAlign--center">
+      class="
+        sprk-o-Stack__item 
+        sprk-o-Stack__item--center-column 
+        sprk-b-TypeDisplayFive 
+        sprk-b-Measure 
+        sprk-b-Measure--narrow 
+        sprk-u-TextAlign--center
+      ">
       Award Component Heading
     </h2>
 
-    <div class="sprk-o-Stack__item sprk-o-Stack__item--center-column sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s">
+    <div 
+      class="
+        sprk-o-Stack__item 
+        sprk-o-Stack__item--center-column 
+        sprk-o-Stack sprk-o-Stack--medium 
+        sprk-o-Stack--split@s
+      ">
       <a
         class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack"
         href="#nogo"
@@ -42,7 +53,13 @@ export const defaultStory = () => {
           src="https://spark-assets.netlify.app/spark-logo-updated.svg" />
       </a>
 
-      <a class="sprk-o-Stack__item sprk-o-Stack__item--flex@s sprk-o-Stack" href="#nogo">
+      <a 
+        class="
+          sprk-o-Stack__item 
+          sprk-o-Stack__item--flex@s 
+          sprk-o-Stack
+        " 
+        href="#nogo">
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
           alt="Spark placeholder image"
@@ -55,9 +72,12 @@ export const defaultStory = () => {
       data-sprk-toggle="container"
     >
       <button
-        class="sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none"
-        data-sprk-toggle="trigger"
-      >
+        class="
+          sprk-c-Toggle__trigger 
+          sprk-b-TypeBodyThree 
+          sprk-u-TextCrop--none
+        "
+        data-sprk-toggle="trigger">
           <svg
             class="sprk-c-Icon sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs"
             data-sprk-toggle="icon"

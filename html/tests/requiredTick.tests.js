@@ -1,5 +1,9 @@
-/* global window document describe beforeEach it afterEach */
-import { requiredTick, runValidation, bindUIEvents } from '../base/inputs/requiredTick';
+/* global window document describe beforeEach it afterEach sinon */
+import {
+  requiredTick,
+  runValidation,
+  bindUIEvents,
+} from '../base/inputs/requiredTick';
 
 describe('requiredTick init', () => {
   afterEach(() => {
@@ -9,9 +13,9 @@ describe('requiredTick init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     requiredTick();
-    expect(document
-      .querySelectorAll
-      .getCall(0).args[0]).toBe('[data-sprk-required-only="tick"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-required-only="tick"]',
+    );
   });
 });
 
@@ -106,8 +110,8 @@ describe('requiredTextInput UI Events tests', () => {
     expect(inputContainer.addEventListener.getCall(0).args[0]).toBe('change');
   });
 
-  it('should mark error when change is triggered with no selected'
-    + ' inputs', () => {
+  it(`should mark error when change is 
+      triggered with no selected inputs`, () => {
     event = new window.Event('change');
     inputContainer.dispatchEvent(event);
     expect(errorContainer.textContent).toBe('This field is required.');

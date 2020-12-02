@@ -172,7 +172,7 @@
         "header": {
           "background-color": {
             "comment": "The background color of Secondary Table headers.",
-            "value": "{black.value}",
+            "value": "{white.value}",
             "file": "settings",
             "themable": true
           },

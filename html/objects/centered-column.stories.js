@@ -3,7 +3,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Components/Centered Column',
   decorators: [
-    story => `
+    (story) => `
       <div class="sprk-o-Box sb-decorate">${story()}</div>
     `,
   ],
@@ -18,9 +18,7 @@ a maximum width.
   },
 };
 
-export const defaultStory = () => (
-  '<div class="sprk-o-CenteredColumn"></div>'
-);
+export const defaultStory = () => '<div class="sprk-o-CenteredColumn"></div>';
 
 defaultStory.story = {
   name: 'Default',

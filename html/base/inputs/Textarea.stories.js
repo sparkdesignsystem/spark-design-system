@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/m
 
 export default {
   title: 'Components/Input/Textarea',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
@@ -13,7 +11,7 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const textarea = () => (
+export const textarea = () =>
   `
     <div class="sprk-b-InputContainer">
       <label
@@ -35,14 +33,13 @@ export const textarea = () => (
         id="textarea--error-container"
       ></div>
     </div>
-  `
-);
+  `;
 
 textarea.story = {
   name: 'Default',
 };
 
-export const invalidTextarea = () => (
+export const invalidTextarea = () =>
   `
     <div class="sprk-b-InputContainer">
       <label
@@ -75,14 +72,13 @@ export const invalidTextarea = () => (
         </div>
       </div>
     </div>
-  `
-);
+  `;
 
 invalidTextarea.story = {
   name: 'Invalid',
 };
 
-export const disabledTextarea = () => (
+export const disabledTextarea = () =>
   `
     <div class="sprk-b-InputContainer">
       <label
@@ -105,8 +101,7 @@ export const disabledTextarea = () => (
         id="textarea--error-container"
       ></div>
     </div>
-  `
-);
+  `;
 
 disabledTextarea.story = {
   name: 'Disabled',
