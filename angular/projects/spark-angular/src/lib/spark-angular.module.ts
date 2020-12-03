@@ -73,6 +73,7 @@ import { SprkCheckboxGroupModule } from './components/inputs/sprk-checkbox-group
 import { SprkCheckboxItemModule } from './components/inputs/sprk-checkbox-item/sprk-checkbox-item.module';
 import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divider.module';
 import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module';
+import { SprkTextareaModule } from './directives/inputs/sprk-textarea/sprk-textarea.module';
 @NgModule({
   exports: [
     SprkAlertModule,
@@ -143,6 +144,7 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkSelectModule,
     SprkDividerDirectiveModule,
     SprkSpinnerModule,
+    SprkTextareaModule,
   ],
 })
 export class SparkAngularModule {}

@@ -1,12 +1,12 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
-import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
+import { SprkTextareaModule } from '../../directives/inputs/sprk-textarea/sprk-textarea.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkTextareaContainerModule } from './sprk-textarea-container/sprk-textarea-container.module';
 import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkTextareaDirective } from '../../directives/inputs/sprk-textarea/sprk-textarea.directive';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
@@ -14,7 +14,7 @@ export default {
   title: 'Components/Input/Textarea',
   component: SprkInputContainerComponent,
   subcomponents: {
-    SprkInputDirective,
+    SprkTextareaDirective,
     SprkLabelDirective,
   },
   decorators: [
@@ -45,7 +45,7 @@ const modules = {
     SprkTextareaContainerModule,
     SprkInputContainerModule,
     SprkLabelModule,
-    SprkInputModule,
+    SprkTextareaModule,
     SprkIconModule,
     SprkFieldErrorModule,
   ],
@@ -62,7 +62,7 @@ export const textarea = () => ({
         [(ngModel)]="textarea_input"
         #textareaInput="ngModel"
         data-id="textarea-1"
-        sprkInput
+        sprkTextarea
       ></textarea>
     </sprk-textarea-container>
   `,
@@ -73,7 +73,7 @@ textarea.story = {
   parameters: {
     jest: [
       'sprk-textarea-container.component',
-      'sprk-input.directive',
+      'sprk-textarea.directive',
       'sprk-label.directive',
     ],
   },
@@ -91,7 +91,7 @@ export const invalidTextarea = () => ({
         [(ngModel)]="textarea_input"
         #textareaInput="ngModel"
         data-id="textarea-1"
-        sprkInput
+        sprkTextarea
         aria-invalid="true"
       ></textarea>
       <span sprkFieldError>
@@ -111,7 +111,7 @@ invalidTextarea.story = {
     jest: [
       'sprk-textarea-container.component',
       'sprk-field-error.directive',
-      'sprk-input.directive',
+      'sprk-textarea.directive',
       'sprk-label.directive',
     ],
   },
@@ -131,7 +131,7 @@ export const disabledTextarea = () => ({
         [(ngModel)]="textarea_input"
         #textareaInput="ngModel"
         data-id="textarea-1"
-        sprkInput
+        sprkTextarea
         disabled
       ></textarea>
     </sprk-textarea-container>
@@ -143,7 +143,7 @@ disabledTextarea.story = {
   parameters: {
     jest: [
       'sprk-textarea-container.component',
-      'sprk-input.directive',
+      'sprk-textarea.directive',
       'sprk-label.directive',
     ],
   },

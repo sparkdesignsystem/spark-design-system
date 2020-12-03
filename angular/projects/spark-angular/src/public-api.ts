@@ -244,3 +244,5 @@ export { SprkTooltipComponent } from './lib/components/sprk-tooltip/sprk-tooltip
 export { SprkTooltipModule } from './lib/components/sprk-tooltip/sprk-tooltip.module';
 export { SprkDividerDirectiveModule } from './lib/directives/sprk-divider/sprk-divider.module';
 export { SprkDividerDirective } from './lib/directives/sprk-divider/sprk-divider.directive';
+export { SprkTextareaDirective } from './lib/directives/inputs/sprk-textarea/sprk-textarea.directive';
+export { SprkTextareaModule } from './lib/directives/inputs/sprk-textarea/sprk-textarea.module';
