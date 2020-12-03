@@ -133,6 +133,12 @@ describe('Spark Input Directive', () => {
     ).toEqual('test-str');
   });
 
+  it('should set the data-id attribute to the value of idString', () => {
+    expect(inputElementNoValue.nativeElement.getAttribute('data-id')).toEqual(
+      'test-str',
+    );
+  });
+
   it("should not add the floating label class on change if the input value isn't empty and the variant is not huge", () => {
     expect(
       inputElementNoValue.nativeElement.classList.contains(
