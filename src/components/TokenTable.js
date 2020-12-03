@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { SprkTable, SprkTextInput } from '@sparkdesignsystem/spark-react';
+import debounce from 'lodash/debounce';
 
 const TokenTable = () => {
   const tokenData = useStaticQuery(
@@ -36,15 +37,27 @@ const TokenTable = () => {
   const [filteredData, setFilteredData] = useState(sassVarData);
   const [query, setQuery] = useState('');
 
+  // Wait for user to finish typing before filtering.
+  const debouncedSetData = useCallback(
+    debounce((data) => {
+      setFilteredData(data);
+    }, 1000),
+  );
+
   useEffect(() => {
+    // If no search query, set it to default
     if (query === '') {
       setFilteredData(sassVarData);
       return;
     }
+
+    // Filter through data
     const getFilteredData = sassVarData.filter(({ flattenedData }) => {
       return flattenedData.includes(query.toLowerCase());
     });
-    setFilteredData(getFilteredData);
+
+    // Set data to display
+    debouncedSetData(getFilteredData);
   }, [query]);
 
   return (
