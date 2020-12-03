@@ -74,7 +74,7 @@ export const selectBox = () => ({
         </optgroup>
       </select>
       <sprk-icon
-        iconType="chevron-down"
+        iconName="chevron-down"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
@@ -117,13 +117,13 @@ export const invalidSelectBox = () => ({
         </optgroup>
       </select>
       <sprk-icon
-        iconType="chevron-down"
+        iconName="chevron-down"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -165,7 +165,7 @@ export const disabledSelectBox = () => ({
         </optgroup>
       </select>
       <sprk-icon
-        iconType="chevron-down"
+        iconName="chevron-down"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
@@ -211,7 +211,7 @@ export const hugeSelectBox = () => ({
       </select>
       <label sprkLabel for="select-huge-1">Huge Select Box Label</label>
       <sprk-icon
-        iconType="chevron-down"
+        iconName="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
@@ -259,13 +259,13 @@ export const invalidHugeSelectBox = () => ({
       </select>
       <label sprkLabel for="select-huge-invalid">Huge Select Box Label</label>
       <sprk-icon
-        iconType="chevron-down"
+        iconName="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -314,7 +314,7 @@ export const disabledHugeSelectBox = () => ({
       </select>
       <label sprkLabel isDisabled="true" for="select-huge-disabled">Huge Select Box Label</label>
       <sprk-icon
-        iconType="chevron-down"
+        iconName="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>

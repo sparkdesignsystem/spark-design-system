@@ -20,22 +20,21 @@ export default {
     SprkLabelDirective,
     SprkInputDirective,
     SprkFieldErrorDirective,
-   },
+  },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
     onSubmit(event): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
@@ -44,7 +43,7 @@ ${markdownDocumentationLinkBuilder('input')}
 - Helper text is marked with the \`sprkHelperText\` directive.
 `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
@@ -114,7 +113,7 @@ export const invalidHelperText = () => ({
       </p>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>

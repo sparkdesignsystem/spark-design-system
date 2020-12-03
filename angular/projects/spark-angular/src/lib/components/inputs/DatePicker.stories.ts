@@ -76,7 +76,7 @@ export const defaultStory = () => ({
           Date Input
         </label>
         <sprk-icon
-          iconType="calendar"
+          iconName="calendar"
           additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
           sprk-input-icon
         ></sprk-icon>
@@ -116,7 +116,7 @@ export const invalidDatePicker = () => ({
           Date Input
         </label>
         <sprk-icon
-          iconType="calendar"
+          iconName="calendar"
           additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
           sprk-input-icon
         ></sprk-icon>
@@ -134,7 +134,7 @@ export const invalidDatePicker = () => ({
       </div>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -165,7 +165,7 @@ export const disabledDatePicker = () => ({
           Date Input
         </label>
         <sprk-icon
-          iconType="calendar"
+          iconName="calendar"
           additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-DatePicker__icon"
           sprk-input-icon
         ></sprk-icon>
@@ -205,7 +205,7 @@ export const legacyStory = () => ({
         Date Input
       </label>
       <sprk-icon
-        iconType="calendar"
+        iconName="calendar"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
@@ -245,7 +245,7 @@ export const legacyInvalidDatePicker = () => ({
         Date Input
       </label>
       <sprk-icon
-        iconType="calendar"
+        iconName="calendar"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
@@ -263,7 +263,7 @@ export const legacyInvalidDatePicker = () => ({
       />
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -294,7 +294,7 @@ export const legacyDisabledDatePicker = () => ({
         Date Input
       </label>
       <sprk-icon
-        iconType="calendar"
+        iconName="calendar"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>

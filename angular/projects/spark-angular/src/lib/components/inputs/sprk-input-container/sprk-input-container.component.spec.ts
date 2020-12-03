@@ -47,7 +47,7 @@ class Test2Component {}
         </optgroup>
       </select>
       <sprk-icon
-        iconType="chevron-down"
+        iconName="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
@@ -68,7 +68,7 @@ class Test3Component {}
         <option value="2">Option 2</option>
       </select>
       <sprk-icon
-        iconType="chevron-down"
+        iconName="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>

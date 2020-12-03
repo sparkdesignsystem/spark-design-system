@@ -205,7 +205,7 @@ export const disabledSSNInput = () => ({
         sprkFieldError
       >
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         >
         </sprk-icon>

@@ -68,7 +68,7 @@ export const searchInput = () => ({
           Search
         </label>
         <sprk-icon
-          iconType="search"
+          iconName="search"
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
         ></sprk-icon>
@@ -111,7 +111,7 @@ export const invalidSearchInput = () => ({
           Search
         </label>
         <sprk-icon
-          iconType="search"
+          iconName="search"
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
         ></sprk-icon>
@@ -129,7 +129,7 @@ export const invalidSearchInput = () => ({
       </div>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -164,7 +164,7 @@ export const disabledSearchInput = () => ({
           Search
         </label>
         <sprk-icon
-          iconType="search"
+          iconName="search"
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
         ></sprk-icon>
@@ -206,7 +206,7 @@ export const legacyStory = () => ({
         Search
       </label>
       <sprk-icon
-        iconType="search"
+        iconName="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
@@ -246,7 +246,7 @@ export const legacyInvalidSearchInput = () => ({
         Search
       </label>
       <sprk-icon
-        iconType="search"
+        iconName="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
@@ -263,7 +263,7 @@ export const legacyInvalidSearchInput = () => ({
       >
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -295,7 +295,7 @@ export const legacyDisabledSearchInput = () => ({
         Search
       </label>
       <sprk-icon
-        iconType="search"
+        iconName="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
