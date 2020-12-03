@@ -15,7 +15,7 @@ import { SprkTextareaContainerComponent } from './sprk-textarea-container.compon
       <p sprkHelperText>Helper Text!</p>
       <span sprkFieldError>Error Message!</span>
     </sprk-textarea-container>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -38,8 +38,8 @@ describe('SprkTextareaContainerComponent', () => {
         SprkInputDirective,
         SprkFieldErrorDirective,
         TestComponent,
-        SprkTextareaContainerComponent
-      ]
+        SprkTextareaContainerComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -48,12 +48,12 @@ describe('SprkTextareaContainerComponent', () => {
     component = testFixture.componentInstance;
 
     inputContainerFixture = TestBed.createComponent(
-      SprkTextareaContainerComponent
+      SprkTextareaContainerComponent,
     );
     inputContainerComponent = inputContainerFixture.componentInstance;
 
     inputContainerElement = inputContainerFixture.nativeElement.querySelector(
-      'div'
+      'div',
     );
 
     labelElement = testFixture.debugElement.query(By.css('label'))
@@ -74,7 +74,7 @@ describe('SprkTextareaContainerComponent', () => {
     inputContainerComponent.additionalClasses = 'sprk-u-man';
     inputContainerFixture.detectChanges();
     expect(inputContainerElement.classList.toString()).toEqual(
-      'sprk-b-InputContainer sprk-b-InputContainer--textarea sprk-u-man'
+      'sprk-b-InputContainer sprk-b-InputContainer--textarea sprk-u-man',
     );
   });
 
@@ -84,7 +84,13 @@ describe('SprkTextareaContainerComponent', () => {
 
   it('should set the aria-describedby attribute on the input to match the id on the error field', () => {
     expect(inputElement.getAttribute('aria-describedby')).toEqual(
-      errorElement.id
+      errorElement.id,
     );
+  });
+
+  it('should add the value of idString to the data-id on the textarea', () => {
+    inputContainerComponent.idString = 'test-id-str';
+    inputContainerFixture.detectChanges();
+    expect(inputContainerElement.getAttribute('data-id')).toBe('test-id-str');
   });
 });
