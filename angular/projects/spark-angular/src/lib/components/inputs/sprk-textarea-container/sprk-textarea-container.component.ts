@@ -1,5 +1,5 @@
 import { Component, ContentChild, Input, OnInit } from '@angular/core';
-import * as _ from 'lodash';
+import { uniqueId } from 'lodash';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
@@ -11,10 +11,11 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
       <ng-content select="[sprkLabel]"></ng-content>
       <ng-content select="[sprkInput]"></ng-content>
       <ng-content select="sprk-selection-item-container"></ng-content>
+      <ng-content select="sprk-checkbox-item"></ng-content>
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
     </div>
-  `
+  `,
 })
 export class SprkTextareaContainerComponent implements OnInit {
   /**
@@ -24,13 +25,6 @@ export class SprkTextareaContainerComponent implements OnInit {
    */
   @Input()
   additionalClasses: string;
-  /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * icon container.
-   */
-  @Input()
-  iconContainerClasses: string;
   /**
    * This component expects a child label element
    * with the `sprkLabel` directive.
@@ -53,7 +47,7 @@ export class SprkTextareaContainerComponent implements OnInit {
   /**
    * @ignore
    */
-  id = _.uniqueId();
+  id = uniqueId();
   /**
    * @ignore
    */
@@ -69,11 +63,11 @@ export class SprkTextareaContainerComponent implements OnInit {
   getClasses(): string {
     const classArray: string[] = [
       'sprk-b-InputContainer',
-      'sprk-b-InputContainer--textarea'
+      'sprk-b-InputContainer--textarea',
     ];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -89,7 +83,7 @@ export class SprkTextareaContainerComponent implements OnInit {
     if (this.input && this.error) {
       this.input.ref.nativeElement.setAttribute(
         'aria-describedby',
-        this.error_id
+        this.error_id,
       );
       this.error.ref.nativeElement.id = this.error_id;
     }
