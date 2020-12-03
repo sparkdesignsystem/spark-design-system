@@ -30,7 +30,7 @@ import { SprkTableHeadModule } from './directives/sprk-table-head/sprk-table-hea
 import { SprkTableRowHeadingModule } from './directives/sprk-table-row-heading/sprk-table-row-heading.module';
 import { SprkTabbedNavigationPanelModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.module';
 import { SprkTabbedNavigationTabModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
-import { SparkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
+import { SprkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
 import { SprkHugeInputContainerModule } from './components/inputs/sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkTextareaContainerModule } from './components/inputs/sprk-textarea-container/sprk-textarea-container.module';
 import { SprkIconInputContainerModule } from './components/inputs/sprk-icon-input-container/sprk-icon-input-container.module';
@@ -90,7 +90,7 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkOrderedListModule,
     SprkUnorderedListModule,
     SprkListItemModule,
-    SparkInputContainerModule,
+    SprkInputContainerModule,
     SprkHugeInputContainerModule,
     SprkTextareaContainerModule,
     SprkIconInputContainerModule,

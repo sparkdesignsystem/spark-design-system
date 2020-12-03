@@ -5,15 +5,15 @@ import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-labe
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
-import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
+import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Monetary',
-  component: SparkInputContainerComponent,
+  component: SprkInputContainerComponent,
   subcomponents: {
     SprkInputDirective,
     SprkLabelDirective,
@@ -54,7 +54,7 @@ you may need to remove before submitting the form.
 
 const modules = {
   imports: [
-    SparkInputContainerModule,
+    SprkInputContainerModule,
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,

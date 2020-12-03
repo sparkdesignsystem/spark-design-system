@@ -4,8 +4,8 @@ import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
-import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
+import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
@@ -14,7 +14,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook
 
 export default {
   title: 'Components/Input/Percentage',
-  component: SparkInputContainerComponent,
+  component: SprkInputContainerComponent,
   subcomponents: {
     SprkInputDirective,
     SprkLabelDirective,
@@ -46,7 +46,7 @@ ${markdownDocumentationLinkBuilder('input')}
 
 const modules = {
   imports: [
-    SparkInputContainerModule,
+    SprkInputContainerModule,
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,

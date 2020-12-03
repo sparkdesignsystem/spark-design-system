@@ -7,15 +7,15 @@ import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-inpu
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
-import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
-import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
+import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date Picker',
-  component: SparkInputContainerComponent,
+  component: SprkInputContainerComponent,
   subcomponents: {
     SprkDatepickerDirective,
     SprkLabelDirective,
@@ -57,7 +57,7 @@ the Inputs table below for available customization options.
 
 const modules = {
   imports: [
-    SparkInputContainerModule,
+    SprkInputContainerModule,
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,

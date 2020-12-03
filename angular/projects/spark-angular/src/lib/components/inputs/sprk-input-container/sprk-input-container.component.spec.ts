@@ -5,7 +5,7 @@ import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-e
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkSelectDirective } from '../../../directives/inputs/sprk-select/sprk-select.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-import { SparkInputContainerComponent } from './sprk-input-container.component';
+import { SprkInputContainerComponent } from './sprk-input-container.component';
 import { SprkIconComponent } from '../../sprk-icon/sprk-icon.component';
 @Component({
   selector: 'sprk-test-1',
@@ -104,7 +104,7 @@ class Test5Component {}
 })
 class Test6Component {}
 
-describe('SparkInputContainerComponent', () => {
+describe('SprkInputContainerComponent', () => {
   let component1: Test1Component;
   let component2: Test2Component;
   let component3: Test3Component;
@@ -119,19 +119,19 @@ describe('SparkInputContainerComponent', () => {
   let testFixture5: ComponentFixture<Test5Component>;
   let testFixture6: ComponentFixture<Test6Component>;
 
-  let inputContainerComponent1: SparkInputContainerComponent;
-  let inputContainerComponent2: SparkInputContainerComponent;
-  let inputContainerComponent3: SparkInputContainerComponent;
-  let inputContainerComponent4: SparkInputContainerComponent;
-  let inputContainerComponent5: SparkInputContainerComponent;
-  let inputContainerComponent6: SparkInputContainerComponent;
+  let inputContainerComponent1: SprkInputContainerComponent;
+  let inputContainerComponent2: SprkInputContainerComponent;
+  let inputContainerComponent3: SprkInputContainerComponent;
+  let inputContainerComponent4: SprkInputContainerComponent;
+  let inputContainerComponent5: SprkInputContainerComponent;
+  let inputContainerComponent6: SprkInputContainerComponent;
 
-  let inputContainerFixture1: ComponentFixture<SparkInputContainerComponent>;
-  let inputContainerFixture2: ComponentFixture<SparkInputContainerComponent>;
-  let inputContainerFixture3: ComponentFixture<SparkInputContainerComponent>;
-  let inputContainerFixture4: ComponentFixture<SparkInputContainerComponent>;
-  let inputContainerFixture5: ComponentFixture<SparkInputContainerComponent>;
-  let inputContainerFixture6: ComponentFixture<SparkInputContainerComponent>;
+  let inputContainerFixture1: ComponentFixture<SprkInputContainerComponent>;
+  let inputContainerFixture2: ComponentFixture<SprkInputContainerComponent>;
+  let inputContainerFixture3: ComponentFixture<SprkInputContainerComponent>;
+  let inputContainerFixture4: ComponentFixture<SprkInputContainerComponent>;
+  let inputContainerFixture5: ComponentFixture<SprkInputContainerComponent>;
+  let inputContainerFixture6: ComponentFixture<SprkInputContainerComponent>;
 
   let inputContainerElement1: HTMLElement;
   let inputContainerElement2: HTMLElement;
@@ -177,7 +177,7 @@ describe('SparkInputContainerComponent', () => {
         Test4Component,
         Test5Component,
         Test6Component,
-        SparkInputContainerComponent,
+        SprkInputContainerComponent,
         SprkIconComponent,
       ],
     }).compileComponents();
@@ -199,22 +199,22 @@ describe('SparkInputContainerComponent', () => {
     component6 = testFixture6.componentInstance;
 
     inputContainerFixture1 = TestBed.createComponent(
-      SparkInputContainerComponent,
+      SprkInputContainerComponent,
     );
     inputContainerFixture2 = TestBed.createComponent(
-      SparkInputContainerComponent,
+      SprkInputContainerComponent,
     );
     inputContainerFixture3 = TestBed.createComponent(
-      SparkInputContainerComponent,
+      SprkInputContainerComponent,
     );
     inputContainerFixture4 = TestBed.createComponent(
-      SparkInputContainerComponent,
+      SprkInputContainerComponent,
     );
     inputContainerFixture5 = TestBed.createComponent(
-      SparkInputContainerComponent,
+      SprkInputContainerComponent,
     );
     inputContainerFixture6 = TestBed.createComponent(
-      SparkInputContainerComponent,
+      SprkInputContainerComponent,
     );
 
     inputContainerComponent1 = inputContainerFixture1.componentInstance;

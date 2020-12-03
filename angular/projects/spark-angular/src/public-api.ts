@@ -8,8 +8,8 @@ export { SprkHugeInputContainerComponent } from './lib/components/inputs/sprk-hu
 export { SprkHugeInputContainerModule } from './lib/components/inputs/sprk-huge-input-container/sprk-huge-input-container.module';
 export { SprkIconInputContainerComponent } from './lib/components/inputs/sprk-icon-input-container/sprk-icon-input-container.component';
 export { SprkIconInputContainerModule } from './lib/components/inputs/sprk-icon-input-container/sprk-icon-input-container.module';
-export { SparkInputContainerComponent } from './lib/components/inputs/sprk-input-container/sprk-input-container.component';
-export { SparkInputContainerModule } from './lib/components/inputs/sprk-input-container/sprk-input-container.module';
+export { SprkInputContainerComponent } from './lib/components/inputs/sprk-input-container/sprk-input-container.component';
+export { SprkInputContainerModule } from './lib/components/inputs/sprk-input-container/sprk-input-container.module';
 export { SprkSelectionContainerComponent } from './lib/components/inputs/sprk-selection-container/sprk-selection-container.component';
 export { SprkSelectionContainerModule } from './lib/components/inputs/sprk-selection-container/sprk-selection-container.module';
 export { SprkSelectionItemContainerComponent } from './lib/components/inputs/sprk-selection-item-container/sprk-selection-item-container.component';
@@ -118,8 +118,10 @@ export { SprkTabbedNavigationTabDirective } from './lib/directives/tabbed-naviga
 export { SprkTabbedNavigationTabModule } from './lib/directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 export { SprkIconInputContainerComponent as ɵbu } from './lib/components/inputs/sprk-icon-input-container/sprk-icon-input-container.component';
 export { SprkIconInputContainerModule as ɵbt } from './lib/components/inputs/sprk-icon-input-container/sprk-icon-input-container.module';
-export { SparkInputContainerComponent as ɵbn } from './lib/components/inputs/sprk-input-container/sprk-input-container.component';
-export { SparkInputContainerModule as ɵbm } from './lib/components/inputs/sprk-input-container/sprk-input-container.module';
+export { SprkInputContainerComponent as ɵbn } from './lib/components/inputs/sprk-input-container/sprk-input-container.component';
+export { SprkInputContainerModule as ɵbm } from './lib/components/inputs/sprk-input-container/sprk-input-container.module';
+export { SprkInputContainerComponent as SparkInputContainerComponent } from './lib/components/inputs/sprk-input-container/sprk-input-container.component';
+export { SprkInputContainerModule as SparkInputContainerModule } from './lib/components/inputs/sprk-input-container/sprk-input-container.module';
 export { SprkSelectionContainerComponent as ɵbw } from './lib/components/inputs/sprk-selection-container/sprk-selection-container.component';
 export { SprkSelectionContainerModule as ɵbv } from './lib/components/inputs/sprk-selection-container/sprk-selection-container.module';
 export { SprkSelectionItemContainerComponent as ɵbx } from './lib/components/inputs/sprk-selection-item-container/sprk-selection-item-container.component';

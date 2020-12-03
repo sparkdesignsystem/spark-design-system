@@ -1,6 +1,6 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
-import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
+import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
@@ -18,7 +18,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook
 
 export default {
   title: 'Components/Input/SSN',
-  component: SparkInputContainerComponent,
+  component: SprkInputContainerComponent,
   subcomponents: {
     SprkInputDirective,
     SprkLabelDirective,
@@ -61,7 +61,7 @@ ${markdownDocumentationLinkBuilder('input')}
 
 const modules = {
   imports: [
-    SparkInputContainerModule,
+    SprkInputContainerModule,
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,

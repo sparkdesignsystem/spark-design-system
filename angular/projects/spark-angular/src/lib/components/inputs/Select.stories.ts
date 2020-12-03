@@ -4,8 +4,8 @@ import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-labe
 import { SprkSelectDirective } from '../../directives/inputs/sprk-select/sprk-select.directive';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
-import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
-import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
+import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -13,7 +13,7 @@ import { SprkSelectModule } from '../../directives/inputs/sprk-select/sprk-selec
 
 export default {
   title: 'Components/Input/Select',
-  component: SparkInputContainerComponent,
+  component: SprkInputContainerComponent,
   subcomponents: {
     SprkSelectDirective,
     SprkLabelDirective,
@@ -45,7 +45,7 @@ ${markdownDocumentationLinkBuilder('input')}
 
 const modules = {
   imports: [
-    SparkInputContainerModule,
+    SprkInputContainerModule,
     SprkLabelModule,
     SprkIconModule,
     SprkSelectModule,

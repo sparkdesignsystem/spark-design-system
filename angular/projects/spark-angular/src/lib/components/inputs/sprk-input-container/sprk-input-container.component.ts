@@ -27,7 +27,7 @@ import { SprkSelectDirective } from '../../../directives/inputs/sprk-select/sprk
     </div>
   `,
 })
-export class SparkInputContainerComponent implements OnInit {
+export class SprkInputContainerComponent implements OnInit {
   /**
    * @ignore
    */
