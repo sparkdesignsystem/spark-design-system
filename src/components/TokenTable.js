@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { SprkTable, SprkTextInput } from '@sparkdesignsystem/spark-react';
 import debounce from 'lodash/debounce';
@@ -35,46 +35,38 @@ const TokenTable = () => {
   }));
 
   const [filteredData, setFilteredData] = useState(sassVarData);
-  const [query, setQuery] = useState('');
+  const [value, setValue] = useState('');
 
-  // Wait for user to finish typing before filtering.
-  const debouncedSetData = useCallback(
-    debounce((data) => {
-      setFilteredData(data);
-    }, 1000),
+  const debouncedFilterData = useCallback(
+    debounce((searchQuery) => {
+      setFilteredData(
+        sassVarData.filter(({ flattenedData }) => {
+          return flattenedData.includes(searchQuery.toLowerCase());
+        }),
+      );
+    }, 500),
+    [],
   );
 
-  useEffect(() => {
-    // If no search query, set it to default
-    if (query === '') {
-      setFilteredData(sassVarData);
-      return;
-    }
-
-    // Filter through data
-    const getFilteredData = sassVarData.filter(({ flattenedData }) => {
-      return flattenedData.includes(query.toLowerCase());
-    });
-
-    // Set data to display
-    debouncedSetData(getFilteredData);
-  }, [query]);
+  const handleChange = (event) => {
+    const { value: searchQuery } = event.target;
+    setValue(searchQuery);
+    debouncedFilterData(searchQuery);
+  };
 
   return (
     <>
       <SprkTextInput
         label="Filter Through Token List:"
         name="text-input-label"
-        value={query}
-        onChange={(e) => {
-          setQuery(e.target.value);
-        }}
+        value={value}
+        onChange={handleChange}
       />
       {filteredData.length <= 0 ? (
         <p>
           No results for
           <span className="sprk-u-FontStyle--italic">
-            &nbsp;&lsquo;{query}&rsquo;
+            &nbsp;&lsquo;{value}&rsquo;
           </span>
           . Try another keyword.
         </p>
