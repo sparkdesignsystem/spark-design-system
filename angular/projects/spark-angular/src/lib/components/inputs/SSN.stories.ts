@@ -88,7 +88,7 @@ export const SSNInput = () => ({
         sprkInput
       >
       <sprk-checkbox-item
-        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+        isVisibilityToggle="true"
       >
         <input
           type="checkbox"
@@ -135,7 +135,7 @@ export const invalidSSNInput = () => ({
         aria-invalid="true"
       >
       <sprk-checkbox-item
-        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+        isVisibilityToggle="true"
       >
         <input
           type="checkbox"
@@ -188,7 +188,7 @@ export const disabledSSNInput = () => ({
         disabled
       >
       <sprk-checkbox-item
-        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+        isVisibilityToggle="true"
       >
         <input
           type="checkbox"

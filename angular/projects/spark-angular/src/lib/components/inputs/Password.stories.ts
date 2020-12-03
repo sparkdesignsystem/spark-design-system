@@ -73,7 +73,7 @@ export const passwordInput = () => ({
       <label sprkLabel>Password</label>
       <input type="password" name="password_input" sprkInput />
       <sprk-checkbox-item
-        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+        isVisibilityToggle="true"
       >
         <input
           type="checkbox"
@@ -113,7 +113,7 @@ export const invalidPasswordInput = () => ({
         aria-invalid="true"
       />
       <sprk-checkbox-item
-        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+        isVisibilityToggle="true"
       >
         <input
           type="checkbox"
@@ -155,7 +155,7 @@ export const disabledPasswordInput = () => ({
       <label isDisabled="true" sprkLabel>Password</label>
       <input type="password" name="password_input" sprkInput disabled />
       <sprk-checkbox-item
-        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+        isVisibilityToggle="true"
       >
         <input
           type="checkbox"
