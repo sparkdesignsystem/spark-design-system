@@ -1,31 +1,30 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
-import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
-import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
-import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
-import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
-import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
-import { SprkSelectionItemContainerComponent } from './sprk-selection-item-container/sprk-selection-item-container.component';
 import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
-import { SprkSelectionInputDirective } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
-import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
+import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
+import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { SprkCheckboxItemModule } from './sprk-checkbox-item/sprk-checkbox-item.module';
+import { SprkCheckboxItemComponent } from './sprk-checkbox-item/sprk-checkbox-item.component';
+import { SprkCheckboxLabelModule } from '../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.module';
+import { SprkCheckboxLabelDirective } from '../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.directive';
+import { SprkCheckboxInputModule } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
+import { SprkCheckboxInputDirective } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
-import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
 
 export default {
   title: 'Components/Input/SSN',
   component: SparkInputContainerComponent,
   subcomponents: {
     SprkInputDirective,
-    SprkSelectionItemContainerComponent,
     SprkLabelDirective,
-    SprkSelectionInputDirective,
-    SprkSelectionLabelDirective,
+    SprkCheckboxItemComponent,
+    SprkCheckboxInputDirective,
+    SprkCheckboxLabelDirective,
     SprkFieldErrorDirective,
   },
   decorators: [
@@ -67,10 +66,9 @@ const modules = {
     SprkInputModule,
     SprkIconModule,
     SprkFieldErrorModule,
-    SprkSelectionContainerModule,
-    SprkSelectionItemContainerModule,
-    SprkSelectionInputModule,
-    SprkSelectionLabelModule,
+    SprkCheckboxInputModule,
+    SprkCheckboxLabelModule,
+    SprkCheckboxItemModule,
   ],
 };
 
@@ -89,18 +87,18 @@ export const SSNInput = () => ({
         id="ssn-input"
         sprkInput
       >
-      <sprk-selection-item-container
+      <sprk-checkbox-item
         additionalClasses="sprk-b-InputContainer__visibility-toggle"
       >
         <input
           type="checkbox"
-          sprkSelectionInput
+          sprkCheckboxInput
           (click)="toggleSSNType()"
           data-id="ssn-reveal-3"
           id="show-ssn"
         >
-        <label for="show-ssn" sprkSelectionLabel>Show SSN</label>
-      </sprk-selection-item-container>
+        <label for="show-ssn" sprkCheckboxLabel>Show SSN</label>
+      </sprk-checkbox-item>
     </sprk-input-container>
   `,
 });
@@ -110,7 +108,9 @@ SSNInput.story = {
   parameters: {
     jest: [
       'sprk-input-container.component',
-      'sprk-selection-item-container.component',
+      'sprk-checkbox-item.component',
+      'sprk-checkbox-input.directive',
+      'sprk-checkbox-label.directive',
       'sprk-input.directive',
       'sprk-label.directive',
     ],
@@ -134,21 +134,21 @@ export const invalidSSNInput = () => ({
         class="sprk-b-TextInput--error"
         aria-invalid="true"
       >
-      <sprk-selection-item-container
+      <sprk-checkbox-item
         additionalClasses="sprk-b-InputContainer__visibility-toggle"
       >
         <input
           type="checkbox"
-          sprkSelectionInput
+          sprkCheckboxInput
           (click)="toggleSSNType()"
           data-id="ssn-reveal-3"
           id="show-ssn"
         >
-        <label for="show-ssn" sprkSelectionLabel>Show SSN</label>
-      </sprk-selection-item-container>
+        <label for="show-ssn" sprkCheckboxLabel>Show SSN</label>
+      </sprk-checkbox-item>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -162,7 +162,9 @@ invalidSSNInput.story = {
   parameters: {
     jest: [
       'sprk-input-container.component',
-      'sprk-selection-item-container.component',
+      'sprk-checkbox-item.component',
+      'sprk-checkbox-input.directive',
+      'sprk-checkbox-label.directive',
       'sprk-input.directive',
       'sprk-label.directive',
     ],
@@ -185,19 +187,19 @@ export const disabledSSNInput = () => ({
         sprkInput
         disabled
       >
-      <sprk-selection-item-container
+      <sprk-checkbox-item
         additionalClasses="sprk-b-InputContainer__visibility-toggle"
       >
         <input
           type="checkbox"
-          sprkSelectionInput
+          sprkCheckboxInput
           (click)="toggleSSNType()"
           data-id="ssn-reveal-3"
           id="show-ssn"
           disabled
         >
-        <label isDisabled="true" for="show-ssn" sprkSelectionLabel>Show SSN</label>
-      </sprk-selection-item-container>
+        <label isDisabled="true" for="show-ssn" sprkCheckboxLabel>Show SSN</label>
+      </sprk-checkbox-item>
       <div
         [hidden]="ssnInput.valid || ssnInput.pristine"
         sprkFieldError
@@ -218,7 +220,9 @@ disabledSSNInput.story = {
   parameters: {
     jest: [
       'sprk-input-container.component',
-      'sprk-selection-item-container.component',
+      'sprk-checkbox-item.component',
+      'sprk-checkbox-input.directive',
+      'sprk-checkbox-label.directive',
       'sprk-input.directive',
       'sprk-label.directive',
     ],
