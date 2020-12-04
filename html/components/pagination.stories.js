@@ -4,9 +4,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Pagination',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     docs: { iframeHeight: 70 },
     info: `
@@ -48,16 +46,28 @@ export const defaultStory = () => {
     data-id="pagination-1"
   >
     <ul
-      class="sprk-c-Pagination sprk-o-HorizontalList sprk-o-HorizontalList--spacing-medium"
-    >
+      class="
+        sprk-c-Pagination 
+        sprk-o-HorizontalList 
+        sprk-o-HorizontalList--spacing-medium
+      ">
       <li>
         <a
-          class="sprk-c-Pagination__icon sprk-b-Link sprk-b-Link--disabled sprk-b-Link--plain"
+          class="
+            sprk-c-Pagination__icon 
+            sprk-b-Link 
+            sprk-b-Link--disabled 
+            sprk-b-Link--plain
+          "
           href="#nogo"
           data-sprk-pagination="prev">
           <span class="sprk-u-ScreenReaderText">Prev</span>
           <svg
-            class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+            class="
+              sprk-c-Icon 
+              sprk-c-Icon--filled-current-color 
+              sprk-c-Icon--stroke-current-color
+            "
             viewBox="0 0 64 64"
           >
             <use xlink:href="#chevron-left"></use>
@@ -67,7 +77,11 @@ export const defaultStory = () => {
 
       <li>
         <a
-          class="sprk-c-Pagination__link sprk-c-Pagination__link--current sprk-b-Link"
+          class="
+            sprk-c-Pagination__link 
+            sprk-c-Pagination__link--current 
+            sprk-b-Link
+          "
           href="#nogo"
           data-sprk-pagination="item"
           aria-current="true">
@@ -100,7 +114,11 @@ export const defaultStory = () => {
           data-sprk-pagination="next">
           <span class="sprk-u-ScreenReaderText">Next</span>
           <svg
-            class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+            class="
+              sprk-c-Icon 
+              sprk-c-Icon--filled-current-color 
+              sprk-c-Icon--stroke-current-color
+            "
             viewBox="0 0 64 64"
           >
             <use xlink:href="#chevron-right"></use>
@@ -116,7 +134,7 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['pagination'],
-  }
+  },
 };
 
 export const pager = () => {
@@ -127,15 +145,22 @@ export const pager = () => {
   return `
   <nav aria-label="Pagination Navigation" data-id="pagination-3">
     <ul
-      class="sprk-c-Pagination sprk-o-HorizontalList sprk-o-HorizontalList--spacing-large"
-    >
+      class="
+        sprk-c-Pagination 
+        sprk-o-HorizontalList 
+        sprk-o-HorizontalList--spacing-large
+      ">
       <li>
         <a
           class="sprk-c-Pagination__icon sprk-b-Link sprk-b-Link--plain"
           href="#nogo"
         >
           <svg
-            class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+            class="
+              sprk-c-Icon 
+              sprk-c-Icon--filled-current-color 
+              sprk-c-Icon--stroke-current-color
+            "
             viewBox="0 0 64 64"
           >
             <use xlink:href="#chevron-left"></use>
@@ -150,7 +175,11 @@ export const pager = () => {
           href="#nogo"
         >
           <svg
-            class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+            class="
+              sprk-c-Icon 
+              sprk-c-Icon--filled-current-color 
+              sprk-c-Icon--stroke-current-color
+            "
             viewBox="0 0 64 64"
           >
             <use xlink:href="#chevron-right"></use>
@@ -163,9 +192,8 @@ export const pager = () => {
   `;
 };
 
-
 pager.story = {
   parameters: {
     jest: ['pagination'],
-  }
+  },
 };

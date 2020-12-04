@@ -3,7 +3,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Foundations/Typography',
   decorators: [
-    story => `
+    (story) => `
       <div class="sprk-o-Box sb-decorate">${story()}</div>
     `,
   ],
@@ -43,7 +43,9 @@ correct type classes applied.
 };
 
 export const pageTitle = () => `
-  <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">The Quick Brown Fox Jumps Over the Lazy Dog</h1>
+  <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">
+    The Quick Brown Fox Jumps Over the Lazy Dog
+  </h1>
 `;
 
 pageTitle.story = {
@@ -51,7 +53,9 @@ pageTitle.story = {
 };
 
 export const displayOne = () => `
-  <h1 class="sprk-b-TypeDisplayOne">The Quick Brown Fox Jumps Over the Lazy Dog</h1>
+  <h1 class="sprk-b-TypeDisplayOne">
+    The Quick Brown Fox Jumps Over the Lazy Dog
+  </h1>
 `;
 
 displayOne.story = {
@@ -59,7 +63,9 @@ displayOne.story = {
 };
 
 export const displayTwo = () => `
-  <h1 class="sprk-b-TypeDisplayTwo">The Quick Brown Fox Jumps Over the Lazy Dog</h1>
+  <h1 class="sprk-b-TypeDisplayTwo">
+    The Quick Brown Fox Jumps Over the Lazy Dog
+  </h1>
 `;
 
 displayTwo.story = {
@@ -67,7 +73,9 @@ displayTwo.story = {
 };
 
 export const displayThree = () => `
-  <h2 class="sprk-b-TypeDisplayThree">The Quick Brown Fox Jumps Over the Lazy Dog</h2>
+  <h2 class="sprk-b-TypeDisplayThree">
+    The Quick Brown Fox Jumps Over the Lazy Dog
+  </h2>
 `;
 
 displayThree.story = {
@@ -75,7 +83,9 @@ displayThree.story = {
 };
 
 export const displayFour = () => `
-  <h3 class="sprk-b-TypeDisplayFour">The Quick Brown Fox Jumps Over the Lazy Dog</h3>
+  <h3 class="sprk-b-TypeDisplayFour">
+    The Quick Brown Fox Jumps Over the Lazy Dog
+  </h3>
 `;
 
 displayFour.story = {
@@ -83,7 +93,9 @@ displayFour.story = {
 };
 
 export const displayFive = () => `
-  <h4 class="sprk-b-TypeDisplayFive">The Quick Brown Fox Jumps Over the Lazy Dog</h4>
+  <h4 class="sprk-b-TypeDisplayFive">
+    The Quick Brown Fox Jumps Over the Lazy Dog
+  </h4>
 `;
 
 displayFive.story = {
@@ -91,7 +103,9 @@ displayFive.story = {
 };
 
 export const displaySix = () => `
-  <h5 class="sprk-b-TypeDisplaySix">The Quick Brown Fox Jumps Over the Lazy Dog</h5>
+  <h5 class="sprk-b-TypeDisplaySix">
+    The Quick Brown Fox Jumps Over the Lazy Dog
+  </h5>
 `;
 
 displaySix.story = {
@@ -99,7 +113,9 @@ displaySix.story = {
 };
 
 export const displaySeven = () => `
-  <h6 class="sprk-b-TypeDisplaySeven">The Quick Brown Fox Jumps Over the Lazy Dog</h6>
+  <h6 class="sprk-b-TypeDisplaySeven">
+    The Quick Brown Fox Jumps Over the Lazy Dog
+  </h6>
 `;
 
 displaySeven.story = {
@@ -108,10 +124,12 @@ displaySeven.story = {
 
 export const bodyOne = () => `
   <p class="sprk-b-TypeBodyOne">Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus
-    semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod
-    aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
-    ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
+  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
+  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
+  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
+  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+  dui eget dui.</p>
 `;
 
 bodyOne.story = {
@@ -120,10 +138,12 @@ bodyOne.story = {
 
 export const bodyTwo = () => `
   <p class="sprk-b-TypeBodyTwo">Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus
-    semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod
-    aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
-    ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
+  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
+  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
+  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
+  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+  dui eget dui.</p>
 `;
 
 bodyTwo.story = {
@@ -132,10 +152,12 @@ bodyTwo.story = {
 
 export const bodyThree = () => `
   <p class="sprk-b-TypeBodyThree">Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus
-    semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod
-    aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
-    ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
+  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
+  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
+  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
+  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+  dui eget dui.</p>
 `;
 
 bodyThree.story = {
@@ -144,10 +166,12 @@ bodyThree.story = {
 
 export const bodyFour = () => `
   <p class="sprk-b-TypeBodyFour">Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus
-    semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod
-    aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
-    ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+    adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
+    risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
+    augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
+    sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
+    ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+    dui eget dui.</p>
 `;
 
 bodyFour.story = {
