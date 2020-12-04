@@ -51,6 +51,10 @@ const TokenTable = () => {
   const handleChange = (event) => {
     const newValue = event.target.value;
     setValue(newValue);
+    if (newValue === '') {
+      setFilteredData(sassVarData);
+      return;
+    }
     debouncedFilterData(newValue);
   };
 
