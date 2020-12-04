@@ -49,9 +49,9 @@ const TokenTable = () => {
   );
 
   const handleChange = (event) => {
-    const { value: searchQuery } = event.target;
-    setValue(searchQuery);
-    debouncedFilterData(searchQuery);
+    const newValue = event.target.value;
+    setValue(newValue);
+    debouncedFilterData(newValue);
   };
 
   return (
@@ -62,11 +62,20 @@ const TokenTable = () => {
         value={value}
         onChange={handleChange}
       />
+      {value.length > 0 && filteredData.length > 0 && (
+        <p className="sprk-u-mbl">
+          Showing results for
+          <span className="sprk-u-FontStyle--italic">
+            &nbsp;&lsquo;{value.toString()}&rsquo;
+          </span>
+        </p>
+      )}
+
       {filteredData.length <= 0 ? (
         <p>
           No results for
           <span className="sprk-u-FontStyle--italic">
-            &nbsp;&lsquo;{value}&rsquo;
+            &nbsp;&lsquo;{value.toString()}&rsquo;
           </span>
           . Try another keyword.
         </p>
