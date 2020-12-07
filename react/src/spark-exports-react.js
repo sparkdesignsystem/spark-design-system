@@ -45,3 +45,4 @@ export { default as SprkText } from './base/typography/SprkText/SprkText';
 export { default as SprkHeading } from './base/typography/SprkHeading/SprkHeading';
 export { default as SprkCenteredColumn } from './objects/centered-column/SprkCenteredColumn';
 export { default as SprkErrorContainer } from './base/inputs/SprkErrorContainer/SprkErrorContainer';
+export { default as sprkFormatSSN } from './utilities/helpers/formatters/sprkFormatSSN';
