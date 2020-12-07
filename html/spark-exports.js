@@ -126,6 +126,10 @@ import {
   isEscPressed,
   isEnterPressed,
   isSpacePressed,
+  isDownPressed,
+  isUpPressed,
+  isLeftPressed,
+  isRightPressed,
 } from './utilities/keypress';
 import toggleValue from './utilities/toggleValue';
 import {
@@ -236,6 +240,10 @@ export {
   isEscPressed,
   isEnterPressed,
   isSpacePressed,
+  isUpPressed,
+  isDownPressed,
+  isLeftPressed,
+  isRightPressed,
   toggleValue,
   dropdowns,
   bindDropdownUIEvents,
