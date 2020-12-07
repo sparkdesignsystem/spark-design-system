@@ -4,7 +4,6 @@ import {
   isEscPressed,
   isUpPressed,
   isDownPressed,
-  isTabPressed,
 } from '../utilities/keypress';
 import generateAriaControls from '../utilities/generateAriaControls';
 
