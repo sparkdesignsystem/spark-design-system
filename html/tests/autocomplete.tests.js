@@ -77,16 +77,6 @@ describe('Autocomplete tests', () => {
     expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
-  it('should close the search results when tabbing out of the input', () => {
-    bindUIEvents(container);
-
-    const event = new window.Event('keydown');
-    event.keyCode = 9;
-    input.dispatchEvent(event);
-
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
-  });
-
   it(`it should not close the search results if search
   results are clicked`, () => {
     bindUIEvents(container);
