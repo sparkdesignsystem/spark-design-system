@@ -48,3 +48,4 @@ export { default as SprkErrorContainer } from './base/inputs/SprkErrorContainer/
 export { default as sprkFormatSSN } from './utilities/helpers/formatters/sprkFormatSSN';
 export { default as sprkFormatDate } from './utilities/helpers/formatters/sprkFormatDate';
 export { default as sprkFormatPhone } from './utilities/helpers/formatters/sprkFormatPhone';
+export { default as sprkFormatMonetary } from './utilities/helpers/formatters/sprkFormatMonetary';
