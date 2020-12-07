@@ -57,6 +57,18 @@ describe('Autocomplete tests', () => {
     expect(list.id).toEqual(testString);
   });
 
+  it('should set aria-expanded="false" when the list is closed', () => {
+    bindUIEvents(container);
+    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+
+    const escKeyEvent = new window.Event('keydown');
+    escKeyEvent.keyCode = 27;
+    document.dispatchEvent(escKeyEvent);
+
+    expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(input.getAttribute('aria-expanded')).toEqual('false');
+  });
+
   it('should close the search results if escape is pressed', () => {
     bindUIEvents(container);
     expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
@@ -240,13 +252,13 @@ describe('Autocomplete tests', () => {
     );
   });
 
-  // it('should not break if you press other keys', () => {
-  //   bindUIEvents(container);
+  it('should not break if you press other keys', () => {
+    bindUIEvents(container);
 
-  //   const event = new window.Event('keydown');
-  //   event.keyCode = 111;
-  //   input.dispatchEvent(event);
+    const event = new window.Event('keydown');
+    event.keyCode = 111;
+    input.dispatchEvent(event);
 
-  //   document.dispatchEvent(event);
-  // });
+    document.dispatchEvent(event);
+  });
 });
