@@ -14,32 +14,33 @@ const isListOpen = (list) => {
   return !list.classList.contains('sprk-u-Display--none');
 };
 
-const resetResults = (resultList) => {
-  resultList.forEach((result) => {
-    result.classList.remove(activeClass);
-    result.setAttribute('aria-selected', false);
+// remove the visual focus from every list item in the list
+const resetListItems = (list) => {
+  list.forEach((listItem) => {
+    listItem.classList.remove(activeClass);
+    listItem.setAttribute('aria-selected', false);
   });
 };
 
 const hideList = (list, input) => {
   if (isListOpen(list)) {
-    resetResults(list.querySelectorAll('li'));
+    resetListItems(list.querySelectorAll('li'));
     list.classList.add('sprk-u-Display--none');
     input.removeAttribute('aria-activedescendant');
     input.setAttribute('aria-expanded', false);
   }
 };
 
-const highlightResult = (result, input) => {
+const highlightListItem = (result, input) => {
   input.setAttribute('aria-activedescendant', result.id);
   result.classList.add(activeClass);
   result.setAttribute('aria-selected', true);
 };
 
-const getActiveResultIndex = (results) => {
+const getActiveItemIndex = (list) => {
   let activeIndex = null;
-  results.forEach((result, index) => {
-    if (result.classList.contains(activeClass)) {
+  list.forEach((listItem, index) => {
+    if (listItem.classList.contains(activeClass)) {
       activeIndex = index;
     }
   });
@@ -47,27 +48,27 @@ const getActiveResultIndex = (results) => {
   return activeIndex;
 };
 
-const advanceHighlightedResult = (results, input) => {
-  const activeIndex = getActiveResultIndex(results);
-  resetResults(results);
+const advanceHighlightedItem = (results, input) => {
+  const activeIndex = getActiveItemIndex(results);
+  resetListItems(results);
 
   if (activeIndex === null) {
-    highlightResult(results[0], input);
+    highlightListItem(results[0], input);
   } else if (activeIndex + 1 <= results.length - 1) {
-    highlightResult(results[activeIndex + 1], input);
+    highlightListItem(results[activeIndex + 1], input);
   } else {
-    highlightResult(results[0], input);
+    highlightListItem(results[0], input);
   }
 };
 
-const retreatHighlightedResult = (results, input) => {
-  const activeIndex = getActiveResultIndex(results);
-  resetResults(results);
+const retreatHighlightedItem = (results, input) => {
+  const activeIndex = getActiveItemIndex(results);
+  resetListItems(results);
 
   if (activeIndex === null || activeIndex - 1 === -1) {
-    highlightResult(results[results.length - 1], input);
+    highlightListItem(results[results.length - 1], input);
   } else {
-    highlightResult(results[activeIndex - 1], input);
+    highlightListItem(results[activeIndex - 1], input);
   }
 };
 
@@ -76,9 +77,6 @@ const bindUIEvents = (autocompleteContainer) => {
   const list = autocompleteContainer.querySelector('ul');
 
   generateAriaControls(input, list, 'autocomplete');
-
-  // todo if the input has a value and the list is visible
-  // resetResults(list.querySelectorAll('li'));
 
   input.addEventListener('keydown', (e) => {
     const selectableListItems = list.querySelectorAll(
@@ -90,18 +88,15 @@ const bindUIEvents = (autocompleteContainer) => {
       e.preventDefault();
 
       if (!list.classList.contains('sprk-u-Display--none')) {
-        retreatHighlightedResult(selectableListItems, input);
+        retreatHighlightedItem(selectableListItems, input);
       }
     } else if (isDownPressed(e)) {
       e.stopPropagation();
       e.preventDefault();
 
       if (!list.classList.contains('sprk-u-Display--none')) {
-        advanceHighlightedResult(selectableListItems, input);
+        advanceHighlightedItem(selectableListItems, input);
       }
-    } else if (isTabPressed(e)) {
-      // hide results if we're tabbing out of the control
-      hideList(list, input);
     }
   });
 
