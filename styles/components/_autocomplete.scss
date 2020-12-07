@@ -13,7 +13,7 @@
   box-shadow: $sprk-autocomplete-results-shadow;
   max-width: $sprk-autocomplete-results-max-width;
   max-height: $sprk-autocomplete-results-max-height;
-  position: relative;
+  position: absolute;
   z-index: $sprk-autocomplete-results-z-index;
   overflow-y: $sprk-autocomplete-results-overflow-y;
 
@@ -31,4 +31,8 @@
   .sprk-c-Autocomplete__results--active {
     background-color: $sprk-autocomplete-results-active-background-color;
   }
+}
+
+.sprk-b-InputContainer--huge .sprk-c-Autocomplete__results {
+  max-width: 37.5rem; //TODO move to json
 }
