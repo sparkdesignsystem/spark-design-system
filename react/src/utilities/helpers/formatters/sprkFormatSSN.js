@@ -1,5 +1,4 @@
 const sprkFormatSSN = (value) => {
-  console.log(value, 'valuea asdfs');
   let val = value.trim().replace(/-/g, '');
   let newVal = '';
   const sizes = [3, 2, 4];
