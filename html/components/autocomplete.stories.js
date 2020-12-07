@@ -62,18 +62,18 @@ export const defaultStory = () => {
         <ul
           class="sprk-c-Autocomplete__results sprk-u-Width-100"
         >
-          <li>Apple</li>
-          <li>Apricot</li>
-          <li>Avocado</li>
-          <li>Banana</li>
-          <li>Blackberry</li>
-          <li>Blueberry</li>
-          <li>Clementine</li>
-          <li>Fig</li>
-          <li>Grape</li>
-          <li>Kumquat</li>
-          <li>Lemon</li>
-          <li>Papaya</li>
+          <li role="option">Apple</li>
+          <li role="option">Apricot</li>
+          <li role="option">Avocado</li>
+          <li role="option">Banana</li>
+          <li role="option">Blackberry</li>
+          <li role="option">Blueberry</li>
+          <li role="option">Clementine</li>
+          <li role="option">Fig</li>
+          <li role="option">Grape</li>
+          <li role="option">Kumquat</li>
+          <li role="option">Lemon</li>
+          <li role="option">Papaya</li>
         </ul>
 
         <div
@@ -139,18 +139,18 @@ export const hugeStory = () => {
       <ul
         class="sprk-c-Autocomplete__results sprk-u-Width-100"
       >
-        <li>Apple</li>
-        <li>Apricot</li>
-        <li>Avocado</li>
-        <li>Banana</li>
-        <li>Blackberry</li>
-        <li>Blueberry</li>
-        <li>Clementine</li>
-        <li>Fig</li>
-        <li>Grape</li>
-        <li>Kumquat</li>
-        <li>Lemon</li>
-        <li>Papaya</li>
+        <li role="option">Apple</li>
+        <li role="option">Apricot</li>
+        <li role="option">Avocado</li>
+        <li role="option">Banana</li>
+        <li role="option">Blackberry</li>
+        <li role="option">Blueberry</li>
+        <li role="option">Clementine</li>
+        <li role="option">Fig</li>
+        <li role="option">Grape</li>
+        <li role="option">Kumquat</li>
+        <li role="option">Lemon</li>
+        <li role="option">Papaya</li>
       </ul>
 
       <div
