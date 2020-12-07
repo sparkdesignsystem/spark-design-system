@@ -46,3 +46,4 @@ export { default as SprkHeading } from './base/typography/SprkHeading/SprkHeadin
 export { default as SprkCenteredColumn } from './objects/centered-column/SprkCenteredColumn';
 export { default as SprkErrorContainer } from './base/inputs/SprkErrorContainer/SprkErrorContainer';
 export { default as sprkFormatSSN } from './utilities/helpers/formatters/sprkFormatSSN';
+export { default as sprkFormatDate } from './utilities/helpers/formatters/sprkFormatDate';
