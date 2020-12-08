@@ -3,7 +3,7 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme, { mount } from 'enzyme';
 import sprkFormatSSN from './sprkFormatSSN';
-import SprkTextInput from '../../../base/inputs/SprkTextInput/SprkTextInput';
+import SprkTextInput from '../../base/inputs/SprkTextInput/SprkTextInput';
 
 Enzyme.configure({ adapter: new Adapter() });
 
