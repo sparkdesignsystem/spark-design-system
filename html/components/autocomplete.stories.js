@@ -38,7 +38,7 @@ browser focus, which stays in the input.
 
 
 #### Requires Additional Engineering:
-In order to keep the Spark Autocomplete generic enough to use in a wide
+In order to keep the Spark Autocomplete flexible enough to use in a wide
   variety of use cases, some of the interactivity of the component is left
   up to implementing teams.
 
