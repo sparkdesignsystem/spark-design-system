@@ -8,22 +8,53 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('autocomplete')}
-- some additional engineering is required
-- Filtering the list
-  - make sure to update aria-live when the list updates
-  - Highlight the matching text in the search results
-  - Displaying a message if a filter returns 0 results
-- Selecting an item in the list
-- Showing the list
-  - set aria-expanded to true on the input
-- Hiding the list
-  - remove aria-selected from the active list item
-  - remove aria-activedescendant from the input
-  - set aria-expanded to false on the input
+- Live demos of the Autocomplete are available on our [demo site](https://spark-testhtml.netlify.app/autocomplete.html).
 
-- Applying CSS classes for error states
-- data-sprk-autocomplete-no-select
-- sprk-c-Autocomplete__results--active
+#### Keyboard Interactions
+- The list can be closed by clicking on the document body or by pressing
+the Escape key.
+- When the list is open, items in the list can be highlighted using the
+Up and Down Arrow keys. Note that this highlight is distinct from the
+browser focus, which stays in the input.
+
+#### Accessibility
+- The component should include an element with \`aria-live="polite"\`. The
+  contents of this element should be updated to reflect the number of visible
+  items in the list.
+- The input should have \`aria-autocomplete="list"\` and \`role="combobox"\`.
+  These attributes correctly identify the control to Assistive Technology.
+- The input should have \`autocomplete="off"\`, \`autocapitalize="off"\`,
+  and \`spellcheck="false"\`. These attributes deactivate default browser
+  behavior that can interfere with autocomplete behavior.
+- When the list is hidden, the text input should have \`aria-expanded="false"\`.
+- When the list is visible, the text input should have \`aria-expanded="true"\`.
+- When the list is visible and an item is highlighted (with the arrow keys),
+  the text input should have \`aria-activedescendant\` set to the \`id\`
+  of the active item.
+- When a list item is highlighted (with the arrow keys), it should have
+  \`aria-selected="true"\`.
+- Each selectable list item should have \`role="option"\`.
+
+
+#### Requires Additional Engineering:
+In order to keep the Spark Autocomplete generic enough to use in a wide
+  variety of use cases, some of the interactivity of the component is left
+  up to implementing teams.
+
+  - Filtering the list
+    - Display a message if a filter returns 0 results
+    - Highlight the matching text in the search results
+    - Update the contents of the associated \`aria-live\` element
+  - Showing the list
+    - set \`aria-expanded\` to \`true\` on the input
+  - Hiding the list
+    - remove \`aria-selected\` from the active list item
+    - remove \`aria-activedescendant\` from the input
+    - set \`aria-expanded\` to false on the input
+  - Selecting an item in the list by clicking it or pressing the Enter key.
+  - \`data-sprk-autocomplete-no-select\` can be applied to any result item
+  that you wish to omit from the arrow key highlighting behavior. For example
+  a "No results found" message or an item that is hidden by a filter.
     `,
     docs: { iframeHeight: 400 },
   },
