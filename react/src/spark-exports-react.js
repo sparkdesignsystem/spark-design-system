@@ -49,3 +49,7 @@ export { default as sprkFormatSSN } from './utilities/formatters/sprkFormatSSN';
 export { default as sprkFormatDate } from './utilities/formatters/sprkFormatDate';
 export { default as sprkFormatPhone } from './utilities/formatters/sprkFormatPhone';
 export { default as sprkFormatMonetary } from './utilities/formatters/sprkFormatMonetary';
+export { default as sprkIsValidSSN } from './utilities/validation/sprkIsValidSSN';
+export { default as sprkIsValidDate } from './utilities/validation/sprkIsValidDate';
+export { default as sprkIsValidPhone } from './utilities/validation/sprkIsValidPhone';
+export { default as sprkIsValidMonetary } from './utilities/validation/sprkIsValidMonetary';
