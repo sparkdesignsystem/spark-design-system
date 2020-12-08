@@ -8,9 +8,24 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('autocomplete')}
-- autocompletes complete automatically
+- some additional engineering is required
+- Filtering the list
+  - make sure to update aria-live when the list updates
+  - Highlight the matching text in the search results
+  - Displaying a message if a filter returns 0 results
+- Selecting an item in the list
+- Showing the list
+  - set aria-expanded to true on the input
+- Hiding the list
+  - remove aria-selected from the active list item
+  - remove aria-activedescendant from the input
+  - set aria-expanded to false on the input
+
+- Applying CSS classes for error states
+- data-sprk-autocomplete-no-select
+- sprk-c-Autocomplete__results--active
     `,
-    docs: { iframeHeight: 200 },
+    docs: { iframeHeight: 400 },
   },
 };
 
@@ -82,12 +97,6 @@ export const defaultStory = () => {
         ></div>
       </div>
     </div>
-    <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">1</button>
-    <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">2</button>
-    <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">3</button>
-    <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">4</button>
-    <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">5</button>
-    <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">6</button>
   `;
 };
 
@@ -159,12 +168,6 @@ export const hugeStory = () => {
       ></div>
     </div>
   </div>
-  <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">1</button>
-  <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">2</button>
-  <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">3</button>
-  <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">4</button>
-  <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">5</button>
-  <button class="sprk-c-Button sprk-u-Display--block sprk-u-mbm">6</button>
   `;
 };
 
