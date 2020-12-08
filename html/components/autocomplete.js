@@ -34,6 +34,15 @@ const highlightListItem = (result, input) => {
   input.setAttribute('aria-activedescendant', result.id);
   result.classList.add(activeClass);
   result.setAttribute('aria-selected', true);
+
+  // TODO scroll the list if necessary
+  // If the option isn’t visible within the menu
+  // if(!this.isElementVisible(option.parent(), option)) {
+
+  //   // make it visible by setting its position inside the menu
+  //   option.parent().scrollTop(option.parent().scrollTop() +
+  // option.position().top);
+  // }
 };
 
 const getActiveItemIndex = (list) => {
