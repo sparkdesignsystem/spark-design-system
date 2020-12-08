@@ -26,6 +26,7 @@ browser focus, which stays in the input.
 - The input should have \`autocomplete="off"\`, \`autocapitalize="off"\`,
   and \`spellcheck="false"\`. These attributes deactivate default browser
   behavior that can interfere with autocomplete behavior.
+- The list should have \`role="listbox"\`.
 - When the list is hidden, the text input should have \`aria-expanded="false"\`.
 - When the list is visible, the text input should have \`aria-expanded="true"\`.
 - When the list is visible and an item is highlighted (with the arrow keys),
@@ -71,6 +72,7 @@ export const defaultStory = () => {
 
       <div class="sprk-b-InputContainer">
         <label
+          id="autocomplete-label"
           for="autocomplete-input"
           class="sprk-b-Label"
         >
@@ -95,8 +97,11 @@ export const defaultStory = () => {
                   sprk-b-TextInput--has-svg-icon
                   sprk-u-Width-100
                 "
+            id="autocomplete-input"
             type="text"
+            aria-labelledby="autocomplete-label"
             aria-describedby="input--error-container"
+            aria-expanded="true"
             aria-autocomplete="list"
             role="combobox"
             autocomplete="off"
@@ -107,6 +112,8 @@ export const defaultStory = () => {
 
         <ul
           class="sprk-c-Autocomplete__results sprk-u-Width-100"
+          role="listbox"
+          aria-labelledby="autocomplete-label"
         >
           <li role="option">Apple</li>
           <li role="option">Apricot</li>
@@ -160,24 +167,33 @@ export const hugeStory = () => {
           <use xlink:href="#search" />
         </svg>
         <input
-            class="sprk-b-TextInput sprk-u-Width-100"
-            data-sprk-input="huge"
-            id="text-input-huge"
-            data-id="text-input-huge"
-            type="text"
-            aria-describedby="text-input-huge--error-container"
-            placeholder="Search for a Fruit"
-          >
-          <label
-            for="text-input-huge"
-            class="sprk-b-Label"
-          >
-            Search for a Fruit
-          </label>
+          id="text-input-huge"
+          type="text"
+          class="sprk-b-TextInput sprk-u-Width-100"
+          placeholder="Search for a Fruit"
+          aria-labelledby="input-label-huge"
+          aria-describedby="input--error-container"
+          aria-expanded="true"
+          aria-autocomplete="list"
+          role="combobox"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+          data-sprk-input="huge"
+        >
+        <label
+          for="text-input-huge"
+          id="input-label-huge"
+          class="sprk-b-Label"
+        >
+          Search for a Fruit
+        </label>
       </div>
 
       <ul
         class="sprk-c-Autocomplete__results sprk-u-Width-100"
+        role="listbox"
+        aria-labelledby="input-label-huge"
       >
         <li role="option">Apple</li>
         <li role="option">Apricot</li>
