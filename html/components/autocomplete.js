@@ -86,14 +86,14 @@ const bindUIEvents = (autocompleteContainer) => {
       e.stopPropagation();
       e.preventDefault();
 
-      if (!list.classList.contains('sprk-u-Display--none')) {
+      if (isListOpen(list)) {
         retreatHighlightedItem(selectableListItems, input);
       }
     } else if (isDownPressed(e)) {
       e.stopPropagation();
       e.preventDefault();
 
-      if (!list.classList.contains('sprk-u-Display--none')) {
+      if (isListOpen(list)) {
         advanceHighlightedItem(selectableListItems, input);
       }
     }
