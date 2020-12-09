@@ -153,6 +153,7 @@ import scrollYDirection from './utilities/scrollYDirection';
 import { checkbox, bindCheckboxUIEvents } from './base/inputs/checkbox';
 import generateIdForInput from './utilities/generateIdForInput';
 import { radioInput, bindRadioUIEvents } from './base/inputs/radioInput';
+import resetListItems from './utilities/resetListItems';
 
 export {
   dateInput,
@@ -272,4 +273,5 @@ export {
   generateIdForInput,
   radioInput,
   bindRadioUIEvents,
+  resetListItems,
 };
