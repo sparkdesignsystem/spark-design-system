@@ -6,6 +6,7 @@ import {
   isDownPressed,
 } from '../utilities/keypress';
 import generateAriaControls from '../utilities/generateAriaControls';
+import resetListItems from '../utilities/resetListItems';
 
 const activeClass = 'sprk-c-Autocomplete__results--active';
 
@@ -13,17 +14,9 @@ const isListOpen = (list) => {
   return !list.classList.contains('sprk-u-Display--none');
 };
 
-// remove the visual focus from every list item in the list
-const resetListItems = (list) => {
-  list.forEach((listItem) => {
-    listItem.classList.remove(activeClass);
-    listItem.setAttribute('aria-selected', false);
-  });
-};
-
 const hideList = (list, input) => {
   if (isListOpen(list)) {
-    resetListItems(list.querySelectorAll('li'));
+    resetListItems(list.querySelectorAll('li'), activeClass);
     list.classList.add('sprk-u-Display--none');
     input.removeAttribute('aria-activedescendant');
     input.setAttribute('aria-expanded', false);
@@ -58,7 +51,7 @@ const getActiveItemIndex = (list) => {
 
 const advanceHighlightedItem = (results, input) => {
   const activeIndex = getActiveItemIndex(results);
-  resetListItems(results);
+  resetListItems(results, activeClass);
 
   if (activeIndex === null) {
     highlightListItem(results[0], input);
@@ -71,7 +64,7 @@ const advanceHighlightedItem = (results, input) => {
 
 const retreatHighlightedItem = (results, input) => {
   const activeIndex = getActiveItemIndex(results);
-  resetListItems(results);
+  resetListItems(results, activeClass);
 
   if (activeIndex === null || activeIndex - 1 === -1) {
     highlightListItem(results[results.length - 1], input);
