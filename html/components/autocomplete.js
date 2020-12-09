@@ -7,15 +7,13 @@ import {
 } from '../utilities/keypress';
 import generateAriaControls from '../utilities/generateAriaControls';
 import resetListItems from '../utilities/resetListItems';
+import isElementVisible from '../utilities/isElementVisible';
 
 const activeClass = 'sprk-c-Autocomplete__results--active';
 
-const isListOpen = (list) => {
-  return !list.classList.contains('sprk-u-Display--none');
-};
-
-const hideList = (list, input) => {
-  if (isListOpen(list)) {
+const hideList = (autocompleteContainer, input) => {
+  if (isElementVisible('ul', autocompleteContainer)) {
+    const list = autocompleteContainer.querySelector('ul');
     resetListItems(list.querySelectorAll('li'), activeClass);
     list.classList.add('sprk-u-Display--none');
     input.removeAttribute('aria-activedescendant');
@@ -88,14 +86,14 @@ const bindUIEvents = (autocompleteContainer) => {
       e.stopPropagation();
       e.preventDefault();
 
-      if (isListOpen(list)) {
+      if (isElementVisible('ul', autocompleteContainer)) {
         retreatHighlightedItem(selectableListItems, input);
       }
     } else if (isDownPressed(e)) {
       e.stopPropagation();
       e.preventDefault();
 
-      if (isListOpen(list)) {
+      if (isElementVisible('ul', autocompleteContainer)) {
         advanceHighlightedItem(selectableListItems, input);
       }
     }
@@ -104,14 +102,14 @@ const bindUIEvents = (autocompleteContainer) => {
   // Hide results if Escape is pressed
   document.addEventListener('keydown', (e) => {
     if (isEscPressed(e)) {
-      hideList(list, input);
+      hideList(autocompleteContainer, input);
     }
   });
 
   // Hide results if the document body is clicked
   document.addEventListener('click', (e) => {
     if (!(input.contains(e.target) || list.contains(e.target))) {
-      hideList(list, input);
+      hideList(autocompleteContainer, input);
     }
   });
 };
