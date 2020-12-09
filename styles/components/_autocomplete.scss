@@ -6,14 +6,14 @@
 /// @group autocomplete
 ////
 .sprk-c-Autocomplete__results {
-  list-style-type: none;
+  list-style-type: $sprk-autocomplete-results-list-style-type;
   background-color: $sprk-white;
   border: $sprk-autocomplete-results-border;
   border-radius: $sprk-autocomplete-results-border-radius;
   box-shadow: $sprk-autocomplete-results-shadow;
   max-width: $sprk-autocomplete-results-max-width;
   max-height: $sprk-autocomplete-results-max-height;
-  position: absolute;
+  position: $sprk-autocomplete-results-position;
   z-index: $sprk-autocomplete-results-z-index;
   overflow-y: $sprk-autocomplete-results-overflow-y;
 

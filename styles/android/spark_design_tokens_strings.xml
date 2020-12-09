@@ -19,6 +19,8 @@
   <string name="sprk_alert_border_info">2px solid #ff1c6ef2</string><!-- The border value of the Information Alert component. -->
   <string name="sprk_alert_border_success">2px solid #ff298540</string><!-- The border value of the Success Alert component. -->
   <string name="sprk_alert_border_fail">2px solid #ffe50158</string><!-- The border value of the Fail Alert component. -->
+  <string name="sprk_autocomplete_results_list_style_type">none</string><!-- The list style type of the Autocomplete results. -->
+  <string name="sprk_autocomplete_results_position">absolute</string><!-- The position style of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_border_style">solid</string><!-- The border style of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_border">1.00dp solid #fff7f7f7</string><!-- The border of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_overflow_y">scroll</string><!-- The overflow-y behavior of the Autocomplete results. -->
