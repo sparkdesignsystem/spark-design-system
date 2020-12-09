@@ -48,6 +48,15 @@
           "file": "settings",
           "themable": true
         },
+        "border-radius": {
+          "comment": "The border radius of the Autocomplete results.",
+          "value": "4px",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
         "border": {
           "comment": "The border of the Autocomplete results.",
           "value": "{autocomplete.results.border-width.value} {autocomplete.results.border-style.value} {autocomplete.results.border-color.value}",

@@ -377,6 +377,7 @@ public class SparkDesignTokens {
     public static let sprkAlertIconMarginLeft = CGFloat(0.00)
     public static let sprkAlertIconMarginTop = CGFloat(0.00)
     public static let sprkAlertIconSize = CGFloat(32.00)
+    public static let sprkAutocompleteResultsBorderRadius = CGFloat(4.00)
     public static let sprkAutocompleteResultsBorderWidth = CGFloat(1.00)
     public static let sprkAutocompleteResultsMaxHeight = CGFloat(288.00)
     public static let sprkAutocompleteResultsMaxWidth = CGFloat(440.00)
