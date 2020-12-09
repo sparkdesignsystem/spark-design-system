@@ -12,6 +12,24 @@
             "themable": true
           }
         },
+        "list-style-type": {
+          "comment": "The list style type of the Autocomplete results.",
+          "value": "none",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": false
+        },
+        "position": {
+          "comment": "The position style of the Autocomplete results.",
+          "value": "absolute",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": false
+        },
         "background-color": {
           "comment": "Background color of the Autocomplete results.",
           "value": "{white.value}",
