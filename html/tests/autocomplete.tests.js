@@ -154,7 +154,6 @@ describe('Autocomplete tests', () => {
 
     list.classList.add('sprk-u-Display--none');
 
-    // race condition causing CSS classes to not be observed immediately
     expect(
       listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
     ).toBe(false);
@@ -213,7 +212,6 @@ describe('Autocomplete tests', () => {
 
     list.classList.add('sprk-u-Display--none');
 
-    // race condition causing CSS classes to not be observed immediately
     expect(
       listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
     ).toBe(false);

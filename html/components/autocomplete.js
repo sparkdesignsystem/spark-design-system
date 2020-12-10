@@ -26,14 +26,20 @@ const highlightListItem = (result, input) => {
   result.classList.add(activeClass);
   result.setAttribute('aria-selected', true);
 
-  // TODO scroll the list if necessary
-  // If the option isn’t visible within the menu
-  // if(!this.isElementVisible(option.parent(), option)) {
+  const listItemTop = result.getBoundingClientRect().top;
+  const listItemBottom = result.getBoundingClientRect().bottom;
 
-  //   // make it visible by setting its position inside the menu
-  //   option.parent().scrollTop(option.parent().scrollTop() +
-  // option.position().top);
-  // }
+  const listTop = result.parentNode.getBoundingClientRect().top;
+  const listBottom = result.parentNode.getBoundingClientRect().bottom;
+
+  // if the list item is not vertically contained within the list
+  if (listItemTop < listTop || listItemBottom > listBottom) {
+    // the distance from the top of the <li> to the top of the <ul>
+    const childTop = result.offsetTop;
+
+    // eslint-disable-next-line no-param-reassign
+    result.parentNode.scrollTop = childTop;
+  }
 };
 
 const getActiveItemIndex = (list) => {
