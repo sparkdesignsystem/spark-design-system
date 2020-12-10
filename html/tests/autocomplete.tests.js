@@ -155,19 +155,17 @@ describe('Autocomplete tests', () => {
     list.classList.add('sprk-u-Display--none');
 
     // race condition causing CSS classes to not be observed immediately
-    setTimeout(() => {
-      expect(
-        listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
-      ).toBe(false);
+    expect(
+      listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
+    ).toBe(false);
 
-      const event = new window.Event('keydown');
-      event.keyCode = 40;
-      input.dispatchEvent(event);
+    const event = new window.Event('keydown');
+    event.keyCode = 40;
+    input.dispatchEvent(event);
 
-      expect(
-        listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
-      ).toBe(false);
-    }, 3000);
+    expect(
+      listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
+    ).toBe(false);
   });
 
   it('should move visual focus with up arrow', () => {
@@ -216,19 +214,17 @@ describe('Autocomplete tests', () => {
     list.classList.add('sprk-u-Display--none');
 
     // race condition causing CSS classes to not be observed immediately
-    setTimeout(() => {
-      expect(
-        listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
-      ).toBe(false);
+    expect(
+      listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
+    ).toBe(false);
 
-      const event = new window.Event('keydown');
-      event.keyCode = 38;
-      input.dispatchEvent(event);
+    const event = new window.Event('keydown');
+    event.keyCode = 38;
+    input.dispatchEvent(event);
 
-      expect(
-        listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
-      ).toBe(false);
-    }, 3000);
+    expect(
+      listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
+    ).toBe(false);
   });
 
   it('should skip non-results when moving visual focus with down arrow', () => {
