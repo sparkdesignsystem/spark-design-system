@@ -66,7 +66,7 @@ describe('Autocomplete tests', () => {
     document.dispatchEvent(escKeyEvent);
 
     expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
-    expect(input.getAttribute('aria-expanded')).toEqual('false');
+    expect(input.parentNode.getAttribute('aria-expanded')).toEqual('false');
   });
 
   it('should close the search results if escape is pressed', () => {
