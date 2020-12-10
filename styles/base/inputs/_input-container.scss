@@ -81,12 +81,6 @@
   margin-top: $sprk-select-input-huge-icon-margin-top;
 }
 
-// .sprk-b-InputContainer--huge
-//   .sprk-b-TextInputIconContainer
-//   :first-child.sprk-b-TextInput {
-//   padding: $sprk-text-input-huge-has-text-icon-padding;
-// }
-
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus,
 .sprk-b-InputContainer--huge
   .sprk-b-TextInputIconContainer
