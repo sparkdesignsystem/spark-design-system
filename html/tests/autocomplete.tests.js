@@ -36,14 +36,22 @@ describe('Autocomplete tests', () => {
   });
 
   it('should generate an id if needed', () => {
+    // The id on the list, aria-controls on the input, and aria-owns on the
+    // input container should all match.
+
     expect(list.getAttribute('id')).toBe(null);
     expect(input.getAttribute('aria-controls')).toBe(null);
+    expect(input.parentNode.getAttribute('aria-owns')).toBe(null);
 
     bindUIEvents(container);
     expect(list.hasAttribute('id')).toBeTruthy();
     expect(input.hasAttribute('aria-controls')).toBeTruthy();
+    expect(input.parentNode.hasAttribute('aria-owns')).toBeTruthy();
     expect(list.getAttribute('id')).toEqual(
       input.getAttribute('aria-controls'),
+    );
+    expect(list.getAttribute('id')).toEqual(
+      input.parentNode.getAttribute('aria-owns'),
     );
   });
 
