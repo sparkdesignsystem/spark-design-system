@@ -126,18 +126,18 @@ export const defaultStory = () => {
           role="listbox"
           aria-labelledby="autocomplete-label"
         >
-          <li role="option">Apple</li>
-          <li role="option">Apricot</li>
-          <li role="option">Avocado</li>
-          <li role="option">Banana</li>
-          <li role="option">Blackberry</li>
-          <li role="option">Blueberry</li>
-          <li role="option">Clementine</li>
-          <li role="option">Fig</li>
-          <li role="option">Grape</li>
-          <li role="option">Kumquat</li>
-          <li role="option">Lemon</li>
-          <li role="option">Papaya</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Apple</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Apricot</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Avocado</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Banana</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Blackberry</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Blueberry</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Clementine</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Fig</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Grape</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Kumquat</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Lemon</li>
+          <li class="sprk-c-Autocomplete__result" role="option">Papaya</li>
         </ul>
 
         <div
@@ -209,18 +209,18 @@ export const hugeStory = () => {
         role="listbox"
         aria-labelledby="input-label-huge"
       >
-        <li role="option">Apple</li>
-        <li role="option">Apricot</li>
-        <li role="option">Avocado</li>
-        <li role="option">Banana</li>
-        <li role="option">Blackberry</li>
-        <li role="option">Blueberry</li>
-        <li role="option">Clementine</li>
-        <li role="option">Fig</li>
-        <li role="option">Grape</li>
-        <li role="option">Kumquat</li>
-        <li role="option">Lemon</li>
-        <li role="option">Papaya</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Apple</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Apricot</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Avocado</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Banana</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Blackberry</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Blueberry</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Clementine</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Fig</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Grape</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Kumquat</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Lemon</li>
+        <li class="sprk-c-Autocomplete__result" role="option">Papaya</li>
       </ul>
 
       <div

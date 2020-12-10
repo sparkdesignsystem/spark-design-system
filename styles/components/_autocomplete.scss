@@ -16,21 +16,21 @@
   position: $sprk-autocomplete-results-position;
   z-index: $sprk-autocomplete-results-z-index;
   overflow-y: $sprk-autocomplete-results-overflow-y;
+}
 
-  li {
-    padding: $sprk-autocomplete-results-items-padding;
-    border-bottom: $sprk-autocomplete-results-items-border-bottom;
-    font-size: $sprk-autocomplete-results-items-font-size;
+/// Apply highlighting style to the element.
+.sprk-c-Autocomplete__results--active {
+  background-color: $sprk-autocomplete-results-active-background-color;
+}
 
-    &:hover {
-      background-color: $sprk-autocomplete-results-items-hover-background-color;
-      cursor: $sprk-autocomplete-results-items-hover-cursor;
-    }
-  }
+.sprk-c-Autocomplete__result {
+  padding: $sprk-autocomplete-results-items-padding;
+  border-bottom: $sprk-autocomplete-results-items-border-bottom;
+  font-size: $sprk-autocomplete-results-items-font-size;
 
-  /// Apply highlighting style to the element.
-  .sprk-c-Autocomplete__results--active {
-    background-color: $sprk-autocomplete-results-active-background-color;
+  &:hover {
+    background-color: $sprk-autocomplete-results-items-hover-background-color;
+    cursor: $sprk-autocomplete-results-items-hover-cursor;
   }
 }
 
