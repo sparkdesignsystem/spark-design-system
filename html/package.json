@@ -8,7 +8,7 @@
     "test:generate-output": "npm run build-styles && jest --config ./jest-config.js --json --outputFile=./.jest-test-results.json",
     "test:watch": "npm run build-styles && jest -o --watch --config ./jest-config.js",
     "coverage": "npm run build-styles && jest --coverage --config ./jest-config.js",
-    "build": "webpack",
+    "build": "npm run build-styles && webpack",
     "build-styles": "cd '../styles/' && npm install && node build.js",
     "prepublishOnly": "npm run build",
     "sassdocmodifiers": "sassdoc '../styles/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
