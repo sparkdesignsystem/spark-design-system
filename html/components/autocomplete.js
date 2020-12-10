@@ -6,6 +6,7 @@ import {
   isDownPressed,
 } from '../utilities/keypress';
 import generateAriaControls from '../utilities/generateAriaControls';
+import generateAriaOwns from '../utilities/generateAriaOwns';
 import resetListItems from '../utilities/resetListItems';
 import isElementVisible from '../utilities/isElementVisible';
 
@@ -17,7 +18,7 @@ const hideList = (autocompleteContainer, input) => {
     resetListItems(list.querySelectorAll('li'), activeClass);
     list.classList.add('sprk-u-Display--none');
     input.removeAttribute('aria-activedescendant');
-    input.setAttribute('aria-expanded', false);
+    input.parentNode.setAttribute('aria-expanded', false);
   }
 };
 
@@ -82,6 +83,7 @@ const bindUIEvents = (autocompleteContainer) => {
   const list = autocompleteContainer.querySelector('ul');
 
   generateAriaControls(input, list, 'autocomplete');
+  generateAriaOwns(input.parentNode, list, 'autocomplete');
 
   input.addEventListener('keydown', (e) => {
     const selectableListItems = list.querySelectorAll(
