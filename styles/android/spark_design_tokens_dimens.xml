@@ -75,7 +75,6 @@
   <dimen name="sprk_input_max_width">440.00dp</dimen><!-- The value used as a maximum width for Input containers. -->
   <dimen name="sprk_input_max_width_full">1600.00dp</dimen><!-- The value used for the maximum width of an Input container using the .sprk-b-InputContainer--full modifier. -->
   <dimen name="sprk_input_huge_icon_offset_top">800.00dp</dimen><!-- The top value for icons in Huge Inputs. -->
-  <dimen name="sprk_input_huge_has_icon_padding">0.00dp</dimen><!-- The padding value for Huge Inputs that contains an icon. -->
   <dimen name="sprk_input_has_icon_right_top">38.00dp</dimen><!-- The top offset of the icon displayed on the right side of Inputs. -->
   <dimen name="sprk_input_has_icon_right_left">71.00dp</dimen><!-- The top offset of the icon displayed on the left side of Inputs. -->
   <dimen name="sprk_input_has_icon_padding_right">0.00dp</dimen><!-- The padding of the icon displayed inside of Inputs. -->

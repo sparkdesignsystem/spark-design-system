@@ -542,7 +542,7 @@
         "comment": "The padding value for Huge Inputs that contains an icon.",
         "value": "0 0 0 42px",
         "attributes": {
-          "category": "size"
+          "category": "content"
         },
         "file": "settings",
         "themable": true

@@ -484,7 +484,6 @@ public class SparkDesignTokens {
     public static let sprkInputHasIconRightLeft = CGFloat(71.00)
     public static let sprkInputHasIconRightTop = CGFloat(38.00)
     public static let sprkInputHugeFontSize = CGFloat(20.00)
-    public static let sprkInputHugeHasIconPadding = CGFloat(0.00)
     public static let sprkInputHugeHeight = CGFloat(64.00)
     public static let sprkInputHugeIconOffsetTop = CGFloat(800.00)
     public static let sprkInputHugeLabelFontSize = CGFloat(13.00)
