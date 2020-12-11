@@ -16,6 +16,7 @@
   position: $sprk-autocomplete-results-position;
   z-index: $sprk-autocomplete-results-z-index;
   overflow-y: $sprk-autocomplete-results-overflow-y;
+  -webkit-overflow-scrolling: touch; // iOS momentum scrolling
 }
 
 /// Apply highlighting style to the element.
