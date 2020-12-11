@@ -52,11 +52,11 @@ In order to keep the Spark Autocomplete flexible enough to use in a wide
     - Highlight the matching text in the search results
     - Update the contents of the associated \`aria-live\` element
   - Showing the list
-    - set \`aria-expanded\` to \`true\` on the input container
+    - Set \`aria-expanded\` to \`true\` on the input container
   - Hiding the list
-    - remove \`aria-selected\` from the active list item
-    - remove \`aria-activedescendant\` from the input
-    - set \`aria-expanded\` to false on the input container
+    - Remove \`aria-selected\` from the active list item
+    - Remove \`aria-activedescendant\` from the input
+    - Set \`aria-expanded\` to false on the input container
   - Selecting an item in the list by clicking it or pressing the Enter key.
     - The highlighted item is identified by the value of
     \`aria-activedescendant\` on the input.
