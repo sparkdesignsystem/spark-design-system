@@ -7,11 +7,11 @@
 ////
 .sprk-c-Autocomplete__results {
   list-style-type: $sprk-autocomplete-results-list-style-type;
-  background-color: $sprk-white;
+  background-color: $sprk-white; // TODO variable
   border: $sprk-autocomplete-results-border;
   border-radius: $sprk-autocomplete-results-border-radius;
   box-shadow: $sprk-autocomplete-results-shadow;
-  max-width: $sprk-autocomplete-results-max-width;
+  width: 100%; // TODO make variable
   max-height: $sprk-autocomplete-results-max-height;
   position: $sprk-autocomplete-results-position;
   z-index: $sprk-autocomplete-results-z-index;
@@ -25,6 +25,7 @@
 }
 
 .sprk-c-Autocomplete__result {
+  // TODO rename variables to sprk-autocomplete-result-padding etc
   padding: $sprk-autocomplete-results-items-padding;
   border-bottom: $sprk-autocomplete-results-items-border-bottom;
   font-size: $sprk-autocomplete-results-items-font-size;
@@ -36,5 +37,5 @@
 }
 
 .sprk-b-InputContainer--huge .sprk-c-Autocomplete__results {
-  max-width: 37.5rem; //TODO move to json
+  max-width: 37.5rem; // TODO move to json
 }

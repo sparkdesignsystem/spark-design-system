@@ -78,6 +78,11 @@ const retreatHighlightedItem = (results, input) => {
   }
 };
 
+const calculateListWidth = (list, input) => {
+  const currentInputWidth = input.offsetWidth;
+  list.setAttribute('style', `max-width:${currentInputWidth}px`);
+};
+
 const bindUIEvents = (autocompleteContainer) => {
   const input = autocompleteContainer.querySelector('input');
   const list = autocompleteContainer.querySelector('ul');
@@ -120,6 +125,14 @@ const bindUIEvents = (autocompleteContainer) => {
       hideList(autocompleteContainer, input);
     }
   });
+
+  // when the window resizes, reset the max-width of the list
+  window.addEventListener('resize', () => {
+    calculateListWidth(list, input);
+  });
+
+  // calculate the max-width on init
+  calculateListWidth(list, input);
 };
 
 const autocomplete = () => {

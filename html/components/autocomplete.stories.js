@@ -122,7 +122,7 @@ export const defaultStory = () => {
         </div>
 
         <ul
-          class="sprk-c-Autocomplete__results sprk-u-Width-100"
+          class="sprk-c-Autocomplete__results"
           role="listbox"
           aria-labelledby="autocomplete-label"
         >
@@ -205,7 +205,7 @@ export const hugeStory = () => {
       </div>
 
       <ul
-        class="sprk-c-Autocomplete__results sprk-u-Width-100"
+        class="sprk-c-Autocomplete__results"
         role="listbox"
         aria-labelledby="input-label-huge"
       >
