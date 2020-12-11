@@ -53,4 +53,10 @@ describe('isElementVisible tests', () => {
     expect(divVisible).toBe(true);
     expect(listItemVisible).toBe(false);
   });
+
+  it('should return undefined for unmatching selector', () => {
+    const notAnElement = isElementVisible('.asdf');
+
+    expect(notAnElement).toBe(undefined);
+  });
 });
