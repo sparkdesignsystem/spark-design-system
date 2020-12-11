@@ -8,8 +8,6 @@ const isElementVisible = (selector, container = document) => {
   const elementIsVisible = !(
     elementDisplayValue === 'none' || elementVisibilityValue === 'hidden'
   );
-  console.log(`my HTML is: ${element.outerHTML}`);
-  console.log(`isElementVisible returns: ${elementIsVisible}`);
   // eslint-disable-next-line consistent-return
   return elementIsVisible;
 };

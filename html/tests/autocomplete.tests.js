@@ -36,14 +36,22 @@ describe('Autocomplete tests', () => {
   });
 
   it('should generate an id if needed', () => {
+    // The id on the list, aria-controls on the input, and aria-owns on the
+    // input container should all match.
+
     expect(list.getAttribute('id')).toBe(null);
     expect(input.getAttribute('aria-controls')).toBe(null);
+    expect(input.parentNode.getAttribute('aria-owns')).toBe(null);
 
     bindUIEvents(container);
     expect(list.hasAttribute('id')).toBeTruthy();
     expect(input.hasAttribute('aria-controls')).toBeTruthy();
+    expect(input.parentNode.hasAttribute('aria-owns')).toBeTruthy();
     expect(list.getAttribute('id')).toEqual(
       input.getAttribute('aria-controls'),
+    );
+    expect(list.getAttribute('id')).toEqual(
+      input.parentNode.getAttribute('aria-owns'),
     );
   });
 
@@ -66,7 +74,7 @@ describe('Autocomplete tests', () => {
     document.dispatchEvent(escKeyEvent);
 
     expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
-    expect(input.getAttribute('aria-expanded')).toEqual('false');
+    expect(input.parentNode.getAttribute('aria-expanded')).toEqual('false');
   });
 
   it('should close the search results if escape is pressed', () => {
@@ -154,7 +162,6 @@ describe('Autocomplete tests', () => {
 
     list.classList.add('sprk-u-Display--none');
 
-    // race condition causing CSS classes to not be observed immediately
     expect(
       listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
     ).toBe(false);
@@ -213,7 +220,6 @@ describe('Autocomplete tests', () => {
 
     list.classList.add('sprk-u-Display--none');
 
-    // race condition causing CSS classes to not be observed immediately
     expect(
       listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
     ).toBe(false);
