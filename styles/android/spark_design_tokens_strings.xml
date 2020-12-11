@@ -104,6 +104,7 @@
   <string name="sprk_input_huge_padding">0 24.00dp</string><!-- The padding for Huge Inputs. -->
   <string name="sprk_input_huge_label_padding">0 (24.00dp + 2.00dp)</string><!-- The label padding for Huge Inputs. -->
   <string name="sprk_input_huge_box_shadow">0 3px 10px 1px rgba(0, 0, 0, 0.08)</string><!-- The box shadow value on Huge Inputs. -->
+  <string name="sprk_input_huge_has_icon_padding">0 0 0 42px</string><!-- The padding value for Huge Inputs that contains an icon. -->
   <string name="sprk_input_error_text_margin">0 0 0 6px</string><!-- The margin used for Input error text. -->
   <string name="sprk_error_container_margin">8.00dp 0 0 0</string><!-- The margin for Input containers that have an error. -->
   <string name="sprk_monetary_symbol">'$'</string><!-- The symbol used to denote currency for Monetary Inputs. -->
