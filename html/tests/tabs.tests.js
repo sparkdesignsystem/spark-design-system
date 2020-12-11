@@ -1,4 +1,4 @@
-/* global window document beforeEach afterEach describe it */
+/* global window document beforeEach afterEach describe it sinon */
 import {
   tabs,
   bindUIEvents,
@@ -18,7 +18,9 @@ describe('tabs init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     tabs();
-    expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-navigation="tabs"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-navigation="tabs"]',
+    );
   });
 });
 
@@ -540,7 +542,9 @@ describe('getActiveTabIndex tests', () => {
   });
 
   it('should return null when there are no tabs active', () => {
-    expect(getActiveTabIndex(tabsSet, 'sprk-c-Tabs__button--active')).toBe(null);
+    expect(getActiveTabIndex(tabsSet, 'sprk-c-Tabs__button--active')).toBe(
+      null,
+    );
   });
 
   it('should return the correct index when a tab is active', () => {

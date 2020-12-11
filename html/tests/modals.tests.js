@@ -1,4 +1,4 @@
-/* global window beforeEach afterEach document describe it */
+/* global window beforeEach afterEach document describe it sinon */
 import {
   modals,
   showModal,
@@ -13,12 +13,9 @@ import {
 import {
   getFocusableEls,
   focusFirstEl,
-  isActiveElement
+  isActiveElement,
 } from '../utilities/elementState';
-import {
-  isTabPressed,
-  isEscPressed
-} from '../utilities/keypress';
+import { isTabPressed, isEscPressed } from '../utilities/keypress';
 
 describe('modals init', () => {
   afterEach(() => {
@@ -29,11 +26,19 @@ describe('modals init', () => {
     sinon.spy(document, 'querySelectorAll');
     sinon.spy(document, 'querySelector');
     modals();
-    expect(document.querySelector.getCall(0).args[0]).toBe('[data-sprk-modal-mask="true"]');
+    expect(document.querySelector.getCall(0).args[0]).toBe(
+      '[data-sprk-modal-mask="true"]',
+    );
     expect(document.querySelector.getCall(1).args[0]).toBe('[data-sprk-main]');
-    expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-modal-trigger]');
-    expect(document.querySelectorAll.getCall(1).args[0]).toBe('[data-sprk-modal]');
-    expect(document.querySelectorAll.getCall(2).args[0]).toBe('[data-sprk-modal-cancel]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-modal-trigger]',
+    );
+    expect(document.querySelectorAll.getCall(1).args[0]).toBe(
+      '[data-sprk-modal]',
+    );
+    expect(document.querySelectorAll.getCall(2).args[0]).toBe(
+      '[data-sprk-modal-cancel]',
+    );
   });
 });
 
@@ -85,13 +90,22 @@ describe('modal UI tests', () => {
 
     triggerDefaultModal = document.createElement('button');
     sinon.spy(triggerDefaultModal, 'addEventListener');
-    triggerDefaultModal.setAttribute('data-sprk-modal-trigger', 'exampleDefaultModal');
-    triggerDefaultModal.setAttribute('data-sprk-modal-trigger-prevent-default', 'true');
+    triggerDefaultModal.setAttribute(
+      'data-sprk-modal-trigger',
+      'exampleDefaultModal',
+    );
+    triggerDefaultModal.setAttribute(
+      'data-sprk-modal-trigger-prevent-default',
+      'true',
+    );
     triggerDefaultModal.textContent = 'Launch Default Modal';
 
     triggerWaitModal = document.createElement('button');
     sinon.spy(triggerWaitModal, 'addEventListener');
-    triggerWaitModal.setAttribute('data-sprk-modal-trigger', 'exampleWaitModal');
+    triggerWaitModal.setAttribute(
+      'data-sprk-modal-trigger',
+      'exampleWaitModal',
+    );
     triggerWaitModal.textContent = 'Launch Wait Modal';
 
     defaultModal.append(cancelDefault);
@@ -124,7 +138,9 @@ describe('modal UI tests', () => {
       [defaultModal, waitModal],
       [cancelDefault],
     );
-    expect(triggerDefaultModal.addEventListener.getCall(0).args[0]).toBe('click');
+    expect(triggerDefaultModal.addEventListener.getCall(0).args[0]).toBe(
+      'click',
+    );
     expect(triggerWaitModal.addEventListener.getCall(0).args[0]).toBe('click');
   });
 
@@ -143,8 +159,11 @@ describe('modal UI tests', () => {
     expect(defaultModal.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
-  it('should hide the correct modal when cancel is triggered if preventDefault is not set', () => {
-    triggerDefaultModal.removeAttribute('data-sprk-modal-trigger-prevent-default');
+  it(`should hide the correct modal when cancel is 
+      triggered if preventDefault is not set`, () => {
+    triggerDefaultModal.removeAttribute(
+      'data-sprk-modal-trigger-prevent-default',
+    );
     bindUIEvents(
       modalMask,
       main,
@@ -170,7 +189,8 @@ describe('modal UI tests', () => {
     expect(cancelDefault.addEventListener.getCall(0).args[0]).toBe('click');
   });
 
-  it('should bind a click event to the mask, if there is a modal and a mask', () => {
+  it(`should bind a click event to the mask, 
+      if there is a modal and a mask`, () => {
     bindUIEvents(
       modalMask,
       main,
@@ -277,11 +297,17 @@ describe('Modal tests', () => {
     link2.href = '#';
 
     triggerDefaultModal = document.createElement('button');
-    triggerDefaultModal.setAttribute('data-sprk-modal-trigger', 'exampleDefaultModal');
+    triggerDefaultModal.setAttribute(
+      'data-sprk-modal-trigger',
+      'exampleDefaultModal',
+    );
     triggerDefaultModal.textContent = 'Launch Default Modal';
 
     triggerWaitModal = document.createElement('button');
-    triggerWaitModal.setAttribute('data-sprk-modal-trigger', 'exampleWaitModal');
+    triggerWaitModal.setAttribute(
+      'data-sprk-modal-trigger',
+      'exampleWaitModal',
+    );
     triggerWaitModal.textContent = 'Launch Wait Modal';
 
     defaultModal.append(cancelDefault);
@@ -314,7 +340,8 @@ describe('Modal tests', () => {
     expect(modalEl).toEqual(defaultModal);
   });
 
-  it('should show the default modal, mask and set aria-hidden=true on main container', () => {
+  it(`should show the default modal, mask and set 
+      aria-hidden=true on main container`, () => {
     showModal(defaultModal, modalMask, main);
 
     // showModal should remove the hide class from the modal mask
@@ -332,7 +359,8 @@ describe('Modal tests', () => {
     expect(defaultModal.classList.add.called).toBe(false);
   });
 
-  it('should show the wait modal, mask and set aria-hidden=true on main', () => {
+  it(`should show the wait modal, mask and set 
+      aria-hidden=true on main`, () => {
     showModal(waitModal, modalMask, main);
 
     // showModal should remove the hide class from the modal mask
@@ -345,7 +373,8 @@ describe('Modal tests', () => {
     expect(main.hasAttribute('aria-hidden')).toBe(true);
   });
 
-  it('should hide the default modal, mask, remove aria-hidden=true on main, and send focus back to trigger element', () => {
+  it(`should hide the default modal, mask, remove aria-hidden=true 
+      on main, and send focus back to trigger element`, () => {
     // First we show the modal
     showModal(defaultModal, modalMask, main);
     hideModal(defaultModal, modalMask, main);
@@ -363,12 +392,14 @@ describe('Modal tests', () => {
     expect(triggerDefaultModal).toEqual(document.activeElement);
   });
 
-  it('should return if the modal is already hidden or if the mask or main section is not defined', () => {
+  it(`should return if the modal is already hidden or if the 
+      mask or main section is not defined`, () => {
     hideModal(defaultModal, modalMask, main);
     expect(modalMask.classList.add.called).toBe(false);
   });
 
-  it('should hide the wait modal, mask, remove aria-hidden=true on main, and send focus back to trigger element', () => {
+  it(`should hide the wait modal, mask, remove aria-hidden=true 
+      on main, and send focus back to trigger element`, () => {
     // First we show the modal
     showModal(waitModal, modalMask, main);
     hideModal(waitModal, modalMask, main);
@@ -419,7 +450,9 @@ describe('Modal tests', () => {
   it('should do nothing if focusFirstEl contains no focusable elements', () => {
     focusFirstEl(defaultModal);
     focusFirstEl(document.createElement('div'));
-    expect(document.activeElement.outerHTML).toBe('<a data-sprk-modal-cancel="exampleDefaultModal" href="#">Link</a>');
+    expect(document.activeElement.outerHTML).toBe(
+      '<a data-sprk-modal-cancel="exampleDefaultModal" href="#">Link</a>',
+    );
   });
 
   it('should determine if Tab key was pressed', () => {
@@ -518,7 +551,8 @@ describe('Modal tests', () => {
     expect(document.activeElement).toEqual(waitModal);
   });
 
-  it('should return focus to the open wait modal if shift + tab is pressed', () => {
+  it(`should return focus to the open wait 
+      modal if shift + tab is pressed`, () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
     const tabKeyEvent = new window.Event('keydown');
     tabKeyEvent.keyCode = 9;
@@ -528,7 +562,8 @@ describe('Modal tests', () => {
     expect(document.activeElement).toEqual(waitModal);
   });
 
-  it('should return focus to the first element if tab is pressed while the last focusable element is focused', () => {
+  it(`should return focus to the first element if tab is pressed while
+      the last focusable element is focused`, () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
     const tabKeyEvent = new window.Event('keydown');
     tabKeyEvent.keyCode = 9;
@@ -539,7 +574,8 @@ describe('Modal tests', () => {
     expect(document.activeElement).toEqual(cancelDefault);
   });
 
-  it('should return focus to the first element if tab + shift is pressed while the first focusable element is focused', () => {
+  it(`should return focus to the first element if tab + shift 
+      is pressed while the first focusable element is focused`, () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
     const tabKeyEvent = new window.Event('keydown');
     tabKeyEvent.keyCode = 9;
@@ -551,7 +587,8 @@ describe('Modal tests', () => {
     expect(document.activeElement).toEqual(link2);
   });
 
-  it('should do nothing if tab + shift is pressed while the focused element is not first', () => {
+  it(`should do nothing if tab + shift is pressed while 
+      the focused element is not first`, () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
     const tabKeyEvent = new window.Event('keydown');
     tabKeyEvent.keyCode = 9;
@@ -562,7 +599,8 @@ describe('Modal tests', () => {
     expect(document.activeElement).toEqual(link2);
   });
 
-  it('should do nothing if tab is pressed while the focused element is not last', () => {
+  it(`should do nothing if tab is pressed while 
+      the focused element is not last`, () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
     const tabKeyEvent = new window.Event('keydown');
     tabKeyEvent.keyCode = 9;
@@ -575,7 +613,10 @@ describe('Modal tests', () => {
   it('should not hide an open wait modal', () => {
     const modalsList = document.querySelectorAll('[data-sprk-modal]');
     showModal(waitModal, modalMask, main);
-    handleMaskEvents(modalsList, modalMask, main, { target: modalMask, preventDefault: () => {} });
+    handleMaskEvents(modalsList, modalMask, main, {
+      target: modalMask,
+      preventDefault: () => {},
+    });
     expect(waitModal.classList.contains('sprk-u-Display--none')).toBe(false);
   });
 

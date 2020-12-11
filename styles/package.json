@@ -4,8 +4,9 @@
   "description": "Styles for Spark Design System.",
   "main": "web/settings.js",
   "scripts": {
-    "build": "node build.js",
+    "build": "node build.js && npm run build-css",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass ./_spark.scss web/css/spark.min.css --output-style compressed",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "devDependencies": {
+    "node-sass": "^5.0.0",
     "style-dictionary": "2.10.1"
   },
   "publishConfig": {

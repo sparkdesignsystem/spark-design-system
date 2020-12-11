@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/m
 
 export default {
   title: 'Components/Input/Helper Text',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
@@ -14,7 +12,7 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const helperText = () => (
+export const helperText = () =>
   `
     <div class="sprk-b-InputContainer">
       <label
@@ -43,14 +41,13 @@ export const helperText = () => (
         id="text-input-helper--error-container"
       ></div>
     </div>
-  `
-);
+  `;
 
 helperText.story = {
   name: 'Default',
 };
 
-export const invalidHelperText = () => (
+export const invalidHelperText = () =>
   `
     <div class="sprk-b-InputContainer">
       <label
@@ -89,8 +86,7 @@ export const invalidHelperText = () => (
         </div>
       </div>
     </div>
-  `
-);
+  `;
 
 invalidHelperText.story = {
   name: 'With Error Text',

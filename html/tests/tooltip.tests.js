@@ -1,9 +1,9 @@
-/* global document beforeEach afterEach describe it window */
+/* global document beforeEach describe it window sinon */
 describe('Tooltip tests', () => {
   const tooltip = require('../components/tooltip');
   let container;
   let trigger;
-  let tooltip_element;
+  let tooltipElement;
 
   beforeEach(() => {
     container = document.createElement('span');
@@ -14,17 +14,17 @@ describe('Tooltip tests', () => {
     trigger.setAttribute('data-sprk-tooltip', 'trigger');
     trigger.setAttribute('aria-labelledby', 'tooltip_1');
 
-    tooltip_element = document.createElement('span');
-    tooltip_element.setAttribute('data-sprk-tooltip', 'content');
-    tooltip_element.classList.add('sprk-c-Tooltip');
-    tooltip_element.setAttribute('aria-hidden', 'true');
-    tooltip_element.setAttribute('id', 'tooltip_content_1');
-    tooltip_element.setAttribute('role', 'tooltip');
+    tooltipElement = document.createElement('span');
+    tooltipElement.setAttribute('data-sprk-tooltip', 'content');
+    tooltipElement.classList.add('sprk-c-Tooltip');
+    tooltipElement.setAttribute('aria-hidden', 'true');
+    tooltipElement.setAttribute('id', 'tooltip_content_1');
+    tooltipElement.setAttribute('role', 'tooltip');
 
-    tooltip_element.innerHTML = 'tooltip text';
+    tooltipElement.innerHTML = 'tooltip text';
 
     container.append(trigger);
-    container.append(tooltip_element);
+    container.append(tooltipElement);
 
     document.body.appendChild(container);
   });
@@ -32,8 +32,9 @@ describe('Tooltip tests', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     tooltip.tooltip();
-    expect(document.querySelectorAll
-      .getCall(0).args[0]).toBe('[data-sprk-tooltip="container"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-tooltip="container"]',
+    );
 
     document.querySelectorAll.restore();
   });
@@ -45,7 +46,6 @@ describe('Tooltip tests', () => {
   });
 
   describe('Tooltip behavior', () => {
-
     beforeEach(() => {
       tooltip.tooltip();
     });
@@ -53,7 +53,7 @@ describe('Tooltip tests', () => {
     it('should set toggled class when sticking open', () => {
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(false);
       expect(trigger.getAttribute('aria-expanded')).toBe('false');
-      tooltip.showTooltip(trigger, tooltip_element, true);
+      tooltip.showTooltip(trigger, tooltipElement, true);
       expect(trigger.getAttribute('aria-expanded')).toBe('true');
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(true);
     });
@@ -61,30 +61,30 @@ describe('Tooltip tests', () => {
     it('should not set toggled class when not sticking open', () => {
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(false);
       expect(trigger.getAttribute('aria-expanded')).toBe('false');
-      tooltip.showTooltip(trigger, tooltip_element, false);
+      tooltip.showTooltip(trigger, tooltipElement, false);
       expect(trigger.getAttribute('aria-expanded')).toBe('true');
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(false);
     });
 
     it('should hide correctly', () => {
-      tooltip.showTooltip(trigger, tooltip_element, true);
+      tooltip.showTooltip(trigger, tooltipElement, true);
       expect(trigger.getAttribute('aria-expanded')).toBe('true');
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(true);
-      tooltip.hideTooltip(trigger, tooltip_element);
+      tooltip.hideTooltip(trigger, tooltipElement);
       expect(trigger.getAttribute('aria-expanded')).toBe('false');
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(false);
     });
 
     it('should hide the tooltip when toggling', () => {
-      tooltip.showTooltip(trigger, tooltip_element, true);
-      tooltip.toggleTooltip(trigger, tooltip_element);
+      tooltip.showTooltip(trigger, tooltipElement, true);
+      tooltip.toggleTooltip(trigger, tooltipElement);
 
       expect(trigger.getAttribute('aria-expanded')).toBe('false');
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(false);
     });
 
     it('should show the tooltip when toggling', () => {
-      tooltip.toggleTooltip(trigger, tooltip_element);
+      tooltip.toggleTooltip(trigger, tooltipElement);
       expect(trigger.getAttribute('aria-expanded')).toBe('true');
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(true);
     });
@@ -140,7 +140,7 @@ describe('Tooltip tests', () => {
     });
 
     it('should hide on Escape', () => {
-      tooltip.toggleTooltip(trigger, tooltip_element);
+      tooltip.toggleTooltip(trigger, tooltipElement);
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(true);
       const event = new window.Event('keydown');
       event.keyCode = 27;
@@ -149,7 +149,7 @@ describe('Tooltip tests', () => {
     });
 
     it('should hide on document click', () => {
-      tooltip.toggleTooltip(trigger, tooltip_element);
+      tooltip.toggleTooltip(trigger, tooltipElement);
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(true);
       document.dispatchEvent(new window.Event('click'));
       expect(trigger.classList.contains('sprk-c-Tooltip--toggled')).toBe(false);
@@ -160,11 +160,13 @@ describe('Tooltip tests', () => {
       window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
-        return { top: 75, left: 75 }
-      }
+        return { top: 75, left: 75 };
+      };
 
       trigger.click();
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
+      expect(
+        tooltipElement.classList.contains('sprk-c-Tooltip--top-left'),
+      ).toBe(true);
     });
 
     it('should add the top right positioning class', () => {
@@ -172,11 +174,13 @@ describe('Tooltip tests', () => {
       window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
-        return { top: 75, left: 25 }
-      }
+        return { top: 75, left: 25 };
+      };
 
       trigger.click();
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top-right')).toBe(true);
+      expect(
+        tooltipElement.classList.contains('sprk-c-Tooltip--top-right'),
+      ).toBe(true);
     });
 
     it('should add the bottom left positioning class', () => {
@@ -184,11 +188,13 @@ describe('Tooltip tests', () => {
       window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
-        return { top: 25, left: 75 }
-      }
+        return { top: 25, left: 75 };
+      };
 
       trigger.click();
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--bottom-left')).toBe(true);
+      expect(
+        tooltipElement.classList.contains('sprk-c-Tooltip--bottom-left'),
+      ).toBe(true);
     });
 
     it('should add the bottom right positioning class', () => {
@@ -196,11 +202,13 @@ describe('Tooltip tests', () => {
       window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
-        return { top: 25, left: 25 }
-      }
+        return { top: 25, left: 25 };
+      };
 
       trigger.click();
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--bottom-right')).toBe(true);
+      expect(
+        tooltipElement.classList.contains('sprk-c-Tooltip--bottom-right'),
+      ).toBe(true);
     });
 
     it('should add positioning class on hover', () => {
@@ -208,27 +216,31 @@ describe('Tooltip tests', () => {
       window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
-        return { top: 75, left: 75 }
-      }
+        return { top: 75, left: 75 };
+      };
 
       const event = new window.Event('mouseover');
       trigger.dispatchEvent(event);
 
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
-    })
+      expect(
+        tooltipElement.classList.contains('sprk-c-Tooltip--top-left'),
+      ).toBe(true);
+    });
 
     it('should add positioning class on focus', () => {
       window.innerWidth = 100;
       window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
-        return { top: 75, left: 75 }
-      }
+        return { top: 75, left: 75 };
+      };
 
       const event = new window.Event('focus');
       trigger.dispatchEvent(event);
 
-      expect(tooltip_element.classList.contains('sprk-c-Tooltip--top-left')).toBe(true);
-    })
-  })
+      expect(
+        tooltipElement.classList.contains('sprk-c-Tooltip--top-left'),
+      ).toBe(true);
+    });
+  });
 });

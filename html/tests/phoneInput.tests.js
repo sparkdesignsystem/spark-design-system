@@ -1,5 +1,9 @@
-/* global beforeEach afterEach window document describe it */
-import { phoneInput, formatPhone, bindUIEvents } from '../base/inputs/phoneInput';
+/* global beforeEach afterEach window document describe it  sinon */
+import {
+  phoneInput,
+  formatPhone,
+  bindUIEvents,
+} from '../base/inputs/phoneInput';
 
 describe('phoneInput init', () => {
   let div;
@@ -17,8 +21,9 @@ describe('phoneInput init', () => {
     global.document = window.document;
     sinon.spy(document, 'querySelectorAll');
     phoneInput();
-    expect(document.querySelectorAll
-      .getCall(0).args[0]).toBe('[data-sprk-input="phone"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-input="phone"]',
+    );
   });
 });
 
@@ -32,8 +37,8 @@ describe('formatPhone tests', () => {
     field = document.createElement('input');
     field.setAttribute(
       'pattern',
-      '(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d'
-      + '{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$',
+      '(^(\\+\\d{1,2}\\s)?((\\(\\d{3}\\))|\\d' +
+        '{3})[\\s.-]?\\d{3}[\\s.-]?\\d{4}$)|^$',
     );
     element.appendChild(field);
     field.value = '3133733000';
@@ -57,8 +62,8 @@ describe('formatPhone tests', () => {
     expect(field.addEventListener.getCall(0).args[0]).toBe('input');
   });
 
-  it('should validate and format when input is triggered with valid'
-    + ' input', () => {
+  it(`should validate and format when 
+      input is triggered with valid input`, () => {
     bindUIEvents(element);
     event = new window.Event('input');
     field.dispatchEvent(event);

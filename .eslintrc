@@ -29,5 +29,13 @@
         "every": [ "id" ]
       }
     }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["html/tests/*.js"],
+      "rules": {
+        "global-require": "off"
+      }
+    }
+  ]
 }

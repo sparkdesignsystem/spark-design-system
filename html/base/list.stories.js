@@ -2,9 +2,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/List',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('list')}
@@ -13,7 +11,7 @@ ${markdownDocumentationLinkBuilder('list')}
   },
 };
 
-export const unordered = () => (
+export const unordered = () =>
   `
     <ul
       class="sprk-b-List"
@@ -23,10 +21,9 @@ export const unordered = () => (
       <li data-id="list-item-2">Unordered List Item</li>
       <li data-id="list-item-3">Unordered List Item</li>
     </ul>
-  `
-);
+  `;
 
-export const ordered = () => (
+export const ordered = () =>
   `
     <ol
       class="sprk-b-List"
@@ -36,10 +33,9 @@ export const ordered = () => (
       <li data-id="list-item-5">Ordered List Item</li>
       <li data-id="list-item-6">Ordered List Item</li>
     </ol>
-  `
-);
+  `;
 
-export const indented = () => (
+export const indented = () =>
   `
     <ul
       class="sprk-b-List sprk-b-List--indented"
@@ -49,10 +45,9 @@ export const indented = () => (
       <li data-id="list-item-8">Indented Item</li>
       <li data-id="list-item-9">Indented Item</li>
     </ul>
-  `
-);
+  `;
 
-export const bare = () => (
+export const bare = () =>
   `
     <ul
       class="sprk-b-List sprk-b-List--bare"
@@ -62,5 +57,4 @@ export const bare = () => (
       <li data-id="list-item-11">Bare List Item</li>
       <li data-id="list-item-12">Bare List Item</li>
     </ul>
-  `
-);
+  `;

@@ -1,8 +1,9 @@
-/* global document describe beforeEach it */
+/* global document describe beforeEach it sinon */
+
 describe('Highlight Board tests', () => {
-  jest.mock('object-fit-images', () => mockObjectFitImagesStub);
   let element;
   const mockObjectFitImagesStub = sinon.spy();
+  jest.mock('object-fit-images', () => mockObjectFitImagesStub);
 
   const { highlightBoard } = require('../components/highlight-board');
 

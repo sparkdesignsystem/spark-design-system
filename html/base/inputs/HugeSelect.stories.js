@@ -5,9 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/m
 
 export default {
   title: 'Components/Input/Huge Select',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}

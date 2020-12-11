@@ -3,7 +3,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Components/Box',
   decorators: [
-    story => `
+    (story) => `
       <div class="sprk-o-Box sb-decorate">${story()}</div>
     `,
   ],
@@ -19,7 +19,7 @@ values. See the Class Modifiers for Box table below for options.
   },
 };
 
-export const defaultBox = () => ('<div class="sprk-o-Box"></div>');
+export const defaultBox = () => '<div class="sprk-o-Box"></div>';
 
 defaultBox.story = {
   name: 'Default',

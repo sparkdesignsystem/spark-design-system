@@ -1,7 +1,7 @@
 if (typeof Object.assign !== 'function') {
   // Must be writable: true, enumerable: false, configurable: true
   Object.defineProperty(Object, 'assign', {
-    value: function assign(target, varArgs) {
+    value: function assign(target) {
       // .length of function is 2
 
       if (target === null || target === undefined) {
@@ -10,7 +10,7 @@ if (typeof Object.assign !== 'function') {
 
       const to = Object(target);
 
-      for (let index = 1; index < arguments.length; index++) {
+      for (let index = 1; index < arguments.length; index + 1) {
         const nextSource = arguments[index];
 
         if (nextSource !== null && nextSource !== undefined) {

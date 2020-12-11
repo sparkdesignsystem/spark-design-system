@@ -1,5 +1,5 @@
 import { useEffect } from '@storybook/client-api';
-import { toggle } from '../components/toggle';
+import { toggle } from './toggle';
 import '../utilities/polyfills/classListSVG';
 import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
@@ -33,9 +33,28 @@ export const defaultStory = () => {
         role="contentinfo"
         data-id="footer-1"
       >
-        <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh">
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+        <div 
+          class="
+            sprk-o-Stack__item 
+            sprk-o-Stack 
+            sprk-o-Stack--medium 
+            sprk-o-Stack--split@m
+          ">
+          <div 
+            class="
+              sprk-o-Stack__item 
+              sprk-o-Stack__item--three-tenths@m 
+              sprk-o-Stack 
+              sprk-o-Stack--misc-b 
+              sprk-o-Box 
+              sprk-u-prh
+            ">
+            <h3 
+              class="
+                sprk-o-Stack__item 
+                sprk-b-TypeBodyOne 
+                sprk-c-Footer__text
+              ">
               Our Sister Companies
             </h3>
 
@@ -46,7 +65,12 @@ export const defaultStory = () => {
                 </a>
               </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
+              <p 
+                class="
+                  sprk-o-Stack__item 
+                  sprk-b-TypeBodyFour 
+                  sprk-c-Footer__text
+                ">
                 Buy a home, refinance, or manage your mortgage online with
                 America's largest mortgage lender
               </p>
@@ -59,7 +83,12 @@ export const defaultStory = () => {
                 </a>
               </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
+              <p 
+                class="
+                  sprk-o-Stack__item 
+                  sprk-b-TypeBodyFour 
+                  sprk-c-Footer__text
+                ">
                 Get a personal loan to consolidate debt, renovate
                 your home and more
               </p>
@@ -72,7 +101,12 @@ export const defaultStory = () => {
                 </a>
               </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
+              <p 
+                class="
+                  sprk-o-Stack__item 
+                  sprk-b-TypeBodyFour 
+                  sprk-c-Footer__text
+                ">
                 Get a real estate agent handpicked for you and
                 search the latest home listings
               </p>
@@ -85,108 +119,259 @@ export const defaultStory = () => {
                 </a>
               </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
+              <p 
+                class="
+                  sprk-o-Stack__item 
+                  sprk-b-TypeBodyFour 
+                  sprk-c-Footer__text
+                ">
                 Access tools and articles that can help
                 you reach your financial goals
               </p>
             </div>
           </div>
 
-          <div class="sprk-o-Stack__item sprk-o-Stack__item--seven-tenths@m sprk-o-Stack sprk-o-Stack--medium">
-            <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@m">
-              <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large">
-                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+          <div 
+            class="
+              sprk-o-Stack__item 
+              sprk-o-Stack__item--seven-tenths@m 
+              sprk-o-Stack sprk-o-Stack--medium
+            ">
+            <div 
+              class="
+                sprk-o-Stack__item 
+                sprk-o-Stack 
+                sprk-o-Stack--medium 
+                sprk-o-Stack--split@m
+              ">
+              <div 
+                class="
+                  sprk-o-Stack__item 
+                  sprk-o-Stack__item--third@m 
+                  sprk-o-Box 
+                  sprk-u-PaddingRight--a 
+                  sprk-o-Stack 
+                  sprk-o-Stack--large
+                ">
+                <h3 
+                  class="
+                    sprk-o-Stack__item 
+                    sprk-b-TypeBodyOne 
+                    sprk-c-Footer__text
+                  ">
                   Site Links
                 </h3>
 
-                <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
+                <ul 
+                  class="
+                    sprk-o-Stack__item 
+                    sprk-o-Stack 
+                    sprk-o-Stack--misc-a 
+                    sprk-b-List 
+                    sprk-b-List--bare
+                  ">
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       About This
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       About This Other Thing
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       About That
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       Link Item
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       This Link Item
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large">
-                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+              <div 
+                class="
+                  sprk-o-Stack__item 
+                  sprk-o-Stack__item--third@m 
+                  sprk-o-Box 
+                  sprk-u-PaddingRight--a 
+                  sprk-o-Stack sprk-o-Stack--large
+                ">
+                <h3 
+                  class="
+                    sprk-o-Stack__item 
+                    sprk-b-TypeBodyOne 
+                    sprk-c-Footer__text
+                  ">
                   Learn More
                 </h3>
 
-                <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
+                <ul 
+                  class="
+                    sprk-o-Stack__item 
+                    sprk-o-Stack 
+                    sprk-o-Stack--misc-a 
+                    sprk-b-List sprk-b-List--bare
+                  ">
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       About This Other Thing
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                        " 
+                      href="#nogo">
                       About This
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       About That
                     </a>
                   </li>
 
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       Link Item
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <div class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-o-Stack sprk-o-Stack--large">
-                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+              <div 
+                class="
+                  sprk-o-Stack__item 
+                  sprk-o-Stack__item--third@m 
+                  sprk-o-Box 
+                  sprk-o-Stack 
+                  sprk-o-Stack--large
+                ">
+                <h3 
+                  class="
+                    sprk-o-Stack__item 
+                    sprk-b-TypeBodyOne 
+                    sprk-c-Footer__text
+                  ">
                   Support
                 </h3>
 
-                <ul class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
+                <ul 
+                  class="
+                    sprk-o-Stack__item 
+                    sprk-o-Stack 
+                    sprk-o-Stack--misc-a 
+                    sprk-b-List 
+                    sprk-b-List--bare
+                  ">
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       Share Your Screen
                     </a>
                   </li>
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       Opt Out
                     </a>
                   </li>
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       Disclosures and Other Things
                     </a>
                   </li>
                   <li class="sprk-o-Stack__item">
-                    <a class="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light" href="#nogo">
+                    <a 
+                      class="
+                        sprk-c-Footer__link 
+                        sprk-b-Link 
+                        sprk-b-Link--light
+                      " 
+                      href="#nogo">
                       We Want Your Feedback
                     </a>
                   </li>
@@ -194,16 +379,46 @@ export const defaultStory = () => {
               </div>
             </div>
 
-            <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box">
-              <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+            <div 
+              class="
+                sprk-o-Stack__item 
+                sprk-o-Stack 
+                sprk-o-Stack--large 
+                sprk-o-Box
+              ">
+              <h3 
+                class="
+                  sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
                 Connect With Us
               </h3>
 
-              <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@m">
-                <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
+              <div 
+                class="
+                  sprk-o-Stack__item 
+                  sprk-o-Stack 
+                  sprk-o-Stack--large 
+                  sprk-o-Stack--split@m
+                ">
+                <ul 
+                  class="
+                    sprk-o-Stack__item 
+                    sprk-o-Stack__item--flex@m 
+                    sprk-o-Stack 
+                    sprk-o-Stack--split@xxs 
+                    sprk-o-Stack--medium 
+                    sprk-b-List 
+                    sprk-b-List--bare
+                  ">
                   <li class="sprk-o-Stack__item">
                     <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                      <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl" viewBox="0 0 64 64">
+                      <svg 
+                        class="
+                          sprk-c-Footer__icon 
+                          sprk-c-Icon 
+                          sprk-c-Icon--filled-current-color 
+                          sprk-c-Icon--xl
+                          " 
+                          viewBox="0 0 64 64">
                         <use xlink:href="#facebook" />
                       </svg>
                       <span class="sprk-u-ScreenReaderText">Facebook</span>
@@ -212,7 +427,14 @@ export const defaultStory = () => {
 
                   <li class="sprk-o-Stack__item">
                     <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                      <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl" viewBox="0 0 64 64">
+                      <svg 
+                        class="
+                          sprk-c-Footer__icon 
+                          sprk-c-Icon 
+                          sprk-c-Icon--filled-current-color 
+                          sprk-c-Icon--xl
+                        " 
+                        viewBox="0 0 64 64">
                         <use xlink:href="#instagram" />
                       </svg>
                       <span class="sprk-u-ScreenReaderText">Instagram</span>
@@ -221,7 +443,14 @@ export const defaultStory = () => {
 
                   <li class="sprk-o-Stack__item">
                     <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                      <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl" viewBox="0 0 64 64">
+                      <svg 
+                        class="
+                          sprk-c-Footer__icon 
+                          sprk-c-Icon 
+                          sprk-c-Icon--filled-current-color 
+                          sprk-c-Icon--xl
+                        " 
+                        viewBox="0 0 64 64">
                         <use xlink:href="#twitter" />
                       </svg>
                       <span class="sprk-u-ScreenReaderText">Twitter</span>
@@ -230,7 +459,14 @@ export const defaultStory = () => {
 
                   <li class="sprk-o-Stack__item">
                     <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                      <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl" viewBox="0 0 64 64">
+                      <svg 
+                        class="
+                          sprk-c-Footer__icon 
+                          sprk-c-Icon 
+                          sprk-c-Icon--filled-current-color 
+                          sprk-c-Icon--xl
+                        " 
+                      viewBox="0 0 64 64">
                         <use xlink:href="#youtube"/>
                       </svg>
                       <span class="sprk-u-ScreenReaderText">Youtube</span>
@@ -242,15 +478,47 @@ export const defaultStory = () => {
           </div>
         </div>
 
-        <span class="sprk-c-Divider sprk-u-mvn sprk-u-mhm" data-id="divider-1"></span>
+        <span 
+          class="
+            sprk-c-Divider 
+            sprk-u-mvn 
+            sprk-u-mhm
+          " 
+          data-id="divider-1">
+        </span>
 
-        <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-PaddingTop--b">
-          <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large" data-id="award-1">
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+        <div 
+          class="
+            sprk-o-Stack__item 
+            sprk-o-Stack 
+            sprk-o-Stack--misc-b 
+            sprk-o-Box 
+            sprk-u-PaddingTop--b
+          ">
+          <div 
+            class="
+              sprk-o-Stack__item 
+              sprk-o-Stack 
+              sprk-o-Stack--large
+            " 
+            data-id="award-1">
+            <h3 
+              class="
+                sprk-o-Stack__item 
+                sprk-b-TypeBodyOne 
+                sprk-c-Footer__text
+              ">
               Awards Heading Title
             </h3>
 
-            <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm">
+            <div 
+              class="
+                sprk-o-Stack__item 
+                sprk-o-Stack 
+                sprk-o-Stack--medium 
+                sprk-o-Stack--split@s 
+                sprk-u-mbm
+              ">
               <div class="sprk-o-Stack__item">
                 <a href="#nogo">
                   <img
@@ -276,18 +544,32 @@ export const defaultStory = () => {
                     sprk-c-Toggle__trigger
                     sprk-c-Toggle__trigger--small
                   "
-                    data-sprk-toggle="trigger"
-                >
-                  <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs" data-sprk-toggle="icon" viewBox="0 0 100 100">
+                  data-sprk-toggle="trigger">
+                  <svg 
+                    class="
+                      sprk-c-Footer__icon 
+                      sprk-c-Icon 
+                      sprk-c-Icon--xl 
+                      sprk-c-Icon--toggle 
+                      sprk-u-mrs
+                    " 
+                    data-sprk-toggle="icon" viewBox="0 0 100 100">
                     <use xlink:href="#chevron-down-circle"></use>
                   </svg>
                   My Award Disclaimer
                 </button>
 
                 <div data-sprk-toggle="content">
-                  <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs sprk-c-Footer__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in laoreet ante,
-                    non feugiat neque. Suspendisse et ipsum leo. Quisque non consectetur justo.
+                  <p 
+                    class="
+                      sprk-b-TypeBodyFour 
+                      sprk-u-pts 
+                      sprk-u-pbs 
+                      sprk-c-Footer__text
+                    ">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Aliquam in laoreet ante, non feugiat neque. Suspendisse 
+                    et ipsum leo. Quisque non consectetur justo.
                   </p>
                 </div>
               </div>
@@ -297,31 +579,50 @@ export const defaultStory = () => {
           <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
             &#42;Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam.
           </p>
 
           <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
-            Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-            Lorem ipsum dolor sit amet, consectetur.
+            Incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam. Lorem ipsum dolor sit 
+            amet, consectetur.
           </p>
 
           <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
             &#42;&#42;Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            incididunt ut labore et dolore magna aliqua. Ut 
+            enim ad minim veniam. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam.
           </p>
 
           <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
             Lorem ipsum dolor sit amet, consectetur.
           </p>
 
-          <ul class="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
+          <ul 
+            class="
+              sprk-o-Stack__item 
+              sprk-o-Stack__item--flex@m 
+              sprk-o-Stack 
+              sprk-o-Stack--split@xxs 
+              sprk-o-Stack--medium 
+              sprk-b-List 
+              sprk-b-List--bare
+            ">
             <li class="sprk-o-Stack__item">
               <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl" viewBox="0 0 64 64">
+                <svg 
+                  class="
+                    sprk-c-Footer__icon 
+                    sprk-c-Icon 
+                    sprk-c-Icon--filled-current-color 
+                    sprk-c-Icon--xl
+                  "
+                  viewBox="0 0 64 64">
                   <use xlink:href="#townhouse" />
                 </svg>
                 <span class="sprk-u-ScreenReaderText">Townhouse</span>
@@ -330,7 +631,14 @@ export const defaultStory = () => {
 
             <li class="sprk-o-Stack__item">
               <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl" viewBox="0 0 64 64">
+                <svg 
+                  class="
+                    sprk-c-Footer__icon 
+                    sprk-c-Icon 
+                    sprk-c-Icon--filled-current-color 
+                    sprk-c-Icon--xl
+                  " 
+                  viewBox="0 0 64 64">
                   <use xlink:href="#townhouse" />
                 </svg>
                 <span class="sprk-u-ScreenReaderText">Townhouse</span>
@@ -339,7 +647,14 @@ export const defaultStory = () => {
 
             <li class="sprk-o-Stack__item">
               <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                <svg class="sprk-c-Footer__icon sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--xl" viewBox="0 0 64 64">
+                <svg 
+                  class="
+                    sprk-c-Footer__icon 
+                    sprk-c-Icon 
+                    sprk-c-Icon--filled-current-color 
+                    sprk-c-Icon--xl
+                  " 
+                  viewBox="0 0 64 64">
                   <use xlink:href="#townhouse" />
                 </svg>
                 <span class="sprk-u-ScreenReaderText">Townhouse</span>

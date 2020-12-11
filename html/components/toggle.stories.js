@@ -5,9 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Toggle',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('toggle')}
@@ -26,8 +24,12 @@ export const defaultStory = () => {
       data-sprk-toggle="container"
       data-id="toggle-1"
     >
-     <button
-        class="sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none"
+      <button
+        class="
+          sprk-c-Toggle__trigger 
+          sprk-b-TypeBodyThree 
+          sprk-u-TextCrop--none
+        "
         data-sprk-toggle="trigger"
       >
         <svg
@@ -69,5 +71,5 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['toggle'],
-  }
+  },
 };

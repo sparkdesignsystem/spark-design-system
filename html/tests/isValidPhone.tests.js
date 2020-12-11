@@ -1,10 +1,10 @@
 /* global describe it */
 
 /*
-* These tests are for testing the regex provided in isValidPhone,
-* although in practice, the regex is assigned to the pattern attribute
-*  in the markup.
-*/
+ * These tests are for testing the regex provided in isValidPhone,
+ * although in practice, the regex is assigned to the pattern attribute
+ *  in the markup.
+ */
 import isValidPhone from '../utilities/validation/isValidPhone';
 
 describe('isValidPhone tests', () => {

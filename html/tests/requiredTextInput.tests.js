@@ -1,4 +1,4 @@
-/* global window document describe beforeEach afterEach it */
+/* global window document describe beforeEach afterEach it sinon */
 import {
   requiredTextInput,
   runValidation,
@@ -13,8 +13,9 @@ describe('requiredTextInput init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     requiredTextInput();
-    expect(document.querySelectorAll
-      .getCall(0).args[0]).toBe('[data-sprk-required-only="text"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-required-only="text"]',
+    );
   });
 });
 
@@ -51,15 +52,14 @@ describe('requiredTextInput UI Events tests', () => {
 
   beforeEach(() => {
     inputContainer = document.createElement('div');
-    inputContainer
-      .setAttribute('data-sprk-required-only', 'text');
+    inputContainer.setAttribute('data-sprk-required-only', 'text');
     input = document.createElement('input');
     input.type = 'text';
     input.setAttribute('required', null);
     input.setAttribute(
       'pattern',
-      '(^(?!666|000|9\\d{2})\\d'
-      + '{3}([- ]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$',
+      '(^(?!666|000|9\\d{2})\\d' +
+        '{3}([- ]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$',
     );
     sinon.spy(input, 'addEventListener');
     inputContainer.appendChild(input);

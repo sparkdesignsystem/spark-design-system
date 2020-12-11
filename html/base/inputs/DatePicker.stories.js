@@ -5,9 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/m
 
 export default {
   title: 'Components/Input/Date Picker',
-  decorators: [
-    story => `<div class="sprk-o-Box">${story()}</div>`,
-  ],
+  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
   parameters: {
     docs: { iframeHeight: 320 },
     info: `
@@ -38,7 +36,6 @@ export const defaultStory = () => {
   useEffect(() => {
     datePicker();
   }, []);
-
   return `
     <div
       class="sprk-b-InputContainer"
@@ -54,7 +51,11 @@ export const defaultStory = () => {
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color
+          "
           viewBox="0 0 64 64"
         >
           <use xlink:href="#calendar" />
@@ -93,7 +94,6 @@ export const invalidDatePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
-
   return `
     <div
       class="sprk-b-InputContainer"
@@ -109,7 +109,11 @@ export const invalidDatePicker = () => {
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color
+          "
           viewBox="0 0 64 64"
         >
           <use xlink:href="#calendar" />
@@ -160,7 +164,6 @@ export const disabledDatePicker = () => {
   useEffect(() => {
     datePicker();
   }, []);
-
   return `
     <div
       class="sprk-b-InputContainer"
@@ -176,7 +179,11 @@ export const disabledDatePicker = () => {
 
       <div class="sprk-b-TextInputIconContainer">
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color
+          "
           viewBox="0 0 64 64"
         >
           <use xlink:href="#calendar" />

@@ -94,7 +94,12 @@ export const informational = () => {
           data-sprk-dropdown-trigger-text-container=""
           >Make a selection...</span>
         <svg
-          class="sprk-c-Icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-u-mls"
+          class="
+            sprk-c-Icon 
+            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon--stroke-current-color 
+            sprk-u-mls
+          "
           viewBox="0 0 100 100">
           <use xlink:href="#chevron-down" />
         </svg>

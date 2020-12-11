@@ -8,7 +8,7 @@ describe('toggleAriaExpanded tests', () => {
     element = document.createElement('div');
     element.setAttribute('aria-expanded', 'true');
 
-    expect(element.getAttribute('aria-expanded')).toEqual('true')
+    expect(element.getAttribute('aria-expanded')).toEqual('true');
 
     toggleAriaExpanded(element);
 
@@ -19,7 +19,7 @@ describe('toggleAriaExpanded tests', () => {
     element = document.createElement('div');
     element.setAttribute('aria-expanded', 'false');
 
-    expect(element.getAttribute('aria-expanded')).toEqual('false')
+    expect(element.getAttribute('aria-expanded')).toEqual('false');
 
     toggleAriaExpanded(element);
 
@@ -29,6 +29,6 @@ describe('toggleAriaExpanded tests', () => {
   it('should not add aria-expanded if it does not exist', () => {
     element = document.createElement('div');
 
-    expect(element.hasAttribute('aria-expanded')).toEqual(false)
+    expect(element.hasAttribute('aria-expanded')).toEqual(false);
   });
 });

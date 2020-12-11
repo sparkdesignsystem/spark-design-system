@@ -2,17 +2,27 @@ import { uniqueId } from 'lodash';
 
 const generateIdForInput = (inputElement, labelElement, componentName) => {
   let inputId = inputElement.getAttribute('id');
-  let labelFor = labelElement.htmlFor;
-  
+  const labelFor = labelElement.htmlFor;
+
   // Warn if 'for' exists but the 'id' does not
   if (labelFor && !inputId) {
-    console.warn(`Spark Design System Warning - The value of 'for' (${labelFor}) on the label expects a matching 'id' on the input.`);
+    /* eslint-disable no-console */
+    console.warn(
+      `Spark Design System Warning - The value of 'for' (${labelFor}) on the 
+      label expects a matching 'id' on the input.`,
+    );
+    /* eslint-enable no-console */
     return;
   }
 
   // Warn if 'for' and 'id' both exist but don't match
   if (inputId && labelFor && inputId !== labelFor) {
-    console.warn(`Spark Design System Warning - The value of 'for' (${labelFor}) on the label should match the 'id' on the input (${inputId}).`);
+    /* eslint-disable no-console */
+    console.warn(
+      `Spark Design System Warning - The value of 'for' (${labelFor}) on the 
+      label should match the 'id' on the input (${inputId}).`,
+    );
+    /* eslint-enable no-console */
     return;
   }
 

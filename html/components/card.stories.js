@@ -3,7 +3,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Components/Card',
   decorators: [
-    story => `<div class="sprk-o-Box sprk-o-Box--large">${story()}</div>`,
+    (story) => `<div class="sprk-o-Box sprk-o-Box--large">${story()}</div>`,
   ],
   parameters: {
     info: `
@@ -13,7 +13,7 @@ ${markdownDocumentationLinkBuilder('card')}
   },
 };
 
-export const defaultStory = () => (
+export const defaultStory = () =>
   `
     <div
       class="sprk-c-Card sprk-o-Stack"
@@ -30,8 +30,7 @@ export const defaultStory = () => (
         Base Card Content
       </div>
     </div>
-  `
-);
+  `;
 
 defaultStory.story = {
   name: 'Default',
@@ -40,7 +39,7 @@ defaultStory.story = {
   },
 };
 
-export const standout = () => (
+export const standout = () =>
   `
     <div
       class="
@@ -60,10 +59,9 @@ export const standout = () => (
         Standout Card Content
       </div>
     </div>
-  `
-);
+  `;
 
-export const highlightedHeader = () => (
+export const highlightedHeader = () =>
   `
     <div
       class="sprk-c-Card sprk-c-Card--standout sprk-o-Stack"
@@ -113,8 +111,7 @@ export const highlightedHeader = () => (
         </p>
       </div>
     </div>
-  `
-);
+  `;
 
 highlightedHeader.story = {
   name: 'Highlighted Header',
@@ -123,7 +120,7 @@ highlightedHeader.story = {
   },
 };
 
-export const teaser = () => (
+export const teaser = () =>
   `
     <div
       class="sprk-c-Card sprk-o-Stack"
@@ -163,8 +160,7 @@ export const teaser = () => (
         </div>
       </div>
     </div>
-  `
-);
+  `;
 
 teaser.story = {
   parameters: {
@@ -172,7 +168,7 @@ teaser.story = {
   },
 };
 
-export const teaserWithDifferentElementOrder = () => (
+export const teaserWithDifferentElementOrder = () =>
   `
     <div
       class="sprk-c-Card sprk-o-Stack"
@@ -215,8 +211,7 @@ export const teaserWithDifferentElementOrder = () => (
         </div>
       </div>
     </div>
-  `
-);
+  `;
 
 teaserWithDifferentElementOrder.story = {
   name: 'Teaser With Different Element Order',
@@ -225,7 +220,7 @@ teaserWithDifferentElementOrder.story = {
   },
 };
 
-export const twoUpCards = () => (
+export const twoUpCards = () =>
   `
     <div
       class="
@@ -340,8 +335,7 @@ export const twoUpCards = () => (
       </div>
     </div>
   </div>
-  `
-);
+  `;
 
 twoUpCards.story = {
   name: 'Card Layout - Two Up',
@@ -350,7 +344,7 @@ twoUpCards.story = {
   },
 };
 
-export const threeUpCards = () => (
+export const threeUpCards = () =>
   `
     <div class="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@l">
       <div
@@ -529,8 +523,7 @@ export const threeUpCards = () => (
         </div>
       </div>
     </div>
-  `
-);
+  `;
 
 threeUpCards.story = {
   name: 'Card Layout - Three Up',
@@ -539,7 +532,7 @@ threeUpCards.story = {
   },
 };
 
-export const fourUpCards = () => (
+export const fourUpCards = () =>
   `
     <div
       class="sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@xl"
@@ -679,8 +672,7 @@ export const fourUpCards = () => (
         </div>
       </div>
     </div>
-  `
-);
+  `;
 
 fourUpCards.story = {
   name: 'Card Layout - Four Up',

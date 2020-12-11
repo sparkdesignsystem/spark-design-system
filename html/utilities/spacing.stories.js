@@ -3,7 +3,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 export default {
   title: 'Foundations/Spacing',
   decorators: [
-    story => `
+    (story) => `
       <div class="sprk-o-Box sb-decorate">${story()}</div>
     `,
   ],
@@ -14,7 +14,7 @@ ${markdownDocumentationLinkBuilder('space', 'foundations')}
   },
 };
 
-export const insetSpacing = () => (
+export const insetSpacing = () =>
   `
     <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
@@ -41,15 +41,16 @@ export const insetSpacing = () => (
         The grey border shows the extra large inset of 64px.
       </p>
     </div>
-  `
-);
+  `;
 
 insetSpacing.story = {
   name: 'Inset',
-  decorators: [storyFn => `<div class="sb-inset-spacing-example">${storyFn()}</div>`],
+  decorators: [
+    (storyFn) => `<div class="sb-inset-spacing-example">${storyFn()}</div>`,
+  ],
 };
 
-export const insetSpacingShort = () => (
+export const insetSpacingShort = () =>
   `
     <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
@@ -73,18 +74,21 @@ export const insetSpacingShort = () => (
     </div>
     <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
-        The grey border shows the extra large inset short of 32px 64px 32px 64px.
+        The grey border shows the extra large inset short of 
+        32px 64px 32px 64px.
       </p>
     </div>
-  `
-);
+  `;
 
 insetSpacingShort.story = {
   name: 'Inset Short',
-  decorators: [storyFn => `<div class="sb-inset-spacing-short-example">${storyFn()}</div>`],
+  decorators: [
+    (storyFn) =>
+      `<div class="sb-inset-spacing-short-example">${storyFn()}</div>`,
+  ],
 };
 
-export const insetSpacingTall = () => (
+export const insetSpacingTall = () =>
   `
     <div class="sprk-u-mbm">
       <p class="sprk-b-TypeBodyTwo">
@@ -111,15 +115,17 @@ export const insetSpacingTall = () => (
         The grey border shows the extra large inset tall of 96px 64px 96px 64px.
       </p>
     </div>
-  `
-);
+  `;
 
 insetSpacingTall.story = {
   name: 'Inset Tall',
-  decorators: [storyFn => `<div class="sb-inset-spacing-tall-example">${storyFn()}</div>`],
+  decorators: [
+    (storyFn) =>
+      `<div class="sb-inset-spacing-tall-example">${storyFn()}</div>`,
+  ],
 };
 
-export const stackSpacing = () => (
+export const stackSpacing = () =>
   `
     <div>
       <p class="sprk-b-TypeBodyTwo">
@@ -146,16 +152,17 @@ export const stackSpacing = () => (
         The grey shows the extra large stack spacing of 64px.
       </p>
     </div>
-  `
-);
+  `;
 
 stackSpacing.story = {
   name: 'Stack',
-  decorators: [storyFn => `<div class="sb-inset-spacing-stack-example">${storyFn()}</div>`],
+  decorators: [
+    (storyFn) =>
+      `<div class="sb-inset-spacing-stack-example">${storyFn()}</div>`,
+  ],
 };
 
-
-export const inlineSpacing = () => (
+export const inlineSpacing = () =>
   `
     <p>
       Inline items with xs spacing.
@@ -186,15 +193,17 @@ export const inlineSpacing = () => (
       Inline items with no right margin on the last item.
     </p>
     <span>Fish</span><span>Frogs</span><span>Turtles</span>
-  `
-);
+  `;
 
 inlineSpacing.story = {
   name: 'Inline',
-  decorators: [storyFn => `<div class="sb-inset-spacing-inline-example">${storyFn()}</div>`],
+  decorators: [
+    (storyFn) =>
+      `<div class="sb-inset-spacing-inline-example">${storyFn()}</div>`,
+  ],
 };
 
-export const inlineSpacingMisc = () => (
+export const inlineSpacingMisc = () =>
   `
     <p>
       The grey shows a margin right using the the misc "a" spacing of 24px.
@@ -215,10 +224,12 @@ export const inlineSpacingMisc = () => (
       The grey shows a margin right using the misc "d" spacing of 80px.
     </p>
     <span>Cats</span><span>Dogs</span><span>Birds</span>
-  `
-);
+  `;
 
 inlineSpacingMisc.story = {
   name: 'Misc',
-  decorators: [storyFn => `<div class="sb-inset-spacing-misc-example">${storyFn()}</div>`],
+  decorators: [
+    (storyFn) =>
+      `<div class="sb-inset-spacing-misc-example">${storyFn()}</div>`,
+  ],
 };

@@ -25,8 +25,9 @@ const buildErrorContainer = (errorContainer, iconName, message) => {
 };
 
 const setInvalidSelect = (inputContainer, defaultErrorMessage) => {
-  const overrideErrorMessage = inputContainer
-    .getAttribute('data-sprk-input-invalid-content');
+  const overrideErrorMessage = inputContainer.getAttribute(
+    'data-sprk-input-invalid-content',
+  );
   const select = inputContainer.querySelector('select');
   const errorContainer = inputContainer.querySelector('.sprk-b-ErrorContainer');
 
@@ -34,8 +35,7 @@ const setInvalidSelect = (inputContainer, defaultErrorMessage) => {
   select.setAttribute('aria-invalid', 'true');
 
   if (errorContainer) {
-    select.setAttribute('aria-describedby', errorContainer
-      .getAttribute('id'));
+    select.setAttribute('aria-describedby', errorContainer.getAttribute('id'));
     errorContainer.innerHTML = '';
     buildErrorContainer(
       errorContainer,

@@ -1,4 +1,4 @@
-/* global document describe it beforeEach afterEach window */
+/* global document describe it beforeEach afterEach window sinon */
 import { formatSSN, ssnInput, bindUIEvents } from '../base/inputs/ssnInput';
 
 describe('ssnInput init', () => {
@@ -9,7 +9,9 @@ describe('ssnInput init', () => {
   it('should call getElements once with the correct selector', () => {
     sinon.spy(document, 'querySelectorAll');
     ssnInput();
-    expect(document.querySelectorAll.getCall(0).args[0]).toBe('[data-sprk-input="ssn"]');
+    expect(document.querySelectorAll.getCall(0).args[0]).toBe(
+      '[data-sprk-input="ssn"]',
+    );
   });
 });
 
@@ -32,12 +34,11 @@ describe('ssnInput UI Events tests', () => {
     inputContainer = document.createElement('div');
     input = document.createElement('input');
     input.type = 'password';
-    input
-      .setAttribute(
-        'pattern',
-        '(^(?!666|000|9\\d{2})'
-        + '\\d{3}([- ]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$',
-      );
+    input.setAttribute(
+      'pattern',
+      '(^(?!666|000|9\\d{2})' +
+        '\\d{3}([- ]{0,1})(?!00)\\d{2}\\1(?!0{4})\\2\\d{4}$)|^$',
+    );
     sinon.spy(input, 'addEventListener');
     checkbox = document.createElement('input');
     sinon.spy(checkbox, 'addEventListener');
