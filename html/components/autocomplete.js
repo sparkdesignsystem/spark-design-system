@@ -10,7 +10,7 @@ import generateAriaOwns from '../utilities/generateAriaOwns';
 import resetListItems from '../utilities/resetListItems';
 import isElementVisible from '../utilities/isElementVisible';
 
-const activeClass = 'sprk-c-Autocomplete__results--active';
+const activeClass = 'sprk-c-Autocomplete__result--active';
 
 const hideList = (autocompleteContainer, input) => {
   if (isElementVisible('ul', autocompleteContainer)) {

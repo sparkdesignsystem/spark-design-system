@@ -120,7 +120,7 @@ describe('Autocomplete tests', () => {
     bindUIEvents(container);
 
     expect(
-      listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(false);
 
     const event = new window.Event('keydown');
@@ -128,7 +128,7 @@ describe('Autocomplete tests', () => {
     input.dispatchEvent(event);
 
     expect(
-      listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
   });
 
@@ -136,7 +136,7 @@ describe('Autocomplete tests', () => {
     bindUIEvents(container);
 
     expect(
-      listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(false);
 
     const event = new window.Event('keydown');
@@ -144,7 +144,7 @@ describe('Autocomplete tests', () => {
     input.dispatchEvent(event);
 
     expect(
-      listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
 
     input.dispatchEvent(event);
@@ -152,7 +152,7 @@ describe('Autocomplete tests', () => {
     input.dispatchEvent(event);
 
     expect(
-      listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
   });
 
@@ -163,7 +163,7 @@ describe('Autocomplete tests', () => {
     list.classList.add('sprk-u-Display--none');
 
     expect(
-      listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(false);
 
     const event = new window.Event('keydown');
@@ -171,7 +171,7 @@ describe('Autocomplete tests', () => {
     input.dispatchEvent(event);
 
     expect(
-      listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(false);
   });
 
@@ -179,7 +179,7 @@ describe('Autocomplete tests', () => {
     bindUIEvents(container);
 
     expect(
-      listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(false);
 
     const event = new window.Event('keydown');
@@ -187,7 +187,7 @@ describe('Autocomplete tests', () => {
     input.dispatchEvent(event);
 
     expect(
-      listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
   });
 
@@ -195,7 +195,7 @@ describe('Autocomplete tests', () => {
     bindUIEvents(container);
 
     expect(
-      listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(false);
 
     const event = new window.Event('keydown');
@@ -203,7 +203,7 @@ describe('Autocomplete tests', () => {
     input.dispatchEvent(event);
 
     expect(
-      listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
 
     input.dispatchEvent(event);
@@ -211,7 +211,7 @@ describe('Autocomplete tests', () => {
     input.dispatchEvent(event);
 
     expect(
-      listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
   });
 
@@ -221,7 +221,7 @@ describe('Autocomplete tests', () => {
     list.classList.add('sprk-u-Display--none');
 
     expect(
-      listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(false);
 
     const event = new window.Event('keydown');
@@ -229,7 +229,7 @@ describe('Autocomplete tests', () => {
     input.dispatchEvent(event);
 
     expect(
-      listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(false);
   });
 
@@ -243,13 +243,13 @@ describe('Autocomplete tests', () => {
     input.dispatchEvent(event);
 
     expect(
-      listItem1.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
 
     input.dispatchEvent(event);
 
     expect(
-      listItem3.classList.contains('sprk-c-Autocomplete__results--active'),
+      listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
   });
 

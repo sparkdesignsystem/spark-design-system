@@ -17,10 +17,10 @@
   <color name="sprk_alert_text_color_fail">#ff1c1b1a</color><!-- The value for the color property in the Fail Alert component. -->
   <color name="sprk_alert_text_color_success">#ff1c1b1a</color><!-- The value for the color property in the Success Alert component. -->
   <color name="sprk_alert_text_color_info">#ff1c1b1a</color><!-- The value for the color property in the Information Alert component. -->
-  <color name="sprk_autocomplete_results_active_background_color">#ffe8e8e8</color><!-- Background color of the active Autocomplete. -->
   <color name="sprk_autocomplete_results_background_color">#ffffffff</color><!-- Background color of the Autocomplete results. -->
   <color name="sprk_autocomplete_results_border_color">#fff7f7f7</color><!-- The border color of the Autocomplete results. -->
-  <color name="sprk_autocomplete_results_items_hover_background_color">#ffe8e8e8</color><!-- The background color of the hovered Autocomplete results. -->
+  <color name="sprk_autocomplete_result_hover_background_color">#ffe8e8e8</color><!-- The background color of the hovered Autocomplete results. -->
+  <color name="sprk_autocomplete_result_active_background_color">#ffe8e8e8</color><!-- Background color of the active Autocomplete result. -->
   <color name="sprk_btn_background_color">#ffc8102e</color><!-- The background color of the Button component. -->
   <color name="sprk_btn_shadow_color">#14141414</color><!-- The box shadow color value for the Button component. -->
   <color name="sprk_btn_border_color">#ffc8102e</color><!-- The border color of the Button component. -->

@@ -7,11 +7,11 @@
 ////
 .sprk-c-Autocomplete__results {
   list-style-type: $sprk-autocomplete-results-list-style-type;
-  background-color: $sprk-white; // TODO variable
+  background-color: $sprk-autocomplete-results-background-color;
   border: $sprk-autocomplete-results-border;
   border-radius: $sprk-autocomplete-results-border-radius;
   box-shadow: $sprk-autocomplete-results-shadow;
-  width: 100%; // TODO make variable
+  width: $sprk-autocomplete-results-width;
   max-height: $sprk-autocomplete-results-max-height;
   position: $sprk-autocomplete-results-position;
   z-index: $sprk-autocomplete-results-z-index;
@@ -19,23 +19,22 @@
   -webkit-overflow-scrolling: touch; // iOS momentum scrolling
 }
 
-/// Apply highlighting style to the element.
-.sprk-c-Autocomplete__results--active {
-  background-color: $sprk-autocomplete-results-active-background-color;
+.sprk-b-InputContainer--huge .sprk-c-Autocomplete__results {
+  max-width: $sprk-autocomplete-results-huge-max-width;
 }
 
 .sprk-c-Autocomplete__result {
-  // TODO rename variables to sprk-autocomplete-result-padding etc
-  padding: $sprk-autocomplete-results-items-padding;
-  border-bottom: $sprk-autocomplete-results-items-border-bottom;
-  font-size: $sprk-autocomplete-results-items-font-size;
+  padding: $sprk-autocomplete-result-padding;
+  border-bottom: $sprk-autocomplete-result-border-bottom;
+  font-size: $sprk-autocomplete-result-font-size;
 
   &:hover {
-    background-color: $sprk-autocomplete-results-items-hover-background-color;
-    cursor: $sprk-autocomplete-results-items-hover-cursor;
+    background-color: $sprk-autocomplete-result-hover-background-color;
+    cursor: $sprk-autocomplete-result-hover-cursor;
   }
 }
 
-.sprk-b-InputContainer--huge .sprk-c-Autocomplete__results {
-  max-width: 37.5rem; // TODO move to json
+/// Apply highlighting style to the element.
+.sprk-c-Autocomplete__result--active {
+  background-color: $sprk-autocomplete-result-active-background-color;
 }
