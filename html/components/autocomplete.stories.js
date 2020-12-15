@@ -76,104 +76,22 @@ export const defaultStory = () => {
   }, []);
 
   return `
-    <div data-sprk-autocomplete="container">
+    <div class="sprk-b-InputContainer" data-sprk-autocomplete="container">
       <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
+      <label
+        id="autocomplete-label"
+        for="autocomplete-input"
+        class="sprk-b-Label"
+      >
+        Search for a Fruit
+      </label>
 
-      <div class="sprk-b-InputContainer">
-        <label
-          id="autocomplete-label"
-          for="autocomplete-input"
-          class="sprk-b-Label"
-        >
-          Search for a Fruit
-        </label>
-
-        <div
-          class="sprk-b-TextInputIconContainer"
-          role="combobox"
-          aria-haspopup="listbox"
-          aria-expanded="true"
-          aria-labelledby="autocomplete-label"
-        >
-          <svg
-            class="
-              sprk-c-Icon
-              sprk-c-Icon--filled-current-color
-              sprk-c-Icon--stroke-current-color
-            "
-            viewBox="0 0 64 64"
-            aria-hidden="true"
-          >
-            <use xlink:href="#search" />
-          </svg>
-
-          <input
-            class="
-                  sprk-b-TextInput
-                  sprk-b-TextInput--has-svg-icon
-                  sprk-u-Width-100
-                "
-            id="autocomplete-input"
-            type="text"
-            aria-autocomplete="list"
-            aria-describedby="input--error-container"
-            autocomplete="off"
-            autocapitalize="off"
-            spellcheck="false"
-          >
-        </div>
-
-        <ul
-          class="sprk-c-Autocomplete__results"
-          role="listbox"
-          aria-labelledby="autocomplete-label"
-        >
-          <li class="sprk-c-Autocomplete__result" role="option">Apple</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Apricot</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Avocado</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Banana</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Blackberry</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Blueberry</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Clementine</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Fig</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Grape</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Kumquat</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Lemon</li>
-          <li class="sprk-c-Autocomplete__result" role="option">Papaya</li>
-        </ul>
-
-        <div
-          class="sprk-b-ErrorContainer"
-          id="input--error-container"
-        ></div>
-      </div>
-    </div>
-  `;
-};
-
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['autocomplete'],
-  },
-};
-
-export const hugeStory = () => {
-  useEffect(() => {
-    autocomplete();
-  }, []);
-
-  return `
-  <div data-sprk-autocomplete="container">
-    <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
-
-    <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <div
         class="sprk-b-TextInputIconContainer"
         role="combobox"
         aria-haspopup="listbox"
         aria-expanded="true"
-        aria-labelledby="input-label-huge"
+        aria-labelledby="autocomplete-label"
       >
         <svg
           class="
@@ -181,35 +99,32 @@ export const hugeStory = () => {
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
-          viewBox="0 0 64 64" aria-hidden="true"
+          viewBox="0 0 64 64"
+          aria-hidden="true"
         >
           <use xlink:href="#search" />
         </svg>
+
         <input
-          class="sprk-b-TextInput sprk-u-Width-100"
-          id="text-input-huge"
+          class="
+                sprk-b-TextInput
+                sprk-b-TextInput--has-svg-icon
+                sprk-u-Width-100
+              "
+          id="autocomplete-input"
           type="text"
-          placeholder="Search for a Fruit"
           aria-autocomplete="list"
-          aria-describedby="text-input-huge--error-container"
+          aria-describedby="input--error-container"
           autocomplete="off"
           autocapitalize="off"
           spellcheck="false"
-          data-sprk-input="huge"
         >
-        <label
-          for="text-input-huge"
-          id="input-label-huge"
-          class="sprk-b-Label"
-        >
-          Search for a Fruit
-        </label>
       </div>
 
       <ul
         class="sprk-c-Autocomplete__results"
         role="listbox"
-        aria-labelledby="input-label-huge"
+        aria-labelledby="autocomplete-label"
       >
         <li class="sprk-c-Autocomplete__result" role="option">Apple</li>
         <li class="sprk-c-Autocomplete__result" role="option">Apricot</li>
@@ -227,9 +142,91 @@ export const hugeStory = () => {
 
       <div
         class="sprk-b-ErrorContainer"
-        id="text-input-huge--error-container"
+        id="input--error-container"
       ></div>
     </div>
+  `;
+};
+
+defaultStory.story = {
+  name: 'Default',
+  parameters: {
+    jest: ['autocomplete'],
+  },
+};
+
+export const hugeStory = () => {
+  useEffect(() => {
+    autocomplete();
+  }, []);
+
+  return `
+  <div
+    class="sprk-b-InputContainer sprk-b-InputContainer--huge"
+    data-sprk-autocomplete="container"
+  >
+    <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
+    <div
+      class="sprk-b-TextInputIconContainer"
+      role="combobox"
+      aria-haspopup="listbox"
+      aria-expanded="true"
+      aria-labelledby="input-label-huge"
+    >
+      <svg
+        class="
+          sprk-c-Icon
+          sprk-c-Icon--filled-current-color
+          sprk-c-Icon--stroke-current-color
+        "
+        viewBox="0 0 64 64" aria-hidden="true"
+      >
+        <use xlink:href="#search" />
+      </svg>
+      <input
+        class="sprk-b-TextInput sprk-u-Width-100"
+        id="text-input-huge"
+        type="text"
+        placeholder="Search for a Fruit"
+        aria-autocomplete="list"
+        aria-describedby="text-input-huge--error-container"
+        autocomplete="off"
+        autocapitalize="off"
+        spellcheck="false"
+        data-sprk-input="huge"
+      >
+      <label
+        for="text-input-huge"
+        id="input-label-huge"
+        class="sprk-b-Label"
+      >
+        Search for a Fruit
+      </label>
+    </div>
+
+    <ul
+      class="sprk-c-Autocomplete__results"
+      role="listbox"
+      aria-labelledby="input-label-huge"
+    >
+      <li class="sprk-c-Autocomplete__result" role="option">Apple</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Apricot</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Avocado</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Banana</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Blackberry</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Blueberry</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Clementine</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Fig</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Grape</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Kumquat</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Lemon</li>
+      <li class="sprk-c-Autocomplete__result" role="option">Papaya</li>
+    </ul>
+
+    <div
+      class="sprk-b-ErrorContainer"
+      id="text-input-huge--error-container"
+    ></div>
   </div>
   `;
 };
