@@ -80,7 +80,7 @@
   <dimen name="sprk_select_arrow_offset_y">-31.00dp</dimen><!-- The value for margin-top on the icon in Selects. -->
   <dimen name="sprk_select_arrow_offset_x">19.00dp</dimen><!-- The value for margin-right on the icon in Selects. -->
   <dimen name="sprk_textarea_min_height">125.00dp</dimen><!-- The minimum height of Textarea. -->
-  <dimen name="sprk_textarea_padding">16.00dp</dimen><!-- The padding insdie Textarea. -->
+  <dimen name="sprk_textarea_padding">16.00dp</dimen><!-- The padding inside Textarea. -->
   <dimen name="sprk_date_picker_max_width">320.00dp</dimen><!-- The maximum width of the Date Picker popup. -->
   <dimen name="sprk_date_picker_border_radius">4.00dp</dimen><!-- The border radius applied to the Date Picker popup. -->
   <dimen name="sprk_date_picker_button_size">36.00dp</dimen><!-- The size of the buttons used internally by the Date Picker popup. -->

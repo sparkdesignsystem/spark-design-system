@@ -913,7 +913,7 @@
       "themable": true
     },
     "padding": {
-      "comment": "The padding insdie Textarea.",
+      "comment": "The padding inside Textarea.",
       "value": "{space.m.value}",
       "attributes": {
         "category": "size"
