@@ -47,10 +47,6 @@ scroll.
  additionalClasses="sprk-u-Measure"
 ></SprkDivider>
 
-## Variants
-
-### Base
-
 Autocomplete is commonly used for search bars where accurate, quick suggestions
 help the user choose the correct data format for a task.
 
@@ -60,12 +56,30 @@ help the user choose the correct data format for a task.
   minHeight="15rem"
 />
 
+## States
+
+Each Autocomplete variant has an error and disabled state.
+
+### Error
+<ComponentPreview
+  componentName="autocomplete--default-invalid"
+  hasHTML
+/>
+
+### Disabled
+<ComponentPreview
+  componentName="autocomplete--default-disabled"
+  hasHTML
+/>
+
+
+## Variants
+
 ### Huge
 
 Huge Autocomplete is a larger version of the Autocomplete field.
 
-They're commonly used as a standalone feature on the page (i.e. Google search
-bar).
+They're commonly used as a standalone feature on the page.
 
 <ComponentPreview
   componentName="autocomplete--huge"
