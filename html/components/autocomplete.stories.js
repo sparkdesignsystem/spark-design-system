@@ -1,5 +1,6 @@
 import { useEffect } from '@storybook/client-api';
 import { autocomplete } from './autocomplete';
+import { hugeInput } from '../base/inputs/hugeInput';
 import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -158,6 +159,7 @@ defaultStory.story = {
 export const hugeStory = () => {
   useEffect(() => {
     autocomplete();
+    hugeInput();
   }, []);
 
   return `
@@ -234,6 +236,6 @@ export const hugeStory = () => {
 hugeStory.story = {
   name: 'Huge',
   parameters: {
-    jest: ['autocomplete'],
+    jest: ['autocomplete', 'hugeInput'],
   },
 };
