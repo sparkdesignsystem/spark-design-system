@@ -8,25 +8,38 @@ describe('Autocomplete tests', () => {
   let listItem1;
   let listItem2;
   let listItem3;
+  let outsideElement;
 
   beforeEach(() => {
     container = document.createElement('div');
     container.setAttribute('data-sprk-autocomplete', 'container');
 
     input = document.createElement('input');
+    input.setAttribute('data-sprk-autocomplete', 'input');
 
     list = document.createElement('ul');
     list.setAttribute('data-sprk-autocomplete', 'filtered');
+    list.setAttribute('data-sprk-autocomplete', 'results');
 
     listItem1 = document.createElement('li');
+    listItem1.setAttribute('data-sprk-autocomplete', 'result');
+
     listItem2 = document.createElement('li');
+    listItem2.setAttribute('data-sprk-autocomplete', 'result');
+
     listItem3 = document.createElement('li');
+    listItem3.setAttribute('data-sprk-autocomplete', 'result');
+
     list.appendChild(listItem1);
     list.appendChild(listItem2);
     list.appendChild(listItem3);
 
     container.appendChild(input);
     container.appendChild(list);
+
+    outsideElement = document.createElement('button');
+    outsideElement.innerHTML = 'Outside Button';
+    document.body.appendChild(outsideElement);
 
     sinon.spy(document, 'querySelectorAll');
   });
@@ -94,6 +107,14 @@ describe('Autocomplete tests', () => {
 
     document.dispatchEvent(new window.Event('click'));
 
+    expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
+  });
+
+  it('should close the search results if an outside element is clicked', () => {
+    bindUIEvents(container);
+    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+
+    outsideElement.click();
     expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
@@ -268,5 +289,61 @@ describe('Autocomplete tests', () => {
     input.dispatchEvent(event);
 
     document.dispatchEvent(event);
+  });
+
+  it('should run functions on window resize', () => {
+    bindUIEvents(container);
+    const spy = jest.fn();
+    window.addEventListener('resize', spy);
+    const event = new window.Event('resize');
+    window.resizeTo(3000, 3000);
+    window.dispatchEvent(event);
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('Should set the scrolltop to equal offsetTop if listItem top is less than list top', () => {
+    bindUIEvents(container);
+
+    const event = new window.Event('keydown');
+    event.keyCode = 40;
+
+    // Set window height & width
+    window.innerWidth = 300;
+    window.innerHeight = 300;
+
+    // Set the top of the list
+    listItem2.parentNode.getBoundingClientRect = () => {
+      return { top: 25 };
+    };
+
+    // Set the top of the list item
+    listItem2.getBoundingClientRect = () => {
+      return { top: 24 };
+    };
+    input.dispatchEvent(event);
+    expect(listItem2.parentNode.scrollTop).toEqual(listItem2.offsetTop);
+  });
+
+  it('Should set the scrolltop to equal offsetTop if listItem bottom is greater than list bottom', () => {
+    bindUIEvents(container);
+
+    const event = new window.Event('keydown');
+    event.keyCode = 40;
+
+    // Set window height & width
+    window.innerWidth = 300;
+    window.innerHeight = 300;
+
+    // Set the bottom of the list
+    listItem2.parentNode.getBoundingClientRect = () => {
+      return { bottom: 25 };
+    };
+
+    // Set the bottom of the list item
+    listItem2.getBoundingClientRect = () => {
+      return { bottom: 26 };
+    };
+    input.dispatchEvent(event);
+    expect(listItem2.parentNode.scrollTop).toEqual(listItem2.offsetTop);
   });
 });
