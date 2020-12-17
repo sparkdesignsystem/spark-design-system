@@ -136,18 +136,66 @@ export const defaultStory = () => {
         aria-labelledby="autocomplete-label"
         data-sprk-autocomplete="results"
       >
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Apple</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Apricot</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Avocado</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Banana</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Blackberry</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Blueberry</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Clementine</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Fig</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Grape</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Kumquat</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Lemon</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Papaya</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Apple</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Apricot</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Avocado</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Banana</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Blackberry</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Blueberry</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Clementine</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Fig</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Grape</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Kumquat</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Lemon</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Papaya</li>
       </ul>
 
       <div
@@ -225,18 +273,66 @@ export const defaultInvalid = () => {
         role="listbox"
         aria-labelledby="autocomplete-label"
       >
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Apple</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Apricot</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Avocado</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Banana</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Blackberry</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Blueberry</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Clementine</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Fig</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Grape</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Kumquat</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Lemon</li>
-        <li data-sprk-autocomplete="result" class="sprk-c-Autocomplete__result" role="option">Papaya</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Apple</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Apricot</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Avocado</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Banana</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Blackberry</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Blueberry</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Clementine</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Fig</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Grape</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Kumquat</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Lemon</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Papaya</li>
       </ul>
 
       <div
@@ -297,6 +393,7 @@ export const defaultDisabled = () => {
         </svg>
 
         <input
+          data-sprk-autocomplete="input"
           class="
                 sprk-b-TextInput
                 sprk-b-TextInput--has-svg-icon
@@ -314,22 +411,71 @@ export const defaultDisabled = () => {
       </div>
 
       <ul
+        data-sprk-autocomplete="results"
         class="sprk-c-Autocomplete__results sprk-u-Display--none"
         role="listbox"
         aria-labelledby="autocomplete-label"
       >
-        <li class="sprk-c-Autocomplete__result" role="option">Apple</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Apricot</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Avocado</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Banana</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Blackberry</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Blueberry</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Clementine</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Fig</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Grape</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Kumquat</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Lemon</li>
-        <li class="sprk-c-Autocomplete__result" role="option">Papaya</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Apple</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Apricot</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Avocado</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Banana</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Blackberry</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Blueberry</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Clementine</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Fig</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Grape</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Kumquat</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Lemon</li>
+        <li
+          data-sprk-autocomplete="result"
+          class="sprk-c-Autocomplete__result"
+          role="option"
+        >Papaya</li>
       </ul>
 
       <div
@@ -384,6 +530,7 @@ export const hugeStory = () => {
         autocapitalize="off"
         spellcheck="false"
         data-sprk-input="huge"
+        data-sprk-autocomplete="input"
       >
       <label
         for="text-input-huge"
@@ -398,19 +545,68 @@ export const hugeStory = () => {
       class="sprk-c-Autocomplete__results"
       role="listbox"
       aria-labelledby="input-label-huge"
+      data-sprk-autocomplete="results"
     >
-      <li class="sprk-c-Autocomplete__result" role="option">Apple</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Apricot</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Avocado</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Banana</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Blackberry</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Blueberry</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Clementine</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Fig</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Grape</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Kumquat</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Lemon</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Papaya</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Apple</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Apricot</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Avocado</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Banana</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Blackberry</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Blueberry</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Clementine</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Fig</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Grape</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Kumquat</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Lemon</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Papaya</li>
     </ul>
 
     <div
@@ -469,6 +665,7 @@ export const hugeInvalid = () => {
         autocapitalize="off"
         spellcheck="false"
         data-sprk-input="huge"
+        data-sprk-autocomplete="input"
       >
       <label
         for="autocomplete-huge-invalid"
@@ -483,19 +680,68 @@ export const hugeInvalid = () => {
       class="sprk-c-Autocomplete__results sprk-u-Display--none"
       role="listbox"
       aria-labelledby="autocomplete-huge-label-invalid"
+      data-sprk-autocomplete="results"
     >
-      <li class="sprk-c-Autocomplete__result" role="option">Apple</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Apricot</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Avocado</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Banana</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Blackberry</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Blueberry</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Clementine</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Fig</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Grape</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Kumquat</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Lemon</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Papaya</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Apple</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Apricot</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Avocado</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Banana</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Blackberry</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Blueberry</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Clementine</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Fig</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Grape</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Kumquat</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Lemon</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Papaya</li>
     </ul>
 
     <div
@@ -562,8 +808,9 @@ export const hugeDisabled = () => {
         autocomplete="off"
         autocapitalize="off"
         spellcheck="false"
-        data-sprk-input="huge"
         disabled
+        data-sprk-input="huge"
+        data-sprk-autocomplete="input"
       >
       <label
         for="autocomplete-input-huge-disabled"
@@ -578,19 +825,68 @@ export const hugeDisabled = () => {
       class="sprk-c-Autocomplete__results sprk-u-Display--none"
       role="listbox"
       aria-labelledby="input-label-huge"
+      data-sprk-autocomplete="results"
     >
-      <li class="sprk-c-Autocomplete__result" role="option">Apple</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Apricot</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Avocado</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Banana</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Blackberry</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Blueberry</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Clementine</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Fig</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Grape</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Kumquat</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Lemon</li>
-      <li class="sprk-c-Autocomplete__result" role="option">Papaya</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Apple</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Apricot</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Avocado</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Banana</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Blackberry</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Blueberry</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Clementine</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Fig</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Grape</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Kumquat</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Lemon</li>
+      <li
+        data-sprk-autocomplete="result"
+        class="sprk-c-Autocomplete__result"
+        role="option"
+      >Papaya</li>
     </ul>
 
     <div
