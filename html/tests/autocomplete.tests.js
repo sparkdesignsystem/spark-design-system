@@ -94,7 +94,7 @@ describe('Autocomplete tests', () => {
   });
 
   it('should close the search results if escape is pressed', () => {
-    expect(listEL.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
 
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 27;
