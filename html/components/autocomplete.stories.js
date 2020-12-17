@@ -65,6 +65,7 @@ In order to keep the Spark Autocomplete flexible enough to use in a wide
     \`aria-activedescendant\` on the input.
 
 The following data attributes are used to structure the component.
+
 - \`data-sprk-autocomplete="container"\` on the outermost div.
 - \`data-sprk-autocomplete="input"\` on the input.
 - \`data-sprk-autocomplete="results"\` on the results \`ul\`.
