@@ -133,6 +133,7 @@ const bindUIEvents = (autocompleteContainer) => {
     if (!(inputEl.contains(e.target) || listEl.contains(e.target))) {
       hideList(autocompleteContainer, inputEl);
     }
+    hideList(autocompleteContainer, input);
   });
 
   // when the window resizes, reset the max-width of the list
