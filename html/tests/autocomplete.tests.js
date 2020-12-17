@@ -54,16 +54,18 @@ describe('Autocomplete tests', () => {
   it('should generate an id if needed', () => {
     // The id on the list, aria-controls on the input, and aria-owns on the
     // input container should all match.
-
+    listEl.removeAttribute('id');
+    inputEl.removeAttribute('aria-controls');
+    inputEl.parentNode.removeAttribute('aria-owns');
     expect(listEl.getAttribute('id')).toBe(null);
     expect(inputEl.getAttribute('aria-controls')).toBe(null);
     expect(inputEl.parentNode.getAttribute('aria-owns')).toBe(null);
-
+    autocomplete();
     expect(listEl.hasAttribute('id')).toBeTruthy();
     expect(inputEl.hasAttribute('aria-controls')).toBeTruthy();
     expect(inputEl.parentNode.hasAttribute('aria-owns')).toBeTruthy();
-    expect(listEL.getAttribute('id')).toEqual(
-      inputEL.getAttribute('aria-controls'),
+    expect(listEl.getAttribute('id')).toEqual(
+      inputEl.getAttribute('aria-controls'),
     );
     expect(listEl.getAttribute('id')).toEqual(
       inputEl.parentNode.getAttribute('aria-owns'),
@@ -73,12 +75,15 @@ describe('Autocomplete tests', () => {
   it('should not generate an id if one is provided', () => {
     const testString = 'test_string';
     listEl.setAttribute('id', testString);
+    inputEl.removeAttribute('aria-controls');
+    inputEl.parentNode.removeAttribute('aria-owns');
+    autocomplete();
     expect(inputEl.getAttribute('aria-controls')).toEqual(testString);
     expect(listEl.id).toEqual(testString);
   });
 
   it('should set aria-expanded="false" when the list is closed', () => {
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
 
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 27;
