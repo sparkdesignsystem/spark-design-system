@@ -129,8 +129,6 @@ describe('Autocomplete tests', () => {
 
   it('it should not close the search results if input is clicked', () => {
     expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
-
-    inputEl.dispatchEvent(new window.Event('click'));
     inputEl.click();
     expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
   });
