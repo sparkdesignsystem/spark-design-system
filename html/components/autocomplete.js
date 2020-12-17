@@ -12,23 +12,23 @@ import isElementVisible from '../utilities/isElementVisible';
 
 const activeClass = 'sprk-c-Autocomplete__result--active';
 
-const hideList = (autocompleteContainer, input) => {
+const hideList = (autocompleteContainer, inputEl) => {
   if (isElementVisible('ul', autocompleteContainer)) {
-    const list = autocompleteContainer.querySelector(
+    const listEl = autocompleteContainer.querySelector(
       '[data-sprk-autocomplete="results"]',
     );
     resetListItems(
-      list.querySelectorAll('[data-sprk-autocomplete="result"]'),
+      listEl.querySelectorAll('[data-sprk-autocomplete="result"]'),
       activeClass,
     );
-    list.classList.add('sprk-u-Display--none');
-    input.removeAttribute('aria-activedescendant');
-    input.parentNode.setAttribute('aria-expanded', false);
+    listEl.classList.add('sprk-u-Display--none');
+    inputEl.removeAttribute('aria-activedescendant');
+    inputEl.parentNode.setAttribute('aria-expanded', false);
   }
 };
 
-const highlightListItem = (result, input) => {
-  input.setAttribute('aria-activedescendant', result.id);
+const highlightListItem = (result, inputEl) => {
+  inputEl.setAttribute('aria-activedescendant', result.id);
   result.classList.add(activeClass);
   result.setAttribute('aria-selected', true);
 
@@ -48,9 +48,9 @@ const highlightListItem = (result, input) => {
   }
 };
 
-const getActiveItemIndex = (list) => {
+const getActiveItemIndex = (listEl) => {
   let activeIndex = null;
-  list.forEach((listItem, index) => {
+  listEl.forEach((listItem, index) => {
     if (listItem.classList.contains(activeClass)) {
       activeIndex = index;
     }
@@ -59,48 +59,48 @@ const getActiveItemIndex = (list) => {
   return activeIndex;
 };
 
-const advanceHighlightedItem = (results, input) => {
+const advanceHighlightedItem = (results, inputEl) => {
   const activeIndex = getActiveItemIndex(results);
   resetListItems(results, activeClass);
 
   if (activeIndex === null) {
-    highlightListItem(results[0], input);
+    highlightListItem(results[0], inputEl);
   } else if (activeIndex + 1 <= results.length - 1) {
-    highlightListItem(results[activeIndex + 1], input);
+    highlightListItem(results[activeIndex + 1], inputEl);
   } else {
-    highlightListItem(results[0], input);
+    highlightListItem(results[0], inputEl);
   }
 };
 
-const retreatHighlightedItem = (results, input) => {
+const retreatHighlightedItem = (results, inputEl) => {
   const activeIndex = getActiveItemIndex(results);
   resetListItems(results, activeClass);
 
   if (activeIndex === null || activeIndex - 1 === -1) {
-    highlightListItem(results[results.length - 1], input);
+    highlightListItem(results[results.length - 1], inputEl);
   } else {
-    highlightListItem(results[activeIndex - 1], input);
+    highlightListItem(results[activeIndex - 1], inputEl);
   }
 };
 
-const calculateListWidth = (list, input) => {
-  const currentInputWidth = input.offsetWidth;
-  list.setAttribute('style', `max-width:${currentInputWidth}px`);
+const calculateListWidth = (listEl, inputEl) => {
+  const currentInputWidth = inputEl.offsetWidth;
+  listEl.setAttribute('style', `max-width:${currentInputWidth}px`);
 };
 
 const bindUIEvents = (autocompleteContainer) => {
-  const input = autocompleteContainer.querySelector(
+  const inputEl = autocompleteContainer.querySelector(
     '[data-sprk-autocomplete="input"]',
   );
-  const list = autocompleteContainer.querySelector(
+  const listEl = autocompleteContainer.querySelector(
     '[data-sprk-autocomplete="results"]',
   );
 
-  generateAriaControls(input, list, 'autocomplete');
-  generateAriaOwns(input.parentNode, list, 'autocomplete');
+  generateAriaControls(inputEl, listEl, 'autocomplete');
+  generateAriaOwns(inputEl.parentNode, listEl, 'autocomplete');
 
-  input.addEventListener('keydown', (e) => {
-    const selectableListItems = list.querySelectorAll(
+  inputEl.addEventListener('keydown', (e) => {
+    const selectableListItems = listEl.querySelectorAll(
       'li:not([data-sprk-autocomplete-no-select])',
     );
 
@@ -109,14 +109,14 @@ const bindUIEvents = (autocompleteContainer) => {
       e.preventDefault();
 
       if (isElementVisible('ul', autocompleteContainer)) {
-        retreatHighlightedItem(selectableListItems, input);
+        retreatHighlightedItem(selectableListItems, inputEl);
       }
     } else if (isDownPressed(e)) {
       e.stopPropagation();
       e.preventDefault();
 
       if (isElementVisible('ul', autocompleteContainer)) {
-        advanceHighlightedItem(selectableListItems, input);
+        advanceHighlightedItem(selectableListItems, inputEl);
       }
     }
   });
@@ -124,24 +124,24 @@ const bindUIEvents = (autocompleteContainer) => {
   // Hide results if Escape is pressed
   document.addEventListener('keydown', (e) => {
     if (isEscPressed(e)) {
-      hideList(autocompleteContainer, input);
+      hideList(autocompleteContainer, inputEl);
     }
   });
 
   // Hide results if the document body is clicked
   document.addEventListener('click', (e) => {
-    if (!(input.contains(e.target) || list.contains(e.target))) {
-      hideList(autocompleteContainer, input);
+    if (!(inputEl.contains(e.target) || listEl.contains(e.target))) {
+      hideList(autocompleteContainer, inputEl);
     }
   });
 
   // when the window resizes, reset the max-width of the list
   window.addEventListener('resize', () => {
-    calculateListWidth(list, input);
+    calculateListWidth(listEl, inputEl);
   });
 
   // calculate the max-width on init
-  calculateListWidth(list, input);
+  calculateListWidth(listEl, inputEl);
 };
 
 const autocomplete = () => {

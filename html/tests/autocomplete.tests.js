@@ -3,8 +3,8 @@ import { bindUIEvents, autocomplete } from '../components/autocomplete';
 
 describe('Autocomplete tests', () => {
   let container;
-  let input;
-  let list;
+  let inputEl;
+  let listEl;
   let listItem1;
   let listItem2;
   let listItem3;
@@ -14,12 +14,12 @@ describe('Autocomplete tests', () => {
     container = document.createElement('div');
     container.setAttribute('data-sprk-autocomplete', 'container');
 
-    input = document.createElement('input');
-    input.setAttribute('data-sprk-autocomplete', 'input');
+    inputEl = document.createElement('input');
+    inputEl.setAttribute('data-sprk-autocomplete', 'input');
 
-    list = document.createElement('ul');
-    list.setAttribute('data-sprk-autocomplete', 'filtered');
-    list.setAttribute('data-sprk-autocomplete', 'results');
+    listEl = document.createElement('ul');
+    listEl.setAttribute('data-sprk-autocomplete', 'filtered');
+    listEl.setAttribute('data-sprk-autocomplete', 'results');
 
     listItem1 = document.createElement('li');
     listItem1.setAttribute('data-sprk-autocomplete', 'result');
@@ -30,12 +30,12 @@ describe('Autocomplete tests', () => {
     listItem3 = document.createElement('li');
     listItem3.setAttribute('data-sprk-autocomplete', 'result');
 
-    list.appendChild(listItem1);
-    list.appendChild(listItem2);
-    list.appendChild(listItem3);
+    listEl.appendChild(listItem1);
+    listEl.appendChild(listItem2);
+    listEl.appendChild(listItem3);
 
-    container.appendChild(input);
-    container.appendChild(list);
+    container.appendChild(inputEl);
+    container.appendChild(listEl);
 
     outsideElement = document.createElement('button');
     outsideElement.innerHTML = 'Outside Button';
@@ -52,89 +52,89 @@ describe('Autocomplete tests', () => {
     // The id on the list, aria-controls on the input, and aria-owns on the
     // input container should all match.
 
-    expect(list.getAttribute('id')).toBe(null);
-    expect(input.getAttribute('aria-controls')).toBe(null);
-    expect(input.parentNode.getAttribute('aria-owns')).toBe(null);
+    expect(listEl.getAttribute('id')).toBe(null);
+    expect(inputEl.getAttribute('aria-controls')).toBe(null);
+    expect(inputEl.parentNode.getAttribute('aria-owns')).toBe(null);
 
     bindUIEvents(container);
-    expect(list.hasAttribute('id')).toBeTruthy();
-    expect(input.hasAttribute('aria-controls')).toBeTruthy();
-    expect(input.parentNode.hasAttribute('aria-owns')).toBeTruthy();
-    expect(list.getAttribute('id')).toEqual(
-      input.getAttribute('aria-controls'),
+    expect(listEl.hasAttribute('id')).toBeTruthy();
+    expect(inputEl.hasAttribute('aria-controls')).toBeTruthy();
+    expect(inputEl.parentNode.hasAttribute('aria-owns')).toBeTruthy();
+    expect(listEl.getAttribute('id')).toEqual(
+      inputEl.getAttribute('aria-controls'),
     );
-    expect(list.getAttribute('id')).toEqual(
-      input.parentNode.getAttribute('aria-owns'),
+    expect(listEl.getAttribute('id')).toEqual(
+      inputEl.parentNode.getAttribute('aria-owns'),
     );
   });
 
   it('should not generate an id if one is provided', () => {
     const testString = 'test_string';
-    list.setAttribute('id', testString);
+    listEl.setAttribute('id', testString);
 
     bindUIEvents(container);
 
-    expect(input.getAttribute('aria-controls')).toEqual(testString);
-    expect(list.id).toEqual(testString);
+    expect(inputEl.getAttribute('aria-controls')).toEqual(testString);
+    expect(listEl.id).toEqual(testString);
   });
 
   it('should set aria-expanded="false" when the list is closed', () => {
     bindUIEvents(container);
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
 
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 27;
     document.dispatchEvent(escKeyEvent);
 
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
-    expect(input.parentNode.getAttribute('aria-expanded')).toEqual('false');
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(inputEl.parentNode.getAttribute('aria-expanded')).toEqual('false');
   });
 
   it('should close the search results if escape is pressed', () => {
     bindUIEvents(container);
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
 
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 27;
     document.dispatchEvent(escKeyEvent);
 
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
   it('should close the search results if document is clicked', () => {
     bindUIEvents(container);
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
 
     document.dispatchEvent(new window.Event('click'));
 
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
   it('should close the search results if an outside element is clicked', () => {
     bindUIEvents(container);
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
 
     outsideElement.click();
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(true);
   });
 
   it(`it should not close the search results if search
   results are clicked`, () => {
     bindUIEvents(container);
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
 
-    list.dispatchEvent(new window.Event('click'));
+    listEl.dispatchEvent(new window.Event('click'));
 
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
   });
 
   it('it should not close the search results if input is clicked', () => {
     bindUIEvents(container);
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
 
-    input.dispatchEvent(new window.Event('click'));
+    inputEl.dispatchEvent(new window.Event('click'));
 
-    expect(list.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
   });
 
   it('should move visual focus with down arrow', () => {
@@ -146,7 +146,7 @@ describe('Autocomplete tests', () => {
 
     const event = new window.Event('keydown');
     event.keyCode = 40;
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     expect(
       listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
@@ -162,15 +162,15 @@ describe('Autocomplete tests', () => {
 
     const event = new window.Event('keydown');
     event.keyCode = 40;
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     expect(
       listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
 
-    input.dispatchEvent(event);
-    input.dispatchEvent(event);
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     expect(
       listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
@@ -181,7 +181,7 @@ describe('Autocomplete tests', () => {
   list is hidden`, () => {
     bindUIEvents(container);
 
-    list.classList.add('sprk-u-Display--none');
+    listEl.classList.add('sprk-u-Display--none');
 
     expect(
       listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
@@ -189,7 +189,7 @@ describe('Autocomplete tests', () => {
 
     const event = new window.Event('keydown');
     event.keyCode = 40;
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     expect(
       listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
@@ -205,7 +205,7 @@ describe('Autocomplete tests', () => {
 
     const event = new window.Event('keydown');
     event.keyCode = 38;
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     expect(
       listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
@@ -221,15 +221,15 @@ describe('Autocomplete tests', () => {
 
     const event = new window.Event('keydown');
     event.keyCode = 38;
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     expect(
       listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
 
-    input.dispatchEvent(event);
-    input.dispatchEvent(event);
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     expect(
       listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
@@ -239,7 +239,7 @@ describe('Autocomplete tests', () => {
   it('should not move visual focus with up arrow if the list is hidden', () => {
     bindUIEvents(container);
 
-    list.classList.add('sprk-u-Display--none');
+    listEl.classList.add('sprk-u-Display--none');
 
     expect(
       listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
@@ -247,7 +247,7 @@ describe('Autocomplete tests', () => {
 
     const event = new window.Event('keydown');
     event.keyCode = 38;
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     expect(
       listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
@@ -261,13 +261,13 @@ describe('Autocomplete tests', () => {
 
     const event = new window.Event('keydown');
     event.keyCode = 40;
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     expect(
       listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toBe(true);
 
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     expect(
       listItem3.classList.contains('sprk-c-Autocomplete__result--active'),
@@ -286,7 +286,7 @@ describe('Autocomplete tests', () => {
 
     const event = new window.Event('keydown');
     event.keyCode = 111;
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
 
     document.dispatchEvent(event);
   });
@@ -301,7 +301,8 @@ describe('Autocomplete tests', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('Should set the scrolltop to equal offsetTop if listItem top is less than list top', () => {
+  it(`Should set the scrolltop to equal offsetTop if 
+  listItem top is less than list top`, () => {
     bindUIEvents(container);
 
     const event = new window.Event('keydown');
@@ -320,11 +321,12 @@ describe('Autocomplete tests', () => {
     listItem2.getBoundingClientRect = () => {
       return { top: 24 };
     };
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
     expect(listItem2.parentNode.scrollTop).toEqual(listItem2.offsetTop);
   });
 
-  it('Should set the scrolltop to equal offsetTop if listItem bottom is greater than list bottom', () => {
+  it(`Should set the scrolltop to equal offsetTop if 
+  listItem bottom is greater than list bottom`, () => {
     bindUIEvents(container);
 
     const event = new window.Event('keydown');
@@ -343,7 +345,7 @@ describe('Autocomplete tests', () => {
     listItem2.getBoundingClientRect = () => {
       return { bottom: 26 };
     };
-    input.dispatchEvent(event);
+    inputEl.dispatchEvent(event);
     expect(listItem2.parentNode.scrollTop).toEqual(listItem2.offsetTop);
   });
 });
