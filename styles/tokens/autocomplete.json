@@ -137,6 +137,15 @@
             "file": "settings",
             "themable": true
           }
+        },
+        "last-child-border-bottom": {
+          "comment": "The border-bottom of the last Autocomplete result.",
+          "value": "none",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
         }
       },
       "result": {
