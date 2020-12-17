@@ -14,8 +14,13 @@ const activeClass = 'sprk-c-Autocomplete__result--active';
 
 const hideList = (autocompleteContainer, input) => {
   if (isElementVisible('ul', autocompleteContainer)) {
-    const list = autocompleteContainer.querySelector('ul');
-    resetListItems(list.querySelectorAll('li'), activeClass);
+    const list = autocompleteContainer.querySelector(
+      '[data-sprk-autocomplete="results"]',
+    );
+    resetListItems(
+      list.querySelectorAll('[data-sprk-autocomplete="result"]'),
+      activeClass,
+    );
     list.classList.add('sprk-u-Display--none');
     input.removeAttribute('aria-activedescendant');
     input.parentNode.setAttribute('aria-expanded', false);
@@ -84,8 +89,12 @@ const calculateListWidth = (list, input) => {
 };
 
 const bindUIEvents = (autocompleteContainer) => {
-  const input = autocompleteContainer.querySelector('input');
-  const list = autocompleteContainer.querySelector('ul');
+  const input = autocompleteContainer.querySelector(
+    '[data-sprk-autocomplete="input"]',
+  );
+  const list = autocompleteContainer.querySelector(
+    '[data-sprk-autocomplete="results"]',
+  );
 
   generateAriaControls(input, list, 'autocomplete');
   generateAriaOwns(input.parentNode, list, 'autocomplete');
