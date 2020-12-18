@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-react",
-  "version": "4.0.0",
+  "version": "4.1.0-beta.0",
   "description": "A collection of Spark Design System components in React 16+",
   "main": "dist/index.js",
   "repository": {
@@ -59,7 +59,7 @@
     "sinon": "^7.5.0"
   },
   "dependencies": {
-    "@sparkdesignsystem/spark-styles": "^1.0.0",
+    "@sparkdesignsystem/spark-styles": "^1.1.0-beta.0",
     "classnames": "^2.2.6",
     "focus-visible": "5.0.2",
     "lodash.assign": "^4.2.0",
