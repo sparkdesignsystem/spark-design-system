@@ -13,7 +13,12 @@ import isElementVisible from '../utilities/isElementVisible';
 const activeClass = 'sprk-c-Autocomplete__result--active';
 
 const hideList = (autocompleteContainer, inputEl) => {
-  if (isElementVisible('ul', autocompleteContainer)) {
+  if (
+    isElementVisible(
+      '[data-sprk-autocomplete="results"]',
+      autocompleteContainer,
+    )
+  ) {
     const listEl = autocompleteContainer.querySelector(
       '[data-sprk-autocomplete="results"]',
     );
@@ -108,14 +113,24 @@ const bindUIEvents = (autocompleteContainer) => {
       e.stopPropagation();
       e.preventDefault();
 
-      if (isElementVisible('ul', autocompleteContainer)) {
+      if (
+        isElementVisible(
+          '[data-sprk-autocomplete="results"]',
+          autocompleteContainer,
+        )
+      ) {
         retreatHighlightedItem(selectableListItems, inputEl);
       }
     } else if (isDownPressed(e)) {
       e.stopPropagation();
       e.preventDefault();
 
-      if (isElementVisible('ul', autocompleteContainer)) {
+      if (
+        isElementVisible(
+          '[data-sprk-autocomplete="results"]',
+          autocompleteContainer,
+        )
+      ) {
         advanceHighlightedItem(selectableListItems, inputEl);
       }
     }
