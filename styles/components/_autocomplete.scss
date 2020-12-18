@@ -1,0 +1,44 @@
+// ==================================================================
+// Autocomplete
+// ==================================================================
+
+////
+/// @group autocomplete
+////
+.sprk-c-Autocomplete__results {
+  list-style-type: $sprk-autocomplete-results-list-style-type;
+  background-color: $sprk-autocomplete-results-background-color;
+  border: $sprk-autocomplete-results-border;
+  border-radius: $sprk-autocomplete-results-border-radius;
+  box-shadow: $sprk-autocomplete-results-shadow;
+  width: $sprk-autocomplete-results-width;
+  max-height: $sprk-autocomplete-results-max-height;
+  position: $sprk-autocomplete-results-position;
+  z-index: $sprk-autocomplete-results-z-index;
+  overflow-y: $sprk-autocomplete-results-overflow-y;
+  -webkit-overflow-scrolling: touch; // iOS momentum scrolling
+
+  > :last-child {
+    border-bottom: $sprk-autocomplete-results-last-child-border-bottom;
+  }
+}
+
+.sprk-b-InputContainer--huge .sprk-c-Autocomplete__results {
+  max-width: $sprk-autocomplete-results-huge-max-width;
+}
+
+.sprk-c-Autocomplete__result {
+  padding: $sprk-autocomplete-result-padding;
+  border-bottom: $sprk-autocomplete-result-border-bottom;
+  font-size: $sprk-autocomplete-result-font-size;
+
+  &:hover {
+    background-color: $sprk-autocomplete-result-hover-background-color;
+    cursor: $sprk-autocomplete-result-hover-cursor;
+  }
+}
+
+/// Apply highlighting style to the element.
+.sprk-c-Autocomplete__result--active {
+  background-color: $sprk-autocomplete-result-active-background-color;
+}

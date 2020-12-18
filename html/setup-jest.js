@@ -1,5 +1,15 @@
 import sinon from 'sinon';
 
+const path = require('path');
+const fs = require('fs');
+
+const css = fs.readFileSync(path.resolve('../styles/web/css/spark.min.css'));
+const head = global.document.getElementsByTagName('head')[0];
+const styleTag = global.document.createElement('style');
+styleTag.type = 'text/css';
+styleTag.innerHTML = css;
+head.appendChild(styleTag);
+
 global.sinon = sinon;
 global.document = window.document;
 global.window = window;

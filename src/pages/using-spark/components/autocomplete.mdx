@@ -1,0 +1,219 @@
+---
+title: Autocomplete
+---
+
+import ComponentPreview from '../../../components/ComponentPreview';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
+import typingExample from '../../../images/autocomplete/Typing.png';
+import selectingExample from '../../../images/autocomplete/SelectingOption.png';
+import noResultsFoundExample from '../../../images/autocomplete/NoMatches.png';
+import noSearchIconExample from '../../../images/autocomplete/NoSearchIcon.png';
+import twoLinesExample from '../../../images/autocomplete/Addresstwolines.png';
+import noLabelExample from '../../../images/autocomplete/NoLabelAbove.png';
+import categoriesExample from '../../../images/autocomplete/Searchacrosscategories.png';
+import recentSearchesExample from '../../../images/autocomplete/Focused_withoutsearch.png';
+
+# Autocomplete
+
+Autocomplete input fields allow the browser to predict information being
+entered by the user. The browser should display options based on
+previous information entered.
+
+<ComponentPreview
+  componentName="autocomplete--default-story"
+  hasHTML
+  minHeight="27rem"
+/>
+
+### Usage
+
+Autocomplete helps users search for options that are difficult to remember or
+commonly misspelled. They allow designers to include more options to choose
+from, with less space.
+
+### Guidelines
+
+Autocomplete input fields should be used:
+
+- When information can be predicted from previously entered information.
+- When accuracy and speed are important to the user.
+- When the number of options is no longer convenient or efficient to display
+  in a select box.
+- When a select box has too many options but can be predicted for the user
+  (i.e. states, countries).
+
+Best practices for Autocomplete input fields:
+
+- Try to keep lists under 10 matching options so the user doesn't have to
+  scroll.
+- Guide the user by highlighting the most relevant suggestion.
+- Use text wrapping for longer suggestions.
+- Order suggestions by relevancy for quick selection.
+- Ensure the Autocomplete list is not blocking other elements on mobile.
+
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
+
+Autocomplete is commonly used for search bars where accurate, quick suggestions
+help the user choose the correct data format for a task.
+
+## Variants
+
+### Default
+
+<ComponentPreview
+  componentName="autocomplete--default-story"
+  hasHTML
+  minHeight="27rem"
+/>
+
+### Huge
+
+Huge Autocomplete is a larger version of the Autocomplete field.
+
+They're commonly used as a standalone feature on the page.
+
+<ComponentPreview
+  componentName="autocomplete--huge-story"
+  hasHTML
+  minHeight="27rem"
+/>
+
+## States
+
+Each Autocomplete variant has an error and disabled state.
+
+### Error
+
+<ComponentPreview componentName="autocomplete--default-invalid" hasHTML />
+
+### Disabled
+
+<ComponentPreview componentName="autocomplete--default-disabled" hasHTML />
+
+### Active Typing
+
+<img
+  class="sprk-u-mbm"
+  src={typingExample}
+  alt="As a user types into the Autocomplete input, matching results are displayed in a listbox below the input."/>
+
+### Selecting Option
+
+<img
+  class="sprk-u-mbm"
+  src={selectingExample}
+  alt="The Autocomplete component with a mouse cursor highlighting a search result."/>
+
+### No Results Found
+
+Provide guidance and offer suggestions if no results are found or do not match any information in the database.
+
+Create a better experience for the user by:
+
+- Expressing empathy.
+- Clearly communicate the state of the result.
+- Offer suggestions for next steps.
+
+<img
+  class="sprk-u-mbm"
+  src={noResultsFoundExample}
+  alt="The Autocomplete component displaying a 'No results found' message."/>
+
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
+
+## Additional Customizations
+
+### No Search Icon
+
+Showing a search icon is not required if an Autocomplete is part of a larger form.
+
+Use the search icon when an Autocomplete is independent of other form elements on the page to provide clarity that this is a search field.
+
+<img
+  class="sprk-u-mbm"
+  src={noSearchIconExample}
+  alt="The Autocomplete component without the search icon."/>
+
+### Address - Two Lines of Text
+
+Addresses can span two lines when displaying the full address.
+
+<img
+  class="sprk-u-mbm"
+  src={twoLinesExample}
+  alt="The Autocomplete component displaying multi-line search results."/>
+
+### No Label
+
+A label is not required for this input type. Autocomplete inputs should not use a label when used in a masthead.
+
+<img
+  class="sprk-u-mbm"
+  src={noLabelExample}
+  alt="The Autocomplete component depicted without the label."/>
+
+### Search Across Categories
+
+If there are different types of results for the same search term that users may need to look, then the categories can be featured at the top of the list for users to choose.
+
+<img
+  class="sprk-u-mbm"
+  src={categoriesExample}
+  alt="The Autocomplete component displaying category links at the top of the search results."/>
+
+### Focused - Without Search
+
+Use a focused state when users have recently interacted with the Autocomplete input. By including terms they have searched in the past, we can help navigate to results quicker.
+
+<img
+  class="sprk-u-mbm"
+  src={recentSearchesExample}
+  alt="The Autocomplete displaying a Recent Searches list."/>
+
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
+
+## Anatomy
+
+- May have a search icon.
+- Must show predictive suggestions in a listbox.
+- Must have suggestions that can be selected.
+
+## Accessibility
+
+### Keyboard Interactions:
+
+- Use the `Up Arrow` and `Down Arrow` keys to:
+
+  - Highlight suggested values.
+
+- Use the `Enter` key to:
+
+  - Selected the highlighted suggestion.
+  - Close the listbox.
+
+- Use the `Escape` key to:
+
+  - Close the listbox.
+
+- Use the `Tab` key to:
+  - Select the highlighted suggestion.
+  - Close the listbox and move focus to the next focused element.
+
+### Screen Reader Interaction
+
+- When the input gains focus, it is identified as an Autocomplete.
+- When search results are displayed, the number of results is announced.
+- When suggestions are highlighted, they are announced.
+
+### Helpful Resources
+
+- [WAI-ARIA Authoring Practices 1.1 Combobox](https://www.w3.org/TR/wai-aria-practices-1.1/#combobox)
+- [WAI-ARIA 1.1 Combobox with Listbox Popup Examples](https://www.w3.org/TR/wai-aria-practices-1.1/examples/combobox/aria1.1pattern/listbox-combo.html)
+
+## Related Components
+
+To show a full list of options, use a [Select Box](https://sparkdesignsystem.com/using-spark/components/input#select-box).
+
+## Research
+
+The Autocomplete pattern is based on the principle of recognition over recall.
