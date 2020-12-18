@@ -4,6 +4,14 @@ title: Autocomplete
 
 import ComponentPreview from '../../../components/ComponentPreview';
 import { SprkDivider } from '@sparkdesignsystem/spark-react';
+import typingExample from '../../../images/autocomplete/Typing.png';
+import selectingExample from '../../../images/autocomplete/SelectingOption.png';
+import noResultsFoundExample from '../../../images/autocomplete/NoMatches.png';
+import noSearchIconExample from '../../../images/autocomplete/NoSearchIcon.png';
+import twoLinesExample from '../../../images/autocomplete/Addresstwolines.png';
+import noLabelExample from '../../../images/autocomplete/NoLabelAbove.png';
+import categoriesExample from '../../../images/autocomplete/Searchacrosscategories.png';
+import recentSearchesExample from '../../../images/autocomplete/Focused_withoutsearch.png';
 
 # Autocomplete
 
@@ -14,7 +22,7 @@ previous information entered.
 <ComponentPreview
   componentName="autocomplete--default-story"
   hasHTML
-  minHeight="15rem"
+  minHeight="27rem"
 />
 
 ### Usage
@@ -48,10 +56,26 @@ Best practices for Autocomplete input fields:
 Autocomplete is commonly used for search bars where accurate, quick suggestions
 help the user choose the correct data format for a task.
 
+## Variants
+
+### Default
+
 <ComponentPreview
   componentName="autocomplete--default-story"
   hasHTML
-  minHeight="15rem"
+  minHeight="27rem"
+/>
+
+### Huge
+
+Huge Autocomplete is a larger version of the Autocomplete field.
+
+They're commonly used as a standalone feature on the page.
+
+<ComponentPreview
+  componentName="autocomplete--huge-story"
+  hasHTML
+  minHeight="27rem"
 />
 
 ## States
@@ -66,43 +90,19 @@ Each Autocomplete variant has an error and disabled state.
 
 <ComponentPreview componentName="autocomplete--default-disabled" hasHTML />
 
-## Variants
-
-### Huge
-
-Huge Autocomplete is a larger version of the Autocomplete field.
-
-They're commonly used as a standalone feature on the page.
-
-<ComponentPreview
-  componentName="autocomplete--huge"
-  hasHTML
-  minHeight="27rem"
-/>
-
-### Default
-
-<ComponentPreview
-  componentName="autocomplete--default"
-  hasHTML
-  minHeight="27rem"
-/>
-
 ### Active Typing
 
-<ComponentPreview
-  componentName="autocomplete--active-typing"
-  hasHTML
-  minHeight="27rem"
-/>
+<img
+  class="sprk-u-mbm"
+  src={typingExample}
+  alt="As a user types into the Autocomplete input, matching results are displayed in a listbox below the input."/>
 
 ### Selecting Option
 
-<ComponentPreview
-  componentName="autocomplete--selecting-option"
-  hasHTML
-  minHeight="27rem"
-/>
+<img
+  class="sprk-u-mbm"
+  src={selectingExample}
+  alt="The Autocomplete component with a mouse cursor highlighting a search result."/>
 
 ### No Results Found
 
@@ -114,11 +114,10 @@ Create a better experience for the user by:
 - Clearly communicate the state of the result.
 - Offer suggestions for next steps.
 
-<ComponentPreview
-  componentName="autocomplete--no-results-found"
-  hasHTML
-  minHeight="27rem"
-/>
+<img
+  class="sprk-u-mbm"
+  src={noResultsFoundExample}
+  alt="The Autocomplete component displaying a 'No results found' message."/>
 
 <SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
@@ -130,58 +129,53 @@ Showing a search icon is not required if an autocomplete is part of a larger for
 
 Use the search icon when an autocomplete is independent of other form elements on the page to provide clarity that this is a search field.
 
-<ComponentPreview
-  componentName="autocomplete--no-search-icon"
-  hasHTML
-  minHeight="27rem"
-/>
+<img
+  class="sprk-u-mbm"
+  src={noSearchIconExample}
+  alt="The Autocomplete component without the search icon."/>
 
-### Address - two lines of text
+### Address - Two Lines of Text
 
 Addresses can span two lines when displaying the full address.
 
-<ComponentPreview
-  componentName="autocomplete--two-lines-of-text"
-  hasHTML
-  minHeight="27rem"
-/>
+<img
+  class="sprk-u-mbm"
+  src={twoLinesExample}
+  alt="The Autocomplete component displaying multi-line search results."/>
 
-### No label above field
+### No Label
 
 A label is not required for this input type. Autocomplete inputs should not use a label when used in a masthead.
 
-<ComponentPreview
-  componentName="autocomplete--no-label-above-field"
-  hasHTML
-  minHeight="27rem"
-/>
+<img
+  class="sprk-u-mbm"
+  src={noLabelExample}
+  alt="The Autocomplete component depicted without the label."/>
 
-### Search across categories
+### Search Across Categories
 
 If there are different types of results for the same search term that users may need to look, then the categories can be featured at the top of the list for users to choose.
 
-<ComponentPreview
-  componentName="autocomplete--search-across-categories"
-  hasHTML
-  minHeight="27rem"
-/>
+<img
+  class="sprk-u-mbm"
+  src={categoriesExample}
+  alt="The Autocomplete component displaying category links at the top of the search results."/>
 
-### Focused - without search (option)
+### Focused - Without Search
 
 Use a focused state when users have recently interacted with the autocomplete input. By including terms they have searched in the past, we can help navigate to results quicker.
 
-<ComponentPreview
-  componentName="autocomplete--focused"
-  hasHTML
-  minHeight="27rem"
-/>
+<img
+  class="sprk-u-mbm"
+  src={recentSearchesExample}
+  alt="The Autocomplete displaying a Recent Searches list."/>
 
 <SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
 ## Anatomy
 
 - May have a search icon.
-- Must show predictive suggestions in a dropdown.
+- Must show predictive suggestions in a listbox.
 - Must have suggestions that can be selected.
 
 ## Accessibility
@@ -190,46 +184,32 @@ Use a focused state when users have recently interacted with the autocomplete in
 
 - Use the `Up Arrow` and `Down Arrow` keys to:
 
-  - Cycle through auto-suggestions and input field.
-  - Move visual focus to the last suggested value.
+  - Highlight suggested values.
 
 - Use the `Enter` key to:
 
-  - Set the text box value to the content of the selected option.
-  - Closes the list box/menu.
+  - Selected the highlighted suggestion.
+  - Close the listbox.
 
 - Use the `Escape` key to:
 
-  - Close the list.
-  - Clear the text box.
-  - If the list box is displayed, closes it or closes the menu.
+  - Close the listbox.
 
 - Use the `Tab` key to:
-  - Select the currently focused auto suggestion.
-  - Close the menu and move focus to the next focused element.
+  - Select the highlighted suggestion.
+  - Close the listbox and move focus to the next focused element.
 
-### Screen-reader Interaction
+### Screen Reader Interaction
 
-- When the search-field gains focus, an initial instruction is announced.
-- When search results are returned, the count and instructions are announced.
-- When suggestions are arrowed through, they’re spoken aloud.
-- When suggestions are arrowed through, focus remains on the search-field while visual focus shifts to the active list element.
-
-### Guidelines
-
-- When utilizing autocomplete for form data (ex. autocomplete for states and countries), element should be set to Inline.
-
-- In all other cases, the default setting should be [List](https://sparkdesignsystem.com/using-spark/components/list).
+- When the input gains focus, it is identified as an autocomplete.
+- When search results are displayed, the number of results is announced.
+- When suggestions are highlighted, they are announced.
 
 ### Helpful Resources
 
-- [Autocomplete Combobox with manual Selection](https://medium.com/@kgotgit/web-accessibility-autocomplete-combobox-with-manual-selection-angular-component-part-2-2f7bc1388b59)
-- [ARIA 1.0 Combobox with Both List and Inline Autocomplete](https://www.w3.org/TR/wai-aria-practices-1.1/examples/combobox/aria1.0pattern/combobox-autocomplete-both.html)
-- [ARIA 1.0 Combobox with List Autocomplete](https://www.w3.org/TR/wai-aria-practices-1.1/examples/combobox/aria1.0pattern/combobox-autocomplete-list.html)
-- [Autocomplete attribute: AXE Deque](https://dequeuniversity.com/rules/axe/3.5/autocomplete-valid?application=rocketvalidator)
-- [1.3.5 Identify Input Purpose](https://www.w3.org/TR/WCAG21/%22%20/l%20%22identify-input-purpose)
-- [H98: Using HTML 5.2 autocomplete attributes](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)
-- [F107: Failure of Success Criterion 1.3.5 due to incorrect autocomplete attribute values](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)
+- [WAI-ARIA Authoring Practices 1.1 Combobox](https://www.w3.org/TR/wai-aria-practices-1.1/#combobox)
+- [WAI-ARIA 1.1 Combobox with Listbox Popup Examples](https://www.w3.org/TR/wai-aria-practices-1.1/examples/combobox/aria1.1pattern/listbox-combo.html)
+- [Autocomplete Combobox with Manual Selection](https://medium.com/@kgotgit/web-accessibility-autocomplete-combobox-with-manual-selection-angular-component-part-2-2f7bc1388b59)
 
 ## Related Components
 
@@ -239,5 +219,4 @@ To show a full list of options, use a [Select Box](https://sparkdesignsystem.com
 
 The Autocomplete pattern is based on the principle of recognition over recall.
 
-For more on the Autocomplete patterns see [UI Patterns: Autocomplete](https://ui-patterns.com/patterns/Autocomplete)
-The Autocomplete pattern is based on the principle of recognition over recall.
+For more on the Autocomplete patterns see [UI Patterns: Autocomplete](http://ui-patterns.com/patterns/Autocomplete)

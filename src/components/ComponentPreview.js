@@ -14,7 +14,7 @@ const ComponentPreview = ({
   maxWidth,
   allowScrolling,
 }) => {
-  const iframeURL = `https://html.sparkdesignsystem.com/iframe.html?id=${componentType}-${componentName}`;
+  const iframeURL = `http://localhost:7006/iframe.html?id=${componentType}-${componentName}`;
 
   return (
     <div className="sprk-u-mbm sprk-u-ptl">
