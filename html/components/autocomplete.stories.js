@@ -9,7 +9,9 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('autocomplete')}
-- Live demos of the Autocomplete are available on our [demo site](https://spark-testhtml.netlify.app/autocomplete.html).
+- Live demos of the Autocomplete are available on our
+[demo site](https://spark-testhtml.netlify.app/autocomplete.html)
+([View Source](https://github.com/sparkdesignsystem/spark-starter-html/blob/kitchen-sink/src/js/autocomplete.js)).
 
 #### Keyboard Interactions
 - The list can be closed by clicking on the document body or by pressing
