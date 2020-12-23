@@ -14,7 +14,7 @@ class SprkSelectionInput extends React.Component {
       choiceItems: props.choices.map(item => ({ id: uniqueId(), ...item })),
     };
     this.handleChange = this.handleChange.bind(this);
-    this.selectRef = React.createRef();
+    this.selectRef = this.props.forwardedRef;
   }
 
   componentDidMount() {
@@ -54,6 +54,7 @@ class SprkSelectionInput extends React.Component {
       analyticsString,
       disabled,
       errorMessage,
+      forwardedRef,
       helperText,
       idString,
       label,
@@ -241,6 +242,10 @@ SprkSelectionInput.propTypes = {
    */
   errorMessage: PropTypes.string,
   /**
+   * A ref passed in will be attached to the input element of the rendered component.
+   */
+  forwardedRef: PropTypes.shape(),
+  /**
    * Text that describes the
    * group of selection items as a whole.
    * Applies to the checkbox and radio variants only.
@@ -279,6 +284,7 @@ SprkSelectionInput.defaultProps = {
   analyticsString: '',
   disabled: false,
   errorMessage: '',
+  forwardedRef: React.createRef(),
   groupLabel: '',
   helperText: '',
   idString: '',
