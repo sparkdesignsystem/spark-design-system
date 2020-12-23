@@ -2,13 +2,8 @@
   title: Color Accessibility
 ---
 
-import accessibilityKey from '../../../images/accessibility-key.png';
-import accessibilityKey2x from '../../../images/accessibility-key@2x.png';
-import accessibilityKey3x from '../../../images/accessibility-key@3x.png';
-
 import chart1HighRes from '../../../images/contrast-chart-1-high-res.jpg';
 import chart2HighRes from '../../../images/contrast-chart-2-high-res.jpg';
-
 
 import grayBox from '../../../images/gray-box-contrast-key.svg';
 import greenBox from '../../../images/green-box-contrast-key.svg';
@@ -22,7 +17,6 @@ import accessibilityChart2 from '../../../images/accessibility-chart-2.png';
 import accessibilityChart22x from '../../../images/accessibility-chart-2@2x.png';
 import accessibilityChart23x from '../../../images/accessibility-chart-2@3x.png';
 
-export const accessibilityKeySet = `${accessibilityKey} 560w, ${accessibilityKey2x} 1120w, ${accessibilityKey3x} 1680w`;
 export const accessibilityChart1Set= `${accessibilityChart1} 560w, ${accessibilityChart12x} 1120w, ${accessibilityChart13x} 1680w`;
 export const accessibilityChart2Set= `${accessibilityChart2} 560w, ${accessibilityChart22x} 1120w, ${accessibilityChart23x} 1680w`;
 
@@ -89,9 +83,9 @@ Use these charts to discern contrast accessibility between two colors.
   <img
     srcset={accessibilityChart1Set}
     src={accessibilityChart1}
-    sizes="(min-width: 1120px) 1120px,
-          (min-width: 1680px) 1680px,
-          560px"
+    sizes="(min-width: 1680px) 1680px,
+           (min-width: 1120px) 1120px,
+           560px"
     class="sprk-u-mbm"
     alt="A chart of colors comparing contrast accessibility."/>
 </a>
@@ -99,9 +93,9 @@ Use these charts to discern contrast accessibility between two colors.
   <img
     srcset={accessibilityChart2Set}
     src={accessibilityChart2}
-    sizes="(min-width: 1120px) 1120px,
-          (min-width: 1680px) 1680px,
-          560px"
+    sizes="(min-width: 1680px) 1680px,
+           (min-width: 1120px) 1120px,
+           560px"
     class="sprk-u-mbh"
     alt="A chart of colors comparing contrast accessibility."/>
 </a>
