@@ -10,6 +10,12 @@
   <dimen name="sprk_alert_icon_margin_bottom">0.00sp</dimen><!-- The margin bottom for the icon in the Alert component. -->
   <dimen name="sprk_alert_icon_margin_left">0.00sp</dimen><!-- The margin left for the icon in the Alert component. -->
   <dimen name="sprk_alert_icon_size">32.00sp</dimen><!-- Sets the height and width of the two icons used in the Alert component. -->
+  <dimen name="sprk_autocomplete_results_border_width">1.00dp</dimen><!-- The border size of the Autocomplete results. -->
+  <dimen name="sprk_autocomplete_results_border_radius">4.00dp</dimen><!-- The border radius of the Autocomplete results. -->
+  <dimen name="sprk_autocomplete_results_width">1600.00dp</dimen><!-- The width of the Autocomplete results. -->
+  <dimen name="sprk_autocomplete_results_max_width">440.00dp</dimen><!-- The max-width of the Autocomplete results. -->
+  <dimen name="sprk_autocomplete_results_max_height">288.00dp</dimen><!-- The max-height of the Autocomplete results. -->
+  <dimen name="sprk_autocomplete_results_huge_max_width">600.00dp</dimen><!-- The max-width of the huge Autocomplete results. -->
   <dimen name="sprk_blockquote_margin">0.00dp</dimen><!-- Value for the margin property on Blockquote component. -->
   <dimen name="sprk_blockquote_quote_margin">0.00dp</dimen><!-- Value for the margin property on the quote in the Blockquote component. -->
   <dimen name="sprk_blockquote_quote_last_margin">0.00dp</dimen><!-- Value for the margin property on the last quote in the Blockquote component. -->
@@ -80,7 +86,7 @@
   <dimen name="sprk_select_arrow_offset_y">-31.00dp</dimen><!-- The value for margin-top on the icon in Selects. -->
   <dimen name="sprk_select_arrow_offset_x">19.00dp</dimen><!-- The value for margin-right on the icon in Selects. -->
   <dimen name="sprk_textarea_min_height">125.00dp</dimen><!-- The minimum height of Textarea. -->
-  <dimen name="sprk_textarea_padding">16.00dp</dimen><!-- The padding insdie Textarea. -->
+  <dimen name="sprk_textarea_padding">16.00dp</dimen><!-- The padding inside Textarea. -->
   <dimen name="sprk_date_picker_max_width">320.00dp</dimen><!-- The maximum width of the Date Picker popup. -->
   <dimen name="sprk_date_picker_border_radius">4.00dp</dimen><!-- The border radius applied to the Date Picker popup. -->
   <dimen name="sprk_date_picker_button_size">36.00dp</dimen><!-- The size of the buttons used internally by the Date Picker popup. -->

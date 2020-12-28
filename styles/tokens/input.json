@@ -537,6 +537,15 @@
         },
         "file": "settings",
         "themable": true
+      },
+      "has-icon-padding": {
+        "comment": "The padding value for Huge Inputs that contains an icon.",
+        "value": "0 0 0 42px",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
       }
     },
     "error-text": {
@@ -913,7 +922,7 @@
       "themable": true
     },
     "padding": {
-      "comment": "The padding insdie Textarea.",
+      "comment": "The padding inside Textarea.",
       "value": "{space.m.value}",
       "attributes": {
         "category": "size"

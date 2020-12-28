@@ -72,20 +72,13 @@
 // to create floating label effect
 // Label element must follow the input element
 
-// Huge styles for Monetary Input
 .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput {
-  padding: $sprk-text-input-has-icon-padding;
+  padding: $sprk-input-huge-has-icon-padding;
 }
 
 // Takes in account the height of the select to position select icon
 .sprk-b-InputContainer--huge .sprk-b-SelectContainer__icon {
   margin-top: $sprk-select-input-huge-icon-margin-top;
-}
-
-.sprk-b-InputContainer--huge
-  .sprk-b-TextInputIconContainer
-  :first-child.sprk-b-TextInput {
-  padding: $sprk-text-input-huge-has-text-icon-padding;
 }
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:focus,
@@ -124,7 +117,8 @@
   .sprk-b-TextInputIconContainer
   .sprk-b-TextInput.sprk-b-Input--has-floating-label::-ms-input-placeholder,
 .sprk-b-InputContainer--huge
-  > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden::-ms-input-placeholder {
+  > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden::-ms-input-placeholder,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden::-ms-input-placeholder {
   opacity: $sprk-input-huge-placeholder-active-opacity;
   transition-delay: $sprk-input-huge-placeholder-transition-delay;
   transition-property: $sprk-input-huge-placeholder-transition-property;
@@ -145,14 +139,16 @@
   .sprk-b-TextInputIconContainer
   .sprk-b-TextInput.sprk-b-Input--has-floating-label::placeholder,
 .sprk-b-InputContainer--huge
-  > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden::placeholder {
+  > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden::placeholder,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden::placeholder {
   opacity: $sprk-input-huge-placeholder-active-opacity;
   transition-delay: $sprk-input-huge-placeholder-transition-delay;
   transition-property: $sprk-input-huge-placeholder-transition-property;
 }
 
 .sprk-b-InputContainer--huge
-  > :first-child.sprk-b-TextInput::-ms-input-placeholder {
+  > :first-child.sprk-b-TextInput::-ms-input-placeholder,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput::-ms-input-placeholder {
   opacity: $sprk-input-huge-placeholder-opacity;
 }
 
@@ -175,23 +171,27 @@
 }
 // IE11 Override
 .sprk-b-InputContainer--huge
-  > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:-ms-input-placeholder {
+  > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:-ms-input-placeholder,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden:-ms-input-placeholder {
   opacity: $sprk-input-huge-placeholder-active-opacity;
   color: $sprk-placeholder-color;
 }
-
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden:focus,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:focus,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden.sprk-b-TextInput.sprk-b-TextInput--float-label,
+  .sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden.sprk-b-TextInput.sprk-b-TextInput--float-label,
 .sprk-b-InputContainer--huge
-  > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden.sprk-b-TextInput.sprk-b-Input--has-floating-label {
+  > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden.sprk-b-TextInput.sprk-b-Input--has-floating-label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden.sprk-b-TextInput.sprk-b-Input--has-floating-label {
   padding: $sprk-input-huge-padding;
 }
 
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden
-  + .sprk-b-Label {
+  + .sprk-b-Label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden + .sprk-b-Label {
   left: -10000px;
   width: 1px;
   height: 1px;
@@ -201,13 +201,15 @@
 // This has to be separated from the rest of the CSS
 // for the rest of it to work in Edge
 .sprk-b-InputContainer--huge
-  > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
+  > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown),
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
   padding: $sprk-input-huge-padding;
 }
 
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown)
-  + .sprk-b-Label {
+  + .sprk-b-Label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown) + .sprk-b-Label {
   left: -10000px;
   width: 1px;
   height: 1px;
@@ -215,10 +217,13 @@
 }
 
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput:disabled,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:disabled,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--float-label,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput.sprk-b-Input--has-floating-label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-Input--has-floating-label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-Select:disabled,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-Select.sprk-b-Input--has-floating-label {
@@ -230,43 +235,18 @@
 }
 
 .sprk-b-InputContainer--huge
-  > :first-child.sprk-b-TextInput:disabled.sprk-b-TextInput--label-hidden {
+  > :first-child.sprk-b-TextInput:disabled.sprk-b-TextInput--label-hidden,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:disabled.sprk-b-TextInput--label-hidden {
   color: $sprk-text-input-disabled-color;
 }
 
 .sprk-b-InputContainer--huge
-  > :first-child.sprk-b-TextInput:not(:placeholder-shown) {
+  > :first-child.sprk-b-TextInput:not(:placeholder-shown),
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) {
   padding-top: $sprk-input-huge-active-padding-top;
 }
 
-// Huge styles for text inputs with icon
-.sprk-b-InputContainer--huge
-  > :first-child.sprk-b-Label
-  + .sprk-b-TextInputIconContainer
-  .sprk-b-TextInput::placeholder {
-  opacity: $sprk-input-huge-placeholder-active-opacity;
-}
-
-.sprk-b-InputContainer--huge
-  > :first-child.sprk-b-Label
-  + .sprk-b-TextInputIconContainer
-  .sprk-b-TextInput:focus,
-.sprk-b-InputContainer--huge
-  .sprk-b-TextInputIconContainer
-  .sprk-b-TextInput.sprk-b-TextInput--label-hidden:focus {
-  padding: $sprk-text-input-has-icon-padding;
-}
-
-.sprk-b-InputContainer--huge
-  > :first-child.sprk-b-Label
-  + .sprk-b-TextInputIconContainer
-  .sprk-b-TextInput:not(:placeholder-shown),
-.sprk-b-InputContainer--huge
-  .sprk-b-TextInputIconContainer
-  .sprk-b-TextInput.sprk-b-TextInput--label-hidden:not(:placeholder-shown) {
-  padding: $sprk-text-input-has-icon-padding;
-}
-
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-TextInput + .sprk-b-Label,
 .sprk-b-InputContainer--huge > :first-child.sprk-b-Select + .sprk-b-Label,
 .sprk-b-InputContainer--huge
@@ -283,6 +263,11 @@
   pointer-events: none;
 }
 
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput + .sprk-b-Label {
+  padding: $sprk-input-huge-has-icon-padding;
+}
+
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:focus + .sprk-b-Label,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput:focus
   + .sprk-b-Label,
@@ -297,6 +282,8 @@
   color: $sprk-input-huge-focus-label-color;
 }
 
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--float-label + .sprk-b-Label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-Input--has-floating-label + .sprk-b-Label,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput.sprk-b-TextInput--float-label
   + .sprk-b-Label,
@@ -321,6 +308,7 @@
   color: $sprk-input-huge-complete-label-color;
 }
 
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) + .sprk-b-Label,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput:not(:placeholder-shown)
   + .sprk-b-Label,
@@ -335,6 +323,7 @@
 }
 
 /* stylelint-disable */
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:not(:placeholder-shown) + .sprk-b-Label,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput:not(:placeholder-shown)
   + .sprk-b-Label,
@@ -347,6 +336,9 @@
 }
 
 /* stylelint-enable */
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error:focus + .sprk-b-Label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error.sprk-b-TextInput--float-label + .sprk-b-Label,
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error.sprk-b-Input--has-floating-label + .sprk-b-Label,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput.sprk-b-TextInput--error:focus
   + .sprk-b-Label,
@@ -380,6 +372,7 @@
   color: $sprk-input-huge-error-focus-label-color;
 }
 
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown) + .sprk-b-Label,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput.sprk-b-TextInput--error:not(:placeholder-shown)
   + .sprk-b-Label,
@@ -411,9 +404,10 @@
   .sprk-b-TextInputIconContainer
   .sprk-b-TextInput:focus
   + .sprk-b-Label {
-  padding: $sprk-text-input-huge-has-text-icon-padding;
+  padding: $sprk-input-huge-has-icon-padding;
 }
 
+.sprk-b-InputContainer--huge .sprk-b-TextInputIconContainer .sprk-b-TextInput:disabled + .sprk-b-Label,
 .sprk-b-InputContainer--huge
   > :first-child.sprk-b-TextInput:disabled
   + .sprk-b-Label,
