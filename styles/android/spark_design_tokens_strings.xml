@@ -19,6 +19,16 @@
   <string name="sprk_alert_border_info">2px solid #ff1c6ef2</string><!-- The border value of the Information Alert component. -->
   <string name="sprk_alert_border_success">2px solid #ff298540</string><!-- The border value of the Success Alert component. -->
   <string name="sprk_alert_border_fail">2px solid #ffe50158</string><!-- The border value of the Fail Alert component. -->
+  <string name="sprk_autocomplete_results_list_style_type">none</string><!-- The list style type of the Autocomplete results. -->
+  <string name="sprk_autocomplete_results_position">absolute</string><!-- The position style of the Autocomplete results. -->
+  <string name="sprk_autocomplete_results_border_style">solid</string><!-- The border style of the Autocomplete results. -->
+  <string name="sprk_autocomplete_results_border">1.00dp solid #fff7f7f7</string><!-- The border of the Autocomplete results. -->
+  <string name="sprk_autocomplete_results_overflow_y">scroll</string><!-- The overflow-y behavior of the Autocomplete results. -->
+  <string name="sprk_autocomplete_results_shadow">0 0 40px 2px rgba(0, 0, 0, 0.1)</string><!-- The box shadow of the Autocomplete results. -->
+  <string name="sprk_autocomplete_results_z_index">32000.00dp</string><!-- The z-index of the Autocomplete results. -->
+  <string name="sprk_autocomplete_results_last_child_border_bottom">none</string><!-- The border-bottom of the last Autocomplete result. -->
+  <string name="sprk_autocomplete_result_border_bottom">1px solid #ffd2d1d1</string><!-- The border-bottom of the Autocomplete results. -->
+  <string name="sprk_autocomplete_result_hover_cursor">pointer</string><!-- The cursor of the hovered Autocomplete results. -->
   <string name="sprk_blockquote_source_prefix">'-'</string><!-- Before pseudo-element on the Blockquote component. -->
   <string name="sprk_btn_shadow">0 3px 10px #14141414</string><!-- The box shadow value of the Button component. -->
   <string name="sprk_btn_border_style">solid</string><!-- The border style of the Button component. -->
@@ -95,6 +105,7 @@
   <string name="sprk_input_huge_padding">0 24.00dp</string><!-- The padding for Huge Inputs. -->
   <string name="sprk_input_huge_label_padding">0 (24.00dp + 2.00dp)</string><!-- The label padding for Huge Inputs. -->
   <string name="sprk_input_huge_box_shadow">0 3px 10px 1px rgba(0, 0, 0, 0.08)</string><!-- The box shadow value on Huge Inputs. -->
+  <string name="sprk_input_huge_has_icon_padding">0 0 0 42px</string><!-- The padding value for Huge Inputs that contains an icon. -->
   <string name="sprk_input_error_text_margin">0 0 0 6px</string><!-- The margin used for Input error text. -->
   <string name="sprk_error_container_margin">8.00dp 0 0 0</string><!-- The margin for Input containers that have an error. -->
   <string name="sprk_monetary_symbol">'$'</string><!-- The symbol used to denote currency for Monetary Inputs. -->
