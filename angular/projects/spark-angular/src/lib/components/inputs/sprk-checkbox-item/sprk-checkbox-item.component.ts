@@ -61,8 +61,8 @@ export class SprkCheckboxItemComponent implements OnInit {
   idString: string;
 
   /**
-   * Determines whether the `sprk-b-InputContainer__visibility-toggle`
-   * class is applied.
+   * If `true`, the checkbox item will receive styling to make it a
+   * visibility toggle. Use this for "Show Password" checkboxes.
    */
   @Input()
   isVisibilityToggle: boolean;
