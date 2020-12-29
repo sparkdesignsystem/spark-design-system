@@ -5,9 +5,9 @@ import { SprkHelperTextDirective } from './sprk-helper-text.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <span sprkHelperText idString="test-str" analyticsString="test"
-      >Helper Text</span
-    >
+    <span sprkHelperText idString="test-str" analyticsString="test">
+      Helper Text
+    </span>
   `,
 })
 class TestComponent {}
