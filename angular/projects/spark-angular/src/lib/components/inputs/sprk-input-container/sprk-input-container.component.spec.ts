@@ -104,6 +104,19 @@ class Test5Component {}
 })
 class Test6Component {}
 
+@Component({
+  selector: 'sprk-test-7',
+  template: `
+    <sprk-input-container>
+      <label sprkLabel for="test-7">Label!</label>
+      <input sprkInput id="test-7" />
+      <p sprkHelperText>Helper Text!</p>
+      <span sprkFieldError>Error Message!</span>
+    </sprk-input-container>
+  `,
+})
+class Test7Component {}
+
 describe('SprkInputContainerComponent', () => {
   let component1: Test1Component;
   let component2: Test2Component;
@@ -111,6 +124,7 @@ describe('SprkInputContainerComponent', () => {
   let component4: Test4Component;
   let component5: Test5Component;
   let component6: Test6Component;
+  let component7: Test7Component;
 
   let testFixture1: ComponentFixture<Test1Component>;
   let testFixture2: ComponentFixture<Test2Component>;
@@ -118,6 +132,7 @@ describe('SprkInputContainerComponent', () => {
   let testFixture4: ComponentFixture<Test4Component>;
   let testFixture5: ComponentFixture<Test5Component>;
   let testFixture6: ComponentFixture<Test6Component>;
+  let testFixture7: ComponentFixture<Test7Component>;
 
   let inputContainerComponent1: SprkInputContainerComponent;
   let inputContainerComponent2: SprkInputContainerComponent;
@@ -125,6 +140,7 @@ describe('SprkInputContainerComponent', () => {
   let inputContainerComponent4: SprkInputContainerComponent;
   let inputContainerComponent5: SprkInputContainerComponent;
   let inputContainerComponent6: SprkInputContainerComponent;
+  let inputContainerComponent7: SprkInputContainerComponent;
 
   let inputContainerFixture1: ComponentFixture<SprkInputContainerComponent>;
   let inputContainerFixture2: ComponentFixture<SprkInputContainerComponent>;
@@ -132,6 +148,7 @@ describe('SprkInputContainerComponent', () => {
   let inputContainerFixture4: ComponentFixture<SprkInputContainerComponent>;
   let inputContainerFixture5: ComponentFixture<SprkInputContainerComponent>;
   let inputContainerFixture6: ComponentFixture<SprkInputContainerComponent>;
+  let inputContainerFixture7: ComponentFixture<SprkInputContainerComponent>;
 
   let inputContainerElement1: HTMLElement;
   let inputContainerElement2: HTMLElement;
@@ -139,6 +156,7 @@ describe('SprkInputContainerComponent', () => {
   let inputContainerElement4: HTMLElement;
   let inputContainerElement5: HTMLElement;
   let inputContainerElement6: HTMLElement;
+  let inputContainerElement7: HTMLElement;
 
   let labelElement1: HTMLElement;
   let inputElement1: HTMLElement;
@@ -164,6 +182,10 @@ describe('SprkInputContainerComponent', () => {
   let inputElement6: HTMLElement;
   let errorElement6: HTMLElement;
 
+  let labelElement7: HTMLElement;
+  let inputElement7: HTMLElement;
+  let errorElement7: HTMLElement;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -177,6 +199,7 @@ describe('SprkInputContainerComponent', () => {
         Test4Component,
         Test5Component,
         Test6Component,
+        Test7Component,
         SprkInputContainerComponent,
         SprkIconComponent,
       ],
@@ -190,6 +213,7 @@ describe('SprkInputContainerComponent', () => {
     testFixture4 = TestBed.createComponent(Test4Component);
     testFixture5 = TestBed.createComponent(Test5Component);
     testFixture6 = TestBed.createComponent(Test6Component);
+    testFixture7 = TestBed.createComponent(Test7Component);
 
     component1 = testFixture1.componentInstance;
     component2 = testFixture2.componentInstance;
@@ -197,6 +221,7 @@ describe('SprkInputContainerComponent', () => {
     component4 = testFixture4.componentInstance;
     component5 = testFixture5.componentInstance;
     component6 = testFixture6.componentInstance;
+    component7 = testFixture7.componentInstance;
 
     inputContainerFixture1 = TestBed.createComponent(
       SprkInputContainerComponent,
@@ -216,6 +241,9 @@ describe('SprkInputContainerComponent', () => {
     inputContainerFixture6 = TestBed.createComponent(
       SprkInputContainerComponent,
     );
+    inputContainerFixture7 = TestBed.createComponent(
+      SprkInputContainerComponent,
+    );
 
     inputContainerComponent1 = inputContainerFixture1.componentInstance;
     inputContainerComponent2 = inputContainerFixture2.componentInstance;
@@ -223,6 +251,7 @@ describe('SprkInputContainerComponent', () => {
     inputContainerComponent4 = inputContainerFixture4.componentInstance;
     inputContainerComponent5 = inputContainerFixture5.componentInstance;
     inputContainerComponent6 = inputContainerFixture6.componentInstance;
+    inputContainerComponent7 = inputContainerFixture7.componentInstance;
 
     inputContainerComponent1.ngOnInit();
     inputContainerComponent2.ngOnInit();
@@ -230,6 +259,7 @@ describe('SprkInputContainerComponent', () => {
     inputContainerComponent4.ngOnInit();
     inputContainerComponent5.ngOnInit();
     inputContainerComponent6.ngOnInit();
+    inputContainerComponent7.ngOnInit();
 
     testFixture1.detectChanges();
     testFixture2.detectChanges();
@@ -237,6 +267,7 @@ describe('SprkInputContainerComponent', () => {
     testFixture4.detectChanges();
     testFixture5.detectChanges();
     testFixture6.detectChanges();
+    testFixture7.detectChanges();
 
     inputContainerFixture1.detectChanges();
     inputContainerFixture2.detectChanges();
@@ -244,6 +275,7 @@ describe('SprkInputContainerComponent', () => {
     inputContainerFixture4.detectChanges();
     inputContainerFixture5.detectChanges();
     inputContainerFixture6.detectChanges();
+    inputContainerFixture7.detectChanges();
 
     inputContainerElement1 = inputContainerFixture1.nativeElement.querySelector(
       'div',
@@ -263,6 +295,10 @@ describe('SprkInputContainerComponent', () => {
     inputContainerElement6 = inputContainerFixture6.nativeElement.querySelector(
       'div',
     );
+    inputContainerElement7 = inputContainerFixture7.nativeElement.querySelector(
+      'div',
+    );
+
     labelElement1 = testFixture1.debugElement.query(By.css('label'))
       .nativeElement;
     labelElement2 = testFixture2.debugElement.query(By.css('label'))
@@ -274,6 +310,8 @@ describe('SprkInputContainerComponent', () => {
     labelElement5 = testFixture5.debugElement.query(By.css('label'))
       .nativeElement;
     labelElement6 = testFixture6.debugElement.query(By.css('label'))
+      .nativeElement;
+    labelElement7 = testFixture7.debugElement.query(By.css('label'))
       .nativeElement;
 
     inputElement1 = testFixture1.debugElement.query(By.css('input'))
@@ -288,6 +326,8 @@ describe('SprkInputContainerComponent', () => {
       .nativeElement;
     inputElement6 = testFixture6.debugElement.query(By.css('input'))
       .nativeElement;
+    inputElement7 = testFixture7.debugElement.query(By.css('input'))
+      .nativeElement;
 
     errorElement1 = testFixture1.debugElement.query(By.css('span'))
       .nativeElement;
@@ -301,6 +341,8 @@ describe('SprkInputContainerComponent', () => {
       .nativeElement;
     errorElement6 = testFixture6.debugElement.query(By.css('span'))
       .nativeElement;
+    errorElement7 = testFixture7.debugElement.query(By.css('span'))
+      .nativeElement;
   });
 
   it('should create itself', () => {
@@ -310,6 +352,7 @@ describe('SprkInputContainerComponent', () => {
     expect(component4).toBeTruthy();
     expect(component5).toBeTruthy();
     expect(component6).toBeTruthy();
+    expect(component7).toBeTruthy();
   });
 
   it('should add classes to input when additionalClasses has a value', () => {
@@ -384,16 +427,9 @@ describe('SprkInputContainerComponent', () => {
     ).toEqual(true);
   });
 
-  it('should not change the input id if one is existing', () => {
-    inputElement1.setAttribute('id', 'test-id');
-    inputContainerFixture1.detectChanges();
-    expect(inputElement1.getAttribute('id')).toBe('test-id');
-  });
-
-  it('should not change the select id if one is existing', () => {
-    inputElement3.setAttribute('id', 'test-id');
-    inputContainerFixture3.detectChanges();
-    expect(inputElement3.getAttribute('id')).toBe('test-id');
+  it('should not change the input id or label for if they match', () => {
+    expect(inputElement7.getAttribute('id')).toBe('test-7');
+    expect(labelElement7.getAttribute('for')).toEqual('test-7');
   });
 
   it('should use the input id value for the "for" value if mismatching', () => {
