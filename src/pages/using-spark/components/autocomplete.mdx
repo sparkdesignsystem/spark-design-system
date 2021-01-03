@@ -4,14 +4,47 @@ title: Autocomplete
 
 import ComponentPreview from '../../../components/ComponentPreview';
 import { SprkDivider } from '@sparkdesignsystem/spark-react';
-import typingExample from '../../../images/autocomplete/Active Typing@2x.png';
-import selectingExample from '../../../images/autocomplete/Selecting Options@2x.png';
-import noResultsFoundExample from '../../../images/autocomplete/No Results Found@2x.png';
-import noSearchIconExample from '../../../images/autocomplete/No Search Icon@2x.png';
-import twoLinesExample from '../../../images/autocomplete/address_two_lines@2x.png';
-import noLabelExample from '../../../images/autocomplete/no_label@2x.png';
-import categoriesExample from '../../../images/autocomplete/search_across_categories@2x.png';
-import recentSearchesExample from '../../../images/autocomplete/focused_without_search@2x.png';
+
+
+import typingExample from '../../../images/autocomplete/Active_Typing.png';
+import typingExample2x from '../../../images/autocomplete/Active_Typing@2x.png';
+import typingExample3x from '../../../images/autocomplete/Active_Typing@3x.png';
+const typingExampleSet = `${typingExample} 560w, ${typingExample2x} 1120w, ${typingExample3x} 1680w`;
+
+import selectingExample from '../../../images/autocomplete/SelectingOptions.png';
+import selectingExample2x from '../../../images/autocomplete/SelectingOptions@2x.png';
+import selectingExample3x from '../../../images/autocomplete/SelectingOptions@3x.png';
+const selectingExampleSet = `${selectingExample} 560w, ${selectingExample2x} 1120w, ${selectingExample3x} 1680w`;
+
+import noResultsFoundExample from '../../../images/autocomplete/NoResultsFound.png';
+import noResultsFoundExample2x from '../../../images/autocomplete/NoResultsFound@2x.png';
+import noResultsFoundExample3x from '../../../images/autocomplete/NoResultsFound@3x.png';
+const noResultsFoundExampleSet = `${noResultsFoundExample} 560w, ${noResultsFoundExample2x} 1120w, ${noResultsFoundExample3x} 1680w`;
+
+import noSearchIconExample from '../../../images/autocomplete/NoSearchIcon.png';
+import noSearchIconExample2x from '../../../images/autocomplete/NoSearchIcon@2x.png';
+import noSearchIconExample3x from '../../../images/autocomplete/NoSearchIcon@3x.png';
+const noSearchIconExampleSet = `${noSearchIconExample} 560w, ${noSearchIconExample2x} 1120w, ${noSearchIconExample3x} 1680w`;
+
+import twoLinesExample from '../../../images/autocomplete/address_two_lines.png';
+import twoLinesExample2x from '../../../images/autocomplete/address_two_lines@2x.png';
+import twoLinesExample3x from '../../../images/autocomplete/address_two_lines@3x.png';
+const twoLinesExampleSet = `${twoLinesExample} 560w, ${twoLinesExample2x} 1120w, ${twoLinesExample3x} 1680w`;
+
+import noLabelExample from '../../../images/autocomplete/no_label.png';
+import noLabelExample2x from '../../../images/autocomplete/no_label@2x.png';
+import noLabelExample3x from '../../../images/autocomplete/no_label@3x.png';
+const noLabelExampleSet = `${noLabelExample} 560w, ${noLabelExample2x} 1120w, ${noLabelExample3x} 1680w`;
+
+import categoriesExample from '../../../images/autocomplete/search_across_categories.png';
+import categoriesExample2x from '../../../images/autocomplete/search_across_categories@2x.png';
+import categoriesExample3x from '../../../images/autocomplete/search_across_categories@3x.png';
+const categoriesExampleSet = `${categoriesExample} 560w, ${categoriesExample2x} 1120w, ${categoriesExample3x} 1680w`;
+
+import recentSearchesExample from '../../../images/autocomplete/focused_without_search.png';
+import recentSearchesExample2x from '../../../images/autocomplete/focused_without_search@2x.png';
+import recentSearchesExample3x from '../../../images/autocomplete/focused_without_search@3x.png';
+const recentSearchesExampleSet = `${recentSearchesExample} 560w, ${recentSearchesExample2x} 1120w, ${recentSearchesExample3x} 1680w`;
 
 # Autocomplete
 
@@ -92,18 +125,31 @@ Each Autocomplete variant has an error and disabled state.
 
 ### Active Typing
 
+## Without Sizes
+
 <img
-  class="sprk-u-mbm"
-  src={typingExample}
-  style="max-width: 40rem; width: 100%;"
+  srcset={typingExampleSet}
+  src={typingExample2x}
+  class="sprk-u-mbm sprk-u-Measure sprk-u-Width-100"
   alt="As a user types into the Autocomplete input, matching results are displayed in a listbox below the input."/>
 
-### Selecting Option
+## With Sizes
+
+<img
+  srcset={typingExampleSet}
+  src={typingExample2x}
+  sizes="(min-width: 1680px) 1680px,
+           (min-width: 1120px) 1120px,
+           560px"
+  class="sprk-u-mbm sprk-u-Measure sprk-u-Width-100"
+  alt="As a user types into the Autocomplete input, matching results are displayed in a listbox below the input."/>
+
+<!-- ### Selecting Option
 
 <img
   class="sprk-u-mbm"
-  src={selectingExample}
-  style="max-width: 40rem; width: 100%;"
+  srcset={selectingExampleSet}
+  src={selectingExample2x}
   alt="The Autocomplete component with a mouse cursor highlighting a search result."/>
 
 ### No Results Found
@@ -118,7 +164,11 @@ Create a better experience for the user by:
 
 <img
   class="sprk-u-mbm"
-  src={noResultsFoundExample}
+  srcset={noResultsFoundExampleSet}
+  src={noResultsFoundExample2x}
+  sizes="(min-width: 1680px) 1680px,
+           (min-width: 1120px) 1120px,
+           560px"
   style="max-width: 40rem; width: 100%;"
   alt="The Autocomplete component displaying a 'No results found' message."/>
 
@@ -134,7 +184,11 @@ Use the search icon when an Autocomplete is independent of other form elements o
 
 <img
   class="sprk-u-mbm"
-  src={noSearchIconExample}
+  srcset={noSearchIconExampleSet}
+  src={noSearchIconExample2x}
+  sizes="(min-width: 1680px) 1680px,
+           (min-width: 1120px) 1120px,
+           560px"
   style="max-width: 40rem; width: 100%;"
   alt="The Autocomplete component without the search icon."/>
 
@@ -144,7 +198,11 @@ Addresses can span two lines when displaying the full address.
 
 <img
   class="sprk-u-mbm"
-  src={twoLinesExample}
+  srcset={twoLinesExampleSet}
+  src={twoLinesExample2x}
+  sizes="(min-width: 1680px) 1680px,
+           (min-width: 1120px) 1120px,
+           560px"
   style="max-width: 40rem; width: 100%;"
   alt="The Autocomplete component displaying multi-line search results."/>
 
@@ -154,7 +212,11 @@ A label is not required for this input type. Autocomplete inputs should not use 
 
 <img
   class="sprk-u-mbm"
-  src={noLabelExample}
+  srcset={noLabelExampleSet}
+  src={noLabelExample2x}
+  sizes="(min-width: 1680px) 1680px,
+           (min-width: 1120px) 1120px,
+           560px"
   style="max-width: 40rem; width: 100%;"
   alt="The Autocomplete component depicted without the label."/>
 
@@ -164,7 +226,11 @@ If there are different types of results for the same search term that users may 
 
 <img
   class="sprk-u-mbm"
-  src={categoriesExample}
+  srcset={categoriesExampleSet}
+  src={categoriesExample2x}
+  sizes="(min-width: 1680px) 1680px,
+           (min-width: 1120px) 1120px,
+           560px"
   style="max-width: 40rem; width: 100%;"
   alt="The Autocomplete component displaying category links at the top of the search results."/>
 
@@ -174,7 +240,11 @@ Use a focused state when users have recently interacted with the Autocomplete in
 
 <img
   class="sprk-u-mbm"
-  src={recentSearchesExample}
+  srcset={recentSearchesExampleSet}
+  src={recentSearchesExample2x}
+  sizes="(min-width: 1680px) 1680px,
+           (min-width: 1120px) 1120px,
+           560px"
   style="max-width: 40rem; width: 100%;"
   alt="The Autocomplete displaying a Recent Searches list."/>
 
@@ -224,4 +294,4 @@ To show a full list of options, use a [Select Box](https://sparkdesignsystem.com
 
 ## Research
 
-The Autocomplete pattern is based on the principle of recognition over recall.
+The Autocomplete pattern is based on the principle of recognition over recall. -->
