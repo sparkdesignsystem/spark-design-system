@@ -1,6 +1,6 @@
 import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import customTheme from 'prism-react-renderer/themes/github';
+import customTheme from 'prism-react-renderer/themes/vsDark';
 
 const InlineCode = ({ children, className, additionalPreClasses, theme }) => {
   className = className ? className : '';
@@ -16,6 +16,8 @@ const InlineCode = ({ children, className, additionalPreClasses, theme }) => {
         <pre
           className={`docs-code sprk-u-Measure ${className} ${additionalPreClasses}`}
           style={{ ...style }}
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+          tabIndex="0"
         >
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
