@@ -67,13 +67,29 @@ const Header = ({ setContext }) => {
     element: Link,
   }));
 
+  const usingSparkExamples = useUsingSparkData().examples.map((page) => ({
+    text: page.node.frontmatter.title,
+    to: `/using-spark/examples/${page.node.parent.name}`,
+    element: Link,
+  }));
+
   const usingSparkFoundations = useUsingSparkData().foundations.map((page) => ({
     text: page.node.frontmatter.title,
     to: `/using-spark/foundations/${page.node.parent.name}`,
     element: Link,
   }));
 
-  const usingSparkPages = usingSparkFoundations.concat(usingSparkComponents);
+  const usingSparkGuides = useUsingSparkData().guides.map((page) => ({
+    text: page.node.frontmatter.title,
+    to: `/using-spark/guides/${page.node.parent.name}`,
+    element: Link,
+  }));
+
+  const usingSparkPages = usingSparkFoundations.concat(
+    usingSparkGuides,
+    usingSparkComponents,
+    usingSparkExamples,
+  );
 
   const principlePages = usePrincipleSparkData().map((page) => ({
     text: page.node.frontmatter.title,
