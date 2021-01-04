@@ -1,0 +1,208 @@
+  {
+    "autocomplete": {
+      "results": {
+        "list-style-type": {
+          "comment": "The list style type of the Autocomplete results.",
+          "value": "none",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": false
+        },
+        "position": {
+          "comment": "The position style of the Autocomplete results.",
+          "value": "absolute",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": false
+        },
+        "background-color": {
+          "comment": "Background color of the Autocomplete results.",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border-width": {
+          "comment": "The border size of the Autocomplete results.",
+          "value": "1px",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border-style": {
+          "comment": "The border style of the Autocomplete results.",
+          "value": "solid",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border-color": {
+          "comment": "The border color of the Autocomplete results.",
+          "value": "{gray.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border-radius": {
+          "comment": "The border radius of the Autocomplete results.",
+          "value": "4px",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "border": {
+          "comment": "The border of the Autocomplete results.",
+          "value": "{autocomplete.results.border-width.value} {autocomplete.results.border-style.value} {autocomplete.results.border-color.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "width": {
+          "comment": "The width of the Autocomplete results.",
+          "value": "100%",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "max-width": {
+          "comment": "The max-width of the Autocomplete results.",
+          "value": "27.5rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "max-height": {
+          "comment": "The max-height of the Autocomplete results.",
+          "value": "18rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "overflow-y": {
+          "comment": "The overflow-y behavior of the Autocomplete results.",
+          "value": "scroll",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "shadow": {
+          "comment": "The box shadow of the Autocomplete results.",
+          "value": "0 0 40px 2px rgba(0, 0, 0, 0.1)",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "z-index": {
+          "comment": "The z-index of the Autocomplete results.",
+          "value": "{layer.height.m.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "huge": {
+          "max-width": {
+            "comment": "The max-width of the huge Autocomplete results.",
+            "value": "37.5rem",
+            "attributes": {
+              "category": "size"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        },
+        "last-child-border-bottom": {
+          "comment": "The border-bottom of the last Autocomplete result.",
+          "value": "none",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "result": {
+        "font": {
+          "size": {
+            "comment": "The font size of the Autocomplete results.",
+            "value": "{font.size.body.one.value}",
+            "file": "settings",
+            "themable": true
+          }
+        },
+        "padding": {
+          "comment": "The padding around the Autocomplete results.",
+          "value": "{space.m.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "border-bottom": {
+          "comment": "The border-bottom of the Autocomplete results.",
+          "value": "1px solid {black-tint.20.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "hover": {
+          "background-color": {
+            "comment": "The background color of the hovered Autocomplete results.",
+            "value": "{black-tint.10.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "cursor": {
+            "comment": "The cursor of the hovered Autocomplete results.",
+            "value": "pointer",
+            "attributes": {
+              "category": "content"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        },
+        "active": {
+          "background-color": {
+            "comment": "Background color of the active Autocomplete result.",
+            "value": "{black-tint.10.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        }
+      }
+    }
+  }
