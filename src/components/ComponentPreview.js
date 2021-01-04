@@ -13,6 +13,7 @@ const ComponentPreview = ({
   maxHeight,
   maxWidth,
   allowScrolling,
+  title,
 }) => {
   const iframeURL = `https://html.sparkdesignsystem.com/iframe.html?id=${componentType}-${componentName}`;
 
@@ -26,7 +27,7 @@ const ComponentPreview = ({
             maxWidth,
           }}
           scrolling={allowScrolling}
-          title="Component Preview"
+          title={title}
           className="docs-c-ComponentPreview sprk-o-Box"
           src={iframeURL}
           loading="lazy"
@@ -56,11 +57,13 @@ ComponentPreview.propTypes = {
   maxWidth: PropTypes.string,
   minHeight: PropTypes.string,
   allowScrolling: PropTypes.bool,
+  title: PropTypes.string,
 };
 
 ComponentPreview.defaultProps = {
   componentType: 'components',
   allowScrolling: false,
+  title: 'Component Preview',
 };
 
 export default ComponentPreview;
