@@ -7,27 +7,28 @@ import { SprkDivider } from '@sparkdesignsystem/spark-react';
 # Pagination
 
 Pagination breaks related content or data into
-multiple pages and allows a client to navigate through them. 
+multiple pages and allows a client to navigate through them.
 
 <ComponentPreview
   componentName="pagination--default-story"
   hasReact
   hasAngular
   hasHTML
+  titleAttr="Pagination Example"
 />
 
 ### Usage
 
 Use Pagination when splitting related content or a
 large set of data into smaller chunks across several
-pages will make the content easier to consume. 
+pages will make the content easier to consume.
 
 ### Guidelines
 
 - Pagination only includes navigation elements for paging
 and does not manipulate data or control the display of a
 data grid; this control is used only to provide navigation
-and to indicate the current page and number of pages. 
+and to indicate the current page and number of pages.
 
 <SprkDivider
  element="span"
@@ -42,13 +43,14 @@ The Default variant displays back and forward Icon
 chevrons as well as page numbers for each page.
 If there are more than 3 pages, ellipses (…) are used
 to condense the component and make it more readable
-while still showing the first, last, and current pages. 
+while still showing the first, last, and current pages.
 
 <ComponentPreview
   componentName="pagination--default-story"
   hasReact
   hasAngular
   hasHTML
+  titleAttr="Default Pagination Example"
 />
 
 ### Pager
@@ -56,13 +58,14 @@ while still showing the first, last, and current pages.
 The Pager variant does not include page numbers and only
 includes Icon chevrons for navigating forwards and backwards
 between pages. Pager should be used when you want the client
-to only navigate in sequential order. 
+to only navigate in sequential order.
 
 <ComponentPreview
   componentName="pagination--pager"
   hasReact
   hasAngular
   hasHTML
+  titleAttr="Pager Example"
 />
 
 ## Anatomy
@@ -70,20 +73,20 @@ to only navigate in sequential order.
 - Pagination must have Icon chevrons for incrementally
 navigating forward or backward between pages.
 - Default Pagination must have page numbers for
-navigating to specific pages 
+navigating to specific pages
 - Pagination must include an ellipsis (…) indicating
-hidden pages when there are more than 3 pages. 
+hidden pages when there are more than 3 pages.
 
 ## Accessibility
 
 - Users can navigate to the control using the keyboard
 and are able to activate the Icon chevrons and page
-numbers using the ENTER or SPACE keys. 
+numbers using the ENTER or SPACE keys.
 - The component is correctly identified and interpreted
-by screen reader technology. 
+by screen reader technology.
 - Each page number is correctly identified and interpreted
-by screen reader technology. 
+by screen reader technology.
 - The current page number includes the `aria-current`
-attribute. 
+attribute.
 - The Icon chevrons are correctly identified by screen
 reader technology.
