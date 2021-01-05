@@ -1,6 +1,6 @@
 import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import customTheme from 'prism-react-renderer/themes/vsDark';
+import customTheme from 'prism-react-renderer/themes/duotoneDark';
 
 const InlineCode = ({ children, className, additionalPreClasses, theme }) => {
   className = className ? className : '';
