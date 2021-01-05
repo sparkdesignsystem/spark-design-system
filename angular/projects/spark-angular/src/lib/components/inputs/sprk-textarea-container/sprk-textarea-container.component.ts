@@ -114,9 +114,6 @@ export class SprkTextareaContainerComponent implements OnInit {
   }
 
   hasMatchingForAndID(label, input): boolean {
-    if (!this.hasFor(label) || !this.hasID(input)) {
-      return;
-    }
     return label.htmlFor === input.id;
   }
 

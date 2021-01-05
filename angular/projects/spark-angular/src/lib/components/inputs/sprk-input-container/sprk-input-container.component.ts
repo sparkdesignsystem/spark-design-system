@@ -73,7 +73,7 @@ export class SprkInputContainerComponent implements OnInit {
 
   /**
    * This component expects a child input element
-   * with the `sprkInput` directive.
+   * with the `sprkSelect` directive.
    */
   @ContentChild(SprkSelectDirective, { static: true })
   select: SprkSelectDirective;
@@ -126,9 +126,6 @@ export class SprkInputContainerComponent implements OnInit {
   }
 
   hasMatchingForAndID(label, input): boolean {
-    if (!this.hasFor(label) || !this.hasID(input)) {
-      return;
-    }
     return label.htmlFor === input.id;
   }
 
