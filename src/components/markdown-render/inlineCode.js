@@ -16,8 +16,6 @@ const InlineCode = ({ children, className, additionalPreClasses, theme }) => {
         <pre
           className={`docs-code sprk-u-Measure ${className} ${additionalPreClasses}`}
           style={{ ...style }}
-          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-          tabIndex="0"
         >
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
