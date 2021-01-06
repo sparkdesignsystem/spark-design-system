@@ -17,14 +17,6 @@ export class SprkInputDirective implements OnInit {
    */
   constructor(public ref: ElementRef, private renderer: Renderer2) {}
 
-  // /**
-  //  * If set to `true`, then
-  //  * the icon styles will be applied
-  //  * to the input.
-  //  */
-  // @Input()
-  // hasIcon: boolean;
-
   /**
    * If set to `huge`, then
    * the huge styles will be applied
