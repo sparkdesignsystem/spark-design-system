@@ -4,15 +4,10 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Input/Date Picker',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkDatePickerInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
@@ -46,9 +41,7 @@ export const defaultStory = () => (
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkDatePickerInput',
-    ]
+    jest: ['SprkDatePickerInput'],
   },
 };
 
@@ -59,16 +52,13 @@ export const invalidDatePicker = () => (
     errorMessage="Incorrect date."
     label="Date"
     valid={false}
-    errorMessage="There is an error on this field"
   />
 );
 
 invalidDatePicker.story = {
   name: 'Invalid',
   parameters: {
-    jest: [
-      'SprkDatePickerInput',
-    ]
+    jest: ['SprkDatePickerInput'],
   },
 };
 
@@ -85,8 +75,59 @@ export const disabledDatePicker = () => (
 disabledDatePicker.story = {
   name: 'Disabled',
   parameters: {
-    jest: [
-      'SprkDatePickerInput',
-    ]
+    jest: ['SprkDatePickerInput'],
+  },
+};
+
+export const hugeDatePicker = () => (
+  <SprkDatePickerInput
+    type="hugeTextInput"
+    name="date"
+    placeholder="01/01/2019"
+    errorMessage="Incorrect date."
+    label="Date"
+  />
+);
+
+hugeDatePicker.story = {
+  name: 'Huge',
+  parameters: {
+    jest: ['SprkDatePickerInput'],
+  },
+};
+
+export const invalidHugeDatePicker = () => (
+  <SprkDatePickerInput
+    type="hugeTextInput"
+    name="date"
+    placeholder="01/01/2019"
+    errorMessage="Incorrect date."
+    label="Date"
+    valid={false}
+  />
+);
+
+invalidHugeDatePicker.story = {
+  name: 'Invalid Huge',
+  parameters: {
+    jest: ['SprkDatePickerInput'],
+  },
+};
+
+export const disabledHugeDatePicker = () => (
+  <SprkDatePickerInput
+    type="hugeTextInput"
+    name="date"
+    placeholder="01/01/2019"
+    errorMessage="Incorrect date."
+    label="Date"
+    disabled
+  />
+);
+
+disabledHugeDatePicker.story = {
+  name: 'Disabled Huge',
+  parameters: {
+    jest: ['SprkDatePickerInput'],
   },
 };
