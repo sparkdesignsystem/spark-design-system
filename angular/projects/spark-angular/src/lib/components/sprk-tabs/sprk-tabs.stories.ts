@@ -53,7 +53,7 @@ export const defaultStory = () => ({
       <button
         sprkTabsButton
         data-id="tab-2"
-        [defaultActive]=true
+        [isDefaultActive]=true
       >
         Tab 2
       </button>
@@ -68,7 +68,7 @@ export const defaultStory = () => ({
         euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
         Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
       </div>
-      <div [defaultActive]=true sprkTabsPanel>
+      <div [isDefaultActive]=true sprkTabsPanel>
         <p>Tab 2 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
         euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
         Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>

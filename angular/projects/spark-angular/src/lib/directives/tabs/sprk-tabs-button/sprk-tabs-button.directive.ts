@@ -16,7 +16,7 @@ export class SprkTabsButtonDirective implements OnInit {
    * active styles and aria attributes on render.
    */
   @Input()
-  defaultActive: boolean;
+  isDefaultActive: boolean;
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
@@ -32,7 +32,7 @@ export class SprkTabsButtonDirective implements OnInit {
   getClasses(): string[] {
     const classArray: string[] = ['sprk-c-Tabs__button'];
 
-    if (this.defaultActive) {
+    if (this.isDefaultActive) {
       classArray.push('sprk-c-Tabs__button--active');
     }
 
@@ -53,7 +53,7 @@ export class SprkTabsButtonDirective implements OnInit {
     this.ref.nativeElement.setAttribute('role', 'tab');
     this.ref.nativeElement.setAttribute(
       'aria-selected',
-      this.defaultActive ? 'true' : 'false',
+      this.isDefaultActive ? 'true' : 'false',
     );
 
     if (this.analyticsString) {

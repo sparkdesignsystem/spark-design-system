@@ -16,7 +16,7 @@ export class SprkTabsPanelDirective implements OnInit {
    * be set as the active Panel on render.
    */
   @Input()
-  defaultActive: boolean;
+  isDefaultActive: boolean;
 
   /**
    * @ignore
@@ -24,7 +24,7 @@ export class SprkTabsPanelDirective implements OnInit {
   getClasses(): string[] {
     const classArray: string[] = ['sprk-c-Tabs__content'];
 
-    if (!this.defaultActive) {
+    if (!this.isDefaultActive) {
       classArray.push('sprk-u-HideWhenJs');
     }
 
