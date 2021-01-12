@@ -108,7 +108,7 @@ export const invalidHugeDatePicker = () => (
 );
 
 invalidHugeDatePicker.story = {
-  name: 'Invalid Huge',
+  name: 'Huge Invalid',
   parameters: {
     jest: ['SprkDatePickerInput'],
   },
@@ -126,7 +126,7 @@ export const disabledHugeDatePicker = () => (
 );
 
 disabledHugeDatePicker.story = {
-  name: 'Disabled Huge',
+  name: 'Huge Disabled',
   parameters: {
     jest: ['SprkDatePickerInput'],
   },

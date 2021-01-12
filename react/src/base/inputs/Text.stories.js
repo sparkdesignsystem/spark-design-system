@@ -79,7 +79,7 @@ export const invalidHugeTextInput = () => (
 );
 
 invalidHugeTextInput.story = {
-  name: 'Invalid Huge',
+  name: 'Huge Invalid',
   component: SprkTextInput,
   parameters: {
     jest: ['SprkTextInput'],
@@ -97,7 +97,7 @@ export const disabledHugeTextInput = () => (
 );
 
 disabledHugeTextInput.story = {
-  name: 'Disabled Huge',
+  name: 'Huge Disabled',
   component: SprkTextInput,
   parameters: {
     jest: ['SprkTextInput'],
