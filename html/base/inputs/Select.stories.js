@@ -306,7 +306,7 @@ export const invalidHugeSelectBox = () => {
 };
 
 invalidHugeSelectBox.story = {
-  name: 'Invalid Huge',
+  name: 'Huge Invalid',
   parameters: {
     jest: ['hugeInput'],
   },
@@ -371,7 +371,7 @@ export const disabledHugeSelectBox = () => {
 };
 
 disabledHugeSelectBox.story = {
-  name: 'Disabled Huge',
+  name: 'Huge Disabled',
   parameters: {
     jest: ['hugeInput'],
   },

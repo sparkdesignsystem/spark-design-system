@@ -198,7 +198,7 @@ export const invalidHugeTextInput = () => {
 };
 
 invalidHugeTextInput.story = {
-  name: 'Invalid Huge',
+  name: 'Huge Invalid',
   parameters: {
     jest: ['hugeInput'],
   },
@@ -238,7 +238,7 @@ export const disabledHugeTextInput = () => {
 };
 
 disabledHugeTextInput.story = {
-  name: 'Disabled Huge',
+  name: 'Huge Disabled',
   parameters: {
     jest: ['hugeInput'],
   },
