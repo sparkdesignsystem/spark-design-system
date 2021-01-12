@@ -1,8 +1,14 @@
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[sprkTabbedNavigationPanel]'
+  selector: '[sprkTabbedNavigationPanel]',
 })
+/**
+ * @deprecate This directive will be removed in
+ * a future release in favor of the `sprk-tabs-panel` directive.
+ * Please use the `sprk-tabs-panel` directive.
+ * TODO: Remove this directive as part of Issue XXXX.
+ */
 export class SprkTabbedNavigationPanelDirective implements OnInit {
   /**
    * Expects a space separated string
@@ -29,7 +35,7 @@ export class SprkTabbedNavigationPanelDirective implements OnInit {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -41,7 +47,7 @@ export class SprkTabbedNavigationPanelDirective implements OnInit {
     this.ref.nativeElement.setAttribute('role', 'tabpanel');
     this.ref.nativeElement.setAttribute('tabindex', '0');
 
-    this.getClasses().forEach(item => {
+    this.getClasses().forEach((item) => {
       this.ref.nativeElement.classList.add(item);
     });
   }

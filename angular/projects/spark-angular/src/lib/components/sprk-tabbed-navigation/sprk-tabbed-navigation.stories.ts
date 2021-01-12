@@ -23,6 +23,9 @@ export default {
     },
     info: `
 ${markdownDocumentationLinkBuilder('tabs')}
+- The \`sprk-tabbed-navigation\` component has been deprecated. Please use
+[sprk-tabs](https://angular.sparkdesignsystem.com/?path=/story/components-tabs--default-story)
+instead.
 - The Tabs component makes use of the
 \`sprk-u-JavaScript\` class to provide a graceful
 degradation experience in environments where JavaScript

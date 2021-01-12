@@ -9,10 +9,10 @@ import { SprkTabsComponent } from './sprk-tabs.component';
   template: `
     <sprk-tabs>
       <button sprkTabsButton>Tab 1</button>
-      <button sprkTabsButton [defaultActive]="true">Tab 2</button>
+      <button sprkTabsButton [isDefaultActive]="true">Tab 2</button>
       <button sprkTabsButton>Tab 3</button>
       <div sprkTabsPanel>Tab1 Content</div>
-      <div sprkTabsPanel [defaultActive]="true">Tab2 Content</div>
+      <div sprkTabsPanel [isDefaultActive]="true">Tab2 Content</div>
       <div sprkTabsPanel>Tab3 Content</div>
     </sprk-tabs>
   `,

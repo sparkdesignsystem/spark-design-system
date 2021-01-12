@@ -1,14 +1,20 @@
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[sprkTabbedNavigationTab]'
+  selector: '[sprkTabbedNavigationTab]',
 })
+/**
+ * @deprecate This directive will be removed in
+ * a future release in favor of the `sprk-tabs-button` directive.
+ * Please use the `sprk-tabs-button` directive.
+ * TODO: Remove this directive as part of Issue XXXX.
+ */
 export class SprkTabbedNavigationTabDirective implements OnInit {
- /**
-  * Expects a space separated string
-  * of classes to be added to the
-  * element.
-  */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * element.
+   */
   @Input()
   additionalClasses: string;
   /**
@@ -37,7 +43,7 @@ export class SprkTabbedNavigationTabDirective implements OnInit {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -46,20 +52,20 @@ export class SprkTabbedNavigationTabDirective implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getClasses().forEach(item => {
+    this.getClasses().forEach((item) => {
       this.ref.nativeElement.classList.add(item);
     });
 
     this.ref.nativeElement.setAttribute('role', 'tab');
     this.ref.nativeElement.setAttribute(
       'aria-selected',
-      this.defaultActive ? 'true' : 'false'
+      this.defaultActive ? 'true' : 'false',
     );
 
     if (this.analyticsString) {
       this.ref.nativeElement.setAttribute(
         'data-analytics',
-        this.analyticsString
+        this.analyticsString,
       );
     }
   }
