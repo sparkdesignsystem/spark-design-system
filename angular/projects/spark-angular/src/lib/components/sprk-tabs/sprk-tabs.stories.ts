@@ -64,18 +64,14 @@ export const defaultStory = () => ({
         Tab 3
       </button>
       <div sprkTabsPanel>
-        <p>Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
-        euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
-        Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
+        <p>Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <div [isDefaultActive]=true sprkTabsPanel>
-        <p>Tab 2 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
-        euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
-        Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
+        <p>Tab 2 Content Sed quis rhoncus ipsum. Nulla euismod nisi est, vel
+        consequat ante consectetur in.</p>
       </div>
       <div sprkTabsPanel>
-        <p>Tab 3 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
-        euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
+        <p>Tab 3 Content Ut interdum dictum est at ornare. Nam nec dapibus nibh.
         Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
       </div>
     </sprk-tabs>
