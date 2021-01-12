@@ -1,6 +1,6 @@
 {
   "name": "spark-design-system-gatsby",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "A documentation and guide site for Spark Design System",
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "license": "MIT",
@@ -45,7 +45,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.0",
     "@mdx-js/react": "^1.5.0",
-    "@sparkdesignsystem/spark-react": "^4.0.0",
+    "@sparkdesignsystem/spark-react": "^4.1.0",
     "babel-plugin-react-docgen": "^3.1.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.20.24",

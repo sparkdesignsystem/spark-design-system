@@ -126,6 +126,10 @@ import {
   isEscPressed,
   isEnterPressed,
   isSpacePressed,
+  isDownPressed,
+  isUpPressed,
+  isLeftPressed,
+  isRightPressed,
 } from './utilities/keypress';
 import toggleValue from './utilities/toggleValue';
 import {
@@ -144,11 +148,13 @@ import { carousel } from './components/carousel';
 import { highlightBoard } from './components/highlight-board';
 import toggleAriaExpandedAttribute from './utilities/toggleAriaExpanded';
 import generateAriaControls from './utilities/generateAriaControls';
+import generateAriaOwns from './utilities/generateAriaOwns';
 import isElementVisible from './utilities/isElementVisible';
 import scrollYDirection from './utilities/scrollYDirection';
 import { checkbox, bindCheckboxUIEvents } from './base/inputs/checkbox';
 import generateIdForInput from './utilities/generateIdForInput';
 import { radioInput, bindRadioUIEvents } from './base/inputs/radioInput';
+import resetListItems from './utilities/resetListItems';
 
 export {
   dateInput,
@@ -236,6 +242,10 @@ export {
   isEscPressed,
   isEnterPressed,
   isSpacePressed,
+  isUpPressed,
+  isDownPressed,
+  isLeftPressed,
+  isRightPressed,
   toggleValue,
   dropdowns,
   bindDropdownUIEvents,
@@ -259,9 +269,11 @@ export {
   toggleClassWithValue,
   toggleAriaExpandedAttribute,
   generateAriaControls,
+  generateAriaOwns,
   checkbox,
   bindCheckboxUIEvents,
   generateIdForInput,
   radioInput,
   bindRadioUIEvents,
+  resetListItems,
 };
