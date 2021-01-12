@@ -20,7 +20,6 @@ import { SprkInputDirective } from './sprk-input.directive';
       idString="test-str"
       analyticsString="test-str"
       hasIcon="true"
-      isValid="false"
     />
     <select sprkInput id="select"></select>
     <textarea sprkInput id="textarea"></textarea>
