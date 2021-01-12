@@ -29,6 +29,8 @@ import { SprkTableHeadModule } from './directives/sprk-table-head/sprk-table-hea
 import { SprkTableRowHeadingModule } from './directives/sprk-table-row-heading/sprk-table-row-heading.module';
 import { SprkTabbedNavigationPanelModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.module';
 import { SprkTabbedNavigationTabModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
+import { SprkTabsPanelModule } from './directives/tabs/sprk-tabs-panel/sprk-tabs-panel.module';
+import { SprkTabsButtonModule } from './directives/tabs/sprk-tabs-button/sprk-tabs-button.module';
 import { SparkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
 import { SprkHugeInputContainerModule } from './components/inputs/sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkTextareaContainerModule } from './components/inputs/sprk-textarea-container/sprk-textarea-container.module';
@@ -51,6 +53,7 @@ import { SprkPaginationModule } from './components/sprk-pagination/sprk-paginati
 import { SprkPromoModule } from './components/sprk-promo/sprk-promo.module';
 import { SprkStackModule } from './components/sprk-stack/sprk-stack.module';
 import { SprkTabbedNavigationModule } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.module';
+import { SprkTabsModule } from './components/sprk-tabs/sprk-tabs.module';
 import { SprkTableModule } from './components/sprk-table/sprk-table.module';
 import { SprkToggleModule } from './components/sprk-toggle/sprk-toggle.module';
 import { SprkTooltipModule } from './components/sprk-tooltip/sprk-tooltip.module';
@@ -115,6 +118,8 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkTableRowHeadingModule,
     SprkTabbedNavigationTabModule,
     SprkTabbedNavigationPanelModule,
+    SprkTabsButtonModule,
+    SprkTabsPanelModule,
     SprkPaginationModule,
     SprkStackModule,
     SprkStackItemModule,
@@ -123,6 +128,7 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkIconModule,
     SprkFooterModule,
     SprkTabbedNavigationModule,
+    SprkTabsModule,
     SprkBoxModule,
     SprkTextModule,
     SprkHeadingModule,

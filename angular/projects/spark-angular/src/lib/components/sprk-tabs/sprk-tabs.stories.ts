@@ -1,15 +1,15 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { SprkTabbedNavigationModule } from './sprk-tabbed-navigation.module';
-import { SprkTabbedNavigationPanelModule } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.module';
-import { SprkTabbedNavigationTabModule } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
-import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
+import { SprkTabsModule } from './sprk-tabs.module';
+import { SprkTabsPanelModule } from '../../directives/tabs/sprk-tabs-panel/sprk-tabs-panel.module';
+import { SprkTabsButtonModule } from '../../directives/tabs/sprk-tabs-button/sprk-tabs-button.module';
+import { SprkTabsComponent } from './sprk-tabs.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
-import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
+import { SprkTabsPanelDirective } from '../../directives/tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
+import { SprkTabsButtonDirective } from '../../directives/tabs/sprk-tabs-button/sprk-tabs-button.directive';
 
 export default {
-  title: 'Components/Tabs (Deprecated)',
-  component: SprkTabbedNavigationComponent,
+  title: 'Components/Tabs',
+  component: SprkTabsComponent,
   decorators: [
     storyWrapper(
       (storyContent) =>
@@ -18,8 +18,8 @@ export default {
   ],
   parameters: {
     subcomponents: {
-      SprkTabbedNavigationPanelDirective,
-      SprkTabbedNavigationTabDirective,
+      SprkTabsPanelDirective,
+      SprkTabsButtonDirective,
     },
     info: `
 ${markdownDocumentationLinkBuilder('tabs')}
@@ -36,53 +36,49 @@ only one content panel will be visible at a time.
 };
 
 const modules = {
-  imports: [
-    SprkTabbedNavigationModule,
-    SprkTabbedNavigationPanelModule,
-    SprkTabbedNavigationTabModule,
-  ],
+  imports: [SprkTabsModule, SprkTabsPanelModule, SprkTabsButtonModule],
 };
 
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-tabbed-navigation idString="tabs-1">
+    <sprk-tabs idString="tabs-1">
       <button
-        sprkTabbedNavigationTab
+        sprkTabsButton
         analyticsString="Tab: 1"
         data-id="tab-1"
       >
         Tab 1
       </button>
       <button
-        sprkTabbedNavigationTab
+        sprkTabsButton
         data-id="tab-2"
         [defaultActive]=true
       >
         Tab 2
       </button>
       <button
-        sprkTabbedNavigationTab
+        sprkTabsButton
         data-id="tab-3"
       >
         Tab 3
       </button>
-      <div sprkTabbedNavigationPanel>
+      <div sprkTabsPanel>
         <p>Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
         euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
         Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
       </div>
-      <div [defaultActive]=true sprkTabbedNavigationPanel>
+      <div [defaultActive]=true sprkTabsPanel>
         <p>Tab 2 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
         euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
         Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
       </div>
-      <div sprkTabbedNavigationPanel>
+      <div sprkTabsPanel>
         <p>Tab 3 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
         euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
         Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
       </div>
-    </sprk-tabbed-navigation>
+    </sprk-tabs>
   `,
 });
 
@@ -90,9 +86,9 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: [
-      'sprk-tabbed-navigation.component',
-      'sprk-tabbed-navigation-panel.directive',
-      'sprk-tabbed-navigation-tab.directive',
+      'sprk-tabs.component',
+      'sprk-tabs-panel.directive',
+      'sprk-tabs-button.directive',
     ],
   },
 };
