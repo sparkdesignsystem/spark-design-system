@@ -6,7 +6,7 @@ import {
   ISprkFooterAward,
   ISprkFooterBadgeLink,
   ISprkDisclaimerText,
-  ISprkDisclaimerToggle
+  ISprkDisclaimerToggle,
 } from './sprk-footer.interfaces';
 
 @Component({
@@ -25,7 +25,9 @@ import {
             *ngIf="globalLinks"
             class="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh"
           >
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+            <h3
+              class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text"
+            >
               {{ globalHeading }}
             </h3>
 
@@ -57,7 +59,9 @@ import {
                 </a>
               </div>
 
-              <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
+              <p
+                class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text"
+              >
                 {{ item.text }}
               </p>
             </div>
@@ -74,7 +78,9 @@ import {
                 *ngFor="let item of localLinks"
                 class="sprk-o-Stack__item sprk-o-Stack__item--third@m sprk-o-Box sprk-u-PaddingRight--a sprk-o-Stack sprk-o-Stack--large"
               >
-                <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+                <h3
+                  class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text"
+                >
                   {{ item.heading }}
                 </h3>
 
@@ -90,7 +96,9 @@ import {
                       variant="light"
                       class="sprk-c-Footer__link"
                       href="{{ link.href }}"
-                      analyticsString="{{ link.analyticsString || link.analytics }}"
+                      analyticsString="{{
+                        link.analyticsString || link.analytics
+                      }}"
                     >
                       {{ link.text }}
                     </a>
@@ -103,7 +111,9 @@ import {
               *ngIf="socialLinks"
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box"
             >
-              <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+              <h3
+                class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text"
+              >
                 {{ connectHeading }}
               </h3>
 
@@ -129,12 +139,16 @@ import {
                       sprkLink
                       variant="plain"
                       href="{{ item.href }}"
-                      analyticsString="{{ item.analytics || item.analyticsString }}"
+                      analyticsString="{{
+                        item.analytics || item.analyticsString
+                      }}"
                     >
                       <sprk-icon
                         *ngIf="item.icon"
                         iconType="{{ item.icon }}"
-                        additionalClasses="{{ item.iconCSS }} sprk-c-Footer__icon"
+                        additionalClasses="{{
+                          item.iconCSS
+                        }} sprk-c-Footer__icon"
                       ></sprk-icon>
                       <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
                         item.iconScreenReaderText
@@ -159,7 +173,9 @@ import {
             *ngIf="awards"
             class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large"
           >
-            <h3 class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+            <h3
+              class="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text"
+            >
               {{ awardsHeading }}
             </h3>
 
@@ -172,7 +188,9 @@ import {
                   variant="plain"
                   class="sprk-o-Stack__item"
                   href="{{ award.href }}"
-                  analyticsString="{{ award.analytics || award.analyticsString }}"
+                  analyticsString="{{
+                    award.analytics || award.analyticsString
+                  }}"
                 >
                   <img
                     *ngIf="award.imgSrc"
@@ -190,11 +208,15 @@ import {
             >
               <sprk-toggle
                 title="{{ toggle.title }}"
-                analyticsString="{{ toggle.analytics || toggle.analyticsString }}"
+                analyticsString="{{
+                  toggle.analytics || toggle.analyticsString
+                }}"
                 iconClass="sprk-c-Footer__icon"
                 titleFontClass="sprk-b-TypeBodyFour sprk-c-Footer__trigger"
               >
-                <p class="sprk-b-TypeBodyFour sprk-c-Footer__text">{{ toggle.body }}</p>
+                <p class="sprk-b-TypeBodyFour sprk-c-Footer__text">
+                  {{ toggle.body }}
+                </p>
               </sprk-toggle>
             </div>
           </div>
@@ -243,7 +265,7 @@ import {
         </div>
       </footer>
     </div>
-  `
+  `,
 })
 export class SprkFooterComponent {
   /**
@@ -280,7 +302,7 @@ export class SprkFooterComponent {
   connectHeading: string;
   /**
    * Array of
-   * [ISprkFooterGlobalLink](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * [ISprkFooterGlobalLink](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    *  used to build the
    * links in the "Global" section.
    */
@@ -288,7 +310,7 @@ export class SprkFooterComponent {
   globalLinks: ISprkFooterGlobalLink[];
   /**
    * Array of
-   * [ISprkFooterLocalLinkColumn](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * [ISprkFooterLocalLinkColumn](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    *  used to build
    * the columns of links
    * in the "Site Links" section.
@@ -297,7 +319,7 @@ export class SprkFooterComponent {
   localLinks: ISprkFooterLocalLinkColumn[];
   /**
    * Array of
-   * [ISprkFooterSocialLink](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * [ISprkFooterSocialLink](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    *  used to build the
    * icon links in the "Connect With Us section".
    */
@@ -305,7 +327,7 @@ export class SprkFooterComponent {
   socialLinks: ISprkFooterSocialLink[];
   /**
    * Array of
-   * [ISprkFooterAward](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * [ISprkFooterAward](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    *  used to build the
    * awards in the "Awards" section.
    */
@@ -313,7 +335,7 @@ export class SprkFooterComponent {
   awards: ISprkFooterAward[];
   /**
    * Array of
-   * [ISprkFooterBadgeLink](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * [ISprkFooterBadgeLink](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    *  used to build the
    * icon links in the icon
    * section in the bottom
@@ -323,7 +345,7 @@ export class SprkFooterComponent {
   badgeLinks: ISprkFooterBadgeLink[];
   /**
    * Array of
-   * [ISprkDisclaimerText](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * [ISprkDisclaimerText](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    *  used to build disclaimer text in the
    * of the Footer.
    */
@@ -331,7 +353,7 @@ export class SprkFooterComponent {
   disclaimerText: ISprkDisclaimerText[];
   /**
    * Array of
-   * [ISprkDisclaimerToggle](https://github.com/sparkdesignsystem/spark-design-system/blob/master/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
+   * [ISprkDisclaimerToggle](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    *  used to build
    * the disclamer toggle(s) in
    * the the Footer.
@@ -344,11 +366,11 @@ export class SprkFooterComponent {
    */
   getClasses(): string {
     const classArray: string[] = [
-      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-c-Footer'
+      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-c-Footer',
     ];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }

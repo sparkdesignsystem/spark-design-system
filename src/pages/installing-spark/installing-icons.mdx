@@ -7,7 +7,7 @@
 
 Spark makes it possible for you to include SVG
 icons right into your project using two basic
-methods, **Compile Time** and **Run Time**. 
+methods, **Compile Time** and **Run Time**.
 
 For more information on working with SVG icons, check out
 [this guide](https://css-tricks.com/svg-sprites-use-better-icon-fonts/).
@@ -35,15 +35,16 @@ before publishing and include only the versions they’ve tested.
 at the beginning for building and maintaining the connection
 to the CDN over the long term.
 
-You can find additional examples by using these helpful 
-[Gulp](https://github.com/sparkdesignsystem/spark-starter-html/blob/master/gulpfile.js#L11)
+You can find additional examples by referencing these
+[Gulp](https://github.com/sparkdesignsystem/spark-starter-html/blob/kitchen-sink/src/js/loadIcons.js#L11)
 and
 [Gatsby](https://github.com/sparkdesignsystem/spark-design-system/blob/staging/plugins/gatsby-symbol-set-fetch/gatsby-node.js)
-files.
+files to get you started.
 
->***Note***: If you use this method you must not put
+>***Note***: Do not download and place
 the SVG file in your source control repository.
-The SVG file should only be hosted on the official CDN.
+To stay up-to-date with the official icons, use the hosted CDN.
+Additionally, you may need polyfills for IE11 compatibility.
 
 ## Run Time
 
@@ -72,7 +73,7 @@ update immediately without a chance for review.
 
 You can find additional examples by using these environment
 [Angular](https://github.com/sparkdesignsystem/spark-starter-angular/blob/kitchen-sink/src/app/spark-docs/icon-set/icon-set.component.ts)
-and [React](https://github.com/sparkdesignsystem/spark-starter-react/blob/kitchen-sink/src/components/IconSet/IconSet.js) 
+and [React](https://github.com/sparkdesignsystem/spark-starter-react/blob/kitchen-sink/src/components/IconSet/IconSet.js)
 component files.
 
 ## Troubleshooting
