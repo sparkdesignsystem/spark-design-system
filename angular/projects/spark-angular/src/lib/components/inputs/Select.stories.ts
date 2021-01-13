@@ -346,7 +346,6 @@ export const legacyHugeSelectBox = () => ({
     <sprk-huge-input-container>
       <select
         id="select-huge-1"
-        aria-describedby="select-normal--error-container"
         data-id="select-huge-1"
         data-sprk-input="huge"
         sprkInput
@@ -450,7 +449,6 @@ export const legacyDisabledHugeSelectBox = () => ({
     <sprk-huge-input-container>
       <select
         id="select-huge-1"
-        aria-describedby="select-normal--error-container"
         data-id="select-huge-1"
         data-sprk-input="huge"
         sprkInput
