@@ -4,7 +4,11 @@ import { SprkFieldErrorDirective } from './sprk-field-error.directive';
 
 @Component({
   selector: 'sprk-test',
-  template: ` <span sprkFieldError>Error Message</span> `,
+  template: `
+    <span sprkFieldError idString="test-str" analyticsString="test">
+      Error Message
+    </span>
+  `,
 })
 class TestComponent {}
 
@@ -32,5 +36,14 @@ describe('Spark Field Error Directive', () => {
     expect(spanElement.classList.contains('sprk-b-ErrorContainer')).toEqual(
       true,
     );
+    expect(spanElement.classList.length).toEqual(1);
+  });
+
+  it('should set the data-id attribute to the value of idString', () => {
+    expect(spanElement.getAttribute('data-id')).toEqual('test-str');
+  });
+
+  it('should set the data-analytics attribute to the value of analyticsString', () => {
+    expect(spanElement.getAttribute('data-analytics')).toEqual('test');
   });
 });

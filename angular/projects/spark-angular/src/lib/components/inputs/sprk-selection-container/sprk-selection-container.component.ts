@@ -4,9 +4,9 @@ import {
   ContentChild,
   ContentChildren,
   Input,
-  QueryList
+  QueryList,
 } from '@angular/core';
-import * as _ from 'lodash';
+import { uniqueId } from 'lodash';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkSelectionItemContainerComponent } from '../sprk-selection-item-container/sprk-selection-item-container.component';
@@ -25,7 +25,7 @@ import { SprkSelectionItemContainerComponent } from '../sprk-selection-item-cont
       <ng-content select="[sprkFieldError]"></ng-content>
       <ng-content></ng-content>
     </div>
-  `
+  `,
 })
 export class SprkSelectionContainerComponent implements AfterContentInit {
   /**
@@ -58,7 +58,7 @@ export class SprkSelectionContainerComponent implements AfterContentInit {
   /**
    * @ignore
    */
-  id = _.uniqueId();
+  id = uniqueId();
   /**
    * @ignore
    */
@@ -71,7 +71,7 @@ export class SprkSelectionContainerComponent implements AfterContentInit {
     const classArray: string[] = ['sprk-b-InputContainer'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -83,10 +83,10 @@ export class SprkSelectionContainerComponent implements AfterContentInit {
    */
   ngAfterContentInit(): void {
     if (this.selectionItems && this.error) {
-      this.selectionItems.forEach(item => {
+      this.selectionItems.forEach((item) => {
         item.input.ref.nativeElement.setAttribute(
           'aria-describedby',
-          this.error_id
+          this.error_id,
         );
       });
       this.error.ref.nativeElement.id = this.error_id;

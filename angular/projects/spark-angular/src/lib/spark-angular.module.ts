@@ -13,6 +13,7 @@ import { SprkDatepickerModule } from './directives/inputs/sprk-datepicker/sprk-d
 import { SprkFieldErrorModule } from './directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkHelperTextModule } from './directives/inputs/sprk-helper-text/sprk-helper-text.module';
 import { SprkInputModule } from './directives/inputs/sprk-input/sprk-input.module';
+import { SprkSelectModule } from './directives/inputs/sprk-select/sprk-select.module';
 import { SprkRadioInputModule } from './directives/inputs/sprk-radio-input/sprk-radio-input.module';
 import { SprkCheckboxInputModule } from './directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
 import { SprkLabelModule } from './directives/inputs/sprk-label/sprk-label.module';
@@ -29,7 +30,7 @@ import { SprkTableHeadModule } from './directives/sprk-table-head/sprk-table-hea
 import { SprkTableRowHeadingModule } from './directives/sprk-table-row-heading/sprk-table-row-heading.module';
 import { SprkTabbedNavigationPanelModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.module';
 import { SprkTabbedNavigationTabModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
-import { SparkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
+import { SprkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
 import { SprkHugeInputContainerModule } from './components/inputs/sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkTextareaContainerModule } from './components/inputs/sprk-textarea-container/sprk-textarea-container.module';
 import { SprkIconInputContainerModule } from './components/inputs/sprk-icon-input-container/sprk-icon-input-container.module';
@@ -72,6 +73,7 @@ import { SprkCheckboxGroupModule } from './components/inputs/sprk-checkbox-group
 import { SprkCheckboxItemModule } from './components/inputs/sprk-checkbox-item/sprk-checkbox-item.module';
 import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divider.module';
 import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module';
+import { SprkTextareaModule } from './directives/inputs/sprk-textarea/sprk-textarea.module';
 @NgModule({
   exports: [
     SprkAlertModule,
@@ -89,7 +91,7 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkOrderedListModule,
     SprkUnorderedListModule,
     SprkListItemModule,
-    SparkInputContainerModule,
+    SprkInputContainerModule,
     SprkHugeInputContainerModule,
     SprkTextareaContainerModule,
     SprkIconInputContainerModule,
@@ -139,8 +141,10 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkCheckboxLabelModule,
     SprkFieldsetModule,
     SprkLegendModule,
+    SprkSelectModule,
     SprkDividerDirectiveModule,
     SprkSpinnerModule,
+    SprkTextareaModule,
   ],
 })
 export class SparkAngularModule {}

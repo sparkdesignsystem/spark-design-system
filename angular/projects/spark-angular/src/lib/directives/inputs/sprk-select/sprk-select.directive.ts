@@ -9,9 +9,9 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[sprkInput]',
+  selector: '[sprkSelect]',
 })
-export class SprkInputDirective implements OnInit {
+export class SprkSelectDirective implements OnInit {
   /**
    * @ignore
    */
@@ -52,12 +52,13 @@ export class SprkInputDirective implements OnInit {
    * has a value.
    * @param element the nativeElement
    */
-  floatLabelWhenValue(element: HTMLInputElement) {
-    const value = (element as HTMLInputElement).value;
+  floatLabelWhenValue(element: HTMLSelectElement) {
+    const value = (element as HTMLSelectElement).value;
     value.length > 0
       ? this.renderer.addClass(element, 'sprk-b-Input--has-floating-label')
       : this.renderer.removeClass(element, 'sprk-b-Input--has-floating-label');
   }
+
   /**
    * @ignore
    */
@@ -68,24 +69,12 @@ export class SprkInputDirective implements OnInit {
     }
   }
 
-  /**
-   * TODO: Remove the code in this file that is related
-   * to `SELECT` and `TEXTAREA` in favor of new
-   * `sprkSelect` and `sprkTextarea` directives.
-   */
   ngOnInit(): void {
-    if (this.ref.nativeElement.nodeName === 'SELECT') {
-      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Select');
-    } else if (this.ref.nativeElement.nodeName === 'TEXTAREA') {
-      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-TextInput');
-      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-TextArea');
-    } else {
-      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-TextInput');
-    }
+    this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Select');
+    this.renderer.addClass(this.ref.nativeElement, 'sprk-u-Width-100');
 
     if (this.variant === 'huge') {
       this.floatLabelWhenValue(this.ref.nativeElement);
     }
-    this.renderer.addClass(this.ref.nativeElement, 'sprk-u-Width-100');
   }
 }

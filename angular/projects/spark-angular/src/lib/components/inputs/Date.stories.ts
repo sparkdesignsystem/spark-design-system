@@ -1,18 +1,18 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { SparkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
+import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
-import { SparkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date',
-  component: SparkInputContainerComponent,
+  component: SprkInputContainerComponent,
   subcomponents: {
     SprkLabelDirective,
     SprkInputDirective,
@@ -20,19 +20,18 @@ export default {
   },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
     onSubmit(event): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
@@ -46,12 +45,12 @@ which you may need to remove before submitting the form.
   to the hundredth place.
 `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
   imports: [
-    SparkInputContainerModule,
+    SprkInputContainerModule,
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,
@@ -103,7 +102,7 @@ export const invalidDateInput = () => ({
       />
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -128,7 +127,7 @@ export const disabledDateInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel class="sprk-b-Label--disabled">Date Input (No Picker)</label>
+      <label sprkLabel isDisabled="true">Date Input (No Picker)</label>
       <input
         disabled
         name="date_input"

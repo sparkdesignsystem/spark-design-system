@@ -6,6 +6,11 @@ import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-i
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkHugeInputContainerComponent } from './sprk-huge-input-container.component';
 
+/**
+ * TODO: #3329
+ * This component will be removed in a future release.
+ * Please use the sprk-input-container.
+ */
 @Component({
   selector: 'sprk-test',
   template: `
@@ -15,7 +20,7 @@ import { SprkHugeInputContainerComponent } from './sprk-huge-input-container.com
       <p sprkHelperText>Helper Text!</p>
       <span sprkFieldError>Error Message!</span>
     </sprk-huge-input-container>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -38,8 +43,8 @@ describe('SprkHugeInputContainerComponent', () => {
         SprkInputDirective,
         SprkFieldErrorDirective,
         TestComponent,
-        SprkHugeInputContainerComponent
-      ]
+        SprkHugeInputContainerComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -48,12 +53,12 @@ describe('SprkHugeInputContainerComponent', () => {
     component = testFixture.componentInstance;
 
     inputContainerFixture = TestBed.createComponent(
-      SprkHugeInputContainerComponent
+      SprkHugeInputContainerComponent,
     );
     inputContainerComponent = inputContainerFixture.componentInstance;
 
     inputContainerElement = inputContainerFixture.nativeElement.querySelector(
-      'div'
+      'div',
     );
 
     labelElement = testFixture.debugElement.query(By.css('label'))
@@ -74,7 +79,7 @@ describe('SprkHugeInputContainerComponent', () => {
     inputContainerComponent.additionalClasses = 'sprk-u-man';
     inputContainerFixture.detectChanges();
     expect(inputContainerElement.classList.toString()).toEqual(
-      'sprk-b-InputContainer sprk-b-InputContainer--huge sprk-u-man'
+      'sprk-b-InputContainer sprk-b-InputContainer--huge sprk-u-man',
     );
   });
 
@@ -84,7 +89,7 @@ describe('SprkHugeInputContainerComponent', () => {
 
   it('should set the aria-describedby attribute on the input to match the id on the error field', () => {
     expect(inputElement.getAttribute('aria-describedby')).toEqual(
-      errorElement.id
+      errorElement.id,
     );
   });
 });
