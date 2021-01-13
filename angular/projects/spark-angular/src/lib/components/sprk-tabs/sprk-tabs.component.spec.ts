@@ -223,6 +223,19 @@ describe('SprkTabsComponent', () => {
     expect(element.getAttribute('data-id')).toBeNull();
   });
 
+  it('should add data-analytics when analyticsString has a value', () => {
+    const testString = 'element-id';
+    component.analyticsString = testString;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-analytics')).toEqual(testString);
+  });
+
+  it('should not add data-analytics when analyticsString has no value', () => {
+    component.analyticsString = null;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-analytics')).toBeNull();
+  });
+
   it('the right arrow key should do nothing if all tabs to the right are disabled', () => {
     testTab1.click();
     fixture.detectChanges();

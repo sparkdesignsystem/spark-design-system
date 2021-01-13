@@ -17,7 +17,24 @@ export class SprkTabsPanelDirective implements OnInit {
    */
   @Input()
   isDefaultActive: boolean;
-
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
+  @Input()
+  analyticsString: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
+  @Input()
+  idString: string;
   /**
    * @ignore
    */
@@ -44,6 +61,17 @@ export class SprkTabsPanelDirective implements OnInit {
     this.getClasses().forEach((item) => {
       this.ref.nativeElement.classList.add(item);
     });
+
+    if (this.analyticsString) {
+      this.ref.nativeElement.setAttribute(
+        'data-analytics',
+        this.analyticsString,
+      );
+    }
+
+    if (this.idString) {
+      this.ref.nativeElement.setAttribute('data-id', this.idString);
+    }
   }
   /**
    * @ignore

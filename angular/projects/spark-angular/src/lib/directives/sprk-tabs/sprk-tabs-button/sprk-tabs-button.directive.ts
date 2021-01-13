@@ -34,6 +34,16 @@ export class SprkTabsButtonDirective implements OnInit {
   @Input()
   analyticsString: string;
   /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
+  @Input()
+  idString: string;
+  /**
    * The tab button will emit this event when the button is clicked.
    */
   @Output()
@@ -80,6 +90,10 @@ export class SprkTabsButtonDirective implements OnInit {
         'data-analytics',
         this.analyticsString,
       );
+    }
+
+    if (this.idString) {
+      this.ref.nativeElement.setAttribute('data-id', this.idString);
     }
   }
   /**

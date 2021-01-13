@@ -18,7 +18,7 @@ import { SprkTabsButtonDirective } from '../../directives/sprk-tabs/sprk-tabs-bu
     <div
       [ngClass]="getClasses()"
       [attr.data-id]="idString"
-      [attr.data-analyticsString]="analyticsString"
+      [attr.data-analytics]="analyticsString"
     >
       <div class="sprk-c-Tabs__buttons" role="tablist">
         <ng-content select="[sprkTabsButton]"></ng-content>

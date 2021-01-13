@@ -4,7 +4,16 @@ import { SprkTabsPanelDirective } from './sprk-tabs-panel.directive';
 
 @Component({
   selector: 'sprk-test-component',
-  template: ` <div additionalClasses="sprk-u-man" sprkTabsPanel>Panel</div> `,
+  template: `
+    <div
+      additionalClasses="sprk-u-man"
+      sprkTabsPanel
+      idString="panelId"
+      analyticsString="panelAnalytics"
+    >
+      Panel
+    </div>
+  `,
 })
 class TestComponent {}
 
@@ -46,5 +55,13 @@ describe('Spark Tabs Panel Directive', () => {
 
   it('should add the hide class by default', () => {
     expect(element.classList.contains('sprk-u-HideWhenJs')).toEqual(true);
+  });
+
+  it('should add a value for data-analytics if analyticsString has a value', () => {
+    expect(element.getAttribute('data-analytics')).toEqual('panelAnalytics');
+  });
+
+  it('should add a value for data-id if idString has a value', () => {
+    expect(element.getAttribute('data-id')).toEqual('panelId');
   });
 });

@@ -8,6 +8,7 @@ import { By } from '@angular/platform-browser';
   template: `
     <button
       analyticsString="Tab 1"
+      idString="Tab idString"
       isDefaultActive="true"
       id="123"
       additionalClasses="sprk-u-man"
@@ -53,6 +54,10 @@ describe('Spark Tabs Button Directive', () => {
 
   it('should add a value for data-analytics if analyticsString has a value', () => {
     expect(element.getAttribute('data-analytics')).toEqual('Tab 1');
+  });
+
+  it('should add a value for data-id if idString has a value', () => {
+    expect(element.getAttribute('data-id')).toEqual('Tab idString');
   });
 
   it('should call custom button click event', (done) => {
