@@ -158,6 +158,9 @@ export class SprkTabsComponent implements AfterContentInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
   getContentRelationships(): void {
     let tabIDs = [];
     let panelIDs = [];
@@ -287,6 +290,9 @@ export class SprkTabsComponent implements AfterContentInit {
     this.setActiveTab(tabs[activeIndex], tabpanels[activeIndex], activeClass);
   }
 
+  /**
+   * @ignore
+   */
   goToEndTab(tabs, tabpanels, activeClass, direction) {
     let newActiveIndex;
 
