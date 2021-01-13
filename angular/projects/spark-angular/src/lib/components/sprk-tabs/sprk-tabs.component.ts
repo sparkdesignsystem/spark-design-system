@@ -9,8 +9,8 @@ import {
   Renderer2,
 } from '@angular/core';
 import * as _ from 'lodash';
-import { SprkTabsPanelDirective } from '../../directives/tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
-import { SprkTabsButtonDirective } from '../../directives/tabs/sprk-tabs-button/sprk-tabs-button.directive';
+import { SprkTabsPanelDirective } from '../../directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
+import { SprkTabsButtonDirective } from '../../directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.directive';
 
 @Component({
   selector: 'sprk-tabs',

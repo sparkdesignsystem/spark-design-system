@@ -1,11 +1,11 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkTabsModule } from './sprk-tabs.module';
-import { SprkTabsPanelModule } from '../../directives/tabs/sprk-tabs-panel/sprk-tabs-panel.module';
-import { SprkTabsButtonModule } from '../../directives/tabs/sprk-tabs-button/sprk-tabs-button.module';
+import { SprkTabsPanelModule } from '../../directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.module';
+import { SprkTabsButtonModule } from '../../directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.module';
 import { SprkTabsComponent } from './sprk-tabs.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { SprkTabsPanelDirective } from '../../directives/tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
-import { SprkTabsButtonDirective } from '../../directives/tabs/sprk-tabs-button/sprk-tabs-button.directive';
+import { SprkTabsPanelDirective } from '../../directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
+import { SprkTabsButtonDirective } from '../../directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.directive';
 
 export default {
   title: 'Components/Tabs',

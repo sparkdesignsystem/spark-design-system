@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkTabsPanelDirective } from '../../directives/tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
-import { SprkTabsButtonDirective } from '../../directives/tabs/sprk-tabs-button/sprk-tabs-button.directive';
+import { SprkTabsPanelDirective } from '../../directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
+import { SprkTabsButtonDirective } from '../../directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.directive';
 import { SprkTabsComponent } from './sprk-tabs.component';
 
 @Component({

@@ -30,8 +30,8 @@ import { SprkTableHeadModule } from './directives/sprk-table-head/sprk-table-hea
 import { SprkTableRowHeadingModule } from './directives/sprk-table-row-heading/sprk-table-row-heading.module';
 import { SprkTabbedNavigationPanelModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.module';
 import { SprkTabbedNavigationTabModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
-import { SprkTabsPanelModule } from './directives/tabs/sprk-tabs-panel/sprk-tabs-panel.module';
-import { SprkTabsButtonModule } from './directives/tabs/sprk-tabs-button/sprk-tabs-button.module';
+import { SprkTabsPanelModule } from './directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.module';
+import { SprkTabsButtonModule } from './directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.module';
 import { SprkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
 import { SprkHugeInputContainerModule } from './components/inputs/sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkTextareaContainerModule } from './components/inputs/sprk-textarea-container/sprk-textarea-container.module';
