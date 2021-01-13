@@ -15,7 +15,11 @@ import { SprkTabsButtonDirective } from '../../directives/tabs/sprk-tabs-button/
 @Component({
   selector: 'sprk-tabs',
   template: `
-    <div [ngClass]="getClasses()" [attr.data-id]="idString">
+    <div
+      [ngClass]="getClasses()"
+      [attr.data-id]="idString"
+      [attr.data-analyticsString]="analyticsString"
+    >
       <div class="sprk-c-Tabs__buttons" role="tablist">
         <ng-content select="[sprkTabsButton]"></ng-content>
       </div>
@@ -42,6 +46,14 @@ export class SprkTabsComponent implements AfterContentInit {
    */
   @Input()
   idString: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
+  @Input()
+  analyticsString: string;
   /**
    * This component expects children `<button>` elements
    * with the `SprkTabsButtonDirective` on them.
