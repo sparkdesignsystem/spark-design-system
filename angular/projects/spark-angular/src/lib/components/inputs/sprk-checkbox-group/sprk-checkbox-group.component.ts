@@ -60,7 +60,7 @@ export class SprkCheckboxGroupComponent implements AfterContentInit {
    * `<sprk-checkbox-item>` components.
    */
   @ContentChildren(SprkCheckboxItemComponent, { descendants: true })
-  checkboxs: QueryList<SprkCheckboxItemComponent>;
+  checkboxes: QueryList<SprkCheckboxItemComponent>;
 
   /**
    * @ignore
@@ -95,8 +95,8 @@ export class SprkCheckboxGroupComponent implements AfterContentInit {
    * @ignore
    */
   ngAfterContentInit(): void {
-    if (this.checkboxs && this.error) {
-      this.checkboxs.forEach((checkbox) => {
+    if (this.checkboxes && this.error) {
+      this.checkboxes.forEach((checkbox) => {
         checkbox.input.ref.nativeElement.setAttribute(
           'aria-describedby',
           this.error.ref.nativeElement.id || this.error_id,

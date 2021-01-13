@@ -1,25 +1,23 @@
 import {
   Directive,
   ElementRef,
-  OnInit,
   Input,
-  Renderer2,
   HostBinding,
+  Renderer2,
 } from '@angular/core';
 
 @Directive({
-  selector: '[sprkFieldError]',
+  selector: '[sprkTextarea]',
 })
-export class SprkFieldErrorDirective implements OnInit {
+export class SprkTextareaDirective {
   /**
    * @ignore
    */
   constructor(public ref: ElementRef, private renderer: Renderer2) {}
-
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
-   * element. This is intended to be
+   * component. This is intended to be
    * used as a selector for automated
    * tools. This value should be unique
    * per page.
@@ -27,7 +25,6 @@ export class SprkFieldErrorDirective implements OnInit {
   @HostBinding('attr.data-id')
   @Input()
   idString: string;
-
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the element.
@@ -39,6 +36,6 @@ export class SprkFieldErrorDirective implements OnInit {
   analyticsString: string;
 
   ngOnInit(): void {
-    this.renderer.addClass(this.ref.nativeElement, 'sprk-b-ErrorContainer');
+    this.renderer.addClass(this.ref.nativeElement, 'sprk-b-TextArea');
   }
 }
