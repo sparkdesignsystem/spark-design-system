@@ -78,11 +78,11 @@ describe('SprkTabsComponent', () => {
   });
 
   beforeEach(() => {
-    testFixture = TestBed.createComponent(TestComponent);
-    testComponent = testFixture.componentInstance;
-
     fixture = TestBed.createComponent(SprkTabsComponent);
     component = fixture.componentInstance;
+
+    testFixture = TestBed.createComponent(TestComponent);
+    testComponent = testFixture.componentInstance;
     testFixture.detectChanges();
 
     element = fixture.nativeElement.querySelector('div');
@@ -172,10 +172,22 @@ describe('SprkTabsComponent', () => {
     expect(testPanel2.focus).toHaveBeenCalled();
   });
 
-  it('should return null if tab does not contain active class', () => {
+  it('should not break when initializing with no buttons or panels', () => {
+    const test = component.getContentRelationships();
+  });
+
+  it('should return null if tab does not contain custom active class', () => {
     const test = component.getActiveTabIndex(
       [document.createElement('div')],
       'hello',
+    );
+    expect(test).toBe(null);
+  });
+
+  it('should return null if tab does not contain active class', () => {
+    const test = component.getActiveTabIndex(
+      [document.createElement('div')],
+      undefined,
     );
     expect(test).toBe(null);
   });
@@ -186,6 +198,26 @@ describe('SprkTabsComponent', () => {
     component.setActiveTab(noPanelButton, undefined, undefined);
     fixture.detectChanges();
     expect(noPanelButton.hasAttribute('aria-selected')).toEqual(true);
+  });
+
+  it('should reset tabs with custom activeClass', () => {
+    let testButton = document.createElement('div');
+    testButton.classList.add('testClass');
+
+    component.resetTabs([testButton], [], 'testClass');
+    fixture.detectChanges();
+    expect(testButton.classList.contains('testClass')).toEqual(false);
+  });
+
+  it('should reset tabs with default activeClass', () => {
+    let testButton = document.createElement('div');
+    testButton.classList.add('sprk-c-Tabs__button--active');
+
+    component.resetTabs([testButton], [], undefined);
+    fixture.detectChanges();
+    expect(
+      testButton.classList.contains('sprk-c-Tabs__button--active'),
+    ).toEqual(false);
   });
 
   it('should move focus into the active panel when tab is pressed and the target is not role=tab', () => {
