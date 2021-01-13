@@ -60,7 +60,7 @@
 
 [[redirects]]
   from = "/docs/change-workflow"
-  to = "https://github.com/sparkdesignsystem/spark-design-system/blob/master/CONTRIBUTING.md"
+  to = "https://github.com/sparkdesignsystem/spark-design-system/blob/main/CONTRIBUTING.md"
   status = 301
 
 [[redirects]]
@@ -70,7 +70,7 @@
 
 [[redirects]]
   from = "/docs/contributions"
-  to = "https://github.com/sparkdesignsystem/spark-design-system/blob/master/CONTRIBUTING.md"
+  to = "https://github.com/sparkdesignsystem/spark-design-system/blob/main/CONTRIBUTING.md"
   status = 301
 
 [[redirects]]

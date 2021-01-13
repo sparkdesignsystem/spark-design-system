@@ -227,9 +227,8 @@ const IndexPage = () => (
 
           <SprkStackItem>
             <SprkLink
-              href="https://github.com/sparkdesignsystem/spark-design-system/blob/master/CONTRIBUTING.md"
-              additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-              variant="plain"
+              href="https://github.com/sparkdesignsystem/spark-design-system/blob/main/CONTRIBUTING.md"
+              variant="secondary"
             >
               Learn More
             </SprkLink>
