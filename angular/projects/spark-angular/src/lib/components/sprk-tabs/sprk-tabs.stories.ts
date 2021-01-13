@@ -6,6 +6,9 @@ import { SprkTabsComponent } from './sprk-tabs.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkTabsPanelDirective } from '../../directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
 import { SprkTabsButtonDirective } from '../../directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.directive';
+import { SprkTabbedNavigationModule } from '../sprk-tabbed-navigation/sprk-tabbed-navigation.module';
+import { SprkTabbedNavigationPanelModule } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.module';
+import { SprkTabbedNavigationTabModule } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 
 export default {
   title: 'Components/Tabs',
@@ -85,6 +88,68 @@ defaultStory.story = {
       'sprk-tabs.component',
       'sprk-tabs-panel.directive',
       'sprk-tabs-button.directive',
+    ],
+  },
+};
+
+const modules_deprecated = {
+  imports: [
+    SprkTabbedNavigationModule,
+    SprkTabbedNavigationPanelModule,
+    SprkTabbedNavigationTabModule,
+  ],
+};
+
+export const deprecated = () => ({
+  moduleMetadata: modules_deprecated,
+  template: `
+    <sprk-tabbed-navigation idString="tabs-1">
+      <button
+        sprkTabbedNavigationTab
+        analyticsString="Tab: 1"
+        data-id="tab-1"
+      >
+        Tab 1
+      </button>
+      <button
+        sprkTabbedNavigationTab
+        data-id="tab-2"
+        [defaultActive]=true
+      >
+        Tab 2
+      </button>
+      <button
+        sprkTabbedNavigationTab
+        data-id="tab-3"
+      >
+        Tab 3
+      </button>
+      <div sprkTabbedNavigationPanel>
+        <p>Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
+        euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
+        Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
+      </div>
+      <div [defaultActive]=true sprkTabbedNavigationPanel>
+        <p>Tab 2 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
+        euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
+        Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
+      </div>
+      <div sprkTabbedNavigationPanel>
+        <p>Tab 3 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
+        euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
+        Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
+      </div>
+    </sprk-tabbed-navigation>
+  `,
+});
+
+deprecated.story = {
+  name: 'Deprecated',
+  parameters: {
+    jest: [
+      'sprk-tabbed-navigation.component',
+      'sprk-tabbed-navigation-panel.directive',
+      'sprk-tabbed-navigation-tab.directive',
     ],
   },
 };
