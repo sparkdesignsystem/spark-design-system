@@ -180,6 +180,14 @@ describe('SprkTabsComponent', () => {
     expect(test).toBe(null);
   });
 
+  it('should select tab even if panel does not exist', () => {
+    const noPanelButton = document.createElement('div');
+
+    component.setActiveTab(noPanelButton, undefined, undefined);
+    fixture.detectChanges();
+    expect(noPanelButton.hasAttribute('aria-selected')).toEqual(true);
+  });
+
   it('should move focus into the active panel when tab is pressed and the target is not role=tab', () => {
     testTab2.click();
     jest.spyOn(testPanel2, 'focus').mockImplementation(() => {});
@@ -324,7 +332,8 @@ describe('SprkTabsComponent', () => {
     fixture.detectChanges();
     const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 10;
-    testElement.dispatchEvent(event);
+    testTab1.dispatchEvent(event);
+    fixture.detectChanges();
     expect(component.incrementTab).toBeCalledTimes(0);
     expect(component.goToEndTab).toBeCalledTimes(0);
   });
