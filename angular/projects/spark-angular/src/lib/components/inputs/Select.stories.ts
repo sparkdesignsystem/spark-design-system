@@ -108,7 +108,6 @@ export const invalidSelectBox = () => ({
       <select
         class="sprk-b-Select--error"
         id="select-error-1"
-        aria-describedby="select-normal--error-container"
         data-id="select-error-1"
         sprkSelect
         aria-invalid="true"
@@ -392,7 +391,6 @@ export const legacyInvalidHugeSelectBox = () => ({
     <sprk-huge-input-container>
       <select
         id="select-huge-1"
-        aria-describedby="select-normal--error-container"
         data-id="select-huge-1"
         data-sprk-input="huge"
         sprkInput
