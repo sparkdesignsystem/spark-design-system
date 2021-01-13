@@ -1,4 +1,12 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  Input,
+  OnInit,
+  Output,
+  EventEmitter,
+  HostListener,
+} from '@angular/core';
 
 @Directive({
   selector: '[sprkTabsButton]',
@@ -25,7 +33,18 @@ export class SprkTabsButtonDirective implements OnInit {
    */
   @Input()
   analyticsString: string;
-
+  /**
+   * The tab button will emit this event when the button is clicked.
+   */
+  @Output()
+  tabClick = new EventEmitter<any>();
+  /**
+   * @ignore
+   */
+  @HostListener('click', ['$event'])
+  onClick(event) {
+    this.tabClick.emit(event);
+  }
   /**
    * @ignore
    */
