@@ -53,3 +53,4 @@ export { default as sprkIsValidSSN } from './utilities/validation/sprkIsValidSSN
 export { default as sprkIsValidDate } from './utilities/validation/sprkIsValidDate';
 export { default as sprkIsValidPhone } from './utilities/validation/sprkIsValidPhone';
 export { default as sprkIsValidMonetary } from './utilities/validation/sprkIsValidMonetary';
+export { default as SprkInput } from './base/inputs/SprkInput/SprkInput';
