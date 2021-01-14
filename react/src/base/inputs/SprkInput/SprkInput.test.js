@@ -26,6 +26,17 @@ describe('SprkInput:', () => {
     ).toBe(3);
   });
 
+  it('should add class when isValid is false', () => {
+    const wrapper = mount(<SprkInput isValid={false} />);
+
+    expect(
+      wrapper.find('.sprk-b-TextInput').hasClass('sprk-b-TextInput--error'),
+    ).toBe(true);
+    expect(
+      wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
+    ).toBe(3);
+  });
+
   it('should assign data-analytics when analyticsString has a value', () => {
     const wrapper = mount(<SprkInput analyticsString="321" />);
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
