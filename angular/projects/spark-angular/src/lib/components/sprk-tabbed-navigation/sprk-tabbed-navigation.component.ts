@@ -28,7 +28,7 @@ import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-naviga
  * @deprecate This component will be removed in
  * a future release in favor of the `sprk-tabs` component.
  * Please use the `sprk-tabs` component.
- * TODO: Remove this component as part of Issue XXXX.
+ * TODO: Remove this component as part of Issue 1378.
  */
 export class SprkTabbedNavigationComponent implements AfterContentInit {
   /**

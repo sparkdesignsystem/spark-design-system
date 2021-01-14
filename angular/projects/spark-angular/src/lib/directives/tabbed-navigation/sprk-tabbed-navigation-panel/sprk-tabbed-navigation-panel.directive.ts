@@ -7,7 +7,7 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
  * @deprecate This directive will be removed in
  * a future release in favor of the `sprk-tabs-panel` directive.
  * Please use the `sprk-tabs-panel` directive.
- * TODO: Remove this directive as part of Issue XXXX.
+ * TODO: Remove this directive as part of Issue 1378.
  */
 export class SprkTabbedNavigationPanelDirective implements OnInit {
   /**
