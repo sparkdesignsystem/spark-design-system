@@ -1,18 +1,14 @@
 import React from 'react';
 import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
+import SprkInput from './SprkInput/SprkInput';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/SSN',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
-  component: SprkRevealInput,
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
+  component: SprkInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
@@ -31,7 +27,34 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const SSNInput = () => (
+export const SSNInput = () => <SprkInput />;
+
+SSNInput.story = {
+  name: 'Default',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const invalidSSNInput = () => <SprkRevealInput isValid={false} />;
+
+invalidSSNInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const disabledSSNInput = () => <SprkInput isDisabled />;
+
+disabledSSNInput.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const legacySSNInput = () => (
   <SprkRevealInput
     label="Social Security Number"
     toggleLabel="Show SSN"
@@ -39,16 +62,14 @@ export const SSNInput = () => (
   />
 );
 
-SSNInput.story = {
-  name: 'Default',
+legacySSNInput.story = {
+  name: 'Legacy (Deprecated)',
   parameters: {
-    jest: [
-      'SprkRevealInput',
-    ]
+    jest: ['SprkRevealInput'],
   },
 };
 
-export const invalidSSNInput = () => (
+export const legacyInvalidSSNInput = () => (
   <SprkRevealInput
     label="Social Security Number"
     toggleLabel="Show SSN"
@@ -58,16 +79,14 @@ export const invalidSSNInput = () => (
   />
 );
 
-invalidSSNInput.story = {
-  name: 'Invalid',
+legacyInvalidSSNInput.story = {
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
-    jest: [
-      'SprkRevealInput',
-    ]
+    jest: ['SprkRevealInput'],
   },
 };
 
-export const disabledSSNInput = () => (
+export const legacyDisabledSSNInput = () => (
   <SprkRevealInput
     label="Social Security Number"
     toggleLabel="Show SSN"
@@ -76,11 +95,9 @@ export const disabledSSNInput = () => (
   />
 );
 
-disabledSSNInput.story = {
-  name: 'Disabled',
+legacyDisabledSSNInput.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
-    jest: [
-      'SprkRevealInput',
-    ]
+    jest: ['SprkRevealInput'],
   },
 };

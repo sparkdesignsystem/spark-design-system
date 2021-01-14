@@ -1,18 +1,14 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
+import SprkInput from './SprkInput/SprkInput';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Phone',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
-  component: SprkTextInput,
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
+  component: SprkInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
@@ -34,7 +30,38 @@ before submitting the form.
   },
 };
 
-export const phoneInput = () => (
+export const phoneInput = () => <SprkInput placeholder="(000) 000-0000" />;
+
+phoneInput.story = {
+  name: 'Default',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const invalidPhoneInput = () => (
+  <SprkInput placeholder="(000) 000-0000" isValid={false} />
+);
+
+invalidPhoneInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const disabledPhoneInput = () => (
+  <SprkInput placeholder="(000) 000-0000" isDisabled />
+);
+
+disabledPhoneInput.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const legacyPhoneInput = () => (
   <SprkTextInput
     label="Phone Number"
     name="phone"
@@ -42,16 +69,14 @@ export const phoneInput = () => (
   />
 );
 
-phoneInput.story = {
-  name: 'Default',
+legacyPhoneInput.story = {
+  name: 'Legacy (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
-export const invalidPhoneInput = () => (
+export const legacyInvalidPhoneInput = () => (
   <SprkTextInput
     label="Phone Number"
     name="phone"
@@ -61,16 +86,14 @@ export const invalidPhoneInput = () => (
   />
 );
 
-invalidPhoneInput.story = {
-  name: 'Invalid',
+legacyInvalidPhoneInput.story = {
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
-export const disabledPhoneInput = () => (
+export const legacyDisabledPhoneInput = () => (
   <SprkTextInput
     label="Phone Number"
     name="phone"
@@ -79,11 +102,9 @@ export const disabledPhoneInput = () => (
   />
 );
 
-disabledPhoneInput.story = {
-  name: 'Disabled',
+legacyDisabledPhoneInput.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };

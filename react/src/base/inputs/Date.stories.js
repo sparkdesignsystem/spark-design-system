@@ -1,18 +1,14 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
+import SprkInput from './SprkInput/SprkInput';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
-  component: SprkTextInput,
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
+  component: SprkInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters (/)
@@ -30,24 +26,49 @@ which you may need to remove before submitting the form.
   },
 };
 
-export const dateInput = () => (
-  <SprkTextInput
-    label="Date"
-    name="date"
-    placeholder="01/01/2019"
-  />
-);
+export const dateInput = () => <SprkInput placeholder="01/01/2019" />;
 
 dateInput.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkInput'],
   },
 };
 
 export const invalidDateInput = () => (
+  <SprkInput placeholder="01/01/2019" isValid={false} />
+);
+
+invalidDateInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const disabledDateInput = () => (
+  <SprkInput placeholder="01/01/2019" isDisabled />
+);
+
+disabledDateInput.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const legacy = () => (
+  <SprkTextInput label="Date" name="date" placeholder="01/01/2019" />
+);
+
+legacy.story = {
+  name: 'Legacy (Deprecated)',
+  parameters: {
+    jest: ['SprkTextInput'],
+  },
+};
+
+export const legacyInvalidDateInput = () => (
   <SprkTextInput
     label="Date"
     name="date"
@@ -57,29 +78,20 @@ export const invalidDateInput = () => (
   />
 );
 
-invalidDateInput.story = {
-  name: 'Invalid',
+legacyInvalidDateInput.story = {
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
-export const disabledDateInput = () => (
-  <SprkTextInput
-    label="Date"
-    name="date"
-    placeholder="01/01/2019"
-    disabled
-  />
+export const legacyDisabledDateInput = () => (
+  <SprkTextInput label="Date" name="date" placeholder="01/01/2019" disabled />
 );
 
-disabledDateInput.story = {
-  name: 'Disabled',
+legacyDisabledDateInput.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };

@@ -4,15 +4,10 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Input/Textarea',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkTextInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
@@ -21,11 +16,10 @@ export const textarea = () => (
   <SprkTextInput label="Description" name="description" type="textarea" />
 );
 
-textarea.story = { name: 'Default',
+textarea.story = {
+  name: 'Default',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
@@ -42,9 +36,7 @@ export const invalidTextarea = () => (
 invalidTextarea.story = {
   name: 'Invalid',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
@@ -60,8 +52,6 @@ export const disabledTextarea = () => (
 disabledTextarea.story = {
   name: 'Disabled',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };

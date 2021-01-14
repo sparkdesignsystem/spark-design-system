@@ -1,18 +1,14 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
+import SprkInput from './SprkInput/SprkInput';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Monetary',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
-  component: SprkTextInput,
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
+  component: SprkInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field may contain special characters
@@ -30,52 +26,79 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const monetaryInput = () => (
-  <SprkTextInput label="Payment" textIcon name="monetary" placeholder="0.00" />
-);
+export const monetaryInput = () => <SprkInput placeholder="0.00" />;
 
 monetaryInput.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkInput'],
   },
 };
 
 export const invalidMonetaryInput = () => (
+  <SprkInput placeholder="0.00" isValid={false} />
+);
+
+invalidMonetaryInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const disabledMonetaryInput = () => (
+  <SprkInput placeholder="0.00" isDisabled />
+);
+
+disabledMonetaryInput.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const legacyMonetaryInput = () => (
+  <SprkTextInput label="Payment" textIcon name="monetary" placeholder="0.00" />
+);
+
+monetaryInput.story = {
+  name: 'Legacy (Deprecated)',
+  parameters: {
+    jest: ['SprkTextInput'],
+  },
+};
+
+export const legacyInvalidMonetaryInput = () => (
   <SprkTextInput
     label="Payment"
-    textIcon name="monetary"
+    textIcon
+    name="monetary"
     placeholder="0.00"
     valid={false}
     errorMessage="There is an error on this field."
   />
 );
 
-invalidMonetaryInput.story = {
-  name: 'Invalid',
+legacyInvalidMonetaryInput.story = {
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
-export const disabledMonetaryInput = () => (
+export const legacyDisabledMonetaryInput = () => (
   <SprkTextInput
     label="Payment"
-    textIcon name="monetary"
+    textIcon
+    name="monetary"
     placeholder="0.00"
     disabled
   />
 );
 
-disabledMonetaryInput.story = {
-  name: 'Disabled',
+legacyDisabledMonetaryInput.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };

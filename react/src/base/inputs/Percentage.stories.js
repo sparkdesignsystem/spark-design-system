@@ -1,23 +1,50 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
+import SprkInput from './SprkInput/SprkInput';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Percentage',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
-  component: SprkTextInput,
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
+  component: SprkInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
 
-export const percentageInput = () => (
+export const percentageInput = () => <SprkInput type="tel" />;
+
+percentageInput.story = {
+  name: 'Default',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const invalidPercentageInput = () => (
+  <SprkInput type="tel" isValid={false} />
+);
+
+invalidPercentageInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const disabledPercentageInput = () => (
+  <SprkInput type="tel" isDisabled />
+);
+
+disabledPercentageInput.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const legacyPercentageInput = () => (
   <SprkTextInput
     label="Percentage"
     iconRight
@@ -28,16 +55,14 @@ export const percentageInput = () => (
   />
 );
 
-percentageInput.story = {
-  name: 'Default',
+legacyPercentageInput.story = {
+  name: 'Legacy (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
-export const invalidPercentageInput = () => (
+export const legacyInvalidPercentageInput = () => (
   <SprkTextInput
     label="Percentage"
     iconRight
@@ -50,16 +75,14 @@ export const invalidPercentageInput = () => (
   />
 );
 
-invalidPercentageInput.story = {
-  name: 'Invalid',
+legacyInvalidPercentageInput.story = {
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
-export const disabledPercentageInput = () => (
+export const legacyDisabledPercentageInput = () => (
   <SprkTextInput
     label="Percentage"
     iconRight
@@ -71,11 +94,9 @@ export const disabledPercentageInput = () => (
   />
 );
 
-disabledPercentageInput.story = {
-  name: 'Disabled',
+legacyDisabledPercentageInput.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };

@@ -1,18 +1,14 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
+import SprkInput from './SprkInput/SprkInput';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Helper Text',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
-  component: SprkTextInput,
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
+  component: SprkInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - Helper text must be placed below the Input and above the error container.
@@ -20,7 +16,25 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const helperText = () => (
+export const helperText = () => <SprkInput />;
+
+helperText.story = {
+  name: 'Default',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const invalidHelperText = () => <SprkInput isValid={false} />;
+
+invalidHelperText.story = {
+  name: 'With Error Text',
+  parameters: {
+    jest: ['SprkInput'],
+  },
+};
+
+export const legacyHelperText = () => (
   <SprkTextInput
     label="Text Input"
     name="helper-text-example"
@@ -28,16 +42,14 @@ export const helperText = () => (
   />
 );
 
-helperText.story = {
-  name: 'Default',
+legacyHelperText.story = {
+  name: 'Legacy (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
-export const invalidHelperText = () => (
+export const legacyInvalidHelperText = () => (
   <SprkTextInput
     label="Text Input"
     name="helper-text-example"
@@ -47,11 +59,9 @@ export const invalidHelperText = () => (
   />
 );
 
-invalidHelperText.story = {
-  name: 'With Error Text',
+legacyInvalidHelperText.story = {
+  name: 'Legacy With Error Text (Deprecated)',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
