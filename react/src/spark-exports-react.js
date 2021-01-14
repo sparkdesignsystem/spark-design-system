@@ -54,3 +54,4 @@ export { default as sprkIsValidDate } from './utilities/validation/sprkIsValidDa
 export { default as sprkIsValidPhone } from './utilities/validation/sprkIsValidPhone';
 export { default as sprkIsValidMonetary } from './utilities/validation/sprkIsValidMonetary';
 export { default as SprkInput } from './base/inputs/SprkInput/SprkInput';
+export { default as SprkLabel } from './base/inputs/SprkLabel/SprkLabel';
