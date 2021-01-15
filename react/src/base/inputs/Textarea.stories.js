@@ -12,38 +12,38 @@ export default {
   },
 };
 
-export const textarea = () => (
-  
-);
+// export const textarea = () => (
 
-textarea.story = {
-  name: 'Default',
-  parameters: {
-    jest: [''],
-  },
-};
+// );
 
-export const invalidTextarea = () => (
+// textarea.story = {
+//   name: 'Default',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-);
+// export const invalidTextarea = () => (
 
-invalidTextarea.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [''],
-  },
-};
+// );
 
-export const disabledTextarea = () => (
+// invalidTextarea.story = {
+//   name: 'Invalid',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-);
+// export const disabledTextarea = () => (
 
-disabledTextarea.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [''],
-  },
-};
+// );
+
+// disabledTextarea.story = {
+//   name: 'Disabled',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
 export const legacyTextarea = () => (
   <SprkTextInput label="Description" name="description" type="textarea" />

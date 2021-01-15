@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
 
+/**
+ * TODO: Remove this component as part of Issue 3775.
+ */
 class SprkInputElement extends Component {
   constructor(props) {
     const { value } = props;
@@ -122,8 +125,8 @@ class SprkInputElement extends Component {
 
 SprkInputElement.propTypes = {
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector
-   * for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving as a
+   * unique selector for outside libraries to capture data.
    */
   analyticsString: propTypes.string,
   /**
@@ -131,9 +134,9 @@ SprkInputElement.propTypes = {
    */
   errorContainerId: propTypes.string,
   /**
-   * A function supplied will be passed the value of the input and then
-   * executed, if the valid prop is true. The value returned will be
-   * assigned to the value of the input.
+   * A function supplied will be passed the value of the input
+   * and then executed, if the valid prop is true. The value
+   * returned will be assigned to the value of the input.
    */
   formatter: propTypes.func,
   /**
@@ -149,8 +152,8 @@ SprkInputElement.propTypes = {
    */
   id: propTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for
-   * automated tools.
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: propTypes.string,
   /**
@@ -172,6 +175,12 @@ SprkInputElement.propTypes = {
    * attribute on the Input.
    */
   ariaDescribedBy: propTypes.string,
+  children: propTypes.node,
+  disabled: propTypes.bool,
+  hiddenLabel: propTypes.bool,
+  forwardedRef: propTypes.shape(),
+  value: propTypes.string,
+  defaultValue: propTypes.string,
 };
 
 export default SprkInputElement;

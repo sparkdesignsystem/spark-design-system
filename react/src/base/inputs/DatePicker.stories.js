@@ -29,71 +29,71 @@ props table below for available customization options.
   },
 };
 
-export const defaultStory = () => (
+// export const defaultStory = () => (
 
-);
+// );
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [''],
-  },
-};
+// defaultStory.story = {
+//   name: 'Default',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-export const invalidDatePicker = () => (
+// export const invalidDatePicker = () => (
 
-);
+// );
 
-invalidDatePicker.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [''],
-  },
-};
+// invalidDatePicker.story = {
+//   name: 'Invalid',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-export const disabledDatePicker = () => (
+// export const disabledDatePicker = () => (
 
-);
+// );
 
-disabledDatePicker.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [''],
-  },
-};
+// disabledDatePicker.story = {
+//   name: 'Disabled',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-export const hugeDatePicker = () => (
+// export const hugeDatePicker = () => (
 
-);
+// );
 
-hugeDatePicker.story = {
-  name: 'Huge',
-  parameters: {
-    jest: [''],
-  },
-};
+// hugeDatePicker.story = {
+//   name: 'Huge',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-export const invalidHugeDatePicker = () => (
+// export const invalidHugeDatePicker = () => (
 
-);
+// );
 
-invalidHugeDatePicker.story = {
-  name: 'Huge Invalid',
-  parameters: {
-    jest: [''],
-  },
-};
+// invalidHugeDatePicker.story = {
+//   name: 'Huge Invalid',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-export const disabledHugeDatePicker = () => (
+// export const disabledHugeDatePicker = () => (
 
-);
+// );
 
-disabledHugeDatePicker.story = {
-  name: 'Huge Disabled',
-  parameters: {
-    jest: [''],
-  },
-};
+// disabledHugeDatePicker.story = {
+//   name: 'Huge Disabled',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
 export const legacyDefaultStory = () => (
   <SprkDatePickerInput
