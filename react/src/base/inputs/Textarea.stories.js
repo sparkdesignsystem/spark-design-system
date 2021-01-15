@@ -13,17 +13,50 @@ export default {
 };
 
 export const textarea = () => (
-  <SprkTextInput label="Description" name="description" type="textarea" />
+  
 );
 
 textarea.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkTextInput'],
+    jest: [''],
   },
 };
 
 export const invalidTextarea = () => (
+
+);
+
+invalidTextarea.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const disabledTextarea = () => (
+
+);
+
+disabledTextarea.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const legacyTextarea = () => (
+  <SprkTextInput label="Description" name="description" type="textarea" />
+);
+
+legacyTextarea.story = {
+  name: 'Legacy (Deprecated)',
+  parameters: {
+    jest: ['SprkTextInput'],
+  },
+};
+
+export const legacyInvalidTextarea = () => (
   <SprkTextInput
     label="Description"
     name="description"
@@ -33,14 +66,14 @@ export const invalidTextarea = () => (
   />
 );
 
-invalidTextarea.story = {
-  name: 'Invalid',
+legacyInvalidTextarea.story = {
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
     jest: ['SprkTextInput'],
   },
 };
 
-export const disabledTextarea = () => (
+export const legacyDisabledTextarea = () => (
   <SprkTextInput
     label="Description"
     name="description"
@@ -49,8 +82,8 @@ export const disabledTextarea = () => (
   />
 );
 
-disabledTextarea.story = {
-  name: 'Disabled',
+legacyDisabledTextarea.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
     jest: ['SprkTextInput'],
   },

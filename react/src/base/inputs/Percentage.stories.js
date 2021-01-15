@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
+import SprkLabel from './SprkLabel/SprkLabel';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -13,34 +14,62 @@ export default {
   },
 };
 
-export const percentageInput = () => <SprkInput type="tel" />;
+export const percentageInput = () => (
+  <>
+    <SprkLabel>Percentage</SprkLabel>
+    <SprkInput
+      additionalClasses="
+        sprk-b-TextInput--has-svg-icon
+        sprk-b-InputContainer__input--has-icon-right"
+      type="tel"
+    />
+  </>
+);
 
 percentageInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
 export const invalidPercentageInput = () => (
-  <SprkInput type="tel" isValid={false} />
+  <>
+    <SprkLabel>Percentage</SprkLabel>
+    <SprkInput
+      additionalClasses="
+        sprk-b-TextInput--has-svg-icon
+        sprk-b-InputContainer__input--has-icon-right"
+      type="tel"
+      isValid={false}
+    />
+  </>
 );
 
 invalidPercentageInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
 export const disabledPercentageInput = () => (
-  <SprkInput type="tel" isDisabled />
+  <>
+    <SprkLabel isDisabled>Percentage</SprkLabel>
+    <SprkInput
+      additionalClasses="
+        sprk-b-TextInput--has-svg-icon
+        sprk-b-InputContainer__input--has-icon-right"
+      type="tel"
+      isDisabled
+    />
+  </>
 );
 
 disabledPercentageInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 

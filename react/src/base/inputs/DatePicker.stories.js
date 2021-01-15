@@ -30,39 +30,105 @@ props table below for available customization options.
 };
 
 export const defaultStory = () => (
-  <SprkDatePickerInput
-    name="date"
-    placeholder="01/01/2019"
-    errorMessage="Incorrect date."
-    label="Date"
-  />
+
 );
 
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkDatePickerInput'],
+    jest: [''],
   },
 };
 
 export const invalidDatePicker = () => (
-  <SprkDatePickerInput
-    name="date"
-    placeholder="01/01/2019"
-    errorMessage="Incorrect date."
-    label="Date"
-    valid={false}
-  />
+
 );
 
 invalidDatePicker.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkDatePickerInput'],
+    jest: [''],
   },
 };
 
 export const disabledDatePicker = () => (
+
+);
+
+disabledDatePicker.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const hugeDatePicker = () => (
+
+);
+
+hugeDatePicker.story = {
+  name: 'Huge',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const invalidHugeDatePicker = () => (
+
+);
+
+invalidHugeDatePicker.story = {
+  name: 'Huge Invalid',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const disabledHugeDatePicker = () => (
+
+);
+
+disabledHugeDatePicker.story = {
+  name: 'Huge Disabled',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const legacyDefaultStory = () => (
+  <SprkDatePickerInput
+    name="date"
+    placeholder="01/01/2019"
+    errorMessage="Incorrect date."
+    label="Date"
+  />
+);
+
+legacyDefaultStory.story = {
+  name: 'Legacy (Deprecated)',
+  parameters: {
+    jest: ['SprkDatePickerInput'],
+  },
+};
+
+export const legacyInvalidDatePicker = () => (
+  <SprkDatePickerInput
+    name="date"
+    placeholder="01/01/2019"
+    errorMessage="Incorrect date."
+    label="Date"
+    valid={false}
+  />
+);
+
+legacyInvalidDatePicker.story = {
+  name: 'Legacy Invalid (Deprecated)',
+  parameters: {
+    jest: ['SprkDatePickerInput'],
+  },
+};
+
+export const legacyDisabledDatePicker = () => (
   <SprkDatePickerInput
     name="date"
     placeholder="01/01/2019"
@@ -72,14 +138,14 @@ export const disabledDatePicker = () => (
   />
 );
 
-disabledDatePicker.story = {
-  name: 'Disabled',
+legacyDisabledDatePicker.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
     jest: ['SprkDatePickerInput'],
   },
 };
 
-export const hugeDatePicker = () => (
+export const legacyHugeDatePicker = () => (
   <SprkDatePickerInput
     type="hugeTextInput"
     name="date"
@@ -89,14 +155,14 @@ export const hugeDatePicker = () => (
   />
 );
 
-hugeDatePicker.story = {
-  name: 'Huge',
+legacyHugeDatePicker.story = {
+  name: 'Legacy Huge (Deprecated)',
   parameters: {
     jest: ['SprkDatePickerInput'],
   },
 };
 
-export const invalidHugeDatePicker = () => (
+export const legacyInvalidHugeDatePicker = () => (
   <SprkDatePickerInput
     type="hugeTextInput"
     name="date"
@@ -107,14 +173,14 @@ export const invalidHugeDatePicker = () => (
   />
 );
 
-invalidHugeDatePicker.story = {
-  name: 'Huge Invalid',
+legacyInvalidHugeDatePicker.story = {
+  name: 'Legacy Huge Invalid (Deprecated)',
   parameters: {
     jest: ['SprkDatePickerInput'],
   },
 };
 
-export const disabledHugeDatePicker = () => (
+export const legacyDisabledHugeDatePicker = () => (
   <SprkDatePickerInput
     type="hugeTextInput"
     name="date"
@@ -125,8 +191,8 @@ export const disabledHugeDatePicker = () => (
   />
 );
 
-disabledHugeDatePicker.story = {
-  name: 'Huge Disabled',
+legacyDisabledHugeDatePicker.story = {
+  name: 'Legacy Huge Disabled (Deprecated)',
   parameters: {
     jest: ['SprkDatePickerInput'],
   },

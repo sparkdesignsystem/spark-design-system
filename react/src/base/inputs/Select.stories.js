@@ -13,6 +13,72 @@ export default {
 };
 
 export const selectBox = () => (
+
+);
+
+selectBox.story = {
+  name: 'Default',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const invalidSelectBox = () => (
+
+);
+
+invalidSelectBox.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const disabledSelectBox = () => (
+
+);
+
+disabledSelectBox.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const hugeSelectBox = () => (
+
+);
+
+hugeSelectBox.story = {
+  name: 'Huge',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const invalidHugeSelectBox = () => (
+
+);
+
+invalidHugeSelectBox.story = {
+  name: 'Huge Invalid',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const disabledHugeSelectBox = () => (
+
+);
+
+disabledHugeSelectBox.story = {
+  name: 'Huge Disabled',
+  parameters: {
+    jest: [''],
+  },
+};
+
+export const legacySelectBox = () => (
   <SprkSelectionInput
     choices={[
       {
@@ -51,14 +117,14 @@ export const selectBox = () => (
   />
 );
 
-selectBox.story = {
-  name: 'Default',
+legacySelectBox.story = {
+  name: 'Legacy (Deprecated)',
   parameters: {
     jest: ['SprkSelectionInput'],
   },
 };
 
-export const invalidSelectBox = () => (
+export const legacyInvalidSelectBox = () => (
   <SprkSelectionInput
     choices={[
       {
@@ -99,14 +165,14 @@ export const invalidSelectBox = () => (
   />
 );
 
-invalidSelectBox.story = {
-  name: 'Invalid',
+legacyInvalidSelectBox.story = {
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
     jest: ['SprkSelectionInput'],
   },
 };
 
-export const disabledSelectBox = () => (
+export const legacyDisabledSelectBox = () => (
   <SprkSelectionInput
     choices={[
       {
@@ -146,14 +212,14 @@ export const disabledSelectBox = () => (
   />
 );
 
-disabledSelectBox.story = {
-  name: 'Disabled',
+legacyDisabledSelectBox.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
     jest: ['SprkSelectionInput'],
   },
 };
 
-export const hugeSelectBox = () => (
+export const legacyHugeSelectBox = () => (
   <SprkSelectionInput
     label="Select Box Label"
     choices={[
@@ -193,14 +259,14 @@ export const hugeSelectBox = () => (
   />
 );
 
-hugeSelectBox.story = {
-  name: 'Huge',
+legacyHugeSelectBox.story = {
+  name: 'Legacy Huge (Deprecated)',
   parameters: {
     jest: ['SprkSelectionInput'],
   },
 };
 
-export const invalidHugeSelectBox = () => (
+export const legacyInvalidHugeSelectBox = () => (
   <SprkSelectionInput
     label="Select Box Label"
     choices={[
@@ -242,14 +308,14 @@ export const invalidHugeSelectBox = () => (
   />
 );
 
-invalidHugeSelectBox.story = {
-  name: 'Huge Invalid',
+legacyInvalidHugeSelectBox.story = {
+  name: 'Legacy Huge Invalid (Deprecated)',
   parameters: {
     jest: ['SprkSelectionInput'],
   },
 };
 
-export const disabledHugeSelectBox = () => (
+export const legacyDisabledHugeSelectBox = () => (
   <SprkSelectionInput
     label="Select Box Label"
     choices={[
@@ -290,8 +356,8 @@ export const disabledHugeSelectBox = () => (
   />
 );
 
-disabledHugeSelectBox.story = {
-  name: 'Huge Disabled',
+legacyDisabledHugeSelectBox.story = {
+  name: 'Legacy Huge Disabled (Deprecated)',
   parameters: {
     jest: ['SprkSelectionInput'],
   },

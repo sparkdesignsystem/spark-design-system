@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
+import SprkLabel from './SprkLabel/SprkLabel';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -26,34 +27,58 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const monetaryInput = () => <SprkInput placeholder="0.00" />;
+export const monetaryInput = () => (
+  <>
+    <SprkLabel isMonetary>Payment</SprkLabel>
+    <SprkInput
+      additionalClasses="sprk-b-TextInput--has-text-icon"
+      placeholder="0.00"
+    />
+  </>
+);
 
 monetaryInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
 export const invalidMonetaryInput = () => (
-  <SprkInput placeholder="0.00" isValid={false} />
+  <>
+    <SprkLabel isMonetary>Payment</SprkLabel>
+    <SprkInput
+      additionalClasses="sprk-b-TextInput--has-text-icon"
+      placeholder="0.00"
+      isValid={false}
+    />
+  </>
 );
 
 invalidMonetaryInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
 export const disabledMonetaryInput = () => (
-  <SprkInput placeholder="0.00" isDisabled />
+  <>
+    <SprkLabel isMonetary isDisabled>
+      Payment
+    </SprkLabel>
+    <SprkInput
+      additionalClasses="sprk-b-TextInput--has-text-icon"
+      placeholder="0.00"
+      isDisabled
+    />
+  </>
 );
 
 disabledMonetaryInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
@@ -61,7 +86,7 @@ export const legacyMonetaryInput = () => (
   <SprkTextInput label="Payment" textIcon name="monetary" placeholder="0.00" />
 );
 
-monetaryInput.story = {
+legacyMonetaryInput.story = {
   name: 'Legacy (Deprecated)',
   parameters: {
     jest: ['SprkTextInput'],

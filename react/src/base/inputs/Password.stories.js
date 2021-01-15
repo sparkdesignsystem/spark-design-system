@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
 import SprkInput from './SprkInput/SprkInput';
+import SprkLabel from './SprkLabel/SprkLabel';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -13,30 +14,45 @@ export default {
   },
 };
 
-export const passwordInput = () => <SprkInput />;
+export const passwordInput = () => (
+  <>
+    <SprkLabel>Password</SprkLabel>
+    <SprkInput />
+  </>
+);
 
 passwordInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
-export const invalidPasswordInput = () => <SprkInput isValid={false} />;
+export const invalidPasswordInput = () => (
+  <>
+    <SprkLabel>Password</SprkLabel>
+    <SprkInput isValid={false} />
+  </>
+);
 
 invalidPasswordInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
-export const disabledPasswordInput = () => <SprkInput isDisabled />;
+export const disabledPasswordInput = () => (
+  <>
+    <SprkLabel isDisabled>Password</SprkLabel>
+    <SprkInput isDisabled />
+  </>
+);
 
 disabledPasswordInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
