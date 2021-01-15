@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
+import SprkLabel from './SprkLabel/SprkLabel';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -14,35 +15,60 @@ export default {
 };
 
 export const searchInput = () => (
-  <SprkInput type="search" placeholder="Search" />
+  <>
+    <SprkLabel isHidden>Text Input Label</SprkLabel>
+    <SprkInput
+      additionalClasses="sprk-b-TextInput--has-svg-icon"
+      type="search"
+      placeholder="Search"
+    />
+  </>
 );
 
 searchInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
 export const invalidSearchInput = () => (
-  <SprkInput type="search" placeholder="Search" isValid={false} />
+  <>
+    <SprkLabel isHidden>Text Input Label</SprkLabel>
+    <SprkInput
+      additionalClasses="sprk-b-TextInput--has-svg-icon"
+      type="search"
+      placeholder="Search"
+      isValid={false}
+    />
+  </>
 );
 
 invalidSearchInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
 export const disabledSearchInput = () => (
-  <SprkInput type="search" placeholder="Search" isDisabled />
+  <>
+    <SprkLabel isHidden isDisabled>
+      Text Input Label
+    </SprkLabel>
+    <SprkInput
+      additionalClasses="sprk-b-TextInput--has-svg-icon"
+      type="search"
+      placeholder="Search"
+      isDisabled
+    />
+  </>
 );
 
 disabledSearchInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 

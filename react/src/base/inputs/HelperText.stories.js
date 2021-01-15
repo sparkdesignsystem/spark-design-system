@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
+import SprkLabel from './SprkLabel/SprkLabel';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -16,21 +17,31 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const helperText = () => <SprkInput />;
+export const helperText = () => (
+  <>
+    <SprkLabel>Text Input</SprkLabel>
+    <SprkInput />
+  </>
+);
 
 helperText.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
-export const invalidHelperText = () => <SprkInput isValid={false} />;
+export const invalidHelperText = () => (
+  <>
+    <SprkLabel>Text Input</SprkLabel>
+    <SprkInput isValid={false} />
+  </>
+);
 
 invalidHelperText.story = {
   name: 'With Error Text',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
