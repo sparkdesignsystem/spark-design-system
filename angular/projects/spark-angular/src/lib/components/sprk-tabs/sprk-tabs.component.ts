@@ -8,7 +8,7 @@ import {
   QueryList,
   Renderer2,
 } from '@angular/core';
-import * as _ from 'lodash';
+import { uniqueId } from 'lodash';
 import { SprkTabsPanelDirective } from '../../directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
 import { SprkTabsButtonDirective } from '../../directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.directive';
 
@@ -71,7 +71,7 @@ export class SprkTabsComponent implements AfterContentInit {
   /**
    * @ignore
    */
-  componentID = _.uniqueId();
+  componentID = uniqueId();
   /**
    * @ignore
    */
