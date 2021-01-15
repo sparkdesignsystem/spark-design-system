@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
+import SprkLabel from './SprkLabel/SprkLabel';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -30,34 +31,45 @@ before submitting the form.
   },
 };
 
-export const phoneInput = () => <SprkInput placeholder="(000) 000-0000" />;
+export const phoneInput = () => (
+  <>
+    <SprkLabel>Phone Number</SprkLabel>
+    <SprkInput placeholder="(000) 000-0000" />
+  </>
+);
 
 phoneInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
 export const invalidPhoneInput = () => (
-  <SprkInput placeholder="(000) 000-0000" isValid={false} />
+  <>
+    <SprkLabel>Phone Number</SprkLabel>
+    <SprkInput placeholder="(000) 000-0000" isValid={false} />
+  </>
 );
 
 invalidPhoneInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
 export const disabledPhoneInput = () => (
-  <SprkInput placeholder="(000) 000-0000" isDisabled />
+  <>
+    <SprkLabel isDisabled>Phone Number</SprkLabel>
+    <SprkInput placeholder="(000) 000-0000" isDisabled />
+  </>
 );
 
 disabledPhoneInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 

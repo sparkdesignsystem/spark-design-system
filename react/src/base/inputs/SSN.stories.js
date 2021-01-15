@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
 import SprkInput from './SprkInput/SprkInput';
+import SprkLabel from './SprkLabel/SprkLabel';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -27,30 +28,45 @@ ${markdownDocumentationLinkBuilder('input')}
   },
 };
 
-export const SSNInput = () => <SprkInput />;
+export const SSNInput = () => (
+  <>
+    <SprkLabel>Social Security Number</SprkLabel>
+    <SprkInput />
+  </>
+);
 
 SSNInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
-export const invalidSSNInput = () => <SprkRevealInput isValid={false} />;
+export const invalidSSNInput = () => (
+  <>
+    <SprkLabel>Social Security Number</SprkLabel>
+    <SprkInput isValid={false} />
+  </>
+);
 
 invalidSSNInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
-export const disabledSSNInput = () => <SprkInput isDisabled />;
+export const disabledSSNInput = () => (
+  <>
+    <SprkLabel isDisabled>Social Security Number</SprkLabel>
+    <SprkInput isDisabled />
+  </>
+);
 
 disabledSSNInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput'],
+    jest: ['SprkInput', 'SprkLabel'],
   },
 };
 
