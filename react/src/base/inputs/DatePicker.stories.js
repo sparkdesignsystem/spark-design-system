@@ -14,86 +14,86 @@ ${markdownDocumentationLinkBuilder('input')}
 (/) which you may need to remove before submitting the form.
 - The Date Picker makes use of a 3rd party library called
 Tiny Date Picker. See the datePickerConfig object in the
-props table below for available customization options. 
-- Requires Additional Engineering: 
+props table below for available customization options.
+- Requires Additional Engineering:
   - Validation - The \`valid\` prop controls this
   input’s validation state. This boolean is determined
-  by your own validation logic. Validation happens before 
-  reformatting. 
+  by your own validation logic. Validation happens before
+  reformatting.
   - Reformatting to date pattern MM/DD/YYYY - After valid
   input, it should reformat to add commas and decimals to
   the hundredth place. Reformat user input with the \`formatter\`
   prop. This prop receives a function that takes the current
-  value and returns the reformatted value. 
+  value and returns the reformatted value.
 `,
   },
 };
 
-export const defaultStory = () => (
+// export const defaultStory = () => (
 
-);
+// );
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [''],
-  },
-};
+// defaultStory.story = {
+//   name: 'Default',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-export const invalidDatePicker = () => (
+// export const invalidDatePicker = () => (
 
-);
+// );
 
-invalidDatePicker.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [''],
-  },
-};
+// invalidDatePicker.story = {
+//   name: 'Invalid',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-export const disabledDatePicker = () => (
+// export const disabledDatePicker = () => (
 
-);
+// );
 
-disabledDatePicker.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [''],
-  },
-};
+// disabledDatePicker.story = {
+//   name: 'Disabled',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-export const hugeDatePicker = () => (
+// export const hugeDatePicker = () => (
 
-);
+// );
 
-hugeDatePicker.story = {
-  name: 'Huge',
-  parameters: {
-    jest: [''],
-  },
-};
+// hugeDatePicker.story = {
+//   name: 'Huge',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-export const invalidHugeDatePicker = () => (
+// export const invalidHugeDatePicker = () => (
 
-);
+// );
 
-invalidHugeDatePicker.story = {
-  name: 'Huge Invalid',
-  parameters: {
-    jest: [''],
-  },
-};
+// invalidHugeDatePicker.story = {
+//   name: 'Huge Invalid',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
-export const disabledHugeDatePicker = () => (
+// export const disabledHugeDatePicker = () => (
 
-);
+// );
 
-disabledHugeDatePicker.story = {
-  name: 'Huge Disabled',
-  parameters: {
-    jest: [''],
-  },
-};
+// disabledHugeDatePicker.story = {
+//   name: 'Huge Disabled',
+//   parameters: {
+//     jest: [''],
+//   },
+// };
 
 export const legacyDefaultStory = () => (
   <SprkDatePickerInput

@@ -2,6 +2,7 @@ import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
+import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -16,8 +17,30 @@ export default {
 
 export const textInput = () => (
   <>
-    <SprkLabel>Text Input Label</SprkLabel>
-    <SprkInput />
+    <SprkInputContainer>
+      <SprkLabel htmlFor="cats">Both there and matching</SprkLabel>
+      <SprkInput id="cats" />
+    </SprkInputContainer>
+
+    <SprkInputContainer>
+      <SprkLabel>Both empty</SprkLabel>
+      <SprkInput />
+    </SprkInputContainer>
+
+    <SprkInputContainer>
+      <SprkLabel htmlFor="dogs">No id on input</SprkLabel>
+      <SprkInput />
+    </SprkInputContainer>
+
+    <SprkInputContainer>
+      <SprkLabel htmlFor="camel">Mismatching</SprkLabel>
+      <SprkInput id="ferret" />
+    </SprkInputContainer>
+
+    <SprkInputContainer>
+      <SprkLabel>NO For on label</SprkLabel>
+      <SprkInput id="birds" />
+    </SprkInputContainer>
   </>
 );
 

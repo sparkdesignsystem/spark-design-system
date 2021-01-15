@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+// import SprkLabel from './spark'
 // import uniqueId from 'lodash/uniqueId';
 
 class SprkInputContainer extends Component {
@@ -91,6 +92,15 @@ class SprkInputContainer extends Component {
       ...rest
     } = this.props;
     // TODO const { id, errorContainerId } = this.state;
+
+    React.Children.forEach(children, () => {
+      let sprkLabel;
+      if (children.type.name !== SprkLabel.name) {
+        sprkLabel = children;
+        console.log(sprkLabel, 'the label component')
+      }
+    });
+
 
     return (
       <div
