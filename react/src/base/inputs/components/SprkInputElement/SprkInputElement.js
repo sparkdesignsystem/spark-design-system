@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
 
+/**
+ * TODO: Remove this component as part of Issue 3775.
+ */
 class SprkInputElement extends Component {
   constructor(props) {
     const { value } = props;
     const { defaultValue } = props;
     super(props);
 
-    if( value || defaultValue ) {
+    if (value || defaultValue) {
       this.state = {
         hasValue: true,
       };
@@ -75,7 +78,7 @@ class SprkInputElement extends Component {
         aria-invalid={!valid}
         aria-describedby={errorContainerId}
         value={valid && formatter(value) ? formatter(value) : value}
-        onBlur={e => handleOnBlur(e)}
+        onBlur={(e) => handleOnBlur(e)}
         {...rest}
       >
         {children}
@@ -86,7 +89,8 @@ class SprkInputElement extends Component {
 
 SprkInputElement.propTypes = {
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving as a
+   * unique selector for outside libraries to capture data.
    */
   analyticsString: propTypes.string,
   /**
@@ -94,7 +98,9 @@ SprkInputElement.propTypes = {
    */
   errorContainerId: propTypes.string,
   /**
-   * A function supplied will be passed the value of the input and then executed, if the valid prop is true. The value returned will be assigned to the value of the input.
+   * A function supplied will be passed the value of the input
+   * and then executed, if the valid prop is true. The value
+   * returned will be assigned to the value of the input.
    */
   formatter: propTypes.func,
   /**
@@ -110,7 +116,8 @@ SprkInputElement.propTypes = {
    */
   id: propTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: propTypes.string,
   /**
@@ -127,6 +134,12 @@ SprkInputElement.propTypes = {
    * component in the valid or the error state.
    */
   valid: propTypes.bool,
+  children: propTypes.node,
+  disabled: propTypes.bool,
+  hiddenLabel: propTypes.bool,
+  forwardedRef: propTypes.shape(),
+  value: propTypes.string,
+  defaultValue: propTypes.string,
 };
 
 export default SprkInputElement;
