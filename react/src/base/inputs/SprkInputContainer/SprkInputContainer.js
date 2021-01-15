@@ -86,6 +86,15 @@ class SprkInputContainer extends Component {
       ...rest
     } = this.props;
 
+    React.Children.forEach(children, () => {
+      let sprkLabel;
+      if (children.type.name !== SprkLabel.name) {
+        sprkLabel = children;
+        console.log(sprkLabel, 'the label component')
+      }
+    });
+
+
     return (
       <div
         data-analytics={analyticsString}
