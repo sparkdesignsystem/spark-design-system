@@ -19,7 +19,7 @@ import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-naviga
       <div class="sprk-c-Tabs__buttons" role="tablist">
         <ng-content select="[sprkTabbedNavigationTab]"></ng-content>
       </div>
-      <ng-content select="[sprkTabbedNavigationPane]"></ng-content>
+      <ng-content select="[sprkTabbedNavigationPanel]"></ng-content>
       <ng-content></ng-content>
     </div>
   `,

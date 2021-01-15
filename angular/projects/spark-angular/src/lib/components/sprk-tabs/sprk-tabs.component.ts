@@ -23,7 +23,7 @@ import { SprkTabsButtonDirective } from '../../directives/sprk-tabs/sprk-tabs-bu
       <div class="sprk-c-Tabs__buttons" role="tablist">
         <ng-content select="[sprkTabsButton]"></ng-content>
       </div>
-      <ng-content select="[sprkTabsPane]"></ng-content>
+      <ng-content select="[sprkTabsPanel]"></ng-content>
       <ng-content></ng-content>
     </div>
   `,
