@@ -144,7 +144,7 @@ export const deprecated = () => ({
 });
 
 deprecated.story = {
-  name: 'Deprecated',
+  name: 'Legacy (Deprecated)',
   parameters: {
     jest: [
       'sprk-tabbed-navigation.component',
