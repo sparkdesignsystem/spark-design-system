@@ -12,6 +12,7 @@ export default {
   },
 };
 
+// Had to comment out because it breaks SB left uncommented
 // export const textarea = () => (
 
 // );
@@ -23,6 +24,7 @@ export default {
 //   },
 // };
 
+// Had to comment out because it breaks SB left uncommented
 // export const invalidTextarea = () => (
 
 // );
@@ -34,6 +36,7 @@ export default {
 //   },
 // };
 
+// Had to comment out because it breaks SB left uncommented
 // export const disabledTextarea = () => (
 
 // );

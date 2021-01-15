@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import uniqueId from 'lodash/uniqueId';
 
 class SprkInput extends Component {
   constructor(props) {
@@ -112,12 +113,20 @@ SprkInput.propTypes = {
    *  of the rendered input element.
    */
   value: PropTypes.string,
+  /**
+   * Assigned to the `id` attribute
+   * of the rendered input element.
+   * A custom ID will
+   * be added if this is not supplied.
+   */
+  id: PropTypes.string,
 };
 
 SprkInput.defaultProps = {
   formatter: (value) => value,
   forwardedRef: React.createRef(),
   isValid: true,
+  id: uniqueId('sprk-'),
   isDisabled: false,
 };
 
