@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import uniqueId from 'lodash/uniqueId';
 
 const SprkLabel = (props) => {
   const {
@@ -75,10 +76,17 @@ SprkLabel.propTypes = {
    */
   hasIcon: PropTypes.bool,
   /**
-   * Assigned to the `for` attribute of the label that will connect
+   * Assigned to the `for` attribute of
+   * the label that will connect
    * relationships between the label and input.
+   * A custom string is used if this is not
+   * supplied.
    */
   htmlFor: PropTypes.string,
+};
+
+SprkLabel.defaultProps = {
+  htmlFor: uniqueId('sprk-'),
 };
 
 export default SprkLabel;
