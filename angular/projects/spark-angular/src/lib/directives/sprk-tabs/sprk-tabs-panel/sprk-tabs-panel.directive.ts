@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[sprkTabsPanel]',
@@ -55,26 +55,31 @@ export class SprkTabsPanelDirective implements OnInit {
   }
 
   ngOnInit(): void {
-    this.ref.nativeElement.setAttribute('role', 'tabpanel');
-    this.ref.nativeElement.setAttribute('tabindex', '0');
+    this.renderer.setAttribute(this.ref.nativeElement, 'role', 'tabpanel');
+    this.renderer.setAttribute(this.ref.nativeElement, 'tabindex', '0');
 
     this.getClasses().forEach((item) => {
-      this.ref.nativeElement.classList.add(item);
+      this.renderer.addClass(this.ref.nativeElement, item);
     });
 
     if (this.analyticsString) {
-      this.ref.nativeElement.setAttribute(
+      this.renderer.setAttribute(
+        this.ref.nativeElement,
         'data-analytics',
         this.analyticsString,
       );
     }
 
     if (this.idString) {
-      this.ref.nativeElement.setAttribute('data-id', this.idString);
+      this.renderer.setAttribute(
+        this.ref.nativeElement,
+        'data-id',
+        this.idString,
+      );
     }
   }
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef) {}
+  constructor(public ref: ElementRef, private renderer: Renderer2) {}
 }

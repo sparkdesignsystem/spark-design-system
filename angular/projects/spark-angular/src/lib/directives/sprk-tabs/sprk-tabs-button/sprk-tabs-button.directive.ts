@@ -6,6 +6,7 @@ import {
   Output,
   EventEmitter,
   HostListener,
+  Renderer2,
 } from '@angular/core';
 
 @Directive({
@@ -76,28 +77,34 @@ export class SprkTabsButtonDirective implements OnInit {
 
   ngOnInit(): void {
     this.getClasses().forEach((item) => {
-      this.ref.nativeElement.classList.add(item);
+      this.renderer.addClass(this.ref.nativeElement, item);
     });
 
-    this.ref.nativeElement.setAttribute('role', 'tab');
-    this.ref.nativeElement.setAttribute(
+    this.renderer.setAttribute(this.ref.nativeElement, 'role', 'tab');
+    this.renderer.setAttribute(
+      this.ref.nativeElement,
       'aria-selected',
       this.isDefaultActive ? 'true' : 'false',
     );
 
     if (this.analyticsString) {
-      this.ref.nativeElement.setAttribute(
+      this.renderer.setAttribute(
+        this.ref.nativeElement,
         'data-analytics',
         this.analyticsString,
       );
     }
 
     if (this.idString) {
-      this.ref.nativeElement.setAttribute('data-id', this.idString);
+      this.renderer.setAttribute(
+        this.ref.nativeElement,
+        'data-id',
+        this.idString,
+      );
     }
   }
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef) {}
+  constructor(public ref: ElementRef, private renderer: Renderer2) {}
 }

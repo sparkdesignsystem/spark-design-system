@@ -228,9 +228,9 @@ export class SprkTabsComponent implements AfterContentInit {
   ariaOrientation(width, element) {
     // switch aria-orientation on mobile (based on _tabs.scss breakpoint)
     if (width <= 736) {
-      element.setAttribute('aria-orientation', 'vertical');
+      this.renderer.setAttribute(element, 'aria-orientation', 'vertical');
     } else {
-      element.setAttribute('aria-orientation', 'horizontal');
+      this.renderer.setAttribute(element, 'aria-orientation', 'horizontal');
     }
   }
 
@@ -255,11 +255,14 @@ export class SprkTabsComponent implements AfterContentInit {
    */
   resetTabs(tabs, tabpanels, activeClass) {
     tabs.forEach((tab) => {
-      tab.classList.remove(activeClass || 'sprk-c-Tabs__button--active');
-      tab.removeAttribute('tabindex');
-      tab.setAttribute('aria-selected', 'false');
+      this.renderer.removeClass(
+        tab,
+        activeClass || 'sprk-c-Tabs__button--active',
+      );
+      this.renderer.removeAttribute(tab, 'tabindex');
+      this.renderer.setAttribute(tab, 'aria-selected', 'false');
       tabpanels.forEach((panel) => {
-        panel.classList.add('sprk-u-HideWhenJs');
+        this.renderer.addClass(panel, 'sprk-u-HideWhenJs');
       });
     });
   }
@@ -344,11 +347,11 @@ export class SprkTabsComponent implements AfterContentInit {
    * @ignore
    */
   setActiveTab(tab, tabpanel, activeClass) {
-    tab.classList.add(activeClass || 'sprk-c-Tabs__button--active');
-    tab.setAttribute('tabindex', '0');
-    tab.setAttribute('aria-selected', 'true');
+    this.renderer.addClass(tab, activeClass || 'sprk-c-Tabs__button--active');
+    this.renderer.setAttribute(tab, 'tabindex', '0');
+    this.renderer.setAttribute(tab, 'aria-selected', 'true');
     if (tabpanel) {
-      tabpanel.classList.remove('sprk-u-HideWhenJs');
+      this.renderer.removeClass(tabpanel, 'sprk-u-HideWhenJs');
     }
     tab.focus();
   }
