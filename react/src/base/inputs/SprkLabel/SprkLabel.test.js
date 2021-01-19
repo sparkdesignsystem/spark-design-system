@@ -63,4 +63,14 @@ describe('SprkLabel:', () => {
     const wrapper = mount(<SprkLabel idString="321">Label</SprkLabel>);
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
   });
+
+  it('should assign htmlFor when htmlFor has a value', () => {
+    const wrapper = mount(<SprkLabel htmlFor="321" />);
+    expect(wrapper.find('.sprk-b-Label').prop('htmlFor')).toBe('321');
+  });
+
+  it('should assign default htmlFor when htmlFor has no value', () => {
+    const wrapper = mount(<SprkLabel />);
+    expect(wrapper.find('.sprk-b-Label').prop('htmlFor')).toContain('sprk-');
+  });
 });
