@@ -30,6 +30,7 @@ class SprkInput extends Component {
       isDisabled,
       isValid,
       value,
+      id,
       ...rest
     } = this.props;
     const { hasValue } = this.state;
@@ -60,6 +61,7 @@ class SprkInput extends Component {
         aria-invalid={!isValid}
         value={isValid && formatter(value) ? formatter(value) : value}
         onBlur={(e) => handleOnBlur(e)}
+        id={id}
         {...rest}
       />
     );
