@@ -3,6 +3,10 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import SprkIcon from '../../../components/icons/SprkIcon';
 
+/**
+ * TODO: Remove this component as part of Issue 3785.
+ */
+
 const SprkErrorContainer = ({
   additionalClasses,
   analyticsString,
