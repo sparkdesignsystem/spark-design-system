@@ -1,5 +1,7 @@
 import React from 'react';
 import SprkDatePickerInput from './SprkDatePickerInput/SprkDatePickerInput';
+import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
+import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -29,71 +31,128 @@ props table below for available customization options.
   },
 };
 
-// export const defaultStory = () => (
+export const defaultStory = () => (
+  <SprkInputContainer>
+    <SprkDatePickerInput
+      name="date"
+      placeholder="01/01/2019"
+      errorMessage="Incorrect date."
+      label="Date"
+    />
+  </SprkInputContainer>
+);
 
-// );
+defaultStory.story = {
+  name: 'Default',
+  parameters: {
+    jest: ['SprkInputContainer', 'SprkDatePickerInput'],
+  },
+};
 
-// defaultStory.story = {
-//   name: 'Default',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
+export const invalidDatePicker = () => (
+  <SprkInputContainer>
+    <SprkDatePickerInput
+      name="date"
+      placeholder="01/01/2019"
+      label="Date"
+      valid={false}
+    />
+    <SprkErrorContainer
+      id="invalid-date"
+      message="Update this story once error container is done"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
+);
 
-// export const invalidDatePicker = () => (
+invalidDatePicker.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: ['SprkErrorContainer', 'SprkInputContainer'],
+  },
+};
 
-// );
+export const disabledDatePicker = () => (
+  <SprkInputContainer>
+    <SprkDatePickerInput
+      name="date"
+      placeholder="01/01/2019"
+      errorMessage="Incorrect date."
+      label="Date"
+      disabled
+    />
+  </SprkInputContainer>
+);
 
-// invalidDatePicker.story = {
-//   name: 'Invalid',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
+disabledDatePicker.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: ['SprkInputContainer'],
+  },
+};
 
-// export const disabledDatePicker = () => (
+export const hugeDatePicker = () => (
+  <SprkInputContainer variant="huge">
+    <SprkDatePickerInput
+      type="hugeTextInput"
+      name="date"
+      placeholder="01/01/2019"
+      label="Date"
+    />
+  </SprkInputContainer>
+);
 
-// );
+hugeDatePicker.story = {
+  name: 'Huge',
+  parameters: {
+    jest: ['SprkInputContainer'],
+  },
+};
 
-// disabledDatePicker.story = {
-//   name: 'Disabled',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
+export const invalidHugeDatePicker = () => (
+  <SprkInputContainer variant="huge">
+    <SprkDatePickerInput
+      type="hugeTextInput"
+      name="date"
+      placeholder="01/01/2019"
+      label="Date"
+      valid={false}
+    />
+    <SprkErrorContainer
+      id="invalid-huge"
+      message="Update this story once error container is done"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
+);
 
-// export const hugeDatePicker = () => (
+invalidHugeDatePicker.story = {
+  name: 'Huge Invalid',
+  parameters: {
+    jest: ['SprkErrorContainer', 'SprkInputContainer'],
+  },
+};
 
-// );
+export const disabledHugeDatePicker = () => (
+  <SprkInputContainer variant="huge">
+    <SprkDatePickerInput
+      type="hugeTextInput"
+      name="date"
+      placeholder="01/01/2019"
+      label="Date"
+      disabled
+    />
+  </SprkInputContainer>
+);
 
-// hugeDatePicker.story = {
-//   name: 'Huge',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
-
-// export const invalidHugeDatePicker = () => (
-
-// );
-
-// invalidHugeDatePicker.story = {
-//   name: 'Huge Invalid',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
-
-// export const disabledHugeDatePicker = () => (
-
-// );
-
-// disabledHugeDatePicker.story = {
-//   name: 'Huge Disabled',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
+disabledHugeDatePicker.story = {
+  name: 'Huge Disabled',
+  parameters: {
+    jest: ['SprkInputContainer'],
+  },
+};
 
 export const legacyDefaultStory = () => (
   <SprkDatePickerInput

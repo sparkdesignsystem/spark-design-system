@@ -2,6 +2,8 @@ import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
+import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
+import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -26,50 +28,61 @@ before submitting the form.
   to the hundredth place. Reformat user input
   with the \`formatter\` prop. This prop receives
   a function that takes the current value and returns
-  the reformatted value. 
+  the reformatted value.
 `,
   },
 };
 
 export const phoneInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel>Phone Number</SprkLabel>
     <SprkInput placeholder="(000) 000-0000" />
-  </>
+  </SprkInputContainer>
 );
 
 phoneInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
 export const invalidPhoneInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel>Phone Number</SprkLabel>
     <SprkInput placeholder="(000) 000-0000" isValid={false} />
-  </>
+    <SprkErrorContainer
+      id="invalid-date"
+      message="Update this story once error container is done"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
 );
 
 invalidPhoneInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: [
+      'SprkInput',
+      'SprkLabel',
+      'SprkInputContainer',
+      'SprkErrorContainer',
+    ],
   },
 };
 
 export const disabledPhoneInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel isDisabled>Phone Number</SprkLabel>
     <SprkInput placeholder="(000) 000-0000" isDisabled />
-  </>
+  </SprkInputContainer>
 );
 
 disabledPhoneInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 

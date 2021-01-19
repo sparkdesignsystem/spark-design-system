@@ -1,5 +1,7 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
+import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
+import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -12,71 +14,313 @@ export default {
   },
 };
 
-// export const selectBox = () => (
+export const selectBox = () => (
+  <SprkInputContainer>
+    <SprkSelectionInput
+      choices={[
+        {
+          label: 'Option 1',
+          value: 'option-1',
+        },
+        {
+          label: 'Option 2',
+          value: 'option-2',
+        },
+        {
+          label: 'Option 3',
+          value: 'option-3',
+        },
+        {
+          label: 'Grouped Options',
+          options: [
+            {
+              label: 'Grouped Option 1',
+              value: 'grouped-option-1',
+            },
+            {
+              label: 'Grouped Option 2',
+              value: 'grouped-option-2',
+            },
+            {
+              label: 'Grouped Option 3',
+              value: 'grouped-option-3',
+            },
+          ],
+        },
+      ]}
+      name="name"
+      variant="select"
+      label="Select Box Label"
+    />
+  </SprkInputContainer>
+);
 
-// );
+selectBox.story = {
+  name: 'Default',
+  parameters: {
+    jest: ['SprkInputContainer'],
+  },
+};
 
-// selectBox.story = {
-//   name: 'Default',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
+export const invalidSelectBox = () => (
+  <SprkInputContainer>
+    <SprkSelectionInput
+      choices={[
+        {
+          label: 'Option 1',
+          value: 'option-1',
+        },
+        {
+          label: 'Option 2',
+          value: 'option-2',
+        },
+        {
+          label: 'Option 3',
+          value: 'option-3',
+        },
+        {
+          label: 'Grouped Options',
+          options: [
+            {
+              label: 'Grouped Option 1',
+              value: 'grouped-option-1',
+            },
+            {
+              label: 'Grouped Option 2',
+              value: 'grouped-option-2',
+            },
+            {
+              label: 'Grouped Option 3',
+              value: 'grouped-option-3',
+            },
+          ],
+        },
+      ]}
+      name="name"
+      variant="select"
+      label="Select Box Label"
+      valid={false}
+    />
+    <SprkErrorContainer
+      id="invalid-date"
+      message="Update this story once error container is done"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
+);
 
-// export const invalidSelectBox = () => (
+invalidSelectBox.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: ['SprkInputContainer', 'SprkErrorContainer'],
+  },
+};
 
-// );
+export const disabledSelectBox = () => (
+  <SprkInputContainer>
+    <SprkSelectionInput
+      choices={[
+        {
+          label: 'Option 1',
+          value: 'option-1',
+        },
+        {
+          label: 'Option 2',
+          value: 'option-2',
+        },
+        {
+          label: 'Option 3',
+          value: 'option-3',
+        },
+        {
+          label: 'Grouped Options',
+          options: [
+            {
+              label: 'Grouped Option 1',
+              value: 'grouped-option-1',
+            },
+            {
+              label: 'Grouped Option 2',
+              value: 'grouped-option-2',
+            },
+            {
+              label: 'Grouped Option 3',
+              value: 'grouped-option-3',
+            },
+          ],
+        },
+      ]}
+      name="name"
+      variant="select"
+      label="Select Box Label"
+      disabled
+    />
+  </SprkInputContainer>
+);
 
-// invalidSelectBox.story = {
-//   name: 'Invalid',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
+disabledSelectBox.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: ['SprkInputContainer'],
+  },
+};
 
-// export const disabledSelectBox = () => (
+export const hugeSelectBox = () => (
+  <SprkInputContainer variant="huge">
+    <SprkSelectionInput
+      label="Select Box Label"
+      choices={[
+        {
+          label: 'Option 1',
+          value: 'option-1',
+        },
+        {
+          label: 'Option 2',
+          value: 'option-2',
+        },
+        {
+          label: 'Option 3',
+          value: 'option-3',
+        },
+        {
+          label: 'Grouped Options',
+          options: [
+            {
+              label: 'Grouped Option 1',
+              value: 'grouped-option-1',
+            },
+            {
+              label: 'Grouped Option 2',
+              value: 'grouped-option-2',
+            },
+            {
+              label: 'Grouped Option 3',
+              value: 'grouped-option-3',
+            },
+          ],
+        },
+      ]}
+      variant="hugeSelect"
+      name="select"
+      defaultValue=""
+    />
+  </SprkInputContainer>
+);
 
-// );
+hugeSelectBox.story = {
+  name: 'Huge',
+  parameters: {
+    jest: ['SprkInputContainer'],
+  },
+};
 
-// disabledSelectBox.story = {
-//   name: 'Disabled',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
+export const invalidHugeSelectBox = () => (
+  <SprkInputContainer variant="huge">
+    <SprkSelectionInput
+      label="Select Box Label"
+      choices={[
+        {
+          label: 'Option 1',
+          value: 'option-1',
+        },
+        {
+          label: 'Option 2',
+          value: 'option-2',
+        },
+        {
+          label: 'Option 3',
+          value: 'option-3',
+        },
+        {
+          label: 'Grouped Options',
+          options: [
+            {
+              label: 'Grouped Option 1',
+              value: 'grouped-option-1',
+            },
+            {
+              label: 'Grouped Option 2',
+              value: 'grouped-option-2',
+            },
+            {
+              label: 'Grouped Option 3',
+              value: 'grouped-option-3',
+            },
+          ],
+        },
+      ]}
+      variant="hugeSelect"
+      name="select"
+      valid={false}
+      errorMessage="There is an error in the field."
+      defaultValue=""
+    />
+    <SprkErrorContainer
+      id="invalid-date"
+      message="Update this story once error container is done"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
+);
 
-// export const hugeSelectBox = () => (
+invalidHugeSelectBox.story = {
+  name: 'Huge Invalid',
+  parameters: {
+    jest: ['SprkInputContainer', 'SprkErrorContainer'],
+  },
+};
 
-// );
+export const disabledHugeSelectBox = () => (
+  <SprkInputContainer variant="huge">
+    <SprkSelectionInput
+      label="Select Box Label"
+      choices={[
+        {
+          label: 'Option 1',
+          value: 'option-1',
+        },
+        {
+          label: 'Option 2',
+          value: 'option-2',
+        },
+        {
+          label: 'Option 3',
+          value: 'option-3',
+        },
+        {
+          label: 'Grouped Options',
+          options: [
+            {
+              label: 'Grouped Option 1',
+              value: 'grouped-option-1',
+            },
+            {
+              label: 'Grouped Option 2',
+              value: 'grouped-option-2',
+            },
+            {
+              label: 'Grouped Option 3',
+              value: 'grouped-option-3',
+            },
+          ],
+        },
+      ]}
+      variant="hugeSelect"
+      name="select"
+      disabled
+      defaultValue=""
+    />
+  </SprkInputContainer>
+);
 
-// hugeSelectBox.story = {
-//   name: 'Huge',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
-
-// export const invalidHugeSelectBox = () => (
-
-// );
-
-// invalidHugeSelectBox.story = {
-//   name: 'Huge Invalid',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
-
-// export const disabledHugeSelectBox = () => (
-
-// );
-
-// disabledHugeSelectBox.story = {
-//   name: 'Huge Disabled',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
+disabledHugeSelectBox.story = {
+  name: 'Huge Disabled',
+  parameters: {
+    jest: ['SprkInputContainer'],
+  },
+};
 
 export const legacySelectBox = () => (
   <SprkSelectionInput
