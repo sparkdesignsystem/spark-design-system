@@ -2,6 +2,8 @@ import React from 'react';
 import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
+import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
+import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -29,44 +31,55 @@ ${markdownDocumentationLinkBuilder('input')}
 };
 
 export const SSNInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel>Social Security Number</SprkLabel>
     <SprkInput />
-  </>
+  </SprkInputContainer>
 );
 
 SSNInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
 export const invalidSSNInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel>Social Security Number</SprkLabel>
     <SprkInput isValid={false} />
-  </>
+    <SprkErrorContainer
+      id="invalid-ssn"
+      message="Update this story once error container is done"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
 );
 
 invalidSSNInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: [
+      'SprkInput',
+      'SprkLabel',
+      'SprkInputContainer',
+      'SprkErrorContainer',
+    ],
   },
 };
 
 export const disabledSSNInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel isDisabled>Social Security Number</SprkLabel>
     <SprkInput isDisabled />
-  </>
+  </SprkInputContainer>
 );
 
 disabledSSNInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
