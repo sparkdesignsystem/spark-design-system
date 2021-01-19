@@ -49,12 +49,16 @@ describe('SprkInput:', () => {
 
   it('should assign id when id has a value', () => {
     const wrapper = mount(<SprkInput id="321" />);
-    expect(wrapper.find('.sprk-b-TextInput').prop('id')).toBe('321');
+    expect(
+      wrapper.find('.sprk-b-TextInput').getDOMNode().getAttribute('id'),
+    ).toBe('321');
   });
 
   it('should assign default id when id has no value', () => {
     const wrapper = mount(<SprkInput />);
-    expect(wrapper.find('.sprk-b-TextInput').prop('id')).toContain('sprk-');
+    expect(
+      wrapper.find('.sprk-b-TextInput').getDOMNode().getAttribute('id'),
+    ).toContain('sprk-');
   });
 
   it(`should add floating label class
