@@ -93,7 +93,7 @@ disabledDatePicker.story = {
 };
 
 export const hugeDatePicker = () => (
-  <SprkInputContainer>
+  <SprkInputContainer variant="huge">
     <SprkDatePickerInput
       type="hugeTextInput"
       name="date"
@@ -111,7 +111,7 @@ hugeDatePicker.story = {
 };
 
 export const invalidHugeDatePicker = () => (
-  <SprkInputContainer>
+  <SprkInputContainer variant="huge">
     <SprkDatePickerInput
       type="hugeTextInput"
       name="date"
@@ -136,7 +136,7 @@ invalidHugeDatePicker.story = {
 };
 
 export const disabledHugeDatePicker = () => (
-  <SprkInputContainer>
+  <SprkInputContainer variant="huge">
     <SprkDatePickerInput
       type="hugeTextInput"
       name="date"

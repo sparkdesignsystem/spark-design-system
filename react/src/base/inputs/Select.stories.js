@@ -167,7 +167,7 @@ disabledSelectBox.story = {
 };
 
 export const hugeSelectBox = () => (
-  <SprkInputContainer>
+  <SprkInputContainer variant="huge">
     <SprkSelectionInput
       label="Select Box Label"
       choices={[
@@ -216,7 +216,7 @@ hugeSelectBox.story = {
 };
 
 export const invalidHugeSelectBox = () => (
-  <SprkInputContainer>
+  <SprkInputContainer variant="huge">
     <SprkSelectionInput
       label="Select Box Label"
       choices={[
@@ -273,7 +273,7 @@ invalidHugeSelectBox.story = {
 };
 
 export const disabledHugeSelectBox = () => (
-  <SprkInputContainer>
+  <SprkInputContainer variant="huge">
     <SprkSelectionInput
       label="Select Box Label"
       choices={[
