@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import uniqueId from 'lodash/uniqueId';
 import SprkTextInput from '../SprkTextInput/SprkTextInput';
 
+/**
+ * TODO: Remove this component as part of Issue 3780.
+ */
 class SprkRevealInput extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +17,7 @@ class SprkRevealInput extends Component {
   }
 
   toggleReveal() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isRevealed: !prevState.isRevealed,
     }));
   }
@@ -50,11 +53,13 @@ class SprkRevealInput extends Component {
 
 SprkRevealInput.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to
+   * the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving
+   * as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
@@ -75,7 +80,8 @@ SprkRevealInput.propTypes = {
    */
   hiddenLabel: PropTypes.bool,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a
+   * unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -107,7 +113,7 @@ SprkRevealInput.propTypes = {
 SprkRevealInput.defaultProps = {
   additionalClasses: '',
   analyticsString: '',
-  formatter: value => value,
+  formatter: (value) => value,
   helperText: '',
   hiddenLabel: false,
   idString: '',
