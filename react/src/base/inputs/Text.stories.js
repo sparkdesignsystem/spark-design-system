@@ -3,6 +3,7 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
+import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -11,98 +12,99 @@ export default {
   component: SprkInput,
   parameters: {
     jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
-    info: `${markdownDocumentationLinkBuilder('input')}`,
+    info: `${markdownDocumentationLinkBuilder('input')}
+- Each Spark Input Container should contain one label/input set.
+- The Huge Input element should preceed the label element.
+    `,
   },
 };
 
 export const textInput = () => (
-  <>
-    <SprkInputContainer>
-      <SprkLabel htmlFor="cats">Both there and matching</SprkLabel>
-      <SprkInput id="cats" />
-    </SprkInputContainer>
-
-    <SprkInputContainer>
-      <SprkLabel>Both empty</SprkLabel>
-      <SprkInput />
-    </SprkInputContainer>
-
-    <SprkInputContainer>
-      <SprkLabel htmlFor="dogs">No id on input</SprkLabel>
-      <SprkInput />
-    </SprkInputContainer>
-
-    <SprkInputContainer>
-      <SprkLabel htmlFor="camel">Mismatching</SprkLabel>
-      <SprkInput id="ferret" />
-    </SprkInputContainer>
-
-    <SprkInputContainer>
-      <SprkLabel>NO For on label</SprkLabel>
-      <SprkInput id="birds" />
-    </SprkInputContainer>
-  </>
+  <SprkInputContainer>
+    <SprkLabel htmlFor="custom">Text Input</SprkLabel>
+    <SprkInput id="custom" />
+  </SprkInputContainer>
 );
 
 textInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
 export const invalidTextInput = () => (
-  <>
-    <SprkLabel>Text Input Label</SprkLabel>
-    <SprkInput isValid={false} />
-  </>
+  <SprkInputContainer>
+    <SprkLabel htmlFor="invalid-input">Invalid Input</SprkLabel>
+    <SprkInput id="invalid-input" isValid={false} />
+    <SprkErrorContainer
+      id="invalid-error"
+      message="Update this story once error container is done"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
 );
 
 invalidTextInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: [
+      'SprkInput',
+      'SprkLabel',
+      'SprkInputContainer',
+      'SprkErrorContainer',
+    ],
   },
 };
 
 export const disabledTextInput = () => (
-  <>
-    <SprkLabel isDisabled>Text Input Label</SprkLabel>
-    <SprkInput isDisabled />
-  </>
+  <SprkInputContainer>
+    <SprkLabel htmlFor="disabled-input" isDisabled>
+      Disabled Input
+    </SprkLabel>
+    <SprkInput id="disabled-input" isDisabled />
+  </SprkInputContainer>
 );
 
 disabledTextInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
 export const hugeTextInput = () => (
-  <>
-    <SprkLabel>Text Input Label</SprkLabel>
-    <SprkInput variant="huge" placeholder="Huge Text Placeholder" />
-  </>
+  <SprkInputContainer variant="huge">
+    <SprkInput id="huge-input" variant="huge" placeholder="Placeholder" />
+    <SprkLabel htmlFor="huge-input">Huge Input</SprkLabel>
+  </SprkInputContainer>
 );
 
 hugeTextInput.story = {
   name: 'Huge',
   component: SprkInput,
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
 export const invalidHugeTextInput = () => (
-  <>
-    <SprkLabel>Text Input Label</SprkLabel>
+  <SprkInputContainer variant="huge">
     <SprkInput
+      id="invalid-huge-input"
       variant="huge"
-      placeholder="Huge Text Placeholder"
+      placeholder="Placeholder"
       isValid={false}
     />
-  </>
+    <SprkLabel htmlFor="invalid-huge-input">Huge Input</SprkLabel>
+    <SprkErrorContainer
+      id="huge-error"
+      message="Update once error container is done to remove message prop"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
 );
 
 invalidHugeTextInput.story = {
@@ -114,17 +116,22 @@ invalidHugeTextInput.story = {
 };
 
 export const disabledHugeTextInput = () => (
-  <>
-    <SprkLabel>Text Input Label</SprkLabel>
-    <SprkInput variant="huge" placeholder="Huge Text Placeholder" isDisabled />
-  </>
+  <SprkInputContainer variant="huge">
+    <SprkInput
+      id="disabled-huge-input"
+      variant="huge"
+      placeholder="Placeholder"
+      isDisabled
+    />
+    <SprkLabel htmlFor="disabled-huge-input">Huge Input</SprkLabel>
+  </SprkInputContainer>
 );
 
 disabledHugeTextInput.story = {
   name: 'Huge Disabled',
   component: SprkInput,
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
