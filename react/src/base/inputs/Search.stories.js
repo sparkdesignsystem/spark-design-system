@@ -2,6 +2,8 @@ import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
+import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
+import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -15,25 +17,25 @@ export default {
 };
 
 export const searchInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel isHidden>Text Input Label</SprkLabel>
     <SprkInput
       additionalClasses="sprk-b-TextInput--has-svg-icon"
       type="search"
       placeholder="Search"
     />
-  </>
+  </SprkInputContainer>
 );
 
 searchInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
 export const invalidSearchInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel isHidden>Text Input Label</SprkLabel>
     <SprkInput
       additionalClasses="sprk-b-TextInput--has-svg-icon"
@@ -41,18 +43,29 @@ export const invalidSearchInput = () => (
       placeholder="Search"
       isValid={false}
     />
-  </>
+    <SprkErrorContainer
+      id="invalid-search"
+      message="Update this story once error container is done"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
 );
 
 invalidSearchInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: [
+      'SprkInput',
+      'SprkLabel',
+      'SprkInputContainer',
+      'SprkErrorContainer',
+    ],
   },
 };
 
 export const disabledSearchInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel isHidden isDisabled>
       Text Input Label
     </SprkLabel>
@@ -62,13 +75,13 @@ export const disabledSearchInput = () => (
       placeholder="Search"
       isDisabled
     />
-  </>
+  </SprkInputContainer>
 );
 
 disabledSearchInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
