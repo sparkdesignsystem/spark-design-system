@@ -2,6 +2,9 @@ import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
+import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
+import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
+
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -15,7 +18,7 @@ export default {
 };
 
 export const percentageInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel>Percentage</SprkLabel>
     <SprkInput
       additionalClasses="
@@ -23,18 +26,18 @@ export const percentageInput = () => (
         sprk-b-InputContainer__input--has-icon-right"
       type="tel"
     />
-  </>
+  </SprkInputContainer>
 );
 
 percentageInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
 export const invalidPercentageInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel>Percentage</SprkLabel>
     <SprkInput
       additionalClasses="
@@ -43,18 +46,29 @@ export const invalidPercentageInput = () => (
       type="tel"
       isValid={false}
     />
-  </>
+    <SprkErrorContainer
+      id="invalid-percentage"
+      message="Update this story once error container is done"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
 );
 
 invalidPercentageInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: [
+      'SprkInput',
+      'SprkLabel',
+      'SprkInputContainer',
+      'SprkErrorContainer',
+    ],
   },
 };
 
 export const disabledPercentageInput = () => (
-  <>
+  <SprkInputContainer>
     <SprkLabel isDisabled>Percentage</SprkLabel>
     <SprkInput
       additionalClasses="
@@ -63,13 +77,13 @@ export const disabledPercentageInput = () => (
       type="tel"
       isDisabled
     />
-  </>
+  </SprkInputContainer>
 );
 
 disabledPercentageInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
