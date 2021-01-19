@@ -54,6 +54,16 @@ describe('SprkInput:', () => {
     ).toBe('321');
   });
 
+  it('should assign aria-describedby when ariaDescribedBy has a value', () => {
+    const wrapper = mount(<SprkInput ariaDescribedBy="321" />);
+    expect(
+      wrapper
+        .find('.sprk-b-TextInput')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('321');
+  });
+
   it('should assign default id when id has no value', () => {
     const wrapper = mount(<SprkInput />);
     expect(
