@@ -64,13 +64,17 @@ describe('SprkLabel:', () => {
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
   });
 
-  it('should assign htmlFor when htmlFor has a value', () => {
+  it('should assign for attribute when htmlFor has a value', () => {
     const wrapper = mount(<SprkLabel htmlFor="321" />);
-    expect(wrapper.find('.sprk-b-Label').prop('htmlFor')).toBe('321');
+    expect(wrapper.find('.sprk-b-Label').getDOMNode().getAttribute('for')).toBe(
+      '321',
+    );
   });
 
-  it('should assign default htmlFor when htmlFor has no value', () => {
+  it('should assign default for attribute when htmlFor has no value', () => {
     const wrapper = mount(<SprkLabel />);
-    expect(wrapper.find('.sprk-b-Label').prop('htmlFor')).toContain('sprk-');
+    expect(
+      wrapper.find('.sprk-b-Label').getDOMNode().getAttribute('for'),
+    ).toContain('sprk-');
   });
 });
