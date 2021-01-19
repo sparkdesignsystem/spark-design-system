@@ -2,6 +2,8 @@ import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
+import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
+import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -9,7 +11,7 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkInput,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: ['SprkInputIconCheck'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field may contain special characters
@@ -28,57 +30,86 @@ ${markdownDocumentationLinkBuilder('input')}
 };
 
 export const monetaryInput = () => (
-  <>
-    <SprkLabel isMonetary>Payment</SprkLabel>
-    <SprkInput
-      additionalClasses="sprk-b-TextInput--has-text-icon"
-      placeholder="0.00"
-    />
-  </>
+  <SprkInputContainer>
+    <div
+      className="
+        sprk-b-InputContainer__icon-container
+        sprk-b-TextInputIconContainer--has-text-icon"
+    >
+      <SprkLabel isMonetary>Payment</SprkLabel>
+      <SprkInput
+        additionalClasses="sprk-b-TextInput--has-text-icon"
+        placeholder="0.00"
+      />
+    </div>
+  </SprkInputContainer>
 );
 
 monetaryInput.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
 export const invalidMonetaryInput = () => (
-  <>
-    <SprkLabel isMonetary>Payment</SprkLabel>
-    <SprkInput
-      additionalClasses="sprk-b-TextInput--has-text-icon"
-      placeholder="0.00"
-      isValid={false}
-    />
-  </>
+  <SprkInputContainer>
+    <div
+      className="
+        sprk-b-InputContainer__icon-container
+        sprk-b-TextInputIconContainer--has-text-icon"
+    >
+      <SprkLabel isMonetary>Payment</SprkLabel>
+      <SprkInput
+        additionalClasses="sprk-b-TextInput--has-text-icon"
+        placeholder="0.00"
+        isValid={false}
+      />
+    </div>
+    <SprkErrorContainer
+      id="invalid-monetary"
+      message="Update this story once error container is done"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </SprkInputContainer>
 );
 
 invalidMonetaryInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: [
+      'SprkInput',
+      'SprkLabel',
+      'SprkInputContainer',
+      'SprkErrorContainer',
+    ],
   },
 };
 
 export const disabledMonetaryInput = () => (
-  <>
-    <SprkLabel isMonetary isDisabled>
-      Payment
-    </SprkLabel>
-    <SprkInput
-      additionalClasses="sprk-b-TextInput--has-text-icon"
-      placeholder="0.00"
-      isDisabled
-    />
-  </>
+  <SprkInputContainer>
+    <div
+      className="
+        sprk-b-InputContainer__icon-container
+        sprk-b-TextInputIconContainer--has-text-icon"
+    >
+      <SprkLabel isMonetary isDisabled>
+        Payment
+      </SprkLabel>
+      <SprkInput
+        additionalClasses="sprk-b-TextInput--has-text-icon"
+        placeholder="0.00"
+        isDisabled
+      />
+    </div>
+  </SprkInputContainer>
 );
 
 disabledMonetaryInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
