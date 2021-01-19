@@ -29,6 +29,7 @@ class SprkInput extends Component {
       idString,
       isDisabled,
       isValid,
+      ariaDescribedBy,
       value,
       id,
       ...rest
@@ -56,6 +57,7 @@ class SprkInput extends Component {
         )}
         disabled={isDisabled}
         ref={forwardedRef}
+        aria-describedby={ariaDescribedBy}
         data-id={idString}
         data-analytics={analyticsString}
         aria-invalid={!isValid}
@@ -122,6 +124,13 @@ SprkInput.propTypes = {
    * be added if this is not supplied.
    */
   id: PropTypes.string,
+  /**
+   * Assigned to the `aria-describedby`
+   * attribute of the input used
+   * to create relationships between the
+   * input and error container.
+   */
+  ariaDescribedBy: PropTypes.string,
 };
 
 SprkInput.defaultProps = {
