@@ -2,6 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
 
+/**
+ * TODO: Remove this component as part of Issue 3789.
+ */
+
 const SprkInputLabel = ({ id, hiddenLabel, label, disabled }) => (
   <label
     htmlFor={id}
