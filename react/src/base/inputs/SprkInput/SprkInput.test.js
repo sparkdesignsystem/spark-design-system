@@ -47,6 +47,30 @@ describe('SprkInput:', () => {
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
   });
 
+  it('should assign id when id has a value', () => {
+    const wrapper = mount(<SprkInput id="321" />);
+    expect(
+      wrapper.find('.sprk-b-TextInput').getDOMNode().getAttribute('id'),
+    ).toBe('321');
+  });
+
+  it('should assign aria-describedby when ariaDescribedBy has a value', () => {
+    const wrapper = mount(<SprkInput ariaDescribedBy="321" />);
+    expect(
+      wrapper
+        .find('.sprk-b-TextInput')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('321');
+  });
+
+  it('should assign default id when id has no value', () => {
+    const wrapper = mount(<SprkInput />);
+    expect(
+      wrapper.find('.sprk-b-TextInput').getDOMNode().getAttribute('id'),
+    ).toContain('sprk-');
+  });
+
   it(`should add floating label class
   to huge input when a value is present and blurred out`, () => {
     const wrapper = mount(<SprkInput variant="huge" />);
