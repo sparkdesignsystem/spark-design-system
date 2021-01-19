@@ -110,6 +110,12 @@ describe('SprkTabsComponent', () => {
     expect(element.classList.toString()).toEqual('sprk-c-Tabs sprk-u-man');
   });
 
+  it('should add tabstrip additional classes if tablistAdditionalClasses has a value', () => {
+    component.tablistAdditionalClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(element.querySelector('.sprk-c-Tabs__buttons').classList.toString()).toEqual('sprk-c-Tabs__buttons sprk-u-man');
+  });
+
   it('should create an id for each tab', () => {
     expect(testTab1.id).toContain('tabs');
     expect(testTab2.id).toContain('tabs');

@@ -20,7 +20,10 @@ import { SprkTabsButtonDirective } from '../../directives/sprk-tabs/sprk-tabs-bu
       [attr.data-id]="idString"
       [attr.data-analytics]="analyticsString"
     >
-      <div class="sprk-c-Tabs__buttons" role="tablist">
+      <div
+        [ngClass]="getTablistClasses()"
+        role="tablist"
+      >
         <ng-content select="[sprkTabsButton]"></ng-content>
       </div>
       <ng-content select="[sprkTabsPanel]"></ng-content>
@@ -36,6 +39,13 @@ export class SprkTabsComponent implements AfterContentInit {
    */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * tablist element.
+   */
+  @Input()
+  tablistAdditionalClasses: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -163,6 +173,21 @@ export class SprkTabsComponent implements AfterContentInit {
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getTablistClasses(): string {
+    const classArray: string[] = ['sprk-c-Tabs__buttons'];
+
+    if (this.tablistAdditionalClasses) {
+      this.tablistAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
