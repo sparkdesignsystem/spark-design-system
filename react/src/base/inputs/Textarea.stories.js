@@ -1,5 +1,8 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
+import SprkTextarea from './SprkTextarea/SprkTextarea';
+import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
+import SprkLabel from './SprkLabel/SprkLabel';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -12,41 +15,64 @@ export default {
   },
 };
 
+export const textarea = () => (
+  <>
+    <SprkLabel htmlFor="sprk-textarea">Description</SprkLabel>
+    <SprkTextarea id="sprk-textarea" additionalClasses="sprk-u-Width-100" />
+  </>
+);
+
+textarea.story = {
+  name: 'Default',
+  parameters: {
+    jest: ['SprkTextarea', 'SprkLabel'],
+  },
+};
+
+export const invalidTextarea = () => (
+  <>
+    <SprkLabel htmlFor="sprk-textarea-invalid">Description</SprkLabel>
+    <SprkTextarea
+      id="sprk-textarea-invalid"
+      additionalClasses="sprk-u-Width-100"
+      isValid={false}
+    />
+    <SprkErrorContainer
+      id="invalid-error"
+      message="Update once error container is done to remove message prop"
+    >
+      There is an error on this field.
+    </SprkErrorContainer>
+  </>
+);
+
+invalidTextarea.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: ['SprkTextarea', 'SprkErrorContainer'],
+  },
+};
+
 // Had to comment out because it breaks SB left uncommented
-// export const textarea = () => (
+export const disabledTextarea = () => (
+  <>
+    <SprkLabel isDisabled htmlFor="sprk-textarea">
+      Description
+    </SprkLabel>
+    <SprkTextarea
+      id="sprk-textarea"
+      additionalClasses="sprk-u-Width-100"
+      isDisabled
+    />
+  </>
+);
 
-// );
-
-// textarea.story = {
-//   name: 'Default',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
-
-// Had to comment out because it breaks SB left uncommented
-// export const invalidTextarea = () => (
-
-// );
-
-// invalidTextarea.story = {
-//   name: 'Invalid',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
-
-// Had to comment out because it breaks SB left uncommented
-// export const disabledTextarea = () => (
-
-// );
-
-// disabledTextarea.story = {
-//   name: 'Disabled',
-//   parameters: {
-//     jest: [''],
-//   },
-// };
+disabledTextarea.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: ['SprkTextarea', 'SprkLabel'],
+  },
+};
 
 export const legacyTextarea = () => (
   <SprkTextInput label="Description" name="description" type="textarea" />
