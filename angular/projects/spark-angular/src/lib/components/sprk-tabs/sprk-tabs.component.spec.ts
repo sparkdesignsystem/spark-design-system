@@ -113,29 +113,35 @@ describe('SprkTabsComponent', () => {
   it('should add tabstrip additional classes if tablistAdditionalClasses has a value', () => {
     component.tablistAdditionalClasses = 'sprk-u-man';
     fixture.detectChanges();
-    expect(element.querySelector('.sprk-c-Tabs__buttons').classList.toString()).toEqual('sprk-c-Tabs__buttons sprk-u-man');
+    expect(
+      element.querySelector('.sprk-c-Tabs__buttons').classList.toString(),
+    ).toEqual('sprk-c-Tabs__buttons sprk-u-man');
   });
 
   it('should create an id for each tab', () => {
     expect(testTab1.id).toContain('tabs');
     expect(testTab2.id).toContain('tabs');
+    expect(testTab3.id).toContain('tabs');
     expect(testTab1.id).not.toEqual(testTab2.id);
   });
 
   it('should create an id for each panel', () => {
     expect(testPanel1.id).toContain('tabs');
     expect(testPanel2.id).toContain('tabs');
+    expect(testPanel3.id).toContain('tabs');
     expect(testPanel1.id).not.toEqual(testPanel2.id);
   });
 
   it('should set aria-controls on each tab', () => {
     expect(testTab1.getAttribute('aria-controls')).toEqual(testPanel1.id);
     expect(testTab2.getAttribute('aria-controls')).toEqual(testPanel2.id);
+    expect(testTab3.getAttribute('aria-controls')).toEqual(testPanel3.id);
   });
 
   it('should set aria-labelledby on each panel', () => {
     expect(testPanel1.getAttribute('aria-labelledby')).toEqual(testTab1.id);
     expect(testPanel2.getAttribute('aria-labelledby')).toEqual(testTab2.id);
+    expect(testPanel3.getAttribute('aria-labelledby')).toEqual(testTab3.id);
   });
 
   it('should change which tab / panel is active if a non-active tab is clicked', () => {
@@ -163,8 +169,9 @@ describe('SprkTabsComponent', () => {
   });
 
   it('resizing should set the aria-orientation correctly', () => {
+    jest.spyOn(component, 'ariaOrientation').mockImplementation(() => {});
     window.dispatchEvent(new Event('resize'));
-    expect(testElement.hasAttribute('aria-orientation')).toEqual(true);
+    expect(component.ariaOrientation).toHaveBeenCalled();
   });
 
   it('should move focus into the active panel when tab is pressed and the target is a button', () => {
@@ -179,7 +186,8 @@ describe('SprkTabsComponent', () => {
   });
 
   it('should not break when initializing with no buttons or panels', () => {
-    const test = component.getContentRelationships();
+    component.getContentRelationships();
+    expect(component).toBeTruthy();
   });
 
   it('should return null if tab does not contain custom active class', () => {
