@@ -49,32 +49,32 @@ export const defaultStory = () => ({
       <button
         sprkTabsButton
         analyticsString="Tab: 1"
-        data-id="tab-1"
+        idString="tab-1"
       >
         Tab 1
       </button>
       <button
         sprkTabsButton
-        data-id="tab-2"
-        [isDefaultActive]=true
+        idString="tab-2"
+        [isDefaultActive]="true"
       >
         Tab 2
       </button>
       <button
         sprkTabsButton
-        data-id="tab-3"
+        idString="tab-3"
       >
         Tab 3
       </button>
       <div sprkTabsPanel>
-        <p>Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p sprkText variant="bodyTwo">Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
-      <div [isDefaultActive]=true sprkTabsPanel>
-        <p>Tab 2 Content Sed quis rhoncus ipsum. Nulla euismod nisi est, vel
+      <div [isDefaultActive]="true" sprkTabsPanel>
+        <p sprkText variant="bodyTwo">Tab 2 Content Sed quis rhoncus ipsum. Nulla euismod nisi est, vel
         consequat ante consectetur in.</p>
       </div>
       <div sprkTabsPanel>
-        <p>Tab 3 Content Ut interdum dictum est at ornare. Nam nec dapibus nibh.
+        <p sprkText variant="bodyTwo">Tab 3 Content Ut interdum dictum est at ornare. Nam nec dapibus nibh.
         Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
       </div>
     </sprk-tabs>
@@ -107,35 +107,35 @@ export const deprecated = () => ({
       <button
         sprkTabbedNavigationTab
         analyticsString="Tab: 1"
-        data-id="tab-1"
+        idString="tab-1"
       >
         Tab 1
       </button>
       <button
         sprkTabbedNavigationTab
-        data-id="tab-2"
-        [defaultActive]=true
+        idString="tab-2"
+        [defaultActive]="true"
       >
         Tab 2
       </button>
       <button
         sprkTabbedNavigationTab
-        data-id="tab-3"
+        idString="tab-3"
       >
         Tab 3
       </button>
       <div sprkTabbedNavigationPanel>
-        <p>Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
+        <p sprkText variant="bodyTwo">Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
         euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
         Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
       </div>
-      <div [defaultActive]=true sprkTabbedNavigationPanel>
-        <p>Tab 2 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
+      <div [defaultActive]="true" sprkTabbedNavigationPanel>
+        <p sprkText variant="bodyTwo">Tab 2 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
         euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
         Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
       </div>
       <div sprkTabbedNavigationPanel>
-        <p>Tab 3 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
+        <p sprkText variant="bodyTwo">Tab 3 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rhoncus ipsum. Nulla
         euismod nisi est, vel consequat ante consectetur in. Ut interdum dictum est at ornare. Nam nec dapibus nibh.
         Integer venenatis ex eu mi euismod, non ultricies lacus venenatis.</p>
       </div>
