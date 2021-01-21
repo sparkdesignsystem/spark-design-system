@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
-import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
-import { SprkTabbedNavigationComponent } from './sprk-tabbed-navigation.component';
+import { SprkTabsPanelDirective } from '../../directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
+import { SprkTabsButtonDirective } from '../../directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.directive';
+import { SprkTabsComponent } from './sprk-tabs.component';
 
 @Component({
   selector: 'sprk-test',
   template: `
-    <sprk-tabbed-navigation>
-      <button sprkTabbedNavigationTab>Tab 1</button>
-      <button sprkTabbedNavigationTab [defaultActive]="true">Tab 2</button>
-      <button sprkTabbedNavigationTab>Tab 3</button>
-      <div sprkTabbedNavigationPanel>Tab1 Content</div>
-      <div sprkTabbedNavigationPanel [defaultActive]="true">Tab2 Content</div>
-      <div sprkTabbedNavigationPanel>Tab3 Content</div>
-    </sprk-tabbed-navigation>
+    <sprk-tabs>
+      <button sprkTabsButton>Tab 1</button>
+      <button sprkTabsButton [isDefaultActive]="true">Tab 2</button>
+      <button sprkTabsButton>Tab 3</button>
+      <div sprkTabsPanel>Tab1 Content</div>
+      <div sprkTabsPanel [isDefaultActive]="true">Tab2 Content</div>
+      <div sprkTabsPanel>Tab3 Content</div>
+    </sprk-tabs>
   `,
 })
 class TestComponent {}
@@ -24,18 +24,18 @@ class TestComponent {}
   template: `
     <div>
       <button class="changeButton" (click)="changeMe()">Change Content</button>
-      <sprk-tabbed-navigation idString="tabs-1">
+      <sprk-tabs idString="tabs-1">
         <button
           *ngFor="let item of list; let i = index"
-          sprkTabbedNavigationTab
+          sprkTabsButton
           analyticsString="Tab: {{ i }}"
         >
           {{ item }}
         </button>
-        <div sprkTabbedNavigationPanel *ngFor="let item of list; let i = index">
+        <div sprkTabsPanel *ngFor="let item of list; let i = index">
           <p>{{ item }}</p>
         </div>
-      </sprk-tabbed-navigation>
+      </sprk-tabs>
     </div>
   `,
 })
@@ -47,9 +47,9 @@ class DynamicComponent {
   }
 }
 
-describe('SprkTabbedNavigationComponent', () => {
-  let component: SprkTabbedNavigationComponent;
-  let fixture: ComponentFixture<SprkTabbedNavigationComponent>;
+describe('SprkTabsComponent', () => {
+  let component: SprkTabsComponent;
+  let fixture: ComponentFixture<SprkTabsComponent>;
   let element: HTMLElement;
 
   let dynamicTestComponent;
@@ -68,27 +68,25 @@ describe('SprkTabbedNavigationComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        SprkTabbedNavigationComponent,
+        SprkTabsComponent,
         TestComponent,
         DynamicComponent,
-        SprkTabbedNavigationPanelDirective,
-        SprkTabbedNavigationTabDirective,
+        SprkTabsPanelDirective,
+        SprkTabsButtonDirective,
       ],
     }).compileComponents();
   });
 
   beforeEach(() => {
+    fixture = TestBed.createComponent(SprkTabsComponent);
+    component = fixture.componentInstance;
+
     testFixture = TestBed.createComponent(TestComponent);
     testComponent = testFixture.componentInstance;
-
-    fixture = TestBed.createComponent(SprkTabbedNavigationComponent);
-    component = fixture.componentInstance;
     testFixture.detectChanges();
 
     element = fixture.nativeElement.querySelector('div');
-    testElement = testFixture.nativeElement.querySelector(
-      'sprk-tabbed-navigation',
-    );
+    testElement = testFixture.nativeElement.querySelector('sprk-tabs');
 
     testTab1 = testElement.querySelectorAll('.sprk-c-Tabs__button')[0];
     testTab2 = testElement.querySelectorAll('.sprk-c-Tabs__button')[1];
@@ -112,17 +110,25 @@ describe('SprkTabbedNavigationComponent', () => {
     expect(element.classList.toString()).toEqual('sprk-c-Tabs sprk-u-man');
   });
 
+  it('should add tabstrip additional classes if tablistAdditionalClasses has a value', () => {
+    component.tablistAdditionalClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Tabs__buttons').classList.toString(),
+    ).toEqual('sprk-c-Tabs__buttons sprk-u-man');
+  });
+
   it('should create an id for each tab', () => {
-    expect(testTab1.id).toContain('tabbed-navigation');
-    expect(testTab2.id).toContain('tabbed-navigation');
-    expect(testTab3.id).toContain('tabbed-navigation');
+    expect(testTab1.id).toContain('tabs');
+    expect(testTab2.id).toContain('tabs');
+    expect(testTab3.id).toContain('tabs');
     expect(testTab1.id).not.toEqual(testTab2.id);
   });
 
   it('should create an id for each panel', () => {
-    expect(testPanel1.id).toContain('tabbed-navigation');
-    expect(testPanel2.id).toContain('tabbed-navigation');
-    expect(testPanel3.id).toContain('tabbed-navigation');
+    expect(testPanel1.id).toContain('tabs');
+    expect(testPanel2.id).toContain('tabs');
+    expect(testPanel3.id).toContain('tabs');
     expect(testPanel1.id).not.toEqual(testPanel2.id);
   });
 
@@ -179,12 +185,53 @@ describe('SprkTabbedNavigationComponent', () => {
     expect(testPanel2.focus).toHaveBeenCalled();
   });
 
-  it('should return null if tab does not contain active class', () => {
+  it('should not break when initializing with no buttons or panels', () => {
+    component.getContentRelationships();
+    expect(component).toBeTruthy();
+  });
+
+  it('should return null if tab does not contain custom active class', () => {
     const test = component.getActiveTabIndex(
       [document.createElement('div')],
       'hello',
     );
     expect(test).toBe(null);
+  });
+
+  it('should return null if tab does not contain active class', () => {
+    const test = component.getActiveTabIndex(
+      [document.createElement('div')],
+      undefined,
+    );
+    expect(test).toBe(null);
+  });
+
+  it('should select tab even if panel does not exist', () => {
+    const noPanelButton = document.createElement('div');
+
+    component.setActiveTab(noPanelButton, undefined, undefined);
+    fixture.detectChanges();
+    expect(noPanelButton.hasAttribute('aria-selected')).toEqual(true);
+  });
+
+  it('should reset tabs with custom activeClass', () => {
+    let testButton = document.createElement('div');
+    testButton.classList.add('testClass');
+
+    component.resetTabs([testButton], [], 'testClass');
+    fixture.detectChanges();
+    expect(testButton.classList.contains('testClass')).toEqual(false);
+  });
+
+  it('should reset tabs with default activeClass', () => {
+    let testButton = document.createElement('div');
+    testButton.classList.add('sprk-c-Tabs__button--active');
+
+    component.resetTabs([testButton], [], undefined);
+    fixture.detectChanges();
+    expect(
+      testButton.classList.contains('sprk-c-Tabs__button--active'),
+    ).toEqual(false);
   });
 
   it('should move focus into the active panel when tab is pressed and the target is not role=tab', () => {
@@ -228,6 +275,19 @@ describe('SprkTabbedNavigationComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(element.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should add data-analytics when analyticsString has a value', () => {
+    const testString = 'element-id';
+    component.analyticsString = testString;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-analytics')).toEqual(testString);
+  });
+
+  it('should not add data-analytics when analyticsString has no value', () => {
+    component.analyticsString = null;
+    fixture.detectChanges();
+    expect(element.getAttribute('data-analytics')).toBeNull();
   });
 
   it('the right arrow key should do nothing if all tabs to the right are disabled', () => {
@@ -318,7 +378,8 @@ describe('SprkTabbedNavigationComponent', () => {
     fixture.detectChanges();
     const event: Event = new Event('keydown', { bubbles: true });
     event['keyCode'] = 10;
-    testElement.dispatchEvent(event);
+    testTab1.dispatchEvent(event);
+    fixture.detectChanges();
     expect(component.incrementTab).toBeCalledTimes(0);
     expect(component.goToEndTab).toBeCalledTimes(0);
   });

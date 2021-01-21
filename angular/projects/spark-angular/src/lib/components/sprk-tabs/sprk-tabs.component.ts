@@ -8,29 +8,30 @@ import {
   QueryList,
   Renderer2,
 } from '@angular/core';
-import * as _ from 'lodash';
-import { SprkTabbedNavigationPanelDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.directive';
-import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.directive';
+import { uniqueId } from 'lodash';
+import { SprkTabsPanelDirective } from '../../directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
+import { SprkTabsButtonDirective } from '../../directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.directive';
 
 @Component({
-  selector: 'sprk-tabbed-navigation',
+  selector: 'sprk-tabs',
   template: `
-    <div [ngClass]="getClasses()" [attr.data-id]="idString">
-      <div class="sprk-c-Tabs__buttons" role="tablist">
-        <ng-content select="[sprkTabbedNavigationTab]"></ng-content>
+    <div
+      [ngClass]="getClasses()"
+      [attr.data-id]="idString"
+      [attr.data-analytics]="analyticsString"
+    >
+      <div
+        [ngClass]="getTablistClasses()"
+        role="tablist"
+      >
+        <ng-content select="[sprkTabsButton]"></ng-content>
       </div>
-      <ng-content select="[sprkTabbedNavigationPanel]"></ng-content>
+      <ng-content select="[sprkTabsPanel]"></ng-content>
       <ng-content></ng-content>
     </div>
   `,
 })
-/**
- * @deprecate This component will be removed in
- * a future release in favor of the `sprk-tabs` component.
- * Please use the `sprk-tabs` component.
- * TODO: Remove this component as part of Issue 1378.
- */
-export class SprkTabbedNavigationComponent implements AfterContentInit {
+export class SprkTabsComponent implements AfterContentInit {
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -38,6 +39,13 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * tablist element.
+   */
+  @Input()
+  tablistAdditionalClasses: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -49,23 +57,31 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   @Input()
   idString: string;
   /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
+  @Input()
+  analyticsString: string;
+  /**
    * This component expects children `<button>` elements
-   * with the `SprkTabbedNavigationTabDirective` on them.
+   * with the `SprkTabsButtonDirective` on them.
    * These serve as the Tabs.
    */
-  @ContentChildren(SprkTabbedNavigationTabDirective)
-  tabs: QueryList<SprkTabbedNavigationTabDirective>;
+  @ContentChildren(SprkTabsButtonDirective)
+  tabs: QueryList<SprkTabsButtonDirective>;
   /**
    * This component expects children `<div>` elements
-   * with the `SprkTabbedNavigationPanelDirective` on them.
+   * with the `SprkTabsPanelDirective` on them.
    * These serve as the Panels.
    */
-  @ContentChildren(SprkTabbedNavigationPanelDirective)
-  panels: QueryList<SprkTabbedNavigationPanelDirective>;
+  @ContentChildren(SprkTabsPanelDirective)
+  panels: QueryList<SprkTabsPanelDirective>;
   /**
    * @ignore
    */
-  componentID = _.uniqueId();
+  componentID = uniqueId();
   /**
    * @ignore
    */
@@ -164,14 +180,32 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     return classArray.join(' ');
   }
 
+  /**
+   * @ignore
+   */
+  getTablistClasses(): string {
+    const classArray: string[] = ['sprk-c-Tabs__buttons'];
+
+    if (this.tablistAdditionalClasses) {
+      this.tablistAdditionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
   getContentRelationships(): void {
     let tabIDs = [];
     let panelIDs = [];
 
     if (this.tabs && this.panels) {
       this.tabs.forEach((tab, index) => {
-        const tabID = `tabbed-navigation-${this.componentID}-tab-${index}`;
-        const panelID = `tabbed-navigation-${this.componentID}-panel-${index}`;
+        const tabID = `tabs-${this.componentID}-tab-${index}`;
+        const panelID = `tabs-${this.componentID}-panel-${index}`;
 
         this.renderer.setAttribute(tab.ref.nativeElement, 'id', tabID);
         this.renderer.setAttribute(
@@ -219,9 +253,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
   ariaOrientation(width, element) {
     // switch aria-orientation on mobile (based on _tabs.scss breakpoint)
     if (width <= 736) {
-      element.setAttribute('aria-orientation', 'vertical');
+      this.renderer.setAttribute(element, 'aria-orientation', 'vertical');
     } else {
-      element.setAttribute('aria-orientation', 'horizontal');
+      this.renderer.setAttribute(element, 'aria-orientation', 'horizontal');
     }
   }
 
@@ -246,11 +280,14 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    */
   resetTabs(tabs, tabpanels, activeClass) {
     tabs.forEach((tab) => {
-      tab.classList.remove(activeClass || 'sprk-c-Tabs__button--active');
-      tab.removeAttribute('tabindex');
-      tab.setAttribute('aria-selected', 'false');
+      this.renderer.removeClass(
+        tab,
+        activeClass || 'sprk-c-Tabs__button--active',
+      );
+      this.renderer.removeAttribute(tab, 'tabindex');
+      this.renderer.setAttribute(tab, 'aria-selected', 'false');
       tabpanels.forEach((panel) => {
-        panel.classList.add('sprk-u-HideWhenJs');
+        this.renderer.addClass(panel, 'sprk-u-HideWhenJs');
       });
     });
   }
@@ -293,6 +330,9 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
     this.setActiveTab(tabs[activeIndex], tabpanels[activeIndex], activeClass);
   }
 
+  /**
+   * @ignore
+   */
   goToEndTab(tabs, tabpanels, activeClass, direction) {
     let newActiveIndex;
 
@@ -332,11 +372,11 @@ export class SprkTabbedNavigationComponent implements AfterContentInit {
    * @ignore
    */
   setActiveTab(tab, tabpanel, activeClass) {
-    tab.classList.add(activeClass || 'sprk-c-Tabs__button--active');
-    tab.setAttribute('tabindex', '0');
-    tab.setAttribute('aria-selected', 'true');
+    this.renderer.addClass(tab, activeClass || 'sprk-c-Tabs__button--active');
+    this.renderer.setAttribute(tab, 'tabindex', '0');
+    this.renderer.setAttribute(tab, 'aria-selected', 'true');
     if (tabpanel) {
-      tabpanel.classList.remove('sprk-u-HideWhenJs');
+      this.renderer.removeClass(tabpanel, 'sprk-u-HideWhenJs');
     }
     tab.focus();
   }
