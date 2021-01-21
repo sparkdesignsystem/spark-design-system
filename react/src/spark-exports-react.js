@@ -9,6 +9,7 @@ export { default as SprkFlag } from './components/flag/SprkFlag';
 export { default as SprkHighlightBoard } from './components/highlight-board/SprkHighlightBoard';
 export { default as SprkIcon } from './components/icons/SprkIcon';
 export { default as SprkTextInput } from './base/inputs/SprkTextInput/SprkTextInput';
+export { default as SprkTextarea } from './base/inputs/SprkTextarea/SprkTextarea';
 export { default as SprkRevealInput } from './base/inputs/SprkRevealInput/SprkRevealInput';
 export { default as SprkSelectionInput } from './base/inputs/SprkSelectionInput/SprkSelectionInput';
 export { default as SprkCheckboxGroup } from './base/inputs/SprkCheckbox/SprkCheckboxGroup/SprkCheckboxGroup';
