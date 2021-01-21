@@ -147,7 +147,7 @@ class SprkDropdown extends Component {
                   sprk-c-Icon--stroke-current-color
                   sprk-u-mls
                 "
-                iconName="chevron-down"
+                iconName={iconName}
               />
             </>
           )}
