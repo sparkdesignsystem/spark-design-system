@@ -74,9 +74,18 @@
         "file": "settings",
         "themable": true
       },
+      "bottom-color": {
+        "comment": "The border color of the underline on Links",
+        "value": "{purple.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "bottom": {
         "comment": "The style of the underline on Links.",
-        "value": "{link.underline.width.value} {link.border.bottom-style.value} {purple.value}",
+        "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.border.bottom-color.value}",
         "attributes": {
           "category": "content"
         },
