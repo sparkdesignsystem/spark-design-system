@@ -3,12 +3,13 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkTextarea from './SprkTextarea/SprkTextarea';
 import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import SprkLabel from './SprkLabel/SprkLabel';
+import SprkHelperText from './SprkHelperText/SprkHelperText';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Textarea',
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
-  component: SprkTextInput,
+  component: SprkTextarea,
   parameters: {
     jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
@@ -18,7 +19,11 @@ export default {
 export const textarea = () => (
   <>
     <SprkLabel htmlFor="sprk-textarea">Description</SprkLabel>
-    <SprkTextarea id="sprk-textarea" additionalClasses="sprk-u-Width-100" />
+    <SprkTextarea
+      name="textarea"
+      id="sprk-textarea"
+      additionalClasses="sprk-u-Width-100"
+    />
   </>
 );
 
@@ -29,13 +34,34 @@ textarea.story = {
   },
 };
 
+export const textareaHelperText = () => (
+  <>
+    <SprkLabel htmlFor="sprk-textarea-helper">Description</SprkLabel>
+    <SprkTextarea
+      name="textarea-helper"
+      id="sprk-textarea-helper"
+      additionalClasses="sprk-u-Width-100"
+    />
+    <SprkHelperText>Helper text for this field.</SprkHelperText>
+  </>
+);
+
+textareaHelperText.story = {
+  name: 'Default Helper Text',
+  parameters: {
+    jest: ['SprkTextarea', 'SprkLabel'],
+  },
+};
+
 export const invalidTextarea = () => (
   <>
     <SprkLabel htmlFor="sprk-textarea-invalid">Description</SprkLabel>
     <SprkTextarea
+      name="textarea-invalid"
       id="sprk-textarea-invalid"
       additionalClasses="sprk-u-Width-100"
       isValid={false}
+      ariaDescribedBy="invalid-error"
     />
     <SprkErrorContainer
       id="invalid-error"
@@ -49,18 +75,18 @@ export const invalidTextarea = () => (
 invalidTextarea.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkTextarea', 'SprkErrorContainer'],
+    jest: ['SprkTextarea', 'SprkErrorContainer', 'SprkLabel'],
   },
 };
 
-// Had to comment out because it breaks SB left uncommented
 export const disabledTextarea = () => (
   <>
-    <SprkLabel isDisabled htmlFor="sprk-textarea">
+    <SprkLabel isDisabled htmlFor="sprk-textarea-disabled">
       Description
     </SprkLabel>
     <SprkTextarea
-      id="sprk-textarea"
+      id="sprk-textarea-disabled"
+      name="textarea-disabled"
       additionalClasses="sprk-u-Width-100"
       isDisabled
     />
