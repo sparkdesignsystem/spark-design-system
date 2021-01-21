@@ -463,4 +463,28 @@ describe('SprkDropdown:', () => {
       );
     },
   );
+
+  it('should call openedEvent when the dropdown is opened', () => {
+    const myMock = jest.fn();
+
+    const wrapper = mount(<SprkDropdown openedEvent={myMock} />);
+
+    expect(wrapper.state().isOpen).toBe(false);
+    wrapper.find('.sprk-b-Link').simulate('click');
+    expect(wrapper.state().isOpen).toBe(true);
+
+    expect(myMock.mock.calls.length).toBe(1);
+  });
+
+  it('should call openedEvent when the dropdown is closed', () => {
+    const myMock = jest.fn();
+
+    const wrapper = mount(<SprkDropdown closedEvent={myMock} />);
+
+    expect(wrapper.state().isOpen).toBe(false);
+    wrapper.find('.sprk-b-Link').simulate('click');
+    expect(myMock.mock.calls.length).toBe(0);
+    wrapper.instance().closeOnEsc({ key: 'Escape' });
+    expect(myMock.mock.calls.length).toBe(1);
+  });
 });

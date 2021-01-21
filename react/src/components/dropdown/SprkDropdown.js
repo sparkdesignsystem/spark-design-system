@@ -80,9 +80,15 @@ class SprkDropdown extends Component {
 
   toggleDropdownOpen(e) {
     e.preventDefault();
+    const { openedEvent } = this.props;
+
     this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
     }));
+
+    if (openedEvent) {
+      openedEvent();
+    }
   }
 
   closeOnEsc(e) {
@@ -98,9 +104,15 @@ class SprkDropdown extends Component {
   }
 
   closeDropdown() {
+    const { closedEvent } = this.props;
+
     this.setState({
       isOpen: false,
     });
+
+    if (closedEvent) {
+      closedEvent();
+    }
   }
 
   // TODO: Remove deprecated props as part of Issue XXXX
@@ -378,6 +390,14 @@ SprkDropdown.propTypes = {
    * The variant of the Dropdown to render.
    */
   variant: PropTypes.oneOf(['base', 'informational']),
+  /**
+   * A function to be called when the dropdown is toggled open.
+   */
+  openedEvent: PropTypes.func,
+  /**
+   * A function to be called when the dropdown is toggled closed.
+   */
+  closedEvent: PropTypes.func,
 };
 
 SprkDropdown.defaultProps = {
