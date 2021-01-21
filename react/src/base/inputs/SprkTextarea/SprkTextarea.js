@@ -12,6 +12,8 @@ const SprkTextarea = (props) => {
     idString,
     isDisabled,
     id,
+    value,
+    formatter,
     ariaDescribedBy,
     isValid,
     ...rest
@@ -19,11 +21,14 @@ const SprkTextarea = (props) => {
 
   return (
     <textarea
-      className={classNames('sprk-b-TextArea', additionalClasses)}
+      className={classNames('sprk-b-TextArea', additionalClasses, {
+        'sprk-b-TextArea--error': !isValid,
+      })}
       id={id}
       disabled={isDisabled}
       ref={forwardedRef}
       data-id={idString}
+      value={isValid && formatter(value) ? formatter(value) : value}
       data-analytics={analyticsString}
       aria-invalid={!isValid}
       aria-describedby={ariaDescribedBy}
@@ -82,9 +87,21 @@ SprkTextarea.propTypes = {
    * Will render the component in it's disabled state.
    */
   isDisabled: PropTypes.bool,
+  /**
+   * A function supplied will be passed the value of the
+   * textarea and then executed, if the valid prop is true. The value
+   * returned will be assigned to the value of the textarea.
+   */
+  formatter: PropTypes.func,
+  /**
+   * 	Assigned to the `value` attribute
+   *  of the rendered input element.
+   */
+  value: PropTypes.string,
 };
 
 SprkTextarea.defaultProps = {
+  formatter: (value) => value,
   forwardedRef: React.createRef(),
   isValid: true,
   id: uniqueId('sprk-'),
