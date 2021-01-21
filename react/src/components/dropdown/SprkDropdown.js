@@ -121,6 +121,7 @@ class SprkDropdown extends Component {
       title,
       heading = title,
       variant,
+      ...rest
     } = this.props;
     const { choiceFunction, footer } = choices;
     const { choiceItems, isOpen, triggerText } = this.state;
@@ -140,6 +141,7 @@ class SprkDropdown extends Component {
           data-analytics={analyticsString || 'undefined'}
           data-id={idString || 'undefined'}
           onClick={this.toggleDropdownOpen}
+          {...rest}
         >
           {variant === 'informational' && (
             <>
@@ -195,7 +197,7 @@ class SprkDropdown extends Component {
                   value,
                   // eslint-disable-next-line no-shadow
                   idString,
-                  ...rest
+                  ...choicesRest
                 } = choice;
                 const TagName = element || 'a';
                 return (
@@ -218,7 +220,7 @@ class SprkDropdown extends Component {
                           }
                         }}
                         data-id={idString}
-                        {...rest}
+                        {...choicesRest}
                       >
                         {text}
                       </TagName>
@@ -238,7 +240,7 @@ class SprkDropdown extends Component {
                               choiceFunction(value);
                             }
                           }}
-                          {...rest}
+                          {...choicesRest}
                         >
                           <p className="sprk-b-TypeBodyOne">{content.title}</p>
                           <p className="sprk-b-TypeBodyTwo">
