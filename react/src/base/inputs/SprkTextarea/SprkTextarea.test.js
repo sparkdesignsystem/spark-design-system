@@ -16,6 +16,16 @@ describe('SprkTextInput:', () => {
     expect(wrapper.find('.sprk-b-TextArea.sprk-u-mbm').length).toBe(1);
   });
 
+  it('should add error class when isValid is false', () => {
+    const wrapper = mount(<SprkTextarea isValid={false} />);
+    expect(wrapper.find('.sprk-b-TextArea--error').length).toBe(1);
+  });
+
+  it('should not add error class when isValid is true', () => {
+    const wrapper = mount(<SprkTextarea isValid />);
+    expect(wrapper.find('.sprk-b-TextArea--error').length).toBe(0);
+  });
+
   it('should add disabled attribute isDisabled is true', () => {
     const wrapper = mount(<SprkTextarea isDisabled />);
     expect(wrapper.find('textarea[disabled]').length).toBe(1);
