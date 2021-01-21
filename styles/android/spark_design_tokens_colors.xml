@@ -83,13 +83,13 @@
   <color name="sprk_link_color">#ff603aa1</color><!-- The default color on Links. -->
   <color name="sprk_link_underline_color">#ff603aa1</color><!-- The color of the underline on Links. -->
   <color name="sprk_link_underline_visited_color">#ff8d8d8c</color><!-- The color of the underline on visited Links. -->
-  <color name="sprk_link_border_bottom_color">#ff603aa1</color><!-- The border color of the underline on Links -->
+  <color name="sprk_link_border_bottom_color">#ff603aa1</color><!-- The border color of the underline on Links. -->
   <color name="sprk_link_hover_color">#ff2e1166</color><!-- The color of Links on hover. -->
   <color name="sprk_link_simple_color">#ff1c1b1a</color><!-- The color value of Simple Links. -->
   <color name="sprk_link_simple_hover_color">#ff1c1b1a</color><!-- The color of Simple Links on hover. -->
   <color name="sprk_link_simple_hover_underline_color">#ffc8102e</color><!-- The underline color value of Simple Links on hover. -->
   <color name="sprk_link_light_color">#ffffffff</color><!-- The color value of Light Links. -->
-  <color name="sprk_link_light_hover_color">#ffffffff</color><!-- The color of Light Links on hover -->
+  <color name="sprk_link_light_hover_color">#ffffffff</color><!-- The color of Light Links on hover. -->
   <color name="sprk_link_light_hover_underline_color">#ffffffff</color><!-- The underline color value of Light Links on hover. -->
   <color name="sprk_link_has_icon_color_icon">#ff603aa1</color><!-- The color of icons in Links containing icons. -->
   <color name="sprk_link_has_icon_hover_color_text">#ff2e1166</color><!-- The color value for Links with icons in the hover state. -->

@@ -75,7 +75,7 @@
         "themable": true
       },
       "bottom-color": {
-        "comment": "The border color of the underline on Links",
+        "comment": "The border color of the underline on Links.",
         "value": "{purple.value}",
         "attributes": {
           "category": "color"
@@ -237,7 +237,7 @@
           "themable": true
         },
         "color": {
-          "comment": "The color of Light Links on hover",
+          "comment": "The color of Light Links on hover.",
           "value": "{white.value}",
           "attributes": {
             "category": "color"
