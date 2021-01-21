@@ -40,9 +40,9 @@ export const defaultStory = () => (
         },
       ],
     }}
+    heading="My Choices"
     iconName="settings"
-    title="My Choices"
-    additionalIconClasses="sprk-c-Icon--l"
+    iconAdditionalClasses="sprk-c-Icon--l"
   />
 );
 
@@ -53,7 +53,7 @@ defaultStory.story = {
 export const informational = () => (
   <SprkDropdown
     variant="informational"
-    title="My Choices"
+    heading="My Choices"
     choices={{
       choiceFunction: (choiceText) => {
         console.log(choiceText);

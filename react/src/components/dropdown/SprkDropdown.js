@@ -103,18 +103,23 @@ class SprkDropdown extends Component {
     });
   }
 
+  // TODO: Remove deprecated props as part of Issue XXXX
   render() {
     const {
       additionalClasses,
       additionalIconClasses,
+      iconAdditionalClasses = additionalIconClasses,
       additionalTriggerClasses,
+      triggerAdditionalClasses = additionalTriggerClasses,
       additionalTriggerTextClasses,
+      triggerTextAdditionalClasses = additionalTriggerTextClasses,
       analyticsString,
       choices,
       iconName,
       idString,
       screenReaderText,
       title,
+      heading = title,
       variant,
     } = this.props;
     const { choiceFunction, footer } = choices;
@@ -127,7 +132,7 @@ class SprkDropdown extends Component {
           additionalClasses={classNames(
             'sprk-c-Dropdown__trigger',
             { 'sprk-u-mrs': variant === 'informational' },
-            additionalTriggerClasses,
+            triggerAdditionalClasses,
           )}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
@@ -156,28 +161,28 @@ class SprkDropdown extends Component {
               <span
                 className={classNames(
                   'sprk-u-ScreenReaderText',
-                  additionalTriggerTextClasses,
+                  triggerTextAdditionalClasses,
                 )}
               >
                 {screenReaderText}
               </span>
               <SprkIcon
                 iconName={iconName}
-                additionalClasses={additionalIconClasses}
+                additionalClasses={iconAdditionalClasses}
               />
             </>
           )}
         </SprkLink>
         {isOpen && (
           <div className={classNames('sprk-c-Dropdown', additionalClasses)}>
-            {title !== '' && (
+            {heading !== '' && (
               <div className="sprk-c-Dropdown__header">
-                <h2 className="sprk-c-Dropdown__title">{title}</h2>
+                <h2 className="sprk-c-Dropdown__title">{heading}</h2>
               </div>
             )}
             <ul
               className="sprk-c-Dropdown__links"
-              aria-label={title || screenReaderText || 'My Choices'}
+              aria-label={heading || screenReaderText || 'My Choices'}
               role="listbox"
             >
               {choiceItems.map((choice) => {
@@ -268,16 +273,36 @@ SprkDropdown.propTypes = {
    * container of the component.
    */
   additionalClasses: PropTypes.string,
+  // TODO remove as part of issue XXXX
   /**
+   * Deprecated - use `iconAdditionalClasses` instead.
    * A space-separated string of classes to add to the icon.
    */
   additionalIconClasses: PropTypes.string,
   /**
+   * A space-separated string of classes to add to the icon.
+   */
+  iconAdditionalClasses: PropTypes.string,
+  // TODO remove as part of issue XXXX
+  /**
+   * Deprecated - use `triggerAdditionalClasses` instead.
    * A space-separated string of classes
    * to add to the trigger element.
    */
   additionalTriggerClasses: PropTypes.string,
   /**
+   * A space-separated string of classes
+   * to add to the trigger element.
+   */
+  triggerAdditionalClasses: PropTypes.string,
+  /**
+   * A space-separated string of classes
+   * to add to the trigger text.
+   */
+  triggerTextAdditionalClasses: PropTypes.string,
+  // TODO remove as part of issue XXXX
+  /**
+   * Deprecated - use `triggerTextAdditionalClasses` instead.
    * A space-separated string of classes
    * to add to the trigger text.
    */
@@ -331,15 +356,22 @@ SprkDropdown.propTypes = {
   /**
    * A value for screen readers when there isn't
    * discernable text on the dropdown.
-   * Useful for when the `title` prop is empty
+   * Useful for when the `heading` prop is empty
    * and the Dropdown trigger is only an icon.
    */
   screenReaderText: PropTypes.string,
+  // TODO remove as part of issue XXXX
   /**
+   * Deprecated - use `heading` instead.
    * The text of the optional header above the
    * choices in the dropdown.
    */
   title: PropTypes.string,
+  /**
+   * The text of the optional header above the
+   * choices in the dropdown.
+   */
+  heading: PropTypes.string,
   /**
    * The variant of the Dropdown to render.
    */
