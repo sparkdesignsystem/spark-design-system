@@ -76,7 +76,7 @@
       },
       "bottom": {
         "comment": "The style of the underline on Links.",
-        "value": "{link.underline.width.value} {link.border.bottom-style.value} {link.underline.visited.color.value}",
+        "value": "{link.underline.width.value} {link.border.bottom-style.value} {purple.value}",
         "attributes": {
           "category": "content"
         },
