@@ -151,7 +151,7 @@ class SprkDropdown extends Component {
               />
             </>
           )}
-          {variant === 'base' && (
+          {variant !== 'informational' && (
             <>
               <span
                 className={classNames(
@@ -200,7 +200,7 @@ class SprkDropdown extends Component {
                     role="option"
                     key={choice.id}
                   >
-                    {variant === 'base' && (
+                    {variant !== 'informational' && (
                       <TagName
                         className="sprk-c-Dropdown__link"
                         href={TagName === 'a' ? href || '#' : undefined}
@@ -347,21 +347,11 @@ SprkDropdown.propTypes = {
 };
 
 SprkDropdown.defaultProps = {
-  additionalClasses: '',
-  additionalIconClasses: '',
-  additionalTriggerClasses: '',
-  additionalTriggerTextClasses: '',
-  analyticsString: '',
-  children: [],
   choices: {
     items: [],
   },
   defaultTriggerText: 'Choose One...',
   iconName: 'chevron-down',
-  idString: '',
-  screenReaderText: '',
-  title: '',
-  variant: 'base',
 };
 
 export default SprkDropdown;
