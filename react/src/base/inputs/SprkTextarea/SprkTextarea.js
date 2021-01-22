@@ -3,22 +3,20 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import uniqueId from 'lodash/uniqueId';
 
-const SprkTextarea = (props) => {
-  const {
-    additionalClasses,
-    analyticsString,
-    children,
-    forwardedRef,
-    idString,
-    isDisabled,
-    id,
-    value,
-    formatter,
-    ariaDescribedBy,
-    isValid,
-    ...rest
-  } = props;
-
+const SprkTextarea = ({
+  additionalClasses,
+  analyticsString,
+  children,
+  forwardedRef,
+  idString,
+  isDisabled,
+  id,
+  value,
+  formatter,
+  ariaDescribedBy,
+  isValid,
+  ...rest
+}) => {
   return (
     <textarea
       className={classNames('sprk-b-TextArea', additionalClasses, {
