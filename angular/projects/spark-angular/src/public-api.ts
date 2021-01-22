@@ -246,3 +246,9 @@ export { SprkDividerDirectiveModule } from './lib/directives/sprk-divider/sprk-d
 export { SprkDividerDirective } from './lib/directives/sprk-divider/sprk-divider.directive';
 export { SprkTextareaDirective } from './lib/directives/inputs/sprk-textarea/sprk-textarea.directive';
 export { SprkTextareaModule } from './lib/directives/inputs/sprk-textarea/sprk-textarea.module';
+export { SprkTabsComponent } from './lib/components/sprk-tabs/sprk-tabs.component';
+export { SprkTabsModule } from './lib/components/sprk-tabs/sprk-tabs.module';
+export { SprkTabsPanelDirective } from './lib/directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
+export { SprkTabsPanelModule } from './lib/directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.module';
+export { SprkTabsButtonDirective } from './lib/directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.directive';
+export { SprkTabsButtonModule } from './lib/directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.module';
