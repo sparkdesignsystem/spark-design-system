@@ -6,13 +6,13 @@ import uniqueId from 'lodash/uniqueId';
 const SprkTextarea = ({
   additionalClasses,
   analyticsString,
-  children,
   forwardedRef,
   idString,
   isDisabled,
   id,
   value,
   formatter,
+  onChange,
   ariaDescribedBy,
   isValid,
   ...rest
@@ -27,13 +27,12 @@ const SprkTextarea = ({
       ref={forwardedRef}
       data-id={idString}
       value={isValid && formatter(value) ? formatter(value) : value}
+      onChange={onChange}
       data-analytics={analyticsString}
       aria-invalid={!isValid}
       aria-describedby={ariaDescribedBy}
       {...rest}
-    >
-      {children}
-    </textarea>
+    />
   );
 };
 
@@ -48,10 +47,6 @@ SprkTextarea.propTypes = {
    * unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
-  /**
-   * Content to render inside of the textarea.
-   */
-  children: PropTypes.node,
   /**
    * A ref passed in will be attached to the textarea
    * element of the rendered component.
@@ -92,14 +87,20 @@ SprkTextarea.propTypes = {
    */
   formatter: PropTypes.func,
   /**
-   * 	Assigned to the `value` attribute
-   *  of the rendered input element.
+   * Assigned to the `value` attribute
+   * of the rendered input element.
    */
   value: PropTypes.string,
+  /**
+   * A function that handles the
+   * onChange of the textarea.
+   */
+  onChange: PropTypes.func,
 };
 
 SprkTextarea.defaultProps = {
   formatter: (value) => value,
+  onChange: () => {},
   forwardedRef: React.createRef(),
   isValid: true,
   id: uniqueId('sprk-'),
