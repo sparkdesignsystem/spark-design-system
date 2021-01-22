@@ -133,6 +133,7 @@ class SprkDropdown extends Component {
       title,
       heading = title,
       variant,
+      defaultTriggerText,
       ...rest
     } = this.props;
     const { choiceFunction, footer } = choices;
