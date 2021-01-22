@@ -71,17 +71,13 @@ describe('SprkTextarea:', () => {
 
   it('should run the supplied formatter', () => {
     const formatterFn = jest.fn(() => true);
-    const onBlur = jest.fn();
-    mount(<SprkTextarea formatter={formatterFn} onBlur={onBlur} />);
+    mount(<SprkTextarea formatter={formatterFn} />);
     expect(formatterFn.mock.calls.length).toBe(2);
   });
 
   it('should not run the formatter if the field is invalid', () => {
     const formatterFn = jest.fn(() => true);
-    const onBlur = jest.fn();
-    mount(
-      <SprkTextarea formatter={formatterFn} isValid={false} onBlur={onBlur} />,
-    );
+    mount(<SprkTextarea formatter={formatterFn} isValid={false} />);
     expect(formatterFn.mock.calls.length).toBe(0);
   });
 
@@ -101,5 +97,13 @@ describe('SprkTextarea:', () => {
     expect(
       wrapper.find('textarea').getDOMNode().getAttribute('data-test'),
     ).toBe('testing');
+  });
+
+  it('should run the supplied onChange function', () => {
+    const onChangeMock = jest.fn();
+    const wrapper = mount(<SprkTextarea onChange={onChangeMock} />);
+    const textarea = wrapper.find('textarea');
+    textarea.simulate('change', { target: { value: 'test-value' } });
+    expect(onChangeMock.mock.calls.length).toBe(1);
   });
 });
