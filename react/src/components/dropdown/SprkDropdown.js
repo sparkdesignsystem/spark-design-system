@@ -283,8 +283,7 @@ class SprkDropdown extends Component {
 SprkDropdown.propTypes = {
   /**
    * A space-separated string of
-   * classes to add to the outermost
-   * container of the component.
+   * classes to add to the dropdown.
    */
   additionalClasses: PropTypes.string,
   // TODO remove as part of issue XXXX
