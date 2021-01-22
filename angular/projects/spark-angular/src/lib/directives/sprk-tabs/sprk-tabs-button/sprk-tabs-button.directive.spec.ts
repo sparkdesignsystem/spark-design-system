@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkTabbedNavigationTabDirective } from './sprk-tabbed-navigation-tab.directive';
+import { SprkTabsButtonDirective } from './sprk-tabs-button.directive';
+import { By } from '@angular/platform-browser';
 
 @Component({
   selector: 'sprk-test-component',
   template: `
     <button
       analyticsString="Tab 1"
-      defaultActive="true"
+      idString="Tab idString"
+      isDefaultActive="true"
       id="123"
       additionalClasses="sprk-u-man"
-      sprkTabbedNavigationTab
+      sprkTabsButton
     >
       Tab 1
     </button>
@@ -18,19 +20,23 @@ import { SprkTabbedNavigationTabDirective } from './sprk-tabbed-navigation-tab.d
 })
 class TestComponent {}
 
-describe('Spark Tabbed Navigation Tab Directive', () => {
+describe('Spark Tabs Button Directive', () => {
   let fixture: ComponentFixture<TestComponent>;
   let component: TestComponent;
   let element: HTMLElement;
+  let directiveElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkTabbedNavigationTabDirective, TestComponent],
+      declarations: [SprkTabsButtonDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('button');
+    directiveElement = fixture.debugElement
+      .query(By.directive(SprkTabsButtonDirective))
+      .injector.get(SprkTabsButtonDirective) as SprkTabsButtonDirective;
     fixture.detectChanges();
   });
 
@@ -48,5 +54,19 @@ describe('Spark Tabbed Navigation Tab Directive', () => {
 
   it('should add a value for data-analytics if analyticsString has a value', () => {
     expect(element.getAttribute('data-analytics')).toEqual('Tab 1');
+  });
+
+  it('should add a value for data-id if idString has a value', () => {
+    expect(element.getAttribute('data-id')).toEqual('Tab idString');
+  });
+
+  it('should call custom button click event', (done) => {
+    let called = false;
+    directiveElement.tabClick.subscribe((g) => {
+      called = true;
+      done();
+    });
+    element.click();
+    expect(called).toEqual(true);
   });
 });
