@@ -1,11 +1,11 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkTextarea from './SprkTextarea';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkTextInput:', () => {
+describe('SprkTextarea:', () => {
   it('should render a textarea with the correct class', () => {
     const wrapper = mount(<SprkTextarea />);
     expect(wrapper.find('.sprk-b-TextArea').length).toBe(1);
@@ -83,5 +83,23 @@ describe('SprkTextInput:', () => {
       <SprkTextarea formatter={formatterFn} isValid={false} onBlur={onBlur} />,
     );
     expect(formatterFn.mock.calls.length).toBe(0);
+  });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkTextarea data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
+  });
+
+  it('should add forwardedRef to textarea', () => {
+    // Create ref
+    const forwardedRef = React.createRef();
+    // Add ref as prop
+    const wrapper = mount(<SprkTextarea forwardedRef={forwardedRef} />);
+    // Use ref to set an attribute
+    forwardedRef.current.setAttribute('data-test', 'testing');
+    // Check that mounted component received attribute
+    expect(
+      wrapper.find('textarea').getDOMNode().getAttribute('data-test'),
+    ).toBe('testing');
   });
 });
