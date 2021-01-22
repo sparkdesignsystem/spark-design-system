@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import TinyDatePicker from 'tiny-date-picker';
 import assign from 'lodash/assign';
-import SprkInput from '../SprkInput/SprkInput';
+import uniqueId from 'lodash/uniqueId';
 
 class SprkDatePicker extends Component {
   constructor(props) {
+    const { value } = props;
     super(props).datePickerInputRef = React.createRef();
     this.tdpConfig = {
       mode: 'dp-below',
@@ -23,6 +25,16 @@ class SprkDatePicker extends Component {
           })
           .replace(/[^ -~]/g, ''),
     };
+
+    if (value) {
+      this.state = {
+        hasValue: true,
+      };
+    } else {
+      this.state = {
+        hasValue: false,
+      };
+    }
   }
 
   componentDidMount() {
@@ -33,7 +45,6 @@ class SprkDatePicker extends Component {
     );
   }
 
-  // NEED TO FIGURE OUT FORWARDEDREF
   render() {
     const {
       datePickerConfig,
@@ -49,19 +60,32 @@ class SprkDatePicker extends Component {
       id,
       ...rest
     } = this.props;
+    const { hasValue } = this.state;
+
+    // Adds class for IE and Edge
+    const handleOnBlur = (e) => {
+      if (e.target.value.length > 0) {
+        this.setState({ hasValue: true });
+      } else {
+        this.setState({ hasValue: false });
+      }
+    };
+
     return (
-      <SprkInput
-        variant={variant}
-        additionalClasses={additionalClasses}
-        analyticsString={analyticsString}
-        formatter={formatter}
-        idString={idString}
-        isDisabled={isDisabled}
-        isValid={isValid}
-        ariaDescribedBy={ariaDescribedBy}
-        value={value}
-        id={id}
+      <input
+        className={classNames('sprk-b-TextInput', additionalClasses, {
+          'sprk-b-TextInput--error': !isValid,
+          'sprk-b-Input--has-floating-label': hasValue && variant === 'huge',
+        })}
+        disabled={isDisabled}
         forwardedRef={this.datePickerInputRef}
+        aria-describedby={ariaDescribedBy}
+        data-id={idString}
+        data-analytics={analyticsString}
+        aria-invalid={!isValid}
+        value={isValid && formatter(value) ? formatter(value) : value}
+        onBlur={(e) => handleOnBlur(e)}
+        id={id}
         {...rest}
       />
     );
@@ -151,6 +175,10 @@ SprkDatePicker.propTypes = {
 
 SprkDatePicker.defaultProps = {
   datePickerConfig: {},
+  formatter: (value) => value,
+  isValid: true,
+  id: uniqueId('sprk-'),
+  isDisabled: false,
 };
 
 export default SprkDatePicker;
