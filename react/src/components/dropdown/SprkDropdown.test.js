@@ -470,20 +470,55 @@ describe('SprkDropdown:', () => {
     const wrapper = mount(<SprkDropdown openedEvent={myMock} />);
 
     expect(wrapper.state().isOpen).toBe(false);
+
     wrapper.find('.sprk-b-Link').simulate('click');
     expect(wrapper.state().isOpen).toBe(true);
-
     expect(myMock.mock.calls.length).toBe(1);
   });
 
-  it('should call openedEvent when the dropdown is closed', () => {
+  it('should not call openedEvent if the dropdown is already open', () => {
+    const myMock = jest.fn();
+
+    const wrapper = mount(<SprkDropdown openedEvent={myMock} />);
+
+    expect(wrapper.state().isOpen).toBe(false);
+
+    wrapper.find('.sprk-b-Link').simulate('click');
+    expect(wrapper.state().isOpen).toBe(true);
+    expect(myMock.mock.calls.length).toBe(1);
+
+    wrapper.find('.sprk-b-Link').simulate('click');
+    expect(wrapper.state().isOpen).toBe(true);
+    expect(myMock.mock.calls.length).toBe(1);
+  });
+
+  it('should call closedEvent when the dropdown is closed', () => {
     const myMock = jest.fn();
 
     const wrapper = mount(<SprkDropdown closedEvent={myMock} />);
 
     expect(wrapper.state().isOpen).toBe(false);
+
     wrapper.find('.sprk-b-Link').simulate('click');
     expect(myMock.mock.calls.length).toBe(0);
+
+    wrapper.instance().closeOnEsc({ key: 'Escape' });
+    expect(myMock.mock.calls.length).toBe(1);
+  });
+
+  it('should not call closedEvent if the dropdown is already closed', () => {
+    const myMock = jest.fn();
+
+    const wrapper = mount(<SprkDropdown closedEvent={myMock} />);
+
+    expect(wrapper.state().isOpen).toBe(false);
+
+    wrapper.find('.sprk-b-Link').simulate('click');
+    expect(myMock.mock.calls.length).toBe(0);
+
+    wrapper.instance().closeOnEsc({ key: 'Escape' });
+    expect(myMock.mock.calls.length).toBe(1);
+
     wrapper.instance().closeOnEsc({ key: 'Escape' });
     expect(myMock.mock.calls.length).toBe(1);
   });

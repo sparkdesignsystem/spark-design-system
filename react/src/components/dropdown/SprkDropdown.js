@@ -81,13 +81,16 @@ class SprkDropdown extends Component {
   toggleDropdownOpen(e) {
     e.preventDefault();
     const { openedEvent } = this.props;
+    const { isOpen } = this.state;
 
-    this.setState((prevState) => ({
-      isOpen: !prevState.isOpen,
-    }));
+    if (!isOpen) {
+      this.setState((prevState) => ({
+        isOpen: !prevState.isOpen,
+      }));
 
-    if (openedEvent) {
-      openedEvent();
+      if (openedEvent) {
+        openedEvent();
+      }
     }
   }
 
@@ -105,13 +108,16 @@ class SprkDropdown extends Component {
 
   closeDropdown() {
     const { closedEvent } = this.props;
+    const { isOpen } = this.state;
 
-    this.setState({
-      isOpen: false,
-    });
+    if (isOpen) {
+      this.setState({
+        isOpen: false,
+      });
 
-    if (closedEvent) {
-      closedEvent();
+      if (closedEvent) {
+        closedEvent();
+      }
     }
   }
 
@@ -134,6 +140,8 @@ class SprkDropdown extends Component {
       heading = title,
       variant,
       defaultTriggerText,
+      openedEvent,
+      closedEvent,
       ...rest
     } = this.props;
     const { choiceFunction, footer } = choices;
@@ -327,8 +335,6 @@ SprkDropdown.propTypes = {
    * selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
-  /** Content to render inside of the SprkDropdown */
-  children: PropTypes.node,
   /**
    * The choices object represents
    * data that is shown inside the open dropdown
