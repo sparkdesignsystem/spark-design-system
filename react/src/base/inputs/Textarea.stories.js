@@ -11,7 +11,7 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkTextarea,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: ['SprkTextarea'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
