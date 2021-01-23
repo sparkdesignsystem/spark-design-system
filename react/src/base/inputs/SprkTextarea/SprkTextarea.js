@@ -26,7 +26,7 @@ const SprkTextarea = ({
       disabled={isDisabled}
       ref={forwardedRef}
       data-id={idString}
-      value={isValid && formatter(value) ? formatter(value) : value}
+      value={isValid && formatter ? formatter(value) : value}
       onChange={onChange}
       data-analytics={analyticsString}
       aria-invalid={!isValid}
@@ -99,8 +99,6 @@ SprkTextarea.propTypes = {
 };
 
 SprkTextarea.defaultProps = {
-  formatter: (value) => value,
-  onChange: () => {},
   forwardedRef: React.createRef(),
   isValid: true,
   id: uniqueId('sprk-'),
