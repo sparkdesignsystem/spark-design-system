@@ -160,7 +160,7 @@ export const hugeTextInput = () => ({
         sprkInput
         variant="huge"
       />
-      <label sprkLabel>Huge Text Input</label>
+      <label sprkLabel>Text Input Label</label>
     </sprk-input-container>
   `,
 });
