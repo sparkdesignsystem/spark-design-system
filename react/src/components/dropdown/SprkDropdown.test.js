@@ -616,4 +616,50 @@ describe('SprkDropdown:', () => {
     wrapper.instance().closeOnEsc({ key: 'Escape' });
     expect(myMock.mock.calls.length).toBe(1);
   });
+
+  it('should render choice paragraphs if the content exists', () => {
+    const wrapper = mount(
+      <SprkDropdown
+        defaultTriggerText="test"
+        variant="informational"
+        choices={{
+          items: [
+            {
+              content: {
+                title: 'Item 1',
+                infoLine1: 'Line 1',
+                infoLine2: 'Line 2',
+              },
+            },
+          ],
+        }}
+      />,
+    );
+
+    wrapper.find('.sprk-b-Link').simulate('click');
+
+    expect(wrapper.find('p.sprk-b-TypeBodyTwo').length).toBe(2);
+  });
+
+  it('should not render choice paragraphs if content does not exist', () => {
+    const wrapper = mount(
+      <SprkDropdown
+        defaultTriggerText="test"
+        variant="informational"
+        choices={{
+          items: [
+            {
+              content: {
+                title: 'Item 1',
+              },
+            },
+          ],
+        }}
+      />,
+    );
+
+    wrapper.find('.sprk-b-Link').simulate('click');
+
+    expect(wrapper.find('p.sprk-b-TypeBodyTwo').length).toBe(0);
+  });
 });
