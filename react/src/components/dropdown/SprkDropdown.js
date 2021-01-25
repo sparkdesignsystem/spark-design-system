@@ -121,7 +121,7 @@ class SprkDropdown extends Component {
     }
   }
 
-  // TODO: Remove deprecated props as part of Issue XXXX
+  // TODO: Remove deprecated props as part of Issue 3798
   render() {
     const {
       additionalClasses,
@@ -295,7 +295,7 @@ SprkDropdown.propTypes = {
    * classes to add to the dropdown.
    */
   additionalClasses: PropTypes.string,
-  // TODO remove as part of issue XXXX
+  // TODO remove as part of issue 3798
   /**
    * Deprecated - use `iconAdditionalClasses` instead.
    * A space-separated string of classes to add to the icon.
@@ -305,7 +305,7 @@ SprkDropdown.propTypes = {
    * A space-separated string of classes to add to the icon.
    */
   iconAdditionalClasses: PropTypes.string,
-  // TODO remove as part of issue XXXX
+  // TODO remove as part of issue 3798
   /**
    * Deprecated - use `triggerAdditionalClasses` instead.
    * A space-separated string of classes
@@ -322,7 +322,7 @@ SprkDropdown.propTypes = {
    * to add to the trigger text.
    */
   triggerTextAdditionalClasses: PropTypes.string,
-  // TODO remove as part of issue XXXX
+  // TODO remove as part of issue 3798
   /**
    * Deprecated - use `triggerTextAdditionalClasses` instead.
    * A space-separated string of classes
@@ -380,7 +380,7 @@ SprkDropdown.propTypes = {
    * and the Dropdown trigger is only an icon.
    */
   screenReaderText: PropTypes.string,
-  // TODO remove as part of issue XXXX
+  // TODO remove as part of issue 3798
   /**
    * Deprecated - use `heading` instead.
    * The text of the optional header above the
