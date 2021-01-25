@@ -154,14 +154,27 @@ describe('SprkTextInput:', () => {
     expect(wrapper.find('.sprk-b-HelperText').length).toBe(0);
   });
 
-  it('should have aria-describedby if errorContainerId is provided', () => {
+  it(`should have aria-describedby if errorContainerId is provided and
+    ariaDescribedBy is not provided`, () => {
     const wrapper = mount(<SprkTextInput errorContainerId="foo" />);
     expect(wrapper.find('[aria-describedby="foo"]').length).toBe(1);
   });
 
   it(`should not have aria-describedby if errorContainerId is not
-    provided`, () => {
+    provided and ariaDescribedBy is not provided`, () => {
     const wrapper = mount(<SprkTextInput />);
     expect(wrapper.find('[aria-describedby]').length).toBe(0);
+  });
+
+  it('should add ariaDescribedBy to aria-describedby', () => {
+    const wrapper = mount(<SprkTextInput ariaDescribedBy="my ids" />);
+    expect(wrapper.find('[aria-describedby="my ids"]').length).toBe(1);
+  });
+
+  it('should merge errorContainerId and ariaDescribedBy', () => {
+    const wrapper = mount(
+      <SprkTextInput errorContainerId="foo" ariaDescribedBy="bar" />,
+    );
+    expect(wrapper.find('[aria-describedby="foo bar"]').length).toBe(1);
   });
 });
