@@ -159,22 +159,25 @@ class SprkDropdown extends Component {
           aria-expanded={isOpen}
           aria-haspopup="listbox"
           aria-label={screenReaderText || triggerText}
-          data-analytics={analyticsString || 'undefined'}
-          data-id={idString || 'undefined'}
+          data-analytics={analyticsString}
+          data-id={idString}
           onClick={this.toggleDropdownOpen}
           {...rest}
         >
           {variant === 'informational' && (
             <>
-              <span className={classNames(additionalTriggerTextClasses)}>
+              <span className={classNames(triggerTextAdditionalClasses)}>
                 {triggerText}
               </span>
               <SprkIcon
-                additionalClasses="
+                additionalClasses={classNames(
+                  iconAdditionalClasses,
+                  `
                   sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
                   sprk-u-mls
-                "
+                `,
+                )}
                 iconName={iconName}
               />
             </>
