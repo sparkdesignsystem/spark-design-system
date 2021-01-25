@@ -10,10 +10,9 @@ describe('SprkInput:', () => {
     const wrapper = mount(<SprkInput />);
 
     expect(wrapper.find('.sprk-b-TextInput').length).toBe(1);
-    expect(wrapper.find('.sprk-u-Width-100').length).toBe(1);
     expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
-    ).toBe(2);
+    ).toBe(1);
     expect(wrapper.state().hasValue).toBe(false);
   });
 
@@ -23,7 +22,7 @@ describe('SprkInput:', () => {
     expect(wrapper.find('.sprk-b-TextInput').hasClass('sprk-u-man')).toBe(true);
     expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
-    ).toBe(3);
+    ).toBe(2);
   });
 
   it('should add class when isValid is false', () => {
@@ -34,7 +33,7 @@ describe('SprkInput:', () => {
     ).toBe(true);
     expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
-    ).toBe(3);
+    ).toBe(2);
   });
 
   it('should assign data-analytics when analyticsString has a value', () => {

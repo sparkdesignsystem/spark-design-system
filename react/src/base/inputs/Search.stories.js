@@ -20,7 +20,7 @@ export const searchInput = () => (
   <SprkInputContainer>
     <SprkLabel isHidden>Text Input Label</SprkLabel>
     <SprkInput
-      additionalClasses="sprk-b-TextInput--has-svg-icon"
+      additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
       type="search"
       placeholder="Search"
     />
@@ -38,7 +38,7 @@ export const invalidSearchInput = () => (
   <SprkInputContainer>
     <SprkLabel isHidden>Text Input Label</SprkLabel>
     <SprkInput
-      additionalClasses="sprk-b-TextInput--has-svg-icon"
+      additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
       type="search"
       placeholder="Search"
       isValid={false}
@@ -70,7 +70,7 @@ export const disabledSearchInput = () => (
       Text Input Label
     </SprkLabel>
     <SprkInput
-      additionalClasses="sprk-b-TextInput--has-svg-icon"
+      additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
       type="search"
       placeholder="Search"
       isDisabled
