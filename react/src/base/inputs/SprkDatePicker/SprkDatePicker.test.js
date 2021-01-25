@@ -132,4 +132,13 @@ describe('SprkDatePicker:', () => {
     mount(<SprkDatePicker type="text" formatter={formatter} isValid={false} />);
     expect(formatter.mock.calls.length).toBe(0);
   });
+
+  it(`format function should format the date to 2
+  day month and year by default`, () => {
+    const wrapper = mount(<SprkDatePicker />);
+    const date = new Date('December 17, 1995 03:24:00');
+    expect(wrapper.find(SprkDatePicker).instance().tdpConfig.format(date)).toBe(
+      '12/17/1995',
+    );
+  });
 });
