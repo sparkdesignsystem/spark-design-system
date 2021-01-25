@@ -47,14 +47,10 @@ class SprkInput extends Component {
 
     return (
       <input
-        className={classNames(
-          'sprk-u-Width-100 sprk-b-TextInput',
-          additionalClasses,
-          {
-            'sprk-b-TextInput--error': !isValid,
-            'sprk-b-Input--has-floating-label': hasValue && variant === 'huge',
-          },
-        )}
+        className={classNames('sprk-b-TextInput', additionalClasses, {
+          'sprk-b-TextInput--error': !isValid,
+          'sprk-b-Input--has-floating-label': hasValue && variant === 'huge',
+        })}
         disabled={isDisabled}
         ref={forwardedRef}
         aria-describedby={ariaDescribedBy}

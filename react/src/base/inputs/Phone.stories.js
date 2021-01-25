@@ -36,7 +36,10 @@ before submitting the form.
 export const phoneInput = () => (
   <SprkInputContainer>
     <SprkLabel>Phone Number</SprkLabel>
-    <SprkInput placeholder="(000) 000-0000" />
+    <SprkInput
+      placeholder="(000) 000-0000"
+      additionalClasses="sprk-u-Width-100"
+    />
   </SprkInputContainer>
 );
 
@@ -50,7 +53,11 @@ phoneInput.story = {
 export const invalidPhoneInput = () => (
   <SprkInputContainer>
     <SprkLabel>Phone Number</SprkLabel>
-    <SprkInput placeholder="(000) 000-0000" isValid={false} />
+    <SprkInput
+      placeholder="(000) 000-0000"
+      isValid={false}
+      additionalClasses="sprk-u-Width-100"
+    />
     <SprkErrorContainer
       id="invalid-date"
       message="Update this story once error container is done"
@@ -75,7 +82,11 @@ invalidPhoneInput.story = {
 export const disabledPhoneInput = () => (
   <SprkInputContainer>
     <SprkLabel isDisabled>Phone Number</SprkLabel>
-    <SprkInput placeholder="(000) 000-0000" isDisabled />
+    <SprkInput
+      placeholder="(000) 000-0000"
+      isDisabled
+      additionalClasses="sprk-u-Width-100"
+    />
   </SprkInputContainer>
 );
 
