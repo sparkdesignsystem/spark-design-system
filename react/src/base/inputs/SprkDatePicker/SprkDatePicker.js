@@ -78,7 +78,7 @@ class SprkDatePicker extends Component {
           'sprk-b-Input--has-floating-label': hasValue && variant === 'huge',
         })}
         disabled={isDisabled}
-        forwardedRef={this.datePickerInputRef}
+        ref={this.datePickerInputRef}
         aria-describedby={ariaDescribedBy}
         data-id={idString}
         data-analytics={analyticsString}

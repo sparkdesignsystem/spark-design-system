@@ -1,15 +1,18 @@
 import React from 'react';
+import SprkDatePicker from './SprkDatePicker/SprkDatePicker';
 import SprkDatePickerInput from './SprkDatePickerInput/SprkDatePickerInput';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
 import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
+import SprkLabel from './SprkLabel/SprkLabel';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date Picker',
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
-  component: SprkDatePickerInput,
+  component: SprkDatePicker,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: ['SprkDatePicker'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
@@ -33,30 +36,44 @@ props table below for available customization options.
 
 export const defaultStory = () => (
   <SprkInputContainer>
-    <SprkDatePickerInput
-      name="date"
-      placeholder="01/01/2019"
-      errorMessage="Incorrect date."
-      label="Date"
-    />
+    <div className="sprk-b-InputContainer__icon-container">
+      <SprkLabel>Date</SprkLabel>
+      <SprkIcon
+        iconName="calendar"
+        additionalClasses="
+          sprk-c-Icon--stroke-current-color
+          sprk-b-InputContainer__icon"
+      />
+      <SprkDatePicker
+        placeholder="01/01/2021"
+        additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+      />
+    </div>
   </SprkInputContainer>
 );
 
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInputContainer', 'SprkDatePickerInput'],
+    jest: ['SprkInputContainer', 'SprkDatePicker', 'SprkLabel', 'SprkIcon'],
   },
 };
 
 export const invalidDatePicker = () => (
   <SprkInputContainer>
-    <SprkDatePickerInput
-      name="date"
-      placeholder="01/01/2019"
-      label="Date"
-      valid={false}
-    />
+    <div className="sprk-b-InputContainer__icon-container">
+      <SprkLabel>Date</SprkLabel>
+      <SprkIcon
+        iconName="calendar"
+        additionalClasses="
+          sprk-c-Icon--stroke-current-color sprk-b-InputContainer__icon"
+      />
+      <SprkDatePicker
+        isValid={false}
+        placeholder="01/01/2021"
+        additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+      />
+    </div>
     <SprkErrorContainer
       id="invalid-date"
       message="Update this story once error container is done"
@@ -69,56 +86,68 @@ export const invalidDatePicker = () => (
 invalidDatePicker.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputContainer'],
+    jest: [
+      'SprkErrorContainer',
+      'SprkInputContainer',
+      'SprkDatePicker',
+      'SprkLabel',
+      'SprkIcon',
+    ],
   },
 };
 
 export const disabledDatePicker = () => (
   <SprkInputContainer>
-    <SprkDatePickerInput
-      name="date"
-      placeholder="01/01/2019"
-      errorMessage="Incorrect date."
-      label="Date"
-      disabled
-    />
+    <div className="sprk-b-InputContainer__icon-container">
+      <SprkLabel isDisabled>Date</SprkLabel>
+      <SprkIcon
+        iconName="calendar"
+        additionalClasses="
+          sprk-c-Icon--stroke-current-color sprk-b-InputContainer__icon"
+      />
+      <SprkDatePicker
+        isDisabled
+        placeholder="01/01/2021"
+        additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+      />
+    </div>
   </SprkInputContainer>
 );
 
 disabledDatePicker.story = {
   name: 'Disabled',
   parameters: {
-    jest: ['SprkInputContainer'],
+    jest: ['SprkInputContainer', 'SprkDatePicker', 'SprkLabel', 'SprkIcon'],
   },
 };
 
 export const hugeDatePicker = () => (
   <SprkInputContainer variant="huge">
-    <SprkDatePickerInput
-      type="hugeTextInput"
-      name="date"
-      placeholder="01/01/2019"
-      label="Date"
+    <SprkDatePicker
+      variant="huge"
+      placeholder="01/01/2021"
+      additionalClasses="sprk-u-Width-100"
     />
+    <SprkLabel>Date</SprkLabel>
   </SprkInputContainer>
 );
 
 hugeDatePicker.story = {
   name: 'Huge',
   parameters: {
-    jest: ['SprkInputContainer'],
+    jest: ['SprkInputContainer', 'SprkDatePicker', 'SprkLabel'],
   },
 };
 
 export const invalidHugeDatePicker = () => (
   <SprkInputContainer variant="huge">
-    <SprkDatePickerInput
-      type="hugeTextInput"
-      name="date"
-      placeholder="01/01/2019"
-      label="Date"
-      valid={false}
+    <SprkDatePicker
+      variant="huge"
+      placeholder="01/01/2021"
+      isValid={false}
+      additionalClasses="sprk-u-Width-100"
     />
+    <SprkLabel>Date</SprkLabel>
     <SprkErrorContainer
       id="invalid-huge"
       message="Update this story once error container is done"
@@ -131,33 +160,38 @@ export const invalidHugeDatePicker = () => (
 invalidHugeDatePicker.story = {
   name: 'Huge Invalid',
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputContainer'],
+    jest: [
+      'SprkErrorContainer',
+      'SprkInputContainer',
+      'SprkDatePicker',
+      'SprkLabel',
+    ],
   },
 };
 
 export const disabledHugeDatePicker = () => (
   <SprkInputContainer variant="huge">
-    <SprkDatePickerInput
-      type="hugeTextInput"
-      name="date"
-      placeholder="01/01/2019"
-      label="Date"
-      disabled
+    <SprkDatePicker
+      variant="huge"
+      placeholder="01/01/2021"
+      isDisabled
+      additionalClasses="sprk-u-Width-100"
     />
+    <SprkLabel isDisabled>Date</SprkLabel>
   </SprkInputContainer>
 );
 
 disabledHugeDatePicker.story = {
   name: 'Huge Disabled',
   parameters: {
-    jest: ['SprkInputContainer'],
+    jest: ['SprkInputContainer', 'SprkDatePicker', 'SprkLabel'],
   },
 };
 
 export const legacyDefaultStory = () => (
   <SprkDatePickerInput
     name="date"
-    placeholder="01/01/2019"
+    placeholder="01/01/2021"
     errorMessage="Incorrect date."
     label="Date"
   />
@@ -173,7 +207,7 @@ legacyDefaultStory.story = {
 export const legacyInvalidDatePicker = () => (
   <SprkDatePickerInput
     name="date"
-    placeholder="01/01/2019"
+    placeholder="01/01/2021"
     errorMessage="Incorrect date."
     label="Date"
     valid={false}
@@ -190,7 +224,7 @@ legacyInvalidDatePicker.story = {
 export const legacyDisabledDatePicker = () => (
   <SprkDatePickerInput
     name="date"
-    placeholder="01/01/2019"
+    placeholder="01/01/2021"
     errorMessage="Incorrect date."
     label="Date"
     disabled
@@ -208,7 +242,7 @@ export const legacyHugeDatePicker = () => (
   <SprkDatePickerInput
     type="hugeTextInput"
     name="date"
-    placeholder="01/01/2019"
+    placeholder="01/01/2021"
     errorMessage="Incorrect date."
     label="Date"
   />
@@ -225,7 +259,7 @@ export const legacyInvalidHugeDatePicker = () => (
   <SprkDatePickerInput
     type="hugeTextInput"
     name="date"
-    placeholder="01/01/2019"
+    placeholder="01/01/2021"
     errorMessage="Incorrect date."
     label="Date"
     valid={false}
@@ -243,7 +277,7 @@ export const legacyDisabledHugeDatePicker = () => (
   <SprkDatePickerInput
     type="hugeTextInput"
     name="date"
-    placeholder="01/01/2019"
+    placeholder="01/01/2021"
     errorMessage="Incorrect date."
     label="Date"
     disabled
