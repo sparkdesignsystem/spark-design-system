@@ -154,14 +154,14 @@ describe('SprkTextInput:', () => {
     expect(wrapper.find('.sprk-b-HelperText').length).toBe(0);
   });
 
-  it(`should have aria-describedby if errorContainerId is provided and
+  it(`should have aria-describedby if the field is invalid and
     ariaDescribedBy is not provided`, () => {
-    const wrapper = mount(<SprkTextInput errorContainerId="foo" />);
-    expect(wrapper.find('[aria-describedby="foo"]').length).toBe(1);
+    const wrapper = mount(<SprkTextInput valid={false} />);
+    expect(wrapper.find('[aria-describedby]').length).toBe(1);
   });
 
-  it(`should not have aria-describedby if errorContainerId is not
-    provided and ariaDescribedBy is not provided`, () => {
+  it(`should not have aria-describedby if the field is valid and
+    ariaDescribedBy is not provided`, () => {
     const wrapper = mount(<SprkTextInput />);
     expect(wrapper.find('[aria-describedby]').length).toBe(0);
   });
@@ -173,8 +173,17 @@ describe('SprkTextInput:', () => {
 
   it('should merge errorContainerId and ariaDescribedBy', () => {
     const wrapper = mount(
-      <SprkTextInput errorContainerId="foo" ariaDescribedBy="bar" />,
+      <SprkTextInput ariaDescribedBy="foo bar" valid={false} />,
     );
-    expect(wrapper.find('[aria-describedby="foo bar"]').length).toBe(1);
+    const input = wrapper.find('input');
+    expect(input.length).toBe(1);
+    expect(input.getDOMNode().getAttribute('aria-describedby')).toContain(
+      'foo bar',
+    );
+    // aria-describedby should also contain the generated ID for the error
+    // container, which we do not know at compile time
+    expect(input.getDOMNode().getAttribute('aria-describedby')).not.toEqual(
+      'foo bar',
+    );
   });
 });
