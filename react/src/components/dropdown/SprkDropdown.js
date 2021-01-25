@@ -267,12 +267,16 @@ class SprkDropdown extends Component {
                           {...choicesRest}
                         >
                           <p className="sprk-b-TypeBodyOne">{content.title}</p>
-                          <p className="sprk-b-TypeBodyTwo">
-                            {content.infoLine1}
-                          </p>
-                          <p className="sprk-b-TypeBodyTwo">
-                            {content.infoLine2}
-                          </p>
+                          {content.infoLine1 && (
+                            <p className="sprk-b-TypeBodyTwo">
+                              {content.infoLine1}
+                            </p>
+                          )}
+                          {content.infoLine2 && (
+                            <p className="sprk-b-TypeBodyTwo">
+                              {content.infoLine2}
+                            </p>
+                          )}
                         </TagName>
                       </>
                     )}
