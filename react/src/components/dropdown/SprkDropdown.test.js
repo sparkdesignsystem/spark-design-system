@@ -35,6 +35,7 @@ describe('SprkDropdown:', () => {
     },
   );
 
+  // TODO: Remove as part of Issue 3798
   it(
     'should add classes to the icon,' +
       ' when additionalIconClasses has a value',
@@ -47,6 +48,30 @@ describe('SprkDropdown:', () => {
   );
 
   it(
+    'should add classes to the icon,' +
+      ' when iconAdditionalClasses has a value',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown iconAdditionalClasses="test-class" />,
+      );
+      expect(wrapper.find('.sprk-c-Icon.test-class').length).toBe(1);
+    },
+  );
+
+  // TODO: Remove as part of Issue 3798
+  it('should prefer iconAdditionalClasses over additionalIconClasses', () => {
+    const wrapper = mount(
+      <SprkDropdown
+        iconAdditionalClasses="newClass"
+        additionalIconClasses="oldClass"
+      />,
+    );
+    expect(wrapper.find('.sprk-c-Icon.newClass').length).toBe(1);
+    expect(wrapper.find('.sprk-c-Icon.oldClass').length).toBe(0);
+  });
+
+  // TODO: Remove as part of Issue 3798
+  it(
     'should add classes to the trigger,' +
       ' when additionalTriggerClasses has a value',
     () => {
@@ -58,6 +83,34 @@ describe('SprkDropdown:', () => {
   );
 
   it(
+    'should add classes to the trigger,' +
+      ' when triggerAdditionalClasses has a value',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown triggerAdditionalClasses="sprk-u-man" />,
+      );
+      expect(wrapper.find('.sprk-b-Link.sprk-u-man').length).toBe(1);
+    },
+  );
+
+  // TODO: Remove as part of Issue 3798
+  it(
+    'should prefer triggerAdditionalClasses over' +
+      ' deprecated additionalTriggerClasses',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown
+          triggerAdditionalClasses="newClass"
+          additionalTriggerClasses="oldClass"
+        />,
+      );
+      expect(wrapper.find('.sprk-b-Link.newClass').length).toBe(1);
+      expect(wrapper.find('.sprk-b-Link.oldClass').length).toBe(0);
+    },
+  );
+
+  // TODO: Remove as part of Issue 3798
+  it(
     'should add classes to the trigger text when,' +
       'additionalTriggerTextClasses has a value',
     () => {
@@ -65,6 +118,33 @@ describe('SprkDropdown:', () => {
         <SprkDropdown additionalTriggerTextClasses="sprk-u-man" />,
       );
       expect(wrapper.find('span.sprk-u-man').length).toBe(1);
+    },
+  );
+
+  it(
+    'should add classes to the trigger text when,' +
+      'triggerTextAdditionalClasses has a value',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown triggerTextAdditionalClasses="sprk-u-man" />,
+      );
+      expect(wrapper.find('span.sprk-u-man').length).toBe(1);
+    },
+  );
+
+  // TODO: Remove as part of Issue 3798
+  it(
+    'should prefer triggerTextAdditionalClasses over' +
+      ' additionalTriggerTextClasses',
+    () => {
+      const wrapper = mount(
+        <SprkDropdown
+          triggerTextAdditionalClasses="newClass"
+          additionalTriggerTextClasses="oldClass"
+        />,
+      );
+      expect(wrapper.find('span.newClass').length).toBe(1);
+      expect(wrapper.find('span.oldClass').length).toBe(0);
     },
   );
 
@@ -84,10 +164,24 @@ describe('SprkDropdown:', () => {
     expect(wrapper.find('.sprk-u-ScreenReaderText').text()).toBe('test');
   });
 
+  // TODO: Remove as part of Issue 3798
   it('should assign the choices header when title has a value', () => {
     const wrapper = mount(<SprkDropdown title="My Choices" />);
     wrapper.find('.sprk-b-Link').simulate('click');
     expect(wrapper.find('.sprk-c-Dropdown__header').text()).toBe('My Choices');
+  });
+
+  it('should assign the choices header when heading has a value', () => {
+    const wrapper = mount(<SprkDropdown heading="My Choices" />);
+    wrapper.find('.sprk-b-Link').simulate('click');
+    expect(wrapper.find('.sprk-c-Dropdown__header').text()).toBe('My Choices');
+  });
+
+  // TODO: Remove as part of Issue 3798
+  it('should prefer heading over title', () => {
+    const wrapper = mount(<SprkDropdown heading="new" title="old" />);
+    wrapper.find('.sprk-b-Link').simulate('click');
+    expect(wrapper.find('.sprk-c-Dropdown__header').text()).toBe('new');
   });
 
   it('should build the correct number of choices from a choices object', () => {
