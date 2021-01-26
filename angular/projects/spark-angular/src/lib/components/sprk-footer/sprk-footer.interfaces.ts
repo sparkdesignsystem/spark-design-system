@@ -37,7 +37,7 @@ export interface ISprkDisclaimerToggle {
   analytics?: string;
   /**
    * The value supplied will be rendered as the
-   * toggle body content insidea a paragraph tage
+   * toggle body content inside a paragraph tag
    * that appears after the title is clicked.
    */
   body: string;
@@ -50,7 +50,7 @@ export interface ISprkDisclaimerToggle {
  * There is no text rendered for Social Links
  * other than the visually hidden
  * `iconScreenReaderText`
- * that is used to descibe the icon to
+ * that is used to describe the icon to
  * screen readers.
  * This interface extends `SprkFooterLinkOptionalProps`
  * because the `text` property for link is not required.
@@ -84,6 +84,10 @@ export interface ISprkFooterSocialLink {
    */
   href?: string;
   /**
+   * The `routerLink` value for the link.
+   */
+  routerLink?: string;
+  /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the link
    * Intended for an outside
@@ -116,7 +120,7 @@ export interface ISprkFooterLocalLinkColumn {
    * The data to build the list of
    * local links for the column.
    * While passing in this array of links
-   * is technicially optional and the column
+   * is technically optional and the column
    * will still be rendered, it's not recommended
    * to have just an empty column.
    */
@@ -132,6 +136,10 @@ export interface ISprkFooterLocalLinkColumn {
      * component.
      */
     href?: string;
+    /**
+     * The `routerLink` value for the link.
+     */
+    routerLink?: string;
     /**
      * The value supplied will be assigned to the
      * `data-analytics` attribute on the link
@@ -203,6 +211,10 @@ export interface ISprkFooterGlobalLink {
    */
   href?: string;
   /**
+   * The `routerLink` value for the link.
+   */
+  routerLink?: string;
+  /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the link
    * Intended for an outside
@@ -226,7 +238,7 @@ export interface ISprkFooterGlobalLink {
  * There is no text rendered for Badge links
  * other than the visually hidden
  * `iconScreenReaderText`
- * that is used to descibe the icon to
+ * that is used to describe the icon to
  * screen readers.
  */
 export interface ISprkFooterBadgeLink {
@@ -257,6 +269,10 @@ export interface ISprkFooterBadgeLink {
    * component.
    */
   href?: string;
+  /**
+   * The `routerLink` value for the link.
+   */
+  routerLink?: string;
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the link
@@ -290,6 +306,10 @@ export interface ISprkFooterAward {
    */
   href?: string;
   /**
+   * The `routerLink` value for the link.
+   */
+  routerLink?: string;
+  /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the link
    * Intended for an outside
@@ -319,4 +339,3 @@ export interface ISprkFooterAward {
    */
   imgCSS?: string;
 }
-

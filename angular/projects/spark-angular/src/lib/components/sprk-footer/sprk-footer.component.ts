@@ -40,6 +40,7 @@ import {
                   sprkLink
                   variant="plain"
                   href="{{ item.href }}"
+                  [routerLink]="{{ item.routerLink }}"
                   analyticsString="{{ item.analytics || item.analyticsString }}"
                 >
                   <sprk-icon
@@ -96,6 +97,7 @@ import {
                       variant="light"
                       class="sprk-c-Footer__link"
                       href="{{ link.href }}"
+                      [routerLink]="{{ link.routerLink }}"
                       analyticsString="{{
                         link.analyticsString || link.analytics
                       }}"
@@ -139,6 +141,7 @@ import {
                       sprkLink
                       variant="plain"
                       href="{{ item.href }}"
+                      [routerLink]="{{ item.routerLink }}"
                       analyticsString="{{
                         item.analytics || item.analyticsString
                       }}"
@@ -188,6 +191,7 @@ import {
                   variant="plain"
                   class="sprk-o-Stack__item"
                   href="{{ award.href }}"
+                  [routerLink]="{{ award.routerLink }}"
                   analyticsString="{{
                     award.analytics || award.analyticsString
                   }}"
@@ -249,6 +253,7 @@ import {
                 sprkLink
                 variant="plain"
                 href="{{ item.href }}"
+                [routerLink]="{{ item.routerLink }}"
                 analyticsString="{{ item.analytics || item.analyticsString }}"
               >
                 <sprk-icon
@@ -355,7 +360,7 @@ export class SprkFooterComponent {
    * Array of
    * [ISprkDisclaimerToggle](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-footer/sprk-footer.interfaces.ts)
    *  used to build
-   * the disclamer toggle(s) in
+   * the disclaimer toggle(s) in
    * the the Footer.
    */
   @Input()
