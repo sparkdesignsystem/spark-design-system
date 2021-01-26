@@ -10,7 +10,7 @@ import { SprkDropdownComponent } from './sprk-dropdown.component';
     CommonModule,
     SprkIconModule,
     SprkLinkDirectiveModule,
-    RouterModule.forRoot([]),
+    RouterModule,
   ],
   declarations: [SprkDropdownComponent],
   exports: [SprkDropdownComponent],
