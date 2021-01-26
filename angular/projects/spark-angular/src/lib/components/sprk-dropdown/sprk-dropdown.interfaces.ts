@@ -37,13 +37,13 @@ export interface ISprkDropdownChoice {
   /**
    * On click, this value will
    * be emitted from the dropdown component.
-   * Additionally, if the `dropdownType` is set to `informational`
+   * Additionally, if the `variant` is set to `informational`
    * or `mastheadSelector` the trigger text
    * will be updated to this value on click.
    * This field is marked as optional since it
    * technically won't break the component if
    * omitted but should be supplied
-   * if the `dropdownType` is set to `informational`
+   * if the `variant` is set to `informational`
    * or `mastheadSelector`. This is because
    * the dropdown trigger
    * text will be updated to this value on click,
@@ -52,7 +52,7 @@ export interface ISprkDropdownChoice {
    */
   value?: string;
   /**
-   * If `isDefault` is set to `true` and `dropdownType` is set to `informational`
+   * If `isDefault` is set to `true` and `variant` is set to `informational`
    * then `triggerText` will be automatically changed to this choice `value`
    */
   isDefault?: boolean;

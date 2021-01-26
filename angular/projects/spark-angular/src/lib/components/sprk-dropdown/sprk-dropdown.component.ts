@@ -16,10 +16,15 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
   template: `
     <div
       [ngClass]="{
-        'sprk-c-MastheadMask': isOpen && dropdownType === 'mastheadSelector'
+        'sprk-c-MastheadMask':
+          isOpen && this.getVariant() === 'mastheadSelector'
       }"
     >
-      <div [ngClass]="{ 'sprk-o-Box': dropdownType === 'mastheadSelector' }">
+      <div
+        [ngClass]="{
+          'sprk-o-Box': this.getVariant() === 'mastheadSelector'
+        }"
+      >
         <a
           sprkLink
           variant="plain"
@@ -46,7 +51,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <div
           class="sprk-c-Dropdown__header"
           *ngIf="
-            dropdownType === 'mastheadSelector' ||
+            this.getVariant() === 'mastheadSelector' ||
             returnSecondIfBoth(title, heading) ||
             selector
           "
@@ -143,7 +148,14 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
 })
 export class SprkDropdownComponent implements OnChanges {
   /**
-   * The variant of the Dropdown to render.
+   * Determines the type of Dropdown to render.
+   */
+  @Input()
+  variant = 'default';
+  // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
+  /**
+   * Deprecated: Use `variant` input instead.
+   * Determines the type of Dropdown to render.
    */
   @Input()
   dropdownType = 'base';
@@ -233,7 +245,7 @@ export class SprkDropdownComponent implements OnChanges {
   triggerIconType: string;
   /**
    * The text that is initially rendered to the trigger.
-   * If `dropdownType` is `informational`,
+   * If `variant` is `informational`,
    * clicking on a choice will change the trigger text.
    */
   @Input()
@@ -264,7 +276,7 @@ export class SprkDropdownComponent implements OnChanges {
    */
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.choices) {
-      if (this.dropdownType === 'informational') {
+      if (this.getVariant() === 'informational') {
         this._updateTriggerTextWithDefaultValue();
       }
     }
@@ -307,9 +319,11 @@ export class SprkDropdownComponent implements OnChanges {
       'data-sprk-dropdown-choice-index',
     );
     const clickedChoice = this.choices[choiceIndex];
+
+    // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
     if (
-      this.dropdownType === 'informational' ||
-      this.dropdownType === 'mastheadSelector'
+      this.getVariant() === 'informational' ||
+      this.getVariant() === 'mastheadSelector'
     ) {
       this.setActiveChoice(event);
       this.updateTriggerText(event);
@@ -360,18 +374,35 @@ export class SprkDropdownComponent implements OnChanges {
     if (a && b) {
       return b;
     }
-
     if (a && !b) {
       return a;
     }
-
     if (!a && b) {
       return b;
     }
-
     return;
   }
 
+  // TODO: #3800 Remove `title` input, now replaced with `heading`
+  /**
+   * @ignore
+   */
+  getVariant(): string {
+    // dropdownType and variant both have defaults,
+    // they always exist.
+
+    // config has both dropdownType, and variant
+    if (this.dropdownType != 'base' && this.variant != 'default') {
+      return this.variant;
+    }
+
+    // config has dropdownType, no variant
+    if (this.dropdownType != 'base' && this.variant === 'default') {
+      return this.dropdownType;
+    }
+
+    return this.variant;
+  }
   /**
    * @ignore
    */

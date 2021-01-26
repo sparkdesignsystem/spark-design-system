@@ -32,7 +32,6 @@ export const defaultStory = () => ({
   template: `
     <sprk-dropdown
       screenReaderText="Description of default dropdown."
-      dropdownType="base"
       heading="My Choices"
       triggerIconType="settings"
       additionalTriggerClasses="sprk-b-Link--plain"
@@ -62,7 +61,7 @@ export const informational = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-dropdown
-      dropdownType="informational"
+      variant="informational"
       additionalTriggerClasses="sprk-b-Link--plain"
       triggerText="Make a selection..."
       heading="My Choices"
