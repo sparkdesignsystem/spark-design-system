@@ -40,7 +40,7 @@ import {
                   sprkLink
                   variant="plain"
                   href="{{ item.href }}"
-                  [routerLink]="{{ item.routerLink }}"
+                  [routerLink]="[item.routerLink]"
                   analyticsString="{{ item.analytics || item.analyticsString }}"
                 >
                   <sprk-icon
@@ -97,7 +97,7 @@ import {
                       variant="light"
                       class="sprk-c-Footer__link"
                       href="{{ link.href }}"
-                      [routerLink]="{{ link.routerLink }}"
+                      [routerLink]="[link.routerLink]"
                       analyticsString="{{
                         link.analyticsString || link.analytics
                       }}"
@@ -141,7 +141,7 @@ import {
                       sprkLink
                       variant="plain"
                       href="{{ item.href }}"
-                      [routerLink]="{{ item.routerLink }}"
+                      [routerLink]="[item.routerLink]"
                       analyticsString="{{
                         item.analytics || item.analyticsString
                       }}"
@@ -191,7 +191,7 @@ import {
                   variant="plain"
                   class="sprk-o-Stack__item"
                   href="{{ award.href }}"
-                  [routerLink]="{{ award.routerLink }}"
+                  [routerLink]="[award.routerLink]"
                   analyticsString="{{
                     award.analytics || award.analyticsString
                   }}"
@@ -253,7 +253,7 @@ import {
                 sprkLink
                 variant="plain"
                 href="{{ item.href }}"
-                [routerLink]="{{ item.routerLink }}"
+                [routerLink]="[item.routerLink]"
                 analyticsString="{{ item.analytics || item.analyticsString }}"
               >
                 <sprk-icon

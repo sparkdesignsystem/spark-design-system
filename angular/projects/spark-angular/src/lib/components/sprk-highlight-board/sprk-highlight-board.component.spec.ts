@@ -3,6 +3,7 @@ import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkHighlightBoardComponent } from './sprk-highlight-board.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SprkHighlightBoardComponent', () => {
   let component: SprkHighlightBoardComponent;
@@ -11,13 +12,14 @@ describe('SprkHighlightBoardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [
         SprkHighlightBoardComponent,
         SprkStackComponent,
         SprkLinkDirective,
         SprkStackItemDirective,
-        SprkHighlightBoardComponent
-      ]
+        SprkHighlightBoardComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -40,7 +42,7 @@ describe('SprkHighlightBoardComponent', () => {
   it('should add the correct class if type is not set', () => {
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image'
+      'sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image',
     );
   });
 
@@ -54,7 +56,7 @@ describe('SprkHighlightBoardComponent', () => {
     component.type = 'stacked';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--stacked'
+      'sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--stacked',
     );
   });
 
@@ -71,7 +73,8 @@ describe('SprkHighlightBoardComponent', () => {
     component.ctaText = null;
     component.ctaText2 = 'test123';
     fixture.detectChanges();
-    const ctaCount = element.querySelectorAll('.sprk-c-HighlightBoard__cta').length;
+    const ctaCount = element.querySelectorAll('.sprk-c-HighlightBoard__cta')
+      .length;
     expect(ctaCount).toEqual(0);
   });
 
@@ -92,7 +95,7 @@ describe('SprkHighlightBoardComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image sprk-u-pam sprk-u-man'
+      'sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image sprk-u-pam sprk-u-man',
     );
   });
 

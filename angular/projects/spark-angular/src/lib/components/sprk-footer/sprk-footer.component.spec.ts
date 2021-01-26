@@ -3,6 +3,7 @@ import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkFooterComponent } from './sprk-footer.component';
 import { SprkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SprkFooterComponent', () => {
   let component: SprkFooterComponent;
@@ -11,12 +12,13 @@ describe('SprkFooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [
         SprkIconComponent,
         SprkToggleComponent,
         SprkFooterComponent,
-        SprkLinkDirective
-      ]
+        SprkLinkDirective,
+      ],
     }).compileComponents();
   }));
 
@@ -40,7 +42,7 @@ describe('SprkFooterComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-c-Footer sprk-u-pam sprk-u-man'
+      'sprk-o-CenteredColumn sprk-o-Stack sprk-o-Stack--misc-b sprk-c-Footer sprk-u-pam sprk-u-man',
     );
   });
 

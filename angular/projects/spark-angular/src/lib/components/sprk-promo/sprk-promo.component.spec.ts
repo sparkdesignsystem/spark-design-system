@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkPromoComponent } from './sprk-promo.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SprkPromoComponent', () => {
   let component: SprkPromoComponent;
@@ -10,6 +11,7 @@ describe('SprkPromoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [SprkPromoComponent, SprkIconComponent, SprkLinkDirective],
     }).compileComponents();
   }));
