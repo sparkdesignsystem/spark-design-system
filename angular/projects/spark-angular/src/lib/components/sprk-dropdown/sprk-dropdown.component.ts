@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
 
+// TODO: #3800 Remove `title` input, now replaced with `heading`
 @Component({
   selector: 'sprk-dropdown',
   template: `
@@ -44,19 +45,26 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
       <div [ngClass]="getClasses()" *ngIf="isOpen">
         <div
           class="sprk-c-Dropdown__header"
-          *ngIf="dropdownType === 'mastheadSelector' || title || selector"
+          *ngIf="
+            dropdownType === 'mastheadSelector' ||
+            returnSecondIfBoth(title, heading) ||
+            selector
+          "
         >
-          <h2 class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo" *ngIf="title">
-            {{ title }}
+          <h2
+            class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo"
+            *ngIf="title || heading"
+          >
+            {{ returnSecondIfBoth(title, heading) }}
           </h2>
 
           <a
             sprkLink
-            *ngIf="selector && !title"
+            *ngIf="selector && (!title || !heading)"
             variant="plain"
             class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
             (click)="toggle($event)"
-            [attr.aria-label]="title"
+            [attr.aria-label]="selector"
             href="#"
           >
             <span
@@ -80,7 +88,11 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <ul
           class="sprk-c-Dropdown__links"
           role="listbox"
-          [attr.aria-label]="title ? title : screenReaderText || 'My Choices'"
+          [attr.aria-label]="
+            title || heading
+              ? returnSecondIfBoth(title, heading)
+              : screenReaderText || 'My Choices'
+          "
         >
           <li
             class="sprk-c-Dropdown__item"
@@ -185,18 +197,24 @@ export class SprkDropdownComponent implements OnChanges {
   @Input()
   isOpen = false;
 
-  // TODO: Remove `title` in issue
+  // TODO: #3800 Remove `title` input, now replaced with `heading`
   /**
-   * Deprecated – use `heading` instead.
-   * The value supplied will be displayed
-   * in a box above the choices.
+   * Deprecated – use `heading` input instead.
+   * The heading text displayed in
+   * in the box above the choices.
    */
   @Input()
   title: string;
-
   /**
-   * The value supplied will be assigned to
-   * the title text.
+   * The heading text displayed in
+   * in the box above the choices.
+   */
+  @Input()
+  heading: string;
+  /**
+   * Typically found in masthead dropdowns,
+   * this value supplied will be assigned to
+   * the title text when its open.
    */
   @Input()
   selector: string;
@@ -332,6 +350,26 @@ export class SprkDropdownComponent implements OnChanges {
    */
   hideDropdown(): void {
     this.isOpen = false;
+  }
+
+  // TODO: #3800 Remove `title` input, now replaced with `heading`
+  /**
+   * @ignore
+   */
+  returnSecondIfBoth(a, b): void {
+    if (a && b) {
+      return b;
+    }
+
+    if (a && !b) {
+      return a;
+    }
+
+    if (!a && b) {
+      return b;
+    }
+
+    return;
   }
 
   /**

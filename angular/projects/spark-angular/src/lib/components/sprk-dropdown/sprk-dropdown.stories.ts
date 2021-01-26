@@ -9,10 +9,8 @@ export default {
   component: SprkDropdownComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -26,10 +24,7 @@ element has a popup menu.
 };
 
 const modules = {
-  imports: [
-    SprkDropdownModule,
-    SprkLinkDirectiveModule,
-  ],
+  imports: [SprkDropdownModule, SprkLinkDirectiveModule],
 };
 
 export const defaultStory = () => ({
@@ -38,7 +33,7 @@ export const defaultStory = () => ({
     <sprk-dropdown
       screenReaderText="Description of default dropdown."
       dropdownType="base"
-      title="My Choices"
+      heading="My Choices"
       triggerIconType="settings"
       additionalTriggerClasses="sprk-b-Link--plain"
       additionalIconClasses="sprk-c-Icon--l"
@@ -53,14 +48,14 @@ export const defaultStory = () => ({
       ]"
     >
     </sprk-dropdown>
-  `
+  `,
 });
 
 defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['sprk-dropdown.component'],
-  }
+  },
 };
 
 export const informational = () => ({
@@ -70,7 +65,7 @@ export const informational = () => ({
       dropdownType="informational"
       additionalTriggerClasses="sprk-b-Link--plain"
       triggerText="Make a selection..."
-      title="My Choices"
+      heading="My Choices"
       triggerIconType="chevron-down"
       [choices]="[{
         content: {
@@ -107,7 +102,7 @@ export const informational = () => ({
         </a>
       </div>
     </sprk-dropdown>
-  `
+  `,
 });
 
 informational.story = {
