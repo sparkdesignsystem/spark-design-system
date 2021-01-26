@@ -63,7 +63,12 @@ import {
         <div
           class="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
         >
-          <a sprkLink [attr.href]="logoHref" variant="unstyled">
+          <a
+            sprkLink
+            [attr.href]="logoHref"
+            [routerLink]="logoRouterLink"
+            variant="unstyled"
+          >
             <ng-content select="[logo-slot]"></ng-content>
             <span class="sprk-u-ScreenReaderText">{{
               logoLinkScreenReaderText
@@ -271,6 +276,11 @@ export class SprkMastheadComponent implements AfterContentInit {
    */
   @Input()
   logoHref = '/';
+  /**
+   *  The `routerLink` value of the logo.
+   */
+  @Input()
+  logoRouterLink;
   /**
    * The value supplied will be used as
    * screen reader text that is visually hidden
