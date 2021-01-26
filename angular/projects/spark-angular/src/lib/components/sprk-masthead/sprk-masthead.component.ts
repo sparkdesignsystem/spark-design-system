@@ -134,6 +134,7 @@ import {
                   [analyticsString]="link.analyticsString"
                   class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   [attr.href]="link.href"
+                  [routerLink]="link.routerLink"
                 >
                   {{ link.text }}
                 </a>
@@ -177,6 +178,7 @@ import {
               variant="unstyled"
               [analyticsString]="narrowSelector['footer'].analyticsString"
               [attr.href]="narrowSelector['footer'].href"
+              [routerLink]="narrowSelector['footer'].routerLink"
               class="sprk-c-Button sprk-c-Button--tertiary"
             >
               {{ narrowSelector['footer'].text }}
@@ -204,6 +206,7 @@ import {
                       variant="unstyled"
                       class="sprk-c-MastheadAccordion__summary"
                       [attr.href]="subNavLink.href"
+                      [routerLink]="subNavLink.routerLink"
                       [analyticsString]="subNavLink.analyticsString"
                     >
                       <sprk-icon
@@ -234,6 +237,7 @@ import {
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   [attr.href]="narrowLink.href"
+                  [routerLink]="narrowLink.routerLink"
                   [analyticsString]="narrowLink.analyticsString"
                 >
                   <span class="sprk-c-MastheadAccordion__heading">
