@@ -166,19 +166,6 @@ export class SprkLinkComponent implements OnInit {
   isExternal = false;
 
   ngOnInit() {
-    // This message is split up like this so that we can keep the line
-    // length down in the editor while also logging a single unformatted
-    // line of text in the console.
-    const message =
-      'Spark Design System Warning: Spark Link has been ' +
-      'refactored to be an Angular Directive. The old Angular Component ' +
-      'version has been deprecated. This version will be permanently removed ' +
-      'from Spark in an upcoming release. To update to the new version, ' +
-      'replace any instance of the <sprk-link> component in your codebase with ' +
-      'the new Directive syntax.';
-
-    console.warn(message);
-
     // Sets the default href if none provided
     if (this.href === '' || this.href === null || this.href === undefined) {
       this.href = '#';
