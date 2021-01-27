@@ -191,7 +191,7 @@ export const invalidHugeTextInput = () => ({
         sprkInput
         variant="huge"
       />
-      <label sprkLabel>Huge Text Input</label>
+      <label sprkLabel>Text Input Label</label>
       <span sprkFieldError>
         <sprk-icon
           iconName="exclamation-filled"
@@ -229,7 +229,7 @@ export const disabledHugeTextInput = () => ({
         variant="huge"
         disabled
       />
-      <label isDisabled="true" sprkLabel>Huge Text Input</label>
+      <label isDisabled="true" sprkLabel>Text Input Label</label>
     </sprk-input-container>
   `,
 });
@@ -257,7 +257,7 @@ export const legacyHugeTextInput = () => ({
         #textInput="ngModel"
         sprkInput
       />
-      <label sprkLabel>Huge Text Input</label>
+      <label sprkLabel>Text Input Label</label>
     </sprk-huge-input-container>
   `,
 });
@@ -287,7 +287,7 @@ export const legacyInvalidHugeTextInput = () => ({
         aria-invalid="true"
         sprkInput
       />
-      <label sprkLabel>Huge Text Input</label>
+      <label sprkLabel>Text Input Label</label>
       <span sprkFieldError>
         <sprk-icon
           iconName="exclamation-filled"
@@ -324,7 +324,7 @@ export const legacyDisabledHugeTextInput = () => ({
         sprkInput
         disabled
       />
-      <label class="sprk-b-Label--disabled" sprkLabel>Huge Text Input</label>
+      <label class="sprk-b-Label--disabled" sprkLabel>Text Input Label</label>
     </sprk-huge-input-container>
   `,
 });
