@@ -35,6 +35,7 @@ describe('SprkMastheadComponent', () => {
     component = fixture.componentInstance;
     mastheadElement = fixture.nativeElement.querySelector('header');
     hamburgerIcon = mastheadElement.querySelector('.sprk-c-Menu');
+    fixture.detectChanges();
   });
 
   afterEach(() => {
@@ -70,7 +71,7 @@ describe('SprkMastheadComponent', () => {
   });
 
   it('should add the aria-expanded attribute and show the narrow nav when the icon is clicked', () => {
-    expect(hamburgerIcon.getAttribute('aria-expanded')).toEqual(null);
+    expect(hamburgerIcon.getAttribute('aria-expanded')).toEqual('false');
     expect(component.isNarrowNavOpen).toEqual(false);
     hamburgerIcon.click();
     fixture.detectChanges();
