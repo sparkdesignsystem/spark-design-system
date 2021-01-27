@@ -3,14 +3,14 @@ import {
   HostListener,
   Input,
   Renderer2,
-  AfterContentInit
+  AfterContentInit,
 } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 import * as _ from 'lodash';
 import {
   ISprkNarrowNavLink,
   ISprkNarrowSelector,
-  ISprkBigNavLink
+  ISprkBigNavLink,
 } from './sprk-masthead.interfaces';
 
 @Component({
@@ -63,12 +63,12 @@ import {
         <div
           class="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
         >
-          <a sprkLink [attr.href]="logoHref" variant="unstyled">
+          <sprk-link [href]="logoHref" linkType="unstyled">
             <ng-content select="[logo-slot]"></ng-content>
             <span class="sprk-u-ScreenReaderText">{{
               logoLinkScreenReaderText
             }}</span>
-          </a>
+          </sprk-link>
         </div>
 
         <div
@@ -123,15 +123,14 @@ import {
                 ></sprk-dropdown>
               </div>
               <div *ngIf="!link.subNav">
-                <a
-                  sprkLink
-                  variant="simple"
+                <sprk-link
+                  linkType="plain"
                   [analyticsString]="link.analyticsString"
-                  class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                  [attr.href]="link.href"
+                  additionalClasses="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                  [href]="link.href"
                 >
                   {{ link.text }}
-                </a>
+                </sprk-link>
               </div>
             </li>
           </ul>
@@ -167,15 +166,14 @@ import {
             class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
             sprkDropdownFooter
           >
-            <a
-              sprkLink
-              variant="unstyled"
+            <sprk-link
+              linkType="unstyled"
               [analyticsString]="narrowSelector['footer'].analyticsString"
               [attr.href]="narrowSelector['footer'].href"
-              class="sprk-c-Button sprk-c-Button--tertiary"
+              additionalClasses="sprk-c-Button sprk-c-Button--tertiary"
             >
               {{ narrowSelector['footer'].text }}
-            </a>
+            </sprk-link>
           </div>
         </sprk-dropdown>
 
@@ -196,11 +194,10 @@ import {
                     class="sprk-c-MastheadAccordion__item"
                     *ngFor="let subNavLink of narrowLink.subNav"
                   >
-                    <a
-                      sprkLink
-                      variant="unstyled"
-                      class="sprk-c-MastheadAccordion__summary"
-                      [attr.href]="subNavLink.href"
+                    <sprk-link
+                      linkType="unstyled"
+                      additionalClasses="sprk-c-MastheadAccordion__summary"
+                      [href]="subNavLink.href"
                       [analyticsString]="subNavLink.analyticsString"
                     >
                       <sprk-icon
@@ -214,7 +211,7 @@ import {
                         *ngIf="subNavLink.leadingIcon"
                       ></sprk-icon>
                       {{ subNavLink.text }}
-                    </a>
+                    </sprk-link>
                   </li>
                 </ul>
               </sprk-masthead-accordion-item>
@@ -226,11 +223,10 @@ import {
                   'sprk-c-MastheadAccordion__item--active': narrowLink.active
                 }"
               >
-                <a
-                  sprkLink
-                  variant="unstyled"
-                  class="sprk-c-MastheadAccordion__summary"
-                  [attr.href]="narrowLink.href"
+                <sprk-link
+                  linkType="unstyled"
+                  additionalClasses="sprk-c-MastheadAccordion__summary"
+                  [href]="narrowLink.href"
                   [analyticsString]="narrowLink.analyticsString"
                 >
                   <span class="sprk-c-MastheadAccordion__heading">
@@ -246,7 +242,7 @@ import {
                     ></sprk-icon>
                     {{ narrowLink.text }}
                   </span>
-                </a>
+                </sprk-link>
               </li>
             </div>
           </div>
@@ -254,7 +250,7 @@ import {
         <ng-content select="[narrowNavFooter]"></ng-content>
       </nav>
     </header>
-  `
+  `,
 })
 export class SprkMastheadComponent implements AfterContentInit {
   /**
@@ -268,9 +264,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     });
   }
 
- /**
-  *  The `href` value of the logo.
-  */
+  /**
+   *  The `href` value of the logo.
+   */
   @Input()
   logoHref = '/';
   /**
@@ -453,7 +449,9 @@ export class SprkMastheadComponent implements AfterContentInit {
    * @ignore
    */
   isElementVisible(selector) {
-    if (typeof window === 'undefined') { return; }
+    if (typeof window === 'undefined') {
+      return;
+    }
     const element = document.querySelector(selector);
     if (!element) {
       return;
@@ -503,7 +501,7 @@ export class SprkMastheadComponent implements AfterContentInit {
     const classArray: string[] = ['sprk-c-Masthead', 'sprk-o-Stack'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -530,7 +528,7 @@ export class SprkMastheadComponent implements AfterContentInit {
     const classArray: string[] = [];
 
     if (this.additionalNarrowNavClasses) {
-      this.additionalNarrowNavClasses.split(' ').forEach(className => {
+      this.additionalNarrowNavClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -549,11 +547,11 @@ export class SprkMastheadComponent implements AfterContentInit {
       'sprk-o-Stack--center-row',
       'sprk-o-Stack--split@xxs',
       'sprk-b-List',
-      'sprk-b-List--bare'
+      'sprk-b-List--bare',
     ];
 
     if (this.additionalBigNavClasses) {
-      this.additionalBigNavClasses.split(' ').forEach(className => {
+      this.additionalBigNavClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -580,7 +578,7 @@ export class SprkMastheadComponent implements AfterContentInit {
     this.renderer.addClass(document.body, 'sprk-u-Overflow--hidden');
     this.renderer.addClass(
       document.body.parentElement,
-      'sprk-u-Overflow--hidden'
+      'sprk-u-Overflow--hidden',
     );
     this.renderer.addClass(document.body, 'sprk-u-Height--100');
     this.renderer.addClass(document.body.parentElement, 'sprk-u-Height--100');
@@ -594,12 +592,12 @@ export class SprkMastheadComponent implements AfterContentInit {
     this.renderer.removeClass(document.body, 'sprk-u-Overflow--hidden');
     this.renderer.removeClass(
       document.body.parentElement,
-      'sprk-u-Overflow--hidden'
+      'sprk-u-Overflow--hidden',
     );
     this.renderer.removeClass(document.body, 'sprk-u-Height--100');
     this.renderer.removeClass(
       document.body.parentElement,
-      'sprk-u-Height--100'
+      'sprk-u-Height--100',
     );
     this.isNarrowNavOpen = false;
   }
