@@ -96,6 +96,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
                 sprkLink
                 variant="unstyled"
                 [attr.href]="choice.href"
+                [routerLink]="choice.routerLink"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
                   'sprk-c-Dropdown__link': true,
@@ -110,6 +111,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
                 sprkLink
                 variant="unstyled"
                 [attr.href]="choice.href"
+                [routerLink]="choice.routerLink"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
                   'sprk-c-Dropdown__link': true,
