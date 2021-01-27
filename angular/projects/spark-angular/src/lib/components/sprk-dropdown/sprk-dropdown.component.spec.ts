@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { SprkLinkComponent } from '../sprk-link/sprk-link.component';
 
 describe('SprkDropdownComponent', () => {
   let component: SprkDropdownComponent;
@@ -12,11 +14,13 @@ describe('SprkDropdownComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [
         SprkDropdownComponent,
         SprkIconComponent,
-        SprkLinkDirective
-      ]
+        SprkLinkDirective,
+        SprkLinkComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -36,7 +40,7 @@ describe('SprkDropdownComponent', () => {
   it('should add the correct classes if additionalClasses are supplied', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     expect(component.getClasses()).toEqual(
-      'sprk-c-Dropdown sprk-u-pam sprk-u-man'
+      'sprk-c-Dropdown sprk-u-pam sprk-u-man',
     );
   });
 
@@ -86,11 +90,11 @@ describe('SprkDropdownComponent', () => {
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information'
+          infoLine2: 'More Information',
         },
         value: 'Choice Title 1',
-        active: false
-      }
+        active: false,
+      },
     ];
     fixture.detectChanges();
     dropdownTriggerElement.click();
@@ -110,10 +114,10 @@ describe('SprkDropdownComponent', () => {
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information'
+          infoLine2: 'More Information',
         },
-        value: 'Choice Title 1'
-      }
+        value: 'Choice Title 1',
+      },
     ];
     dropdownTriggerElement.click();
     fixture.detectChanges();
@@ -129,12 +133,12 @@ describe('SprkDropdownComponent', () => {
     component.choices = [
       {
         text: 'Option 1',
-        value: 'Option 1'
+        value: 'Option 1',
       },
       {
         text: 'Option 2',
-        value: 'Option 2'
-      }
+        value: 'Option 2',
+      },
     ];
     dropdownTriggerElement.click();
     fixture.detectChanges();
@@ -149,7 +153,7 @@ describe('SprkDropdownComponent', () => {
     component.additionalTriggerClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(dropdownTriggerElement.classList.contains('sprk-u-man')).toEqual(
-      true
+      true,
     );
   });
 
@@ -157,7 +161,7 @@ describe('SprkDropdownComponent', () => {
     component.additionalTriggerTextClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(dropdownTriggerTextElement.classList.contains('sprk-u-man')).toEqual(
-      true
+      true,
     );
   });
 
@@ -165,25 +169,25 @@ describe('SprkDropdownComponent', () => {
     component.triggerText = 'test';
     component.screenReaderText = '';
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('a').getAttribute('aria-label')).toEqual(
-      'test'
-    );
+    expect(
+      fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
+    ).toEqual('test');
   });
 
   it('should apply aria-label when screenReaderText is provided', () => {
     component.triggerText = '';
     component.screenReaderText = 'test';
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('a').getAttribute('aria-label')).toEqual(
-      'test'
-    );
+    expect(
+      fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
+    ).toEqual('test');
   });
 
   it('should apply a default aria-label when none is provided', () => {
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('a').getAttribute('aria-label')).toEqual(
-      'Choose One'
-    );
+    expect(
+      fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
+    ).toEqual('Choose One');
   });
 
   it('should apply an aria-label to listbox when title provided', () => {
@@ -192,7 +196,9 @@ describe('SprkDropdownComponent', () => {
     dropdownTriggerElement.click();
 
     fixture.detectChanges();
-    const listBoxAria = fixture.nativeElement.querySelector('.sprk-c-Dropdown__links').getAttribute('aria-label');
+    const listBoxAria = fixture.nativeElement
+      .querySelector('.sprk-c-Dropdown__links')
+      .getAttribute('aria-label');
     expect(listBoxAria).toEqual('test');
   });
 
@@ -202,17 +208,18 @@ describe('SprkDropdownComponent', () => {
     dropdownTriggerElement.click();
 
     fixture.detectChanges();
-    const listBoxAria = fixture.nativeElement.querySelector('.sprk-c-Dropdown__links').getAttribute('aria-label');
+    const listBoxAria = fixture.nativeElement
+      .querySelector('.sprk-c-Dropdown__links')
+      .getAttribute('aria-label');
     expect(listBoxAria).toEqual('test');
   });
 
   it('should apply a default aria-label to listbox when none is provided', () => {
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    const listBoxAria = fixture.nativeElement.querySelector('.sprk-c-Dropdown__links').getAttribute('aria-label');
-    expect(listBoxAria).toEqual(
-      'My Choices'
-    );
-
+    const listBoxAria = fixture.nativeElement
+      .querySelector('.sprk-c-Dropdown__links')
+      .getAttribute('aria-label');
+    expect(listBoxAria).toEqual('My Choices');
   });
 });

@@ -1,6 +1,9 @@
 import { SprkDropdownModule } from './sprk-dropdown.module';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
+import { SprkLinkModule } from '../sprk-link/sprk-link.module';
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
@@ -9,10 +12,8 @@ export default {
   component: SprkDropdownComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -29,7 +30,12 @@ const modules = {
   imports: [
     SprkDropdownModule,
     SprkLinkDirectiveModule,
+    SprkLinkModule,
+    RouterModule.forRoot([
+      { path: 'iframe.html', component: SprkDropdownComponent },
+    ]),
   ],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 };
 
 export const defaultStory = () => ({
@@ -44,7 +50,8 @@ export const defaultStory = () => ({
       additionalIconClasses="sprk-c-Icon--l"
       [choices]="[{
           text: 'Option 1',
-          value: 'Option 1'
+          value: 'Option 1',
+          href: 'https://www.google.com'
         },
         {
           text: 'Option 2',
@@ -53,14 +60,14 @@ export const defaultStory = () => ({
       ]"
     >
     </sprk-dropdown>
-  `
+  `,
 });
 
 defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['sprk-dropdown.component'],
-  }
+  },
 };
 
 export const informational = () => ({
@@ -106,7 +113,7 @@ export const informational = () => ({
         </a>
       </div>
     </sprk-dropdown>
-  `
+  `,
 });
 
 informational.story = {
