@@ -169,7 +169,7 @@ import {
             <sprk-link
               linkType="unstyled"
               [analyticsString]="narrowSelector['footer'].analyticsString"
-              [attr.href]="narrowSelector['footer'].href"
+              [href]="narrowSelector['footer'].href"
               additionalClasses="sprk-c-Button sprk-c-Button--tertiary"
             >
               {{ narrowSelector['footer'].text }}
