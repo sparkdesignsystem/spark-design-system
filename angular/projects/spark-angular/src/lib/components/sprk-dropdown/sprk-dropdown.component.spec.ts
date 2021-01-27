@@ -222,4 +222,38 @@ describe('SprkDropdownComponent', () => {
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('My Choices');
   });
+
+  it('should set href to external link when href contains a : in the provided value', () => {
+    component.choices = [
+      {
+        text: 'Option 1',
+        value: 'Option 1',
+        href: 'https://www.google.com',
+      },
+    ];
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement
+        .querySelector('.sprk-c-Dropdown__link')
+        .getAttribute('href'),
+    ).toEqual('https://www.google.com');
+  });
+
+  it('should set href to routerLink when href is an internal', () => {
+    component.choices = [
+      {
+        text: 'Option 1',
+        value: 'Option 1',
+        href: '/alert',
+      },
+    ];
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement
+        .querySelector('.sprk-c-Dropdown__link')
+        .getAttribute('href'),
+    ).toEqual('/alert');
+  });
 });
