@@ -57,6 +57,7 @@ export const selectBox = () => (
     />
     <SprkIcon
       iconName="chevron-down"
+      aria-hidden="true"
       additionalClasses="
               sprk-c-Icon--filled-current-color
               sprk-c-Icon--stroke-current-color
@@ -114,6 +115,7 @@ export const invalidSelectBox = () => (
     />
     <SprkIcon
       iconName="chevron-down"
+      aria-hidden="true"
       additionalClasses="
               sprk-c-Icon--filled-current-color
               sprk-c-Icon--stroke-current-color
@@ -189,6 +191,7 @@ export const disabledSelectBox = () => (
     />
     <SprkIcon
       iconName="chevron-down"
+      aria-hidden="true"
       additionalClasses="
               sprk-c-Icon--filled-current-color
               sprk-c-Icon--stroke-current-color
@@ -246,6 +249,7 @@ export const hugeSelectBox = () => (
     <SprkLabel htmlFor="huge-select">Select Box Label</SprkLabel>
     <SprkIcon
       iconName="chevron-down"
+      aria-hidden="true"
       additionalClasses="
               sprk-c-Icon--filled-current-color
               sprk-c-Icon--stroke-current-color
@@ -305,6 +309,7 @@ export const invalidHugeSelectBox = () => (
     <SprkLabel htmlFor="invalid-huge-select">Select Box Label</SprkLabel>
     <SprkIcon
       iconName="chevron-down"
+      aria-hidden="true"
       additionalClasses="
               sprk-c-Icon--filled-current-color
               sprk-c-Icon--stroke-current-color
@@ -369,6 +374,7 @@ export const disabledHugeSelectBox = () => (
     />
     <SprkIcon
       iconName="chevron-down"
+      aria-hidden="true"
       additionalClasses="
               sprk-c-Icon--filled-current-color
               sprk-c-Icon--stroke-current-color
