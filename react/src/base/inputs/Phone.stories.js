@@ -3,7 +3,8 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -11,7 +12,7 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkInput,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: ['SprkInput'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
@@ -35,8 +36,9 @@ before submitting the form.
 
 export const phoneInput = () => (
   <SprkInputContainer>
-    <SprkLabel>Phone Number</SprkLabel>
+    <SprkLabel htmlFor="phone-1">Phone Number</SprkLabel>
     <SprkInput
+      id="phone-1"
       placeholder="(000) 000-0000"
       additionalClasses="sprk-u-Width-100"
     />
@@ -52,18 +54,21 @@ phoneInput.story = {
 
 export const invalidPhoneInput = () => (
   <SprkInputContainer>
-    <SprkLabel>Phone Number</SprkLabel>
+    <SprkLabel htmlFor="phone-2">Phone Number</SprkLabel>
     <SprkInput
+      id="phone-2"
+      ariaDescribedBy="invalid-phone"
       placeholder="(000) 000-0000"
       isValid={false}
       additionalClasses="sprk-u-Width-100"
     />
-    <SprkErrorContainer
-      id="invalid-date"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-phone">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -74,15 +79,19 @@ invalidPhoneInput.story = {
       'SprkInput',
       'SprkLabel',
       'SprkInputContainer',
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
     ],
   },
 };
 
 export const disabledPhoneInput = () => (
   <SprkInputContainer>
-    <SprkLabel isDisabled>Phone Number</SprkLabel>
+    <SprkLabel htmlFor="phone-3" isDisabled>
+      Phone Number
+    </SprkLabel>
     <SprkInput
+      id="phone-3"
       placeholder="(000) 000-0000"
       isDisabled
       additionalClasses="sprk-u-Width-100"
