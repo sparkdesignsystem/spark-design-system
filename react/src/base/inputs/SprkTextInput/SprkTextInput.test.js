@@ -173,17 +173,16 @@ describe('SprkTextInput:', () => {
 
   it('should merge errorContainerId and ariaDescribedBy', () => {
     const wrapper = mount(
-      <SprkTextInput ariaDescribedBy="foo bar" valid={false} />,
+      <SprkTextInput
+        errorContainerId="errorId"
+        ariaDescribedBy="id1 id2"
+        valid={false}
+      />,
     );
     const input = wrapper.find('input');
     expect(input.length).toBe(1);
-    expect(input.getDOMNode().getAttribute('aria-describedby')).toContain(
-      'foo bar',
-    );
-    // aria-describedby should also contain the generated ID for the error
-    // container, which we do not know at compile time
-    expect(input.getDOMNode().getAttribute('aria-describedby')).not.toEqual(
-      'foo bar',
+    expect(input.getDOMNode().getAttribute('aria-describedby')).toEqual(
+      'errorId id1 id2',
     );
   });
 });
