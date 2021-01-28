@@ -11,6 +11,8 @@ import {
 import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
 
 // TODO: #3800 Remove `title` input, now replaced with `heading`
+// TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
+// TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
 @Component({
   selector: 'sprk-dropdown',
   template: `
@@ -42,7 +44,9 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
             [iconType]="triggerIconType"
-            additionalClasses="sprk-u-mls {{ additionalIconClasses }}"
+            additionalClasses="sprk-u-mls {{
+              returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
+            }}"
           ></sprk-icon>
         </a>
       </div>
@@ -84,7 +88,9 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
                 sprk-u-mls
                 sprk-c-Icon--toggle
                 sprk-Stack__item
-                {{ additionalIconClasses }}
+                {{
+                returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
+              }}
               "
             ></sprk-icon>
           </a>
@@ -166,6 +172,14 @@ export class SprkDropdownComponent implements OnChanges {
    */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon.
+   */
+  @Input()
+  iconAdditionalClasses: string;
+  // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
   /**
    * Expects a space separated string
    * of classes to be added to the

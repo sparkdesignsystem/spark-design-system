@@ -35,7 +35,7 @@ export const defaultStory = () => ({
       heading="My Choices"
       triggerIconType="settings"
       additionalTriggerClasses="sprk-b-Link--plain"
-      additionalIconClasses="sprk-c-Icon--l"
+      iconAdditionalClasses="sprk-c-Icon--l"
       [choices]="[{
           text: 'Option 1',
           value: 'Option 1'
