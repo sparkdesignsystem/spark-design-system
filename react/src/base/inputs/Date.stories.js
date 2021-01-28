@@ -75,7 +75,6 @@ invalidDateInput.story = {
       'SprkInput',
       'SprkLabel',
       'SprkInputContainer',
-      'SprkErrorContainer',
       'SprkFieldError',
       'SprkIcon',
     ],
