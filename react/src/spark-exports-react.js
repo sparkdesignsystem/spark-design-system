@@ -58,3 +58,4 @@ export { default as SprkInput } from './base/inputs/SprkInput/SprkInput';
 export { default as SprkLabel } from './base/inputs/SprkLabel/SprkLabel';
 export { default as SprkDatePicker } from './base/inputs/SprkDatePicker/SprkDatePicker';
 export { default as SprkInputContainer } from './base/inputs/SprkInputContainer/SprkInputContainer';
+export { default as SprkFieldError } from './base/inputs/SprkFieldError/SprkFieldError';
