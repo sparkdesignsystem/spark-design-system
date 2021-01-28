@@ -3,8 +3,8 @@ import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
-
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -12,15 +12,15 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkInput,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: ['SprkInput'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
 
 export const passwordInput = () => (
   <SprkInputContainer>
-    <SprkLabel>Password</SprkLabel>
-    <SprkInput additionalClasses="sprk-u-Width-100" />
+    <SprkLabel htmlFor="password-1">Password</SprkLabel>
+    <SprkInput id="password-1" additionalClasses="sprk-u-Width-100" />
   </SprkInputContainer>
 );
 
@@ -33,14 +33,20 @@ passwordInput.story = {
 
 export const invalidPasswordInput = () => (
   <SprkInputContainer>
-    <SprkLabel>Password</SprkLabel>
-    <SprkInput isValid={false} additionalClasses="sprk-u-Width-100" />
-    <SprkErrorContainer
-      id="invalid-password"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkLabel htmlFor="password-2">Password</SprkLabel>
+    <SprkInput
+      id="password-2"
+      ariaDescribedBy="invalid-password"
+      isValid={false}
+      additionalClasses="sprk-u-Width-100"
+    />
+    <SprkFieldError id="invalid-password">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -51,15 +57,22 @@ invalidPasswordInput.story = {
       'SprkInput',
       'SprkLabel',
       'SprkInputContainer',
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
     ],
   },
 };
 
 export const disabledPasswordInput = () => (
   <SprkInputContainer>
-    <SprkLabel isDisabled>Password</SprkLabel>
-    <SprkInput isDisabled additionalClasses="sprk-u-Width-100" />
+    <SprkLabel htmlFor="password-3" isDisabled>
+      Password
+    </SprkLabel>
+    <SprkInput
+      id="password-3"
+      isDisabled
+      additionalClasses="sprk-u-Width-100"
+    />
   </SprkInputContainer>
 );
 
