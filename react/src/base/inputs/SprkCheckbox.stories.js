@@ -1,6 +1,5 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import SprkCheckboxGroup from './SprkCheckbox/SprkCheckboxGroup/SprkCheckboxGroup';
 import SprkCheckboxItem from './SprkCheckbox/SprkCheckboxItem/SprkCheckboxItem';
 import SprkFieldset from './SprkFieldset/SprkFieldset';
@@ -8,6 +7,8 @@ import SprkLegend from './SprkLegend/SprkLegend';
 import SprkHelperText from './SprkHelperText/SprkHelperText';
 import SprkStack from '../../objects/stack/SprkStack';
 import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -24,7 +25,8 @@ export default {
       SprkSelectionInput,
     },
     jest: [
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
       'SprkCheckboxGroup',
       'SprkCheckboxItem',
       'SprkFieldset',
@@ -92,10 +94,13 @@ export const invalidCheckbox = () => (
       <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
     </SprkFieldset>
-    <SprkErrorContainer
-      id="checkbox-error-container"
-      message="There is an error on this field"
-    />
+    <SprkFieldError id="invalid-checkbox">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkCheckboxGroup>
 );
 
@@ -194,10 +199,13 @@ export const hugeInvalid = () => (
         Checkbox Item 3
       </SprkCheckboxItem>
     </SprkFieldset>
-    <SprkErrorContainer
-      id="checkbox-huge-error-container"
-      message="There is an error on this field"
-    />
+    <SprkFieldError id="invalid-huge-checkbox">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkCheckboxGroup>
 );
 
