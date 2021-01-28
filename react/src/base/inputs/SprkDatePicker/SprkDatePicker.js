@@ -1,12 +1,30 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import TinyDatePicker from 'tiny-date-picker';
+import assign from 'lodash/assign';
 import uniqueId from 'lodash/uniqueId';
 
-class SprkInput extends Component {
+class SprkDatePicker extends Component {
   constructor(props) {
     const { value } = props;
-    super(props);
+    super(props).datePickerInputRef = React.createRef();
+    this.tdpConfig = {
+      mode: 'dp-below',
+      lang: {
+        days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+      },
+      min: '01/1/2008',
+      max: '01/1/2068',
+      format: (date) =>
+        date
+          .toLocaleDateString('en-US', {
+            month: '2-digit',
+            day: '2-digit',
+            year: 'numeric',
+          })
+          .replace(/[^ -~]/g, ''),
+    };
 
     if (value) {
       this.state = {
@@ -19,13 +37,21 @@ class SprkInput extends Component {
     }
   }
 
+  componentDidMount() {
+    const { datePickerConfig } = this.props;
+    TinyDatePicker(
+      this.datePickerInputRef.current,
+      assign(this.tdpConfig, datePickerConfig),
+    );
+  }
+
   render() {
     const {
+      datePickerConfig,
       variant,
       additionalClasses,
       analyticsString,
       formatter,
-      forwardedRef,
       idString,
       isDisabled,
       isValid,
@@ -52,12 +78,12 @@ class SprkInput extends Component {
           'sprk-b-Input--has-floating-label': hasValue && variant === 'huge',
         })}
         disabled={isDisabled}
-        ref={forwardedRef}
+        ref={this.datePickerInputRef}
         aria-describedby={ariaDescribedBy}
         data-id={idString}
         data-analytics={analyticsString}
         aria-invalid={!isValid}
-        value={isValid && formatter(value) ? formatter(value) : value}
+        value={isValid && formatter ? formatter(value) : value}
         onBlur={(e) => handleOnBlur(e)}
         id={id}
         {...rest}
@@ -66,7 +92,30 @@ class SprkInput extends Component {
   }
 }
 
-SprkInput.propTypes = {
+SprkDatePicker.propTypes = {
+  /**
+   * Exposes configuration provided
+   * by tiny-date-picker, see [github](https://github.com/chrisdavies/tiny-date-picker) for documentation.
+   */
+  datePickerConfig: PropTypes.shape({
+    appendTo: PropTypes.node,
+    lang: PropTypes.shape({
+      days: PropTypes.arrayOf(PropTypes.string),
+      months: PropTypes.arrayOf(PropTypes.string),
+    }),
+    today: PropTypes.string,
+    clear: PropTypes.string,
+    close: PropTypes.string,
+    format: PropTypes.func,
+    parse: PropTypes.func,
+    mode: PropTypes.oneOf(['dp-modal', 'dp-below', 'dp-permanent']),
+    highlightedDate: PropTypes.string,
+    min: PropTypes.string,
+    max: PropTypes.string,
+    inRange: PropTypes.func,
+    dateClass: PropTypes.func,
+    dayOffset: PropTypes.number,
+  }),
   /**
    * Determines the style of the input container.
    * Supplying no value will cause
@@ -75,7 +124,7 @@ SprkInput.propTypes = {
   variant: PropTypes.oneOf(['huge']),
   /**
    * A space-separated string of classes
-   * to add to the outermost container of the component.
+   * to add to the component.
    */
   additionalClasses: PropTypes.string,
   /**
@@ -99,11 +148,6 @@ SprkInput.propTypes = {
    * component in the valid or the error state.
    */
   isValid: PropTypes.bool,
-  /**
-   * A ref passed in will be attached to the
-   * input element of the rendered component.
-   */
-  forwardedRef: PropTypes.shape(),
   /**
    * Will render the component in it's disabled state.
    */
@@ -129,12 +173,12 @@ SprkInput.propTypes = {
   ariaDescribedBy: PropTypes.string,
 };
 
-SprkInput.defaultProps = {
+SprkDatePicker.defaultProps = {
+  datePickerConfig: {},
   formatter: (value) => value,
-  forwardedRef: React.createRef(),
   isValid: true,
   id: uniqueId('sprk-'),
   isDisabled: false,
 };
 
-export default SprkInput;
+export default SprkDatePicker;

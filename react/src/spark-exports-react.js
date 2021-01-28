@@ -9,6 +9,7 @@ export { default as SprkFlag } from './components/flag/SprkFlag';
 export { default as SprkHighlightBoard } from './components/highlight-board/SprkHighlightBoard';
 export { default as SprkIcon } from './components/icons/SprkIcon';
 export { default as SprkTextInput } from './base/inputs/SprkTextInput/SprkTextInput';
+export { default as SprkTextarea } from './base/inputs/SprkTextarea/SprkTextarea';
 export { default as SprkRevealInput } from './base/inputs/SprkRevealInput/SprkRevealInput';
 export { default as SprkSelectionInput } from './base/inputs/SprkSelectionInput/SprkSelectionInput';
 export { default as SprkCheckboxGroup } from './base/inputs/SprkCheckbox/SprkCheckboxGroup/SprkCheckboxGroup';
@@ -55,3 +56,5 @@ export { default as sprkIsValidPhone } from './utilities/validation/sprkIsValidP
 export { default as sprkIsValidMonetary } from './utilities/validation/sprkIsValidMonetary';
 export { default as SprkInput } from './base/inputs/SprkInput/SprkInput';
 export { default as SprkLabel } from './base/inputs/SprkLabel/SprkLabel';
+export { default as SprkDatePicker } from './base/inputs/SprkDatePicker/SprkDatePicker';
+export { default as SprkInputContainer } from './base/inputs/SprkInputContainer/SprkInputContainer';
