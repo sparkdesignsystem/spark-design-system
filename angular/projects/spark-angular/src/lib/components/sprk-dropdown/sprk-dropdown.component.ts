@@ -14,6 +14,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
 // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
 // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
 // TODO: #3800 Remove `additionalTriggerTextClasses` input, now replaced with `triggerTextAdditionalClasses`
+// TODO: #3800 Remove `triggerIconType` input, now replaced with `triggerIconName`
 @Component({
   selector: 'sprk-dropdown',
   template: `
@@ -44,7 +45,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
-            [iconType]="triggerIconType"
+            [iconType]="returnSecondIfBoth(triggerIconType, triggerIconName)"
             additionalClasses="sprk-u-mls {{
               returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
             }}"
@@ -82,7 +83,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
               >{{ selector }}</span
             >
             <sprk-icon
-              [iconType]="triggerIconType"
+              [iconType]="returnSecondIfBoth(triggerIconType, triggerIconName)"
               additionalClasses="
                 sprk-c-Icon--filled-current-color
                 sprk-c-Icon--stroke-current-color
@@ -274,8 +275,16 @@ export class SprkDropdownComponent implements OnChanges {
    * to the right of the trigger text.
    */
   @Input()
+  triggerIconName: string;
+  // TODO: #3800 Remove `triggerIconType` input, now replaced with `triggerIconName`
+  /**
+   * If supplied, will render the icon
+   * to the right of the trigger text.
+   */
+  @Input()
   triggerIconType: string;
   /**
+   * Deprecated. Use `triggerIconName` instead.
    * The text that is initially rendered to the trigger.
    * If `variant` is `informational`,
    * clicking on a choice will change the trigger text.
