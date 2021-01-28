@@ -26,7 +26,7 @@ describe('SprkTextarea:', () => {
     expect(wrapper.find('.sprk-b-TextArea--error').length).toBe(0);
   });
 
-  it('should add disabled attribute isDisabled is true', () => {
+  it('should add disabled attribute when isDisabled is true', () => {
     const wrapper = mount(<SprkTextarea isDisabled />);
     expect(wrapper.find('textarea[disabled]').length).toBe(1);
   });
