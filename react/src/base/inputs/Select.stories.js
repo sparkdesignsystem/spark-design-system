@@ -12,7 +12,12 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkSelect,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: [
+      'SprkSelect',
+      'SprkErrorContainer',
+      'SprkInputIconCheck',
+      'SprkIcon',
+    ],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
