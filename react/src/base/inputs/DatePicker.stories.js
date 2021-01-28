@@ -37,14 +37,16 @@ props table below for available customization options.
 export const defaultStory = () => (
   <SprkInputContainer>
     <div className="sprk-b-InputContainer__icon-container">
-      <SprkLabel>Date</SprkLabel>
+      <SprkLabel for="datepicker-1">Date</SprkLabel>
       <SprkIcon
         iconName="calendar"
         additionalClasses="
           sprk-c-Icon--stroke-current-color
           sprk-b-InputContainer__icon"
+        aria-hidden="true"
       />
       <SprkDatePicker
+        id="datepicker-1"
         placeholder="01/01/2021"
         additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
       />
@@ -62,16 +64,19 @@ defaultStory.story = {
 export const invalidDatePicker = () => (
   <SprkInputContainer>
     <div className="sprk-b-InputContainer__icon-container">
-      <SprkLabel>Date</SprkLabel>
+      <SprkLabel for="datepicker-2">Date</SprkLabel>
       <SprkIcon
         iconName="calendar"
         additionalClasses="
           sprk-c-Icon--stroke-current-color sprk-b-InputContainer__icon"
+        aria-hidden="true"
       />
       <SprkDatePicker
+        id="datepicker-2"
         isValid={false}
         placeholder="01/01/2021"
         additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+        ariaDescribedBy="invalid-date"
       />
     </div>
     <SprkErrorContainer
@@ -99,13 +104,17 @@ invalidDatePicker.story = {
 export const disabledDatePicker = () => (
   <SprkInputContainer>
     <div className="sprk-b-InputContainer__icon-container">
-      <SprkLabel isDisabled>Date</SprkLabel>
+      <SprkLabel for="datepicker-3" isDisabled>
+        Date
+      </SprkLabel>
       <SprkIcon
         iconName="calendar"
         additionalClasses="
           sprk-c-Icon--stroke-current-color sprk-b-InputContainer__icon"
+        aria-hidden="true"
       />
       <SprkDatePicker
+        id="datepicker-3"
         isDisabled
         placeholder="01/01/2021"
         additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
@@ -124,11 +133,12 @@ disabledDatePicker.story = {
 export const hugeDatePicker = () => (
   <SprkInputContainer variant="huge">
     <SprkDatePicker
+      id="huge-datepicker-1"
       variant="huge"
       placeholder="01/01/2021"
       additionalClasses="sprk-u-Width-100"
     />
-    <SprkLabel>Date</SprkLabel>
+    <SprkLabel for="huge-datepicker-1">Date</SprkLabel>
   </SprkInputContainer>
 );
 
@@ -142,12 +152,14 @@ hugeDatePicker.story = {
 export const invalidHugeDatePicker = () => (
   <SprkInputContainer variant="huge">
     <SprkDatePicker
+      id="huge-datepicker-2"
       variant="huge"
       placeholder="01/01/2021"
       isValid={false}
       additionalClasses="sprk-u-Width-100"
+      ariaDescribedBy="invalid-huge"
     />
-    <SprkLabel>Date</SprkLabel>
+    <SprkLabel for="huge-datepicker-2">Date</SprkLabel>
     <SprkErrorContainer
       id="invalid-huge"
       message="Update this story once error container is done"
@@ -172,12 +184,15 @@ invalidHugeDatePicker.story = {
 export const disabledHugeDatePicker = () => (
   <SprkInputContainer variant="huge">
     <SprkDatePicker
+      id="huge-datepicker-3"
       variant="huge"
       placeholder="01/01/2021"
       isDisabled
       additionalClasses="sprk-u-Width-100"
     />
-    <SprkLabel isDisabled>Date</SprkLabel>
+    <SprkLabel for="huge-datepicker-3" isDisabled>
+      Date
+    </SprkLabel>
   </SprkInputContainer>
 );
 

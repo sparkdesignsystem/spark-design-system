@@ -83,7 +83,7 @@ class SprkDatePicker extends Component {
         data-id={idString}
         data-analytics={analyticsString}
         aria-invalid={!isValid}
-        value={isValid && formatter(value) ? formatter(value) : value}
+        value={isValid && formatter ? formatter(value) : value}
         onBlur={(e) => handleOnBlur(e)}
         id={id}
         {...rest}
@@ -124,7 +124,7 @@ SprkDatePicker.propTypes = {
   variant: PropTypes.oneOf(['huge']),
   /**
    * A space-separated string of classes
-   * to add to the outermost container of the component.
+   * to add to the component.
    */
   additionalClasses: PropTypes.string,
   /**
