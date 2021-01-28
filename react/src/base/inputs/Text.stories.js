@@ -22,7 +22,7 @@ export default {
 export const textInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="custom">Text Input</SprkLabel>
-    <SprkInput id="custom" />
+    <SprkInput id="custom" additionalClasses="sprk-u-Width-100" />
   </SprkInputContainer>
 );
 
@@ -36,7 +36,11 @@ textInput.story = {
 export const invalidTextInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="invalid-input">Invalid Input</SprkLabel>
-    <SprkInput id="invalid-input" isValid={false} />
+    <SprkInput
+      id="invalid-input"
+      isValid={false}
+      additionalClasses="sprk-u-Width-100"
+    />
     <SprkErrorContainer
       id="invalid-error"
       message="Update this story once error container is done"
@@ -63,7 +67,11 @@ export const disabledTextInput = () => (
     <SprkLabel htmlFor="disabled-input" isDisabled>
       Disabled Input
     </SprkLabel>
-    <SprkInput id="disabled-input" isDisabled />
+    <SprkInput
+      id="disabled-input"
+      isDisabled
+      additionalClasses="sprk-u-Width-100"
+    />
   </SprkInputContainer>
 );
 
@@ -76,7 +84,12 @@ disabledTextInput.story = {
 
 export const hugeTextInput = () => (
   <SprkInputContainer variant="huge">
-    <SprkInput id="huge-input" variant="huge" placeholder="Placeholder" />
+    <SprkInput
+      id="huge-input"
+      variant="huge"
+      placeholder="Placeholder"
+      additionalClasses="sprk-u-Width-100"
+    />
     <SprkLabel htmlFor="huge-input">Huge Input</SprkLabel>
   </SprkInputContainer>
 );
@@ -96,6 +109,7 @@ export const invalidHugeTextInput = () => (
       variant="huge"
       placeholder="Placeholder"
       isValid={false}
+      additionalClasses="sprk-u-Width-100"
     />
     <SprkLabel htmlFor="invalid-huge-input">Huge Input</SprkLabel>
     <SprkErrorContainer
@@ -122,6 +136,7 @@ export const disabledHugeTextInput = () => (
       variant="huge"
       placeholder="Placeholder"
       isDisabled
+      additionalClasses="sprk-u-Width-100"
     />
     <SprkLabel htmlFor="disabled-huge-input">Huge Input</SprkLabel>
   </SprkInputContainer>
