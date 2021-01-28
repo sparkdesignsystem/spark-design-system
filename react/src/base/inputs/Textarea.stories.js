@@ -49,7 +49,7 @@ export const textareaHelperText = () => (
 textareaHelperText.story = {
   name: 'Default Helper Text',
   parameters: {
-    jest: ['SprkTextarea', 'SprkLabel'],
+    jest: ['SprkTextarea', 'SprkLabel', 'SprkHelperText'],
   },
 };
 
