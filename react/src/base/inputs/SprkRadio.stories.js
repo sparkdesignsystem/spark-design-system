@@ -1,6 +1,5 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import SprkRadioGroup from './SprkRadio/SprkRadioGroup/SprkRadioGroup';
 import SprkRadioItem from './SprkRadio/SprkRadioItem/SprkRadioItem';
 import SprkFieldset from './SprkFieldset/SprkFieldset';
@@ -8,6 +7,8 @@ import SprkLegend from './SprkLegend/SprkLegend';
 import SprkHelperText from './SprkHelperText/SprkHelperText';
 import SprkStack from '../../objects/stack/SprkStack';
 import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -16,7 +17,6 @@ export default {
   component: SprkRadioGroup,
   parameters: {
     subcomponents: {
-      SprkErrorContainer,
       SprkRadioGroup,
       SprkRadioItem,
       SprkFieldset,
@@ -25,7 +25,8 @@ export default {
       SprkSelectionInput,
     },
     jest: [
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
       'SprkRadioGroup',
       'SprkRadio',
       'SprkFieldset',
@@ -87,10 +88,13 @@ export const invalidRadioButton = () => (
     <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
     <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
     <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
-    <SprkErrorContainer
-      id="radio-error-container"
-      message="There is an error on this field"
-    />
+    <SprkFieldError id="invalid-radio">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkRadioGroup>
 );
 
@@ -190,10 +194,13 @@ export const hugeInvalid = () => (
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
-    <SprkErrorContainer
-      id="radio-huge-error-container"
-      message="There is an error on this field"
-    />
+    <SprkFieldError id="invalid-huge-radio">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkRadioGroup>
 );
 
