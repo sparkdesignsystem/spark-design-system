@@ -13,6 +13,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
 // TODO: #3800 Remove `title` input, now replaced with `heading`
 // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
 // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
+// TODO: #3800 Remove `additionalTriggerTextClasses` input, now replaced with `triggerTextAdditionalClasses`
 @Component({
   selector: 'sprk-dropdown',
   template: `
@@ -203,6 +204,14 @@ export class SprkDropdownComponent implements OnChanges {
   @Input()
   additionalTriggerClasses: string;
   /**
+   * Expects a space separated string of
+   * classes to be added to the trigger text.
+   */
+  @Input()
+  triggerTextAdditionalClasses: string;
+  // TODO: #3800 Remove `additionalTriggerTextClasses` input, now replaced with `triggerTextAdditionalClasses`
+  /**
+   * Deprecated. Use `triggerTextAdditionalClasses` instead.
    * Expects a space separated string of
    * classes to be added to the trigger text.
    */
@@ -467,8 +476,16 @@ export class SprkDropdownComponent implements OnChanges {
   getTriggerTextClasses(): string {
     const classArray: string[] = [''];
 
-    if (this.additionalTriggerTextClasses) {
-      this.additionalTriggerTextClasses.split(' ').forEach((className) => {
+    // TODO: #3800 Remove `additionalTriggerTextClasses` input, now replaced with `triggerTextAdditionalClasses`
+    if (
+      this.additionalTriggerTextClasses ||
+      this.triggerTextAdditionalClasses
+    ) {
+      const classes = this.returnSecondIfBoth(
+        this.additionalTriggerTextClasses,
+        this.triggerTextAdditionalClasses,
+      );
+      classes.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
