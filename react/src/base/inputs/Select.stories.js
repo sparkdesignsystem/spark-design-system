@@ -1,23 +1,33 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
+import SprkSelect from './SprkSelect/SprkSelect';
+import SprkIcon from '../../components/icons/SprkIcon';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
 import SprkFieldError from './SprkFieldError/SprkFieldError';
-import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import SprkLabel from './SprkLabel/SprkLabel';
 
 export default {
   title: 'Components/Input/Select',
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
-  component: SprkSelectionInput,
+  component: SprkSelect,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: [
+      'SprkSelect',
+      'SprkFieldError',
+      'SprkInputIconCheck',
+      'SprkIcon',
+      'SprkLabel',
+    ],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
 
 export const selectBox = () => (
   <SprkInputContainer>
-    <SprkSelectionInput
+    <SprkLabel htmlFor="default-select">Select Box Label</SprkLabel>
+    <SprkSelect
+      id="default-select"
       choices={[
         {
           label: 'Option 1',
@@ -49,9 +59,16 @@ export const selectBox = () => (
           ],
         },
       ]}
-      name="name"
-      variant="select"
-      label="Select Box Label"
+      name="select"
+    />
+    <SprkIcon
+      iconName="chevron-down"
+      aria-hidden="true"
+      additionalClasses="
+        sprk-c-Icon--filled-current-color
+        sprk-c-Icon--stroke-current-color
+        sprk-b-SelectContainer__icon
+      "
     />
   </SprkInputContainer>
 );
@@ -65,7 +82,10 @@ selectBox.story = {
 
 export const invalidSelectBox = () => (
   <SprkInputContainer>
-    <SprkSelectionInput
+    <SprkLabel htmlFor="invalid-select">Select Box Label</SprkLabel>
+    <SprkSelect
+      id="invalid-select"
+      ariaDescribedBy="select-invalid-error"
       choices={[
         {
           label: 'Option 1',
@@ -97,12 +117,19 @@ export const invalidSelectBox = () => (
           ],
         },
       ]}
-      name="name"
-      variant="select"
-      label="Select Box Label"
-      valid={false}
+      name="select"
+      isValid={false}
     />
-    <SprkFieldError id="invalid-select">
+    <SprkIcon
+      iconName="chevron-down"
+      aria-hidden="true"
+      additionalClasses="
+        sprk-c-Icon--filled-current-color
+        sprk-c-Icon--stroke-current-color
+        sprk-b-SelectContainer__icon
+      "
+    />
+    <SprkFieldError id="select-invalid-error">
       <SprkIcon
         iconName="exclamation-filled"
         additionalClasses="sprk-b-ErrorIcon"
@@ -122,7 +149,11 @@ invalidSelectBox.story = {
 
 export const disabledSelectBox = () => (
   <SprkInputContainer>
-    <SprkSelectionInput
+    <SprkLabel isDisabled htmlFor="disabled-select">
+      Select Box Label
+    </SprkLabel>
+    <SprkSelect
+      id="disabled-select"
       choices={[
         {
           label: 'Option 1',
@@ -154,10 +185,17 @@ export const disabledSelectBox = () => (
           ],
         },
       ]}
-      name="name"
-      variant="select"
-      label="Select Box Label"
-      disabled
+      name="disabled-select"
+      isDisabled
+    />
+    <SprkIcon
+      iconName="chevron-down"
+      aria-hidden="true"
+      additionalClasses="
+        sprk-c-Icon--filled-current-color
+        sprk-c-Icon--stroke-current-color
+        sprk-b-SelectContainer__icon
+      "
     />
   </SprkInputContainer>
 );
@@ -171,8 +209,8 @@ disabledSelectBox.story = {
 
 export const hugeSelectBox = () => (
   <SprkInputContainer variant="huge">
-    <SprkSelectionInput
-      label="Select Box Label"
+    <SprkSelect
+      id="huge-select"
       choices={[
         {
           label: 'Option 1',
@@ -204,9 +242,19 @@ export const hugeSelectBox = () => (
           ],
         },
       ]}
-      variant="hugeSelect"
+      variant="huge"
       name="select"
       defaultValue=""
+    />
+    <SprkLabel htmlFor="huge-select">Select Box Label</SprkLabel>
+    <SprkIcon
+      iconName="chevron-down"
+      aria-hidden="true"
+      additionalClasses="
+        sprk-c-Icon--filled-current-color
+        sprk-c-Icon--stroke-current-color
+        sprk-b-SelectContainer__icon
+      "
     />
   </SprkInputContainer>
 );
@@ -220,8 +268,8 @@ hugeSelectBox.story = {
 
 export const invalidHugeSelectBox = () => (
   <SprkInputContainer variant="huge">
-    <SprkSelectionInput
-      label="Select Box Label"
+    <SprkSelect
+      id="select-huge-invalid"
       choices={[
         {
           label: 'Option 1',
@@ -253,14 +301,25 @@ export const invalidHugeSelectBox = () => (
           ],
         },
       ]}
-      variant="hugeSelect"
-      name="select"
-      valid={false}
-      errorMessage="There is an error in the field."
+      variant="huge"
+      name="select-huge-invalid"
+      ariaDescribedBy="select-huge-invalid"
+      isValid={false}
       defaultValue=""
     />
-    <SprkFieldError id="invalid-huge-select">
+    <SprkLabel htmlFor="select-huge-invalid">Select Box Label</SprkLabel>
+    <SprkIcon
+      iconName="chevron-down"
+      aria-hidden="true"
+      additionalClasses="
+        sprk-c-Icon--filled-current-color
+        sprk-c-Icon--stroke-current-color
+        sprk-b-SelectContainer__icon
+      "
+    />
+    <SprkFieldError id="select-huge-invalid">
       <SprkIcon
+        aria-hidden="true"
         iconName="exclamation-filled"
         additionalClasses="sprk-b-ErrorIcon"
       />
@@ -278,8 +337,8 @@ invalidHugeSelectBox.story = {
 
 export const disabledHugeSelectBox = () => (
   <SprkInputContainer variant="huge">
-    <SprkSelectionInput
-      label="Select Box Label"
+    <SprkSelect
+      id="huge-disabled-select"
       choices={[
         {
           label: 'Option 1',
@@ -311,10 +370,22 @@ export const disabledHugeSelectBox = () => (
           ],
         },
       ]}
-      variant="hugeSelect"
-      name="select"
-      disabled
+      variant="huge"
+      name="huge-disabled-select"
+      isDisabled
       defaultValue=""
+    />
+    <SprkLabel htmlFor="huge-disabled-select" isDisabled>
+      Select Box Label
+    </SprkLabel>
+    <SprkIcon
+      iconName="chevron-down"
+      aria-hidden="true"
+      additionalClasses="
+        sprk-c-Icon--filled-current-color
+        sprk-c-Icon--stroke-current-color
+        sprk-b-SelectContainer__icon
+      "
     />
   </SprkInputContainer>
 );
