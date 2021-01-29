@@ -351,7 +351,11 @@ SprkDropdown.propTypes = {
     items: PropTypes.arrayOf(
       PropTypes.shape({
         /** The element to render for each menu item. */
-        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        element: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.func,
+          PropTypes.elementType,
+        ]),
         /**
          * Determines the href of the choice item.
          */
