@@ -20,7 +20,7 @@ export default {
 export const passwordInput = () => (
   <SprkInputContainer>
     <SprkLabel>Password</SprkLabel>
-    <SprkInput additionalClasses="sprk-u-Width-100" />
+    <SprkInput />
   </SprkInputContainer>
 );
 
@@ -34,7 +34,7 @@ passwordInput.story = {
 export const invalidPasswordInput = () => (
   <SprkInputContainer>
     <SprkLabel>Password</SprkLabel>
-    <SprkInput isValid={false} additionalClasses="sprk-u-Width-100" />
+    <SprkInput isValid={false} />
     <SprkErrorContainer
       id="invalid-password"
       message="Update this story once error container is done"
@@ -59,7 +59,7 @@ invalidPasswordInput.story = {
 export const disabledPasswordInput = () => (
   <SprkInputContainer>
     <SprkLabel isDisabled>Password</SprkLabel>
-    <SprkInput isDisabled additionalClasses="sprk-u-Width-100" />
+    <SprkInput isDisabled />
   </SprkInputContainer>
 );
 

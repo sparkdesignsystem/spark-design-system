@@ -23,7 +23,7 @@ ${markdownDocumentationLinkBuilder('input')}
 export const helperText = () => (
   <SprkInputContainer>
     <SprkLabel>Text Input</SprkLabel>
-    <SprkInput additionalClasses="sprk-u-Width-100" />
+    <SprkInput />
     <SprkHelperText>Helper Text for the form field.</SprkHelperText>
   </SprkInputContainer>
 );
@@ -38,7 +38,7 @@ helperText.story = {
 export const invalidHelperText = () => (
   <SprkInputContainer>
     <SprkLabel>Text Input</SprkLabel>
-    <SprkInput isValid={false} additionalClasses="sprk-u-Width-100" />
+    <SprkInput isValid={false} />
     <SprkHelperText>Helper Text for the form field.</SprkHelperText>
     <SprkErrorContainer
       id="invalid-helper"
