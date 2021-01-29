@@ -17,6 +17,7 @@ export default {
       'SprkErrorContainer',
       'SprkInputIconCheck',
       'SprkIcon',
+      'SprkLabel',
     ],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
