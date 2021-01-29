@@ -58,6 +58,7 @@ export const invalidSSNInput = () => (
       <SprkIcon
         iconName="exclamation-filled"
         additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
       />
       <div className="sprk-b-ErrorText">There is an error on this field.</div>
     </SprkFieldError>
