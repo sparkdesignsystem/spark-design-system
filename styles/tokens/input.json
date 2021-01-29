@@ -192,6 +192,15 @@
       "file": "settings",
       "themable": true
     },
+    "width": {
+      "comment": "The width setting on Inputs.",
+      "value": "100%",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "huge": {
       "focus": {
         "border-width": {

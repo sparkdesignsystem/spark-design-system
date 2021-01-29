@@ -660,6 +660,7 @@ public class SparkDesignTokens {
     public static let sprkTextInputHugeBorderWidth = CGFloat(2.00)
     public static let sprkTextInputHugeFocusBorderWidth = CGFloat(2.00)
     public static let sprkTextInputHugeHeight = CGFloat(64.00)
+    public static let sprkTextInputWidth = CGFloat(1600.00)
     public static let sprkTextareaMinHeight = CGFloat(125.00)
     public static let sprkTextareaPadding = CGFloat(16.00)
     public static let sprkToggleTriggerPaddingBottom = CGFloat(0.00)
