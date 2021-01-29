@@ -377,6 +377,9 @@ export const disabledHugeSelectBox = () => (
       isDisabled
       defaultValue=""
     />
+    <SprkLabel htmlFor="huge-disabled-select" isDisabled>
+      Select Box Label
+    </SprkLabel>
     <SprkIcon
       iconName="chevron-down"
       aria-hidden="true"
@@ -385,9 +388,6 @@ export const disabledHugeSelectBox = () => (
               sprk-c-Icon--stroke-current-color
               sprk-b-SelectContainer__icon"
     />
-    <SprkLabel htmlFor="huge-disabled-select" isDisabled>
-      Select Box Label
-    </SprkLabel>
   </SprkInputContainer>
 );
 
