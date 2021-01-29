@@ -185,4 +185,25 @@ describe('SprkTextInput:', () => {
       'errorId id1 id2',
     );
   });
+
+  it('should respond to updates to errorContainerId or ariaDescribedBy', () => {
+    const wrapper = mount(
+      <SprkTextInput
+        errorContainerId="errorId"
+        ariaDescribedBy="id1 id2"
+        valid={false}
+      />,
+    );
+
+    const input = wrapper.find('input');
+    expect(input.length).toBe(1);
+    expect(input.getDOMNode().getAttribute('aria-describedby')).toEqual(
+      'errorId id1 id2',
+    );
+
+    wrapper.setProps({ errorContainerId: 'error2' });
+    expect(input.getDOMNode().getAttribute('aria-describedby')).toEqual(
+      'error2 id1 id2',
+    );
+  });
 });

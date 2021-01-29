@@ -17,6 +17,41 @@ class SprkInputElement extends Component {
         hasValue: false,
       };
     }
+
+    this.calculateAriaDescribedBy = this.calculateAriaDescribedBy.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
+    });
+  }
+
+  componentDidUpdate(prevProps) {
+    const { errorContainerId, ariaDescribedBy } = this.props;
+
+    if (
+      errorContainerId !== prevProps.errorContainerId ||
+      ariaDescribedBy !== prevProps.ariaDescribedBy
+    ) {
+      this.setState({
+        calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
+      });
+    }
+  }
+
+  calculateAriaDescribedBy() {
+    const { errorContainerId, ariaDescribedBy } = this.props;
+
+    if (errorContainerId && ariaDescribedBy) {
+      return `${errorContainerId} ${ariaDescribedBy}`;
+    }
+
+    if (ariaDescribedBy) return ariaDescribedBy;
+
+    if (errorContainerId) return errorContainerId;
+
+    return undefined;
   }
 
   render() {
@@ -39,7 +74,7 @@ class SprkInputElement extends Component {
       ariaDescribedBy,
       ...rest
     } = this.props;
-    const { hasValue } = this.state;
+    const { hasValue, calculatedAriaDescribedBy } = this.state;
 
     const Element = type === 'textarea' ? 'textarea' : 'input';
 
@@ -50,18 +85,6 @@ class SprkInputElement extends Component {
       } else {
         this.setState({ hasValue: false });
       }
-    };
-
-    const getAriaDescribedBy = () => {
-      if (errorContainerId && ariaDescribedBy) {
-        return `${errorContainerId} ${ariaDescribedBy}`;
-      }
-
-      if (ariaDescribedBy) return ariaDescribedBy;
-
-      if (errorContainerId) return errorContainerId;
-
-      return undefined;
     };
 
     return (
@@ -86,8 +109,8 @@ class SprkInputElement extends Component {
         data-id={idString}
         data-analytics={analyticsString}
         aria-invalid={!valid}
-        aria-describedby={getAriaDescribedBy()}
-        value={valid && formatter(value) ? formatter(value) : value}
+        aria-describedby={calculatedAriaDescribedBy}
+        value={valid && formatter ? formatter(value) : value}
         onBlur={(e) => handleOnBlur(e)}
         {...rest}
       >
