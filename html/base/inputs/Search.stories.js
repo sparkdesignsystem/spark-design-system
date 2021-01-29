@@ -37,7 +37,6 @@ export const searchInput = () => `
           class="
             sprk-b-TextInput
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="search-input"
           data-id="search-input"
@@ -84,7 +83,6 @@ export const invalidSearchInput = () => `
             sprk-b-TextInput
             sprk-b-TextArea--error
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="search-input"
           data-id="search-input"
@@ -145,7 +143,6 @@ export const disabledSearchInput = () => `
           class="
             sprk-b-TextInput
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="search-input"
           data-id="search-input"

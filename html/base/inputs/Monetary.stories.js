@@ -45,7 +45,6 @@ export const monetaryInput = () => `
           class="
             sprk-b-TextInput
             sprk-b-TextInput--has-text-icon
-            sprk-u-Width-100
           "
           id="monetary"
           data-id="monetary-input"
@@ -90,7 +89,6 @@ export const invalidMonetaryInput = () => `
             sprk-b-TextInput
             sprk-b-TextInput--error
             sprk-b-TextInput--has-text-icon
-            sprk-u-Width-100
           "
           id="monetary"
           data-id="monetary-input"
@@ -142,7 +140,6 @@ export const disabledMonetaryInput = () => `
           class="
             sprk-b-TextInput
             sprk-b-TextInput--has-text-icon
-            sprk-u-Width-100
           "
           id="monetary"
           data-id="monetary-input"

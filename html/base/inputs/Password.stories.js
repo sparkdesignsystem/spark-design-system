@@ -32,7 +32,7 @@ export const passwordInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="password"
         data-id="password-input"
         type="password"
@@ -88,7 +88,7 @@ export const invalidPasswordInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
+        class="sprk-b-TextInput sprk-b-TextInput--error"
         id="password"
         data-id="password-input"
         type="password"
@@ -152,7 +152,7 @@ export const disabledPasswordInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="password"
         data-id="password-input"
         type="password"

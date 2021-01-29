@@ -121,7 +121,6 @@ export const defaultStory = () => {
           class="
                 sprk-b-TextInput
                 sprk-b-TextInput--has-svg-icon
-                sprk-u-Width-100
               "
           id="autocomplete-input"
           type="text"
@@ -257,7 +256,6 @@ export const defaultInvalid = () => {
             sprk-b-TextInput
             sprk-b-TextInput--error
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="autocomplete-input-invalid"
           type="text"
@@ -400,7 +398,6 @@ export const defaultDisabled = () => {
           class="
                 sprk-b-TextInput
                 sprk-b-TextInput--has-svg-icon
-                sprk-u-Width-100
               "
           id="autocomplete-input-disabled"
           type="text"
@@ -523,7 +520,7 @@ export const hugeStory = () => {
         <use xlink:href="#search" />
       </svg>
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="text-input-huge"
         type="text"
         placeholder="Search for a Fruit"
@@ -657,7 +654,7 @@ export const hugeInvalid = () => {
         <use xlink:href="#search" />
       </svg>
       <input
-        class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
+        class="sprk-b-TextInput sprk-b-TextInput--error"
         id="autocomplete-huge-invalid"
         type="text"
         placeholder="Search for a Fruit"
@@ -802,7 +799,7 @@ export const hugeDisabled = () => {
         <use xlink:href="#search" />
       </svg>
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="autocomplete-input-huge-disabled"
         type="text"
         placeholder="Search for a Fruit"

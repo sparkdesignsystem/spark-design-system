@@ -86,6 +86,5 @@ export class SprkInputDirective implements OnInit {
     if (this.variant === 'huge') {
       this.floatLabelWhenValue(this.ref.nativeElement);
     }
-    this.renderer.addClass(this.ref.nativeElement, 'sprk-u-Width-100');
   }
 }

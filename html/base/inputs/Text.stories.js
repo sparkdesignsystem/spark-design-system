@@ -23,7 +23,7 @@ export const textInput = () => `
     </label>
 
     <input
-      class="sprk-b-TextInput sprk-u-Width-100"
+      class="sprk-b-TextInput"
       id="text-input"
       data-id="text-input"
       type="text"
@@ -52,7 +52,7 @@ export const invalidTextInput = () => `
     </label>
 
     <input
-      class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
+      class="sprk-b-TextInput sprk-b-TextInput--error"
       id="text-input"
       data-id="text-input"
       type="text"
@@ -92,7 +92,7 @@ export const disabledTextInput = () => `
     </label>
 
     <input
-      class="sprk-b-TextInput sprk-u-Width-100"
+      class="sprk-b-TextInput"
       id="text-input"
       data-id="text-input"
       type="text"
@@ -120,7 +120,7 @@ export const hugeTextInput = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         data-sprk-input="huge"
         id="text-input-huge"
         data-id="text-input-huge"
@@ -161,8 +161,7 @@ export const invalidHugeTextInput = () => {
       <input
         class="
           sprk-b-TextInput
-          sprk-b-TextInput--error
-          sprk-u-Width-100"
+          sprk-b-TextInput--error"
         data-sprk-input="huge"
         id="text-input-huge"
         data-id="text-input-huge"
@@ -212,7 +211,7 @@ export const disabledHugeTextInput = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         data-sprk-input="huge"
         id="text-input-huge"
         data-id="text-input-huge"
