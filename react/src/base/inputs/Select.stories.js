@@ -311,9 +311,10 @@ export const invalidHugeSelectBox = () => (
       iconName="chevron-down"
       aria-hidden="true"
       additionalClasses="
-              sprk-c-Icon--filled-current-color
-              sprk-c-Icon--stroke-current-color
-              sprk-b-SelectContainer__icon"
+        sprk-c-Icon--filled-current-color
+        sprk-c-Icon--stroke-current-color
+        sprk-b-SelectContainer__icon
+      "
     />
     <SprkFieldError id="select-huge-invalid">
       <SprkIcon
@@ -369,7 +370,7 @@ export const disabledHugeSelectBox = () => (
         },
       ]}
       variant="huge"
-      name="select-huge"
+      name="huge-disabled-select"
       isDisabled
       defaultValue=""
     />
@@ -380,9 +381,10 @@ export const disabledHugeSelectBox = () => (
       iconName="chevron-down"
       aria-hidden="true"
       additionalClasses="
-              sprk-c-Icon--filled-current-color
-              sprk-c-Icon--stroke-current-color
-              sprk-b-SelectContainer__icon"
+        sprk-c-Icon--filled-current-color
+        sprk-c-Icon--stroke-current-color
+        sprk-b-SelectContainer__icon
+      "
     />
   </SprkInputContainer>
 );
