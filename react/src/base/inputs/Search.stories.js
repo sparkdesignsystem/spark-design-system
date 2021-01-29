@@ -3,7 +3,8 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -11,15 +12,18 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkInput,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: ['SprkInput'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
 
 export const searchInput = () => (
   <SprkInputContainer>
-    <SprkLabel isHidden>Text Input Label</SprkLabel>
+    <SprkLabel htmlFor="search-1" isHidden>
+      Text Input Label
+    </SprkLabel>
     <SprkInput
+      id="search-1"
       additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
       type="search"
       placeholder="Search"
@@ -36,19 +40,25 @@ searchInput.story = {
 
 export const invalidSearchInput = () => (
   <SprkInputContainer>
-    <SprkLabel isHidden>Text Input Label</SprkLabel>
+    <SprkLabel htmlFor="search-2" isHidden>
+      Text Input Label
+    </SprkLabel>
     <SprkInput
+      id="search-2"
+      ariaDescribedBy="invalid-search"
       additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
       type="search"
       placeholder="Search"
       isValid={false}
     />
-    <SprkErrorContainer
-      id="invalid-search"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-search">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -59,17 +69,19 @@ invalidSearchInput.story = {
       'SprkInput',
       'SprkLabel',
       'SprkInputContainer',
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
     ],
   },
 };
 
 export const disabledSearchInput = () => (
   <SprkInputContainer>
-    <SprkLabel isHidden isDisabled>
+    <SprkLabel htmlFor="search-3" isHidden isDisabled>
       Text Input Label
     </SprkLabel>
     <SprkInput
+      id="search-3"
       additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
       type="search"
       placeholder="Search"

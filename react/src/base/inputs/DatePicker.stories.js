@@ -2,8 +2,8 @@ import React from 'react';
 import SprkDatePicker from './SprkDatePicker/SprkDatePicker';
 import SprkDatePickerInput from './SprkDatePickerInput/SprkDatePickerInput';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import SprkLabel from './SprkLabel/SprkLabel';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
 import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
@@ -79,12 +79,14 @@ export const invalidDatePicker = () => (
         ariaDescribedBy="invalid-date"
       />
     </div>
-    <SprkErrorContainer
-      id="invalid-date"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-date">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -92,11 +94,11 @@ invalidDatePicker.story = {
   name: 'Invalid',
   parameters: {
     jest: [
-      'SprkErrorContainer',
       'SprkInputContainer',
       'SprkDatePicker',
       'SprkLabel',
       'SprkIcon',
+      'SprkFieldError',
     ],
   },
 };
@@ -160,12 +162,14 @@ export const invalidHugeDatePicker = () => (
       ariaDescribedBy="invalid-huge"
     />
     <SprkLabel htmlFor="huge-datepicker-2">Date</SprkLabel>
-    <SprkErrorContainer
-      id="invalid-huge"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-huge">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -173,10 +177,11 @@ invalidHugeDatePicker.story = {
   name: 'Huge Invalid',
   parameters: {
     jest: [
-      'SprkErrorContainer',
+      'SprkFieldError',
       'SprkInputContainer',
       'SprkDatePicker',
       'SprkLabel',
+      'SprkIcon',
     ],
   },
 };

@@ -3,8 +3,8 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
-
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -12,15 +12,16 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkInput,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: ['SprkInput'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
 
 export const percentageInput = () => (
   <SprkInputContainer>
-    <SprkLabel>Percentage</SprkLabel>
+    <SprkLabel htmlFor="percentage-1">Percentage</SprkLabel>
     <SprkInput
+      id="percentage-1"
       additionalClasses="
         sprk-b-TextInput--has-svg-icon
         sprk-b-InputContainer__input--has-icon-right"
@@ -38,20 +39,24 @@ percentageInput.story = {
 
 export const invalidPercentageInput = () => (
   <SprkInputContainer>
-    <SprkLabel>Percentage</SprkLabel>
+    <SprkLabel htmlFor="percentage-2">Percentage</SprkLabel>
     <SprkInput
+      id="percentage-2"
+      ariaDescribedBy="invalid-percentage"
       additionalClasses="
         sprk-b-TextInput--has-svg-icon
         sprk-b-InputContainer__input--has-icon-right"
       type="tel"
       isValid={false}
     />
-    <SprkErrorContainer
-      id="invalid-percentage"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-percentage">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -62,15 +67,19 @@ invalidPercentageInput.story = {
       'SprkInput',
       'SprkLabel',
       'SprkInputContainer',
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
     ],
   },
 };
 
 export const disabledPercentageInput = () => (
   <SprkInputContainer>
-    <SprkLabel isDisabled>Percentage</SprkLabel>
+    <SprkLabel htmlFor="percentage-3" isDisabled>
+      Percentage
+    </SprkLabel>
     <SprkInput
+      id="percentage-3"
       additionalClasses="
         sprk-b-TextInput--has-svg-icon
         sprk-b-InputContainer__input--has-icon-right"

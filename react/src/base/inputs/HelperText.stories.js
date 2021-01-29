@@ -3,8 +3,9 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import SprkHelperText from './SprkHelperText/SprkHelperText';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -12,7 +13,7 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkInput,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck', 'SprkHelperText'],
+    jest: ['SprkHelperText'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - Helper text must be placed below the Input and above the error container.
@@ -22,30 +23,45 @@ ${markdownDocumentationLinkBuilder('input')}
 
 export const helperText = () => (
   <SprkInputContainer>
-    <SprkLabel>Text Input</SprkLabel>
-    <SprkInput additionalClasses="sprk-u-Width-100" />
-    <SprkHelperText>Helper Text for the form field.</SprkHelperText>
+    <SprkLabel htmlFor="text-1">Text Input</SprkLabel>
+    <SprkInput
+      id="text-1"
+      additionalClasses="sprk-u-Width-100"
+      ariaDescribedBy="helper-text-1"
+    />
+    <SprkHelperText id="helper-text-1">
+      Helper Text for the form field.
+    </SprkHelperText>
   </SprkInputContainer>
 );
 
 helperText.story = {
   name: 'Default',
   parameters: {
-    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer', 'SprkHelperText'],
   },
 };
 
 export const invalidHelperText = () => (
   <SprkInputContainer>
-    <SprkLabel>Text Input</SprkLabel>
-    <SprkInput isValid={false} additionalClasses="sprk-u-Width-100" />
-    <SprkHelperText>Helper Text for the form field.</SprkHelperText>
-    <SprkErrorContainer
-      id="invalid-helper"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkLabel htmlFor="text-2">Text Input</SprkLabel>
+    <SprkInput
+      ariaDescribedBy="helper-text-2 invalid-helper"
+      id="text-2"
+      isValid={false}
+      additionalClasses="sprk-u-Width-100"
+    />
+    <SprkHelperText id="helper-text-2">
+      Helper Text for the form field.
+    </SprkHelperText>
+    <SprkFieldError id="invalid-helper">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -53,10 +69,12 @@ invalidHelperText.story = {
   name: 'With Error Text',
   parameters: {
     jest: [
+      'SprkHelperText',
       'SprkInput',
       'SprkLabel',
       'SprkInputContainer',
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
     ],
   },
 };

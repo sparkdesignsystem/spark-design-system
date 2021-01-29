@@ -1,7 +1,8 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -101,19 +102,21 @@ export const invalidSelectBox = () => (
       label="Select Box Label"
       valid={false}
     />
-    <SprkErrorContainer
-      id="invalid-date"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-select">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
 invalidSelectBox.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkInputContainer', 'SprkErrorContainer'],
+    jest: ['SprkInputContainer', 'SprkFieldError', 'SprkIcon'],
   },
 };
 
@@ -256,19 +259,20 @@ export const invalidHugeSelectBox = () => (
       errorMessage="There is an error in the field."
       defaultValue=""
     />
-    <SprkErrorContainer
-      id="invalid-date"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-huge-select">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
 invalidHugeSelectBox.story = {
   name: 'Huge Invalid',
   parameters: {
-    jest: ['SprkInputContainer', 'SprkErrorContainer'],
+    jest: ['SprkInputContainer', 'SprkFieldError', 'SprkIcon'],
   },
 };
 

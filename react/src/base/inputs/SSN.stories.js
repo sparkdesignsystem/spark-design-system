@@ -3,7 +3,8 @@ import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -11,7 +12,7 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkInput,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: ['SprkInput'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
@@ -32,8 +33,8 @@ ${markdownDocumentationLinkBuilder('input')}
 
 export const SSNInput = () => (
   <SprkInputContainer>
-    <SprkLabel>Social Security Number</SprkLabel>
-    <SprkInput additionalClasses="sprk-u-Width-100" />
+    <SprkLabel htmlFor="ssn-1">Social Security Number</SprkLabel>
+    <SprkInput id="ssn-1" additionalClasses="sprk-u-Width-100" />
   </SprkInputContainer>
 );
 
@@ -46,14 +47,21 @@ SSNInput.story = {
 
 export const invalidSSNInput = () => (
   <SprkInputContainer>
-    <SprkLabel>Social Security Number</SprkLabel>
-    <SprkInput isValid={false} additionalClasses="sprk-u-Width-100" />
-    <SprkErrorContainer
-      id="invalid-ssn"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkLabel htmlFor="ssn-2">Social Security Number</SprkLabel>
+    <SprkInput
+      id="ssn-2"
+      ariaDescribedBy="invalid-ssn"
+      isValid={false}
+      additionalClasses="sprk-u-Width-100"
+    />
+    <SprkFieldError id="invalid-ssn">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -64,15 +72,18 @@ invalidSSNInput.story = {
       'SprkInput',
       'SprkLabel',
       'SprkInputContainer',
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
     ],
   },
 };
 
 export const disabledSSNInput = () => (
   <SprkInputContainer>
-    <SprkLabel isDisabled>Social Security Number</SprkLabel>
-    <SprkInput isDisabled additionalClasses="sprk-u-Width-100" />
+    <SprkLabel isDisabled htmlFor="ssn-3">
+      Social Security Number
+    </SprkLabel>
+    <SprkInput id="ssn-3" isDisabled additionalClasses="sprk-u-Width-100" />
   </SprkInputContainer>
 );
 
