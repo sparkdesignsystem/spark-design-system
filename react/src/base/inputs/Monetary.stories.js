@@ -2,8 +2,9 @@ import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -11,7 +12,7 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkInput,
   parameters: {
-    jest: ['SprkInputIconCheck'],
+    jest: ['SprkInput'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field may contain special characters
@@ -36,9 +37,12 @@ export const monetaryInput = () => (
         sprk-b-InputContainer__icon-container
         sprk-b-TextInputIconContainer--has-text-icon"
     >
-      <SprkLabel isMonetary>Payment</SprkLabel>
+      <SprkLabel isMonetary htmlFor="monetary-1">
+        Payment
+      </SprkLabel>
       <SprkInput
         additionalClasses="sprk-b-TextInput--has-text-icon"
+        id="monetary-1"
         placeholder="0.00"
       />
     </div>
@@ -59,19 +63,25 @@ export const invalidMonetaryInput = () => (
         sprk-b-InputContainer__icon-container
         sprk-b-TextInputIconContainer--has-text-icon"
     >
-      <SprkLabel isMonetary>Payment</SprkLabel>
+      <SprkLabel isMonetary htmlFor="monetary-2">
+        Payment
+      </SprkLabel>
       <SprkInput
         additionalClasses="sprk-b-TextInput--has-text-icon"
+        id="monetary-2"
+        ariaDescribedBy="invalid-monetary"
         placeholder="0.00"
         isValid={false}
       />
     </div>
-    <SprkErrorContainer
-      id="invalid-monetary"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-monetary">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -82,7 +92,8 @@ invalidMonetaryInput.story = {
       'SprkInput',
       'SprkLabel',
       'SprkInputContainer',
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
     ],
   },
 };
@@ -94,11 +105,12 @@ export const disabledMonetaryInput = () => (
         sprk-b-InputContainer__icon-container
         sprk-b-TextInputIconContainer--has-text-icon"
     >
-      <SprkLabel isMonetary isDisabled>
+      <SprkLabel isMonetary isDisabled htmlFor="monetary-3">
         Payment
       </SprkLabel>
       <SprkInput
         additionalClasses="sprk-b-TextInput--has-text-icon"
+        id="monetary-3"
         placeholder="0.00"
         isDisabled
       />

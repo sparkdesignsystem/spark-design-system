@@ -3,7 +3,8 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -11,7 +12,7 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkInput,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: ['SprkInput'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters (/)
@@ -31,8 +32,8 @@ which you may need to remove before submitting the form.
 
 export const dateInput = () => (
   <SprkInputContainer>
-    <SprkLabel>Date</SprkLabel>
-    <SprkInput placeholder="01/01/2021" />
+    <SprkLabel htmlFor="date-1">Date</SprkLabel>
+    <SprkInput id="date-1" placeholder="01/01/2021" />
   </SprkInputContainer>
 );
 
@@ -45,14 +46,21 @@ dateInput.story = {
 
 export const invalidDateInput = () => (
   <SprkInputContainer>
-    <SprkLabel>Date</SprkLabel>
-    <SprkInput placeholder="01/01/2021" isValid={false} />
-    <SprkErrorContainer
-      id="invalid-error"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkLabel htmlFor="date-2">Date</SprkLabel>
+    <SprkInput
+      id="date-2"
+      placeholder="01/01/2021"
+      isValid={false}
+      ariaDescribedBy="invalid-error"
+    />
+    <SprkFieldError id="invalid-error">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -63,15 +71,18 @@ invalidDateInput.story = {
       'SprkInput',
       'SprkLabel',
       'SprkInputContainer',
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
     ],
   },
 };
 
 export const disabledDateInput = () => (
   <SprkInputContainer>
-    <SprkLabel isDisabled>Date</SprkLabel>
-    <SprkInput placeholder="01/01/2021" isDisabled />
+    <SprkLabel htmlFor="date-3" isDisabled>
+      Date
+    </SprkLabel>
+    <SprkInput id="date-3" placeholder="01/01/2021" isDisabled />
   </SprkInputContainer>
 );
 
@@ -83,7 +94,7 @@ disabledDateInput.story = {
 };
 
 export const legacy = () => (
-  <SprkTextInput label="Date" name="date" placeholder="01/01/2019" />
+  <SprkTextInput label="Date" name="date" placeholder="01/01/2021" />
 );
 
 legacy.story = {
@@ -97,7 +108,7 @@ export const legacyInvalidDateInput = () => (
   <SprkTextInput
     label="Date"
     name="date"
-    placeholder="01/01/2019"
+    placeholder="01/01/2021"
     valid={false}
     errorMessage="There is an error on this field."
   />
@@ -111,7 +122,7 @@ legacyInvalidDateInput.story = {
 };
 
 export const legacyDisabledDateInput = () => (
-  <SprkTextInput label="Date" name="date" placeholder="01/01/2019" disabled />
+  <SprkTextInput label="Date" name="date" placeholder="01/01/2021" disabled />
 );
 
 legacyDisabledDateInput.story = {

@@ -1,9 +1,10 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkTextarea from './SprkTextarea/SprkTextarea';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkHelperText from './SprkHelperText/SprkHelperText';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -63,19 +64,21 @@ export const invalidTextarea = () => (
       isValid={false}
       ariaDescribedBy="invalid-error"
     />
-    <SprkErrorContainer
-      id="invalid-error"
-      message="Update once error container is done to remove message prop"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-error">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </>
 );
 
 invalidTextarea.story = {
   name: 'Invalid',
   parameters: {
-    jest: ['SprkTextarea', 'SprkErrorContainer', 'SprkLabel'],
+    jest: ['SprkTextarea', 'SprkFieldError', 'SprkLabel', 'SprkIcon'],
   },
 };
 

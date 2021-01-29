@@ -3,7 +3,8 @@ import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -11,7 +12,7 @@ export default {
   decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkInput,
   parameters: {
-    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
+    jest: ['SprkInput'],
     info: `${markdownDocumentationLinkBuilder('input')}
 - Each Spark Input Container should contain one label/input set.
 - The Huge Input element should preceed the label element.
@@ -40,13 +41,16 @@ export const invalidTextInput = () => (
       id="invalid-input"
       isValid={false}
       additionalClasses="sprk-u-Width-100"
+      ariaDescribedBy="invalid-error"
     />
-    <SprkErrorContainer
-      id="invalid-error"
-      message="Update this story once error container is done"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-error">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -57,7 +61,8 @@ invalidTextInput.story = {
       'SprkInput',
       'SprkLabel',
       'SprkInputContainer',
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
     ],
   },
 };
@@ -110,14 +115,17 @@ export const invalidHugeTextInput = () => (
       placeholder="Placeholder"
       isValid={false}
       additionalClasses="sprk-u-Width-100"
+      ariaDescribedBy="invalid-error"
     />
     <SprkLabel htmlFor="invalid-huge-input">Huge Input</SprkLabel>
-    <SprkErrorContainer
-      id="huge-error"
-      message="Update once error container is done to remove message prop"
-    >
-      There is an error on this field.
-    </SprkErrorContainer>
+    <SprkFieldError id="invalid-error">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkInputContainer>
 );
 
@@ -125,7 +133,13 @@ invalidHugeTextInput.story = {
   name: 'Huge Invalid',
   component: SprkInput,
   parameters: {
-    jest: ['SprkInput', 'SprkLabel'],
+    jest: [
+      'SprkInput',
+      'SprkLabel',
+      'SprkInputContainer',
+      'SprkFieldError',
+      'SprkIcon',
+    ],
   },
 };
 
