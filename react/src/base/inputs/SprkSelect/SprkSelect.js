@@ -115,7 +115,7 @@ class SprkSelect extends React.Component {
 SprkSelect.propTypes = {
   /**
    * A space-separated string of classes to
-   * add to the outermost container of the component.
+   * add to the component.
    */
   additionalClasses: PropTypes.string,
   /**
@@ -140,8 +140,8 @@ SprkSelect.propTypes = {
        */
       name: PropTypes.string,
       /**
-       * 	Assigned to the `value` attribute
-       *  of the rendered input element.
+       * Assigned to the `value` attribute
+       * of the rendered input element.
        */
       value: PropTypes.string,
     }),
@@ -154,7 +154,7 @@ SprkSelect.propTypes = {
    * Assigned to the `aria-describedby`
    * attribute of the input used
    * to create relationships between the
-   * input and error container.
+   * input and other containers.
    */
   ariaDescribedBy: PropTypes.string,
   /**
@@ -169,7 +169,7 @@ SprkSelect.propTypes = {
   isValid: PropTypes.bool,
   /**
    * Will render a blank first option. This option
-   * is only available when `variant="huge"`
+   * is only available when `variant="huge"`.
    */
   hasBlankFirstOption: PropTypes.bool,
   /**
