@@ -21,7 +21,7 @@ describe('SprkSelect:', () => {
 
   it('should allow for a custom ID', () => {
     const wrapper = mount(<SprkSelect choices={choices} id="custom" />);
-    expect(wrapper.getDOMNode().id).toBe('custom');
+    expect(wrapper.find('.sprk-b-Select').getDOMNode().id).toBe('custom');
   });
 
   it('should create an ID if one is not supplied', () => {
