@@ -37,11 +37,7 @@ before submitting the form.
 export const phoneInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="phone-1">Phone Number</SprkLabel>
-    <SprkInput
-      id="phone-1"
-      placeholder="(000) 000-0000"
-      additionalClasses="sprk-u-Width-100"
-    />
+    <SprkInput id="phone-1" placeholder="(000) 000-0000" />
   </SprkInputContainer>
 );
 
@@ -60,7 +56,6 @@ export const invalidPhoneInput = () => (
       ariaDescribedBy="invalid-phone"
       placeholder="(000) 000-0000"
       isValid={false}
-      additionalClasses="sprk-u-Width-100"
     />
     <SprkFieldError id="invalid-phone">
       <SprkIcon
@@ -91,12 +86,7 @@ export const disabledPhoneInput = () => (
     <SprkLabel htmlFor="phone-3" isDisabled>
       Phone Number
     </SprkLabel>
-    <SprkInput
-      id="phone-3"
-      placeholder="(000) 000-0000"
-      isDisabled
-      additionalClasses="sprk-u-Width-100"
-    />
+    <SprkInput id="phone-3" placeholder="(000) 000-0000" isDisabled />
   </SprkInputContainer>
 );
 

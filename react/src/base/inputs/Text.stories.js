@@ -23,7 +23,7 @@ export default {
 export const textInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="custom">Text Input</SprkLabel>
-    <SprkInput id="custom" additionalClasses="sprk-u-Width-100" />
+    <SprkInput id="custom" />
   </SprkInputContainer>
 );
 
@@ -40,7 +40,6 @@ export const invalidTextInput = () => (
     <SprkInput
       id="invalid-input"
       isValid={false}
-      additionalClasses="sprk-u-Width-100"
       ariaDescribedBy="invalid-error"
     />
     <SprkFieldError id="invalid-error">
@@ -72,11 +71,7 @@ export const disabledTextInput = () => (
     <SprkLabel htmlFor="disabled-input" isDisabled>
       Disabled Input
     </SprkLabel>
-    <SprkInput
-      id="disabled-input"
-      isDisabled
-      additionalClasses="sprk-u-Width-100"
-    />
+    <SprkInput id="disabled-input" isDisabled />
   </SprkInputContainer>
 );
 
@@ -89,12 +84,7 @@ disabledTextInput.story = {
 
 export const hugeTextInput = () => (
   <SprkInputContainer variant="huge">
-    <SprkInput
-      id="huge-input"
-      variant="huge"
-      placeholder="Placeholder"
-      additionalClasses="sprk-u-Width-100"
-    />
+    <SprkInput id="huge-input" variant="huge" placeholder="Placeholder" />
     <SprkLabel htmlFor="huge-input">Huge Input</SprkLabel>
   </SprkInputContainer>
 );
@@ -114,7 +104,6 @@ export const invalidHugeTextInput = () => (
       variant="huge"
       placeholder="Placeholder"
       isValid={false}
-      additionalClasses="sprk-u-Width-100"
       ariaDescribedBy="invalid-error"
     />
     <SprkLabel htmlFor="invalid-huge-input">Huge Input</SprkLabel>
@@ -150,7 +139,6 @@ export const disabledHugeTextInput = () => (
       variant="huge"
       placeholder="Placeholder"
       isDisabled
-      additionalClasses="sprk-u-Width-100"
     />
     <SprkLabel htmlFor="disabled-huge-input">Huge Input</SprkLabel>
   </SprkInputContainer>
