@@ -124,9 +124,10 @@ export const invalidSelectBox = () => (
       iconName="chevron-down"
       aria-hidden="true"
       additionalClasses="
-              sprk-c-Icon--filled-current-color
-              sprk-c-Icon--stroke-current-color
-              sprk-b-SelectContainer__icon"
+        sprk-c-Icon--filled-current-color
+        sprk-c-Icon--stroke-current-color
+        sprk-b-SelectContainer__icon
+      "
     />
     <SprkFieldError id="select-invalid-error">
       <SprkIcon
