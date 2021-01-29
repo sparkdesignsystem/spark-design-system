@@ -14,7 +14,7 @@ export default {
   parameters: {
     jest: [
       'SprkSelect',
-      'SprkErrorContainer',
+      'SprkFieldError',
       'SprkInputIconCheck',
       'SprkIcon',
       'SprkLabel',
