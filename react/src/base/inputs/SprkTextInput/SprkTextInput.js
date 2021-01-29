@@ -36,6 +36,7 @@ class SprkTextInput extends Component {
       type,
       valid,
       value,
+      ariaDescribedBy,
       ...rest
     } = this.props;
     const { id, errorContainerId } = this.state;
@@ -67,7 +68,7 @@ class SprkTextInput extends Component {
               forwardedRef={forwardedRef}
               type={type}
               formatter={formatter}
-              errorContainerId={errorContainerId}
+              errorContainerId={valid ? undefined : errorContainerId}
               hiddenLabel={hiddenLabel}
               valid={valid}
               leadingIcon={leadingIcon}
@@ -75,6 +76,7 @@ class SprkTextInput extends Component {
               value={value}
               iconRight={iconRight}
               disabled={disabled}
+              ariaDescribedBy={ariaDescribedBy}
               {...rest}
             />
           </SprkLabelLocationCheck>
@@ -93,11 +95,13 @@ class SprkTextInput extends Component {
 
 SprkTextInput.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to the outermost container of
+   * the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector
+   * for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /** Content to render inside of the component. */
@@ -108,15 +112,19 @@ SprkTextInput.propTypes = {
    */
   errorMessage: PropTypes.string,
   /**
-   * A function supplied will be passed the value of the input and then executed, if the valid prop is true. The value returned will be assigned to the value of the input.
+   * A function supplied will be passed the value of the input and then
+   * executed, if the valid prop is true. The value returned will be
+   * assigned to the value of the input.
    */
   formatter: PropTypes.func,
   /**
-   * A ref passed in will be attached to the input element of the rendered component.
+   * A ref passed in will be attached to the input element of the
+   * rendered component.
    */
   forwardedRef: PropTypes.shape(),
   /**
-   * 	Text that appears below the input, intended to provide more information to a user.
+   * Text that appears below the input, intended to provide more
+   * information to a user.
    */
   helperText: PropTypes.string,
   /**
@@ -129,7 +137,8 @@ SprkTextInput.propTypes = {
    */
   iconRight: PropTypes.bool,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a unique selector for
+   * automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -158,6 +167,11 @@ SprkTextInput.propTypes = {
    * 	If true, will render the component in the disabled state.
    */
   disabled: PropTypes.bool,
+  /**
+   * A space-separated string of valid HTML ids to add to the aria-describedby
+   * attribute on the Input.
+   */
+  ariaDescribedBy: PropTypes.string,
 };
 
 SprkTextInput.defaultProps = {
@@ -165,7 +179,7 @@ SprkTextInput.defaultProps = {
   analyticsString: '',
   children: [],
   errorMessage: '',
-  formatter: value => value,
+  formatter: (value) => value,
   forwardedRef: React.createRef(),
   helperText: '',
   hiddenLabel: false,
