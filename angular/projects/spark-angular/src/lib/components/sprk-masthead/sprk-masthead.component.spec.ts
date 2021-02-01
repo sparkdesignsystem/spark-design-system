@@ -63,6 +63,10 @@ describe('SprkMastheadComponent', () => {
     const logoElement: HTMLElement = mastheadElement.querySelector(
       '.sprk-c-Masthead__branding a',
     );
+    const logoElementLength = mastheadElement.querySelectorAll(
+      '.sprk-c-Masthead__branding a',
+    ).length;
+    expect(logoElementLength).toEqual(1);
     expect(logoElement.getAttribute('href')).toEqual('/alert');
     expect(logoElement.textContent.trim()).toEqual('Go to the alerts page.');
   });
@@ -74,7 +78,11 @@ describe('SprkMastheadComponent', () => {
     const logoElement: HTMLElement = mastheadElement.querySelector(
       '.sprk-c-Masthead__branding a',
     );
+    const logoElementLength = mastheadElement.querySelectorAll(
+      '.sprk-c-Masthead__branding a',
+    ).length;
     expect(logoElement.getAttribute('href')).toEqual('/button');
+    expect(logoElementLength).toEqual(1);
     expect(logoElement.textContent.trim()).toEqual('Go to the buttons page.');
   });
 
