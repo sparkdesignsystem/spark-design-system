@@ -341,11 +341,9 @@ export const extended = () => ({
       [narrowNavLinks]="extendedNarrowLinks"
       [narrowSelector]="mySelector"
       idString="masthead-extended-1"
-      logoHref="/dogs"
-      logoHrefRouter="/router-link"
     >
       <svg
-        logo-slot-router
+        logo-slot
         class="sprk-c-Masthead__logo"
         xmlns="http://www.w3.org/2000/svg"
         width="365.4"
