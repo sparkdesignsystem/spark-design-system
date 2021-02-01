@@ -12,9 +12,6 @@ export interface ISprkBigNavLink {
   text: string;
   /**
    * The `href` value for the link.
-   * If omitted, the href will
-   * be set to `#` by the `SprkLink`
-   * component.
    */
   href?: string;
   /**
@@ -54,9 +51,6 @@ export interface ISprkNarrowNavLink {
   text: string;
   /**
    * The `href` value for the link.
-   * If omitted, the href will
-   * be set to `#` by the `SprkLink`
-   * component.
    */
   href?: string;
   /**
@@ -91,9 +85,6 @@ export interface ISprkNarrowNavLink {
     text: string;
     /**
      * The `href` value for the link.
-     * If omitted, the href will
-     * be set to `#` by the `SprkLink`
-     * component.
      */
     href?: string;
     /**
