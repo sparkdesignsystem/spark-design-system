@@ -80,9 +80,18 @@ class SprkDropdown extends Component {
 
   toggleDropdownOpen(e) {
     e.preventDefault();
-    this.setState((prevState) => ({
-      isOpen: !prevState.isOpen,
-    }));
+    const { openedEvent } = this.props;
+    const { isOpen } = this.state;
+
+    if (!isOpen) {
+      this.setState((prevState) => ({
+        isOpen: !prevState.isOpen,
+      }));
+
+      if (openedEvent) {
+        openedEvent();
+      }
+    }
   }
 
   closeOnEsc(e) {
@@ -98,24 +107,42 @@ class SprkDropdown extends Component {
   }
 
   closeDropdown() {
-    this.setState({
-      isOpen: false,
-    });
+    const { closedEvent } = this.props;
+    const { isOpen } = this.state;
+
+    if (isOpen) {
+      this.setState({
+        isOpen: false,
+      });
+
+      if (closedEvent) {
+        closedEvent();
+      }
+    }
   }
 
+  // TODO: Remove deprecated props as part of Issue 3798
   render() {
     const {
       additionalClasses,
       additionalIconClasses,
+      iconAdditionalClasses = additionalIconClasses,
       additionalTriggerClasses,
+      triggerAdditionalClasses = additionalTriggerClasses,
       additionalTriggerTextClasses,
+      triggerTextAdditionalClasses = additionalTriggerTextClasses,
       analyticsString,
       choices,
       iconName,
       idString,
       screenReaderText,
       title,
+      heading = title,
       variant,
+      defaultTriggerText,
+      openedEvent,
+      closedEvent,
+      ...rest
     } = this.props;
     const { choiceFunction, footer } = choices;
     const { choiceItems, isOpen, triggerText } = this.state;
@@ -127,57 +154,61 @@ class SprkDropdown extends Component {
           additionalClasses={classNames(
             'sprk-c-Dropdown__trigger',
             { 'sprk-u-mrs': variant === 'informational' },
-            additionalTriggerClasses,
+            triggerAdditionalClasses,
           )}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
           aria-label={screenReaderText || triggerText}
-          data-analytics={analyticsString || 'undefined'}
-          data-id={idString || 'undefined'}
+          data-analytics={analyticsString}
+          data-id={idString}
           onClick={this.toggleDropdownOpen}
+          {...rest}
         >
           {variant === 'informational' && (
             <>
-              <span className={classNames(additionalTriggerTextClasses)}>
+              <span className={classNames(triggerTextAdditionalClasses)}>
                 {triggerText}
               </span>
               <SprkIcon
-                additionalClasses="
+                additionalClasses={classNames(
+                  iconAdditionalClasses,
+                  `
                   sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
                   sprk-u-mls
-                "
-                iconName="chevron-down"
+                `,
+                )}
+                iconName={iconName}
               />
             </>
           )}
-          {variant === 'base' && (
+          {variant !== 'informational' && (
             <>
               <span
                 className={classNames(
                   'sprk-u-ScreenReaderText',
-                  additionalTriggerTextClasses,
+                  triggerTextAdditionalClasses,
                 )}
               >
                 {screenReaderText}
               </span>
               <SprkIcon
                 iconName={iconName}
-                additionalClasses={additionalIconClasses}
+                additionalClasses={iconAdditionalClasses}
               />
             </>
           )}
         </SprkLink>
         {isOpen && (
           <div className={classNames('sprk-c-Dropdown', additionalClasses)}>
-            {title !== '' && (
+            {heading !== '' && (
               <div className="sprk-c-Dropdown__header">
-                <h2 className="sprk-c-Dropdown__title">{title}</h2>
+                <h2 className="sprk-c-Dropdown__title">{heading}</h2>
               </div>
             )}
             <ul
               className="sprk-c-Dropdown__links"
-              aria-label={title || screenReaderText || 'My Choices'}
+              aria-label={heading || screenReaderText || 'My Choices'}
               role="listbox"
             >
               {choiceItems.map((choice) => {
@@ -190,7 +221,7 @@ class SprkDropdown extends Component {
                   value,
                   // eslint-disable-next-line no-shadow
                   idString,
-                  ...rest
+                  ...choicesRest
                 } = choice;
                 const TagName = element || 'a';
                 return (
@@ -200,7 +231,7 @@ class SprkDropdown extends Component {
                     role="option"
                     key={choice.id}
                   >
-                    {variant === 'base' && (
+                    {variant !== 'informational' && (
                       <TagName
                         className="sprk-c-Dropdown__link"
                         href={TagName === 'a' ? href || '#' : undefined}
@@ -213,7 +244,7 @@ class SprkDropdown extends Component {
                           }
                         }}
                         data-id={idString}
-                        {...rest}
+                        {...choicesRest}
                       >
                         {text}
                       </TagName>
@@ -233,15 +264,19 @@ class SprkDropdown extends Component {
                               choiceFunction(value);
                             }
                           }}
-                          {...rest}
+                          {...choicesRest}
                         >
                           <p className="sprk-b-TypeBodyOne">{content.title}</p>
-                          <p className="sprk-b-TypeBodyTwo">
-                            {content.infoLine1}
-                          </p>
-                          <p className="sprk-b-TypeBodyTwo">
-                            {content.infoLine2}
-                          </p>
+                          {content.infoLine1 && (
+                            <p className="sprk-b-TypeBodyTwo">
+                              {content.infoLine1}
+                            </p>
+                          )}
+                          {content.infoLine2 && (
+                            <p className="sprk-b-TypeBodyTwo">
+                              {content.infoLine2}
+                            </p>
+                          )}
                         </TagName>
                       </>
                     )}
@@ -264,20 +299,39 @@ class SprkDropdown extends Component {
 SprkDropdown.propTypes = {
   /**
    * A space-separated string of
-   * classes to add to the outermost
-   * container of the component.
+   * classes to add to the dropdown.
    */
   additionalClasses: PropTypes.string,
+  // TODO remove as part of issue 3798
   /**
+   * Deprecated - use `iconAdditionalClasses` instead.
    * A space-separated string of classes to add to the icon.
    */
   additionalIconClasses: PropTypes.string,
   /**
+   * A space-separated string of classes to add to the icon.
+   */
+  iconAdditionalClasses: PropTypes.string,
+  // TODO remove as part of issue 3798
+  /**
+   * Deprecated - use `triggerAdditionalClasses` instead.
    * A space-separated string of classes
    * to add to the trigger element.
    */
   additionalTriggerClasses: PropTypes.string,
   /**
+   * A space-separated string of classes
+   * to add to the trigger element.
+   */
+  triggerAdditionalClasses: PropTypes.string,
+  /**
+   * A space-separated string of classes
+   * to add to the trigger text.
+   */
+  triggerTextAdditionalClasses: PropTypes.string,
+  // TODO remove as part of issue 3798
+  /**
+   * Deprecated - use `triggerTextAdditionalClasses` instead.
    * A space-separated string of classes
    * to add to the trigger text.
    */
@@ -288,8 +342,6 @@ SprkDropdown.propTypes = {
    * selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
-  /** Content to render inside of the SprkDropdown */
-  children: PropTypes.node,
   /**
    * The choices object represents
    * data that is shown inside the open dropdown
@@ -299,7 +351,11 @@ SprkDropdown.propTypes = {
     items: PropTypes.arrayOf(
       PropTypes.shape({
         /** The element to render for each menu item. */
-        element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+        element: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.func,
+          PropTypes.elementType,
+        ]),
         /**
          * Determines the href of the choice item.
          */
@@ -331,37 +387,42 @@ SprkDropdown.propTypes = {
   /**
    * A value for screen readers when there isn't
    * discernable text on the dropdown.
-   * Useful for when the `title` prop is empty
+   * Useful for when the `heading` prop is empty
    * and the Dropdown trigger is only an icon.
    */
   screenReaderText: PropTypes.string,
+  // TODO remove as part of issue 3798
   /**
+   * Deprecated - use `heading` instead.
    * The text of the optional header above the
    * choices in the dropdown.
    */
   title: PropTypes.string,
   /**
+   * The text of the optional header above the
+   * choices in the dropdown.
+   */
+  heading: PropTypes.string,
+  /**
    * The variant of the Dropdown to render.
    */
   variant: PropTypes.oneOf(['base', 'informational']),
+  /**
+   * A function to be called when the dropdown is toggled open.
+   */
+  openedEvent: PropTypes.func,
+  /**
+   * A function to be called when the dropdown is toggled closed.
+   */
+  closedEvent: PropTypes.func,
 };
 
 SprkDropdown.defaultProps = {
-  additionalClasses: '',
-  additionalIconClasses: '',
-  additionalTriggerClasses: '',
-  additionalTriggerTextClasses: '',
-  analyticsString: '',
-  children: [],
   choices: {
     items: [],
   },
   defaultTriggerText: 'Choose One...',
   iconName: 'chevron-down',
-  idString: '',
-  screenReaderText: '',
-  title: '',
-  variant: 'base',
 };
 
 export default SprkDropdown;
