@@ -93,9 +93,23 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             <div *ngIf="choice.content; then content; else link"></div>
             <ng-template #link>
               <a
+                *ngIf="!choice.routerLink"
                 sprkLink
                 variant="unstyled"
                 [attr.href]="choice.href"
+                [analyticsString]="choice.analyticsString"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
+                [attr.aria-label]="choice.text"
+                >{{ choice.text }}
+              </a>
+              <a
+                *ngIf="choice.routerLink"
+                sprkLink
+                variant="unstyled"
+                [routerLink]="choice.routerLink"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
                   'sprk-c-Dropdown__link': true,
@@ -108,8 +122,25 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             <ng-template #content>
               <a
                 sprkLink
+                *ngIf="!choice.routerLink"
                 variant="unstyled"
                 [attr.href]="choice.href"
+                [analyticsString]="choice.analyticsString"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
+                [attr.aria-label]="choice.content.title"
+              >
+                <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
+                <p>{{ choice.content.infoLine1 }}</p>
+                <p>{{ choice.content.infoLine2 }}</p>
+              </a>
+              <a
+                sprkLink
+                *ngIf="choice.routerLink"
+                variant="unstyled"
+                [routerLink]="choice.routerLink"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
                   'sprk-c-Dropdown__link': true,
