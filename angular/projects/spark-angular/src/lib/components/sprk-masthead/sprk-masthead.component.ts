@@ -140,11 +140,22 @@ import {
               </div>
               <div *ngIf="!link.subNav">
                 <a
+                  *ngIf="!link.routerLink"
                   sprkLink
                   variant="simple"
                   [analyticsString]="link.analyticsString"
                   class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   [attr.href]="link.href"
+                >
+                  {{ link.text }}
+                </a>
+                <a
+                  *ngIf="link.routerLink"
+                  sprkLink
+                  variant="simple"
+                  [analyticsString]="link.analyticsString"
+                  class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                  [routerLink]="link.routerLink"
                 >
                   {{ link.text }}
                 </a>
@@ -184,10 +195,21 @@ import {
             sprkDropdownFooter
           >
             <a
+              *ngIf="!narrowSelector['footer'].routerLink"
               sprkLink
               variant="unstyled"
               [analyticsString]="narrowSelector['footer'].analyticsString"
               [attr.href]="narrowSelector['footer'].href"
+              class="sprk-c-Button sprk-c-Button--tertiary"
+            >
+              {{ narrowSelector['footer'].text }}
+            </a>
+            <a
+              *ngIf="narrowSelector['footer'].routerLink"
+              sprkLink
+              variant="unstyled"
+              [analyticsString]="narrowSelector['footer'].analyticsString"
+              [routerLink]="narrowSelector['footer'].routerLink"
               class="sprk-c-Button sprk-c-Button--tertiary"
             >
               {{ narrowSelector['footer'].text }}
@@ -211,10 +233,31 @@ import {
                     *ngFor="let subNavLink of narrowLink.subNav"
                   >
                     <a
+                      *ngIf="!subNavLink.routerLink"
                       sprkLink
                       variant="unstyled"
                       class="sprk-c-MastheadAccordion__summary"
                       [attr.href]="subNavLink.href"
+                      [analyticsString]="subNavLink.analyticsString"
+                    >
+                      <sprk-icon
+                        [iconType]="subNavLink.leadingIcon"
+                        additionalClasses="
+                          sprk-c-Icon--filled-current-color
+                          sprk-c-Icon--stroke-current-color
+                          sprk-c-Icon--xl
+                          sprk-u-mrs
+                        "
+                        *ngIf="subNavLink.leadingIcon"
+                      ></sprk-icon>
+                      {{ subNavLink.text }}
+                    </a>
+                    <a
+                      *ngIf="subNavLink.routerLink"
+                      sprkLink
+                      variant="unstyled"
+                      class="sprk-c-MastheadAccordion__summary"
+                      [routerLink]="subNavLink.routerLink"
                       [analyticsString]="subNavLink.analyticsString"
                     >
                       <sprk-icon
@@ -241,10 +284,33 @@ import {
                 }"
               >
                 <a
+                  *ngIf="!narrowLink.routerLink"
                   sprkLink
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   [attr.href]="narrowLink.href"
+                  [analyticsString]="narrowLink.analyticsString"
+                >
+                  <span class="sprk-c-MastheadAccordion__heading">
+                    <sprk-icon
+                      [iconType]="narrowLink.leadingIcon"
+                      additionalClasses="
+                        sprk-c-Icon--filled-current-color
+                        sprk-c-Icon--stroke-current-color
+                        sprk-c-Icon--xl
+                        sprk-u-mrs
+                      "
+                      *ngIf="narrowLink.leadingIcon"
+                    ></sprk-icon>
+                    {{ narrowLink.text }}
+                  </span>
+                </a>
+                <a
+                  *ngIf="narrowLink.routerLink"
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  [routerLink]="narrowLink.routerLink"
                   [analyticsString]="narrowLink.analyticsString"
                 >
                   <span class="sprk-c-MastheadAccordion__heading">
