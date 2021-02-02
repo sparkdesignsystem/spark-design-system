@@ -163,136 +163,130 @@ describe('SprkDropdownComponent', () => {
     expect(wrappedDropdownComponent.isOpen).toEqual(false);
   });
 
-  // it('should set active on click of a choice on an informational dropdown', () => {
-  //   fixture.detectChanges();
-  //   component.variant = 'informational';
-  //   component.choices = [
-  //     {
-  //       content: {
-  //         title: 'Choice Title',
-  //         infoLine1: 'Information about this choice',
-  //         infoLine2: 'More Information',
-  //       },
-  //       value: 'Choice Title 1',
-  //       active: false,
-  //     },
-  //   ];
-  //   fixture.detectChanges();
-  //   dropdownTriggerElement.click();
-  //   fixture.detectChanges();
-  //   expect(dropdownComponent.isOpen).toEqual(true);
-  //   console.log(fixture.nativeElement.outerHTML)
-  //   const listElement = fixture.nativeElement.querySelectorAll('li')[0];
-  //   listElement.dispatchEvent(new Event('click'));
-  //   fixture.detectChanges();
-  //   expect(dropdownComponent.choices[0]['active']).toEqual(true);
-  // });
+  it('should set active on click of a choice on an informational dropdown', () => {
+    wrappedFixture.detectChanges();
+    wrapperComponent.variant = 'informational';
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information',
+        },
+        value: 'Choice Title 1',
+        active: false,
+      },
+    ];
+    wrappedFixture.detectChanges();
+    dropdownTriggerElement.click();
+    wrappedFixture.detectChanges();
+    expect(dropdownComponent.isOpen).toEqual(true);
+    const listElement = wrappedFixture.nativeElement.querySelectorAll('li')[0];
+    listElement.dispatchEvent(new Event('click'));
+    wrappedFixture.detectChanges();
+    expect(dropdownComponent.choices[0]['active']).toEqual(true);
+  });
 
-  // it('should set active on click of a choice on a base dropdown if active isnt defined initially', () => {
-  //   wrappedFixture.detectChanges();
-  //   wrapperComponent.variant = 'informational';
-  //   wrapperComponent.choices = [
-  //     {
-  //       content: {
-  //         title: 'Choice Title',
-  //         infoLine1: 'Information about this choice',
-  //         infoLine2: 'More Information',
-  //       },
-  //       value: 'Choice Title 1',
-  //     },
-  //   ];
-  //   wrappedDropdownTriggerElement.click();
-  //   wrappedFixture.detectChanges();
-  //   expect(wrappedDropdownComponent.isOpen).toEqual(true);
-  //   const listElement = wrappedFixture.nativeElement.querySelectorAll('li')[0];
-  //   listElement.dispatchEvent(new Event('click'));
-  //   wrappedFixture.detectChanges();
-  //   expect(wrappedDropdownComponent.choices[0]['active']).toEqual(true);
-  // });
+  it('should set active on click of a choice on a base dropdown if active isnt defined initially', () => {
+    wrappedFixture.detectChanges();
+    wrapperComponent.variant = 'informational';
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information',
+        },
+        value: 'Choice Title 1',
+      },
+    ];
+    wrappedDropdownTriggerElement.click();
+    wrappedFixture.detectChanges();
+    expect(wrappedDropdownComponent.isOpen).toEqual(true);
+    const listElement = wrappedFixture.nativeElement.querySelectorAll('li')[0];
+    listElement.dispatchEvent(new Event('click'));
+    wrappedFixture.detectChanges();
+    expect(wrappedDropdownComponent.choices[0]['active']).toEqual(true);
+  });
 
-  // it('should not set active on click of a choice on a base dropdown', () => {
-  //   wrappedFixture.detectChanges();
-  //   wrapperComponent.choices = [
-  //     {
-  //       text: 'Option 1',
-  //       value: 'Option 1',
-  //     },
-  //     {
-  //       text: 'Option 2',
-  //       value: 'Option 2',
-  //     },
-  //   ];
-  //   wrappedDropdownTriggerElement.click();
-  //   wrappedFixture.detectChanges();
-  //   expect(wrappedDropdownComponent.isOpen).toEqual(true);
-  //   const listElement = wrappedFixture.nativeElement.querySelectorAll('li')[0];
-  //   listElement.dispatchEvent(new Event('click'));
-  //   wrappedFixture.detectChanges();
-  //   expect(wrappedDropdownComponent.choices[0]['active']).toEqual(false);
-  // });
+  it('should not set active on click of a choice on a base dropdown', () => {
+    wrappedFixture.detectChanges();
+    wrapperComponent.choices = [
+      {
+        text: 'Option 1',
+        value: 'Option 1',
+      },
+      {
+        text: 'Option 2',
+        value: 'Option 2',
+      },
+    ];
+    wrappedDropdownTriggerElement.click();
+    wrappedFixture.detectChanges();
+    expect(wrappedDropdownComponent.isOpen).toEqual(true);
+    const listElement = wrappedFixture.nativeElement.querySelectorAll('li')[0];
+    listElement.dispatchEvent(new Event('click'));
+    wrappedFixture.detectChanges();
+    expect(wrappedDropdownComponent.choices[0]['active']).toEqual(false);
+  });
 
-  // // TODO: #3800 remove dropdownType tests
-  // it('should not set active on click with dropdownType="base" (matches default)', () => {
-  //   wrapperComponent.dropdownType = 'base';
-  //   wrapperComponent.choices = [{text: 'asdf', value: 'asdf'}];
-  //   wrappedDropdownTriggerElement.click();
-  //   wrappedFixture.detectChanges();
-  //   wrappedFixture.nativeElement.querySelectorAll('li')[0].dispatchEvent(new Event('click'));
-  //   wrappedFixture.detectChanges();
-  //   const isInformational = wrappedDropdownComponent.choices[0]['active'];
-  //   expect(isInformational).toEqual(false);
-  // });
+  // TODO: #3800 remove dropdownType tests
+  it('should not set active on click with dropdownType="base" (matches default)', () => {
+    wrapperComponent.dropdownType = 'base';
+    wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
+    wrappedDropdownTriggerElement.click();
+    wrappedFixture.detectChanges();
+    wrappedFixture.nativeElement
+      .querySelectorAll('li')[0]
+      .dispatchEvent(new Event('click'));
+    wrappedFixture.detectChanges();
+    const isInformational = wrappedDropdownComponent.choices[0]['active'];
+    expect(isInformational).toEqual(false);
+  });
 
-  // it('should not set active on click with variant="default" (matches default)', () => {
-  //   wrapperComponent.variant = 'default';
-  //   wrapperComponent.choices = [{text: 'asdf', value: 'asdf'}];
-  //   wrappedDropdownTriggerElement.click();
-  //   wrappedFixture.detectChanges();
-  //   wrappedFixture.nativeElement.querySelectorAll('li')[0].dispatchEvent(new Event('click'));
-  //   wrappedFixture.detectChanges();
-  //   const isInformational = wrappedDropdownComponent.choices[0]['active'];
-  //   expect(isInformational).toEqual(false);
-  // });
+  it('should not set active on click with variant="default" (matches default)', () => {
+    wrapperComponent.variant = 'default';
+    wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
+    wrappedDropdownTriggerElement.click();
+    wrappedFixture.detectChanges();
+    wrappedFixture.nativeElement
+      .querySelectorAll('li')[0]
+      .dispatchEvent(new Event('click'));
+    wrappedFixture.detectChanges();
+    const isInformational = wrappedDropdownComponent.choices[0]['active'];
+    expect(isInformational).toEqual(false);
+  });
 
-  // // TODO: #3800 remove dropdownType tests
-  // it('should set active on click with dropdownType="informational"', () => {
-  //   console.log('asdf')
-  //   wrapperComponent.dropdownType = 'informational';
-  //   wrapperComponent.choices = [{text: 'asdf', value: 'asdf'}];
-  //   wrappedFixture.detectChanges();
-  //   wrappedDropdownTriggerElement.click();
-  //   wrappedFixture.detectChanges();
-  //   wrappedFixture.nativeElement.querySelectorAll('li')[0].dispatchEvent(new Event('click'));
-  //   wrappedFixture.detectChanges();
-  //   const isInformational = wrappedDropdownComponent.choices[0]['active'];
-  //   expect(isInformational).toEqual(true);
-  // });
+  // TODO: #3800 remove dropdownType tests
+  it('should set active on click with dropdownType="informational"', () => {
+    wrapperComponent.dropdownType = 'informational';
+    wrapperComponent.variant = 'default';
+    wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
+    wrappedFixture.detectChanges();
+    wrappedDropdownTriggerElement.click();
+    wrappedFixture.detectChanges();
+    wrappedFixture.nativeElement
+      .querySelectorAll('li')[0]
+      .dispatchEvent(new Event('click'));
+    wrappedFixture.detectChanges();
+    const isInformational = wrappedDropdownComponent.choices[0]['active'];
+    expect(isInformational).toEqual(true);
+  });
 
-  // // TODO: #3800 remove dropdownType tests
-  // it('should not set active on click with dropdownType="informational" and variant="default"', () => {
-  //   wrapperComponent.dropdownType = 'informational';
-  //   wrapperComponent.variant = 'default';
-  //   wrapperComponent.choices = [{text: 'asdf', value: 'asdf'}];
-  //   wrappedDropdownTriggerElement.click();
-  //   wrappedFixture.detectChanges();
-  //   wrappedFixture.nativeElement.querySelectorAll('li')[0].dispatchEvent(new Event('click'));
-  //   wrappedFixture.detectChanges();
-  //   const isInformational = wrappedDropdownComponent.choices[0]['active'];
-  //   expect(isInformational).toEqual(false);
-  // });
-
-  // // TODO: #3800 remove dropdownType tests
-  // it('should set active on click with dropdownType="base" and variant="informational"', () => {
-  //   wrapperComponent.dropdownType = 'base';
-  //   wrapperComponent.variant = 'informational';
-  //   wrapperComponent.choices = [{text: 'asdf', value: 'asdf'}];
-  //   wrappedDropdownTriggerElement.click();
-  //   wrappedFixture.detectChanges();
-  //   wrappedFixture.nativeElement.querySelectorAll('li')[0].dispatchEvent(new Event('click'));
-  //   wrappedFixture.detectChanges();
-  //   const isInformational = wrappedDropdownComponent.choices[0]['active'];
-  //   expect(isInformational).toEqual(true);
-  // });
+  // TODO: #3800 remove dropdownType tests
+  it('should set active on click with dropdownType="base" and variant="informational"', () => {
+    wrapperComponent.dropdownType = 'base';
+    wrapperComponent.variant = 'informational';
+    wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
+    wrappedDropdownTriggerElement.click();
+    wrappedFixture.detectChanges();
+    wrappedFixture.nativeElement
+      .querySelectorAll('li')[0]
+      .dispatchEvent(new Event('click'));
+    wrappedFixture.detectChanges();
+    const isInformational = wrappedDropdownComponent.choices[0]['active'];
+    expect(isInformational).toEqual(true);
+  });
 
   // TODO: #3800 Remove `additionalTriggerClasses` tests
   it('should set a value if additionalTriggerClasses has a value', () => {
