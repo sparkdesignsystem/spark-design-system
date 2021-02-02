@@ -209,33 +209,6 @@ describe('SprkDropdownComponent', () => {
   });
 
   // TODO: #3800 remove dropdownType tests
-  it('should not set active on click with dropdownType="base" (matches default)', () => {
-    wrapperComponent.dropdownType = 'base';
-    wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
-    dropdownTriggerElement.click();
-    fixture.detectChanges();
-    fixture.nativeElement
-      .querySelectorAll('li')[0]
-      .dispatchEvent(new Event('click'));
-    fixture.detectChanges();
-    const isInformational = dropdownComponent.choices[0]['active'];
-    expect(isInformational).toEqual(false);
-  });
-
-  it('should not set active on click with variant="default" (matches default)', () => {
-    wrapperComponent.variant = 'default';
-    wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
-    dropdownTriggerElement.click();
-    fixture.detectChanges();
-    fixture.nativeElement
-      .querySelectorAll('li')[0]
-      .dispatchEvent(new Event('click'));
-    fixture.detectChanges();
-    const isInformational = dropdownComponent.choices[0]['active'];
-    expect(isInformational).toEqual(false);
-  });
-
-  // TODO: #3800 remove dropdownType tests
   it('should set active on click with dropdownType="informational"', () => {
     wrapperComponent.dropdownType = 'informational';
     wrapperComponent.variant = 'default';
