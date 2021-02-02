@@ -8,7 +8,8 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector-interfaces';
+// TODO: Decouple with dropdown and make its own masthead selector interface
+import { ISprkDropdownChoice } from '../../sprk-dropdown/sprk-dropdown.interfaces';
 
 @Component({
   selector: 'sprk-masthead-selector',
@@ -186,13 +187,14 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    */
   @Input()
   selector: string;
+  // TODO: Decouple with dropdown and make its own masthead selector interface
   /**
    * Expects an array of
-   * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
+   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
    *  objects.
    */
   @Input()
-  choices: ISprkMastheadSelectorChoice[];
+  choices: ISprkDropdownChoice[];
   /**
    * If supplied, will render the icon
    * to the right of the trigger text.
@@ -224,10 +226,16 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    * @ignore
    */
   constructor(public ref: ElementRef) {}
+
   /**
    * @ignore
    */
-  ngOnChanges(changes: SimpleChanges): void {}
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.choices && changes.choices) {
+      this._updateTriggerTextWithDefaultValue();
+    }
+  }
+
   /**
    * @ignore
    */
@@ -248,7 +256,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
 
   @HostListener('document:focusin', ['$event'])
   onFocusin(event): void {
-    /* istanbul ignore else: angular focus event isnt setting e.target */
+    /* istanbul ignore next: angular focus event isnt setting e.target */
     if (
       !this.ref.nativeElement.contains(event.target) ||
       event.target.classList.contains('sprk-c-MastheadMask')
@@ -294,7 +302,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    * @ignore
    */
   clearActiveChoices(): void {
-    this.choices.forEach((choice: ISprkMastheadSelectorChoice) => {
+    this.choices.forEach((choice: ISprkDropdownChoice) => {
       choice['active'] = false;
     });
   }
@@ -370,7 +378,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   /**
    * Lookup choice with specified `isDefault: true` field
    */
-  protected _lookupDefaultChoice(): ISprkMastheadSelectorChoice | null {
+  protected _lookupDefaultChoice(): ISprkDropdownChoice | null {
     return this.choices.find((choice) => choice.isDefault) || null;
   }
 }
