@@ -37,9 +37,32 @@ import {
             >
               <div class="sprk-o-Stack__item">
                 <a
+                  *ngIf="!item.routerLink"
                   sprkLink
                   variant="plain"
                   href="{{ item.href }}"
+                  analyticsString="{{ item.analytics || item.analyticsString }}"
+                >
+                  <sprk-icon
+                    *ngIf="item.icon"
+                    iconType="{{ item.icon }}"
+                    additionalClasses="{{ item.iconCSS }} sprk-c-Footer__icon"
+                  ></sprk-icon>
+                  <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
+                    item.iconScreenReaderText
+                  }}</span>
+                  <img
+                    *ngIf="item.imgSrc"
+                    src="{{ item.imgSrc }}"
+                    alt="{{ item.imgAlt }}"
+                    class="{{ item.imgCSS }}"
+                  />
+                </a>
+                <a
+                  *ngIf="item.routerLink"
+                  sprkLink
+                  variant="plain"
+                  [routerLink]="item.routerLink"
                   analyticsString="{{ item.analytics || item.analyticsString }}"
                 >
                   <sprk-icon
@@ -92,10 +115,23 @@ import {
                     *ngFor="let link of item.links"
                   >
                     <a
+                      *ngIf="!link.routerLink"
                       sprkLink
                       variant="light"
                       class="sprk-c-Footer__link"
                       href="{{ link.href }}"
+                      analyticsString="{{
+                        link.analyticsString || link.analytics
+                      }}"
+                    >
+                      {{ link.text }}
+                    </a>
+                    <a
+                      *ngIf="link.routerLink"
+                      sprkLink
+                      variant="light"
+                      class="sprk-c-Footer__link"
+                      [routerLink]="link.routerLink"
                       analyticsString="{{
                         link.analyticsString || link.analytics
                       }}"
@@ -136,9 +172,30 @@ import {
                     class="sprk-o-Stack__item"
                   >
                     <a
+                      *ngIf="!item.routerLink"
                       sprkLink
                       variant="plain"
                       href="{{ item.href }}"
+                      analyticsString="{{
+                        item.analytics || item.analyticsString
+                      }}"
+                    >
+                      <sprk-icon
+                        *ngIf="item.icon"
+                        iconType="{{ item.icon }}"
+                        additionalClasses="{{
+                          item.iconCSS
+                        }} sprk-c-Footer__icon"
+                      ></sprk-icon>
+                      <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
+                        item.iconScreenReaderText
+                      }}</span>
+                    </a>
+                    <a
+                      *ngIf="item.routerLink"
+                      sprkLink
+                      variant="plain"
+                      [routerLink]="item.routerLink"
                       analyticsString="{{
                         item.analytics || item.analyticsString
                       }}"
@@ -184,10 +241,28 @@ import {
             >
               <div class="sprk-o-Stack__item" *ngFor="let award of awards">
                 <a
+                  *ngIf="!award.routerLink"
                   sprkLink
                   variant="plain"
                   class="sprk-o-Stack__item"
                   href="{{ award.href }}"
+                  analyticsString="{{
+                    award.analytics || award.analyticsString
+                  }}"
+                >
+                  <img
+                    *ngIf="award.imgSrc"
+                    src="{{ award.imgSrc }}"
+                    alt="{{ award.imgAlt }}"
+                    class="{{ award.imgCSS }}"
+                  />
+                </a>
+                <a
+                  *ngIf="award.routerLink"
+                  sprkLink
+                  variant="plain"
+                  class="sprk-o-Stack__item"
+                  [routerLink]="award.routerLink"
                   analyticsString="{{
                     award.analytics || award.analyticsString
                   }}"
@@ -246,9 +321,26 @@ import {
           >
             <li *ngFor="let item of badgeLinks" class="sprk-o-Stack__item">
               <a
+                *ngIf="!item.routerLink"
                 sprkLink
                 variant="plain"
                 href="{{ item.href }}"
+                analyticsString="{{ item.analytics || item.analyticsString }}"
+              >
+                <sprk-icon
+                  *ngIf="item.icon"
+                  iconType="{{ item.icon }}"
+                  additionalClasses="{{ item.iconCSS }} sprk-c-Footer__icon"
+                ></sprk-icon>
+                <span *ngIf="item.icon" class="sprk-u-ScreenReaderText">{{
+                  item.iconScreenReaderText
+                }}</span>
+              </a>
+              <a
+                *ngIf="item.routerLink"
+                sprkLink
+                variant="plain"
+                [routerLink]="item.routerLink"
                 analyticsString="{{ item.analytics || item.analyticsString }}"
               >
                 <sprk-icon

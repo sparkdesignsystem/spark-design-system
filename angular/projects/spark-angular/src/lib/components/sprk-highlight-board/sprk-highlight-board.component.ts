@@ -36,9 +36,20 @@ import { Component, Input, OnInit } from '@angular/core';
         >
           <div sprkStackItem class="sprk-c-HighlightBoard__cta">
             <a
+              *ngIf="!ctaRouterLink"
               sprkLink
               variant="unstyled"
               [attr.href]="ctaHref"
+              class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
+              [analyticsString]="analyticsStringCta"
+            >
+              {{ ctaText }}
+            </a>
+            <a
+              *ngIf="ctaRouterLink"
+              sprkLink
+              variant="unstyled"
+              [routerLink]="ctaRouterLink"
               class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
               [analyticsString]="analyticsStringCta"
             >
@@ -52,9 +63,20 @@ import { Component, Input, OnInit } from '@angular/core';
             class="sprk-c-HighlightBoard__cta"
           >
             <a
+              *ngIf="!ctaRouterLink2"
               sprkLink
               variant="unstyled"
               [attr.href]="ctaHref2"
+              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
+              [analyticsString]="analyticsStringCta2"
+            >
+              {{ ctaText2 }}
+            </a>
+            <a
+              *ngIf="ctaRouterLink2"
+              sprkLink
+              variant="unstyled"
+              [routerLink]="ctaRouterLink2"
               class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
               [analyticsString]="analyticsStringCta2"
             >
@@ -64,7 +86,7 @@ import { Component, Input, OnInit } from '@angular/core';
         </sprk-stack>
       </sprk-stack>
     </div>
-  `
+  `,
 })
 export class SprkHighlightBoardComponent implements OnInit {
   /**
@@ -97,6 +119,12 @@ export class SprkHighlightBoardComponent implements OnInit {
   @Input()
   ctaHref: string;
   /**
+   * The Highlight Board will use this as the
+   * `routerLink` for the main call to action.
+   */
+  @Input()
+  ctaRouterLink: string;
+  /**
    * The Highlight Board will use this as
    * the text for the secondary call to action.
    */
@@ -109,6 +137,13 @@ export class SprkHighlightBoardComponent implements OnInit {
    */
   @Input()
   ctaHref2: string;
+  /**
+   * The Highlight Board will use this
+   * as the `routerLink` for the secondary
+   * call to action.
+   */
+  @Input()
+  ctaRouterLink2: string;
   /**
    * The value supplied will be assigned to
    * the `data-analytics` attribute on the call to action.
@@ -180,7 +215,7 @@ export class SprkHighlightBoardComponent implements OnInit {
       case 'stacked':
         this.centerBtns = 'sprk-o-Stack--center-row';
         classArray.push(
-          'sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--stacked'
+          'sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--stacked',
         );
         break;
       default:
@@ -189,7 +224,7 @@ export class SprkHighlightBoardComponent implements OnInit {
     }
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
