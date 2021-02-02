@@ -236,4 +236,24 @@ describe('SprkMastheadComponent', () => {
       narrowNavElement.getAttribute('id'),
     );
   });
+
+  it('should set the href link of the bigNavLink', () => {
+    component.bigNavLinks = [{ text: 'Item 1', href: '/alert' }];
+    fixture.detectChanges();
+    const secondaryNavElementItem = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__link--big-nav',
+    );
+    expect(secondaryNavElementItem.getAttribute('href')).toEqual('/alert');
+  });
+
+  it('should set the href link of the bigNavLink when using routerLink', () => {
+    component.bigNavLinks = [{ text: 'Item 1', routerLink: '/alert-router' }];
+    fixture.detectChanges();
+    const secondaryNavElementItem = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__link--big-nav',
+    );
+    expect(secondaryNavElementItem.getAttribute('href')).toEqual(
+      '/alert-router',
+    );
+  });
 });
