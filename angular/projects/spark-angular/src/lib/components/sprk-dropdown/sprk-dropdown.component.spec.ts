@@ -154,6 +154,24 @@ describe('SprkDropdownComponent', () => {
     expect(wrappedDropdownComponent.isOpen).toEqual(false);
   });
 
+  it('should close the dropdown when clicking on the mask', () => {
+    wrappedDropdownTriggerElement.click();
+    wrappedFixture.detectChanges();
+    wrappedDropdownElement = wrappedFixture.nativeElement.querySelector('div');
+    expect(wrappedDropdownElement).not.toBeNull();
+    wrappedDropdownElement.ownerDocument.dispatchEvent(new Event('click'));
+    expect(wrappedDropdownComponent.isOpen).toEqual(false);
+  });
+
+  // it('should not close the dropdown when clicking on the dropdown', () => {
+  //   wrappedDropdownTriggerElement.click();
+  //   wrappedFixture.detectChanges();
+  //   wrappedDropdownElement = wrappedFixture.nativeElement.querySelector('div');
+  //   expect(wrappedDropdownElement).not.toBeNull();
+  //   wrappedDropdownElement.ownerDocument.dispatchEvent(new Event('click'));
+  //   expect(wrappedDropdownComponent.isOpen).toEqual(false);
+  // });
+
   it('should close the dropdown on focusin outside the element', () => {
     wrappedDropdownTriggerElement.click();
     wrappedFixture.detectChanges();
