@@ -6,6 +6,49 @@ import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
 import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
+@Component({
+  template: `
+    <sprk-dropdown
+      [dropdownType]="dropdownType"
+      [variant]="variant"
+      [triggerText]="triggerText"
+      [choices]="choices"
+      [additionalClasses]="additionalClasses"
+      [idString]="idString"
+      [additionalTriggerClasses]="additionalTriggerClasses"
+      [triggerAdditionalClasses]="triggerAdditionalClasses"
+      [additionalTriggerTextClasses]="additionalTriggerTextClasses"
+      [triggerTextAdditionalClasses]="triggerTextAdditionalClasses"
+      [additionalIconClasses]="additionalIconClasses"
+      [iconAdditionalClasses]="iconAdditionalClasses"
+      [screenReaderText]="screenReaderText"
+      [triggerIconType]="triggerIconType"
+      [triggerIconName]="triggerIconName"
+      [title]="title"
+      [heading]="heading"
+    >
+    </sprk-dropdown>
+  `,
+})
+class TestWrapperComponent {
+  dropdownType: string;
+  variant: string;
+  triggerText: string;
+  choices: ISprkDropdownChoice[];
+  additionalClasses: string;
+  idString: string;
+  additionalTriggerClasses: string;
+  additionalTriggerTextClasses: string;
+  triggerAdditionalClasses: string;
+  triggerTextAdditionalClasses: string;
+  additionalIconClasses: string;
+  iconAdditionalClasses: string;
+  triggerIconType: string;
+  triggerIconName: string;
+  screenReaderText: string;
+  title: string;
+  heading: string;
+}
 
 describe('SprkDropdownComponent', () => {
   let wrappedFixture: ComponentFixture<TestWrapperComponent>;
@@ -14,6 +57,7 @@ describe('SprkDropdownComponent', () => {
   let wrappedDropdownElement: HTMLElement;
   let wrappedDropdownTriggerElement: HTMLElement;
   let wrappedDropdownTriggerTextElement: HTMLElement;
+  let wrappedDropdownIconElement: HTMLElement;
 
   let fixture: ComponentFixture<SprkDropdownComponent>;
   let component: SprkDropdownComponent;
@@ -43,6 +87,9 @@ describe('SprkDropdownComponent', () => {
     ).componentInstance;
     wrappedDropdownTriggerElement = wrappedFixture.nativeElement.querySelector(
       'a',
+    );
+    wrappedDropdownIconElement = wrappedFixture.nativeElement.querySelector(
+      'svg',
     );
     wrappedDropdownTriggerTextElement = wrappedFixture.nativeElement.querySelector(
       'span',
@@ -524,50 +571,72 @@ describe('SprkDropdownComponent', () => {
     );
   });
 
-  // todo additionalIconClasses - 3 tests
-  // todo triggerIconType - 3 tests
-});
+  // TODO: #3800 remove additionalIconClasses tests
+  it('should correctly add classes from additionalIconClasses', () => {
+    wrapperComponent.additionalIconClasses = 'testClass';
+    wrappedFixture.detectChanges();
 
-@Component({
-  template: `
-    <sprk-dropdown
-      [dropdownType]="dropdownType"
-      [variant]="variant"
-      [triggerText]="triggerText"
-      [choices]="choices"
-      [additionalClasses]="additionalClasses"
-      [idString]="idString"
-      [additionalTriggerClasses]="additionalTriggerClasses"
-      [triggerAdditionalClasses]="triggerAdditionalClasses"
-      [additionalTriggerTextClasses]="additionalTriggerTextClasses"
-      [triggerTextAdditionalClasses]="triggerTextAdditionalClasses"
-      [additionalIconClasses]="additionalIconClasses"
-      [iconAdditionalClasses]="iconAdditionalClasses"
-      [screenReaderText]="screenReaderText"
-      [triggerIconType]="triggerIconType"
-      [triggerIconName]="triggerIconName"
-      [title]="title"
-      [heading]="heading"
-    >
-    </sprk-dropdown>
-  `,
-})
-class TestWrapperComponent {
-  dropdownType: string;
-  variant: string;
-  triggerText: string;
-  choices: ISprkDropdownChoice[];
-  additionalClasses: string;
-  idString: string;
-  additionalTriggerClasses: string;
-  additionalTriggerTextClasses: string;
-  triggerAdditionalClasses: string;
-  triggerTextAdditionalClasses: string;
-  additionalIconClasses: string;
-  iconAdditionalClasses: string;
-  triggerIconType: string;
-  triggerIconName: string;
-  screenReaderText: string;
-  title: string;
-  heading: string;
-}
+    expect(wrappedDropdownIconElement.classList.toString()).toContain(
+      'testClass',
+    );
+  });
+
+  it('should correctly add classes from iconAdditionalClasses', () => {
+    wrapperComponent.iconAdditionalClasses = 'testClass';
+    wrappedFixture.detectChanges();
+
+    expect(wrappedDropdownIconElement.classList.toString()).toContain(
+      'testClass',
+    );
+  });
+
+  // TODO: #3800 remove additionalIconClasses tests
+  it('should prefer iconAdditionalClasses over additionalIconClasses', () => {
+    wrapperComponent.additionalIconClasses = 'oldClass';
+    wrapperComponent.iconAdditionalClasses = 'newClass';
+    wrappedFixture.detectChanges();
+
+    expect(wrappedDropdownIconElement.classList.toString()).not.toContain(
+      'oldClass',
+    );
+    expect(wrappedDropdownIconElement.classList.toString()).toContain(
+      'newClass',
+    );
+  });
+
+  // TODO: #3800 remove triggerIconType tests
+  it('should add icon type from triggerIconType', () => {
+    wrapperComponent.triggerIconType = 'access';
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedDropdownIconElement
+        .querySelector('use')
+        .getAttribute('xlink:href'),
+    ).toEqual('#access');
+  });
+
+  it('should add icon type from triggerIconName', () => {
+    wrapperComponent.triggerIconName = 'access';
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedDropdownIconElement
+        .querySelector('use')
+        .getAttribute('xlink:href'),
+    ).toEqual('#access');
+  });
+
+  // TODO: #3800 remove triggerIconType tests
+  it('should prefer triggerIconName over triggerIconType', () => {
+    wrapperComponent.triggerIconType = 'bell';
+    wrapperComponent.triggerIconName = 'access';
+    wrappedFixture.detectChanges();
+
+    expect(
+      wrappedDropdownIconElement
+        .querySelector('use')
+        .getAttribute('xlink:href'),
+    ).toEqual('#access');
+  });
+});
