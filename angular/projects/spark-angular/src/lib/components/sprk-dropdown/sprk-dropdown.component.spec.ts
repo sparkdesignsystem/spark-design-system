@@ -51,20 +51,13 @@ class TestWrapperComponent {
 }
 
 describe('SprkDropdownComponent', () => {
-  let wrappedFixture: ComponentFixture<TestWrapperComponent>;
+  let fixture: ComponentFixture<TestWrapperComponent>;
   let wrapperComponent: TestWrapperComponent;
-  let wrappedDropdownComponent: SprkDropdownComponent;
-  let wrappedDropdownElement: HTMLElement;
-  let wrappedDropdownTriggerElement: HTMLElement;
-  let wrappedDropdownTriggerTextElement: HTMLElement;
-  let wrappedDropdownIconElement: HTMLElement;
-
-  let fixture: ComponentFixture<SprkDropdownComponent>;
-  let component: SprkDropdownComponent;
-  let dropdownComponent: SprkDropdownComponent;
   let dropdownElement: HTMLElement;
-  let dropdownTriggerElement: HTMLElement;
   let dropdownTriggerTextElement: HTMLElement;
+  let dropdownIconElement: HTMLElement;
+  let dropdownComponent: SprkDropdownComponent;
+  let dropdownTriggerElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -78,47 +71,34 @@ describe('SprkDropdownComponent', () => {
   }));
 
   beforeEach(() => {
-    wrappedFixture = TestBed.createComponent(TestWrapperComponent);
-    wrappedFixture.detectChanges();
-    wrapperComponent = wrappedFixture.componentInstance;
-
-    wrappedDropdownComponent = wrappedFixture.debugElement.query(
-      By.directive(SprkDropdownComponent),
-    ).componentInstance;
-    wrappedDropdownTriggerElement = wrappedFixture.nativeElement.querySelector(
-      'a',
-    );
-    wrappedDropdownIconElement = wrappedFixture.nativeElement.querySelector(
-      'svg',
-    );
-    wrappedDropdownTriggerTextElement = wrappedFixture.nativeElement.querySelector(
-      'span',
-    );
-    wrappedDropdownElement = wrappedFixture.nativeElement.querySelector('div');
-
-    fixture = TestBed.createComponent(SprkDropdownComponent);
+    fixture = TestBed.createComponent(TestWrapperComponent);
     fixture.detectChanges();
-    component = fixture.componentInstance;
-    dropdownComponent = wrappedFixture.debugElement.query(
+    wrapperComponent = fixture.componentInstance;
+
+    dropdownComponent = fixture.debugElement.query(
       By.directive(SprkDropdownComponent),
     ).componentInstance;
-    dropdownTriggerElement = wrappedFixture.nativeElement.querySelector('a');
-    dropdownTriggerTextElement = wrappedFixture.nativeElement.querySelector(
-      'span',
-    );
-    dropdownElement = wrappedFixture.nativeElement.querySelector('div');
+    dropdownTriggerElement = fixture.nativeElement.querySelector('a');
+    dropdownIconElement = fixture.nativeElement.querySelector('svg');
+    dropdownTriggerTextElement = fixture.nativeElement.querySelector('span');
+    dropdownElement = fixture.nativeElement.querySelector('div');
+
+    dropdownComponent = fixture.debugElement.query(
+      By.directive(SprkDropdownComponent),
+    ).componentInstance;
+    dropdownTriggerElement = fixture.nativeElement.querySelector('a');
   });
 
   it('should create', () => {
-    expect(wrappedDropdownComponent).toBeTruthy();
+    expect(dropdownComponent).toBeTruthy();
   });
 
   it('should add the correct classes if additionalClasses are supplied', () => {
     wrapperComponent.additionalClasses = 'sprk-u-pam sprk-u-man';
 
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
-    expect(wrappedDropdownComponent.getClasses()).toEqual(
+    expect(dropdownComponent.getClasses()).toEqual(
       'sprk-c-Dropdown sprk-u-pam sprk-u-man',
     );
   });
@@ -126,63 +106,43 @@ describe('SprkDropdownComponent', () => {
   it('should add data-id when idString has a value', () => {
     const testString = 'element-id';
     wrapperComponent.idString = testString;
-    wrappedFixture.detectChanges();
-    expect(wrappedDropdownTriggerElement.getAttribute('data-id')).toEqual(
-      testString,
-    );
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.getAttribute('data-id')).toEqual(testString);
   });
 
   it('should not add data-id when idString has no value', () => {
     wrapperComponent.idString = null;
-    wrappedFixture.detectChanges();
-    expect(wrappedDropdownTriggerElement.getAttribute('data-id')).toBeNull();
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.getAttribute('data-id')).toBeNull();
   });
 
   it('should open the dropdown on click', () => {
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    wrappedDropdownElement = wrappedFixture.nativeElement.querySelector('div');
-    expect(wrappedDropdownElement).not.toBeNull();
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    dropdownElement = fixture.nativeElement.querySelector('div');
+    expect(dropdownElement).not.toBeNull();
   });
 
   it('should close the dropdown on click outside the element', () => {
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    wrappedDropdownElement = wrappedFixture.nativeElement.querySelector('div');
-    expect(wrappedDropdownElement).not.toBeNull();
-    wrappedDropdownElement.ownerDocument.dispatchEvent(new Event('click'));
-    expect(wrappedDropdownComponent.isOpen).toEqual(false);
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    dropdownElement = fixture.nativeElement.querySelector('div');
+    expect(dropdownElement).not.toBeNull();
+    dropdownElement.ownerDocument.dispatchEvent(new Event('click'));
+    expect(dropdownComponent.isOpen).toEqual(false);
   });
-
-  it('should close the dropdown when clicking on the mask', () => {
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    wrappedDropdownElement = wrappedFixture.nativeElement.querySelector('div');
-    expect(wrappedDropdownElement).not.toBeNull();
-    wrappedDropdownElement.ownerDocument.dispatchEvent(new Event('click'));
-    expect(wrappedDropdownComponent.isOpen).toEqual(false);
-  });
-
-  // it('should not close the dropdown when clicking on the dropdown', () => {
-  //   wrappedDropdownTriggerElement.click();
-  //   wrappedFixture.detectChanges();
-  //   wrappedDropdownElement = wrappedFixture.nativeElement.querySelector('div');
-  //   expect(wrappedDropdownElement).not.toBeNull();
-  //   wrappedDropdownElement.ownerDocument.dispatchEvent(new Event('click'));
-  //   expect(wrappedDropdownComponent.isOpen).toEqual(false);
-  // });
 
   it('should close the dropdown on focusin outside the element', () => {
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    wrappedDropdownElement = wrappedFixture.nativeElement.querySelector('div');
-    expect(wrappedDropdownComponent.isOpen).toEqual(true);
-    wrappedDropdownElement.ownerDocument.dispatchEvent(new Event('focusin'));
-    expect(wrappedDropdownComponent.isOpen).toEqual(false);
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    dropdownElement = fixture.nativeElement.querySelector('div');
+    expect(dropdownComponent.isOpen).toEqual(true);
+    dropdownElement.ownerDocument.dispatchEvent(new Event('focusin'));
+    expect(dropdownComponent.isOpen).toEqual(false);
   });
 
   it('should set active on click of a choice on an informational dropdown', () => {
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     wrapperComponent.variant = 'informational';
     wrapperComponent.choices = [
       {
@@ -195,18 +155,18 @@ describe('SprkDropdownComponent', () => {
         active: false,
       },
     ];
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     dropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     expect(dropdownComponent.isOpen).toEqual(true);
-    const listElement = wrappedFixture.nativeElement.querySelectorAll('li')[0];
+    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     expect(dropdownComponent.choices[0]['active']).toEqual(true);
   });
 
   it('should set active on click of a choice on a base dropdown if active isnt defined initially', () => {
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     wrapperComponent.variant = 'informational';
     wrapperComponent.choices = [
       {
@@ -218,17 +178,17 @@ describe('SprkDropdownComponent', () => {
         value: 'Choice Title 1',
       },
     ];
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    expect(wrappedDropdownComponent.isOpen).toEqual(true);
-    const listElement = wrappedFixture.nativeElement.querySelectorAll('li')[0];
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(dropdownComponent.isOpen).toEqual(true);
+    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
-    wrappedFixture.detectChanges();
-    expect(wrappedDropdownComponent.choices[0]['active']).toEqual(true);
+    fixture.detectChanges();
+    expect(dropdownComponent.choices[0]['active']).toEqual(true);
   });
 
   it('should not set active on click of a choice on a base dropdown', () => {
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     wrapperComponent.choices = [
       {
         text: 'Option 1',
@@ -239,39 +199,39 @@ describe('SprkDropdownComponent', () => {
         value: 'Option 2',
       },
     ];
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    expect(wrappedDropdownComponent.isOpen).toEqual(true);
-    const listElement = wrappedFixture.nativeElement.querySelectorAll('li')[0];
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(dropdownComponent.isOpen).toEqual(true);
+    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     listElement.dispatchEvent(new Event('click'));
-    wrappedFixture.detectChanges();
-    expect(wrappedDropdownComponent.choices[0]['active']).toEqual(false);
+    fixture.detectChanges();
+    expect(dropdownComponent.choices[0]['active']).toEqual(false);
   });
 
   // TODO: #3800 remove dropdownType tests
   it('should not set active on click with dropdownType="base" (matches default)', () => {
     wrapperComponent.dropdownType = 'base';
     wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    wrappedFixture.nativeElement
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    fixture.nativeElement
       .querySelectorAll('li')[0]
       .dispatchEvent(new Event('click'));
-    wrappedFixture.detectChanges();
-    const isInformational = wrappedDropdownComponent.choices[0]['active'];
+    fixture.detectChanges();
+    const isInformational = dropdownComponent.choices[0]['active'];
     expect(isInformational).toEqual(false);
   });
 
   it('should not set active on click with variant="default" (matches default)', () => {
     wrapperComponent.variant = 'default';
     wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    wrappedFixture.nativeElement
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    fixture.nativeElement
       .querySelectorAll('li')[0]
       .dispatchEvent(new Event('click'));
-    wrappedFixture.detectChanges();
-    const isInformational = wrappedDropdownComponent.choices[0]['active'];
+    fixture.detectChanges();
+    const isInformational = dropdownComponent.choices[0]['active'];
     expect(isInformational).toEqual(false);
   });
 
@@ -280,14 +240,14 @@ describe('SprkDropdownComponent', () => {
     wrapperComponent.dropdownType = 'informational';
     wrapperComponent.variant = 'default';
     wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
-    wrappedFixture.detectChanges();
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    wrappedFixture.nativeElement
+    fixture.detectChanges();
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    fixture.nativeElement
       .querySelectorAll('li')[0]
       .dispatchEvent(new Event('click'));
-    wrappedFixture.detectChanges();
-    const isInformational = wrappedDropdownComponent.choices[0]['active'];
+    fixture.detectChanges();
+    const isInformational = dropdownComponent.choices[0]['active'];
     expect(isInformational).toEqual(true);
   });
 
@@ -296,108 +256,100 @@ describe('SprkDropdownComponent', () => {
     wrapperComponent.dropdownType = 'base';
     wrapperComponent.variant = 'informational';
     wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    wrappedFixture.nativeElement
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    fixture.nativeElement
       .querySelectorAll('li')[0]
       .dispatchEvent(new Event('click'));
-    wrappedFixture.detectChanges();
-    const isInformational = wrappedDropdownComponent.choices[0]['active'];
+    fixture.detectChanges();
+    const isInformational = dropdownComponent.choices[0]['active'];
     expect(isInformational).toEqual(true);
   });
 
   // TODO: #3800 Remove `additionalTriggerClasses` tests
   it('should set a value if additionalTriggerClasses has a value', () => {
     wrapperComponent.additionalTriggerClasses = 'sprk-u-man';
-    wrappedFixture.detectChanges();
-    expect(
-      wrappedDropdownTriggerElement.classList.contains('sprk-u-man'),
-    ).toEqual(true);
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.classList.contains('sprk-u-man')).toEqual(
+      true,
+    );
   });
 
   it('should set a value if triggerAdditionalClasses has a value', () => {
     wrapperComponent.triggerAdditionalClasses = 'sprk-u-man';
-    wrappedFixture.detectChanges();
-    expect(
-      wrappedDropdownTriggerElement.classList.contains('sprk-u-man'),
-    ).toEqual(true);
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.classList.contains('sprk-u-man')).toEqual(
+      true,
+    );
   });
 
   // TODO: #3800 Remove `additionalTriggerClasses` tests
   it('should prefer triggerAdditionalClasses over additionalTriggerClasses', () => {
     wrapperComponent.additionalTriggerClasses = 'oldClass';
     wrapperComponent.triggerAdditionalClasses = 'newClass';
-    wrappedFixture.detectChanges();
-    expect(
-      wrappedDropdownTriggerElement.classList.contains('newClass'),
-    ).toEqual(true);
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.classList.contains('newClass')).toEqual(true);
   });
 
   // TODO: #3800 Remove `additionalTriggerTextClasses` tests
   it('should set a value if additionalTriggerTextClasses has a value', () => {
     wrapperComponent.additionalTriggerTextClasses = 'sprk-u-man';
-    wrappedFixture.detectChanges();
-    expect(
-      wrappedDropdownTriggerTextElement.classList.contains('sprk-u-man'),
-    ).toEqual(true);
+    fixture.detectChanges();
+    expect(dropdownTriggerTextElement.classList.contains('sprk-u-man')).toEqual(
+      true,
+    );
   });
 
   it('should set a value if triggerTextAdditionalClasses has a value', () => {
     wrapperComponent.triggerTextAdditionalClasses = 'sprk-u-man';
-    wrappedFixture.detectChanges();
-    expect(
-      wrappedDropdownTriggerTextElement.classList.contains('sprk-u-man'),
-    ).toEqual(true);
+    fixture.detectChanges();
+    expect(dropdownTriggerTextElement.classList.contains('sprk-u-man')).toEqual(
+      true,
+    );
   });
 
   // TODO: #3800 Remove `additionalTriggerTextClasses` tests
   it('should prefer triggerTextAdditionalClasses over additionalTriggerTextClasses', () => {
     wrapperComponent.additionalTriggerTextClasses = 'oldClass';
     wrapperComponent.triggerTextAdditionalClasses = 'newClass';
-    wrappedFixture.detectChanges();
-    expect(
-      wrappedDropdownTriggerTextElement.classList.contains('newClass'),
-    ).toEqual(true);
+    fixture.detectChanges();
+    expect(dropdownTriggerTextElement.classList.contains('newClass')).toEqual(
+      true,
+    );
   });
 
   it('should apply aria-label when triggerText is provided', () => {
     wrapperComponent.triggerText = 'test';
     wrapperComponent.screenReaderText = '';
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     expect(
-      wrappedFixture.nativeElement
-        .querySelector('a')
-        .getAttribute('aria-label'),
+      fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
     ).toEqual('test');
   });
 
   it('should apply aria-label when screenReaderText is provided', () => {
     wrapperComponent.triggerText = '';
     wrapperComponent.screenReaderText = 'test';
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     expect(
-      wrappedFixture.nativeElement
-        .querySelector('a')
-        .getAttribute('aria-label'),
+      fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
     ).toEqual('test');
   });
 
   it('should apply a default aria-label when none is provided', () => {
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     expect(
-      wrappedFixture.nativeElement
-        .querySelector('a')
-        .getAttribute('aria-label'),
+      fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
     ).toEqual('Choose One');
   });
 
   it('should apply an aria-label to listbox when title provided', () => {
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     wrapperComponent.title = 'test';
-    wrappedDropdownTriggerElement.click();
+    dropdownTriggerElement.click();
 
-    wrappedFixture.detectChanges();
-    const listBoxAria = wrappedFixture.nativeElement
+    fixture.detectChanges();
+    const listBoxAria = fixture.nativeElement
       .querySelector('.sprk-c-Dropdown__links')
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('test');
@@ -405,12 +357,12 @@ describe('SprkDropdownComponent', () => {
 
   // TODO: #3800 Remove `heading` tests
   it('should apply an aria-label to listbox when heading provided', () => {
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     wrapperComponent.heading = 'test';
-    wrappedDropdownTriggerElement.click();
+    dropdownTriggerElement.click();
 
-    wrappedFixture.detectChanges();
-    const listBoxAria = wrappedFixture.nativeElement
+    fixture.detectChanges();
+    const listBoxAria = fixture.nativeElement
       .querySelector('.sprk-c-Dropdown__links')
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('test');
@@ -418,34 +370,34 @@ describe('SprkDropdownComponent', () => {
 
   // TODO: #3800 Remove `heading` tests
   it('should prefer heading over title', () => {
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     wrapperComponent.title = 'title';
     wrapperComponent.heading = 'heading';
-    wrappedDropdownTriggerElement.click();
+    dropdownTriggerElement.click();
 
-    wrappedFixture.detectChanges();
-    const listBoxAria = wrappedFixture.nativeElement
+    fixture.detectChanges();
+    const listBoxAria = fixture.nativeElement
       .querySelector('.sprk-c-Dropdown__links')
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('heading');
   });
 
   it('should apply an aria-label to listbox when screenReaderText is provided', () => {
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
     wrapperComponent.screenReaderText = 'test';
-    wrappedDropdownTriggerElement.click();
+    dropdownTriggerElement.click();
 
-    wrappedFixture.detectChanges();
-    const listBoxAria = wrappedFixture.nativeElement
+    fixture.detectChanges();
+    const listBoxAria = fixture.nativeElement
       .querySelector('.sprk-c-Dropdown__links')
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('test');
   });
 
   it('should apply a default aria-label to listbox when none is provided', () => {
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
-    const listBoxAria = wrappedFixture.nativeElement
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    const listBoxAria = fixture.nativeElement
       .querySelector('.sprk-c-Dropdown__links')
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('My Choices');
@@ -466,9 +418,9 @@ describe('SprkDropdownComponent', () => {
       },
     ];
     wrapperComponent.triggerText = expectedTriggerText;
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
-    const triggerTextElement = wrappedFixture.nativeElement.getElementsByTagName(
+    const triggerTextElement = fixture.nativeElement.getElementsByTagName(
       'a',
     )[0].firstElementChild;
     expect(triggerTextElement.textContent).toEqual(expectedTriggerText);
@@ -486,13 +438,13 @@ describe('SprkDropdownComponent', () => {
         isDefault: true,
       },
     ];
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
-    const triggerTextElement = wrappedFixture.nativeElement.getElementsByTagName(
+    const triggerTextElement = fixture.nativeElement.getElementsByTagName(
       'a',
     )[0].firstElementChild;
     expect(triggerTextElement.textContent).not.toEqual(
-      wrappedDropdownComponent.choices[1].value,
+      dropdownComponent.choices[1].value,
     );
   });
 
@@ -510,13 +462,13 @@ describe('SprkDropdownComponent', () => {
       },
     ];
 
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
-    const triggerTextElement = wrappedFixture.nativeElement.getElementsByTagName(
+    const triggerTextElement = fixture.nativeElement.getElementsByTagName(
       'a',
     )[0].firstElementChild;
     expect(triggerTextElement.textContent).toEqual(
-      wrappedDropdownComponent.choices[1].value,
+      dropdownComponent.choices[1].value,
     );
   });
 
@@ -533,7 +485,7 @@ describe('SprkDropdownComponent', () => {
         isDefault: true,
       },
     ];
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
     wrapperComponent.choices = [
       {
@@ -547,13 +499,13 @@ describe('SprkDropdownComponent', () => {
       },
     ];
 
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
-    const triggerTextElement = wrappedFixture.nativeElement.getElementsByTagName(
+    const triggerTextElement = fixture.nativeElement.getElementsByTagName(
       'a',
     )[0].firstElementChild;
     expect(triggerTextElement.textContent).toEqual(
-      wrappedDropdownComponent.choices[1].value,
+      dropdownComponent.choices[1].value,
     );
   });
 
@@ -572,70 +524,58 @@ describe('SprkDropdownComponent', () => {
         isDefault: true,
       },
     ];
-    wrappedDropdownTriggerElement.click();
-    wrappedFixture.detectChanges();
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
 
-    const triggerTextElement = wrappedFixture.nativeElement.querySelector(
+    const triggerTextElement = fixture.nativeElement.querySelector(
       '[aria-selected="true"]',
     );
     expect(triggerTextElement.textContent.trim()).toEqual(
-      wrappedDropdownComponent.choices[1].value,
+      dropdownComponent.choices[1].value,
     );
   });
 
   // TODO: #3800 remove additionalIconClasses tests
   it('should correctly add classes from additionalIconClasses', () => {
     wrapperComponent.additionalIconClasses = 'testClass';
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
-    expect(wrappedDropdownIconElement.classList.toString()).toContain(
-      'testClass',
-    );
+    expect(dropdownIconElement.classList.toString()).toContain('testClass');
   });
 
   it('should correctly add classes from iconAdditionalClasses', () => {
     wrapperComponent.iconAdditionalClasses = 'testClass';
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
-    expect(wrappedDropdownIconElement.classList.toString()).toContain(
-      'testClass',
-    );
+    expect(dropdownIconElement.classList.toString()).toContain('testClass');
   });
 
   // TODO: #3800 remove additionalIconClasses tests
   it('should prefer iconAdditionalClasses over additionalIconClasses', () => {
     wrapperComponent.additionalIconClasses = 'oldClass';
     wrapperComponent.iconAdditionalClasses = 'newClass';
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
-    expect(wrappedDropdownIconElement.classList.toString()).not.toContain(
-      'oldClass',
-    );
-    expect(wrappedDropdownIconElement.classList.toString()).toContain(
-      'newClass',
-    );
+    expect(dropdownIconElement.classList.toString()).not.toContain('oldClass');
+    expect(dropdownIconElement.classList.toString()).toContain('newClass');
   });
 
   // TODO: #3800 remove triggerIconType tests
   it('should add icon type from triggerIconType', () => {
     wrapperComponent.triggerIconType = 'access';
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
     expect(
-      wrappedDropdownIconElement
-        .querySelector('use')
-        .getAttribute('xlink:href'),
+      dropdownIconElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#access');
   });
 
   it('should add icon type from triggerIconName', () => {
     wrapperComponent.triggerIconName = 'access';
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
     expect(
-      wrappedDropdownIconElement
-        .querySelector('use')
-        .getAttribute('xlink:href'),
+      dropdownIconElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#access');
   });
 
@@ -643,12 +583,10 @@ describe('SprkDropdownComponent', () => {
   it('should prefer triggerIconName over triggerIconType', () => {
     wrapperComponent.triggerIconType = 'bell';
     wrapperComponent.triggerIconName = 'access';
-    wrappedFixture.detectChanges();
+    fixture.detectChanges();
 
     expect(
-      wrappedDropdownIconElement
-        .querySelector('use')
-        .getAttribute('xlink:href'),
+      dropdownIconElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#access');
   });
 });
