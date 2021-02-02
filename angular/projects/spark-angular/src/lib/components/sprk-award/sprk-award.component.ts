@@ -24,6 +24,7 @@ import { Component, Input } from '@angular/core';
       <div sprkStackItem [ngClass]="getClasses()">
         <div [ngClass]="getImgContainerClasses()">
           <a
+            *ngIf="!imgOneRouterLink"
             sprkLink
             variant="unstyled"
             class="sprk-o-Stack"
@@ -36,13 +37,42 @@ import { Component, Input } from '@angular/core';
               src="{{ imgOneSrc }}"
             />
           </a>
+          <a
+            *ngIf="imgOneRouterLink"
+            sprkLink
+            variant="unstyled"
+            class="sprk-o-Stack"
+            [routerLink]="imgOneRouterLink"
+            [analyticsString]="imgOneAnalyticsString || analyticsStringImgOne"
+          >
+            <img
+              [ngClass]="getClassesImgOne()"
+              alt="{{ imgOneAlt }}"
+              src="{{ imgOneSrc }}"
+            />
+          </a>
         </div>
         <div [ngClass]="getImgContainerClasses()">
           <a
+            *ngIf="!imgTwoRouterLink"
             sprkLink
             variant="unstyled"
             class="sprk-o-Stack"
             [attr.href]="imgTwoHref"
+            [analyticsString]="imgTwoAnalyticsString || analyticsStringImgTwo"
+          >
+            <img
+              [ngClass]="getClassesImgTwo()"
+              alt="{{ imgTwoAlt }}"
+              src="{{ imgTwoSrc }}"
+            />
+          </a>
+          <a
+            *ngIf="imgTwoRouterLink"
+            sprkLink
+            variant="unstyled"
+            class="sprk-o-Stack"
+            [routerLink]="imgTwoRouterLink"
             [analyticsString]="imgTwoAnalyticsString || analyticsStringImgTwo"
           >
             <img
@@ -99,10 +129,22 @@ export class SprkAwardComponent {
   @Input()
   imgOneHref: string;
   /**
+   * The `routerLink` value that will be applied to the first image link.
+   * Use this if you prefer a routerLink over an href.
+   */
+  @Input()
+  imgOneRouterLink: string;
+  /**
    * The `href` value that will be applied to the second image link.
    */
   @Input()
   imgTwoHref: string;
+  /**
+   * The `routerLink` value that will be applied to the second image link.
+   * Use this if you prefer a routerLink over an href.
+   */
+  @Input()
+  imgTwoRouterLink: string;
   /**
    * The `alt` text that will be applied to the second image.
    */

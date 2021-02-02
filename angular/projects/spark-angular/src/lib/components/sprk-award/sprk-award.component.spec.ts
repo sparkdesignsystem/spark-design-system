@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkAwardComponent } from './sprk-award.component';
+import { RouterTestingModule } from '@angular/router/testing';
 import { SprkToggleComponent } from '../sprk-toggle/sprk-toggle.component';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
@@ -14,7 +15,7 @@ describe('SprkAwardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
+      imports: [BrowserAnimationsModule, RouterTestingModule],
       declarations: [
         SprkAwardComponent,
         SprkLinkDirective,
@@ -29,8 +30,8 @@ describe('SprkAwardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkAwardComponent);
     component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelector('div');
     fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
   });
 
   it('should create itself', () => {
@@ -99,6 +100,60 @@ describe('SprkAwardComponent', () => {
     expect(element.querySelector('a').getAttribute('data-analytics')).toEqual(
       str,
     );
+  });
+
+  it('should set the href given a value in the imgTwoHref Input', () => {
+    component.splitAt = 'large';
+    component.imgTwoHref = 'https://www.sparkdesignsystem.com/two';
+    component.imgTwoSrc = 'https://www.sparkdesignsystem.com/';
+    component.imgTwoAlt = 'placeholder';
+    component.title = 'placeholder';
+    component.disclaimerTitle = 'placeholder';
+    component.disclaimerCopy = 'placeholder';
+    fixture.detectChanges();
+    expect(element.querySelectorAll('a')[1].getAttribute('href')).toEqual(
+      'https://www.sparkdesignsystem.com/two',
+    );
+  });
+
+  it('should set the href given a value in the imgTwoRouterLink Input', () => {
+    component.splitAt = 'large';
+    component.imgTwoRouterLink = '/test-two';
+    component.imgTwoSrc = 'https://www.sparkdesignsystem.com/';
+    component.imgTwoAlt = 'placeholder';
+    component.title = 'placeholder';
+    component.disclaimerTitle = 'placeholder';
+    component.disclaimerCopy = 'placeholder';
+    fixture.detectChanges();
+    expect(element.querySelectorAll('a')[1].getAttribute('href')).toEqual(
+      '/test-two',
+    );
+  });
+
+  it('should set the href given a value in the imgOneHref Input', () => {
+    component.splitAt = 'large';
+    component.imgOneHref = 'https://www.sparkdesignsystem.com/';
+    component.imgOneSrc = 'https://www.sparkdesignsystem.com/';
+    component.imgOneAlt = 'placeholder';
+    component.title = 'placeholder';
+    component.disclaimerTitle = 'placeholder';
+    component.disclaimerCopy = 'placeholder';
+    fixture.detectChanges();
+    expect(element.querySelector('a').getAttribute('href')).toEqual(
+      'https://www.sparkdesignsystem.com/',
+    );
+  });
+
+  it('should set the href given a value in the imgOneRouterLink Input', () => {
+    component.splitAt = 'large';
+    component.imgOneRouterLink = '/test';
+    component.imgOneSrc = 'https://www.sparkdesignsystem.com/';
+    component.imgOneAlt = 'placeholder';
+    component.title = 'placeholder';
+    component.disclaimerTitle = 'placeholder';
+    component.disclaimerCopy = 'placeholder';
+    fixture.detectChanges();
+    expect(element.querySelector('a').getAttribute('href')).toEqual('/test');
   });
 
   it('should set the data-analytics attribute given a value in the analyticsStringImgTwo Input', () => {
@@ -288,6 +343,7 @@ describe('SprkAwardComponent', () => {
   it('should prefer imgTwoAdditionalClasses over additionalClassesImgTwo', () => {
     const testOldProp = 'testClass';
     const testNewProp = 'testNewClass';
+    component.imgTwoHref = '/test';
     component.additionalClassesImgTwo = testOldProp;
     component.imgTwoAdditionalClasses = testNewProp;
     fixture.detectChanges();
