@@ -8,27 +8,13 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
+import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector-interfaces';
 
-// TODO: #3800 Remove `title` input, now replaced with `heading`
-// TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
-// TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
-// TODO: #3800 Remove `additionalTriggerTextClasses` input, now replaced with `triggerTextAdditionalClasses`
-// TODO: #3800 Remove `triggerIconType` input, now replaced with `triggerIconName`
 @Component({
-  selector: 'sprk-dropdown',
+  selector: 'sprk-masthead-selector',
   template: `
-    <div
-      [ngClass]="{
-        'sprk-c-MastheadMask':
-          isOpen && this.getVariant() === 'mastheadSelector'
-      }"
-    >
-      <div
-        [ngClass]="{
-          'sprk-o-Box': this.getVariant() === 'mastheadSelector'
-        }"
-      >
+    <div [ngClass]="{ 'sprk-c-MastheadMask': isOpen }">
+      <div class="sprk-o-Box">
         <a
           sprkLink
           variant="plain"
@@ -45,33 +31,21 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
-            [iconType]="returnSecondIfBoth(triggerIconType, triggerIconName)"
-            additionalClasses="sprk-u-mls {{
-              returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
-            }}"
+            [iconType]="triggerIconName"
+            additionalClasses="sprk-u-mls {{ iconAdditionalClasses }}"
           ></sprk-icon>
         </a>
       </div>
 
       <div [ngClass]="getClasses()" *ngIf="isOpen">
-        <div
-          class="sprk-c-Dropdown__header"
-          *ngIf="
-            this.getVariant() === 'mastheadSelector' ||
-            returnSecondIfBoth(title, heading) ||
-            selector
-          "
-        >
-          <h2
-            class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo"
-            *ngIf="title || heading"
-          >
-            {{ returnSecondIfBoth(title, heading) }}
+        <div class="sprk-c-Dropdown__header" *ngIf="heading || selector">
+          <h2 class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo" *ngIf="heading">
+            {{ heading }}
           </h2>
 
           <a
             sprkLink
-            *ngIf="selector && (!title || !heading)"
+            *ngIf="selector && !heading"
             variant="plain"
             class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
             (click)="toggle($event)"
@@ -83,16 +57,14 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
               >{{ selector }}</span
             >
             <sprk-icon
-              [iconType]="returnSecondIfBoth(triggerIconType, triggerIconName)"
+              [iconType]="triggerIconName"
               additionalClasses="
                 sprk-c-Icon--filled-current-color
                 sprk-c-Icon--stroke-current-color
                 sprk-u-mls
                 sprk-c-Icon--toggle
                 sprk-Stack__item
-                {{
-                returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
-              }}
+                {{ iconAdditionalClasses }}
               "
             ></sprk-icon>
           </a>
@@ -102,9 +74,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           class="sprk-c-Dropdown__links"
           role="listbox"
           [attr.aria-label]="
-            title || heading
-              ? returnSecondIfBoth(title, heading)
-              : screenReaderText || 'My Choices'
+            heading ? heading : screenReaderText || 'My Choices'
           "
         >
           <li
@@ -154,19 +124,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
     </div>
   `,
 })
-export class SprkDropdownComponent implements OnChanges {
-  /**
-   * Determines the type of Dropdown to render.
-   */
-  @Input()
-  variant = 'default';
-  // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
-  /**
-   * Deprecated: Use `variant` input instead.
-   * Determines the type of Dropdown to render.
-   */
-  @Input()
-  dropdownType = 'base';
+export class SprkMastheadSelectorComponent implements OnChanges {
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -181,43 +139,18 @@ export class SprkDropdownComponent implements OnChanges {
    */
   @Input()
   iconAdditionalClasses: string;
-  // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
-  /**
-   * Deprecated. Use `iconAdditionalClasses` instead.
-   * Expects a space separated string
-   * of classes to be added to the
-   * icon.
-   */
-  @Input()
-  additionalIconClasses: string;
   /**
    * Expects a space separated string of
    * classes to be added to the trigger link element.
    */
   @Input()
   triggerAdditionalClasses: string;
-  // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
-  /**
-   * Deprecated. Use `triggerAdditionalClasses` instead.
-   * Expects a space separated string of
-   * classes to be added to the trigger link element.
-   */
-  @Input()
-  additionalTriggerClasses: string;
   /**
    * Expects a space separated string of
    * classes to be added to the trigger text.
    */
   @Input()
   triggerTextAdditionalClasses: string;
-  // TODO: #3800 Remove `additionalTriggerTextClasses` input, now replaced with `triggerTextAdditionalClasses`
-  /**
-   * Deprecated. Use `triggerTextAdditionalClasses` instead.
-   * Expects a space separated string of
-   * classes to be added to the trigger text.
-   */
-  @Input()
-  additionalTriggerTextClasses: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -241,15 +174,6 @@ export class SprkDropdownComponent implements OnChanges {
    */
   @Input()
   isOpen = false;
-
-  // TODO: #3800 Remove `title` input, now replaced with `heading`
-  /**
-   * Deprecated – use `heading` input instead.
-   * The heading text displayed in
-   * in the box above the choices.
-   */
-  @Input()
-  title: string;
   /**
    * The heading text displayed in
    * in the box above the choices.
@@ -257,37 +181,26 @@ export class SprkDropdownComponent implements OnChanges {
   @Input()
   heading: string;
   /**
-   * Typically found in masthead dropdowns,
-   * this value supplied will be assigned to
+   * This value supplied will be assigned to
    * the title text when its open.
    */
   @Input()
   selector: string;
   /**
    * Expects an array of
-   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
+   * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
    *  objects.
    */
   @Input()
-  choices: ISprkDropdownChoice[];
+  choices: ISprkMastheadSelectorChoice[];
   /**
    * If supplied, will render the icon
    * to the right of the trigger text.
    */
   @Input()
   triggerIconName: string;
-  // TODO: #3800 Remove `triggerIconType` input, now replaced with `triggerIconName`
-  /**
-   * Deprecated. Use `triggerIconName` instead.
-   * If supplied, will render the icon
-   * to the right of the trigger text.
-   */
-  @Input()
-  triggerIconType: string;
   /**
    * The text that is initially rendered to the trigger.
-   * If `variant` is `informational`,
-   * clicking on a choice will change the trigger text.
    */
   @Input()
   triggerText: string;
@@ -311,18 +224,10 @@ export class SprkDropdownComponent implements OnChanges {
    * @ignore
    */
   constructor(public ref: ElementRef) {}
-
   /**
    * @ignore
    */
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes.choices) {
-      if (this.getVariant() === 'informational') {
-        this._updateTriggerTextWithDefaultValue();
-      }
-    }
-  }
-
+  ngOnChanges(changes: SimpleChanges): void {}
   /**
    * @ignore
    */
@@ -361,14 +266,8 @@ export class SprkDropdownComponent implements OnChanges {
     );
     const clickedChoice = this.choices[choiceIndex];
 
-    // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
-    if (
-      this.getVariant() === 'informational' ||
-      this.getVariant() === 'mastheadSelector'
-    ) {
-      this.setActiveChoice(event);
-      this.updateTriggerText(event);
-    }
+    this.setActiveChoice(event);
+    this.updateTriggerText(event);
     this.hideDropdown();
     this.choiceMade.emit(clickedChoice['value']);
   }
@@ -395,7 +294,7 @@ export class SprkDropdownComponent implements OnChanges {
    * @ignore
    */
   clearActiveChoices(): void {
-    this.choices.forEach((choice: ISprkDropdownChoice) => {
+    this.choices.forEach((choice: ISprkMastheadSelectorChoice) => {
       choice['active'] = false;
     });
   }
@@ -407,43 +306,6 @@ export class SprkDropdownComponent implements OnChanges {
     this.isOpen = false;
   }
 
-  // TODO: #3800 Remove `title` input, now replaced with `heading`
-  /**
-   * @ignore
-   */
-  returnSecondIfBoth(a, b): any {
-    if (a && b) {
-      return b;
-    }
-    if (a && !b) {
-      return a;
-    }
-    if (!a && b) {
-      return b;
-    }
-    return;
-  }
-
-  // TODO: #3800 Remove `title` input, now replaced with `heading`
-  /**
-   * @ignore
-   */
-  getVariant(): string {
-    // dropdownType and variant both have defaults,
-    // they always exist.
-
-    // config has both dropdownType, and variant
-    if (this.dropdownType != 'base' && this.variant != 'default') {
-      return this.variant;
-    }
-
-    // config has dropdownType, no variant
-    if (this.dropdownType != 'base' && this.variant === 'default') {
-      return this.dropdownType;
-    }
-
-    return this.variant;
-  }
   /**
    * @ignore
    */
@@ -465,13 +327,8 @@ export class SprkDropdownComponent implements OnChanges {
   getTriggerClasses(): string {
     const classArray: string[] = ['sprk-c-Dropdown__trigger'];
 
-    if (this.additionalTriggerClasses || this.triggerAdditionalClasses) {
-      // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
-      const classes = this.returnSecondIfBoth(
-        this.additionalTriggerClasses,
-        this.triggerAdditionalClasses,
-      );
-      classes.split(' ').forEach((className) => {
+    if (this.triggerAdditionalClasses) {
+      this.triggerAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -485,16 +342,8 @@ export class SprkDropdownComponent implements OnChanges {
   getTriggerTextClasses(): string {
     const classArray: string[] = [''];
 
-    // TODO: #3800 Remove `additionalTriggerTextClasses` input, now replaced with `triggerTextAdditionalClasses`
-    if (
-      this.additionalTriggerTextClasses ||
-      this.triggerTextAdditionalClasses
-    ) {
-      const classes = this.returnSecondIfBoth(
-        this.additionalTriggerTextClasses,
-        this.triggerTextAdditionalClasses,
-      );
-      classes.split(' ').forEach((className) => {
+    if (this.triggerTextAdditionalClasses) {
+      this.triggerTextAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -521,7 +370,7 @@ export class SprkDropdownComponent implements OnChanges {
   /**
    * Lookup choice with specified `isDefault: true` field
    */
-  protected _lookupDefaultChoice(): ISprkDropdownChoice | null {
+  protected _lookupDefaultChoice(): ISprkMastheadSelectorChoice | null {
     return this.choices.find((choice) => choice.isDefault) || null;
   }
 }

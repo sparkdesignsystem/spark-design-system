@@ -144,22 +144,21 @@ import {
         role="navigation"
         [id]="narrowNavId"
       >
-        <sprk-dropdown
+        <sprk-masthead-selector
           *ngIf="narrowSelector"
-          dropdownType="mastheadSelector"
           additionalClasses="sprk-c-Masthead__selector-dropdown"
-          additionalTriggerClasses="
+          triggerAdditionalClasses="
             sprk-c-Masthead__selector
             sprk-b-Link
             sprk-b-Link--plain
             sprk-o-Stack
             sprk-o-Stack--split@xxs
             sprk-o-Stack--center-column"
-          additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
-          additionalIconClasses="sprk-Stack__item sprk-u-mrs"
+          triggerTextAdditionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
+          iconAdditionalClasses="sprk-Stack__item sprk-u-mrs"
           [triggerText]="narrowSelector['trigger'].text"
           selector="Select One"
-          triggerIconType="chevron-down"
+          triggerIconName="chevron-down"
           [choices]="narrowSelector['choices']"
         >
           <div
@@ -177,7 +176,7 @@ import {
               {{ narrowSelector['footer'].text }}
             </a>
           </div>
-        </sprk-dropdown>
+        </sprk-masthead-selector>
 
         <sprk-masthead-accordion [additionalClasses]="getNarrowNavClasses()">
           <div *ngFor="let narrowLink of narrowNavLinks">
