@@ -160,6 +160,58 @@ describe('SprkDropdownComponent', () => {
     expect(dropDownComponent.choices[0]['active']).toEqual(false);
   });
 
+  it('should href value if href is set on choice item', () => {
+    fixture.detectChanges();
+    wrapperComponent.choices = [
+      {
+        text: 'Option 1',
+        value: 'Option 1',
+        href: '/test',
+      },
+      {
+        text: 'Option 2',
+        value: 'Option 2',
+      },
+    ];
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(dropDownComponent.isOpen).toEqual(true);
+    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
+    const listLink = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__link',
+    );
+    listElement.dispatchEvent(new Event('click'));
+    fixture.detectChanges();
+    expect(dropDownComponent.choices[0]['active']).toEqual(false);
+    expect(listLink.getAttribute('href')).toEqual('/test');
+  });
+
+  it('should href value if routerLink is set on choice item', () => {
+    fixture.detectChanges();
+    wrapperComponent.choices = [
+      {
+        text: 'Option 1',
+        value: 'Option 1',
+        routerLink: '/router-test',
+      },
+      {
+        text: 'Option 2',
+        value: 'Option 2',
+      },
+    ];
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(dropDownComponent.isOpen).toEqual(true);
+    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
+    const listLink = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__link',
+    );
+    listElement.dispatchEvent(new Event('click'));
+    fixture.detectChanges();
+    expect(dropDownComponent.choices[0]['active']).toEqual(false);
+    expect(listLink.getAttribute('href')).toEqual('/router-test');
+  });
+
   it('should set a value if additionalTriggerClasses has a value', () => {
     wrapperComponent.additionalTriggerClasses = 'sprk-u-man';
     fixture.detectChanges();
