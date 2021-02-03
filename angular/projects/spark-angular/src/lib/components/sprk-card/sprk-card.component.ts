@@ -201,7 +201,7 @@ import { Component, Input } from '@angular/core';
             *ngIf="ctaRouterLink"
             sprkLink
             variant="unstyled"
-            [routerLink]="ctaRouterLInk"
+            [routerLink]="ctaRouterLink"
             [ngClass]="getClassesCta()"
             [analyticsString]="ctaAnalytics"
           >
