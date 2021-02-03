@@ -126,7 +126,7 @@ import { ISprkDropdownChoice } from '../../sprk-dropdown/sprk-dropdown.interface
             </ng-template>
           </li>
         </ul>
-        <ng-content select="[sprkDropdownFooter]"></ng-content>
+        <ng-content select="[sprkMastheadSelectorFooter]"></ng-content>
       </div>
     </div>
   `,
