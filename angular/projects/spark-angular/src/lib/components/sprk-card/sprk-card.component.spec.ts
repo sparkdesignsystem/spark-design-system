@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkCardComponent } from './sprk-card.component';
@@ -10,8 +11,8 @@ describe('SparkCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SprkLinkDirectiveModule, SprkIconModule],
-      declarations: [SprkCardComponent]
+      imports: [SprkLinkDirectiveModule, SprkIconModule, RouterTestingModule],
+      declarations: [SprkCardComponent],
     }).compileComponents();
   }));
 
@@ -30,14 +31,26 @@ describe('SparkCardComponent', () => {
     expect(element.classList.toString()).toEqual(component.getClassesCard());
   });
 
-  it('should show routerLink href on img link if set', () => {
+  it('should set href on img link if imgHref set', () => {
     component.cardType = 'teaser';
     component.media = 'img';
-    component.imgHref = '/sparkdesignsystem.com';
+    component.imgHref = 'https://www.sparkdesignsystem.com';
     fixture.detectChanges();
     element = fixture.nativeElement.querySelector('div');
     const el = element.querySelector('a');
-    expect(el.getAttribute('href')).toEqual('/sparkdesignsystem.com');
+    expect(el.getAttribute('href')).toEqual(
+      'https://www.sparkdesignsystem.com',
+    );
+  });
+
+  it('should set href on img link if imgRouterLink set', () => {
+    component.cardType = 'teaser';
+    component.media = 'img';
+    component.imgRouterLink = '/router-test';
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    const el = element.querySelector('a');
+    expect(el.getAttribute('href')).toEqual('/router-test');
   });
 
   it('should add the correct classes if additionalClassesCta is set on cta link', () => {
@@ -71,7 +84,7 @@ describe('SparkCardComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClassesCard()).toEqual(
-      'sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man'
+      'sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man',
     );
   });
 
@@ -83,7 +96,7 @@ describe('SparkCardComponent', () => {
     component.ctaType = 'link';
     fixture.detectChanges();
     expect(component.getClassesCta()).toEqual(
-      'sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon'
+      'sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon',
     );
   });
 
@@ -94,9 +107,7 @@ describe('SparkCardComponent', () => {
     component.ctaIcon = 'bell';
     component.ctaType = 'button';
     fixture.detectChanges();
-    expect(component.getClassesCta()).toEqual(
-      'sprk-c-Button'
-    );
+    expect(component.getClassesCta()).toEqual('sprk-c-Button');
   });
 
   it('should add the correct classes if cardType and additionalClasses have values', () => {
@@ -110,7 +121,7 @@ describe('SparkCardComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClassesCard()).toEqual(
-      'sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man'
+      'sprk-c-Card sprk-o-Stack sprk-u-pam sprk-u-man',
     );
   });
 

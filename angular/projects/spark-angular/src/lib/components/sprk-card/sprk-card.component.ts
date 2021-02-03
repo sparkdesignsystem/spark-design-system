@@ -11,8 +11,22 @@ import { Component, Input } from '@angular/core';
       <a
         sprkLink
         variant="unstyled"
-        *ngIf="media === 'img'"
+        *ngIf="media === 'img' && !imgRouterLink"
         [href]="imgHref"
+        class="sprk-o-Stack__item"
+        [analyticsString]="imgLinkAnalytics"
+      >
+        <img
+          class="sprk-c-Card__media"
+          [attr.alt]="imgAlt"
+          [attr.src]="imgSrc"
+        />
+      </a>
+      <a
+        sprkLink
+        variant="unstyled"
+        *ngIf="media === 'img' && imgRouterLink"
+        [routerLink]="imgRouterLink"
         class="sprk-o-Stack__item"
         [analyticsString]="imgLinkAnalytics"
       >
@@ -35,8 +49,21 @@ import { Component, Input } from '@angular/core';
         <a
           sprkLink
           variant="unstyled"
-          *ngIf="media === 'icon'"
+          *ngIf="media === 'icon' && !iconRouterLink"
           [attr.href]="iconHref"
+          class="sprk-o-Stack__item sprk-u-AbsoluteCenter"
+          [analyticsString]="iconLinkAnalytics"
+        >
+          <sprk-icon
+            [iconType]="iconType"
+            [additionalClasses]="additionalClassesIcon"
+          ></sprk-icon>
+        </a>
+        <a
+          sprkLink
+          variant="unstyled"
+          *ngIf="media === 'icon' && iconRouterLink"
+          [routerLink]="iconRouterLink"
           class="sprk-o-Stack__item sprk-u-AbsoluteCenter"
           [analyticsString]="iconLinkAnalytics"
         >
@@ -52,6 +79,7 @@ import { Component, Input } from '@angular/core';
 
         <div class="sprk-o-Stack__item">
           <a
+            *ngIf="!ctaRouterLink"
             sprkLink
             variant="unstyled"
             [attr.href]="ctaHref"
@@ -60,7 +88,21 @@ import { Component, Input } from '@angular/core';
           >
             {{ ctaText }}
             <sprk-icon
-              *ngIf="ctaIcon && (ctaType === 'link')"
+              *ngIf="ctaIcon && ctaType === 'link'"
+              [iconType]="ctaIcon"
+            ></sprk-icon>
+          </a>
+          <a
+            *ngIf="ctaRouterLink"
+            sprkLink
+            variant="unstyled"
+            [routerLink]="ctaRouterLink"
+            [ngClass]="getClassesCta()"
+            [analyticsString]="ctaAnalytics"
+          >
+            {{ ctaText }}
+            <sprk-icon
+              *ngIf="ctaIcon && ctaType === 'link'"
               [iconType]="ctaIcon"
             ></sprk-icon>
           </a>
@@ -93,8 +135,18 @@ import { Component, Input } from '@angular/core';
         <a
           sprkLink
           variant="unstyled"
-          *ngIf="media === 'img'"
+          *ngIf="media === 'img' && !imgRouterLink"
           [attr.href]="imgHref"
+          class="sprk-o-Stack__item"
+          [analyticsString]="imgLinkAnalytics"
+        >
+          <img [attr.alt]="imgAlt" [attr.src]="imgSrc" />
+        </a>
+        <a
+          sprkLink
+          variant="unstyled"
+          *ngIf="media === 'img' && imgRouterLink"
+          [routerLink]="imgRouterLink"
           class="sprk-o-Stack__item"
           [analyticsString]="imgLinkAnalytics"
         >
@@ -103,8 +155,21 @@ import { Component, Input } from '@angular/core';
 
         <a
           sprkLink
-          *ngIf="media === 'icon'"
+          *ngIf="media === 'icon' && !iconRouterLink"
           [attr.href]="iconHref"
+          variant="unstyled"
+          class="sprk-o-Stack__item sprk-o-Stack__item--center"
+          [analyticsString]="iconLinkAnalytics"
+        >
+          <sprk-icon
+            [iconType]="iconType"
+            [additionalClasses]="additionalClassesIcon"
+          ></sprk-icon>
+        </a>
+        <a
+          sprkLink
+          *ngIf="media === 'icon' && iconRouterLink"
+          [routerLink]="iconRouterLink"
           variant="unstyled"
           class="sprk-o-Stack__item sprk-o-Stack__item--center"
           [analyticsString]="iconLinkAnalytics"
@@ -119,6 +184,7 @@ import { Component, Input } from '@angular/core';
 
         <div class="sprk-o-Stack__item">
           <a
+            *ngIf="!ctaRouterLink"
             sprkLink
             variant="unstyled"
             [attr.href]="ctaHref"
@@ -127,14 +193,28 @@ import { Component, Input } from '@angular/core';
           >
             {{ ctaText }}
             <sprk-icon
-              *ngIf="ctaIcon && (ctaType === 'link')"
+              *ngIf="ctaIcon && ctaType === 'link'"
+              [iconType]="ctaIcon"
+            ></sprk-icon>
+          </a>
+          <a
+            *ngIf="ctaRouterLink"
+            sprkLink
+            variant="unstyled"
+            [routerLink]="ctaRouterLInk"
+            [ngClass]="getClassesCta()"
+            [analyticsString]="ctaAnalytics"
+          >
+            {{ ctaText }}
+            <sprk-icon
+              *ngIf="ctaIcon && ctaType === 'link'"
               [iconType]="ctaIcon"
             ></sprk-icon>
           </a>
         </div>
       </div>
     </div>
-  `
+  `,
 })
 export class SprkCardComponent {
   /**
@@ -142,7 +222,7 @@ export class SprkCardComponent {
    * The available values are `base`, `teaser`, and `teaserHeading`.
    */
   @Input()
-  cardType: 'base' | 'teaser' | 'teaserHeading' = 'base' ;
+  cardType: 'base' | 'teaser' | 'teaserHeading' = 'base';
   /**
    * The main content
    * of the Card. Placed between
@@ -195,11 +275,23 @@ export class SprkCardComponent {
   @Input()
   iconHref: string;
   /**
+   * If the `media` input is set to `icon`, this
+   * is used to supply the `routerLink` for the icon.
+   */
+  @Input()
+  iconRouterLink: string;
+  /**
    * If the `media` input is set to `img`, this
    * is used to supply the `href` of the image.
    */
   @Input()
   imgHref: string;
+  /**
+   * If the `media` input is set to `img`, this
+   * is used to supply the `routerLink` of the image.
+   */
+  @Input()
+  imgRouterLink: string;
   /**
    * Determines what icon `sprk-icon` renders
    * next to the call-to-action link.
@@ -240,6 +332,11 @@ export class SprkCardComponent {
    */
   @Input()
   ctaHref: string;
+  /**
+   * The `routerLink` value for the call to action.
+   */
+  @Input()
+  ctaRouterLink: string;
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -282,7 +379,7 @@ export class SprkCardComponent {
     }
 
     if (this.additionalCtaClasses) {
-      this.additionalCtaClasses.split(' ').forEach(className => {
+      this.additionalCtaClasses.split(' ').forEach((className) => {
         ctaClassArray.push(className);
       });
     }
@@ -297,7 +394,7 @@ export class SprkCardComponent {
     const classArray: string[] = ['sprk-c-Card', 'sprk-o-Stack'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
