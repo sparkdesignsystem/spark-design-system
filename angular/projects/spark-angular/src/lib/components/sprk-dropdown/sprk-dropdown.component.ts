@@ -433,12 +433,12 @@ export class SprkDropdownComponent implements OnChanges {
     // they always exist.
 
     // config has both dropdownType, and variant
-    if (this.dropdownType != 'base' && this.variant != 'default') {
+    if (this.dropdownType !== 'base' && this.variant !== 'default') {
       return this.variant;
     }
 
     // config has dropdownType, no variant
-    if (this.dropdownType != 'base' && this.variant === 'default') {
+    if (this.dropdownType !== 'base' && this.variant === 'default') {
       return this.dropdownType;
     }
 

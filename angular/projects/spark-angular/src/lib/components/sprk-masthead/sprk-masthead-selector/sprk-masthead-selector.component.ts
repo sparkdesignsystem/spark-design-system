@@ -33,7 +33,9 @@ import { ISprkDropdownChoice } from '../../sprk-dropdown/sprk-dropdown.interface
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
             [iconType]="triggerIconName"
-            additionalClasses="sprk-u-mls {{ iconAdditionalClasses }}"
+            additionalClasses="sprk-Stack__item sprk-u-mhs {{
+              iconAdditionalClasses
+            }}"
           ></sprk-icon>
         </a>
       </div>
@@ -62,7 +64,7 @@ import { ISprkDropdownChoice } from '../../sprk-dropdown/sprk-dropdown.interface
               additionalClasses="
                 sprk-c-Icon--filled-current-color
                 sprk-c-Icon--stroke-current-color
-                sprk-u-mls
+                sprk-u-mhs
                 sprk-c-Icon--toggle
                 sprk-Stack__item
                 {{ iconAdditionalClasses }}
@@ -318,7 +320,9 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    * @ignore
    */
   getClasses(): string {
-    const classArray: string[] = ['sprk-c-Dropdown'];
+    const classArray: string[] = [
+      'sprk-c-Dropdown sprk-c-Masthead__selector-dropdown',
+    ];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
@@ -333,7 +337,9 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    * @ignore
    */
   getTriggerClasses(): string {
-    const classArray: string[] = ['sprk-c-Dropdown__trigger'];
+    const classArray: string[] = [
+      'sprk-c-Dropdown__trigger sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column',
+    ];
 
     if (this.triggerAdditionalClasses) {
       this.triggerAdditionalClasses.split(' ').forEach((className) => {
@@ -348,8 +354,9 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    * @ignore
    */
   getTriggerTextClasses(): string {
-    const classArray: string[] = [''];
-
+    const classArray: string[] = [
+      'sprk-o-Stack__item sprk-o-Stack__item--flex@xxs',
+    ];
     if (this.triggerTextAdditionalClasses) {
       this.triggerTextAdditionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
