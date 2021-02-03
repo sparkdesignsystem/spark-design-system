@@ -48,7 +48,6 @@ import { SprkIconModule } from './components/sprk-icon/sprk-icon.module';
 import { SprkLinkModule } from './components/sprk-link/sprk-link.module';
 import { SprkListItemModule } from './components/sprk-list-item/sprk-list-item.module';
 import { SprkMastheadModule } from './components/sprk-masthead/sprk-masthead.module';
-import { SprkMastheadSelectorModule } from './components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.module';
 import { SprkModalModule } from './components/sprk-modal/sprk-modal.module';
 import { SprkOrderedListModule } from './components/sprk-ordered-list/sprk-ordered-list.module';
 import { SprkPaginationModule } from './components/sprk-pagination/sprk-pagination.module';
@@ -89,7 +88,6 @@ import { SprkTextareaModule } from './directives/inputs/sprk-textarea/sprk-texta
     SprkDictionaryModule,
     SprkDividerModule,
     SprkDropdownModule,
-    SprkMastheadSelectorModule,
     SprkLinkModule,
     SprkHighlightBoardModule,
     SprkModalModule,
