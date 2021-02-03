@@ -562,4 +562,41 @@ describe('SprkDropdownComponent', () => {
       dropdownIconElement.querySelector('use').getAttribute('xlink:href'),
     ).toEqual('#access');
   });
+
+  it('should not render empty paragraphs', () => {
+    fixture.detectChanges();
+    wrapperComponent.variant = 'informational';
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information',
+        },
+        value: 'Choice Title 1',
+        active: false,
+      },
+    ];
+    fixture.detectChanges();
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(dropdownComponent.isOpen).toEqual(true);
+    let paragraphs = fixture.nativeElement.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(3);
+
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+        },
+        value: 'Choice Title 1',
+        active: false,
+      },
+    ];
+    fixture.detectChanges();
+    expect(dropdownComponent.isOpen).toEqual(true);
+    paragraphs = fixture.nativeElement.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(2);
+  });
 });
