@@ -146,16 +146,6 @@ import {
       >
         <sprk-masthead-selector
           *ngIf="narrowSelector"
-          additionalClasses="sprk-c-Masthead__selector-dropdown"
-          triggerAdditionalClasses="
-            sprk-c-Masthead__selector
-            sprk-b-Link
-            sprk-b-Link--plain
-            sprk-o-Stack
-            sprk-o-Stack--split@xxs
-            sprk-o-Stack--center-column"
-          triggerTextAdditionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
-          iconAdditionalClasses="sprk-Stack__item sprk-u-mrs"
           [triggerText]="narrowSelector['trigger'].text"
           selector="Select One"
           triggerIconName="chevron-down"
