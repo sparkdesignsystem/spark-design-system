@@ -86,7 +86,7 @@ describe('SprkMastheadSelectorComponent', () => {
     fixture.detectChanges();
 
     expect(dropdownComponent.getClasses()).toEqual(
-      'sprk-c-Dropdown sprk-u-pam sprk-u-man',
+      'sprk-c-Dropdown sprk-c-Masthead__selector-dropdown sprk-u-pam sprk-u-man',
     );
   });
 
