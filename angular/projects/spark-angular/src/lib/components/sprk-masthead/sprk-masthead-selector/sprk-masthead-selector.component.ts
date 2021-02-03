@@ -116,8 +116,12 @@ import { ISprkDropdownChoice } from '../../sprk-dropdown/sprk-dropdown.interface
                 [attr.aria-label]="choice.content.title"
               >
                 <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
-                <p>{{ choice.content.infoLine1 }}</p>
-                <p>{{ choice.content.infoLine2 }}</p>
+                <p sprkText variant="bodyTwo" *ngIf="choice.content.infoLine1">
+                  {{ choice.content.infoLine1 }}
+                </p>
+                <p sprkText variant="bodyFour" *ngIf="choice.content.infoLine2">
+                  {{ choice.content.infoLine2 }}
+                </p>
               </a>
             </ng-template>
           </li>
