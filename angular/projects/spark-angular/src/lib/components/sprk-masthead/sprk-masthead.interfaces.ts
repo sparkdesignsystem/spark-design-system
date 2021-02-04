@@ -147,11 +147,11 @@ export interface ISprkNarrowSelector {
     /**
      * The `href` for the link.
      */
-    href: string;
+    href?: string;
     /**
      * The `routerLink` for the link.
      */
-    routerLink: string;
+    routerLink?: string;
     /**
      * The value supplied will be assigned to the
      * `data-analytics` attribute on the link.
