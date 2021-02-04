@@ -280,4 +280,86 @@ describe('SprkMastheadComponent', () => {
     );
     expect(narrowNavLink.getAttribute('href')).toEqual('/alert-router');
   });
+
+  it('should set the href link of the footer link in selector when using routerLink', () => {
+    const mySelector = {
+      trigger: {
+        text: 'Select One',
+      },
+      choices: [
+        {
+          content: {
+            title: 'Choice Title 1',
+            infoLine1: 'Information about this choice',
+            infoLine2: 'More Information',
+          },
+          value: 'Choice Title 1',
+          active: false,
+        },
+      ],
+      footer: {
+        analyticsString: 'Go Elsewhere Link',
+        text: 'Go Elsewhere',
+        routerLink: '/footer-test',
+      },
+    };
+    component.narrowSelector = mySelector;
+    component.narrowNavLinks = [
+      { text: 'Item 1', routerLink: '/footer-router' },
+    ];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const selectorTrigger = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__trigger',
+    );
+    selectorTrigger.click();
+    fixture.detectChanges();
+    const footerLink = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__footer a',
+    );
+    expect(footerLink.getAttribute('href')).toEqual('/footer-test');
+  });
+
+  it('should set the href link of the footer link in selector when using href', () => {
+    const mySelector = {
+      trigger: {
+        text: 'Select One',
+      },
+      choices: [
+        {
+          content: {
+            title: 'Choice Title 1',
+            infoLine1: 'Information about this choice',
+            infoLine2: 'More Information',
+          },
+          value: 'Choice Title 1',
+          active: false,
+        },
+      ],
+      footer: {
+        analyticsString: 'Go Elsewhere Link',
+        text: 'Go Elsewhere',
+        href: 'https://www.sparkdesignsystem.com',
+      },
+    };
+    component.narrowSelector = mySelector;
+    component.narrowNavLinks = [
+      { text: 'Item 1', routerLink: '/footer-router' },
+    ];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const selectorTrigger = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__trigger',
+    );
+    selectorTrigger.click();
+    fixture.detectChanges();
+    const footerLink = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__footer a',
+    );
+    expect(footerLink.getAttribute('href')).toEqual(
+      'https://www.sparkdesignsystem.com',
+    );
+  });
 });
