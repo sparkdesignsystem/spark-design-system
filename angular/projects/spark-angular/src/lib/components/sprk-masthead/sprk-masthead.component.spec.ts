@@ -256,4 +256,28 @@ describe('SprkMastheadComponent', () => {
       '/alert-router',
     );
   });
+
+  it('should set the href link of the narrowNavLink', () => {
+    component.narrowNavLinks = [{ text: 'Item 1', href: '/alert' }];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const narrowNavLink = fixture.nativeElement.querySelector(
+      '.sprk-c-MastheadAccordion__summary',
+    );
+    expect(narrowNavLink.getAttribute('href')).toEqual('/alert');
+  });
+
+  it('should set the href link of the narrowNavLink when using routerLink', () => {
+    component.narrowNavLinks = [
+      { text: 'Item 1', routerLink: '/alert-router' },
+    ];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const narrowNavLink = fixture.nativeElement.querySelector(
+      '.sprk-c-MastheadAccordion__summary',
+    );
+    expect(narrowNavLink.getAttribute('href')).toEqual('/alert-router');
+  });
 });
