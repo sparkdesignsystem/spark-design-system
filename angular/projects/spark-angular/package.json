@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
-  "version": "12.1.0-alpha.0",
+  "version": "12.1.0",
   "author": "Quicken Loans",
   "license": "MIT",
   "scripts": {
