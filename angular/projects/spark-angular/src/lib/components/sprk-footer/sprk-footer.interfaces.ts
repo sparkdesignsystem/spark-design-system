@@ -180,7 +180,7 @@ export interface ISprkFooterGlobalLink {
   /**
    * Name of the icon.
    */
-  icon: string;
+  icon?: string;
   /**
    * Expects a space separated string
    * of classes to be added to the
