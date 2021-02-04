@@ -160,7 +160,7 @@ describe('SprkDropdownComponent', () => {
     expect(dropDownComponent.choices[0]['active']).toEqual(false);
   });
 
-  it('should href value if href is set on choice item', () => {
+  it('should set href value if href is set on choice item', () => {
     fixture.detectChanges();
     wrapperComponent.choices = [
       {
@@ -186,7 +186,7 @@ describe('SprkDropdownComponent', () => {
     expect(listLink.getAttribute('href')).toEqual('/test');
   });
 
-  it('should href value if routerLink is set on choice item', () => {
+  it('should set href value if routerLink is set on choice item', () => {
     fixture.detectChanges();
     wrapperComponent.choices = [
       {
