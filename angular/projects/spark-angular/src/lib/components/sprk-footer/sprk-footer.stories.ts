@@ -3,16 +3,16 @@ import { SprkFooterModule } from './sprk-footer.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 
 export default {
   title: 'Components/Footer',
   component: SprkFooterComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -29,7 +29,14 @@ const modules = {
   imports: [
     SprkFooterModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot([
+      {
+        path: 'iframe.html',
+        component: SprkFooterComponent,
+      },
+    ]),
   ],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 };
 
 export const defaultStory = () => ({
@@ -262,5 +269,5 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['sprk-footer.component'],
-  }
+  },
 };
