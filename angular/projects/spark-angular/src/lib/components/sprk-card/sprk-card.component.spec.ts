@@ -53,6 +53,26 @@ describe('SparkCardComponent', () => {
     expect(el.getAttribute('href')).toEqual('/router-test');
   });
 
+  it('should set href on icon link if iconRouterLink set', () => {
+    component.cardType = 'teaser';
+    component.media = 'icon';
+    component.iconRouterLink = '/router-test-icon';
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    const el = element.querySelector('a');
+    expect(el.getAttribute('href')).toEqual('/router-test-icon');
+  });
+
+  it('should set href on cta link if ctaRouterLink set', () => {
+    component.cardType = 'teaser';
+    component.media = 'img';
+    component.ctaRouterLink = '/router-test-cta';
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div.sprk-o-Stack__item');
+    const el = element.querySelector('a');
+    expect(el.getAttribute('href')).toEqual('/router-test-cta');
+  });
+
   it('should add the correct classes if additionalClassesCta is set on cta link', () => {
     component.additionalCtaClasses = 'sprk-u-pam';
     fixture.detectChanges();
