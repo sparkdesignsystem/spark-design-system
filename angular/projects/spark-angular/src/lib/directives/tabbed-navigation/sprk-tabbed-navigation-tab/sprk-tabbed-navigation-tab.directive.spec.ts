@@ -7,15 +7,14 @@ import { SprkTabbedNavigationTabDirective } from './sprk-tabbed-navigation-tab.d
   template: `
     <button
       analyticsString="Tab 1"
-      isActive="true"
-      controlsId="cntrls"
+      defaultActive="true"
       id="123"
       additionalClasses="sprk-u-man"
       sprkTabbedNavigationTab
     >
       Tab 1
     </button>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -26,7 +25,7 @@ describe('Spark Tabbed Navigation Tab Directive', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkTabbedNavigationTabDirective, TestComponent]
+      declarations: [SprkTabbedNavigationTabDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);

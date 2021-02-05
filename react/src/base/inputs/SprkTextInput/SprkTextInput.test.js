@@ -21,12 +21,14 @@ describe('SprkTextInput:', () => {
     ).toBe(true);
   });
 
-  it('should add floating label class to huge input when a value is present and blurred out', () => {
+  it(`should add floating label class to huge input when a value is present
+    and blurred out`, () => {
     const wrapper = mount(<SprkTextInput type="hugeTextInput" />);
     const input = wrapper.find('input');
     input.value = 'foo';
     // on blur pass object into blur handler
-    // Enzyme does not update state of the DOM but we can simulate update to the DOM state by passing same state into react function
+    // Enzyme does not update state of the DOM but we can simulate update to
+    // the DOM state by passing same state into react function
     input.simulate('blur', { target: { value: 'foo' } });
 
     expect(
@@ -36,7 +38,8 @@ describe('SprkTextInput:', () => {
     ).toBe(true);
   });
 
-  it('should remove/not have floating label class to huge input when a value is not present and blurred out', () => {
+  it(`should remove/not have floating label class to huge input when a value
+    is not present and blurred out`, () => {
     const wrapper = mount(<SprkTextInput type="hugeTextInput" />);
     const input = wrapper.find('input');
 
@@ -64,12 +67,10 @@ describe('SprkTextInput:', () => {
     ).toBe(true);
   });
 
-  it('should add floating label class to huge text when there is defaultValue', () => {
+  it(`should add floating label class to huge text when there is
+    defaultValue`, () => {
     const wrapper = mount(
-      <SprkTextInput
-        defaultValue="default Value"
-        type="hugeTextInput"
-      />,
+      <SprkTextInput defaultValue="default Value" type="hugeTextInput" />,
     );
     expect(
       wrapper
@@ -107,7 +108,11 @@ describe('SprkTextInput:', () => {
     const formatter = jest.fn(() => true);
     const onChangeMock = jest.fn();
     mount(
-      <SprkTextInput type="text" formatter={formatter} onChange={onChangeMock} />,
+      <SprkTextInput
+        type="text"
+        formatter={formatter}
+        onChange={onChangeMock}
+      />,
     );
     expect(formatter.mock.calls.length).toBe(2);
   });
@@ -133,7 +138,9 @@ describe('SprkTextInput:', () => {
 
   it('should not run the formatter if the field is invalid (textarea)', () => {
     const formatter = jest.fn();
-    mount(<SprkTextInput type="textarea" formatter={formatter} valid={false} />);
+    mount(
+      <SprkTextInput type="textarea" formatter={formatter} valid={false} />,
+    );
     expect(formatter.mock.calls.length).toBe(0);
   });
 
@@ -145,5 +152,58 @@ describe('SprkTextInput:', () => {
   it('should not render helper text if not supplied', () => {
     const wrapper = mount(<SprkTextInput helperText="" />);
     expect(wrapper.find('.sprk-b-HelperText').length).toBe(0);
+  });
+
+  it(`should have aria-describedby if the field is invalid and
+    ariaDescribedBy is not provided`, () => {
+    const wrapper = mount(<SprkTextInput valid={false} />);
+    expect(wrapper.find('[aria-describedby]').length).toBe(1);
+  });
+
+  it(`should not have aria-describedby if the field is valid and
+    ariaDescribedBy is not provided`, () => {
+    const wrapper = mount(<SprkTextInput />);
+    expect(wrapper.find('[aria-describedby]').length).toBe(0);
+  });
+
+  it('should add ariaDescribedBy to aria-describedby', () => {
+    const wrapper = mount(<SprkTextInput ariaDescribedBy="my ids" />);
+    expect(wrapper.find('[aria-describedby="my ids"]').length).toBe(1);
+  });
+
+  it('should merge errorContainerId and ariaDescribedBy', () => {
+    const wrapper = mount(
+      <SprkTextInput
+        errorContainerId="errorId"
+        ariaDescribedBy="id1 id2"
+        valid={false}
+      />,
+    );
+    const input = wrapper.find('input');
+    expect(input.length).toBe(1);
+    expect(input.getDOMNode().getAttribute('aria-describedby')).toEqual(
+      'errorId id1 id2',
+    );
+  });
+
+  it('should respond to updates to errorContainerId or ariaDescribedBy', () => {
+    const wrapper = mount(
+      <SprkTextInput
+        errorContainerId="errorId"
+        ariaDescribedBy="id1 id2"
+        valid={false}
+      />,
+    );
+
+    const input = wrapper.find('input');
+    expect(input.length).toBe(1);
+    expect(input.getDOMNode().getAttribute('aria-describedby')).toEqual(
+      'errorId id1 id2',
+    );
+
+    wrapper.setProps({ errorContainerId: 'error2' });
+    expect(input.getDOMNode().getAttribute('aria-describedby')).toEqual(
+      'error2 id1 id2',
+    );
   });
 });

@@ -4,32 +4,22 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Input/Text',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkTextInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
 
 export const textInput = () => (
-  <SprkTextInput
-    label="Text Input Label"
-    name="text-input-label"
-  />
+  <SprkTextInput label="Text Input Label" name="text-input-label" />
 );
 
 textInput.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
@@ -45,25 +35,71 @@ export const invalidTextInput = () => (
 invalidTextInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
 export const disabledTextInput = () => (
-  <SprkTextInput
-    label="Text Input Label"
-    name="text-input-label"
-    disabled
-  />
+  <SprkTextInput label="Text Input Label" name="text-input-label" disabled />
 );
 
 disabledTextInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
+  },
+};
+
+export const hugeTextInput = () => (
+  <SprkTextInput
+    type="hugeTextInput"
+    label="Text Input Label"
+    name="text-input-label"
+    placeholder="Huge Text Placeholder"
+  />
+);
+
+hugeTextInput.story = {
+  name: 'Huge',
+  component: SprkTextInput,
+  parameters: {
+    jest: ['SprkTextInput'],
+  },
+};
+
+export const invalidHugeTextInput = () => (
+  <SprkTextInput
+    type="hugeTextInput"
+    label="Text Input Label"
+    name="text-input-label"
+    placeholder="Huge Text Placeholder"
+    valid={false}
+    errorMessage="There is an error on this field."
+  />
+);
+
+invalidHugeTextInput.story = {
+  name: 'Huge Invalid',
+  component: SprkTextInput,
+  parameters: {
+    jest: ['SprkTextInput'],
+  },
+};
+
+export const disabledHugeTextInput = () => (
+  <SprkTextInput
+    type="hugeTextInput"
+    label="Text Input Label"
+    name="text-input-label"
+    placeholder="Huge Text Placeholder"
+    disabled
+  />
+);
+
+disabledHugeTextInput.story = {
+  name: 'Huge Disabled',
+  component: SprkTextInput,
+  parameters: {
+    jest: ['SprkTextInput'],
   },
 };
