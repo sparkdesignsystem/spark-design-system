@@ -19,11 +19,17 @@ import { SprkTabbedNavigationTabDirective } from '../../directives/tabbed-naviga
       <div class="sprk-c-Tabs__buttons" role="tablist">
         <ng-content select="[sprkTabbedNavigationTab]"></ng-content>
       </div>
-      <ng-content select="[sprkTabbedNavigationPane]"></ng-content>
+      <ng-content select="[sprkTabbedNavigationPanel]"></ng-content>
       <ng-content></ng-content>
     </div>
   `,
 })
+/**
+ * @deprecate This component will be removed in
+ * a future release in favor of the `sprk-tabs` component.
+ * Please use the `sprk-tabs` component.
+ * TODO: Remove this component as part of Issue 1378.
+ */
 export class SprkTabbedNavigationComponent implements AfterContentInit {
   /**
    * Expects a space separated string
