@@ -78,11 +78,12 @@ export interface ISprkFooterSocialLink {
   text?: string;
   /**
    * The `href` value for the link.
-   * If omitted, the href will
-   * be set to `#` by the `SprkLink`
-   * component.
    */
   href?: string;
+  /**
+   * The `routerLink` value for the link.
+   */
+  routerLink?: string;
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the link
@@ -127,11 +128,12 @@ export interface ISprkFooterLocalLinkColumn {
     text: string;
     /**
      * The `href` value for the link.
-     * If omitted, the href will
-     * be set to `#` by the `SprkLink`
-     * component.
      */
     href?: string;
+    /**
+     * The `routerLink` value for the link.
+     */
+    routerLink?: string;
     /**
      * The value supplied will be assigned to the
      * `data-analytics` attribute on the link
@@ -178,7 +180,7 @@ export interface ISprkFooterGlobalLink {
   /**
    * Name of the icon.
    */
-  icon: string;
+  icon?: string;
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -197,11 +199,12 @@ export interface ISprkFooterGlobalLink {
   text: string;
   /**
    * The `href` value for the link.
-   * If omitted, the href will
-   * be set to `#` by the `SprkLink`
-   * component.
    */
   href?: string;
+  /**
+   * The `routerLink` value for the link.
+   */
+  routerLink?: string;
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the link
@@ -252,11 +255,12 @@ export interface ISprkFooterBadgeLink {
   text?: string;
   /**
    * The `href` value for the link.
-   * If omitted, the href will
-   * be set to `#` by the `SprkLink`
-   * component.
    */
   href?: string;
+  /**
+   * The `routerLink` value for the link.
+   */
+  routerLink?: string;
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the link
@@ -284,11 +288,12 @@ export interface ISprkFooterAward {
   text?: string;
   /**
    * The `href` value for the link.
-   * If omitted, the href will
-   * be set to `#` by the `SprkLink`
-   * component.
    */
   href?: string;
+  /**
+   * The `routerLink` value for the link.
+   */
+  routerLink?: string;
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the link
@@ -319,4 +324,3 @@ export interface ISprkFooterAward {
    */
   imgCSS?: string;
 }
-

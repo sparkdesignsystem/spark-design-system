@@ -15,10 +15,8 @@ export default {
   component: SprkMastheadComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     subcomponents: {
@@ -33,6 +31,10 @@ between the \`$sprk-masthead-logo-min-width\` (174px)
 and \`$sprk-masthead-logo-max-width\` (192px).
 You can additionally override those min and max
 settings by resetting the variables in your own Sass file.
+- To have a \`routerLink\` for the Logo use the \`logoRouterLink="/your-link"\`
+Input for the link value. This requires the use of \`logo-slot-router\`
+on the logo element in place of the \`logo-slot\` that you see
+in the example code.
 - The default height of the Masthead on narrow
 viewports is 81px. Your logo might require you to
 update this value in your application’s Sass file using the
@@ -76,13 +78,15 @@ const modules = {
     SprkMastheadModule,
     SprkLinkDirectiveModule,
     SprkDropdownModule,
-    RouterModule.forRoot([{
-      path: 'iframe.html',
-      component: SprkMastheadComponent,
-    }]),
+    RouterModule.forRoot([
+      {
+        path: 'iframe.html',
+        component: SprkMastheadComponent,
+      },
+    ]),
     BrowserAnimationsModule,
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 };
 
 export const defaultStory = () => ({
@@ -294,28 +298,28 @@ export const defaultStory = () => ({
           {
             text: 'Item 3',
             href: '#nogo',
-          }
-        ]
+          },
+        ],
       },
       {
         text: 'Item 2',
         href: '#nogo',
-        active: true
+        active: true,
       },
       {
         text: '(555) 555-5555',
         href: '#nogo',
         active: false,
-        leadingIcon: 'landline'
+        leadingIcon: 'landline',
       },
       {
         text: 'Talk To Us',
         href: '#nogo',
         active: false,
-        leadingIcon: 'call-team-member'
-      }
-    ]
-  }
+        leadingIcon: 'call-team-member',
+      },
+    ],
+  },
 });
 
 defaultStory.story = {
@@ -514,7 +518,7 @@ export const extended = () => ({
       {
         text: 'Navigation Item',
         href: '#nogo',
-        active: false
+        active: false,
       },
       {
         text: 'Your Item',
@@ -522,23 +526,23 @@ export const extended = () => ({
         subNav: [
           {
             text: 'Item 1',
-            href: '#nogo'
+            href: '#nogo',
           },
           {
             text: 'Item 2',
-            href: '#nogo'
+            href: '#nogo',
           },
           {
             text: 'Item 3',
-            href: '#nogo'
-          }
-        ]
+            href: '#nogo',
+          },
+        ],
       },
       {
         text: 'Nav Item',
         href: '#nogo',
         active: false,
-        leadingIcon: 'settings'
+        leadingIcon: 'settings',
       },
       {
         text: 'Navigation Item',
@@ -547,24 +551,24 @@ export const extended = () => ({
         subNav: [
           {
             text: 'Item 1',
-            href: '#nogo'
+            href: '#nogo',
           },
           {
             text: 'Item 2',
-            href: '#nogo'
+            href: '#nogo',
           },
           {
             text: 'Item 3',
-            href: '#nogo'
-          }
-        ]
+            href: '#nogo',
+          },
+        ],
       },
       {
         text: 'Item',
         href: '#nogo',
         active: false,
-        leadingIcon: 'chat-online'
-      }
+        leadingIcon: 'chat-online',
+      },
     ],
     extendedNarrowLinks: [
       {
@@ -573,22 +577,22 @@ export const extended = () => ({
         subNav: [
           {
             text: 'Item 1',
-            href: '#nogo'
+            href: '#nogo',
           },
           {
             text: 'Item 2',
-            href: '#nogo'
+            href: '#nogo',
           },
           {
             text: 'Item 3',
-            href: '#nogo'
-          }
-        ]
+            href: '#nogo',
+          },
+        ],
       },
       {
         text: 'Item 2',
         href: '#nogo',
-        active: true
+        active: true,
       },
       {
         text: 'Item 3',
@@ -596,43 +600,43 @@ export const extended = () => ({
         subNav: [
           {
             text: 'Item 1',
-            href: '#nogo'
+            href: '#nogo',
           },
           {
             text: 'Item 2',
-            href: '#nogo'
+            href: '#nogo',
           },
           {
             text: 'Item 3',
-            href: '#nogo'
-          }
-        ]
+            href: '#nogo',
+          },
+        ],
       },
       {
         text: 'Item 4',
-        href: '#nogo'
+        href: '#nogo',
       },
       {
         text: 'Item 5',
-        href: '#nogo'
+        href: '#nogo',
       },
       {
         text: '(586) 123-4567',
         href: '#nogo',
         active: false,
-        leadingIcon: 'landline'
+        leadingIcon: 'landline',
       },
       {
         text: 'Talk To Us',
         href: '#nogo',
         active: false,
-        leadingIcon: 'call-team-member'
+        leadingIcon: 'call-team-member',
       },
       {
         text: 'Settings',
         href: '#nogo',
         active: false,
-        leadingIcon: 'settings'
+        leadingIcon: 'settings',
       },
       {
         text: 'My Account',
@@ -642,82 +646,82 @@ export const extended = () => ({
         subNav: [
           {
             text: 'Change Username',
-            href: '#nogo'
+            href: '#nogo',
           },
           {
             text: 'Change Password',
-            href: '#nogo'
+            href: '#nogo',
           },
           {
             text: 'Sign Out',
-            href: '#nogo'
-          }
-        ]
-      }
+            href: '#nogo',
+          },
+        ],
+      },
     ],
     mySelector: {
       trigger: {
-        text: 'Select One'
+        text: 'Select One',
       },
       choices: [
         {
           content: {
             title: 'Choice Title 1',
             infoLine1: 'Information about this choice',
-            infoLine2: 'More Information'
+            infoLine2: 'More Information',
           },
           value: 'Choice Title 1',
-          active: false
+          active: false,
         },
         {
           content: {
             title: 'Choice Title 2',
             infoLine1: 'Information about this choice',
-            infoLine2: 'More Information'
+            infoLine2: 'More Information',
           },
           value: 'Choice Title 2',
-          active: true
-        }
+          active: true,
+        },
       ],
       footer: {
         analyticsString: 'Go Elsewhere Link',
         text: 'Go Elsewhere',
         href: '#nogo',
-      }
+      },
     },
     siteDropdownChoices: [
       {
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information'
+          infoLine2: 'More Information',
         },
         value: 'Choice Title 1',
-        active: false
+        active: false,
       },
       {
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information'
+          infoLine2: 'More Information',
         },
         value: 'Choice Title 2',
-        active: true
-      }
+        active: true,
+      },
     ],
     simpleChoices: [
       {
         text: 'Change Username',
-        value: 'change-username'
+        value: 'change-username',
       },
       {
         text: 'Change Password',
-        value: 'change-password'
+        value: 'change-password',
       },
       {
         text: 'Sign Out',
-        value: 'sign-out'
-      }
+        value: 'sign-out',
+      },
     ],
   },
 });

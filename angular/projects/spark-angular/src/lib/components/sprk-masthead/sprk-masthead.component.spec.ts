@@ -2,16 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
-import {
-  SprkMastheadAccordionComponent
-} from './sprk-masthead-accordion/sprk-masthead-accordion.component';
-import {
-  SprkMastheadAccordionItemComponent
-} from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
+import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
 import { SprkMastheadComponent } from './sprk-masthead.component';
-import {
-  SprkDropdownComponent
-} from '../sprk-dropdown/sprk-dropdown.component';
+import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
 describe('SprkMastheadComponent', () => {
   let component: SprkMastheadComponent;
   let fixture: ComponentFixture<SprkMastheadComponent>;
@@ -29,8 +23,8 @@ describe('SprkMastheadComponent', () => {
         SprkLinkDirective,
         SprkDropdownComponent,
         SprkMastheadAccordionComponent,
-        SprkMastheadAccordionItemComponent
-      ]
+        SprkMastheadAccordionItemComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -58,7 +52,7 @@ describe('SprkMastheadComponent', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(mastheadElement.classList.toString()).toEqual(
-      'sprk-c-Masthead sprk-o-Stack sprk-u-man'
+      'sprk-c-Masthead sprk-o-Stack sprk-u-man',
     );
   });
 
@@ -67,10 +61,29 @@ describe('SprkMastheadComponent', () => {
     component.logoLinkScreenReaderText = 'Go to the alerts page.';
     fixture.detectChanges();
     const logoElement: HTMLElement = mastheadElement.querySelector(
-      '.sprk-c-Masthead__branding a'
+      '.sprk-c-Masthead__branding a',
     );
+    const logoElementLength = mastheadElement.querySelectorAll(
+      '.sprk-c-Masthead__branding a',
+    ).length;
+    expect(logoElementLength).toEqual(1);
     expect(logoElement.getAttribute('href')).toEqual('/alert');
     expect(logoElement.textContent.trim()).toEqual('Go to the alerts page.');
+  });
+
+  it('should set the logo router link and text to provided values', () => {
+    component.logoRouterLink = '/button';
+    component.logoLinkScreenReaderText = 'Go to the buttons page.';
+    fixture.detectChanges();
+    const logoElement: HTMLElement = mastheadElement.querySelector(
+      '.sprk-c-Masthead__branding a',
+    );
+    const logoElementLength = mastheadElement.querySelectorAll(
+      '.sprk-c-Masthead__branding a',
+    ).length;
+    expect(logoElement.getAttribute('href')).toEqual('/button');
+    expect(logoElementLength).toEqual(1);
+    expect(logoElement.textContent.trim()).toEqual('Go to the buttons page.');
   });
 
   it('should add the aria-expanded attribute and show the narrow nav when the icon is clicked', () => {
@@ -87,13 +100,13 @@ describe('SprkMastheadComponent', () => {
     hamburgerIcon.click();
     fixture.detectChanges();
     expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
-      true
+      true,
     );
     expect(component.isNarrowNavOpen).toEqual(true);
     hamburgerIcon.click();
     fixture.detectChanges();
     expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
-      false
+      false,
     );
     expect(component.isNarrowNavOpen).toEqual(false);
   });
@@ -124,7 +137,7 @@ describe('SprkMastheadComponent', () => {
     component.isNarrowNavOpen = true;
     fixture.detectChanges();
     narrowNavElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__narrow-nav .sprk-c-MastheadAccordion'
+      '.sprk-c-Masthead__narrow-nav .sprk-c-MastheadAccordion',
     );
     expect(narrowNavElement.classList.contains('sprk-u-man')).toEqual(true);
   });
@@ -134,7 +147,7 @@ describe('SprkMastheadComponent', () => {
     component.additionalBigNavClasses = 'sprk-u-man';
     fixture.detectChanges();
     secondaryNavElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__big-nav-items'
+      '.sprk-c-Masthead__big-nav-items',
     );
     expect(secondaryNavElement.classList.contains('sprk-u-man')).toEqual(true);
   });
@@ -144,25 +157,27 @@ describe('SprkMastheadComponent', () => {
     component.additionalBigNavClasses = '';
     fixture.detectChanges();
     secondaryNavElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__big-nav-items'
+      '.sprk-c-Masthead__big-nav-items',
     );
     expect(secondaryNavElement.classList.toString()).toEqual(
-      'sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare'
+      'sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare',
     );
   });
 
   it('should add the scroll class when state isScrolled is true', () => {
     component.isScrolled = true;
     fixture.detectChanges();
-    expect(mastheadElement.classList.contains('sprk-c-Masthead--scroll'))
-    .toEqual(true);
+    expect(
+      mastheadElement.classList.contains('sprk-c-Masthead--scroll'),
+    ).toEqual(true);
   });
 
   it('should add the hidden class when state isHidden is true', () => {
     component.isHidden = true;
     fixture.detectChanges();
-    expect(mastheadElement.classList.contains('sprk-c-Masthead--hidden'))
-    .toEqual(true);
+    expect(
+      mastheadElement.classList.contains('sprk-c-Masthead--hidden'),
+    ).toEqual(true);
   });
 
   it('should update state isHidden to true when scrollDirection is equal to down', () => {
@@ -198,17 +213,153 @@ describe('SprkMastheadComponent', () => {
   it('should add aria-controls and id to narrowNav if narrowNavId is not passed', () => {
     component.isNarrowNavOpen = true;
     fixture.detectChanges();
-    narrowNavElement = fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav');
-    expect(narrowNavElement.getAttribute('id')).toMatch(/sprk_masthead_narrow_nav_\d/);
-    expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(narrowNavElement.getAttribute('id'));
+    narrowNavElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__narrow-nav',
+    );
+    expect(narrowNavElement.getAttribute('id')).toMatch(
+      /sprk_masthead_narrow_nav_\d/,
+    );
+    expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(
+      narrowNavElement.getAttribute('id'),
+    );
   });
 
   it('should add correct aria-controls and id to narrowNav if narrowNavId is passed', () => {
     component.isNarrowNavOpen = true;
     component.narrowNavId = 'test_controls';
     fixture.detectChanges();
-    narrowNavElement = fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav');
+    narrowNavElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__narrow-nav',
+    );
     expect(narrowNavElement.getAttribute('id')).toEqual('test_controls');
-    expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(narrowNavElement.getAttribute('id'));
+    expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(
+      narrowNavElement.getAttribute('id'),
+    );
+  });
+
+  it('should set the href link of the bigNavLink', () => {
+    component.bigNavLinks = [{ text: 'Item 1', href: '/alert' }];
+    fixture.detectChanges();
+    const secondaryNavElementItem = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__link--big-nav',
+    );
+    expect(secondaryNavElementItem.getAttribute('href')).toEqual('/alert');
+  });
+
+  it('should set the href link of the bigNavLink when using routerLink', () => {
+    component.bigNavLinks = [{ text: 'Item 1', routerLink: '/alert-router' }];
+    fixture.detectChanges();
+    const secondaryNavElementItem = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__link--big-nav',
+    );
+    expect(secondaryNavElementItem.getAttribute('href')).toEqual(
+      '/alert-router',
+    );
+  });
+
+  it('should set the href link of the narrowNavLink', () => {
+    component.narrowNavLinks = [{ text: 'Item 1', href: '/alert' }];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const narrowNavLink = fixture.nativeElement.querySelector(
+      '.sprk-c-MastheadAccordion__summary',
+    );
+    expect(narrowNavLink.getAttribute('href')).toEqual('/alert');
+  });
+
+  it('should set the href link of the narrowNavLink when using routerLink', () => {
+    component.narrowNavLinks = [
+      { text: 'Item 1', routerLink: '/alert-router' },
+    ];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const narrowNavLink = fixture.nativeElement.querySelector(
+      '.sprk-c-MastheadAccordion__summary',
+    );
+    expect(narrowNavLink.getAttribute('href')).toEqual('/alert-router');
+  });
+
+  it('should set the href link of the footer link in selector when using routerLink', () => {
+    const mySelector = {
+      trigger: {
+        text: 'Select One',
+      },
+      choices: [
+        {
+          content: {
+            title: 'Choice Title 1',
+            infoLine1: 'Information about this choice',
+            infoLine2: 'More Information',
+          },
+          value: 'Choice Title 1',
+          active: false,
+        },
+      ],
+      footer: {
+        analyticsString: 'Go Elsewhere Link',
+        text: 'Go Elsewhere',
+        routerLink: '/footer-test',
+      },
+    };
+    component.narrowSelector = mySelector;
+    component.narrowNavLinks = [
+      { text: 'Item 1', routerLink: '/footer-router' },
+    ];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const selectorTrigger = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__trigger',
+    );
+    selectorTrigger.click();
+    fixture.detectChanges();
+    const footerLink = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__footer a',
+    );
+    expect(footerLink.getAttribute('href')).toEqual('/footer-test');
+  });
+
+  it('should set the href link of the footer link in selector when using href', () => {
+    const mySelector = {
+      trigger: {
+        text: 'Select One',
+      },
+      choices: [
+        {
+          content: {
+            title: 'Choice Title 1',
+            infoLine1: 'Information about this choice',
+            infoLine2: 'More Information',
+          },
+          value: 'Choice Title 1',
+          active: false,
+        },
+      ],
+      footer: {
+        analyticsString: 'Go Elsewhere Link',
+        text: 'Go Elsewhere',
+        href: 'https://www.sparkdesignsystem.com',
+      },
+    };
+    component.narrowSelector = mySelector;
+    component.narrowNavLinks = [
+      { text: 'Item 1', routerLink: '/footer-router' },
+    ];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const selectorTrigger = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__trigger',
+    );
+    selectorTrigger.click();
+    fixture.detectChanges();
+    const footerLink = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__footer a',
+    );
+    expect(footerLink.getAttribute('href')).toEqual(
+      'https://www.sparkdesignsystem.com',
+    );
   });
 });

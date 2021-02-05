@@ -9,7 +9,7 @@ import { SprkDivider } from '@sparkdesignsystem/spark-react';
 The Modal component interrupts the
 user without leaving the current page.
 It forces the user to interact with
-critical information. 
+critical information.
 
 <ComponentPreview
   componentName="modal--default-story"
@@ -17,6 +17,7 @@ critical information.
   hasAngular
   hasHTML
   minHeight="25rem"
+  titleAttr="Modal Example"
 />
 
 ### Usage
@@ -26,14 +27,14 @@ is critical information to show the user,
 a choice that the user must make immediately,
 a small amount of user information is needed,
 or when an action will result in a longer
-than normal wait.  
+than normal wait.
 
 The Modal component is inherently disruptive.
 It disables everything on the page below it
 until it is dismissed. The Modal component
 should be used sparingly, thoughtfully, and
 only when interruption is necessary to
-continuing a task. 
+continuing a task.
 
 ### Guidelines
 
@@ -41,7 +42,7 @@ continuing a task.
 a clear path of action for the user.
 - The content inside of a Modal should be short
 and concise. If much more information is needed,
-consider sending the user to a new page. 
+consider sending the user to a new page.
 - A Modal should not be launched from within another Modal.
 
 <SprkDivider
@@ -62,6 +63,7 @@ allows a user to take an action.
   hasAngular
   hasHTML
   minHeight="25rem"
+  titleAttr="Choice Modal Example"
 />
 
 ### Info
@@ -74,12 +76,13 @@ A Modal that shows critical information to the user.
   hasAngular
   hasHTML
   minHeight="20rem"
+  titleAttr="Info Modal Example"
 />
 
 ### Wait
 
 A Modal that acts as a loading screen.
-Once loading is finished, it will dismiss itself. 
+Once loading is finished, it will dismiss itself.
 
 <ComponentPreview
   componentName="modal--wait"
@@ -87,39 +90,40 @@ Once loading is finished, it will dismiss itself.
   hasAngular
   hasHTML
   minHeight="25rem"
+  titleAttr="Wait Modal Example"
 />
 
 ## Anatomy
 
 - A Modal (excluding the Wait Modal)
-must have a [Button](/using-spark/components/button) to trigger it. 
+must have a [Button](/using-spark/components/button) to trigger it.
 - A Modal (excluding the Wait Modal)
-must have a Close Icon to dismiss it. 
+must have a Close Icon to dismiss it.
 - A Modal has a background mask that
-covers up the page below. 
-- A Modal must have a title. 
-- A Modal must have informational text. 
-- A Choice Modal must include a [Button](/using-spark/components/button). 
+covers up the page below.
+- A Modal must have a title.
+- A Modal must have informational text.
+- A Choice Modal must include a [Button](/using-spark/components/button).
 
 ## Accessibility
 
 - The Modal component can be fully
 controlled using a mouse, keyboard,
-and/or screen reader. 
+and/or screen reader.
 - When a Modal is opened:
     - The first focusable element
-    inside it will receive focus. 
+    inside it will receive focus.
     - The focus is "trapped" inside
     the Modal. Pressing the Tab or Shift+Tab
     keys to move focus will only shift
-    focus between the elements in the Modal. 
-- Modals can be closed several ways: 
+    focus between the elements in the Modal.
+- Modals can be closed several ways:
     - Pressing the "Escape" key on the
-    keyboard (excluding Wait Modal) 
+    keyboard (excluding Wait Modal)
     - Pressing the Cancel button
-    (in the Choice Modal). 
+    (in the Choice Modal).
     - Pressing the Close Icon
-    (in the Choice Modal or Info Modal). 
+    (in the Choice Modal or Info Modal).
     - Pressing the background mask overlay
-    (in the Choice Modal or Info Modal). 
-    - Wait Modal will close on its own. 
+    (in the Choice Modal or Info Modal).
+    - Wait Modal will close on its own.

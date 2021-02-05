@@ -7,7 +7,7 @@
 
 Spark makes it possible for you to include SVG
 icons right into your project using two basic
-methods, **Compile Time** and **Run Time**. 
+methods, **Compile Time** and **Run Time**.
 
 For more information on working with SVG icons, check out
 [this guide](https://css-tricks.com/svg-sprites-use-better-icon-fonts/).
@@ -20,7 +20,7 @@ downloading the latest SVG, from the correct CDN URL,
 as part of your build process. That way, you’ll be
 able to embed the SVG directly into your compiled site.
 
-### Pros:
+### Advantages to Compile Time
 - The main advantages of this method are performance
 and reliability. The user avoids waiting for the CDN
 to serve the SVG, making this method ideal for production
@@ -30,20 +30,21 @@ are included in the site. Since the SVG file is downloaded
 during development, developers can review the SVG file
 before publishing and include only the versions they’ve tested.
 
-### Cons:
+### Disadvantages to Compile Time
 - However, this method does require more development work
 at the beginning for building and maintaining the connection
 to the CDN over the long term.
 
-You can find additional examples by using these helpful 
-[Gulp](https://github.com/sparkdesignsystem/spark-starter-html/blob/master/gulpfile.js#L11)
+You can find additional examples by referencing these
+[Gulp](https://github.com/sparkdesignsystem/spark-starter-html/blob/kitchen-sink/src/js/loadIcons.js#L11)
 and
 [Gatsby](https://github.com/sparkdesignsystem/spark-design-system/blob/staging/plugins/gatsby-symbol-set-fetch/gatsby-node.js)
-files.
+files to get you started.
 
->***Note***: If you use this method you must not put
+>***Note***: Do not download and place
 the SVG file in your source control repository.
-The SVG file should only be hosted on the official CDN.
+To stay up-to-date with the official icons, use the hosted CDN.
+Additionally, you may need polyfills for IE11 compatibility.
 
 ## Run Time
 
@@ -56,12 +57,12 @@ That way, the full SVG and
 icons are automatically embedded at the top of your page making
 them available to use within the body.
 
-### Pros:
+### Advantages to Run Time
 - The primary advantage of this method is that the least amount of
 setup and additional tooling needed. It’s ideal for quick,
 non-production projects.
 
-### Cons:
+### Disadvantages to Run Time
 - This method mainly lacks performance. You can easily end up
 downloading the icons more than once on subsequent page loads
 and having to wait for multiple downloads to complete.
@@ -72,7 +73,7 @@ update immediately without a chance for review.
 
 You can find additional examples by using these environment
 [Angular](https://github.com/sparkdesignsystem/spark-starter-angular/blob/kitchen-sink/src/app/spark-docs/icon-set/icon-set.component.ts)
-and [React](https://github.com/sparkdesignsystem/spark-starter-react/blob/kitchen-sink/src/components/IconSet/IconSet.js) 
+and [React](https://github.com/sparkdesignsystem/spark-starter-react/blob/kitchen-sink/src/components/IconSet/IconSet.js)
 component files.
 
 ## Troubleshooting
