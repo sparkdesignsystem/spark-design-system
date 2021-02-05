@@ -31,6 +31,10 @@ between the \`$sprk-masthead-logo-min-width\` (174px)
 and \`$sprk-masthead-logo-max-width\` (192px).
 You can additionally override those min and max
 settings by resetting the variables in your own Sass file.
+- To have a \`routerLink\` for the Logo use the \`logoRouterLink="/your-link"\`
+Input for the link value. This requires the use of \`logo-slot-router\`
+on the logo element in place of the \`logo-slot\` that you see
+in the example code.
 - The default height of the Masthead on narrow
 viewports is 81px. Your logo might require you to
 update this value in your application’s Sass file using the

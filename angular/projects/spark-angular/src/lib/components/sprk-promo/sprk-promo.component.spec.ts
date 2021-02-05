@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkPromoComponent } from './sprk-promo.component';
@@ -10,6 +11,7 @@ describe('SprkPromoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [SprkPromoComponent, SprkIconComponent, SprkLinkDirective],
     }).compileComponents();
   }));
@@ -139,5 +141,59 @@ describe('SprkPromoComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(element.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should set the href link of the img if imgHref is set', () => {
+    component.imgSrc = 'www.example.com/image.jpg';
+    component.imgHref = 'https://www.google.com';
+    fixture.detectChanges();
+    expect(element.querySelector('a').getAttribute('href')).toEqual(
+      'https://www.google.com',
+    );
+  });
+
+  it('should set the href link of the img if imgRouterLink is set', () => {
+    component.imgSrc = 'www.example.com/image.jpg';
+    component.imgRouterLink = '/router-test';
+    fixture.detectChanges();
+    expect(element.querySelector('a').getAttribute('href')).toEqual(
+      '/router-test',
+    );
+  });
+
+  it('should set the href link of the button if buttonHref is set', () => {
+    component.cta = 'button';
+    component.buttonHref = 'https://www.google.com';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Button').getAttribute('href'),
+    ).toEqual('https://www.google.com');
+  });
+
+  it('should set the href link of the button if buttonRouterLink is set', () => {
+    component.cta = 'button';
+    component.buttonRouterLink = '/router-link';
+    fixture.detectChanges();
+    expect(
+      element.querySelector('.sprk-c-Button').getAttribute('href'),
+    ).toEqual('/router-link');
+  });
+
+  it('should set the href link of the button if ctaLinkHref is set', () => {
+    component.cta = 'link';
+    component.ctaLinkHref = 'https://www.google.com';
+    fixture.detectChanges();
+    expect(element.querySelector('.sprk-b-Link').getAttribute('href')).toEqual(
+      'https://www.google.com',
+    );
+  });
+
+  it('should set the href link of the button if ctaLinkRouterLink is set', () => {
+    component.cta = 'link';
+    component.ctaLinkRouterLink = '/router-link';
+    fixture.detectChanges();
+    expect(element.querySelector('.sprk-b-Link').getAttribute('href')).toEqual(
+      '/router-link',
+    );
   });
 });

@@ -4,7 +4,10 @@ import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
 import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+<<<<<<< HEAD
 import { SprkMastheadSelectorComponent } from './sprk-masthead-selector/sprk-masthead-selector.component';
+=======
+>>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
 import { SprkMastheadComponent } from './sprk-masthead.component';
 import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
 describe('SprkMastheadComponent', () => {
@@ -25,7 +28,10 @@ describe('SprkMastheadComponent', () => {
         SprkDropdownComponent,
         SprkMastheadAccordionComponent,
         SprkMastheadAccordionItemComponent,
+<<<<<<< HEAD
         SprkMastheadSelectorComponent,
+=======
+>>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
       ],
     }).compileComponents();
   }));
@@ -65,8 +71,27 @@ describe('SprkMastheadComponent', () => {
     const logoElement: HTMLElement = mastheadElement.querySelector(
       '.sprk-c-Masthead__branding a',
     );
+    const logoElementLength = mastheadElement.querySelectorAll(
+      '.sprk-c-Masthead__branding a',
+    ).length;
+    expect(logoElementLength).toEqual(1);
     expect(logoElement.getAttribute('href')).toEqual('/alert');
     expect(logoElement.textContent.trim()).toEqual('Go to the alerts page.');
+  });
+
+  it('should set the logo router link and text to provided values', () => {
+    component.logoRouterLink = '/button';
+    component.logoLinkScreenReaderText = 'Go to the buttons page.';
+    fixture.detectChanges();
+    const logoElement: HTMLElement = mastheadElement.querySelector(
+      '.sprk-c-Masthead__branding a',
+    );
+    const logoElementLength = mastheadElement.querySelectorAll(
+      '.sprk-c-Masthead__branding a',
+    ).length;
+    expect(logoElement.getAttribute('href')).toEqual('/button');
+    expect(logoElementLength).toEqual(1);
+    expect(logoElement.textContent.trim()).toEqual('Go to the buttons page.');
   });
 
   it('should add the aria-expanded attribute and show the narrow nav when the icon is clicked', () => {
@@ -218,5 +243,134 @@ describe('SprkMastheadComponent', () => {
     expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(
       narrowNavElement.getAttribute('id'),
     );
+<<<<<<< HEAD
+=======
+  });
+
+  it('should set the href link of the bigNavLink', () => {
+    component.bigNavLinks = [{ text: 'Item 1', href: '/alert' }];
+    fixture.detectChanges();
+    const secondaryNavElementItem = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__link--big-nav',
+    );
+    expect(secondaryNavElementItem.getAttribute('href')).toEqual('/alert');
+  });
+
+  it('should set the href link of the bigNavLink when using routerLink', () => {
+    component.bigNavLinks = [{ text: 'Item 1', routerLink: '/alert-router' }];
+    fixture.detectChanges();
+    const secondaryNavElementItem = fixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__link--big-nav',
+    );
+    expect(secondaryNavElementItem.getAttribute('href')).toEqual(
+      '/alert-router',
+    );
+  });
+
+  it('should set the href link of the narrowNavLink', () => {
+    component.narrowNavLinks = [{ text: 'Item 1', href: '/alert' }];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const narrowNavLink = fixture.nativeElement.querySelector(
+      '.sprk-c-MastheadAccordion__summary',
+    );
+    expect(narrowNavLink.getAttribute('href')).toEqual('/alert');
+  });
+
+  it('should set the href link of the narrowNavLink when using routerLink', () => {
+    component.narrowNavLinks = [
+      { text: 'Item 1', routerLink: '/alert-router' },
+    ];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const narrowNavLink = fixture.nativeElement.querySelector(
+      '.sprk-c-MastheadAccordion__summary',
+    );
+    expect(narrowNavLink.getAttribute('href')).toEqual('/alert-router');
+  });
+
+  it('should set the href link of the footer link in selector when using routerLink', () => {
+    const mySelector = {
+      trigger: {
+        text: 'Select One',
+      },
+      choices: [
+        {
+          content: {
+            title: 'Choice Title 1',
+            infoLine1: 'Information about this choice',
+            infoLine2: 'More Information',
+          },
+          value: 'Choice Title 1',
+          active: false,
+        },
+      ],
+      footer: {
+        analyticsString: 'Go Elsewhere Link',
+        text: 'Go Elsewhere',
+        routerLink: '/footer-test',
+      },
+    };
+    component.narrowSelector = mySelector;
+    component.narrowNavLinks = [
+      { text: 'Item 1', routerLink: '/footer-router' },
+    ];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const selectorTrigger = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__trigger',
+    );
+    selectorTrigger.click();
+    fixture.detectChanges();
+    const footerLink = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__footer a',
+    );
+    expect(footerLink.getAttribute('href')).toEqual('/footer-test');
+  });
+
+  it('should set the href link of the footer link in selector when using href', () => {
+    const mySelector = {
+      trigger: {
+        text: 'Select One',
+      },
+      choices: [
+        {
+          content: {
+            title: 'Choice Title 1',
+            infoLine1: 'Information about this choice',
+            infoLine2: 'More Information',
+          },
+          value: 'Choice Title 1',
+          active: false,
+        },
+      ],
+      footer: {
+        analyticsString: 'Go Elsewhere Link',
+        text: 'Go Elsewhere',
+        href: 'https://www.sparkdesignsystem.com',
+      },
+    };
+    component.narrowSelector = mySelector;
+    component.narrowNavLinks = [
+      { text: 'Item 1', routerLink: '/footer-router' },
+    ];
+    fixture.detectChanges();
+    hamburgerIcon.click();
+    fixture.detectChanges();
+    const selectorTrigger = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__trigger',
+    );
+    selectorTrigger.click();
+    fixture.detectChanges();
+    const footerLink = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__footer a',
+    );
+    expect(footerLink.getAttribute('href')).toEqual(
+      'https://www.sparkdesignsystem.com',
+    );
+>>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
   });
 });

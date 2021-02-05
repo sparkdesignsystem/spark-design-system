@@ -86,7 +86,7 @@ JavaScript to ensure maintainability and scalability.
 * Class Naming Conventions can be found [here](https://sparkdesignsystem.com/docs/class-naming-convention).
 * [Stylelint](https://github.com/stylelint/stylelint) is used to lint
   Sass files and all of Spark Sass coding conventions can be found
-  in the [Stylelint configuration file ](https://github.com/sparkdesignsystem/spark-design-system/blob/master/.stylelintrc).
+  in the [Stylelint configuration file ](https://github.com/sparkdesignsystem/spark-design-system/blob/main/.stylelintrc).
 
 #### JS
 

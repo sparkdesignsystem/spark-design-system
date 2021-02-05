@@ -45,10 +45,15 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
+<<<<<<< HEAD
             [iconType]="returnSecondIfBoth(triggerIconType, triggerIconName)"
             additionalClasses="sprk-u-mls {{
               returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
             }}"
+=======
+            [iconType]="triggerIconType"
+            additionalClasses="sprk-u-mls {{ additionalIconClasses }}"
+>>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
           ></sprk-icon>
         </a>
       </div>
@@ -101,11 +106,15 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <ul
           class="sprk-c-Dropdown__links"
           role="listbox"
+<<<<<<< HEAD
           [attr.aria-label]="
             title || heading
               ? returnSecondIfBoth(title, heading)
               : screenReaderText || 'My Choices'
           "
+=======
+          [attr.aria-label]="title ? title : screenReaderText || 'My Choices'"
+>>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
         >
           <li
             class="sprk-c-Dropdown__item"
@@ -118,9 +127,23 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             <div *ngIf="choice.content; then content; else link"></div>
             <ng-template #link>
               <a
+                *ngIf="!choice.routerLink"
                 sprkLink
                 variant="unstyled"
                 [attr.href]="choice.href"
+                [analyticsString]="choice.analyticsString"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
+                [attr.aria-label]="choice.text"
+                >{{ choice.text }}
+              </a>
+              <a
+                *ngIf="choice.routerLink"
+                sprkLink
+                variant="unstyled"
+                [routerLink]="choice.routerLink"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
                   'sprk-c-Dropdown__link': true,
@@ -133,6 +156,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             <ng-template #content>
               <a
                 sprkLink
+                *ngIf="!choice.routerLink"
                 variant="unstyled"
                 [attr.href]="choice.href"
                 [analyticsString]="choice.analyticsString"
@@ -149,6 +173,22 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
                 <p sprkText variant="bodyTwo" *ngIf="choice.content.infoLine2">
                   {{ choice.content.infoLine2 }}
                 </p>
+              </a>
+              <a
+                sprkLink
+                *ngIf="choice.routerLink"
+                variant="unstyled"
+                [routerLink]="choice.routerLink"
+                [analyticsString]="choice.analyticsString"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
+                [attr.aria-label]="choice.content.title"
+              >
+                <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
+                <p>{{ choice.content.infoLine1 }}</p>
+                <p>{{ choice.content.infoLine2 }}</p>
               </a>
             </ng-template>
           </li>
@@ -269,7 +309,7 @@ export class SprkDropdownComponent implements OnChanges {
   selector: string;
   /**
    * Expects an array of
-   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
+   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
    *  objects.
    */
   @Input()
@@ -469,6 +509,7 @@ export class SprkDropdownComponent implements OnChanges {
   getTriggerClasses(): string {
     const classArray: string[] = ['sprk-c-Dropdown__trigger'];
 
+<<<<<<< HEAD
     if (this.additionalTriggerClasses || this.triggerAdditionalClasses) {
       // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
       const classes = this.returnSecondIfBoth(
@@ -476,6 +517,10 @@ export class SprkDropdownComponent implements OnChanges {
         this.triggerAdditionalClasses,
       );
       classes.split(' ').forEach((className) => {
+=======
+    if (this.additionalTriggerClasses) {
+      this.additionalTriggerClasses.split(' ').forEach((className) => {
+>>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
         classArray.push(className);
       });
     }
@@ -489,6 +534,7 @@ export class SprkDropdownComponent implements OnChanges {
   getTriggerTextClasses(): string {
     const classArray: string[] = [''];
 
+<<<<<<< HEAD
     // TODO: #3800 Remove `additionalTriggerTextClasses` input, now replaced with `triggerTextAdditionalClasses`
     if (
       this.additionalTriggerTextClasses ||
@@ -499,6 +545,10 @@ export class SprkDropdownComponent implements OnChanges {
         this.triggerTextAdditionalClasses,
       );
       classes.split(' ').forEach((className) => {
+=======
+    if (this.additionalTriggerTextClasses) {
+      this.additionalTriggerTextClasses.split(' ').forEach((className) => {
+>>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
         classArray.push(className);
       });
     }

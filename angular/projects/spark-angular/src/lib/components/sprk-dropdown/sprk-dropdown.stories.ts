@@ -3,6 +3,8 @@ import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.mo
 import { SprkDropdownComponent } from './sprk-dropdown.component';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 
 export default {
   title: 'Components/Dropdown',
@@ -24,7 +26,21 @@ element has a popup menu.
 };
 
 const modules = {
+<<<<<<< HEAD
   imports: [SprkDropdownModule, SprkLinkDirectiveModule],
+=======
+  imports: [
+    SprkDropdownModule,
+    SprkLinkDirectiveModule,
+    RouterModule.forRoot([
+      {
+        path: 'iframe.html',
+        component: SprkDropdownComponent,
+      },
+    ]),
+  ],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+>>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
 };
 
 export const defaultStory = () => ({
