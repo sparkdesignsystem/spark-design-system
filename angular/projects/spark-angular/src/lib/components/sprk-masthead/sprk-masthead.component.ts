@@ -181,7 +181,7 @@ import {
           <div
             *ngIf="narrowSelector['footer']"
             class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
-            sprkDropdownFooter
+            sprkMastheadSelectorFooter
           >
             <a
               *ngIf="!narrowSelector['footer'].routerLink"

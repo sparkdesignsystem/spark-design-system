@@ -4,10 +4,7 @@ import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
 import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
-<<<<<<< HEAD
 import { SprkMastheadSelectorComponent } from './sprk-masthead-selector/sprk-masthead-selector.component';
-=======
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
 import { SprkMastheadComponent } from './sprk-masthead.component';
 import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
 describe('SprkMastheadComponent', () => {
@@ -28,10 +25,7 @@ describe('SprkMastheadComponent', () => {
         SprkDropdownComponent,
         SprkMastheadAccordionComponent,
         SprkMastheadAccordionItemComponent,
-<<<<<<< HEAD
         SprkMastheadSelectorComponent,
-=======
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
       ],
     }).compileComponents();
   }));
@@ -243,8 +237,6 @@ describe('SprkMastheadComponent', () => {
     expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(
       narrowNavElement.getAttribute('id'),
     );
-<<<<<<< HEAD
-=======
   });
 
   it('should set the href link of the bigNavLink', () => {
@@ -371,6 +363,5 @@ describe('SprkMastheadComponent', () => {
     expect(footerLink.getAttribute('href')).toEqual(
       'https://www.sparkdesignsystem.com',
     );
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
   });
 });

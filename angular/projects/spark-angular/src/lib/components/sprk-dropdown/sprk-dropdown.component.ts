@@ -45,15 +45,10 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
-<<<<<<< HEAD
             [iconType]="returnSecondIfBoth(triggerIconType, triggerIconName)"
             additionalClasses="sprk-u-mls {{
               returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
             }}"
-=======
-            [iconType]="triggerIconType"
-            additionalClasses="sprk-u-mls {{ additionalIconClasses }}"
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
           ></sprk-icon>
         </a>
       </div>
@@ -106,15 +101,11 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <ul
           class="sprk-c-Dropdown__links"
           role="listbox"
-<<<<<<< HEAD
           [attr.aria-label]="
             title || heading
               ? returnSecondIfBoth(title, heading)
               : screenReaderText || 'My Choices'
           "
-=======
-          [attr.aria-label]="title ? title : screenReaderText || 'My Choices'"
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
         >
           <li
             class="sprk-c-Dropdown__item"
@@ -509,7 +500,6 @@ export class SprkDropdownComponent implements OnChanges {
   getTriggerClasses(): string {
     const classArray: string[] = ['sprk-c-Dropdown__trigger'];
 
-<<<<<<< HEAD
     if (this.additionalTriggerClasses || this.triggerAdditionalClasses) {
       // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
       const classes = this.returnSecondIfBoth(
@@ -517,10 +507,6 @@ export class SprkDropdownComponent implements OnChanges {
         this.triggerAdditionalClasses,
       );
       classes.split(' ').forEach((className) => {
-=======
-    if (this.additionalTriggerClasses) {
-      this.additionalTriggerClasses.split(' ').forEach((className) => {
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
         classArray.push(className);
       });
     }
@@ -534,7 +520,6 @@ export class SprkDropdownComponent implements OnChanges {
   getTriggerTextClasses(): string {
     const classArray: string[] = [''];
 
-<<<<<<< HEAD
     // TODO: #3800 Remove `additionalTriggerTextClasses` input, now replaced with `triggerTextAdditionalClasses`
     if (
       this.additionalTriggerTextClasses ||
@@ -545,10 +530,6 @@ export class SprkDropdownComponent implements OnChanges {
         this.triggerTextAdditionalClasses,
       );
       classes.split(' ').forEach((className) => {
-=======
-    if (this.additionalTriggerTextClasses) {
-      this.additionalTriggerTextClasses.split(' ').forEach((className) => {
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
         classArray.push(className);
       });
     }

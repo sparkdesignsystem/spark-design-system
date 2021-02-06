@@ -7,7 +7,6 @@ import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
 import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
-<<<<<<< HEAD
 @Component({
   template: `
     <sprk-dropdown
@@ -51,8 +50,6 @@ class TestWrapperComponent {
   title: string;
   heading: string;
 }
-=======
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
 
 describe('SprkDropdownComponent', () => {
   let fixture: ComponentFixture<TestWrapperComponent>;
@@ -79,12 +76,6 @@ describe('SprkDropdownComponent', () => {
     fixture = TestBed.createComponent(TestWrapperComponent);
     fixture.detectChanges();
     wrapperComponent = fixture.componentInstance;
-<<<<<<< HEAD
-=======
-    dropDownComponent = fixture.debugElement.query(
-      By.directive(SprkDropdownComponent),
-    ).componentInstance;
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
 
     dropdownComponent = fixture.debugElement.query(
       By.directive(SprkDropdownComponent),
@@ -109,11 +100,7 @@ describe('SprkDropdownComponent', () => {
 
     fixture.detectChanges();
 
-<<<<<<< HEAD
     expect(dropdownComponent.getClasses()).toEqual(
-=======
-    expect(dropDownComponent.getClasses()).toEqual(
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
       'sprk-c-Dropdown sprk-u-pam sprk-u-man',
     );
   });
@@ -223,7 +210,6 @@ describe('SprkDropdownComponent', () => {
     expect(dropdownComponent.choices[0]['active']).toEqual(false);
   });
 
-<<<<<<< HEAD
   // TODO: #3800 remove dropdownType tests
   it('should set active on click with dropdownType="informational"', () => {
     wrapperComponent.dropdownType = 'informational';
@@ -256,7 +242,6 @@ describe('SprkDropdownComponent', () => {
   });
 
   // TODO: #3800 Remove `additionalTriggerClasses` tests
-=======
   it('should set href value if href is set on choice item', () => {
     fixture.detectChanges();
     wrapperComponent.choices = [
@@ -272,14 +257,14 @@ describe('SprkDropdownComponent', () => {
     ];
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    expect(dropDownComponent.isOpen).toEqual(true);
+    expect(dropdownComponent.isOpen).toEqual(true);
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     const listLink = fixture.nativeElement.querySelector(
       '.sprk-c-Dropdown__link',
     );
     listElement.dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    expect(dropDownComponent.choices[0]['active']).toEqual(false);
+    expect(dropdownComponent.choices[0]['active']).toEqual(false);
     expect(listLink.getAttribute('href')).toEqual('/test');
   });
 
@@ -298,24 +283,22 @@ describe('SprkDropdownComponent', () => {
     ];
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    expect(dropDownComponent.isOpen).toEqual(true);
+    expect(dropdownComponent.isOpen).toEqual(true);
     const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     const listLink = fixture.nativeElement.querySelector(
       '.sprk-c-Dropdown__link',
     );
     listElement.dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    expect(dropDownComponent.choices[0]['active']).toEqual(false);
+    expect(dropdownComponent.choices[0]['active']).toEqual(false);
     expect(listLink.getAttribute('href')).toEqual('/router-test');
   });
 
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
   it('should set a value if additionalTriggerClasses has a value', () => {
     wrapperComponent.additionalTriggerClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(dropdownTriggerElement.classList.contains('sprk-u-man')).toEqual(
       true,
-<<<<<<< HEAD
     );
   });
 
@@ -324,8 +307,6 @@ describe('SprkDropdownComponent', () => {
     fixture.detectChanges();
     expect(dropdownTriggerElement.classList.contains('sprk-u-man')).toEqual(
       true,
-=======
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
     );
   });
 
@@ -343,7 +324,6 @@ describe('SprkDropdownComponent', () => {
     fixture.detectChanges();
     expect(dropdownTriggerTextElement.classList.contains('sprk-u-man')).toEqual(
       true,
-<<<<<<< HEAD
     );
   });
 
@@ -362,8 +342,6 @@ describe('SprkDropdownComponent', () => {
     fixture.detectChanges();
     expect(dropdownTriggerTextElement.classList.contains('newClass')).toEqual(
       true,
-=======
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
     );
   });
 
@@ -402,7 +380,6 @@ describe('SprkDropdownComponent', () => {
     const listBoxAria = fixture.nativeElement
       .querySelector('.sprk-c-Dropdown__links')
       .getAttribute('aria-label');
-<<<<<<< HEAD
     expect(listBoxAria).toEqual('test');
   });
 
@@ -415,8 +392,6 @@ describe('SprkDropdownComponent', () => {
     const listBoxAria = fixture.nativeElement
       .querySelector('.sprk-c-Dropdown__links')
       .getAttribute('aria-label');
-=======
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
     expect(listBoxAria).toEqual('test');
   });
 
@@ -496,11 +471,7 @@ describe('SprkDropdownComponent', () => {
       'a',
     )[0].firstElementChild;
     expect(triggerTextElement.textContent).not.toEqual(
-<<<<<<< HEAD
       dropdownComponent.choices[1].value,
-=======
-      dropDownComponent.choices[1].value,
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
     );
   });
 
@@ -524,11 +495,7 @@ describe('SprkDropdownComponent', () => {
       'a',
     )[0].firstElementChild;
     expect(triggerTextElement.textContent).toEqual(
-<<<<<<< HEAD
       dropdownComponent.choices[1].value,
-=======
-      dropDownComponent.choices[1].value,
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
     );
   });
 
@@ -565,11 +532,7 @@ describe('SprkDropdownComponent', () => {
       'a',
     )[0].firstElementChild;
     expect(triggerTextElement.textContent).toEqual(
-<<<<<<< HEAD
       dropdownComponent.choices[1].value,
-=======
-      dropDownComponent.choices[1].value,
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
     );
   });
 
@@ -595,7 +558,6 @@ describe('SprkDropdownComponent', () => {
       '[aria-selected="true"]',
     );
     expect(triggerTextElement.textContent.trim()).toEqual(
-<<<<<<< HEAD
       dropdownComponent.choices[1].value,
     );
   });
@@ -606,13 +568,8 @@ describe('SprkDropdownComponent', () => {
     fixture.detectChanges();
 
     expect(dropdownIconElement.classList.toString()).toContain('testClass');
-=======
-      dropDownComponent.choices[1].value,
-    );
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
   });
 
-<<<<<<< HEAD
   it('should correctly add classes from iconAdditionalClasses', () => {
     wrapperComponent.iconAdditionalClasses = 'testClass';
     fixture.detectChanges();
@@ -697,32 +654,3 @@ describe('SprkDropdownComponent', () => {
     expect(paragraphs.length).toEqual(2);
   });
 });
-=======
-@Component({
-  template: `
-    <sprk-dropdown
-      [dropdownType]="dropdownType"
-      [triggerText]="triggerText"
-      [choices]="choices"
-      [additionalClasses]="additionalClasses"
-      [idString]="idString"
-      [additionalTriggerClasses]="additionalTriggerClasses"
-      [additionalTriggerTextClasses]="additionalTriggerTextClasses"
-      [screenReaderText]="screenReaderText"
-      [title]="title"
-    >
-    </sprk-dropdown>
-  `,
-})
-class TestWrapperComponent {
-  dropdownType: string;
-  triggerText: string;
-  choices: ISprkDropdownChoice[];
-  additionalClasses: string;
-  idString: string;
-  additionalTriggerClasses: string;
-  additionalTriggerTextClasses: string;
-  screenReaderText: string;
-  title: string;
-}
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
