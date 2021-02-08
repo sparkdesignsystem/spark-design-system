@@ -68,11 +68,17 @@ export const defaultHelperText = () => (
   <SprkRadioGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
-      <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
-      <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
+      <SprkRadioItem name="radio" ariaDescribedBy="radio-helper-text">
+        Radio Item 1
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" ariaDescribedBy="radio-helper-text">
+        Radio Item 2
+      </SprkRadioItem>
+      <SprkRadioItem name="radio" ariaDescribedBy="radio-helper-text">
+        Radio Item 3
+      </SprkRadioItem>
     </SprkFieldset>
-    <SprkHelperText>Input Helper Text</SprkHelperText>
+    <SprkHelperText id="radio-helper-text">Input Helper Text</SprkHelperText>
   </SprkRadioGroup>
 );
 
@@ -85,9 +91,15 @@ defaultHelperText.story = {
 
 export const invalidRadioButton = () => (
   <SprkRadioGroup>
-    <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
-    <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
-    <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
+    <SprkRadioItem name="radio" ariaDescribedBy="invalid-radio">
+      Radio Item 1
+    </SprkRadioItem>
+    <SprkRadioItem name="radio" ariaDescribedBy="invalid-radio">
+      Radio Item 2
+    </SprkRadioItem>
+    <SprkRadioItem name="radio" ariaDescribedBy="invalid-radio">
+      Radio Item 3
+    </SprkRadioItem>
     <SprkFieldError id="invalid-radio">
       <SprkIcon
         iconName="exclamation-filled"
@@ -158,17 +170,29 @@ export const hugeHelperText = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem name="radio" variant="huge">
+      <SprkRadioItem
+        name="radio"
+        variant="huge"
+        ariaDescribedBy="huge-radio-helper-text"
+      >
         Radio Item 1
       </SprkRadioItem>
-      <SprkRadioItem name="radio" variant="huge">
+      <SprkRadioItem
+        name="radio"
+        variant="huge"
+        ariaDescribedBy="huge-radio-helper-text"
+      >
         Radio Item 2
       </SprkRadioItem>
-      <SprkRadioItem name="radio" variant="huge">
+      <SprkRadioItem
+        name="radio"
+        variant="huge"
+        ariaDescribedBy="huge-radio-helper-text"
+      >
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
-    <SprkHelperText>
+    <SprkHelperText id="huge-radio-helper-text">
       Optional helper text, used to clarify the field&#x27;s intent.
     </SprkHelperText>
   </SprkRadioGroup>
@@ -185,13 +209,25 @@ export const hugeInvalid = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem name="radio" variant="huge">
+      <SprkRadioItem
+        name="radio"
+        variant="huge"
+        ariaDescribedBy="invalid-huge-radio"
+      >
         Radio Item 1
       </SprkRadioItem>
-      <SprkRadioItem name="radio" variant="huge">
+      <SprkRadioItem
+        name="radio"
+        variant="huge"
+        ariaDescribedBy="invalid-huge-radio"
+      >
         Radio Item 2
       </SprkRadioItem>
-      <SprkRadioItem name="radio" variant="huge">
+      <SprkRadioItem
+        name="radio"
+        variant="huge"
+        ariaDescribedBy="invalid-huge-radio"
+      >
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
