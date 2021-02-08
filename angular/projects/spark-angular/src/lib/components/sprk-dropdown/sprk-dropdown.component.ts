@@ -115,8 +115,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           <li
             class="sprk-c-Dropdown__item"
             *ngFor="let choice of choices; let i = index"
-            [attr.data-sprk-dropdown-choice-index]="i"
-            (click)="choiceClick($event)"
+            (click)="choiceClick(i)"
             [attr.aria-selected]="choice.active"
             role="option"
           >
@@ -397,13 +396,9 @@ export class SprkDropdownComponent implements OnChanges {
   /**
    * @ignore
    */
-  choiceClick(event) {
+  choiceClick(i) {
     this.clearActiveChoices();
-    const choiceIndex = event.currentTarget.getAttribute(
-      'data-sprk-dropdown-choice-index',
-    );
-    const clickedChoice = this.choices[choiceIndex];
-
+    const clickedChoice = this.choices[i];
     // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
     if (
       this.returnSecondIfBoth(this.dropdownType, this.variant) ===
@@ -411,8 +406,8 @@ export class SprkDropdownComponent implements OnChanges {
       this.returnSecondIfBoth(this.dropdownType, this.variant) ===
         'mastheadSelector'
     ) {
-      this.setActiveChoice(event);
-      this.updateTriggerText(event);
+      this.setActiveChoice(i);
+      this.updateTriggerText(i);
     }
     this.hideDropdown();
     this.choiceMade.emit(clickedChoice['value']);
@@ -420,20 +415,14 @@ export class SprkDropdownComponent implements OnChanges {
   /**
    * @ignore
    */
-  setActiveChoice(event): void {
-    const choiceIndex = event.currentTarget.getAttribute(
-      'data-sprk-dropdown-choice-index',
-    );
-    this.choices[choiceIndex]['active'] = true;
+  setActiveChoice(i): void {
+    this.choices[i]['active'] = true;
   }
   /**
    * @ignore
    */
-  updateTriggerText(event): void {
-    const choiceIndex = event.currentTarget.getAttribute(
-      'data-sprk-dropdown-choice-index',
-    );
-    this.triggerText = this.choices[choiceIndex]['value'];
+  updateTriggerText(i): void {
+    this.triggerText = this.choices[i]['value'];
   }
 
   /**

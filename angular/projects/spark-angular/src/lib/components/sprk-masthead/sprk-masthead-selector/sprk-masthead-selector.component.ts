@@ -8,7 +8,6 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-// TODO: Decouple with dropdown and make its own masthead selector interface
 import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-masthead-selector.interfaces';
 
 @Component({
@@ -83,8 +82,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
           <li
             class="sprk-c-Dropdown__item"
             *ngFor="let choice of choices; let i = index"
-            [attr.data-sprk-dropdown-choice-index]="i"
-            (click)="choiceClick($event)"
+            (click)="choiceClick(i)"
             [attr.aria-selected]="choice.active"
             role="option"
           >
@@ -177,7 +175,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   @Input()
   analyticsString: string;
   /**
-   * If `true`, the Dropdown will be open when rendered.
+   * If `true`, the Masthead Selector will be open when rendered.
    */
   @Input()
   isOpen = false;
@@ -196,7 +194,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   // TODO: Decouple with dropdown and make its own masthead selector interface
   /**
    * Expects an array of
-   * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.interfaces.ts)
+   * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.interfaces.ts)
    *  objects.
    */
   @Input()
@@ -273,35 +271,26 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   /**
    * @ignore
    */
-  choiceClick(event) {
+  choiceClick(i) {
     this.clearActiveChoices();
-    const choiceIndex = event.currentTarget.getAttribute(
-      'data-sprk-dropdown-choice-index',
-    );
-    const clickedChoice = this.choices[choiceIndex];
+    const clickedChoice = this.choices[i];
 
-    this.setActiveChoice(event);
-    this.updateTriggerText(event);
+    this.setActiveChoice(i);
+    this.updateTriggerText(i);
     this.hideDropdown();
     this.choiceMade.emit(clickedChoice['value']);
   }
   /**
    * @ignore
    */
-  setActiveChoice(event): void {
-    const choiceIndex = event.currentTarget.getAttribute(
-      'data-sprk-dropdown-choice-index',
-    );
-    this.choices[choiceIndex]['active'] = true;
+  setActiveChoice(i): void {
+    this.choices[i]['active'] = true;
   }
   /**
    * @ignore
    */
-  updateTriggerText(event): void {
-    const choiceIndex = event.currentTarget.getAttribute(
-      'data-sprk-dropdown-choice-index',
-    );
-    this.triggerText = this.choices[choiceIndex]['value'];
+  updateTriggerText(i): void {
+    this.triggerText = this.choices[i]['value'];
   }
 
   /**

@@ -9,6 +9,7 @@ import { SprkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
 import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+import { SprkMastheadSelectorComponent } from './sprk-masthead-selector/sprk-masthead-selector.component';
 
 export default {
   title: 'Components/Masthead',
@@ -22,6 +23,7 @@ export default {
     subcomponents: {
       SprkMastheadAccordionComponent,
       SprkMastheadAccordionItemComponent,
+      SprkMastheadSelectorComponent,
     },
     info: `
 ${markdownDocumentationLinkBuilder('masthead')}

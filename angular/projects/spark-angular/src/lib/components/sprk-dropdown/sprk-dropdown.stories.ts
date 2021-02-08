@@ -26,9 +26,6 @@ element has a popup menu.
 };
 
 const modules = {
-<<<<<<< HEAD
-  imports: [SprkDropdownModule, SprkLinkDirectiveModule],
-=======
   imports: [
     SprkDropdownModule,
     SprkLinkDirectiveModule,
@@ -40,7 +37,6 @@ const modules = {
     ]),
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
->>>>>>> e88cfbfa888c5919c427a16481a8b2a0ecc33c94
 };
 
 export const defaultStory = () => ({
