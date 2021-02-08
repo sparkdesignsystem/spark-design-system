@@ -72,6 +72,16 @@ describe('SprkCheckboxItem:', () => {
     ).toBe(true);
   });
 
+  it(`should not apply visibility-toggle class if it
+  isVisibilityToggle is false`, () => {
+    const wrapper = shallow(<SprkCheckboxItem isVisibilityToggle={false} />);
+    expect(
+      wrapper
+        .find('.sprk-b-SelectionContainer')
+        .hasClass('sprk-b-InputContainer__visibility-toggle'),
+    ).toBe(false);
+  });
+
   it('should render label', () => {
     const wrapper = shallow(<SprkCheckboxItem>Label</SprkCheckboxItem>);
     expect(wrapper.find('label').text()).toEqual('Label');
