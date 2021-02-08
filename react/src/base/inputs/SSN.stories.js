@@ -19,6 +19,8 @@ ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
 (-) which you may need to remove before submitting the form.
 - Requires Additional Engineering:
+  - Show/Hide Functionality - Create a function that toggles
+  the \`type\` attribute of the input between \`text\` and \`password\`.
   - Validation - The \`valid\` prop controls this input’s
   validation state. This boolean is determined by your
   own validation logic. Validation happens before reformatting.

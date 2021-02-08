@@ -14,7 +14,12 @@ export default {
   component: SprkInput,
   parameters: {
     jest: ['SprkInput'],
-    info: `${markdownDocumentationLinkBuilder('input')}`,
+    info: `
+${markdownDocumentationLinkBuilder('input')}
+- Requires Additional Engineering:
+  - Show/Hide Functionality - Create a function that toggles
+  the \`type\` attribute of the input between \`text\` and \`password\`.
+`,
   },
 };
 
