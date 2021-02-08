@@ -36,14 +36,36 @@ describe('SprkInput:', () => {
     ).toBe(2);
   });
 
+  it('should not add error class when isValid is true', () => {
+    const wrapper = mount(<SprkInput isValid />);
+
+    expect(
+      wrapper.find('.sprk-b-TextInput').hasClass('sprk-b-TextInput--error'),
+    ).toBe(false);
+    expect(
+      wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
+    ).toBe(1);
+  });
+
   it('should assign data-analytics when analyticsString has a value', () => {
     const wrapper = mount(<SprkInput analyticsString="321" />);
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
   });
 
+  it(`should not render data-analytics when
+  analyticsString is not present`, () => {
+    const wrapper = mount(<SprkInput />);
+    expect(wrapper.find('[data-analytics]').length).toBe(0);
+  });
+
   it('should assign data-id when idString has a value', () => {
     const wrapper = mount(<SprkInput idString="321" />);
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
+  });
+
+  it('should not render data-id when idString is not present', () => {
+    const wrapper = mount(<SprkInput />);
+    expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
   it('should assign id when id has a value', () => {
@@ -61,6 +83,17 @@ describe('SprkInput:', () => {
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('321');
+  });
+
+  it(`should not render aria-describedby
+  when ariaDescribedBy is not present`, () => {
+    const wrapper = mount(<SprkInput />);
+    expect(
+      wrapper
+        .find('.sprk-b-TextInput')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe(null);
   });
 
   it('should assign default id when id has no value', () => {
