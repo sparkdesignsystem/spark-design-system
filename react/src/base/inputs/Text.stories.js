@@ -15,7 +15,7 @@ export default {
     jest: ['SprkInput'],
     info: `${markdownDocumentationLinkBuilder('input')}
 - Each Spark Input Container should contain one label/input set.
-- The Huge Input element should preceed the label element.
+- The Huge Input element should precede the label element.
     `,
   },
 };
@@ -23,7 +23,7 @@ export default {
 export const textInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="custom">Text Input</SprkLabel>
-    <SprkInput id="custom" />
+    <SprkInput id="custom" type="text" />
   </SprkInputContainer>
 );
 
@@ -38,6 +38,7 @@ export const invalidTextInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="invalid-input">Invalid Input</SprkLabel>
     <SprkInput
+      type="text"
       id="invalid-input"
       isValid={false}
       ariaDescribedBy="invalid-error"
@@ -71,7 +72,7 @@ export const disabledTextInput = () => (
     <SprkLabel htmlFor="disabled-input" isDisabled>
       Disabled Input
     </SprkLabel>
-    <SprkInput id="disabled-input" isDisabled />
+    <SprkInput type="text" id="disabled-input" isDisabled />
   </SprkInputContainer>
 );
 
@@ -84,7 +85,12 @@ disabledTextInput.story = {
 
 export const hugeTextInput = () => (
   <SprkInputContainer variant="huge">
-    <SprkInput id="huge-input" variant="huge" placeholder="Placeholder" />
+    <SprkInput
+      id="huge-input"
+      variant="huge"
+      placeholder="Placeholder"
+      type="text"
+    />
     <SprkLabel htmlFor="huge-input">Huge Input</SprkLabel>
   </SprkInputContainer>
 );
@@ -105,6 +111,7 @@ export const invalidHugeTextInput = () => (
       placeholder="Placeholder"
       isValid={false}
       ariaDescribedBy="invalid-error"
+      type="text"
     />
     <SprkLabel htmlFor="invalid-huge-input">Huge Input</SprkLabel>
     <SprkFieldError id="invalid-error">
@@ -139,6 +146,7 @@ export const disabledHugeTextInput = () => (
       variant="huge"
       placeholder="Placeholder"
       isDisabled
+      type="text"
     />
     <SprkLabel htmlFor="disabled-huge-input">Huge Input</SprkLabel>
   </SprkInputContainer>
