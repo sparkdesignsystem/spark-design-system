@@ -136,9 +136,20 @@ describe('SprkSelect:', () => {
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
   });
 
+  it(`should not render data-analytics when
+  analyticsString is not present`, () => {
+    const wrapper = mount(<SprkSelect choices={choices} />);
+    expect(wrapper.find('[data-analytics]').length).toBe(0);
+  });
+
   it('should assign data-id when idString has a value', () => {
     const wrapper = mount(<SprkSelect choices={choices} idString="321" />);
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
+  });
+
+  it('should not render data-id when idString is not present', () => {
+    const wrapper = mount(<SprkSelect choices={choices} />);
+    expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
   it('should render the select with error styles when isValid is false', () => {
@@ -146,10 +157,23 @@ describe('SprkSelect:', () => {
     expect(wrapper.find('.sprk-b-Select--error').length).toBe(1);
   });
 
+  it(`should not render the select with error
+  styles when isValid is true`, () => {
+    const wrapper = mount(<SprkSelect choices={choices} isValid />);
+    expect(wrapper.find('.sprk-b-Select--error').length).toBe(0);
+  });
+
   it('should make select disabled when isDisabled is set', () => {
     const wrapper = mount(<SprkSelect choices={choices} isDisabled />);
     expect(wrapper.find('select').getDOMNode().hasAttribute('disabled')).toBe(
       true,
+    );
+  });
+
+  it(`should not make select disabled when isDisabled is false`, () => {
+    const wrapper = mount(<SprkSelect choices={choices} isDisabled={false} />);
+    expect(wrapper.find('select').getDOMNode().hasAttribute('disabled')).toBe(
+      false,
     );
   });
 
@@ -169,5 +193,10 @@ describe('SprkSelect:', () => {
     });
     const wrapper = mount(<SprkSelect choices={choices} />);
     expect(wrapper.find('optgroup').length).toBe(1);
+  });
+
+  it('should not render grouped options if not supplied', () => {
+    const wrapper = mount(<SprkSelect choices={choices} />);
+    expect(wrapper.find('optgroup').length).toBe(0);
   });
 });
