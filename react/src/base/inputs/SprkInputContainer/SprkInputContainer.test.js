@@ -23,6 +23,15 @@ describe('SprkInputContainer:', () => {
     ).toBe(true);
   });
 
+  it('should not add huge class if variant is not huge', () => {
+    const wrapper = mount(<SprkInputContainer />);
+    expect(
+      wrapper
+        .find('.sprk-b-InputContainer')
+        .hasClass('sprk-b-InputContainer--huge'),
+    ).toBe(false);
+  });
+
   it('should add classes when additionalClasses has a value', () => {
     const wrapper = mount(
       <SprkInputContainer additionalClasses="sprk-u-man" />,
@@ -35,9 +44,20 @@ describe('SprkInputContainer:', () => {
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
   });
 
+  it(`should not render data-analytics when
+  analyticsString is not present`, () => {
+    const wrapper = mount(<SprkInputContainer />);
+    expect(wrapper.find('[data-analytics]').length).toBe(0);
+  });
+
   it('should assign data-id when idString has a value', () => {
     const wrapper = mount(<SprkInputContainer idString="321" />);
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
+  });
+
+  it('should not render data-id when idString is not present', () => {
+    const wrapper = mount(<SprkInputContainer />);
+    expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
   it('should set for value of label to match input id if mismatching', () => {
