@@ -34,7 +34,7 @@ ${markdownDocumentationLinkBuilder('input')}
 export const SSNInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="ssn-1">Social Security Number</SprkLabel>
-    <SprkInput id="ssn-1" additionalClasses="sprk-u-Width-100" />
+    <SprkInput id="ssn-1" />
   </SprkInputContainer>
 );
 
@@ -48,12 +48,7 @@ SSNInput.story = {
 export const invalidSSNInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="ssn-2">Social Security Number</SprkLabel>
-    <SprkInput
-      id="ssn-2"
-      ariaDescribedBy="invalid-ssn"
-      isValid={false}
-      additionalClasses="sprk-u-Width-100"
-    />
+    <SprkInput id="ssn-2" ariaDescribedBy="invalid-ssn" isValid={false} />
     <SprkFieldError id="invalid-ssn">
       <SprkIcon
         iconName="exclamation-filled"
@@ -83,7 +78,7 @@ export const disabledSSNInput = () => (
     <SprkLabel isDisabled htmlFor="ssn-3">
       Social Security Number
     </SprkLabel>
-    <SprkInput id="ssn-3" isDisabled additionalClasses="sprk-u-Width-100" />
+    <SprkInput id="ssn-3" isDisabled />
   </SprkInputContainer>
 );
 

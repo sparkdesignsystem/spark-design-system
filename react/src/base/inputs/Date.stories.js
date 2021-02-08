@@ -33,11 +33,7 @@ which you may need to remove before submitting the form.
 export const dateInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="date-1">Date</SprkLabel>
-    <SprkInput
-      id="date-1"
-      placeholder="01/01/2021"
-      additionalClasses="sprk-u-Width-100"
-    />
+    <SprkInput id="date-1" placeholder="01/01/2021" />
   </SprkInputContainer>
 );
 
@@ -55,7 +51,6 @@ export const invalidDateInput = () => (
       id="date-2"
       placeholder="01/01/2021"
       isValid={false}
-      additionalClasses="sprk-u-Width-100"
       ariaDescribedBy="invalid-error"
     />
     <SprkFieldError id="invalid-error">
@@ -87,12 +82,7 @@ export const disabledDateInput = () => (
     <SprkLabel htmlFor="date-3" isDisabled>
       Date
     </SprkLabel>
-    <SprkInput
-      id="date-3"
-      placeholder="01/01/2021"
-      isDisabled
-      additionalClasses="sprk-u-Width-100"
-    />
+    <SprkInput id="date-3" placeholder="01/01/2021" isDisabled />
   </SprkInputContainer>
 );
 

@@ -41,8 +41,8 @@ export const monetaryInput = () => (
         Payment
       </SprkLabel>
       <SprkInput
+        additionalClasses="sprk-b-TextInput--has-text-icon"
         id="monetary-1"
-        additionalClasses="sprk-b-TextInput--has-text-icon sprk-u-Width-100"
         placeholder="0.00"
       />
     </div>
@@ -67,9 +67,9 @@ export const invalidMonetaryInput = () => (
         Payment
       </SprkLabel>
       <SprkInput
+        additionalClasses="sprk-b-TextInput--has-text-icon"
         id="monetary-2"
         ariaDescribedBy="invalid-monetary"
-        additionalClasses="sprk-b-TextInput--has-text-icon sprk-u-Width-100"
         placeholder="0.00"
         isValid={false}
       />
@@ -109,8 +109,8 @@ export const disabledMonetaryInput = () => (
         Payment
       </SprkLabel>
       <SprkInput
+        additionalClasses="sprk-b-TextInput--has-text-icon"
         id="monetary-3"
-        additionalClasses="sprk-b-TextInput--has-text-icon sprk-u-Width-100"
         placeholder="0.00"
         isDisabled
       />

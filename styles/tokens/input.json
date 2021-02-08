@@ -192,6 +192,15 @@
       "file": "settings",
       "themable": true
     },
+    "width": {
+      "comment": "The width setting on Inputs.",
+      "value": "100%",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "huge": {
       "focus": {
         "border-width": {
@@ -746,6 +755,15 @@
     }
   },
   "select": {
+    "width": {
+      "comment": "The value for the width property for Selects.",
+      "value": "100%",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "appearance": {
       "comment": "The value for the appearance property for Selects.",
       "value": "none",
@@ -903,6 +921,15 @@
     }
   },
   "textarea": {
+    "width": {
+      "comment": "The width of Textarea.",
+      "value": "100%",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "min-height": {
       "comment": "The minimum height of Textarea.",
       "value": "125px",

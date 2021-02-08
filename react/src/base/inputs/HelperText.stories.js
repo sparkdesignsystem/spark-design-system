@@ -24,11 +24,7 @@ ${markdownDocumentationLinkBuilder('input')}
 export const helperText = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="text-1">Text Input</SprkLabel>
-    <SprkInput
-      id="text-1"
-      additionalClasses="sprk-u-Width-100"
-      ariaDescribedBy="helper-text-1"
-    />
+    <SprkInput id="text-1" ariaDescribedBy="helper-text-1" />
     <SprkHelperText id="helper-text-1">
       Helper Text for the form field.
     </SprkHelperText>
@@ -49,7 +45,6 @@ export const invalidHelperText = () => (
       ariaDescribedBy="helper-text-2 invalid-helper"
       id="text-2"
       isValid={false}
-      additionalClasses="sprk-u-Width-100"
     />
     <SprkHelperText id="helper-text-2">
       Helper Text for the form field.
