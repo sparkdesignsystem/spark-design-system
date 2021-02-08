@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
+import SprkCheckboxItem from './SprkCheckbox/SprkCheckboxItem/SprkCheckboxItem';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
@@ -21,6 +22,7 @@ export const passwordInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="password-1">Password</SprkLabel>
     <SprkInput id="password-1" />
+    <SprkCheckboxItem isVisibilityToggle>Show Password</SprkCheckboxItem>
   </SprkInputContainer>
 );
 
@@ -39,6 +41,7 @@ export const invalidPasswordInput = () => (
       ariaDescribedBy="invalid-password"
       isValid={false}
     />
+    <SprkCheckboxItem isVisibilityToggle>Show Password</SprkCheckboxItem>
     <SprkFieldError id="invalid-password">
       <SprkIcon
         iconName="exclamation-filled"
@@ -69,6 +72,9 @@ export const disabledPasswordInput = () => (
       Password
     </SprkLabel>
     <SprkInput id="password-3" isDisabled />
+    <SprkCheckboxItem isVisibilityToggle isDisabled>
+      Show Password
+    </SprkCheckboxItem>
   </SprkInputContainer>
 );
 
