@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import SprkInputLabel from '../SprkInputLabel/SprkInputLabel';
 
 /**
- * TODO: Remove this component as part of Issue 3769.
+ * TODO: Remove this component as part of Issue #3769.
  */
 
 const SprkLabelLocationCheck = ({
