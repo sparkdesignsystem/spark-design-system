@@ -7,7 +7,7 @@ import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck/SprkLab
 import SprkIcon from '../../../components/icons/SprkIcon';
 
 /**
- * TODO: Remove this component as part of Issue 3783.
+ * TODO: Remove this component as part of Issue #3783.
  */
 class SprkSelectionInput extends React.Component {
   constructor(props) {

@@ -4,7 +4,7 @@ import uniqueId from 'lodash/uniqueId';
 import SprkTextInput from '../SprkTextInput/SprkTextInput';
 
 /**
- * TODO: Remove this component as part of Issue 3780.
+ * TODO: Remove this component as part of Issue #3780.
  */
 class SprkRevealInput extends Component {
   constructor(props) {

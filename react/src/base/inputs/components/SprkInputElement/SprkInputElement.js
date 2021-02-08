@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import propTypes from 'prop-types';
 
 /**
- * TODO: Remove this component as part of Issue 3775.
+ * TODO: Remove this component as part of Issue #3775.
  */
 class SprkInputElement extends Component {
   constructor(props) {

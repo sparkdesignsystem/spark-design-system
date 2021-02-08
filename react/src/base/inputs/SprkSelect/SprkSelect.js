@@ -177,7 +177,7 @@ SprkSelect.propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Determines what type of input is rendered.
+   * Determines what variant of input is rendered.
    */
   variant: PropTypes.oneOf(['huge']),
   /**

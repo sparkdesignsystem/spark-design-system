@@ -38,7 +38,7 @@ describe('SprkTextarea:', () => {
     ).toBe('true');
   });
 
-  it('should not set aria-invalid attr to true when isValid is true', () => {
+  it('should not set aria-invalid attr to false when isValid is true', () => {
     const wrapper = mount(<SprkTextarea isValid />);
     expect(
       wrapper.find('textarea').getDOMNode().getAttribute('aria-invalid'),

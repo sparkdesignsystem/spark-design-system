@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import SprkIcon from '../../../../components/icons/SprkIcon';
 
 /**
- * TODO: Remove this component as part of Issue 3786.
+ * TODO: Remove this component as part of Issue #3786.
  */
 
 const SprkInputIconCheck = ({
