@@ -5,7 +5,6 @@ import { By } from '@angular/platform-browser';
 import { SprkIconComponent } from '../../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../../directives/sprk-link/sprk-link.directive';
 import { SprkMastheadSelectorComponent } from './sprk-masthead-selector.component';
-// TODO: Decouple with dropdown and make its own masthead selector interface
 import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector.interfaces';
 
 @Component({
