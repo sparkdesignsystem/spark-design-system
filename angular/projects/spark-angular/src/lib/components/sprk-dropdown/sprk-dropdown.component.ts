@@ -21,12 +21,16 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
     <div
       [ngClass]="{
         'sprk-c-MastheadMask':
-          isOpen && this.getVariant() === 'mastheadSelector'
+          isOpen &&
+          this.returnSecondIfBoth(this.dropdownType, this.variant) ===
+            'mastheadSelector'
       }"
     >
       <div
         [ngClass]="{
-          'sprk-o-Box': this.getVariant() === 'mastheadSelector'
+          'sprk-o-Box':
+            this.returnSecondIfBoth(this.dropdownType, this.variant) ===
+            'mastheadSelector'
         }"
       >
         <a
@@ -45,7 +49,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
-            [iconType]="returnSecondIfBoth(triggerIconType, triggerIconName)"
+            [iconName]="returnSecondIfBoth(triggerIconType, triggerIconName)"
             additionalClasses="sprk-u-mls {{
               returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
             }}"
@@ -57,7 +61,8 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <div
           class="sprk-c-Dropdown__header"
           *ngIf="
-            this.getVariant() === 'mastheadSelector' ||
+            this.returnSecondIfBoth(this.dropdownType, this.variant) ===
+              'mastheadSelector' ||
             returnSecondIfBoth(title, heading) ||
             selector
           "
@@ -83,7 +88,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
               >{{ selector }}</span
             >
             <sprk-icon
-              [iconType]="returnSecondIfBoth(triggerIconType, triggerIconName)"
+              [iconName]="returnSecondIfBoth(triggerIconType, triggerIconName)"
               additionalClasses="
                 sprk-c-Icon--filled-current-color
                 sprk-c-Icon--stroke-current-color
@@ -194,10 +199,10 @@ export class SprkDropdownComponent implements OnChanges {
    * Determines the type of Dropdown to render.
    */
   @Input()
-  variant = 'default';
+  variant: string;
   // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
   /**
-   * Deprecated: Use `variant` input instead.
+   * Deprecated: Use the `variant` input instead.
    * Determines the type of Dropdown to render.
    */
   @Input()
@@ -352,7 +357,10 @@ export class SprkDropdownComponent implements OnChanges {
    */
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.choices) {
-      if (this.getVariant() === 'informational') {
+      if (
+        this.returnSecondIfBoth(this.dropdownType, this.variant) ===
+        'informational'
+      ) {
         this._updateTriggerTextWithDefaultValue();
       }
     }
@@ -398,8 +406,10 @@ export class SprkDropdownComponent implements OnChanges {
 
     // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
     if (
-      this.getVariant() === 'informational' ||
-      this.getVariant() === 'mastheadSelector'
+      this.returnSecondIfBoth(this.dropdownType, this.variant) ===
+        'informational' ||
+      this.returnSecondIfBoth(this.dropdownType, this.variant) ===
+        'mastheadSelector'
     ) {
       this.setActiveChoice(event);
       this.updateTriggerText(event);
@@ -459,26 +469,6 @@ export class SprkDropdownComponent implements OnChanges {
     return;
   }
 
-  // TODO: #3800 Remove `title` input, now replaced with `heading`
-  /**
-   * @ignore
-   */
-  getVariant(): string {
-    // dropdownType and variant both have defaults,
-    // they always exist.
-
-    // config has both dropdownType, and variant
-    if (this.dropdownType !== 'base' && this.variant !== 'default') {
-      return this.variant;
-    }
-
-    // config has dropdownType, no variant
-    if (this.dropdownType !== 'base' && this.variant === 'default') {
-      return this.dropdownType;
-    }
-
-    return this.variant;
-  }
   /**
    * @ignore
    */

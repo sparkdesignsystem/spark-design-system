@@ -213,7 +213,6 @@ describe('SprkDropdownComponent', () => {
   // TODO: #3800 remove dropdownType tests
   it('should set active on click with dropdownType="informational"', () => {
     wrapperComponent.dropdownType = 'informational';
-    wrapperComponent.variant = 'default';
     wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
     fixture.detectChanges();
     dropdownTriggerElement.click();

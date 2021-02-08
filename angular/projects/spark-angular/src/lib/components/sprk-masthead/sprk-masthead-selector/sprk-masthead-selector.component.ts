@@ -9,7 +9,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 // TODO: Decouple with dropdown and make its own masthead selector interface
-import { ISprkDropdownChoice } from '../../sprk-dropdown/sprk-dropdown.interfaces';
+import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-masthead-selector.interfaces';
 
 @Component({
   selector: 'sprk-masthead-selector',
@@ -32,7 +32,7 @@ import { ISprkDropdownChoice } from '../../sprk-dropdown/sprk-dropdown.interface
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
-            [iconType]="triggerIconName"
+            [iconName]="triggerIconName"
             additionalClasses="sprk-Stack__item sprk-u-mhs {{
               iconAdditionalClasses
             }}"
@@ -60,7 +60,7 @@ import { ISprkDropdownChoice } from '../../sprk-dropdown/sprk-dropdown.interface
               >{{ selector }}</span
             >
             <sprk-icon
-              [iconType]="triggerIconName"
+              [iconName]="triggerIconName"
               additionalClasses="
                 sprk-c-Icon--filled-current-color
                 sprk-c-Icon--stroke-current-color
@@ -196,11 +196,11 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   // TODO: Decouple with dropdown and make its own masthead selector interface
   /**
    * Expects an array of
-   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
+   * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.interfaces.ts)
    *  objects.
    */
   @Input()
-  choices: ISprkDropdownChoice[];
+  choices: ISprkMastheadSelectorChoice[];
   /**
    * If supplied, will render the icon
    * to the right of the trigger text.
@@ -308,7 +308,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    * @ignore
    */
   clearActiveChoices(): void {
-    this.choices.forEach((choice: ISprkDropdownChoice) => {
+    this.choices.forEach((choice: ISprkMastheadSelectorChoice) => {
       choice['active'] = false;
     });
   }
@@ -389,7 +389,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   /**
    * Lookup choice with specified `isDefault: true` field
    */
-  protected _lookupDefaultChoice(): ISprkDropdownChoice | null {
+  protected _lookupDefaultChoice(): ISprkMastheadSelectorChoice | null {
     return this.choices.find((choice) => choice.isDefault) || null;
   }
 }
