@@ -69,11 +69,17 @@ export const defaultHelperText = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-      <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-      <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+      <SprkCheckboxItem ariaDescribedBy="checkbox-helper-text">
+        Checkbox Item 1
+      </SprkCheckboxItem>
+      <SprkCheckboxItem ariaDescribedBy="checkbox-helper-text">
+        Checkbox Item 2
+      </SprkCheckboxItem>
+      <SprkCheckboxItem ariaDescribedBy="checkbox-helper-text">
+        Checkbox Item 3
+      </SprkCheckboxItem>
     </SprkFieldset>
-    <SprkHelperText>
+    <SprkHelperText id="checkbox-helper-text">
       Optional helper text, used to clarify the field&#x27;s intent.
     </SprkHelperText>
   </SprkCheckboxGroup>
@@ -90,9 +96,15 @@ export const invalidCheckbox = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-      <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-      <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+      <SprkCheckboxItem ariaDescribedBy="invalid-checkbox">
+        Checkbox Item 1
+      </SprkCheckboxItem>
+      <SprkCheckboxItem ariaDescribedBy="invalid-checkbox">
+        Checkbox Item 2
+      </SprkCheckboxItem>
+      <SprkCheckboxItem ariaDescribedBy="invalid-checkbox">
+        Checkbox Item 3
+      </SprkCheckboxItem>
     </SprkFieldset>
     <SprkFieldError id="invalid-checkbox">
       <SprkIcon
@@ -163,17 +175,29 @@ export const hugeHelperText = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckboxItem name="checkboxName" variant="huge">
+      <SprkCheckboxItem
+        name="checkboxName"
+        variant="huge"
+        ariaDescribedBy="huge-checkbox-helper-text"
+      >
         Checkbox Item 1
       </SprkCheckboxItem>
-      <SprkCheckboxItem name="checkboxName" variant="huge">
+      <SprkCheckboxItem
+        name="checkboxName"
+        variant="huge"
+        ariaDescribedBy="huge-checkbox-helper-text"
+      >
         Checkbox Item 2
       </SprkCheckboxItem>
-      <SprkCheckboxItem name="checkboxName" variant="huge">
+      <SprkCheckboxItem
+        name="checkboxName"
+        variant="huge"
+        ariaDescribedBy="huge-checkbox-helper-text"
+      >
         Checkbox Item 3
       </SprkCheckboxItem>
     </SprkFieldset>
-    <SprkHelperText>
+    <SprkHelperText id="huge-checkbox-helper-text">
       Optional helper text, used to clarify the field&#x27;s intent
     </SprkHelperText>
   </SprkCheckboxGroup>
@@ -190,13 +214,25 @@ export const hugeInvalid = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkCheckboxItem name="checkboxName" variant="huge">
+      <SprkCheckboxItem
+        name="checkboxName"
+        variant="huge"
+        ariaDescribedBy="invalid-huge-checkbox"
+      >
         Checkbox Item 1
       </SprkCheckboxItem>
-      <SprkCheckboxItem name="checkboxName" variant="huge">
+      <SprkCheckboxItem
+        name="checkboxName"
+        variant="huge"
+        ariaDescribedBy="invalid-huge-checkbox"
+      >
         Checkbox Item 2
       </SprkCheckboxItem>
-      <SprkCheckboxItem name="checkboxName" variant="huge">
+      <SprkCheckboxItem
+        name="checkboxName"
+        variant="huge"
+        ariaDescribedBy="invalid-huge-checkbox"
+      >
         Checkbox Item 3
       </SprkCheckboxItem>
     </SprkFieldset>
