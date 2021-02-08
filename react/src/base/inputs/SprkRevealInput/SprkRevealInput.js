@@ -111,14 +111,9 @@ SprkRevealInput.propTypes = {
 };
 
 SprkRevealInput.defaultProps = {
-  additionalClasses: '',
-  analyticsString: '',
   formatter: (value) => value,
-  helperText: '',
   hiddenLabel: false,
-  idString: '',
   label: 'Text Input Label',
-  leadingIcon: '',
   textIcon: false,
   toggleLabel: 'Show Value',
   valid: true,
