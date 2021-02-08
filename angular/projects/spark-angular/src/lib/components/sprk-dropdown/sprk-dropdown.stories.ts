@@ -3,16 +3,16 @@ import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.mo
 import { SprkDropdownComponent } from './sprk-dropdown.component';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 
 export default {
   title: 'Components/Dropdown',
   component: SprkDropdownComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -29,7 +29,14 @@ const modules = {
   imports: [
     SprkDropdownModule,
     SprkLinkDirectiveModule,
+    RouterModule.forRoot([
+      {
+        path: 'iframe.html',
+        component: SprkDropdownComponent,
+      },
+    ]),
   ],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 };
 
 export const defaultStory = () => ({
@@ -53,14 +60,14 @@ export const defaultStory = () => ({
       ]"
     >
     </sprk-dropdown>
-  `
+  `,
 });
 
 defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['sprk-dropdown.component'],
-  }
+  },
 };
 
 export const informational = () => ({
@@ -107,7 +114,7 @@ export const informational = () => ({
         </a>
       </div>
     </sprk-dropdown>
-  `
+  `,
 });
 
 informational.story = {

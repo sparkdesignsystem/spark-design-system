@@ -39,6 +39,7 @@ class SprkTextInput extends Component {
       type,
       valid,
       value,
+      ariaDescribedBy,
       ...rest
     } = this.props;
     const { id, errorContainerId } = this.state;
@@ -70,7 +71,7 @@ class SprkTextInput extends Component {
               forwardedRef={forwardedRef}
               type={type}
               formatter={formatter}
-              errorContainerId={errorContainerId}
+              errorContainerId={valid ? undefined : errorContainerId}
               hiddenLabel={hiddenLabel}
               valid={valid}
               leadingIcon={leadingIcon}
@@ -78,6 +79,7 @@ class SprkTextInput extends Component {
               value={value}
               iconRight={iconRight}
               disabled={disabled}
+              ariaDescribedBy={ariaDescribedBy}
               {...rest}
             />
           </SprkLabelLocationCheck>
@@ -168,6 +170,11 @@ SprkTextInput.propTypes = {
    * 	If true, will render the component in the disabled state.
    */
   disabled: PropTypes.bool,
+  /**
+   * A space-separated string of valid HTML ids to
+   * add to the aria-describedby attribute on the Input.
+   */
+  ariaDescribedBy: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.string,
 };

@@ -20,6 +20,41 @@ class SprkInputElement extends Component {
         hasValue: false,
       };
     }
+
+    this.calculateAriaDescribedBy = this.calculateAriaDescribedBy.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
+    });
+  }
+
+  componentDidUpdate(prevProps) {
+    const { errorContainerId, ariaDescribedBy } = this.props;
+
+    if (
+      errorContainerId !== prevProps.errorContainerId ||
+      ariaDescribedBy !== prevProps.ariaDescribedBy
+    ) {
+      this.setState({
+        calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
+      });
+    }
+  }
+
+  calculateAriaDescribedBy() {
+    const { errorContainerId, ariaDescribedBy } = this.props;
+
+    if (errorContainerId && ariaDescribedBy) {
+      return `${errorContainerId} ${ariaDescribedBy}`;
+    }
+
+    if (ariaDescribedBy) return ariaDescribedBy;
+
+    if (errorContainerId) return errorContainerId;
+
+    return undefined;
   }
 
   render() {
@@ -39,9 +74,10 @@ class SprkInputElement extends Component {
       hiddenLabel,
       disabled,
       valid,
+      ariaDescribedBy,
       ...rest
     } = this.props;
-    const { hasValue } = this.state;
+    const { hasValue, calculatedAriaDescribedBy } = this.state;
 
     const Element = type === 'textarea' ? 'textarea' : 'input';
 
@@ -76,8 +112,8 @@ class SprkInputElement extends Component {
         data-id={idString}
         data-analytics={analyticsString}
         aria-invalid={!valid}
-        aria-describedby={errorContainerId}
-        value={valid && formatter(value) ? formatter(value) : value}
+        aria-describedby={calculatedAriaDescribedBy}
+        value={valid && formatter ? formatter(value) : value}
         onBlur={(e) => handleOnBlur(e)}
         {...rest}
       >
@@ -94,7 +130,7 @@ SprkInputElement.propTypes = {
    */
   analyticsString: propTypes.string,
   /**
-   * Configured by parent and assigned to the `aria-describedby` attribute.
+   * Configured by parent and included in the `aria-describedby` attribute.
    */
   errorContainerId: propTypes.string,
   /**
@@ -134,6 +170,11 @@ SprkInputElement.propTypes = {
    * component in the valid or the error state.
    */
   valid: propTypes.bool,
+  /**
+   * A space-separated string of valid HTML Ids
+   * to add to the aria-describedby attribute on the Input.
+   */
+  ariaDescribedBy: propTypes.string,
   children: propTypes.node,
   disabled: propTypes.bool,
   hiddenLabel: propTypes.bool,

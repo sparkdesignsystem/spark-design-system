@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
       <a
         sprkLink
         variant="unstyled"
-        *ngIf="isFlag && !mediaRev"
+        *ngIf="isFlag && !mediaRev && !imgRouterLink"
         [ngClass]="getClassesFlag()"
         [attr.href]="imgHref"
         [analyticsString]="flagLinkAnalytics"
@@ -21,8 +21,36 @@ import { Component, Input } from '@angular/core';
       <a
         sprkLink
         variant="unstyled"
-        *ngIf="imgSrc && !mediaRev && !isFlag"
+        *ngIf="isFlag && !mediaRev && imgRouterLink"
+        [ngClass]="getClassesFlag()"
+        [routerLink]="imgRouterLink"
+        [analyticsString]="flagLinkAnalytics"
+      >
+        <img
+          class="sprk-c-Promo__image--flag"
+          alt="{{ imgAlt }}"
+          src="{{ imgSrc }}"
+        />
+      </a>
+      <a
+        sprkLink
+        variant="unstyled"
+        *ngIf="imgSrc && !mediaRev && !isFlag && !imgRouterLink"
         [attr.href]="imgHref"
+        [analyticsString]="imgLinkAnalytics"
+        [ngClass]="getClassesImg()"
+      >
+        <img
+          class="sprk-c-Promo__image"
+          alt="{{ imgAlt }}"
+          src="{{ imgSrc }}"
+        />
+      </a>
+      <a
+        sprkLink
+        variant="unstyled"
+        *ngIf="imgSrc && !mediaRev && !isFlag && imgRouterLink"
+        [routerLink]="imgRouterLink"
         [analyticsString]="imgLinkAnalytics"
         [ngClass]="getClassesImg()"
       >
@@ -51,9 +79,20 @@ import { Component, Input } from '@angular/core';
 
         <div *ngIf="cta === 'button'" class="sprk-o-Stack__item">
           <a
+            *ngIf="!buttonRouterLink"
             sprkLink
             variant="unstyled"
             [attr.href]="buttonHref"
+            [ngClass]="getClassesButton()"
+            [analyticsString]="buttonLinkAnalytics"
+          >
+            {{ ctaText }}
+          </a>
+          <a
+            *ngIf="buttonRouterLink"
+            sprkLink
+            variant="unstyled"
+            [routerLink]="buttonRouterLink"
             [ngClass]="getClassesButton()"
             [analyticsString]="buttonLinkAnalytics"
           >
@@ -64,8 +103,18 @@ import { Component, Input } from '@angular/core';
         <a
           sprkLink
           variant="simple"
-          *ngIf="cta === 'link'"
+          *ngIf="cta === 'link' && !ctaLinkRouterLink"
           [attr.href]="ctaLinkHref"
+          class="sprk-o-Stack__item"
+          [analyticsString]="ctaLinkAnalytics"
+        >
+          {{ ctaText }}
+        </a>
+        <a
+          sprkLink
+          variant="simple"
+          *ngIf="cta === 'link' && ctaLinkRouterLink"
+          [routerLink]="ctaLinkRouterLink"
           class="sprk-o-Stack__item"
           [analyticsString]="ctaLinkAnalytics"
         >
@@ -76,8 +125,22 @@ import { Component, Input } from '@angular/core';
       <a
         sprkLink
         variant="unstyled"
-        *ngIf="isFlag && mediaRev"
+        *ngIf="isFlag && mediaRev && !imgRouterLink"
         [attr.href]="imgHref"
+        [ngClass]="getClassesFlag()"
+        [analyticsString]="flagLinkAnalytics"
+      >
+        <img
+          class="sprk-c-Promo__image--flag"
+          alt="{{ imgAlt }}"
+          src="{{ imgSrc }}"
+        />
+      </a>
+      <a
+        sprkLink
+        variant="unstyled"
+        *ngIf="isFlag && mediaRev && imgRouterLink"
+        [routerLink]="imgRouterLink"
         [ngClass]="getClassesFlag()"
         [analyticsString]="flagLinkAnalytics"
       >
@@ -91,8 +154,22 @@ import { Component, Input } from '@angular/core';
       <a
         sprkLink
         variant="unstyled"
-        *ngIf="imgSrc && mediaRev && !isFlag"
+        *ngIf="imgSrc && mediaRev && !isFlag && !imgRouterLink"
         [attr.href]="imgHref"
+        [analyticsString]="imgLinkAnalytics"
+        [ngClass]="getClassesImg()"
+      >
+        <img
+          class="sprk-c-Promo__image"
+          alt="{{ imgAlt }}"
+          src="{{ imgSrc }}"
+        />
+      </a>
+      <a
+        sprkLink
+        variant="unstyled"
+        *ngIf="imgSrc && mediaRev && !isFlag && imgRouterLink"
+        [routerLink]="imgRouterLink"
         [analyticsString]="imgLinkAnalytics"
         [ngClass]="getClassesImg()"
       >
@@ -135,6 +212,12 @@ export class SprkPromoComponent {
   @Input()
   buttonHref: string;
   /**
+   * This will be the `routerLink` for the button
+   * if `cta` is set to `button`.
+   */
+  @Input()
+  buttonRouterLink: string;
+  /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the
    * call-to-action button if `cta` is set to `button`.
@@ -149,10 +232,15 @@ export class SprkPromoComponent {
   @Input()
   buttonVariant: string;
   /**
-   * This will be the href for the the link if `cta` is set to `link`.
+   * This will be the `href` for the the link if `cta` is set to `link`.
    */
   @Input()
   ctaLinkHref: string;
+  /**
+   * This will be the `routerLink` for the the link if `cta` is set to `link`.
+   */
+  @Input()
+  ctaLinkRouterLink: string;
   /**
    * The value supplied will be assigned to
    * the `data-analytics` attribute on the
@@ -214,6 +302,11 @@ export class SprkPromoComponent {
    */
   @Input()
   imgHref: string;
+  /**
+   * The `routerLink` value for the Promo image.
+   */
+  @Input()
+  imgRouterLink: string;
   /**
    * If `imgSrc` is true and `isFlag` is `false`,
    * the value supplied will be assigned to

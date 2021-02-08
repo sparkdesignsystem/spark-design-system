@@ -28,15 +28,15 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           [analyticsString]="analyticsString"
           aria-haspopup="listbox"
           href="#"
-          [attr.aria-label]="triggerText ? triggerText : (screenReaderText || 'Choose One')"
+          [attr.aria-label]="
+            triggerText ? triggerText : screenReaderText || 'Choose One'
+          "
         >
           <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
             [iconType]="triggerIconType"
-            additionalClasses="sprk-u-mls {{
-              additionalIconClasses
-            }}"
+            additionalClasses="sprk-u-mls {{ additionalIconClasses }}"
           ></sprk-icon>
         </a>
       </div>
@@ -80,7 +80,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <ul
           class="sprk-c-Dropdown__links"
           role="listbox"
-          [attr.aria-label]="title ? title : (screenReaderText || 'My Choices')"
+          [attr.aria-label]="title ? title : screenReaderText || 'My Choices'"
         >
           <li
             class="sprk-c-Dropdown__item"
@@ -93,9 +93,23 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             <div *ngIf="choice.content; then content; else link"></div>
             <ng-template #link>
               <a
+                *ngIf="!choice.routerLink"
                 sprkLink
                 variant="unstyled"
                 [attr.href]="choice.href"
+                [analyticsString]="choice.analyticsString"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
+                [attr.aria-label]="choice.text"
+                >{{ choice.text }}
+              </a>
+              <a
+                *ngIf="choice.routerLink"
+                sprkLink
+                variant="unstyled"
+                [routerLink]="choice.routerLink"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
                   'sprk-c-Dropdown__link': true,
@@ -108,8 +122,25 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             <ng-template #content>
               <a
                 sprkLink
+                *ngIf="!choice.routerLink"
                 variant="unstyled"
                 [attr.href]="choice.href"
+                [analyticsString]="choice.analyticsString"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
+                [attr.aria-label]="choice.content.title"
+              >
+                <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
+                <p>{{ choice.content.infoLine1 }}</p>
+                <p>{{ choice.content.infoLine2 }}</p>
+              </a>
+              <a
+                sprkLink
+                *ngIf="choice.routerLink"
+                variant="unstyled"
+                [routerLink]="choice.routerLink"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
                   'sprk-c-Dropdown__link': true,
@@ -127,7 +158,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <ng-content select="[sprkDropdownFooter]"></ng-content>
       </div>
     </div>
-  `
+  `,
 })
 export class SprkDropdownComponent implements OnChanges {
   /**
@@ -198,7 +229,7 @@ export class SprkDropdownComponent implements OnChanges {
   selector: string;
   /**
    * Expects an array of
-   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/tree/master/src/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
+   * [ISprkDropdownChoice](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-dropdown/sprk-dropdown.interfaces.ts)
    *  objects.
    */
   @Input()
@@ -282,7 +313,7 @@ export class SprkDropdownComponent implements OnChanges {
   choiceClick(event) {
     this.clearActiveChoices();
     const choiceIndex = event.currentTarget.getAttribute(
-      'data-sprk-dropdown-choice-index'
+      'data-sprk-dropdown-choice-index',
     );
     const clickedChoice = this.choices[choiceIndex];
     if (
@@ -300,7 +331,7 @@ export class SprkDropdownComponent implements OnChanges {
    */
   setActiveChoice(event): void {
     const choiceIndex = event.currentTarget.getAttribute(
-      'data-sprk-dropdown-choice-index'
+      'data-sprk-dropdown-choice-index',
     );
     this.choices[choiceIndex]['active'] = true;
   }
@@ -309,7 +340,7 @@ export class SprkDropdownComponent implements OnChanges {
    */
   updateTriggerText(event): void {
     const choiceIndex = event.currentTarget.getAttribute(
-      'data-sprk-dropdown-choice-index'
+      'data-sprk-dropdown-choice-index',
     );
     this.triggerText = this.choices[choiceIndex]['value'];
   }
@@ -337,7 +368,7 @@ export class SprkDropdownComponent implements OnChanges {
     const classArray: string[] = ['sprk-c-Dropdown'];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -352,7 +383,7 @@ export class SprkDropdownComponent implements OnChanges {
     const classArray: string[] = ['sprk-c-Dropdown__trigger'];
 
     if (this.additionalTriggerClasses) {
-      this.additionalTriggerClasses.split(' ').forEach(className => {
+      this.additionalTriggerClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -367,7 +398,7 @@ export class SprkDropdownComponent implements OnChanges {
     const classArray: string[] = [''];
 
     if (this.additionalTriggerTextClasses) {
-      this.additionalTriggerTextClasses.split(' ').forEach(className => {
+      this.additionalTriggerTextClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
