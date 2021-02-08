@@ -4,16 +4,16 @@ import { SprkCardComponent } from './sprk-card.component';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 export default {
   title: 'Components/Card',
   component: SprkCardComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box sprk-o-Box--large">${ storyContent }<div>`
-      )
-    )
+      (storyContent) =>
+        `<div class="sprk-o-Box sprk-o-Box--large">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `${markdownDocumentationLinkBuilder('card')}`,
@@ -26,7 +26,14 @@ const modules = {
     SprkCardModule,
     SprkStackModule,
     SprkStackItemModule,
+    RouterModule.forRoot([
+      {
+        path: 'iframe.html',
+        component: SprkCardComponent,
+      },
+    ]),
   ],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 };
 
 export const defaultStory = () => ({
@@ -44,7 +51,7 @@ export const defaultStory = () => ({
         Base Card Content
       </div>
     </sprk-card>
-  `
+  `,
 });
 
 defaultStory.story = {
@@ -69,7 +76,7 @@ export const standout = () => ({
         sprk-o-Stack
         sprk-o-Stack--medium">Standout Card Content</div>
     </sprk-card>
-  `
+  `,
 });
 
 standout.story = {
@@ -117,7 +124,7 @@ export const highlightedHeader = () => ({
           signiferumque at. Numquam.
         </p>
       </div>
-  </sprk-card>`
+  </sprk-card>`,
 });
 
 highlightedHeader.story = {
@@ -147,7 +154,7 @@ export const teaser = () => ({
       idString="card-teaser"
     >
     </sprk-card>
- `
+ `,
 });
 
 teaser.story = {

@@ -63,7 +63,7 @@ const connectIcons = {
       element: 'a',
     },
     {
-      href: 'https://twitter.com/sparkQL',
+      href: 'https://twitter.com/SparkDesignSys',
       name: 'twitter',
       screenReaderText: 'Spark Twitter',
       element: 'a',
