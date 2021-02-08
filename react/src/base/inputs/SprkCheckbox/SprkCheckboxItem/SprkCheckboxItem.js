@@ -18,6 +18,7 @@ const SprkCheckboxItem = (props) => {
     onChange,
     id,
     ariaDescribedBy,
+    isVisibilityToggle,
     ...rest
   } = props;
   const internalId = uniqueId('sprk-checkbox-');
@@ -30,6 +31,7 @@ const SprkCheckboxItem = (props) => {
         additionalClasses,
         {
           'sprk-b-Checkbox--huge': variant === 'huge',
+          'sprk-b-InputContainer__visibility-toggle': isVisibilityToggle,
         },
       )}
       data-analytics={analyticsString}
@@ -136,6 +138,11 @@ SprkCheckboxItem.propTypes = {
    * Passes in a function that handles the onChange of the input.
    */
   onChange: PropTypes.func,
+  /**
+   * If `true`, the checkbox item will receive styling to make it a
+   * visibility toggle. Use this for "Show Password" checkboxes.
+   */
+  isVisibilityToggle: PropTypes.bool,
 };
 
 export default SprkCheckboxItem;

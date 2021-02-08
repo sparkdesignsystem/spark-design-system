@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkRevealInput from './SprkRevealInput/SprkRevealInput';
+import SprkCheckboxItem from './SprkCheckbox/SprkCheckboxItem/SprkCheckboxItem';
 import SprkInput from './SprkInput/SprkInput';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
@@ -18,6 +19,8 @@ ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
 (-) which you may need to remove before submitting the form.
 - Requires Additional Engineering:
+  - Show/Hide Functionality - Create a function that toggles
+  the \`type\` attribute of the input between \`text\` and \`password\`.
   - Validation - The \`valid\` prop controls this input’s
   validation state. This boolean is determined by your
   own validation logic. Validation happens before reformatting.
@@ -35,6 +38,7 @@ export const SSNInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="ssn-1">Social Security Number</SprkLabel>
     <SprkInput id="ssn-1" />
+    <SprkCheckboxItem isVisibilityToggle>Show SSN</SprkCheckboxItem>
   </SprkInputContainer>
 );
 
@@ -49,6 +53,7 @@ export const invalidSSNInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="ssn-2">Social Security Number</SprkLabel>
     <SprkInput id="ssn-2" ariaDescribedBy="invalid-ssn" isValid={false} />
+    <SprkCheckboxItem isVisibilityToggle>Show SSN</SprkCheckboxItem>
     <SprkFieldError id="invalid-ssn">
       <SprkIcon
         iconName="exclamation-filled"
@@ -79,6 +84,9 @@ export const disabledSSNInput = () => (
       Social Security Number
     </SprkLabel>
     <SprkInput id="ssn-3" isDisabled />
+    <SprkCheckboxItem isVisibilityToggle isDisabled>
+      Show SSN
+    </SprkCheckboxItem>
   </SprkInputContainer>
 );
 
