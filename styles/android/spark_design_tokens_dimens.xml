@@ -68,6 +68,7 @@
   <dimen name="sprk_input_huge_height">64.00dp</dimen><!-- The height value for Huge Inputs. -->
   <dimen name="sprk_text_input_height">48.00dp</dimen><!-- The height setting for Inputs. -->
   <dimen name="sprk_text_input_border_radius">4.00dp</dimen><!-- The border radius setting for Inputs. -->
+  <dimen name="sprk_text_input_width">1600.00dp</dimen><!-- The width setting on Inputs. -->
   <dimen name="sprk_text_input_huge_focus_border_width">2.00dp</dimen><!-- Todo deprecate, The border width for Huge Inputs on focus. -->
   <dimen name="sprk_text_input_huge_active_label_top">10.00dp</dimen><!-- Todo deprecate, The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container. -->
   <dimen name="sprk_text_input_huge_border_width">2.00dp</dimen><!-- Todo deprecate, The border width for Huge Inputs. -->
@@ -83,8 +84,10 @@
   <dimen name="sprk_input_text_icon_offset_y">32.00dp</dimen><!-- The XY offset of text icons inside Inputs. -->
   <dimen name="sprk_error_icon_size">20.00dp</dimen><!-- The Input error icon size. -->
   <dimen name="sprk_select_input_huge_padding_right">45.00dp</dimen><!-- The padding right for Huge Inputs. -->
+  <dimen name="sprk_select_width">1600.00dp</dimen><!-- The value for the width property for Selects. -->
   <dimen name="sprk_select_arrow_offset_y">-31.00dp</dimen><!-- The value for margin-top on the icon in Selects. -->
   <dimen name="sprk_select_arrow_offset_x">19.00dp</dimen><!-- The value for margin-right on the icon in Selects. -->
+  <dimen name="sprk_textarea_width">1600.00dp</dimen><!-- The width of Textarea. -->
   <dimen name="sprk_textarea_min_height">125.00dp</dimen><!-- The minimum height of Textarea. -->
   <dimen name="sprk_textarea_padding">16.00dp</dimen><!-- The padding inside Textarea. -->
   <dimen name="sprk_date_picker_max_width">320.00dp</dimen><!-- The maximum width of the Date Picker popup. -->

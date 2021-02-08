@@ -92,7 +92,7 @@ class SprkInputElement extends Component {
 
     return (
       <Element
-        className={classNames('sprk-u-Width-100', {
+        className={classNames({
           'sprk-b-TextArea': type === 'textarea',
           'sprk-b-TextInput sprk-b-InputContainer__input': type !== 'textarea',
           'sprk-b-TextInput--label-hidden':

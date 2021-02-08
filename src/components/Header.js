@@ -140,7 +140,7 @@ const Header = ({ setContext }) => {
       utilityContents={utilityItems}
       navLink={
         <SprkTextInput
-          additionalClasses="docs-header-search sprk-u-Width-100"
+          additionalClasses="docs-header-search"
           leadingIcon="search"
           hiddenLabel
           name="InlineSearch"

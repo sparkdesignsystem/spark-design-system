@@ -19,6 +19,7 @@
 /// @group display
 /// @name .sprk-u-JavaScript, .sprk-u-HideWhenJs
 
+/* stylelint-disable selector-class-pattern */
 /// Turns off the display of an element so that it has no effect on layout.
 /// @group display
 /// @name .sprk-u-Display--none
@@ -27,7 +28,7 @@
   display: none !important;
 }
 
-// stylelint-enable
+/* stylelint-enable selector-class-pattern */
 /// The element generates a block element box.
 /// @group display
 .sprk-u-Display--block {
@@ -145,6 +146,7 @@
 // Height
 ///
 
+/* stylelint-disable selector-class-pattern */
 /// Changes the height of the element to 100 percent.
 /// @group height
 .sprk-u-Height--100 {
@@ -162,6 +164,11 @@
 }
 
 /* stylelint-enable selector-class-pattern */
+/// Changes the width of the element to `auto`.
+/// @group width
+.sprk-u-Width--auto {
+  width: auto !important;
+}
 
 //
 // Alignment
@@ -511,6 +518,8 @@
 .sprk-u-BackgroundColor--black {
   background-color: $sprk-black !important;
 }
+
+/* stylelint-disable selector-class-pattern */
 /// Sets the background color to black tinted at 90%.
 /// @group color
 .sprk-u-BackgroundColor--black-tint-90 {
@@ -556,6 +565,8 @@
 .sprk-u-BackgroundColor--black-tint-10 {
   background-color: $sprk-black-tint-10 !important;
 }
+
+/* stylelint-enable selector-class-pattern */
 /// Sets the background color to gray.
 /// @group color
 .sprk-u-BackgroundColor--gray {
@@ -581,8 +592,6 @@
 .sprk-u-BackgroundColor--magnolia {
   background-color: $sprk-magnolia !important;
 }
-
-/* stylelint-enable selector-class-pattern */
 
 //
 // Spacing

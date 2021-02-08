@@ -65,7 +65,6 @@ export const defaultStory = () => {
           class="
             sprk-b-TextInput
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="datepicker"
           data-id="datepicker-input"
@@ -124,7 +123,6 @@ export const invalidDatePicker = () => {
             sprk-b-TextInput
             sprk-b-TextInput--error
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="datepicker"
           data-id="datepicker-input"
@@ -193,7 +191,6 @@ export const disabledDatePicker = () => {
           class="
             sprk-b-TextInput
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="datepicker"
           data-id="datepicker-input"

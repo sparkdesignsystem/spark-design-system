@@ -20,11 +20,7 @@ export default {
 export const textarea = () => (
   <>
     <SprkLabel htmlFor="sprk-textarea">Description</SprkLabel>
-    <SprkTextarea
-      name="textarea"
-      id="sprk-textarea"
-      additionalClasses="sprk-u-Width-100"
-    />
+    <SprkTextarea name="textarea" id="sprk-textarea" />
   </>
 );
 
@@ -38,11 +34,7 @@ textarea.story = {
 export const textareaHelperText = () => (
   <>
     <SprkLabel htmlFor="sprk-textarea-helper">Description</SprkLabel>
-    <SprkTextarea
-      name="textarea-helper"
-      id="sprk-textarea-helper"
-      additionalClasses="sprk-u-Width-100"
-    />
+    <SprkTextarea name="textarea-helper" id="sprk-textarea-helper" />
     <SprkHelperText>Helper text for this field.</SprkHelperText>
   </>
 );
@@ -60,7 +52,6 @@ export const invalidTextarea = () => (
     <SprkTextarea
       name="textarea-invalid"
       id="sprk-textarea-invalid"
-      additionalClasses="sprk-u-Width-100"
       isValid={false}
       ariaDescribedBy="invalid-error"
     />
@@ -90,7 +81,6 @@ export const disabledTextarea = () => (
     <SprkTextarea
       id="sprk-textarea-disabled"
       name="textarea-disabled"
-      additionalClasses="sprk-u-Width-100"
       isDisabled
     />
   </>

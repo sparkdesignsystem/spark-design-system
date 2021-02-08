@@ -20,7 +20,7 @@ export default {
 export const passwordInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="password-1">Password</SprkLabel>
-    <SprkInput id="password-1" additionalClasses="sprk-u-Width-100" />
+    <SprkInput id="password-1" />
   </SprkInputContainer>
 );
 
@@ -38,7 +38,6 @@ export const invalidPasswordInput = () => (
       id="password-2"
       ariaDescribedBy="invalid-password"
       isValid={false}
-      additionalClasses="sprk-u-Width-100"
     />
     <SprkFieldError id="invalid-password">
       <SprkIcon
@@ -69,11 +68,7 @@ export const disabledPasswordInput = () => (
     <SprkLabel htmlFor="password-3" isDisabled>
       Password
     </SprkLabel>
-    <SprkInput
-      id="password-3"
-      isDisabled
-      additionalClasses="sprk-u-Width-100"
-    />
+    <SprkInput id="password-3" isDisabled />
   </SprkInputContainer>
 );
 

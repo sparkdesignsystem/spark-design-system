@@ -46,7 +46,6 @@ export const percentageInput = () => `
             sprk-b-TextInput
             sprk-b-InputContainer__input
             sprk-b-InputContainer__input--has-icon-right
-            sprk-u-Width-100
           "
           id="percentage"
           data-id="percentage"
@@ -101,7 +100,6 @@ export const invalidPercentageInput = () => `
             sprk-b-TextInput--error
             sprk-b-InputContainer__input
             sprk-b-InputContainer__input--has-icon-right
-            sprk-u-Width-100
           "
           id="percentage"
           data-id="percentage"
@@ -166,7 +164,6 @@ export const disabledPercentageInput = () => `
             sprk-b-TextInput
             sprk-b-InputContainer__input
             sprk-b-InputContainer__input--has-icon-right
-            sprk-u-Width-100
           "
           id="percentage"
           data-id="percentage"

@@ -24,7 +24,7 @@ export const searchInput = () => (
     </SprkLabel>
     <SprkInput
       id="search-1"
-      additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+      additionalClasses="sprk-b-TextInput--has-svg-icon"
       type="search"
       placeholder="Search"
     />
@@ -46,7 +46,7 @@ export const invalidSearchInput = () => (
     <SprkInput
       id="search-2"
       ariaDescribedBy="invalid-search"
-      additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+      additionalClasses="sprk-b-TextInput--has-svg-icon"
       type="search"
       placeholder="Search"
       isValid={false}
@@ -82,7 +82,7 @@ export const disabledSearchInput = () => (
     </SprkLabel>
     <SprkInput
       id="search-3"
-      additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+      additionalClasses="sprk-b-TextInput--has-svg-icon"
       type="search"
       placeholder="Search"
       isDisabled

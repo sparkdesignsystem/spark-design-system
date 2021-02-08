@@ -48,7 +48,7 @@ export const defaultStory = () => (
       <SprkDatePicker
         id="datepicker-1"
         placeholder="01/01/2021"
-        additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+        additionalClasses="sprk-b-TextInput--has-svg-icon"
       />
     </div>
   </SprkInputContainer>
@@ -75,7 +75,7 @@ export const invalidDatePicker = () => (
         id="datepicker-2"
         isValid={false}
         placeholder="01/01/2021"
-        additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+        additionalClasses="sprk-b-TextInput--has-svg-icon"
         ariaDescribedBy="invalid-date"
       />
     </div>
@@ -119,7 +119,7 @@ export const disabledDatePicker = () => (
         id="datepicker-3"
         isDisabled
         placeholder="01/01/2021"
-        additionalClasses="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+        additionalClasses="sprk-b-TextInput--has-svg-icon"
       />
     </div>
   </SprkInputContainer>
@@ -138,7 +138,6 @@ export const hugeDatePicker = () => (
       id="huge-datepicker-1"
       variant="huge"
       placeholder="01/01/2021"
-      additionalClasses="sprk-u-Width-100"
     />
     <SprkLabel htmlFor="huge-datepicker-1">Date</SprkLabel>
   </SprkInputContainer>
@@ -158,7 +157,6 @@ export const invalidHugeDatePicker = () => (
       variant="huge"
       placeholder="01/01/2021"
       isValid={false}
-      additionalClasses="sprk-u-Width-100"
       ariaDescribedBy="invalid-huge"
     />
     <SprkLabel htmlFor="huge-datepicker-2">Date</SprkLabel>
@@ -193,7 +191,6 @@ export const disabledHugeDatePicker = () => (
       variant="huge"
       placeholder="01/01/2021"
       isDisabled
-      additionalClasses="sprk-u-Width-100"
     />
     <SprkLabel htmlFor="huge-datepicker-3" isDisabled>
       Date
