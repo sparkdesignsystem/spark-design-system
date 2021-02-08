@@ -8,7 +8,7 @@ import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck/SprkLab
 import SprkInputElement from '../components/SprkInputElement/SprkInputElement';
 
 /**
- * TODO: Remove this component as part of Issue 3782.
+ * TODO: Remove this component as part of Issue #3782.
  */
 class SprkTextInput extends Component {
   constructor(props) {
