@@ -187,7 +187,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   heading: string;
   /**
    * This value supplied will be assigned to
-   * the title text when its open.
+   * the title text when it's open.
    */
   @Input()
   selector: string;

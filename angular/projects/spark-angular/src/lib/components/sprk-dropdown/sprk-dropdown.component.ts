@@ -35,9 +35,9 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
         <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
         <sprk-icon
-          [iconName]="returnSecondIfBoth(triggerIconType, triggerIconName)"
+          [iconName]="triggerIconName || triggerIconType"
           additionalClasses="sprk-u-mls {{
-            returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
+            iconAdditionalClasses || additionalIconClasses
           }}"
         ></sprk-icon>
       </a>
@@ -45,13 +45,13 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
       <div [ngClass]="getClasses()" *ngIf="isOpen">
         <div
           class="sprk-c-Dropdown__header"
-          *ngIf="returnSecondIfBoth(title, heading) || selector"
+          *ngIf="heading || selector || title"
         >
           <h2
             class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo"
             *ngIf="title || heading"
           >
-            {{ returnSecondIfBoth(title, heading) }}
+            {{ heading || title }}
           </h2>
 
           <a
@@ -68,16 +68,14 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
               >{{ selector }}</span
             >
             <sprk-icon
-              [iconName]="returnSecondIfBoth(triggerIconType, triggerIconName)"
+              [iconName]="triggerIconName || triggerIconType"
               additionalClasses="
                 sprk-c-Icon--filled-current-color
                 sprk-c-Icon--stroke-current-color
                 sprk-u-mls
                 sprk-c-Icon--toggle
                 sprk-Stack__item
-                {{
-                returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
-              }}
+                {{ iconAdditionalClasses || additionalIconClasses }}
               "
             ></sprk-icon>
           </a>
@@ -87,8 +85,8 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           class="sprk-c-Dropdown__links"
           role="listbox"
           [attr.aria-label]="
-            title || heading
-              ? returnSecondIfBoth(title, heading)
+            heading || title
+              ? heading || title
               : screenReaderText || 'My Choices'
           "
         >
@@ -335,10 +333,7 @@ export class SprkDropdownComponent implements OnChanges {
    */
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.choices) {
-      if (
-        this.returnSecondIfBoth(this.dropdownType, this.variant) ===
-        'informational'
-      ) {
+      if (this.variant || this.dropdownType === 'informational') {
         this._updateTriggerTextWithDefaultValue();
       }
     }
@@ -373,10 +368,7 @@ export class SprkDropdownComponent implements OnChanges {
     this.clearActiveChoices();
     const clickedChoice = this.choices[i];
     // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
-    if (
-      this.returnSecondIfBoth(this.dropdownType, this.variant) ===
-      'informational'
-    ) {
+    if (this.variant || this.dropdownType === 'informational') {
       this.setActiveChoice(i);
       this.updateTriggerText(i);
     }
@@ -412,23 +404,6 @@ export class SprkDropdownComponent implements OnChanges {
     this.isOpen = false;
   }
 
-  // TODO: #3800 Remove `title` input, now replaced with `heading`
-  /**
-   * @ignore
-   */
-  returnSecondIfBoth(a, b): any {
-    if (a && b) {
-      return b;
-    }
-    if (a && !b) {
-      return a;
-    }
-    if (!a && b) {
-      return b;
-    }
-    return;
-  }
-
   /**
    * @ignore
    */
@@ -452,10 +427,8 @@ export class SprkDropdownComponent implements OnChanges {
 
     if (this.additionalTriggerClasses || this.triggerAdditionalClasses) {
       // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
-      const classes = this.returnSecondIfBoth(
-        this.additionalTriggerClasses,
-        this.triggerAdditionalClasses,
-      );
+      const classes =
+        this.triggerAdditionalClasses || this.additionalTriggerClasses;
       classes.split(' ').forEach((className) => {
         classArray.push(className);
       });
@@ -472,13 +445,11 @@ export class SprkDropdownComponent implements OnChanges {
 
     // TODO: #3800 Remove `additionalTriggerTextClasses` input, now replaced with `triggerTextAdditionalClasses`
     if (
-      this.additionalTriggerTextClasses ||
-      this.triggerTextAdditionalClasses
+      this.triggerTextAdditionalClasses ||
+      this.additionalTriggerTextClasses
     ) {
-      const classes = this.returnSecondIfBoth(
-        this.additionalTriggerTextClasses,
-        this.triggerTextAdditionalClasses,
-      );
+      const classes =
+        this.triggerTextAdditionalClasses || this.additionalTriggerTextClasses;
       classes.split(' ').forEach((className) => {
         classArray.push(className);
       });
