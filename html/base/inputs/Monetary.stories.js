@@ -49,6 +49,7 @@ export const monetaryInput = () => `
           id="monetary"
           data-id="monetary-input"
           type="tel"
+          placeholder="0.00"
           aria-describedby="monetary--error-container"
         >
       </div>
@@ -93,6 +94,7 @@ export const invalidMonetaryInput = () => `
           id="monetary"
           data-id="monetary-input"
           type="tel"
+          placeholder="0.00"
           aria-invalid="true"
           aria-describedby="monetary--error-container"
         >
@@ -144,6 +146,7 @@ export const disabledMonetaryInput = () => `
           id="monetary"
           data-id="monetary-input"
           type="tel"
+          placeholder="0.00"
           aria-describedby="monetary--error-container"
           disabled
         >
