@@ -89,9 +89,23 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
             <div *ngIf="choice.content; then content; else link"></div>
             <ng-template #link>
               <a
+                *ngIf="!choice.routerLink"
                 sprkLink
                 variant="unstyled"
                 [attr.href]="choice.href"
+                [analyticsString]="choice.analyticsString"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
+                [attr.aria-label]="choice.text"
+                >{{ choice.text }}
+              </a>
+              <a
+                *ngIf="choice.routerLink"
+                sprkLink
+                variant="unstyled"
+                [routerLink]="choice.routerLink"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
                   'sprk-c-Dropdown__link': true,
@@ -104,6 +118,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
             <ng-template #content>
               <a
                 sprkLink
+                *ngIf="!choice.routerLink"
                 variant="unstyled"
                 [attr.href]="choice.href"
                 [analyticsString]="choice.analyticsString"
@@ -117,9 +132,25 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
                 <p sprkText variant="bodyTwo" *ngIf="choice.content.infoLine1">
                   {{ choice.content.infoLine1 }}
                 </p>
-                <p sprkText variant="bodyFour" *ngIf="choice.content.infoLine2">
+                <p sprkText variant="bodyTwo" *ngIf="choice.content.infoLine2">
                   {{ choice.content.infoLine2 }}
                 </p>
+              </a>
+              <a
+                sprkLink
+                *ngIf="choice.routerLink"
+                variant="unstyled"
+                [routerLink]="choice.routerLink"
+                [analyticsString]="choice.analyticsString"
+                [ngClass]="{
+                  'sprk-c-Dropdown__link': true,
+                  'sprk-c-Dropdown__link--active': choice.active
+                }"
+                [attr.aria-label]="choice.content.title"
+              >
+                <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
+                <p>{{ choice.content.infoLine1 }}</p>
+                <p>{{ choice.content.infoLine2 }}</p>
               </a>
             </ng-template>
           </li>
@@ -191,7 +222,6 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    */
   @Input()
   selector: string;
-  // TODO: Decouple with dropdown and make its own masthead selector interface
   /**
    * Expects an array of
    * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.interfaces.ts)

@@ -13,14 +13,15 @@ export interface ISprkMastheadSelectorChoice {
   text?: string;
   /**
    * The `href` value for the link.
-   * If omitted, the href will
-   * be set to `#` by the `SprkLink`
-   * component.
    */
   href?: string;
   /**
-   * The value is assigned to the
-   * `data-analytics` attribute on the link.
+   * The `routerLink` value for the link.
+   */
+  routerLink?: string;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the link
    * Intended for an outside
    * library to capture data.
    */

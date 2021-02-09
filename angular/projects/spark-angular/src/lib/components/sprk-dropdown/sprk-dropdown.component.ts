@@ -187,7 +187,7 @@ export class SprkDropdownComponent implements OnChanges {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * content that appears when dropdown is open.
+   * content that appears when dropdown is.
    */
   @Input()
   additionalClasses: string;
@@ -311,7 +311,7 @@ export class SprkDropdownComponent implements OnChanges {
    * The value supplied will be visually hidden
    * inside the trigger. Useful
    * for when title is empty,
-   * and only `triggerIconType` is supplied.
+   * and only `triggerIconName` is supplied.
    */
   @Input()
   screenReaderText: string;
