@@ -50,7 +50,7 @@ and <code>SprkLegend</code> to group together all related choices.
 export const defaultStory = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
@@ -68,7 +68,7 @@ defaultStory.story = {
 export const defaultHelperText = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem ariaDescribedBy="checkbox-helper-text">
         Checkbox Item 1
       </SprkCheckboxItem>
@@ -95,7 +95,7 @@ defaultHelperText.story = {
 export const invalidCheckbox = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem ariaDescribedBy="invalid-checkbox">
         Checkbox Item 1
       </SprkCheckboxItem>
@@ -127,7 +127,7 @@ invalidCheckbox.story = {
 export const disabledCheckbox = () => (
   <SprkCheckboxGroup isDisabled>
     <SprkFieldset>
-      <SprkLegend isDisabled>Group Label Name</SprkLegend>
+      <SprkLegend isDisabled>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem name="checkboxName" isDisabled>
         Checkbox Item 1
       </SprkCheckboxItem>
@@ -151,7 +151,7 @@ disabledCheckbox.story = {
 export const huge = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 1
       </SprkCheckboxItem>
@@ -174,7 +174,7 @@ huge.story = {
 export const hugeHelperText = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem
         name="checkboxName"
         variant="huge"
@@ -213,7 +213,7 @@ hugeHelperText.story = {
 export const hugeInvalid = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem
         name="checkboxName"
         variant="huge"
@@ -257,7 +257,7 @@ hugeInvalid.story = {
 export const hugeDisabled = () => (
   <SprkCheckboxGroup variant="huge" isDisabled>
     <SprkFieldset>
-      <SprkLegend isDisabled>Group Label Name</SprkLegend>
+      <SprkLegend isDisabled>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem name="checkboxName" variant="huge" isDisabled>
         Checkbox Item 1
       </SprkCheckboxItem>
@@ -281,7 +281,7 @@ hugeDisabled.story = {
 export const hugeLayoutTwo = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -312,7 +312,7 @@ hugeLayoutTwo.story = {
 export const hugeLayoutFour = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -356,7 +356,7 @@ hugeLayoutFour.story = {
 export const hugeLayoutFive = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -414,7 +414,7 @@ hugeLayoutFive.story = {
 export const hugeLayoutSix = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">

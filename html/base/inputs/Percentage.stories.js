@@ -27,7 +27,7 @@ export const percentageInput = () => `
           for="percentage"
           class="sprk-b-Label"
         >
-          Interest Rate
+          Percentage
         </label>
 
         <svg
@@ -80,7 +80,7 @@ export const invalidPercentageInput = () => `
           for="percentage"
           class="sprk-b-Label"
         >
-          Interest Rate
+          Percentage
         </label>
 
         <svg
@@ -145,7 +145,7 @@ export const disabledPercentageInput = () => `
           for="percentage"
           class="sprk-b-Label sprk-b-Label--disabled"
         >
-          Interest Rate
+          Percentage
         </label>
 
         <svg

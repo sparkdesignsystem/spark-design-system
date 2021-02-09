@@ -78,6 +78,7 @@ export const monetaryInput = () => ({
           class="sprk-b-TextInput--has-text-icon"
           name="monetary_input"
           type="text"
+          placeholder="0.00"
           [(ngModel)]="monetary_input"
           #monetaryInput="ngModel"
           sprkInput
@@ -113,6 +114,7 @@ export const invalidMonetaryInput = () => ({
           class="sprk-b-TextInput--has-text-icon sprk-b-TextInput--error"
           aria-invalid="true"
           name="monetary_input"
+          placeholder="0.00"
           type="text"
           [(ngModel)]="monetary_input"
           #monetaryInput="ngModel"
@@ -156,6 +158,7 @@ export const disabledMonetaryInput = () => ({
         <input
           class="sprk-b-TextInput--has-text-icon"
           name="monetary_input"
+          placeholder="0.00"
           type="text"
           [(ngModel)]="monetary_input"
           #monetaryInput="ngModel"
@@ -190,6 +193,7 @@ export const legacyStory = () => ({
       <input
         class="sprk-b-TextInput--has-text-icon"
         name="monetary_input"
+        placeholder="0.00"
         type="text"
         [(ngModel)]="monetary_input"
         #monetaryInput="ngModel"
@@ -222,6 +226,7 @@ export const legacyInvalidMonetaryInput = () => ({
       <input
         class="sprk-b-TextInput--has-text-icon sprk-b-TextInput--error"
         aria-invalid="true"
+        placeholder="0.00"
         name="monetary_input"
         type="text"
         [(ngModel)]="monetary_input"
@@ -263,6 +268,7 @@ export const legacyDisabledMonetaryInput = () => ({
       <input
         class="sprk-b-TextInput--has-text-icon"
         name="monetary_input"
+        placeholder="0.00"
         type="text"
         [(ngModel)]="monetary_input"
         #monetaryInput="ngModel"
