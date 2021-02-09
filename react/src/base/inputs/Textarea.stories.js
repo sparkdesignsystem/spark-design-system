@@ -1,6 +1,7 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
 import SprkTextarea from './SprkTextarea/SprkTextarea';
+import SprkTextareaContainer from './SprkTextareaContainer/SprkTextareaContainer';
 import SprkLabel from './SprkLabel/SprkLabel';
 import SprkHelperText from './SprkHelperText/SprkHelperText';
 import SprkFieldError from './SprkFieldError/SprkFieldError';
@@ -18,10 +19,10 @@ export default {
 };
 
 export const textarea = () => (
-  <>
+  <SprkTextareaContainer>
     <SprkLabel htmlFor="sprk-textarea">Description</SprkLabel>
     <SprkTextarea name="textarea" id="sprk-textarea" />
-  </>
+  </SprkTextareaContainer>
 );
 
 textarea.story = {
@@ -32,11 +33,17 @@ textarea.story = {
 };
 
 export const textareaHelperText = () => (
-  <>
+  <SprkTextareaContainer>
     <SprkLabel htmlFor="sprk-textarea-helper">Description</SprkLabel>
-    <SprkTextarea name="textarea-helper" id="sprk-textarea-helper" />
-    <SprkHelperText>Helper text for this field.</SprkHelperText>
-  </>
+    <SprkTextarea
+      name="textarea-helper"
+      id="sprk-textarea-helper"
+      ariaDescribedBy="helper-text"
+    />
+    <SprkHelperText id="helper-text">
+      Helper text for this field.
+    </SprkHelperText>
+  </SprkTextareaContainer>
 );
 
 textareaHelperText.story = {
@@ -47,7 +54,7 @@ textareaHelperText.story = {
 };
 
 export const invalidTextarea = () => (
-  <>
+  <SprkTextareaContainer>
     <SprkLabel htmlFor="sprk-textarea-invalid">Description</SprkLabel>
     <SprkTextarea
       name="textarea-invalid"
@@ -63,7 +70,7 @@ export const invalidTextarea = () => (
       />
       <div className="sprk-b-ErrorText">There is an error on this field.</div>
     </SprkFieldError>
-  </>
+  </SprkTextareaContainer>
 );
 
 invalidTextarea.story = {
@@ -74,7 +81,7 @@ invalidTextarea.story = {
 };
 
 export const disabledTextarea = () => (
-  <>
+  <SprkTextareaContainer>
     <SprkLabel isDisabled htmlFor="sprk-textarea-disabled">
       Description
     </SprkLabel>
@@ -83,7 +90,7 @@ export const disabledTextarea = () => (
       name="textarea-disabled"
       isDisabled
     />
-  </>
+  </SprkTextareaContainer>
 );
 
 disabledTextarea.story = {
