@@ -21,12 +21,28 @@ describe('SprkLabel:', () => {
     expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(2);
   });
 
+  it(`should not render an element with the ScreenReaderText
+  class when isHidden is false`, () => {
+    const wrapper = mount(<SprkLabel isHidden={false}>Label</SprkLabel>);
+
+    expect(wrapper.find('.sprk-u-ScreenReaderText').length).toBe(0);
+    expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(1);
+  });
+
   it(`should render an element with the disabled
   class when isDisabled is true`, () => {
     const wrapper = mount(<SprkLabel isDisabled>Label</SprkLabel>);
 
     expect(wrapper.find('.sprk-b-Label--disabled').length).toBe(1);
     expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(2);
+  });
+
+  it(`should not render an element with the disabled
+  class when isDisabled is false`, () => {
+    const wrapper = mount(<SprkLabel isDisabled={false}>Label</SprkLabel>);
+
+    expect(wrapper.find('.sprk-b-Label--disabled').length).toBe(0);
+    expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(1);
   });
 
   it(`should render an element with the with-icon
@@ -37,12 +53,28 @@ describe('SprkLabel:', () => {
     expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(2);
   });
 
+  it(`should not render an element with the with-icon
+  class when hasIcon is false`, () => {
+    const wrapper = mount(<SprkLabel hasIcon={false}>Label</SprkLabel>);
+
+    expect(wrapper.find('.sprk-b-Label--with-icon').length).toBe(0);
+    expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(1);
+  });
+
   it(`should render an element with the monetary
   class when isMonetary is true`, () => {
     const wrapper = mount(<SprkLabel isMonetary>Label</SprkLabel>);
 
     expect(wrapper.find('.sprk-b-Label--monetary').length).toBe(1);
     expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(2);
+  });
+
+  it(`should not render an element with the monetary
+  class when isMonetary is false`, () => {
+    const wrapper = mount(<SprkLabel isMonetary={false}>Label</SprkLabel>);
+
+    expect(wrapper.find('.sprk-b-Label--monetary').length).toBe(0);
+    expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(1);
   });
 
   it('should add classes when additionalClasses has a value', () => {
@@ -59,9 +91,20 @@ describe('SprkLabel:', () => {
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
   });
 
+  it(`should not render data-analytics when
+  analyticsString is not present`, () => {
+    const wrapper = mount(<SprkLabel>Label</SprkLabel>);
+    expect(wrapper.find('[data-analytics]').length).toBe(0);
+  });
+
   it('should assign data-id when idString has a value', () => {
     const wrapper = mount(<SprkLabel idString="321">Label</SprkLabel>);
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
+  });
+
+  it('should not render data-id when idString is not present', () => {
+    const wrapper = mount(<SprkLabel>Label</SprkLabel>);
+    expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
   it('should assign for attribute when htmlFor has a value', () => {

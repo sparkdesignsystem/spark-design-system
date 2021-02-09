@@ -67,7 +67,7 @@ export const phoneInput = () => ({
       <label sprkLabel>Phone Number</label>
       <input
         name="phone_input"
-        type="text"
+        type="tel"
         placeholder="(000) 000-0000"
         [(ngModel)]="phone_input"
         #phoneInput="ngModel"
@@ -97,7 +97,7 @@ export const invalidPhoneInput = () => ({
         class="sprk-b-TextInput--error"
         aria-invalid="true"
         name="phone_input"
-        type="text"
+        type="tel"
         placeholder="(000) 000-0000"
         [(ngModel)]="phone_input"
         #phoneInput="ngModel"
@@ -133,7 +133,7 @@ export const disabledPhoneInput = () => ({
       <label isDisabled="true" sprkLabel>Phone Number</label>
       <input
         name="phone_input"
-        type="text"
+        type="tel"
         placeholder="(000) 000-0000"
         [(ngModel)]="phone_input"
         #phoneInput="ngModel"

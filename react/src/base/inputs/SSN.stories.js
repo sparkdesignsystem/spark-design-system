@@ -37,7 +37,7 @@ ${markdownDocumentationLinkBuilder('input')}
 export const SSNInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="ssn-1">Social Security Number</SprkLabel>
-    <SprkInput id="ssn-1" />
+    <SprkInput id="ssn-1" type="password" />
     <SprkCheckboxItem isVisibilityToggle>Show SSN</SprkCheckboxItem>
   </SprkInputContainer>
 );
@@ -52,7 +52,12 @@ SSNInput.story = {
 export const invalidSSNInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="ssn-2">Social Security Number</SprkLabel>
-    <SprkInput id="ssn-2" ariaDescribedBy="invalid-ssn" isValid={false} />
+    <SprkInput
+      id="ssn-2"
+      ariaDescribedBy="invalid-ssn"
+      isValid={false}
+      type="password"
+    />
     <SprkCheckboxItem isVisibilityToggle>Show SSN</SprkCheckboxItem>
     <SprkFieldError id="invalid-ssn">
       <SprkIcon
@@ -83,7 +88,7 @@ export const disabledSSNInput = () => (
     <SprkLabel isDisabled htmlFor="ssn-3">
       Social Security Number
     </SprkLabel>
-    <SprkInput id="ssn-3" isDisabled />
+    <SprkInput id="ssn-3" isDisabled type="password" />
     <SprkCheckboxItem isVisibilityToggle isDisabled>
       Show SSN
     </SprkCheckboxItem>

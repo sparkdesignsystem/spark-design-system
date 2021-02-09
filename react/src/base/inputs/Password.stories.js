@@ -26,7 +26,7 @@ ${markdownDocumentationLinkBuilder('input')}
 export const passwordInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="password-1">Password</SprkLabel>
-    <SprkInput id="password-1" />
+    <SprkInput id="password-1" type="password" />
     <SprkCheckboxItem isVisibilityToggle>Show Password</SprkCheckboxItem>
   </SprkInputContainer>
 );
@@ -43,6 +43,7 @@ export const invalidPasswordInput = () => (
     <SprkLabel htmlFor="password-2">Password</SprkLabel>
     <SprkInput
       id="password-2"
+      type="password"
       ariaDescribedBy="invalid-password"
       isValid={false}
     />
@@ -76,7 +77,7 @@ export const disabledPasswordInput = () => (
     <SprkLabel htmlFor="password-3" isDisabled>
       Password
     </SprkLabel>
-    <SprkInput id="password-3" isDisabled />
+    <SprkInput id="password-3" type="password" isDisabled />
     <SprkCheckboxItem isVisibilityToggle isDisabled>
       Show Password
     </SprkCheckboxItem>
