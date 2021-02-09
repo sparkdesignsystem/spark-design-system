@@ -18,54 +18,34 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
 @Component({
   selector: 'sprk-dropdown',
   template: `
-    <div
-      [ngClass]="{
-        'sprk-c-MastheadMask':
-          isOpen &&
-          this.returnSecondIfBoth(this.dropdownType, this.variant) ===
-            'mastheadSelector'
-      }"
-    >
-      <div
-        [ngClass]="{
-          'sprk-o-Box':
-            this.returnSecondIfBoth(this.dropdownType, this.variant) ===
-            'mastheadSelector'
-        }"
+    <div>
+      <a
+        sprkLink
+        variant="plain"
+        [ngClass]="getTriggerClasses()"
+        (click)="toggle($event)"
+        [idString]="idString"
+        [analyticsString]="analyticsString"
+        aria-haspopup="listbox"
+        href="#"
+        [attr.aria-label]="
+          triggerText ? triggerText : screenReaderText || 'Choose One'
+        "
       >
-        <a
-          sprkLink
-          variant="plain"
-          [ngClass]="getTriggerClasses()"
-          (click)="toggle($event)"
-          [idString]="idString"
-          [analyticsString]="analyticsString"
-          aria-haspopup="listbox"
-          href="#"
-          [attr.aria-label]="
-            triggerText ? triggerText : screenReaderText || 'Choose One'
-          "
-        >
-          <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
-          <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
-          <sprk-icon
-            [iconName]="returnSecondIfBoth(triggerIconType, triggerIconName)"
-            additionalClasses="sprk-u-mls {{
-              returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
-            }}"
-          ></sprk-icon>
-        </a>
-      </div>
+        <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
+        <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
+        <sprk-icon
+          [iconName]="returnSecondIfBoth(triggerIconType, triggerIconName)"
+          additionalClasses="sprk-u-mls {{
+            returnSecondIfBoth(additionalIconClasses, iconAdditionalClasses)
+          }}"
+        ></sprk-icon>
+      </a>
 
       <div [ngClass]="getClasses()" *ngIf="isOpen">
         <div
           class="sprk-c-Dropdown__header"
-          *ngIf="
-            this.returnSecondIfBoth(this.dropdownType, this.variant) ===
-              'mastheadSelector' ||
-            returnSecondIfBoth(title, heading) ||
-            selector
-          "
+          *ngIf="returnSecondIfBoth(title, heading) || selector"
         >
           <h2
             class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo"
@@ -205,7 +185,7 @@ export class SprkDropdownComponent implements OnChanges {
    * Determines the type of Dropdown to render.
    */
   @Input()
-  dropdownType = 'base';
+  dropdownType;
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -296,8 +276,7 @@ export class SprkDropdownComponent implements OnChanges {
   @Input()
   heading: string;
   /**
-   * Typically found in masthead dropdowns,
-   * this value supplied will be assigned to
+   * The value supplied will be assigned to
    * the title text when its open.
    */
   @Input()
@@ -375,10 +354,7 @@ export class SprkDropdownComponent implements OnChanges {
 
   @HostListener('document:click', ['$event'])
   onClick(event): void {
-    if (
-      !this.ref.nativeElement.contains(event.target) ||
-      event.target.classList.contains('sprk-c-MastheadMask')
-    ) {
+    if (!this.ref.nativeElement.contains(event.target)) {
       this.hideDropdown();
     }
   }
@@ -386,10 +362,7 @@ export class SprkDropdownComponent implements OnChanges {
   @HostListener('document:focusin', ['$event'])
   onFocusin(event): void {
     /* istanbul ignore else: angular focus event isnt setting e.target */
-    if (
-      !this.ref.nativeElement.contains(event.target) ||
-      event.target.classList.contains('sprk-c-MastheadMask')
-    ) {
+    if (!this.ref.nativeElement.contains(event.target)) {
       this.hideDropdown();
     }
   }
@@ -402,9 +375,7 @@ export class SprkDropdownComponent implements OnChanges {
     // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
     if (
       this.returnSecondIfBoth(this.dropdownType, this.variant) ===
-        'informational' ||
-      this.returnSecondIfBoth(this.dropdownType, this.variant) ===
-        'mastheadSelector'
+      'informational'
     ) {
       this.setActiveChoice(i);
       this.updateTriggerText(i);
