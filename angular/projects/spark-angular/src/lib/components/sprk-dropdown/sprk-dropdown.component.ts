@@ -187,7 +187,7 @@ export class SprkDropdownComponent implements OnChanges {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * component.
+   * content that appears when dropdown is open.
    */
   @Input()
   additionalClasses: string;

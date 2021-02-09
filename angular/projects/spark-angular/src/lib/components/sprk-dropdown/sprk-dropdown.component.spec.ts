@@ -95,6 +95,10 @@ describe('SprkDropdownComponent', () => {
     expect(dropdownComponent).toBeTruthy();
   });
 
+  it('should have the correct base classes on dropdown content', () => {
+    expect(dropdownComponent.getClasses()).toEqual('sprk-c-Dropdown');
+  });
+
   it('should add the correct classes if additionalClasses are supplied', () => {
     wrapperComponent.additionalClasses = 'sprk-u-pam sprk-u-man';
 
@@ -167,7 +171,7 @@ describe('SprkDropdownComponent', () => {
     expect(dropdownComponent.choices[0]['active']).toEqual(true);
   });
 
-  it('should set active on click of a choice on a base dropdown if active isnt defined initially', () => {
+  it('should set active on click of a choice on an informational dropdown if active is not defined initially', () => {
     fixture.detectChanges();
     wrapperComponent.variant = 'informational';
     wrapperComponent.choices = [
@@ -291,14 +295,6 @@ describe('SprkDropdownComponent', () => {
     fixture.detectChanges();
     expect(dropdownComponent.choices[0]['active']).toEqual(false);
     expect(listLink.getAttribute('href')).toEqual('/router-test');
-  });
-
-  it('should set a value if additionalTriggerClasses has a value', () => {
-    wrapperComponent.additionalTriggerClasses = 'sprk-u-man';
-    fixture.detectChanges();
-    expect(dropdownTriggerElement.classList.contains('sprk-u-man')).toEqual(
-      true,
-    );
   });
 
   it('should set a value if triggerAdditionalClasses has a value', () => {
