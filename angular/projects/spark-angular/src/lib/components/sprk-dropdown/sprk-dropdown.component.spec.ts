@@ -287,13 +287,9 @@ describe('SprkDropdownComponent', () => {
     dropdownTriggerElement.click();
     fixture.detectChanges();
     expect(dropdownComponent.isOpen).toEqual(true);
-    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
     const listLink = fixture.nativeElement.querySelector(
       '.sprk-c-Dropdown__link',
     );
-    listElement.dispatchEvent(new Event('click'));
-    fixture.detectChanges();
-    expect(dropdownComponent.choices[0]['active']).toEqual(false);
     expect(listLink.getAttribute('href')).toEqual('/router-test');
   });
 

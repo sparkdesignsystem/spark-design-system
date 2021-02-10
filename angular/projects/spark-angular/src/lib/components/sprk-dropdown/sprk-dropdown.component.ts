@@ -333,7 +333,11 @@ export class SprkDropdownComponent implements OnChanges {
    */
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.choices) {
-      if (this.variant || this.dropdownType === 'informational') {
+      // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
+      if (
+        this.variant === 'informational' ||
+        this.dropdownType === 'informational'
+      ) {
         this._updateTriggerTextWithDefaultValue();
       }
     }
@@ -368,7 +372,10 @@ export class SprkDropdownComponent implements OnChanges {
     this.clearActiveChoices();
     const clickedChoice = this.choices[i];
     // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
-    if (this.variant || this.dropdownType === 'informational') {
+    if (
+      this.variant === 'informational' ||
+      this.dropdownType === 'informational'
+    ) {
       this.setActiveChoice(i);
       this.updateTriggerText(i);
     }
