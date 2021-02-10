@@ -301,6 +301,14 @@ describe('SprkDropdownComponent', () => {
     );
   });
 
+  it('should set a value if additionalTriggerClasses has a value', () => {
+    wrapperComponent.additionalTriggerClasses = 'sprk-u-man';
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.classList.contains('sprk-u-man')).toEqual(
+      true,
+    );
+  });
+
   // TODO: #3800 Remove `additionalTriggerClasses` tests
   it('should prefer triggerAdditionalClasses over additionalTriggerClasses', () => {
     wrapperComponent.additionalTriggerClasses = 'oldClass';
