@@ -42,6 +42,17 @@ describe('SprkFieldError:', () => {
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
   });
 
+  it(`should not render data-analytics when
+  analyticsString is not present`, () => {
+    const wrapper = mount(
+      <SprkFieldError>
+        <div className="sprk-b-ErrorText">There is an error on this field.</div>
+      </SprkFieldError>,
+    );
+
+    expect(wrapper.find('[data-analytics]').length).toBe(0);
+  });
+
   it('should assign data-id when idString has a value', () => {
     const wrapper = mount(
       <SprkFieldError idString="321">
@@ -50,6 +61,16 @@ describe('SprkFieldError:', () => {
     );
 
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
+  });
+
+  it('should not render data-id when idString is not present', () => {
+    const wrapper = mount(
+      <SprkFieldError>
+        <div className="sprk-b-ErrorText">There is an error on this field.</div>
+      </SprkFieldError>,
+    );
+
+    expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
   it('should assign id attribute when id has a value', () => {
