@@ -30,7 +30,7 @@ const SprkRadioGroup = (props) => {
 
     if (element.type.name === 'SprkHelperText') {
       hasHelperText = true;
-      helperId = element.props.id || uniqueId('sprk-helper-text-');
+      helperId = element.props.id;
       return React.cloneElement(element, { id: helperId });
     }
 

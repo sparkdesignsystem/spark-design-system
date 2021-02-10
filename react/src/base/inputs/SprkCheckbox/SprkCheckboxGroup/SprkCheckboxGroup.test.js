@@ -4,7 +4,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import SprkCheckboxGroup from './SprkCheckboxGroup';
 import SprkCheckboxItem from '../SprkCheckboxItem/SprkCheckboxItem';
 import SprkFieldset from '../../SprkFieldset/SprkFieldset';
-import SprkHelperText from '../../SprkHelperText/SprkHelperText';
 import SprkErrorContainer from '../../SprkErrorContainer/SprkErrorContainer';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -102,34 +101,6 @@ describe('SprkCheckboxGroup:', () => {
     );
     wrapper.find('SprkCheckboxItem').forEach((item) => {
       expect(item.prop('ariaDescribedBy')).toContain('sprk-error-container-');
-    });
-  });
-
-  it(`should assign an id to SprkHelperText if it doesn't
-   already have one`, () => {
-    const wrapper = mount(
-      <SprkCheckboxGroup>
-        <SprkHelperText>Helper Text</SprkHelperText>
-      </SprkCheckboxGroup>,
-    );
-    expect(wrapper.find(SprkHelperText).prop('id')).toContain(
-      'sprk-helper-text',
-    );
-  });
-
-  it(`when no id is given to SprkHelperText, it should generate one and
-  put it on the SprkHelperText and on any SprkRadioItems`, () => {
-    const wrapper = mount(
-      <SprkCheckboxGroup>
-        <SprkCheckboxItem />
-        <SprkCheckboxItem />
-        <SprkCheckboxItem />
-        <SprkCheckboxItem />
-        <SprkHelperText>Helper Text</SprkHelperText>
-      </SprkCheckboxGroup>,
-    );
-    wrapper.find(SprkCheckboxItem).forEach((item) => {
-      expect(item.prop('ariaDescribedBy')).toContain('sprk-helper-text');
     });
   });
 

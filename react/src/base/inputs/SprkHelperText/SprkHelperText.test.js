@@ -1,30 +1,88 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkHelperText from './SprkHelperText';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkHelperText:', () => {
-  it('should apply additional classes', () => {
-    const expected = 'test-class';
-    const wrapper = shallow(<SprkHelperText additionalClasses={expected} />);
-    expect(wrapper.find('.sprk-b-HelperText').hasClass(expected)).toBe(true);
+  it('should render an element with the correct class', () => {
+    const wrapper = mount(
+      <SprkHelperText>Helper Text for the form field.</SprkHelperText>,
+    );
+
+    expect(wrapper.find('.sprk-b-HelperText').length).toBe(1);
+    expect(
+      wrapper.find('.sprk-b-HelperText').getDOMNode().classList.length,
+    ).toBe(1);
   });
 
-  it('should apply analyticsString', () => {
-    const expected = 'testAnalytics';
-    const wrapper = shallow(<SprkHelperText analyticsString={expected} />);
-    expect(wrapper.find('.sprk-b-HelperText').prop('data-analytics')).toEqual(
-      expected,
+  it('should add classes when additionalClasses has a value', () => {
+    const wrapper = mount(
+      <SprkHelperText additionalClasses="sprk-u-man">
+        Helper Text for the form field.
+      </SprkHelperText>,
     );
+    expect(wrapper.find('.sprk-b-HelperText.sprk-u-man').length).toBe(1);
+    expect(
+      wrapper.find('.sprk-b-HelperText').getDOMNode().classList.length,
+    ).toBe(2);
   });
 
-  it('should apply data-id', () => {
-    const expected = 'test-data-id';
-    const wrapper = shallow(<SprkHelperText idString={expected} />);
-    expect(wrapper.find('.sprk-b-HelperText').prop('data-id')).toEqual(
-      expected,
+  it('should assign data-analytics when analyticsString has a value', () => {
+    const wrapper = mount(
+      <SprkHelperText analyticsString="321">
+        Helper Text for the form field.
+      </SprkHelperText>,
     );
+
+    expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
+  });
+
+  it(`should not render data-analytics when
+  analyticsString is not present`, () => {
+    const wrapper = mount(
+      <SprkHelperText>Helper Text for the form field.</SprkHelperText>,
+    );
+
+    expect(wrapper.find('[data-analytics]').length).toBe(0);
+  });
+
+  it('should assign data-id when idString has a value', () => {
+    const wrapper = mount(
+      <SprkHelperText idString="321">
+        Helper Text for the form field.
+      </SprkHelperText>,
+    );
+
+    expect(wrapper.find('[data-id="321"]').length).toBe(1);
+  });
+
+  it('should not render data-id when idString is not present', () => {
+    const wrapper = mount(
+      <SprkHelperText>Helper Text for the form field.</SprkHelperText>,
+    );
+
+    expect(wrapper.find('[data-id]').length).toBe(0);
+  });
+
+  it('should assign id attribute when id has a value', () => {
+    const wrapper = mount(
+      <SprkHelperText id="test-id">
+        Helper Text for the form field.
+      </SprkHelperText>,
+    );
+    expect(
+      wrapper.find('.sprk-b-HelperText').getDOMNode().getAttribute('id'),
+    ).toBe('test-id');
+  });
+
+  it('should assign default id attribute when id has no value', () => {
+    const wrapper = mount(
+      <SprkHelperText>Helper Text for the form field.</SprkHelperText>,
+    );
+    expect(
+      wrapper.find('.sprk-b-HelperText').getDOMNode().getAttribute('id'),
+    ).toContain('sprk-');
   });
 });
