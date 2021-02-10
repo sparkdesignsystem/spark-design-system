@@ -165,6 +165,29 @@ describe('SprkMastheadSelectorComponent', () => {
     expect(listLink.getAttribute('href')).toEqual('/router-test');
   });
 
+  it('should set href value if href is set on choice item', () => {
+    fixture.detectChanges();
+    wrapperComponent.choices = [
+      {
+        text: 'Option 1',
+        value: 'Option 1',
+        href: '/test',
+      },
+      {
+        text: 'Option 2',
+        value: 'Option 2',
+      },
+    ];
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(dropdownComponent.isOpen).toEqual(true);
+    // TODO: #3835 Create separate classes for sprk-masthead-selector
+    const listLink = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown__link',
+    );
+    expect(listLink.getAttribute('href')).toEqual('/test');
+  });
+
   it('should set a value if triggerAdditionalClasses has a value', () => {
     wrapperComponent.triggerAdditionalClasses = 'sprk-u-man';
     fixture.detectChanges();
