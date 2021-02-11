@@ -269,7 +269,6 @@ describe('SprkDropdownComponent', () => {
     expect(isInformational).toEqual(true);
   });
 
-  // TODO: #3800 Remove `additionalTriggerClasses` tests
   it('should set href value if href is set on choice item', () => {
     fixture.detectChanges();
     wrapperComponent.choices = [
