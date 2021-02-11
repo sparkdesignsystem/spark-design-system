@@ -77,9 +77,13 @@ describe('SprkMastheadSelectorComponent', () => {
   });
 
   it('should have the correct base classes on Masthead Selector content', () => {
-    expect(mastheadSelectorComponent.getClasses()).toEqual(
-      'sprk-c-Dropdown sprk-c-Masthead__selector-dropdown',
-    );
+    mastheadSelectorTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelectorAll(
+        '.sprk-c-Dropdown.sprk-c-Masthead__selector-dropdown',
+      ).length,
+    ).toEqual(1);
   });
 
   it('should add data-id when idString has a value', () => {
@@ -186,9 +190,9 @@ describe('SprkMastheadSelectorComponent', () => {
         value: 'Option 2',
       },
     ];
-    dropdownTriggerElement.click();
+    mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
-    expect(dropdownComponent.isOpen).toEqual(true);
+    expect(mastheadSelectorComponent.isOpen).toEqual(true);
     // TODO: #3835 Create separate classes for sprk-masthead-selector
     const listLink = fixture.nativeElement.querySelector(
       '.sprk-c-Dropdown__link',
@@ -354,7 +358,7 @@ describe('SprkMastheadSelectorComponent', () => {
   it('should set dropdown title to selector', () => {
     wrapperComponent.selector = 'test';
     fixture.detectChanges();
-    dropdownTriggerElement.click();
+    mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
 
     expect(
