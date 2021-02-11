@@ -18,36 +18,39 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
         <a
           sprkLink
           variant="plain"
-          [ngClass]="getTriggerClasses()"
+          class="
+            sprk-c-Dropdown__trigger
+            sprk-c-Masthead__selector
+            sprk-b-Link
+            sprk-b-Link--plain
+            sprk-o-Stack
+            sprk-o-Stack--split@xxs
+            sprk-o-Stack--center-column
+          "
           (click)="toggle($event)"
           [idString]="idString"
           [analyticsString]="analyticsString"
           aria-haspopup="listbox"
           href="#"
-          [attr.aria-label]="
-            triggerText ? triggerText : screenReaderText || 'Choose One'
-          "
+          [attr.aria-label]="triggerText || 'Choose One'"
         >
-          <span [ngClass]="getTriggerTextClasses()">{{ triggerText }}</span>
-          <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
+          <span class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs">{{
+            triggerText
+          }}</span>
           <sprk-icon
             [iconName]="triggerIconName"
-            additionalClasses="sprk-Stack__item sprk-u-mhs {{
-              iconAdditionalClasses
-            }}"
+            additionalClasses="sprk-Stack__item sprk-u-mhs"
           ></sprk-icon>
         </a>
       </div>
 
-      <div [ngClass]="getClasses()" *ngIf="isOpen">
-        <div class="sprk-c-Dropdown__header" *ngIf="heading || selector">
-          <h2 class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo" *ngIf="heading">
-            {{ heading }}
-          </h2>
-
+      <div
+        class="sprk-c-Dropdown sprk-c-Masthead__selector-dropdown"
+        *ngIf="isOpen"
+      >
+        <div class="sprk-c-Dropdown__header" *ngIf="selector">
           <a
             sprkLink
-            *ngIf="selector && !heading"
             variant="plain"
             class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
             (click)="toggle($event)"
@@ -66,7 +69,6 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
                 sprk-u-mhs
                 sprk-c-Icon--toggle
                 sprk-Stack__item
-                {{ iconAdditionalClasses }}
               "
             ></sprk-icon>
           </a>
@@ -75,9 +77,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
         <ul
           class="sprk-c-Dropdown__links"
           role="listbox"
-          [attr.aria-label]="
-            heading ? heading : screenReaderText || 'My Choices'
-          "
+          [attr.aria-label]="'My Choices'"
         >
           <li
             class="sprk-c-Dropdown__item"
@@ -162,31 +162,10 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
 })
 export class SprkMastheadSelectorComponent implements OnChanges {
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
+   * This value will be assigned to the masthead selector placeholder text.
    */
   @Input()
-  additionalClasses: string;
-  /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * icon.
-   */
-  @Input()
-  iconAdditionalClasses: string;
-  /**
-   * Expects a space separated string of
-   * classes to be added to the trigger link element.
-   */
-  @Input()
-  triggerAdditionalClasses: string;
-  /**
-   * Expects a space separated string of
-   * classes to be added to the trigger text.
-   */
-  @Input()
-  triggerTextAdditionalClasses: string;
+  selector: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -206,23 +185,6 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   @Input()
   analyticsString: string;
   /**
-   * If `true`, the Masthead Selector will be open when rendered.
-   */
-  @Input()
-  isOpen = false;
-  /**
-   * The heading text displayed in
-   * in the box above the choices.
-   */
-  @Input()
-  heading: string;
-  /**
-   * This value supplied will be assigned to
-   * the title text when it's open.
-   */
-  @Input()
-  selector: string;
-  /**
    * Expects an array of
    * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.interfaces.ts)
    *  objects.
@@ -230,8 +192,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   @Input()
   choices: ISprkMastheadSelectorChoice[];
   /**
-   * If supplied, will render the icon
-   * to the right of the trigger text.
+   * Renders the icon to the right of the trigger text.
    */
   @Input()
   triggerIconName: string;
@@ -241,14 +202,6 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   @Input()
   triggerText: string;
   /**
-   * The value supplied will be visually hidden
-   * inside the trigger. Useful
-   * for when title is empty,
-   * and only `triggerIconType` is supplied.
-   */
-  @Input()
-  screenReaderText: string;
-  /**
    * The event that is
    * emitted from the Dropdown when a choice
    * is clicked. The event contains the value
@@ -256,6 +209,11 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    */
   @Output()
   choiceMade: EventEmitter<string> = new EventEmitter();
+
+  /**
+   * @ignore
+   */
+  isOpen = false;
   /**
    * @ignore
    */
@@ -337,56 +295,6 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    */
   hideDropdown(): void {
     this.isOpen = false;
-  }
-
-  /**
-   * @ignore
-   */
-  getClasses(): string {
-    const classArray: string[] = [
-      'sprk-c-Dropdown sprk-c-Masthead__selector-dropdown',
-    ];
-
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray.join(' ');
-  }
-
-  /**
-   * @ignore
-   */
-  getTriggerClasses(): string {
-    const classArray: string[] = [
-      'sprk-c-Dropdown__trigger sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column',
-    ];
-
-    if (this.triggerAdditionalClasses) {
-      this.triggerAdditionalClasses.split(' ').forEach((className) => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray.join(' ');
-  }
-
-  /**
-   * @ignore
-   */
-  getTriggerTextClasses(): string {
-    const classArray: string[] = [
-      'sprk-o-Stack__item sprk-o-Stack__item--flex@xxs',
-    ];
-    if (this.triggerTextAdditionalClasses) {
-      this.triggerTextAdditionalClasses.split(' ').forEach((className) => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray.join(' ');
   }
 
   /**

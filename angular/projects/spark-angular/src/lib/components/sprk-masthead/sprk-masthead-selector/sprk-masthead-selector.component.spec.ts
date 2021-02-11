@@ -13,14 +13,10 @@ import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector.interfaces
     <sprk-masthead-selector
       [triggerText]="triggerText"
       [choices]="choices"
-      [additionalClasses]="additionalClasses"
-      [idString]="idString"
-      [triggerAdditionalClasses]="triggerAdditionalClasses"
-      [triggerTextAdditionalClasses]="triggerTextAdditionalClasses"
-      [iconAdditionalClasses]="iconAdditionalClasses"
-      [screenReaderText]="screenReaderText"
       [triggerIconName]="triggerIconName"
-      [heading]="heading"
+      [idString]="idString"
+      [analyticsString]="analyticsString"
+      [selector]="selector"
     >
     </sprk-masthead-selector>
   `,
@@ -28,21 +24,16 @@ import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector.interfaces
 class TestWrapperComponent {
   triggerText: string;
   choices: ISprkMastheadSelectorChoice[];
-  additionalClasses: string;
   idString: string;
-  triggerAdditionalClasses: string;
-  triggerTextAdditionalClasses: string;
-  iconAdditionalClasses: string;
   triggerIconName: string;
-  screenReaderText: string;
-  heading: string;
+  analyticsString: string;
+  selector: string;
 }
 
 describe('SprkMastheadSelectorComponent', () => {
   let fixture: ComponentFixture<TestWrapperComponent>;
   let wrapperComponent: TestWrapperComponent;
   let dropdownElement: HTMLElement;
-  let dropdownTriggerTextElement: HTMLElement;
   let dropdownIconElement: HTMLElement;
   let dropdownComponent: SprkMastheadSelectorComponent;
   let dropdownTriggerElement: HTMLElement;
@@ -69,7 +60,6 @@ describe('SprkMastheadSelectorComponent', () => {
     ).componentInstance;
     dropdownTriggerElement = fixture.nativeElement.querySelector('a');
     dropdownIconElement = fixture.nativeElement.querySelector('svg');
-    dropdownTriggerTextElement = fixture.nativeElement.querySelector('span');
     dropdownElement = fixture.nativeElement.querySelector('div');
 
     dropdownComponent = fixture.debugElement.query(
@@ -80,16 +70,6 @@ describe('SprkMastheadSelectorComponent', () => {
 
   it('should create', () => {
     expect(dropdownComponent).toBeTruthy();
-  });
-
-  it('should add the correct classes if additionalClasses are supplied', () => {
-    wrapperComponent.additionalClasses = 'sprk-u-pam sprk-u-man';
-
-    fixture.detectChanges();
-
-    expect(dropdownComponent.getClasses()).toEqual(
-      'sprk-c-Dropdown sprk-c-Masthead__selector-dropdown sprk-u-pam sprk-u-man',
-    );
   });
 
   it('should add data-id when idString has a value', () => {
@@ -103,6 +83,21 @@ describe('SprkMastheadSelectorComponent', () => {
     wrapperComponent.idString = null;
     fixture.detectChanges();
     expect(dropdownTriggerElement.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should add data-analytics when analyticsString has a value', () => {
+    const testString = 'element-id';
+    wrapperComponent.analyticsString = testString;
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.getAttribute('data-analytics')).toEqual(
+      testString,
+    );
+  });
+
+  it('should not add data-analytics when analyticsString has no value', () => {
+    wrapperComponent.analyticsString = null;
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.getAttribute('data-analytics')).toBeNull();
   });
 
   it('should open the dropdown on click', () => {
@@ -188,34 +183,8 @@ describe('SprkMastheadSelectorComponent', () => {
     expect(listLink.getAttribute('href')).toEqual('/test');
   });
 
-  it('should set a value if triggerAdditionalClasses has a value', () => {
-    wrapperComponent.triggerAdditionalClasses = 'sprk-u-man';
-    fixture.detectChanges();
-    expect(dropdownTriggerElement.classList.contains('sprk-u-man')).toEqual(
-      true,
-    );
-  });
-
-  it('should set a value if triggerTextAdditionalClasses has a value', () => {
-    wrapperComponent.triggerTextAdditionalClasses = 'sprk-u-man';
-    fixture.detectChanges();
-    expect(dropdownTriggerTextElement.classList.contains('sprk-u-man')).toEqual(
-      true,
-    );
-  });
-
   it('should apply aria-label when triggerText is provided', () => {
     wrapperComponent.triggerText = 'test';
-    wrapperComponent.screenReaderText = '';
-    fixture.detectChanges();
-    expect(
-      fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
-    ).toEqual('test');
-  });
-
-  it('should apply aria-label when screenReaderText is provided', () => {
-    wrapperComponent.triggerText = '';
-    wrapperComponent.screenReaderText = 'test';
     fixture.detectChanges();
     expect(
       fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
@@ -227,30 +196,6 @@ describe('SprkMastheadSelectorComponent', () => {
     expect(
       fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
     ).toEqual('Choose One');
-  });
-
-  it('should apply an aria-label to listbox when heading provided', () => {
-    fixture.detectChanges();
-    wrapperComponent.heading = 'test';
-    dropdownTriggerElement.click();
-
-    fixture.detectChanges();
-    const listBoxAria = fixture.nativeElement
-      .querySelector('.sprk-c-Dropdown__links')
-      .getAttribute('aria-label');
-    expect(listBoxAria).toEqual('test');
-  });
-
-  it('should apply an aria-label to listbox when screenReaderText is provided', () => {
-    fixture.detectChanges();
-    wrapperComponent.screenReaderText = 'test';
-    dropdownTriggerElement.click();
-
-    fixture.detectChanges();
-    const listBoxAria = fixture.nativeElement
-      .querySelector('.sprk-c-Dropdown__links')
-      .getAttribute('aria-label');
-    expect(listBoxAria).toEqual('test');
   });
 
   it('should apply a default aria-label to listbox when none is provided', () => {
@@ -346,13 +291,6 @@ describe('SprkMastheadSelectorComponent', () => {
     );
   });
 
-  it('should correctly add classes from iconAdditionalClasses', () => {
-    wrapperComponent.iconAdditionalClasses = 'testClass';
-    fixture.detectChanges();
-
-    expect(dropdownIconElement.classList.toString()).toContain('testClass');
-  });
-
   it('should add icon type from triggerIconName', () => {
     wrapperComponent.triggerIconName = 'access';
     fixture.detectChanges();
@@ -396,5 +334,17 @@ describe('SprkMastheadSelectorComponent', () => {
     expect(dropdownComponent.isOpen).toEqual(true);
     paragraphs = fixture.nativeElement.querySelectorAll('p');
     expect(paragraphs.length).toEqual(2);
+  });
+
+  it('should set dropdown title to selector', () => {
+    wrapperComponent.selector = 'test';
+    fixture.detectChanges();
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown__title')
+        .textContent,
+    ).toEqual('test');
   });
 });
