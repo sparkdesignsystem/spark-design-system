@@ -364,4 +364,9 @@ describe('SprkMastheadComponent', () => {
       'https://www.sparkdesignsystem.com',
     );
   });
+
+  it('isElementVisible should return undefined if the element does not exist', () => {
+    const result = component.isElementVisible('foo');
+    expect(result).toEqual(undefined);
+  });
 });

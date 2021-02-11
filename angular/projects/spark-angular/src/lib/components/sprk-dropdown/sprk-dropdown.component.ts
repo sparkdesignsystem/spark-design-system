@@ -187,7 +187,7 @@ export class SprkDropdownComponent implements OnChanges {
   /**
    * Expects a space separated string
    * of classes to be added to the
-   * content that appears when dropdown is.
+   * dropdown list.
    */
   @Input()
   additionalClasses: string;
@@ -258,17 +258,16 @@ export class SprkDropdownComponent implements OnChanges {
    */
   @Input()
   isOpen = false;
-
   // TODO: #3800 Remove `title` input, now replaced with `heading`
   /**
    * Deprecated – use the `heading` input instead.
-   * The heading text displayed in
+   * The heading text displayed
    * in the box above the choices.
    */
   @Input()
   title: string;
   /**
-   * The heading text displayed in
+   * The heading text displayed
    * in the box above the choices.
    */
   @Input()
