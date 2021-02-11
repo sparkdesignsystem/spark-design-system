@@ -16,7 +16,7 @@ import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector.interfaces
       [triggerIconName]="triggerIconName"
       [idString]="idString"
       [analyticsString]="analyticsString"
-      [selector]="selector"
+      [heading]="heading"
     >
     </sprk-masthead-selector>
   `,
@@ -27,7 +27,7 @@ class TestWrapperComponent {
   idString: string;
   triggerIconName: string;
   analyticsString: string;
-  selector: string;
+  heading: string;
 }
 
 describe('SprkMastheadSelectorComponent', () => {
@@ -355,8 +355,8 @@ describe('SprkMastheadSelectorComponent', () => {
     expect(paragraphs.length).toEqual(2);
   });
 
-  it('should set dropdown title to selector', () => {
-    wrapperComponent.selector = 'test';
+  it('should set dropdown title to heading', () => {
+    wrapperComponent.heading = 'test';
     fixture.detectChanges();
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();

@@ -174,7 +174,7 @@ import {
         <sprk-masthead-selector
           *ngIf="narrowSelector"
           [triggerText]="narrowSelector['trigger'].text"
-          selector="Select One"
+          heading="Select One"
           triggerIconName="chevron-down"
           [choices]="narrowSelector['choices']"
         >

@@ -48,18 +48,18 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
         class="sprk-c-Dropdown sprk-c-Masthead__selector-dropdown"
         *ngIf="isOpen"
       >
-        <div class="sprk-c-Dropdown__header" *ngIf="selector">
+        <div class="sprk-c-Dropdown__header" *ngIf="heading">
           <a
             sprkLink
             variant="plain"
             class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
             (click)="toggle($event)"
-            [attr.aria-label]="selector"
+            [attr.aria-label]="heading"
             href="#"
           >
             <span
               class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
-              >{{ selector }}</span
+              >{{ heading }}</span
             >
             <sprk-icon
               [iconName]="triggerIconName"
@@ -162,10 +162,11 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
 })
 export class SprkMastheadSelectorComponent implements OnChanges {
   /**
-   * This value will be assigned to the masthead selector placeholder text.
+   * This value will be assigned to the masthead selector
+   * placeholder text and the dropdown heading.
    */
   @Input()
-  selector: string;
+  heading: string;
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
