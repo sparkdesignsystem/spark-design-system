@@ -260,7 +260,7 @@ export class SprkDropdownComponent implements OnChanges {
   isOpen = false;
   // TODO: #3800 Remove `title` input, now replaced with `heading`
   /**
-   * Deprecated. use the `heading` input instead.
+   * Deprecated. Use the `heading` input instead.
    * The heading text displayed
    * in the box above the choices.
    */
