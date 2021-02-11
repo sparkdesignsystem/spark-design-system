@@ -94,8 +94,8 @@ export const informational = () => ({
           infoLine2: 'More Information'
         },
         value: 'Choice Title 2',
-        active: true,
-        isDefault: true
+        active: false,
+        isDefault: false
       }
     ]"
     >
