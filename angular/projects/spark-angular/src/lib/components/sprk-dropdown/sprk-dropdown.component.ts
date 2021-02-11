@@ -179,7 +179,7 @@ export class SprkDropdownComponent implements OnChanges {
   variant: string;
   // TODO: #3800 Remove `dropdownType` input, now replaced with `variant`
   /**
-   * Deprecated: Use the `variant` input instead.
+   * Deprecated. Use the `variant` input instead.
    * Determines the type of Dropdown to render.
    */
   @Input()
@@ -213,7 +213,7 @@ export class SprkDropdownComponent implements OnChanges {
    */
   @Input()
   triggerAdditionalClasses: string;
-  // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
+  // TODO: #3800 Remove `additionalTriggerClasses` input, now replaced with `triggerAdditionalClasses`
   /**
    * Deprecated. Use `triggerAdditionalClasses` instead.
    * Expects a space separated string of
@@ -432,7 +432,7 @@ export class SprkDropdownComponent implements OnChanges {
     const classArray: string[] = ['sprk-c-Dropdown__trigger'];
 
     if (this.additionalTriggerClasses || this.triggerAdditionalClasses) {
-      // TODO: #3800 Remove `additionalIconClasses` input, now replaced with `iconAdditionalClasses`
+      // TODO: #3800 Remove `additionalTriggerClasses` input, now replaced with `triggerAdditionalClasses`
       const classes =
         this.triggerAdditionalClasses || this.additionalTriggerClasses;
       classes.split(' ').forEach((className) => {

@@ -101,9 +101,7 @@ describe('SprkDropdownComponent', () => {
 
   it('should add the correct classes if additionalClasses are supplied', () => {
     wrapperComponent.additionalClasses = 'sprk-u-pam sprk-u-man';
-
     fixture.detectChanges();
-
     expect(dropdownComponent.getClasses()).toEqual(
       'sprk-c-Dropdown sprk-u-pam sprk-u-man',
     );

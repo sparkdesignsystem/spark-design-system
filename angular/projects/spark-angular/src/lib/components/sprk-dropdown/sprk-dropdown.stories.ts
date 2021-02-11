@@ -77,7 +77,7 @@ export const informational = () => ({
       triggerAdditionalClasses="sprk-b-Link--plain"
       triggerText="Make a selection..."
       heading="My Choices"
-      triggerIconType="chevron-down"
+      triggerIconName="chevron-down"
       [choices]="[{
         content: {
           title: 'Choice Title 1',
