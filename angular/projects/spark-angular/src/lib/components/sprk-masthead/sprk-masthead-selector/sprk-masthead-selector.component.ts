@@ -32,11 +32,14 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
           [analyticsString]="analyticsString"
           aria-haspopup="listbox"
           href="#"
-          [attr.aria-label]="triggerText || 'Choose One'"
+          [attr.aria-label]="
+            triggerText ? triggerText : screenReaderText || 'Choose One'
+          "
         >
           <span class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs">{{
             triggerText
           }}</span>
+          <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
             [iconName]="triggerIconName"
             additionalClasses="sprk-Stack__item sprk-u-mhs"
@@ -77,7 +80,9 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
         <ul
           class="sprk-c-Dropdown__links"
           role="listbox"
-          [attr.aria-label]="'My Choices'"
+          [attr.aria-label]="
+            heading ? heading : screenReaderText || 'My Choices'
+          "
         >
           <li
             class="sprk-c-Dropdown__item"
@@ -161,6 +166,14 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
   `,
 })
 export class SprkMastheadSelectorComponent implements OnChanges {
+  /**
+   * The value supplied will be visually hidden
+   * inside the trigger. Useful
+   * for when title is empty,
+   * and only `triggerIconType` is supplied.
+   */
+  @Input()
+  screenReaderText: string;
   /**
    * This value will be assigned to the masthead selector
    * placeholder text and the dropdown heading.

@@ -17,6 +17,7 @@ import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector.interfaces
       [idString]="idString"
       [analyticsString]="analyticsString"
       [heading]="heading"
+      [screenReaderText]="screenReaderText"
     >
     </sprk-masthead-selector>
   `,
@@ -28,6 +29,7 @@ class TestWrapperComponent {
   triggerIconName: string;
   analyticsString: string;
   heading: string;
+  screenReaderText: string;
 }
 
 describe('SprkMastheadSelectorComponent', () => {
@@ -202,6 +204,16 @@ describe('SprkMastheadSelectorComponent', () => {
 
   it('should apply aria-label when triggerText is provided', () => {
     wrapperComponent.triggerText = 'test';
+    wrapperComponent.screenReaderText = '';
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
+    ).toEqual('test');
+  });
+
+  it('should apply aria-label when screenReaderText is provided', () => {
+    wrapperComponent.triggerText = '';
+    wrapperComponent.screenReaderText = 'test';
     fixture.detectChanges();
     expect(
       fixture.nativeElement.querySelector('a').getAttribute('aria-label'),
@@ -222,6 +234,18 @@ describe('SprkMastheadSelectorComponent', () => {
       .querySelector('.sprk-c-Dropdown__links')
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('My Choices');
+  });
+
+  it('should apply an aria-label to listbox when screenReaderText is provided', () => {
+    fixture.detectChanges();
+    wrapperComponent.screenReaderText = 'test';
+    mastheadSelectorTriggerElement.click();
+
+    fixture.detectChanges();
+    const listBoxAria = fixture.nativeElement
+      .querySelector('.sprk-c-Dropdown__links')
+      .getAttribute('aria-label');
+    expect(listBoxAria).toEqual('test');
   });
 
   it('should change trigger text if default choice option specified', () => {
