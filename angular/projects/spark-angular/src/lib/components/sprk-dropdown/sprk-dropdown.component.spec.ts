@@ -27,6 +27,9 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
       [triggerIconName]="triggerIconName"
       [title]="title"
       [heading]="heading"
+      [selector]="selector"
+      [analyticsString]="analyticsString"
+      [isOpen]="isOpen"
     >
     </sprk-dropdown>
   `,
@@ -49,6 +52,9 @@ class TestWrapperComponent {
   screenReaderText: string;
   title: string;
   heading: string;
+  analyticsString: string;
+  isOpen: boolean;
+  selector: string;
 }
 
 describe('SprkDropdownComponent', () => {
@@ -118,6 +124,27 @@ describe('SprkDropdownComponent', () => {
     wrapperComponent.idString = null;
     fixture.detectChanges();
     expect(dropdownTriggerElement.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should add data-analytics when analyticsString has a value', () => {
+    const testString = 'element-id';
+    wrapperComponent.analyticsString = testString;
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.getAttribute('data-analytics')).toEqual(
+      testString,
+    );
+  });
+
+  it('should not add data-analytics when analyticsString has no value', () => {
+    wrapperComponent.analyticsString = null;
+    fixture.detectChanges();
+    expect(dropdownTriggerElement.getAttribute('data-analytics')).toBeNull();
+  });
+
+  it('should render open with isOpen true', () => {
+    wrapperComponent.isOpen = true;
+    fixture.detectChanges();
+    expect(dropdownComponent.isOpen).toEqual(true);
   });
 
   it('should open the dropdown on click', () => {
@@ -649,5 +676,21 @@ describe('SprkDropdownComponent', () => {
     expect(dropdownComponent.isOpen).toEqual(true);
     paragraphs = fixture.nativeElement.querySelectorAll('p');
     expect(paragraphs.length).toEqual(2);
+  });
+
+  it('should apply selector Input to aria-label and title', () => {
+    wrapperComponent.selector = 'test';
+    fixture.detectChanges();
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+
+    const headerLink = fixture.nativeElement
+      .querySelector('.sprk-c-Dropdown__header a')
+      .getAttribute('aria-label');
+    expect(headerLink).toEqual('test');
+
+    const title = fixture.nativeElement.querySelector('.sprk-c-Dropdown__title')
+      .textContent;
+    expect(title).toEqual('test');
   });
 });
