@@ -9,6 +9,7 @@ import { SprkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
 import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+import { SprkMastheadSelectorComponent } from './sprk-masthead-selector/sprk-masthead-selector.component';
 
 export default {
   title: 'Components/Masthead',
@@ -22,6 +23,7 @@ export default {
     subcomponents: {
       SprkMastheadAccordionComponent,
       SprkMastheadAccordionItemComponent,
+      SprkMastheadSelectorComponent,
     },
     info: `
 ${markdownDocumentationLinkBuilder('masthead')}
@@ -456,15 +458,15 @@ export const extended = () => ({
       >
         <div class="sprk-o-Stack__item sprk-u-Position--relative">
           <sprk-dropdown
-            dropdownType="informational"
-            additionalTriggerClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
+            variant="informational"
+            triggerAdditionalClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
             triggerText="My Selector"
             additionalClasses="sprk-c-Masthead__selector-dropdown sprk-u-Width-100"
-            triggerIconType="chevron-down"
+            triggerIconName="chevron-down"
             [choices]="siteDropdownChoices"
             selector="Select One"
-            additionalIconClasses="sprk-c-Icon--filled-current-color sprk-Stack__item"
-            additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
+            iconAdditionalClasses="sprk-c-Icon--filled-current-color sprk-Stack__item"
+            triggerTextAdditionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
           >
             <div
               class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
@@ -500,11 +502,10 @@ export const extended = () => ({
         <li>
           <sprk-dropdown
             [choices]="simpleChoices"
-            dropdownType="simple"
-            title="My Account"
-            triggerIconType="user"
-            additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
-            additionalIconClasses="sprk-c-Icon--xl"
+            heading="My Account"
+            triggerIconName="user"
+            triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+            iconAdditionalClasses="sprk-c-Icon--xl"
             additionalClasses="sprk-u-Right--zero sprk-u-mrm"
             screenReaderText="User Account"
           >

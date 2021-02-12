@@ -46,6 +46,8 @@ export { SprkMastheadAccordionItemComponent } from './lib/components/sprk-masthe
 export { SprkMastheadAccordionItemModule } from './lib/components/sprk-masthead/sprk-masthead-accordion-item/sprk-masthead-accordion-item.module';
 export { SprkMastheadAccordionComponent } from './lib/components/sprk-masthead/sprk-masthead-accordion/sprk-masthead-accordion.component';
 export { SprkMastheadAccordionModule } from './lib/components/sprk-masthead/sprk-masthead-accordion/sprk-masthead-accordion.module';
+export { SprkMastheadSelectorComponent } from './lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.component';
+export { SprkMastheadSelectorModule } from './lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.module';
 export { SprkMastheadComponent } from './lib/components/sprk-masthead/sprk-masthead.component';
 export { SprkMastheadModule } from './lib/components/sprk-masthead/sprk-masthead.module';
 export { SprkModalComponent } from './lib/components/sprk-modal/sprk-modal.component';

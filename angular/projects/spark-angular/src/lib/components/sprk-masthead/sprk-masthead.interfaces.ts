@@ -1,4 +1,4 @@
-import { ISprkDropdownChoice } from '../sprk-dropdown/sprk-dropdown.interfaces';
+import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector/sprk-masthead-selector.interfaces';
 
 /**
  * Used to create the "Big Navigation"
@@ -35,7 +35,7 @@ export interface ISprkBigNavLink {
    * Optional sub-navigation for the link.
    * Renders a dropdown under the main link.
    */
-  subNav?: ISprkDropdownChoice;
+  subNav?: ISprkMastheadSelectorChoice;
 }
 
 /**
@@ -133,7 +133,7 @@ export interface ISprkNarrowSelector {
    * construct a selectable
    * choice item in the dropdown.
    */
-  choices: ISprkDropdownChoice[];
+  choices: ISprkMastheadSelectorChoice[];
   /**
    * Optional data used to construct
    * a link in the bottom of the narrow

@@ -44,11 +44,10 @@ export const defaultStory = () => ({
   template: `
     <sprk-dropdown
       screenReaderText="Description of default dropdown."
-      dropdownType="base"
-      title="My Choices"
-      triggerIconType="settings"
-      additionalTriggerClasses="sprk-b-Link--plain"
-      additionalIconClasses="sprk-c-Icon--l"
+      heading="My Choices"
+      triggerIconName="settings"
+      triggerAdditionalClasses="sprk-b-Link--plain"
+      iconAdditionalClasses="sprk-c-Icon--l"
       [choices]="[{
           text: 'Option 1',
           value: 'Option 1'
@@ -74,11 +73,11 @@ export const informational = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-dropdown
-      dropdownType="informational"
-      additionalTriggerClasses="sprk-b-Link--plain"
+      variant="informational"
+      triggerAdditionalClasses="sprk-b-Link--plain"
       triggerText="Make a selection..."
-      title="My Choices"
-      triggerIconType="chevron-down"
+      heading="My Choices"
+      triggerIconName="chevron-down"
       [choices]="[{
         content: {
           title: 'Choice Title 1',
@@ -95,8 +94,8 @@ export const informational = () => ({
           infoLine2: 'More Information'
         },
         value: 'Choice Title 2',
-        active: true,
-        isDefault: true
+        active: false,
+        isDefault: false
       }
     ]"
     >
