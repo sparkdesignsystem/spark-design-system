@@ -502,7 +502,7 @@ export const extended = () => ({
         <li>
           <sprk-dropdown
             [choices]="simpleChoices"
-            title="My Account"
+            heading="My Account"
             triggerIconName="user"
             triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
             iconAdditionalClasses="sprk-c-Icon--xl"
