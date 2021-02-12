@@ -405,7 +405,49 @@ describe('SprkMastheadSelectorComponent', () => {
     expect(paragraphs.length).toEqual(2);
   });
 
-  it('should set dropdown title to heading', () => {
+  it('should not render empty paragraphs for choices using routerLink', () => {
+    fixture.detectChanges();
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information',
+        },
+        routerLink: '/router-test',
+        value: 'Choice Title 1',
+        active: false,
+      },
+    ];
+    fixture.detectChanges();
+    mastheadSelectorTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    let paragraphs = fixture.nativeElement.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(3);
+
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+        },
+        routerLink: '/router-test',
+        value: 'Choice Title 1',
+        active: false,
+      },
+    ];
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    paragraphs = fixture.nativeElement.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(2);
+  });
+
+  it('should set selector title to heading', () => {
     wrapperComponent.heading = 'test';
     fixture.detectChanges();
     mastheadSelectorTriggerElement.click();
