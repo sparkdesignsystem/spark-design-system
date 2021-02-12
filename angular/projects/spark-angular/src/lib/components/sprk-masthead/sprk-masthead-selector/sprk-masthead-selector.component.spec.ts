@@ -36,7 +36,6 @@ describe('SprkMastheadSelectorComponent', () => {
   let fixture: ComponentFixture<TestWrapperComponent>;
   let wrapperComponent: TestWrapperComponent;
   let mastheadSelectorElement: HTMLElement;
-  let mastheadSelectorTriggerTextElement: HTMLElement;
   let mastheadSelectorIconElement: HTMLElement;
   let mastheadSelectorComponent: SprkMastheadSelectorComponent;
   let mastheadSelectorTriggerElement: HTMLElement;
@@ -63,10 +62,6 @@ describe('SprkMastheadSelectorComponent', () => {
     ).componentInstance;
     mastheadSelectorTriggerElement = fixture.nativeElement.querySelector('a');
     mastheadSelectorIconElement = fixture.nativeElement.querySelector('svg');
-    mastheadSelectorTriggerTextElement = fixture.nativeElement.querySelector(
-      'span',
-    );
-    mastheadSelectorElement = fixture.nativeElement.querySelector('div');
 
     mastheadSelectorComponent = fixture.debugElement.query(
       By.directive(SprkMastheadSelectorComponent),
@@ -121,39 +116,62 @@ describe('SprkMastheadSelectorComponent', () => {
   });
 
   it('should open the Masthead Selector on click', () => {
+    expect(fixture.nativeElement.querySelector('.sprk-c-Dropdown')).toBeNull();
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
-    mastheadSelectorElement = fixture.nativeElement.querySelector('div');
-    expect(mastheadSelectorElement).not.toBeNull();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
   });
 
   it('should close the Masthead Selector on click outside the element', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
-    mastheadSelectorElement = fixture.nativeElement.querySelector('div');
+    mastheadSelectorElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown',
+    );
     expect(mastheadSelectorElement).not.toBeNull();
     mastheadSelectorElement.ownerDocument.dispatchEvent(new Event('click'));
-    expect(mastheadSelectorComponent.isOpen).toEqual(false);
+    fixture.detectChanges();
+    mastheadSelectorElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown',
+    );
+    expect(mastheadSelectorElement).toBeNull();
   });
 
   it('should close the Masthead Selector on focusin outside the element', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
-    mastheadSelectorElement = fixture.nativeElement.querySelector('div');
-    expect(mastheadSelectorComponent.isOpen).toEqual(true);
+    mastheadSelectorElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown',
+    );
+    expect(mastheadSelectorElement).not.toBeNull();
     mastheadSelectorElement.ownerDocument.dispatchEvent(new Event('focusin'));
-    expect(mastheadSelectorComponent.isOpen).toEqual(false);
+    fixture.detectChanges();
+    mastheadSelectorElement = fixture.nativeElement.querySelector(
+      '.sprk-c-Dropdown',
+    );
+    expect(mastheadSelectorElement).toBeNull();
   });
 
   it('should set active on click', () => {
     wrapperComponent.choices = [{ text: 'asdf', value: 'asdf' }];
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelectorAll('.sprk-c-Dropdown__link')[0]
+        .classList,
+    ).not.toContain('sprk-c-Dropdown__link--active');
     fixture.nativeElement
       .querySelectorAll('li')[0]
       .dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    expect(mastheadSelectorComponent.choices[0]['active']).toEqual(true);
+    mastheadSelectorTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelectorAll('.sprk-c-Dropdown__link')[0]
+        .classList,
+    ).toContain('sprk-c-Dropdown__link--active');
   });
 
   it('should set href value if routerLink is set on choice item', () => {
@@ -171,7 +189,9 @@ describe('SprkMastheadSelectorComponent', () => {
     ];
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
-    expect(mastheadSelectorComponent.isOpen).toEqual(true);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
     // TODO: #3835 Create separate classes for sprk-masthead-selector
     const listLink = fixture.nativeElement.querySelector(
       '.sprk-c-Dropdown__link',
@@ -194,7 +214,9 @@ describe('SprkMastheadSelectorComponent', () => {
     ];
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
-    expect(mastheadSelectorComponent.isOpen).toEqual(true);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
     // TODO: #3835 Create separate classes for sprk-masthead-selector
     const listLink = fixture.nativeElement.querySelector(
       '.sprk-c-Dropdown__link',
@@ -359,7 +381,9 @@ describe('SprkMastheadSelectorComponent', () => {
     fixture.detectChanges();
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
-    expect(mastheadSelectorComponent.isOpen).toEqual(true);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
     let paragraphs = fixture.nativeElement.querySelectorAll('p');
     expect(paragraphs.length).toEqual(3);
 
@@ -374,7 +398,9 @@ describe('SprkMastheadSelectorComponent', () => {
       },
     ];
     fixture.detectChanges();
-    expect(mastheadSelectorComponent.isOpen).toEqual(true);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
     paragraphs = fixture.nativeElement.querySelectorAll('p');
     expect(paragraphs.length).toEqual(2);
   });

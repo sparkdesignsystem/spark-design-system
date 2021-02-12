@@ -89,7 +89,6 @@ describe('SprkDropdownComponent', () => {
     dropdownTriggerElement = fixture.nativeElement.querySelector('a');
     dropdownIconElement = fixture.nativeElement.querySelector('svg');
     dropdownTriggerTextElement = fixture.nativeElement.querySelector('span');
-    dropdownElement = fixture.nativeElement.querySelector('div');
 
     dropdownComponent = fixture.debugElement.query(
       By.directive(SprkDropdownComponent),
@@ -102,15 +101,27 @@ describe('SprkDropdownComponent', () => {
   });
 
   it('should have the correct base classes on dropdown content', () => {
-    expect(dropdownComponent.getClasses()).toEqual('sprk-c-Dropdown');
+    expect(fixture.nativeElement.querySelector('.sprk-c-Dropdown')).toBeNull();
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown').classList.length,
+    ).toEqual(1);
   });
 
   it('should add the correct classes if additionalClasses are supplied', () => {
     wrapperComponent.additionalClasses = 'sprk-u-pam sprk-u-man';
+    dropdownElement = fixture.nativeElement.querySelector('.sprk-c-Dropdown');
+    expect(dropdownElement).toBeNull();
+    dropdownTriggerElement.click();
     fixture.detectChanges();
-    expect(dropdownComponent.getClasses()).toEqual(
-      'sprk-c-Dropdown sprk-u-pam sprk-u-man',
-    );
+    dropdownElement = fixture.nativeElement.querySelector('.sprk-c-Dropdown');
+    expect(dropdownElement.classList).toContain('sprk-u-pam');
+    expect(dropdownElement.classList).toContain('sprk-u-man');
+    expect(dropdownElement.classList.length).toEqual(3);
   });
 
   it('should add data-id when idString has a value', () => {
@@ -144,32 +155,40 @@ describe('SprkDropdownComponent', () => {
   it('should render open with isOpen true', () => {
     wrapperComponent.isOpen = true;
     fixture.detectChanges();
-    expect(dropdownComponent.isOpen).toEqual(true);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
   });
 
   it('should open the dropdown on click', () => {
+    expect(fixture.nativeElement.querySelector('.sprk-c-Dropdown')).toBeNull();
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    dropdownElement = fixture.nativeElement.querySelector('div');
-    expect(dropdownElement).not.toBeNull();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
   });
 
   it('should close the dropdown on click outside the element', () => {
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    dropdownElement = fixture.nativeElement.querySelector('div');
+    dropdownElement = fixture.nativeElement.querySelector('.sprk-c-Dropdown');
     expect(dropdownElement).not.toBeNull();
     dropdownElement.ownerDocument.dispatchEvent(new Event('click'));
-    expect(dropdownComponent.isOpen).toEqual(false);
+    fixture.detectChanges();
+    dropdownElement = fixture.nativeElement.querySelector('.sprk-c-Dropdown');
+    expect(dropdownElement).toBeNull();
   });
 
   it('should close the dropdown on focusin outside the element', () => {
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    dropdownElement = fixture.nativeElement.querySelector('div');
-    expect(dropdownComponent.isOpen).toEqual(true);
+    dropdownElement = fixture.nativeElement.querySelector('.sprk-c-Dropdown');
+    expect(dropdownElement).not.toBeNull();
     dropdownElement.ownerDocument.dispatchEvent(new Event('focusin'));
-    expect(dropdownComponent.isOpen).toEqual(false);
+    fixture.detectChanges();
+    dropdownElement = fixture.nativeElement.querySelector('.sprk-c-Dropdown');
+    expect(dropdownElement).toBeNull();
   });
 
   it('should set active on click of a choice on an informational dropdown', () => {
@@ -189,11 +208,18 @@ describe('SprkDropdownComponent', () => {
     fixture.detectChanges();
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    expect(dropdownComponent.isOpen).toEqual(true);
-    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
-    listElement.dispatchEvent(new Event('click'));
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    const choice = fixture.nativeElement.querySelectorAll('li')[0];
+    choice.dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    expect(dropdownComponent.choices[0]['active']).toEqual(true);
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelectorAll('.sprk-c-Dropdown__link')[0]
+        .classList,
+    ).toContain('sprk-c-Dropdown__link--active');
   });
 
   it('should set active on click of a choice on an informational dropdown if active is not defined initially', () => {
@@ -211,11 +237,18 @@ describe('SprkDropdownComponent', () => {
     ];
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    expect(dropdownComponent.isOpen).toEqual(true);
-    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
-    listElement.dispatchEvent(new Event('click'));
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    const choice = fixture.nativeElement.querySelectorAll('li')[0];
+    choice.dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    expect(dropdownComponent.choices[0]['active']).toEqual(true);
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelectorAll('.sprk-c-Dropdown__link')[0]
+        .classList,
+    ).toContain('sprk-c-Dropdown__link--active');
   });
 
   it('should not set active on click of a choice on a base dropdown', () => {
@@ -232,11 +265,18 @@ describe('SprkDropdownComponent', () => {
     ];
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    expect(dropdownComponent.isOpen).toEqual(true);
-    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
-    listElement.dispatchEvent(new Event('click'));
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    const choice = fixture.nativeElement.querySelectorAll('li')[0];
+    choice.dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    expect(dropdownComponent.choices[0]['active']).toEqual(false);
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelectorAll('.sprk-c-Dropdown__link')[0]
+        .classList,
+    ).not.toContain('sprk-c-Dropdown__link--active');
   });
 
   // TODO: #3800 remove dropdownType tests
@@ -250,7 +290,11 @@ describe('SprkDropdownComponent', () => {
       .querySelectorAll('li')[0]
       .dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    const isInformational = dropdownComponent.choices[0]['active'];
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    const isInformational = fixture.nativeElement
+      .querySelectorAll('.sprk-c-Dropdown__link')[0]
+      .classList.contains('sprk-c-Dropdown__link--active');
     expect(isInformational).toEqual(true);
   });
 
@@ -265,7 +309,11 @@ describe('SprkDropdownComponent', () => {
       .querySelectorAll('li')[0]
       .dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    const isInformational = dropdownComponent.choices[0]['active'];
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    const isInformational = fixture.nativeElement
+      .querySelectorAll('.sprk-c-Dropdown__link')[0]
+      .classList.contains('sprk-c-Dropdown__link--active');
     expect(isInformational).toEqual(true);
   });
 
@@ -277,21 +325,15 @@ describe('SprkDropdownComponent', () => {
         value: 'Option 1',
         href: '/test',
       },
-      {
-        text: 'Option 2',
-        value: 'Option 2',
-      },
     ];
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    expect(dropdownComponent.isOpen).toEqual(true);
-    const listElement = fixture.nativeElement.querySelectorAll('li')[0];
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
     const listLink = fixture.nativeElement.querySelector(
       '.sprk-c-Dropdown__link',
     );
-    listElement.dispatchEvent(new Event('click'));
-    fixture.detectChanges();
-    expect(dropdownComponent.choices[0]['active']).toEqual(false);
     expect(listLink.getAttribute('href')).toEqual('/test');
   });
 
@@ -303,14 +345,12 @@ describe('SprkDropdownComponent', () => {
         value: 'Option 1',
         routerLink: '/router-test',
       },
-      {
-        text: 'Option 2',
-        value: 'Option 2',
-      },
     ];
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    expect(dropdownComponent.isOpen).toEqual(true);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
     const listLink = fixture.nativeElement.querySelector(
       '.sprk-c-Dropdown__link',
     );
@@ -657,7 +697,9 @@ describe('SprkDropdownComponent', () => {
     fixture.detectChanges();
     dropdownTriggerElement.click();
     fixture.detectChanges();
-    expect(dropdownComponent.isOpen).toEqual(true);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
     let paragraphs = fixture.nativeElement.querySelectorAll('p');
     expect(paragraphs.length).toEqual(3);
 
@@ -672,7 +714,9 @@ describe('SprkDropdownComponent', () => {
       },
     ];
     fixture.detectChanges();
-    expect(dropdownComponent.isOpen).toEqual(true);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
     paragraphs = fixture.nativeElement.querySelectorAll('p');
     expect(paragraphs.length).toEqual(2);
   });
