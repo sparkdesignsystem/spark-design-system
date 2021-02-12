@@ -20,7 +20,7 @@ class SprkInputContainer extends Component {
     let errorContainerID;
     let helperTextID;
     let inputAriaDescribedBy;
-    let inputAriaDescribedByArray;
+    let inputAriaDescribedByArray = [];
 
     /*
      * Store references to id, for,
@@ -30,9 +30,6 @@ class SprkInputContainer extends Component {
       if (child.type.name === SprkInput.name) {
         id = child.props.id;
         inputAriaDescribedBy = child.props.ariaDescribedBy;
-        if (inputAriaDescribedBy) {
-          inputAriaDescribedByArray = inputAriaDescribedBy.split(' ');
-        }
       }
       if (child.type.name === SprkLabel.name) {
         labelFor = child.props.htmlFor;
@@ -52,7 +49,10 @@ class SprkInputContainer extends Component {
      * and helperTextID are in the inputAriaDescribedByArray.
      * If they aren't, add it to the array.
      */
-    if (inputAriaDescribedByArray && (helperTextID || errorContainerID)) {
+    if (helperTextID || errorContainerID) {
+      if (inputAriaDescribedBy) {
+        inputAriaDescribedByArray = inputAriaDescribedBy.split(' ');
+      }
       if (helperTextID) {
         if (!inputAriaDescribedByArray.includes(helperTextID)) {
           inputAriaDescribedByArray.push(helperTextID);

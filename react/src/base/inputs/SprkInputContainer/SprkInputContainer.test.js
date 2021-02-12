@@ -5,6 +5,8 @@ import SprkInputContainer from './SprkInputContainer';
 import SprkLabel from '../SprkLabel/SprkLabel';
 import SprkInput from '../SprkInput/SprkInput';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
+import SprkFieldError from '../SprkFieldError/SprkFieldError';
+import SprkHelperText from '../SprkHelperText/SprkHelperText';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -96,48 +98,229 @@ describe('SprkInputContainer:', () => {
     expect(bothCustom.find('label').getDOMNode().htmlFor).toBe(
       bothCustom.find('input').getDOMNode().id,
     );
+
+    const bothMatch = mount(
+      <SprkInputContainer>
+        <SprkLabel htmlFor="match">htmlFor and id Match</SprkLabel>
+        <SprkInput id="match" />
+      </SprkInputContainer>,
+    );
+    expect(bothMatch.find('input').getDOMNode().id).toBe('match');
+    expect(bothMatch.find('label').getDOMNode().htmlFor).toBe('match');
   });
 
-  it(`
-    should match the aria-describedby on the
-    input with the error container id if error
-    container present`, () => {
+  it(`should add the helperTextID to the aria-describedby
+  on the input if it isn't present`, () => {
     const wrapper = mount(
       <SprkInputContainer>
-        <SprkLabel htmlFor="invalid-input">Invalid Input</SprkLabel>
-        <SprkInput id="invalid-input" />
-        <SprkErrorContainer
-          id="test-error"
-          message="There is an error on this field."
-        >
-          Need to update this test once error container is updated to
-          compositional.
-        </SprkErrorContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput />
+        <SprkHelperText id="test-id" />
       </SprkInputContainer>,
     );
+
     expect(
       wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
-    ).toBe('test-error');
+    ).toBe('test-id');
+  });
 
-    const userSuppliedAria = mount(
+  it(`should add the errorContainerID to the aria-describedby
+  on the input if it isn't present`, () => {
+    const wrapper = mount(
       <SprkInputContainer>
-        <SprkLabel htmlFor="invalid-input">Invalid Input</SprkLabel>
-        <SprkInput id="invalid-input" ariaDescribedBy="user-supplied" />
-        <SprkErrorContainer
-          id="test-error"
-          message="There is an error on this field."
-        >
-          Need to update this test once error container is updated to
-          compositional.
-        </SprkErrorContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput />
+        <SprkErrorContainer id="test-id" message="test message" />
       </SprkInputContainer>,
     );
+
     expect(
-      userSuppliedAria
-        .find('input')
-        .getDOMNode()
-        .getAttribute('aria-describedby'),
-    ).toBe('test-error');
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should add the fieldErrorID to the aria-describedby
+  on the input if it isn't present`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput />
+        <SprkFieldError id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should allow additional values be passed to the aria-describedby`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput ariaDescribedBy="additional-value" />
+        <SprkFieldError id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('additional-value test-id');
+  });
+
+  it(`should add helperTextID and fieldErrorID to the
+  aria-describedby if neither are present`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput />
+        <SprkFieldError id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-helper-id test-error-id');
+  });
+
+  it(`should add helperTextID and errorContainerID to the
+  aria-describedby if neither are present`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput />
+        <SprkErrorContainer message="test message" id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-helper-id test-error-id');
+  });
+
+  it(`should add helperTextID and fieldErrorID to the
+  aria-describedby if neither are present and keep additional values`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput ariaDescribedBy="additional-value" />
+        <SprkFieldError id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('additional-value test-helper-id test-error-id');
+  });
+
+  it(`should add helperTextID and errorContainerID to the
+  aria-describedby if neither are present and keep additional values`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput ariaDescribedBy="additional-value" />
+        <SprkErrorContainer message="test message" id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('additional-value test-helper-id test-error-id');
+  });
+
+  it(`should not add helperTextID and errorContainerID to the
+  aria-describedby if both are present and keep additional values`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput ariaDescribedBy="value test-helper-id test-error-id" />
+        <SprkErrorContainer message="test message" id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('value test-helper-id test-error-id');
+  });
+
+  it(`should not add helperTextID and fieldErrorID to the
+  aria-describedby if both are present and keep additional values`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput ariaDescribedBy="value test-helper-id test-error-id" />
+        <SprkFieldError id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('value test-helper-id test-error-id');
+  });
+
+  it(`should not add helperTextID to the 
+  aria-describedby if it's present`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput ariaDescribedBy="test-helper-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-helper-id');
+  });
+
+  it(`should not add errorContainerID to the 
+  aria-describedby if it's present`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput ariaDescribedBy="test-id" />
+        <SprkErrorContainer message="test message" id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should not add fieldErrorID to the 
+  aria-describedby if it's present`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput ariaDescribedBy="test-id" />
+        <SprkFieldError id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should not add aria-describedby to the input
+  if there is no helper or error text`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe(null);
   });
 
   it('should allow other elements to be passed through', () => {
