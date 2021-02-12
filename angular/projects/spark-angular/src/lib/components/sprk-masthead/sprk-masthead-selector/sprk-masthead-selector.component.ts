@@ -173,13 +173,13 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   /**
    * The value supplied will be visually hidden
    * inside the trigger. Useful
-   * for when title is empty,
-   * and only `triggerIconType` is supplied.
+   * for when heading is empty,
+   * and only `triggerIconName` is supplied.
    */
   @Input()
   screenReaderText: string;
   /**
-   * This value will be assigned to the masthead selector
+   * This value will be assigned to the Masthead Selector
    * placeholder text and the dropdown heading.
    */
   @Input()
@@ -210,7 +210,9 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   @Input()
   choices: ISprkMastheadSelectorChoice[];
   /**
-   * Renders the icon to the right of the trigger text.
+   * The name of the icon that
+   * renders the icon to the right
+   * of the trigger text.
    */
   @Input()
   triggerIconName: string;
@@ -221,7 +223,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   triggerText: string;
   /**
    * The event that is
-   * emitted from the Dropdown when a choice
+   * emitted from the Masthead Selector when a choice
    * is clicked. The event contains the value
    * of the choice that was clicked.
    */
@@ -316,7 +318,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   }
 
   /**
-   * Update trigger text with default choice value
+   * Update trigger text with default choice value.
    */
   protected _updateTriggerTextWithDefaultValue(): void {
     const defaultChoice = this._lookupDefaultChoice();
@@ -332,7 +334,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   }
 
   /**
-   * Lookup choice with specified `isDefault: true` field
+   * Lookup choice with specified `isDefault: true` field.
    */
   protected _lookupDefaultChoice(): ISprkMastheadSelectorChoice | null {
     return this.choices.find((choice) => choice.isDefault) || null;

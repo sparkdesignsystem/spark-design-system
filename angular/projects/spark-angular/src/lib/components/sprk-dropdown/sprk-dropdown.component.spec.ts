@@ -721,6 +721,49 @@ describe('SprkDropdownComponent', () => {
     expect(paragraphs.length).toEqual(2);
   });
 
+  it('should not render empty paragraphs for choices using routerLink', () => {
+    fixture.detectChanges();
+    wrapperComponent.variant = 'informational';
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information',
+        },
+        routerLink: '/router-test',
+        value: 'Choice Title 1',
+        active: false,
+      },
+    ];
+    fixture.detectChanges();
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    let paragraphs = fixture.nativeElement.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(3);
+
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+        },
+        value: 'Choice Title 1',
+        routerLink: '/router-test',
+        active: false,
+      },
+    ];
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    paragraphs = fixture.nativeElement.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(2);
+  });
+
   it('should apply selector Input to aria-label and title', () => {
     wrapperComponent.selector = 'test';
     fixture.detectChanges();
