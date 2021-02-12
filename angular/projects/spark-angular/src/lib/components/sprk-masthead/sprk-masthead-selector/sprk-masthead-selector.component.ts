@@ -133,7 +133,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
                 }"
                 [attr.aria-label]="choice.content.title"
               >
-                <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
+                <p sprkText variant="bodyOne">{{ choice.content.title }}</p>
                 <p sprkText variant="bodyTwo" *ngIf="choice.content.infoLine1">
                   {{ choice.content.infoLine1 }}
                 </p>
@@ -153,7 +153,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
                 }"
                 [attr.aria-label]="choice.content.title"
               >
-                <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
+                <p sprkText variant="bodyOne">{{ choice.content.title }}</p>
                 <p sprkText variant="bodyTwo" *ngIf="choice.content.infoLine1">
                   {{ choice.content.infoLine1 }}
                 </p>
