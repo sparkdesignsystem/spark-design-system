@@ -60,18 +60,6 @@ describe('SprkCheckboxGroup:', () => {
     );
   });
 
-  it(`should assign an id to SprkErrorContainer if it doesn't
-      already have one`, () => {
-    const wrapper = mount(
-      <SprkCheckboxGroup>
-        <SprkErrorContainer message="Error" />
-      </SprkCheckboxGroup>,
-    );
-    expect(wrapper.find(SprkErrorContainer).prop('id')).toContain(
-      'sprk-error-container',
-    );
-  });
-
   it(`should assign ariaDescribedBy to SprkCheckboxItem that matches the
   supplied id on SprkErrorContainer`, () => {
     const wrapper = mount(
@@ -89,21 +77,6 @@ describe('SprkCheckboxGroup:', () => {
     });
   });
 
-  it(`when no id is given to SprkErrorContainer, it should generate one and
-  put it on the SprkErrorContainer and on any SprkRadioItems`, () => {
-    const wrapper = mount(
-      <SprkCheckboxGroup>
-        <SprkCheckboxItem />
-        <SprkCheckboxItem />
-        <SprkCheckboxItem />
-        <SprkErrorContainer message="Error" />
-      </SprkCheckboxGroup>,
-    );
-    wrapper.find('SprkCheckboxItem').forEach((item) => {
-      expect(item.prop('ariaDescribedBy')).toContain('sprk-error-container-');
-    });
-  });
-
   it(`should not add aria-describedby
   to RadioItems when there is no
   ErrorContainer or HelperText`, () => {
@@ -117,22 +90,6 @@ describe('SprkCheckboxGroup:', () => {
 
     wrapper.find(SprkCheckboxItem).forEach((item) => {
       expect(typeof item.prop('ariaDescribedBy') === 'undefined').toEqual(true);
-    });
-  });
-
-  it(`when no id is given to SprkErrorContainer, it should generate
-  one and put it on the SprkErrorContainer and on any
-  SprkCheckboxItems in the fieldset`, () => {
-    const wrapper = mount(
-      <SprkCheckboxGroup>
-        <SprkCheckboxItem />
-        <SprkCheckboxItem />
-        <SprkCheckboxItem />
-        <SprkErrorContainer message="Error" />
-      </SprkCheckboxGroup>,
-    );
-    wrapper.find('SprkCheckboxItem').forEach((item) => {
-      expect(item.prop('ariaDescribedBy')).toContain('sprk-error-container-');
     });
   });
 });

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import uniqueId from 'lodash/uniqueId';
 import addPropsToMatchingComponents from '../../../../utilities/helpers/addPropsToMatchingComponents/addPropsToMatchingComponents';
 
 const SprkCheckboxGroup = (props) => {
@@ -24,7 +23,7 @@ const SprkCheckboxGroup = (props) => {
   const elementsToProcess = childrenArray.map((element) => {
     if (element.type.name === 'SprkErrorContainer') {
       hasErrorContainer = true;
-      errorId = element.props.id || uniqueId('sprk-error-container-');
+      errorId = element.props.id;
       return React.cloneElement(element, { id: errorId });
     }
 

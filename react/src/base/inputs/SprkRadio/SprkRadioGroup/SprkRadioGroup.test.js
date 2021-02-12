@@ -60,18 +60,6 @@ describe('SprkRadioGroup:', () => {
     );
   });
 
-  it(`should assign an id to SprkErrorContainer if it doesn't
-   already have one`, () => {
-    const wrapper = mount(
-      <SprkRadioGroup>
-        <SprkErrorContainer message="Error" />
-      </SprkRadioGroup>,
-    );
-    expect(wrapper.find(SprkErrorContainer).props().id).toContain(
-      'sprk-error-container',
-    );
-  });
-
   it(`should assign ariaDescribedBy to SprkRadioItem that matches the
   supplied id on SprkErrorContainer`, () => {
     const wrapper = mount(
@@ -90,22 +78,6 @@ describe('SprkRadioGroup:', () => {
     });
   });
 
-  it(`when no id is given to SprkErrorContainer, it should generate one and
-  put it on the SprkErrorContainer and on any SprkRadioItems`, () => {
-    const wrapper = mount(
-      <SprkRadioGroup>
-        <SprkRadioItem name="radio" />
-        <SprkRadioItem name="radio" />
-        <SprkRadioItem name="radio" />
-        <SprkErrorContainer message="Error" />
-      </SprkRadioGroup>,
-    );
-
-    wrapper.find(SprkRadioItem).forEach((item) => {
-      expect(item.props().ariaDescribedBy).toContain('sprk-error-container');
-    });
-  });
-
   it(`should not add aria-describedby to RadioItems when there is no
   ErrorContainer or HelperText`, () => {
     const wrapper = mount(
@@ -118,25 +90,6 @@ describe('SprkRadioGroup:', () => {
 
     wrapper.find(SprkRadioItem).forEach((item) => {
       expect(typeof item.props().ariaDescribedBy === 'undefined').toEqual(true);
-    });
-  });
-
-  it(`when no id is given to SprkErrorContainer, it should generate
-  one and put it on the SprkErrorContainer and on any
-  SprkRadioItems in the fieldset`, () => {
-    const wrapper = mount(
-      <SprkRadioGroup>
-        <SprkFieldset>
-          <SprkRadioItem name="radio" />
-          <SprkRadioItem name="radio" />
-          <SprkRadioItem name="radio" />
-        </SprkFieldset>
-        <SprkErrorContainer message="Error" />
-      </SprkRadioGroup>,
-    );
-
-    wrapper.find(SprkRadioItem).forEach((item) => {
-      expect(item.props().ariaDescribedBy).toContain('sprk-error-container');
     });
   });
 });
