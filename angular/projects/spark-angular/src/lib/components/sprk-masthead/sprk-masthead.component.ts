@@ -133,7 +133,7 @@ import {
                   [choices]="link.subNav"
                   triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   additionalClasses="sprk-u-TextAlign--left"
-                  triggerIconType="chevron-down"
+                  triggerIconName="chevron-down"
                   [analyticsString]="link.analyticsString"
                   [triggerText]="link.text"
                 ></sprk-dropdown>
