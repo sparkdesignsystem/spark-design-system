@@ -672,6 +672,7 @@ public class SparkDesignTokens {
     public static let sprkTooltipCaretWidth = CGFloat(16.00)
     public static let sprkTooltipMaxWidth = CGFloat(328.00)
     public static let sprkTooltipMinWidth = CGFloat(60.00)
+    public static let sprkTooltipPreferredWidth = CGFloat(160.00)
     public static let sprkTooltipTriggerHoverOffset = CGFloat(16.00)
     public static let sprkTooltipTriggerPadding = CGFloat(0.00)
     public static let sprkTypeDisplayOneBreakpoint = CGFloat(700.00)

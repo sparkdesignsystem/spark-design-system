@@ -237,7 +237,6 @@
   <string name="sprk_tooltip_trigger_background_color">transparent</string><!-- The background color for the tooltip trigger. -->
   <string name="sprk_tooltip_trigger_text_align">left</string><!-- The text align for the tooltip trigger. -->
   <string name="sprk_tooltip_text_align">left</string><!-- The text align for the tooltip. -->
-  <string name="sprk_tooltip_preferred_width">max-content</string><!-- The preferred width of the tooltip. -->
   <string name="sprk_tooltip_transition">all 200ms ease-out</string><!-- The transition applied to the tooltip. -->
   <string name="sprk_webfonts">''</string><!-- Expects a Sass List containing one or more nested Sass Lists. The nested lists should each contain: A List of urls to download a font, the name of the font and the weight of the font. -->
   <string name="sprk_page_title_mark_padding">0 0 24.00dp</string><!-- Amount of padding between the mark and the text on the page title mark. -->

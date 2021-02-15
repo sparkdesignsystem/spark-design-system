@@ -137,7 +137,7 @@
         "themable": true
       },
       "max-width": {
-        "comment": "The max-width of the tooltip. This is used as a fallback if the preferred width is invalid, e.g. for IE 11.",
+        "comment": "The max-width of the tooltip.",
         "value": "328px",
         "attributes": {
           "category": "size"
@@ -147,9 +147,9 @@
       },
       "preferred-width": {
         "comment": "The preferred width of the tooltip.",
-        "value": "max-content",
+        "value": "160px",
         "attributes": {
-          "category": "content"
+          "category": "size"
         },
         "file": "settings",
         "themable": true

@@ -1,7 +1,6 @@
 ////
 /// @group tooltip
 ////
-
 .sprk-c-Tooltip__container {
   position: relative;
   display: inline-flex;
@@ -37,9 +36,6 @@
   position: absolute;
   max-width: $sprk-tooltip-max-width;
   min-width: $sprk-tooltip-min-width;
-  width: $sprk-tooltip-max-width;
-
-  /* By default, IE will ignore this line and use the previous */
   width: $sprk-tooltip-preferred-width;
   z-index: $sprk-tooltip-z-index;
   transition: $sprk-tooltip-transition;
@@ -65,8 +61,12 @@
   &.sprk-c-Tooltip--top-left {
     top: auto;
     left: auto;
-    bottom: calc(100% + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset});
-    right: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
+    bottom: calc(
+      100% + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
+    );
+    right: calc(
+      50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2
+    );
 
     &::before {
       top: auto;
@@ -79,8 +79,12 @@
   &.sprk-c-Tooltip--top-right {
     top: auto;
     right: auto;
-    bottom: calc(100% + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset});
-    left: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
+    bottom: calc(
+      100% + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
+    );
+    left: calc(
+      50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2
+    );
 
     &::before {
       top: auto;
@@ -91,8 +95,12 @@
   }
 
   &.sprk-c-Tooltip--bottom-left {
-    top: calc(100% + #{$sprk-tooltip-caret-width} +  #{$sprk-tooltip-animation-offset});
-    right: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
+    top: calc(
+      100% + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
+    );
+    right: calc(
+      50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2
+    );
     bottom: auto;
     left: auto;
 
@@ -105,10 +113,14 @@
   }
 
   &.sprk-c-Tooltip--bottom-right {
-    top: calc(100% + #{$sprk-tooltip-caret-width} +  #{$sprk-tooltip-animation-offset});
+    top: calc(
+      100% + #{$sprk-tooltip-caret-width} + #{$sprk-tooltip-animation-offset}
+    );
     right: auto;
     bottom: auto;
-    left: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
+    left: calc(
+      50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2
+    );
 
     &::before {
       top: calc(-#{$sprk-tooltip-caret-width} / 2);
@@ -136,19 +148,25 @@
     top: auto;
     left: auto;
     bottom: calc(100% + #{$sprk-tooltip-caret-width});
-    right: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
+    right: calc(
+      50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2
+    );
   }
 
   &.sprk-c-Tooltip--top-right {
     top: auto;
     right: auto;
     bottom: calc(100% + #{$sprk-tooltip-caret-width});
-    left: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
+    left: calc(
+      50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2
+    );
   }
 
   &.sprk-c-Tooltip--bottom-left {
     top: calc(100% + #{$sprk-tooltip-caret-width});
-    right: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
+    right: calc(
+      50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2
+    );
     bottom: auto;
     left: auto;
   }
@@ -157,6 +175,8 @@
     top: calc(100% + #{$sprk-tooltip-caret-width});
     right: auto;
     bottom: auto;
-    left: calc(50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2);
+    left: calc(
+      50% - #{$sprk-tooltip-caret-width} - #{$sprk-tooltip-caret-offset} / 2
+    );
   }
 }

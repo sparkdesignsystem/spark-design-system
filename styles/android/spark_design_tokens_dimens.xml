@@ -263,7 +263,8 @@
   <dimen name="sprk_tooltip_trigger_hover_offset">16.00dp</dimen><!-- The surrounding hover area around the trigger when the Tooltip is visible. -->
   <dimen name="sprk_tooltip_trigger_padding">0.00dp</dimen><!-- The padding for the tooltip trigger. -->
   <dimen name="sprk_tooltip_border_radius">4.00dp</dimen><!-- The border radius for the tooltip. -->
-  <dimen name="sprk_tooltip_max_width">328.00dp</dimen><!-- The max-width of the tooltip. This is used as a fallback if the preferred width is invalid, e.g. for IE 11. -->
+  <dimen name="sprk_tooltip_max_width">328.00dp</dimen><!-- The max-width of the tooltip. -->
+  <dimen name="sprk_tooltip_preferred_width">160.00dp</dimen><!-- The preferred width of the tooltip. -->
   <dimen name="sprk_tooltip_min_width">60.00dp</dimen><!-- The min-width of the tooltip. -->
   <dimen name="sprk_tooltip_animation_offset">8.00dp</dimen><!-- The distance the tooltip should move during its animation. -->
   <dimen name="sprk_typography_breakpoint">864.00dp</dimen><!-- The breakpoint used for typography. -->
