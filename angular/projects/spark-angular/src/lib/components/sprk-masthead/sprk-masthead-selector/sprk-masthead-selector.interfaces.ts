@@ -1,9 +1,9 @@
 /**
- * The choice object is used to
+ * This choice object is used to
  * construct a selectable
- * choice item in the dropdown.
+ * choice item in the Masthead Selector.
  */
-export interface ISprkDropdownChoice {
+export interface ISprkMastheadSelectorChoice {
   /**
    * The text rendered inside the link.
    * If `content` is supplied, then the
@@ -36,20 +36,8 @@ export interface ISprkDropdownChoice {
    */
   active?: boolean;
   /**
-   * On click, this value will
-   * be emitted from the dropdown component.
-   * Additionally, if the `variant` is set to `informational`
-   * or `mastheadSelector` the trigger text
-   * will be updated to this value on click.
-   * This field is marked as optional since it
-   * technically won't break the component if
-   * omitted but should be supplied
-   * if the `variant` is set to `informational`
-   * or `mastheadSelector`. This is because
-   * the dropdown trigger
-   * text will be updated to this value on click,
-   * meaning the trigger text will be set to empty if
-   * this is omitted in those cases.
+   * The value that will emit from the selector component
+   * on click.
    */
   value?: string;
   /**
@@ -84,7 +72,7 @@ export interface ISprkDropdownChoice {
     infoLine1: string;
     /**
      * Value is rendered in a paragraph tag
-     * underneath the `infoLine1` paragraph.
+     * underneath the `infoLine2` paragraph.
      * Use to give extra information about the choice item.
      */
     infoLine2?: string;
