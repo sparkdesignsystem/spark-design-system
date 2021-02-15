@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
+import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { SprkDropdownComponent } from './sprk-dropdown.component';
     SprkIconModule,
     SprkLinkDirectiveModule,
     RouterModule,
+    SprkTextModule,
   ],
   declarations: [SprkDropdownComponent],
   exports: [SprkDropdownComponent],

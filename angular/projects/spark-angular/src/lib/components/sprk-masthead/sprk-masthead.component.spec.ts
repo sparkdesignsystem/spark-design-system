@@ -4,6 +4,7 @@ import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
 import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+import { SprkMastheadSelectorComponent } from './sprk-masthead-selector/sprk-masthead-selector.component';
 import { SprkMastheadComponent } from './sprk-masthead.component';
 import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
 describe('SprkMastheadComponent', () => {
@@ -24,6 +25,7 @@ describe('SprkMastheadComponent', () => {
         SprkDropdownComponent,
         SprkMastheadAccordionComponent,
         SprkMastheadAccordionItemComponent,
+        SprkMastheadSelectorComponent,
       ],
     }).compileComponents();
   }));
@@ -88,27 +90,37 @@ describe('SprkMastheadComponent', () => {
 
   it('should add the aria-expanded attribute and show the narrow nav when the icon is clicked', () => {
     expect(hamburgerIcon.getAttribute('aria-expanded')).toEqual(null);
-    expect(component.isNarrowNavOpen).toEqual(false);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
+    ).toBeNull();
     hamburgerIcon.click();
     fixture.detectChanges();
     expect(hamburgerIcon.getAttribute('aria-expanded')).toEqual('true');
-    expect(component.isNarrowNavOpen).toEqual(true);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
+    ).not.toBeNull();
   });
 
   it('should add a class to body and show the narrow nav when the icon is clicked', () => {
-    expect(component.isNarrowNavOpen).toEqual(false);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
+    ).toBeNull();
     hamburgerIcon.click();
     fixture.detectChanges();
     expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
       true,
     );
-    expect(component.isNarrowNavOpen).toEqual(true);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
+    ).not.toBeNull();
     hamburgerIcon.click();
     fixture.detectChanges();
     expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
       false,
     );
-    expect(component.isNarrowNavOpen).toEqual(false);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
+    ).toBeNull();
   });
 
   it('should close the narrow nav on orientationchange', () => {
@@ -116,7 +128,9 @@ describe('SprkMastheadComponent', () => {
     fixture.detectChanges();
     window.dispatchEvent(new Event('orientationchange'));
     fixture.detectChanges();
-    expect(component.isNarrowNavOpen).toEqual(false);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
+    ).toBeNull();
   });
 
   it('should add data-id when idString has a value', () => {
@@ -198,8 +212,12 @@ describe('SprkMastheadComponent', () => {
     fixture.detectChanges();
     component.throttledUpdateLayoutState();
 
-    expect(component.isHidden).toBe(false);
-    expect(component.isNarrowLayout).toBe(false);
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Masthead').classList,
+    ).not.toContain('sprk-c-Masthead--hidden');
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
+    ).toBeNull();
   });
 
   it('should call throttledUpdateLayoutState to be called on resize', () => {
@@ -361,5 +379,10 @@ describe('SprkMastheadComponent', () => {
     expect(footerLink.getAttribute('href')).toEqual(
       'https://www.sparkdesignsystem.com',
     );
+  });
+
+  it('isElementVisible should return undefined if the element does not exist', () => {
+    const result = component.isElementVisible('foo');
+    expect(result).toEqual(undefined);
   });
 });
