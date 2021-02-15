@@ -367,7 +367,7 @@ export class SprkDropdownComponent implements OnChanges {
     event.preventDefault();
     this.isOpen = !this.isOpen;
     if (this.isOpen) {
-      this.openedEvent.emit(event);
+      this.openedEvent.emit();
     } else {
       this.closedEvent.emit();
     }
