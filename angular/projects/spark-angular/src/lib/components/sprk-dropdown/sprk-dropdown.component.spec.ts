@@ -112,6 +112,27 @@ describe('SprkDropdownComponent', () => {
     ).toEqual(1);
   });
 
+  it('should emit open and closed events when dropdown is opened or closed', (done) => {
+    let openEventEmitted = false;
+    let closedEventEmitted = false;
+
+    dropdownComponent.openedEvent.subscribe((g) => {
+      openEventEmitted = true;
+      done();
+    });
+    dropdownComponent.closedEvent.subscribe((g) => {
+      closedEventEmitted = true;
+      done();
+    });
+
+    dropdownTriggerElement.click();
+    expect(openEventEmitted).toEqual(true);
+    expect(closedEventEmitted).toEqual(false);
+
+    dropdownTriggerElement.click();
+    expect(closedEventEmitted).toEqual(true);
+  });
+
   it('should add the correct classes if additionalClasses are supplied', () => {
     wrapperComponent.additionalClasses = 'sprk-u-pam sprk-u-man';
     dropdownElement = fixture.nativeElement.querySelector('.sprk-c-Dropdown');

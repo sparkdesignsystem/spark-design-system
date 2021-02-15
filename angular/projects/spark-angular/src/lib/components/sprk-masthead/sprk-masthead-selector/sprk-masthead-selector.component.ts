@@ -231,6 +231,19 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   choiceMade: EventEmitter<string> = new EventEmitter();
 
   /**
+   * This event will be emitted
+   * when the Masthead Selector is opened.
+   */
+  @Output()
+  openedEvent: EventEmitter<any> = new EventEmitter();
+  /**
+   * This event will be emitted
+   * when the Masthead Selector is closed.
+   */
+  @Output()
+  closedEvent: EventEmitter<any> = new EventEmitter();
+
+  /**
    * @ignore
    */
   isOpen = false;
@@ -254,6 +267,11 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   toggle(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      this.openedEvent.emit();
+    } else {
+      this.closedEvent.emit();
+    }
   }
 
   @HostListener('document:click', ['$event'])

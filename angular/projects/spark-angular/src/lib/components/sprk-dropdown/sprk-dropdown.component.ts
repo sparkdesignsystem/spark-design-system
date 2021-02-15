@@ -326,6 +326,20 @@ export class SprkDropdownComponent implements OnChanges {
    */
   @Output()
   choiceMade: EventEmitter<string> = new EventEmitter();
+
+  /**
+   * This event will be emitted
+   * when the Dropdown is opened.
+   */
+  @Output()
+  openedEvent: EventEmitter<any> = new EventEmitter();
+  /**
+   * This event will be emitted
+   * when the Dropdown is closed.
+   */
+  @Output()
+  closedEvent: EventEmitter<any> = new EventEmitter();
+
   /**
    * @ignore
    */
@@ -352,6 +366,11 @@ export class SprkDropdownComponent implements OnChanges {
   toggle(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      this.openedEvent.emit(event);
+    } else {
+      this.closedEvent.emit();
+    }
   }
 
   @HostListener('document:click', ['$event'])
