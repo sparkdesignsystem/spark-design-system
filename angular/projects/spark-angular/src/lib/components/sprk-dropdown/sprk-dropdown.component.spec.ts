@@ -112,6 +112,27 @@ describe('SprkDropdownComponent', () => {
     ).toEqual(1);
   });
 
+  it('should emit open and closed events when dropdown is opened or closed', (done) => {
+    let openEventEmitted = false;
+    let closedEventEmitted = false;
+
+    dropdownComponent.openedEvent.subscribe((g) => {
+      openEventEmitted = true;
+      done();
+    });
+    dropdownComponent.closedEvent.subscribe((g) => {
+      closedEventEmitted = true;
+      done();
+    });
+
+    dropdownTriggerElement.click();
+    expect(openEventEmitted).toEqual(true);
+    expect(closedEventEmitted).toEqual(false);
+
+    dropdownTriggerElement.click();
+    expect(closedEventEmitted).toEqual(true);
+  });
+
   it('should add the correct classes if additionalClasses are supplied', () => {
     wrapperComponent.additionalClasses = 'sprk-u-pam sprk-u-man';
     dropdownElement = fixture.nativeElement.querySelector('.sprk-c-Dropdown');
@@ -710,6 +731,49 @@ describe('SprkDropdownComponent', () => {
           infoLine1: 'Information about this choice',
         },
         value: 'Choice Title 1',
+        active: false,
+      },
+    ];
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    paragraphs = fixture.nativeElement.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(2);
+  });
+
+  it('should not render empty paragraphs for choices using routerLink', () => {
+    fixture.detectChanges();
+    wrapperComponent.variant = 'informational';
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information',
+        },
+        routerLink: '/router-test',
+        value: 'Choice Title 1',
+        active: false,
+      },
+    ];
+    fixture.detectChanges();
+    dropdownTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    let paragraphs = fixture.nativeElement.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(3);
+
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+        },
+        value: 'Choice Title 1',
+        routerLink: '/router-test',
         active: false,
       },
     ];

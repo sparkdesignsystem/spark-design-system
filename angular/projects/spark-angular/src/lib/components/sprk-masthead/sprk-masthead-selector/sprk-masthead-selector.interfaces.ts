@@ -1,7 +1,7 @@
 /**
  * This choice object is used to
  * construct a selectable
- * choice item in the masthead selector.
+ * choice item in the Masthead Selector.
  */
 export interface ISprkMastheadSelectorChoice {
   /**
@@ -72,7 +72,7 @@ export interface ISprkMastheadSelectorChoice {
     infoLine1: string;
     /**
      * Value is rendered in a paragraph tag
-     * underneath the `infoLine1` paragraph.
+     * underneath the `infoLine2` paragraph.
      * Use to give extra information about the choice item.
      */
     infoLine2?: string;

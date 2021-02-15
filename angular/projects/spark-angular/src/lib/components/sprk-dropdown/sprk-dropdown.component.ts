@@ -139,7 +139,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
                 }"
                 [attr.aria-label]="choice.content.title"
               >
-                <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
+                <p sprkText variant="bodyOne">{{ choice.content.title }}</p>
                 <p sprkText variant="bodyTwo" *ngIf="choice.content.infoLine1">
                   {{ choice.content.infoLine1 }}
                 </p>
@@ -159,9 +159,13 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
                 }"
                 [attr.aria-label]="choice.content.title"
               >
-                <p class="sprk-b-TypeBodyOne">{{ choice.content.title }}</p>
-                <p>{{ choice.content.infoLine1 }}</p>
-                <p>{{ choice.content.infoLine2 }}</p>
+                <p sprkText variant="bodyOne">{{ choice.content.title }}</p>
+                <p sprkText variant="bodyTwo" *ngIf="choice.content.infoLine1">
+                  {{ choice.content.infoLine1 }}
+                </p>
+                <p sprkText variant="bodyTwo" *ngIf="choice.content.infoLine2">
+                  {{ choice.content.infoLine2 }}
+                </p>
               </a>
             </ng-template>
           </li>
@@ -322,6 +326,20 @@ export class SprkDropdownComponent implements OnChanges {
    */
   @Output()
   choiceMade: EventEmitter<string> = new EventEmitter();
+
+  /**
+   * This event will be emitted
+   * when the Dropdown is opened.
+   */
+  @Output()
+  openedEvent: EventEmitter<any> = new EventEmitter();
+  /**
+   * This event will be emitted
+   * when the Dropdown is closed.
+   */
+  @Output()
+  closedEvent: EventEmitter<any> = new EventEmitter();
+
   /**
    * @ignore
    */
@@ -348,6 +366,11 @@ export class SprkDropdownComponent implements OnChanges {
   toggle(event): void {
     event.preventDefault();
     this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      this.openedEvent.emit();
+    } else {
+      this.closedEvent.emit();
+    }
   }
 
   @HostListener('document:click', ['$event'])

@@ -73,6 +73,27 @@ describe('SprkMastheadSelectorComponent', () => {
     expect(mastheadSelectorComponent).toBeTruthy();
   });
 
+  it('should emit open and closed events when selector is opened or closed', (done) => {
+    let openEventEmitted = false;
+    let closedEventEmitted = false;
+
+    mastheadSelectorComponent.openedEvent.subscribe((g) => {
+      openEventEmitted = true;
+      done();
+    });
+    mastheadSelectorComponent.closedEvent.subscribe((g) => {
+      closedEventEmitted = true;
+      done();
+    });
+
+    mastheadSelectorTriggerElement.click();
+    expect(openEventEmitted).toEqual(true);
+    expect(closedEventEmitted).toEqual(false);
+
+    mastheadSelectorTriggerElement.click();
+    expect(closedEventEmitted).toEqual(true);
+  });
+
   it('should have the correct base classes on Masthead Selector content', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
@@ -405,7 +426,49 @@ describe('SprkMastheadSelectorComponent', () => {
     expect(paragraphs.length).toEqual(2);
   });
 
-  it('should set dropdown title to heading', () => {
+  it('should not render empty paragraphs for choices using routerLink', () => {
+    fixture.detectChanges();
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'More Information',
+        },
+        routerLink: '/router-test',
+        value: 'Choice Title 1',
+        active: false,
+      },
+    ];
+    fixture.detectChanges();
+    mastheadSelectorTriggerElement.click();
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    let paragraphs = fixture.nativeElement.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(3);
+
+    wrapperComponent.choices = [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+        },
+        routerLink: '/router-test',
+        value: 'Choice Title 1',
+        active: false,
+      },
+    ];
+    fixture.detectChanges();
+    expect(
+      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+    ).not.toBeNull();
+    paragraphs = fixture.nativeElement.querySelectorAll('p');
+    expect(paragraphs.length).toEqual(2);
+  });
+
+  it('should set selector title to heading', () => {
     wrapperComponent.heading = 'test';
     fixture.detectChanges();
     mastheadSelectorTriggerElement.click();
