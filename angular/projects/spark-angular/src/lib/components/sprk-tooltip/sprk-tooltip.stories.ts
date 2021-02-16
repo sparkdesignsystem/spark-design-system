@@ -25,12 +25,17 @@ const modules = {
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-tooltip
-      iconAdditionalClasses="sprk-c-Icon--filled"
-    >
-      Use Tooltips to provide info that’s not vital to completing the task.
-      Keep the text short and stick to what’s helpful and relevant.
-    </sprk-tooltip>
+    <div>
+      <p>
+        This is some demo text before the tooltip.
+        <sprk-tooltip
+          iconAdditionalClasses="sprk-c-Icon--filled"
+        >
+          Use Tooltips to provide info that’s not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </sprk-tooltip>
+      </p>
+    </div>
   `,
 });
 
