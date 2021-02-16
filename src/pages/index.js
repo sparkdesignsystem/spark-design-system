@@ -21,6 +21,7 @@ const teaserDesigners = {
   cta: {
     text: 'Go To Designer Basics',
     ctaVariant: 'button',
+    ctaLinkElement: 'a',
     buttonVariant: 'tertiary',
     href: '/principles/design-principles',
   },
@@ -46,6 +47,7 @@ const teaserDevelopers = {
   cta: {
     text: 'Go To Developer Basics',
     ctaVariant: 'button',
+    ctaLinkElement: 'a',
     buttonVariant: 'tertiary',
     href: '/installing-spark',
   },
@@ -72,6 +74,7 @@ const teaserComponents = {
   cta: {
     text: 'Go To Components',
     ctaVariant: 'button',
+    ctaLinkElement: 'a',
     buttonVariant: 'tertiary',
     href: '/using-spark/components/button',
   },
@@ -96,6 +99,7 @@ const teaserFoundations = {
   cta: {
     text: 'Go To Foundations',
     ctaVariant: 'button',
+    ctaLinkElement: 'a',
     buttonVariant: 'tertiary',
     href: '/using-spark/foundations/color',
   },
@@ -119,6 +123,7 @@ const teaserUtils = {
   cta: {
     text: 'Go To Utilities',
     ctaVariant: 'button',
+    ctaLinkElement: 'a',
     buttonVariant: 'tertiary',
     href: '/using-spark/foundations/css-utilities',
   },
@@ -141,6 +146,7 @@ const teaserNews = {
   cta: {
     text: 'Go To News',
     ctaVariant: 'button',
+    ctaLinkElement: 'a',
     buttonVariant: 'tertiary',
     href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
   },
