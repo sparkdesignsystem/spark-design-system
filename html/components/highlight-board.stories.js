@@ -15,7 +15,7 @@ Make sure to include keypress handlers in your JavaScript.
 - If the Buttons are being used to navigate
 to a new page, they should be \`<a>\` elements.
 If they are being used to trigger an event or action,
-then they should be \`<button>\` elements with \`aria-role=button\`.
+then they should be \`<button>\` elements.
 `,
   },
 };
