@@ -118,7 +118,9 @@ SprkHighlightBoard.propTypes = {
    */
   imgSrc: PropTypes.string,
   /**
-   * The `alt` text for the main image.
+   * The `alt` text for the main image. If the image used is decorative and
+   * does not present any important content, set this property to "" so
+   * the image will be hidden from assistive technology.
    */
   imgAlt: PropTypes.string,
   /**
