@@ -49,7 +49,7 @@ export const defaultStory = () => ({
       ctaText2="Developers"
       ctaHref2="#nogo"
       imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-      imgAlt="placeholder"
+      imgAlt=""
       idString="highlightboard-1"
     >
     </sprk-highlight-board>
@@ -92,7 +92,7 @@ export const stacked = () => ({
       ctaText="Learn More"
       type="stacked"
       imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-      imgAlt="placeholder"
+      imgAlt=""
       idString="highlightboard-4"
     >
     </sprk-highlight-board>
