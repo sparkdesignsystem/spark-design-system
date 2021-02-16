@@ -73,7 +73,7 @@ export const teaser = () => (
       media: {
         href: '#nogo',
         mediaLinkElement: 'a',
-        imgAlt: 'placeholder image',
+        imgAlt: 'Learn more',
         imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
         mediaAnalyticsString: 'Card:teaser-link',
         mediaVariant: 'img',
@@ -100,7 +100,7 @@ export const teaserWithDifferentElementOrder = () => (
       media: {
         href: '#nogo',
         mediaLinkElement: 'a',
-        imgAlt: 'placeholder image',
+        imgAlt: 'Learn more',
         imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
         mediaAnalyticsString: 'Card:teaser-link',
         mediaVariant: 'img',
@@ -130,7 +130,7 @@ export const twoUpCards = () => (
         media: {
           href: '#nogo',
           mediaLinkElement: 'a',
-          imgAlt: 'placeholder image',
+          imgAlt: 'Learn more',
           imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
@@ -156,7 +156,7 @@ export const twoUpCards = () => (
         media: {
           href: '#nogo',
           mediaLinkElement: 'a',
-          imgAlt: 'placeholder image',
+          imgAlt: 'Learn more',
           imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
@@ -191,7 +191,7 @@ export const threeUpCards = () => (
         media: {
           href: '#nogo',
           mediaLinkElement: 'a',
-          imgAlt: 'placeholder image',
+          imgAlt: 'Learn more',
           imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
@@ -217,7 +217,7 @@ export const threeUpCards = () => (
         media: {
           href: '#nogo',
           mediaLinkElement: 'a',
-          imgAlt: 'placeholder image',
+          imgAlt: 'Learn more',
           imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
@@ -243,7 +243,7 @@ export const threeUpCards = () => (
         media: {
           href: '#nogo',
           mediaLinkElement: 'a',
-          imgAlt: 'placeholder image',
+          imgAlt: 'Learn more',
           imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
@@ -278,7 +278,7 @@ export const fourUpCards = () => (
         media: {
           href: '#nogo',
           mediaLinkElement: 'a',
-          imgAlt: 'placeholder image',
+          imgAlt: 'Learn more',
           imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
@@ -304,7 +304,7 @@ export const fourUpCards = () => (
         media: {
           href: '#nogo',
           mediaLinkElement: 'a',
-          imgAlt: 'placeholder image',
+          imgAlt: 'Learn more',
           imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
@@ -330,7 +330,7 @@ export const fourUpCards = () => (
         media: {
           href: '#nogo',
           mediaLinkElement: 'a',
-          imgAlt: 'placeholder image',
+          imgAlt: 'Learn more',
           imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',
@@ -356,7 +356,7 @@ export const fourUpCards = () => (
         media: {
           href: '#nogo',
           mediaLinkElement: 'a',
-          imgAlt: 'placeholder image',
+          imgAlt: 'Learn more',
           imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
           mediaAnalyticsString: 'Card:teaser-link',
           mediaVariant: 'img',

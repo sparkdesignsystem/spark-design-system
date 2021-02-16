@@ -129,7 +129,7 @@ export const teaser = () =>
       <a href="#nogo" class="sprk-o-Stack__item">
         <img
           class="sprk-c-Card__media"
-          alt="Spark placeholder image."
+          alt="Learn more"
           src="https://spark-assets.netlify.app/desktop.jpg"
         >
       </a>
@@ -186,7 +186,7 @@ export const teaserWithDifferentElementOrder = () =>
 
       <a href="#nogo" class="sprk-o-Stack__item">
         <img
-          alt="Spark placeholder image"
+          alt="Learn more"
           src="https://spark-assets.netlify.app/desktop.jpg" />
       </a>
 
@@ -244,7 +244,7 @@ export const twoUpCards = () =>
         >
           <img
             class="sprk-c-Card__media"
-            alt="Spark placeholder image."
+            alt="Learn more"
             src="https://spark-assets.netlify.app/desktop.jpg"
           >
         </a>
@@ -295,7 +295,7 @@ export const twoUpCards = () =>
       <a href="#nogo" class="sprk-o-Stack__item">
         <img
           class="sprk-c-Card__media"
-          alt="Spark placeholder image."
+          alt="Learn more"
           src="https://spark-assets.netlify.app/desktop.jpg">
       </a>
 
