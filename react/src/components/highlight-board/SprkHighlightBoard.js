@@ -20,15 +20,8 @@ const SprkHighlightBoard = (props) => {
     variant,
     additionalClasses,
     idString,
-    analyticsString,
     ...other
   } = props;
-
-  warning(
-    (imgSrc && imgAlt) || (!imgSrc && !imgAlt),
-    `SprkHighlightBoard: If imgSrc is provided, then imgAlt is required
-    (and vice versa).`,
-  );
 
   warning(
     !(ctaText2 !== null && ctaText === null),
@@ -149,7 +142,8 @@ SprkHighlightBoard.propTypes = {
    */
   ctaAnalytics: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a
+   * unique selector for automated tools.
    */
   ctaIdString: PropTypes.string,
   /** The text for the second call to action. */
@@ -174,11 +168,13 @@ SprkHighlightBoard.propTypes = {
    */
   variant: PropTypes.oneOf(['noImage', 'stacked']),
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as
+   * a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to
+   * the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
 };
