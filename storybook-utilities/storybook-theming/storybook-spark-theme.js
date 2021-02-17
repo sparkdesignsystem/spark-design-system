@@ -25,7 +25,7 @@ export default create({
   appBg: '#f3f3f3',
   appBorderColor: 'rgb(51, 51, 51)',
   appBorderRadius: 4,
-  fontBase: '"urw-din", sans-serif',
+  fontBase: 'RocketSans, Helvetica, "Helvetica Neue", Arial, sans-serif',
   fontCode: 'monospace',
   barTextColor: 'rgb(51, 51, 51)',
   barSelectedColor: 'rgb(51, 51, 51)',
