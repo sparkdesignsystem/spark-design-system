@@ -19,12 +19,11 @@ class SprkInputElement extends Component {
     }
 
     this.calculateAriaDescribedBy = this.calculateAriaDescribedBy.bind(this);
+    this.setAriaDescribedBy = this.setAriaDescribedBy.bind(this);
   }
 
   componentDidMount() {
-    this.setState({
-      calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
-    });
+    this.setAriaDescribedBy();
   }
 
   componentDidUpdate(prevProps) {
@@ -34,10 +33,14 @@ class SprkInputElement extends Component {
       errorContainerId !== prevProps.errorContainerId ||
       ariaDescribedBy !== prevProps.ariaDescribedBy
     ) {
-      this.setState({
-        calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
-      });
+      this.setAriaDescribedBy();
     }
+  }
+
+  setAriaDescribedBy() {
+    this.setState({
+      calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
+    });
   }
 
   calculateAriaDescribedBy() {
@@ -172,6 +175,12 @@ SprkInputElement.propTypes = {
    * attribute on the Input.
    */
   ariaDescribedBy: propTypes.string,
+  children: propTypes.node,
+  disabled: propTypes.bool,
+  hiddenLabel: propTypes.bool,
+  forwardedRef: propTypes.shape(),
+  value: propTypes.string,
+  defaultValue: propTypes.string,
 };
 
 export default SprkInputElement;
