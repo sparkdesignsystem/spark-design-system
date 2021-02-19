@@ -40,8 +40,8 @@ class SprkTooltip extends Component {
     const elemX = trigger.getBoundingClientRect().left;
     const elemY = trigger.getBoundingClientRect().top;
 
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
+    const viewportWidth = document.documentElement.clientWidth;
+    const viewportHeight = document.documentElement.clientHeight;
 
     const maxWidth = 328;
     const triggerWidth = 16;
