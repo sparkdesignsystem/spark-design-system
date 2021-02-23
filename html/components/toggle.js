@@ -110,6 +110,13 @@ const bindToggleUIEvents = (element) => {
   // Add click event listener to trigger for each toggle collection we find
   toggleTrigger.addEventListener('click', (e) => {
     e.preventDefault();
+
+    // If we are in the middle of handling the previous toggle event,
+    // then we should ignore this event
+    if (e.currentTarget.style.pointerEvents === 'none') {
+      return;
+    }
+
     // Disable clicks till animation runs
     e.currentTarget.style.pointerEvents = 'none';
     handleToggleClick(
