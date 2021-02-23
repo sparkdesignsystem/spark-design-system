@@ -25,7 +25,7 @@
   "dependencies": {
     "@sparkdesignsystem/spark-styles": "^1.1.0",
     "focus-visible": "5.0.2",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9"
   }
 }
