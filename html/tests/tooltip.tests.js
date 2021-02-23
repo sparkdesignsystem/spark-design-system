@@ -156,12 +156,8 @@ describe('Tooltip tests', () => {
     });
 
     it('should add the top left positioning class', () => {
-      Object.defineProperty(document.documentElement, 'clientWidth', {
-        value: 100,
-      });
-      Object.defineProperty(document.documentElement, 'clientHeight', {
-        value: 100,
-      });
+      window.innerWidth = 100;
+      window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
         return { top: 75, left: 75 };
@@ -174,12 +170,8 @@ describe('Tooltip tests', () => {
     });
 
     it('should add the top right positioning class', () => {
-      Object.defineProperty(document.documentElement, 'clientWidth', {
-        value: 100,
-      });
-      Object.defineProperty(document.documentElement, 'clientHeight', {
-        value: 100,
-      });
+      window.innerWidth = 100;
+      window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
         return { top: 75, left: 25 };
@@ -192,12 +184,8 @@ describe('Tooltip tests', () => {
     });
 
     it('should add the bottom left positioning class', () => {
-      Object.defineProperty(document.documentElement, 'clientWidth', {
-        value: 100,
-      });
-      Object.defineProperty(document.documentElement, 'clientHeight', {
-        value: 100,
-      });
+      window.innerWidth = 100;
+      window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
         return { top: 25, left: 75 };
@@ -210,12 +198,8 @@ describe('Tooltip tests', () => {
     });
 
     it('should add the bottom right positioning class', () => {
-      Object.defineProperty(document.documentElement, 'clientWidth', {
-        value: 100,
-      });
-      Object.defineProperty(document.documentElement, 'clientHeight', {
-        value: 100,
-      });
+      window.innerWidth = 100;
+      window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
         return { top: 25, left: 25 };
@@ -228,12 +212,8 @@ describe('Tooltip tests', () => {
     });
 
     it('should add positioning class on hover', () => {
-      Object.defineProperty(document.documentElement, 'clientWidth', {
-        value: 100,
-      });
-      Object.defineProperty(document.documentElement, 'clientHeight', {
-        value: 100,
-      });
+      window.innerWidth = 100;
+      window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
         return { top: 75, left: 75 };
@@ -248,12 +228,8 @@ describe('Tooltip tests', () => {
     });
 
     it('should add positioning class on focus', () => {
-      Object.defineProperty(document.documentElement, 'clientWidth', {
-        value: 100,
-      });
-      Object.defineProperty(document.documentElement, 'clientHeight', {
-        value: 100,
-      });
+      window.innerWidth = 100;
+      window.innerHeight = 100;
 
       trigger.getBoundingClientRect = () => {
         return { top: 75, left: 75 };
