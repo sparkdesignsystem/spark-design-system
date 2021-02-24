@@ -22,8 +22,8 @@ const addPositioningClass = (trigger, tooltip) => {
   const elemX = trigger.getBoundingClientRect().left;
   const elemY = trigger.getBoundingClientRect().top;
 
-  const viewportWidth = window.screen.width;
-  const viewportHeight = window.screen.height;
+  const viewportWidth = document.documentElement.clientWidth;
+  const viewportHeight = document.documentElement.clientHeight;
 
   const maxWidth = 328;
   const triggerWidth = 16;
