@@ -20,7 +20,6 @@ export const defaultStory = () => {
   }, []);
 
   return `
-  Some example text to go before for testing and  more
     <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
       <button
         type="button"
