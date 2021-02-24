@@ -1,24 +1,6 @@
 ////
 /// @group tooltip
 ////
-
-@keyframes fadeInFromNone {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
-
 .sprk-c-Tooltip__container {
   position: relative;
   display: inline-flex;
@@ -59,9 +41,9 @@
   /* By default, IE will ignore this line and use the previous */
   width: $sprk-tooltip-preferred-width;
   z-index: $sprk-tooltip-z-index;
-  // transition: opacity 200ms ease-out;
+  transition: $sprk-tooltip-transition;
   opacity: 0;
-  display: none;
+  visibility: hidden;
 
   &::selection {
     color: $sprk-white;
@@ -162,9 +144,8 @@
 .sprk-c-Tooltip__trigger:focus + .sprk-c-Tooltip,
 .sprk-c-Tooltip__trigger.sprk-c-Tooltip--toggled + .sprk-c-Tooltip,
 .sprk-c-Tooltip:hover {
-  display: block;
-  animation: fadeInFromNone 0.5s ease-out;
-  animation-fill-mode: forwards;
+  opacity: 1;
+  visibility: visible;
 
   &.sprk-c-Tooltip--top-left {
     top: auto;
