@@ -253,11 +253,39 @@ describe('Toggle tests', () => {
     ).toBe(true);
   });
 
-  it(`should not add Accordion__item class 
+  it(`should not add Accordion__item class
       if toggle is not an accordion`, () => {
     handleToggleClick(content, null, null, trigger);
     expect(container.classList.contains('sprk-c-Accordion__item--open')).toBe(
       false,
     );
+  });
+
+  it('should ignore repeated clicks during animation', () => {
+    bindToggleUIEvents(container);
+
+    // the first click should open the toggle
+    trigger.dispatchEvent(new window.Event('click'));
+    expect(icon.classList).toContain('sprk-c-Icon--open');
+
+    // clicking it again immediately should not close the toggle
+    trigger.dispatchEvent(new window.Event('click'));
+    expect(icon.classList).toContain('sprk-c-Icon--open');
+  });
+
+  it('should allow repeated clicks after animation', (cb) => {
+    bindToggleUIEvents(container);
+    expect(icon.classList).not.toContain('sprk-c-Icon--open');
+
+    // the first click should open the toggle
+    trigger.dispatchEvent(new window.Event('click'));
+    expect(icon.classList).toContain('sprk-c-Icon--open');
+
+    setTimeout(() => {
+      // clicking it again after waiting should close the toggle
+      trigger.dispatchEvent(new window.Event('click'));
+      expect(icon.classList).not.toContain('sprk-c-Icon--open');
+      cb();
+    }, 100);
   });
 });
