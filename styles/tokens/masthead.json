@@ -551,6 +551,15 @@
         "themable": true
       },
       "item": {
+        "border-bottom": {
+          "comment": "The border bottom of the big navigation items in the Masthead Extended.",
+          "value": "0.125rem solid transparent",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
         "active-border-bottom": {
           "comment": "The border bottom of the active big navigation items in the Masthead Extended.",
           "value": "0.125rem solid {red.value}",
