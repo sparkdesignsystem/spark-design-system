@@ -1,7 +1,11 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkCardModule } from './sprk-card.module';
+import { SprkCardContentModule } from './directives/sprk-card-content/sprk-card-content.module';
+import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkCardComponent } from './sprk-card.component';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
+import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
+import { SprkHeadingModule } from '../../directives/sprk-heading/sprk-heading.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { RouterModule } from '@angular/router';
@@ -25,7 +29,11 @@ const modules = {
   imports: [
     SprkCardModule,
     SprkStackModule,
+    SprkCardContentModule,
     SprkStackItemModule,
+    SprkHeadingModule,
+    SprkLinkDirectiveModule,
+    SprkTextModule,
     RouterModule.forRoot([
       {
         path: 'iframe.html',
@@ -39,18 +47,28 @@ const modules = {
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-card
-      cardType="base"
-      idString="card-default"
-    >
-      <div class="
-        sprk-o-Stack__item
-        sprk-c-Card__content
-        sprk-o-Stack
-        sprk-o-Stack--medium">
-        Base Card Content
-      </div>
-    </sprk-card>
+  <sprk-card idString="new-card">
+    <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
+      <p sprkStackItem sprkText variant="bodyTwo">
+        New Default Card. This works without the cardType="base" because
+        we have ng-content running for when cardType=base
+        but we also have the default cardType set to base if not supplied.
+      </p>
+    </sprk-stack>
+  </sprk-card>
+
+  <sprk-card
+    cardType="base"
+    idString="card-default"
+  >
+    <div class="
+      sprk-o-Stack__item
+      sprk-c-Card__content
+      sprk-o-Stack
+      sprk-o-Stack--medium">
+      Old Card
+    </div>
+  </sprk-card>
   `,
 });
 
@@ -75,6 +93,14 @@ export const standout = () => ({
         sprk-c-Card__content
         sprk-o-Stack
         sprk-o-Stack--medium">Standout Card Content</div>
+    </sprk-card>
+
+    <sprk-card idString="standout" isStandout="true">
+      <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
+        <p sprkStackItem sprkText variant="bodyTwo">
+          New Standout Card
+        </p>
+      </sprk-stack>
     </sprk-card>
   `,
 });
@@ -153,6 +179,51 @@ export const teaser = () => ({
       additionalCtaClasses="sprk-c-Button--secondary"
       idString="card-teaser"
     >
+    </sprk-card>
+
+
+    <sprk-card idString="card-teaser">
+      <a
+        sprkLink
+        variant="unstyled"
+        routerLink="/test"
+        sprkStackItem
+        [analyticsString]="img-link-analytics"
+      >
+        <img
+          class="sprk-c-Card__media"
+          alt="Learn more"
+          src="https://spark-assets.netlify.app/desktop.jpg"
+        />
+      </a>
+
+      <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+        <h3 sprkHeading variant="displayFive" sprkStackItem>
+          New Teaser Card
+        </h3>
+
+        <p sprkText variant="bodytwo" sprkStackItem>
+          Lorem ipsum dolor sit amet, doctus
+          invenirevix te. Facilisi perpetua.
+          This card words because it falls into
+          the ng-content catch because the default
+          cardType is base which allows for ng-content.
+          The old one works still because we did not remove
+          the old cardType input from the component.
+        </p>
+
+        <div sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            routerLink="/test"
+            class="sprk-c-Button sprk-c-Button--secondary"
+            analyticsString="test-cta"
+          >
+            Learn More
+          </a>
+        </div>
+      </sprk-stack>
     </sprk-card>
  `,
 });
