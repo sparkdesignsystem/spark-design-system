@@ -26,6 +26,8 @@ export { SprkAwardComponent } from './lib/components/sprk-award/sprk-award.compo
 export { SprkAwardModule } from './lib/components/sprk-award/sprk-award.module';
 export { SprkCardComponent } from './lib/components/sprk-card/sprk-card.component';
 export { SprkCardModule } from './lib/components/sprk-card/sprk-card.module';
+export { SprkCardContentDirective } from './lib/components/sprk-card/directives/sprk-card-content/sprk-card-content.directive';
+export { SprkCardContentModule } from './lib/components/sprk-card/directives/sprk-card-content/sprk-card-content.module';
 export { SprkDictionaryComponent } from './lib/components/sprk-dictionary/sprk-dictionary.component';
 export { SprkDictionaryModule } from './lib/components/sprk-dictionary/sprk-dictionary.module';
 export { SprkDividerComponent } from './lib/components/sprk-divider/sprk-divider.component';
