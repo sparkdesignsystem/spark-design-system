@@ -224,6 +224,12 @@ export class SprkCardComponent {
   @Input()
   cardType: 'base' | 'teaser' | 'teaserHeading' = 'base';
   /**
+   * If `true`, the card will receive
+   * the standout design styles.
+   */
+  @Input()
+  isStandout: boolean;
+  /**
    * The main content
    * of the Card. Placed between
    * the title and call to action.
@@ -392,6 +398,10 @@ export class SprkCardComponent {
    */
   getClassesCard(): string {
     const classArray: string[] = ['sprk-c-Card', 'sprk-o-Stack'];
+
+    if (this.isStandout) {
+      classArray.push('sprk-c-Card--standout');
+    }
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
