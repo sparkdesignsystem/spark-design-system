@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import SprkLabel from '../SprkLabel/SprkLabel';
 import SprkTextarea from '../SprkTextarea/SprkTextarea';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
+import SprkFieldError from '../SprkFieldError/SprkFieldError';
+import SprkHelperText from '../SprkHelperText/SprkHelperText';
 
 class SprkTextareaContainer extends Component {
   constructor(props) {
@@ -16,6 +18,9 @@ class SprkTextareaContainer extends Component {
     let id;
     let labelFor;
     let errorContainerID;
+    let helperTextID;
+    let inputAriaDescribedBy;
+    let inputAriaDescribedByArray = [];
 
     /*
      * Store references to id, for
@@ -24,14 +29,42 @@ class SprkTextareaContainer extends Component {
     React.Children.forEach(children, (child) => {
       if (child.type.name === SprkTextarea.name) {
         id = child.props.id;
+        inputAriaDescribedBy = child.props.ariaDescribedBy;
       }
       if (child.type.name === SprkLabel.name) {
         labelFor = child.props.htmlFor;
       }
-      if (child.type.name === SprkErrorContainer.name) {
+      if (
+        child.type.name === SprkFieldError.name ||
+        child.type.name === SprkErrorContainer.name
+      ) {
         errorContainerID = child.props.id;
       }
+      if (child.type.name === SprkHelperText.name) {
+        helperTextID = child.props.id;
+      }
     });
+
+    /* Check to see if the errorContainerID
+     * and helperTextID are in the inputAriaDescribedByArray.
+     * If they aren't, add it to the array.
+     */
+    if (helperTextID || errorContainerID) {
+      if (inputAriaDescribedBy) {
+        inputAriaDescribedByArray = inputAriaDescribedBy.split(' ');
+      }
+      if (helperTextID) {
+        if (!inputAriaDescribedByArray.includes(helperTextID)) {
+          inputAriaDescribedByArray.push(helperTextID);
+        }
+      }
+      if (errorContainerID) {
+        if (!inputAriaDescribedByArray.includes(errorContainerID)) {
+          inputAriaDescribedByArray.push(errorContainerID);
+        }
+      }
+      inputAriaDescribedBy = inputAriaDescribedByArray.join(' ');
+    }
 
     if (id && labelFor && id.length > 0 && labelFor.length > 0) {
       const childrenElements = React.Children.map(children, (child) => {
@@ -53,18 +86,12 @@ class SprkTextareaContainer extends Component {
         }
 
         /*
-         * If there is an error container
-         * with an id then match the aria-describedby
-         * on the input to the id on the
-         * error container.
+         * If there is an inputAriaDescribedBy,
+         * add it to the SprkTextarea element.
          */
-        if (
-          errorContainerID &&
-          child.type.name === SprkTextarea.name &&
-          child.props.ariaDescribedBy !== errorContainerID
-        ) {
+        if (inputAriaDescribedBy && child.type.name === SprkTextarea.name) {
           return React.cloneElement(child, {
-            ariaDescribedBy: errorContainerID,
+            ariaDescribedBy: inputAriaDescribedBy,
           });
         }
 
