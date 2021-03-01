@@ -133,10 +133,18 @@ describe('SprkCheckboxItemComponent', () => {
     fixture3.detectChanges();
     fixture4.detectChanges();
 
-    checkboxItemElement1 = checkboxItemFixture1.nativeElement.querySelector('div');
-    checkboxItemElement2 = checkboxItemFixture2.nativeElement.querySelector('div');
-    checkboxItemElement3 = checkboxItemFixture3.nativeElement.querySelector('div');
-    checkboxItemElement4 = checkboxItemFixture4.nativeElement.querySelector('div');
+    checkboxItemElement1 = checkboxItemFixture1.nativeElement.querySelector(
+      'div',
+    );
+    checkboxItemElement2 = checkboxItemFixture2.nativeElement.querySelector(
+      'div',
+    );
+    checkboxItemElement3 = checkboxItemFixture3.nativeElement.querySelector(
+      'div',
+    );
+    checkboxItemElement4 = checkboxItemFixture4.nativeElement.querySelector(
+      'div',
+    );
     checkboxInputElement1 = fixture1.debugElement.query(By.css('input'))
       .nativeElement;
     checkboxLabelElement1 = fixture1.debugElement.query(By.css('label'))
@@ -163,6 +171,7 @@ describe('SprkCheckboxItemComponent', () => {
     expect(component1).toBeTruthy();
     expect(component2).toBeTruthy();
     expect(component3).toBeTruthy();
+    expect(component4).toBeTruthy();
   });
 
   it('should add classes when additionalClasses has a value', () => {
@@ -170,6 +179,14 @@ describe('SprkCheckboxItemComponent', () => {
     checkboxItemFixture1.detectChanges();
     expect(checkboxItemElement1.classList.toString()).toEqual(
       'sprk-b-SelectionContainer sprk-b-Checkbox sprk-u-man',
+    );
+  });
+
+  it('should add correct class when isVisibilityToggle is true', () => {
+    checkboxItemComponent4.isVisibilityToggle = true;
+    checkboxItemFixture4.detectChanges();
+    expect(checkboxItemElement4.classList.toString()).toEqual(
+      'sprk-b-SelectionContainer sprk-b-Checkbox sprk-b-InputContainer__visibility-toggle',
     );
   });
 
@@ -187,9 +204,9 @@ describe('SprkCheckboxItemComponent', () => {
   it('should add the huge variant class if variant is huge', () => {
     checkboxItemComponent1.variant = 'huge';
     checkboxItemFixture1.detectChanges();
-    expect(checkboxItemElement1.classList.contains('sprk-b-Checkbox--huge')).toBe(
-      true,
-    );
+    expect(
+      checkboxItemElement1.classList.contains('sprk-b-Checkbox--huge'),
+    ).toBe(true);
   });
 
   it("should console.warn if for and id both exist but don't match", () => {

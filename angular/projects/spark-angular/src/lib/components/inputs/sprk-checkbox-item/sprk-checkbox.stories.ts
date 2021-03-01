@@ -322,7 +322,7 @@ export const invalidCheckbox = () => ({
       </fieldset>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">
@@ -687,7 +687,7 @@ export const hugeInvalid = () => ({
       </fieldset>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">
@@ -1358,7 +1358,7 @@ export const legacyStory = () => ({
           for="checkbox-1"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 1
+          Legacy Checkbox Item 1
         </label>
       </sprk-selection-item-container>
 
@@ -1378,7 +1378,7 @@ export const legacyStory = () => ({
           for="checkbox-2"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 2
+          Legacy Checkbox Item 2
         </label>
       </sprk-selection-item-container>
 
@@ -1398,7 +1398,7 @@ export const legacyStory = () => ({
           for="checkbox-3"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 3
+          Legacy Checkbox Item 3
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>
@@ -1442,7 +1442,7 @@ export const legacyInvalidStory = () => ({
           for="checkbox-1"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 1
+          Legacy Checkbox Item 1
         </label>
       </sprk-selection-item-container>
 
@@ -1462,7 +1462,7 @@ export const legacyInvalidStory = () => ({
           for="checkbox-2"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 2
+          Legacy Checkbox Item 2
         </label>
       </sprk-selection-item-container>
 
@@ -1482,7 +1482,7 @@ export const legacyInvalidStory = () => ({
           for="checkbox-3"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 3
+          Legacy Checkbox Item 3
         </label>
       </sprk-selection-item-container>
       <span sprkFieldError>
@@ -1536,7 +1536,7 @@ export const legacyDisabledStory = () => ({
           class="sprk-b-Label--disabled"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 1
+          Legacy Checkbox Item 1
         </label>
       </sprk-selection-item-container>
 
@@ -1558,7 +1558,7 @@ export const legacyDisabledStory = () => ({
           class="sprk-b-Label--disabled"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 2
+          Legacy Checkbox Item 2
         </label>
       </sprk-selection-item-container>
 
@@ -1580,7 +1580,7 @@ export const legacyDisabledStory = () => ({
           class="sprk-b-Label--disabled"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 3
+          Legacy Checkbox Item 3
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>

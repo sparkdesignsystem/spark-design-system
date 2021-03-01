@@ -8,8 +8,8 @@ export { SprkHugeInputContainerComponent } from './lib/components/inputs/sprk-hu
 export { SprkHugeInputContainerModule } from './lib/components/inputs/sprk-huge-input-container/sprk-huge-input-container.module';
 export { SprkIconInputContainerComponent } from './lib/components/inputs/sprk-icon-input-container/sprk-icon-input-container.component';
 export { SprkIconInputContainerModule } from './lib/components/inputs/sprk-icon-input-container/sprk-icon-input-container.module';
-export { SparkInputContainerComponent } from './lib/components/inputs/sprk-input-container/sprk-input-container.component';
-export { SparkInputContainerModule } from './lib/components/inputs/sprk-input-container/sprk-input-container.module';
+export { SprkInputContainerComponent } from './lib/components/inputs/sprk-input-container/sprk-input-container.component';
+export { SprkInputContainerModule } from './lib/components/inputs/sprk-input-container/sprk-input-container.module';
 export { SprkSelectionContainerComponent } from './lib/components/inputs/sprk-selection-container/sprk-selection-container.component';
 export { SprkSelectionContainerModule } from './lib/components/inputs/sprk-selection-container/sprk-selection-container.module';
 export { SprkSelectionItemContainerComponent } from './lib/components/inputs/sprk-selection-item-container/sprk-selection-item-container.component';
@@ -46,6 +46,8 @@ export { SprkMastheadAccordionItemComponent } from './lib/components/sprk-masthe
 export { SprkMastheadAccordionItemModule } from './lib/components/sprk-masthead/sprk-masthead-accordion-item/sprk-masthead-accordion-item.module';
 export { SprkMastheadAccordionComponent } from './lib/components/sprk-masthead/sprk-masthead-accordion/sprk-masthead-accordion.component';
 export { SprkMastheadAccordionModule } from './lib/components/sprk-masthead/sprk-masthead-accordion/sprk-masthead-accordion.module';
+export { SprkMastheadSelectorComponent } from './lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.component';
+export { SprkMastheadSelectorModule } from './lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.module';
 export { SprkMastheadComponent } from './lib/components/sprk-masthead/sprk-masthead.component';
 export { SprkMastheadModule } from './lib/components/sprk-masthead/sprk-masthead.module';
 export { SprkModalComponent } from './lib/components/sprk-modal/sprk-modal.component';
@@ -86,6 +88,8 @@ export { SprkHelperTextDirective } from './lib/directives/inputs/sprk-helper-tex
 export { SprkHelperTextModule } from './lib/directives/inputs/sprk-helper-text/sprk-helper-text.module';
 export { SprkInputDirective } from './lib/directives/inputs/sprk-input/sprk-input.directive';
 export { SprkInputModule } from './lib/directives/inputs/sprk-input/sprk-input.module';
+export { SprkSelectDirective } from './lib/directives/inputs/sprk-select/sprk-select.directive';
+export { SprkSelectModule } from './lib/directives/inputs/sprk-select/sprk-select.module';
 export { SprkLabelDirective } from './lib/directives/inputs/sprk-label/sprk-label.directive';
 export { SprkLabelModule } from './lib/directives/inputs/sprk-label/sprk-label.module';
 export { SprkSelectionInputDirective } from './lib/directives/inputs/sprk-selection-input/sprk-selection-input.directive';
@@ -116,8 +120,10 @@ export { SprkTabbedNavigationTabDirective } from './lib/directives/tabbed-naviga
 export { SprkTabbedNavigationTabModule } from './lib/directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
 export { SprkIconInputContainerComponent as ɵbu } from './lib/components/inputs/sprk-icon-input-container/sprk-icon-input-container.component';
 export { SprkIconInputContainerModule as ɵbt } from './lib/components/inputs/sprk-icon-input-container/sprk-icon-input-container.module';
-export { SparkInputContainerComponent as ɵbn } from './lib/components/inputs/sprk-input-container/sprk-input-container.component';
-export { SparkInputContainerModule as ɵbm } from './lib/components/inputs/sprk-input-container/sprk-input-container.module';
+export { SprkInputContainerComponent as ɵbn } from './lib/components/inputs/sprk-input-container/sprk-input-container.component';
+export { SprkInputContainerModule as ɵbm } from './lib/components/inputs/sprk-input-container/sprk-input-container.module';
+export { SprkInputContainerComponent as SparkInputContainerComponent } from './lib/components/inputs/sprk-input-container/sprk-input-container.component';
+export { SprkInputContainerModule as SparkInputContainerModule } from './lib/components/inputs/sprk-input-container/sprk-input-container.module';
 export { SprkSelectionContainerComponent as ɵbw } from './lib/components/inputs/sprk-selection-container/sprk-selection-container.component';
 export { SprkSelectionContainerModule as ɵbv } from './lib/components/inputs/sprk-selection-container/sprk-selection-container.module';
 export { SprkSelectionItemContainerComponent as ɵbx } from './lib/components/inputs/sprk-selection-item-container/sprk-selection-item-container.component';
@@ -240,3 +246,11 @@ export { SprkTooltipComponent } from './lib/components/sprk-tooltip/sprk-tooltip
 export { SprkTooltipModule } from './lib/components/sprk-tooltip/sprk-tooltip.module';
 export { SprkDividerDirectiveModule } from './lib/directives/sprk-divider/sprk-divider.module';
 export { SprkDividerDirective } from './lib/directives/sprk-divider/sprk-divider.directive';
+export { SprkTextareaDirective } from './lib/directives/inputs/sprk-textarea/sprk-textarea.directive';
+export { SprkTextareaModule } from './lib/directives/inputs/sprk-textarea/sprk-textarea.module';
+export { SprkTabsComponent } from './lib/components/sprk-tabs/sprk-tabs.component';
+export { SprkTabsModule } from './lib/components/sprk-tabs/sprk-tabs.module';
+export { SprkTabsPanelDirective } from './lib/directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.directive';
+export { SprkTabsPanelModule } from './lib/directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.module';
+export { SprkTabsButtonDirective } from './lib/directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.directive';
+export { SprkTabsButtonModule } from './lib/directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.module';
