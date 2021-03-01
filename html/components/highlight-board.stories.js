@@ -15,7 +15,7 @@ Make sure to include keypress handlers in your JavaScript.
 - If the Buttons are being used to navigate
 to a new page, they should be \`<a>\` elements.
 If they are being used to trigger an event or action,
-then they should be \`<button>\` elements with \`aria-role=button\`.
+then they should be \`<button>\` elements.
 `,
   },
 };
@@ -28,7 +28,7 @@ export const defaultStory = () => `
       <img
         class="sprk-c-HighlightBoard__image"
         src="https://spark-assets.netlify.app/desktop.jpg"
-        alt="desktop"
+        alt=""
       >
 
       <div class="
@@ -58,12 +58,12 @@ export const defaultStory = () => `
           </div>
 
           <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-            <a 
+            <a
               class="
-                sprk-c-Button 
-                sprk-c-Button--full@s 
+                sprk-c-Button
+                sprk-c-Button--full@s
                 sprk-c-Button--secondary
-              " 
+              "
               href="#nogo">
               Developers
             </a>
@@ -142,7 +142,7 @@ export const stacked = () => `
   >
     <img
       class="sprk-c-HighlightBoard__image"
-      src="https://spark-assets.netlify.app/desktop.jpg" alt="desktop">
+      src="https://spark-assets.netlify.app/desktop.jpg" alt="">
 
     <div class="
       sprk-c-HighlightBoard__content
