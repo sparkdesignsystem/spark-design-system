@@ -322,6 +322,12 @@
           "file": "settings",
           "themable": true
         },
+        "dropdown-font-size": {
+          "comment": "The font size of the selector dropdown.",
+          "value": "{font.size.body.one.value}",
+          "file": "settings",
+          "themable": true
+        },
         "dropdown-border-bottom-mask-open": {
           "comment": "The bottom border that gets applied to the selector dropdown when open in the Masthead with Extended Navigation.",
           "value": "2px solid {gray.value}",
