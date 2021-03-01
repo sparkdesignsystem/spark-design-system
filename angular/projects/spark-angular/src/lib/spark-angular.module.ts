@@ -78,6 +78,7 @@ import { SprkCheckboxItemModule } from './components/inputs/sprk-checkbox-item/s
 import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divider.module';
 import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module';
 import { SprkTextareaModule } from './directives/inputs/sprk-textarea/sprk-textarea.module';
+import { SprkCardHeaderModule } from './components/sprk-card/directives/sprk-card-header/sprk-card-header.module';
 @NgModule({
   exports: [
     SprkAlertModule,
@@ -87,6 +88,7 @@ import { SprkTextareaModule } from './directives/inputs/sprk-textarea/sprk-texta
     SprkButtonModule,
     SprkCardModule,
     SprkCardContentModule,
+    SprkCardHeaderModule,
     SprkDictionaryModule,
     SprkDividerModule,
     SprkDropdownModule,

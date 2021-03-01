@@ -1,6 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkCardModule } from './sprk-card.module';
 import { SprkCardContentModule } from './directives/sprk-card-content/sprk-card-content.module';
+import { SprkCardHeaderModule } from './directives/sprk-card-header/sprk-card-header.module';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkCardComponent } from './sprk-card.component';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
@@ -32,6 +33,7 @@ const modules = {
     SprkCardContentModule,
     SprkStackItemModule,
     SprkHeadingModule,
+    SprkCardHeaderModule,
     SprkLinkDirectiveModule,
     SprkTextModule,
     RouterModule.forRoot([
@@ -150,7 +152,36 @@ export const highlightedHeader = () => ({
           signiferumque at. Numquam.
         </p>
       </div>
-  </sprk-card>`,
+  </sprk-card>
+
+  <sprk-card idString="highlighted-header" isStandout="true">
+    <sprk-stack sprkCardHeader sprkStackItem itemSpacing="medium">
+      <h3
+        sprkHeading
+        sprkStackItem
+        variant="displaySeven"
+        class="sprk-u-Color--white"
+      >
+        Description
+      </h3>
+
+      <h4
+        sprkHeading
+        sprkStackItem
+        variant="displayFive"
+        class="sprk-u-Color--white"
+      >
+        Card Title
+      </h4>
+    </sprk-stack>
+
+    <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
+      <p sprkStackItem sprkText variant="bodyTwo">
+        New highlighted header Card.
+      </p>
+    </sprk-stack>
+  </sprk-card>
+  `,
 });
 
 highlightedHeader.story = {
