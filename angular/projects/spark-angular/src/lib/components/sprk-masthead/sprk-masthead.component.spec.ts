@@ -329,7 +329,7 @@ describe('SprkMastheadComponent', () => {
     hamburgerIcon.click();
     fixture.detectChanges();
     const selectorTrigger = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown__trigger',
+      '.sprk-c-Masthead__selector',
     );
     selectorTrigger.click();
     fixture.detectChanges();
@@ -369,7 +369,7 @@ describe('SprkMastheadComponent', () => {
     hamburgerIcon.click();
     fixture.detectChanges();
     const selectorTrigger = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown__trigger',
+      '.sprk-c-Masthead__selector',
     );
     selectorTrigger.click();
     fixture.detectChanges();
