@@ -317,17 +317,18 @@
 // Selector Dropdown
 // ==================================================================
 .sprk-c-Masthead__selector-dropdown {
+  background-color: $sprk-white;
   border-bottom: $sprk-masthead-selector-dropdown-border-bottom-mask-open;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-radius: 0;
+  border-radius: $sprk-border-radius;
   box-shadow: $sprk-masthead-selector-dropdown-box-shadow-mask-open;
+  font-size: $sprk-dropdown-font-size;
+  position: absolute;
   max-width: 100%;
   margin: 0;
   width: 100%;
   top: 0;
   padding: $sprk-masthead-selector-dropdown-padding;
+  z-index: $sprk-layer-height-m;
 }
 
 .sprk-c-Masthead__selector-dropdown .sprk-c-Dropdown__link {

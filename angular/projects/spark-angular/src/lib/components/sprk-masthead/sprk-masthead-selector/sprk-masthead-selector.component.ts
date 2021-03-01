@@ -19,7 +19,6 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
           sprkLink
           variant="plain"
           class="
-            sprk-c-Dropdown__trigger
             sprk-c-Masthead__selector
             sprk-b-Link
             sprk-b-Link--plain
@@ -47,10 +46,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
         </a>
       </div>
 
-      <div
-        class="sprk-c-Dropdown sprk-c-Masthead__selector-dropdown"
-        *ngIf="isOpen"
-      >
+      <div class="sprk-c-Masthead__selector-dropdown" *ngIf="isOpen">
         <div class="sprk-c-Dropdown__header" *ngIf="heading">
           <a
             sprkLink
