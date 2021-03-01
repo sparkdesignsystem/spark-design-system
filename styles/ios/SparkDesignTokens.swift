@@ -315,6 +315,7 @@ public class SparkDesignTokens {
     public static let sprkMastheadLinkVisitedColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkMastheadSelectorBgColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkMastheadSelectorBorderColorMaskOpen = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
+    public static let sprkMastheadSelectorDropdownFontSize = CGFloat(16.00)
     public static let sprkMastheadSelectorFontColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkMastheadSelectorFontWeight = 300
     public static let sprkMastheadSimpleLinkIconHoverColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
