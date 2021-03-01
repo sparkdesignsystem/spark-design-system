@@ -212,14 +212,13 @@ export const teaser = () => ({
     >
     </sprk-card>
 
-
     <sprk-card idString="card-teaser">
       <a
         sprkLink
         variant="unstyled"
         routerLink="/test"
         sprkStackItem
-        [analyticsString]="img-link-analytics"
+        analyticsString="img-link-analytics"
       >
         <img
           class="sprk-c-Card__media"
@@ -270,52 +269,146 @@ teaser.story = {
 export const twoUpCards = () => ({
   moduleMetadata: modules,
   template: `
-   <sprk-stack
-     itemSpacing="large"
-     splitAt="large"
-     additionalClasses="sprk-o-Stack--center-row"
+  <sprk-stack
+    itemSpacing="large"
+    splitAt="large"
+    additionalClasses="sprk-o-Stack--center-row"
    >
-     <div
-       class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-       sprkStackItem
-     >
-       <sprk-card
-         cardType="teaser"
-         media="img"
-         idString="card-two-up-1"
-         imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-         imgAlt="Learn more"
-         body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
-           Facilisi perpetua an pri, errem commune mea at, mei prima tantas
-           signiferumque at. Numquam."
-         ctaType="button"
-         additionalCtaClasses="sprk-c-Button--secondary"
-         ctaText="Learn More"
-         title="Title"
-         sprkStackItem
-       ></sprk-card>
-      </div>
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+    <div
+      class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+      sprkStackItem
+    >
+      <sprk-card
+        cardType="teaser"
+        media="img"
+        idString="card-two-up-1"
+        imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+        imgAlt="Learn more"
+        body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
+          Facilisi perpetua an pri, errem commune mea at, mei prima tantas
+          signiferumque at. Numquam."
+        ctaType="button"
+        additionalCtaClasses="sprk-c-Button--secondary"
+        ctaText="Learn More"
+        title="Title"
         sprkStackItem
+      ></sprk-card>
+    </div>
+    <div
+      class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+      sprkStackItem
+    >
+      <sprk-card
+        cardType="teaser"
+        media="img"
+        idString="card-two-up-2"
+        imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+        imgAlt="Learn more"
+        body="This Lorem ipsum dolor sit amet, doctus invenire vix
+          te. Facilisi perpetua an pri, errem commune mea at, mei
+          prima tantas signiferumque at. Numquam."
+        ctaType="button"
+        additionalCtaClasses="sprk-c-Button--secondary"
+        ctaText="Learn More"
+        title="Title"
+        sprkStackItem
+      ></sprk-card>
+    </div>
+  </sprk-stack>
+
+  <sprk-stack
+    itemSpacing="large"
+    splitAt="large"
+    additionalClasses="sprk-o-Stack--center-row"
+   >
+    <sprk-card sprkStackItem additionalClasses="sprk-o-Stack__item--flex@l">
+      <a
+        sprkLink
+        variant="unstyled"
+        routerLink="/test"
+        sprkStackItem
+        analyticsString="img-link-analytics"
       >
-        <sprk-card
-          cardType="teaser"
-          media="img"
-          idString="card-two-up-2"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          imgAlt="Learn more"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix
-            te. Facilisi perpetua an pri, errem commune mea at, mei
-            prima tantas signiferumque at. Numquam."
-          ctaType="button"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          ctaText="Learn More"
-          title="Title"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-    </sprk-stack>
+        <img
+          class="sprk-c-Card__media"
+          alt="Learn more"
+          src="https://spark-assets.netlify.app/desktop.jpg"
+        />
+      </a>
+
+      <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+        <h3 sprkHeading variant="displayFive" sprkStackItem>
+          New Teaser Card
+        </h3>
+
+        <p sprkText variant="bodytwo" sprkStackItem>
+          Lorem ipsum dolor sit amet, doctus
+          invenirevix te. Facilisi perpetua.
+          This card words because it falls into
+          the ng-content catch because the default
+          cardType is base which allows for ng-content.
+          The old one works still because we did not remove
+          the old cardType input from the component.
+        </p>
+
+        <div sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            routerLink="/test"
+            class="sprk-c-Button sprk-c-Button--secondary"
+            analyticsString="test-cta"
+          >
+            Learn More
+          </a>
+        </div>
+      </sprk-stack>
+    </sprk-card>
+
+    <sprk-card sprkStackItem additionalClasses="sprk-o-Stack__item--flex@l">
+      <a
+        sprkLink
+        variant="unstyled"
+        routerLink="/test"
+        sprkStackItem
+        analyticsString="img-link-analytics"
+      >
+        <img
+          class="sprk-c-Card__media"
+          alt="Learn more"
+          src="https://spark-assets.netlify.app/desktop.jpg"
+        />
+      </a>
+
+      <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+        <h3 sprkHeading variant="displayFive" sprkStackItem>
+          New Teaser Card
+        </h3>
+
+        <p sprkText variant="bodytwo" sprkStackItem>
+          Lorem ipsum dolor sit amet, doctus
+          invenirevix te. Facilisi perpetua.
+          This card words because it falls into
+          the ng-content catch because the default
+          cardType is base which allows for ng-content.
+          The old one works still because we did not remove
+          the old cardType input from the component.
+        </p>
+
+        <div sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            routerLink="/test"
+            class="sprk-c-Button sprk-c-Button--secondary"
+            analyticsString="test-cta"
+          >
+            Learn More
+          </a>
+        </div>
+      </sprk-stack>
+    </sprk-card>
+  </sprk-stack>
   `,
 });
 
