@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import SprkLabel from '../SprkLabel/SprkLabel';
 import SprkInput from '../SprkInput/SprkInput';
+import SprkSelect from '../SprkSelect/SprkSelect';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkFieldError from '../SprkFieldError/SprkFieldError';
 import SprkHelperText from '../SprkHelperText/SprkHelperText';
@@ -27,7 +28,10 @@ class SprkInputContainer extends Component {
      * errorContainerID and helperTextID.
      */
     React.Children.forEach(children, (child) => {
-      if (child.type.name === SprkInput.name) {
+      if (
+        child.type.name === SprkInput.name ||
+        child.type.name === SprkSelect.name
+      ) {
         id = child.props.id;
         inputAriaDescribedBy = child.props.ariaDescribedBy;
       }
@@ -89,7 +93,11 @@ class SprkInputContainer extends Component {
          * If there is an inputAriaDescribedBy,
          * add it to the SprkInput element.
          */
-        if (inputAriaDescribedBy && child.type.name === SprkInput.name) {
+        if (
+          inputAriaDescribedBy &&
+          (child.type.name === SprkInput.name ||
+            child.type.name === SprkSelect.name)
+        ) {
           return React.cloneElement(child, {
             ariaDescribedBy: inputAriaDescribedBy,
           });

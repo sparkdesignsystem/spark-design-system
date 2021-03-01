@@ -7,6 +7,7 @@ import SprkInput from '../SprkInput/SprkInput';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkFieldError from '../SprkFieldError/SprkFieldError';
 import SprkHelperText from '../SprkHelperText/SprkHelperText';
+import SprkSelect from '../SprkSelect/SprkSelect';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -320,6 +321,283 @@ describe('SprkInputContainer:', () => {
 
     expect(
       wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
+
+  it(`should add the helperTextID to the aria-describedby
+  on the select if it isn't present`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} />
+        <SprkHelperText id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should add the errorContainerID to the aria-describedby
+  on the select if it isn't present`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} />
+        <SprkErrorContainer id="test-id" message="test message" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should add the fieldErrorID to the aria-describedby
+  on the select if it isn't present`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} />
+        <SprkFieldError id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should allow additional values be passed to
+  the aria-describedby on a select`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} ariaDescribedBy="additional-value" />
+        <SprkFieldError id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('additional-value test-id');
+  });
+
+  it(`should add helperTextID and fieldErrorID to the
+  aria-describedby on a select if neither are present`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} />
+        <SprkFieldError id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-helper-id test-error-id');
+  });
+
+  it(`should add helperTextID and errorContainerID to the
+  aria-describedby on a select if neither are present`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} />
+        <SprkErrorContainer message="test message" id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-helper-id test-error-id');
+  });
+
+  it(`should add helperTextID and fieldErrorID to the aria-describedby
+  on a select if neither are present and keep additional values`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} ariaDescribedBy="additional-value" />
+        <SprkFieldError id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('additional-value test-helper-id test-error-id');
+  });
+
+  it(`should add helperTextID and errorContainerID to the aria-describedby on a
+  select if neither are present and keep additional values`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} ariaDescribedBy="additional-value" />
+        <SprkErrorContainer message="test message" id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('additional-value test-helper-id test-error-id');
+  });
+
+  it(`should not add helperTextID and errorContainerID to the aria-describedby
+  on a select if both are present and keep additional values`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect
+          choices={choices}
+          ariaDescribedBy="value test-helper-id test-error-id"
+        />
+        <SprkErrorContainer message="test message" id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('value test-helper-id test-error-id');
+  });
+
+  it(`should not add helperTextID and fieldErrorID to the aria-describedby
+  on a select if both are present and keep additional values`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect
+          choices={choices}
+          ariaDescribedBy="value test-helper-id test-error-id"
+        />
+        <SprkFieldError id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('value test-helper-id test-error-id');
+  });
+
+  it(`should not add helperTextID to the 
+  aria-describedby on a select if it's present`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} ariaDescribedBy="test-helper-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-helper-id');
+  });
+
+  it(`should not add errorContainerID to the 
+  aria-describedby on a select if it's present`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} ariaDescribedBy="test-id" />
+        <SprkErrorContainer message="test message" id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should not add fieldErrorID to the 
+  aria-describedby on a select if it's present`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} ariaDescribedBy="test-id" />
+        <SprkFieldError id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should not add aria-describedby to the select
+  if there is no helper or error text`, () => {
+    const choices = [
+      { name: 'item-choice', label: 'Item 1', value: '1' },
+      { name: 'item-choice-2', label: 'Item 2', value: '2' },
+    ];
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkSelect choices={choices} />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
     ).toBe(null);
   });
 
