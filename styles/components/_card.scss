@@ -5,7 +5,6 @@
 ////
 /// @group card
 ////
-
 .sprk-c-Card {
   box-shadow: $sprk-card-shadow;
   border-radius: $sprk-card-border-radius;
@@ -40,7 +39,7 @@
   border-radius: $sprk-card-border-radius $sprk-card-border-radius 0 0;
 }
 
-// TODO
+// TODO: Remove this as part of Issue #3897
 .sprk-c-Card__container {
   flex: 0 1 $sprk-card-max-width;
   min-width: 0;
