@@ -35,8 +35,8 @@ class SprkInputContainer extends Component {
         labelFor = child.props.htmlFor;
       }
       if (
-        child.type.name === SprkErrorContainer.name ||
-        child.type.name === SprkFieldError.name
+        child.type.name === SprkFieldError.name ||
+        child.type.name === SprkErrorContainer.name
       ) {
         errorContainerID = child.props.id;
       }
