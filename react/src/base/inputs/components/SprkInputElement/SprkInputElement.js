@@ -22,12 +22,11 @@ class SprkInputElement extends Component {
     }
 
     this.calculateAriaDescribedBy = this.calculateAriaDescribedBy.bind(this);
+    this.setAriaDescribedBy = this.setAriaDescribedBy.bind(this);
   }
 
   componentDidMount() {
-    this.setState({
-      calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
-    });
+    this.setAriaDescribedBy();
   }
 
   componentDidUpdate(prevProps) {
@@ -37,10 +36,14 @@ class SprkInputElement extends Component {
       errorContainerId !== prevProps.errorContainerId ||
       ariaDescribedBy !== prevProps.ariaDescribedBy
     ) {
-      this.setState({
-        calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
-      });
+      this.setAriaDescribedBy();
     }
+  }
+
+  setAriaDescribedBy() {
+    this.setState({
+      calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
+    });
   }
 
   calculateAriaDescribedBy() {
