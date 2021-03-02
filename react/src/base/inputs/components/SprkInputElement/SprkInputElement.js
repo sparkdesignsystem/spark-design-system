@@ -174,8 +174,11 @@ SprkInputElement.propTypes = {
    */
   valid: propTypes.bool,
   /**
-   * A space-separated string of valid HTML Ids
-   * to add to the aria-describedby attribute on the Input.
+   * Assigned to the `aria-describedby`
+   * attribute. Used to create
+   * relationships between the
+   * component and text that describes it,
+   * such as helper text or an error field.
    */
   ariaDescribedBy: propTypes.string,
   children: propTypes.node,
