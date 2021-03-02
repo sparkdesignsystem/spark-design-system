@@ -49,28 +49,13 @@ const modules = {
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-  <sprk-card idString="new-card">
-    <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
-      <p sprkStackItem sprkText variant="bodyTwo">
-        New Default Card. This works without the cardType="base" because
-        we have ng-content running for when cardType=base
-        but we also have the default cardType set to base if not supplied.
-      </p>
-    </sprk-stack>
-  </sprk-card>
-
-  <sprk-card
-    cardType="base"
-    idString="card-default"
-  >
-    <div class="
-      sprk-o-Stack__item
-      sprk-c-Card__content
-      sprk-o-Stack
-      sprk-o-Stack--medium">
-      Old Card
-    </div>
-  </sprk-card>
+    <sprk-card idString="default">
+      <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
+        <p sprkStackItem sprkText variant="bodyTwo">
+          Base Card
+        </p>
+      </sprk-stack>
+    </sprk-card>
   `,
 });
 
@@ -78,11 +63,67 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     docs: { iframeHeight: 150 },
+    jest: [
+      'sprk-card.component',
+      'sprk-card-content.directive',
+      'sprk-stack.component',
+      'sprk-stack-item.directive',
+      'sprk-text.directive',
+    ],
+  },
+};
+
+export const legacyStory = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card
+      cardType="base"
+      idString="card-default"
+    >
+      <div class="
+        sprk-o-Stack__item
+        sprk-c-Card__content
+        sprk-o-Stack
+        sprk-o-Stack--medium">
+        <p class="sprk-TypeBodyTwo">Base Card</p>
+      </div>
+    </sprk-card>
+  `,
+});
+
+legacyStory.story = {
+  name: 'Legacy (Deprecated)',
+  parameters: {
     jest: ['sprk-card.component'],
   },
 };
 
 export const standout = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card idString="standout" isStandout="true">
+      <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
+        <p sprkStackItem sprkText variant="bodyTwo">
+          Standout Card
+        </p>
+      </sprk-stack>
+    </sprk-card>
+  `,
+});
+
+standout.story = {
+  parameters: {
+    jest: [
+      'sprk-card.component',
+      'sprk-card-content.directive',
+      'sprk-stack.component',
+      'sprk-stack-item.directive',
+      'sprk-text.directive',
+    ],
+  },
+};
+
+export const legacyStandout = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-card
@@ -94,26 +135,72 @@ export const standout = () => ({
         sprk-o-Stack__item
         sprk-c-Card__content
         sprk-o-Stack
-        sprk-o-Stack--medium">Standout Card Content</div>
+        sprk-o-Stack--medium"
+      >
+      <p class="sprk-TypeBodyTwo">Standout Card</p>
+      </div>
     </sprk-card>
+  `,
+});
 
-    <sprk-card idString="standout" isStandout="true">
+legacyStandout.story = {
+  parameters: {
+    name: 'Legacy Standout (Deprecated)',
+    jest: ['sprk-card.component'],
+  },
+};
+
+export const highlightedHeader = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card idString="highlighted-header" isStandout="true">
+      <sprk-stack sprkCardHeader sprkStackItem itemSpacing="medium">
+        <h3
+          sprkHeading
+          sprkStackItem
+          variant="displaySeven"
+          class="sprk-u-Color--white"
+        >
+          Description
+        </h3>
+
+        <h4
+          sprkHeading
+          sprkStackItem
+          variant="displayFive"
+          class="sprk-u-Color--white"
+        >
+          Card Title
+        </h4>
+      </sprk-stack>
+
       <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
         <p sprkStackItem sprkText variant="bodyTwo">
-          New Standout Card
+          Lorem ipsum dolor sit amet, doctus invenire vix te. Facilisi
+          perpetua an pri, errem commune mea at, mei prima tantas
+          signiferumque at. Numquam.
         </p>
       </sprk-stack>
     </sprk-card>
   `,
 });
 
-standout.story = {
+highlightedHeader.story = {
+  name: 'Highlighted Header',
   parameters: {
-    jest: ['sprk-card.component'],
+    docs: { iframeHeight: 300 },
+    jest: [
+      'sprk-card.component',
+      'sprk-card-content.directive',
+      'sprk-stack.component',
+      'sprk-stack-item.directive',
+      'sprk-text.directive',
+      'sprk-heading.directive',
+    ],
   },
 };
 
-export const highlightedHeader = () => ({
+export const legacyHighlightedHeader = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-card
@@ -152,40 +239,12 @@ export const highlightedHeader = () => ({
           signiferumque at. Numquam.
         </p>
       </div>
-  </sprk-card>
-
-  <sprk-card idString="highlighted-header" isStandout="true">
-    <sprk-stack sprkCardHeader sprkStackItem itemSpacing="medium">
-      <h3
-        sprkHeading
-        sprkStackItem
-        variant="displaySeven"
-        class="sprk-u-Color--white"
-      >
-        Description
-      </h3>
-
-      <h4
-        sprkHeading
-        sprkStackItem
-        variant="displayFive"
-        class="sprk-u-Color--white"
-      >
-        Card Title
-      </h4>
-    </sprk-stack>
-
-    <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
-      <p sprkStackItem sprkText variant="bodyTwo">
-        New highlighted header Card.
-      </p>
-    </sprk-stack>
-  </sprk-card>
+    </sprk-card>
   `,
 });
 
-highlightedHeader.story = {
-  name: 'Highlighted Header',
+legacyHighlightedHeader.story = {
+  name: 'Legacy Highlighted Header (Deprecated)',
   parameters: {
     docs: { iframeHeight: 300 },
     jest: ['sprk-card.component'],
@@ -193,6 +252,66 @@ highlightedHeader.story = {
 };
 
 export const teaser = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card idString="teaser">
+      <a
+        sprkLink
+        variant="unstyled"
+        href="/"
+        sprkStackItem
+        analyticsString="img-link-analytics"
+      >
+        <img
+          class="sprk-c-Card__media"
+          alt="Learn more"
+          src="https://spark-assets.netlify.app/desktop.jpg"
+        />
+      </a>
+
+      <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+        <h3 sprkHeading variant="displayFive" sprkStackItem>
+          Teaser Card
+        </h3>
+
+        <p sprkText variant="bodytwo" sprkStackItem>
+          Lorem ipsum dolor sit amet, doctus
+          invenirevix te. Facilisi perpetua.
+        </p>
+
+        <div sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="/"
+            class="sprk-c-Button sprk-c-Button--secondary"
+            analyticsString="test-cta"
+          >
+            Learn More
+          </a>
+        </div>
+      </sprk-stack>
+    </sprk-card>
+ `,
+});
+
+teaser.story = {
+  name: 'Teaser',
+  parameters: {
+    docs: { iframeHeight: 550 },
+    jest: [
+      'sprk-card.component',
+      'sprk-card-content.directive',
+      'sprk-stack.component',
+      'sprk-stack-item.directive',
+      'sprk-text.directive',
+      'sprk-heading.directive',
+      'sprk-link.directive',
+    ],
+  },
+};
+
+export const legacyTeaser = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-card
@@ -211,55 +330,11 @@ export const teaser = () => ({
       idString="card-teaser"
     >
     </sprk-card>
-
-    <sprk-card idString="card-teaser">
-      <a
-        sprkLink
-        variant="unstyled"
-        routerLink="/test"
-        sprkStackItem
-        analyticsString="img-link-analytics"
-      >
-        <img
-          class="sprk-c-Card__media"
-          alt="Learn more"
-          src="https://spark-assets.netlify.app/desktop.jpg"
-        />
-      </a>
-
-      <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
-        <h3 sprkHeading variant="displayFive" sprkStackItem>
-          New Teaser Card
-        </h3>
-
-        <p sprkText variant="bodytwo" sprkStackItem>
-          Lorem ipsum dolor sit amet, doctus
-          invenirevix te. Facilisi perpetua.
-          This card words because it falls into
-          the ng-content catch because the default
-          cardType is base which allows for ng-content.
-          The old one works still because we did not remove
-          the old cardType input from the component.
-        </p>
-
-        <div sprkStackItem>
-          <a
-            sprkLink
-            variant="unstyled"
-            routerLink="/test"
-            class="sprk-c-Button sprk-c-Button--secondary"
-            analyticsString="test-cta"
-          >
-            Learn More
-          </a>
-        </div>
-      </sprk-stack>
-    </sprk-card>
  `,
 });
 
-teaser.story = {
-  name: 'Teaser',
+legacyTeaser.story = {
+  name: 'Legacy Teaser (Deprecated)',
   parameters: {
     docs: { iframeHeight: 550 },
     jest: ['sprk-card.component'],
@@ -269,146 +344,98 @@ teaser.story = {
 export const twoUpCards = () => ({
   moduleMetadata: modules,
   template: `
-  <sprk-stack
-    itemSpacing="large"
-    splitAt="large"
-    additionalClasses="sprk-o-Stack--center-row"
-   >
-    <div
-      class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-      sprkStackItem
+    <sprk-stack
+      itemSpacing="large"
+      splitAt="large"
+      additionalClasses="sprk-o-Stack--center-row"
     >
-      <sprk-card
-        cardType="teaser"
-        media="img"
-        idString="card-two-up-1"
-        imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-        imgAlt="Learn more"
-        body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
-          Facilisi perpetua an pri, errem commune mea at, mei prima tantas
-          signiferumque at. Numquam."
-        ctaType="button"
-        additionalCtaClasses="sprk-c-Button--secondary"
-        ctaText="Learn More"
-        title="Title"
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
         sprkStackItem
-      ></sprk-card>
-    </div>
-    <div
-      class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-      sprkStackItem
-    >
-      <sprk-card
-        cardType="teaser"
-        media="img"
-        idString="card-two-up-2"
-        imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-        imgAlt="Learn more"
-        body="This Lorem ipsum dolor sit amet, doctus invenire vix
-          te. Facilisi perpetua an pri, errem commune mea at, mei
-          prima tantas signiferumque at. Numquam."
-        ctaType="button"
-        additionalCtaClasses="sprk-c-Button--secondary"
-        ctaText="Learn More"
-        title="Title"
-        sprkStackItem
-      ></sprk-card>
-    </div>
-  </sprk-stack>
-
-  <sprk-stack
-    itemSpacing="large"
-    splitAt="large"
-    additionalClasses="sprk-o-Stack--center-row"
-   >
-    <sprk-card sprkStackItem additionalClasses="sprk-o-Stack__item--flex@l">
-      <a
-        sprkLink
-        variant="unstyled"
-        routerLink="/test"
-        sprkStackItem
-        analyticsString="img-link-analytics"
       >
-        <img
-          class="sprk-c-Card__media"
-          alt="Learn more"
-          src="https://spark-assets.netlify.app/desktop.jpg"
-        />
-      </a>
-
-      <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
-        <h3 sprkHeading variant="displayFive" sprkStackItem>
-          New Teaser Card
-        </h3>
-
-        <p sprkText variant="bodytwo" sprkStackItem>
-          Lorem ipsum dolor sit amet, doctus
-          invenirevix te. Facilisi perpetua.
-          This card words because it falls into
-          the ng-content catch because the default
-          cardType is base which allows for ng-content.
-          The old one works still because we did not remove
-          the old cardType input from the component.
-        </p>
-
-        <div sprkStackItem>
+        <sprk-card sprkStackItem>
           <a
             sprkLink
             variant="unstyled"
-            routerLink="/test"
-            class="sprk-c-Button sprk-c-Button--secondary"
-            analyticsString="test-cta"
+            href="/"
+            sprkStackItem
           >
-            Learn More
+            <img
+              class="sprk-c-Card__media"
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
           </a>
-        </div>
-      </sprk-stack>
-    </sprk-card>
 
-    <sprk-card sprkStackItem additionalClasses="sprk-o-Stack__item--flex@l">
-      <a
-        sprkLink
-        variant="unstyled"
-        routerLink="/test"
+          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Teaser Card
+            </h3>
+
+            <p sprkText variant="bodytwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="/"
+                class="sprk-c-Button sprk-c-Button--secondary"
+                analyticsString="test-cta"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
         sprkStackItem
-        analyticsString="img-link-analytics"
       >
-        <img
-          class="sprk-c-Card__media"
-          alt="Learn more"
-          src="https://spark-assets.netlify.app/desktop.jpg"
-        />
-      </a>
-
-      <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
-        <h3 sprkHeading variant="displayFive" sprkStackItem>
-          New Teaser Card
-        </h3>
-
-        <p sprkText variant="bodytwo" sprkStackItem>
-          Lorem ipsum dolor sit amet, doctus
-          invenirevix te. Facilisi perpetua.
-          This card words because it falls into
-          the ng-content catch because the default
-          cardType is base which allows for ng-content.
-          The old one works still because we did not remove
-          the old cardType input from the component.
-        </p>
-
-        <div sprkStackItem>
+        <sprk-card sprkStackItem>
           <a
             sprkLink
             variant="unstyled"
-            routerLink="/test"
-            class="sprk-c-Button sprk-c-Button--secondary"
-            analyticsString="test-cta"
+            href="/"
+            sprkStackItem
           >
-            Learn More
+            <img
+              class="sprk-c-Card__media"
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
           </a>
-        </div>
-      </sprk-stack>
-    </sprk-card>
-  </sprk-stack>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Teaser Card
+            </h3>
+
+            <p sprkText variant="bodytwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="/"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+    </sprk-stack>
   `,
 });
 
@@ -416,11 +443,235 @@ twoUpCards.story = {
   name: 'Card Layout - Two Up',
   parameters: {
     docs: { iframeHeight: 600 },
+    jest: [
+      'sprk-card.component',
+      'sprk-card-content.directive',
+      'sprk-stack.component',
+      'sprk-stack-item.directive',
+      'sprk-text.directive',
+      'sprk-heading.directive',
+      'sprk-link.directive',
+    ],
+  },
+};
+
+export const legacyTwoUpCards = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-stack
+      itemSpacing="large"
+      splitAt="large"
+      additionalClasses="sprk-o-Stack--center-row"
+    >
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-two-up-1"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+          imgAlt="Learn more"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
+            Facilisi perpetua an pri, errem commune mea at, mei prima tantas
+            signiferumque at. Numquam."
+          ctaType="button"
+          additionalCtaClasses="sprk-c-Button--secondary"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+        ></sprk-card>
+      </div>
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-two-up-2"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+          imgAlt="Learn more"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix
+            te. Facilisi perpetua an pri, errem commune mea at, mei
+            prima tantas signiferumque at. Numquam."
+          ctaType="button"
+          additionalCtaClasses="sprk-c-Button--secondary"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+        ></sprk-card>
+      </div>
+    </sprk-stack>
+  `,
+});
+
+legacyTwoUpCards.story = {
+  name: 'Legacy Card Layout - Two Up (Deprecated)',
+  parameters: {
+    docs: { iframeHeight: 600 },
     jest: ['sprk-card.component'],
   },
 };
 
 export const threeUpCards = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-stack
+      itemSpacing="large"
+      splitAt="large"
+      additionalClasses="sprk-o-Stack--center-row"
+    >
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="/"
+            sprkStackItem
+          >
+            <img
+              class="sprk-c-Card__media"
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Teaser Card
+            </h3>
+
+            <p sprkText variant="bodytwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="/"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="/"
+            sprkStackItem
+          >
+            <img
+              class="sprk-c-Card__media"
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Teaser Card
+            </h3>
+
+            <p sprkText variant="bodytwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="/"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="/"
+            sprkStackItem
+          >
+            <img
+              class="sprk-c-Card__media"
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Teaser Card
+            </h3>
+
+            <p sprkText variant="bodytwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="/"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+    </sprk-stack>
+  `,
+});
+
+threeUpCards.story = {
+  name: 'Card Layout - Three Up',
+  parameters: {
+    docs: { iframeHeight: 600 },
+    jest: [
+      'sprk-card.component',
+      'sprk-card-content.directive',
+      'sprk-stack.component',
+      'sprk-stack-item.directive',
+      'sprk-text.directive',
+      'sprk-heading.directive',
+      'sprk-link.directive',
+    ],
+  },
+};
+
+export const legacyThreeUpCards = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-stack
@@ -492,8 +743,8 @@ export const threeUpCards = () => ({
   `,
 });
 
-threeUpCards.story = {
-  name: 'Card Layout - Three Up',
+legacyThreeUpCards.story = {
+  name: 'Legacy Card Layout - Three Up (Deprecated)',
   parameters: {
     docs: { iframeHeight: 600 },
     jest: ['sprk-card.component'],
@@ -501,6 +752,206 @@ threeUpCards.story = {
 };
 
 export const fourUpCards = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-stack
+      itemSpacing="large"
+      splitAt="large"
+      additionalClasses="sprk-o-Stack--center-row"
+    >
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="/"
+            sprkStackItem
+          >
+            <img
+              class="sprk-c-Card__media"
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Teaser Card
+            </h3>
+
+            <p sprkText variant="bodytwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="/"
+                class="sprk-c-Button sprk-c-Button--secondary"
+                analyticsString="test-cta"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="/"
+            sprkStackItem
+          >
+            <img
+              class="sprk-c-Card__media"
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Teaser Card
+            </h3>
+
+            <p sprkText variant="bodytwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="/"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="/"
+            sprkStackItem
+          >
+            <img
+              class="sprk-c-Card__media"
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Teaser Card
+            </h3>
+
+            <p sprkText variant="bodytwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="/"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="/"
+            sprkStackItem
+          >
+            <img
+              class="sprk-c-Card__media"
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Teaser Card
+            </h3>
+
+            <p sprkText variant="bodytwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="/"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+    </sprk-stack>
+  `,
+});
+
+fourUpCards.story = {
+  name: 'Card Layout - Four Up',
+  parameters: {
+    docs: { iframeHeight: 600 },
+    jest: [
+      'sprk-card.component',
+      'sprk-card-content.directive',
+      'sprk-stack.component',
+      'sprk-stack-item.directive',
+      'sprk-text.directive',
+      'sprk-heading.directive',
+      'sprk-link.directive',
+    ],
+  },
+};
+
+export const legacyFourUpCards = () => ({
   moduleMetadata: modules,
   template: `
    <sprk-stack
@@ -592,8 +1043,8 @@ export const fourUpCards = () => ({
   `,
 });
 
-fourUpCards.story = {
-  name: 'Card Layout - Four Up',
+legacyFourUpCards.story = {
+  name: 'Legacy Card Layout - Four Up (Deprecated)',
   parameters: {
     docs: { iframeHeight: 600 },
     jest: ['sprk-card.component'],

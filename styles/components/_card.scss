@@ -39,12 +39,12 @@
   border-radius: $sprk-card-border-radius $sprk-card-border-radius 0 0;
 }
 
-// TODO: Remove this as part of Issue #3897
 .sprk-c-Card__container {
   flex: 0 1 $sprk-card-max-width;
   min-width: 0;
 }
 
+/* stylelint-disable selector-class-pattern */
 // IE11 flexbox fix - https://github.com/philipwalton/flexbugs#flexbug-17
 .sprk-o-Stack__item.sprk-o-Stack__item--flex\@xs.sprk-c-Card {
   @media all and (min-width: $sprk-split-breakpoint-xs) {
@@ -80,6 +80,8 @@
     min-width: 0%;
   }
 }
+
+/* stylelint-enable selector-class-pattern */
 
 /// Sets `max-width` to 100%, allowing card to fill
 /// the entire width of it's container. Best used
