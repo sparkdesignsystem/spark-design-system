@@ -271,15 +271,6 @@
           "file": "settings",
           "themable": true
         },
-        "dropdown-padding": {
-          "comment": "The padding of the selector dropdown in the Masthead with Extended Navigation.",
-          "value": "0",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
         "min-width": {
           "comment": "The minimum width of the selector in the Masthead with Extended Navigation.",
           "value": "17rem",
@@ -325,6 +316,96 @@
         "dropdown-font-size": {
           "comment": "The font size of the selector dropdown.",
           "value": "{font.size.body.one.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "dropdown-padding": {
+          "comment": "The padding of the selector dropdown in the Masthead with Extended Navigation.",
+          "value": "0",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "dropdown-item-padding": {
+          "comment": "The padding around the Masthead Selector Dropdown items.",
+          "value": "{space.misc.a.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "dropdown-title": {
+          "font": {
+            "size": {
+              "comment": "The font size of the Masthead Selector Dropdown title.",
+              "value": "{masthead.selector.dropdown-font-size.value}",
+              "file": "settings",
+              "themable": true
+            },
+            "weight": {
+              "comment": "The font weight of the Masthead Selector Dropdown title.",
+              "value": "300",
+              "file": "settings",
+              "themable": true
+            }
+          },
+          "color": {
+            "comment": "The color of the Masthead Selector Dropdown title.",
+            "value": "{black-tint.30.value}",
+            "file": "settings",
+            "themable": true
+          }
+        },
+        "dropdown-link-color": {
+          "comment": "The color of the Masthead Selector Dropdown links.",
+          "value": "{black.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "dropdown-line-height": {
+          "comment": "The line height of the Masthead Selector Dropdown.",
+          "value": "1",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "dropdown-active": {
+          "background-color": {
+            "comment": "Background color of the Masthead Selector Dropdown items that are active or hovered.",
+            "value": "{gray.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "border": {
+            "comment": "The left border of the Masthead Selector Dropdown item that is active.",
+            "value": "2.5px solid {purple.value}",
+            "attributes": {
+              "category": "content"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "box-shadow": {
+            "comment": "The box-shadow of the Masthead Selector Dropdown item that is active.",
+            "value": "-1px 0 0 0 {purple.value}",
+            "attributes": {
+              "category": "content"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        },
+        "dropdown-footer-padding": {
+          "comment": "The padding around the Masthead selector dropdown footer.",
+          "value": "{space.inset.short.l.value}",
           "file": "settings",
           "themable": true
         },

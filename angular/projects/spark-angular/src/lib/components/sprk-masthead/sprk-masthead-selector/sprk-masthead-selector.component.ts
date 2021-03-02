@@ -47,7 +47,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
       </div>
 
       <div class="sprk-c-Masthead__selector-dropdown" *ngIf="isOpen">
-        <div class="sprk-c-Dropdown__header" *ngIf="heading">
+        <div class="sprk-c-Masthead__selector-dropdown-header" *ngIf="heading">
           <a
             sprkLink
             variant="plain"
@@ -57,7 +57,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
             href="#"
           >
             <span
-              class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
+              class="sprk-c-Masthead__selector-dropdown-title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
               >{{ heading }}</span
             >
             <sprk-icon
@@ -74,14 +74,14 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
         </div>
 
         <ul
-          class="sprk-c-Dropdown__links"
+          class="sprk-c-Masthead__selector-dropdown-links"
           role="listbox"
           [attr.aria-label]="
             heading ? heading : screenReaderText || 'My Choices'
           "
         >
           <li
-            class="sprk-c-Dropdown__item"
+            class="sprk-c-Masthead__selector-dropdown-item"
             *ngFor="let choice of choices; let i = index"
             (click)="choiceClick(i)"
             [attr.aria-selected]="choice.active"
@@ -96,8 +96,9 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
                 [attr.href]="choice.href"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
-                  'sprk-c-Dropdown__link': true,
-                  'sprk-c-Dropdown__link--active': choice.active
+                  'sprk-c-Masthead__selector-dropdown-link': true,
+                  'sprk-c-Masthead__selector-dropdown-link--active':
+                    choice.active
                 }"
                 [attr.aria-label]="choice.text"
                 >{{ choice.text }}
@@ -109,8 +110,9 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
                 [routerLink]="choice.routerLink"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
-                  'sprk-c-Dropdown__link': true,
-                  'sprk-c-Dropdown__link--active': choice.active
+                  'sprk-c-Masthead__selector-dropdown-link': true,
+                  'sprk-c-Masthead__selector-dropdown-link--active':
+                    choice.active
                 }"
                 [attr.aria-label]="choice.text"
                 >{{ choice.text }}
@@ -124,8 +126,9 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
                 [attr.href]="choice.href"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
-                  'sprk-c-Dropdown__link': true,
-                  'sprk-c-Dropdown__link--active': choice.active
+                  'sprk-c-Masthead__selector-dropdown-link': true,
+                  'sprk-c-Masthead__selector-dropdown-link--active':
+                    choice.active
                 }"
                 [attr.aria-label]="choice.content.title"
               >
@@ -144,8 +147,9 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
                 [routerLink]="choice.routerLink"
                 [analyticsString]="choice.analyticsString"
                 [ngClass]="{
-                  'sprk-c-Dropdown__link': true,
-                  'sprk-c-Dropdown__link--active': choice.active
+                  'sprk-c-Masthead__selector-dropdown-link': true,
+                  'sprk-c-Masthead__selector-dropdown-link--active':
+                    choice.active
                 }"
                 [attr.aria-label]="choice.content.title"
               >
