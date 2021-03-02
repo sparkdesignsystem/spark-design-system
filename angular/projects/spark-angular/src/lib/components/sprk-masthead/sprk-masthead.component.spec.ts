@@ -334,7 +334,7 @@ describe('SprkMastheadComponent', () => {
     selectorTrigger.click();
     fixture.detectChanges();
     const footerLink = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown__footer a',
+      '.sprk-c-Masthead__selector-footer a',
     );
     expect(footerLink.getAttribute('href')).toEqual('/footer-test');
   });
@@ -374,7 +374,7 @@ describe('SprkMastheadComponent', () => {
     selectorTrigger.click();
     fixture.detectChanges();
     const footerLink = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown__footer a',
+      '.sprk-c-Masthead__selector-footer a',
     );
     expect(footerLink.getAttribute('href')).toEqual(
       'https://www.sparkdesignsystem.com',

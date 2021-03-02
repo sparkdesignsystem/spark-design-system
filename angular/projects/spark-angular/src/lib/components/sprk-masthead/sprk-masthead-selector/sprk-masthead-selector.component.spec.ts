@@ -186,9 +186,10 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelectorAll('.sprk-c-Dropdown__link')[0]
-        .classList,
-    ).not.toContain('sprk-c-Dropdown__link--active');
+      fixture.nativeElement.querySelectorAll(
+        '.sprk-c-Masthead__selector-dropdown-link',
+      )[0].classList,
+    ).not.toContain('sprk-c-Masthead__selector-dropdown-link--active');
     fixture.nativeElement
       .querySelectorAll('li')[0]
       .dispatchEvent(new Event('click'));
@@ -196,9 +197,10 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelectorAll('.sprk-c-Dropdown__link')[0]
-        .classList,
-    ).toContain('sprk-c-Dropdown__link--active');
+      fixture.nativeElement.querySelectorAll(
+        '.sprk-c-Masthead__selector-dropdown-link',
+      )[0].classList,
+    ).toContain('sprk-c-Masthead__selector-dropdown-link--active');
   });
 
   it('should set href value if routerLink is set on choice item', () => {
@@ -223,7 +225,7 @@ describe('SprkMastheadSelectorComponent', () => {
     ).not.toBeNull();
     // TODO: #3835 Create separate classes for sprk-masthead-selector
     const listLink = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown__link',
+      '.sprk-c-Masthead__selector-dropdown-link',
     );
     expect(listLink.getAttribute('href')).toEqual('/router-test');
   });
@@ -250,7 +252,7 @@ describe('SprkMastheadSelectorComponent', () => {
     ).not.toBeNull();
     // TODO: #3835 Create separate classes for sprk-masthead-selector
     const listLink = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown__link',
+      '.sprk-c-Masthead__selector-dropdown-link',
     );
     expect(listLink.getAttribute('href')).toEqual('/test');
   });
@@ -284,7 +286,7 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     const listBoxAria = fixture.nativeElement
-      .querySelector('.sprk-c-Dropdown__links')
+      .querySelector('.sprk-c-Masthead__selector-dropdown-links')
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('My Choices');
   });
@@ -296,7 +298,7 @@ describe('SprkMastheadSelectorComponent', () => {
 
     fixture.detectChanges();
     const listBoxAria = fixture.nativeElement
-      .querySelector('.sprk-c-Dropdown__links')
+      .querySelector('.sprk-c-Masthead__selector-dropdown-links')
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('test');
   });
@@ -493,8 +495,9 @@ describe('SprkMastheadSelectorComponent', () => {
     fixture.detectChanges();
 
     expect(
-      fixture.nativeElement.querySelector('.sprk-c-Dropdown__title')
-        .textContent,
+      fixture.nativeElement.querySelector(
+        '.sprk-c-Masthead__selector-dropdown-title',
+      ).textContent,
     ).toEqual('test');
   });
 });
