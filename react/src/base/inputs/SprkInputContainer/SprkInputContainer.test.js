@@ -8,6 +8,7 @@ import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkFieldError from '../SprkFieldError/SprkFieldError';
 import SprkHelperText from '../SprkHelperText/SprkHelperText';
 import SprkSelect from '../SprkSelect/SprkSelect';
+import SprkDatePicker from '../SprkDatePicker/SprkDatePicker';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -598,6 +599,221 @@ describe('SprkInputContainer:', () => {
 
     expect(
       wrapper.find('select').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
+
+  it(`should add the helperTextID to the aria-describedby
+  on the datepicker if it isn't present`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker />
+        <SprkHelperText id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should add the errorContainerID to the aria-describedby
+  on the datepicker if it isn't present`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker />
+        <SprkErrorContainer id="test-id" message="test message" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should add the fieldErrorID to the aria-describedby
+  on the datepicker if it isn't present`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker />
+        <SprkFieldError id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should allow additional values be passed to the
+  aria-describedby on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker ariaDescribedBy="additional-value" />
+        <SprkFieldError id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('additional-value test-id');
+  });
+
+  it(`should add helperTextID and fieldErrorID to the
+  aria-describedby if neither are present on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker />
+        <SprkFieldError id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-helper-id test-error-id');
+  });
+
+  it(`should add helperTextID and errorContainerID to the
+  aria-describedby if neither are present on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker />
+        <SprkErrorContainer message="test message" id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-helper-id test-error-id');
+  });
+
+  it(`should add helperTextID and fieldErrorID to the aria-describedby
+  if neither are present and keep additional values on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker ariaDescribedBy="additional-value" />
+        <SprkFieldError id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('additional-value test-helper-id test-error-id');
+  });
+
+  it(`should add helperTextID and errorContainerID to the aria-describedby
+  if neither are present and keep additional values on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker ariaDescribedBy="additional-value" />
+        <SprkErrorContainer message="test message" id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('additional-value test-helper-id test-error-id');
+  });
+
+  it(`should not add helperTextID and errorContainerID to the aria-describedby
+  if both are present and keep additional values on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker ariaDescribedBy="value test-helper-id test-error-id" />
+        <SprkErrorContainer message="test message" id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('value test-helper-id test-error-id');
+  });
+
+  it(`should not add helperTextID and fieldErrorID to the aria-describedby
+  if both are present and keep additional values on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker ariaDescribedBy="value test-helper-id test-error-id" />
+        <SprkFieldError id="test-error-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('value test-helper-id test-error-id');
+  });
+
+  it(`should not add helperTextID to the 
+  aria-describedby if it's present on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker ariaDescribedBy="test-helper-id" />
+        <SprkHelperText id="test-helper-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-helper-id');
+  });
+
+  it(`should not add errorContainerID to the 
+  aria-describedby if it's present on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker ariaDescribedBy="test-id" />
+        <SprkErrorContainer message="test message" id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should not add fieldErrorID to the 
+  aria-describedby if it's present on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker ariaDescribedBy="test-id" />
+        <SprkFieldError id="test-id" />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should not add aria-describedby to the input
+  if there is no helper or error text on a datepicker`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkDatePicker />
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
     ).toBe(null);
   });
 

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import SprkLabel from '../SprkLabel/SprkLabel';
 import SprkInput from '../SprkInput/SprkInput';
 import SprkSelect from '../SprkSelect/SprkSelect';
+import SprkDatePicker from '../SprkDatePicker/SprkDatePicker';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkFieldError from '../SprkFieldError/SprkFieldError';
 import SprkHelperText from '../SprkHelperText/SprkHelperText';
@@ -30,7 +31,8 @@ class SprkInputContainer extends Component {
     React.Children.forEach(children, (child) => {
       if (
         child.type.name === SprkInput.name ||
-        child.type.name === SprkSelect.name
+        child.type.name === SprkSelect.name ||
+        child.type.name === SprkDatePicker.name
       ) {
         id = child.props.id;
         inputAriaDescribedBy = child.props.ariaDescribedBy;
@@ -96,7 +98,8 @@ class SprkInputContainer extends Component {
         if (
           inputAriaDescribedBy &&
           (child.type.name === SprkInput.name ||
-            child.type.name === SprkSelect.name)
+            child.type.name === SprkSelect.name ||
+            child.type.name === SprkDatePicker.name)
         ) {
           return React.cloneElement(child, {
             ariaDescribedBy: inputAriaDescribedBy,
