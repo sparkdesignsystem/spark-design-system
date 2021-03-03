@@ -43,6 +43,20 @@ describe('SparkCardComponent', () => {
     );
   });
 
+  it('should add standout style selector if isStandout is true', () => {
+    component.isStandout = true;
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    expect(element.classList).toContain('sprk-c-Card--standout');
+  });
+
+  it('should not add standout style selector if isStandout is false', () => {
+    component.isStandout = false;
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    expect(element.classList.contains('sprk-c-Card--standout')).toBe(false);
+  });
+
   it('should set href on img link if imgRouterLink set', () => {
     component.cardType = 'teaser';
     component.media = 'img';
