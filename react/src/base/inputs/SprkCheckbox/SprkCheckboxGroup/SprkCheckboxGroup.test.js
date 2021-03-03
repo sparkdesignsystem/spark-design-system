@@ -6,6 +6,7 @@ import SprkCheckboxItem from '../SprkCheckboxItem/SprkCheckboxItem';
 import SprkErrorContainer from '../../SprkErrorContainer/SprkErrorContainer';
 import SprkFieldError from '../../SprkFieldError/SprkFieldError';
 import SprkHelperText from '../../SprkHelperText/SprkHelperText';
+import SprkFieldSet from '../../SprkFieldSet/SprkFieldSet';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -21,28 +22,66 @@ describe('SprkCheckboxGroup:', () => {
     expect(wrapper.find('SprkCheckboxItem').length).toBe(3);
   });
 
+  it(`should render SprkCheckboxItem inside of it when
+  they are grandchildren`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <SprkFieldSet>
+          <SprkCheckboxItem>
+            Label<p>Test</p>
+          </SprkCheckboxItem>
+          <SprkCheckboxItem>Label</SprkCheckboxItem>
+          <SprkCheckboxItem>Label</SprkCheckboxItem>
+        </SprkFieldSet>
+      </SprkCheckboxGroup>,
+    );
+    expect(wrapper.find('SprkCheckboxItem').length).toBe(3);
+    expect(wrapper.find('label').length).toBe(3);
+    expect(wrapper.find('p').length).toBe(1);
+  });
+
+  it(`should render additional children inside`, () => {
+    const wrapper = shallow(
+      <SprkCheckboxGroup>
+        <SprkFieldSet>
+          <SprkCheckboxItem>Label</SprkCheckboxItem>
+          <SprkCheckboxItem>Label</SprkCheckboxItem>
+          <SprkCheckboxItem>Label</SprkCheckboxItem>
+        </SprkFieldSet>
+        <p>Test</p>
+      </SprkCheckboxGroup>,
+    );
+    expect(wrapper.find('SprkCheckboxItem').length).toBe(3);
+    expect(wrapper.find('p').length).toBe(1);
+  });
+
   it('should have container styles', () => {
-    const wrapper = shallow(<SprkCheckboxGroup />);
-    expect(
-      wrapper.find('.sprk-b-InputContainer').hasClass('sprk-b-InputContainer'),
-    ).toBe(true);
+    const wrapper = mount(<SprkCheckboxGroup />);
+    expect(wrapper.find('div').hasClass('sprk-b-InputContainer')).toBe(true);
+    expect(wrapper.find('div').getDOMNode().classList.length).toBe(1);
   });
 
   it('should apply additionalClasses', () => {
     const expected = 'test';
-    const wrapper = shallow(<SprkCheckboxGroup additionalClasses={expected} />);
+    const wrapper = mount(<SprkCheckboxGroup additionalClasses={expected} />);
     expect(wrapper.find('.sprk-b-InputContainer').hasClass(expected)).toBe(
       true,
     );
+    expect(
+      wrapper.find('.sprk-b-InputContainer').getDOMNode().classList.length,
+    ).toBe(2);
   });
 
   it('should apply huge container class', () => {
-    const wrapper = shallow(<SprkCheckboxGroup variant="huge" />);
+    const wrapper = mount(<SprkCheckboxGroup variant="huge" />);
     expect(
       wrapper
         .find('.sprk-b-InputContainer')
         .hasClass('sprk-b-InputContainer--huge'),
     ).toBe(true);
+    expect(
+      wrapper.find('.sprk-b-InputContainer').getDOMNode().classList.length,
+    ).toBe(2);
   });
 
   it('should apply analyticsString', () => {
@@ -53,12 +92,22 @@ describe('SprkCheckboxGroup:', () => {
     ).toEqual(expected);
   });
 
+  it('should not render data-analytics if no analyticsString', () => {
+    const wrapper = shallow(<SprkCheckboxGroup />);
+    expect(wrapper.find('[data-analytics]').length).toBe(0);
+  });
+
   it('should apply data-id', () => {
     const expected = 'test-data-id';
     const wrapper = shallow(<SprkCheckboxGroup idString={expected} />);
     expect(wrapper.find('.sprk-b-InputContainer').prop('data-id')).toEqual(
       expected,
     );
+  });
+
+  it('should not render data-id if no idString', () => {
+    const wrapper = shallow(<SprkCheckboxGroup />);
+    expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
   it(`should add the helperTextID to the aria-describedby
