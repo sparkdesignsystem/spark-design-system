@@ -12,6 +12,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { SprkCardMediaModule } from './directives/sprk-card-media/sprk-card-media.module';
+import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 export default {
   title: 'Components/Card',
   component: SprkCardComponent,
@@ -36,6 +37,7 @@ const modules = {
     SprkStackItemModule,
     SprkHeadingModule,
     SprkCardHeaderModule,
+    SprkIconModule,
     SprkLinkDirectiveModule,
     SprkTextModule,
     RouterModule.forRoot([
@@ -304,6 +306,7 @@ teaser.story = {
     jest: [
       'sprk-card.component',
       'sprk-card-content.directive',
+      'sprk-card-media.directive',
       'sprk-stack.component',
       'sprk-stack-item.directive',
       'sprk-text.directive',
@@ -340,6 +343,136 @@ legacyTeaser.story = {
   parameters: {
     docs: { iframeHeight: 550 },
     jest: ['sprk-card.component'],
+  },
+};
+
+export const teaserIcon = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card idString="teaser-icon">
+      <sprk-stack
+        sprkCardContent
+        itemSpacing="large"
+        sprkStackItem
+        additionalClasses="sprk-u-TextAlign--center"
+      >
+        <a
+          sprkLink
+          variant="unstyled"
+          href="#nogo"
+          sprkStackItem
+          analyticsString="teaser-icon-media"
+          class="sprk-u-AbsoluteCenter"
+        >
+          <sprk-icon
+            iconName="call-team-member"
+            additionalClasses="sprk-c-Icon--xl"
+          ></sprk-icon>
+        </a>
+
+        <h3 sprkHeading variant="displayFive" sprkStackItem>
+          Title
+        </h3>
+
+        <p sprkText variant="bodytwo" sprkStackItem>
+          Lorem ipsum dolor sit amet, doctus
+          invenirevix te. Facilisi perpetua an
+          pri, errem communemea at, mei prima
+          tantas signiferumque at.
+        </p>
+
+        <div sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="#nogo"
+            class="sprk-c-Button sprk-c-Button--secondary"
+            analyticsString="teaser-icon-cta"
+          >
+            Learn More
+          </a>
+        </div>
+      </sprk-stack>
+    </sprk-card>
+ `,
+});
+
+teaserIcon.story = {
+  name: 'Teaser With Icon',
+  parameters: {
+    docs: { iframeHeight: 550 },
+    jest: [
+      'sprk-card.component',
+      'sprk-card-content.directive',
+      'sprk-stack.component',
+      'sprk-stack-item.directive',
+      'sprk-text.directive',
+      'sprk-heading.directive',
+      'sprk-link.directive',
+      'sprk-icon.component',
+    ],
+  },
+};
+
+export const teaserWithDifferentElementOrder = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card idString="teaser-diff-order">
+      <h3 sprkHeading sprkCardContent variant="displayFive" sprkStackItem>
+        Title
+      </h3>
+
+      <a
+        sprkLink
+        variant="unstyled"
+        href="#nogo"
+        sprkStackItem
+        analyticsString="teaser-diff-order-media"
+      >
+        <img
+          alt="Learn more"
+          src="https://spark-assets.netlify.app/desktop.jpg"
+        />
+      </a>
+
+      <sprk-stack sprkCardContent itemSpacing="large" sprkStackItem>
+        <p sprkText variant="bodytwo" sprkStackItem>
+          Lorem ipsum dolor sit amet, doctus
+          invenirevix te. Facilisi perpetua.
+        </p>
+
+        <div sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="#nogo"
+            class="sprk-c-Button sprk-c-Button--secondary"
+            analyticsString="teaser-diff-order-cta"
+          >
+            Learn More
+          </a>
+        </div>
+      </sprk-stack>
+    </sprk-card>
+  `,
+});
+
+teaserWithDifferentElementOrder.story = {
+  name: 'Teaser With Different Element Order',
+  parameters: {
+    jest: [
+      'sprk-card.component',
+      'sprk-card-content.directive',
+      'sprk-card-media.directive',
+      'sprk-stack.component',
+      'sprk-stack-item.directive',
+      'sprk-text.directive',
+      'sprk-heading.directive',
+      'sprk-link.directive',
+    ],
+    docs: {
+      iframeHeight: 550,
+    },
   },
 };
 
@@ -451,6 +584,7 @@ twoUpCards.story = {
     jest: [
       'sprk-card.component',
       'sprk-card-content.directive',
+      'sprk-card-media.directive',
       'sprk-stack.component',
       'sprk-stack-item.directive',
       'sprk-text.directive',
@@ -672,6 +806,7 @@ threeUpCards.story = {
     docs: { iframeHeight: 600 },
     jest: [
       'sprk-card.component',
+      'sprk-card-media.directive',
       'sprk-card-content.directive',
       'sprk-stack.component',
       'sprk-stack-item.directive',
@@ -961,6 +1096,7 @@ fourUpCards.story = {
       'sprk-card.component',
       'sprk-card-content.directive',
       'sprk-stack.component',
+      'sprk-card-media.directive',
       'sprk-stack-item.directive',
       'sprk-text.directive',
       'sprk-heading.directive',
