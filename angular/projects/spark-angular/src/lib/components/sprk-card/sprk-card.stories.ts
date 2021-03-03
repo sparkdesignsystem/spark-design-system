@@ -144,8 +144,8 @@ export const legacyStandout = () => ({
 });
 
 legacyStandout.story = {
+  name: 'Legacy Standout (Deprecated)',
   parameters: {
-    name: 'Legacy Standout (Deprecated)',
     jest: ['sprk-card.component'],
   },
 };
