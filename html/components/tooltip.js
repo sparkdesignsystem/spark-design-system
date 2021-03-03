@@ -12,17 +12,18 @@ import toggleAriaExpanded from '../utilities/toggleAriaExpanded';
  */
 
 const addPositioningClass = (trigger, tooltip) => {
-  const existingClasses = tooltip.className
-    .replace('sprk-c-Tooltip--bottom-right', '')
-    .replace('sprk-c-Tooltip--bottom-left', '')
-    .replace('sprk-c-Tooltip--top-right', '')
-    .replace('sprk-c-Tooltip--top-left', '');
+  tooltip.classList.remove(
+    'sprk-c-Tooltip--bottom-right',
+    'sprk-c-Tooltip--bottom-left',
+    'sprk-c-Tooltip--top-right',
+    'sprk-c-Tooltip--top-left',
+  );
 
   const elemX = trigger.getBoundingClientRect().left;
   const elemY = trigger.getBoundingClientRect().top;
 
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
+  const viewportWidth = document.documentElement.clientWidth;
+  const viewportHeight = document.documentElement.clientHeight;
 
   const maxWidth = 328;
   const triggerWidth = 16;
@@ -34,17 +35,17 @@ const addPositioningClass = (trigger, tooltip) => {
     calculatedWidth =
       elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
     if (elemY > viewportHeight / 2) {
-      tooltip.className = `${existingClasses} sprk-c-Tooltip--top-left`;
+      tooltip.classList.add('sprk-c-Tooltip--top-left');
     } else {
-      tooltip.className = `${existingClasses} sprk-c-Tooltip--bottom-left`;
+      tooltip.classList.add('sprk-c-Tooltip--bottom-left');
     }
   } else {
     calculatedWidth =
       viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
     if (elemY > viewportHeight / 2) {
-      tooltip.className = `${existingClasses} sprk-c-Tooltip--top-right`;
+      tooltip.classList.add('sprk-c-Tooltip--top-right');
     } else {
-      tooltip.className = `${existingClasses} sprk-c-Tooltip--bottom-right`;
+      tooltip.classList.add('sprk-c-Tooltip--bottom-right');
     }
   }
 
