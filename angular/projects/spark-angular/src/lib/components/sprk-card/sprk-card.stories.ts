@@ -54,7 +54,7 @@ export const defaultStory = () => ({
     <sprk-card idString="default">
       <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
         <p sprkStackItem sprkText variant="bodyTwo">
-          Base Card
+          Default Card
         </p>
       </sprk-stack>
     </sprk-card>
