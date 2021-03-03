@@ -34,7 +34,7 @@ describe('Spark Card Content Directive', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have the correct base classes', () => {
+  it('should have the correct base class', () => {
     expect(mediaElement0.classList.contains('sprk-c-Card__media')).toBe(true);
   });
 

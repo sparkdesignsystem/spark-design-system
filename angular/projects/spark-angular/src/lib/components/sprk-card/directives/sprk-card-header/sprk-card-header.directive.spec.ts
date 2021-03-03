@@ -34,7 +34,7 @@ describe('Spark Card Header Directive', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have the correct base classes', () => {
+  it('should have the correct base class', () => {
     expect(headerElement0.classList.contains('sprk-c-Card__header')).toBe(true);
   });
 
