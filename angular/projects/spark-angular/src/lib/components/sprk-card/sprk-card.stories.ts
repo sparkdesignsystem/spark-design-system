@@ -11,6 +11,7 @@ import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import { SprkCardMediaModule } from './directives/sprk-card-media/sprk-card-media.module';
 export default {
   title: 'Components/Card',
   component: SprkCardComponent,
@@ -29,6 +30,7 @@ export default {
 const modules = {
   imports: [
     SprkCardModule,
+    SprkCardMediaModule,
     SprkStackModule,
     SprkCardContentModule,
     SprkStackItemModule,
