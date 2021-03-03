@@ -63,6 +63,7 @@ import { SprkButtonModule } from './directives/sprk-button/sprk-button.module';
 import { SprkAwardModule } from './components/sprk-award/sprk-award.module';
 import { SprkCardModule } from './components/sprk-card/sprk-card.module';
 import { SprkCardContentModule } from './components/sprk-card/directives/sprk-card-content/sprk-card-content.module';
+import { SprkCardMediaModule } from './components/sprk-card/directives/sprk-card-media/sprk-card-media.module';
 import { SprkDictionaryModule } from './components/sprk-dictionary/sprk-dictionary.module';
 import { SprkHighlightBoardModule } from './components/sprk-highlight-board/sprk-highlight-board.module';
 import { SprkBoxModule } from './directives/sprk-box/sprk-box.module';
@@ -88,6 +89,7 @@ import { SprkCardHeaderModule } from './components/sprk-card/directives/sprk-car
     SprkButtonModule,
     SprkCardModule,
     SprkCardContentModule,
+    SprkCardMediaModule,
     SprkCardHeaderModule,
     SprkDictionaryModule,
     SprkDividerModule,

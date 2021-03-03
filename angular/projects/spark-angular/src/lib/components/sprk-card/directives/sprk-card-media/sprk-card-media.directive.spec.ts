@@ -1,28 +1,28 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkCardHeaderDirective } from './sprk-card-header.directive';
+import { SprkCardMediaDirective } from './sprk-card-media.directive';
 
 @Component({
   selector: 'sprk-test',
-  template: ` <div sprkCardHeader idString="test"></div> `,
+  template: ` <img sprkCardMedia idString="test" /> `,
 })
 class TestComponent {}
 
-describe('Spark Card Header Directive', () => {
+describe('Spark Card Content Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let item0Element: HTMLElement;
+  let mediaElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkCardHeaderDirective, TestComponent],
+      declarations: [SprkCardMediaDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
 
     fixture.detectChanges();
-    item0Element = fixture.nativeElement.querySelectorAll('div')[0];
+    mediaElement = fixture.nativeElement.querySelector('img');
   }));
 
   it('should create itself', () => {
@@ -30,10 +30,10 @@ describe('Spark Card Header Directive', () => {
   });
 
   it('should have the correct base classes', () => {
-    expect(item0Element.classList.contains('sprk-c-Card__header')).toBe(true);
+    expect(mediaElement.classList.contains('sprk-c-Card__media')).toBe(true);
   });
 
   it('should apply correct idString value to data-id', () => {
-    expect(item0Element.getAttribute('data-id') === 'test').toBe(true);
+    expect(mediaElement.getAttribute('data-id') === 'test').toBe(true);
   });
 });

@@ -137,7 +137,7 @@ export const legacyStandout = () => ({
         sprk-o-Stack
         sprk-o-Stack--medium"
       >
-      <p class="sprk-TypeBodyTwo">Standout Card</p>
+        <p class="sprk-TypeBodyTwo">Standout Card</p>
       </div>
     </sprk-card>
   `,
@@ -258,12 +258,12 @@ export const teaser = () => ({
       <a
         sprkLink
         variant="unstyled"
-        href="/"
+        href="#nogo"
         sprkStackItem
         analyticsString="img-link-analytics"
       >
         <img
-          class="sprk-c-Card__media"
+          sprkCardMedia
           alt="Learn more"
           src="https://spark-assets.netlify.app/desktop.jpg"
         />
@@ -283,7 +283,7 @@ export const teaser = () => ({
           <a
             sprkLink
             variant="unstyled"
-            href="/"
+            href="#nogo"
             class="sprk-c-Button sprk-c-Button--secondary"
             analyticsString="test-cta"
           >
@@ -357,11 +357,11 @@ export const twoUpCards = () => ({
           <a
             sprkLink
             variant="unstyled"
-            href="/"
+            href="#nogo"
             sprkStackItem
           >
             <img
-              class="sprk-c-Card__media"
+              sprkCardMedia
               alt="Learn more"
               src="https://spark-assets.netlify.app/desktop.jpg"
             />
@@ -382,7 +382,7 @@ export const twoUpCards = () => ({
               <a
                 sprkLink
                 variant="unstyled"
-                href="/"
+                href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
                 analyticsString="test-cta"
               >
@@ -401,11 +401,11 @@ export const twoUpCards = () => ({
           <a
             sprkLink
             variant="unstyled"
-            href="/"
+            href="#nogo"
             sprkStackItem
           >
             <img
-              class="sprk-c-Card__media"
+              sprkCardMedia
               alt="Learn more"
               src="https://spark-assets.netlify.app/desktop.jpg"
             />
@@ -426,7 +426,7 @@ export const twoUpCards = () => ({
               <a
                 sprkLink
                 variant="unstyled"
-                href="/"
+                href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -531,11 +531,11 @@ export const threeUpCards = () => ({
           <a
             sprkLink
             variant="unstyled"
-            href="/"
+            href="#nogo"
             sprkStackItem
           >
             <img
-              class="sprk-c-Card__media"
+              sprkCardMedia
               alt="Learn more"
               src="https://spark-assets.netlify.app/desktop.jpg"
             />
@@ -556,7 +556,7 @@ export const threeUpCards = () => ({
               <a
                 sprkLink
                 variant="unstyled"
-                href="/"
+                href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -574,11 +574,11 @@ export const threeUpCards = () => ({
           <a
             sprkLink
             variant="unstyled"
-            href="/"
+            href="#nogo"
             sprkStackItem
           >
             <img
-              class="sprk-c-Card__media"
+              sprkCardMedia
               alt="Learn more"
               src="https://spark-assets.netlify.app/desktop.jpg"
             />
@@ -599,7 +599,7 @@ export const threeUpCards = () => ({
               <a
                 sprkLink
                 variant="unstyled"
-                href="/"
+                href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -617,11 +617,11 @@ export const threeUpCards = () => ({
           <a
             sprkLink
             variant="unstyled"
-            href="/"
+            href="#nogo"
             sprkStackItem
           >
             <img
-              class="sprk-c-Card__media"
+              sprkCardMedia
               alt="Learn more"
               src="https://spark-assets.netlify.app/desktop.jpg"
             />
@@ -642,7 +642,7 @@ export const threeUpCards = () => ({
               <a
                 sprkLink
                 variant="unstyled"
-                href="/"
+                href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -767,11 +767,11 @@ export const fourUpCards = () => ({
           <a
             sprkLink
             variant="unstyled"
-            href="/"
+            href="#nogo"
             sprkStackItem
           >
             <img
-              class="sprk-c-Card__media"
+              sprkCardMedia
               alt="Learn more"
               src="https://spark-assets.netlify.app/desktop.jpg"
             />
@@ -792,7 +792,7 @@ export const fourUpCards = () => ({
               <a
                 sprkLink
                 variant="unstyled"
-                href="/"
+                href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
                 analyticsString="test-cta"
               >
@@ -811,11 +811,11 @@ export const fourUpCards = () => ({
           <a
             sprkLink
             variant="unstyled"
-            href="/"
+            href="#nogo"
             sprkStackItem
           >
             <img
-              class="sprk-c-Card__media"
+              sprkCardMedia
               alt="Learn more"
               src="https://spark-assets.netlify.app/desktop.jpg"
             />
@@ -836,7 +836,7 @@ export const fourUpCards = () => ({
               <a
                 sprkLink
                 variant="unstyled"
-                href="/"
+                href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -854,11 +854,11 @@ export const fourUpCards = () => ({
           <a
             sprkLink
             variant="unstyled"
-            href="/"
+            href="#nogo"
             sprkStackItem
           >
             <img
-              class="sprk-c-Card__media"
+              sprkCardMedia
               alt="Learn more"
               src="https://spark-assets.netlify.app/desktop.jpg"
             />
@@ -879,7 +879,7 @@ export const fourUpCards = () => ({
               <a
                 sprkLink
                 variant="unstyled"
-                href="/"
+                href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -897,11 +897,11 @@ export const fourUpCards = () => ({
           <a
             sprkLink
             variant="unstyled"
-            href="/"
+            href="#nogo"
             sprkStackItem
           >
             <img
-              class="sprk-c-Card__media"
+              sprkCardMedia
               alt="Learn more"
               src="https://spark-assets.netlify.app/desktop.jpg"
             />
@@ -922,7 +922,7 @@ export const fourUpCards = () => ({
               <a
                 sprkLink
                 variant="unstyled"
-                href="/"
+                href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More

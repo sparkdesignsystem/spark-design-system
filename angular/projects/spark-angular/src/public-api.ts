@@ -28,6 +28,8 @@ export { SprkCardComponent } from './lib/components/sprk-card/sprk-card.componen
 export { SprkCardModule } from './lib/components/sprk-card/sprk-card.module';
 export { SprkCardContentDirective } from './lib/components/sprk-card/directives/sprk-card-content/sprk-card-content.directive';
 export { SprkCardContentModule } from './lib/components/sprk-card/directives/sprk-card-content/sprk-card-content.module';
+export { SprkCardMediaDirective } from './lib/components/sprk-card/directives/sprk-card-media/sprk-card-media.directive';
+export { SprkCardMediaModule } from './lib/components/sprk-card/directives/sprk-card-media/sprk-card-media.module';
 export { SprkCardHeaderDirective } from './lib/components/sprk-card/directives/sprk-card-header/sprk-card-header.directive';
 export { SprkCardHeaderModule } from './lib/components/sprk-card/directives/sprk-card-header/sprk-card-header.module';
 export { SprkDictionaryComponent } from './lib/components/sprk-dictionary/sprk-dictionary.component';

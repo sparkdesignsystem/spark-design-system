@@ -224,7 +224,7 @@ export class SprkCardComponent {
   @Input()
   cardType: 'base' | 'teaser' | 'teaserHeading' = 'base';
   /**
-   * If `true`, the card will receive
+   * If `true`, the Card will receive
    * the standout design styles.
    */
   @Input()
