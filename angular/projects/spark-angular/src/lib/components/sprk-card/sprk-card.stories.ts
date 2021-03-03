@@ -85,7 +85,7 @@ export const legacyStory = () => ({
         sprk-c-Card__content
         sprk-o-Stack
         sprk-o-Stack--medium">
-        <p class="sprk-TypeBodyTwo">Base Card</p>
+        <p class="sprk-TypeBodyTwo">Default Card</p>
       </div>
     </sprk-card>
   `,
@@ -317,7 +317,7 @@ export const legacyTeaser = () => ({
     <sprk-card
       media="img"
       cardType="teaser"
-      title="Teaser Card Title"
+      title="Title"
       body="Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua."
       imgSrc="https://spark-assets.netlify.app/desktop.jpg"
       imgAlt="Learn more"
@@ -415,7 +415,7 @@ export const twoUpCards = () => ({
 
           <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
             <h3 sprkHeading variant="displayFive" sprkStackItem>
-              Teaser Card
+              Title
             </h3>
 
             <p sprkText variant="bodytwo" sprkStackItem>
@@ -547,7 +547,7 @@ export const threeUpCards = () => ({
 
           <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
             <h3 sprkHeading variant="displayFive" sprkStackItem>
-              Teaser Card
+              Title
             </h3>
 
             <p sprkText variant="bodytwo" sprkStackItem>
@@ -592,7 +592,7 @@ export const threeUpCards = () => ({
 
           <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
             <h3 sprkHeading variant="displayFive" sprkStackItem>
-              Teaser Card
+              Title
             </h3>
 
             <p sprkText variant="bodytwo" sprkStackItem>
@@ -637,7 +637,7 @@ export const threeUpCards = () => ({
 
           <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
             <h3 sprkHeading variant="displayFive" sprkStackItem>
-              Teaser Card
+              Title
             </h3>
 
             <p sprkText variant="bodytwo" sprkStackItem>
@@ -789,7 +789,7 @@ export const fourUpCards = () => ({
 
           <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
             <h3 sprkHeading variant="displayFive" sprkStackItem>
-              Teaser Card
+              Title
             </h3>
 
             <p sprkText variant="bodytwo" sprkStackItem>
@@ -834,7 +834,7 @@ export const fourUpCards = () => ({
 
           <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
             <h3 sprkHeading variant="displayFive" sprkStackItem>
-              Teaser Card
+              Title
             </h3>
 
             <p sprkText variant="bodytwo" sprkStackItem>
@@ -879,7 +879,7 @@ export const fourUpCards = () => ({
 
           <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
             <h3 sprkHeading variant="displayFive" sprkStackItem>
-              Teaser Card
+              Title
             </h3>
 
             <p sprkText variant="bodytwo" sprkStackItem>
@@ -924,7 +924,7 @@ export const fourUpCards = () => ({
 
           <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
             <h3 sprkHeading variant="displayFive" sprkStackItem>
-              Teaser Card
+              Title
             </h3>
 
             <p sprkText variant="bodytwo" sprkStackItem>
