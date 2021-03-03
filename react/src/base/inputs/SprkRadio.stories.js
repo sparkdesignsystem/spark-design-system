@@ -36,9 +36,7 @@ export default {
     info: `
     ${markdownDocumentationLinkBuilder('input')}
 - Spark radios have been refactored into a compositional style component.
-The version that uses <code>SprkSelectionInput</code> will be permanently
-removed in our Fall 2020 release.
-- To update to the new version, replace radios implemented by
+To update to the new version, replace radios implemented by
 the <code>SprkSelectionInput</code> component with our
 new implementation using <code>SprkRadioGroup</code>
 and <code>SprkRadio</code> components.
@@ -65,18 +63,12 @@ defaultStory.story = {
 };
 
 export const defaultHelperText = () => (
-  <SprkRadioGroup>
+  <SprkRadioGroup ariaDescribedBy="radio-helper-text">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem name="radio" ariaDescribedBy="radio-helper-text">
-        Radio Item 1
-      </SprkRadioItem>
-      <SprkRadioItem name="radio" ariaDescribedBy="radio-helper-text">
-        Radio Item 2
-      </SprkRadioItem>
-      <SprkRadioItem name="radio" ariaDescribedBy="radio-helper-text">
-        Radio Item 3
-      </SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
     </SprkFieldset>
     <SprkHelperText id="radio-helper-text">Input Helper Text</SprkHelperText>
   </SprkRadioGroup>
@@ -90,16 +82,10 @@ defaultHelperText.story = {
 };
 
 export const invalidRadioButton = () => (
-  <SprkRadioGroup>
-    <SprkRadioItem name="radio" ariaDescribedBy="invalid-radio">
-      Radio Item 1
-    </SprkRadioItem>
-    <SprkRadioItem name="radio" ariaDescribedBy="invalid-radio">
-      Radio Item 2
-    </SprkRadioItem>
-    <SprkRadioItem name="radio" ariaDescribedBy="invalid-radio">
-      Radio Item 3
-    </SprkRadioItem>
+  <SprkRadioGroup ariaDescribedBy="invalid-radio">
+    <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
+    <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
+    <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
     <SprkFieldError id="invalid-radio">
       <SprkIcon
         iconName="exclamation-filled"
@@ -167,28 +153,16 @@ huge.story = {
 };
 
 export const hugeHelperText = () => (
-  <SprkRadioGroup variant="huge">
+  <SprkRadioGroup variant="huge" ariaDescribedBy="huge-radio-helper-text">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="huge-radio-helper-text"
-      >
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="huge-radio-helper-text"
-      >
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 2
       </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="huge-radio-helper-text"
-      >
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
@@ -206,28 +180,16 @@ hugeHelperText.story = {
 };
 
 export const hugeInvalid = () => (
-  <SprkRadioGroup variant="huge">
+  <SprkRadioGroup variant="huge" ariaDescribedBy="invalid-huge-radio">
     <SprkFieldset>
       <SprkLegend>Group Label Name</SprkLegend>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="invalid-huge-radio"
-      >
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="invalid-huge-radio"
-      >
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 2
       </SprkRadioItem>
-      <SprkRadioItem
-        name="radio"
-        variant="huge"
-        ariaDescribedBy="invalid-huge-radio"
-      >
+      <SprkRadioItem name="radio" variant="huge">
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
