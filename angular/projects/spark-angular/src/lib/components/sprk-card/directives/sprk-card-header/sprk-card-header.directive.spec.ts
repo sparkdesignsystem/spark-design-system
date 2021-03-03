@@ -4,14 +4,18 @@ import { SprkCardHeaderDirective } from './sprk-card-header.directive';
 
 @Component({
   selector: 'sprk-test',
-  template: ` <div sprkCardHeader idString="test"></div> `,
+  template: `
+    <div sprkCardHeader idString="test"></div>
+    <div sprkCardHeader></div>
+  `,
 })
 class TestComponent {}
 
 describe('Spark Card Header Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let headerElement: HTMLElement;
+  let headerElement0: HTMLElement;
+  let headerElement1: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -22,7 +26,8 @@ describe('Spark Card Header Directive', () => {
     component = fixture.componentInstance;
 
     fixture.detectChanges();
-    headerElement = fixture.nativeElement.querySelector('div');
+    headerElement0 = fixture.nativeElement.querySelector('div');
+    headerElement1 = fixture.nativeElement.querySelectorAll('div')[1];
   }));
 
   it('should create itself', () => {
@@ -30,10 +35,14 @@ describe('Spark Card Header Directive', () => {
   });
 
   it('should have the correct base classes', () => {
-    expect(headerElement.classList.contains('sprk-c-Card__header')).toBe(true);
+    expect(headerElement0.classList.contains('sprk-c-Card__header')).toBe(true);
   });
 
   it('should apply correct idString value to data-id', () => {
-    expect(headerElement.getAttribute('data-id') === 'test').toBe(true);
+    expect(headerElement0.getAttribute('data-id') === 'test').toBe(true);
+  });
+
+  it('should not apply data-id when idString is not set', () => {
+    expect(headerElement1.getAttribute('data-id')).toBe(null);
   });
 });

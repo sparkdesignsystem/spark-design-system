@@ -4,14 +4,18 @@ import { SprkCardMediaDirective } from './sprk-card-media.directive';
 
 @Component({
   selector: 'sprk-test',
-  template: ` <img sprkCardMedia idString="test" /> `,
+  template: `
+    <img sprkCardMedia idString="test" />
+    <img sprkCardMedia />
+  `,
 })
 class TestComponent {}
 
 describe('Spark Card Content Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let mediaElement: HTMLElement;
+  let mediaElement0: HTMLElement;
+  let mediaElement1: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -22,7 +26,8 @@ describe('Spark Card Content Directive', () => {
     component = fixture.componentInstance;
 
     fixture.detectChanges();
-    mediaElement = fixture.nativeElement.querySelector('img');
+    mediaElement0 = fixture.nativeElement.querySelector('img');
+    mediaElement1 = fixture.nativeElement.querySelectorAll('img')[1];
   }));
 
   it('should create itself', () => {
@@ -30,10 +35,14 @@ describe('Spark Card Content Directive', () => {
   });
 
   it('should have the correct base classes', () => {
-    expect(mediaElement.classList.contains('sprk-c-Card__media')).toBe(true);
+    expect(mediaElement0.classList.contains('sprk-c-Card__media')).toBe(true);
   });
 
   it('should apply correct idString value to data-id', () => {
-    expect(mediaElement.getAttribute('data-id') === 'test').toBe(true);
+    expect(mediaElement0.getAttribute('data-id') === 'test').toBe(true);
+  });
+
+  it('should not apply data-id when idString is not set', () => {
+    expect(mediaElement1.getAttribute('data-id')).toBe(null);
   });
 });
