@@ -260,7 +260,7 @@ export const teaser = () => ({
         variant="unstyled"
         href="#nogo"
         sprkStackItem
-        analyticsString="img-link-analytics"
+        analyticsString="teaser-media"
       >
         <img
           sprkCardMedia
@@ -271,7 +271,7 @@ export const teaser = () => ({
 
       <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
         <h3 sprkHeading variant="displayFive" sprkStackItem>
-          Teaser Card
+          Title
         </h3>
 
         <p sprkText variant="bodytwo" sprkStackItem>
@@ -285,7 +285,7 @@ export const teaser = () => ({
             variant="unstyled"
             href="#nogo"
             class="sprk-c-Button sprk-c-Button--secondary"
-            analyticsString="test-cta"
+            analyticsString="teaser-cta"
           >
             Learn More
           </a>
@@ -357,6 +357,7 @@ export const twoUpCards = () => ({
           <a
             sprkLink
             variant="unstyled"
+            analyticsString="two-up-media"
             href="#nogo"
             sprkStackItem
           >
@@ -369,7 +370,7 @@ export const twoUpCards = () => ({
 
           <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
             <h3 sprkHeading variant="displayFive" sprkStackItem>
-              Teaser Card
+              Title
             </h3>
 
             <p sprkText variant="bodytwo" sprkStackItem>
@@ -384,7 +385,7 @@ export const twoUpCards = () => ({
                 variant="unstyled"
                 href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
-                analyticsString="test-cta"
+                analyticsString="two-up-cta"
               >
                 Learn More
               </a>
@@ -403,6 +404,7 @@ export const twoUpCards = () => ({
             variant="unstyled"
             href="#nogo"
             sprkStackItem
+            analyticsString="two-up-media-2"
           >
             <img
               sprkCardMedia
@@ -428,6 +430,7 @@ export const twoUpCards = () => ({
                 variant="unstyled"
                 href="#nogo"
                 class="sprk-c-Button sprk-c-Button--secondary"
+                analyticsString="two-up-cta-2"
               >
                 Learn More
               </a>
@@ -532,6 +535,7 @@ export const threeUpCards = () => ({
             sprkLink
             variant="unstyled"
             href="#nogo"
+            analyticsString="three-up-media"
             sprkStackItem
           >
             <img
@@ -557,6 +561,7 @@ export const threeUpCards = () => ({
                 sprkLink
                 variant="unstyled"
                 href="#nogo"
+                analyticsString="three-up-cta"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -576,6 +581,7 @@ export const threeUpCards = () => ({
             variant="unstyled"
             href="#nogo"
             sprkStackItem
+            analyticsString="three-up-media-2"
           >
             <img
               sprkCardMedia
@@ -600,6 +606,7 @@ export const threeUpCards = () => ({
                 sprkLink
                 variant="unstyled"
                 href="#nogo"
+                analyticsString="three-up-cta-2"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -618,6 +625,7 @@ export const threeUpCards = () => ({
             sprkLink
             variant="unstyled"
             href="#nogo"
+            analyticsString="three-up-media-3"
             sprkStackItem
           >
             <img
@@ -643,6 +651,7 @@ export const threeUpCards = () => ({
                 sprkLink
                 variant="unstyled"
                 href="#nogo"
+                analyticsString="three-up-cta-3"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -768,6 +777,7 @@ export const fourUpCards = () => ({
             sprkLink
             variant="unstyled"
             href="#nogo"
+            analyticsString="four-up-media"
             sprkStackItem
           >
             <img
@@ -793,50 +803,7 @@ export const fourUpCards = () => ({
                 sprkLink
                 variant="unstyled"
                 href="#nogo"
-                class="sprk-c-Button sprk-c-Button--secondary"
-                analyticsString="test-cta"
-              >
-                Learn More
-              </a>
-            </div>
-          </sprk-stack>
-        </sprk-card>
-      </div>
-
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card sprkStackItem>
-          <a
-            sprkLink
-            variant="unstyled"
-            href="#nogo"
-            sprkStackItem
-          >
-            <img
-              sprkCardMedia
-              alt="Learn more"
-              src="https://spark-assets.netlify.app/desktop.jpg"
-            />
-          </a>
-
-          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
-            <h3 sprkHeading variant="displayFive" sprkStackItem>
-              Teaser Card
-            </h3>
-
-            <p sprkText variant="bodytwo" sprkStackItem>
-              This Lorem ipsum dolor sit amet, doctus invenire vix te.
-              Facilisi perpetua an pri, errem commune mea at, mei prima
-              tantas signiferumque at. Numquam.
-            </p>
-
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
+                analyticsString="four-up-cta"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -856,6 +823,7 @@ export const fourUpCards = () => ({
             variant="unstyled"
             href="#nogo"
             sprkStackItem
+            analyticsString="four-up-media-2"
           >
             <img
               sprkCardMedia
@@ -880,6 +848,7 @@ export const fourUpCards = () => ({
                 sprkLink
                 variant="unstyled"
                 href="#nogo"
+                analyticsString="four-up-cta-2"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
@@ -898,6 +867,7 @@ export const fourUpCards = () => ({
             sprkLink
             variant="unstyled"
             href="#nogo"
+            analyticsString="four-up-media-3"
             sprkStackItem
           >
             <img
@@ -922,7 +892,53 @@ export const fourUpCards = () => ({
               <a
                 sprkLink
                 variant="unstyled"
+                analyticsString="four-up-cta-3"
                 href="#nogo"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="#nogo"
+            sprkStackItem
+            analyticsString="four-up-media-4"
+          >
+            <img
+              sprkCardMedia
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Teaser Card
+            </h3>
+
+            <p sprkText variant="bodytwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="#nogo"
+                analyticsString="four-up-cta-4"
                 class="sprk-c-Button sprk-c-Button--secondary"
               >
                 Learn More
