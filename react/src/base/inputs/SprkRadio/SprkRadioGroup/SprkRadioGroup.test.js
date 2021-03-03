@@ -24,6 +24,23 @@ describe('SprkRadioGroup:', () => {
 
   it(`should render SprkRadioItem inside of it when
   they are grandchildren`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkFieldSet>
+          <SprkRadioItem>
+            Label<p>Test</p>
+          </SprkRadioItem>
+          <SprkRadioItem>Label</SprkRadioItem>
+          <SprkRadioItem>Label</SprkRadioItem>
+        </SprkFieldSet>
+      </SprkRadioGroup>,
+    );
+    expect(wrapper.find('SprkRadioItem').length).toBe(3);
+    expect(wrapper.find('label').length).toBe(3);
+    expect(wrapper.find('p').length).toBe(1);
+  });
+
+  it(`should render additional children inside`, () => {
     const wrapper = shallow(
       <SprkRadioGroup>
         <SprkFieldSet>
@@ -31,33 +48,40 @@ describe('SprkRadioGroup:', () => {
           <SprkRadioItem>Label</SprkRadioItem>
           <SprkRadioItem>Label</SprkRadioItem>
         </SprkFieldSet>
+        <p>Test</p>
       </SprkRadioGroup>,
     );
     expect(wrapper.find('SprkRadioItem').length).toBe(3);
+    expect(wrapper.find('p').length).toBe(1);
   });
 
   it('should have container styles', () => {
-    const wrapper = shallow(<SprkRadioGroup />);
-    expect(
-      wrapper.find('.sprk-b-InputContainer').hasClass('sprk-b-InputContainer'),
-    ).toBe(true);
+    const wrapper = mount(<SprkRadioGroup />);
+    expect(wrapper.find('div').hasClass('sprk-b-InputContainer')).toBe(true);
+    expect(wrapper.find('div').getDOMNode().classList.length).toBe(1);
   });
 
   it('should apply additionalClasses', () => {
     const expected = 'test';
-    const wrapper = shallow(<SprkRadioGroup additionalClasses={expected} />);
+    const wrapper = mount(<SprkRadioGroup additionalClasses={expected} />);
     expect(wrapper.find('.sprk-b-InputContainer').hasClass(expected)).toBe(
       true,
     );
+    expect(
+      wrapper.find('.sprk-b-InputContainer').getDOMNode().classList.length,
+    ).toBe(2);
   });
 
   it('should apply huge container class', () => {
-    const wrapper = shallow(<SprkRadioGroup variant="huge" />);
+    const wrapper = mount(<SprkRadioGroup variant="huge" />);
     expect(
       wrapper
         .find('.sprk-b-InputContainer')
         .hasClass('sprk-b-InputContainer--huge'),
     ).toBe(true);
+    expect(
+      wrapper.find('.sprk-b-InputContainer').getDOMNode().classList.length,
+    ).toBe(2);
   });
 
   it('should apply analyticsString', () => {
@@ -68,12 +92,22 @@ describe('SprkRadioGroup:', () => {
     ).toEqual(expected);
   });
 
+  it('should not render data-analytics if no analyticsString', () => {
+    const wrapper = shallow(<SprkRadioGroup />);
+    expect(wrapper.find('[data-analytics]').length).toBe(0);
+  });
+
   it('should apply data-id', () => {
     const expected = 'test-data-id';
     const wrapper = shallow(<SprkRadioGroup idString={expected} />);
     expect(wrapper.find('.sprk-b-InputContainer').prop('data-id')).toEqual(
       expected,
     );
+  });
+
+  it('should not render data-id if no idString', () => {
+    const wrapper = shallow(<SprkRadioGroup />);
+    expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
   it(`should add the helperTextID to the aria-describedby
