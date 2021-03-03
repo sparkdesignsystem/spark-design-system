@@ -50,7 +50,6 @@ const SprkCheckboxGroup = (props) => {
       ? inputAriaDescribedByArray.join(' ')
       : null;
 
-  // For each element, if it has grandChildren, add ariaDescribedBy to those
   let key = 0;
   let elementsToRender = elementsToProcess;
   if (errorId || helperId) {

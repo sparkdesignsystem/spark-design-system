@@ -10,52 +10,62 @@ const SprkRadioGroup = (props) => {
     idString,
     additionalClasses,
     analyticsString,
+    ariaDescribedBy,
+    ...rest
   } = props;
 
-  let errorId = null;
-  let helperId = null;
-  let hasErrorContainer = false;
-  let hasHelperText = false;
-
+  let errorId;
+  let helperId;
+  let inputAriaDescribedByArray = [];
+  if (ariaDescribedBy) {
+    inputAriaDescribedByArray = ariaDescribedBy.split(' ');
+  }
   const childrenArray = React.Children.toArray(children);
-  // Map through children, assign SprkErrorContainer with id/uniqueId
-  // Assign errorId which will determine the ariaDescribedBy of SprkRadioItem
+  // Get the errorId and helperId.
+  // If they don't exist in the ariaDescribedBy, add them.
   const elementsToProcess = childrenArray.map((element) => {
-    if (element.type.name === 'SprkErrorContainer') {
-      hasErrorContainer = true;
+    if (
+      element.type.name === 'SprkFieldError' ||
+      element.type.name === 'SprkErrorContainer'
+    ) {
       errorId = element.props.id;
-      return React.cloneElement(element, { id: errorId });
+      if (!inputAriaDescribedByArray.includes(errorId)) {
+        inputAriaDescribedByArray.push(errorId);
+      }
+      return React.cloneElement(element);
     }
 
     if (element.type.name === 'SprkHelperText') {
-      hasHelperText = true;
       helperId = element.props.id;
-      return React.cloneElement(element, { id: helperId });
+      if (!inputAriaDescribedByArray.includes(helperId)) {
+        inputAriaDescribedByArray.push(helperId);
+      }
+      return React.cloneElement(element);
     }
 
     return element;
   });
 
-  // for each element, if it has grandChildren, add ariaDescribedBy to those
+  const inputAriaDescribedBy =
+    inputAriaDescribedByArray.length > 0
+      ? inputAriaDescribedByArray.join(' ')
+      : null;
+
   let key = 0;
   let elementsToRender = elementsToProcess;
-  if (hasErrorContainer || hasHelperText) {
+  if (errorId || helperId) {
     elementsToRender = elementsToProcess.map((element) => {
       key += 1;
       let grandChildren = null;
       if (element.props.children) {
         grandChildren = addPropsToMatchingComponents(
           element.props.children,
-          ['SprkRadioItem'],
-          {
-            ariaDescribedBy: [helperId, errorId].join(' '),
-          },
+          'SprkRadioItem',
         );
       }
 
       if (element.type.name === 'SprkRadioItem') {
         return React.cloneElement(element, {
-          ariaDescribedBy: [helperId, errorId].join(' '),
           key: `sprk-radio-item-${key}`,
           children: grandChildren || element.children,
         });
@@ -74,6 +84,8 @@ const SprkRadioGroup = (props) => {
       })}
       data-analytics={analyticsString}
       data-id={idString}
+      aria-describedby={inputAriaDescribedBy}
+      {...rest}
     >
       {elementsToRender}
     </div>
@@ -103,6 +115,14 @@ SprkRadioGroup.propTypes = {
    * to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
+  /**
+   * Assigned to the `aria-describedby`
+   * attribute. Used to create
+   * relationships between the
+   * component and text that describes it,
+   * such as helper text or an error field.
+   */
+  ariaDescribedBy: PropTypes.string,
 };
 
 export default SprkRadioGroup;
