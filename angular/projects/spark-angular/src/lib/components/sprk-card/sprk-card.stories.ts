@@ -228,11 +228,13 @@ export const teaserIcon = () => ({
           variant="unstyled"
           href="#nogo"
           sprkStackItem
+          aria-label="Title"
           analyticsString="teaser-icon-media"
           class="sprk-u-AbsoluteCenter"
         >
           <sprk-icon
             iconName="call-team-member"
+            aria-hidden="true"
             additionalClasses="sprk-c-Icon--xl"
           ></sprk-icon>
         </a>

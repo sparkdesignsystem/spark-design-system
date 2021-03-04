@@ -364,8 +364,9 @@ export const threeUpCards = () =>
             sprk-u-TextAlign--center
           "
         >
-          <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
+          <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item" aria-label="Icon Title">
             <svg
+              aria-hidden="true"
               class="
                 sprk-c-Icon
                 sprk-c-Icon--xl
@@ -428,12 +429,13 @@ export const threeUpCards = () =>
             sprk-u-TextAlign--center
           "
         >
-          <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
+          <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item" aria-label="Icon Title">
             <svg
               class="
                 sprk-c-Icon
                 sprk-c-Icon--xl"
               height="75"
+              aria-hidden="true"
               viewBox="0 0 220.63 197.62"
             >
               <use xlink:href="#call-team-member" />
@@ -486,8 +488,11 @@ export const threeUpCards = () =>
         >
           <a
             href="#nogo"
-            class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
+            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            aria-label="Icon Title"
+          >
             <svg
+              aria-hidden="true"
               class="
                 sprk-c-Icon
                 sprk-c-Icon--xl"
