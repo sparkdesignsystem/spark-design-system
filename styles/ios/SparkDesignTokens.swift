@@ -318,6 +318,7 @@ public class SparkDesignTokens {
     public static let sprkMastheadSelectorBgColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkMastheadSelectorBorderColorMaskOpen = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkMastheadSelectorDropdownFontSize = CGFloat(16.00)
+    public static let sprkMastheadSelectorDropdownFontWeight = 400
     public static let sprkMastheadSelectorDropdownFooterPadding = CGFloat(16.00)
     public static let sprkMastheadSelectorDropdownItemPadding = CGFloat(24.00)
     public static let sprkMastheadSelectorDropdownTitleColor = UIColor(red: 0.729, green: 0.729, blue: 0.729, alpha:1)

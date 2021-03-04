@@ -314,13 +314,19 @@
           "themable": true
         },
         "dropdown-font-size": {
-          "comment": "The font size of the selector dropdown.",
+          "comment": "The font size of the Masthead Selector Dropdown.",
           "value": "{font.size.body.one.value}",
           "file": "settings",
           "themable": true
         },
+        "dropdown-font-weight": {
+          "comment": "The font weight of the Masthead Selector Dropdown.",
+          "value": "400",
+          "file": "settings",
+          "themable": true
+        },
         "dropdown-padding": {
-          "comment": "The padding of the selector dropdown in the Masthead with Extended Navigation.",
+          "comment": "The padding of the Masthead Selector Dropdown.",
           "value": "0",
           "attributes": {
             "category": "size"
