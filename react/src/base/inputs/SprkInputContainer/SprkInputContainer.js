@@ -49,8 +49,27 @@ class SprkInputContainer extends Component {
       if (child.type.name === SprkHelperText.name) {
         helperTextID = child.props.id;
       }
+      // If the child has it's own children and the it's an icon-container,
+      // map through them to get values.
+      if (child.props.children && child.props.className) {
+        const childsClassName = child.props.className;
+        if (childsClassName.includes('sprk-b-InputContainer__icon-container')) {
+          React.Children.forEach(child.props.children, (childsChild) => {
+            if (
+              childsChild.type.name === SprkInput.name ||
+              childsChild.type.name === SprkSelect.name ||
+              childsChild.type.name === SprkDatePicker.name
+            ) {
+              id = childsChild.props.id;
+              inputAriaDescribedBy = childsChild.props.ariaDescribedBy;
+            }
+            if (childsChild.type.name === SprkLabel.name) {
+              labelFor = childsChild.props.htmlFor;
+            }
+          });
+        }
+      }
     });
-
     /* Check to see if the errorContainerID
      * and helperTextID are in the inputAriaDescribedByArray.
      * If they aren't, add it to the array.
@@ -106,6 +125,37 @@ class SprkInputContainer extends Component {
           });
         }
 
+        if (child.props.children && child.props.className) {
+          const childsClassName = child.props.className;
+          if (
+            childsClassName.includes('sprk-b-InputContainer__icon-container')
+          ) {
+            const childsChildrenElements = React.Children.map(
+              child.props.children,
+              (childsChild) => {
+                if (id !== labelFor) {
+                  if (childsChild.type.name === SprkLabel.name) {
+                    return React.cloneElement(childsChild, {
+                      htmlFor: id,
+                    });
+                  }
+                }
+                if (
+                  inputAriaDescribedBy &&
+                  (childsChild.type.name === SprkInput.name ||
+                    childsChild.type.name === SprkSelect.name ||
+                    childsChild.type.name === SprkDatePicker.name)
+                ) {
+                  return React.cloneElement(childsChild, {
+                    ariaDescribedBy: inputAriaDescribedBy,
+                  });
+                }
+                return childsChild;
+              },
+            );
+            return childsChildrenElements;
+          }
+        }
         return child;
       });
       return childrenElements;
