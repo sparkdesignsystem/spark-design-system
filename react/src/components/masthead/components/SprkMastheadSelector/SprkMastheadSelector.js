@@ -12,7 +12,7 @@ class SprkMastheadSelector extends Component {
     this.state = {
       isOpen: false,
       triggerText: props.defaultTriggerText,
-      choiceItems: props.choices.items.map(item => ({
+      choiceItems: props.choices.items.map((item) => ({
         id: uniqueId(),
         ...item,
       })),
@@ -99,7 +99,12 @@ class SprkMastheadSelector extends Component {
           <SprkLink
             variant="plain"
             additionalClasses={classNames(
-              'sprk-c-Masthead__selector sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column',
+              `
+                sprk-c-Masthead__selector
+                sprk-o-Stack
+                sprk-o-Stack--split@xxs
+                sprk-o-Stack--center-column
+              `,
               additionalTriggerClasses,
             )}
             data-analytics={analyticsString}
@@ -131,20 +136,32 @@ class SprkMastheadSelector extends Component {
         {isOpen && (
           <div
             className={classNames(
-              'sprk-c-Masthead__selector-dropdown sprk-c-Dropdown',
+              'sprk-c-Masthead__selector-dropdown',
               additionalClasses,
             )}
             data-sprk-dropdown="dropdown-selector"
           >
-            <div className="sprk-c-Dropdown__header">
+            <div className="sprk-c-Masthead__selector-dropdown-header">
               <SprkLink
                 variant="plain"
-                additionalClasses="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
+                additionalClasses="
+                  sprk-o-Stack
+                  sprk-o-Stack--split@xxs
+                  sprk-o-Stack--center-column
+                  sprk-u-Width-100
+                "
                 onClick={this.closeDropdown}
                 href="#nogo"
                 aria-haspopup="true"
               >
-                <span className="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs">
+                <span
+                  className="
+                    sprk-c-Masthead__selector-dropdown-title
+                    sprk-b-TypeBodyTwo
+                    sprk-o-Stack__item
+                    sprk-o-Stack__item--flex@xxs
+                  "
+                >
                   {triggerText}
                 </span>
                 <SprkIcon
@@ -154,7 +171,7 @@ class SprkMastheadSelector extends Component {
               </SprkLink>
             </div>
 
-            <ul className="sprk-c-Dropdown__links">
+            <ul className="sprk-c-Masthead__selector-dropdown-links">
               {choiceItems.map((item) => {
                 const {
                   element,
@@ -166,9 +183,15 @@ class SprkMastheadSelector extends Component {
                 } = item;
                 const TagName = element || 'a';
                 return (
-                  <li className="sprk-c-Dropdown__item" key={item.id}>
+                  <li
+                    className="sprk-c-Masthead__selector-dropdown-item"
+                    key={item.id}
+                  >
                     <TagName
-                      className="sprk-c-Dropdown__link sprk-u-ptm"
+                      className="
+                        sprk-c-Masthead__selector-dropdown-link
+                        sprk-u-ptm
+                      "
                       href={TagName === 'a' ? href || '#nogo' : undefined}
                       onClick={() => {
                         this.updateTriggerText(title);
@@ -189,7 +212,12 @@ class SprkMastheadSelector extends Component {
             </ul>
 
             {footer && (
-              <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
+              <div
+                className="
+                  sprk-c-Masthead__selector-footer
+                  sprk-u-TextAlign--center
+                "
+              >
                 {footer}
               </div>
             )}
@@ -202,7 +230,8 @@ class SprkMastheadSelector extends Component {
 
 SprkMastheadSelector.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to add to
+   * the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
@@ -218,14 +247,19 @@ SprkMastheadSelector.propTypes = {
    */
   additionalTriggerTextClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving as
+   * a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
-  /** Configuration object that builds the dropdown */
+  /** Configuration object that builds the dropdown. */
   choices: PropTypes.shape({
-    /** A node to render at the foot of the dropdown menu */
+    /**
+     * A function supplied that will run when a choice is made.
+     */
+    choiceFunction: PropTypes.func,
+    /** A node to render at the foot of the dropdown menu. */
     footer: PropTypes.node,
-    /** An array of objects that describe the items in the menu */
+    /** An array of objects that describe the items in the menu. */
     items: PropTypes.arrayOf(
       PropTypes.shape({
         /**
@@ -236,7 +270,7 @@ SprkMastheadSelector.propTypes = {
          * The `href` value assigned the logo's link.
          */
         href: PropTypes.string,
-        /** The text for the masthead selector item.*/
+        /** The text for the masthead selector item. */
         text: PropTypes.string,
       }),
     ).isRequired,
@@ -248,7 +282,8 @@ SprkMastheadSelector.propTypes = {
   /** The icon type of the trigger icon */
   iconName: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as
+   * a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /** Applies styles if the selector is flush with the sides of the viewport */
