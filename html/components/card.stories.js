@@ -364,7 +364,11 @@ export const threeUpCards = () =>
             sprk-u-TextAlign--center
           "
         >
-          <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item" aria-label="Icon Title">
+          <a
+            href="#nogo"
+            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            aria-label="Icon Title"
+          >
             <svg
               aria-hidden="true"
               class="
@@ -429,7 +433,11 @@ export const threeUpCards = () =>
             sprk-u-TextAlign--center
           "
         >
-          <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item" aria-label="Icon Title">
+          <a
+            href="#nogo"
+            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            aria-label="Icon Title"
+          >
             <svg
               class="
                 sprk-c-Icon

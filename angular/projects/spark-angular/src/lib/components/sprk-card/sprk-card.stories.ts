@@ -66,7 +66,6 @@ export const defaultStory = () => ({
 defaultStory.story = {
   name: 'Default',
   parameters: {
-    docs: { iframeHeight: 150 },
     jest: [
       'sprk-card.component',
       'sprk-card-content.directive',
