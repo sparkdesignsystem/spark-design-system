@@ -254,7 +254,12 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should add the top left positioning class', () => {
-    window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 100,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
 
     triggerElement.getBoundingClientRect = () => {
       return { top: 75, left: 75 };
@@ -269,7 +274,12 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should add the top right positioning class', () => {
-    window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 100,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
 
     triggerElement.getBoundingClientRect = () => {
       return { top: 75, left: 25 };
@@ -284,7 +294,12 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should add the bottom left positioning class', () => {
-    window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 100,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
 
     triggerElement.getBoundingClientRect = () => {
       return { top: 25, left: 75 };
@@ -299,7 +314,12 @@ describe('SprkTooltipComponent', () => {
   });
 
   it('should add the bottom right positioning class', () => {
-    window = Object.assign(window, { innerWidth: 100, innerHeight: 100 });
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 100,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
 
     triggerElement.getBoundingClientRect = () => {
       return { top: 25, left: 25 };
