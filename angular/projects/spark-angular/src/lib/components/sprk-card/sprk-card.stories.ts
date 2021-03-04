@@ -77,31 +77,6 @@ defaultStory.story = {
   },
 };
 
-export const legacyStory = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-card
-      cardType="base"
-      idString="card-default"
-    >
-      <div class="
-        sprk-o-Stack__item
-        sprk-c-Card__content
-        sprk-o-Stack
-        sprk-o-Stack--medium">
-        <p class="sprk-TypeBodyTwo">Default Card</p>
-      </div>
-    </sprk-card>
-  `,
-});
-
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: ['sprk-card.component'],
-  },
-};
-
 export const standout = () => ({
   moduleMetadata: modules,
   template: `
@@ -124,33 +99,6 @@ standout.story = {
       'sprk-stack-item.directive',
       'sprk-text.directive',
     ],
-  },
-};
-
-export const legacyStandout = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-card
-      cardType="base"
-      idString="card-standout"
-      additionalClasses="sprk-c-Card--standout"
-    >
-      <div class="
-        sprk-o-Stack__item
-        sprk-c-Card__content
-        sprk-o-Stack
-        sprk-o-Stack--medium"
-      >
-        <p class="sprk-TypeBodyTwo">Standout Card</p>
-      </div>
-    </sprk-card>
-  `,
-});
-
-legacyStandout.story = {
-  name: 'Legacy Standout (Deprecated)',
-  parameters: {
-    jest: ['sprk-card.component'],
   },
 };
 
@@ -201,57 +149,6 @@ highlightedHeader.story = {
       'sprk-text.directive',
       'sprk-heading.directive',
     ],
-  },
-};
-
-export const legacyHighlightedHeader = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-card
-      cardType="base"
-      idString="card-highlighted-header"
-      additionalClasses="sprk-c-Card--standout"
-    >
-      <div class="
-        sprk-o-Stack__item
-        sprk-c-Card__header
-        sprk-o-Stack
-        sprk-o-Stack--medium">
-        <h3 class="
-          sprk-b-TypeDisplaySeven
-          sprk-o-Stack__item
-          sprk-u-Color--white">
-          Description
-        </h3>
-
-        <h4 class="
-          sprk-b-TypeDisplayFive
-          sprk-o-Stack__item
-          sprk-u-Color--white">
-          Card Title
-        </h4>
-      </div>
-
-      <div class="
-        sprk-o-Stack__item
-        sprk-o-Stack
-        sprk-o-Stack--medium
-        sprk-c-Card__content">
-        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          Lorem ipsum dolor sit amet, doctus invenire vix te. Facilisi
-          perpetua an pri, errem commune mea at, mei prima tantas
-          signiferumque at. Numquam.
-        </p>
-      </div>
-    </sprk-card>
-  `,
-});
-
-legacyHighlightedHeader.story = {
-  name: 'Legacy Highlighted Header (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 300 },
-    jest: ['sprk-card.component'],
   },
 };
 
@@ -313,36 +210,6 @@ teaser.story = {
       'sprk-heading.directive',
       'sprk-link.directive',
     ],
-  },
-};
-
-export const legacyTeaser = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-card
-      media="img"
-      cardType="teaser"
-      title="Title"
-      body="Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua."
-      imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-      imgAlt="Learn more"
-      imgHref="#nogo"
-      ctaType="button"
-      ctaText="Learn More"
-      ctaHref="#nogo"
-      ctaAnalytics="Button: Spark"
-      additionalCtaClasses="sprk-c-Button--secondary"
-      idString="card-teaser"
-    >
-    </sprk-card>
- `,
-});
-
-legacyTeaser.story = {
-  name: 'Legacy Teaser (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 550 },
-    jest: ['sprk-card.component'],
   },
 };
 
@@ -594,66 +461,6 @@ twoUpCards.story = {
   },
 };
 
-export const legacyTwoUpCards = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-stack
-      itemSpacing="large"
-      splitAt="large"
-      additionalClasses="sprk-o-Stack--center-row"
-    >
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          media="img"
-          idString="card-two-up-1"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          imgAlt="Learn more"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
-            Facilisi perpetua an pri, errem commune mea at, mei prima tantas
-            signiferumque at. Numquam."
-          ctaType="button"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          ctaText="Learn More"
-          title="Title"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          media="img"
-          idString="card-two-up-2"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          imgAlt="Learn more"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix
-            te. Facilisi perpetua an pri, errem commune mea at, mei
-            prima tantas signiferumque at. Numquam."
-          ctaType="button"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          ctaText="Learn More"
-          title="Title"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-    </sprk-stack>
-  `,
-});
-
-legacyTwoUpCards.story = {
-  name: 'Legacy Card Layout - Two Up (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: ['sprk-card.component'],
-  },
-};
-
 export const threeUpCards = () => ({
   moduleMetadata: modules,
   template: `
@@ -814,86 +621,6 @@ threeUpCards.story = {
       'sprk-heading.directive',
       'sprk-link.directive',
     ],
-  },
-};
-
-export const legacyThreeUpCards = () => ({
-  moduleMetadata: modules,
-  template: `
-   <sprk-stack
-     itemSpacing="large"
-     splitAt="large"
-     additionalClasses="sprk-o-Stack--center-row"
-   >
-     <div
-       class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-       sprkStackItem
-     >
-       <sprk-card
-         cardType="teaser"
-         idString="card-three-up-1"
-         media="img"
-         imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-         imgAlt="Learn more"
-         body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
-           Facilisi perpetua an pri, errem commune mea at, mei prima
-           tantas signiferumque at. Numquam."
-         ctaType="button"
-         ctaText="Learn More"
-         additionalCtaClasses="sprk-c-Button--secondary"
-         title="Title"
-         sprkStackItem
-       ></sprk-card>
-      </div>
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          media="img"
-          idString="card-three-up-2"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          imgAlt="Learn more"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix
-            te. Facilisi perpetua an pri, errem commune mea at, mei
-            prima tantas signiferumque at. Numquam."
-          ctaType="button"
-          ctaText="Learn More"
-          title="Title"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          media="img"
-          idString="card-three-up-3"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          imgAlt="Learn more"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix
-            te. Facilisi perpetua an pri, errem commune mea at, mei
-            prima tantas signiferumque at. Numquam."
-          ctaType="button"
-          ctaText="Learn More"
-          title="Title"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-    </sprk-stack>
-  `,
-});
-
-legacyThreeUpCards.story = {
-  name: 'Legacy Card Layout - Three Up (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: ['sprk-card.component'],
   },
 };
 
@@ -1102,6 +829,279 @@ fourUpCards.story = {
       'sprk-heading.directive',
       'sprk-link.directive',
     ],
+  },
+};
+
+export const legacyStory = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card
+      cardType="base"
+      idString="card-default"
+    >
+      <div class="
+        sprk-o-Stack__item
+        sprk-c-Card__content
+        sprk-o-Stack
+        sprk-o-Stack--medium">
+        <p class="sprk-TypeBodyTwo">Default Card</p>
+      </div>
+    </sprk-card>
+  `,
+});
+
+legacyStory.story = {
+  name: 'Legacy (Deprecated)',
+  parameters: {
+    jest: ['sprk-card.component'],
+  },
+};
+
+export const legacyStandout = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card
+      cardType="base"
+      idString="card-standout"
+      additionalClasses="sprk-c-Card--standout"
+    >
+      <div class="
+        sprk-o-Stack__item
+        sprk-c-Card__content
+        sprk-o-Stack
+        sprk-o-Stack--medium"
+      >
+        <p class="sprk-TypeBodyTwo">Standout Card</p>
+      </div>
+    </sprk-card>
+  `,
+});
+
+legacyStandout.story = {
+  name: 'Legacy Standout (Deprecated)',
+  parameters: {
+    jest: ['sprk-card.component'],
+  },
+};
+
+export const legacyHighlightedHeader = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card
+      cardType="base"
+      idString="card-highlighted-header"
+      additionalClasses="sprk-c-Card--standout"
+    >
+      <div class="
+        sprk-o-Stack__item
+        sprk-c-Card__header
+        sprk-o-Stack
+        sprk-o-Stack--medium">
+        <h3 class="
+          sprk-b-TypeDisplaySeven
+          sprk-o-Stack__item
+          sprk-u-Color--white">
+          Description
+        </h3>
+
+        <h4 class="
+          sprk-b-TypeDisplayFive
+          sprk-o-Stack__item
+          sprk-u-Color--white">
+          Card Title
+        </h4>
+      </div>
+
+      <div class="
+        sprk-o-Stack__item
+        sprk-o-Stack
+        sprk-o-Stack--medium
+        sprk-c-Card__content">
+        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
+          Lorem ipsum dolor sit amet, doctus invenire vix te. Facilisi
+          perpetua an pri, errem commune mea at, mei prima tantas
+          signiferumque at. Numquam.
+        </p>
+      </div>
+    </sprk-card>
+  `,
+});
+
+legacyHighlightedHeader.story = {
+  name: 'Legacy Highlighted Header (Deprecated)',
+  parameters: {
+    docs: { iframeHeight: 300 },
+    jest: ['sprk-card.component'],
+  },
+};
+
+export const legacyTeaser = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-card
+      media="img"
+      cardType="teaser"
+      title="Title"
+      body="Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua."
+      imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+      imgAlt="Learn more"
+      imgHref="#nogo"
+      ctaType="button"
+      ctaText="Learn More"
+      ctaHref="#nogo"
+      ctaAnalytics="Button: Spark"
+      additionalCtaClasses="sprk-c-Button--secondary"
+      idString="card-teaser"
+    >
+    </sprk-card>
+ `,
+});
+
+legacyTeaser.story = {
+  name: 'Legacy Teaser (Deprecated)',
+  parameters: {
+    docs: { iframeHeight: 550 },
+    jest: ['sprk-card.component'],
+  },
+};
+
+export const legacyTwoUpCards = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-stack
+      itemSpacing="large"
+      splitAt="large"
+      additionalClasses="sprk-o-Stack--center-row"
+    >
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-two-up-1"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+          imgAlt="Learn more"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
+            Facilisi perpetua an pri, errem commune mea at, mei prima tantas
+            signiferumque at. Numquam."
+          ctaType="button"
+          additionalCtaClasses="sprk-c-Button--secondary"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+        ></sprk-card>
+      </div>
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-two-up-2"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+          imgAlt="Learn more"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix
+            te. Facilisi perpetua an pri, errem commune mea at, mei
+            prima tantas signiferumque at. Numquam."
+          ctaType="button"
+          additionalCtaClasses="sprk-c-Button--secondary"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+        ></sprk-card>
+      </div>
+    </sprk-stack>
+  `,
+});
+
+legacyTwoUpCards.story = {
+  name: 'Legacy Card Layout - Two Up (Deprecated)',
+  parameters: {
+    docs: { iframeHeight: 600 },
+    jest: ['sprk-card.component'],
+  },
+};
+
+export const legacyThreeUpCards = () => ({
+  moduleMetadata: modules,
+  template: `
+   <sprk-stack
+     itemSpacing="large"
+     splitAt="large"
+     additionalClasses="sprk-o-Stack--center-row"
+   >
+     <div
+       class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+       sprkStackItem
+     >
+       <sprk-card
+         cardType="teaser"
+         idString="card-three-up-1"
+         media="img"
+         imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+         imgAlt="Learn more"
+         body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
+           Facilisi perpetua an pri, errem commune mea at, mei prima
+           tantas signiferumque at. Numquam."
+         ctaType="button"
+         ctaText="Learn More"
+         additionalCtaClasses="sprk-c-Button--secondary"
+         title="Title"
+         sprkStackItem
+       ></sprk-card>
+      </div>
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card
+          cardType="teaser"
+          media="img"
+          idString="card-three-up-2"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+          imgAlt="Learn more"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix
+            te. Facilisi perpetua an pri, errem commune mea at, mei
+            prima tantas signiferumque at. Numquam."
+          ctaType="button"
+          ctaText="Learn More"
+          title="Title"
+          additionalCtaClasses="sprk-c-Button--secondary"
+          sprkStackItem
+        ></sprk-card>
+      </div>
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card
+          cardType="teaser"
+          additionalCtaClasses="sprk-c-Button--secondary"
+          media="img"
+          idString="card-three-up-3"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+          imgAlt="Learn more"
+          body="This Lorem ipsum dolor sit amet, doctus invenire vix
+            te. Facilisi perpetua an pri, errem commune mea at, mei
+            prima tantas signiferumque at. Numquam."
+          ctaType="button"
+          ctaText="Learn More"
+          title="Title"
+          sprkStackItem
+        ></sprk-card>
+      </div>
+    </sprk-stack>
+  `,
+});
+
+legacyThreeUpCards.story = {
+  name: 'Legacy Card Layout - Three Up (Deprecated)',
+  parameters: {
+    docs: { iframeHeight: 600 },
+    jest: ['sprk-card.component'],
   },
 };
 
