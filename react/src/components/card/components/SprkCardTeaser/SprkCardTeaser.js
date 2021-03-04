@@ -221,7 +221,8 @@ SprkCardTeaser.propTypes = {
      */
     cta: PropTypes.shape({
       /**
-       * A space-separated string of classes to add to the call-to-action icon.
+       * A space-separated string of classes
+       * to add to the call-to-action icon.
        */
       additionalCtaIconClasses: PropTypes.string,
       /**
@@ -232,11 +233,13 @@ SprkCardTeaser.propTypes = {
        */
       ctaAnalytics: PropTypes.string,
       /**
-       * Determines what icon `SprkIcon` renders next to the Call to Action.
+       * Determines what icon `SprkIcon`
+       * renders next to the Call to Action.
        */
       ctaIcon: PropTypes.string,
       /**
-       * Determines if link renders as an anchor tag, or router link.
+       * Determines if link renders as an
+       * anchor tag, or router link.
        */
       ctaLinkElement: PropTypes.oneOfType([
         PropTypes.string,
@@ -269,7 +272,8 @@ SprkCardTeaser.propTypes = {
      */
     media: PropTypes.shape({
       /**
-       * A space-separated string of classes to add to the media icon.
+       * A space-separated string of classes to
+       * add to the media icon.
        */
       additionalMediaIconClasses: PropTypes.string,
       /**
@@ -277,7 +281,8 @@ SprkCardTeaser.propTypes = {
        */
       href: PropTypes.string,
       /**
-       * Determines if link renders as an Anchor tag, or router link.
+       * Determines if link renders as an
+       * Anchor tag, or router link.
        */
       mediaLinkElement: PropTypes.oneOfType([
         PropTypes.string,
@@ -294,11 +299,14 @@ SprkCardTeaser.propTypes = {
       /** The source link for the media. */
       imgSrc: PropTypes.string,
       /**
-       * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+       * Assigned to the `data-analytics` attribute
+       * serving as a unique selector for outside
+       * libraries to capture data.
        */
       mediaAnalyticsString: PropTypes.string,
       /**
-       * Determines which type of media renders. Defaults to `img` if none provided.
+       * Determines which type of media renders.
+       * Defaults to `img` if none provided.
        */
       mediaVariant: PropTypes.oneOf(['img', 'icon']),
     }),
@@ -316,13 +324,15 @@ SprkCardTeaser.propTypes = {
 };
 
 SprkCardTeaser.defaultProps = {
-  cta: {
-    ctaVariant: 'link',
-    ctaLinkElement: 'a',
-  },
-  media: {
-    mediaVariant: 'img',
-    mediaLinkElement: 'a',
+  teaserConfig: {
+    cta: {
+      ctaVariant: 'link',
+      ctaLinkElement: 'a',
+    },
+    media: {
+      mediaVariant: 'img',
+      mediaLinkElement: 'a',
+    },
   },
 };
 

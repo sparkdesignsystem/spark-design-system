@@ -63,10 +63,13 @@ SprkCard.propTypes = {
    */
   additionalClasses: PropTypes.string,
   /**
-   * A space-separated string of classes to add to the card content container.
+   * A space-separated string of classes
+   * to add to the card content container.
    */
   additionalContentClasses: PropTypes.string,
-  /** Content to render inside of SprkCard. */
+  /**
+   * Content to render inside of SprkCard.
+   */
   children: PropTypes.node,
   /**
    * Assigned to the `data-id` attribute serving
@@ -106,7 +109,8 @@ SprkCard.propTypes = {
     title: PropTypes.string,
   }),
   /**
-   * Configuration that populate the content of SprkCard teaser.
+   * Configuration that populate the
+   * content of SprkCard teaser.
    */
   teaserConfig: PropTypes.shape({
     /**
@@ -118,7 +122,8 @@ SprkCard.propTypes = {
      */
     cta: PropTypes.shape({
       /**
-       * A space-separated string of classes to add to the call-to-action icon.
+       * A space-separated string of classes to
+       * add to the call-to-action icon.
        */
       additionalCtaIconClasses: PropTypes.string,
       /**
@@ -129,11 +134,13 @@ SprkCard.propTypes = {
        */
       ctaAnalytics: PropTypes.string,
       /**
-       * Determines what icon `SprkIcon` renders next to the Call to Action.
+       * Determines what icon `SprkIcon` renders next to
+       * the Call to Action.
        */
       ctaIcon: PropTypes.string,
       /**
-       * Determines if link renders as an anchor tag, or router link.
+       * Determines if link renders as an anchor
+       * tag, or router link.
        */
       ctaLinkElement: PropTypes.oneOfType([
         PropTypes.string,

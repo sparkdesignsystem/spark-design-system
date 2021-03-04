@@ -6,7 +6,7 @@ const SprkCardHighlightedHeader = (props) => {
   const { description, title, bodyText } = highlightedHeaderConfig;
 
   return (
-    <React.Fragment>
+    <>
       <div
         className="
           sprk-o-Stack__item
@@ -44,19 +44,25 @@ const SprkCardHighlightedHeader = (props) => {
       >
         <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">{bodyText}</p>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
 SprkCardHighlightedHeader.propTypes = {
   highlightedHeaderConfig: PropTypes.shape({
-    /** Headline of the Highlighted Header Card. */
+    /**
+     * Headline of the
+     * Highlighted Header Card.
+     */
     title: PropTypes.string,
     /**
      * Text inside of Highlighted Header Card.
      */
     bodyText: PropTypes.string,
-    /** Sub-headline text of the Highlighted Header Card. */
+    /**
+     * Sub-headline text of the
+     * Highlighted Header Card.
+     */
     description: PropTypes.string,
   }),
 };

@@ -30,6 +30,13 @@ describe('SprkCard:', () => {
     );
   });
 
+  it('should not add standout class if isStandout is false', () => {
+    const wrapper = shallow(<SprkCard isStandout={false} />);
+    expect(wrapper.find('.sprk-c-Card').hasClass('sprk-c-Card--standout')).toBe(
+      false,
+    );
+  });
+
   // If teaser, should load teaser card
   it('should load teaser if there is teaserConfig', () => {
     const wrapper = mount(
