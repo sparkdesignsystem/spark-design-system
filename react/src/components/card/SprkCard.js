@@ -14,6 +14,7 @@ const SprkCard = (props) => {
     isStandout,
     teaserConfig,
     variant,
+    ...other
   } = props;
 
   const GetCardContent = () => {
@@ -48,6 +49,7 @@ const SprkCard = (props) => {
         'sprk-u-TextAlign--center': teaserConfig.media.mediaVariant === 'icon',
       })}
       data-id={idString}
+      {...other}
     >
       <GetCardContent />
     </div>
