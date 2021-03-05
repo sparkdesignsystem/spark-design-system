@@ -367,7 +367,7 @@ export const threeUpCards = () =>
           <a
             href="#nogo"
             class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
-            aria-label="Icon Title"
+            aria-label="Learn More"
           >
             <svg
               aria-hidden="true"
@@ -436,7 +436,7 @@ export const threeUpCards = () =>
           <a
             href="#nogo"
             class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
-            aria-label="Icon Title"
+            aria-label="Learn More"
           >
             <svg
               class="
@@ -497,7 +497,7 @@ export const threeUpCards = () =>
           <a
             href="#nogo"
             class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
-            aria-label="Icon Title"
+            aria-label="Learn More"
           >
             <svg
               aria-hidden="true"
