@@ -27,7 +27,17 @@ const modules = {
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-    todo
+  <sprk-autocomplete isOpen="true">
+    <div aria-live-slot>i am the aria-live div</div>
+    <label label-slot>Search for a Fruit</label>
+    <div input-icon-container-slot>
+      svg
+      <input>
+    </div>
+    <ul role="listbox" list-slot>
+      <li role="option">Apple</li>
+    </ul>
+  </sprk-autocomplete>
   `,
 });
 
