@@ -112,6 +112,7 @@ export const teaserWithIcon = () => (
         ctaVariant: 'button',
         ctaLinkElement: 'a',
         href: '#nogo',
+        buttonVariant: 'secondary',
       },
       media: {
         href: '#nogo',
@@ -139,6 +140,7 @@ export const teaserWithDifferentElementOrder = () => (
         text: 'Learn More',
         ctaVariant: 'button',
         href: '#nogo',
+        buttonVariant: 'secondary',
       },
       media: {
         href: '#nogo',
@@ -474,6 +476,7 @@ export const legacyTeaser = () => (
         text: 'Learn More',
         ctaVariant: 'button',
         ctaLinkElement: 'a',
+        buttonVariant: 'secondary',
         href: '#nogo',
       },
       media: {
@@ -506,6 +509,7 @@ export const legacyTeaserWithDifferentElementOrder = () => (
         text: 'Learn More',
         ctaVariant: 'button',
         href: '#nogo',
+        buttonVariant: 'secondary',
       },
       media: {
         href: '#nogo',
