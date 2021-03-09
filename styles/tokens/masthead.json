@@ -451,6 +451,15 @@
           "file": "settings",
           "themable": true
         },
+        "dropdown-footer-text-align": {
+          "comment": "The text-align of the Masthead selector dropdown footer.",
+          "value": "center",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
         "dropdown-border-bottom-mask-open": {
           "comment": "The bottom border that gets applied to the selector dropdown when open in the Masthead with Extended Navigation.",
           "value": "2px solid {gray.value}",

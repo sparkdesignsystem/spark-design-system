@@ -191,6 +191,7 @@
   <string name="sprk_masthead_selector_dropdown_text_decoration">none</string><!-- The text deocoration of the Masthead Selector Dropdown. -->
   <string name="sprk_masthead_selector_dropdown_active_border">2.5px solid #ff603aa1</string><!-- The left border of the Masthead Selector Dropdown item that is active. -->
   <string name="sprk_masthead_selector_dropdown_active_box_shadow">-1px 0 0 0 #ff603aa1</string><!-- The box-shadow of the Masthead Selector Dropdown item that is active. -->
+  <string name="sprk_masthead_selector_dropdown_footer_text_align">center</string><!-- The text-align of the Masthead selector dropdown footer. -->
   <string name="sprk_masthead_selector_dropdown_border_bottom_mask_open">2px solid #fff7f7f7</string><!-- The bottom border that gets applied to the selector dropdown when open in the Masthead with Extended Navigation. -->
   <string name="sprk_masthead_selector_dropdown_box_shadow_mask_open">0 5px 10px rgba(0, 0, 0, 0.1)</string><!-- The box shadow that gets applied to the selector dropdown when open in the Masthead with Extended Navigation. -->
   <string name="sprk_masthead_transition">all 0.3s ease-in</string><!-- The transition applied to the Masthead. -->

@@ -1027,12 +1027,7 @@ export const extended = () => {
               </li>
             </ul>
 
-            <div
-              class="
-                sprk-c-Masthead__selector-footer
-                sprk-u-TextAlign--center
-              "
-            >
+            <div class="sprk-c-Masthead__selector-footer">
               <a
                 class="
                   sprk-c-Button

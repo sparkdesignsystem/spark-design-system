@@ -180,7 +180,7 @@ import {
         >
           <div
             *ngIf="narrowSelector['footer']"
-            class="sprk-c-Masthead__selector-footer sprk-u-TextAlign--center"
+            class="sprk-c-Masthead__selector-footer"
             sprkMastheadSelectorFooter
           >
             <a
