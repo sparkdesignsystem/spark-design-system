@@ -557,6 +557,7 @@ public class SparkDesignTokens {
     public static let sprkMastheadNarrowHeight = CGFloat(81.00)
     public static let sprkMastheadSelectorBorderRadius = CGFloat(5.00)
     public static let sprkMastheadSelectorDropdownLineHeight = CGFloat(16.00)
+    public static let sprkMastheadSelectorDropdownMargin = CGFloat(0.00)
     public static let sprkMastheadSelectorDropdownPadding = CGFloat(0.00)
     public static let sprkMastheadSelectorMinWidth = CGFloat(272.00)
     public static let sprkMastheadSelectorPadding = CGFloat(8.00)

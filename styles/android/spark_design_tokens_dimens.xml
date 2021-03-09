@@ -176,6 +176,7 @@
   <dimen name="sprk_masthead_selector_padding">8.00dp</dimen><!-- The padding of the selector in the Masthead with Extended Navigation. -->
   <dimen name="sprk_masthead_selector_min_width">272.00dp</dimen><!-- The minimum width of the selector in the Masthead with Extended Navigation. -->
   <dimen name="sprk_masthead_selector_border_radius">5.00dp</dimen><!-- The border radius of the selector in the Masthead with Extended Navigation. -->
+  <dimen name="sprk_masthead_selector_dropdown_margin">0.00dp</dimen><!-- The margin of the Masthead Selector Dropdown. -->
   <dimen name="sprk_masthead_selector_dropdown_padding">0.00dp</dimen><!-- The padding of the Masthead Selector Dropdown. -->
   <dimen name="sprk_masthead_selector_dropdown_line_height">16.00dp</dimen><!-- The line height of the Masthead Selector Dropdown. -->
   <dimen name="sprk_masthead_narrow_height">81.00dp</dimen><!-- This is the height of the Masthead on narrow viewports and is used to calculate how far from the top the narrow navigation items should be displayed. -->

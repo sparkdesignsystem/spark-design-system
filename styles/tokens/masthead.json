@@ -313,6 +313,15 @@
           "file": "settings",
           "themable": true
         },
+        "dropdown-z-index": {
+          "comment": "The z-index of the Masthead Selector Dropdown.",
+          "value": "{layer.height.m.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
         "dropdown-font-size": {
           "comment": "The font size of the Masthead Selector Dropdown.",
           "value": "{font.size.body.one.value}",
@@ -322,6 +331,15 @@
         "dropdown-font-weight": {
           "comment": "The font weight of the Masthead Selector Dropdown.",
           "value": "400",
+          "file": "settings",
+          "themable": true
+        },
+        "dropdown-margin": {
+          "comment": "The margin of the Masthead Selector Dropdown.",
+          "value": "0",
+          "attributes": {
+            "category": "size"
+          },
           "file": "settings",
           "themable": true
         },
@@ -367,6 +385,24 @@
           "value": "{black.value}",
           "attributes": {
             "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "dropdown-link-padding": {
+          "comment": "The padding of the Masthead Selector Dropdown links.",
+          "value": "{space.m.value} {space.misc.a.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "dropdown-text-decoration": {
+          "comment": "The text deocoration of the Masthead Selector Dropdown.",
+          "value": "none",
+          "attributes": {
+            "category": "content"
           },
           "file": "settings",
           "themable": true

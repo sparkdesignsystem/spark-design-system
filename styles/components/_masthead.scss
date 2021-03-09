@@ -324,23 +324,21 @@
   font-size: $sprk-masthead-selector-dropdown-font-size;
   position: absolute;
   max-width: 100%;
-  margin: 0;
+  margin: $sprk-masthead-selector-dropdown-margin;
   width: 100%;
   top: 0;
   padding: $sprk-masthead-selector-dropdown-padding;
-  z-index: $sprk-layer-height-m;
+  z-index: $sprk-masthead-selector-dropdown-z-index;
 }
 
 .sprk-c-Masthead__selector-dropdown .sprk-c-Masthead__selector-dropdown-link {
-  padding: $sprk-space-m $sprk-space-misc-a;
+  padding: $sprk-masthead-selector-dropdown-link-padding;
 }
 
 .sprk-c-Masthead__selector-dropdown-header {
   padding: ($sprk-masthead-selector-dropdown-item-padding / 2)
     $sprk-masthead-selector-dropdown-item-padding;
 
-  // GET RID? Might always have a heading
-  // When the header has a heading, this adjust its padding because the header takes over as the "first item"
   + .sprk-c-Masthead__selector-dropdown-links {
     .sprk-c-Dropdown__item:first-child
       .sprk-c-Masthead__selector-dropdown-link {
@@ -376,7 +374,7 @@
   display: block;
   padding: ($sprk-masthead-selector-dropdown-item-padding / 2)
     $sprk-masthead-selector-dropdown-item-padding;
-  text-decoration: none;
+  text-decoration: $sprk-masthead-selector-dropdown-text-decoration;
   line-height: $sprk-masthead-selector-dropdown-line-height;
 
   &:hover {
