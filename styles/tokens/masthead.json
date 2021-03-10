@@ -418,7 +418,7 @@
         },
         "dropdown-active": {
           "background-color": {
-            "comment": "The background color of the Selector Dropdown items that are active or hovered. Found, found in a Masthead with Extended Navigation.",
+            "comment": "The background color of the Selector Dropdown items that are active or hovered. Found in a Masthead with Extended Navigation.",
             "value": "{gray.value}",
             "attributes": {
               "category": "color"
@@ -427,7 +427,7 @@
             "themable": true
           },
           "border": {
-            "comment": "The left border of the Selector Dropdown item that is active. Found, found in a Masthead with Extended Navigation.",
+            "comment": "The left border of the Selector Dropdown item that is active. Found in a Masthead with Extended Navigation.",
             "value": "2.5px solid {purple.value}",
             "attributes": {
               "category": "content"
@@ -436,7 +436,7 @@
             "themable": true
           },
           "box-shadow": {
-            "comment": "The box-shadow of the Selector Dropdown item that is active. Found, found in a Masthead with Extended Navigation.",
+            "comment": "The box-shadow of the Selector Dropdown item that is active. Found in a Masthead with Extended Navigation.",
             "value": "-1px 0 0 0 {purple.value}",
             "attributes": {
               "category": "content"
