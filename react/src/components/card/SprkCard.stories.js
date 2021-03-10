@@ -523,8 +523,9 @@ export const fourUpCards = () => (
 
         <SprkStackItem>
           <SprkText variant="bodyTwo">
-            Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi
-            perpetua.
+            This Lorem ipsum dolor sit amet, doctus invenire vix te. Facilisi
+            perpetua an pri, errem commune mea at, mei prima tantas
+            signiferumque at. Numquam.
           </SprkText>
         </SprkStackItem>
 
