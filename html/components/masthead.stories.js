@@ -1002,7 +1002,7 @@ export const extended = () => {
             <ul class="sprk-c-Masthead__selector-dropdown-links">
               <li class="sprk-c-Masthead__selector-dropdown-item">
                 <a
-                  class="sprk-c-Masthead__selector-dropdown-link sprk-u-ptm"
+                  class="sprk-c-Masthead__selector-dropdown-link"
                   href="#nogo"
                   data-sprk-dropdown-choice="Selection Choice Title 1"
                   role="option"

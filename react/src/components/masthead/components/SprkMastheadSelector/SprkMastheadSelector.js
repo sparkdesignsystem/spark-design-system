@@ -148,7 +148,6 @@ class SprkMastheadSelector extends Component {
                   sprk-o-Stack
                   sprk-o-Stack--split@xxs
                   sprk-o-Stack--center-column
-                  sprk-u-Width-100
                 "
                 onClick={this.closeDropdown}
                 href="#nogo"
@@ -188,10 +187,7 @@ class SprkMastheadSelector extends Component {
                     key={item.id}
                   >
                     <TagName
-                      className="
-                        sprk-c-Masthead__selector-dropdown-link
-                        sprk-u-ptm
-                      "
+                      className="sprk-c-Masthead__selector-dropdown-link"
                       href={TagName === 'a' ? href || '#nogo' : undefined}
                       onClick={() => {
                         this.updateTriggerText(title);
@@ -263,7 +259,7 @@ SprkMastheadSelector.propTypes = {
          * The `href` value assigned the logo's link.
          */
         href: PropTypes.string,
-        /** The text for the masthead selector item. */
+        /** The text for the Masthead Selector item. */
         text: PropTypes.string,
       }),
     ).isRequired,

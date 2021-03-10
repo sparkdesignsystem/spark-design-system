@@ -254,7 +254,7 @@
       },
       "selector": {
         "border": {
-          "comment": "The border of the selector in the Masthead with Extended Navigation.",
+          "comment": "The border of the Selector, found in a Masthead with Extended Navigation.",
           "value": "2px solid {black-tint.30.value}",
           "attributes": {
             "category": "content"
@@ -263,7 +263,7 @@
           "themable": true
         },
         "padding": {
-          "comment": "The padding of the selector in the Masthead with Extended Navigation.",
+          "comment": "The padding of the Selector, found in a Masthead with Extended Navigation.",
           "value": "{space.inset.short.m.value}",
           "attributes": {
             "category": "size"
@@ -272,7 +272,7 @@
           "themable": true
         },
         "min-width": {
-          "comment": "The minimum width of the selector in the Masthead with Extended Navigation.",
+          "comment": "The minimum width of the Selector, found in a Masthead with Extended Navigation.",
           "value": "17rem",
           "attributes": {
             "category": "size"
@@ -281,25 +281,25 @@
           "themable": true
         },
         "font-color": {
-          "comment": "The font color of the selector in the Masthead with Extended Navigation.",
+          "comment": "The font color of the selector, found in a Masthead with Extended Navigation.",
           "value": "{black.value}",
           "file": "settings",
           "themable": true
         },
         "bg-color": {
-          "comment": "The background color of the selector in the Masthead with Extended Navigation.",
+          "comment": "The background color of the selector, found in a Masthead with Extended Navigation.",
           "value": "{white.value}",
           "file": "settings",
           "themable": true
         },
         "border-color-mask-open": {
-          "comment": "The bottom color that gets applied to the selector dropdown when open in the Masthead with Extended Navigation.",
+          "comment": "The bottom color that gets applied to the selector dropdown when open, found in a Masthead with Extended Navigation.",
           "value": "{white.value}",
           "file": "settings",
           "themable": true
         },
         "border-radius": {
-          "comment": "The border radius of the selector in the Masthead with Extended Navigation.",
+          "comment": "The border radius of the selector, found in a Masthead with Extended Navigation.",
           "value": "5px",
           "attributes": {
             "category": "size"
@@ -308,13 +308,13 @@
           "themable": true
         },
         "font-weight": {
-          "comment": "The font weight of the selector in the Masthead with Extended Navigation.",
+          "comment": "The font weight of the selector, found in a Masthead with Extended Navigation.",
           "value": "300",
           "file": "settings",
           "themable": true
         },
         "dropdown-z-index": {
-          "comment": "The z-index of the Masthead Selector Dropdown.",
+          "comment": "The z-index of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "{layer.height.m.value}",
           "attributes": {
             "category": "content"
@@ -323,19 +323,19 @@
           "themable": true
         },
         "dropdown-font-size": {
-          "comment": "The font size of the Masthead Selector Dropdown.",
+          "comment": "The font size of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "{font.size.body.one.value}",
           "file": "settings",
           "themable": true
         },
         "dropdown-font-weight": {
-          "comment": "The font weight of the Masthead Selector Dropdown.",
+          "comment": "The font weight of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "400",
           "file": "settings",
           "themable": true
         },
         "dropdown-margin": {
-          "comment": "The margin of the Masthead Selector Dropdown.",
+          "comment": "The margin of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "0",
           "attributes": {
             "category": "size"
@@ -344,7 +344,7 @@
           "themable": true
         },
         "dropdown-padding": {
-          "comment": "The padding of the Masthead Selector Dropdown.",
+          "comment": "The padding of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "0",
           "attributes": {
             "category": "size"
@@ -353,7 +353,7 @@
           "themable": true
         },
         "dropdown-item-padding": {
-          "comment": "The padding around the Masthead Selector Dropdown items.",
+          "comment": "The padding around the Selector Dropdown items, found in a Masthead with Extended Navigation.",
           "value": "{space.misc.a.value}",
           "file": "settings",
           "themable": true
@@ -361,27 +361,27 @@
         "dropdown-title": {
           "font": {
             "size": {
-              "comment": "The font size of the Masthead Selector Dropdown title.",
+              "comment": "The font size of the Selector Dropdown title, found in a Masthead with Extended Navigation.",
               "value": "{masthead.selector.dropdown-font-size.value}",
               "file": "settings",
               "themable": true
             },
             "weight": {
-              "comment": "The font weight of the Masthead Selector Dropdown title.",
+              "comment": "The font weight of the Selector Dropdown title, found in a Masthead with Extended Navigation.",
               "value": "300",
               "file": "settings",
               "themable": true
             }
           },
           "color": {
-            "comment": "The color of the Masthead Selector Dropdown title.",
-            "value": "{black-tint.30.value}",
+            "comment": "The color of the Selector Dropdown title, found in a Masthead with Extended Navigation.",
+            "value": "{black-tint.60.value}",
             "file": "settings",
             "themable": true
           }
         },
         "dropdown-link-color": {
-          "comment": "The color of the Masthead Selector Dropdown links.",
+          "comment": "The color of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "{black.value}",
           "attributes": {
             "category": "color"
@@ -390,7 +390,7 @@
           "themable": true
         },
         "dropdown-link-padding": {
-          "comment": "The padding of the Masthead Selector Dropdown links.",
+          "comment": "The padding of the Selector Dropdown links, found in a Masthead with Extended Navigation.",
           "value": "{space.m.value} {space.misc.a.value}",
           "attributes": {
             "category": "content"
@@ -399,7 +399,7 @@
           "themable": true
         },
         "dropdown-text-decoration": {
-          "comment": "The text deocoration of the Masthead Selector Dropdown.",
+          "comment": "The text decoration of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "none",
           "attributes": {
             "category": "content"
@@ -408,7 +408,7 @@
           "themable": true
         },
         "dropdown-line-height": {
-          "comment": "The line height of the Masthead Selector Dropdown.",
+          "comment": "The line height of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "1",
           "attributes": {
             "category": "size"
@@ -418,7 +418,7 @@
         },
         "dropdown-active": {
           "background-color": {
-            "comment": "Background color of the Masthead Selector Dropdown items that are active or hovered.",
+            "comment": "The background color of the Selector Dropdown items that are active or hovered. Found, found in a Masthead with Extended Navigation.",
             "value": "{gray.value}",
             "attributes": {
               "category": "color"
@@ -427,7 +427,7 @@
             "themable": true
           },
           "border": {
-            "comment": "The left border of the Masthead Selector Dropdown item that is active.",
+            "comment": "The left border of the Selector Dropdown item that is active. Found, found in a Masthead with Extended Navigation.",
             "value": "2.5px solid {purple.value}",
             "attributes": {
               "category": "content"
@@ -436,7 +436,7 @@
             "themable": true
           },
           "box-shadow": {
-            "comment": "The box-shadow of the Masthead Selector Dropdown item that is active.",
+            "comment": "The box-shadow of the Selector Dropdown item that is active. Found, found in a Masthead with Extended Navigation.",
             "value": "-1px 0 0 0 {purple.value}",
             "attributes": {
               "category": "content"
@@ -446,13 +446,13 @@
           }
         },
         "dropdown-footer-padding": {
-          "comment": "The padding around the Masthead selector dropdown footer.",
+          "comment": "The padding around the Selector Dropdown footer, found in a Masthead with Extended Navigation.",
           "value": "{space.inset.short.l.value}",
           "file": "settings",
           "themable": true
         },
         "dropdown-footer-text-align": {
-          "comment": "The text-align of the Masthead selector dropdown footer.",
+          "comment": "The text-align of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "center",
           "attributes": {
             "category": "content"
@@ -461,7 +461,7 @@
           "themable": true
         },
         "dropdown-border-bottom-mask-open": {
-          "comment": "The bottom border that gets applied to the selector dropdown when open in the Masthead with Extended Navigation.",
+          "comment": "The bottom border that gets applied to the selector dropdown when open, found in a Masthead with Extended Navigation.",
           "value": "2px solid {gray.value}",
           "attributes": {
             "category": "content"
@@ -470,7 +470,7 @@
           "themable": true
         },
         "dropdown-box-shadow-mask-open": {
-          "comment": "The box shadow that gets applied to the selector dropdown when open in the Masthead with Extended Navigation.",
+          "comment": "The box shadow that gets applied to the selector dropdown when open, found in a Masthead with Extended Navigation.",
           "value": "0 5px 10px rgba(0, 0, 0, 0.1)",
           "attributes": {
             "category": "content"
