@@ -157,6 +157,7 @@ export const teaserWithIcon = () => (
           href="#nogo"
           analyticsString="teaser-icon-media"
           additionalClasses="sprk-u-AbsoluteCenter"
+          aria-label="Learn More"
         >
           <SprkIcon
             iconName="call-team-member"
@@ -328,7 +329,7 @@ export const twoUpCards = () => (
             variant="unstyled"
             additionalClasses="sprk-c-Button sprk-c-Button--secondary"
             href="#nogo"
-            analyticsString="two-up-media-2"
+            analyticsString="two-up-cta-2"
           >
             Learn More
           </SprkLink>
