@@ -432,7 +432,7 @@ export const threeUpCards = () => (
             variant="unstyled"
             additionalClasses="sprk-c-Button sprk-c-Button--secondary"
             href="#nogo"
-            analyticsString="three-up-media-2"
+            analyticsString="three-up-cta-2"
           >
             Learn More
           </SprkLink>
@@ -477,7 +477,7 @@ export const threeUpCards = () => (
             variant="unstyled"
             additionalClasses="sprk-c-Button sprk-c-Button--secondary"
             href="#nogo"
-            analyticsString="three-up-media-3"
+            analyticsString="three-up-cta-3"
           >
             Learn More
           </SprkLink>
@@ -580,7 +580,7 @@ export const fourUpCards = () => (
             variant="unstyled"
             additionalClasses="sprk-c-Button sprk-c-Button--secondary"
             href="#nogo"
-            analyticsString="four-up-media-2"
+            analyticsString="four-up-cta-2"
           >
             Learn More
           </SprkLink>
@@ -625,7 +625,7 @@ export const fourUpCards = () => (
             variant="unstyled"
             additionalClasses="sprk-c-Button sprk-c-Button--secondary"
             href="#nogo"
-            analyticsString="four-up-media-3"
+            analyticsString="four-up-cta-3"
           >
             Learn More
           </SprkLink>
@@ -670,7 +670,7 @@ export const fourUpCards = () => (
             variant="unstyled"
             additionalClasses="sprk-c-Button sprk-c-Button--secondary"
             href="#nogo"
-            analyticsString="four-up-media-4"
+            analyticsString="four-up-cta-4"
           >
             Learn More
           </SprkLink>
