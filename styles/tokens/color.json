@@ -100,7 +100,7 @@
     "file": "color"
   },
   "orange": {
-    "comment": "Use to communicate an error, urgency or when something needs attention.",
+    "comment": "Use to communicate error, warning, urgency or attention needed.",
     "value": "rgb(212, 117, 0)",
     "group": "semantic",
     "type": "#D47500",
