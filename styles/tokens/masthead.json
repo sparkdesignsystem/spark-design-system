@@ -313,6 +313,12 @@
           "file": "settings",
           "themable": true
         },
+        "dropdown-background-color": {
+          "comment": "The background color of the Selector Dropdown, found in a Masthead with Extended Navigation..",
+          "value": "{white.value}",
+          "file": "settings",
+          "themable": true
+        },
         "dropdown-z-index": {
           "comment": "The z-index of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "{layer.height.m.value}",
