@@ -10,6 +10,10 @@
   margin: 0 auto;
 }
 
+.sprk-c-Promo--full {
+  max-width: $sprk-promo-max-width-full;
+}
+
 /// Adds a border around the Promo.
 .sprk-c-Promo--bordered {
   border: $sprk-promo-border;

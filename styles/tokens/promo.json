@@ -24,6 +24,15 @@
       "file": "settings",
       "themable": true
     },
+    "max-width-full": {
+      "comment": "Sets the maximum width of the Promo component to be full width.",
+      "value": "100%",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "breakpoint": {
       "comment": "The Promo component breakpoint at which large viewport styles begin.",
       "value": "42.5rem",
