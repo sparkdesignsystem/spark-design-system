@@ -39,6 +39,56 @@ give feedback.
 
 ## Accessibility
 
-Icons are a great way to provide additional meaning for clients
-with cognitive and visual disabilities. They should be
-accompanied by text whenever possible.
+The following guidance is based on the W3C guidelines and universal 
+accessibility best practices:  
+
+- Ensure all informative `<img>` elements have a meaningful alternate (ALT) 
+text and all decorative `<img>` elements have empty alt attributes `(e.g. alt="")`. 
+- There are three main ways to add alternate text to an image: 
+  - Using an alt attribute. Example: `<img alt="drawing of a cat" src="...">`
+  - Using an aria-label. Example: `<img aria-label="drawing of a cat" src="...">`
+  - Using an aria-labelledby attribute. Example: `<img arialabelledby="someID" src="...">`
+
+- Alt text should give the intent, purpose, and meaning of the image. 
+
+- When writing the alternative text for an informative image always 
+consider how the user will experience it based upon context of the entire page. 
+
+- When writing the alternative text for a functional/active image 
+(such as clickable icons or buttons), make sure that it helps your users understand what happens when they click the image. 
+
+- Length 
+  - 125 characters or less. 
+  - Be as concise as possible while providing meaningful descriptions. 
+  - Don’t include phrases like “image of” or “picture of.” 
+  - Don’t include copyright or source information. 
+  - Alternative text will innately improve the discoverability of your page. 
+However, always remember that the purpose of ALT text is to provide accessibility 
+for disabled users. (For example, it will empower your blind users to experience 
+the image through the use of assistive technology, such as screen readers). 
+Hence, you should never use ALT text as a SEO opportunity. 
+You can include keywords only if they help describe the image. 
+
+- Style
+  - Use sentence case. 
+  - Include a period at the end of the alt text – even if it’s not a 
+complete sentence. The period will provide a slight pause when 
+read by the screen reader. 
+
+- Diversity & Inclusion
+  - Always remember that your alternative text must be aligned with 
+the culture of Diversity & Inclusion. Reflective of our ISMs 
+and values, the ALT text should support and celebrate diversity 
+across all its aspects, including and not limited to race, 
+culture, disability, age, religion, gender, orientation, and 
+other aspects of human identity we always embrace and empower 
+through our words and actions.  
+
+- Helpful Resources
+  - [1.1.1 Non-text Content: All non-text content that is presented 
+  to the user has a text alternative that serves the equivalent purpose](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html) 
+  - [G82: Providing a text alternative that identifies the purpose of the non-text content](https://www.w3.org/TR/WCAG20-TECHS/G82.html)
+  - [H2: Combining adjacent image and text links for the same resource](https://www.w3.org/TR/WCAG20-TECHS/H2.html)
+  - [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/TR/WCAG20-TECHS/H24.html)
+  - [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/TR/WCAG20-TECHS/H30.html)
+  - [WebAIM Alt Text Guidelines](https://webaim.org/techniques/alttext/) 
