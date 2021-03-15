@@ -314,7 +314,7 @@
           "themable": true
         },
         "dropdown-background-color": {
-          "comment": "The background color of the Selector Dropdown, found in a Masthead with Extended Navigation..",
+          "comment": "The background color of the Selector Dropdown, found in a Masthead with Extended Navigation.",
           "value": "{white.value}",
           "file": "settings",
           "themable": true
