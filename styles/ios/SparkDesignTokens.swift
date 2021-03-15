@@ -164,7 +164,7 @@ public class SparkDesignTokens {
     public static let sprkLinkColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconColorIcon = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconHoverColorText = UIColor(red: 0.180, green: 0.067, blue: 0.400, alpha:1)
-    public static let sprkLinkHoverColor = UIColor(red: 0.180, green: 0.067, blue: 0.400, alpha:1)
+    public static let sprkLinkHoverColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkLinkLightColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkLinkLightHoverColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkLinkLightHoverUnderlineColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)

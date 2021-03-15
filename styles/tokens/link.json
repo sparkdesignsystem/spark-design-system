@@ -96,7 +96,7 @@
     "hover": {
       "color": {
         "comment": "The color of Links on hover.",
-        "value": "{purple-deep.value}",
+        "value": "{red.value}",
         "attributes": {
           "category": "color"
         },
