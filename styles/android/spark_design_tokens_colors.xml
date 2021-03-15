@@ -92,7 +92,7 @@
   <color name="sprk_link_light_hover_color">#ffffffff</color><!-- The color of Light Links on hover. -->
   <color name="sprk_link_light_hover_underline_color">#ffffffff</color><!-- The underline color value of Light Links on hover. -->
   <color name="sprk_link_has_icon_color_icon">#ff603aa1</color><!-- The color of icons in Links containing icons. -->
-  <color name="sprk_link_has_icon_hover_color_text">#ff2e1166</color><!-- The color value for Links with icons in the hover state. -->
+  <color name="sprk_link_has_icon_hover_color_text">#ffc8102e</color><!-- The color value for Links with icons in the hover state. -->
   <color name="sprk_masthead_mask_color">#80000000</color><!-- The color of the mask that gets applied when the Masthead selector dropdown is open on narrow screens. -->
   <color name="sprk_modal_mask_color">#59222222</color><!-- The color of the mask overlay that is shown behind the Modal. -->
   <color name="sprk_stepper_icon_border_color">#ff8d8d8c</color><!-- The color of the border around the Stepper icon. -->

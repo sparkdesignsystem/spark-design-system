@@ -163,7 +163,7 @@ public class SparkDesignTokens {
     public static let sprkLinkBorderBottomColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconColorIcon = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
-    public static let sprkLinkHasIconHoverColorText = UIColor(red: 0.180, green: 0.067, blue: 0.400, alpha:1)
+    public static let sprkLinkHasIconHoverColorText = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkLinkHoverColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkLinkLightColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkLinkLightHoverColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
@@ -290,8 +290,8 @@ public class SparkDesignTokens {
     public static let sprkLinkFontWeight = "500"
     public static let sprkLinkHasIconFill = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconFontWeight = "500"
-    public static let sprkLinkHasIconHoverFill = UIColor(red: 0.180, green: 0.067, blue: 0.400, alpha:1)
-    public static let sprkLinkHasIconHoverStroke = UIColor(red: 0.180, green: 0.067, blue: 0.400, alpha:1)
+    public static let sprkLinkHasIconHoverFill = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
+    public static let sprkLinkHasIconHoverStroke = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkLinkHasIconStroke = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkLightFontWeight = "300"
     public static let sprkLinkLightHoverFontWeight = "500"

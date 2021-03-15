@@ -420,7 +420,7 @@
       "hover": {
         "color-text": {
           "comment": "The color value for Links with icons in the hover state.",
-          "value": "{purple-deep.value}",
+          "value": "{red.value}",
           "attributes": {
             "category": "color"
           },
