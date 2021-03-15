@@ -9,7 +9,7 @@
   <color name="sprk_alert_dismiss_icon_color">#ff1c1b1a</color><!-- The color of the dismiss icon in the Alert component. -->
   <color name="sprk_alert_icon_color_info">#ff1c6ef2</color><!-- The icon color of the Information Alert component. -->
   <color name="sprk_alert_icon_color_success">#ff298540</color><!-- The icon color of the Success Alert component. -->
-  <color name="sprk_alert_icon_color_fail">#ffe50158</color><!-- The icon color of the Fail Alert component. -->
+  <color name="sprk_alert_icon_color_fail">#ffd47500</color><!-- The icon color of the Fail Alert component. -->
   <color name="sprk_alert_bg_color">#ffffffff</color><!-- The background color of the default Alert component. -->
   <color name="sprk_alert_bg_color_fail">#ffffffff</color><!-- The background color of the Fail Alert component. -->
   <color name="sprk_alert_bg_color_success">#ffffffff</color><!-- The background color of the Success Alert component. -->
@@ -43,8 +43,9 @@
   <color name="sprk_purple_lightest">#ffe7e2f2</color><!-- Lightest purple for interactive elements. Can also be used for limited floods of color. -->
   <color name="sprk_green">#ff298540</color><!-- Use to communicate a positive status or message. -->
   <color name="sprk_blue">#ff1c6ef2</color><!-- Use to communicate an informative status or message. -->
-  <color name="sprk_pink">#ffe50158</color><!-- Use to communicate an error status or message. -->
-  <color name="sprk_yellow">#ffeda302</color><!-- Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this color. -->
+  <color name="sprk_orange">#ffd47500</color><!-- Use to communicate error, warning, urgency or attention needed. -->
+  <color name="sprk_pink">#ffe50158</color><!-- Deprecated. Use orange instead to communicate an error status or message. -->
+  <color name="sprk_yellow">#ffeda302</color><!-- Deprecated. Use orange instead to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this color. -->
   <color name="sprk_white">#ffffffff</color><!-- White for floods of color and accents, like backgrounds and cards. -->
   <color name="sprk_black">#ff1c1b1a</color><!-- Black for main text color, specifically in headline and body copy. -->
   <color name="sprk_black_tint_10">#ffe8e8e8</color><!-- Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text. -->
@@ -79,7 +80,7 @@
   <color name="sprk_icon_fill_color">#ff1c1b1a</color><!-- Value for the fill property of the Icon component. -->
   <color name="sprk_icon_stroke_color">#ff1c1b1a</color><!-- Value for the stroke property of the Icon component. -->
   <color name="sprk_icon_filled_fill_color">#ff1c1b1a</color><!-- Value for the fill property of the Filled Icon component. -->
-  <color name="sprk_text_input_error_color">#ffe50158</color><!-- Color setting for Inputs with errors. -->
+  <color name="sprk_text_input_error_color">#ffd47500</color><!-- Color setting for Inputs with errors. -->
   <color name="sprk_link_color">#ff603aa1</color><!-- The default color on Links. -->
   <color name="sprk_link_underline_color">#ff603aa1</color><!-- The color of the underline on Links. -->
   <color name="sprk_link_underline_visited_color">#ff8d8d8c</color><!-- The color of the underline on visited Links. -->
