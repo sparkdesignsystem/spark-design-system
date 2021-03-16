@@ -38,10 +38,22 @@ describe('SprkPromoComponent', () => {
     expect(element.classList.contains('sprk-c-Promo--bordered')).toEqual(true);
   });
 
+  it('should not add class when hasBorder is false', () => {
+    component.hasBorder = false;
+    fixture.detectChanges();
+    expect(element.classList.contains('sprk-c-Promo--bordered')).toEqual(false);
+  });
+
   it('should add class when isFlag is true', () => {
     component.isFlag = true;
     fixture.detectChanges();
     expect(element.classList.contains('sprk-c-Promo--flag')).toEqual(true);
+  });
+
+  it('should not add class when isFlag is false', () => {
+    component.isFlag = false;
+    fixture.detectChanges();
+    expect(element.classList.contains('sprk-c-Promo--flag')).toEqual(false);
   });
 
   it('should add data-id when idString has a value', () => {
