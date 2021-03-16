@@ -20,15 +20,14 @@ export const defaultStory = () => `
     "
     data-id="promo-1"
   >
-
     <div
       class="
         sprk-c-Promo__content
-        sprk-o-Stack__item sprk-o-Stack
+        sprk-o-Stack__item
+        sprk-o-Stack
         sprk-o-Stack--large
       "
     >
-
       <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
         Title
       </h3>
@@ -49,7 +48,6 @@ export const defaultStory = () => `
         </a>
       </div>
     </div>
-
   </div>
 `;
 
@@ -68,11 +66,10 @@ export const flag = () => `
     "
     data-id="promo-2"
   >
-
     <a href="#nogo" class="sprk-o-Stack__item sprk-o-Stack__item--fourth@s">
       <img
         class="sprk-c-Promo__image--flag"
-        alt="Spark placeholder image."
+        alt="Spark Design System Logo."
         src="https://spark-assets.netlify.app/spark-logo-updated.svg"
       >
     </a>
@@ -92,7 +89,6 @@ export const flag = () => `
         per lacus neque egestas. Diam quod curabitur.
       </div>
     </div>
-
   </div>
 `;
 
@@ -112,12 +108,11 @@ export const withImage = () => `
     "
     data-id="promo-3"
   >
-
     <a href="#nogo" class="sprk-o-Stack__item sprk-o-Stack__item--half@s ">
       <img
         class="sprk-c-Promo__image"
         src="https://spark-assets.netlify.app/house.jpg"
-        alt="Spark placeholder image."
+        alt="A house and front yard."
       />
     </a>
 
@@ -149,7 +144,6 @@ export const withImage = () => `
         </a>
       </div>
     </div>
-
   </div>
   `;
 
@@ -163,7 +157,6 @@ export const withReversedImage = () => `
     "
     data-id="promo-4"
   >
-
     <div
       class="
         sprk-c-Promo__content
@@ -172,7 +165,6 @@ export const withReversedImage = () => `
         sprk-o-Stack sprk-o-Stack--large
       "
     >
-
       <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
         Title
       </h3>
@@ -198,7 +190,7 @@ export const withReversedImage = () => `
       <img
         class="sprk-c-Promo__image"
         src="https://spark-assets.netlify.app/house.jpg"
-        alt="Spark placeholder image."
+        alt="A house and front yard."
       />
     </a>
   </div>

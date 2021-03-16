@@ -582,6 +582,7 @@ public class SparkDesignTokens {
     public static let sprkPromoImageNarrowMaxHeight = CGFloat(320.00)
     public static let sprkPromoImageNarrowMaxWidth = CGFloat(800.00)
     public static let sprkPromoMaxWidth = CGFloat(680.00)
+    public static let sprkPromoMaxWidthFull = CGFloat(1600.00)
     public static let sprkRadioInputBorderRadius = CGFloat(800.00)
     public static let sprkRadioInputHugeInnerCircleHeight = CGFloat(16.00)
     public static let sprkRadioInputHugeInnerCircleLeft = CGFloat(20.00)
