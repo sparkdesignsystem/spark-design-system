@@ -11,7 +11,7 @@ import { SprkPromoContentDirective } from './sprk-promo-content.directive';
 })
 class TestComponent {}
 
-describe('Spark Card Content Directive', () => {
+describe('Spark Promo Content Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let contentElement0: HTMLElement;

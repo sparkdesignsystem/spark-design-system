@@ -11,7 +11,7 @@ import { SprkPromoHeadingDirective } from './sprk-promo-heading.directive';
 })
 class TestComponent {}
 
-describe('Spark Card Heading Directive', () => {
+describe('Spark Promo Heading Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let contentElement0: HTMLElement;
