@@ -26,6 +26,11 @@ describe('SprkCard:', () => {
     );
   });
 
+  it('should display a Card with the correct additionalClasses', () => {
+    const wrapper = shallow(<SprkCard additionalClasses="sprk-u-mam" />);
+    expect(wrapper.find('.sprk-c-Card').hasClass('sprk-u-mam')).toBe(true);
+  });
+
   it('should not add standout class if isStandout is false', () => {
     const wrapper = shallow(<SprkCard isStandout={false} />);
     expect(wrapper.find('.sprk-c-Card').hasClass('sprk-c-Card--standout')).toBe(
@@ -40,6 +45,6 @@ describe('SprkCard:', () => {
 
   it('should not assign data-id when idString is not provided', () => {
     const wrapper = mount(<SprkCard />);
-    expect(wrapper.find('[data-id="321"]').length).toBe(0);
+    expect(wrapper.find('[data-id]').length).toBe(0);
   });
 });
