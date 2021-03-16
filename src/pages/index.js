@@ -92,7 +92,7 @@ const teaserComponents = {
 
 const teaserGuides = {
   bodyText: `
-    Guides on how to make design choices that
+    Guidance on how to make design choices that
     prioritize user experience. Get answers on topics
     like layout, messaging, and placement.
   `,
