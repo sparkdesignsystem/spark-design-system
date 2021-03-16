@@ -40,7 +40,7 @@
       "visited": {
         "color": {
           "comment": "The color of the underline on visited Links.",
-          "value": "{black-tint.50.value}",
+          "value": "{purple.value}",
           "attributes": {
             "category": "color"
           },
@@ -436,6 +436,40 @@
         "stroke": {
           "comment": "The stroke color for icons contained in Links on hover.",
           "value": "{link.has-icon.hover.color-text.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "border": {
+          "bottom": {
+            "comment": "The border settings for Links with icons in the hover state.",
+            "value": "{link.has-icon.underline.width.value} {link.border.bottom-style.value} {link.has-icon.underline.color.value}",
+            "attributes": {
+              "category": "content"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        }
+      },
+      "visited": {
+        "color-text": {
+          "comment": "The color value for Links with icons in the visited state.",
+          "value": "{purple.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "fill": {
+          "comment": "The fill color for icons contained in Links in the visited state.",
+          "value": "{link.has-icon.visited.color-text.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "stroke": {
+          "comment": "The stroke color for icons contained in Links in the visited state.",
+          "value": "{link.has-icon.visited.color-text.value}",
           "file": "settings",
           "themable": true
         },

@@ -164,6 +164,7 @@ public class SparkDesignTokens {
     public static let sprkLinkColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconColorIcon = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconHoverColorText = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
+    public static let sprkLinkHasIconVisitedColorText = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHoverColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkLinkLightColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkLinkLightHoverColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
@@ -172,7 +173,7 @@ public class SparkDesignTokens {
     public static let sprkLinkSimpleHoverColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkLinkSimpleHoverUnderlineColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkLinkUnderlineColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
-    public static let sprkLinkUnderlineVisitedColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
+    public static let sprkLinkUnderlineVisitedColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkMagnolia = UIColor(red: 0.941, green: 0.855, blue: 1.000, alpha:1)
     public static let sprkMastheadMaskColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha:0.5)
     public static let sprkMidRed = UIColor(red: 0.616, green: 0.133, blue: 0.208, alpha:1)
@@ -293,6 +294,8 @@ public class SparkDesignTokens {
     public static let sprkLinkHasIconHoverFill = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkLinkHasIconHoverStroke = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkLinkHasIconStroke = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
+    public static let sprkLinkHasIconVisitedFill = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
+    public static let sprkLinkHasIconVisitedStroke = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkLightFontWeight = "300"
     public static let sprkLinkLightHoverFontWeight = "500"
     public static let sprkLinkSimpleFontWeight = "300"

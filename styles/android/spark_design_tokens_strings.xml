@@ -163,7 +163,7 @@
   <string name="sprk_link_border_bottom_style">solid</string><!-- The border style of the underline on Links. -->
   <string name="sprk_link_border_bottom">2.00dp solid #ff603aa1</string><!-- The style of the underline on Links. -->
   <string name="sprk_link_hover_border_bottom">2.00dp solid #ffc8102e</string><!-- The underline style of Links on hover. -->
-  <string name="sprk_link_visited_border_bottom">2.00dp solid #ff8d8d8c</string><!-- The style of the underline on visited Links. -->
+  <string name="sprk_link_visited_border_bottom">2.00dp solid #ff603aa1</string><!-- The style of the underline on visited Links. -->
   <string name="sprk_link_simple_hover_border_bottom">2.00dp solid #ffc8102e</string><!-- The underline style of visited Simple Links on hover. -->
   <string name="sprk_link_simple_underline_color">transparent</string><!-- The underline color value of Simple Links. -->
   <string name="sprk_link_simple_border_bottom">2.00dp solid transparent</string><!-- The underline style of Simple Links. -->
@@ -177,6 +177,7 @@
   <string name="sprk_link_has_icon_underline_color">transparent</string><!-- The underline color of Links containing icons. -->
   <string name="sprk_link_has_icon_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons. -->
   <string name="sprk_link_has_icon_hover_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons in the hover state. -->
+  <string name="sprk_link_has_icon_visited_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons in the hover state. -->
   <string name="sprk_link_disabled_border_bottom">0.00dp solid #ff8d8d8c</string><!-- The underline settings for the disabled Link. -->
   <string name="sprk_link_disabled_hover_border_bottom">0.00dp solid #ff8d8d8c</string><!-- The underline settings for the disabled Link. -->
   <string name="sprk_masthead_border_bottom_style">solid</string><!-- The bottom border style on the Masthead. -->
