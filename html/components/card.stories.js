@@ -154,7 +154,7 @@ export const teaser = () =>
         </p>
 
         <div class="sprk-o-Stack__item">
-          <a href="#nogo" class="sprk-c-Button">
+          <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
             Learn More
           </a>
         </div>
@@ -205,7 +205,7 @@ export const teaserWithDifferentElementOrder = () =>
         </p>
 
         <div class="sprk-o-Stack__item">
-          <a href="#nogo" class="sprk-c-Button">
+          <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
             Learn More
           </a>
         </div>
@@ -577,7 +577,7 @@ export const fourUpCards = () =>
           </p>
 
           <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
               Button
             </a>
           </div>
@@ -610,7 +610,7 @@ export const fourUpCards = () =>
           </p>
 
           <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
               Button
             </a>
           </div>
@@ -644,7 +644,7 @@ export const fourUpCards = () =>
           </p>
 
           <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
               Button
             </a>
           </div>
@@ -678,7 +678,7 @@ export const fourUpCards = () =>
           </p>
 
           <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
               Button
             </a>
           </div>
