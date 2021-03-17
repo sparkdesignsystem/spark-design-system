@@ -92,13 +92,13 @@
     },
     "color": {
       "comment": "The color setting for Inputs.",
-      "value": "{black.value}",
+      "value": "{black-tint.80.value}",
       "file": "settings",
       "themable": true
     },
     "border": {
       "comment": "The border setting for Inputs.",
-      "value": "2px solid {black-tint.50.value}",
+      "value": "1px solid {black-tint.80.value}",
       "attributes": {
         "category": "content"
       },
@@ -152,7 +152,7 @@
     },
     "disabled-color": {
       "comment": "The color on disabled Inputs.",
-      "value": "{black-tint.50.value}",
+      "value": "{black-tint.15.value}",
       "file": "settings",
       "themable": true
     },
@@ -170,7 +170,7 @@
     },
     "disabled-background-color": {
       "comment": "The background color on disabled Inputs.",
-      "value": "{black-tint.40.value}",
+      "value": "{black-tint.15.value}",
       "file": "settings",
       "themable": true
     },
@@ -227,7 +227,7 @@
       },
       "complete-label-color": {
         "comment": "Todo deprecate, The label color when the Huge Input has a value and is not focused.",
-        "value": "{black.value}",
+        "value": "{black-tint.80.value}",
         "file": "settings",
         "themable": true
       },
@@ -254,7 +254,7 @@
       },
       "border-width": {
         "comment": "Todo deprecate, The border width for Huge Inputs.",
-        "value": "2px",
+        "value": "1px",
         "attributes": {
           "category": "size"
         },
