@@ -47,6 +47,7 @@ class SprkInputContainer extends Component {
       // map through them to get values.
       if (
         child.props.children &&
+        child.props.className &&
         child.props.className.includes('sprk-b-InputContainer__icon-container')
       ) {
         React.Children.forEach(child.props.children, (grandchild) => {
@@ -112,6 +113,7 @@ class SprkInputContainer extends Component {
 
         if (
           child.props.children &&
+          child.props.className &&
           child.props.className.includes(
             'sprk-b-InputContainer__icon-container',
           )
