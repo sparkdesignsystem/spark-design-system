@@ -1,16 +1,9 @@
-import {
-  Directive,
-  Input,
-  HostBinding,
-  Renderer2,
-  ElementRef,
-  OnInit,
-} from '@angular/core';
+import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[sprkPromoHeading]',
 })
-export class SprkPromoHeadingDirective implements OnInit {
+export class SprkPromoHeadingDirective {
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -23,14 +16,5 @@ export class SprkPromoHeadingDirective implements OnInit {
   @Input()
   idString: string;
 
-  // @HostBinding('class.sprk-c-Promo__title') true;
-
-  /**
-   * @ignore
-   */
-  constructor(public ref: ElementRef, private renderer: Renderer2) {}
-
-  ngOnInit() {
-    this.renderer.addClass(this.ref.nativeElement, 'sprk-c-Promo__title');
-  }
+  @HostBinding('class.sprk-c-Promo__title') true;
 }
