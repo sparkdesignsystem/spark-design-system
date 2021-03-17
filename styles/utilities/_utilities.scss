@@ -387,6 +387,11 @@
 .sprk-u-Color--blue {
   color: $sprk-blue !important;
 }
+/// Sets the font color to orange.
+/// @group color
+.sprk-u-Color--orange {
+  color: $sprk-pink !important;
+}
 /// Sets the font color to pink.
 /// @group color
 .sprk-u-Color--pink {
@@ -488,6 +493,12 @@
 .sprk-u-BackgroundColor--blue {
   background-color: $sprk-blue !important;
 }
+/// Sets the background color to orange.
+/// @group color
+.sprk-u-BackgroundColor--orange {
+  background-color: $sprk-orange !important;
+}
+
 /// Sets the background color to pink.
 /// @group color
 .sprk-u-BackgroundColor--pink {
