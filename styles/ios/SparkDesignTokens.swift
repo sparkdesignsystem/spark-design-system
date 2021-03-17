@@ -93,7 +93,7 @@ public class SparkDesignTokens {
     public static let sprkAlertBgColorSuccess = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkAlertBorderColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkAlertDismissIconColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
-    public static let sprkAlertIconColorFail = UIColor(red: 0.898, green: 0.004, blue: 0.345, alpha:1)
+    public static let sprkAlertIconColorFail = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkAlertIconColorInfo = UIColor(red: 0.110, green: 0.431, blue: 0.949, alpha:1)
     public static let sprkAlertIconColorSuccess = UIColor(red: 0.161, green: 0.522, blue: 0.251, alpha:1)
     public static let sprkAlertShadowColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha:0.08)
@@ -177,6 +177,7 @@ public class SparkDesignTokens {
     public static let sprkMastheadMaskColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha:0.5)
     public static let sprkMidRed = UIColor(red: 0.616, green: 0.133, blue: 0.208, alpha:1)
     public static let sprkModalMaskColor = UIColor(red: 0.133, green: 0.133, blue: 0.133, alpha:0.35)
+    public static let sprkOrange = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkPink = UIColor(red: 0.898, green: 0.004, blue: 0.345, alpha:1)
     public static let sprkPurple = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkPurpleDark = UIColor(red: 0.235, green: 0.192, blue: 0.455, alpha:1)
@@ -191,7 +192,7 @@ public class SparkDesignTokens {
     public static let sprkStepperIconColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkStepperIconColorHover = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkStepperIconColorSelected = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
-    public static let sprkTextInputErrorColor = UIColor(red: 0.898, green: 0.004, blue: 0.345, alpha:1)
+    public static let sprkTextInputErrorColor = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkWhite = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkWisteria = UIColor(red: 0.871, green: 0.694, blue: 0.992, alpha:1)
     public static let sprkYellow = UIColor(red: 0.929, green: 0.639, blue: 0.008, alpha:1)
@@ -362,7 +363,7 @@ public class SparkDesignTokens {
     public static let sprkSelectDisabledBackgroundColor = UIColor(red: 0.643, green: 0.643, blue: 0.639, alpha:1)
     public static let sprkSelectDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkSelectDisabledColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
-    public static let sprkSelectErrorBorderColor = UIColor(red: 0.898, green: 0.004, blue: 0.345, alpha:1)
+    public static let sprkSelectErrorBorderColor = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkSelectFocusBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkSelectFontFamily = "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif"
     public static let sprkSelectFontSize = CGFloat(16.00)
@@ -740,7 +741,7 @@ public class SparkDesignTokens {
     public static let sprkTextInputDisabledBackgroundColor = UIColor(red: 0.643, green: 0.643, blue: 0.639, alpha:1)
     public static let sprkTextInputDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkTextInputDisabledColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
-    public static let sprkTextInputErrorBorderColor = UIColor(red: 0.898, green: 0.004, blue: 0.345, alpha:1)
+    public static let sprkTextInputErrorBorderColor = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkTextInputFocusBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkTextInputFontFamily = "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif"
     public static let sprkTextInputFontWeight = 300

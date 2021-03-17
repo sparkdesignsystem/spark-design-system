@@ -14,12 +14,11 @@
 //
 // Display and Visibility
 ///
-
+// stylelint-disable selector-class-pattern
 /// Turns off the display of an element so that it has no effect on layout.
 /// @group display
 /// @name .sprk-u-JavaScript, .sprk-u-HideWhenJs
 
-/* stylelint-disable selector-class-pattern */
 /// Turns off the display of an element so that it has no effect on layout.
 /// @group display
 /// @name .sprk-u-Display--none
@@ -28,7 +27,6 @@
   display: none !important;
 }
 
-/* stylelint-enable selector-class-pattern */
 /// The element generates a block element box.
 /// @group display
 .sprk-u-Display--block {
@@ -146,7 +144,6 @@
 // Height
 ///
 
-/* stylelint-disable selector-class-pattern */
 /// Changes the height of the element to 100 percent.
 /// @group height
 .sprk-u-Height--100 {
@@ -163,7 +160,6 @@
   max-width: 100% !important;
 }
 
-/* stylelint-enable selector-class-pattern */
 /// Changes the width of the element to `auto`.
 /// @group width
 .sprk-u-Width--auto {
@@ -519,7 +515,6 @@
   background-color: $sprk-black !important;
 }
 
-/* stylelint-disable selector-class-pattern */
 /// Sets the background color to black tinted at 90%.
 /// @group color
 .sprk-u-BackgroundColor--black-tint-90 {
@@ -566,7 +561,6 @@
   background-color: $sprk-black-tint-10 !important;
 }
 
-/* stylelint-enable selector-class-pattern */
 /// Sets the background color to gray.
 /// @group color
 .sprk-u-BackgroundColor--gray {
@@ -612,7 +606,6 @@
 /// @group misc-spacing
 /// @name sprk-u-MarginAll--d
 
-/* stylelint-disable  selector-class-pattern */
 // Misc Padding Spacing A
 .sprk-u-PaddingTop--a,
 .sprk-u-PaddingVertical--a,
@@ -813,8 +806,6 @@
   margin-left: $sprk-space-misc-d !important;
 }
 
-/* stylelint-enable  selector-class-pattern */
-
 //
 // Multi-property utilities
 ///
@@ -877,3 +868,5 @@
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 }
+
+// stylelint-enable selector-class-pattern
