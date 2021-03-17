@@ -317,21 +317,61 @@
 // Selector Dropdown
 // ==================================================================
 .sprk-c-Masthead__selector-dropdown {
+  background-color: $sprk-masthead-selector-dropdown-background-color;
   border-bottom: $sprk-masthead-selector-dropdown-border-bottom-mask-open;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-radius: 0;
   box-shadow: $sprk-masthead-selector-dropdown-box-shadow-mask-open;
+  font-size: $sprk-masthead-selector-dropdown-font-size;
+  position: absolute;
   max-width: 100%;
-  margin: 0;
+  margin: $sprk-masthead-selector-dropdown-margin;
   width: 100%;
   top: 0;
   padding: $sprk-masthead-selector-dropdown-padding;
+  z-index: $sprk-masthead-selector-dropdown-z-index;
 }
 
-.sprk-c-Masthead__selector-dropdown .sprk-c-Dropdown__link {
-  padding: $sprk-space-m $sprk-space-misc-a;
+.sprk-c-Masthead__selector-dropdown-header {
+  padding: ($sprk-masthead-selector-dropdown-item-padding / 2)
+    $sprk-masthead-selector-dropdown-item-padding;
+}
+
+.sprk-c-Masthead__selector-dropdown-title {
+  color: $sprk-masthead-selector-dropdown-title-color;
+  font-weight: $sprk-masthead-selector-dropdown-title-font-weight;
+  font-size: $sprk-masthead-selector-dropdown-title-font-size;
+}
+
+.sprk-c-Masthead__selector-dropdown-links {
+  list-style-type: none;
+}
+
+.sprk-c-Masthead__selector-dropdown-item {
+  font-weight: $sprk-masthead-selector-dropdown-font-weight;
+}
+
+.sprk-c-Masthead__selector-dropdown-link {
+  color: $sprk-masthead-selector-dropdown-link-color;
+  display: block;
+  padding: $sprk-masthead-selector-dropdown-link-padding;
+  text-decoration: $sprk-masthead-selector-dropdown-text-decoration;
+  line-height: $sprk-masthead-selector-dropdown-line-height;
+
+  &:hover {
+    background-color: $sprk-masthead-selector-dropdown-active-background-color;
+  }
+}
+
+/// Adds styles to indicate that the dropdown
+/// link is currently active.
+.sprk-c-Masthead__selector-dropdown-link--active {
+  box-shadow: $sprk-masthead-selector-dropdown-active-box-shadow;
+  border-left: $sprk-masthead-selector-dropdown-active-border;
+  background-color: $sprk-masthead-selector-dropdown-active-background-color;
+}
+
+.sprk-c-Masthead__selector-footer {
+  padding: $sprk-masthead-selector-dropdown-footer-padding;
+  text-align: $sprk-masthead-selector-dropdown-footer-text-align;
 }
 
 // ==================================================================
