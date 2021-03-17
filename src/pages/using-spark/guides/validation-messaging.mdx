@@ -1,8 +1,9 @@
 ---
   title: Validation Messaging
 ---
-
-import validationAnatomy from '../../../images/guides/validation-anatomy.svg';
+import validationAnatomy from '../../../images/guides/validation-anatomy.png';
+import validationAnatomy2x from '../../../images/guides/validation-anatomy@2x.png';
+export const validationAnatomySet = `${validationAnatomy} 560w, ${validationAnatomy2x} 1120w`
 
 import {
   SprkHeading,
@@ -25,6 +26,7 @@ Giving validation feedback is an emotional process. Support users with this proc
 - Use a combination of [placement](#placement), [timing](#timing), and [language](#language) to guide users through moments of uncertainty.
 
 <img
+  srcSet={validationAnatomySet}
   class="sprk-u-Measure sprk-u-pam sprk-u-pbh"
   src={validationAnatomy}
   alt="Anatomy of input validation with numbers pointing to each part: timing, timing, and language."
