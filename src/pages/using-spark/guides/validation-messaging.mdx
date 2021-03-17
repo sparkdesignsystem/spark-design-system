@@ -4,9 +4,20 @@
 
 import validationAnatomy from '../../../images/guides/validation-anatomy.svg';
 
-# Validation Messaging Guide
+import {
+  SprkHeading,
+} from '@sparkdesignsystem/spark-react';
 
-## Main Takeaways
+<span id="validation-messaging-guide" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h1" additionalClasses="sprk-u-mbl sprk-u-Measure" isPageTitle>
+  Validation Messaging Guide
+</SprkHeading>
+
+<span id="main-takeaways" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h2" additionalClasses="sprk-u-mbm sprk-u-Measure" variant="displayThree">
+  Main Takeaways
+</SprkHeading>
+
 Giving validation feedback is an emotional process. Support users with this process by following these guidelines:
 
 - Explain what the Input expects before the user enters data. (Example: password rules, ranges, etc)
@@ -14,26 +25,38 @@ Giving validation feedback is an emotional process. Support users with this proc
 - Use a combination of [placement](#placement), [timing](#timing), and [language](#language) to guide users through moments of uncertainty.
 
 <img
-  class="sprk-u-Measure sprk-u-pam"
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbh"
   src={validationAnatomy}
-  alt="Anatomy of input validation with numbers pointing to each part: placement, timing, and language."
+  alt="Anatomy of input validation with numbers pointing to each part: timing, timing, and language."
 />
 
 
-## Placement
+<span id="placement" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h2" additionalClasses="sprk-u-mbm sprk-u-Measure" variant="displayThree">
+  Placement
+</SprkHeading>
+
 - Place messaging close to the input. Spark places validation directly under the input.
 - Provide a clear visual to indicate something has gone wrong with user input and needs attention.
 - Plan error messaging for every field.
 - On Forms with multiple fields, show validation messaging for each input field to guide users to a successful submission.
 
-## Timing
+<span id="timing" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h2" additionalClasses="sprk-u-mbm sprk-u-Measure" variant="displayThree">
+  Timing
+</SprkHeading>
+
 -	Show validation messaging after the user enters the data or when the input becomes out of **selection focus**.
 - On forms, show error messaging **before** the user submits the form.
 
 > **Selection focus** changes when a user taps or clicks anywhere outside of the current focused input. Focus can also change
 > through keyboard navigation.
 
-## Language
+<span id="language" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h2" additionalClasses="sprk-u-mbm sprk-u-Measure" variant="displayThree">
+  Language
+</SprkHeading>
+
 <ul>
   <li>
     Use labels and helper text to clarify what data the input expects. Messaging should be related and relevant to the Input.
@@ -61,7 +84,11 @@ Giving validation feedback is an emotional process. Support users with this proc
 </ul>
 
 
-## Examples
+<span id="examples" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h2" additionalClasses="sprk-u-mbm sprk-u-Measure" variant="displayThree">
+  Examples
+</SprkHeading>
+
 Use error messaging to clarify any system errors and additional constraints to the user.
 - *Choose a T-shirt size.* (Example: Radio Input, Dropdown)
 - *Choose at least one of the options.* (Example: Checkbox)
