@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import SprkLabel from '../SprkLabel/SprkLabel';
-import SprkInput from '../SprkInput/SprkInput';
-import SprkSelect from '../SprkSelect/SprkSelect';
-import SprkDatePicker from '../SprkDatePicker/SprkDatePicker';
 import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkFieldError from '../SprkFieldError/SprkFieldError';
 import SprkHelperText from '../SprkHelperText/SprkHelperText';
+import isSprkInput from '../../../utilities/helpers/isSprkInput/isSprkInput';
 
 class SprkInputContainer extends Component {
   constructor(props) {
@@ -29,11 +27,7 @@ class SprkInputContainer extends Component {
      * errorContainerID and helperTextID.
      */
     React.Children.forEach(children, (child) => {
-      if (
-        child.type.name === SprkInput.name ||
-        child.type.name === SprkSelect.name ||
-        child.type.name === SprkDatePicker.name
-      ) {
+      if (isSprkInput(child)) {
         id = child.props.id;
         inputAriaDescribedBy = child.props.ariaDescribedBy;
       }
@@ -51,23 +45,19 @@ class SprkInputContainer extends Component {
       }
       // If the child has it's own children and the it's an icon-container,
       // map through them to get values.
-      if (child.props.children && child.props.className) {
-        const childsClassName = child.props.className;
-        if (childsClassName.includes('sprk-b-InputContainer__icon-container')) {
-          React.Children.forEach(child.props.children, (childsChild) => {
-            if (
-              childsChild.type.name === SprkInput.name ||
-              childsChild.type.name === SprkSelect.name ||
-              childsChild.type.name === SprkDatePicker.name
-            ) {
-              id = childsChild.props.id;
-              inputAriaDescribedBy = childsChild.props.ariaDescribedBy;
-            }
-            if (childsChild.type.name === SprkLabel.name) {
-              labelFor = childsChild.props.htmlFor;
-            }
-          });
-        }
+      if (
+        child.props.children &&
+        child.props.className.includes('sprk-b-InputContainer__icon-container')
+      ) {
+        React.Children.forEach(child.props.children, (grandchild) => {
+          if (isSprkInput(grandchild)) {
+            id = grandchild.props.id;
+            inputAriaDescribedBy = grandchild.props.ariaDescribedBy;
+          }
+          if (grandchild.type.name === SprkLabel.name) {
+            labelFor = grandchild.props.htmlFor;
+          }
+        });
       }
     });
     /* Check to see if the errorContainerID
@@ -114,47 +104,37 @@ class SprkInputContainer extends Component {
          * If there is an inputAriaDescribedBy,
          * add it to the SprkInput element.
          */
-        if (
-          inputAriaDescribedBy &&
-          (child.type.name === SprkInput.name ||
-            child.type.name === SprkSelect.name ||
-            child.type.name === SprkDatePicker.name)
-        ) {
+        if (inputAriaDescribedBy && isSprkInput(child)) {
           return React.cloneElement(child, {
             ariaDescribedBy: inputAriaDescribedBy,
           });
         }
 
-        if (child.props.children && child.props.className) {
-          const childsClassName = child.props.className;
-          if (
-            childsClassName.includes('sprk-b-InputContainer__icon-container')
-          ) {
-            const childsChildrenElements = React.Children.map(
-              child.props.children,
-              (childsChild) => {
-                if (id !== labelFor) {
-                  if (childsChild.type.name === SprkLabel.name) {
-                    return React.cloneElement(childsChild, {
-                      htmlFor: id,
-                    });
-                  }
-                }
-                if (
-                  inputAriaDescribedBy &&
-                  (childsChild.type.name === SprkInput.name ||
-                    childsChild.type.name === SprkSelect.name ||
-                    childsChild.type.name === SprkDatePicker.name)
-                ) {
-                  return React.cloneElement(childsChild, {
-                    ariaDescribedBy: inputAriaDescribedBy,
+        if (
+          child.props.children &&
+          child.props.className.includes(
+            'sprk-b-InputContainer__icon-container',
+          )
+        ) {
+          const grandchildrenElements = React.Children.map(
+            child.props.children,
+            (grandchild) => {
+              if (id !== labelFor) {
+                if (grandchild.type.name === SprkLabel.name) {
+                  return React.cloneElement(grandchild, {
+                    htmlFor: id,
                   });
                 }
-                return childsChild;
-              },
-            );
-            return childsChildrenElements;
-          }
+              }
+              if (inputAriaDescribedBy && isSprkInput(grandchild)) {
+                return React.cloneElement(grandchild, {
+                  ariaDescribedBy: inputAriaDescribedBy,
+                });
+              }
+              return grandchild;
+            },
+          );
+          return grandchildrenElements;
         }
         return child;
       });
