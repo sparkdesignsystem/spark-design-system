@@ -268,14 +268,14 @@ SprkMastheadSelector.propTypes = {
   children: PropTypes.node,
   /** The text set as the default of the trigger link */
   defaultTriggerText: PropTypes.string,
-  /** The icon type of the trigger icon */
+  /** The icon type of the trigger icon. */
   iconName: PropTypes.string,
   /**
    * Assigned to the `data-id` attribute serving as
    * a unique selector for automated tools.
    */
   idString: PropTypes.string,
-  /** Applies styles if the selector is flush with the sides of the viewport */
+  /** Applies styles if the selector is flush with the sides of the viewport. */
   isFlush: PropTypes.bool,
 };
 

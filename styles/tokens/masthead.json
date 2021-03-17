@@ -281,25 +281,25 @@
           "themable": true
         },
         "font-color": {
-          "comment": "The font color of the selector, found in a Masthead with Extended Navigation.",
+          "comment": "The font color of the Selector, found in a Masthead with Extended Navigation.",
           "value": "{black.value}",
           "file": "settings",
           "themable": true
         },
         "bg-color": {
-          "comment": "The background color of the selector, found in a Masthead with Extended Navigation.",
+          "comment": "The background color of the Selector, found in a Masthead with Extended Navigation.",
           "value": "{white.value}",
           "file": "settings",
           "themable": true
         },
         "border-color-mask-open": {
-          "comment": "The bottom color that gets applied to the selector dropdown when open, found in a Masthead with Extended Navigation.",
+          "comment": "The bottom color that gets applied to the Selector Dropdown when open, found in a Masthead with Extended Navigation.",
           "value": "{white.value}",
           "file": "settings",
           "themable": true
         },
         "border-radius": {
-          "comment": "The border radius of the selector, found in a Masthead with Extended Navigation.",
+          "comment": "The border radius of the Selector, found in a Masthead with Extended Navigation.",
           "value": "5px",
           "attributes": {
             "category": "size"
@@ -308,7 +308,7 @@
           "themable": true
         },
         "font-weight": {
-          "comment": "The font weight of the selector, found in a Masthead with Extended Navigation.",
+          "comment": "The font weight of the Selector, found in a Masthead with Extended Navigation.",
           "value": "300",
           "file": "settings",
           "themable": true
@@ -467,7 +467,7 @@
           "themable": true
         },
         "dropdown-border-bottom-mask-open": {
-          "comment": "The bottom border that gets applied to the selector dropdown when open, found in a Masthead with Extended Navigation.",
+          "comment": "The bottom border that gets applied to the Selector Dropdown when open, found in a Masthead with Extended Navigation.",
           "value": "2px solid {gray.value}",
           "attributes": {
             "category": "content"
@@ -476,7 +476,7 @@
           "themable": true
         },
         "dropdown-box-shadow-mask-open": {
-          "comment": "The box shadow that gets applied to the selector dropdown when open, found in a Masthead with Extended Navigation.",
+          "comment": "The box shadow that gets applied to the Selector Dropdown when open, found in a Masthead with Extended Navigation.",
           "value": "0 5px 10px rgba(0, 0, 0, 0.1)",
           "attributes": {
             "category": "content"
@@ -495,7 +495,7 @@
         "themable": true
       },
       "mask-color": {
-        "comment": "The color of the mask that gets applied when the Masthead selector dropdown is open on narrow screens.",
+        "comment": "The color of the mask that gets applied when the Masthead Selector Dropdown is open on narrow screens.",
         "value": "rgba(0, 0, 0, 0.5)",
         "attributes": {
           "category": "color"
