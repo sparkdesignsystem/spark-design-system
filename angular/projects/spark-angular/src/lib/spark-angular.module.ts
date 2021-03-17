@@ -62,6 +62,8 @@ import { SprkUnorderedListModule } from './components/sprk-unordered-list/sprk-u
 import { SprkButtonModule } from './directives/sprk-button/sprk-button.module';
 import { SprkAwardModule } from './components/sprk-award/sprk-award.module';
 import { SprkCardModule } from './components/sprk-card/sprk-card.module';
+import { SprkCardContentModule } from './components/sprk-card/directives/sprk-card-content/sprk-card-content.module';
+import { SprkCardMediaModule } from './components/sprk-card/directives/sprk-card-media/sprk-card-media.module';
 import { SprkDictionaryModule } from './components/sprk-dictionary/sprk-dictionary.module';
 import { SprkHighlightBoardModule } from './components/sprk-highlight-board/sprk-highlight-board.module';
 import { SprkBoxModule } from './directives/sprk-box/sprk-box.module';
@@ -77,6 +79,7 @@ import { SprkCheckboxItemModule } from './components/inputs/sprk-checkbox-item/s
 import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divider.module';
 import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module';
 import { SprkTextareaModule } from './directives/inputs/sprk-textarea/sprk-textarea.module';
+import { SprkCardHeaderModule } from './components/sprk-card/directives/sprk-card-header/sprk-card-header.module';
 @NgModule({
   exports: [
     SprkAlertModule,
@@ -85,6 +88,9 @@ import { SprkTextareaModule } from './directives/inputs/sprk-textarea/sprk-texta
     SprkAwardModule,
     SprkButtonModule,
     SprkCardModule,
+    SprkCardContentModule,
+    SprkCardMediaModule,
+    SprkCardHeaderModule,
     SprkDictionaryModule,
     SprkDividerModule,
     SprkDropdownModule,

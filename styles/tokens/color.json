@@ -99,8 +99,18 @@
     },
     "file": "color"
   },
+  "orange": {
+    "comment": "Use to communicate error, warning, urgency or attention needed.",
+    "value": "rgb(212, 117, 0)",
+    "group": "semantic",
+    "type": "#D47500",
+    "attributes": {
+      "category": "color"
+    },
+    "file": "color"
+  },
   "pink": {
-    "comment": "Use to communicate an error status or message.",
+    "comment": "Deprecated. Use orange instead to communicate an error status or message.",
     "value": "rgb(229, 1, 88)",
     "group": "semantic",
     "type": "#E50158",
@@ -110,7 +120,7 @@
     "file": "color"
   },
   "yellow": {
-    "comment": "Use to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this color.",
+    "comment": "Deprecated. Use orange instead to communicate an urgent status or message. Be sure to follow accessibility guidelines when using this color.",
     "value": "rgb(237, 163, 2)",
     "group": "semantic",
     "type": "#EDA302",
