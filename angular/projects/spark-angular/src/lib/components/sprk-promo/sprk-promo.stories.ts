@@ -87,7 +87,8 @@ export const flag = () => ({
     <sprk-promo idString="flag-promo" hasBorder="true" isFlag="true" additionalClasses="sprk-o-Stack--split@s">
       <a href="#nogo" sprkStackItem class="sprk-o-Stack__item--fourth@s">
        <img
-         class="sprk-c-Promo__image--flag"
+         sprkPromoMedia
+         isFlag="true"
          alt="Spark Design System Logo."
          src="https://spark-assets.netlify.app/spark-logo-updated.svg"
         >
@@ -121,7 +122,7 @@ export const withImage = () => ({
     <sprk-promo idString="image-promo" hasBorder="true" additionalClasses="sprk-o-Stack--split@s">
       <a href="#nogo" sprkStackItem class="sprk-o-Stack__item--half@s">
        <img
-         class="sprk-c-Promo__image"
+         sprkPromoMedia
          alt="A house and front yard."
          src="https://spark-assets.netlify.app/house.jpg"
         >
@@ -212,7 +213,7 @@ export const withReversedImage = () => ({
 
       <a href="#nogo" sprkStackItem class="sprk-o-Stack__item--half@s">
         <img
-          class="sprk-c-Promo__image"
+          sprkPromoMedia
           alt="A house and front yard."
           src="https://spark-assets.netlify.app/house.jpg"
         >

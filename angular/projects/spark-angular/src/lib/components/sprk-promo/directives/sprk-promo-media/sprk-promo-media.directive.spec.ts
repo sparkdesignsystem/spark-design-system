@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkPromoSubheadingDirective } from './sprk-promo-subheading.directive';
+import { SprkPromoMediaDirective } from './sprk-promo-media.directive';
 
 @Component({
   selector: 'sprk-test',
   template: `
-    <p sprkPromoSubheading idString="test"></p>
-    <p sprkPromoSubheading></p>
+    <img sprkPromoMedia idString="test" />
+    <img sprkPromoMedia isFlag="true" />
   `,
 })
 class TestComponent {}
 
-describe('Spark Promo Subheading Directive', () => {
+describe('Spark Promo Media Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let element0: HTMLElement;
@@ -19,15 +19,15 @@ describe('Spark Promo Subheading Directive', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkPromoSubheadingDirective, TestComponent],
+      declarations: [SprkPromoMediaDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
 
     fixture.detectChanges();
-    element0 = fixture.nativeElement.querySelector('p');
-    element1 = fixture.nativeElement.querySelectorAll('p')[1];
+    element0 = fixture.nativeElement.querySelector('img');
+    element1 = fixture.nativeElement.querySelectorAll('img')[1];
   }));
 
   it('should create itself', () => {
@@ -35,12 +35,22 @@ describe('Spark Promo Subheading Directive', () => {
   });
 
   it('should have the correct base class', () => {
-    expect(element0.classList.contains('sprk-c-Promo__subtitle')).toBe(true);
-    expect(element1.classList.contains('sprk-c-Promo__subtitle')).toBe(true);
+    expect(element0.classList.contains('sprk-c-Promo__image')).toBe(true);
+    expect(element1.classList.contains('sprk-c-Promo__image')).toBe(true);
   });
 
   it('should apply correct idString value to data-id', () => {
     expect(element0.getAttribute('data-id') === 'test').toBe(true);
+  });
+
+  it('should apply correct class if isFlag is true', () => {
+    expect(element1.classList.contains('sprk-c-Promo__image--flag')).toBe(true);
+  });
+
+  it('should not apply flag media class if isFlag is false', () => {
+    expect(element0.classList.contains('sprk-c-Promo__image--flag')).toBe(
+      false,
+    );
   });
 
   it('should not apply data-id when idString is not set', () => {

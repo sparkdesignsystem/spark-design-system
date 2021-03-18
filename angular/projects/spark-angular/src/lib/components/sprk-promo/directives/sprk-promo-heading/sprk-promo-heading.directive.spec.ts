@@ -14,8 +14,8 @@ class TestComponent {}
 describe('Spark Promo Heading Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let contentElement0: HTMLElement;
-  let contentElement1: HTMLElement;
+  let element0: HTMLElement;
+  let element1: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -26,8 +26,8 @@ describe('Spark Promo Heading Directive', () => {
     component = fixture.componentInstance;
 
     fixture.detectChanges();
-    contentElement0 = fixture.nativeElement.querySelector('h3');
-    contentElement1 = fixture.nativeElement.querySelectorAll('h3')[1];
+    element0 = fixture.nativeElement.querySelector('h3');
+    element1 = fixture.nativeElement.querySelectorAll('h3')[1];
   }));
 
   it('should create itself', () => {
@@ -35,19 +35,15 @@ describe('Spark Promo Heading Directive', () => {
   });
 
   it('should have the correct base class', () => {
-    expect(contentElement0.classList.contains('sprk-c-Promo__title')).toBe(
-      true,
-    );
-    expect(contentElement1.classList.contains('sprk-c-Promo__title')).toBe(
-      true,
-    );
+    expect(element0.classList.contains('sprk-c-Promo__title')).toBe(true);
+    expect(element1.classList.contains('sprk-c-Promo__title')).toBe(true);
   });
 
   it('should apply correct idString value to data-id', () => {
-    expect(contentElement0.getAttribute('data-id') === 'test').toBe(true);
+    expect(element0.getAttribute('data-id') === 'test').toBe(true);
   });
 
   it('should not apply data-id when idString is not set', () => {
-    expect(contentElement1.getAttribute('data-id')).toBe(null);
+    expect(element1.getAttribute('data-id')).toBe(null);
   });
 });
