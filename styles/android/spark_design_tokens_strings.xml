@@ -197,6 +197,7 @@
   <string name="sprk_masthead_selector_dropdown_footer_text_align">center</string><!-- The text-align of the Selector Dropdown, found in a Masthead with Extended Navigation. -->
   <string name="sprk_masthead_selector_dropdown_border_bottom_mask_open">2px solid #fff7f7f7</string><!-- The bottom border that gets applied to the Selector Dropdown when open, found in a Masthead with Extended Navigation. -->
   <string name="sprk_masthead_selector_dropdown_box_shadow_mask_open">0 5px 10px rgba(0, 0, 0, 0.1)</string><!-- The box shadow that gets applied to the Selector Dropdown when open, found in a Masthead with Extended Navigation. -->
+  <string name="sprk_masthead_selector_hover_border">2px solid #ff603aa1</string><!-- The border of the Selector when hovered, found in a Masthead with Extended Navigation. -->
   <string name="sprk_masthead_transition">all 0.3s ease-in</string><!-- The transition applied to the Masthead. -->
   <string name="sprk_masthead_translate_y">translateY(-100%)</string><!-- The transform length that gets applied when the Masthead scrolls out of view on narrow screens. -->
   <string name="sprk_masthead_accordion_active_left_border">3px solid #ffc8102e</string><!-- The left border of the active item in the navigation links when masthead is on narrow viewports. -->

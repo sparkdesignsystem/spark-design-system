@@ -483,6 +483,23 @@
           },
           "file": "settings",
           "themable": true
+        },
+        "hover": {
+          "font-color": {
+            "comment": "The font color of the Selector when hovered, found in a Masthead with Extended Navigation.",
+            "value": "{purple.value}",
+            "file": "settings",
+            "themable": true
+          },
+          "border": {
+              "comment": "The border of the Selector when hovered, found in a Masthead with Extended Navigation.",
+              "value": "2px solid {purple.value}",
+              "attributes": {
+                "category": "content"
+              },
+              "file": "settings",
+              "themable": true
+          }
         }
       },
       "narrow-height": {

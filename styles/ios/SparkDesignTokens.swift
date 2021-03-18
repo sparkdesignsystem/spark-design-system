@@ -331,6 +331,7 @@ public class SparkDesignTokens {
     public static let sprkMastheadSelectorDropdownTitleFontWeight = 300
     public static let sprkMastheadSelectorFontColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkMastheadSelectorFontWeight = 300
+    public static let sprkMastheadSelectorHoverFontColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkMastheadSimpleLinkIconHoverColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkMediaGutter = CGFloat(16.00)
     public static let sprkMediaGutterHuge = CGFloat(64.00)
