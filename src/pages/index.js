@@ -101,11 +101,12 @@ const teaserGuides = {
     ctaVariant: 'button',
     buttonVariant: 'tertiary',
     href: '/using-spark/guides',
+    ctaLinkElement: 'a',
   },
   media: {
     href: '/using-spark/guides',
     mediaLinkElement: 'a',
-    imgAlt: 'An illustration of a book flipping through pages.',
+    imgAlt: 'Explore Guides',
     imgSrc: guidesMedia,
     mediaVariant: 'img',
   },
