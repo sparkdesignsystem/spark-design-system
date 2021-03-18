@@ -74,7 +74,7 @@
   <color name="sprk_footer_link_color">#ffffffff</color><!-- Link color on the Footer. -->
   <color name="sprk_footer_icon_color">#ffffffff</color><!-- Icon color on the Footer. -->
   <color name="sprk_footer_trigger_color">#ffffffff</color><!-- Toggle trigger color on the Footer. -->
-  <color name="sprk_footer_trigger_hover_color">#ff9265d3</color><!-- Toggle trigger hover color on the Footer. -->
+  <color name="sprk_footer_trigger_hover_color">#ffffffff</color><!-- Toggle trigger hover color on the Footer. -->
   <color name="sprk_highlight_board_color">#ffffffff</color><!-- The background color of the Highlight Board. -->
   <color name="sprk_highlight_board_content_box_color">#ffffffff</color><!-- The background color of the content box in the Highlight Board. -->
   <color name="sprk_icon_fill_color">#ff1c1b1a</color><!-- Value for the fill property of the Icon component. -->
@@ -94,9 +94,7 @@
   <color name="sprk_link_light_hover_underline_color">#ffffffff</color><!-- The underline color value of Light Links on hover. -->
   <color name="sprk_link_has_icon_color_icon">#ff603aa1</color><!-- The color of icons in Links containing icons. -->
   <color name="sprk_link_has_icon_hover_color_text">#ffc8102e</color><!-- The color value for Links with icons in the hover state. -->
-  <color name="sprk_link_has_icon_hover_color_text">#ff2e1166</color><!-- The color value for Links with icons in the hover state. -->
   <color name="sprk_link_has_icon_visited_color_text">#ff603aa1</color><!-- The color value for Links with icons in the visited state. -->
-  <color name="sprk_masthead_mask_color">#80000000</color><!-- The color of the mask that gets applied when the Masthead selector dropdown is open on narrow screens. -->
   <color name="sprk_masthead_selector_dropdown_link_color">#ff1c1b1a</color><!-- The color of the Selector Dropdown, found in a Masthead with Extended Navigation. -->
   <color name="sprk_masthead_selector_dropdown_active_background_color">#fff7f7f7</color><!-- The background color of the Selector Dropdown items that are active or hovered. Found in a Masthead with Extended Navigation. -->
   <color name="sprk_masthead_mask_color">#80000000</color><!-- The color of the mask that gets applied when the Masthead Selector Dropdown is open on narrow screens. -->
@@ -118,5 +116,5 @@
   <color name="sprk_color_body_two">#ff1c1b1a</color><!-- The color of TypeBodyTwo. -->
   <color name="sprk_color_body_three">#ff1c1b1a</color><!-- The color of TypeBodyThree. -->
   <color name="sprk_color_body_four">#ff1c1b1a</color><!-- The color of TypeBodyFour. -->
-
+  
 </resources>

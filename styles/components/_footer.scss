@@ -32,10 +32,13 @@
   &:active,
   &:focus {
     color: $sprk-footer-trigger-hover-color;
+    font-weight: $sprk-footer-trigger-hover-font-weight;
+    text-decoration: $sprk-footer-trigger-hover-text-decoration;
     transition: $sprk-footer-toggle-transition;
 
     .sprk-c-Footer__icon {
       fill: $sprk-footer-trigger-hover-color;
+      stroke: $sprk-footer-trigger-hover-color;
       transition: $sprk-footer-toggle-transition;
     }
   }
