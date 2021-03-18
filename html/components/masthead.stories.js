@@ -595,6 +595,8 @@ export const extended = () => {
                     <svg
                       class="
                         sprk-c-Icon
+                        sprk-c-Icon--filled-current-color
+                        sprk-c-Icon--stroke-current-color
                         sprk-c-Icon--toggle
                         sprk-Stack__item
                       "
@@ -985,6 +987,8 @@ export const extended = () => {
                 <svg
                   class="
                     sprk-c-Icon
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--toggle
                     sprk-Stack__item
                   "
