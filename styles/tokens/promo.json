@@ -52,8 +52,8 @@
         "file": "settings",
         "themable": true
       },
-      "narrow-max-width": {
-        "comment": "The maximum width of the image in the Promo component on narrow viewports.",
+      "flag-narrow-max-width": {
+        "comment": "The maximum width of the flag image in the Promo component on narrow viewports.",
         "value": "50%",
         "attributes": {
           "category": "size"

@@ -68,7 +68,7 @@ export const flag = () => `
   >
     <a href="#nogo" class="sprk-o-Stack__item sprk-o-Stack__item--fourth@s">
       <img
-        class="sprk-c-Promo__image--flag"
+        class="sprk-c-Promo__image sprk-c-Promo__image--flag"
         alt="Spark Design System Logo."
         src="https://spark-assets.netlify.app/spark-logo-updated.svg"
       >

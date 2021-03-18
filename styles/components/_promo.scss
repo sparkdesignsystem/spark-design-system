@@ -29,18 +29,6 @@
   color: $sprk-promo-subtitle-font-color;
 }
 
-/// Adds styles for the image
-/// in the Flag Promo variant.
-.sprk-c-Promo__image--flag {
-  object-fit: cover;
-  padding: $sprk-space-inset-m;
-
-  @media (max-width: $sprk-promo-breakpoint) {
-    max-width: $sprk-promo-image-narrow-max-width;
-    max-height: $sprk-promo-image-narrow-max-height;
-  }
-}
-
 .sprk-c-Promo__image {
   width: 100%;
   height: 100%;
@@ -48,6 +36,18 @@
 
   @media (max-width: $sprk-promo-breakpoint) {
     max-height: $sprk-promo-image-narrow-max-height;
+  }
+}
+
+/// Adds styles for the image
+/// in the Flag Promo variant.
+.sprk-c-Promo__image--flag {
+  width: auto;
+  height: auto;
+  padding: $sprk-space-inset-m;
+
+  @media (max-width: $sprk-promo-breakpoint) {
+    max-width: $sprk-promo-image-flag-narrow-max-width;
   }
 }
 
