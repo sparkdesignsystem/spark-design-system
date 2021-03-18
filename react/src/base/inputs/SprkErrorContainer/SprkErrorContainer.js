@@ -43,8 +43,10 @@ SprkErrorContainer.propTypes = {
    */
   analyticsString: PropTypes.string,
   /**
-   * Configured by parent and
-   * assigned to the `id` attribute.
+   * Assigned to the `id` attribute
+   * of the rendered input element.
+   * A custom ID will
+   * be added if this is not supplied.
    */
   id: PropTypes.string,
   /**
