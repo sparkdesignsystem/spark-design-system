@@ -67,7 +67,7 @@
   <color name="sprk_dropdown_border_color">#fff7f7f7</color><!-- The border color of the Dropdown. -->
   <color name="sprk_dropdown_link_color">#ff1c1b1a</color><!-- The color of the Dropdown links. -->
   <color name="sprk_dropdown_trigger_color">#ff1c1b1a</color><!-- The color of the Dropdown trigger. -->
-  <color name="sprk_dropdown_trigger_color_active">#ff1c1b1a</color><!-- The color of the Dropdown trigger on hover, active, focus. -->
+  <color name="sprk_dropdown_trigger_color_active">#ff603aa1</color><!-- The color of the Dropdown trigger on hover, active, focus. -->
   <color name="sprk_dropdown_trigger_color_visited">#ff1c1b1a</color><!-- The color of the Dropdown trigger for the visited state. -->
   <color name="sprk_footer_background_color">#ff1c1b1a</color><!-- Background color of the Footer. -->
   <color name="sprk_footer_text_color">#ffffffff</color><!-- Text color on the Footer. -->

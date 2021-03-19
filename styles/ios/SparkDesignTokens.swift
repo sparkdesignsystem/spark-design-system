@@ -144,7 +144,7 @@ public class SparkDesignTokens {
     public static let sprkDropdownBorderColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkDropdownLinkColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkDropdownTriggerColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
-    public static let sprkDropdownTriggerColorActive = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
+    public static let sprkDropdownTriggerColorActive = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkDropdownTriggerColorVisited = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkFooterBackgroundColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkFooterIconColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
