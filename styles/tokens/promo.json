@@ -89,7 +89,7 @@
         "themable": true
       },
       "height": {
-        "comment": "The height for the image in the Promo component",
+        "comment": "The height for the image in the Promo component.",
         "value": "100%",
         "attributes": {
           "category": "size"
@@ -98,7 +98,7 @@
         "themable": true
       },
       "width": {
-        "comment": "The width for the image in the Promo component",
+        "comment": "The width for the image in the Promo component.",
         "value": "100%",
         "attributes": {
           "category": "size"
