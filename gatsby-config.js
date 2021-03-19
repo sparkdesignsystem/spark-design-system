@@ -59,6 +59,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: 'src/pages/using-spark/guides.mdx',
+        name: 'guides',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: 'src/pages/using-spark',
         name: 'using-spark-pages',
       },
@@ -91,6 +98,9 @@ module.exports = {
           ),
           'installing-spark-page': require.resolve(
             './src/components/layouts/InstallingSparkLayout.js',
+          ),
+          guides: require.resolve(
+            './src/components/layouts/UsingSparkLayout.js',
           ),
           'using-spark-pages': require.resolve(
             './src/components/layouts/UsingSparkLayout.js',
