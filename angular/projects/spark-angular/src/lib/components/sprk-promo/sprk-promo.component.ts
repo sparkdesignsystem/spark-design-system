@@ -17,7 +17,8 @@ export class SprkPromoComponent {
   @Input()
   additionalClasses: string;
   /**
-   * If `true`, the Flag Promo variant will be rendered.
+   * If `true`, the Flag Promo variant styles
+   * will be added to the component.
    */
   @Input()
   isFlag: boolean;
