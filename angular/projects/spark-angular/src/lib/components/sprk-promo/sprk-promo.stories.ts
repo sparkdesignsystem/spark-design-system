@@ -86,11 +86,11 @@ export const flag = () => ({
   template: `
     <sprk-promo idString="flag-promo" hasBorder="true" isFlag="true" additionalClasses="sprk-o-Stack--split@s">
       <a href="#nogo" sprkStackItem class="sprk-o-Stack__item--fourth@s">
-       <img
-         sprkPromoMedia
-         isFlag="true"
-         alt="Spark Design System Logo."
-         src="https://spark-assets.netlify.app/spark-logo-updated.svg"
+        <img
+          sprkPromoMedia
+          isFlag="true"
+          alt="Spark Design System Logo."
+          src="https://spark-assets.netlify.app/spark-logo-updated.svg"
         >
       </a>
 
@@ -121,10 +121,10 @@ export const withImage = () => ({
   template: `
     <sprk-promo idString="image-promo" hasBorder="true" additionalClasses="sprk-o-Stack--split@s">
       <a href="#nogo" sprkStackItem class="sprk-o-Stack__item--half@s">
-       <img
-         sprkPromoMedia
-         alt="A house and front yard."
-         src="https://spark-assets.netlify.app/house.jpg"
+        <img
+          sprkPromoMedia
+          alt="A house and front yard."
+          src="https://spark-assets.netlify.app/house.jpg"
         >
       </a>
 
