@@ -206,6 +206,10 @@
   <string name="sprk_menu_icon_transition">transform 0.3s ease-in-out, opacity 0.2s ease-in-out</string><!-- The transition on the menu icon that turns the menu icon into an 'X'. -->
   <string name="sprk_modal_shadow">0 4px 5px rgba(0, 0, 0, 0.6)</string><!-- The box shadow on the Modal. -->
   <string name="sprk_promo_border">1px solid #ffa4a4a3</string><!-- The border of the Promo component. -->
+  <string name="sprk_promo_margin">0 auto</string><!-- The margin of the Promo component. -->
+  <string name="sprk_promo_image_object_fit">cover</string><!-- The object-fit setting of the image in the Promo component. -->
+  <string name="sprk_promo_image_flag_height">auto</string><!-- The height for the Flag image in the Promo component -->
+  <string name="sprk_promo_image_flag_width">auto</string><!-- The width for the Flag image in the Promo component -->
   <string name="sprk_pre_overflow">auto</string><!-- Reset for the overflow property on pre elements. -->
   <string name="sprk_spinner_speed">1s</string><!-- The speed of the animation for Spinners. -->
   <string name="sprk_stepper_bg">transparent</string><!-- The background color of the Stepper. -->
