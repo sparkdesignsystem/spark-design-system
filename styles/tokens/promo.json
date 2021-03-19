@@ -116,7 +116,7 @@
         "themable": true
       },
       "flag-padding": {
-        "comment": "The padding for the Flag image in the Promo component",
+        "comment": "The padding for the Flag image in the Promo component.",
         "value": "{space.inset.m.value}",
         "attributes": {
           "category": "size"
@@ -125,7 +125,7 @@
         "themable": true
       },
       "flag-height": {
-        "comment": "The height for the Flag image in the Promo component",
+        "comment": "The height for the Flag image in the Promo component.",
         "value": "auto",
         "attributes": {
           "category": "content"
@@ -134,7 +134,7 @@
         "themable": true
       },
       "flag-width": {
-        "comment": "The width for the Flag image in the Promo component",
+        "comment": "The width for the Flag image in the Promo component.",
         "value": "auto",
         "attributes": {
           "category": "content"
