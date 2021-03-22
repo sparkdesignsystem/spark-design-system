@@ -252,6 +252,12 @@
 
     .sprk-c-Masthead__link--big-nav {
       border-bottom: $sprk-big-nav-link-hover-border-bottom;
+      color: $sprk-red; // TODO json
+    }
+
+    .sprk-c-Icon {
+      stroke: $sprk-red;
+      fill: $sprk-red;
     }
   }
 }
