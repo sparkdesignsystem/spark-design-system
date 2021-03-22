@@ -131,9 +131,15 @@
           "file": "settings",
           "themable": true
         },
+        "hover-color": {
+          "comment": "The color of Masthead Links on hover.",
+          "value": "{red.value}",
+          "file": "settings",
+          "themable": true
+        },
         "icon-hover-color": {
           "comment": "The color of Masthead Icon Links on hover.",
-          "value": "{purple.value}",
+          "value": "{red.value}",
           "file": "settings",
           "themable": true
         },

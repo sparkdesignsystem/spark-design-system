@@ -165,9 +165,14 @@
     color: $sprk-masthead-link-visited-color;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    color: $sprk-masthead-link-hover-color;
+
     .sprk-c-Icon {
       color: $sprk-masthead-link-icon-hover-color;
+      stroke: $sprk-masthead-link-icon-hover-color;
+      fill: $sprk-masthead-link-icon-hover-color;
     }
   }
 }
