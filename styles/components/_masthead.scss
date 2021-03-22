@@ -358,6 +358,17 @@
   }
 }
 
+.sprk-c-Masthead__selector-dropdown-header-link:focus {
+  .sprk-c-Masthead__selector-dropdown-title {
+    color: $sprk-masthead-selector-hover-font-color;
+  }
+
+  .sprk-c-Icon {
+    stroke: $sprk-masthead-selector-hover-font-color;
+    fill: $sprk-masthead-selector-hover-font-color;
+  }
+}
+
 .sprk-c-Masthead__selector-dropdown-title {
   color: $sprk-masthead-selector-dropdown-title-color;
   font-weight: $sprk-masthead-selector-dropdown-title-font-weight;
