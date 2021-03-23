@@ -208,7 +208,7 @@ class SprkMastheadSelector extends Component {
             </ul>
 
             {footer && (
-              <div className=" sprk-c-Masthead__selector-footer ">{footer}</div>
+              <div className="sprk-c-Masthead__selector-footer">{footer}</div>
             )}
           </div>
         )}
