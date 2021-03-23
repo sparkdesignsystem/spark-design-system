@@ -1,5 +1,5 @@
 const isSprkInput = (elem) => {
-  return !!(
+  return (
     elem.type.name === 'SprkInput' ||
     elem.type.name === 'SprkSelect' ||
     elem.type.name === 'SprkDatePicker'
