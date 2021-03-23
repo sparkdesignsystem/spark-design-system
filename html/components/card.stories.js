@@ -129,7 +129,7 @@ export const teaser = () =>
       <a href="#nogo" class="sprk-o-Stack__item">
         <img
           class="sprk-c-Card__media"
-          alt="Spark placeholder image."
+          alt="Learn more"
           src="https://spark-assets.netlify.app/desktop.jpg"
         >
       </a>
@@ -154,7 +154,7 @@ export const teaser = () =>
         </p>
 
         <div class="sprk-o-Stack__item">
-          <a href="#nogo" class="sprk-c-Button">
+          <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
             Learn More
           </a>
         </div>
@@ -186,7 +186,7 @@ export const teaserWithDifferentElementOrder = () =>
 
       <a href="#nogo" class="sprk-o-Stack__item">
         <img
-          alt="Spark placeholder image"
+          alt="Learn more"
           src="https://spark-assets.netlify.app/desktop.jpg" />
       </a>
 
@@ -205,7 +205,7 @@ export const teaserWithDifferentElementOrder = () =>
         </p>
 
         <div class="sprk-o-Stack__item">
-          <a href="#nogo" class="sprk-c-Button">
+          <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
             Learn More
           </a>
         </div>
@@ -244,7 +244,7 @@ export const twoUpCards = () =>
         >
           <img
             class="sprk-c-Card__media"
-            alt="Spark placeholder image."
+            alt="Learn more"
             src="https://spark-assets.netlify.app/desktop.jpg"
           >
         </a>
@@ -295,7 +295,7 @@ export const twoUpCards = () =>
       <a href="#nogo" class="sprk-o-Stack__item">
         <img
           class="sprk-c-Card__media"
-          alt="Spark placeholder image."
+          alt="Learn more"
           src="https://spark-assets.netlify.app/desktop.jpg">
       </a>
 
@@ -364,8 +364,13 @@ export const threeUpCards = () =>
             sprk-u-TextAlign--center
           "
         >
-          <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
+          <a
+            href="#nogo"
+            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            aria-label="Learn More"
+          >
             <svg
+              aria-hidden="true"
               class="
                 sprk-c-Icon
                 sprk-c-Icon--xl
@@ -428,12 +433,17 @@ export const threeUpCards = () =>
             sprk-u-TextAlign--center
           "
         >
-          <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
+          <a
+            href="#nogo"
+            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            aria-label="Learn More"
+          >
             <svg
               class="
                 sprk-c-Icon
                 sprk-c-Icon--xl"
               height="75"
+              aria-hidden="true"
               viewBox="0 0 220.63 197.62"
             >
               <use xlink:href="#call-team-member" />
@@ -486,8 +496,11 @@ export const threeUpCards = () =>
         >
           <a
             href="#nogo"
-            class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
+            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            aria-label="Learn More"
+          >
             <svg
+              aria-hidden="true"
               class="
                 sprk-c-Icon
                 sprk-c-Icon--xl"
@@ -564,7 +577,7 @@ export const fourUpCards = () =>
           </p>
 
           <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
               Button
             </a>
           </div>
@@ -597,7 +610,7 @@ export const fourUpCards = () =>
           </p>
 
           <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
               Button
             </a>
           </div>
@@ -631,7 +644,7 @@ export const fourUpCards = () =>
           </p>
 
           <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
               Button
             </a>
           </div>
@@ -665,7 +678,7 @@ export const fourUpCards = () =>
           </p>
 
           <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
               Button
             </a>
           </div>

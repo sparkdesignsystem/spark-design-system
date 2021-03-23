@@ -23,57 +23,62 @@ class SprkTooltip extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('keydown', this.handleWindowKeydown);
-    window.addEventListener('click', this.handleWindowClick);
-
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', this.handleWindowKeydown);
+      window.addEventListener('click', this.handleWindowClick);
+    }
     this.setPositioningClass();
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleWindowKeydown);
-    window.removeEventListener('click', this.handleWindowClick);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('keydown', this.handleWindowKeydown);
+      window.removeEventListener('click', this.handleWindowClick);
+    }
   }
 
   setPositioningClass() {
-    const trigger = this.triggerRef.current;
+    if (typeof window !== 'undefined') {
+      const trigger = this.triggerRef.current;
 
-    const elemX = trigger.getBoundingClientRect().left;
-    const elemY = trigger.getBoundingClientRect().top;
+      const elemX = trigger.getBoundingClientRect().left;
+      const elemY = trigger.getBoundingClientRect().top;
 
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
+      const viewportWidth = document.documentElement.clientWidth;
+      const viewportHeight = document.documentElement.clientHeight;
 
-    const maxWidth = 328;
-    const triggerWidth = 16;
-    const tooltipBorderWidth = 16;
-    const tooltipSpacing = 16;
+      const maxWidth = 328;
+      const triggerWidth = 16;
+      const tooltipBorderWidth = 16;
+      const tooltipSpacing = 16;
 
-    let calculatedWidth;
+      let calculatedWidth;
 
-    if (elemX > viewportWidth / 2) {
-      calculatedWidth =
-        elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
-      if (elemY > viewportHeight / 2) {
-        this.setState({ position: 'topleft' });
+      if (elemX > viewportWidth / 2) {
+        calculatedWidth =
+          elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
+        if (elemY > viewportHeight / 2) {
+          this.setState({ position: 'topleft' });
+        } else {
+          this.setState({ position: 'bottomleft' });
+        }
       } else {
-        this.setState({ position: 'bottomleft' });
+        calculatedWidth =
+          viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
+        if (elemY > viewportHeight / 2) {
+          this.setState({ position: 'topright' });
+        } else {
+          this.setState({ position: 'bottomright' });
+        }
       }
-    } else {
-      calculatedWidth =
-        viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
-      if (elemY > viewportHeight / 2) {
-        this.setState({ position: 'topright' });
-      } else {
-        this.setState({ position: 'bottomright' });
-      }
-    }
 
-    if (calculatedWidth < maxWidth) {
-      // overwrite the width if there's not enough room to display it
-      this.tooltipRef.current.setAttribute(
-        'style',
-        `width:${calculatedWidth}px`,
-      );
+      if (calculatedWidth < maxWidth) {
+        // overwrite the width if there's not enough room to display it
+        this.tooltipRef.current.setAttribute(
+          'style',
+          `width:${calculatedWidth}px`,
+        );
+      }
     }
   }
 

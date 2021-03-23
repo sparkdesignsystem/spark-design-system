@@ -5,10 +5,18 @@ import { SprkDatepickerDirective } from './sprk-datepicker.directive';
 @Component({
   selector: 'sprk-test',
   template: `
-    <input type="text" placeholder="MM/DD/YYYY" sprkDatepicker />
-  `
+    <input
+      type="text"
+      placeholder="MM/DD/YYYY"
+      sprkDatepicker
+      idString="test-str"
+      analyticsString="test"
+    />
+  `,
 })
-class TestComponent {}
+class TestComponent {
+  testVal = false;
+}
 
 describe('SprkDatePickerDirective', () => {
   let component: TestComponent;
@@ -20,10 +28,10 @@ describe('SprkDatePickerDirective', () => {
       providers: [
         {
           provide: 'TinyDatePicker',
-          useValue: null
-        }
+          useValue: null,
+        },
       ],
-      declarations: [SprkDatepickerDirective, TestComponent]
+      declarations: [SprkDatepickerDirective, TestComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
@@ -31,5 +39,21 @@ describe('SprkDatePickerDirective', () => {
     fixture.detectChanges();
     inputElement = fixture.nativeElement.querySelector('input');
     expect(component).toBeTruthy();
+  });
+
+  it('should add correct classes to the element', () => {
+    expect(inputElement.classList.contains('sprk-b-TextInput')).toEqual(true);
+    expect(inputElement.classList.contains('sprk-b-TextInput')).toEqual(true);
+    expect(
+      inputElement.classList.contains('sprk-b-TextInput--has-svg-icon'),
+    ).toEqual(true);
+  });
+
+  it('should set the data-id attribute to the value of idString', () => {
+    expect(inputElement.getAttribute('data-id')).toEqual('test-str');
+  });
+
+  it('should set the data-analytics attribute to the value of analyticsString', () => {
+    expect(inputElement.getAttribute('data-analytics')).toEqual('test');
   });
 });

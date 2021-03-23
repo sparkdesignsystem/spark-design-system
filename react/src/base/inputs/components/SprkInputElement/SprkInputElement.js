@@ -8,7 +8,7 @@ class SprkInputElement extends Component {
     const { defaultValue } = props;
     super(props);
 
-    if( value || defaultValue ) {
+    if (value || defaultValue) {
       this.state = {
         hasValue: true,
       };
@@ -17,6 +17,44 @@ class SprkInputElement extends Component {
         hasValue: false,
       };
     }
+
+    this.calculateAriaDescribedBy = this.calculateAriaDescribedBy.bind(this);
+    this.setAriaDescribedBy = this.setAriaDescribedBy.bind(this);
+  }
+
+  componentDidMount() {
+    this.setAriaDescribedBy();
+  }
+
+  componentDidUpdate(prevProps) {
+    const { errorContainerId, ariaDescribedBy } = this.props;
+
+    if (
+      errorContainerId !== prevProps.errorContainerId ||
+      ariaDescribedBy !== prevProps.ariaDescribedBy
+    ) {
+      this.setAriaDescribedBy();
+    }
+  }
+
+  setAriaDescribedBy() {
+    this.setState({
+      calculatedAriaDescribedBy: this.calculateAriaDescribedBy(),
+    });
+  }
+
+  calculateAriaDescribedBy() {
+    const { errorContainerId, ariaDescribedBy } = this.props;
+
+    if (errorContainerId && ariaDescribedBy) {
+      return `${errorContainerId} ${ariaDescribedBy}`;
+    }
+
+    if (ariaDescribedBy) return ariaDescribedBy;
+
+    if (errorContainerId) return errorContainerId;
+
+    return undefined;
   }
 
   render() {
@@ -36,9 +74,10 @@ class SprkInputElement extends Component {
       hiddenLabel,
       disabled,
       valid,
+      ariaDescribedBy,
       ...rest
     } = this.props;
-    const { hasValue } = this.state;
+    const { hasValue, calculatedAriaDescribedBy } = this.state;
 
     const Element = type === 'textarea' ? 'textarea' : 'input';
 
@@ -73,9 +112,9 @@ class SprkInputElement extends Component {
         data-id={idString}
         data-analytics={analyticsString}
         aria-invalid={!valid}
-        aria-describedby={errorContainerId}
-        value={valid && formatter(value) ? formatter(value) : value}
-        onBlur={e => handleOnBlur(e)}
+        aria-describedby={calculatedAriaDescribedBy}
+        value={valid && formatter ? formatter(value) : value}
+        onBlur={(e) => handleOnBlur(e)}
         {...rest}
       >
         {children}
@@ -86,15 +125,18 @@ class SprkInputElement extends Component {
 
 SprkInputElement.propTypes = {
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector
+   * for outside libraries to capture data.
    */
   analyticsString: propTypes.string,
   /**
-   * Configured by parent and assigned to the `aria-describedby` attribute.
+   * Configured by parent and included in the `aria-describedby` attribute.
    */
   errorContainerId: propTypes.string,
   /**
-   * A function supplied will be passed the value of the input and then executed, if the valid prop is true. The value returned will be assigned to the value of the input.
+   * A function supplied will be passed the value of the input and then
+   * executed, if the valid prop is true. The value returned will be
+   * assigned to the value of the input.
    */
   formatter: propTypes.func,
   /**
@@ -110,7 +152,8 @@ SprkInputElement.propTypes = {
    */
   id: propTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving as a unique selector for
+   * automated tools.
    */
   idString: propTypes.string,
   /**
@@ -127,6 +170,17 @@ SprkInputElement.propTypes = {
    * component in the valid or the error state.
    */
   valid: propTypes.bool,
+  /**
+   * A space-separated string of valid HTML Ids to add to the aria-describedby
+   * attribute on the Input.
+   */
+  ariaDescribedBy: propTypes.string,
+  children: propTypes.node,
+  disabled: propTypes.bool,
+  hiddenLabel: propTypes.bool,
+  forwardedRef: propTypes.shape(),
+  value: propTypes.string,
+  defaultValue: propTypes.string,
 };
 
 export default SprkInputElement;

@@ -62,7 +62,7 @@
     },
     "error-color": {
       "comment": "Color setting for Inputs with errors.",
-      "value": "{pink.value}",
+      "value": "{orange.value}",
       "attributes": {
         "category": "color"
       },
@@ -140,7 +140,7 @@
     },
     "error-border-color": {
       "comment": "The border color on Inputs when there is an error.",
-      "value": "{pink.value}",
+      "value": "{orange.value}",
       "file": "settings",
       "themable": true
     },

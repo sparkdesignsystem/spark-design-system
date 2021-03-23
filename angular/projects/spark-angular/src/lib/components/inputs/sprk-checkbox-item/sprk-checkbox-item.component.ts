@@ -61,10 +61,20 @@ export class SprkCheckboxItemComponent implements OnInit {
   idString: string;
 
   /**
+   * If `true`, the checkbox item will receive styling to make it a
+   * visibility toggle. Use this for "Show Password" checkboxes.
+   */
+  @Input()
+  isVisibilityToggle: boolean;
+
+  /**
    * @ignore
    */
   getClasses(): string {
-    const classArray: string[] = ['sprk-b-SelectionContainer', 'sprk-b-Checkbox'];
+    const classArray: string[] = [
+      'sprk-b-SelectionContainer',
+      'sprk-b-Checkbox',
+    ];
 
     if (this.additionalClasses) {
       this.additionalClasses.split(' ').forEach((className) => {
@@ -74,6 +84,10 @@ export class SprkCheckboxItemComponent implements OnInit {
 
     if (this.variant === 'huge') {
       classArray.push('sprk-b-Checkbox--huge');
+    }
+
+    if (this.isVisibilityToggle) {
+      classArray.push('sprk-b-InputContainer__visibility-toggle');
     }
 
     return classArray.join(' ');

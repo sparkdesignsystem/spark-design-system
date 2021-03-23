@@ -131,9 +131,9 @@ import {
               <div *ngIf="link.subNav">
                 <sprk-dropdown
                   [choices]="link.subNav"
-                  additionalTriggerClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                  triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                   additionalClasses="sprk-u-TextAlign--left"
-                  triggerIconType="chevron-down"
+                  triggerIconName="chevron-down"
                   [analyticsString]="link.analyticsString"
                   [triggerText]="link.text"
                 ></sprk-dropdown>
@@ -171,28 +171,17 @@ import {
         role="navigation"
         [id]="narrowNavId"
       >
-        <sprk-dropdown
+        <sprk-masthead-selector
           *ngIf="narrowSelector"
-          dropdownType="mastheadSelector"
-          additionalClasses="sprk-c-Masthead__selector-dropdown"
-          additionalTriggerClasses="
-            sprk-c-Masthead__selector
-            sprk-b-Link
-            sprk-b-Link--plain
-            sprk-o-Stack
-            sprk-o-Stack--split@xxs
-            sprk-o-Stack--center-column"
-          additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
-          additionalIconClasses="sprk-Stack__item sprk-u-mrs"
           [triggerText]="narrowSelector['trigger'].text"
-          selector="Select One"
-          triggerIconType="chevron-down"
+          heading="Select One"
+          triggerIconName="chevron-down"
           [choices]="narrowSelector['choices']"
         >
           <div
             *ngIf="narrowSelector['footer']"
-            class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
-            sprkDropdownFooter
+            class="sprk-c-Masthead__selector-footer"
+            sprkMastheadSelectorFooter
           >
             <a
               *ngIf="!narrowSelector['footer'].routerLink"
@@ -215,7 +204,7 @@ import {
               {{ narrowSelector['footer'].text }}
             </a>
           </div>
-        </sprk-dropdown>
+        </sprk-masthead-selector>
 
         <sprk-masthead-accordion [additionalClasses]="getNarrowNavClasses()">
           <div *ngFor="let narrowLink of narrowNavLinks">

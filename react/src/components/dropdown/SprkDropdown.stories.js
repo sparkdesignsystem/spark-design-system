@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
 import SprkDropdown from './SprkDropdown';
 import SprkButton from '../buttons/SprkButton';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -6,7 +7,13 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 export default {
   title: 'Components/Dropdown',
   component: SprkDropdown,
-  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
+  decorators: [
+    (story) => (
+      <BrowserRouter>
+        <div className="sprk-o-Box">{story()}</div>
+      </BrowserRouter>
+    ),
+  ],
   parameters: {
     jest: ['SprkDropdown'],
     info: `
@@ -36,13 +43,14 @@ export const defaultStory = () => (
         {
           text: 'Option 2',
           value: 'option-2',
-          href: '#nogo',
+          to: '#nogo',
+          element: Link,
         },
       ],
     }}
+    heading="My Choices"
     iconName="settings"
-    title="My Choices"
-    additionalIconClasses="sprk-c-Icon--l"
+    iconAdditionalClasses="sprk-c-Icon--l"
   />
 );
 
@@ -53,7 +61,7 @@ defaultStory.story = {
 export const informational = () => (
   <SprkDropdown
     variant="informational"
-    title="My Choices"
+    heading="My Choices"
     choices={{
       choiceFunction: (choiceText) => {
         console.log(choiceText);
@@ -77,7 +85,7 @@ export const informational = () => (
             infoLine2: 'More Information',
           },
           value: 'choice-title-1',
-          isActive: false,
+          isDefault: false,
           href: '#nogo',
         },
         {
@@ -87,7 +95,7 @@ export const informational = () => (
             infoLine2: 'More Information',
           },
           value: 'choice-title-2',
-          isActive: false,
+          isDefault: true,
           href: '#nogo',
         },
       ],
