@@ -78,7 +78,7 @@ export const flag = () => (
       <SprkLink variant="unstyled" href="#nogo">
         <img
           className="sprk-c-Promo__image sprk-c-Promo__image--flag"
-          alt="Spark Design System Logo."
+          alt="Learn more about Spark Design System."
           src="https://spark-assets.netlify.app/spark-logo-updated.svg"
         />
       </SprkLink>
@@ -118,7 +118,7 @@ export const withImage = () => (
       <SprkLink variant="unstyled" href="#nogo">
         <img
           className="sprk-c-Promo__image"
-          alt="A house and front yard."
+          alt="Additional insights about this property."
           src="https://spark-assets.netlify.app/house.jpg"
         />
       </SprkLink>
@@ -235,7 +235,7 @@ export const withReversedImage = () => (
       <SprkLink variant="unstyled" href="#nogo">
         <img
           className="sprk-c-Promo__image"
-          alt="A house and front yard."
+          alt="Additional insights about this property."
           src="https://spark-assets.netlify.app/house.jpg"
         />
       </SprkLink>
