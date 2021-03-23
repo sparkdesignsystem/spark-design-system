@@ -41,13 +41,11 @@
   <string name="sprk_btn_disabled_border">2.00dp solid transparent</string><!-- The border of the Disabled Button component. -->
   <string name="sprk_btn_disabled_shadow">none</string><!-- The shadow color of the Disabled Button component. -->
   <string name="sprk_btn_disabled_hover_border">2.00dp solid transparent</string><!-- The border of the Button component when disabled on hover. -->
-  <string name="sprk_btn_secondary_disabled_background_color">transparent</string><!-- The background color of the Disabled Button component. -->
   <string name="sprk_btn_secondary_disabled_shadow">none</string><!-- The box shadow of the Secondary Button component when disabled. -->
   <string name="sprk_btn_secondary_disabled_hover_border">2.00dp solid #ff8d8d8c</string><!-- The border of the Secondary Button component when disabled on hover. -->
-  <string name="sprk_btn_secondary_background_color">transparent</string><!-- The background color of the Secondary Button component. -->
-  <string name="sprk_btn_secondary_border">2.00dp solid #ffc8102e</string><!-- The border of the Secondary Button component. -->
+  <string name="sprk_btn_secondary_border">2.00dp solid #ff3c3174</string><!-- The border of the Secondary Button component. -->
   <string name="sprk_btn_secondary_hover_shadow">0 3px 10px #14141414</string><!-- The box shadow of the Secondary Button component on hover. -->
-  <string name="sprk_btn_secondary_hover_border">2.00dp solid #ffc8102e</string><!-- The border of the Secondary Button component on hover. -->
+  <string name="sprk_btn_secondary_hover_border">2.00dp solid #ff603aa1</string><!-- The border of the Secondary Button component on hover. -->
   <string name="sprk_btn_tertiary_disabled_background_color">transparent</string><!-- The background color of the Tertiary Button component when disabled. -->
   <string name="sprk_btn_tertiary_disabled_shadow">none</string><!-- The box shadow of the Tertiary Button component when disabled. -->
   <string name="sprk_btn_tertiary_disabled_hover_border">2.00dp solid #ff8d8d8c</string><!-- The border of the Tertiary Button component when disabled on hover. -->
