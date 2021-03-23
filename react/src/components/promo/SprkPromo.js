@@ -31,9 +31,7 @@ const SprkPromo = (props) => {
 
 SprkPromo.propTypes = {
   /**
-   * Content that will
-   * be rendered inside the content portion
-   * of the promo.
+   * The content to render inside the Promo.
    */
   children: PropTypes.node,
   /**
