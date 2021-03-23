@@ -99,16 +99,6 @@ export const tertiary = () =>
     </button>
   `;
 
-export const quaternary = () =>
-  `
-    <button
-      class="sprk-c-Button sprk-c-Button--quaternary"
-      data-id="button-quaternary"
-    >
-      Button
-    </button>
-  `;
-
 export const disabled = () =>
   `
   <button
@@ -136,17 +126,6 @@ export const disabledTertiary = () =>
   <button
     class="sprk-c-Button sprk-c-Button--tertiary sprk-is-Disabled"
     data-id="button-disabled-tertiary"
-    disabled
-  >
-    Button
-  </button>
-  `;
-
-export const disabledQuaternary = () =>
-  `
-  <button
-    class="sprk-c-Button sprk-c-Button--quaternary sprk-is-Disabled"
-    data-id="button-disabled-quaternary"
     disabled
   >
     Button
@@ -218,30 +197,6 @@ export const spinningTertiary = () =>
   `;
 
 spinningTertiary.story = {
-  parameters: {
-    jest: ['spinners'],
-  },
-};
-
-export const spinningQuaternary = () =>
-  `
-  <button
-    class="sprk-c-Button sprk-c-Button--quaternary sprk-c-Button--has-spinner"
-    data-sprk-spinner="click"
-    data-id="button-spinner-quaternary"
-    data-sprk-spinner-variant="dark"
-    aria-label="Loading"
-    aria-live="polite"
-    disabled
-  >
-    <div
-      class="sprk-c-Spinner sprk-c-Spinner--dark sprk-c-Spinner--circle"
-      role="progressbar"
-      aria-valuetext="Loading"></div>
-  </button>
-  `;
-
-spinningQuaternary.story = {
   parameters: {
     jest: ['spinners'],
   },

@@ -70,16 +70,6 @@ export const tertiary = () => (
   </SprkButton>
 );
 
-export const quaternary = () => (
-  <SprkButton
-    variant="quaternary"
-    idString="button-4"
-    analyticsString="button-4-analytics"
-  >
-    Button
-  </SprkButton>
-);
-
 export const disabled = () => (
   <SprkButton
     isDisabled
@@ -107,17 +97,6 @@ export const disabledTertiary = () => (
     variant="tertiary"
     idString="button-7"
     analyticsString="button-7-analytics"
-  >
-    Button
-  </SprkButton>
-);
-
-export const disabledQuaternary = () => (
-  <SprkButton
-    isDisabled
-    variant="quaternary"
-    idString="button-8"
-    analyticsString="button-8-analytics"
   >
     Button
   </SprkButton>
@@ -152,17 +131,6 @@ export const spinningTertiary = () => (
     isSpinning
   >
     <SprkSpinner variant="secondary" />
-  </SprkButton>
-);
-
-export const spinningQuaternary = () => (
-  <SprkButton
-    variant="quaternary"
-    idString="button-12"
-    analyticsString="button-12-analytics"
-    isSpinning
-  >
-    <SprkSpinner variant="dark" />
   </SprkButton>
 );
 
