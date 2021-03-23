@@ -13,8 +13,8 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
 @Component({
   selector: 'sprk-masthead-selector',
   template: `
-    <div [ngClass]="{ 'sprk-c-MastheadMask': isOpen }">
-      <div class="sprk-o-Box">
+    <div [ngClass]="{ 'sprk-c-MastheadMask': isOpen && isFlush }">
+      <div [ngClass]="{ 'sprk-o-Box': isFlush }">
         <a
           sprkLink
           variant="plain"
@@ -51,7 +51,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
           <a
             sprkLink
             variant="plain"
-            class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
+            class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100 sprk-c-Masthead__selector-dropdown-header-link"
             (click)="toggle($event)"
             [attr.aria-label]="heading"
             href="#"
@@ -221,6 +221,9 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    */
   @Input()
   triggerText: string;
+  /** Applies styles if the selector is flush with the sides of the viewport. */
+  @Input()
+  isFlush: boolean;
   /**
    * The event that is
    * emitted from the Masthead Selector when a choice
