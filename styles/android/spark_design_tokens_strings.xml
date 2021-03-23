@@ -204,8 +204,8 @@
   <string name="sprk_masthead_accordion_item_text_align">left</string><!-- The text alignment of the items in the navigation links when masthead is on narrow viewports. -->
   <string name="sprk_masthead_accordion_item_background">transparent</string><!-- The background of the items in the navigation links when masthead is on narrow viewports. -->
   <string name="sprk_big_nav_link_hover_border_bottom">transparent</string><!-- The border-bottom of the links in the big nav item when the big nav item is hovered in the Masthead Extended. -->
-  <string name="sprk_big_nav_item_border_bottom">0.125rem solid transparent</string><!-- The border bottom of the big navigation items in the Masthead Extended. -->
   <string name="sprk_big_nav_item_active_border_bottom">0.125rem solid #ffc8102e</string><!-- The border bottom of the active big navigation items in the Masthead Extended. -->
+  <string name="sprk_big_nav_item_border_bottom">0.125rem solid transparent</string><!-- The border bottom of the big navigation items in the Masthead Extended. -->
   <string name="sprk_big_nav_item_open_border_bottom">0.125rem solid #ffc8102e</string><!-- The border bottom of open big navigation items in the Masthead Extended. -->
   <string name="sprk_menu_icon_transition">transform 0.3s ease-in-out, opacity 0.2s ease-in-out</string><!-- The transition on the menu icon that turns the menu icon into an 'X'. -->
   <string name="sprk_modal_shadow">0 4px 5px rgba(0, 0, 0, 0.6)</string><!-- The box shadow on the Modal. -->

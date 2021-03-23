@@ -718,6 +718,23 @@
         "themable": true
       },
       "item": {
+        "active": {
+          "border-bottom": {
+            "comment": "The border bottom of the active big navigation items in the Masthead Extended.",
+            "value": "0.125rem solid {red.value}",
+            "attributes": {
+              "category": "content"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "color": {
+            "comment": "The color of active big navigation items in the Extended Masthead.",
+            "value": "{red.value}",
+            "file": "settings",
+            "themable": true
+          }
+        },
         "border-bottom": {
           "comment": "The border bottom of the big navigation items in the Masthead Extended.",
           "value": "0.125rem solid transparent",
@@ -727,18 +744,9 @@
           "file": "settings",
           "themable": true
         },
-        "active-border-bottom": {
-          "comment": "The border bottom of the active big navigation items in the Masthead Extended.",
-          "value": "0.125rem solid {red.value}",
-          "attributes": {
-            "category": "content"
-          },
-          "file": "settings",
-          "themable": true
-        },
         "open-border-bottom": {
           "comment": "The border bottom of open big navigation items in the Masthead Extended.",
-          "value": "{big-nav.item.active-border-bottom.value}",
+          "value": "{big-nav.item.active.border-bottom.value}",
           "attributes": {
             "category": "content"
           },
