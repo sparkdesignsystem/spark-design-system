@@ -57,7 +57,7 @@ export const defaultStory = () => ({
             neque egestas. Diam quod curabitur.
           </p>
 
-          <div sprkStackItem>
+          <div sprkStackItem class="sprk-o-Stack__item--end-column">
             <a
               sprkLink
               variant="unstyled"
