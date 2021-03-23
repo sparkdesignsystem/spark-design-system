@@ -69,7 +69,7 @@ export const flag = () => `
     <a href="#nogo" class="sprk-o-Stack__item sprk-o-Stack__item--fourth@s">
       <img
         class="sprk-c-Promo__image sprk-c-Promo__image--flag"
-        alt="Spark Design System Logo."
+        alt="Learn more about Spark Design System."
         src="https://spark-assets.netlify.app/spark-logo-updated.svg"
       >
     </a>
@@ -112,7 +112,7 @@ export const withImage = () => `
       <img
         class="sprk-c-Promo__image"
         src="https://spark-assets.netlify.app/house.jpg"
-        alt="A house and front yard."
+        alt="Additional insights about this property."
       />
     </a>
 
@@ -190,7 +190,7 @@ export const withReversedImage = () => `
       <img
         class="sprk-c-Promo__image"
         src="https://spark-assets.netlify.app/house.jpg"
-        alt="A house and front yard."
+        alt="Additional insights about this property."
       />
     </a>
   </div>

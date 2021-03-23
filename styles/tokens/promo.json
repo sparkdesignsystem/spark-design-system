@@ -106,41 +106,43 @@
         "file": "settings",
         "themable": true
       },
-      "flag-narrow-max-width": {
-        "comment": "The maximum width of the Flag image in the Promo component on narrow viewports.",
-        "value": "50%",
-        "attributes": {
-          "category": "size"
+      "flag": {
+        "narrow-max-width": {
+          "comment": "The maximum width of the Flag image in the Promo component on narrow viewports.",
+          "value": "50%",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
         },
-        "file": "settings",
-        "themable": true
-      },
-      "flag-padding": {
-        "comment": "The padding for the Flag image in the Promo component.",
-        "value": "{space.inset.m.value}",
-        "attributes": {
-          "category": "size"
+        "padding": {
+          "comment": "The padding for the Flag image in the Promo component.",
+          "value": "{space.inset.m.value}",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
         },
-        "file": "settings",
-        "themable": true
-      },
-      "flag-height": {
-        "comment": "The height for the Flag image in the Promo component.",
-        "value": "auto",
-        "attributes": {
-          "category": "content"
+        "height": {
+          "comment": "The height for the Flag image in the Promo component.",
+          "value": "auto",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
         },
-        "file": "settings",
-        "themable": true
-      },
-      "flag-width": {
-        "comment": "The width for the Flag image in the Promo component.",
-        "value": "auto",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
+        "width": {
+          "comment": "The width for the Flag image in the Promo component.",
+          "value": "auto",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
       }
     },
     "title": {
