@@ -48,7 +48,7 @@ export const defaultStory = () => (
           </SprkText>
         </SprkStackItem>
 
-        <SprkStackItem>
+        <SprkStackItem additionalClasses="sprk-o-Stack__item--end-column">
           <SprkLink
             variant="unstyled"
             href="#nogo"
@@ -111,7 +111,6 @@ export const withImage = () => (
   <SprkPromo
     idString="image-promo"
     hasBorder
-    isFlag
     additionalClasses="sprk-o-Stack--split@s"
   >
     <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s">
@@ -181,7 +180,6 @@ export const withReversedImage = () => (
   <SprkPromo
     idString="rev-image-promo"
     hasBorder
-    isFlag
     additionalClasses="sprk-o-Stack--split@s"
   >
     <SprkStackItem
