@@ -31,6 +31,11 @@ describe('SprkPromo:', () => {
     expect(wrapper.find('div.sprk-c-Promo[data-id="test"]').length).toBe(1);
   });
 
+  it('should not render with data-id when not provided', () => {
+    const wrapper = shallow(<SprkPromo />);
+    expect(wrapper.find('div.sprk-c-Promo[data-id]').length).toBe(0);
+  });
+
   it('should render with additional attributes when provided', () => {
     const wrapper = shallow(<SprkPromo data-test="test" />);
     expect(wrapper.find('div.sprk-c-Promo[data-test="test"]').length).toBe(1);
