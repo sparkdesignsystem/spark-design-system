@@ -1,0 +1,106 @@
+---
+  title: Validation Messaging
+---
+import validationAnatomy from '../../../images/guides/validation-anatomy.png';
+import validationAnatomy2x from '../../../images/guides/validation-anatomy@2x.png';
+export const validationAnatomySet = `${validationAnatomy} 560w, ${validationAnatomy2x} 1120w`
+
+import {
+  SprkHeading,
+} from '@sparkdesignsystem/spark-react';
+
+<span id="validation-messaging-guide" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h1" additionalClasses="sprk-u-mbl sprk-u-Measure" isPageTitle>
+  Validation Messaging Guide
+</SprkHeading>
+
+<span id="main-takeaways" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h2" additionalClasses="sprk-u-mbm sprk-u-Measure" variant="displayThree">
+  Main Takeaways
+</SprkHeading>
+
+Giving validation feedback is an emotional process. Support users with this process by following these guidelines:
+
+- Explain what the Input expects before the user enters data. (Example: password rules, ranges, etc)
+- Give clear and helpful feedback when encountering a problem.
+- Use a combination of [placement](#placement), [timing](#timing), and [language](#language) to guide users through moments of uncertainty.
+
+<img
+  srcSet={validationAnatomySet}
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbh sprk-u-Width-100"
+  src={validationAnatomy}
+  alt="Anatomy of Input validation with numbers pointing to each part: placement, timing, and language."
+/>
+
+
+<span id="placement" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h2" additionalClasses="sprk-u-mbm sprk-u-Measure" variant="displayThree">
+  Placement
+</SprkHeading>
+
+- Place messaging close to the Input. Spark places validation directly under the Input.
+- Provide a clear visual to indicate something has gone wrong with user Input and needs attention.
+- Plan error messaging for every field.
+- On forms with multiple fields, show validation messaging for each Input field to guide users to a successful submission.
+
+<span id="timing" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h2" additionalClasses="sprk-u-mbm sprk-u-Measure" variant="displayThree">
+  Timing
+</SprkHeading>
+
+- Show validation messaging after the user enters the data or when the Input becomes out of **selection focus**.
+- On forms, show error messaging **before** the user submits the form.
+
+> **Selection focus** changes when a user taps or clicks anywhere outside of the current focused element. Focus can also change
+> through keyboard navigation.
+
+<span id="language" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h2" additionalClasses="sprk-u-mbm sprk-u-Measure" variant="displayThree">
+  Language
+</SprkHeading>
+
+<ul>
+  <li>
+    Use labels and helper text to clarify what data the Input expects. Messaging should be related and relevant to the Input.
+  </li>
+  <li>
+    Deliver direct and concise statement of the problem in non-technical terms. Write out abbreviations.
+  </li>
+  <li>
+    Use sentence case. Do not use all caps.
+  </li>
+  <li>
+    Direct users to the next action to solve the problem.
+    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mvs">
+      <li>
+        Use positive action verbs, rather than negative ones. Focus on the solution by explaining what to do, opposed to what not to do.
+      </li>
+      <li>
+        If the “error” is a system condition that blocks the user from accomplishing a task, offer them a way to be notified of updated system status.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Follow accessibility guidelines, and where applicable, use <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA19">aria-live regions</a>.
+  </li>
+</ul>
+
+
+<span id="examples" class="docs-b-Link--anchor"></span>
+<SprkHeading element="h2" additionalClasses="sprk-u-mbm sprk-u-Measure" variant="displayThree">
+  Examples
+</SprkHeading>
+
+Use error messaging to clarify any system errors and additional constraints to the user.
+- *Choose a T-shirt size.* (Example: Radio Input, Dropdown)
+- *Choose at least one of the options.* (Example: Checkbox)
+- *Enter your first name.* (Example: Text Input)
+- *Enter an amount that is less than your current balance of $19,800.* (Example: Monetary Input)
+- *Enter a date within the past 99 years.* (Example: data Input constraint)
+- *Enter your 9-digit Social Security Number.*
+- *Create a password that meets the following criteria:*
+  - *It has at least 8 characters.*
+  - *Contains a number.*
+  - *Contains a special character.*
+
+> The guides are not all-inclusive in regard to accessibility considerations. Refer to the [Web Content Accessibility Guidelines (WCAG 2.1, Level AA)](https://www.w3.org/TR/WCAG21/) for additional insights.
