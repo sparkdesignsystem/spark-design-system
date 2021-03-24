@@ -214,6 +214,7 @@ public class SparkDesignTokens {
     public static let sprkDatePickerPadding = CGFloat(8.00)
     public static let sprkDatePickerPaddingWide = CGFloat(16.00)
     public static let sprkDatePickerSelectedDayFontWeight = 500
+    public static let sprkDictionaryLabelColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkDictionaryLabelFontSize = CGFloat(16.00)
     public static let sprkDictionaryLabelFontWeight = "500"
     public static let sprkDictionaryLabelLineHeight = CGFloat(25.60)
@@ -282,6 +283,7 @@ public class SparkDesignTokens {
     public static let sprkInputTextIconFontWeight = 700
     public static let sprkInputTextIconOffsetX = CGFloat(16.00)
     public static let sprkInputTextIconZIndex = CGFloat(16.00)
+    public static let sprkLabelColor = UIColor(red: 0.286, green: 0.286, blue: 0.282, alpha:1)
     public static let sprkLabelDisabledColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkLabelFontWeight = 400
     public static let sprkLineHeightDisplayOneWide = 1.03

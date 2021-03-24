@@ -1282,6 +1282,12 @@
     }
   },
   "label": {
+    "color": {
+      "comment": "The color of Input labels.",
+      "value": "{black-tint.80.value}",
+      "file": "settings",
+      "themable": true
+    },
     "padding": {
       "comment": "The padding applied to Input labels.",
       "value": "0",
