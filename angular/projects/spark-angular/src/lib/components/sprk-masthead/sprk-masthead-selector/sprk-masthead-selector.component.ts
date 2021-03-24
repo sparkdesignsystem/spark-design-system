@@ -51,7 +51,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
           <a
             sprkLink
             variant="plain"
-            class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100 sprk-c-Masthead__selector-dropdown-header-link"
+            class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-c-Masthead__selector-dropdown-header-link"
             (click)="toggle($event)"
             [attr.aria-label]="heading"
             href="#"
