@@ -32,7 +32,7 @@
         "comment": "Link font-weight on the Footer.",
         "value": "normal",
         "attributes": {
-          "category": "size"
+          "category": "content"
         },
         "file": "settings",
         "themable": true
@@ -80,7 +80,7 @@
           "comment": "Toggle trigger hover font-weight on the Footer.",
           "value": "500",
           "attributes": {
-            "category": "size"
+            "category": "content"
           },
           "file": "settings",
           "themable": true
