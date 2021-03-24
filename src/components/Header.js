@@ -79,7 +79,12 @@ const Header = ({ setContext }) => {
     element: Link,
   }));
 
-  const usingSparkGuides = useUsingSparkData().guides.map((page) => ({
+  // So we don't see a "Guides" landing page link under "the Guides section"
+  const processedSparkGuides = useUsingSparkData().guides.filter(
+    (item) => item.node.parent.name !== 'guides',
+  );
+
+  const usingSparkGuides = processedSparkGuides.map((page) => ({
     text: page.node.frontmatter.title,
     to: `/using-spark/guides/${page.node.parent.name}`,
     element: Link,
@@ -115,6 +120,15 @@ const Header = ({ setContext }) => {
         setContext('using-spark');
       },
       subNavLinks: usingSparkPages,
+    },
+    {
+      element: Link,
+      text: 'Guides',
+      to: '/using-spark/guides',
+      onClick: () => {
+        setContext('guides');
+      },
+      subNavLinks: usingSparkGuides,
     },
     {
       element: Link,
