@@ -80,7 +80,7 @@
           "comment": "Toggle trigger hover font-weight on the Footer.",
           "value": "500",
           "attributes": {
-            "category": "content"
+            "category": "size"
           },
           "file": "settings",
           "themable": true
