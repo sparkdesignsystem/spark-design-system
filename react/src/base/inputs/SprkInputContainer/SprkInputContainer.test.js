@@ -12,7 +12,7 @@ import SprkIcon from '../../../components/icons/SprkIcon';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SprkInputContainer:', () => {
+describe('SprkInputContainer Class Tests:', () => {
   it('should render an element with the correct class', () => {
     const wrapper = mount(<SprkInputContainer />);
     expect(wrapper.find('.sprk-b-InputContainer').length).toBe(1);
@@ -42,7 +42,9 @@ describe('SprkInputContainer:', () => {
     );
     expect(wrapper.find('.sprk-b-InputContainer.sprk-u-man').length).toBe(1);
   });
+});
 
+describe('SprkInputContainer Data Attribute Tests:', () => {
   it('should assign data-analytics when analyticsString has a value', () => {
     const wrapper = mount(<SprkInputContainer analyticsString="321" />);
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
@@ -63,7 +65,9 @@ describe('SprkInputContainer:', () => {
     const wrapper = mount(<SprkInputContainer />);
     expect(wrapper.find('[data-id]').length).toBe(0);
   });
+});
 
+describe('SprkInputContainer ID/htmlFor Tests:', () => {
   it('should set for value of label to match input id if mismatching', () => {
     const wrapper = mount(
       <SprkInputContainer>
@@ -168,7 +172,8 @@ describe('SprkInputContainer:', () => {
     expect(bothMatch.find('input').getDOMNode().id).toBe('match');
     expect(bothMatch.find('label').getDOMNode().htmlFor).toBe('match');
   });
-
+});
+describe('SprkInputContainer aria-describedby Tests:', () => {
   it(`should add the helperTextID to the aria-describedby
   on the input if it isn't present`, () => {
     const wrapper = mount(
@@ -656,7 +661,8 @@ describe('SprkInputContainer:', () => {
       wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
     ).toBe(null);
   });
-
+});
+describe('SprkInputContainer Additional Elements Tests:', () => {
   it('should allow other elements to be passed through', () => {
     const wrapper = mount(
       <SprkInputContainer>
