@@ -173,10 +173,12 @@
   <dimen name="sprk_masthead_column_width">1424.00dp</dimen><!-- The maximum width of the Masthead. -->
   <dimen name="sprk_masthead_logo_max_width">192.00dp</dimen><!-- The maximum width of the logo in the Masthead. -->
   <dimen name="sprk_masthead_logo_min_width">174.00dp</dimen><!-- The minimum width of the logo in the Masthead. -->
-  <dimen name="sprk_masthead_selector_padding">8.00dp</dimen><!-- The padding of the selector in the Masthead with Extended Navigation. -->
-  <dimen name="sprk_masthead_selector_dropdown_padding">0.00dp</dimen><!-- The padding of the selector dropdown in the Masthead with Extended Navigation. -->
-  <dimen name="sprk_masthead_selector_min_width">272.00dp</dimen><!-- The minimum width of the selector in the Masthead with Extended Navigation. -->
-  <dimen name="sprk_masthead_selector_border_radius">5.00dp</dimen><!-- The border radius of the selector in the Masthead with Extended Navigation. -->
+  <dimen name="sprk_masthead_selector_padding">8.00dp</dimen><!-- The padding of the Selector, found in a Masthead with Extended Navigation. -->
+  <dimen name="sprk_masthead_selector_min_width">272.00dp</dimen><!-- The minimum width of the Selector, found in a Masthead with Extended Navigation. -->
+  <dimen name="sprk_masthead_selector_border_radius">5.00dp</dimen><!-- The border radius of the Selector, found in a Masthead with Extended Navigation. -->
+  <dimen name="sprk_masthead_selector_dropdown_margin">0.00dp</dimen><!-- The margin of the Selector Dropdown, found in a Masthead with Extended Navigation. -->
+  <dimen name="sprk_masthead_selector_dropdown_padding">0.00dp</dimen><!-- The padding of the Selector Dropdown, found in a Masthead with Extended Navigation. -->
+  <dimen name="sprk_masthead_selector_dropdown_line_height">16.00dp</dimen><!-- The line height of the Selector Dropdown, found in a Masthead with Extended Navigation. -->
   <dimen name="sprk_masthead_narrow_height">81.00dp</dimen><!-- This is the height of the Masthead on narrow viewports and is used to calculate how far from the top the narrow navigation items should be displayed. -->
   <dimen name="sprk_masthead_accordion_item_open_line_height">2.00dp</dimen><!-- The height of the line on open navigation links when masthead is on narrow viewports. -->
   <dimen name="sprk_big_nav_column_width">1024.00dp</dimen><!-- The maximum width of the big navigation items in the navigation bar in the Masthead Extended. -->
