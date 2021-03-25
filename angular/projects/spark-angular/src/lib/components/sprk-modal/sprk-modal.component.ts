@@ -3,7 +3,7 @@ import {
   EventEmitter,
   HostListener,
   Input,
-  Output
+  Output,
 } from '@angular/core';
 import * as _ from 'lodash';
 
@@ -40,9 +40,7 @@ import * as _ from 'lodash';
             [attr.data-analytics]="closeAnalyticsString"
             (click)="closeModal($event)"
           >
-            <sprk-icon
-              iconType="close"
-            ></sprk-icon>
+            <sprk-icon iconType="close"></sprk-icon>
           </button>
         </header>
 
@@ -58,22 +56,21 @@ import * as _ from 'lodash';
 
         <footer
           *ngIf="modalType === 'choice'"
-          class="sprk-o-Stack__item sprk-c-Modal__footer"
+          class="sprk-o-Stack__item sprk-c-Modal__footer sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
         >
           <button
-            class="sprk-c-Button sprk-u-mrm"
-            [attr.data-analytics]="confirmAnalyticsString"
-            (click)="emitConfirmClick($event)"
-          >
-            {{ confirmText }}
-          </button>
-
-          <button
-            class="sprk-c-Button sprk-c-Button--tertiary"
+            class="sprk-c-Button sprk-c-Button--tertiary sprk-u-mrm sprk-o-Stack__item"
             [attr.data-analytics]="cancelAnalyticsString"
             (click)="emitCancelClick($event)"
           >
             {{ cancelText }}
+          </button>
+          <button
+            class="sprk-c-Button sprk-o-Stack__item"
+            [attr.data-analytics]="confirmAnalyticsString"
+            (click)="emitConfirmClick($event)"
+          >
+            {{ confirmText }}
           </button>
         </footer>
       </div>
@@ -85,7 +82,7 @@ import * as _ from 'lodash';
       tabindex="-1"
       (click)="closeModal($event)"
     ></div>
-  `
+  `,
 })
 export class SprkModalComponent {
   @Input()
