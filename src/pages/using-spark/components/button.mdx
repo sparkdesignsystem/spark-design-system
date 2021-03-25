@@ -7,6 +7,7 @@ import { SprkDivider } from '@sparkdesignsystem/spark-react';
 # Button
 
 An interactive element that represents an action or choice.
+Well written button text clearly communicates what action will occur when the user interacts with it.
 
 <ComponentPreview
   componentName="button--primary"
@@ -18,29 +19,38 @@ An interactive element that represents an action or choice.
 
 ### Usage
 
-Use Buttons to represent the main actions on a page.
+Use buttons to represent what type of actions the users can take on a page and to create a visual hierarchy between different calls to action.
+
+> As a general rule, use one main call-to-action button (Primary button) per screen but no more than two.
 
 Examples of Button usage:
-- To trigger a new UI element to appear on the page.
+- To trigger action.
 - To submit a form.
 - To begin a new task.
 - To navigate to the next step in a process.
+- To confirm completion or to exit out of a flow.
+
+If the action will take take the user to a new page or to an external site, consider using a [Link](/using-spark/components/link) instead.
 
 ### Guidelines
 
-- Button Text
-  - Use precise, task-specific action verbs like: “Add”, “Remove”, “Read Details”, and “Submit”.
-  - Avoid ambiguous words like “Yes”, “No”, “OK”, and “Click Here”.
-  - Use title case (capitalize the first letter each word)
-  - Use less than 20 characters.
-  - Never wrap to a second line.
-- Button width should not exceed 280px.
+#### How to Write Effective Button Text
+- Button text should set clear expectation of what will happen on click.
+- Always use title case (capitalize the first letter each word).
+- Use task-specific action verbs like: “Add”, “Remove”, “Read Details”, and “Submit”.
+- Use less than 20 characters.
+- Use compact words. For example, instead of “Submit Your Information Now” use “Submit”.
+- Use first-person pronouns. Use “Customize My Loan,”  “Customize Your Loan.”
+- Do not use ampersands (&).
+- Do not wrap button text into a second line; it reduces legibility, and starts looking less like an interactable element.
+
+#### Button Styling
+- Text should be center aligned.
+- Width should be more than 48px, but less than 280px.
+- Buttons should have at least 24px of space away from any surrounding elements.
 - Do not use buttons in paragraphs or within a lines of text. Use [Link](/using-spark/components/link) instead.
-- Use Button variants to create action hierarchy within a page. Variant names imply their placement within that hierarchy.
-  - [Primary Button](#primary-button)
-  - [Secondary Button](#secondary-button)
-  - [Tertiary Button](#tertiary-button)
-  - [Quaternary Button](#quaternary-button)
+
+
 
 <SprkDivider
  element="span"
@@ -49,9 +59,25 @@ Examples of Button usage:
 
 ## Variants
 
+Use Button variants to create action hierarchy within a page. Variant names imply their placement within that hierarchy.
+- [Primary Button](#primary-button)
+- [Secondary Button](#secondary-button)
+- [Tertiary Button](#tertiary-button)
+
 ### Primary Button
 
-Reserve for the most important action on the page. Use no more than two per page.
+The main call to action on the page. Use no more than two Primary Buttons per page.
+
+> When there are multiple actions, use the primary button to indicate the main option.
+
+#### Examples
+- Submit Application
+- Apply to Buy a Home
+- Apply for Refinance
+- In a multi-step form, a Primary Button works with Secondary and Tertiary Button as a set of related actions.
+  - **Primary Button is "Submit"**
+  - Secondary Button is "Back"
+  - Tertiary Button is "Cancel"
 
 <ComponentPreview
   componentName="button--primary"
@@ -63,7 +89,16 @@ Reserve for the most important action on the page. Use no more than two per page
 
 ### Secondary Button
 
-Represents the second-highest priority, following the Primary Button. There can be more than one on a page.
+Represents the second-highest priority action, following the Primary Button. There can be more than one on a page.
+
+#### Examples
+- Preview
+- Save For Later
+- Back
+- In a multi-step form, a Secondary Button works with Primary and Tertiary Button as a set of related actions.
+  - Primary Button is "Submit"
+  - **Secondary Button is "Back"**
+  - Tertiary Button is "Cancel"
 
 <ComponentPreview
   componentName="button--secondary"
@@ -74,8 +109,13 @@ Represents the second-highest priority, following the Primary Button. There can 
 />
 
 ### Tertiary Button
+Represents less prominent actions. Sometimes in in an action set with [Primary](#primary-button) and [Secondary](#secondary-button) Buttons, but they can also be independent actions.
 
-Represents the third-highest priority on the page. Pair with [Primary](#primary-button) and [Secondary](#secondary-button) Buttons.
+#### Example
+- In a multi-step form, a Tertiary Button works with Primary and Secondary Button as a set of related actions.
+  - Primary Button is "Submit"
+  - Secondary Button is "Back"
+  - **Tertiary Button is "Cancel"**
 
 <ComponentPreview
   componentName="button--tertiary"
@@ -83,18 +123,6 @@ Represents the third-highest priority on the page. Pair with [Primary](#primary-
   hasAngular
   hasHTML
   titleAttr="Tertiary Button Example"
-/>
-
-### Quaternary Button
-
-Represents the least important action on a page. Also used for the Sign In buttons at the top of navigation.
-
-<ComponentPreview
-  componentName="button--quaternary"
-  hasReact
-  hasAngular
-  hasHTML
-  titleAttr="Quaternary Button Example"
 />
 
 ## States
