@@ -7,7 +7,11 @@
 .sprk-c-Promo {
   background-color: $sprk-promo-background-color;
   max-width: $sprk-promo-max-width;
-  margin: 0 auto;
+  margin: $sprk-promo-margin;
+}
+
+.sprk-c-Promo--full {
+  max-width: $sprk-promo-max-width-full;
 }
 
 /// Adds a border around the Promo.
@@ -25,34 +29,34 @@
   color: $sprk-promo-subtitle-font-color;
 }
 
-/// Adds styles for the image
-/// in the Flag Promo variant.
-.sprk-c-Promo__image--flag {
-  object-fit: cover;
-  padding: $sprk-space-inset-m;
+.sprk-c-Promo__image {
+  width: $sprk-promo-image-width;
+  height: $sprk-promo-image-height;
+  object-fit: $sprk-promo-image-object-fit;
 
   @media (max-width: $sprk-promo-breakpoint) {
-    max-width: $sprk-promo-image-narrow-max-width;
     max-height: $sprk-promo-image-narrow-max-height;
   }
 }
 
-.sprk-c-Promo__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/// Adds styles for the image
+/// in the Flag Promo variant.
+.sprk-c-Promo__image--flag {
+  width: $sprk-promo-image-flag-width;
+  height: $sprk-promo-image-flag-height;
+  padding: $sprk-promo-image-flag-padding;
 
   @media (max-width: $sprk-promo-breakpoint) {
-    max-height: $sprk-promo-image-narrow-max-height;
+    max-width: $sprk-promo-image-flag-narrow-max-width;
   }
 }
 
 .sprk-c-Promo__content {
-  padding: $sprk-space-inset-l;
+  padding: $sprk-promo-content-padding;
 }
 
 ///	Adds styles for the Flag Promo variant.
 /// @name .sprk-c-Promo--flag
 .sprk-c-Promo--flag .sprk-c-Promo__content {
-  padding: $sprk-space-inset-m;
+  padding: $sprk-promo-flag-content-padding;
 }

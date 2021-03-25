@@ -195,9 +195,15 @@
   <dimen name="sprk_pag_max_width">416.00dp</dimen><!-- The maximum width of the Pagination component. -->
   <dimen name="sprk_pag_circle_size">32.00dp</dimen><!-- The width and height setting of the circle around the currently selected pagination link in the Pagination component. -->
   <dimen name="sprk_promo_max_width">680.00dp</dimen><!-- The maximum width of the Promo component. -->
+  <dimen name="sprk_promo_content_padding">32.00dp</dimen><!-- The padding for the content in the Promo component. -->
+  <dimen name="sprk_promo_flag_content_padding">16.00dp</dimen><!-- The padding for the content in the Flag Promo component. -->
+  <dimen name="sprk_promo_max_width_full">1600.00dp</dimen><!-- Sets the maximum width of the Promo component to be full width. -->
   <dimen name="sprk_promo_breakpoint">680.00dp</dimen><!-- The Promo component breakpoint at which large viewport styles begin. -->
   <dimen name="sprk_promo_image_narrow_max_height">320.00dp</dimen><!-- The maximum height of the image in the Promo component on narrow viewports. -->
-  <dimen name="sprk_promo_image_narrow_max_width">800.00dp</dimen><!-- The maximum width of the image in the Promo component on narrow viewports. -->
+  <dimen name="sprk_promo_image_height">1600.00dp</dimen><!-- The height for the image in the Promo component. -->
+  <dimen name="sprk_promo_image_width">1600.00dp</dimen><!-- The width for the image in the Promo component. -->
+  <dimen name="sprk_promo_image_flag_narrow_max_width">800.00dp</dimen><!-- The maximum width of the Flag image in the Promo component on narrow viewports. -->
+  <dimen name="sprk_promo_image_flag_padding">16.00dp</dimen><!-- The padding for the Flag image in the Promo component. -->
   <dimen name="sprk_border_radius">5.00dp</dimen><!-- Value used for border-radius across the system. -->
   <dimen name="sprk_space_inset_xs">4.00dp</dimen><!-- Value for the extra small inset space. -->
   <dimen name="sprk_space_inset_s">8.00dp</dimen><!-- Value for the small inset space. -->
