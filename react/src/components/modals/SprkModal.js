@@ -67,14 +67,6 @@ class SprkModal extends Component {
     this.removeListeners();
   }
 
-  isTabPressed(e) {
-    return e.key === 'Tab' || e.keyCode === 9;
-  }
-  
-  isEscPressed(e) {
-    return e.key === 'Escape' || e.keyCode === 27;
-  }
-
   getFocusableEls(containerRef) {
     const focusEls = containerRef.querySelectorAll(
       'a[href], area[href],' +
@@ -84,10 +76,6 @@ class SprkModal extends Component {
         'button:not([disabled]), [tabindex="0"]',
     );
     return focusEls;
-  }
-
-  isActiveElement(elementRef) {
-    return document.activeElement === elementRef;
   }
 
   setExternalFocus() {
@@ -133,6 +121,18 @@ class SprkModal extends Component {
           break;
       }
     }
+  }
+
+  isTabPressed(e) {
+    return e.key === 'Tab' || e.keyCode === 9;
+  }
+
+  isEscPressed(e) {
+    return e.key === 'Escape' || e.keyCode === 27;
+  }
+
+  isActiveElement(elementRef) {
+    return document.activeElement === elementRef;
   }
 
   cancel() {
@@ -260,42 +260,38 @@ class SprkModal extends Component {
               )}
             </header>
 
-            <div>
-              <div
-                className="
-                  sprk-o-Stack__item
-                  sprk-c-Modal__body
-                  sprk-o-Stack
-                  sprk-o-Stack--medium
-                "
-                id={'modalContent_' + this.aria_id}
-              >
-                {isWait && (
-                  <SprkSpinner
-                    size="large"
-                    additionalClasses="
+            <div
+              className={classnames(
+                'sprk-o-Stack__item sprk-c-Modal__body',
+                isWait ? 'sprk-o-Stack sprk-o-Stack--medium' : '',
+              )}
+              id={'modalContent_' + this.aria_id}
+            >
+              {isWait && (
+                <SprkSpinner
+                  size="large"
+                  additionalClasses="
                       sprk-o-Stack__item
                       sprk-c-Spinner--primary
                     "
-                  />
-                )}
-                <div className="sprk-b-TypeBodyTwo sprk-c-Modal__content">
-                  {children}
-                </div>
-              </div>
-
-              {isChoice && (
-                <ModalFooter
-                  confirmClick={confirmClick}
-                  cancelClick={this.cancel}
-                  confirmText={confirmText}
-                  cancelText={cancelText}
-                  ref={this.footerRef}
-                  confirmAnalyticsString={confirmAnalyticsString}
-                  cancelAnalyticsString={cancelAnalyticsString}
                 />
               )}
+              <div className="sprk-b-TypeBodyTwo sprk-c-Modal__content">
+                {children}
+              </div>
             </div>
+
+            {isChoice && (
+              <ModalFooter
+                confirmClick={confirmClick}
+                cancelClick={this.cancel}
+                confirmText={confirmText}
+                cancelText={cancelText}
+                ref={this.footerRef}
+                confirmAnalyticsString={confirmAnalyticsString}
+                cancelAnalyticsString={cancelAnalyticsString}
+              />
+            )}
           </div>
         </div>
 
