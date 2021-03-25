@@ -5,7 +5,7 @@ import {
   Input,
   Output,
 } from '@angular/core';
-import * as _ from 'lodash';
+import { uniqueId } from 'lodash';
 
 @Component({
   selector: 'sprk-modal',
@@ -181,7 +181,7 @@ export class SprkModalComponent {
   /**
    * @ignore
    */
-  componentID = _.uniqueId();
+  componentID = uniqueId();
   /**
    * @ignore
    */
