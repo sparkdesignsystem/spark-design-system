@@ -375,7 +375,7 @@ public class SparkDesignTokens {
     public static let sprkSelectColor = UIColor(red: 0.286, green: 0.286, blue: 0.282, alpha:1)
     public static let sprkSelectDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
     public static let sprkSelectDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
-    public static let sprkSelectDisabledColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
+    public static let sprkSelectDisabledColor = #808080
     public static let sprkSelectErrorBorderColor = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkSelectFocusBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkSelectFontFamily = "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif"
@@ -675,6 +675,9 @@ public class SparkDesignTokens {
     public static let sprkTableSecondaryRowCompBorderWidth = CGFloat(1.00)
     public static let sprkTableSecondaryRowCompRowSpacing = CGFloat(0.00)
     public static let sprkTextInputBorderRadius = CGFloat(4.00)
+    public static let sprkTextInputDisabledBorderWidth = CGFloat(0.00)
+    public static let sprkTextInputErrorBorderWidth = CGFloat(2.00)
+    public static let sprkTextInputFocusBorderWidth = CGFloat(2.00)
     public static let sprkTextInputFontSize = CGFloat(16.00)
     public static let sprkTextInputHeight = CGFloat(48.00)
     public static let sprkTextInputHugeActiveLabelTop = CGFloat(10.00)
@@ -758,7 +761,7 @@ public class SparkDesignTokens {
     public static let sprkTextInputColor = UIColor(red: 0.286, green: 0.286, blue: 0.282, alpha:1)
     public static let sprkTextInputDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
     public static let sprkTextInputDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
-    public static let sprkTextInputDisabledColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
+    public static let sprkTextInputDisabledColor = #808080
     public static let sprkTextInputErrorBorderColor = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkTextInputFocusBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkTextInputFontFamily = "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif"

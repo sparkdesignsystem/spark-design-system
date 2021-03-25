@@ -91,6 +91,7 @@
   <string name="sprk_text_input_border">1px solid #ff494948</string><!-- The border setting for Inputs. -->
   <string name="sprk_text_input_box_shadow">none</string><!-- The box shadow setting for Inputs. -->
   <string name="sprk_text_input_padding">0 16.00dp</string><!-- The padding setting for Inputs. -->
+  <string name="sprk_text_input_focus_box_shadow">0 2px 8px #ff494948</string>
   <string name="sprk_text_input_disabled_box_shadow">none</string><!-- The box shadow on disabled Inputs. -->
   <string name="sprk_text_input_transition">border-color 0.15s ease</string><!-- The transition setting on Inputs. -->
   <string name="sprk_text_input_huge_has_text_icon_padding">0 40px</string><!-- The padding value for Huge Inputs with icons. -->

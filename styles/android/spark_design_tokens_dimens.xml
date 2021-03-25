@@ -68,6 +68,9 @@
   <dimen name="sprk_input_huge_height">64.00dp</dimen><!-- The height value for Huge Inputs. -->
   <dimen name="sprk_text_input_height">48.00dp</dimen><!-- The height setting for Inputs. -->
   <dimen name="sprk_text_input_border_radius">4.00dp</dimen><!-- The border radius setting for Inputs. -->
+  <dimen name="sprk_text_input_focus_border_width">2.00dp</dimen><!-- The border width on Inputs when focused. -->
+  <dimen name="sprk_text_input_error_border_width">2.00dp</dimen><!-- The border width on Inputs when there is an error. -->
+  <dimen name="sprk_text_input_disabled_border_width">0.00dp</dimen><!-- The border width on disabled Inputs. -->
   <dimen name="sprk_text_input_huge_focus_border_width">2.00dp</dimen><!-- Todo deprecate, The border width for Huge Inputs on focus. -->
   <dimen name="sprk_text_input_huge_active_label_top">10.00dp</dimen><!-- Todo deprecate, The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container. -->
   <dimen name="sprk_text_input_huge_border_width">1.00dp</dimen><!-- Todo deprecate, The border width for Huge Inputs. -->

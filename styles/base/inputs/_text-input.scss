@@ -23,23 +23,23 @@
 }
 
 .sprk-b-TextInput:focus {
-  border-color: $sprk-text-input-focus-border-color;
-  border: 2px solid $sprk-text-input-focus-border-color; //todo this should be 3 props combined into 1
-  box-shadow: 0 2px 8px $sprk-black-tint-80; //todo
+  border: $sprk-text-input-focus-border-width solid
+    $sprk-text-input-focus-border-color;
+  box-shadow: $sprk-text-input-focus-box-shadow;
 }
 
 .sprk-b-TextInput--error,
 .sprk-b-TextInput--error:focus {
-  // border-color: $sprk-text-input-error-border-color;
-  border: 2px solid $sprk-text-input-error-border-color; // todo
+  border: $sprk-text-input-error-border-width solid
+    $sprk-text-input-error-border-color;
 }
 
 .sprk-b-TextInput[disabled] {
   background-color: $sprk-text-input-disabled-background-color;
   border-color: $sprk-text-input-disabled-border-color;
-  border: none; //todo
+  border: $sprk-text-input-disabled-border-width solid
+    $sprk-text-input-disabled-border-color;
   color: $sprk-text-input-disabled-color;
-  color: #808080;
   cursor: not-allowed;
 }
 
