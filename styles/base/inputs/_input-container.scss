@@ -42,7 +42,15 @@
 .sprk-b-InputContainer--huge .sprk-b-TextInput:focus,
 .sprk-b-InputContainer--huge .sprk-b-Select:focus {
   border-width: $sprk-input-huge-focus-border-width;
-  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.08); //todo it matches the existing value but move it to a new focus value
+  box-shadow: $sprk-input-huge-focus-box-shadow;
+}
+
+.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--error {
+  border-width: 2px;
+}
+
+.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput[disabled] {
+  border-width: 0;
 }
 
 /*

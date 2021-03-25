@@ -105,6 +105,7 @@
   <string name="sprk_input_huge_label_top">64.00dp / 3</string><!-- The top value for Huge Input labels. This adjusts how far the label is from the top of the container. -->
   <string name="sprk_input_huge_padding">0 24.00dp</string><!-- The padding for Huge Inputs. -->
   <string name="sprk_input_huge_label_padding">0 (24.00dp + 1.00dp)</string><!-- The label padding for Huge Inputs. -->
+  <string name="sprk_input_huge_focus_box_shadow">0 2px 8px #ff494948</string><!-- The box shadow value on Huge Inputs. -->
   <string name="sprk_input_huge_box_shadow">0 3px 10px 1px rgba(0, 0, 0, 0.08)</string><!-- The box shadow value on Huge Inputs. -->
   <string name="sprk_input_huge_has_icon_padding">0 0 0 42px</string><!-- The padding value for Huge Inputs that contains an icon. -->
   <string name="sprk_input_error_text_margin">0 0 0 6px</string><!-- The margin used for Input error text. -->

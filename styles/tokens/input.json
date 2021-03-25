@@ -133,24 +133,23 @@
       "themable": true
     },
     "focus": {
-      "border": {
-        "color": {
-          "comment": "The border color on Inputs when focused.",
-          "value": "{purple.value}",
-          "file": "settings",
-          "themable": true
+      "border-color": {
+        "comment": "The border color on Inputs when focused.",
+        "value": "{purple.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border-width": {
+        "comment": "The border width on Inputs when focused.",
+        "value": "2px",
+        "attributes": {
+          "category": "size"
         },
-        "width": {
-          "comment": "The border width on Inputs when focused.",
-          "value": "2px",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        }
+        "file": "settings",
+        "themable": true
       },
       "box-shadow": {
+        "comment": "The box shadow on Inputs when focused.",
         "value": "0 2px 8px {black-tint.80.value}",
         "attributes": {
           "category": "content"
@@ -159,206 +158,212 @@
         "themable": true
       }
     },
-    "error-border-width": {
-      "comment": "The border width on Inputs when there is an error.",
-      "value": "2px",
+    "focus-border": {
+      "comment": "The border on Inputs when focused.",
+      "value": "{text-input.focus.border-width} solid {text-input.focus.border-color}",
+      "file": "settings",
+      "themable": true
+    }
+  },
+  "error-border-width": {
+    "comment": "The border width on Inputs when there is an error.",
+    "value": "2px",
+    "attributes": {
+      "category": "size"
+    },
+    "file": "settings",
+    "themable": true
+  },
+  "error-border-color": {
+    "comment": "The border color on Inputs when there is an error.",
+    "value": "{orange.value}",
+    "file": "settings",
+    "themable": true
+  },
+  "disabled": {
+    "border-color": {
+      "comment": "The border color on disabled Inputs.",
+      "value": "{black-tint.50.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "border-width": {
+      "comment": "The border width on disabled Inputs.",
+      "value": "0",
       "attributes": {
         "category": "size"
       },
       "file": "settings",
       "themable": true
     },
-    "error-border-color": {
-      "comment": "The border color on Inputs when there is an error.",
-      "value": "{orange.value}",
+    "color": {
+      "comment": "The color on disabled Inputs.",
+      "value": "#808080",
       "file": "settings",
       "themable": true
     },
-    "disabled": {
-      "border-color": {
-        "comment": "The border color on disabled Inputs.",
-        "value": "{black-tint.50.value}",
-        "file": "settings",
-        "themable": true
+    "background-color": {
+      "comment": "The background color on disabled Inputs.",
+      "value": "{black-tint.15.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "box-shadow": {
+      "comment": "The box shadow on disabled Inputs.",
+      "value": "none",
+      "attributes": {
+        "category": "content"
       },
+      "file": "settings",
+      "themable": true
+    }
+  },
+  "readonly-border-color": {
+    "comment": "The border color on readonly Inputs.",
+    "value": "{black-tint.50.value}",
+    "file": "settings",
+    "themable": true
+  },
+  "readonly-color": {
+    "comment": "The color on readonly Inputs.",
+    "value": "{black-tint.50.value}",
+    "file": "settings",
+    "themable": true
+  },
+  "transition": {
+    "comment": "The transition setting on Inputs.",
+    "value": "border-color 0.15s ease",
+    "attributes": {
+      "category": "content"
+    },
+    "file": "settings",
+    "themable": true
+  },
+  "huge": {
+    "focus": {
       "border-width": {
-        "comment": "The border width on disabled Inputs.",
-        "value": "0",
+        "comment": "Todo deprecate, The border width for Huge Inputs on focus.",
+        "value": "2px",
         "attributes": {
           "category": "size"
         },
         "file": "settings",
         "themable": true
       },
-      "color": {
-        "comment": "The color on disabled Inputs.",
-        "value": "#808080",
-        "file": "settings",
-        "themable": true
-      },
-      "background-color": {
-        "comment": "The background color on disabled Inputs.",
-        "value": "{black-tint.15.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "box-shadow": {
-        "comment": "The box shadow on disabled Inputs.",
-        "value": "none",
-        "attributes": {
-          "category": "content"
-        },
+      "label-color": {
+        "comment": "Todo deprecate, The label color value of Huge Inputs on focus.",
+        "value": "{purple.value}",
         "file": "settings",
         "themable": true
       }
     },
-    "readonly-border-color": {
-      "comment": "The border color on readonly Inputs.",
-      "value": "{black-tint.50.value}",
-      "file": "settings",
-      "themable": true
-    },
-    "readonly-color": {
-      "comment": "The color on readonly Inputs.",
-      "value": "{black-tint.50.value}",
-      "file": "settings",
-      "themable": true
-    },
-    "transition": {
-      "comment": "The transition setting on Inputs.",
-      "value": "border-color 0.15s ease",
+    "has-text-icon-padding": {
+      "comment": "The padding value for Huge Inputs with icons.",
+      "value": "0 40px",
       "attributes": {
         "category": "content"
       },
       "file": "settings",
       "themable": true
     },
-    "huge": {
-      "focus": {
-        "border-width": {
-          "comment": "Todo deprecate, The border width for Huge Inputs on focus.",
-          "value": "2px",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "label-color": {
-          "comment": "Todo deprecate, The label color value of Huge Inputs on focus.",
-          "value": "{purple.value}",
-          "file": "settings",
-          "themable": true
-        }
+    "error-focus-label-color": {
+      "comment": "Todo deprecate, The label color value of Huge Inputs when they have an error.",
+      "value": "{black.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "complete-label-color": {
+      "comment": "Todo deprecate, The label color when the Huge Input has a value and is not focused.",
+      "value": "{black-tint.80.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "font-size": {
+      "comment": "Todo deprecate, The font size for Huge Inputs.",
+      "value": "{font.size.display.five.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "label-font-size": {
+      "comment": "Todo deprecate, The label font size for Huge Inputs.",
+      "value": "{font.size.body.four.value}",
+      "file": "settings",
+      "themable": true
+    },
+    "active-label-top": {
+      "comment": "Todo deprecate, The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container.",
+      "value": "10px",
+      "attributes": {
+        "category": "size"
       },
-      "has-text-icon-padding": {
-        "comment": "The padding value for Huge Inputs with icons.",
-        "value": "0 40px",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
+      "file": "settings",
+      "themable": true
+    },
+    "border-width": {
+      "comment": "Todo deprecate, The border width for Huge Inputs.",
+      "value": "1px",
+      "attributes": {
+        "category": "size"
       },
-      "error-focus-label-color": {
-        "comment": "Todo deprecate, The label color value of Huge Inputs when they have an error.",
-        "value": "{black.value}",
-        "file": "settings",
-        "themable": true
+      "file": "settings",
+      "themable": true
+    },
+    "padding": {
+      "comment": "Todo deprecate, The padding for Huge Inputs.",
+      "value": "0 {space.misc.a.value}",
+      "attributes": {
+        "category": "content"
       },
-      "complete-label-color": {
-        "comment": "Todo deprecate, The label color when the Huge Input has a value and is not focused.",
-        "value": "{black-tint.80.value}",
-        "file": "settings",
-        "themable": true
+      "file": "settings",
+      "themable": true
+    },
+    "transition": {
+      "comment": "Todo deprecate, The transition value for Huge Inputs.",
+      "value": "top 0.3s, color 0.3s, font-size 0.3s",
+      "attributes": {
+        "category": "content"
       },
-      "font-size": {
-        "comment": "Todo deprecate, The font size for Huge Inputs.",
-        "value": "{font.size.display.five.value}",
-        "file": "settings",
-        "themable": true
+      "file": "settings",
+      "themable": true
+    },
+    "transition-delay": {
+      "comment": "Todo deprecate, The transition delay value for Huge Inputs.",
+      "value": "0s",
+      "attributes": {
+        "category": "content"
       },
-      "label-font-size": {
-        "comment": "Todo deprecate, The label font size for Huge Inputs.",
-        "value": "{font.size.body.four.value}",
-        "file": "settings",
-        "themable": true
+      "file": "settings",
+      "themable": true
+    },
+    "placeholder-transition-delay": {
+      "comment": "Todo deprecate, The transition delay placeholder value for Huge Inputs.",
+      "value": "100ms",
+      "attributes": {
+        "category": "content"
       },
-      "active-label-top": {
-        "comment": "Todo deprecate, The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container.",
-        "value": "10px",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "settings",
-        "themable": true
+      "file": "settings",
+      "themable": true
+    },
+    "placeholder-transition-property": {
+      "comment": "Todo deprecate, The transition property placeholder value for Huge Inputs.",
+      "value": "opacity",
+      "attributes": {
+        "category": "content"
       },
-      "border-width": {
-        "comment": "Todo deprecate, The border width for Huge Inputs.",
-        "value": "1px",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "padding": {
-        "comment": "Todo deprecate, The padding for Huge Inputs.",
-        "value": "0 {space.misc.a.value}",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "transition": {
-        "comment": "Todo deprecate, The transition value for Huge Inputs.",
-        "value": "top 0.3s, color 0.3s, font-size 0.3s",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "transition-delay": {
-        "comment": "Todo deprecate, The transition delay value for Huge Inputs.",
-        "value": "0s",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "placeholder-transition-delay": {
-        "comment": "Todo deprecate, The transition delay placeholder value for Huge Inputs.",
-        "value": "100ms",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "placeholder-transition-property": {
-        "comment": "Todo deprecate, The transition property placeholder value for Huge Inputs.",
-        "value": "opacity",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "placeholder-opacity": {
-        "comment": "Todo deprecate, The placeholder opacity value for Huge Inputs.",
-        "value": "0",
-        "file": "settings",
-        "themable": true
-      },
-      "active-placeholder-opacity": {
-        "comment": "Todo deprecate, The placeholder opacity value for Huge Inputs.",
-        "value": "1",
-        "file": "settings",
-        "themable": true
-      }
+      "file": "settings",
+      "themable": true
+    },
+    "placeholder-opacity": {
+      "comment": "Todo deprecate, The placeholder opacity value for Huge Inputs.",
+      "value": "0",
+      "file": "settings",
+      "themable": true
+    },
+    "active-placeholder-opacity": {
+      "comment": "Todo deprecate, The placeholder opacity value for Huge Inputs.",
+      "value": "1",
+      "file": "settings",
+      "themable": true
     }
   },
   "text-input-huge-label-top": {
@@ -433,6 +438,17 @@
         "value": "{text-input.huge.error-focus-label-color.value}",
         "file": "settings",
         "themable": true
+      },
+      "error-border-width": {
+        "width": {
+          "comment": "The border width on huge Inputs when they have an error.",
+          "value": "2px",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        }
       },
       "complete-label-color": {
         "comment": "The label color when the Huge Input has a value and is not focused.",
@@ -515,6 +531,15 @@
         "label-color": {
           "comment": "The label color value of Huge Inputs on focus.",
           "value": "{text-input.huge.focus.label-color.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "box-shadow": {
+          "comment": "The box shadow value on Huge Inputs on focus.",
+          "value": "{text-input.focus.box-shadow.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
