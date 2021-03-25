@@ -1,18 +1,9 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkCardModule } from './sprk-card.module';
-import { SprkCardContentModule } from './directives/sprk-card-content/sprk-card-content.module';
-import { SprkCardHeaderModule } from './directives/sprk-card-header/sprk-card-header.module';
-import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkCardComponent } from './sprk-card.component';
-import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
-import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
-import { SprkHeadingModule } from '../../directives/sprk-heading/sprk-heading.module';
-import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import { SprkCardMediaModule } from './directives/sprk-card-media/sprk-card-media.module';
-import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 export default {
   title: 'Components/Card',
   component: SprkCardComponent,
@@ -31,15 +22,6 @@ export default {
 const modules = {
   imports: [
     SprkCardModule,
-    SprkCardMediaModule,
-    SprkStackModule,
-    SprkCardContentModule,
-    SprkStackItemModule,
-    SprkHeadingModule,
-    SprkCardHeaderModule,
-    SprkIconModule,
-    SprkLinkDirectiveModule,
-    SprkTextModule,
     RouterModule.forRoot([
       {
         path: 'iframe.html',
@@ -174,7 +156,7 @@ export const teaser = () => ({
           Title
         </h3>
 
-        <p sprkText variant="bodytwo" sprkStackItem>
+        <p sprkText variant="bodyTwo" sprkStackItem>
           Lorem ipsum dolor sit amet, doctus
           invenirevix te. Facilisi perpetua.
         </p>
@@ -242,7 +224,7 @@ export const teaserIcon = () => ({
           Title
         </h3>
 
-        <p sprkText variant="bodytwo" sprkStackItem>
+        <p sprkText variant="bodyTwo" sprkStackItem>
           Lorem ipsum dolor sit amet, doctus
           invenirevix te. Facilisi perpetua an
           pri, errem communemea at, mei prima
@@ -304,7 +286,7 @@ export const teaserWithDifferentElementOrder = () => ({
       </a>
 
       <sprk-stack sprkCardContent itemSpacing="large" sprkStackItem>
-        <p sprkText variant="bodytwo" sprkStackItem>
+        <p sprkText variant="bodyTwo" sprkStackItem>
           Lorem ipsum dolor sit amet, doctus
           invenirevix te. Facilisi perpetua.
         </p>
@@ -376,7 +358,7 @@ export const twoUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
@@ -421,7 +403,7 @@ export const twoUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
@@ -494,7 +476,7 @@ export const threeUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
@@ -539,7 +521,7 @@ export const threeUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
@@ -584,7 +566,7 @@ export const threeUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
@@ -657,7 +639,7 @@ export const fourUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
@@ -702,7 +684,7 @@ export const fourUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
@@ -747,7 +729,7 @@ export const fourUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
@@ -792,7 +774,7 @@ export const fourUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
