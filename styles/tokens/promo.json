@@ -15,9 +15,45 @@
       "file": "settings",
       "themable": true
     },
+    "margin": {
+      "comment": "The margin of the Promo component.",
+      "value": "0 auto",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "max-width": {
       "comment": "The maximum width of the Promo component.",
       "value": "42.5rem",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "content-padding": {
+      "comment": "The padding for the content in the Promo component.",
+      "value": "{space.inset.l.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "flag-content-padding": {
+      "comment": "The padding for the content in the Flag Promo component.",
+      "value": "{space.inset.m.value}",
+      "attributes": {
+        "category": "size"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "max-width-full": {
+      "comment": "Sets the maximum width of the Promo component to be full width.",
+      "value": "100%",
       "attributes": {
         "category": "size"
       },
@@ -43,14 +79,70 @@
         "file": "settings",
         "themable": true
       },
-      "narrow-max-width": {
-        "comment": "The maximum width of the image in the Promo component on narrow viewports.",
-        "value": "50%",
+      "object-fit": {
+        "comment": "The object-fit setting of the image in the Promo component.",
+        "value": "cover",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "height": {
+        "comment": "The height for the image in the Promo component.",
+        "value": "100%",
         "attributes": {
           "category": "size"
         },
         "file": "settings",
         "themable": true
+      },
+      "width": {
+        "comment": "The width for the image in the Promo component.",
+        "value": "100%",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "flag": {
+        "narrow-max-width": {
+          "comment": "The maximum width of the Flag image in the Promo component on narrow viewports.",
+          "value": "50%",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "padding": {
+          "comment": "The padding for the Flag image in the Promo component.",
+          "value": "{space.inset.m.value}",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "height": {
+          "comment": "The height for the Flag image in the Promo component.",
+          "value": "auto",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "width": {
+          "comment": "The width for the Flag image in the Promo component.",
+          "value": "auto",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
       }
     },
     "title": {

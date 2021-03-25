@@ -18,17 +18,16 @@ export const defaultStory = () => `
       sprk-c-Promo--bordered
       sprk-o-Stack sprk-o-Stack--split@s
     "
-    data-id="promo-1"
+    data-id="default-promo"
   >
-
     <div
       class="
         sprk-c-Promo__content
-        sprk-o-Stack__item sprk-o-Stack
+        sprk-o-Stack__item
+        sprk-o-Stack
         sprk-o-Stack--large
       "
     >
-
       <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
         Title
       </h3>
@@ -43,13 +42,12 @@ export const defaultStory = () => `
         per lacus neque egestas. Diam quod curabitur.
       </div>
 
-      <div class="sprk-o-Stack__item">
+      <div class="sprk-o-Stack__item sprk-o-Stack__item--end-column">
         <a href="#nogo" class="sprk-c-Button">
           Learn More
         </a>
       </div>
     </div>
-
   </div>
 `;
 
@@ -66,13 +64,12 @@ export const flag = () => `
       sprk-o-Stack
       sprk-o-Stack--split@s
     "
-    data-id="promo-2"
+    data-id="flag-promo"
   >
-
     <a href="#nogo" class="sprk-o-Stack__item sprk-o-Stack__item--fourth@s">
       <img
-        class="sprk-c-Promo__image--flag"
-        alt="Spark placeholder image."
+        class="sprk-c-Promo__image sprk-c-Promo__image--flag"
+        alt="Learn more about Spark Design System."
         src="https://spark-assets.netlify.app/spark-logo-updated.svg"
       >
     </a>
@@ -92,7 +89,6 @@ export const flag = () => `
         per lacus neque egestas. Diam quod curabitur.
       </div>
     </div>
-
   </div>
 `;
 
@@ -110,14 +106,13 @@ export const withImage = () => `
       sprk-o-Stack
       sprk-o-Stack--split@s
     "
-    data-id="promo-3"
+    data-id="image-promo"
   >
-
-    <a href="#nogo" class="sprk-o-Stack__item sprk-o-Stack__item--half@s ">
+    <a href="#nogo" class="sprk-o-Stack__item sprk-o-Stack__item--half@s">
       <img
         class="sprk-c-Promo__image"
         src="https://spark-assets.netlify.app/house.jpg"
-        alt="Spark placeholder image."
+        alt="Additional insights about this property."
       />
     </a>
 
@@ -128,7 +123,6 @@ export const withImage = () => `
       sprk-o-Stack
       sprk-o-Stack--large"
     >
-
       <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
         Title
       </h3>
@@ -149,7 +143,6 @@ export const withImage = () => `
         </a>
       </div>
     </div>
-
   </div>
   `;
 
@@ -161,9 +154,8 @@ export const withReversedImage = () => `
       sprk-o-Stack
       sprk-o-Stack--split@s
     "
-    data-id="promo-4"
+    data-id="rev-image-promo"
   >
-
     <div
       class="
         sprk-c-Promo__content
@@ -172,7 +164,6 @@ export const withReversedImage = () => `
         sprk-o-Stack sprk-o-Stack--large
       "
     >
-
       <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item sprk-c-Promo__title">
         Title
       </h3>
@@ -198,7 +189,7 @@ export const withReversedImage = () => `
       <img
         class="sprk-c-Promo__image"
         src="https://spark-assets.netlify.app/house.jpg"
-        alt="Spark placeholder image."
+        alt="Additional insights about this property."
       />
     </a>
   </div>
