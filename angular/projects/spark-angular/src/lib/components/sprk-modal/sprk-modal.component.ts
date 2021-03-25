@@ -56,10 +56,19 @@ import * as _ from 'lodash';
 
         <footer
           *ngIf="modalType === 'choice'"
-          class="sprk-o-Stack__item sprk-c-Modal__footer sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
+          class="
+            sprk-o-Stack__item
+            sprk-c-Modal__footer
+            sprk-o-Stack
+            sprk-o-Stack--split@xxs
+            sprk-o-Stack--end-row"
         >
           <button
-            class="sprk-c-Button sprk-c-Button--tertiary sprk-u-mrm sprk-o-Stack__item"
+            class="
+              sprk-c-Button
+              sprk-c-Button--tertiary
+              sprk-u-mrm
+              sprk-o-Stack__item"
             [attr.data-analytics]="cancelAnalyticsString"
             (click)="emitCancelClick($event)"
           >
