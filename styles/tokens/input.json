@@ -453,10 +453,21 @@
         "file": "settings",
         "themable": true
       },
-      "error-border-width": {
+      "error-border": {
         "width": {
           "comment": "The border width on huge Inputs when they have an error.",
           "value": "2px",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "disabled-border": {
+        "width": {
+          "comment": "The border width on huge Inputs when they are disabled.",
+          "value": "0px",
           "attributes": {
             "category": "size"
           },

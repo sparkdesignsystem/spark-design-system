@@ -32,25 +32,26 @@
   font-size: $sprk-input-huge-font-size;
   padding: $sprk-input-huge-padding;
   box-shadow: $sprk-input-huge-box-shadow;
+
+  &:focus {
+    border-width: $sprk-input-huge-focus-border-width;
+    box-shadow: $sprk-input-huge-focus-box-shadow;
+  }
+}
+
+.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--error,
+.sprk-b-InputContainer--huge .sprk-b-Select.sprk-b-Select--error {
+  border-width: $sprk-input-huge-error-border-width;
+}
+
+.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput[disabled],
+.sprk-b-InputContainer--huge .sprk-b-Select.sprk-b-Select[disabled] {
+  border-width: $sprk-input-huge-disabled-border-width;
 }
 
 // Adjust for select open icon
 .sprk-b-InputContainer--huge .sprk-b-Select {
   padding-right: $sprk-select-input-huge-padding-right;
-}
-
-.sprk-b-InputContainer--huge .sprk-b-TextInput:focus,
-.sprk-b-InputContainer--huge .sprk-b-Select:focus {
-  border-width: $sprk-input-huge-focus-border-width;
-  box-shadow: $sprk-input-huge-focus-box-shadow;
-}
-
-.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--error {
-  border-width: 2px;
-}
-
-.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput[disabled] {
-  border-width: 0;
 }
 
 /*
