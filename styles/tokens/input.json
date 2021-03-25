@@ -164,18 +164,26 @@
       "file": "settings",
       "themable": true
     },
-    "error-border-width": {
-      "comment": "The border width on Inputs when there is an error.",
-      "value": "2px",
-      "attributes": {
-        "category": "size"
+    "error": {
+      "border-width": {
+        "comment": "The border width on Inputs when there is an error.",
+        "value": "2px",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
       },
-      "file": "settings",
-      "themable": true
+      "border-color": {
+        "comment": "The border color on Inputs when there is an error.",
+        "value": "{orange.value}",
+        "file": "settings",
+        "themable": true
+      }
     },
-    "error-border-color": {
-      "comment": "The border color on Inputs when there is an error.",
-      "value": "{orange.value}",
+    "error-border": {
+      "comment": "The border on Inputs when there is an error.",
+      "value": "{text-input.error.border-width.value} solid {text-input.error.border-color.value}",
       "file": "settings",
       "themable": true
     },
@@ -216,6 +224,12 @@
         "file": "settings",
         "themable": true
       }
+    },
+    "disabled-border": {
+      "comment": "The border on disabled Inputs.",
+      "value": "{text-input.disabled.border-width.value} solid {text-input.disabled.border-color.value}",
+      "file": "settings",
+      "themable": true
     },
     "readonly-border-color": {
       "comment": "The border color on readonly Inputs.",
@@ -935,7 +949,7 @@
     },
     "error-border-color": {
       "comment": "The border color on Selects when there is an error.",
-      "value": "{text-input.error-border-color.value}",
+      "value": "{text-input.error.border-color.value}",
       "file": "settings",
       "themable": true
     },

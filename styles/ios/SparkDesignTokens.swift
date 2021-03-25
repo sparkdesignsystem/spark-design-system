@@ -763,8 +763,10 @@ public class SparkDesignTokens {
     public static let sprkTableStripeColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkTextInputColor = UIColor(red: 0.286, green: 0.286, blue: 0.282, alpha:1)
     public static let sprkTextInputDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
+    public static let sprkTextInputDisabledBorder = CGFloat(0.00) solid UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkTextInputDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkTextInputDisabledColor = #808080
+    public static let sprkTextInputErrorBorder = CGFloat(2.00) solid UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkTextInputErrorBorderColor = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkTextInputFocusBorder = CGFloat(2.00) solid UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkTextInputFocusBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)

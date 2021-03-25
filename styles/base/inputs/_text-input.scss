@@ -29,15 +29,13 @@
 
 .sprk-b-TextInput--error,
 .sprk-b-TextInput--error:focus {
-  border: $sprk-text-input-error-border-width solid
-    $sprk-text-input-error-border-color;
+  border: $sprk-text-input-error-border;
 }
 
 .sprk-b-TextInput[disabled] {
   color: $sprk-text-input-disabled-color;
   background-color: $sprk-text-input-disabled-background-color;
-  border: $sprk-text-input-disabled-border-width solid
-    $sprk-text-input-disabled-border-color;
+  border: $sprk-text-input-disabled-border;
   cursor: not-allowed;
 }
 
@@ -104,7 +102,7 @@
 
 /* stylelint-disable selector-combinator-space-before */
 .sprk-b-TextInput.ng-invalid:not(.ng-pristine)
-~ .sprk-b-InputContainer__input-border {
+  ~ .sprk-b-InputContainer__input-border {
   animation: none;
   border-bottom: 3px solid $sprk-text-input-error-color;
   width: 100%;
