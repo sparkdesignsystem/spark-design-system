@@ -128,7 +128,7 @@
     &:disabled {
       /* stylelint-disable max-nesting-depth */
       + .sprk-b-Checkbox__label {
-        border-color: $sprk-checkbox-huge-container-disabled-border-color;
+        border: $sprk-checkbox-huge-container-disabled-border;
         background: $sprk-checkbox-huge-container-disabled-background;
 
         &::before {
@@ -148,7 +148,8 @@
       /* stylelint-disable max-nesting-depth */
       + .sprk-b-Checkbox__label {
         // Container's border color when focused through keyboard
-        border-color: $sprk-checkbox-huge-container-focus-border-color;
+        border: $sprk-checkbox-huge-container-focus-border;
+        box-shadow: $sprk-text-input-focus-box-shadow;
 
         // Custom checkbox element border color when focused through keyboard
         &:hover {
