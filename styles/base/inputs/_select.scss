@@ -18,7 +18,8 @@
   width: 100%;
 
   &:focus {
-    border-color: $sprk-select-focus-border-color;
+    border: $sprk-select-focus-border;
+    box-shadow: $sprk-select-focus-box-shadow;
   }
 
   // Remove FF specific focusring in favor of ours
@@ -46,7 +47,7 @@
 }
 
 .sprk-b-Select[disabled] {
-  border-color: $sprk-select-disabled-border-color;
+  border: $sprk-select-disabled-border;
   background-color: $sprk-select-disabled-background-color;
   color: $sprk-select-disabled-color;
 }
@@ -55,5 +56,5 @@
 /// @name .sprk-b-Select--error
 .sprk-b-Select--error,
 .sprk-b-Select--error:focus {
-  border-color: $sprk-select-error-border-color;
+  border: $sprk-select-error-border;
 }

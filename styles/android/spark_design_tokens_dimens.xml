@@ -88,6 +88,8 @@
   <dimen name="sprk_error_icon_size">20.00dp</dimen><!-- The Input error icon size. -->
   <dimen name="sprk_select_input_huge_padding_right">45.00dp</dimen><!-- The padding right for Huge Inputs. -->
   <dimen name="sprk_select_focus_border_width">2.00dp</dimen><!-- The border width on Selects when focused. -->
+  <dimen name="sprk_select_error_border_width">2.00dp</dimen><!-- The border width on Selects when there is an error. -->
+  <dimen name="sprk_select_disabled_border_width">0.00dp</dimen><!-- The border width on disabled Selects. -->
   <dimen name="sprk_select_arrow_offset_y">-31.00dp</dimen><!-- The value for margin-top on the icon in Selects. -->
   <dimen name="sprk_select_arrow_offset_x">19.00dp</dimen><!-- The value for margin-right on the icon in Selects. -->
   <dimen name="sprk_textarea_min_height">125.00dp</dimen><!-- The minimum height of Textarea. -->

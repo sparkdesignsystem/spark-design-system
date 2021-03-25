@@ -947,21 +947,61 @@
       "file": "settings",
       "themable": true
     },
-    "error-border-color": {
-      "comment": "The border color on Selects when there is an error.",
-      "value": "{text-input.error.border-color.value}",
+    "error": {
+      "border-color": {
+        "comment": "The border color on Selects when there is an error.",
+        "value": "{text-input.error.border-color.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border-width": {
+        "comment": "The border width on Selects when there is an error.",
+        "value": "{text-input.error.border-width.value}",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "error-border": {
+      "comment": "The border on Selects when there is an error.",
+      "value": "{select.error.border-width.value} solid {select.error.border-color.value}",
       "file": "settings",
       "themable": true
     },
-    "disabled-border-color": {
-      "comment": "The border color on disabled Selects.",
-      "value": "{text-input.disabled.border-color.value}",
-      "file": "settings",
-      "themable": true
+    "disabled": {
+      "border-color": {
+        "comment": "The border color on disabled Selects.",
+        "value": "{text-input.disabled.border-color.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border-width": {
+        "comment": "The border width on disabled Selects.",
+        "value": "{text-input.disabled.border-width.value}",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "color": {
+        "comment": "The color on disabled Selects.",
+        "value": "{text-input.disabled.color.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "background-color": {
+        "comment": "The background color on disabled Selects.",
+        "value": "{text-input.disabled.background-color.value}",
+        "file": "settings",
+        "themable": true
+      }
     },
-    "disabled-color": {
-      "comment": "The color on disabled Selects.",
-      "value": "{text-input.disabled.color.value}",
+    "disabled-border": {
+      "comment": "The border on disabled Selects.",
+      "value": "{select.disabled.border-width.value} solid {select.disabled.border-color.value}",
       "file": "settings",
       "themable": true
     },
@@ -980,12 +1020,6 @@
       "attributes": {
         "category": "content"
       },
-      "file": "settings",
-      "themable": true
-    },
-    "disabled-background-color": {
-      "comment": "The background color on disabled Selects.",
-      "value": "{text-input.disabled.background-color.value}",
       "file": "settings",
       "themable": true
     },
