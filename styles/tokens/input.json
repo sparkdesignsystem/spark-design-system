@@ -160,7 +160,7 @@
     },
     "focus-border": {
       "comment": "The border on Inputs when focused.",
-      "value": "{text-input.focus.border-width} solid {text-input.focus.border-color}",
+      "value": "{text-input.focus.border-width.value} solid {text-input.focus.border-color.value}",
       "file": "settings",
       "themable": true
     },
@@ -901,9 +901,35 @@
       "file": "settings",
       "themable": true
     },
-    "focus-border-color": {
-      "comment": "The border color on Selects when focused.",
-      "value": "{text-input.focus.border.0color.value}",
+    "focus": {
+      "border-color": {
+        "comment": "The border color on Selects when focused.",
+        "value": "{text-input.focus.border-color.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border-width": {
+        "comment": "The border width on Selects when focused.",
+        "value": "{text-input.focus.border-width.value}",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "box-shadow": {
+        "comment": "The box shadow on Selects when focused.",
+        "value": "{text-input.focus.box-shadow.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
+    "focus-border": {
+      "comment": "The border on Selects when focused.",
+      "value": "{select.focus.border-width.value} solid {select.focus.border-color.value}",
       "file": "settings",
       "themable": true
     },

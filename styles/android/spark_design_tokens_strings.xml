@@ -91,7 +91,7 @@
   <string name="sprk_text_input_border">1px solid #ff494948</string><!-- The border setting for Inputs. -->
   <string name="sprk_text_input_box_shadow">none</string><!-- The box shadow setting for Inputs. -->
   <string name="sprk_text_input_padding">0 16.00dp</string><!-- The padding setting for Inputs. -->
-  <string name="sprk_text_input_focus_box_shadow">0 2px 8px #ff494948</string>
+  <string name="sprk_text_input_focus_box_shadow">0 2px 8px #ff494948</string><!-- The box shadow on Inputs when focused. -->
   <string name="sprk_text_input_disabled_box_shadow">none</string><!-- The box shadow on disabled Inputs. -->
   <string name="sprk_text_input_transition">border-color 0.15s ease</string><!-- The transition setting on Inputs. -->
   <string name="sprk_text_input_huge_has_text_icon_padding">0 40px</string><!-- The padding value for Huge Inputs with icons. -->
@@ -105,7 +105,7 @@
   <string name="sprk_input_huge_label_top">64.00dp / 3</string><!-- The top value for Huge Input labels. This adjusts how far the label is from the top of the container. -->
   <string name="sprk_input_huge_padding">0 24.00dp</string><!-- The padding for Huge Inputs. -->
   <string name="sprk_input_huge_label_padding">0 (24.00dp + 1.00dp)</string><!-- The label padding for Huge Inputs. -->
-  <string name="sprk_input_huge_focus_box_shadow">0 2px 8px #ff494948</string><!-- The box shadow value on Huge Inputs. -->
+  <string name="sprk_input_huge_focus_box_shadow">0 2px 8px #ff494948</string><!-- The box shadow value on Huge Inputs on focus. -->
   <string name="sprk_input_huge_box_shadow">0 3px 10px 1px rgba(0, 0, 0, 0.08)</string><!-- The box shadow value on Huge Inputs. -->
   <string name="sprk_input_huge_has_icon_padding">0 0 0 42px</string><!-- The padding value for Huge Inputs that contains an icon. -->
   <string name="sprk_input_error_text_margin">0 0 0 6px</string><!-- The margin used for Input error text. -->
@@ -118,6 +118,7 @@
   <string name="sprk_select_border">1px solid #ff494948</string><!-- The border setting for Selects. -->
   <string name="sprk_select_box_shadow">none</string><!-- The box shadow setting for Selects. -->
   <string name="sprk_select_padding">12px 45px 12px 13px</string><!-- The padding setting for Selects. -->
+  <string name="sprk_select_focus_box_shadow">0 2px 8px #ff494948</string><!-- The box shadow on Selects when focused. -->
   <string name="sprk_select_moz_focusring_color">transparent</string><!-- The value for the Firefox specific -moz-focusring color setting. -->
   <string name="sprk_select_moz_focusring_text_shadow">0 0 0 #ff494948</string><!-- The value for the Firefox specific -moz-focusring text-shadow setting. -->
   <string name="sprk_textarea_margin">0.00dp</string><!-- The margin surrounding Textarea. -->
