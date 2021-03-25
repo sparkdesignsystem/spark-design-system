@@ -8,10 +8,8 @@ export default {
   component: SprkModalComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -33,9 +31,7 @@ You must write your own function to toggle dismissal through the '(hide)' input.
 };
 
 const modules = {
-  imports: [
-    SprkModalModule,
-  ],
+  imports: [SprkModalModule],
 };
 
 export const defaultStory = () => ({
@@ -48,7 +44,8 @@ export const defaultStory = () => ({
       idString="modal-choice-1"
       (confirmClick)="confirmClick($event)"
     >
-      This is some modal content.
+      This is some content that is in a modal. It explains what the modal is for.
+      There will also be a way to close the modal.
     </sprk-modal>
   `,
   props: {
@@ -60,7 +57,7 @@ defaultStory.story = {
   name: 'Default',
   parameters: {
     jest: ['sprk-modal.component'],
-  }
+  },
 };
 
 export const info = () => ({
@@ -72,9 +69,9 @@ export const info = () => ({
       modalType="info"
       idString="modal-info-1"
     >
-      This is some content that is in a modal.
-      It explains what the modal is for.
-      There will also be a way to close the modal.
+      Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua.
     </sprk-modal>
   `,
   props: {
@@ -85,7 +82,7 @@ export const info = () => ({
 info.story = {
   parameters: {
     jest: ['sprk-modal.component'],
-  }
+  },
 };
 
 export const wait = () => ({
@@ -98,9 +95,9 @@ export const wait = () => ({
       idString="modal-wait-1"
     >
       <p class="sprk-c-Modal__content">
-        Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.
       </p>
     </sprk-modal>
   `,
@@ -112,5 +109,5 @@ export const wait = () => ({
 wait.story = {
   parameters: {
     jest: ['sprk-modal.component'],
-  }
+  },
 };

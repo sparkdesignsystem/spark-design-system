@@ -44,8 +44,8 @@ export const defaultStory = () => (
     confirmText="Confirm"
     cancelText="Cancel"
   >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
+    This is some content that is in a modal. It explains what the modal is for.
+    There will also be a way to close the modal.
   </SprkModal>
 );
 
