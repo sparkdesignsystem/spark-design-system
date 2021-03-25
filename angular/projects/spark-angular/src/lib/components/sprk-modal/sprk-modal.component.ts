@@ -40,7 +40,7 @@ import * as _ from 'lodash';
             [attr.data-analytics]="closeAnalyticsString"
             (click)="closeModal($event)"
           >
-            <sprk-icon iconType="close"></sprk-icon>
+            <sprk-icon iconName="close"></sprk-icon>
           </button>
         </header>
 

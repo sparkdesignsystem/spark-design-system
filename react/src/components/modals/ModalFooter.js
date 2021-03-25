@@ -32,11 +32,11 @@ class ModalFooter extends Component {
     return (
       <footer
         className="
-        sprk-o-Stack__item
-        sprk-c-Modal__footer
-        sprk-o-Stack
-        sprk-o-Stack--split@xxs
-        sprk-o-Stack--end-row"
+          sprk-o-Stack__item
+          sprk-c-Modal__footer
+          sprk-o-Stack
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
       >
         {/* vanilla expects a paragraph here */}
         <p>&nbsp;</p>
