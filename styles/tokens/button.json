@@ -319,7 +319,7 @@
         },
         "background-color": {
           "comment": "The background color of the Disabled Button component.",
-          "value": "{white.value}",
+          "value": "{gray.value}",
           "file": "settings",
           "themable": true
         },
@@ -436,10 +436,7 @@
       "disabled": {
         "background-color": {
           "comment": "The background color of the Tertiary Button component when disabled.",
-          "value": "transparent",
-          "attributes": {
-            "category": "content"
-          },
+          "value": "{black-tint.10.value}",
           "file": "settings",
           "themable": true
         },
@@ -460,7 +457,7 @@
         },
         "border-color": {
           "comment": "The border color of the Tertiary Button component when disabled.",
-          "value": "{black-tint.50.value}",
+          "value": "{btn.tertiary.disabled.background-color.value}",
           "file": "settings",
           "themable": true
         },
@@ -491,16 +488,13 @@
       },
       "background-color": {
         "comment": "The background color of the Tertiary Button component.",
-        "value": "transparent",
-        "attributes": {
-          "category": "content"
-        },
+        "value": "{white.value}",
         "file": "settings",
         "themable": true
       },
       "border-color": {
         "comment": "The border color of the Tertiary Button component.",
-        "value": "{purple-dark.value}",
+        "value": "{btn.tertiary.background-color.value}",
         "file": "settings",
         "themable": true
       },
@@ -540,7 +534,7 @@
         },
         "border-color": {
           "comment": "The border color of the Tertiary Button component on hover.",
-          "value": "{purple.value}",
+          "value": "{btn.tertiary.hover.background-color.value}",
           "file": "settings",
           "themable": true
         },

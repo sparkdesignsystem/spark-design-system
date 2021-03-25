@@ -46,13 +46,11 @@
   <string name="sprk_btn_secondary_border">2.00dp solid #ff3c3174</string><!-- The border of the Secondary Button component. -->
   <string name="sprk_btn_secondary_hover_shadow">0 3px 10px #14141414</string><!-- The box shadow of the Secondary Button component on hover. -->
   <string name="sprk_btn_secondary_hover_border">2.00dp solid #ff603aa1</string><!-- The border of the Secondary Button component on hover. -->
-  <string name="sprk_btn_tertiary_disabled_background_color">transparent</string><!-- The background color of the Tertiary Button component when disabled. -->
   <string name="sprk_btn_tertiary_disabled_shadow">none</string><!-- The box shadow of the Tertiary Button component when disabled. -->
-  <string name="sprk_btn_tertiary_disabled_hover_border">2.00dp solid #ff8d8d8c</string><!-- The border of the Tertiary Button component when disabled on hover. -->
-  <string name="sprk_btn_tertiary_background_color">transparent</string><!-- The background color of the Tertiary Button component. -->
-  <string name="sprk_btn_tertiary_border">2.00dp solid #ff3c3174</string><!-- The border of the Tertiary Button component. -->
+  <string name="sprk_btn_tertiary_disabled_hover_border">2.00dp solid #ffe8e8e8</string><!-- The border of the Tertiary Button component when disabled on hover. -->
+  <string name="sprk_btn_tertiary_border">2.00dp solid #ffffffff</string><!-- The border of the Tertiary Button component. -->
   <string name="sprk_btn_tertiary_hover_shadow">0 3px 10px #14141414</string><!-- The box shadow of the Tertiary Button component on hover -->
-  <string name="sprk_btn_tertiary_hover_border">2.00dp solid #ff8d8d8c</string><!-- The border of the Tertiary Button component when disabled on hover. -->
+  <string name="sprk_btn_tertiary_hover_border">2.00dp solid #ffe8e8e8</string><!-- The border of the Tertiary Button component when disabled on hover. -->
   <string name="sprk_btn_quaternary_disabled_border_style">solid</string><!-- The border style of the Quaternary Button component when disabled. -->
   <string name="sprk_btn_quaternary_disabled_background_color">transparent</string><!-- The background color of the Quaternary Button component when disabled. -->
   <string name="sprk_btn_quaternary_disabled_shadow">none</string><!-- The box shadow of the Quaternary Button component when disabled. -->
