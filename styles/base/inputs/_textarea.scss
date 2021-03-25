@@ -15,22 +15,19 @@
   transition: $sprk-text-input-transition;
 
   &:focus {
-    border: $sprk-text-input-focus-border-width solid
-      $sprk-text-input-focus-border-color;
+    border: $sprk-text-input-focus-border;
     box-shadow: $sprk-text-input-focus-box-shadow;
   }
 }
 
 .sprk-b-TextArea--error,
 .sprk-b-TextArea--error:focus {
-  border: $sprk-text-input-error-border-width solid
-    $sprk-text-input-error-border-color;
+  border: $sprk-text-input-error-border;
 }
 
 .sprk-b-TextArea[disabled] {
   background-color: $sprk-text-input-disabled-background-color;
-  border: $sprk-text-input-disabled-border-width solid
-    $sprk-text-input-disabled-border-color;
+  border: $sprk-text-input-disabled-border;
   color: $sprk-text-input-disabled-color;
   cursor: not-allowed;
 }
