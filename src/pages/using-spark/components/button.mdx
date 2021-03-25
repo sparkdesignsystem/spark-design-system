@@ -21,7 +21,7 @@ Well written button text clearly communicates what action will occur when the us
 
 Use buttons to represent what type of actions the users can take on a page and to create a visual hierarchy between different calls to action.
 
-> As a general rule, use one main call-to-action button (Primary button) per screen but no more than two.
+> As a general rule, use no more than two primary call-to-action buttons ([Primary Button](#primary-button)) per page.
 
 Examples of Button usage:
 - To trigger action.
@@ -40,17 +40,21 @@ If the action will take take the user to a new page or to an external site, cons
 - Use task-specific action verbs like: “Add”, “Remove”, “Read Details”, and “Submit”.
 - Use less than 20 characters.
 - Use compact words. For example, instead of “Submit Your Information Now” use “Submit”.
-- Use first-person pronouns. Use “Customize My Loan,”  “Customize Your Loan.”
+- Use first-person pronouns. Use “Customize My Loan,” instead of “Customize Your Loan.”
 - Do not use ampersands (&).
 - Do not wrap button text into a second line; it reduces legibility, and starts looking less like an interactable element.
 
 #### Button Styling
 - Text should be center aligned.
-- Width should be more than 48px, but less than 280px.
-- Buttons should have at least 24px of space away from any surrounding elements.
-- Do not use buttons in paragraphs or within a lines of text. Use [Link](/using-spark/components/link) instead.
+- Buttons should have 16px of padding on the top and bottom, and 24px on the left and right sides.
+- Width should be between 48x and 280px.
+- Grouped buttons should be 16px away from each other.
+- Do not use buttons in paragraphs or within lines of text. Use [Link](/using-spark/components/link) instead.
 
-
+#### Full Width at Smaller Viewports
+At small viewport sizes, a Button may be full width.
+- Stacked Buttons should have the primary action above secondary actions.
+-	Use full width Buttons in containers that take up 1/3 of the grid or smaller.
 
 <SprkDivider
  element="span"
@@ -59,16 +63,19 @@ If the action will take take the user to a new page or to an external site, cons
 
 ## Variants
 
-Use Button variants to create action hierarchy within a page. Variant names imply their placement within that hierarchy.
+Use Button variants to emphasize different actions within a page.
+
+> Variant names imply the order within action hierarchy, but they do not imply the visual of placement on the page.
+
 - [Primary Button](#primary-button)
 - [Secondary Button](#secondary-button)
 - [Tertiary Button](#tertiary-button)
 
 ### Primary Button
 
-The main call to action on the page. Use no more than two Primary Buttons per page.
+Represents the main call to action on the page. Use no more than two Primary Buttons per page.
 
-> When there are multiple actions, use the primary button to indicate the main option.
+> When there are multiple buttons, use the Primary Button to indicate the main action.
 
 #### Examples
 - Submit Application
@@ -109,7 +116,7 @@ Represents the second-highest priority action, following the Primary Button. The
 />
 
 ### Tertiary Button
-Represents less prominent actions. Sometimes in in an action set with [Primary](#primary-button) and [Secondary](#secondary-button) Buttons, but they can also be independent actions.
+Represents less prominent actions. Sometimes in an action set with [Primary](#primary-button) and [Secondary](#secondary-button) Buttons, but they can also be independent actions.
 
 #### Example
 - In a multi-step form, a Tertiary Button works with Primary and Secondary Button as a set of related actions.
@@ -209,6 +216,7 @@ At small viewport sizes, a Button may be used at full width.
 - A Button must contain text and/or an Icon
 
 ## Accessibility
-
 - If a Button only includes an Icon with no
 text, alternative text must be provided.
+
+> We follow, [WCAG 2.1 Level AA - Button Aria Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#button) (Web Content Accessibility Guidelines).
