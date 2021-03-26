@@ -540,7 +540,7 @@
         },
         "shadow": {
           "comment": "The box shadow of the Tertiary Button component on hover",
-          "value": "{btn.shadow.value}",
+          "value": "none",
           "attributes": {
             "category": "content"
           },
