@@ -23,11 +23,13 @@ import { uniqueId } from 'lodash';
       [attr.aria-describedby]="content_id"
       [attr.data-id]="idString"
     >
-      <div class="sprk-o-Stack sprk-o-Stack--large">
-        <header class="sprk-o-Stack__item sprk-c-Modal__header">
+      <sprk-stack itemSpacing="large">
+        <header class="sprk-c-Modal__header" sprkStackItem>
           <h2
-            class="sprk-c-Modal__heading sprk-b-TypeDisplayFour"
+            class="sprk-c-Modal__heading"
             [id]="heading_id"
+            sprkHeading
+            variant="displayFour"
           >
             {{ title }}
           </h2>
@@ -45,19 +47,23 @@ import { uniqueId } from 'lodash';
         </header>
 
         <div
-          class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium"
+          class="sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium"
+          sprkStackItem
         >
           <div
             *ngIf="modalType == 'wait'"
-            class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--primary"
+            sprkStackItem
+            sprkSpinner
+            variant="primary"
+            size="large"
           ></div>
           <ng-content></ng-content>
         </div>
 
         <footer
           *ngIf="modalType === 'choice'"
+          sprkStackItem
           class="
-            sprk-o-Stack__item
             sprk-c-Modal__footer
             sprk-o-Stack
             sprk-o-Stack--split@xxs
@@ -65,24 +71,24 @@ import { uniqueId } from 'lodash';
             sprk-o-Stack--medium"
         >
           <button
-            class="
-              sprk-c-Button
-              sprk-c-Button--tertiary
-              sprk-o-Stack__item"
+            sprkStackItem
+            sprkButton
+            variant="tertiary"
             [attr.data-analytics]="cancelAnalyticsString"
             (click)="emitCancelClick($event)"
           >
             {{ cancelText }}
           </button>
           <button
-            class="sprk-c-Button sprk-o-Stack__item"
+            sprkStackItem
+            sprkButton
             [attr.data-analytics]="confirmAnalyticsString"
             (click)="emitConfirmClick($event)"
           >
             {{ confirmText }}
           </button>
         </footer>
-      </div>
+      </sprk-stack>
     </div>
 
     <div
