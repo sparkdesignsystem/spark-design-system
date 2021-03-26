@@ -96,7 +96,7 @@ export const disabledTextInput = () => `
       id="text-input"
       data-id="text-input"
       type="text"
-      value=""
+      value="Disabled"
       aria-describedby="text-input--error-container"
       disabled
     >
