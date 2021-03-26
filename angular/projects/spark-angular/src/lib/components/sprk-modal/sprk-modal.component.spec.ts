@@ -24,11 +24,9 @@ describe('SprkModalComponent', () => {
     fixture.detectChanges();
     modalElement = fixture.nativeElement.querySelector('.sprk-c-Modal');
     confirmButtonElement = fixture.nativeElement.querySelectorAll(
-      'footer .sprk-c-Button',
+      'footer button',
     )[1];
-    cancelElement = fixture.nativeElement.querySelectorAll(
-      'footer .sprk-c-Button',
-    )[0];
+    cancelElement = fixture.nativeElement.querySelectorAll('footer button')[0];
     closeElement = fixture.nativeElement.querySelector('header button');
   });
 

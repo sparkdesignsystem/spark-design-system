@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
-import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkButtonModule } from '../../directives/sprk-button/sprk-button.module';
 import { SprkHeadingModule } from '../../directives/sprk-heading/sprk-heading.module';
@@ -14,7 +13,6 @@ import { SprkModalComponent } from './sprk-modal.component';
     CommonModule,
     RouterModule,
     SprkIconModule,
-    SprkStackModule,
     SprkStackItemModule,
     SprkButtonModule,
     SprkHeadingModule,
@@ -24,7 +22,6 @@ import { SprkModalComponent } from './sprk-modal.component';
   exports: [
     SprkModalComponent,
     SprkIconModule,
-    SprkStackModule,
     SprkStackItemModule,
     SprkButtonModule,
     SprkHeadingModule,

@@ -23,7 +23,7 @@ import { uniqueId } from 'lodash';
       [attr.aria-describedby]="content_id"
       [attr.data-id]="idString"
     >
-      <sprk-stack itemSpacing="large">
+      <div class="sprk-o-Stack sprk-o-Stack--large">
         <header class="sprk-c-Modal__header" sprkStackItem>
           <h2
             class="sprk-c-Modal__heading"
@@ -88,7 +88,7 @@ import { uniqueId } from 'lodash';
             {{ confirmText }}
           </button>
         </footer>
-      </sprk-stack>
+      </div>
     </div>
 
     <div
