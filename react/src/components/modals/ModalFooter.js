@@ -36,13 +36,13 @@ class ModalFooter extends Component {
           sprk-o-Stack__item
           sprk-c-Modal__footer
           sprk-o-Stack
-          sprk-o-Stack--split@xxs
+          sprk-o-Stack--split@xs
           sprk-o-Stack--end-row
           sprk-o-Stack--medium"
       >
         {/* vanilla expects a paragraph here */}
         <p>&nbsp;</p>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs">
+        <SprkStackItem>
           <SprkButton
             variant="tertiary"
             onClick={cancelClick}
@@ -52,7 +52,7 @@ class ModalFooter extends Component {
             {cancelText}
           </SprkButton>
         </SprkStackItem>
-        <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs">
+        <SprkStackItem>
           <SprkButton
             onClick={confirmClick}
             type="button"

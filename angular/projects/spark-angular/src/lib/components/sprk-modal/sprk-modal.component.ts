@@ -66,29 +66,29 @@ import { uniqueId } from 'lodash';
           class="
             sprk-c-Modal__footer
             sprk-o-Stack
-            sprk-o-Stack--split@xxs
+            sprk-o-Stack--split@xs
             sprk-o-Stack--end-row
             sprk-o-Stack--medium"
         >
-          <button
-            sprkStackItem
-            class="sprk-o-Stack__item--flex@xxs"
-            sprkButton
-            variant="tertiary"
-            [attr.data-analytics]="cancelAnalyticsString"
-            (click)="emitCancelClick($event)"
-          >
-            {{ cancelText }}
-          </button>
-          <button
-            sprkStackItem
-            class="sprk-o-Stack__item--flex@xxs"
-            sprkButton
-            [attr.data-analytics]="confirmAnalyticsString"
-            (click)="emitConfirmClick($event)"
-          >
-            {{ confirmText }}
-          </button>
+          <div sprkStackItem>
+            <button
+              sprkButton
+              variant="tertiary"
+              [attr.data-analytics]="cancelAnalyticsString"
+              (click)="emitCancelClick($event)"
+            >
+              {{ cancelText }}
+            </button>
+          </div>
+          <div sprkStackItem>
+            <button
+              sprkButton
+              [attr.data-analytics]="confirmAnalyticsString"
+              (click)="emitConfirmClick($event)"
+            >
+              {{ confirmText }}
+            </button>
+          </div>
         </footer>
       </div>
     </div>

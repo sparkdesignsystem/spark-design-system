@@ -83,27 +83,25 @@ export const defaultStory = () => {
             sprk-o-Stack__item
             sprk-c-Modal__footer
             sprk-o-Stack
-            sprk-o-Stack--split@xxs
+            sprk-o-Stack--split@xs
             sprk-o-Stack--end-row
             sprk-o-Stack--medium">
-          <button
-            class="
-              sprk-c-Button
-              sprk-c-Button--tertiary
-              sprk-o-Stack__item
-              sprk-o-Stack__item--flex@xxs"
-            data-sprk-modal-cancel="exampleChoiceModal"
-          >
-            Cancel
-          </button>
-
-          <button
-            class="
-              sprk-c-Button
-              sprk-o-Stack__item
-              sprk-o-Stack__item--flex@xxs">
-            Confirm
-          </button>
+          <div class="sprk-o-Stack__item">
+            <button
+              class="
+                sprk-c-Button
+                sprk-c-Button--tertiary
+                "
+              data-sprk-modal-cancel="exampleChoiceModal"
+            >
+              Cancel
+            </button>
+          </div>
+          <div class="sprk-o-Stack__item">
+            <button class="sprk-c-Button">
+              Confirm
+            </button>
+          </div>
         </footer>
       </div>
     </div>
