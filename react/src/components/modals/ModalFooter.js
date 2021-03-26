@@ -36,7 +36,8 @@ class ModalFooter extends Component {
           sprk-c-Modal__footer
           sprk-o-Stack
           sprk-o-Stack--split@xxs
-          sprk-o-Stack--end-row"
+          sprk-o-Stack--end-row
+          sprk-o-Stack--medium"
       >
         {/* vanilla expects a paragraph here */}
         <p>&nbsp;</p>
@@ -44,7 +45,6 @@ class ModalFooter extends Component {
           className="
             sprk-c-Button
             sprk-c-Button--tertiary
-            sprk-u-mrm
             sprk-o-Stack__item"
           data-sprk-modal-cancel="exampleChoiceModal"
           onClick={cancelClick}

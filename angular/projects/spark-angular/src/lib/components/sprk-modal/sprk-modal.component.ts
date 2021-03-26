@@ -61,13 +61,13 @@ import { uniqueId } from 'lodash';
             sprk-c-Modal__footer
             sprk-o-Stack
             sprk-o-Stack--split@xxs
-            sprk-o-Stack--end-row"
+            sprk-o-Stack--end-row
+            sprk-o-Stack--medium"
         >
           <button
             class="
               sprk-c-Button
               sprk-c-Button--tertiary
-              sprk-u-mrm
               sprk-o-Stack__item"
             [attr.data-analytics]="cancelAnalyticsString"
             (click)="emitCancelClick($event)"
