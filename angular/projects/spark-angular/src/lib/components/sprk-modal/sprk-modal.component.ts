@@ -72,6 +72,7 @@ import { uniqueId } from 'lodash';
         >
           <button
             sprkStackItem
+            class="sprk-o-Stack__item--flex@xxs"
             sprkButton
             variant="tertiary"
             [attr.data-analytics]="cancelAnalyticsString"
@@ -81,6 +82,7 @@ import { uniqueId } from 'lodash';
           </button>
           <button
             sprkStackItem
+            class="sprk-o-Stack__item--flex@xxs"
             sprkButton
             [attr.data-analytics]="confirmAnalyticsString"
             (click)="emitConfirmClick($event)"
