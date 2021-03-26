@@ -7,7 +7,6 @@ import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack
 import { SprkButtonModule } from '../../directives/sprk-button/sprk-button.module';
 import { SprkHeadingModule } from '../../directives/sprk-heading/sprk-heading.module';
 import { SprkSpinnerModule } from '../../directives/sprk-spinner/sprk-spinner.module';
-
 import { SprkModalComponent } from './sprk-modal.component';
 
 @NgModule({
