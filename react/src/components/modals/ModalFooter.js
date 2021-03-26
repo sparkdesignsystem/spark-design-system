@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import noop from 'lodash/noop';
+import SprkButton from '../buttons/SprkButton';
+import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
 
 class ModalFooter extends Component {
   constructor(props) {
@@ -15,7 +17,6 @@ class ModalFooter extends Component {
     // The button should receive focus when the
     // modal becomes visible (not necessarily when it renders or updates), and
     // only in the default variant.
-
     this.confirmButtonRef.current.focus();
   }
 
@@ -41,27 +42,26 @@ class ModalFooter extends Component {
       >
         {/* vanilla expects a paragraph here */}
         <p>&nbsp;</p>
-        <button
-          className="
-            sprk-c-Button
-            sprk-c-Button--tertiary
-            sprk-o-Stack__item"
-          data-sprk-modal-cancel="exampleChoiceModal"
-          onClick={cancelClick}
-          type="button"
-          data-analytics={cancelAnalyticsString}
-        >
-          {cancelText}
-        </button>
-        <button
-          className="sprk-c-Button sprk-o-Stack__item"
-          onClick={confirmClick}
-          type="button"
-          ref={this.confirmButtonRef}
-          data-analytics={confirmAnalyticsString}
-        >
-          {confirmText}
-        </button>
+        <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs">
+          <SprkButton
+            variant="tertiary"
+            onClick={cancelClick}
+            type="button"
+            analyticsString={cancelAnalyticsString}
+          >
+            {cancelText}
+          </SprkButton>
+        </SprkStackItem>
+        <SprkStackItem additionalClasses="sprk-o-Stack__item--flex@xxs">
+          <SprkButton
+            onClick={confirmClick}
+            type="button"
+            forwardedRef={this.confirmButtonRef}
+            analyticsString={confirmAnalyticsString}
+          >
+            {confirmText}
+          </SprkButton>
+        </SprkStackItem>
       </footer>
     );
   }
