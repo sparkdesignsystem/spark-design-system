@@ -90,13 +90,18 @@ export const defaultStory = () => {
             class="
               sprk-c-Button
               sprk-c-Button--tertiary
-              sprk-o-Stack__item"
+              sprk-o-Stack__item
+              sprk-o-Stack__item--flex@xxs"
             data-sprk-modal-cancel="exampleChoiceModal"
           >
             Cancel
           </button>
 
-          <button class="sprk-c-Button sprk-o-Stack__item">
+          <button
+            class="
+              sprk-c-Button
+              sprk-o-Stack__item
+              sprk-o-Stack__item--flex@xxs">
             Confirm
           </button>
         </footer>
