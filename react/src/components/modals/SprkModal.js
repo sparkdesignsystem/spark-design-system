@@ -12,6 +12,18 @@ import ModalFooter from './ModalFooter';
 import Mask from './Mask';
 
 class SprkModal extends Component {
+  static isTabPressed(e) {
+    return e.key === 'Tab' || e.keyCode === 9;
+  }
+
+  static isEscPressed(e) {
+    return e.key === 'Escape' || e.keyCode === 27;
+  }
+
+  static isActiveElement(elementRef) {
+    return document.activeElement === elementRef;
+  }
+
   constructor(props) {
     super(props);
 
@@ -26,10 +38,6 @@ class SprkModal extends Component {
     this.setInternalFocus = this.setInternalFocus.bind(this);
     this.setExternalFocus = this.setExternalFocus.bind(this);
     this.handleKeyEvents = this.handleKeyEvents.bind(this);
-    this.isTabPressed = this.isTabPressed.bind(this);
-    this.isEscPressed = this.isEscPressed.bind(this);
-    this.getFocusableEls = this.getFocusableEls.bind(this);
-    this.isActiveElement = this.isActiveElement.bind(this);
   }
 
   componentDidMount() {
@@ -67,7 +75,7 @@ class SprkModal extends Component {
     this.removeListeners();
   }
 
-  getFocusableEls(containerRef) {
+  static getFocusableEls(containerRef) {
     const focusEls = containerRef.querySelectorAll(
       'a[href], area[href],' +
         'input:not([disabled]),' +
@@ -121,18 +129,6 @@ class SprkModal extends Component {
           break;
       }
     }
-  }
-
-  isTabPressed(e) {
-    return e.key === 'Tab' || e.keyCode === 9;
-  }
-
-  isEscPressed(e) {
-    return e.key === 'Escape' || e.keyCode === 27;
-  }
-
-  isActiveElement(elementRef) {
-    return document.activeElement === elementRef;
   }
 
   cancel() {
