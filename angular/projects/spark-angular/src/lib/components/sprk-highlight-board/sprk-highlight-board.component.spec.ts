@@ -4,6 +4,7 @@ import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkHighlightBoardComponent } from './sprk-highlight-board.component';
+import { SprkHeadingDirective } from '../../directives/sprk-heading/sprk-heading.directive';
 
 describe('SprkHighlightBoardComponent', () => {
   let component: SprkHighlightBoardComponent;
@@ -18,7 +19,7 @@ describe('SprkHighlightBoardComponent', () => {
         SprkStackComponent,
         SprkLinkDirective,
         SprkStackItemDirective,
-        SprkHighlightBoardComponent,
+        SprkHeadingDirective,
       ],
     }).compileComponents();
   }));
@@ -48,16 +49,22 @@ describe('SprkHighlightBoardComponent', () => {
 
   it('should add the correct class if type is set as noImage', () => {
     component.type = 'noImage';
+    component.heading = 'heading';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual('sprk-c-HighlightBoard');
+    expect(element.querySelectorAll('.sprk-b-TypeDisplayTwo').length).toBe(1);
+    expect(element.querySelectorAll('.sprk-b-TypeDisplayOne').length).toBe(0);
   });
 
   it('should add the correct class if type is set as stacked', () => {
     component.type = 'stacked';
+    component.heading = 'heading';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
       'sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image sprk-c-HighlightBoard--stacked',
     );
+    expect(element.querySelectorAll('.sprk-b-TypeDisplayOne').length).toBe(1);
+    expect(element.querySelectorAll('.sprk-b-TypeDisplayTwo').length).toBe(0);
   });
 
   it('should set the data-analytics attribute given a value in the analyticsStringCta Input', () => {

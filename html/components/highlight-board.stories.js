@@ -52,7 +52,12 @@ export const defaultStory = () => `
           sprk-o-Stack--center-column"
         >
           <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-            <a class="sprk-c-Button sprk-c-Button--full@s" href="#nogo">
+            <a
+              class="
+                sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@s
+              "
+              href="#nogo"
+            >
               Designers
             </a>
           </div>
@@ -62,7 +67,6 @@ export const defaultStory = () => `
               class="
                 sprk-c-Button
                 sprk-c-Button--full@s
-                sprk-c-Button--secondary
               "
               href="#nogo">
               Developers
@@ -106,6 +110,7 @@ export const noImage = () => `
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
           <a class="
             sprk-c-Button
+            sprk-c-Button--secondary
             sprk-c-Button--full@s" href="#nogo">
             Designers
           </a>
@@ -113,7 +118,7 @@ export const noImage = () => `
 
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
           <a
-            class="sprk-c-Button sprk-c-Button--full@s sprk-c-Button--secondary"
+            class="sprk-c-Button sprk-c-Button--full@s"
             href="#nogo">
             Developers
           </a>
@@ -163,14 +168,17 @@ export const stacked = () => `
         sprk-o-Stack--center-row"
         >
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-          <a class="sprk-c-Button sprk-c-Button--full@s" href="#nogo">
+          <a
+            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@s"
+            href="#nogo"
+          >
             Designers
           </a>
         </div>
 
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
           <a
-            class="sprk-c-Button sprk-c-Button--full@s sprk-c-Button--secondary"
+            class="sprk-c-Button sprk-c-Button--full@s"
             href="#nogo">
             Developers
           </a>
