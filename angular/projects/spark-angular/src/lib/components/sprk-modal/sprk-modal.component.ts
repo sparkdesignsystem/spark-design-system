@@ -3,9 +3,9 @@ import {
   EventEmitter,
   HostListener,
   Input,
-  Output
+  Output,
 } from '@angular/core';
-import * as _ from 'lodash';
+import { uniqueId } from 'lodash';
 
 @Component({
   selector: 'sprk-modal',
@@ -24,10 +24,12 @@ import * as _ from 'lodash';
       [attr.data-id]="idString"
     >
       <div class="sprk-o-Stack sprk-o-Stack--large">
-        <header class="sprk-o-Stack__item sprk-c-Modal__header">
+        <header class="sprk-c-Modal__header" sprkStackItem>
           <h2
-            class="sprk-c-Modal__heading sprk-b-TypeDisplayFour"
+            class="sprk-c-Modal__heading"
             [id]="heading_id"
+            sprkHeading
+            variant="displayFour"
           >
             {{ title }}
           </h2>
@@ -40,41 +42,53 @@ import * as _ from 'lodash';
             [attr.data-analytics]="closeAnalyticsString"
             (click)="closeModal($event)"
           >
-            <sprk-icon
-              iconType="close"
-            ></sprk-icon>
+            <sprk-icon iconName="close"></sprk-icon>
           </button>
         </header>
 
         <div
-          class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium"
+          class="sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium"
+          sprkStackItem
         >
           <div
             *ngIf="modalType == 'wait'"
-            class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--primary"
+            sprkStackItem
+            sprkSpinner
+            variant="primary"
+            size="large"
           ></div>
           <ng-content></ng-content>
         </div>
 
         <footer
           *ngIf="modalType === 'choice'"
-          class="sprk-o-Stack__item sprk-c-Modal__footer"
+          sprkStackItem
+          class="
+            sprk-c-Modal__footer
+            sprk-o-Stack
+            sprk-o-Stack--split@xs
+            sprk-o-Stack--end-row
+            sprk-o-Stack--medium"
         >
-          <button
-            class="sprk-c-Button sprk-u-mrm"
-            [attr.data-analytics]="confirmAnalyticsString"
-            (click)="emitConfirmClick($event)"
-          >
-            {{ confirmText }}
-          </button>
-
-          <button
-            class="sprk-c-Button sprk-c-Button--tertiary"
-            [attr.data-analytics]="cancelAnalyticsString"
-            (click)="emitCancelClick($event)"
-          >
-            {{ cancelText }}
-          </button>
+          <div sprkStackItem>
+            <button
+              sprkButton
+              variant="tertiary"
+              analyticsString="cancelAnalyticsString"
+              (click)="emitCancelClick($event)"
+            >
+              {{ cancelText }}
+            </button>
+          </div>
+          <div sprkStackItem>
+            <button
+              sprkButton
+               analyticsString="confirmAnalyticsString"
+              (click)="emitConfirmClick($event)"
+            >
+              {{ confirmText }}
+            </button>
+          </div>
         </footer>
       </div>
     </div>
@@ -85,7 +99,7 @@ import * as _ from 'lodash';
       tabindex="-1"
       (click)="closeModal($event)"
     ></div>
-  `
+  `,
 })
 export class SprkModalComponent {
   @Input()
@@ -175,7 +189,7 @@ export class SprkModalComponent {
   /**
    * @ignore
    */
-  componentID = _.uniqueId();
+  componentID = uniqueId();
   /**
    * @ignore
    */
