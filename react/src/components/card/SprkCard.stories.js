@@ -295,8 +295,8 @@ export const twoUpCards = () => (
         <SprkStack
           splitAt="extraTiny"
           additionalClasses="
-          sprk-o-Stack__item
-          sprk-o-Stack--end-row"
+            sprk-o-Stack__item
+            sprk-o-Stack--end-row"
         >
           <SprkStackItem>
             <SprkLink
@@ -348,8 +348,8 @@ export const twoUpCards = () => (
         <SprkStack
           splitAt="extraTiny"
           additionalClasses="
-          sprk-o-Stack__item
-          sprk-o-Stack--end-row"
+            sprk-o-Stack__item
+            sprk-o-Stack--end-row"
         >
           <SprkStackItem>
             <SprkLink
@@ -413,8 +413,8 @@ export const threeUpCards = () => (
         <SprkStack
           splitAt="extraTiny"
           additionalClasses="
-          sprk-o-Stack__item
-          sprk-o-Stack--end-row"
+            sprk-o-Stack__item
+            sprk-o-Stack--end-row"
         >
           <SprkStackItem>
             <SprkLink
@@ -465,8 +465,8 @@ export const threeUpCards = () => (
         <SprkStack
           splitAt="extraTiny"
           additionalClasses="
-          sprk-o-Stack__item
-          sprk-o-Stack--end-row"
+            sprk-o-Stack__item
+            sprk-o-Stack--end-row"
         >
           <SprkStackItem>
             <SprkLink
@@ -517,8 +517,8 @@ export const threeUpCards = () => (
         <SprkStack
           splitAt="extraTiny"
           additionalClasses="
-          sprk-o-Stack__item
-          sprk-o-Stack--end-row"
+            sprk-o-Stack__item
+            sprk-o-Stack--end-row"
         >
           <SprkStackItem>
             <SprkLink
@@ -582,8 +582,8 @@ export const fourUpCards = () => (
         <SprkStack
           splitAt="extraTiny"
           additionalClasses="
-          sprk-o-Stack__item
-          sprk-o-Stack--end-row"
+            sprk-o-Stack__item
+            sprk-o-Stack--end-row"
         >
           <SprkStackItem>
             <SprkLink
@@ -634,8 +634,8 @@ export const fourUpCards = () => (
         <SprkStack
           splitAt="extraTiny"
           additionalClasses="
-          sprk-o-Stack__item
-          sprk-o-Stack--end-row"
+            sprk-o-Stack__item
+            sprk-o-Stack--end-row"
         >
           <SprkStackItem>
             <SprkLink
@@ -686,8 +686,8 @@ export const fourUpCards = () => (
         <SprkStack
           splitAt="extraTiny"
           additionalClasses="
-          sprk-o-Stack__item
-          sprk-o-Stack--end-row"
+            sprk-o-Stack__item
+            sprk-o-Stack--end-row"
         >
           <SprkStackItem>
             <SprkLink
@@ -738,8 +738,8 @@ export const fourUpCards = () => (
         <SprkStack
           splitAt="extraTiny"
           additionalClasses="
-          sprk-o-Stack__item
-          sprk-o-Stack--end-row"
+            sprk-o-Stack__item
+            sprk-o-Stack--end-row"
         >
           <SprkStackItem>
             <SprkLink
