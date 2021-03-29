@@ -473,7 +473,7 @@ export const extended = () => ({
                 sprkLink
                 variant="unstyled"
                 href="#nogo"
-                class="sprk-c-Button sprk-c-Button--tertiary sprk-c-Button--compact"
+                class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
               >
                 Placeholder
               </a>
@@ -682,8 +682,8 @@ export const extended = () => ({
         },
       ],
       footer: {
-        analyticsString: 'Go Elsewhere Link',
-        text: 'Go Elsewhere',
+        analyticsString: 'Placeholder Link',
+        text: 'Placeholder',
         href: '#nogo',
       },
     },
