@@ -74,7 +74,7 @@ import { uniqueId } from 'lodash';
             <button
               sprkButton
               variant="tertiary"
-              [attr.data-analytics]="cancelAnalyticsString"
+              analyticsString="cancelAnalyticsString"
               (click)="emitCancelClick($event)"
             >
               {{ cancelText }}
