@@ -53,7 +53,8 @@ export const standout = () =>
         class="
           sprk-o-Stack__item
           sprk-c-Card__content
-          sprk-o-Stack sprk-o-Stack--medium
+          sprk-o-Stack
+          sprk-o-Stack--medium
         "
       >
         Standout Card Content
@@ -138,7 +139,8 @@ export const teaser = () =>
         class="
           sprk-o-Stack__item
           sprk-c-Card__content
-          sprk-o-Stack sprk-o-Stack--large
+          sprk-o-Stack
+          sprk-o-Stack--large
         "
       >
         <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">
@@ -153,10 +155,17 @@ export const teaser = () =>
           prima tantas signiferumque at. Numquam.
         </p>
 
-        <div class="sprk-o-Stack__item">
-          <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
-            Learn More
-          </a>
+        <div class="
+          sprk-o-Stack__item
+          sprk-o-Stack
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <div class="sprk-o-Stack__item">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -204,10 +213,17 @@ export const teaserWithDifferentElementOrder = () =>
           mea at, mei prima tantas signiferumque at. Numquam.
         </p>
 
-        <div class="sprk-o-Stack__item">
-          <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
-            Learn More
-          </a>
+        <div class="
+          sprk-o-Stack__item
+          sprk-o-Stack
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <div class="sprk-o-Stack__item">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -268,19 +284,26 @@ export const twoUpCards = () =>
             tantas signiferumque at. Numquam.
           </p>
 
-          <a
-            href="#nogo"
-            class="
-              sprk-o-Stack__item
-              sprk-b-Link
-              sprk-b-Link--has-icon
-            "
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--split@xs
+            sprk-o-Stack--end-row"
           >
-            Learn More
-            <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-              <use xlink:href="#arrow-right" />
-            </svg>
-          </a>
+            <a
+              href="#nogo"
+              class="
+                sprk-o-Stack__item
+                sprk-b-Link
+                sprk-b-Link--has-icon
+              "
+            >
+              Learn More
+              <svg class="sprk-c-Icon" viewBox="0 0 64 64">
+                <use xlink:href="#arrow-right" />
+              </svg>
+            </a>
+          </div>
         </div>
     </div>
 
@@ -318,20 +341,26 @@ export const twoUpCards = () =>
           signiferumque at.
           Numquam.
         </p>
-
-        <a
-          href="#nogo"
-          class="
-            sprk-o-Stack__item
-            sprk-b-Link
-            sprk-b-Link--has-icon
-          "
+        <div class="
+          sprk-o-Stack__item
+          sprk-o-Stack
+          sprk-o-Stack--split@xs
+          sprk-o-Stack--end-row"
         >
-          Learn More
-          <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-            <use xlink:href="#arrow-right" />
-          </svg>
-        </a>
+          <a
+            href="#nogo"
+            class="
+              sprk-o-Stack__item
+              sprk-b-Link
+              sprk-b-Link--has-icon
+            "
+          >
+            Learn More
+            <svg class="sprk-c-Icon" viewBox="0 0 64 64">
+              <use xlink:href="#arrow-right" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -576,10 +605,17 @@ export const fourUpCards = () =>
             amet, doctus invenirevix te. Facilisi perpetua.
           </p>
 
-          <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
-              Button
-            </a>
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--split@xxs
+            sprk-o-Stack--end-row"
+          >
+            <div class="sprk-o-Stack__item">
+              <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+                Button
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -609,10 +645,17 @@ export const fourUpCards = () =>
             doctus invenirevix te. Facilisi perpetua.
           </p>
 
-          <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
-              Button
-            </a>
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--split@xxs
+            sprk-o-Stack--end-row"
+          >
+            <div class="sprk-o-Stack__item">
+              <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+                Button
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -643,10 +686,17 @@ export const fourUpCards = () =>
             doctus invenirevix te. Facilisi perpetua.
           </p>
 
-          <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
-              Button
-            </a>
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--split@xxs
+            sprk-o-Stack--end-row"
+          >
+            <div class="sprk-o-Stack__item">
+              <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+                Button
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -677,10 +727,17 @@ export const fourUpCards = () =>
             doctus invenirevix te. Facilisi perpetua.
           </p>
 
-          <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
-              Button
-            </a>
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--split@xxs
+            sprk-o-Stack--end-row"
+          >
+            <div class="sprk-o-Stack__item">
+              <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+                Button
+              </a>
+            </div>
           </div>
         </div>
       </div>
