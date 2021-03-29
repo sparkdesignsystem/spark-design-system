@@ -127,16 +127,23 @@ export const teaser = () => (
         </SprkText>
       </SprkStackItem>
 
-      <SprkStackItem>
-        <SprkLink
-          variant="unstyled"
-          additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-          href="#nogo"
-          analyticsString="teaser-cta"
-        >
-          Learn More
-        </SprkLink>
-      </SprkStackItem>
+      <SprkStack
+        additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+      >
+        <SprkStackItem>
+          <SprkLink
+            variant="unstyled"
+            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+            href="#nogo"
+            analyticsString="teaser-cta"
+          >
+            Learn More
+          </SprkLink>
+        </SprkStackItem>
+      </SprkStack>
     </SprkStack>
   </SprkCard>
 );
@@ -225,16 +232,23 @@ export const teaserWithDifferentElementOrder = () => (
         </SprkText>
       </SprkStackItem>
 
-      <SprkStackItem>
-        <SprkLink
-          variant="unstyled"
-          additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-          href="#nogo"
-          analyticsString="teaser-diff-order-cta"
-        >
-          Learn More
-        </SprkLink>
-      </SprkStackItem>
+      <SprkStack
+        additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+      >
+        <SprkStackItem>
+          <SprkLink
+            variant="unstyled"
+            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+            href="#nogo"
+            analyticsString="teaser-diff-order-cta"
+          >
+            Learn More
+          </SprkLink>
+        </SprkStackItem>
+      </SprkStack>
     </SprkStack>
   </SprkCard>
 );
@@ -278,16 +292,23 @@ export const twoUpCards = () => (
           </SprkText>
         </SprkStackItem>
 
-        <SprkStackItem>
-          <SprkLink
-            variant="unstyled"
-            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-            href="#nogo"
-            analyticsString="two-up-cta"
-          >
-            Learn More
-          </SprkLink>
-        </SprkStackItem>
+        <SprkStack
+          additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <SprkStackItem>
+            <SprkLink
+              variant="unstyled"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+              href="#nogo"
+              analyticsString="two-up-cta"
+            >
+              Learn More
+            </SprkLink>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStack>
     </SprkCard>
 
@@ -324,16 +345,23 @@ export const twoUpCards = () => (
           </SprkText>
         </SprkStackItem>
 
-        <SprkStackItem>
-          <SprkLink
-            variant="unstyled"
-            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-            href="#nogo"
-            analyticsString="two-up-cta-2"
-          >
-            Learn More
-          </SprkLink>
-        </SprkStackItem>
+        <SprkStack
+          additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <SprkStackItem>
+            <SprkLink
+              variant="unstyled"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+              href="#nogo"
+              analyticsString="two-up-cta-2"
+            >
+              Learn More
+            </SprkLink>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStack>
     </SprkCard>
   </SprkStack>
@@ -382,16 +410,23 @@ export const threeUpCards = () => (
           </SprkText>
         </SprkStackItem>
 
-        <SprkStackItem>
-          <SprkLink
-            variant="unstyled"
-            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-            href="#nogo"
-            analyticsString="three-up-cta"
-          >
-            Learn More
-          </SprkLink>
-        </SprkStackItem>
+        <SprkStack
+          additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <SprkStackItem>
+            <SprkLink
+              variant="unstyled"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+              href="#nogo"
+              analyticsString="three-up-cta"
+            >
+              Learn More
+            </SprkLink>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStack>
     </SprkCard>
     <SprkCard additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l">
@@ -427,16 +462,23 @@ export const threeUpCards = () => (
           </SprkText>
         </SprkStackItem>
 
-        <SprkStackItem>
-          <SprkLink
-            variant="unstyled"
-            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-            href="#nogo"
-            analyticsString="three-up-cta-2"
-          >
-            Learn More
-          </SprkLink>
-        </SprkStackItem>
+        <SprkStack
+          additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <SprkStackItem>
+            <SprkLink
+              variant="unstyled"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+              href="#nogo"
+              analyticsString="three-up-cta-2"
+            >
+              Learn More
+            </SprkLink>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStack>
     </SprkCard>
     <SprkCard additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l">
@@ -472,16 +514,23 @@ export const threeUpCards = () => (
           </SprkText>
         </SprkStackItem>
 
-        <SprkStackItem>
-          <SprkLink
-            variant="unstyled"
-            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-            href="#nogo"
-            analyticsString="three-up-cta-3"
-          >
-            Learn More
-          </SprkLink>
-        </SprkStackItem>
+        <SprkStack
+          additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <SprkStackItem>
+            <SprkLink
+              variant="unstyled"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+              href="#nogo"
+              analyticsString="three-up-cta-3"
+            >
+              Learn More
+            </SprkLink>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStack>
     </SprkCard>
   </SprkStack>
@@ -530,16 +579,23 @@ export const fourUpCards = () => (
           </SprkText>
         </SprkStackItem>
 
-        <SprkStackItem>
-          <SprkLink
-            variant="unstyled"
-            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-            href="#nogo"
-            analyticsString="four-up-cta"
-          >
-            Learn More
-          </SprkLink>
-        </SprkStackItem>
+        <SprkStack
+          additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <SprkStackItem>
+            <SprkLink
+              variant="unstyled"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+              href="#nogo"
+              analyticsString="four-up-cta"
+            >
+              Learn More
+            </SprkLink>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStack>
     </SprkCard>
     <SprkCard additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l">
@@ -575,16 +631,23 @@ export const fourUpCards = () => (
           </SprkText>
         </SprkStackItem>
 
-        <SprkStackItem>
-          <SprkLink
-            variant="unstyled"
-            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-            href="#nogo"
-            analyticsString="four-up-cta-2"
-          >
-            Learn More
-          </SprkLink>
-        </SprkStackItem>
+        <SprkStack
+          additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <SprkStackItem>
+            <SprkLink
+              variant="unstyled"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+              href="#nogo"
+              analyticsString="four-up-cta-2"
+            >
+              Learn More
+            </SprkLink>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStack>
     </SprkCard>
     <SprkCard additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l">
@@ -620,16 +683,23 @@ export const fourUpCards = () => (
           </SprkText>
         </SprkStackItem>
 
-        <SprkStackItem>
-          <SprkLink
-            variant="unstyled"
-            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-            href="#nogo"
-            analyticsString="four-up-cta-3"
-          >
-            Learn More
-          </SprkLink>
-        </SprkStackItem>
+        <SprkStack
+          additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <SprkStackItem>
+            <SprkLink
+              variant="unstyled"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+              href="#nogo"
+              analyticsString="four-up-cta-3"
+            >
+              Learn More
+            </SprkLink>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStack>
     </SprkCard>
     <SprkCard additionalClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@l">
@@ -665,16 +735,23 @@ export const fourUpCards = () => (
           </SprkText>
         </SprkStackItem>
 
-        <SprkStackItem>
-          <SprkLink
-            variant="unstyled"
-            additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-            href="#nogo"
-            analyticsString="four-up-cta-4"
-          >
-            Learn More
-          </SprkLink>
-        </SprkStackItem>
+        <SprkStack
+          additionalClasses="
+          sprk-o-Stack__item
+          sprk-o-Stack--split@xxs
+          sprk-o-Stack--end-row"
+        >
+          <SprkStackItem>
+            <SprkLink
+              variant="unstyled"
+              additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+              href="#nogo"
+              analyticsString="four-up-cta-4"
+            >
+              Learn More
+            </SprkLink>
+          </SprkStackItem>
+        </SprkStack>
       </SprkStack>
     </SprkCard>
   </SprkStack>
