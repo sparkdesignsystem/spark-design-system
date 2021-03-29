@@ -6,7 +6,6 @@ import uniqueId from 'lodash/uniqueId';
 import SprkIcon from '../icons/SprkIcon';
 import SprkLink from '../../base/links/SprkLink';
 import SprkText from '../../base/typography/SprkText/SprkText';
-import SprkHeading from '../../base/typography/SprkHeading/SprkHeading';
 
 class SprkDropdown extends Component {
   constructor(props) {
@@ -205,12 +204,13 @@ class SprkDropdown extends Component {
           <div className={classNames('sprk-c-Dropdown', additionalClasses)}>
             {heading !== '' && (
               <div className="sprk-c-Dropdown__header">
-                <SprkHeading
+                <SprkText
                   element="h2"
+                  variant="bodyTwo"
                   additionalClasses="sprk-c-Dropdown__title"
                 >
                   {heading}
-                </SprkHeading>
+                </SprkText>
               </div>
             )}
             <ul
@@ -273,16 +273,14 @@ class SprkDropdown extends Component {
                           }}
                           {...choicesRest}
                         >
-                          <SprkText element="p" variant="bodyOne">
-                            {content.title}
-                          </SprkText>
+                          <SprkText variant="bodyOne">{content.title}</SprkText>
                           {content.infoLine1 && (
-                            <SprkText element="p" variant="bodyTwo">
+                            <SprkText variant="bodyTwo">
                               {content.infoLine1}
                             </SprkText>
                           )}
                           {content.infoLine2 && (
-                            <SprkText element="p" variant="bodyTwo">
+                            <SprkText variant="bodyTwo">
                               {content.infoLine2}
                             </SprkText>
                           )}
