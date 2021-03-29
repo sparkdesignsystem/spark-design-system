@@ -15,6 +15,11 @@ import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
     SprkTextModule,
   ],
   declarations: [SprkDropdownComponent],
-  exports: [SprkDropdownComponent],
+  exports: [
+    SprkDropdownComponent,
+    SprkIconModule,
+    SprkLinkDirectiveModule,
+    SprkTextModule,
+  ],
 })
 export class SprkDropdownModule {}
