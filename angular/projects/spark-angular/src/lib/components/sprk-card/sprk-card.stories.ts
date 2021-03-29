@@ -162,8 +162,7 @@ export const teaser = () => ({
         </p>
 
         <sprk-stack
-          splitAt="tiny"
-          additionalClasses="sprk-o-Stack--end-row"
+          additionalClasses="sprk-o-Stack--end-column"
           sprkStackItem
         >
           <div sprkStackItem>
@@ -298,8 +297,7 @@ export const teaserWithDifferentElementOrder = () => ({
         </p>
 
         <sprk-stack
-          splitAt="tiny"
-          additionalClasses="sprk-o-Stack--end-row"
+          additionalClasses="sprk-o-Stack--end-column"
           sprkStackItem
         >
           <div sprkStackItem>
@@ -377,8 +375,7 @@ export const twoUpCards = () => ({
             </p>
 
             <sprk-stack
-              splitAt="tiny"
-              additionalClasses="sprk-o-Stack--end-row"
+              additionalClasses="sprk-o-Stack--end-column"
               sprkStackItem
             >
               <div sprkStackItem>
@@ -428,8 +425,7 @@ export const twoUpCards = () => ({
             </p>
 
             <sprk-stack
-              splitAt="tiny"
-              additionalClasses="sprk-o-Stack--end-row"
+              additionalClasses="sprk-o-Stack--end-column"
               sprkStackItem
             >
               <div sprkStackItem>
@@ -507,8 +503,7 @@ export const threeUpCards = () => ({
             </p>
 
             <sprk-stack
-              splitAt="tiny"
-              additionalClasses="sprk-o-Stack--end-row"
+              additionalClasses="sprk-o-Stack--end-column"
               sprkStackItem
             >
               <div sprkStackItem>
@@ -558,8 +553,7 @@ export const threeUpCards = () => ({
             </p>
 
             <sprk-stack
-              splitAt="tiny"
-              additionalClasses="sprk-o-Stack--end-row"
+              additionalClasses="sprk-o-Stack--end-column"
               sprkStackItem
             >
               <div sprkStackItem>
@@ -609,8 +603,7 @@ export const threeUpCards = () => ({
             </p>
 
             <sprk-stack
-              splitAt="tiny"
-              additionalClasses="sprk-o-Stack--end-row"
+              additionalClasses="sprk-o-Stack--end-column"
               sprkStackItem
             >
               <div sprkStackItem>
@@ -688,8 +681,7 @@ export const fourUpCards = () => ({
             </p>
 
             <sprk-stack
-              splitAt="tiny"
-              additionalClasses="sprk-o-Stack--end-row"
+              additionalClasses="sprk-o-Stack--end-column"
               sprkStackItem
             >
               <div sprkStackItem>
@@ -739,8 +731,7 @@ export const fourUpCards = () => ({
             </p>
 
             <sprk-stack
-              splitAt="tiny"
-              additionalClasses="sprk-o-Stack--end-row"
+              additionalClasses="sprk-o-Stack--end-column"
               sprkStackItem
             >
               <div sprkStackItem>
@@ -790,8 +781,7 @@ export const fourUpCards = () => ({
             </p>
 
             <sprk-stack
-              splitAt="tiny"
-              additionalClasses="sprk-o-Stack--end-row"
+              additionalClasses="sprk-o-Stack--end-column"
               sprkStackItem
             >
               <div sprkStackItem>
@@ -841,8 +831,7 @@ export const fourUpCards = () => ({
             </p>
 
             <sprk-stack
-              splitAt="tiny"
-              additionalClasses="sprk-o-Stack--end-row"
+              additionalClasses="sprk-o-Stack--end-column"
               sprkStackItem
             >
               <div sprkStackItem>

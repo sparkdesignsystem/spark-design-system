@@ -158,8 +158,7 @@ export const teaser = () =>
         <div class="
           sprk-o-Stack__item
           sprk-o-Stack
-          sprk-o-Stack--split@xxs
-          sprk-o-Stack--end-row"
+          sprk-o-Stack--end-column"
         >
           <div class="sprk-o-Stack__item">
             <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
@@ -216,8 +215,7 @@ export const teaserWithDifferentElementOrder = () =>
         <div class="
           sprk-o-Stack__item
           sprk-o-Stack
-          sprk-o-Stack--split@xxs
-          sprk-o-Stack--end-row"
+          sprk-o-Stack--end-column"
         >
           <div class="sprk-o-Stack__item">
             <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
@@ -287,8 +285,7 @@ export const twoUpCards = () =>
           <div class="
             sprk-o-Stack__item
             sprk-o-Stack
-            sprk-o-Stack--split@xs
-            sprk-o-Stack--end-row"
+            sprk-o-Stack--end-column"
           >
             <a
               href="#nogo"
@@ -344,8 +341,7 @@ export const twoUpCards = () =>
         <div class="
           sprk-o-Stack__item
           sprk-o-Stack
-          sprk-o-Stack--split@xs
-          sprk-o-Stack--end-row"
+          sprk-o-Stack--end-column"
         >
           <a
             href="#nogo"
@@ -608,8 +604,7 @@ export const fourUpCards = () =>
           <div class="
             sprk-o-Stack__item
             sprk-o-Stack
-            sprk-o-Stack--split@xxs
-            sprk-o-Stack--end-row"
+            sprk-o-Stack--end-column"
           >
             <div class="sprk-o-Stack__item">
               <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
@@ -648,8 +643,7 @@ export const fourUpCards = () =>
           <div class="
             sprk-o-Stack__item
             sprk-o-Stack
-            sprk-o-Stack--split@xxs
-            sprk-o-Stack--end-row"
+            sprk-o-Stack--end-column"
           >
             <div class="sprk-o-Stack__item">
               <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
@@ -689,8 +683,7 @@ export const fourUpCards = () =>
           <div class="
             sprk-o-Stack__item
             sprk-o-Stack
-            sprk-o-Stack--split@xxs
-            sprk-o-Stack--end-row"
+            sprk-o-Stack--end-column"
           >
             <div class="sprk-o-Stack__item">
               <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
@@ -730,8 +723,7 @@ export const fourUpCards = () =>
           <div class="
             sprk-o-Stack__item
             sprk-o-Stack
-            sprk-o-Stack--split@xxs
-            sprk-o-Stack--end-row"
+            sprk-o-Stack--end-column"
           >
             <div class="sprk-o-Stack__item">
               <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
