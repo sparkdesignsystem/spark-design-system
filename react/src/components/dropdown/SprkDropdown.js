@@ -5,6 +5,8 @@ import classNames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
 import SprkIcon from '../icons/SprkIcon';
 import SprkLink from '../../base/links/SprkLink';
+import SprkText from '../../base/typography/SprkText/SprkText';
+import SprkHeading from '../../base/typography/SprkHeading/SprkHeading';
 
 class SprkDropdown extends Component {
   constructor(props) {
@@ -203,7 +205,12 @@ class SprkDropdown extends Component {
           <div className={classNames('sprk-c-Dropdown', additionalClasses)}>
             {heading !== '' && (
               <div className="sprk-c-Dropdown__header">
-                <h2 className="sprk-c-Dropdown__title">{heading}</h2>
+                <SprkHeading
+                  element="h2"
+                  additionalClasses="sprk-c-Dropdown__title"
+                >
+                  {heading}
+                </SprkHeading>
               </div>
             )}
             <ul
@@ -266,16 +273,18 @@ class SprkDropdown extends Component {
                           }}
                           {...choicesRest}
                         >
-                          <p className="sprk-b-TypeBodyOne">{content.title}</p>
+                          <SprkText element="p" variant="bodyOne">
+                            {content.title}
+                          </SprkText>
                           {content.infoLine1 && (
-                            <p className="sprk-b-TypeBodyTwo">
+                            <SprkText element="p" variant="bodyTwo">
                               {content.infoLine1}
-                            </p>
+                            </SprkText>
                           )}
                           {content.infoLine2 && (
-                            <p className="sprk-b-TypeBodyTwo">
+                            <SprkText element="p" variant="bodyTwo">
                               {content.infoLine2}
-                            </p>
+                            </SprkText>
                           )}
                         </TagName>
                       </>

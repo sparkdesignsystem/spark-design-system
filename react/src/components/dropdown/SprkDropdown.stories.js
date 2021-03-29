@@ -68,7 +68,7 @@ export const informational = () => (
       },
       footer: (
         <SprkButton
-          variant="tertiary"
+          variant="secondary"
           additionalClasses="sprk-c-Button--compact"
           onClick={() => {
             console.log('Clicked!');
