@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import noop from 'lodash/noop';
+import SprkButton from '../buttons/SprkButton';
+import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
 
 class ModalFooter extends Component {
   constructor(props) {
@@ -11,10 +13,10 @@ class ModalFooter extends Component {
   }
 
   focusConfirm() {
-    // Apply focus to the confirm button. The button should receive focus when the
+    // Apply focus to the confirm button.
+    // The button should receive focus when the
     // modal becomes visible (not necessarily when it renders or updates), and
     // only in the default variant.
-
     this.confirmButtonRef.current.focus();
   }
 
@@ -29,28 +31,37 @@ class ModalFooter extends Component {
     } = this.props;
 
     return (
-      <footer className="sprk-o-Stack__item">
+      <footer
+        className="
+          sprk-o-Stack__item
+          sprk-c-Modal__footer
+          sprk-o-Stack
+          sprk-o-Stack--split@xs
+          sprk-o-Stack--end-row
+          sprk-o-Stack--medium"
+      >
         {/* vanilla expects a paragraph here */}
         <p>&nbsp;</p>
-        <button
-          className="sprk-c-Button sprk-u-mrm"
-          onClick={confirmClick}
-          type="button"
-          ref={this.confirmButtonRef}
-          data-analytics={confirmAnalyticsString}
-        >
-          {confirmText}
-        </button>
-
-        <button
-          className="sprk-c-Button sprk-c-Button--tertiary"
-          data-sprk-modal-cancel="exampleChoiceModal"
-          onClick={cancelClick}
-          type="button"
-          data-analytics={cancelAnalyticsString}
-        >
-          {cancelText}
-        </button>
+        <SprkStackItem>
+          <SprkButton
+            variant="tertiary"
+            onClick={cancelClick}
+            type="button"
+            analyticsString={cancelAnalyticsString}
+          >
+            {cancelText}
+          </SprkButton>
+        </SprkStackItem>
+        <SprkStackItem>
+          <SprkButton
+            onClick={confirmClick}
+            type="button"
+            forwardedRef={this.confirmButtonRef}
+            analyticsString={confirmAnalyticsString}
+          >
+            {confirmText}
+          </SprkButton>
+        </SprkStackItem>
       </footer>
     );
   }
@@ -59,22 +70,24 @@ class ModalFooter extends Component {
 ModalFooter.propTypes = {
   /**
    * The function that runs when confirm choice is clicked.
-  */
+   */
   confirmClick: PropTypes.func,
   /**
    * The function that runs when cancel choice, the mask, or Esc is pressed.
-  */
+   */
   cancelClick: PropTypes.func,
   /** Text to render on the confirmation button. */
   confirmText: PropTypes.string,
   /** Text to render on the cancel button. */
   cancelText: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving
+   * as a unique selector for outside libraries to capture data.
    */
   confirmAnalyticsString: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving
+   * as a unique selector for outside libraries to capture data.
    */
   cancelAnalyticsString: PropTypes.string,
 };
