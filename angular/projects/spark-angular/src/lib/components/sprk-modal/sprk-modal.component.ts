@@ -83,7 +83,7 @@ import { uniqueId } from 'lodash';
           <div sprkStackItem>
             <button
               sprkButton
-              [attr.data-analytics]="confirmAnalyticsString"
+               analyticsString="confirmAnalyticsString"
               (click)="emitConfirmClick($event)"
             >
               {{ confirmText }}
