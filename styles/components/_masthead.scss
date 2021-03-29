@@ -165,9 +165,14 @@
     color: $sprk-masthead-link-visited-color;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    color: $sprk-masthead-link-hover-color;
+
     .sprk-c-Icon {
       color: $sprk-masthead-link-icon-hover-color;
+      stroke: $sprk-masthead-link-icon-hover-color;
+      fill: $sprk-masthead-link-icon-hover-color;
     }
   }
 }
@@ -198,8 +203,13 @@
   &:hover,
   &:active,
   &:focus {
-    color: $sprk-masthead-selector-font-color;
-    border: $sprk-masthead-selector-border;
+    color: $sprk-masthead-selector-hover-font-color;
+    border: $sprk-masthead-selector-hover-border;
+
+    .sprk-c-Icon {
+      stroke: $sprk-masthead-selector-hover-font-color;
+      fill: $sprk-masthead-selector-hover-font-color;
+    }
   }
 
   @media all and (min-width: $sprk-masthead-breakpoint) {
@@ -247,6 +257,12 @@
 
     .sprk-c-Masthead__link--big-nav {
       border-bottom: $sprk-big-nav-link-hover-border-bottom;
+      color: $sprk-big-nav-item-active-color;
+    }
+
+    .sprk-c-Icon {
+      stroke: $sprk-big-nav-item-active-color;
+      fill: $sprk-big-nav-item-active-color;
     }
   }
 }
@@ -333,12 +349,36 @@
 .sprk-c-Masthead__selector-dropdown-header {
   padding: ($sprk-masthead-selector-dropdown-item-padding / 2)
     $sprk-masthead-selector-dropdown-item-padding;
+
+  &:hover .sprk-c-Icon,
+  &:focus .sprk-c-Icon,
+  &:active .sprk-c-Icon {
+    stroke: $sprk-masthead-selector-hover-font-color;
+    fill: $sprk-masthead-selector-hover-font-color;
+  }
+}
+
+.sprk-c-Masthead__selector-dropdown-header-link:focus {
+  .sprk-c-Masthead__selector-dropdown-title {
+    color: $sprk-masthead-selector-hover-font-color;
+  }
+
+  .sprk-c-Icon {
+    stroke: $sprk-masthead-selector-hover-font-color;
+    fill: $sprk-masthead-selector-hover-font-color;
+  }
 }
 
 .sprk-c-Masthead__selector-dropdown-title {
   color: $sprk-masthead-selector-dropdown-title-color;
   font-weight: $sprk-masthead-selector-dropdown-title-font-weight;
   font-size: $sprk-masthead-selector-dropdown-title-font-size;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $sprk-masthead-selector-hover-font-color;
+  }
 }
 
 .sprk-c-Masthead__selector-dropdown-links {
