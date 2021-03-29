@@ -47,7 +47,7 @@ describe('SprkHighlightBoardComponent', () => {
     );
   });
 
-  it('should add the correct class if type is set as noImage', () => {
+  it('should add the correct classes if type is set as noImage', () => {
     component.type = 'noImage';
     component.heading = 'heading';
     fixture.detectChanges();
@@ -56,7 +56,7 @@ describe('SprkHighlightBoardComponent', () => {
     expect(element.querySelectorAll('.sprk-b-TypeDisplayOne').length).toBe(0);
   });
 
-  it('should add the correct class if type is set as stacked', () => {
+  it('should add the correct classes if type is set as stacked', () => {
     component.type = 'stacked';
     component.heading = 'heading';
     fixture.detectChanges();
