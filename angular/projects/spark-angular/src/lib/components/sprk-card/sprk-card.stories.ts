@@ -161,17 +161,23 @@ export const teaser = () => ({
           invenirevix te. Facilisi perpetua.
         </p>
 
-        <div sprkStackItem>
-          <a
-            sprkLink
-            variant="unstyled"
-            href="#nogo"
-            class="sprk-c-Button sprk-c-Button--secondary"
-            analyticsString="teaser-cta"
-          >
-            Learn More
-          </a>
-        </div>
+        <sprk-stack
+          splitAt="tiny"
+          additionalClasses="sprk-o-Stack--end-row"
+          sprkStackItem
+        >
+          <div sprkStackItem>
+            <a
+              sprkLink
+              variant="unstyled"
+              href="#nogo"
+              class="sprk-c-Button sprk-c-Button--secondary"
+              analyticsString="teaser-cta"
+            >
+              Learn More
+            </a>
+          </div>
+        </sprk-stack>
       </sprk-stack>
     </sprk-card>
  `,
@@ -291,17 +297,23 @@ export const teaserWithDifferentElementOrder = () => ({
           invenirevix te. Facilisi perpetua.
         </p>
 
-        <div sprkStackItem>
-          <a
-            sprkLink
-            variant="unstyled"
-            href="#nogo"
-            class="sprk-c-Button sprk-c-Button--secondary"
-            analyticsString="teaser-diff-order-cta"
-          >
-            Learn More
-          </a>
-        </div>
+        <sprk-stack
+          splitAt="tiny"
+          additionalClasses="sprk-o-Stack--end-row"
+          sprkStackItem
+        >
+          <div sprkStackItem>
+            <a
+              sprkLink
+              variant="unstyled"
+              href="#nogo"
+              class="sprk-c-Button sprk-c-Button--secondary"
+              analyticsString="teaser-diff-order-cta"
+            >
+              Learn More
+            </a>
+          </div>
+        </sprk-stack>
       </sprk-stack>
     </sprk-card>
   `,
@@ -364,17 +376,23 @@ export const twoUpCards = () => ({
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                class="sprk-c-Button sprk-c-Button--secondary"
-                analyticsString="two-up-cta"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              splitAt="tiny"
+              additionalClasses="sprk-o-Stack--end-row"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                  analyticsString="two-up-cta"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -409,17 +427,23 @@ export const twoUpCards = () => ({
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                class="sprk-c-Button sprk-c-Button--secondary"
-                analyticsString="two-up-cta-2"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              splitAt="tiny"
+              additionalClasses="sprk-o-Stack--end-row"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                  analyticsString="two-up-cta-2"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -482,17 +506,23 @@ export const threeUpCards = () => ({
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="three-up-cta"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              splitAt="tiny"
+              additionalClasses="sprk-o-Stack--end-row"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="three-up-cta"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -527,17 +557,23 @@ export const threeUpCards = () => ({
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="three-up-cta-2"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              splitAt="tiny"
+              additionalClasses="sprk-o-Stack--end-row"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="three-up-cta-2"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -572,17 +608,23 @@ export const threeUpCards = () => ({
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="three-up-cta-3"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              splitAt="tiny"
+              additionalClasses="sprk-o-Stack--end-row"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="three-up-cta-3"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -645,17 +687,23 @@ export const fourUpCards = () => ({
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="four-up-cta"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              splitAt="tiny"
+              additionalClasses="sprk-o-Stack--end-row"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="four-up-cta"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -690,17 +738,23 @@ export const fourUpCards = () => ({
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="four-up-cta-2"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              splitAt="tiny"
+              additionalClasses="sprk-o-Stack--end-row"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="four-up-cta-2"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -735,17 +789,23 @@ export const fourUpCards = () => ({
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                analyticsString="four-up-cta-3"
-                href="#nogo"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              splitAt="tiny"
+              additionalClasses="sprk-o-Stack--end-row"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  analyticsString="four-up-cta-3"
+                  href="#nogo"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -780,17 +840,23 @@ export const fourUpCards = () => ({
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="four-up-cta-4"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              splitAt="tiny"
+              additionalClasses="sprk-o-Stack--end-row"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="four-up-cta-4"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
