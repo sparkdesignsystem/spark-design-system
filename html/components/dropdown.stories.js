@@ -162,7 +162,7 @@ export const informational = () => {
       <div
         class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
       >
-        <a class="sprk-c-Button sprk-c-Button--tertiary" href="#nogo">
+        <a class="sprk-c-Button sprk-c-Button--secondary" href="#nogo">
           Go Elsewhere
         </a>
       </div>
