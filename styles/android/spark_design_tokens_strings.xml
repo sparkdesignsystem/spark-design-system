@@ -158,7 +158,7 @@
   <string name="sprk_checkbox_huge_container_padding">20px 16.00dp 20px 55px</string><!-- The padding of the huge checkbox input. -->
   <string name="sprk_checkbox_huge_container_hover_box_shadow">0 3px 10px 1px rgba(0, 0, 0, 0.08)</string><!-- The box shadow of the huge checkbox input when hovered. -->
   <string name="sprk_checkbox_huge_container_disabled_box_shadow">none</string><!-- The box shadow of the huge checkbox input when disabled. -->
-  <string name="sprk_checkbox_custom_input_border">1px solid #ff1c1b1a</string><!-- The border of the custom checkbox input. -->
+  <string name="sprk_checkbox_custom_input_border">1px solid #ff494948</string><!-- The border of the custom checkbox input. -->
   <string name="sprk_checkbox_custom_input_border_focus">2px solid #ff603aa1</string><!-- The border of the custom checkbox input when focused. -->
   <string name="sprk_checkbox_custom_input_border_focus_checked">2px solid #ff1c1b1a</string><!-- The border of the custom checkbox input when it is checked and focused. -->
   <string name="sprk_checkbox_custom_input_background_color_disabled">#ffdddddd</string><!-- The background color of the custom checkbox input when disabled. -->

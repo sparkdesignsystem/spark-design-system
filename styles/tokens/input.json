@@ -2176,7 +2176,7 @@
       },
       "border": {
         "comment": "The border of the custom checkbox input.",
-        "value": "1px solid {black.value}",
+        "value": "1px solid {black-tint.80.value}",
         "attributes": {
           "category": "content"
         },
