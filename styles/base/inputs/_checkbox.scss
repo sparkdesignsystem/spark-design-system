@@ -74,6 +74,10 @@
 }
 
 // Disabled styles for checkbox and label
+.sprk-b-Checkbox__input:disabled + .sprk-b-Checkbox__label {
+  cursor: $sprk-checkbox-custom-input-cursor-disabled;
+}
+
 .sprk-b-Checkbox__input:disabled + .sprk-b-Checkbox__label::before {
   cursor: $sprk-checkbox-custom-input-cursor-disabled;
   border-color: $sprk-checkbox-custom-input-border-color-disabled;

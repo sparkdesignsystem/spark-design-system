@@ -1553,9 +1553,27 @@
         "file": "settings",
         "themable": true
       },
+      "border-disabled": {
+        "comment": "The border of the outer circle in the disabled radio input.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "background-color-disabled": {
+        "comment": "The background color of the outer circle in the disabled radio input.",
+        "value": "{text-input.disabled.background-color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "border-hover-disabled": {
         "comment": "The border of the outer circle in the disabled radio input on hover.",
-        "value": "2px solid {black-tint.50.value}",
+        "value": "none",
         "attributes": {
           "category": "content"
         },
@@ -1690,7 +1708,7 @@
     },
     "cursor-hover-disabled": {
       "comment": "The cursor style of the disabled radio on hover.",
-      "value": "default",
+      "value": "not-allowed",
       "attributes": {
         "category": "content"
       },
@@ -1923,6 +1941,12 @@
           "attributes": {
             "category": "content"
           },
+          "file": "settings",
+          "themable": true
+        },
+        "border-disabled": {
+          "comment": "The border of the outer circle of the huge radio input when it is disabled.",
+          "value": "1px solid {black-tint.50.value}",
           "file": "settings",
           "themable": true
         }

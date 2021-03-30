@@ -378,6 +378,7 @@ public class SparkDesignTokens {
     public static let sprkRadioInputHugeFocusedOuterCircleBorderBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkRadioInputHugeLabelHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkRadioInputHugeLabelHoverBoxShadow = "0 3px 10px 1px rgba(0, 0, 0, 0.08)"
+    public static let sprkRadioInputHugeOuterCircleBorderDisabled = 1px solid UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkRadioInputHugeOuterCircleBorderHoverBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkRadioInputHugeTransition = "all 0.2s ease-in-out"
     public static let sprkRadioInputInnerCircleBackgroundColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
