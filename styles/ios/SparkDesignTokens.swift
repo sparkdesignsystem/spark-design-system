@@ -71,7 +71,7 @@ public class SparkDesignTokens {
     public static let sprkCheckboxCustomInputBackgroundColorHover = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkCheckboxCustomInputBorderColorChecked = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkCheckboxCustomInputBorderColorDisabled = transparent
-    public static let sprkCheckboxCustomInputBorderColorHover = UIColor(red: 0.376, green: 0.373, blue: 0.369, alpha:1)
+    public static let sprkCheckboxCustomInputBorderHover = 1.5px solid UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkCheckboxHugeContainerCheckedBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkCheckboxHugeContainerCheckedHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkCheckboxHugeContainerDisabledBackground = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
@@ -83,6 +83,7 @@ public class SparkDesignTokens {
     public static let sprkCheckboxHugeContainerFocusBorderWidth = CGFloat(2.00)
     public static let sprkCheckboxHugeContainerFocusCheckedBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkCheckboxHugeContainerFocusHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
+    public static let sprkCheckboxHugeContainerHoverBorder = 1.5px solid UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkCheckboxHugeContainerHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkCheckboxHugeCustomInputCheckboxElementCheckedBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkCheckboxHugeCustomInputDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
@@ -376,10 +377,10 @@ public class SparkDesignTokens {
     public static let sprkRadioInputHugeFocusedLabelBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkRadioInputHugeFocusedLabelBorderWidth = CGFloat(2.00)
     public static let sprkRadioInputHugeFocusedOuterCircleBorderBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
-    public static let sprkRadioInputHugeLabelHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
+    public static let sprkRadioInputHugeLabelHoverBorder = 1.5px solid UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkRadioInputHugeLabelHoverBoxShadow = "0 3px 10px 1px rgba(0, 0, 0, 0.08)"
     public static let sprkRadioInputHugeOuterCircleBorderDisabled = 1px solid UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
-    public static let sprkRadioInputHugeOuterCircleBorderHoverBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
+    public static let sprkRadioInputHugeOuterCircleHoverBackgroundColor = UIColor(red: 0.110, green: 0.431, blue: 0.949, alpha:1)
     public static let sprkRadioInputHugeTransition = "all 0.2s ease-in-out"
     public static let sprkRadioInputInnerCircleBackgroundColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkSelectionBgColor = UIColor(red: 0.906, green: 0.886, blue: 0.949, alpha:1)

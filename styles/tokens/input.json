@@ -1528,7 +1528,16 @@
     "outer-circle": {
       "hover-border": {
         "comment": "The border of the outer circle in the radio input on hover.",
-        "value": "2px solid {black-tint.70.value}",
+        "value": "1.5px solid {black.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "hover-background-color": {
+        "comment": "The background color of the outer circle in the radio input on hover.",
+        "value": "{gray.value}",
         "attributes": {
           "category": "content"
         },
@@ -1777,9 +1786,9 @@
           "file": "settings",
           "themable": true
         },
-        "hover-border-color": {
-          "comment": "The border color of the huge radio input label on hover.",
-          "value": "{black.value}",
+        "hover-border": {
+          "comment": "The border of the huge radio input label on hover.",
+          "value": "1.5px solid {black.value}",
           "file": "settings",
           "themable": true
         },
@@ -1884,9 +1893,9 @@
         "themable": true
       },
       "outer-circle": {
-        "border-hover-background-color": {
+        "hover-background-color": {
           "comment": "The background color of the outer circle of the huge radio input on hover.",
-          "value": "{gray.value}",
+          "value": "{blue.value}",
           "file": "settings",
           "themable": true
         },
@@ -2118,6 +2127,12 @@
         "file": "settings",
         "themable": true
       },
+      "hover-border": {
+        "comment": "The border on focused huge checkbox Inputs.",
+        "value": "1.5px solid {black.value}",
+        "file": "settings",
+        "themable": true
+      },
       "checked-border-color": {
         "comment": "The border color of the huge checkbox input when checked.",
         "value": "{purple.value}",
@@ -2219,9 +2234,9 @@
         "file": "settings",
         "themable": true
       },
-      "border-color-hover": {
+      "border-hover": {
         "comment": "The border color of the custom checkbox input when hovered.",
-        "value": "{black-tint.70.value}",
+        "value": "1.5px solid {black.value}",
         "file": "settings",
         "themable": true
       },

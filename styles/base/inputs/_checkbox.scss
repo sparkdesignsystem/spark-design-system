@@ -50,7 +50,7 @@
 // Hover styles for unchecked checkbox
 .sprk-b-Checkbox__input:hover + .sprk-b-Checkbox__label::before {
   background-color: $sprk-checkbox-custom-input-background-color-hover;
-  border-color: $sprk-checkbox-custom-input-border-color-hover;
+  border: $sprk-checkbox-custom-input-border-hover;
 }
 
 // Checked styles for checkbox and label
@@ -147,9 +147,15 @@
       /* stylelint-enable max-nesting-depth */
     }
 
+    &:hover {
+      /* stylelint-disable max-nesting-depth */
+      + .sprk-b-Checkbox__label {
+        border: $sprk-checkbox-huge-container-hover-border;
+      }
+    }
+
     // Styles for container when focused by keyboard
     &:focus {
-      /* stylelint-disable max-nesting-depth */
       + .sprk-b-Checkbox__label {
         // Container's border color when focused through keyboard
         border: $sprk-checkbox-huge-container-focus-border;

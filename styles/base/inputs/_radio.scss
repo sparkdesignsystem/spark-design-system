@@ -15,6 +15,7 @@
   &:hover {
     + .sprk-b-Radio__label::before {
       border: $sprk-radio-input-outer-circle-hover-border;
+      background-color: $sprk-radio-input-outer-circle-hover-background-color;
     }
   }
 
@@ -106,12 +107,12 @@
     line-height: $sprk-radio-input-huge-label-line-height;
 
     &:hover {
-      border-color: $sprk-radio-input-huge-label-hover-border-color;
+      border: $sprk-radio-input-huge-label-hover-border;
       box-shadow: $sprk-radio-input-huge-label-hover-box-shadow;
 
       /* stylelint-disable max-nesting-depth */
       ::before {
-        background-color: $sprk-radio-input-huge-outer-circle-border-hover-background-color;
+        background-color: $sprk-radio-input-huge-outer-circle-hover-background-color;
       }
     }
   }
