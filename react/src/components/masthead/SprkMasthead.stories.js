@@ -174,7 +174,7 @@ const utilityItems = [
   <SprkButton
     element="a"
     href="#nogo"
-    variant="quaternary"
+    variant="secondary"
     additionalClasses="sprk-u-Right--zero sprk-u-mrm sprk-c-Button--compact"
   >
     Sign In

@@ -226,7 +226,7 @@ export const defaultStory = () => {
               <a
                 class="
                   sprk-c-Button
-                  sprk-c-Button--quaternary
+                  sprk-c-Button--secondary
                   sprk-c-Button--compact
                 "
                 href="#nogo"
@@ -396,8 +396,9 @@ export const defaultStory = () => {
             <a
               class="
                 sprk-c-Button
-                sprk-c-Button--quaternary
-                sprk-c-Button--compact sprk-c-Button--full@s
+                sprk-c-Button--secondary
+                sprk-c-Button--compact
+                sprk-c-Button--full@s
               "
               href="#nogo"
             >
