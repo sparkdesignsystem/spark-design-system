@@ -48,7 +48,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   /**
    *  Determines the corresponding button style.
    */
-  @Input() variant: 'primary' | 'secondary' | 'tertiary';
+  @Input() variant: 'primary' | 'secondary' | 'tertiary' = 'primary';
 
   // Always set the button class on the element
   @HostBinding('class.sprk-c-Button') true;
