@@ -92,7 +92,7 @@
     },
     "color": {
       "comment": "The color setting for Inputs.",
-      "value": "{black-tint.80.value}",
+      "value": "{black.value}",
       "file": "settings",
       "themable": true
     },
@@ -150,7 +150,7 @@
       },
       "box-shadow": {
         "comment": "The box shadow on Inputs when focused.",
-        "value": "0 2px 8px {black-tint.80.value}",
+        "value": "0 2px 8px {black-tint.50.value}",
         "attributes": {
           "category": "content"
         },
@@ -167,7 +167,7 @@
     "error": {
       "border-width": {
         "comment": "The border width on Inputs when there is an error.",
-        "value": "2px",
+        "value": "1px",
         "attributes": {
           "category": "size"
         },
@@ -456,7 +456,7 @@
       "error-border": {
         "width": {
           "comment": "The border width on huge Inputs when they have an error.",
-          "value": "2px",
+          "value": "1px",
           "attributes": {
             "category": "size"
           },
@@ -464,12 +464,21 @@
           "themable": true
         }
       },
-      "disabled-border": {
-        "width": {
+      "disabled": {
+        "border-width": {
           "comment": "The border width on huge Inputs when they are disabled.",
           "value": "0px",
           "attributes": {
             "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "box-shadow": {
+          "comment": "The box shadow value on Huge Inputs when they are disabled.",
+          "value": "none",
+          "attributes": {
+            "category": "content"
           },
           "file": "settings",
           "themable": true
@@ -1555,7 +1564,7 @@
       },
       "border-checked": {
         "comment": "The border of the outer circle in the radio input when checked.",
-        "value": "2px solid {purple.value}",
+        "value": "1px solid {purple.value}",
         "attributes": {
           "category": "content"
         },
@@ -1564,7 +1573,7 @@
       },
       "border": {
         "comment": "The border of the outer circle in the radio input.",
-        "value": "2px solid {black-tint.50.value}",
+        "value": "1px solid {black-tint.50.value}",
         "attributes": {
           "category": "content"
         },
@@ -2128,7 +2137,7 @@
       },
       "border": {
         "comment": "The border of the custom checkbox input.",
-        "value": "2px solid {black-tint.50.value}",
+        "value": "1px solid {black-tint.50.value}",
         "attributes": {
           "category": "content"
         },
@@ -2173,7 +2182,7 @@
       },
       "background-color-disabled": {
         "comment": "The background color of the custom checkbox input when disabled.",
-        "value": "transparent",
+        "value": "{text-input.disabled.background-color.value}",
         "attributes": {
           "category": "content"
         },
@@ -2194,13 +2203,13 @@
       },
       "border-color-disabled": {
         "comment": "The border color of the custom checkbox input when disabled.",
-        "value": "{black-tint.50.value}",
+        "value": "transparent",
         "file": "settings",
         "themable": true
       },
       "cursor-disabled": {
         "comment": "The cursor for the custom checkbox input when disabled.",
-        "value": "default",
+        "value": "not-allowed",
         "attributes": {
           "category": "content"
         },

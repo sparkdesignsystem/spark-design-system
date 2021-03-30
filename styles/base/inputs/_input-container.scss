@@ -47,6 +47,7 @@
 .sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput[disabled],
 .sprk-b-InputContainer--huge .sprk-b-Select.sprk-b-Select[disabled] {
   border-width: $sprk-input-huge-disabled-border-width;
+  box-shadow: $sprk-input-huge-disabled-box-shadow;
 }
 
 // Adjust for select open icon
