@@ -198,7 +198,7 @@ export const spinningSecondary = () => {
         sprkButton
         [isSpinning]="true"
       >
-        <div sprkSpinner variant="primary"></div>
+        <div sprkSpinner variant="secondary"></div>
       </button>
     `,
   };
