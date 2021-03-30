@@ -190,7 +190,7 @@ import {
               variant="unstyled"
               [analyticsString]="narrowSelector['footer'].analyticsString"
               [attr.href]="narrowSelector['footer'].href"
-              class="sprk-c-Button sprk-c-Button--tertiary"
+              class="sprk-c-Button sprk-c-Button--secondary"
             >
               {{ narrowSelector['footer'].text }}
             </a>
@@ -200,7 +200,7 @@ import {
               variant="unstyled"
               [analyticsString]="narrowSelector['footer'].analyticsString"
               [routerLink]="narrowSelector['footer'].routerLink"
-              class="sprk-c-Button sprk-c-Button--tertiary"
+              class="sprk-c-Button sprk-c-Button--secondary"
             >
               {{ narrowSelector['footer'].text }}
             </a>
