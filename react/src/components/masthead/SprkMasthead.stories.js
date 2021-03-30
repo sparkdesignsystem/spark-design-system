@@ -124,32 +124,6 @@ const addedNarrowNavLinks = [
   },
 ];
 
-const dropdownChoices = {
-  choiceFunction: (choiceText) => {
-    console.log(choiceText);
-  },
-  items: [
-    {
-      text: 'Option 1',
-      value: 'option-1',
-      element: 'a',
-      href: '#nogo',
-    },
-    {
-      text: 'Option 2',
-      value: 'option-2',
-      element: 'a',
-      href: '#nogo',
-    },
-    {
-      text: 'Option 3',
-      value: 'option-3',
-      element: 'a',
-      href: '#nogo',
-    },
-  ],
-};
-
 const selector = {
   choiceFunction: (text) => {
     console.log(text);
@@ -171,7 +145,7 @@ const selector = {
   ],
   footer: (
     <SprkButton
-      variant="tertiary"
+      variant="secondary"
       additionalClasses="sprk-c-Button--compact"
       onClick={() => {
         console.log('Clicked!');
@@ -200,7 +174,7 @@ const utilityItems = [
   <SprkButton
     element="a"
     href="#nogo"
-    variant="quaternary"
+    variant="secondary"
     additionalClasses="sprk-u-Right--zero sprk-u-mrm sprk-c-Button--compact"
   >
     Sign In

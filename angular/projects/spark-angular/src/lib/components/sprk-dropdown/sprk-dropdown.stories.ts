@@ -107,7 +107,7 @@ export const informational = () => ({
           sprkLink
           variant="unstyled"
           href="#nogo"
-          class="sprk-c-Button sprk-c-Button--tertiary"
+          class="sprk-c-Button sprk-c-Button--secondary"
         >
           Go Elsewhere
         </a>
