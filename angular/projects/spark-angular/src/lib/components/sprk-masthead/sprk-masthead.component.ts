@@ -177,6 +177,7 @@ import {
           heading="Select One"
           triggerIconName="chevron-down"
           [choices]="narrowSelector['choices']"
+          isFlush="true"
         >
           <div
             *ngIf="narrowSelector['footer']"

@@ -17,6 +17,7 @@ const SprkButton = ({
   variant,
   href,
   spinningAriaLabel,
+  forwardedRef,
   ...rest
 }) => {
   let TagName;
@@ -59,6 +60,7 @@ const SprkButton = ({
       // TODO: Remove disabled prop on next release #3557
       disabled={TagName !== 'a' ? isDisabled || isSpinning : undefined}
       href={TagName !== 'button' ? href : undefined}
+      ref={forwardedRef}
       {...rest}
       // TODO: Remove loading on next release #3557
       {...((loading || isSpinning) && { 'aria-label': spinningAriaLabel })}
@@ -141,6 +143,10 @@ SprkButton.propTypes = {
    * The actual value is what is applied to the href attribute.
    */
   href: PropTypes.string,
+  /**
+   * A ref passed in will be attached to the button component.
+   */
+  forwardedRef: PropTypes.shape(),
 };
 
 // TODO: Remove disabled and spinningAriaLabel on next release #3557

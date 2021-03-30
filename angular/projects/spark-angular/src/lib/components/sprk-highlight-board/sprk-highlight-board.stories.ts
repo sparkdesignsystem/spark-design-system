@@ -72,8 +72,8 @@ export const noImage = () => ({
   template: `
     <sprk-highlight-board
       heading="Hello, Welcome To Spark Design System"
-      ctaText="Learn More"
-      ctaText2="Learn More"
+      ctaText="Designers"
+      ctaText2="Developers"
       type="noImage"
       idString="highlightboard-3"
     >
@@ -93,7 +93,8 @@ export const stacked = () => ({
   template: `
     <sprk-highlight-board
       heading="Hello, Welcome To Spark Design System"
-      ctaText="Learn More"
+      ctaText="Designers"
+      ctaText2="Developers"
       type="stacked"
       imgSrc="https://spark-assets.netlify.app/desktop.jpg"
       imgAlt=""

@@ -81,6 +81,8 @@
   <string name="sprk_dropdown_shadow">0 0 40px 2px rgba(0, 0, 0, 0.1)</string><!-- The box shadow of the Dropdown. -->
   <string name="sprk_footer_link_font_weight">normal</string><!-- Link font-weight on the Footer. -->
   <string name="sprk_footer_trigger_font_weight">normal</string><!-- Toggle trigger font-weight on the Footer. -->
+  <string name="sprk_footer_trigger_hover_font_weight">500</string><!-- Toggle trigger hover font-weight on the Footer. -->
+  <string name="sprk_footer_trigger_hover_text_decoration">underline</string><!-- Toggle trigger hover text decoration on the Footer. -->
   <string name="sprk_footer_toggle_transition">0.3s</string><!-- Toggle transition timing on the Footer. -->
   <string name="sprk_horizontal_list_delimiter">','</string><!-- The delimiter between delimited items in Horizontal List components. -->
   <string name="sprk_icon_l_stroke">none</string><!-- Value for the stroke property of the large Icon component. -->
@@ -165,8 +167,8 @@
   <string name="sprk_link_text_decoration">none</string><!-- The text decoration on Links. -->
   <string name="sprk_link_border_bottom_style">solid</string><!-- The border style of the underline on Links. -->
   <string name="sprk_link_border_bottom">2.00dp solid #ff603aa1</string><!-- The style of the underline on Links. -->
-  <string name="sprk_link_hover_border_bottom">2.00dp solid #ff2e1166</string><!-- The underline style of Links on hover. -->
-  <string name="sprk_link_visited_border_bottom">2.00dp solid #ff8d8d8c</string><!-- The style of the underline on visited Links. -->
+  <string name="sprk_link_hover_border_bottom">2.00dp solid #ffc8102e</string><!-- The underline style of Links on hover. -->
+  <string name="sprk_link_visited_border_bottom">2.00dp solid #ff603aa1</string><!-- The style of the underline on visited Links. -->
   <string name="sprk_link_simple_hover_border_bottom">2.00dp solid #ffc8102e</string><!-- The underline style of visited Simple Links on hover. -->
   <string name="sprk_link_simple_underline_color">transparent</string><!-- The underline color value of Simple Links. -->
   <string name="sprk_link_simple_border_bottom">2.00dp solid transparent</string><!-- The underline style of Simple Links. -->
@@ -180,6 +182,7 @@
   <string name="sprk_link_has_icon_underline_color">transparent</string><!-- The underline color of Links containing icons. -->
   <string name="sprk_link_has_icon_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons. -->
   <string name="sprk_link_has_icon_hover_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons in the hover state. -->
+  <string name="sprk_link_has_icon_visited_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons in the hover state. -->
   <string name="sprk_link_disabled_border_bottom">0.00dp solid #ff8d8d8c</string><!-- The underline settings for the disabled Link. -->
   <string name="sprk_link_disabled_hover_border_bottom">0.00dp solid #ff8d8d8c</string><!-- The underline settings for the disabled Link. -->
   <string name="sprk_masthead_border_bottom_style">solid</string><!-- The bottom border style on the Masthead. -->
@@ -197,14 +200,15 @@
   <string name="sprk_masthead_selector_dropdown_footer_text_align">center</string><!-- The text-align of the Selector Dropdown, found in a Masthead with Extended Navigation. -->
   <string name="sprk_masthead_selector_dropdown_border_bottom_mask_open">2px solid #fff7f7f7</string><!-- The bottom border that gets applied to the Selector Dropdown when open, found in a Masthead with Extended Navigation. -->
   <string name="sprk_masthead_selector_dropdown_box_shadow_mask_open">0 5px 10px rgba(0, 0, 0, 0.1)</string><!-- The box shadow that gets applied to the Selector Dropdown when open, found in a Masthead with Extended Navigation. -->
+  <string name="sprk_masthead_selector_hover_border">2px solid #ff603aa1</string><!-- The border of the Selector when hovered, found in a Masthead with Extended Navigation. -->
   <string name="sprk_masthead_transition">all 0.3s ease-in</string><!-- The transition applied to the Masthead. -->
   <string name="sprk_masthead_translate_y">translateY(-100%)</string><!-- The transform length that gets applied when the Masthead scrolls out of view on narrow screens. -->
   <string name="sprk_masthead_accordion_active_left_border">3px solid #ffc8102e</string><!-- The left border of the active item in the navigation links when masthead is on narrow viewports. -->
   <string name="sprk_masthead_accordion_item_text_align">left</string><!-- The text alignment of the items in the navigation links when masthead is on narrow viewports. -->
   <string name="sprk_masthead_accordion_item_background">transparent</string><!-- The background of the items in the navigation links when masthead is on narrow viewports. -->
   <string name="sprk_big_nav_link_hover_border_bottom">transparent</string><!-- The border-bottom of the links in the big nav item when the big nav item is hovered in the Masthead Extended. -->
-  <string name="sprk_big_nav_item_border_bottom">0.125rem solid transparent</string><!-- The border bottom of the big navigation items in the Masthead Extended. -->
   <string name="sprk_big_nav_item_active_border_bottom">0.125rem solid #ffc8102e</string><!-- The border bottom of the active big navigation items in the Masthead Extended. -->
+  <string name="sprk_big_nav_item_border_bottom">0.125rem solid transparent</string><!-- The border bottom of the big navigation items in the Masthead Extended. -->
   <string name="sprk_big_nav_item_open_border_bottom">0.125rem solid #ffc8102e</string><!-- The border bottom of open big navigation items in the Masthead Extended. -->
   <string name="sprk_menu_icon_transition">transform 0.3s ease-in-out, opacity 0.2s ease-in-out</string><!-- The transition on the menu icon that turns the menu icon into an 'X'. -->
   <string name="sprk_modal_shadow">0 4px 5px rgba(0, 0, 0, 0.6)</string><!-- The box shadow on the Modal. -->

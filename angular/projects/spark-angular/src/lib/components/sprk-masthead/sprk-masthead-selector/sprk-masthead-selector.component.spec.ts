@@ -18,6 +18,7 @@ import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector.interfaces
       [analyticsString]="analyticsString"
       [heading]="heading"
       [screenReaderText]="screenReaderText"
+      [isFlush]="isFlush"
     >
     </sprk-masthead-selector>
   `,
@@ -30,6 +31,7 @@ class TestWrapperComponent {
   analyticsString: string;
   heading: string;
   screenReaderText: string;
+  isFlush: boolean;
 }
 
 describe('SprkMastheadSelectorComponent', () => {
@@ -499,5 +501,17 @@ describe('SprkMastheadSelectorComponent', () => {
         '.sprk-c-Masthead__selector-dropdown-title',
       ).textContent,
     ).toEqual('test');
+  });
+
+  it('should add the correct class if isFlush is true', () => {
+    wrapperComponent.isFlush = true;
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('.sprk-o-Box')).not.toBeNull();
+  });
+
+  it('should not add the class if isFlush is false', () => {
+    wrapperComponent.isFlush = false;
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('.sprk-o-Box')).toBeNull();
   });
 });
