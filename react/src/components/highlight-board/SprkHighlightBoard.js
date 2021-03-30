@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import warning from 'warning';
 import SprkButton from '../buttons/SprkButton';
+import SprkStack from '../../objects/stack/SprkStack';
+import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
+import SprkHeading from '../../base/typography/SprkHeading/SprkHeading';
 
 const SprkHighlightBoard = (props) => {
   const {
@@ -52,26 +55,27 @@ const SprkHighlightBoard = (props) => {
         />
       )}
 
-      <div
-        className="sprk-c-HighlightBoard__content
-        sprk-o-Stack sprk-o-Stack--large"
+      <SprkStack
+        itemSpacing="large"
+        additionalClasses="sprk-c-HighlightBoard__content"
       >
         {heading && (
-          <h1
-            className="sprk-b-TypeDisplayOne
-            sprk-c-HighlightBoard__heading sprk-o-Stack__item"
-          >
-            {heading}
-          </h1>
+          <SprkStackItem>
+            <SprkHeading
+              variant="typeDisplayOne"
+              additionalClasses="sprk-c-HighlightBoard__heading"
+            >
+              {heading}
+            </SprkHeading>
+          </SprkStackItem>
         )}
 
         {ctaText && (
-          <div
-            className={classnames(
+          <SprkStack
+            itemSpacing="medium"
+            splitAt="tiny"
+            additionalClasses={classnames(
               'sprk-o-Stack__item',
-              'sprk-o-Stack',
-              'sprk-o-Stack--medium',
-              'sprk-o-Stack--split@xs',
               'sprk-o-Stack--center-column',
               {
                 'sprk-o-Stack--center-row':
@@ -79,8 +83,9 @@ const SprkHighlightBoard = (props) => {
               },
             )}
           >
-            <div className="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
+            <SprkStackItem additionalClasses="sprk-c-HighlightBoard__cta">
               <SprkButton
+                variant="secondary"
                 element="a"
                 href={ctaHref}
                 analyticsString={ctaAnalytics}
@@ -89,12 +94,11 @@ const SprkHighlightBoard = (props) => {
               >
                 {ctaText}
               </SprkButton>
-            </div>
+            </SprkStackItem>
 
             {ctaText2 && (
-              <div className="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
+              <SprkStackItem additionalClasses="sprk-c-HighlightBoard__cta">
                 <SprkButton
-                  variant="secondary"
                   element="a"
                   href={ctaHref2}
                   analyticsString={ctaAnalytics2}
@@ -103,11 +107,11 @@ const SprkHighlightBoard = (props) => {
                 >
                   {ctaText2}
                 </SprkButton>
-              </div>
+              </SprkStackItem>
             )}
-          </div>
+          </SprkStack>
         )}
-      </div>
+      </SprkStack>
     </div>
   );
 };
@@ -119,7 +123,7 @@ SprkHighlightBoard.propTypes = {
   imgSrc: PropTypes.string,
   /**
    * The `alt` text for the main image. If the image used is decorative and
-   * does not present any important content, set this property to "" so
+   * does not present any important content, set this property to `""` so
    * the image will be hidden from assistive technology.
    */
   imgAlt: PropTypes.string,
@@ -166,7 +170,8 @@ SprkHighlightBoard.propTypes = {
    */
   ctaIdString2: PropTypes.string,
   /**
-   * Determines the style of Highlight Board is rendered.
+   * Determines the style of the Highlight Board that
+   * is rendered.
    */
   variant: PropTypes.oneOf(['noImage', 'stacked']),
   /**
@@ -179,23 +184,6 @@ SprkHighlightBoard.propTypes = {
    * the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
-};
-
-SprkHighlightBoard.defaultProps = {
-  imgSrc: null,
-  imgAlt: null,
-  heading: null,
-  ctaText: null,
-  ctaHref: null,
-  ctaAnalytics: null,
-  ctaIdString: null,
-  ctaText2: null,
-  ctaHref2: null,
-  ctaAnalytics2: null,
-  ctaIdString2: null,
-  variant: null,
-  idString: null,
-  additionalClasses: null,
 };
 
 export default SprkHighlightBoard;

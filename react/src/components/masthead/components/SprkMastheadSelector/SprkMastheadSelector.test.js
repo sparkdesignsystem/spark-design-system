@@ -301,4 +301,28 @@ describe('SprkMastheadSelector:', () => {
       ).length,
     ).toBe(1);
   });
+
+  it('should add the correct class if isFlush is true', () => {
+    const wrapper = mount(
+      <SprkMastheadSelector
+        isFlush
+        choices={{
+          items: [{ text: 'Item 1', value: 'item-1' }],
+        }}
+      />,
+    );
+    expect(wrapper.find('.sprk-o-Box').length).toBe(1);
+  });
+
+  it('should not add the class if isFlush is false', () => {
+    const wrapper = mount(
+      <SprkMastheadSelector
+        isFlush={false}
+        choices={{
+          items: [{ text: 'Item 1', value: 'item-1' }],
+        }}
+      />,
+    );
+    expect(wrapper.find('.sprk-o-Box').length).toBe(0);
+  });
 });

@@ -562,15 +562,13 @@ export const extended = () => {
               </a>
 
               <div
-                class="
-                  sprk-c-Masthead__selector-dropdown
-                  sprk-c-Dropdown sprk-u-Display--none
-                "
+                class="sprk-c-Masthead__selector-dropdown sprk-u-Display--none"
                 data-sprk-dropdown="dropdown-selector-wide"
                 >
-                <div class="sprk-c-Dropdown__header">
+                <div class="sprk-c-Masthead__selector-dropdown-header">
                   <a
                     class="
+                      sprk-c-Masthead__selector-dropdown-header-link
                       sprk-b-Link
                       sprk-b-Link--plain
                       sprk-o-Stack
@@ -584,7 +582,7 @@ export const extended = () => {
                   >
                     <span
                       class="
-                        sprk-c-Dropdown__title
+                        sprk-c-Masthead__selector-dropdown-title
                         sprk-b-TypeBodyTwo
                         sprk-o-Stack__item
                         sprk-o-Stack__item--flex@xxs
@@ -607,10 +605,10 @@ export const extended = () => {
                   </a>
                 </div>
 
-                <ul class="sprk-c-Dropdown__links">
-                  <li class="sprk-c-Dropdown__item">
+                <ul class="sprk-c-Masthead__selector-dropdown-links">
+                  <li class="sprk-c-Masthead__selector-dropdown-item">
                     <a
-                      class="sprk-c-Dropdown__link sprk-u-ptm"
+                      class="sprk-c-Masthead__selector-dropdown-link sprk-u-ptm"
                       href="#nogo"
                       data-sprk-dropdown-choice="Selection Choice Title 1"
                       role="option"
@@ -621,17 +619,26 @@ export const extended = () => {
                   </li>
 
                   <li
-                    class="sprk-c-Dropdown__item"
+                    class="sprk-c-Masthead__selector-dropdown-item"
                     data-sprk-dropdown-choice="Selection Choice Title 2"
                   >
-                    <a class="sprk-c-Dropdown__link" href="#nogo" role="option">
+                    <a
+                      class="sprk-c-Masthead__selector-dropdown-link"
+                      href="#nogo"
+                      role="option"
+                    >
                       <p class="sprk-b-TypeBodyOne">Selection Choice Title 2</p>
                       <p>Information here</p>
                     </a>
                   </li>
                 </ul>
 
-                <div class="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
+                <div
+                  class="
+                    sprk-c-Masthead__selector-footer
+                    sprk-u-TextAlign--center
+                  "
+                >
                   <a
                     class="
                       sprk-c-Button
@@ -963,6 +970,7 @@ export const extended = () => {
             <div class="sprk-c-Masthead__selector-dropdown-header">
               <a
                 class="
+                  sprk-c-Masthead__selector-dropdown-header-link
                   sprk-b-Link
                   sprk-b-Link--plain
                   sprk-o-Stack

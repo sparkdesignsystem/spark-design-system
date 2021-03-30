@@ -72,10 +72,14 @@
 
   &:hover,
   &:active,
-  &:focus,
-  &:visited {
+  &:focus {
     border-bottom: $sprk-link-has-icon-hover-border-bottom;
     color: $sprk-link-has-icon-hover-color-text;
+  }
+
+  &:visited {
+    border-bottom: $sprk-link-has-icon-visited-border-bottom;
+    color: $sprk-link-has-icon-visited-color-text;
   }
 }
 
@@ -83,9 +87,12 @@
   color: $sprk-link-has-icon-color-icon;
   fill: $sprk-link-has-icon-fill;
   stroke: $sprk-link-has-icon-stroke;
+  transition: $sprk-link-transition;
 }
 
-.sprk-b-Link--has-icon:hover .sprk-c-Icon {
+.sprk-b-Link--has-icon:hover .sprk-c-Icon,
+.sprk-b-Link--has-icon:focus .sprk-c-Icon,
+.sprk-b-Link--has-icon:active .sprk-c-Icon {
   color: $sprk-link-has-icon-hover-color-text;
   fill: $sprk-link-has-icon-hover-fill;
   stroke: $sprk-link-has-icon-hover-stroke;

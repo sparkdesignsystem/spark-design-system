@@ -36,7 +36,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
         <sprk-icon
           [iconName]="triggerIconName || triggerIconType"
-          additionalClasses="sprk-u-mls {{
+          additionalClasses="sprk-u-mls sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color {{
             iconAdditionalClasses || additionalIconClasses
           }}"
         ></sprk-icon>
