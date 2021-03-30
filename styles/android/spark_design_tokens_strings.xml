@@ -81,7 +81,6 @@
   <string name="sprk_dropdown_shadow">0 0 40px 2px rgba(0, 0, 0, 0.1)</string><!-- The box shadow of the Dropdown. -->
   <string name="sprk_footer_link_font_weight">normal</string><!-- Link font-weight on the Footer. -->
   <string name="sprk_footer_trigger_font_weight">normal</string><!-- Toggle trigger font-weight on the Footer. -->
-  <string name="sprk_footer_trigger_hover_font_weight">500</string><!-- Toggle trigger hover font-weight on the Footer. -->
   <string name="sprk_footer_trigger_hover_text_decoration">underline</string><!-- Toggle trigger hover text decoration on the Footer. -->
   <string name="sprk_footer_toggle_transition">0.3s</string><!-- Toggle transition timing on the Footer. -->
   <string name="sprk_horizontal_list_delimiter">','</string><!-- The delimiter between delimited items in Horizontal List components. -->
