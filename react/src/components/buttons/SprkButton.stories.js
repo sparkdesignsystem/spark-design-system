@@ -119,7 +119,7 @@ export const spinningSecondary = () => (
     analyticsString="button-10-analytics"
     isSpinning
   >
-    <SprkSpinner variant="primary" />
+    <SprkSpinner variant="secondary" />
   </SprkButton>
 );
 
