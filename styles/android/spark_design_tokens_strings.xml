@@ -149,6 +149,7 @@
   <string name="sprk_radio_input_cursor_hover_disabled">not-allowed</string><!-- The cursor style of the disabled radio on hover. -->
   <string name="sprk_radio_input_huge_label_border">1px solid #ff494948</string><!-- The border for the huge radio input label. -->
   <string name="sprk_radio_input_huge_label_padding">1.25rem 1rem 1.25rem 3.4375rem</string><!-- The padding for the huge radio input label. -->
+  <string name="sprk_radio_input_huge_label_hover_box_shadow">0 3px 10px 1px rgba(0, 0, 0, 0.08), 0 0 0 0.25px #ff1c1b1a</string><!-- The box shadow of the huge radio input label on hover. -->
   <string name="sprk_radio_input_huge_checked_hover_label_border">6px 0 0 0</string><!-- The margin surrounding visibility controls (Ex. 'Show SSN'). -->
   <string name="sprk_radio_input_huge_outer_circle_border_hover_disabled">none</string><!-- The border of the outer circle of the huge radio input when it is disabled and hovered. -->
   <string name="sprk_radio_input_huge_outer_circle_box_shadow_hover_disabled">none</string><!-- The box shadow of the outer circle of the huge radio input when it is disabled and hovered. -->
@@ -156,7 +157,7 @@
   <string name="sprk_checkbox_huge_container_transition">all 0.2s ease-in-out</string><!-- The transition of the huge checkbox input. -->
   <string name="sprk_checkbox_huge_container_border">1px solid #ff494948</string><!-- The border settings of the huge checkbox input. -->
   <string name="sprk_checkbox_huge_container_padding">20px 16.00dp 20px 55px</string><!-- The padding of the huge checkbox input. -->
-  <string name="sprk_checkbox_huge_container_hover_box_shadow">0 3px 10px 1px rgba(0, 0, 0, 0.08)</string><!-- The box shadow of the huge checkbox input when hovered. -->
+  <string name="sprk_checkbox_huge_container_hover_box_shadow">0 3px 10px 1px rgba(0, 0, 0, 0.08), 0 0 0 0.25px #ff1c1b1a</string><!-- The box shadow of the huge checkbox input when hovered. -->
   <string name="sprk_checkbox_huge_container_disabled_box_shadow">none</string><!-- The box shadow of the huge checkbox input when disabled. -->
   <string name="sprk_checkbox_custom_input_border">1px solid #ff494948</string><!-- The border of the custom checkbox input. -->
   <string name="sprk_checkbox_custom_input_border_focus">2px solid #ff603aa1</string><!-- The border of the custom checkbox input when focused. -->

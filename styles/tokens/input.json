@@ -1788,13 +1788,16 @@
         },
         "hover-border": {
           "comment": "The border of the huge radio input label on hover.",
-          "value": "1.5px solid {black.value}",
+          "value": "1px solid {black.value}",
           "file": "settings",
           "themable": true
         },
         "hover-box-shadow": {
           "comment": "The box shadow of the huge radio input label on hover.",
-          "value": "{input.huge.box-shadow.value}",
+          "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08), 0 0 0 0.25px {black.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -2053,7 +2056,7 @@
       },
       "hover-box-shadow": {
         "comment": "The box shadow of the huge checkbox input when hovered.",
-        "value": "{input.huge.box-shadow.value}",
+          "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08), 0 0 0 0.25px {black.value}",
         "attributes": {
           "category": "content"
         },
@@ -2129,7 +2132,7 @@
       },
       "hover-border": {
         "comment": "The border on focused huge checkbox Inputs.",
-        "value": "1.5px solid {black.value}",
+        "value": "1px solid {black.value}",
         "file": "settings",
         "themable": true
       },
