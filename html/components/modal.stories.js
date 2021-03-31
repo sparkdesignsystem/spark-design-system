@@ -91,7 +91,7 @@ export const defaultStory = () => {
               class="
                 sprk-c-Button
                 sprk-c-Button--tertiary
-                "
+              "
               data-sprk-modal-cancel="exampleChoiceModal"
             >
               Cancel
