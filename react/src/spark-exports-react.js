@@ -21,6 +21,7 @@ export { default as SprkLegend } from './base/inputs/SprkLegend/SprkLegend';
 export { default as SprkLink } from './base/links/SprkLink';
 export { default as SprkTable } from './base/tables/SprkTable';
 export { default as SprkMasthead } from './components/masthead/SprkMasthead';
+export { default as SprkMastheadSelector } from './components/masthead/components/SprkMastheadSelector/SprkMastheadSelector';
 export { default as SprkPagination } from './components/pagination/SprkPagination';
 export { default as SprkPromo } from './components/promo/SprkPromo';
 export { default as SprkSpinner } from './components/spinners/SprkSpinner';
