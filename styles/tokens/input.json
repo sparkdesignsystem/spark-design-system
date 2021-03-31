@@ -2003,9 +2003,9 @@
         "file": "settings",
         "themable": true
       },
-      "border": {
+      "box-shadow": {
         "comment": "The border settings of the huge checkbox input.",
-        "value": "1px solid {black-tint.80.value}",
+        "value": "0 0 0 1px {black-tint.80.value}",
         "attributes": {
           "category": "content"
         },
@@ -2048,15 +2048,9 @@
         "file": "settings",
         "themable": true
       },
-      "hover-border-color": {
-        "comment": "The border color of the huge checkbox input when hovered.",
-        "value": "{black.value}",
-        "file": "settings",
-        "themable": true
-      },
       "hover-box-shadow": {
         "comment": "The box shadow of the huge checkbox input when hovered.",
-          "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08), 0 0 0 0.25px {black.value}",
+          "value": "0 0 0 1.5px {black.value}, {input.huge.box-shadow.value}",
         "attributes": {
           "category": "content"
         },
@@ -2064,18 +2058,6 @@
         "themable": true
       },
       "disabled": {
-        "border-color": {
-          "comment": "The border color of the huge checkbox input when disabled.",
-          "value": "{text-input.disabled.border-color.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "border-width": {
-          "comment": "The border width of the huge checkbox input when disabled.",
-          "value": "{text-input.disabled.border-width.value}",
-          "file": "settings",
-          "themable": true
-        },
         "box-shadow": {
           "comment": "The box shadow of the huge checkbox input when disabled.",
           "value": "none",
@@ -2092,59 +2074,38 @@
           "themable": true
         }
       },
-      "disabled-border": {
-        "comment": "The border on disabled huge checkbox Inputs.",
-        "value": "{checkbox.huge-container.disabled.border-width.value} solid {checkbox.huge-container.disabled.border-color.value}",
-        "file": "settings",
-        "themable": true
-      },
       "focus": {
-        "border-color": {
-          "comment": "The border color of the huge checkbox input when focused.",
-          "value": "{purple.value}",
+        "box-shadow": {
+          "comment": "The box shadow on Selects when focused.",
+          "value": "0 0 0 2px {purple.value}, {text-input.focus.box-shadow.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         },
-        "border-width": {
-          "comment": "The border width of the huge checkbox input when focused.",
-          "value": "{text-input.focus.border-width.value}",
+        "checked-box-shadow": {
+          "comment": "The box-shadow color of the huge checkbox input when checked and focused.",
+          "value": "0 0 0 2px {black.value}",
           "file": "settings",
           "themable": true
         },
-        "hover-border-color": {
-          "comment": "The border color of the huge checkbox input when focused and hovered.",
-          "value": "{black.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "checked-border-color": {
-          "comment": "The border color of the huge checkbox input when checked and focused.",
-          "value": "{black.value}",
+        "hover-box-shadow": {
+          "comment": "The box-shadow of the huge checkbox input when focused and hovered.",
+            "value": "0 0 0 1px {black.value}, {text-input.focus.box-shadow.value}",
           "file": "settings",
           "themable": true
         }
       },
-      "focus-border": {
-        "comment": "The border on focused huge checkbox Inputs.",
-        "value": "{checkbox.huge-container.focus.border-width.value} solid {checkbox.huge-container.focus.border-color.value}",
+      "checked-box-shadow": {
+        "comment": "The box-shadow of the huge checkbox input when checked and hovered.",
+          "value": "0 0 0 1px {purple.value}",
         "file": "settings",
         "themable": true
       },
-      "hover-border": {
-        "comment": "The border on focused huge checkbox Inputs.",
-        "value": "1px solid {black.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "checked-border-color": {
-        "comment": "The border color of the huge checkbox input when checked.",
-        "value": "{purple.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "checked-hover-border-color": {
-        "comment": "The border color of the huge checkbox input when checked and hovered.",
-        "value": "{black.value}",
+      "checked-hover-box-shadow": {
+        "comment": "The box-shadow of the huge checkbox input when checked and hovered.",
+          "value": "0 0 0 1px {black.value}, {text-input.focus.box-shadow.value}",
         "file": "settings",
         "themable": true
       }
@@ -2326,6 +2287,12 @@
       "disabled-border-color": {
         "comment": "The border color of the custom checkbox element of the huge checkbox input when disabled.",
         "value": "{black-tint.50.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "checkbox-element-focused-hover-border-color": {
+        "comment": "The border color of the custom checkbox element of the huge checkbox input when focused and hovered.",
+        "value": "{black.value}",
         "file": "settings",
         "themable": true
       },

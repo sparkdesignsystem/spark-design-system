@@ -37,7 +37,7 @@ export const defaultStory = () => {
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
         <legend class="sprk-b-Legend sprk-b-Label">
-          Checkbox Group Labels
+          Checkbox Group Label
         </legend>
 
         <div
