@@ -223,7 +223,7 @@ class SprkModal extends Component {
         <div
           className={classnames(
             'sprk-c-Modal',
-            isWait ? 'sprk-c-Modal--wait' : '',
+            { 'sprk-c-Modal--wait': isWait },
             additionalClasses,
           )}
           role="dialog"
@@ -257,10 +257,9 @@ class SprkModal extends Component {
             </header>
 
             <div
-              className={classnames(
-                'sprk-o-Stack__item sprk-c-Modal__body',
-                isWait ? 'sprk-o-Stack sprk-o-Stack--medium' : '',
-              )}
+              className={classnames('sprk-o-Stack__item sprk-c-Modal__body', {
+                'sprk-o-Stack sprk-o-Stack--medium': isWait,
+              })}
               id={'modalContent_' + this.aria_id}
             >
               {isWait && (

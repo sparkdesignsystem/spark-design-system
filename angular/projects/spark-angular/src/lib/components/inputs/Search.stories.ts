@@ -61,6 +61,7 @@ export const searchInput = () => ({
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
         <label
+          for="search"
           hasIcon="true"
           isHidden="true"
           sprkLabel
@@ -73,6 +74,7 @@ export const searchInput = () => ({
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="search"
           name="inline_search_input"
           class="sprk-b-TextInput--has-svg-icon"
           type="search"
@@ -104,6 +106,7 @@ export const invalidSearchInput = () => ({
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
         <label
+          for="invalid-search"
           hasIcon="true"
           isHidden="true"
           sprkLabel
@@ -116,6 +119,8 @@ export const invalidSearchInput = () => ({
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="invalid-search"
+          aria-describedby="search-error"
           name="inline_search_input"
           class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
           type="search"
@@ -127,7 +132,7 @@ export const invalidSearchInput = () => ({
           aria-invalid="true"
         >
       </div>
-      <span sprkFieldError>
+      <span sprkFieldError id="search-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -156,6 +161,7 @@ export const disabledSearchInput = () => ({
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
         <label
+          for="disabled-search"
           hasIcon="true"
           isHidden="true"
           isDisabled="true"
@@ -169,6 +175,7 @@ export const disabledSearchInput = () => ({
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="disabled-search"
           name="inline_search_input"
           class="sprk-b-TextInput--has-svg-icon"
           type="search"
@@ -200,6 +207,7 @@ export const legacyStory = () => ({
   template: `
     <sprk-icon-input-container>
       <label
+        for="legacy-search"
         class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
         sprkLabel
       >
@@ -211,6 +219,7 @@ export const legacyStory = () => ({
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-search"
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon"
         type="search"
@@ -240,6 +249,7 @@ export const legacyInvalidSearchInput = () => ({
   template: `
     <sprk-icon-input-container>
       <label
+        for="legacy-invalid-search"
         class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
         sprkLabel
       >
@@ -251,6 +261,8 @@ export const legacyInvalidSearchInput = () => ({
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-invalid-search"
+        aria-describedby="legacy-search-error"
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
         type="search"
@@ -261,7 +273,7 @@ export const legacyInvalidSearchInput = () => ({
         sprkInput
         aria-invalid="true"
       >
-      <span sprkFieldError>
+      <span sprkFieldError id="legacy-search-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -289,6 +301,7 @@ export const legacyDisabledSearchInput = () => ({
   template: `
     <sprk-icon-input-container>
       <label
+        for="legacy-disabled-search"
         class="sprk-b-Label--with-icon sprk-u-ScreenReaderText sprk-b-Label--disabled"
         sprkLabel
       >
@@ -300,6 +313,7 @@ export const legacyDisabledSearchInput = () => ({
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-disabled-search"
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon"
         type="search"
