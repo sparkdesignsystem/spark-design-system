@@ -89,8 +89,7 @@
 
   .sprk-b-Checkbox__label {
     transition: $sprk-checkbox-huge-container-transition;
-    // Using box shadow as border so it doesn't take up space on
-    // hover and focus
+    // Using box shadow as border so it doesn't take up space on hover and focus
     box-shadow: $sprk-checkbox-huge-container-box-shadow;
     border-radius: $sprk-checkbox-huge-container-border-radius;
     padding: $sprk-checkbox-huge-container-padding;
