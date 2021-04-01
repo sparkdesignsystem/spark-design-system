@@ -61,10 +61,12 @@ export const helperText = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>
+      <label for="helper-input" sprkLabel>
         Text Input Label
       </label>
       <input
+        id="helper-input"
+        aria-describedby="helper-text"
         sprkInput
         name="text_input"
         type="text"
@@ -72,7 +74,7 @@ export const helperText = () => ({
         #textInput="ngModel"
         data-id="text-input-1"
       >
-      <p sprkHelperText>
+      <p sprkHelperText id="helper-text">
         Optional helper text, used to clarify the field's intent.
       </p>
     </sprk-input-container>
@@ -95,10 +97,12 @@ export const invalidHelperText = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>
+      <label for="invalid-helper-input" sprkLabel>
         Text Input Label
       </label>
       <input
+        id="invalid-helper-input"
+        aria-describedby="helper-text helper-error"
         sprkInput
         name="text_input"
         type="text"
@@ -108,10 +112,10 @@ export const invalidHelperText = () => ({
         class="sprk-b-TextInput--error"
         aria-invalid="true"
       >
-      <p sprkHelperText>
+      <p sprkHelperText id="helper-text">
         Optional helper text, used to clarify the field's intent.
       </p>
-      <span sprkFieldError>
+      <span sprkFieldError id="helper-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
