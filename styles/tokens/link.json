@@ -361,6 +361,15 @@
       }
     },
     "has-icon": {
+      "transition": {
+        "comment": "The transition timing for hover, active and focus styles on Links that have icon.",
+        "value": "0.3s",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "color-icon": {
         "comment": "The color of icons in Links containing icons.",
         "value": "{purple.value}",
