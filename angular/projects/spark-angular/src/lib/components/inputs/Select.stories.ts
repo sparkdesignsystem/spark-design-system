@@ -111,6 +111,7 @@ export const invalidSelectBox = () => ({
         data-id="select-error-1"
         sprkSelect
         aria-invalid="true"
+        aria-describedby="select-error"
       >
         <option value="none">Please choose...</option>
         <option value="1">Option 1</option>
@@ -127,7 +128,7 @@ export const invalidSelectBox = () => ({
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
-      <span sprkFieldError>
+      <span sprkFieldError id="select-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -247,6 +248,7 @@ export const invalidHugeSelectBox = () => ({
         variant="huge"
         class="sprk-b-Select--error"
         aria-invalid="true"
+        aria-describedby="huge-select-error"
       >
         <option
           value=""
@@ -269,7 +271,7 @@ export const invalidHugeSelectBox = () => ({
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
-      <span sprkFieldError>
+      <span sprkFieldError id="huge-select-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -396,6 +398,7 @@ export const legacyInvalidHugeSelectBox = () => ({
         sprkInput
         class="sprk-b-Select--error"
         aria-invalid="true"
+        aria-describedby="legacy-huge-select-error"
       >
         <option
           value=""
@@ -418,7 +421,7 @@ export const legacyInvalidHugeSelectBox = () => ({
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
       ></sprk-icon>
-      <span sprkFieldError>
+      <span sprkFieldError id="legacy-huge-select-error">
         <sprk-icon
           iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
