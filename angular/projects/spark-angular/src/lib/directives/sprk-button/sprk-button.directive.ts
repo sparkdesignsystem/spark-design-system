@@ -48,8 +48,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   /**
    *  Determines the corresponding button style.
    */
-  @Input() variant: 'primary' | 'secondary' | 'tertiary' | 'quaternary' =
-    'primary';
+  @Input() variant: 'primary' | 'secondary' | 'tertiary' = 'primary';
 
   // Always set the button class on the element
   @HostBinding('class.sprk-c-Button') true;
@@ -80,7 +79,6 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
     const variants = {
       secondary: 'sprk-c-Button--secondary',
       tertiary: 'sprk-c-Button--tertiary',
-      quaternary: 'sprk-c-Button--quaternary',
     };
     if (variants.hasOwnProperty(this.variant)) {
       this.renderer.addClass(this.ref.nativeElement, variants[this.variant]);
@@ -155,12 +153,6 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
       this.variant === 'tertiary'
     ) {
       spinnerClass += ' sprk-c-Spinner--secondary';
-    }
-    if (
-      el.classList.contains('sprk-c-Button--quaternary') ||
-      this.variant === 'quaternary'
-    ) {
-      spinnerClass += ' sprk-c-Spinner--dark';
     }
     this.renderer.setAttribute(el, 'data-sprk-spinner-text', el.textContent);
     this.renderer.setAttribute(el, 'aria-label', ariaLabel);

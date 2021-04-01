@@ -39,9 +39,6 @@ const SprkButton = ({
     if (variant === 'tertiary') {
       spinnerVariant = 'secondary';
     }
-    if (variant === 'quaternary') {
-      spinnerVariant = 'dark';
-    }
   }
   return (
     <TagName
@@ -49,7 +46,6 @@ const SprkButton = ({
         'sprk-c-Button',
         { 'sprk-c-Button--secondary': variant === 'secondary' },
         { 'sprk-c-Button--tertiary': variant === 'tertiary' },
-        { 'sprk-c-Button--quaternary': variant === 'quaternary' },
         { 'sprk-is-Disabled': isDisabled },
         { 'sprk-c-Button--has-spinner': isSpinning },
         additionalClasses,
@@ -136,7 +132,7 @@ SprkButton.propTypes = {
   /**
    *  Determines the corresponding button style.
    */
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   /**
    * If an href is provided and no element is provided,
    * an anchor tag will be rendered.
