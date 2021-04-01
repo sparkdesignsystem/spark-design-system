@@ -64,8 +64,9 @@ export const phoneInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>Phone Number</label>
+      <label for="phone" sprkLabel>Phone Number</label>
       <input
+        id="phone"
         name="phone_input"
         type="text"
         placeholder="(000) 000-0000"
@@ -92,8 +93,10 @@ export const invalidPhoneInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>Phone Number</label>
+      <label for="invalid-phone" sprkLabel>Phone Number</label>
       <input
+        id="invalid-phone"
+        aria-describedby="phone-error"
         class="sprk-b-TextInput--error"
         aria-invalid="true"
         name="phone_input"
@@ -103,7 +106,7 @@ export const invalidPhoneInput = () => ({
         #phoneInput="ngModel"
         sprkInput
       />
-      <span sprkFieldError>
+      <span sprkFieldError id="phone-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -130,8 +133,15 @@ export const disabledPhoneInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label isDisabled="true" sprkLabel>Phone Number</label>
+      <label
+        for="disabled-phone"
+        isDisabled="true"
+        sprkLabel
+      >
+        Phone Number
+      </label>
       <input
+        id="disabled-phone"
         name="phone_input"
         type="text"
         placeholder="(000) 000-0000"
