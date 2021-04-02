@@ -242,6 +242,7 @@ export const invalidHugeSelectBox = () => ({
   template: `
     <sprk-input-container variant="huge">
       <select
+        id="huge-select-error-1"
         data-id="select-huge-invalid"
         data-sprk-input="huge"
         sprkSelect
@@ -265,7 +266,7 @@ export const invalidHugeSelectBox = () => ({
           <option value="g3">Grouped Option 3</option>
         </optgroup>
       </select>
-      <label sprkLabel for="select-huge-invalid">Huge Select Box Label</label>
+      <label sprkLabel for="huge-select-error-1">Huge Select Box Label</label>
       <sprk-icon
         iconName="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
