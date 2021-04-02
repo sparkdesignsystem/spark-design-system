@@ -175,6 +175,7 @@
   <string name="sprk_link_light_visited_border_bottom">2.00dp solid transparent</string><!-- The underline style of visited Light Links. -->
   <string name="sprk_link_plain_border">none</string><!-- The border settings for Plain Links. -->
   <string name="sprk_link_plain_visited_border">none</string><!-- The border settings for Plain Links in the visited state. -->
+  <string name="sprk_link_has_icon_transition">0.3s</string><!-- The transition timing for hover, active and focus styles on Links that have icon. -->
   <string name="sprk_link_has_icon_underline_color">transparent</string><!-- The underline color of Links containing icons. -->
   <string name="sprk_link_has_icon_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons. -->
   <string name="sprk_link_has_icon_hover_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons in the hover state. -->
