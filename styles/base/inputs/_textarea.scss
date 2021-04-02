@@ -1,5 +1,4 @@
 .sprk-b-TextArea {
-  border: $sprk-text-input-border;
   border-radius: $sprk-text-input-border-radius;
   box-shadow: $sprk-text-input-box-shadow;
   color: $sprk-text-input-color;
@@ -15,19 +14,26 @@
   transition: $sprk-text-input-transition;
 
   &:focus {
-    border: $sprk-text-input-focus-border;
     box-shadow: $sprk-text-input-focus-box-shadow;
   }
 }
 
-.sprk-b-TextArea--error,
-.sprk-b-TextArea--error:focus {
-  border: $sprk-text-input-error-border;
+.sprk-b-TextArea--error {
+  box-shadow: $sprk-text-input-error-box-shadow;
+
+  &:focus {
+    box-shadow: $sprk-text-input-error-focus-box-shadow;
+  }
 }
 
 .sprk-b-TextArea[disabled] {
   background-color: $sprk-text-input-disabled-background-color;
-  border: $sprk-text-input-disabled-border;
   color: $sprk-text-input-disabled-color;
   cursor: not-allowed;
+  box-shadow: $sprk-text-input-disabled-box-shadow;
+
+  &:hover,
+  &:focus {
+    box-shadow: $sprk-text-input-disabled-box-shadow;
+  }
 }

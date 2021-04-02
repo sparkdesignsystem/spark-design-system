@@ -9,7 +9,6 @@
 // TODO sprk-b-TextInput to be deprecated and replace with sprk-b-InputContainer__input
 .sprk-b-InputContainer__input {
   box-shadow: $sprk-text-input-box-shadow;
-  border: $sprk-text-input-border;
   border-radius: $sprk-text-input-border-radius;
   color: $sprk-text-input-color;
   font-family: $sprk-text-input-font-family;
@@ -23,20 +22,28 @@
 }
 
 .sprk-b-TextInput:focus {
-  border: $sprk-text-input-focus-border;
   box-shadow: $sprk-text-input-focus-box-shadow;
 }
 
-.sprk-b-TextInput--error,
-.sprk-b-TextInput--error:focus {
-  border: $sprk-text-input-error-border;
+.sprk-b-TextInput--error {
+  box-shadow: $sprk-text-input-error-box-shadow;
+
+  &:focus {
+    box-shadow: $sprk-text-input-error-focus-box-shadow;
+  }
+
 }
 
 .sprk-b-TextInput[disabled] {
   color: $sprk-text-input-disabled-color;
   background-color: $sprk-text-input-disabled-background-color;
-  border: $sprk-text-input-disabled-border;
   cursor: not-allowed;
+  box-shadow: $sprk-text-input-disabled-box-shadow;
+
+  &:hover,
+  &:focus {
+    box-shadow: $sprk-text-input-disabled-box-shadow;
+  }
 }
 
 .sprk-b-TextInput--has-svg-icon {
@@ -101,8 +108,7 @@
 /* stylelint-disable selector-class-pattern */
 
 /* stylelint-disable selector-combinator-space-before */
-.sprk-b-TextInput.ng-invalid:not(.ng-pristine)
-  ~ .sprk-b-InputContainer__input-border {
+.sprk-b-TextInput.ng-invalid:not(.ng-pristine) ~ .sprk-b-InputContainer__input-border {
   animation: none;
   border-bottom: 3px solid $sprk-text-input-error-color;
   width: 100%;
