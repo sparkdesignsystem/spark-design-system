@@ -220,7 +220,7 @@ describe('SprkDropdownComponent', () => {
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information',
+          infoLine2: 'Additional Information',
         },
         value: 'Choice Title 1',
         active: false,
@@ -251,7 +251,7 @@ describe('SprkDropdownComponent', () => {
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information',
+          infoLine2: 'Additional Information',
         },
         value: 'Choice Title 1',
       },
@@ -709,7 +709,7 @@ describe('SprkDropdownComponent', () => {
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information',
+          infoLine2: 'Additional Information',
         },
         value: 'Choice Title 1',
         active: false,
@@ -750,7 +750,7 @@ describe('SprkDropdownComponent', () => {
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information',
+          infoLine2: 'Additional Information',
         },
         routerLink: '/router-test',
         value: 'Choice Title 1',

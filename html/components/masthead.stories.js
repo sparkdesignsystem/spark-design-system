@@ -549,13 +549,12 @@ export const extended = () => {
                   data-sprk-dropdown-trigger-text-container
                   role="combobox"
                 >
-                  Select One
+                  Choose One
                 </span>
                 <svg
                   class="
                     sprk-c-Icon
-                    sprk-c-Icon--filled-current-color
-                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--toggle
                     sprk-Stack__item
                   "
                   viewBox="0 0 100 100"
@@ -591,13 +590,11 @@ export const extended = () => {
                         sprk-o-Stack__item--flex@xxs
                       "
                     >
-                      Select One
+                      Choose One
                     </span>
                     <svg
                       class="
                         sprk-c-Icon
-                        sprk-c-Icon--filled-current-color
-                        sprk-c-Icon--stroke-current-color
                         sprk-c-Icon--toggle
                         sprk-Stack__item
                       "
@@ -617,7 +614,7 @@ export const extended = () => {
                       role="option"
                     >
                       <p class="sprk-b-TypeBodyOne">Selection Choice Title 1</p>
-                      <p>Information here</p>
+                      <p>Additional Information</p>
                     </a>
                   </li>
 
@@ -631,7 +628,7 @@ export const extended = () => {
                       role="option"
                     >
                       <p class="sprk-b-TypeBodyOne">Selection Choice Title 2</p>
-                      <p>Information here</p>
+                      <p>Additional Information</p>
                     </a>
                   </li>
                 </ul>
@@ -948,13 +945,11 @@ export const extended = () => {
                 data-sprk-dropdown-trigger-text-container
                 role="combobox"
               >
-                Select One
+                Choose One
               </span>
               <svg
                 class="
                   sprk-c-Icon
-                  sprk-c-Icon--filled-current-color
-                  sprk-c-Icon--stroke-current-color
                   sprk-c-Icon--toggle
                   sprk-Stack__item
                 "
@@ -992,13 +987,11 @@ export const extended = () => {
                     sprk-o-Stack__item--flex@xxs
                   "
                 >
-                  Select One
+                  Choose One
                 </span>
                 <svg
                   class="
                     sprk-c-Icon
-                    sprk-c-Icon--filled-current-color
-                    sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--toggle
                     sprk-Stack__item
                   "
@@ -1018,7 +1011,7 @@ export const extended = () => {
                   role="option"
                 >
                   <p class="sprk-b-TypeBodyOne">Selection Choice Title 1</p>
-                  <p>Information here</p>
+                  <p>Additional Information</p>
                 </a>
               </li>
 
@@ -1032,7 +1025,7 @@ export const extended = () => {
                   role="option"
                 >
                   <p class="sprk-b-TypeBodyOne">Selection Choice Title 2</p>
-                  <p>Information here</p>
+                  <p>Additional Information</p>
                 </a>
               </li>
             </ul>
