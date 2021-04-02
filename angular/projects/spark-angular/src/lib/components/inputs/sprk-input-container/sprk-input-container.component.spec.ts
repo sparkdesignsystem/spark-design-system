@@ -355,7 +355,7 @@ describe('SprkInputContainerComponent', () => {
     expect(component7).toBeTruthy();
   });
 
-  it('should add classes to input when additionalClasses has a value', () => {
+  it('should add classes to container when additionalClasses has a value', () => {
     inputContainerComponent1.additionalClasses = 'sprk-u-man';
     inputContainerFixture1.detectChanges();
     expect(inputContainerElement1.classList.toString()).toEqual(
@@ -363,7 +363,7 @@ describe('SprkInputContainerComponent', () => {
     );
   });
 
-  it('should add classes to select when additionalClasses has a value', () => {
+  it('should add classes to select container when additionalClasses has a value', () => {
     inputContainerComponent3.additionalClasses = 'sprk-u-man';
     inputContainerFixture3.detectChanges();
     expect(inputContainerElement3.classList.toString()).toEqual(
@@ -399,13 +399,13 @@ describe('SprkInputContainerComponent', () => {
     );
   });
 
-  it('should add the value of idString to data-id on the input', () => {
+  it('should add the value of idString to data-id on the container', () => {
     inputContainerComponent1.idString = 'test-id-str';
     inputContainerFixture1.detectChanges();
     expect(inputContainerElement1.getAttribute('data-id')).toBe('test-id-str');
   });
 
-  it('should add the value of idString to data-id on the select', () => {
+  it('should add the value of idString to data-id on the select container', () => {
     inputContainerComponent3.idString = 'test-id-str';
     inputContainerFixture3.detectChanges();
     expect(inputContainerElement3.getAttribute('data-id')).toBe('test-id-str');

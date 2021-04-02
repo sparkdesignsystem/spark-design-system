@@ -50,6 +50,7 @@ export const defaultStory = () => ({
         sprkTabsButton
         analyticsString="Tab: 1"
         idString="tab-1"
+        type="button"
       >
         Tab 1
       </button>
@@ -57,12 +58,14 @@ export const defaultStory = () => ({
         sprkTabsButton
         idString="tab-2"
         [isDefaultActive]="true"
+        type="button"
       >
         Tab 2
       </button>
       <button
         sprkTabsButton
         idString="tab-3"
+        type="button"
       >
         Tab 3
       </button>
@@ -108,6 +111,7 @@ export const deprecated = () => ({
         sprkTabbedNavigationTab
         analyticsString="Tab: 1"
         idString="tab-1"
+        type="button"
       >
         Tab 1
       </button>
@@ -115,12 +119,14 @@ export const deprecated = () => ({
         sprkTabbedNavigationTab
         idString="tab-2"
         [defaultActive]="true"
+        type="button"
       >
         Tab 2
       </button>
       <button
         sprkTabbedNavigationTab
         idString="tab-3"
+        type="button"
       >
         Tab 3
       </button>

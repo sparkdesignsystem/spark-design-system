@@ -237,7 +237,7 @@ export const legacyInvalidMonetaryInput = () => ({
       />
       <span sprkFieldError id="legacy-monetary-error">
         <sprk-icon
-          iconName="exclamation-filled"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
