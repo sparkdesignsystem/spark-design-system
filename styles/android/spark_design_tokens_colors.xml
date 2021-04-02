@@ -27,7 +27,6 @@
   <color name="sprk_btn_text_color">#ffffffff</color><!-- The text color of the Button component. -->
   <color name="sprk_btn_hover_background_color">#ff9d2235</color><!-- The background color of the Button component on hover. -->
   <color name="sprk_btn_hover_text_color">#ffffffff</color><!-- The text color of the Button component on hover. -->
-  <color name="sprk_btn_secondary_hover_background_color">#fff9e7ea</color><!-- The background color of the Secondary Button component on hover. -->
   <color name="sprk_card_shadow_color_wide_viewport">#14000000</color><!-- The box shadow color of the Card on wide viewports. -->
   <color name="sprk_card_shadow_color_standout">#1a000000</color><!-- The box shadow color of the Standout Card variant on narrow viewports. -->
   <color name="sprk_card_shadow_color_standout_wide_viewport">#1a000000</color><!-- The box shadow color of the Standout Card variant on wide viewports. -->

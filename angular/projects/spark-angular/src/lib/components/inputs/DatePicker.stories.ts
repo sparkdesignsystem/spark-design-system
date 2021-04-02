@@ -72,7 +72,7 @@ export const defaultStory = () => ({
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
-        <label hasIcon="true" sprkLabel>
+        <label for="datepicker" hasIcon="true" sprkLabel>
           Date Input
         </label>
         <sprk-icon
@@ -81,6 +81,7 @@ export const defaultStory = () => ({
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="datepicker"
           name="datepicker_input"
           type="text"
           placeholder="MM/DD/YYYY"
@@ -112,7 +113,7 @@ export const invalidDatePicker = () => ({
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
-        <label hasIcon="true" sprkLabel>
+        <label for="invalid-datepicker" hasIcon="true" sprkLabel>
           Date Input
         </label>
         <sprk-icon
@@ -121,6 +122,8 @@ export const invalidDatePicker = () => ({
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="invalid-datepicker"
+          aria-describedby="datepicker-error"
           name="datepicker_input"
           type="text"
           class="sprk-b-TextInput--error"
@@ -132,7 +135,7 @@ export const invalidDatePicker = () => ({
           sprkDatepicker
         />
       </div>
-      <span sprkFieldError>
+      <span sprkFieldError id="datepicker-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -161,7 +164,7 @@ export const disabledDatePicker = () => ({
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
-        <label hasIcon="true" sprkLabel isDisabled="true">
+        <label for="disabled-datepicker" hasIcon="true" sprkLabel isDisabled="true">
           Date Input
         </label>
         <sprk-icon
@@ -170,6 +173,7 @@ export const disabledDatePicker = () => ({
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="disabled-datepicker"
           name="datepicker_input"
           type="text"
           disabled
@@ -201,7 +205,7 @@ export const legacyStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
-      <label class="sprk-b-Label--with-icon" sprkLabel>
+      <label for="legacy-datepicker" class="sprk-b-Label--with-icon" sprkLabel>
         Date Input
       </label>
       <sprk-icon
@@ -210,6 +214,7 @@ export const legacyStory = () => ({
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-datepicker"
         name="datepicker_input"
         class="sprk-b-TextInput--has-svg-icon"
         type="text"
@@ -241,7 +246,7 @@ export const legacyInvalidDatePicker = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
-      <label class="sprk-b-Label--with-icon" sprkLabel>
+      <label for="legacy-invalid-datepicker" class="sprk-b-Label--with-icon" sprkLabel>
         Date Input
       </label>
       <sprk-icon
@@ -250,6 +255,8 @@ export const legacyInvalidDatePicker = () => ({
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-invalid-datepicker"
+        aria-describedby="legacy-datepicker-error"
         name="datepicker_input"
         class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
         type="text"
@@ -261,7 +268,7 @@ export const legacyInvalidDatePicker = () => ({
         sprkDatepicker
         sprkInput
       />
-      <span sprkFieldError>
+      <span sprkFieldError id="legacy-datepicker-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -290,7 +297,7 @@ export const legacyDisabledDatePicker = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
-      <label class="sprk-b-Label--with-icon sprk-b-Label--disabled" sprkLabel>
+      <label for="legacy-disabled-datepicker" class="sprk-b-Label--with-icon sprk-b-Label--disabled" sprkLabel>
         Date Input
       </label>
       <sprk-icon
@@ -299,6 +306,7 @@ export const legacyDisabledDatePicker = () => ({
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-disabled-datepicker"
         disabled
         name="datepicker_input"
         class="sprk-b-TextInput--has-svg-icon"

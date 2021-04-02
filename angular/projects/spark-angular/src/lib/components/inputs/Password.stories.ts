@@ -70,8 +70,8 @@ export const passwordInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>Password</label>
-      <input type="password" name="password_input" sprkInput />
+      <label for="password" sprkLabel>Password</label>
+      <input id="password" type="password" name="password_input" sprkInput />
       <sprk-checkbox-item
         isVisibilityToggle="true"
       >
@@ -104,8 +104,10 @@ export const invalidPasswordInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>Password</label>
+      <label for="invalid-password" sprkLabel>Password</label>
       <input
+        id="invalid-password"
+        aria-describedby="password-error"
         type="password"
         name="password_input"
         sprkInput
@@ -122,7 +124,7 @@ export const invalidPasswordInput = () => ({
         />
         <label for="show-password" sprkCheckboxLabel>Show Password</label>
       </sprk-checkbox-item>
-      <span sprkFieldError>
+      <span sprkFieldError id="password-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -152,8 +154,14 @@ export const disabledPasswordInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label isDisabled="true" sprkLabel>Password</label>
-      <input type="password" name="password_input" sprkInput disabled />
+      <label for="disabled-password" isDisabled="true" sprkLabel>Password</label>
+      <input
+        id="disabled-password"
+        type="password"
+        name="password_input"
+        sprkInput
+        disabled
+      />
       <sprk-checkbox-item
         isVisibilityToggle="true"
       >

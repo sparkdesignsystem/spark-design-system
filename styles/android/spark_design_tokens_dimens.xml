@@ -31,7 +31,6 @@
   <dimen name="sprk_btn_disabled_opacity">16.00dp</dimen><!-- The opacity value of the Disabled Button component. -->
   <dimen name="sprk_btn_disabled_border_width">2.00dp</dimen><!-- The border width of the Disabled Button component. -->
   <dimen name="sprk_btn_tertiary_disabled_border_width">2.00dp</dimen><!-- The border width of the Tertiary Button component when disabled. -->
-  <dimen name="sprk_btn_quaternary_disabled_border_width">2.00dp</dimen><!-- The border width of the Quaternary Button component when disabled. -->
   <dimen name="sprk_card_max_width">425.00dp</dimen><!-- The maximum width of the Card. -->
   <dimen name="sprk_card_border_radius">8.00dp</dimen><!-- The border radius of the Card. -->
   <dimen name="sprk_card_content_padding">24.00dp</dimen><!-- The padding of the content inside the Card. -->

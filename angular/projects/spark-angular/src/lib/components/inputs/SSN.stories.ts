@@ -133,6 +133,7 @@ export const invalidSSNInput = () => ({
         sprkInput
         class="sprk-b-TextInput--error"
         aria-invalid="true"
+        aria-describedby="ssn-error"
       >
       <sprk-checkbox-item
         isVisibilityToggle="true"
@@ -146,7 +147,7 @@ export const invalidSSNInput = () => ({
         >
         <label for="show-ssn" sprkCheckboxLabel>Show SSN</label>
       </sprk-checkbox-item>
-      <span sprkFieldError>
+      <span sprkFieldError id="ssn-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -200,17 +201,6 @@ export const disabledSSNInput = () => ({
         >
         <label isDisabled="true" for="show-ssn" sprkCheckboxLabel>Show SSN</label>
       </sprk-checkbox-item>
-      <div
-        [hidden]="ssnInput.valid || ssnInput.pristine"
-        sprkFieldError
-      >
-        <sprk-icon
-          iconName="exclamation-filled"
-          additionalClasses="sprk-b-ErrorIcon"
-        >
-        </sprk-icon>
-        <div class="sprk-b-ErrorText">Invalid SSN.</div>
-      </div>
     </sprk-input-container>
   `,
 });
