@@ -52,6 +52,10 @@ import { SprkModalModule } from './components/sprk-modal/sprk-modal.module';
 import { SprkOrderedListModule } from './components/sprk-ordered-list/sprk-ordered-list.module';
 import { SprkPaginationModule } from './components/sprk-pagination/sprk-pagination.module';
 import { SprkPromoModule } from './components/sprk-promo/sprk-promo.module';
+import { SprkPromoMediaModule } from './components/sprk-promo/directives/sprk-promo-media/sprk-promo-media.module';
+import { SprkPromoContentModule } from './components/sprk-promo/directives/sprk-promo-content/sprk-promo-content.module';
+import { SprkPromoHeadingModule } from './components/sprk-promo/directives/sprk-promo-heading/sprk-promo-heading.module';
+import { SprkPromoSubheadingModule } from './components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.module';
 import { SprkStackModule } from './components/sprk-stack/sprk-stack.module';
 import { SprkTabbedNavigationModule } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.module';
 import { SprkTabsModule } from './components/sprk-tabs/sprk-tabs.module';
@@ -119,6 +123,10 @@ import { SprkCardHeaderModule } from './components/sprk-card/directives/sprk-car
     SprkFormatterSsnModule,
     SprkDatepickerModule,
     SprkPromoModule,
+    SprkPromoMediaModule,
+    SprkPromoContentModule,
+    SprkPromoHeadingModule,
+    SprkPromoSubheadingModule,
     SprkTableModule,
     SprkTableHeadModule,
     SprkTableGroupedColumnModule,

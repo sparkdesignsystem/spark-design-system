@@ -214,7 +214,7 @@ export const legacyStory = () => ({
         Search
       </label>
       <sprk-icon
-        iconName="search"
+        iconType="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
@@ -256,7 +256,7 @@ export const legacyInvalidSearchInput = () => ({
         Search
       </label>
       <sprk-icon
-        iconName="search"
+        iconType="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
@@ -275,7 +275,7 @@ export const legacyInvalidSearchInput = () => ({
       >
       <span sprkFieldError id="legacy-search-error">
         <sprk-icon
-          iconName="exclamation-filled"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -308,7 +308,7 @@ export const legacyDisabledSearchInput = () => ({
         Search
       </label>
       <sprk-icon
-        iconName="search"
+        iconType="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>

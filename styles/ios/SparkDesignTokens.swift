@@ -325,7 +325,7 @@ public class SparkDesignTokens {
     public static let sprkMastheadSelectorDropdownFontWeight = 400
     public static let sprkMastheadSelectorDropdownFooterPadding = CGFloat(16.00)
     public static let sprkMastheadSelectorDropdownItemPadding = CGFloat(24.00)
-    public static let sprkMastheadSelectorDropdownTitleColor = UIColor(red: 0.467, green: 0.463, blue: 0.463, alpha:1)
+    public static let sprkMastheadSelectorDropdownTitleColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkMastheadSelectorDropdownTitleFontSize = CGFloat(16.00)
     public static let sprkMastheadSelectorDropdownTitleFontWeight = 300
     public static let sprkMastheadSelectorFontColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)

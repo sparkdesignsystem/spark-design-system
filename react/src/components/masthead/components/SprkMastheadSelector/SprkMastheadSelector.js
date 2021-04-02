@@ -280,7 +280,7 @@ SprkMastheadSelector.propTypes = {
 };
 
 SprkMastheadSelector.defaultProps = {
-  defaultTriggerText: 'Choose One...',
+  defaultTriggerText: 'Choose One',
   iconName: 'chevron-down',
   isFlush: false,
 };

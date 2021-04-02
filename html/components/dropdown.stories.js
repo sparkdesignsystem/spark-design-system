@@ -140,7 +140,7 @@ export const informational = () => {
             </p>
 
             <p class="sprk-b-TypeBodyTwo">
-              More information
+              Additional information
             </p>
           </a>
         </li>
@@ -154,7 +154,7 @@ export const informational = () => {
           <a class="sprk-c-Dropdown__link" href="#nogo">
             <p class="sprk-b-TypeBodyOne">Choice Title 2</p>
             <p class="sprk-b-TypeBodyTwo">Information about this choice</p>
-            <p class="sprk-b-TypeBodyTwo">More information</p>
+            <p class="sprk-b-TypeBodyTwo">Additional information</p>
           </a>
         </li>
       </ul>
