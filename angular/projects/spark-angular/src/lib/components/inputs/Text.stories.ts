@@ -301,7 +301,7 @@ export const legacyInvalidHugeTextInput = () => ({
       <label for="legacy-invalid-huge-text" sprkLabel>Text Input Label</label>
       <span sprkFieldError id="legacy-huge-text-error">
         <sprk-icon
-          iconName="exclamation-filled"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>

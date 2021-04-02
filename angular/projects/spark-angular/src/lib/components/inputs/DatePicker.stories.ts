@@ -209,7 +209,7 @@ export const legacyStory = () => ({
         Date Input
       </label>
       <sprk-icon
-        iconName="calendar"
+        iconType="calendar"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
@@ -250,7 +250,7 @@ export const legacyInvalidDatePicker = () => ({
         Date Input
       </label>
       <sprk-icon
-        iconName="calendar"
+        iconType="calendar"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
@@ -270,7 +270,7 @@ export const legacyInvalidDatePicker = () => ({
       />
       <span sprkFieldError id="legacy-datepicker-error">
         <sprk-icon
-          iconName="exclamation-filled"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -301,7 +301,7 @@ export const legacyDisabledDatePicker = () => ({
         Date Input
       </label>
       <sprk-icon
-        iconName="calendar"
+        iconType="calendar"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
