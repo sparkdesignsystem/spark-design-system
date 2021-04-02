@@ -244,7 +244,6 @@ export const invalidHugeSelectBox = () => ({
       <select
         id="huge-select-error-1"
         data-id="select-huge-invalid"
-        data-sprk-input="huge"
         sprkSelect
         variant="huge"
         class="sprk-b-Select--error"
@@ -349,7 +348,6 @@ export const legacyHugeSelectBox = () => ({
       <select
         id="select-huge-1"
         data-id="select-huge-1"
-        data-sprk-input="huge"
         sprkInput
       >
         <option
@@ -395,7 +393,6 @@ export const legacyInvalidHugeSelectBox = () => ({
       <select
         id="select-huge-1"
         data-id="select-huge-1"
-        data-sprk-input="huge"
         sprkInput
         class="sprk-b-Select--error"
         aria-invalid="true"
@@ -452,7 +449,6 @@ export const legacyDisabledHugeSelectBox = () => ({
       <select
         id="select-huge-1"
         data-id="select-huge-1"
-        data-sprk-input="huge"
         sprkInput
         disabled
       >
