@@ -79,7 +79,6 @@
   <dimen name="sprk_input_container_huge_max_width">600.00dp</dimen><!-- The max-width setting for Huge Inputs. -->
   <dimen name="sprk_input_max_width">440.00dp</dimen><!-- The value used as a maximum width for Input containers. -->
   <dimen name="sprk_input_max_width_full">1600.00dp</dimen><!-- The value used for the maximum width of an Input container using the .sprk-b-InputContainer--full modifier. -->
-  <dimen name="sprk_input_huge_error_border_width">1.00dp</dimen><!-- The border width on huge Inputs when they have an error. -->
   <dimen name="sprk_input_huge_disabled_border_width">0.00dp</dimen><!-- The border width on huge Inputs when they are disabled. -->
   <dimen name="sprk_input_huge_icon_offset_top">800.00dp</dimen><!-- The top value for icons in Huge Inputs. -->
   <dimen name="sprk_input_has_icon_right_top">38.00dp</dimen><!-- The top offset of the icon displayed on the right side of Inputs. -->

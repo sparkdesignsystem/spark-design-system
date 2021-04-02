@@ -14,20 +14,20 @@
 
   &:hover {
     + .sprk-b-Radio__label::before {
-      border: $sprk-radio-input-outer-circle-hover-border;
+      box-shadow: $sprk-radio-input-outer-circle-hover-box-shadow;
       background-color: $sprk-radio-input-outer-circle-hover-background-color;
     }
   }
 
   &:focus {
     + .sprk-b-Radio__label::before {
-      border: $sprk-radio-input-outer-circle-focus-border;
+      box-shadow: $sprk-radio-input-outer-circle-focus-box-shadow;
     }
   }
 }
 
 .sprk-b-Radio__label::before,
-.sprk-b-Radio__input:checked + .sprk-b-Radio__label::after {
+.sprk-b-Radio__label::after {
   border-radius: $sprk-radio-input-border-radius;
   content: '';
   position: absolute;
@@ -35,29 +35,29 @@
   display: inline-block;
 }
 
-// will be the circle
+// The outer circle of the custom radio element
 .sprk-b-Radio__label::before {
   width: $sprk-radio-input-outer-circle-width;
   height: $sprk-radio-input-outer-circle-height;
-  border: $sprk-radio-input-outer-circle-border;
+  box-shadow: $sprk-radio-input-outer-circle-box-shadow;
   top: $sprk-radio-input-outer-circle-top;
   left: $sprk-radio-input-outer-circle-left;
 }
 
 .sprk-b-Radio__input:checked + .sprk-b-Radio__label::before {
-  border: $sprk-radio-input-outer-circle-border-checked;
+  box-shadow: $sprk-radio-input-outer-circle-box-shadow;
 }
 
 .sprk-b-Radio__input:checked {
   &:hover {
     + .sprk-b-Radio__label::before {
-      border: $sprk-radio-input-outer-circle-hover-border;
+      box-shadow: $sprk-radio-input-outer-circle-hover-box-shadow;
     }
   }
 
   &:focus {
     + .sprk-b-Radio__label::before {
-      border: $sprk-radio-input-outer-circle-hover-border;
+      box-shadow: $sprk-radio-input-outer-circle-hover-box-shadow;
     }
   }
 }
@@ -72,20 +72,20 @@
 
 .sprk-b-Radio__input:disabled {
   + .sprk-b-Radio__label::before {
-    border: $sprk-radio-input-outer-circle-border-disabled;
     background-color: $sprk-radio-input-outer-circle-background-color-disabled;
     cursor: $sprk-radio-input-cursor-hover-disabled;
+    box-shadow: $sprk-radio-input-outer-circle-box-shadow-disabled;
   }
 
   &:hover {
     + .sprk-b-Radio__label::before {
-      border: $sprk-radio-input-outer-circle-border-hover-disabled;
+      box-shadow: $sprk-radio-input-outer-circle-box-shadow-disabled;
     }
   }
 
   &:focus {
     + .sprk-b-Radio__label::before {
-      border: $sprk-radio-input-outer-circle-focus-border-disabled;
+      box-shadow: $sprk-radio-input-outer-circle-box-shadow-disabled;
     }
   }
 }
@@ -142,7 +142,7 @@
     box-shadow: $sprk-radio-input-huge-checked-hover-box-shadow;
 
     ::before {
-      border-color: $sprk-radio-input-huge-checked-hover-outer-circle-border-color;
+      box-shadow: $sprk-radio-input-huge-checked-hover-box-shadow;
     }
   }
 
@@ -169,7 +169,6 @@
     }
 
     + .sprk-b-Radio__label::before {
-      border: $sprk-radio-input-huge-outer-circle-border-disabled;
       cursor: $sprk-radio-input-cursor-hover-disabled;
     }
   }
