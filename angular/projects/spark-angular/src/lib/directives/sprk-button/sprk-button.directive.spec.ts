@@ -28,10 +28,6 @@ import { SprkSpinnerDirective } from '../sprk-spinner/sprk-spinner.directive';
     >
       Test 5
     </button>
-    <!-- TODO: Remove spinning functionality from button on next release #3561 -->
-    <button sprkButton variant="quaternary" [isSpinning]="spinnerVal">
-      Test 6
-    </button>
     <button sprkButton additionalClasses="testClass" [isSpinning]="true">
       <div sprkSpinner></div>
     </button>
@@ -49,9 +45,8 @@ describe('Spark Button Directive', () => {
   let button3Element: HTMLElement;
   let button4Element: HTMLElement;
   let button5Element: HTMLElement;
-  let button6Element: HTMLElement;
   // TODO: Remove this test is for checking if new spinner directive is being used #3561
-  let button7Element: HTMLElement;
+  let button6Element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -68,7 +63,6 @@ describe('Spark Button Directive', () => {
     button4Element = fixture.nativeElement.querySelectorAll('button')[3];
     button5Element = fixture.nativeElement.querySelectorAll('button')[4];
     button6Element = fixture.nativeElement.querySelectorAll('button')[5];
-    button7Element = fixture.nativeElement.querySelectorAll('button')[6];
   }));
 
   it('should create itself', () => {
@@ -103,17 +97,6 @@ describe('Spark Button Directive', () => {
     expect(spinner.classList.contains('sprk-c-Spinner--dark')).toBe(false);
   });
 
-  // TODO: Remove spinning functionality from button on next release #3561
-  it('should add the dark spinner class when isSpinning is true on a quaternary button', () => {
-    const spinnerNotThere = button6Element.querySelector('.sprk-c-Spinner');
-    expect(spinnerNotThere).toBeNull();
-    component.spinnerVal = true;
-    fixture.detectChanges();
-    const spinner = button6Element.querySelector('.sprk-c-Spinner');
-    expect(spinner.classList.contains('sprk-c-Spinner--dark')).toBe(true);
-    expect(spinner.classList.contains('sprk-c-Spinner--secondary')).toBe(false);
-  });
-
   it('should add the default button class when variant is not set', () => {
     expect(button1Element.classList.contains('sprk-c-Button')).toBe(true);
     expect(button1Element.classList.length).toBe(1);
@@ -133,21 +116,14 @@ describe('Spark Button Directive', () => {
     expect(button5Element.classList.length).toBe(2);
   });
 
-  it('should add the quaternary button class when variant is quaternary', () => {
-    expect(button6Element.classList.contains('sprk-c-Button--quaternary')).toBe(
-      true,
-    );
-    expect(button6Element.classList.length).toBe(2);
-  });
-
   it('should add the additionalClasses', () => {
-    expect(button7Element.classList.contains('testClass')).toBe(true);
+    expect(button6Element.classList.contains('testClass')).toBe(true);
   });
 
   it('should add loading state classes and attributes', () => {
-    expect(button7Element.getAttribute('disabled')).toBe('true');
+    expect(button6Element.getAttribute('disabled')).toBe('true');
     expect(
-      button7Element.classList.contains('sprk-c-Button--has-spinner'),
+      button6Element.classList.contains('sprk-c-Button--has-spinner'),
     ).toBe(true);
   });
 
@@ -200,7 +176,7 @@ describe('Spark Button Directive', () => {
 
   // TODO: Remove. This is for checking if user is using new spinner directive #3561
   it('should render new spinner if using sprk-spinner-directive', () => {
-    const spinnerEl = button7Element.querySelector('.sprk-c-Spinner');
+    const spinnerEl = button6Element.querySelector('.sprk-c-Spinner');
     expect(spinnerEl.getAttribute('role')).toBe('progressbar');
     expect(spinnerEl.getAttribute('aria-valuetext')).toBe('Loading');
   });
