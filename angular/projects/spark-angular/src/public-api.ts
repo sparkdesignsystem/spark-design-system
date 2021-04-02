@@ -260,3 +260,11 @@ export { SprkTabsPanelDirective } from './lib/directives/sprk-tabs/sprk-tabs-pan
 export { SprkTabsPanelModule } from './lib/directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.module';
 export { SprkTabsButtonDirective } from './lib/directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.directive';
 export { SprkTabsButtonModule } from './lib/directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.module';
+export { SprkPromoMediaDirective } from './lib/components/sprk-promo/directives/sprk-promo-media/sprk-promo-media.directive';
+export { SprkPromoMediaModule } from './lib/components/sprk-promo/directives/sprk-promo-media/sprk-promo-media.module';
+export { SprkPromoContentDirective } from './lib/components/sprk-promo/directives/sprk-promo-content/sprk-promo-content.directive';
+export { SprkPromoContentModule } from './lib/components/sprk-promo/directives/sprk-promo-content/sprk-promo-content.module';
+export { SprkPromoHeadingDirective } from './lib/components/sprk-promo/directives/sprk-promo-heading/sprk-promo-heading.directive';
+export { SprkPromoHeadingModule } from './lib/components/sprk-promo/directives/sprk-promo-heading/sprk-promo-heading.module';
+export { SprkPromoSubheadingDirective } from './lib/components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.directive';
+export { SprkPromoSubheadingModule } from './lib/components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.module';
