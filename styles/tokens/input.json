@@ -1826,15 +1826,6 @@
           "file": "settings",
           "themable": true
         },
-        "border-color": {
-          "comment": "The border color of the outer circle of the huge radio input.",
-          "value": "{black-tint.80.value}",
-          "attributes": {
-            "category": "content"
-          },
-          "file": "settings",
-          "themable": true
-        },
         "width": {
           "comment": "The width of the outer circle of the huge radio input.",
           "value": "1.5rem",
@@ -2095,6 +2086,15 @@
         "file": "settings",
         "themable": true
       },
+      "box-shadow-disabled": {
+        "comment": "The box shadow of the custom checkbox input when disabled.",
+        "value": "0 0 0 1px {black-tint.50.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "box-shadow-focus-checked": {
         "comment": "The box shadow of the custom checkbox input when focused and checked.",
         "value": "0 0 0 2px {black.value}",
@@ -2128,18 +2128,6 @@
         "attributes": {
           "category": "content"
         },
-        "file": "settings",
-        "themable": true
-      },
-      "border-color-checked": {
-        "comment": "The border color of the custom checkbox input when checked.",
-        "value": "{purple.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "border-color-disabled": {
-        "comment": "The border color of the custom checkbox input when disabled.",
-        "value": "transparent",
         "file": "settings",
         "themable": true
       },
@@ -2214,12 +2202,6 @@
       "left": {
         "comment": "The left value of the custom checkbox element of the huge checkbox input.",
         "value": "{space.m.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "disabled-border-color": {
-        "comment": "The border color of the custom checkbox element of the huge checkbox input when disabled.",
-        "value": "{black-tint.50.value}",
         "file": "settings",
         "themable": true
       },

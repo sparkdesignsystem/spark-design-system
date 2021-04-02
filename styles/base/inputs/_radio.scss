@@ -70,24 +70,15 @@
   top: $sprk-radio-input-inner-circle-top;
 }
 
-.sprk-b-Radio__input:disabled {
-  + .sprk-b-Radio__label::before {
-    background-color: $sprk-radio-input-outer-circle-background-color-disabled;
-    cursor: $sprk-radio-input-cursor-hover-disabled;
-    box-shadow: $sprk-radio-input-outer-circle-box-shadow-disabled;
-  }
+.sprk-b-Radio__input:disabled + .sprk-b-Radio__label {
+  cursor: not-allowed;
+  cursor: $sprk-radio-input-cursor-hover-disabled;
+}
 
-  &:hover {
-    + .sprk-b-Radio__label::before {
-      box-shadow: $sprk-radio-input-outer-circle-box-shadow-disabled;
-    }
-  }
-
-  &:focus {
-    + .sprk-b-Radio__label::before {
-      box-shadow: $sprk-radio-input-outer-circle-box-shadow-disabled;
-    }
-  }
+.sprk-b-Radio__input:disabled + .sprk-b-Radio__label::before {
+  background-color: $sprk-radio-input-outer-circle-background-color-disabled;
+  cursor: $sprk-radio-input-cursor-hover-disabled;
+  box-shadow: $sprk-radio-input-outer-circle-box-shadow-disabled;
 }
 
 // Huge Styles for Radio
@@ -101,7 +92,7 @@
   .sprk-b-Radio__label {
     transition: $sprk-radio-input-huge-transition;
     // Using box shadow as border so it doesn't take up space on hover and focus
-    box-shadow: $sprk-checkbox-huge-container-box-shadow;
+    box-shadow: $sprk-radio-input-huge-label-box-shadow;
     border-radius: $sprk-radio-input-huge-label-border-radius;
     padding: $sprk-radio-input-huge-label-padding;
     flex-basis: $sprk-radio-input-huge-label-flex-basis;
@@ -122,7 +113,6 @@
     width: $sprk-radio-input-huge-outer-circle-height;
     top: $sprk-radio-input-huge-outer-circle-top;
     left: $sprk-radio-input-huge-outer-circle-left;
-    border-color: $sprk-radio-input-huge-outer-circle-border-color;
   }
 
   .sprk-b-Radio__input:focus + .sprk-b-Radio__label {

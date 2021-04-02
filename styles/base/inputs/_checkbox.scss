@@ -81,7 +81,7 @@
 
 .sprk-b-Checkbox__input:disabled + .sprk-b-Checkbox__label::before {
   cursor: $sprk-checkbox-custom-input-cursor-disabled;
-  border-color: $sprk-checkbox-custom-input-border-color-disabled;
+  box-shadow: $sprk-checkbox-custom-input-box-shadow-disabled;
   background-color: $sprk-checkbox-custom-input-background-color-disabled;
 }
 
@@ -137,7 +137,8 @@
         background: $sprk-checkbox-huge-container-disabled-background;
 
         &::before {
-          border-color: $sprk-checkbox-huge-custom-input-disabled-border-color;
+          // border-color: $sprk-checkbox-huge-custom-input-disabled-border-color;
+          // box-shadow: $sprk-checkbox-huge-custom-input-disabled-box-shadow;
         }
       }
 
