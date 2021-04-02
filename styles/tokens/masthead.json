@@ -387,7 +387,7 @@
           },
           "color": {
             "comment": "The color of the Selector Dropdown title, found in a Masthead with Extended Navigation.",
-            "value": "{black-tint.60.value}",
+            "value": "{black.value}",
             "file": "settings",
             "themable": true
           }

@@ -54,9 +54,19 @@ that are published to npm.
 
 If you want to run a copy of Gatsby locally:
 
-1. Run `npm install`.
-2. Run `npm start`.
-3. Open your browser to `http://localhost:8000/`.
+1. Navigate to the root directory of the project.
+2. Run `npm install`.
+3. Run `npm start`.
+4. Open your browser to `http://localhost:8000/`.
+
+If you want to run a copy of Gatsby and Storybook locally:
+
+1. Navigate to the root directory of the project.
+2. Run `npm run installall`.
+3. Run `npm start` to start Gatsby then open your browser to `http://localhost:8000/`.
+4. Run `(cd react/ ; npm run storybook)` to start Storybook for React.
+5. Run `(cd angular/ ; npm run storybook)` to start Storybook for Angular.
+6. Run `(cd html/ ; npm run storybook)` to start Storybook for HTML.
 
 ### Unit Tests
 
