@@ -82,7 +82,7 @@ export const informational = () => ({
         content: {
           title: 'Choice Title 1',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information'
+          infoLine2: 'Additional Information'
         },
         value: 'Choice Title 1',
         active: false
@@ -91,7 +91,7 @@ export const informational = () => ({
         content: {
           title: 'Choice Title 2',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information'
+          infoLine2: 'Additional Information'
         },
         value: 'Choice Title 2',
         active: false,

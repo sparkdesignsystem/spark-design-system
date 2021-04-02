@@ -324,11 +324,11 @@ describe('SprkDropdown:', () => {
   );
 
   it(
-    'should set state with triggerText as Choose One...' +
+    'should set state with triggerText as Choose One' +
       ' when choice items are empty and defaultTriggerText is not provided',
     () => {
       const wrapper = mount(<SprkDropdown />);
-      expect(wrapper.state().triggerText).toBe('Choose One...');
+      expect(wrapper.state().triggerText).toBe('Choose One');
     },
   );
 
@@ -488,7 +488,7 @@ describe('SprkDropdown:', () => {
       wrapper.find('.sprk-b-Link').simulate('click');
       expect(
         wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
-      ).toBe('Choose One...');
+      ).toBe('Choose One');
     },
   );
 
@@ -523,7 +523,7 @@ describe('SprkDropdown:', () => {
 
     expect(
       wrapper.find('.sprk-b-Link').instance().getAttribute('aria-label'),
-    ).toBe('Choose One...');
+    ).toBe('Choose One');
   });
 
   it('should apply aria-label to listbox when title is provided', () => {

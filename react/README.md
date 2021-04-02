@@ -70,6 +70,14 @@ If you want to run a copy of Gatsby locally:
 2. Run `npm start`.
 3. Open your browser to `http://localhost:8000/`.
 
+If you want to run a copy of Gatsby and Storybook locally:
+
+1. Run `npm run installall`.
+2. Run `npm start` to start Gatsby then open your browser to `http://localhost:8000/`.
+3. Run `(cd react/ ; npm run storybook)` to start Storybook for React.
+3. Run `(cd angular/ ; npm run storybook)` to start Storybook for Angular.
+3. Run `(cd html/ ; npm run storybook)` to start Storybook for HTML.
+
 ### Unit Tests
 
 Spark uses the [Jest](https://jestjs.io) test

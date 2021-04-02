@@ -63,9 +63,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
             <sprk-icon
               [iconName]="triggerIconName"
               additionalClasses="
-                sprk-c-Icon--filled-current-color
-                sprk-c-Icon--stroke-current-color
-                sprk-u-mhs
+                sprk-c-Icon
                 sprk-c-Icon--toggle
                 sprk-Stack__item
               "

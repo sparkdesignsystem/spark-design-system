@@ -205,7 +205,7 @@ SprkMastheadDropdown.propTypes = {
 };
 
 SprkMastheadDropdown.defaultProps = {
-  triggerText: 'Choose One...',
+  triggerText: 'Choose One',
   iconName: 'chevron-down',
   variant: 'base',
   choices: {

@@ -465,8 +465,8 @@ export const extended = () => ({
       >
         <div class="sprk-o-Stack__item sprk-u-Position--relative">
           <sprk-masthead-selector
-            triggerText="My Selector"
-            heading="Select One"
+            triggerText="Choose One"
+            heading="Choose One"
             triggerIconName="chevron-down"
             [choices]="siteDropdownChoices"
           >
@@ -664,14 +664,14 @@ export const extended = () => ({
     ],
     mySelector: {
       trigger: {
-        text: 'Select One',
+        text: 'Choose One',
       },
       choices: [
         {
           content: {
             title: 'Choice Title 1',
             infoLine1: 'Information about this choice',
-            infoLine2: 'More Information',
+            infoLine2: 'Additional Information',
           },
           value: 'Choice Title 1',
           active: false,
@@ -680,7 +680,7 @@ export const extended = () => ({
           content: {
             title: 'Choice Title 2',
             infoLine1: 'Information about this choice',
-            infoLine2: 'More Information',
+            infoLine2: 'Additional Information',
           },
           value: 'Choice Title 2',
           active: true,
@@ -697,7 +697,7 @@ export const extended = () => ({
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information',
+          infoLine2: 'Additional Information',
         },
         value: 'Choice Title 1',
         active: false,
@@ -706,7 +706,7 @@ export const extended = () => ({
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information',
+          infoLine2: 'Additional Information',
         },
         value: 'Choice Title 2',
         active: true,
