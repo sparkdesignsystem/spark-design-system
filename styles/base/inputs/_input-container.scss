@@ -43,6 +43,15 @@
   box-shadow: $sprk-input-huge-disabled-box-shadow;
 }
 
+.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--error,
+.sprk-b-InputContainer--huge .sprk-b-Select.sprk-b-Select--error {
+  box-shadow: $sprk-input-huge-error-box-shadow;
+
+  &:focus {
+    box-shadow: $sprk-input-huge-error-focus-box-shadow;
+  }
+}
+
 // Adjust for select open icon
 .sprk-b-InputContainer--huge .sprk-b-Select {
   padding-right: $sprk-select-input-huge-padding-right;

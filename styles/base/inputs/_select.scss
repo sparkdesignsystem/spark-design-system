@@ -6,6 +6,7 @@
   -moz-appearance: $sprk-select-appearance;
   appearance: $sprk-select-appearance;
   border-radius: $sprk-select-border-radius;
+  border: none;
   box-shadow: $sprk-select-box-shadow;
   background: $sprk-select-background;
   color: $sprk-select-color;
@@ -48,6 +49,7 @@
   background-color: $sprk-select-disabled-background-color;
   color: $sprk-select-disabled-color;
   box-shadow: $sprk-text-input-disabled-box-shadow;
+  cursor: not-allowed;
 
   &:hover,
   &:focus {

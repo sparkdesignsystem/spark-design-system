@@ -23,7 +23,7 @@
   content: '';
   height: $sprk-checkbox-custom-input-height;
   width: $sprk-checkbox-custom-input-width;
-  border: $sprk-checkbox-custom-input-border;
+  box-shadow: $sprk-checkbox-custom-input-box-shadow;
   border-radius: $sprk-checkbox-custom-input-border-radius;
   top: $sprk-checkbox-custom-input-top;
   left: $sprk-checkbox-custom-input-left;
@@ -42,15 +42,17 @@
 }
 
 // Focus styles for unchecked checkbox
-.sprk-b-Checkbox__input:focus + .sprk-b-Checkbox__label::before {
-  border: $sprk-checkbox-custom-input-border-focus;
-  background-color: $sprk-checkbox-custom-input-background-color-focus;
+.sprk-b-Checkbox__input:focus {
+  + .sprk-b-Checkbox__label::before {
+    box-shadow: $sprk-checkbox-custom-input-box-shadow-focus;
+    background-color: $sprk-checkbox-custom-input-background-color-focus;
+  }
 }
 
 // Hover styles for unchecked checkbox
 .sprk-b-Checkbox__input:hover + .sprk-b-Checkbox__label::before {
   background-color: $sprk-checkbox-custom-input-background-color-hover;
-  border: $sprk-checkbox-custom-input-border-hover;
+  box-shadow: $sprk-checkbox-custom-input-box-shadow-hover;
 }
 
 // Checked styles for checkbox and label
@@ -62,13 +64,12 @@
 
   + .sprk-b-Checkbox__label::before {
     background-color: $sprk-checkbox-custom-input-background-color-checked;
-    border-color: $sprk-checkbox-custom-input-border-color-checked;
   }
 
   &:focus {
     // Override focus border color if its checked
     + .sprk-b-Checkbox__label::before {
-      border: $sprk-checkbox-custom-input-border-focus-checked;
+      box-shadow: $sprk-checkbox-custom-input-box-shadow-focus-checked;
     }
   }
 }

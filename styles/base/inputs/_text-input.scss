@@ -31,7 +31,6 @@
   &:focus {
     box-shadow: $sprk-text-input-error-focus-box-shadow;
   }
-
 }
 
 .sprk-b-TextInput[disabled] {
@@ -43,6 +42,16 @@
   &:hover,
   &:focus {
     box-shadow: $sprk-text-input-disabled-box-shadow;
+  }
+}
+
+.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--error,
+.sprk-b-InputContainer--huge .sprk-b-Select.sprk-b-Select--error {
+  // border-width: $sprk-input-huge-error-border-width;
+  box-shadow: 0 0 0 1px $sprk-orange;
+
+  &:focus {
+    box-shadow: 0 0 0 1px $sprk-orange;
   }
 }
 
