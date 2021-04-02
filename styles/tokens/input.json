@@ -151,7 +151,7 @@
     },
     "error": {
       "box-shadow": {
-        "comment": "The box shadow on Inputs there is an error and it's focused.",
+        "comment": "The box shadow on Inputs there is an error.",
         "value": "0 0 0 1px {orange.value}",
         "attributes": {
           "category": "content"
@@ -536,12 +536,6 @@
         "themable": true
       },
       "focus": {
-        "border-width": {
-          "comment": "The border width for Huge Inputs on focus.",
-          "value": "{text-input.huge.focus.border-width.value}",
-          "file": "settings",
-          "themable": true
-        },
         "label-color": {
           "comment": "The label color value of Huge Inputs on focus.",
           "value": "{text-input.huge.focus.label-color.value}",
@@ -550,7 +544,7 @@
         },
         "box-shadow": {
           "comment": "The box shadow value on Huge Inputs on focus.",
-          "value": "0 0 0 1px {black-tint.80.value}",
+          "value": "0 0 0 2px {purple.value}, 0 2px 8px {black-tint.30.value}",
           "attributes": {
             "category": "content"
           },
@@ -596,7 +590,25 @@
       },
       "box-shadow": {
         "comment": "The box shadow value on Huge Inputs.",
-        "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
+        "value": "0 0 0 1px {black-tint.80.value}, 0 2px 8px {black-tint.30.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "error-box-shadow": {
+        "comment": "The box shadow value on Huge Inputs in the error state.",
+        "value": "0 0 0 1px {orange.value}, 0 2px 8px {black-tint.30.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "error-focus-box-shadow": {
+        "comment": "The box shadow value on Huge Inputs in the error state and focused.",
+        "value": "0 0 0 1px {orange.value}, 0 2px 8px {black-tint.30.value}",
         "attributes": {
           "category": "content"
         },
@@ -1508,7 +1520,7 @@
       },
       "box-shadow-disabled": {
         "comment": "The box shadow value on the outer circle of the custom radio element when disabled.",
-        "value": "0 0 0 2px {black-tint.50.value}",
+        "value": "0 0 0 1px {black-tint.50.value}",
         "attributes": {
           "category": "content"
         },
@@ -1544,7 +1556,7 @@
       },
       "box-shadow": {
         "comment": "The box shadow value on the outer circle of the custom radio element.",
-        "value": "0 0 0 1px {black-tint.50.value}",
+        "value": "0 0 0 1px {black-tint.80.value}",
         "attributes": {
           "category": "content"
         },
@@ -2056,27 +2068,36 @@
         "file": "settings",
         "themable": true
       },
-      "border": {
-        "comment": "The border of the custom checkbox input.",
-        "value": "1px solid {black-tint.80.value}",
+      "box-shadow": {
+        "comment": "The box shadow value on the custom checkbox element.",
+        "value": "0 0 0 1px {black-tint.80.value}",
         "attributes": {
           "category": "content"
         },
         "file": "settings",
         "themable": true
       },
-      "border-focus": {
-        "comment": "The border of the custom checkbox input when focused.",
-        "value": "2px solid {purple.value}",
+      "box-shadow-hover": {
+        "comment": "The box shadow value of the custom checkbox input when hovered.",
+        "value": "0 0 0 1.5px {black.value}",
         "attributes": {
           "category": "content"
         },
         "file": "settings",
         "themable": true
       },
-      "border-focus-checked": {
-        "comment": "The border of the custom checkbox input when it is checked and focused.",
-        "value": "2px solid {black.value}",
+      "box-shadow-focus": {
+        "comment": "The box shadow of the custom checkbox input when focused.",
+        "value": "0 0 0 2px {purple.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "box-shadow-focus-checked": {
+        "comment": "The box shadow of the custom checkbox input when focused and checked.",
+        "value": "0 0 0 2px {black.value}",
         "attributes": {
           "category": "content"
         },
@@ -2113,12 +2134,6 @@
       "border-color-checked": {
         "comment": "The border color of the custom checkbox input when checked.",
         "value": "{purple.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "border-hover": {
-        "comment": "The border color of the custom checkbox input when hovered.",
-        "value": "1.5px solid {black.value}",
         "file": "settings",
         "themable": true
       },
