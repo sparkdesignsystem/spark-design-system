@@ -1351,7 +1351,7 @@
   },
   "visibility-control-margin": {
     "comment": "The margin surrounding visibility controls (Ex. 'Show SSN').",
-    "value": "6px 0 0 0",
+    "value": "8px 0 0 0",
     "attributes": {
       "category": "content"
     },

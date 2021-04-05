@@ -125,7 +125,7 @@
   <string name="sprk_date_picker_header_border">1px solid #fff7f7f7</string><!-- The border setting for the header in the Date Picker. -->
   <string name="sprk_date_picker_header_padding">0 0 8.00dp 0</string><!-- The padding setting for the header in the Date Picker. -->
   <string name="sprk_label_margin">0 0 8.00dp 0</string><!-- The margin applied to Input labels. -->
-  <string name="sprk_visibility_control_margin">6px 0 0 0</string><!-- The margin surrounding visibility controls (Ex. 'Show SSN'). -->
+  <string name="sprk_visibility_control_margin">8px 0 0 0</string><!-- The margin surrounding visibility controls (Ex. 'Show SSN'). -->
   <string name="sprk_radio_input_outer_circle_hover_box_shadow">0 0 0 1.5px #ff1c1b1a</string><!-- The box shadow value on the outer circle of the custom radio element when hovered. -->
   <string name="sprk_radio_input_outer_circle_hover_background_color">#fff7f7f7</string><!-- The background color of the outer circle in the radio input on hover. -->
   <string name="sprk_radio_input_outer_circle_focus_box_shadow">0 0 0 2px #ff603aa1</string><!-- The box shadow value on the outer circle of the custom radio element when focused. -->
