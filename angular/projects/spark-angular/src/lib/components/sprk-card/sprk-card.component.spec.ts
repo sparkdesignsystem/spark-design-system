@@ -31,6 +31,15 @@ describe('SparkCardComponent', () => {
     expect(element.classList.toString()).toEqual(component.getClassesCard());
   });
 
+  it('should add additionalClasses if supplied', () => {
+    component.additionalClasses = 'sprk-u-mbm';
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelector('div');
+    expect(element.classList.toString()).toEqual(
+      'sprk-c-Card sprk-o-Stack sprk-u-mbm',
+    );
+  });
+
   it('should add standout style selector if isStandout is true', () => {
     component.isStandout = true;
     fixture.detectChanges();
