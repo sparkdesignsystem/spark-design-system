@@ -124,21 +124,6 @@
       "themable": true
     },
     "focus": {
-      "border-color": {
-        "comment": "The border color on Inputs when focused.",
-        "value": "{purple.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "border-width": {
-        "comment": "The border width on Inputs when focused.",
-        "value": "2px",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "settings",
-        "themable": true
-      },
       "box-shadow": {
         "comment": "The box shadow on Inputs when focused.",
         "value": "0 0 0 2px {purple.value}, 0 2px 8px {black-tint.30.value}",
@@ -167,39 +152,9 @@
         },
         "file": "settings",
         "themable": true
-      },
-      "border-width": {
-        "comment": "The border width on Inputs when there is an error.",
-        "value": "1px",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "border-color": {
-        "comment": "The border color on Inputs when there is an error.",
-        "value": "{orange.value}",
-        "file": "settings",
-        "themable": true
       }
     },
     "disabled": {
-      "border-color": {
-        "comment": "The border color on disabled Inputs.",
-        "value": "{black-tint.50.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "border-width": {
-        "comment": "The border width on disabled Inputs.",
-        "value": "0",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "settings",
-        "themable": true
-      },
       "color": {
         "comment": "The color on disabled Inputs.",
         "value": "#808080",
@@ -222,12 +177,6 @@
         "themable": true
       }
     },
-    "readonly-border-color": {
-      "comment": "The border color on readonly Inputs.",
-      "value": "{black-tint.50.value}",
-      "file": "settings",
-      "themable": true
-    },
     "readonly-color": {
       "comment": "The color on readonly Inputs.",
       "value": "{black-tint.50.value}",
@@ -236,7 +185,7 @@
     },
     "transition": {
       "comment": "The transition setting on Inputs.",
-      "value": "border-color 0.15s ease",
+      "value": "box-shadow 0.15s ease",
       "attributes": {
         "category": "content"
       },
@@ -245,15 +194,6 @@
     },
     "huge": {
       "focus": {
-        "border-width": {
-          "comment": "Todo deprecate, The border width for Huge Inputs on focus.",
-          "value": "2px",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
         "label-color": {
           "comment": "Todo deprecate, The label color value of Huge Inputs on focus.",
           "value": "{purple.value}",
@@ -297,15 +237,6 @@
       "active-label-top": {
         "comment": "Todo deprecate, The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container.",
         "value": "10px",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "border-width": {
-        "comment": "Todo deprecate, The border width for Huge Inputs.",
-        "value": "1px",
         "attributes": {
           "category": "size"
         },
@@ -445,15 +376,6 @@
         "themable": true
       },
       "disabled": {
-        "border-width": {
-          "comment": "The border width on huge Inputs when they are disabled.",
-          "value": "0px",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
         "box-shadow": {
           "comment": "The box shadow value on Huge Inputs when they are disabled.",
           "value": "none",
@@ -511,12 +433,6 @@
         "file": "settings",
         "themable": true
       },
-      "border-width": {
-        "comment": "The border width for Huge Inputs.",
-        "value": "{text-input.huge.border-width.value}",
-        "file": "settings",
-        "themable": true
-      },
       "padding": {
         "comment": "The padding for Huge Inputs.",
         "value": "{text-input.huge.padding.value}",
@@ -528,7 +444,7 @@
       },
       "label-padding": {
         "comment": "The label padding for Huge Inputs.",
-        "value": "0 ({space.misc.a.value} + {input.huge.border-width.value})",
+        "value": "0 ({space.misc.a.value} + 1)",
         "attributes": {
           "category": "content"
         },
@@ -919,21 +835,6 @@
       "themable": true
     },
     "focus": {
-      "border-color": {
-        "comment": "The border color on Selects when focused.",
-        "value": "{text-input.focus.border-color.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "border-width": {
-        "comment": "The border width on Selects when focused.",
-        "value": "{text-input.focus.border-width.value}",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "settings",
-        "themable": true
-      },
       "box-shadow": {
         "comment": "The box shadow on Selects when focused.",
         "value": "0 0 0 1px {black-tint.80.value}",
@@ -944,39 +845,7 @@
         "themable": true
       }
     },
-    "error": {
-      "border-color": {
-        "comment": "The border color on Selects when there is an error.",
-        "value": "{text-input.error.border-color.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "border-width": {
-        "comment": "The border width on Selects when there is an error.",
-        "value": "{text-input.error.border-width.value}",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "settings",
-        "themable": true
-      }
-    },
     "disabled": {
-      "border-color": {
-        "comment": "The border color on disabled Selects.",
-        "value": "{text-input.disabled.border-color.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "border-width": {
-        "comment": "The border width on disabled Selects.",
-        "value": "{text-input.disabled.border-width.value}",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "settings",
-        "themable": true
-      },
       "color": {
         "comment": "The color on disabled Selects.",
         "value": "{text-input.disabled.color.value}",
@@ -1527,15 +1396,6 @@
         "file": "settings",
         "themable": true
       },
-      "border-disabled": {
-        "comment": "The border of the outer circle in the disabled radio input.",
-        "value": "none",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
       "background-color-disabled": {
         "comment": "The background color of the outer circle in the disabled radio input.",
         "value": "{text-input.disabled.background-color.value}",
@@ -1813,7 +1673,7 @@
           "themable": true
         }
       },
-      "focused-outer-circle-border-background-color": {
+      "focused-outer-circle-background-color": {
         "comment": "The background color of the outer circle of the huge radio input when it has focus.",
         "value": "{gray.value}",
         "file": "settings",
@@ -2187,12 +2047,6 @@
         "file": "settings",
         "themable": true
       },
-      "hover-border-color": {
-        "comment": "The border color of the custom checkbox element of the huge checkbox input when hovered.",
-        "value": "{black.value}",
-        "file": "settings",
-        "themable": true
-      },
       "top": {
         "comment": "The top value of the custom checkbox element of the huge checkbox input.",
         "value": "{space.m.value}",
@@ -2205,15 +2059,9 @@
         "file": "settings",
         "themable": true
       },
-      "checkbox-element-focused-hover-border-color": {
-        "comment": "The border color of the custom checkbox element of the huge checkbox input when focused and hovered.",
-        "value": "{black.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "checkbox-element-checked-border-color": {
-        "comment": "The border color of the custom checkbox element of the huge checkbox input when checked.",
-        "value": "{purple.value}",
+      "checkbox-element-checked-box-shadow": {
+        "comment": "The box-shadw of the custom checkbox element of the huge checkbox input when checked.",
+        "value": "none",
         "file": "settings",
         "themable": true
       }

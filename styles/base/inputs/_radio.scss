@@ -105,6 +105,8 @@
       ::before {
         background-color: $sprk-radio-input-huge-outer-circle-hover-background-color;
       }
+
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
@@ -119,7 +121,7 @@
     box-shadow: $sprk-radio-input-huge-focus-label-box-shadow;
 
     ::before {
-      background-color: $sprk-radio-input-huge-focused-outer-circle-border-background-color;
+      background-color: $sprk-radio-input-huge-focused-outer-circle-background-color;
     }
   }
 

@@ -71,9 +71,7 @@ public class SparkDesignTokens {
     public static let sprkCheckboxHugeContainerDisabledBackground = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
     public static let sprkCheckboxHugeContainerFocusCheckedBoxShadow = 0 0 0 2px UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkCheckboxHugeContainerFocusHoverBoxShadow = 0 0 0 1px UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1), 0 2px 8px UIColor(red: 0.729, green: 0.729, blue: 0.729, alpha:1)
-    public static let sprkCheckboxHugeCustomInputCheckboxElementCheckedBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
-    public static let sprkCheckboxHugeCustomInputCheckboxElementFocusedHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
-    public static let sprkCheckboxHugeCustomInputHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
+    public static let sprkCheckboxHugeCustomInputCheckboxElementCheckedBoxShadow = none
     public static let sprkCheckboxHugeCustomInputLeft = CGFloat(16.00)
     public static let sprkCheckboxHugeCustomInputTop = CGFloat(16.00)
     public static let sprkCheckboxInputOpacity = 0
@@ -256,7 +254,6 @@ public class SparkDesignTokens {
     public static let sprkInputErrorTextFontWeight = 400
     public static let sprkInputErrorTextLineHeight = 1.4
     public static let sprkInputHugeActivePaddingTop = CGFloat(64.00) / 4
-    public static let sprkInputHugeBorderWidth = CGFloat(1.00)
     public static let sprkInputHugeCompleteLabelColor = UIColor(red: 0.286, green: 0.286, blue: 0.282, alpha:1)
     public static let sprkInputHugeErrorFocusLabelColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkInputHugeFocusLabelColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
@@ -355,7 +352,7 @@ public class SparkDesignTokens {
     public static let sprkRadioInputHugeCheckedHoverBoxShadow = 0 0 0 2px UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1), 0 2px 8px UIColor(red: 0.729, green: 0.729, blue: 0.729, alpha:1)
     public static let sprkRadioInputHugeCheckedLabelBoxShadow = 0 0 0 1px UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkRadioInputHugeDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
-    public static let sprkRadioInputHugeFocusedOuterCircleBorderBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
+    public static let sprkRadioInputHugeFocusedOuterCircleBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkRadioInputHugeOuterCircleHoverBackgroundColor = UIColor(red: 0.110, green: 0.431, blue: 0.949, alpha:1)
     public static let sprkRadioInputHugeTransition = "all 0.2s ease-in-out"
     public static let sprkRadioInputInnerCircleBackgroundColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
@@ -365,10 +362,7 @@ public class SparkDesignTokens {
     public static let sprkSelectBorderRadius = CGFloat(4.00)
     public static let sprkSelectColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkSelectDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
-    public static let sprkSelectDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkSelectDisabledColor = #808080
-    public static let sprkSelectErrorBorderColor = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
-    public static let sprkSelectFocusBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkSelectFontFamily = "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif"
     public static let sprkSelectFontSize = CGFloat(16.00)
     public static let sprkSelectFontWeight = 300
@@ -491,7 +485,6 @@ public class SparkDesignTokens {
     public static let sprkInputHasIconPaddingRight = CGFloat(0.00)
     public static let sprkInputHasIconRightLeft = CGFloat(71.00)
     public static let sprkInputHasIconRightTop = CGFloat(38.00)
-    public static let sprkInputHugeDisabledBorderWidth = CGFloat(0.00)
     public static let sprkInputHugeFontSize = CGFloat(20.00)
     public static let sprkInputHugeHeight = CGFloat(64.00)
     public static let sprkInputHugeIconOffsetTop = CGFloat(800.00)
@@ -607,9 +600,6 @@ public class SparkDesignTokens {
     public static let sprkRadioInputOuterCircleWidth = CGFloat(16.00)
     public static let sprkSelectArrowOffsetX = CGFloat(19.00)
     public static let sprkSelectArrowOffsetY = CGFloat(-31.00)
-    public static let sprkSelectDisabledBorderWidth = CGFloat(0.00)
-    public static let sprkSelectErrorBorderWidth = CGFloat(1.00)
-    public static let sprkSelectFocusBorderWidth = CGFloat(2.00)
     public static let sprkSelectInputHugePaddingRight = CGFloat(45.00)
     public static let sprkSpaceH = CGFloat(64.00)
     public static let sprkSpaceInsetL = CGFloat(32.00)
@@ -670,15 +660,10 @@ public class SparkDesignTokens {
     public static let sprkTableSecondaryRowCompBorderWidth = CGFloat(1.00)
     public static let sprkTableSecondaryRowCompRowSpacing = CGFloat(0.00)
     public static let sprkTextInputBorderRadius = CGFloat(4.00)
-    public static let sprkTextInputDisabledBorderWidth = CGFloat(0.00)
-    public static let sprkTextInputErrorBorderWidth = CGFloat(1.00)
-    public static let sprkTextInputFocusBorderWidth = CGFloat(2.00)
     public static let sprkTextInputFontSize = CGFloat(16.00)
     public static let sprkTextInputHeight = CGFloat(48.00)
     public static let sprkTextInputHugeActiveLabelTop = CGFloat(10.00)
     public static let sprkTextInputHugeActivePaddingTop = CGFloat(64.00) / 4
-    public static let sprkTextInputHugeBorderWidth = CGFloat(1.00)
-    public static let sprkTextInputHugeFocusBorderWidth = CGFloat(2.00)
     public static let sprkTextInputHugeHeight = CGFloat(64.00)
     public static let sprkTextareaMinHeight = CGFloat(125.00)
     public static let sprkTextareaPadding = CGFloat(16.00)
@@ -755,10 +740,7 @@ public class SparkDesignTokens {
     public static let sprkTableStripeColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkTextInputColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkTextInputDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
-    public static let sprkTextInputDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkTextInputDisabledColor = #808080
-    public static let sprkTextInputErrorBorderColor = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
-    public static let sprkTextInputFocusBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkTextInputFontFamily = "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif"
     public static let sprkTextInputFontWeight = 300
     public static let sprkTextInputHugeActivePlaceholderOpacity = 1
@@ -770,7 +752,6 @@ public class SparkDesignTokens {
     public static let sprkTextInputHugePlaceholderOpacity = 0
     public static let sprkTextInputLineHeight = 1.3
     public static let sprkTextInputOutline = 0
-    public static let sprkTextInputReadonlyBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkTextInputReadonlyColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkToggleIconHoverFill = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkToggleTriggerFontSizeSmall = CGFloat(13.00)
