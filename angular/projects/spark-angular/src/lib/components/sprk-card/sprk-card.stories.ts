@@ -1,9 +1,13 @@
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkCardModule } from './sprk-card.module';
 import { SprkCardComponent } from './sprk-card.component';
+import { SprkCardContentDirective } from './directives/sprk-card-content/sprk-card-content.directive';
+import { SprkCardMediaDirective } from './directives/sprk-card-media/sprk-card-media.directive';
+import { SprkCardHeaderDirective } from './directives/sprk-card-header/sprk-card-header.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
+
 export default {
   title: 'Components/Card',
   component: SprkCardComponent,
@@ -14,6 +18,11 @@ export default {
     ),
   ],
   parameters: {
+    subcomponents: {
+      SprkCardContentDirective,
+      SprkCardHeaderDirective,
+      SprkCardMediaDirective,
+    },
     info: `${markdownDocumentationLinkBuilder('card')}`,
     docs: { iframeHeight: 200 },
   },
@@ -124,6 +133,7 @@ highlightedHeader.story = {
     docs: { iframeHeight: 300 },
     jest: [
       'sprk-card.component',
+      'sprk-card-header.component',
       'sprk-card-content.directive',
       'sprk-stack.component',
       'sprk-stack-item.directive',
