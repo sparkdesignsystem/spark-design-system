@@ -64,6 +64,7 @@
   }
 
   + .sprk-b-Checkbox__label::before {
+    box-shadow: $sprk-checkbox-custom-input-box-shadow-checked;
     background-color: $sprk-checkbox-custom-input-background-color-checked;
   }
 
@@ -71,6 +72,13 @@
     // Override focus border color if its checked
     + .sprk-b-Checkbox__label::before {
       box-shadow: $sprk-checkbox-custom-input-box-shadow-focus-checked;
+    }
+  }
+
+  &:hover {
+    // Override focus border color if its checked
+    + .sprk-b-Checkbox__label::before {
+      box-shadow: $sprk-checkbox-custom-input-box-shadow-hover-checked;
     }
   }
 }
@@ -171,6 +179,10 @@
       // Styles for container when checkbox is focused on while being checked
       &:focus + .sprk-b-Checkbox__label {
         box-shadow: $sprk-checkbox-huge-container-focus-checked-box-shadow;
+
+        &:hover {
+          box-shadow: $sprk-checkbox-huge-container-checked-hover-box-shadow;
+        }
       }
     }
   }

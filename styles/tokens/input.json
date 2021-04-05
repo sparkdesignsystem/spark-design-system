@@ -1867,13 +1867,13 @@
         },
         "checked-box-shadow": {
           "comment": "The box-shadow color of the huge checkbox input when checked and focused.",
-          "value": "0 0 0 2px {black.value}",
+          "value": "0 0 0 2px {purple.value}",
           "file": "settings",
           "themable": true
         },
         "hover-box-shadow": {
           "comment": "The box-shadow of the huge checkbox input when focused and hovered.",
-            "value": "0 0 0 1px {black.value}, 0 2px 8px {black-tint.30.value}",
+            "value": "0 0 0 2px {black.value}, 0 2px 8px {black-tint.30.value}",
           "file": "settings",
           "themable": true
         }
@@ -1886,7 +1886,7 @@
       },
       "checked-hover-box-shadow": {
         "comment": "The box-shadow of the huge checkbox input when checked and hovered.",
-          "value": "0 0 0 1px {black.value}, 0 2px 8px {black-tint.30.value}",
+          "value": "0 0 0 2px {black.value}, 0 2px 8px {black-tint.30.value}",
         "file": "settings",
         "themable": true
       }
@@ -1928,6 +1928,15 @@
         "file": "settings",
         "themable": true
       },
+      "box-shadow-checked": {
+        "comment": "The box shadow value on the custom checkbox element when checked.",
+        "value": "0 0 0 1px {purple.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "box-shadow-hover": {
         "comment": "The box shadow value of the custom checkbox input when hovered.",
         "value": "0 0 0 1.5px {black.value}",
@@ -1957,6 +1966,15 @@
       },
       "box-shadow-focus-checked": {
         "comment": "The box shadow of the custom checkbox input when focused and checked.",
+        "value": "0 0 0 2px {purple.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "box-shadow-hover-checked": {
+        "comment": "The box shadow of the custom checkbox input when hovered and checked.",
         "value": "0 0 0 2px {black.value}",
         "attributes": {
           "category": "content"

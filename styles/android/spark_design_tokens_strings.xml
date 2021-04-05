@@ -150,10 +150,12 @@
   <string name="sprk_checkbox_huge_container_disabled_box_shadow">none</string><!-- The box shadow of the huge checkbox input when disabled. -->
   <string name="sprk_checkbox_huge_container_focus_box_shadow">0 0 0 2px #ff603aa1, 0 2px 8px #ffbababa</string><!-- The box shadow on Selects when focused. -->
   <string name="sprk_checkbox_custom_input_box_shadow">0 0 0 1px #ff494948</string><!-- The box shadow value on the custom checkbox element. -->
+  <string name="sprk_checkbox_custom_input_box_shadow_checked">0 0 0 1px #ff603aa1</string><!-- The box shadow value on the custom checkbox element when checked. -->
   <string name="sprk_checkbox_custom_input_box_shadow_hover">0 0 0 1.5px #ff1c1b1a</string><!-- The box shadow value of the custom checkbox input when hovered. -->
   <string name="sprk_checkbox_custom_input_box_shadow_focus">0 0 0 2px #ff603aa1</string><!-- The box shadow of the custom checkbox input when focused. -->
   <string name="sprk_checkbox_custom_input_box_shadow_disabled">0 0 0 1px #ff8d8d8c</string><!-- The box shadow of the custom checkbox input when disabled. -->
-  <string name="sprk_checkbox_custom_input_box_shadow_focus_checked">0 0 0 2px #ff1c1b1a</string><!-- The box shadow of the custom checkbox input when focused and checked. -->
+  <string name="sprk_checkbox_custom_input_box_shadow_focus_checked">0 0 0 2px #ff603aa1</string><!-- The box shadow of the custom checkbox input when focused and checked. -->
+  <string name="sprk_checkbox_custom_input_box_shadow_hover_checked">0 0 0 2px #ff1c1b1a</string><!-- The box shadow of the custom checkbox input when hovered and checked. -->
   <string name="sprk_checkbox_custom_input_background_color_disabled">#ffdddddd</string><!-- The background color of the custom checkbox input when disabled. -->
   <string name="sprk_checkbox_custom_input_cursor_disabled">not-allowed</string><!-- The cursor for the custom checkbox input when disabled. -->
   <string name="sprk_checkbox_checkmark_border_left">2px solid #ffffffff</string><!-- The border settings to create the bottom portion of the checkmark. -->
