@@ -232,7 +232,7 @@
       "hover": {
         "font-weight": {
           "comment": "The font weight of Light Links on hover.",
-          "value": "{font.weight.body.one.value}",
+          "value": "{font.weight.body.two.value}",
           "file": "settings",
           "themable": true
         },
