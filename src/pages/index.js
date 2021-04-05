@@ -263,10 +263,7 @@ const IndexPage = () => (
           </SprkStackItem>
 
           <SprkStackItem>
-            <SprkLink
-              href="https://github.com/sparkdesignsystem/spark-design-system/blob/main/CONTRIBUTING.md"
-              variant="secondary"
-            >
+            <SprkLink href="https://github.com/sparkdesignsystem/spark-design-system/blob/main/CONTRIBUTING.md">
               Learn More
             </SprkLink>
           </SprkStackItem>
