@@ -290,7 +290,7 @@ public class SparkDesignTokens {
     public static let sprkLinkHasIconVisitedFill = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconVisitedStroke = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkLightFontWeight = "300"
-    public static let sprkLinkLightHoverFontWeight = "500"
+    public static let sprkLinkLightHoverFontWeight = "300"
     public static let sprkLinkSimpleFontWeight = "300"
     public static let sprkMastheadAccordionActiveBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkMastheadAccordionActiveFontColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
