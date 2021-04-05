@@ -131,7 +131,7 @@
   <string name="sprk_radio_input_outer_circle_focus_box_shadow">0 0 0 2px #ff603aa1</string><!-- The box shadow value on the outer circle of the custom radio element when focused. -->
   <string name="sprk_radio_input_outer_circle_box_shadow_disabled">0 0 0 1px #ff8d8d8c</string><!-- The box shadow value on the outer circle of the custom radio element when disabled. -->
   <string name="sprk_radio_input_outer_circle_background_color_disabled">#ffdddddd</string><!-- The background color of the outer circle in the disabled radio input. -->
-  <string name="sprk_radio_input_outer_circle_box_shadow_checked">0 0 0 2px #ff603aa1</string><!-- The box shadow value on the outer circle of the custom radio element when checked. -->
+  <string name="sprk_radio_input_outer_circle_box_shadow_checked">0 0 0 1px #ff603aa1</string><!-- The box shadow value on the outer circle of the custom radio element when checked. -->
   <string name="sprk_radio_input_outer_circle_box_shadow">0 0 0 1px #ff494948</string><!-- The box shadow value on the outer circle of the custom radio element. -->
   <string name="sprk_radio_input_transition">all 0.2s ease-in-out</string><!-- The transition for the radio input. -->
   <string name="sprk_radio_input_cursor_hover_disabled">not-allowed</string><!-- The cursor style of the disabled radio on hover. -->

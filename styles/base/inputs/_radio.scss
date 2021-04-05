@@ -45,7 +45,7 @@
 }
 
 .sprk-b-Radio__input:checked + .sprk-b-Radio__label::before {
-  box-shadow: $sprk-radio-input-outer-circle-box-shadow;
+  box-shadow: $sprk-radio-input-outer-circle-box-shadow-checked;
 }
 
 .sprk-b-Radio__input:checked {
@@ -57,7 +57,7 @@
 
   &:focus {
     + .sprk-b-Radio__label::before {
-      box-shadow: $sprk-radio-input-outer-circle-hover-box-shadow;
+      box-shadow: $sprk-radio-input-outer-circle-focus-box-shadow;
     }
   }
 }
@@ -129,7 +129,14 @@
     box-shadow: $sprk-radio-input-huge-checked-label-box-shadow;
   }
 
-  .sprk-b-Radio__input:checked:focus + .sprk-b-Radio__label,
+  .sprk-b-Radio__input:checked:focus + .sprk-b-Radio__label {
+    box-shadow: $sprk-radio-input-huge-checked-focus-box-shadow;
+
+    ::before {
+      box-shadow: $sprk-radio-input-huge-checked-focus-box-shadow;
+    }
+  }
+
   .sprk-b-Radio__input:checked:hover + .sprk-b-Radio__label {
     box-shadow: $sprk-radio-input-huge-checked-hover-box-shadow;
 

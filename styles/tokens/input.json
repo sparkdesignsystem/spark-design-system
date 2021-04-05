@@ -1407,7 +1407,7 @@
       },
       "box-shadow-checked": {
         "comment": "The box shadow value on the outer circle of the custom radio element when checked.",
-        "value": "0 0 0 2px {purple.value}",
+        "value": "0 0 0 1px {purple.value}",
         "attributes": {
           "category": "content"
         },
@@ -1629,8 +1629,14 @@
           "themable": true
         },
         "hover-box-shadow": {
-          "comment": "The box-shadow of the huge radio input when checked and hovered .",
+          "comment": "The box-shadow of the huge radio input when checked and hovered.",
             "value": "0 0 0 2px {black.value}, 0 2px 8px {black-tint.30.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "focus-box-shadow": {
+          "comment": "The box-shadow of the huge radio input when checked and focused.",
+            "value": "0 0 0 2px {purple.value}, 0 2px 8px {black-tint.30.value}",
           "file": "settings",
           "themable": true
         }

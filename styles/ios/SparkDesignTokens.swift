@@ -349,6 +349,7 @@ public class SparkDesignTokens {
     public static let sprkPromoSubtitleFontWeight = "500"
     public static let sprkPromoTitleFontColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkPromoTitleFontWeight = "bold"
+    public static let sprkRadioInputHugeCheckedFocusBoxShadow = 0 0 0 2px UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1), 0 2px 8px UIColor(red: 0.729, green: 0.729, blue: 0.729, alpha:1)
     public static let sprkRadioInputHugeCheckedHoverBoxShadow = 0 0 0 2px UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1), 0 2px 8px UIColor(red: 0.729, green: 0.729, blue: 0.729, alpha:1)
     public static let sprkRadioInputHugeCheckedLabelBoxShadow = 0 0 0 1px UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkRadioInputHugeDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
