@@ -71,7 +71,6 @@
 }
 
 .sprk-b-Radio__input:disabled + .sprk-b-Radio__label {
-  cursor: not-allowed;
   cursor: $sprk-radio-input-cursor-hover-disabled;
 }
 
