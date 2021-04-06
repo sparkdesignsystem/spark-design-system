@@ -5,7 +5,6 @@
 ////
 /// @group dictionary
 ////
-
 .sprk-c-Dictionary {
   border: $sprk-dictionary-border;
 }
@@ -22,6 +21,7 @@
 }
 
 .sprk-c-Dictionary .sprk-b-Label {
+  color: $sprk-dictionary-label-color;
   font-size: $sprk-dictionary-label-font-size;
   line-height: $sprk-dictionary-label-line-height;
   font-weight: $sprk-dictionary-label-font-weight;

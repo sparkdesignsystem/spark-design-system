@@ -9,7 +9,6 @@
 // TODO sprk-b-TextInput to be deprecated and replace with sprk-b-InputContainer__input
 .sprk-b-InputContainer__input {
   box-shadow: $sprk-text-input-box-shadow;
-  border: $sprk-text-input-border;
   border-radius: $sprk-text-input-border-radius;
   color: $sprk-text-input-color;
   font-family: $sprk-text-input-font-family;
@@ -23,19 +22,36 @@
 }
 
 .sprk-b-TextInput:focus {
-  border-color: $sprk-text-input-focus-border-color;
+  box-shadow: $sprk-text-input-focus-box-shadow;
 }
 
-.sprk-b-TextInput--error,
-.sprk-b-TextInput--error:focus {
-  border-color: $sprk-text-input-error-border-color;
+.sprk-b-TextInput--error {
+  box-shadow: $sprk-text-input-error-box-shadow;
+
+  &:focus {
+    box-shadow: $sprk-text-input-error-focus-box-shadow;
+  }
 }
 
 .sprk-b-TextInput[disabled] {
-  background-color: $sprk-text-input-disabled-background-color;
-  border-color: $sprk-text-input-disabled-border-color;
   color: $sprk-text-input-disabled-color;
-  cursor: not-allowed;
+  background-color: $sprk-text-input-disabled-background-color;
+  cursor: $sprk-text-input-disabled-cursor;
+  box-shadow: $sprk-text-input-disabled-box-shadow;
+
+  &:hover,
+  &:focus {
+    box-shadow: $sprk-text-input-disabled-box-shadow;
+  }
+}
+
+.sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--error,
+.sprk-b-InputContainer--huge .sprk-b-Select.sprk-b-Select--error {
+  box-shadow: $sprk-text-input-error-box-shadow;
+
+  &:focus {
+    box-shadow: $sprk-text-input-error-focus-box-shadow;
+  }
 }
 
 .sprk-b-TextInput--has-svg-icon {
@@ -98,6 +114,8 @@
 }
 
 /* stylelint-disable selector-class-pattern */
+
+/* stylelint-disable selector-combinator-space-before */
 .sprk-b-TextInput.ng-invalid:not(.ng-pristine)
   ~ .sprk-b-InputContainer__input-border {
   animation: none;
