@@ -82,6 +82,7 @@
   <string name="sprk_text_input_error_box_shadow">0 0 0 1px #ffd47500</string><!-- The box shadow on Inputs there is an error. -->
   <string name="sprk_text_input_error_focus_box_shadow">0 0 0 1px #ffd47500, 0 2px 8px #ffbababa</string><!-- The box shadow on Inputs when there is an error and it is focused. -->
   <string name="sprk_text_input_disabled_box_shadow">none</string><!-- The box shadow on disabled Inputs. -->
+  <string name="sprk_text_input_disabled_cursor">not-allowed</string><!-- The cursor style of disabled inputs on hover. -->
   <string name="sprk_text_input_transition">box-shadow 0.15s ease</string><!-- The transition setting on Inputs. -->
   <string name="sprk_text_input_huge_has_text_icon_padding">0 40px</string><!-- The padding value for Huge Inputs with icons. -->
   <string name="sprk_text_input_huge_padding">0 24.00dp</string><!-- Todo deprecate, The padding for Huge Inputs. -->

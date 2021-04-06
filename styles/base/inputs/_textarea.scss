@@ -29,7 +29,7 @@
 .sprk-b-TextArea[disabled] {
   background-color: $sprk-text-input-disabled-background-color;
   color: $sprk-text-input-disabled-color;
-  cursor: not-allowed;
+  cursor: $sprk-text-input-disabled-cursor;
   box-shadow: $sprk-text-input-disabled-box-shadow;
 
   &:hover,

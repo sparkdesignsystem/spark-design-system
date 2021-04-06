@@ -434,7 +434,7 @@
   top: $sprk-input-huge-label-top;
   font-size: $sprk-input-huge-font-size;
   color: $sprk-text-input-disabled-color;
-  cursor: not-allowed;
+  cursor: $sprk-text-input-disabled-cursor;
 }
 
 .sprk-b-InputContainer--huge

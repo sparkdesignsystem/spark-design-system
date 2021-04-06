@@ -175,6 +175,15 @@
         },
         "file": "settings",
         "themable": true
+      },
+      "cursor": {
+        "comment": "The cursor style of disabled inputs on hover.",
+        "value": "not-allowed",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
       }
     },
     "readonly-color": {
@@ -1533,7 +1542,7 @@
     },
     "cursor-hover-disabled": {
       "comment": "The cursor style of the disabled radio on hover.",
-      "value": "not-allowed",
+      "value": "{text-input.disabled.cursor.value}",
       "attributes": {
         "category": "content"
       },
@@ -1630,13 +1639,13 @@
         },
         "hover-box-shadow": {
           "comment": "The box-shadow of the huge radio input when checked and hovered.",
-            "value": "0 0 0 2px {black.value}, 0 2px 8px {black-tint.30.value}",
+          "value": "0 0 0 2px {black.value}, 0 2px 8px {black-tint.30.value}",
           "file": "settings",
           "themable": true
         },
         "focus-box-shadow": {
           "comment": "The box-shadow of the huge radio input when checked and focused.",
-            "value": "0 0 0 2px {purple.value}, 0 2px 8px {black-tint.30.value}",
+          "value": "0 0 0 2px {purple.value}, 0 2px 8px {black-tint.30.value}",
           "file": "settings",
           "themable": true
         }
@@ -2017,7 +2026,7 @@
       },
       "cursor-disabled": {
         "comment": "The cursor for the custom checkbox input when disabled.",
-        "value": "not-allowed",
+        "value": "{text-input.disabled.cursor.value}",
         "attributes": {
           "category": "content"
         },
