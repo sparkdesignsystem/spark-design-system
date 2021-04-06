@@ -230,6 +230,16 @@
       },
       "file": "color"
     },
+    "15": {
+      "comment": "Black at 15%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
+      "value": "rgb(221, 221, 221)",
+      "group": "neutral",
+      "type": "#DDDDDD",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "color"
+    },
     "10": {
       "comment": "Black at 10%. Use this gray in combination with content hierarchy, font-weight and background color to create AA accessible text.",
       "value": "rgb(232, 232, 232)",

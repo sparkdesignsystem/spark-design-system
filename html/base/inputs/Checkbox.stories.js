@@ -16,7 +16,7 @@ use the tabindex attribute to change this.
 - Change the value of the aria-checked attribute
 dynamically when the checkbox is activated.
 
-###### Ensure all related checkboxes are grouped together using 
+###### Ensure all related checkboxes are grouped together using
 one of the following methods:
 
 - Fieldset and legend tags
