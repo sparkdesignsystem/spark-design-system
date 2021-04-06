@@ -47,7 +47,6 @@
 
 .sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--error,
 .sprk-b-InputContainer--huge .sprk-b-Select.sprk-b-Select--error {
-  // border-width: $sprk-input-huge-error-border-width;
   box-shadow: 0 0 0 1px $sprk-orange;
 
   &:focus {
@@ -117,7 +116,8 @@
 /* stylelint-disable selector-class-pattern */
 
 /* stylelint-disable selector-combinator-space-before */
-.sprk-b-TextInput.ng-invalid:not(.ng-pristine) ~ .sprk-b-InputContainer__input-border {
+.sprk-b-TextInput.ng-invalid:not(.ng-pristine)
+  ~ .sprk-b-InputContainer__input-border {
   animation: none;
   border-bottom: 3px solid $sprk-text-input-error-color;
   width: 100%;

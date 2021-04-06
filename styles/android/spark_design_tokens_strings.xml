@@ -25,7 +25,6 @@
   <string name="sprk_autocomplete_results_border">1.00dp solid #fff7f7f7</string><!-- The border of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_overflow_y">scroll</string><!-- The overflow-y behavior of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_shadow">0 0 40px 2px rgba(0, 0, 0, 0.1)</string><!-- The box shadow of the Autocomplete results. -->
-  <string name="sprk_autocomplete_results_margin_top">1px</string><!-- The margin-top of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_z_index">32000.00dp</string><!-- The z-index of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_last_child_border_bottom">none</string><!-- The border-bottom of the last Autocomplete result. -->
   <string name="sprk_autocomplete_result_border_bottom">1px solid #ffd2d1d1</string><!-- The border-bottom of the Autocomplete results. -->
@@ -81,7 +80,7 @@
   <string name="sprk_text_input_padding">0 16.00dp</string><!-- The padding setting for Inputs. -->
   <string name="sprk_text_input_focus_box_shadow">0 0 0 2px #ff603aa1, 0 2px 8px #ffbababa</string><!-- The box shadow on Inputs when focused. -->
   <string name="sprk_text_input_error_box_shadow">0 0 0 1px #ffd47500</string><!-- The box shadow on Inputs there is an error. -->
-  <string name="sprk_text_input_error_focus_box_shadow">0 0 0 1px #ffd47500, 0 2px 8px #ffbababa</string><!-- The box shadow on Inputs there is an error and it's focused. -->
+  <string name="sprk_text_input_error_focus_box_shadow">0 0 0 1px #ffd47500, 0 2px 8px #ffbababa</string><!-- The box shadow on Inputs when there is an error and it is focused. -->
   <string name="sprk_text_input_disabled_box_shadow">none</string><!-- The box shadow on disabled Inputs. -->
   <string name="sprk_text_input_transition">box-shadow 0.15s ease</string><!-- The transition setting on Inputs. -->
   <string name="sprk_text_input_huge_has_text_icon_padding">0 40px</string><!-- The padding value for Huge Inputs with icons. -->

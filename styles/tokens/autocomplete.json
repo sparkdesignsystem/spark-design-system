@@ -122,7 +122,7 @@
           "comment": "The margin-top of the Autocomplete results.",
           "value": "1px",
           "attributes": {
-            "category": "content"
+            "category": "size"
           },
           "file": "settings",
           "themable": true

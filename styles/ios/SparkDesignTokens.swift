@@ -381,6 +381,7 @@ public class SparkDesignTokens {
     public static let sprkAutocompleteResultsBorderRadius = CGFloat(4.00)
     public static let sprkAutocompleteResultsBorderWidth = CGFloat(1.00)
     public static let sprkAutocompleteResultsHugeMaxWidth = CGFloat(600.00)
+    public static let sprkAutocompleteResultsMarginTop = CGFloat(1.00)
     public static let sprkAutocompleteResultsMaxHeight = CGFloat(288.00)
     public static let sprkAutocompleteResultsMaxWidth = CGFloat(440.00)
     public static let sprkAutocompleteResultsWidth = CGFloat(1600.00)

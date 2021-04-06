@@ -145,7 +145,7 @@
         "themable": true
       },
       "focus-box-shadow": {
-        "comment": "The box shadow on Inputs there is an error and it's focused.",
+        "comment": "The box shadow on Inputs when there is an error and it is focused.",
         "value": "0 0 0 1px {orange.value}, 0 2px 8px {black-tint.30.value}",
         "attributes": {
           "category": "content"
@@ -1837,7 +1837,7 @@
       },
       "hover-box-shadow": {
         "comment": "The box shadow of the huge checkbox input when hovered.",
-          "value": "0 0 0 1.5px {black.value}, 0 0 0 1px {black-tint.80.value}",
+        "value": "0 0 0 1.5px {black.value}, 0 0 0 1px {black-tint.80.value}",
         "attributes": {
           "category": "content"
         },
@@ -1879,20 +1879,20 @@
         },
         "hover-box-shadow": {
           "comment": "The box-shadow of the huge checkbox input when focused and hovered.",
-            "value": "0 0 0 2px {black.value}, 0 2px 8px {black-tint.30.value}",
+          "value": "0 0 0 2px {black.value}, 0 2px 8px {black-tint.30.value}",
           "file": "settings",
           "themable": true
         }
       },
       "checked-box-shadow": {
         "comment": "The box-shadow of the huge checkbox input when checked and hovered.",
-          "value": "0 0 0 1px {purple.value}",
+        "value": "0 0 0 1px {purple.value}",
         "file": "settings",
         "themable": true
       },
       "checked-hover-box-shadow": {
         "comment": "The box-shadow of the huge checkbox input when checked and hovered.",
-          "value": "0 0 0 2px {black.value}, 0 2px 8px {black-tint.30.value}",
+        "value": "0 0 0 2px {black.value}, 0 2px 8px {black-tint.30.value}",
         "file": "settings",
         "themable": true
       }
@@ -2084,7 +2084,7 @@
         "themable": true
       },
       "checkbox-element-checked-box-shadow": {
-        "comment": "The box-shadw of the custom checkbox element of the huge checkbox input when checked.",
+        "comment": "The box-shadow of the custom checkbox element of the huge checkbox input when checked.",
         "value": "none",
         "file": "settings",
         "themable": true
