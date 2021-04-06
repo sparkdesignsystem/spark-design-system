@@ -825,6 +825,12 @@
       "file": "settings",
       "themable": true
     },
+    "border": {
+      "comment": "The border setting for Selects.",
+      "value": "none",
+      "file": "settings",
+      "themable": true
+    },
     "box-shadow": {
       "comment": "The box shadow setting for Selects.",
       "value": "{text-input.box-shadow.value}",

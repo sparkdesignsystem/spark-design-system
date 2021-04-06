@@ -47,10 +47,10 @@
 
 .sprk-b-InputContainer--huge .sprk-b-TextInput.sprk-b-TextInput--error,
 .sprk-b-InputContainer--huge .sprk-b-Select.sprk-b-Select--error {
-  box-shadow: 0 0 0 1px $sprk-orange;
+  box-shadow: $sprk-text-input-error-box-shadow;
 
   &:focus {
-    box-shadow: 0 0 0 1px $sprk-orange;
+    box-shadow: $sprk-text-input-error-focus-box-shadow;
   }
 }
 

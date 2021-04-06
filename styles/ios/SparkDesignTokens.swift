@@ -360,6 +360,7 @@ public class SparkDesignTokens {
     public static let sprkSelectionBgColor = UIColor(red: 0.906, green: 0.886, blue: 0.949, alpha:1)
     public static let sprkSelectionContainerLabelFontWeight = 300
     public static let sprkSelectionTextColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
+    public static let sprkSelectBorder = none
     public static let sprkSelectBorderRadius = CGFloat(4.00)
     public static let sprkSelectColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkSelectDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)

@@ -6,7 +6,7 @@
   -moz-appearance: $sprk-select-appearance;
   appearance: $sprk-select-appearance;
   border-radius: $sprk-select-border-radius;
-  border: none;
+  border: $sprk-select-border;
   box-shadow: $sprk-select-box-shadow;
   background: $sprk-select-background;
   color: $sprk-select-color;
