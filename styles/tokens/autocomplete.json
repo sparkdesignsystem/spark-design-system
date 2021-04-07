@@ -118,6 +118,15 @@
           "file": "settings",
           "themable": true
         },
+        "margin-top": {
+          "comment": "The margin-top of the Autocomplete results.",
+          "value": "1px",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        },
         "z-index": {
           "comment": "The z-index of the Autocomplete results.",
           "value": "{layer.height.m.value}",
