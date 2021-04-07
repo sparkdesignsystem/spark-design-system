@@ -30,7 +30,7 @@
       },
       "font-weight": {
         "comment": "Link font-weight on the Footer.",
-        "value": "normal",
+        "value": "300",
         "attributes": {
           "category": "content"
         },
