@@ -72,7 +72,7 @@ export const helperText = () => ({
         type="text"
         [(ngModel)]="text_input"
         #textInput="ngModel"
-        data-id="text-input-1"
+        idString="text-input-1"
       >
       <p sprkHelperText id="helper-text">
         Optional helper text, used to clarify the field's intent.
@@ -108,7 +108,7 @@ export const invalidHelperText = () => ({
         type="text"
         [(ngModel)]="text_input"
         #textInput="ngModel"
-        data-id="text-input-1"
+        idString="text-input-1"
         class="sprk-b-TextInput--error"
         aria-invalid="true"
       >
