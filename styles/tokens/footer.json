@@ -78,9 +78,9 @@
         },
         "font-weight": {
           "comment": "Toggle trigger hover font-weight on the Footer.",
-          "value": "500",
+          "value": "normal",
           "attributes": {
-            "category": "size"
+            "category": "content"
           },
           "file": "settings",
           "themable": true
