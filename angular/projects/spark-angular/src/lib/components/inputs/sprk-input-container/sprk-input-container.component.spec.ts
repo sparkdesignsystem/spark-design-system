@@ -38,7 +38,7 @@ class Test2Component {}
   template: `
     <sprk-input-container>
       <label sprkLabel for="select-normal-1">Select Box Label</label>
-      <select id="select-normal-1" data-id="select-1" sprkSelect>
+      <select id="select-normal-1" idString="select-1" sprkSelect>
         <option value="none">Please choose...</option>
         <option value="1">Option 1</option>
         <optgroup label="Grouped Options">
