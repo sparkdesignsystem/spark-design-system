@@ -1351,7 +1351,7 @@ export const legacyRadio = () => ({
           [(ngModel)]="radio_input"
           sprkSelectionInput
           #radioInput="ngModel"
-          idString="radio-1"
+          data-id="radio-1"
           id="radio-1"
         >
         <label
@@ -1369,7 +1369,7 @@ export const legacyRadio = () => ({
           sprkSelectionInput
           [(ngModel)]="radio_input"
           #radioInput="ngModel"
-          idString="radio-2"
+          data-id="radio-2"
           id="radio-2"
         >
         <label
@@ -1387,7 +1387,7 @@ export const legacyRadio = () => ({
           sprkSelectionInput
           [(ngModel)]="radio_input"
           #radioInput="ngModel"
-          idString="radio-3"
+          data-id="radio-3"
           id="radio-3"
         >
         <label
@@ -1426,7 +1426,7 @@ export const legacyInvalidRadio = () => ({
           [(ngModel)]="radio_input"
           sprkSelectionInput
           #radioInput="ngModel"
-          idString="radio-1"
+          data-id="radio-1"
           id="radio-1"
         >
         <label
@@ -1444,7 +1444,7 @@ export const legacyInvalidRadio = () => ({
           sprkSelectionInput
           [(ngModel)]="radio_input"
           #radioInput="ngModel"
-          idString="radio-2"
+          data-id="radio-2"
           id="radio-2"
         >
         <label
@@ -1462,7 +1462,7 @@ export const legacyInvalidRadio = () => ({
           sprkSelectionInput
           [(ngModel)]="radio_input"
           #radioInput="ngModel"
-          idString="radio-3"
+          data-id="radio-3"
           id="radio-3"
         >
         <label
@@ -1509,7 +1509,7 @@ export const legacyDisabledRadio = () => ({
           [(ngModel)]="radio_input"
           sprkSelectionInput
           #radioInput="ngModel"
-          idString="radio-1"
+          data-id="radio-1"
           id="radio-1"
           disabled
         >
@@ -1529,7 +1529,7 @@ export const legacyDisabledRadio = () => ({
           sprkSelectionInput
           [(ngModel)]="radio_input"
           #radioInput="ngModel"
-          idString="radio-2"
+          data-id="radio-2"
           id="radio-2"
           disabled
         >
@@ -1549,7 +1549,7 @@ export const legacyDisabledRadio = () => ({
           sprkSelectionInput
           [(ngModel)]="radio_input"
           #radioInput="ngModel"
-          idString="radio-3"
+          data-id="radio-3"
           id="radio-3"
           disabled
         >

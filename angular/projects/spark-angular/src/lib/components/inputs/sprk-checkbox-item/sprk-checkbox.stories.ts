@@ -1349,7 +1349,7 @@ export const legacyStory = () => ({
           [(ngModel)]="checkbox_input1"
           sprkSelectionInput
           #checkboxInput1="ngModel"
-          idString="checkbox-1"
+          data-id="checkbox-1"
           id="checkbox-1"
           (change)="onSelect($event)"
         >
@@ -1369,7 +1369,7 @@ export const legacyStory = () => ({
           [(ngModel)]="checkbox_input2"
           sprkSelectionInput
           #checkboxInput2="ngModel"
-          idString="checkbox-2"
+          data-id="checkbox-2"
           id="checkbox-2"
           (change)="onSelect($event)"
         >
@@ -1389,7 +1389,7 @@ export const legacyStory = () => ({
           [(ngModel)]="checkbox_input3"
           sprkSelectionInput
           #checkboxInput3="ngModel"
-          idString="checkbox-3"
+          data-id="checkbox-3"
           id="checkbox-3"
           (change)="onSelect($event)"
         >
@@ -1433,7 +1433,7 @@ export const legacyInvalidStory = () => ({
           [(ngModel)]="checkbox_input1"
           sprkSelectionInput
           #checkboxInput1="ngModel"
-          idString="checkbox-1"
+          data-id="checkbox-1"
           id="checkbox-1"
           (change)="onSelect($event)"
         >
@@ -1453,7 +1453,7 @@ export const legacyInvalidStory = () => ({
           [(ngModel)]="checkbox_input2"
           sprkSelectionInput
           #checkboxInput2="ngModel"
-          idString="checkbox-2"
+          data-id="checkbox-2"
           id="checkbox-2"
           (change)="onSelect($event)"
         >
@@ -1473,7 +1473,7 @@ export const legacyInvalidStory = () => ({
           [(ngModel)]="checkbox_input3"
           sprkSelectionInput
           #checkboxInput3="ngModel"
-          idString="checkbox-3"
+          data-id="checkbox-3"
           id="checkbox-3"
           (change)="onSelect($event)"
         >
@@ -1525,7 +1525,7 @@ export const legacyDisabledStory = () => ({
           [(ngModel)]="checkbox_input1"
           sprkSelectionInput
           #checkboxInput1="ngModel"
-          idString="checkbox-1"
+          data-id="checkbox-1"
           id="checkbox-1"
           (change)="onSelect($event)"
           disabled
@@ -1547,7 +1547,7 @@ export const legacyDisabledStory = () => ({
           [(ngModel)]="checkbox_input2"
           sprkSelectionInput
           #checkboxInput2="ngModel"
-          idString="checkbox-2"
+          data-id="checkbox-2"
           id="checkbox-2"
           (change)="onSelect($event)"
           disabled
@@ -1569,7 +1569,7 @@ export const legacyDisabledStory = () => ({
           [(ngModel)]="checkbox_input3"
           sprkSelectionInput
           #checkboxInput3="ngModel"
-          idString="checkbox-3"
+          data-id="checkbox-3"
           id="checkbox-3"
           (change)="onSelect($event)"
           disabled
