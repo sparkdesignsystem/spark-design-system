@@ -83,7 +83,7 @@ export const SSNInput = () => ({
         name="ssn_input"
         [(ngModel)]="ssn_input"
         #ssnInput="ngModel"
-        data-id="ssn-1"
+        idString="ssn-1"
         id="ssn-input"
         sprkInput
       >
@@ -94,7 +94,7 @@ export const SSNInput = () => ({
           type="checkbox"
           sprkCheckboxInput
           (click)="toggleSSNType()"
-          data-id="ssn-reveal-3"
+          idString="ssn-reveal-3"
           id="show-ssn"
         >
         <label for="show-ssn" sprkCheckboxLabel>Show SSN</label>
@@ -128,7 +128,7 @@ export const invalidSSNInput = () => ({
         name="ssn_input"
         [(ngModel)]="ssn_input"
         #ssnInput="ngModel"
-        data-id="ssn-1"
+        idString="ssn-1"
         id="ssn-input"
         sprkInput
         class="sprk-b-TextInput--error"
@@ -142,7 +142,7 @@ export const invalidSSNInput = () => ({
           type="checkbox"
           sprkCheckboxInput
           (click)="toggleSSNType()"
-          data-id="ssn-reveal-3"
+          idString="ssn-reveal-3"
           id="show-ssn"
         >
         <label for="show-ssn" sprkCheckboxLabel>Show SSN</label>
@@ -183,7 +183,7 @@ export const disabledSSNInput = () => ({
         name="ssn_input"
         [(ngModel)]="ssn_input"
         #ssnInput="ngModel"
-        data-id="ssn-1"
+        idString="ssn-1"
         id="ssn-input"
         sprkInput
         disabled
@@ -195,7 +195,7 @@ export const disabledSSNInput = () => ({
           type="checkbox"
           sprkCheckboxInput
           (click)="toggleSSNType()"
-          data-id="ssn-reveal-3"
+          idString="ssn-reveal-3"
           id="show-ssn"
           disabled
         >

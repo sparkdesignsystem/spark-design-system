@@ -81,7 +81,7 @@ export const searchInput = () => ({
           placeholder="Search"
           [(ngModel)]="inline_search_input"
           #inlineSearchInput="ngModel"
-          data-id="input-search-1"
+          idString="input-search-1"
           sprkInput
         >
       </div>
@@ -127,7 +127,7 @@ export const invalidSearchInput = () => ({
           placeholder="Search"
           [(ngModel)]="inline_search_input"
           #inlineSearchInput="ngModel"
-          data-id="input-search-1"
+          idString="input-search-1"
           sprkInput
           aria-invalid="true"
         >
@@ -182,7 +182,7 @@ export const disabledSearchInput = () => ({
           placeholder="Search"
           [(ngModel)]="inline_search_input"
           #inlineSearchInput="ngModel"
-          data-id="input-search-1"
+          idString="input-search-1"
           sprkInput
           disabled
         >
@@ -226,7 +226,7 @@ export const legacyStory = () => ({
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
-        data-id="input-search-1"
+        idString="input-search-1"
         sprkInput
       >
     </sprk-icon-input-container>
@@ -269,7 +269,7 @@ export const legacyInvalidSearchInput = () => ({
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
-        data-id="input-search-1"
+        idString="input-search-1"
         sprkInput
         aria-invalid="true"
       >
@@ -320,7 +320,7 @@ export const legacyDisabledSearchInput = () => ({
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
-        data-id="input-search-1"
+        idString="input-search-1"
         sprkInput
         disabled
       >

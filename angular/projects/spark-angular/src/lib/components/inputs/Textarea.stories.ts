@@ -61,7 +61,7 @@ export const textarea = () => ({
         id="textarea-1"
         [(ngModel)]="textarea_input"
         #textareaInput="ngModel"
-        data-id="textarea-1"
+        idString="textarea-1"
         sprkTextarea
       ></textarea>
     </sprk-textarea-container>
@@ -90,7 +90,7 @@ export const invalidTextarea = () => ({
         id="textarea-1"
         [(ngModel)]="textarea_input"
         #textareaInput="ngModel"
-        data-id="textarea-1"
+        idString="textarea-1"
         sprkTextarea
         aria-invalid="true"
         aria-describedby="textarea-error"
@@ -134,7 +134,7 @@ export const disabledTextarea = () => ({
         id="textarea-1"
         [(ngModel)]="textarea_input"
         #textareaInput="ngModel"
-        data-id="textarea-1"
+        idString="textarea-1"
         sprkTextarea
         disabled
       ></textarea>
