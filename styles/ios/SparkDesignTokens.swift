@@ -471,6 +471,7 @@ public class SparkDesignTokens {
     public static let sprkFontSizeDisplayThreeWide = CGFloat(34.00)
     public static let sprkFontSizeDisplayTwo = CGFloat(32.00)
     public static let sprkFontSizeDisplayTwoWide = CGFloat(40.00)
+    public static let sprkFooterLinkFontWeight = CGFloat(4800.00)
     public static let sprkHelperFontSize = CGFloat(13.00)
     public static let sprkHighlightBoardBreakpoint = CGFloat(480.00)
     public static let sprkHighlightBoardContentWidth = CGFloat(480.00)

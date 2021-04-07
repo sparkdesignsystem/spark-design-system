@@ -55,6 +55,7 @@
   <dimen name="sprk_flag_gutter_large">32.00dp</dimen><!-- Value for the gutters between body and figure in the Large Flag component. -->
   <dimen name="sprk_flag_gutter_huge">64.00dp</dimen><!-- Value for the gutters between body and figure in the Huge Flag component. -->
   <dimen name="sprk_flag_stacked_breakpoint">400.00dp</dimen><!-- Value for the gutters between body and figure in the Stacked Flag component. -->
+  <dimen name="sprk_footer_link_font_weight">4800.00dp</dimen><!-- Link font-weight on the Footer. -->
   <dimen name="sprk_highlight_board_breakpoint">480.00dp</dimen><!-- The Highlight Board breakpoint at which styles change for padding, font size and button width. -->
   <dimen name="sprk_highlight_board_content_width">480.00dp</dimen><!-- The maximum width of the content for the Highlight Board when it has an image. -->
   <dimen name="sprk_highlight_board_type_reduction_percentage">12.80dp</dimen><!-- Percentage reduction value for the font size in the Highlight Board in narrow viewports. -->
