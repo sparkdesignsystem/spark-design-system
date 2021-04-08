@@ -20,9 +20,13 @@
   }
 }
 
-.sprk-b-TextArea--error,
+.sprk-b-TextArea--error {
+  border-color: $sprk-text-input-error-border-color;
+}
+
 .sprk-b-TextArea--error:focus {
   border-color: $sprk-text-input-error-border-color;
+  box-shadow: $sprk-text-input-error-focus-box-shadow;
 }
 
 .sprk-b-TextArea[disabled] {
