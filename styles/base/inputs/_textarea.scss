@@ -16,6 +16,7 @@
 
   &:focus {
     border-color: $sprk-text-input-focus-border-color;
+    box-shadow: $sprk-text-input-focus-box-shadow;
   }
 }
 

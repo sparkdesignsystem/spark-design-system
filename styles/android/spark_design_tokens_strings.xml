@@ -76,11 +76,13 @@
   <string name="sprk_icon_filled_stroke_color">none</string><!-- Value for the stroke property of the Filled Icon component. -->
   <string name="sprk_text_input_has_text_icon_padding">0 0 1px 37px</string><!-- The font size of text icons inside Inputs. -->
   <string name="sprk_text_input_has_icon_padding">12px 0 12px 40px</string><!-- The padding inside Inputs that contain icons. -->
-  <string name="sprk_text_input_border">2px solid #ff8d8d8c</string><!-- The border setting for Inputs. -->
+  <string name="sprk_text_input_border">1px solid #ff8d8d8c</string><!-- The border setting for Inputs. -->
   <string name="sprk_text_input_box_shadow">none</string><!-- The box shadow setting for Inputs. -->
   <string name="sprk_text_input_padding">0 16.00dp</string><!-- The padding setting for Inputs. -->
+  <string name="sprk_text_input_focus_box_shadow">0 0 0 1px #ff603aa1, 0 2px 8px #ffbababa</string><!-- The box shadow setting for Inputs on focus. -->
+  <string name="sprk_text_input_error_focus_box_shadow">0 0 0 1px #ffd47500, 0 2px 8px #ffbababa</string><!-- The box shadow setting for Inputs on focus when there is an error. -->
   <string name="sprk_text_input_disabled_box_shadow">none</string><!-- The box shadow on disabled Inputs. -->
-  <string name="sprk_text_input_transition">border-color 0.15s ease</string><!-- The transition setting on Inputs. -->
+  <string name="sprk_text_input_transition">all 0.15s ease</string><!-- The transition setting on Inputs. -->
   <string name="sprk_text_input_huge_has_text_icon_padding">0 40px</string><!-- The padding value for Huge Inputs with icons. -->
   <string name="sprk_text_input_huge_padding">0 24.00dp</string><!-- Todo deprecate, The padding for Huge Inputs. -->
   <string name="sprk_text_input_huge_transition">top 0.3s, color 0.3s, font-size 0.3s</string><!-- Todo deprecate, The transition value for Huge Inputs. -->
@@ -91,8 +93,10 @@
   <string name="sprk_input_container_margin">0 0 32.00dp 0</string><!-- The value for padding applied to fieldset elements. -->
   <string name="sprk_input_huge_label_top">64.00dp / 3</string><!-- The top value for Huge Input labels. This adjusts how far the label is from the top of the container. -->
   <string name="sprk_input_huge_padding">0 24.00dp</string><!-- The padding for Huge Inputs. -->
-  <string name="sprk_input_huge_label_padding">0 (24.00dp + 2.00dp)</string><!-- The label padding for Huge Inputs. -->
-  <string name="sprk_input_huge_box_shadow">0 3px 10px 1px rgba(0, 0, 0, 0.08)</string><!-- The box shadow value on Huge Inputs. -->
+  <string name="sprk_input_huge_label_padding">0 (24.00dp + 1px)</string><!-- The label padding for Huge Inputs. -->
+  <string name="sprk_input_huge_focus_box_shadow">0 0 0 1px #ff603aa1, 0 2px 8px #ffbababa</string><!-- The box shadow value on Huge Inputs on focus. -->
+  <string name="sprk_input_huge_box_shadow_disabled">none</string><!-- The box shadow value on disabled Huge Inputs. -->
+  <string name="sprk_input_huge_box_shadow">0 2px 8px #ffbababa</string><!-- The box shadow value on Huge Inputs. -->
   <string name="sprk_input_huge_has_icon_padding">0 0 0 42px</string><!-- The padding value for Huge Inputs that contains an icon. -->
   <string name="sprk_input_error_text_margin">0 0 0 6px</string><!-- The margin used for Input error text. -->
   <string name="sprk_error_container_margin">8.00dp 0 0 0</string><!-- The margin for Input containers that have an error. -->
@@ -101,7 +105,7 @@
   <string name="sprk_select_input_huge_icon_margin_top">-((64.00dp - 16.00dp) / 2 + 16.00dp)</string><!-- The margin-top value for icons in Huge Select Inputs. -->
   <string name="sprk_select_appearance">none</string><!-- The value for the appearance property for Selects. -->
   <string name="sprk_select_background">none</string><!-- The background setting for Selects. -->
-  <string name="sprk_select_border">2px solid #ff8d8d8c</string><!-- The border setting for Selects. -->
+  <string name="sprk_select_border">1px solid #ff8d8d8c</string><!-- The border setting for Selects. -->
   <string name="sprk_select_box_shadow">none</string><!-- The box shadow setting for Selects. -->
   <string name="sprk_select_padding">12px 45px 12px 13px</string><!-- The padding setting for Selects. -->
   <string name="sprk_select_moz_focusring_color">transparent</string><!-- The value for the Firefox specific -moz-focusring color setting. -->
@@ -136,7 +140,7 @@
   <string name="sprk_checkbox_huge_container_transition">all 0.2s ease-in-out</string><!-- The transition of the huge checkbox input. -->
   <string name="sprk_checkbox_huge_container_border">2px solid #ff8d8d8c</string><!-- The border settings of the huge checkbox input. -->
   <string name="sprk_checkbox_huge_container_padding">20px 16.00dp 20px 55px</string><!-- The padding of the huge checkbox input. -->
-  <string name="sprk_checkbox_huge_container_hover_box_shadow">0 3px 10px 1px rgba(0, 0, 0, 0.08)</string><!-- The box shadow of the huge checkbox input when hovered. -->
+  <string name="sprk_checkbox_huge_container_hover_box_shadow">0 2px 8px #ffbababa</string><!-- The box shadow of the huge checkbox input when hovered. -->
   <string name="sprk_checkbox_huge_container_disabled_box_shadow">none</string><!-- The box shadow of the huge checkbox input when disabled. -->
   <string name="sprk_checkbox_custom_input_border">2px solid #ff8d8d8c</string><!-- The border of the custom checkbox input. -->
   <string name="sprk_checkbox_custom_input_border_focus">2px solid #ff603aa1</string><!-- The border of the custom checkbox input when focused. -->

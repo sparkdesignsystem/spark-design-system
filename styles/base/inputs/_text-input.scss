@@ -24,11 +24,16 @@
 
 .sprk-b-TextInput:focus {
   border-color: $sprk-text-input-focus-border-color;
+  box-shadow: $sprk-text-input-focus-box-shadow;
 }
 
-.sprk-b-TextInput--error,
+.sprk-b-TextInput--error {
+  border-color: $sprk-text-input-error-border-color;
+}
+
 .sprk-b-TextInput--error:focus {
   border-color: $sprk-text-input-error-border-color;
+  box-shadow: $sprk-text-input-error-focus-box-shadow;
 }
 
 .sprk-b-TextInput[disabled] {

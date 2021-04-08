@@ -98,7 +98,7 @@
     },
     "border": {
       "comment": "The border setting for Inputs.",
-      "value": "2px solid {black-tint.50.value}",
+      "value": "1px solid {black-tint.50.value}",
       "attributes": {
         "category": "content"
       },
@@ -138,6 +138,24 @@
       "file": "settings",
       "themable": true
     },
+    "focus-box-shadow": {
+      "comment": "The box shadow setting for Inputs on focus.",
+      "value": "0 0 0 1px {purple.value}, 0 2px 8px {black-tint.30.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "error-focus-box-shadow": {
+      "comment": "The box shadow setting for Inputs on focus when there is an error.",
+      "value": "0 0 0 1px {orange.value}, 0 2px 8px {black-tint.30.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "error-border-color": {
       "comment": "The border color on Inputs when there is an error.",
       "value": "{orange.value}",
@@ -146,7 +164,7 @@
     },
     "disabled-border-color": {
       "comment": "The border color on disabled Inputs.",
-      "value": "{black-tint.50.value}",
+      "value": "{black-tint.15.value}",
       "file": "settings",
       "themable": true
     },
@@ -170,7 +188,7 @@
     },
     "disabled-background-color": {
       "comment": "The background color on disabled Inputs.",
-      "value": "{black-tint.40.value}",
+      "value": "{black-tint.15.value}",
       "file": "settings",
       "themable": true
     },
@@ -185,7 +203,7 @@
     },
     "transition": {
       "comment": "The transition setting on Inputs.",
-      "value": "border-color 0.15s ease",
+      "value": "all 0.15s ease",
       "attributes": {
         "category": "content"
       },
@@ -387,6 +405,18 @@
       "themable": true
     },
     "huge": {
+      "error-border-color": {
+        "comment": "The border color on Inputs when there is an error.",
+        "value": "{orange.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border-color": {
+        "comment": "The border color on Huge Inputs.",
+        "value": "{black-tint.80.value}",
+        "file": "settings",
+        "themable": true
+      },
       "error-focus-label-color": {
         "comment": "The label color value of Huge Inputs when they have an error.",
         "value": "{text-input.huge.error-focus-label-color.value}",
@@ -442,7 +472,7 @@
       },
       "border-width": {
         "comment": "The border width for Huge Inputs.",
-        "value": "{text-input.huge.border-width.value}",
+        "value": "1px",
         "file": "settings",
         "themable": true
       },
@@ -465,15 +495,24 @@
         "themable": true
       },
       "focus": {
-        "border-width": {
-          "comment": "The border width for Huge Inputs on focus.",
-          "value": "{text-input.huge.focus.border-width.value}",
+        "border-color": {
+          "comment": "The label color value of Huge Inputs on focus.",
+          "value": "{text-input.focus-border-color.value}",
           "file": "settings",
           "themable": true
         },
         "label-color": {
           "comment": "The label color value of Huge Inputs on focus.",
           "value": "{text-input.huge.focus.label-color.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "box-shadow": {
+          "comment": "The box shadow value on Huge Inputs on focus.",
+          "value": "{text-input.focus-box-shadow.value}",
+          "attributes": {
+            "category": "content"
+          },
           "file": "settings",
           "themable": true
         }
@@ -514,9 +553,18 @@
         "file": "settings",
         "themable": true
       },
+      "box-shadow-disabled": {
+        "comment": "The box shadow value on disabled Huge Inputs.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "box-shadow": {
         "comment": "The box shadow value on Huge Inputs.",
-        "value": "0 3px 10px 1px rgba(0, 0, 0, 0.08)",
+        "value": "0 2px 8px {black-tint.30.value}",
         "attributes": {
           "category": "content"
         },
@@ -1282,6 +1330,15 @@
     }
   },
   "label": {
+    "color": {
+      "comment": "Color setting for Input label.",
+      "value": "{black-tint.80.value}",
+      "attributes": {
+        "category": "color"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "padding": {
       "comment": "The padding applied to Input labels.",
       "value": "0",
