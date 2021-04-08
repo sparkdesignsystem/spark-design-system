@@ -16,7 +16,6 @@
   position: $sprk-autocomplete-results-position;
   z-index: $sprk-autocomplete-results-z-index;
   overflow-y: $sprk-autocomplete-results-overflow-y;
-  margin-top: $sprk-autocomplete-results-margin-top; // offset to not overlap the 1px box-shadow border
   -webkit-overflow-scrolling: touch; // iOS momentum scrolling
 
   > :last-child {
