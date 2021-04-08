@@ -44,12 +44,6 @@
           "value": "{line-height.body.one.value}",
           "file": "settings",
           "themable": true
-        },
-        "color": {
-          "comment": "The color of the labels in the Dictionary.",
-          "value": "{black.value}",
-          "file": "settings",
-          "themable": true
         }
       }
     }

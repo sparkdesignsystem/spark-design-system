@@ -15,7 +15,6 @@
   <dimen name="sprk_autocomplete_results_width">1600.00dp</dimen><!-- The width of the Autocomplete results. -->
   <dimen name="sprk_autocomplete_results_max_width">440.00dp</dimen><!-- The max-width of the Autocomplete results. -->
   <dimen name="sprk_autocomplete_results_max_height">288.00dp</dimen><!-- The max-height of the Autocomplete results. -->
-  <dimen name="sprk_autocomplete_results_margin_top">1.00dp</dimen><!-- The margin-top of the Autocomplete results. -->
   <dimen name="sprk_autocomplete_results_huge_max_width">600.00dp</dimen><!-- The max-width of the huge Autocomplete results. -->
   <dimen name="sprk_blockquote_margin">0.00dp</dimen><!-- Value for the margin property on Blockquote component. -->
   <dimen name="sprk_blockquote_quote_margin">0.00dp</dimen><!-- Value for the margin property on the quote in the Blockquote component. -->
@@ -69,7 +68,9 @@
   <dimen name="sprk_input_huge_height">64.00dp</dimen><!-- The height value for Huge Inputs. -->
   <dimen name="sprk_text_input_height">48.00dp</dimen><!-- The height setting for Inputs. -->
   <dimen name="sprk_text_input_border_radius">4.00dp</dimen><!-- The border radius setting for Inputs. -->
+  <dimen name="sprk_text_input_huge_focus_border_width">2.00dp</dimen><!-- Todo deprecate, The border width for Huge Inputs on focus. -->
   <dimen name="sprk_text_input_huge_active_label_top">10.00dp</dimen><!-- Todo deprecate, The top value for Huge Input labels when they are active. This adjusts how far the label is from the top of the container. -->
+  <dimen name="sprk_text_input_huge_border_width">2.00dp</dimen><!-- Todo deprecate, The border width for Huge Inputs. -->
   <dimen name="sprk_text_input_huge_active_padding_top">64.00dp / 4</dimen><!-- Todo deprecate, The padding top value of active Huge Inputs. -->
   <dimen name="sprk_input_container_narrow_max_width">104.00dp</dimen><!-- The value used for the maximum width of an icon container using the icon container narrow modifier. -->
   <dimen name="sprk_input_container_huge_max_width">600.00dp</dimen><!-- The max-width setting for Huge Inputs. -->

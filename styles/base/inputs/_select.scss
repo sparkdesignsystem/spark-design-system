@@ -1,12 +1,13 @@
 ////
 /// @group input
 ////
+
 .sprk-b-Select {
   -webkit-appearance: $sprk-select-appearance;
   -moz-appearance: $sprk-select-appearance;
   appearance: $sprk-select-appearance;
-  border-radius: $sprk-select-border-radius;
   border: $sprk-select-border;
+  border-radius: $sprk-select-border-radius;
   box-shadow: $sprk-select-box-shadow;
   background: $sprk-select-background;
   color: $sprk-select-color;
@@ -18,7 +19,7 @@
   width: 100%;
 
   &:focus {
-    box-shadow: $sprk-text-input-focus-box-shadow;
+    border-color: $sprk-select-focus-border-color;
   }
 
   // Remove FF specific focusring in favor of ours
@@ -32,7 +33,7 @@
 .sprk-b-Select:focus::-ms-value {
   color: $sprk-select-color;
   background: $sprk-select-background;
-  box-shadow: $sprk-text-input-focus-box-shadow;
+  border-color: $sprk-select-focus-border-color;
 }
 
 .sprk-b-Select::-ms-expand {
@@ -46,23 +47,14 @@
 }
 
 .sprk-b-Select[disabled] {
+  border-color: $sprk-select-disabled-border-color;
   background-color: $sprk-select-disabled-background-color;
   color: $sprk-select-disabled-color;
-  box-shadow: $sprk-text-input-disabled-box-shadow;
-  cursor: $sprk-text-input-disabled-cursor;
-
-  &:hover,
-  &:focus {
-    box-shadow: $sprk-text-input-disabled-box-shadow;
-  }
 }
 
 /// Adds select error styles.
 /// @name .sprk-b-Select--error
-.sprk-b-Select--error {
-  box-shadow: $sprk-text-input-error-box-shadow;
-
-  &:focus {
-    box-shadow: $sprk-text-input-error-focus-box-shadow;
-  }
+.sprk-b-Select--error,
+.sprk-b-Select--error:focus {
+  border-color: $sprk-select-error-border-color;
 }
