@@ -76,7 +76,7 @@ import { uniqueId } from 'lodash';
               variant="tertiary"
               analyticsString="cancelAnalyticsString"
               (click)="emitCancelClick($event)"
-              class="sprk-c-Button--full@xs"
+              additionalClasses="sprk-c-Button--full@xs"
             >
               {{ cancelText }}
             </button>
@@ -86,7 +86,7 @@ import { uniqueId } from 'lodash';
               sprkButton
               analyticsString="confirmAnalyticsString"
               (click)="emitConfirmClick($event)"
-              class="sprk-c-Button--full@xs"
+              additionalClasses="sprk-c-Button--full@xs"
             >
               {{ confirmText }}
             </button>
