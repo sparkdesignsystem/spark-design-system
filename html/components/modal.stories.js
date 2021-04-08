@@ -91,6 +91,7 @@ export const defaultStory = () => {
               class="
                 sprk-c-Button
                 sprk-c-Button--tertiary
+                sprk-c-Button--full@xs
               "
               data-sprk-modal-cancel="exampleChoiceModal"
             >
@@ -98,7 +99,7 @@ export const defaultStory = () => {
             </button>
           </div>
           <div class="sprk-o-Stack__item">
-            <button class="sprk-c-Button">
+            <button class="sprk-c-Button sprk-c-Button--full@xs">
               Confirm
             </button>
           </div>
