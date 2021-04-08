@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node build.js && npm run build-css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass ./_spark.scss web/css/spark.min.css --output-style compressed",
+    "build-css": "sass --style=compressed ./_spark.scss:web/css/spark.min.css",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "devDependencies": {
-    "node-sass": "^5.0.0",
+    "sass": "^1.32.8",
     "style-dictionary": "2.10.1"
   },
   "publishConfig": {

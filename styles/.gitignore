@@ -16,6 +16,7 @@ web/scss/_space.scss
 web/scss/_typography.scss
 web/scss/_vars.scss
 web/css/spark.min.css
+web/css/spark.min.css.map
 web/js/
 dist/
 /public
