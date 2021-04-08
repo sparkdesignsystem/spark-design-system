@@ -48,6 +48,7 @@ class ModalFooter extends Component {
             onClick={cancelClick}
             type="button"
             analyticsString={cancelAnalyticsString}
+            additionalClasses="sprk-c-Button--full@xs"
           >
             {cancelText}
           </SprkButton>
@@ -58,6 +59,7 @@ class ModalFooter extends Component {
             type="button"
             forwardedRef={this.confirmButtonRef}
             analyticsString={confirmAnalyticsString}
+            additionalClasses="sprk-c-Button--full@xs"
           >
             {confirmText}
           </SprkButton>
