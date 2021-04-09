@@ -40,7 +40,7 @@
   background-color: $sprk-text-input-disabled-background-color;
   border-color: $sprk-text-input-disabled-border-color;
   color: $sprk-text-input-disabled-color;
-  cursor: not-allowed;
+  cursor: $sprk-text-input-disabled-cursor;
 }
 
 .sprk-b-TextInput--has-svg-icon {

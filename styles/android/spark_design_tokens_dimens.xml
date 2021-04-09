@@ -16,6 +16,7 @@
   <dimen name="sprk_autocomplete_results_max_width">440.00dp</dimen><!-- The max-width of the Autocomplete results. -->
   <dimen name="sprk_autocomplete_results_max_height">288.00dp</dimen><!-- The max-height of the Autocomplete results. -->
   <dimen name="sprk_autocomplete_results_huge_max_width">600.00dp</dimen><!-- The max-width of the huge Autocomplete results. -->
+  <dimen name="sprk_autocomplete_results_margin_top">1.00dp</dimen><!-- The margin-top of the Autocomplete results. -->
   <dimen name="sprk_blockquote_margin">0.00dp</dimen><!-- Value for the margin property on Blockquote component. -->
   <dimen name="sprk_blockquote_quote_margin">0.00dp</dimen><!-- Value for the margin property on the quote in the Blockquote component. -->
   <dimen name="sprk_blockquote_quote_last_margin">0.00dp</dimen><!-- Value for the margin property on the last quote in the Blockquote component. -->

@@ -70,6 +70,7 @@ public class SparkDesignTokens {
     public static let sprkCheckboxCustomInputBorderColorDisabled = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkCheckboxCustomInputBorderHover = 1px solid UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkCheckboxCustomInputBorderHoverDisabled = 1px solid UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
+    public static let sprkCheckboxCustomInputBoxShadowHoverDisabled = "none"
     public static let sprkCheckboxHugeContainerCheckedBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkCheckboxHugeContainerCheckedHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkCheckboxHugeContainerDisabledBackground = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
@@ -366,10 +367,10 @@ public class SparkDesignTokens {
     public static let sprkRadioInputHugeCheckedHoverOuterCircleBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkRadioInputHugeCheckedLabelBorder = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkRadioInputHugeDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
-    public static let sprkRadioInputHugeFocusedLabelBorder = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
+    public static let sprkRadioInputHugeFocusedLabelBorder = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkRadioInputHugeFocusedOuterCircleBorderBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkRadioInputHugeLabelHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
-    public static let sprkRadioInputHugeLabelHoverBoxShadow = 0 2px 8px UIColor(red: 0.729, green: 0.729, blue: 0.729, alpha:1)
+    public static let sprkRadioInputHugeLabelHoverBoxShadow = 0 0 0 1px UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1) ,0 2px 8px UIColor(red: 0.729, green: 0.729, blue: 0.729, alpha:1)
     public static let sprkRadioInputHugeOuterCircleBorderHoverBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkRadioInputHugeTransition = "all 0.2s ease-in-out"
     public static let sprkRadioInputInnerCircleBackgroundColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
@@ -381,6 +382,7 @@ public class SparkDesignTokens {
     public static let sprkSelectDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
     public static let sprkSelectDisabledBorderColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
     public static let sprkSelectDisabledColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
+    public static let sprkSelectDisabledCursor = "not-allowed"
     public static let sprkSelectErrorBorderColor = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkSelectFocusBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkSelectFontFamily = "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif"
@@ -400,6 +402,7 @@ public class SparkDesignTokens {
     public static let sprkAutocompleteResultsBorderRadius = CGFloat(4.00)
     public static let sprkAutocompleteResultsBorderWidth = CGFloat(1.00)
     public static let sprkAutocompleteResultsHugeMaxWidth = CGFloat(600.00)
+    public static let sprkAutocompleteResultsMarginTop = CGFloat(1.00)
     public static let sprkAutocompleteResultsMaxHeight = CGFloat(288.00)
     public static let sprkAutocompleteResultsMaxWidth = CGFloat(440.00)
     public static let sprkAutocompleteResultsWidth = CGFloat(1600.00)
