@@ -701,7 +701,7 @@ export const hugeDisabled = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend sprk-b-Legend--disabled">
+        <legend class="sprk-b-Legend sprk-b-Label sprk-b-Label--disabled">
           Radio Group Label
         </legend>
         <div
