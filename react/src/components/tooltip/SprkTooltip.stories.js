@@ -14,7 +14,7 @@ export default {
 
 export const defaultStory = () => (
   <SprkTooltip iconAdditionalClasses="sprk-c-Icon--filled">
-    Use Tooltips to provide info that’s not vital to completing the task. Keep
+    Use Tooltips to provide info that is not vital to completing the task. Keep
     the text short and stick to what’s helpful and relevant.
   </SprkTooltip>
 );
