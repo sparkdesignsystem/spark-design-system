@@ -41,7 +41,7 @@ Spark Design System is where we collect our best solutions for how to design and
 
 * Install the Sass npm package.
 
-  `npm install --save-dev node-sass`
+  `npm install --save-dev sass`
 
 * In `App.js` import your main Sass file that you will create.
 
