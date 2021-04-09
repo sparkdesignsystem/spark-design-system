@@ -909,7 +909,7 @@
     },
     "focus-box-shadow": {
       "comment": "The box shadow of the outer circle in the radio input on focus.",
-      "value": "0 0 0 1px {purple.value}",
+      "value": "{text-input.focus-box-shadow.value}",
       "attributes": {
         "category": "content"
       },

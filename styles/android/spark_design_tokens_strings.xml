@@ -110,7 +110,7 @@
   <string name="sprk_select_border">1px solid #ff494948</string><!-- The border setting for Selects. -->
   <string name="sprk_select_box_shadow">none</string><!-- The box shadow setting for Selects. -->
   <string name="sprk_select_padding">12px 45px 12px 13px</string><!-- The padding setting for Selects. -->
-  <string name="sprk_select_focus_box_shadow">0 0 0 1px #ff603aa1</string><!-- The box shadow of the outer circle in the radio input on focus. -->
+  <string name="sprk_select_focus_box_shadow">0 0 0 1px #ff603aa1, 0 2px 8px #ffbababa</string><!-- The box shadow of the outer circle in the radio input on focus. -->
   <string name="sprk_select_error_box_shadow">0 0 0 1px #ffd47500</string><!-- The box shadow of the outer circle in the radio input when there is an error. -->
   <string name="sprk_select_moz_focusring_color">transparent</string><!-- The value for the Firefox specific -moz-focusring color setting. -->
   <string name="sprk_select_moz_focusring_text_shadow">0 0 0 #ff1c1b1a</string><!-- The value for the Firefox specific -moz-focusring text-shadow setting. -->
