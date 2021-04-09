@@ -20,39 +20,32 @@ sets clear expectations of what action will occur when users interact with it.
 
 ### Usage
 
-Use buttons to communicate the different actions users can take.
+Use buttons to communicate the different actions users can take and how they can interact with the page.
 
-Use a [Link](/using-spark/components/link) when the action is to take the user to a new page or to an external site.
+> As a general rule, use one main call to action ([Primary Button](#primary-button)) per screen.
 
+- Use button types consistently across products.
 - Avoid using too many buttons on a page.
-- Use title case for button labels.
-- Button text should be as short as possible.
+- Use a [Link](/using-spark/components/link) when the action is to take the user to a new page or to an external site.
+
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
 ## Variants
 
-Buttons have different visual weights to indicate to users the most
-important actions on an interface.
+Buttons have different visual weights that help establish a visual hierarchy on a page.
 
-- [Primary Button](/using-spark/components/button/#primary-button) (Filled)
-- [Secondary Button](/using-spark/components/button/#secondary-button) (Outlined)
-- [Tertiary Button](/using-spark/components/button/#tertiary-button) (Text button)
-- Compact Button (Need to add example)
-- Full Width Button
+- [Primary Button](#primary-button) (Filled)
+- [Secondary Button](#secondary-button) (Outlined)
+- [Tertiary Button](#tertiary-button) (Text button)
+- [Compact Button](#compact-button)
+- [Full Width Button](#full-width-button)
 
-Use one primary button as the main call to action to establish the
-button hierarchy on a screen.
+> Use one primary button as the main call to action to establish the
+> button hierarchy on a screen.
 
-### Primary Button/Filled
+### Primary Button
 
-It represents the main action we want users to take on a screen. Filled
-buttons have the heaviest visual weight and should be used in areas of
-high importance.
-
-- Use to indicate the main call to action on a screen.
-- Use one Primary (Filled) button per screen to help users understand the action hierarchy of the page and to avoid any confusion.
-- To indicate the main action that helps users navigate to the next step in a process.
-- Exception -
-  - For specific situations where two Primary (Filled) buttons may need to be together, for example if the user can choose between two journeys a 'button group' can be used.
+It represents the main action we want users to take on a screen. Filled buttons have the heaviest visual weight.
 
 <ComponentPreview
   componentName="button--primary"
@@ -62,13 +55,18 @@ high importance.
   titleAttr="Primary Button Example"
 />
 
-### Secondary Button/Outlined
+- Use in areas of high importance.
+- Use one Primary (Filled) button per screen to help users understand the action hierarchy of the page and to avoid any confusion.
+- For actions that help users navigate to the next step in a process.
+
+**Exception**
+
+For specific situations where users can choose between two journeys, two Primary (Filled) buttons may exist side by side.
+
+### Secondary Button
 
 It represents independent or alternative actions from the main call to action on
-the screen. Secondary (Outlined) buttons have a medium visual weight and emphasis.
-
-- There can be one or multiple Secondary (Outlined) buttons on a screen.
-- Use for alternative actions that do not navigate the user to the next step in a process.
+the screen. Outlined buttons have a medium visual weight and emphasis.
 
 <ComponentPreview
   componentName="button--secondary"
@@ -78,12 +76,14 @@ the screen. Secondary (Outlined) buttons have a medium visual weight and emphasi
   titleAttr="Secondary Button Example"
 />
 
+- There can be more than one on a screen.
+- Use for alternative actions that do not navigate the user to the next step in a process.
+
 ### Tertiary Button
 
-It represents the least important action on a screen. Tertiary (Text)
-buttons have the lowest visual weight.
+It represents the least important action on a screen. They have a similar visual style to a text [Link](/using-spark/components/link) and
+have the lowest visual weight.
 
-- They have a similar style to a Link.
 - For independent or less important actions.
 - They can be used for sub-tasks where a Primary (Filled) button is the main action.
 - In a button set, use Tertiary buttons for actions with the least visual emphasis that do not require the user's attention.
@@ -112,37 +112,6 @@ smaller, like mobile screens.
 - Button takes up the full width of it's container.
 - On mobile screens, buttons can be stacked.
 - When stacked, place the primary action on top of secondary actions.
-
-<ComponentPreview
-  componentName="button--full-width-at-small-viewport"
-  hasReact
-  hasAngular
-  hasHTML
-  titleAttr="Full Width at Smaller Viewports Button Example"
-/>
-## Button Groups
-
-Buttons can be grouped with other buttons to establish a relationship between them.
-
-- Group buttons based on their usage and importance.
-- A maximum of two buttons should be in a group.
-  - A Primary button can be grouped with any less visual weight (Secondary or Tertiary) buttons.
-  - Do not mix a primary, secondary, and tertiary buttons in the same button group.
-- Do not use too many buttons on a page to avoid overwhelming users.
-
-#### Exception
-
-- For layouts that require more than three calls to action in a group,
-  - Use one Primary button for the main action in combination with two less visual weight buttons.
-  - Do not mix more than two styles of buttons.
-  - If using a primary button in the group, prefer all other buttons to be tertiary.
-
-### Full Width at Smaller Viewports
-
-At small viewport sizes, a Button may be used at full width.
-
-- Stacked Buttons should have the primary action above secondary actions.
-- Use full width Buttons in containers that take up 1/3 of the grid or smaller.
 
 <ComponentPreview
   componentName="button--full-width-at-small-viewport"
@@ -218,13 +187,29 @@ Use when data is being saved or submitted. The spinning indicator will replace t
   titleAttr="Spinning Tertiary Button Example"
 />
 
-## Anatomy
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
-- A Button must have a text label and/or icon, and a container.
-- A Button's Text communicates the action that will happen when the
-  user interacts with it.
+## Button Groups
 
-### Guidelines
+Buttons can be grouped with other buttons to establish a relationship between them.
+
+- Group buttons based on their usage and importance.
+- A max of two buttons should be in a group.
+  - A Primary button can be grouped with any less visual weight (Secondary or Tertiary) buttons.
+  - Do not mix a primary, secondary, and tertiary buttons in the same button group.
+- Do not use too many buttons on a page to avoid overwhelming users.
+
+**Exception**
+
+For layouts that require more than three calls to action in a group.
+
+- Use one Primary button for the main action in combination with two less visual weight buttons.
+- Do not mix more than two styles of buttons.
+- If using a primary button in the group, prefer all other buttons to be tertiary.
+
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
+
+### Style Guidelines
 
 #### Text Labels
 
@@ -258,10 +243,18 @@ to communicate the main action and capture's the user's attention.
 > placing buttons to the right communicates the main action to the user.
 
 - Buttons should be right aligned to its parent container.
-- On a Button set or group, the main action should be placed **on the
-  right** to indicate the most important action.
+- On a Button group, place the main action **on the
+  right** for the most important action.
 - **Side by Side (Horizontal) buttons** - place the Primary (Filled) button **on the right** and all other actions to the left.
 - **Stack (Vertical) buttons** - place the Primary (Filled) button **on top** of the secondary or tertiary action.
+
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
+
+## Anatomy
+
+- A Button must have a text label and/or icon, and a container.
+- A Button's Text communicates the action that will happen when the
+  user interacts with it.
 
 ## Accessibility
 
@@ -270,6 +263,4 @@ to communicate the main action and capture's the user's attention.
 
 - Adhere to [Web Content Accessibility Guidelines (WCAG 2.1, Level AA)](https://www.w3.org/TR/WCAG21/) for web usage and to specified [Accessibility Guidelines](https://sparkdesignsystem.com/principles/accessibility-guidelines/) for other digital channels.
 
-We follow, [WCAG 2.1 Level AA - Button Aria
-Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#button) (Web
-Content Accessibility Guidelines).
+> We follow, [WCAG 2.1 Level AA - Button Aria Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#button) (Web Content Accessibility Guidelines).
