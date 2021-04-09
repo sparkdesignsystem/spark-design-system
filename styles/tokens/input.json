@@ -2210,7 +2210,7 @@
         "themable": true
       },
       "border-hover": {
-        "comment": "The border the custom checkbox input when hovered.",
+        "comment": "The border of the custom checkbox input when hovered.",
         "value": "1px solid {black.value}",
         "file": "settings",
         "themable": true
