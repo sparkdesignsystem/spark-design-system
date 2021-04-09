@@ -1,13 +1,14 @@
 ---
-  title: Button
+title: Button
 ---
+
 import ComponentPreview from '../../../components/ComponentPreview';
 import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Button
 
-An interactive element that represents an action or choice.
-Well written button text clearly communicates what action will occur when the user interacts with it.
+Buttons allow users to trigger actions and make choices. A button's text
+sets clear expectations of what action will occur when users interact with it.
 
 <ComponentPreview
   componentName="button--primary"
@@ -19,72 +20,39 @@ Well written button text clearly communicates what action will occur when the us
 
 ### Usage
 
-Use Buttons to represent what type of actions the users can take on a page and to create a visual hierarchy between different calls to action.
+Use buttons to communicate the different actions users can take.
 
-> As a general rule, use no more than two primary call-to-action buttons ([Primary Button](#primary-button)) per page.
+Use a [Link](/using-spark/components/link) when the action is to take the user to a new page or to an external site.
 
-Examples of Button usage:
-- To trigger action.
-- To submit a form.
-- To begin a new task.
-- To navigate to the next step in a process.
-- To confirm completion or to exit out of a flow.
-
-If the action will take the user to a new page or to an external site, consider using a [Link](/using-spark/components/link) instead.
-
-### Guidelines
-
-#### How to Write Effective Button Text
-- Button text should set clear expectations as to what will happen when activated.
-- Use title case (capitalize the first letter each word).
-- Use task-specific action verbs like: “Add”, “Remove”, “Read Details”, and “Submit”.
-- Use less than 20 characters.
-- Use compact words. For example, instead of “Submit Your Information Now” use “Submit”.
-- Use first-person pronouns. Use “Customize My Loan,” instead of “Customize Your Loan.”
-- Do not use ampersands (&).
-- Do not wrap button text into a second line; it reduces legibility, and starts looking less like an interactable element.
-
-#### Button Styling
-- Text should be center aligned.
-- Buttons should have 16px of padding on the top and bottom, and 24px on the left and right sides.
-- Width should be between 48px and 280px.
-- Grouped buttons should be 16px away from each other.
-- Do not use buttons in paragraphs or within lines of text. Use [Link](/using-spark/components/link) instead.
-
-#### Full Width at Smaller Viewports
-At small viewport sizes, a Button may be full width.
-- Stacked Buttons should have the primary action above secondary actions.
-- Use full width Buttons in containers that take up 1/3 of the grid or smaller.
-
-<SprkDivider
- element="span"
- additionalClasses="sprk-u-Measure"
-></SprkDivider>
+- Avoid using too many buttons on a page.
+- Use title case for button labels.
+- Button text should be as short as possible.
 
 ## Variants
 
-Use Button variants to emphasize different actions within a page.
+Buttons have different visual weights to indicate to users the most
+important actions on an interface.
 
-> Variant names imply the order within action hierarchy, but they do not imply the **visual** placement on the page.
+- [Primary Button](/using-spark/components/button/#primary-button) (Filled)
+- [Secondary Button](/using-spark/components/button/#secondary-button) (Outlined)
+- [Tertiary Button](/using-spark/components/button/#tertiary-button) (Text button)
+- Compact Button (Need to add example)
+- Full Width Button
 
-- [Primary Button](#primary-button)
-- [Secondary Button](#secondary-button)
-- [Tertiary Button](#tertiary-button)
+Use one primary button as the main call to action to establish the
+button hierarchy on a screen.
 
-### Primary Button
+### Primary Button/Filled
 
-Represents the main call to action on the page. Use no more than two Primary Buttons per page.
+It represents the main action we want users to take on a screen. Filled
+buttons have the heaviest visual weight and should be used in areas of
+high importance.
 
-> When there are multiple buttons, use the Primary Button to indicate the main action.
-
-#### Examples
-- Submit Application
-- Apply to Buy a Home
-- Apply for Refinance
-- In a multi-step form, a Primary Button works with Secondary and Tertiary Button as a set of related actions.
-  - **Primary Button is "Submit"**
-  - Secondary Button is "Back"
-  - Tertiary Button is "Cancel"
+- Use to indicate the main call to action on a screen.
+- Use one Primary (Filled) button per screen to help users understand the action hierarchy of the page and to avoid any confusion.
+- To indicate the main action that helps users navigate to the next step in a process.
+- Exception -
+  - For specific situations where two Primary (Filled) buttons may need to be together, for example if the user can choose between two journeys a 'button group' can be used.
 
 <ComponentPreview
   componentName="button--primary"
@@ -94,18 +62,13 @@ Represents the main call to action on the page. Use no more than two Primary But
   titleAttr="Primary Button Example"
 />
 
-### Secondary Button
+### Secondary Button/Outlined
 
-Represents the second-highest priority action, following the Primary Button. There can be more than one on a page.
+It represents independent or alternative actions from the main call to action on
+the screen. Secondary (Outlined) buttons have a medium visual weight and emphasis.
 
-#### Examples
-- Preview
-- Save For Later
-- Back
-- In a multi-step form, a Secondary Button works with Primary and Tertiary Button as a set of related actions.
-  - Primary Button is "Submit"
-  - **Secondary Button is "Back"**
-  - Tertiary Button is "Cancel"
+- There can be one or multiple Secondary (Outlined) buttons on a screen.
+- Use for alternative actions that do not navigate the user to the next step in a process.
 
 <ComponentPreview
   componentName="button--secondary"
@@ -116,13 +79,14 @@ Represents the second-highest priority action, following the Primary Button. The
 />
 
 ### Tertiary Button
-Represents less prominent actions. Sometimes in an action set with [Primary](#primary-button) and [Secondary](#secondary-button) Buttons, but they can also be independent actions.
 
-#### Example
-- In a multi-step form, a Tertiary Button works with Primary and Secondary Button as a set of related actions.
-  - Primary Button is "Submit"
-  - Secondary Button is "Back"
-  - **Tertiary Button is "Cancel"**
+It represents the least important action on a screen. Tertiary (Text)
+buttons have the lowest visual weight.
+
+- They have a similar style to a Link.
+- For independent or less important actions.
+- They can be used for sub-tasks where a Primary (Filled) button is the main action.
+- In a button set, use Tertiary buttons for actions with the least visual emphasis that do not require the user's attention.
 
 <ComponentPreview
   componentName="button--tertiary"
@@ -132,72 +96,46 @@ Represents less prominent actions. Sometimes in an action set with [Primary](#pr
   titleAttr="Tertiary Button Example"
 />
 
-## States
+### Compact Buttons
 
-### Disabled
+A smaller version of regular sized buttons.
 
-Represents an action that’s not currently available to the user. It implies that the Button would be available given a certain set of circumstances.
+- All button types (Primary, Secondary and Tertiary) can be Compact buttons.
+- Use in smaller viewports, like mobile screens.
+- Do not mix with regular sized buttons.
 
-Since a user can’t interact with this Button, consider if it’s necessary to show it at all.
+### Full Width Buttons
 
-#### Disabled - Primary
+Use full width buttons in containers that take up 1/3 of the grid or
+smaller, like mobile screens.
+
+- Button takes up the full width of it's container.
+- On mobile screens, buttons can be stacked.
+- When stacked, place the primary action on top of secondary actions.
+
 <ComponentPreview
-  componentName="button--disabled"
+  componentName="button--full-width-at-small-viewport"
   hasReact
   hasAngular
   hasHTML
-  titleAttr="Disabled Button Example"
+  titleAttr="Full Width at Smaller Viewports Button Example"
 />
+## Button Groups
 
-#### Disabled - Secondary
-<ComponentPreview
-  componentName="button--disabled-secondary"
-  hasReact
-  hasAngular
-  hasHTML
-  titleAttr="Disabled Secondary Button Example"
-/>
+Buttons can be grouped with other buttons to establish a relationship between them.
 
-#### Disabled - Tertiary
-<ComponentPreview
-  componentName="button--disabled-tertiary"
-  hasReact
-  hasAngular
-  hasHTML
-  titleAttr="Disabled Tertiary Button Example"
-/>
+- Group buttons based on their usage and importance.
+- A maximum of two buttons should be in a group.
+  - A Primary button can be grouped with any less visual weight (Secondary or Tertiary) buttons.
+  - Do not mix a primary, secondary, and tertiary buttons in the same button group.
+- Do not use too many buttons on a page to avoid overwhelming users.
 
-### Spinning
+#### Exception
 
-Use when data is being saved or submitted. The spinning indicator will replace the Button text.
-
-#### Spinning - Primary
-<ComponentPreview
-  componentName="button--spinning"
-  hasReact
-  hasAngular
-  hasHTML
-  titleAttr="Spinning Primary Button Example"
-/>
-
-#### Spinning - Secondary
-<ComponentPreview
-  componentName="button--spinning-secondary"
-  hasHTML
-  hasReact
-  hasAngular
-  titleAttr="Spinning Secondary Button Example"
-/>
-
-#### Spinning - Tertiary
-<ComponentPreview
-  componentName="button--spinning-tertiary"
-  hasHTML
-  hasReact
-  hasAngular
-  titleAttr="Spinning Tertiary Button Example"
-/>
-
+- For layouts that require more than three calls to action in a group,
+  - Use one Primary button for the main action in combination with two less visual weight buttons.
+  - Do not mix more than two styles of buttons.
+  - If using a primary button in the group, prefer all other buttons to be tertiary.
 
 ### Full Width at Smaller Viewports
 
@@ -214,12 +152,124 @@ At small viewport sizes, a Button may be used at full width.
   titleAttr="Full Width at Smaller Viewports Button Example"
 />
 
+## States
+
+#### Disabled - Primary
+
+<ComponentPreview
+  componentName="button--disabled"
+  hasReact
+  hasAngular
+  hasHTML
+  titleAttr="Disabled Button Example"
+/>
+
+#### Disabled - Secondary
+
+<ComponentPreview
+  componentName="button--disabled-secondary"
+  hasReact
+  hasAngular
+  hasHTML
+  titleAttr="Disabled Secondary Button Example"
+/>
+
+#### Disabled - Tertiary
+
+<ComponentPreview
+  componentName="button--disabled-tertiary"
+  hasReact
+  hasAngular
+  hasHTML
+  titleAttr="Disabled Tertiary Button Example"
+/>
+
+### Spinning
+
+Use when data is being saved or submitted. The spinning indicator will replace the Button text.
+
+#### Spinning - Primary
+
+<ComponentPreview
+  componentName="button--spinning"
+  hasReact
+  hasAngular
+  hasHTML
+  titleAttr="Spinning Primary Button Example"
+/>
+
+#### Spinning - Secondary
+
+<ComponentPreview
+  componentName="button--spinning-secondary"
+  hasHTML
+  hasReact
+  hasAngular
+  titleAttr="Spinning Secondary Button Example"
+/>
+
+#### Spinning - Tertiary
+
+<ComponentPreview
+  componentName="button--spinning-tertiary"
+  hasHTML
+  hasReact
+  hasAngular
+  titleAttr="Spinning Tertiary Button Example"
+/>
+
 ## Anatomy
 
-- A Button must contain text and/or an Icon
+- A Button must have a text label and/or icon, and a container.
+- A Button's Text communicates the action that will happen when the
+  user interacts with it.
+
+### Guidelines
+
+#### Text Labels
+
+- Button text should set clear expectations of what will happen when the user interacts with it.
+- Always use title case (capitalize the first letter each word).
+- Use task-specific action verbs like: "Add," Remove," Read Details," and "Submit."
+- Use less than 20 characters.
+- Use compact words. For example, instead of "Submit Your Information Now" use "Submit."
+- Use first-person pronouns. Use "Customize My Loan," instead of "Customize Your Loan."
+- Do not use ampersands (&).
+- Do not wrap button text into a second line; it reduces legibility and starts looking less like an interactable element.
+
+#### Button Styling
+
+- Text should be center aligned.
+- Buttons should have 16px of padding on the top and bottom, and 24px on the left and right sides.
+- Width should be between 48x and 280px.
+- Grouped buttons should be 16px away from each other.
+- Apply the same width to all buttons in a group.
+- Do not use buttons in paragraphs or within lines of text. Use
+  [Link](/using-spark/components/link)
+  instead.
+
+#### Button Alignment
+
+As a rule, place the (Primary) button **on the right side** of a screen
+to communicate the main action and capture's the user's attention.
+
+> This rule follows the Gutenberg's principle, which describes how a
+> user's eye makes a z-pattern when scanning a screen and implies that
+> placing buttons to the right communicates the main action to the user.
+
+- Buttons should be right aligned to its parent container.
+- On a Button set or group, the main action should be placed **on the
+  right** to indicate the most important action.
+- **Side by Side (Horizontal) buttons** - place the Primary (Filled) button **on the right** and all other actions to the left.
+- **Stack (Vertical) buttons** - place the Primary (Filled) button **on top** of the secondary or tertiary action.
 
 ## Accessibility
-- If a Button only includes an Icon with no
-text, alternative text must be provided.
 
-> We follow, [WCAG 2.1 Level AA - Button Aria Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#button) (Web Content Accessibility Guidelines).
+- If a Button only includes an Icon with no text, alternative text
+  must be provided.
+
+- Adhere to [Web Content Accessibility Guidelines (WCAG 2.1, Level AA)](https://www.w3.org/TR/WCAG21/) for web usage and to specified [Accessibility Guidelines](https://sparkdesignsystem.com/principles/accessibility-guidelines/) for other digital channels.
+
+We follow, [WCAG 2.1 Level AA - Button Aria
+Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#button) (Web
+Content Accessibility Guidelines).
