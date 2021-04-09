@@ -68,7 +68,6 @@ public class SparkDesignTokens {
     public static let sprkCheckboxCustomInputBackgroundColorHover = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
     public static let sprkCheckboxCustomInputBorderColorChecked = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkCheckboxCustomInputBorderColorDisabled = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
-    public static let sprkCheckboxCustomInputBorderHover = 1px solid UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkCheckboxCustomInputBorderHoverDisabled = 1px solid UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkCheckboxCustomInputBoxShadowHoverDisabled = "none"
     public static let sprkCheckboxHugeContainerCheckedBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
@@ -267,7 +266,9 @@ public class SparkDesignTokens {
     public static let sprkInputHugeActivePaddingTop = CGFloat(64.00) / 4
     public static let sprkInputHugeBorderColor = UIColor(red: 0.286, green: 0.286, blue: 0.282, alpha:1)
     public static let sprkInputHugeBorderWidth = 1px
+    public static let sprkInputHugeColorDisabled = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkInputHugeCompleteLabelColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
+    public static let sprkInputHugeCursorDisabled = "not-allowed"
     public static let sprkInputHugeErrorBorderColor = UIColor(red: 0.831, green: 0.459, blue: 0.000, alpha:1)
     public static let sprkInputHugeErrorFocusLabelColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkInputHugeFocusBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)

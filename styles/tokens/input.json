@@ -571,6 +571,18 @@
         "file": "settings",
         "themable": true
       },
+      "color-disabled": {
+        "comment": "The color on disabled Huge Inputs.",
+        "value": "{text-input.disabled-color.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "cursor-disabled": {
+        "comment": "The cursor on disabled Huge Inputs.",
+        "value": "{text-input.disabled-cursor.value}",
+        "file": "settings",
+        "themable": true
+      },
       "box-shadow-disabled": {
         "comment": "The box shadow value on disabled Huge Inputs.",
         "value": "none",
@@ -2212,6 +2224,9 @@
       "border-hover": {
         "comment": "The border the custom checkbox input when hovered.",
         "value": "1px solid {black.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },

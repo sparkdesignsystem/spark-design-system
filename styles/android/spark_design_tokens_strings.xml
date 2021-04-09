@@ -163,6 +163,7 @@
   <string name="sprk_checkbox_custom_input_box_shadow_focus">0 0 0 1px #ff603aa1</string><!-- The box shadow of the custom checkbox input when focused. -->
   <string name="sprk_checkbox_custom_input_border_focus_checked">1px solid #ff603aa1</string><!-- The border of the custom checkbox input when it is checked and focused. -->
   <string name="sprk_checkbox_custom_input_background_color_disabled">#ffdddddd</string><!-- The background color of the custom checkbox input when disabled. -->
+  <string name="sprk_checkbox_custom_input_border_hover">1px solid #ff1c1b1a</string><!-- The border the custom checkbox input when hovered. -->
   <string name="sprk_checkbox_custom_input_box_shadow_hover">0 0 0 1px #ff1c1b1a</string><!-- The box shadow of the custom checkbox input when hovered. -->
   <string name="sprk_checkbox_custom_input_cursor_disabled">not-allowed</string><!-- The cursor for the custom checkbox input when disabled. -->
   <string name="sprk_checkbox_checkmark_border_left">2px solid #ffffffff</string><!-- The border settings to create the bottom portion of the checkmark. -->
