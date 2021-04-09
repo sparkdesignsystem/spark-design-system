@@ -30,9 +30,9 @@
       },
       "font-weight": {
         "comment": "Link font-weight on the Footer.",
-        "value": "normal",
+        "value": "300",
         "attributes": {
-          "category": "content"
+          "category": "size"
         },
         "file": "settings",
         "themable": true
@@ -78,9 +78,9 @@
         },
         "font-weight": {
           "comment": "Toggle trigger hover font-weight on the Footer.",
-          "value": "500",
+          "value": "normal",
           "attributes": {
-            "category": "size"
+            "category": "content"
           },
           "file": "settings",
           "themable": true
