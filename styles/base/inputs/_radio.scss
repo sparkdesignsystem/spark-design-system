@@ -167,11 +167,13 @@
 
   .sprk-b-Radio__input:disabled + .sprk-b-Radio__label {
     background-color: $sprk-radio-input-huge-disabled-background-color;
+    border-color: $sprk-radio-input-huge-label-disabled-border-color;
+    box-shadow: $sprk-radio-input-huge-label-disabled-box-shadow;
   }
 
   .sprk-b-Radio__input:disabled + .sprk-b-Radio__label:hover {
-    border: $sprk-radio-input-huge-outer-circle-border-hover-disabled;
-    box-shadow: $sprk-radio-input-huge-outer-circle-box-shadow-hover-disabled;
+    border-color: $sprk-radio-input-huge-label-disabled-border-color;
+    box-shadow: $sprk-radio-input-huge-label-disabled-box-shadow;
 
     ::before {
       background-color: $sprk-radio-input-huge-disabled-background-color;

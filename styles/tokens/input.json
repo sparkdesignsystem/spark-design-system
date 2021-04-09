@@ -1755,6 +1755,18 @@
           "file": "settings",
           "themable": true
         },
+        "disabled-border-color": {
+          "comment": "The border color of the huge radio input label when disabled.",
+          "value": "{black-tint.50.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "disabled-box-shadow": {
+          "comment": "The box shadow of the huge radio input label when disabled.",
+          "value": "{text-input.disabled-box-shadow.value}",
+          "file": "settings",
+          "themable": true
+        },
         "hover-border-color": {
           "comment": "The border color of the huge radio input label on hover.",
           "value": "{black.value}",
@@ -2032,7 +2044,7 @@
       },
       "disabled-border-color": {
         "comment": "The border color of the huge checkbox input when disabled.",
-        "value": "{text-input.disabled-border-color.value}",
+        "value": "{black-tint.50.value}",
         "file": "settings",
         "themable": true
       },

@@ -74,7 +74,7 @@ public class SparkDesignTokens {
     public static let sprkCheckboxHugeContainerCheckedBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkCheckboxHugeContainerCheckedHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkCheckboxHugeContainerDisabledBackground = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
-    public static let sprkCheckboxHugeContainerDisabledBorderColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
+    public static let sprkCheckboxHugeContainerDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkCheckboxHugeContainerFocusBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkCheckboxHugeContainerFocusCheckedBorderColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkCheckboxHugeContainerFocusHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
@@ -369,6 +369,8 @@ public class SparkDesignTokens {
     public static let sprkRadioInputHugeDisabledBackgroundColor = UIColor(red: 0.867, green: 0.867, blue: 0.867, alpha:1)
     public static let sprkRadioInputHugeFocusedLabelBorder = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkRadioInputHugeFocusedOuterCircleBorderBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
+    public static let sprkRadioInputHugeLabelDisabledBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
+    public static let sprkRadioInputHugeLabelDisabledBoxShadow = "none"
     public static let sprkRadioInputHugeLabelHoverBorderColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkRadioInputHugeLabelHoverBoxShadow = 0 0 0 1px UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1) ,0 2px 8px UIColor(red: 0.729, green: 0.729, blue: 0.729, alpha:1)
     public static let sprkRadioInputHugeOuterCircleBorderHoverBackgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha:1)
