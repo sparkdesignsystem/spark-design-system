@@ -13,6 +13,7 @@ import { SprkDatepickerModule } from './directives/inputs/sprk-datepicker/sprk-d
 import { SprkFieldErrorModule } from './directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkHelperTextModule } from './directives/inputs/sprk-helper-text/sprk-helper-text.module';
 import { SprkInputModule } from './directives/inputs/sprk-input/sprk-input.module';
+import { SprkSelectModule } from './directives/inputs/sprk-select/sprk-select.module';
 import { SprkRadioInputModule } from './directives/inputs/sprk-radio-input/sprk-radio-input.module';
 import { SprkCheckboxInputModule } from './directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
 import { SprkLabelModule } from './directives/inputs/sprk-label/sprk-label.module';
@@ -29,7 +30,9 @@ import { SprkTableHeadModule } from './directives/sprk-table-head/sprk-table-hea
 import { SprkTableRowHeadingModule } from './directives/sprk-table-row-heading/sprk-table-row-heading.module';
 import { SprkTabbedNavigationPanelModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-panel/sprk-tabbed-navigation-panel.module';
 import { SprkTabbedNavigationTabModule } from './directives/tabbed-navigation/sprk-tabbed-navigation-tab/sprk-tabbed-navigation-tab.module';
-import { SparkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
+import { SprkTabsPanelModule } from './directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.module';
+import { SprkTabsButtonModule } from './directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.module';
+import { SprkInputContainerModule } from './components/inputs/sprk-input-container/sprk-input-container.module';
 import { SprkHugeInputContainerModule } from './components/inputs/sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkTextareaContainerModule } from './components/inputs/sprk-textarea-container/sprk-textarea-container.module';
 import { SprkIconInputContainerModule } from './components/inputs/sprk-icon-input-container/sprk-icon-input-container.module';
@@ -49,8 +52,13 @@ import { SprkModalModule } from './components/sprk-modal/sprk-modal.module';
 import { SprkOrderedListModule } from './components/sprk-ordered-list/sprk-ordered-list.module';
 import { SprkPaginationModule } from './components/sprk-pagination/sprk-pagination.module';
 import { SprkPromoModule } from './components/sprk-promo/sprk-promo.module';
+import { SprkPromoMediaModule } from './components/sprk-promo/directives/sprk-promo-media/sprk-promo-media.module';
+import { SprkPromoContentModule } from './components/sprk-promo/directives/sprk-promo-content/sprk-promo-content.module';
+import { SprkPromoHeadingModule } from './components/sprk-promo/directives/sprk-promo-heading/sprk-promo-heading.module';
+import { SprkPromoSubheadingModule } from './components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.module';
 import { SprkStackModule } from './components/sprk-stack/sprk-stack.module';
 import { SprkTabbedNavigationModule } from './components/sprk-tabbed-navigation/sprk-tabbed-navigation.module';
+import { SprkTabsModule } from './components/sprk-tabs/sprk-tabs.module';
 import { SprkTableModule } from './components/sprk-table/sprk-table.module';
 import { SprkToggleModule } from './components/sprk-toggle/sprk-toggle.module';
 import { SprkTooltipModule } from './components/sprk-tooltip/sprk-tooltip.module';
@@ -58,6 +66,8 @@ import { SprkUnorderedListModule } from './components/sprk-unordered-list/sprk-u
 import { SprkButtonModule } from './directives/sprk-button/sprk-button.module';
 import { SprkAwardModule } from './components/sprk-award/sprk-award.module';
 import { SprkCardModule } from './components/sprk-card/sprk-card.module';
+import { SprkCardContentModule } from './components/sprk-card/directives/sprk-card-content/sprk-card-content.module';
+import { SprkCardMediaModule } from './components/sprk-card/directives/sprk-card-media/sprk-card-media.module';
 import { SprkDictionaryModule } from './components/sprk-dictionary/sprk-dictionary.module';
 import { SprkHighlightBoardModule } from './components/sprk-highlight-board/sprk-highlight-board.module';
 import { SprkBoxModule } from './directives/sprk-box/sprk-box.module';
@@ -72,6 +82,8 @@ import { SprkCheckboxGroupModule } from './components/inputs/sprk-checkbox-group
 import { SprkCheckboxItemModule } from './components/inputs/sprk-checkbox-item/sprk-checkbox-item.module';
 import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divider.module';
 import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module';
+import { SprkTextareaModule } from './directives/inputs/sprk-textarea/sprk-textarea.module';
+import { SprkCardHeaderModule } from './components/sprk-card/directives/sprk-card-header/sprk-card-header.module';
 @NgModule({
   exports: [
     SprkAlertModule,
@@ -80,6 +92,9 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkAwardModule,
     SprkButtonModule,
     SprkCardModule,
+    SprkCardContentModule,
+    SprkCardMediaModule,
+    SprkCardHeaderModule,
     SprkDictionaryModule,
     SprkDividerModule,
     SprkDropdownModule,
@@ -89,7 +104,7 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkOrderedListModule,
     SprkUnorderedListModule,
     SprkListItemModule,
-    SparkInputContainerModule,
+    SprkInputContainerModule,
     SprkHugeInputContainerModule,
     SprkTextareaContainerModule,
     SprkIconInputContainerModule,
@@ -108,6 +123,10 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkFormatterSsnModule,
     SprkDatepickerModule,
     SprkPromoModule,
+    SprkPromoMediaModule,
+    SprkPromoContentModule,
+    SprkPromoHeadingModule,
+    SprkPromoSubheadingModule,
     SprkTableModule,
     SprkTableHeadModule,
     SprkTableGroupedColumnModule,
@@ -115,6 +134,8 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkTableRowHeadingModule,
     SprkTabbedNavigationTabModule,
     SprkTabbedNavigationPanelModule,
+    SprkTabsButtonModule,
+    SprkTabsPanelModule,
     SprkPaginationModule,
     SprkStackModule,
     SprkStackItemModule,
@@ -123,6 +144,7 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkIconModule,
     SprkFooterModule,
     SprkTabbedNavigationModule,
+    SprkTabsModule,
     SprkBoxModule,
     SprkTextModule,
     SprkHeadingModule,
@@ -139,8 +161,10 @@ import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module
     SprkCheckboxLabelModule,
     SprkFieldsetModule,
     SprkLegendModule,
+    SprkSelectModule,
     SprkDividerDirectiveModule,
     SprkSpinnerModule,
+    SprkTextareaModule,
   ],
 })
 export class SparkAngularModule {}

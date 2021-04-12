@@ -42,7 +42,7 @@ export const defaultStory = () => {
         id="tooltip_1"
         role="tooltip"
       >
-        Use Tooltips to provide info that’s not vital to completing the task.
+        Use Tooltips to provide info that is not vital to completing the task.
         Keep the text short and stick to what’s helpful and relevant.
       </span>
     </span>

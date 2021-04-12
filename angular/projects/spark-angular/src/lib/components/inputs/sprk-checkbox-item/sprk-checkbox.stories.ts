@@ -106,7 +106,7 @@ export const defaultStory = () => ({
             [(ngModel)]="checkbox_input1"
             sprkCheckboxInput
             #checkboxInput1="ngModel"
-            data-id="checkbox-1"
+            idString="checkbox-1"
             id="checkbox-1"
           >
           <label
@@ -124,7 +124,7 @@ export const defaultStory = () => ({
             [(ngModel)]="checkbox_input2"
             sprkCheckboxInput
             #checkboxInput2="ngModel"
-            data-id="checkbox-2"
+            idString="checkbox-2"
             id="checkbox-2"
           >
           <label
@@ -142,7 +142,7 @@ export const defaultStory = () => ({
             [(ngModel)]="checkbox_input3"
             sprkCheckboxInput
             #checkboxInput3="ngModel"
-            data-id="checkbox-3"
+            idString="checkbox-3"
             id="checkbox-3"
           >
           <label
@@ -188,7 +188,7 @@ export const defaultHelperText = () => ({
             [(ngModel)]="checkbox_input1"
             sprkCheckboxInput
             #checkboxInput1="ngModel"
-            data-id="checkbox-1"
+            idString="checkbox-1"
             id="checkbox-1"
           >
           <label
@@ -206,7 +206,7 @@ export const defaultHelperText = () => ({
             [(ngModel)]="checkbox_input2"
             sprkCheckboxInput
             #checkboxInput2="ngModel"
-            data-id="checkbox-2"
+            idString="checkbox-2"
             id="checkbox-2"
           >
           <label
@@ -224,7 +224,7 @@ export const defaultHelperText = () => ({
             [(ngModel)]="checkbox_input3"
             sprkCheckboxInput
             #checkboxInput3="ngModel"
-            data-id="checkbox-3"
+            idString="checkbox-3"
             id="checkbox-3"
           >
           <label
@@ -273,7 +273,7 @@ export const invalidCheckbox = () => ({
             [(ngModel)]="checkbox_input1"
             sprkCheckboxInput
             #checkboxInput1="ngModel"
-            data-id="checkbox-1"
+            idString="checkbox-1"
             id="checkbox-1"
           >
           <label
@@ -291,7 +291,7 @@ export const invalidCheckbox = () => ({
             [(ngModel)]="checkbox_input2"
             sprkCheckboxInput
             #checkboxInput2="ngModel"
-            data-id="checkbox-2"
+            idString="checkbox-2"
             id="checkbox-2"
           >
           <label
@@ -309,7 +309,7 @@ export const invalidCheckbox = () => ({
             [(ngModel)]="checkbox_input3"
             sprkCheckboxInput
             #checkboxInput3="ngModel"
-            data-id="checkbox-3"
+            idString="checkbox-3"
             id="checkbox-3"
           >
           <label
@@ -322,7 +322,7 @@ export const invalidCheckbox = () => ({
       </fieldset>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">
@@ -365,7 +365,7 @@ export const disabledCheckbox = () => ({
             [(ngModel)]="checkbox_input1"
             sprkCheckboxInput
             #checkboxInput1="ngModel"
-            data-id="checkbox-1"
+            idString="checkbox-1"
             id="checkbox-1"
             disabled
           >
@@ -385,7 +385,7 @@ export const disabledCheckbox = () => ({
             [(ngModel)]="checkbox_input2"
             sprkCheckboxInput
             #checkboxInput2="ngModel"
-            data-id="checkbox-2"
+            idString="checkbox-2"
             id="checkbox-2"
             disabled
           >
@@ -405,7 +405,7 @@ export const disabledCheckbox = () => ({
             [(ngModel)]="checkbox_input3"
             sprkCheckboxInput
             #checkboxInput3="ngModel"
-            data-id="checkbox-3"
+            idString="checkbox-3"
             id="checkbox-3"
             disabled
           >
@@ -453,7 +453,7 @@ export const huge = () => ({
             [(ngModel)]="checkbox_input1"
             sprkCheckboxInput
             #checkboxInput1="ngModel"
-            data-id="checkbox-1"
+            idString="checkbox-1"
             id="checkbox-1"
             variant="huge"
           >
@@ -473,7 +473,7 @@ export const huge = () => ({
             [(ngModel)]="checkbox_input2"
             sprkCheckboxInput
             #checkboxInput2="ngModel"
-            data-id="checkbox-2"
+            idString="checkbox-2"
             id="checkbox-2"
             variant="huge"
           >
@@ -493,7 +493,7 @@ export const huge = () => ({
             [(ngModel)]="checkbox_input3"
             sprkCheckboxInput
             #checkboxInput3="ngModel"
-            data-id="checkbox-3"
+            idString="checkbox-3"
             id="checkbox-3"
             variant="huge"
           >
@@ -541,7 +541,7 @@ export const hugeHelperText = () => ({
             [(ngModel)]="checkbox_input1"
             sprkCheckboxInput
             #checkboxInput1="ngModel"
-            data-id="checkbox-1"
+            idString="checkbox-1"
             id="checkbox-1"
             variant="huge"
           >
@@ -561,7 +561,7 @@ export const hugeHelperText = () => ({
             [(ngModel)]="checkbox_input2"
             sprkCheckboxInput
             #checkboxInput2="ngModel"
-            data-id="checkbox-2"
+            idString="checkbox-2"
             id="checkbox-2"
             variant="huge"
           >
@@ -581,7 +581,7 @@ export const hugeHelperText = () => ({
             [(ngModel)]="checkbox_input3"
             sprkCheckboxInput
             #checkboxInput3="ngModel"
-            data-id="checkbox-3"
+            idString="checkbox-3"
             id="checkbox-3"
             variant="huge"
           >
@@ -632,7 +632,7 @@ export const hugeInvalid = () => ({
             [(ngModel)]="checkbox_input1"
             sprkCheckboxInput
             #checkboxInput1="ngModel"
-            data-id="checkbox-1"
+            idString="checkbox-1"
             id="checkbox-1"
             variant="huge"
           >
@@ -652,7 +652,7 @@ export const hugeInvalid = () => ({
             [(ngModel)]="checkbox_input2"
             sprkCheckboxInput
             #checkboxInput2="ngModel"
-            data-id="checkbox-2"
+            idString="checkbox-2"
             id="checkbox-2"
             variant="huge"
           >
@@ -672,7 +672,7 @@ export const hugeInvalid = () => ({
             [(ngModel)]="checkbox_input3"
             sprkCheckboxInput
             #checkboxInput3="ngModel"
-            data-id="checkbox-3"
+            idString="checkbox-3"
             id="checkbox-3"
             variant="huge"
           >
@@ -687,7 +687,7 @@ export const hugeInvalid = () => ({
       </fieldset>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">
@@ -729,7 +729,7 @@ export const hugeDisabled = () => ({
             [(ngModel)]="checkbox_input1"
             sprkCheckboxInput
             #checkboxInput1="ngModel"
-            data-id="checkbox-1"
+            idString="checkbox-1"
             id="checkbox-1"
             variant="huge"
             disabled
@@ -751,7 +751,7 @@ export const hugeDisabled = () => ({
             [(ngModel)]="checkbox_input2"
             sprkCheckboxInput
             #checkboxInput2="ngModel"
-            data-id="checkbox-2"
+            idString="checkbox-2"
             id="checkbox-2"
             variant="huge"
             disabled
@@ -773,7 +773,7 @@ export const hugeDisabled = () => ({
             [(ngModel)]="checkbox_input3"
             sprkCheckboxInput
             #checkboxInput3="ngModel"
-            data-id="checkbox-3"
+            idString="checkbox-3"
             id="checkbox-3"
             variant="huge"
             disabled
@@ -826,7 +826,7 @@ export const hugeLayoutTwo = () => ({
                 [(ngModel)]="checkbox_input1"
                 sprkCheckboxInput
                 #checkboxInput1="ngModel"
-                data-id="checkbox-1"
+                idString="checkbox-1"
                 id="checkbox-1"
                 variant="huge"
               >
@@ -848,7 +848,7 @@ export const hugeLayoutTwo = () => ({
                 [(ngModel)]="checkbox_input2"
                 sprkCheckboxInput
                 #checkboxInput2="ngModel"
-                data-id="checkbox-2"
+                idString="checkbox-2"
                 id="checkbox-2"
                 variant="huge"
               >
@@ -902,7 +902,7 @@ export const hugeLayoutFour = () => ({
                     [(ngModel)]="checkbox_input1"
                     sprkCheckboxInput
                     #checkboxInput1="ngModel"
-                    data-id="checkbox-1"
+                    idString="checkbox-1"
                     id="checkbox-1"
                     variant="huge"
                   >
@@ -924,7 +924,7 @@ export const hugeLayoutFour = () => ({
                     [(ngModel)]="checkbox_input2"
                     sprkCheckboxInput
                     #checkboxInput2="ngModel"
-                    data-id="checkbox-2"
+                    idString="checkbox-2"
                     id="checkbox-2"
                     variant="huge"
                   >
@@ -950,7 +950,7 @@ export const hugeLayoutFour = () => ({
                     [(ngModel)]="checkbox_input3"
                     sprkCheckboxInput
                     #checkboxInput3="ngModel"
-                    data-id="checkbox-3"
+                    idString="checkbox-3"
                     id="checkbox-3"
                     variant="huge"
                   >
@@ -972,7 +972,7 @@ export const hugeLayoutFour = () => ({
                     [(ngModel)]="checkbox_input4"
                     sprkCheckboxInput
                     #checkboxInput4="ngModel"
-                    data-id="checkbox-4"
+                    idString="checkbox-4"
                     id="checkbox-4"
                     variant="huge"
                   >
@@ -1028,7 +1028,7 @@ export const hugeLayoutFive = () => ({
                     [(ngModel)]="checkbox_input1"
                     sprkCheckboxInput
                     #checkboxInput1="ngModel"
-                    data-id="checkbox-1"
+                    idString="checkbox-1"
                     id="checkbox-1"
                     variant="huge"
                   >
@@ -1050,7 +1050,7 @@ export const hugeLayoutFive = () => ({
                     [(ngModel)]="checkbox_input2"
                     sprkCheckboxInput
                     #checkboxInput2="ngModel"
-                    data-id="checkbox-2"
+                    idString="checkbox-2"
                     id="checkbox-2"
                     variant="huge"
                   >
@@ -1076,7 +1076,7 @@ export const hugeLayoutFive = () => ({
                     [(ngModel)]="checkbox_input3"
                     sprkCheckboxInput
                     #checkboxInput3="ngModel"
-                    data-id="checkbox-3"
+                    idString="checkbox-3"
                     id="checkbox-3"
                     variant="huge"
                   >
@@ -1098,7 +1098,7 @@ export const hugeLayoutFive = () => ({
                     [(ngModel)]="checkbox_input4"
                     sprkCheckboxInput
                     #checkboxInput4="ngModel"
-                    data-id="checkbox-4"
+                    idString="checkbox-4"
                     id="checkbox-4"
                     variant="huge"
                   >
@@ -1124,7 +1124,7 @@ export const hugeLayoutFive = () => ({
                     [(ngModel)]="checkbox_input5"
                     sprkCheckboxInput
                     #checkboxInput5="ngModel"
-                    data-id="checkbox-5"
+                    idString="checkbox-5"
                     id="checkbox-5"
                     variant="huge"
                   >
@@ -1180,7 +1180,7 @@ export const hugeLayoutSix = () => ({
                     [(ngModel)]="checkbox_input1"
                     sprkCheckboxInput
                     #checkboxInput1="ngModel"
-                    data-id="checkbox-1"
+                    idString="checkbox-1"
                     id="checkbox-1"
                     variant="huge"
                   >
@@ -1202,7 +1202,7 @@ export const hugeLayoutSix = () => ({
                     [(ngModel)]="checkbox_input2"
                     sprkCheckboxInput
                     #checkboxInput2="ngModel"
-                    data-id="checkbox-2"
+                    idString="checkbox-2"
                     id="checkbox-2"
                     variant="huge"
                   >
@@ -1228,7 +1228,7 @@ export const hugeLayoutSix = () => ({
                     [(ngModel)]="checkbox_input3"
                     sprkCheckboxInput
                     #checkboxInput3="ngModel"
-                    data-id="checkbox-3"
+                    idString="checkbox-3"
                     id="checkbox-3"
                     variant="huge"
                   >
@@ -1250,7 +1250,7 @@ export const hugeLayoutSix = () => ({
                     [(ngModel)]="checkbox_input4"
                     sprkCheckboxInput
                     #checkboxInput4="ngModel"
-                    data-id="checkbox-4"
+                    idString="checkbox-4"
                     id="checkbox-4"
                     variant="huge"
                   >
@@ -1276,7 +1276,7 @@ export const hugeLayoutSix = () => ({
                     [(ngModel)]="checkbox_input5"
                     sprkCheckboxInput
                     #checkboxInput5="ngModel"
-                    data-id="checkbox-5"
+                    idString="checkbox-5"
                     id="checkbox-5"
                     variant="huge"
                   >
@@ -1298,7 +1298,7 @@ export const hugeLayoutSix = () => ({
                     [(ngModel)]="checkbox_input6"
                     sprkCheckboxInput
                     #checkboxInput6="ngModel"
-                    data-id="checkbox-6"
+                    idString="checkbox-6"
                     id="checkbox-6"
                     variant="huge"
                   >
@@ -1358,7 +1358,7 @@ export const legacyStory = () => ({
           for="checkbox-1"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 1
+          Legacy Checkbox Item 1
         </label>
       </sprk-selection-item-container>
 
@@ -1378,7 +1378,7 @@ export const legacyStory = () => ({
           for="checkbox-2"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 2
+          Legacy Checkbox Item 2
         </label>
       </sprk-selection-item-container>
 
@@ -1398,7 +1398,7 @@ export const legacyStory = () => ({
           for="checkbox-3"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 3
+          Legacy Checkbox Item 3
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>
@@ -1442,7 +1442,7 @@ export const legacyInvalidStory = () => ({
           for="checkbox-1"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 1
+          Legacy Checkbox Item 1
         </label>
       </sprk-selection-item-container>
 
@@ -1462,7 +1462,7 @@ export const legacyInvalidStory = () => ({
           for="checkbox-2"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 2
+          Legacy Checkbox Item 2
         </label>
       </sprk-selection-item-container>
 
@@ -1482,7 +1482,7 @@ export const legacyInvalidStory = () => ({
           for="checkbox-3"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 3
+          Legacy Checkbox Item 3
         </label>
       </sprk-selection-item-container>
       <span sprkFieldError>
@@ -1536,7 +1536,7 @@ export const legacyDisabledStory = () => ({
           class="sprk-b-Label--disabled"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 1
+          Legacy Checkbox Item 1
         </label>
       </sprk-selection-item-container>
 
@@ -1558,7 +1558,7 @@ export const legacyDisabledStory = () => ({
           class="sprk-b-Label--disabled"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 2
+          Legacy Checkbox Item 2
         </label>
       </sprk-selection-item-container>
 
@@ -1580,7 +1580,7 @@ export const legacyDisabledStory = () => ({
           class="sprk-b-Label--disabled"
           sprkSelectionLabel
         >
-          Checkbox Checkbox Item 3
+          Legacy Checkbox Item 3
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>

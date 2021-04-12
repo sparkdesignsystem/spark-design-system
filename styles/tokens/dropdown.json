@@ -139,7 +139,7 @@
         },
         "color-active": {
           "comment": "The color of the Dropdown trigger on hover, active, focus.",
-          "value": "{black.value}",
+          "value": "{purple.value}",
           "attributes": {
             "category": "color"
           },

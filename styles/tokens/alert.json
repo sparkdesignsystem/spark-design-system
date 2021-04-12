@@ -198,7 +198,7 @@
         },
         "fail": {
           "comment": "The icon color of the Fail Alert component.",
-          "value": "{pink.value}",
+          "value": "{orange.value}",
           "attributes": {
             "category": "color"
           },
@@ -227,7 +227,7 @@
     },
     "border-fail": {
       "comment": "The border value of the Fail Alert component.",
-      "value": "2px solid {pink.value}",
+      "value": "2px solid {orange.value}",
       "attributes": {
         "category": "content"
       },

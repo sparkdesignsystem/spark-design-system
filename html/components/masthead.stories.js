@@ -159,7 +159,7 @@ export const defaultStory = () => {
               sprk-o-HorizontalList
               sprk-o-HorizontalList--spacing-large
               sprk-o-Stack__item--center-column
-              "
+            "
           >
             <li>
               <a
@@ -190,11 +190,11 @@ export const defaultStory = () => {
 
           <ul
             class="
-                sprk-o-Stack__item
-                sprk-o-HorizontalList
-                sprk-o-HorizontalList--spacing-large
-                sprk-o-Stack--center-column
-              "
+              sprk-o-Stack__item
+              sprk-o-HorizontalList
+              sprk-o-HorizontalList--spacing-large
+              sprk-o-Stack--center-column
+            "
           >
             <li>
               <a
@@ -225,12 +225,12 @@ export const defaultStory = () => {
             <li>
               <a
                 class="
-                    sprk-c-Button
-                    sprk-c-Button--quaternary
-                    sprk-c-Button--compact
-                  "
-                  href="#nogo"
-                >
+                  sprk-c-Button
+                  sprk-c-Button--secondary
+                  sprk-c-Button--compact
+                "
+                href="#nogo"
+              >
                 Sign In
               </a>
             </li>
@@ -290,8 +290,8 @@ export const defaultStory = () => {
                   class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
                   href="#nogo"
                 >
-                    Item 1
-                  </a>
+                  Item 1
+                </a>
               </li>
 
               <li>
@@ -299,8 +299,8 @@ export const defaultStory = () => {
                   class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
                   href="#nogo"
                 >
-                    Item 2
-                  </a>
+                  Item 2
+                </a>
               </li>
 
               <li>
@@ -308,8 +308,8 @@ export const defaultStory = () => {
                   class="sprk-b-Link sprk-b-Link--plain sprk-c-Masthead__link"
                   href="#nogo"
                 >
-                    Item 3
-                  </a>
+                  Item 3
+                </a>
               </li>
             </ul>
           </li>
@@ -324,14 +324,14 @@ export const defaultStory = () => {
               class="sprk-c-MastheadAccordion__summary"
               href="#nogo"
             >
-                <span
-                  class="
-                    sprk-b-TypeBodyOne
-                    sprk-c-MastheadAccordion__heading
-                  ">
-                  Item 2
-                </span>
-              </a>
+              <span
+                class="
+                  sprk-b-TypeBodyOne
+                  sprk-c-MastheadAccordion__heading
+                ">
+                Item 2
+              </span>
+            </a>
           </li>
 
           <li class="sprk-c-MastheadAccordion__item">
@@ -341,26 +341,26 @@ export const defaultStory = () => {
               "
               href="tel:555-555-5555"
             >
-                <span
+              <span
+                class="
+                  sprk-b-TypeBodyOne
+                  sprk-c-MastheadAccordion__heading
+                "
+              >
+                <svg
                   class="
-                    sprk-b-TypeBodyOne
-                    sprk-c-MastheadAccordion__heading
+                    sprk-c-Icon
+                    sprk-c-Icon--xl
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
+                    sprk-u-mrs
                   "
+                  viewBox="0 0 64 64"
                 >
-                  <svg
-                    class="
-                      sprk-c-Icon
-                      sprk-c-Icon--xl
-                      sprk-c-Icon--filled-current-color
-                      sprk-c-Icon--stroke-current-color
-                      sprk-u-mrs
-                    "
-                    viewBox="0 0 64 64"
-                  >
-                    <use xlink:href="#landline" />
-                  </svg>
-                  (555) 555-5555
-                </span>
+                  <use xlink:href="#landline" />
+                </svg>
+                (555) 555-5555
+              </span>
               </a>
           </li>
 
@@ -369,39 +369,41 @@ export const defaultStory = () => {
               class="sprk-c-MastheadAccordion__summary"
               href="#nogo"
             >
-                <span
+              <span
+                class="
+                  sprk-b-TypeBodyOne
+                  sprk-c-MastheadAccordion__heading
+                "
+              >
+                <svg
                   class="
-                    sprk-b-TypeBodyOne
-                    sprk-c-MastheadAccordion__heading
+                    sprk-c-Icon
+                    sprk-c-Icon--xl
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
+                    sprk-u-mrs
                   "
+                  viewBox="0 0 64 64"
                 >
-                  <svg
-                    class="
-                      sprk-c-Icon
-                      sprk-c-Icon--xl
-                      sprk-c-Icon--filled-current-color
-                      sprk-c-Icon--stroke-current-color
-                      sprk-u-mrs
-                    "
-                    viewBox="0 0 64 64"
-                  >
-                    <use xlink:href="#call-team-member" />
-                  </svg>
-                  Talk To Us
-                </span>
-              </a>
+                  <use xlink:href="#call-team-member" />
+                </svg>
+                Talk To Us
+              </span>
+            </a>
           </li>
+
           <li class="sprk-c-MastheadAccordion__item sprk-o-Box">
             <a
               class="
                 sprk-c-Button
-                sprk-c-Button--quaternary
-                sprk-c-Button--compact sprk-c-Button--full@s
+                sprk-c-Button--secondary
+                sprk-c-Button--compact
+                sprk-c-Button--full@s
               "
               href="#nogo"
             >
-                Sign In
-              </a>
+              Sign In
+            </a>
           </li>
         </ul>
       </nav>
@@ -442,11 +444,12 @@ export const extended = () => {
           sprk-o-Stack
           sprk-o-Stack--split@xxs
         ">
-        <div class="
-          sprk-c-Masthead__menu
-          sprk-o-Stack__item
-          sprk-o-Stack__item--center-column@xxs
-        "
+        <div
+          class="
+            sprk-c-Masthead__menu
+            sprk-o-Stack__item
+            sprk-o-Stack__item--center-column@xxs
+          "
         >
           <button
             class="sprk-c-Menu"
@@ -479,9 +482,9 @@ export const extended = () => {
 
         <div
           class="
-          sprk-c-Masthead__branding
-          sprk-o-Stack__item
-          sprk-o-Stack__item--center-column@xxs
+            sprk-c-Masthead__branding
+            sprk-o-Stack__item
+            sprk-o-Stack__item--center-column@xxs
           "
         >
           <a href="#nogo">
@@ -519,12 +522,12 @@ export const extended = () => {
           role="navigation"
         >
           <div
-          class="
-            sprk-o-Stack__item
-            sprk-o-Stack__item--flex@xxs
-            sprk-o-Stack
-            sprk-o-Stack--center-column sprk-o-Stack--center-row
-          "
+            class="
+              sprk-o-Stack__item
+              sprk-o-Stack__item--flex@xxs
+              sprk-o-Stack
+              sprk-o-Stack--center-column sprk-o-Stack--center-row
+            "
           >
             <div class="sprk-o-Stack__item sprk-u-Position--relative">
               <a
@@ -546,13 +549,12 @@ export const extended = () => {
                   data-sprk-dropdown-trigger-text-container
                   role="combobox"
                 >
-                  Select One
+                  Choose One
                 </span>
                 <svg
                   class="
                     sprk-c-Icon
-                    sprk-c-Icon--filled-current-color
-                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--toggle
                     sprk-Stack__item
                   "
                   viewBox="0 0 100 100"
@@ -562,15 +564,13 @@ export const extended = () => {
               </a>
 
               <div
-                class="
-                  sprk-c-Masthead__selector-dropdown
-                  sprk-c-Dropdown sprk-u-Display--none
-                "
+                class="sprk-c-Masthead__selector-dropdown sprk-u-Display--none"
                 data-sprk-dropdown="dropdown-selector-wide"
                 >
-                <div class="sprk-c-Dropdown__header">
+                <div class="sprk-c-Masthead__selector-dropdown-header">
                   <a
                     class="
+                      sprk-c-Masthead__selector-dropdown-header-link
                       sprk-b-Link
                       sprk-b-Link--plain
                       sprk-o-Stack
@@ -584,19 +584,17 @@ export const extended = () => {
                   >
                     <span
                       class="
-                        sprk-c-Dropdown__title
+                        sprk-c-Masthead__selector-dropdown-title
                         sprk-b-TypeBodyTwo
                         sprk-o-Stack__item
                         sprk-o-Stack__item--flex@xxs
                       "
                     >
-                      Select One
+                      Choose One
                     </span>
                     <svg
                       class="
                         sprk-c-Icon
-                        sprk-c-Icon--filled-current-color
-                        sprk-c-Icon--stroke-current-color
                         sprk-c-Icon--toggle
                         sprk-Stack__item
                       "
@@ -607,36 +605,45 @@ export const extended = () => {
                   </a>
                 </div>
 
-                <ul class="sprk-c-Dropdown__links">
-                  <li class="sprk-c-Dropdown__item">
+                <ul class="sprk-c-Masthead__selector-dropdown-links">
+                  <li class="sprk-c-Masthead__selector-dropdown-item">
                     <a
-                      class="sprk-c-Dropdown__link sprk-u-ptm"
+                      class="sprk-c-Masthead__selector-dropdown-link sprk-u-ptm"
                       href="#nogo"
                       data-sprk-dropdown-choice="Selection Choice Title 1"
                       role="option"
                     >
                       <p class="sprk-b-TypeBodyOne">Selection Choice Title 1</p>
-                      <p>Information here</p>
+                      <p>Additional Information</p>
                     </a>
                   </li>
 
                   <li
-                    class="sprk-c-Dropdown__item"
+                    class="sprk-c-Masthead__selector-dropdown-item"
                     data-sprk-dropdown-choice="Selection Choice Title 2"
                   >
-                    <a class="sprk-c-Dropdown__link" href="#nogo" role="option">
+                    <a
+                      class="sprk-c-Masthead__selector-dropdown-link"
+                      href="#nogo"
+                      role="option"
+                    >
                       <p class="sprk-b-TypeBodyOne">Selection Choice Title 2</p>
-                      <p>Information here</p>
+                      <p>Additional Information</p>
                     </a>
                   </li>
                 </ul>
 
-                <div class="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
+                <div
+                  class="
+                    sprk-c-Masthead__selector-footer
+                    sprk-u-TextAlign--center
+                  "
+                >
                   <a
                     class="
                       sprk-c-Button
                       sprk-c-Button--compact
-                      sprk-c-Button--tertiary
+                      sprk-c-Button--secondary
                     "
                     href="#nogo"
                   >
@@ -762,7 +769,7 @@ export const extended = () => {
                 aria-haspopup="true"
                 role="combobox"
               >
-                  Navigation Item
+                Navigation Item
 
                 <svg
                   class="
@@ -847,8 +854,8 @@ export const extended = () => {
                 data-sprk-dropdown-trigger="dropdown04"
                 aria-haspopup="true"
                 role="combobox"
-                >
-                  Navigation Item
+              >
+                Navigation Item
 
                 <svg
                   class="
@@ -918,7 +925,6 @@ export const extended = () => {
         role="navigation"
         data-id="navigation-narrow-2"
       >
-
         <div data-sprk-masthead-mask="">
           <div class="sprk-o-Box">
             <a
@@ -939,13 +945,11 @@ export const extended = () => {
                 data-sprk-dropdown-trigger-text-container
                 role="combobox"
               >
-                Select One
+                Choose One
               </span>
               <svg
                 class="
                   sprk-c-Icon
-                  sprk-c-Icon--filled-current-color
-                  sprk-c-Icon--stroke-current-color
                   sprk-c-Icon--toggle
                   sprk-Stack__item
                 "
@@ -957,16 +961,13 @@ export const extended = () => {
           </div>
 
           <div
-            class="
-              sprk-c-Masthead__selector-dropdown
-              sprk-c-Dropdown
-              sprk-u-Display--none
-            "
-              data-sprk-dropdown="dropdown-selector"
-            >
-            <div class="sprk-c-Dropdown__header">
+            class="sprk-c-Masthead__selector-dropdown sprk-u-Display--none"
+            data-sprk-dropdown="dropdown-selector"
+          >
+            <div class="sprk-c-Masthead__selector-dropdown-header">
               <a
                 class="
+                  sprk-c-Masthead__selector-dropdown-header-link
                   sprk-b-Link
                   sprk-b-Link--plain
                   sprk-o-Stack
@@ -980,19 +981,17 @@ export const extended = () => {
               >
                 <span
                   class="
-                    sprk-c-Dropdown__title
+                    sprk-c-Masthead__selector-dropdown-title
                     sprk-b-TypeBodyTwo
                     sprk-o-Stack__item
                     sprk-o-Stack__item--flex@xxs
                   "
                 >
-                  Select One
+                  Choose One
                 </span>
                 <svg
                   class="
                     sprk-c-Icon
-                    sprk-c-Icon--filled-current-color
-                    sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--toggle
                     sprk-Stack__item
                   "
@@ -1003,36 +1002,40 @@ export const extended = () => {
               </a>
             </div>
 
-            <ul class="sprk-c-Dropdown__links">
-              <li class="sprk-c-Dropdown__item">
+            <ul class="sprk-c-Masthead__selector-dropdown-links">
+              <li class="sprk-c-Masthead__selector-dropdown-item">
                 <a
-                  class="sprk-c-Dropdown__link sprk-u-ptm"
+                  class="sprk-c-Masthead__selector-dropdown-link"
                   href="#nogo"
                   data-sprk-dropdown-choice="Selection Choice Title 1"
                   role="option"
                 >
                   <p class="sprk-b-TypeBodyOne">Selection Choice Title 1</p>
-                  <p>Information here</p>
+                  <p>Additional Information</p>
                 </a>
               </li>
 
               <li
-                class="sprk-c-Dropdown__item"
+                class="sprk-c-Masthead__selector-dropdown-item"
                 data-sprk-dropdown-choice="Selection Choice Title 2"
               >
-                <a class="sprk-c-Dropdown__link" href="#nogo" role="option">
+                <a
+                  class="sprk-c-Masthead__selector-dropdown-link"
+                  href="#nogo"
+                  role="option"
+                >
                   <p class="sprk-b-TypeBodyOne">Selection Choice Title 2</p>
-                  <p>Information here</p>
+                  <p>Additional Information</p>
                 </a>
               </li>
             </ul>
 
-            <div class="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
+            <div class="sprk-c-Masthead__selector-footer">
               <a
                 class="
                   sprk-c-Button
                   sprk-c-Button--compact
-                  sprk-c-Button--tertiary
+                  sprk-c-Button--secondary
                 "
                 href="#nogo"
               >

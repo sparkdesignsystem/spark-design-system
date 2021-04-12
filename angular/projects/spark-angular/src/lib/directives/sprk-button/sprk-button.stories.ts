@@ -107,25 +107,6 @@ tertiary.story = {
   },
 };
 
-export const quaternary = () => ({
-  moduleMetadata: modules,
-  template: `
-    <button
-      variant="quaternary"
-      idString="button-quaternary"
-      sprkButton
-    >
-      Button
-    </button>
-  `,
-});
-
-quaternary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
-};
-
 export const disabled = () => ({
   moduleMetadata: modules,
   template: `
@@ -185,26 +166,6 @@ disabledTertiary.story = {
   },
 };
 
-export const disabledQuaternary = () => ({
-  moduleMetadata: modules,
-  template: `
-    <button
-      disabled
-      idString="button-disabled-quaternary"
-      sprkButton
-      variant="quaternary"
-    >
-      Button
-    </button>
-  `,
-});
-
-disabledQuaternary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
-};
-
 export const spinning = () => {
   return {
     moduleMetadata: modules,
@@ -237,7 +198,7 @@ export const spinningSecondary = () => {
         sprkButton
         [isSpinning]="true"
       >
-        <div sprkSpinner variant="primary"></div>
+        <div sprkSpinner variant="secondary"></div>
       </button>
     `,
   };
@@ -266,28 +227,6 @@ export const spinningTertiary = () => {
 };
 
 spinningTertiary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
-};
-
-export const spinningQuaternary = () => {
-  return {
-    moduleMetadata: modules,
-    template: `
-      <button
-        variant="quaternary"
-        idString="button-spinning-quaternary"
-        sprkButton
-        [isSpinning]="true"
-      >
-        <div sprkSpinner variant="dark"></div>
-      </button>
-    `,
-  };
-};
-
-spinningQuaternary.story = {
   parameters: {
     jest: ['sprk-button.directive'],
   },

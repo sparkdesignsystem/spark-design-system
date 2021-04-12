@@ -3,7 +3,11 @@ import { uniqueId } from 'lodash';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-
+/**
+ * TODO: #3329
+ * This component will be removed in a future release.
+ * Please use the sprk-input-container.
+ */
 @Component({
   selector: 'sprk-huge-input-container',
   template: `
@@ -15,21 +19,21 @@ import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-l
       <ng-content select="[sprkHelperText]"></ng-content>
       <ng-content select="[sprkFieldError]"></ng-content>
     </div>
-  `
+  `,
 })
 export class SprkHugeInputContainerComponent implements OnInit {
- /**
-  * Expects a space separated string
-  * of classes to be added to the
-  * component.
-  */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
   @Input()
   additionalClasses: string;
- /**
-  * Expects a space separated string
-  * of classes to be added to the
-  * icon container.
-  */
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon container.
+   */
   @Input()
   iconContainerClasses: string;
   /**
@@ -38,10 +42,10 @@ export class SprkHugeInputContainerComponent implements OnInit {
    */
   @ContentChild(SprkLabelDirective, { static: true })
   label: SprkLabelDirective;
- /**
-  * This component expects a child input element
-  * with the `sprkInput` directive.
-  */
+  /**
+   * This component expects a child input element
+   * with the `sprkInput` directive.
+   */
   @ContentChild(SprkInputDirective, { static: true })
   input: SprkInputDirective;
   /**
@@ -70,11 +74,11 @@ export class SprkHugeInputContainerComponent implements OnInit {
   getClasses(): string {
     const classArray: string[] = [
       'sprk-b-InputContainer',
-      'sprk-b-InputContainer--huge'
+      'sprk-b-InputContainer--huge',
     ];
 
     if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach(className => {
+      this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
     }
@@ -89,7 +93,7 @@ export class SprkHugeInputContainerComponent implements OnInit {
     if (this.input && this.error) {
       this.input.ref.nativeElement.setAttribute(
         'aria-describedby',
-        this.error_id
+        this.error_id,
       );
       this.error.ref.nativeElement.id = this.error_id;
     }

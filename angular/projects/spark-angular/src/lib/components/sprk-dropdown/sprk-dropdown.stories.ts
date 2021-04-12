@@ -44,11 +44,10 @@ export const defaultStory = () => ({
   template: `
     <sprk-dropdown
       screenReaderText="Description of default dropdown."
-      dropdownType="base"
-      title="My Choices"
-      triggerIconType="settings"
-      additionalTriggerClasses="sprk-b-Link--plain"
-      additionalIconClasses="sprk-c-Icon--l"
+      heading="My Choices"
+      triggerIconName="settings"
+      triggerAdditionalClasses="sprk-b-Link--plain"
+      iconAdditionalClasses="sprk-c-Icon--l"
       [choices]="[{
           text: 'Option 1',
           value: 'Option 1'
@@ -74,16 +73,16 @@ export const informational = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-dropdown
-      dropdownType="informational"
-      additionalTriggerClasses="sprk-b-Link--plain"
+      variant="informational"
+      triggerAdditionalClasses="sprk-b-Link--plain"
       triggerText="Make a selection..."
-      title="My Choices"
-      triggerIconType="chevron-down"
+      heading="My Choices"
+      triggerIconName="chevron-down"
       [choices]="[{
         content: {
           title: 'Choice Title 1',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information'
+          infoLine2: 'Additional Information'
         },
         value: 'Choice Title 1',
         active: false
@@ -92,11 +91,11 @@ export const informational = () => ({
         content: {
           title: 'Choice Title 2',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information'
+          infoLine2: 'Additional Information'
         },
         value: 'Choice Title 2',
-        active: true,
-        isDefault: true
+        active: false,
+        isDefault: false
       }
     ]"
     >
@@ -108,7 +107,7 @@ export const informational = () => ({
           sprkLink
           variant="unstyled"
           href="#nogo"
-          class="sprk-c-Button sprk-c-Button--tertiary"
+          class="sprk-c-Button sprk-c-Button--secondary"
         >
           Go Elsewhere
         </a>

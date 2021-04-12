@@ -18,11 +18,9 @@ import { Component, Input, OnInit } from '@angular/core';
       >
         <h1
           sprkStackItem
-          [ngClass]="{
-            'sprk-b-TypeDisplayTwo': type === 'noImage',
-            'sprk-b-TypeDisplayOne': type !== 'noImage',
-            'sprk-c-HighlightBoard__heading': true
-          }"
+          sprkHeading
+          variant="{{ type === 'noImage' ? 'displayTwo' : 'displayOne' }}"
+          class="sprk-c-HighlightBoard__heading"
         >
           {{ heading }}
         </h1>
@@ -40,7 +38,7 @@ import { Component, Input, OnInit } from '@angular/core';
               sprkLink
               variant="unstyled"
               [attr.href]="ctaHref"
-              class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
+              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
               [analyticsString]="analyticsStringCta"
             >
               {{ ctaText }}
@@ -50,7 +48,7 @@ import { Component, Input, OnInit } from '@angular/core';
               sprkLink
               variant="unstyled"
               [routerLink]="ctaRouterLink"
-              class="sprk-c-Button sprk-c-Button--primary sprk-c-Button--full@sm"
+              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
               [analyticsString]="analyticsStringCta"
             >
               {{ ctaText }}
@@ -67,7 +65,7 @@ import { Component, Input, OnInit } from '@angular/core';
               sprkLink
               variant="unstyled"
               [attr.href]="ctaHref2"
-              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
+              class="sprk-c-Button sprk-c-Button--full@sm"
               [analyticsString]="analyticsStringCta2"
             >
               {{ ctaText2 }}
@@ -77,7 +75,7 @@ import { Component, Input, OnInit } from '@angular/core';
               sprkLink
               variant="unstyled"
               [routerLink]="ctaRouterLink2"
-              class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@sm"
+              class="sprk-c-Button sprk-c-Button--full@sm"
               [analyticsString]="analyticsStringCta2"
             >
               {{ ctaText2 }}
@@ -101,8 +99,9 @@ export class SprkHighlightBoardComponent implements OnInit {
   @Input()
   imgSrc: string;
   /**
-   * The Highlight Board will use this as
-   * the `alt` text for the main image.
+   * The `alt` text for the main image. If the image used is decorative and
+   * does not present any important content, set this property to `""` so
+   * the image will be hidden from assistive technology.
    */
   @Input()
   imgAlt: string;

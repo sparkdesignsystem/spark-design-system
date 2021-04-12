@@ -34,13 +34,6 @@ describe('SprkButton:', () => {
     );
   });
 
-  it('should display a button element with correct classes when variant is quaternary', () => {
-    const wrapper = shallow(<SprkButton variant="quaternary" />);
-    expect(wrapper.find('button').hasClass('sprk-c-Button--quaternary')).toBe(
-      true,
-    );
-  });
-
   // TODO: Remove internal spinner from button on next release #3557
   it('if loading is not set, should not render the spinner', () => {
     const wrapper = mount(<SprkButton />);
@@ -108,13 +101,6 @@ describe('SprkButton:', () => {
     expect(wrapper.find('.sprk-c-Spinner--primary').length).toBe(0);
     expect(wrapper.find('.sprk-c-Spinner--secondary').length).toBe(1);
     expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(0);
-  });
-
-  it('if loading is set and variant is quaternary, should render the dark spinner', () => {
-    const wrapper = mount(<SprkButton loading variant="quaternary" />);
-    expect(wrapper.find('.sprk-c-Spinner--primary').length).toBe(0);
-    expect(wrapper.find('.sprk-c-Spinner--secondary').length).toBe(0);
-    expect(wrapper.find('.sprk-c-Spinner--dark').length).toBe(1);
   });
 
   it('should add role=button if an anchor is rendered', () => {

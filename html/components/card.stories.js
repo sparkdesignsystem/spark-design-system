@@ -53,7 +53,8 @@ export const standout = () =>
         class="
           sprk-o-Stack__item
           sprk-c-Card__content
-          sprk-o-Stack sprk-o-Stack--medium
+          sprk-o-Stack
+          sprk-o-Stack--medium
         "
       >
         Standout Card Content
@@ -129,7 +130,7 @@ export const teaser = () =>
       <a href="#nogo" class="sprk-o-Stack__item">
         <img
           class="sprk-c-Card__media"
-          alt="Spark placeholder image."
+          alt="Learn more"
           src="https://spark-assets.netlify.app/desktop.jpg"
         >
       </a>
@@ -138,7 +139,8 @@ export const teaser = () =>
         class="
           sprk-o-Stack__item
           sprk-c-Card__content
-          sprk-o-Stack sprk-o-Stack--large
+          sprk-o-Stack
+          sprk-o-Stack--large
         "
       >
         <h3 class="sprk-b-TypeDisplayFive sprk-o-Stack__item">
@@ -153,10 +155,16 @@ export const teaser = () =>
           prima tantas signiferumque at. Numquam.
         </p>
 
-        <div class="sprk-o-Stack__item">
-          <a href="#nogo" class="sprk-c-Button">
-            Learn More
-          </a>
+        <div class="
+          sprk-o-Stack__item
+          sprk-o-Stack
+          sprk-o-Stack--end-column"
+        >
+          <div class="sprk-o-Stack__item">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -186,7 +194,7 @@ export const teaserWithDifferentElementOrder = () =>
 
       <a href="#nogo" class="sprk-o-Stack__item">
         <img
-          alt="Spark placeholder image"
+          alt="Learn more"
           src="https://spark-assets.netlify.app/desktop.jpg" />
       </a>
 
@@ -204,10 +212,16 @@ export const teaserWithDifferentElementOrder = () =>
           mea at, mei prima tantas signiferumque at. Numquam.
         </p>
 
-        <div class="sprk-o-Stack__item">
-          <a href="#nogo" class="sprk-c-Button">
-            Learn More
-          </a>
+        <div class="
+          sprk-o-Stack__item
+          sprk-o-Stack
+          sprk-o-Stack--end-column"
+        >
+          <div class="sprk-o-Stack__item">
+            <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -244,7 +258,7 @@ export const twoUpCards = () =>
         >
           <img
             class="sprk-c-Card__media"
-            alt="Spark placeholder image."
+            alt="Learn more"
             src="https://spark-assets.netlify.app/desktop.jpg"
           >
         </a>
@@ -268,19 +282,25 @@ export const twoUpCards = () =>
             tantas signiferumque at. Numquam.
           </p>
 
-          <a
-            href="#nogo"
-            class="
-              sprk-o-Stack__item
-              sprk-b-Link
-              sprk-b-Link--has-icon
-            "
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--end-column"
           >
-            Learn More
-            <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-              <use xlink:href="#arrow-right" />
-            </svg>
-          </a>
+            <a
+              href="#nogo"
+              class="
+                sprk-o-Stack__item
+                sprk-b-Link
+                sprk-b-Link--has-icon
+              "
+            >
+              Learn More
+              <svg class="sprk-c-Icon" viewBox="0 0 64 64">
+                <use xlink:href="#arrow-right" />
+              </svg>
+            </a>
+          </div>
         </div>
     </div>
 
@@ -295,7 +315,7 @@ export const twoUpCards = () =>
       <a href="#nogo" class="sprk-o-Stack__item">
         <img
           class="sprk-c-Card__media"
-          alt="Spark placeholder image."
+          alt="Learn more"
           src="https://spark-assets.netlify.app/desktop.jpg">
       </a>
 
@@ -318,20 +338,25 @@ export const twoUpCards = () =>
           signiferumque at.
           Numquam.
         </p>
-
-        <a
-          href="#nogo"
-          class="
-            sprk-o-Stack__item
-            sprk-b-Link
-            sprk-b-Link--has-icon
-          "
+        <div class="
+          sprk-o-Stack__item
+          sprk-o-Stack
+          sprk-o-Stack--end-column"
         >
-          Learn More
-          <svg class="sprk-c-Icon" viewBox="0 0 64 64">
-            <use xlink:href="#arrow-right" />
-          </svg>
-        </a>
+          <a
+            href="#nogo"
+            class="
+              sprk-o-Stack__item
+              sprk-b-Link
+              sprk-b-Link--has-icon
+            "
+          >
+            Learn More
+            <svg class="sprk-c-Icon" viewBox="0 0 64 64">
+              <use xlink:href="#arrow-right" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -364,8 +389,13 @@ export const threeUpCards = () =>
             sprk-u-TextAlign--center
           "
         >
-          <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
+          <a
+            href="#nogo"
+            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            aria-label="Learn More"
+          >
             <svg
+              aria-hidden="true"
               class="
                 sprk-c-Icon
                 sprk-c-Icon--xl
@@ -428,12 +458,17 @@ export const threeUpCards = () =>
             sprk-u-TextAlign--center
           "
         >
-          <a href="#nogo" class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
+          <a
+            href="#nogo"
+            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            aria-label="Learn More"
+          >
             <svg
               class="
                 sprk-c-Icon
                 sprk-c-Icon--xl"
               height="75"
+              aria-hidden="true"
               viewBox="0 0 220.63 197.62"
             >
               <use xlink:href="#call-team-member" />
@@ -486,8 +521,11 @@ export const threeUpCards = () =>
         >
           <a
             href="#nogo"
-            class="sprk-u-AbsoluteCenter sprk-o-Stack__item">
+            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            aria-label="Learn More"
+          >
             <svg
+              aria-hidden="true"
               class="
                 sprk-c-Icon
                 sprk-c-Icon--xl"
@@ -563,10 +601,16 @@ export const fourUpCards = () =>
             amet, doctus invenirevix te. Facilisi perpetua.
           </p>
 
-          <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
-              Button
-            </a>
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--end-column"
+          >
+            <div class="sprk-o-Stack__item">
+              <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+                Button
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -596,10 +640,16 @@ export const fourUpCards = () =>
             doctus invenirevix te. Facilisi perpetua.
           </p>
 
-          <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
-              Button
-            </a>
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--end-column"
+          >
+            <div class="sprk-o-Stack__item">
+              <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+                Button
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -630,10 +680,16 @@ export const fourUpCards = () =>
             doctus invenirevix te. Facilisi perpetua.
           </p>
 
-          <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
-              Button
-            </a>
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--end-column"
+          >
+            <div class="sprk-o-Stack__item">
+              <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+                Button
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -664,10 +720,16 @@ export const fourUpCards = () =>
             doctus invenirevix te. Facilisi perpetua.
           </p>
 
-          <div class="sprk-o-Stack__item">
-            <a href="#nogo" class="sprk-c-Button">
-              Button
-            </a>
+          <div class="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--end-column"
+          >
+            <div class="sprk-o-Stack__item">
+              <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">
+                Button
+              </a>
+            </div>
           </div>
         </div>
       </div>

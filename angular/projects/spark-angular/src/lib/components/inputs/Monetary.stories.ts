@@ -5,15 +5,15 @@ import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-labe
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkIconInputContainerComponent } from './sprk-icon-input-container/sprk-icon-input-container.component';
+import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
+import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { SprkFormatterMonetaryModule } from '../../directives/inputs/formatters/sprk-formatter-monetary/sprk-formatter-monetary.module';
 
 export default {
   title: 'Components/Input/Monetary',
-  component: SprkIconInputContainerComponent,
+  component: SprkInputContainerComponent,
   subcomponents: {
     SprkInputDirective,
     SprkLabelDirective,
@@ -21,19 +21,18 @@ export default {
   },
   decorators: [
     storyWrapper(
-      storyContent => (
+      (storyContent) =>
         `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${storyContent}
           </form>
-        <div>`
-      )
-    )
+        <div>`,
+    ),
   ],
   props: {
     onSubmit(event): void {
       this.form_submitted = true;
-    }
+    },
   },
   parameters: {
     info: `
@@ -50,30 +49,150 @@ $1,234.56) is non-numeric.
 you may need to remove before submitting the form.
     `,
     docs: { iframeHeight: 200 },
-  }
+  },
 };
 
 const modules = {
   imports: [
+    SprkInputContainerModule,
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,
     SprkFieldErrorModule,
     SprkIconInputContainerModule,
-    SprkFormatterMonetaryModule,
   ],
 };
 
 export const monetaryInput = () => ({
   moduleMetadata: modules,
   template: `
+    <sprk-input-container>
+      <div class="
+        sprk-b-InputContainer__icon-container
+        sprk-b-TextInputIconContainer--has-text-icon"
+      >
+        <label for="monetary" isMonetary="true" sprkLabel>
+          Payment
+        </label>
+        <input
+          id="monetary"
+          class="sprk-b-TextInput--has-text-icon"
+          name="monetary_input"
+          type="text"
+          [(ngModel)]="monetary_input"
+          #monetaryInput="ngModel"
+          sprkInput
+        />
+      </div>
+    </sprk-input-container>
+  `,
+});
+
+monetaryInput.story = {
+  name: 'Default',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
+};
+
+export const invalidMonetaryInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <div class="
+        sprk-b-InputContainer__icon-container
+        sprk-b-TextInputIconContainer--has-text-icon"
+      >
+        <label for="invalid-monetary" isMonetary="true" sprkLabel>
+          Payment
+        </label>
+        <input
+          aria-describedby="monetary-error"
+          id="invalid-monetary"
+          class="sprk-b-TextInput--has-text-icon sprk-b-TextInput--error"
+          aria-invalid="true"
+          name="monetary_input"
+          type="text"
+          [(ngModel)]="monetary_input"
+          #monetaryInput="ngModel"
+          sprkInput
+        />
+      </div>
+      <span sprkFieldError id="monetary-error">
+        <sprk-icon
+          iconName="exclamation-filled"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+invalidMonetaryInput.story = {
+  name: 'Invalid',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
+};
+
+export const disabledMonetaryInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <div class="
+        sprk-b-InputContainer__icon-container
+        sprk-b-TextInputIconContainer--has-text-icon"
+      >
+        <label for="disabled-monetary" isMonetary="true" isDisabled="true" sprkLabel>
+          Payment
+        </label>
+        <input
+          id="disabled-monetary"
+          class="sprk-b-TextInput--has-text-icon"
+          name="monetary_input"
+          type="text"
+          [(ngModel)]="monetary_input"
+          #monetaryInput="ngModel"
+          sprkInput
+          disabled
+        />
+      </div>
+    </sprk-input-container>
+  `,
+});
+
+disabledMonetaryInput.story = {
+  name: 'Disabled',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-input.directive',
+      'sprk-label.directive',
+    ],
+  },
+};
+
+export const legacyStory = () => ({
+  moduleMetadata: modules,
+  template: `
     <sprk-icon-input-container
       iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
     >
-      <label class="sprk-b-Label--monetary" sprkLabel>
+      <label for="legacy-monetary" class="sprk-b-Label--monetary" sprkLabel>
         Payment
       </label>
       <input
+        id="legacy-monetary"
         class="sprk-b-TextInput--has-text-icon"
         name="monetary_input"
         type="text"
@@ -85,8 +204,8 @@ export const monetaryInput = () => ({
   `,
 });
 
-monetaryInput.story = {
-  name: 'Default',
+legacyStory.story = {
+  name: 'Legacy (Deprecated)',
   parameters: {
     jest: [
       'sprk-icon-input-container.component',
@@ -96,16 +215,18 @@ monetaryInput.story = {
   },
 };
 
-export const invalidMonetaryInput = () => ({
+export const legacyInvalidMonetaryInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container
       iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
     >
-      <label class="sprk-b-Label--monetary" sprkLabel>
+      <label for="legacy-invalid-monetary" class="sprk-b-Label--monetary" sprkLabel>
         Payment
       </label>
       <input
+        id="legacy-invalid-monetary"
+        aria-describedby="legacy-monetary-error"
         class="sprk-b-TextInput--has-text-icon sprk-b-TextInput--error"
         aria-invalid="true"
         name="monetary_input"
@@ -114,7 +235,7 @@ export const invalidMonetaryInput = () => ({
         #monetaryInput="ngModel"
         sprkInput
       />
-      <span sprkFieldError>
+      <span sprkFieldError id="legacy-monetary-error">
         <sprk-icon
           iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -125,8 +246,8 @@ export const invalidMonetaryInput = () => ({
   `,
 });
 
-invalidMonetaryInput.story = {
-  name: 'Invalid',
+legacyInvalidMonetaryInput.story = {
+  name: 'Legacy Invalid (Deprecated)',
   parameters: {
     jest: [
       'sprk-icon-input-container.component',
@@ -137,16 +258,21 @@ invalidMonetaryInput.story = {
   },
 };
 
-export const disabledMonetaryInput = () => ({
+export const legacyDisabledMonetaryInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container
       iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
     >
-      <label class="sprk-b-Label--monetary sprk-b-Label--disabled" sprkLabel>
+      <label
+        for="legacy-disabled-monetary"
+        class="sprk-b-Label--monetary sprk-b-Label--disabled"
+        sprkLabel
+      >
         Payment
       </label>
       <input
+        id="legacy-disabled-monetary"
         class="sprk-b-TextInput--has-text-icon"
         name="monetary_input"
         type="text"
@@ -159,8 +285,8 @@ export const disabledMonetaryInput = () => ({
   `,
 });
 
-disabledMonetaryInput.story = {
-  name: 'Disabled',
+legacyDisabledMonetaryInput.story = {
+  name: 'Legacy Disabled (Deprecated)',
   parameters: {
     jest: [
       'sprk-icon-input-container.component',
@@ -169,93 +295,3 @@ disabledMonetaryInput.story = {
     ],
   },
 };
-
-
-export const formatting = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-icon-input-container
-      iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
-    >
-      <label class="sprk-b-Label--monetary" sprkLabel>
-        Payment
-      </label>
-      <input
-        class="sprk-b-TextInput--has-text-icon"
-        name="monetary_input"
-        type="text"
-        sprkFormatterMonetary
-        [(ngModel)]="monetary_input"
-        #monetaryInput="ngModel"
-        sprkInput
-      />
-    </sprk-icon-input-container>
-  `
-});
-
-export const validating = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-icon-input-container
-      iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
-    >
-      <label class="sprk-b-Label--monetary" sprkLabel>
-        Payment
-      </label>
-      <input
-        class="sprk-b-TextInput--has-text-icon"
-        [ngClass]="{'sprk-b-TextInput--error': monetaryInput.invalid}"
-        name="monetary_input"
-        type="text"
-        pattern="^[+-]?[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$"
-        [(ngModel)]="monetary_input"
-        #monetaryInput="ngModel"
-        sprkInput
-      />
-      <div
-        [hidden]="monetaryInput.valid || monetaryInput.pristine"
-        sprkFieldError
-      >
-        <sprk-icon
-          iconType="exclamation-filled"
-          additionalClasses="sprk-b-ErrorIcon"
-        ></sprk-icon>
-        <div class="sprk-b-ErrorText">Invalid amount.</div>
-      </div>
-    </sprk-icon-input-container>
-  `
-});
-
-export const formattingAndValidating = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-icon-input-container
-      iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
-    >
-      <label class="sprk-b-Label--monetary" sprkLabel>
-        Payment
-      </label>
-      <input
-        class="sprk-b-TextInput--has-text-icon"
-        [ngClass]="{'sprk-b-TextInput--error': monetaryInput.invalid}"
-        name="monetary_input"
-        type="text"
-        pattern="^[+-]?[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$"
-        sprkFormatterMonetary
-        [(ngModel)]="monetary_input"
-        #monetaryInput="ngModel"
-        sprkInput
-      />
-      <div
-        [hidden]="monetaryInput.valid || monetaryInput.pristine"
-        sprkFieldError
-      >
-        <sprk-icon
-          iconType="exclamation-filled"
-          additionalClasses="sprk-b-ErrorIcon"
-        ></sprk-icon>
-        <div class="sprk-b-ErrorText">Invalid amount.</div>
-      </div>
-    </sprk-icon-input-container>
-  `
-});

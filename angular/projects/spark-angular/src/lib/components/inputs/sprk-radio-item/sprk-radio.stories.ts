@@ -108,7 +108,7 @@ export const defaultStory = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
-            data-id="radio-1"
+            idString="radio-1"
             id="radio-1"
           >
           <label
@@ -126,7 +126,7 @@ export const defaultStory = () => ({
            [(ngModel)]="radio_input"
            sprkRadioInput
            #radioInput="ngModel"
-           data-id="radio-2"
+           idString="radio-2"
            id="radio-2"
          >
          <label
@@ -144,7 +144,7 @@ export const defaultStory = () => ({
            [(ngModel)]="radio_input"
            sprkRadioInput
            #radioInput="ngModel"
-           data-id="radio-3"
+           idString="radio-3"
            id="radio-3"
          >
          <label
@@ -190,6 +190,7 @@ export const defaultHelperText = () => ({
               [(ngModel)]="radio_input"
               sprkRadioInput
               #radioInput="ngModel"
+              idString="radio-1"
               id="invalid-radio-1"
             >
           <label
@@ -207,6 +208,7 @@ export const defaultHelperText = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
+            idString="radio-2"
             id="invalid-radio-2"
           >
           <label
@@ -224,7 +226,7 @@ export const defaultHelperText = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
-            data-id="radio-3"
+            idString="radio-3"
             id="invalid-radio-3"
           >
           <label
@@ -272,6 +274,7 @@ export const invalidRadioButton = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
+            idString="radio-1"
             id="invalid-radio-1"
           >
           <label
@@ -289,6 +292,7 @@ export const invalidRadioButton = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
+            idString="radio-2"
             id="invalid-radio-2"
           >
           <label
@@ -306,7 +310,7 @@ export const invalidRadioButton = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
-            data-id="radio-3"
+            idString="radio-3"
             id="invalid-radio-3"
           >
           <label
@@ -319,7 +323,7 @@ export const invalidRadioButton = () => ({
       </fieldset>
       <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">
@@ -362,6 +366,7 @@ export const disabledRadioButton = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
+            idString="radio-1"
             id="disabled-radio-1"
             disabled
           >
@@ -381,6 +386,7 @@ export const disabledRadioButton = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
+            idString="radio-2"
             id="disabled-radio-2"
             disabled
           >
@@ -400,7 +406,7 @@ export const disabledRadioButton = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
-            data-id="radio-3"
+            idString="radio-3"
             id="disabled-radio-3"
             disabled
           >
@@ -449,6 +455,7 @@ export const huge = () => ({
             sprkRadioInput
             variant="huge"
             #radioInput="ngModel"
+            idString="radio-1"
             id="huge-radio-1"
           >
           <label
@@ -468,6 +475,7 @@ export const huge = () => ({
            sprkRadioInput
            variant="huge"
            #radioInput="ngModel"
+           idString="radio-2"
            id="huge-radio-2"
          >
          <label
@@ -487,7 +495,7 @@ export const huge = () => ({
             sprkRadioInput
             variant="huge"
             #radioInput="ngModel"
-            data-id="radio-3"
+            idString="radio-3"
             id="huge-radio-3"
           >
           <label
@@ -534,6 +542,7 @@ export const hugeHelperText = () => ({
               [(ngModel)]="radio_input"
               sprkRadioInput
               #radioInput="ngModel"
+              idString="radio-1"
               id="helper-radio-1"
               variant="huge"
             >
@@ -553,6 +562,7 @@ export const hugeHelperText = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
+            idString="radio-2"
             id="helper-radio-2"
             variant="huge"
           >
@@ -572,7 +582,7 @@ export const hugeHelperText = () => ({
             [(ngModel)]="radio_input"
             sprkRadioInput
             #radioInput="ngModel"
-            data-id="radio-3"
+            idString="radio-3"
             id="helper-radio-3"
             variant="huge"
           >
@@ -623,6 +633,7 @@ export const hugeInvalid = () => ({
             sprkRadioInput
             variant="huge"
             #radioInput="ngModel"
+            idString="radio-1"
             id="huge-invalid-radio-1"
           >
           <label
@@ -642,6 +653,7 @@ export const hugeInvalid = () => ({
             sprkRadioInput
             variant="huge"
             #radioInput="ngModel"
+            idString="radio-2"
             id="huge-invalid-radio-2"
           >
           <label
@@ -661,7 +673,7 @@ export const hugeInvalid = () => ({
             sprkRadioInput
             variant="huge"
             #radioInput="ngModel"
-            data-id="radio-3"
+            idString="radio-3"
             id="huge-invalid-radio-3"
           >
           <label
@@ -676,7 +688,7 @@ export const hugeInvalid = () => ({
 
      <span sprkFieldError>
         <sprk-icon
-          iconType="exclamation-filled"
+          iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">
@@ -719,6 +731,7 @@ export const hugeDisabled = () => ({
             sprkRadioInput
             variant="huge"
             #radioInput="ngModel"
+            idString="radio-1"
             id="huge-invalid-radio-1"
             disabled
           >
@@ -740,6 +753,7 @@ export const hugeDisabled = () => ({
             sprkRadioInput
             variant="huge"
             #radioInput="ngModel"
+            idString="radio-2"
             id="huge-invalid-radio-2"
             disabled
           >
@@ -761,6 +775,7 @@ export const hugeDisabled = () => ({
             sprkRadioInput
             variant="huge"
             #radioInput="ngModel"
+            idString="radio-3"
             id="huge-disabled-radio-3"
             disabled
           >
@@ -812,6 +827,7 @@ export const hugeLayoutTwo = () => ({
               sprkRadioInput
               variant="huge"
               #radioInput="ngModel"
+              idString="radio-1"
               id="huge-layout-radio-1"
             >
             <label
@@ -833,6 +849,7 @@ export const hugeLayoutTwo = () => ({
               sprkRadioInput
               variant="huge"
               #radioInput="ngModel"
+              idString="radio-2"
               id="huge-layout-radio-2"
             >
             <label
@@ -887,6 +904,7 @@ export const hugeLayoutFour = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-1"
                   id="huge-layout-four-radio-1"
                 >
                 <label
@@ -908,6 +926,7 @@ export const hugeLayoutFour = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-2"
                   id="huge-layout-four-radio-2"
                 >
                 <label
@@ -933,6 +952,7 @@ export const hugeLayoutFour = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-3"
                   id="huge-layout-four-radio-3"
                 >
                 <label
@@ -954,6 +974,7 @@ export const hugeLayoutFour = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-4"
                   id="huge-layout-four-radio-4"
                 >
                 <label
@@ -1010,6 +1031,7 @@ export const hugeLayoutFive = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-1"
                   id="huge-layout-five-radio-1"
                 >
                 <label
@@ -1031,6 +1053,7 @@ export const hugeLayoutFive = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-2"
                   id="huge-layout-five-radio-2"
                 >
                 <label
@@ -1056,6 +1079,7 @@ export const hugeLayoutFive = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-3"
                   id="huge-layout-five-radio-3"
                 >
                 <label
@@ -1077,6 +1101,7 @@ export const hugeLayoutFive = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-4"
                   id="huge-layout-five-radio-4"
                 >
                 <label
@@ -1102,6 +1127,7 @@ export const hugeLayoutFive = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-5"
                   id="huge-layout-five-radio-5"
                 >
                 <label
@@ -1158,6 +1184,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-1"
                   id="huge-layout-six-radio-1"
                 >
                 <label
@@ -1179,6 +1206,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-2"
                   id="huge-layout-six-radio-2"
                 >
                 <label
@@ -1204,6 +1232,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-3"
                   id="huge-layout-six-radio-3"
                 >
                 <label
@@ -1225,6 +1254,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-4"
                   id="huge-layout-six-radio-4"
                 >
                 <label
@@ -1250,6 +1280,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-5"
                   id="huge-layout-six-radio-5"
                 >
                 <label
@@ -1271,6 +1302,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioInput
                   variant="huge"
                   #radioInput="ngModel"
+                  idString="radio-6"
                   id="huge-layout-six-radio-6"
                 >
                 <label

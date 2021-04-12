@@ -15,7 +15,7 @@ Make sure to include keypress handlers in your JavaScript.
 - If the Buttons are being used to navigate
 to a new page, they should be \`<a>\` elements.
 If they are being used to trigger an event or action,
-then they should be \`<button>\` elements with \`aria-role=button\`.
+then they should be \`<button>\` elements.
 `,
   },
 };
@@ -28,7 +28,7 @@ export const defaultStory = () => `
       <img
         class="sprk-c-HighlightBoard__image"
         src="https://spark-assets.netlify.app/desktop.jpg"
-        alt="desktop"
+        alt=""
       >
 
       <div class="
@@ -52,18 +52,22 @@ export const defaultStory = () => `
           sprk-o-Stack--center-column"
         >
           <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-            <a class="sprk-c-Button sprk-c-Button--full@s" href="#nogo">
+            <a
+              class="
+                sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@s
+              "
+              href="#nogo"
+            >
               Designers
             </a>
           </div>
 
           <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-            <a 
+            <a
               class="
-                sprk-c-Button 
-                sprk-c-Button--full@s 
-                sprk-c-Button--secondary
-              " 
+                sprk-c-Button
+                sprk-c-Button--full@s
+              "
               href="#nogo">
               Developers
             </a>
@@ -106,6 +110,7 @@ export const noImage = () => `
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
           <a class="
             sprk-c-Button
+            sprk-c-Button--secondary
             sprk-c-Button--full@s" href="#nogo">
             Designers
           </a>
@@ -113,7 +118,7 @@ export const noImage = () => `
 
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
           <a
-            class="sprk-c-Button sprk-c-Button--full@s sprk-c-Button--secondary"
+            class="sprk-c-Button sprk-c-Button--full@s"
             href="#nogo">
             Developers
           </a>
@@ -142,7 +147,7 @@ export const stacked = () => `
   >
     <img
       class="sprk-c-HighlightBoard__image"
-      src="https://spark-assets.netlify.app/desktop.jpg" alt="desktop">
+      src="https://spark-assets.netlify.app/desktop.jpg" alt="">
 
     <div class="
       sprk-c-HighlightBoard__content
@@ -163,14 +168,17 @@ export const stacked = () => `
         sprk-o-Stack--center-row"
         >
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
-          <a class="sprk-c-Button sprk-c-Button--full@s" href="#nogo">
+          <a
+            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--full@s"
+            href="#nogo"
+          >
             Designers
           </a>
         </div>
 
         <div class="sprk-o-Stack__item sprk-c-HighlightBoard__cta">
           <a
-            class="sprk-c-Button sprk-c-Button--full@s sprk-c-Button--secondary"
+            class="sprk-c-Button sprk-c-Button--full@s"
             href="#nogo">
             Developers
           </a>

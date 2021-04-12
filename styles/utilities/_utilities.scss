@@ -14,7 +14,7 @@
 //
 // Display and Visibility
 ///
-
+// stylelint-disable selector-class-pattern
 /// Turns off the display of an element so that it has no effect on layout.
 /// @group display
 /// @name .sprk-u-JavaScript, .sprk-u-HideWhenJs
@@ -27,7 +27,6 @@
   display: none !important;
 }
 
-// stylelint-enable
 /// The element generates a block element box.
 /// @group display
 .sprk-u-Display--block {
@@ -160,8 +159,6 @@
 .sprk-u-MaxWidth--100 {
   max-width: 100% !important;
 }
-
-/* stylelint-enable selector-class-pattern */
 
 //
 // Alignment
@@ -390,6 +387,11 @@
 .sprk-u-Color--blue {
   color: $sprk-blue !important;
 }
+/// Sets the font color to orange.
+/// @group color
+.sprk-u-Color--orange {
+  color: $sprk-orange !important;
+}
 /// Sets the font color to pink.
 /// @group color
 .sprk-u-Color--pink {
@@ -491,6 +493,12 @@
 .sprk-u-BackgroundColor--blue {
   background-color: $sprk-blue !important;
 }
+/// Sets the background color to orange.
+/// @group color
+.sprk-u-BackgroundColor--orange {
+  background-color: $sprk-orange !important;
+}
+
 /// Sets the background color to pink.
 /// @group color
 .sprk-u-BackgroundColor--pink {
@@ -582,8 +590,6 @@
   background-color: $sprk-magnolia !important;
 }
 
-/* stylelint-enable selector-class-pattern */
-
 //
 // Spacing
 ///
@@ -603,7 +609,6 @@
 /// @group misc-spacing
 /// @name sprk-u-MarginAll--d
 
-/* stylelint-disable  selector-class-pattern */
 // Misc Padding Spacing A
 .sprk-u-PaddingTop--a,
 .sprk-u-PaddingVertical--a,
@@ -804,8 +809,6 @@
   margin-left: $sprk-space-misc-d !important;
 }
 
-/* stylelint-enable  selector-class-pattern */
-
 //
 // Multi-property utilities
 ///
@@ -868,3 +871,5 @@
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 }
+
+// stylelint-enable selector-class-pattern

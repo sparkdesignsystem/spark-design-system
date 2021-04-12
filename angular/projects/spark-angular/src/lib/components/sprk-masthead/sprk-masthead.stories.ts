@@ -9,6 +9,8 @@ import { SprkDropdownModule } from '../sprk-dropdown/sprk-dropdown.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
 import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+import { SprkMastheadSelectorComponent } from './sprk-masthead-selector/sprk-masthead-selector.component';
+import { SprkMastheadSelectorModule } from './sprk-masthead-selector/sprk-masthead-selector.module';
 
 export default {
   title: 'Components/Masthead',
@@ -22,6 +24,7 @@ export default {
     subcomponents: {
       SprkMastheadAccordionComponent,
       SprkMastheadAccordionItemComponent,
+      SprkMastheadSelectorComponent,
     },
     info: `
 ${markdownDocumentationLinkBuilder('masthead')}
@@ -78,6 +81,7 @@ const modules = {
     SprkMastheadModule,
     SprkLinkDirectiveModule,
     SprkDropdownModule,
+    SprkMastheadSelectorModule,
     RouterModule.forRoot([
       {
         path: 'iframe.html',
@@ -261,7 +265,7 @@ export const defaultStory = () => ({
           <a
             sprkLink
             href="#nogo"
-            class="sprk-c-Button sprk-c-Button--quaternary sprk-c-Button--compact"
+            class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
           >
             Sign In
           </a>
@@ -274,7 +278,12 @@ export const defaultStory = () => ({
         <a
           sprkLink
           href="#nogo"
-          class="sprk-c-Button sprk-c-Button--quaternary sprk-c-Button--compact sprk-c-Button--full@s"
+          class="
+            sprk-c-Button
+            sprk-c-Button--secondary
+            sprk-c-Button--compact
+            sprk-c-Button--full@s
+          "
         >
           Sign In
         </a>
@@ -455,31 +464,26 @@ export const extended = () => ({
         class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row"
       >
         <div class="sprk-o-Stack__item sprk-u-Position--relative">
-          <sprk-dropdown
-            dropdownType="informational"
-            additionalTriggerClasses="sprk-c-Masthead__selector sprk-b-Link sprk-b-Link--plain sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
-            triggerText="My Selector"
-            additionalClasses="sprk-c-Masthead__selector-dropdown sprk-u-Width-100"
-            triggerIconType="chevron-down"
+          <sprk-masthead-selector
+            triggerText="Choose One"
+            heading="Choose One"
+            triggerIconName="chevron-down"
             [choices]="siteDropdownChoices"
-            selector="Select One"
-            additionalIconClasses="sprk-c-Icon--filled-current-color sprk-Stack__item"
-            additionalTriggerTextClasses="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
           >
             <div
-              class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
-              sprkDropdownFooter
+              class="sprk-c-Masthead__selector-footer"
+              sprkMastheadSelectorFooter
             >
               <a
                 sprkLink
                 variant="unstyled"
-                class="sprk-c-Button sprk-c-Button--compact sprk-c-Button--tertiary"
                 href="#nogo"
+                class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
               >
                 Placeholder
               </a>
             </div>
-          </sprk-dropdown>
+          </sprk-masthead-selector>
         </div>
       </div>
 
@@ -500,11 +504,10 @@ export const extended = () => ({
         <li>
           <sprk-dropdown
             [choices]="simpleChoices"
-            dropdownType="simple"
-            title="My Account"
-            triggerIconType="user"
-            additionalTriggerClasses="sprk-b-Link--plain sprk-c-Masthead__link"
-            additionalIconClasses="sprk-c-Icon--xl"
+            heading="My Account"
+            triggerIconName="user"
+            triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+            iconAdditionalClasses="sprk-c-Icon--xl"
             additionalClasses="sprk-u-Right--zero sprk-u-mrm"
             screenReaderText="User Account"
           >
@@ -661,14 +664,14 @@ export const extended = () => ({
     ],
     mySelector: {
       trigger: {
-        text: 'Select One',
+        text: 'Choose One',
       },
       choices: [
         {
           content: {
             title: 'Choice Title 1',
             infoLine1: 'Information about this choice',
-            infoLine2: 'More Information',
+            infoLine2: 'Additional Information',
           },
           value: 'Choice Title 1',
           active: false,
@@ -677,15 +680,15 @@ export const extended = () => ({
           content: {
             title: 'Choice Title 2',
             infoLine1: 'Information about this choice',
-            infoLine2: 'More Information',
+            infoLine2: 'Additional Information',
           },
           value: 'Choice Title 2',
           active: true,
         },
       ],
       footer: {
-        analyticsString: 'Go Elsewhere Link',
-        text: 'Go Elsewhere',
+        analyticsString: 'Placeholder Link',
+        text: 'Placeholder',
         href: '#nogo',
       },
     },
@@ -694,7 +697,7 @@ export const extended = () => ({
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information',
+          infoLine2: 'Additional Information',
         },
         value: 'Choice Title 1',
         active: false,
@@ -703,7 +706,7 @@ export const extended = () => ({
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information',
+          infoLine2: 'Additional Information',
         },
         value: 'Choice Title 2',
         active: true,
