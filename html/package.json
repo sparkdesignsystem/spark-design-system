@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark",
-  "version": "16.0.0-beta.2",
+  "version": "16.0.0",
   "description": "Spark is the main package for the Spark Design System. This package contains the JavaScript and components that make up the basic interfaces for Quicken Loans Fintech products.",
   "main": "es5/sparkExports.js",
   "scripts": {
@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "dependencies": {
-    "@sparkdesignsystem/spark-styles": "^2.0.0-beta.2",
+    "@sparkdesignsystem/spark-styles": "^2.0.0",
     "dom-slider": "2.1.0",
     "focus-visible": "5.0.2",
     "lodash": "^4.17.21",
