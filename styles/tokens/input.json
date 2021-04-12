@@ -2113,7 +2113,16 @@
       },
       "focus-checked-border-color": {
         "comment": "The border color of the huge checkbox input when checked and focused.",
-        "value": "{purple.value}",
+        "value": "{black.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "focus-checked-box-shadow": {
+        "comment": "The box-shadow of the huge checkbox input when checked and focused.",
+        "value": "0 0 0 1px {black.value}, {input.huge.box-shadow.value}",
+        "attributes": {
+          "category": "content"
+        },
         "file": "settings",
         "themable": true
       },
@@ -2181,7 +2190,16 @@
       },
       "border-focus-checked": {
         "comment": "The border of the custom checkbox input when it is checked and focused.",
-        "value": "1px solid {purple.value}",
+        "value": "1px solid {black.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "box-shadow-focus-checked": {
+        "comment": "The box-shadow of the custom checkbox input when it is checked and focused.",
+        "value": "0 0 0 1px {black.value}",
         "attributes": {
           "category": "content"
         },
