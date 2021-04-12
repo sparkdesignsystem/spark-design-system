@@ -71,6 +71,7 @@
     // Override focus border color if its checked
     + .sprk-b-Checkbox__label::before {
       border: $sprk-checkbox-custom-input-border-focus-checked;
+      box-shadow: $sprk-checkbox-custom-input-box-shadow-focus-checked;
     }
   }
 
@@ -190,11 +191,6 @@
           border-color: $sprk-checkbox-huge-container-checked-hover-border-color;
           box-shadow: $sprk-checkbox-huge-container-hover-box-shadow;
         }
-
-        // Custom checkbox element's border color when checked
-        &::before {
-          border-color: $sprk-checkbox-huge-custom-input-checkbox-element-checked-border-color;
-        }
       }
 
       &:hover {
@@ -207,6 +203,7 @@
       // Styles for container when checkbox is focused on while being checked
       &:focus + .sprk-b-Checkbox__label {
         border-color: $sprk-checkbox-huge-container-focus-checked-border-color;
+        box-shadow: $sprk-checkbox-huge-container-focus-checked-box-shadow;
 
         &:hover {
           border-color: $sprk-checkbox-huge-container-checked-hover-border-color;
