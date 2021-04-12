@@ -253,6 +253,26 @@ describe('SprkTooltipComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
+  it('should add the correct positioning class on large window', () => {
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 800,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
+
+    triggerElement.getBoundingClientRect = () => {
+      return { top: 75, left: 75 };
+    };
+
+    fixture.nativeElement.dispatchEvent(new Event('mouseover'));
+    fixture.detectChanges();
+
+    expect(tooltipElement.classList.contains('sprk-c-Tooltip--top-right')).toBe(
+      true,
+    );
+  });
+
   it('should add the top left positioning class', () => {
     Object.defineProperty(document.documentElement, 'clientWidth', {
       value: 100,

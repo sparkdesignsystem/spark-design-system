@@ -25,6 +25,16 @@ import { SprkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-i
     SprkLinkDirectiveModule,
   ],
   declarations: [SprkMastheadComponent],
-  exports: [SprkMastheadComponent],
+  exports: [
+    SprkMastheadComponent,
+    SprkMastheadAccordionModule,
+    SprkMastheadAccordionItemModule,
+    SprkMastheadSelectorModule,
+    SprkDropdownModule,
+    SprkAccordionModule,
+    SprkAccordionItemModule,
+    SprkLinkDirectiveModule,
+    SprkIconModule,
+  ],
 })
 export class SprkMastheadModule {}

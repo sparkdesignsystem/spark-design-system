@@ -68,7 +68,7 @@ export const informational = () => (
       },
       footer: (
         <SprkButton
-          variant="tertiary"
+          variant="secondary"
           additionalClasses="sprk-c-Button--compact"
           onClick={() => {
             console.log('Clicked!');
@@ -82,7 +82,7 @@ export const informational = () => (
           content: {
             title: 'Choice Title 1',
             infoLine1: 'Information about this choice',
-            infoLine2: 'More Information',
+            infoLine2: 'Additional Information',
           },
           value: 'choice-title-1',
           isDefault: false,
@@ -92,7 +92,7 @@ export const informational = () => (
           content: {
             title: 'Choice Title 2',
             infoLine1: 'Information about this choice',
-            infoLine2: 'More Information',
+            infoLine2: 'Additional Information',
           },
           value: 'choice-title-2',
           isDefault: true,

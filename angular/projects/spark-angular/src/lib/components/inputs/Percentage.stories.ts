@@ -63,13 +63,14 @@ export const percentageInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-InputContainer__icon-container--narrow"
       >
-        <label sprkLabel>Percentage</label>
+        <label for="percentage" sprkLabel>Percentage</label>
         <sprk-icon
           iconName="percent"
           additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="percentage"
           class="sprk-b-InputContainer__input--has-icon-right"
           name="percentage"
           type="tel"
@@ -99,7 +100,7 @@ export const invalidPercentageInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-InputContainer__icon-container--narrow"
       >      
-        <label sprkLabel>Percentage</label>
+        <label for="invalid-percentage" sprkLabel>Percentage</label>
         <sprk-icon
           iconName="percent"
           additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
@@ -107,13 +108,15 @@ export const invalidPercentageInput = () => ({
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="invalid-percentage"
+          aria-describedby="percentage-error"
           class="sprk-b-InputContainer__input--has-icon-right sprk-b-TextInput--error"
           name="percentage"
           type="tel"
           sprkInput
         />
       </div>
-      <span sprkFieldError>
+      <span sprkFieldError id="percentage-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -144,13 +147,14 @@ export const disabledPercentageInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-InputContainer__icon-container--narrow"
       >
-        <label isDisabled="true" sprkLabel>Percentage</label>
+        <label for="disabled-percentage" isDisabled="true" sprkLabel>Percentage</label>
         <sprk-icon
           iconName="percent"
           additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="disabled-percentage"
           class="sprk-b-InputContainer__input--has-icon-right"
           name="percentage"
           type="tel"
@@ -177,13 +181,14 @@ export const legacyStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
-      <label sprkLabel>Percentage</label>
+      <label for="legacy-percentage" sprkLabel>Percentage</label>
       <sprk-icon
-        iconName="percent"
+        iconType="percent"
         additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-percentage"
         class="sprk-b-InputContainer__input--has-icon-right"
         name="percentage"
         type="tel"
@@ -208,22 +213,24 @@ export const legacyInvalidPercentageInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
-      <label sprkLabel>Percentage</label>
+      <label for="legacy-invalid-percentage" sprkLabel>Percentage</label>
       <sprk-icon
-        iconName="percent"
+        iconType="percent"
         additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
         aria-invalid="true"
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-invalid-percentage"
+        aria-describedby="legacy-percentage-error"
         class="sprk-b-InputContainer__input--has-icon-right sprk-b-TextInput--error"
         name="percentage"
         type="tel"
         sprkInput
       />
-      <span sprkFieldError>
+      <span sprkFieldError id="legacy-percentage-error">
         <sprk-icon
-          iconName="exclamation-filled"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -248,13 +255,20 @@ export const legacyDisabledPercentageInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
-      <label class="sprk-b-Label--disabled" sprkLabel>Percentage</label>
+      <label
+        for="legacy-disabled-percentage"
+        class="sprk-b-Label--disabled"
+        sprkLabel
+      >
+        Percentage
+      </label>
       <sprk-icon
-        iconName="percent"
+        iconType="percent"
         additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-disabled-percentage"
         class="sprk-b-InputContainer__input--has-icon-right"
         name="percentage"
         type="tel"

@@ -71,10 +71,11 @@ export const monetaryInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-TextInputIconContainer--has-text-icon"
       >
-        <label isMonetary="true" sprkLabel>
+        <label for="monetary" isMonetary="true" sprkLabel>
           Payment
         </label>
         <input
+          id="monetary"
           class="sprk-b-TextInput--has-text-icon"
           name="monetary_input"
           type="text"
@@ -107,10 +108,12 @@ export const invalidMonetaryInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-TextInputIconContainer--has-text-icon"
       >
-        <label isMonetary="true" sprkLabel>
+        <label for="invalid-monetary" isMonetary="true" sprkLabel>
           Payment
         </label>
         <input
+          aria-describedby="monetary-error"
+          id="invalid-monetary"
           class="sprk-b-TextInput--has-text-icon sprk-b-TextInput--error"
           aria-invalid="true"
           name="monetary_input"
@@ -121,7 +124,7 @@ export const invalidMonetaryInput = () => ({
           sprkInput
         />
       </div>
-      <span sprkFieldError>
+      <span sprkFieldError id="monetary-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -152,10 +155,11 @@ export const disabledMonetaryInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-TextInputIconContainer--has-text-icon"
       >
-        <label isMonetary="true" isDisabled="true" sprkLabel>
+        <label for="disabled-monetary" isMonetary="true" isDisabled="true" sprkLabel>
           Payment
         </label>
         <input
+          id="disabled-monetary"
           class="sprk-b-TextInput--has-text-icon"
           name="monetary_input"
           placeholder="0.00"
@@ -187,10 +191,11 @@ export const legacyStory = () => ({
     <sprk-icon-input-container
       iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
     >
-      <label class="sprk-b-Label--monetary" sprkLabel>
+      <label for="legacy-monetary" class="sprk-b-Label--monetary" sprkLabel>
         Payment
       </label>
       <input
+        id="legacy-monetary"
         class="sprk-b-TextInput--has-text-icon"
         name="monetary_input"
         placeholder="0.00"
@@ -220,10 +225,12 @@ export const legacyInvalidMonetaryInput = () => ({
     <sprk-icon-input-container
       iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
     >
-      <label class="sprk-b-Label--monetary" sprkLabel>
+      <label for="legacy-invalid-monetary" class="sprk-b-Label--monetary" sprkLabel>
         Payment
       </label>
       <input
+        id="legacy-invalid-monetary"
+        aria-describedby="legacy-monetary-error"
         class="sprk-b-TextInput--has-text-icon sprk-b-TextInput--error"
         aria-invalid="true"
         placeholder="0.00"
@@ -233,9 +240,9 @@ export const legacyInvalidMonetaryInput = () => ({
         #monetaryInput="ngModel"
         sprkInput
       />
-      <span sprkFieldError>
+      <span sprkFieldError id="legacy-monetary-error">
         <sprk-icon
-          iconName="exclamation-filled"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -262,10 +269,15 @@ export const legacyDisabledMonetaryInput = () => ({
     <sprk-icon-input-container
       iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
     >
-      <label class="sprk-b-Label--monetary sprk-b-Label--disabled" sprkLabel>
+      <label
+        for="legacy-disabled-monetary"
+        class="sprk-b-Label--monetary sprk-b-Label--disabled"
+        sprkLabel
+      >
         Payment
       </label>
       <input
+        id="legacy-disabled-monetary"
         class="sprk-b-TextInput--has-text-icon"
         name="monetary_input"
         placeholder="0.00"

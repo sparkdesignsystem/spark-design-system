@@ -19,6 +19,7 @@
 
   &:focus {
     border-color: $sprk-select-focus-border-color;
+    box-shadow: $sprk-select-focus-box-shadow;
   }
 
   // Remove FF specific focusring in favor of ours
@@ -33,6 +34,7 @@
   color: $sprk-select-color;
   background: $sprk-select-background;
   border-color: $sprk-select-focus-border-color;
+  box-shadow: $sprk-select-focus-box-shadow;
 }
 
 .sprk-b-Select::-ms-expand {
@@ -49,11 +51,16 @@
   border-color: $sprk-select-disabled-border-color;
   background-color: $sprk-select-disabled-background-color;
   color: $sprk-select-disabled-color;
+  cursor: $sprk-select-disabled-cursor;
 }
 
 /// Adds select error styles.
 /// @name .sprk-b-Select--error
-.sprk-b-Select--error,
+.sprk-b-Select--error {
+  border-color: $sprk-select-error-border-color;
+}
+
 .sprk-b-Select--error:focus {
   border-color: $sprk-select-error-border-color;
+  box-shadow: $sprk-select-error-box-shadow;
 }

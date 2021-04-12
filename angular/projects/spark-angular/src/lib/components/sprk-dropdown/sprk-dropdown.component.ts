@@ -36,7 +36,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
         <sprk-icon
           [iconName]="triggerIconName || triggerIconType"
-          additionalClasses="sprk-u-mls {{
+          additionalClasses="sprk-u-mls sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color {{
             iconAdditionalClasses || additionalIconClasses
           }}"
         ></sprk-icon>
@@ -48,7 +48,9 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
           *ngIf="heading || selector || title"
         >
           <h2
-            class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo"
+            sprkText
+            variant="bodyTwo"
+            class="sprk-c-Dropdown__title"
             *ngIf="title || heading"
           >
             {{ heading || title }}
@@ -64,17 +66,20 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             href="#"
           >
             <span
-              class="sprk-c-Dropdown__title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
+              sprkStackItem
+              sprkText
+              variant="bodyTwo"
+              class="sprk-c-Dropdown__title sprk-o-Stack__item--flex@xxs"
               >{{ selector }}</span
             >
             <sprk-icon
+              sprkStackItem
               [iconName]="triggerIconName || triggerIconType"
               additionalClasses="
                 sprk-c-Icon--filled-current-color
                 sprk-c-Icon--stroke-current-color
                 sprk-u-mls
                 sprk-c-Icon--toggle
-                sprk-Stack__item
                 {{ iconAdditionalClasses || additionalIconClasses }}
               "
             ></sprk-icon>

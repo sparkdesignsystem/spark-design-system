@@ -146,6 +146,15 @@
           },
           "file": "settings",
           "themable": true
+        },
+        "margin-top": {
+          "comment": "The margin-top of the Autocomplete results.",
+          "value": "1px",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
         }
       },
       "result": {

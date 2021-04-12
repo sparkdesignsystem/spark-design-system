@@ -1,18 +1,13 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
-import { SprkCardModule } from './sprk-card.module';
-import { SprkCardContentModule } from './directives/sprk-card-content/sprk-card-content.module';
-import { SprkCardHeaderModule } from './directives/sprk-card-header/sprk-card-header.module';
-import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
-import { SprkCardComponent } from './sprk-card.component';
-import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
-import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
-import { SprkHeadingModule } from '../../directives/sprk-heading/sprk-heading.module';
-import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
-import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import { SprkCardMediaModule } from './directives/sprk-card-media/sprk-card-media.module';
-import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+import { SprkCardModule } from './sprk-card.module';
+import { SprkCardComponent } from './sprk-card.component';
+import { SprkCardContentDirective } from './directives/sprk-card-content/sprk-card-content.directive';
+import { SprkCardMediaDirective } from './directives/sprk-card-media/sprk-card-media.directive';
+import { SprkCardHeaderDirective } from './directives/sprk-card-header/sprk-card-header.directive';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+
 export default {
   title: 'Components/Card',
   component: SprkCardComponent,
@@ -23,6 +18,11 @@ export default {
     ),
   ],
   parameters: {
+    subcomponents: {
+      SprkCardContentDirective,
+      SprkCardHeaderDirective,
+      SprkCardMediaDirective,
+    },
     info: `${markdownDocumentationLinkBuilder('card')}`,
     docs: { iframeHeight: 200 },
   },
@@ -31,15 +31,6 @@ export default {
 const modules = {
   imports: [
     SprkCardModule,
-    SprkCardMediaModule,
-    SprkStackModule,
-    SprkCardContentModule,
-    SprkStackItemModule,
-    SprkHeadingModule,
-    SprkCardHeaderModule,
-    SprkIconModule,
-    SprkLinkDirectiveModule,
-    SprkTextModule,
     RouterModule.forRoot([
       {
         path: 'iframe.html',
@@ -142,6 +133,7 @@ highlightedHeader.story = {
     docs: { iframeHeight: 300 },
     jest: [
       'sprk-card.component',
+      'sprk-card-header.component',
       'sprk-card-content.directive',
       'sprk-stack.component',
       'sprk-stack-item.directive',
@@ -174,22 +166,27 @@ export const teaser = () => ({
           Title
         </h3>
 
-        <p sprkText variant="bodytwo" sprkStackItem>
+        <p sprkText variant="bodyTwo" sprkStackItem>
           Lorem ipsum dolor sit amet, doctus
           invenirevix te. Facilisi perpetua.
         </p>
 
-        <div sprkStackItem>
-          <a
-            sprkLink
-            variant="unstyled"
-            href="#nogo"
-            class="sprk-c-Button sprk-c-Button--secondary"
-            analyticsString="teaser-cta"
-          >
-            Learn More
-          </a>
-        </div>
+        <sprk-stack
+          additionalClasses="sprk-o-Stack--end-column"
+          sprkStackItem
+        >
+          <div sprkStackItem>
+            <a
+              sprkLink
+              variant="unstyled"
+              href="#nogo"
+              class="sprk-c-Button sprk-c-Button--secondary"
+              analyticsString="teaser-cta"
+            >
+              Learn More
+            </a>
+          </div>
+        </sprk-stack>
       </sprk-stack>
     </sprk-card>
  `,
@@ -242,7 +239,7 @@ export const teaserIcon = () => ({
           Title
         </h3>
 
-        <p sprkText variant="bodytwo" sprkStackItem>
+        <p sprkText variant="bodyTwo" sprkStackItem>
           Lorem ipsum dolor sit amet, doctus
           invenirevix te. Facilisi perpetua an
           pri, errem communemea at, mei prima
@@ -304,22 +301,27 @@ export const teaserWithDifferentElementOrder = () => ({
       </a>
 
       <sprk-stack sprkCardContent itemSpacing="large" sprkStackItem>
-        <p sprkText variant="bodytwo" sprkStackItem>
+        <p sprkText variant="bodyTwo" sprkStackItem>
           Lorem ipsum dolor sit amet, doctus
           invenirevix te. Facilisi perpetua.
         </p>
 
-        <div sprkStackItem>
-          <a
-            sprkLink
-            variant="unstyled"
-            href="#nogo"
-            class="sprk-c-Button sprk-c-Button--secondary"
-            analyticsString="teaser-diff-order-cta"
-          >
-            Learn More
-          </a>
-        </div>
+        <sprk-stack
+          additionalClasses="sprk-o-Stack--end-column"
+          sprkStackItem
+        >
+          <div sprkStackItem>
+            <a
+              sprkLink
+              variant="unstyled"
+              href="#nogo"
+              class="sprk-c-Button sprk-c-Button--secondary"
+              analyticsString="teaser-diff-order-cta"
+            >
+              Learn More
+            </a>
+          </div>
+        </sprk-stack>
       </sprk-stack>
     </sprk-card>
   `,
@@ -376,23 +378,28 @@ export const twoUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                class="sprk-c-Button sprk-c-Button--secondary"
-                analyticsString="two-up-cta"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              additionalClasses="sprk-o-Stack--end-column"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                  analyticsString="two-up-cta"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -421,23 +428,28 @@ export const twoUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                class="sprk-c-Button sprk-c-Button--secondary"
-                analyticsString="two-up-cta-2"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              additionalClasses="sprk-o-Stack--end-column"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                  analyticsString="two-up-cta-2"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -494,23 +506,28 @@ export const threeUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="three-up-cta"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              additionalClasses="sprk-o-Stack--end-column"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="three-up-cta"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -539,23 +556,28 @@ export const threeUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="three-up-cta-2"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              additionalClasses="sprk-o-Stack--end-column"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="three-up-cta-2"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -584,23 +606,28 @@ export const threeUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="three-up-cta-3"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              additionalClasses="sprk-o-Stack--end-column"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="three-up-cta-3"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -657,23 +684,28 @@ export const fourUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="four-up-cta"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              additionalClasses="sprk-o-Stack--end-column"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="four-up-cta"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -702,23 +734,28 @@ export const fourUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="four-up-cta-2"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              additionalClasses="sprk-o-Stack--end-column"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="four-up-cta-2"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -747,23 +784,28 @@ export const fourUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                analyticsString="four-up-cta-3"
-                href="#nogo"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              additionalClasses="sprk-o-Stack--end-column"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  analyticsString="four-up-cta-3"
+                  href="#nogo"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -792,23 +834,28 @@ export const fourUpCards = () => ({
               Title
             </h3>
 
-            <p sprkText variant="bodytwo" sprkStackItem>
+            <p sprkText variant="bodyTwo" sprkStackItem>
               This Lorem ipsum dolor sit amet, doctus invenire vix te.
               Facilisi perpetua an pri, errem commune mea at, mei prima
               tantas signiferumque at. Numquam.
             </p>
 
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="four-up-cta-4"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <sprk-stack
+              additionalClasses="sprk-o-Stack--end-column"
+              sprkStackItem
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="four-up-cta-4"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
         </sprk-card>
       </div>
@@ -830,378 +877,5 @@ fourUpCards.story = {
       'sprk-heading.directive',
       'sprk-link.directive',
     ],
-  },
-};
-
-export const legacyStory = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-card
-      cardType="base"
-      idString="card-default"
-    >
-      <div class="
-        sprk-o-Stack__item
-        sprk-c-Card__content
-        sprk-o-Stack
-        sprk-o-Stack--medium">
-        <p class="sprk-TypeBodyTwo">Default Card</p>
-      </div>
-    </sprk-card>
-  `,
-});
-
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: ['sprk-card.component'],
-  },
-};
-
-export const legacyStandout = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-card
-      cardType="base"
-      idString="card-standout"
-      additionalClasses="sprk-c-Card--standout"
-    >
-      <div class="
-        sprk-o-Stack__item
-        sprk-c-Card__content
-        sprk-o-Stack
-        sprk-o-Stack--medium"
-      >
-        <p class="sprk-TypeBodyTwo">Standout Card</p>
-      </div>
-    </sprk-card>
-  `,
-});
-
-legacyStandout.story = {
-  name: 'Legacy Standout (Deprecated)',
-  parameters: {
-    jest: ['sprk-card.component'],
-  },
-};
-
-export const legacyHighlightedHeader = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-card
-      cardType="base"
-      idString="card-highlighted-header"
-      additionalClasses="sprk-c-Card--standout"
-    >
-      <div class="
-        sprk-o-Stack__item
-        sprk-c-Card__header
-        sprk-o-Stack
-        sprk-o-Stack--medium">
-        <h3 class="
-          sprk-b-TypeDisplaySeven
-          sprk-o-Stack__item
-          sprk-u-Color--white">
-          Description
-        </h3>
-
-        <h4 class="
-          sprk-b-TypeDisplayFive
-          sprk-o-Stack__item
-          sprk-u-Color--white">
-          Card Title
-        </h4>
-      </div>
-
-      <div class="
-        sprk-o-Stack__item
-        sprk-o-Stack
-        sprk-o-Stack--medium
-        sprk-c-Card__content">
-        <p class="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          Lorem ipsum dolor sit amet, doctus invenire vix te. Facilisi
-          perpetua an pri, errem commune mea at, mei prima tantas
-          signiferumque at. Numquam.
-        </p>
-      </div>
-    </sprk-card>
-  `,
-});
-
-legacyHighlightedHeader.story = {
-  name: 'Legacy Highlighted Header (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 300 },
-    jest: ['sprk-card.component'],
-  },
-};
-
-export const legacyTeaser = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-card
-      media="img"
-      cardType="teaser"
-      title="Title"
-      body="Lorem ipsum dolor sit amet, doctus invenirevix te. Facilisi perpetua."
-      imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-      imgAlt="Learn more"
-      imgHref="#nogo"
-      ctaType="button"
-      ctaText="Learn More"
-      ctaHref="#nogo"
-      ctaAnalytics="Button: Spark"
-      additionalCtaClasses="sprk-c-Button--secondary"
-      idString="card-teaser"
-    >
-    </sprk-card>
- `,
-});
-
-legacyTeaser.story = {
-  name: 'Legacy Teaser (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 550 },
-    jest: ['sprk-card.component'],
-  },
-};
-
-export const legacyTwoUpCards = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-stack
-      itemSpacing="large"
-      splitAt="large"
-      additionalClasses="sprk-o-Stack--center-row"
-    >
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          media="img"
-          idString="card-two-up-1"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          imgAlt="Learn more"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
-            Facilisi perpetua an pri, errem commune mea at, mei prima tantas
-            signiferumque at. Numquam."
-          ctaType="button"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          ctaText="Learn More"
-          title="Title"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          media="img"
-          idString="card-two-up-2"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          imgAlt="Learn more"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix
-            te. Facilisi perpetua an pri, errem commune mea at, mei
-            prima tantas signiferumque at. Numquam."
-          ctaType="button"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          ctaText="Learn More"
-          title="Title"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-    </sprk-stack>
-  `,
-});
-
-legacyTwoUpCards.story = {
-  name: 'Legacy Card Layout - Two Up (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: ['sprk-card.component'],
-  },
-};
-
-export const legacyThreeUpCards = () => ({
-  moduleMetadata: modules,
-  template: `
-   <sprk-stack
-     itemSpacing="large"
-     splitAt="large"
-     additionalClasses="sprk-o-Stack--center-row"
-   >
-     <div
-       class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-       sprkStackItem
-     >
-       <sprk-card
-         cardType="teaser"
-         idString="card-three-up-1"
-         media="img"
-         imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-         imgAlt="Learn more"
-         body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
-           Facilisi perpetua an pri, errem commune mea at, mei prima
-           tantas signiferumque at. Numquam."
-         ctaType="button"
-         ctaText="Learn More"
-         additionalCtaClasses="sprk-c-Button--secondary"
-         title="Title"
-         sprkStackItem
-       ></sprk-card>
-      </div>
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          media="img"
-          idString="card-three-up-2"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          imgAlt="Learn more"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix
-            te. Facilisi perpetua an pri, errem commune mea at, mei
-            prima tantas signiferumque at. Numquam."
-          ctaType="button"
-          ctaText="Learn More"
-          title="Title"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          media="img"
-          idString="card-three-up-3"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          imgAlt="Learn more"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix
-            te. Facilisi perpetua an pri, errem commune mea at, mei
-            prima tantas signiferumque at. Numquam."
-          ctaType="button"
-          ctaText="Learn More"
-          title="Title"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-    </sprk-stack>
-  `,
-});
-
-legacyThreeUpCards.story = {
-  name: 'Legacy Card Layout - Three Up (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: ['sprk-card.component'],
-  },
-};
-
-export const legacyFourUpCards = () => ({
-  moduleMetadata: modules,
-  template: `
-   <sprk-stack
-     itemSpacing="large"
-     splitAt="large"
-     additionalClasses="sprk-o-Stack--center-row"
-   >
-     <div
-       class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-       sprkStackItem
-     >
-       <sprk-card
-         cardType="teaser"
-         additionalCtaClasses="sprk-c-Button--secondary"
-         media="img"
-         idString="card-four-up-1"
-         imgAlt="Learn more"
-         imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-         body="This Lorem ipsum dolor sit amet, doctus invenire vix te.
-           Facilisi perpetua an pri, errem commune mea at, mei prima
-           tantas signiferumque at. Numquam."
-         ctaType="button"
-         ctaText="Learn More"
-         title="Title"
-         sprkStackItem
-       ></sprk-card>
-      </div>
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          media="img"
-          idString="card-four-up-2"
-          imgAlt="Learn more"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix
-            te. Facilisi perpetua an pri, errem commune mea at, mei
-            prima tantas signiferumque at. Numquam."
-          ctaType="button"
-          ctaText="Learn More"
-          title="Title"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          media="img"
-          idString="card-four-up-3"
-          imgAlt="Learn more"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix
-            te. Facilisi perpetua an pri, errem commune mea at, mei
-            prima tantas signiferumque at. Numquam."
-          ctaType="button"
-          ctaText="Learn More"
-          title="Title"
-          sprkStackItem
-        ></sprk-card>
-      </div>
-      <div
-        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-        sprkStackItem
-      >
-        <sprk-card
-          cardType="teaser"
-          additionalCtaClasses="sprk-c-Button--secondary"
-          media="img"
-          idString="card-four-up-4"
-          imgAlt="Learn more"
-          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-          body="This Lorem ipsum dolor sit amet, doctus invenire vix
-            te. Facilisi perpetua an pri, errem commune mea at, mei
-            prima tantas signiferumque at. Numquam."
-          ctaType="button"
-          ctaText="Learn More"
-          title="Title"
-          sprkStackItem
-         ></sprk-card>
-      </div>
-    </sprk-stack>
-  `,
-});
-
-legacyFourUpCards.story = {
-  name: 'Legacy Card Layout - Four Up (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: ['sprk-card.component'],
   },
 };

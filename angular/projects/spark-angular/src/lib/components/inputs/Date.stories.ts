@@ -62,8 +62,9 @@ export const dateInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>Date Input (No Picker)</label>
+      <label for="date" sprkLabel>Date Input (No Picker)</label>
       <input
+        id="date"
         name="date_input"
         type="text"
         placeholder="MM/DD/YYYY"
@@ -90,8 +91,10 @@ export const invalidDateInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>Date Input (No Picker)</label>
+      <label for="invalid-date" sprkLabel>Date Input (No Picker)</label>
       <input
+        id="invalid-date"
+        aria-describedby="date-error"
         class="sprk-b-TextInput--error"
         name="date_input"
         type="text"
@@ -100,7 +103,7 @@ export const invalidDateInput = () => ({
         #dateInput="ngModel"
         sprkInput
       />
-      <span sprkFieldError>
+      <span sprkFieldError id="date-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -127,8 +130,9 @@ export const disabledDateInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel isDisabled="true">Date Input (No Picker)</label>
+      <label for="disabled-date" sprkLabel isDisabled="true">Date Input (No Picker)</label>
       <input
+        id="disabled-date"
         disabled
         name="date_input"
         type="text"

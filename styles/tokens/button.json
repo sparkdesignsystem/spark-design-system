@@ -319,10 +319,7 @@
         },
         "background-color": {
           "comment": "The background color of the Disabled Button component.",
-          "value": "transparent",
-          "attributes": {
-            "category": "content"
-          },
+          "value": "{gray.value}",
           "file": "settings",
           "themable": true
         },
@@ -359,22 +356,19 @@
       },
       "background-color": {
         "comment": "The background color of the Secondary Button component.",
-        "value": "transparent",
-        "attributes": {
-          "category": "content"
-        },
+        "value": "{white.value}",
         "file": "settings",
         "themable": true
       },
       "border-color": {
         "comment": "The border color of the Secondary Button component.",
-        "value": "{red.value}",
+        "value": "{purple-dark.value}",
         "file": "settings",
         "themable": true
       },
       "border": {
         "comment": "The border of the Secondary Button component.",
-        "value": "{btn.border-width.value} {btn.border-style.value} {btn.border-color.value}",
+        "value": "{btn.border-width.value} {btn.border-style.value} {purple-dark.value}",
         "attributes": {
           "category": "content"
         },
@@ -383,35 +377,32 @@
       },
       "text-color": {
         "comment": "The text color of the Secondary Button component.",
-        "value": "{red.value}",
+        "value": "{purple-dark.value}",
         "file": "settings",
         "themable": true
       },
       "visited-text-color": {
         "comment": "The text color of the Secondary Button component when visited.",
-        "value": "{red.value}",
+        "value": "{purple-dark.value}",
         "file": "settings",
         "themable": true
       },
       "hover": {
         "text-color": {
           "comment": "The hover text color of the Secondary Button component.",
-          "value": "{red.value}",
+          "value": "{purple.value}",
           "file": "settings",
           "themable": true
         },
         "background-color": {
           "comment": "The background color of the Secondary Button component on hover.",
-          "value": "#f9e7ea",
-          "attributes": {
-            "category": "color"
-          },
+          "value": "{purple-lightest.value}",
           "file": "settings",
           "themable": true
         },
         "border-color": {
           "comment": "The border color of the Secondary Button component on hover.",
-          "value": "{red.value}",
+          "value": "{purple.value}",
           "file": "settings",
           "themable": true
         },
@@ -445,10 +436,7 @@
       "disabled": {
         "background-color": {
           "comment": "The background color of the Tertiary Button component when disabled.",
-          "value": "transparent",
-          "attributes": {
-            "category": "content"
-          },
+          "value": "{black-tint.10.value}",
           "file": "settings",
           "themable": true
         },
@@ -469,7 +457,7 @@
         },
         "border-color": {
           "comment": "The border color of the Tertiary Button component when disabled.",
-          "value": "{black-tint.50.value}",
+          "value": "{btn.tertiary.disabled.background-color.value}",
           "file": "settings",
           "themable": true
         },
@@ -500,16 +488,13 @@
       },
       "background-color": {
         "comment": "The background color of the Tertiary Button component.",
-        "value": "transparent",
-        "attributes": {
-          "category": "content"
-        },
+        "value": "{white.value}",
         "file": "settings",
         "themable": true
       },
       "border-color": {
         "comment": "The border color of the Tertiary Button component.",
-        "value": "{purple-dark.value}",
+        "value": "{btn.tertiary.background-color.value}",
         "file": "settings",
         "themable": true
       },
@@ -549,13 +534,13 @@
         },
         "border-color": {
           "comment": "The border color of the Tertiary Button component on hover.",
-          "value": "{purple.value}",
+          "value": "{btn.tertiary.hover.background-color.value}",
           "file": "settings",
           "themable": true
         },
         "shadow": {
           "comment": "The box shadow of the Tertiary Button component on hover",
-          "value": "{btn.shadow.value}",
+          "value": "none",
           "attributes": {
             "category": "content"
           },
@@ -574,150 +559,6 @@
       },
       "letter-spacing": {
         "comment": "The letter spacing of the Tertiary Button component.",
-        "value": "{btn.letter-spacing.value}",
-        "file": "settings",
-        "themable": true
-      }
-    },
-    "quaternary": {
-      "disabled": {
-        "border-width": {
-          "comment": "The border width of the Quaternary Button component when disabled.",
-          "value": "{btn.disabled.border-width.value}",
-          "attributes": {
-            "category": "size"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "border-style": {
-          "comment": "The border style of the Quaternary Button component when disabled.",
-          "value": "{btn.disabled.border-style.value}",
-          "attributes": {
-            "category": "content"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "border-color": {
-          "comment": "The border color of the Quaternary Button component when disabled.",
-          "value": "{black-tint.50.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "text-color": {
-          "comment": "The text color of the Quaternary Button component when disabled.",
-          "value": "{black-tint.50.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "background-color": {
-          "comment": "The background color of the Quaternary Button component when disabled.",
-          "value": "transparent",
-          "attributes": {
-            "category": "content"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "shadow": {
-          "comment": "The box shadow of the Quaternary Button component when disabled.",
-          "value": "none",
-          "attributes": {
-            "category": "content"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "hover-border": {
-          "comment": "The border of the Quaternary Button component when disabled on hover.",
-          "value": "{btn.quaternary.disabled.border-width.value} {btn.quaternary.disabled.border-style.value} {btn.quaternary.disabled.border-color.value}",
-          "attributes": {
-            "category": "content"
-          },
-          "file": "settings",
-          "themable": true
-        }
-      },
-      "background-color": {
-        "comment": "The background color of the Quaternary Button component.",
-        "value": "transparent",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "border-color": {
-        "comment": "The border color of the Quaternary Button component.",
-        "value": "{black-tint.50.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "border": {
-        "comment": "The border of the Quaternary Button component.",
-        "value": "{btn.border-width.value} {btn.border-style.value} {btn.quaternary.border-color.value}",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "text-color": {
-        "comment": "The text color of the Quaternary Button component.",
-        "value": "{black.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "visited-text-color": {
-        "comment": "The text color of the Quaternary Button component when visited.",
-        "value": "{black.value}",
-        "file": "settings",
-        "themable": true
-      },
-      "box-shadow": {
-        "comment": "The box-shadow of the Quaternary Button component.",
-        "value": "none",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "settings",
-        "themable": true
-      },
-      "hover": {
-        "text-color": {
-          "comment": "The text color of the Quaternary Button component on hover.",
-          "value": "{black.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "background-color": {
-          "comment": "The background color of the Quaternary Button component on hover.",
-          "value": "transparent",
-          "attributes": {
-            "category": "content"
-          },
-          "file": "settings",
-          "themable": true
-        },
-        "border-color": {
-          "comment": "The border color of the Quaternary Button component on hover.",
-          "value": "{black.value}",
-          "file": "settings",
-          "themable": true
-        },
-        "shadow": {
-          "comment": "The box shadow of the Quaternary Button component on hover.",
-          "value": "{btn.shadow.value}",
-          "attributes": {
-            "category": "content"
-          },
-          "file": "settings",
-          "themable": true
-        }
-      },
-      "letter-spacing": {
-        "comment": "The letter spacing of the Quaternary Button component.",
         "value": "{btn.letter-spacing.value}",
         "file": "settings",
         "themable": true

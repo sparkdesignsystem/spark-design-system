@@ -27,14 +27,7 @@ export const textInput = () => `
       id="text-input"
       data-id="text-input"
       type="text"
-      value=""
-      aria-describedby="text-input--error-container"
     >
-
-    <div
-      class="sprk-b-ErrorContainer"
-      id="text-input--error-container"
-    ></div>
   </div>
 `;
 
@@ -56,7 +49,6 @@ export const invalidTextInput = () => `
       id="text-input"
       data-id="text-input"
       type="text"
-      value=""
       aria-invalid="true"
       aria-describedby="text-input--error-container"
     >
@@ -68,6 +60,7 @@ export const invalidTextInput = () => `
       <svg
         class="sprk-c-Icon sprk-b-ErrorIcon"
         viewBox="0 0 64 64"
+        aria-hidden="true"
       >
         <use xlink:href="#exclamation-filled" />
       </svg>
@@ -96,15 +89,8 @@ export const disabledTextInput = () => `
       id="text-input"
       data-id="text-input"
       type="text"
-      value=""
-      aria-describedby="text-input--error-container"
       disabled
     >
-
-    <div
-      class="sprk-b-ErrorContainer"
-      id="text-input--error-container"
-    ></div>
   </div>
 `;
 
@@ -125,7 +111,6 @@ export const hugeTextInput = () => {
         id="text-input-huge"
         data-id="text-input-huge"
         type="text"
-        aria-describedby="text-input-huge--error-container"
         placeholder="Placeholder"
       >
 
@@ -135,11 +120,6 @@ export const hugeTextInput = () => {
       >
         Text Input Label
       </label>
-
-      <div
-        class="sprk-b-ErrorContainer"
-        id="text-input-huge--error-container"
-      ></div>
     </div>
   `;
 };
@@ -185,6 +165,7 @@ export const invalidHugeTextInput = () => {
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -216,7 +197,6 @@ export const disabledHugeTextInput = () => {
         id="text-input-huge"
         data-id="text-input-huge"
         type="text"
-        aria-describedby="text-input-huge--error-container"
         placeholder="Placeholder"
         disabled
       >
@@ -227,11 +207,6 @@ export const disabledHugeTextInput = () => {
       >
         Text Input Label
       </label>
-
-      <div
-        class="sprk-b-ErrorContainer"
-        id="text-input-huge--error-container"
-      ></div>
     </div>
   `;
 };

@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import uniqueId from 'lodash/uniqueId';
 import SprkIcon from '../icons/SprkIcon';
 import SprkLink from '../../base/links/SprkLink';
+import SprkText from '../../base/typography/SprkText/SprkText';
 
 class SprkDropdown extends Component {
   constructor(props) {
@@ -203,7 +204,13 @@ class SprkDropdown extends Component {
           <div className={classNames('sprk-c-Dropdown', additionalClasses)}>
             {heading !== '' && (
               <div className="sprk-c-Dropdown__header">
-                <h2 className="sprk-c-Dropdown__title">{heading}</h2>
+                <SprkText
+                  element="h2"
+                  variant="bodyTwo"
+                  additionalClasses="sprk-c-Dropdown__title"
+                >
+                  {heading}
+                </SprkText>
               </div>
             )}
             <ul
@@ -266,16 +273,16 @@ class SprkDropdown extends Component {
                           }}
                           {...choicesRest}
                         >
-                          <p className="sprk-b-TypeBodyOne">{content.title}</p>
+                          <SprkText variant="bodyOne">{content.title}</SprkText>
                           {content.infoLine1 && (
-                            <p className="sprk-b-TypeBodyTwo">
+                            <SprkText variant="bodyTwo">
                               {content.infoLine1}
-                            </p>
+                            </SprkText>
                           )}
                           {content.infoLine2 && (
-                            <p className="sprk-b-TypeBodyTwo">
+                            <SprkText variant="bodyTwo">
                               {content.infoLine2}
-                            </p>
+                            </SprkText>
                           )}
                         </TagName>
                       </>
@@ -421,7 +428,7 @@ SprkDropdown.defaultProps = {
   choices: {
     items: [],
   },
-  defaultTriggerText: 'Choose One...',
+  defaultTriggerText: 'Choose One',
   iconName: 'chevron-down',
 };
 

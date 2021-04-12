@@ -16,6 +16,7 @@
   <dimen name="sprk_autocomplete_results_max_width">440.00dp</dimen><!-- The max-width of the Autocomplete results. -->
   <dimen name="sprk_autocomplete_results_max_height">288.00dp</dimen><!-- The max-height of the Autocomplete results. -->
   <dimen name="sprk_autocomplete_results_huge_max_width">600.00dp</dimen><!-- The max-width of the huge Autocomplete results. -->
+  <dimen name="sprk_autocomplete_results_margin_top">1.00dp</dimen><!-- The margin-top of the Autocomplete results. -->
   <dimen name="sprk_blockquote_margin">0.00dp</dimen><!-- Value for the margin property on Blockquote component. -->
   <dimen name="sprk_blockquote_quote_margin">0.00dp</dimen><!-- Value for the margin property on the quote in the Blockquote component. -->
   <dimen name="sprk_blockquote_quote_last_margin">0.00dp</dimen><!-- Value for the margin property on the last quote in the Blockquote component. -->
@@ -31,7 +32,6 @@
   <dimen name="sprk_btn_disabled_opacity">16.00dp</dimen><!-- The opacity value of the Disabled Button component. -->
   <dimen name="sprk_btn_disabled_border_width">2.00dp</dimen><!-- The border width of the Disabled Button component. -->
   <dimen name="sprk_btn_tertiary_disabled_border_width">2.00dp</dimen><!-- The border width of the Tertiary Button component when disabled. -->
-  <dimen name="sprk_btn_quaternary_disabled_border_width">2.00dp</dimen><!-- The border width of the Quaternary Button component when disabled. -->
   <dimen name="sprk_card_max_width">425.00dp</dimen><!-- The maximum width of the Card. -->
   <dimen name="sprk_card_border_radius">8.00dp</dimen><!-- The border radius of the Card. -->
   <dimen name="sprk_card_content_padding">24.00dp</dimen><!-- The padding of the content inside the Card. -->
@@ -55,6 +55,7 @@
   <dimen name="sprk_flag_gutter_large">32.00dp</dimen><!-- Value for the gutters between body and figure in the Large Flag component. -->
   <dimen name="sprk_flag_gutter_huge">64.00dp</dimen><!-- Value for the gutters between body and figure in the Huge Flag component. -->
   <dimen name="sprk_flag_stacked_breakpoint">400.00dp</dimen><!-- Value for the gutters between body and figure in the Stacked Flag component. -->
+  <dimen name="sprk_footer_link_font_weight">4800.00dp</dimen><!-- Link font-weight on the Footer. -->
   <dimen name="sprk_highlight_board_breakpoint">480.00dp</dimen><!-- The Highlight Board breakpoint at which styles change for padding, font size and button width. -->
   <dimen name="sprk_highlight_board_content_width">480.00dp</dimen><!-- The maximum width of the content for the Highlight Board when it has an image. -->
   <dimen name="sprk_highlight_board_type_reduction_percentage">12.80dp</dimen><!-- Percentage reduction value for the font size in the Highlight Board in narrow viewports. -->
@@ -198,9 +199,15 @@
   <dimen name="sprk_pag_max_width">416.00dp</dimen><!-- The maximum width of the Pagination component. -->
   <dimen name="sprk_pag_circle_size">32.00dp</dimen><!-- The width and height setting of the circle around the currently selected pagination link in the Pagination component. -->
   <dimen name="sprk_promo_max_width">680.00dp</dimen><!-- The maximum width of the Promo component. -->
+  <dimen name="sprk_promo_content_padding">32.00dp</dimen><!-- The padding for the content in the Promo component. -->
+  <dimen name="sprk_promo_flag_content_padding">16.00dp</dimen><!-- The padding for the content in the Flag Promo component. -->
+  <dimen name="sprk_promo_max_width_full">1600.00dp</dimen><!-- Sets the maximum width of the Promo component to be full width. -->
   <dimen name="sprk_promo_breakpoint">680.00dp</dimen><!-- The Promo component breakpoint at which large viewport styles begin. -->
   <dimen name="sprk_promo_image_narrow_max_height">320.00dp</dimen><!-- The maximum height of the image in the Promo component on narrow viewports. -->
-  <dimen name="sprk_promo_image_narrow_max_width">800.00dp</dimen><!-- The maximum width of the image in the Promo component on narrow viewports. -->
+  <dimen name="sprk_promo_image_height">1600.00dp</dimen><!-- The height for the image in the Promo component. -->
+  <dimen name="sprk_promo_image_width">1600.00dp</dimen><!-- The width for the image in the Promo component. -->
+  <dimen name="sprk_promo_image_flag_narrow_max_width">800.00dp</dimen><!-- The maximum width of the Flag image in the Promo component on narrow viewports. -->
+  <dimen name="sprk_promo_image_flag_padding">16.00dp</dimen><!-- The padding for the Flag image in the Promo component. -->
   <dimen name="sprk_border_radius">5.00dp</dimen><!-- Value used for border-radius across the system. -->
   <dimen name="sprk_space_inset_xs">4.00dp</dimen><!-- Value for the extra small inset space. -->
   <dimen name="sprk_space_inset_s">8.00dp</dimen><!-- Value for the small inset space. -->

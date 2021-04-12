@@ -302,14 +302,14 @@ describe('SprkMastheadComponent', () => {
   it('should set the href link of the footer link in selector when using routerLink', () => {
     const mySelector = {
       trigger: {
-        text: 'Select One',
+        text: 'Choose One',
       },
       choices: [
         {
           content: {
             title: 'Choice Title 1',
             infoLine1: 'Information about this choice',
-            infoLine2: 'More Information',
+            infoLine2: 'Additional Information',
           },
           value: 'Choice Title 1',
           active: false,
@@ -342,14 +342,14 @@ describe('SprkMastheadComponent', () => {
   it('should set the href link of the footer link in selector when using href', () => {
     const mySelector = {
       trigger: {
-        text: 'Select One',
+        text: 'Choose One',
       },
       choices: [
         {
           content: {
             title: 'Choice Title 1',
             infoLine1: 'Information about this choice',
-            infoLine2: 'More Information',
+            infoLine2: 'Additional Information',
           },
           value: 'Choice Title 1',
           active: false,

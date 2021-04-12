@@ -59,8 +59,9 @@ export const textInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>Text Input Label</label>
+      <label for="text" sprkLabel>Text Input Label</label>
       <input
+        id="text"
         name="text_input"
         type="text"
         [(ngModel)]="text_input"
@@ -86,8 +87,10 @@ export const invalidTextInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>Text Input Label</label>
+      <label for="invalid-text" sprkLabel>Text Input Label</label>
       <input
+        id="invalid-text"
+        aria-describedby="text-error"
         class="sprk-b-TextInput--error"
         name="text_input"
         type="text"
@@ -96,7 +99,7 @@ export const invalidTextInput = () => ({
         sprkInput
         aria-invalid="true"
       />
-      <span sprkFieldError>
+      <span sprkFieldError id="text-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -123,8 +126,9 @@ export const disabledTextInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label isDisabled="true" sprkLabel>Text Input Label</label>
+      <label for="disabled-text" isDisabled="true" sprkLabel>Text Input Label</label>
       <input
+        id="disabled-text"
         name="text_input"
         type="text"
         [(ngModel)]="text_input"
@@ -152,6 +156,7 @@ export const hugeTextInput = () => ({
   template: `
     <sprk-input-container variant="huge">
       <input
+        id="huge-text"
         placeholder="Placeholder"
         name="text_input_huge"
         type="text"
@@ -160,7 +165,7 @@ export const hugeTextInput = () => ({
         sprkInput
         variant="huge"
       />
-      <label sprkLabel>Text Input Label</label>
+      <label for="huge-text" sprkLabel>Text Input Label</label>
     </sprk-input-container>
   `,
 });
@@ -181,6 +186,8 @@ export const invalidHugeTextInput = () => ({
   template: `
     <sprk-input-container variant="huge">
       <input
+        id="invalid-huge-text"
+        aria-describedby="huge-text-error"
         placeholder="Placeholder"
         name="text_input_huge"
         type="text"
@@ -191,8 +198,8 @@ export const invalidHugeTextInput = () => ({
         sprkInput
         variant="huge"
       />
-      <label sprkLabel>Text Input Label</label>
-      <span sprkFieldError>
+      <label for="invalid-huge-text" sprkLabel>Text Input Label</label>
+      <span sprkFieldError id="huge-text-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -220,6 +227,7 @@ export const disabledHugeTextInput = () => ({
   template: `
     <sprk-input-container variant="huge">
       <input
+        id="disabled-huge-text"
         placeholder="Placeholder"
         name="text_input_huge"
         type="text"
@@ -229,7 +237,7 @@ export const disabledHugeTextInput = () => ({
         variant="huge"
         disabled
       />
-      <label isDisabled="true" sprkLabel>Text Input Label</label>
+      <label for="disabled-huge-text" isDisabled="true" sprkLabel>Text Input Label</label>
     </sprk-input-container>
   `,
 });
@@ -250,6 +258,7 @@ export const legacyHugeTextInput = () => ({
   template: `
     <sprk-huge-input-container>
       <input
+        id="legacy-huge-text"
         placeholder="Placeholder"
         name="text_input_huge"
         type="text"
@@ -257,7 +266,7 @@ export const legacyHugeTextInput = () => ({
         #textInput="ngModel"
         sprkInput
       />
-      <label sprkLabel>Text Input Label</label>
+      <label for="legacy-huge-text" sprkLabel>Text Input Label</label>
     </sprk-huge-input-container>
   `,
 });
@@ -278,6 +287,8 @@ export const legacyInvalidHugeTextInput = () => ({
   template: `
     <sprk-huge-input-container>
       <input
+        id="legacy-invalid-huge-text"
+        aria-describedby="legacy-huge-text-error"
         placeholder="Placeholder"
         name="text_input_huge"
         type="text"
@@ -287,10 +298,10 @@ export const legacyInvalidHugeTextInput = () => ({
         aria-invalid="true"
         sprkInput
       />
-      <label sprkLabel>Text Input Label</label>
-      <span sprkFieldError>
+      <label for="legacy-invalid-huge-text" sprkLabel>Text Input Label</label>
+      <span sprkFieldError id="legacy-huge-text-error">
         <sprk-icon
-          iconName="exclamation-filled"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -316,6 +327,7 @@ export const legacyDisabledHugeTextInput = () => ({
   template: `
     <sprk-huge-input-container>
       <input
+        id="legacy-disabled-huge-text"
         placeholder="Placeholder"
         name="text_input_huge"
         type="text"
@@ -324,7 +336,13 @@ export const legacyDisabledHugeTextInput = () => ({
         sprkInput
         disabled
       />
-      <label class="sprk-b-Label--disabled" sprkLabel>Text Input Label</label>
+      <label
+        for="legacy-disabled-huge-text"
+        class="sprk-b-Label--disabled"
+        sprkLabel
+      >
+        Text Input Label
+      </label>
     </sprk-huge-input-container>
   `,
 });
