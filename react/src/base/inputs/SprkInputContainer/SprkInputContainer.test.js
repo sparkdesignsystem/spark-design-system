@@ -135,42 +135,53 @@ describe('SprkInputContainer ID/htmlFor Tests:', () => {
       </SprkInputContainer>,
     );
     expect(wrapper.find('label').getDOMNode().htmlFor).toBe('testID');
+  });
 
-    const customFor = mount(
+  it(`should set for value of label to match
+  input id if missing on grandchildren`, () => {
+    const wrapper = mount(
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
-          <SprkLabel>With custom for</SprkLabel>
+          <SprkLabel>Missing for</SprkLabel>
           <SprkInput id="testID" />
         </div>
       </SprkInputContainer>,
     );
-    expect(customFor.find('label').getDOMNode().htmlFor).toBe('testID');
+    expect(wrapper.find('label').getDOMNode().htmlFor).toBe('testID');
+  });
 
-    const customID = mount(
+  it(`should set for value of label to match
+  input id if id is missing on grandchildren`, () => {
+    const wrapper = mount(
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
-          <SprkLabel htmlFor="testFor">Input has custom ID</SprkLabel>
+          <SprkLabel htmlFor="testFor">Input has missing ID</SprkLabel>
           <SprkInput />
         </div>
       </SprkInputContainer>,
     );
-    expect(customID.find('label').getDOMNode().htmlFor).toBe(
-      customID.find('input').getDOMNode().id,
+    expect(wrapper.find('label').getDOMNode().htmlFor).toBe(
+      wrapper.find('input').getDOMNode().id,
     );
+  });
 
-    const bothCustom = mount(
+  it(`should set for value of label to match
+  input id if both are missing on grandchildren`, () => {
+    const wrapper = mount(
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
-          <SprkLabel>Input has custom ID</SprkLabel>
+          <SprkLabel>Missing for and ID</SprkLabel>
           <SprkInput />
         </div>
       </SprkInputContainer>,
     );
-    expect(bothCustom.find('label').getDOMNode().htmlFor).toBe(
-      bothCustom.find('input').getDOMNode().id,
+    expect(wrapper.find('label').getDOMNode().htmlFor).toBe(
+      wrapper.find('input').getDOMNode().id,
     );
+  });
 
-    const bothMatch = mount(
+  it(`should not update for or ID if matching on grandchildren`, () => {
+    const wrapper = mount(
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel htmlFor="match">htmlFor and id Match</SprkLabel>
@@ -178,10 +189,11 @@ describe('SprkInputContainer ID/htmlFor Tests:', () => {
         </div>
       </SprkInputContainer>,
     );
-    expect(bothMatch.find('input').getDOMNode().id).toBe('match');
-    expect(bothMatch.find('label').getDOMNode().htmlFor).toBe('match');
+    expect(wrapper.find('input').getDOMNode().id).toBe('match');
+    expect(wrapper.find('label').getDOMNode().htmlFor).toBe('match');
   });
 });
+
 describe('SprkInputContainer aria-describedby Tests:', () => {
   it(`should add the helperTextID to the aria-describedby
   on the input if it isn't present`, () => {
