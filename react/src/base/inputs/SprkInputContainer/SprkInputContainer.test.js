@@ -76,43 +76,52 @@ describe('SprkInputContainer ID/htmlFor Tests:', () => {
       </SprkInputContainer>,
     );
     expect(wrapper.find('label').getDOMNode().htmlFor).toBe('testID');
+  });
 
-    const customFor = mount(
+  it('should set for value of label to match input id if it is missing', () => {
+    const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>With custom for</SprkLabel>
         <SprkInput id="testID" />
       </SprkInputContainer>,
     );
-    expect(customFor.find('label').getDOMNode().htmlFor).toBe('testID');
+    expect(wrapper.find('label').getDOMNode().htmlFor).toBe('testID');
+  });
 
-    const customID = mount(
+  it(`should set the for value of the label to be
+  the default ID of the input`, () => {
+    const wrapper = mount(
       <SprkInputContainer>
-        <SprkLabel htmlFor="testFor">Input has custom ID</SprkLabel>
+        <SprkLabel htmlFor="testFor">Input default ID</SprkLabel>
         <SprkInput />
       </SprkInputContainer>,
     );
-    expect(customID.find('label').getDOMNode().htmlFor).toBe(
-      customID.find('input').getDOMNode().id,
+    expect(wrapper.find('label').getDOMNode().htmlFor).toBe(
+      wrapper.find('input').getDOMNode().id,
     );
+  });
 
-    const bothCustom = mount(
+  it('should set for value of label to match input id if both missing', () => {
+    const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input has custom ID</SprkLabel>
         <SprkInput />
       </SprkInputContainer>,
     );
-    expect(bothCustom.find('label').getDOMNode().htmlFor).toBe(
-      bothCustom.find('input').getDOMNode().id,
+    expect(wrapper.find('label').getDOMNode().htmlFor).toBe(
+      wrapper.find('input').getDOMNode().id,
     );
+  });
 
-    const bothMatch = mount(
+  it('should not update for or id if they are matching', () => {
+    const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel htmlFor="match">htmlFor and id Match</SprkLabel>
         <SprkInput id="match" />
       </SprkInputContainer>,
     );
-    expect(bothMatch.find('input').getDOMNode().id).toBe('match');
-    expect(bothMatch.find('label').getDOMNode().htmlFor).toBe('match');
+    expect(wrapper.find('input').getDOMNode().id).toBe('match');
+    expect(wrapper.find('label').getDOMNode().htmlFor).toBe('match');
   });
 
   it(`should set for value of label to match
