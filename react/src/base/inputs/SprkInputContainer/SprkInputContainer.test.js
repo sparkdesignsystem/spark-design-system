@@ -104,7 +104,7 @@ describe('SprkInputContainer ID/htmlFor Tests:', () => {
   it('should set for value of label to match input id if both missing', () => {
     const wrapper = mount(
       <SprkInputContainer>
-        <SprkLabel>Input has custom ID</SprkLabel>
+        <SprkLabel>Input has default ID</SprkLabel>
         <SprkInput />
       </SprkInputContainer>,
     );
