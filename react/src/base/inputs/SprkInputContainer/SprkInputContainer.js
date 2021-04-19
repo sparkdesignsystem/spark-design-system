@@ -93,12 +93,10 @@ class SprkInputContainer extends Component {
          * before checking for length to avoid running
          * .length on undefined.
          */
-        if (id !== labelFor) {
-          if (child.type.name === SprkLabel.name) {
-            return React.cloneElement(child, {
-              htmlFor: id,
-            });
-          }
+        if (id !== labelFor && child.type.name === SprkLabel.name) {
+          return React.cloneElement(child, {
+            htmlFor: id,
+          });
         }
 
         /*
@@ -121,12 +119,10 @@ class SprkInputContainer extends Component {
           const grandchildrenElements = React.Children.map(
             child.props.children,
             (grandchild) => {
-              if (id !== labelFor) {
-                if (grandchild.type.name === SprkLabel.name) {
-                  return React.cloneElement(grandchild, {
-                    htmlFor: id,
-                  });
-                }
+              if (id !== labelFor && grandchild.type.name === SprkLabel.name) {
+                return React.cloneElement(grandchild, {
+                  htmlFor: id,
+                });
               }
               if (inputAriaDescribedBy && isSprkInput(grandchild)) {
                 return React.cloneElement(grandchild, {

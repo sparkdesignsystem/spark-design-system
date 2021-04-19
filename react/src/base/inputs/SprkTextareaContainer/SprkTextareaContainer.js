@@ -77,12 +77,10 @@ class SprkTextareaContainer extends Component {
          * before checking for length to avoid running
          * .length on undefined.
          */
-        if (id !== labelFor) {
-          if (child.type.name === SprkLabel.name) {
-            return React.cloneElement(child, {
-              htmlFor: id,
-            });
-          }
+        if (id !== labelFor && child.type.name === SprkLabel.name) {
+          return React.cloneElement(child, {
+            htmlFor: id,
+          });
         }
 
         /*
