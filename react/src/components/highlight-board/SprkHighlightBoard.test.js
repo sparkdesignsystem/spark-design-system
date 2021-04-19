@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import sinon from 'sinon';
 import SprkHighlightBoard from './SprkHighlightBoard';
@@ -37,14 +37,14 @@ describe('SprkHighlightBoard:', () => {
   });
 
   it('should render a header when provided', () => {
-    const wrapper = shallow(<SprkHighlightBoard heading="foo" />);
+    const wrapper = mount(<SprkHighlightBoard heading="foo" />);
     const header = wrapper.find('h1.sprk-c-HighlightBoard__heading');
 
     expect(header.length).toBe(1);
   });
 
   it('should render both ctas when provided text for both', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <SprkHighlightBoard ctaText="this is a test" ctaText2="so is this" />,
     );
     const contentDiv = wrapper.find('div.sprk-c-HighlightBoard__cta');
@@ -53,7 +53,7 @@ describe('SprkHighlightBoard:', () => {
   });
 
   it('should not allow a secondary CTA without a primary CTA', () => {
-    const wrapper = shallow(<SprkHighlightBoard ctaText2="so is this" />);
+    const wrapper = mount(<SprkHighlightBoard ctaText2="so is this" />);
     const contentDiv = wrapper.find('div.sprk-c-HighlightBoard__cta');
 
     expect(contentDiv.length).toBe(0);

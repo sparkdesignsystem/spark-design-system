@@ -61,6 +61,7 @@ export const searchInput = () => ({
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
         <label
+          for="search"
           hasIcon="true"
           isHidden="true"
           sprkLabel
@@ -73,13 +74,14 @@ export const searchInput = () => ({
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="search"
           name="inline_search_input"
           class="sprk-b-TextInput--has-svg-icon"
           type="search"
           placeholder="Search"
           [(ngModel)]="inline_search_input"
           #inlineSearchInput="ngModel"
-          data-id="input-search-1"
+          idString="input-search-1"
           sprkInput
         >
       </div>
@@ -104,6 +106,7 @@ export const invalidSearchInput = () => ({
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
         <label
+          for="invalid-search"
           hasIcon="true"
           isHidden="true"
           sprkLabel
@@ -116,18 +119,20 @@ export const invalidSearchInput = () => ({
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="invalid-search"
+          aria-describedby="search-error"
           name="inline_search_input"
           class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
           type="search"
           placeholder="Search"
           [(ngModel)]="inline_search_input"
           #inlineSearchInput="ngModel"
-          data-id="input-search-1"
+          idString="input-search-1"
           sprkInput
           aria-invalid="true"
         >
       </div>
-      <span sprkFieldError>
+      <span sprkFieldError id="search-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -156,6 +161,7 @@ export const disabledSearchInput = () => ({
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
         <label
+          for="disabled-search"
           hasIcon="true"
           isHidden="true"
           isDisabled="true"
@@ -169,13 +175,14 @@ export const disabledSearchInput = () => ({
           sprk-input-icon
         ></sprk-icon>
         <input
+          id="disabled-search"
           name="inline_search_input"
           class="sprk-b-TextInput--has-svg-icon"
           type="search"
           placeholder="Search"
           [(ngModel)]="inline_search_input"
           #inlineSearchInput="ngModel"
-          data-id="input-search-1"
+          idString="input-search-1"
           sprkInput
           disabled
         >
@@ -200,24 +207,26 @@ export const legacyStory = () => ({
   template: `
     <sprk-icon-input-container>
       <label
+        for="legacy-search"
         class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
         sprkLabel
       >
         Search
       </label>
       <sprk-icon
-        iconName="search"
+        iconType="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-search"
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon"
         type="search"
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
-        data-id="input-search-1"
+        idString="input-search-1"
         sprkInput
       >
     </sprk-icon-input-container>
@@ -240,30 +249,33 @@ export const legacyInvalidSearchInput = () => ({
   template: `
     <sprk-icon-input-container>
       <label
+        for="legacy-invalid-search"
         class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
         sprkLabel
       >
         Search
       </label>
       <sprk-icon
-        iconName="search"
+        iconType="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-invalid-search"
+        aria-describedby="legacy-search-error"
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
         type="search"
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
-        data-id="input-search-1"
+        idString="input-search-1"
         sprkInput
         aria-invalid="true"
       >
-      <span sprkFieldError>
+      <span sprkFieldError id="legacy-search-error">
         <sprk-icon
-          iconName="exclamation-filled"
+          iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
@@ -289,24 +301,26 @@ export const legacyDisabledSearchInput = () => ({
   template: `
     <sprk-icon-input-container>
       <label
+        for="legacy-disabled-search"
         class="sprk-b-Label--with-icon sprk-u-ScreenReaderText sprk-b-Label--disabled"
         sprkLabel
       >
         Search
       </label>
       <sprk-icon
-        iconName="search"
+        iconType="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input
+        id="legacy-disabled-search"
         name="inline_search_input"
         class="sprk-b-TextInput--has-svg-icon"
         type="search"
         placeholder="Search"
         [(ngModel)]="inline_search_input"
         #inlineSearchInput="ngModel"
-        data-id="input-search-1"
+        idString="input-search-1"
         sprkInput
         disabled
       >

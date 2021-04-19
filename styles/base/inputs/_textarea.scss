@@ -17,17 +17,22 @@
 
   &:focus {
     border-color: $sprk-text-input-focus-border-color;
+    box-shadow: $sprk-text-input-focus-box-shadow;
   }
 }
 
-.sprk-b-TextArea--error,
+.sprk-b-TextArea--error {
+  border-color: $sprk-text-input-error-border-color;
+}
+
 .sprk-b-TextArea--error:focus {
   border-color: $sprk-text-input-error-border-color;
+  box-shadow: $sprk-text-input-error-focus-box-shadow;
 }
 
 .sprk-b-TextArea[disabled] {
   background-color: $sprk-text-input-disabled-background-color;
   border-color: $sprk-text-input-disabled-border-color;
   color: $sprk-text-input-disabled-color;
-  cursor: not-allowed;
+  cursor: $sprk-text-input-disabled-cursor;
 }

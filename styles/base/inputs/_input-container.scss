@@ -28,10 +28,24 @@
   transition-delay: $sprk-input-huge-transition-delay;
   height: $sprk-input-huge-height;
   border-width: $sprk-input-huge-border-width;
+  border-color: $sprk-input-huge-border-color;
   border-radius: $sprk-text-input-border-radius;
   font-size: $sprk-input-huge-font-size;
   padding: $sprk-input-huge-padding;
   box-shadow: $sprk-input-huge-box-shadow;
+
+  &.sprk-b-TextInput--error {
+    border-color: $sprk-input-huge-error-border-color;
+  }
+
+  &.sprk-b-Select--error {
+    border-color: $sprk-input-huge-error-border-color;
+  }
+}
+
+.sprk-b-InputContainer--huge .sprk-b-TextInput[disabled],
+.sprk-b-InputContainer--huge .sprk-b-Select[disabled] {
+  box-shadow: $sprk-input-huge-box-shadow-disabled;
 }
 
 // Adjust for select open icon
@@ -41,7 +55,18 @@
 
 .sprk-b-InputContainer--huge .sprk-b-TextInput:focus,
 .sprk-b-InputContainer--huge .sprk-b-Select:focus {
-  border-width: $sprk-input-huge-focus-border-width;
+  border-color: $sprk-input-huge-focus-border-color;
+  box-shadow: $sprk-input-huge-focus-box-shadow;
+
+  &.sprk-b-TextInput--error {
+    border-color: $sprk-input-huge-error-border-color;
+    box-shadow: $sprk-input-huge-error-focus-box-shadow;
+  }
+
+  &.sprk-b-Select--error {
+    border-color: $sprk-input-huge-error-border-color;
+    box-shadow: $sprk-input-huge-error-focus-box-shadow;
+  }
 }
 
 /*
@@ -421,8 +446,8 @@
   + .sprk-b-Label {
   top: $sprk-input-huge-label-top;
   font-size: $sprk-input-huge-font-size;
-  color: $sprk-text-input-disabled-color;
-  cursor: not-allowed;
+  color: $sprk-input-huge-color-disabled;
+  cursor: $sprk-input-huge-cursor-disabled;
 }
 
 .sprk-b-InputContainer--huge

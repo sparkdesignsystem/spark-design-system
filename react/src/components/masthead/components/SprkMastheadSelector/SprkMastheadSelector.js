@@ -111,7 +111,6 @@ class SprkMastheadSelector extends Component {
             data-id={idString}
             onClick={this.openDropdown}
             href="#nogo"
-            data-sprk-dropdown-trigger="dropdown-selector"
             aria-haspopup="true"
           >
             <span
@@ -148,6 +147,7 @@ class SprkMastheadSelector extends Component {
                   sprk-o-Stack
                   sprk-o-Stack--split@xxs
                   sprk-o-Stack--center-column
+                  sprk-c-Masthead__selector-dropdown-header-link
                 "
                 onClick={this.closeDropdown}
                 href="#nogo"
@@ -208,7 +208,7 @@ class SprkMastheadSelector extends Component {
             </ul>
 
             {footer && (
-              <div className=" sprk-c-Masthead__selector-footer ">{footer}</div>
+              <div className="sprk-c-Masthead__selector-footer">{footer}</div>
             )}
           </div>
         )}
@@ -280,7 +280,7 @@ SprkMastheadSelector.propTypes = {
 };
 
 SprkMastheadSelector.defaultProps = {
-  defaultTriggerText: 'Choose One...',
+  defaultTriggerText: 'Choose One',
   iconName: 'chevron-down',
   isFlush: false,
 };

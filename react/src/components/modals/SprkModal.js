@@ -12,6 +12,18 @@ import ModalFooter from './ModalFooter';
 import Mask from './Mask';
 
 class SprkModal extends Component {
+  static isTabPressed(e) {
+    return e.key === 'Tab' || e.keyCode === 9;
+  }
+
+  static isEscPressed(e) {
+    return e.key === 'Escape' || e.keyCode === 27;
+  }
+
+  static isActiveElement(elementRef) {
+    return document.activeElement === elementRef;
+  }
+
   constructor(props) {
     super(props);
 
@@ -26,10 +38,6 @@ class SprkModal extends Component {
     this.setInternalFocus = this.setInternalFocus.bind(this);
     this.setExternalFocus = this.setExternalFocus.bind(this);
     this.handleKeyEvents = this.handleKeyEvents.bind(this);
-    this.isTabPressed = this.isTabPressed.bind(this);
-    this.isEscPressed = this.isEscPressed.bind(this);
-    this.getFocusableEls = this.getFocusableEls.bind(this);
-    this.isActiveElement = this.isActiveElement.bind(this);
   }
 
   componentDidMount() {
@@ -67,15 +75,7 @@ class SprkModal extends Component {
     this.removeListeners();
   }
 
-  isTabPressed(e) {
-    return e.key === 'Tab' || e.keyCode === 9;
-  }
-  
-  isEscPressed(e) {
-    return e.key === 'Escape' || e.keyCode === 27;
-  }
-
-  getFocusableEls(containerRef) {
+  static getFocusableEls(containerRef) {
     const focusEls = containerRef.querySelectorAll(
       'a[href], area[href],' +
         'input:not([disabled]),' +
@@ -84,10 +84,6 @@ class SprkModal extends Component {
         'button:not([disabled]), [tabindex="0"]',
     );
     return focusEls;
-  }
-
-  isActiveElement(elementRef) {
-    return document.activeElement === elementRef;
   }
 
   setExternalFocus() {
@@ -227,7 +223,7 @@ class SprkModal extends Component {
         <div
           className={classnames(
             'sprk-c-Modal',
-            isWait ? 'sprk-c-Modal--wait' : '',
+            { 'sprk-c-Modal--wait': isWait },
             additionalClasses,
           )}
           role="dialog"
@@ -260,42 +256,37 @@ class SprkModal extends Component {
               )}
             </header>
 
-            <div>
-              <div
-                className="
-                  sprk-o-Stack__item
-                  sprk-c-Modal__body
-                  sprk-o-Stack
-                  sprk-o-Stack--medium
-                "
-                id={'modalContent_' + this.aria_id}
-              >
-                {isWait && (
-                  <SprkSpinner
-                    size="large"
-                    additionalClasses="
+            <div
+              className={classnames('sprk-o-Stack__item sprk-c-Modal__body', {
+                'sprk-o-Stack sprk-o-Stack--medium': isWait,
+              })}
+              id={'modalContent_' + this.aria_id}
+            >
+              {isWait && (
+                <SprkSpinner
+                  size="large"
+                  additionalClasses="
                       sprk-o-Stack__item
                       sprk-c-Spinner--primary
                     "
-                  />
-                )}
-                <div className="sprk-b-TypeBodyTwo sprk-c-Modal__content">
-                  {children}
-                </div>
-              </div>
-
-              {isChoice && (
-                <ModalFooter
-                  confirmClick={confirmClick}
-                  cancelClick={this.cancel}
-                  confirmText={confirmText}
-                  cancelText={cancelText}
-                  ref={this.footerRef}
-                  confirmAnalyticsString={confirmAnalyticsString}
-                  cancelAnalyticsString={cancelAnalyticsString}
                 />
               )}
+              <div className="sprk-b-TypeBodyTwo sprk-c-Modal__content">
+                {children}
+              </div>
             </div>
+
+            {isChoice && (
+              <ModalFooter
+                confirmClick={confirmClick}
+                cancelClick={this.cancel}
+                confirmText={confirmText}
+                cancelText={cancelText}
+                ref={this.footerRef}
+                confirmAnalyticsString={confirmAnalyticsString}
+                cancelAnalyticsString={cancelAnalyticsString}
+              />
+            )}
           </div>
         </div>
 

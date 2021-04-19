@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import uniqueId from 'lodash/uniqueId';
+import classNames from 'classnames';
 import SprkTextInput from '../SprkTextInput/SprkTextInput';
 
 /**
@@ -24,9 +25,14 @@ class SprkRevealInput extends Component {
 
   render() {
     const { isRevealed, revealControlId } = this.state;
-    const { toggleLabel, ...rest } = this.props;
+    const { toggleLabel, disabled, ...rest } = this.props;
+
     return (
-      <SprkTextInput type={isRevealed ? 'text' : 'password'} {...rest}>
+      <SprkTextInput
+        type={isRevealed ? 'text' : 'password'}
+        disabled={disabled}
+        {...rest}
+      >
         <div
           className="
           sprk-b-Checkbox
@@ -38,10 +44,14 @@ class SprkRevealInput extends Component {
             id={revealControlId}
             type="checkbox"
             onClick={this.toggleReveal}
+            disabled={disabled}
           />
           <label
             htmlFor={revealControlId}
-            className="sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label"
+            className={classNames(
+              'sprk-b-Label sprk-b-Label--inline sprk-b-Checkbox__label',
+              { 'sprk-b-Label--disabled': disabled },
+            )}
           >
             {toggleLabel}
           </label>
@@ -58,8 +68,8 @@ SprkRevealInput.propTypes = {
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving
-   * as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving as a unique selector
+   * for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
@@ -108,10 +118,15 @@ SprkRevealInput.propTypes = {
    * component in the valid or the error state.
    */
   valid: PropTypes.bool,
+  /**
+   * 	If true, will render the component in the disabled state.
+   */
+  disabled: PropTypes.bool,
 };
 
 SprkRevealInput.defaultProps = {
   formatter: (value) => value,
+  helperText: '',
   hiddenLabel: false,
   label: 'Text Input Label',
   textIcon: false,

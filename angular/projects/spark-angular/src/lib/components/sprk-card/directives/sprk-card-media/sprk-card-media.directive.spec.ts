@@ -11,7 +11,7 @@ import { SprkCardMediaDirective } from './sprk-card-media.directive';
 })
 class TestComponent {}
 
-describe('Spark Card Content Directive', () => {
+describe('Spark Card Media Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let mediaElement0: HTMLElement;

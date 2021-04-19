@@ -18,7 +18,8 @@
     "sassdoc": "sassdoc './styles/web/scss/**/_*.scss' --parse > ./src/data/sass-vars.json",
     "clean": "gatsby clean",
     "sassdocmodifiers": "sassdoc './styles/**/_*.scss' --parse > ./src/data/sass-modifiers.json",
-    "sassdocutilities": "sassdoc './styles/utilities/_*.scss' --parse > ./src/data/sass-utilities.json"
+    "sassdocutilities": "sassdoc './styles/utilities/_*.scss' --parse > ./src/data/sass-utilities.json",
+    "installall": "npm install && (cd ./styles/ ; npm install) && (cd ./html/ ; npm install) && (cd ./react/ ; npm install) && (cd ./angular/ ; npm install)"
   },
   "lint-staged": {
     "*.scss": [

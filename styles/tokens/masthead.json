@@ -131,9 +131,15 @@
           "file": "settings",
           "themable": true
         },
+        "hover-color": {
+          "comment": "The color of Masthead Links on hover.",
+          "value": "{red.value}",
+          "file": "settings",
+          "themable": true
+        },
         "icon-hover-color": {
           "comment": "The color of Masthead Icon Links on hover.",
-          "value": "{purple.value}",
+          "value": "{red.value}",
           "file": "settings",
           "themable": true
         },
@@ -381,7 +387,7 @@
           },
           "color": {
             "comment": "The color of the Selector Dropdown title, found in a Masthead with Extended Navigation.",
-            "value": "{black-tint.60.value}",
+            "value": "{black.value}",
             "file": "settings",
             "themable": true
           }
@@ -483,6 +489,23 @@
           },
           "file": "settings",
           "themable": true
+        },
+        "hover": {
+          "font-color": {
+            "comment": "The font color of the Selector when hovered, found in a Masthead with Extended Navigation.",
+            "value": "{purple.value}",
+            "file": "settings",
+            "themable": true
+          },
+          "border": {
+              "comment": "The border of the Selector when hovered, found in a Masthead with Extended Navigation.",
+              "value": "2px solid {purple.value}",
+              "attributes": {
+                "category": "content"
+              },
+              "file": "settings",
+              "themable": true
+          }
         }
       },
       "narrow-height": {
@@ -695,6 +718,23 @@
         "themable": true
       },
       "item": {
+        "active": {
+          "border-bottom": {
+            "comment": "The border bottom of the active big navigation items in the Masthead Extended.",
+            "value": "0.125rem solid {red.value}",
+            "attributes": {
+              "category": "content"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "color": {
+            "comment": "The color of active big navigation items in the Extended Masthead.",
+            "value": "{red.value}",
+            "file": "settings",
+            "themable": true
+          }
+        },
         "border-bottom": {
           "comment": "The border bottom of the big navigation items in the Masthead Extended.",
           "value": "0.125rem solid transparent",
@@ -704,18 +744,9 @@
           "file": "settings",
           "themable": true
         },
-        "active-border-bottom": {
-          "comment": "The border bottom of the active big navigation items in the Masthead Extended.",
-          "value": "0.125rem solid {red.value}",
-          "attributes": {
-            "category": "content"
-          },
-          "file": "settings",
-          "themable": true
-        },
         "open-border-bottom": {
           "comment": "The border bottom of open big navigation items in the Masthead Extended.",
-          "value": "{big-nav.item.active-border-bottom.value}",
+          "value": "{big-nav.item.active.border-bottom.value}",
           "attributes": {
             "category": "content"
           },

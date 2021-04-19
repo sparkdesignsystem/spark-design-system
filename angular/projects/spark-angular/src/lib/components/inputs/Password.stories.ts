@@ -14,6 +14,14 @@ import { SprkCheckboxLabelModule } from '../../directives/inputs/sprk-checkbox-l
 import { SprkCheckboxLabelDirective } from '../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.directive';
 import { SprkCheckboxInputModule } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
 import { SprkCheckboxInputDirective } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
+import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
+import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
+import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
+import { SprkSelectionContainerComponent } from './sprk-selection-container/sprk-selection-container.component';
+import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
+import { SprkSelectionItemContainerComponent } from './sprk-selection-item-container/sprk-selection-item-container.component';
+import { SprkSelectionInputDirective } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
+import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -26,6 +34,10 @@ export default {
     SprkCheckboxInputDirective,
     SprkCheckboxLabelDirective,
     SprkFieldErrorDirective,
+    SprkSelectionLabelDirective,
+    SprkSelectionContainerComponent,
+    SprkSelectionItemContainerComponent,
+    SprkSelectionInputDirective,
   },
   decorators: [
     storyWrapper(
@@ -63,6 +75,10 @@ const modules = {
     SprkCheckboxInputModule,
     SprkCheckboxLabelModule,
     SprkCheckboxItemModule,
+    SprkSelectionContainerModule,
+    SprkSelectionItemContainerModule,
+    SprkSelectionInputModule,
+    SprkSelectionLabelModule,
   ],
 };
 
@@ -70,8 +86,8 @@ export const passwordInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>Password</label>
-      <input type="password" name="password_input" sprkInput />
+      <label for="password" sprkLabel>Password</label>
+      <input id="password" type="password" name="password_input" sprkInput />
       <sprk-checkbox-item
         isVisibilityToggle="true"
       >
@@ -104,8 +120,10 @@ export const invalidPasswordInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label sprkLabel>Password</label>
+      <label for="invalid-password" sprkLabel>Password</label>
       <input
+        id="invalid-password"
+        aria-describedby="password-error"
         type="password"
         name="password_input"
         sprkInput
@@ -122,7 +140,7 @@ export const invalidPasswordInput = () => ({
         />
         <label for="show-password" sprkCheckboxLabel>Show Password</label>
       </sprk-checkbox-item>
-      <span sprkFieldError>
+      <span sprkFieldError id="password-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -152,8 +170,14 @@ export const disabledPasswordInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label isDisabled="true" sprkLabel>Password</label>
-      <input type="password" name="password_input" sprkInput disabled />
+      <label for="disabled-password" isDisabled="true" sprkLabel>Password</label>
+      <input
+        id="disabled-password"
+        type="password"
+        name="password_input"
+        sprkInput
+        disabled
+      />
       <sprk-checkbox-item
         isVisibilityToggle="true"
       >
@@ -178,6 +202,120 @@ disabledPasswordInput.story = {
       'sprk-input.directive',
       'sprk-checkbox-input.directive',
       'sprk-checkbox-label.directive',
+      'sprk-label.directive',
+    ],
+  },
+};
+
+export const legacy = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Password</label>
+      <input type="password" name="password_input" sprkInput />
+      <sprk-selection-item-container
+        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+      >
+        <input
+          type="checkbox"
+          sprkSelectionInput
+          id="show-password"
+        />
+        <label for="show-password" sprkSelectionLabel>Show Password</label>
+      </sprk-selection-item-container>
+    </sprk-input-container>
+  `,
+});
+
+legacy.story = {
+  name: 'Legacy (Deprecated)',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-input.directive',
+      'sprk-selection-input.directive',
+      'sprk-label.directive',
+    ],
+  },
+};
+
+export const legacyInvalidPasswordInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label sprkLabel>Password</label>
+      <input
+        type="password"
+        name="password_input"
+        sprkInput
+        class="sprk-b-TextInput--error"
+        aria-invalid="true"
+      />
+      <sprk-selection-item-container
+        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+      >
+        <input
+          type="checkbox"
+          sprkSelectionInput
+          id="show-password"
+        />
+        <label for="show-password" sprkSelectionLabel>Show Password</label>
+      </sprk-selection-item-container>
+      <span sprkFieldError>
+        <sprk-icon
+          iconType="exclamation-filled"
+          additionalClasses="sprk-b-ErrorIcon"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  `,
+});
+
+legacyInvalidPasswordInput.story = {
+  name: 'Legacy Invalid (Deprecated)',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-input.directive',
+      'sprk-selection-input.directive',
+      'sprk-label.directive',
+      'sprk-field-error.directive',
+    ],
+  },
+};
+
+export const legacyDisabledPasswordInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label class="sprk-b-Label--disabled" sprkLabel>Password</label>
+      <input type="password" name="password_input" sprkInput disabled />
+      <sprk-selection-item-container
+        additionalClasses="sprk-b-InputContainer__visibility-toggle"
+      >
+        <input
+          type="checkbox"
+          sprkSelectionInput
+          id="show-password"
+          disabled
+        />
+        <label class="sprk-b-Label--disabled" for="show-password" sprkSelectionLabel>Show Password</label>
+      </sprk-selection-item-container>
+    </sprk-input-container>
+  `,
+});
+
+legacyDisabledPasswordInput.story = {
+  name: 'Legacy Disabled (Deprecated)',
+  parameters: {
+    jest: [
+      'sprk-input-container.component',
+      'sprk-selection-item-container.component',
+      'sprk-input.directive',
+      'sprk-selection-input.directive',
       'sprk-label.directive',
     ],
   },

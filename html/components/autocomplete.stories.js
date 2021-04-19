@@ -28,7 +28,7 @@ browser focus, which stays in the input.
   \`aria-haspopup="listbox"\`. These attributes correctly identify the control
   to Assistive Technology.
 - The input should have \`aria-autocomplete="list"\`.
-  This attribute correctly identifies the control to Assistive Technology.
+  This attribute correctly identifies the control to assistive technology.
 - The input should have \`autocomplete="off"\`, \`autocapitalize="off"\`,
   and \`spellcheck="false"\`. These attributes deactivate default browser
   behavior that can interfere with autocomplete behavior.
