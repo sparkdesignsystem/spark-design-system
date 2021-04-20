@@ -32,4 +32,17 @@ describe('SprkLegend:', () => {
     const wrapper = shallow(<SprkLegend idString={expected} />);
     expect(wrapper.find('.sprk-b-Legend').prop('data-id')).toEqual(expected);
   });
+  it('should set aria-describedby attribute if value provided', () => {
+    const wrapper = shallow(<SprkLegend ariaDescribedBy="error-id" />);
+    expect(wrapper.find('.sprk-b-Legend').prop('aria-describedby')).toBe(
+      'error-id',
+    );
+  });
+
+  it('should not set aria-describedby attr if not provided', () => {
+    const wrapper = shallow(<SprkLegend />);
+    expect(wrapper.find('.sprk-b-Legend').prop('aria-describedby')).toBe(
+      undefined,
+    );
+  });
 });
