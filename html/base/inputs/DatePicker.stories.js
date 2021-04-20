@@ -52,8 +52,9 @@ export const defaultStory = () => {
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
+            sprk-b-InputContainer__icon
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
@@ -110,8 +111,9 @@ export const invalidDatePicker = () => {
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
+            sprk-b-InputContainer__icon
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
@@ -180,8 +182,9 @@ export const disabledDatePicker = () => {
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
+            sprk-b-InputContainer__icon
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"

@@ -106,6 +106,7 @@ export const defaultStory = () => {
       >
         <svg
           class="
+            sprk-b-InputContainer__icon
             sprk-c-Icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -241,6 +242,7 @@ export const defaultInvalid = () => {
       >
         <svg
           class="
+            sprk-b-InputContainer__icon
             sprk-c-Icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -385,6 +387,7 @@ export const defaultDisabled = () => {
       >
         <svg
           class="
+            sprk-b-InputContainer__icon
             sprk-c-Icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -514,6 +517,7 @@ export const hugeStory = () => {
     >
       <svg
         class="
+          sprk-b-InputContainer__icon
           sprk-c-Icon
           sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
@@ -648,6 +652,7 @@ export const hugeInvalid = () => {
     >
       <svg
         class="
+          sprk-b-InputContainer__icon
           sprk-c-Icon
           sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
@@ -793,6 +798,7 @@ export const hugeDisabled = () => {
     >
       <svg
         class="
+          sprk-b-InputContainer__icon
           sprk-c-Icon
           sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
