@@ -99,7 +99,7 @@ export const invalidPercentageInput = () => ({
       <div class="
         sprk-b-InputContainer__icon-container
         sprk-b-InputContainer__icon-container--narrow"
-      >      
+      >
         <label for="invalid-percentage" sprkLabel>Percentage</label>
         <sprk-icon
           iconName="percent"

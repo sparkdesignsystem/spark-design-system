@@ -70,7 +70,7 @@ export const searchInput = () => ({
         </label>
         <sprk-icon
           iconName="search"
-          additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-b-InputContainer__icon sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
         ></sprk-icon>
         <input
@@ -115,7 +115,7 @@ export const invalidSearchInput = () => ({
         </label>
         <sprk-icon
           iconName="search"
-          additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-b-InputContainer__icon sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
         ></sprk-icon>
         <input
@@ -171,7 +171,7 @@ export const disabledSearchInput = () => ({
         </label>
         <sprk-icon
           iconName="search"
-          additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-b-InputContainer__icon sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
         ></sprk-icon>
         <input
@@ -215,7 +215,7 @@ export const legacyStory = () => ({
       </label>
       <sprk-icon
         iconType="search"
-        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InputContainer__icon sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input
@@ -257,7 +257,7 @@ export const legacyInvalidSearchInput = () => ({
       </label>
       <sprk-icon
         iconType="search"
-        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InputContainer__icon sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input
@@ -309,7 +309,7 @@ export const legacyDisabledSearchInput = () => ({
       </label>
       <sprk-icon
         iconType="search"
-        additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InputContainer__icon sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
       ></sprk-icon>
       <input
