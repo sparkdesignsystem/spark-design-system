@@ -10,6 +10,7 @@ import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-i
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { SprkTooltipModule } from '../sprk-tooltip/sprk-tooltip.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -52,6 +53,7 @@ const modules = {
     SprkIconModule,
     SprkFieldErrorModule,
     SprkIconInputContainerModule,
+    SprkTooltipModule,
   ],
 };
 
@@ -63,7 +65,12 @@ export const percentageInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-InputContainer__icon-container--narrow"
       >
-        <label for="percentage" sprkLabel>Percentage</label>
+        <label for="percentage" sprkLabel>Percentage  <sprk-tooltip
+        iconAdditionalClasses="sprk-c-Icon--filled"
+      >
+        Use Tooltips to provide info that is not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </sprk-tooltip></label>
         <sprk-icon
           iconName="percent"
           additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
@@ -100,7 +107,12 @@ export const invalidPercentageInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-InputContainer__icon-container--narrow"
       >
-        <label for="invalid-percentage" sprkLabel>Percentage</label>
+        <label for="invalid-percentage" sprkLabel>Percentage   <sprk-tooltip
+        iconAdditionalClasses="sprk-c-Icon--filled"
+      >
+        Use Tooltips to provide info that is not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </sprk-tooltip></label>
         <sprk-icon
           iconName="percent"
           additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
@@ -147,7 +159,12 @@ export const disabledPercentageInput = () => ({
         sprk-b-InputContainer__icon-container
         sprk-b-InputContainer__icon-container--narrow"
       >
-        <label for="disabled-percentage" isDisabled="true" sprkLabel>Percentage</label>
+        <label for="disabled-percentage" isDisabled="true" sprkLabel>Percentage   <sprk-tooltip
+        iconAdditionalClasses="sprk-c-Icon--filled"
+      >
+        Use Tooltips to provide info that is not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </sprk-tooltip></label>
         <sprk-icon
           iconName="percent"
           additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
@@ -181,7 +198,12 @@ export const legacyStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
-      <label for="legacy-percentage" sprkLabel>Percentage</label>
+      <label for="legacy-percentage" sprkLabel>Percentage   <sprk-tooltip
+      iconAdditionalClasses="sprk-c-Icon--filled"
+    >
+      Use Tooltips to provide info that is not vital to completing the task.
+      Keep the text short and stick to what’s helpful and relevant.
+    </sprk-tooltip></label>
       <sprk-icon
         iconType="percent"
         additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
@@ -213,7 +235,12 @@ export const legacyInvalidPercentageInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
-      <label for="legacy-invalid-percentage" sprkLabel>Percentage</label>
+      <label for="legacy-invalid-percentage" sprkLabel>Percentage   <sprk-tooltip
+      iconAdditionalClasses="sprk-c-Icon--filled"
+    >
+      Use Tooltips to provide info that is not vital to completing the task.
+      Keep the text short and stick to what’s helpful and relevant.
+    </sprk-tooltip></label>
       <sprk-icon
         iconType="percent"
         additionalClasses="sprk-b-InputContainer__icon sprk-b-InputContainer__icon--right"
@@ -261,6 +288,12 @@ export const legacyDisabledPercentageInput = () => ({
         sprkLabel
       >
         Percentage
+        <sprk-tooltip
+        iconAdditionalClasses="sprk-c-Icon--filled"
+      >
+        Use Tooltips to provide info that is not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </sprk-tooltip>
       </label>
       <sprk-icon
         iconType="percent"

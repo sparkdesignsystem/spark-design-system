@@ -1,6 +1,7 @@
 import { useEffect } from '@storybook/client-api';
 import { autocomplete } from './autocomplete';
 import { hugeInput } from '../base/inputs/hugeInput';
+import { tooltip } from './tooltip';
 import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -84,6 +85,7 @@ a "No results found" message or an item that is hidden by a filter.
 export const defaultStory = () => {
   useEffect(() => {
     autocomplete();
+    tooltip();
   }, []);
 
   return `
@@ -94,7 +96,32 @@ export const defaultStory = () => {
         for="autocomplete-input"
         class="sprk-b-Label"
       >
-        Search for a Fruit
+        Search for a Fruit  <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
+        <button
+          type="button"
+          data-sprk-tooltip="trigger"
+          class="sprk-c-Tooltip__trigger"
+          aria-labelledby="tooltip_1"
+          type="button"
+        >
+          <svg
+            class="sprk-c-Icon sprk-c-Icon--filled"
+            aria-hidden="true"
+          >
+            <use xlink:href="#question-filled" />
+          </svg>
+        </button>
+        <span
+          data-sprk-tooltip="content"
+          class="sprk-c-Tooltip"
+          aria-hidden="true"
+          id="tooltip_1"
+          role="tooltip"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </span>
+      </span>
       </label>
 
       <div
@@ -220,6 +247,7 @@ defaultStory.story = {
 export const defaultInvalid = () => {
   useEffect(() => {
     autocomplete();
+    tooltip();
   }, []);
 
   return `
@@ -230,7 +258,32 @@ export const defaultInvalid = () => {
         for="autocomplete-input-invalid"
         class="sprk-b-Label"
       >
-        Search for a Fruit
+        Search for a Fruit  <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
+        <button
+          type="button"
+          data-sprk-tooltip="trigger"
+          class="sprk-c-Tooltip__trigger"
+          aria-labelledby="tooltip_1"
+          type="button"
+        >
+          <svg
+            class="sprk-c-Icon sprk-c-Icon--filled"
+            aria-hidden="true"
+          >
+            <use xlink:href="#question-filled" />
+          </svg>
+        </button>
+        <span
+          data-sprk-tooltip="content"
+          class="sprk-c-Tooltip"
+          aria-hidden="true"
+          id="tooltip_1"
+          role="tooltip"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </span>
+      </span>
       </label>
 
       <div
@@ -365,6 +418,7 @@ defaultInvalid.story = {
 export const defaultDisabled = () => {
   useEffect(() => {
     autocomplete();
+    tooltip();
   }, []);
 
   return `
@@ -375,7 +429,32 @@ export const defaultDisabled = () => {
         for="autocomplete-input-disabled"
         class="sprk-b-Label sprk-b-Label--disabled"
       >
-        Search for a Fruit
+        Search for a Fruit  <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
+        <button
+          type="button"
+          data-sprk-tooltip="trigger"
+          class="sprk-c-Tooltip__trigger"
+          aria-labelledby="tooltip_1"
+          type="button"
+        >
+          <svg
+            class="sprk-c-Icon sprk-c-Icon--filled"
+            aria-hidden="true"
+          >
+            <use xlink:href="#question-filled" />
+          </svg>
+        </button>
+        <span
+          data-sprk-tooltip="content"
+          class="sprk-c-Tooltip"
+          aria-hidden="true"
+          id="tooltip_1"
+          role="tooltip"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </span>
+      </span>
       </label>
 
       <div
@@ -500,6 +579,7 @@ export const hugeStory = () => {
   useEffect(() => {
     autocomplete();
     hugeInput();
+    tooltip();
   }, []);
 
   return `
@@ -544,7 +624,32 @@ export const hugeStory = () => {
         id="input-label-huge"
         class="sprk-b-Label"
       >
-        Search for a Fruit
+        Search for a Fruit  <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
+        <button
+          type="button"
+          data-sprk-tooltip="trigger"
+          class="sprk-c-Tooltip__trigger"
+          aria-labelledby="tooltip_1"
+          type="button"
+        >
+          <svg
+            class="sprk-c-Icon sprk-c-Icon--filled"
+            aria-hidden="true"
+          >
+            <use xlink:href="#question-filled" />
+          </svg>
+        </button>
+        <span
+          data-sprk-tooltip="content"
+          class="sprk-c-Tooltip"
+          aria-hidden="true"
+          id="tooltip_1"
+          role="tooltip"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </span>
+      </span>
       </label>
     </div>
 
@@ -635,6 +740,7 @@ export const hugeInvalid = () => {
   useEffect(() => {
     autocomplete();
     hugeInput();
+    tooltip();
   }, []);
 
   return `
@@ -680,7 +786,32 @@ export const hugeInvalid = () => {
         id="autocomplete-huge-label-invalid"
         class="sprk-b-Label"
       >
-        Search for a Fruit
+        Search for a Fruit  <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
+        <button
+          type="button"
+          data-sprk-tooltip="trigger"
+          class="sprk-c-Tooltip__trigger"
+          aria-labelledby="tooltip_1"
+          type="button"
+        >
+          <svg
+            class="sprk-c-Icon sprk-c-Icon--filled"
+            aria-hidden="true"
+          >
+            <use xlink:href="#question-filled" />
+          </svg>
+        </button>
+        <span
+          data-sprk-tooltip="content"
+          class="sprk-c-Tooltip"
+          aria-hidden="true"
+          id="tooltip_1"
+          role="tooltip"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </span>
+      </span>
       </label>
     </div>
 
@@ -781,6 +912,7 @@ export const hugeDisabled = () => {
   useEffect(() => {
     autocomplete();
     hugeInput();
+    tooltip();
   }, []);
 
   return `
@@ -826,7 +958,32 @@ export const hugeDisabled = () => {
         id="autocomplete-label-huge-disabled"
         class="sprk-b-Label sprk-b-Label--disabled"
       >
-        Search for a Fruit
+        Search for a Fruit  <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
+        <button
+          type="button"
+          data-sprk-tooltip="trigger"
+          class="sprk-c-Tooltip__trigger"
+          aria-labelledby="tooltip_1"
+          type="button"
+        >
+          <svg
+            class="sprk-c-Icon sprk-c-Icon--filled"
+            aria-hidden="true"
+          >
+            <use xlink:href="#question-filled" />
+          </svg>
+        </button>
+        <span
+          data-sprk-tooltip="content"
+          class="sprk-c-Tooltip"
+          aria-hidden="true"
+          id="tooltip_1"
+          role="tooltip"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </span>
+      </span>
       </label>
     </div>
 

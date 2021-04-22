@@ -9,6 +9,7 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
 import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.module';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkTooltipModule } from '../sprk-tooltip/sprk-tooltip.module';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -63,6 +64,7 @@ const modules = {
     SprkIconModule,
     SprkFieldErrorModule,
     SprkDatepickerModule,
+    SprkTooltipModule,
     SprkIconInputContainerModule,
   ],
 };
@@ -74,6 +76,12 @@ export const defaultStory = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label for="datepicker" hasIcon="true" sprkLabel>
           Date Input
+          <sprk-tooltip
+          iconAdditionalClasses="sprk-c-Icon--filled"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </sprk-tooltip>
         </label>
         <sprk-icon
           iconName="calendar"
@@ -115,6 +123,12 @@ export const invalidDatePicker = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label for="invalid-datepicker" hasIcon="true" sprkLabel>
           Date Input
+          <sprk-tooltip
+          iconAdditionalClasses="sprk-c-Icon--filled"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </sprk-tooltip>
         </label>
         <sprk-icon
           iconName="calendar"
@@ -166,6 +180,12 @@ export const disabledDatePicker = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label for="disabled-datepicker" hasIcon="true" sprkLabel isDisabled="true">
           Date Input
+          <sprk-tooltip
+          iconAdditionalClasses="sprk-c-Icon--filled"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </sprk-tooltip>
         </label>
         <sprk-icon
           iconName="calendar"
@@ -207,6 +227,12 @@ export const legacyStory = () => ({
     <sprk-icon-input-container>
       <label for="legacy-datepicker" class="sprk-b-Label--with-icon" sprkLabel>
         Date Input
+        <sprk-tooltip
+        iconAdditionalClasses="sprk-c-Icon--filled"
+      >
+        Use Tooltips to provide info that is not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </sprk-tooltip>
       </label>
       <sprk-icon
         iconType="calendar"
@@ -248,6 +274,12 @@ export const legacyInvalidDatePicker = () => ({
     <sprk-icon-input-container>
       <label for="legacy-invalid-datepicker" class="sprk-b-Label--with-icon" sprkLabel>
         Date Input
+        <sprk-tooltip
+        iconAdditionalClasses="sprk-c-Icon--filled"
+      >
+        Use Tooltips to provide info that is not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </sprk-tooltip>
       </label>
       <sprk-icon
         iconType="calendar"
@@ -299,6 +331,12 @@ export const legacyDisabledDatePicker = () => ({
     <sprk-icon-input-container>
       <label for="legacy-disabled-datepicker" class="sprk-b-Label--with-icon sprk-b-Label--disabled" sprkLabel>
         Date Input
+        <sprk-tooltip
+        iconAdditionalClasses="sprk-c-Icon--filled"
+      >
+        Use Tooltips to provide info that is not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </sprk-tooltip>
       </label>
       <sprk-icon
         iconType="calendar"

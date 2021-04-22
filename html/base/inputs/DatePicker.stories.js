@@ -1,5 +1,6 @@
 import { useEffect } from '@storybook/client-api';
 import { datePicker } from './datePicker';
+import { tooltip } from '../../components/tooltip';
 import '../../utilities/polyfills/classListSVG';
 import { markdownDocumentationLinkBuilder } from '../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
@@ -35,6 +36,7 @@ Github for customization options.
 export const defaultStory = () => {
   useEffect(() => {
     datePicker();
+    tooltip();
   }, []);
   return `
     <div
@@ -46,7 +48,32 @@ export const defaultStory = () => {
         for="datepicker"
         class="sprk-b-Label sprk-b-Label--with-icon"
       >
-        Date
+        Date   <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
+        <button
+          type="button"
+          data-sprk-tooltip="trigger"
+          class="sprk-c-Tooltip__trigger"
+          aria-labelledby="tooltip_1"
+          type="button"
+        >
+          <svg
+            class="sprk-c-Icon sprk-c-Icon--filled"
+            aria-hidden="true"
+          >
+            <use xlink:href="#question-filled" />
+          </svg>
+        </button>
+        <span
+          data-sprk-tooltip="content"
+          class="sprk-c-Tooltip"
+          aria-hidden="true"
+          id="tooltip_1"
+          role="tooltip"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </span>
+      </span>
       </label>
 
       <div class="sprk-b-TextInputIconContainer">
@@ -94,6 +121,7 @@ defaultStory.story = {
 export const invalidDatePicker = () => {
   useEffect(() => {
     datePicker();
+    tooltip();
   }, []);
   return `
     <div
@@ -105,7 +133,32 @@ export const invalidDatePicker = () => {
         for="datepicker"
         class="sprk-b-Label sprk-b-Label--with-icon"
       >
-        Date
+        Date   <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
+        <button
+          type="button"
+          data-sprk-tooltip="trigger"
+          class="sprk-c-Tooltip__trigger"
+          aria-labelledby="tooltip_1"
+          type="button"
+        >
+          <svg
+            class="sprk-c-Icon sprk-c-Icon--filled"
+            aria-hidden="true"
+          >
+            <use xlink:href="#question-filled" />
+          </svg>
+        </button>
+        <span
+          data-sprk-tooltip="content"
+          class="sprk-c-Tooltip"
+          aria-hidden="true"
+          id="tooltip_1"
+          role="tooltip"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </span>
+      </span>
       </label>
 
       <div class="sprk-b-TextInputIconContainer">
@@ -165,6 +218,7 @@ invalidDatePicker.story = {
 export const disabledDatePicker = () => {
   useEffect(() => {
     datePicker();
+    tooltip();
   }, []);
   return `
     <div
@@ -176,7 +230,32 @@ export const disabledDatePicker = () => {
         for="datepicker"
         class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--with-icon"
       >
-        Date
+        Date   <span data-sprk-tooltip="container" class="sprk-c-Tooltip__container">
+        <button
+          type="button"
+          data-sprk-tooltip="trigger"
+          class="sprk-c-Tooltip__trigger"
+          aria-labelledby="tooltip_1"
+          type="button"
+        >
+          <svg
+            class="sprk-c-Icon sprk-c-Icon--filled"
+            aria-hidden="true"
+          >
+            <use xlink:href="#question-filled" />
+          </svg>
+        </button>
+        <span
+          data-sprk-tooltip="content"
+          class="sprk-c-Tooltip"
+          aria-hidden="true"
+          id="tooltip_1"
+          role="tooltip"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </span>
+      </span>
       </label>
 
       <div class="sprk-b-TextInputIconContainer">

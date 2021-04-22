@@ -10,6 +10,7 @@ import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-c
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { SprkTooltipModule } from '../sprk-tooltip/sprk-tooltip.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -51,6 +52,7 @@ const modules = {
     SprkLabelModule,
     SprkInputModule,
     SprkIconModule,
+    SprkTooltipModule,
     SprkFieldErrorModule,
   ],
 };
@@ -67,6 +69,12 @@ export const searchInput = () => ({
           sprkLabel
         >
           Search
+          <sprk-tooltip
+          iconAdditionalClasses="sprk-c-Icon--filled"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </sprk-tooltip>
         </label>
         <sprk-icon
           iconName="search"
@@ -112,6 +120,12 @@ export const invalidSearchInput = () => ({
           sprkLabel
         >
           Search
+          <sprk-tooltip
+          iconAdditionalClasses="sprk-c-Icon--filled"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </sprk-tooltip>
         </label>
         <sprk-icon
           iconName="search"
@@ -168,6 +182,12 @@ export const disabledSearchInput = () => ({
           sprkLabel
         >
           Search
+          <sprk-tooltip
+          iconAdditionalClasses="sprk-c-Icon--filled"
+        >
+          Use Tooltips to provide info that is not vital to completing the task.
+          Keep the text short and stick to what’s helpful and relevant.
+        </sprk-tooltip>
         </label>
         <sprk-icon
           iconName="search"
@@ -212,6 +232,12 @@ export const legacyStory = () => ({
         sprkLabel
       >
         Search
+        <sprk-tooltip
+        iconAdditionalClasses="sprk-c-Icon--filled"
+      >
+        Use Tooltips to provide info that is not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </sprk-tooltip>
       </label>
       <sprk-icon
         iconType="search"
@@ -254,6 +280,12 @@ export const legacyInvalidSearchInput = () => ({
         sprkLabel
       >
         Search
+        <sprk-tooltip
+        iconAdditionalClasses="sprk-c-Icon--filled"
+      >
+        Use Tooltips to provide info that is not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </sprk-tooltip>
       </label>
       <sprk-icon
         iconType="search"
@@ -306,6 +338,12 @@ export const legacyDisabledSearchInput = () => ({
         sprkLabel
       >
         Search
+        <sprk-tooltip
+        iconAdditionalClasses="sprk-c-Icon--filled"
+      >
+        Use Tooltips to provide info that is not vital to completing the task.
+        Keep the text short and stick to what’s helpful and relevant.
+      </sprk-tooltip>
       </label>
       <sprk-icon
         iconType="search"
