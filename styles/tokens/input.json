@@ -708,7 +708,7 @@
     "text-icon": {
       "z-index": {
         "comment": "The z-index of text icons inside Inputs.",
-        "value": "{layer.height.xs.value}",
+        "value": "0",
         "file": "settings",
         "themable": true
       },
