@@ -80,7 +80,7 @@ export const defaultStory = () => ({
           iconAdditionalClasses="sprk-c-Icon--filled"
         >
           Use Tooltips to provide info that is not vital to completing the task.
-          Keep the text short and stick to what’s helpful and relevant.asdfasdfsdf
+          Keep the text short and stasdfasdfick to what’s helpful and relevant.asdfasdfsdf
         </sprk-tooltip>
         </label>
         <sprk-icon
