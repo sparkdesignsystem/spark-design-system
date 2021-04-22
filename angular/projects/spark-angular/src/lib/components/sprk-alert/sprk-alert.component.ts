@@ -21,7 +21,7 @@ import {
         <sprk-icon
           [iconName]="getIconName()"
           additionalClasses="sprk-c-Alert__icon sprk-c-Icon--xl sprk-c-Icon--filled sprk-c-Icon--filled-current-color"
-          aria-hidden="true"
+          ariaHidden="true"
         ></sprk-icon>
 
         <p class="sprk-c-Alert__text"><ng-content></ng-content></p>
@@ -37,7 +37,7 @@ import {
         <sprk-icon
           iconName="{{ dismissIconName }}"
           additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
-          aria-hidden="true"
+          ariaHidden="true"
         ></sprk-icon>
       </button>
     </div>
