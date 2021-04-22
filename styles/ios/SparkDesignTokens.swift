@@ -283,10 +283,10 @@ public class SparkDesignTokens {
     public static let sprkInputHugeTransitionDelay = "0s"
     public static let sprkInputIconOffsetX = CGFloat(16.00)
     public static let sprkInputIconOffsetY = CGFloat(16.00)
-    public static let sprkInputIconZIndex = CGFloat(16.00)
+    public static let sprkInputIconZIndex = 0
     public static let sprkInputTextIconFontWeight = 700
     public static let sprkInputTextIconOffsetX = CGFloat(16.00)
-    public static let sprkInputTextIconZIndex = 0
+    public static let sprkInputTextIconZIndex = CGFloat(16.00)
     public static let sprkLabelDisabledColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkLabelFontWeight = 400
     public static let sprkLineHeightDisplayOneWide = 1.03
