@@ -37,6 +37,7 @@ class SprkTextInput extends Component {
       valid,
       value,
       ariaDescribedBy,
+      iconAriaHidden,
       ...rest
     } = this.props;
     const { id, errorContainerId } = this.state;
@@ -52,6 +53,7 @@ class SprkTextInput extends Component {
           textIcon={textIcon}
           narrowWidth={narrowWidth}
           iconRight={iconRight}
+          ariaHidden={iconAriaHidden}
         >
           <SprkLabelLocationCheck
             type={type}
@@ -172,6 +174,10 @@ SprkTextInput.propTypes = {
    * attribute on the Input.
    */
   ariaDescribedBy: PropTypes.string,
+  /**
+   * 	The value of aria-hidden on the icon inside the input element.
+   */
+  iconAriaHidden: PropTypes.bool,
 };
 
 SprkTextInput.defaultProps = {
@@ -191,6 +197,7 @@ SprkTextInput.defaultProps = {
   textIcon: false,
   valid: true,
   disabled: false,
+  // iconAriaHidden: false,
 };
 
 export default SprkTextInput;

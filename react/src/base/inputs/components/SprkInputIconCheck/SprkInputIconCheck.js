@@ -9,6 +9,7 @@ const SprkInputIconCheck = ({
   textIcon,
   narrowWidth,
   iconRight,
+  ariaHidden,
 }) => {
   if (leadingIcon || textIcon) {
     return (
@@ -27,6 +28,7 @@ const SprkInputIconCheck = ({
               'sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color': true,
               'sprk-b-InputContainer__icon--right': iconRight,
             })}
+            aria-hidden={ariaHidden}
           />
         )}
         {children}
@@ -41,6 +43,7 @@ SprkInputIconCheck.propTypes = {
   textIcon: propTypes.bool,
   narrowWidth: propTypes.bool,
   iconRight: propTypes.bool,
+  ariaHidden: propTypes.bool,
 };
 
 export default SprkInputIconCheck;
