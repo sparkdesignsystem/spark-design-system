@@ -112,6 +112,7 @@ export const defaultStory = () => {
           "
           viewBox="0 0 64 64"
           aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#search" />
         </svg>
@@ -247,6 +248,7 @@ export const defaultInvalid = () => {
           "
           viewBox="0 0 64 64"
           aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#search" />
         </svg>
@@ -391,6 +393,7 @@ export const defaultDisabled = () => {
           "
           viewBox="0 0 64 64"
           aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#search" />
         </svg>
@@ -518,7 +521,9 @@ export const hugeStory = () => {
           sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
         "
-        viewBox="0 0 64 64" aria-hidden="true"
+        viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#search" />
       </svg>
@@ -652,7 +657,9 @@ export const hugeInvalid = () => {
           sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
         "
-        viewBox="0 0 64 64" aria-hidden="true"
+        viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#search" />
       </svg>
@@ -797,7 +804,9 @@ export const hugeDisabled = () => {
           sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
         "
-        viewBox="0 0 64 64" aria-hidden="true"
+        viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#search" />
       </svg>
