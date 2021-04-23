@@ -4,15 +4,10 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 
 export default {
   title: 'Components/Input/Search',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   component: SprkTextInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkErrorContainer', 'SprkInputIconCheck'],
     info: `${markdownDocumentationLinkBuilder('input')}`,
   },
 };
@@ -24,15 +19,14 @@ export const searchInput = () => (
     hiddenLabel
     name="InlineSearch"
     placeholder="Search"
+    iconAriaHidden="true"
   />
 );
 
 searchInput.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
@@ -51,9 +45,7 @@ export const invalidSearchInput = () => (
 invalidSearchInput.story = {
   name: 'Invalid',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
 
@@ -71,8 +63,6 @@ export const disabledSearchInput = () => (
 disabledSearchInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkTextInput'],
   },
 };
