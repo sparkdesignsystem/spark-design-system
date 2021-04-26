@@ -19,7 +19,6 @@ export const searchInput = () => (
     hiddenLabel
     name="InlineSearch"
     placeholder="Search"
-    iconAriaHidden="true"
   />
 );
 
