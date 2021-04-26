@@ -7,6 +7,7 @@ import SprkErrorContainer from '../../SprkErrorContainer/SprkErrorContainer';
 import SprkFieldError from '../../SprkFieldError/SprkFieldError';
 import SprkHelperText from '../../SprkHelperText/SprkHelperText';
 import SprkFieldSet from '../../SprkFieldSet/SprkFieldSet';
+import SprkLegend from '../../SprkLegend/SprkLegend';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -111,9 +112,10 @@ describe('SprkRadioGroup:', () => {
   });
 
   it(`should add the helperTextID to the aria-describedby
-  on the container if it isn't present`, () => {
+  on the legend if it isn't present`, () => {
     const wrapper = mount(
       <SprkRadioGroup>
+        <SprkLegend>Radio Group Label</SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -123,16 +125,39 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should add the helperTextID to the aria-describedby
+  on the grandchild legend if it isn't present`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkFieldSet>
+          <SprkLegend>Radio Group Label</SprkLegend>
+          <SprkRadioItem>Radio Item 1</SprkRadioItem>
+          <SprkRadioItem>Radio Item 2</SprkRadioItem>
+          <SprkRadioItem>Radio Item 3</SprkRadioItem>
+        </SprkFieldSet>
+        <SprkHelperText id="test-id" />
+      </SprkRadioGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
   it(`should add the errorContainerID to the aria-describedby
-  on the container if it isn't present`, () => {
+  on the legend if it isn't present`, () => {
     const wrapper = mount(
       <SprkRadioGroup>
+        <SprkLegend>Radio Group Label</SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -142,16 +167,17 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
   it(`should add the fieldErrorID to the aria-describedby
-  on the container if it isn't present`, () => {
+  on the legend if it isn't present`, () => {
     const wrapper = mount(
       <SprkRadioGroup>
+        <SprkLegend>Radio Group Label</SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -161,15 +187,19 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
-  it(`should allow additional values be passed to the aria-describedby`, () => {
+  it(`should allow additional values be passed to
+  the aria-describedby on the legend`, () => {
     const wrapper = mount(
-      <SprkRadioGroup ariaDescribedBy="additional-value">
+      <SprkRadioGroup>
+        <SprkLegend ariaDescribedBy="additional-value">
+          Radio Group Label
+        </SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -179,16 +209,17 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('additional-value test-id');
   });
 
   it(`should add helperTextID and fieldErrorID to the
-  aria-describedby if neither are present`, () => {
+  aria-describedby on the legend if neither are present`, () => {
     const wrapper = mount(
       <SprkRadioGroup>
+        <SprkLegend>Radio Group Label</SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -199,16 +230,17 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-error-id test-helper-id');
   });
 
   it(`should add helperTextID and errorContainerID to the
-  aria-describedby if neither are present`, () => {
+  aria-describedby on the legend if neither are present`, () => {
     const wrapper = mount(
       <SprkRadioGroup>
+        <SprkLegend>Radio Group Label</SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -219,16 +251,19 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-error-id test-helper-id');
   });
 
-  it(`should add helperTextID and fieldErrorID to the
-  aria-describedby if neither are present and keep additional values`, () => {
+  it(`should add helperTextID and fieldErrorID to the aria-describedby
+  on the legend if neither are present and keep additional values`, () => {
     const wrapper = mount(
-      <SprkRadioGroup ariaDescribedBy="additional-value">
+      <SprkRadioGroup>
+        <SprkLegend ariaDescribedBy="additional-value">
+          Radio Group Label
+        </SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -239,16 +274,19 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('additional-value test-error-id test-helper-id');
   });
 
-  it(`should add helperTextID and errorContainerID to the
-  aria-describedby if neither are present and keep additional values`, () => {
+  it(`should add helperTextID and errorContainerID to the aria-describedby
+  on the legend if neither are present and keep additional values`, () => {
     const wrapper = mount(
-      <SprkRadioGroup ariaDescribedBy="additional-value">
+      <SprkRadioGroup>
+        <SprkLegend ariaDescribedBy="additional-value">
+          Radio Group Label
+        </SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -259,16 +297,19 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('additional-value test-error-id test-helper-id');
   });
 
-  it(`should not add helperTextID and errorContainerID to the
-  aria-describedby if both are present and keep additional values`, () => {
+  it(`should not add helperTextID and errorContainerID to the aria-describedby
+  on the legend if both are present and keep additional values`, () => {
     const wrapper = mount(
-      <SprkRadioGroup ariaDescribedBy="value test-helper-id test-error-id">
+      <SprkRadioGroup>
+        <SprkLegend ariaDescribedBy="value test-helper-id test-error-id">
+          Radio Group Label
+        </SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -279,16 +320,19 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('value test-helper-id test-error-id');
   });
 
-  it(`should not add helperTextID and fieldErrorID to the
-  aria-describedby if both are present and keep additional values`, () => {
+  it(`should not add helperTextID and fieldErrorID to the aria-describedby
+  on the legend if both are present and keep additional values`, () => {
     const wrapper = mount(
-      <SprkRadioGroup ariaDescribedBy="value test-helper-id test-error-id">
+      <SprkRadioGroup>
+        <SprkLegend ariaDescribedBy="value test-helper-id test-error-id">
+          Radio Group Label
+        </SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -299,16 +343,19 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('value test-helper-id test-error-id');
   });
 
   it(`should not add helperTextID to the
-  aria-describedby if it's present`, () => {
+  aria-describedby on the legend if it's present`, () => {
     const wrapper = mount(
-      <SprkRadioGroup ariaDescribedBy="test-helper-id">
+      <SprkRadioGroup>
+        <SprkLegend ariaDescribedBy="test-helper-id">
+          Radio Group Label
+        </SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -318,16 +365,17 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-helper-id');
   });
 
   it(`should not add errorContainerID to the
-  aria-describedby if it's present`, () => {
+  aria-describedby on the legend if it's present`, () => {
     const wrapper = mount(
-      <SprkRadioGroup ariaDescribedBy="test-id">
+      <SprkRadioGroup>
+        <SprkLegend ariaDescribedBy="test-id">Radio Group Label</SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -337,16 +385,17 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
   it(`should not add fieldErrorID to the
-  aria-describedby if it's present`, () => {
+  aria-describedby on the legend if it's present`, () => {
     const wrapper = mount(
-      <SprkRadioGroup ariaDescribedBy="test-id">
+      <SprkRadioGroup>
+        <SprkLegend ariaDescribedBy="test-id">Radio Group Label</SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -356,16 +405,17 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
-  it(`should not add aria-describedby to the container
+  it(`should not add aria-describedby to the legend
   if there is no helper or error text`, () => {
     const wrapper = mount(
       <SprkRadioGroup>
+        <SprkLegend>Radio Group Label</SprkLegend>
         <SprkRadioItem>Radio Item 1</SprkRadioItem>
         <SprkRadioItem>Radio Item 2</SprkRadioItem>
         <SprkRadioItem>Radio Item 3</SprkRadioItem>
@@ -374,7 +424,7 @@ describe('SprkRadioGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-InputContainer')
+        .find('.sprk-b-Legend')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe(null);

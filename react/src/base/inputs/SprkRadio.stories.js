@@ -63,9 +63,11 @@ defaultStory.story = {
 };
 
 export const defaultHelperText = () => (
-  <SprkRadioGroup ariaDescribedBy="radio-helper-text">
+  <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend ariaDescribedBy="radio-helper-text">
+        Group Label Name
+      </SprkLegend>
       <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
@@ -82,10 +84,13 @@ defaultHelperText.story = {
 };
 
 export const invalidRadioButton = () => (
-  <SprkRadioGroup ariaDescribedBy="invalid-radio">
-    <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
-    <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
-    <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
+  <SprkRadioGroup>
+    <SprkFieldset>
+      <SprkLegend ariaDescribedBy="invalid-radio">Group Label Name</SprkLegend>
+      <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
+    </SprkFieldset>
     <SprkFieldError id="invalid-radio">
       <SprkIcon
         iconName="exclamation-filled"
@@ -153,9 +158,11 @@ huge.story = {
 };
 
 export const hugeHelperText = () => (
-  <SprkRadioGroup variant="huge" ariaDescribedBy="huge-radio-helper-text">
+  <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend ariaDescribedBy="huge-radio-helper-text">
+        Group Label Name
+      </SprkLegend>
       <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
@@ -180,9 +187,11 @@ hugeHelperText.story = {
 };
 
 export const hugeInvalid = () => (
-  <SprkRadioGroup variant="huge" ariaDescribedBy="invalid-huge-radio">
+  <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend ariaDescribedBy="invalid-huge-radio">
+        Group Label Name
+      </SprkLegend>
       <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>

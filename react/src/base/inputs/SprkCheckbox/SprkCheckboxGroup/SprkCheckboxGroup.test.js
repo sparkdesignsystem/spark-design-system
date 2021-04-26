@@ -131,6 +131,28 @@ describe('SprkCheckboxGroup:', () => {
     ).toBe('test-id');
   });
 
+  it(`should add the helperTextID to the aria-describedby
+  on the grandchild legend if it isn't present`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <SprkFieldSet>
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldSet>
+        <SprkHelperText id="test-id" />
+      </SprkCheckboxGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Legend')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
   it(`should add the errorContainerID to the aria-describedby
   on the legend if it isn't present`, () => {
     const wrapper = mount(

@@ -10,17 +10,32 @@ const SprkRadioGroup = (props) => {
     idString,
     additionalClasses,
     analyticsString,
-    ariaDescribedBy,
     ...rest
   } = props;
 
   let errorId;
   let helperId;
   let inputAriaDescribedByArray = [];
-  if (ariaDescribedBy) {
-    inputAriaDescribedByArray = ariaDescribedBy.split(' ');
-  }
+  let legendAriaDescribedBy;
+
   const childrenArray = React.Children.toArray(children);
+  // Get the ariaDescribedBy
+  React.Children.forEach(children, (child) => {
+    if (child.props.children) {
+      React.Children.forEach(child.props.children, (grandchild) => {
+        if (grandchild.type && grandchild.type.name === 'SprkLegend') {
+          legendAriaDescribedBy = grandchild.props.ariaDescribedBy;
+        }
+      });
+    }
+    if (child.type.name === 'SprkLegend') {
+      legendAriaDescribedBy = child.props.ariaDescribedBy;
+    }
+  });
+
+  if (legendAriaDescribedBy) {
+    inputAriaDescribedByArray = legendAriaDescribedBy.split(' ');
+  }
   // Get the errorId and helperId.
   // If they don't exist in the ariaDescribedBy, add them.
   const elementsToProcess = childrenArray.map((element) => {
@@ -60,14 +75,22 @@ const SprkRadioGroup = (props) => {
       if (element.props.children) {
         grandChildren = addPropsToMatchingComponents(
           element.props.children,
-          'SprkRadioItem',
+          'SprkLegend',
+          {
+            ariaDescribedBy: inputAriaDescribedBy,
+          },
         );
+      }
+
+      if (element.type.name === 'SprkLegend') {
+        return React.cloneElement(element, {
+          ariaDescribedBy: inputAriaDescribedBy,
+        });
       }
 
       if (element.type.name === 'SprkRadioItem') {
         return React.cloneElement(element, {
           key: `sprk-radio-item-${key}`,
-          children: grandChildren || element.children,
         });
       }
 
@@ -84,7 +107,6 @@ const SprkRadioGroup = (props) => {
       })}
       data-analytics={analyticsString}
       data-id={idString}
-      aria-describedby={inputAriaDescribedBy}
       {...rest}
     >
       {elementsToRender}
@@ -115,14 +137,6 @@ SprkRadioGroup.propTypes = {
    * to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
-  /**
-   * Assigned to the `aria-describedby`
-   * attribute. Used to create
-   * relationships between the
-   * component and text that describes it,
-   * such as helper text or an error field.
-   */
-  ariaDescribedBy: PropTypes.string,
 };
 
 export default SprkRadioGroup;

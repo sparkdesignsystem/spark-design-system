@@ -90,7 +90,6 @@ const SprkCheckboxGroup = (props) => {
       if (element.type.name === 'SprkCheckboxItem') {
         return React.cloneElement(element, {
           key: `sprk-checkbox-item-${key}`,
-          children: grandChildren || element.children,
         });
       }
 
