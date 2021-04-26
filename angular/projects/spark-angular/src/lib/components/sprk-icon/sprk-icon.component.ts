@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
       [attr.viewBox]="viewBox"
       [attr.aria-labelledby]="ariaLabelledby"
       [attr.aria-hidden]="ariaHidden"
+      [attr.focusable]="focusable"
       [attr.data-id]="idString"
     >
       <use [attr.xlink:href]="icon" />
@@ -50,6 +51,12 @@ export class SprkIconComponent {
    */
   @Input()
   ariaHidden: string;
+  /**
+   * Expects a value to assign to
+   * the `focusable` attribute of the icon.
+   */
+  @Input()
+  focusable: string;
   /**
    * Expects a space separated string
    * of classes to be added to the
