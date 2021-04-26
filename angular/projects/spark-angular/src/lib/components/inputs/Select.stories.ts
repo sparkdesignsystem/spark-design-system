@@ -84,6 +84,8 @@ export const selectBox = () => ({
         iconName="chevron-down"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
+        ariaHidden="true"
+        focusable="true"
       ></sprk-icon>
     </sprk-input-container>
   `,
@@ -127,11 +129,15 @@ export const invalidSelectBox = () => ({
         iconName="chevron-down"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
+        ariaHidden="true"
+        focusable="true"
       ></sprk-icon>
       <span sprkFieldError id="select-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
+          ariaHidden="true"
+          focusable="true"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -175,6 +181,8 @@ export const disabledSelectBox = () => ({
         iconName="chevron-down"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
+        ariaHidden="true"
+        focusable="true"
       ></sprk-icon>
     </sprk-input-container>
   `,
@@ -221,6 +229,8 @@ export const hugeSelectBox = () => ({
         iconName="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
+        ariaHidden="true"
+        focusable="true"
       ></sprk-icon>
     </sprk-input-container>
   `,
@@ -270,11 +280,15 @@ export const invalidHugeSelectBox = () => ({
         iconName="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
+        ariaHidden="true"
+        focusable="true"
       ></sprk-icon>
       <span sprkFieldError id="huge-select-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
+          ariaHidden="true"
+          focusable="true"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -325,6 +339,8 @@ export const disabledHugeSelectBox = () => ({
         iconName="chevron-down"
         additionalClasses="sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
+        ariaHidden="true"
+        focusable="true"
       ></sprk-icon>
     </sprk-input-container>
   `,
@@ -370,6 +386,8 @@ export const legacyHugeSelectBox = () => ({
         iconType="chevron-down"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
+        ariaHidden="true"
+        focusable="true"
       ></sprk-icon>
     </sprk-huge-input-container>
   `,
@@ -418,11 +436,15 @@ export const legacyInvalidHugeSelectBox = () => ({
         iconType="chevron-down"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
+        ariaHidden="true"
+        focusable="true"
       ></sprk-icon>
       <span sprkFieldError id="legacy-huge-select-error">
         <sprk-icon
           iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
+          ariaHidden="true"
+          focusable="true"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -472,6 +494,8 @@ export const legacyDisabledHugeSelectBox = () => ({
         iconType="chevron-down"
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-b-SelectContainer__icon"
         sprk-select-icon
+        ariaHidden="true"
+        focusable="true"
       ></sprk-icon>
     </sprk-huge-input-container>
   `,
