@@ -57,7 +57,7 @@ export const percentageInput = () => {
           role="tooltip"
         >
           Use Tooltips to provide info that is not vital to completing the task.
-          Keep the text short and stick to what’s hasdfasdfelpful and relevant.
+          Keep the text short and stick to what’s hasdfasdfelpful and relevdfasdfasdfant.
         </span>
       </span>
         </label>
