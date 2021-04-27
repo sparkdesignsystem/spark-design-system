@@ -35,13 +35,13 @@ import { uniqueId } from 'lodash';
         <sprk-icon
           [iconType]="iconNameToUse"
           [additionalClasses]="iconAdditionalClasses"
-          aria-hidden="true"
+          ariaHidden="true"
         ></sprk-icon>
       </button>
       <span
         [ngClass]="getTooltipClasses()"
         [attr.id]="id"
-        aria-hidden="true"
+        ariaHidden="true"
         role="tooltip"
         #tooltipElement
       >

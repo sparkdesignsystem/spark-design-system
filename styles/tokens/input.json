@@ -677,17 +677,17 @@
       }
     },
     "has-icon": {
-      "right-top": {
-        "comment": "The top offset of the icon displayed on the right side of Inputs.",
-        "value": "38px",
+      "margin-right-top": {
+        "comment": "The margin top of the icon displayed on the right side of Inputs.",
+        "value": "16px",
         "attributes": {
           "category": "size"
         },
         "file": "settings",
         "themable": true
       },
-      "right-left": {
-        "comment": "The top offset of the icon displayed on the left side of Inputs.",
+      "margin-right-left": {
+        "comment": "The margin left of the icon displayed on the left side of Inputs.",
         "value": "71px",
         "attributes": {
           "category": "size"
