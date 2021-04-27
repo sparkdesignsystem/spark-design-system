@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
       [ngClass]="getClasses()"
       [attr.viewBox]="viewBox"
       [attr.aria-labelledby]="ariaLabelledby"
+      [attr.aria-hidden]="ariaHidden"
       [attr.data-id]="idString"
     >
       <use [attr.xlink:href]="icon" />
@@ -43,6 +44,12 @@ export class SprkIconComponent {
    */
   @Input()
   ariaLabelledby: string;
+  /**
+   * Expects a value to assign to
+   * the `aria-hidden` attribute of the icon.
+   */
+  @Input()
+  ariaHidden: string;
   /**
    * Expects a space separated string
    * of classes to be added to the

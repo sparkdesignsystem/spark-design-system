@@ -12,6 +12,7 @@ import designersMedia from '../images/designers.svg';
 import foundationsMedia from '../images/foundations.svg';
 import newsMedia from '../images/news-and-updates.svg';
 import utilitiesMedia from '../images/utilities.svg';
+import guidesMedia from '../images/guides.svg';
 
 const teaserDesigners = {
   bodyText: `
@@ -86,6 +87,30 @@ const teaserComponents = {
     mediaVariant: 'img',
   },
   title: 'Components',
+  titleFirst: false,
+};
+
+const teaserGuides = {
+  bodyText: `
+    Guidance on how to make design choices that
+    prioritize user experience. Get answers on topics
+    like layout, messaging, and placement.
+  `,
+  cta: {
+    text: 'Explore Guides',
+    ctaVariant: 'button',
+    buttonVariant: 'tertiary',
+    href: '/using-spark/guides',
+    ctaLinkElement: 'a',
+  },
+  media: {
+    href: '/using-spark/guides',
+    mediaLinkElement: 'a',
+    imgAlt: 'Explore Guides',
+    imgSrc: guidesMedia,
+    mediaVariant: 'img',
+  },
+  title: "'How To' Guides",
   titleFirst: false,
 };
 
@@ -208,6 +233,12 @@ const IndexPage = () => (
           <SprkCard
             additionalClasses="docs-c-Card"
             variant="teaser"
+            teaserConfig={teaserGuides}
+          />
+
+          <SprkCard
+            additionalClasses="docs-c-Card"
+            variant="teaser"
             teaserConfig={teaserFoundations}
           />
 
@@ -232,10 +263,7 @@ const IndexPage = () => (
           </SprkStackItem>
 
           <SprkStackItem>
-            <SprkLink
-              href="https://github.com/sparkdesignsystem/spark-design-system/blob/main/CONTRIBUTING.md"
-              variant="secondary"
-            >
+            <SprkLink href="https://github.com/sparkdesignsystem/spark-design-system/blob/main/CONTRIBUTING.md">
               Learn More
             </SprkLink>
           </SprkStackItem>

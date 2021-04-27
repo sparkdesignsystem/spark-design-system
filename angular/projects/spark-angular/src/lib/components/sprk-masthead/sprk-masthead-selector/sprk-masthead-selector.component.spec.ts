@@ -18,6 +18,7 @@ import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector.interfaces
       [analyticsString]="analyticsString"
       [heading]="heading"
       [screenReaderText]="screenReaderText"
+      [isFlush]="isFlush"
     >
     </sprk-masthead-selector>
   `,
@@ -30,6 +31,7 @@ class TestWrapperComponent {
   analyticsString: string;
   heading: string;
   screenReaderText: string;
+  isFlush: boolean;
 }
 
 describe('SprkMastheadSelectorComponent', () => {
@@ -99,7 +101,7 @@ describe('SprkMastheadSelectorComponent', () => {
     fixture.detectChanges();
     expect(
       fixture.nativeElement.querySelectorAll(
-        '.sprk-c-Dropdown.sprk-c-Masthead__selector-dropdown',
+        '.sprk-c-Masthead__selector-dropdown',
       ).length,
     ).toEqual(1);
   });
@@ -137,11 +139,17 @@ describe('SprkMastheadSelectorComponent', () => {
   });
 
   it('should open the Masthead Selector on click', () => {
-    expect(fixture.nativeElement.querySelector('.sprk-c-Dropdown')).toBeNull();
+    expect(
+      fixture.nativeElement.querySelector(
+        '.sprk-c-Masthead__selector-dropdown',
+      ),
+    ).toBeNull();
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+      fixture.nativeElement.querySelector(
+        '.sprk-c-Masthead__selector-dropdown',
+      ),
     ).not.toBeNull();
   });
 
@@ -149,13 +157,13 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     mastheadSelectorElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown',
+      '.sprk-c-Masthead__selector-dropdown',
     );
     expect(mastheadSelectorElement).not.toBeNull();
     mastheadSelectorElement.ownerDocument.dispatchEvent(new Event('click'));
     fixture.detectChanges();
     mastheadSelectorElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown',
+      '.sprk-c-Masthead__selector-dropdown',
     );
     expect(mastheadSelectorElement).toBeNull();
   });
@@ -164,13 +172,13 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     mastheadSelectorElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown',
+      '.sprk-c-Masthead__selector-dropdown',
     );
     expect(mastheadSelectorElement).not.toBeNull();
     mastheadSelectorElement.ownerDocument.dispatchEvent(new Event('focusin'));
     fixture.detectChanges();
     mastheadSelectorElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown',
+      '.sprk-c-Masthead__selector-dropdown',
     );
     expect(mastheadSelectorElement).toBeNull();
   });
@@ -180,9 +188,10 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelectorAll('.sprk-c-Dropdown__link')[0]
-        .classList,
-    ).not.toContain('sprk-c-Dropdown__link--active');
+      fixture.nativeElement.querySelectorAll(
+        '.sprk-c-Masthead__selector-dropdown-link',
+      )[0].classList,
+    ).not.toContain('sprk-c-Masthead__selector-dropdown-link--active');
     fixture.nativeElement
       .querySelectorAll('li')[0]
       .dispatchEvent(new Event('click'));
@@ -190,9 +199,10 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelectorAll('.sprk-c-Dropdown__link')[0]
-        .classList,
-    ).toContain('sprk-c-Dropdown__link--active');
+      fixture.nativeElement.querySelectorAll(
+        '.sprk-c-Masthead__selector-dropdown-link',
+      )[0].classList,
+    ).toContain('sprk-c-Masthead__selector-dropdown-link--active');
   });
 
   it('should set href value if routerLink is set on choice item', () => {
@@ -211,11 +221,13 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+      fixture.nativeElement.querySelector(
+        '.sprk-c-Masthead__selector-dropdown',
+      ),
     ).not.toBeNull();
     // TODO: #3835 Create separate classes for sprk-masthead-selector
     const listLink = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown__link',
+      '.sprk-c-Masthead__selector-dropdown-link',
     );
     expect(listLink.getAttribute('href')).toEqual('/router-test');
   });
@@ -236,11 +248,13 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+      fixture.nativeElement.querySelector(
+        '.sprk-c-Masthead__selector-dropdown',
+      ),
     ).not.toBeNull();
     // TODO: #3835 Create separate classes for sprk-masthead-selector
     const listLink = fixture.nativeElement.querySelector(
-      '.sprk-c-Dropdown__link',
+      '.sprk-c-Masthead__selector-dropdown-link',
     );
     expect(listLink.getAttribute('href')).toEqual('/test');
   });
@@ -274,7 +288,7 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     const listBoxAria = fixture.nativeElement
-      .querySelector('.sprk-c-Dropdown__links')
+      .querySelector('.sprk-c-Masthead__selector-dropdown-links')
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('My Choices');
   });
@@ -286,7 +300,7 @@ describe('SprkMastheadSelectorComponent', () => {
 
     fixture.detectChanges();
     const listBoxAria = fixture.nativeElement
-      .querySelector('.sprk-c-Dropdown__links')
+      .querySelector('.sprk-c-Masthead__selector-dropdown-links')
       .getAttribute('aria-label');
     expect(listBoxAria).toEqual('test');
   });
@@ -393,7 +407,7 @@ describe('SprkMastheadSelectorComponent', () => {
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information',
+          infoLine2: 'Additional Information',
         },
         value: 'Choice Title 1',
         active: false,
@@ -403,7 +417,9 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+      fixture.nativeElement.querySelector(
+        '.sprk-c-Masthead__selector-dropdown',
+      ),
     ).not.toBeNull();
     let paragraphs = fixture.nativeElement.querySelectorAll('p');
     expect(paragraphs.length).toEqual(3);
@@ -420,7 +436,9 @@ describe('SprkMastheadSelectorComponent', () => {
     ];
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+      fixture.nativeElement.querySelector(
+        '.sprk-c-Masthead__selector-dropdown',
+      ),
     ).not.toBeNull();
     paragraphs = fixture.nativeElement.querySelectorAll('p');
     expect(paragraphs.length).toEqual(2);
@@ -433,7 +451,7 @@ describe('SprkMastheadSelectorComponent', () => {
         content: {
           title: 'Choice Title',
           infoLine1: 'Information about this choice',
-          infoLine2: 'More Information',
+          infoLine2: 'Additional Information',
         },
         routerLink: '/router-test',
         value: 'Choice Title 1',
@@ -444,7 +462,9 @@ describe('SprkMastheadSelectorComponent', () => {
     mastheadSelectorTriggerElement.click();
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+      fixture.nativeElement.querySelector(
+        '.sprk-c-Masthead__selector-dropdown',
+      ),
     ).not.toBeNull();
     let paragraphs = fixture.nativeElement.querySelectorAll('p');
     expect(paragraphs.length).toEqual(3);
@@ -462,7 +482,9 @@ describe('SprkMastheadSelectorComponent', () => {
     ];
     fixture.detectChanges();
     expect(
-      fixture.nativeElement.querySelector('.sprk-c-Dropdown'),
+      fixture.nativeElement.querySelector(
+        '.sprk-c-Masthead__selector-dropdown',
+      ),
     ).not.toBeNull();
     paragraphs = fixture.nativeElement.querySelectorAll('p');
     expect(paragraphs.length).toEqual(2);
@@ -475,8 +497,21 @@ describe('SprkMastheadSelectorComponent', () => {
     fixture.detectChanges();
 
     expect(
-      fixture.nativeElement.querySelector('.sprk-c-Dropdown__title')
-        .textContent,
+      fixture.nativeElement.querySelector(
+        '.sprk-c-Masthead__selector-dropdown-title',
+      ).textContent,
     ).toEqual('test');
+  });
+
+  it('should add the correct class if isFlush is true', () => {
+    wrapperComponent.isFlush = true;
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('.sprk-o-Box')).not.toBeNull();
+  });
+
+  it('should not add the class if isFlush is false', () => {
+    wrapperComponent.isFlush = false;
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('.sprk-o-Box')).toBeNull();
   });
 });

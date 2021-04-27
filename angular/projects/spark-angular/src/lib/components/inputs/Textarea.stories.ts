@@ -61,7 +61,7 @@ export const textarea = () => ({
         id="textarea-1"
         [(ngModel)]="textarea_input"
         #textareaInput="ngModel"
-        data-id="textarea-1"
+        idString="textarea-1"
         sprkTextarea
       ></textarea>
     </sprk-textarea-container>
@@ -90,11 +90,12 @@ export const invalidTextarea = () => ({
         id="textarea-1"
         [(ngModel)]="textarea_input"
         #textareaInput="ngModel"
-        data-id="textarea-1"
+        idString="textarea-1"
         sprkTextarea
         aria-invalid="true"
+        aria-describedby="textarea-error"
       ></textarea>
-      <span sprkFieldError>
+      <span sprkFieldError id="textarea-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -124,13 +125,16 @@ export const disabledTextarea = () => ({
       <label
         isDisabled="true"
         for="textarea-1"
-        sprkLabel>Description</label>
+        sprkLabel
+      >
+        Description
+      </label>
       <textarea
         name="textarea_input"
         id="textarea-1"
         [(ngModel)]="textarea_input"
         #textareaInput="ngModel"
-        data-id="textarea-1"
+        idString="textarea-1"
         sprkTextarea
         disabled
       ></textarea>

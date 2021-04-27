@@ -99,8 +99,12 @@ describe('SprkTooltip:', () => {
   });
 
   it('should render correctly in the bottom right quadrant', () => {
-    window.innerWidth = 100;
-    window.innerHeight = 100;
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 100,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
 
     const wrapper = mount(<SprkTooltip />);
     const trigger = wrapper.find('button');
@@ -116,8 +120,12 @@ describe('SprkTooltip:', () => {
   });
 
   it('should render correctly in the bottom left quadrant', () => {
-    window.innerWidth = 100;
-    window.innerHeight = 100;
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 100,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
 
     const wrapper = mount(<SprkTooltip />);
     const trigger = wrapper.find('button');
@@ -133,8 +141,12 @@ describe('SprkTooltip:', () => {
   });
 
   it('should render correctly in the top right quadrant', () => {
-    window.innerWidth = 100;
-    window.innerHeight = 100;
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 100,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
 
     const wrapper = mount(<SprkTooltip />);
     const trigger = wrapper.find('button');
@@ -150,8 +162,12 @@ describe('SprkTooltip:', () => {
   });
 
   it('should render correctly in the top left quadrant', () => {
-    window.innerWidth = 100;
-    window.innerHeight = 100;
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 100,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
 
     const wrapper = mount(<SprkTooltip />);
     const trigger = wrapper.find('button');
@@ -174,8 +190,12 @@ describe('SprkTooltip:', () => {
   });
 
   it('should calculate position on hover', () => {
-    window.innerWidth = 100;
-    window.innerHeight = 100;
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 100,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
 
     const wrapper = mount(<SprkTooltip />);
     const trigger = wrapper.find('button');
@@ -191,8 +211,12 @@ describe('SprkTooltip:', () => {
   });
 
   it('should calculate position on focus', () => {
-    window.innerWidth = 100;
-    window.innerHeight = 100;
+    Object.defineProperty(document.documentElement, 'clientWidth', {
+      value: 100,
+    });
+    Object.defineProperty(document.documentElement, 'clientHeight', {
+      value: 100,
+    });
 
     const wrapper = mount(<SprkTooltip />);
     const trigger = wrapper.find('button');

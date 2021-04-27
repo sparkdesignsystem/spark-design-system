@@ -30,9 +30,9 @@
       },
       "font-weight": {
         "comment": "Link font-weight on the Footer.",
-        "value": "normal",
+        "value": "300",
         "attributes": {
-          "category": "content"
+          "category": "size"
         },
         "file": "settings",
         "themable": true
@@ -66,14 +66,34 @@
         "file": "settings",
         "themable": true
       },
-      "hover-color": {
-        "comment": "Toggle trigger hover color on the Footer.",
-        "value": "{purple-light.value}",
-        "attributes": {
-          "category": "color"
+      "hover": {
+        "color": {
+          "comment": "Toggle trigger hover color on the Footer.",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
         },
-        "file": "settings",
-        "themable": true
+        "font-weight": {
+          "comment": "Toggle trigger hover font-weight on the Footer.",
+          "value": "normal",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "text-decoration": {
+          "comment": "Toggle trigger hover text decoration on the Footer.",
+          "value": "underline",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
       }
     },
     "toggle-transition": {

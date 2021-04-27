@@ -174,13 +174,14 @@ import {
         <sprk-masthead-selector
           *ngIf="narrowSelector"
           [triggerText]="narrowSelector['trigger'].text"
-          heading="Select One"
+          heading="Choose One"
           triggerIconName="chevron-down"
           [choices]="narrowSelector['choices']"
+          isFlush="true"
         >
           <div
             *ngIf="narrowSelector['footer']"
-            class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
+            class="sprk-c-Masthead__selector-footer"
             sprkMastheadSelectorFooter
           >
             <a
@@ -189,7 +190,7 @@ import {
               variant="unstyled"
               [analyticsString]="narrowSelector['footer'].analyticsString"
               [attr.href]="narrowSelector['footer'].href"
-              class="sprk-c-Button sprk-c-Button--tertiary"
+              class="sprk-c-Button sprk-c-Button--secondary"
             >
               {{ narrowSelector['footer'].text }}
             </a>
@@ -199,7 +200,7 @@ import {
               variant="unstyled"
               [analyticsString]="narrowSelector['footer'].analyticsString"
               [routerLink]="narrowSelector['footer'].routerLink"
-              class="sprk-c-Button sprk-c-Button--tertiary"
+              class="sprk-c-Button sprk-c-Button--secondary"
             >
               {{ narrowSelector['footer'].text }}
             </a>

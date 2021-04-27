@@ -35,13 +35,13 @@ import { uniqueId } from 'lodash';
         <sprk-icon
           [iconType]="iconNameToUse"
           [additionalClasses]="iconAdditionalClasses"
-          aria-hidden="true"
+          ariaHidden="true"
         ></sprk-icon>
       </button>
       <span
         [ngClass]="getTooltipClasses()"
         [attr.id]="id"
-        aria-hidden="true"
+        ariaHidden="true"
         role="tooltip"
         #tooltipElement
       >
@@ -191,65 +191,70 @@ export class SprkTooltipComponent implements AfterViewInit, OnChanges {
    * @ignore
    */
   setPositioningClass(): void {
-    const trigger = this.triggerElement.nativeElement;
-    let positioningClass = 'sprk-c-Tooltip--bottom-right';
+    if (typeof window !== 'undefined') {
+      const trigger = this.triggerElement.nativeElement;
+      let positioningClass = 'sprk-c-Tooltip--bottom-right';
 
-    const elemX = trigger.getBoundingClientRect().left;
-    const elemY = trigger.getBoundingClientRect().top;
+      const elemX = trigger.getBoundingClientRect().left;
+      const elemY = trigger.getBoundingClientRect().top;
 
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
+      const viewportWidth = document.documentElement.clientWidth;
+      const viewportHeight = document.documentElement.clientHeight;
 
-    const maxWidth = 328;
-    const triggerWidth = 16;
-    const tooltipSpacing = 16;
-    const tooltipBorderWidth = 16;
-    let calculatedWidth = maxWidth;
+      const maxWidth = 328;
+      const triggerWidth = 16;
+      const tooltipSpacing = 16;
+      const tooltipBorderWidth = 16;
+      let calculatedWidth = maxWidth;
 
-    if (elemX > viewportWidth / 2) {
-      calculatedWidth =
-        elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
-      if (elemY > viewportHeight / 2) {
-        positioningClass = 'sprk-c-Tooltip--top-left';
+      if (elemX > viewportWidth / 2) {
+        calculatedWidth =
+          elemX + triggerWidth + tooltipBorderWidth - tooltipSpacing;
+        if (elemY > viewportHeight / 2) {
+          positioningClass = 'sprk-c-Tooltip--top-left';
+        } else {
+          positioningClass = 'sprk-c-Tooltip--bottom-left';
+        }
       } else {
-        positioningClass = 'sprk-c-Tooltip--bottom-left';
+        calculatedWidth =
+          viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
+        if (elemY > viewportHeight / 2) {
+          positioningClass = 'sprk-c-Tooltip--top-right';
+        } else {
+          positioningClass = 'sprk-c-Tooltip--bottom-right';
+        }
       }
-    } else {
-      calculatedWidth =
-        viewportWidth - elemX + tooltipBorderWidth - tooltipSpacing;
-      if (elemY > viewportHeight / 2) {
-        positioningClass = 'sprk-c-Tooltip--top-right';
-      } else {
-        positioningClass = 'sprk-c-Tooltip--bottom-right';
-      }
-    }
 
-    if (calculatedWidth < maxWidth) {
-      // overwrite the width if there's not enough room to display it
-      this.renderer.setAttribute(
+      if (calculatedWidth < maxWidth) {
+        // overwrite the width if there's not enough room to display it
+        this.renderer.setAttribute(
+          this.tooltipElement.nativeElement,
+          'style',
+          'width:' + calculatedWidth + 'px',
+        );
+      }
+
+      this.renderer.removeClass(
         this.tooltipElement.nativeElement,
-        'style',
-        'width:' + calculatedWidth + 'px',
+        'sprk-c-Tooltip--top-left',
+      );
+      this.renderer.removeClass(
+        this.tooltipElement.nativeElement,
+        'sprk-c-Tooltip--top-right',
+      );
+      this.renderer.removeClass(
+        this.tooltipElement.nativeElement,
+        'sprk-c-Tooltip--bottom-right',
+      );
+      this.renderer.removeClass(
+        this.tooltipElement.nativeElement,
+        'sprk-c-Tooltip--bottom-left',
+      );
+      this.renderer.addClass(
+        this.tooltipElement.nativeElement,
+        positioningClass,
       );
     }
-
-    this.renderer.removeClass(
-      this.tooltipElement.nativeElement,
-      'sprk-c-Tooltip--top-left',
-    );
-    this.renderer.removeClass(
-      this.tooltipElement.nativeElement,
-      'sprk-c-Tooltip--top-right',
-    );
-    this.renderer.removeClass(
-      this.tooltipElement.nativeElement,
-      'sprk-c-Tooltip--bottom-right',
-    );
-    this.renderer.removeClass(
-      this.tooltipElement.nativeElement,
-      'sprk-c-Tooltip--bottom-left',
-    );
-    this.renderer.addClass(this.tooltipElement.nativeElement, positioningClass);
   }
 
   /**

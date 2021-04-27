@@ -77,6 +77,14 @@ describe('SprkIconComponent', () => {
     expect(iconElement.getAttribute('aria-labelledby')).toEqual('test');
   });
 
+  it('should add aria-hidden', () => {
+    component.iconName = 'bell';
+    component.ariaHidden = 'true';
+    fixture.detectChanges();
+    expect(iconElement.hasAttribute('aria-hidden')).toBeTruthy();
+    expect(iconElement.getAttribute('aria-hidden')).toEqual('true');
+  });
+
   it('should add the correct classes if iconName has no value, but additionalClasses does', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
