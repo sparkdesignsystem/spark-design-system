@@ -230,7 +230,7 @@ export const teaserIcon = () => ({
         >
           <sprk-icon
             iconName="call-team-member"
-            aria-hidden="true"
+            ariaHidden="true"
             additionalClasses="sprk-c-Icon--xl"
           ></sprk-icon>
         </a>
