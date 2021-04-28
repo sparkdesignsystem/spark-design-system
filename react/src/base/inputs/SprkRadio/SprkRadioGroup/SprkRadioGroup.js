@@ -1,118 +1,139 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import addPropsToMatchingComponents from '../../../../utilities/helpers/addPropsToMatchingComponents/addPropsToMatchingComponents';
+import SprkErrorContainer from '../../SprkErrorContainer/SprkErrorContainer';
+import SprkFieldError from '../../SprkFieldError/SprkFieldError';
+import SprkHelperText from '../../SprkHelperText/SprkHelperText';
+import SprkFieldset from '../../SprkFieldset/SprkFieldset';
 
-const SprkRadioGroup = (props) => {
-  const {
-    children,
-    variant,
-    idString,
-    additionalClasses,
-    analyticsString,
-    ...rest
-  } = props;
-
-  let errorId;
-  let helperId;
-  let inputAriaDescribedByArray = [];
-  let legendAriaDescribedBy;
-
-  const childrenArray = React.Children.toArray(children);
-  // Get the ariaDescribedBy
-  React.Children.forEach(children, (child) => {
-    if (child.props.children) {
-      React.Children.forEach(child.props.children, (grandchild) => {
-        if (grandchild.type && grandchild.type.name === 'SprkLegend') {
-          legendAriaDescribedBy = grandchild.props.ariaDescribedBy;
-        }
-      });
-    }
-    if (child.type.name === 'SprkLegend') {
-      legendAriaDescribedBy = child.props.ariaDescribedBy;
-    }
-  });
-
-  if (legendAriaDescribedBy) {
-    inputAriaDescribedByArray = legendAriaDescribedBy.split(' ');
+class SprkRadioGroup extends Component {
+  constructor(props) {
+    super(props);
+    this.renderChildren = this.renderChildren.bind(this);
   }
-  // Get the errorId and helperId.
-  // If they don't exist in the ariaDescribedBy, add them.
-  const elementsToProcess = childrenArray.map((element) => {
-    if (
-      element.type.name === 'SprkFieldError' ||
-      element.type.name === 'SprkErrorContainer'
-    ) {
-      errorId = element.props.id;
-      if (!inputAriaDescribedByArray.includes(errorId)) {
-        inputAriaDescribedByArray.push(errorId);
+
+  renderChildren() {
+    const { children } = this.props;
+    let errorContainerID;
+    let helperTextID;
+    let ariaDescribedByArray = [];
+    let fieldsetAriaDescribedBy;
+
+    /*
+     * Store references to errorContainerID, helperTextID,
+     * & fieldset ariaDescribedBy.
+     */
+    React.Children.forEach(children, (child) => {
+      if (child.type.name === SprkFieldset.name) {
+        fieldsetAriaDescribedBy = child.props.ariaDescribedBy;
       }
-      return React.cloneElement(element);
-    }
-
-    if (element.type.name === 'SprkHelperText') {
-      helperId = element.props.id;
-      if (!inputAriaDescribedByArray.includes(helperId)) {
-        inputAriaDescribedByArray.push(helperId);
+      if (
+        child.type.name === SprkFieldError.name ||
+        child.type.name === SprkErrorContainer.name
+      ) {
+        errorContainerID = child.props.id;
       }
-      return React.cloneElement(element);
-    }
-
-    return element;
-  });
-
-  const inputAriaDescribedBy =
-    inputAriaDescribedByArray.length > 0
-      ? inputAriaDescribedByArray.join(' ')
-      : null;
-
-  let key = 0;
-  let elementsToRender = elementsToProcess;
-  if (errorId || helperId) {
-    elementsToRender = elementsToProcess.map((element) => {
-      key += 1;
-      let grandChildren = null;
-      if (element.props.children) {
-        grandChildren = addPropsToMatchingComponents(
-          element.props.children,
-          'SprkLegend',
-          {
-            ariaDescribedBy: inputAriaDescribedBy,
-          },
-        );
+      if (child.type.name === SprkHelperText.name) {
+        helperTextID = child.props.id;
       }
-
-      if (element.type.name === 'SprkLegend') {
-        return React.cloneElement(element, {
-          ariaDescribedBy: inputAriaDescribedBy,
+      // If the child has it's own children
+      // map through them to get values.
+      if (child.props && child.props.children) {
+        React.Children.forEach(child.props.children, (grandchild) => {
+          if (grandchild.type) {
+            if (grandchild.type.name === SprkFieldset.name) {
+              fieldsetAriaDescribedBy = grandchild.props.ariaDescribedBy;
+            }
+            if (
+              grandchild.type.name === SprkFieldError.name ||
+              grandchild.type.name === SprkErrorContainer.name
+            ) {
+              errorContainerID = grandchild.props.id;
+            }
+            if (grandchild.type.name === SprkHelperText.name) {
+              helperTextID = grandchild.props.id;
+            }
+          }
         });
       }
-
-      if (element.type.name === 'SprkRadioItem') {
-        return React.cloneElement(element, {
-          key: `sprk-radio-item-${key}`,
-        });
-      }
-
-      return React.cloneElement(element, {
-        key: `sprk-radio-outer-item-${key}`,
-        children: grandChildren || element.children,
-      });
     });
+    /* Check to see if the errorContainerID
+     * and helperTextID are in the ariaDescribedByArray.
+     * If they aren't, add it to the array.
+     */
+    if (helperTextID || errorContainerID) {
+      if (fieldsetAriaDescribedBy) {
+        ariaDescribedByArray = fieldsetAriaDescribedBy.split(' ');
+      }
+      if (helperTextID) {
+        if (!ariaDescribedByArray.includes(helperTextID)) {
+          ariaDescribedByArray.push(helperTextID);
+        }
+      }
+      if (errorContainerID) {
+        if (!ariaDescribedByArray.includes(errorContainerID)) {
+          ariaDescribedByArray.push(errorContainerID);
+        }
+      }
+      fieldsetAriaDescribedBy = ariaDescribedByArray.join(' ');
+    }
+    if (fieldsetAriaDescribedBy) {
+      const childrenElements = React.Children.map(children, (child) => {
+        if (child.type && child.type.name === SprkFieldset.name) {
+          return React.cloneElement(child, {
+            ariaDescribedBy: fieldsetAriaDescribedBy,
+          });
+        }
+        if (child.props.children) {
+          const grandchildrenElements = React.Children.map(
+            child.props.children,
+            (grandchild) => {
+              if (
+                grandchild.type &&
+                grandchild.type.name === SprkFieldset.name
+              ) {
+                return React.cloneElement(grandchild, {
+                  ariaDescribedBy: fieldsetAriaDescribedBy,
+                });
+              }
+              return grandchild;
+            },
+          );
+          return React.cloneElement(child, {
+            children: grandchildrenElements,
+          });
+        }
+        return child;
+      });
+      return childrenElements;
+    }
+    // Return other elements ex. <div>
+    return children;
   }
-  return (
-    <div
-      className={classnames('sprk-b-InputContainer', additionalClasses, {
-        'sprk-b-InputContainer--huge': variant === 'huge',
-      })}
-      data-analytics={analyticsString}
-      data-id={idString}
-      {...rest}
-    >
-      {elementsToRender}
-    </div>
-  );
-};
+
+  render() {
+    const {
+      variant,
+      idString,
+      additionalClasses,
+      analyticsString,
+      ...rest
+    } = this.props;
+
+    return (
+      <div
+        className={classnames('sprk-b-InputContainer', additionalClasses, {
+          'sprk-b-InputContainer--huge': variant === 'huge',
+        })}
+        data-analytics={analyticsString}
+        data-id={idString}
+        {...rest}
+      >
+        {this.renderChildren()}
+      </div>
+    );
+  }
+}
 
 SprkRadioGroup.propTypes = {
   /** Content to render inside of the component. */

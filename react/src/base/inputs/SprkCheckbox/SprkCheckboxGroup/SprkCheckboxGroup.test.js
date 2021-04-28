@@ -6,8 +6,9 @@ import SprkCheckboxItem from '../SprkCheckboxItem/SprkCheckboxItem';
 import SprkErrorContainer from '../../SprkErrorContainer/SprkErrorContainer';
 import SprkFieldError from '../../SprkFieldError/SprkFieldError';
 import SprkHelperText from '../../SprkHelperText/SprkHelperText';
-import SprkFieldSet from '../../SprkFieldSet/SprkFieldSet';
+import SprkFieldset from '../../SprkFieldset/SprkFieldset';
 import SprkLegend from '../../SprkLegend/SprkLegend';
+import SprkStack from '../../../../objects/stack/SprkStack';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -27,13 +28,13 @@ describe('SprkCheckboxGroup:', () => {
   they are grandchildren`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkFieldSet>
+        <SprkFieldset>
           <SprkCheckboxItem>
             Label<p>Test</p>
           </SprkCheckboxItem>
           <SprkCheckboxItem>Label</SprkCheckboxItem>
           <SprkCheckboxItem>Label</SprkCheckboxItem>
-        </SprkFieldSet>
+        </SprkFieldset>
       </SprkCheckboxGroup>,
     );
     expect(wrapper.find('SprkCheckboxItem').length).toBe(3);
@@ -44,11 +45,11 @@ describe('SprkCheckboxGroup:', () => {
   it(`should render additional children inside`, () => {
     const wrapper = shallow(
       <SprkCheckboxGroup>
-        <SprkFieldSet>
+        <SprkFieldset>
           <SprkCheckboxItem>Label</SprkCheckboxItem>
           <SprkCheckboxItem>Label</SprkCheckboxItem>
           <SprkCheckboxItem>Label</SprkCheckboxItem>
-        </SprkFieldSet>
+        </SprkFieldset>
         <p>Test</p>
       </SprkCheckboxGroup>,
     );
@@ -112,117 +113,127 @@ describe('SprkCheckboxGroup:', () => {
   });
 
   it(`should add the helperTextID to the aria-describedby
-  on the legend if it isn't present`, () => {
+  on the fieldset if it isn't present`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend>Checkbox Group Label</SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset>
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkHelperText id="test-id" />
       </SprkCheckboxGroup>,
     );
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
   it(`should add the helperTextID to the aria-describedby
-  on the grandchild legend if it isn't present`, () => {
+  on the grandchild fieldset if it isn't present`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkFieldSet>
-          <SprkLegend>Checkbox Group Label</SprkLegend>
-          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
-        </SprkFieldSet>
+        <SprkStack>
+          <SprkFieldset>
+            <SprkLegend>Checkbox Group Label</SprkLegend>
+            <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+            <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+            <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+          </SprkFieldset>
+        </SprkStack>
         <SprkHelperText id="test-id" />
       </SprkCheckboxGroup>,
     );
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
   it(`should add the errorContainerID to the aria-describedby
-  on the legend if it isn't present`, () => {
+  on the fieldset if it isn't present`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend>Checkbox Group Label</SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset>
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkErrorContainer id="test-id" message="test message" />
       </SprkCheckboxGroup>,
     );
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
   it(`should add the fieldErrorID to the aria-describedby
-  on the legend if it isn't present`, () => {
+  on the fieldset if it isn't present`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend>Checkbox Group Label</SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset>
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkFieldError id="test-id" />
       </SprkCheckboxGroup>,
     );
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
   it(`should allow additional values be passed to
-  the aria-describedby on the legend`, () => {
+  the aria-describedby on the fieldset`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend ariaDescribedBy="additional-value">
-          Checkbox Group Label
-        </SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset ariaDescribedBy="additional-value">
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkFieldError id="test-id" />
       </SprkCheckboxGroup>,
     );
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('additional-value test-id');
   });
 
   it(`should add helperTextID and fieldErrorID to the
-  aria-describedby on the legend if neither are present`, () => {
+  aria-describedby on the fieldset if neither are present`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend>Checkbox Group Label</SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset>
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkCheckboxGroup>,
@@ -230,20 +241,22 @@ describe('SprkCheckboxGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
-    ).toBe('test-error-id test-helper-id');
+    ).toBe('test-helper-id test-error-id');
   });
 
   it(`should add helperTextID and errorContainerID to the
-  aria-describedby on the legend if neither are present`, () => {
+  aria-describedby on the fieldset if neither are present`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend>Checkbox Group Label</SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset>
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkCheckboxGroup>,
@@ -251,22 +264,22 @@ describe('SprkCheckboxGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
-    ).toBe('test-error-id test-helper-id');
+    ).toBe('test-helper-id test-error-id');
   });
 
   it(`should add helperTextID and fieldErrorID to the aria-describedby
-  on the legend if neither are present and keep additional values`, () => {
+  on the fieldset if neither are present and keep additional values`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend ariaDescribedBy="additional-value">
-          Checkbox Group Label
-        </SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset ariaDescribedBy="additional-value">
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkCheckboxGroup>,
@@ -274,22 +287,22 @@ describe('SprkCheckboxGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
-    ).toBe('additional-value test-error-id test-helper-id');
+    ).toBe('additional-value test-helper-id test-error-id');
   });
 
   it(`should add helperTextID and errorContainerID to the aria-describedby
-  on the legend if neither are present and keep additional values`, () => {
+  on the fieldset if neither are present and keep additional values`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend ariaDescribedBy="additional-value">
-          Checkbox Group Label
-        </SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset ariaDescribedBy="additional-value">
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkCheckboxGroup>,
@@ -297,22 +310,22 @@ describe('SprkCheckboxGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
-    ).toBe('additional-value test-error-id test-helper-id');
+    ).toBe('additional-value test-helper-id test-error-id');
   });
 
   it(`should not add helperTextID and errorContainerID to the aria-describedby
-  on the legend if both are present and keep additional values`, () => {
+  on the fieldset if both are present and keep additional values`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend ariaDescribedBy="value test-helper-id test-error-id">
-          Checkbox Group Label
-        </SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset ariaDescribedBy="value test-helper-id test-error-id">
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkCheckboxGroup>,
@@ -320,22 +333,22 @@ describe('SprkCheckboxGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('value test-helper-id test-error-id');
   });
 
   it(`should not add helperTextID and fieldErrorID to the aria-describedby
-  on the legend if both are present and keep additional values`, () => {
+  on the fieldset if both are present and keep additional values`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend ariaDescribedBy="value test-helper-id test-error-id">
-          Checkbox Group Label
-        </SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset ariaDescribedBy="value test-helper-id test-error-id">
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkCheckboxGroup>,
@@ -343,88 +356,95 @@ describe('SprkCheckboxGroup:', () => {
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('value test-helper-id test-error-id');
   });
 
   it(`should not add helperTextID to the
-  aria-describedby on the legend if it's present`, () => {
+  aria-describedby on the fieldset if it's present`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend ariaDescribedBy="test-helper-id">
-          Checkbox Group Label
-        </SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset ariaDescribedBy="test-helper-id">
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkHelperText id="test-helper-id" />
       </SprkCheckboxGroup>,
     );
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-helper-id');
   });
 
   it(`should not add errorContainerID to the
-  aria-describedby on the legend if it's present`, () => {
+  aria-describedby on the fieldset if it's present`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend ariaDescribedBy="test-id">Checkbox Group Label</SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset ariaDescribedBy="test-id">
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
+
         <SprkErrorContainer message="test message" id="test-id" />
       </SprkCheckboxGroup>,
     );
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
   it(`should not add fieldErrorID to the
-  aria-describedby on the legend if it's present`, () => {
+  aria-describedby on the fieldset if it's present`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend ariaDescribedBy="test-id">Checkbox Group Label</SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset ariaDescribedBy="test-id">
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
         <SprkFieldError id="test-id" />
       </SprkCheckboxGroup>,
     );
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe('test-id');
   });
 
-  it(`should not add aria-describedby to the legend
+  it(`should not add aria-describedby to the fieldset
   if there is no helper or error text`, () => {
     const wrapper = mount(
       <SprkCheckboxGroup>
-        <SprkLegend>Checkbox Group Label</SprkLegend>
-        <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
-        <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        <SprkFieldset>
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
       </SprkCheckboxGroup>,
     );
 
     expect(
       wrapper
-        .find('.sprk-b-Legend')
+        .find('.sprk-b-Fieldset')
         .getDOMNode()
         .getAttribute('aria-describedby'),
     ).toBe(null);

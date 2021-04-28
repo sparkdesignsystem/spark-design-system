@@ -25,4 +25,18 @@ describe('SprkFieldset:', () => {
     const wrapper = shallow(<SprkFieldset idString={expected} />);
     expect(wrapper.find('.sprk-b-Fieldset').prop('data-id')).toEqual(expected);
   });
+
+  it('should set aria-describedby attribute if value provided', () => {
+    const wrapper = shallow(<SprkFieldset ariaDescribedBy="error-id" />);
+    expect(wrapper.find('.sprk-b-Fieldset').prop('aria-describedby')).toBe(
+      'error-id',
+    );
+  });
+
+  it('should not set aria-describedby attr if not provided', () => {
+    const wrapper = shallow(<SprkFieldset />);
+    expect(wrapper.find('.sprk-b-Fieldset').prop('aria-describedby')).toBe(
+      undefined,
+    );
+  });
 });

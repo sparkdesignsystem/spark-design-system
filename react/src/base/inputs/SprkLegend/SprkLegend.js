@@ -9,7 +9,6 @@ const SprkLegend = (props) => {
     analyticsString,
     additionalClasses,
     isDisabled,
-    ariaDescribedBy,
     ...other
   } = props;
 
@@ -20,7 +19,6 @@ const SprkLegend = (props) => {
       })}
       data-analytics={analyticsString}
       data-id={idString}
-      aria-describedby={ariaDescribedBy}
       {...other}
     >
       {children}
@@ -50,14 +48,6 @@ SprkLegend.propTypes = {
    * Will render the component in its disabled state.
    */
   isDisabled: PropTypes.bool,
-  /**
-   * Assigned to the `aria-describedby`
-   * attribute. Used to create
-   * relationships between the
-   * component and text that describes it,
-   * such as helper text or an error field.
-   */
-  ariaDescribedBy: PropTypes.string,
 };
 
 export default SprkLegend;

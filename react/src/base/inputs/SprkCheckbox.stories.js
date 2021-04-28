@@ -64,10 +64,8 @@ defaultStory.story = {
 
 export const defaultHelperText = () => (
   <SprkCheckboxGroup>
-    <SprkFieldset>
-      <SprkLegend ariaDescribedBy="checkbox-helper-text">
-        Checkbox Group Label
-      </SprkLegend>
+    <SprkFieldset ariaDescribedBy="checkbox-helper-text">
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
@@ -87,10 +85,8 @@ defaultHelperText.story = {
 
 export const invalidCheckbox = () => (
   <SprkCheckboxGroup>
-    <SprkFieldset>
-      <SprkLegend ariaDescribedBy="invalid-checkbox">
-        Checkbox Group Label
-      </SprkLegend>
+    <SprkFieldset ariaDescribedBy="invalid-checkbox">
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
@@ -162,10 +158,8 @@ huge.story = {
 };
 export const hugeHelperText = () => (
   <SprkCheckboxGroup variant="huge">
-    <SprkFieldset>
-      <SprkLegend ariaDescribedBy="huge-checkbox-helper-text">
-        Checkbox Group Label
-      </SprkLegend>
+    <SprkFieldset ariaDescribedBy="huge-checkbox-helper-text">
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 1
       </SprkCheckboxItem>

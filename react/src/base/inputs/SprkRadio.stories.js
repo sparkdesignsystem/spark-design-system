@@ -65,13 +65,12 @@ defaultStory.story = {
 export const defaultHelperText = () => (
   <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend ariaDescribedBy="radio-helper-text">
-        Group Label Name
-      </SprkLegend>
+      <SprkLegend>Group Label Name</SprkLegend>
       <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
     </SprkFieldset>
+
     <SprkHelperText id="radio-helper-text">Input Helper Text</SprkHelperText>
   </SprkRadioGroup>
 );
@@ -85,8 +84,8 @@ defaultHelperText.story = {
 
 export const invalidRadioButton = () => (
   <SprkRadioGroup>
-    <SprkFieldset>
-      <SprkLegend ariaDescribedBy="invalid-radio">Group Label Name</SprkLegend>
+    <SprkFieldset ariaDescribedBy="invalid-radio">
+      <SprkLegend>Group Label Name</SprkLegend>
       <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
@@ -159,10 +158,8 @@ huge.story = {
 
 export const hugeHelperText = () => (
   <SprkRadioGroup variant="huge">
-    <SprkFieldset>
-      <SprkLegend ariaDescribedBy="huge-radio-helper-text">
-        Group Label Name
-      </SprkLegend>
+    <SprkFieldset ariaDescribedBy="huge-radio-helper-text">
+      <SprkLegend>Group Label Name</SprkLegend>
       <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
@@ -188,10 +185,8 @@ hugeHelperText.story = {
 
 export const hugeInvalid = () => (
   <SprkRadioGroup variant="huge">
-    <SprkFieldset>
-      <SprkLegend ariaDescribedBy="invalid-huge-radio">
-        Group Label Name
-      </SprkLegend>
+    <SprkFieldset ariaDescribedBy="invalid-huge-radio">
+      <SprkLegend>Group Label Name</SprkLegend>
       <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
