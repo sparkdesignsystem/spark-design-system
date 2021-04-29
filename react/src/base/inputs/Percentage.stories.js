@@ -19,7 +19,7 @@ export default {
 
 export const percentageInput = () => (
   <SprkTextInput
-    label="Percentage"
+    label="Percentage test"
     iconRight
     leadingIcon="percent"
     narrowWidth
