@@ -8,4 +8,12 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/', '<rootDir>/setup.test.js'],
   coveragePathIgnorePatterns: ['/node_modules/'],
   coverageDirectory: '../coverage/react',
+  coverageThreshold: {
+    global: {
+      branches: 95,
+      functions: 95,
+      lines: 95,
+      statements: 95,
+    },
+  },
 };

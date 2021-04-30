@@ -8,4 +8,12 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/', '<rootDir>/setup-jest.js'],
   coveragePathIgnorePatterns: ['/node_modules/'],
   coverageDirectory: '<rootDir>/coverage',
+  coverageThreshold: {
+    global: {
+      branches: 95,
+      functions: 95,
+      lines: 95,
+      statements: 95,
+    },
+  },
 };
