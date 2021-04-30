@@ -54,6 +54,9 @@ export class SprkStackComponent {
 
     // Handle the choice of item split breakpoint by adding CSS class
     switch (this.splitAt) {
+      case 'extraTiny':
+        classArray.push('sprk-o-Stack--split@xxs');
+        break;
       case 'tiny':
         classArray.push('sprk-o-Stack--split@xs');
         break;

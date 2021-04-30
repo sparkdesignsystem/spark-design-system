@@ -1,4 +1,4 @@
-import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector/sprk-masthead-selector.interfaces';
+import { ISprkMastheadSelectorChoice } from './components/sprk-masthead-selector/sprk-masthead-selector.interfaces';
 import { ISprkDropdownChoice } from '../sprk-dropdown/sprk-dropdown.interfaces';
 /**
  * Used to create the "Big Navigation"

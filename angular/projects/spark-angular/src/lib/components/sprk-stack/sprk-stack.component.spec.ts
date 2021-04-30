@@ -58,6 +58,12 @@ describe('SprkStackComponent', () => {
   });
 
   it('should set the correct class for splitAt', () => {
+    component.splitAt = 'extraTiny';
+    fixture.detectChanges();
+    expect(element.classList.contains('sprk-o-Stack--split@xxs')).toEqual(true);
+  });
+
+  it('should set the correct class for splitAt', () => {
     component.splitAt = 'tiny';
     fixture.detectChanges();
     expect(element.classList.contains('sprk-o-Stack--split@xs')).toEqual(true);
