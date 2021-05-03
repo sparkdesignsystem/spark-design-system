@@ -238,7 +238,7 @@ SprkTooltip.propTypes = {
   /**
    * Vertical alignment of tooltip.
    */
-  verticalAlignment: PropTypes.string,
+  verticalAlignment: PropTypes.oneOf(['top', 'middle', 'bottom', 'baseline']),
   /**
    * Expects a space separated string of classes to be added to the svg icon.
    */
