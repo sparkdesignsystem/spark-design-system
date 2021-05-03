@@ -73,7 +73,7 @@ export class SprkTooltipComponent implements AfterViewInit, OnChanges {
    * The vertical alignment of the tooltip.
    */
   @Input()
-  verticalAlignment: 'baseline' | 'top' | 'middle' | 'bottom' = 'middle';
+  verticalAlignment: 'baseline' | 'top' | 'middle' | 'bottom';
   /**
    * The icon to use for the trigger element.
    */
