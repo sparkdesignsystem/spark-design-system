@@ -15,6 +15,8 @@ import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-erro
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultsModule } from './sprk-autocomplete-results/sprk-autocomplete-results.module';
+import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk-autocomplete-result.directive';
+import { SprkAutocompleteResultModule } from './sprk-autocomplete-result/sprk-autocomplete-result.module';
 
 export default {
   title: 'Components/Autocomplete',
@@ -22,6 +24,7 @@ export default {
   subcomponents: {
     SprkInputDirective,
     SprkAutocompleteResultsDirective,
+    SprkAutocompleteResultDirective,
     SprkIconComponent,
     SprkLabelDirective,
     SprkFieldErrorDirective,
@@ -51,6 +54,7 @@ const modules = {
     SprkIconModule,
     SprkFieldErrorModule,
     SprkAutocompleteResultsModule,
+    SprkAutocompleteResultModule,
   ],
 };
 
@@ -100,7 +104,7 @@ export const defaultStory = () => ({
         aria-labelledby="autocomplete-label"
         sprkAutocompleteResults
       >
-        <li role="option" class="sprk-c-Autocomplete__result">Apple</li>
+        <li sprkAutocompleteResult id="option_1_1">Apple</li>
       </ul>
     </sprk-input-container>
   </sprk-autocomplete>
