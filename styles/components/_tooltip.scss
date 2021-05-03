@@ -4,7 +4,22 @@
 .sprk-c-Tooltip__container {
   position: relative;
   display: inline-flex;
+}
+
+.sprk-c-Tooltip__container--top {
+  vertical-align: top;
+}
+
+.sprk-c-Tooltip__container--middle {
   vertical-align: middle;
+}
+
+.sprk-c-Tooltip__container--bottom {
+  vertical-align: bottom;
+}
+
+.sprk-c-Tooltip__container--baseline {
+  vertical-align: baseline;
 }
 
 .sprk-c-Tooltip__trigger {

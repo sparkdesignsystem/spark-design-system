@@ -16,7 +16,13 @@ import { uniqueId } from 'lodash';
   selector: 'sprk-tooltip',
   template: `
     <span
-      class="sprk-c-Tooltip__container"
+      [ngClass]="{
+        'sprk-c-Tooltip__container': true,
+        'sprk-c-Tooltip__container--top': verticalAlignment === 'top',
+        'sprk-c-Tooltip__container--middle': verticalAlignment === 'middle',
+        'sprk-c-Tooltip__container--bottom': verticalAlignment === 'bottom',
+        'sprk-c-Tooltip__container--baseline': verticalAlignment === 'baseline'
+      }"
       [attr.data-id]="idString"
       #containerElement
     >
@@ -63,6 +69,11 @@ export class SprkTooltipComponent implements AfterViewInit, OnChanges {
    */
   @Input()
   triggerIconType = 'question-filled';
+  /**
+   * The vertical alignment of the tooltip.
+   */
+  @Input()
+  verticalAlignment: 'baseline' | 'top' | 'middle' | 'bottom' = 'middle';
   /**
    * The icon to use for the trigger element.
    */
