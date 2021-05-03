@@ -40,16 +40,49 @@ export class SprkAutocompleteResultsDirective implements OnInit {
   analyticsString: string;
 
   /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * element.
+   */
+  @Input()
+  additionalClasses: string;
+
+  /**
    * @ignore
    */
-  @HostListener('change', ['$event'])
-  OnChange() {
-    // if (this.variant === 'huge') {
-    //   this.floatLabelWhenValue(this.ref.nativeElement);
-    // }
+  getClasses(): string[] {
+    const classArray: string[] = ['sprk-c-Autocomplete__results'];
+
+    if (this.additionalClasses) {
+      this.additionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    return classArray;
   }
 
   ngOnInit(): void {
-    // this.renderer.addClass(this.ref.nativeElement, 'sprk-u-Width-100');
+    this.getClasses().forEach((item) => {
+      this.renderer.addClass(this.ref.nativeElement, item);
+    });
+
+    this.renderer.setAttribute(this.ref.nativeElement, 'role', 'listbox');
+
+    if (this.analyticsString) {
+      this.renderer.setAttribute(
+        this.ref.nativeElement,
+        'data-analytics',
+        this.analyticsString,
+      );
+    }
+
+    if (this.idString) {
+      this.renderer.setAttribute(
+        this.ref.nativeElement,
+        'data-id',
+        this.idString,
+      );
+    }
   }
 }

@@ -97,8 +97,6 @@ export const defaultStory = () => ({
         >
       </div>
       <ul
-        class="sprk-c-Autocomplete__results"
-        role="listbox"
         aria-labelledby="autocomplete-label"
         sprkAutocompleteResults
       >
