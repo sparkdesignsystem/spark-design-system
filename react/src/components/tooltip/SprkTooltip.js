@@ -144,6 +144,7 @@ class SprkTooltip extends Component {
       triggerIconName,
       iconAdditionalClasses,
       additionalClasses,
+      verticalAlignment,
       analyticsString,
       isDefaultOpen,
       id,
@@ -168,7 +169,17 @@ class SprkTooltip extends Component {
     }
 
     return (
-      <span {...other} className="sprk-c-Tooltip__container" data-id={idString}>
+      <span
+        {...other}
+        data-id={idString}
+        className={classnames('sprk-c-Tooltip__container', {
+          'sprk-c-Tooltip__container--top': verticalAlignment === 'top',
+          'sprk-c-Tooltip__container--middle': verticalAlignment === 'middle',
+          'sprk-c-Tooltip__container--bottom': verticalAlignment === 'bottom',
+          'sprk-c-Tooltip__container--baseline':
+            verticalAlignment === 'baseline',
+        })}
+      >
         <button
           type="button"
           ref={this.triggerRef}
@@ -224,6 +235,10 @@ SprkTooltip.propTypes = {
    * the trigger element. Intended for an outside library to capture data.
    */
   analyticsString: PropTypes.string,
+  /**
+   * Vertical alignment of tooltip.
+   */
+  verticalAlignment: PropTypes.string,
   /**
    * Expects a space separated string of classes to be added to the svg icon.
    */
