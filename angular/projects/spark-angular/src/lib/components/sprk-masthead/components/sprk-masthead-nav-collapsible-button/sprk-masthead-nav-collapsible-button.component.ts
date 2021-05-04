@@ -21,6 +21,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
           'sprk-c-Menu__icon--open': isOpen
         }"
         aria-hidden="true"
+        focusable="false"
         viewBox="0 0 64 64"
         xmlns="http://www.w3.org/2000/svg"
       >

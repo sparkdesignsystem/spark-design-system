@@ -1117,7 +1117,7 @@ export const withOutCollapsibleNav = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-masthead>
-      <div sprkMastheadBranding sprkStackItem>
+      <div sprkMastheadBranding sprkStackItem class="sprk-u-TextAlign--left">
         <a
           sprkLink
           href="#nogo"
