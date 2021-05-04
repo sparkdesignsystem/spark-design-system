@@ -85,12 +85,17 @@ export class SprkAutocompleteComponent implements AfterContentInit {
    * docs docs docs
    */
   hideResults(): void {
-    console.log('hiding');
-    this.renderer.addClass(this.results.nativeElement, 'sprk-u-Display--none');
-    // set aria-expanded to false
-    // remove activedescendant frm input
-    // remove aria-selected and highlight class from all list items
-    // emit something
+    if (this.results) {
+      console.log('results exists');
+      this.renderer.addClass(
+        this.results.nativeElement,
+        'sprk-u-Display--none',
+      );
+      // set aria-expanded to false
+      // remove activedescendant frm input
+      // remove aria-selected and highlight class from all list items
+      this.closedEvent.emit();
+    }
   }
 
   /**
@@ -102,7 +107,7 @@ export class SprkAutocompleteComponent implements AfterContentInit {
       'sprk-u-Display--none',
     );
     // set aria-expanded to true
-    // emit something
+    this.openedEvent.emit();
   }
 
   /**
@@ -135,6 +140,17 @@ export class SprkAutocompleteComponent implements AfterContentInit {
    */
   @Input()
   additionalClasses: string; // TODO where does this go and do we need more?
+
+  /**
+   * Accepts a function to run when asdf
+   */
+  @Output()
+  openedEvent = new EventEmitter<any>();
+  /**
+   * Accepts a function to run when asdf
+   */
+  @Output()
+  closedEvent = new EventEmitter<any>();
 
   /**
    * @ignore
