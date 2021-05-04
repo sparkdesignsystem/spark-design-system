@@ -20,8 +20,6 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
           variant="plain"
           class="
             sprk-c-Masthead__selector
-            sprk-b-Link
-            sprk-b-Link--plain
             sprk-o-Stack
             sprk-o-Stack--split@xxs
             sprk-o-Stack--center-column
@@ -35,11 +33,12 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
             triggerText ? triggerText : screenReaderText || 'Choose One'
           "
         >
-          <span class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs">{{
+          <span sprkStackItem class="sprk-o-Stack__item--flex@xxs">{{
             triggerText
           }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
+            sprkStackItem
             [iconName]="triggerIconName"
             additionalClasses="sprk-Stack__item sprk-u-mhs"
           ></sprk-icon>
@@ -57,14 +56,15 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
             href="#"
           >
             <span
-              class="sprk-c-Masthead__selector-dropdown-title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
+              sprkStackItem
+              class="sprk-c-Masthead__selector-dropdown-title sprk-b-TypeBodyTwo sprk-o-Stack__item--flex@xxs"
               >{{ heading }}</span
             >
             <sprk-icon
+              sprkStackItem
               [iconName]="triggerIconName"
               additionalClasses="
                 sprk-c-Icon--toggle
-                sprk-Stack__item
               "
             ></sprk-icon>
           </a>
@@ -262,7 +262,8 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   }
 
   /**
-   * @ignore
+   * Updates the open state when the
+   * selector is toggled.
    */
   toggle(event): void {
     event.preventDefault();

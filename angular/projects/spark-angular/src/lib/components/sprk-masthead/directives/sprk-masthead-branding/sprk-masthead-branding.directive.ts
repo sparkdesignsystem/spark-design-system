@@ -2,7 +2,6 @@ import {
   Directive,
   Input,
   HostBinding,
-  OnInit,
   Renderer2,
   ElementRef,
 } from '@angular/core';
@@ -10,7 +9,7 @@ import {
 @Directive({
   selector: '[sprkMastheadBranding]',
 })
-export class SprkMastheadBrandingDirective implements OnInit {
+export class SprkMastheadBrandingDirective {
   /**
    * @ignore
    */
@@ -26,17 +25,4 @@ export class SprkMastheadBrandingDirective implements OnInit {
   idString: string;
 
   @HostBinding('class.sprk-c-Masthead__branding') true: string;
-
-  /**
-   * We apply the Stack class centerthis way instead of using
-   * HostBinding because we want it to be able to be changed
-   * if needed ex. the responsive suffix. Using HostBinding
-   * would make it so the class cannot be removed.
-   */
-  ngOnInit(): void {
-    this.renderer.addClass(
-      this.ref.nativeElement,
-      'sprk-o-Stack__item--center-column@xxs',
-    );
-  }
 }

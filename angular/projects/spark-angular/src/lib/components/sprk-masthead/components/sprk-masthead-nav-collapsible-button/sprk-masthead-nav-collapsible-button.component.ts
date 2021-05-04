@@ -10,8 +10,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       (click)="toggleCollapsibleNav($event)"
       [attr.aria-controls]="collapsibleNavId"
       [attr.data-analytics]="analyticsString"
+      [attr.data-id]="idString"
     >
-      <span class="sprk-u-ScreenReaderText">Toggle Navigation</span>
+      <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
       <svg
         [ngClass]="{
           'sprk-c-Icon': true,
@@ -43,6 +44,14 @@ export class SprkMastheadNavCollapsibleButtonComponent {
    * @ignore
    */
   constructor() {}
+
+  /**
+   * The value supplied will be used
+   * as the screen reader text that describes
+   * the button.
+   */
+  @Input()
+  screenReaderText = 'Toggle Navigation';
 
   /**
    * The value supplied will be assigned to the

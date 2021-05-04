@@ -5,7 +5,9 @@ import { SprkMastheadNavCollapsibleButtonComponent } from './sprk-masthead-nav-c
 @Component({
   selector: 'sprk-test',
   template: `
-    <button sprkMastheadNavCollapsibleButton idString="test">Test</button>
+    <sprk-masthead-nav-collapsible-button idString="test"
+      >Test</sprk-masthead-nav-collapsible-button
+    >
   `,
 })
 class TestComponent {}
@@ -31,7 +33,7 @@ describe('SprkMastheadNavCollapsibleButtonComponent', () => {
   });
 
   it('should add the collapsible nav button class', () => {
-    expect(el.classList.contains('sprk-c-Masthead__menu')).toBe(true);
+    expect(el.classList.contains('sprk-c-Menu')).toBe(true);
   });
 
   it('should add data-id if value is supplied', () => {

@@ -5,6 +5,7 @@ import { SprkIconModule } from '../../../sprk-icon/sprk-icon.module';
 import { SprkLinkDirectiveModule } from '../../../../directives/sprk-link/sprk-link.module';
 import { SprkMastheadSelectorComponent } from './sprk-masthead-selector.component';
 import { SprkTextModule } from '../../../../directives/sprk-text/sprk-text.module';
+import { SprkStackItemModule } from '../../../../directives/sprk-stack-item/sprk-stack-item.module';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { SprkTextModule } from '../../../../directives/sprk-text/sprk-text.modul
     SprkLinkDirectiveModule,
     RouterModule,
     SprkTextModule,
+    SprkStackItemModule,
   ],
   declarations: [SprkMastheadSelectorComponent],
   exports: [
@@ -20,6 +22,7 @@ import { SprkTextModule } from '../../../../directives/sprk-text/sprk-text.modul
     SprkIconModule,
     SprkLinkDirectiveModule,
     SprkTextModule,
+    SprkStackItemModule,
   ],
 })
 export class SprkMastheadSelectorModule {}

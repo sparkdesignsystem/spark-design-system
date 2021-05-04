@@ -10,8 +10,8 @@ import { SprkMastheadComponent } from './sprk-masthead.component';
 import { SprkMastheadNavCollapsibleDirective } from './directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
 import { SprkMastheadContentDirective } from './directives/sprk-masthead-content/sprk-masthead-content.directive';
 import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-branding/sprk-masthead-branding.directive';
-import { SprkMastheadNavLinksDirective } from './directives/sprk-masthead-nav-links/sprk-masthead-nav-links.directive';
-import { SprkMastheadNavCollapsibleButtonDirective } from './directives/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.directive';
+import { SprkMastheadNavItemsDirective } from './directives/sprk-masthead-nav-items/sprk-masthead-nav-items.directive';
+import { SprkMastheadNavCollapsibleButtonComponent } from './components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.component';
 import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
@@ -34,60 +34,49 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
             width="365.4"
             height="48"
             viewBox="0 0 365.4 101.35"
-          >
-            test
-          </svg>
+          ></svg>
         </a>
       </div>
 
-      <div
-        navItem-slot
-        sprkStackItem
-        class="sprk-c-Masthead__nav-item sprk-o-Stack__item--center-column@xxs"
-      >
+      <div sprkMastheadNavItem sprkStackItem>
         <a sprkLink variant="simple" class="sprk-c-Masthead__link" href="#nogo">
           Sign In
         </a>
       </div>
 
       <nav
-        sprkMastheadNavLinks
+        sprkMastheadNavItems
         sprkStackItem
         role="navigation"
-        class="
-          sprk-o-Stack__item--flex@xxs
-          sprk-o-Stack
-          sprk-o-Stack--misc-a
-          sprk-o-Stack--split@xxs
-          sprk-o-Stack--end-row
-      "
+        class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
       >
-        <div
-          sprkStackItem
-          class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row"
-        >
-          <div sprkStackItem class="sprk-u-Position--relative">
-            <sprk-masthead-selector
-              triggerText="Choose One"
-              heading="Choose One"
-              triggerIconName="chevron-down"
-              [choices]="selectorDropdown"
-            >
-              <div
-                class="sprk-c-Masthead__selector-footer"
-                sprkMastheadSelectorFooter
+        <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
+          <sprk-stack
+            additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row"
+          >
+            <div sprkStackItem class="sprk-u-Position--relative">
+              <sprk-masthead-selector
+                triggerText="Choose One"
+                heading="Choose One"
+                triggerIconName="chevron-down"
+                [choices]="selectorDropdown"
               >
-                <a
-                  sprkLink
-                  variant="unstyled"
-                  href="#nogo"
-                  class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+                <div
+                  class="sprk-c-Masthead__selector-footer"
+                  sprkMastheadSelectorFooter
                 >
-                  Placeholder
-                </a>
-              </div>
-            </sprk-masthead-selector>
-          </div>
+                  <a
+                    sprkLink
+                    variant="unstyled"
+                    href="#nogo"
+                    class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+                  >
+                    Placeholder
+                  </a>
+                </div>
+              </sprk-masthead-selector>
+            </div>
+          </sprk-stack>
         </div>
 
         <ul
@@ -125,7 +114,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       </nav>
 
       <div sprkStackItem>
-        <nav sprkMastheadNavBar role="navigation" [attr.data-id]="cats">
+        <nav sprkMastheadNavBar sprkStackItem role="navigation" idString="cats">
           <ul
             class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare"
           >
@@ -202,6 +191,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         sprkMastheadNavCollapsible
         class="sprk-u-Display--none"
         role="navigation"
+        idString="collapsible-nav"
       >
         <sprk-masthead-selector
           triggerText="Choose One"
@@ -484,9 +474,9 @@ describe('SprkMastheadComponent', () => {
         Test1Component,
         SprkStackItemDirective,
         SprkMastheadContentDirective,
-        SprkMastheadNavLinksDirective,
+        SprkMastheadNavItemsDirective,
         SprkMastheadNavCollapsibleDirective,
-        SprkMastheadNavCollapsibleButtonDirective,
+        SprkMastheadNavCollapsibleButtonComponent,
         SprkMastheadBrandingDirective,
       ],
     }).compileComponents();
@@ -498,9 +488,9 @@ describe('SprkMastheadComponent', () => {
 
     mastheadFixture = TestBed.createComponent(SprkMastheadComponent);
     mastheadComponent = mastheadFixture.componentInstance;
-    mastheadComponent.ngAfterContentInit();
-    mastheadFixture.detectChanges();
     fixture.detectChanges();
+    mastheadFixture.detectChanges();
+    mastheadComponent.ngAfterContentInit();
     mastheadElement = mastheadFixture.nativeElement.querySelector(
       '.sprk-c-Masthead',
     );
@@ -508,6 +498,10 @@ describe('SprkMastheadComponent', () => {
       '.sprk-c-Masthead__narrow-nav',
     );
     collapsibleNavButton = mastheadElement.querySelector('.sprk-c-Menu');
+    console.log(
+      mastheadElement.parentElement.innerHTML,
+      'the nav button catssssss',
+    );
   });
 
   afterEach(() => {
@@ -523,14 +517,14 @@ describe('SprkMastheadComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should add classes when additionalClasses has a value', () => {
-  //   mastheadComponent.additionalClasses = 'sprk-u-man';
-  //   mastheadFixture.detectChanges();
-  //   fixture.detectChanges();
-  //   expect(mastheadElement.classList.toString()).toEqual(
-  //     'sprk-c-Masthead sprk-o-Stack sprk-u-man',
-  //   );
-  // });
+  it('should add classes when additionalClasses has a value', () => {
+    mastheadComponent.additionalClasses = 'sprk-u-man';
+    mastheadFixture.detectChanges();
+    fixture.detectChanges();
+    expect(mastheadElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack sprk-u-man',
+    );
+  });
 
   // it(`
   //     should add the aria-expanded attribute to collapsbile nav button and

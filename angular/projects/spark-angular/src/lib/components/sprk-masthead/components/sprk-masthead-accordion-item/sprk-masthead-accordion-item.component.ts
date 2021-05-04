@@ -6,9 +6,7 @@ import { toggleAnimations } from '../../../sprk-toggle/sprk-toggle-animations';
   selector: 'sprk-masthead-accordion-item',
   template: `
     <li [ngClass]="getClasses()">
-      <div
-        class="sprk-u-Position--relative sprk-o-Stack__item sprk-u-Width-100"
-      >
+      <div sprkStackItem class="sprk-u-Position--relative sprk-u-Width-100">
         <button
           [attr.aria-controls]="accordion_controls_id"
           class="sprk-c-MastheadAccordion__summary"
@@ -19,7 +17,7 @@ import { toggleAnimations } from '../../../sprk-toggle/sprk-toggle-animations';
         >
           <span [ngClass]="getHeadingClasses()">
             <sprk-icon
-              [iconType]="leadingIcon"
+              [iconName]="leadingIcon"
               additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs"
               *ngIf="leadingIcon"
             ></sprk-icon>
@@ -30,7 +28,7 @@ import { toggleAnimations } from '../../../sprk-toggle/sprk-toggle-animations';
             additionalClasses="sprk-c-MastheadAccordion__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-c-Icon--toggle {{
               iconStateClass
             }}"
-            [iconType]="currentIconType"
+            [iconName]="currentIconType"
           ></sprk-icon>
         </button>
       </div>
@@ -146,7 +144,8 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
       : (this.iconStateClass = 'sprk-c-Icon--open');
   }
   /**
-   * @ignore
+   * Updates the isOpen state when
+   * the item is toggled.
    */
   toggleAccordion(event): void {
     event.preventDefault();

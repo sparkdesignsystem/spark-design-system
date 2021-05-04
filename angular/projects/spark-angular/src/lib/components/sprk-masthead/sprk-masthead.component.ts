@@ -10,6 +10,7 @@ import {
 import { Router, Event, NavigationEnd } from '@angular/router';
 import { uniqueId, throttle } from 'lodash';
 import { SprkMastheadNavCollapsibleDirective } from './directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
+import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-branding/sprk-masthead-branding.directive';
 
 @Component({
   selector: 'sprk-masthead',
@@ -19,6 +20,7 @@ import { SprkMastheadNavCollapsibleDirective } from './directives/sprk-masthead-
         sprkStackItem
         splitAt="extraTiny"
         additionalClasses="sprk-c-Masthead__content"
+        *ngIf="branding"
       >
         <div
           sprkStackItem
@@ -45,6 +47,15 @@ export class SprkMastheadComponent implements AfterContentInit {
    */
   constructor(private renderer: Renderer2, router: Router) {
     router.events.subscribe((event: Event) => {
+      /**
+       * If page is changed by the router
+       * and they have a collapsibleNav
+       * we want to make sure it is closed
+       * when the new page loads.
+       */
+      if (!this.collapsibleNav) {
+        return;
+      }
       if (event instanceof NavigationEnd) {
         this.closeCollapsibleNav();
       }
@@ -82,6 +93,12 @@ export class SprkMastheadComponent implements AfterContentInit {
     read: ElementRef,
   })
   collapsibleNav: ElementRef;
+
+  @ContentChild(SprkMastheadBrandingDirective, {
+    static: false,
+    read: ElementRef,
+  })
+  branding: ElementRef;
 
   /**
    * @ignore
@@ -177,15 +194,9 @@ export class SprkMastheadComponent implements AfterContentInit {
     if (!this.collapsibleNav) {
       return;
     }
-    console.log(
-      this.collapsibleNav.nativeElement.id.length > 0,
-      ' found mobile nac',
-    );
     this.collapsibleNav.nativeElement.id.length > 0
       ? (this.collapsibleNavId = this.collapsibleNav.nativeElement.id)
       : (this.collapsibleNavId = uniqueId(`sprk_masthead_collapsible_nav_`));
-
-    console.log(this.collapsibleNavId, 'the id');
   }
 
   /**
@@ -208,7 +219,6 @@ export class SprkMastheadComponent implements AfterContentInit {
    */
   ngAfterContentInit() {
     this.isNarrowViewport = this.isElementVisible('.sprk-c-Masthead__menu');
-    console.log(this.collapsibleNav, 'the nav asdfasdf');
 
     // Check for existing ID on collapsible navigation
     this.getCollapsibleNavId();

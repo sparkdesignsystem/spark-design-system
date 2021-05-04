@@ -15,9 +15,15 @@ import { SprkMastheadNavBarDirective } from '../sprk-masthead/directives/sprk-ma
 import { SprkMastheadNavCollapsibleDirective } from '../sprk-masthead/directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
 import { SprkMastheadNavCollapsibleButtonComponent } from '../sprk-masthead/components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.component';
 import { SprkTextDirective } from '../../directives/sprk-text/sprk-text.directive';
+import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
 import { SprkHeadingDirective } from '../../directives/sprk-heading/sprk-heading.directive';
+import { SprkHeadingModule } from '../../directives/sprk-heading/sprk-heading.module';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
+import { SprkHighlightBoardComponent } from '../sprk-highlight-board/sprk-highlight-board.component';
+import { SprkHighlightBoardModule } from '../../components/sprk-highlight-board/sprk-highlight-board.module';
+import { SprkCardModule } from '../../components/sprk-card/sprk-card.module';
+import { SprkBoxModule } from '../../directives/sprk-box/sprk-box.module';
 
 export default {
   title: 'Components/Masthead',
@@ -34,6 +40,7 @@ export default {
       SprkMastheadNavCollapsibleButtonComponent,
       SprkTextDirective,
       SprkHeadingDirective,
+      SprkHighlightBoardComponent,
       SprkStackItemDirective,
       SprkStackComponent,
     },
@@ -143,14 +150,177 @@ const logoSvg = `
 `;
 
 const bodyContent = `
-  <div class="sprk-o-Box">
-    <sprk-stack itemSpacing="large" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10]" additionalClasses="sprk-o-Box">
-      <h2 sprkStackItem sprkHeading variant="displayTwo">
-        This is example body content and is not part of the component.
-      </h2>
-      <p sprkStackItem *ngFor="let number of [0,1,2,3]" sprkText variant="bodyTwo">
-        This is example body content and is not part of the component.
-      </p>
+  <sprk-highlight-board
+    heading="Hello, Welcome To Spark Design System"
+    ctaText="Designers"
+    ctaHref="#nogo"
+    ctaText2="Developers"
+    ctaHref2="#nogo"
+    imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+    imgAlt=""
+    idString="highlightboard-1"
+  >
+  </sprk-highlight-board>
+
+  <div sprkBox spacing="large">
+    <h2 sprkHeading variant="displayTwo">Example Cards</h2>
+  </div>
+
+  <div sprkBox>
+    <sprk-stack
+      itemSpacing="large"
+      splitAt="large"
+      additionalClasses="sprk-o-Stack--center-row"
+    >
+    <div
+      class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+      sprkStackItem
+    >
+      <sprk-card sprkStackItem>
+        <a
+          sprkLink
+          variant="unstyled"
+          href="#nogo"
+          analyticsString="three-up-media"
+          sprkStackItem
+        >
+          <img
+            sprkCardMedia
+            alt="Learn more"
+            src="https://spark-assets.netlify.app/desktop.jpg"
+          />
+        </a>
+
+        <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+          <h3 sprkHeading variant="displayFive" sprkStackItem>
+            Title
+          </h3>
+
+          <p sprkText variant="bodyTwo" sprkStackItem>
+            This Lorem ipsum dolor sit amet, doctus invenire vix te.
+            Facilisi perpetua an pri, errem commune mea at, mei prima
+            tantas signiferumque at. Numquam.
+          </p>
+
+          <sprk-stack
+            additionalClasses="sprk-o-Stack--end-column"
+            sprkStackItem
+          >
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="#nogo"
+                analyticsString="three-up-cta"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-stack>
+      </sprk-card>
+    </div>
+
+    <div
+      class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+      sprkStackItem
+    >
+      <sprk-card sprkStackItem>
+        <a
+          sprkLink
+          variant="unstyled"
+          href="#nogo"
+          sprkStackItem
+          analyticsString="three-up-media-2"
+        >
+          <img
+            sprkCardMedia
+            alt="Learn more"
+            src="https://spark-assets.netlify.app/desktop.jpg"
+          />
+        </a>
+
+        <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+          <h3 sprkHeading variant="displayFive" sprkStackItem>
+            Title
+          </h3>
+
+          <p sprkText variant="bodyTwo" sprkStackItem>
+            This Lorem ipsum dolor sit amet, doctus invenire vix te.
+            Facilisi perpetua an pri, errem commune mea at, mei prima
+            tantas signiferumque at. Numquam.
+          </p>
+
+          <sprk-stack
+            additionalClasses="sprk-o-Stack--end-column"
+            sprkStackItem
+          >
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="#nogo"
+                analyticsString="three-up-cta-2"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-stack>
+      </sprk-card>
+    </div>
+
+    <div
+      class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+      sprkStackItem
+    >
+      <sprk-card sprkStackItem>
+        <a
+          sprkLink
+          variant="unstyled"
+          href="#nogo"
+          analyticsString="three-up-media-3"
+          sprkStackItem
+        >
+          <img
+            sprkCardMedia
+            alt="Learn more"
+            src="https://spark-assets.netlify.app/desktop.jpg"
+          />
+        </a>
+
+        <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+          <h3 sprkHeading variant="displayFive" sprkStackItem>
+            Title
+          </h3>
+
+          <p sprkText variant="bodyTwo" sprkStackItem>
+            This Lorem ipsum dolor sit amet, doctus invenire vix te.
+            Facilisi perpetua an pri, errem commune mea at, mei prima
+            tantas signiferumque at. Numquam.
+          </p>
+
+          <sprk-stack
+            additionalClasses="sprk-o-Stack--end-column"
+            sprkStackItem
+          >
+            <div sprkStackItem>
+              <a
+                sprkLink
+                variant="unstyled"
+                href="#nogo"
+                analyticsString="three-up-cta-3"
+                class="sprk-c-Button sprk-c-Button--secondary"
+              >
+                Learn More
+              </a>
+            </div>
+          </sprk-stack>
+        </sprk-stack>
+      </sprk-card>
+    </div>
     </sprk-stack>
   </div>
 `;
@@ -158,6 +328,11 @@ const bodyContent = `
 const modules = {
   imports: [
     SprkMastheadModule,
+    SprkHighlightBoardModule,
+    SprkCardModule,
+    SprkTextModule,
+    SprkHeadingModule,
+    SprkBoxModule,
     RouterModule.forRoot([
       {
         path: 'iframe.html',
@@ -173,7 +348,7 @@ export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-masthead>
-      <div sprkMastheadBranding sprkStackItem>
+      <div sprkMastheadBranding sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
         <a
           sprkLink
           href="#nogo"
@@ -424,7 +599,7 @@ export const extended = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-masthead>
-      <div sprkMastheadBranding sprkStackItem>
+      <div sprkMastheadBranding sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
         <a
           sprkLink
           href="#nogo"
@@ -448,30 +623,32 @@ export const extended = () => ({
         </a>
       </div>
 
-      <nav sprkMastheadNavItems sprkStackItem role="navigation">
-        <div sprkStackItem class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--center-column sprk-o-Stack--center-row">
-          <div sprkStackItem class="sprk-u-Position--relative">
-            <sprk-masthead-selector
-              triggerText="Choose One"
-              heading="Choose One"
-              triggerIconName="chevron-down"
-              [choices]="selectorDropdown"
-            >
-              <div
-                class="sprk-c-Masthead__selector-footer"
-                sprkMastheadSelectorFooter
+      <nav sprkMastheadNavItems sprkStackItem role="navigation" class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row">
+        <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
+          <sprk-stack additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row">
+            <div sprkStackItem class="sprk-u-Position--relative">
+              <sprk-masthead-selector
+                triggerText="Choose One"
+                heading="Choose One"
+                triggerIconName="chevron-down"
+                [choices]="selectorDropdown"
               >
-                <a
-                  sprkLink
-                  variant="unstyled"
-                  href="#nogo"
-                  class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+                <div
+                  class="sprk-c-Masthead__selector-footer"
+                  sprkMastheadSelectorFooter
                 >
-                  Placeholder
-                </a>
-              </div>
-            </sprk-masthead-selector>
-          </div>
+                  <a
+                    sprkLink
+                    variant="unstyled"
+                    href="#nogo"
+                    class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+                  >
+                    Placeholder
+                  </a>
+                </div>
+              </sprk-masthead-selector>
+            </div>
+          </sprk-stack>
         </div>
 
         <ul
@@ -596,7 +773,6 @@ export const extended = () => ({
 
       <nav
         sprkMastheadNavCollapsible
-        cats
         class="sprk-u-Display--none"
         role="navigation"
         idString="collapsible-nav"
@@ -934,5 +1110,133 @@ extended.story = {
       'sprk-masthead-accordion.component',
       'sprk-masthead-accordion-item.component',
     ],
+  },
+};
+
+export const withOutCollapsibleNav = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-masthead>
+      <div sprkMastheadBranding sprkStackItem>
+        <a
+          sprkLink
+          href="#nogo"
+          variant="unstyled"
+        >
+          <svg
+            class="sprk-c-Masthead__logo sprk-u-TextAlign--left"
+            xmlns="http://www.w3.org/2000/svg"
+            width="365.4"
+            height="48"
+            viewBox="0 0 365.4 101.35"
+          >
+            ${logoSvg}
+          </svg>
+        </a>
+      </div>
+
+      <div sprkMastheadNavItem sprkStackItem>
+        <a
+          sprkLink
+          variant="simple"
+          class="sprk-c-Masthead__link"
+          href="#nogo"
+        >
+          Talk To Us
+        </a>
+      </div>
+
+      <nav sprkMastheadNavItems sprkStackItem role="navigation" class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row">
+        <ul
+          sprkStackItem
+          class="
+            sprk-o-HorizontalList
+            sprk-o-HorizontalList--spacing-medium
+            sprk-o-Stack--center-column
+          "
+        >
+          <li>
+            <a
+              sprkLink
+              variant="simple"
+              class="sprk-c-Masthead__link"
+              href="#nogo"
+            >
+              Talk To Us
+            </a>
+          </li>
+
+          <li>
+            <sprk-dropdown
+              [choices]="talkToUsDropdownChoices"
+              heading="My Account"
+              triggerIconName="user"
+              triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+              iconAdditionalClasses="sprk-c-Icon--xl"
+              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              screenReaderText="User Account"
+            >
+            </sprk-dropdown>
+          </li>
+        </ul>
+      </nav>
+    </sprk-masthead>
+    ${bodyContent}
+  `,
+  props: {
+    item2NavBarDropdownChoices: [
+      {
+        text: 'Item 1',
+        href: '#nogo',
+      },
+      {
+        text: 'Item 2',
+        href: '#nogo',
+      },
+      {
+        text: 'Item 3',
+        href: '#nogo',
+      },
+    ],
+    selectorDropdown: [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'Additional Information',
+        },
+        value: 'Choice Title 1',
+        active: false,
+      },
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'Additional Information',
+        },
+        value: 'Choice Title 2',
+        active: true,
+      },
+    ],
+    talkToUsDropdownChoices: [
+      {
+        text: 'Change Username',
+        value: 'change-username',
+      },
+      {
+        text: 'Change Password',
+        value: 'change-password',
+      },
+      {
+        text: 'Sign Out',
+        value: 'sign-out',
+      },
+    ],
+  },
+});
+
+withOutCollapsibleNav.story = {
+  parameters: {
+    jest: ['sprk-masthead.component'],
   },
 };

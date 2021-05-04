@@ -4,13 +4,12 @@ import {
   HostBinding,
   ElementRef,
   Renderer2,
-  OnInit,
 } from '@angular/core';
 
 @Directive({
   selector: '[sprkMastheadNavItems]',
 })
-export class SprkMastheadNavItemsDirective implements OnInit {
+export class SprkMastheadNavItemsDirective {
   /**
    * @ignore
    */
@@ -26,17 +25,4 @@ export class SprkMastheadNavItemsDirective implements OnInit {
   idString: string;
 
   @HostBinding('class.sprk-c-Masthead__little-nav') true;
-
-  /**
-   * We apply the Stack modifier class this way instead of using
-   * HostBinding because we want it to be able to be changed
-   * if needed ex. the responsive suffix. Using HostBinding
-   * would make it so the class cannot be removed.
-   */
-  ngOnInit(): void {
-    this.renderer.addClass(
-      this.ref.nativeElement,
-      'sprk-o-Stack__item--center-column@xxs',
-    );
-  }
 }
