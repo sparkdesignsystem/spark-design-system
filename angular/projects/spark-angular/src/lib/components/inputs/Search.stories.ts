@@ -73,7 +73,6 @@ export const searchInput = () => ({
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
-
         ></sprk-icon>
         <input
           id="search"
@@ -120,7 +119,6 @@ export const invalidSearchInput = () => ({
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
-
         ></sprk-icon>
         <input
           id="invalid-search"
