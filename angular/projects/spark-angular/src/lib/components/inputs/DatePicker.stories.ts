@@ -80,7 +80,6 @@ export const defaultStory = () => ({
           additionalClasses="sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
-          focusable="false"
         ></sprk-icon>
         <input
           id="datepicker"
@@ -123,7 +122,6 @@ export const invalidDatePicker = () => ({
           additionalClasses="sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
-          focusable="false"
         ></sprk-icon>
         <input
           id="invalid-datepicker"
@@ -144,7 +142,6 @@ export const invalidDatePicker = () => ({
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
           ariaHidden="true"
-          focusable="false"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -178,7 +175,6 @@ export const disabledDatePicker = () => ({
           additionalClasses="sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
-          focusable="false"
         ></sprk-icon>
         <input
           id="disabled-datepicker"
@@ -221,7 +217,6 @@ export const legacyStory = () => ({
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
-        focusable="false"
       ></sprk-icon>
       <input
         id="legacy-datepicker"
@@ -264,7 +259,6 @@ export const legacyInvalidDatePicker = () => ({
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
-        focusable="false"
       ></sprk-icon>
       <input
         id="legacy-invalid-datepicker"
@@ -285,7 +279,6 @@ export const legacyInvalidDatePicker = () => ({
           iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
           ariaHidden="true"
-          focusable="false"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -319,7 +312,6 @@ export const legacyDisabledDatePicker = () => ({
         additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
-        focusable="false"
       ></sprk-icon>
       <input
         id="legacy-disabled-datepicker"

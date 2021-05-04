@@ -73,7 +73,7 @@ export const searchInput = () => ({
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
-          focusable="false"
+
         ></sprk-icon>
         <input
           id="search"
@@ -120,7 +120,7 @@ export const invalidSearchInput = () => ({
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
-          focusable="false"
+
         ></sprk-icon>
         <input
           id="invalid-search"
@@ -141,7 +141,6 @@ export const invalidSearchInput = () => ({
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
           ariaHidden="true"
-          focusable="false"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -180,7 +179,6 @@ export const disabledSearchInput = () => ({
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
-          focusable="false"
         ></sprk-icon>
         <input
           id="disabled-search"
@@ -226,7 +224,6 @@ export const legacyStory = () => ({
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
-        focusable="false"
       ></sprk-icon>
       <input
         id="legacy-search"
@@ -270,7 +267,6 @@ export const legacyInvalidSearchInput = () => ({
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
-        focusable="false"
       ></sprk-icon>
       <input
         id="legacy-invalid-search"
@@ -290,7 +286,6 @@ export const legacyInvalidSearchInput = () => ({
           iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
           ariaHidden="true"
-          focusable="false"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -326,7 +321,6 @@ export const legacyDisabledSearchInput = () => ({
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
-        focusable="false"
       ></sprk-icon>
       <input
         id="legacy-disabled-search"

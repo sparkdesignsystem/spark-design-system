@@ -85,9 +85,16 @@ describe('SprkIconComponent', () => {
     expect(iconElement.getAttribute('aria-hidden')).toEqual('true');
   });
 
-  it('should add focusable', () => {
+  it('should add focusable=false by default', () => {
     component.iconName = 'bell';
-    component.focusable = 'true';
+    fixture.detectChanges();
+    expect(iconElement.hasAttribute('focusable')).toBeTruthy();
+    expect(iconElement.getAttribute('focusable')).toEqual('false');
+  });
+
+  it('should add focusableAttr', () => {
+    component.iconName = 'bell';
+    component.focusableAttr = true;
     fixture.detectChanges();
     expect(iconElement.hasAttribute('focusable')).toBeTruthy();
     expect(iconElement.getAttribute('focusable')).toEqual('true');
