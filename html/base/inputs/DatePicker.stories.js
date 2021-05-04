@@ -52,11 +52,13 @@ export const defaultStory = () => {
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#calendar" />
         </svg>
@@ -110,11 +112,13 @@ export const invalidDatePicker = () => {
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#calendar" />
         </svg>
@@ -142,6 +146,8 @@ export const invalidDatePicker = () => {
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -180,11 +186,13 @@ export const disabledDatePicker = () => {
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#calendar" />
         </svg>

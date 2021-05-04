@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
       [attr.viewBox]="viewBox"
       [attr.aria-labelledby]="ariaLabelledby"
       [attr.aria-hidden]="ariaHidden"
+      [attr.focusable]="focusableAttr"
       [attr.data-id]="idString"
     >
       <use [attr.xlink:href]="icon" />
@@ -50,6 +51,14 @@ export class SprkIconComponent {
    */
   @Input()
   ariaHidden: string;
+  /**
+   * Expects a value to assign to
+   * the `focusable` attribute of the icon. This is a
+   * deprecated SVG attribute that is only included for
+   * IE 11 compatibility.
+   */
+  @Input()
+  focusableAttr: boolean = false;
   /**
    * Expects a space separated string
    * of classes to be added to the

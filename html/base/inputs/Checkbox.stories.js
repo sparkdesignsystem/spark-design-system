@@ -16,7 +16,7 @@ use the tabindex attribute to change this.
 - Change the value of the aria-checked attribute
 dynamically when the checkbox is activated.
 
-###### Ensure all related checkboxes are grouped together using 
+###### Ensure all related checkboxes are grouped together using
 one of the following methods:
 
 - Fieldset and legend tags
@@ -288,6 +288,8 @@ export const invalidCheckbox = () => {
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -700,6 +702,8 @@ export const hugeInvalid = () => {
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
