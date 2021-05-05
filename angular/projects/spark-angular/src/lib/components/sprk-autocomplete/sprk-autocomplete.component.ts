@@ -7,13 +7,17 @@ import {
   OnChanges,
   SimpleChanges,
   ViewChild,
+  ViewChildren,
+  ContentChildren,
   ContentChild,
   HostListener,
   AfterContentInit,
   ElementRef,
+  QueryList,
 } from '@angular/core';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sprk-autocomplete-results.directive';
+import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk-autocomplete-result.directive';
 
 @Component({
   selector: 'sprk-autocomplete',
@@ -22,11 +26,10 @@ import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sp
 export class SprkAutocompleteComponent implements AfterContentInit {
   constructor(private ref: ElementRef, private renderer: Renderer2) {}
 
-  // TODO calculate and set max-width on page load and on window resize
-  // const calculateListWidth = (listEl, inputEl) => {
-  //   const currentInputWidth = inputEl.offsetWidth;
-  //   listEl.setAttribute('style', `max-width:${currentInputWidth}px`);
-  // };
+  // todo put these somewhere else
+  isUpPressed = (e) => e.key === 'ArrowRight' || e.keyCode === 38;
+  isDownPressed = (e) => e.key === 'ArrowDown' || e.keyCode === 40;
+  isEnterPressed = (e) => e.key === 'Enter' || e.keyCode === 13;
 
   /**
    * @ignore
@@ -44,10 +47,21 @@ export class SprkAutocompleteComponent implements AfterContentInit {
       }
     }
 
-    // if up arrow
-    // if down arrow
-    // Enter
-    // Tab?
+    if (this.isUpPressed($event)) {
+      this.retreatHighlightedItem();
+    }
+
+    if (this.isDownPressed($event)) {
+      this.advanceHighlightedItem();
+    }
+
+    if (this.isEnterPressed($event)) {
+      // Only select the list item if the list is open
+      // and an item is highlighted
+      if (this.isOpen && this.highlightedIndex !== -1) {
+        this.selectListItem();
+      }
+    }
   }
 
   /**
@@ -82,14 +96,69 @@ export class SprkAutocompleteComponent implements AfterContentInit {
   results: ElementRef;
 
   /**
+   * This component expects asdf.
+   */
+  @ContentChildren(SprkAutocompleteResultDirective, { descendants: true })
+  resultItems: QueryList<SprkAutocompleteResultDirective>;
+
+  retreatHighlightedItem(): void {
+    this.resetListItems();
+
+    if (this.highlightedIndex < 0 || this.highlightedIndex - 1 === -1) {
+      this.highlightedIndex = this.resultItems.length - 1;
+    } else {
+      this.highlightedIndex = this.highlightedIndex - 1;
+    }
+
+    this.highlightListItem(this.resultItems.toArray()[this.highlightedIndex]);
+  }
+
+  advanceHighlightedItem(): void {
+    this.resetListItems();
+
+    if (this.highlightedIndex < 0) {
+      this.highlightedIndex = 0;
+    } else if (this.highlightedIndex + 1 <= this.resultItems.length - 1) {
+      this.highlightedIndex = this.highlightedIndex + 1;
+    } else {
+      this.highlightedIndex = 0;
+    }
+
+    this.highlightListItem(this.resultItems.toArray()[this.highlightedIndex]);
+  }
+
+  resetListItems(): void {
+    this.resultItems.forEach((element, index) => {
+      element.isHighlighted = false;
+    });
+  }
+
+  highlightListItem(element): void {
+    element.isHighlighted = true;
+
+    this.renderer.setAttribute(
+      this.input.ref.nativeElement,
+      'aria-activedescendant',
+      element.ref.nativeElement.id,
+    );
+  }
+
+  selectListItem(): void {
+    var selectedElement = this.resultItems.filter(
+      (element, index) => element.isHighlighted,
+    )[0];
+    var selectedId = selectedElement.ref.nativeElement.id;
+    this.itemSelectedEvent.emit(selectedId);
+  }
+
+  /**
    * docs docs docs
    */
   hideResults(): void {
     if (this.results) {
-      console.log('results exists');
       this.renderer.addClass(
         this.results.nativeElement,
-        'sprk-u-Display--none',
+        'sprk-c-Autocomplete__results--hidden', // todo use a new class scoped to the component
       );
       // set aria-expanded to false
       // remove activedescendant frm input
@@ -104,11 +173,13 @@ export class SprkAutocompleteComponent implements AfterContentInit {
   showResults(): void {
     this.renderer.removeClass(
       this.results.nativeElement,
-      'sprk-u-Display--none',
+      'sprk-c-Autocomplete__results--hidden',
     );
     // set aria-expanded to true
     this.openedEvent.emit();
   }
+
+  highlightedIndex = -1;
 
   /**
    * If `true`, the TODO
@@ -151,6 +222,11 @@ export class SprkAutocompleteComponent implements AfterContentInit {
    */
   @Output()
   closedEvent = new EventEmitter<any>();
+  /**
+   * Accepts a function to run when asdf
+   */
+  @Output()
+  itemSelectedEvent = new EventEmitter<any>();
 
   /**
    * @ignore
@@ -164,14 +240,21 @@ export class SprkAutocompleteComponent implements AfterContentInit {
       if (this.isOpen) {
         this.renderer.removeClass(
           this.results.nativeElement,
-          'sprk-u-Display--none',
+          'sprk-c-Autocomplete__results--hidden',
         );
       } else {
         this.renderer.addClass(
           this.results.nativeElement,
-          'sprk-u-Display--none',
+          'sprk-c-Autocomplete__results--hidden',
         );
       }
+    }
+
+    // if I have an itemSelectedEvent, also set that as the click event on each result
+    if (this.itemSelectedEvent) {
+      this.resultItems.forEach((element, index) => {
+        element.itemSelectedEvent = this.itemSelectedEvent;
+      });
     }
   }
 }

@@ -61,7 +61,7 @@ const modules = {
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-  <sprk-autocomplete isOpen="true">
+  <sprk-autocomplete isOpen="true" (itemSelectedEvent)="closedEvent()">
     <sprk-input-container>
       <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
       <label
@@ -104,7 +104,9 @@ export const defaultStory = () => ({
         aria-labelledby="autocomplete-label"
         sprkAutocompleteResults
       >
-        <li sprkAutocompleteResult id="option_1_1">Apple</li>
+        <li sprkAutocompleteResult>Apple</li>
+        <li sprkAutocompleteResult id="option_1_2">Apricot</li>
+        <li sprkAutocompleteResult id="option_1_3">Avocado</li>
       </ul>
     </sprk-input-container>
   </sprk-autocomplete>

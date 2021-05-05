@@ -28,28 +28,35 @@ describe('SprkAutocompleteComponent', () => {
     }).compileComponents();
   }));
 
+  var compile, scope, directiveElem;
+
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkAutocompleteComponent);
     component = fixture.componentInstance;
+
+    // something like this?
+    // module('sampleDirectives');
+
+    // inject(function($compile, $rootScope){
+    //   compile = $compile;
+    //   scope = $rootScope.$new();
+    // });
+
+    // var element = angular.element('<ul sprkAutocompleteResults></ul>');
+    // directiveElem = compile(element)(scope);
+    // scope.$digest();
+
+    // fixture.nativeElement.appendChild(directiveElem);
+
     fixture.detectChanges();
 
-    const input = document.createElement('input');
-    input.setAttribute('sprkInput', '');
-
-    const resultsElement = document.createElement('ul');
-    // needs to be that Directive so it can be selected
-    resultsElement.setAttribute('sprkAutocompleteResults', '');
-
-    fixture.nativeElement.appendChild(input);
-    fixture.nativeElement.appendChild(resultsElement);
-
-    fixture.detectChanges();
-
-    console.log(fixture.debugElement.nativeElement.outerHTML);
+    // console.log(fixture.debugElement.nativeElement.outerHTML);
 
     wrappedFixture = TestBed.createComponent(WrappedAutocompleteComponent);
     wrappedComponent = wrappedFixture.componentInstance;
     wrappedFixture.detectChanges();
+
+    // console.log(wrappedFixture.debugElement.nativeElement.outerHTML);
   });
 
   it('should create itself', () => {
