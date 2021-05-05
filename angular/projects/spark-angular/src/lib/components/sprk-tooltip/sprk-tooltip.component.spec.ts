@@ -198,6 +198,7 @@ describe('SprkTooltipComponent', () => {
     expect(
       containerElement.classList.contains('sprk-c-Tooltip__container--top'),
     ).toEqual(true);
+    expect(containerElement.classList.length).toEqual(2);
   });
 
   it('should add vertical align bottom', () => {
@@ -206,6 +207,7 @@ describe('SprkTooltipComponent', () => {
     expect(
       containerElement.classList.contains('sprk-c-Tooltip__container--bottom'),
     ).toEqual(true);
+    expect(containerElement.classList.length).toEqual(2);
   });
 
   it('should add vertical align baseline', () => {
@@ -216,6 +218,7 @@ describe('SprkTooltipComponent', () => {
         'sprk-c-Tooltip__container--baseline',
       ),
     ).toEqual(true);
+    expect(containerElement.classList.length).toEqual(2);
   });
 
   it('should generate an id if needed', () => {
