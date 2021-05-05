@@ -61,7 +61,7 @@ const modules = {
 export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
-  <sprk-autocomplete isOpen="true" (itemSelectedEvent)="closedEvent()">
+  <sprk-autocomplete isOpen="true">
     <sprk-input-container>
       <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
       <label
@@ -86,6 +86,7 @@ export const defaultStory = () => ({
             sprk-c-Icon--stroke-current-color
           "
           sprk-input-icon
+          ariaHidden="true"
         ></sprk-icon>
         <input
           id="autocomplete-input"
@@ -118,6 +119,14 @@ export const defaultStory = () => ({
         <li sprkAutocompleteResult>Papaya</li>
       </ul>
     </sprk-input-container>
+    <span sprkFieldError id="autocomplete--error-container">
+      <sprk-icon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        ariaHidden="true"
+      ></sprk-icon>
+      <div class="sprk-b-ErrorText"></div>
+    </span>
   </sprk-autocomplete>
   `,
 });
@@ -132,7 +141,74 @@ defaultStory.story = {
 export const defaultInvalid = () => ({
   moduleMetadata: modules,
   template: `
-    default invalid
+  <sprk-autocomplete>
+    <sprk-input-container>
+      <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
+      <label
+        id="autocomplete-label2"
+        for="autocomplete-input2"
+        hasIcon="true"
+        sprkLabel
+      >
+        Search for a Fruit
+      </label>
+      <div
+        class="sprk-b-TextInputIconContainer"
+        aria-labelledby="autocomplete-label2"
+        role="combobox"
+        aria-haspopup="listbox"
+      >
+        <sprk-icon
+          iconName="search"
+          additionalClasses="
+            sprk-b-InlineSearch__icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
+          "
+          sprk-input-icon
+          ariaHidden="true"
+        ></sprk-icon>
+        <input
+          id="autocomplete-input2"
+          name="autocomplete-input2"
+          type="text"
+          class="sprk-b-TextInput--has-svg-icon sprk-u-Width-100 sprk-b-TextInput--error"
+          aria-describedby="autocomplete--error-container2"
+          aria-invalid="true"
+          sprkInput
+          idString="autocomplete-input2"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        >
+      </div>
+      <ul
+        aria-labelledby="autocomplete-label2"
+        sprkAutocompleteResults
+      >
+        <li sprkAutocompleteResult>Apple</li>
+        <li sprkAutocompleteResult>Apricot</li>
+        <li sprkAutocompleteResult>Avocado</li>
+        <li sprkAutocompleteResult>Banana</li>
+        <li sprkAutocompleteResult>Blackberry</li>
+        <li sprkAutocompleteResult>Blueberry</li>
+        <li sprkAutocompleteResult>Clementine</li>
+        <li sprkAutocompleteResult>Fig</li>
+        <li sprkAutocompleteResult>Grape</li>
+        <li sprkAutocompleteResult>Kumquat</li>
+        <li sprkAutocompleteResult>Lemon</li>
+        <li sprkAutocompleteResult>Papaya</li>
+      </ul>
+      <span sprkFieldError id="autocomplete--error-container2">
+        <sprk-icon
+          iconName="exclamation-filled"
+          additionalClasses="sprk-b-ErrorIcon"
+          ariaHidden="true"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  </sprk-autocomplete>
   `,
 });
 
@@ -146,7 +222,69 @@ defaultInvalid.story = {
 export const defaultDisabled = () => ({
   moduleMetadata: modules,
   template: `
-    default disabled
+  <sprk-autocomplete>
+    <sprk-input-container>
+      <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
+      <label
+        id="autocomplete-label3"
+        for="autocomplete-input3"
+        hasIcon="true"
+        isDisabled="true"
+        sprkLabel
+      >
+        Search for a Fruit
+      </label>
+      <div
+        class="sprk-b-TextInputIconContainer"
+        aria-labelledby="autocomplete-label3"
+        role="combobox"
+        aria-haspopup="listbox"
+      >
+        <sprk-icon
+          iconName="search"
+          additionalClasses="
+            sprk-b-InlineSearch__icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
+          "
+          sprk-input-icon
+          ariaHidden="true"
+        ></sprk-icon>
+        <input
+          id="autocomplete-input3"
+          name="autocomplete-input3"
+          type="text"
+          class="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+          aria-describedby="autocomplete--error-container3"
+          sprkInput
+          idString="autocomplete-input3"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+          disabled
+        >
+      </div>
+      <ul
+        aria-labelledby="autocomplete-label3"
+        sprkAutocompleteResults
+      >
+        <li sprkAutocompleteResult>Apple</li>
+        <li sprkAutocompleteResult>Apricot</li>
+        <li sprkAutocompleteResult>Avocado</li>
+        <li sprkAutocompleteResult>Banana</li>
+        <li sprkAutocompleteResult>Blackberry</li>
+        <li sprkAutocompleteResult>Blueberry</li>
+        <li sprkAutocompleteResult>Clementine</li>
+        <li sprkAutocompleteResult>Fig</li>
+        <li sprkAutocompleteResult>Grape</li>
+        <li sprkAutocompleteResult>Kumquat</li>
+        <li sprkAutocompleteResult>Lemon</li>
+        <li sprkAutocompleteResult>Papaya</li>
+      </ul>
+      <span sprkFieldError id="autocomplete--error-container3">
+      </span>
+    </sprk-input-container>
+  </sprk-autocomplete>
   `,
 });
 

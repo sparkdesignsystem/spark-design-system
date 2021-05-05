@@ -34,6 +34,8 @@ export class SprkAutocompleteComponent implements AfterContentInit {
   calculateListWidth() {
     const currentInputWidth = this.input.ref.nativeElement.offsetWidth;
 
+    console.log('input width: ' + currentInputWidth);
+
     this.renderer.setAttribute(
       this.results.nativeElement,
       'style',
@@ -252,6 +254,7 @@ export class SprkAutocompleteComponent implements AfterContentInit {
   ngAfterContentInit(): void {
     if (this.input) {
       this.input.ref.nativeElement.setAttribute('aria-expanded', this.isOpen);
+      this.calculateListWidth();
     }
 
     if (this.results) {
@@ -274,7 +277,5 @@ export class SprkAutocompleteComponent implements AfterContentInit {
         element.itemSelectedEvent = this.itemSelectedEvent;
       });
     }
-
-    this.calculateListWidth();
   }
 }
