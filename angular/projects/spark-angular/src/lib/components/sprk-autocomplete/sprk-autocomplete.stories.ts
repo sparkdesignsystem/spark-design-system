@@ -105,8 +105,17 @@ export const defaultStory = () => ({
         sprkAutocompleteResults
       >
         <li sprkAutocompleteResult>Apple</li>
-        <li sprkAutocompleteResult id="option_1_2">Apricot</li>
-        <li sprkAutocompleteResult id="option_1_3">Avocado</li>
+        <li sprkAutocompleteResult>Apricot</li>
+        <li sprkAutocompleteResult>Avocado</li>
+        <li sprkAutocompleteResult>Banana</li>
+        <li sprkAutocompleteResult>Blackberry</li>
+        <li sprkAutocompleteResult>Blueberry</li>
+        <li sprkAutocompleteResult>Clementine</li>
+        <li sprkAutocompleteResult>Fig</li>
+        <li sprkAutocompleteResult>Grape</li>
+        <li sprkAutocompleteResult>Kumquat</li>
+        <li sprkAutocompleteResult>Lemon</li>
+        <li sprkAutocompleteResult>Papaya</li>
       </ul>
     </sprk-input-container>
   </sprk-autocomplete>

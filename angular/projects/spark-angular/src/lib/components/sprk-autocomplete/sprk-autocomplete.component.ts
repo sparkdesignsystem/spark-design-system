@@ -31,6 +31,16 @@ export class SprkAutocompleteComponent implements AfterContentInit {
   isDownPressed = (e) => e.key === 'ArrowDown' || e.keyCode === 40;
   isEnterPressed = (e) => e.key === 'Enter' || e.keyCode === 13;
 
+  calculateListWidth() {
+    const currentInputWidth = this.input.ref.nativeElement.offsetWidth;
+
+    this.renderer.setAttribute(
+      this.results.nativeElement,
+      'style',
+      'max-width:' + currentInputWidth + 'px',
+    );
+  }
+
   /**
    * @ignore
    */
@@ -77,6 +87,14 @@ export class SprkAutocompleteComponent implements AfterContentInit {
       this.isOpen = false;
       this.hideResults();
     }
+  }
+
+  /**
+   * @ignore
+   */
+  @HostListener('window:resize', ['$event'])
+  onResize(event): void {
+    this.calculateListWidth();
   }
 
   /**
@@ -256,5 +274,7 @@ export class SprkAutocompleteComponent implements AfterContentInit {
         element.itemSelectedEvent = this.itemSelectedEvent;
       });
     }
+
+    this.calculateListWidth();
   }
 }

@@ -42,10 +42,34 @@ export class SprkAutocompleteResultDirective implements OnInit {
   @Input()
   analyticsString: string;
 
+  private _isHighlighted: boolean;
   @HostBinding('class.sprk-c-Autocomplete__result--active')
   @HostBinding('attr.aria-selected')
   @Input()
-  isHighlighted: boolean = false;
+  set isHighlighted(value: boolean) {
+    this._isHighlighted = value;
+
+    if (this._isHighlighted) {
+      var result = this.ref.nativeElement;
+      const listItemTop = result.getBoundingClientRect().top;
+      const listItemBottom = result.getBoundingClientRect().bottom;
+
+      const listTop = result.parentNode.getBoundingClientRect().top;
+      const listBottom = result.parentNode.getBoundingClientRect().bottom;
+
+      // if the list item is not vertically contained within the list
+      if (listItemTop < listTop || listItemBottom > listBottom) {
+        // the distance from the top of the <li> to the top of the <ul>
+        const childTop = result.offsetTop;
+
+        // eslint-disable-next-line no-param-reassign
+        result.parentNode.scrollTop = childTop;
+      }
+    }
+  }
+  get isHighlighted() {
+    return this._isHighlighted;
+  }
 
   @HostListener('click', ['$event.target'])
   onClick() {
