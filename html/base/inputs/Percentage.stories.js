@@ -37,6 +37,8 @@ export const percentageInput = () => `
             sprk-b-InputContainer__icon--right
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#percent" />
         </svg>
@@ -91,6 +93,8 @@ export const invalidPercentageInput = () => `
             sprk-b-InputContainer__icon--right
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#percent" />
         </svg>
@@ -118,6 +122,8 @@ export const invalidPercentageInput = () => `
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -157,6 +163,8 @@ export const disabledPercentageInput = () => `
             sprk-b-InputContainer__icon--right
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#percent" />
         </svg>
