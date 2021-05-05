@@ -226,7 +226,7 @@ SprkTooltip.propTypes = {
   /** Content to render inside of the component. */
   children: PropTypes.node,
   /**
-   * Expects a space separated string of classes to be added to the tooltip
+   * Expects a space separated string of classes to be added to the Tooltip
    * element.
    */
   additionalClasses: PropTypes.string,
@@ -236,7 +236,8 @@ SprkTooltip.propTypes = {
    */
   analyticsString: PropTypes.string,
   /**
-   * Vertical alignment of tooltip.
+   * Vertical alignment of Tooltip. By default,
+   * the Tooltip will not have any vertical alignment set.
    */
   verticalAlignment: PropTypes.oneOf(['top', 'middle', 'bottom', 'baseline']),
   /**
@@ -244,7 +245,7 @@ SprkTooltip.propTypes = {
    */
   iconAdditionalClasses: PropTypes.string,
   /**
-   * ID will be placed on the tooltip element and used for aria-labelledby on
+   * ID will be placed on the Tooltip element and used for aria-labelledby on
    * the trigger element.
    */
   id: PropTypes.string,
@@ -254,7 +255,7 @@ SprkTooltip.propTypes = {
    */
   idString: PropTypes.string,
   /**
-   * Whether or not the tooltip is toggled open when the component renders.
+   * Whether or not the Tooltip is toggled open when the component renders.
    */
   isDefaultOpen: PropTypes.bool,
   /**
@@ -267,11 +268,11 @@ SprkTooltip.propTypes = {
    */
   triggerIconName: PropTypes.string,
   /**
-   * A function to be called when the tooltip is toggled open.
+   * A function to be called when the Tooltip is toggled open.
    */
   openedEvent: PropTypes.func,
   /**
-   * A function to be called when the tooltip is toggled closed.
+   * A function to be called when the Tooltip is toggled closed.
    */
   closedEvent: PropTypes.func,
 };

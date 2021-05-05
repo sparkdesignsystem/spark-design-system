@@ -6,26 +6,26 @@
   display: inline-flex;
 }
 
-/// Vertically aligns the tooltip to the top.
+/// Vertically aligns the Tooltip to the top.
 /// @name .sprk-c-Tooltip__container--top
 .sprk-c-Tooltip__container--top {
   vertical-align: top;
 }
 
-/// Vertically aligns the tooltip to the middle.
+/// Vertically aligns the Tooltip to the middle.
 /// @name .sprk-c-Tooltip__container--middle
 .sprk-c-Tooltip__container--middle {
   vertical-align: middle;
 }
 
-/// Vertically aligns the tooltip to the bottom.
+/// Vertically aligns the Tooltip to the bottom.
 /// @name .sprk-c-Tooltip__container--bottom
 .sprk-c-Tooltip__container--bottom {
   vertical-align: bottom;
 }
 
-/// Vertically aligns the tooltip to the middle.
-/// @name .sprk-c-Tooltip__container--middle
+/// Vertically aligns the Tooltip to the middle.
+/// @name .sprk-c-Tooltip__container--baseline
 .sprk-c-Tooltip__container--baseline {
   vertical-align: baseline;
 }
