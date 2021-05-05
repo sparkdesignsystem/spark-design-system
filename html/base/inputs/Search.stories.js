@@ -24,11 +24,13 @@ export const searchInput = () => `
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#search" />
         </svg>
@@ -70,11 +72,13 @@ export const invalidSearchInput = () => `
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#search" />
         </svg>
@@ -102,6 +106,8 @@ export const invalidSearchInput = () => `
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -132,11 +138,13 @@ export const disabledSearchInput = () => `
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#search" />
         </svg>

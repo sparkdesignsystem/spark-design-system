@@ -48,6 +48,8 @@ export const selectBox = () => `
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#chevron-down" />
       </svg>
@@ -98,6 +100,8 @@ export const invalidSelectBox = () => `
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#chevron-down" />
       </svg>
@@ -109,6 +113,8 @@ export const invalidSelectBox = () => `
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -158,6 +164,8 @@ export const disabledSelectBox = () => `
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#chevron-down" />
       </svg>
@@ -218,6 +226,8 @@ export const hugeSelectBox = () => {
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#chevron-down" />
       </svg>
@@ -283,6 +293,8 @@ export const invalidHugeSelectBox = () => {
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#chevron-down" />
       </svg>
@@ -294,6 +306,8 @@ export const invalidHugeSelectBox = () => {
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -358,6 +372,8 @@ export const disabledHugeSelectBox = () => {
           sprk-b-SelectContainer__icon
         "
         viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#chevron-down" />
       </svg>
