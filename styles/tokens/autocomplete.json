@@ -155,6 +155,9 @@
           },
           "file": "settings",
           "themable": true
+        },
+        "hidden-display": {
+          
         }
       },
       "result": {
