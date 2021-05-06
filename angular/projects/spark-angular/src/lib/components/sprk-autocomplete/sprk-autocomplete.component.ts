@@ -52,7 +52,7 @@ export class SprkAutocompleteComponent
       // Only select the list item if the list is open
       // and an item is highlighted
       if (this.isOpen && this.highlightedIndex !== -1) {
-        this.selectListItem();
+        this.selectHighlightedListItem();
       }
     }
   }
@@ -77,18 +77,19 @@ export class SprkAutocompleteComponent
    */
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
-    this.calculateListWidth();
+    this.calculateResultsWidth();
   }
 
   /**
-   * This component expects a child input element
+   * This component expects a child element
    * with the `sprkInput` directive.
    */
   @ContentChild(SprkInputDirective, { static: false })
   input: SprkInputDirective;
 
   /**
-   * This component expects asdf
+   * This component expects a child element
+   * with the `sprkAutocompleteResults` directive.
    */
   @ContentChild(SprkAutocompleteResultsDirective, {
     static: false,
@@ -97,60 +98,43 @@ export class SprkAutocompleteComponent
   results: ElementRef;
 
   /**
-   * This component expects asdf.
+   * This component expects the `sprkAutocompleteResults` child
+   * to contain elements with the `sprkAutocompleteResult` directive.
    */
   @ContentChildren(SprkAutocompleteResultDirective, { descendants: true })
   resultItems: QueryList<SprkAutocompleteResultDirective>;
 
   /**
-   * If `true`, the TODO
+   * If `true`, the Autocomplete results will be visible when the component loads.
    */
   @Input()
   isOpen = false;
-  /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the component.
-   * Intended for an outside
-   * library to capture data.
-   */
-  @Input()
-  analyticsString: string;
-  /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
-   */
-  @Input()
-  idString: string;
-  /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
-   */
-  @Input()
-  additionalClasses: string; // TODO where does this go and do we need more?
 
   /**
-   * Accepts a function to run when asdf
+   * This event will be emitted after the Autocomplete results are opened.
    */
   @Output()
   openedEvent = new EventEmitter<any>();
   /**
-   * Accepts a function to run when asdf
+   * This event will be emitted after the Autocomplete results are closed.
    */
   @Output()
   closedEvent = new EventEmitter<any>();
   /**
-   * Accepts a function to run when asdf
+   * This event will be emitted when an Autocomplete result is selected with
+   * a click event or with the Enter key. The event contains the id of the
+   * selected item.
    */
   @Output()
   itemSelectedEvent = new EventEmitter<any>();
 
+  /**
+   * @ignore
+   * Highlight the previous item in the Autocomplete results.
+   * Used for arrow key functionality.
+   */
   retreatHighlightedItem(): void {
-    this.resetListItems();
+    this.removeAllHighlights();
 
     if (this.highlightedIndex < 0 || this.highlightedIndex - 1 === -1) {
       this.highlightedIndex = this.resultItems.length - 1;
@@ -161,8 +145,13 @@ export class SprkAutocompleteComponent
     this.highlightListItem(this.resultItems.toArray()[this.highlightedIndex]);
   }
 
+  /**
+   * @ignore
+   * Highlight the next item in the Autocomplete results.
+   * Used for arrow key functionality.
+   */
   advanceHighlightedItem(): void {
-    this.resetListItems();
+    this.removeAllHighlights();
 
     if (this.highlightedIndex < 0) {
       this.highlightedIndex = 0;
@@ -175,23 +164,36 @@ export class SprkAutocompleteComponent
     this.highlightListItem(this.resultItems.toArray()[this.highlightedIndex]);
   }
 
-  resetListItems(): void {
+  /**
+   * @ignore
+   * Remove the highlight from all Autocomplete result items.
+   */
+  removeAllHighlights(): void {
     this.resultItems.forEach((element, index) => {
       element.isHighlighted = false;
     });
   }
 
-  highlightListItem(element): void {
-    element.isHighlighted = true;
+  /**
+   * Highlight a specific element in the Autocomplete results. If the Enter
+   * key is pressed, this element will be selected.
+   * @param listItemElement The element to highlight.
+   */
+  highlightListItem(listItemElement): void {
+    listItemElement.isHighlighted = true;
 
     this.renderer.setAttribute(
       this.input.ref.nativeElement,
       'aria-activedescendant',
-      element.ref.nativeElement.id,
+      listItemElement.ref.nativeElement.id,
     );
   }
 
-  selectListItem(): void {
+  /**
+   * Emit the itemSelectedEvent with the currently-highlighted Autocomplete
+   * result item.
+   */
+  selectHighlightedListItem(): void {
     var selectedElement = this.resultItems.filter(
       (element, index) => element.isHighlighted,
     )[0];
@@ -200,33 +202,59 @@ export class SprkAutocompleteComponent
   }
 
   /**
-   * docs docs docs
+   * Hide the Autocomplete results list.
    */
   hideResults(): void {
     if (this.results) {
+      // Remove the hidden style
       this.renderer.addClass(
         this.results.nativeElement,
-        'sprk-c-Autocomplete__results--hidden', // todo use a new class scoped to the component
+        'sprk-c-Autocomplete__results--hidden',
       );
-      // set aria-expanded to false
-      // remove activedescendant frm input
+
+      // Set aria-expanded on the input
+      this.renderer.setAttribute(
+        this.input.ref.nativeElement,
+        'aria-expanded',
+        'false',
+      );
+
+      // Remove aria-activedescendant from the input
+      this.renderer.removeAttribute(
+        this.input.ref.nativeElement,
+        'aria-activedescendant',
+      );
+
       // remove aria-selected and highlight class from all list items
+      this.removeAllHighlights();
+
       this.closedEvent.emit();
     }
   }
 
   /**
-   * docs docs docs
+   * Show the Autocomplete results list.
    */
   showResults(): void {
     this.renderer.removeClass(
       this.results.nativeElement,
       'sprk-c-Autocomplete__results--hidden',
     );
-    // set aria-expanded to true
+
+    // Set aria-expanded on the input
+    this.renderer.setAttribute(
+      this.input.ref.nativeElement,
+      'aria-expanded',
+      'true',
+    );
+
     this.openedEvent.emit();
   }
 
+  /**
+   * @ignore
+   * Track the index of the currently-highlighted Autocomplete result item.
+   */
   highlightedIndex = -1;
 
   /**
@@ -239,38 +267,47 @@ export class SprkAutocompleteComponent
 
     if (this.results) {
       if (this.isOpen) {
-        this.renderer.removeClass(
-          this.results.nativeElement,
-          'sprk-c-Autocomplete__results--hidden',
-        );
+        this.showResults();
       } else {
-        this.renderer.addClass(
-          this.results.nativeElement,
-          'sprk-c-Autocomplete__results--hidden',
-        );
+        this.hideResults();
       }
     }
 
-    // if I have an itemSelectedEvent, also set that as the click event on each result
+    // if itemSelectedEvent is specified, also set that as the click event on each result
     if (this.itemSelectedEvent) {
       this.resultItems.forEach((element, index) => {
-        element.itemSelectedEvent = this.itemSelectedEvent;
+        element.clickedEvent = this.itemSelectedEvent;
       });
     }
   }
 
+  /**
+   * @ignore
+   * This logic needs to happen in this event so that the input width is
+   * correctly calculated.
+   */
   ngAfterViewInit(): void {
     if (this.input) {
-      this.calculateListWidth();
+      this.calculateResultsWidth();
     }
   }
 
-  // todo put these somewhere else
+  /** @ignore */
   isUpPressed = (e) => e.key === 'ArrowRight' || e.keyCode === 38;
+  /** @ignore */
   isDownPressed = (e) => e.key === 'ArrowDown' || e.keyCode === 40;
+  /** @ignore */
   isEnterPressed = (e) => e.key === 'Enter' || e.keyCode === 13;
+  /** @ignore */
+  isEscapePressed = (e) =>
+    e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27;
 
-  calculateListWidth() {
+  /**
+   * @ignore
+   * Set the max-width on the Autocomplete results equal to the current
+   * width of the input element.
+   */
+  calculateResultsWidth() {
     const currentInputWidth = this.input.ref.nativeElement.offsetWidth;
 
     this.renderer.setAttribute(

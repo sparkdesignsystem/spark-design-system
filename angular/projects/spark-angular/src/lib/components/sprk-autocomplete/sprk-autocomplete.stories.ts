@@ -22,13 +22,13 @@ export default {
   title: 'Components/Autocomplete',
   component: SprkAutocompleteComponent,
   subcomponents: {
+    SprkInputContainerComponent,
+    SprkLabelDirective,
+    SprkIconComponent,
     SprkInputDirective,
     SprkAutocompleteResultsDirective,
     SprkAutocompleteResultDirective,
-    SprkIconComponent,
-    SprkLabelDirective,
     SprkFieldErrorDirective,
-    SprkInputContainerComponent,
   },
   decorators: [
     storyWrapper(
@@ -38,7 +38,62 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('autocomplete')}
-todo write docs
+- Live demos of the Autocomplete are available on our
+[demo site](https://spark-testangular.netlify.app/autocomplete)
+([View Source](https://github.com/sparkdesignsystem/spark-starter-angular)).
+
+#### Keyboard Interactions
+- The list can be closed by clicking on the document body or by pressing
+the \`Escape\` key.
+- When the list is open, items in the list can be highlighted using the
+\`Up\` and \`Down\` arrow keys. Note that this highlight is distinct from the
+browser focus, which stays in the input.
+- When the list is open and an item is highlighted, pressing the \`Enter\` key
+will trigger the \`itemSelectedEvent\`.
+
+#### Accessibility
+- The component should include an element with \`aria-live="polite"\`. The
+  contents of this element should be updated to reflect the number of visible
+  items in the list. View the
+  [demo site](https://spark-testangular.netlify.app/autocomplete)
+  for examples.
+- The input container should have \`role="combobox"\` and
+  \`aria-haspopup="listbox"\`. These attributes correctly identify the control
+  to Assistive Technology.
+- The input should have \`aria-autocomplete="list"\`.
+  This attribute correctly identifies the control to assistive technology.
+- The input should have \`autocomplete="off"\`, \`autocapitalize="off"\`,
+  and \`spellcheck="false"\`. These attributes deactivate default browser
+  behavior that can interfere with autocomplete behavior.
+- The list should have \`role="listbox"\`.
+- When the list is hidden, the input container should have
+  \`aria-expanded="false"\`.
+- When the list is visible, the input container should have
+  \`aria-expanded="true"\`.
+- When the list is visible and an item is highlighted (with the arrow keys),
+  the text input should have \`aria-activedescendant\` set to the \`id\`
+  of the active item.
+- When a list item is highlighted (with the arrow keys), it should have
+  \`aria-selected="true"\`.
+- Each selectable list item should have \`role="option"\`.
+
+
+#### Requires Additional Engineering:
+In order to keep the Spark Autocomplete flexible enough to use in a wide
+  variety of use cases, some of the interactivity of the component is left
+  up to implementing teams.
+
+  - Filtering the list
+    - Display a message if a filter returns 0 results.
+    - Highlight the matching text in the search results.
+    - Update the contents of the associated \`aria-live\` element.
+  - Showing the results list with \`showResults()\`.
+  - Hiding the results list with \`hideResults()\`.
+  - Setting the value of the input when an item is selected.
+    - The id of the selected item can be retrieved using
+    \`itemSelectedEvent\`.
+    - The highlighted item is identified by the value of
+    \`aria-activedescendant\` on the input.
 `,
     docs: { iframeHeight: 400 },
   },

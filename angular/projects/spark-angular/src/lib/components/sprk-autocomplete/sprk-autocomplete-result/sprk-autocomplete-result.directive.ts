@@ -42,11 +42,22 @@ export class SprkAutocompleteResultDirective implements OnInit {
   @Input()
   analyticsString: string;
 
+  /**
+   * @ignore
+   *
+   */
   private _isHighlighted: boolean;
+
   @HostBinding('class.sprk-c-Autocomplete__result--active')
   @HostBinding('attr.aria-selected')
   @Input()
   set isHighlighted(value: boolean) {
+    /**
+     * Normally Spark would put this kind of behavior in ngOnChanges, but
+     * that lifecycle event is not triggered when an Input is updated directly
+     * from a parent component. This logic is moved into a setter on the Input
+     * so that it is triggered when sprk-autocomplete changes this value.
+     */
     this._isHighlighted = value;
 
     if (this._isHighlighted) {
@@ -62,7 +73,6 @@ export class SprkAutocompleteResultDirective implements OnInit {
         // the distance from the top of the <li> to the top of the <ul>
         const childTop = result.offsetTop;
 
-        // eslint-disable-next-line no-param-reassign
         result.parentNode.scrollTop = childTop;
       }
     }
@@ -71,16 +81,22 @@ export class SprkAutocompleteResultDirective implements OnInit {
     return this._isHighlighted;
   }
 
+  /**
+   * @ignore
+   */
   @HostListener('click', ['$event.target'])
   onClick() {
-    this.itemSelectedEvent.emit(this.ref.nativeElement.id);
+    this.clickedEvent.emit(this.ref.nativeElement.id);
   }
 
   /**
-   * Accepts a function to run when asdf
+   * @ignore
+   * Accepts a function to run when an item is clicked.
+   * This should be set automatically by sprk-autocomplete and should
+   * not be set manually by users.
    */
   @Output()
-  itemSelectedEvent = new EventEmitter<any>();
+  clickedEvent = new EventEmitter<any>();
 
   /**
    * Expects a space separated string
