@@ -53,15 +53,14 @@ class SprkTextareaContainer extends Component {
       if (inputAriaDescribedBy) {
         inputAriaDescribedByArray = inputAriaDescribedBy.split(' ');
       }
-      if (helperTextID) {
-        if (!inputAriaDescribedByArray.includes(helperTextID)) {
-          inputAriaDescribedByArray.push(helperTextID);
-        }
+      if (helperTextID && !inputAriaDescribedByArray.includes(helperTextID)) {
+        inputAriaDescribedByArray.push(helperTextID);
       }
-      if (errorContainerID) {
-        if (!inputAriaDescribedByArray.includes(errorContainerID)) {
-          inputAriaDescribedByArray.push(errorContainerID);
-        }
+      if (
+        errorContainerID &&
+        !inputAriaDescribedByArray.includes(errorContainerID)
+      ) {
+        inputAriaDescribedByArray.push(errorContainerID);
       }
       inputAriaDescribedBy = inputAriaDescribedByArray.join(' ');
     }

@@ -65,15 +65,14 @@ class SprkCheckboxGroup extends Component {
       if (fieldsetAriaDescribedBy) {
         ariaDescribedByArray = fieldsetAriaDescribedBy.split(' ');
       }
-      if (helperTextID) {
-        if (!ariaDescribedByArray.includes(helperTextID)) {
-          ariaDescribedByArray.push(helperTextID);
-        }
+      if (helperTextID && !ariaDescribedByArray.includes(helperTextID)) {
+        ariaDescribedByArray.push(helperTextID);
       }
-      if (errorContainerID) {
-        if (!ariaDescribedByArray.includes(errorContainerID)) {
-          ariaDescribedByArray.push(errorContainerID);
-        }
+      if (
+        errorContainerID &&
+        !ariaDescribedByArray.includes(errorContainerID)
+      ) {
+        ariaDescribedByArray.push(errorContainerID);
       }
       fieldsetAriaDescribedBy = ariaDescribedByArray.join(' ');
     }
