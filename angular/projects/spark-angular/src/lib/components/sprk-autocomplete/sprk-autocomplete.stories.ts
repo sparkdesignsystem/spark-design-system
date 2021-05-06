@@ -298,7 +298,69 @@ defaultDisabled.story = {
 export const hugeStory = () => ({
   moduleMetadata: modules,
   template: `
-    huge
+  <sprk-autocomplete isOpen="true">
+    <sprk-input-container variant="huge">
+      <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
+
+      <div
+        class="sprk-b-TextInputIconContainer"
+        aria-labelledby="autocomplete-label4"
+        role="combobox"
+        aria-haspopup="listbox"
+      >
+        <sprk-icon
+          iconName="search"
+          additionalClasses="
+            sprk-b-InlineSearch__icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
+          "
+          sprk-input-icon
+          ariaHidden="true"
+        ></sprk-icon>
+        <input
+          id="autocomplete-input4"
+          name="autocomplete-input4"
+          type="text"
+          placeholder="Search for a Fruit"
+          class="sprk-u-Width-100"
+          aria-describedby="autocomplete--error-container4"
+          sprkInput
+          variant="huge"
+          idString="autocomplete-input4"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        >
+        <label
+          id="autocomplete-label4"
+          for="autocomplete-input4"
+          sprkLabel
+        >
+          Search for a Fruit
+        </label>
+      </div>
+      <ul
+        aria-labelledby="autocomplete-label4"
+        sprkAutocompleteResults
+      >
+        <li sprkAutocompleteResult>Apple</li>
+        <li sprkAutocompleteResult>Apricot</li>
+        <li sprkAutocompleteResult>Avocado</li>
+        <li sprkAutocompleteResult>Banana</li>
+        <li sprkAutocompleteResult>Blackberry</li>
+        <li sprkAutocompleteResult>Blueberry</li>
+        <li sprkAutocompleteResult>Clementine</li>
+        <li sprkAutocompleteResult>Fig</li>
+        <li sprkAutocompleteResult>Grape</li>
+        <li sprkAutocompleteResult>Kumquat</li>
+        <li sprkAutocompleteResult>Lemon</li>
+        <li sprkAutocompleteResult>Papaya</li>
+      </ul>
+      <span sprkFieldError id="autocomplete--error-container4">
+      </span>
+    </sprk-input-container>
+  </sprk-autocomplete>
   `,
 });
 
@@ -312,7 +374,76 @@ hugeStory.story = {
 export const hugeInvalid = () => ({
   moduleMetadata: modules,
   template: `
-    huge invalid
+  <sprk-autocomplete>
+    <sprk-input-container variant="huge">
+      <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
+
+      <div
+        class="sprk-b-TextInputIconContainer"
+        aria-labelledby="autocomplete-label5"
+        role="combobox"
+        aria-haspopup="listbox"
+      >
+        <sprk-icon
+          iconName="search"
+          additionalClasses="
+            sprk-b-InlineSearch__icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
+          "
+          sprk-input-icon
+          ariaHidden="true"
+        ></sprk-icon>
+        <input
+          id="autocomplete-input5"
+          name="autocomplete-input5"
+          type="text"
+          placeholder="Search for a Fruit"
+          class="sprk-u-Width-100 sprk-b-TextInput--error"
+          aria-describedby="autocomplete--error-container5"
+          aria-invalid="true"
+          sprkInput
+          variant="huge"
+          idString="autocomplete-input5"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        >
+        <label
+          id="autocomplete-label5"
+          for="autocomplete-input5"
+          sprkLabel
+        >
+          Search for a Fruit
+        </label>
+      </div>
+      <ul
+        aria-labelledby="autocomplete-label5"
+        sprkAutocompleteResults
+      >
+        <li sprkAutocompleteResult>Apple</li>
+        <li sprkAutocompleteResult>Apricot</li>
+        <li sprkAutocompleteResult>Avocado</li>
+        <li sprkAutocompleteResult>Banana</li>
+        <li sprkAutocompleteResult>Blackberry</li>
+        <li sprkAutocompleteResult>Blueberry</li>
+        <li sprkAutocompleteResult>Clementine</li>
+        <li sprkAutocompleteResult>Fig</li>
+        <li sprkAutocompleteResult>Grape</li>
+        <li sprkAutocompleteResult>Kumquat</li>
+        <li sprkAutocompleteResult>Lemon</li>
+        <li sprkAutocompleteResult>Papaya</li>
+      </ul>
+      <span sprkFieldError id="autocomplete--error-container5">
+        <sprk-icon
+          iconName="exclamation-filled"
+          additionalClasses="sprk-b-ErrorIcon"
+          ariaHidden="true"
+        ></sprk-icon>
+        <div class="sprk-b-ErrorText">There is an error on this field.</div>
+      </span>
+    </sprk-input-container>
+  </sprk-autocomplete>
   `,
 });
 
@@ -326,12 +457,75 @@ hugeInvalid.story = {
 export const hugeDisabled = () => ({
   moduleMetadata: modules,
   template: `
-    huge disabled
+  <sprk-autocomplete>
+    <sprk-input-container variant="huge">
+      <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
+
+      <div
+        class="sprk-b-TextInputIconContainer"
+        aria-labelledby="autocomplete-label6"
+        role="combobox"
+        aria-haspopup="listbox"
+      >
+        <sprk-icon
+          iconName="search"
+          additionalClasses="
+            sprk-b-InlineSearch__icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
+          "
+          sprk-input-icon
+          ariaHidden="true"
+        ></sprk-icon>
+        <input
+          id="autocomplete-input6"
+          name="autocomplete-input6"
+          type="text"
+          placeholder="Search for a Fruit"
+          class="sprk-u-Width-100"
+          aria-describedby="autocomplete--error-container6"
+          disabled
+          sprkInput
+          variant="huge"
+          idString="autocomplete-input6"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        >
+        <label
+          id="autocomplete-label6"
+          for="autocomplete-input6"
+          sprkLabel
+        >
+          Search for a Fruit
+        </label>
+      </div>
+      <ul
+        aria-labelledby="autocomplete-label6"
+        sprkAutocompleteResults
+      >
+        <li sprkAutocompleteResult>Apple</li>
+        <li sprkAutocompleteResult>Apricot</li>
+        <li sprkAutocompleteResult>Avocado</li>
+        <li sprkAutocompleteResult>Banana</li>
+        <li sprkAutocompleteResult>Blackberry</li>
+        <li sprkAutocompleteResult>Blueberry</li>
+        <li sprkAutocompleteResult>Clementine</li>
+        <li sprkAutocompleteResult>Fig</li>
+        <li sprkAutocompleteResult>Grape</li>
+        <li sprkAutocompleteResult>Kumquat</li>
+        <li sprkAutocompleteResult>Lemon</li>
+        <li sprkAutocompleteResult>Papaya</li>
+      </ul>
+      <span sprkFieldError id="autocomplete--error-container6">
+      </span>
+    </sprk-input-container>
+  </sprk-autocomplete>
   `,
 });
 
 hugeDisabled.story = {
-  name: 'Huge Disabbled',
+  name: 'Huge Disabled',
   parameters: {
     jest: ['sprk-autocomplete.component'],
   },
