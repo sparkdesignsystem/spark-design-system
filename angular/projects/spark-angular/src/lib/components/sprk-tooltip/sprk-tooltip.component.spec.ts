@@ -184,6 +184,43 @@ describe('SprkTooltipComponent', () => {
     expect(tooltipElement.classList.contains('sprk-test')).toEqual(true);
   });
 
+  it('should add vertical align middle', () => {
+    component.verticalAlignment = 'middle';
+    fixture.detectChanges();
+    expect(
+      containerElement.classList.contains('sprk-c-Tooltip__container--middle'),
+    ).toEqual(true);
+  });
+
+  it('should add vertical align top', () => {
+    component.verticalAlignment = 'top';
+    fixture.detectChanges();
+    expect(
+      containerElement.classList.contains('sprk-c-Tooltip__container--top'),
+    ).toEqual(true);
+    expect(containerElement.classList.length).toEqual(2);
+  });
+
+  it('should add vertical align bottom', () => {
+    component.verticalAlignment = 'bottom';
+    fixture.detectChanges();
+    expect(
+      containerElement.classList.contains('sprk-c-Tooltip__container--bottom'),
+    ).toEqual(true);
+    expect(containerElement.classList.length).toEqual(2);
+  });
+
+  it('should add vertical align baseline', () => {
+    component.verticalAlignment = 'baseline';
+    fixture.detectChanges();
+    expect(
+      containerElement.classList.contains(
+        'sprk-c-Tooltip__container--baseline',
+      ),
+    ).toEqual(true);
+    expect(containerElement.classList.length).toEqual(2);
+  });
+
   it('should generate an id if needed', () => {
     const foundLabelledBy = triggerElement.getAttribute('aria-labelledby');
     const foundId = tooltipElement.id;
