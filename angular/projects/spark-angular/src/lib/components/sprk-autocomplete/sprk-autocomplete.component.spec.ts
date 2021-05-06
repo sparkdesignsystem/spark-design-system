@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: `sprk-test`,
   template: ` <sprk-autocomplete isOpen="true">
+    <input sprkInput />
     <ul sprkAutocompleteResults></ul>
   </sprk-autocomplete>`,
 })

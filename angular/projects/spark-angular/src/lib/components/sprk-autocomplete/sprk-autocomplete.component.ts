@@ -236,17 +236,21 @@ export class SprkAutocompleteComponent
    * Show the Autocomplete results list.
    */
   showResults(): void {
-    this.renderer.removeClass(
-      this.results.nativeElement,
-      'sprk-c-Autocomplete__results--hidden',
-    );
+    if (this.results) {
+      this.renderer.removeClass(
+        this.results.nativeElement,
+        'sprk-c-Autocomplete__results--hidden',
+      );
+    }
 
-    // Set aria-expanded on the input
-    this.renderer.setAttribute(
-      this.input.ref.nativeElement,
-      'aria-expanded',
-      'true',
-    );
+    if (this.input) {
+      // Set aria-expanded on the input
+      this.renderer.setAttribute(
+        this.input.ref.nativeElement,
+        'aria-expanded',
+        'true',
+      );
+    }
 
     this.openedEvent.emit();
   }
