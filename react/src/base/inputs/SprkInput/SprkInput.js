@@ -134,7 +134,7 @@ SprkInput.defaultProps = {
   formatter: (value) => value,
   forwardedRef: React.createRef(),
   isValid: true,
-  id: uniqueId('sprk-'),
+  id: uniqueId('sprk-input-'),
   isDisabled: false,
 };
 

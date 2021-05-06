@@ -39,7 +39,7 @@ export default {
 To update to the new version, replace radios implemented by
 the <code>SprkSelectionInput</code> component with our
 new implementation using <code>SprkRadioGroup</code>
-and <code>SprkRadio</code> components.
+and <code>SprkRadioItem</code> components.
     `,
   },
 };

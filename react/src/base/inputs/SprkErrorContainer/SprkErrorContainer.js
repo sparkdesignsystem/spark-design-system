@@ -61,7 +61,7 @@ SprkErrorContainer.propTypes = {
 };
 
 SprkErrorContainer.defaultProps = {
-  id: uniqueId('sprk-'),
+  id: uniqueId('sprk-error-container-'),
 };
 
 export default SprkErrorContainer;

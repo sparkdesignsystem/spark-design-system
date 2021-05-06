@@ -102,7 +102,7 @@ SprkTextarea.propTypes = {
 SprkTextarea.defaultProps = {
   forwardedRef: React.createRef(),
   isValid: true,
-  id: uniqueId('sprk-'),
+  id: uniqueId('sprk-textarea-'),
 };
 
 export default SprkTextarea;

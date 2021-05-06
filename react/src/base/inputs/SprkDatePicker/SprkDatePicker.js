@@ -178,7 +178,7 @@ SprkDatePicker.defaultProps = {
   datePickerConfig: {},
   formatter: (value) => value,
   isValid: true,
-  id: uniqueId('sprk-'),
+  id: uniqueId('sprk-datepicker-'),
   isDisabled: false,
 };
 

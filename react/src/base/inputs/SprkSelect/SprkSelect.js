@@ -191,7 +191,7 @@ SprkSelect.propTypes = {
 };
 
 SprkSelect.defaultProps = {
-  id: uniqueId('sprk-'),
+  id: uniqueId('sprk-select-'),
   isValid: true,
 };
 

@@ -55,7 +55,7 @@ SprkFieldError.propTypes = {
 };
 
 SprkFieldError.defaultProps = {
-  id: uniqueId('sprk-'),
+  id: uniqueId('sprk-field-error-'),
 };
 
 export default SprkFieldError;

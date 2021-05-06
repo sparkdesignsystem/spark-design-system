@@ -54,7 +54,7 @@ SprkHelperText.propTypes = {
 };
 
 SprkHelperText.defaultProps = {
-  id: uniqueId('sprk-'),
+  id: uniqueId('sprk-helper-text-'),
 };
 
 export default SprkHelperText;
