@@ -120,12 +120,6 @@ export const defaultStory = () => ({
       </ul>
     </sprk-input-container>
     <span sprkFieldError id="autocomplete--error-container">
-      <sprk-icon
-        iconName="exclamation-filled"
-        additionalClasses="sprk-b-ErrorIcon"
-        ariaHidden="true"
-      ></sprk-icon>
-      <div class="sprk-b-ErrorText"></div>
     </span>
   </sprk-autocomplete>
   `,

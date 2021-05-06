@@ -4,15 +4,12 @@ import {
   EventEmitter,
   Input,
   Output,
-  OnChanges,
-  SimpleChanges,
-  ViewChild,
-  ViewChildren,
   ContentChildren,
   ContentChild,
   HostListener,
   AfterContentInit,
   ElementRef,
+  AfterViewInit,
   QueryList,
 } from '@angular/core';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
@@ -23,25 +20,9 @@ import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk
   selector: 'sprk-autocomplete',
   template: `<ng-content></ng-content>`,
 })
-export class SprkAutocompleteComponent implements AfterContentInit {
+export class SprkAutocompleteComponent
+  implements AfterContentInit, AfterViewInit {
   constructor(private ref: ElementRef, private renderer: Renderer2) {}
-
-  // todo put these somewhere else
-  isUpPressed = (e) => e.key === 'ArrowRight' || e.keyCode === 38;
-  isDownPressed = (e) => e.key === 'ArrowDown' || e.keyCode === 40;
-  isEnterPressed = (e) => e.key === 'Enter' || e.keyCode === 13;
-
-  calculateListWidth() {
-    const currentInputWidth = this.input.ref.nativeElement.offsetWidth;
-
-    console.log('input width: ' + currentInputWidth);
-
-    this.renderer.setAttribute(
-      this.results.nativeElement,
-      'style',
-      'max-width:' + currentInputWidth + 'px',
-    );
-  }
 
   /**
    * @ignore
@@ -120,6 +101,53 @@ export class SprkAutocompleteComponent implements AfterContentInit {
    */
   @ContentChildren(SprkAutocompleteResultDirective, { descendants: true })
   resultItems: QueryList<SprkAutocompleteResultDirective>;
+
+  /**
+   * If `true`, the TODO
+   */
+  @Input()
+  isOpen = false;
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the component.
+   * Intended for an outside
+   * library to capture data.
+   */
+  @Input()
+  analyticsString: string;
+  /**
+   * The value supplied will be assigned
+   * to the `data-id` attribute on the
+   * component. This is intended to be
+   * used as a selector for automated
+   * tools. This value should be unique
+   * per page.
+   */
+  @Input()
+  idString: string;
+  /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * component.
+   */
+  @Input()
+  additionalClasses: string; // TODO where does this go and do we need more?
+
+  /**
+   * Accepts a function to run when asdf
+   */
+  @Output()
+  openedEvent = new EventEmitter<any>();
+  /**
+   * Accepts a function to run when asdf
+   */
+  @Output()
+  closedEvent = new EventEmitter<any>();
+  /**
+   * Accepts a function to run when asdf
+   */
+  @Output()
+  itemSelectedEvent = new EventEmitter<any>();
 
   retreatHighlightedItem(): void {
     this.resetListItems();
@@ -202,59 +230,11 @@ export class SprkAutocompleteComponent implements AfterContentInit {
   highlightedIndex = -1;
 
   /**
-   * If `true`, the TODO
-   */
-  @Input()
-  isOpen = false;
-  /**
-   * The value supplied will be assigned to the
-   * `data-analytics` attribute on the component.
-   * Intended for an outside
-   * library to capture data.
-   */
-  @Input()
-  analyticsString: string;
-  /**
-   * The value supplied will be assigned
-   * to the `data-id` attribute on the
-   * component. This is intended to be
-   * used as a selector for automated
-   * tools. This value should be unique
-   * per page.
-   */
-  @Input()
-  idString: string;
-  /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * component.
-   */
-  @Input()
-  additionalClasses: string; // TODO where does this go and do we need more?
-
-  /**
-   * Accepts a function to run when asdf
-   */
-  @Output()
-  openedEvent = new EventEmitter<any>();
-  /**
-   * Accepts a function to run when asdf
-   */
-  @Output()
-  closedEvent = new EventEmitter<any>();
-  /**
-   * Accepts a function to run when asdf
-   */
-  @Output()
-  itemSelectedEvent = new EventEmitter<any>();
-
-  /**
    * @ignore
    */
   ngAfterContentInit(): void {
     if (this.input) {
       this.input.ref.nativeElement.setAttribute('aria-expanded', this.isOpen);
-      this.calculateListWidth();
     }
 
     if (this.results) {
@@ -277,5 +257,26 @@ export class SprkAutocompleteComponent implements AfterContentInit {
         element.itemSelectedEvent = this.itemSelectedEvent;
       });
     }
+  }
+
+  ngAfterViewInit(): void {
+    if (this.input) {
+      this.calculateListWidth();
+    }
+  }
+
+  // todo put these somewhere else
+  isUpPressed = (e) => e.key === 'ArrowRight' || e.keyCode === 38;
+  isDownPressed = (e) => e.key === 'ArrowDown' || e.keyCode === 40;
+  isEnterPressed = (e) => e.key === 'Enter' || e.keyCode === 13;
+
+  calculateListWidth() {
+    const currentInputWidth = this.input.ref.nativeElement.offsetWidth;
+
+    this.renderer.setAttribute(
+      this.results.nativeElement,
+      'style',
+      'max-width:' + currentInputWidth + 'px',
+    );
   }
 }
