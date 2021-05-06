@@ -163,7 +163,7 @@
   <dimen name="sprk_masthead_content_item_padding_top">8.00dp</dimen><!-- The padding top around the content items in the content section of the Masthead. -->
   <dimen name="sprk_masthead_content_item_padding_top_wide">8.00dp</dimen><!-- The padding top around the content items in the content section of the Masthead in wide viewports. -->
   <dimen name="sprk_masthead_content_item_padding_bottom">8.00dp</dimen><!-- The padding bottom around the content items in the content section of the Masthead. -->
-  <dimen name="sprk_masthead_content_item_padding_bottom_wide">16.00dp</dimen><!-- The padding bottom around the content items in the content section of the Masthead in wide viewports. -->
+  <dimen name="sprk_masthead_content_item_padding_bottom_wide">8.00dp</dimen><!-- The padding bottom around the content items in the content section of the Masthead in wide viewports. -->
   <dimen name="sprk_masthead_content_item_padding_right">8.00dp</dimen><!-- The padding right around the content items in the content section of the Masthead. -->
   <dimen name="sprk_masthead_content_item_padding_right_wide">16.00dp</dimen><!-- The padding right around the content items in the content section of the Masthead in wide viewports. -->
   <dimen name="sprk_masthead_content_item_padding_left">8.00dp</dimen><!-- The padding left around the content items in the content section of the Masthead. -->
