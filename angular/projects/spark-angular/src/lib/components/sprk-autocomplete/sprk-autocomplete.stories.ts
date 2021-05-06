@@ -40,7 +40,7 @@ export default {
 ${markdownDocumentationLinkBuilder('autocomplete')}
 - Live demos of the Autocomplete are available on our
 [demo site](https://spark-testangular.netlify.app/autocomplete)
-([View Source](https://github.com/sparkdesignsystem/spark-starter-angular)).
+([View Source](https://github.com/sparkdesignsystem/spark-starter-angular/tree/kitchen-sink/src/app/spark-docs/autocomplete-docs)).
 
 #### Keyboard Interactions
 - The list can be closed by clicking on the document body or by pressing
@@ -61,7 +61,7 @@ will trigger the \`itemSelectedEvent\`.
   \`aria-haspopup="listbox"\`. These attributes correctly identify the control
   to Assistive Technology.
 - The input should have \`aria-autocomplete="list"\`.
-  This attribute correctly identifies the control to assistive technology.
+  This attribute correctly identifies the control to Assistive Technology.
 - The input should have \`autocomplete="off"\`, \`autocapitalize="off"\`,
   and \`spellcheck="false"\`. These attributes deactivate default browser
   behavior that can interfere with autocomplete behavior.
@@ -83,7 +83,7 @@ In order to keep the Spark Autocomplete flexible enough to use in a wide
   variety of use cases, some of the interactivity of the component is left
   up to implementing teams.
 
-  - Filtering the list
+  - Filtering the list.
     - Display a message if a filter returns 0 results.
     - Highlight the matching text in the search results.
     - Update the contents of the associated \`aria-live\` element.
@@ -92,7 +92,7 @@ In order to keep the Spark Autocomplete flexible enough to use in a wide
   - Setting the value of the input when an item is selected.
     - The id of the selected item can be retrieved using
     \`itemSelectedEvent\`.
-    - The highlighted item is identified by the value of
+    - The highlighted item is also identified by the value of
     \`aria-activedescendant\` on the input.
 `,
     docs: { iframeHeight: 400 },
