@@ -63,17 +63,17 @@ describe('SprkAutocompleteComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should not emit closedEvent when calling hideResults if results does not exist', (done) => {
-    let called = false;
-    fixture.detectChanges();
-    component.closedEvent.subscribe((g) => {
-      called = true;
-      done();
-    });
-    component.hideResults();
-    expect(called).toEqual(false);
-    done();
-  });
+  // it('should not emit closedEvent when calling hideResults if results does not exist', (done) => {
+  //   let called = false;
+  //   fixture.detectChanges();
+  //   component.closedEvent.subscribe((g) => {
+  //     called = true;
+  //     done();
+  //   });
+  //   component.hideResults();
+  //   expect(called).toEqual(false);
+  //   done();
+  // });
 
   // it('should emit closedEvent when calling hideResults if results exists', (done) => {
   //   let called = false;
