@@ -43,11 +43,22 @@ export class SprkAutocompleteResultDirective implements OnInit {
   analyticsString: string;
 
   /**
+   * Expects a space separated string
+   * of classes to be added to the
+   * element.
+   */
+  @Input()
+  additionalClasses: string;
+
+  /**
    * @ignore
    *
    */
   private _isHighlighted: boolean;
 
+  /**
+   * If true, this Autocomplete result will be highlighted.
+   */
   @HostBinding('class.sprk-c-Autocomplete__result--active')
   @HostBinding('attr.aria-selected')
   @Input()
@@ -83,14 +94,6 @@ export class SprkAutocompleteResultDirective implements OnInit {
 
   /**
    * @ignore
-   */
-  @HostListener('click', ['$event.target'])
-  onClick() {
-    this.clickedEvent.emit(this.ref.nativeElement.id);
-  }
-
-  /**
-   * @ignore
    * Accepts a function to run when an item is clicked.
    * This should be set automatically by sprk-autocomplete and should
    * not be set manually by users.
@@ -99,12 +102,12 @@ export class SprkAutocompleteResultDirective implements OnInit {
   clickedEvent = new EventEmitter<any>();
 
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * element.
+   * @ignore
    */
-  @Input()
-  additionalClasses: string;
+  @HostListener('click', ['$event.target'])
+  onClick() {
+    this.clickedEvent.emit(this.ref.nativeElement.id);
+  }
 
   /**
    * @ignore

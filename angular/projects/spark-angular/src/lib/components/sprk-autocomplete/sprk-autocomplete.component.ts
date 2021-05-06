@@ -23,6 +23,53 @@ import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk
 export class SprkAutocompleteComponent
   implements AfterContentInit, AfterViewInit {
   constructor(private ref: ElementRef, private renderer: Renderer2) {}
+  /**
+   * This component expects a child element
+   * with the `sprkInput` directive.
+   */
+  @ContentChild(SprkInputDirective, { static: false })
+  input: SprkInputDirective;
+
+  /**
+   * This component expects a child element
+   * with the `sprkAutocompleteResults` directive.
+   */
+  @ContentChild(SprkAutocompleteResultsDirective, {
+    static: false,
+    read: ElementRef,
+  })
+  results: ElementRef;
+
+  /**
+   * This component expects the `sprkAutocompleteResults` child
+   * to contain elements with the `sprkAutocompleteResult` directive.
+   */
+  @ContentChildren(SprkAutocompleteResultDirective, { descendants: true })
+  resultItems: QueryList<SprkAutocompleteResultDirective>;
+
+  /**
+   * If `true`, the Autocomplete results will be visible when the component loads.
+   */
+  @Input()
+  isOpen = false;
+
+  /**
+   * This event will be emitted after the Autocomplete results are opened.
+   */
+  @Output()
+  openedEvent = new EventEmitter<any>();
+  /**
+   * This event will be emitted after the Autocomplete results are closed.
+   */
+  @Output()
+  closedEvent = new EventEmitter<any>();
+  /**
+   * This event will be emitted when an Autocomplete result is selected with
+   * a click event or with the Enter key. The event contains the id of the
+   * selected item.
+   */
+  @Output()
+  itemSelectedEvent = new EventEmitter<any>();
 
   /**
    * @ignore
@@ -79,54 +126,6 @@ export class SprkAutocompleteComponent
   onResize(event): void {
     this.calculateResultsWidth();
   }
-
-  /**
-   * This component expects a child element
-   * with the `sprkInput` directive.
-   */
-  @ContentChild(SprkInputDirective, { static: false })
-  input: SprkInputDirective;
-
-  /**
-   * This component expects a child element
-   * with the `sprkAutocompleteResults` directive.
-   */
-  @ContentChild(SprkAutocompleteResultsDirective, {
-    static: false,
-    read: ElementRef,
-  })
-  results: ElementRef;
-
-  /**
-   * This component expects the `sprkAutocompleteResults` child
-   * to contain elements with the `sprkAutocompleteResult` directive.
-   */
-  @ContentChildren(SprkAutocompleteResultDirective, { descendants: true })
-  resultItems: QueryList<SprkAutocompleteResultDirective>;
-
-  /**
-   * If `true`, the Autocomplete results will be visible when the component loads.
-   */
-  @Input()
-  isOpen = false;
-
-  /**
-   * This event will be emitted after the Autocomplete results are opened.
-   */
-  @Output()
-  openedEvent = new EventEmitter<any>();
-  /**
-   * This event will be emitted after the Autocomplete results are closed.
-   */
-  @Output()
-  closedEvent = new EventEmitter<any>();
-  /**
-   * This event will be emitted when an Autocomplete result is selected with
-   * a click event or with the Enter key. The event contains the id of the
-   * selected item.
-   */
-  @Output()
-  itemSelectedEvent = new EventEmitter<any>();
 
   /**
    * @ignore
@@ -296,16 +295,6 @@ export class SprkAutocompleteComponent
     }
   }
 
-  /** @ignore */
-  isUpPressed = (e) => e.key === 'ArrowRight' || e.keyCode === 38;
-  /** @ignore */
-  isDownPressed = (e) => e.key === 'ArrowDown' || e.keyCode === 40;
-  /** @ignore */
-  isEnterPressed = (e) => e.key === 'Enter' || e.keyCode === 13;
-  /** @ignore */
-  isEscapePressed = (e) =>
-    e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27;
-
   /**
    * @ignore
    * Set the max-width on the Autocomplete results equal to the current
@@ -320,4 +309,13 @@ export class SprkAutocompleteComponent
       'max-width:' + currentInputWidth + 'px',
     );
   }
+  /** @ignore */
+  isUpPressed = (e) => e.key === 'ArrowRight' || e.keyCode === 38;
+  /** @ignore */
+  isDownPressed = (e) => e.key === 'ArrowDown' || e.keyCode === 40;
+  /** @ignore */
+  isEnterPressed = (e) => e.key === 'Enter' || e.keyCode === 13;
+  /** @ignore */
+  isEscapePressed = (e) =>
+    e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27;
 }
