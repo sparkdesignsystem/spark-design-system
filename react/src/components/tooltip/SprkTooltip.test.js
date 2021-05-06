@@ -39,6 +39,26 @@ describe('SprkTooltip:', () => {
     expect(wrapper.find('.sprk-c-Tooltip.spork').length).toBe(1);
   });
 
+  it('should add vertical align top class', () => {
+    const wrapper = mount(<SprkTooltip verticalAlignment="top" />);
+    expect(wrapper.find('.sprk-c-Tooltip__container--top').length).toBe(1);
+  });
+
+  it('should add vertical align middle class', () => {
+    const wrapper = mount(<SprkTooltip verticalAlignment="middle" />);
+    expect(wrapper.find('.sprk-c-Tooltip__container--middle').length).toBe(1);
+  });
+
+  it('should add vertical align bottom class', () => {
+    const wrapper = mount(<SprkTooltip verticalAlignment="bottom" />);
+    expect(wrapper.find('.sprk-c-Tooltip__container--bottom').length).toBe(1);
+  });
+
+  it('should add vertical align baseline class', () => {
+    const wrapper = mount(<SprkTooltip verticalAlignment="baseline" />);
+    expect(wrapper.find('.sprk-c-Tooltip__container--baseline').length).toBe(1);
+  });
+
   it('should add data-id', () => {
     const wrapper = mount(<SprkTooltip idString="spork" />);
     expect(wrapper.find('[data-id="spork"]').length).toBe(1);
