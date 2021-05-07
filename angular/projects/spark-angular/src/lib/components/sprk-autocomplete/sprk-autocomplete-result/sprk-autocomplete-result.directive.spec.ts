@@ -53,4 +53,28 @@ describe('Spark Autocomplete Result Directive', () => {
   it('should add a value for data-id if idString has a value', () => {
     expect(element.getAttribute('data-id')).toEqual('resultId1');
   });
+
+  it('should emit click event', (done) => {
+    let clickEventEmitted = false;
+
+    component.clickedEvent.subscribe((g) => {
+      openEventEmitted = true;
+      done();
+    });
+    component.closedEvent.subscribe((g) => {
+      closedEventEmitted = true;
+      done();
+    });
+
+    element.querySelector('button').click();
+    expect(openEventEmitted).toEqual(true);
+    expect(closedEventEmitted).toEqual(false);
+
+    element.querySelector('button').click();
+    expect(closedEventEmitted).toEqual(true);
+  });
+  // clicking should trigger the click event
+  // setting isHighlighted should set the class and aria-selected
+  // removing isHighlighted should remove the class and set aria-selected
+  // setting isHighlighted should scroll the parentNode if necessary
 });
