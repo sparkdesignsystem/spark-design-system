@@ -16,7 +16,7 @@ export class SprkPromoSubheadingDirective {
   @Input()
   idString: string;
 
-  @HostBinding('class.sprk-c-Promo__subtitle') true;
+  @HostBinding('class.sprk-c-Promo__subtitle') promoSubtitleClass = true;
 
   /**
    * @ignore

@@ -4,7 +4,7 @@ import { Directive, Input, HostBinding } from '@angular/core';
   selector: '[sprkCenteredColumn]',
 })
 export class SprkCenteredColumnDirective {
-  @HostBinding('class.sprk-o-CenteredColumn') true;
+  @HostBinding('class.sprk-o-CenteredColumn') centeredColumnClass = true;
 
   /**
    * The value supplied will be assigned
