@@ -4,7 +4,7 @@ import { Directive, Input, HostBinding } from '@angular/core';
   selector: '[sprkDivider]',
 })
 export class SprkDividerDirective {
-  @HostBinding('class.sprk-c-Divider') true;
+  @HostBinding('class.sprk-c-Divider') dividerClass = true;
 
   /**
    * The value supplied will be assigned
