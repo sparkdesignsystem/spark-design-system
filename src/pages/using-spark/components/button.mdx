@@ -4,6 +4,30 @@ title: Button
 
 import ComponentPreview from '../../../components/ComponentPreview';
 import { SprkDivider } from '@sparkdesignsystem/spark-react';
+import buttonVariants from '../../../images/buttons/buttonVariants.png';
+import buttonVariants2x from '../../../images/buttons/buttonVariants@2x.png';
+export const buttonVariantsSet = `${buttonVariants} 560w, ${buttonVariants2x} 1120w`;
+import primaryButtonException from '../../../images/buttons/primaryButtonException.png';
+import primaryButtonException2x from '../../../images/buttons/primaryButtonException@2x.png';
+export const primaryButtonExceptionSet = `${primaryButtonException} 560w, ${primaryButtonException2x} 1120w`;
+import buttonModal from '../../../images/buttons/buttonModal.png';
+import buttonModal2x from '../../../images/buttons/buttonModal@2x.png';
+export const buttonModalSet = `${buttonModal} 560w, ${buttonModal} 1120w`;
+import buttonForm from '../../../images/buttons/buttonForm.png';
+import buttonForm2x from '../../../images/buttons/buttonForm@2x.png';
+export const buttonFormSet = `${buttonForm} 560w, ${buttonForm} 1120w`;
+import fullWidthButton from '../../../images/buttons/fullWidthButton.png';
+import fullWidthButton2x from '../../../images/buttons/fullWidthButton@2x.png';
+export const fullWidthButtonSet = `${fullWidthButton} 560w, ${fullWidthButton} 1120w`;
+import stackedButtons from '../../../images/buttons/stackedButtons.png';
+import stackedButtons2x from '../../../images/buttons/stackedButtons@2x.png';
+export const stackedButtonsSet = `${stackedButtons} 560w, ${stackedButtons} 1120w`;
+import sideBySide from '../../../images/buttons/sideBySide.png';
+import sideBySide2x from '../../../images/buttons/sideBySide@2x.png';
+export const sideBySideSet = `${sideBySide} 560w, ${sideBySide} 1120w`;
+import verticalButtons from '../../../images/buttons/verticalButtons.png';
+import verticalButtons2x from '../../../images/buttons/verticalButtons@2x.png';
+export const verticalButtonsSet = `${verticalButtons} 560w, ${verticalButtons} 1120w`;
 
 # Button
 
@@ -22,7 +46,7 @@ sets clear expectations of what action will occur when users interact with it.
 
 Use buttons to communicate the different actions users can take and how they can interact with the page.
 
-> As a general rule, use one main call to action ([Primary Button](#primary-button)) per screen.
+> As a general rule, use one ([Primary Button](#primary-button)) as the main call to action to establish the button hierarchy on a screen.
 
 - Use button types consistently across products.
 - Avoid using too many buttons on a page.
@@ -32,20 +56,23 @@ Use buttons to communicate the different actions users can take and how they can
 
 ## Variants
 
-Buttons have different visual weights that help establish a visual hierarchy on a page.
+Buttons have different visual weights that help establish a visual hierarchy of the actions a user can take on a page.
 
 - [Primary Button](#primary-button) (Filled)
 - [Secondary Button](#secondary-button) (Outlined)
 - [Tertiary Button](#tertiary-button) (Text button)
-- [Compact Button](#compact-button)
 - [Full Width Button](#full-width-button)
 
-> Use one primary button as the main call to action to establish the
-> button hierarchy on a screen.
+<img
+  srcSet={buttonVariantsSet}
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbm sprk-u-Width-100"
+  src={buttonVariants}
+  alt="Anatomy of three button types."
+/>
 
 ### Primary Button
 
-It represents the main action we want users to take on a screen. Filled buttons have the heaviest visual weight.
+It represents the main action we want users to take on a screen. Filled buttons have the heaviest visual weight, use in areas of high importance.
 
 <ComponentPreview
   componentName="button--primary"
@@ -55,13 +82,32 @@ It represents the main action we want users to take on a screen. Filled buttons 
   titleAttr="Primary Button Example"
 />
 
-- Use in areas of high importance.
+- Use to point out the main call to action on an interface.
 - Use one Primary (Filled) button per screen to help users understand the action hierarchy of the page and to avoid any confusion.
-- For actions that help users navigate to the next step in a process.
+- In a process flow, use to show the main action to help users navigate to the next step.
 
-**Exception**
+**Example:**
 
-For specific situations where users can choose between two journeys, two Primary (Filled) buttons may exist side by side.
+The ‘Submit’ button represents the main action in this button group.
+
+<img
+  srcSet={buttonModalSet}
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbh sprk-u-Width-100"
+  src={buttonModal}
+  alt="A primary button is on the right and represents the main action"
+/>
+
+**Exception:**
+for specific situations where users can choose between two journeys, two Primary (Filled) buttons may exist side by side.
+
+<img
+  srcSet={primaryButtonExceptionSet}
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbm sprk-u-Width-100"
+  src={primaryButtonException}
+  alt="Two primary buttons placed side by side."
+/>
+
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
 ### Secondary Button
 
@@ -79,14 +125,12 @@ the screen. Outlined buttons have a medium visual weight and emphasis.
 - There can be more than one on a screen.
 - Use for alternative actions that do not navigate the user to the next step in a process.
 
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
+
 ### Tertiary Button
 
 It represents the least important action on a screen. They have a similar visual style to a text [Link](/using-spark/components/link) and
 have the lowest visual weight.
-
-- For independent or less important actions.
-- They can be used for sub-tasks where a Primary (Filled) button is the main action.
-- In a button set, use Tertiary buttons for actions with the least visual emphasis that do not require the user's attention.
 
 <ComponentPreview
   componentName="button--tertiary"
@@ -96,22 +140,25 @@ have the lowest visual weight.
   titleAttr="Tertiary Button Example"
 />
 
-### Compact Buttons
+- For independent or less important actions.
+- Use for sub-tasks where a Primary (Filled) button is the main action.
+- In a button group, use Tertiary buttons for actions with the least visual emphasis that do not require the user's attention.
 
-A smaller version of regular sized buttons.
+**Example:**
 
-- All button types (Primary, Secondary and Tertiary) can be Compact buttons.
-- Use in smaller viewports, like mobile screens.
-- Do not mix with regular sized buttons.
+<img
+  srcSet={buttonFormSet}
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbh sprk-u-Width-100"
+  src={buttonForm}
+  alt="The back and cancel button represent least important actions in the button group"
+/>
+
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
 ### Full Width Buttons
 
 Use full width buttons in containers that take up 1/3 of the grid or
 smaller, like mobile screens.
-
-- Button takes up the full width of it's container.
-- On mobile screens, buttons can be stacked.
-- When stacked, place the primary action on top of secondary actions.
 
 <ComponentPreview
   componentName="button--full-width-at-small-viewport"
@@ -120,6 +167,21 @@ smaller, like mobile screens.
   hasHTML
   titleAttr="Full Width at Smaller Viewports Button Example"
 />
+
+- Button takes up the full width of it's container.
+- On mobile screens, buttons can be stacked.
+- When stacked, place the primary action on top of secondary actions.
+
+**Example:**
+
+<img
+  srcSet={fullWidthButtonSet}
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbm sprk-u-Width-100"
+  src={fullWidthButton}
+  alt="A button that takes up the full width of it's container."
+/>
+
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
 ## States
 
@@ -197,15 +259,14 @@ Buttons can be grouped with other buttons to establish a relationship between th
 - A max of two buttons should be in a group.
   - A Primary button can be grouped with any less visual weight (Secondary or Tertiary) buttons.
   - Do not mix a primary, secondary, and tertiary buttons in the same button group.
-- Do not use too many buttons on a page to avoid overwhelming users.
+  - Do not use too many buttons on a page to avoid overwhelming users.
 
-**Exception**
+**Exception:**
 
-For layouts that require more than three calls to action in a group.
-
-- Use one Primary button for the main action in combination with two less visual weight buttons.
-- Do not mix more than two styles of buttons.
-- If using a primary button in the group, prefer all other buttons to be tertiary.
+- For layouts that require more than three calls to action in a group.
+  - Use one Primary button for the main action in combination with two less visual weight buttons.
+  - If using a primary button in the group, prefer all other buttons to be tertiary.
+  - Do not mix more than two styles of buttons.
 
 <SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
@@ -224,10 +285,10 @@ For layouts that require more than three calls to action in a group.
 
 #### Button Styling
 
-- Text should be center aligned.
-- Buttons should have 16px of padding on the top and bottom, and 24px on the left and right sides.
-- Width should be between 48x and 280px.
-- Grouped buttons should be 16px away from each other.
+- Text should be **center aligned**.
+- Buttons should have **16px** of padding on the top and bottom, and **24px** on the left and right sides.
+- Width should be between **48x** and **280px**.
+- Grouped buttons should be **16px** away from each other.
 - Apply the same width to all buttons in a group.
 - Do not use buttons in paragraphs or within lines of text. Use
   [Link](/using-spark/components/link)
@@ -242,11 +303,48 @@ to communicate the main action and capture's the user's attention.
 > user's eye makes a z-pattern when scanning a screen and implies that
 > placing buttons to the right communicates the main action to the user.
 
-- Buttons should be right aligned to its parent container.
-- On a Button group, place the main action **on the
-  right** for the most important action.
+- Buttons should be **right aligned** to its parent container.
+- Place the main action **on the
+  right** for the most important action in a button group.
 - **Side by Side (Horizontal) buttons** - place the Primary (Filled) button **on the right** and all other actions to the left.
 - **Stack (Vertical) buttons** - place the Primary (Filled) button **on top** of the secondary or tertiary action.
+
+**Example:**
+
+In a button group with three actions, the ‘Submit’ button:
+
+- represents the **main action**.
+- is placed **on the right** of the other buttons.
+- is **right aligned** to it's parent container.
+
+<img
+  srcSet={buttonFormSet}
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbh sprk-u-Width-100"
+  src={buttonForm}
+  alt="A primary button is placed on the right of two tertiary buttons."
+/>
+
+**Example:**
+
+In a button set, the main action is placed on the right.
+
+<img
+  srcSet={sideBySideSet}
+  class="sprk-u-Measure sprk-u-pas sprk-u-pbm sprk-u-Width-100"
+  src={sideBySide}
+  alt="In a button set, the primary button is on the right."
+/>
+
+**Example:**
+
+In a mobile view, two buttons are stacked and the main action is on the top.
+
+<img
+  srcSet={verticalButtonsSet}
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbs sprk-u-Width-50"
+  src={verticalButtons}
+  alt="On a mobile screen the main action is on top of the secondary action."
+/>
 
 <SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
@@ -255,6 +353,8 @@ to communicate the main action and capture's the user's attention.
 - A Button must have a text label and/or icon, and a container.
 - A Button's Text communicates the action that will happen when the
   user interacts with it.
+
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
 ## Accessibility
 
