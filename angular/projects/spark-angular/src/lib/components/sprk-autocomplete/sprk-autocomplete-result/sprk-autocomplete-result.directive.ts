@@ -129,14 +129,11 @@ export class SprkAutocompleteResultDirective implements OnInit {
       this.renderer.addClass(this.ref.nativeElement, item);
     });
 
-    // TODO generate an ID
     let itemId = this.ref.nativeElement.id;
     if (!itemId) {
       itemId = uniqueId(`sprk_autocomplete_result_`);
       this.renderer.setProperty(this.ref.nativeElement, 'id', itemId);
     }
-
-    this.renderer.setAttribute(this.ref.nativeElement, 'role', 'option');
 
     if (this.analyticsString) {
       this.renderer.setAttribute(

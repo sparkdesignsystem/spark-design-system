@@ -213,7 +213,7 @@ export class SprkAutocompleteComponent
 
       // Set aria-expanded on the input
       this.renderer.setAttribute(
-        this.input.ref.nativeElement,
+        this.input.ref.nativeElement.parentNode,
         'aria-expanded',
         'false',
       );
@@ -245,7 +245,7 @@ export class SprkAutocompleteComponent
     if (this.input) {
       // Set aria-expanded on the input
       this.renderer.setAttribute(
-        this.input.ref.nativeElement,
+        this.input.ref.nativeElement.parentNode,
         'aria-expanded',
         'true',
       );
@@ -264,10 +264,6 @@ export class SprkAutocompleteComponent
    * @ignore
    */
   ngAfterContentInit(): void {
-    if (this.input) {
-      this.input.ref.nativeElement.setAttribute('aria-expanded', this.isOpen);
-    }
-
     if (this.results) {
       if (this.isOpen) {
         this.showResults();

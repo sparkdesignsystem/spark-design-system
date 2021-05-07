@@ -67,8 +67,6 @@ export class SprkAutocompleteResultsDirective implements OnInit {
       this.renderer.addClass(this.ref.nativeElement, item);
     });
 
-    this.renderer.setAttribute(this.ref.nativeElement, 'role', 'listbox');
-
     if (this.analyticsString) {
       this.renderer.setAttribute(
         this.ref.nativeElement,

@@ -43,7 +43,7 @@ ${markdownDocumentationLinkBuilder('autocomplete')}
 ([View Source](https://github.com/sparkdesignsystem/spark-starter-angular/tree/kitchen-sink/src/app/spark-docs/autocomplete-docs)).
 
 #### Keyboard Interactions
-- The list can be closed by clicking on the document body or by pressing
+- The list can be closed by clicking outside the Autocomplete or by pressing
 the \`Escape\` key.
 - When the list is open, items in the list can be highlighted using the
 \`Up\` and \`Down\` arrow keys. Note that this highlight is distinct from the
@@ -57,7 +57,7 @@ will trigger the \`itemSelectedEvent\`.
   items in the list. View the
   [demo site](https://spark-testangular.netlify.app/autocomplete)
   for examples.
-- The input container should have \`role="combobox"\` and
+- The input's parent element should have \`role="combobox"\` and
   \`aria-haspopup="listbox"\`. These attributes correctly identify the control
   to Assistive Technology.
 - The input should have \`aria-autocomplete="list"\`.
@@ -66,9 +66,9 @@ will trigger the \`itemSelectedEvent\`.
   and \`spellcheck="false"\`. These attributes deactivate default browser
   behavior that can interfere with autocomplete behavior.
 - The list should have \`role="listbox"\`.
-- When the list is hidden, the input container should have
+- When the list is hidden, the input's parent element should have
   \`aria-expanded="false"\`.
-- When the list is visible, the input container should have
+- When the list is visible, the input's parent element should have
   \`aria-expanded="true"\`.
 - When the list is visible and an item is highlighted (with the arrow keys),
   the text input should have \`aria-activedescendant\` set to the \`id\`
@@ -149,6 +149,7 @@ export const defaultStory = () => ({
           type="text"
           class="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
           aria-describedby="autocomplete--error-container"
+          aria-autocomplete="list"
           sprkInput
           idString="autocomplete-input1"
           autocomplete="off"
@@ -157,21 +158,22 @@ export const defaultStory = () => ({
         >
       </div>
       <ul
-        aria-labelledby="autocomplete-label"
         sprkAutocompleteResults
-      >
-        <li sprkAutocompleteResult>Apple</li>
-        <li sprkAutocompleteResult>Apricot</li>
-        <li sprkAutocompleteResult>Avocado</li>
-        <li sprkAutocompleteResult>Banana</li>
-        <li sprkAutocompleteResult>Blackberry</li>
-        <li sprkAutocompleteResult>Blueberry</li>
-        <li sprkAutocompleteResult>Clementine</li>
-        <li sprkAutocompleteResult>Fig</li>
-        <li sprkAutocompleteResult>Grape</li>
-        <li sprkAutocompleteResult>Kumquat</li>
-        <li sprkAutocompleteResult>Lemon</li>
-        <li sprkAutocompleteResult>Papaya</li>
+        aria-labelledby="autocomplete-label"
+        role="listbox"
+        >
+        <li sprkAutocompleteResult role="option">Apple</li>
+        <li sprkAutocompleteResult role="option">Apricot</li>
+        <li sprkAutocompleteResult role="option">Avocado</li>
+        <li sprkAutocompleteResult role="option">Banana</li>
+        <li sprkAutocompleteResult role="option">Blackberry</li>
+        <li sprkAutocompleteResult role="option">Blueberry</li>
+        <li sprkAutocompleteResult role="option">Clementine</li>
+        <li sprkAutocompleteResult role="option">Fig</li>
+        <li sprkAutocompleteResult role="option">Grape</li>
+        <li sprkAutocompleteResult role="option">Kumquat</li>
+        <li sprkAutocompleteResult role="option">Lemon</li>
+        <li sprkAutocompleteResult role="option">Papaya</li>
       </ul>
     </sprk-input-container>
     <span sprkFieldError id="autocomplete--error-container">
@@ -224,6 +226,7 @@ export const defaultInvalid = () => ({
           class="sprk-b-TextInput--has-svg-icon sprk-u-Width-100 sprk-b-TextInput--error"
           aria-describedby="autocomplete--error-container2"
           aria-invalid="true"
+          aria-autocomplete="list"
           sprkInput
           idString="autocomplete-input2"
           autocomplete="off"
@@ -234,19 +237,20 @@ export const defaultInvalid = () => ({
       <ul
         aria-labelledby="autocomplete-label2"
         sprkAutocompleteResults
+        role="listbox"
       >
-        <li sprkAutocompleteResult>Apple</li>
-        <li sprkAutocompleteResult>Apricot</li>
-        <li sprkAutocompleteResult>Avocado</li>
-        <li sprkAutocompleteResult>Banana</li>
-        <li sprkAutocompleteResult>Blackberry</li>
-        <li sprkAutocompleteResult>Blueberry</li>
-        <li sprkAutocompleteResult>Clementine</li>
-        <li sprkAutocompleteResult>Fig</li>
-        <li sprkAutocompleteResult>Grape</li>
-        <li sprkAutocompleteResult>Kumquat</li>
-        <li sprkAutocompleteResult>Lemon</li>
-        <li sprkAutocompleteResult>Papaya</li>
+        <li sprkAutocompleteResult role="option">Apple</li>
+        <li sprkAutocompleteResult role="option">Apricot</li>
+        <li sprkAutocompleteResult role="option">Avocado</li>
+        <li sprkAutocompleteResult role="option">Banana</li>
+        <li sprkAutocompleteResult role="option">Blackberry</li>
+        <li sprkAutocompleteResult role="option">Blueberry</li>
+        <li sprkAutocompleteResult role="option">Clementine</li>
+        <li sprkAutocompleteResult role="option">Fig</li>
+        <li sprkAutocompleteResult role="option">Grape</li>
+        <li sprkAutocompleteResult role="option">Kumquat</li>
+        <li sprkAutocompleteResult role="option">Lemon</li>
+        <li sprkAutocompleteResult role="option">Papaya</li>
       </ul>
       <span sprkFieldError id="autocomplete--error-container2">
         <sprk-icon
@@ -305,6 +309,7 @@ export const defaultDisabled = () => ({
           type="text"
           class="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
           aria-describedby="autocomplete--error-container3"
+          aria-autocomplete="list"
           sprkInput
           idString="autocomplete-input3"
           autocomplete="off"
@@ -316,19 +321,20 @@ export const defaultDisabled = () => ({
       <ul
         aria-labelledby="autocomplete-label3"
         sprkAutocompleteResults
+        role="listbox"
       >
-        <li sprkAutocompleteResult>Apple</li>
-        <li sprkAutocompleteResult>Apricot</li>
-        <li sprkAutocompleteResult>Avocado</li>
-        <li sprkAutocompleteResult>Banana</li>
-        <li sprkAutocompleteResult>Blackberry</li>
-        <li sprkAutocompleteResult>Blueberry</li>
-        <li sprkAutocompleteResult>Clementine</li>
-        <li sprkAutocompleteResult>Fig</li>
-        <li sprkAutocompleteResult>Grape</li>
-        <li sprkAutocompleteResult>Kumquat</li>
-        <li sprkAutocompleteResult>Lemon</li>
-        <li sprkAutocompleteResult>Papaya</li>
+        <li sprkAutocompleteResult role="option">Apple</li>
+        <li sprkAutocompleteResult role="option">Apricot</li>
+        <li sprkAutocompleteResult role="option">Avocado</li>
+        <li sprkAutocompleteResult role="option">Banana</li>
+        <li sprkAutocompleteResult role="option">Blackberry</li>
+        <li sprkAutocompleteResult role="option">Blueberry</li>
+        <li sprkAutocompleteResult role="option">Clementine</li>
+        <li sprkAutocompleteResult role="option">Fig</li>
+        <li sprkAutocompleteResult role="option">Grape</li>
+        <li sprkAutocompleteResult role="option">Kumquat</li>
+        <li sprkAutocompleteResult role="option">Lemon</li>
+        <li sprkAutocompleteResult role="option">Papaya</li>
       </ul>
       <span sprkFieldError id="autocomplete--error-container3">
       </span>
@@ -374,6 +380,7 @@ export const hugeStory = () => ({
           placeholder="Search for a Fruit"
           class="sprk-u-Width-100"
           aria-describedby="autocomplete--error-container4"
+          aria-autocomplete="list"
           sprkInput
           variant="huge"
           idString="autocomplete-input4"
@@ -392,19 +399,20 @@ export const hugeStory = () => ({
       <ul
         aria-labelledby="autocomplete-label4"
         sprkAutocompleteResults
+        role="listbox"
       >
-        <li sprkAutocompleteResult>Apple</li>
-        <li sprkAutocompleteResult>Apricot</li>
-        <li sprkAutocompleteResult>Avocado</li>
-        <li sprkAutocompleteResult>Banana</li>
-        <li sprkAutocompleteResult>Blackberry</li>
-        <li sprkAutocompleteResult>Blueberry</li>
-        <li sprkAutocompleteResult>Clementine</li>
-        <li sprkAutocompleteResult>Fig</li>
-        <li sprkAutocompleteResult>Grape</li>
-        <li sprkAutocompleteResult>Kumquat</li>
-        <li sprkAutocompleteResult>Lemon</li>
-        <li sprkAutocompleteResult>Papaya</li>
+        <li sprkAutocompleteResult role="option">Apple</li>
+        <li sprkAutocompleteResult role="option">Apricot</li>
+        <li sprkAutocompleteResult role="option">Avocado</li>
+        <li sprkAutocompleteResult role="option">Banana</li>
+        <li sprkAutocompleteResult role="option">Blackberry</li>
+        <li sprkAutocompleteResult role="option">Blueberry</li>
+        <li sprkAutocompleteResult role="option">Clementine</li>
+        <li sprkAutocompleteResult role="option">Fig</li>
+        <li sprkAutocompleteResult role="option">Grape</li>
+        <li sprkAutocompleteResult role="option">Kumquat</li>
+        <li sprkAutocompleteResult role="option">Lemon</li>
+        <li sprkAutocompleteResult role="option">Papaya</li>
       </ul>
       <span sprkFieldError id="autocomplete--error-container4">
       </span>
@@ -451,6 +459,7 @@ export const hugeInvalid = () => ({
           class="sprk-u-Width-100 sprk-b-TextInput--error"
           aria-describedby="autocomplete--error-container5"
           aria-invalid="true"
+          aria-autocomplete="list"
           sprkInput
           variant="huge"
           idString="autocomplete-input5"
@@ -469,19 +478,20 @@ export const hugeInvalid = () => ({
       <ul
         aria-labelledby="autocomplete-label5"
         sprkAutocompleteResults
+        role="listbox"
       >
-        <li sprkAutocompleteResult>Apple</li>
-        <li sprkAutocompleteResult>Apricot</li>
-        <li sprkAutocompleteResult>Avocado</li>
-        <li sprkAutocompleteResult>Banana</li>
-        <li sprkAutocompleteResult>Blackberry</li>
-        <li sprkAutocompleteResult>Blueberry</li>
-        <li sprkAutocompleteResult>Clementine</li>
-        <li sprkAutocompleteResult>Fig</li>
-        <li sprkAutocompleteResult>Grape</li>
-        <li sprkAutocompleteResult>Kumquat</li>
-        <li sprkAutocompleteResult>Lemon</li>
-        <li sprkAutocompleteResult>Papaya</li>
+        <li sprkAutocompleteResult role="option">Apple</li>
+        <li sprkAutocompleteResult role="option">Apricot</li>
+        <li sprkAutocompleteResult role="option">Avocado</li>
+        <li sprkAutocompleteResult role="option">Banana</li>
+        <li sprkAutocompleteResult role="option">Blackberry</li>
+        <li sprkAutocompleteResult role="option">Blueberry</li>
+        <li sprkAutocompleteResult role="option">Clementine</li>
+        <li sprkAutocompleteResult role="option">Fig</li>
+        <li sprkAutocompleteResult role="option">Grape</li>
+        <li sprkAutocompleteResult role="option">Kumquat</li>
+        <li sprkAutocompleteResult role="option">Lemon</li>
+        <li sprkAutocompleteResult role="option">Papaya</li>
       </ul>
       <span sprkFieldError id="autocomplete--error-container5">
         <sprk-icon
@@ -533,6 +543,7 @@ export const hugeDisabled = () => ({
           placeholder="Search for a Fruit"
           class="sprk-u-Width-100"
           aria-describedby="autocomplete--error-container6"
+          aria-autocomplete="list"
           disabled
           sprkInput
           variant="huge"
@@ -552,19 +563,20 @@ export const hugeDisabled = () => ({
       <ul
         aria-labelledby="autocomplete-label6"
         sprkAutocompleteResults
+        role="listbox"
       >
-        <li sprkAutocompleteResult>Apple</li>
-        <li sprkAutocompleteResult>Apricot</li>
-        <li sprkAutocompleteResult>Avocado</li>
-        <li sprkAutocompleteResult>Banana</li>
-        <li sprkAutocompleteResult>Blackberry</li>
-        <li sprkAutocompleteResult>Blueberry</li>
-        <li sprkAutocompleteResult>Clementine</li>
-        <li sprkAutocompleteResult>Fig</li>
-        <li sprkAutocompleteResult>Grape</li>
-        <li sprkAutocompleteResult>Kumquat</li>
-        <li sprkAutocompleteResult>Lemon</li>
-        <li sprkAutocompleteResult>Papaya</li>
+        <li sprkAutocompleteResult role="option">Apple</li>
+        <li sprkAutocompleteResult role="option">Apricot</li>
+        <li sprkAutocompleteResult role="option">Avocado</li>
+        <li sprkAutocompleteResult role="option">Banana</li>
+        <li sprkAutocompleteResult role="option">Blackberry</li>
+        <li sprkAutocompleteResult role="option">Blueberry</li>
+        <li sprkAutocompleteResult role="option">Clementine</li>
+        <li sprkAutocompleteResult role="option">Fig</li>
+        <li sprkAutocompleteResult role="option">Grape</li>
+        <li sprkAutocompleteResult role="option">Kumquat</li>
+        <li sprkAutocompleteResult role="option">Lemon</li>
+        <li sprkAutocompleteResult role="option">Papaya</li>
       </ul>
       <span sprkFieldError id="autocomplete--error-container6">
       </span>
