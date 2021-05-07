@@ -24,11 +24,11 @@ import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-brandi
       >
         <div
           sprkStackItem
-          *ngIf="collapsibleNav"
+          *ngIf="collapsibleNavDirective"
           class="sprk-c-Masthead__menu sprk-o-Stack__item--center-column@xxs"
         >
           <sprk-masthead-nav-collapsible-button
-            [collapsibleNavId]="collapsibleNavId"
+            [collapsibleNavId]="collapsibleNavDirective.id"
             (sprkCollapsibleNavButtonClicked)="toggleCollapsibleNav($event)"
           ></sprk-masthead-nav-collapsible-button>
         </div>
@@ -51,12 +51,15 @@ export class SprkMastheadComponent implements AfterContentInit {
        * If page is changed by the router
        * and they have a collapsibleNav
        * we want to make sure it is closed
-       * when the new page loads.
+       * when the new page loads if it is open.
        */
-      if (!this.collapsibleNav) {
+      if (!this.collapsibleNavDirective) {
         return;
       }
-      if (event instanceof NavigationEnd) {
+      if (
+        event instanceof NavigationEnd &&
+        !this.collapsibleNavDirective.isCollapsed
+      ) {
         this.closeCollapsibleNav();
       }
     });
@@ -71,13 +74,6 @@ export class SprkMastheadComponent implements AfterContentInit {
   additionalClasses: string;
 
   /**
-   * Represents the initial state of the
-   * narrow nav element of the Masthead component.
-   */
-  @Input()
-  isCollapsibleNavOpen = false;
-
-  /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
    * component. This is intended to be
@@ -90,9 +86,8 @@ export class SprkMastheadComponent implements AfterContentInit {
 
   @ContentChild(SprkMastheadNavCollapsibleDirective, {
     static: false,
-    read: ElementRef,
   })
-  collapsibleNav: ElementRef;
+  collapsibleNavDirective: SprkMastheadNavCollapsibleDirective;
 
   @ContentChild(SprkMastheadBrandingDirective, {
     static: false,
@@ -100,14 +95,6 @@ export class SprkMastheadComponent implements AfterContentInit {
   })
   branding: ElementRef;
 
-  /**
-   * @ignore
-   */
-  componentID = uniqueId();
-  /**
-   * @ignore
-   */
-  controls_id = `sprk-collapsible-nav-item__${this.componentID}`;
   /**
    * @ignore
    */
@@ -131,10 +118,6 @@ export class SprkMastheadComponent implements AfterContentInit {
   /**
    * @ignore
    */
-  collapsibleNavId: string;
-  /**
-   * @ignore
-   */
   currentScrollPosition = 0;
   /**
    * @ignore
@@ -146,14 +129,13 @@ export class SprkMastheadComponent implements AfterContentInit {
   throttledUpdateLayoutState = throttle(this.updateLayoutState, 500);
 
   /**
-   * @ignore
    * Closes the collapsible navigation
    * if it is left open when
    * the viewport is expanded.
    */
   @HostListener('window:orientationchange')
   handleResizeEvent() {
-    if (this.collapsibleNav) {
+    if (!this.collapsibleNavDirective.isCollapsed) {
       this.closeCollapsibleNav();
     }
   }
@@ -176,26 +158,12 @@ export class SprkMastheadComponent implements AfterContentInit {
    */
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
-    if (this.collapsibleNav) {
+    if (this.collapsibleNavDirective) {
       this.isNarrowViewportOnResize = this.isElementVisible(
         '.sprk-c-Masthead__menu',
       );
       this.throttledUpdateLayoutState();
     }
-  }
-
-  /**
-   * If there is a collapsbile nav and it has a pre-existing ID
-   * then get the value else get a
-   * custom ID from the uniqueId method.
-   */
-  getCollapsibleNavId() {
-    if (!this.collapsibleNav) {
-      return;
-    }
-    this.collapsibleNav.nativeElement.id.length > 0
-      ? (this.collapsibleNavId = this.collapsibleNav.nativeElement.id)
-      : (this.collapsibleNavId = uniqueId(`sprk_masthead_collapsible_nav_`));
   }
 
   /**
@@ -217,9 +185,6 @@ export class SprkMastheadComponent implements AfterContentInit {
    */
   ngAfterContentInit() {
     this.isNarrowViewport = this.isElementVisible('.sprk-c-Masthead__menu');
-
-    // Check for existing ID on collapsible navigation
-    this.getCollapsibleNavId();
   }
 
   /**
@@ -291,7 +256,10 @@ export class SprkMastheadComponent implements AfterContentInit {
       });
     }
 
-    if (this.collapsibleNav && this.isCollapsibleNavOpen) {
+    if (
+      this.collapsibleNavDirective &&
+      !this.collapsibleNavDirective.isCollapsed
+    ) {
       classArray.push('sprk-c-Masthead--open');
     }
 
@@ -307,17 +275,16 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   /**
-   *  When the button for the collapsible nav
-   * is clicked this will check the value of
-   * the isCollapsibleNavOpen boolen tracker
-   * to determine when to open or close
-   * the collapsible navigation.
+   * When the button for the collapsible nav
+   * is clicked this will check if the collapsible
+   * nav is open. If it is open, then it will close it. If it
+   * is closed then it will open it.
    */
-  toggleCollapsibleNav(event): void {
-    if (!this.collapsibleNav) {
+  toggleCollapsibleNav(): void {
+    if (!this.collapsibleNavDirective) {
       return;
     }
-    if (this.isCollapsibleNavOpen) {
+    if (!this.collapsibleNavDirective.isCollapsed) {
       this.closeCollapsibleNav();
     } else {
       this.openCollapsibleNav();
@@ -326,12 +293,13 @@ export class SprkMastheadComponent implements AfterContentInit {
 
   /**
    * Adds the correct styles to the body and HTML elements
-   * in order for the collapsible nav to be open. This also removes
-   * the display none class from the collapsible nav to show it and updates
-   * the tracker isCollapsibleNavOpen boolen to be `true`.
+   * in order for the collapsible nav to be open.
+   * Sets the isCollapsed input on the collapsible nav
+   * to be false so that the directive adds the CSS styles
+   * to show the nav.
    */
   openCollapsibleNav(): void {
-    if (!this.collapsibleNav) {
+    if (!this.collapsibleNavDirective) {
       return;
     }
     this.renderer.addClass(document.body, 'sprk-u-Overflow--hidden');
@@ -341,22 +309,17 @@ export class SprkMastheadComponent implements AfterContentInit {
     );
     this.renderer.addClass(document.body, 'sprk-u-Height--100');
     this.renderer.addClass(document.body.parentElement, 'sprk-u-Height--100');
-    this.isCollapsibleNavOpen = true;
-    this.renderer.removeClass(
-      this.collapsibleNav.nativeElement,
-      'sprk-u-Display--none',
-    );
+    this.collapsibleNavDirective.isCollapsed = false;
   }
 
   /**
    * Removes the styles that were added to
    * the body and HTML elements when the nav was open.
-   * This also adds the display none class
-   * to the collapsible nav to hide it and updates
-   * the tracker isCollapsibleNavOpen boolen to be `false`.
+   * Sets the isCollapsed input on the collapsed nav to be true
+   * so that the directive adds the collapsed CSS class.
    */
   closeCollapsibleNav(): void {
-    if (!this.collapsibleNav) {
+    if (!this.collapsibleNavDirective) {
       return;
     }
     this.renderer.removeClass(document.body, 'sprk-u-Overflow--hidden');
@@ -369,10 +332,6 @@ export class SprkMastheadComponent implements AfterContentInit {
       document.body.parentElement,
       'sprk-u-Height--100',
     );
-    this.isCollapsibleNavOpen = false;
-    this.renderer.addClass(
-      this.collapsibleNav.nativeElement,
-      'sprk-u-Display--none',
-    );
+    this.collapsibleNavDirective.isCollapsed = true;
   }
 }

@@ -454,7 +454,6 @@ export const defaultStory = () => ({
 
     <nav
       sprkMastheadNavCollapsible
-      class="sprk-u-Display--none"
       role="navigation"
     >
       <sprk-masthead-accordion>
@@ -760,7 +759,6 @@ export const extended = () => ({
 
       <nav
         sprkMastheadNavCollapsible
-        class="sprk-u-Display--none"
         role="navigation"
         idString="collapsible-nav"
       >
