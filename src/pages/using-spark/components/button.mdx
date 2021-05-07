@@ -46,7 +46,7 @@ sets clear expectations of what action will occur when users interact with it.
 
 Use buttons to communicate the different actions users can take and how they can interact with the page.
 
-> As a general rule, use one ([Primary Button](#primary-button)) as the main call to action to establish the button hierarchy on a screen.
+> As a general rule, use one [Primary Button](#primary-button) as the main call to action to establish the button hierarchy on a screen.
 
 - Use button types consistently across products.
 - Avoid using too many buttons on a page.
@@ -82,23 +82,26 @@ It represents the main action we want users to take on a screen. Filled buttons 
   titleAttr="Primary Button Example"
 />
 
+#### Usage
+
 - Use to point out the main call to action on an interface.
 - Use one Primary (Filled) button per screen to help users understand the action hierarchy of the page and to avoid any confusion.
 - In a process flow, use to show the main action to help users navigate to the next step.
 
 **Example:**
 
-The ‘Submit’ button represents the main action in this button group.
-
 <img
   srcSet={buttonModalSet}
-  class="sprk-u-Measure sprk-u-pam sprk-u-pbh sprk-u-Width-100"
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbm sprk-u-Width-100"
   src={buttonModal}
   alt="A primary button is on the right and represents the main action"
 />
 
+In this example, the "Submit" button represents the main action in this button group.
+
 **Exception:**
-for specific situations where users can choose between two journeys, two Primary (Filled) buttons may exist side by side.
+
+- For specific situations where users can choose between two journeys, two Primary (Filled) buttons may exist side by side.
 
 <img
   srcSet={primaryButtonExceptionSet}
@@ -122,6 +125,8 @@ the screen. Outlined buttons have a medium visual weight and emphasis.
   titleAttr="Secondary Button Example"
 />
 
+#### Usage
+
 - There can be more than one on a screen.
 - Use for alternative actions that do not navigate the user to the next step in a process.
 
@@ -140,6 +145,8 @@ have the lowest visual weight.
   titleAttr="Tertiary Button Example"
 />
 
+#### Usage
+
 - For independent or less important actions.
 - Use for sub-tasks where a Primary (Filled) button is the main action.
 - In a button group, use Tertiary buttons for actions with the least visual emphasis that do not require the user's attention.
@@ -148,14 +155,16 @@ have the lowest visual weight.
 
 <img
   srcSet={buttonFormSet}
-  class="sprk-u-Measure sprk-u-pam sprk-u-pbh sprk-u-Width-100"
+  class="sprk-u-Measure sprk-u-pam sprk-u-pbm sprk-u-Width-100"
   src={buttonForm}
   alt="The back and cancel button represent least important actions in the button group"
 />
 
+In a this example, the "Back" and "Cancel" buttons represent the least important actions in the button group.
+
 <SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
 
-### Full Width Buttons
+### Full Width Button
 
 Use full width buttons in containers that take up 1/3 of the grid or
 smaller, like mobile screens.
@@ -167,6 +176,8 @@ smaller, like mobile screens.
   hasHTML
   titleAttr="Full Width at Smaller Viewports Button Example"
 />
+
+#### Usage
 
 - Button takes up the full width of it's container.
 - On mobile screens, buttons can be stacked.
@@ -185,7 +196,13 @@ smaller, like mobile screens.
 
 ## States
 
-#### Disabled - Primary
+### Disabled
+
+- [Disabled Primary](#disabled-primary)
+- [Disabled Secondary](#disabled-secondary)
+- [Disabled Tertiary](#disabled-tertiary)
+
+#### Disabled Primary
 
 <ComponentPreview
   componentName="button--disabled"
@@ -195,7 +212,7 @@ smaller, like mobile screens.
   titleAttr="Disabled Button Example"
 />
 
-#### Disabled - Secondary
+#### Disabled Secondary
 
 <ComponentPreview
   componentName="button--disabled-secondary"
@@ -205,7 +222,7 @@ smaller, like mobile screens.
   titleAttr="Disabled Secondary Button Example"
 />
 
-#### Disabled - Tertiary
+#### Disabled Tertiary
 
 <ComponentPreview
   componentName="button--disabled-tertiary"
@@ -215,11 +232,17 @@ smaller, like mobile screens.
   titleAttr="Disabled Tertiary Button Example"
 />
 
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
+
 ### Spinning
 
 Use when data is being saved or submitted. The spinning indicator will replace the Button text.
 
-#### Spinning - Primary
+- [Spinning Primary](#spinning-primary)
+- [Spinning Secondary](#spinning-secondary)
+- [Spinning Tertiary](#spinning-tertiary)
+
+#### Spinning Primary
 
 <ComponentPreview
   componentName="button--spinning"
@@ -229,7 +252,9 @@ Use when data is being saved or submitted. The spinning indicator will replace t
   titleAttr="Spinning Primary Button Example"
 />
 
-#### Spinning - Secondary
+<SprkDivider element="span" additionalClasses="sprk-u-Measure"></SprkDivider>
+
+#### Spinning Secondary
 
 <ComponentPreview
   componentName="button--spinning-secondary"
@@ -239,7 +264,7 @@ Use when data is being saved or submitted. The spinning indicator will replace t
   titleAttr="Spinning Secondary Button Example"
 />
 
-#### Spinning - Tertiary
+#### Spinning Tertiary
 
 <ComponentPreview
   componentName="button--spinning-tertiary"
