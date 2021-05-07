@@ -179,13 +179,17 @@ export class SprkAutocompleteComponent
    * @param listItemElement The element to highlight.
    */
   highlightListItem(listItemElement): void {
-    listItemElement.isHighlighted = true;
+    if (listItemElement) {
+      listItemElement.isHighlighted = true;
+    }
 
-    this.renderer.setAttribute(
-      this.input.ref.nativeElement,
-      'aria-activedescendant',
-      listItemElement.ref.nativeElement.id,
-    );
+    if (this.input) {
+      this.renderer.setAttribute(
+        this.input.ref.nativeElement,
+        'aria-activedescendant',
+        listItemElement.ref.nativeElement.id,
+      );
+    }
   }
 
   /**
@@ -211,18 +215,20 @@ export class SprkAutocompleteComponent
         'sprk-c-Autocomplete__results--hidden',
       );
 
-      // Set aria-expanded on the input
-      this.renderer.setAttribute(
-        this.input.ref.nativeElement.parentNode,
-        'aria-expanded',
-        'false',
-      );
+      if (this.input) {
+        // Set aria-expanded on the input
+        this.renderer.setAttribute(
+          this.input.ref.nativeElement.parentNode,
+          'aria-expanded',
+          'false',
+        );
 
-      // Remove aria-activedescendant from the input
-      this.renderer.removeAttribute(
-        this.input.ref.nativeElement,
-        'aria-activedescendant',
-      );
+        // Remove aria-activedescendant from the input
+        this.renderer.removeAttribute(
+          this.input.ref.nativeElement,
+          'aria-activedescendant',
+        );
+      }
 
       // remove aria-selected and highlight class from all list items
       this.removeAllHighlights();
@@ -299,14 +305,16 @@ export class SprkAutocompleteComponent
   calculateResultsWidth() {
     const currentInputWidth = this.input.ref.nativeElement.offsetWidth;
 
-    this.renderer.setAttribute(
-      this.results.nativeElement,
-      'style',
-      'max-width:' + currentInputWidth + 'px',
-    );
+    if (this.results) {
+      this.renderer.setAttribute(
+        this.results.nativeElement,
+        'style',
+        'max-width:' + currentInputWidth + 'px',
+      );
+    }
   }
   /** @ignore */
-  isUpPressed = (e) => e.key === 'ArrowRight' || e.keyCode === 38;
+  isUpPressed = (e) => e.key === 'ArrowUp' || e.keyCode === 38;
   /** @ignore */
   isDownPressed = (e) => e.key === 'ArrowDown' || e.keyCode === 40;
   /** @ignore */
