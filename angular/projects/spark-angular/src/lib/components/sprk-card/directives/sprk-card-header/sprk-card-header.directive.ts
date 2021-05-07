@@ -16,7 +16,7 @@ export class SprkCardHeaderDirective {
   @Input()
   idString: string;
 
-  @HostBinding('class.sprk-c-Card__header') true;
+  @HostBinding('class.sprk-c-Card__header') cardHeaderClass = true;
 
   /**
    * @ignore

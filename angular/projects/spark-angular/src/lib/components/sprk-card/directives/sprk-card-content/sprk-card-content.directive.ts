@@ -16,7 +16,7 @@ export class SprkCardContentDirective {
   @Input()
   idString: string;
 
-  @HostBinding('class.sprk-c-Card__content') true;
+  @HostBinding('class.sprk-c-Card__content') cardContentClass = true;
 
   /**
    * @ignore

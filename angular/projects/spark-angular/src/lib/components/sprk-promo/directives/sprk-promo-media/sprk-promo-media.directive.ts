@@ -23,7 +23,7 @@ export class SprkPromoMediaDirective {
   @Input()
   isFlag: string;
 
-  @HostBinding('class.sprk-c-Promo__image') true;
+  @HostBinding('class.sprk-c-Promo__image') promoImageClass = true;
 
   /**
    * @ignore

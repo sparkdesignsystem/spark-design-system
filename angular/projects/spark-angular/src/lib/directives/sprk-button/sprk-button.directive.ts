@@ -51,7 +51,7 @@ export class SprkButtonDirective implements OnInit, OnChanges, AfterViewInit {
   @Input() variant: 'primary' | 'secondary' | 'tertiary' = 'primary';
 
   // Always set the button class on the element
-  @HostBinding('class.sprk-c-Button') true;
+  @HostBinding('class.sprk-c-Button') buttonClass = true;
 
   /**
    * The value supplied will be assigned
