@@ -290,6 +290,7 @@
 // that contains the Masthead Accordion
 // Starts below the main content (logo branding, menu)
 .sprk-c-Masthead__narrow-nav,
+.sprk-c-Masthead__collapsible-nav,
 .sprk-c-MastheadMask {
   background-color: $sprk-white;
   height: 100%;
@@ -316,6 +317,10 @@
     // Hide narrow nav on larger views
     display: none;
   }
+}
+
+.sprk-c-Masthead__collapsible-nav--is-collapsed {
+  display: none;
 }
 
 .sprk-c-MastheadMask {
