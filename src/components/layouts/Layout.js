@@ -80,12 +80,12 @@ const Layout = ({ children, initialContext, hasSideBar, location }) => {
             <p className="sprk-u-Color--white">
               Designs launching
               <span className="sprk-u-FontWeight--bold sprk-u-mas">before</span>
-              July 14, 2021, please reference
+              July 31, 2021, please reference
               <a
                 href="https://v13--spark-design-system.netlify.app/"
                 className="docs-c-Banner--link sprk-u-mls"
               >
-                version 13 of Spark
+                this previous version of Spark
               </a>
               . Questions? Please contact your Product Owner or Experience
               Director.
