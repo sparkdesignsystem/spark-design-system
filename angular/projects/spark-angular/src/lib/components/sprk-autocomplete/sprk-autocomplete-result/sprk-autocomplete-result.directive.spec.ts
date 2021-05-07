@@ -42,10 +42,6 @@ describe('Spark Autocomplete Result Directive', () => {
     );
   });
 
-  it('should add the correct role', () => {
-    expect(element.getAttribute('role')).toEqual('option');
-  });
-
   it('should add classes if additionalClasses has a value', () => {
     expect(element.classList.contains('testClass')).toEqual(true);
   });
