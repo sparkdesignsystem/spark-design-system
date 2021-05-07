@@ -1,20 +1,13 @@
-import {
-  Directive,
-  Input,
-  HostBinding,
-  OnInit,
-  Renderer2,
-  ElementRef,
-} from '@angular/core';
+import { Directive, Input, HostBinding, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[sprkMastheadNavItem]',
 })
-export class SprkMastheadNavItemDirective implements OnInit {
+export class SprkMastheadNavItemDirective {
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef, private renderer: Renderer2) {}
+  constructor(public ref: ElementRef) {}
 
   /**
    * The value supplied will be assigned to the `data-id` attribute on the
@@ -25,18 +18,5 @@ export class SprkMastheadNavItemDirective implements OnInit {
   @Input()
   idString: string;
 
-  @HostBinding('class.sprk-c-Masthead__nav-item') true: string;
-
-  /**
-   * We apply the Stack class centerthis way instead of using
-   * HostBinding because we want it to be able to be changed
-   * if needed ex. the responsive suffix. Using HostBinding
-   * would make it so the class cannot be removed.
-   */
-  ngOnInit(): void {
-    this.renderer.addClass(
-      this.ref.nativeElement,
-      'sprk-o-Stack__item--center-column@xxs',
-    );
-  }
+  @HostBinding('class.sprk-c-Masthead__nav-item') mastheadNavItemClass = true;
 }

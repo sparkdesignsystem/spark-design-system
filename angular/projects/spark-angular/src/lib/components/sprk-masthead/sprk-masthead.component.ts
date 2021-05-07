@@ -171,7 +171,6 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   /**
-   * @ignore
    * Handles when viewport size changes to
    * large while narrow nav is hidden.
    */
@@ -186,7 +185,7 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   /**
-   * If there is a collapsbile nav and it has an ID
+   * If there is a collapsbile nav and it has a pre-existing ID
    * then get the value else get a
    * custom ID from the uniqueId method.
    */
@@ -200,14 +199,13 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   /**
-   * @ignore
+   * If the viewport goes from small to large
+   * then make sure to show the Masthead.
    */
   updateLayoutState() {
     if (this.isNarrowViewport !== this.isNarrowViewportOnResize) {
       this.isNarrowViewport = this.isNarrowViewportOnResize;
 
-      // If the viewport is not narrow on
-      // resize update, show the Masthead.
       if (!this.isNarrowViewport) {
         this.isMastheadHidden = false;
       }
@@ -225,7 +223,6 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   /**
-   * @ignore
    * Takes in a selector and checks the document for that element.
    * If found, it checks the computed styles for display and visibility and returns
    * wheter or the element is shown on the page.
@@ -248,7 +245,7 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   /**
-   * @ignore
+   * @returns 'up' || 'down'
    * This returns whether or not
    * there was an up or down scrolling
    * action.
@@ -267,7 +264,6 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   /**
-   * @ignore
    * This gets the direction of the scroll that occurred last
    * and updates the `isMastheadHidden` tracker value. If the user
    * scrolled down, we update `isMastheadHidden` to `true` (hide the Masthead).
@@ -311,8 +307,7 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   /**
-   * @ignore
-   * When the button for the collapsible nav
+   *  When the button for the collapsible nav
    * is clicked this will check the value of
    * the isCollapsibleNavOpen boolen tracker
    * to determine when to open or close
@@ -330,7 +325,6 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   /**
-   * @ignore
    * Adds the correct styles to the body and HTML elements
    * in order for the collapsible nav to be open. This also removes
    * the display none class from the collapsible nav to show it and updates
@@ -355,7 +349,6 @@ export class SprkMastheadComponent implements AfterContentInit {
   }
 
   /**
-   * @ignore
    * Removes the styles that were added to
    * the body and HTML elements when the nav was open.
    * This also adds the display none class

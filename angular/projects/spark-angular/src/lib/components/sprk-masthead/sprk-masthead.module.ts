@@ -19,12 +19,14 @@ import { SprkMastheadNavCollapsibleModule } from './directives/sprk-masthead-nav
 import { SprkMastheadNavCollapsibleButtonModule } from './components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.module';
 import { SprkMastheadNavItemsModule } from './directives/sprk-masthead-nav-items/sprk-masthead-nav-items.module';
 import { SprkMastheadNavItemModule } from './directives/sprk-masthead-nav-item/sprk-masthead-nav-item.module';
+import { SprkMastheadLinkModule } from './directives/sprk-masthead-link/sprk-masthead-link.module';
 
 @NgModule({
   imports: [
     CommonModule,
     SprkIconModule,
     RouterModule,
+    SprkMastheadLinkModule,
     SprkMastheadAccordionModule,
     SprkMastheadAccordionItemModule,
     SprkMastheadSelectorModule,
@@ -62,6 +64,7 @@ import { SprkMastheadNavItemModule } from './directives/sprk-masthead-nav-item/s
     SprkMastheadContentModule,
     SprkMastheadBrandingModule,
     SprkMastheadNavItemModule,
+    SprkMastheadLinkModule,
   ],
 })
 export class SprkMastheadModule {}

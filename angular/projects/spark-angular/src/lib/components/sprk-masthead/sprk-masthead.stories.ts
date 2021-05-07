@@ -366,8 +366,8 @@ export const defaultStory = () => ({
         </a>
       </div>
 
-      <div sprkMastheadNavItem sprkStackItem>
-        <a sprkLink variant="simple" class="sprk-c-Masthead__link" href="#nogo">
+      <div sprkMastheadNavItem sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
+        <a sprkMastheadLink href="#nogo">
           Sign In
         </a>
       </div>
@@ -395,9 +395,7 @@ export const defaultStory = () => ({
         >
           <li>
             <a
-              sprkLink
-              variant="simple"
-              class="sprk-c-Masthead__link"
+              sprkMastheadLink
               href="#nogo"
             >
               Item 1
@@ -406,9 +404,7 @@ export const defaultStory = () => ({
 
           <li>
             <a
-              sprkLink
-              variant="simple"
-              class="sprk-c-Masthead__link"
+              sprkMastheadLink
               href="#nogo"
             >
               Item 2
@@ -426,9 +422,7 @@ export const defaultStory = () => ({
         >
           <li>
             <a
-              sprkLink
-              variant="simple"
-              class="sprk-c-Masthead__link"
+              sprkMastheadLink
               href="tel:555-555-5555"
             >
              (555) 555-5555
@@ -437,9 +431,7 @@ export const defaultStory = () => ({
 
           <li>
             <a
-              sprkLink
-              variant="simple"
-              class="sprk-c-Masthead__link"
+              sprkMastheadLink
               href="#nogo"
             >
               Talk To Us
@@ -617,8 +609,8 @@ export const extended = () => ({
         </a>
       </div>
 
-      <div sprkMastheadNavItem sprkStackItem>
-        <a sprkLink variant="simple" class="sprk-c-Masthead__link" href="#nogo">
+      <div sprkMastheadNavItem sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
+        <a sprkMastheadLink href="#nogo">
           Sign In
         </a>
       </div>
@@ -661,9 +653,7 @@ export const extended = () => ({
         >
           <li>
             <a
-              sprkLink
-              variant="simple"
-              class="sprk-c-Masthead__link"
+              sprkMastheadLink
               href="#nogo"
             >
               Talk To Us
@@ -698,10 +688,9 @@ export const extended = () => ({
               class="sprk-c-Masthead__big-nav-item"
             >
               <a
-                sprkLink
-                variant="simple"
-                analyticsString="cats"
-                class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-1"
                 href="#nogo"
               >
                 Item One
@@ -728,10 +717,9 @@ export const extended = () => ({
               class="sprk-c-Masthead__big-nav-item"
             >
               <a
-                sprkLink
-                variant="simple"
-                analyticsString="cats"
-                class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-3"
                 href="#nogo"
               >
                 Item Three
@@ -758,10 +746,9 @@ export const extended = () => ({
               class="sprk-c-Masthead__big-nav-item"
             >
               <a
-                sprkLink
-                variant="simple"
-                analyticsString="cats"
-                class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-5"
                 href="#nogo"
               >
                 Item Five
@@ -1135,11 +1122,9 @@ export const withOutCollapsibleNav = () => ({
         </a>
       </div>
 
-      <div sprkMastheadNavItem sprkStackItem>
+      <div sprkMastheadNavItem sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
         <a
-          sprkLink
-          variant="simple"
-          class="sprk-c-Masthead__link"
+          sprkMastheadLink
           href="#nogo"
         >
           Talk To Us
@@ -1157,9 +1142,7 @@ export const withOutCollapsibleNav = () => ({
         >
           <li>
             <a
-              sprkLink
-              variant="simple"
-              class="sprk-c-Masthead__link"
+              sprkMastheadLink
               href="#nogo"
             >
               Talk To Us

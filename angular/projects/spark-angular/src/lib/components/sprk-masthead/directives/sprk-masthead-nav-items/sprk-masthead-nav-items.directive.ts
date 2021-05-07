@@ -1,10 +1,4 @@
-import {
-  Directive,
-  Input,
-  HostBinding,
-  ElementRef,
-  Renderer2,
-} from '@angular/core';
+import { Directive, Input, HostBinding, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[sprkMastheadNavItems]',
@@ -13,7 +7,7 @@ export class SprkMastheadNavItemsDirective {
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef, private renderer: Renderer2) {}
+  constructor(public ref: ElementRef) {}
 
   /**
    * The value supplied will be assigned to the `data-id` attribute on the
@@ -24,5 +18,6 @@ export class SprkMastheadNavItemsDirective {
   @Input()
   idString: string;
 
-  @HostBinding('class.sprk-c-Masthead__little-nav') true;
+  @HostBinding('class.sprk-c-Masthead__little-nav')
+  mastheadNavItemsClass = true;
 }

@@ -11,11 +11,12 @@ import { SprkMastheadNavCollapsibleDirective } from './directives/sprk-masthead-
 import { SprkMastheadContentDirective } from './directives/sprk-masthead-content/sprk-masthead-content.directive';
 import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-branding/sprk-masthead-branding.directive';
 import { SprkMastheadNavItemsDirective } from './directives/sprk-masthead-nav-items/sprk-masthead-nav-items.directive';
+import { SprkMastheadNavItemDirective } from './directives/sprk-masthead-nav-item/sprk-masthead-nav-item.directive';
 import { SprkMastheadNavCollapsibleButtonComponent } from './components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.component';
 import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
-
+import { SprkMastheadLinkDirective } from './directives/sprk-masthead-link/sprk-masthead-link.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
@@ -34,11 +35,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
             width="365.4"
             height="48"
             viewBox="0 0 365.4 101.35"
-          ></svg>
+          >
+            svg
+          </svg>
         </a>
       </div>
 
-      <div sprkMastheadNavItem sprkStackItem>
+      <div
+        sprkMastheadNavItem
+        sprkStackItem
+        class="sprk-o-Stack__item--center-column@xxs"
+      >
         <a sprkLink variant="simple" class="sprk-c-Masthead__link" href="#nogo">
           Sign In
         </a>
@@ -475,6 +482,8 @@ describe('SprkMastheadComponent', () => {
         SprkStackItemDirective,
         SprkMastheadContentDirective,
         SprkMastheadNavItemsDirective,
+        SprkMastheadNavItemDirective,
+        SprkMastheadLinkDirective,
         SprkMastheadNavCollapsibleDirective,
         SprkMastheadNavCollapsibleButtonComponent,
         SprkMastheadBrandingDirective,

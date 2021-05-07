@@ -1,10 +1,4 @@
-import {
-  Directive,
-  Input,
-  HostBinding,
-  Renderer2,
-  ElementRef,
-} from '@angular/core';
+import { Directive, Input, HostBinding, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[sprkMastheadBranding]',
@@ -13,7 +7,7 @@ export class SprkMastheadBrandingDirective {
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef, private renderer: Renderer2) {}
+  constructor(public ref: ElementRef) {}
 
   /**
    * The value supplied will be assigned to the `data-id` attribute on the
@@ -24,5 +18,5 @@ export class SprkMastheadBrandingDirective {
   @Input()
   idString: string;
 
-  @HostBinding('class.sprk-c-Masthead__branding') true: string;
+  @HostBinding('class.sprk-c-Masthead__branding') mastheadBrandingClass = true;
 }
