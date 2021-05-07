@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import SprkMasthead from './SprkMasthead';
 import SprkButton from '../buttons/SprkButton';
@@ -175,7 +176,7 @@ const utilityItems = [
     element="a"
     href="#nogo"
     variant="secondary"
-    additionalClasses="sprk-u-Right--zero sprk-u-mrm sprk-c-Button--compact"
+    additionalClasses="sprk-u-Right--zero sprk-c-Button--compact"
   >
     Sign In
   </SprkButton>,

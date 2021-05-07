@@ -545,7 +545,7 @@ public class SparkDesignTokens {
     public static let sprkMastheadBreakpoint = CGFloat(864.00)
     public static let sprkMastheadColumnWidth = CGFloat(1424.00)
     public static let sprkMastheadContentItemPaddingBottom = CGFloat(8.00)
-    public static let sprkMastheadContentItemPaddingBottomWide = CGFloat(16.00)
+    public static let sprkMastheadContentItemPaddingBottomWide = CGFloat(8.00)
     public static let sprkMastheadContentItemPaddingLeft = CGFloat(8.00)
     public static let sprkMastheadContentItemPaddingLeftWide = CGFloat(16.00)
     public static let sprkMastheadContentItemPaddingRight = CGFloat(8.00)

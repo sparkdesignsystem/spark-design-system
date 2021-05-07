@@ -16,7 +16,7 @@ export class SprkPromoContentDirective {
   @Input()
   idString: string;
 
-  @HostBinding('class.sprk-c-Promo__content') true;
+  @HostBinding('class.sprk-c-Promo__content') promoContentClass = true;
 
   /**
    * @ignore

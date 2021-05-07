@@ -16,5 +16,5 @@ export class SprkPromoHeadingDirective {
   @Input()
   idString: string;
 
-  @HostBinding('class.sprk-c-Promo__title') true;
+  @HostBinding('class.sprk-c-Promo__title') promoTitleClass = true;
 }
