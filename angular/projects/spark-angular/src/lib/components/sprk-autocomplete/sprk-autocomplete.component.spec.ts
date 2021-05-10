@@ -299,7 +299,7 @@ describe('SprkAutocompleteComponent', () => {
     expect(component.retreatHighlightedItem).toBeCalledTimes(0);
   });
 
-  it('should highlight the last item when Up is pressed and isOpen', () => {
+  it('should highlight the last item when retreatHighlightedItem is called and isOpen', () => {
     component.showResults();
 
     fixture.detectChanges();
@@ -312,6 +312,30 @@ describe('SprkAutocompleteComponent', () => {
 
     fixture.detectChanges();
     expect(component.resultItems.toArray()[3].isHighlighted).toEqual(true);
+  });
+
+  it('should highlight the third item when retreatHighlightedItem is called and isOpen and fourth item is highlighted', () => {
+    component.showResults();
+
+    fixture.detectChanges();
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowUp',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.resultItems.toArray()[3].isHighlighted).toEqual(true);
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowUp',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.resultItems.toArray()[2].isHighlighted).toEqual(true);
   });
 
   it('should call advanceHighlightedItem when Down is pressed and isOpen', () => {
@@ -358,6 +382,54 @@ describe('SprkAutocompleteComponent', () => {
     component.showResults();
 
     fixture.detectChanges();
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowDown',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.resultItems.toArray()[0].isHighlighted).toEqual(true);
+  });
+
+  it('should highlight the second item when Down is pressed and isOpen and first item is selected', () => {
+    component.showResults();
+
+    fixture.detectChanges();
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowDown',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.resultItems.toArray()[0].isHighlighted).toEqual(true);
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowDown',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.resultItems.toArray()[1].isHighlighted).toEqual(true);
+  });
+
+  it('should highlight the first item when Down is pressed and isOpen and last item is highlighted', () => {
+    component.showResults();
+
+    fixture.detectChanges();
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowUp',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.resultItems.toArray()[3].isHighlighted).toEqual(true);
 
     document.dispatchEvent(
       new KeyboardEvent('keydown', {
