@@ -18,5 +18,15 @@ export class SprkMastheadNavBarDirective {
   @Input()
   idString: string;
 
+  /**
+   * The value supplied will be assigned to the
+   * `data-analytics` attribute on the element.
+   * Intended for an outside
+   * library to capture data.
+   */
+  @HostBinding('attr.data-analytics')
+  @Input()
+  analyticsString: string;
+
   @HostBinding('class.sprk-c-Masthead__big-nav') mastheadNavBarClass = true;
 }

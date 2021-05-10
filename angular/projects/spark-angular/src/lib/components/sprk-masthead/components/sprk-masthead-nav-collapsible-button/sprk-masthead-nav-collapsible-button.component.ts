@@ -14,12 +14,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     >
       <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
       <svg
-        [ngClass]="{
-          'sprk-c-Icon': true,
-          'sprk-c-Icon--xl': true,
-          'sprk-c-Menu__icon': true,
-          'sprk-c-Menu__icon--open': isOpen
-        }"
+        [ngClass]="getClassesIcon()"
         aria-hidden="true"
         focusable="false"
         viewBox="0 0 64 64"
@@ -98,17 +93,25 @@ export class SprkMastheadNavCollapsibleButtonComponent {
   additionalClasses: string;
 
   /**
-   * When the button is closed this event will be emitted.
+   * Expects a space separated string
+   * of classes to be added to the
+   * icon inside the button.
+   */
+  @Input()
+  iconAdditionalClasses: string;
+
+  /**
+   * When the button is clicked this event will be emitted.
    */
   @Output()
-  sprkCollapsibleNavButtonClicked = new EventEmitter<any>();
+  collapsibleNavButtonEvent = new EventEmitter<any>();
 
   /**
    * Emits an event when the button is clicked.
    */
-  toggleCollapsibleNav(event: { preventDefault: () => void }): void {
+  toggleCollapsibleNav(event): void {
     event.preventDefault();
-    this.sprkCollapsibleNavButtonClicked.emit();
+    this.collapsibleNavButtonEvent.emit();
   }
 
   /**
@@ -124,5 +127,28 @@ export class SprkMastheadNavCollapsibleButtonComponent {
     }
 
     return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getClassesIcon(): string {
+    const classArr: string[] = [
+      'sprk-c-Icon',
+      'sprk-c-Icon--xl',
+      'sprk-c-Menu__icon',
+    ];
+
+    if (this.iconAdditionalClasses) {
+      this.iconAdditionalClasses.split(' ').forEach((className) => {
+        classArr.push(className);
+      });
+    }
+
+    if (this.isOpen) {
+      classArr.push('sprk-c-Menu__icon--is-open');
+    }
+
+    return classArr.join(' ');
   }
 }

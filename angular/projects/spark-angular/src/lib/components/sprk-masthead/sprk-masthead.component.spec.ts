@@ -36,7 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
             height="48"
             viewBox="0 0 365.4 101.35"
           >
-            svg
+            Test
           </svg>
         </a>
       </div>
@@ -46,7 +46,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         sprkStackItem
         class="sprk-o-Stack__item--center-column@xxs"
       >
-        <a sprkLink variant="simple" class="sprk-c-Masthead__link" href="#nogo">
+        <a sprkMastheadLink href="#nogo">
           Sign In
         </a>
       </div>
@@ -95,12 +95,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
           "
         >
           <li>
-            <a
-              sprkLink
-              variant="simple"
-              class="sprk-c-Masthead__link"
-              href="#nogo"
-            >
+            <a sprkMastheadLink href="#nogo">
               Talk To Us
             </a>
           </li>
@@ -127,10 +122,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
           >
             <li sprkStackItem class="sprk-c-Masthead__big-nav-item">
               <a
-                sprkLink
-                variant="simple"
-                analyticsString="cats"
-                class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-1"
                 href="#nogo"
               >
                 Item One
@@ -154,10 +148,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
             <li sprkStackItem class="sprk-c-Masthead__big-nav-item">
               <a
-                sprkLink
-                variant="simple"
-                analyticsString="cats"
-                class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-3"
                 href="#nogo"
               >
                 Item Three
@@ -181,10 +174,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
             <li sprkStackItem class="sprk-c-Masthead__big-nav-item">
               <a
-                sprkLink
-                variant="simple"
-                analyticsString="cats"
-                class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-5"
                 href="#nogo"
               >
                 Item Five
@@ -196,7 +188,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
       <nav
         sprkMastheadNavCollapsible
-        class="sprk-u-Display--none"
         role="navigation"
         idString="collapsible-nav"
       >

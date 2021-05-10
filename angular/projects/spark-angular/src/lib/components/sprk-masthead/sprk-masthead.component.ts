@@ -280,7 +280,7 @@ export class SprkMastheadComponent implements AfterContentInit {
    * nav is open. If it is open, then it will close it. If it
    * is closed then it will open it.
    */
-  toggleCollapsibleNav(): void {
+  toggleCollapsibleNav(event): void {
     if (!this.collapsibleNavDirective) {
       return;
     }
