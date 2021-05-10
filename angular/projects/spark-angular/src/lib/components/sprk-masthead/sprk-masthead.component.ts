@@ -8,7 +8,7 @@ import {
   ElementRef,
 } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
-import { uniqueId, throttle } from 'lodash';
+import { throttle } from 'lodash';
 import { SprkMastheadNavCollapsibleDirective } from './directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
 import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-branding/sprk-masthead-branding.directive';
 

@@ -507,10 +507,6 @@ describe('SprkMastheadComponent', () => {
       '.sprk-c-Masthead__narrow-nav',
     );
     collapsibleNavButton = mastheadElement.querySelector('.sprk-c-Menu');
-    console.log(
-      mastheadElement.parentElement.innerHTML,
-      'the nav button catssssss',
-    );
   });
 
   afterEach(() => {
