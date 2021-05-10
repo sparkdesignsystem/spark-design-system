@@ -179,6 +179,7 @@ export class SprkAutocompleteComponent
    * @param listItemElement The element to highlight.
    */
   highlightListItem(listItemElement): void {
+    // console.log('highlighting item with index: ' + this.highlightedIndex)
     if (listItemElement) {
       listItemElement.isHighlighted = true;
     }
@@ -209,6 +210,7 @@ export class SprkAutocompleteComponent
    */
   hideResults(): void {
     if (this.results) {
+      // console.log('hiding results and results exists')
       // Remove the hidden style
       this.renderer.addClass(
         this.results.nativeElement,
@@ -234,6 +236,7 @@ export class SprkAutocompleteComponent
       this.removeAllHighlights();
 
       this.closedEvent.emit();
+      this.isOpen = false;
     }
   }
 
@@ -246,18 +249,19 @@ export class SprkAutocompleteComponent
         this.results.nativeElement,
         'sprk-c-Autocomplete__results--hidden',
       );
-    }
 
-    if (this.input) {
-      // Set aria-expanded on the input
-      this.renderer.setAttribute(
-        this.input.ref.nativeElement.parentNode,
-        'aria-expanded',
-        'true',
-      );
-    }
+      if (this.input) {
+        // Set aria-expanded on the input
+        this.renderer.setAttribute(
+          this.input.ref.nativeElement.parentNode,
+          'aria-expanded',
+          'true',
+        );
+      }
 
-    this.openedEvent.emit();
+      this.openedEvent.emit();
+      this.isOpen = true;
+    }
   }
 
   /**
@@ -303,14 +307,16 @@ export class SprkAutocompleteComponent
    * width of the input element.
    */
   calculateResultsWidth() {
-    const currentInputWidth = this.input.ref.nativeElement.offsetWidth;
+    if (this.input) {
+      const currentInputWidth = this.input.ref.nativeElement.offsetWidth;
 
-    if (this.results) {
-      this.renderer.setAttribute(
-        this.results.nativeElement,
-        'style',
-        'max-width:' + currentInputWidth + 'px',
-      );
+      if (this.results) {
+        this.renderer.setAttribute(
+          this.results.nativeElement,
+          'style',
+          'max-width:' + currentInputWidth + 'px',
+        );
+      }
     }
   }
   /** @ignore */

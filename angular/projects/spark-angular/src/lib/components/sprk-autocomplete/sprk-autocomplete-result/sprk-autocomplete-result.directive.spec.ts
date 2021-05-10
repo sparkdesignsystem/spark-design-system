@@ -13,10 +13,6 @@ import { By } from '@angular/platform-browser';
         idString="resultId1"
         additionalClasses="testClass"
       ></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
     </ul>
   `,
 })
@@ -98,6 +94,7 @@ describe('Spark Autocomplete Result Directive', () => {
     ).toEqual(false);
   });
 
+  // TODO
   it('should scroll the parentNode when setting isHighlighted if necessary', () => {
     // set the scroll position so the current item is out of view
     // element.getBoundingClientRect = () => {
