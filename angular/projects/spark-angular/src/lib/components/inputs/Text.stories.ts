@@ -11,7 +11,6 @@ import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-labe
 import { SprkHugeInputContainerModule } from './sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkHugeInputContainerComponent } from './sprk-huge-input-container/sprk-huge-input-container.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { SprkTooltipModule } from '../../components/sprk-tooltip/sprk-tooltip.module';
 
 export default {
   title: 'Components/Input/Text',
@@ -21,7 +20,6 @@ export default {
     SprkLabelDirective,
     SprkHugeInputContainerComponent,
     SprkFieldErrorDirective,
-    SprkTooltipModule,
   },
   decorators: [
     storyWrapper(
@@ -54,7 +52,6 @@ const modules = {
     SprkIconModule,
     SprkHugeInputContainerModule,
     SprkFieldErrorModule,
-    SprkTooltipModule,
   ],
 };
 
@@ -64,12 +61,6 @@ export const textInput = () => ({
     <sprk-input-container>
       <label for="text" sprkLabel>
         Text Input Label
-        <sprk-tooltip
-          iconAdditionalClasses="sprk-c-Icon--filled"
-        >
-          Use Tooltips to provide info that is not vital to completing the task.
-          Keep the text short and stick to what’s helpful and relevant.
-        </sprk-tooltip>
       </label>
       <input
         id="text"
