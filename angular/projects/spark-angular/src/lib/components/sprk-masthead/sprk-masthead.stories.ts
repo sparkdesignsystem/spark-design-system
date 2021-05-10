@@ -15,11 +15,6 @@ import { SprkMastheadSelectorModule } from './sprk-masthead-selector/sprk-masthe
 export default {
   title: 'Components/Masthead',
   component: SprkMastheadComponent,
-  decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
-    ),
-  ],
   parameters: {
     subcomponents: {
       SprkMastheadAccordionComponent,
