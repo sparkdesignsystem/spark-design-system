@@ -27,20 +27,21 @@ class SprkTextareaContainer extends Component {
      * and errorContainerID.
      */
     React.Children.forEach(children, (child) => {
-      if (child.type.name === SprkTextarea.name) {
+      if (child.type && child.type.name === SprkTextarea.name) {
         id = child.props.id;
         inputAriaDescribedBy = child.props.ariaDescribedBy;
       }
-      if (child.type.name === SprkLabel.name) {
+      if (child.type && child.type.name === SprkLabel.name) {
         labelFor = child.props.htmlFor;
       }
       if (
-        child.type.name === SprkFieldError.name ||
-        child.type.name === SprkErrorContainer.name
+        child.type &&
+        (child.type.name === SprkFieldError.name ||
+          child.type.name === SprkErrorContainer.name)
       ) {
         errorContainerID = child.props.id;
       }
-      if (child.type.name === SprkHelperText.name) {
+      if (child.type && child.type.name === SprkHelperText.name) {
         helperTextID = child.props.id;
       }
     });

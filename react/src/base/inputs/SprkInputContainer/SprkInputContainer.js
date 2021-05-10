@@ -31,16 +31,17 @@ class SprkInputContainer extends Component {
         id = child.props.id;
         inputAriaDescribedBy = child.props.ariaDescribedBy;
       }
-      if (child.type.name === SprkLabel.name) {
+      if (child.type && child.type.name === SprkLabel.name) {
         labelFor = child.props.htmlFor;
       }
       if (
-        child.type.name === SprkFieldError.name ||
-        child.type.name === SprkErrorContainer.name
+        child.type &&
+        (child.type.name === SprkFieldError.name ||
+          child.type.name === SprkErrorContainer.name)
       ) {
         errorContainerID = child.props.id;
       }
-      if (child.type.name === SprkHelperText.name) {
+      if (child.type && child.type.name === SprkHelperText.name) {
         helperTextID = child.props.id;
       }
       // If the child has it's own children and the it's an icon-container,
@@ -55,7 +56,7 @@ class SprkInputContainer extends Component {
             id = grandchild.props.id;
             inputAriaDescribedBy = grandchild.props.ariaDescribedBy;
           }
-          if (grandchild.type.name === SprkLabel.name) {
+          if (grandchild.type && grandchild.type.name === SprkLabel.name) {
             labelFor = grandchild.props.htmlFor;
           }
         });

@@ -24,35 +24,35 @@ class SprkCheckboxGroup extends Component {
      * & fieldset ariaDescribedBy.
      */
     React.Children.forEach(children, (child) => {
-      if (child.type.name === SprkFieldset.name) {
+      if (child.type && child.type.name === SprkFieldset.name) {
         fieldsetAriaDescribedBy = child.props.ariaDescribedBy;
       }
       if (
-        child.type.name === SprkFieldError.name ||
-        child.type.name === SprkErrorContainer.name
+        child.type &&
+        (child.type.name === SprkFieldError.name ||
+          child.type.name === SprkErrorContainer.name)
       ) {
         errorContainerID = child.props.id;
       }
-      if (child.type.name === SprkHelperText.name) {
+      if (child.type && child.type.name === SprkHelperText.name) {
         helperTextID = child.props.id;
       }
       // If the child has it's own children
       // map through them to get values.
       if (child.props && child.props.children) {
         React.Children.forEach(child.props.children, (grandchild) => {
-          if (grandchild.type) {
-            if (grandchild.type.name === SprkFieldset.name) {
-              fieldsetAriaDescribedBy = grandchild.props.ariaDescribedBy;
-            }
-            if (
-              grandchild.type.name === SprkFieldError.name ||
-              grandchild.type.name === SprkErrorContainer.name
-            ) {
-              errorContainerID = grandchild.props.id;
-            }
-            if (grandchild.type.name === SprkHelperText.name) {
-              helperTextID = grandchild.props.id;
-            }
+          if (grandchild.type && grandchild.type.name === SprkFieldset.name) {
+            fieldsetAriaDescribedBy = grandchild.props.ariaDescribedBy;
+          }
+          if (
+            grandchild.type &&
+            (grandchild.type.name === SprkFieldError.name ||
+              grandchild.type.name === SprkErrorContainer.name)
+          ) {
+            errorContainerID = grandchild.props.id;
+          }
+          if (grandchild.type && grandchild.type.name === SprkHelperText.name) {
+            helperTextID = grandchild.props.id;
           }
         });
       }
