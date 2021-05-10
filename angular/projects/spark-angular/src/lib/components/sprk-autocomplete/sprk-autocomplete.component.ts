@@ -87,11 +87,11 @@ export class SprkAutocompleteComponent
       }
     }
 
-    if (this.isUpPressed($event)) {
+    if (this.isUpPressed($event) && this.isOpen) {
       this.retreatHighlightedItem();
     }
 
-    if (this.isDownPressed($event)) {
+    if (this.isDownPressed($event) && this.isOpen) {
       this.advanceHighlightedItem();
     }
 
@@ -179,7 +179,6 @@ export class SprkAutocompleteComponent
    * @param listItemElement The element to highlight.
    */
   highlightListItem(listItemElement): void {
-    // console.log('highlighting item with index: ' + this.highlightedIndex)
     if (listItemElement) {
       listItemElement.isHighlighted = true;
     }
@@ -210,7 +209,6 @@ export class SprkAutocompleteComponent
    */
   hideResults(): void {
     if (this.results) {
-      // console.log('hiding results and results exists')
       // Remove the hidden style
       this.renderer.addClass(
         this.results.nativeElement,

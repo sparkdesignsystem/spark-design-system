@@ -34,6 +34,10 @@ describe('SprkAutocompleteComponent', () => {
   let fixture: ComponentFixture<WrappedAutocompleteComponent>;
   let resultsElement;
   let inputElement;
+  let result1;
+  let result2;
+  let result3;
+  let result4;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -56,6 +60,11 @@ describe('SprkAutocompleteComponent', () => {
 
     resultsElement = fixture.nativeElement.querySelector('ul');
     inputElement = fixture.nativeElement.querySelector('input');
+
+    result1 = fixture.nativeElement.querySelectorAll('li')[0];
+    result2 = fixture.nativeElement.querySelectorAll('li')[1];
+    result3 = fixture.nativeElement.querySelectorAll('li')[2];
+    result4 = fixture.nativeElement.querySelectorAll('li')[3];
 
     fixture.detectChanges();
   });
@@ -228,11 +237,34 @@ describe('SprkAutocompleteComponent', () => {
     expect(component.hideResults).toBeCalledTimes(0);
   });
 
-  it('should call retreatHighlightedItem when Up is pressed', () => {
+  // hiding resets list items correctly
+  it('should remove highlights when calling hideResults()', () => {
+    component.showResults();
+    fixture.detectChanges();
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowUp',
+      }),
+    );
+
+    fixture.detectChanges();
+
+    expect(component.resultItems.toArray()[3].isHighlighted).toEqual(true);
+
+    component.hideResults();
+
+    fixture.detectChanges();
+
+    expect(component.resultItems.toArray()[3].isHighlighted).toEqual(false);
+  });
+
+  it('should call retreatHighlightedItem when Up is pressed and isOpen', () => {
     jest
       .spyOn(component, 'retreatHighlightedItem')
       .mockImplementation(() => {});
 
+    component.showResults();
     fixture.detectChanges();
 
     expect(component.retreatHighlightedItem).toBeCalledTimes(0);
@@ -247,13 +279,47 @@ describe('SprkAutocompleteComponent', () => {
     expect(component.retreatHighlightedItem).toBeCalledTimes(1);
   });
 
-  // TODO test retreatHighlightedItem with actual items
+  it('should not call retreatHighlightedItem when Up is pressed and not open', () => {
+    jest
+      .spyOn(component, 'retreatHighlightedItem')
+      .mockImplementation(() => {});
 
-  it('should call advanceHighlightedItem when Down is pressed', () => {
+    component.hideResults();
+    fixture.detectChanges();
+
+    expect(component.retreatHighlightedItem).toBeCalledTimes(0);
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowUp',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.retreatHighlightedItem).toBeCalledTimes(0);
+  });
+
+  it('should highlight the last item when Up is pressed and isOpen', () => {
+    component.showResults();
+
+    fixture.detectChanges();
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowUp',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.resultItems.toArray()[3].isHighlighted).toEqual(true);
+  });
+
+  it('should call advanceHighlightedItem when Down is pressed and isOpen', () => {
     jest
       .spyOn(component, 'advanceHighlightedItem')
       .mockImplementation(() => {});
 
+    component.showResults();
     fixture.detectChanges();
 
     expect(component.advanceHighlightedItem).toBeCalledTimes(0);
@@ -268,7 +334,40 @@ describe('SprkAutocompleteComponent', () => {
     expect(component.advanceHighlightedItem).toBeCalledTimes(1);
   });
 
-  // TODO test advanceHighlightedItem with actual items
+  it('should not call advanceHighlightedItem when Down is pressed and not open', () => {
+    jest
+      .spyOn(component, 'advanceHighlightedItem')
+      .mockImplementation(() => {});
+
+    component.hideResults();
+    fixture.detectChanges();
+
+    expect(component.advanceHighlightedItem).toBeCalledTimes(0);
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowDown',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.advanceHighlightedItem).toBeCalledTimes(0);
+  });
+
+  it('should highlight the first item when Down is pressed and isOpen', () => {
+    component.showResults();
+
+    fixture.detectChanges();
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowDown',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.resultItems.toArray()[0].isHighlighted).toEqual(true);
+  });
 
   it('should emit itemSelectedEvent when pressing Enter and an item is highlighted', (done) => {
     let called = false;
@@ -336,9 +435,27 @@ describe('SprkAutocompleteComponent', () => {
     // TODO expect maxWidth to have been set
   });
 
-  // arrow keys do activedescendant
-  // hiding resets list items correctly
-  // selectHighlightedListItem should get the correct id and emit it
+  it('should set aria-activedescendant on the input when highlighting an item', () => {
+    component.showResults();
+    expect(
+      component.input.ref.nativeElement.getAttribute('aria-activedescendant'),
+    ).toEqual(null);
+
+    fixture.detectChanges();
+
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'ArrowDown',
+      }),
+    );
+
+    fixture.detectChanges();
+    expect(component.resultItems.toArray()[0].isHighlighted).toEqual(true);
+    expect(
+      component.input.ref.nativeElement.getAttribute('aria-activedescendant'),
+    ).toEqual('item1');
+  });
+
   // init with isOpen=false should render with the right class
   // init with isOpen=true should render with the right class
   // setting itemSelectedEvent should correctly set the click event on the grandchildren
