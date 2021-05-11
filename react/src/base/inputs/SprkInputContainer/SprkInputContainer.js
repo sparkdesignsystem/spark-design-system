@@ -37,7 +37,7 @@ class SprkInputContainer extends Component {
 
     /*
      * Checks each child element and grandchild element to
-     * store the provided `ariaDescribedby` on the input,
+     * store the provided `ariaDescribedby` on the `input`,
      * `id` of the SprkFieldError, SprkErrorContainer,
      * SprkHelperText, and `for` of the SprkLabel in
      * variables for processing.
