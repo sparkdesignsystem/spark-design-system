@@ -87,7 +87,7 @@ class SprkCheckboxGroup extends Component {
             errorContainerID = grandchild.props.id;
           }
           /**
-           * If the child element is a SprkHelperText,
+           * If the grandchild element is a SprkHelperText,
            * then the `id` is stored for later use.
            */
           if (grandchild.type && grandchild.type.name === SprkHelperText.name) {
