@@ -77,15 +77,9 @@ export class SprkAutocompleteComponent
    */
   @HostListener('document:keydown', ['$event'])
   onKeydown($event) {
-    if (
-      $event.key === 'Escape' ||
-      $event.key === 'Esc' ||
-      $event.keyCode === 27
-    ) {
-      if (this.isOpen) {
-        this.isOpen = false;
-        this.hideResults();
-      }
+    if (this.isEscapePressed($event) && this.isOpen) {
+      this.isOpen = false;
+      this.hideResults();
     }
 
     if (this.isUpPressed($event) && this.isOpen) {
@@ -96,12 +90,14 @@ export class SprkAutocompleteComponent
       this.advanceHighlightedItem();
     }
 
-    if (this.isEnterPressed($event)) {
-      // Only select the list item if the list is open
-      // and an item is highlighted
-      if (this.isOpen && this.highlightedIndex !== -1) {
-        this.selectHighlightedListItem();
-      }
+    // Only select the list item if the list is open
+    // and an item is highlighted
+    if (
+      this.isEnterPressed($event) &&
+      this.isOpen &&
+      this.highlightedIndex !== -1
+    ) {
+      this.selectHighlightedListItem();
     }
   }
 
@@ -334,7 +330,8 @@ export class SprkAutocompleteComponent
   /** @ignore */
   isEnterPressed = (e) => e.key === 'Enter' || e.keyCode === 13;
   /** @ignore */
-  isEscapePressed = (e) => e.key === 'Escape' || e.keyCode === 27;
+  isEscapePressed = (e) =>
+    e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27;
 
   /**
    * @ignore

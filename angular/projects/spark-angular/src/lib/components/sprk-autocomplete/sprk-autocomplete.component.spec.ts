@@ -233,7 +233,6 @@ describe('SprkAutocompleteComponent', () => {
     expect(component.hideResults).toBeCalledTimes(0);
   });
 
-  // hiding resets list items correctly
   it('should remove highlights when calling hideResults()', () => {
     component.showResults();
     fixture.detectChanges();
