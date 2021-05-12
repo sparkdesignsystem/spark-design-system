@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
 import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk-autocomplete-result.directive';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import {
   ViewChild,
@@ -13,25 +13,40 @@ import {
 
 @Component({
   selector: `sprk-test`,
-  template: ` <sprk-autocomplete>
-    <div>
-      <input sprkInput />
-    </div>
-    <ul sprkAutocompleteResults>
-      <li sprkAutocompleteResult id="item1"></li>
-      <li sprkAutocompleteResult id="item2"></li>
-      <li sprkAutocompleteResult id="item3"></li>
-      <li sprkAutocompleteResult id="item4"></li>
-    </ul>
-  </sprk-autocomplete>`,
+  template: `
+    <sprk-autocomplete>
+      <div>
+        <input sprkInput />
+      </div>
+      <ul sprkAutocompleteResults>
+        <li sprkAutocompleteResult id="item1"></li>
+        <li sprkAutocompleteResult id="item2"></li>
+        <li sprkAutocompleteResult id="item3"></li>
+        <li sprkAutocompleteResult id="item4"></li>
+      </ul>
+    </sprk-autocomplete>
+  `,
 })
-class WrappedAutocompleteComponent {
-  // isOpen: boolean = false;
-  // @ViewChild(SprkAutocompleteComponent) innerAutocomplete: SprkAutocompleteComponent;
-}
+class WrappedAutocompleteComponent {}
+
+@Component({
+  selector: `aria-test-1`,
+  template: `
+    <sprk-autocomplete>
+      <div>
+        <input sprkInput />
+      </div>
+      <ul sprkAutocompleteResults></ul>
+    </sprk-autocomplete>
+  `,
+})
+class AriaTest1Component {}
+
 describe('SprkAutocompleteComponent', () => {
   let component: SprkAutocompleteComponent;
+  let ariaComponent1: AriaTest1Component;
   let fixture: ComponentFixture<WrappedAutocompleteComponent>;
+  let ariaFixture1: ComponentFixture<AriaTest1Component>;
   let resultsElement;
   let inputElement;
   let result1;
@@ -47,6 +62,7 @@ describe('SprkAutocompleteComponent', () => {
         SprkAutocompleteResultsDirective,
         SprkAutocompleteResultDirective,
         SprkInputDirective,
+        AriaTest1Component,
       ],
     }).compileComponents();
   }));
@@ -67,6 +83,10 @@ describe('SprkAutocompleteComponent', () => {
     result4 = fixture.nativeElement.querySelectorAll('li')[3];
 
     fixture.detectChanges();
+
+    ariaFixture1 = TestBed.createComponent(AriaTest1Component);
+    ariaComponent1 = ariaFixture1.componentInstance;
+    ariaFixture1.detectChanges();
   });
 
   it('should create itself', () => {
@@ -528,6 +548,38 @@ describe('SprkAutocompleteComponent', () => {
     ).toEqual('item1');
   });
 
+  it('should generate aria-controls and id if needed', () => {
+    // maybe 3 (14??) new wrapped components? Could I set those attributes manually and then manually call
+    // generate? Or manually call ngOnInit or whatever?
+    const inputAriaControls = ariaFixture1.nativeElement
+      .querySelector('input')
+      .getAttribute('aria-controls');
+    const listId = ariaFixture1.nativeElement
+      .querySelector('ul')
+      .getAttribute('id');
+
+    expect(inputAriaControls).toBeTruthy();
+    expect(listId).toBeTruthy();
+    expect(inputAriaControls).toEqual(listId);
+  });
+
+  it('should generate aria-controls for existing id if needed', () => {});
+
+  it('should not generate aria-controls and id if not needed', () => {});
+
+  it('should console.warn if aria-controls and id exist and do not match', () => {});
+
+  it('should console.warn if aria-controls exists and id does not', () => {});
+
+  it('should generate aria-owns and id if needed', () => {});
+
+  it('should generate aria-owns for existing id if needed', () => {});
+
+  it('should not generate aria-owns and id if not needed', () => {});
+
+  it('should console.warn if aria-owns and id exist and do not match', () => {});
+
+  it('should console.warn if aria-owns exists and id does not', () => {});
   // init with isOpen=false should render with the right class
   // init with isOpen=true should render with the right class
   // setting itemSelectedEvent should correctly set the click event on the grandchildren

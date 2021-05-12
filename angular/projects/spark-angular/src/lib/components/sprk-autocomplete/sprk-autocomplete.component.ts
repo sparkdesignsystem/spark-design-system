@@ -15,6 +15,7 @@ import {
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk-autocomplete-result.directive';
+import { uniqueId } from 'lodash';
 
 @Component({
   selector: 'sprk-autocomplete',
@@ -286,6 +287,15 @@ export class SprkAutocompleteComponent
         element.clickedEvent = this.itemSelectedEvent;
       });
     }
+
+    this.generateAriaControls(
+      this.input.ref.nativeElement,
+      this.results.nativeElement,
+    );
+    this.generateAriaOwns(
+      this.input.ref.nativeElement.parentNode,
+      this.results.nativeElement,
+    );
   }
 
   /**
@@ -326,4 +336,95 @@ export class SprkAutocompleteComponent
   /** @ignore */
   isEscapePressed = (e) =>
     e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27;
+
+  /**
+   * Copy the value of the id attribute on contentElement
+   * into the aria-controls attribute on triggerElement.
+   * Generate a unique ID if needed.
+   * @param triggerElement The element that will receive the aria-controls attribute.
+   * @param contentElement The element that will receive an id if needed.
+   */
+  generateAriaControls = (triggerElement, contentElement) => {
+    const triggerAriaControls = triggerElement.getAttribute('aria-controls');
+    let contentId = contentElement.getAttribute('id');
+
+    // Warn if aria-controls exists but the id does not
+    if (triggerAriaControls && !contentId) {
+      /* eslint-disable no-console */
+      console.warn(
+        `Spark Design System Warning - The component with aria-controls="${triggerAriaControls}" expects a matching id on the content element.`,
+      );
+      /* eslint-enable no-console */
+      return;
+    }
+
+    // Warn if aria-controls and id both exist but don't match
+    if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
+      /* eslint-disable no-console */
+      console.warn(
+        `Spark Design System Warning - The value of aria-controls ("${triggerAriaControls}") should match the id of the content element ("${contentId}").`,
+      );
+      /* eslint-enable no-console */
+      return;
+    }
+
+    // If we don't have a valid id, generate one with lodash
+    if (!contentId) {
+      contentId = uniqueId(`sprk_autocomplete_results_`);
+      contentElement.setAttribute('id', contentId);
+    }
+
+    // set the value of aria-controls
+    triggerElement.setAttribute('aria-controls', contentId);
+  };
+
+  /**
+   * Copy the value of the id attribute on contentElement
+   * into the aria-owns attribute on ownerElement.
+   * Generate a unique ID if needed.
+   * @param ownerElement The element that will receive the aria-owns attribute.
+   * @param contentElement The element that will receive an id if needed.
+   */
+  generateAriaOwns = (ownerElement, contentElement) => {
+    const ownerAriaOwns = ownerElement.getAttribute('aria-owns');
+    let contentId = contentElement.getAttribute('id');
+
+    // Warn if aria-owns exists but the id does not
+    if (ownerAriaOwns && !contentId) {
+      /* eslint-disable no-console */
+      console.warn(
+        `Spark Design System Warning - The component with
+        aria-owns="${ownerAriaOwns}" expects a
+        matching id on the content element.`,
+      );
+      /* eslint-enable no-console */
+      return;
+    }
+
+    // Warn if aria-owns and id both exist but don't match
+    if (contentId && ownerAriaOwns && contentId !== ownerAriaOwns) {
+      /* eslint-disable no-console */
+      console.warn(
+        `Spark Design System Warning - The value of aria-owns
+        ("${ownerAriaOwns}") should match the id of the
+        content element ("${contentId}").`,
+      );
+      /* eslint-enable no-console */
+      return;
+    }
+
+    // If we don't have a valid id, generate one with lodash
+    if (!contentId) {
+      contentId = uniqueId(`sprk_autocomplete_results_`);
+      contentElement.setAttribute('id', contentId);
+    }
+
+    // set the value of aria-ownss
+    ownerElement.setAttribute('aria-owns', contentId);
+  };
 }
+
+// TODO aria-controls needs to be generated and tested
+// are there any angular directives where we're doing this currently? I think everywhere in sprk-angular where we do anything with aria-controls
+// its in a configured component where the user isn't able to set an id on those inner elements anyway. Another way this component is unlike existing stuff.
+// TODO aria-owns on input.parentNode, id on list
