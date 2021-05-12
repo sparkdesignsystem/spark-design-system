@@ -522,10 +522,7 @@ describe('SprkAutocompleteComponent', () => {
     component.input.ref.nativeElement.removeAttribute('aria-controls');
     fixture.detectChanges();
 
-    component.generateAriaControls(
-      component.input.ref.nativeElement,
-      component.results.nativeElement,
-    );
+    component.ngAfterContentInit();
     fixture.detectChanges();
 
     const actualId = component.results.nativeElement.getAttribute('id');
@@ -545,10 +542,7 @@ describe('SprkAutocompleteComponent', () => {
     component.input.ref.nativeElement.removeAttribute('aria-controls');
     fixture.detectChanges();
 
-    component.generateAriaControls(
-      component.input.ref.nativeElement,
-      component.results.nativeElement,
-    );
+    component.ngAfterContentInit();
     fixture.detectChanges();
 
     const actualId = component.results.nativeElement.getAttribute('id');
@@ -569,10 +563,7 @@ describe('SprkAutocompleteComponent', () => {
     component.input.ref.nativeElement.setAttribute('aria-controls', providedId);
     fixture.detectChanges();
 
-    component.generateAriaControls(
-      component.input.ref.nativeElement,
-      component.results.nativeElement,
-    );
+    component.ngAfterContentInit();
     fixture.detectChanges();
 
     const actualId = component.results.nativeElement.getAttribute('id');
@@ -586,19 +577,20 @@ describe('SprkAutocompleteComponent', () => {
     expect(actualAriaControls).toEqual(actualId);
   });
 
-  it('should console.warn if aria-controls and id exist and do not match', () => {});
+  it('should console.warn if aria-controls and id exist and do not match', () => {
+    // TODO
+  });
 
-  it('should console.warn if aria-controls exists and id does not', () => {});
+  it('should console.warn if aria-controls exists and id does not', () => {
+    // TODO
+  });
 
   it('should generate aria-owns and id if needed', () => {
     component.results.nativeElement.removeAttribute('id');
     component.input.ref.nativeElement.parentNode.removeAttribute('aria-owns');
     fixture.detectChanges();
 
-    component.generateAriaOwns(
-      component.input.ref.nativeElement.parentNode,
-      component.results.nativeElement,
-    );
+    component.ngAfterContentInit();
     fixture.detectChanges();
 
     const actualId = component.results.nativeElement.getAttribute('id');
@@ -618,10 +610,7 @@ describe('SprkAutocompleteComponent', () => {
     component.input.ref.nativeElement.parentNode.removeAttribute('aria-owns');
     fixture.detectChanges();
 
-    component.generateAriaOwns(
-      component.input.ref.nativeElement.parentNode,
-      component.results.nativeElement,
-    );
+    component.ngAfterContentInit();
     fixture.detectChanges();
 
     const actualId = component.results.nativeElement.getAttribute('id');
@@ -645,10 +634,7 @@ describe('SprkAutocompleteComponent', () => {
     );
     fixture.detectChanges();
 
-    component.generateAriaOwns(
-      component.input.ref.nativeElement.parentNode,
-      component.results.nativeElement,
-    );
+    component.ngAfterContentInit();
     fixture.detectChanges();
 
     const actualId = component.results.nativeElement.getAttribute('id');
@@ -662,14 +648,43 @@ describe('SprkAutocompleteComponent', () => {
     expect(actualAriaOwns).toEqual(actualId);
   });
 
-  it('should console.warn if aria-owns and id exist and do not match', () => {});
+  it('should console.warn if aria-owns and id exist and do not match', () => {
+    // TODO
+  });
 
-  it('should console.warn if aria-owns exists and id does not', () => {});
+  it('should console.warn if aria-owns exists and id does not', () => {
+    // TODO
+  });
+
+  it('should call showResults when initializing with isOpen=true', () => {
+    component.isOpen = true;
+    jest.spyOn(component, 'showResults').mockImplementation(() => {});
+
+    fixture.detectChanges();
+
+    expect(component.showResults).toBeCalledTimes(0);
+
+    component.ngAfterContentInit();
+
+    fixture.detectChanges();
+    expect(component.showResults).toBeCalledTimes(1);
+  });
+
+  it('should call hideResults when initializing with isOpen=false', () => {
+    component.isOpen = false;
+    jest.spyOn(component, 'hideResults').mockImplementation(() => {});
+
+    fixture.detectChanges();
+
+    expect(component.hideResults).toBeCalledTimes(0);
+
+    component.ngAfterContentInit();
+
+    fixture.detectChanges();
+    expect(component.hideResults).toBeCalledTimes(1);
+  });
 
   // TODO
-  // init with isOpen=false should render with the right class
-  // init with isOpen=true should render with the right class
-  // maxwidth is calculated correctly at different widths
   // setting itemSelectedEvent should correctly set the click event on the grandchildren
-  // if I figure out how to manually call ngOnInit or whatever, use that in the ariaOwns/Controls tests instead
+  // maxwidth is calculated correctly at different widths
 });
