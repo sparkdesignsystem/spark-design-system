@@ -19,15 +19,22 @@ export default {
 
 export const searchInput = () => (
   <SprkInputContainer>
-    <SprkLabel htmlFor="search-1" isHidden>
-      Text Input Label
-    </SprkLabel>
-    <SprkInput
-      id="search-1"
-      additionalClasses="sprk-b-TextInput--has-svg-icon"
-      type="search"
-      placeholder="Search"
-    />
+    <div className="sprk-b-InputContainer__icon-container">
+      <SprkLabel htmlFor="search-1" isHidden>
+        Text Input Label
+      </SprkLabel>
+      <SprkIcon
+        iconName="search"
+        aria-hidden="true"
+        additionalClasses="sprk-b-InputContainer__icon"
+      />
+      <SprkInput
+        id="search-1"
+        additionalClasses="sprk-b-TextInput--has-svg-icon"
+        type="search"
+        placeholder="Search"
+      />
+    </div>
   </SprkInputContainer>
 );
 
@@ -40,17 +47,24 @@ searchInput.story = {
 
 export const invalidSearchInput = () => (
   <SprkInputContainer>
-    <SprkLabel htmlFor="search-2" isHidden>
-      Text Input Label
-    </SprkLabel>
-    <SprkInput
-      id="search-2"
-      ariaDescribedBy="invalid-search"
-      additionalClasses="sprk-b-TextInput--has-svg-icon"
-      type="search"
-      placeholder="Search"
-      isValid={false}
-    />
+    <div className="sprk-b-InputContainer__icon-container">
+      <SprkLabel htmlFor="search-2" isHidden>
+        Text Input Label
+      </SprkLabel>
+      <SprkIcon
+        iconName="search"
+        aria-hidden="true"
+        additionalClasses="sprk-b-InputContainer__icon"
+      />
+      <SprkInput
+        id="search-2"
+        ariaDescribedBy="invalid-search"
+        additionalClasses="sprk-b-TextInput--has-svg-icon"
+        type="search"
+        placeholder="Search"
+        isValid={false}
+      />
+    </div>
     <SprkFieldError id="invalid-search">
       <SprkIcon
         iconName="exclamation-filled"
@@ -77,16 +91,23 @@ invalidSearchInput.story = {
 
 export const disabledSearchInput = () => (
   <SprkInputContainer>
-    <SprkLabel htmlFor="search-3" isHidden isDisabled>
-      Text Input Label
-    </SprkLabel>
-    <SprkInput
-      id="search-3"
-      additionalClasses="sprk-b-TextInput--has-svg-icon"
-      type="search"
-      placeholder="Search"
-      isDisabled
-    />
+    <div className="sprk-b-InputContainer__icon-container">
+      <SprkLabel htmlFor="search-3" isHidden isDisabled>
+        Text Input Label
+      </SprkLabel>
+      <SprkIcon
+        iconName="search"
+        aria-hidden="true"
+        additionalClasses="sprk-b-InputContainer__icon"
+      />
+      <SprkInput
+        id="search-3"
+        additionalClasses="sprk-b-TextInput--has-svg-icon"
+        type="search"
+        placeholder="Search"
+        isDisabled
+      />
+    </div>
   </SprkInputContainer>
 );
 
