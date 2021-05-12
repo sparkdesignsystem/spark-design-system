@@ -334,8 +334,7 @@ export class SprkAutocompleteComponent
   /** @ignore */
   isEnterPressed = (e) => e.key === 'Enter' || e.keyCode === 13;
   /** @ignore */
-  isEscapePressed = (e) =>
-    e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27;
+  isEscapePressed = (e) => e.key === 'Escape' || e.keyCode === 27;
 
   /**
    * @ignore
