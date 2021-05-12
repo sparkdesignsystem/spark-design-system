@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
 import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk-autocomplete-result.directive';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 
 @Component({
@@ -45,11 +45,13 @@ describe('SprkAutocompleteComponent', () => {
     }).compileComponents();
   }));
 
+  let spy;
   beforeEach(() => {
+    spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
+
     fixture = TestBed.createComponent(WrappedAutocompleteComponent);
     fixture.detectChanges();
 
-    // component = fixture.componentInstance.innerAutocomplete;
     component = fixture.debugElement.children[0].componentInstance;
 
     resultsElement = fixture.nativeElement.querySelector('ul');
@@ -61,6 +63,10 @@ describe('SprkAutocompleteComponent', () => {
     result4 = fixture.nativeElement.querySelectorAll('li')[3];
 
     fixture.detectChanges();
+  });
+
+  afterEach(() => {
+    spy.mockRestore();
   });
 
   it('should create itself', () => {
@@ -578,11 +584,53 @@ describe('SprkAutocompleteComponent', () => {
   });
 
   it('should console.warn if aria-controls and id exist and do not match', () => {
-    // TODO
+    const providedId = 'test_id';
+    const providedAriaControls = 'test_controls';
+
+    component.results.nativeElement.setAttribute('id', providedId);
+    component.input.ref.nativeElement.setAttribute(
+      'aria-controls',
+      providedAriaControls,
+    );
+
+    // add aria-owns so it doesn't generate its own console.warn
+    component.input.ref.nativeElement.parentNode.setAttribute(
+      'aria-owns',
+      providedId,
+    );
+
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+
+    fixture.detectChanges();
+
+    expect(console.warn).toBeCalledTimes(0);
+
+    component.ngAfterContentInit();
+
+    fixture.detectChanges();
+    expect(console.warn).toBeCalledTimes(1);
   });
 
   it('should console.warn if aria-controls exists and id does not', () => {
-    // TODO
+    const providedAriaControls = 'test_controls';
+
+    component.results.nativeElement.removeAttribute('id');
+    component.input.ref.nativeElement.setAttribute(
+      'aria-controls',
+      providedAriaControls,
+    );
+
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+
+    fixture.detectChanges();
+
+    expect(console.warn).toBeCalledTimes(0);
+
+    component.ngAfterContentInit();
+
+    fixture.detectChanges();
+    // the second call is from aria-owns warning for the same reason
+    expect(console.warn).toBeCalledTimes(2);
   });
 
   it('should generate aria-owns and id if needed', () => {
@@ -649,11 +697,50 @@ describe('SprkAutocompleteComponent', () => {
   });
 
   it('should console.warn if aria-owns and id exist and do not match', () => {
-    // TODO
+    const providedId = 'test_id';
+    const providedAriaControls = 'test_controls';
+
+    component.results.nativeElement.setAttribute('id', providedId);
+    component.input.ref.nativeElement.parentNode.setAttribute(
+      'aria-controls',
+      providedAriaControls,
+    );
+
+    // add aria-controls so it doesn't generate its own console.warn
+    component.input.ref.nativeElement.setAttribute('aria-controls', providedId);
+
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+
+    fixture.detectChanges();
+
+    expect(console.warn).toBeCalledTimes(0);
+
+    component.ngAfterContentInit();
+
+    fixture.detectChanges();
+    expect(console.warn).toBeCalledTimes(1);
   });
 
   it('should console.warn if aria-owns exists and id does not', () => {
-    // TODO
+    const providedAriaOwns = 'test_owns';
+
+    component.results.nativeElement.removeAttribute('id');
+    component.input.ref.nativeElement.parentNode.setAttribute(
+      'aria-controls',
+      providedAriaOwns,
+    );
+
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+
+    fixture.detectChanges();
+
+    expect(console.warn).toBeCalledTimes(0);
+
+    component.ngAfterContentInit();
+
+    fixture.detectChanges();
+    // the second call is from aria-controls warning for the same reason
+    expect(console.warn).toBeCalledTimes(2);
   });
 
   it('should call showResults when initializing with isOpen=true', () => {
