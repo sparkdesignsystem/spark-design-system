@@ -60,21 +60,27 @@ will trigger the \`itemSelectedEvent\`.
 - The input's parent element should have \`role="combobox"\` and
   \`aria-haspopup="listbox"\`. These attributes correctly identify the control
   to Assistive Technology.
+- The input's parent element should have \`aria-owns\` set to the id of the
+  list element. This attribute and id will be generated automatically by Spark
+  if they are not provided.
 - The input should have \`aria-autocomplete="list"\`.
   This attribute correctly identifies the control to Assistive Technology.
 - The input should have \`autocomplete="off"\`, \`autocapitalize="off"\`,
   and \`spellcheck="false"\`. These attributes deactivate default browser
   behavior that can interfere with autocomplete behavior.
+- The input element should have \`aria-controls\` set to the id of the
+  list element. This attribute and id will be generated automatically by Spark
+  if they are not provided.
 - The list should have \`role="listbox"\`.
 - When the list is hidden, the input's parent element should have
-  \`aria-expanded="false"\`.
+  \`aria-expanded="false"\`. Spark will apply this attribute automatically.
 - When the list is visible, the input's parent element should have
-  \`aria-expanded="true"\`.
+  \`aria-expanded="true"\`. Spark will apply this attribute automatically.
 - When the list is visible and an item is highlighted (with the arrow keys),
   the text input should have \`aria-activedescendant\` set to the \`id\`
-  of the active item.
+  of the active item. Spark will apply this attribute automatically.
 - When a list item is highlighted (with the arrow keys), it should have
-  \`aria-selected="true"\`.
+  \`aria-selected="true"\`. Spark will apply this attribute automatically.
 - Each selectable list item should have \`role="option"\`.
 
 
