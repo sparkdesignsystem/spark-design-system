@@ -340,6 +340,133 @@
         "themable": true
       }
     },
+    "footer": {
+      "color": {
+        "comment": "The color value of inline Footer Links.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "hover": {
+        "cursor": {
+          "comment": "The cursor of inline Footer Links on hover.",
+          "value": "pointer",
+          "file": "settings",
+          "themable": true
+        },
+        "font-weight": {
+          "comment": "The font weight of inline Footer Links on hover.",
+          "value": "{font.weight.body.two.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "color": {
+          "comment": "The color of inline Footer Links on hover.",
+          "value": "{wisteria.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "underline": {
+          "color": {
+            "comment": "The underline color value of inline Footer Links on hover.",
+            "value": "{wisteria.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "width": {
+            "comment": "The underline width value of inline Footer Links on hover.",
+            "value": "0.125rem",
+            "attributes": {
+              "category": "size"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        },
+        "after": {
+          "left": {
+            "comment": "The left position of the after element of inline Footer Links on hover.",
+            "value": "0%",
+            "attributes": {
+              "category": "size"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "width": {
+            "comment": "The width of the after element of inline Footer Links on hover.",
+            "value": "100%",
+            "attributes": {
+              "category": "size"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        },
+        "border-bottom": {
+          "comment": "The underline style of inline Footer Links on hover.",
+          "value": "{link.footer.hover.underline.width.value} {link.border.bottom-style.value} {link.footer.hover.underline.color.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "underline": {
+        "color": {
+          "comment": "The underline color value of inline Footer Links.",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "width": {
+          "comment": "The underline width value of inline Footer Links.",
+          "value": "0.125rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "font-weight": {
+        "comment": "The font weight of inline Footer Links.",
+        "value": "{font.weight.body.two.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border-bottom": {
+        "comment": "The underline style of inline Footer Links.",
+        "value": "{link.footer.underline.width.value} {link.border.bottom-style.value} {link.footer.underline.color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "visited-border-bottom": {
+        "comment": "The underline style of visited Light Links.",
+        "value": "{link.light.underline.width.value} {link.border.bottom-style.value} {link.light.underline.color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
     "plain": {
       "border": {
         "comment": "The border settings for Plain Links.",
