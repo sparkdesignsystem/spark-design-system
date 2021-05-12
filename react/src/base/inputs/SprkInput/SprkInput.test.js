@@ -151,7 +151,7 @@ describe('SprkInput:', () => {
     mount(
       <SprkInput type="text" formatter={formatter} onChange={onChangeMock} />,
     );
-    expect(formatter.mock.calls.length).toBe(2);
+    expect(formatter.mock.calls.length).toBe(1);
   });
 
   it('should not run the formatter if the field is invalid', () => {
