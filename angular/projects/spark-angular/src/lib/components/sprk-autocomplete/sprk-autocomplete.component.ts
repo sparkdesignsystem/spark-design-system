@@ -338,6 +338,7 @@ export class SprkAutocompleteComponent
     e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27;
 
   /**
+   * @ignore
    * Copy the value of the id attribute on contentElement
    * into the aria-controls attribute on triggerElement.
    * Generate a unique ID if needed.
@@ -379,6 +380,7 @@ export class SprkAutocompleteComponent
   };
 
   /**
+   * @ignore
    * Copy the value of the id attribute on contentElement
    * into the aria-owns attribute on ownerElement.
    * Generate a unique ID if needed.
@@ -423,8 +425,3 @@ export class SprkAutocompleteComponent
     ownerElement.setAttribute('aria-owns', contentId);
   };
 }
-
-// TODO aria-controls needs to be generated and tested
-// are there any angular directives where we're doing this currently? I think everywhere in sprk-angular where we do anything with aria-controls
-// its in a configured component where the user isn't able to set an id on those inner elements anyway. Another way this component is unlike existing stuff.
-// TODO aria-owns on input.parentNode, id on list

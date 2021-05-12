@@ -144,8 +144,6 @@ describe('SprkAutocompleteComponent', () => {
   it('should add the correct attributes in hideResults', () => {
     component.showResults();
     fixture.detectChanges();
-    // console.log(fixture.nativeElement.innerHTML);
-    // console.log(component.results.nativeElement.outerHTML);
     expect(
       resultsElement.classList.contains('sprk-c-Autocomplete__results--hidden'),
     ).toEqual(false);
@@ -155,14 +153,12 @@ describe('SprkAutocompleteComponent', () => {
 
     component.hideResults();
     fixture.detectChanges();
-    // console.log(fixture.debugElement.nativeElement.innerHTML);
     expect(
       resultsElement.classList.contains('sprk-c-Autocomplete__results--hidden'),
     ).toEqual(true);
     expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
       'false',
     );
-    // todo expect removeAllHighlights to have been called
   });
 
   it('should emit closedEvent when calling hideResults if results exists', (done) => {
@@ -524,7 +520,6 @@ describe('SprkAutocompleteComponent', () => {
 
     fixture.detectChanges();
     expect(component.calculateResultsWidth).toBeCalledTimes(1);
-    // TODO expect maxWidth to have been set
   });
 
   it('should set aria-activedescendant on the input when highlighting an item', () => {
