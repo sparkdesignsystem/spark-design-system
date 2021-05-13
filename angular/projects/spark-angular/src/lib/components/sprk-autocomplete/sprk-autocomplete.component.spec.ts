@@ -873,6 +873,57 @@ describe('SprkAutocompleteComponent', () => {
     done();
   });
 
-  // TODO
-  // maxwidth is calculated correctly at different widths
+  it('should set the correct max width', () => {
+    Object.defineProperty(component.input.ref.nativeElement, 'offsetWidth', {
+      value: 123,
+    });
+
+    fixture.detectChanges();
+
+    component.ngAfterViewInit();
+
+    fixture.detectChanges();
+
+    expect(component.results.nativeElement.getAttribute('style')).toEqual(
+      'max-width:123px',
+    );
+  });
+
+  it('should not set the max width when calling ngAfterViewInit if input is undefined', () => {
+    component.input = undefined;
+
+    fixture.detectChanges();
+
+    component.ngAfterViewInit();
+
+    fixture.detectChanges();
+
+    expect(component.input).toEqual(undefined);
+  });
+
+  it('should not set the max width when calling calculateResultsWidth if input is undefined', () => {
+    component.input = undefined;
+
+    fixture.detectChanges();
+
+    component.calculateResultsWidth();
+
+    fixture.detectChanges();
+
+    expect(component.input).toEqual(undefined);
+  });
+
+  it('should not set the max width when calling calculateResultsWidth if results is undefined', () => {
+    component.results = undefined;
+
+    fixture.detectChanges();
+
+    component.calculateResultsWidth();
+
+    fixture.detectChanges();
+
+    expect(component.input.ref.nativeElement.getAttribute('style')).toEqual(
+      null,
+    );
+  });
 });
