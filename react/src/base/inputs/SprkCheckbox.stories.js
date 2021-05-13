@@ -36,10 +36,7 @@ export default {
     info: `
     ${markdownDocumentationLinkBuilder('input')}
 - Spark checkboxes have been refactored into a compositional style component.
-The version that uses <code>SprkSelectionInput</code>
-will be permanently removed
-in our Fall 2020 release.
-- To update to the new version, replace checkboxes implemented with our
+To update to the new version, replace checkboxes implemented with our
 new implementation using <code>SprkCheckboxGroup</code>
 and <code>SprkCheckboxItem</code> components.
 - Use <code>SprkCheckboxGroup</code>, <code>SprkFieldset</code>,
@@ -67,17 +64,11 @@ defaultStory.story = {
 
 export const defaultHelperText = () => (
   <SprkCheckboxGroup>
-    <SprkFieldset>
+    <SprkFieldset ariaDescribedBy="checkbox-helper-text">
       <SprkLegend>Checkbox Group Label</SprkLegend>
-      <SprkCheckboxItem ariaDescribedBy="checkbox-helper-text">
-        Checkbox Item 1
-      </SprkCheckboxItem>
-      <SprkCheckboxItem ariaDescribedBy="checkbox-helper-text">
-        Checkbox Item 2
-      </SprkCheckboxItem>
-      <SprkCheckboxItem ariaDescribedBy="checkbox-helper-text">
-        Checkbox Item 3
-      </SprkCheckboxItem>
+      <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+      <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+      <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
     </SprkFieldset>
     <SprkHelperText id="checkbox-helper-text">
       Optional helper text, used to clarify the field&#x27;s intent.
@@ -94,17 +85,11 @@ defaultHelperText.story = {
 
 export const invalidCheckbox = () => (
   <SprkCheckboxGroup>
-    <SprkFieldset>
+    <SprkFieldset ariaDescribedBy="invalid-checkbox">
       <SprkLegend>Checkbox Group Label</SprkLegend>
-      <SprkCheckboxItem ariaDescribedBy="invalid-checkbox">
-        Checkbox Item 1
-      </SprkCheckboxItem>
-      <SprkCheckboxItem ariaDescribedBy="invalid-checkbox">
-        Checkbox Item 2
-      </SprkCheckboxItem>
-      <SprkCheckboxItem ariaDescribedBy="invalid-checkbox">
-        Checkbox Item 3
-      </SprkCheckboxItem>
+      <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+      <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+      <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
     </SprkFieldset>
     <SprkFieldError id="invalid-checkbox">
       <SprkIcon
@@ -173,27 +158,15 @@ huge.story = {
 };
 export const hugeHelperText = () => (
   <SprkCheckboxGroup variant="huge">
-    <SprkFieldset>
+    <SprkFieldset ariaDescribedBy="huge-checkbox-helper-text">
       <SprkLegend>Checkbox Group Label</SprkLegend>
-      <SprkCheckboxItem
-        name="checkboxName"
-        variant="huge"
-        ariaDescribedBy="huge-checkbox-helper-text"
-      >
+      <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 1
       </SprkCheckboxItem>
-      <SprkCheckboxItem
-        name="checkboxName"
-        variant="huge"
-        ariaDescribedBy="huge-checkbox-helper-text"
-      >
+      <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 2
       </SprkCheckboxItem>
-      <SprkCheckboxItem
-        name="checkboxName"
-        variant="huge"
-        ariaDescribedBy="huge-checkbox-helper-text"
-      >
+      <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 3
       </SprkCheckboxItem>
     </SprkFieldset>
@@ -212,27 +185,15 @@ hugeHelperText.story = {
 
 export const hugeInvalid = () => (
   <SprkCheckboxGroup variant="huge">
-    <SprkFieldset>
+    <SprkFieldset ariaDescribedBy="invalid-huge-checkbox">
       <SprkLegend>Checkbox Group Label</SprkLegend>
-      <SprkCheckboxItem
-        name="checkboxName"
-        variant="huge"
-        ariaDescribedBy="invalid-huge-checkbox"
-      >
+      <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 1
       </SprkCheckboxItem>
-      <SprkCheckboxItem
-        name="checkboxName"
-        variant="huge"
-        ariaDescribedBy="invalid-huge-checkbox"
-      >
+      <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 2
       </SprkCheckboxItem>
-      <SprkCheckboxItem
-        name="checkboxName"
-        variant="huge"
-        ariaDescribedBy="invalid-huge-checkbox"
-      >
+      <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 3
       </SprkCheckboxItem>
     </SprkFieldset>

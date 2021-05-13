@@ -166,9 +166,10 @@ SprkDatePicker.propTypes = {
   id: PropTypes.string,
   /**
    * Assigned to the `aria-describedby`
-   * attribute of the input used
-   * to create relationships between the
-   * input and error container.
+   * attribute. Used to create
+   * relationships between the
+   * component and text that describes it,
+   * such as helper text or an error field.
    */
   ariaDescribedBy: PropTypes.string,
 };
@@ -177,7 +178,7 @@ SprkDatePicker.defaultProps = {
   datePickerConfig: {},
   formatter: (value) => value,
   isValid: true,
-  id: uniqueId('sprk-'),
+  id: uniqueId('sprk-datepicker-'),
   isDisabled: false,
 };
 

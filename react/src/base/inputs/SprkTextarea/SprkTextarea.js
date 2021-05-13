@@ -71,9 +71,10 @@ SprkTextarea.propTypes = {
   id: PropTypes.string,
   /**
    * Assigned to the `aria-describedby`
-   * attribute of the textarea used
-   * to create relationships between the
-   * input and error container.
+   * attribute. Used to create
+   * relationships between the
+   * component and text that describes it,
+   * such as helper text or an error field.
    */
   ariaDescribedBy: PropTypes.string,
   /**
@@ -101,7 +102,7 @@ SprkTextarea.propTypes = {
 SprkTextarea.defaultProps = {
   forwardedRef: React.createRef(),
   isValid: true,
-  id: uniqueId('sprk-'),
+  id: uniqueId('sprk-textarea-'),
 };
 
 export default SprkTextarea;

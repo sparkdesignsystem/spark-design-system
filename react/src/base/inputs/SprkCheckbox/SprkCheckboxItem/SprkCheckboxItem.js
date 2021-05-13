@@ -79,10 +79,12 @@ SprkCheckboxItem.propTypes = {
    * Assigned to the `data-id` attribute serving as
    * a unique selector for automated tools.
    */
-  idString: PropTypes.string,
   /**
-   * Assigned to the `aria-describedby` attribute of the input used
-   * to create relationships between the input and error container.
+   * Assigned to the `aria-describedby`
+   * attribute. Used to create
+   * relationships between the
+   * component and text that describes it,
+   * such as helper text or an error field.
    */
   ariaDescribedBy: PropTypes.string,
   /**
@@ -143,6 +145,12 @@ SprkCheckboxItem.propTypes = {
    * visibility toggle. Use this for "Show Password" checkboxes.
    */
   isVisibilityToggle: PropTypes.bool,
+  /**
+   * Assigned to the `data-id` attribute
+   * serving as a unique selector for
+   * automated tools.
+   */
+  idString: PropTypes.string,
 };
 
 export default SprkCheckboxItem;

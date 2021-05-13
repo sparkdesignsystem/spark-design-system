@@ -152,9 +152,10 @@ SprkSelect.propTypes = {
   isDisabled: PropTypes.bool,
   /**
    * Assigned to the `aria-describedby`
-   * attribute of the input used
-   * to create relationships between the
-   * input and other containers.
+   * attribute. Used to create
+   * relationships between the
+   * component and text that describes it,
+   * such as helper text or an error field.
    */
   ariaDescribedBy: PropTypes.string,
   /**
@@ -190,7 +191,7 @@ SprkSelect.propTypes = {
 };
 
 SprkSelect.defaultProps = {
-  id: uniqueId('sprk-'),
+  id: uniqueId('sprk-select-'),
   isValid: true,
 };
 

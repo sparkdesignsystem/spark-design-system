@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import uniqueId from 'lodash/uniqueId';
 import SprkIcon from '../../../components/icons/SprkIcon';
 
 /**
@@ -42,10 +43,12 @@ SprkErrorContainer.propTypes = {
    */
   analyticsString: PropTypes.string,
   /**
-   * Configured by parent and
-   * assigned to the `id` attribute.
+   * Assigned to the `id` attribute
+   * of the rendered error container.
+   * A custom ID will
+   * be added if this is not supplied.
    */
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   /**
    * Assigned to the `data-id` attribute
    * serving as a unique selector for automated tools.
@@ -55,6 +58,10 @@ SprkErrorContainer.propTypes = {
    * Error text to show.
    */
   message: PropTypes.string.isRequired,
+};
+
+SprkErrorContainer.defaultProps = {
+  id: uniqueId('sprk-error-container-'),
 };
 
 export default SprkErrorContainer;

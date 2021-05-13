@@ -8,6 +8,7 @@ const SprkFieldset = (props) => {
     idString,
     analyticsString,
     additionalClasses,
+    ariaDescribedBy,
     ...other
   } = props;
 
@@ -16,6 +17,7 @@ const SprkFieldset = (props) => {
       className={classnames('sprk-b-Fieldset', additionalClasses)}
       data-analytics={analyticsString}
       data-id={idString}
+      aria-describedby={ariaDescribedBy}
       {...other}
     >
       {children}
@@ -41,6 +43,14 @@ SprkFieldset.propTypes = {
    * to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
+  /**
+   * Assigned to the `aria-describedby`
+   * attribute. Used to create
+   * relationships between the
+   * component and text that describes it,
+   * such as helper text or an error field.
+   */
+  ariaDescribedBy: PropTypes.string,
 };
 
 export default SprkFieldset;

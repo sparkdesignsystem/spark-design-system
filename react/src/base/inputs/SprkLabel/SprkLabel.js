@@ -86,7 +86,7 @@ SprkLabel.propTypes = {
 };
 
 SprkLabel.defaultProps = {
-  htmlFor: uniqueId('sprk-'),
+  htmlFor: uniqueId('sprk-label-'),
 };
 
 export default SprkLabel;
