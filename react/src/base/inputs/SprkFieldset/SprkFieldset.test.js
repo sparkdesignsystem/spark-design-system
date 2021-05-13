@@ -20,10 +20,22 @@ describe('SprkFieldset:', () => {
     );
   });
 
+  it('should not render data-analytics if no value', () => {
+    const wrapper = shallow(<SprkFieldset />);
+    expect(wrapper.find('.sprk-b-Fieldset').prop('data-analytics').length).toBe(
+      0,
+    );
+  });
+
   it('should apply data-id', () => {
     const expected = 'test-data-id';
     const wrapper = shallow(<SprkFieldset idString={expected} />);
     expect(wrapper.find('.sprk-b-Fieldset').prop('data-id')).toEqual(expected);
+  });
+
+  it('should not render data-id if no value', () => {
+    const wrapper = shallow(<SprkFieldset />);
+    expect(wrapper.find('.sprk-b-Fieldset').prop('data-id').length).toBe(0);
   });
 
   it('should set aria-describedby attribute if value provided', () => {

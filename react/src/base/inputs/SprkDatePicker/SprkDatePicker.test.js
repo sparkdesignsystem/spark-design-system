@@ -41,9 +41,20 @@ describe('SprkDatePicker:', () => {
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
   });
 
+  it(`should not render data-analytics when
+    analyticsString has no value`, () => {
+    const wrapper = mount(<SprkDatePicker />);
+    expect(wrapper.find('[data-analytics]').length).toBe(0);
+  });
+
   it('should assign data-id when idString has a value', () => {
     const wrapper = mount(<SprkDatePicker idString="321" />);
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
+  });
+
+  it('should not render data-id when idString has no value', () => {
+    const wrapper = mount(<SprkDatePicker />);
+    expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
   it('should assign id when id has a value', () => {
@@ -51,6 +62,13 @@ describe('SprkDatePicker:', () => {
     expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().getAttribute('id'),
     ).toBe('321');
+  });
+
+  it('should assign default id when id has no value', () => {
+    const wrapper = mount(<SprkDatePicker />);
+    expect(
+      wrapper.find('.sprk-b-TextInput').getDOMNode().getAttribute('id'),
+    ).toContain('sprk-datepicker-');
   });
 
   it('should assign aria-describedby when ariaDescribedBy has a value', () => {
@@ -63,11 +81,15 @@ describe('SprkDatePicker:', () => {
     ).toBe('321');
   });
 
-  it('should assign default id when id has no value', () => {
+  it(`should not render aria-describedby when
+    ariaDescribedBy has no value`, () => {
     const wrapper = mount(<SprkDatePicker />);
     expect(
-      wrapper.find('.sprk-b-TextInput').getDOMNode().getAttribute('id'),
-    ).toContain('sprk-');
+      wrapper
+        .find('.sprk-b-TextInput')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe(null);
   });
 
   it(`should add floating label class

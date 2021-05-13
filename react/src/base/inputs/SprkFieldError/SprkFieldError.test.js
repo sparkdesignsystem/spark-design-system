@@ -92,6 +92,6 @@ describe('SprkFieldError:', () => {
     );
     expect(
       wrapper.find('.sprk-b-ErrorContainer').getDOMNode().getAttribute('id'),
-    ).toContain('sprk-');
+    ).toContain('sprk-field-error-');
   });
 });
