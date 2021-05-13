@@ -14,9 +14,6 @@ import { By } from '@angular/platform-browser';
         additionalClasses="testClass"
       ></li>
       <li sprkAutocompleteResult></li>
-      <li sprkAutocompleteResult></li>
-      <li sprkAutocompleteResult></li>
-      <li sprkAutocompleteResult></li>
     </ul>
   `,
 })

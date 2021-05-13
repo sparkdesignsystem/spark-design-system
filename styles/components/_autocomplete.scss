@@ -46,5 +46,5 @@
 
 /// Hide the Autocomplete Results
 .sprk-c-Autocomplete__results--hidden {
-  display: none;
+  display: $sprk-autocomplete-results-hidden-display;
 }
