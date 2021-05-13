@@ -169,6 +169,29 @@ describe('SprkAutocompleteComponent', () => {
     done();
   });
 
+  it('should not set input attributes when calling hideResults() with no input', () => {
+    component.showResults();
+    component.input = undefined;
+    fixture.detectChanges();
+
+    component.hideResults();
+
+    fixture.detectChanges();
+
+    expect(component.input).toEqual(undefined);
+  });
+
+  it('should not set input attributes when calling showResults() with no input', () => {
+    component.input = undefined;
+    fixture.detectChanges();
+
+    component.showResults();
+
+    fixture.detectChanges();
+
+    expect(component.input).toEqual(undefined);
+  });
+
   it('should call hideResults when pressing Escape if the results are open', () => {
     component.isOpen = true;
     jest.spyOn(component, 'hideResults').mockImplementation(() => {});
@@ -436,6 +459,26 @@ describe('SprkAutocompleteComponent', () => {
     expect(component.resultItems.toArray()[0].isHighlighted).toEqual(true);
   });
 
+  it('should not set aria-activedescendant when calling highlightListItem with no listItemElement', () => {
+    component.highlightListItem(undefined);
+    fixture.detectChanges();
+    expect(
+      component.input.ref.nativeElement.getAttribute('aria-activedescendant'),
+    ).toEqual(null);
+  });
+
+  it('should not set aria-activedescendant when calling highlightListItem with no input', () => {
+    component.input = undefined;
+    fixture.detectChanges();
+
+    let testItem = component.resultItems.toArray()[1];
+    component.highlightListItem(testItem);
+
+    fixture.detectChanges();
+
+    expect(component.input).toEqual(undefined);
+  });
+
   it('should emit itemSelectedEvent when pressing Enter and an item is highlighted', (done) => {
     let called = false;
     let value = -1;
@@ -695,6 +738,16 @@ describe('SprkAutocompleteComponent', () => {
     expect(actualAriaOwns).toEqual(actualId);
   });
 
+  it('should not generate aria-owns and id if input does not exist', () => {
+    component.input = undefined;
+    fixture.detectChanges();
+
+    component.ngAfterContentInit();
+    fixture.detectChanges();
+
+    expect(component.input).toEqual(undefined);
+  });
+
   it('should console.warn if aria-owns and id exist and do not match', () => {
     const providedId = 'test_id';
     const providedAriaControls = 'test_controls';
@@ -770,7 +823,65 @@ describe('SprkAutocompleteComponent', () => {
     expect(component.hideResults).toBeCalledTimes(1);
   });
 
+  it('should not show or hide results when initializing with no results', () => {
+    component.isOpen = false;
+    component.results = undefined;
+    jest.spyOn(component, 'hideResults').mockImplementation(() => {});
+    jest.spyOn(component, 'showResults').mockImplementation(() => {});
+
+    fixture.detectChanges();
+
+    expect(component.hideResults).toBeCalledTimes(0);
+    expect(component.showResults).toBeCalledTimes(0);
+
+    component.ngAfterContentInit();
+
+    fixture.detectChanges();
+    expect(component.hideResults).toBeCalledTimes(0);
+    expect(component.showResults).toBeCalledTimes(0);
+  });
+
+  it('should set the click event on the list items if itemSelectedEvent is set', (done) => {
+    let called = false;
+    let value = -1;
+
+    component.isOpen = true;
+    component.itemSelectedEvent.subscribe((itemId) => {
+      called = true;
+      value = itemId;
+      done();
+    });
+
+    fixture.detectChanges();
+
+    component.resultItems
+      .toArray()[0]
+      .ref.nativeElement.dispatchEvent(new Event('click'));
+
+    expect(called).toEqual(true);
+    expect(value).toEqual('item1');
+    done();
+  });
+
+  it('should not set the click event on the list items if itemSelectedEvent is not set', (done) => {
+    let called = false;
+
+    component.itemSelectedEvent = undefined;
+    component.isOpen = true;
+    fixture.detectChanges();
+
+    component.ngAfterContentInit();
+
+    fixture.detectChanges();
+
+    component.resultItems
+      .toArray()[0]
+      .ref.nativeElement.dispatchEvent(new Event('click'));
+
+    expect(called).toEqual(false);
+    done();
+  });
+
   // TODO
-  // setting itemSelectedEvent should correctly set the click event on the grandchildren
   // maxwidth is calculated correctly at different widths
 });

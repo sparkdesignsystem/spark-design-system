@@ -176,16 +176,21 @@ export class SprkAutocompleteComponent
    * @param listItemElement The element to highlight.
    */
   highlightListItem(listItemElement): void {
+    // console.log('highlighting')
     if (listItemElement) {
       listItemElement.isHighlighted = true;
-    }
 
-    if (this.input) {
-      this.renderer.setAttribute(
-        this.input.ref.nativeElement,
-        'aria-activedescendant',
-        listItemElement.ref.nativeElement.id,
-      );
+      // console.log('listItem exists');
+
+      if (this.input) {
+        this.renderer.setAttribute(
+          this.input.ref.nativeElement,
+          'aria-activedescendant',
+          listItemElement.ref.nativeElement.id,
+        );
+      } else {
+        console.log('input is ' + this.input);
+      }
     }
   }
 
@@ -275,6 +280,17 @@ export class SprkAutocompleteComponent
       } else {
         this.hideResults();
       }
+
+      if (this.input) {
+        this.generateAriaControls(
+          this.input.ref.nativeElement,
+          this.results.nativeElement,
+        );
+        this.generateAriaOwns(
+          this.input.ref.nativeElement.parentNode,
+          this.results.nativeElement,
+        );
+      }
     }
 
     // if itemSelectedEvent is specified, also set that as the click event on each result
@@ -283,15 +299,6 @@ export class SprkAutocompleteComponent
         element.clickedEvent = this.itemSelectedEvent;
       });
     }
-
-    this.generateAriaControls(
-      this.input.ref.nativeElement,
-      this.results.nativeElement,
-    );
-    this.generateAriaOwns(
-      this.input.ref.nativeElement.parentNode,
-      this.results.nativeElement,
-    );
   }
 
   /**
