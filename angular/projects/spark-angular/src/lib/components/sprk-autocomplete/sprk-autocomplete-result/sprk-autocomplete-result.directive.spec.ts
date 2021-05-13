@@ -13,6 +13,10 @@ import { By } from '@angular/platform-browser';
         idString="resultId1"
         additionalClasses="testClass"
       ></li>
+      <li sprkAutocompleteResult></li>
+      <li sprkAutocompleteResult></li>
+      <li sprkAutocompleteResult></li>
+      <li sprkAutocompleteResult></li>
     </ul>
   `,
 })
@@ -94,18 +98,25 @@ describe('Spark Autocomplete Result Directive', () => {
     ).toEqual(false);
   });
 
-  // TODO
   it('should scroll the parentNode when setting isHighlighted if necessary', () => {
-    // set the scroll position so the current item is out of view
-    // element.getBoundingClientRect = () => {
-    //   return { top: 250, bottom: 300 };
-    // };
-    // element.parentNode.getBoundingClientRect = () => {
-    //   return { top: 0, bottom: 200 };
-    // };
-    // expect the child element to not be visible
-    // directiveElement.isHighlighted = true;
-    // fixture.detectChanges();
-    // expect the child element to be visible
+    const listItem2 = fixture.nativeElement.querySelectorAll(
+      '.sprk-c-Autocomplete__result',
+    )[1];
+
+    // Set the top of the list
+    listItem2.parentNode.getBoundingClientRect = () => {
+      return { top: 25 };
+    };
+
+    // Set the top of the list item
+    listItem2.getBoundingClientRect = () => {
+      return { top: 24 };
+    };
+
+    directiveElement.isHighlighted = true;
+    fixture.detectChanges();
+
+    // expect the child element to be scrolled into view
+    expect(listItem2.parentNode.scrollTop).toEqual(listItem2.offsetTop);
   });
 });

@@ -176,11 +176,8 @@ export class SprkAutocompleteComponent
    * @param listItemElement The element to highlight.
    */
   highlightListItem(listItemElement): void {
-    // console.log('highlighting')
     if (listItemElement) {
       listItemElement.isHighlighted = true;
-
-      // console.log('listItem exists');
 
       if (this.input) {
         this.renderer.setAttribute(
@@ -188,8 +185,6 @@ export class SprkAutocompleteComponent
           'aria-activedescendant',
           listItemElement.ref.nativeElement.id,
         );
-      } else {
-        console.log('input is ' + this.input);
       }
     }
   }

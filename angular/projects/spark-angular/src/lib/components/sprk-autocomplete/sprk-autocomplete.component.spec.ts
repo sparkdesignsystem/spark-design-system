@@ -28,10 +28,6 @@ describe('SprkAutocompleteComponent', () => {
   let fixture: ComponentFixture<WrappedAutocompleteComponent>;
   let resultsElement;
   let inputElement;
-  let result1;
-  let result2;
-  let result3;
-  let result4;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -56,11 +52,6 @@ describe('SprkAutocompleteComponent', () => {
 
     resultsElement = fixture.nativeElement.querySelector('ul');
     inputElement = fixture.nativeElement.querySelector('input');
-
-    result1 = fixture.nativeElement.querySelectorAll('li')[0];
-    result2 = fixture.nativeElement.querySelectorAll('li')[1];
-    result3 = fixture.nativeElement.querySelectorAll('li')[2];
-    result4 = fixture.nativeElement.querySelectorAll('li')[3];
 
     fixture.detectChanges();
   });
