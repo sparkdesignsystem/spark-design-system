@@ -586,7 +586,12 @@ export const defaultStory = () => {
           <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
             Incididunt ut labore et dolore magna aliqua.
             Ut enim ad
-            <a class="sprk-b-Link sprk-b-Link--footer">inline link</a>
+            <a
+              href="#nogo"
+              class="sprk-b-Link sprk-b-Link--footer"
+            >
+              inline link
+            </a>
             minim veniam. Lorem ipsum dolor sit
             amet, consectetur.
           </p>
