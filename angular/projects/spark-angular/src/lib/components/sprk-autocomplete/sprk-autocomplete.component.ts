@@ -78,7 +78,6 @@ export class SprkAutocompleteComponent
   @HostListener('document:keydown', ['$event'])
   onKeydown($event) {
     if (this.isEscapePressed($event) && this.isOpen) {
-      this.isOpen = false;
       this.hideResults();
     }
 
@@ -111,7 +110,6 @@ export class SprkAutocompleteComponent
       !this.ref.nativeElement.contains(event.target) &&
       this.isOpen
     ) {
-      this.isOpen = false;
       this.hideResults();
     }
   }
@@ -172,13 +170,16 @@ export class SprkAutocompleteComponent
 
   /**
    * Highlight a specific element in the Autocomplete results. If the Enter
-   * key is pressed, this element will be selected.
+   * key is pressed, the itemSelectedEvent will be emitted with this
+   * element's id.
    * @param listItemElement The element to highlight.
    */
   highlightListItem(listItemElement): void {
     if (listItemElement) {
       listItemElement.isHighlighted = true;
 
+      // set aria-activedescendant on the input to the id of the
+      // highlighted item
       if (this.input) {
         this.renderer.setAttribute(
           this.input.ref.nativeElement,
@@ -195,7 +196,7 @@ export class SprkAutocompleteComponent
    */
   selectHighlightedListItem(): void {
     var selectedElement = this.resultItems.filter(
-      (element, index) => element.isHighlighted,
+      (element) => element.isHighlighted,
     )[0];
     var selectedId = selectedElement.ref.nativeElement.id;
     this.itemSelectedEvent.emit(selectedId);
@@ -213,7 +214,7 @@ export class SprkAutocompleteComponent
       );
 
       if (this.input) {
-        // Set aria-expanded on the input
+        // Set aria-expanded on the input's parent
         this.renderer.setAttribute(
           this.input.ref.nativeElement.parentNode,
           'aria-expanded',
@@ -246,7 +247,7 @@ export class SprkAutocompleteComponent
       );
 
       if (this.input) {
-        // Set aria-expanded on the input
+        // Set aria-expanded on the input's parent
         this.renderer.setAttribute(
           this.input.ref.nativeElement.parentNode,
           'aria-expanded',
@@ -277,10 +278,13 @@ export class SprkAutocompleteComponent
       }
 
       if (this.input) {
+        // set aria-controls on the input to the id of the results
         this.generateAriaControls(
           this.input.ref.nativeElement,
           this.results.nativeElement,
         );
+
+        // set aria-owns on the input's parent to the id of the results
         this.generateAriaOwns(
           this.input.ref.nativeElement.parentNode,
           this.results.nativeElement,
@@ -290,7 +294,7 @@ export class SprkAutocompleteComponent
 
     // if itemSelectedEvent is specified, also set that as the click event on each result
     if (this.itemSelectedEvent) {
-      this.resultItems.forEach((element, index) => {
+      this.resultItems.forEach((element) => {
         element.clickedEvent = this.itemSelectedEvent;
       });
     }
@@ -349,21 +353,17 @@ export class SprkAutocompleteComponent
 
     // Warn if aria-controls exists but the id does not
     if (triggerAriaControls && !contentId) {
-      /* eslint-disable no-console */
       console.warn(
         `Spark Design System Warning - The component with aria-controls="${triggerAriaControls}" expects a matching id on the content element.`,
       );
-      /* eslint-enable no-console */
       return;
     }
 
     // Warn if aria-controls and id both exist but don't match
     if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
-      /* eslint-disable no-console */
       console.warn(
         `Spark Design System Warning - The value of aria-controls ("${triggerAriaControls}") should match the id of the content element ("${contentId}").`,
       );
-      /* eslint-enable no-console */
       return;
     }
 
@@ -391,25 +391,21 @@ export class SprkAutocompleteComponent
 
     // Warn if aria-owns exists but the id does not
     if (ownerAriaOwns && !contentId) {
-      /* eslint-disable no-console */
       console.warn(
         `Spark Design System Warning - The component with
         aria-owns="${ownerAriaOwns}" expects a
         matching id on the content element.`,
       );
-      /* eslint-enable no-console */
       return;
     }
 
     // Warn if aria-owns and id both exist but don't match
     if (contentId && ownerAriaOwns && contentId !== ownerAriaOwns) {
-      /* eslint-disable no-console */
       console.warn(
         `Spark Design System Warning - The value of aria-owns
         ("${ownerAriaOwns}") should match the id of the
         content element ("${contentId}").`,
       );
-      /* eslint-enable no-console */
       return;
     }
 
