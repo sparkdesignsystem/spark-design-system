@@ -29,7 +29,7 @@ import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-brandi
         >
           <sprk-masthead-nav-collapsible-button
             [collapsibleNavId]="collapsibleNavDirective.id"
-            (sprkCollapsibleNavButtonClicked)="toggleCollapsibleNav($event)"
+            (collapsibleNavButtonEvent)="toggleCollapsibleNav($event)"
           ></sprk-masthead-nav-collapsible-button>
         </div>
 
@@ -147,9 +147,7 @@ export class SprkMastheadComponent implements AfterContentInit {
     window.scrollY >= 10
       ? (this.isPageScrolled = true)
       : (this.isPageScrolled = false);
-    if (this.isNarrowViewport) {
-      this.throttledUpdateScrollDirection();
-    }
+    this.throttledUpdateScrollDirection();
   }
 
   /**
@@ -158,7 +156,9 @@ export class SprkMastheadComponent implements AfterContentInit {
    */
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
+    // If there is a collapsible nav and there was a window resize
     if (this.collapsibleNavDirective) {
+      // Update internal state with true if the collapsible nav is
       this.isNarrowViewportOnResize = this.isElementVisible(
         '.sprk-c-Masthead__menu',
       );
@@ -184,7 +184,10 @@ export class SprkMastheadComponent implements AfterContentInit {
    * @ignore
    */
   ngAfterContentInit() {
+    // We say that it is a narrow viewport if
+    // the collapisble nav's style is not set to display: none
     this.isNarrowViewport = this.isElementVisible('.sprk-c-Masthead__menu');
+    console.log(' ngAfterContentInit classes ran');
   }
 
   /**
@@ -200,6 +203,7 @@ export class SprkMastheadComponent implements AfterContentInit {
     if (!element) {
       return;
     }
+    console.log(element, 'the element');
     const elementDisplayValue = window.getComputedStyle(element).display;
     const elementVisibilityValue = window.getComputedStyle(element).visibility;
     const elementIsVisible =
@@ -234,7 +238,7 @@ export class SprkMastheadComponent implements AfterContentInit {
    * scrolled down, we update `isMastheadHidden` to `true` (hide the Masthead).
    * If the scroll direction is up, we update `isMastheadHidden` to `false` (show the Masthead).
    */
-  updateScrollDirection() {
+  updateScrollDirection(): void {
     const newlyScrolledDirection = this.getVerticalScrollDirection();
     if (this.currentScrollDirection !== newlyScrolledDirection) {
       this.currentScrollDirection = newlyScrolledDirection;
@@ -248,6 +252,7 @@ export class SprkMastheadComponent implements AfterContentInit {
    * @ignore
    */
   getClasses(): string {
+    console.log(' get classes ran');
     const classArray: string[] = ['sprk-c-Masthead', 'sprk-o-Stack'];
 
     if (this.additionalClasses) {
@@ -260,15 +265,16 @@ export class SprkMastheadComponent implements AfterContentInit {
       this.collapsibleNavDirective &&
       !this.collapsibleNavDirective.isCollapsed
     ) {
-      classArray.push('sprk-c-Masthead--open');
+      classArray.push('sprk-c-Masthead--is-open');
     }
 
     if (this.isPageScrolled) {
-      classArray.push('sprk-c-Masthead--scroll');
+      classArray.push('sprk-c-Masthead--is-scrolled');
     }
+    // console.log(this.isNarrowViewport, 'this.isNarrowViewport')
 
-    if (this.isMastheadHidden) {
-      classArray.push('sprk-c-Masthead--hidden');
+    if (this.isMastheadHidden && this.isNarrowViewport) {
+      classArray.push('sprk-c-Masthead--is-hidden');
     }
 
     return classArray.join(' ');
@@ -278,15 +284,18 @@ export class SprkMastheadComponent implements AfterContentInit {
    * When the button for the collapsible nav
    * is clicked this will check if the collapsible
    * nav is open. If it is open, then it will close it. If it
-   * is closed then it will open it.
+   * is closed then it will open it. We run this method
+   * whenever the collapsible nav emits the isButtonOpen event.
    */
-  toggleCollapsibleNav(event): void {
+  toggleCollapsibleNav(isButtonOpen: boolean): void {
     if (!this.collapsibleNavDirective) {
       return;
     }
-    if (!this.collapsibleNavDirective.isCollapsed) {
+    // If the button is now closed then we want to close the nav too
+    if (!isButtonOpen && !this.collapsibleNavDirective.isCollapsed) {
       this.closeCollapsibleNav();
     } else {
+      // The button is now open and we want to open the nav too
       this.openCollapsibleNav();
     }
   }
@@ -309,6 +318,7 @@ export class SprkMastheadComponent implements AfterContentInit {
     );
     this.renderer.addClass(document.body, 'sprk-u-Height--100');
     this.renderer.addClass(document.body.parentElement, 'sprk-u-Height--100');
+    // Set the isCollapsed property on the collapsible nav to false to open it
     this.collapsibleNavDirective.isCollapsed = false;
   }
 
@@ -332,6 +342,7 @@ export class SprkMastheadComponent implements AfterContentInit {
       document.body.parentElement,
       'sprk-u-Height--100',
     );
+    // Set the isCollapsed property on the collapsible nav to true to close it
     this.collapsibleNavDirective.isCollapsed = true;
   }
 }

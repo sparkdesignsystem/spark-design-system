@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
@@ -446,16 +446,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     </sprk-masthead>
   `,
 })
-class Test1Component {}
+class Test1Component {
+  @ViewChild(SprkMastheadComponent, {
+    static: false,
+  })
+  masthead: SprkMastheadComponent;
+}
 
 describe('SprkMastheadComponent', () => {
   let component: Test1Component;
+  let componentFixture: ComponentFixture<Test1Component>;
+  let componentElement: HTMLElement;
+
   let mastheadComponent: SprkMastheadComponent;
   let mastheadFixture: ComponentFixture<SprkMastheadComponent>;
-  let fixture: ComponentFixture<Test1Component>;
   let mastheadElement: HTMLElement;
+
   let collapsibleNavButton: HTMLElement;
   let collapsibleNavEl: HTMLElement;
+
+  let mastheadCollapsibleNavButton: HTMLElement;
+  let mastheadCollapsibleNavEl: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -483,28 +494,38 @@ describe('SprkMastheadComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Test1Component);
-    component = fixture.componentInstance;
-
-    mastheadFixture = TestBed.createComponent(SprkMastheadComponent);
-    mastheadComponent = mastheadFixture.componentInstance;
-    fixture.detectChanges();
-    mastheadFixture.detectChanges();
-    mastheadComponent.ngAfterContentInit();
-    mastheadElement = mastheadFixture.nativeElement.querySelector(
+    // Using Test Component Wrapper
+    componentFixture = TestBed.createComponent(Test1Component);
+    component = componentFixture.componentInstance;
+    componentFixture.detectChanges();
+    // component.masthead.ngAfterContentInit();
+    componentElement = componentFixture.nativeElement.querySelector(
       '.sprk-c-Masthead',
     );
-    collapsibleNavEl = mastheadElement.querySelector(
-      '.sprk-c-Masthead__narrow-nav',
+    collapsibleNavEl = componentFixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__nav-collapsible',
     );
-    collapsibleNavButton = mastheadElement.querySelector('.sprk-c-Menu');
+    collapsibleNavButton = componentFixture.debugElement.nativeElement.querySelector(
+      'button',
+    );
+
+    // Using generated component instance
+    // mastheadFixture = TestBed.createComponent(SprkMastheadComponent);
+    // mastheadComponent = mastheadFixture.componentInstance;
+    // mastheadFixture.detectChanges();
+    // mastheadComponent.ngAfterContentInit();
+    // mastheadElement = mastheadFixture.nativeElement.querySelector('.sprk-c-Masthead');
+    // mastheadCollapsibleNavEl = mastheadFixture.nativeElement.querySelector(
+    //   '.sprk-c-Masthead__nav-collapsible',
+    // );
+    // mastheadCollapsibleNavButton = mastheadFixture.nativeElement.querySelector('.sprk-c-Menu');
   });
 
   afterEach(() => {
-    mastheadComponent.currentScrollDirection = 'up';
-    mastheadComponent.isMastheadHidden = false;
-    mastheadComponent.isNarrowViewport = false;
-    mastheadComponent.isNarrowViewportOnResize = false;
+    component.masthead.currentScrollDirection = 'up';
+    component.masthead.isMastheadHidden = false;
+    component.masthead.isNarrowViewport = false;
+    component.masthead.isNarrowViewportOnResize = false;
     window.document.body.style.minHeight = '800px';
     window.document.body.style.minWidth = '1024px';
   });
@@ -514,89 +535,177 @@ describe('SprkMastheadComponent', () => {
   });
 
   it('should add classes when additionalClasses has a value', () => {
-    mastheadComponent.additionalClasses = 'sprk-u-man';
-    mastheadFixture.detectChanges();
-    fixture.detectChanges();
-    expect(mastheadElement.classList.toString()).toEqual(
+    component.masthead.additionalClasses = 'sprk-u-man';
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
       'sprk-c-Masthead sprk-o-Stack sprk-u-man',
     );
   });
 
-  // it(`
-  //     should add the aria-expanded attribute to collapsbile nav button and
-  //     show the collapsible nav when the icon is clicked
-  //   `, () => {
-  //   expect(collapsibleNavButton.getAttribute('aria-expanded')).toEqual(null);
-  //     expect(collapsibleNavEl).toBeNull();
-  //   collapsibleNavButton.click();
-  //   fixture.detectChanges();
-  //   expect(collapsibleNavButton.getAttribute('aria-expanded')).toEqual('true');
-  //     expect(collapsibleNavEl).not.toBeNull();
-  // });
+  it('should show the menu icon if a collapsible nav is present', () => {
+    expect(collapsibleNavButton).toBeTruthy();
+  });
 
-  // it('should add a class to body and show the narrow nav when the icon is clicked', () => {
-  //   expect(collapsibleNavEl).toBeNull();
-  //   collapsibleNavButton.click();
-  //   mastheadFixture.detectChanges();
-  //   expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
-  //     true,
+  it('should pass the collapsible nav ID to the collapsible nav button component aria-controls attribute', () => {
+    const buttonId = collapsibleNavButton.getAttribute('aria-controls');
+    const navId = collapsibleNavEl.id;
+    expect(buttonId).toEqual(navId);
+  });
+
+  it('should pass the collapsible nav ID to the collapsible nav button component aria-controls attribute', () => {
+    const buttonId = collapsibleNavButton.getAttribute('aria-controls');
+    const navId = collapsibleNavEl.id;
+    expect(buttonId).toEqual(navId);
+  });
+
+  it('should set the collapsible nav isCollapsed prop to false when button is clicked and was closed before clicked', () => {
+    // expect the collapsible nav to be closed at first with having the is-collapsed class
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    // click the collapsible nav button which runs the open method
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // child directive isCollapsed should now be false, which opens the collapsbile nav
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(false);
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+  });
+
+  it('should close the collapsible nav when the collapsible nav button is clicked and was open before clicked', () => {
+    // click the collapsible nav button which runs the open method
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // expect the collapsible nav to be open at first without having the is-collapsed class
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+    // click the collapsible nav button which runs the close method
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // child directive isCollapsed should now be true, which close the collapsbile nav
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(true);
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+  });
+
+  it(`
+      should add the aria-expanded attribute to collapsbile nav button and
+      show the collapsible nav when the icon is clicked
+    `, () => {
+    expect(collapsibleNavButton.getAttribute('aria-expanded')).toEqual('false');
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    expect(collapsibleNavButton.getAttribute('aria-expanded')).toEqual('true');
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+  });
+
+  it('should add a class to body and show the collapsible nav when the collapsible button is clicked', () => {
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
+      true,
+    );
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
+      false,
+    );
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+  });
+
+  it('should close the narrow nav on orientationchange', () => {
+    // should be closed first
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    // we open it
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // we expect it to be open
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+    // we expect its directive to identify that it is open
+    component.masthead.collapsibleNavDirective.isCollapsed = false;
+    componentFixture.detectChanges();
+    // fire the event on the window
+    window.dispatchEvent(new Event('orientationchange'));
+    componentFixture.detectChanges();
+    // we expect the component to detect the event and close the collapsible nav
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+  });
+
+  it('should add data-id when idString has a value', () => {
+    const testString = 'element-id';
+    component.masthead.idString = testString;
+    componentFixture.detectChanges();
+    expect(componentElement.getAttribute('data-id')).toEqual(testString);
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    component.masthead.idString = null;
+    componentFixture.detectChanges();
+    expect(componentElement.getAttribute('data-id')).toBeNull();
+  });
+
+  it('should add the scroll class when state isPageScrolled is true', () => {
+    component.masthead.isPageScrolled = true;
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack sprk-c-Masthead--is-scrolled',
+    );
+  });
+
+  // it('should add the hidden class when state isMastheadHidden is true and on small viewports', () => {
+  //   component.masthead.isMastheadHidden = true;
+  //   componentFixture.detectChanges();
+  //   global.innerWidth = 320;
+  //   global.dispatchEvent(new Event('resize'));
+  //   expect(componentElement.classList.toString()).toEqual(
+  //     'sprk-c-Masthead sprk-o-Stack sprk-c-Masthead--is-hidden',
   //   );
-  //   expect(collapsibleNavEl).not.toBeNull();
-  //   collapsibleNavButton.click();
-  //   mastheadFixture.detectChanges();
-  //   expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
-  //     false,
+  // });
+
+  // it('should not add the hidden class when state isMastheadHidden is true and on large viewports', () => {
+  //   component.masthead.isMastheadHidden = true;
+  //   componentFixture.detectChanges();
+  //   global.innerWidth = 1080;
+  //   global.dispatchEvent(new Event('resize'));
+  //   expect(componentElement.classList.toString()).toEqual(
+  //     'sprk-c-Masthead sprk-o-Stack',
   //   );
-  //   expect(collapsibleNavEl).toBeNull();
-  // });
-
-  // it('should close the narrow nav on orientationchange', () => {
-  //   mastheadComponent.isCollapsibleNavOpen = true;
-  //   mastheadFixture.detectChanges();
-  //   window.dispatchEvent(new Event('orientationchange'));
-  //   mastheadFixture.detectChanges();
-  //   expect(collapsibleNavEl).toBeNull();
-  // });
-
-  // it('should add data-id when idString has a value', () => {
-  //   const testString = 'element-id';
-  //   mastheadComponent.idString = testString;
-  //   mastheadFixture.detectChanges();
-  //   expect(mastheadElement.getAttribute('data-id')).toEqual(testString);
-  // });
-
-  // it('should not add data-id when idString has no value', () => {
-  //   mastheadComponent.idString = null;
-  //   mastheadFixture.detectChanges();
-  //   expect(mastheadElement.getAttribute('data-id')).toBeNull();
-  // });
-
-  // it('should add the scroll class when state isPageScrolled is true', () => {
-  //   mastheadComponent.isPageScrolled = true;
-  //   mastheadFixture.detectChanges();
-  //   expect(
-  //     mastheadElement.classList.contains('sprk-c-Masthead--scroll'),
-  //   ).toEqual(true);
-  // });
-
-  // it('should add the hidden class when state isMastheadHidden is true', () => {
-  //   mastheadComponent.isMastheadHidden = true;
-  //   mastheadFixture.detectChanges();
-  //   expect(
-  //     mastheadElement.classList.contains('sprk-c-Masthead--hidden'),
-  //   ).toEqual(true);
   // });
 
   // it('should update state isMastheadHidden to true when currentScrollDirection is equal to down', () => {
+  //   // Expect masthead to be shown originally
+  //   expect(component.masthead.isMastheadHidden).toBe(false);
   //   // Scroll down the page
   //   const scrollEvent = document.createEvent('CustomEvent');
   //   scrollEvent.initCustomEvent('scroll', false, false, null);
   //   Object.defineProperty(window, 'scrollY', { value: 456, writable: true });
-  //   mastheadFixture.detectChanges();
+  //   // componentFixture.detectChanges();
   //   window.dispatchEvent(scrollEvent);
-  //   mastheadFixture.detectChanges();
-  //   expect(mastheadComponent.isMastheadHidden).toBe(true);
-  //   expect(mastheadComponent.currentScrollDirection).toBe('down');
+  //   componentFixture.detectChanges();
+  //   expect(component.masthead.currentScrollDirection).toBe('down');
+  //   expect(component.masthead.isMastheadHidden).toBe(true);
   // });
 
   // it('should show masthead when going from small to large screen', () => {
@@ -606,7 +715,7 @@ describe('SprkMastheadComponent', () => {
   //   mastheadComponent.throttledUpdateLayoutState();
 
   //   expect(mastheadElement).not.toContain('sprk-c-Masthead--hidden');
-  //   expect(collapsibleNavEl).toBeNull();
+  //   expect(collapsibleNavEl.classList.toString()).toEqual('sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed');
   // });
 
   // it('should call throttledUpdateLayoutState to be called on resize if collapsible nav present', () => {
@@ -615,17 +724,6 @@ describe('SprkMastheadComponent', () => {
   //   resizeEvent.initCustomEvent('resize', false, false, null);
   //   window.dispatchEvent(resizeEvent);
   //   expect(spyOnResize).toHaveBeenCalled();
-  // });
-
-  // it('should add aria-controls and ID to collapsible nav if present and if collapsibleNavId is not passed', () => {
-  //   mastheadComponent.isCollapsibleNavOpen = true;
-  //   mastheadFixture.detectChanges();
-  //   expect(collapsibleNavEl.getAttribute('id')).toMatch(
-  //     /sprk_masthead_narrow_nav_\d/,
-  //   );
-  //   expect(collapsibleNavButton.getAttribute('aria-controls')).toEqual(
-  //     collapsibleNavEl.getAttribute('id'),
-  //   );
   // });
 
   // it(`

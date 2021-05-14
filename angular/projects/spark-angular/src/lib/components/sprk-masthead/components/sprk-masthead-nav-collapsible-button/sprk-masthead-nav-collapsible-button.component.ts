@@ -60,7 +60,8 @@ export class SprkMastheadNavCollapsibleButtonComponent {
 
   /**
    * If `true`, the button
-   * will be open when it is rendered.
+   * will have open styles and ARIA settings
+   * when it is rendered.
    */
   @Input()
   isOpen = false;
@@ -104,14 +105,16 @@ export class SprkMastheadNavCollapsibleButtonComponent {
    * When the button is clicked this event will be emitted.
    */
   @Output()
-  collapsibleNavButtonEvent = new EventEmitter<any>();
+  collapsibleNavButtonEvent = new EventEmitter<boolean>();
 
   /**
-   * Emits an event when the button is clicked.
+   * Emits a boolean value that tells is the buttonn is open or closed
+   * when the button is clicked.
    */
   toggleCollapsibleNav(event): void {
     event.preventDefault();
-    this.collapsibleNavButtonEvent.emit();
+    this.isOpen = !this.isOpen;
+    this.collapsibleNavButtonEvent.emit(this.isOpen);
   }
 
   /**

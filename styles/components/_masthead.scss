@@ -19,7 +19,8 @@
 }
 
 /// Adds styles for the Masthead when it is open.
-.sprk-c-Masthead--open {
+.sprk-c-Masthead--open,
+.sprk-c-Masthead--is-open {
   position: fixed;
   left: 0;
   right: 0;
@@ -32,15 +33,19 @@
 }
 
 ///	Adds styles for the Masthead when the user scrolls past it.
-.sprk-c-Masthead--scroll {
+.sprk-c-Masthead--scroll,
+.sprk-c-Masthead--is-scrolled {
   box-shadow: $sprk-masthead-shadow-scroll;
 }
 
-/// Adds styles to hide the Masthead
-/// when a user scrolls on a narrow screen.
-.sprk-c-Masthead--hidden {
-  transform: $sprk-masthead-translateY;
-  transition: $sprk-masthead-transition;
+/// Adds hidden styles to hide the Masthead
+/// when a user scrolls down on a narrow screen.
+.sprk-c-Masthead--hidden,
+.sprk-c-Masthead--is-hidden {
+  @media all and (max-width: $sprk-masthead-breakpoint) {
+    transform: $sprk-masthead-translateY;
+    transition: $sprk-masthead-transition;
+  }
 }
 
 // Keep padding settings consistent for menu,
