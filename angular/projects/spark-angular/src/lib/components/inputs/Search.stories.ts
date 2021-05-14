@@ -212,7 +212,7 @@ export const legacyStory = () => ({
     <sprk-icon-input-container>
       <label
         for="legacy-search"
-        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+        class="sprk-u-ScreenReaderText"
         sprkLabel
       >
         Search
@@ -255,7 +255,7 @@ export const legacyInvalidSearchInput = () => ({
     <sprk-icon-input-container>
       <label
         for="legacy-invalid-search"
-        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+        class="sprk-u-ScreenReaderText"
         sprkLabel
       >
         Search
@@ -309,7 +309,7 @@ export const legacyDisabledSearchInput = () => ({
     <sprk-icon-input-container>
       <label
         for="legacy-disabled-search"
-        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText sprk-b-Label--disabled"
+        class="sprk-u-ScreenReaderText sprk-b-Label--disabled"
         sprkLabel
       >
         Search

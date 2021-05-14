@@ -56,13 +56,6 @@ describe('SprkLabelDirective', () => {
     expect(label.nativeElement.classList.length).toBe(1);
   });
 
-  it('should add the icon label class if hasIcon is true', () => {
-    expect(labelHasIcon.classList.contains('sprk-b-Label--with-icon')).toEqual(
-      true,
-    );
-    expect(labelHasIcon.classList.length).toBe(2);
-  });
-
   it('should add the disabled class if isDisabled is true', () => {
     expect(labelDisabled.classList.contains('sprk-b-Label--disabled')).toEqual(
       true,

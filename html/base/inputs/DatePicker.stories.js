@@ -44,7 +44,7 @@ export const defaultStory = () => {
     >
       <label
         for="datepicker"
-        class="sprk-b-Label sprk-b-Label--with-icon"
+        class="sprk-b-Label"
       >
         Date
       </label>
@@ -103,7 +103,7 @@ export const invalidDatePicker = () => {
     >
       <label
         for="datepicker"
-        class="sprk-b-Label sprk-b-Label--with-icon"
+        class="sprk-b-Label"
       >
         Date
       </label>
@@ -176,7 +176,7 @@ export const disabledDatePicker = () => {
     >
       <label
         for="datepicker"
-        class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--with-icon"
+        class="sprk-b-Label sprk-b-Label--disabled"
       >
         Date
       </label>

@@ -16,7 +16,7 @@ export const searchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
         for="search-input"
-        class="sprk-b-Label sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+        class="sprk-b-Label sprk-u-ScreenReaderText"
       >
         Search
       </label>
@@ -63,7 +63,7 @@ export const invalidSearchInput = () => `
     <div class="sprk-b-InputContainer">
       <label
         for="search-input"
-        class="sprk-b-Label sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+        class="sprk-b-Label sprk-u-ScreenReaderText"
       >
         Search
       </label>
@@ -127,7 +127,6 @@ export const disabledSearchInput = () => `
         class="
           sprk-b-Label
           sprk-b-Label--disabled
-          sprk-b-Label--with-icon
           sprk-u-ScreenReaderText"
       >
         Search
