@@ -100,7 +100,7 @@ describe('SprkInput:', () => {
     const wrapper = mount(<SprkInput />);
     expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().getAttribute('id'),
-    ).toContain('sprk-');
+    ).toContain('sprk-input-');
   });
 
   it(`should add floating label class

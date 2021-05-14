@@ -83,6 +83,6 @@ describe('SprkHelperText:', () => {
     );
     expect(
       wrapper.find('.sprk-b-HelperText').getDOMNode().getAttribute('id'),
-    ).toContain('sprk-');
+    ).toContain('sprk-helper-text-');
   });
 });

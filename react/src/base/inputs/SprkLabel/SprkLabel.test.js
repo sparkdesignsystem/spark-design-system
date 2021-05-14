@@ -45,22 +45,6 @@ describe('SprkLabel:', () => {
     expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(1);
   });
 
-  it(`should render an element with the with-icon
-  class when hasIcon is true`, () => {
-    const wrapper = mount(<SprkLabel hasIcon>Label</SprkLabel>);
-
-    expect(wrapper.find('.sprk-b-Label--with-icon').length).toBe(1);
-    expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(2);
-  });
-
-  it(`should not render an element with the with-icon
-  class when hasIcon is false`, () => {
-    const wrapper = mount(<SprkLabel hasIcon={false}>Label</SprkLabel>);
-
-    expect(wrapper.find('.sprk-b-Label--with-icon').length).toBe(0);
-    expect(wrapper.find('.sprk-b-Label').getDOMNode().classList.length).toBe(1);
-  });
-
   it(`should render an element with the monetary
   class when isMonetary is true`, () => {
     const wrapper = mount(<SprkLabel isMonetary>Label</SprkLabel>);

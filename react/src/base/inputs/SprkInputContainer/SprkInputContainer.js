@@ -18,9 +18,9 @@ class SprkInputContainer extends Component {
    * It processes and updates the children & grandchildren that
    * are passed into the SprkInputContainer to add necessary
    * a11y considerations.
-   * `for` and `id` are checked and updated to match,
+   * `htmlFor` and `id` are checked and updated to match,
    * if they don't match initially.
-   * `ariaDescribedby` is checked and updated on the `input`
+   * `ariaDescribedBy` is checked and updated on the `input`
    * element to include the `id` of the `SprkHelperText`,
    * `SprkFieldError`, and `SprkErrorContainer` if present among
    * the children and grandchildren.
@@ -37,30 +37,33 @@ class SprkInputContainer extends Component {
 
     /*
      * Checks each child element and grandchild element to
-     * store the provided `ariaDescribedby` on the `input`,
-     * `id` of the SprkFieldError, SprkErrorContainer,
-     * SprkHelperText, and `for` of the SprkLabel in
+     * store the provided `ariaDescribedBy` on the `input`,
+     * `id` of the `SprkFieldError`, `SprkErrorContainer`,
+     * `SprkHelperText`, and `htmlFor` of the `SprkLabel` in
      * variables for processing.
      */
     React.Children.forEach(children, (child) => {
       /**
-       * If the child element is a SprkInput, then the `id`
-       * & `ariaDescribedby` are stored for later use.
+       * If the child element is a `SprkInput`, then the `id`
+       * & `ariaDescribedBy` are stored for later use.
        */
       if (isSprkInput(child)) {
         id = child.props.id;
         inputAriaDescribedBy = child.props.ariaDescribedBy;
       }
       /**
-       * If the child element is a SprkLabel, then the `htmlFor`
+       * If the child element is a `SprkLabel`, then the `htmlFor`
        * is stored for later use.
        */
       if (child.type && child.type.name === SprkLabel.name) {
         labelFor = child.props.htmlFor;
       }
       /**
-       * If the child element is a SprkFieldError or SprkErrorContainer,
+       * If the child element is a `SprkFieldError` or `SprkErrorContainer`,
        * then the `id` is stored for later use.
+       * `SprkFieldError` is the newer, preferred component and
+       * `SprkErrorContainer` is going to be deprecated. If they are both
+       * present, then `SprkFieldError` will take precedent.
        */
       if (
         child.type &&
@@ -70,7 +73,7 @@ class SprkInputContainer extends Component {
         errorContainerID = child.props.id;
       }
       /**
-       * If the child element is a SprkHelperText,
+       * If the child element is a `SprkHelperText`,
        * then the `id` is stored for later use.
        */
       if (child.type && child.type.name === SprkHelperText.name) {
@@ -87,15 +90,15 @@ class SprkInputContainer extends Component {
       ) {
         React.Children.forEach(child.props.children, (grandchild) => {
           /**
-           * If the grandchild element is a SprkInput, then the `id`
-           * & `ariaDescribedby` are stored for later use.
+           * If the grandchild element is a `SprkInput`, then the `id`
+           * & `ariaDescribedBy` are stored for later use.
            */
           if (isSprkInput(grandchild)) {
             id = grandchild.props.id;
             inputAriaDescribedBy = grandchild.props.ariaDescribedBy;
           }
           /**
-           * If the grandchild element is a SprkLabel, then the `htmlFor`
+           * If the grandchild element is a `SprkLabel`, then the `htmlFor`
            * is stored for later use.
            */
           if (grandchild.type && grandchild.type.name === SprkLabel.name) {
@@ -105,27 +108,27 @@ class SprkInputContainer extends Component {
       }
     });
     /**
-     * If there is a SprkHelperText, SprkFieldError, or SprkErrorContainer
+     * If there is a `SprkHelperText`, `SprkFieldError`, or `SprkErrorContainer`
      * present in the children elements then start the `ariaDescribedBy`
      * processing.
      */
     if (helperTextID || errorContainerID) {
       /**
-       * If an `ariaDescribedBy` was provided on the SprkInput,
+       * If an `ariaDescribedBy` was provided on the `SprkInput`,
        * then split the string into an array.
        */
       if (inputAriaDescribedBy) {
         inputAriaDescribedByArray = inputAriaDescribedBy.split(' ');
       }
       /**
-       * If there is a SprkHelperText element present and the `id` is not
-       * present in the SprkInput's `ariaDescribedBy` array, add it.
+       * If there is a `SprkHelperText` element present and the `id` is not
+       * present in the `SprkInput`'s `ariaDescribedBy` array, add it.
        */
       if (helperTextID && !inputAriaDescribedByArray.includes(helperTextID)) {
         inputAriaDescribedByArray.push(helperTextID);
       }
       /**
-       * If there is a SprkFieldError or SprkErrorContainer element present
+       * If there is a `SprkFieldError` or `SprkErrorContainer` element present
        * and the `id` is not present in the SprkInput's `ariaDescribedBy` array,
        * add it.
        */
@@ -138,21 +141,23 @@ class SprkInputContainer extends Component {
       /**
        * Once the necessary values have been added to the `ariaDescribedBy`
        * array, rejoin the values to make a string that will be passed to the
-       * SprkInput prop.
+       * `SprkInput` prop.
        */
       inputAriaDescribedBy = inputAriaDescribedByArray.join(' ');
     }
 
+    /**
+     * `SprkInput` and `SprkLabel` will always have
+     * an `id` and a `htmlFor`. We check for presence (id="")
+     * before checking for length to avoid running
+     * .length on undefined.
+     */
     if (id && labelFor && id.length > 0 && labelFor.length > 0) {
       const childrenElements = React.Children.map(children, (child) => {
         /*
-         * If the SprkLabel `htmlFor` and the input `id`
+         * If the `SprkLabel` `htmlFor` and the `input` `id`
          * are mismatching, use the `id`
-         * value to set the `htmlFor` attribute on the SprkLabel.
-         * SprkInput and SprkLabel will always have
-         * an `id` and a `htmlFor`. We check for presence (id="")
-         * before checking for length to avoid running
-         * .length on undefined.
+         * value to set the `htmlFor` attribute on the `SprkLabel`.
          */
         if (id !== labelFor && child.type.name === SprkLabel.name) {
           return React.cloneElement(child, {
@@ -162,7 +167,7 @@ class SprkInputContainer extends Component {
 
         /*
          * If there is an `inputAriaDescribedBy` value and the child element
-         * is a SprkInput, then clone the child element and update the
+         * is a `SprkInput`, then clone the child element and update the
          * `ariaDescribedBy` prop with the correct value.
          */
         if (inputAriaDescribedBy && isSprkInput(child)) {
@@ -185,9 +190,9 @@ class SprkInputContainer extends Component {
             child.props.children,
             (grandchild) => {
               /*
-               * If the grandchild is a SprkLabel and the `htmlFor` and
-               * the input `id` are mismatching, use the `id`
-               * value to set the `htmlFor` attribute on the SprkLabel.
+               * If the grandchild is a `SprkLabel` and the `htmlFor` and
+               * the `input` `id` are mismatching, use the `id`
+               * value to set the `htmlFor` attribute on the `SprkLabel`.
                */
               if (id !== labelFor && grandchild.type.name === SprkLabel.name) {
                 return React.cloneElement(grandchild, {
@@ -196,7 +201,7 @@ class SprkInputContainer extends Component {
               }
               /*
                * If there is an `inputAriaDescribedBy` value and
-               * the grandchild element is a SprkInput, then clone
+               * the grandchild element is a `SprkInput`, then clone
                * the grandchild element and update the `ariaDescribedBy`
                * prop with the correct value.
                */

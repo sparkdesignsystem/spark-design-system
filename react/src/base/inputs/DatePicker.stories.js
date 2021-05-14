@@ -37,7 +37,9 @@ props table below for available customization options.
 export const defaultStory = () => (
   <SprkInputContainer>
     <div className="sprk-b-InputContainer__icon-container">
-      <SprkLabel htmlFor="datepicker-1">Date</SprkLabel>
+      <SprkLabel htmlFor="datepicker-1" hasIcon>
+        Date
+      </SprkLabel>
       <SprkIcon
         iconName="calendar"
         additionalClasses="

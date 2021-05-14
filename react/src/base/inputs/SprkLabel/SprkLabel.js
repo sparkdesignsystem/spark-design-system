@@ -7,7 +7,6 @@ const SprkLabel = (props) => {
   const {
     children,
     additionalClasses,
-    hasIcon,
     isMonetary,
     isHidden,
     idString,
@@ -23,7 +22,6 @@ const SprkLabel = (props) => {
       className={classNames('sprk-b-Label', additionalClasses, {
         'sprk-u-ScreenReaderText': isHidden,
         'sprk-b-Label--disabled': isDisabled,
-        'sprk-b-Label--with-icon': hasIcon,
         'sprk-b-Label--monetary': isMonetary,
       })}
       data-id={idString}
@@ -69,12 +67,6 @@ SprkLabel.propTypes = {
    * disabled styles to the label.
    */
   isDisabled: PropTypes.bool,
-  /**
-   * If `true`, this will add
-   * styles to the label to make it work
-   * with an icon.
-   */
-  hasIcon: PropTypes.bool,
   /**
    * Assigned to the `for` attribute of
    * the label that will connect
