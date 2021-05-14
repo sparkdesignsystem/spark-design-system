@@ -5,7 +5,7 @@
     "build": "npm run set-version && ng build spark-angular && npm run build-schematics",
     "build-schematics": "npm run build --prefix projects/spark-angular",
     "test": "jest --config ./projects/spark-angular/jest.config.js --verbose",
-    "test:generate-output": "jest --coverage --config ./projects/spark-angular/jest.config.js --json --outputFile=./src/.jest-test-results.json",
+    "test:generate-output": "jest --config ./projects/spark-angular/jest.config.js --json --outputFile=./src/.jest-test-results.json",
     "test:watch": "jest -o --watch --config ./projects/spark-angular/jest.config.js",
     "lint": "ng lint",
     "coverage": "jest --coverage --config ./projects/spark-angular/jest.config.js",
