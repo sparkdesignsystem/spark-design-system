@@ -5,7 +5,7 @@ import { markdownDocumentationLinkBuilder } from '../../storybook-utilities/mark
 
 export default {
   title: 'Components/Footer',
-  decorators: [(story) => `<div class="sprk-o-Box">${story()}</div>`],
+  decorators: [(story) => `<div>${story()}</div>`],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('footer')}
