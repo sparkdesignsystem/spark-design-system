@@ -172,6 +172,8 @@ class SprkFooter extends Component {
                 </p>
               ))}
 
+            {/* To allow users to use inline links until
+            compositional footer is available */}
             {additionalDisclaimer}
             {additionalIcons.length > 0 && (
               <ul
