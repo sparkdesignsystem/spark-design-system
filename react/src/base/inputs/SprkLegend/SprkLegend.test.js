@@ -1,15 +1,28 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkLegend from './SprkLegend';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkLegend:', () => {
+  it('should render an element with the correct class', () => {
+    const wrapper = mount(<SprkLegend>Legend</SprkLegend>);
+
+    expect(wrapper.find('.sprk-b-Legend').length).toBe(1);
+    expect(wrapper.find('.sprk-b-Label').length).toBe(1);
+    expect(wrapper.find('.sprk-b-Legend').getDOMNode().classList.length).toBe(
+      2,
+    );
+  });
+
   it('should apply additional classes', () => {
     const expected = 'test-class';
-    const wrapper = shallow(<SprkLegend additionalClasses={expected} />);
+    const wrapper = mount(<SprkLegend additionalClasses={expected} />);
     expect(wrapper.find('.sprk-b-Legend').hasClass(expected)).toBe(true);
+    expect(wrapper.find('.sprk-b-Legend').getDOMNode().classList.length).toBe(
+      3,
+    );
   });
 
   it('should apply disabled classes', () => {

@@ -102,6 +102,6 @@ describe('SprkLabel:', () => {
     const wrapper = mount(<SprkLabel />);
     expect(
       wrapper.find('.sprk-b-Label').getDOMNode().getAttribute('for'),
-    ).toContain('sprk-');
+    ).toContain('sprk-label-');
   });
 });
