@@ -17,6 +17,9 @@ describe('SprkSelect:', () => {
   it('should render an element with the correct class', () => {
     const wrapper = mount(<SprkSelect choices={choices} />);
     expect(wrapper.find('.sprk-b-Select').length).toBe(1);
+    expect(wrapper.find('.sprk-b-Select').getDOMNode().classList.length).toBe(
+      1,
+    );
   });
 
   it('should allow for a custom ID', () => {
@@ -127,6 +130,9 @@ describe('SprkSelect:', () => {
       <SprkSelect choices={choices} additionalClasses="sprk-u-mbm" />,
     );
     expect(wrapper.find('.sprk-b-Select').hasClass('sprk-u-mbm')).toBe(true);
+    expect(wrapper.find('.sprk-b-Select').getDOMNode().classList.length).toBe(
+      2,
+    );
   });
 
   it('should assign data-analytics when analyticsString has a value', () => {
@@ -155,12 +161,18 @@ describe('SprkSelect:', () => {
   it('should render the select with error styles when isValid is false', () => {
     const wrapper = mount(<SprkSelect choices={choices} isValid={false} />);
     expect(wrapper.find('.sprk-b-Select--error').length).toBe(1);
+    expect(wrapper.find('.sprk-b-Select').getDOMNode().classList.length).toBe(
+      2,
+    );
   });
 
   it(`should not render the select with error
   styles when isValid is true`, () => {
     const wrapper = mount(<SprkSelect choices={choices} isValid />);
     expect(wrapper.find('.sprk-b-Select--error').length).toBe(0);
+    expect(wrapper.find('.sprk-b-Select').getDOMNode().classList.length).toBe(
+      1,
+    );
   });
 
   it('should make select disabled when isDisabled is set', () => {

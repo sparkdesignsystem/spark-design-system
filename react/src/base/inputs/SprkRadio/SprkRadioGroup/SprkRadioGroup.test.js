@@ -134,6 +134,30 @@ describe('SprkRadioGroup:', () => {
     ).toBe('test-id');
   });
 
+  it(`should add the grandchild helperTextID to the aria-describedby
+  on the fieldset if it isn't present`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkFieldset>
+          <SprkLegend>Radio Group Label</SprkLegend>
+          <SprkRadioItem>Radio Item 1</SprkRadioItem>
+          <SprkRadioItem>Radio Item 2</SprkRadioItem>
+          <SprkRadioItem>Radio Item 3</SprkRadioItem>
+        </SprkFieldset>
+        <div>
+          <SprkHelperText id="test-id" />
+        </div>
+      </SprkRadioGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
   it(`should add the helperTextID to the aria-describedby
   on the grandchild fieldset if it isn't present`, () => {
     const wrapper = mount(
@@ -180,6 +204,30 @@ describe('SprkRadioGroup:', () => {
     ).toBe('test-id');
   });
 
+  it(`should add the grandchild errorContainerID to the aria-describedby
+  on the fieldset if it isn't present`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkFieldset>
+          <SprkLegend>Radio Group Label</SprkLegend>
+          <SprkRadioItem>Radio Item 1</SprkRadioItem>
+          <SprkRadioItem>Radio Item 2</SprkRadioItem>
+          <SprkRadioItem>Radio Item 3</SprkRadioItem>
+        </SprkFieldset>
+        <div>
+          <SprkErrorContainer id="test-id" message="test message" />
+        </div>
+      </SprkRadioGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
   it(`should add the fieldErrorID to the aria-describedby
   on the fieldset if it isn't present`, () => {
     const wrapper = mount(
@@ -191,6 +239,30 @@ describe('SprkRadioGroup:', () => {
           <SprkRadioItem>Radio Item 3</SprkRadioItem>
         </SprkFieldset>
         <SprkFieldError id="test-id" />
+      </SprkRadioGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('test-id');
+  });
+
+  it(`should add the grandchild fieldErrorID to the aria-describedby
+  on the fieldset if it isn't present`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkFieldset>
+          <SprkLegend>Radio Group Label</SprkLegend>
+          <SprkRadioItem>Radio Item 1</SprkRadioItem>
+          <SprkRadioItem>Radio Item 2</SprkRadioItem>
+          <SprkRadioItem>Radio Item 3</SprkRadioItem>
+        </SprkFieldset>
+        <div>
+          <SprkFieldError id="test-id" />
+        </div>
       </SprkRadioGroup>,
     );
 
