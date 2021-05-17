@@ -2,7 +2,6 @@ import {
   Directive,
   ElementRef,
   OnInit,
-  HostListener,
   Input,
   HostBinding,
   Renderer2,
