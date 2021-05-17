@@ -31,7 +31,7 @@ describe('SprkSelect:', () => {
     const wrapper = mount(<SprkSelect choices={choices} />);
     expect(
       wrapper.find('.sprk-b-Select').getDOMNode().getAttribute('id'),
-    ).toContain('sprk-');
+    ).toContain('sprk-select-');
   });
 
   it('should add floating label to huge if it has a default value', () => {
@@ -44,6 +44,9 @@ describe('SprkSelect:', () => {
         .getDOMNode()
         .classList.contains('sprk-b-Input--has-floating-label'),
     ).toBe(true);
+    expect(wrapper.find('.sprk-b-Select').getDOMNode().classList.length).toBe(
+      2,
+    );
   });
 
   it('should add floating label to huge if it has a value on change', () => {
@@ -58,6 +61,7 @@ describe('SprkSelect:', () => {
         .getDOMNode()
         .classList.contains('sprk-b-Input--has-floating-label'),
     ).toBe(true);
+    expect(select.getDOMNode().classList.length).toBe(2);
   });
 
   it('should not add floating label if it has a value on change', () => {
@@ -70,6 +74,7 @@ describe('SprkSelect:', () => {
         .getDOMNode()
         .classList.contains('sprk-b-Input--has-floating-label'),
     ).toBe(false);
+    expect(select.getDOMNode().classList.length).toBe(1);
   });
 
   it('should not add floating label to huge if has no value on load', () => {
@@ -82,6 +87,7 @@ describe('SprkSelect:', () => {
         .getDOMNode()
         .classList.contains('sprk-b-Input--has-floating-label'),
     ).toBe(false);
+    expect(select.getDOMNode().classList.length).toBe(1);
   });
 
   it('should run the supplied onChange function', () => {

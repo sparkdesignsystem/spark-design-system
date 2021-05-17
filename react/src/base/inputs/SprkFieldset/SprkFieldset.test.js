@@ -17,8 +17,11 @@ describe('SprkFieldset:', () => {
 
   it('should apply additional classes', () => {
     const expected = 'test-class';
-    const wrapper = shallow(<SprkFieldset additionalClasses={expected} />);
+    const wrapper = mount(<SprkFieldset additionalClasses={expected} />);
     expect(wrapper.find('.sprk-b-Fieldset').hasClass(expected)).toBe(true);
+    expect(wrapper.find('.sprk-b-Fieldset').getDOMNode().classList.length).toBe(
+      2,
+    );
   });
 
   it('should apply analyticsString', () => {

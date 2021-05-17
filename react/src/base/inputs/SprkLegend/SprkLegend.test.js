@@ -26,10 +26,13 @@ describe('SprkLegend:', () => {
   });
 
   it('should apply disabled classes', () => {
-    const wrapper = shallow(<SprkLegend isDisabled />);
+    const wrapper = mount(<SprkLegend isDisabled />);
     expect(
       wrapper.find('.sprk-b-Legend').hasClass('sprk-b-Label--disabled'),
     ).toEqual(true);
+    expect(wrapper.find('.sprk-b-Legend').getDOMNode().classList.length).toBe(
+      3,
+    );
   });
 
   it('should apply analyticsString', () => {
@@ -40,9 +43,21 @@ describe('SprkLegend:', () => {
     );
   });
 
+  it('should not render data-analytics if no value', () => {
+    const wrapper = shallow(<SprkLegend />);
+    expect(wrapper.find('.sprk-b-Legend').prop('data-analytics')).toEqual(
+      undefined,
+    );
+  });
+
   it('should apply data-id', () => {
     const expected = 'test-data-id';
     const wrapper = shallow(<SprkLegend idString={expected} />);
     expect(wrapper.find('.sprk-b-Legend').prop('data-id')).toEqual(expected);
+  });
+
+  it('should not render data-id if no value', () => {
+    const wrapper = shallow(<SprkLegend />);
+    expect(wrapper.find('.sprk-b-Legend').prop('data-id')).toEqual(undefined);
   });
 });

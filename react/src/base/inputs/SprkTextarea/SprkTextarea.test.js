@@ -9,21 +9,33 @@ describe('SprkTextarea:', () => {
   it('should render a textarea with the correct class', () => {
     const wrapper = mount(<SprkTextarea />);
     expect(wrapper.find('.sprk-b-TextArea').length).toBe(1);
+    expect(wrapper.find('.sprk-b-TextArea').getDOMNode().classList.length).toBe(
+      1,
+    );
   });
 
   it('should add classes when additionalClasses has a value', () => {
     const wrapper = mount(<SprkTextarea additionalClasses="sprk-u-mbm" />);
-    expect(wrapper.find('.sprk-b-TextArea.sprk-u-mbm').length).toBe(1);
+    expect(wrapper.find('.sprk-u-mbm').length).toBe(1);
+    expect(wrapper.find('.sprk-b-TextArea').getDOMNode().classList.length).toBe(
+      2,
+    );
   });
 
   it('should add error class when isValid is false', () => {
     const wrapper = mount(<SprkTextarea isValid={false} />);
     expect(wrapper.find('.sprk-b-TextArea--error').length).toBe(1);
+    expect(wrapper.find('.sprk-b-TextArea').getDOMNode().classList.length).toBe(
+      2,
+    );
   });
 
   it('should not add error class when isValid is true', () => {
     const wrapper = mount(<SprkTextarea isValid />);
     expect(wrapper.find('.sprk-b-TextArea--error').length).toBe(0);
+    expect(wrapper.find('.sprk-b-TextArea').getDOMNode().classList.length).toBe(
+      1,
+    );
   });
 
   it('should add disabled attribute when isDisabled is true', () => {
@@ -64,9 +76,20 @@ describe('SprkTextarea:', () => {
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
   });
 
+  it(`should not render data-analytics when
+  analyticsString has no value`, () => {
+    const wrapper = mount(<SprkTextarea />);
+    expect(wrapper.find('[data-analytics]').length).toBe(0);
+  });
+
   it('should assign data-id when idString has a value', () => {
     const wrapper = mount(<SprkTextarea idString="test" />);
     expect(wrapper.find('[data-id="test"]').length).toBe(1);
+  });
+
+  it('should not render data-id when idString has no value', () => {
+    const wrapper = mount(<SprkTextarea />);
+    expect(wrapper.find('[data-id').length).toBe(0);
   });
 
   it('should run the supplied formatter', () => {

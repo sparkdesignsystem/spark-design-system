@@ -14,6 +14,9 @@ describe('SprkTextareaContainer Class Tests:', () => {
   it('should render an element with the correct class', () => {
     const wrapper = mount(<SprkTextareaContainer />);
     expect(wrapper.find('.sprk-b-InputContainer').length).toBe(1);
+    expect(
+      wrapper.find('.sprk-b-InputContainer').getDOMNode().classList.length,
+    ).toBe(1);
   });
 
   it('should add classes when additionalClasses has a value', () => {
@@ -21,6 +24,9 @@ describe('SprkTextareaContainer Class Tests:', () => {
       <SprkTextareaContainer additionalClasses="sprk-u-man" />,
     );
     expect(wrapper.find('.sprk-b-InputContainer.sprk-u-man').length).toBe(1);
+    expect(
+      wrapper.find('.sprk-b-InputContainer').getDOMNode().classList.length,
+    ).toBe(2);
   });
 });
 

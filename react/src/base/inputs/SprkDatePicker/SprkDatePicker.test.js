@@ -108,6 +108,9 @@ describe('SprkDatePicker:', () => {
         .find('.sprk-b-TextInput')
         .hasClass('sprk-b-Input--has-floating-label'),
     ).toBe(true);
+    expect(
+      wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
+    ).toBe(2);
     expect(wrapper.state().hasValue).toBe(true);
   });
 
@@ -123,6 +126,9 @@ describe('SprkDatePicker:', () => {
         .find('.sprk-b-TextInput')
         .hasClass('sprk-b-Input--has-floating-label'),
     ).toBe(false);
+    expect(
+      wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
+    ).toBe(1);
   });
 
   it('should add floating label class to huge text when there is value', () => {
@@ -134,6 +140,9 @@ describe('SprkDatePicker:', () => {
         .find('.sprk-b-TextInput')
         .hasClass('sprk-b-Input--has-floating-label'),
     ).toBe(true);
+    expect(
+      wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
+    ).toBe(2);
   });
 
   it('should run the supplied formatter', () => {
