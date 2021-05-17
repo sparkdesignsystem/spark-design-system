@@ -1,5 +1,6 @@
 import React from 'react';
 import SprkFooter from './SprkFooter';
+import SprkLink from '../../base/links/SprkLink';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
@@ -7,7 +8,7 @@ import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFo
 
 export default {
   title: 'Components/Footer',
-  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
+  decorators: [(story) => <div>{story()}</div>],
   component: SprkFooter,
   parameters: {
     subcomponents: {
@@ -27,42 +28,42 @@ must be present.
 
 export const defaultStory = () => (
   <SprkFooter
-    globalItems= {{
+    globalItems={{
       heading: 'Our Sister Companies',
       items: [
         {
           mediaType: 'image',
-          src:
-            'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
+          src: 'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
           altText: 'Rocket Mortgage by Quicken Loans Logo',
-          description: 'Buy a home, refinance, or manage your mortgage online with America\'s largest mortgage lender',
+          description:
+            "Buy a home, refinance, or manage your mortgage online with America's largest mortgage lender",
           element: 'a',
           mediaHref: '#nogo',
         },
         {
           mediaType: 'image',
-          src:
-            'https://spark-assets.netlify.app/rocket-loans-white.svg',
+          src: 'https://spark-assets.netlify.app/rocket-loans-white.svg',
           altText: 'Rocket Loans Logo',
-          description: 'Get a personal loan to consolidate debt, renovate your home and more',
+          description:
+            'Get a personal loan to consolidate debt, renovate your home and more',
           element: 'a',
           mediaHref: '#nogo',
         },
         {
           mediaType: 'image',
-          src:
-            'https://spark-assets.netlify.app/rocket-homes-white.svg',
+          src: 'https://spark-assets.netlify.app/rocket-homes-white.svg',
           altText: 'Rocket Homes Logo',
-          description: 'Get a real estate agent handpicked for you and search the latest home listings',
+          description:
+            'Get a real estate agent handpicked for you and search the latest home listings',
           element: 'a',
           mediaHref: '#nogo',
         },
         {
           mediaType: 'image',
-          src:
-            'https://spark-assets.netlify.app/rocket-hq-white.svg',
+          src: 'https://spark-assets.netlify.app/rocket-hq-white.svg',
           altText: 'Rocket HQ Logo',
-          description: 'Access tools and articles that can help you reach your financial goals',
+          description:
+            'Access tools and articles that can help you reach your financial goals',
           element: 'a',
           mediaHref: '#nogo',
         },
@@ -159,28 +160,32 @@ export const defaultStory = () => (
           name: 'facebook',
           screenReaderText: 'Facebook',
           element: 'a',
-          addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
+          addClasses:
+            'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
         },
         {
           href: '#nogo',
           name: 'instagram',
           screenReaderText: 'Instagram',
           element: 'a',
-          addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
+          addClasses:
+            'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
         },
         {
           href: '#nogo',
           name: 'twitter',
           screenReaderText: 'Twitter',
           element: 'a',
-          addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
+          addClasses:
+            'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
         },
         {
           href: '#nogo',
           name: 'youtube',
           screenReaderText: 'YouTube',
           element: 'a',
-          addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
+          addClasses:
+            'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color',
         },
       ],
     }}
@@ -189,15 +194,13 @@ export const defaultStory = () => (
       images: [
         {
           href: '#nogo',
-          src:
-            'https://spark-assets.netlify.app/spark-logo-mark.svg',
+          src: 'https://spark-assets.netlify.app/spark-logo-mark.svg',
           altText: 'Spark Logo',
           element: 'a',
         },
         {
           href: '#nogo',
-          src:
-            'https://spark-assets.netlify.app/spark-logo-mark.svg',
+          src: 'https://spark-assets.netlify.app/spark-logo-mark.svg',
           altText: 'Spark Logo',
           element: 'a',
         },
@@ -244,6 +247,21 @@ export const defaultStory = () => (
         text: 'Lorem ipsum dolor sit amet, consectetur.',
       },
     ]}
+    additionalDisclaimer={
+      <p
+        className="
+          sprk-o-Stack__item
+          sprk-b-TypeBodyFour
+          sprk-c-Footer__text
+        "
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit{' '}
+        <SprkLink href="noGo" additionalClasses="sprk-b-Link--footer">
+          inline link
+        </SprkLink>{' '}
+        accusantium doloremque laudantiu
+      </p>
+    }
   />
 );
 
