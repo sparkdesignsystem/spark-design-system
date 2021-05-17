@@ -256,7 +256,7 @@ export const defaultStory = () => (
         "
       >
         Sed ut perspiciatis unde omnis iste natus error sit{' '}
-        <SprkLink href="#noGo" additionalClasses="sprk-b-Link--footer">
+        <SprkLink href="#nogo" additionalClasses="sprk-b-Link--footer">
           inline link
         </SprkLink>{' '}
         accusantium doloremque laudantiu
