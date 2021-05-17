@@ -89,7 +89,7 @@ describe('SprkTextarea:', () => {
 
   it('should not render data-id when idString has no value', () => {
     const wrapper = mount(<SprkTextarea />);
-    expect(wrapper.find('[data-id').length).toBe(0);
+    expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
   it('should run the supplied formatter', () => {
