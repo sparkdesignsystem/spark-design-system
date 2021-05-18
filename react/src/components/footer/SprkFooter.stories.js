@@ -1,6 +1,8 @@
 import React from 'react';
 import SprkFooter from './SprkFooter';
 import SprkLink from '../../base/links/SprkLink';
+import SprkStack from '../../objects/stack/SprkStack';
+import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
@@ -248,19 +250,11 @@ export const defaultStory = () => (
       },
     ]}
     additionalDisclaimer={
-      <p
-        className="
-          sprk-o-Stack__item
-          sprk-b-TypeBodyFour
-          sprk-c-Footer__text
-        "
-      >
-        Sed ut perspiciatis unde omnis iste natus error sit{' '}
-        <SprkLink href="#nogo" additionalClasses="sprk-b-Link--footer">
-          inline link
-        </SprkLink>{' '}
-        accusantium doloremque laudantiu
-      </p>
+      <SprkStackItem>
+        <p className="sprk-b-TypeBodyFour sprk-c-Footer__text">
+          STACKS Sed ut perspiciatis unde omnis iste natus error sit <SprkLink href="#nogo" additionalClasses="sprk-b-Link--footer"> inline link </SprkLink> accusantium doloremque laudantiu.
+        </p>
+      </SprkStackItem>
     }
   />
 );

@@ -3,7 +3,8 @@ import { SprkFooterModule } from './sprk-footer.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
-import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
+import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
+import { SprkStackItemModule} from '../../directives/sprk-stack-item/sprk-stack-item.module'
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
@@ -27,6 +28,8 @@ const modules = {
   imports: [
     SprkFooterModule,
     SprkLinkDirectiveModule,
+    SprkStackModule,
+    SprkStackItemModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {
@@ -260,14 +263,18 @@ export const defaultStory = () => ({
         }
       ]"
     >
-      <div
+      <sprk-stack
         additional-disclaimer-slot
-        class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large"
+        itemSpacing="large"
+        sprkStackItem
       >
-        <p class="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text">
+        <p
+          sprkStackItem
+          class="sprk-b-TypeBodyFour sprk-c-Footer__text"
+        >
           Sed ut perspiciatis unde omnis iste natus error sit <a href="#nogo" sprkLink class="sprk-b-Link--footer"> inline link</a> accusantium doloremque laudantium
         </p>
-      </div>
+      </sprk-stack>
     </sprk-footer>
   `,
 });
