@@ -547,8 +547,6 @@ public class SparkDesignTokens {
     public static let sprkLineHeightDisplayTwo = CGFloat(16.00)
     public static let sprkLineHeightDisplayTwoWide = CGFloat(16.00)
     public static let sprkLinkDisabledUnderlineWidth = CGFloat(0.00)
-    public static let sprkLinkFooterHoverAfterLeft = CGFloat(0.00)
-    public static let sprkLinkFooterHoverAfterWidth = CGFloat(1600.00)
     public static let sprkLinkFooterHoverUnderlineWidth = CGFloat(2.00)
     public static let sprkLinkFooterUnderlineWidth = CGFloat(2.00)
     public static let sprkLinkHasIconUnderlineWidth = CGFloat(0.00)
