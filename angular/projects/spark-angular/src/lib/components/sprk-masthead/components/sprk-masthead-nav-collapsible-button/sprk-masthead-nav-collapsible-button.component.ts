@@ -105,7 +105,7 @@ export class SprkMastheadNavCollapsibleButtonComponent {
    * When the button is clicked this event will be emitted.
    */
   @Output()
-  collapsibleNavButtonEvent = new EventEmitter<boolean>();
+  readonly collapsibleNavButtonEvent = new EventEmitter<boolean>();
 
   /**
    * Emits a boolean value that tells is the buttonn is open or closed

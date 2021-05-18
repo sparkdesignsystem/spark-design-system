@@ -56,6 +56,22 @@ export { SprkMastheadSelectorComponent } from './lib/components/sprk-masthead/co
 export { SprkMastheadSelectorModule } from './lib/components/sprk-masthead/components/sprk-masthead-selector/sprk-masthead-selector.module';
 export { SprkMastheadComponent } from './lib/components/sprk-masthead/sprk-masthead.component';
 export { SprkMastheadModule } from './lib/components/sprk-masthead/sprk-masthead.module';
+export { SprkMastheadNavCollapsibleButtonComponent } from './lib/components/sprk-masthead/components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.component';
+export { SprkMastheadNavCollapsibleButtonModule } from './lib/components/sprk-masthead/components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.module';
+export { SprkMastheadBrandingDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-branding/sprk-masthead-branding.directive';
+export { SprkMastheadBrandingModule } from './lib/components/sprk-masthead/directives/sprk-masthead-branding/sprk-masthead-branding.module';
+export { SprkMastheadContentDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-content/sprk-masthead-content.directive';
+export { SprkMastheadContentModule } from './lib/components/sprk-masthead/directives/sprk-masthead-content/sprk-masthead-content.module';
+export { SprkMastheadLinkDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-link/sprk-masthead-link.directive';
+export { SprkMastheadLinkModule } from './lib/components/sprk-masthead/directives/sprk-masthead-link/sprk-masthead-link.module';
+export { SprkMastheadNavBarDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-bar/sprk-masthead-nav-bar.directive';
+export { SprkMastheadNavBarModule } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-bar/sprk-masthead-nav-bar.module';
+export { SprkMastheadNavCollapsibleDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
+export { SprkMastheadNavCollapsibleModule } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.module';
+export { SprkMastheadNavItemDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-item/sprk-masthead-nav-item.directive';
+export { SprkMastheadNavItemModule } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-item/sprk-masthead-nav-item.module';
+export { SprkMastheadNavItemsDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-items/sprk-masthead-nav-items.directive';
+export { SprkMastheadNavItemsModule } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-items/sprk-masthead-nav-items.module';
 export { SprkModalComponent } from './lib/components/sprk-modal/sprk-modal.component';
 export { SprkModalModule } from './lib/components/sprk-modal/sprk-modal.module';
 export { SprkOrderedListComponent } from './lib/components/sprk-ordered-list/sprk-ordered-list.component';
@@ -268,3 +284,4 @@ export { SprkPromoHeadingDirective } from './lib/components/sprk-promo/directive
 export { SprkPromoHeadingModule } from './lib/components/sprk-promo/directives/sprk-promo-heading/sprk-promo-heading.module';
 export { SprkPromoSubheadingDirective } from './lib/components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.directive';
 export { SprkPromoSubheadingModule } from './lib/components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.module';
+export { isElementVisible } from './lib/utilities/isElementVisible/isElementVisible';
