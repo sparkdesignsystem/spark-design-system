@@ -252,7 +252,7 @@ export const defaultStory = () => (
     additionalDisclaimer={
       <SprkStackItem>
         <p className="sprk-b-TypeBodyFour sprk-c-Footer__text">
-          STACKS Sed ut perspiciatis unde omnis iste natus error sit <SprkLink href="#nogo" additionalClasses="sprk-b-Link--footer"> inline link </SprkLink> accusantium doloremque laudantiu.
+          STACKS Sed ut perspiciatis unde omnis iste natus error sit <SprkLink href="#nogo" additionalClasses="sprk-b-Link--inline-light"> inline link </SprkLink> accusantium doloremque laudantiu.
         </p>
       </SprkStackItem>
     }

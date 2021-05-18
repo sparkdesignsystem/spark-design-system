@@ -588,7 +588,7 @@ export const defaultStory = () => {
             Ut enim ad
             <a
               href="#nogo"
-              class="sprk-b-Link sprk-b-Link--footer"
+              class="sprk-b-Link sprk-b-Link--inline-light"
             >
               inline link
             </a>

@@ -340,9 +340,9 @@
         "themable": true
       }
     },
-    "footer": {
+    "inline-light": {
       "color": {
-        "comment": "The color value of inline Footer Links.",
+        "comment": "The color value of inline Links on a dark background.",
         "value": "{white.value}",
         "attributes": {
           "category": "color"
@@ -352,19 +352,19 @@
       },
       "hover": {
         "cursor": {
-          "comment": "The cursor of inline Footer Links on hover.",
+          "comment": "The cursor of inline Links on a dark background on hover.",
           "value": "pointer",
           "file": "settings",
           "themable": true
         },
         "font-weight": {
-          "comment": "The font weight of inline Footer Links on hover.",
+          "comment": "The font weight of inline Links on a dark background on hover.",
           "value": "{font.weight.body.two.value}",
           "file": "settings",
           "themable": true
         },
         "color": {
-          "comment": "The color of inline Footer Links on hover.",
+          "comment": "The color of inline Links on a dark background on hover.",
           "value": "{wisteria.value}",
           "attributes": {
             "category": "color"
@@ -374,7 +374,7 @@
         },
         "underline": {
           "color": {
-            "comment": "The underline color value of inline Footer Links on hover.",
+            "comment": "The underline color value of inline Links on a dark background on hover.",
             "value": "{wisteria.value}",
             "attributes": {
               "category": "color"
@@ -383,7 +383,7 @@
             "themable": true
           },
           "width": {
-            "comment": "The underline width value of inline Footer Links on hover.",
+            "comment": "The underline width value inline Links on a dark background on hover.",
             "value": "0.125rem",
             "attributes": {
               "category": "size"
@@ -393,8 +393,8 @@
           }
         },
         "border-bottom": {
-          "comment": "The underline style of inline Footer Links on hover.",
-          "value": "{link.footer.hover.underline.width.value} {link.border.bottom-style.value} {link.footer.hover.underline.color.value}",
+          "comment": "The underline style of inline Links on a dark background on hover.",
+          "value": "{link.inline-light.hover.underline.width.value} {link.border.bottom-style.value} {link.inline-light.hover.underline.color.value}",
           "attributes": {
             "category": "content"
           },
@@ -404,7 +404,7 @@
       },
       "underline": {
         "color": {
-          "comment": "The underline color value of inline Footer Links.",
+          "comment": "The underline color value of inline Links on a dark background",
           "value": "{white.value}",
           "attributes": {
             "category": "content"
@@ -413,7 +413,7 @@
           "themable": true
         },
         "width": {
-          "comment": "The underline width value of inline Footer Links.",
+          "comment": "The underline width value inline Links on a dark background.",
           "value": "0.125rem",
           "attributes": {
             "category": "size"
@@ -423,14 +423,14 @@
         }
       },
       "font-weight": {
-        "comment": "The font weight of inline Footer Links.",
+        "comment": "The font weight of inline Links on a dark background.",
         "value": "{font.weight.body.two.value}",
         "file": "settings",
         "themable": true
       },
       "border-bottom": {
-        "comment": "The underline style of inline Footer Links.",
-        "value": "{link.footer.underline.width.value} {link.border.bottom-style.value} {link.footer.underline.color.value}",
+        "comment": "The underline style of inline Links on a dark background.",
+        "value": "{link.inline-light.underline.width.value} {link.border.bottom-style.value} {link.inline-light.underline.color.value}",
         "attributes": {
           "category": "content"
         },
@@ -438,7 +438,7 @@
         "themable": true
       },
       "visited-border-bottom": {
-        "comment": "The underline style of visited Light Links.",
+        "comment": "The underline style of visited inline Links on a dark background.",
         "value": "{link.light.underline.width.value} {link.border.bottom-style.value} {link.light.underline.color.value}",
         "attributes": {
           "category": "content"
