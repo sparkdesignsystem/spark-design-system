@@ -70,6 +70,7 @@ describe('SprkAutocompleteComponent', () => {
     expect(
       resultsElement.classList.contains('sprk-c-Autocomplete__results--hidden'),
     ).toEqual(true);
+    expect(resultsElement.classList.length).toEqual(2);
     expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
       'false',
     );
@@ -82,6 +83,7 @@ describe('SprkAutocompleteComponent', () => {
     expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
       'true',
     );
+    expect(resultsElement.classList.length).toEqual(1);
   });
 
   it('should emit openedEvent when calling showResults if results exists', (done) => {
@@ -121,6 +123,7 @@ describe('SprkAutocompleteComponent', () => {
     expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
       'true',
     );
+    expect(resultsElement.classList.length).toEqual(1);
 
     component.hideResults();
     fixture.detectChanges();
@@ -130,6 +133,7 @@ describe('SprkAutocompleteComponent', () => {
     expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
       'false',
     );
+    expect(resultsElement.classList.length).toEqual(2);
   });
 
   it('should emit closedEvent when calling hideResults if results exists', (done) => {

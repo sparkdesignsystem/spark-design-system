@@ -23,6 +23,7 @@ describe('Spark Autocomplete Result Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let element: HTMLElement;
+  let emptyElement: HTMLElement;
   let directiveElement;
 
   beforeEach(async(() => {
@@ -32,7 +33,8 @@ describe('Spark Autocomplete Result Directive', () => {
 
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelector('li');
+    element = fixture.nativeElement.querySelectorAll('li')[0];
+    emptyElement = fixture.nativeElement.querySelectorAll('li')[1];
 
     directiveElement = fixture.debugElement
       .query(By.directive(SprkAutocompleteResultDirective))
@@ -48,13 +50,16 @@ describe('Spark Autocomplete Result Directive', () => {
   });
 
   it('should add the correct base class', () => {
-    expect(element.classList.contains('sprk-c-Autocomplete__result')).toEqual(
-      true,
-    );
+    expect(
+      emptyElement.classList.contains('sprk-c-Autocomplete__result'),
+    ).toEqual(true);
+
+    expect(emptyElement.classList.length).toEqual(1);
   });
 
   it('should add classes if additionalClasses has a value', () => {
     expect(element.classList.contains('testClass')).toEqual(true);
+    expect(element.classList.length).toEqual(2);
   });
 
   it('should add a value for data-analytics if analyticsString has a value', () => {
@@ -83,6 +88,7 @@ describe('Spark Autocomplete Result Directive', () => {
     expect(
       element.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toEqual(true);
+    expect(element.classList.length).toEqual(3);
   });
 
   it('should not add the class and aria attribute if isHighlighted is false', () => {
@@ -93,6 +99,7 @@ describe('Spark Autocomplete Result Directive', () => {
     expect(
       element.classList.contains('sprk-c-Autocomplete__result--active'),
     ).toEqual(false);
+    expect(element.classList.length).toEqual(2);
   });
 
   it('should scroll the parentNode when setting isHighlighted if necessary', () => {

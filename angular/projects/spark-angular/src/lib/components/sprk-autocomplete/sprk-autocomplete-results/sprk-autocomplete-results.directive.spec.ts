@@ -11,6 +11,7 @@ import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results.di
       idString="resultsId1"
       additionalClasses="testClass"
     ></ul>
+    <ul sprkAutocompleteResults></ul>
   `,
 })
 class TestComponent {}
@@ -19,6 +20,7 @@ describe('Spark Autocomplete Results Directive', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let element: HTMLElement;
+  let emptyElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -27,7 +29,8 @@ describe('Spark Autocomplete Results Directive', () => {
 
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelector('ul');
+    element = fixture.nativeElement.querySelectorAll('ul')[0];
+    emptyElement = fixture.nativeElement.querySelectorAll('ul')[1];
 
     fixture.detectChanges();
   }));
@@ -37,13 +40,15 @@ describe('Spark Autocomplete Results Directive', () => {
   });
 
   it('should add the correct base class', () => {
-    expect(element.classList.contains('sprk-c-Autocomplete__results')).toEqual(
-      true,
-    );
+    expect(
+      emptyElement.classList.contains('sprk-c-Autocomplete__results'),
+    ).toEqual(true);
+    expect(emptyElement.classList.length).toEqual(1);
   });
 
   it('should add classes if additionalClasses has a value', () => {
     expect(element.classList.contains('testClass')).toEqual(true);
+    expect(element.classList.length).toEqual(2);
   });
 
   it('should add a value for data-analytics if analyticsString has a value', () => {
