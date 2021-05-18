@@ -26,7 +26,7 @@ describe('SprkDatePicker:', () => {
     ).toBe(3);
   });
 
-  it('should add class when isValid is false', () => {
+  it('should add the error class when isValid is false', () => {
     const wrapper = mount(<SprkDatePicker isValid={false} />);
 
     expect(
