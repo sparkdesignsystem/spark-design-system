@@ -5,7 +5,7 @@ import uniqueId from 'lodash/uniqueId';
 import SprkIcon from '../../../components/icons/SprkIcon';
 
 /**
- * TODO: Remove this component as part of Issue 3785.
+ * TODO: Remove this component as part of Issue #3785.
  */
 
 const SprkErrorContainer = ({
