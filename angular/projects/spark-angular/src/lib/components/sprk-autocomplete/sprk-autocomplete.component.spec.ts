@@ -263,13 +263,13 @@ describe('SprkAutocompleteComponent', () => {
 
     fixture.detectChanges();
 
-    expect(component.resultItems.toArray()[3].isHighlighted).toEqual(true);
+    expect(component.resultItems.toArray()[3].isSelected).toEqual(true);
 
     component.hideResults();
 
     fixture.detectChanges();
 
-    expect(component.resultItems.toArray()[3].isHighlighted).toEqual(false);
+    expect(component.resultItems.toArray()[3].isSelected).toEqual(false);
   });
 
   it('should call retreatHighlightedItem when Up is pressed and isOpen', () => {
@@ -324,7 +324,7 @@ describe('SprkAutocompleteComponent', () => {
     );
 
     fixture.detectChanges();
-    expect(component.resultItems.toArray()[3].isHighlighted).toEqual(true);
+    expect(component.resultItems.toArray()[3].isSelected).toEqual(true);
   });
 
   it('should highlight the third item when retreatHighlightedItem is called and isOpen and fourth item is highlighted', () => {
@@ -339,7 +339,7 @@ describe('SprkAutocompleteComponent', () => {
     );
 
     fixture.detectChanges();
-    expect(component.resultItems.toArray()[3].isHighlighted).toEqual(true);
+    expect(component.resultItems.toArray()[3].isSelected).toEqual(true);
 
     document.dispatchEvent(
       new KeyboardEvent('keydown', {
@@ -348,7 +348,7 @@ describe('SprkAutocompleteComponent', () => {
     );
 
     fixture.detectChanges();
-    expect(component.resultItems.toArray()[2].isHighlighted).toEqual(true);
+    expect(component.resultItems.toArray()[2].isSelected).toEqual(true);
   });
 
   it('should call advanceHighlightedItem when Down is pressed and isOpen', () => {
@@ -403,7 +403,7 @@ describe('SprkAutocompleteComponent', () => {
     );
 
     fixture.detectChanges();
-    expect(component.resultItems.toArray()[0].isHighlighted).toEqual(true);
+    expect(component.resultItems.toArray()[0].isSelected).toEqual(true);
   });
 
   it('should highlight the second item when Down is pressed and isOpen and first item is selected', () => {
@@ -418,7 +418,7 @@ describe('SprkAutocompleteComponent', () => {
     );
 
     fixture.detectChanges();
-    expect(component.resultItems.toArray()[0].isHighlighted).toEqual(true);
+    expect(component.resultItems.toArray()[0].isSelected).toEqual(true);
 
     document.dispatchEvent(
       new KeyboardEvent('keydown', {
@@ -427,7 +427,7 @@ describe('SprkAutocompleteComponent', () => {
     );
 
     fixture.detectChanges();
-    expect(component.resultItems.toArray()[1].isHighlighted).toEqual(true);
+    expect(component.resultItems.toArray()[1].isSelected).toEqual(true);
   });
 
   it('should highlight the first item when Down is pressed and isOpen and last item is highlighted', () => {
@@ -442,7 +442,7 @@ describe('SprkAutocompleteComponent', () => {
     );
 
     fixture.detectChanges();
-    expect(component.resultItems.toArray()[3].isHighlighted).toEqual(true);
+    expect(component.resultItems.toArray()[3].isSelected).toEqual(true);
 
     document.dispatchEvent(
       new KeyboardEvent('keydown', {
@@ -451,7 +451,7 @@ describe('SprkAutocompleteComponent', () => {
     );
 
     fixture.detectChanges();
-    expect(component.resultItems.toArray()[0].isHighlighted).toEqual(true);
+    expect(component.resultItems.toArray()[0].isSelected).toEqual(true);
   });
 
   it('should not set aria-activedescendant when calling highlightListItem with no listItemElement', () => {
@@ -554,7 +554,7 @@ describe('SprkAutocompleteComponent', () => {
     );
 
     fixture.detectChanges();
-    expect(component.resultItems.toArray()[0].isHighlighted).toEqual(true);
+    expect(component.resultItems.toArray()[0].isSelected).toEqual(true);
     expect(
       component.input.ref.nativeElement.getAttribute('aria-activedescendant'),
     ).toEqual('item1');

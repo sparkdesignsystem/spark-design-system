@@ -164,7 +164,7 @@ export class SprkAutocompleteComponent
    */
   removeAllHighlights(): void {
     this.resultItems.forEach((element, index) => {
-      element.isHighlighted = false;
+      element.isSelected = false;
     });
   }
 
@@ -176,7 +176,7 @@ export class SprkAutocompleteComponent
    */
   highlightListItem(listItemElement): void {
     if (listItemElement) {
-      listItemElement.isHighlighted = true;
+      listItemElement.isSelected = true;
 
       // set aria-activedescendant on the input to the id of the
       // highlighted item
@@ -196,7 +196,7 @@ export class SprkAutocompleteComponent
    */
   selectHighlightedListItem(): void {
     var selectedElement = this.resultItems.filter(
-      (element) => element.isHighlighted,
+      (element) => element.isSelected,
     )[0];
     var selectedId = selectedElement.ref.nativeElement.id;
     this.itemSelectedEvent.emit(selectedId);

@@ -54,7 +54,7 @@ export class SprkAutocompleteResultDirective implements OnInit {
    * @ignore
    *
    */
-  private _isHighlighted: boolean;
+  private _isSelected: boolean;
 
   /**
    * If true, this Autocomplete result will be highlighted.
@@ -62,16 +62,16 @@ export class SprkAutocompleteResultDirective implements OnInit {
   @HostBinding('class.sprk-c-Autocomplete__result--active')
   @HostBinding('attr.aria-selected')
   @Input()
-  set isHighlighted(value: boolean) {
+  set isSelected(value: boolean) {
     /**
      * Normally Spark would put this kind of behavior in ngOnChanges, but
      * that lifecycle event is not triggered when an Input is updated directly
      * from a parent component. This logic is moved into a setter on the Input
      * so that it is triggered when sprk-autocomplete changes this value.
      */
-    this._isHighlighted = value;
+    this._isSelected = value;
 
-    if (this._isHighlighted) {
+    if (this._isSelected) {
       var result = this.ref.nativeElement;
       const listItemTop = result.getBoundingClientRect().top;
       const listItemBottom = result.getBoundingClientRect().bottom;
@@ -88,8 +88,8 @@ export class SprkAutocompleteResultDirective implements OnInit {
       }
     }
   }
-  get isHighlighted() {
-    return this._isHighlighted;
+  get isSelected() {
+    return this._isSelected;
   }
 
   /**

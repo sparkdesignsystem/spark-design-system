@@ -80,8 +80,8 @@ describe('Spark Autocomplete Result Directive', () => {
     expect(called).toEqual(true);
   });
 
-  it('should add the class and aria attribute if isHighlighted is true', () => {
-    directiveElement.isHighlighted = true;
+  it('should add the class and aria attribute if isSelected is true', () => {
+    directiveElement.isSelected = true;
     fixture.detectChanges();
 
     expect(element.getAttribute('aria-selected')).toEqual('true');
@@ -91,8 +91,8 @@ describe('Spark Autocomplete Result Directive', () => {
     expect(element.classList.length).toEqual(3);
   });
 
-  it('should not add the class and aria attribute if isHighlighted is false', () => {
-    directiveElement.isHighlighted = false;
+  it('should not add the class and aria attribute if isSelected is false', () => {
+    directiveElement.isSelected = false;
     fixture.detectChanges();
 
     expect(element.getAttribute('aria-selected')).toEqual('false');
@@ -102,7 +102,7 @@ describe('Spark Autocomplete Result Directive', () => {
     expect(element.classList.length).toEqual(2);
   });
 
-  it('should scroll the parentNode when setting isHighlighted if necessary', () => {
+  it('should scroll the parentNode when setting isSelected if necessary', () => {
     const listItem2 = fixture.nativeElement.querySelectorAll(
       '.sprk-c-Autocomplete__result',
     )[1];
@@ -117,7 +117,7 @@ describe('Spark Autocomplete Result Directive', () => {
       return { top: 24 };
     };
 
-    directiveElement.isHighlighted = true;
+    directiveElement.isSelected = true;
     fixture.detectChanges();
 
     // expect the child element to be scrolled into view
