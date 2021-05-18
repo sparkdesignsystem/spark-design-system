@@ -68,7 +68,7 @@ class SprkInput extends Component {
 
 SprkInput.propTypes = {
   /**
-   * Determines the style of the input container.
+   * Determines the variant of the input.
    * Supplying no value will cause
    * the default styles to be used.
    */
