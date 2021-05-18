@@ -31,7 +31,7 @@ SprkFieldError.propTypes = {
   children: PropTypes.node,
   /**
    * Assigned to the `id` attribute
-   * of the rendered input element.
+   * of the rendered component.
    * A custom ID will
    * be added if this is not supplied.
    */
