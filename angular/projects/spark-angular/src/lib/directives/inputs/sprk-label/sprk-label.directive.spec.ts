@@ -9,9 +9,6 @@ import { SprkLabelDirective } from './sprk-label.directive';
     <label sprkLabel idString="test-str" analyticsString="test">
       Label!
     </label>
-    <label sprkLabel hasIcon="true">
-      Label!
-    </label>
     <label sprkLabel isDisabled="true">
       Label!
     </label>
@@ -29,7 +26,6 @@ describe('SprkLabelDirective', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let label: DebugElement;
-  let labelHasIcon: HTMLElement;
   let labelDisabled: HTMLElement;
   let labelHidden: HTMLElement;
   let labelMonetary: HTMLElement;
@@ -43,10 +39,9 @@ describe('SprkLabelDirective', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
     label = fixture.debugElement.query(By.css('label'));
-    labelHasIcon = fixture.nativeElement.querySelectorAll('label')[1];
-    labelDisabled = fixture.nativeElement.querySelectorAll('label')[2];
-    labelHidden = fixture.nativeElement.querySelectorAll('label')[3];
-    labelMonetary = fixture.nativeElement.querySelectorAll('label')[4];
+    labelDisabled = fixture.nativeElement.querySelectorAll('label')[1];
+    labelHidden = fixture.nativeElement.querySelectorAll('label')[2];
+    labelMonetary = fixture.nativeElement.querySelectorAll('label')[3];
   }));
 
   it('should add the correct label classes to the applied element', () => {

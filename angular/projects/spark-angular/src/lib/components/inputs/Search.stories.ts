@@ -62,7 +62,6 @@ export const searchInput = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label
           for="search"
-          hasIcon="true"
           isHidden="true"
           sprkLabel
         >
@@ -108,7 +107,6 @@ export const invalidSearchInput = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label
           for="invalid-search"
-          hasIcon="true"
           isHidden="true"
           sprkLabel
         >
@@ -165,7 +163,6 @@ export const disabledSearchInput = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label
           for="disabled-search"
-          hasIcon="true"
           isHidden="true"
           isDisabled="true"
           sprkLabel
