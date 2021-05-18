@@ -45,11 +45,7 @@ export const defaultStory = () => (
           sprk-b-InputContainer__icon"
         aria-hidden="true"
       />
-      <SprkDatePicker
-        id="datepicker-1"
-        placeholder="01/01/2021"
-        additionalClasses="sprk-b-TextInput--has-svg-icon"
-      />
+      <SprkDatePicker id="datepicker-1" placeholder="01/01/2021" />
     </div>
   </SprkInputContainer>
 );
@@ -75,7 +71,6 @@ export const invalidDatePicker = () => (
         id="datepicker-2"
         isValid={false}
         placeholder="01/01/2021"
-        additionalClasses="sprk-b-TextInput--has-svg-icon"
         ariaDescribedBy="invalid-date"
       />
     </div>
@@ -115,12 +110,7 @@ export const disabledDatePicker = () => (
           sprk-c-Icon--stroke-current-color sprk-b-InputContainer__icon"
         aria-hidden="true"
       />
-      <SprkDatePicker
-        id="datepicker-3"
-        isDisabled
-        placeholder="01/01/2021"
-        additionalClasses="sprk-b-TextInput--has-svg-icon"
-      />
+      <SprkDatePicker id="datepicker-3" isDisabled placeholder="01/01/2021" />
     </div>
   </SprkInputContainer>
 );

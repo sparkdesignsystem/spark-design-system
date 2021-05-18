@@ -10,9 +10,10 @@ describe('SprkDatePicker:', () => {
     const wrapper = mount(<SprkDatePicker />);
 
     expect(wrapper.find('.sprk-b-TextInput').length).toBe(1);
+    expect(wrapper.find('.sprk-b-TextInput--has-svg-icon').length).toBe(1);
     expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
-    ).toBe(1);
+    ).toBe(2);
     expect(wrapper.state().hasValue).toBe(false);
   });
 
@@ -22,7 +23,7 @@ describe('SprkDatePicker:', () => {
     expect(wrapper.find('.sprk-b-TextInput').hasClass('sprk-u-man')).toBe(true);
     expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
-    ).toBe(2);
+    ).toBe(3);
   });
 
   it('should add class when isValid is false', () => {
@@ -33,7 +34,7 @@ describe('SprkDatePicker:', () => {
     ).toBe(true);
     expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
-    ).toBe(2);
+    ).toBe(3);
   });
 
   it('should assign data-analytics when analyticsString has a value', () => {
@@ -109,6 +110,11 @@ describe('SprkDatePicker:', () => {
         .hasClass('sprk-b-Input--has-floating-label'),
     ).toBe(true);
     expect(
+      wrapper
+        .find('.sprk-b-TextInput')
+        .hasClass('sprk-b-TextInput--has-svg-icon'),
+    ).toBe(false);
+    expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
     ).toBe(2);
     expect(wrapper.state().hasValue).toBe(true);
@@ -127,6 +133,11 @@ describe('SprkDatePicker:', () => {
         .hasClass('sprk-b-Input--has-floating-label'),
     ).toBe(false);
     expect(
+      wrapper
+        .find('.sprk-b-TextInput')
+        .hasClass('sprk-b-TextInput--has-svg-icon'),
+    ).toBe(false);
+    expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
     ).toBe(1);
   });
@@ -140,6 +151,11 @@ describe('SprkDatePicker:', () => {
         .find('.sprk-b-TextInput')
         .hasClass('sprk-b-Input--has-floating-label'),
     ).toBe(true);
+    expect(
+      wrapper
+        .find('.sprk-b-TextInput')
+        .hasClass('sprk-b-TextInput--has-svg-icon'),
+    ).toBe(false);
     expect(
       wrapper.find('.sprk-b-TextInput').getDOMNode().classList.length,
     ).toBe(2);

@@ -76,6 +76,7 @@ class SprkDatePicker extends Component {
         className={classNames('sprk-b-TextInput', additionalClasses, {
           'sprk-b-TextInput--error': !isValid,
           'sprk-b-Input--has-floating-label': hasValue && variant === 'huge',
+          'sprk-b-TextInput--has-svg-icon': variant !== 'huge',
         })}
         disabled={isDisabled}
         ref={this.datePickerInputRef}
