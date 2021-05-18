@@ -70,7 +70,7 @@ SprkInput.propTypes = {
   /**
    * Determines the variant of the input.
    * Supplying no value will cause
-   * the default styles to be used.
+   * the default input to be used.
    */
   variant: PropTypes.oneOf(['huge']),
   /**
