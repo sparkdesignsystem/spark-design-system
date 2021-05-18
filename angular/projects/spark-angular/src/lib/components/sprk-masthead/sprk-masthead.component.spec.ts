@@ -18,6 +18,8 @@ import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component'
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
 import { SprkMastheadLinkDirective } from './directives/sprk-masthead-link/sprk-masthead-link.directive';
+import { Router, NavigationEnd, RouterEvent } from '@angular/router';
+import { ReplaySubject } from 'rxjs';
 
 @Component({
   selector: 'sprk-test',
@@ -641,10 +643,16 @@ describe('SprkMastheadComponent', () => {
   let componentElementNoCollapsibleNav: HTMLElement;
   let collapsibleNavButtonNoCollapsibleNav: HTMLElement;
   let collapsibleNavElNoCollapsibleNav: HTMLElement;
+  let eventsSub = new ReplaySubject<RouterEvent>(1);
+  const routerStub = {
+    events: eventsSub,
+    url: '/test',
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, BrowserAnimationsModule],
+      imports: [BrowserAnimationsModule, RouterTestingModule.withRoutes([])],
+      providers: [{ provide: Router, useValue: routerStub }],
       declarations: [
         SprkMastheadComponent,
         SprkIconComponent,
@@ -721,6 +729,11 @@ describe('SprkMastheadComponent', () => {
 
   it('should show the menu icon if a collapsible nav is present', () => {
     expect(collapsibleNavButton).toBeTruthy();
+  });
+
+  it('should not show the menu icon if there is no collapsible nav', () => {
+    expect(collapsibleNavButtonNoCollapsibleNav).toBeNull();
+    expect(collapsibleNavElNoCollapsibleNav).toBeNull();
   });
 
   it('should pass the collapsible nav ID to the collapsible nav button component aria-controls attribute', () => {
@@ -825,12 +838,12 @@ describe('SprkMastheadComponent', () => {
     );
   });
 
-  it('should close the narrow nav on orientationchange', () => {
+  it('should close the collapsible nav on orientationchange', () => {
     // Should be closed first
     expect(collapsibleNavEl.classList.toString()).toEqual(
       'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
     );
-    // We open it
+    // Set it to open
     collapsibleNavButton.click();
     componentFixture.detectChanges();
     // we expect it to be open
@@ -841,9 +854,6 @@ describe('SprkMastheadComponent', () => {
     expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
       true,
     );
-    // We expect its directive to identify that it is open
-    component.masthead.collapsibleNavDirective.isCollapsed = false;
-    componentFixture.detectChanges();
     // Fire the event on the window
     window.dispatchEvent(new Event('orientationchange'));
     componentFixture.detectChanges();
@@ -886,12 +896,30 @@ describe('SprkMastheadComponent', () => {
     );
   });
 
-  it('should only add the scrolled class if they scroll past 10 in the scrollY position', () => {
+  it("should not add the scrolled class if they don't scroll past 10 in the scrollY position", () => {
     Object.defineProperty(window, 'scrollY', { value: 9, writable: true });
     window.dispatchEvent(new Event('scroll'));
     componentFixture.detectChanges();
     expect(componentElement.classList.toString()).toEqual(
       'sprk-c-Masthead sprk-o-Stack sprk-c-Masthead--is-hidden',
+    );
+  });
+
+  it('should add the scrolled class if they scroll past 10 in the scrollY position', () => {
+    Object.defineProperty(window, 'scrollY', { value: 11, writable: true });
+    window.dispatchEvent(new Event('scroll'));
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack sprk-c-Masthead--is-scrolled sprk-c-Masthead--is-hidden',
+    );
+  });
+
+  it('should not add the scrolled class if the scroll position is less than 0', () => {
+    Object.defineProperty(window, 'scrollY', { value: -1, writable: true });
+    window.dispatchEvent(new Event('scroll'));
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack',
     );
   });
 
@@ -937,11 +965,6 @@ describe('SprkMastheadComponent', () => {
     expect(spyOnResize).toHaveBeenCalled();
   });
 
-  it('should not render the menu button if there is no collapsible nav', () => {
-    expect(collapsibleNavButtonNoCollapsibleNav).toBeNull();
-    expect(collapsibleNavElNoCollapsibleNav).toBeNull();
-  });
-
   it('should have isPageScrolled as false upon load', () => {
     expect(component.masthead.isPageScrolled).toBe(false);
   });
@@ -960,5 +983,29 @@ describe('SprkMastheadComponent', () => {
 
   it('should have currentScrollDirection as 0 upon load', () => {
     expect(component.masthead.currentScrollPosition).toBe(0);
+  });
+
+  it('should close the open collapsible nav when user goes to a new page', () => {
+    // We expect it to be closed and have the collapsed CSS class
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(true);
+    // We open the collapsible nav
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // We expect it to be open and not have the collapsed CSS class
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(false);
+    // We use the router to navigate the page and fire the navigation end event
+    const navigate = new NavigationEnd(1, 'old-route', 'new-route');
+    eventsSub.next(navigate);
+    componentFixture.detectChanges();
+    // We expect the collapsible nav to be collapsed since we are on a new page
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
   });
 });

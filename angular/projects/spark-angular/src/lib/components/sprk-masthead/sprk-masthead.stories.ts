@@ -455,6 +455,7 @@ export const defaultStory = () => ({
     <nav
       sprkMastheadNavCollapsible
       role="navigation"
+      idString="default-collapsible-nav"
     >
       <sprk-masthead-accordion>
         <sprk-masthead-accordion-item heading="Item 1">
@@ -760,7 +761,7 @@ export const extended = () => ({
       <nav
         sprkMastheadNavCollapsible
         role="navigation"
-        idString="collapsible-nav"
+        idString="extended-collapsible-nav"
       >
         <sprk-masthead-selector
           triggerText="Choose One"
