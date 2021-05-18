@@ -222,7 +222,9 @@ class SprkInputContainer extends Component {
            * If there was an icon-container, return the grandchildren
            * elements that were mapped through.
            */
-          return grandchildrenElements;
+          return React.cloneElement(child, {
+            children: grandchildrenElements,
+          });
         }
         /**
          * If the child element does not need to be updated

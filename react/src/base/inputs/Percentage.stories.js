@@ -19,14 +19,27 @@ export default {
 
 export const percentageInput = () => (
   <SprkInputContainer>
-    <SprkLabel htmlFor="percentage-1">Percentage</SprkLabel>
-    <SprkInput
-      id="percentage-1"
-      additionalClasses="
+    <div
+      className="
+        sprk-b-InputContainer__icon-container
+        sprk-b-InputContainer__icon-container--narrow"
+    >
+      <SprkLabel htmlFor="percentage-1">Percentage</SprkLabel>
+      <SprkIcon
+        iconName="percent"
+        additionalClasses="
+          sprk-b-InputContainer__icon
+          sprk-b-InputContainer__icon--right"
+        aria-hidden="true"
+      />
+      <SprkInput
+        id="percentage-1"
+        additionalClasses="
         sprk-b-TextInput--has-svg-icon
         sprk-b-InputContainer__input--has-icon-right"
-      type="tel"
-    />
+        type="tel"
+      />
+    </div>
   </SprkInputContainer>
 );
 
@@ -39,16 +52,29 @@ percentageInput.story = {
 
 export const invalidPercentageInput = () => (
   <SprkInputContainer>
-    <SprkLabel htmlFor="percentage-2">Percentage</SprkLabel>
-    <SprkInput
-      id="percentage-2"
-      ariaDescribedBy="invalid-percentage"
-      additionalClasses="
+    <div
+      className="
+        sprk-b-InputContainer__icon-container
+        sprk-b-InputContainer__icon-container--narrow"
+    >
+      <SprkLabel htmlFor="percentage-2">Percentage</SprkLabel>
+      <SprkIcon
+        iconName="percent"
+        additionalClasses="
+          sprk-b-InputContainer__icon
+          sprk-b-InputContainer__icon--right"
+        aria-hidden="true"
+      />
+      <SprkInput
+        id="percentage-2"
+        ariaDescribedBy="invalid-percentage"
+        additionalClasses="
         sprk-b-TextInput--has-svg-icon
         sprk-b-InputContainer__input--has-icon-right"
-      type="tel"
-      isValid={false}
-    />
+        type="tel"
+        isValid={false}
+      />
+    </div>
     <SprkFieldError id="invalid-percentage">
       <SprkIcon
         iconName="exclamation-filled"
@@ -75,17 +101,30 @@ invalidPercentageInput.story = {
 
 export const disabledPercentageInput = () => (
   <SprkInputContainer>
-    <SprkLabel htmlFor="percentage-3" isDisabled>
-      Percentage
-    </SprkLabel>
-    <SprkInput
-      id="percentage-3"
-      additionalClasses="
+    <div
+      className="
+        sprk-b-InputContainer__icon-container
+        sprk-b-InputContainer__icon-container--narrow"
+    >
+      <SprkLabel htmlFor="percentage-3" isDisabled>
+        Percentage
+      </SprkLabel>
+      <SprkIcon
+        iconName="percent"
+        additionalClasses="
+          sprk-b-InputContainer__icon
+          sprk-b-InputContainer__icon--right"
+        aria-hidden="true"
+      />
+      <SprkInput
+        id="percentage-3"
+        additionalClasses="
         sprk-b-TextInput--has-svg-icon
         sprk-b-InputContainer__input--has-icon-right"
-      type="tel"
-      isDisabled
-    />
+        type="tel"
+        isDisabled
+      />
+    </div>
   </SprkInputContainer>
 );
 
