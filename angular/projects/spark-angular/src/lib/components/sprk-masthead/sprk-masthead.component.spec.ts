@@ -644,6 +644,7 @@ describe('SprkMastheadComponent', () => {
   let collapsibleNavButtonNoCollapsibleNav: HTMLElement;
   let collapsibleNavElNoCollapsibleNav: HTMLElement;
   let eventsSub = new ReplaySubject<RouterEvent>(1);
+  let windowSpy;
   const routerStub = {
     events: eventsSub,
     url: '/test',
@@ -703,9 +704,11 @@ describe('SprkMastheadComponent', () => {
     collapsibleNavButtonNoCollapsibleNav = componentFixtureNoCollapsibleNav.debugElement.nativeElement.querySelector(
       'button',
     );
+    windowSpy = jest.spyOn(window, 'window', 'get');
   });
 
   afterEach(() => {
+    windowSpy.mockRestore();
     component.masthead.currentScrollDirection = 'up';
     component.masthead.isMastheadHidden = false;
     component.masthead.isPageScrolled = false;
@@ -956,6 +959,17 @@ describe('SprkMastheadComponent', () => {
     expect(component.masthead.isMastheadHidden).toBe(true);
   });
 
+  it('should update state isMastheadHidden to false when currentScrollDirection is equal to up', () => {
+    component.masthead.currentScrollPosition = 200;
+    const scrollEvent2 = document.createEvent('CustomEvent');
+    scrollEvent2.initCustomEvent('scroll', false, false, null);
+    Object.defineProperty(window, 'scrollY', { value: 20, writable: true });
+    window.dispatchEvent(scrollEvent2);
+    componentFixture.detectChanges();
+    expect(component.masthead.currentScrollDirection).toBe('up');
+    expect(component.masthead.isMastheadHidden).toBe(false);
+  });
+
   it('should call throttledUpdateLayoutState on resize', () => {
     const spyOnResize = jest.spyOn(
       component.masthead,
@@ -1007,5 +1021,27 @@ describe('SprkMastheadComponent', () => {
     expect(collapsibleNavEl.classList.toString()).toEqual(
       'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
     );
+  });
+
+  it('should close the collapsible nav when viewport expands to large from small', () => {
+    component.masthead.isMastheadHidden = true;
+    component.masthead.collapsibleNavDirective.isCollapsed = false;
+    component.masthead.isNarrowViewport = true;
+    component.masthead.isNarrowViewportOnResize = false;
+    component.masthead.updateLayoutState();
+    componentFixture.detectChanges();
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    expect(component.masthead.isMastheadHidden).toBe(false);
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(true);
+  });
+
+  it('should not update scroll direction if window is undefined', () => {
+    windowSpy.mockImplementation(() => undefined);
+    expect(window).toBeUndefined();
+    component.masthead.currentScrollPosition = 10;
+    component.masthead.getVerticalScrollDirection();
+    expect(component.masthead.currentScrollPosition).toBe(10);
   });
 });

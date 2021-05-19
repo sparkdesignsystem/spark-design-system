@@ -191,14 +191,14 @@ export class SprkMastheadComponent implements AfterViewInit {
    * and that we close the collapsible nav if it was open.
    */
   updateLayoutState() {
-    if (this.isNarrowViewport !== this.isNarrowViewportOnResize) {
-      this.isNarrowViewport = this.isNarrowViewportOnResize;
-      // If we are on a large viewport, make sure Masthead is visible
-      if (!this.isNarrowViewport) {
-        this.isMastheadHidden = false;
-        this.closeCollapsibleNav();
-      }
+    // If the viewport didn't change then don't do anything
+    if (this.isNarrowViewport === this.isNarrowViewportOnResize) {
+      return;
     }
+    // Update internal state to new viewport state on resize
+    this.isNarrowViewport = this.isNarrowViewportOnResize;
+    this.isMastheadHidden = false;
+    this.closeCollapsibleNav();
   }
 
   /**
@@ -217,16 +217,17 @@ export class SprkMastheadComponent implements AfterViewInit {
    * action.
    */
   getVerticalScrollDirection(): string {
-    if (typeof window !== 'undefined') {
-      const newScrollPos = window.scrollY;
-      if (newScrollPos < 0) {
-        return;
-      }
-      const diff = newScrollPos - this.currentScrollPosition;
-      const direction = diff > 0 ? 'down' : 'up';
-      this.currentScrollPosition = newScrollPos;
-      return direction;
+    if (typeof window === 'undefined') {
+      return;
     }
+    const newScrollPos = window.scrollY;
+    if (newScrollPos < 0) {
+      return;
+    }
+    const diff = newScrollPos - this.currentScrollPosition;
+    const direction = diff > 0 ? 'down' : 'up';
+    this.currentScrollPosition = newScrollPos;
+    return direction;
   }
 
   /**
