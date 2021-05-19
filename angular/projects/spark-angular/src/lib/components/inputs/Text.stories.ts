@@ -59,9 +59,7 @@ export const textInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label for="text" sprkLabel>
-        Text Input Label
-      </label>
+      <label for="text" sprkLabel>Text Input Label</label>
       <input
         id="text"
         name="text_input"
