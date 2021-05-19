@@ -149,10 +149,10 @@ const logoSvg = `
 
 const bodyContent = `
   <sprk-highlight-board
-    heading="Hello, Welcome To Spark Design System"
-    ctaText="Designers"
+    heading="Example Content To View Masthead Scrolling"
+    ctaText="Example One"
     ctaHref="#nogo"
-    ctaText2="Developers"
+    ctaText2="Example Two"
     ctaHref2="#nogo"
     imgSrc="https://spark-assets.netlify.app/desktop.jpg"
     imgAlt=""
