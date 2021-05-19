@@ -60,8 +60,6 @@ export { SprkMastheadNavCollapsibleButtonComponent } from './lib/components/sprk
 export { SprkMastheadNavCollapsibleButtonModule } from './lib/components/sprk-masthead/components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.module';
 export { SprkMastheadBrandingDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-branding/sprk-masthead-branding.directive';
 export { SprkMastheadBrandingModule } from './lib/components/sprk-masthead/directives/sprk-masthead-branding/sprk-masthead-branding.module';
-export { SprkMastheadContentDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-content/sprk-masthead-content.directive';
-export { SprkMastheadContentModule } from './lib/components/sprk-masthead/directives/sprk-masthead-content/sprk-masthead-content.module';
 export { SprkMastheadLinkDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-link/sprk-masthead-link.directive';
 export { SprkMastheadLinkModule } from './lib/components/sprk-masthead/directives/sprk-masthead-link/sprk-masthead-link.module';
 export { SprkMastheadNavBarDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-bar/sprk-masthead-nav-bar.directive';

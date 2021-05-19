@@ -9,7 +9,6 @@ import { SprkMastheadAccordionItemComponent } from './components/sprk-masthead-a
 import { SprkMastheadSelectorComponent } from './components/sprk-masthead-selector/sprk-masthead-selector.component';
 import { SprkMastheadComponent } from './sprk-masthead.component';
 import { SprkMastheadNavCollapsibleDirective } from './directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
-import { SprkMastheadContentDirective } from './directives/sprk-masthead-content/sprk-masthead-content.directive';
 import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-branding/sprk-masthead-branding.directive';
 import { SprkMastheadNavItemsDirective } from './directives/sprk-masthead-nav-items/sprk-masthead-nav-items.directive';
 import { SprkMastheadNavItemDirective } from './directives/sprk-masthead-nav-item/sprk-masthead-nav-item.directive';
@@ -666,7 +665,6 @@ describe('SprkMastheadComponent', () => {
         Test1Component,
         Test2Component,
         SprkStackItemDirective,
-        SprkMastheadContentDirective,
         SprkMastheadNavItemsDirective,
         SprkMastheadNavItemDirective,
         SprkMastheadLinkDirective,

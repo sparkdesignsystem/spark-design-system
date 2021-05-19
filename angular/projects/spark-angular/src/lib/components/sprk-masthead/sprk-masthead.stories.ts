@@ -10,7 +10,6 @@ import { SprkMastheadAccordionComponent } from '../sprk-masthead/components/sprk
 import { SprkMastheadAccordionItemComponent } from '../sprk-masthead/components/sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
 import { SprkMastheadSelectorComponent } from '../sprk-masthead/components/sprk-masthead-selector/sprk-masthead-selector.component';
 import { SprkMastheadBrandingDirective } from '../sprk-masthead/directives/sprk-masthead-branding/sprk-masthead-branding.directive';
-import { SprkMastheadContentDirective } from '../sprk-masthead/directives/sprk-masthead-content/sprk-masthead-content.directive';
 import { SprkMastheadNavBarDirective } from '../sprk-masthead/directives/sprk-masthead-nav-bar/sprk-masthead-nav-bar.directive';
 import { SprkMastheadNavCollapsibleDirective } from '../sprk-masthead/directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
 import { SprkMastheadNavCollapsibleButtonComponent } from '../sprk-masthead/components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.component';
@@ -33,7 +32,6 @@ export default {
       SprkMastheadAccordionComponent,
       SprkMastheadAccordionItemComponent,
       SprkMastheadSelectorComponent,
-      SprkMastheadContentDirective,
       SprkMastheadBrandingDirective,
       SprkMastheadNavBarDirective,
       SprkMastheadNavCollapsibleDirective,
@@ -454,6 +452,7 @@ export const defaultStory = () => ({
       <nav
         sprkMastheadNavCollapsible
         role="navigation"
+        aria-label="collapsible"
         idString="default-collapsible-nav"
       >
         <sprk-masthead-accordion>
@@ -613,7 +612,12 @@ export const extended = () => ({
         </a>
       </div>
 
-      <nav sprkMastheadNavItems sprkStackItem role="navigation" class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row">
+      <nav
+        sprkMastheadNavItems
+        sprkStackItem
+        role="navigation"
+        class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
+      >
         <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
           <sprk-stack additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row">
             <div sprkStackItem class="sprk-u-Position--relative">
@@ -678,9 +682,9 @@ export const extended = () => ({
           sprkMastheadNavBar
           sprkStackItem
           role="navigation"
-          idString="cats"
         >
-          <ul class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare">
+          <ul
+            class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare">
             <li
               sprkStackItem
               class="sprk-c-Masthead__big-nav-item"
@@ -705,7 +709,7 @@ export const extended = () => ({
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                 additionalClasses="sprk-u-TextAlign--left"
                 triggerIconName="chevron-down"
-                analyticsString="cats"
+                analyticsString="nav-bar-item-2"
                 triggerText="Item Two"
               ></sprk-dropdown>
             </li>
@@ -734,7 +738,7 @@ export const extended = () => ({
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                 additionalClasses="sprk-u-TextAlign--left"
                 triggerIconName="chevron-down"
-                analyticsString="cats"
+                analyticsString="nav-bar-item-4"
                 triggerText="Item Four"
               ></sprk-dropdown>
             </li>
@@ -760,6 +764,7 @@ export const extended = () => ({
         sprkMastheadNavCollapsible
         role="navigation"
         idString="extended-collapsible-nav"
+        aria-label="collapsible"
       >
         <sprk-masthead-selector
           triggerText="Choose One"
@@ -775,7 +780,7 @@ export const extended = () => ({
             <a
               sprkLink
               variant="unstyled"
-              analyticsString="cats"
+              analyticsString="placeholder-button"
               href="#nogo"
               class="sprk-c-Button sprk-c-Button--secondary"
             >
@@ -795,7 +800,7 @@ export const extended = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="accordion-item-1"
                 >
                   Item 1
                 </a>
@@ -807,7 +812,7 @@ export const extended = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="accordion-item-2"
                 >
                   Item 2
                 </a>
@@ -819,7 +824,7 @@ export const extended = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="accordion-item-3"
                 >
                   Item 3
                 </a>
@@ -832,7 +837,6 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
             </a>
@@ -848,7 +852,6 @@ export const extended = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 1
                 </a>
@@ -860,7 +863,6 @@ export const extended = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 2
                 </a>
@@ -872,7 +874,6 @@ export const extended = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 3
                 </a>
@@ -885,7 +886,6 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 4</span>
             </a>
@@ -896,7 +896,6 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 5</span>
             </a>
@@ -907,7 +906,6 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -929,7 +927,6 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -951,7 +948,6 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -978,7 +974,7 @@ export const extended = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="change-username"
                 >
                   Change Username
                 </a>
@@ -990,7 +986,7 @@ export const extended = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="change-password"
                 >
                   Change Password
                 </a>
@@ -1002,7 +998,7 @@ export const extended = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="sign-out"
                 >
                   Sign Out
                 </a>
@@ -1124,7 +1120,12 @@ export const extendedWithExampleContent = () => ({
         </a>
       </div>
 
-      <nav sprkMastheadNavItems sprkStackItem role="navigation" class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row">
+      <nav
+        sprkMastheadNavItems
+        sprkStackItem
+        role="navigation"
+        class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
+      >
         <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
           <sprk-stack additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row">
             <div sprkStackItem class="sprk-u-Position--relative">
@@ -1191,7 +1192,8 @@ export const extendedWithExampleContent = () => ({
           role="navigation"
           idString="cats"
         >
-          <ul class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare">
+          <ul
+            class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare">
             <li
               sprkStackItem
               class="sprk-c-Masthead__big-nav-item"
@@ -1216,7 +1218,7 @@ export const extendedWithExampleContent = () => ({
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                 additionalClasses="sprk-u-TextAlign--left"
                 triggerIconName="chevron-down"
-                analyticsString="cats"
+                analyticsString="nav-bar-item-2"
                 triggerText="Item Two"
               ></sprk-dropdown>
             </li>
@@ -1245,7 +1247,7 @@ export const extendedWithExampleContent = () => ({
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                 additionalClasses="sprk-u-TextAlign--left"
                 triggerIconName="chevron-down"
-                analyticsString="cats"
+                analyticsString="nav-bar-item-4"
                 triggerText="Item Four"
               ></sprk-dropdown>
             </li>
@@ -1271,6 +1273,7 @@ export const extendedWithExampleContent = () => ({
         sprkMastheadNavCollapsible
         role="navigation"
         idString="extended-collapsible-nav"
+        aria-label="collapsible"
       >
         <sprk-masthead-selector
           triggerText="Choose One"
@@ -1286,7 +1289,7 @@ export const extendedWithExampleContent = () => ({
             <a
               sprkLink
               variant="unstyled"
-              analyticsString="cats"
+              analyticsString="placeholder-button"
               href="#nogo"
               class="sprk-c-Button sprk-c-Button--secondary"
             >
@@ -1306,7 +1309,6 @@ export const extendedWithExampleContent = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 1
                 </a>
@@ -1318,7 +1320,6 @@ export const extendedWithExampleContent = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 2
                 </a>
@@ -1330,7 +1331,6 @@ export const extendedWithExampleContent = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 3
                 </a>
@@ -1343,7 +1343,6 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
             </a>
@@ -1359,7 +1358,6 @@ export const extendedWithExampleContent = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 1
                 </a>
@@ -1371,7 +1369,6 @@ export const extendedWithExampleContent = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 2
                 </a>
@@ -1383,7 +1380,6 @@ export const extendedWithExampleContent = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 3
                 </a>
@@ -1396,7 +1392,6 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 4</span>
             </a>
@@ -1407,7 +1402,6 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 5</span>
             </a>
@@ -1418,7 +1412,6 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -1440,7 +1433,6 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -1462,7 +1454,6 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -1489,7 +1480,7 @@ export const extendedWithExampleContent = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="change-username"
                 >
                   Change Username
                 </a>
@@ -1501,7 +1492,7 @@ export const extendedWithExampleContent = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="change-password"
                 >
                   Change Password
                 </a>
@@ -1513,7 +1504,7 @@ export const extendedWithExampleContent = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="sign-out"
                 >
                   Sign Out
                 </a>
@@ -1639,7 +1630,12 @@ export const withoutCollapsibleNav = () => ({
         </a>
       </div>
 
-      <nav sprkMastheadNavItems sprkStackItem role="navigation" class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row">
+      <nav
+        sprkMastheadNavItems
+        sprkStackItem
+        role="navigation"
+        class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
+      >
         <ul
           sprkStackItem
           class="

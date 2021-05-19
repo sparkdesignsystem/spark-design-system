@@ -13,7 +13,6 @@ import { SprkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-i
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkMastheadBrandingModule } from './directives/sprk-masthead-branding/sprk-masthead-branding.module';
-import { SprkMastheadContentModule } from './directives/sprk-masthead-content/sprk-masthead-content.module';
 import { SprkMastheadNavBarModule } from './directives/sprk-masthead-nav-bar/sprk-masthead-nav-bar.module';
 import { SprkMastheadNavCollapsibleModule } from './directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.module';
 import { SprkMastheadNavCollapsibleButtonModule } from './components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.module';
@@ -42,7 +41,6 @@ import { SprkBoxModule } from '../../directives/sprk-box/sprk-box.module';
     SprkMastheadNavCollapsibleButtonModule,
     SprkMastheadNavCollapsibleModule,
     SprkMastheadNavBarModule,
-    SprkMastheadContentModule,
     SprkMastheadBrandingModule,
     SprkMastheadNavItemModule,
   ],
@@ -64,7 +62,6 @@ import { SprkBoxModule } from '../../directives/sprk-box/sprk-box.module';
     SprkMastheadNavCollapsibleButtonModule,
     SprkMastheadNavCollapsibleModule,
     SprkMastheadNavBarModule,
-    SprkMastheadContentModule,
     SprkMastheadBrandingModule,
     SprkMastheadNavItemModule,
     SprkMastheadLinkModule,
