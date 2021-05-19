@@ -452,127 +452,126 @@ export const defaultStory = () => ({
         </ul>
       </nav>
 
-    <nav
-      sprkMastheadNavCollapsible
-      role="navigation"
-      idString="default-collapsible-nav"
-    >
-      <sprk-masthead-accordion>
-        <sprk-masthead-accordion-item heading="Item 1">
-          <ul
-            class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
-          >
-            <li class="sprk-c-MastheadAccordion__item">
-              <a
-                sprkLink
-                variant="unstyled"
-                class="sprk-c-MastheadAccordion__summary"
-                href="#nogo"
-                analyticsString="dogs"
-              >
-                Item 1
-              </a>
-            </li>
+      <nav
+        sprkMastheadNavCollapsible
+        role="navigation"
+        idString="default-collapsible-nav"
+      >
+        <sprk-masthead-accordion>
+          <sprk-masthead-accordion-item heading="Item 1">
+            <ul
+              class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
+            >
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Item 1
+                </a>
+              </li>
 
-            <li class="sprk-c-MastheadAccordion__item">
-              <a
-                sprkLink
-                variant="unstyled"
-                class="sprk-c-MastheadAccordion__summary"
-                href="#nogo"
-                analyticsString="dogs"
-              >
-                Item 2
-              </a>
-            </li>
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Item 2
+                </a>
+              </li>
 
-            <li class="sprk-c-MastheadAccordion__item">
-              <a
-                sprkLink
-                variant="unstyled"
-                class="sprk-c-MastheadAccordion__summary"
-                href="#nogo"
-                analyticsString="dogs"
-              >
-                Item 3
-              </a>
-            </li>
-          </ul>
-        </sprk-masthead-accordion-item>
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Item 3
+                </a>
+              </li>
+            </ul>
+          </sprk-masthead-accordion-item>
 
-        <li class="sprk-c-MastheadAccordion__item sprk-c-MastheadAccordion__item--active">
+          <li class="sprk-c-MastheadAccordion__item sprk-c-MastheadAccordion__item--active">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+              analyticsString="dogs"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
+            </a>
+          </li>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+              analyticsString="dogs"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">
+                <sprk-icon
+                  iconName="landline"
+                  additionalClasses="
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--xl
+                    sprk-u-mrs
+                  "
+                ></sprk-icon>
+                (555) 555-5555
+              </span>
+            </a>
+          </li>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+              analyticsString="dogs"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">
+                <sprk-icon
+                  iconName="call-team-member"
+                  additionalClasses="
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--xl
+                    sprk-u-mrs
+                  "
+                ></sprk-icon>
+                Talk To Us
+              </span>
+            </a>
+          </li>
+        </sprk-masthead-accordion>
+
+        <div class="sprk-u-mas">
           <a
             sprkLink
-            variant="unstyled"
-            class="sprk-c-MastheadAccordion__summary"
-            analyticsString="dogs"
+            href="#nogo"
+            class="
+              sprk-c-Button
+              sprk-c-Button--secondary
+              sprk-c-Button--compact
+              sprk-c-Button--full@s
+            "
           >
-            <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
+            Sign In
           </a>
-        </li>
-
-        <li class="sprk-c-MastheadAccordion__item">
-          <a
-            sprkLink
-            variant="unstyled"
-            class="sprk-c-MastheadAccordion__summary"
-            analyticsString="dogs"
-          >
-            <span class="sprk-c-MastheadAccordion__heading">
-              <sprk-icon
-                iconName="landline"
-                additionalClasses="
-                  sprk-c-Icon--filled-current-color
-                  sprk-c-Icon--stroke-current-color
-                  sprk-c-Icon--xl
-                  sprk-u-mrs
-                "
-              ></sprk-icon>
-              (555) 555-5555
-            </span>
-          </a>
-        </li>
-
-        <li class="sprk-c-MastheadAccordion__item">
-          <a
-            sprkLink
-            variant="unstyled"
-            class="sprk-c-MastheadAccordion__summary"
-            analyticsString="dogs"
-          >
-            <span class="sprk-c-MastheadAccordion__heading">
-              <sprk-icon
-                iconName="call-team-member"
-                additionalClasses="
-                  sprk-c-Icon--filled-current-color
-                  sprk-c-Icon--stroke-current-color
-                  sprk-c-Icon--xl
-                  sprk-u-mrs
-                "
-              ></sprk-icon>
-              Talk To Us
-            </span>
-          </a>
-        </li>
-      </sprk-masthead-accordion>
-
-      <div class="sprk-u-mas">
-        <a
-          sprkLink
-          href="#nogo"
-          class="
-            sprk-c-Button
-            sprk-c-Button--secondary
-            sprk-c-Button--compact
-            sprk-c-Button--full@s
-          "
-        >
-          Sign In
-        </a>
-      </div>
-    </nav>
-  </sprk-masthead>
-  ${bodyContent}
+        </div>
+      </nav>
+    </sprk-masthead>
   `,
 });
 
@@ -588,6 +587,517 @@ defaultStory.story = {
 };
 
 export const extended = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-masthead>
+      <div sprkMastheadBranding sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
+        <a
+          sprkLink
+          href="#nogo"
+          variant="unstyled"
+        >
+          <svg
+            class="sprk-c-Masthead__logo"
+            xmlns="http://www.w3.org/2000/svg"
+            width="365.4"
+            height="48"
+            viewBox="0 0 365.4 101.35"
+          >
+            ${logoSvg}
+          </svg>
+        </a>
+      </div>
+
+      <div sprkMastheadNavItem sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
+        <a sprkMastheadLink href="#nogo">
+          Sign In
+        </a>
+      </div>
+
+      <nav sprkMastheadNavItems sprkStackItem role="navigation" class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row">
+        <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
+          <sprk-stack additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row">
+            <div sprkStackItem class="sprk-u-Position--relative">
+              <sprk-masthead-selector
+                triggerText="Choose One"
+                heading="Choose One"
+                triggerIconName="chevron-down"
+                [choices]="selectorDropdown"
+              >
+                <div
+                  class="sprk-c-Masthead__selector-footer"
+                  sprkMastheadSelectorFooter
+                >
+                  <a
+                    sprkLink
+                    variant="unstyled"
+                    href="#nogo"
+                    class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+                  >
+                    Placeholder
+                  </a>
+                </div>
+              </sprk-masthead-selector>
+            </div>
+          </sprk-stack>
+        </div>
+
+        <ul
+          sprkStackItem
+          class="
+            sprk-o-HorizontalList
+            sprk-o-HorizontalList--spacing-medium
+            sprk-o-Stack--center-column
+          "
+        >
+          <li>
+            <a
+              sprkMastheadLink
+              href="#nogo"
+            >
+              Talk To Us
+            </a>
+          </li>
+
+          <li>
+            <sprk-dropdown
+              [choices]="talkToUsDropdownChoices"
+              heading="My Account"
+              triggerIconName="user"
+              triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+              iconAdditionalClasses="sprk-c-Icon--xl"
+              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              screenReaderText="User Account"
+            >
+            </sprk-dropdown>
+          </li>
+        </ul>
+      </nav>
+
+      <div sprkStackItem>
+        <nav
+          sprkMastheadNavBar
+          sprkStackItem
+          role="navigation"
+          idString="cats"
+        >
+          <ul class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare">
+            <li
+              sprkStackItem
+              class="sprk-c-Masthead__big-nav-item"
+            >
+              <a
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-1"
+                href="#nogo"
+              >
+                Item One
+              </a>
+            </li>
+
+            <li
+              sprkStackItem
+              class="sprk-c-Masthead__big-nav-item"
+              aria-haspopup="true"
+            >
+              <sprk-dropdown
+                [choices]="item2NavBarDropdownChoices"
+                triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                additionalClasses="sprk-u-TextAlign--left"
+                triggerIconName="chevron-down"
+                analyticsString="cats"
+                triggerText="Item Two"
+              ></sprk-dropdown>
+            </li>
+
+            <li
+              sprkStackItem
+              class="sprk-c-Masthead__big-nav-item"
+            >
+              <a
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-3"
+                href="#nogo"
+              >
+                Item Three
+              </a>
+            </li>
+
+            <li
+              sprkStackItem
+              class="sprk-c-Masthead__big-nav-item"
+              aria-haspopup="true"
+            >
+              <sprk-dropdown
+                [choices]="item2NavBarDropdownChoices"
+                triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                additionalClasses="sprk-u-TextAlign--left"
+                triggerIconName="chevron-down"
+                analyticsString="cats"
+                triggerText="Item Four"
+              ></sprk-dropdown>
+            </li>
+
+            <li
+              sprkStackItem
+              class="sprk-c-Masthead__big-nav-item"
+            >
+              <a
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-5"
+                href="#nogo"
+              >
+                Item Five
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <nav
+        sprkMastheadNavCollapsible
+        role="navigation"
+        idString="extended-collapsible-nav"
+      >
+        <sprk-masthead-selector
+          triggerText="Choose One"
+          heading="Choose One"
+          triggerIconName="chevron-down"
+          [choices]="narrowSelectorDropdown"
+          isFlush="true"
+        >
+          <div
+            class="sprk-c-Masthead__selector-footer"
+            sprkMastheadSelectorFooter
+          >
+            <a
+              sprkLink
+              variant="unstyled"
+              analyticsString="cats"
+              href="#nogo"
+              class="sprk-c-Button sprk-c-Button--secondary"
+            >
+              Placeholder
+            </a>
+          </div>
+        </sprk-masthead-selector>
+
+        <sprk-masthead-accordion>
+          <sprk-masthead-accordion-item heading="Item 1">
+            <ul
+              class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
+            >
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Item 1
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Item 2
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Item 3
+                </a>
+              </li>
+            </ul>
+          </sprk-masthead-accordion-item>
+
+          <li class="sprk-c-MastheadAccordion__item sprk-c-MastheadAccordion__item--active">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+              analyticsString="dogs"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
+            </a>
+          </li>
+
+          <sprk-masthead-accordion-item heading="Item 3">
+            <ul
+              class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
+            >
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Item 1
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Item 2
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Item 3
+                </a>
+              </li>
+            </ul>
+          </sprk-masthead-accordion-item>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+              analyticsString="dogs"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">Item 4</span>
+            </a>
+          </li>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+              analyticsString="dogs"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">Item 5</span>
+            </a>
+          </li>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+              analyticsString="dogs"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">
+                <sprk-icon
+                  iconName="landline"
+                  additionalClasses="
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--xl
+                    sprk-u-mrs
+                  "
+                ></sprk-icon>
+                (555) 555-5555
+              </span>
+            </a>
+          </li>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+              analyticsString="dogs"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">
+                <sprk-icon
+                  iconName="call-team-member"
+                  additionalClasses="
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--xl
+                    sprk-u-mrs
+                  "
+                ></sprk-icon>
+                Talk To Us
+              </span>
+            </a>
+          </li>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+              analyticsString="dogs"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">
+                <sprk-icon
+                  iconName="settings"
+                  additionalClasses="
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--xl
+                    sprk-u-mrs
+                  "
+                ></sprk-icon>
+                Settings
+              </span>
+            </a>
+          </li>
+
+          <sprk-masthead-accordion-item heading="My Account" leadingIcon="user">
+            <ul
+              class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
+            >
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Change Username
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Change Password
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="dogs"
+                >
+                  Sign Out
+                </a>
+              </li>
+            </ul>
+          </sprk-masthead-accordion-item>
+        </sprk-masthead-accordion>
+      </nav>
+    </sprk-masthead>
+  `,
+  props: {
+    item2NavBarDropdownChoices: [
+      {
+        text: 'Item 1',
+        href: '#nogo',
+      },
+      {
+        text: 'Item 2',
+        href: '#nogo',
+      },
+      {
+        text: 'Item 3',
+        href: '#nogo',
+      },
+    ],
+    selectorDropdown: [
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'Additional Information',
+        },
+        value: 'Choice Title 1',
+        active: false,
+      },
+      {
+        content: {
+          title: 'Choice Title',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'Additional Information',
+        },
+        value: 'Choice Title 2',
+        active: true,
+      },
+    ],
+    talkToUsDropdownChoices: [
+      {
+        text: 'Change Username',
+        value: 'change-username',
+      },
+      {
+        text: 'Change Password',
+        value: 'change-password',
+      },
+      {
+        text: 'Sign Out',
+        value: 'sign-out',
+      },
+    ],
+    narrowSelectorDropdown: [
+      {
+        content: {
+          title: 'Choice Title 1',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'Additional Information',
+        },
+        value: 'Choice Title 1',
+        active: false,
+      },
+      {
+        content: {
+          title: 'Choice Title 2',
+          infoLine1: 'Information about this choice',
+          infoLine2: 'Additional Information',
+        },
+        value: 'Choice Title 2',
+        active: true,
+      },
+    ],
+  },
+});
+
+extended.story = {
+  parameters: {
+    docs: { iframeHeight: 450 },
+    jest: [
+      'sprk-masthead.component',
+      'sprk-masthead-accordion.component',
+      'sprk-masthead-accordion-item.component',
+    ],
+  },
+};
+
+export const extendedWithExampleContent = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-masthead>
@@ -1088,7 +1598,7 @@ export const extended = () => ({
   },
 });
 
-extended.story = {
+extendedWithExampleContent.story = {
   parameters: {
     docs: { iframeHeight: 450 },
     jest: [
@@ -1163,7 +1673,6 @@ export const withoutCollapsibleNav = () => ({
         </ul>
       </nav>
     </sprk-masthead>
-    ${bodyContent}
   `,
   props: {
     item2NavBarDropdownChoices: [
