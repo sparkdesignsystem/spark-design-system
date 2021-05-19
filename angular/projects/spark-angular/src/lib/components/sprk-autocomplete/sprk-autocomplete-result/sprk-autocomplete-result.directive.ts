@@ -54,7 +54,7 @@ export class SprkAutocompleteResultDirective implements OnInit {
    * @ignore
    *
    */
-  private _isSelected: boolean;
+  private _isSelected = false;
 
   /**
    * If true, this Autocomplete result will be highlighted.
