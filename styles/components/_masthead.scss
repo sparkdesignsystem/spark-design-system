@@ -80,7 +80,8 @@
 }
 
 // When open, adjust box shadow and border styles
-.sprk-c-Masthead--open .sprk-c-Masthead__content {
+.sprk-c-Masthead--open .sprk-c-Masthead__content,
+.sprk-c-Masthead--is-open .sprk-c-Masthead__content {
   border-bottom: $sprk-masthead-border-bottom;
   box-shadow: $sprk-masthead-shadow;
 

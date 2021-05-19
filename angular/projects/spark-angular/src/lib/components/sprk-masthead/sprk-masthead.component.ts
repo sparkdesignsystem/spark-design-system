@@ -20,8 +20,8 @@ import { isElementVisible } from '../../utilities/isElementVisible/isElementVisi
   template: `
     <header [ngClass]="getClasses()" role="banner" [attr.data-id]="idString">
       <sprk-stack
-        sprkStackItem
         splitAt="extraTiny"
+        isStackItem="true"
         additionalClasses="sprk-c-Masthead__content"
         *ngIf="branding"
       >

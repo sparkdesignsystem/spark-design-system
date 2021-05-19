@@ -47,6 +47,13 @@ export class SprkStackComponent {
   additionalClasses: string;
 
   /**
+   * Use in cases of nested Stack components where the Stack is also
+   * a Stack item.
+   */
+  @Input()
+  isStackItem: boolean;
+
+  /**
    * @ignore
    */
   getClasses(): string {
@@ -101,6 +108,10 @@ export class SprkStackComponent {
       this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
+    }
+
+    if (this.isStackItem) {
+      classArray.push('sprk-o-Stack__item');
     }
 
     return classArray.join(' ');

@@ -191,7 +191,7 @@ const bodyContent = `
           />
         </a>
 
-        <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+        <sprk-stack sprkCardContent itemSpacing="medium" isStackItem="true">
           <h3 sprkHeading variant="displayFive" sprkStackItem>
             Title
           </h3>
@@ -203,8 +203,8 @@ const bodyContent = `
           </p>
 
           <sprk-stack
+            isStackItem="true"
             additionalClasses="sprk-o-Stack--end-column"
-            sprkStackItem
           >
             <div sprkStackItem>
               <a
@@ -241,7 +241,7 @@ const bodyContent = `
           />
         </a>
 
-        <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+        <sprk-stack sprkCardContent itemSpacing="medium" additionalClasses="sprk-o-Stack__item">
           <h3 sprkHeading variant="displayFive" sprkStackItem>
             Title
           </h3>
@@ -253,8 +253,7 @@ const bodyContent = `
           </p>
 
           <sprk-stack
-            additionalClasses="sprk-o-Stack--end-column"
-            sprkStackItem
+            additionalClasses="sprk-o-Stack--end-column sprk-o-Stack__item"
           >
             <div sprkStackItem>
               <a
@@ -291,7 +290,7 @@ const bodyContent = `
           />
         </a>
 
-        <sprk-stack sprkCardContent itemSpacing="medium" sprkStackItem>
+        <sprk-stack sprkCardContent itemSpacing="medium" isStackItem="true">
           <h3 sprkHeading variant="displayFive" sprkStackItem>
             Title
           </h3>
@@ -303,8 +302,8 @@ const bodyContent = `
           </p>
 
           <sprk-stack
+            isStackItem="true"
             additionalClasses="sprk-o-Stack--end-column"
-            sprkStackItem
           >
             <div sprkStackItem>
               <a
@@ -556,7 +555,7 @@ export const defaultStory = () => ({
           </li>
         </sprk-masthead-accordion>
 
-        <div class="sprk-u-mas">
+        <div sprkBox spacing="small">
           <a
             sprkLink
             href="#nogo"
