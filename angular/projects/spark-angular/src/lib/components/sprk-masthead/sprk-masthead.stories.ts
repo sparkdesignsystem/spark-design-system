@@ -1099,7 +1099,7 @@ extended.story = {
   },
 };
 
-export const withOutCollapsibleNav = () => ({
+export const withoutCollapsibleNav = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-masthead>
@@ -1217,7 +1217,7 @@ export const withOutCollapsibleNav = () => ({
   },
 });
 
-withOutCollapsibleNav.story = {
+withoutCollapsibleNav.story = {
   parameters: {
     jest: ['sprk-masthead.component'],
   },
