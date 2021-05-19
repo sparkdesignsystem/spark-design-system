@@ -50,16 +50,15 @@ describe('Spark Autocomplete Result Directive', () => {
   });
 
   it('should add the correct base class', () => {
-    expect(
-      emptyElement.classList.contains('sprk-c-Autocomplete__result'),
-    ).toEqual(true);
-
-    expect(emptyElement.classList.length).toEqual(1);
+    expect(emptyElement.classList.toString()).toEqual(
+      'sprk-c-Autocomplete__result',
+    );
   });
 
   it('should add classes if additionalClasses has a value', () => {
-    expect(element.classList.contains('testClass')).toEqual(true);
-    expect(element.classList.length).toEqual(2);
+    expect(element.classList.toString()).toEqual(
+      'sprk-c-Autocomplete__result testClass',
+    );
   });
 
   it('should add a value for data-analytics if analyticsString has a value', () => {
@@ -85,10 +84,9 @@ describe('Spark Autocomplete Result Directive', () => {
     fixture.detectChanges();
 
     expect(element.getAttribute('aria-selected')).toEqual('true');
-    expect(
-      element.classList.contains('sprk-c-Autocomplete__result--active'),
-    ).toEqual(true);
-    expect(element.classList.length).toEqual(3);
+    expect(element.classList.toString()).toEqual(
+      'sprk-c-Autocomplete__result testClass sprk-c-Autocomplete__result--active',
+    );
   });
 
   it('should not add the class and aria attribute if isSelected is false', () => {
@@ -96,10 +94,9 @@ describe('Spark Autocomplete Result Directive', () => {
     fixture.detectChanges();
 
     expect(element.getAttribute('aria-selected')).toEqual('false');
-    expect(
-      element.classList.contains('sprk-c-Autocomplete__result--active'),
-    ).toEqual(false);
-    expect(element.classList.length).toEqual(2);
+    expect(element.classList.toString()).toEqual(
+      'sprk-c-Autocomplete__result testClass',
+    );
   });
 
   it('should scroll the parentNode when setting isSelected if necessary', () => {

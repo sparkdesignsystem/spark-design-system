@@ -40,15 +40,15 @@ describe('Spark Autocomplete Results Directive', () => {
   });
 
   it('should add the correct base class', () => {
-    expect(
-      emptyElement.classList.contains('sprk-c-Autocomplete__results'),
-    ).toEqual(true);
-    expect(emptyElement.classList.length).toEqual(1);
+    expect(emptyElement.classList.toString()).toEqual(
+      'sprk-c-Autocomplete__results',
+    );
   });
 
   it('should add classes if additionalClasses has a value', () => {
-    expect(element.classList.contains('testClass')).toEqual(true);
-    expect(element.classList.length).toEqual(2);
+    expect(element.classList.toString()).toEqual(
+      'sprk-c-Autocomplete__results testClass',
+    );
   });
 
   it('should add a value for data-analytics if analyticsString has a value', () => {

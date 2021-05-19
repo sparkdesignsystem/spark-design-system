@@ -67,23 +67,21 @@ describe('SprkAutocompleteComponent', () => {
   it('should add the correct attributes in showResults', () => {
     component.hideResults();
     fixture.detectChanges();
-    expect(
-      resultsElement.classList.contains('sprk-c-Autocomplete__results--hidden'),
-    ).toEqual(true);
-    expect(resultsElement.classList.length).toEqual(2);
+    expect(resultsElement.classList.toString()).toEqual(
+      'sprk-c-Autocomplete__results sprk-c-Autocomplete__results--hidden',
+    );
     expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
       'false',
     );
 
     component.showResults();
     fixture.detectChanges();
-    expect(
-      resultsElement.classList.contains('sprk-c-Autocomplete__results--hidden'),
-    ).toEqual(false);
+    expect(resultsElement.classList.toString()).toEqual(
+      'sprk-c-Autocomplete__results',
+    );
     expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
       'true',
     );
-    expect(resultsElement.classList.length).toEqual(1);
   });
 
   it('should emit openedEvent when calling showResults if results exists', (done) => {
@@ -117,23 +115,21 @@ describe('SprkAutocompleteComponent', () => {
   it('should add the correct attributes in hideResults', () => {
     component.showResults();
     fixture.detectChanges();
-    expect(
-      resultsElement.classList.contains('sprk-c-Autocomplete__results--hidden'),
-    ).toEqual(false);
+    expect(resultsElement.classList.toString()).toEqual(
+      'sprk-c-Autocomplete__results',
+    );
     expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
       'true',
     );
-    expect(resultsElement.classList.length).toEqual(1);
 
     component.hideResults();
     fixture.detectChanges();
-    expect(
-      resultsElement.classList.contains('sprk-c-Autocomplete__results--hidden'),
-    ).toEqual(true);
+    expect(resultsElement.classList.toString()).toEqual(
+      'sprk-c-Autocomplete__results sprk-c-Autocomplete__results--hidden',
+    );
     expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
       'false',
     );
-    expect(resultsElement.classList.length).toEqual(2);
   });
 
   it('should emit closedEvent when calling hideResults if results exists', (done) => {
