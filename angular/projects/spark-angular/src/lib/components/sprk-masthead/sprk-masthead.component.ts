@@ -108,35 +108,40 @@ export class SprkMastheadComponent implements AfterViewInit {
   branding: ElementRef;
 
   /**
-   * @ignore
+   * Keeps state of if the page has been scrolled.
    */
   isPageScrolled = false;
   /**
-   * @ignore
+   * Keeps state of if the Masthead is on a narrow viewport.
    */
   isNarrowViewport = false;
   /**
-   * @ignore
+   * Keeps state of the scroll direction in order to apply
+   * CSS classes or not.
    */
   currentScrollDirection = 'up';
   /**
-   * @ignore
+   * Keeps state of if the Masthead is hidden in order to apply
+   * CSS classes or not.
    */
   isMastheadHidden = false;
   /**
-   * @ignore
+   * Keeps state of the viewport on resize.
    */
   isNarrowViewportOnResize = false;
   /**
-   * @ignore
+   * Keeps state of the scroll position in
+   * order to apply CSS classes or not.
    */
   currentScrollPosition = 0;
   /**
-   * @ignore
+   * Throttles the updateScrollDirection function to prevent
+   * it from impacting performance.
    */
   throttledUpdateScrollDirection = throttle(this.updateScrollDirection, 500);
   /**
-   * @ignore
+   * Throttles the updateLayoutState function to prevent
+   * it from impacting performance.
    */
   throttledUpdateLayoutState = throttle(this.updateLayoutState, 500);
 
@@ -156,7 +161,7 @@ export class SprkMastheadComponent implements AfterViewInit {
   }
 
   /**
-   * @ignore
+   * Updates the scroll direction when the page is scrolled.
    */
   @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
@@ -202,7 +207,8 @@ export class SprkMastheadComponent implements AfterViewInit {
   }
 
   /**
-   * @ignore
+   * When the view initializes we set internal state
+   * for if the viewport is narrow or not.
    */
   ngAfterViewInit() {
     // We say that it is a narrow viewport if
@@ -247,7 +253,8 @@ export class SprkMastheadComponent implements AfterViewInit {
   }
 
   /**
-   * @ignore
+   * Gets any additional classes for the main Masthead element
+   * and sets the default classes.
    */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Masthead', 'sprk-o-Stack'];
