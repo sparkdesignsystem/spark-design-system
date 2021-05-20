@@ -39,7 +39,6 @@
   &:hover,
   &:active,
   &:focus {
-    transition: $sprk-link-transition;
     color: $sprk-link-simple-hover-color;
     border-bottom: $sprk-link-simple-hover-border-bottom;
   }
@@ -58,10 +57,29 @@
   &:hover,
   &:active,
   &:focus {
-    transition: $sprk-link-transition;
     color: $sprk-link-light-hover-color;
     font-weight: $sprk-link-light-hover-font-weight;
     border-bottom: $sprk-link-light-hover-border-bottom;
+  }
+}
+
+/// Used when an inline link is on the dark background of the footer.
+.sprk-b-Link--inline-light {
+  color: $sprk-link-inline-light-color;
+  border-bottom: $sprk-link-inline-light-border-bottom;
+  font-weight: $sprk-link-inline-light-font-weight;
+
+  &:visited {
+    border-bottom: $sprk-link-inline-light-visited-border-bottom;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sprk-link-inline-light-hover-color;
+    font-weight: $sprk-link-inline-light-hover-font-weight;
+    border-bottom: $sprk-link-inline-light-hover-border-bottom;
+    cursor: $sprk-link-inline-light-hover-cursor;
   }
 }
 

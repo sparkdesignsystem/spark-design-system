@@ -9,11 +9,7 @@ import { APP_BASE_HREF } from '@angular/common';
 export default {
   title: 'Components/Footer',
   component: SprkFooterComponent,
-  decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
-    ),
-  ],
+  decorators: [storyWrapper((storyContent) => `<div>${storyContent}<div>`)],
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('footer')}
@@ -261,6 +257,20 @@ export const defaultStory = () => ({
         }
       ]"
     >
+      <sprk-stack
+        additional-disclaimer-slot
+        itemSpacing="large"
+        sprkStackItem
+      >
+        <p
+          sprkStackItem
+          sprkText
+          variant="bodyFour"
+          class="sprk-c-Footer__text"
+        >
+          Sed ut perspiciatis unde omnis iste natus error sit <a href="#nogo" sprkLink class="sprk-b-Link--inline-light"> inline link</a> accusantium doloremque laudantium
+        </p>
+      </sprk-stack>
     </sprk-footer>
   `,
 });
