@@ -69,6 +69,14 @@ describe('Spark Autocomplete Result Directive', () => {
     expect(element.getAttribute('data-id')).toEqual('resultId1');
   });
 
+  it('should not add a value for data-analytics if analyticsString has no value', () => {
+    expect(emptyElement.getAttribute('data-analytics')).toEqual(null);
+  });
+
+  it('should not add a value for data-id if idString has no value', () => {
+    expect(emptyElement.getAttribute('data-id')).toEqual(null);
+  });
+
   it('should emit click event', (done) => {
     let called = false;
     directiveElement.clickedEvent.subscribe((g) => {

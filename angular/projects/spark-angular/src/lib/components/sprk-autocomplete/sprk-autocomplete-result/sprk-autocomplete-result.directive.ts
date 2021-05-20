@@ -72,7 +72,7 @@ export class SprkAutocompleteResultDirective implements OnInit {
     this._isSelected = value;
 
     if (this._isSelected) {
-      var result = this.ref.nativeElement;
+      const result = this.ref.nativeElement;
       const listItemTop = result.getBoundingClientRect().top;
       const listItemBottom = result.getBoundingClientRect().bottom;
 

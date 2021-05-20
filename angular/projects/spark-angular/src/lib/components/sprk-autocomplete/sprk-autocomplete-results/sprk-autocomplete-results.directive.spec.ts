@@ -58,4 +58,12 @@ describe('Spark Autocomplete Results Directive', () => {
   it('should add a value for data-id if idString has a value', () => {
     expect(element.getAttribute('data-id')).toEqual('resultsId1');
   });
+
+  it('should not add a value for data-analytics if analyticsString has no value', () => {
+    expect(emptyElement.getAttribute('data-analytics')).toEqual(null);
+  });
+
+  it('should not add a value for data-id if idString has no value', () => {
+    expect(emptyElement.getAttribute('data-id')).toEqual(null);
+  });
 });
