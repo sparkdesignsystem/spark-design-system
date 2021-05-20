@@ -7,6 +7,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilitie
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
 import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
+import SprkText from '../../base/typography/SprkText/SprkText';
 
 export default {
   title: 'Components/Footer',
@@ -251,9 +252,13 @@ export const defaultStory = () => (
     ]}
     additionalDisclaimer={
       <SprkStackItem>
-        <p className="sprk-b-TypeBodyFour sprk-c-Footer__text">
-          STACKS Sed ut perspiciatis unde omnis iste natus error sit <SprkLink href="#nogo" additionalClasses="sprk-b-Link--inline-light"> inline link </SprkLink> accusantium doloremque laudantiu.
-        </p>
+        <SprkText
+          variant="bodyFour"
+          additionalClasses="sprk-c-Footer__text"
+          element="p"
+        >
+          Sed ut perspiciatis unde omnis iste natus error sit <SprkLink href="#nogo" additionalClasses="sprk-b-Link--inline-light">inline link</SprkLink> accusantium doloremque laudantiu.
+        </SprkText>
       </SprkStackItem>
     }
   />

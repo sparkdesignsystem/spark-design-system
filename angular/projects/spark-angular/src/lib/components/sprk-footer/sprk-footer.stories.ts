@@ -1,5 +1,6 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkFooterModule } from './sprk-footer.module';
+import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
@@ -29,6 +30,7 @@ const modules = {
     SprkFooterModule,
     SprkLinkDirectiveModule,
     SprkStackModule,
+    SprkTextModule,
     SprkStackItemModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
@@ -270,7 +272,9 @@ export const defaultStory = () => ({
       >
         <p
           sprkStackItem
-          class="sprk-b-TypeBodyFour sprk-c-Footer__text"
+          sprkText
+          variant="bodyFour"
+          class="sprk-c-Footer__text"
         >
           Sed ut perspiciatis unde omnis iste natus error sit <a href="#nogo" sprkLink class="sprk-b-Link--inline-light"> inline link</a> accusantium doloremque laudantium
         </p>
