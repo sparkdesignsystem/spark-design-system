@@ -148,178 +148,180 @@ const logoSvg = `
 `;
 
 const bodyContent = `
-  <sprk-highlight-board
-    heading="Example Content To View Masthead Scrolling"
-    ctaText="Example One"
-    ctaHref="#nogo"
-    ctaText2="Example Two"
-    ctaHref2="#nogo"
-    imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-    imgAlt=""
-    idString="highlightboard-1"
-  >
-  </sprk-highlight-board>
-
-  <div sprkBox spacing="large">
-    <h2 sprkHeading variant="displayTwo">Example Cards</h2>
-  </div>
-
-  <div sprkBox>
-    <sprk-stack
-      itemSpacing="large"
-      splitAt="large"
-      additionalClasses="sprk-o-Stack--center-row"
+  <main>
+    <sprk-highlight-board
+      heading="Example Content To View Masthead Scrolling"
+      ctaText="Example One"
+      ctaHref="#nogo"
+      ctaText2="Example Two"
+      ctaHref2="#nogo"
+      imgSrc="https://spark-assets.netlify.app/desktop.jpg"
+      imgAlt=""
+      idString="highlightboard-1"
     >
-    <div
-      class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-      sprkStackItem
-    >
-      <sprk-card sprkStackItem>
-        <a
-          sprkLink
-          variant="unstyled"
-          href="#nogo"
-          analyticsString="three-up-media"
-          sprkStackItem
-        >
-          <img
-            sprkCardMedia
-            alt="Learn more"
-            src="https://spark-assets.netlify.app/desktop.jpg"
-          />
-        </a>
+    </sprk-highlight-board>
 
-        <sprk-stack sprkCardContent itemSpacing="medium" isStackItem="true">
-          <h3 sprkHeading variant="displayFive" sprkStackItem>
-            Title
-          </h3>
-
-          <p sprkText variant="bodyTwo" sprkStackItem>
-            This Lorem ipsum dolor sit amet, doctus invenire vix te.
-            Facilisi perpetua an pri, errem commune mea at, mei prima
-            tantas signiferumque at. Numquam.
-          </p>
-
-          <sprk-stack
-            isStackItem="true"
-            additionalClasses="sprk-o-Stack--end-column"
-          >
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="three-up-cta"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
-          </sprk-stack>
-        </sprk-stack>
-      </sprk-card>
+    <div sprkBox spacing="large">
+      <h2 sprkHeading variant="displayTwo">Example Cards</h2>
     </div>
 
-    <div
-      class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-      sprkStackItem
-    >
-      <sprk-card sprkStackItem>
-        <a
-          sprkLink
-          variant="unstyled"
-          href="#nogo"
-          sprkStackItem
-          analyticsString="three-up-media-2"
-        >
-          <img
-            sprkCardMedia
-            alt="Learn more"
-            src="https://spark-assets.netlify.app/desktop.jpg"
-          />
-        </a>
-
-        <sprk-stack sprkCardContent itemSpacing="medium" additionalClasses="sprk-o-Stack__item">
-          <h3 sprkHeading variant="displayFive" sprkStackItem>
-            Title
-          </h3>
-
-          <p sprkText variant="bodyTwo" sprkStackItem>
-            This Lorem ipsum dolor sit amet, doctus invenire vix te.
-            Facilisi perpetua an pri, errem commune mea at, mei prima
-            tantas signiferumque at. Numquam.
-          </p>
-
-          <sprk-stack
-            additionalClasses="sprk-o-Stack--end-column sprk-o-Stack__item"
+    <div sprkBox>
+      <sprk-stack
+        itemSpacing="large"
+        splitAt="large"
+        additionalClasses="sprk-o-Stack--center-row"
+      >
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="#nogo"
+            analyticsString="three-up-media"
+            sprkStackItem
           >
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="three-up-cta-2"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <img
+              sprkCardMedia
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" isStackItem="true">
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Title
+            </h3>
+
+            <p sprkText variant="bodyTwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <sprk-stack
+              isStackItem="true"
+              additionalClasses="sprk-o-Stack--end-column"
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="three-up-cta"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
-        </sprk-stack>
-      </sprk-card>
-    </div>
+        </sprk-card>
+      </div>
 
-    <div
-      class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
-      sprkStackItem
-    >
-      <sprk-card sprkStackItem>
-        <a
-          sprkLink
-          variant="unstyled"
-          href="#nogo"
-          analyticsString="three-up-media-3"
-          sprkStackItem
-        >
-          <img
-            sprkCardMedia
-            alt="Learn more"
-            src="https://spark-assets.netlify.app/desktop.jpg"
-          />
-        </a>
-
-        <sprk-stack sprkCardContent itemSpacing="medium" isStackItem="true">
-          <h3 sprkHeading variant="displayFive" sprkStackItem>
-            Title
-          </h3>
-
-          <p sprkText variant="bodyTwo" sprkStackItem>
-            This Lorem ipsum dolor sit amet, doctus invenire vix te.
-            Facilisi perpetua an pri, errem commune mea at, mei prima
-            tantas signiferumque at. Numquam.
-          </p>
-
-          <sprk-stack
-            isStackItem="true"
-            additionalClasses="sprk-o-Stack--end-column"
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="#nogo"
+            sprkStackItem
+            analyticsString="three-up-media-2"
           >
-            <div sprkStackItem>
-              <a
-                sprkLink
-                variant="unstyled"
-                href="#nogo"
-                analyticsString="three-up-cta-3"
-                class="sprk-c-Button sprk-c-Button--secondary"
-              >
-                Learn More
-              </a>
-            </div>
+            <img
+              sprkCardMedia
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" additionalClasses="sprk-o-Stack__item">
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Title
+            </h3>
+
+            <p sprkText variant="bodyTwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <sprk-stack
+              additionalClasses="sprk-o-Stack--end-column sprk-o-Stack__item"
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="three-up-cta-2"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
           </sprk-stack>
-        </sprk-stack>
-      </sprk-card>
+        </sprk-card>
+      </div>
+
+      <div
+        class="sprk-c-Card__container sprk-o-Stack__item--flex@l"
+        sprkStackItem
+      >
+        <sprk-card sprkStackItem>
+          <a
+            sprkLink
+            variant="unstyled"
+            href="#nogo"
+            analyticsString="three-up-media-3"
+            sprkStackItem
+          >
+            <img
+              sprkCardMedia
+              alt="Learn more"
+              src="https://spark-assets.netlify.app/desktop.jpg"
+            />
+          </a>
+
+          <sprk-stack sprkCardContent itemSpacing="medium" isStackItem="true">
+            <h3 sprkHeading variant="displayFive" sprkStackItem>
+              Title
+            </h3>
+
+            <p sprkText variant="bodyTwo" sprkStackItem>
+              This Lorem ipsum dolor sit amet, doctus invenire vix te.
+              Facilisi perpetua an pri, errem commune mea at, mei prima
+              tantas signiferumque at. Numquam.
+            </p>
+
+            <sprk-stack
+              isStackItem="true"
+              additionalClasses="sprk-o-Stack--end-column"
+            >
+              <div sprkStackItem>
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  analyticsString="three-up-cta-3"
+                  class="sprk-c-Button sprk-c-Button--secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </sprk-stack>
+          </sprk-stack>
+        </sprk-card>
+      </div>
+      </sprk-stack>
     </div>
-    </sprk-stack>
-  </div>
+  </main>
 `;
 
 const modules = {
@@ -564,6 +566,7 @@ export const defaultStory = () => ({
         </div>
       </nav>
     </sprk-masthead>
+
   `,
 });
 
