@@ -723,33 +723,18 @@ describe('SprkMastheadComponent', () => {
     );
   });
 
-  it('should close the collapsible nav on orientationchange', () => {
-    // Should be closed first
+  it('should close the collapsible nav when viewport expands to large from small', () => {
+    component.masthead.isMastheadHidden = true;
+    component.masthead.collapsibleNavDirective.isCollapsed = false;
+    component.masthead.isNarrowViewport = true;
+    component.masthead.isNarrowViewportOnResize = false;
+    component.masthead.updateLayoutState();
+    componentFixture.detectChanges();
     expect(collapsibleNavEl.classList.toString()).toEqual(
       'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
     );
-    // Set it to open
-    collapsibleNavButton.click();
-    componentFixture.detectChanges();
-    // we expect it to be open
-    expect(collapsibleNavEl.classList.toString()).toEqual(
-      'sprk-c-Masthead__nav-collapsible',
-    );
-    // We expect the overflow class to be added to the body tag
-    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
-      true,
-    );
-    // Fire the event on the window
-    window.dispatchEvent(new Event('orientationchange'));
-    componentFixture.detectChanges();
-    // We expect the component to detect the event and close the collapsible nav
-    expect(collapsibleNavEl.classList.toString()).toEqual(
-      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
-    );
-    // We expect the class that was added to the body to be removed
-    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
-      false,
-    );
+    expect(component.masthead.isMastheadHidden).toBe(false);
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(true);
   });
 
   it('should add data-id when idString has a value', () => {
@@ -858,6 +843,15 @@ describe('SprkMastheadComponent', () => {
       'throttledUpdateLayoutState',
     );
     window.dispatchEvent(new Event('resize'));
+    expect(spyOnResize).toHaveBeenCalled();
+  });
+
+  it('should call throttledUpdateLayoutState on orientationchange', () => {
+    const spyOnResize = jest.spyOn(
+      component.masthead,
+      'throttledUpdateLayoutState',
+    );
+    window.dispatchEvent(new Event('orientationchange'));
     expect(spyOnResize).toHaveBeenCalled();
   });
 

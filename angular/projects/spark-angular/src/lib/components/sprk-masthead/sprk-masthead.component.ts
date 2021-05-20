@@ -146,21 +146,6 @@ export class SprkMastheadComponent implements AfterViewInit {
   throttledUpdateLayoutState = throttle(this.updateLayoutState, 500);
 
   /**
-   * Closes the collapsible navigation
-   * if it is left open when
-   * the viewport orientation is changed.
-   */
-  @HostListener('window:orientationchange')
-  handleOrientationChangeEvent() {
-    if (!this.collapsibleNavDirective) {
-      return;
-    }
-    this.closeCollapsibleNav();
-    // Update narrow layout state
-    this.isNarrowViewport = isElementVisible(this.mastheadMenuContainer);
-  }
-
-  /**
    * Updates the scroll direction when the page is scrolled.
    */
   @HostListener('window:scroll', ['$event'])
@@ -172,9 +157,11 @@ export class SprkMastheadComponent implements AfterViewInit {
   }
 
   /**
-   * Handles when viewport size changes to
-   * large while narrow nav is hidden.
+   * When page is resized or the orientation changes
+   * we want to update the internal state to close
+   * the collapsible nav if needed.
    */
+  @HostListener('window:orientationchange')
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
     if (!this.collapsibleNavDirective) {
