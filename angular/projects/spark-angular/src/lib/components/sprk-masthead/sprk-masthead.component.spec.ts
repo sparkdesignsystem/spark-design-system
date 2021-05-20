@@ -846,13 +846,33 @@ describe('SprkMastheadComponent', () => {
     expect(spyOnResize).toHaveBeenCalled();
   });
 
-  it('should call throttledUpdateLayoutState on orientationchange', () => {
-    const spyOnResize = jest.spyOn(
-      component.masthead,
-      'throttledUpdateLayoutState',
+  it('should close the collapsible nav on orientationchange', () => {
+    // Should be closed first
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
     );
+    // Set it to open
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // we expect it to be open
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+    // We expect the overflow class to be added to the body tag
+    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
+      true,
+    );
+    // Fire the event on the window
     window.dispatchEvent(new Event('orientationchange'));
-    expect(spyOnResize).toHaveBeenCalled();
+    componentFixture.detectChanges();
+    // We expect the component to detect the event and close the collapsible nav
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    // We expect the class that was added to the body to be removed
+    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
+      false,
+    );
   });
 
   it('should have isPageScrolled as false upon load', () => {

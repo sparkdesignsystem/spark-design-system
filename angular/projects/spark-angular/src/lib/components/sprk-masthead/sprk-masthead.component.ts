@@ -12,7 +12,6 @@ import { Router, Event, NavigationEnd } from '@angular/router';
 import { throttle } from 'lodash';
 import { SprkMastheadNavCollapsibleDirective } from './directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
 import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-branding/sprk-masthead-branding.directive';
-import { SprkMastheadNavCollapsibleButtonComponent } from './components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.component';
 import { isElementVisible } from '../../utilities/isElementVisible/isElementVisible';
 
 @Component({
@@ -33,6 +32,7 @@ import { isElementVisible } from '../../utilities/isElementVisible/isElementVisi
         >
           <sprk-masthead-nav-collapsible-button
             [collapsibleNavId]="collapsibleNavDirective.id"
+            [isOpen]="isCollapsibleNavOpen"
             (collapsibleNavButtonEvent)="toggleCollapsibleNav($event)"
           ></sprk-masthead-nav-collapsible-button>
         </div>
@@ -93,11 +93,6 @@ export class SprkMastheadComponent implements AfterViewInit {
   })
   collapsibleNavDirective: SprkMastheadNavCollapsibleDirective;
 
-  @ViewChild(SprkMastheadNavCollapsibleButtonComponent, {
-    static: false,
-  })
-  collapsibleNavButtonComponent: SprkMastheadNavCollapsibleButtonComponent;
-
   @ViewChild('mastheadMenuContainer', { static: false })
   mastheadMenuContainer: ElementRef;
 
@@ -134,6 +129,12 @@ export class SprkMastheadComponent implements AfterViewInit {
    * order to apply CSS classes or not.
    */
   currentScrollPosition = 0;
+
+  /**
+   * Represents the initial state of the
+   * collapsible nav of the Masthead component.
+   */
+  isCollapsibleNavOpen = false;
   /**
    * Throttles the updateScrollDirection function to prevent
    * it from impacting performance.
@@ -157,11 +158,23 @@ export class SprkMastheadComponent implements AfterViewInit {
   }
 
   /**
-   * When page is resized or the orientation changes
+   * Closes the collapsible navigation menu
+   * if it is left open when
+   * the viewport orientation changes.
+   */
+  @HostListener('window:orientationchange')
+  handleResizeEvent() {
+    if (!this.collapsibleNavDirective) {
+      return;
+    }
+    this.closeCollapsibleNav();
+  }
+
+  /**
+   * When page is resized
    * we want to update the internal state to close
    * the collapsible nav if needed.
    */
-  @HostListener('window:orientationchange')
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
     if (!this.collapsibleNavDirective) {
@@ -201,6 +214,11 @@ export class SprkMastheadComponent implements AfterViewInit {
     // We say that it is a narrow viewport if
     // the collapisble nav button style is not set to display: none
     this.isNarrowViewport = isElementVisible(this.mastheadMenuContainer);
+    if (this.collapsibleNavDirective) {
+      this.collapsibleNavDirective.isCollapsed
+        ? (this.isCollapsibleNavOpen = false)
+        : (this.isCollapsibleNavOpen = true);
+    }
   }
 
   /**
@@ -305,7 +323,7 @@ export class SprkMastheadComponent implements AfterViewInit {
     // Set the isCollapsed property on the collapsible nav to false to open it
     this.collapsibleNavDirective.isCollapsed = false;
     // Ensure the button styles are set to open
-    this.collapsibleNavButtonComponent.isOpen = true;
+    this.isCollapsibleNavOpen = true;
   }
 
   /**
@@ -328,6 +346,6 @@ export class SprkMastheadComponent implements AfterViewInit {
     // Set the isCollapsed property on the collapsible nav to true to close it
     this.collapsibleNavDirective.isCollapsed = true;
     // Ensure the button styles are set to closed
-    this.collapsibleNavButtonComponent.isOpen = false;
+    this.isCollapsibleNavOpen = false;
   }
 }
