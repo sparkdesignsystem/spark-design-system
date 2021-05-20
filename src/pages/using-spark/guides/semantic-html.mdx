@@ -1,5 +1,5 @@
 ---
-title: Semantic HTML
+title: Writing Meaningful Web Content With Semantic HTML
 ---
 
 import { SprkHeading } from '@sparkdesignsystem/spark-react';
@@ -13,22 +13,23 @@ import { SprkHeading } from '@sparkdesignsystem/spark-react';
   Writing Meaningful Web Content with Semantic HTML
 </SprkHeading>
 
-Typically, in a word document, writers bold or italicize text to add context to the copy.
+Typically, in a word document, writers **bold** or <em>italicize</em> text to add **emphasis** to the copy.
 
-When producing web content, the context and structure are defined by a page’s HTML (Hyper Text Markup Language).
+When producing web content, the **structure** and **meaning** are defined by a page’s HTML (Hyper Text Markup Language).
 
-<span id="main-takeaways" class="docs-b-Link--anchor"></span>
-<SprkHeading
-  element="h3"
-  additionalClasses="sprk-u-mbm sprk-u-Measure"
-  variant="displayThree"
->
-  Main Takeaways
-</SprkHeading>
+> HTML is made up of **elements**, which when applied they give **structure** to content and can **add different meaning** to pieces of text.
 
-- Use HTML elements to define the meaning, structure, or style of a word, line, or any piece of text.
-- It's important to know and understand the purpose of each HTML tag to communicate the intended meaning of the enclosed text.
-- Use the correct tag to communicate meaning and ensure content is accessible for assistive technologies.
+### Main Takeaways
+
+- Use HTML elements to define the structure and meaning of a web page's content.
+- Know the purpose of each element to understand when to use it and to ensure the content can be access by assistive technologies.
+- Use the correct element to ensure the content communicates the intended meaning.
+
+### Benefits Of Using Semantic HTML
+
+- **It's easier to develop**. It gives content structure making it easier to understand.
+- **It's better for mobile experiences**. Semantic HTML is lighter in file size, and easier to make responsive.
+- **It's good for SEO**. It makes documents more findable, search engines give more importance to keywords inside the content structure.
 
 <span id="html-tags-usage" class="docs-b-Link--anchor"></span>
 <SprkHeading
@@ -36,19 +37,30 @@ When producing web content, the context and structure are defined by a page’s 
   additionalClasses="sprk-u-mbm sprk-u-Measure"
   variant="displayTwo"
 >
-  HTML Tags Usage
+  HTML Elements
 </SprkHeading>
 
-Use tags to clearly describe their meaning and content to browsers, developers and
-users of assistive technologies.
+An **element** is created by enclosing pieces of text using **tags**. Elements describe the meaning and content to web browsers, developers and users of assistive technologies.
 
-> As a UX Writer, it's important to **understand** each HTML tag's **usage** and **purpose** to know when to use them, and ensure the content is communicating the **intended meaning**.
+> As a UX Writer, it's important to **understand** each HTML element's **usage** and **purpose** to know when to use them, and ensure the content is communicating the **intended meaning**.
 
-Common HTML tags are the **Strong** `strong` and the **Emphasis** `em` tags.
+The most common HTML elements for UX Writer's are:
 
-- Use these tags to ensure users can perceive the semantic meaning indicated by the visual treatment, even if they’re using assistive technology like a screen reader.
+- The **strong element** `<strong></strong>`, defines text with strong importance.
+- The **emphasis element** `<em></em>`, defines text emphasis.
 
-- Don’t use the **Bold** `bold` or **Italic** `italic` tags for emphasizing text. These don’t add meaning to the copy, and they aren’t accessible for screen readers.
+Using these elements ensure users can perceive the semantic meaning indicated by the visual treatment, even if they’re using assistive technology like a screen reader.
+
+### HTML Formatting Elements
+
+Use the bold and italic elements to display special types of text.
+
+- The `<b>bold</b>` element to bold text without extra importance.
+
+- The `<i>italic</i>` element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.
+  - Use for technical terms, a phrase from another language, a thought, a product name, etc.
+
+> The intended meaning or purpose of the enclosed text should be what determines which element to use. For more information, visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"> Modzilla's Developer Documentation - HTML elements </a>.
 
 <span id="strong" class="docs-b-Link--anchor"></span>
 <SprkHeading
@@ -56,19 +68,18 @@ Common HTML tags are the **Strong** `strong` and the **Emphasis** `em` tags.
   additionalClasses="sprk-u-mbm sprk-u-Measure"
   variant="displayThree"
 >
-  Strong Importance Text
+  Using The Strong Element
 </SprkHeading>
 
-The `<strong>Strong Tag</strong>` indicates that its contents have strong importance, seriousness, or urgency.
+The <strong>strong element</strong> indicates strong importance, seriousness, or urgency of the enclosed text inside the `<strong></strong>` tags.
 
-Browsers render the contents inside the Strong tag in **bold type**.
+By default web browsers, render the contents inside strong tags in **bold type**.
 
 #### Usage
 
 - To reference the name of a page.
-- To emphasize text, like a word or a phrase.
-- Use for content that is of greater importance.
-- Don’t use the Bold tag to emphasize text. Use the Bold tag to draw attention to text without indicating that it's more important.
+- To represent strong importance of it's contents.
+- To add importance or urgency to pieces of a sentence.
 
 <span id="examples" class="docs-b-Link--anchor"></span>
 <SprkHeading
@@ -79,7 +90,7 @@ Browsers render the contents inside the Strong tag in **bold type**.
   Examples
 </SprkHeading>
 
-**Do's**:
+These are some examples of emphasized word(s) using the strong element.
 
 - Check your **To Do List** items for new tasks.
   - Check your `<strong> To Do List </strong>` items for new tasks.
@@ -90,12 +101,15 @@ Browsers render the contents inside the Strong tag in **bold type**.
 - Remember to bring your **driver’s license** to your closing appointment.
   - Remember to bring your `<strong>driver’s license</strong>` to your closing appointment.
 
-**Dont's**:
+#### Strong vs Bold Element vs Styling Text
 
-- Check your **To Do List** items for new tasks.
-  - Check your `<b>To Do List</b>` items for new tasks.
-- Go to your **Settings page and find your payment elections settings.**
-  - Go to your `<b>Settings page and find your payment elections settings.</b>`
+- Use the **strong element** `<strong></strong>` for important content, and to communicate urgency.
+- Use the <b>bold element</b> `<b></b>` to bring attention to text without indicating that it's more important.
+  - Use to draw the reader's attention to the elements contents, which aren't of special importance.
+  - Use for **keywords** in a summary and for **product names** in a review.
+  - **Don't** use the **bold element** for styling or decorating text.
+
+> For **decorating** and **styling** text, use the **CSS** (Cascade Styling Sheet) <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a> property.
 
 <span id="emphasis-text" class="docs-b-Link--anchor"></span>
 <SprkHeading
@@ -103,23 +117,29 @@ Browsers render the contents inside the Strong tag in **bold type**.
   additionalClasses="sprk-u-mbm sprk-u-Measure"
   variant="displayThree"
 >
-  Emphasis Text
+  Stressing Emphasis
 </SprkHeading>
 
-Use the `<em>Emphasis Tag</em>` to give stressed emphasis to a word or words, in the same way verbal stress works.
+Use the <strong>em element</strong> to give <em>stressed emphasis</em> to the enclosed text inside the `<em></em>` tags, in the same way verbal stress works.
 
-Browsers render the content inside the Emphasis tag in <em>Italic type</em>.
+By default, web browsers render the contents inside the emphasis tags as <em>italic type</em>.
 
-> As a UX Writer is important to understand and know when to apply **Stress Emphasis** to text, this can **change the meaning** of the sentence itself.
+A screen reader will pronounce the words inside the **em** element `<em></em>` tags with an emphasis, using verbal stress.
+
+> As a UX Writer, is important to know when to apply **stress emphasis** to text, because it can **change the meaning** of the sentence.
 
 #### Usage
 
-- It indicates an implicit or explicit contrast.
-- To reference a specific instance of microcopy within the interface that users can take action on.
-
-**Don’t**
-
-- Use the `<i>Italic Tag</i>` for text emphasis or to refer to a UI (User Interface) element on a page.
+- Use for words that have a stressed emphasis compared to surrounding text.
+  - For example: Our family <em>loves</em> spending summers on the beach.
+- Use to change the meaning of a sentence.
+  - For example: We found the perfect house, let's put an offer <em>
+    now
+      </em>!
+- To reference a specific instance of microcopy within the web page that users can take action on.
+  - For example: <em>
+    Find Brokers Near Me
+      </em> to connect with a broker in your community.
 
 <span id="examples" class="docs-b-Link--anchor"></span>
 <SprkHeading
@@ -130,36 +150,23 @@ Browsers render the content inside the Emphasis tag in <em>Italic type</em>.
   Examples
 </SprkHeading>
 
-**Do's**:
+Here are some examples using the em element to give stressed emphasis to some of text.
 
 - Sort by <em>Submitted</em> to see the loans you’ve already completed.
   - Sort by `<em>Submitted</em>` to see the loans you’ve already completed.
 - Select <em>I don’t have a preference </em> from the dropdown if you change your mind.
   - Select `<em>I don’t have a preference </em>` from the dropdown if you change your mind.
 
-**Dont's**:
+#### Emphasis vs The Idiomatic Text Element
 
-- Check your <i>To Do List </i> items for new tasks.
+- Use the **emphasis element** `<em></em>` to indicate stress emphasis.
+- Use the **idiomatic text element** `<i></i>` for text that is set off from the normal prose, like an alternate tone or mood.
+  - Use for technical terms, transliterations and taxonomical designations (for example: "Homo Sapiens").
 
-  - Check your `<i>To Do List </i>` items for new tasks.
-
-- <i>Need Help? </i> Call us to speak with a Home Loan Expert.
-
-  - `<i> Need Help? </i>` Call us to speak with a Home Loan Expert.
-
-- Use the <i>button </i> to see today’s rates.
-  - Use the `<i>button </i>` to see today’s rates.
-
-> To view a list of all the HTML tags available to add meaning to copy, refer to [MDN’s Semantic element list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#inline_text_semantics).
+> To view a list of all the HTML elements available to add meaning to copy, refer to [MDN’s Semantic element list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#inline_text_semantics).
 
 ## Accessibility
 
 Use semantic HTML to ensure digital experiences are inclusive to all users and accessible by assistive technologies.
 
-### Benefits Of Using Semantic HTML
-
-- **It's easier to develop**, and easier to understand.
-- **It's better for mobile experiences**, semantic HTML is lighter in file size, and easier to make responsive.
-- **It's good for SEO**, it makes documents more findable, search engines give more importance to keywords inside the content structure.
-
-> The guides are not all-inclusive. Refer to the [Web Content Accessibility Guidelines (WCAG 2.1, Level AA)](https://www.w3.org/TR/WCAG21/) for more insights.
+> Our guides are not all-inclusive. Refer to the [Web Content Accessibility Guidelines (WCAG 2.1, Level AA)- Semantic Elements](https://www.w3.org/TR/2016/REC-html51-20161101/dom.html#elements) for more insights.
