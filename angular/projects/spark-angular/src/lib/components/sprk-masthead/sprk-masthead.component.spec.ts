@@ -36,9 +36,7 @@ import { ReplaySubject } from 'rxjs';
             width="365.4"
             height="48"
             viewBox="0 0 365.4 101.35"
-          >
-            Test
-          </svg>
+          ></svg>
         </a>
       </div>
 
@@ -117,7 +115,7 @@ import { ReplaySubject } from 'rxjs';
       </nav>
 
       <div sprkStackItem>
-        <nav sprkMastheadNavBar sprkStackItem role="navigation" idString="cats">
+        <nav sprkMastheadNavBar sprkStackItem role="navigation">
           <ul
             class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare"
           >
@@ -142,7 +140,7 @@ import { ReplaySubject } from 'rxjs';
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                 additionalClasses="sprk-u-TextAlign--left"
                 triggerIconName="chevron-down"
-                analyticsString="cats"
+                analyticsString="nav-bar-item-2"
                 triggerText="Item Two"
               ></sprk-dropdown>
             </li>
@@ -168,7 +166,7 @@ import { ReplaySubject } from 'rxjs';
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
                 additionalClasses="sprk-u-TextAlign--left"
                 triggerIconName="chevron-down"
-                analyticsString="cats"
+                analyticsString="nav-bar-item-4"
                 triggerText="Item Four"
               ></sprk-dropdown>
             </li>
@@ -190,7 +188,8 @@ import { ReplaySubject } from 'rxjs';
       <nav
         sprkMastheadNavCollapsible
         role="navigation"
-        idString="collapsible-nav"
+        idString="extended-collapsible-nav"
+        aria-label="collapsible"
       >
         <sprk-masthead-selector
           triggerText="Choose One"
@@ -206,7 +205,7 @@ import { ReplaySubject } from 'rxjs';
             <a
               sprkLink
               variant="unstyled"
-              analyticsString="cats"
+              analyticsString="placeholder-button"
               href="#nogo"
               class="sprk-c-Button sprk-c-Button--secondary"
             >
@@ -226,7 +225,7 @@ import { ReplaySubject } from 'rxjs';
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="accordion-item-1"
                 >
                   Item 1
                 </a>
@@ -238,7 +237,7 @@ import { ReplaySubject } from 'rxjs';
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="accordion-item-2"
                 >
                   Item 2
                 </a>
@@ -250,7 +249,7 @@ import { ReplaySubject } from 'rxjs';
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="accordion-item-3"
                 >
                   Item 3
                 </a>
@@ -265,7 +264,6 @@ import { ReplaySubject } from 'rxjs';
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
             </a>
@@ -281,7 +279,6 @@ import { ReplaySubject } from 'rxjs';
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 1
                 </a>
@@ -293,7 +290,6 @@ import { ReplaySubject } from 'rxjs';
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 2
                 </a>
@@ -305,7 +301,6 @@ import { ReplaySubject } from 'rxjs';
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 3
                 </a>
@@ -318,7 +313,6 @@ import { ReplaySubject } from 'rxjs';
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 4</span>
             </a>
@@ -329,7 +323,6 @@ import { ReplaySubject } from 'rxjs';
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 5</span>
             </a>
@@ -340,7 +333,6 @@ import { ReplaySubject } from 'rxjs';
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -362,7 +354,6 @@ import { ReplaySubject } from 'rxjs';
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -384,7 +375,6 @@ import { ReplaySubject } from 'rxjs';
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -411,7 +401,7 @@ import { ReplaySubject } from 'rxjs';
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="change-username"
                 >
                   Change Username
                 </a>
@@ -423,7 +413,7 @@ import { ReplaySubject } from 'rxjs';
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="change-password"
                 >
                   Change Password
                 </a>
@@ -435,7 +425,7 @@ import { ReplaySubject } from 'rxjs';
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
+                  analyticsString="sign-out"
                 >
                   Sign Out
                 </a>

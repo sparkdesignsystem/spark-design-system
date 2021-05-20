@@ -466,7 +466,6 @@ export const defaultStory = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 1
                 </a>
@@ -478,7 +477,6 @@ export const defaultStory = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 2
                 </a>
@@ -490,7 +488,6 @@ export const defaultStory = () => ({
                   variant="unstyled"
                   class="sprk-c-MastheadAccordion__summary"
                   href="#nogo"
-                  analyticsString="dogs"
                 >
                   Item 3
                 </a>
@@ -503,7 +500,6 @@ export const defaultStory = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
             </a>
@@ -514,7 +510,6 @@ export const defaultStory = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -536,7 +531,6 @@ export const defaultStory = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
-              analyticsString="dogs"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
