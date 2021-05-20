@@ -448,21 +448,15 @@ class Test1Component {
   selector: 'sprk-test-2',
   template: `
     <sprk-masthead>
-      <div
-        sprkMastheadBranding
-        sprkStackItem
-        class="sprk-o-Stack__item--center-column@xxs"
-      >
+      <div sprkMastheadBranding sprkStackItem class="sprk-u-TextAlign--left">
         <a sprkLink href="#nogo" variant="unstyled">
           <svg
-            class="sprk-c-Masthead__logo"
+            class="sprk-c-Masthead__logo sprk-u-TextAlign--left"
             xmlns="http://www.w3.org/2000/svg"
             width="365.4"
             height="48"
             viewBox="0 0 365.4 101.35"
-          >
-            Test
-          </svg>
+          ></svg>
         </a>
       </div>
 
@@ -472,7 +466,7 @@ class Test1Component {
         class="sprk-o-Stack__item--center-column@xxs"
       >
         <a sprkMastheadLink href="#nogo">
-          Sign In
+          Talk To Us
         </a>
       </div>
 
@@ -482,35 +476,6 @@ class Test1Component {
         role="navigation"
         class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
       >
-        <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
-          <sprk-stack
-            additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row"
-          >
-            <div sprkStackItem class="sprk-u-Position--relative">
-              <sprk-masthead-selector
-                triggerText="Choose One"
-                heading="Choose One"
-                triggerIconName="chevron-down"
-                [choices]="selectorDropdown"
-              >
-                <div
-                  class="sprk-c-Masthead__selector-footer"
-                  sprkMastheadSelectorFooter
-                >
-                  <a
-                    sprkLink
-                    variant="unstyled"
-                    href="#nogo"
-                    class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
-                  >
-                    Placeholder
-                  </a>
-                </div>
-              </sprk-masthead-selector>
-            </div>
-          </sprk-stack>
-        </div>
-
         <ul
           sprkStackItem
           class="
@@ -539,77 +504,6 @@ class Test1Component {
           </li>
         </ul>
       </nav>
-
-      <div sprkStackItem>
-        <nav sprkMastheadNavBar sprkStackItem role="navigation" idString="cats">
-          <ul
-            class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare"
-          >
-            <li sprkStackItem class="sprk-c-Masthead__big-nav-item">
-              <a
-                sprkMastheadLink
-                variant="navBar"
-                analyticsString="nav-bar-item-1"
-                href="#nogo"
-              >
-                Item One
-              </a>
-            </li>
-
-            <li
-              sprkStackItem
-              class="sprk-c-Masthead__big-nav-item"
-              aria-haspopup="true"
-            >
-              <sprk-dropdown
-                [choices]="item2NavBarDropdownChoices"
-                triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                additionalClasses="sprk-u-TextAlign--left"
-                triggerIconName="chevron-down"
-                analyticsString="cats"
-                triggerText="Item Two"
-              ></sprk-dropdown>
-            </li>
-
-            <li sprkStackItem class="sprk-c-Masthead__big-nav-item">
-              <a
-                sprkMastheadLink
-                variant="navBar"
-                analyticsString="nav-bar-item-3"
-                href="#nogo"
-              >
-                Item Three
-              </a>
-            </li>
-
-            <li
-              sprkStackItem
-              class="sprk-c-Masthead__big-nav-item"
-              aria-haspopup="true"
-            >
-              <sprk-dropdown
-                [choices]="item2NavBarDropdownChoices"
-                triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                additionalClasses="sprk-u-TextAlign--left"
-                triggerIconName="chevron-down"
-                analyticsString="cats"
-                triggerText="Item Four"
-              ></sprk-dropdown>
-            </li>
-
-            <li sprkStackItem class="sprk-c-Masthead__big-nav-item">
-              <a
-                sprkMastheadLink
-                variant="navBar"
-                analyticsString="nav-bar-item-5"
-                href="#nogo"
-              >
-                Item Five
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
     </sprk-masthead>
   `,
 })
