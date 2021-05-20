@@ -297,9 +297,13 @@ export class SprkMastheadComponent implements AfterViewInit {
    * whenever the collapsible nav emits the isButtonOpen event.
    */
   toggleCollapsibleNav(isButtonOpen: boolean): void {
+    console.log('toggle collapsible nav click from masthead ran');
     if (!this.collapsibleNavDirective.isCollapsed) {
       this.closeCollapsibleNav();
     } else {
+      console.log(
+        'detected menu is not closed and ran open. toggle collapsible nav click from masthead ran',
+      );
       // The button is now open and we want to open the nav too
       this.openCollapsibleNav();
     }

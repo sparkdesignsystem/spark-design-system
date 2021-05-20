@@ -113,6 +113,8 @@ export class SprkMastheadNavCollapsibleButtonComponent {
    */
   toggleCollapsibleNav(event): void {
     event.preventDefault();
+    console.log('button component: detected click');
+
     this.isOpen = !this.isOpen;
     this.collapsibleNavButtonEvent.emit(this.isOpen);
   }
