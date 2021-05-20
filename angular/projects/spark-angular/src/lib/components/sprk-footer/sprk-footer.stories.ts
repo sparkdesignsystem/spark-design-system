@@ -1,11 +1,7 @@
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkFooterModule } from './sprk-footer.module';
-import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
-import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
-import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
-import { SprkStackItemModule} from '../../directives/sprk-stack-item/sprk-stack-item.module'
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
@@ -28,10 +24,6 @@ must be present.
 const modules = {
   imports: [
     SprkFooterModule,
-    SprkLinkDirectiveModule,
-    SprkStackModule,
-    SprkTextModule,
-    SprkStackItemModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {
