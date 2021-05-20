@@ -52,7 +52,7 @@ import sparkPrerender from "@sparkdesignsystem/spark/es5/sparkPrerender";
 import "@sparkdesignsystem/spark/es5/sparkPolyfills";
 
 // import the Spark CSS
-import "@sparkdesignsystem/spark-styles/spark";
+import "@sparkdesignsystem/spark-styles/_spark.scss";
 
 // initialize Spark
 sparkPrerender();
@@ -96,6 +96,7 @@ Spark components to correctly handle focus changes.
 ### Notes:
 - Do not put `data-sprk-main` on the `<body>` tag.
 - The main content container cannot contain the Spark Masthead component.
+- Put this container above the `<script src="main.js"></script>` line.
 
 ``` html
 <div data-sprk-main>

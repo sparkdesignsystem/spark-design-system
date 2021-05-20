@@ -58,17 +58,42 @@ include in your site.
 down on the Button page to find <a href="https://html.sparkdesignsystem.com/?path=/docs/components-button--spinning" target="_blank">Spinning Button</a>.
 Then you’d copy the Spinning Button code that looks like this:
 
-``` html
-<button class="sprk-c-Button" data-sprk-spinner="click">
-Submit
-</button>
-```
-
 > **Note**: Make sure you’re including `main.js` after the HTML
 elements in `index.html`. The `<script>` line should be at the
 bottom of the `<body>` tag.
 
-8. You should see the component you just installed with all the
+``` html
+<button
+  class="sprk-c-Button sprk-c-Button--has-spinner"
+  data-sprk-spinner="click"
+  data-id="button-spinner-1"
+>
+  Submit
+</button>
+```
+
+> Our Storybook code shows the component in its active state. Making a button that
+starts spinning requires additional engineering. The following is one example of implementation.
+
+8. Add an `onclick` to the button that will run the Spark function. In this example,
+we'll name the function `startSpinner()`
+```
+  <button class="sprk-c-Button" onclick="startSpinner()" data-id="button-spinner-1">
+    Start Spinning
+  </button>
+```
+
+9. In the `main.js` file, import `setSpinning` from Spark and create a `startSpinner` function.
+```
+import { setSpinning } from '@sparkdesignsystem/spark';
+
+window.startSpinner = () => {
+  const spinningButton = document.querySelector('[data-id="button-spinner-1"]');
+  setSpinning(spinningButton, {});
+}
+```
+
+10. You should see the component you just installed with all the
 correct Spark CSS applied.
 
 > **For example**: If you’ve added a Spinning Button
