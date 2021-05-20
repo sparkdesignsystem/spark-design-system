@@ -99,7 +99,15 @@ SprkDatePicker.propTypes = {
    * by tiny-date-picker, see [github](https://github.com/chrisdavies/tiny-date-picker) for documentation.
    */
   datePickerConfig: PropTypes.shape({
+    /**
+     * What DOM element the Date Picker will be added to. This defaults
+     * to document.body
+     */
     appendTo: PropTypes.node,
+    /**
+     * Lang can be used to customize the text that is displayed
+     * in the calendar. You can use this to display a different language.
+     */
     lang: PropTypes.shape({
       days: PropTypes.arrayOf(PropTypes.string),
       months: PropTypes.arrayOf(PropTypes.string),
@@ -107,14 +115,65 @@ SprkDatePicker.propTypes = {
     today: PropTypes.string,
     clear: PropTypes.string,
     close: PropTypes.string,
+    /**
+     * format {Date} -> string is a function which takes a
+     * date and returns a string. It can be used to customize
+     * the way a date will look in the input after the user has
+     * selected it, and is particularly useful if you're targeting
+     * a non-US customer.
+     */
     format: PropTypes.func,
+    /**
+     * parse {string|Date} -> Date is the inverse of format.
+     * If you specify one, you probably should specify the other
+     * the default parse function handles whatever the new Date
+     * constructor handles. Note that parse may be passed either a
+     * string or a date.
+     */
     parse: PropTypes.func,
+    /**
+     * mode {'dp-modal'|'dp-below'|'dp-permanent'} specifies the
+     * way the date picker should display:
+     * 'dp-modal' displays the picker as a modal
+     * 'dp-below' displays the date picker as a dropdown
+     * 'dp-permanent' displays the date picker as a permanent
+     * (always showing) calendar.
+     */
     mode: PropTypes.oneOf(['dp-modal', 'dp-below', 'dp-permanent']),
+    /**
+     * highlightedDate specifies what date to highlight when the
+     * date picker is displayed and the associated input has no value.
+     */
     highlightedDate: PropTypes.string,
+    /**
+     * min {string|Date} specifies the minimum date
+     * that can be selected (inclusive).
+     * All earlier dates will be disabled.
+     */
     min: PropTypes.string,
+    /**
+     * max {string|Date} specifies the maximum date
+     * that can be selected (inclusive).
+     * All later dates will be disabled.
+     */
     max: PropTypes.string,
+    /**
+     * inRange {Date} -> boolean takes a date and returns
+     * true or false. If false, the date
+     * will be disabled in the date picker.
+     */
     inRange: PropTypes.func,
+    /**
+     * dateClass {Date} -> string takes a date and returns
+     * a CSS class name to be associated
+     * with that date in the date picker.
+     */
     dateClass: PropTypes.func,
+    /**
+     * dayOffset {number} specifies which day of the week is
+     * considered the first. By default,
+     * this is 0 (Sunday). Set it to 1 for Monday, 2 for Tuesday, etc.
+     */
     dayOffset: PropTypes.number,
   }),
   /**
