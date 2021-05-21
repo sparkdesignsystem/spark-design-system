@@ -195,10 +195,10 @@ export class SprkAutocompleteComponent
    * result item.
    */
   selectHighlightedListItem(): void {
-    var selectedElement = this.resultItems.filter(
+    let selectedElement = this.resultItems.filter(
       (element) => element.isSelected,
     )[0];
-    var selectedId = selectedElement.ref.nativeElement.id;
+    let selectedId = selectedElement.ref.nativeElement.id;
     this.itemSelectedEvent.emit(selectedId);
   }
 
