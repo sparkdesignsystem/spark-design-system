@@ -152,6 +152,8 @@
   <dimen name="sprk_link_light_hover_after_left">0.00dp</dimen><!-- The left position of the after element of Light Links on hover. -->
   <dimen name="sprk_link_light_hover_after_width">1600.00dp</dimen><!-- The width of the after element of Light Links on hover. -->
   <dimen name="sprk_link_light_underline_width">2.00dp</dimen><!-- The underline width value of Light Links. -->
+  <dimen name="sprk_link_inline_light_hover_underline_width">2.00dp</dimen><!-- The underline width value inline Links on a dark background on hover. -->
+  <dimen name="sprk_link_inline_light_underline_width">2.00dp</dimen><!-- The underline width value inline Links on a dark background. -->
   <dimen name="sprk_link_has_icon_underline_width">0.00dp</dimen><!-- The underline width of Links containing icons. -->
   <dimen name="sprk_link_disabled_underline_width">0.00dp</dimen><!-- The underline width for the disabled Link. -->
   <dimen name="sprk_list_margin_left">16.00dp</dimen><!-- The default margin left indentation on Lists. -->
