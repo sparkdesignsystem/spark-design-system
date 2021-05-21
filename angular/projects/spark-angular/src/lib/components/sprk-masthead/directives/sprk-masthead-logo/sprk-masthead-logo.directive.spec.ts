@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkMastheadLogoDirective } from './sprk-masthead-Logo.directive';
+import { SprkMastheadLogoDirective } from './sprk-masthead-logo.directive';
 
 @Component({
   selector: 'sprk-test',
