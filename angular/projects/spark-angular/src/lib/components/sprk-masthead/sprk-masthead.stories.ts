@@ -1624,56 +1624,6 @@ export const withoutCollapsibleNav = () => ({
       </nav>
     </sprk-masthead>
   `,
-  props: {
-    item2NavBarDropdownChoices: [
-      {
-        text: 'Item 1',
-        href: '#nogo',
-      },
-      {
-        text: 'Item 2',
-        href: '#nogo',
-      },
-      {
-        text: 'Item 3',
-        href: '#nogo',
-      },
-    ],
-    selectorDropdown: [
-      {
-        content: {
-          title: 'Choice Title',
-          infoLine1: 'Information about this choice',
-          infoLine2: 'Additional Information',
-        },
-        value: 'Choice Title 1',
-        active: false,
-      },
-      {
-        content: {
-          title: 'Choice Title',
-          infoLine1: 'Information about this choice',
-          infoLine2: 'Additional Information',
-        },
-        value: 'Choice Title 2',
-        active: true,
-      },
-    ],
-    talkToUsDropdownChoices: [
-      {
-        text: 'Change Username',
-        value: 'change-username',
-      },
-      {
-        text: 'Change Password',
-        value: 'change-password',
-      },
-      {
-        text: 'Sign Out',
-        value: 'sign-out',
-      },
-    ],
-  },
 });
 
 withoutCollapsibleNav.story = {
