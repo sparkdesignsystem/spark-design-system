@@ -375,6 +375,7 @@ export const defaultStory = () => ({
         sprkMastheadNavItems
         sprkStackItem
         role="navigation"
+        aria-label="Navigation Links"
         class="
           sprk-o-Stack__item--flex@xxs
           sprk-o-Stack
@@ -613,6 +614,7 @@ export const extended = () => ({
         sprkMastheadNavItems
         sprkStackItem
         role="navigation"
+        aria-label="Navigation Links"
         class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
       >
         <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
@@ -1121,6 +1123,7 @@ export const extendedWithExampleContent = () => ({
         sprkMastheadNavItems
         sprkStackItem
         role="navigation"
+        aria-label="Navigation Links With Selector"
         class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
       >
         <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
@@ -1631,6 +1634,7 @@ export const withoutCollapsibleNav = () => ({
         sprkMastheadNavItems
         sprkStackItem
         role="navigation"
+        aria-label="Navigation Links"
         class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
       >
         <ul
