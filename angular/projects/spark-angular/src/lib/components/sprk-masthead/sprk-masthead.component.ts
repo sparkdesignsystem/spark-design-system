@@ -190,13 +190,13 @@ export class SprkMastheadComponent implements AfterViewInit {
   /**
    * If the viewport size has changed then update
    * the isNarrowViewport state with true if
-   * it is now a narrow viewport or false is it's
-   * now a large viewport. If it's now a large viewport,
+   * it is now a narrow viewport or false is it is
+   * now a large viewport. If it is now a large viewport,
    * we want to make sure the Masthead is not hidden
    * and that we close the collapsible nav if it was open.
    */
   updateLayoutState() {
-    // If the viewport didn't change then don't do anything
+    // If the viewport didn't change then do not do anything
     if (this.isNarrowViewport === this.isNarrowViewportOnResize) {
       return;
     }
