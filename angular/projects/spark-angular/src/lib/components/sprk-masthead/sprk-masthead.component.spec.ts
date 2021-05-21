@@ -117,9 +117,9 @@ import { ReplaySubject } from 'rxjs';
       <div sprkStackItem>
         <nav sprkMastheadNavBar sprkStackItem role="navigation">
           <ul
-            class="sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare"
+            class="sprk-c-Masthead__nav-bar-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare"
           >
-            <li sprkStackItem class="sprk-c-Masthead__big-nav-item">
+            <li sprkStackItem class="sprk-c-Masthead__nav-bar-item">
               <a
                 sprkMastheadLink
                 variant="navBar"
@@ -132,12 +132,12 @@ import { ReplaySubject } from 'rxjs';
 
             <li
               sprkStackItem
-              class="sprk-c-Masthead__big-nav-item"
+              class="sprk-c-Masthead__nav-bar-item"
               aria-haspopup="true"
             >
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
-                triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
                 additionalClasses="sprk-u-TextAlign--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-2"
@@ -145,7 +145,7 @@ import { ReplaySubject } from 'rxjs';
               ></sprk-dropdown>
             </li>
 
-            <li sprkStackItem class="sprk-c-Masthead__big-nav-item">
+            <li sprkStackItem class="sprk-c-Masthead__nav-bar-item">
               <a
                 sprkMastheadLink
                 variant="navBar"
@@ -158,12 +158,12 @@ import { ReplaySubject } from 'rxjs';
 
             <li
               sprkStackItem
-              class="sprk-c-Masthead__big-nav-item"
+              class="sprk-c-Masthead__nav-bar-item"
               aria-haspopup="true"
             >
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
-                triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
+                triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
                 additionalClasses="sprk-u-TextAlign--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-4"
@@ -171,7 +171,7 @@ import { ReplaySubject } from 'rxjs';
               ></sprk-dropdown>
             </li>
 
-            <li sprkStackItem class="sprk-c-Masthead__big-nav-item">
+            <li sprkStackItem class="sprk-c-Masthead__nav-bar-item">
               <a
                 sprkMastheadLink
                 variant="navBar"

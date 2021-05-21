@@ -49,7 +49,7 @@ export class SprkMastheadLinkDirective implements OnInit {
     if (this.variant === 'navBar') {
       this.renderer.addClass(
         this.ref.nativeElement,
-        'sprk-c-Masthead__link--big-nav',
+        'sprk-c-Masthead__link--nav-bar',
       );
     }
   }

@@ -28,5 +28,5 @@ export class SprkMastheadNavBarDirective {
   @Input()
   analyticsString: string;
 
-  @HostBinding('class.sprk-c-Masthead__big-nav') mastheadNavBarClass = true;
+  @HostBinding('class.sprk-c-Masthead__nav-bar') mastheadNavBarClass = true;
 }

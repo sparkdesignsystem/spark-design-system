@@ -12,10 +12,11 @@ import { SprkMastheadNavCollapsibleButtonComponent } from './sprk-masthead-nav-c
       additionalClasses="sprk-u-mbm"
       iconAdditionalClasses="sprk-u-mbs"
       collapsibleNavId="1"
-      >Test</sprk-masthead-nav-collapsible-button
     >
+      Test
+    </sprk-masthead-nav-collapsible-button>
     <sprk-masthead-nav-collapsible-button
-      >Test</sprk-masthead-nav-collapsible-button
+      >Test 2</sprk-masthead-nav-collapsible-button
     >
   `,
 })

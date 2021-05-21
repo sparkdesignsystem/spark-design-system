@@ -4,6 +4,9 @@
 ////
 /// @group masthead
 ////
+
+// TODO: Remove old name styles when completing React and HTML upgrades
+// and update the variable names as well.
 .sprk-c-Masthead {
   background-color: $sprk-masthead-bg-color;
   border-bottom: $sprk-masthead-border-bottom;
@@ -137,8 +140,9 @@
   min-width: $sprk-masthead-logo-min-width;
 }
 
-// Hide big and little navs until larger view
+// Hide nav bar and nav items until larger view
 .sprk-c-Masthead__big-nav,
+.sprk-c-Masthead__nav-bar,
 .sprk-c-Masthead__little-nav {
   display: none;
 
@@ -225,6 +229,7 @@
 
 /// Adds an underline on links used in
 /// the big navigation bar.
+.sprk-c-Masthead__link--nav-bar,
 .sprk-c-Masthead__link--big-nav {
   display: block;
   font-weight: $sprk-big-nav-link-font-weight;
@@ -237,11 +242,13 @@
   }
 }
 
-.sprk-c-Masthead__big-nav {
+.sprk-c-Masthead__big-nav,
+.sprk-c-Masthead__nav-bar {
   background-color: $sprk-big-nav-bg;
 }
 
 // Big nav bar has a max width for child items
+.sprk-c-Masthead__nav-bar-items,
 .sprk-c-Masthead__big-nav-items {
   // Relative pos for child dropdowns
   position: relative;
@@ -249,6 +256,7 @@
   max-width: $sprk-big-nav-column-width;
 }
 
+.sprk-c-Masthead__nav-bar-item,
 .sprk-c-Masthead__big-nav-item {
   line-height: $sprk-big-nav-item-line-height;
   position: relative;
@@ -261,7 +269,8 @@
   &:hover {
     border-bottom: $sprk-big-nav-item-active-border-bottom;
 
-    .sprk-c-Masthead__link--big-nav {
+    .sprk-c-Masthead__link--big-nav,
+    .sprk-c-Masthead__link--nav-bar {
       border-bottom: $sprk-big-nav-link-hover-border-bottom;
       color: $sprk-big-nav-item-active-color;
     }
@@ -275,19 +284,26 @@
 
 /// Adds an active state color and bold
 /// font weight to active big navigation items.
-/// @name .sprk-c-Masthead__big-nav-item--active
-.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
+/// @name .sprk-c-Masthead__nav-bar-item--active
+.sprk-c-Masthead__nav-bar-item--active
+  > .sprk-c-Masthead__link--nav-bar
+  .sprk-c-Masthead__big-nav-item--active
+  > .sprk-c-Masthead__link--big-nav {
   font-weight: $sprk-big-nav-link-font-weight;
 }
 
 /// Adds open styles to open big navigation items.
 /// @name .sprk-c-Masthead__big-nav-item--open
+.sprk-c-Masthead__nav-bar-item:focus-within,
+.sprk-c-Masthead__nav-bar-item--open,
+.sprk-c-Masthead__nav-bar-item--active,
 .sprk-c-Masthead__big-nav-item:focus-within,
 .sprk-c-Masthead__big-nav-item--open,
 .sprk-c-Masthead__big-nav-item--active {
   border-bottom: $sprk-big-nav-item-open-border-bottom;
 
-  .sprk-c-Masthead__link--big-nav {
+  .sprk-c-Masthead__link--big-nav,
+  .sprk-c-Masthead__link--nav-bar {
     border-bottom: $sprk-big-nav-link-hover-border-bottom;
   }
 }

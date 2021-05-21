@@ -14,7 +14,7 @@ import { toggleAnimations } from '../../../sprk-toggle/sprk-toggle-animations';
           [attr.data-id]="idString"
           (click)="toggleAccordion($event)"
           [attr.aria-expanded]="isOpen"
-          role="button"
+          type="button"
         >
           <span [ngClass]="getHeadingClasses()">
             <sprk-icon

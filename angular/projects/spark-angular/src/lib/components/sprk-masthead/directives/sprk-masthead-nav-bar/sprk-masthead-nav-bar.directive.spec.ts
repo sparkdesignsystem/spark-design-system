@@ -36,7 +36,7 @@ describe('SprkMastheadNavBarDirective', () => {
   });
 
   it('should add the navigation class', () => {
-    expect(el.classList.toString()).toBe('sprk-c-Masthead__big-nav');
+    expect(el.classList.toString()).toBe('sprk-c-Masthead__nav-bar');
   });
 
   it('should add data-id if value is supplied', () => {

@@ -43,7 +43,7 @@ describe('SprkMastheadLinkDirective', () => {
 
   it('should add the nav bar link class if variant is set to navBar', () => {
     expect(el2.classList.toString()).toBe(
-      'sprk-c-Masthead__link--big-nav sprk-c-Masthead__link sprk-b-Link sprk-b-Link--simple',
+      'sprk-c-Masthead__link--nav-bar sprk-c-Masthead__link sprk-b-Link sprk-b-Link--simple',
     );
   });
 

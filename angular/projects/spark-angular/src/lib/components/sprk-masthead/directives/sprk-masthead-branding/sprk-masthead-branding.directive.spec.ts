@@ -36,7 +36,7 @@ describe('SprkMastheadBrandingDirective', () => {
   });
 
   it('should add the branding class', () => {
-    expect(el.classList.contains('sprk-c-Masthead__branding')).toBe(true);
+    expect(el.classList.toString()).toBe('sprk-c-Masthead__branding');
   });
 
   it('should add data-id if value is supplied', () => {

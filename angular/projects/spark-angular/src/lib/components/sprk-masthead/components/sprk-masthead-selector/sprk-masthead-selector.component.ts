@@ -38,7 +38,6 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
           }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
           <sprk-icon
-            sprkStackItem
             [iconName]="triggerIconName"
             additionalClasses="sprk-Stack__item sprk-u-mhs"
           ></sprk-icon>
@@ -57,15 +56,14 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
           >
             <span
               sprkStackItem
-              class="sprk-c-Masthead__selector-dropdown-title sprk-b-TypeBodyTwo sprk-o-Stack__item--flex@xxs"
+              sprkText
+              variant="bodyTwo"
+              class="sprk-c-Masthead__selector-dropdown-title sprk-o-Stack__item--flex@xxs"
               >{{ heading }}</span
             >
             <sprk-icon
-              sprkStackItem
               [iconName]="triggerIconName"
-              additionalClasses="
-                sprk-c-Icon--toggle
-              "
+              additionalClasses="sprk-Stack__item sprk-c-Icon--toggle"
             ></sprk-icon>
           </a>
         </div>
@@ -201,7 +199,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   analyticsString: string;
   /**
    * Expects an array of
-   * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.interfaces.ts)
+   * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-masthead/components/sprk-masthead-selector/sprk-masthead-selector.interfaces.ts)
    *  objects.
    */
   @Input()
@@ -228,23 +226,24 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    * of the choice that was clicked.
    */
   @Output()
-  choiceMade: EventEmitter<string> = new EventEmitter();
+  readonly choiceMade: EventEmitter<string> = new EventEmitter();
 
   /**
    * This event will be emitted
    * when the Masthead Selector is opened.
    */
   @Output()
-  openedEvent: EventEmitter<any> = new EventEmitter();
+  readonly openedEvent: EventEmitter<any> = new EventEmitter();
   /**
    * This event will be emitted
    * when the Masthead Selector is closed.
    */
   @Output()
-  closedEvent: EventEmitter<any> = new EventEmitter();
+  readonly closedEvent: EventEmitter<any> = new EventEmitter();
 
   /**
-   * @ignore
+   * Keeps track of state on whether
+   * the selector is open or not.
    */
   isOpen = false;
   /**
