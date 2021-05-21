@@ -7,6 +7,7 @@ describe('SprkMastheadAccordionComponent', () => {
   let component: SprkMastheadAccordionComponent;
   let fixture: ComponentFixture<SprkMastheadAccordionComponent>;
   let accordionElement: HTMLElement;
+  let accordionNavElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -22,6 +23,7 @@ describe('SprkMastheadAccordionComponent', () => {
     fixture = TestBed.createComponent(SprkMastheadAccordionComponent);
     component = fixture.componentInstance;
     accordionElement = fixture.nativeElement.querySelector('ul');
+    accordionNavElement = fixture.nativeElement.querySelector('nav');
   });
 
   it('should create itself', () => {
@@ -41,5 +43,27 @@ describe('SprkMastheadAccordionComponent', () => {
     expect(accordionElement.classList.toString()).toEqual(
       'sprk-c-MastheadAccordion sprk-b-List sprk-b-List--bare sprk-u-man',
     );
+  });
+
+  it('should add aria label when ariaLabel has a value', () => {
+    component.ariaLabel = 'test';
+    fixture.detectChanges();
+    expect(accordionNavElement.getAttribute('aria-label')).toEqual('test');
+  });
+
+  it('should not add aria label when ariaLabel has no value', () => {
+    fixture.detectChanges();
+    expect(accordionNavElement.getAttribute('aria-label')).toBe(null);
+  });
+
+  it('should add data-id when idString has a value', () => {
+    component.idString = 'test';
+    fixture.detectChanges();
+    expect(accordionNavElement.getAttribute('data-id')).toEqual('test');
+  });
+
+  it('should not add data-id when idString has no value', () => {
+    fixture.detectChanges();
+    expect(accordionNavElement.getAttribute('data-id')).toBe(null);
   });
 });

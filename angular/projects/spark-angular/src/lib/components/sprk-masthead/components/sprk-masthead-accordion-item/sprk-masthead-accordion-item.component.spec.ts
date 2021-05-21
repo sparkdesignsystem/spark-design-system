@@ -60,6 +60,13 @@ describe('SprkMastheadAccordionItemComponent', () => {
     );
   });
 
+  it('should not add an analytics data attribute if analyticsString has no value', () => {
+    fixture.detectChanges();
+    expect(accordionItemLinkElement.getAttribute('data-analytics')).toEqual(
+      null,
+    );
+  });
+
   it('should be closed if isOpen is false', () => {
     component.isOpen = false;
     fixture.detectChanges();

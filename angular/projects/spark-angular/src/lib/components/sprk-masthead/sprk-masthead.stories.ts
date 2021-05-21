@@ -455,7 +455,7 @@ export const defaultStory = () => ({
       <nav
         sprkMastheadNavCollapsible
         role="navigation"
-        aria-label="collapsible"
+        aria-label="Collapsible Navigation"
         idString="default-collapsible-nav"
       >
         <sprk-masthead-accordion>

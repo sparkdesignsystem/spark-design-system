@@ -14,6 +14,7 @@ import { toggleAnimations } from '../../../sprk-toggle/sprk-toggle-animations';
           [attr.data-id]="idString"
           (click)="toggleAccordion($event)"
           [attr.aria-expanded]="isOpen"
+          role="button"
         >
           <span [ngClass]="getHeadingClasses()">
             <sprk-icon
@@ -41,6 +42,10 @@ import { toggleAnimations } from '../../../sprk-toggle/sprk-toggle-animations';
   animations: [toggleAnimations.toggleContent],
 })
 export class SprkMastheadAccordionItemComponent implements OnInit {
+  /**
+   * The value supplied will be used
+   * as the heading for the item.
+   */
   @Input()
   heading: string;
   /**
@@ -128,7 +133,8 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
   public animState = 'closed';
 
   /**
-   * @ignore
+   * This applies the correct styles to the item
+   * when it is open or closed.
    */
   accordionState(): void {
     this.isOpen === false
