@@ -1602,15 +1602,11 @@ extendedWithExampleContent.story = {
 export const withoutCollapsibleNav = () => ({
   moduleMetadata: modules,
   template: `
-    <sprk-masthead>
-      <div sprkMastheadBranding sprkStackItem class="sprk-u-TextAlign--left">
-        <a
-          sprkLink
-          href="#nogo"
-          variant="unstyled"
-        >
+    <sprk-masthead additionalClasses="sprk-o-Stack--split@xxs sprk-o-Box sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-o-Stack--medium">
+      <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
+        <a sprkLink href="#nogo" variant="unstyled">
           <svg
-            class="sprk-c-Masthead__logo sprk-u-TextAlign--left"
+            class="sprk-c-Masthead__logo"
             xmlns="http://www.w3.org/2000/svg"
             width="365.4"
             height="48"
@@ -1621,52 +1617,10 @@ export const withoutCollapsibleNav = () => ({
         </a>
       </div>
 
-      <div sprkMastheadNavItem sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
-        <a
-          sprkMastheadLink
-          href="#nogo"
-        >
+      <nav sprkStackItem role="navigation">
+        <a sprkMastheadLink href="#nogo">
           Talk To Us
         </a>
-      </div>
-
-      <nav
-        sprkMastheadNavItems
-        sprkStackItem
-        role="navigation"
-        aria-label="Navigation Links"
-        class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
-      >
-        <ul
-          sprkStackItem
-          class="
-            sprk-o-HorizontalList
-            sprk-o-HorizontalList--spacing-medium
-            sprk-o-Stack--center-column
-          "
-        >
-          <li>
-            <a
-              sprkMastheadLink
-              href="#nogo"
-            >
-              Talk To Us
-            </a>
-          </li>
-
-          <li>
-            <sprk-dropdown
-              [choices]="talkToUsDropdownChoices"
-              heading="My Account"
-              triggerIconName="user"
-              triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
-              iconAdditionalClasses="sprk-c-Icon--xl"
-              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
-              screenReaderText="User Account"
-            >
-            </sprk-dropdown>
-          </li>
-        </ul>
       </nav>
     </sprk-masthead>
   `,
