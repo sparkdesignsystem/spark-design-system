@@ -23,6 +23,10 @@ import { SprkHighlightBoardComponent } from '../sprk-highlight-board/sprk-highli
 import { SprkHighlightBoardModule } from '../../components/sprk-highlight-board/sprk-highlight-board.module';
 import { SprkCardModule } from '../../components/sprk-card/sprk-card.module';
 import { SprkBoxModule } from '../../directives/sprk-box/sprk-box.module';
+import { SprkMastheadLogoDirective } from './directives/sprk-masthead-logo/sprk-masthead-logo.directive';
+import { SprkMastheadLinkDirective } from './directives/sprk-masthead-link/sprk-masthead-link.directive';
+import { SprkMastheadNavItemDirective } from './directives/sprk-masthead-nav-item/sprk-masthead-nav-item.directive';
+import { SprkMastheadNavItemsDirective } from './directives/sprk-masthead-nav-items/sprk-masthead-nav-items.directive';
 
 export default {
   title: 'Components/Masthead',
@@ -33,6 +37,10 @@ export default {
       SprkMastheadAccordionItemComponent,
       SprkMastheadSelectorComponent,
       SprkMastheadBrandingDirective,
+      SprkMastheadLogoDirective,
+      SprkMastheadLinkDirective,
+      SprkMastheadNavItemDirective,
+      SprkMastheadNavItemsDirective,
       SprkMastheadNavBarDirective,
       SprkMastheadNavCollapsibleDirective,
       SprkMastheadNavCollapsibleButtonComponent,

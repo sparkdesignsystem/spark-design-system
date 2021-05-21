@@ -13,6 +13,7 @@ import { SprkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-i
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkMastheadBrandingModule } from './directives/sprk-masthead-branding/sprk-masthead-branding.module';
+import { SprkMastheadLogoModule } from './directives/sprk-masthead-logo/sprk-masthead-logo.module';
 import { SprkMastheadNavBarModule } from './directives/sprk-masthead-nav-bar/sprk-masthead-nav-bar.module';
 import { SprkMastheadNavCollapsibleModule } from './directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.module';
 import { SprkMastheadNavCollapsibleButtonModule } from './components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.module';
@@ -20,6 +21,7 @@ import { SprkMastheadNavItemsModule } from './directives/sprk-masthead-nav-items
 import { SprkMastheadNavItemModule } from './directives/sprk-masthead-nav-item/sprk-masthead-nav-item.module';
 import { SprkMastheadLinkModule } from './directives/sprk-masthead-link/sprk-masthead-link.module';
 import { SprkBoxModule } from '../../directives/sprk-box/sprk-box.module';
+import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
 
 @NgModule({
   imports: [
@@ -43,6 +45,8 @@ import { SprkBoxModule } from '../../directives/sprk-box/sprk-box.module';
     SprkMastheadNavBarModule,
     SprkMastheadBrandingModule,
     SprkMastheadNavItemModule,
+    SprkMastheadLogoModule,
+    SprkTextModule,
   ],
   declarations: [SprkMastheadComponent],
   exports: [
@@ -65,6 +69,8 @@ import { SprkBoxModule } from '../../directives/sprk-box/sprk-box.module';
     SprkMastheadBrandingModule,
     SprkMastheadNavItemModule,
     SprkMastheadLinkModule,
+    SprkMastheadLogoModule,
+    SprkTextModule,
   ],
 })
 export class SprkMastheadModule {}
