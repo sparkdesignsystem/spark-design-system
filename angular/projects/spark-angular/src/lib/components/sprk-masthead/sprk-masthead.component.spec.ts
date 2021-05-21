@@ -933,6 +933,14 @@ describe('SprkMastheadComponent', () => {
     expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(true);
   });
 
+  it('should update internal state for collapsible nav if is it open on load', () => {
+    component.masthead.collapsibleNavDirective.isCollapsed = false;
+    componentFixture.detectChanges();
+    component.masthead.ngAfterViewInit();
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(false);
+    expect(component.masthead.isCollapsibleNavOpen).toBe(true);
+  });
+
   it('should not update scroll direction if window is undefined', () => {
     windowSpy.mockImplementation(() => undefined);
     expect(window).toBeUndefined();
