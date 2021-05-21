@@ -52,10 +52,11 @@
 }
 
 // Keep padding settings consistent for menu,
-// logo branding, little nav, and additional nav link
+// logo branding, nav items, and additional nav link
 .sprk-c-Masthead__menu,
 .sprk-c-Masthead__branding,
 .sprk-c-Masthead__little-nav,
+.sprk-c-Masthead__nav-items,
 .sprk-c-Masthead__nav-item {
   padding-top: $sprk-masthead-content-item-padding-top;
   padding-left: $sprk-masthead-content-item-padding-left;
@@ -143,7 +144,8 @@
 // Hide nav bar and nav items until larger view
 .sprk-c-Masthead__big-nav,
 .sprk-c-Masthead__nav-bar,
-.sprk-c-Masthead__little-nav {
+.sprk-c-Masthead__little-nav,
+.sprk-c-Masthead__nav-items {
   display: none;
 
   @media (min-width: $sprk-masthead-breakpoint) {
@@ -151,8 +153,9 @@
   }
 }
 
-// If there are too many little nav links they'll wrap
-.sprk-c-Masthead__little-nav {
+// If there are too many nav items they'll wrap
+.sprk-c-Masthead__little-nav,
+.sprk-c-Masthead__nav-items {
   flex-wrap: wrap;
   position: relative;
 }

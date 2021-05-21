@@ -28,6 +28,6 @@ export class SprkMastheadNavItemsDirective {
   @Input()
   analyticsString: string;
 
-  @HostBinding('class.sprk-c-Masthead__little-nav')
+  @HostBinding('class.sprk-c-Masthead__nav-items')
   mastheadNavItemsClass = true;
 }

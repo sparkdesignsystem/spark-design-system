@@ -36,7 +36,7 @@ describe('SprkMastheadNavItemDirective', () => {
   });
 
   it('should add the NavItem class', () => {
-    expect(el.classList.contains('sprk-c-Masthead__nav-item')).toBe(true);
+    expect(el.classList.toString()).toBe('sprk-c-Masthead__nav-item');
   });
 
   it('should add data-id if value is supplied', () => {
