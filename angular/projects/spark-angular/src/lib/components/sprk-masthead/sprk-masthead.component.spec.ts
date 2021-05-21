@@ -854,7 +854,7 @@ describe('SprkMastheadComponent', () => {
     // Set it to open
     collapsibleNavButton.click();
     componentFixture.detectChanges();
-    // we expect it to be open
+    // We expect it to be open
     expect(collapsibleNavEl.classList.toString()).toEqual(
       'sprk-c-Masthead__nav-collapsible',
     );

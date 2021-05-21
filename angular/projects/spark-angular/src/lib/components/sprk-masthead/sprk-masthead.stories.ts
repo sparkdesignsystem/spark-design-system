@@ -500,6 +500,7 @@ export const defaultStory = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="tel:555-555-5555"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -892,6 +893,7 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="tel:555-555-5555"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -1330,6 +1332,7 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
             </a>
@@ -1379,6 +1382,7 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 4</span>
             </a>
@@ -1389,6 +1393,7 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 5</span>
             </a>
@@ -1399,6 +1404,7 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="tel:555-555-5555"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -1420,6 +1426,7 @@ export const extendedWithExampleContent = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon

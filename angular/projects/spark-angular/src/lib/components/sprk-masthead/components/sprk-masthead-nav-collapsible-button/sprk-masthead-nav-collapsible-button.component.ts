@@ -108,7 +108,7 @@ export class SprkMastheadNavCollapsibleButtonComponent {
   readonly collapsibleNavButtonEvent = new EventEmitter<boolean>();
 
   /**
-   * Emits a boolean value that tells is the buttonn is open or closed
+   * Emits a boolean value that tells is the button is open or closed
    * when the button is clicked.
    */
   toggleCollapsibleNav(event): void {
@@ -118,7 +118,9 @@ export class SprkMastheadNavCollapsibleButtonComponent {
   }
 
   /**
-   * @ignore
+   * @returns string
+   * Sets the classes and any additional classes
+   * passed in on the button.
    */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Menu'];
@@ -133,7 +135,9 @@ export class SprkMastheadNavCollapsibleButtonComponent {
   }
 
   /**
-   * @ignore
+   * @returns string
+   * Sets the classes and any additional classes
+   * passed in on the icon.
    */
   getClassesIcon(): string {
     const classArr: string[] = [

@@ -294,7 +294,7 @@ export class SprkMastheadComponent implements AfterViewInit {
    * is clicked this will check if the collapsible
    * nav is open. If it is open, then it will close it. If it
    * is closed then it will open it. We run this method
-   * whenever the collapsible nav emits the isButtonOpen event.
+   * whenever the collapsible nav emits the `isButtonOpen` event.
    */
   toggleCollapsibleNav(isButtonOpen: boolean): void {
     if (!this.collapsibleNavDirective.isCollapsed) {
@@ -308,7 +308,7 @@ export class SprkMastheadComponent implements AfterViewInit {
   /**
    * Adds the correct styles to the body and HTML elements
    * in order for the collapsible nav to be open.
-   * Sets the isCollapsed input on the collapsible nav
+   * Sets the `isCollapsed` input on the collapsible nav
    * to be false so that the directive adds the CSS styles
    * to show the nav.
    */
@@ -320,7 +320,7 @@ export class SprkMastheadComponent implements AfterViewInit {
     );
     this.renderer.addClass(document.body, 'sprk-u-Height--100');
     this.renderer.addClass(document.body.parentElement, 'sprk-u-Height--100');
-    // Set the isCollapsed property on the collapsible nav to false to open it
+    // Set the `isCollapsed` property on the collapsible nav to false to open it
     this.collapsibleNavDirective.isCollapsed = false;
     // Ensure the button styles are set to open
     this.isCollapsibleNavOpen = true;
@@ -329,7 +329,7 @@ export class SprkMastheadComponent implements AfterViewInit {
   /**
    * Removes the styles that were added to
    * the body and HTML elements when the nav was open.
-   * Sets the isCollapsed input on the collapsed nav to be true
+   * Sets the `isCollapsed` input on the collapsible nav to be true
    * so that the directive adds the collapsed CSS class.
    */
   closeCollapsibleNav(): void {
@@ -343,7 +343,7 @@ export class SprkMastheadComponent implements AfterViewInit {
       document.body.parentElement,
       'sprk-u-Height--100',
     );
-    // Set the isCollapsed property on the collapsible nav to true to close it
+    // Set the `isCollapsed` property on the collapsible nav to `true` to close it
     this.collapsibleNavDirective.isCollapsed = true;
     // Ensure the button styles are set to closed
     this.isCollapsibleNavOpen = false;
