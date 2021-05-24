@@ -33,6 +33,7 @@ import { isElementVisible } from '../../utilities/isElementVisible/isElementVisi
           <sprk-masthead-nav-collapsible-button
             [collapsibleNavId]="collapsibleNavDirective.id"
             [isOpen]="isCollapsibleNavOpen"
+            [screenReaderText]="collpsibleNavButtonScreenReaderText"
             (collapsibleNavButtonEvent)="toggleCollapsibleNav($event)"
           ></sprk-masthead-nav-collapsible-button>
         </div>
@@ -76,6 +77,16 @@ export class SprkMastheadComponent implements AfterViewInit {
    */
   @Input()
   additionalClasses: string;
+
+  /**
+   * The vlue supplied will be used
+   * as the screen reader text for the
+   * collpsible nav button. If none is
+   * supplied then a default of
+   * 'Toggle Navigation' is set.
+   */
+  @Input()
+  collpsibleNavButtonScreenReaderText: string;
 
   /**
    * The value supplied will be assigned

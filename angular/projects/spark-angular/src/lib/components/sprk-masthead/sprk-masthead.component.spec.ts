@@ -627,6 +627,13 @@ describe('SprkMastheadComponent', () => {
     expect(buttonId).toEqual(navId);
   });
 
+  it('should pass the collapsible nav button screen reader text to the collapsible nav button if present', () => {
+    const buttonText = collapsibleNavButton.querySelector('span');
+    component.masthead.collpsibleNavButtonScreenReaderText = 'test-text';
+    componentFixture.detectChanges();
+    expect(buttonText.textContent).toEqual('test-text');
+  });
+
   it('should set the collapsible nav isCollapsed prop to false when button is clicked and was closed before clicked', () => {
     // expect the collapsible nav to be closed at first with having the is-collapsed class
     expect(collapsibleNavEl.classList.toString()).toEqual(
