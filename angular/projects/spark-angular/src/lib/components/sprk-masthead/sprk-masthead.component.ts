@@ -83,10 +83,10 @@ export class SprkMastheadComponent implements AfterViewInit {
    * as the screen reader text for the
    * collapsible nav button. If none is
    * supplied then a default of
-   * "Toggle Navigation" is set.
+   * \"Toggle Navigation\" is set.
    */
   @Input()
-  collapsibleNavButtonScreenReaderText: string;
+  collapsibleNavButtonScreenReaderText = 'Toggle Navigation';
 
   /**
    * The value supplied will be assigned
