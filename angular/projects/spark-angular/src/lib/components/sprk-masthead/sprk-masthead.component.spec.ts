@@ -629,7 +629,7 @@ describe('SprkMastheadComponent', () => {
 
   it('should pass the collapsible nav button screen reader text to the collapsible nav button if present', () => {
     const buttonText = collapsibleNavButton.querySelector('span');
-    component.masthead.collpsibleNavButtonScreenReaderText = 'test-text';
+    component.masthead.collapsibleNavButtonScreenReaderText = 'test-text';
     componentFixture.detectChanges();
     expect(buttonText.textContent).toEqual('test-text');
   });

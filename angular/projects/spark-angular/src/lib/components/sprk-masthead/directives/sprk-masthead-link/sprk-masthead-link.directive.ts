@@ -26,7 +26,8 @@ export class SprkMastheadLinkDirective implements OnInit {
   idString: string;
 
   /**
-   * Will cause the appropriate variant type to render.
+   * If `navBar` is supplied then the link style
+   * for the nav bar links will be applied.
    * If omitted, the default Masthead Link classes are applied.
    */
   @Input() variant: 'navBar';
