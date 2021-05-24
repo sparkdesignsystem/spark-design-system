@@ -6,7 +6,7 @@ import { toggleAnimations } from '../../../sprk-toggle/sprk-toggle-animations';
   selector: 'sprk-masthead-accordion-item',
   template: `
     <li [ngClass]="getClasses()">
-      <div sprkStackItem class="sprk-u-Position--relative sprk-u-Width-100">
+      <div sprkStackItem class="sprk-c-MastheadAccordion__summary-content">
         <button
           [attr.aria-controls]="accordion_controls_id"
           class="sprk-c-MastheadAccordion__summary"

@@ -447,8 +447,13 @@
 // ==================================================================
 // Masthead Accordion
 // ==================================================================
-.sprk-c-MastheadAccordion {
+.sprk-c-MastheadAccordion,
+.sprk-c-MastheadAccordion__summary-content {
   width: 100%;
+}
+
+.sprk-c-MastheadAccordion__summary-content {
+  position: relative;
 }
 
 // Override the dropdown max-width
