@@ -306,8 +306,8 @@ import {
             >
               {{ disclaimer.text }}
             </p>
+            <ng-content select="[additional-disclaimer-slot]"></ng-content>
           </div>
-
           <ul
             *ngIf="badgeLinks"
             class="

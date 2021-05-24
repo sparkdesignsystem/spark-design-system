@@ -167,6 +167,9 @@ public class SparkDesignTokens {
     public static let sprkLinkHasIconHoverColorText = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkLinkHasIconVisitedColorText = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHoverColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
+    public static let sprkLinkInlineLightColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
+    public static let sprkLinkInlineLightHoverColor = UIColor(red: 0.871, green: 0.694, blue: 0.992, alpha:1)
+    public static let sprkLinkInlineLightHoverUnderlineColor = UIColor(red: 0.871, green: 0.694, blue: 0.992, alpha:1)
     public static let sprkLinkLightColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkLinkLightHoverColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkLinkLightHoverUnderlineColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
@@ -304,6 +307,9 @@ public class SparkDesignTokens {
     public static let sprkLinkHasIconStroke = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconVisitedFill = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconVisitedStroke = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
+    public static let sprkLinkInlineLightFontWeight = "300"
+    public static let sprkLinkInlineLightHoverCursor = pointer
+    public static let sprkLinkInlineLightHoverFontWeight = "300"
     public static let sprkLinkLightFontWeight = "300"
     public static let sprkLinkLightHoverFontWeight = "300"
     public static let sprkLinkSimpleFontWeight = "300"
@@ -542,6 +548,8 @@ public class SparkDesignTokens {
     public static let sprkLineHeightDisplayTwoWide = CGFloat(16.00)
     public static let sprkLinkDisabledUnderlineWidth = CGFloat(0.00)
     public static let sprkLinkHasIconUnderlineWidth = CGFloat(0.00)
+    public static let sprkLinkInlineLightHoverUnderlineWidth = CGFloat(2.00)
+    public static let sprkLinkInlineLightUnderlineWidth = CGFloat(2.00)
     public static let sprkLinkLightHoverAfterLeft = CGFloat(0.00)
     public static let sprkLinkLightHoverAfterWidth = CGFloat(1600.00)
     public static let sprkLinkLightHoverUnderlineWidth = CGFloat(2.00)

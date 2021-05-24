@@ -93,6 +93,9 @@
   <color name="sprk_link_light_color">#ffffffff</color><!-- The color value of Light Links. -->
   <color name="sprk_link_light_hover_color">#ffffffff</color><!-- The color of Light Links on hover. -->
   <color name="sprk_link_light_hover_underline_color">#ffffffff</color><!-- The underline color value of Light Links on hover. -->
+  <color name="sprk_link_inline_light_color">#ffffffff</color><!-- The color value of inline Links on a dark background. -->
+  <color name="sprk_link_inline_light_hover_color">#ffdeb1fd</color><!-- The color of inline Links on a dark background on hover. -->
+  <color name="sprk_link_inline_light_hover_underline_color">#ffdeb1fd</color><!-- The underline color value of inline Links on a dark background on hover. -->
   <color name="sprk_link_has_icon_color_icon">#ff603aa1</color><!-- The color of icons in Links containing icons. -->
   <color name="sprk_link_has_icon_hover_color_text">#ffc8102e</color><!-- The color value for Links with icons in the hover state. -->
   <color name="sprk_link_has_icon_visited_color_text">#ff603aa1</color><!-- The color value for Links with icons in the visited state. -->
