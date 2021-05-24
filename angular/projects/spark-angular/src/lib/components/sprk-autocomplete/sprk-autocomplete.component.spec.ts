@@ -616,7 +616,7 @@ describe('SprkAutocompleteComponent', () => {
     expect(actualAriaControls).toEqual(actualId);
   });
 
-  it('should console.warn if aria-controls and id exist and do not match', () => {
+  it('should do nothing if aria-controls and id exist and do not match', () => {
     const providedId = 'test_id';
     const providedAriaControls = 'test_controls';
 
@@ -624,12 +624,6 @@ describe('SprkAutocompleteComponent', () => {
     component.input.ref.nativeElement.setAttribute(
       'aria-controls',
       providedAriaControls,
-    );
-
-    // add aria-owns so it doesn't generate its own console.warn
-    component.input.ref.nativeElement.parentNode.setAttribute(
-      'aria-owns',
-      providedId,
     );
 
     jest.spyOn(console, 'warn').mockImplementation(() => {});
@@ -641,10 +635,18 @@ describe('SprkAutocompleteComponent', () => {
     component.ngAfterContentInit();
 
     fixture.detectChanges();
-    expect(console.warn).toBeCalledTimes(1);
+
+    const actualId = component.results.nativeElement.getAttribute('id');
+    const actualAriaControls = component.input.ref.nativeElement.getAttribute(
+      'aria-controls',
+    );
+
+    expect(console.warn).toBeCalledTimes(0);
+    expect(actualId).toEqual(providedId);
+    expect(actualAriaControls).toEqual(providedAriaControls);
   });
 
-  it('should console.warn if aria-controls exists and id does not', () => {
+  it('should do nothing if aria-controls exists and id does not', () => {
     const providedAriaControls = 'test_controls';
 
     component.results.nativeElement.removeAttribute('id');
@@ -662,8 +664,15 @@ describe('SprkAutocompleteComponent', () => {
     component.ngAfterContentInit();
 
     fixture.detectChanges();
-    // the second call is from aria-owns warning for the same reason
-    expect(console.warn).toBeCalledTimes(2);
+
+    const actualId = component.results.nativeElement.getAttribute('id');
+    const actualAriaControls = component.input.ref.nativeElement.getAttribute(
+      'aria-controls',
+    );
+
+    expect(console.warn).toBeCalledTimes(0);
+    expect(actualId).toEqual(null);
+    expect(actualAriaControls).toEqual(providedAriaControls);
   });
 
   it('should generate aria-owns and id if needed', () => {
@@ -739,37 +748,13 @@ describe('SprkAutocompleteComponent', () => {
     expect(component.input).toEqual(undefined);
   });
 
-  it('should console.warn if aria-owns and id exist and do not match', () => {
+  it('should do nothing if aria-owns and id exist and do not match', () => {
     const providedId = 'test_id';
-    const providedAriaControls = 'test_controls';
+    const providedAriaOwns = 'test_owns';
 
     component.results.nativeElement.setAttribute('id', providedId);
     component.input.ref.nativeElement.parentNode.setAttribute(
-      'aria-controls',
-      providedAriaControls,
-    );
-
-    // add aria-controls so it doesn't generate its own console.warn
-    component.input.ref.nativeElement.setAttribute('aria-controls', providedId);
-
-    jest.spyOn(console, 'warn').mockImplementation(() => {});
-
-    fixture.detectChanges();
-
-    expect(console.warn).toBeCalledTimes(0);
-
-    component.ngAfterContentInit();
-
-    fixture.detectChanges();
-    expect(console.warn).toBeCalledTimes(1);
-  });
-
-  it('should console.warn if aria-owns exists and id does not', () => {
-    const providedAriaOwns = 'test_owns';
-
-    component.results.nativeElement.removeAttribute('id');
-    component.input.ref.nativeElement.parentNode.setAttribute(
-      'aria-controls',
+      'aria-owns',
       providedAriaOwns,
     );
 
@@ -782,8 +767,45 @@ describe('SprkAutocompleteComponent', () => {
     component.ngAfterContentInit();
 
     fixture.detectChanges();
-    // the second call is from aria-controls warning for the same reason
-    expect(console.warn).toBeCalledTimes(2);
+
+    const actualId = component.results.nativeElement.getAttribute('id');
+    const actualAriaOwns = component.input.ref.nativeElement.parentNode.getAttribute(
+      'aria-owns',
+    );
+
+    expect(actualId).toEqual(providedId);
+    expect(actualAriaOwns).toEqual(providedAriaOwns);
+
+    expect(console.warn).toBeCalledTimes(0);
+  });
+
+  it('should do nothing if aria-owns exists and id does not', () => {
+    const providedAriaOwns = 'test_owns';
+
+    component.results.nativeElement.removeAttribute('id');
+    component.input.ref.nativeElement.parentNode.setAttribute(
+      'aria-owns',
+      providedAriaOwns,
+    );
+
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+
+    fixture.detectChanges();
+
+    expect(console.warn).toBeCalledTimes(0);
+
+    component.ngAfterContentInit();
+
+    fixture.detectChanges();
+
+    const actualId = component.results.nativeElement.getAttribute('id');
+    const actualAriaOwns = component.input.ref.nativeElement.parentNode.getAttribute(
+      'aria-owns',
+    );
+
+    expect(console.warn).toBeCalledTimes(0);
+    expect(actualId).toEqual(null);
+    expect(actualAriaOwns).toEqual(providedAriaOwns);
   });
 
   it('should call showResults when initializing with isOpen=true', () => {

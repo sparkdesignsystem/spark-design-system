@@ -351,19 +351,13 @@ export class SprkAutocompleteComponent
     const triggerAriaControls = triggerElement.getAttribute('aria-controls');
     let contentId = contentElement.getAttribute('id');
 
-    // Warn if aria-controls exists but the id does not
+    // Do nothing if aria-controls exists but the id does not
     if (triggerAriaControls && !contentId) {
-      console.warn(
-        `Spark Design System Warning - The component with aria-controls="${triggerAriaControls}" expects a matching id on the content element.`,
-      );
       return;
     }
 
-    // Warn if aria-controls and id both exist but don't match
+    // Do nothing if aria-controls and id both exist but don't match
     if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
-      console.warn(
-        `Spark Design System Warning - The value of aria-controls ("${triggerAriaControls}") should match the id of the content element ("${contentId}").`,
-      );
       return;
     }
 
@@ -389,23 +383,13 @@ export class SprkAutocompleteComponent
     const ownerAriaOwns = ownerElement.getAttribute('aria-owns');
     let contentId = contentElement.getAttribute('id');
 
-    // Warn if aria-owns exists but the id does not
+    // Do nothing if aria-owns exists but the id does not
     if (ownerAriaOwns && !contentId) {
-      console.warn(
-        `Spark Design System Warning - The component with
-        aria-owns="${ownerAriaOwns}" expects a
-        matching id on the content element.`,
-      );
       return;
     }
 
-    // Warn if aria-owns and id both exist but don't match
+    // Do nothing if aria-owns and id both exist but don't match
     if (contentId && ownerAriaOwns && contentId !== ownerAriaOwns) {
-      console.warn(
-        `Spark Design System Warning - The value of aria-owns
-        ("${ownerAriaOwns}") should match the id of the
-        content element ("${contentId}").`,
-      );
       return;
     }
 
@@ -415,7 +399,7 @@ export class SprkAutocompleteComponent
       contentElement.setAttribute('id', contentId);
     }
 
-    // set the value of aria-ownss
+    // set the value of aria-owns
     ownerElement.setAttribute('aria-owns', contentId);
   };
 }
