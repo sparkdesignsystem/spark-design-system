@@ -121,8 +121,4 @@ describe('SprkMastheadNavCollapsibleButtonComponent', () => {
   it('should not add aria-controls if collapsibleNavId does not have a value', () => {
     expect(el2.getAttribute('aria-controls')).toBe(null);
   });
-
-  it('should add aria-expanded set to false if isOpen is false or unset', () => {
-    expect(el2.getAttribute('aria-expanded')).toBe('false');
-  });
 });
