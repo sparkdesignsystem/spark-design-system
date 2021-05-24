@@ -88,7 +88,7 @@ except for IE11.
 };
 
 const logoSvg = `
-    <title>spark-red-full-outlines</title>
+    <title>Spark Design System Logo</title>
     <path
       d="M126.15,53.65l5.76-9.25a20.84,20.84,0,0,0,13.34,5c4.37,0,6.56-1.75,6.56-4.89s-2.55-4.44-9.77-6.78c-7.58-2.48-13.85-6.19-13.85-15,0-10,7.51-15.89,18.37-15.89a27.64,27.64,0,0,1,15.75,4.73l-5.47,9.33a18.14,18.14,0,0,0-10.35-3.57c-3.94,0-6.34,1.68-6.34,4.81,0,3.28,3.21,4.16,9.47,6.27,7.88,2.63,14.22,5.83,14.22,15.31,0,10.28-7.66,16.33-19.32,16.33C136.65,60.07,129.94,57,126.15,53.65Z" />
     <path
@@ -498,6 +498,7 @@ export const defaultStory = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
             </a>
@@ -530,6 +531,7 @@ export const defaultStory = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -832,6 +834,7 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
             </a>
@@ -881,6 +884,7 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 4</span>
             </a>
@@ -891,6 +895,7 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">Item 5</span>
             </a>
@@ -923,6 +928,7 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -944,6 +950,7 @@ export const extended = () => ({
               sprkLink
               variant="unstyled"
               class="sprk-c-MastheadAccordion__summary"
+              href="#nogo"
             >
               <span class="sprk-c-MastheadAccordion__heading">
                 <sprk-icon
@@ -1455,6 +1462,7 @@ export const extendedWithExampleContent = () => ({
             <a
               sprkLink
               variant="unstyled"
+              href="#nogo"
               class="sprk-c-MastheadAccordion__summary"
             >
               <span class="sprk-c-MastheadAccordion__heading">
