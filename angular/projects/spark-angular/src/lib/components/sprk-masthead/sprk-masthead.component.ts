@@ -175,10 +175,9 @@ export class SprkMastheadComponent implements AfterViewInit {
    */
   @HostListener('window:orientationchange')
   handleResizeEvent() {
-    if (!this.collapsibleNavDirective) {
-      return;
+    if (this.collapsibleNavDirective) {
+      this.closeCollapsibleNav();
     }
-    this.closeCollapsibleNav();
   }
 
   /**

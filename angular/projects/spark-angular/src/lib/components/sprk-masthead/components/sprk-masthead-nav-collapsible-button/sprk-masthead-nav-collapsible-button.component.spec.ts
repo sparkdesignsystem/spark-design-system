@@ -12,6 +12,7 @@ import { SprkMastheadNavCollapsibleButtonComponent } from './sprk-masthead-nav-c
       additionalClasses="sprk-u-mbm"
       iconAdditionalClasses="sprk-u-mbs"
       collapsibleNavId="1"
+      screenReaderText="test-text"
     >
       Test
     </sprk-masthead-nav-collapsible-button>
@@ -69,6 +70,10 @@ describe('SprkMastheadNavCollapsibleButtonComponent', () => {
 
   it('should add the collapsible nav button class', () => {
     expect(el2.classList.toString()).toBe('sprk-c-Menu');
+  });
+
+  it('should pass the collapsible nav button screen reader text to the collapsible nav button if present', () => {
+    expect(el.textContent).toEqual('test-text');
   });
 
   it('should add additionalClasses if present', () => {

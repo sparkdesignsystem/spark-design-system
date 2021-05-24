@@ -642,7 +642,7 @@ describe('SprkMastheadComponent', () => {
     // click the collapsible nav button which runs the open method
     collapsibleNavButton.click();
     componentFixture.detectChanges();
-    // child directive isCollapsed should now be false, which opens the collapsbile nav
+    // child directive isCollapsed should now be false, which opens the collapsible nav
     expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(false);
     expect(collapsibleNavEl.classList.toString()).toEqual(
       'sprk-c-Masthead__nav-collapsible',
@@ -660,7 +660,7 @@ describe('SprkMastheadComponent', () => {
     // click the collapsible nav button which runs the close method
     collapsibleNavButton.click();
     componentFixture.detectChanges();
-    // child directive isCollapsed should now be true, which close the collapsbile nav
+    // child directive isCollapsed should now be true, which close the collapsible nav
     expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(true);
     expect(collapsibleNavEl.classList.toString()).toEqual(
       'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
@@ -668,7 +668,7 @@ describe('SprkMastheadComponent', () => {
   });
 
   it(`
-      should add the aria-expanded attribute to collapsbile nav button and
+      should add the aria-expanded attribute to collapsible nav button and
       show the collapsible nav when the icon is clicked
     `, () => {
     expect(collapsibleNavButton.getAttribute('aria-expanded')).toEqual('false');
