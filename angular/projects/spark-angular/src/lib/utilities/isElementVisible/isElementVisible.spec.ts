@@ -20,7 +20,7 @@ class Test1Component {
   elVisibilityVisible: ElementRef;
 }
 
-describe('SprkMastheadComponent', () => {
+describe('isElementVisible', () => {
   let component: Test1Component;
   let componentFixture: ComponentFixture<Test1Component>;
 
