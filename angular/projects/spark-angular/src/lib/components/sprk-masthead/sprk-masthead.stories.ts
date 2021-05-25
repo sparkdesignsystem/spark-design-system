@@ -76,8 +76,8 @@ variable \`$sprk-masthead-breakpoint\`.
 - The Default Masthead allows for one row of navigational items.
  If there are too many to fit in one row, use Extended Masthead
  instead because it allows for two rows of navigational items.
-- The Masthead is a navigation landmark for accessibility
-tools and we add the attribute \`role=”banner”\` to the Masthead.
+- The Masthead is a navigation landmark for accessibility tools,
+so we add \`role=”banner”\` to the Masthead.
 - The Masthead will be "sticky" on small viewports in all browsers
 except for IE11.
 `,
