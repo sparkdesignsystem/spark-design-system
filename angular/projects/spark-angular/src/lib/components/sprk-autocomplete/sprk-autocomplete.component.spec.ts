@@ -68,7 +68,7 @@ describe('SprkAutocompleteComponent', () => {
     component.hideResults();
     fixture.detectChanges();
     expect(resultsElement.classList.toString()).toEqual(
-      'sprk-c-Autocomplete__results sprk-c-Autocomplete__results--hidden',
+      'sprk-c-Autocomplete__results--hidden sprk-c-Autocomplete__results',
     );
     expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
       'false',

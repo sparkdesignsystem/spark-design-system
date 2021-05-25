@@ -1,20 +1,13 @@
-import {
-  Directive,
-  ElementRef,
-  OnInit,
-  Input,
-  HostBinding,
-  Renderer2,
-} from '@angular/core';
+import { Directive, ElementRef, Input, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[sprkAutocompleteResults]',
 })
-export class SprkAutocompleteResultsDirective implements OnInit {
+export class SprkAutocompleteResultsDirective {
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef, private renderer: Renderer2) {}
+  constructor(public ref: ElementRef) {}
 
   /**
    * The value supplied will be assigned
@@ -38,34 +31,5 @@ export class SprkAutocompleteResultsDirective implements OnInit {
   @Input()
   analyticsString: string;
 
-  /**
-   * @ignore
-   */
-  getClasses(): string[] {
-    const classArray: string[] = ['sprk-c-Autocomplete__results'];
-
-    return classArray;
-  }
-
-  ngOnInit(): void {
-    this.getClasses().forEach((item) => {
-      this.renderer.addClass(this.ref.nativeElement, item);
-    });
-
-    if (this.analyticsString) {
-      this.renderer.setAttribute(
-        this.ref.nativeElement,
-        'data-analytics',
-        this.analyticsString,
-      );
-    }
-
-    if (this.idString) {
-      this.renderer.setAttribute(
-        this.ref.nativeElement,
-        'data-id',
-        this.idString,
-      );
-    }
-  }
+  @HostBinding('class.sprk-c-Autocomplete__results') resultsClass = true;
 }

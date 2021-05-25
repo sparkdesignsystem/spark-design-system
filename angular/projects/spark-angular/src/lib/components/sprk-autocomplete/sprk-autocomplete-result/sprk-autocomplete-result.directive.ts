@@ -42,6 +42,8 @@ export class SprkAutocompleteResultDirective implements OnInit {
   @Input()
   analyticsString: string;
 
+  @HostBinding('class.sprk-c-Autocomplete__result') resultClass = true;
+
   /**
    * @ignore
    *
@@ -101,40 +103,11 @@ export class SprkAutocompleteResultDirective implements OnInit {
     this.clickedEvent.emit(this.ref.nativeElement.id);
   }
 
-  /**
-   * @ignore
-   */
-  getClasses(): string[] {
-    const classArray: string[] = ['sprk-c-Autocomplete__result'];
-
-    return classArray;
-  }
-
   ngOnInit(): void {
-    this.getClasses().forEach((item) => {
-      this.renderer.addClass(this.ref.nativeElement, item);
-    });
-
     let itemId = this.ref.nativeElement.id;
     if (!itemId) {
       itemId = uniqueId(`sprk_autocomplete_result_`);
       this.renderer.setProperty(this.ref.nativeElement, 'id', itemId);
-    }
-
-    if (this.analyticsString) {
-      this.renderer.setAttribute(
-        this.ref.nativeElement,
-        'data-analytics',
-        this.analyticsString,
-      );
-    }
-
-    if (this.idString) {
-      this.renderer.setAttribute(
-        this.ref.nativeElement,
-        'data-id',
-        this.idString,
-      );
     }
   }
 }
