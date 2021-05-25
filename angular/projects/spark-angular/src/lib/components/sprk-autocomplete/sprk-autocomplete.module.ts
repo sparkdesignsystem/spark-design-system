@@ -23,8 +23,6 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
   declarations: [SprkAutocompleteComponent],
   exports: [
     SprkAutocompleteComponent,
-    CommonModule,
-    RouterModule,
     SprkIconModule,
     SprkAutocompleteResultsModule,
     SprkAutocompleteResultModule,
