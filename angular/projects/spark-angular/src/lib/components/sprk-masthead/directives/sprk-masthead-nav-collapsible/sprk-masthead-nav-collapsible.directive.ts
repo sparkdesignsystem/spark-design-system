@@ -47,6 +47,7 @@ export class SprkMastheadNavCollapsibleDirective {
 
   @HostBinding('class.sprk-c-Masthead__nav-collapsible--is-collapsed')
   get isCollapsedSetting(): boolean {
+    console.log(' the input getter ran from collapsible nav directive.');
     return this.isCollapsed;
   }
 }

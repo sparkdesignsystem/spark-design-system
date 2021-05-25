@@ -73,11 +73,9 @@ is 54rem (864px). If the content needs of your application
 require this breakpoint to be larger or smaller, it can be
 changed in your application’s Sass file with the
 variable \`$sprk-masthead-breakpoint\`.
-- In the Default Masthead the Navigation Items section is to the
-right of the logo, containing the navigation links and utility
-items. When the number of navigation items is too large to
-fit in one row, the Extended Masthead should be used as it utilizes a second row
-to display the navigation items.
+- The Default Masthead allows for one row of navigational items.
+ If there are too many to fit in one row, use Extended Masthead
+ instead because it allows for two rows of navigational items.
 - The Masthead is a navigation landmark for accessibility
 tools and we add the attribute \`role=”banner”\` to the Masthead.
 - The Masthead will be "sticky" on small viewports in all browsers
