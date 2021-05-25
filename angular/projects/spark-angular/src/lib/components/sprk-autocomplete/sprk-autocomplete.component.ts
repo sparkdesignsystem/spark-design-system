@@ -206,58 +206,62 @@ export class SprkAutocompleteComponent
    * Hide the Autocomplete results list.
    */
   hideResults(): void {
-    if (this.results) {
-      // Remove the hidden style
-      this.renderer.addClass(
-        this.results.nativeElement,
-        'sprk-c-Autocomplete__results--hidden',
+    if (!this.results) {
+      return;
+    }
+
+    // Add the hidden style
+    this.renderer.addClass(
+      this.results.nativeElement,
+      'sprk-c-Autocomplete__results--hidden',
+    );
+
+    if (this.input) {
+      // Set aria-expanded on the input's parent
+      this.renderer.setAttribute(
+        this.input.ref.nativeElement.parentNode,
+        'aria-expanded',
+        'false',
       );
 
-      if (this.input) {
-        // Set aria-expanded on the input's parent
-        this.renderer.setAttribute(
-          this.input.ref.nativeElement.parentNode,
-          'aria-expanded',
-          'false',
-        );
-
-        // Remove aria-activedescendant from the input
-        this.renderer.removeAttribute(
-          this.input.ref.nativeElement,
-          'aria-activedescendant',
-        );
-      }
-
-      // remove aria-selected and highlight class from all list items
-      this.removeAllHighlights();
-
-      this.closedEvent.emit();
-      this.isOpen = false;
+      // Remove aria-activedescendant from the input
+      this.renderer.removeAttribute(
+        this.input.ref.nativeElement,
+        'aria-activedescendant',
+      );
     }
+
+    // remove aria-selected and highlight class from all list items
+    this.removeAllHighlights();
+
+    this.closedEvent.emit();
+    this.isOpen = false;
   }
 
   /**
    * Show the Autocomplete results list.
    */
   showResults(): void {
-    if (this.results) {
-      this.renderer.removeClass(
-        this.results.nativeElement,
-        'sprk-c-Autocomplete__results--hidden',
-      );
-
-      if (this.input) {
-        // Set aria-expanded on the input's parent
-        this.renderer.setAttribute(
-          this.input.ref.nativeElement.parentNode,
-          'aria-expanded',
-          'true',
-        );
-      }
-
-      this.openedEvent.emit();
-      this.isOpen = true;
+    if (!this.results) {
+      return;
     }
+
+    this.renderer.removeClass(
+      this.results.nativeElement,
+      'sprk-c-Autocomplete__results--hidden',
+    );
+
+    if (this.input) {
+      // Set aria-expanded on the input's parent
+      this.renderer.setAttribute(
+        this.input.ref.nativeElement.parentNode,
+        'aria-expanded',
+        'true',
+      );
+    }
+
+    this.openedEvent.emit();
+    this.isOpen = true;
   }
 
   /**
@@ -292,25 +296,23 @@ export class SprkAutocompleteComponent
    * attributes will have been set.
    */
   ngAfterViewInit(): void {
-    if (this.input) {
-      this.calculateResultsWidth();
+    if (!this.input || !this.results) {
+      return;
     }
 
-    if (this.results) {
-      if (this.input) {
-        // set aria-controls on the input to the id of the results
-        this.generateAriaControls(
-          this.input.ref.nativeElement,
-          this.results.nativeElement,
-        );
+    this.calculateResultsWidth();
 
-        // set aria-owns on the input's parent to the id of the results
-        this.generateAriaOwns(
-          this.input.ref.nativeElement.parentNode,
-          this.results.nativeElement,
-        );
-      }
-    }
+    // set aria-controls on the input to the id of the results
+    this.generateAriaControls(
+      this.input.ref.nativeElement,
+      this.results.nativeElement,
+    );
+
+    // set aria-owns on the input's parent to the id of the results
+    this.generateAriaOwns(
+      this.input.ref.nativeElement.parentNode,
+      this.results.nativeElement,
+    );
   }
 
   /**
@@ -319,18 +321,19 @@ export class SprkAutocompleteComponent
    * width of the input element.
    */
   calculateResultsWidth() {
-    if (this.input) {
-      const currentInputWidth = this.input.ref.nativeElement.offsetWidth;
-
-      if (this.results) {
-        this.renderer.setAttribute(
-          this.results.nativeElement,
-          'style',
-          'max-width:' + currentInputWidth + 'px',
-        );
-      }
+    if (!this.input || !this.results) {
+      return;
     }
+
+    const currentInputWidth = this.input.ref.nativeElement.offsetWidth;
+
+    this.renderer.setAttribute(
+      this.results.nativeElement,
+      'style',
+      'max-width:' + currentInputWidth + 'px',
+    );
   }
+
   /** @ignore */
   isUpPressed = (e) => e.key === 'ArrowUp' || e.keyCode === 38;
   /** @ignore */
