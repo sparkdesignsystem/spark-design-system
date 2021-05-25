@@ -9,10 +9,12 @@ import spinnergif from '../../images/installing-spark/html/html-spinner.gif';
 [Part 1 - Setting Up Your Environment](/installing-spark/html-environment-setup) and
 [Part 2 - Installation](/installing-spark/html-installation).
 
-# Installing Spark in an HTML Project
+# Part 3: Adding Spark Components in an HTML Project
 This guide will cover how to add components for HTML, CSS and JavaScript.
-Our <a href="https://github.com/sparkdesignsystem/spark-starter-html/" target="_blank">starter repository</a>
-is available for reference.
+
+Our <a href="https://github.com/sparkdesignsystem/spark-starter-html/" target="_blank">Starter Github Repositories</a> are available for reference:
+- ['kitchen-sink' branch](https://github.com/sparkdesignsystem/spark-starter-html/tree/kitchen-sink) (Spark Installed with component examples.)
+- ['without-spark' branch](https://github.com/sparkdesignsystem/spark-starter-html/tree/kitchen-sink) (all of the prerequisites before Spark Installation.)
 
 For instructions on setting up Spark in other environments, check out the
 guides for [Angular](/installing-spark/angular) and [React](/installing-spark/react).
@@ -27,7 +29,7 @@ Adding a Spinner Button can confirm you've installed Spark's Styles and Javascri
     data-id="button-spinner-1"
     onclick="startSpinner()"
   >
-    Submit
+    Start Spinning
   </button>
 ```
 > **Note**: Inside the `<body>` tag of `index.html`, the line `<script src="main.js"></script>` should be after
@@ -59,19 +61,15 @@ window.startSpinner = () => {
 ## Finding the code to other Spark Components
 
 1. Go to the [Spark HTML Storybook](https://html.sparkdesignsystem.com/)
-2. In the "Components" section, find the one you need.
+2. Find the Component you need in the "Components" section.
 3. Navigate to the *Docs* tab. It's typically at the top of screen next to *Canvas*.
 4. Navigate down the page until you find your component variant.
-5. The *Show code* button will present you code to copy and paste into your project.
+5. The *Show code* button will toggle a code sample.
 
-> Storybook code samples represent the rendered state
+> These code samples represent the *rendered state*
 after Spark's JavaScript functions run. Some functionality requires additional engineering.
 The *Docs* section of each page will give implementation details for each component.
 
-
-## You did it!
-
-You’re ready to start building with Spark!
 
 ## Additional Topics
 
