@@ -9,7 +9,6 @@ import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results.di
       sprkAutocompleteResults
       analyticsString="results1"
       idString="resultsId1"
-      additionalClasses="testClass"
     ></ul>
     <ul sprkAutocompleteResults></ul>
   `,
@@ -42,12 +41,6 @@ describe('Spark Autocomplete Results Directive', () => {
   it('should add the correct base class', () => {
     expect(emptyElement.classList.toString()).toEqual(
       'sprk-c-Autocomplete__results',
-    );
-  });
-
-  it('should add classes if additionalClasses has a value', () => {
-    expect(element.classList.toString()).toEqual(
-      'sprk-c-Autocomplete__results testClass',
     );
   });
 

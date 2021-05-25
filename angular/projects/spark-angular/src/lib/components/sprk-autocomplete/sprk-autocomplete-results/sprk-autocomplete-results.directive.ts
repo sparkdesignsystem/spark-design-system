@@ -39,24 +39,10 @@ export class SprkAutocompleteResultsDirective implements OnInit {
   analyticsString: string;
 
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * element.
-   */
-  @Input()
-  additionalClasses: string;
-
-  /**
    * @ignore
    */
   getClasses(): string[] {
     const classArray: string[] = ['sprk-c-Autocomplete__results'];
-
-    if (this.additionalClasses) {
-      this.additionalClasses.split(' ').forEach((className) => {
-        classArray.push(className);
-      });
-    }
 
     return classArray;
   }

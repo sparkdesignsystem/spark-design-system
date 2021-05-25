@@ -11,7 +11,6 @@ import { By } from '@angular/platform-browser';
         sprkAutocompleteResult
         analyticsString="result1"
         idString="resultId1"
-        additionalClasses="testClass"
       ></li>
       <li sprkAutocompleteResult></li>
     </ul>
@@ -55,12 +54,6 @@ describe('Spark Autocomplete Result Directive', () => {
     );
   });
 
-  it('should add classes if additionalClasses has a value', () => {
-    expect(element.classList.toString()).toEqual(
-      'sprk-c-Autocomplete__result testClass',
-    );
-  });
-
   it('should add a value for data-analytics if analyticsString has a value', () => {
     expect(element.getAttribute('data-analytics')).toEqual('result1');
   });
@@ -93,7 +86,7 @@ describe('Spark Autocomplete Result Directive', () => {
 
     expect(element.getAttribute('aria-selected')).toEqual('true');
     expect(element.classList.toString()).toEqual(
-      'sprk-c-Autocomplete__result testClass sprk-c-Autocomplete__result--active',
+      'sprk-c-Autocomplete__result sprk-c-Autocomplete__result--active',
     );
   });
 
@@ -102,9 +95,7 @@ describe('Spark Autocomplete Result Directive', () => {
     fixture.detectChanges();
 
     expect(element.getAttribute('aria-selected')).toEqual('false');
-    expect(element.classList.toString()).toEqual(
-      'sprk-c-Autocomplete__result testClass',
-    );
+    expect(element.classList.toString()).toEqual('sprk-c-Autocomplete__result');
   });
 
   it('should scroll the parentNode when setting isSelected if necessary', () => {
