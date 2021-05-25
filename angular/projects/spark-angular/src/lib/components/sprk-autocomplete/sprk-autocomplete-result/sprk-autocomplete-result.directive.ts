@@ -13,9 +13,6 @@ import { uniqueId } from 'lodash';
   selector: '[sprkAutocompleteResult]',
 })
 export class SprkAutocompleteResultDirective {
-  /**
-   * @ignore
-   */
   constructor(public ref: ElementRef) {}
 
   /**
