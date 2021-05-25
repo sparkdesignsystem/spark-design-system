@@ -14,7 +14,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SprkStackComponent {
   /**
-   * The value supplied can be `tiny`, `small`, `medium`, `large`, or `huge`.
+   * The value supplied can be `extraTiny`, `tiny`, `small`, `medium`, `large`, or `huge`.
    * This is used as the breakpoint at which the component moves or "splits"
    * to a side by side layout.
    */
