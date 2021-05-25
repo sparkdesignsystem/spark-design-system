@@ -276,7 +276,27 @@ export class SprkAutocompleteComponent
       } else {
         this.hideResults();
       }
+    }
 
+    // if itemSelectedEvent is specified, also set that as the click event on each result
+    if (this.itemSelectedEvent) {
+      this.resultItems.forEach((element) => {
+        element.clickedEvent = this.itemSelectedEvent;
+      });
+    }
+  }
+
+  /**
+   * @ignore
+   * This logic needs to happen in this event so that the correct DOM
+   * attributes will have been set.
+   */
+  ngAfterViewInit(): void {
+    if (this.input) {
+      this.calculateResultsWidth();
+    }
+
+    if (this.results) {
       if (this.input) {
         // set aria-controls on the input to the id of the results
         this.generateAriaControls(
@@ -290,24 +310,6 @@ export class SprkAutocompleteComponent
           this.results.nativeElement,
         );
       }
-    }
-
-    // if itemSelectedEvent is specified, also set that as the click event on each result
-    if (this.itemSelectedEvent) {
-      this.resultItems.forEach((element) => {
-        element.clickedEvent = this.itemSelectedEvent;
-      });
-    }
-  }
-
-  /**
-   * @ignore
-   * This logic needs to happen in this event so that the input width is
-   * correctly calculated.
-   */
-  ngAfterViewInit(): void {
-    if (this.input) {
-      this.calculateResultsWidth();
     }
   }
 
@@ -349,7 +351,7 @@ export class SprkAutocompleteComponent
    */
   generateAriaControls = (triggerElement, contentElement) => {
     const triggerAriaControls = triggerElement.getAttribute('aria-controls');
-    let contentId = contentElement.getAttribute('id');
+    const contentId = contentElement.getAttribute('id');
 
     // Do nothing if aria-controls exists but the id does not
     if (triggerAriaControls && !contentId) {
@@ -359,12 +361,6 @@ export class SprkAutocompleteComponent
     // Do nothing if aria-controls and id both exist but don't match
     if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
       return;
-    }
-
-    // If we don't have a valid id, generate one with lodash
-    if (!contentId) {
-      contentId = uniqueId(`sprk_autocomplete_results_`);
-      contentElement.setAttribute('id', contentId);
     }
 
     // set the value of aria-controls
@@ -381,7 +377,7 @@ export class SprkAutocompleteComponent
    */
   generateAriaOwns = (ownerElement, contentElement) => {
     const ownerAriaOwns = ownerElement.getAttribute('aria-owns');
-    let contentId = contentElement.getAttribute('id');
+    const contentId = contentElement.getAttribute('id');
 
     // Do nothing if aria-owns exists but the id does not
     if (ownerAriaOwns && !contentId) {
@@ -391,12 +387,6 @@ export class SprkAutocompleteComponent
     // Do nothing if aria-owns and id both exist but don't match
     if (contentId && ownerAriaOwns && contentId !== ownerAriaOwns) {
       return;
-    }
-
-    // If we don't have a valid id, generate one with lodash
-    if (!contentId) {
-      contentId = uniqueId(`sprk_autocomplete_results_`);
-      contentElement.setAttribute('id', contentId);
     }
 
     // set the value of aria-owns

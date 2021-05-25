@@ -1,24 +1,30 @@
 import {
   Directive,
   ElementRef,
-  OnInit,
   HostListener,
   Output,
   EventEmitter,
   Input,
   HostBinding,
-  Renderer2,
 } from '@angular/core';
 import { uniqueId } from 'lodash';
 
 @Directive({
   selector: '[sprkAutocompleteResult]',
 })
-export class SprkAutocompleteResultDirective implements OnInit {
+export class SprkAutocompleteResultDirective {
   /**
    * @ignore
    */
-  constructor(public ref: ElementRef, private renderer: Renderer2) {}
+  constructor(public ref: ElementRef) {}
+
+  /**
+   * The value supplied will be assigned to the `id` attribute on the
+   * component. A unique id will be generated if one is not provided.
+   */
+  @HostBinding('attr.id')
+  @Input()
+  id = uniqueId(`sprk_autocomplete_result_`);
 
   /**
    * The value supplied will be assigned
@@ -101,13 +107,5 @@ export class SprkAutocompleteResultDirective implements OnInit {
   @HostListener('click', ['$event.target'])
   onClick() {
     this.clickedEvent.emit(this.ref.nativeElement.id);
-  }
-
-  ngOnInit(): void {
-    let itemId = this.ref.nativeElement.id;
-    if (!itemId) {
-      itemId = uniqueId(`sprk_autocomplete_result_`);
-      this.renderer.setProperty(this.ref.nativeElement, 'id', itemId);
-    }
   }
 }

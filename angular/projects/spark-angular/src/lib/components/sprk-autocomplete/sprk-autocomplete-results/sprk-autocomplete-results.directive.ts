@@ -1,4 +1,5 @@
 import { Directive, ElementRef, Input, HostBinding } from '@angular/core';
+import { uniqueId } from 'lodash';
 
 @Directive({
   selector: '[sprkAutocompleteResults]',
@@ -8,6 +9,14 @@ export class SprkAutocompleteResultsDirective {
    * @ignore
    */
   constructor(public ref: ElementRef) {}
+
+  /**
+   * The value supplied will be assigned to the `id` attribute on the
+   * component. A unique id will be generated if one is not provided.
+   */
+  @HostBinding('attr.id')
+  @Input()
+  id = uniqueId(`sprk_autocomplete_results_`);
 
   /**
    * The value supplied will be assigned

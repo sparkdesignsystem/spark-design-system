@@ -556,24 +556,6 @@ describe('SprkAutocompleteComponent', () => {
     ).toEqual('item1');
   });
 
-  it('should generate aria-controls and id if needed', () => {
-    component.results.nativeElement.removeAttribute('id');
-    component.input.ref.nativeElement.removeAttribute('aria-controls');
-    fixture.detectChanges();
-
-    component.ngAfterContentInit();
-    fixture.detectChanges();
-
-    const actualId = component.results.nativeElement.getAttribute('id');
-    const actualAriaControls = component.input.ref.nativeElement.getAttribute(
-      'aria-controls',
-    );
-
-    expect(actualId).toBeTruthy();
-    expect(actualAriaControls).toBeTruthy();
-    expect(actualAriaControls).toEqual(actualId);
-  });
-
   it('should generate aria-controls for existing id if needed', () => {
     const providedId = 'test_id';
 
@@ -581,7 +563,7 @@ describe('SprkAutocompleteComponent', () => {
     component.input.ref.nativeElement.removeAttribute('aria-controls');
     fixture.detectChanges();
 
-    component.ngAfterContentInit();
+    component.ngAfterViewInit();
     fixture.detectChanges();
 
     const actualId = component.results.nativeElement.getAttribute('id');
@@ -602,7 +584,7 @@ describe('SprkAutocompleteComponent', () => {
     component.input.ref.nativeElement.setAttribute('aria-controls', providedId);
     fixture.detectChanges();
 
-    component.ngAfterContentInit();
+    component.ngAfterViewInit();
     fixture.detectChanges();
 
     const actualId = component.results.nativeElement.getAttribute('id');
@@ -632,7 +614,7 @@ describe('SprkAutocompleteComponent', () => {
 
     expect(console.warn).toBeCalledTimes(0);
 
-    component.ngAfterContentInit();
+    component.ngAfterViewInit();
 
     fixture.detectChanges();
 
@@ -661,7 +643,7 @@ describe('SprkAutocompleteComponent', () => {
 
     expect(console.warn).toBeCalledTimes(0);
 
-    component.ngAfterContentInit();
+    component.ngAfterViewInit();
 
     fixture.detectChanges();
 
@@ -675,24 +657,6 @@ describe('SprkAutocompleteComponent', () => {
     expect(actualAriaControls).toEqual(providedAriaControls);
   });
 
-  it('should generate aria-owns and id if needed', () => {
-    component.results.nativeElement.removeAttribute('id');
-    component.input.ref.nativeElement.parentNode.removeAttribute('aria-owns');
-    fixture.detectChanges();
-
-    component.ngAfterContentInit();
-    fixture.detectChanges();
-
-    const actualId = component.results.nativeElement.getAttribute('id');
-    const actualAriaOwns = component.input.ref.nativeElement.parentNode.getAttribute(
-      'aria-owns',
-    );
-
-    expect(actualId).toBeTruthy();
-    expect(actualAriaOwns).toBeTruthy();
-    expect(actualAriaOwns).toEqual(actualId);
-  });
-
   it('should generate aria-owns for existing id if needed', () => {
     const providedId = 'test_id';
 
@@ -700,7 +664,7 @@ describe('SprkAutocompleteComponent', () => {
     component.input.ref.nativeElement.parentNode.removeAttribute('aria-owns');
     fixture.detectChanges();
 
-    component.ngAfterContentInit();
+    component.ngAfterViewInit();
     fixture.detectChanges();
 
     const actualId = component.results.nativeElement.getAttribute('id');
@@ -724,7 +688,7 @@ describe('SprkAutocompleteComponent', () => {
     );
     fixture.detectChanges();
 
-    component.ngAfterContentInit();
+    component.ngAfterViewInit();
     fixture.detectChanges();
 
     const actualId = component.results.nativeElement.getAttribute('id');
@@ -742,7 +706,7 @@ describe('SprkAutocompleteComponent', () => {
     component.input = undefined;
     fixture.detectChanges();
 
-    component.ngAfterContentInit();
+    component.ngAfterViewInit();
     fixture.detectChanges();
 
     expect(component.input).toEqual(undefined);
@@ -764,7 +728,7 @@ describe('SprkAutocompleteComponent', () => {
 
     expect(console.warn).toBeCalledTimes(0);
 
-    component.ngAfterContentInit();
+    component.ngAfterViewInit();
 
     fixture.detectChanges();
 
@@ -794,7 +758,7 @@ describe('SprkAutocompleteComponent', () => {
 
     expect(console.warn).toBeCalledTimes(0);
 
-    component.ngAfterContentInit();
+    component.ngAfterViewInit();
 
     fixture.detectChanges();
 
