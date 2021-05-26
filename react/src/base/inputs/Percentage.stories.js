@@ -35,8 +35,8 @@ export const percentageInput = () => (
       <SprkInput
         id="percentage-1"
         additionalClasses="
-        sprk-b-TextInput--has-svg-icon
-        sprk-b-InputContainer__input--has-icon-right"
+          sprk-b-TextInput--has-svg-icon
+          sprk-b-InputContainer__input--has-icon-right"
         type="tel"
       />
     </div>
@@ -69,8 +69,8 @@ export const invalidPercentageInput = () => (
         id="percentage-2"
         ariaDescribedBy="invalid-percentage"
         additionalClasses="
-        sprk-b-TextInput--has-svg-icon
-        sprk-b-InputContainer__input--has-icon-right"
+          sprk-b-TextInput--has-svg-icon
+          sprk-b-InputContainer__input--has-icon-right"
         type="tel"
         isValid={false}
       />
@@ -119,8 +119,8 @@ export const disabledPercentageInput = () => (
       <SprkInput
         id="percentage-3"
         additionalClasses="
-        sprk-b-TextInput--has-svg-icon
-        sprk-b-InputContainer__input--has-icon-right"
+          sprk-b-TextInput--has-svg-icon
+          sprk-b-InputContainer__input--has-icon-right"
         type="tel"
         isDisabled
       />
