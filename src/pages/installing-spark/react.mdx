@@ -5,26 +5,24 @@
 import reactApp from '../../images/installing-spark/react/react-app.png';
 import styleCheck from '../../images/installing-spark/react/style-check.png';
 import buttonLoaded from '../../images/installing-spark/react/button-loaded.png';
-import spinnergif from '../../images/installing-spark/react/react-spinner.gif';
+import spinnergif from '../../images/installing-spark/html/html-spinner.gif';
 
 # Installing Spark in a React Project
 
-This guide will walk you through installing and using Spark on an existing
-React site. For help with setting up the necessary development environment,
+This guide walks you through installing and using Spark on an existing
+React app.
+
+For help with setting up the necessary development environment,
 see the [React App Getting Started Guide](https://create-react-app.dev/docs/getting-started).
 
-By the end of this, you’ll have all the Spark React components available
-in your site.
+By the end of this guide, you’ll have Spark set up on your project and have access to all of our components.
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/GeeKuDnMcTk"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-  title="Youtube Player: Installing Spark in a React Project"
-></iframe>
+-----------
+
+Our <a href="https://github.com/sparkdesignsystem/spark-starter-react/" target="_blank">Starter Github Repositories</a> are available for reference:
+- ['kitchen-sink' branch](https://github.com/sparkdesignsystem/spark-starter-react/tree/kitchen-sink) (Spark Installed with component examples.)
+- ['without-spark' branch](https://github.com/sparkdesignsystem/spark-starter-react/tree/kitchen-sink) (all of the prerequisites before Spark Installation.)
+
 
 ## Installing Sass
 <a href="https://sass-lang.com/" target="_blank">Sass</a> is a tool that processes and compiles CSS. You’ll need to use Sass
@@ -66,12 +64,12 @@ site, along with the original React CSS:
 ## Install Spark Packages
 Now we’ll use Sass to import all the Spark CSS.
 
-6. Download the required packages with this command. It contains all
+1. Download the required packages with this command. It contains all
 of the HTML, JavaScript, and CSS needed to run Spark React components.
 ```
 npm install @sparkdesignsystem/spark-react --save-dev
 ```
-7. Import the Spark Sass file into the main Sass file (e.g., `App.scss`).
+2. Import the Spark Sass file into the main Sass file (e.g., `App.scss`).
 ``` javascript
 @import "../node_modules/@sparkdesignsystem/spark-styles/spark.scss";
 ```
@@ -89,30 +87,49 @@ of your page that includes Spark’s styles.
 If Spark React is installed correctly, you should see these CSS rules
 listed in your page’s code.
 
-## Adding React Components
-Let’s add a component that will allow us to test that both Spark’s styles
-and functionality are working. We’ll use
-the [Spinning Button](https://react.sparkdesignsystem.com/?path=/docs/components-button--spinning)
-component to do this. You can find code for all Spark components
-at [react.sparkdesignsystem.com](https://react.sparkdesignsystem.com/).
+## Adding Your First Spark Component
+Adding a Spinner Button can confirm you've installed Spark React packages correctly. It will also get you started with some functionality.
 
-8. Add a reference to the `SprkButton` component at the top
-of `App.js`.
+Rewrite `App.js` to into a [class component](https://reactjs.org/docs/react-component.html) and prepare `SprkButton` to render a `SprkSpinner` on click.
+
+The following code sample has:
+- An import of the React package.
+- A reference to your `App.scss` file.
+- An import of `SprkButton` and `SprkSpinner`.
+- State that will handle the status of `isSpinning` and render the `SprkSpinner` when `true` (for this example, we'll name it `isAppLoading`).
+- `SprkButton` that sets `isAppLoading` to `true` after clicking.
+- Logic inside of `SprkButton` that renders the `SprkSpinner` according to `isAppLoading` state.
 
 ``` javascript
-import { SprkButton } from '@sparkdesignsystem/spark-react';
-```
+import React from 'react';
+import './App.scss';
+import { SprkButton, SprkSpinner } from '@sparkdesignsystem/spark-react';
 
-9. Copy the sample code into the `return` block in `App.js`.
-``` javascript
-function App() {
-  return (
-    <SprkButton loading>Submit</SprkButton>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isAppLoading: false};
+  }
+
+  render() {
+    return (
+      <div>
+        <SprkButton
+          idString="button-9"
+          analyticsString="button-9-analytics"
+          isSpinning={this.state.isAppLoading}
+          onClick={() => { this.setState({ isAppLoading: true }) }}
+        >
+          {this.state.isAppLoading ? <SprkSpinner /> :'Start Spinning'}
+        </SprkButton>
+      </div>
+    );
+  }
 }
-```
-You should now see a Spark Button!
 
+export default App;
+```
+Now, when you click a button, the SprkButton should change from text to a spinning state!
 
 <div class="sprk-u-Measure">
   <img
@@ -122,12 +139,20 @@ You should now see a Spark Button!
     alt="Screenshot of React App with Spark Spark Button"/>
 </div>
 
-## You did it!
-You now have a development environment set up with Spark
-installed and you’re ready to start  building!
+> Learn more about `SprkButton` and `SprkSpinner` functionality in the [Button Storybook documentation](https://react.sparkdesignsystem.com/?path=/docs/components-button--primary).
 
-For Spark support, you can [email the Spark team](mailto:sparkdesignsystem@quickenloans.com)
-with any questions and we’ll respond as quickly as possible.
+
+## Finding the code to other Spark Components
+
+1. Go to the [Spark React Storybook](https://react.sparkdesignsystem.com/)
+2. Find the Component you need in the "Components" section.
+3. Navigate to the *Docs* tab. It's typically at the top of screen next to *Canvas*.
+4. Navigate down the page until you find your component variant.
+5. The *Show code* button will toggle a code sample.
+
+> These code samples represent the final *rendered state* of the components. Just like with a `SprkButton` with a spinner, some functionality requires additional engineering.
+
+The *Docs* section of each page will give implementation details for each component.
 
 ## Additional Topics
 Check out these guides for more information on setting up Spark:
