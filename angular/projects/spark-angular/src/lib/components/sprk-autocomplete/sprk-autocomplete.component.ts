@@ -15,7 +15,12 @@ import {
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk-autocomplete-result.directive';
-import { uniqueId } from 'lodash';
+import {
+  isDownPressed,
+  isEnterPressed,
+  isEscapePressed,
+  isUpPressed,
+} from '../../utilities/keypress/keypress';
 
 @Component({
   selector: 'sprk-autocomplete',
@@ -77,25 +82,21 @@ export class SprkAutocompleteComponent
    */
   @HostListener('document:keydown', ['$event'])
   onKeydown($event) {
-    if (this.isEscapePressed($event) && this.isOpen) {
+    if (isEscapePressed($event) && this.isOpen) {
       this.hideResults();
     }
 
-    if (this.isUpPressed($event) && this.isOpen) {
+    if (isUpPressed($event) && this.isOpen) {
       this.retreatHighlightedItem();
     }
 
-    if (this.isDownPressed($event) && this.isOpen) {
+    if (isDownPressed($event) && this.isOpen) {
       this.advanceHighlightedItem();
     }
 
     // Only select the list item if the list is open
     // and an item is highlighted
-    if (
-      this.isEnterPressed($event) &&
-      this.isOpen &&
-      this.highlightedIndex !== -1
-    ) {
+    if (isEnterPressed($event) && this.isOpen && this.highlightedIndex !== -1) {
       this.selectHighlightedListItem();
     }
   }
@@ -333,16 +334,6 @@ export class SprkAutocompleteComponent
       'max-width:' + currentInputWidth + 'px',
     );
   }
-
-  /** @ignore */
-  isUpPressed = (e) => e.key === 'ArrowUp' || e.keyCode === 38;
-  /** @ignore */
-  isDownPressed = (e) => e.key === 'ArrowDown' || e.keyCode === 40;
-  /** @ignore */
-  isEnterPressed = (e) => e.key === 'Enter' || e.keyCode === 13;
-  /** @ignore */
-  isEscapePressed = (e) =>
-    e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27;
 
   /**
    * @ignore
