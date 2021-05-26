@@ -21,6 +21,8 @@ import {
   isEscapePressed,
   isUpPressed,
 } from '../../utilities/keypress/keypress';
+import { generateAriaOwns } from '../../utilities/generateAriaOwns/generateAriaOwns';
+import { generateAriaControls } from '../../utilities/generateAriaControls/generateAriaControls';
 
 @Component({
   selector: 'sprk-autocomplete',
@@ -304,13 +306,13 @@ export class SprkAutocompleteComponent
     this.calculateResultsWidth();
 
     // set aria-controls on the input to the id of the results
-    this.generateAriaControls(
+    generateAriaControls(
       this.input.ref.nativeElement,
       this.results.nativeElement,
     );
 
     // set aria-owns on the input's parent to the id of the results
-    this.generateAriaOwns(
+    generateAriaOwns(
       this.input.ref.nativeElement.parentNode,
       this.results.nativeElement,
     );
@@ -334,56 +336,4 @@ export class SprkAutocompleteComponent
       'max-width:' + currentInputWidth + 'px',
     );
   }
-
-  /**
-   * @ignore
-   * Copy the value of the id attribute on contentElement
-   * into the aria-controls attribute on triggerElement.
-   * Generate a unique ID if needed.
-   * @param triggerElement The element that will receive the aria-controls attribute.
-   * @param contentElement The element that will receive an id if needed.
-   */
-  generateAriaControls = (triggerElement, contentElement) => {
-    const triggerAriaControls = triggerElement.getAttribute('aria-controls');
-    const contentId = contentElement.getAttribute('id');
-
-    // Do nothing if aria-controls exists but the id does not
-    if (triggerAriaControls && !contentId) {
-      return;
-    }
-
-    // Do nothing if aria-controls and id both exist but don't match
-    if (contentId && triggerAriaControls && contentId !== triggerAriaControls) {
-      return;
-    }
-
-    // set the value of aria-controls
-    triggerElement.setAttribute('aria-controls', contentId);
-  };
-
-  /**
-   * @ignore
-   * Copy the value of the id attribute on contentElement
-   * into the aria-owns attribute on ownerElement.
-   * Generate a unique ID if needed.
-   * @param ownerElement The element that will receive the aria-owns attribute.
-   * @param contentElement The element that will receive an id if needed.
-   */
-  generateAriaOwns = (ownerElement, contentElement) => {
-    const ownerAriaOwns = ownerElement.getAttribute('aria-owns');
-    const contentId = contentElement.getAttribute('id');
-
-    // Do nothing if aria-owns exists but the id does not
-    if (ownerAriaOwns && !contentId) {
-      return;
-    }
-
-    // Do nothing if aria-owns and id both exist but don't match
-    if (contentId && ownerAriaOwns && contentId !== ownerAriaOwns) {
-      return;
-    }
-
-    // set the value of aria-owns
-    ownerElement.setAttribute('aria-owns', contentId);
-  };
 }

@@ -274,3 +274,15 @@ export { SprkAutocompleteResultsModule } from './lib/components/sprk-autocomplet
 export { SprkAutocompleteResultsDirective } from './lib/components/sprk-autocomplete/sprk-autocomplete-results/sprk-autocomplete-results.directive';
 export { SprkAutocompleteResultModule } from './lib/components/sprk-autocomplete/sprk-autocomplete-result/sprk-autocomplete-result.module';
 export { SprkAutocompleteResultDirective } from './lib/components/sprk-autocomplete/sprk-autocomplete-result/sprk-autocomplete-result.directive';
+export { generateAriaOwns } from './lib/utilities/generateAriaOwns/generateAriaOwns';
+export { generateAriaControls } from './lib/utilities/generateAriaControls/generateAriaControls';
+export {
+  isUpPressed,
+  isTabPressed,
+  isSpacePressed,
+  isEnterPressed,
+  isEscapePressed,
+  isRightPressed,
+  isLeftPressed,
+  isDownPressed,
+} from './lib/utilities/keypress/keypress';
