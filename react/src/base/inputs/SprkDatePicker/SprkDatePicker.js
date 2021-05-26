@@ -58,6 +58,7 @@ class SprkDatePicker extends Component {
       ariaDescribedBy,
       value,
       id,
+      onBlur,
       ...rest
     } = this.props;
     const { hasValue } = this.state;
@@ -69,6 +70,7 @@ class SprkDatePicker extends Component {
       } else {
         this.setState({ hasValue: false });
       }
+      if (onBlur) onBlur(e);
     };
 
     return (
@@ -232,6 +234,10 @@ SprkDatePicker.propTypes = {
    * such as helper text or an error field.
    */
   ariaDescribedBy: PropTypes.string,
+  /**
+   * Passes in a function that handles the onBlur of the datepicker.
+   */
+  onBlur: PropTypes.func,
 };
 
 SprkDatePicker.defaultProps = {

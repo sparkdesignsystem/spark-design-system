@@ -188,4 +188,13 @@ describe('SprkDatePicker:', () => {
       '12/17/1995',
     );
   });
+
+  it('should run the supplied onBlur function', () => {
+    const onBlurMock = jest.fn();
+    const wrapper = mount(<SprkDatePicker onBlur={onBlurMock} />);
+    const input = wrapper.find('input');
+
+    input.simulate('blur', { target: { value: '' } });
+    expect(onBlurMock.mock.calls.length).toBe(1);
+  });
 });
