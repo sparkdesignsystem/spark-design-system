@@ -26,7 +26,7 @@ export const helperText = () => (
     <SprkLabel htmlFor="text-1">Text Input</SprkLabel>
     <SprkInput id="text-1" ariaDescribedBy="helper-text-1" />
     <SprkHelperText id="helper-text-1">
-      Helper Text for the form field.
+      Optional helper text, used to clarify the field&apos;s intent.
     </SprkHelperText>
   </SprkInputContainer>
 );
@@ -47,7 +47,7 @@ export const invalidHelperText = () => (
       isValid={false}
     />
     <SprkHelperText id="helper-text-2">
-      Helper Text for the form field.
+      Optional helper text, used to clarify the field&apos;s intent.
     </SprkHelperText>
     <SprkFieldError id="invalid-helper">
       <SprkIcon

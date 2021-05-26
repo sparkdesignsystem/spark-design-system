@@ -71,7 +71,9 @@ export const defaultHelperText = () => (
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
     </SprkFieldset>
 
-    <SprkHelperText id="radio-helper-text">Input Helper Text</SprkHelperText>
+    <SprkHelperText id="radio-helper-text">
+      Optional helper text, used to clarify the field&apos;s intent.
+    </SprkHelperText>
   </SprkRadioGroup>
 );
 

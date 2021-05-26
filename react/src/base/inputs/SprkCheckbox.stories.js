@@ -71,7 +71,7 @@ export const defaultHelperText = () => (
       <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
     </SprkFieldset>
     <SprkHelperText id="checkbox-helper-text">
-      Optional helper text, used to clarify the field&#x27;s intent.
+      Optional helper text, used to clarify the field&apos;s intent.
     </SprkHelperText>
   </SprkCheckboxGroup>
 );
@@ -171,7 +171,7 @@ export const hugeHelperText = () => (
       </SprkCheckboxItem>
     </SprkFieldset>
     <SprkHelperText id="huge-checkbox-helper-text">
-      Optional helper text, used to clarify the field&#x27;s intent
+      Optional helper text, used to clarify the field&apos;s intent.
     </SprkHelperText>
   </SprkCheckboxGroup>
 );

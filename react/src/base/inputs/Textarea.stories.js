@@ -41,7 +41,7 @@ export const textareaHelperText = () => (
       ariaDescribedBy="helper-text"
     />
     <SprkHelperText id="helper-text">
-      Helper text for this field.
+      Optional helper text, used to clarify the field&apos;s intent.
     </SprkHelperText>
   </SprkTextareaContainer>
 );
