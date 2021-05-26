@@ -43,6 +43,13 @@ describe('SprkTextarea:', () => {
     expect(wrapper.find('textarea[disabled]').length).toBe(1);
   });
 
+  it('should not add disabled attribute when isDisabled is false', () => {
+    const wrapper = mount(<SprkTextarea isDisabled={false} />);
+    expect(wrapper.find('textarea').getDOMNode().getAttribute('disabled')).toBe(
+      null,
+    );
+  });
+
   it('should set aria-invalid attribute to true when isValid is false', () => {
     const wrapper = mount(<SprkTextarea isValid={false} />);
     expect(
