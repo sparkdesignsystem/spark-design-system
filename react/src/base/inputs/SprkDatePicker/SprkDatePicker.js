@@ -103,12 +103,11 @@ SprkDatePicker.propTypes = {
   datePickerConfig: PropTypes.shape({
     /**
      * What DOM element the Date Picker will be added to. This defaults
-     * to document.body
+     * to `document.body`.
      */
     appendTo: PropTypes.node,
     /**
-     * Lang can be used to customize the text that is displayed
-     * in the calendar. You can use this to display a different language.
+     * Lang can be used to display a different language in the calendar.
      */
     lang: PropTypes.shape({
       days: PropTypes.arrayOf(PropTypes.string),
@@ -118,63 +117,56 @@ SprkDatePicker.propTypes = {
     clear: PropTypes.string,
     close: PropTypes.string,
     /**
-     * format {Date} -> string is a function which takes a
-     * date and returns a string. It can be used to customize
-     * the way a date will look in the input after the user has
-     * selected it, and is particularly useful if you're targeting
-     * a non-US customer.
+     * Takes a Date and returns a string. Customizes
+     * how the date will look in the input after user
+     * selects a date. Useful for outputting non-standard date formats.
      */
     format: PropTypes.func,
     /**
-     * parse {string|Date} -> Date is the inverse of format.
-     * If you specify one, you probably should specify the other
-     * the default parse function handles whatever the new Date
-     * constructor handles. Note that parse may be passed either a
-     * string or a date.
+     * May be passed either a
+     * string or a Date and returns a Date.
+     * If `format` is specified, it is recommended
+     * that `parse` is also specified.
      */
     parse: PropTypes.func,
     /**
-     * mode {'dp-modal'|'dp-below'|'dp-permanent'} specifies the
-     * way the date picker should display:
-     * 'dp-modal' displays the picker as a modal
-     * 'dp-below' displays the date picker as a dropdown
-     * 'dp-permanent' displays the date picker as a permanent
-     * (always showing) calendar.
+     * Specifies the way the date picker should be displayed.
+     * 'dp-modal' displays the picker as a modal.
+     * 'dp-below' displays the date picker as a dropdown.
+     * 'dp-permanent' displays the date picker as a calendar
+     * that is always showing.
      */
     mode: PropTypes.oneOf(['dp-modal', 'dp-below', 'dp-permanent']),
     /**
-     * highlightedDate specifies what date to highlight when the
+     * Specifies what date to highlight when the
      * date picker is displayed and the associated input has no value.
      */
     highlightedDate: PropTypes.string,
     /**
-     * min {string|Date} specifies the minimum date
-     * that can be selected (inclusive).
-     * All earlier dates will be disabled.
+     * Specifies the minimum date
+     * that can be selected.
      */
     min: PropTypes.string,
     /**
-     * max {string|Date} specifies the maximum date
-     * that can be selected (inclusive).
-     * All later dates will be disabled.
+     * Specifies the maximum date
+     * that can be selected.
      */
     max: PropTypes.string,
     /**
-     * inRange {Date} -> boolean takes a date and returns
+     * Takes a Date and returns
      * true or false. If false, the date
      * will be disabled in the date picker.
      */
     inRange: PropTypes.func,
     /**
-     * dateClass {Date} -> string takes a date and returns
+     * Takes a Date and returns
      * a CSS class name to be associated
      * with that date in the date picker.
      */
     dateClass: PropTypes.func,
     /**
-     * dayOffset {number} specifies which day of the week is
-     * considered the first. By default,
-     * this is 0 (Sunday). Set it to 1 for Monday, 2 for Tuesday, etc.
+     * Specifies which day of the week is
+     * considered the first. Sunday is 0, Monday is 1, etc.
      */
     dayOffset: PropTypes.number,
   }),
