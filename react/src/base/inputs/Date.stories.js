@@ -33,7 +33,7 @@ which you may need to remove before submitting the form.
 export const dateInput = () => (
   <SprkInputContainer>
     <SprkLabel htmlFor="date-1">Date Input (No Picker)</SprkLabel>
-    <SprkInput id="date-1" placeholder="01/01/2021" />
+    <SprkInput id="date-1" placeholder="MM/DD/YYYY" />
   </SprkInputContainer>
 );
 
@@ -49,7 +49,7 @@ export const invalidDateInput = () => (
     <SprkLabel htmlFor="date-2">Date Input (No Picker)</SprkLabel>
     <SprkInput
       id="date-2"
-      placeholder="01/01/2021"
+      placeholder="MM/DD/YYYY"
       isValid={false}
       ariaDescribedBy="invalid-error"
     />
@@ -82,7 +82,7 @@ export const disabledDateInput = () => (
     <SprkLabel htmlFor="date-3" isDisabled>
       Date Input (No Picker)
     </SprkLabel>
-    <SprkInput id="date-3" placeholder="01/01/2021" isDisabled />
+    <SprkInput id="date-3" placeholder="MM/DD/YYYY" isDisabled />
   </SprkInputContainer>
 );
 
@@ -94,7 +94,7 @@ disabledDateInput.story = {
 };
 
 export const legacy = () => (
-  <SprkTextInput label="Date" name="date" placeholder="01/01/2021" />
+  <SprkTextInput label="Date" name="date" placeholder="MM/DD/YYYY" />
 );
 
 legacy.story = {
@@ -108,7 +108,7 @@ export const legacyInvalidDateInput = () => (
   <SprkTextInput
     label="Date"
     name="date"
-    placeholder="01/01/2021"
+    placeholder="MM/DD/YYYY"
     valid={false}
     errorMessage="There is an error on this field."
   />
@@ -122,7 +122,7 @@ legacyInvalidDateInput.story = {
 };
 
 export const legacyDisabledDateInput = () => (
-  <SprkTextInput label="Date" name="date" placeholder="01/01/2021" disabled />
+  <SprkTextInput label="Date" name="date" placeholder="MM/DD/YYYY" disabled />
 );
 
 legacyDisabledDateInput.story = {

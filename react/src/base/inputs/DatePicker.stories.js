@@ -45,7 +45,7 @@ export const defaultStory = () => (
           sprk-b-InputContainer__icon"
         aria-hidden="true"
       />
-      <SprkDatePicker id="datepicker-1" placeholder="01/01/2021" />
+      <SprkDatePicker id="datepicker-1" placeholder="MM/DD/YYYY" />
     </div>
   </SprkInputContainer>
 );
@@ -70,7 +70,7 @@ export const invalidDatePicker = () => (
       <SprkDatePicker
         id="datepicker-2"
         isValid={false}
-        placeholder="01/01/2021"
+        placeholder="MM/DD/YYYY"
         ariaDescribedBy="invalid-date"
       />
     </div>
@@ -110,7 +110,7 @@ export const disabledDatePicker = () => (
           sprk-c-Icon--stroke-current-color sprk-b-InputContainer__icon"
         aria-hidden="true"
       />
-      <SprkDatePicker id="datepicker-3" isDisabled placeholder="01/01/2021" />
+      <SprkDatePicker id="datepicker-3" isDisabled placeholder="MM/DD/YYYY" />
     </div>
   </SprkInputContainer>
 );
@@ -127,7 +127,7 @@ export const hugeDatePicker = () => (
     <SprkDatePicker
       id="huge-datepicker-1"
       variant="huge"
-      placeholder="01/01/2021"
+      placeholder="MM/DD/YYYY"
     />
     <SprkLabel htmlFor="huge-datepicker-1">Date</SprkLabel>
   </SprkInputContainer>
@@ -145,7 +145,7 @@ export const invalidHugeDatePicker = () => (
     <SprkDatePicker
       id="huge-datepicker-2"
       variant="huge"
-      placeholder="01/01/2021"
+      placeholder="MM/DD/YYYY"
       isValid={false}
       ariaDescribedBy="invalid-huge"
     />
@@ -179,7 +179,7 @@ export const disabledHugeDatePicker = () => (
     <SprkDatePicker
       id="huge-datepicker-3"
       variant="huge"
-      placeholder="01/01/2021"
+      placeholder="MM/DD/YYYY"
       isDisabled
     />
     <SprkLabel htmlFor="huge-datepicker-3" isDisabled>
@@ -198,7 +198,7 @@ disabledHugeDatePicker.story = {
 export const legacyDefaultStory = () => (
   <SprkDatePickerInput
     name="date"
-    placeholder="01/01/2021"
+    placeholder="MM/DD/YYYY"
     errorMessage="Incorrect date."
     label="Date"
   />
@@ -214,7 +214,7 @@ legacyDefaultStory.story = {
 export const legacyInvalidDatePicker = () => (
   <SprkDatePickerInput
     name="date"
-    placeholder="01/01/2021"
+    placeholder="MM/DD/YYYY"
     errorMessage="Incorrect date."
     label="Date"
     valid={false}
@@ -231,7 +231,7 @@ legacyInvalidDatePicker.story = {
 export const legacyDisabledDatePicker = () => (
   <SprkDatePickerInput
     name="date"
-    placeholder="01/01/2021"
+    placeholder="MM/DD/YYYY"
     errorMessage="Incorrect date."
     label="Date"
     disabled
@@ -249,7 +249,7 @@ export const legacyHugeDatePicker = () => (
   <SprkDatePickerInput
     type="hugeTextInput"
     name="date"
-    placeholder="01/01/2021"
+    placeholder="MM/DD/YYYY"
     errorMessage="Incorrect date."
     label="Date"
   />
@@ -266,7 +266,7 @@ export const legacyInvalidHugeDatePicker = () => (
   <SprkDatePickerInput
     type="hugeTextInput"
     name="date"
-    placeholder="01/01/2021"
+    placeholder="MM/DD/YYYY"
     errorMessage="Incorrect date."
     label="Date"
     valid={false}
@@ -284,7 +284,7 @@ export const legacyDisabledHugeDatePicker = () => (
   <SprkDatePickerInput
     type="hugeTextInput"
     name="date"
-    placeholder="01/01/2021"
+    placeholder="MM/DD/YYYY"
     errorMessage="Incorrect date."
     label="Date"
     disabled
