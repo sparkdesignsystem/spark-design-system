@@ -433,20 +433,20 @@ hugeLayoutSix.story = {
 
 export const legacy = () => (
   <SprkSelectionInput
-    groupLabel="Checkbox Input"
+    groupLabel="Checkbox Group Label"
     choices={[
       {
-        label: 'Checkbox Item 1',
+        label: 'Legacy Checkbox Item 1',
         name: 'check[]',
         value: 'item-1',
       },
       {
-        label: 'Checkbox Item 2',
+        label: 'Legacy Checkbox Item 2',
         name: 'check[]',
         value: 'item-2',
       },
       {
-        label: 'Checkbox Item 3',
+        label: 'Legacy Checkbox Item 3',
         name: 'check[]',
         value: 'item-2',
       },
@@ -464,20 +464,20 @@ legacy.story = {
 
 export const legacyInvalidCheckbox = () => (
   <SprkSelectionInput
-    groupLabel="Checkbox Input"
+    groupLabel="Checkbox Group Label"
     choices={[
       {
-        label: 'Checkbox Item 1',
+        label: 'Legacy Checkbox Item 1',
         name: 'check[]',
         value: 'item-1',
       },
       {
-        label: 'Checkbox Item 2',
+        label: 'Legacy Checkbox Item 2',
         name: 'check[]',
         value: 'item-2',
       },
       {
-        label: 'Checkbox Item 3',
+        label: 'Legacy Checkbox Item 3',
         name: 'check[]',
         value: 'item-3',
       },
@@ -497,20 +497,20 @@ legacyInvalidCheckbox.story = {
 
 export const legacyDisabledCheckbox = () => (
   <SprkSelectionInput
-    groupLabel="Checkbox Input"
+    groupLabel="Checkbox Group Label"
     choices={[
       {
-        label: 'Checkbox Item 1',
+        label: 'Legacy Checkbox Item 1',
         name: 'check[]',
         value: 'item-1',
       },
       {
-        label: 'Checkbox Item 2',
+        label: 'Legacy Checkbox Item 2',
         name: 'check[]',
         value: 'item-2',
       },
       {
-        label: 'Checkbox Item 3',
+        label: 'Legacy Checkbox Item 3',
         name: 'check[]',
         value: 'item-3',
       },
