@@ -3,6 +3,7 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import isSprkInput from './isSprkInput';
 import SprkInput from '../../../base/inputs/SprkInput/SprkInput';
+import SprkTextarea from '../../../base/inputs/SprkTextarea/SprkTextarea';
 import SprkSelect from '../../../base/inputs/SprkSelect/SprkSelect';
 import SprkDatePicker from '../../../base/inputs/SprkDatePicker/SprkDatePicker';
 
@@ -21,7 +22,16 @@ describe('isSprkInput:', () => {
     expect(isSprkInput(<SprkDatePicker />)).toBe(true);
   });
 
-  it('should return false if it is passed a non input', () => {
+  it(`should return false if it is passed a Spark component
+  that is not an expected Spark input`, () => {
+    expect(isSprkInput(<SprkTextarea />)).toBe(false);
+  });
+
+  it('should return false if it is passed a native DOM element', () => {
     expect(isSprkInput(<div />)).toBe(false);
+  });
+
+  it('should return false if it is passed a native input element', () => {
+    expect(isSprkInput(<input />)).toBe(false);
   });
 });
