@@ -19,7 +19,7 @@ ${markdownDocumentationLinkBuilder('input')}
 (parenthesis and -) which you may need to remove
 before submitting the form.
 - Requires Additional Engineering:
-  - Validation - The \`valid\` prop controls this
+  - Validation - The \`isValid\` prop controls this
   input’s validation state. This boolean is
   determined by your own validation logic.
   Validation happens before reformatting.

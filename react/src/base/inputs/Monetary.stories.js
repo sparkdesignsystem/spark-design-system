@@ -18,7 +18,7 @@ ${markdownDocumentationLinkBuilder('input')}
 - The value of this field may contain special characters
 (,) which you may need to remove before submitting the form.
 - Requires Additional Engineering:
-  - Validation - The \`valid\` prop controls this input’s
+  - Validation - The \`isValid\` prop controls this input’s
   validation state. This boolean is determined by your own
   validation logic. Validation happens before reformatting.
   - Reformatting to monetary pattern (##.##) - On blur, it

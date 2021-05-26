@@ -21,7 +21,7 @@ ${markdownDocumentationLinkBuilder('input')}
 Tiny Date Picker. See the datePickerConfig object in the
 props table below for available customization options.
 - Requires Additional Engineering:
-  - Validation - The \`valid\` prop controls this
+  - Validation - The \`isValid\` prop controls this
   input’s validation state. This boolean is determined
   by your own validation logic. Validation happens before
   reformatting.

@@ -21,7 +21,7 @@ ${markdownDocumentationLinkBuilder('input')}
 - Requires Additional Engineering:
   - Show/Hide Functionality - Create a function that toggles
   the \`type\` attribute of the input between \`text\` and \`password\`.
-  - Validation - The \`valid\` prop controls this input’s
+  - Validation - The \`isValid\` prop controls this input’s
   validation state. This boolean is determined by your
   own validation logic. Validation happens before reformatting.
   - Reformatting to SSN pattern (###-##-####) - After valid
