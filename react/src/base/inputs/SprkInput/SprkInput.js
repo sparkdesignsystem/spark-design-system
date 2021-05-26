@@ -32,6 +32,7 @@ class SprkInput extends Component {
       ariaDescribedBy,
       value,
       id,
+      onBlur,
       ...rest
     } = this.props;
     const { hasValue } = this.state;
@@ -43,6 +44,7 @@ class SprkInput extends Component {
       } else {
         this.setState({ hasValue: false });
       }
+      if (onBlur) onBlur(e);
     };
 
     return (
@@ -128,6 +130,10 @@ SprkInput.propTypes = {
    * such as helper text or an error field.
    */
   ariaDescribedBy: PropTypes.string,
+  /**
+   * Passes in a function that handles the onBlur of the input.
+   */
+  onBlur: PropTypes.func,
 };
 
 SprkInput.defaultProps = {

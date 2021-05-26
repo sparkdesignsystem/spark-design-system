@@ -168,4 +168,13 @@ describe('SprkInput:', () => {
     mount(<SprkInput type="text" formatter={formatter} isValid={false} />);
     expect(formatter.mock.calls.length).toBe(0);
   });
+
+  it('should run the supplied onBlur function', () => {
+    const onBlurMock = jest.fn();
+    const wrapper = mount(<SprkInput onBlur={onBlurMock} />);
+    const input = wrapper.find('input');
+
+    input.simulate('blur', { target: { value: '' } });
+    expect(onBlurMock.mock.calls.length).toBe(1);
+  });
 });
