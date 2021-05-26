@@ -521,4 +521,9 @@ describe('SprkCheckboxGroup:', () => {
         .getAttribute('aria-describedby'),
     ).toBe(null);
   });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkCheckboxGroup data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
+  });
 });

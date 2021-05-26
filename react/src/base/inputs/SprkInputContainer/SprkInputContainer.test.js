@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkInputContainer from './SprkInputContainer';
 import SprkLabel from '../SprkLabel/SprkLabel';
@@ -713,5 +713,10 @@ describe('SprkInputContainer Additional Elements Tests:', () => {
     );
 
     expect(wrapper.find('svg').length).toBe(1);
+  });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkInputContainer data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkInput from './SprkInput';
 
@@ -176,5 +176,10 @@ describe('SprkInput:', () => {
 
     input.simulate('blur', { target: { value: '' } });
     expect(onBlurMock.mock.calls.length).toBe(1);
+  });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkInput data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
 });

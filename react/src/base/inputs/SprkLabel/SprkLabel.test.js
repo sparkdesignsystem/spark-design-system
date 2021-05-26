@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkLabel from './SprkLabel';
 
@@ -103,5 +103,10 @@ describe('SprkLabel:', () => {
     expect(
       wrapper.find('.sprk-b-Label').getDOMNode().getAttribute('for'),
     ).toContain('sprk-label-');
+  });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkLabel data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
 });

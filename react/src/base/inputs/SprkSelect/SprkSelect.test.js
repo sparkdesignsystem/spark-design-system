@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkSelect from './SprkSelect';
 
@@ -216,5 +216,12 @@ describe('SprkSelect:', () => {
   it('should not render grouped options if not supplied', () => {
     const wrapper = mount(<SprkSelect choices={choices} />);
     expect(wrapper.find('optgroup').length).toBe(0);
+  });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(
+      <SprkSelect choices={choices} data-my-attr="testing" />,
+    );
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
 });

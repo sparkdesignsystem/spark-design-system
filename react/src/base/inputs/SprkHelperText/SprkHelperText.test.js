@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkHelperText from './SprkHelperText';
 
@@ -84,5 +84,10 @@ describe('SprkHelperText:', () => {
     expect(
       wrapper.find('.sprk-b-HelperText').getDOMNode().getAttribute('id'),
     ).toContain('sprk-helper-text-');
+  });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkHelperText data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
 });

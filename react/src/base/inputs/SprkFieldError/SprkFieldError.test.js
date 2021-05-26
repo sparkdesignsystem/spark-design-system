@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkFieldError from './SprkFieldError';
 
@@ -93,5 +93,10 @@ describe('SprkFieldError:', () => {
     expect(
       wrapper.find('.sprk-b-ErrorContainer').getDOMNode().getAttribute('id'),
     ).toContain('sprk-field-error-');
+  });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkFieldError data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
 });

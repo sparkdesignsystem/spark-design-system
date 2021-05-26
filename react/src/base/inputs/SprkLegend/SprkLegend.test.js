@@ -60,4 +60,9 @@ describe('SprkLegend:', () => {
     const wrapper = shallow(<SprkLegend />);
     expect(wrapper.find('.sprk-b-Legend').prop('data-id')).toEqual(undefined);
   });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkLegend data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
+  });
 });

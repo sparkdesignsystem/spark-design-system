@@ -118,4 +118,9 @@ describe('SprkCheckboxItem:', () => {
     checkbox.simulate('change', { target: { value: 'test-value' } });
     expect(onCheckboxChangeMock.mock.calls.length).toBe(1);
   });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkCheckboxItem data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
+  });
 });

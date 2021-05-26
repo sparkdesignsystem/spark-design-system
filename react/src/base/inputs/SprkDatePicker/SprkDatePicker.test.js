@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SprkDatePicker from './SprkDatePicker';
 
@@ -196,5 +196,10 @@ describe('SprkDatePicker:', () => {
 
     input.simulate('blur', { target: { value: '' } });
     expect(onBlurMock.mock.calls.length).toBe(1);
+  });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkDatePicker data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
 });
