@@ -105,7 +105,6 @@ export const defaultStory = () => ({
       <label
         id="autocomplete-label"
         for="autocomplete-input"
-        hasIcon="true"
         sprkLabel
       >
         Search for a Fruit
@@ -181,7 +180,6 @@ export const defaultInvalid = () => ({
       <label
         id="autocomplete-label2"
         for="autocomplete-input2"
-        hasIcon="true"
         sprkLabel
       >
         Search for a Fruit
@@ -264,7 +262,6 @@ export const defaultDisabled = () => ({
       <label
         id="autocomplete-label3"
         for="autocomplete-input3"
-        hasIcon="true"
         isDisabled="true"
         sprkLabel
       >
