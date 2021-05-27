@@ -2,10 +2,9 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 import { SprkAutocompleteModule } from './sprk-autocomplete.module';
 import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sprk-autocomplete-results.directive';
-import { SprkAutocompleteResultsModule } from './sprk-autocomplete-results/sprk-autocomplete-results.module';
-import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk-autocomplete-result.directive';
-import { SprkAutocompleteResultModule } from './sprk-autocomplete-result/sprk-autocomplete-result.module';
+import { SprkAutocompleteResultsDirective } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
+import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
+import { SprkAutocompleteInputContainerDirective } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
 
 export default {
   title: 'Components/Autocomplete',
@@ -13,6 +12,7 @@ export default {
   subcomponents: {
     SprkAutocompleteResultsDirective,
     SprkAutocompleteResultDirective,
+    SprkAutocompleteInputContainerDirective,
   },
   decorators: [
     storyWrapper(
@@ -89,11 +89,7 @@ In order to keep the Spark Autocomplete flexible enough to use in a wide
 };
 
 const modules = {
-  imports: [
-    SprkAutocompleteModule,
-    SprkAutocompleteResultsModule,
-    SprkAutocompleteResultModule,
-  ],
+  imports: [SprkAutocompleteModule],
 };
 
 export const defaultStory = () => ({
