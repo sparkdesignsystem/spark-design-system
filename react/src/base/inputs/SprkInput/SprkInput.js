@@ -11,10 +11,12 @@ class SprkInput extends Component {
     if (value) {
       this.state = {
         hasValue: true,
+        currentValue: value,
       };
     } else {
       this.state = {
         hasValue: false,
+        currentValue: '',
       };
     }
   }
@@ -35,16 +37,25 @@ class SprkInput extends Component {
       onBlur,
       ...rest
     } = this.props;
-    const { hasValue } = this.state;
+    const { hasValue, currentValue } = this.state;
+    let internalValue = value;
 
-    // Adds class for IE and Edge
+    // Adds class for IE and Edge,
+    // checks for changes in value to run the formatter
     const handleOnBlur = (e) => {
+      // Check to see if the value has changed.
+      const isValueChanged = currentValue !== e.target.value;
+
       if (e.target.value.length > 0) {
-        this.setState({ hasValue: true });
+        this.setState({ hasValue: true, currentValue: e.target.value });
       } else {
-        this.setState({ hasValue: false });
+        this.setState({ hasValue: false, currentValue: '' });
       }
+      // Run any custom onBlur functions that were passed in.
       if (onBlur) onBlur(e);
+      // Update the value to run the formatter or not.
+      internalValue =
+        isValid && formatter && isValueChanged ? formatter(value) : value;
     };
 
     return (
@@ -59,7 +70,7 @@ class SprkInput extends Component {
         data-id={idString}
         data-analytics={analyticsString}
         aria-invalid={!isValid}
-        value={isValid && formatter ? formatter(value) : value}
+        value={internalValue}
         onBlur={(e) => handleOnBlur(e)}
         id={id}
         {...rest}

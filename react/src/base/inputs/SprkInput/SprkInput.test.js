@@ -154,18 +154,28 @@ describe('SprkInput:', () => {
     ).toBe(2);
   });
 
-  it('should run the supplied formatter', () => {
-    const formatter = jest.fn(() => true);
-    const onChangeMock = jest.fn();
-    mount(
-      <SprkInput type="text" formatter={formatter} onChange={onChangeMock} />,
+  it('should run the supplied formatter when the value is changed', () => {
+    const formatter = jest.fn();
+    const wrapper = mount(
+      <SprkInput type="text" formatter={formatter} value="test" />,
     );
+    const input = wrapper.find('input');
+    input.simulate('blur', { target: { value: 'testing' } });
     expect(formatter.mock.calls.length).toBe(1);
   });
 
   it('should not run the formatter if the field is invalid', () => {
     const formatter = jest.fn();
     mount(<SprkInput type="text" formatter={formatter} isValid={false} />);
+    expect(formatter.mock.calls.length).toBe(0);
+  });
+
+  it('should not run the formatter if the value has not changed', () => {
+    const formatter = jest.fn();
+    const wrapper = mount(<SprkInput value="test" formatter={formatter} />);
+    const input = wrapper.find('input');
+
+    input.simulate('blur', { target: { value: 'test' } });
     expect(formatter.mock.calls.length).toBe(0);
   });
 
