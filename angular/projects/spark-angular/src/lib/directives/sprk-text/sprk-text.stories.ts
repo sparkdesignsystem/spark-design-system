@@ -8,10 +8,8 @@ export default {
   component: SprkTextDirective,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${storyContent}<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -42,9 +40,7 @@ correct type classes applied.
 };
 
 const modules = {
-  imports: [
-    SprkTextModule,
-  ],
+  imports: [SprkTextModule],
 };
 
 export const bodyOne = () => ({
@@ -63,14 +59,12 @@ export const bodyOne = () => ({
        sapien, pharetra maximus augue dui
        eget dui.
     </p>
-  `
+  `,
 });
 
 bodyOne.story = {
   parameters: {
-    jest: [
-      'sprk-text.directive',
-    ],
+    jest: ['sprk-text.directive'],
   },
 };
 
@@ -90,14 +84,12 @@ export const bodyTwo = () => ({
        sapien, pharetra maximus augue dui
        eget dui.
     </p>
-  `
+  `,
 });
 
 bodyTwo.story = {
   parameters: {
-    jest: [
-      'sprk-text.directive',
-    ],
+    jest: ['sprk-text.directive'],
   },
 };
 
@@ -117,14 +109,12 @@ export const bodyThree = () => ({
        sapien, pharetra maximus augue dui
        eget dui.
     </p>
-  `
+  `,
 });
 
 bodyThree.story = {
   parameters: {
-    jest: [
-      'sprk-text.directive',
-    ],
+    jest: ['sprk-text.directive'],
   },
 };
 
@@ -144,14 +134,11 @@ export const bodyFour = () => ({
        sapien, pharetra maximus augue dui
        eget dui.
     </p>
-  `
+  `,
 });
 
 bodyFour.story = {
   parameters: {
-    jest: [
-      'sprk-text.directive',
-    ],
+    jest: ['sprk-text.directive'],
   },
 };
-

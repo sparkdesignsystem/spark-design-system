@@ -1,10 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SprkIconComponent } from '../../sprk-icon/sprk-icon.component';
-import { SprkLinkDirective } from '../../../directives/sprk-link/sprk-link.directive';
-import {
-  SprkMastheadAccordionItemComponent
-} from './sprk-masthead-accordion-item.component';
+import { SprkIconComponent } from '../../../sprk-icon/sprk-icon.component';
+import { SprkLinkDirective } from '../../../../directives/sprk-link/sprk-link.directive';
+import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item.component';
 
 describe('SprkMastheadAccordionItemComponent', () => {
   let component: SprkMastheadAccordionItemComponent;
@@ -20,8 +18,8 @@ describe('SprkMastheadAccordionItemComponent', () => {
       declarations: [
         SprkMastheadAccordionItemComponent,
         SprkIconComponent,
-        SprkLinkDirective
-      ]
+        SprkLinkDirective,
+      ],
     }).compileComponents();
   }));
 
@@ -42,7 +40,7 @@ describe('SprkMastheadAccordionItemComponent', () => {
     component.additionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(accordionItemElement.classList.toString()).toContain(
-      'sprk-c-MastheadAccordion__item sprk-u-Overflow--hidden sprk-u-man'
+      'sprk-c-MastheadAccordion__item sprk-u-Overflow--hidden sprk-u-man',
     );
   });
 
@@ -50,7 +48,7 @@ describe('SprkMastheadAccordionItemComponent', () => {
     component.additionalHeadingClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(accordionHeadingElement.classList.contains('sprk-u-man')).toEqual(
-      true
+      true,
     );
   });
 
@@ -58,7 +56,14 @@ describe('SprkMastheadAccordionItemComponent', () => {
     component.analyticsString = 'Link Action';
     fixture.detectChanges();
     expect(accordionItemLinkElement.getAttribute('data-analytics')).toEqual(
-      'Link Action'
+      'Link Action',
+    );
+  });
+
+  it('should not add an analytics data attribute if analyticsString has no value', () => {
+    fixture.detectChanges();
+    expect(accordionItemLinkElement.getAttribute('data-analytics')).toEqual(
+      null,
     );
   });
 
@@ -67,25 +72,25 @@ describe('SprkMastheadAccordionItemComponent', () => {
     fixture.detectChanges();
     expect(
       accordionItemElement.classList.contains(
-        'sprk-c-MastheadAccordion__item--open'
-      )
+        'sprk-c-MastheadAccordion__item--open',
+      ),
     ).toEqual(false);
   });
 
   it('should be aria-expanded=false if closed', () => {
     component.isOpen = false;
     fixture.detectChanges();
-    expect(
-      accordionItemLinkElement.getAttribute('aria-expanded')
-    ).toEqual("false");
+    expect(accordionItemLinkElement.getAttribute('aria-expanded')).toEqual(
+      'false',
+    );
   });
 
   it('should be aria-expanded=true if open', () => {
     component.isOpen = true;
     fixture.detectChanges();
-    expect(
-      accordionItemLinkElement.getAttribute('aria-expanded')
-    ).toEqual("true");
+    expect(accordionItemLinkElement.getAttribute('aria-expanded')).toEqual(
+      'true',
+    );
   });
 
   it('should be open if isOpen is true', () => {
@@ -93,8 +98,8 @@ describe('SprkMastheadAccordionItemComponent', () => {
     fixture.detectChanges();
     expect(
       accordionItemElement.classList.contains(
-        'sprk-c-MastheadAccordion__item--open'
-      )
+        'sprk-c-MastheadAccordion__item--open',
+      ),
     ).toEqual(true);
   });
 
@@ -105,11 +110,11 @@ describe('SprkMastheadAccordionItemComponent', () => {
     expect(component.isOpen).toEqual(false);
   });
 
-  it('should set the heading to title', () => {
-    component.title = 'This is a title';
+  it('should set the heading', () => {
+    component.heading = 'This is a heading';
     fixture.detectChanges();
     expect(accordionHeadingElement.textContent.trim()).toEqual(
-      'This is a title'
+      'This is a heading',
     );
   });
 
@@ -124,7 +129,7 @@ describe('SprkMastheadAccordionItemComponent', () => {
     component.idString = testString;
     fixture.detectChanges();
     expect(accordionItemLinkElement.getAttribute('data-id')).toEqual(
-      testString
+      testString,
     );
   });
 
@@ -139,8 +144,8 @@ describe('SprkMastheadAccordionItemComponent', () => {
     fixture.detectChanges();
     expect(
       accordionItemElement.classList.contains(
-        'sprk-c-MastheadAccordion__item--active'
-      )
+        'sprk-c-MastheadAccordion__item--active',
+      ),
     ).toEqual(true);
   });
 });

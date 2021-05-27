@@ -4,6 +4,9 @@
 ////
 /// @group masthead
 ////
+
+// TODO: Remove old name styles when completing React and HTML upgrades
+// and update the variable names as well.
 .sprk-c-Masthead {
   background-color: $sprk-masthead-bg-color;
   border-bottom: $sprk-masthead-border-bottom;
@@ -19,7 +22,8 @@
 }
 
 /// Adds styles for the Masthead when it is open.
-.sprk-c-Masthead--open {
+.sprk-c-Masthead--open,
+.sprk-c-Masthead--is-open {
   position: fixed;
   left: 0;
   right: 0;
@@ -32,22 +36,27 @@
 }
 
 ///	Adds styles for the Masthead when the user scrolls past it.
-.sprk-c-Masthead--scroll {
+.sprk-c-Masthead--scroll,
+.sprk-c-Masthead--is-scrolled {
   box-shadow: $sprk-masthead-shadow-scroll;
 }
 
-/// Adds styles to hide the Masthead
-/// when a user scrolls on a narrow screen.
-.sprk-c-Masthead--hidden {
-  transform: $sprk-masthead-translateY;
-  transition: $sprk-masthead-transition;
+/// Adds hidden styles to hide the Masthead
+/// when a user scrolls down on a narrow screen.
+.sprk-c-Masthead--hidden,
+.sprk-c-Masthead--is-hidden {
+  @media all and (max-width: $sprk-masthead-breakpoint) {
+    transform: $sprk-masthead-translateY;
+    transition: $sprk-masthead-transition;
+  }
 }
 
 // Keep padding settings consistent for menu,
-// logo branding, little nav, and additional nav link
+// logo branding, nav items, and additional nav link
 .sprk-c-Masthead__menu,
 .sprk-c-Masthead__branding,
 .sprk-c-Masthead__little-nav,
+.sprk-c-Masthead__nav-items,
 .sprk-c-Masthead__nav-item {
   padding-top: $sprk-masthead-content-item-padding-top;
   padding-left: $sprk-masthead-content-item-padding-left;
@@ -75,7 +84,8 @@
 }
 
 // When open, adjust box shadow and border styles
-.sprk-c-Masthead--open .sprk-c-Masthead__content {
+.sprk-c-Masthead--open .sprk-c-Masthead__content,
+.sprk-c-Masthead--is-open .sprk-c-Masthead__content {
   border-bottom: $sprk-masthead-border-bottom;
   box-shadow: $sprk-masthead-shadow;
 
@@ -131,9 +141,11 @@
   min-width: $sprk-masthead-logo-min-width;
 }
 
-// Hide big and little navs until larger view
+// Hide nav bar and nav items until larger view
 .sprk-c-Masthead__big-nav,
-.sprk-c-Masthead__little-nav {
+.sprk-c-Masthead__nav-bar,
+.sprk-c-Masthead__little-nav,
+.sprk-c-Masthead__nav-items {
   display: none;
 
   @media (min-width: $sprk-masthead-breakpoint) {
@@ -141,8 +153,9 @@
   }
 }
 
-// If there are too many little nav links they'll wrap
-.sprk-c-Masthead__little-nav {
+// If there are too many nav items they'll wrap
+.sprk-c-Masthead__little-nav,
+.sprk-c-Masthead__nav-items {
   flex-wrap: wrap;
   position: relative;
 }
@@ -219,6 +232,7 @@
 
 /// Adds an underline on links used in
 /// the big navigation bar.
+.sprk-c-Masthead__link--nav-bar,
 .sprk-c-Masthead__link--big-nav {
   display: block;
   font-weight: $sprk-big-nav-link-font-weight;
@@ -231,11 +245,13 @@
   }
 }
 
-.sprk-c-Masthead__big-nav {
+.sprk-c-Masthead__big-nav,
+.sprk-c-Masthead__nav-bar {
   background-color: $sprk-big-nav-bg;
 }
 
 // Big nav bar has a max width for child items
+.sprk-c-Masthead__nav-bar-items,
 .sprk-c-Masthead__big-nav-items {
   // Relative pos for child dropdowns
   position: relative;
@@ -243,6 +259,7 @@
   max-width: $sprk-big-nav-column-width;
 }
 
+.sprk-c-Masthead__nav-bar-item,
 .sprk-c-Masthead__big-nav-item {
   line-height: $sprk-big-nav-item-line-height;
   position: relative;
@@ -255,7 +272,8 @@
   &:hover {
     border-bottom: $sprk-big-nav-item-active-border-bottom;
 
-    .sprk-c-Masthead__link--big-nav {
+    .sprk-c-Masthead__link--big-nav,
+    .sprk-c-Masthead__link--nav-bar {
       border-bottom: $sprk-big-nav-link-hover-border-bottom;
       color: $sprk-big-nav-item-active-color;
     }
@@ -269,19 +287,26 @@
 
 /// Adds an active state color and bold
 /// font weight to active big navigation items.
-/// @name .sprk-c-Masthead__big-nav-item--active
-.sprk-c-Masthead__big-nav-item--active > .sprk-c-Masthead__link--big-nav {
+/// @name .sprk-c-Masthead__nav-bar-item--active
+.sprk-c-Masthead__nav-bar-item--active
+  > .sprk-c-Masthead__link--nav-bar
+  .sprk-c-Masthead__big-nav-item--active
+  > .sprk-c-Masthead__link--big-nav {
   font-weight: $sprk-big-nav-link-font-weight;
 }
 
 /// Adds open styles to open big navigation items.
 /// @name .sprk-c-Masthead__big-nav-item--open
+.sprk-c-Masthead__nav-bar-item:focus-within,
+.sprk-c-Masthead__nav-bar-item--open,
+.sprk-c-Masthead__nav-bar-item--active,
 .sprk-c-Masthead__big-nav-item:focus-within,
 .sprk-c-Masthead__big-nav-item--open,
 .sprk-c-Masthead__big-nav-item--active {
   border-bottom: $sprk-big-nav-item-open-border-bottom;
 
-  .sprk-c-Masthead__link--big-nav {
+  .sprk-c-Masthead__link--big-nav,
+  .sprk-c-Masthead__link--nav-bar {
     border-bottom: $sprk-big-nav-link-hover-border-bottom;
   }
 }
@@ -290,6 +315,7 @@
 // that contains the Masthead Accordion
 // Starts below the main content (logo branding, menu)
 .sprk-c-Masthead__narrow-nav,
+.sprk-c-Masthead__nav-collapsible,
 .sprk-c-MastheadMask {
   background-color: $sprk-white;
   height: 100%;
@@ -316,6 +342,10 @@
     // Hide narrow nav on larger views
     display: none;
   }
+}
+
+.sprk-c-Masthead__nav-collapsible--is-collapsed {
+  display: none;
 }
 
 .sprk-c-MastheadMask {
@@ -417,8 +447,13 @@
 // ==================================================================
 // Masthead Accordion
 // ==================================================================
-.sprk-c-MastheadAccordion {
+.sprk-c-MastheadAccordion,
+.sprk-c-MastheadAccordion__summary-content {
   width: 100%;
+}
+
+.sprk-c-MastheadAccordion__summary-content {
+  position: relative;
 }
 
 // Override the dropdown max-width

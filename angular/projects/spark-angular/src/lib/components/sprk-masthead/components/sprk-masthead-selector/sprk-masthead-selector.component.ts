@@ -20,8 +20,6 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
           variant="plain"
           class="
             sprk-c-Masthead__selector
-            sprk-b-Link
-            sprk-b-Link--plain
             sprk-o-Stack
             sprk-o-Stack--split@xxs
             sprk-o-Stack--center-column
@@ -35,7 +33,7 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
             triggerText ? triggerText : screenReaderText || 'Choose One'
           "
         >
-          <span class="sprk-o-Stack__item sprk-o-Stack__item--flex@xxs">{{
+          <span sprkStackItem class="sprk-o-Stack__item--flex@xxs">{{
             triggerText
           }}</span>
           <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
@@ -57,15 +55,15 @@ import { ISprkMastheadSelectorChoice } from '../sprk-masthead-selector/sprk-mast
             href="#"
           >
             <span
-              class="sprk-c-Masthead__selector-dropdown-title sprk-b-TypeBodyTwo sprk-o-Stack__item sprk-o-Stack__item--flex@xxs"
+              sprkStackItem
+              sprkText
+              variant="bodyTwo"
+              class="sprk-c-Masthead__selector-dropdown-title sprk-o-Stack__item--flex@xxs"
               >{{ heading }}</span
             >
             <sprk-icon
               [iconName]="triggerIconName"
-              additionalClasses="
-                sprk-c-Icon--toggle
-                sprk-Stack__item
-              "
+              additionalClasses="sprk-Stack__item sprk-c-Icon--toggle"
             ></sprk-icon>
           </a>
         </div>
@@ -201,7 +199,7 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   analyticsString: string;
   /**
    * Expects an array of
-   * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.interfaces.ts)
+   * [ISprkMastheadSelectorChoice](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-masthead/components/sprk-masthead-selector/sprk-masthead-selector.interfaces.ts)
    *  objects.
    */
   @Input()
@@ -228,23 +226,24 @@ export class SprkMastheadSelectorComponent implements OnChanges {
    * of the choice that was clicked.
    */
   @Output()
-  choiceMade: EventEmitter<string> = new EventEmitter();
+  readonly choiceMade: EventEmitter<string> = new EventEmitter();
 
   /**
    * This event will be emitted
    * when the Masthead Selector is opened.
    */
   @Output()
-  openedEvent: EventEmitter<any> = new EventEmitter();
+  readonly openedEvent: EventEmitter<any> = new EventEmitter();
   /**
    * This event will be emitted
    * when the Masthead Selector is closed.
    */
   @Output()
-  closedEvent: EventEmitter<any> = new EventEmitter();
+  readonly closedEvent: EventEmitter<any> = new EventEmitter();
 
   /**
-   * @ignore
+   * Keeps track of state on whether
+   * the selector is open or not.
    */
   isOpen = false;
   /**
@@ -262,7 +261,8 @@ export class SprkMastheadSelectorComponent implements OnChanges {
   }
 
   /**
-   * @ignore
+   * Updates the open state when the
+   * selector is toggled.
    */
   toggle(event): void {
     event.preventDefault();

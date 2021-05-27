@@ -3,8 +3,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { SprkIconComponent } from '../../sprk-icon/sprk-icon.component';
-import { SprkLinkDirective } from '../../../directives/sprk-link/sprk-link.directive';
+import { SprkIconComponent } from '../../../sprk-icon/sprk-icon.component';
+import { SprkLinkDirective } from '../../../../directives/sprk-link/sprk-link.directive';
 import { SprkMastheadSelectorComponent } from './sprk-masthead-selector.component';
 import { ISprkMastheadSelectorChoice } from './sprk-masthead-selector.interfaces';
 
