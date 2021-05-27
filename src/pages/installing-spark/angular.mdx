@@ -112,12 +112,9 @@ Spark’s styles.
 ## Adding Your First Spark Component
 Adding a Spinner Button can confirm you've installed Spark Angular packages correctly.
 
-This is just one example to implement functionality to get your project started.
+This is just one example to implement functionality and get your project started.
 
-1. In your `app.component.ts` file, do the following:
-- Import `Component` and `HostListener` from `@angular/core`.
-- Create `isAppLoading`, a variable we'll use to track state.
-- Add a `HostListener` that will set `isAppLoading` to `true` on click.
+1. In your `app.component.ts` create a click handler and a variable that track state.
 ``` javascript
 import { Component, HostListener } from '@angular/core';
 
@@ -135,12 +132,12 @@ export class AppComponent {
   }
 }
 ```
-1. In your `app.component.html` file, add a `<button>` element with a `sprkButton` directive.
+This code sample:
+- Imports `Component` and `HostListener` from `@angular/core`.
+- Creates `isAppLoading`, a variable we'll use to track state.
+- Adds a `HostListener` that will set `isAppLoading` to `true` on click.
 
-This `<button>` will have:
-- The `sprkButton` directive.
-- An `isSpinning` input that is determined by the variable `isAppLoading`.
-- Button content that will toggle between the Spark Spinner or Button text. This is determined by the variable `isAppLoading`.
+1. In your `app.component.html` file, add a `<button>` element with a `sprkButton` directive.
 
 ``` html
 <button
@@ -157,7 +154,12 @@ This `<button>` will have:
   </div>
 </button>
 ```
-Rebuild with `npm run start` and you should fine a Button that changes from text to a spinning state on click!
+This `<button>` has:
+- The `sprkButton` directive.
+- An `isSpinning` input that is determined by the variable `isAppLoading`.
+- Button content that will toggle between the Spark Spinner or Button text. This is determined by the variable `isAppLoading`.
+
+Rebuild with `npm run start` and you should find a Spark Button loads a spinner on click!
 
 <div class="sprk-u-Measure">
   <img

@@ -93,14 +93,6 @@ This is just one example to implement functionality to get your project started.
 
 Rewrite `App.js` to into a [class component](https://reactjs.org/docs/react-component.html) and prepare `SprkButton` to render a `SprkSpinner` on click.
 
-The following code sample has:
-- An import of the React package.
-- A reference to your `App.scss` file.
-- An import of `SprkButton` and `SprkSpinner`.
-- State that will handle the status of `isSpinning`, and render the `SprkSpinner` when `true` (for this example, we'll name it `isAppLoading`).
-- `SprkButton` that sets `isAppLoading` to `true` after clicking.
-- Logic inside of `SprkButton` that renders the `SprkSpinner` according to `isAppLoading` state.
-
 ``` javascript
 import React from 'react';
 import './App.scss';
@@ -126,7 +118,15 @@ class App extends React.Component {
 
 export default App;
 ```
-Now, when you click a button, the SprkButton should change from text to a spinning state!
+This code sample has:
+- An import of the React package.
+- A reference to your `App.scss` file.
+- An import of `SprkButton` and `SprkSpinner`.
+- State that will handle the status of `isSpinning`, and render the `SprkSpinner` when `true` (for this example, we'll name it `isAppLoading`).
+- `SprkButton` that sets `isAppLoading` to `true` after clicking.
+- Logic inside of `SprkButton` that renders the `SprkSpinner` according to `isAppLoading` state.
+
+Now, you should find a Spark Button that loads a Spinner on click!
 
 <div class="sprk-u-Measure">
   <img
