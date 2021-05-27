@@ -115,7 +115,7 @@ Adding a Spinner Button can confirm you've installed Spark Angular packages corr
 This is just one example to implement functionality and get your project started.
 
 1. In your `app.component.ts` create a click handler and a variable that track state.
-``` javascript
+``` typescript
 import { Component, HostListener } from '@angular/core';
 
 @Component({
@@ -139,7 +139,7 @@ This code sample:
 
 1. In your `app.component.html` file, add a `<button>` element with a `sprkButton` directive.
 
-``` html
+``` typescript
 <button
   sprkButton
   [isSpinning]="isAppLoading"
