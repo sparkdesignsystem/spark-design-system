@@ -67,7 +67,6 @@ will trigger the \`itemSelectedEvent\`.
   \`aria-selected="true"\`. Spark will apply this attribute automatically.
 - Each selectable list item should have \`role="option"\`.
 
-
 #### Requires Additional Engineering:
 In order to keep the Spark Autocomplete flexible enough to use in a wide
   variety of use cases, some of the interactivity of the component is left
@@ -145,7 +144,7 @@ export const defaultStory = () => ({
         sprkAutocompleteResults
         aria-labelledby="autocomplete-label"
         role="listbox"
-        >
+      >
         <li sprkAutocompleteResult role="option">Apple</li>
         <li sprkAutocompleteResult role="option">Apricot</li>
         <li sprkAutocompleteResult role="option">Avocado</li>
