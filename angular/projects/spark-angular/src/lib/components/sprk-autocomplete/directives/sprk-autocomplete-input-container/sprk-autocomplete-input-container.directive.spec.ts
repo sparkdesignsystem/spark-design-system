@@ -26,7 +26,7 @@ import { SprkAutocompleteInputContainerDirective } from './sprk-autocomplete-inp
       />
     </div>
 
-    <div sprkAutocompleteInputContainer role="custom">
+    <div sprkAutocompleteInputContainer role="custom" ariaHaspopup="custom">
       <input
         id="autocomplete-input"
         name="autocomplete-input"
@@ -102,7 +102,15 @@ describe('Spark Autocomplete Input Container Directive', () => {
     expect(element.getAttribute('aria-labelledby')).toEqual('test-label');
   });
 
+  it('should not add aria-labelledby if no value is supplied', () => {
+    expect(element2.getAttribute('aria-labelledby')).toEqual(null);
+  });
+
   it('should add aria-haspopup set to listbox', () => {
     expect(element.getAttribute('aria-haspopup')).toEqual('listbox');
+  });
+
+  it('should use custom aria-haspopup value if supplied', () => {
+    expect(element2.getAttribute('aria-haspopup')).toEqual('custom');
   });
 });
