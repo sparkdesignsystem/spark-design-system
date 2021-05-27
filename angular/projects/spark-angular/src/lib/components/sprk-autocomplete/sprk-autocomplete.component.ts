@@ -42,7 +42,7 @@ export class SprkAutocompleteComponent
 
   /**
    * This component expects a child element
-   * with the `sprkAutocompleteInputContainer` ref.
+   * with the `sprkAutocompleteInputContainer` attribute.
    */
   @ContentChild(SprkAutocompleteInputContainerDirective, { static: false })
   inputContainer: SprkAutocompleteInputContainerDirective;
