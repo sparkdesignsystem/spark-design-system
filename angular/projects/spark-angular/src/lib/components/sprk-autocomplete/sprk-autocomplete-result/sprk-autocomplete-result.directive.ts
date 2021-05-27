@@ -91,9 +91,9 @@ export class SprkAutocompleteResultDirective {
 
   /**
    * @ignore
-   * Accepts a function to run when an item is clicked.
-   * This should be set automatically by sprk-autocomplete and should
-   * not be set manually by users.
+   * Accepts a function to run when an item is clicked. This should be set
+   * automatically by sprk-autocomplete and should not be set manually by
+   * users, so we include the 'ignore' flag to exclude this from our docs.
    */
   @Output()
   clickedEvent = new EventEmitter<any>();
