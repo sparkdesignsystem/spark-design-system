@@ -8,6 +8,7 @@ import { SprkAutocompleteResultModule } from './sprk-autocomplete-result/sprk-au
 import { SprkInputContainerModule } from '../inputs/sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
     SprkInputContainerModule,
     SprkInputModule,
     SprkFieldErrorModule,
+    SprkLabelModule,
   ],
   declarations: [SprkAutocompleteComponent],
   exports: [
@@ -29,6 +31,7 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
     SprkInputContainerModule,
     SprkInputModule,
     SprkFieldErrorModule,
+    SprkLabelModule,
   ],
 })
 export class SprkAutocompleteModule {}
