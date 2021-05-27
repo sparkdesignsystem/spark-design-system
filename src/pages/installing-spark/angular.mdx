@@ -3,23 +3,20 @@
   order: 4
 ---
 import styleCheck from '../../images/installing-spark/angular/style-check.png';
-import spinnergif from '../../images/installing-spark/angular/angular-spinner.gif';
+import spinnergif from '../../images/installing-spark/html/html-spinner.gif';
 
 # Installing Spark in an Angular Project
 
 This guide will walk you through
-installing and using Spark on an
+installing Spark on an
 existing Angular application.
-For help with setting up the
-necessary development environment, see the
-[Angular CLI Overview](https://angular.io/cli).
 
-By the end of this, you’ll have all the
+By the end of this guide, you'll have
 Spark JavaScript and CSS available
 in your application to start
 building components.
 
-> Note: This covers setting up Spark for
+> This guide covers setting up Spark for
 Angular 7, 8 and 9. Spark doesn’t
 currently support Angular JS.
 
@@ -30,39 +27,29 @@ to the one in the [Angular CLI Overview](https://angular.io/cli)
 - <a href="https://angular.io/guide/router" target="_blank">Angular Routing</a> is installed
 (not required by Angular CLI, but it is required for Spark)
 
-## Schematics
-Spark Angular now supports schematics. If you'd like to install Spark in this way,
-run the following commands from your application's root directory.
-``` bash
- npm install -g @angular/cdk
- ng add @sparkdesignsystem/spark-angular
-```
+For help with setting up the
+necessary development environment, see the
+[Angular CLI Overview](https://angular.io/cli).
 
+Our <a href="https://github.com/sparkdesignsystem/spark-starter-angular/" target="_blank">starter app examples</a> are also available for reference:
+- ['kitchen-sink' branch](https://github.com/sparkdesignsystem/spark-starter-angular/tree/kitchen-sink) (Spark Installed with component examples.)
+- ['without-spark' branch](https://github.com/sparkdesignsystem/spark-starter-angular/tree/kitchen-sink) (All of the prerequisites before Spark Installation.)
 
 ## Installing Spark Packages
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/c5zBjNYrxGA"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-  title="Youtube Player: Installing Spark in an Angular Project"
-></iframe>
+> Spark Angular also supports schematics. If you'd like to install Spark in this way, install Angular CDK if you haven't already (`npm install -g @angular/cdk`), and then run `ng add @sparkdesignsystem/spark-angular`.
 
 1. Start by going to your project
-directory and installing `spark-angular`
-by pasting the following line in a command line application.
+directory and installing `spark-angular`.
 
 ``` bash
 npm install @sparkdesignsystem/spark-angular --save-dev
 ```
 
-2. Edit `app.module.ts` to import the `spark-angular` library
-and also the `BrowserAnimationsModule`, and include
-them in `@NgModule`'s `imports` array. This file can be
-found in `your-app/src/app`.
+2. In your `app.module.ts` file, do the following:
+- Import the `spark-angular` library
+- Import the `BrowserAnimationsModule`.
+- Include both in `@NgModule`'s `imports` array.
 
 ``` typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -91,25 +78,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export class AppModule { }
 ```
 
-3. Next, edit `styles.scss` to `@import` the Spark
-stylesheet. This file can be found in `your-app/src`.
+3. In your `styles.scss` file, `@import` the Spark
+stylesheet.
 
 ``` scss
 @import "node_modules/@sparkdesignsystem/spark-styles/spark.scss"
 ```
 
-> Note: Importing Spark SCSS at the component level can lead to unexpected behavior.
+> We recommend importing Spark Styles globally, because importing at the component level can lead to unexpected behavior.
 
-4. Then, add the `sprk-u-JavaScript` CSS class to the root `<html>` element
-in your application. Usually, the `<html>`
-element is in the `index.html` file.
+4. In the project's `index.html` file, add the `sprk-u-JavaScript` CSS class to the root `<html>` element
+in your application.
 
-5. Back on the command line, build
-and run your new application by running
-`npm run start` and opening `http://localhost:4200/`
-in your web browser. When Angular builds,
-Spark’s styles will be processed and
-bundled into the application.
+5. Build and run the application with
+`npm run start`. When finished, the app will run on `http://localhost:4200/`
+in your web browser.
 
 You can verify that Spark’s
 styles are being included by
@@ -126,76 +109,55 @@ Spark’s styles.
     alt="Screenshot of DOM with Spark Styles"/>
 </div>
 
-## Adding Angular Components
+## Adding Your First Spark Component
+Adding a Spinner Button can confirm you've installed Spark Angular packages correctly.
 
-Now that everything is building,
-let’s add a component to your
-application that will allow us
-to test that both Spark’s styles
-and functionality are working.
-We’ll use the
-[Spinning Button](https://angular.sparkdesignsystem.com/?path=/docs/components-button--spinning)
-component to do this. You can
-find code for all Spark
-components at [angular.sparkdesignsystem.com](https://angular.sparkdesignsystem.com).
+This is just one example to implement functionality to get your project started.
 
-5. Copy the sample code inside `app.component.html`.
+1. In your `app.component.ts` file, do the following:
+- Import `Component` and `HostListener` from `@angular/core`.
+- Create `isAppLoading`, a variable we'll use to track state.
+- Add a `HostListener` that will set `isAppLoading` to `true` on click.
+``` javascript
+import { Component, HostListener } from '@angular/core';
 
-This file can be found in
-`your-app/src/app`.
-You can delete everything in this
-file other than the final line (`<router-outlet></router-outlet>`) .
-
-``` markup
-<button
-  (click)="checkSpinner($event)"
-  sprkButton
->
-  Button
-</button>
-```
-
-You should now see a Spark Button in your
-application! It might look slightly
-cropped, but that’s OK. It’s
-because we don’t yet have
-any layout on the page.
-
-7. Now, let’s add some TypeScript
-to trigger the Spinner
-behavior. Copy this code into
-the `AppComponent` class inside
-`app.component.ts`. This file can
-be found in `your-app/src/app`.
-
-``` typescript
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
 export class AppComponent {
-  submitSpinning = false;
+  isAppLoading: boolean = false;
 
-  checkSpinner(event): void {
-    if (!this.submitSpinning) {
-      setSpinning(event.target, {});
-      this.submitSpinning = true;
-    }
+  @HostListener('click')
+  onClick() {
+    this.isAppLoading = true;
   }
 }
 ```
+1. In your `app.component.html` file, add a `<button>` element with a `sprkButton` directive.
 
-8. Finally, import the `setSpinning`
-utility function from the Spark
-library. This goes at the top
-of your component’s `.ts` file,
-in our case `app.component.ts`.
+This `<button>` will have:
+- The `sprkButton` directive.
+- An `isSpinning` input that is determined by the variable `isAppLoading`.
+- Button content that will toggle between the Spark Spinner or Button text. This is determined by the variable `isAppLoading`.
 
-``` typescript
-import { setSpinning } from '@sparkdesignsystem/spark';
+``` html
+<button
+  sprkButton
+  [isSpinning]="isAppLoading"
+>
+  <div
+    sprkSpinner
+    *ngIf="isAppLoading"
+  >
+  </div>
+  <div *ngIf="!isAppLoading">
+    Start Spinning
+  </div>
+</button>
 ```
-
-9. Head back to your web browser and
-click the Spark Button that you
-added earlier. If everything's
-working correctly, the text
-should be replaced with an animated spinner.
+Rebuild with `npm run start` and you should fine a Button that changes from text to a spinning state on click!
 
 <div class="sprk-u-Measure">
   <img
@@ -205,16 +167,19 @@ should be replaced with an animated spinner.
     alt="A Spark Button Spinner component."/>
 </div>
 
-## You did it!
+> Learn more about Spark Buttons and Spinner functionality in the [Button Storybook documentation](https://angular.sparkdesignsystem.com/?path=/docs/components-button--primary).
 
-You now have a development
-environment set up with Spark
-installed, and you’re ready
-to start building!
-For Spark support,
-[email the Spark team](mailto:sparkdesignsystem@quickenloans.com)
-with any questions and we’ll respond
-as quickly as possible.
+## Finding the code to other Spark Components
+
+1. Go to the [Spark Angular Storybook](https://angular.sparkdesignsystem.com/).
+2. Find the Component you need in the "Components" section.
+3. Navigate to the *Docs* tab. It's typically at the top of screen next to *Canvas*.
+4. Navigate down the page until you find your component variant.
+5. The *Show code* button will toggle a code sample.
+
+> These code samples represent the final *rendered state* of the components. Just like with a Spark Button with a Spinner, some functionality requires additional engineering.
+
+The *Docs* section of each page will give implementation details for each component.
 
 ## Additional Topics
 Check out these guides for more information on setting up Spark:

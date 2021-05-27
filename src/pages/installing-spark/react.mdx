@@ -19,9 +19,9 @@ By the end of this guide, you’ll have Spark set up on your project and have ac
 
 -----------
 
-Our <a href="https://github.com/sparkdesignsystem/spark-starter-react/" target="_blank">Starter Github Repositories</a> are available for reference:
+Our <a href="https://github.com/sparkdesignsystem/spark-starter-react/" target="_blank">starter app examples</a> are available for reference:
 - ['kitchen-sink' branch](https://github.com/sparkdesignsystem/spark-starter-react/tree/kitchen-sink) (Spark Installed with component examples.)
-- ['without-spark' branch](https://github.com/sparkdesignsystem/spark-starter-react/tree/kitchen-sink) (all of the prerequisites before Spark Installation.)
+- ['without-spark' branch](https://github.com/sparkdesignsystem/spark-starter-react/tree/kitchen-sink) (All of the prerequisites before Spark Installation.)
 
 
 ## Installing Sass
@@ -64,8 +64,7 @@ site, along with the original React CSS:
 ## Install Spark Packages
 Now we’ll use Sass to import all the Spark CSS.
 
-1. Download the required packages with this command. It contains all
-of the HTML, JavaScript, and CSS needed to run Spark React components.
+1. Install the Spark React package. It contains all of the Spark React components and Sass styles needed to build with spark.
 ```
 npm install @sparkdesignsystem/spark-react --save-dev
 ```
@@ -88,7 +87,9 @@ If Spark React is installed correctly, you should see these CSS rules
 listed in your page’s code.
 
 ## Adding Your First Spark Component
-Adding a Spinner Button can confirm you've installed Spark React packages correctly. It will also get you started with some functionality.
+Adding a Spinner Button can confirm you've installed Spark React packages correctly.
+
+This is just one example to implement functionality to get your project started.
 
 Rewrite `App.js` to into a [class component](https://reactjs.org/docs/react-component.html) and prepare `SprkButton` to render a `SprkSpinner` on click.
 
@@ -96,7 +97,7 @@ The following code sample has:
 - An import of the React package.
 - A reference to your `App.scss` file.
 - An import of `SprkButton` and `SprkSpinner`.
-- State that will handle the status of `isSpinning` and render the `SprkSpinner` when `true` (for this example, we'll name it `isAppLoading`).
+- State that will handle the status of `isSpinning`, and render the `SprkSpinner` when `true` (for this example, we'll name it `isAppLoading`).
 - `SprkButton` that sets `isAppLoading` to `true` after clicking.
 - Logic inside of `SprkButton` that renders the `SprkSpinner` according to `isAppLoading` state.
 
@@ -113,16 +114,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <SprkButton
-          idString="button-9"
-          analyticsString="button-9-analytics"
-          isSpinning={this.state.isAppLoading}
-          onClick={() => { this.setState({ isAppLoading: true }) }}
-        >
-          {this.state.isAppLoading ? <SprkSpinner /> :'Start Spinning'}
-        </SprkButton>
-      </div>
+      <SprkButton
+        isSpinning={this.state.isAppLoading}
+        onClick={() => { this.setState({ isAppLoading: true }) }}
+      >
+        {this.state.isAppLoading ? <SprkSpinner /> :'Start Spinning'}
+      </SprkButton>
     );
   }
 }
@@ -144,7 +141,7 @@ Now, when you click a button, the SprkButton should change from text to a spinni
 
 ## Finding the code to other Spark Components
 
-1. Go to the [Spark React Storybook](https://react.sparkdesignsystem.com/)
+1. Go to the [Spark React Storybook](https://react.sparkdesignsystem.com/).
 2. Find the Component you need in the "Components" section.
 3. Navigate to the *Docs* tab. It's typically at the top of screen next to *Canvas*.
 4. Navigate down the page until you find your component variant.
