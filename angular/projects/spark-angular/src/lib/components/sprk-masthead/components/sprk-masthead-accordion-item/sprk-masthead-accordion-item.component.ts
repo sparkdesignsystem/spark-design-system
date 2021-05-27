@@ -1,14 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import * as _ from 'lodash';
-import { toggleAnimations } from '../../sprk-toggle/sprk-toggle-animations';
+import { uniqueId } from 'lodash';
+import { toggleAnimations } from '../../../sprk-toggle/sprk-toggle-animations';
 
 @Component({
   selector: 'sprk-masthead-accordion-item',
   template: `
     <li [ngClass]="getClasses()">
-      <div
-        class="sprk-u-Position--relative sprk-o-Stack__item sprk-u-Width-100"
-      >
+      <div sprkStackItem class="sprk-c-MastheadAccordion__summary-content">
         <button
           [attr.aria-controls]="accordion_controls_id"
           class="sprk-c-MastheadAccordion__summary"
@@ -16,21 +14,22 @@ import { toggleAnimations } from '../../sprk-toggle/sprk-toggle-animations';
           [attr.data-id]="idString"
           (click)="toggleAccordion($event)"
           [attr.aria-expanded]="isOpen"
+          type="button"
         >
           <span [ngClass]="getHeadingClasses()">
             <sprk-icon
-              [iconType]="leadingIcon"
+              [iconName]="leadingIcon"
               additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs"
               *ngIf="leadingIcon"
             ></sprk-icon>
-            {{ title }}
+            {{ heading }}
           </span>
 
           <sprk-icon
             additionalClasses="sprk-c-MastheadAccordion__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color sprk-c-Icon--toggle {{
               iconStateClass
             }}"
-            [iconType]="currentIconType"
+            [iconName]="currentIconType"
           ></sprk-icon>
         </button>
       </div>
@@ -43,8 +42,12 @@ import { toggleAnimations } from '../../sprk-toggle/sprk-toggle-animations';
   animations: [toggleAnimations.toggleContent],
 })
 export class SprkMastheadAccordionItemComponent implements OnInit {
+  /**
+   * The value supplied will be used
+   * as the heading for the item.
+   */
   @Input()
-  title: string;
+  heading: string;
   /**
    * The value supplied will be assigned to the
    * `data-analytics` attribute on the component.
@@ -84,7 +87,7 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
   @Input()
   isOpen = false;
   /**
-   * If `true`, the Masthead ccordion item
+   * If `true`, the Masthead accordion item
    * will be active when it is rendered.
    */
   @Input()
@@ -111,7 +114,7 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
   /**
    * @ignore
    */
-  componentID = _.uniqueId();
+  componentID = uniqueId();
   /**
    * @ignore
    */
@@ -130,7 +133,8 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
   public animState = 'closed';
 
   /**
-   * @ignore
+   * This applies the correct styles to the item
+   * when it is open or closed.
    */
   accordionState(): void {
     this.isOpen === false
@@ -146,7 +150,8 @@ export class SprkMastheadAccordionItemComponent implements OnInit {
       : (this.iconStateClass = 'sprk-c-Icon--open');
   }
   /**
-   * @ignore
+   * Updates the isOpen state when
+   * the item is toggled.
    */
   toggleAccordion(event): void {
     event.preventDefault();
