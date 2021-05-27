@@ -340,6 +340,113 @@
         "themable": true
       }
     },
+    "inline-light": {
+      "color": {
+        "comment": "The color value of inline Links on a dark background.",
+        "value": "{white.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "hover": {
+        "cursor": {
+          "comment": "The cursor of inline Links on a dark background on hover.",
+          "value": "pointer",
+          "file": "settings",
+          "themable": true
+        },
+        "font-weight": {
+          "comment": "The font weight of inline Links on a dark background on hover.",
+          "value": "{font.weight.body.two.value}",
+          "file": "settings",
+          "themable": true
+        },
+        "color": {
+          "comment": "The color of inline Links on a dark background on hover.",
+          "value": "{wisteria.value}",
+          "attributes": {
+            "category": "color"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "underline": {
+          "color": {
+            "comment": "The underline color value of inline Links on a dark background on hover.",
+            "value": "{wisteria.value}",
+            "attributes": {
+              "category": "color"
+            },
+            "file": "settings",
+            "themable": true
+          },
+          "width": {
+            "comment": "The underline width value inline Links on a dark background on hover.",
+            "value": "0.125rem",
+            "attributes": {
+              "category": "size"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        },
+        "border-bottom": {
+          "comment": "The underline style of inline Links on a dark background on hover.",
+          "value": "{link.inline-light.hover.underline.width.value} {link.border.bottom-style.value} {link.inline-light.hover.underline.color.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "underline": {
+        "color": {
+          "comment": "The underline color value of inline Links on a dark background",
+          "value": "{white.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "width": {
+          "comment": "The underline width value inline Links on a dark background.",
+          "value": "0.125rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
+      "font-weight": {
+        "comment": "The font weight of inline Links on a dark background.",
+        "value": "{font.weight.body.two.value}",
+        "file": "settings",
+        "themable": true
+      },
+      "border-bottom": {
+        "comment": "The underline style of inline Links on a dark background.",
+        "value": "{link.inline-light.underline.width.value} {link.border.bottom-style.value} {link.inline-light.underline.color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
+      "visited-border-bottom": {
+        "comment": "The underline style of visited inline Links on a dark background.",
+        "value": "{link.light.underline.width.value} {link.border.bottom-style.value} {link.light.underline.color.value}",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      }
+    },
     "plain": {
       "border": {
         "comment": "The border settings for Plain Links.",

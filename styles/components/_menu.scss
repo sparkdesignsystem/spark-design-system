@@ -33,16 +33,19 @@
 // an "X" when open.
 // Not configurable because the "X" needs to be
 // exact.
-.sprk-c-Menu__icon--open .sprk-c-Menu__line--one {
+.sprk-c-Menu__icon--open .sprk-c-Menu__line--one,
+.sprk-c-Menu__icon--is-open .sprk-c-Menu__line--one {
   transform: rotate(45deg);
 }
 
-.sprk-c-Menu__icon--open .sprk-c-Menu__line--two {
+.sprk-c-Menu__icon--open .sprk-c-Menu__line--two,
+.sprk-c-Menu__icon--is-open .sprk-c-Menu__line--two {
   opacity: 1;
   transform-origin: 50% 50%;
   transform: scale(0.01);
 }
 
-.sprk-c-Menu__icon--open .sprk-c-Menu__line--three {
+.sprk-c-Menu__icon--open .sprk-c-Menu__line--three,
+.sprk-c-Menu__icon--is-open .sprk-c-Menu__line--three {
   transform: rotate(-45deg);
 }
