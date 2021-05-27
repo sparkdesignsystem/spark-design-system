@@ -106,6 +106,17 @@ describe('SprkTextarea:', () => {
     expect(formatterFn.mock.calls.length).toBe(1);
   });
 
+  it('should not run the formatter if value has not changed', () => {
+    const formatterFn = jest.fn(() => true);
+    const wrapper = mount(
+      <SprkTextarea formatter={formatterFn} value="test" />,
+    );
+    const textarea = wrapper.find('textarea');
+    textarea.simulate('change', { target: { value: 'test' } });
+    // Formatter runs on render
+    expect(formatterFn.mock.calls.length).toBe(1);
+  });
+
   it('should not run the formatter if the field is invalid', () => {
     const formatterFnInvalid = jest.fn(() => true);
     mount(<SprkTextarea formatter={formatterFnInvalid} isValid={false} />);
