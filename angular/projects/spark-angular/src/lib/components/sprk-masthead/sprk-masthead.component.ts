@@ -3,361 +3,73 @@ import {
   HostListener,
   Input,
   Renderer2,
-  AfterContentInit,
+  ContentChild,
+  ElementRef,
+  AfterViewInit,
+  ViewChild,
 } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
-import * as _ from 'lodash';
-import {
-  ISprkNarrowNavLink,
-  ISprkNarrowSelector,
-  ISprkBigNavLink,
-} from './sprk-masthead.interfaces';
+import { throttle } from 'lodash';
+import { SprkMastheadNavCollapsibleDirective } from './directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
+import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-branding/sprk-masthead-branding.directive';
+import { isElementVisible } from '../../utilities/isElementVisible/isElementVisible';
 
 @Component({
   selector: 'sprk-masthead',
   template: `
     <header [ngClass]="getClasses()" role="banner" [attr.data-id]="idString">
-      <div
-        class="sprk-c-Masthead__content sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--split@xxs"
+      <sprk-stack
+        splitAt="extraTiny"
+        isStackItem="true"
+        additionalClasses="sprk-c-Masthead__content"
+        *ngIf="branding"
       >
         <div
-          class="sprk-c-Masthead__menu sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
+          sprkStackItem
+          *ngIf="collapsibleNavDirective"
+          #mastheadMenuContainer
+          class="sprk-c-Masthead__menu sprk-o-Stack__item--center-column@xxs"
         >
-          <button
-            class="sprk-c-Menu"
-            type="button"
-            [attr.aria-expanded]="isNarrowNavOpen ? true : false"
-            (click)="toggleNarrowNav($event)"
-            [attr.aria-controls]="narrowNavId"
-          >
-            <span class="sprk-u-ScreenReaderText">Toggle Navigation</span>
-            <svg
-              [ngClass]="{
-                'sprk-c-Icon': true,
-                'sprk-c-Icon--xl': true,
-                'sprk-c-Menu__icon': true,
-                'sprk-c-Menu__icon--open': isNarrowNavOpen
-              }"
-              aria-hidden="true"
-              viewBox="0 0 64 64"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g>
-                <path
-                  class="sprk-c-Menu__line sprk-c-Menu__line--two"
-                  d="m8 32h48"
-                />
-                <path
-                  class="sprk-c-Menu__line sprk-c-Menu__line--one"
-                  d="m8 18.68h48"
-                />
-                <path
-                  class="sprk-c-Menu__line sprk-c-Menu__line--three"
-                  d="m8 45.32h48"
-                />
-              </g>
-            </svg>
-          </button>
+          <sprk-masthead-nav-collapsible-button
+            [collapsibleNavId]="collapsibleNavDirective.id"
+            [isOpen]="isCollapsibleNavOpen"
+            [screenReaderText]="collapsibleNavButtonScreenReaderText"
+            (collapsibleNavButtonEvent)="toggleCollapsibleNav($event)"
+          ></sprk-masthead-nav-collapsible-button>
         </div>
 
-        <div
-          class="sprk-c-Masthead__branding sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
-        >
-          <a
-            sprkLink
-            *ngIf="!logoRouterLink"
-            [attr.href]="logoHref"
-            variant="unstyled"
-          >
-            <ng-content select="[logo-slot]"></ng-content>
-            <span class="sprk-u-ScreenReaderText">{{
-              logoLinkScreenReaderText
-            }}</span>
-          </a>
-          <a
-            sprkLink
-            *ngIf="logoRouterLink"
-            [routerLink]="logoRouterLink"
-            variant="unstyled"
-          >
-            <ng-content select="[logo-slot-router]"></ng-content>
-            <span class="sprk-u-ScreenReaderText">{{
-              logoLinkScreenReaderText
-            }}</span>
-          </a>
-        </div>
-
-        <div
-          class="sprk-c-Masthead__nav-item sprk-o-Stack__item sprk-o-Stack__item--center-column@xxs"
-        >
-          <ng-content select="[navItem-slot]"></ng-content>
-        </div>
-        <nav
-          class="
-          sprk-c-Masthead__little-nav
-          sprk-o-Stack__item
-          sprk-o-Stack__item--flex@xxs
-          sprk-o-Stack
-          sprk-o-Stack--misc-a
-          sprk-o-Stack--split@xxs
-          sprk-o-Stack--end-row"
-          role="navigation"
-        >
-          <ng-content select="[little-nav-slot]"></ng-content>
-
-          <ng-content select="[utility-slot]"></ng-content>
-        </nav>
-      </div>
-
-      <div class="sprk-o-Stack__item">
-        <nav
-          class="sprk-c-Masthead__big-nav"
-          role="navigation"
-          [attr.data-id]="idString"
-          *ngIf="bigNavLinks"
-        >
-          <ul [ngClass]="getSecondaryNavClasses()">
-            <li
-              *ngFor="let link of bigNavLinks"
-              [ngClass]="{
-                'sprk-c-Masthead__big-nav-item': true,
-                'sprk-o-Stack__item': true,
-                'sprk-c-Masthead__big-nav-item--open':
-                  link.focused && link.subNav
-              }"
-              routerLinkActive="sprk-c-Masthead__big-nav-item--active"
-              [attr.aria-haspopup]="link.subNav ? 'true' : null"
-            >
-              <div *ngIf="link.subNav">
-                <sprk-dropdown
-                  [choices]="link.subNav"
-                  triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                  additionalClasses="sprk-u-TextAlign--left"
-                  triggerIconName="chevron-down"
-                  [analyticsString]="link.analyticsString"
-                  [triggerText]="link.text"
-                ></sprk-dropdown>
-              </div>
-              <div *ngIf="!link.subNav">
-                <a
-                  *ngIf="!link.routerLink"
-                  sprkLink
-                  variant="simple"
-                  [analyticsString]="link.analyticsString"
-                  class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                  [attr.href]="link.href"
-                >
-                  {{ link.text }}
-                </a>
-                <a
-                  *ngIf="link.routerLink"
-                  sprkLink
-                  variant="simple"
-                  [analyticsString]="link.analyticsString"
-                  class="sprk-c-Masthead__link sprk-c-Masthead__link--big-nav"
-                  [routerLink]="link.routerLink"
-                >
-                  {{ link.text }}
-                </a>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <nav
-        *ngIf="isNarrowNavOpen"
-        class="sprk-c-Masthead__narrow-nav"
-        role="navigation"
-        [id]="narrowNavId"
-      >
-        <sprk-masthead-selector
-          *ngIf="narrowSelector"
-          [triggerText]="narrowSelector['trigger'].text"
-          heading="Choose One"
-          triggerIconName="chevron-down"
-          [choices]="narrowSelector['choices']"
-          isFlush="true"
-        >
-          <div
-            *ngIf="narrowSelector['footer']"
-            class="sprk-c-Masthead__selector-footer"
-            sprkMastheadSelectorFooter
-          >
-            <a
-              *ngIf="!narrowSelector['footer'].routerLink"
-              sprkLink
-              variant="unstyled"
-              [analyticsString]="narrowSelector['footer'].analyticsString"
-              [attr.href]="narrowSelector['footer'].href"
-              class="sprk-c-Button sprk-c-Button--secondary"
-            >
-              {{ narrowSelector['footer'].text }}
-            </a>
-            <a
-              *ngIf="narrowSelector['footer'].routerLink"
-              sprkLink
-              variant="unstyled"
-              [analyticsString]="narrowSelector['footer'].analyticsString"
-              [routerLink]="narrowSelector['footer'].routerLink"
-              class="sprk-c-Button sprk-c-Button--secondary"
-            >
-              {{ narrowSelector['footer'].text }}
-            </a>
-          </div>
-        </sprk-masthead-selector>
-
-        <sprk-masthead-accordion [additionalClasses]="getNarrowNavClasses()">
-          <div *ngFor="let narrowLink of narrowNavLinks">
-            <div *ngIf="narrowLink.subNav">
-              <sprk-masthead-accordion-item
-                [leadingIcon]="narrowLink.leadingIcon"
-                [isActive]="narrowLink.active"
-                [title]="narrowLink.text"
-              >
-                <ul
-                  class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
-                >
-                  <li
-                    class="sprk-c-MastheadAccordion__item"
-                    *ngFor="let subNavLink of narrowLink.subNav"
-                  >
-                    <a
-                      *ngIf="!subNavLink.routerLink"
-                      sprkLink
-                      variant="unstyled"
-                      class="sprk-c-MastheadAccordion__summary"
-                      [attr.href]="subNavLink.href"
-                      [analyticsString]="subNavLink.analyticsString"
-                    >
-                      <sprk-icon
-                        [iconType]="subNavLink.leadingIcon"
-                        additionalClasses="
-                          sprk-c-Icon--filled-current-color
-                          sprk-c-Icon--stroke-current-color
-                          sprk-c-Icon--xl
-                          sprk-u-mrs
-                        "
-                        *ngIf="subNavLink.leadingIcon"
-                      ></sprk-icon>
-                      {{ subNavLink.text }}
-                    </a>
-                    <a
-                      *ngIf="subNavLink.routerLink"
-                      sprkLink
-                      variant="unstyled"
-                      class="sprk-c-MastheadAccordion__summary"
-                      [routerLink]="subNavLink.routerLink"
-                      [analyticsString]="subNavLink.analyticsString"
-                    >
-                      <sprk-icon
-                        [iconType]="subNavLink.leadingIcon"
-                        additionalClasses="
-                          sprk-c-Icon--filled-current-color
-                          sprk-c-Icon--stroke-current-color
-                          sprk-c-Icon--xl
-                          sprk-u-mrs
-                        "
-                        *ngIf="subNavLink.leadingIcon"
-                      ></sprk-icon>
-                      {{ subNavLink.text }}
-                    </a>
-                  </li>
-                </ul>
-              </sprk-masthead-accordion-item>
-            </div>
-            <div *ngIf="!narrowLink.subNav">
-              <li
-                [ngClass]="{
-                  'sprk-c-MastheadAccordion__item': true,
-                  'sprk-c-MastheadAccordion__item--active': narrowLink.active
-                }"
-              >
-                <a
-                  *ngIf="!narrowLink.routerLink"
-                  sprkLink
-                  variant="unstyled"
-                  class="sprk-c-MastheadAccordion__summary"
-                  [attr.href]="narrowLink.href"
-                  [analyticsString]="narrowLink.analyticsString"
-                >
-                  <span class="sprk-c-MastheadAccordion__heading">
-                    <sprk-icon
-                      [iconType]="narrowLink.leadingIcon"
-                      additionalClasses="
-                        sprk-c-Icon--filled-current-color
-                        sprk-c-Icon--stroke-current-color
-                        sprk-c-Icon--xl
-                        sprk-u-mrs
-                      "
-                      *ngIf="narrowLink.leadingIcon"
-                    ></sprk-icon>
-                    {{ narrowLink.text }}
-                  </span>
-                </a>
-                <a
-                  *ngIf="narrowLink.routerLink"
-                  sprkLink
-                  variant="unstyled"
-                  class="sprk-c-MastheadAccordion__summary"
-                  [routerLink]="narrowLink.routerLink"
-                  [analyticsString]="narrowLink.analyticsString"
-                >
-                  <span class="sprk-c-MastheadAccordion__heading">
-                    <sprk-icon
-                      [iconType]="narrowLink.leadingIcon"
-                      additionalClasses="
-                        sprk-c-Icon--filled-current-color
-                        sprk-c-Icon--stroke-current-color
-                        sprk-c-Icon--xl
-                        sprk-u-mrs
-                      "
-                      *ngIf="narrowLink.leadingIcon"
-                    ></sprk-icon>
-                    {{ narrowLink.text }}
-                  </span>
-                </a>
-              </li>
-            </div>
-          </div>
-        </sprk-masthead-accordion>
-        <ng-content select="[narrowNavFooter]"></ng-content>
-      </nav>
+        <ng-content select="[sprkMastheadBranding]"></ng-content>
+        <ng-content select="[sprkMastheadNavItem]"></ng-content>
+        <ng-content select="[sprkMastheadNavItems]"></ng-content>
+      </sprk-stack>
+      <ng-content></ng-content>
     </header>
   `,
 })
-export class SprkMastheadComponent implements AfterContentInit {
+export class SprkMastheadComponent implements AfterViewInit {
   /**
    * @ignore
    */
   constructor(private renderer: Renderer2, router: Router) {
     router.events.subscribe((event: Event) => {
-      if (event instanceof NavigationEnd) {
-        this.closeNarrowNav();
+      /**
+       * If page is changed by the router
+       * and they have a collapsibleNav
+       * we want to make sure it is closed
+       * when the new page loads if it is open.
+       */
+      if (!this.collapsibleNavDirective) {
+        return;
+      }
+      if (
+        event instanceof NavigationEnd &&
+        !this.collapsibleNavDirective.isCollapsed
+      ) {
+        this.closeCollapsibleNav();
       }
     });
   }
 
-  /**
-   * The `href` value of the logo.
-   */
-  @Input()
-  logoHref = '/';
-  /**
-   * The `routerLink` value of the logo. Use this to
-   * have a routerLink instead of a standard link for the logo.
-   * Requires use of `logo-slot-router`
-   * on the logo element.
-   */
-  @Input()
-  logoRouterLink;
-  /**
-   * The value supplied will be used as
-   * screen reader text that is visually hidden
-   * for the link that wraps the logo.
-   */
-  @Input()
-  logoLinkScreenReaderText = 'Go to the homepage';
   /**
    * Expects a space separated string
    * of classes to be added to the
@@ -365,35 +77,17 @@ export class SprkMastheadComponent implements AfterContentInit {
    */
   @Input()
   additionalClasses: string;
+
   /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * big navigation link container.
+   * The value supplied will be used
+   * as the screen reader text for the
+   * collapsible nav button. If none is
+   * supplied then a default of
+   * \"Toggle Navigation\" is set.
    */
   @Input()
-  additionalBigNavClasses: string;
-  /**
-   * Expects a space separated string
-   * of classes to be added to the
-   * narrow navigation container.
-   */
-  @Input()
-  additionalNarrowNavClasses: string;
-  /**
-   * Expects an array of
-   * [ISprkNarrowNavLink](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.interfaces.ts)
-   *  to be
-   * represented in the narrow nav element
-   * of the Masthead component.
-   */
-  @Input()
-  narrowNavLinks: ISprkNarrowNavLink[];
-  /**
-   * Represents the initial state of the
-   * narrow nav element of the Masthead component.
-   */
-  @Input()
-  isNarrowNavOpen = false;
+  collapsibleNavButtonScreenReaderText = 'Toggle Navigation';
+
   /**
    * The value supplied will be assigned
    * to the `data-id` attribute on the
@@ -404,180 +98,178 @@ export class SprkMastheadComponent implements AfterContentInit {
    */
   @Input()
   idString: string;
-  /**
-   * Expects an array of
-   * [ISprkBigNavLink](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.interfaces.ts)
-   *  to be
-   * used to create the Big Navigation of
-   * the Masthead component.
-   */
-  @Input()
-  bigNavLinks: ISprkBigNavLink[];
-  /**
-   * Expects a [ISprkNarrowSelector](https://github.com/sparkdesignsystem/spark-design-system/blob/main/angular/projects/spark-angular/src/lib/components/sprk-masthead/sprk-masthead.interfaces.ts)
-   *  object that
-   * represents dropdown choices inside the dropdown
-   * rendered in the Narrow Navigation.
-   */
-  @Input()
-  narrowSelector: ISprkNarrowSelector;
-  /**
-   * A string that is used to set the `id` on the narrow nav
-   * and the `aria-controls` for the menu trigger button.
-   */
-  @Input()
-  narrowNavId = _.uniqueId(`sprk_masthead_narrow_nav_`);
+
+  @ContentChild(SprkMastheadNavCollapsibleDirective, {
+    static: false,
+  })
+  collapsibleNavDirective: SprkMastheadNavCollapsibleDirective;
+
+  @ViewChild('mastheadMenuContainer', { static: false })
+  mastheadMenuContainer: ElementRef;
+
+  @ContentChild(SprkMastheadBrandingDirective, {
+    static: false,
+    read: ElementRef,
+  })
+  branding: ElementRef;
 
   /**
-   * @ignore
+   * Keeps state of if the page has been scrolled.
    */
-  iconType = 'chevron-down';
+  isPageScrolled = false;
   /**
-   * @ignore
+   * Keeps state of if the Masthead is on a narrow viewport.
    */
-  componentID = _.uniqueId();
+  isNarrowViewport = false;
   /**
-   * @ignore
+   * Keeps state of the scroll direction in order to apply
+   * CSS classes or not.
    */
-  controls_id = `sprk-narrow-navigation-item__${this.componentID}`;
+  currentScrollDirection = 'up';
   /**
-   * @ignore
+   * Keeps state of if the Masthead is hidden in order to apply
+   * CSS classes or not.
    */
-  isScrolled = false;
+  isMastheadHidden = false;
   /**
-   * @ignore
+   * Keeps state of the viewport on resize.
    */
-  isNarrowLayout = false;
+  isNarrowViewportOnResize = false;
   /**
-   * @ignore
+   * Keeps state of the scroll position in
+   * order to apply CSS classes or not.
    */
-  scrollDirection = 'up';
-  /**
-   * @ignore
-   */
-  isHidden = false;
-  /**
-   * @ignore
-   */
-  isNarrowOnResize = false;
-  /**
-   * @ignore
-   */
-  scrollPosition = 0;
-  /**
-   * @ignore
-   */
-  throttledCheckScrollDirection = _.throttle(this.checkScrollDirection, 500);
-  /**
-   * @ignore
-   */
-  throttledUpdateLayoutState = _.throttle(this.updateLayoutState, 500);
+  currentScrollPosition = 0;
 
   /**
-   * @ignore
-   * Closes the narrow navigation menu
-   * if it is left open when
-   * the viewport is expanded.
+   * Represents the initial state of the
+   * collapsible nav of the Masthead component.
    */
-  @HostListener('window:orientationchange')
-  handleResizeEvent() {
-    this.closeNarrowNav();
-  }
+  isCollapsibleNavOpen = false;
+  /**
+   * Throttles the updateScrollDirection function to prevent
+   * it from impacting performance.
+   */
+  throttledUpdateScrollDirection = throttle(this.updateScrollDirection, 500);
+  /**
+   * Throttles the updateLayoutState function to prevent
+   * it from impacting performance.
+   */
+  throttledUpdateLayoutState = throttle(this.updateLayoutState, 500);
 
   /**
-   * @ignore
+   * Updates the scroll direction when the page is scrolled.
    */
   @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
-    window.scrollY >= 10 ? (this.isScrolled = true) : (this.isScrolled = false);
-    if (this.isNarrowLayout) {
-      this.throttledCheckScrollDirection();
+    window.scrollY >= 10
+      ? (this.isPageScrolled = true)
+      : (this.isPageScrolled = false);
+    this.throttledUpdateScrollDirection();
+  }
+
+  /**
+   * Closes the collapsible navigation menu
+   * if it is left open when
+   * the viewport orientation changes.
+   */
+  @HostListener('window:orientationchange')
+  handleResizeEvent() {
+    if (this.collapsibleNavDirective) {
+      this.closeCollapsibleNav();
     }
   }
 
   /**
-   * @ignore
-   * Handles when viewport size changes to
-   * large while narrow nav is hidden.
+   * When page is resized
+   * we want to update the internal state to close
+   * the collapsible nav if needed.
    */
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
-    this.isNarrowOnResize = this.isElementVisible('.sprk-c-Masthead__menu');
+    if (!this.collapsibleNavDirective) {
+      return;
+    }
+    // Update internal layout state
+    this.isNarrowViewportOnResize = isElementVisible(
+      this.mastheadMenuContainer,
+    );
     this.throttledUpdateLayoutState();
   }
 
   /**
-   * @ignore
+   * If the viewport size has changed then update
+   * the isNarrowViewport state with true if
+   * it is now a narrow viewport or false is it is
+   * now a large viewport. If it is now a large viewport,
+   * we want to make sure the Masthead is not hidden
+   * and that we close the collapsible nav if it was open.
    */
   updateLayoutState() {
-    if (this.isNarrowLayout !== this.isNarrowOnResize) {
-      this.isNarrowLayout = this.isNarrowOnResize;
+    // If the viewport didn't change then do not do anything
+    if (this.isNarrowViewport === this.isNarrowViewportOnResize) {
+      return;
+    }
+    // Update internal state to new viewport state on resize
+    this.isNarrowViewport = this.isNarrowViewportOnResize;
+    this.isMastheadHidden = false;
+    this.closeCollapsibleNav();
+  }
 
-      // If is not narrow on resize update, make sure it's visible
-      if (!this.isNarrowLayout) {
-        this.isHidden = false;
-      }
+  /**
+   * When the view initializes we set internal state
+   * for if the viewport is narrow or not.
+   */
+  ngAfterViewInit() {
+    // We say that it is a narrow viewport if
+    // the collapisble nav button style is not set to display: none
+    this.isNarrowViewport = isElementVisible(this.mastheadMenuContainer);
+    if (this.collapsibleNavDirective) {
+      this.collapsibleNavDirective.isCollapsed
+        ? (this.isCollapsibleNavOpen = false)
+        : (this.isCollapsibleNavOpen = true);
     }
   }
 
   /**
-   * @ignore
+   * @returns 'up' || 'down'
+   * This returns whether or not
+   * there was an up or down scrolling
+   * action.
    */
-  ngAfterContentInit() {
-    this.isNarrowLayout = this.isElementVisible('.sprk-c-Masthead__menu');
-  }
-
-  /**
-   * @ignore
-   */
-  isElementVisible(selector) {
+  getVerticalScrollDirection(): string {
     if (typeof window === 'undefined') {
       return;
     }
-    const element = document.querySelector(selector);
-    if (!element) {
+    const newScrollPos = window.scrollY;
+    if (newScrollPos < 0) {
       return;
     }
-    const elementDisplayValue = window.getComputedStyle(element).display;
-    const elementVisibilityValue = window.getComputedStyle(element).visibility;
-    const elementIsVisible =
-      elementDisplayValue === 'none' || elementVisibilityValue === 'hidden'
-        ? false
-        : true;
-    return elementIsVisible;
+    const diff = newScrollPos - this.currentScrollPosition;
+    const direction = diff > 0 ? 'down' : 'up';
+    this.currentScrollPosition = newScrollPos;
+    return direction;
   }
 
   /**
-   * @ignore
+   * This gets the direction of the scroll that occurred last
+   * and updates the `isMastheadHidden` tracker value. If the user
+   * scrolled down, we update `isMastheadHidden` to `true` (hide the Masthead).
+   * If the scroll direction is up, we update `isMastheadHidden` to `false` (show the Masthead).
    */
-  scrollYDirection() {
-    if (typeof window !== 'undefined') {
-      const newScrollPos = window.scrollY;
-      if (newScrollPos < 0) {
-        return;
-      }
-      const diff = newScrollPos - this.scrollPosition;
-      const direction = diff > 0 ? 'down' : 'up';
-      this.scrollPosition = newScrollPos;
-      return direction;
+  updateScrollDirection(): void {
+    const newlyScrolledDirection = this.getVerticalScrollDirection();
+    if (this.currentScrollDirection !== newlyScrolledDirection) {
+      this.currentScrollDirection = newlyScrolledDirection;
+      this.currentScrollDirection === 'down'
+        ? (this.isMastheadHidden = true)
+        : (this.isMastheadHidden = false);
     }
   }
 
   /**
-   * @ignore
-   */
-  checkScrollDirection() {
-    const newDirection = this.scrollYDirection();
-    if (this.scrollDirection !== newDirection) {
-      this.scrollDirection = newDirection;
-      this.scrollDirection === 'down'
-        ? (this.isHidden = true)
-        : (this.isHidden = false);
-    }
-  }
-
-  /**
-   * @ignore
+   * Gets any additional classes for the main Masthead element
+   * and sets the default classes.
    */
   getClasses(): string {
     const classArray: string[] = ['sprk-c-Masthead', 'sprk-o-Stack'];
@@ -588,75 +280,49 @@ export class SprkMastheadComponent implements AfterContentInit {
       });
     }
 
-    if (this.isNarrowNavOpen) {
-      classArray.push('sprk-c-Masthead--open');
+    if (
+      this.collapsibleNavDirective &&
+      !this.collapsibleNavDirective.isCollapsed &&
+      this.isNarrowViewport
+    ) {
+      classArray.push('sprk-c-Masthead--is-open');
     }
 
-    if (this.isScrolled) {
-      classArray.push('sprk-c-Masthead--scroll');
+    if (this.isPageScrolled) {
+      classArray.push('sprk-c-Masthead--is-scrolled');
     }
 
-    if (this.isHidden) {
-      classArray.push('sprk-c-Masthead--hidden');
-    }
-
-    return classArray.join(' ');
-  }
-
-  /**
-   * @ignore
-   */
-  getNarrowNavClasses(): string {
-    const classArray: string[] = [];
-
-    if (this.additionalNarrowNavClasses) {
-      this.additionalNarrowNavClasses.split(' ').forEach((className) => {
-        classArray.push(className);
-      });
+    if (this.isMastheadHidden && this.isNarrowViewport) {
+      classArray.push('sprk-c-Masthead--is-hidden');
     }
 
     return classArray.join(' ');
   }
 
   /**
-   * @ignore
+   * When the button for the collapsible nav
+   * is clicked this will check if the collapsible
+   * nav is open. If it is open, then it will close it. If it
+   * is closed then it will open it. We run this method
+   * whenever the collapsible nav emits the `isButtonOpen` event.
    */
-  getSecondaryNavClasses(): string {
-    const classArray: string[] = [
-      'sprk-c-Masthead__big-nav-items',
-      'sprk-o-Stack',
-      'sprk-o-Stack--misc-a',
-      'sprk-o-Stack--center-row',
-      'sprk-o-Stack--split@xxs',
-      'sprk-b-List',
-      'sprk-b-List--bare',
-    ];
-
-    if (this.additionalBigNavClasses) {
-      this.additionalBigNavClasses.split(' ').forEach((className) => {
-        classArray.push(className);
-      });
-    }
-
-    return classArray.join(' ');
-  }
-
-  /**
-   * @ignore
-   */
-  toggleNarrowNav(event): void {
-    event.preventDefault();
-    if (this.isNarrowNavOpen) {
-      this.closeNarrowNav();
+  toggleCollapsibleNav(isButtonOpen: boolean): void {
+    if (!this.collapsibleNavDirective.isCollapsed) {
+      this.closeCollapsibleNav();
     } else {
-      this.openNarrowNav();
+      // The button is now open and we want to open the nav too
+      this.openCollapsibleNav();
     }
   }
 
   /**
-   * @ignore
+   * Adds the correct styles to the body and HTML elements
+   * in order for the collapsible nav to be open.
+   * Sets the `isCollapsed` input on the collapsible nav
+   * to be false so that the directive adds the CSS styles
+   * to show the nav.
    */
-  openNarrowNav(): void {
+  openCollapsibleNav(): void {
     this.renderer.addClass(document.body, 'sprk-u-Overflow--hidden');
     this.renderer.addClass(
       document.body.parentElement,
@@ -664,13 +330,19 @@ export class SprkMastheadComponent implements AfterContentInit {
     );
     this.renderer.addClass(document.body, 'sprk-u-Height--100');
     this.renderer.addClass(document.body.parentElement, 'sprk-u-Height--100');
-    this.isNarrowNavOpen = true;
+    // Set the `isCollapsed` property on the collapsible nav to false to open it
+    this.collapsibleNavDirective.isCollapsed = false;
+    // Ensure the button styles are set to open
+    this.isCollapsibleNavOpen = true;
   }
 
   /**
-   * @ignore
+   * Removes the styles that were added to
+   * the body and HTML elements when the nav was open.
+   * Sets the `isCollapsed` input on the collapsible nav to be true
+   * so that the directive adds the collapsed CSS class.
    */
-  closeNarrowNav(): void {
+  closeCollapsibleNav(): void {
     this.renderer.removeClass(document.body, 'sprk-u-Overflow--hidden');
     this.renderer.removeClass(
       document.body.parentElement,
@@ -681,6 +353,9 @@ export class SprkMastheadComponent implements AfterContentInit {
       document.body.parentElement,
       'sprk-u-Height--100',
     );
-    this.isNarrowNavOpen = false;
+    // Set the `isCollapsed` property on the collapsible nav to `true` to close it
+    this.collapsibleNavDirective.isCollapsed = true;
+    // Ensure the button styles are set to closed
+    this.isCollapsibleNavOpen = false;
   }
 }
