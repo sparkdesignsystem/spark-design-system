@@ -105,7 +105,12 @@ export const defaultStory = () => ({
       >
         Search for a Fruit
       </label>
-      <div sprkAutocompleteInputContainer ariaLabelledby="autocomplete-label">
+      <div
+        sprkAutocompleteInputContainer
+        aria-labelledby="autocomplete-label"
+        role="combobox"
+        aria-haspopup="listbox"
+      >
         <sprk-icon
           iconName="search"
           additionalClasses="
@@ -177,7 +182,9 @@ export const defaultInvalid = () => ({
       </label>
       <div
         sprkAutocompleteInputContainer
-        ariaLabelledby="autocomplete-label2"
+        aria-labelledby="autocomplete-label2"
+        role="combobox"
+        aria-haspopup="listbox"
       >
         <sprk-icon
           iconName="search"
@@ -258,7 +265,9 @@ export const defaultDisabled = () => ({
       </label>
       <div
         sprkAutocompleteInputContainer
-        ariaLabelledby="autocomplete-label3"
+        aria-labelledby="autocomplete-label3"
+        role="combobox"
+        aria-haspopup="listbox"
       >
         <sprk-icon
           iconName="search"
@@ -326,7 +335,9 @@ export const hugeStory = () => ({
 
       <div
         sprkAutocompleteInputContainer
-        ariaLabelledby="autocomplete-label4"
+        aria-labelledby="autocomplete-label4"
+        role="combobox"
+        aria-haspopup="listbox"
       >
         <sprk-icon
           iconName="search"
@@ -402,7 +413,9 @@ export const hugeInvalid = () => ({
 
       <div
         sprkAutocompleteInputContainer
-        ariaLabelledby="autocomplete-label5"
+        aria-labelledby="autocomplete-label5"
+        role="combobox"
+        aria-haspopup="listbox"
       >
         <sprk-icon
           iconName="search"
@@ -485,7 +498,9 @@ export const hugeDisabled = () => ({
 
       <div
         sprkAutocompleteInputContainer
-        ariaLabelledby="autocomplete-label6"
+        aria-labelledby="autocomplete-label6"
+        role="combobox"
+        aria-haspopup="listbox"
       >
         <sprk-icon
           iconName="search"

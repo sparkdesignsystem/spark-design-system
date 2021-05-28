@@ -291,8 +291,6 @@ export { SprkAutocompleteResultDirective } from './lib/components/sprk-autocompl
 export { SprkAutocompleteInputContainerDirective } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
 export { SprkAutocompleteInputContainerModule } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.module';
 
-export { generateAriaOwns } from './lib/utilities/generateAriaOwns/generateAriaOwns';
-export { generateAriaControls } from './lib/utilities/generateAriaControls/generateAriaControls';
 export {
   isUpPressed,
   isTabPressed,
