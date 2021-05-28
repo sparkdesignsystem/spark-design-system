@@ -125,7 +125,7 @@ export const defaultStory = () => ({
           id="autocomplete-input"
           name="autocomplete-input"
           type="text"
-          class="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+          class="sprk-b-TextInput--has-svg-icon"
           aria-describedby="autocomplete--error-container"
           aria-autocomplete="list"
           sprkInput
@@ -200,7 +200,7 @@ export const defaultInvalid = () => ({
           id="autocomplete-input2"
           name="autocomplete-input2"
           type="text"
-          class="sprk-b-TextInput--has-svg-icon sprk-u-Width-100 sprk-b-TextInput--error"
+          class="sprk-b-TextInput--has-svg-icon sprk-b-TextInput--error"
           aria-describedby="autocomplete--error-container2"
           aria-invalid="true"
           aria-autocomplete="list"
@@ -283,7 +283,7 @@ export const defaultDisabled = () => ({
           id="autocomplete-input3"
           name="autocomplete-input3"
           type="text"
-          class="sprk-b-TextInput--has-svg-icon sprk-u-Width-100"
+          class="sprk-b-TextInput--has-svg-icon"
           aria-describedby="autocomplete--error-container3"
           aria-autocomplete="list"
           sprkInput
@@ -354,7 +354,6 @@ export const hugeStory = () => ({
           name="autocomplete-input4"
           type="text"
           placeholder="Search for a Fruit"
-          class="sprk-u-Width-100"
           aria-describedby="autocomplete--error-container4"
           aria-autocomplete="list"
           sprkInput
@@ -432,7 +431,7 @@ export const hugeInvalid = () => ({
           name="autocomplete-input5"
           type="text"
           placeholder="Search for a Fruit"
-          class="sprk-u-Width-100 sprk-b-TextInput--error"
+          class="sprk-b-TextInput--error"
           aria-describedby="autocomplete--error-container5"
           aria-invalid="true"
           aria-autocomplete="list"
@@ -517,7 +516,6 @@ export const hugeDisabled = () => ({
           name="autocomplete-input6"
           type="text"
           placeholder="Search for a Fruit"
-          class="sprk-u-Width-100"
           aria-describedby="autocomplete--error-container6"
           aria-autocomplete="list"
           disabled
