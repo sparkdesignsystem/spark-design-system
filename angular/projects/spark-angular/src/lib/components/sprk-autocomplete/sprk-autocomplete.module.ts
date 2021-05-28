@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
-import { SprkAutocompleteResultsModule } from './sprk-autocomplete-results/sprk-autocomplete-results.module';
-import { SprkAutocompleteResultModule } from './sprk-autocomplete-result/sprk-autocomplete-result.module';
+import { SprkAutocompleteResultsModule } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.module';
+import { SprkAutocompleteResultModule } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.module';
+import { SprkAutocompleteInputContainerModule } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.module';
 import { SprkInputContainerModule } from '../inputs/sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
@@ -17,6 +18,7 @@ import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.m
     SprkIconModule,
     SprkAutocompleteResultsModule,
     SprkAutocompleteResultModule,
+    SprkAutocompleteInputContainerModule,
     SprkInputContainerModule,
     SprkInputModule,
     SprkFieldErrorModule,
@@ -28,6 +30,7 @@ import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.m
     SprkIconModule,
     SprkAutocompleteResultsModule,
     SprkAutocompleteResultModule,
+    SprkAutocompleteInputContainerModule,
     SprkInputContainerModule,
     SprkInputModule,
     SprkFieldErrorModule,

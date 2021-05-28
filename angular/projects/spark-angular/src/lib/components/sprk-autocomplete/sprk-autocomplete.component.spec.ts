@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
-import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sprk-autocomplete-results.directive';
-import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk-autocomplete-result.directive';
+import { SprkAutocompleteResultsDirective } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
+import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
+import { SprkAutocompleteInputContainerDirective } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
 import { Component } from '@angular/core';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 
@@ -9,7 +10,7 @@ import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-inpu
   selector: `sprk-test`,
   template: `
     <sprk-autocomplete>
-      <div>
+      <div sprkAutocompleteInputContainer>
         <input sprkInput />
       </div>
       <ul sprkAutocompleteResults>
@@ -34,6 +35,7 @@ describe('SprkAutocompleteComponent', () => {
       declarations: [
         SprkAutocompleteComponent,
         WrappedAutocompleteComponent,
+        SprkAutocompleteInputContainerDirective,
         SprkAutocompleteResultsDirective,
         SprkAutocompleteResultDirective,
         SprkInputDirective,
