@@ -13,8 +13,10 @@ import {
   QueryList,
 } from '@angular/core';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
-import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sprk-autocomplete-results.directive';
-import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk-autocomplete-result.directive';
+import { SprkAutocompleteResultsDirective } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
+import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
+import { SprkAutocompleteInputContainerDirective } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
+
 import {
   isDownPressed,
   isEnterPressed,
@@ -37,6 +39,13 @@ export class SprkAutocompleteComponent
    */
   @ContentChild(SprkInputDirective, { static: false })
   input: SprkInputDirective;
+
+  /**
+   * This component expects a child element
+   * with the `sprkAutocompleteInputContainer` attribute.
+   */
+  @ContentChild(SprkAutocompleteInputContainerDirective, { static: false })
+  inputContainer: SprkAutocompleteInputContainerDirective;
 
   /**
    * This component expects a child element
@@ -222,7 +231,7 @@ export class SprkAutocompleteComponent
     if (this.input) {
       // Set aria-expanded on the input's parent
       this.renderer.setAttribute(
-        this.input.ref.nativeElement.parentNode,
+        this.inputContainer.ref.nativeElement,
         'aria-expanded',
         'false',
       );
@@ -257,7 +266,7 @@ export class SprkAutocompleteComponent
     if (this.input) {
       // Set aria-expanded on the input's parent
       this.renderer.setAttribute(
-        this.input.ref.nativeElement.parentNode,
+        this.inputContainer.ref.nativeElement,
         'aria-expanded',
         'true',
       );
@@ -313,7 +322,7 @@ export class SprkAutocompleteComponent
 
     // set aria-owns on the input's parent to the id of the results
     generateAriaOwns(
-      this.input.ref.nativeElement.parentNode,
+      this.inputContainer.ref.nativeElement,
       this.results.nativeElement,
     );
   }

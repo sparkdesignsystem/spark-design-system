@@ -284,10 +284,13 @@ export { SprkPromoSubheadingDirective } from './lib/components/sprk-promo/direct
 export { SprkPromoSubheadingModule } from './lib/components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.module';
 export { SprkAutocompleteModule } from './lib/components/sprk-autocomplete/sprk-autocomplete.module';
 export { SprkAutocompleteComponent } from './lib/components/sprk-autocomplete/sprk-autocomplete.component';
-export { SprkAutocompleteResultsModule } from './lib/components/sprk-autocomplete/sprk-autocomplete-results/sprk-autocomplete-results.module';
-export { SprkAutocompleteResultsDirective } from './lib/components/sprk-autocomplete/sprk-autocomplete-results/sprk-autocomplete-results.directive';
-export { SprkAutocompleteResultModule } from './lib/components/sprk-autocomplete/sprk-autocomplete-result/sprk-autocomplete-result.module';
-export { SprkAutocompleteResultDirective } from './lib/components/sprk-autocomplete/sprk-autocomplete-result/sprk-autocomplete-result.directive';
+export { SprkAutocompleteResultsModule } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-results/sprk-autocomplete-results.module';
+export { SprkAutocompleteResultsDirective } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
+export { SprkAutocompleteResultModule } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-result/sprk-autocomplete-result.module';
+export { SprkAutocompleteResultDirective } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
+export { SprkAutocompleteInputContainerDirective } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
+export { SprkAutocompleteInputContainerModule } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.module';
+
 export { generateAriaOwns } from './lib/utilities/generateAriaOwns/generateAriaOwns';
 export { generateAriaControls } from './lib/utilities/generateAriaControls/generateAriaControls';
 export {

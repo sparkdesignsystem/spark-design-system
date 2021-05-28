@@ -2,10 +2,9 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 import { SprkAutocompleteModule } from './sprk-autocomplete.module';
 import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results/sprk-autocomplete-results.directive';
-import { SprkAutocompleteResultsModule } from './sprk-autocomplete-results/sprk-autocomplete-results.module';
-import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result/sprk-autocomplete-result.directive';
-import { SprkAutocompleteResultModule } from './sprk-autocomplete-result/sprk-autocomplete-result.module';
+import { SprkAutocompleteResultsDirective } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
+import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
+import { SprkAutocompleteInputContainerDirective } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
 
 export default {
   title: 'Components/Autocomplete',
@@ -13,6 +12,7 @@ export default {
   subcomponents: {
     SprkAutocompleteResultsDirective,
     SprkAutocompleteResultDirective,
+    SprkAutocompleteInputContainerDirective,
   },
   decorators: [
     storyWrapper(
@@ -89,11 +89,7 @@ In order to keep the Spark Autocomplete flexible enough to use in a wide
 };
 
 const modules = {
-  imports: [
-    SprkAutocompleteModule,
-    SprkAutocompleteResultsModule,
-    SprkAutocompleteResultModule,
-  ],
+  imports: [SprkAutocompleteModule],
 };
 
 export const defaultStory = () => ({
@@ -109,12 +105,7 @@ export const defaultStory = () => ({
       >
         Search for a Fruit
       </label>
-      <div
-        class="sprk-b-TextInputIconContainer"
-        aria-labelledby="autocomplete-label"
-        role="combobox"
-        aria-haspopup="listbox"
-      >
+      <div sprkAutocompleteInputContainer ariaLabelledby="autocomplete-label">
         <sprk-icon
           iconName="search"
           additionalClasses="
@@ -185,10 +176,8 @@ export const defaultInvalid = () => ({
         Search for a Fruit
       </label>
       <div
-        class="sprk-b-TextInputIconContainer"
-        aria-labelledby="autocomplete-label2"
-        role="combobox"
-        aria-haspopup="listbox"
+        sprkAutocompleteInputContainer
+        ariaLabelledby="autocomplete-label2"
       >
         <sprk-icon
           iconName="search"
@@ -268,10 +257,8 @@ export const defaultDisabled = () => ({
         Search for a Fruit
       </label>
       <div
-        class="sprk-b-TextInputIconContainer"
-        aria-labelledby="autocomplete-label3"
-        role="combobox"
-        aria-haspopup="listbox"
+        sprkAutocompleteInputContainer
+        ariaLabelledby="autocomplete-label3"
       >
         <sprk-icon
           iconName="search"
@@ -338,10 +325,8 @@ export const hugeStory = () => ({
       <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
 
       <div
-        class="sprk-b-TextInputIconContainer"
-        aria-labelledby="autocomplete-label4"
-        role="combobox"
-        aria-haspopup="listbox"
+        sprkAutocompleteInputContainer
+        ariaLabelledby="autocomplete-label4"
       >
         <sprk-icon
           iconName="search"
@@ -416,10 +401,8 @@ export const hugeInvalid = () => ({
       <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
 
       <div
-        class="sprk-b-TextInputIconContainer"
-        aria-labelledby="autocomplete-label5"
-        role="combobox"
-        aria-haspopup="listbox"
+        sprkAutocompleteInputContainer
+        ariaLabelledby="autocomplete-label5"
       >
         <sprk-icon
           iconName="search"
@@ -501,10 +484,8 @@ export const hugeDisabled = () => ({
       <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
 
       <div
-        class="sprk-b-TextInputIconContainer"
-        aria-labelledby="autocomplete-label6"
-        role="combobox"
-        aria-haspopup="listbox"
+        sprkAutocompleteInputContainer
+        ariaLabelledby="autocomplete-label6"
       >
         <sprk-icon
           iconName="search"
