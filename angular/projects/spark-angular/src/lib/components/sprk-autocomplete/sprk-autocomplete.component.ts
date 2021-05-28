@@ -365,7 +365,7 @@ export class SprkAutocompleteComponent
     }
 
     // set the value of aria-controls
-    triggerElement.setAttribute('aria-controls', contentId);
+    this.renderer.setAttribute(triggerElement, 'aria-controls', contentId);
   };
 
   /**
@@ -389,6 +389,6 @@ export class SprkAutocompleteComponent
     }
 
     // set the value of aria-owns
-    ownerElement.setAttribute('aria-owns', contentId);
+    this.renderer.setAttribute(ownerElement, 'aria-owns', contentId);
   };
 }
