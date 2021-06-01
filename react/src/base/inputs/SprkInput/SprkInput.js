@@ -116,7 +116,7 @@ SprkInput.propTypes = {
    * A ref passed in will be attached to the
    * input element of the rendered component.
    */
-  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
+  forwardedRef: PropTypes.oneOf([PropTypes.shape(), PropTypes.func]),
   /**
    * Will render the component in it's disabled state.
    */
