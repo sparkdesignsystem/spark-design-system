@@ -494,7 +494,7 @@ public class SparkDesignTokens {
     public static let sprkFontSizeDisplayFive = CGFloat(20.00)
     public static let sprkFontSizeDisplayFour = CGFloat(26.00)
     public static let sprkFontSizeDisplayOne = CGFloat(44.00)
-    public static let sprkFontSizeDisplayOneWide = CGFloat(54.00)
+    public static let sprkFontSizeDisplayOneWide = CGFloat(44.00)
     public static let sprkFontSizeDisplaySeven = CGFloat(16.00)
     public static let sprkFontSizeDisplaySix = CGFloat(20.00)
     public static let sprkFontSizeDisplayThree = CGFloat(28.00)
