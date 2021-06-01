@@ -56,7 +56,7 @@ SprkHelperText.propTypes = {
   /**
    * A ref passed in will be attached to the rendered component.
    */
-  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
+  forwardedRef: PropTypes.oneOf([PropTypes.shape(), PropTypes.func]),
 };
 
 SprkHelperText.defaultProps = {

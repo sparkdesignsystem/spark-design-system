@@ -124,7 +124,7 @@ SprkTextInput.propTypes = {
    * A ref passed in will be attached to the input
    * element of the rendered component.
    */
-  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
+  forwardedRef: PropTypes.oneOf([PropTypes.shape(), PropTypes.func]),
   /**
    * 	Text that appears below the input, intended
    * to provide more information to a user.

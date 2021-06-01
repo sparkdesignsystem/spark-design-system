@@ -132,7 +132,7 @@ SprkRadioItem.propTypes = {
    * A ref passed in will be attached to the radio
    * element of the rendered component.
    */
-  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
+  forwardedRef: PropTypes.oneOf([PropTypes.shape(), PropTypes.func]),
 };
 
 export default SprkRadioItem;
