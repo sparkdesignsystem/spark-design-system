@@ -147,6 +147,8 @@ import {
 import { carousel } from './components/carousel';
 import { highlightBoard } from './components/highlight-board';
 import toggleAriaExpandedAttribute from './utilities/toggleAriaExpanded';
+import generateAriaControls from './utilities/generateAriaControls';
+import generateAriaOwns from './utilities/generateAriaOwns';
 import isElementVisible from './utilities/isElementVisible';
 import scrollYDirection from './utilities/scrollYDirection';
 import { checkbox, bindCheckboxUIEvents } from './base/inputs/checkbox';
@@ -266,6 +268,8 @@ export {
   addClassIfNotEmpty,
   toggleClassWithValue,
   toggleAriaExpandedAttribute,
+  generateAriaControls,
+  generateAriaOwns,
   checkbox,
   bindCheckboxUIEvents,
   generateIdForInput,
