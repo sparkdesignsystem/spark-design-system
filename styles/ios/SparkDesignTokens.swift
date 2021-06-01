@@ -16,6 +16,7 @@ public class SparkDesignTokens {
     public static let sprkAlertLineHeight = 1.5
     public static let sprkAutocompleteResultFontSize = CGFloat(16.00)
     public static let sprkAutocompleteResultPadding = CGFloat(16.00)
+    public static let sprkAutocompleteResultsHiddenDisplay = none
     public static let sprkBigNavActiveColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkBigNavBg = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkBigNavItemActiveColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
