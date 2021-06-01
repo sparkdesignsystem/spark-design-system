@@ -223,7 +223,7 @@ export class SprkAutocompleteComponent
     // Add the hidden style
     this.renderer.addClass(
       this.results.nativeElement,
-      'sprk-c-Autocomplete__results--hidden',
+      'sprk-c-Autocomplete__results--is-hidden',
     );
 
     if (this.input) {
@@ -258,7 +258,7 @@ export class SprkAutocompleteComponent
 
     this.renderer.removeClass(
       this.results.nativeElement,
-      'sprk-c-Autocomplete__results--hidden',
+      'sprk-c-Autocomplete__results--is-hidden',
     );
 
     if (this.input) {

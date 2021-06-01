@@ -70,7 +70,7 @@ describe('SprkAutocompleteComponent', () => {
     component.hideResults();
     fixture.detectChanges();
     expect(resultsElement.nativeElement.classList.toString()).toEqual(
-      'sprk-c-Autocomplete__results--hidden sprk-c-Autocomplete__results',
+      'sprk-c-Autocomplete__results--is-hidden sprk-c-Autocomplete__results',
     );
     expect(
       inputElement.nativeElement.parentNode.getAttribute('aria-expanded'),
@@ -127,7 +127,7 @@ describe('SprkAutocompleteComponent', () => {
     component.hideResults();
     fixture.detectChanges();
     expect(resultsElement.nativeElement.classList.toString()).toEqual(
-      'sprk-c-Autocomplete__results sprk-c-Autocomplete__results--hidden',
+      'sprk-c-Autocomplete__results sprk-c-Autocomplete__results--is-hidden',
     );
     expect(
       inputElement.nativeElement.parentNode.getAttribute('aria-expanded'),
