@@ -40,14 +40,6 @@ export class SprkLabelDirective implements OnInit {
 
   /**
    * If `true`, this will add
-   * styles to the label to make it work
-   * with an icon.
-   */
-  @Input()
-  hasIcon: boolean;
-
-  /**
-   * If `true`, this will add
    * disabled styles to the label.
    */
   @Input()
@@ -70,9 +62,6 @@ export class SprkLabelDirective implements OnInit {
 
   ngOnInit(): void {
     this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Label');
-    if (this.hasIcon) {
-      this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Label--with-icon');
-    }
     if (this.isDisabled) {
       this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Label--disabled');
     }

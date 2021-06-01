@@ -7,6 +7,9 @@ import SprkInputIconCheck from '../components/SprkInputIconCheck/SprkInputIconCh
 import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck/SprkLabelLocationCheck';
 import SprkInputElement from '../components/SprkInputElement/SprkInputElement';
 
+/**
+ * TODO: Remove this component as part of Issue #3782.
+ */
 class SprkTextInput extends Component {
   constructor(props) {
     super(props);
@@ -95,13 +98,13 @@ class SprkTextInput extends Component {
 
 SprkTextInput.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of
-   * the component.
+   * A space-separated string of classes to add
+   * to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector
-   * for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving as a
+   * unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /** Content to render inside of the component. */
@@ -112,19 +115,19 @@ SprkTextInput.propTypes = {
    */
   errorMessage: PropTypes.string,
   /**
-   * A function supplied will be passed the value of the input and then
-   * executed, if the valid prop is true. The value returned will be
-   * assigned to the value of the input.
+   * A function supplied will be passed the value of the input
+   * and then executed, if the valid prop is true. The value returned
+   * will be assigned to the value of the input.
    */
   formatter: PropTypes.func,
   /**
-   * A ref passed in will be attached to the input element of the
-   * rendered component.
+   * A ref passed in will be attached to the input
+   * element of the rendered component.
    */
-  forwardedRef: PropTypes.shape(),
+  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
   /**
-   * Text that appears below the input, intended to provide more
-   * information to a user.
+   * 	Text that appears below the input, intended
+   * to provide more information to a user.
    */
   helperText: PropTypes.string,
   /**
@@ -137,8 +140,8 @@ SprkTextInput.propTypes = {
    */
   iconRight: PropTypes.bool,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for
-   * automated tools.
+   * Assigned to the `data-id` attribute serving as a
+   * unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -168,29 +171,24 @@ SprkTextInput.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * A space-separated string of valid HTML ids to add to the aria-describedby
-   * attribute on the Input.
+   * Assigned to the `aria-describedby`
+   * attribute. Used to create
+   * relationships between the
+   * component and text that describes it,
+   * such as helper text or an error field.
    */
   ariaDescribedBy: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.string,
 };
 
 SprkTextInput.defaultProps = {
-  additionalClasses: '',
-  analyticsString: '',
-  children: [],
-  errorMessage: '',
   formatter: (value) => value,
   forwardedRef: React.createRef(),
   helperText: '',
-  hiddenLabel: false,
-  iconRight: false,
-  idString: '',
   label: 'Text Input Label',
   leadingIcon: '',
-  narrowWidth: false,
-  textIcon: false,
   valid: true,
-  disabled: false,
 };
 
 export default SprkTextInput;

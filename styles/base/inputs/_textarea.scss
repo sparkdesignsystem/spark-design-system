@@ -13,6 +13,7 @@
   outline: $sprk-text-input-outline;
   padding: $sprk-textarea-padding;
   transition: $sprk-text-input-transition;
+  width: $sprk-textarea-width;
 
   &:focus {
     border-color: $sprk-text-input-focus-border-color;

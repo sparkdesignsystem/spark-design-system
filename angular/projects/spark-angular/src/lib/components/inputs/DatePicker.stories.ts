@@ -72,7 +72,7 @@ export const defaultStory = () => ({
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
-        <label for="datepicker" hasIcon="true" sprkLabel>
+        <label for="datepicker" sprkLabel>
           Date Input
         </label>
         <sprk-icon
@@ -114,7 +114,7 @@ export const invalidDatePicker = () => ({
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
-        <label for="invalid-datepicker" hasIcon="true" sprkLabel>
+        <label for="invalid-datepicker" sprkLabel>
           Date Input
         </label>
         <sprk-icon
@@ -167,7 +167,7 @@ export const disabledDatePicker = () => ({
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
-        <label for="disabled-datepicker" hasIcon="true" sprkLabel isDisabled="true">
+        <label for="disabled-datepicker" sprkLabel isDisabled="true">
           Date Input
         </label>
         <sprk-icon
@@ -209,7 +209,7 @@ export const legacyStory = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
-      <label for="legacy-datepicker" class="sprk-b-Label--with-icon" sprkLabel>
+      <label for="legacy-datepicker" sprkLabel>
         Date Input
       </label>
       <sprk-icon
@@ -251,7 +251,7 @@ export const legacyInvalidDatePicker = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
-      <label for="legacy-invalid-datepicker" class="sprk-b-Label--with-icon" sprkLabel>
+      <label for="legacy-invalid-datepicker" sprkLabel>
         Date Input
       </label>
       <sprk-icon
@@ -304,7 +304,7 @@ export const legacyDisabledDatePicker = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
-      <label for="legacy-disabled-datepicker" class="sprk-b-Label--with-icon sprk-b-Label--disabled" sprkLabel>
+      <label for="legacy-disabled-datepicker" class="sprk-b-Label--disabled" sprkLabel>
         Date Input
       </label>
       <sprk-icon

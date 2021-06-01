@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
 
+/**
+ * TODO: Remove this component as part of Issue #3775.
+ */
 class SprkInputElement extends Component {
   constructor(props) {
     const { value } = props;
@@ -92,7 +95,7 @@ class SprkInputElement extends Component {
 
     return (
       <Element
-        className={classNames('sprk-u-Width-100', {
+        className={classNames({
           'sprk-b-TextArea': type === 'textarea',
           'sprk-b-TextInput sprk-b-InputContainer__input': type !== 'textarea',
           'sprk-b-TextInput--label-hidden':
@@ -125,8 +128,8 @@ class SprkInputElement extends Component {
 
 SprkInputElement.propTypes = {
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector
-   * for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving as a
+   * unique selector for outside libraries to capture data.
    */
   analyticsString: propTypes.string,
   /**
@@ -134,9 +137,9 @@ SprkInputElement.propTypes = {
    */
   errorContainerId: propTypes.string,
   /**
-   * A function supplied will be passed the value of the input and then
-   * executed, if the valid prop is true. The value returned will be
-   * assigned to the value of the input.
+   * A function supplied will be passed the value of the input
+   * and then executed, if the valid prop is true. The value
+   * returned will be assigned to the value of the input.
    */
   formatter: propTypes.func,
   /**
@@ -152,8 +155,8 @@ SprkInputElement.propTypes = {
    */
   id: propTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for
-   * automated tools.
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: propTypes.string,
   /**
@@ -171,8 +174,11 @@ SprkInputElement.propTypes = {
    */
   valid: propTypes.bool,
   /**
-   * A space-separated string of valid HTML Ids to add to the aria-describedby
-   * attribute on the Input.
+   * Assigned to the `aria-describedby`
+   * attribute. Used to create
+   * relationships between the
+   * component and text that describes it,
+   * such as helper text or an error field.
    */
   ariaDescribedBy: propTypes.string,
   children: propTypes.node,

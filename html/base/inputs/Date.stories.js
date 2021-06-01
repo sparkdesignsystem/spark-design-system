@@ -40,7 +40,7 @@ export const dateInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="date-input"
         data-id="date-input"
         type="text"
@@ -74,7 +74,7 @@ export const invalidDateInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
+        class="sprk-b-TextInput sprk-b-TextInput--error"
         id="date-input"
         data-id="date-input"
         type="text"
@@ -121,7 +121,7 @@ export const disabledDateInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="date-input"
         data-id="date-input"
         type="text"

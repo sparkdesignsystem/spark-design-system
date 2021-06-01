@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import uniqueId from 'lodash/uniqueId';
 
 const SprkHelperText = (props) => {
   const {
@@ -8,6 +9,8 @@ const SprkHelperText = (props) => {
     idString,
     analyticsString,
     additionalClasses,
+    id,
+    forwardedRef,
     ...other
   } = props;
 
@@ -16,6 +19,8 @@ const SprkHelperText = (props) => {
       className={classnames('sprk-b-HelperText', additionalClasses)}
       data-analytics={analyticsString}
       data-id={idString}
+      id={id}
+      ref={forwardedRef}
       {...other}
     >
       {children}
@@ -26,6 +31,13 @@ const SprkHelperText = (props) => {
 SprkHelperText.propTypes = {
   /** Content to render inside of the component. */
   children: PropTypes.node,
+  /**
+   * Assigned to the `id` attribute
+   * of the rendered helper text container.
+   * A custom ID will
+   * be added if this is not supplied.
+   */
+  id: PropTypes.string,
   /**
    * Assigned to the `data-id` attribute serving as
    * a unique selector for automated tools.
@@ -41,6 +53,14 @@ SprkHelperText.propTypes = {
    * to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
+  /**
+   * A ref passed in will be attached to the rendered component.
+   */
+  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
+};
+
+SprkHelperText.defaultProps = {
+  id: uniqueId('sprk-helper-text-'),
 };
 
 export default SprkHelperText;
