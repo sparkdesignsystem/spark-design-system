@@ -91,7 +91,7 @@ describe('SprkHelperText:', () => {
     expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
 
-  it('should add forwardedRef to the helper text', () => {
+  it('should add forwardedRef to the helper text container', () => {
     // Create ref
     const forwardedRef = React.createRef();
     // Add ref as prop
