@@ -16,13 +16,7 @@ import { uniqueId } from 'lodash';
   selector: 'sprk-tooltip',
   template: `
     <span
-      [ngClass]="{
-        'sprk-c-Tooltip__container': true,
-        'sprk-c-Tooltip__container--top': verticalAlignment === 'top',
-        'sprk-c-Tooltip__container--middle': verticalAlignment === 'middle',
-        'sprk-c-Tooltip__container--bottom': verticalAlignment === 'bottom',
-        'sprk-c-Tooltip__container--baseline': verticalAlignment === 'baseline'
-      }"
+      [ngClass]="getContainerClasses()"
       [attr.data-id]="idString"
       #containerElement
     >
@@ -91,6 +85,12 @@ export class SprkTooltipComponent implements AfterViewInit, OnChanges {
    */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string of classes to be added to the Tooltip
+   * container.
+   */
+  @Input()
+  containerAdditionalClasses: string;
   /**
    * Expects a space separated string of classes to be added to the svg icon.
    */
@@ -294,6 +294,37 @@ export class SprkTooltipComponent implements AfterViewInit, OnChanges {
       this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getContainerClasses(): string {
+    const classArray: string[] = ['sprk-c-Tooltip__container'];
+
+    if (this.containerAdditionalClasses) {
+      this.containerAdditionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    if (this.verticalAlignment === 'top') {
+      classArray.push('sprk-c-Tooltip__container--top');
+    }
+
+    if (this.verticalAlignment === 'middle') {
+      classArray.push('sprk-c-Tooltip__container--middle');
+    }
+
+    if (this.verticalAlignment === 'bottom') {
+      classArray.push('sprk-c-Tooltip__container--bottom');
+    }
+
+    if (this.verticalAlignment === 'baseline') {
+      classArray.push('sprk-c-Tooltip__container--baseline');
     }
 
     return classArray.join(' ');
