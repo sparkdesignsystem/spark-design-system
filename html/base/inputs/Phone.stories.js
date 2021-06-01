@@ -41,7 +41,7 @@ export const phoneInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="phone-input"
         data-id="phone-input"
         type="tel"
@@ -75,7 +75,7 @@ export const invalidPhoneInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-b-TextArea--error sprk-u-Width-100"
+        class="sprk-b-TextInput sprk-b-TextArea--error"
         id="phone-input"
         data-id="phone-input"
         type="tel"
@@ -122,7 +122,7 @@ export const disabledPhoneInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="phone-input"
         data-id="phone-input"
         type="tel"

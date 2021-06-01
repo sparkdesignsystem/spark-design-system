@@ -68,7 +68,7 @@ export const phoneInput = () => ({
       <input
         id="phone"
         name="phone_input"
-        type="text"
+        type="tel"
         placeholder="(000) 000-0000"
         [(ngModel)]="phone_input"
         #phoneInput="ngModel"
@@ -100,7 +100,7 @@ export const invalidPhoneInput = () => ({
         class="sprk-b-TextInput--error"
         aria-invalid="true"
         name="phone_input"
-        type="text"
+        type="tel"
         placeholder="(000) 000-0000"
         [(ngModel)]="phone_input"
         #phoneInput="ngModel"
@@ -144,7 +144,7 @@ export const disabledPhoneInput = () => ({
       <input
         id="disabled-phone"
         name="phone_input"
-        type="text"
+        type="tel"
         placeholder="(000) 000-0000"
         [(ngModel)]="phone_input"
         #phoneInput="ngModel"

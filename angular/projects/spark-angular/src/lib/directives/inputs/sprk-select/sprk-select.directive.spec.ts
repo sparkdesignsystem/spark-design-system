@@ -67,7 +67,7 @@ describe('Spark Select Directive', () => {
   it('should add the correct class if a select element is used', () => {
     fixture.detectChanges();
     expect(selectElement.nativeElement.classList.toString()).toEqual(
-      'sprk-b-Select sprk-u-Width-100',
+      'sprk-b-Select',
     );
   });
 

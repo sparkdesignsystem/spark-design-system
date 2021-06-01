@@ -71,7 +71,6 @@ export class SprkSelectDirective implements OnInit {
 
   ngOnInit(): void {
     this.renderer.addClass(this.ref.nativeElement, 'sprk-b-Select');
-    this.renderer.addClass(this.ref.nativeElement, 'sprk-u-Width-100');
 
     if (this.variant === 'huge') {
       this.floatLabelWhenValue(this.ref.nativeElement);

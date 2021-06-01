@@ -27,7 +27,7 @@ export const percentageInput = () => `
           for="percentage"
           class="sprk-b-Label"
         >
-          Interest Rate
+          Percentage
         </label>
 
         <svg
@@ -48,7 +48,6 @@ export const percentageInput = () => `
             sprk-b-TextInput
             sprk-b-InputContainer__input
             sprk-b-InputContainer__input--has-icon-right
-            sprk-u-Width-100
           "
           id="percentage"
           data-id="percentage"
@@ -83,7 +82,7 @@ export const invalidPercentageInput = () => `
           for="percentage"
           class="sprk-b-Label"
         >
-          Interest Rate
+          Percentage
         </label>
 
         <svg
@@ -105,7 +104,6 @@ export const invalidPercentageInput = () => `
             sprk-b-TextInput--error
             sprk-b-InputContainer__input
             sprk-b-InputContainer__input--has-icon-right
-            sprk-u-Width-100
           "
           id="percentage"
           data-id="percentage"
@@ -153,7 +151,7 @@ export const disabledPercentageInput = () => `
           for="percentage"
           class="sprk-b-Label sprk-b-Label--disabled"
         >
-          Interest Rate
+          Percentage
         </label>
 
         <svg
@@ -174,7 +172,6 @@ export const disabledPercentageInput = () => `
             sprk-b-TextInput
             sprk-b-InputContainer__input
             sprk-b-InputContainer__input--has-icon-right
-            sprk-u-Width-100
           "
           id="percentage"
           data-id="percentage"

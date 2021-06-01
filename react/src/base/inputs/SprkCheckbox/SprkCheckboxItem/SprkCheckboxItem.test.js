@@ -63,6 +63,25 @@ describe('SprkCheckboxItem:', () => {
     ).toBe(true);
   });
 
+  it('should apply visibility-toggle class', () => {
+    const wrapper = shallow(<SprkCheckboxItem isVisibilityToggle />);
+    expect(
+      wrapper
+        .find('.sprk-b-SelectionContainer')
+        .hasClass('sprk-b-InputContainer__visibility-toggle'),
+    ).toBe(true);
+  });
+
+  it(`should not apply visibility-toggle class if it
+  isVisibilityToggle is false`, () => {
+    const wrapper = shallow(<SprkCheckboxItem isVisibilityToggle={false} />);
+    expect(
+      wrapper
+        .find('.sprk-b-SelectionContainer')
+        .hasClass('sprk-b-InputContainer__visibility-toggle'),
+    ).toBe(false);
+  });
+
   it('should render label', () => {
     const wrapper = shallow(<SprkCheckboxItem>Label</SprkCheckboxItem>);
     expect(wrapper.find('label').text()).toEqual('Label');
@@ -94,11 +113,30 @@ describe('SprkCheckboxItem:', () => {
 
   it('should run the supplied onChange function for checkboxes', () => {
     const onCheckboxChangeMock = jest.fn();
-    const wrapper = mount(
-      <SprkCheckboxItem onChange={onCheckboxChangeMock} />,
-    );
+    const wrapper = mount(<SprkCheckboxItem onChange={onCheckboxChangeMock} />);
     const checkbox = wrapper.find('input[type="checkbox"]');
     checkbox.simulate('change', { target: { value: 'test-value' } });
     expect(onCheckboxChangeMock.mock.calls.length).toBe(1);
+  });
+
+  it('should pass through additional attributes', () => {
+    const wrapper = shallow(<SprkCheckboxItem data-my-attr="testing" />);
+    expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
+  });
+
+  it('should add forwardedRef to the checkbox item', () => {
+    // Create ref
+    const forwardedRef = React.createRef();
+    // Add ref as prop
+    const wrapper = mount(<SprkCheckboxItem forwardedRef={forwardedRef} />);
+    // Use ref to set an attribute
+    forwardedRef.current.setAttribute('data-test', 'testing');
+    // Check that mounted component received attribute
+    expect(
+      wrapper
+        .find('.sprk-b-Checkbox__input')
+        .getDOMNode()
+        .getAttribute('data-test'),
+    ).toBe('testing');
   });
 });
