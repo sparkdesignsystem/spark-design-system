@@ -81,7 +81,7 @@ SprkLabel.propTypes = {
    * A ref passed in will be attached to the label
    * element of the rendered component.
    */
-  forwardedRef: PropTypes.shape(),
+  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
 };
 
 SprkLabel.defaultProps = {

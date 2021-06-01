@@ -51,7 +51,7 @@ SprkTextarea.propTypes = {
    * A ref passed in will be attached to the textarea
    * element of the rendered component.
    */
-  forwardedRef: PropTypes.shape(),
+  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
   /**
    * Assigned to the `data-id` attribute serving as a
    * unique selector for automated tools.

@@ -57,7 +57,7 @@ SprkFieldError.propTypes = {
   /**
    * A ref passed in will be attached to the rendered component.
    */
-  forwardedRef: PropTypes.shape(),
+  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
 };
 
 SprkFieldError.defaultProps = {
