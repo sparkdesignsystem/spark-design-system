@@ -35,13 +35,13 @@ describe('SprkTooltip:', () => {
   });
 
   it('should add additionalClasses', () => {
-    const wrapper = mount(<SprkTooltip additionalClasses="spork" />);
-    expect(wrapper.find('.sprk-c-Tooltip.spork').length).toBe(1);
+    const wrapper = mount(<SprkTooltip additionalClasses="spark" />);
+    expect(wrapper.find('.sprk-c-Tooltip.spark').length).toBe(1);
   });
 
   it('should add containderAdditionalClasses', () => {
-    const wrapper = mount(<SprkTooltip containerAdditionalClasses="spork" />);
-    expect(wrapper.find('.sprk-c-Tooltip__container.spork').length).toBe(1);
+    const wrapper = mount(<SprkTooltip containerAdditionalClasses="spark" />);
+    expect(wrapper.find('.sprk-c-Tooltip__container.spark').length).toBe(1);
   });
 
   it('should add vertical align top class', () => {
@@ -65,18 +65,18 @@ describe('SprkTooltip:', () => {
   });
 
   it('should add data-id', () => {
-    const wrapper = mount(<SprkTooltip idString="spork" />);
-    expect(wrapper.find('[data-id="spork"]').length).toBe(1);
+    const wrapper = mount(<SprkTooltip idString="spark" />);
+    expect(wrapper.find('[data-id="spark"]').length).toBe(1);
   });
 
   it('should add data-analytics', () => {
-    const wrapper = mount(<SprkTooltip analyticsString="spork" />);
-    expect(wrapper.find('[data-analytics="spork"]').length).toBe(1);
+    const wrapper = mount(<SprkTooltip analyticsString="spark" />);
+    expect(wrapper.find('[data-analytics="spark"]').length).toBe(1);
   });
 
   it('should render with the correct icon additionalClasses', () => {
-    const wrapper = mount(<SprkTooltip iconAdditionalClasses="spork" />);
-    expect(wrapper.find('.sprk-c-Icon.spork').length).toBe(1);
+    const wrapper = mount(<SprkTooltip iconAdditionalClasses="spark" />);
+    expect(wrapper.find('.sprk-c-Icon.spark').length).toBe(1);
   });
 
   it('should generate id when needed', () => {
