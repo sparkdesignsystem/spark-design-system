@@ -216,7 +216,7 @@
         },
         "one-wide": {
           "comment": "The size of TypeDisplayOne when the viewport is wider than $sprk-font-size-display-one-breakpoint.",
-          "value": "3.375rem",
+          "value": "2.75rem",
           "file": "typography",
           "attributes": {
             "category": "size",
