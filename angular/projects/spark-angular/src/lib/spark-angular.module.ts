@@ -84,6 +84,8 @@ import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divid
 import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module';
 import { SprkTextareaModule } from './directives/inputs/sprk-textarea/sprk-textarea.module';
 import { SprkCardHeaderModule } from './components/sprk-card/directives/sprk-card-header/sprk-card-header.module';
+import { SprkAutocompleteModule } from './components/sprk-autocomplete/sprk-autocomplete.module';
+
 @NgModule({
   exports: [
     SprkAlertModule,
@@ -165,6 +167,7 @@ import { SprkCardHeaderModule } from './components/sprk-card/directives/sprk-car
     SprkDividerDirectiveModule,
     SprkSpinnerModule,
     SprkTextareaModule,
+    SprkAutocompleteModule,
   ],
 })
 export class SparkAngularModule {}

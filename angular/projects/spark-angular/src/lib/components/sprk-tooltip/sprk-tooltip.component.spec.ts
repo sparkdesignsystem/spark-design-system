@@ -184,6 +184,13 @@ describe('SprkTooltipComponent', () => {
     expect(tooltipElement.classList.contains('sprk-test')).toEqual(true);
   });
 
+  it('should add container additional classes', () => {
+    expect(containerElement.classList.contains('sprk-test')).toEqual(false);
+    component.containerAdditionalClasses = 'sprk-test';
+    fixture.detectChanges();
+    expect(containerElement.classList.contains('sprk-test')).toEqual(true);
+  });
+
   it('should add vertical align middle', () => {
     component.verticalAlignment = 'middle';
     fixture.detectChanges();
