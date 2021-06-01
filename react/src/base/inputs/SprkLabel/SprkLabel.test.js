@@ -109,4 +109,17 @@ describe('SprkLabel:', () => {
     const wrapper = shallow(<SprkLabel data-my-attr="testing" />);
     expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
+
+  it('should add forwardedRef to the checkbox item', () => {
+    // Create ref
+    const forwardedRef = React.createRef();
+    // Add ref as prop
+    const wrapper = mount(<SprkLabel forwardedRef={forwardedRef} />);
+    // Use ref to set an attribute
+    forwardedRef.current.setAttribute('data-test', 'testing');
+    // Check that mounted component received attribute
+    expect(
+      wrapper.find('.sprk-b-Label').getDOMNode().getAttribute('data-test'),
+    ).toBe('testing');
+  });
 });

@@ -18,6 +18,7 @@ const SprkRadioItem = (props) => {
     onChange,
     id,
     ariaDescribedBy,
+    forwardedRef,
     ...rest
   } = props;
   const internalId = uniqueId('sprk-radio-');
@@ -44,6 +45,7 @@ const SprkRadioItem = (props) => {
         onChange={onChangeFunc}
         type="radio"
         value={value}
+        ref={forwardedRef}
         {...rest}
       />
       <label
@@ -126,6 +128,11 @@ SprkRadioItem.propTypes = {
    * Passes in a function that handles the onChange of the input.
    */
   onChange: PropTypes.func,
+  /**
+   * A ref passed in will be attached to the radio
+   * element of the rendered component.
+   */
+  forwardedRef: PropTypes.shape(),
 };
 
 export default SprkRadioItem;

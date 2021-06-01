@@ -10,6 +10,7 @@ const SprkHelperText = (props) => {
     analyticsString,
     additionalClasses,
     id,
+    forwardedRef,
     ...other
   } = props;
 
@@ -19,6 +20,7 @@ const SprkHelperText = (props) => {
       data-analytics={analyticsString}
       data-id={idString}
       id={id}
+      ref={forwardedRef}
       {...other}
     >
       {children}
@@ -51,6 +53,10 @@ SprkHelperText.propTypes = {
    * to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
+  /**
+   * A ref passed in will be attached to the rendered component.
+   */
+  forwardedRef: PropTypes.shape(),
 };
 
 SprkHelperText.defaultProps = {

@@ -10,6 +10,7 @@ const SprkFieldError = (props) => {
     idString,
     analyticsString,
     id,
+    forwardedRef,
     ...rest
   } = props;
 
@@ -19,6 +20,7 @@ const SprkFieldError = (props) => {
       data-analytics={analyticsString}
       data-id={idString}
       id={id}
+      ref={forwardedRef}
       {...rest}
     >
       {children}
@@ -52,6 +54,10 @@ SprkFieldError.propTypes = {
    * a unique selector for automated tools.
    */
   idString: PropTypes.string,
+  /**
+   * A ref passed in will be attached to the rendered component.
+   */
+  forwardedRef: PropTypes.shape(),
 };
 
 SprkFieldError.defaultProps = {

@@ -13,6 +13,7 @@ const SprkLabel = (props) => {
     analyticsString,
     isDisabled,
     htmlFor,
+    forwardedRef,
     ...rest
   } = props;
 
@@ -26,6 +27,7 @@ const SprkLabel = (props) => {
       })}
       data-id={idString}
       data-analytics={analyticsString}
+      ref={forwardedRef}
       {...rest}
     >
       {children}
@@ -75,6 +77,11 @@ SprkLabel.propTypes = {
    * supplied.
    */
   htmlFor: PropTypes.string,
+  /**
+   * A ref passed in will be attached to the label
+   * element of the rendered component.
+   */
+  forwardedRef: PropTypes.shape(),
 };
 
 SprkLabel.defaultProps = {

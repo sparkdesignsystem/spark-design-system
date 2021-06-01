@@ -19,6 +19,7 @@ const SprkCheckboxItem = (props) => {
     id,
     ariaDescribedBy,
     isVisibilityToggle,
+    forwardedRef,
     ...rest
   } = props;
   const internalId = uniqueId('sprk-checkbox-');
@@ -50,6 +51,7 @@ const SprkCheckboxItem = (props) => {
         onChange={onChangeFunc}
         type="checkbox"
         value={value}
+        ref={forwardedRef}
         {...rest}
       />
       <label
@@ -151,6 +153,11 @@ SprkCheckboxItem.propTypes = {
    * automated tools.
    */
   idString: PropTypes.string,
+  /**
+   * A ref passed in will be attached to the checkbox
+   * element of the rendered component.
+   */
+  forwardedRef: PropTypes.shape(),
 };
 
 export default SprkCheckboxItem;

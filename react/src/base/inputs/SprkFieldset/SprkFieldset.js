@@ -9,6 +9,7 @@ const SprkFieldset = (props) => {
     analyticsString,
     additionalClasses,
     ariaDescribedBy,
+    forwardedRef,
     ...other
   } = props;
 
@@ -18,6 +19,7 @@ const SprkFieldset = (props) => {
       data-analytics={analyticsString}
       data-id={idString}
       aria-describedby={ariaDescribedBy}
+      ref={forwardedRef}
       {...other}
     >
       {children}
@@ -51,6 +53,11 @@ SprkFieldset.propTypes = {
    * such as helper text or an error field.
    */
   ariaDescribedBy: PropTypes.string,
+  /**
+   * A ref passed in will be attached to the fieldset
+   * element of the rendered component.
+   */
+  forwardedRef: PropTypes.shape(),
 };
 
 export default SprkFieldset;
