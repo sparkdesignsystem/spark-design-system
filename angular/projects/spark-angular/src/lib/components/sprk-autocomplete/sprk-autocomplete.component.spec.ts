@@ -52,8 +52,8 @@ describe('SprkAutocompleteComponent', () => {
 
     component = fixture.debugElement.children[0].componentInstance;
 
-    resultsElement = fixture.nativeElement.querySelector('ul');
-    inputElement = fixture.nativeElement.querySelector('input');
+    resultsElement = component.results;
+    inputElement = component.input.ref;
 
     fixture.detectChanges();
   });
@@ -69,21 +69,21 @@ describe('SprkAutocompleteComponent', () => {
   it('should add the correct attributes in showResults', () => {
     component.hideResults();
     fixture.detectChanges();
-    expect(resultsElement.classList.toString()).toEqual(
+    expect(resultsElement.nativeElement.classList.toString()).toEqual(
       'sprk-c-Autocomplete__results--hidden sprk-c-Autocomplete__results',
     );
-    expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
-      'false',
-    );
+    expect(
+      inputElement.nativeElement.parentNode.getAttribute('aria-expanded'),
+    ).toEqual('false');
 
     component.showResults();
     fixture.detectChanges();
-    expect(resultsElement.classList.toString()).toEqual(
+    expect(resultsElement.nativeElement.classList.toString()).toEqual(
       'sprk-c-Autocomplete__results',
     );
-    expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
-      'true',
-    );
+    expect(
+      inputElement.nativeElement.parentNode.getAttribute('aria-expanded'),
+    ).toEqual('true');
   });
 
   it('should emit openedEvent when calling showResults if results exists', (done) => {
@@ -117,21 +117,21 @@ describe('SprkAutocompleteComponent', () => {
   it('should add the correct attributes in hideResults', () => {
     component.showResults();
     fixture.detectChanges();
-    expect(resultsElement.classList.toString()).toEqual(
+    expect(resultsElement.nativeElement.classList.toString()).toEqual(
       'sprk-c-Autocomplete__results',
     );
-    expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
-      'true',
-    );
+    expect(
+      inputElement.nativeElement.parentNode.getAttribute('aria-expanded'),
+    ).toEqual('true');
 
     component.hideResults();
     fixture.detectChanges();
-    expect(resultsElement.classList.toString()).toEqual(
+    expect(resultsElement.nativeElement.classList.toString()).toEqual(
       'sprk-c-Autocomplete__results sprk-c-Autocomplete__results--hidden',
     );
-    expect(inputElement.parentNode.getAttribute('aria-expanded')).toEqual(
-      'false',
-    );
+    expect(
+      inputElement.nativeElement.parentNode.getAttribute('aria-expanded'),
+    ).toEqual('false');
   });
 
   it('should emit closedEvent when calling hideResults if results exists', (done) => {

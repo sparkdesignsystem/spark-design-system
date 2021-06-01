@@ -313,16 +313,10 @@ export class SprkAutocompleteComponent
     this.calculateResultsWidth();
 
     // set aria-controls on the input to the id of the results
-    this.generateAriaControls(
-      this.input.ref.nativeElement,
-      this.results.nativeElement,
-    );
+    this.generateAriaControls(this.input.ref, this.results);
 
     // set aria-owns on the input's parent to the id of the results
-    this.generateAriaOwns(
-      this.inputContainer.ref.nativeElement,
-      this.results.nativeElement,
-    );
+    this.generateAriaOwns(this.inputContainer.ref, this.results);
   }
 
   /**
@@ -350,9 +344,14 @@ export class SprkAutocompleteComponent
    * @param triggerElement The element that will receive the aria-controls attribute.
    * @param contentElement The element that will receive an id if needed.
    */
-  generateAriaControls = (triggerElement, contentElement) => {
-    const triggerAriaControls = triggerElement.getAttribute('aria-controls');
-    let contentId = contentElement.getAttribute('id');
+  generateAriaControls = (
+    triggerElement: ElementRef,
+    contentElement: ElementRef,
+  ) => {
+    const triggerAriaControls = triggerElement.nativeElement.getAttribute(
+      'aria-controls',
+    );
+    let contentId = contentElement.nativeElement.getAttribute('id');
 
     // Do nothing if aria-controls exists but the id does not
     if (triggerAriaControls && !contentId) {
@@ -365,7 +364,11 @@ export class SprkAutocompleteComponent
     }
 
     // set the value of aria-controls
-    this.renderer.setAttribute(triggerElement, 'aria-controls', contentId);
+    this.renderer.setAttribute(
+      triggerElement.nativeElement,
+      'aria-controls',
+      contentId,
+    );
   };
 
   /**
@@ -374,9 +377,9 @@ export class SprkAutocompleteComponent
    * @param ownerElement The element that will receive the aria-owns attribute.
    * @param contentElement The element that will receive an id if needed.
    */
-  generateAriaOwns = (ownerElement, contentElement) => {
-    const ownerAriaOwns = ownerElement.getAttribute('aria-owns');
-    let contentId = contentElement.getAttribute('id');
+  generateAriaOwns = (ownerElement: ElementRef, contentElement: ElementRef) => {
+    const ownerAriaOwns = ownerElement.nativeElement.getAttribute('aria-owns');
+    let contentId = contentElement.nativeElement.getAttribute('id');
 
     // Do nothing if aria-owns exists but the id does not
     if (ownerAriaOwns && !contentId) {
@@ -389,6 +392,10 @@ export class SprkAutocompleteComponent
     }
 
     // set the value of aria-owns
-    this.renderer.setAttribute(ownerElement, 'aria-owns', contentId);
+    this.renderer.setAttribute(
+      ownerElement.nativeElement,
+      'aria-owns',
+      contentId,
+    );
   };
 }
