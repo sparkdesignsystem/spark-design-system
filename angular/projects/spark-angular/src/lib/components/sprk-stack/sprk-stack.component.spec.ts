@@ -30,61 +30,103 @@ describe('SprkStackComponent', () => {
   it('should set the correct class for itemSpacing', () => {
     component.itemSpacing = 'tiny';
     fixture.detectChanges();
-    expect(element.classList.contains('sprk-o-Stack--tiny')).toEqual(true);
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--tiny',
+    );
   });
 
   it('should set the correct class for itemSpacing', () => {
     component.itemSpacing = 'small';
     fixture.detectChanges();
-    expect(element.classList.contains('sprk-o-Stack--small')).toEqual(true);
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--small',
+    );
+  });
+
+  it('should add the stack item class if isStackItem is true', () => {
+    component.isStackItem = true;
+    fixture.detectChanges();
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack__item',
+    );
+  });
+
+  it('should not add the stack item class if isStackItem is false', () => {
+    component.isStackItem = false;
+    fixture.detectChanges();
+    expect(element.classList.toString()).toBe('sprk-o-Stack');
   });
 
   it('should set the correct class for itemSpacing', () => {
     component.itemSpacing = 'medium';
     fixture.detectChanges();
-    expect(element.classList.contains('sprk-o-Stack--medium')).toEqual(true);
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--medium',
+    );
   });
 
   it('should set the correct class for itemSpacing', () => {
     component.itemSpacing = 'large';
     fixture.detectChanges();
-    expect(element.classList.contains('sprk-o-Stack--large')).toEqual(true);
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--large',
+    );
   });
 
   it('should set the correct class for itemSpacing', () => {
     component.itemSpacing = 'huge';
     fixture.detectChanges();
-    expect(element.classList.contains('sprk-o-Stack--huge')).toEqual(true);
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--huge',
+    );
+  });
+
+  it('should set the correct class for splitAt', () => {
+    component.splitAt = 'extraTiny';
+    fixture.detectChanges();
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--split@xxs',
+    );
   });
 
   it('should set the correct class for splitAt', () => {
     component.splitAt = 'tiny';
     fixture.detectChanges();
-    expect(element.classList.contains('sprk-o-Stack--split@xs')).toEqual(true);
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--split@xs',
+    );
   });
 
   it('should set the correct class for splitAt', () => {
     component.splitAt = 'small';
     fixture.detectChanges();
-    expect(element.classList.contains('sprk-o-Stack--split@s')).toEqual(true);
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--split@s',
+    );
   });
 
   it('should set the correct class for splitAt', () => {
     component.splitAt = 'medium';
     fixture.detectChanges();
-    expect(element.classList.contains('sprk-o-Stack--split@m')).toEqual(true);
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--split@m',
+    );
   });
 
   it('should set the correct class for splitAt', () => {
     component.splitAt = 'large';
     fixture.detectChanges();
-    expect(element.classList.contains('sprk-o-Stack--split@l')).toEqual(true);
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--split@l',
+    );
   });
 
   it('should set the correct class for splitAt', () => {
     component.splitAt = 'huge';
     fixture.detectChanges();
-    expect(element.classList.contains('sprk-o-Stack--split@xl')).toEqual(true);
+    expect(element.classList.toString()).toBe(
+      'sprk-o-Stack sprk-o-Stack--split@xl',
+    );
   });
 
   it('should add the correct classes if additionalClasses have values', () => {
