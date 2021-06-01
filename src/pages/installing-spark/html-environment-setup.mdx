@@ -138,12 +138,15 @@ with Webpack:
 
 ``` json
 "scripts": {
-  "build": "webpack"
+  "build": "webpack --mode='development'"
 },
 ```
 
 Webpack will combine all JavaScript into a single
 file called `main.js`, so we'll need to reference that instead of `index.js`.
+
+> The `--mode='development'` flag is so Webpack knows what configuration to build with.
+Change this as needed for your project.
 
 3. In `index.html` change the `<script>` that's using `index.js` to `main.js`.
 
