@@ -143,6 +143,7 @@ class SprkTooltip extends Component {
       triggerIconType,
       triggerIconName,
       iconAdditionalClasses,
+      containerAdditionalClasses,
       additionalClasses,
       verticalAlignment,
       analyticsString,
@@ -172,13 +173,17 @@ class SprkTooltip extends Component {
       <span
         {...other}
         data-id={idString}
-        className={classnames('sprk-c-Tooltip__container', {
-          'sprk-c-Tooltip__container--top': verticalAlignment === 'top',
-          'sprk-c-Tooltip__container--middle': verticalAlignment === 'middle',
-          'sprk-c-Tooltip__container--bottom': verticalAlignment === 'bottom',
-          'sprk-c-Tooltip__container--baseline':
-            verticalAlignment === 'baseline',
-        })}
+        className={classnames(
+          'sprk-c-Tooltip__container',
+          containerAdditionalClasses,
+          {
+            'sprk-c-Tooltip__container--top': verticalAlignment === 'top',
+            'sprk-c-Tooltip__container--middle': verticalAlignment === 'middle',
+            'sprk-c-Tooltip__container--bottom': verticalAlignment === 'bottom',
+            'sprk-c-Tooltip__container--baseline':
+              verticalAlignment === 'baseline',
+          },
+        )}
       >
         <button
           type="button"
@@ -230,6 +235,11 @@ SprkTooltip.propTypes = {
    * element.
    */
   additionalClasses: PropTypes.string,
+  /**
+   * Expects a space separated string of classes to be added to the Tooltip's
+   * container.
+   */
+  containerAdditionalClasses: PropTypes.string,
   /**
    * The value supplied will be assigned to the `data-analytics` attribute on
    * the trigger element. Intended for an outside library to capture data.

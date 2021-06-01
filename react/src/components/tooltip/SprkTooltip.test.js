@@ -39,6 +39,11 @@ describe('SprkTooltip:', () => {
     expect(wrapper.find('.sprk-c-Tooltip.spork').length).toBe(1);
   });
 
+  it('should add containderAdditionalClasses', () => {
+    const wrapper = mount(<SprkTooltip containerAdditionalClasses="spork" />);
+    expect(wrapper.find('.sprk-c-Tooltip__container.spork').length).toBe(1);
+  });
+
   it('should add vertical align top class', () => {
     const wrapper = mount(<SprkTooltip verticalAlignment="top" />);
     expect(wrapper.find('.sprk-c-Tooltip__container--top').length).toBe(1);
