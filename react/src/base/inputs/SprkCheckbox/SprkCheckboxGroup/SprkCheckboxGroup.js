@@ -1,85 +1,230 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import uniqueId from 'lodash/uniqueId';
-import addPropsToMatchingComponents from '../../../../utilities/helpers/addPropsToMatchingComponents/addPropsToMatchingComponents';
+import SprkErrorContainer from '../../SprkErrorContainer/SprkErrorContainer';
+import SprkFieldError from '../../SprkFieldError/SprkFieldError';
+import SprkHelperText from '../../SprkHelperText/SprkHelperText';
+import SprkFieldset from '../../SprkFieldset/SprkFieldset';
 
-const SprkCheckboxGroup = (props) => {
-  const {
-    children,
-    variant,
-    idString,
-    additionalClasses,
-    analyticsString,
-  } = props;
-
-  let errorId = null;
-  let helperId = null;
-  let hasErrorContainer = false;
-  let hasHelperText = false;
-
-  const childrenArray = React.Children.toArray(children);
-  // Map through children, assign SprkErrorContainer with id/uniqueId
-  // Assign errorId which will determine the ariaDescribedBy of SprkCheckboxItem
-  const elementsToProcess = childrenArray.map((element) => {
-    if (element.type.name === 'SprkErrorContainer') {
-      hasErrorContainer = true;
-      errorId = element.props.id || uniqueId('sprk-error-container-');
-      return React.cloneElement(element, { id: errorId });
-    }
-
-    if (element.type.name === 'SprkHelperText') {
-      hasHelperText = true;
-      helperId = element.props.id || uniqueId('sprk-helper-text-');
-      return React.cloneElement(element, { id: helperId });
-    }
-    return element;
-  });
-
-  // For each element, if it has grandChildren, add ariaDescribedBy to those
-  let key = 0;
-  let elementsToRender = elementsToProcess;
-  if (hasErrorContainer || hasHelperText) {
-    elementsToRender = elementsToProcess.map((element) => {
-      key += 1;
-      let grandChildren = null;
-      if (element.props.children) {
-        grandChildren = addPropsToMatchingComponents(
-          element.props.children,
-          ['SprkCheckboxItem'],
-          {
-            ariaDescribedBy: [helperId, errorId].join(' '),
-          },
-        );
-      }
-
-      if (element.type.name === 'SprkCheckboxItem') {
-        return React.cloneElement(element, {
-          ariaDescribedBy: [helperId, errorId].join(' '),
-          key: `sprk-checkbox-item-${key}`,
-          children: grandChildren || element.children,
-        });
-      }
-
-      return React.cloneElement(element, {
-        key: `sprk-checkbox-outer-item-${key}`,
-        children: grandChildren || element.children,
-      });
-    });
+class SprkCheckboxGroup extends Component {
+  constructor(props) {
+    super(props);
+    this.renderChildren = this.renderChildren.bind(this);
   }
 
-  return (
-    <div
-      className={classnames('sprk-b-InputContainer', additionalClasses, {
-        'sprk-b-InputContainer--huge': variant === 'huge',
-      })}
-      data-analytics={analyticsString}
-      data-id={idString}
-    >
-      {elementsToRender}
-    </div>
-  );
-};
+  /**
+   * A function that is run when the component renders.
+   * It processes and updates the children & grandchildren that
+   * are passed into the SprkCheckboxGroup to add necessary
+   * a11y considerations.
+   * `ariaDescribedby` is checked and updated on the SprkFieldset
+   * element to include the `id` of the `SprkHelperText`,
+   * `SprkFieldError`, and `SprkErrorContainer` if present among
+   * the children and grandchildren.
+   * @returns {object} Processed and updated children elements
+   */
+  renderChildren() {
+    const { children } = this.props;
+    let errorContainerID;
+    let helperTextID;
+    let ariaDescribedByArray = [];
+    let fieldsetAriaDescribedBy;
+
+    /*
+     * Checks each child element and grandchild element to
+     * store the provided `ariaDescribedby` on the SprkFieldset,
+     * `id` of the SprkFieldError, SprkErrorContainer,
+     * and SprkHelperText in variables for processing.
+     */
+    React.Children.forEach(children, (child) => {
+      /**
+       * If the child element is a SprkFieldset, then the
+       * `ariaDescribedBy` is stored for later use.
+       */
+      if (child.type && child.type.name === SprkFieldset.name) {
+        fieldsetAriaDescribedBy = child.props.ariaDescribedBy;
+      }
+      /**
+       * If the child element is a SprkFieldError or SprkErrorContainer,
+       * then the `id` is stored for later use.
+       */
+      if (
+        child.type &&
+        (child.type.name === SprkFieldError.name ||
+          child.type.name === SprkErrorContainer.name)
+      ) {
+        errorContainerID = child.props.id;
+      }
+      /**
+       * If the child element is a SprkHelperText,
+       * then the `id` is stored for later use.
+       */
+      if (child.type && child.type.name === SprkHelperText.name) {
+        helperTextID = child.props.id;
+      }
+      /**
+       * If the child element has it's own children,
+       * check the grandchildren to get the necessary values.
+       */
+      if (child.props && child.props.children) {
+        React.Children.forEach(child.props.children, (grandchild) => {
+          /**
+           * If the grandchild element is a SprkFieldset, then the
+           * `ariaDescribedBy` is stored for later use.
+           */
+          if (grandchild.type && grandchild.type.name === SprkFieldset.name) {
+            fieldsetAriaDescribedBy = grandchild.props.ariaDescribedBy;
+          }
+          /**
+           * If the grandchild element is a SprkFieldError or
+           * SprkErrorContainer, then the `id` is stored for later use.
+           */
+          if (
+            grandchild.type &&
+            (grandchild.type.name === SprkFieldError.name ||
+              grandchild.type.name === SprkErrorContainer.name)
+          ) {
+            errorContainerID = grandchild.props.id;
+          }
+          /**
+           * If the grandchild element is a SprkHelperText,
+           * then the `id` is stored for later use.
+           */
+          if (grandchild.type && grandchild.type.name === SprkHelperText.name) {
+            helperTextID = grandchild.props.id;
+          }
+        });
+      }
+    });
+    /**
+     * If there is a SprkHelperText, SprkFieldError, or SprkErrorContainer
+     * present in the children elements then start the `ariaDescribedBy`
+     * processing.
+     */
+    if (helperTextID || errorContainerID) {
+      /**
+       * If an `ariaDescribedBy` was provided on the SprkFieldset,
+       * then split the string into an array.
+       */
+      if (fieldsetAriaDescribedBy) {
+        ariaDescribedByArray = fieldsetAriaDescribedBy.split(' ');
+      }
+      /**
+       * If there is a SprkHelperText element present and the `id` is not
+       * present in the SprkFieldset's `ariaDescribedBy` array, add it.
+       */
+      if (helperTextID && !ariaDescribedByArray.includes(helperTextID)) {
+        ariaDescribedByArray.push(helperTextID);
+      }
+      /**
+       * If there is a SprkFieldError or SprkErrorContainer element present
+       * and the `id` is not present in the SprkFieldset's `ariaDescribedBy`
+       * array, add it.
+       */
+      if (
+        errorContainerID &&
+        !ariaDescribedByArray.includes(errorContainerID)
+      ) {
+        ariaDescribedByArray.push(errorContainerID);
+      }
+      /**
+       * Once the necessary values have been added to the `ariaDescribedBy`
+       * array, rejoin the values to make a string that will be passed to the
+       * SprkFieldset prop.
+       */
+      fieldsetAriaDescribedBy = ariaDescribedByArray.join(' ');
+    }
+    /*
+     * If there is an `fieldsetAriaDescribedBy` value map through
+     * the children to update the SprkFieldset `ariaDescribedBy` prop.
+     */
+    if (fieldsetAriaDescribedBy) {
+      const childrenElements = React.Children.map(children, (child) => {
+        /**
+         * If the child element is a SprkFieldset, then clone the child
+         * element and update the `ariaDescribedBy` prop with the correct value.
+         */
+        if (child.type && child.type.name === SprkFieldset.name) {
+          return React.cloneElement(child, {
+            ariaDescribedBy: fieldsetAriaDescribedBy,
+          });
+        }
+        /**
+         * If the child element has it's own children,
+         * map the grandchildren to update the values.
+         */
+        if (child.props.children) {
+          const grandchildrenElements = React.Children.map(
+            child.props.children,
+            (grandchild) => {
+              /**
+               * If the grandchild element is a SprkFieldset,
+               * then clone the grandchild element and update
+               * the `ariaDescribedBy` prop with the correct value.
+               */
+              if (
+                grandchild.type &&
+                grandchild.type.name === SprkFieldset.name
+              ) {
+                return React.cloneElement(grandchild, {
+                  ariaDescribedBy: fieldsetAriaDescribedBy,
+                });
+              }
+              /**
+               * If the grandchild element does not need to be updated
+               * with the `ariaDescribedBy` criteria,
+               * return it without updating any props.
+               */
+              return grandchild;
+            },
+          );
+          /**
+           * If there were grandchildren, return the child with the
+           * processed grandchildren elements.
+           */
+          return React.cloneElement(child, {
+            children: grandchildrenElements,
+          });
+        }
+        /**
+         * If the child element does not need to be updated
+         * with the `ariaDescribedBy` criteria,
+         * return it without updating any props.
+         */
+        return child;
+      });
+      /**
+       * Return the child elements to be rendered.
+       */
+      return childrenElements;
+    }
+    /** Return other elements. ex. <div> */
+    return children;
+  }
+
+  render() {
+    const {
+      variant,
+      idString,
+      additionalClasses,
+      analyticsString,
+      ...rest
+    } = this.props;
+
+    return (
+      <div
+        className={classnames('sprk-b-InputContainer', additionalClasses, {
+          'sprk-b-InputContainer--huge': variant === 'huge',
+        })}
+        data-analytics={analyticsString}
+        data-id={idString}
+        {...rest}
+      >
+        {this.renderChildren()}
+      </div>
+    );
+  }
+}
 
 SprkCheckboxGroup.propTypes = {
   /** Content to render inside of the component. */

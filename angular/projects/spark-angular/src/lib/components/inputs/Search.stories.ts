@@ -62,7 +62,6 @@ export const searchInput = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label
           for="search"
-          hasIcon="true"
           isHidden="true"
           sprkLabel
         >
@@ -108,7 +107,6 @@ export const invalidSearchInput = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label
           for="invalid-search"
-          hasIcon="true"
           isHidden="true"
           sprkLabel
         >
@@ -165,7 +163,6 @@ export const disabledSearchInput = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label
           for="disabled-search"
-          hasIcon="true"
           isHidden="true"
           isDisabled="true"
           sprkLabel
@@ -212,7 +209,7 @@ export const legacyStory = () => ({
     <sprk-icon-input-container>
       <label
         for="legacy-search"
-        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+        class="sprk-u-ScreenReaderText"
         sprkLabel
       >
         Search
@@ -255,7 +252,7 @@ export const legacyInvalidSearchInput = () => ({
     <sprk-icon-input-container>
       <label
         for="legacy-invalid-search"
-        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+        class="sprk-u-ScreenReaderText"
         sprkLabel
       >
         Search
@@ -309,7 +306,7 @@ export const legacyDisabledSearchInput = () => ({
     <sprk-icon-input-container>
       <label
         for="legacy-disabled-search"
-        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText sprk-b-Label--disabled"
+        class="sprk-u-ScreenReaderText sprk-b-Label--disabled"
         sprkLabel
       >
         Search

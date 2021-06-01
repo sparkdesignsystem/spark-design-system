@@ -23,7 +23,7 @@ export const helperText = () =>
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="text-input-helper"
         data-id="text-input-helper"
         type="text"
@@ -58,7 +58,7 @@ export const invalidHelperText = () =>
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
+        class="sprk-b-TextInput sprk-b-TextInput--error"
         id="text-input-helper"
         data-id="text-input-helper"
         type="text"
