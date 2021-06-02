@@ -9,7 +9,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
-import { throttle } from 'lodash';
+import * as _ from 'lodash';
 import { SprkMastheadNavCollapsibleDirective } from './directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
 import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-branding/sprk-masthead-branding.directive';
 import { isElementVisible } from '../../utilities/isElementVisible/isElementVisible';
@@ -150,12 +150,12 @@ export class SprkMastheadComponent implements AfterViewInit {
    * Throttles the updateScrollDirection function to prevent
    * it from impacting performance.
    */
-  throttledUpdateScrollDirection = throttle(this.updateScrollDirection, 500);
+  throttledUpdateScrollDirection = _.throttle(this.updateScrollDirection, 500);
   /**
    * Throttles the updateLayoutState function to prevent
    * it from impacting performance.
    */
-  throttledUpdateLayoutState = throttle(this.updateLayoutState, 500);
+  throttledUpdateLayoutState = _.throttle(this.updateLayoutState, 500);
 
   /**
    * Updates the scroll direction when the page is scrolled.
