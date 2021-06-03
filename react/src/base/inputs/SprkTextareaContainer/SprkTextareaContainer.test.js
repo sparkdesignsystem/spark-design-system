@@ -328,6 +328,20 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
       wrapper.find('textarea').getDOMNode().getAttribute('aria-describedby'),
     ).toBe(null);
   });
+
+  it(`should not update the children if the child is null`, () => {
+    const wrapper = mount(
+      <SprkTextareaContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkTextarea />
+        {false && <div />}
+      </SprkTextareaContainer>,
+    );
+
+    expect(
+      wrapper.find('textarea').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
 });
 describe('SprkTextareaContainer Additional Elements Tests:', () => {
   it('should allow other elements to be passed through', () => {
