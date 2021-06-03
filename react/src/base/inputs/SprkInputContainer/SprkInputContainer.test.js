@@ -682,7 +682,38 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
     ).toBe(null);
   });
+
+  it(`should not update the children if the child is null`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput />
+        {false && <div />}
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
+
+  it(`should not update the grandchildren if the grandchild is null`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <div className="sprk-b-InputContainer__icon-container">
+          <SprkLabel>Input Label</SprkLabel>
+          <SprkInput />
+          {false && <div />}
+        </div>
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
 });
+
 describe('SprkInputContainer Additional Elements Tests:', () => {
   it('should allow other elements to be passed through', () => {
     const wrapper = mount(

@@ -521,6 +521,96 @@ describe('SprkRadioGroup:', () => {
     ).toBe(null);
   });
 
+  it(`should not update the children if the child is null`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkFieldset>
+          <SprkLegend>Radio Group Label</SprkLegend>
+          <SprkRadioItem>Radio Item 1</SprkRadioItem>
+          <SprkRadioItem>Radio Item 2</SprkRadioItem>
+          <SprkRadioItem>Radio Item 3</SprkRadioItem>
+        </SprkFieldset>
+        {false && <div />}
+      </SprkRadioGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
+
+  it(`should not update the grandchildren if the grandchild is null`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <div>
+          <SprkFieldset>
+            <SprkLegend>Radio Group Label</SprkLegend>
+            <SprkRadioItem>Radio Item 1</SprkRadioItem>
+            <SprkRadioItem>Radio Item 2</SprkRadioItem>
+            <SprkRadioItem>Radio Item 3</SprkRadioItem>
+          </SprkFieldset>
+          {false && <div />}
+        </div>
+      </SprkRadioGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
+
+  it(`should not update the children if the child 
+  is null and the fieldset has an aria-describedby`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <SprkFieldset ariaDescribedBy="test">
+          <SprkLegend>Radio Group Label</SprkLegend>
+          <SprkRadioItem>Radio Item 1</SprkRadioItem>
+          <SprkRadioItem>Radio Item 2</SprkRadioItem>
+          <SprkRadioItem>Radio Item 3</SprkRadioItem>
+        </SprkFieldset>
+        {false && <div />}
+      </SprkRadioGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('test');
+  });
+
+  it(`should not update the grandchildren if the grandchild 
+  is null and the fieldset has an aria-describedby`, () => {
+    const wrapper = mount(
+      <SprkRadioGroup>
+        <div>
+          <SprkFieldset ariaDescribedBy="test">
+            <SprkLegend>Radio Group Label</SprkLegend>
+            <SprkRadioItem>Radio Item 1</SprkRadioItem>
+            <SprkRadioItem>Radio Item 2</SprkRadioItem>
+            <SprkRadioItem>Radio Item 3</SprkRadioItem>
+          </SprkFieldset>
+          {false && <div />}
+        </div>
+      </SprkRadioGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('test');
+  });
+
   it('should pass through additional attributes', () => {
     const wrapper = shallow(<SprkRadioGroup data-my-attr="testing" />);
     expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);

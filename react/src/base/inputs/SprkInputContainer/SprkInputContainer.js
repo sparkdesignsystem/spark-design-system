@@ -44,6 +44,15 @@ class SprkInputContainer extends Component {
      */
     React.Children.forEach(children, (child) => {
       /**
+       * Add this check in case the child is being
+       * conditionally rendered.
+       * If the child is not rendered but returns a React fragment the
+       * child will return null and break without this check.
+       */
+      if (child === null) {
+        return;
+      }
+      /**
        * If the child element is a `SprkInput`, then the `id`
        * & `ariaDescribedBy` are stored for later use.
        */
@@ -80,8 +89,8 @@ class SprkInputContainer extends Component {
         helperTextID = child.props.id;
       }
       /**
-       * If the child element has it's own children and it's an icon-container,
-       * check the grandchildren to get the necessary values.
+       * If the child element has it's own children and it's an
+       * icon-container, check the grandchildren to get the necessary values.
        */
       if (
         child.props.children &&
@@ -89,6 +98,15 @@ class SprkInputContainer extends Component {
         child.props.className.includes('sprk-b-InputContainer__icon-container')
       ) {
         React.Children.forEach(child.props.children, (grandchild) => {
+          /**
+           * Add this check in case the child is being
+           * conditionally rendered.
+           * If the child is not rendered but returns a React fragment the
+           * grandchild will return null and break without this check.
+           */
+          if (grandchild === null) {
+            return;
+          }
           /**
            * If the grandchild element is a `SprkInput`, then the `id`
            * & `ariaDescribedBy` are stored for later use.
@@ -154,6 +172,15 @@ class SprkInputContainer extends Component {
      */
     if (id && labelFor && id.length > 0 && labelFor.length > 0) {
       const childrenElements = React.Children.map(children, (child) => {
+        /**
+         * Add this check in case the child is being
+         * conditionally rendered.
+         * If the child is not rendered but returns a React fragment the
+         * child will return null and break without this check.
+         */
+        if (child === null) {
+          return child;
+        }
         /*
          * If the `SprkLabel` `htmlFor` and the `input` `id`
          * are mismatching, use the `id`
@@ -189,6 +216,15 @@ class SprkInputContainer extends Component {
           const grandchildrenElements = React.Children.map(
             child.props.children,
             (grandchild) => {
+              /**
+               * Add this check in case the child is being
+               * conditionally rendered.
+               * If the child is not rendered but returns a React fragment the
+               * grandchild will return null and break without this check.
+               */
+              if (grandchild === null) {
+                return grandchild;
+              }
               /*
                * If the grandchild is a `SprkLabel` and the `htmlFor` and
                * the `input` `id` are mismatching, use the `id`

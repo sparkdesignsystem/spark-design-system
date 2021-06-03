@@ -38,6 +38,15 @@ class SprkCheckboxGroup extends Component {
      */
     React.Children.forEach(children, (child) => {
       /**
+       * Add this check in case the child is being
+       * conditionally rendered.
+       * If the child is not rendered but returns a React fragment the
+       * child will return null and break without this check.
+       */
+      if (child === null) {
+        return;
+      }
+      /**
        * If the child element is a SprkFieldset, then the
        * `ariaDescribedBy` is stored for later use.
        */
@@ -68,6 +77,15 @@ class SprkCheckboxGroup extends Component {
        */
       if (child.props && child.props.children) {
         React.Children.forEach(child.props.children, (grandchild) => {
+          /**
+           * Add this check in case the grandchild is being
+           * conditionally rendered.
+           * If the grandchild is not rendered but returns a React fragment the
+           * grandchild will return null and break without this check.
+           */
+          if (grandchild === null) {
+            return;
+          }
           /**
            * If the grandchild element is a SprkFieldset, then the
            * `ariaDescribedBy` is stored for later use.
@@ -141,6 +159,15 @@ class SprkCheckboxGroup extends Component {
     if (fieldsetAriaDescribedBy) {
       const childrenElements = React.Children.map(children, (child) => {
         /**
+         * Add this check in case the child is being
+         * conditionally rendered.
+         * If the child is not rendered but returns a React fragment the
+         * child will return null and break without this check.
+         */
+        if (child === null) {
+          return child;
+        }
+        /**
          * If the child element is a SprkFieldset, then clone the child
          * element and update the `ariaDescribedBy` prop with the correct value.
          */
@@ -157,6 +184,15 @@ class SprkCheckboxGroup extends Component {
           const grandchildrenElements = React.Children.map(
             child.props.children,
             (grandchild) => {
+              /**
+               * Add this check in case the grandchild is being
+               * conditionally rendered.
+               * If the grandchild is not rendered but returns a React fragment
+               * the grandchild will return null and break without this check.
+               */
+              if (grandchild === null) {
+                return grandchild;
+              }
               /**
                * If the grandchild element is a SprkFieldset,
                * then clone the grandchild element and update

@@ -44,6 +44,15 @@ class SprkTextareaContainer extends Component {
      */
     React.Children.forEach(children, (child) => {
       /**
+       * Add this check in case the child is being
+       * conditionally rendered.
+       * If the child is not rendered but returns a React fragment the
+       * child will return null and break without this check.
+       */
+      if (child === null) {
+        return;
+      }
+      /**
        * If the child element is a SprkTextarea, then the `id`
        * & `ariaDescribedby` are stored for later use.
        */
@@ -119,6 +128,15 @@ class SprkTextareaContainer extends Component {
 
     if (id && labelFor && id.length > 0 && labelFor.length > 0) {
       const childrenElements = React.Children.map(children, (child) => {
+        /**
+         * Add this check in case the child is being
+         * conditionally rendered.
+         * If the child is not rendered but returns a React fragment the
+         * child will return null and break without this check.
+         */
+        if (child === null) {
+          return child;
+        }
         /*
          * If the SprkLabel `htmlFor` and the textarea `id`
          * are mismatching, use the `id`
