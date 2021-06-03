@@ -44,67 +44,85 @@ class SprkInputContainer extends Component {
      */
     React.Children.forEach(children, (child) => {
       /**
-       * If the child element is a `SprkInput`, then the `id`
-       * & `ariaDescribedBy` are stored for later use.
+       * Add this check in case the child is being
+       * conditionally rendered.
+       * If the child is not rendered but returns a React fragment the
+       * child will return null and break without this check.
        */
-      if (isSprkInput(child)) {
-        id = child.props.id;
-        inputAriaDescribedBy = child.props.ariaDescribedBy;
-      }
-      /**
-       * If the child element is a `SprkLabel`, then the `htmlFor`
-       * is stored for later use.
-       */
-      if (child.type && child.type.name === SprkLabel.name) {
-        labelFor = child.props.htmlFor;
-      }
-      /**
-       * If the child element is a `SprkFieldError` or `SprkErrorContainer`,
-       * then the `id` is stored for later use.
-       * `SprkFieldError` is the newer, preferred component and
-       * `SprkErrorContainer` is going to be deprecated. If they are both
-       * present, then `SprkFieldError` will take precedent.
-       */
-      if (
-        child.type &&
-        (child.type.name === SprkFieldError.name ||
-          child.type.name === SprkErrorContainer.name)
-      ) {
-        errorContainerID = child.props.id;
-      }
-      /**
-       * If the child element is a `SprkHelperText`,
-       * then the `id` is stored for later use.
-       */
-      if (child.type && child.type.name === SprkHelperText.name) {
-        helperTextID = child.props.id;
-      }
-      /**
-       * If the child element has it's own children and it's an icon-container,
-       * check the grandchildren to get the necessary values.
-       */
-      if (
-        child.props.children &&
-        child.props.className &&
-        child.props.className.includes('sprk-b-InputContainer__icon-container')
-      ) {
-        React.Children.forEach(child.props.children, (grandchild) => {
-          /**
-           * If the grandchild element is a `SprkInput`, then the `id`
-           * & `ariaDescribedBy` are stored for later use.
-           */
-          if (isSprkInput(grandchild)) {
-            id = grandchild.props.id;
-            inputAriaDescribedBy = grandchild.props.ariaDescribedBy;
-          }
-          /**
-           * If the grandchild element is a `SprkLabel`, then the `htmlFor`
-           * is stored for later use.
-           */
-          if (grandchild.type && grandchild.type.name === SprkLabel.name) {
-            labelFor = grandchild.props.htmlFor;
-          }
-        });
+      if (child !== null) {
+        /**
+         * If the child element is a `SprkInput`, then the `id`
+         * & `ariaDescribedBy` are stored for later use.
+         */
+        if (isSprkInput(child)) {
+          id = child.props.id;
+          inputAriaDescribedBy = child.props.ariaDescribedBy;
+        }
+        /**
+         * If the child element is a `SprkLabel`, then the `htmlFor`
+         * is stored for later use.
+         */
+        if (child.type && child.type.name === SprkLabel.name) {
+          labelFor = child.props.htmlFor;
+        }
+        /**
+         * If the child element is a `SprkFieldError` or `SprkErrorContainer`,
+         * then the `id` is stored for later use.
+         * `SprkFieldError` is the newer, preferred component and
+         * `SprkErrorContainer` is going to be deprecated. If they are both
+         * present, then `SprkFieldError` will take precedent.
+         */
+        if (
+          child.type &&
+          (child.type.name === SprkFieldError.name ||
+            child.type.name === SprkErrorContainer.name)
+        ) {
+          errorContainerID = child.props.id;
+        }
+        /**
+         * If the child element is a `SprkHelperText`,
+         * then the `id` is stored for later use.
+         */
+        if (child.type && child.type.name === SprkHelperText.name) {
+          helperTextID = child.props.id;
+        }
+        /**
+         * If the child element has it's own children and it's an
+         * icon-container, check the grandchildren to get the necessary values.
+         */
+        if (
+          child.props.children &&
+          child.props.className &&
+          child.props.className.includes(
+            'sprk-b-InputContainer__icon-container',
+          )
+        ) {
+          React.Children.forEach(child.props.children, (grandchild) => {
+            /**
+             * Add this check in case the child is being
+             * conditionally rendered.
+             * If the child is not rendered but returns a React fragment the
+             * grandchild will return null and break without this check.
+             */
+            if (grandchild !== null) {
+              /**
+               * If the grandchild element is a `SprkInput`, then the `id`
+               * & `ariaDescribedBy` are stored for later use.
+               */
+              if (isSprkInput(grandchild)) {
+                id = grandchild.props.id;
+                inputAriaDescribedBy = grandchild.props.ariaDescribedBy;
+              }
+              /**
+               * If the grandchild element is a `SprkLabel`, then the `htmlFor`
+               * is stored for later use.
+               */
+              if (grandchild.type && grandchild.type.name === SprkLabel.name) {
+                labelFor = grandchild.props.htmlFor;
+              }
+            }
+          });
+        }
       }
     });
     /**
@@ -154,83 +172,104 @@ class SprkInputContainer extends Component {
      */
     if (id && labelFor && id.length > 0 && labelFor.length > 0) {
       const childrenElements = React.Children.map(children, (child) => {
-        /*
-         * If the `SprkLabel` `htmlFor` and the `input` `id`
-         * are mismatching, use the `id`
-         * value to set the `htmlFor` attribute on the `SprkLabel`.
-         */
-        if (id !== labelFor && child.type.name === SprkLabel.name) {
-          return React.cloneElement(child, {
-            htmlFor: id,
-          });
-        }
-
-        /*
-         * If there is an `inputAriaDescribedBy` value and the child element
-         * is a `SprkInput`, then clone the child element and update the
-         * `ariaDescribedBy` prop with the correct value.
-         */
-        if (inputAriaDescribedBy && isSprkInput(child)) {
-          return React.cloneElement(child, {
-            ariaDescribedBy: inputAriaDescribedBy,
-          });
-        }
         /**
-         * If the child element has it's own children and it's an
-         * icon-container, map the grandchildren to update the values.
+         * Add this check in case the child is being
+         * conditionally rendered.
+         * If the child is not rendered but returns a React fragment the
+         * child will return null and break without this check.
          */
-        if (
-          child.props.children &&
-          child.props.className &&
-          child.props.className.includes(
-            'sprk-b-InputContainer__icon-container',
-          )
-        ) {
-          const grandchildrenElements = React.Children.map(
-            child.props.children,
-            (grandchild) => {
-              /*
-               * If the grandchild is a `SprkLabel` and the `htmlFor` and
-               * the `input` `id` are mismatching, use the `id`
-               * value to set the `htmlFor` attribute on the `SprkLabel`.
-               */
-              if (id !== labelFor && grandchild.type.name === SprkLabel.name) {
-                return React.cloneElement(grandchild, {
-                  htmlFor: id,
-                });
-              }
-              /*
-               * If there is an `inputAriaDescribedBy` value and
-               * the grandchild element is a `SprkInput`, then clone
-               * the grandchild element and update the `ariaDescribedBy`
-               * prop with the correct value.
-               */
-              if (inputAriaDescribedBy && isSprkInput(grandchild)) {
-                return React.cloneElement(grandchild, {
-                  ariaDescribedBy: inputAriaDescribedBy,
-                });
-              }
-              /**
-               * If the grandchild element does not need to be updated
-               * with the `id`, `htmlFor` or `ariaDescribedBy` criteria,
-               * return it without updating any props.
-               */
-              return grandchild;
-            },
-          );
-          /**
-           * If there was an icon-container, return the grandchildren
-           * elements that were mapped through.
+        if (child !== null) {
+          /*
+           * If the `SprkLabel` `htmlFor` and the `input` `id`
+           * are mismatching, use the `id`
+           * value to set the `htmlFor` attribute on the `SprkLabel`.
            */
-          return React.cloneElement(child, {
-            children: grandchildrenElements,
-          });
+          if (id !== labelFor && child.type.name === SprkLabel.name) {
+            return React.cloneElement(child, {
+              htmlFor: id,
+            });
+          }
+
+          /*
+           * If there is an `inputAriaDescribedBy` value and the child element
+           * is a `SprkInput`, then clone the child element and update the
+           * `ariaDescribedBy` prop with the correct value.
+           */
+          if (inputAriaDescribedBy && isSprkInput(child)) {
+            return React.cloneElement(child, {
+              ariaDescribedBy: inputAriaDescribedBy,
+            });
+          }
+          /**
+           * If the child element has it's own children and it's an
+           * icon-container, map the grandchildren to update the values.
+           */
+          if (
+            child.props.children &&
+            child.props.className &&
+            child.props.className.includes(
+              'sprk-b-InputContainer__icon-container',
+            )
+          ) {
+            const grandchildrenElements = React.Children.map(
+              child.props.children,
+              (grandchild) => {
+                /**
+                 * Add this check in case the child is being
+                 * conditionally rendered.
+                 * If the child is not rendered but returns a React fragment the
+                 * grandchild will return null and break without this check.
+                 */
+                if (grandchild !== null) {
+                  /*
+                   * If the grandchild is a `SprkLabel` and the `htmlFor` and
+                   * the `input` `id` are mismatching, use the `id`
+                   * value to set the `htmlFor` attribute on the `SprkLabel`.
+                   */
+                  if (
+                    id !== labelFor &&
+                    grandchild.type.name === SprkLabel.name
+                  ) {
+                    return React.cloneElement(grandchild, {
+                      htmlFor: id,
+                    });
+                  }
+                  /*
+                   * If there is an `inputAriaDescribedBy` value and
+                   * the grandchild element is a `SprkInput`, then clone
+                   * the grandchild element and update the `ariaDescribedBy`
+                   * prop with the correct value.
+                   */
+                  if (inputAriaDescribedBy && isSprkInput(grandchild)) {
+                    return React.cloneElement(grandchild, {
+                      ariaDescribedBy: inputAriaDescribedBy,
+                    });
+                  }
+                  /**
+                   * If the grandchild element does not need to be updated
+                   * with the `id`, `htmlFor` or `ariaDescribedBy` criteria,
+                   * return it without updating any props.
+                   */
+                  return grandchild;
+                }
+                return grandchild;
+              },
+            );
+            /**
+             * If there was an icon-container, return the grandchildren
+             * elements that were mapped through.
+             */
+            return React.cloneElement(child, {
+              children: grandchildrenElements,
+            });
+          }
+          /**
+           * If the child element does not need to be updated
+           * with the `id`, `htmlFor` or `ariaDescribedBy` criteria,
+           * return it without updating any props.
+           */
+          return child;
         }
-        /**
-         * If the child element does not need to be updated
-         * with the `id`, `htmlFor` or `ariaDescribedBy` criteria,
-         * return it without updating any props.
-         */
         return child;
       });
       /**
