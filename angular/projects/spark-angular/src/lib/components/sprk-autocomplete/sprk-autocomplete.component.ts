@@ -293,6 +293,28 @@ export class SprkAutocompleteComponent
     }
 
     // if itemSelectedEvent is specified, also set that as the click event on each result
+    // if (this.itemSelectedEvent) {
+    //   this.resultItems.forEach((element) => {
+    //     element.clickedEvent = this.itemSelectedEvent;
+    //   });
+    // }
+  }
+
+  ngAfterContentChecked() {
+    const currentResultsCount = this.resultItems.length;
+    const newResultsCount = this.results.nativeElement.getElementsByClassName(
+      'sprk-c-Autocomplete__result',
+    ).length;
+
+    /**
+     * This is working, but it's running a LOT. Any time anything in the component is CHECKED,
+     * not even necessarily if something has changed. We only want to do this if the number of
+     * list items has changed.
+     *
+     * Or what if we checked the number of observers and only did it if the count is 0?
+     */
+
+    // if itemSelectedEvent is specified, also set that as the click event on each result
     if (this.itemSelectedEvent) {
       this.resultItems.forEach((element) => {
         element.clickedEvent = this.itemSelectedEvent;
