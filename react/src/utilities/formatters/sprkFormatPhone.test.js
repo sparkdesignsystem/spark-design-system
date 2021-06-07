@@ -26,17 +26,17 @@ describe('sprkFormatPhone tests', () => {
     expect(sprkFormatPhone(input.value)).toBe('(123) 456-7890');
   });
 
-  it('should return null on invalid input', () => {
+  it('should return empty string on invalid input', () => {
     const wrapper = mount(<SprkTextInput />);
     const input = wrapper.find('input');
     input.value = 'asdf';
-    expect(sprkFormatPhone(input.value)).toBe(null);
+    expect(sprkFormatPhone(input.value)).toBe('');
   });
 
-  it('should return null on invalid input with SprkInput', () => {
+  it('should return empty string on invalid input with SprkInput', () => {
     const wrapper = mount(<SprkInput id="test-id" />);
     const input = wrapper.find('input');
     input.value = 'asdf';
-    expect(sprkFormatPhone(input.value)).toBe(null);
+    expect(sprkFormatPhone(input.value)).toBe('');
   });
 });
