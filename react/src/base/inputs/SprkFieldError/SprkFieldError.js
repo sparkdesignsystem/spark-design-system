@@ -13,13 +13,14 @@ const SprkFieldError = (props) => {
     forwardedRef,
     ...rest
   } = props;
+  const internalId = id || uniqueId('sprk-field-error-');
 
   return (
     <div
       className={classNames('sprk-b-ErrorContainer', additionalClasses)}
       data-analytics={analyticsString}
       data-id={idString}
-      id={id}
+      id={internalId}
       ref={forwardedRef}
       {...rest}
     >
@@ -57,11 +58,7 @@ SprkFieldError.propTypes = {
   /**
    * A ref passed in will be attached to the rendered component.
    */
-  forwardedRef: PropTypes.oneOf([PropTypes.shape(), PropTypes.func]),
-};
-
-SprkFieldError.defaultProps = {
-  id: uniqueId('sprk-field-error-'),
+  forwardedRef: PropTypes.oneOfType([PropTypes.shape(), PropTypes.func]),
 };
 
 export default SprkFieldError;

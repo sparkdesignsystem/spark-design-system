@@ -13,13 +13,14 @@ const SprkHelperText = (props) => {
     forwardedRef,
     ...other
   } = props;
+  const internalId = id || uniqueId('sprk-helper-text-');
 
   return (
     <div
       className={classnames('sprk-b-HelperText', additionalClasses)}
       data-analytics={analyticsString}
       data-id={idString}
-      id={id}
+      id={internalId}
       ref={forwardedRef}
       {...other}
     >
@@ -56,11 +57,7 @@ SprkHelperText.propTypes = {
   /**
    * A ref passed in will be attached to the rendered component.
    */
-  forwardedRef: PropTypes.oneOf([PropTypes.shape(), PropTypes.func]),
-};
-
-SprkHelperText.defaultProps = {
-  id: uniqueId('sprk-helper-text-'),
+  forwardedRef: PropTypes.oneOfType([PropTypes.shape(), PropTypes.func]),
 };
 
 export default SprkHelperText;

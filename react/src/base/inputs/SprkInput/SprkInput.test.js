@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('SprkInput:', () => {
   it('should render an element with the correct class', () => {
-    const wrapper = mount(<SprkInput />);
+    const wrapper = mount(<SprkInput id="input-id" />);
 
     expect(wrapper.find('.sprk-b-TextInput').length).toBe(1);
     expect(
@@ -17,7 +17,9 @@ describe('SprkInput:', () => {
   });
 
   it('should add classes when additionalClasses has a value', () => {
-    const wrapper = mount(<SprkInput additionalClasses="sprk-u-man" />);
+    const wrapper = mount(
+      <SprkInput additionalClasses="sprk-u-man" id="input-id" />,
+    );
 
     expect(wrapper.find('.sprk-b-TextInput').hasClass('sprk-u-man')).toBe(true);
     expect(
@@ -26,7 +28,7 @@ describe('SprkInput:', () => {
   });
 
   it('should add class when isValid is false', () => {
-    const wrapper = mount(<SprkInput isValid={false} />);
+    const wrapper = mount(<SprkInput isValid={false} id="input-id" />);
 
     expect(
       wrapper.find('.sprk-b-TextInput').hasClass('sprk-b-TextInput--error'),
@@ -37,7 +39,7 @@ describe('SprkInput:', () => {
   });
 
   it('should not add error class when isValid is true', () => {
-    const wrapper = mount(<SprkInput isValid />);
+    const wrapper = mount(<SprkInput isValid id="input-id" />);
 
     expect(
       wrapper.find('.sprk-b-TextInput').hasClass('sprk-b-TextInput--error'),
@@ -48,23 +50,23 @@ describe('SprkInput:', () => {
   });
 
   it('should assign data-analytics when analyticsString has a value', () => {
-    const wrapper = mount(<SprkInput analyticsString="321" />);
+    const wrapper = mount(<SprkInput analyticsString="321" id="input-id" />);
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
   });
 
   it(`should not render data-analytics when
   analyticsString is not present`, () => {
-    const wrapper = mount(<SprkInput />);
+    const wrapper = mount(<SprkInput id="input-id" />);
     expect(wrapper.find('[data-analytics]').length).toBe(0);
   });
 
   it('should assign data-id when idString has a value', () => {
-    const wrapper = mount(<SprkInput idString="321" />);
+    const wrapper = mount(<SprkInput idString="321" id="input-id" />);
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
   });
 
   it('should not render data-id when idString is not present', () => {
-    const wrapper = mount(<SprkInput />);
+    const wrapper = mount(<SprkInput id="input-id" />);
     expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
@@ -76,7 +78,7 @@ describe('SprkInput:', () => {
   });
 
   it('should assign aria-describedby when ariaDescribedBy has a value', () => {
-    const wrapper = mount(<SprkInput ariaDescribedBy="321" />);
+    const wrapper = mount(<SprkInput ariaDescribedBy="321" id="input-id" />);
     expect(
       wrapper
         .find('.sprk-b-TextInput')
@@ -87,7 +89,7 @@ describe('SprkInput:', () => {
 
   it(`should not render aria-describedby
   when ariaDescribedBy is not present`, () => {
-    const wrapper = mount(<SprkInput />);
+    const wrapper = mount(<SprkInput id="input-id" />);
     expect(
       wrapper
         .find('.sprk-b-TextInput')
@@ -96,16 +98,9 @@ describe('SprkInput:', () => {
     ).toBe(null);
   });
 
-  it('should assign default id when id has no value', () => {
-    const wrapper = mount(<SprkInput />);
-    expect(
-      wrapper.find('.sprk-b-TextInput').getDOMNode().getAttribute('id'),
-    ).toContain('sprk-input-');
-  });
-
   it(`should add floating label class
   to huge input when a value is present and blurred out`, () => {
-    const wrapper = mount(<SprkInput variant="huge" />);
+    const wrapper = mount(<SprkInput variant="huge" id="input-id" />);
     const input = wrapper.find('input');
     input.value = 'foo';
     // on blur pass object into blur handler
@@ -127,7 +122,7 @@ describe('SprkInput:', () => {
 
   it(`should remove/not have floating label
   class to huge input when a value is not present and blurred out`, () => {
-    const wrapper = mount(<SprkInput variant="huge" />);
+    const wrapper = mount(<SprkInput variant="huge" id="input-id" />);
     const input = wrapper.find('input');
 
     input.simulate('blur', { target: { value: '' } });
@@ -143,7 +138,9 @@ describe('SprkInput:', () => {
   });
 
   it('should add floating label class to huge text when there is value', () => {
-    const wrapper = mount(<SprkInput value="value present" variant="huge" />);
+    const wrapper = mount(
+      <SprkInput value="value present" variant="huge" id="input-id" />,
+    );
     expect(
       wrapper
         .find('.sprk-b-TextInput')
@@ -157,25 +154,29 @@ describe('SprkInput:', () => {
   it('should run the supplied formatter when the value is changed', () => {
     const formatter = jest.fn();
     const wrapper = mount(
-      <SprkInput type="text" formatter={formatter} value="test" />,
+      <SprkInput
+        type="text"
+        formatter={formatter}
+        value="test"
+        id="input-id"
+      />,
     );
     const input = wrapper.find('input');
     input.simulate('blur', { target: { value: 'testing' } });
-    expect(formatter.mock.calls.length).toBe(1);
+    // Runs once on render, then the second call on change
+    expect(formatter.mock.calls.length).toBe(2);
   });
 
   it('should not run the formatter if the field is invalid', () => {
     const formatter = jest.fn();
-    mount(<SprkInput type="text" formatter={formatter} isValid={false} />);
-    expect(formatter.mock.calls.length).toBe(0);
-  });
-
-  it('should not run the formatter if the value has not changed', () => {
-    const formatter = jest.fn();
-    const wrapper = mount(<SprkInput value="test" formatter={formatter} />);
-    const input = wrapper.find('input');
-
-    input.simulate('blur', { target: { value: 'test' } });
+    mount(
+      <SprkInput
+        type="text"
+        formatter={formatter}
+        isValid={false}
+        id="input-id"
+      />,
+    );
     expect(formatter.mock.calls.length).toBe(0);
   });
 
@@ -189,7 +190,7 @@ describe('SprkInput:', () => {
   });
 
   it('should pass through additional attributes', () => {
-    const wrapper = shallow(<SprkInput data-my-attr="testing" />);
+    const wrapper = shallow(<SprkInput data-my-attr="testing" id="input-id" />);
     expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
 });
