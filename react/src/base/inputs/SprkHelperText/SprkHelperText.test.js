@@ -8,7 +8,9 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('SprkHelperText:', () => {
   it('should render an element with the correct class', () => {
     const wrapper = mount(
-      <SprkHelperText>Helper Text for the form field.</SprkHelperText>,
+      <SprkHelperText id="helper-id">
+        Helper Text for the form field.
+      </SprkHelperText>,
     );
 
     expect(wrapper.find('.sprk-b-HelperText').length).toBe(1);
@@ -19,7 +21,7 @@ describe('SprkHelperText:', () => {
 
   it('should add classes when additionalClasses has a value', () => {
     const wrapper = mount(
-      <SprkHelperText additionalClasses="sprk-u-man">
+      <SprkHelperText additionalClasses="sprk-u-man" id="helper-id">
         Helper Text for the form field.
       </SprkHelperText>,
     );
@@ -31,7 +33,7 @@ describe('SprkHelperText:', () => {
 
   it('should assign data-analytics when analyticsString has a value', () => {
     const wrapper = mount(
-      <SprkHelperText analyticsString="321">
+      <SprkHelperText analyticsString="321" id="helper-id">
         Helper Text for the form field.
       </SprkHelperText>,
     );
@@ -42,7 +44,9 @@ describe('SprkHelperText:', () => {
   it(`should not render data-analytics when
   analyticsString is not present`, () => {
     const wrapper = mount(
-      <SprkHelperText>Helper Text for the form field.</SprkHelperText>,
+      <SprkHelperText id="helper-id">
+        Helper Text for the form field.
+      </SprkHelperText>,
     );
 
     expect(wrapper.find('[data-analytics]').length).toBe(0);
@@ -50,7 +54,7 @@ describe('SprkHelperText:', () => {
 
   it('should assign data-id when idString has a value', () => {
     const wrapper = mount(
-      <SprkHelperText idString="321">
+      <SprkHelperText idString="321" id="helper-id">
         Helper Text for the form field.
       </SprkHelperText>,
     );
@@ -60,7 +64,9 @@ describe('SprkHelperText:', () => {
 
   it('should not render data-id when idString is not present', () => {
     const wrapper = mount(
-      <SprkHelperText>Helper Text for the form field.</SprkHelperText>,
+      <SprkHelperText id="helper-id">
+        Helper Text for the form field.
+      </SprkHelperText>,
     );
 
     expect(wrapper.find('[data-id]').length).toBe(0);
@@ -77,17 +83,10 @@ describe('SprkHelperText:', () => {
     ).toBe('test-id');
   });
 
-  it('should assign default id attribute when id has no value', () => {
-    const wrapper = mount(
-      <SprkHelperText>Helper Text for the form field.</SprkHelperText>,
-    );
-    expect(
-      wrapper.find('.sprk-b-HelperText').getDOMNode().getAttribute('id'),
-    ).toContain('sprk-helper-text-');
-  });
-
   it('should pass through additional attributes', () => {
-    const wrapper = shallow(<SprkHelperText data-my-attr="testing" />);
+    const wrapper = shallow(
+      <SprkHelperText data-my-attr="testing" id="helper-id" />,
+    );
     expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
 
@@ -95,7 +94,9 @@ describe('SprkHelperText:', () => {
     // Create ref
     const forwardedRef = React.createRef();
     // Add ref as prop
-    const wrapper = mount(<SprkHelperText forwardedRef={forwardedRef} />);
+    const wrapper = mount(
+      <SprkHelperText forwardedRef={forwardedRef} id="helper-id" />,
+    );
     // Use ref to set an attribute
     forwardedRef.current.setAttribute('data-test', 'testing');
     // Check that mounted component received attribute
