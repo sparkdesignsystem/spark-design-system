@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import TinyDatePicker from 'tiny-date-picker';
 import assign from 'lodash/assign';
-import uniqueId from 'lodash/uniqueId';
 
 class SprkDatePicker extends Component {
   constructor(props) {
@@ -215,10 +214,8 @@ SprkDatePicker.propTypes = {
   /**
    * Assigned to the `id` attribute
    * of the rendered input element.
-   * A custom ID will
-   * be added if this is not supplied.
    */
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   /**
    * Assigned to the `aria-describedby`
    * attribute. Used to create
@@ -237,7 +234,6 @@ SprkDatePicker.defaultProps = {
   datePickerConfig: {},
   formatter: (value) => value,
   isValid: true,
-  id: uniqueId('sprk-datepicker-'),
   isDisabled: false,
 };
 

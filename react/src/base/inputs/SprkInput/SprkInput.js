@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import uniqueId from 'lodash/uniqueId';
 
 class SprkInput extends Component {
   constructor(props) {
@@ -120,10 +119,8 @@ SprkInput.propTypes = {
   /**
    * Assigned to the `id` attribute
    * of the rendered input element.
-   * A custom ID will
-   * be added if this is not supplied.
    */
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   /**
    * Assigned to the `aria-describedby`
    * attribute. Used to create
@@ -142,7 +139,6 @@ SprkInput.defaultProps = {
   formatter: (value) => value,
   forwardedRef: React.createRef(),
   isValid: true,
-  id: uniqueId('sprk-input-'),
   isDisabled: false,
 };
 

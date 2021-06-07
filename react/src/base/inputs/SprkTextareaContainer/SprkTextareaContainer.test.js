@@ -76,32 +76,6 @@ describe('SprkTextareaContainer ID/htmlFor Tests:', () => {
     expect(wrapper.find('label').getDOMNode().htmlFor).toBe('testID');
   });
 
-  it(`should set the for value of the label to be
-  the default ID of the textarea`, () => {
-    const wrapper = mount(
-      <SprkTextareaContainer>
-        <SprkLabel htmlFor="testFor">Textarea has default ID</SprkLabel>
-        <SprkTextarea />
-      </SprkTextareaContainer>,
-    );
-    expect(wrapper.find('label').getDOMNode().htmlFor).toBe(
-      wrapper.find('textarea').getDOMNode().id,
-    );
-  });
-
-  it(`should set for value of label to match
-  textarea id if both missing`, () => {
-    const wrapper = mount(
-      <SprkTextareaContainer>
-        <SprkLabel>Textarea has default ID</SprkLabel>
-        <SprkTextarea />
-      </SprkTextareaContainer>,
-    );
-    expect(wrapper.find('label').getDOMNode().htmlFor).toBe(
-      wrapper.find('textarea').getDOMNode().id,
-    );
-  });
-
   it('should not update for or id if they are matching', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
@@ -120,7 +94,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea />
+        <SprkTextarea id="textarea-id" />
         <SprkHelperText id="test-id" />
       </SprkTextareaContainer>,
     );
@@ -135,7 +109,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea />
+        <SprkTextarea id="textarea-id" />
         <SprkErrorContainer id="test-id" message="test message" />
       </SprkTextareaContainer>,
     );
@@ -150,7 +124,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea />
+        <SprkTextarea id="textarea-id" />
         <SprkFieldError id="test-id" />
       </SprkTextareaContainer>,
     );
@@ -164,7 +138,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea ariaDescribedBy="additional-value" />
+        <SprkTextarea ariaDescribedBy="additional-value" id="textarea-id" />
         <SprkFieldError id="test-id" />
       </SprkTextareaContainer>,
     );
@@ -179,7 +153,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea />
+        <SprkTextarea id="textarea-id" />
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkTextareaContainer>,
@@ -195,7 +169,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea />
+        <SprkTextarea id="textarea-id" />
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkTextareaContainer>,
@@ -211,7 +185,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea ariaDescribedBy="additional-value" />
+        <SprkTextarea ariaDescribedBy="additional-value" id="textarea-id" />
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkTextareaContainer>,
@@ -227,7 +201,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea ariaDescribedBy="additional-value" />
+        <SprkTextarea ariaDescribedBy="additional-value" id="textarea-id" />
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkTextareaContainer>,
@@ -243,7 +217,10 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea ariaDescribedBy="value test-helper-id test-error-id" />
+        <SprkTextarea
+          ariaDescribedBy="value test-helper-id test-error-id"
+          id="textarea-id"
+        />
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkTextareaContainer>,
@@ -259,7 +236,10 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea ariaDescribedBy="value test-helper-id test-error-id" />
+        <SprkTextarea
+          ariaDescribedBy="value test-helper-id test-error-id"
+          id="textarea-id"
+        />
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkTextareaContainer>,
@@ -275,7 +255,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea ariaDescribedBy="test-helper-id" />
+        <SprkTextarea ariaDescribedBy="test-helper-id" id="textarea-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkTextareaContainer>,
     );
@@ -290,7 +270,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea ariaDescribedBy="test-id" />
+        <SprkTextarea ariaDescribedBy="test-id" id="textarea-id" />
         <SprkErrorContainer message="test message" id="test-id" />
       </SprkTextareaContainer>,
     );
@@ -305,7 +285,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea ariaDescribedBy="test-id" />
+        <SprkTextarea ariaDescribedBy="test-id" id="textarea-id" />
         <SprkFieldError id="test-id" />
       </SprkTextareaContainer>,
     );
@@ -320,7 +300,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Textarea Label</SprkLabel>
-        <SprkTextarea />
+        <SprkTextarea id="textarea-id" />
       </SprkTextareaContainer>,
     );
 
@@ -333,7 +313,7 @@ describe('SprkTextareaContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkTextareaContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkTextarea />
+        <SprkTextarea id="textarea-id" />
         {false && <div />}
       </SprkTextareaContainer>,
     );

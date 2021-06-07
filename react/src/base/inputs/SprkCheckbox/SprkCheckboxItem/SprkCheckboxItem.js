@@ -157,7 +157,7 @@ SprkCheckboxItem.propTypes = {
    * A ref passed in will be attached to the checkbox
    * element of the rendered component.
    */
-  forwardedRef: PropTypes.oneOf([PropTypes.shape(), PropTypes.func]),
+  forwardedRef: PropTypes.oneOfType([PropTypes.shape(), PropTypes.func]),
 };
 
 export default SprkCheckboxItem;

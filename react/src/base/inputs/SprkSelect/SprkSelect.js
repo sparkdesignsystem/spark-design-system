@@ -187,11 +187,10 @@ SprkSelect.propTypes = {
    * A custom ID will
    * be added if this is not supplied.
    */
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
 };
 
 SprkSelect.defaultProps = {
-  id: uniqueId('sprk-select-'),
   isValid: true,
 };
 

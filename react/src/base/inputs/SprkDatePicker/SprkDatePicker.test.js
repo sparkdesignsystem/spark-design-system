@@ -65,13 +65,6 @@ describe('SprkDatePicker:', () => {
     ).toBe('321');
   });
 
-  it('should assign default id when id has no value', () => {
-    const wrapper = mount(<SprkDatePicker />);
-    expect(
-      wrapper.find('.sprk-b-TextInput').getDOMNode().getAttribute('id'),
-    ).toContain('sprk-datepicker-');
-  });
-
   it('should assign aria-describedby when ariaDescribedBy has a value', () => {
     const wrapper = mount(<SprkDatePicker ariaDescribedBy="321" />);
     expect(
