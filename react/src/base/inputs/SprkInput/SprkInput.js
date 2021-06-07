@@ -60,7 +60,7 @@ class SprkInput extends Component {
         data-id={idString}
         data-analytics={analyticsString}
         aria-invalid={!isValid}
-        value={isValid && formatter ? formatter(value) : value}
+        value={isValid && formatter && hasValue ? formatter(value) : value}
         onBlur={(e) => handleOnBlur(e)}
         id={id}
         {...rest}
