@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import uniqueId from 'lodash/uniqueId';
 
 const SprkFieldError = (props) => {
   const {
@@ -13,14 +12,13 @@ const SprkFieldError = (props) => {
     forwardedRef,
     ...rest
   } = props;
-  const internalId = id || uniqueId('sprk-field-error-');
 
   return (
     <div
       className={classNames('sprk-b-ErrorContainer', additionalClasses)}
       data-analytics={analyticsString}
       data-id={idString}
-      id={internalId}
+      id={id}
       ref={forwardedRef}
       {...rest}
     >
@@ -35,10 +33,8 @@ SprkFieldError.propTypes = {
   /**
    * Assigned to the `id` attribute
    * of the rendered component.
-   * A custom ID will
-   * be added if this is not supplied.
    */
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   /**
    * A space-separated string of
    * classes to add to the component.
