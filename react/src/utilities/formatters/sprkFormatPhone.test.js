@@ -30,13 +30,13 @@ describe('sprkFormatPhone tests', () => {
     const wrapper = mount(<SprkTextInput />);
     const input = wrapper.find('input');
     input.value = 'asdf';
-    expect(sprkFormatPhone(input.value)).toBe(null);
+    expect(sprkFormatPhone(input.value)).toBe('');
   });
 
   it('should return null on invalid input with SprkInput', () => {
     const wrapper = mount(<SprkInput id="test-id" />);
     const input = wrapper.find('input');
     input.value = 'asdf';
-    expect(sprkFormatPhone(input.value)).toBe(null);
+    expect(sprkFormatPhone(input.value)).toBe('');
   });
 });
