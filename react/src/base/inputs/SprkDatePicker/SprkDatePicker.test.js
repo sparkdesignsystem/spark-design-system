@@ -168,18 +168,8 @@ describe('SprkDatePicker:', () => {
     );
     const input = wrapper.find('input');
     input.simulate('blur', { target: { value: '01/02/2021' } });
-    expect(formatter.mock.calls.length).toBe(1);
-  });
-
-  it('should not run the formatter if the value has not changed', () => {
-    const formatter = jest.fn();
-    const wrapper = mount(
-      <SprkDatePicker value="01/01/2021" formatter={formatter} />,
-    );
-    const input = wrapper.find('input');
-
-    input.simulate('blur', { target: { value: '01/01/2021' } });
-    expect(formatter.mock.calls.length).toBe(0);
+    // Runs once on render, then the second on the change
+    expect(formatter.mock.calls.length).toBe(2);
   });
 
   it('should not run the formatter if the field is invalid', () => {
