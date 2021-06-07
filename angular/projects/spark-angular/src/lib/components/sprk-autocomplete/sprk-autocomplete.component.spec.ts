@@ -3,7 +3,7 @@ import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
 import { SprkAutocompleteResultsDirective } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
 import { SprkAutocompleteInputContainerDirective } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 
 @Component({
@@ -819,6 +819,33 @@ describe('SprkAutocompleteComponent', () => {
     expect(component.hideResults).toBeCalledTimes(0);
     expect(component.showResults).toBeCalledTimes(0);
   });
+
+  // it('should set the click event on the list items when the results are changed', (done) => {
+  //   let called = false;
+  //   let value = -1;
+
+  //   component.isOpen = true;
+  //   component.itemSelectedEvent.subscribe((itemId) => {
+  //     called = true;
+  //     value = itemId;
+  //     done();
+  //   });
+
+  //   const newResult = new SprkAutocompleteResultDirective(component.results.nativeElement);
+  //   newResult.id = 'item5';
+
+  //   component.resultItems.reset([...component.resultItems.toArray(), newResult]);
+
+  //   fixture.detectChanges();
+
+  //   component.resultItems
+  //     .toArray()[4]
+  //     .ref.nativeElement.dispatchEvent(new Event('click'));
+
+  //   expect(called).toEqual(true);
+  //   expect(value).toEqual('item5');
+  //   done();
+  // });
 
   it('should set the click event on the list items if itemSelectedEvent is set', (done) => {
     let called = false;
