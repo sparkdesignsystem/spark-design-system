@@ -275,6 +275,19 @@ export class SprkAutocompleteComponent
   }
 
   /**
+   * If itemSelectedEvent is specified, also set that as the click event on each result.
+   * This should be called automatically whenever the results list is changed.
+   */
+  bindClickEvents(): void {
+    if (this.itemSelectedEvent) {
+      // bind the click event on each individual result item.
+      this.resultItems.forEach((autocompleteResultDirective) => {
+        autocompleteResultDirective.clickedEvent = this.itemSelectedEvent;
+      });
+    }
+  }
+
+  /**
    * @ignore
    * Track the index of the currently-highlighted Autocomplete result item.
    */
@@ -292,12 +305,15 @@ export class SprkAutocompleteComponent
       }
     }
 
-    // if itemSelectedEvent is specified, also set that as the click event on each result
-    if (this.itemSelectedEvent) {
-      this.resultItems.forEach((element) => {
-        element.clickedEvent = this.itemSelectedEvent;
-      });
-    }
+    // If there are any result items in the component when it initializes,
+    // set up their click events.
+    this.bindClickEvents();
+
+    // If the result items change at runtime (by a filter, etc),
+    // redo the click events.
+    this.resultItems.changes.subscribe((_) => {
+      this.bindClickEvents();
+    });
   }
 
   /**

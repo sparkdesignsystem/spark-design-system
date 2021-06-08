@@ -24,11 +24,43 @@ import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-inpu
 })
 class WrappedAutocompleteComponent {}
 
+@Component({
+  selector: 'sprk-dynamic-test',
+  template: `
+    <button class="changeButton" (click)="changeMe()">Change Content</button>
+
+    <sprk-autocomplete isOpen="true" itemSelectedEvent="itemSelectedEvent">
+      <div sprkAutocompleteInputContainer>
+        <input sprkInput />
+      </div>
+      <ul sprkAutocompleteResults>
+        <li
+          sprkAutocompleteResult
+          *ngFor="let item of list; let i = index"
+          id="{{ item }}"
+        ></li>
+      </ul>
+    </sprk-autocomplete>
+  `,
+})
+class DynamicComponent {
+  public itemSelectedEvent;
+  public list = ['item1', 'item2', 'item3', 'item4'];
+  public newList = ['item1', 'item2', 'item3', 'item4', 'new_id'];
+  changeMe(): void {
+    this.list = this.newList;
+  }
+}
+
 describe('SprkAutocompleteComponent', () => {
   let component: SprkAutocompleteComponent;
   let fixture: ComponentFixture<WrappedAutocompleteComponent>;
   let resultsElement;
   let inputElement;
+
+  let dynamicTestComponent;
+  let dynamicTestFixture;
+  let dynamicTestAutocomplete;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -39,6 +71,7 @@ describe('SprkAutocompleteComponent', () => {
         SprkAutocompleteResultsDirective,
         SprkAutocompleteResultDirective,
         SprkInputDirective,
+        DynamicComponent,
       ],
     }).compileComponents();
   }));
@@ -56,6 +89,12 @@ describe('SprkAutocompleteComponent', () => {
     inputElement = component.input.ref;
 
     fixture.detectChanges();
+
+    // Dynamic Test Component
+    dynamicTestFixture = TestBed.createComponent(DynamicComponent);
+    dynamicTestComponent = dynamicTestFixture.componentInstance;
+    dynamicTestAutocomplete =
+      dynamicTestFixture.debugElement.children[1].componentInstance;
   });
 
   afterEach(() => {
@@ -913,5 +952,49 @@ describe('SprkAutocompleteComponent', () => {
     expect(component.input.ref.nativeElement.getAttribute('style')).toEqual(
       null,
     );
+  });
+
+  it('should set the click event on the list items when the results are changed', (done) => {
+    let called = false;
+    let value = -1;
+
+    dynamicTestAutocomplete.itemSelectedEvent.subscribe((itemId) => {
+      called = true;
+      value = itemId;
+      done();
+    });
+
+    dynamicTestFixture.detectChanges();
+
+    // expect the length to be 4
+    expect(dynamicTestComponent.list.length).toEqual(4);
+    expect(
+      dynamicTestFixture.nativeElement.querySelectorAll('li').length,
+    ).toEqual(4);
+
+    // click the last item in the list
+    dynamicTestFixture.nativeElement
+      .querySelectorAll('li')[3]
+      .dispatchEvent(new Event('click'));
+
+    dynamicTestFixture.detectChanges();
+
+    expect(called).toEqual(true);
+    expect(value).toEqual('item4');
+
+    // change the dataset used to populate the result items
+    const dynamicTestElement = dynamicTestFixture.nativeElement;
+    const changeButton = dynamicTestElement.querySelector('.changeButton');
+    changeButton.click();
+    dynamicTestFixture.detectChanges();
+
+    // click one of the new items and verify the id that is returned
+    dynamicTestFixture.nativeElement.querySelectorAll('li')[4].click();
+
+    // expect the length to be 5
+    expect(dynamicTestComponent.list.length).toEqual(5);
+    expect(called).toEqual(true);
+    expect(value).toEqual('new_id');
+    done();
   });
 });
