@@ -88,31 +88,6 @@ describe('SprkInputContainer ID/htmlFor Tests:', () => {
     expect(wrapper.find('label').getDOMNode().htmlFor).toBe('testID');
   });
 
-  it(`should set the for value of the label to be
-  the default ID of the input`, () => {
-    const wrapper = mount(
-      <SprkInputContainer>
-        <SprkLabel htmlFor="testFor">Input default ID</SprkLabel>
-        <SprkInput />
-      </SprkInputContainer>,
-    );
-    expect(wrapper.find('label').getDOMNode().htmlFor).toBe(
-      wrapper.find('input').getDOMNode().id,
-    );
-  });
-
-  it('should set for value of label to match input id if both missing', () => {
-    const wrapper = mount(
-      <SprkInputContainer>
-        <SprkLabel>Input has default ID</SprkLabel>
-        <SprkInput />
-      </SprkInputContainer>,
-    );
-    expect(wrapper.find('label').getDOMNode().htmlFor).toBe(
-      wrapper.find('input').getDOMNode().id,
-    );
-  });
-
   it('should not update for or id if they are matching', () => {
     const wrapper = mount(
       <SprkInputContainer>
@@ -150,36 +125,6 @@ describe('SprkInputContainer ID/htmlFor Tests:', () => {
     expect(wrapper.find('label').getDOMNode().htmlFor).toBe('testID');
   });
 
-  it(`should set for value of label to match
-  input id if id is missing on grandchildren`, () => {
-    const wrapper = mount(
-      <SprkInputContainer>
-        <div className="sprk-b-InputContainer__icon-container">
-          <SprkLabel htmlFor="testFor">Input has missing ID</SprkLabel>
-          <SprkInput />
-        </div>
-      </SprkInputContainer>,
-    );
-    expect(wrapper.find('label').getDOMNode().htmlFor).toBe(
-      wrapper.find('input').getDOMNode().id,
-    );
-  });
-
-  it(`should set for value of label to match
-  input id if both are missing on grandchildren`, () => {
-    const wrapper = mount(
-      <SprkInputContainer>
-        <div className="sprk-b-InputContainer__icon-container">
-          <SprkLabel>Missing for and ID</SprkLabel>
-          <SprkInput />
-        </div>
-      </SprkInputContainer>,
-    );
-    expect(wrapper.find('label').getDOMNode().htmlFor).toBe(
-      wrapper.find('input').getDOMNode().id,
-    );
-  });
-
   it(`should not update for or ID if matching on grandchildren`, () => {
     const wrapper = mount(
       <SprkInputContainer>
@@ -200,7 +145,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput />
+        <SprkInput id="input-id" />
         <SprkHelperText id="test-id" />
       </SprkInputContainer>,
     );
@@ -215,7 +160,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput />
+        <SprkInput id="input-id" />
         <SprkErrorContainer id="test-id" message="test message" />
       </SprkInputContainer>,
     );
@@ -230,7 +175,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput />
+        <SprkInput id="input-id" />
         <SprkFieldError id="test-id" />
       </SprkInputContainer>,
     );
@@ -244,7 +189,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput ariaDescribedBy="additional-value" />
+        <SprkInput ariaDescribedBy="additional-value" id="input-id" />
         <SprkFieldError id="test-id" />
       </SprkInputContainer>,
     );
@@ -259,7 +204,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput />
+        <SprkInput id="input-id" />
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkInputContainer>,
@@ -275,7 +220,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput />
+        <SprkInput id="input-id" />
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkInputContainer>,
@@ -291,7 +236,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput ariaDescribedBy="additional-value" />
+        <SprkInput ariaDescribedBy="additional-value" id="input-id" />
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkInputContainer>,
@@ -307,7 +252,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput ariaDescribedBy="additional-value" />
+        <SprkInput ariaDescribedBy="additional-value" id="input-id" />
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkInputContainer>,
@@ -323,7 +268,10 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput ariaDescribedBy="value test-helper-id test-error-id" />
+        <SprkInput
+          ariaDescribedBy="value test-helper-id test-error-id"
+          id="input-id"
+        />
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkInputContainer>,
@@ -339,7 +287,10 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput ariaDescribedBy="value test-helper-id test-error-id" />
+        <SprkInput
+          ariaDescribedBy="value test-helper-id test-error-id"
+          id="input-id"
+        />
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkInputContainer>,
@@ -355,7 +306,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput ariaDescribedBy="test-helper-id" />
+        <SprkInput ariaDescribedBy="test-helper-id" id="input-id" />
         <SprkHelperText id="test-helper-id" />
       </SprkInputContainer>,
     );
@@ -370,7 +321,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput ariaDescribedBy="test-id" />
+        <SprkInput ariaDescribedBy="test-id" id="input-id" />
         <SprkErrorContainer message="test message" id="test-id" />
       </SprkInputContainer>,
     );
@@ -385,7 +336,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput ariaDescribedBy="test-id" />
+        <SprkInput ariaDescribedBy="test-id" id="input-id" />
         <SprkFieldError id="test-id" />
       </SprkInputContainer>,
     );
@@ -400,7 +351,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
     const wrapper = mount(
       <SprkInputContainer>
         <SprkLabel>Input Label</SprkLabel>
-        <SprkInput />
+        <SprkInput id="input-id" />
       </SprkInputContainer>,
     );
 
@@ -415,7 +366,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker />
+          <SprkDatePicker id="datepicker-id" />
         </div>
         <SprkHelperText id="test-id" />
       </SprkInputContainer>,
@@ -432,7 +383,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker />
+          <SprkDatePicker id="datepicker-id" />
         </div>
         <SprkErrorContainer id="test-id" message="test message" />
       </SprkInputContainer>,
@@ -449,7 +400,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker />
+          <SprkDatePicker id="datepicker-id" />
         </div>
         <SprkFieldError id="test-id" />
       </SprkInputContainer>,
@@ -466,7 +417,10 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker ariaDescribedBy="additional-value" />
+          <SprkDatePicker
+            ariaDescribedBy="additional-value"
+            id="datepicker-id"
+          />
         </div>
         <SprkFieldError id="test-id" />
       </SprkInputContainer>,
@@ -484,7 +438,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker />
+          <SprkDatePicker id="datepicker-id" />
         </div>
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
@@ -503,7 +457,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker />
+          <SprkDatePicker id="datepicker-id" />
         </div>
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
@@ -522,7 +476,10 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker ariaDescribedBy="additional-value" />
+          <SprkDatePicker
+            ariaDescribedBy="additional-value"
+            id="datepicker-id"
+          />
         </div>
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
@@ -541,7 +498,10 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker ariaDescribedBy="additional-value" />
+          <SprkDatePicker
+            ariaDescribedBy="additional-value"
+            id="datepicker-id"
+          />
         </div>
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
@@ -561,7 +521,10 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker ariaDescribedBy="value test-helper-id test-error-id" />
+          <SprkDatePicker
+            ariaDescribedBy="value test-helper-id test-error-id"
+            id="datepicker-id"
+          />
         </div>
         <SprkErrorContainer message="test message" id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
@@ -582,7 +545,10 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker ariaDescribedBy="value test-helper-id test-error-id" />
+          <SprkDatePicker
+            ariaDescribedBy="value test-helper-id test-error-id"
+            id="datepicker-id"
+          />
         </div>
         <SprkFieldError id="test-error-id" />
         <SprkHelperText id="test-helper-id" />
@@ -601,7 +567,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker ariaDescribedBy="test-helper-id" />
+          <SprkDatePicker ariaDescribedBy="test-helper-id" id="datepicker-id" />
         </div>
         <SprkHelperText id="test-helper-id" />
       </SprkInputContainer>,
@@ -619,7 +585,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker ariaDescribedBy="test-id" />
+          <SprkDatePicker ariaDescribedBy="test-id" id="datepicker-id" />
         </div>
         <SprkErrorContainer message="test message" id="test-id" />
       </SprkInputContainer>,
@@ -637,7 +603,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker ariaDescribedBy="test-id" />
+          <SprkDatePicker ariaDescribedBy="test-id" id="datepicker-id" />
         </div>
         <SprkFieldError id="test-id" />
       </SprkInputContainer>,
@@ -655,7 +621,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div className="sprk-b-InputContainer__icon-container">
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker />
+          <SprkDatePicker id="datepicker-id" />
         </div>
       </SprkInputContainer>,
     );
@@ -672,7 +638,7 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       <SprkInputContainer>
         <div>
           <SprkLabel>Input Label</SprkLabel>
-          <SprkDatePicker />
+          <SprkDatePicker id="datepicker-id" />
         </div>
         <SprkFieldError id="test-id" />
       </SprkInputContainer>,
@@ -682,7 +648,38 @@ describe('SprkInputContainer aria-describedby Tests:', () => {
       wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
     ).toBe(null);
   });
+
+  it(`should not update the children if the child is null`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <SprkLabel>Input Label</SprkLabel>
+        <SprkInput id="input-id" />
+        {false && <div />}
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
+
+  it(`should not update the grandchildren if the grandchild is null`, () => {
+    const wrapper = mount(
+      <SprkInputContainer>
+        <div className="sprk-b-InputContainer__icon-container">
+          <SprkLabel>Input Label</SprkLabel>
+          <SprkInput id="input-id" />
+          {false && <div />}
+        </div>
+      </SprkInputContainer>,
+    );
+
+    expect(
+      wrapper.find('input').getDOMNode().getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
 });
+
 describe('SprkInputContainer Additional Elements Tests:', () => {
   it('should allow other elements to be passed through', () => {
     const wrapper = mount(
@@ -707,7 +704,7 @@ describe('SprkInputContainer Additional Elements Tests:', () => {
               sprk-b-InputContainer__icon"
             aria-hidden="true"
           />
-          <SprkDatePicker ariaDescribedBy="test-id" />
+          <SprkDatePicker ariaDescribedBy="test-id" id="datepicker-id" />
         </div>
       </SprkInputContainer>,
     );

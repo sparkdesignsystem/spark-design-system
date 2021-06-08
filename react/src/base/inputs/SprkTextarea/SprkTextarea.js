@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import uniqueId from 'lodash/uniqueId';
 
 const SprkTextarea = ({
   additionalClasses,
@@ -51,7 +50,7 @@ SprkTextarea.propTypes = {
    * A ref passed in will be attached to the textarea
    * element of the rendered component.
    */
-  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
+  forwardedRef: PropTypes.oneOfType([PropTypes.shape(), PropTypes.func]),
   /**
    * Assigned to the `data-id` attribute serving as a
    * unique selector for automated tools.
@@ -68,7 +67,7 @@ SprkTextarea.propTypes = {
    * A custom ID will
    * be added if this is not supplied.
    */
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   /**
    * Assigned to the `aria-describedby`
    * attribute. Used to create
@@ -102,7 +101,6 @@ SprkTextarea.propTypes = {
 SprkTextarea.defaultProps = {
   forwardedRef: React.createRef(),
   isValid: true,
-  id: uniqueId('sprk-textarea-'),
 };
 
 export default SprkTextarea;

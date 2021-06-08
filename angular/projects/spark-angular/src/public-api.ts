@@ -282,4 +282,23 @@ export { SprkPromoHeadingDirective } from './lib/components/sprk-promo/directive
 export { SprkPromoHeadingModule } from './lib/components/sprk-promo/directives/sprk-promo-heading/sprk-promo-heading.module';
 export { SprkPromoSubheadingDirective } from './lib/components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.directive';
 export { SprkPromoSubheadingModule } from './lib/components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.module';
+export { SprkAutocompleteModule } from './lib/components/sprk-autocomplete/sprk-autocomplete.module';
+export { SprkAutocompleteComponent } from './lib/components/sprk-autocomplete/sprk-autocomplete.component';
+export { SprkAutocompleteResultsModule } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-results/sprk-autocomplete-results.module';
+export { SprkAutocompleteResultsDirective } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
+export { SprkAutocompleteResultModule } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-result/sprk-autocomplete-result.module';
+export { SprkAutocompleteResultDirective } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
+export { SprkAutocompleteInputContainerDirective } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
+export { SprkAutocompleteInputContainerModule } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.module';
+
+export {
+  isUpPressed,
+  isTabPressed,
+  isSpacePressed,
+  isEnterPressed,
+  isEscapePressed,
+  isRightPressed,
+  isLeftPressed,
+  isDownPressed,
+} from './lib/utilities/keypress/keypress';
 export { isElementVisible } from './lib/utilities/isElementVisible/isElementVisible';

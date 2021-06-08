@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import uniqueId from 'lodash/uniqueId';
 
 class SprkInput extends Component {
   constructor(props) {
@@ -11,12 +10,10 @@ class SprkInput extends Component {
     if (value) {
       this.state = {
         hasValue: true,
-        currentValue: value,
       };
     } else {
       this.state = {
         hasValue: false,
-        currentValue: '',
       };
     }
   }
@@ -37,25 +34,18 @@ class SprkInput extends Component {
       onBlur,
       ...rest
     } = this.props;
-    const { hasValue, currentValue } = this.state;
-    let internalValue = value;
+    const { hasValue } = this.state;
 
-    // Adds class for IE and Edge,
-    // checks for changes in value to run the formatter
+    // Adds class for IE and Edge
     const handleOnBlur = (e) => {
       // Check to see if the value has changed.
-      const isValueChanged = currentValue !== e.target.value;
-
       if (e.target.value.length > 0) {
-        this.setState({ hasValue: true, currentValue: e.target.value });
+        this.setState({ hasValue: true });
       } else {
-        this.setState({ hasValue: false, currentValue: '' });
+        this.setState({ hasValue: false });
       }
       // Run any custom onBlur functions that were passed in.
       if (onBlur) onBlur(e);
-      // Update the value to run the formatter or not.
-      internalValue =
-        isValid && formatter && isValueChanged ? formatter(value) : value;
     };
 
     return (
@@ -70,7 +60,7 @@ class SprkInput extends Component {
         data-id={idString}
         data-analytics={analyticsString}
         aria-invalid={!isValid}
-        value={internalValue}
+        value={isValid && formatter && hasValue ? formatter(value) : value}
         onBlur={(e) => handleOnBlur(e)}
         id={id}
         {...rest}
@@ -116,7 +106,7 @@ SprkInput.propTypes = {
    * A ref passed in will be attached to the
    * input element of the rendered component.
    */
-  forwardedRef: PropTypes.oneOf(PropTypes.shape(), PropTypes.func),
+  forwardedRef: PropTypes.oneOfType([PropTypes.shape(), PropTypes.func]),
   /**
    * Will render the component in it's disabled state.
    */
@@ -129,10 +119,8 @@ SprkInput.propTypes = {
   /**
    * Assigned to the `id` attribute
    * of the rendered input element.
-   * A custom ID will
-   * be added if this is not supplied.
    */
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   /**
    * Assigned to the `aria-describedby`
    * attribute. Used to create
@@ -151,7 +139,6 @@ SprkInput.defaultProps = {
   formatter: (value) => value,
   forwardedRef: React.createRef(),
   isValid: true,
-  id: uniqueId('sprk-input-'),
   isDisabled: false,
 };
 

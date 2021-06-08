@@ -522,6 +522,96 @@ describe('SprkCheckboxGroup:', () => {
     ).toBe(null);
   });
 
+  it(`should not update the children if the child is null`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <SprkFieldset>
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
+        {false && <div />}
+      </SprkCheckboxGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
+
+  it(`should not update the grandchildren if the grandchild is null`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <div>
+          <SprkFieldset>
+            <SprkLegend>Checkbox Group Label</SprkLegend>
+            <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+            <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+            <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+          </SprkFieldset>
+          {false && <div />}
+        </div>
+      </SprkCheckboxGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe(null);
+  });
+
+  it(`should not update the children if the child 
+  is null and the fieldset has an aria-describedby`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <SprkFieldset ariaDescribedBy="test">
+          <SprkLegend>Checkbox Group Label</SprkLegend>
+          <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
+        {false && <div />}
+      </SprkCheckboxGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('test');
+  });
+
+  it(`should not update the grandchildren if the grandchild 
+  is null and the fieldset has an aria-describedby`, () => {
+    const wrapper = mount(
+      <SprkCheckboxGroup>
+        <div>
+          <SprkFieldset ariaDescribedBy="test">
+            <SprkLegend>Checkbox Group Label</SprkLegend>
+            <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+            <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+            <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+          </SprkFieldset>
+          {false && <div />}
+        </div>
+      </SprkCheckboxGroup>,
+    );
+
+    expect(
+      wrapper
+        .find('.sprk-b-Fieldset')
+        .getDOMNode()
+        .getAttribute('aria-describedby'),
+    ).toBe('test');
+  });
+
   it('should pass through additional attributes', () => {
     const wrapper = shallow(<SprkCheckboxGroup data-my-attr="testing" />);
     expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
