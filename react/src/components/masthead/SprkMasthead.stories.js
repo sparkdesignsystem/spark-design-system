@@ -81,7 +81,7 @@ const links = [
     to: '#nogo',
   },
   {
-    element: 'SprkLink',
+    element: SprkLink,
     text: 'Item 3',
     subNavLinks: [
       {
