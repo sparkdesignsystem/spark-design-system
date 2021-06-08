@@ -12,16 +12,16 @@ class SprkFooter extends Component {
     super(props);
     const { linkColumns, additionalIcons, paragraphs } = props;
     this.state = {
-      linkColumnsHasIds: linkColumns.map(item => ({
+      linkColumnsHasIds: linkColumns.map((item) => ({
         heading: item.heading,
         id: uniqueId(),
-        links: item.links.map(link => ({ id: uniqueId(), ...link })),
+        links: item.links.map((link) => ({ id: uniqueId(), ...link })),
       })),
-      additionalIconsHasIds: additionalIcons.map(icon => ({
+      additionalIconsHasIds: additionalIcons.map((icon) => ({
         id: uniqueId(),
         ...icon,
       })),
-      paragraphsHasIds: paragraphs.map(p => ({ id: uniqueId(), ...p })),
+      paragraphsHasIds: paragraphs.map((p) => ({ id: uniqueId(), ...p })),
     };
   }
 
@@ -34,6 +34,7 @@ class SprkFooter extends Component {
       awards,
       paragraphs,
       additionalIcons,
+      additionalDisclaimer,
     } = this.props;
 
     const {
@@ -74,8 +75,8 @@ class SprkFooter extends Component {
                   sprk-o-Stack--medium
                   sprk-o-Stack--split@m"
               >
-                {linkColumnsHasIds.length > 0
-                  && linkColumnsHasIds.map(column => (
+                {linkColumnsHasIds.length > 0 &&
+                  linkColumnsHasIds.map((column) => (
                     <div
                       key={column.id}
                       className="sprk-o-Stack__item
@@ -85,11 +86,25 @@ class SprkFooter extends Component {
                         sprk-o-Stack
                         sprk-o-Stack--large"
                     >
-                      <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
+                      <h3
+                        className="
+                          sprk-o-Stack__item
+                          sprk-b-TypeBodyOne
+                          sprk-c-Footer__text
+                        "
+                      >
                         {column.heading}
                       </h3>
 
-                      <ul className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--misc-a sprk-b-List sprk-b-List--bare">
+                      <ul
+                        className="
+                          sprk-o-Stack__item
+                          sprk-o-Stack
+                          sprk-o-Stack--misc-a
+                          sprk-b-List
+                          sprk-b-List--bare
+                        "
+                      >
                         {column.links.map((columnLink) => {
                           const {
                             id,
@@ -103,8 +118,14 @@ class SprkFooter extends Component {
                           return (
                             <li key={id} className="sprk-o-Stack__item">
                               <TagName
-                                className="sprk-c-Footer__link sprk-b-Link sprk-b-Link--light"
-                                href={TagName === 'a' ? href || '#nogo' : undefined}
+                                className="
+                                  sprk-c-Footer__link
+                                  sprk-b-Link
+                                  sprk-b-Link--light
+                                "
+                                href={
+                                  TagName === 'a' ? href || '#nogo' : undefined
+                                }
                                 data-analytics={analyticsString}
                                 {...rest}
                               >
@@ -137,18 +158,34 @@ class SprkFooter extends Component {
               <SprkFooterAwards awards={awards} />
             )}
 
-            {paragraphs.length > 0
-              && paragraphsHasIds.map(p => (
+            {paragraphs.length > 0 &&
+              paragraphsHasIds.map((p) => (
                 <p
                   key={p.id}
-                  className="sprk-o-Stack__item sprk-b-TypeBodyFour sprk-c-Footer__text"
+                  className="
+                    sprk-o-Stack__item
+                    sprk-b-TypeBodyFour
+                    sprk-c-Footer__text
+                  "
                 >
                   {p.text}
                 </p>
               ))}
 
+            {/* To allow users to use inline links until
+            compositional footer is available */}
+            {additionalDisclaimer}
             {additionalIcons.length > 0 && (
-              <ul className="sprk-o-Stack__item sprk-o-Stack__item--flex@m sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--medium sprk-b-List sprk-b-List--bare">
+              <ul
+                className="
+                  sprk-o-Stack__item
+                  sprk-o-Stack__item--flex@m
+                  sprk-o-Stack
+                  sprk-o-Stack--split@xxs
+                  sprk-o-Stack--medium
+                  sprk-b-List sprk-b-List--bare
+                "
+              >
                 {additionalIconsHasIds.map((icon) => {
                   const {
                     id,
@@ -177,7 +214,9 @@ class SprkFooter extends Component {
                             addClasses,
                           )}
                         />
-                        <span className="sprk-u-ScreenReaderText">{screenReaderText}</span>
+                        <span className="sprk-u-ScreenReaderText">
+                          {screenReaderText}
+                        </span>
                       </TagName>
                     </li>
                   );
@@ -204,18 +243,25 @@ SprkFooter.defaultProps = {
 
 SprkFooter.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A node for additional disclaimers that have inline links.
+   */
+  additionalDisclaimer: PropTypes.node,
+  /**
+   * A space-separated string of classes
+   * to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /** Object used to configure the global items section. */
   globalItems: PropTypes.shape({
     /** Main headline for the global section. */
     heading: PropTypes.string,
-    /** Object used to configure each item in global items section such as `mediaType`, `src`, `description` etc. */
+    /** Object used to configure each item in global items section such as
+     * `mediaType`, `src`, `description` etc. */
     items: PropTypes.arrayOf(
       PropTypes.shape({
         /** The type of media element to render. */
@@ -241,7 +287,8 @@ SprkFooter.propTypes = {
         /** The description of the image */
         description: PropTypes.string,
         /**
-         * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+         * Assigned to the `data-analytics` attribute serving
+         * as a unique selector for outside libraries to capture data.
          */
         analyticsString: PropTypes.string,
         /**
@@ -251,7 +298,8 @@ SprkFooter.propTypes = {
       }),
     ),
   }),
-  /** Constructs the columns of links in the Footer. Maximum number of columns is 3. */
+  /** Constructs the columns of links in the Footer.
+   * Maximum number of columns is 3. */
   linkColumns: PropTypes.arrayOf(
     PropTypes.shape({
       /** The main headline for the column. */
@@ -261,7 +309,7 @@ SprkFooter.propTypes = {
         PropTypes.shape({
           /**
            * The link `href`.
-          */
+           */
           href: PropTypes.string,
           /**
            * The link text.
@@ -272,7 +320,8 @@ SprkFooter.propTypes = {
            */
           element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
           /**
-           * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+           * Assigned to the `data-analytics` attribute serving
+           * as a unique selector for outside libraries to capture data.
            */
           analyticsString: PropTypes.string,
         }),
@@ -293,7 +342,8 @@ SprkFooter.propTypes = {
         /** Text used for screen readers. */
         screenReaderText: PropTypes.string,
         /**
-         * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+         * Assigned to the `data-analytics` attribute serving
+         * as a unique selector for outside libraries to capture data.
          */
         analyticsString: PropTypes.string,
         /**
@@ -329,9 +379,10 @@ SprkFooter.propTypes = {
          * classes to be added to the award image.
          */
         addClasses: PropTypes.string,
-       /**
-        * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
-        */
+        /**
+         * Assigned to the `data-analytics` attribute serving
+         * as a unique selector for outside libraries to capture data.
+         */
         analyticsString: PropTypes.string,
       }),
     ),
@@ -366,7 +417,8 @@ SprkFooter.propTypes = {
        */
       element: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       /**
-       * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+       * Assigned to the `data-analytics` attribute serving
+       * as a unique selector for outside libraries to capture data.
        */
       analyticsString: PropTypes.string,
     }),

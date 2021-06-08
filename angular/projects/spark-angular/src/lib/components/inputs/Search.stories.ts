@@ -62,7 +62,6 @@ export const searchInput = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label
           for="search"
-          hasIcon="true"
           isHidden="true"
           sprkLabel
         >
@@ -72,6 +71,7 @@ export const searchInput = () => ({
           iconName="search"
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
+          ariaHidden="true"
         ></sprk-icon>
         <input
           id="search"
@@ -107,7 +107,6 @@ export const invalidSearchInput = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label
           for="invalid-search"
-          hasIcon="true"
           isHidden="true"
           sprkLabel
         >
@@ -117,6 +116,7 @@ export const invalidSearchInput = () => ({
           iconName="search"
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
+          ariaHidden="true"
         ></sprk-icon>
         <input
           id="invalid-search"
@@ -136,6 +136,7 @@ export const invalidSearchInput = () => ({
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
+          ariaHidden="true"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -162,7 +163,6 @@ export const disabledSearchInput = () => ({
       <div class="sprk-b-InputContainer__icon-container">
         <label
           for="disabled-search"
-          hasIcon="true"
           isHidden="true"
           isDisabled="true"
           sprkLabel
@@ -173,6 +173,7 @@ export const disabledSearchInput = () => ({
           iconName="search"
           additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
           sprk-input-icon
+          ariaHidden="true"
         ></sprk-icon>
         <input
           id="disabled-search"
@@ -208,7 +209,7 @@ export const legacyStory = () => ({
     <sprk-icon-input-container>
       <label
         for="legacy-search"
-        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+        class="sprk-u-ScreenReaderText"
         sprkLabel
       >
         Search
@@ -217,6 +218,7 @@ export const legacyStory = () => ({
         iconType="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
+        ariaHidden="true"
       ></sprk-icon>
       <input
         id="legacy-search"
@@ -250,7 +252,7 @@ export const legacyInvalidSearchInput = () => ({
     <sprk-icon-input-container>
       <label
         for="legacy-invalid-search"
-        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText"
+        class="sprk-u-ScreenReaderText"
         sprkLabel
       >
         Search
@@ -259,6 +261,7 @@ export const legacyInvalidSearchInput = () => ({
         iconType="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
+        ariaHidden="true"
       ></sprk-icon>
       <input
         id="legacy-invalid-search"
@@ -277,6 +280,7 @@ export const legacyInvalidSearchInput = () => ({
         <sprk-icon
           iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
+          ariaHidden="true"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -302,7 +306,7 @@ export const legacyDisabledSearchInput = () => ({
     <sprk-icon-input-container>
       <label
         for="legacy-disabled-search"
-        class="sprk-b-Label--with-icon sprk-u-ScreenReaderText sprk-b-Label--disabled"
+        class="sprk-u-ScreenReaderText sprk-b-Label--disabled"
         sprkLabel
       >
         Search
@@ -311,6 +315,7 @@ export const legacyDisabledSearchInput = () => ({
         iconType="search"
         additionalClasses="sprk-b-InlineSearch__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
+        ariaHidden="true"
       ></sprk-icon>
       <input
         id="legacy-disabled-search"

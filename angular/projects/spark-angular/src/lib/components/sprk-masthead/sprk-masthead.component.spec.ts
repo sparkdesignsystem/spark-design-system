@@ -1,23 +1,542 @@
+import { Component, ViewChild } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
-import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion/sprk-masthead-accordion.component';
-import { SprkMastheadAccordionItemComponent } from './sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
-import { SprkMastheadSelectorComponent } from './sprk-masthead-selector/sprk-masthead-selector.component';
+import { SprkMastheadAccordionComponent } from './components/sprk-masthead-accordion/sprk-masthead-accordion.component';
+import { SprkMastheadAccordionItemComponent } from './components/sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+import { SprkMastheadSelectorComponent } from './components/sprk-masthead-selector/sprk-masthead-selector.component';
 import { SprkMastheadComponent } from './sprk-masthead.component';
+import { SprkMastheadNavCollapsibleDirective } from './directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
+import { SprkMastheadBrandingDirective } from './directives/sprk-masthead-branding/sprk-masthead-branding.directive';
+import { SprkMastheadNavItemsDirective } from './directives/sprk-masthead-nav-items/sprk-masthead-nav-items.directive';
+import { SprkMastheadNavItemDirective } from './directives/sprk-masthead-nav-item/sprk-masthead-nav-item.directive';
+import { SprkMastheadNavCollapsibleButtonComponent } from './components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.component';
 import { SprkDropdownComponent } from '../sprk-dropdown/sprk-dropdown.component';
+import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
+import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
+import { SprkMastheadLinkDirective } from './directives/sprk-masthead-link/sprk-masthead-link.directive';
+import { Router, NavigationEnd, RouterEvent } from '@angular/router';
+import { ReplaySubject } from 'rxjs';
+
+@Component({
+  selector: 'sprk-test',
+  template: `
+    <sprk-masthead>
+      <div
+        sprkMastheadBranding
+        sprkStackItem
+        class="sprk-o-Stack__item--center-column@xxs"
+      >
+        <a sprkLink href="#nogo" variant="unstyled">
+          <svg
+            class="sprk-c-Masthead__logo"
+            xmlns="http://www.w3.org/2000/svg"
+            width="365.4"
+            height="48"
+            viewBox="0 0 365.4 101.35"
+          ></svg>
+        </a>
+      </div>
+
+      <div
+        sprkMastheadNavItem
+        sprkStackItem
+        class="sprk-o-Stack__item--center-column@xxs"
+      >
+        <a sprkMastheadLink href="#nogo">
+          Sign In
+        </a>
+      </div>
+
+      <nav
+        sprkMastheadNavItems
+        sprkStackItem
+        role="navigation"
+        class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
+      >
+        <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
+          <sprk-stack
+            additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row"
+          >
+            <div sprkStackItem class="sprk-u-Position--relative">
+              <sprk-masthead-selector
+                triggerText="Choose One"
+                heading="Choose One"
+                triggerIconName="chevron-down"
+                [choices]="selectorDropdown"
+              >
+                <div
+                  class="sprk-c-Masthead__selector-footer"
+                  sprkMastheadSelectorFooter
+                >
+                  <a
+                    sprkLink
+                    variant="unstyled"
+                    href="#nogo"
+                    class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact"
+                  >
+                    Placeholder
+                  </a>
+                </div>
+              </sprk-masthead-selector>
+            </div>
+          </sprk-stack>
+        </div>
+
+        <ul
+          sprkStackItem
+          class="
+            sprk-o-HorizontalList
+            sprk-o-HorizontalList--spacing-medium
+            sprk-o-Stack--center-column
+          "
+        >
+          <li>
+            <a sprkMastheadLink href="#nogo">
+              Talk To Us
+            </a>
+          </li>
+
+          <li>
+            <sprk-dropdown
+              [choices]="talkToUsDropdownChoices"
+              heading="My Account"
+              triggerIconName="user"
+              triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+              iconAdditionalClasses="sprk-c-Icon--xl"
+              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              screenReaderText="User Account"
+            >
+            </sprk-dropdown>
+          </li>
+        </ul>
+      </nav>
+
+      <div sprkStackItem>
+        <nav sprkMastheadNavBar sprkStackItem role="navigation">
+          <ul
+            class="sprk-c-Masthead__nav-bar-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare"
+          >
+            <li sprkStackItem class="sprk-c-Masthead__nav-bar-item">
+              <a
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-1"
+                href="#nogo"
+              >
+                Item One
+              </a>
+            </li>
+
+            <li
+              sprkStackItem
+              class="sprk-c-Masthead__nav-bar-item"
+              aria-haspopup="true"
+            >
+              <sprk-dropdown
+                [choices]="item2NavBarDropdownChoices"
+                triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
+                additionalClasses="sprk-u-TextAlign--left"
+                triggerIconName="chevron-down"
+                analyticsString="nav-bar-item-2"
+                triggerText="Item Two"
+              ></sprk-dropdown>
+            </li>
+
+            <li sprkStackItem class="sprk-c-Masthead__nav-bar-item">
+              <a
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-3"
+                href="#nogo"
+              >
+                Item Three
+              </a>
+            </li>
+
+            <li
+              sprkStackItem
+              class="sprk-c-Masthead__nav-bar-item"
+              aria-haspopup="true"
+            >
+              <sprk-dropdown
+                [choices]="item2NavBarDropdownChoices"
+                triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
+                additionalClasses="sprk-u-TextAlign--left"
+                triggerIconName="chevron-down"
+                analyticsString="nav-bar-item-4"
+                triggerText="Item Four"
+              ></sprk-dropdown>
+            </li>
+
+            <li sprkStackItem class="sprk-c-Masthead__nav-bar-item">
+              <a
+                sprkMastheadLink
+                variant="navBar"
+                analyticsString="nav-bar-item-5"
+                href="#nogo"
+              >
+                Item Five
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <nav
+        sprkMastheadNavCollapsible
+        role="navigation"
+        idString="extended-collapsible-nav"
+        aria-label="collapsible"
+      >
+        <sprk-masthead-selector
+          triggerText="Choose One"
+          heading="Choose One"
+          triggerIconName="chevron-down"
+          [choices]="narrowSelectorDropdown"
+          isFlush="true"
+        >
+          <div
+            class="sprk-c-Masthead__selector-footer"
+            sprkMastheadSelectorFooter
+          >
+            <a
+              sprkLink
+              variant="unstyled"
+              analyticsString="placeholder-button"
+              href="#nogo"
+              class="sprk-c-Button sprk-c-Button--secondary"
+            >
+              Placeholder
+            </a>
+          </div>
+        </sprk-masthead-selector>
+
+        <sprk-masthead-accordion>
+          <sprk-masthead-accordion-item heading="Item 1">
+            <ul
+              class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
+            >
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="accordion-item-1"
+                >
+                  Item 1
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="accordion-item-2"
+                >
+                  Item 2
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="accordion-item-3"
+                >
+                  Item 3
+                </a>
+              </li>
+            </ul>
+          </sprk-masthead-accordion-item>
+
+          <li
+            class="sprk-c-MastheadAccordion__item sprk-c-MastheadAccordion__item--active"
+          >
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">Item 2</span>
+            </a>
+          </li>
+
+          <sprk-masthead-accordion-item heading="Item 3">
+            <ul
+              class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
+            >
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                >
+                  Item 1
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                >
+                  Item 2
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                >
+                  Item 3
+                </a>
+              </li>
+            </ul>
+          </sprk-masthead-accordion-item>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">Item 4</span>
+            </a>
+          </li>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">Item 5</span>
+            </a>
+          </li>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">
+                <sprk-icon
+                  iconName="landline"
+                  additionalClasses="
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--xl
+                    sprk-u-mrs
+                  "
+                ></sprk-icon>
+                (555) 555-5555
+              </span>
+            </a>
+          </li>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">
+                <sprk-icon
+                  iconName="call-team-member"
+                  additionalClasses="
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--xl
+                    sprk-u-mrs
+                  "
+                ></sprk-icon>
+                Talk To Us
+              </span>
+            </a>
+          </li>
+
+          <li class="sprk-c-MastheadAccordion__item">
+            <a
+              sprkLink
+              variant="unstyled"
+              class="sprk-c-MastheadAccordion__summary"
+            >
+              <span class="sprk-c-MastheadAccordion__heading">
+                <sprk-icon
+                  iconName="settings"
+                  additionalClasses="
+                    sprk-c-Icon--filled-current-color
+                    sprk-c-Icon--stroke-current-color
+                    sprk-c-Icon--xl
+                    sprk-u-mrs
+                  "
+                ></sprk-icon>
+                Settings
+              </span>
+            </a>
+          </li>
+
+          <sprk-masthead-accordion-item heading="My Account" leadingIcon="user">
+            <ul
+              class="sprk-b-List sprk-b-List--bare sprk-c-MastheadAccordion__details"
+            >
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="change-username"
+                >
+                  Change Username
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="change-password"
+                >
+                  Change Password
+                </a>
+              </li>
+
+              <li class="sprk-c-MastheadAccordion__item">
+                <a
+                  sprkLink
+                  variant="unstyled"
+                  class="sprk-c-MastheadAccordion__summary"
+                  href="#nogo"
+                  analyticsString="sign-out"
+                >
+                  Sign Out
+                </a>
+              </li>
+            </ul>
+          </sprk-masthead-accordion-item>
+        </sprk-masthead-accordion>
+      </nav>
+    </sprk-masthead>
+  `,
+})
+class Test1Component {
+  @ViewChild(SprkMastheadComponent, {
+    static: false,
+  })
+  masthead: SprkMastheadComponent;
+}
+
+@Component({
+  selector: 'sprk-test-2',
+  template: `
+    <sprk-masthead>
+      <div sprkMastheadBranding sprkStackItem class="sprk-u-TextAlign--left">
+        <a sprkLink href="#nogo" variant="unstyled">
+          <svg
+            class="sprk-c-Masthead__logo sprk-u-TextAlign--left"
+            xmlns="http://www.w3.org/2000/svg"
+            width="365.4"
+            height="48"
+            viewBox="0 0 365.4 101.35"
+          ></svg>
+        </a>
+      </div>
+
+      <div
+        sprkMastheadNavItem
+        sprkStackItem
+        class="sprk-o-Stack__item--center-column@xxs"
+      >
+        <a sprkMastheadLink href="#nogo">
+          Talk To Us
+        </a>
+      </div>
+
+      <nav
+        sprkMastheadNavItems
+        sprkStackItem
+        role="navigation"
+        class="sprk-o-Stack__item--flex@xxs sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--split@xxs sprk-o-Stack--end-row"
+      >
+        <ul
+          sprkStackItem
+          class="
+            sprk-o-HorizontalList
+            sprk-o-HorizontalList--spacing-medium
+            sprk-o-Stack--center-column
+          "
+        >
+          <li>
+            <a sprkMastheadLink href="#nogo">
+              Talk To Us
+            </a>
+          </li>
+
+          <li>
+            <sprk-dropdown
+              [choices]="talkToUsDropdownChoices"
+              heading="My Account"
+              triggerIconName="user"
+              triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
+              iconAdditionalClasses="sprk-c-Icon--xl"
+              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              screenReaderText="User Account"
+            >
+            </sprk-dropdown>
+          </li>
+        </ul>
+      </nav>
+    </sprk-masthead>
+  `,
+})
+class Test2Component {
+  @ViewChild(SprkMastheadComponent, {
+    static: false,
+  })
+  masthead: SprkMastheadComponent;
+}
+
 describe('SprkMastheadComponent', () => {
-  let component: SprkMastheadComponent;
-  let fixture: ComponentFixture<SprkMastheadComponent>;
-  let mastheadElement: HTMLElement;
-  let hamburgerIcon: HTMLElement;
-  let narrowNavElement: HTMLElement;
-  let secondaryNavElement: HTMLElement;
+  let component: Test1Component;
+  let componentFixture: ComponentFixture<Test1Component>;
+  let componentElement: HTMLElement;
+  let collapsibleNavButton: HTMLElement;
+  let collapsibleNavEl: HTMLElement;
+
+  let componentNoCollapsibleNav: Test1Component;
+  let componentFixtureNoCollapsibleNav: ComponentFixture<Test2Component>;
+  let componentElementNoCollapsibleNav: HTMLElement;
+  let collapsibleNavButtonNoCollapsibleNav: HTMLElement;
+  let collapsibleNavElNoCollapsibleNav: HTMLElement;
+  let eventsSub = new ReplaySubject<RouterEvent>(1);
+  let windowSpy;
+  const routerStub = {
+    events: eventsSub,
+    url: '/test',
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [BrowserAnimationsModule, RouterTestingModule.withRoutes([])],
+      providers: [{ provide: Router, useValue: routerStub }],
       declarations: [
         SprkMastheadComponent,
         SprkIconComponent,
@@ -26,22 +545,57 @@ describe('SprkMastheadComponent', () => {
         SprkMastheadAccordionComponent,
         SprkMastheadAccordionItemComponent,
         SprkMastheadSelectorComponent,
+        SprkStackComponent,
+        Test1Component,
+        Test2Component,
+        SprkStackItemDirective,
+        SprkMastheadNavItemsDirective,
+        SprkMastheadNavItemDirective,
+        SprkMastheadLinkDirective,
+        SprkMastheadNavCollapsibleDirective,
+        SprkMastheadNavCollapsibleButtonComponent,
+        SprkMastheadBrandingDirective,
       ],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SprkMastheadComponent);
-    component = fixture.componentInstance;
-    mastheadElement = fixture.nativeElement.querySelector('header');
-    hamburgerIcon = mastheadElement.querySelector('.sprk-c-Menu');
+    componentFixture = TestBed.createComponent(Test1Component);
+    component = componentFixture.componentInstance;
+    componentFixture.detectChanges();
+    componentElement = componentFixture.nativeElement.querySelector(
+      '.sprk-c-Masthead',
+    );
+    collapsibleNavEl = componentFixture.nativeElement.querySelector(
+      '.sprk-c-Masthead__nav-collapsible',
+    );
+    collapsibleNavButton = componentFixture.debugElement.nativeElement.querySelector(
+      'button',
+    );
+
+    componentFixtureNoCollapsibleNav = TestBed.createComponent(Test2Component);
+    componentNoCollapsibleNav =
+      componentFixtureNoCollapsibleNav.componentInstance;
+    componentFixtureNoCollapsibleNav.detectChanges();
+    componentElementNoCollapsibleNav = componentFixtureNoCollapsibleNav.nativeElement.querySelector(
+      '.sprk-c-Masthead',
+    );
+    collapsibleNavElNoCollapsibleNav = componentFixtureNoCollapsibleNav.nativeElement.querySelector(
+      '.sprk-c-Masthead__nav-collapsible',
+    );
+    collapsibleNavButtonNoCollapsibleNav = componentFixtureNoCollapsibleNav.debugElement.nativeElement.querySelector(
+      'button',
+    );
+    windowSpy = jest.spyOn(window, 'window', 'get');
   });
 
   afterEach(() => {
-    component.scrollDirection = 'up';
-    component.isHidden = false;
-    component.isNarrowLayout = false;
-    component.isNarrowOnResize = false;
+    windowSpy.mockRestore();
+    component.masthead.currentScrollDirection = 'up';
+    component.masthead.isMastheadHidden = false;
+    component.masthead.isPageScrolled = false;
+    component.masthead.isNarrowViewport = false;
+    component.masthead.isNarrowViewportOnResize = false;
     window.document.body.style.minHeight = '800px';
     window.document.body.style.minWidth = '1024px';
   });
@@ -51,338 +605,354 @@ describe('SprkMastheadComponent', () => {
   });
 
   it('should add classes when additionalClasses has a value', () => {
-    component.additionalClasses = 'sprk-u-man';
-    fixture.detectChanges();
-    expect(mastheadElement.classList.toString()).toEqual(
+    component.masthead.additionalClasses = 'sprk-u-man';
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
       'sprk-c-Masthead sprk-o-Stack sprk-u-man',
     );
   });
 
-  it('should set the logo link and text to provided values', () => {
-    component.logoHref = '/alert';
-    component.logoLinkScreenReaderText = 'Go to the alerts page.';
-    fixture.detectChanges();
-    const logoElement: HTMLElement = mastheadElement.querySelector(
-      '.sprk-c-Masthead__branding a',
+  it('should show the menu icon if a collapsible nav is present', () => {
+    expect(collapsibleNavButton).toBeTruthy();
+  });
+
+  it('should not show the menu icon if there is no collapsible nav', () => {
+    expect(collapsibleNavButtonNoCollapsibleNav).toBeNull();
+    expect(collapsibleNavElNoCollapsibleNav).toBeNull();
+  });
+
+  it('should pass the collapsible nav ID to the collapsible nav button component aria-controls attribute', () => {
+    const buttonId = collapsibleNavButton.getAttribute('aria-controls');
+    const navId = collapsibleNavEl.id;
+    expect(buttonId).toEqual(navId);
+  });
+
+  it('should pass the collapsible nav button screen reader text to the collapsible nav button if present', () => {
+    const buttonText = collapsibleNavButton.querySelector('span');
+    component.masthead.collapsibleNavButtonScreenReaderText = 'test-text';
+    componentFixture.detectChanges();
+    expect(buttonText.textContent).toEqual('test-text');
+  });
+
+  it('should set the collapsible nav isCollapsed prop to false when button is clicked and was closed before clicked', () => {
+    // expect the collapsible nav to be closed at first with having the is-collapsed class
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
     );
-    const logoElementLength = mastheadElement.querySelectorAll(
-      '.sprk-c-Masthead__branding a',
-    ).length;
-    expect(logoElementLength).toEqual(1);
-    expect(logoElement.getAttribute('href')).toEqual('/alert');
-    expect(logoElement.textContent.trim()).toEqual('Go to the alerts page.');
-  });
-
-  it('should set the logo router link and text to provided values', () => {
-    component.logoRouterLink = '/button';
-    component.logoLinkScreenReaderText = 'Go to the buttons page.';
-    fixture.detectChanges();
-    const logoElement: HTMLElement = mastheadElement.querySelector(
-      '.sprk-c-Masthead__branding a',
+    // click the collapsible nav button which runs the open method
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // child directive isCollapsed should now be false, which opens the collapsible nav
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(false);
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
     );
-    const logoElementLength = mastheadElement.querySelectorAll(
-      '.sprk-c-Masthead__branding a',
-    ).length;
-    expect(logoElement.getAttribute('href')).toEqual('/button');
-    expect(logoElementLength).toEqual(1);
-    expect(logoElement.textContent.trim()).toEqual('Go to the buttons page.');
   });
 
-  it('should add the aria-expanded attribute and show the narrow nav when the icon is clicked', () => {
-    expect(hamburgerIcon.getAttribute('aria-expanded')).toEqual(null);
-    expect(
-      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
-    ).toBeNull();
-    hamburgerIcon.click();
-    fixture.detectChanges();
-    expect(hamburgerIcon.getAttribute('aria-expanded')).toEqual('true');
-    expect(
-      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
-    ).not.toBeNull();
+  it('should close the collapsible nav when the collapsible nav button is clicked and was open before clicked', () => {
+    // click the collapsible nav button which runs the open method
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // expect the collapsible nav to be open at first without having the is-collapsed class
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+    // click the collapsible nav button which runs the close method
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // child directive isCollapsed should now be true, which close the collapsible nav
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(true);
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
   });
 
-  it('should add a class to body and show the narrow nav when the icon is clicked', () => {
-    expect(
-      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
-    ).toBeNull();
-    hamburgerIcon.click();
-    fixture.detectChanges();
+  it(`
+      should add the aria-expanded attribute to collapsible nav button and
+      show the collapsible nav when the icon is clicked
+    `, () => {
+    expect(collapsibleNavButton.getAttribute('aria-expanded')).toEqual('false');
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    expect(collapsibleNavButton.getAttribute('aria-expanded')).toEqual('true');
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+  });
+
+  it('should add a class to body and show the collapsible nav when the collapsible button is clicked', () => {
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
     expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
       true,
     );
-    expect(
-      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
-    ).not.toBeNull();
-    hamburgerIcon.click();
-    fixture.detectChanges();
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
     expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
       false,
     );
-    expect(
-      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
-    ).toBeNull();
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
   });
 
-  it('should close the narrow nav on orientationchange', () => {
-    component.isNarrowNavOpen = true;
-    fixture.detectChanges();
-    window.dispatchEvent(new Event('orientationchange'));
-    fixture.detectChanges();
-    expect(
-      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
-    ).toBeNull();
+  it('should remove class from body and hide the collapsible nav when the collapsible nav is closed', () => {
+    // Open it
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // Should be open now
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
+    );
+    expect(document.body.classList.toString()).toEqual(
+      'sprk-u-Overflow--hidden sprk-u-Height--100',
+    );
+    expect(document.documentElement.classList.toString()).toEqual(
+      'sprk-u-Overflow--hidden sprk-u-Height--100',
+    );
+    // We click to close it
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // Classes on the body and HTML should be removed
+    expect(document.body.classList.toString()).toEqual('');
+    expect(document.documentElement.classList.toString()).toEqual('');
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+  });
+
+  it('should close the collapsible nav when viewport expands to large from small', () => {
+    component.masthead.isMastheadHidden = true;
+    component.masthead.collapsibleNavDirective.isCollapsed = false;
+    component.masthead.isNarrowViewport = true;
+    component.masthead.isNarrowViewportOnResize = false;
+    component.masthead.updateLayoutState();
+    componentFixture.detectChanges();
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    expect(component.masthead.isMastheadHidden).toBe(false);
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(true);
   });
 
   it('should add data-id when idString has a value', () => {
     const testString = 'element-id';
-    component.idString = testString;
-    fixture.detectChanges();
-    expect(mastheadElement.getAttribute('data-id')).toEqual(testString);
+    component.masthead.idString = testString;
+    componentFixture.detectChanges();
+    expect(componentElement.getAttribute('data-id')).toEqual(testString);
   });
 
   it('should not add data-id when idString has no value', () => {
-    component.idString = null;
-    fixture.detectChanges();
-    expect(mastheadElement.getAttribute('data-id')).toBeNull();
+    component.masthead.idString = null;
+    componentFixture.detectChanges();
+    expect(componentElement.getAttribute('data-id')).toBeNull();
   });
 
-  it('should add classes if additionalNarrowNavClasses has a value', () => {
-    component.additionalNarrowNavClasses = 'sprk-u-man';
-    component.isNarrowNavOpen = true;
-    fixture.detectChanges();
-    narrowNavElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__narrow-nav .sprk-c-MastheadAccordion',
-    );
-    expect(narrowNavElement.classList.contains('sprk-u-man')).toEqual(true);
-  });
-
-  it('should add classes if additionalBigNavClasses has a value', () => {
-    component.bigNavLinks = [{ text: 'Item 1', href: '#nogo' }];
-    component.additionalBigNavClasses = 'sprk-u-man';
-    fixture.detectChanges();
-    secondaryNavElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__big-nav-items',
-    );
-    expect(secondaryNavElement.classList.contains('sprk-u-man')).toEqual(true);
-  });
-
-  it('should not add classes if additionalBigNavClasses has no value', () => {
-    component.bigNavLinks = [{ text: 'Item 1', href: '#nogo' }];
-    component.additionalBigNavClasses = '';
-    fixture.detectChanges();
-    secondaryNavElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__big-nav-items',
-    );
-    expect(secondaryNavElement.classList.toString()).toEqual(
-      'sprk-c-Masthead__big-nav-items sprk-o-Stack sprk-o-Stack--misc-a sprk-o-Stack--center-row sprk-o-Stack--split@xxs sprk-b-List sprk-b-List--bare',
+  it('should add the scroll class when state isPageScrolled is true', () => {
+    component.masthead.isPageScrolled = true;
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack sprk-c-Masthead--is-scrolled',
     );
   });
 
-  it('should add the scroll class when state isScrolled is true', () => {
-    component.isScrolled = true;
-    fixture.detectChanges();
-    expect(
-      mastheadElement.classList.contains('sprk-c-Masthead--scroll'),
-    ).toEqual(true);
+  it('should remove the scroll class when state isPageScrolled is false', () => {
+    component.masthead.isPageScrolled = false;
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack',
+    );
   });
 
-  it('should add the hidden class when state isHidden is true', () => {
-    component.isHidden = true;
-    fixture.detectChanges();
-    expect(
-      mastheadElement.classList.contains('sprk-c-Masthead--hidden'),
-    ).toEqual(true);
+  it("should not add the scrolled class if they don't scroll past 10 in the scrollY position", () => {
+    Object.defineProperty(window, 'scrollY', { value: 9, writable: true });
+    window.dispatchEvent(new Event('scroll'));
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack sprk-c-Masthead--is-hidden',
+    );
   });
 
-  it('should update state isHidden to true when scrollDirection is equal to down', () => {
+  it('should add the scrolled class if they scroll past 10 in the scrollY position', () => {
+    Object.defineProperty(window, 'scrollY', { value: 11, writable: true });
+    window.dispatchEvent(new Event('scroll'));
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack sprk-c-Masthead--is-scrolled sprk-c-Masthead--is-hidden',
+    );
+  });
+
+  it('should not add the scrolled class if the scroll position is less than 0', () => {
+    Object.defineProperty(window, 'scrollY', { value: -1, writable: true });
+    window.dispatchEvent(new Event('scroll'));
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack',
+    );
+  });
+
+  it('should add the hidden class when state isPageScrolled is true and isMastheadHidden is true and on small viewports', () => {
+    component.masthead.isMastheadHidden = true;
+    component.masthead.isPageScrolled = true;
+    window.document.body.style.minWidth = '320px';
+    componentFixture.detectChanges();
+    expect(componentElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack sprk-c-Masthead--is-scrolled sprk-c-Masthead--is-hidden',
+    );
+  });
+
+  it('should not add the hidden class when state isPageScrolled is true and isMastheadHidden is false and on small viewports', () => {
+    component.masthead.isMastheadHidden = false;
+    component.masthead.isPageScrolled = true;
+    componentFixture.detectChanges();
+    window.document.body.style.minWidth = '320px';
+    expect(componentElement.classList.toString()).toEqual(
+      'sprk-c-Masthead sprk-o-Stack sprk-c-Masthead--is-scrolled',
+    );
+  });
+
+  it('should update state isMastheadHidden to true when currentScrollDirection is equal to down', () => {
+    // Expect masthead to be shown originally
+    expect(component.masthead.isMastheadHidden).toBe(false);
     // Scroll down the page
     const scrollEvent = document.createEvent('CustomEvent');
     scrollEvent.initCustomEvent('scroll', false, false, null);
     Object.defineProperty(window, 'scrollY', { value: 456, writable: true });
-    fixture.detectChanges();
     window.dispatchEvent(scrollEvent);
-    fixture.detectChanges();
-    expect(component.isHidden).toBe(true);
-    expect(component.scrollDirection).toBe('down');
+    componentFixture.detectChanges();
+    expect(component.masthead.currentScrollDirection).toBe('down');
+    expect(component.masthead.isMastheadHidden).toBe(true);
   });
 
-  it('should show masthead when going from small to large screen', () => {
-    component.isNarrowOnResize = false;
-    component.isNarrowLayout = true;
-    fixture.detectChanges();
-    component.throttledUpdateLayoutState();
-
-    expect(
-      fixture.nativeElement.querySelector('.sprk-c-Masthead').classList,
-    ).not.toContain('sprk-c-Masthead--hidden');
-    expect(
-      fixture.nativeElement.querySelector('.sprk-c-Masthead__narrow-nav'),
-    ).toBeNull();
+  it('should update state isMastheadHidden to false when currentScrollDirection is equal to up', () => {
+    component.masthead.currentScrollPosition = 200;
+    const scrollEvent2 = document.createEvent('CustomEvent');
+    scrollEvent2.initCustomEvent('scroll', false, false, null);
+    Object.defineProperty(window, 'scrollY', { value: 20, writable: true });
+    window.dispatchEvent(scrollEvent2);
+    componentFixture.detectChanges();
+    expect(component.masthead.currentScrollDirection).toBe('up');
+    expect(component.masthead.isMastheadHidden).toBe(false);
   });
 
-  it('should call throttledUpdateLayoutState to be called on resize', () => {
-    const spyOnResize = jest.spyOn(component, 'throttledUpdateLayoutState');
-    const resizeEvent = document.createEvent('CustomEvent');
-    resizeEvent.initCustomEvent('resize', false, false, null);
-    window.dispatchEvent(resizeEvent);
+  it('should call throttledUpdateLayoutState on resize', () => {
+    const spyOnResize = jest.spyOn(
+      component.masthead,
+      'throttledUpdateLayoutState',
+    );
+    window.dispatchEvent(new Event('resize'));
     expect(spyOnResize).toHaveBeenCalled();
   });
 
-  it('should add aria-controls and id to narrowNav if narrowNavId is not passed', () => {
-    component.isNarrowNavOpen = true;
-    fixture.detectChanges();
-    narrowNavElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__narrow-nav',
+  it('should close the collapsible nav on orientationchange', () => {
+    // Should be closed first
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
     );
-    expect(narrowNavElement.getAttribute('id')).toMatch(
-      /sprk_masthead_narrow_nav_\d/,
+    // Set it to open
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // We expect it to be open
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
     );
-    expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(
-      narrowNavElement.getAttribute('id'),
+    // We expect the overflow class to be added to the body tag
+    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
+      true,
     );
-  });
-
-  it('should add correct aria-controls and id to narrowNav if narrowNavId is passed', () => {
-    component.isNarrowNavOpen = true;
-    component.narrowNavId = 'test_controls';
-    fixture.detectChanges();
-    narrowNavElement = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__narrow-nav',
+    // Fire the event on the window
+    window.dispatchEvent(new Event('orientationchange'));
+    componentFixture.detectChanges();
+    // We expect the component to detect the event and close the collapsible nav
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
     );
-    expect(narrowNavElement.getAttribute('id')).toEqual('test_controls');
-    expect(hamburgerIcon.getAttribute('aria-controls')).toEqual(
-      narrowNavElement.getAttribute('id'),
-    );
-  });
-
-  it('should set the href link of the bigNavLink', () => {
-    component.bigNavLinks = [{ text: 'Item 1', href: '/alert' }];
-    fixture.detectChanges();
-    const secondaryNavElementItem = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__link--big-nav',
-    );
-    expect(secondaryNavElementItem.getAttribute('href')).toEqual('/alert');
-  });
-
-  it('should set the href link of the bigNavLink when using routerLink', () => {
-    component.bigNavLinks = [{ text: 'Item 1', routerLink: '/alert-router' }];
-    fixture.detectChanges();
-    const secondaryNavElementItem = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__link--big-nav',
-    );
-    expect(secondaryNavElementItem.getAttribute('href')).toEqual(
-      '/alert-router',
+    // We expect the class that was added to the body to be removed
+    expect(document.body.classList.contains('sprk-u-Overflow--hidden')).toEqual(
+      false,
     );
   });
 
-  it('should set the href link of the narrowNavLink', () => {
-    component.narrowNavLinks = [{ text: 'Item 1', href: '/alert' }];
-    fixture.detectChanges();
-    hamburgerIcon.click();
-    fixture.detectChanges();
-    const narrowNavLink = fixture.nativeElement.querySelector(
-      '.sprk-c-MastheadAccordion__summary',
-    );
-    expect(narrowNavLink.getAttribute('href')).toEqual('/alert');
+  it('should have isPageScrolled as false upon load', () => {
+    expect(component.masthead.isPageScrolled).toBe(false);
   });
 
-  it('should set the href link of the narrowNavLink when using routerLink', () => {
-    component.narrowNavLinks = [
-      { text: 'Item 1', routerLink: '/alert-router' },
-    ];
-    fixture.detectChanges();
-    hamburgerIcon.click();
-    fixture.detectChanges();
-    const narrowNavLink = fixture.nativeElement.querySelector(
-      '.sprk-c-MastheadAccordion__summary',
-    );
-    expect(narrowNavLink.getAttribute('href')).toEqual('/alert-router');
+  it('should have isMastheadHidden as false upon load', () => {
+    expect(component.masthead.isMastheadHidden).toBe(false);
   });
 
-  it('should set the href link of the footer link in selector when using routerLink', () => {
-    const mySelector = {
-      trigger: {
-        text: 'Choose One',
-      },
-      choices: [
-        {
-          content: {
-            title: 'Choice Title 1',
-            infoLine1: 'Information about this choice',
-            infoLine2: 'Additional Information',
-          },
-          value: 'Choice Title 1',
-          active: false,
-        },
-      ],
-      footer: {
-        analyticsString: 'Go Elsewhere Link',
-        text: 'Go Elsewhere',
-        routerLink: '/footer-test',
-      },
-    };
-    component.narrowSelector = mySelector;
-    component.narrowNavLinks = [
-      { text: 'Item 1', routerLink: '/footer-router' },
-    ];
-    fixture.detectChanges();
-    hamburgerIcon.click();
-    fixture.detectChanges();
-    const selectorTrigger = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__selector',
-    );
-    selectorTrigger.click();
-    fixture.detectChanges();
-    const footerLink = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__selector-footer a',
-    );
-    expect(footerLink.getAttribute('href')).toEqual('/footer-test');
+  it('should have isNarrowViewportOnResize as false upon load', () => {
+    expect(component.masthead.isNarrowViewportOnResize).toBe(false);
   });
 
-  it('should set the href link of the footer link in selector when using href', () => {
-    const mySelector = {
-      trigger: {
-        text: 'Choose One',
-      },
-      choices: [
-        {
-          content: {
-            title: 'Choice Title 1',
-            infoLine1: 'Information about this choice',
-            infoLine2: 'Additional Information',
-          },
-          value: 'Choice Title 1',
-          active: false,
-        },
-      ],
-      footer: {
-        analyticsString: 'Go Elsewhere Link',
-        text: 'Go Elsewhere',
-        href: 'https://www.sparkdesignsystem.com',
-      },
-    };
-    component.narrowSelector = mySelector;
-    component.narrowNavLinks = [
-      { text: 'Item 1', routerLink: '/footer-router' },
-    ];
-    fixture.detectChanges();
-    hamburgerIcon.click();
-    fixture.detectChanges();
-    const selectorTrigger = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__selector',
+  it('should have currentScrollDirection as "up" upon load', () => {
+    expect(component.masthead.currentScrollDirection).toBe('up');
+  });
+
+  it('should have currentScrollDirection as 0 upon load', () => {
+    expect(component.masthead.currentScrollPosition).toBe(0);
+  });
+
+  it('should close the open collapsible nav when user goes to a new page', () => {
+    // We expect it to be closed and have the collapsed CSS class
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
     );
-    selectorTrigger.click();
-    fixture.detectChanges();
-    const footerLink = fixture.nativeElement.querySelector(
-      '.sprk-c-Masthead__selector-footer a',
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(true);
+    // We open the collapsible nav
+    collapsibleNavButton.click();
+    componentFixture.detectChanges();
+    // We expect it to be open and not have the collapsed CSS class
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible',
     );
-    expect(footerLink.getAttribute('href')).toEqual(
-      'https://www.sparkdesignsystem.com',
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(false);
+    // We use the router to navigate the page and fire the navigation end event
+    const navigate = new NavigationEnd(1, 'old-route', 'new-route');
+    eventsSub.next(navigate);
+    componentFixture.detectChanges();
+    // We expect the collapsible nav to be collapsed since we are on a new page
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
     );
   });
 
-  it('isElementVisible should return undefined if the element does not exist', () => {
-    const result = component.isElementVisible('foo');
-    expect(result).toEqual(undefined);
+  it('should close the collapsible nav when viewport expands to large from small', () => {
+    component.masthead.isMastheadHidden = true;
+    component.masthead.collapsibleNavDirective.isCollapsed = false;
+    component.masthead.isNarrowViewport = true;
+    component.masthead.isNarrowViewportOnResize = false;
+    component.masthead.updateLayoutState();
+    componentFixture.detectChanges();
+    expect(collapsibleNavEl.classList.toString()).toEqual(
+      'sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed',
+    );
+    expect(component.masthead.isMastheadHidden).toBe(false);
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(true);
+  });
+
+  it('should update internal state for collapsible nav if is it open on load', () => {
+    component.masthead.collapsibleNavDirective.isCollapsed = false;
+    componentFixture.detectChanges();
+    component.masthead.ngAfterViewInit();
+    expect(component.masthead.collapsibleNavDirective.isCollapsed).toBe(false);
+    expect(component.masthead.isCollapsibleNavOpen).toBe(true);
+  });
+
+  it('should not update scroll direction if window is undefined', () => {
+    windowSpy.mockImplementation(() => undefined);
+    expect(window).toBeUndefined();
+    component.masthead.currentScrollPosition = 10;
+    component.masthead.getVerticalScrollDirection();
+    expect(component.masthead.currentScrollPosition).toBe(10);
   });
 });

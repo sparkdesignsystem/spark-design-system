@@ -1,7 +1,6 @@
 ////
 /// @group input
 ////
-
 .sprk-b-Select {
   -webkit-appearance: $sprk-select-appearance;
   -moz-appearance: $sprk-select-appearance;
@@ -16,7 +15,7 @@
   line-height: $sprk-select-line-height;
   outline: $sprk-select-outline;
   padding: $sprk-select-padding;
-  width: 100%;
+  width: $sprk-select-width;
 
   &:focus {
     border-color: $sprk-select-focus-border-color;

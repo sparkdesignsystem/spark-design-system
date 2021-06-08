@@ -3,6 +3,10 @@ import classnames from 'classnames';
 import propTypes from 'prop-types';
 import SprkIcon from '../../../../components/icons/SprkIcon';
 
+/**
+ * TODO: Remove this component as part of Issue #3786.
+ */
+
 const SprkInputIconCheck = ({
   children,
   leadingIcon,
@@ -24,7 +28,8 @@ const SprkInputIconCheck = ({
             iconName={leadingIcon}
             additionalClasses={classnames({
               'sprk-b-InputContainer__icon': true,
-              'sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color': true,
+              'sprk-c-Icon--stroke-current-color': true,
+              'sprk-c-Icon--filled-current-color': true,
               'sprk-b-InputContainer__icon--right': iconRight,
             })}
           />
@@ -37,6 +42,7 @@ const SprkInputIconCheck = ({
 };
 
 SprkInputIconCheck.propTypes = {
+  children: propTypes.node,
   leadingIcon: propTypes.string,
   textIcon: propTypes.bool,
   narrowWidth: propTypes.bool,

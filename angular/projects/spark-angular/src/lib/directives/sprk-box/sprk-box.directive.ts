@@ -42,7 +42,7 @@ export class SprkBoxDirective {
     | 'miscC'
     | 'miscD';
 
-  @HostBinding('class.sprk-o-Box') true;
+  @HostBinding('class.sprk-o-Box') boxClass = true;
 
   @HostBinding('class.sprk-o-Box--flush')
   get flush() {

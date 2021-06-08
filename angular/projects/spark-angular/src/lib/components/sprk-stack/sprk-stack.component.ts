@@ -14,7 +14,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SprkStackComponent {
   /**
-   * The value supplied can be `tiny`, `small`, `medium`, `large`, or `huge`.
+   * The value supplied can be `extraTiny`, `tiny`, `small`, `medium`, `large`, or `huge`.
    * This is used as the breakpoint at which the component moves or "splits"
    * to a side by side layout.
    */
@@ -47,6 +47,13 @@ export class SprkStackComponent {
   additionalClasses: string;
 
   /**
+   * Use in cases of nested Stack components where the Stack is also
+   * a Stack item.
+   */
+  @Input()
+  isStackItem: boolean;
+
+  /**
    * @ignore
    */
   getClasses(): string {
@@ -54,6 +61,9 @@ export class SprkStackComponent {
 
     // Handle the choice of item split breakpoint by adding CSS class
     switch (this.splitAt) {
+      case 'extraTiny':
+        classArray.push('sprk-o-Stack--split@xxs');
+        break;
       case 'tiny':
         classArray.push('sprk-o-Stack--split@xs');
         break;
@@ -98,6 +108,10 @@ export class SprkStackComponent {
       this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
+    }
+
+    if (this.isStackItem) {
+      classArray.push('sprk-o-Stack__item');
     }
 
     return classArray.join(' ');

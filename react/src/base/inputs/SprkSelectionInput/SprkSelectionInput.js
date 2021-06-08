@@ -6,12 +6,15 @@ import SprkErrorContainer from '../SprkErrorContainer/SprkErrorContainer';
 import SprkLabelLocationCheck from '../components/SprkLabelLocationCheck/SprkLabelLocationCheck';
 import SprkIcon from '../../../components/icons/SprkIcon';
 
+/**
+ * TODO: Remove this component as part of Issue #3783.
+ */
 class SprkSelectionInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       id: uniqueId(),
-      choiceItems: props.choices.map(item => ({ id: uniqueId(), ...item })),
+      choiceItems: props.choices.map((item) => ({ id: uniqueId(), ...item })),
     };
     this.handleChange = this.handleChange.bind(this);
     this.selectRef = React.createRef();
@@ -33,10 +36,10 @@ class SprkSelectionInput extends React.Component {
   }
 
   /*
- * Runs optional onChangeFunc prop.
- * Updates state if huge selects have
- * a value.
- */
+   * Runs optional onChangeFunc prop.
+   * Updates state if huge selects have
+   * a value.
+   */
   handleChange(e, variant, onChangeFunc) {
     const isHugeSelect = variant === 'hugeSelect';
 
@@ -66,6 +69,7 @@ class SprkSelectionInput extends React.Component {
     } = this.props;
     const { choiceItems, id, selectHugeHasValue } = this.state;
     // eslint-disable-next-line react/prop-types
+    // eslint-disable-next-line react/destructuring-assignment
     const onChangeFunc = onChange || this.props.onChangeFunc;
 
     return (
@@ -88,7 +92,7 @@ class SprkSelectionInput extends React.Component {
                     className={classNames({
                       'sprk-b-Checkbox__input': variant === 'checkbox',
                       'sprk-b-Radio__input': variant === 'radio',
-                    })}                    
+                    })}
                     disabled={disabled}
                     id={innerId}
                     type={variant}
@@ -104,7 +108,7 @@ class SprkSelectionInput extends React.Component {
                       'sprk-b-Checkbox__label': variant === 'checkbox',
                       'sprk-b-Radio__label': variant === 'radio',
                       'sprk-b-Label--disabled': disabled,
-                    })} 
+                    })}
                   >
                     {innerLabel}
                   </label>
@@ -137,6 +141,8 @@ class SprkSelectionInput extends React.Component {
                 {...other}
               >
                 {variant === 'hugeSelect' && (
+                  // eslint-disable-next-line max-len
+                  // eslint-disable-next-line jsx-a11y/control-has-associated-label
                   <option
                     value=""
                     hidden={!hasBlankFirstOption}
@@ -202,11 +208,13 @@ class SprkSelectionInput extends React.Component {
 
 SprkSelectionInput.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container of the component.
+   * A space-separated string of classes to
+   * add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
-   * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+   * Assigned to the `data-analytics` attribute serving
+   * as a unique selector for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
   /**
@@ -246,12 +254,15 @@ SprkSelectionInput.propTypes = {
    * Applies to the checkbox and radio variants only.
    */
   groupLabel: PropTypes.string,
+  label: PropTypes.string,
   /**
-   * 	Text that appears below the input, intended to provide more information to a user.
+   * 	Text that appears below the input, intended
+   * to provide more information to a user.
    */
   helperText: PropTypes.string,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for automated tools.
+   * Assigned to the `data-id` attribute serving
+   * as a unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -260,13 +271,15 @@ SprkSelectionInput.propTypes = {
    */
   valid: PropTypes.bool,
   /**
-   * Will render a blank first option. This option is only available when `variant="hugeSelect"`
+   * Will render a blank first option. This option
+   * is only available when `variant="hugeSelect"`
    */
   hasBlankFirstOption: PropTypes.bool,
   /**
    * Passes in a function that handles the onChange of the input.
    */
   onChange: PropTypes.func,
+  onChangeFunc: PropTypes.func,
   /**
    * Determines what type of input is rendered.
    */
@@ -275,15 +288,8 @@ SprkSelectionInput.propTypes = {
 };
 
 SprkSelectionInput.defaultProps = {
-  additionalClasses: '',
-  analyticsString: '',
-  disabled: false,
-  errorMessage: '',
-  groupLabel: '',
   helperText: '',
-  idString: '',
   valid: true,
-  hasBlankFirstOption: false,
 };
 
 export default SprkSelectionInput;

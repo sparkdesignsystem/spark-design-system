@@ -8,6 +8,8 @@ const SprkHelperText = (props) => {
     idString,
     analyticsString,
     additionalClasses,
+    id,
+    forwardedRef,
     ...other
   } = props;
 
@@ -16,6 +18,8 @@ const SprkHelperText = (props) => {
       className={classnames('sprk-b-HelperText', additionalClasses)}
       data-analytics={analyticsString}
       data-id={idString}
+      id={id}
+      ref={forwardedRef}
       {...other}
     >
       {children}
@@ -26,6 +30,11 @@ const SprkHelperText = (props) => {
 SprkHelperText.propTypes = {
   /** Content to render inside of the component. */
   children: PropTypes.node,
+  /**
+   * Assigned to the `id` attribute
+   * of the rendered helper text container.
+   */
+  id: PropTypes.string.isRequired,
   /**
    * Assigned to the `data-id` attribute serving as
    * a unique selector for automated tools.
@@ -41,6 +50,10 @@ SprkHelperText.propTypes = {
    * to add to the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
+  /**
+   * A ref passed in will be attached to the rendered component.
+   */
+  forwardedRef: PropTypes.oneOfType([PropTypes.shape(), PropTypes.func]),
 };
 
 export default SprkHelperText;

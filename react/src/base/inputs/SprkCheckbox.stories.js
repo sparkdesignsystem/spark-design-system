@@ -1,6 +1,5 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import SprkCheckboxGroup from './SprkCheckbox/SprkCheckboxGroup/SprkCheckboxGroup';
 import SprkCheckboxItem from './SprkCheckbox/SprkCheckboxItem/SprkCheckboxItem';
 import SprkFieldset from './SprkFieldset/SprkFieldset';
@@ -8,6 +7,8 @@ import SprkLegend from './SprkLegend/SprkLegend';
 import SprkHelperText from './SprkHelperText/SprkHelperText';
 import SprkStack from '../../objects/stack/SprkStack';
 import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -24,7 +25,8 @@ export default {
       SprkSelectionInput,
     },
     jest: [
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
       'SprkCheckboxGroup',
       'SprkCheckboxItem',
       'SprkFieldset',
@@ -34,10 +36,7 @@ export default {
     info: `
     ${markdownDocumentationLinkBuilder('input')}
 - Spark checkboxes have been refactored into a compositional style component.
-The version that uses <code>SprkSelectionInput</code>
-will be permanently removed
-in our Fall 2020 release.
-- To update to the new version, replace checkboxes implemented with our
+To update to the new version, replace checkboxes implemented with our
 new implementation using <code>SprkCheckboxGroup</code>
 and <code>SprkCheckboxItem</code> components.
 - Use <code>SprkCheckboxGroup</code>, <code>SprkFieldset</code>,
@@ -48,7 +47,7 @@ and <code>SprkLegend</code> to group together all related choices.
 export const defaultStory = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
@@ -65,14 +64,14 @@ defaultStory.story = {
 
 export const defaultHelperText = () => (
   <SprkCheckboxGroup>
-    <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+    <SprkFieldset ariaDescribedBy="checkbox-helper-text">
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
     </SprkFieldset>
-    <SprkHelperText>
-      Optional helper text, used to clarify the field&#x27;s intent.
+    <SprkHelperText id="checkbox-helper-text">
+      Optional helper text, used to clarify the field&apos;s intent.
     </SprkHelperText>
   </SprkCheckboxGroup>
 );
@@ -86,16 +85,20 @@ defaultHelperText.story = {
 
 export const invalidCheckbox = () => (
   <SprkCheckboxGroup>
-    <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+    <SprkFieldset ariaDescribedBy="invalid-checkbox">
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
       <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
     </SprkFieldset>
-    <SprkErrorContainer
-      id="checkbox-error-container"
-      message="There is an error on this field"
-    />
+    <SprkFieldError id="invalid-checkbox">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkCheckboxGroup>
 );
 
@@ -109,7 +112,7 @@ invalidCheckbox.story = {
 export const disabledCheckbox = () => (
   <SprkCheckboxGroup isDisabled>
     <SprkFieldset>
-      <SprkLegend isDisabled>Group Label Name</SprkLegend>
+      <SprkLegend isDisabled>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem name="checkboxName" isDisabled>
         Checkbox Item 1
       </SprkCheckboxItem>
@@ -133,7 +136,7 @@ disabledCheckbox.story = {
 export const huge = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 1
       </SprkCheckboxItem>
@@ -155,8 +158,8 @@ huge.story = {
 };
 export const hugeHelperText = () => (
   <SprkCheckboxGroup variant="huge">
-    <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+    <SprkFieldset ariaDescribedBy="huge-checkbox-helper-text">
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 1
       </SprkCheckboxItem>
@@ -167,8 +170,8 @@ export const hugeHelperText = () => (
         Checkbox Item 3
       </SprkCheckboxItem>
     </SprkFieldset>
-    <SprkHelperText>
-      Optional helper text, used to clarify the field&#x27;s intent
+    <SprkHelperText id="huge-checkbox-helper-text">
+      Optional helper text, used to clarify the field&apos;s intent.
     </SprkHelperText>
   </SprkCheckboxGroup>
 );
@@ -182,8 +185,8 @@ hugeHelperText.story = {
 
 export const hugeInvalid = () => (
   <SprkCheckboxGroup variant="huge">
-    <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+    <SprkFieldset ariaDescribedBy="invalid-huge-checkbox">
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem name="checkboxName" variant="huge">
         Checkbox Item 1
       </SprkCheckboxItem>
@@ -194,10 +197,14 @@ export const hugeInvalid = () => (
         Checkbox Item 3
       </SprkCheckboxItem>
     </SprkFieldset>
-    <SprkErrorContainer
-      id="checkbox-huge-error-container"
-      message="There is an error on this field"
-    />
+    <SprkFieldError id="invalid-huge-checkbox">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkCheckboxGroup>
 );
 
@@ -211,7 +218,7 @@ hugeInvalid.story = {
 export const hugeDisabled = () => (
   <SprkCheckboxGroup variant="huge" isDisabled>
     <SprkFieldset>
-      <SprkLegend isDisabled>Group Label Name</SprkLegend>
+      <SprkLegend isDisabled>Checkbox Group Label</SprkLegend>
       <SprkCheckboxItem name="checkboxName" variant="huge" isDisabled>
         Checkbox Item 1
       </SprkCheckboxItem>
@@ -235,7 +242,7 @@ hugeDisabled.story = {
 export const hugeLayoutTwo = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -266,7 +273,7 @@ hugeLayoutTwo.story = {
 export const hugeLayoutFour = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -310,7 +317,7 @@ hugeLayoutFour.story = {
 export const hugeLayoutFive = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -368,7 +375,7 @@ hugeLayoutFive.story = {
 export const hugeLayoutSix = () => (
   <SprkCheckboxGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Checkbox Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -426,20 +433,20 @@ hugeLayoutSix.story = {
 
 export const legacy = () => (
   <SprkSelectionInput
-    groupLabel="Checkbox Input"
+    groupLabel="Checkbox Group Label"
     choices={[
       {
-        label: 'Checkbox Item 1',
+        label: 'Legacy Checkbox Item 1',
         name: 'check[]',
         value: 'item-1',
       },
       {
-        label: 'Checkbox Item 2',
+        label: 'Legacy Checkbox Item 2',
         name: 'check[]',
         value: 'item-2',
       },
       {
-        label: 'Checkbox Item 3',
+        label: 'Legacy Checkbox Item 3',
         name: 'check[]',
         value: 'item-2',
       },
@@ -457,20 +464,20 @@ legacy.story = {
 
 export const legacyInvalidCheckbox = () => (
   <SprkSelectionInput
-    groupLabel="Checkbox Input"
+    groupLabel="Checkbox Group Label"
     choices={[
       {
-        label: 'Checkbox Item 1',
+        label: 'Legacy Checkbox Item 1',
         name: 'check[]',
         value: 'item-1',
       },
       {
-        label: 'Checkbox Item 2',
+        label: 'Legacy Checkbox Item 2',
         name: 'check[]',
         value: 'item-2',
       },
       {
-        label: 'Checkbox Item 3',
+        label: 'Legacy Checkbox Item 3',
         name: 'check[]',
         value: 'item-3',
       },
@@ -490,20 +497,20 @@ legacyInvalidCheckbox.story = {
 
 export const legacyDisabledCheckbox = () => (
   <SprkSelectionInput
-    groupLabel="Checkbox Input"
+    groupLabel="Checkbox Group Label"
     choices={[
       {
-        label: 'Checkbox Item 1',
+        label: 'Legacy Checkbox Item 1',
         name: 'check[]',
         value: 'item-1',
       },
       {
-        label: 'Checkbox Item 2',
+        label: 'Legacy Checkbox Item 2',
         name: 'check[]',
         value: 'item-2',
       },
       {
-        label: 'Checkbox Item 3',
+        label: 'Legacy Checkbox Item 3',
         name: 'check[]',
         value: 'item-3',
       },
