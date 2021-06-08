@@ -218,7 +218,7 @@ hugeInvalid.story = {
 };
 
 export const hugeDisabled = () => (
-  <SprkRadioGroup variant="huge" isDisabled>
+  <SprkRadioGroup variant="huge">
     <SprkFieldset>
       <SprkLegend isDisabled>Group Label Name</SprkLegend>
       <SprkRadioItem name="radio" variant="huge" isDisabled>
