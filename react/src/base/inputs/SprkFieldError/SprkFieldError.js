@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import uniqueId from 'lodash/uniqueId';
 
 const SprkFieldError = (props) => {
   const {
@@ -34,10 +33,8 @@ SprkFieldError.propTypes = {
   /**
    * Assigned to the `id` attribute
    * of the rendered component.
-   * A custom ID will
-   * be added if this is not supplied.
    */
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   /**
    * A space-separated string of
    * classes to add to the component.
@@ -57,11 +54,7 @@ SprkFieldError.propTypes = {
   /**
    * A ref passed in will be attached to the rendered component.
    */
-  forwardedRef: PropTypes.oneOf([PropTypes.shape(), PropTypes.func]),
-};
-
-SprkFieldError.defaultProps = {
-  id: uniqueId('sprk-field-error-'),
+  forwardedRef: PropTypes.oneOfType([PropTypes.shape(), PropTypes.func]),
 };
 
 export default SprkFieldError;

@@ -15,7 +15,7 @@ beforeEach(() => {
 
 describe('SprkSelect:', () => {
   it('should render an element with the correct class', () => {
-    const wrapper = mount(<SprkSelect choices={choices} />);
+    const wrapper = mount(<SprkSelect choices={choices} id="select-id" />);
     expect(wrapper.find('.sprk-b-Select').length).toBe(1);
     expect(wrapper.find('.sprk-b-Select').getDOMNode().classList.length).toBe(
       1,
@@ -27,16 +27,14 @@ describe('SprkSelect:', () => {
     expect(wrapper.find('.sprk-b-Select').getDOMNode().id).toBe('custom');
   });
 
-  it('should create an ID if one is not supplied', () => {
-    const wrapper = mount(<SprkSelect choices={choices} />);
-    expect(
-      wrapper.find('.sprk-b-Select').getDOMNode().getAttribute('id'),
-    ).toContain('sprk-select-');
-  });
-
   it('should add floating label to huge if it has a default value', () => {
     const wrapper = mount(
-      <SprkSelect choices={choices} variant="huge" defaultValue="test-value" />,
+      <SprkSelect
+        choices={choices}
+        variant="huge"
+        defaultValue="test-value"
+        id="select-id"
+      />,
     );
     expect(
       wrapper
@@ -51,7 +49,12 @@ describe('SprkSelect:', () => {
 
   it('should add floating label to huge if it has a value on change', () => {
     const wrapper = mount(
-      <SprkSelect choices={choices} variant="huge" defaultValue="" />,
+      <SprkSelect
+        choices={choices}
+        variant="huge"
+        defaultValue=""
+        id="select-id"
+      />,
     );
     const select = wrapper.find('.sprk-b-Select');
     select.value = '1';
@@ -65,7 +68,9 @@ describe('SprkSelect:', () => {
   });
 
   it('should not add floating label if it has a value on change', () => {
-    const wrapper = mount(<SprkSelect choices={choices} defaultValue="" />);
+    const wrapper = mount(
+      <SprkSelect choices={choices} defaultValue="" id="select-id" />,
+    );
     const select = wrapper.find('.sprk-b-Select');
     select.value = '1';
     select.simulate('change', { target: { value: 'test-value' } });
@@ -79,7 +84,12 @@ describe('SprkSelect:', () => {
 
   it('should not add floating label to huge if has no value on load', () => {
     const wrapper = mount(
-      <SprkSelect choices={choices} variant="huge" defaultValue="" />,
+      <SprkSelect
+        choices={choices}
+        variant="huge"
+        defaultValue=""
+        id="select-id"
+      />,
     );
     const select = wrapper.find('.sprk-b-Select');
     expect(
@@ -93,7 +103,7 @@ describe('SprkSelect:', () => {
   it('should run the supplied onChange function', () => {
     const onChangeMock = jest.fn();
     const wrapper = mount(
-      <SprkSelect choices={choices} onChange={onChangeMock} />,
+      <SprkSelect choices={choices} onChange={onChangeMock} id="select-id" />,
     );
     const select = wrapper.find('.sprk-b-Select');
     select.value = '1';
@@ -109,6 +119,7 @@ describe('SprkSelect:', () => {
         variant="huge"
         onChange={onChangeMock}
         defaultValue=""
+        id="select-id"
       />,
     );
     const select = wrapper.find('.sprk-b-Select');
@@ -119,21 +130,35 @@ describe('SprkSelect:', () => {
 
   it('should update state if huge select has a value', () => {
     const wrapper = mount(
-      <SprkSelect choices={choices} variant="huge" defaultValue="test-value" />,
+      <SprkSelect
+        choices={choices}
+        variant="huge"
+        defaultValue="test-value"
+        id="select-id"
+      />,
     );
     expect(wrapper.state().selectHugeHasValue).toBe(true);
   });
 
   it('should not update state if huge select does not have a value', () => {
     const wrapper = mount(
-      <SprkSelect choices={choices} variant="huge" defaultValue="" />,
+      <SprkSelect
+        choices={choices}
+        variant="huge"
+        defaultValue=""
+        id="select-id"
+      />,
     );
     expect(wrapper.state().selectHugeHasValue).toBe(undefined);
   });
 
   it('should add classes when additionalClasses has a value', () => {
     const wrapper = mount(
-      <SprkSelect choices={choices} additionalClasses="sprk-u-mbm" />,
+      <SprkSelect
+        choices={choices}
+        additionalClasses="sprk-u-mbm"
+        id="select-id"
+      />,
     );
     expect(wrapper.find('.sprk-b-Select').hasClass('sprk-u-mbm')).toBe(true);
     expect(wrapper.find('.sprk-b-Select').getDOMNode().classList.length).toBe(
@@ -143,29 +168,33 @@ describe('SprkSelect:', () => {
 
   it('should assign data-analytics when analyticsString has a value', () => {
     const wrapper = mount(
-      <SprkSelect choices={choices} analyticsString="321" />,
+      <SprkSelect choices={choices} analyticsString="321" id="select-id" />,
     );
     expect(wrapper.find('[data-analytics="321"]').length).toBe(1);
   });
 
   it(`should not render data-analytics when
   analyticsString is not present`, () => {
-    const wrapper = mount(<SprkSelect choices={choices} />);
+    const wrapper = mount(<SprkSelect choices={choices} id="select-id" />);
     expect(wrapper.find('[data-analytics]').length).toBe(0);
   });
 
   it('should assign data-id when idString has a value', () => {
-    const wrapper = mount(<SprkSelect choices={choices} idString="321" />);
+    const wrapper = mount(
+      <SprkSelect choices={choices} idString="321" id="select-id" />,
+    );
     expect(wrapper.find('[data-id="321"]').length).toBe(1);
   });
 
   it('should not render data-id when idString is not present', () => {
-    const wrapper = mount(<SprkSelect choices={choices} />);
+    const wrapper = mount(<SprkSelect choices={choices} id="select-id" />);
     expect(wrapper.find('[data-id]').length).toBe(0);
   });
 
   it('should render the select with error styles when isValid is false', () => {
-    const wrapper = mount(<SprkSelect choices={choices} isValid={false} />);
+    const wrapper = mount(
+      <SprkSelect choices={choices} isValid={false} id="select-id" />,
+    );
     expect(wrapper.find('.sprk-b-Select--error').length).toBe(1);
     expect(wrapper.find('.sprk-b-Select').getDOMNode().classList.length).toBe(
       2,
@@ -174,7 +203,9 @@ describe('SprkSelect:', () => {
 
   it(`should not render the select with error
   styles when isValid is true`, () => {
-    const wrapper = mount(<SprkSelect choices={choices} isValid />);
+    const wrapper = mount(
+      <SprkSelect choices={choices} isValid id="select-id" />,
+    );
     expect(wrapper.find('.sprk-b-Select--error').length).toBe(0);
     expect(wrapper.find('.sprk-b-Select').getDOMNode().classList.length).toBe(
       1,
@@ -182,14 +213,18 @@ describe('SprkSelect:', () => {
   });
 
   it('should make select disabled when isDisabled is set', () => {
-    const wrapper = mount(<SprkSelect choices={choices} isDisabled />);
+    const wrapper = mount(
+      <SprkSelect choices={choices} isDisabled id="select-id" />,
+    );
     expect(wrapper.find('select').getDOMNode().hasAttribute('disabled')).toBe(
       true,
     );
   });
 
   it(`should not make select disabled when isDisabled is false`, () => {
-    const wrapper = mount(<SprkSelect choices={choices} isDisabled={false} />);
+    const wrapper = mount(
+      <SprkSelect choices={choices} isDisabled={false} id="select-id" />,
+    );
     expect(wrapper.find('select').getDOMNode().hasAttribute('disabled')).toBe(
       false,
     );
@@ -209,18 +244,18 @@ describe('SprkSelect:', () => {
         },
       ],
     });
-    const wrapper = mount(<SprkSelect choices={choices} />);
+    const wrapper = mount(<SprkSelect choices={choices} id="select-id" />);
     expect(wrapper.find('optgroup').length).toBe(1);
   });
 
   it('should not render grouped options if not supplied', () => {
-    const wrapper = mount(<SprkSelect choices={choices} />);
+    const wrapper = mount(<SprkSelect choices={choices} id="select-id" />);
     expect(wrapper.find('optgroup').length).toBe(0);
   });
 
   it('should pass through additional attributes', () => {
     const wrapper = shallow(
-      <SprkSelect choices={choices} data-my-attr="testing" />,
+      <SprkSelect choices={choices} data-my-attr="testing" id="select-id" />,
     );
     expect(wrapper.find('[data-my-attr="testing"]').length).toBe(1);
   });
