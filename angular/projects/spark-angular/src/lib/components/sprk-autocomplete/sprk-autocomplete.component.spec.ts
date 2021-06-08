@@ -3,7 +3,7 @@ import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
 import { SprkAutocompleteResultsDirective } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
 import { SprkAutocompleteInputContainerDirective } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 
 @Component({
@@ -27,6 +27,8 @@ class WrappedAutocompleteComponent {}
 @Component({
   selector: 'sprk-dynamic-test',
   template: `
+    <button class="changeButton" (click)="changeMe()">Change Content</button>
+
     <sprk-autocomplete isOpen="true" itemSelectedEvent="itemSelectedEvent">
       <div sprkAutocompleteInputContainer>
         <input sprkInput />
@@ -35,7 +37,7 @@ class WrappedAutocompleteComponent {}
         <li
           sprkAutocompleteResult
           *ngFor="let item of list; let i = index"
-          id="{{ item.id }}"
+          id="{{ item }}"
         ></li>
       </ul>
     </sprk-autocomplete>
@@ -44,7 +46,7 @@ class WrappedAutocompleteComponent {}
 class DynamicComponent {
   public itemSelectedEvent;
   public list = ['item1', 'item2', 'item3', 'item4'];
-  public newList = ['item1', 'item2', 'item3', 'item4', 'item5'];
+  public newList = ['item1', 'item2', 'item3', 'item4', 'new_id'];
   changeMe(): void {
     this.list = this.newList;
   }
@@ -58,6 +60,7 @@ describe('SprkAutocompleteComponent', () => {
 
   let dynamicTestComponent;
   let dynamicTestFixture;
+  let dynamicTestAutocomplete;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -90,6 +93,8 @@ describe('SprkAutocompleteComponent', () => {
     // Dynamic Test Component
     dynamicTestFixture = TestBed.createComponent(DynamicComponent);
     dynamicTestComponent = dynamicTestFixture.componentInstance;
+    dynamicTestAutocomplete =
+      dynamicTestFixture.debugElement.children[1].componentInstance;
   });
 
   afterEach(() => {
@@ -953,34 +958,43 @@ describe('SprkAutocompleteComponent', () => {
     let called = false;
     let value = -1;
 
-    // dynamicTestComponent.itemSelectedEvent.subscribe((itemId) => {
-    //   called = true;
-    //   value = itemId;
-    //   done();
-    // });
+    dynamicTestAutocomplete.itemSelectedEvent.subscribe((itemId) => {
+      called = true;
+      value = itemId;
+      done();
+    });
 
     dynamicTestFixture.detectChanges();
+
+    // expect the length to be 4
+    expect(dynamicTestComponent.list.length).toEqual(4);
+    expect(
+      dynamicTestFixture.nativeElement.querySelectorAll('li').length,
+    ).toEqual(4);
+
+    // click the last item in the list
+    dynamicTestFixture.nativeElement
+      .querySelectorAll('li')[3]
+      .dispatchEvent(new Event('click'));
+
+    dynamicTestFixture.detectChanges();
+
+    expect(called).toEqual(true);
+    expect(value).toEqual('item4');
+
+    // change the dataset used to populate the result items
     const dynamicTestElement = dynamicTestFixture.nativeElement;
     const changeButton = dynamicTestElement.querySelector('.changeButton');
-
     changeButton.click();
     dynamicTestFixture.detectChanges();
 
-    // let newElement = document.createElement('li');
+    // click one of the new items and verify the id that is returned
+    dynamicTestFixture.nativeElement.querySelectorAll('li')[4].click();
 
-    // const newResult = new SprkAutocompleteResultDirective(newElement);
-    // newResult.id = 'item5';
-
-    // component.resultItems.reset([...component.resultItems.toArray(), newResult]);
-
-    fixture.detectChanges();
-
-    // component.resultItems
-    //   .toArray()[4]
-    //   .ref.nativeElement.dispatchEvent(new Event('click'));
-
-    // expect(called).toEqual(true);
-    // expect(value).toEqual('item5');
+    // expect the length to be 5
+    expect(dynamicTestComponent.list.length).toEqual(5);
+    expect(called).toEqual(true);
+    expect(value).toEqual('new_id');
     done();
   });
 });
