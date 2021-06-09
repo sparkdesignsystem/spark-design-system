@@ -8,35 +8,51 @@ import bundledJs from '../../images/installing-spark/html/bundled-js.png';
 import greenBg from '../../images/installing-spark/html/green-bg.png';
 import helloSpark from '../../images/installing-spark/html/hello-spark.png';
 
-# Installing Spark in an HTML Project
-## Setting Up Your Environment
-
-This guide is Part 1 in a 3-Part series and will walk through setting up your Spark
+> This guide is Part 1 in a 3-Part series and will walk through setting up your Spark
 development environment. You can also check out [Part 2 - Installation](/installing-spark/html-installation) and
 [Part 3 - Adding Components](/installing-spark/html-add-components).
+
+# Part 1: Setting up Your Environment for an HTML Project
 
 For instructions on setting up Spark in other environments, check out the guides for
 [Angular](/installing-spark/angular) and [React](/installing-spark/react) development environments.
 
 Before you begin, make sure you <a href="https://www.npmjs.com/get-npm" target="_blank">install Node Package Manager</a>
-(`npm`). This is a tool that makes it easy to share and reuse
+(`npm`).
+
+This is a tool that makes it easy to share and reuse
 JavaScript code and to update the JavaScript code you’re sharing.
 
+Our <a href="https://github.com/sparkdesignsystem/spark-starter-html/" target="_blank">starter app examples</a> are also available for reference:
+- ['kitchen-sink' branch](https://github.com/sparkdesignsystem/spark-starter-html/tree/kitchen-sink) (Spark Installed with component examples.)
+- ['without-spark' branch](https://github.com/sparkdesignsystem/spark-starter-html/tree/without-spark) (All of the prerequisites before Spark Installation.)
+
+<div
+  class="sprk-u-Measure"
+  style="
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;"
+>
 <iframe
-  width="560"
-  height="315"
+  style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;"
   src="https://www.youtube.com/embed/vo4BIUoYX28"
   frameborder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
-  title="Youtube Player: Installing Spark in an HTML Project Part 1/3 - Setting Up Project Environment"
+  title="Installing Spark in an HTML Project Part 1/3 - Setting Up Project Environment"
 ></iframe>
+</div>
 
 ## Create the Folder Structure
 
 1. First you’ll need to make a new directory for your project, open it
-and initialize `npm`. You can do that with these UNIX commands:
-
+and initialize `npm`.
 ``` shell
 mkdir spark-html
 
@@ -47,14 +63,14 @@ npm init
 
 2. When prompted, accept the default settings for `npm init`. You
 can always edit these later.
-
-You should now have a `package.json` file created. This will keep track
+- Confirm that it's generated a `package.json`. This file keeps track
 of all the dependencies that your site needs to build and run.
 
 3. Inside your `spark-html` folder, create a `src` folder and a `dist` folder.
 
-4. In the `src` folder, create a file called `index.js` and copy this code into
-it:
+4. In the `src` folder, create a file called `index.js` and and add this code:
+- A function that creates a div with text inside.
+- Code that will add that div onto the page.
 
 ``` javascript
 function component() {
@@ -65,9 +81,9 @@ function component() {
 
 document.body.appendChild(component());
 ```
+> We do this because it's a way to check if we've hooked up our JavaScript correctly.
 
-5. In the `dist` folder, create a file called `index.html` and copy this code
-into it:
+5. In the `dist` folder, create a file called `index.html` that will reference that `index.js` file inside the `<body>` tag.
 
 ``` html
 <html>
@@ -91,7 +107,7 @@ structure should look like this:
     alt="A dist folder containing index.html. A src folder containing index.js. A package.json in the root."/>
 </div>
 
-6. Open `index.html` in a web browser. You should see this:
+6. Open `index.html` in a web browser. You should whatever text you set in your `index.js` file.
 
 <div class="sprk-u-Measure">
   <img
@@ -103,10 +119,9 @@ structure should look like this:
 
 ## Installing Webpack
 
-<a href="https://webpack.js.org/" target="_blank">Webpack</a> is a tool that we’ll use to
-combine all the JavaScript needed to run Spark into one file.
+<a href="https://webpack.js.org/" target="_blank">Webpack</a> combines all the JavaScript needed to run Spark into one file.
 
-7. To install Webpack, run this command:
+1. To install Webpack, run this command:
 
 ```
 npm install webpack webpack-cli --save-dev
@@ -116,29 +131,30 @@ npm install webpack webpack-cli --save-dev
 to compile your website, but are not necessary to run the site
 after compilation.
 
-8. In your `package.json` file that you created in Step 2, look for
+2. In your `package.json` file, look for
 the `scripts` section. This is a list of custom commands that `npm`
-can run against your package. Add a new one for building the site
+can run. Add a new command for building the site
 with Webpack:
 
 ``` json
 "scripts": {
-  "build": "webpack"
+  "build": "webpack --mode='development'"
 },
 ```
 
-Webpack will combine all JavaScript dependencies into a single
-JavaScript file called `main.js`. This is the file that you want
-your site to use.
+Webpack will combine all JavaScript into a single
+file called `main.js`, so we'll need to reference that instead of `index.js`.
 
-9. Change the line in `index.html` where you set up the `<script>` 
-tag to look like this:
+> The `--mode='development'` flag is so Webpack knows what configuration to build with.
+Change this as needed for your project.
+
+3. In `index.html` change the `<script>` that's using `index.js` to `main.js`.
 
 ``` html
 <script src="main.js"></script>
 ```
 
-10. Build your website by running this command:
+10. Build your website.
 
 ``` shell
 npm run build
@@ -159,16 +175,15 @@ For more help setting up Webpack, check out the <a href="https://webpack.js.or
 
 ## Installing Sass
 
-Sass is a tool that processes and compiles CSS. You’ll need to use <a href="https://sass-lang.com/" target="_blank">Sass</a>
-to import Spark CSS from the npm package that you created in Step 2.
+<a href="https://sass-lang.com/" target="_blank">Sass</a> is a tool that processes and compiles CSS. You'll need it to use Spark.
 
-11. To install Sass, first run this command:
+1. To install Sass, first run this command:
 
 ```
 npm install node-sass sass-loader css-loader mini-css-extract-plugin --save-dev
 ```
 
-12. In the root directory of your project, create a new file called
+2. In the root directory of your project, create a new file called
 `webpack.config.js` and paste this code into it:
 
 ``` javascript
@@ -195,7 +210,7 @@ module.exports = {
 };
 ```
 
-13. Now let’s write some CSS to compile. Create a new file in `src`
+3. Now let’s write some CSS to compile. Create a new file in `src`
 called `style.scss` and copy this CSS into it:
 
 ``` css
@@ -204,7 +219,7 @@ body {
 }
 ```
 
-14. At the top of `index.js`, add this reference to the uncompiled `scss`
+4. At the top of `index.js`, add this reference to the `scss`
 file:
 
 ``` javascript
@@ -215,7 +230,7 @@ Now when Webpack compiles `index.js`, this import line will include
 your style file. It will be processed according to the rules
 we set up in the webpack config in the previous step.
 
-15. Add this reference to your new compiled CSS in the `<head>` element of `index.html`:
+5. Add this reference to your new compiled CSS in the `<head>` element of `index.html`:
 
 ``` html
 <link rel="stylesheet" href="bundle.css"></link>
@@ -234,7 +249,7 @@ Now when you rebuild your site, you should see `bundle.css` in the
 
 For more help setting up Sass, check out the <a href="https://sass-lang.com/guide" target="_blank">Sass Getting Started Guide</a>.
 
-## You did it!
+## Next Steps
 
 You now have a development environment set up and ready to install Spark!
 Check out [Part 2 - Installation](/installing-spark/html-installation).

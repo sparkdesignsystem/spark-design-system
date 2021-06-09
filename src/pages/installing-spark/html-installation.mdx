@@ -5,30 +5,42 @@
 
 import bundledSpark from '../../images/installing-spark/html/bundled-spark.png';
 
-# Installing Spark in an HTML Project
+> This guide is Part 2 in a 3-Part series. You can also check out [Part 1 - Setting Up Your Environment](/installing-spark/html-environment-setup) and [Part 3 - Adding Components](/installing-spark/html-add-components).
+
+# Part 2: Installing Spark in an HTML Project
 ## Installing Spark
 
 In this guide we’ll walk you through installing Spark into a site without a
-JavaScript framework. You can follow along with the code examples in this
-guide using the sample app found in the ['without-spark' branch](https://github.com/sparkdesignsystem/spark-starter-html/tree/without-spark) of our
-starter repository.
+JavaScript framework.
 
-This guide is Part 2 in a 3-Part series. You can also check out
-[Part 1 - Setting Up Your Environment](/installing-spark/html-environment-setup) and
-[Part 3 - Adding Components](/installing-spark/html-add-components).
+Our <a href="https://github.com/sparkdesignsystem/spark-starter-html/" target="_blank">starter app examples</a> are also available for reference:
+- ['kitchen-sink' branch](https://github.com/sparkdesignsystem/spark-starter-html/tree/kitchen-sink) (Spark Installed with component examples.)
+- ['without-spark' branch](https://github.com/sparkdesignsystem/spark-starter-html/tree/without-spark) (All of the prerequisites before Spark Installation.)
 
 For instructions on setting up Spark in other environments, check out the
 guides for [Angular](/installing-spark/angular) and [React](/installing-spark/react) development environments.
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/u9Cz3IJWJe4"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-  title="Youtube Player: Installing Spark in an HTML Project Part 2/3 - Configuring Spark"
-></iframe>
+<div
+  className="sprk-u-Measure"
+  style="
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;"
+>
+  <iframe
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;"
+    src="https://www.youtube.com/embed/u9Cz3IJWJe4"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    title="Installing Spark in an HTML Project Part 2/3 - Configuring Spark"
+  ></iframe>
+</div>
 
 ## Install the Spark Package
 
@@ -52,7 +64,7 @@ import sparkPrerender from "@sparkdesignsystem/spark/es5/sparkPrerender";
 import "@sparkdesignsystem/spark/es5/sparkPolyfills";
 
 // import the Spark CSS
-import "@sparkdesignsystem/spark-styles/spark";
+import "@sparkdesignsystem/spark-styles/_spark.scss";
 
 // initialize Spark
 sparkPrerender();
@@ -96,6 +108,7 @@ Spark components to correctly handle focus changes.
 ### Notes:
 - Do not put `data-sprk-main` on the `<body>` tag.
 - The main content container cannot contain the Spark Masthead component.
+- Put this container above the `<script src="main.js"></script>` line.
 
 ``` html
 <div data-sprk-main>
@@ -103,9 +116,8 @@ Spark components to correctly handle focus changes.
 </div>
 ```
 
-## You did it!
-
-You’re ready to start [adding components](/installing-spark/html-add-components) to
+## Next Steps
+You’re ready to start [adding Spark components](/installing-spark/html-add-components) to
 your site.
 
 ## Additional Topics
