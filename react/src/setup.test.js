@@ -6,13 +6,13 @@ import sinon from 'sinon';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-var matchMediaStub = sinon.stub();
+const matchMediaStub = sinon.stub();
 
 matchMediaStub.returns({
-  matches : false,
-  addListener : function() {},
-  removeListener: function() {}
-})
+  matches: false,
+  addListener() {},
+  removeListener() {},
+});
 
 window.matchMedia = window.matchMedia || matchMediaStub;
 global.Enzyme = Enzyme;

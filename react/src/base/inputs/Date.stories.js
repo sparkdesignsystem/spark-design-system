@@ -1,24 +1,24 @@
 import React from 'react';
 import SprkTextInput from './SprkTextInput/SprkTextInput';
+import SprkInput from './SprkInput/SprkInput';
+import SprkLabel from './SprkLabel/SprkLabel';
+import SprkInputContainer from './SprkInputContainer/SprkInputContainer';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
   title: 'Components/Input/Date',
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
-  component: SprkTextInput,
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
+  component: SprkInput,
   parameters: {
-    jest: [
-      'SprkErrorContainer',
-      'SprkInputIconCheck',
-    ],
+    jest: ['SprkInput'],
     info: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters (/)
 which you may need to remove before submitting the form.
 - Requires Additional Engineering:
-  - Validation - The \`valid\` prop controls this input’s
+  - Validation - The \`isValid\` prop controls this input’s
   validation state. This boolean is determined by your
   own validation logic. Validation happens before reformatting.
   - Reformatting to date pattern MM/DD/YYYY - After valid
@@ -31,55 +31,103 @@ which you may need to remove before submitting the form.
 };
 
 export const dateInput = () => (
-  <SprkTextInput
-    label="Date"
-    name="date"
-    placeholder="01/01/2019"
-  />
+  <SprkInputContainer>
+    <SprkLabel htmlFor="date-1">Date Input (No Picker)</SprkLabel>
+    <SprkInput id="date-1" placeholder="MM/DD/YYYY" />
+  </SprkInputContainer>
 );
 
 dateInput.story = {
   name: 'Default',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
   },
 };
 
 export const invalidDateInput = () => (
-  <SprkTextInput
-    label="Date"
-    name="date"
-    placeholder="01/01/2019"
-    valid={false}
-    errorMessage="There is an error on this field."
-  />
+  <SprkInputContainer>
+    <SprkLabel htmlFor="date-2">Date Input (No Picker)</SprkLabel>
+    <SprkInput
+      id="date-2"
+      placeholder="MM/DD/YYYY"
+      isValid={false}
+      ariaDescribedBy="invalid-error"
+    />
+    <SprkFieldError id="invalid-error">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
+  </SprkInputContainer>
 );
 
 invalidDateInput.story = {
   name: 'Invalid',
   parameters: {
     jest: [
-      'SprkTextInput',
-    ]
+      'SprkInput',
+      'SprkLabel',
+      'SprkInputContainer',
+      'SprkFieldError',
+      'SprkIcon',
+    ],
   },
 };
 
 export const disabledDateInput = () => (
-  <SprkTextInput
-    label="Date"
-    name="date"
-    placeholder="01/01/2019"
-    disabled
-  />
+  <SprkInputContainer>
+    <SprkLabel htmlFor="date-3" isDisabled>
+      Date Input (No Picker)
+    </SprkLabel>
+    <SprkInput id="date-3" placeholder="MM/DD/YYYY" isDisabled />
+  </SprkInputContainer>
 );
 
 disabledDateInput.story = {
   name: 'Disabled',
   parameters: {
-    jest: [
-      'SprkTextInput',
-    ]
+    jest: ['SprkInput', 'SprkLabel', 'SprkInputContainer'],
+  },
+};
+
+export const legacy = () => (
+  <SprkTextInput label="Date" name="date" placeholder="MM/DD/YYYY" />
+);
+
+legacy.story = {
+  name: 'Legacy (Deprecated)',
+  parameters: {
+    jest: ['SprkTextInput'],
+  },
+};
+
+export const legacyInvalidDateInput = () => (
+  <SprkTextInput
+    label="Date"
+    name="date"
+    placeholder="MM/DD/YYYY"
+    valid={false}
+    errorMessage="There is an error on this field."
+  />
+);
+
+legacyInvalidDateInput.story = {
+  name: 'Legacy Invalid (Deprecated)',
+  parameters: {
+    jest: ['SprkTextInput'],
+  },
+};
+
+export const legacyDisabledDateInput = () => (
+  <SprkTextInput label="Date" name="date" placeholder="MM/DD/YYYY" disabled />
+);
+
+legacyDisabledDateInput.story = {
+  name: 'Legacy Disabled (Deprecated)',
+  parameters: {
+    jest: ['SprkTextInput'],
   },
 };

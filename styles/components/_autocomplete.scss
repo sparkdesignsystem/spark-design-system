@@ -43,3 +43,8 @@
 .sprk-c-Autocomplete__result--active {
   background-color: $sprk-autocomplete-result-active-background-color;
 }
+
+/// Hide the Autocomplete Results
+.sprk-c-Autocomplete__results--is-hidden {
+  display: $sprk-autocomplete-results-hidden-display;
+}

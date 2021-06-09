@@ -18,6 +18,8 @@ const SprkCheckboxItem = (props) => {
     onChange,
     id,
     ariaDescribedBy,
+    isVisibilityToggle,
+    forwardedRef,
     ...rest
   } = props;
   const internalId = uniqueId('sprk-checkbox-');
@@ -30,6 +32,7 @@ const SprkCheckboxItem = (props) => {
         additionalClasses,
         {
           'sprk-b-Checkbox--huge': variant === 'huge',
+          'sprk-b-InputContainer__visibility-toggle': isVisibilityToggle,
         },
       )}
       data-analytics={analyticsString}
@@ -48,6 +51,7 @@ const SprkCheckboxItem = (props) => {
         onChange={onChangeFunc}
         type="checkbox"
         value={value}
+        ref={forwardedRef}
         {...rest}
       />
       <label
@@ -77,10 +81,12 @@ SprkCheckboxItem.propTypes = {
    * Assigned to the `data-id` attribute serving as
    * a unique selector for automated tools.
    */
-  idString: PropTypes.string,
   /**
-   * Assigned to the `aria-describedby` attribute of the input used
-   * to create relationships between the input and error container.
+   * Assigned to the `aria-describedby`
+   * attribute. Used to create
+   * relationships between the
+   * component and text that describes it,
+   * such as helper text or an error field.
    */
   ariaDescribedBy: PropTypes.string,
   /**
@@ -136,6 +142,22 @@ SprkCheckboxItem.propTypes = {
    * Passes in a function that handles the onChange of the input.
    */
   onChange: PropTypes.func,
+  /**
+   * If `true`, the checkbox item will receive styling to make it a
+   * visibility toggle. Use this for "Show Password" checkboxes.
+   */
+  isVisibilityToggle: PropTypes.bool,
+  /**
+   * Assigned to the `data-id` attribute
+   * serving as a unique selector for
+   * automated tools.
+   */
+  idString: PropTypes.string,
+  /**
+   * A ref passed in will be attached to the checkbox
+   * element of the rendered component.
+   */
+  forwardedRef: PropTypes.oneOfType([PropTypes.shape(), PropTypes.func]),
 };
 
 export default SprkCheckboxItem;

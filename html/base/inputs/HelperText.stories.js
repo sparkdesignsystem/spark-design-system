@@ -23,7 +23,7 @@ export const helperText = () =>
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="text-input-helper"
         data-id="text-input-helper"
         type="text"
@@ -58,7 +58,7 @@ export const invalidHelperText = () =>
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
+        class="sprk-b-TextInput sprk-b-TextInput--error"
         id="text-input-helper"
         data-id="text-input-helper"
         type="text"
@@ -78,6 +78,8 @@ export const invalidHelperText = () =>
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>

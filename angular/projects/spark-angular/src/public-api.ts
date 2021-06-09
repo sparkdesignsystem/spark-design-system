@@ -48,14 +48,28 @@ export { SprkLinkComponent } from './lib/components/sprk-link/sprk-link.componen
 export { SprkLinkModule } from './lib/components/sprk-link/sprk-link.module';
 export { SprkListItemComponent } from './lib/components/sprk-list-item/sprk-list-item.component';
 export { SprkListItemModule } from './lib/components/sprk-list-item/sprk-list-item.module';
-export { SprkMastheadAccordionItemComponent } from './lib/components/sprk-masthead/sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
-export { SprkMastheadAccordionItemModule } from './lib/components/sprk-masthead/sprk-masthead-accordion-item/sprk-masthead-accordion-item.module';
-export { SprkMastheadAccordionComponent } from './lib/components/sprk-masthead/sprk-masthead-accordion/sprk-masthead-accordion.component';
-export { SprkMastheadAccordionModule } from './lib/components/sprk-masthead/sprk-masthead-accordion/sprk-masthead-accordion.module';
-export { SprkMastheadSelectorComponent } from './lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.component';
-export { SprkMastheadSelectorModule } from './lib/components/sprk-masthead/sprk-masthead-selector/sprk-masthead-selector.module';
+export { SprkMastheadAccordionItemComponent } from './lib/components/sprk-masthead/components/sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+export { SprkMastheadAccordionItemModule } from './lib/components/sprk-masthead/components/sprk-masthead-accordion-item/sprk-masthead-accordion-item.module';
+export { SprkMastheadAccordionComponent } from './lib/components/sprk-masthead/components/sprk-masthead-accordion/sprk-masthead-accordion.component';
+export { SprkMastheadAccordionModule } from './lib/components/sprk-masthead/components/sprk-masthead-accordion/sprk-masthead-accordion.module';
+export { SprkMastheadSelectorComponent } from './lib/components/sprk-masthead/components/sprk-masthead-selector/sprk-masthead-selector.component';
+export { SprkMastheadSelectorModule } from './lib/components/sprk-masthead/components/sprk-masthead-selector/sprk-masthead-selector.module';
 export { SprkMastheadComponent } from './lib/components/sprk-masthead/sprk-masthead.component';
 export { SprkMastheadModule } from './lib/components/sprk-masthead/sprk-masthead.module';
+export { SprkMastheadNavCollapsibleButtonComponent } from './lib/components/sprk-masthead/components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.component';
+export { SprkMastheadNavCollapsibleButtonModule } from './lib/components/sprk-masthead/components/sprk-masthead-nav-collapsible-button/sprk-masthead-nav-collapsible-button.module';
+export { SprkMastheadBrandingDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-branding/sprk-masthead-branding.directive';
+export { SprkMastheadBrandingModule } from './lib/components/sprk-masthead/directives/sprk-masthead-branding/sprk-masthead-branding.module';
+export { SprkMastheadLinkDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-link/sprk-masthead-link.directive';
+export { SprkMastheadLinkModule } from './lib/components/sprk-masthead/directives/sprk-masthead-link/sprk-masthead-link.module';
+export { SprkMastheadNavBarDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-bar/sprk-masthead-nav-bar.directive';
+export { SprkMastheadNavBarModule } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-bar/sprk-masthead-nav-bar.module';
+export { SprkMastheadNavCollapsibleDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.directive';
+export { SprkMastheadNavCollapsibleModule } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-collapsible/sprk-masthead-nav-collapsible.module';
+export { SprkMastheadNavItemDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-item/sprk-masthead-nav-item.directive';
+export { SprkMastheadNavItemModule } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-item/sprk-masthead-nav-item.module';
+export { SprkMastheadNavItemsDirective } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-items/sprk-masthead-nav-items.directive';
+export { SprkMastheadNavItemsModule } from './lib/components/sprk-masthead/directives/sprk-masthead-nav-items/sprk-masthead-nav-items.module';
 export { SprkModalComponent } from './lib/components/sprk-modal/sprk-modal.component';
 export { SprkModalModule } from './lib/components/sprk-modal/sprk-modal.module';
 export { SprkOrderedListComponent } from './lib/components/sprk-ordered-list/sprk-ordered-list.component';
@@ -162,10 +176,10 @@ export { SprkLinkComponent as ɵg } from './lib/components/sprk-link/sprk-link.c
 export { SprkLinkModule as ɵf } from './lib/components/sprk-link/sprk-link.module';
 export { SprkListItemComponent as ɵbl } from './lib/components/sprk-list-item/sprk-list-item.component';
 export { SprkListItemModule as ɵbk } from './lib/components/sprk-list-item/sprk-list-item.module';
-export { SprkMastheadAccordionItemComponent as ɵcf } from './lib/components/sprk-masthead/sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
-export { SprkMastheadAccordionItemModule as ɵce } from './lib/components/sprk-masthead/sprk-masthead-accordion-item/sprk-masthead-accordion-item.module';
-export { SprkMastheadAccordionComponent as ɵcd } from './lib/components/sprk-masthead/sprk-masthead-accordion/sprk-masthead-accordion.component';
-export { SprkMastheadAccordionModule as ɵcc } from './lib/components/sprk-masthead/sprk-masthead-accordion/sprk-masthead-accordion.module';
+export { SprkMastheadAccordionItemComponent as ɵcf } from './lib/components/sprk-masthead/components/sprk-masthead-accordion-item/sprk-masthead-accordion-item.component';
+export { SprkMastheadAccordionItemModule as ɵce } from './lib/components/sprk-masthead/components/sprk-masthead-accordion-item/sprk-masthead-accordion-item.module';
+export { SprkMastheadAccordionComponent as ɵcd } from './lib/components/sprk-masthead/components/sprk-masthead-accordion/sprk-masthead-accordion.component';
+export { SprkMastheadAccordionModule as ɵcc } from './lib/components/sprk-masthead/components/sprk-masthead-accordion/sprk-masthead-accordion.module';
 export { SprkMastheadComponent as ɵcg } from './lib/components/sprk-masthead/sprk-masthead.component';
 export { SprkMastheadModule as ɵcb } from './lib/components/sprk-masthead/sprk-masthead.module';
 export { SprkModalComponent as ɵbf } from './lib/components/sprk-modal/sprk-modal.component';
@@ -268,3 +282,23 @@ export { SprkPromoHeadingDirective } from './lib/components/sprk-promo/directive
 export { SprkPromoHeadingModule } from './lib/components/sprk-promo/directives/sprk-promo-heading/sprk-promo-heading.module';
 export { SprkPromoSubheadingDirective } from './lib/components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.directive';
 export { SprkPromoSubheadingModule } from './lib/components/sprk-promo/directives/sprk-promo-subheading/sprk-promo-subheading.module';
+export { SprkAutocompleteModule } from './lib/components/sprk-autocomplete/sprk-autocomplete.module';
+export { SprkAutocompleteComponent } from './lib/components/sprk-autocomplete/sprk-autocomplete.component';
+export { SprkAutocompleteResultsModule } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-results/sprk-autocomplete-results.module';
+export { SprkAutocompleteResultsDirective } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
+export { SprkAutocompleteResultModule } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-result/sprk-autocomplete-result.module';
+export { SprkAutocompleteResultDirective } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
+export { SprkAutocompleteInputContainerDirective } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
+export { SprkAutocompleteInputContainerModule } from './lib/components/sprk-autocomplete/directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.module';
+
+export {
+  isUpPressed,
+  isTabPressed,
+  isSpacePressed,
+  isEnterPressed,
+  isEscapePressed,
+  isRightPressed,
+  isLeftPressed,
+  isDownPressed,
+} from './lib/utilities/keypress/keypress';
+export { isElementVisible } from './lib/utilities/isElementVisible/isElementVisible';

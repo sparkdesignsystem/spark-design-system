@@ -22,7 +22,7 @@ export const textarea = () =>
       </label>
 
       <textarea
-        class="sprk-b-TextArea sprk-u-Width-100"
+        class="sprk-b-TextArea"
         id="textarea"
         data-id="textarea"
         aria-describedby="textarea--error-container"
@@ -50,7 +50,7 @@ export const invalidTextarea = () =>
       </label>
 
       <textarea
-        class="sprk-b-TextArea sprk-b-TextArea--error sprk-u-Width-100"
+        class="sprk-b-TextArea sprk-b-TextArea--error"
         id="textarea"
         data-id="textarea"
         aria-describedby="textarea--error-container"
@@ -64,6 +64,8 @@ export const invalidTextarea = () =>
         <svg
          class="sprk-c-Icon sprk-b-ErrorIcon"
          viewBox="0 0 64 64"
+         aria-hidden="true"
+         focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -89,7 +91,7 @@ export const disabledTextarea = () =>
       </label>
 
       <textarea
-        class="sprk-b-TextArea sprk-u-Width-100"
+        class="sprk-b-TextArea"
         id="textarea"
         data-id="textarea"
         aria-describedby="textarea--error-container"

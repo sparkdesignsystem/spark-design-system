@@ -155,6 +155,12 @@
           },
           "file": "settings",
           "themable": true
+        },
+        "hidden-display": {
+          "comment": "The display value of the Autocomplete results.",
+          "value": "none",
+          "file": "settings",
+          "themable": true
         }
       },
       "result": {

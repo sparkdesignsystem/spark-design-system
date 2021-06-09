@@ -4,6 +4,9 @@ import uniqueId from 'lodash/uniqueId';
 import classNames from 'classnames';
 import SprkTextInput from '../SprkTextInput/SprkTextInput';
 
+/**
+ * TODO: Remove this component as part of Issue #3780.
+ */
 class SprkRevealInput extends Component {
   constructor(props) {
     super(props);
@@ -60,8 +63,8 @@ class SprkRevealInput extends Component {
 
 SprkRevealInput.propTypes = {
   /**
-   * A space-separated string of classes to add to the outermost container
-   *  of the component.
+   * A space-separated string of classes to add to
+   * the outermost container of the component.
    */
   additionalClasses: PropTypes.string,
   /**
@@ -87,8 +90,8 @@ SprkRevealInput.propTypes = {
    */
   hiddenLabel: PropTypes.bool,
   /**
-   * Assigned to the `data-id` attribute serving as a unique selector for
-   * automated tools.
+   * Assigned to the `data-id` attribute serving as a
+   * unique selector for automated tools.
    */
   idString: PropTypes.string,
   /**
@@ -122,14 +125,10 @@ SprkRevealInput.propTypes = {
 };
 
 SprkRevealInput.defaultProps = {
-  additionalClasses: '',
-  analyticsString: '',
   formatter: (value) => value,
   helperText: '',
   hiddenLabel: false,
-  idString: '',
   label: 'Text Input Label',
-  leadingIcon: '',
   textIcon: false,
   toggleLabel: 'Show Value',
   valid: true,

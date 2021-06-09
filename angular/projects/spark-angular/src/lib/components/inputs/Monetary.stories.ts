@@ -79,6 +79,7 @@ export const monetaryInput = () => ({
           class="sprk-b-TextInput--has-text-icon"
           name="monetary_input"
           type="text"
+          placeholder="0.00"
           [(ngModel)]="monetary_input"
           #monetaryInput="ngModel"
           sprkInput
@@ -116,6 +117,7 @@ export const invalidMonetaryInput = () => ({
           class="sprk-b-TextInput--has-text-icon sprk-b-TextInput--error"
           aria-invalid="true"
           name="monetary_input"
+          placeholder="0.00"
           type="text"
           [(ngModel)]="monetary_input"
           #monetaryInput="ngModel"
@@ -126,6 +128,7 @@ export const invalidMonetaryInput = () => ({
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
+          ariaHidden="true"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -160,6 +163,7 @@ export const disabledMonetaryInput = () => ({
           id="disabled-monetary"
           class="sprk-b-TextInput--has-text-icon"
           name="monetary_input"
+          placeholder="0.00"
           type="text"
           [(ngModel)]="monetary_input"
           #monetaryInput="ngModel"
@@ -195,6 +199,7 @@ export const legacyStory = () => ({
         id="legacy-monetary"
         class="sprk-b-TextInput--has-text-icon"
         name="monetary_input"
+        placeholder="0.00"
         type="text"
         [(ngModel)]="monetary_input"
         #monetaryInput="ngModel"
@@ -229,6 +234,7 @@ export const legacyInvalidMonetaryInput = () => ({
         aria-describedby="legacy-monetary-error"
         class="sprk-b-TextInput--has-text-icon sprk-b-TextInput--error"
         aria-invalid="true"
+        placeholder="0.00"
         name="monetary_input"
         type="text"
         [(ngModel)]="monetary_input"
@@ -239,6 +245,7 @@ export const legacyInvalidMonetaryInput = () => ({
         <sprk-icon
           iconType="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
+          ariaHidden="true"
         ></sprk-icon>
         <div class="sprk-b-ErrorText">There is an error on this field.</div>
       </span>
@@ -275,6 +282,7 @@ export const legacyDisabledMonetaryInput = () => ({
         id="legacy-disabled-monetary"
         class="sprk-b-TextInput--has-text-icon"
         name="monetary_input"
+        placeholder="0.00"
         type="text"
         [(ngModel)]="monetary_input"
         #monetaryInput="ngModel"

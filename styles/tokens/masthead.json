@@ -74,7 +74,7 @@
         },
         "item-padding-bottom-wide": {
           "comment": "The padding bottom around the content items in the content section of the Masthead in wide viewports.",
-          "value": "{space.m.value}",
+          "value": "{space.s.value}",
           "attributes": {
             "category": "size"
           },

@@ -42,7 +42,7 @@ export const SSNInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="ssn"
         data-id="ssn"
         type="password"
@@ -96,7 +96,7 @@ export const invalidSSNInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
+        class="sprk-b-TextInput sprk-b-TextInput--error"
         id="ssn"
         data-id="ssn"
         type="password"
@@ -133,6 +133,8 @@ export const invalidSSNInput = () => `
         <svg
          class="sprk-c-Icon sprk-b-ErrorIcon"
          viewBox="0 0 64 64"
+         aria-hidden="true"
+         focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -162,7 +164,7 @@ export const disabledSSNInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="ssn"
         data-id="ssn"
         type="password"

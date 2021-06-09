@@ -32,7 +32,7 @@ export const passwordInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="password"
         data-id="password-input"
         type="password"
@@ -88,7 +88,7 @@ export const invalidPasswordInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
+        class="sprk-b-TextInput sprk-b-TextInput--error"
         id="password"
         data-id="password-input"
         type="password"
@@ -125,6 +125,8 @@ export const invalidPasswordInput = () => `
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -152,7 +154,7 @@ export const disabledPasswordInput = () => `
       </label>
 
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="password"
         data-id="password-input"
         type="password"
