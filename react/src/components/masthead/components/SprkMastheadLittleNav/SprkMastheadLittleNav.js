@@ -54,7 +54,7 @@ class SprkMastheadLittleNav extends Component {
           )}
         >
           {links.map((link) => {
-            const { element, href, isActive, text, ...rest } = link;
+            const { element, href, isActive, text, subNavLinks, ...rest } = link;
             const TagName = element || 'a';
             return (
               <li key={link.id}>

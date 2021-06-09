@@ -62,7 +62,7 @@ const SprkHighlightBoard = (props) => {
         {heading && (
           <SprkStackItem>
             <SprkHeading
-              variant="typeDisplayOne"
+              variant="displayOne"
               additionalClasses="sprk-c-HighlightBoard__heading"
             >
               {heading}
