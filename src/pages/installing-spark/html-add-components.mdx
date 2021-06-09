@@ -5,74 +5,49 @@
 
 import spinnergif from '../../images/installing-spark/html/html-spinner.gif';
 
-# Installing Spark in an HTML Project
-## Adding Spark Components
-
-Now you’re ready to start writing the HTML to build the structure
-of the components you’ll be using. Here we’ll cover how to add
-components for HTML, CSS and JavaScript environments with no
-JavaScript framework. You can follow along with the code examples
-in this guide using the sample app found in our <a href="https://github.com/sparkdesignsystem/spark-starter-html/" target="_blank">starter repository</a>.
-
-This guide is Part 3 in a 3-Part series. You can also check out
+> This the final Part of a 3-Part series. You can also check out
 [Part 1 - Setting Up Your Environment](/installing-spark/html-environment-setup) and
 [Part 2 - Installation](/installing-spark/html-installation).
 
+# Part 3: Adding Spark Components in an HTML Project
+This guide will cover how to add components for HTML, CSS and JavaScript.
+
+Our <a href="https://github.com/sparkdesignsystem/spark-starter-html/" target="_blank">Starter Github Repositories</a> are also available for reference:
+- ['kitchen-sink' branch](https://github.com/sparkdesignsystem/spark-starter-html/tree/kitchen-sink) (Spark Installed with component examples.)
+- ['without-spark' branch](https://github.com/sparkdesignsystem/spark-starter-html/tree/without-spark) (all of the prerequisites before Spark Installation.)
+
 For instructions on setting up Spark in other environments, check out the
-guides for [Angular](/installing-spark/angular) and [React](/installing-spark/react) development environments.
+guides for [Angular](/installing-spark/angular) and [React](/installing-spark/react).
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/EwSArEBTaPU"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-  title="Youtube Player: Installing Spark in an HTML Project Part 3/3 - Adding a Spark Component"
-></iframe>
+## Adding Your First Spark Component
+Adding a Spinner Button can confirm you've installed Spark's Styles and JavaScript correctly.
 
-## Navigating to Component HTML
+This is just one example to implement functionality and get your project started.
 
-1. To get started, select the <a href="/using-spark" target="_blank">Using Spark</a>
-tab at the top of this page. This is where you’ll find all the HTML you’ll
-need for the component variants and configurations you can use.
-
-2. Underneath the *Components* section in the left column, find the component
-you want to add.
-
-> **For example**: Let’s say you’re trying to add a Spinning Button. You’d
-select the <a href="../using-spark/components/button" target="_blank">Button</a> component.
-
-3. Click the *HTML* link to view the HTML documentation.
-
-4. Navigate to the *Docs* tab at the top of the screen.
-
-5. Scroll down until you see the component variant you would like to
-include in your site.
-
-6. Click *Show code*.
-
-7. Copy the sample code into `index.html`.
-
-> **For example**: If you’re adding a Spinning Button, you’d scroll
-down on the Button page to find <a href="https://html.sparkdesignsystem.com/?path=/docs/components-button--spinning" target="_blank">Spinning Button</a>.
-Then you’d copy the Spinning Button code that looks like this:
-
+1. Add Spark Button code into your `index.html` and include an `onclick` and a `data-id`.
 ``` html
-<button class="sprk-c-Button" data-sprk-spinner="click">
-Submit
-</button>
+  <button
+    class="sprk-c-Button"
+    data-id="button-spinner-1"
+    onclick="startSpinner()"
+  >
+    Start Spinning
+  </button>
+```
+> **Note**: Inside the `<body>` tag of `index.html`, the line `<script src="main.js"></script>` should be after
+any other HTML elements.
+
+2. In the `index.js` file, import `setSpinning` from Spark and create a `startSpinner` function (this is the function that will run `onclick`).
+```javascript
+import { setSpinning } from '@sparkdesignsystem/spark';
+
+window.startSpinner = () => {
+  const spinningButton = document.querySelector('[data-id="button-spinner-1"]');
+  setSpinning(spinningButton, {});
+}
 ```
 
-> **Note**: Make sure you’re including `main.js` after the HTML
-elements in `index.html`. The `<script>` line should be at the
-bottom of the `<body>` tag.
-
-8. You should see the component you just installed with all the
-correct Spark CSS applied.
-
-> **For example**: If you’ve added a Spinning Button
-you’ll see something like this…
+3. Build your app with `npm run build`, and you should find a Spark Button that loads a Spinner on click.
 
 <div class="sprk-u-Measure">
   <img
@@ -82,9 +57,20 @@ you’ll see something like this…
     alt="A Spark Button Spinner component."/>
 </div>
 
-## You did it!
+> Learn more about Buttons and Spinner functionality in the [Button Storybook documentation](https://html.sparkdesignsystem.com/?path=/docs/components-button--primary).
 
-You’re ready to start building with Spark!
+## Finding the code to other Spark Components
+
+1. Go to the [Spark HTML Storybook](https://html.sparkdesignsystem.com/)
+2. Find the Component you need in the "Components" section.
+3. Navigate to the *Docs* tab. It's typically at the top of screen next to *Canvas*.
+4. Navigate down the page until you find your component variant.
+5. The *Show code* button will toggle a code sample.
+
+> These code samples represent the *rendered state*
+after Spark's JavaScript functions run. Some functionality requires additional engineering.
+
+The *Docs* section of each page will give implementation details for each component.
 
 ## Additional Topics
 
