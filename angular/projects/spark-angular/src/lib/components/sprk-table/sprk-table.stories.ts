@@ -12,10 +12,8 @@ export default {
   component: SprkTableComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     subcomponents: {
@@ -30,9 +28,7 @@ export default {
 };
 
 const modules = {
-  imports: [
-    SprkTableModule,
-  ],
+  imports: [SprkTableModule],
 };
 
 export const columnComparison = () => ({
@@ -72,13 +68,8 @@ export const columnComparison = () => ({
   `,
 });
 
-columnComparison.story = {
-  parameters: {
-    jest: [
-      'sprk-table.component',
-      'sprk-table-head.directive',
-    ],
-  },
+columnComparison.parameters = {
+  jest: ['sprk-table.component', 'sprk-table-head.directive'],
 };
 
 export const secondary = () => ({
@@ -121,13 +112,8 @@ export const secondary = () => ({
   `,
 });
 
-secondary.story = {
-  parameters: {
-    jest: [
-      'sprk-table.component',
-      'sprk-table-head.directive',
-    ],
-  },
+secondary.parameters = {
+  jest: ['sprk-table.component', 'sprk-table-head.directive'],
 };
 
 export const groupedColumns = () => ({
@@ -180,14 +166,12 @@ export const groupedColumns = () => ({
   `,
 });
 
-groupedColumns.story = {
-  parameters: {
-    jest: [
-      'sprk-table.component',
-      'sprk-table-head.directive',
-      'sprk-table-grouped-column.directive',
-    ],
-  },
+groupedColumns.parameters = {
+  jest: [
+    'sprk-table.component',
+    'sprk-table-head.directive',
+    'sprk-table-grouped-column.directive',
+  ],
 };
 
 export const rowComparison = () => ({
@@ -232,15 +216,13 @@ export const rowComparison = () => ({
   `,
 });
 
-rowComparison.story = {
-  parameters: {
-    jest: [
-      'sprk-table.component',
-      'sprk-table-head.directive',
-      'sprk-table-row-heading.directive',
-      'sprk-table-empty-heading.directive',
-    ],
-  },
+rowComparison.parameters = {
+  jest: [
+    'sprk-table.component',
+    'sprk-table-head.directive',
+    'sprk-table-row-heading.directive',
+    'sprk-table-empty-heading.directive',
+  ],
 };
 
 export const secondaryRowComparison = () => ({
@@ -298,12 +280,10 @@ export const secondaryRowComparison = () => ({
   `,
 });
 
-secondaryRowComparison.story = {
-  parameters: {
-    jest: [
-      'sprk-table.component',
-      'sprk-table-head.directive',
-      'sprk-table-row-heading.directive',
-    ],
-  },
+secondaryRowComparison.parameters = {
+  jest: [
+    'sprk-table.component',
+    'sprk-table-head.directive',
+    'sprk-table-row-heading.directive',
+  ],
 };

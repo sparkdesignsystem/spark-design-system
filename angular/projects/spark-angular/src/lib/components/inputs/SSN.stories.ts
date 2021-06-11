@@ -103,18 +103,17 @@ export const SSNInput = () => ({
   `,
 });
 
-SSNInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+SSNInput.storyName = 'Default';
+
+SSNInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidSSNInput = () => ({
@@ -159,18 +158,17 @@ export const invalidSSNInput = () => ({
   `,
 });
 
-invalidSSNInput.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+invalidSSNInput.storyName = 'Invalid';
+
+invalidSSNInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const disabledSSNInput = () => ({
@@ -206,16 +204,15 @@ export const disabledSSNInput = () => ({
   `,
 });
 
-disabledSSNInput.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledSSNInput.storyName = 'Disabled';
+
+disabledSSNInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };

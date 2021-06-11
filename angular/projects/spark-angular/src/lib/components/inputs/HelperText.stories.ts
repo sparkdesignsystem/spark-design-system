@@ -81,16 +81,15 @@ export const helperText = () => ({
   `,
 });
 
-helperText.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-helper-text.directive',
-    ],
-  },
+helperText.storyName = 'Default';
+
+helperText.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-helper-text.directive',
+  ],
 };
 
 export const invalidHelperText = () => ({
@@ -127,15 +126,14 @@ export const invalidHelperText = () => ({
   `,
 });
 
-invalidHelperText.story = {
-  name: 'With Error Text',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-helper-text.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidHelperText.storyName = 'With Error Text';
+
+invalidHelperText.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-helper-text.directive',
+    'sprk-field-error.directive',
+  ],
 };

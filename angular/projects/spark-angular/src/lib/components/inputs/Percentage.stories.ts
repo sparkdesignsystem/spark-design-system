@@ -82,15 +82,14 @@ export const percentageInput = () => ({
   `,
 });
 
-percentageInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+percentageInput.storyName = 'Default';
+
+percentageInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidPercentageInput = () => ({
@@ -130,16 +129,15 @@ export const invalidPercentageInput = () => ({
   `,
 });
 
-invalidPercentageInput.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidPercentageInput.storyName = 'Invalid';
+
+invalidPercentageInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledPercentageInput = () => ({
@@ -170,15 +168,14 @@ export const disabledPercentageInput = () => ({
   `,
 });
 
-disabledPercentageInput.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledPercentageInput.storyName = 'Disabled';
+
+disabledPercentageInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyStory = () => ({
@@ -203,15 +200,14 @@ export const legacyStory = () => ({
   `,
 });
 
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyStory.storyName = 'Legacy (Deprecated)';
+
+legacyStory.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidPercentageInput = () => ({
@@ -246,16 +242,15 @@ export const legacyInvalidPercentageInput = () => ({
   `,
 });
 
-legacyInvalidPercentageInput.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidPercentageInput.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidPercentageInput.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledPercentageInput = () => ({
@@ -287,13 +282,12 @@ export const legacyDisabledPercentageInput = () => ({
   `,
 });
 
-legacyDisabledPercentageInput.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledPercentageInput.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledPercentageInput.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };

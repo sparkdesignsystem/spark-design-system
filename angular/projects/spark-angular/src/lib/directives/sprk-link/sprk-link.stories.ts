@@ -62,11 +62,10 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const simple = () => ({
@@ -84,10 +83,8 @@ export const simple = () => ({
   `,
 });
 
-simple.story = {
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+simple.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const light = () => ({
@@ -105,10 +102,8 @@ export const light = () => ({
   `,
 });
 
-light.story = {
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+light.parameters = {
+  jest: ['sprk-link.directive'],
   decorators: [
     storyWrapper(
       (storyContent) =>
@@ -140,10 +135,8 @@ export const iconWithTextLink = () => ({
   `,
 });
 
-iconWithTextLink.story = {
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+iconWithTextLink.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const disabled = () => ({
@@ -161,10 +154,8 @@ export const disabled = () => ({
   `,
 });
 
-disabled.story = {
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+disabled.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const disabledSimple = () => ({
@@ -183,11 +174,10 @@ export const disabledSimple = () => ({
   `,
 });
 
-disabledSimple.story = {
-  name: 'Disabled - Simple',
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+disabledSimple.storyName = 'Disabled - Simple';
+
+disabledSimple.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const disabledLight = () => ({
@@ -206,11 +196,10 @@ export const disabledLight = () => ({
   `,
 });
 
-disabledLight.story = {
-  name: 'Disabled - Light',
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+disabledLight.storyName = 'Disabled - Light';
+
+disabledLight.parameters = {
+  jest: ['sprk-link.directive'],
   decorators: [
     storyWrapper(
       (storyContent) =>
@@ -243,11 +232,10 @@ export const disabledIconWithTextLink = () => ({
   `,
 });
 
-disabledIconWithTextLink.story = {
-  name: 'Disabled - Icon With Text Link',
-  parameters: {
-    jest: ['sprk-link.directive'],
-  },
+disabledIconWithTextLink.storyName = 'Disabled - Icon With Text Link';
+
+disabledIconWithTextLink.parameters = {
+  jest: ['sprk-link.directive'],
 };
 
 export const deprecated = () => ({
@@ -263,9 +251,8 @@ export const deprecated = () => ({
   `,
 });
 
-deprecated.story = {
-  name: 'Component (Deprecated)',
-  parameters: {
-    jest: ['sprk-link.component'],
-  },
+deprecated.storyName = 'Component (Deprecated)';
+
+deprecated.parameters = {
+  jest: ['sprk-link.directive'],
 };

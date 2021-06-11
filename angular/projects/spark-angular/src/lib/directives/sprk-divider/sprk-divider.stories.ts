@@ -29,11 +29,10 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-divider.directive'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-divider-column.directive'],
 };
 
 export const deprecated = () => ({
@@ -43,9 +42,8 @@ export const deprecated = () => ({
   `,
 });
 
-deprecated.story = {
-  name: 'Component (Deprecated)',
-  parameters: {
-    jest: ['sprk-divider.component'],
-  },
+deprecated.storyName = 'Component (Deprecated)';
+
+deprecated.parameters = {
+  jest: ['sprk-divider-column.directive'],
 };

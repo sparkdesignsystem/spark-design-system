@@ -54,17 +54,16 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: [
+    'sprk-card.component',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+  ],
 };
 
 export const standout = () => ({
@@ -80,16 +79,14 @@ export const standout = () => ({
   `,
 });
 
-standout.story = {
-  parameters: {
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-    ],
-  },
+standout.parameters = {
+  jest: [
+    'sprk-card.component',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+  ],
 };
 
 export const highlightedHeader = () => ({
@@ -127,20 +124,17 @@ export const highlightedHeader = () => ({
   `,
 });
 
-highlightedHeader.story = {
-  name: 'Highlighted Header',
-  parameters: {
-    docs: { iframeHeight: 300 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-header.component',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-    ],
-  },
+highlightedHeader.parameters = {
+  docs: { iframeHeight: 300 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-header.component',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+  ],
 };
 
 export const teaser = () => ({
@@ -192,21 +186,18 @@ export const teaser = () => ({
  `,
 });
 
-teaser.story = {
-  name: 'Teaser',
-  parameters: {
-    docs: { iframeHeight: 550 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-card-media.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-    ],
-  },
+teaser.parameters = {
+  docs: { iframeHeight: 550 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-content.directive',
+    'sprk-card-media.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+  ],
 };
 
 export const teaserIcon = () => ({
@@ -262,21 +253,20 @@ export const teaserIcon = () => ({
  `,
 });
 
-teaserIcon.story = {
-  name: 'Teaser With Icon',
-  parameters: {
-    docs: { iframeHeight: 550 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-      'sprk-icon.component',
-    ],
-  },
+teaserIcon.storyName = 'Teaser With Icon';
+
+teaserIcon.parameters = {
+  docs: { iframeHeight: 550 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+    'sprk-icon.component',
+  ],
 };
 
 export const teaserWithDifferentElementOrder = () => ({
@@ -327,9 +317,10 @@ export const teaserWithDifferentElementOrder = () => ({
   `,
 });
 
-teaserWithDifferentElementOrder.story = {
-  name: 'Teaser With Different Element Order',
-  parameters: {
+(teaserWithDifferentElementOrder.storyName =
+  'Teaser With Different Element Order'),
+  (teaserWithDifferentElementOrder.parameters = {
+    docs: { iframeHeight: 550 },
     jest: [
       'sprk-card.component',
       'sprk-card-content.directive',
@@ -340,11 +331,7 @@ teaserWithDifferentElementOrder.story = {
       'sprk-heading.directive',
       'sprk-link.directive',
     ],
-    docs: {
-      iframeHeight: 550,
-    },
-  },
-};
+  });
 
 export const twoUpCards = () => ({
   moduleMetadata: modules,
@@ -457,21 +444,20 @@ export const twoUpCards = () => ({
   `,
 });
 
-twoUpCards.story = {
-  name: 'Card Layout - Two Up',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-card-media.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-    ],
-  },
+twoUpCards.storyName = 'Card Layout - Two Up';
+
+twoUpCards.parameters = {
+  docs: { iframeHeight: 550 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-media.directive',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+  ],
 };
 
 export const threeUpCards = () => ({
@@ -635,21 +621,20 @@ export const threeUpCards = () => ({
   `,
 });
 
-threeUpCards.story = {
-  name: 'Card Layout - Three Up',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-media.directive',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-    ],
-  },
+threeUpCards.storyName = 'Card Layout - Three Up';
+
+threeUpCards.parameters = {
+  docs: { iframeHeight: 600 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-media.directive',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+  ],
 };
 
 export const fourUpCards = () => ({
@@ -863,19 +848,18 @@ export const fourUpCards = () => ({
   `,
 });
 
-fourUpCards.story = {
-  name: 'Card Layout - Four Up',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-card-media.directive',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-    ],
-  },
+threeUpCards.storyName = 'Card Layout - Four Up';
+
+threeUpCards.parameters = {
+  docs: { iframeHeight: 600 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-media.directive',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+  ],
 };

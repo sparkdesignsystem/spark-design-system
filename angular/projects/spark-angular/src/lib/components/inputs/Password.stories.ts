@@ -102,18 +102,17 @@ export const passwordInput = () => ({
   `,
 });
 
-passwordInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-input.directive',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-label.directive',
-    ],
-  },
+passwordInput.storyName = 'Default';
+
+passwordInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-input.directive',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidPasswordInput = () => ({
@@ -152,19 +151,18 @@ export const invalidPasswordInput = () => ({
   `,
 });
 
-invalidPasswordInput.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-input.directive',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidPasswordInput.storyName = 'Invalid';
+
+invalidPasswordInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-input.directive',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledPasswordInput = () => ({
@@ -194,18 +192,17 @@ export const disabledPasswordInput = () => ({
   `,
 });
 
-disabledPasswordInput.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-input.directive',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledPasswordInput.storyName = 'Disabled';
+
+disabledPasswordInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-input.directive',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacy = () => ({
@@ -228,17 +225,16 @@ export const legacy = () => ({
   `,
 });
 
-legacy.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-input.directive',
-      'sprk-selection-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacy.storyName = 'Legacy (Deprecated)';
+
+legacy.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-input.directive',
+    'sprk-selection-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidPasswordInput = () => ({
@@ -275,18 +271,17 @@ export const legacyInvalidPasswordInput = () => ({
   `,
 });
 
-legacyInvalidPasswordInput.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-input.directive',
-      'sprk-selection-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidPasswordInput.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidPasswordInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-input.directive',
+    'sprk-selection-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledPasswordInput = () => ({
@@ -310,15 +305,14 @@ export const legacyDisabledPasswordInput = () => ({
   `,
 });
 
-legacyDisabledPasswordInput.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-input.directive',
-      'sprk-selection-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledPasswordInput.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledPasswordInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-input.directive',
+    'sprk-selection-input.directive',
+    'sprk-label.directive',
+  ],
 };

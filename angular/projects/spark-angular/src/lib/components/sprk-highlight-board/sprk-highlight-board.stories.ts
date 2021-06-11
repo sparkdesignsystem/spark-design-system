@@ -60,11 +60,10 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-highlight-board.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-highlight-board.component'],
 };
 
 export const noImage = () => ({
@@ -81,11 +80,9 @@ export const noImage = () => ({
   `,
 });
 
-noImage.story = {
-  parameters: {
-    docs: { iframeHeight: 300 },
-    jest: ['sprk-highlight-board.component'],
-  },
+noImage.parameters = {
+  docs: { iframeHeight: 300 },
+  jest: ['sprk-highlight-board.component'],
 };
 
 export const stacked = () => ({
@@ -104,9 +101,7 @@ export const stacked = () => ({
   `,
 });
 
-stacked.story = {
-  parameters: {
-    docs: { iframeHeight: 800 },
-    jest: ['sprk-highlight-board.component'],
-  },
+stacked.parameters = {
+  docs: { iframeHeight: 800 },
+  jest: ['sprk-highlight-board.component'],
 };

@@ -84,15 +84,14 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-tabs.component',
-      'sprk-tabs-panel.directive',
-      'sprk-tabs-button.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: [
+    'sprk-tabs.component',
+    'sprk-tabs-panel.directive',
+    'sprk-tabs-button.directive',
+  ],
 };
 
 const modules_deprecated = {
@@ -149,13 +148,12 @@ export const deprecated = () => ({
   `,
 });
 
-deprecated.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-tabbed-navigation.component',
-      'sprk-tabbed-navigation-panel.directive',
-      'sprk-tabbed-navigation-tab.directive',
-    ],
-  },
+deprecated.storyName = 'Legacy (Deprecated)';
+
+deprecated.parameters = {
+  jest: [
+    'sprk-tabbed-navigation.component',
+    'sprk-tabbed-navigation-panel.directive',
+    'sprk-tabbed-navigation-tab.directive',
+  ],
 };

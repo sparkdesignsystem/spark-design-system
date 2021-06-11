@@ -6,7 +6,12 @@ import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook
 export default {
   title: 'Components/Centered Column',
   component: SprkCenteredColumnDirective,
-  decorators: [storyWrapper(storyContent => `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`)],
+  decorators: [
+    storyWrapper(
+      (storyContent) =>
+        `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`,
+    ),
+  ],
   parameters: {
     docs: { iframeHeight: 140 },
     info: `${markdownDocumentationLinkBuilder('centered-column')}
@@ -15,13 +20,11 @@ any parent element that
 is being used to contain the application contents within
 a maximum width.
     `,
-  }
+  },
 };
 
 const modules = {
-  imports: [
-    SprkCenteredColumnModule,
-  ],
+  imports: [SprkCenteredColumnModule],
 };
 
 export const defaultStory = () => ({
@@ -32,11 +35,8 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-centered-column.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-centered-column.directive'],
 };

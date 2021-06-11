@@ -8,10 +8,8 @@ export default {
   component: SprkFlagComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     docs: { iframeHeight: 200 },
@@ -28,9 +26,7 @@ in one of the slots mentioned above, it will not render.
 };
 
 const modules = {
-  imports: [
-    SprkFlagModule,
-  ],
+  imports: [SprkFlagModule],
 };
 
 export const defaultStory = () => ({
@@ -47,14 +43,13 @@ export const defaultStory = () => ({
         Suspendisse id inventore integer eum non enim diam habitant.
       </p>
     </sprk-flag>
-  `
+  `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-flag.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-flag.component'],
 };
 
 export const reversed = () => ({
@@ -73,13 +68,11 @@ export const reversed = () => ({
         Suspendisse id inventore integer eum non enim diam habitant.
       </p>
     </sprk-flag>
-  `
+  `,
 });
 
-reversed.story = {
-  parameters: {
-    jest: ['sprk-flag.component'],
-  },
+reversed.parameters = {
+  jest: ['sprk-flag.component'],
 };
 
 export const stacked = () => ({
@@ -98,11 +91,9 @@ export const stacked = () => ({
         Suspendisse id inventore integer eum non enim diam habitant.
       </p>
     </sprk-flag>
-  `
+  `,
 });
 
-stacked.story = {
-  parameters: {
-    jest: ['sprk-flag.component'],
-  },
+stacked.parameters = {
+  jest: ['sprk-flag.component'],
 };

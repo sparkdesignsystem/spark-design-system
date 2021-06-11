@@ -2,7 +2,6 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 import { SprkAlertModule } from './sprk-alert.module';
 import { SprkAlertComponent } from './sprk-alert.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-
 export default {
   title: 'Components/Alert',
   component: SprkAlertComponent,
@@ -12,13 +11,16 @@ export default {
     ),
   ],
   parameters: {
-    info: `
-${markdownDocumentationLinkBuilder('alert')}
-- \`role=”alert”\` is required so that
-assistive technologies can inform
-the user that their attention is needed.
-`,
-    docs: { iframeHeight: 120 },
+    docs: {
+      iframeHeight: 120,
+      description: {
+        component: `${markdownDocumentationLinkBuilder('alert')}
+          - \`role=”alert”\` is required so that
+          assistive technologies can inform
+          the user that their attention is needed.
+          `,
+      },
+    },
   },
 };
 
@@ -39,10 +41,8 @@ export const info = () => ({
   `,
 });
 
-info.story = {
-  parameters: {
-    jest: ['sprk-alert.component'],
-  },
+info.parameters = {
+  jest: ['sprk-alert.component'],
 };
 
 export const success = () => ({
@@ -58,10 +58,8 @@ export const success = () => ({
   `,
 });
 
-success.story = {
-  parameters: {
-    jest: ['sprk-alert.component'],
-  },
+success.parameters = {
+  jest: ['sprk-alert.component'],
 };
 
 export const fail = () => ({
@@ -78,11 +76,9 @@ export const fail = () => ({
   `,
 });
 
-fail.story = {
-  parameters: {
-    docs: { iframeHeight: 235 },
-    jest: ['sprk-alert.component'],
-  },
+fail.parameters = {
+  docs: { iframeHeight: 235 },
+  jest: ['sprk-alert.component'],
 };
 
 export const noDismissButton = () => ({
@@ -99,8 +95,6 @@ export const noDismissButton = () => ({
   `,
 });
 
-noDismissButton.story = {
-  parameters: {
-    jest: ['sprk-alert.component'],
-  },
+noDismissButton.parameters = {
+  jest: ['sprk-alert.component'],
 };

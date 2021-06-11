@@ -62,10 +62,8 @@ export const bodyOne = () => ({
   `,
 });
 
-bodyOne.story = {
-  parameters: {
-    jest: ['sprk-text.directive'],
-  },
+bodyOne.parameters = {
+  jest: ['sprk-text.directive'],
 };
 
 export const bodyTwo = () => ({
@@ -87,10 +85,8 @@ export const bodyTwo = () => ({
   `,
 });
 
-bodyTwo.story = {
-  parameters: {
-    jest: ['sprk-text.directive'],
-  },
+bodyTwo.parameters = {
+  jest: ['sprk-text.directive'],
 };
 
 export const bodyThree = () => ({
@@ -112,10 +108,8 @@ export const bodyThree = () => ({
   `,
 });
 
-bodyThree.story = {
-  parameters: {
-    jest: ['sprk-text.directive'],
-  },
+bodyThree.parameters = {
+  jest: ['sprk-text.directive'],
 };
 
 export const bodyFour = () => ({
@@ -137,8 +131,6 @@ export const bodyFour = () => ({
   `,
 });
 
-bodyFour.story = {
-  parameters: {
-    jest: ['sprk-text.directive'],
-  },
+bodyFour.parameters = {
+  jest: ['sprk-text.directive'],
 };

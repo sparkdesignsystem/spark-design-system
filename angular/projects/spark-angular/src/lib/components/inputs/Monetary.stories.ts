@@ -89,15 +89,14 @@ export const monetaryInput = () => ({
   `,
 });
 
-monetaryInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+monetaryInput.storyName = 'Default';
+
+monetaryInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidMonetaryInput = () => ({
@@ -136,16 +135,15 @@ export const invalidMonetaryInput = () => ({
   `,
 });
 
-invalidMonetaryInput.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidMonetaryInput.storyName = 'Invalid';
+
+invalidMonetaryInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledMonetaryInput = () => ({
@@ -175,15 +173,14 @@ export const disabledMonetaryInput = () => ({
   `,
 });
 
-disabledMonetaryInput.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledMonetaryInput.storyName = 'Disabled';
+
+disabledMonetaryInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyStory = () => ({
@@ -209,15 +206,14 @@ export const legacyStory = () => ({
   `,
 });
 
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyStory.storyName = 'Legacy (Deprecated)';
+
+legacyStory.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidMonetaryInput = () => ({
@@ -253,16 +249,15 @@ export const legacyInvalidMonetaryInput = () => ({
   `,
 });
 
-legacyInvalidMonetaryInput.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidMonetaryInput.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidMonetaryInput.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledMonetaryInput = () => ({
@@ -293,13 +288,12 @@ export const legacyDisabledMonetaryInput = () => ({
   `,
 });
 
-legacyDisabledMonetaryInput.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledMonetaryInput.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledMonetaryInput.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };

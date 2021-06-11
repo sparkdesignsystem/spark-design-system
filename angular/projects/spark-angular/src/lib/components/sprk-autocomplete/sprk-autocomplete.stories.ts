@@ -160,12 +160,11 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+defaultStory.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
+
+defaultStory.storyName = 'Default';
 
 export const defaultInvalid = () => ({
   moduleMetadata: modules,
@@ -242,11 +241,10 @@ export const defaultInvalid = () => ({
   `,
 });
 
-defaultInvalid.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+defaultInvalid.storyName = 'Invalid';
+
+defaultInvalid.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
 
 export const defaultDisabled = () => ({
@@ -319,11 +317,10 @@ export const defaultDisabled = () => ({
   `,
 });
 
-defaultDisabled.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+defaultDisabled.storyName = 'Disabled';
+
+defaultDisabled.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
 
 export const hugeStory = () => ({
@@ -396,12 +393,11 @@ export const hugeStory = () => ({
   `,
 });
 
-hugeStory.story = {
-  name: 'Huge',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+hugeStory.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
+
+hugeStory.storyName = 'Huge';
 
 export const hugeInvalid = () => ({
   moduleMetadata: modules,
@@ -481,12 +477,11 @@ export const hugeInvalid = () => ({
   `,
 });
 
-hugeInvalid.story = {
-  name: 'Huge Invalid',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+hugeInvalid.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
+
+hugeInvalid.storyName = 'Huge Invalid';
 
 export const hugeDisabled = () => ({
   moduleMetadata: modules,
@@ -559,9 +554,8 @@ export const hugeDisabled = () => ({
   `,
 });
 
-hugeDisabled.story = {
-  name: 'Huge Disabled',
-  parameters: {
-    jest: ['sprk-autocomplete.component'],
-  },
+hugeDisabled.parameters = {
+  jest: ['sprk-autocomplete.component'],
 };
+
+hugeDisabled.storyName = 'Huge Disabled';

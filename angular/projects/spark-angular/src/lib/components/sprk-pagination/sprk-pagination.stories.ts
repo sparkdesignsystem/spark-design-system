@@ -8,10 +8,8 @@ export default {
   component: SprkPaginationComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -27,9 +25,7 @@ goForward events include this value in a property called
 };
 
 const modules = {
-  imports: [
-    SprkPaginationModule,
-  ],
+  imports: [SprkPaginationModule],
 };
 
 export const defaultStory = () => ({
@@ -44,13 +40,10 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-pagination.component',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-pagination.component'],
 };
 
 export const pager = () => ({
@@ -66,10 +59,6 @@ export const pager = () => ({
   `,
 });
 
-pager.story = {
-  parameters: {
-    jest: [
-      'sprk-pagination.component',
-    ],
-  },
+pager.parameters = {
+  jest: ['sprk-pagination.component'],
 };

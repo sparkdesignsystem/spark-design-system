@@ -63,10 +63,8 @@ export const primary = () => ({
   `,
 });
 
-primary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+primary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const secondary = () => ({
@@ -82,10 +80,8 @@ export const secondary = () => ({
   `,
 });
 
-secondary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+secondary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const tertiary = () => ({
@@ -101,10 +97,8 @@ export const tertiary = () => ({
   `,
 });
 
-tertiary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+tertiary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const disabled = () => ({
@@ -120,10 +114,8 @@ export const disabled = () => ({
   `,
 });
 
-disabled.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+disabled.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const disabledSecondary = () => ({
@@ -140,10 +132,8 @@ export const disabledSecondary = () => ({
   `,
 });
 
-disabledSecondary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+disabledSecondary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const disabledTertiary = () => ({
@@ -160,10 +150,8 @@ export const disabledTertiary = () => ({
   `,
 });
 
-disabledTertiary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+disabledTertiary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const spinning = () => {
@@ -182,10 +170,8 @@ export const spinning = () => {
   };
 };
 
-spinning.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+spinning.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const spinningSecondary = () => {
@@ -204,10 +190,8 @@ export const spinningSecondary = () => {
   };
 };
 
-spinningSecondary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+spinningSecondary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const spinningTertiary = () => {
@@ -226,10 +210,8 @@ export const spinningTertiary = () => {
   };
 };
 
-spinningTertiary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+spinningTertiary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const fullWidthAtSmallViewport = () => {
@@ -247,11 +229,10 @@ export const fullWidthAtSmallViewport = () => {
   };
 };
 
-fullWidthAtSmallViewport.story = {
-  name: 'Full Width at Small Viewport',
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+fullWidthAtSmallViewport.storyName = 'Full Width at Small Viewport';
+
+fullWidthAtSmallViewport.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const fullWidthAtExtraSmallViewport = () => {
@@ -269,9 +250,8 @@ export const fullWidthAtExtraSmallViewport = () => {
   };
 };
 
-fullWidthAtExtraSmallViewport.story = {
-  name: 'Full Width at Extra Small Viewport',
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+fullWidthAtExtraSmallViewport.storyName = 'Full Width at Extra Small Viewport';
+
+fullWidthAtExtraSmallViewport.parameters = {
+  jest: ['sprk-button.directive'],
 };

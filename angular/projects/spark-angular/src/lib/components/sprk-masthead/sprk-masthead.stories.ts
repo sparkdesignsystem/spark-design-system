@@ -567,15 +567,14 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-masthead.component',
-      'sprk-masthead-accordion.component',
-      'sprk-masthead-accordion-item.component',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: [
+    'sprk-masthead.component',
+    'sprk-masthead-accordion.component',
+    'sprk-masthead-accordion-item.component',
+  ],
 };
 
 export const extended = () => ({
@@ -1082,15 +1081,13 @@ export const extended = () => ({
   },
 });
 
-extended.story = {
-  parameters: {
-    docs: { iframeHeight: 450 },
-    jest: [
-      'sprk-masthead.component',
-      'sprk-masthead-accordion.component',
-      'sprk-masthead-accordion-item.component',
-    ],
-  },
+extended.parameters = {
+  docs: { iframeHeight: 450 },
+  jest: [
+    'sprk-masthead.component',
+    'sprk-masthead-accordion.component',
+    'sprk-masthead-accordion-item.component',
+  ],
 };
 
 export const extendedWithExampleContent = () => ({
@@ -1596,15 +1593,13 @@ export const extendedWithExampleContent = () => ({
   },
 });
 
-extendedWithExampleContent.story = {
-  parameters: {
-    docs: { iframeHeight: 450 },
-    jest: [
-      'sprk-masthead.component',
-      'sprk-masthead-accordion.component',
-      'sprk-masthead-accordion-item.component',
-    ],
-  },
+extendedWithExampleContent.parameters = {
+  docs: { iframeHeight: 450 },
+  jest: [
+    'sprk-masthead.component',
+    'sprk-masthead-accordion.component',
+    'sprk-masthead-accordion-item.component',
+  ],
 };
 
 export const withoutCollapsibleNav = () => ({
@@ -1634,8 +1629,6 @@ export const withoutCollapsibleNav = () => ({
   `,
 });
 
-withoutCollapsibleNav.story = {
-  parameters: {
-    jest: ['sprk-masthead.component'],
-  },
+withoutCollapsibleNav.parameters = {
+  jest: ['sprk-masthead.component'],
 };

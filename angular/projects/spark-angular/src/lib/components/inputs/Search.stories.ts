@@ -89,15 +89,14 @@ export const searchInput = () => ({
   `,
 });
 
-searchInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+searchInput.storyName = 'Default';
+
+searchInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidSearchInput = () => ({
@@ -144,16 +143,15 @@ export const invalidSearchInput = () => ({
   `,
 });
 
-invalidSearchInput.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidSearchInput.storyName = 'Invalid';
+
+invalidSearchInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledSearchInput = () => ({
@@ -192,15 +190,14 @@ export const disabledSearchInput = () => ({
   `,
 });
 
-disabledSearchInput.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledSearchInput.storyName = 'Disabled';
+
+disabledSearchInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyStory = () => ({
@@ -235,15 +232,14 @@ export const legacyStory = () => ({
   `,
 });
 
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyStory.storyName = 'Legacy (Deprecated)';
+
+legacyStory.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidSearchInput = () => ({
@@ -288,16 +284,15 @@ export const legacyInvalidSearchInput = () => ({
   `,
 });
 
-legacyInvalidSearchInput.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidSearchInput.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidSearchInput.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledSearchInput = () => ({
@@ -333,13 +328,12 @@ export const legacyDisabledSearchInput = () => ({
   `,
 });
 
-legacyDisabledSearchInput.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledSearchInput.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledSearchInput.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };

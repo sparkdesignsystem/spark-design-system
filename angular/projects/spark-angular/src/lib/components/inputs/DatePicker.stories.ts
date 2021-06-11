@@ -97,16 +97,15 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-input-container.component',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-input-container.component',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+  ],
 };
 
 export const invalidDatePicker = () => ({
@@ -149,17 +148,16 @@ export const invalidDatePicker = () => ({
   `,
 });
 
-invalidDatePicker.story = {
-  name: 'Invalid',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-input-container.component',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidDatePicker.storyName = 'Invalid';
+
+invalidDatePicker.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-input-container.component',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledDatePicker = () => ({
@@ -193,16 +191,15 @@ export const disabledDatePicker = () => ({
   `,
 });
 
-disabledDatePicker.story = {
-  name: 'Disabled',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-input-container.component',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-    ],
-  },
+disabledDatePicker.storyName = 'Disabled';
+
+disabledDatePicker.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-input-container.component',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+  ],
 };
 
 export const legacyStory = () => ({
@@ -234,17 +231,16 @@ export const legacyStory = () => ({
   `,
 });
 
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-    ],
-  },
+legacyStory.storyName = 'Legacy (Deprecated)';
+
+legacyStory.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+  ],
 };
 
 export const legacyInvalidDatePicker = () => ({
@@ -286,18 +282,17 @@ export const legacyInvalidDatePicker = () => ({
   `,
 });
 
-legacyInvalidDatePicker.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidDatePicker.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidDatePicker.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledDatePicker = () => ({
@@ -330,15 +325,14 @@ export const legacyDisabledDatePicker = () => ({
   `,
 });
 
-legacyDisabledDatePicker.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-    ],
-  },
+legacyDisabledDatePicker.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledDatePicker.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+  ],
 };

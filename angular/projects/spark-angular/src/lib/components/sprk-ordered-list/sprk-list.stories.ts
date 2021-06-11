@@ -12,10 +12,9 @@ export default {
   component: SprkUnorderedListComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box sprk-u-mlm">${ storyContent }<div>`
-      )
-    )
+      (storyContent) =>
+        `<div class="sprk-o-Box sprk-u-mlm">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     subcomponents: {
@@ -31,11 +30,7 @@ ${markdownDocumentationLinkBuilder('list')}
 };
 
 const modules = {
-  imports: [
-    SprkOrderedListModule,
-    SprkUnorderedListModule,
-    SprkListItemModule,
-  ],
+  imports: [SprkOrderedListModule, SprkUnorderedListModule, SprkListItemModule],
 };
 
 export const unordered = () => ({
@@ -55,13 +50,8 @@ export const unordered = () => ({
   `,
 });
 
-unordered.story = {
-  parameters: {
-    jest: [
-      'sprk-unordered-list',
-      'sprk-list-item',
-    ],
-  },
+unordered.parameters = {
+  jest: ['sprk-unordered-list', 'sprk-list-item'],
 };
 
 export const ordered = () => ({
@@ -81,13 +71,8 @@ export const ordered = () => ({
   `,
 });
 
-ordered.story = {
-  parameters: {
-    jest: [
-      'sprk-ordered-list',
-      'sprk-list-item',
-    ],
-  },
+ordered.parameters = {
+  jest: ['sprk-ordered-list', 'sprk-list-item'],
 };
 
 export const indented = () => ({
@@ -110,13 +95,8 @@ export const indented = () => ({
   `,
 });
 
-indented.story = {
-  parameters: {
-    jest: [
-      'sprk-unordered-list',
-      'sprk-list-item',
-    ],
-  },
+indented.parameters = {
+  jest: ['sprk-unordered-list', 'sprk-list-item'],
 };
 
 export const bare = () => ({
@@ -139,12 +119,6 @@ export const bare = () => ({
   `,
 });
 
-bare.story = {
-  parameters: {
-    jest: [
-      'sprk-unordered-list',
-      'sprk-list-item',
-    ],
-  },
+bare.parameters = {
+  jest: ['sprk-unordered-list', 'sprk-list-item'],
 };
-

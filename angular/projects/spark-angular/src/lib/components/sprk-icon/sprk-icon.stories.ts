@@ -2,17 +2,18 @@ import { SprkIconModule } from './sprk-icon.module';
 import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkIconComponent } from './sprk-icon.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { getIcons, attachIcons } from '../../../../../../../storybook-utilities/icon-utilities/icon-name-util.js';
+import {
+  getIcons,
+  attachIcons,
+} from '../../../../../../../storybook-utilities/icon-utilities/icon-name-util.js';
 
 export default {
   title: 'Components/Icons',
   component: SprkIconComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     info: `
@@ -46,9 +47,7 @@ communicate the Icon’s meaning.
 };
 
 const modules = {
-  imports: [
-    SprkIconModule,
-  ],
+  imports: [SprkIconModule],
 };
 
 export const defaultStory = () => ({
@@ -62,11 +61,10 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-icon.component'],
-  }
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-icon.component'],
 };
 
 export const gallery = () => {
@@ -76,7 +74,9 @@ export const gallery = () => {
     });
   }
 
-  setTimeout(() => { attachIcons(getIcons()); }, 100);
+  setTimeout(() => {
+    attachIcons(getIcons());
+  }, 100);
 
   return {
     moduleMetadata: modules,
@@ -86,12 +86,9 @@ export const gallery = () => {
   };
 };
 
-gallery.story = {
-  name: 'Gallery',
-  parameters: {
-    docs: {
-      iframeHeight: 1000
-    },
-    jest: ['sprk-icon.component'],
-  }
+gallery.parameters = {
+  docs: {
+    iframeHeight: 1000,
+  },
+  jest: ['sprk-icon.component'],
 };

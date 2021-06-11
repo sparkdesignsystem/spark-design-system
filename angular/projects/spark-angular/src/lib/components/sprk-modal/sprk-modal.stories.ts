@@ -53,11 +53,10 @@ export const defaultStory = () => ({
   },
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-modal.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-modal.component'],
 };
 
 export const info = () => ({
@@ -79,10 +78,8 @@ export const info = () => ({
   },
 });
 
-info.story = {
-  parameters: {
-    jest: ['sprk-modal.component'],
-  },
+info.parameters = {
+  jest: ['sprk-modal.component'],
 };
 
 export const wait = () => ({
@@ -106,8 +103,6 @@ export const wait = () => ({
   },
 });
 
-wait.story = {
-  parameters: {
-    jest: ['sprk-modal.component'],
-  },
+wait.parameters = {
+  jest: ['sprk-modal.component'],
 };

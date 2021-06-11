@@ -11,10 +11,9 @@ export default {
   component: SprkStackComponent,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box sb-decorate">${ storyContent }<div>`
-      )
-    )
+      (storyContent) =>
+        `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`,
+    ),
   ],
   parameters: {
     subcomponents: {
@@ -33,11 +32,7 @@ for an example.
 };
 
 const modules = {
-  imports: [
-    SprkStackModule,
-    SprkStackItemModule,
-    SprkTextModule,
-  ],
+  imports: [SprkStackModule, SprkStackItemModule, SprkTextModule],
 };
 
 export const defaultStory = () => ({
@@ -47,17 +42,13 @@ export const defaultStory = () => ({
       <div sprkStackItem></div>
       <div sprkStackItem></div>
     </sprk-stack>
-  `
+  `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplit = () => ({
@@ -73,14 +64,10 @@ export const stackSplit = () => ({
   `,
 });
 
-stackSplit.story = {
-  name: 'Stack/Split - Spaced Items',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplit.storyName = 'Stack/Split - Spaced Item';
+
+defaultStory.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitTwoCol = () => ({
@@ -99,14 +86,10 @@ export const stackSplitTwoCol = () => ({
   `,
 });
 
-stackSplitTwoCol.story = {
-  name: 'Stack/Split - Two Column',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitTwoCol.storyName = 'Stack/Split - Two Column';
+
+stackSplitTwoCol.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitTwoColWithPadding = () => ({
@@ -133,14 +116,10 @@ export const stackSplitTwoColWithPadding = () => ({
   `,
 });
 
-stackSplitTwoColWithPadding.story = {
-  name: 'Stack/Split - Two Column With Padding',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitTwoColWithPadding.storyName = 'Stack/Split - Two Column With Padding';
+
+stackSplitTwoColWithPadding.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitThreeCol = () => ({
@@ -163,14 +142,10 @@ export const stackSplitThreeCol = () => ({
   `,
 });
 
-stackSplitThreeCol.story = {
-  name: 'Stack/Split - Three Column',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitThreeCol.storyName = 'Stack/Split - Three Column';
+
+stackSplitThreeCol.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitFourCol = () => ({
@@ -197,14 +172,10 @@ export const stackSplitFourCol = () => ({
   `,
 });
 
-stackSplitFourCol.story = {
-  name: 'Stack/Split - Four Column',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitFourCol.storyName = 'Stack/Split - Four Column';
+
+stackSplitFourCol.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitFiveCol = () => ({
@@ -235,14 +206,10 @@ export const stackSplitFiveCol = () => ({
   `,
 });
 
-stackSplitFiveCol.story = {
-  name: 'Stack/Split - Five Column',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitFiveCol.storyName = 'Stack/Split - Five Column';
+
+stackSplitFiveCol.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitSixCol = () => ({
@@ -277,14 +244,10 @@ export const stackSplitSixCol = () => ({
   `,
 });
 
-stackSplitSixCol.story = {
-  name: 'Stack/Split - Six Column',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitSixCol.storyName = 'Stack/Split - Six Column';
+
+stackSplitSixCol.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitLayoutThreeFourths = () => ({
@@ -303,14 +266,10 @@ export const stackSplitLayoutThreeFourths = () => ({
   `,
 });
 
-stackSplitLayoutThreeFourths.story = {
-  name: 'Stack/Split - 75/25',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitLayoutThreeFourths.storyName = 'Stack/Split - 75/25';
+
+stackSplitLayoutThreeFourths.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitLayoutThreeFifths = () => ({
@@ -329,14 +288,10 @@ export const stackSplitLayoutThreeFifths = () => ({
   `,
 });
 
-stackSplitLayoutThreeFifths.story = {
-  name: 'Stack/Split - 60/40',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitLayoutThreeFifths.storyName = 'Stack/Split - 60/40';
+
+stackSplitLayoutThreeFifths.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitLayoutThreeTenths = () => ({
@@ -355,14 +310,10 @@ export const stackSplitLayoutThreeTenths = () => ({
   `,
 });
 
-stackSplitLayoutThreeTenths.story = {
-  name: 'Stack/Split - 30/70',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitLayoutThreeTenths.storyName = 'Stack/Split - 30/70';
+
+stackSplitLayoutThreeTenths.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitLayoutMixed = () => ({
@@ -520,13 +471,9 @@ export const stackSplitLayoutMixed = () => ({
   `,
 });
 
-stackSplitLayoutMixed.story = {
-  name: 'Stack/Split - Mixed Column',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitLayoutMixed.storyName = 'Stack/Split - Mixed Column';
+
+stackSplitLayoutMixed.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };

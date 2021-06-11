@@ -5,19 +5,22 @@ import { SprkBoxModule } from './sprk-box.module';
 export default {
   title: 'Components/Box',
   component: SprkBoxDirective,
-  decorators: [storyWrapper(storyContent => `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`)],
+  decorators: [
+    storyWrapper(
+      (storyContent) =>
+        `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`,
+    ),
+  ],
   parameters: {
-    docs: { iframeHeight: 100 }
-  }
+    docs: { iframeHeight: 100 },
+  },
 };
 
 const modules = {
-  imports: [
-    SprkBoxModule,
-  ],
+  imports: [SprkBoxModule],
 };
 
-export const defaultBox = () => ({
+export const defaultStory = () => ({
   moduleMetadata: modules,
   template: `
     <div sprkBox>
@@ -26,11 +29,8 @@ export const defaultBox = () => ({
   `,
 });
 
-defaultBox.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-box.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-box.directive'],
 };

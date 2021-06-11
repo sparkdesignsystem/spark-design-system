@@ -1,7 +1,5 @@
-import React from 'react';
-import { configure, addDecorator, addParameters } from '@storybook/angular';
-import { withA11y } from '@storybook/addon-a11y';
-import sparkTheme from "../../storybook-utilities/storybook-theming/storybook-spark-theme";
+import { addDecorator, addParameters } from '@storybook/angular';
+import sparkTheme from '../../storybook-utilities/storybook-theming/storybook-spark-theme';
 import '../src/polyfills';
 import { withTests } from '@storybook/addon-jest';
 import results from '../src/.jest-test-results.json';
@@ -17,19 +15,21 @@ import AdditionalInputInfo from '../../storybook-utilities/components/Additional
 const classModifierJSON = require('../../src/data/sass-modifiers.json');
 
 setCompodocJson(docJson);
-addDecorator(withA11y);
 addDecorator(
   withTests({
     filesExt: '.spec.ts',
-    results
-  }
-  ));
+    results,
+  }),
+);
+
 addParameters({
   options: {
     theme: sparkTheme,
     showRoots: true,
     storySort: (a, b) =>
-      a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, { numeric: true }),
+      a[1].kind === b[1].kind
+        ? 0
+        : a[1].id.localeCompare(b[1].id, { numeric: true }),
   },
 });
 
@@ -43,58 +43,70 @@ addParameters({
     },
     container: ({ children, context }) => {
       const componentName = context.kind.split('/')[1];
-      const isInputStory = (componentName === 'Input');
-      const processedJson = configClassModifierJsonProcessor(classModifierJSON, componentName);
+      const isInputStory = componentName === 'Input';
+      const processedJson = configClassModifierJsonProcessor(
+        classModifierJSON,
+        componentName,
+      );
       if (processedJson) {
         return (
           <DocsContainer context={context}>
             <div>
               {children}
 
-              {isInputStory &&
+              {isInputStory && (
                 <AdditionalInputInfo
-                  additionalHeaderClasses='sprk-u-mbm'
-                  additionalListClasses='sprk-u-mbm'
+                  additionalHeaderClasses="sprk-u-mbm"
+                  additionalListClasses="sprk-u-mbm"
                 />
-              }
+              )}
 
-              <h4 className="sprk-u-mbm" id="class-modifiers">Class Modifiers for {componentName}</h4>
+              <h4 className="sprk-u-mbm" id="class-modifiers">
+                Class Modifiers for {componentName}
+              </h4>
               <SprkTable
                 additionalTableClasses="sprk-b-Table--spacing-medium sprk-b-Table--secondary sprk-b-Table--striped"
-                columns = {[
+                columns={[
                   {
                     name: 'selector',
-                    header: 'Class'
+                    header: 'Class',
                   },
                   {
                     name: 'description',
-                    header: 'Description'
+                    header: 'Description',
                   },
                 ]}
-                rows = {processedJson}
+                rows={processedJson}
               />
             </div>
           </DocsContainer>
-        )
+        );
       } else {
         return (
           <DocsContainer context={context}>
             <div>
               {children}
 
-              {isInputStory &&
+              {isInputStory && (
                 <AdditionalInputInfo
-                  additionalHeaderClasses='sprk-u-mbm'
-                  additionalListClasses='sprk-u-mbm'
+                  additionalHeaderClasses="sprk-u-mbm"
+                  additionalListClasses="sprk-u-mbm"
                 />
-              }
+              )}
             </div>
           </DocsContainer>
-        )
+        );
       }
     },
     extractProps,
   },
 });
 
-configure(require.context('../projects/spark-angular/src/lib', true, /\.stories\.(js|ts|tsx|mdx)$/), module);
+export const parameters = {
+  a11y: {
+    element: '#root',
+    config: {},
+    options: {},
+    manual: true,
+  },
+};
