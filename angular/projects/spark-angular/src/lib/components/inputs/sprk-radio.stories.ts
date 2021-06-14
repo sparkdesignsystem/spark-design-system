@@ -1,33 +1,34 @@
-import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
-import { SprkLabelModule } from '../../../directives/inputs/sprk-label/sprk-label.module';
-import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-import { SprkFieldErrorModule } from '../../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
-import { SprkHelperTextDirective } from '../../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
-import { SprkHelperTextModule } from '../../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
-import { markdownDocumentationLinkBuilder } from '../../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { SprkRadioGroupComponent } from '../sprk-radio-group/sprk-radio-group.component';
-import { SprkRadioItemComponent } from './sprk-radio-item.component';
-import { SprkRadioGroupModule } from '../sprk-radio-group/sprk-radio-group.module';
-import { SprkRadioItemModule } from './sprk-radio-item.module';
-import { SprkSelectionContainerModule } from '../sprk-selection-container/sprk-selection-container.module';
-import { SprkSelectionItemContainerModule } from '../sprk-selection-item-container/sprk-selection-item-container.module';
-import { SprkSelectionContainerComponent } from '../sprk-selection-container/sprk-selection-container.component';
-import { SprkSelectionInputModule } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
-import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
-import { SprkRadioInputModule } from '../../../directives/inputs/sprk-radio-input/sprk-radio-input.module';
-import { SprkRadioInputDirective } from '../../../directives/inputs/sprk-radio-input/sprk-radio-input.directive';
-import { SprkSelectionLabelModule } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
-import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
-import { SprkRadioLabelModule } from '../../../directives/inputs/sprk-radio-label/sprk-radio-label.module';
-import { SprkRadioLabelDirective } from '../../../directives/inputs/sprk-radio-label/sprk-radio-label.directive';
-import { SprkIconModule } from '../../sprk-icon/sprk-icon.module';
-import { SprkStackItemModule } from '../../../directives/sprk-stack-item/sprk-stack-item.module';
-import { SprkStackModule } from '../../sprk-stack/sprk-stack.module';
-import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.directive';
-import { SprkLegendDirective } from '../../../directives/inputs/sprk-legend/sprk-legend.directive';
-import { SprkFieldsetModule } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.module';
-import { SprkLegendModule } from '../../../directives/inputs/sprk-legend/sprk-legend.module';
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { SprkHelperTextDirective } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
+import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { SprkRadioGroupComponent } from './sprk-radio-group/sprk-radio-group.component';
+import { SprkRadioItemComponent } from './sprk-radio-item/sprk-radio-item.component';
+import { SprkRadioGroupModule } from './sprk-radio-group/sprk-radio-group.module';
+import { SprkRadioItemModule } from './sprk-radio-item/sprk-radio-item.module';
+import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
+import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
+import { SprkSelectionContainerComponent } from './sprk-selection-container/sprk-selection-container.component';
+import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
+import { SprkSelectionInputDirective } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
+import { SprkRadioInputModule } from '../../directives/inputs/sprk-radio-input/sprk-radio-input.module';
+import { SprkRadioInputDirective } from '../../directives/inputs/sprk-radio-input/sprk-radio-input.directive';
+import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
+import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
+import { SprkRadioLabelModule } from '../../directives/inputs/sprk-radio-label/sprk-radio-label.module';
+import { SprkRadioLabelDirective } from '../../directives/inputs/sprk-radio-label/sprk-radio-label.directive';
+import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
+import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
+import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
+import { SprkFieldsetDirective } from '../../directives/inputs/sprk-fieldset/sprk-fieldset.directive';
+import { SprkLegendDirective } from '../../directives/inputs/sprk-legend/sprk-legend.directive';
+import { SprkFieldsetModule } from '../../directives/inputs/sprk-fieldset/sprk-fieldset.module';
+import { SprkLegendModule } from '../../directives/inputs/sprk-legend/sprk-legend.module';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Radio',
@@ -75,6 +76,7 @@ const modules = {
   imports: [
     SprkRadioGroupModule,
     SprkRadioItemModule,
+    FormsModule,
     SprkRadioInputModule,
     SprkRadioLabelModule,
     SprkFieldsetModule,
@@ -1559,4 +1561,3 @@ legacyDisabledRadio.parameters = {
     'sprk-selection-label.directive',
   ],
 };
-

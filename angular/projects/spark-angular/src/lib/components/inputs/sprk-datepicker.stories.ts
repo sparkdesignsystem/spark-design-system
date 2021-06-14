@@ -12,6 +12,7 @@ import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-c
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Date Picker',
@@ -64,6 +65,7 @@ const modules = {
     SprkFieldErrorModule,
     SprkDatepickerModule,
     SprkIconInputContainerModule,
+    FormsModule,
   ],
 };
 

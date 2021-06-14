@@ -10,6 +10,7 @@ import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-c
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Monetary',
@@ -60,6 +61,7 @@ const modules = {
     SprkIconModule,
     SprkFieldErrorModule,
     SprkIconInputContainerModule,
+    FormsModule,
   ],
 };
 

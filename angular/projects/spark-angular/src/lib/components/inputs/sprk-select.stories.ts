@@ -13,6 +13,7 @@ import { SprkSelectModule } from '../../directives/inputs/sprk-select/sprk-selec
 import { SprkHugeInputContainerModule } from './sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkHugeInputContainerComponent } from './sprk-huge-input-container/sprk-huge-input-container.component';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Select',
@@ -57,6 +58,7 @@ const modules = {
     SprkHugeInputContainerModule,
     SprkFieldErrorModule,
     SprkInputModule,
+    FormsModule,
   ],
 };
 

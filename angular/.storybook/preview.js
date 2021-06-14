@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/angular';
 import '../src/polyfills';
@@ -12,6 +11,7 @@ import { DocsContainer } from '@storybook/addon-docs/blocks';
 import SprkTable from '../../react/src/base/tables/SprkTable';
 import { configClassModifierJsonProcessor } from '../../storybook-utilities/configClassModifierJsonProcessor';
 import AdditionalInputInfo from '../../storybook-utilities/components/AdditionalInputInfo';
+import sparkTheme from '../../storybook-utilities/storybook-theming/storybook-spark-theme';
 
 const classModifierJSON = require('../../src/data/sass-modifiers.json');
 
@@ -24,6 +24,9 @@ addDecorator(
 );
 
 addParameters({
+  docs: {
+    theme: sparkTheme,
+  },
   options: {
     storySort: (a, b) =>
       a[1].kind === b[1].kind

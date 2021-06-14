@@ -11,6 +11,7 @@ import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-inpu
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Percentage',
@@ -52,6 +53,7 @@ const modules = {
     SprkIconModule,
     SprkFieldErrorModule,
     SprkIconInputContainerModule,
+    FormsModule,
   ],
 };
 

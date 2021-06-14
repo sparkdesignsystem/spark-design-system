@@ -1,8 +1,10 @@
-import sparkTheme from '../../storybook-utilities/storybook-theming/storybook-spark-theme';
 import { addons } from '@storybook/addons';
+import sparkTheme from '../../storybook-utilities/storybook-theming/storybook-spark-theme';
 
 addons.setConfig({
-  showRoots: true,
+  sidebar: {
+    showRoots: true,
+  },
   theme: sparkTheme,
 });
 

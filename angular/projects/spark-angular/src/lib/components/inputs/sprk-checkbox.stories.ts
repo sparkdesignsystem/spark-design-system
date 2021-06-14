@@ -1,31 +1,31 @@
-import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
-import { SprkLabelModule } from '../../../directives/inputs/sprk-label/sprk-label.module';
-import { SprkSelectionContainerModule } from '../sprk-selection-container/sprk-selection-container.module';
-import { SprkSelectionItemContainerModule } from '../sprk-selection-item-container/sprk-selection-item-container.module';
-import { SprkSelectionLabelModule } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
-import { SprkSelectionInputModule } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
-import { SprkFieldErrorModule } from '../../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
-import { SprkIconModule } from '../../sprk-icon/sprk-icon.module';
-import { SprkStackItemModule } from '../../../directives/sprk-stack-item/sprk-stack-item.module';
-import { SprkStackModule } from '../../sprk-stack/sprk-stack.module';
-import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.directive';
-import { SprkLegendDirective } from '../../../directives/inputs/sprk-legend/sprk-legend.directive';
-import { SprkFieldsetModule } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.module';
-import { SprkLegendModule } from '../../../directives/inputs/sprk-legend/sprk-legend.module';
-import { SprkCheckboxLabelModule } from '../../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.module';
-import { SprkCheckboxLabelDirective } from '../../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.directive';
-import { SprkCheckboxInputModule } from '../../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
-import { SprkCheckboxInputDirective } from '../../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
-import { SprkCheckboxGroupComponent } from '../sprk-checkbox-group/sprk-checkbox-group.component';
-import { SprkCheckboxItemComponent } from './sprk-checkbox-item.component';
-import { SprkCheckboxGroupModule } from '../sprk-checkbox-group/sprk-checkbox-group.module';
-import { SprkCheckboxItemModule } from './sprk-checkbox-item.module';
-import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-import { SprkHelperTextDirective } from '../../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
-import { SprkHelperTextModule } from '../../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
-
-import { markdownDocumentationLinkBuilder } from '../../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
+import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
+import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
+import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
+import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
+import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
+import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
+import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
+import { SprkFieldsetDirective } from '../../directives/inputs/sprk-fieldset/sprk-fieldset.directive';
+import { SprkLegendDirective } from '../../directives/inputs/sprk-legend/sprk-legend.directive';
+import { SprkFieldsetModule } from '../../directives/inputs/sprk-fieldset/sprk-fieldset.module';
+import { SprkLegendModule } from '../../directives/inputs/sprk-legend/sprk-legend.module';
+import { SprkCheckboxLabelModule } from '../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.module';
+import { SprkCheckboxLabelDirective } from '../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.directive';
+import { SprkCheckboxInputModule } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
+import { SprkCheckboxInputDirective } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
+import { SprkCheckboxGroupComponent } from './sprk-checkbox-group/sprk-checkbox-group.component';
+import { SprkCheckboxItemComponent } from './sprk-checkbox-item/sprk-checkbox-item.component';
+import { SprkCheckboxGroupModule } from './sprk-checkbox-group/sprk-checkbox-group.module';
+import { SprkCheckboxItemModule } from './sprk-checkbox-item/sprk-checkbox-item.module';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkHelperTextDirective } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
+import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Checkbox',
@@ -87,6 +87,7 @@ const modules = {
     SprkIconModule,
     SprkStackItemModule,
     SprkStackModule,
+    FormsModule,
   ],
 };
 

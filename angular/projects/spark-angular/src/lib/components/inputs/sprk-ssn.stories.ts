@@ -15,6 +15,7 @@ import { SprkCheckboxLabelDirective } from '../../directives/inputs/sprk-checkbo
 import { SprkCheckboxInputModule } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
 import { SprkCheckboxInputDirective } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/SSN',
@@ -69,6 +70,7 @@ const modules = {
     SprkCheckboxInputModule,
     SprkCheckboxLabelModule,
     SprkCheckboxItemModule,
+    FormsModule,
   ],
 };
 

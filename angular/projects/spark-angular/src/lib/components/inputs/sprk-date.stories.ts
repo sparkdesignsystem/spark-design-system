@@ -3,20 +3,18 @@ import { SprkInputContainerModule } from './sprk-input-container/sprk-input-cont
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
-import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
-import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
-import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
-import { SprkHelperTextDirective } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
+import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
-  title: 'Components/Input/Helper Text',
+  title: 'Components/Input/Date',
   component: SprkInputContainerComponent,
   subcomponents: {
-    SprkHelperTextDirective,
     SprkLabelDirective,
     SprkInputDirective,
     SprkFieldErrorDirective,
@@ -39,8 +37,13 @@ export default {
   parameters: {
     info: `
 ${markdownDocumentationLinkBuilder('input')}
-- Helper text must be placed below the Input and above the error container.
-- Helper text is marked with the \`sprkHelperText\` directive.
+- The value of this field contains special characters (/)
+which you may need to remove before submitting the form.
+- Requires Additional Engineering:
+  - Validation
+  - Reformatting to date pattern MM/DD/YYYY - After valid
+  input, it should reformat to add commas and decimals
+  to the hundredth place.
 `,
     docs: { iframeHeight: 200 },
   },
@@ -53,68 +56,55 @@ const modules = {
     SprkInputModule,
     SprkIconModule,
     SprkFieldErrorModule,
-    SprkHelperTextModule,
+    FormsModule,
   ],
 };
 
-export const helperText = () => ({
+export const dateInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label for="helper-input" sprkLabel>
-        Text Input Label
-      </label>
+      <label for="date" sprkLabel>Date Input (No Picker)</label>
       <input
-        id="helper-input"
-        aria-describedby="helper-text"
-        sprkInput
-        name="text_input"
+        id="date"
+        name="date_input"
         type="text"
-        [(ngModel)]="text_input"
-        #textInput="ngModel"
-        idString="text-input-1"
-      >
-      <p sprkHelperText id="helper-text">
-        Optional helper text, used to clarify the field's intent.
-      </p>
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="date_input"
+        #dateInput="ngModel"
+        sprkInput
+      />
     </sprk-input-container>
   `,
 });
 
-helperText.storyName = 'Default';
+dateInput.storyName = 'Default';
 
-helperText.parameters = {
+dateInput.parameters = {
   jest: [
     'sprk-input-container.component',
     'sprk-input.directive',
     'sprk-label.directive',
-    'sprk-helper-text.directive',
   ],
 };
 
-export const invalidHelperText = () => ({
+export const invalidDateInput = () => ({
   moduleMetadata: modules,
   template: `
     <sprk-input-container>
-      <label for="invalid-helper-input" sprkLabel>
-        Text Input Label
-      </label>
+      <label for="invalid-date" sprkLabel>Date Input (No Picker)</label>
       <input
-        id="invalid-helper-input"
-        aria-describedby="helper-text helper-error"
-        sprkInput
-        name="text_input"
-        type="text"
-        [(ngModel)]="text_input"
-        #textInput="ngModel"
-        idString="text-input-1"
+        id="invalid-date"
+        aria-describedby="date-error"
         class="sprk-b-TextInput--error"
-        aria-invalid="true"
-      >
-      <p sprkHelperText id="helper-text">
-        Optional helper text, used to clarify the field's intent.
-      </p>
-      <span sprkFieldError id="helper-error">
+        name="date_input"
+        type="text"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="date_input"
+        #dateInput="ngModel"
+        sprkInput
+      />
+      <span sprkFieldError id="date-error">
         <sprk-icon
           iconName="exclamation-filled"
           additionalClasses="sprk-b-ErrorIcon"
@@ -126,14 +116,42 @@ export const invalidHelperText = () => ({
   `,
 });
 
-invalidHelperText.storyName = 'With Error Text';
+invalidDateInput.storyName = 'Invalid';
 
-invalidHelperText.parameters = {
+invalidDateInput.parameters = {
   jest: [
     'sprk-input-container.component',
     'sprk-input.directive',
     'sprk-label.directive',
-    'sprk-helper-text.directive',
     'sprk-field-error.directive',
+  ],
+};
+
+export const disabledDateInput = () => ({
+  moduleMetadata: modules,
+  template: `
+    <sprk-input-container>
+      <label for="disabled-date" sprkLabel isDisabled="true">Date Input (No Picker)</label>
+      <input
+        id="disabled-date"
+        disabled
+        name="date_input"
+        type="text"
+        placeholder="MM/DD/YYYY"
+        [(ngModel)]="date_input"
+        #dateInput="ngModel"
+        sprkInput
+      />
+    </sprk-input-container>
+  `,
+});
+
+disabledDateInput.storyName = 'Disabled';
+
+disabledDateInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
   ],
 };

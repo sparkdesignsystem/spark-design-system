@@ -23,6 +23,7 @@ import { SprkSelectionItemContainerComponent } from './sprk-selection-item-conta
 import { SprkSelectionInputDirective } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 import { SprkSelectionLabelDirective } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Password',
@@ -69,6 +70,7 @@ const modules = {
   imports: [
     SprkInputContainerModule,
     SprkLabelModule,
+    FormsModule,
     SprkInputModule,
     SprkIconModule,
     SprkFieldErrorModule,

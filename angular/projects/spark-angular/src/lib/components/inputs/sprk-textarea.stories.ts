@@ -9,6 +9,7 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
 import { SprkTextareaDirective } from '../../directives/inputs/sprk-textarea/sprk-textarea.directive';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Textarea',
@@ -48,6 +49,7 @@ const modules = {
     SprkTextareaModule,
     SprkIconModule,
     SprkFieldErrorModule,
+    FormsModule,
   ],
 };
 

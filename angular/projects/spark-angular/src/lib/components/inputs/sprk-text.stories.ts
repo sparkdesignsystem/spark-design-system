@@ -11,6 +11,7 @@ import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-labe
 import { SprkHugeInputContainerModule } from './sprk-huge-input-container/sprk-huge-input-container.module';
 import { SprkHugeInputContainerComponent } from './sprk-huge-input-container/sprk-huge-input-container.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Text',
@@ -52,6 +53,7 @@ const modules = {
     SprkIconModule,
     SprkHugeInputContainerModule,
     SprkFieldErrorModule,
+    FormsModule,
   ],
 };
 
