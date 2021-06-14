@@ -109,6 +109,6 @@ export const parameters = {
     element: '#root',
     config: {},
     options: {},
-    manual: true,
+    manual: false,
   },
 };

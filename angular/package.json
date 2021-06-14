@@ -15,7 +15,7 @@
     "set-version": "PACKAGE_VERSION=$(node -p -e \"require('./projects/spark-angular/package.json').version\") && replace '(version).*' \"version: '$PACKAGE_VERSION'\" ./projects/spark-angular/src/environment/environment.ts",
     "sassdocmodifiers": "sassdoc '../styles/**/_*.scss' --parse > ../src/data/sass-modifiers.json",
     "prebuild:storybook": "npm run build-styles && npm run sassdocmodifiers && npm run test:generate-output && npm run docs:json",
-    "storybook": "start-storybook -p 8006 -s ../storybook-utilities/favicon",
+    "storybook": "npm run prebuild:storybook && start-storybook -p 8006 -s ../storybook-utilities/favicon",
     "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon",
     "publish": "npm run build && cd dist/spark-angular && npm publish"
   },
