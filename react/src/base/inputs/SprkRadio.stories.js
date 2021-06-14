@@ -47,7 +47,7 @@ and <code>SprkRadioItem</code> components.
 export const defaultStory = () => (
   <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>

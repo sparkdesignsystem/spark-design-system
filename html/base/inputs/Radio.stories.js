@@ -21,7 +21,7 @@ export const defaultStory = () => {
   return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
 

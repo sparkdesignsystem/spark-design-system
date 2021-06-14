@@ -115,7 +115,7 @@ export const defaultStory = () => ({
             for="radio-1"
             sprkRadioLabel
           >
-            Item 1
+            Radio Item 1
           </label>
        </sprk-radio-item>
        <sprk-radio-item>
@@ -133,7 +133,7 @@ export const defaultStory = () => ({
            for="radio-2"
            sprkRadioLabel
          >
-          Item 2
+          Radio Item 2
          </label>
        </sprk-radio-item>
        <sprk-radio-item>
@@ -151,7 +151,7 @@ export const defaultStory = () => ({
            for="radio-3"
            sprkRadioLabel
          >
-           Item 3
+           Radio Item 3
          </label>
        </sprk-radio-item>
      </fieldset>
