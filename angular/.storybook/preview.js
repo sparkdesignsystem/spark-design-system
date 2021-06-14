@@ -1,5 +1,6 @@
+
+import React from 'react';
 import { addDecorator, addParameters } from '@storybook/angular';
-import sparkTheme from '../../storybook-utilities/storybook-theming/storybook-spark-theme';
 import '../src/polyfills';
 import { withTests } from '@storybook/addon-jest';
 import results from '../src/.jest-test-results.json';
@@ -24,8 +25,6 @@ addDecorator(
 
 addParameters({
   options: {
-    theme: sparkTheme,
-    showRoots: true,
     storySort: (a, b) =>
       a[1].kind === b[1].kind
         ? 0

@@ -68,15 +68,14 @@ export const textarea = () => ({
   `,
 });
 
-textarea.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-textarea-container.component',
-      'sprk-textarea.directive',
-      'sprk-label.directive',
-    ],
-  },
+textarea.storyName = 'Default';
+
+textarea.parameters = {
+  jest: [
+    'sprk-textarea-container.component',
+    'sprk-textarea.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidTextarea = () => ({
@@ -107,16 +106,15 @@ export const invalidTextarea = () => ({
   `,
 });
 
-invalidTextarea.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-textarea-container.component',
-      'sprk-field-error.directive',
-      'sprk-textarea.directive',
-      'sprk-label.directive',
-    ],
-  },
+invalidTextarea.storyName = 'Invalid';
+
+invalidTextarea.parameters = {
+  jest: [
+    'sprk-textarea-container.component',
+    'sprk-field-error.directive',
+    'sprk-textarea.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const disabledTextarea = () => ({
@@ -143,13 +141,12 @@ export const disabledTextarea = () => ({
   `,
 });
 
-disabledTextarea.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-textarea-container.component',
-      'sprk-textarea.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledTextarea.storyName = 'Disabled';
+
+disabledTextarea.parameters = {
+  jest: [
+    'sprk-textarea-container.component',
+    'sprk-textarea.directive',
+    'sprk-label.directive',
+  ],
 };

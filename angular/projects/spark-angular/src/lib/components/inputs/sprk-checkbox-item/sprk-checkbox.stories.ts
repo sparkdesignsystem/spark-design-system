@@ -157,19 +157,18 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const defaultHelperText = () => ({
@@ -242,19 +241,18 @@ export const defaultHelperText = () => ({
   `,
 });
 
-defaultHelperText.story = {
-  name: 'Default Helper Text',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+defaultHelperText.storyName = 'Default Helper Text';
+
+defaultHelperText.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const invalidCheckbox = () => ({
@@ -334,20 +332,19 @@ export const invalidCheckbox = () => ({
   `,
 });
 
-invalidCheckbox.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidCheckbox.storyName = 'Invalid';
+
+invalidCheckbox.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledCheckbox = () => ({
@@ -423,19 +420,18 @@ export const disabledCheckbox = () => ({
   `,
 });
 
-disabledCheckbox.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+disabledCheckbox.storyName = 'Disabled';
+
+disabledCheckbox.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const huge = () => ({
@@ -511,19 +507,16 @@ export const huge = () => ({
   `,
 });
 
-huge.story = {
-  name: 'Huge',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+huge.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeHelperText = () => ({
@@ -602,19 +595,16 @@ export const hugeHelperText = () => ({
   `,
 });
 
-hugeHelperText.story = {
-  name: 'Huge Helper Text',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+huge.hugeHelperText = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeInvalid = () => ({
@@ -700,19 +690,17 @@ export const hugeInvalid = () => ({
   `,
 });
 
-hugeInvalid.story = {
-  name: 'Huge Invalid',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeInvalid.hugeHelperText = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const hugeDisabled = () => ({
@@ -794,20 +782,16 @@ export const hugeDisabled = () => ({
   `,
 });
 
-hugeDisabled.story = {
-  name: 'Huge Disabled',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-      'sprk-field-error.directive',
-    ],
-  },
+hugeInvalid.hugeHelperText = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeLayoutTwo = () => ({
@@ -869,19 +853,18 @@ export const hugeLayoutTwo = () => ({
   `,
 });
 
-hugeLayoutTwo.story = {
-  name: 'Huge Layout - Two',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeLayoutTwo.storyName = 'Huge Layout - Two';
+
+hugeLayoutTwo.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeLayoutFour = () => ({
@@ -995,19 +978,18 @@ export const hugeLayoutFour = () => ({
   `,
 });
 
-hugeLayoutFour.story = {
-  name: 'Huge Layout - Four',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeLayoutFour.storyName = 'Huge Layout - Four';
+
+hugeLayoutFour.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeLayoutFive = () => ({
@@ -1147,19 +1129,18 @@ export const hugeLayoutFive = () => ({
   `,
 });
 
-hugeLayoutFive.story = {
-  name: 'Huge Layout - Five',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeLayoutFive.storyName = 'Huge Layout - Five';
+
+hugeLayoutFive.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeLayoutSix = () => ({
@@ -1321,19 +1302,18 @@ export const hugeLayoutSix = () => ({
   `,
 });
 
-hugeLayoutSix.story = {
-  name: 'Huge Layout - Six',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeLayoutSix.storyName = 'Huge Layout - Six';
+
+hugeLayoutSix.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const legacyStory = () => ({
@@ -1407,17 +1387,16 @@ export const legacyStory = () => ({
   `,
 });
 
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-selection-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-selection-input.directive',
-      'sprk-selection-label.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyStory.storyName = 'Legacy (Deprecated)';
+
+legacyStory.parameters = {
+  jest: [
+    'sprk-selection-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-selection-input.directive',
+    'sprk-selection-label.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidStory = () => ({
@@ -1499,18 +1478,17 @@ export const legacyInvalidStory = () => ({
   `,
 });
 
-legacyInvalidStory.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-selection-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-selection-input.directive',
-      'sprk-selection-label.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidStory.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidStory.parameters = {
+  jest: [
+    'sprk-selection-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-selection-input.directive',
+    'sprk-selection-label.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledStory = () => ({
@@ -1590,15 +1568,14 @@ export const legacyDisabledStory = () => ({
   `,
 });
 
-legacyDisabledStory.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-selection-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-selection-input.directive',
-      'sprk-selection-label.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledStory.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledStory.parameters = {
+  jest: [
+    'sprk-selection-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-selection-input.directive',
+    'sprk-selection-label.directive',
+    'sprk-label.directive',
+  ],
 };

@@ -2,6 +2,7 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 import { SprkHeadingModule } from './sprk-heading.module';
 import { SprkHeadingDirective } from './sprk-heading.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+export * from '../sprk-text/sprk-text.stories';
 
 export default {
   title: 'Foundations/Typography',
@@ -57,12 +58,10 @@ export const pageTitle = () => ({
   `
 });
 
-pageTitle.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+pageTitle.parameters = {
+  jest: [
+    'sprk-heading.directive',
+  ],
 };
 
 export const displayOne = () => ({
@@ -75,12 +74,10 @@ export const displayOne = () => ({
   `
 });
 
-displayOne.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displayOne.parameters = {
+  jest: [
+    'sprk-heading.directive',
+  ],
 };
 
 export const displayTwo = () => ({
@@ -93,12 +90,10 @@ export const displayTwo = () => ({
   `
 });
 
-displayTwo.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displayTwo.parameters = {
+  jest: [
+    'sprk-heading.directive',
+  ],
 };
 
 export const displayThree = () => ({
@@ -111,12 +106,10 @@ export const displayThree = () => ({
   `
 });
 
-displayThree.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displayThree.parameters = {
+  jest: [
+    'sprk-heading.directive',
+  ],
 };
 
 export const displayFour = () => ({
@@ -129,12 +122,10 @@ export const displayFour = () => ({
   `
 });
 
-displayFour.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displayFour.parameters = {
+  jest: [
+    'sprk-heading.directive',
+  ],
 };
 
 export const displayFive = () => ({
@@ -147,12 +138,10 @@ export const displayFive = () => ({
   `
 });
 
-displayFive.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displayFive.parameters = {
+  jest: [
+    'sprk-heading.directive',
+  ],
 };
 
 export const displaySix = () => ({
@@ -165,12 +154,10 @@ export const displaySix = () => ({
   `
 });
 
-displaySix.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displaySix.parameters = {
+  jest: [
+    'sprk-heading.directive',
+  ],
 };
 
 export const displaySeven = () => ({
@@ -183,10 +170,8 @@ export const displaySeven = () => ({
   `
 });
 
-displaySeven.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displaySeven.parameters = {
+  jest: [
+    'sprk-heading.directive',
+  ],
 };

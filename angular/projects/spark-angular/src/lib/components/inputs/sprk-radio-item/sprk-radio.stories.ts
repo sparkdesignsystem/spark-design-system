@@ -159,19 +159,18 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+  ],
 };
 
 export const defaultHelperText = () => ({
@@ -245,17 +244,15 @@ export const defaultHelperText = () => ({
   `,
 });
 
-defaultHelperText.story = {
-  parameters: {
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-      'sprk-helper-text.directive',
-    ],
-  },
+defaultHelperText.parameters = {
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+    'sprk-helper-text.directive',
+  ],
 };
 
 export const invalidRadioButton = () => ({
@@ -335,21 +332,20 @@ export const invalidRadioButton = () => ({
   `,
 });
 
-invalidRadioButton.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidRadioButton.parameters = {
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+    'sprk-field-error.directive',
+  ],
 };
+
+invalidRadioButton.storyName = 'Invalid';
 
 export const disabledRadioButton = () => ({
   moduleMetadata: modules,
@@ -424,20 +420,19 @@ export const disabledRadioButton = () => ({
   `,
 });
 
-disabledRadioButton.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-    ],
-  },
+disabledRadioButton.parameters = {
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+  ],
 };
+
+disabledRadioButton.storyName = 'Disabled';
 
 export const huge = () => ({
   moduleMetadata: modules,
@@ -512,19 +507,17 @@ export const huge = () => ({
   `,
 });
 
-huge.story = {
-  parameters: {
-    docs: { iframeHeight: 300 },
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-    ],
-  },
+huge.parameters = {
+  docs: { iframeHeight: 300 },
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+  ],
 };
 
 export const hugeHelperText = () => ({
@@ -604,17 +597,15 @@ export const hugeHelperText = () => ({
   `,
 });
 
-hugeHelperText.story = {
-  parameters: {
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-      'sprk-helper-text.directive',
-    ],
-  },
+hugeHelperText.parameters = {
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+    'sprk-helper-text.directive',
+  ],
 };
 
 export const hugeInvalid = () => ({
@@ -701,19 +692,17 @@ export const hugeInvalid = () => ({
   `,
 });
 
-hugeInvalid.story = {
-  parameters: {
-    docs: { iframeHeight: 300 },
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-    ],
-  },
+hugeInvalid.parameters = {
+  docs: { iframeHeight: 300 },
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+  ],
 };
 
 export const hugeDisabled = () => ({
@@ -795,19 +784,17 @@ export const hugeDisabled = () => ({
   `,
 });
 
-hugeDisabled.story = {
-  parameters: {
-    docs: { iframeHeight: 300 },
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-    ],
-  },
+hugeDisabled.parameters = {
+  docs: { iframeHeight: 300 },
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+  ],
 };
 
 export const hugeLayoutTwo = () => ({
@@ -869,20 +856,19 @@ export const hugeLayoutTwo = () => ({
   `,
 });
 
-hugeLayoutTwo.story = {
-  name: 'Huge Layout - Two',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-    ],
-  },
+hugeLayoutTwo.storyName = 'Huge Layout - Two';
+
+hugeLayoutTwo.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+  ],
 };
 
 export const hugeLayoutFour = () => ({
@@ -996,20 +982,19 @@ export const hugeLayoutFour = () => ({
   `,
 });
 
-hugeLayoutFour.story = {
-  name: 'Huge Layout - Four',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-    ],
-  },
+hugeLayoutFour.storyName = 'Huge Layout - Four';
+
+hugeLayoutFour.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+  ],
 };
 
 export const hugeLayoutFive = () => ({
@@ -1149,20 +1134,19 @@ export const hugeLayoutFive = () => ({
   `,
 });
 
-hugeLayoutFive.story = {
-  name: 'Huge Layout - Five',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-radio-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-    ],
-  },
+hugeLayoutFive.storyName = 'Huge Layout - Five';
+
+hugeLayoutFive.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+  ],
 };
 
 export const hugeLayoutSix = () => ({
@@ -1324,20 +1308,19 @@ export const hugeLayoutSix = () => ({
   `,
 });
 
-hugeLayoutSix.story = {
-  name: 'Huge Layout - Six',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-radio-input.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-radio-label.directive',
-      'sprk-label.directive',
-      'sprk-radio-item.component',
-      'sprk-radio-group.component',
-    ],
-  },
+hugeLayoutSix.storyName = 'Huge Layout - Six';
+
+hugeLayoutSix.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-radio-input.directive',
+    'sprk-radio-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-radio-item.component',
+    'sprk-radio-group.component',
+  ],
 };
 
 export const legacyRadio = () => ({
@@ -1403,16 +1386,15 @@ export const legacyRadio = () => ({
   `,
 });
 
-legacyRadio.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-selection-item-container.component',
-      'sprk-selection-container.component',
-      'sprk-selection-input.directive',
-      'sprk-selection-label.directive',
-    ],
-  },
+legacyRadio.storyName = 'Legacy (Deprecated)';
+
+legacyRadio.parameters = {
+  jest: [
+    'sprk-selection-item-container.component',
+    'sprk-selection-container.component',
+    'sprk-selection-input.directive',
+    'sprk-selection-label.directive',
+  ],
 };
 
 export const legacyInvalidRadio = () => ({
@@ -1486,17 +1468,16 @@ export const legacyInvalidRadio = () => ({
   `,
 });
 
-legacyInvalidRadio.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-selection-item-container.component',
-      'sprk-selection-container.component',
-      'sprk-selection-input.directive',
-      'sprk-selection-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidRadio.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidRadio.parameters = {
+  jest: [
+    'sprk-selection-item-container.component',
+    'sprk-selection-container.component',
+    'sprk-selection-input.directive',
+    'sprk-selection-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledRadio = () => ({
@@ -1568,14 +1549,14 @@ export const legacyDisabledRadio = () => ({
   `,
 });
 
-legacyDisabledRadio.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-selection-item-container.component',
-      'sprk-selection-container.component',
-      'sprk-selection-input.directive',
-      'sprk-selection-label.directive',
-    ],
-  },
+legacyDisabledRadio.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledRadio.parameters = {
+  jest: [
+    'sprk-selection-item-container.component',
+    'sprk-selection-container.component',
+    'sprk-selection-input.directive',
+    'sprk-selection-label.directive',
+  ],
 };
+

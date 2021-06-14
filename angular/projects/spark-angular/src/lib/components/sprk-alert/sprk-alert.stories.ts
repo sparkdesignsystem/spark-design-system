@@ -2,6 +2,7 @@ import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper'
 import { SprkAlertModule } from './sprk-alert.module';
 import { SprkAlertComponent } from './sprk-alert.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+
 export default {
   title: 'Components/Alert',
   component: SprkAlertComponent,
@@ -15,10 +16,10 @@ export default {
       iframeHeight: 120,
       description: {
         component: `${markdownDocumentationLinkBuilder('alert')}
-          - \`role=”alert”\` is required so that
-          assistive technologies can inform
-          the user that their attention is needed.
-          `,
+- \`role=”alert”\` is required so that
+assistive technologies can inform
+the user that their attention is needed.
+        `,
       },
     },
   },
@@ -30,15 +31,19 @@ const modules = {
 
 export const info = () => ({
   moduleMetadata: modules,
+  props: {
+    variant: 'info',
+    idString: 'alert-info-1',
+    analyticsString: 'test',
+  },
   template: `
     <sprk-alert
-      variant="info"
-      idString="alert-info-1"
-      analyticsString="test"
+      [variant]="variant"
+      [idString]="idString"
+      [analyticsString]="analyticsString"
     >
       This is important information.
-    </sprk-alert>
-  `,
+    </sprk-alert>`,
 });
 
 info.parameters = {
@@ -47,11 +52,16 @@ info.parameters = {
 
 export const success = () => ({
   moduleMetadata: modules,
+  props: {
+    variant: 'success',
+    idString: 'alert-success-1',
+    analyticsString: 'test',
+  },
   template: `
     <sprk-alert
-      variant="success"
-      idString="alert-success-1"
-      analyticsString="object.action.event"
+      [variant]="variant"
+      [idString]="idString"
+      [analyticsString]="analyticsString"
     >
       This is a success message.
     </sprk-alert>
@@ -64,11 +74,16 @@ success.parameters = {
 
 export const fail = () => ({
   moduleMetadata: modules,
+  props: {
+    variant: 'fail',
+    idString: 'alert-fail-1',
+    analyticsString: 'test',
+  },
   template: `
     <sprk-alert
-      variant="fail"
-      idString="alert-fail-1"
-      analyticsString="object.action.event"
+      [variant]="variant"
+      [idString]="idString"
+      [analyticsString]="analyticsString"
     >
       This is a failure message to alert
       that something was not successful.
@@ -83,12 +98,18 @@ fail.parameters = {
 
 export const noDismissButton = () => ({
   moduleMetadata: modules,
+  props: {
+    variant: 'success',
+    idString: 'no-dismiss',
+    analyticsString: 'test',
+    isDismissible: false,
+  },
   template: `
     <sprk-alert
-      variant="success"
-      [isDismissible]="false"
-      idString="alert-success-2"
-      analyticsString="object.action.event"
+      [variant]="variant"
+      [idString]="idString"
+      [analyticsString]="analyticsString"
+      [isDismissible]="isDismissible"
     >
       This Success Alert has no dismiss button.
     </sprk-alert>

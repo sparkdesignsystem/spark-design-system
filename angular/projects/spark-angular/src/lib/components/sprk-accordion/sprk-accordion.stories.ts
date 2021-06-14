@@ -18,7 +18,12 @@ export default {
     subcomponents: {
       SprkAccordionItemComponent,
     },
-    info: `
+    docs: {
+      source: {
+        type: 'code'
+      },
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('accordion')}
 - The Accordion component in spark-angular consists of two Angular components:
     - \`sprk-accordion\`
@@ -29,8 +34,10 @@ components as children. Any other content you add outside of a
 - If your instance only has one item,
 consider using
 the [Toggle Component](/docs/components-toggle--default-story) instead.
-`,
-    docs: { iframeHeight: 420 },
+        `,
+      },
+      iframeHeight: 420
+    },
   },
 };
 
