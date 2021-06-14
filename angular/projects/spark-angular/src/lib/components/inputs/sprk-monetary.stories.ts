@@ -36,7 +36,9 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
 - In order to use Angular form validation on these inputs, add a pattern
 attribute containing a regular expression to the input.
@@ -49,7 +51,9 @@ $1,234.56) is non-numeric.
 - The value of this field may contain special characters ($ ,) which
 you may need to remove before submitting the form.
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
 };
 

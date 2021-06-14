@@ -56,16 +56,19 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
-- Spark checkboxes have been refactored. The version that uses <sprk-selection-container> and <sprk-selection-item-container> will be permanently removed in our Fall 2020 release.
 - To update to the new version, replace checkboxes with our
 new implementation using <code>sprk-checkbox-group</code>
 and <code>sprk-checkbox-item</code> components.
 - Use <sprk-checkbox-group>, sprkFieldset directive,
 and sprkLegend directive to group together all related choices.
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
 };
 

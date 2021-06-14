@@ -35,7 +35,9 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special
 characters (parenthesis and -) which you may
@@ -47,7 +49,9 @@ need to remove before submitting the form.
   should reformat to add commas and decimals
   to the hundredth place.
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
 };
 

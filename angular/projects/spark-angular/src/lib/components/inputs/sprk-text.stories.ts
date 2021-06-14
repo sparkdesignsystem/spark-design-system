@@ -38,10 +38,14 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      iframeHeight: 200,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
-    `,
-    docs: { iframeHeight: 200 },
+         `,
+      },
+    },
   },
 };
 

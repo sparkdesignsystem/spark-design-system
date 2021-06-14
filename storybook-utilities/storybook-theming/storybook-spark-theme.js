@@ -29,7 +29,6 @@ export default create({
   fontCode: 'monospace',
   barTextColor: 'rgb(51, 51, 51)',
   barSelectedColor: 'rgb(51, 51, 51)',
-  // barBg: '#302e2e',
   inputBorderRadius: 4,
   brandTitle: 'Spark Design System',
   brandUrl: 'https://sparkdesignsystem.com',

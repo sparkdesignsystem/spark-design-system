@@ -59,16 +59,19 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
-- Spark radio have been refactored. The version that uses <sprk-selection-container> and <sprk-selection-item-container> will be permanently removed in our Fall 2020 release.
 - To update to the new version, replace radio with our
 new implementation using <code>sprk-radio-group</code>
 and <code>sprk-radio-item</code> components.
 - Use <sprk-radio-group>, sprkFieldset directive,
 and sprkLegend directive to group together all related choices.
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
 };
 

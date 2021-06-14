@@ -44,7 +44,9 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
 (-) which you may need to remove before submitting the form.
@@ -56,7 +58,9 @@ ${markdownDocumentationLinkBuilder('input')}
   input, it should reformat to having the first three numbers,
   a dash, the next two numbers, a dash, and the last four numbers.
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
 };
 
