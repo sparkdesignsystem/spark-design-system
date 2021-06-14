@@ -2,71 +2,80 @@
 title: Writing Meaningful Web Content With Semantic HTML
 ---
 
-import { SprkHeading } from '@sparkdesignsystem/spark-react';
+import {
+  SprkHeading,
+  SprkLink,
+  SprkDivider,
+} from '@sparkdesignsystem/spark-react';
 
-<span
-  id="writing-meaningful-web-content-with-semantic-html"
-  class="docs-b-Link--anchor"
-></span>
-<SprkHeading
-  element="h1"
-  additionalClasses="sprk-u-mbl sprk-u-Measure"
-  isPageTitle
->
+<h1 class="sprk-b-PageTitle sprk-b-TypeDisplayOne sprk-u-mbl sprk-u-Measure">
   Writing Meaningful Web Content with Semantic HTML
-</SprkHeading>
+</h1>
 
 Typically, in a word document, writers bold or italicize text to add emphasis to the copy.
 
-When producing web content, **HTML** (Hyper Text Markup Language) **elements** define the structure, purpose and intended meaning of a page's web content.
+When producing web content, **HTML elements** define the structure, purpose and intended meaning of a page's web content.
 
-<SprkHeading
-  element="h3"
-  additionalClasses="sprk-u-mbm sprk-u-Measure"
-  variant="displayThree"
->
-  Main Takeaways
-</SprkHeading>
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
 
-- Use HTML elements to define the structure and meaning of a web page's content.
-- Know the purpose of each element to understand when to use it and to ensure the content can be access by assistive technologies.
+### Main Takeaways
+
+- Use HTML elements to define the structure and meaning of a web page's content to make it easier for users to understand.
+- Know the purpose of each element to understand when to use it and to ensure the content can be accessed by assistive technologies.
 - Use the correct element to ensure the content communicates the intended meaning.
+- Adding keywords inside a page's content structure increases.
 
-Here are some benefits of using semantic HTML
+Here are some benefits of using semantic HTML:
 
-- **It's easier to develop**. It gives content structure making it easier to understand.
-- **It's better for mobile experiences**. Semantic HTML is lighter in file size, and easier to make responsive.
-- **It's good for SEO**. It makes documents more findable, search engines give more importance to keywords inside the content structure.
+- It's easier for engineers to understand and to develop with.
+- **Create faster, responsive, and better mobile user experiences.** It's easier to make responsive, have reduced file size, and load faster.
+- **Keywords inside documents make them easier to find.** Search engines give more importance to those that have them.
 
-<span id="table-of-contents" class="docs-b-Link--anchor"></span>
-<SprkHeading
-  element="h2"
-  additionalClasses="sprk-u-mbl sprk-u-Measure"
-  variant="displayTwo"
->
-  Table of Contents
-</SprkHeading>
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
 
-- [HTML Elements](#html-elements)
-  - [Creating Elements Using Tags](#creating-elements-using-tags)
-  - [Common HTML Elements For UX writers](#common-html-elements-for-ux-writers)
-- [Semantic Elements](#semantic-elements)
-  - [The Strong Element](#the-strong-element)
-    - [The Strong vs The Bold Element vs Styling Text](#the-strong-vs-the-bold-element-vs-styling-text)
-  - [The Emphasis Element](#the-emphasis-element)
-    - [The Emphasis vs Italic or Idiomatic Text Element](#the-emphasis-vs-the-idiomatic-text-element)
-- [Accessibility](#accessibility)
+### Table of Contents
 
-<span id="html-elements" class="docs-b-Link--anchor"></span>
-<SprkHeading
-  element="h2"
-  additionalClasses="sprk-u-mbm sprk-u-Measure"
-  variant="displayTwo"
->
-  HTML Elements
-</SprkHeading>
+<ul>
+  <li>
+    <a href="#html-elements">HTML Elements</a>
+  </li>
+  <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mvs">
+    <li>
+      <a href="#creating-elements-using-tags">Creating Elements Using Tags</a>
+    </li>
+    <li>
+      <a href="#common-html-elements-for-ux-writers">
+        Common HTML Elements For UX writers
+      </a>
+    </li>
+  </ul>
+  <li>
+    <a href="#semantic-elements">Semantic Elements</a>
+  </li>
+  <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mvs">
+    <li>
+      <a href="#the-strong-element">The Strong Element</a>
+    </li>
+    <li>
+      <a href="#strong-vs-bold-vs-css-styling">Strong vs Bold vs CSS Styling</a>
+    </li>
+    <li>
+      <a href="#the-emphasis-element">The Emphasis Element</a>
+    </li>
+    <li>
+      <a href="#emphasis-vs-italic">Emphasis vs Italic</a>
+    </li>
+  </ul>
+  <li>
+    <a href="#accessibility">Accessibility</a>
+  </li>
+</ul>
 
-HTML (Hyper Text Markup Language) consists of series of elements, which enclose, or wrap pieces of content they appear or act a certain way.
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
+
+## HTML Elements
+
+HTML consists of series of elements, which enclose, or wrap pieces of content they appear or act a certain way.
 
 Elements describe or represent the meaning, structure, or style of a word, to:
 
@@ -74,22 +83,17 @@ Elements describe or represent the meaning, structure, or style of a word, to:
 - Developers
 - Users of assistive technologies
 
-> For more information, visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"> Modzilla's Developer Documentation - HTML elements</a>.
+> For more information, visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"> Mozilla's Developer Documentation - HTML elements</a>.
 
 As a UX Writer, it's important to:
 
 - **Understand** what is the purpose of the enclosed text.
-- **Know** what element to use to use depending on the purpose of the text.
+- **Know** what element to use depending on the purpose of the text.
 - **Ensure** we are communicating the intended meaning of the enclosed text to the users.
 
-<span id="creating-elements-using-tags" class="docs-b-Link--anchor"></span>
-<SprkHeading
-  element="h4"
-  additionalClasses="sprk-u-mbs sprk-u-Measure"
-  variant="displayFour"
->
-  Creating Elements Using Tags
-</SprkHeading>
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
+
+### Creating Elements Using Tags
 
 Use **tags** to create an element. Tags delimit the start and end of elements in the markup.
 
@@ -99,14 +103,9 @@ An element consists of three parts:
 - The **content** enclosed inside the tags.
 - The **closing tag** that represents where the element ends.
 
-<span id="examples" class="docs-b-Link--anchor"></span>
-<SprkHeading
-  element="h5"
-  additionalClasses="sprk-u-mbm sprk-u-Measure"
-  variant="displayFive"
->
+<h3 class="sprk-b-TypeDisplayFour docs-b-h4 sprk-u-mbm sprk-u-Measure">
   Example
-</SprkHeading>
+</h3>
 
 `<p>` Download the Rocket Homes mobile application on your mobile device to start looking for your dream home.`</p>`
 
@@ -114,27 +113,24 @@ An element consists of three parts:
 - The content is the enclosed text (<i>"Download the Rocket.... " </i>) inside the tags.
 - The `</p>` represents where the element ends.
 
-#### Common HTML Elements For UX Writers
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
+
+### Common HTML Elements For UX Writers
 
 Use the strong and emphasis elements, to ensure users can perceive the semantic meaning indicated by the visual treatment, even if they’re using assistive technology like a screen reader.
 
 - The **strong element** `<strong></strong>`, defines text with strong importance.
 - The **emphasis element** `<em></em>`, defines text with stressed emphasis.
 
-> Use the **bold element** `<b></b>` and the **italic or idiomatic text element** `<i></i>` for formatting and to display special types of text.
+> As a general rule, **don't use** the **bold** or the **italic** elements if there is a more descriptive and relevant tag available. Instead, use for formatting and to display special types of text.
 
 - The **bold element** `<b></b>` , draws attention to the element's contents, without extra importance.
 
 - The **italic or idiomatic text element** `<i></i>`, defines a part of text in an alternate voice or mood.
 
-<span id="semantic-elements" class="docs-b-Link--anchor"></span>
-<SprkHeading
-  element="h2"
-  additionalClasses="sprk-u-mbm sprk-u-Measure"
-  variant="displayTwo"
->
-  Semantic Elements
-</SprkHeading>
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
+
+## Semantic Elements
 
 Using HTML Semantic elements ensure users can perceive the semantic meaning indicated by the visual treatment, even if they’re using assistive technology like a screen reader.
 
@@ -143,30 +139,25 @@ Using HTML Semantic elements ensure users can perceive the semantic meaning indi
 
 > To view a list of all the HTML elements available to add semantic meaning to copy, refer to [MDN’s Semantic element list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#inline_text_semantics).
 
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
+
 ### The Strong Element
 
 The <strong>strong element</strong> indicates strong importance, seriousness, or urgency of the enclosed text inside the `<strong></strong>` tags.
 
 - By default web browsers, render the contents inside strong tags in **bold type**.
 
-#### Usage
-
-Use for:
+<h3 class="sprk-b-TypeDisplayFour docs-b-h4 sprk-u-mbm sprk-u-Measure">
+  Usage
+</h3>
 
 - Referencing the name of a page
 - Representing strong importance of it's contents
 - Adding importance or urgency to pieces of a sentence
 
-<span id="examples" class="docs-b-Link--anchor"></span>
-<SprkHeading
-  element="h5"
-  additionalClasses="sprk-u-mbm sprk-u-Measure"
-  variant="displayFive"
->
+<h3 class="sprk-b-TypeDisplayFour docs-b-h4 sprk-u-mbm sprk-u-Measure">
   Examples
-</SprkHeading>
-
-Here are some examples of emphasized word(s) using the strong element.
+</h3>
 
 - Check your **To Do List** items for new tasks.
   - Check your `<strong> To Do List </strong>` items for new tasks.
@@ -177,23 +168,22 @@ Here are some examples of emphasized word(s) using the strong element.
 - Remember to bring your **driver’s license** to your closing appointment.
   - Remember to bring your `<strong>driver’s license</strong>` to your closing appointment.
 
-#### The Strong vs The Bold Element vs Styling Text
+### Strong vs Bold vs CSS Styling
 
 - Use the **strong element** `<strong></strong>` for important content, and to communicate urgency.
+
+> The **bold element**, **italic element** and **CSS styling** are purely presentational.
+
 - Use the <b>bold element</b> `<b></b>` to bring attention to text without indicating that it's more important.
   - Use for:
     - Drawing the reader's attention to the elements contents, which aren't of special importance
     - Keywords in a summary and for product names in a review
-- Use **CSS** (Cascade Styling Sheet) to style or decorate text, like the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"> font-weight style property.</a>
+- Use **CSS** (Cascade Styling Sheet) to style or decorate text. CSS styling **does not** add semantic meaning to content, unlike the strong element.
+  - For example, the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"> font-weight style property</a> adds weight to text, making it appear bolder.
 
-<span id="the-emphasis-element" class="docs-b-Link--anchor"></span>
-<SprkHeading
-  element="h3"
-  additionalClasses="sprk-u-mbm sprk-u-Measure"
-  variant="displayThree"
->
-  The Emphasis Element
-</SprkHeading>
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
+
+### The Emphasis Element
 
 Use the **emphasis** element to give "stressed emphasis" to the enclosed text inside the `<em></em>` tags, in the same way verbal stress works.
 
@@ -201,11 +191,11 @@ Use the **emphasis** element to give "stressed emphasis" to the enclosed text in
 
 - A screen reader will pronounce the words inside the **emphasis** element `<em></em>` tags with an emphasis, using verbal stress.
 
-> As a UX Writer, is important to know when to apply **stress emphasis** to text, because it can **change the meaning** of the sentence.
+> As a UX Writer, it is important to know when to apply **emphasis** to text because it can **change the meaning** of the sentence.
 
-#### Usage
-
-Use for:
+<h3 class="sprk-b-TypeDisplayFour docs-b-h4 sprk-u-mbm sprk-u-Measure">
+  Usage
+</h3>
 
 - Words that have a stressed emphasis compared to surrounding text.
   - For example: Our family <em>loves</em> spending summers on the beach.
@@ -218,33 +208,28 @@ Use for:
     Find Brokers Near Me
       </em> to connect with a broker in your community.
 
-<span id="examples" class="docs-b-Link--anchor"></span>
-<SprkHeading
-  element="h5"
-  additionalClasses="sprk-u-mbm sprk-u-Measure"
-  variant="displayFive"
->
+<h3 class="sprk-b-TypeDisplayFour docs-b-h4 sprk-u-mbm sprk-u-Measure">
   Examples
-</SprkHeading>
-
-Here are some examples using the em element to give stressed emphasis to some of text.
+</h3>
 
 - Sort by <em>Submitted</em> to see the loans you’ve already completed.
   - Sort by `<em>Submitted</em>` to see the loans you’ve already completed.
 - Select <em>I don’t have a preference </em> from the dropdown if you change your mind.
   - Select `<em>I don’t have a preference </em>` from the dropdown if you change your mind.
 
-#### The Emphasis vs Italic or Idiomatic Text Element
+### Emphasis vs Italic
 
 - Use the **emphasis element** `<em></em>` to indicate stress emphasis.
-- Use the **italic or idiomatic text element** `<i></i>` for text that is set off from the normal prose, like an alternate tone or mood.
+- Use the **italic element** `<i></i>` for text that is set off from the normal prose, like an alternate tone or mood.
   - Use for:
     - Technical terms
     - Transliterations
     - Taxonomical designations, like: "Homo Sapiens"
 
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
+
 ## Accessibility
 
 Use semantic HTML to ensure digital experiences are inclusive to all users and accessible by assistive technologies.
 
-> Our guides are not all-inclusive. Refer to the [Web Content Accessibility Guidelines (WCAG 2.1, Level AA)- Semantic Elements](https://www.w3.org/TR/2016/REC-html51-20161101/dom.html#elements) for more insights.
+Our guides are not all-inclusive. Refer to the [Web Content Accessibility Guidelines (WCAG 2.1, Level AA)- Semantic Elements](https://www.w3.org/TR/2016/REC-html51-20161101/dom.html#elements) for more insights.
