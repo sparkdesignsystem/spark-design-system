@@ -13,8 +13,12 @@ export default {
     ),
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('toggle')}`,
-    docs: { iframeHeight: 160 },
+    docs: {
+      description: {
+        component: `${markdownDocumentationLinkBuilder('toggle')}`,
+      },
+      iframeHeight: 160,
+    },
   },
 };
 

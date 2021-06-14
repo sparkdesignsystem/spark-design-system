@@ -9,13 +9,14 @@ export default {
   component: SprkHeadingDirective,
   decorators: [
     storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${storyContent}<div>`
-      )
-    )
+      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    ),
   ],
   parameters: {
-    info: `
+    docs: {
+      iframeHeight: 200,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('typography', 'foundations')}
 
 ##### Line-height Collision
@@ -38,14 +39,13 @@ whitespace removed. Heading elements have this cropping
 automatically applied, where body copy will need the
 correct type classes applied.
 `,
-    docs: { iframeHeight: 200 },
+      },
+    },
   },
 };
 
 const modules = {
-  imports: [
-    SprkHeadingModule,
-  ],
+  imports: [SprkHeadingModule],
 };
 
 export const pageTitle = () => ({
@@ -55,13 +55,11 @@ export const pageTitle = () => ({
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h1>
-  `
+  `,
 });
 
 pageTitle.parameters = {
-  jest: [
-    'sprk-heading.directive',
-  ],
+  jest: ['sprk-heading.directive'],
 };
 
 export const displayOne = () => ({
@@ -71,13 +69,11 @@ export const displayOne = () => ({
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h1>
-  `
+  `,
 });
 
 displayOne.parameters = {
-  jest: [
-    'sprk-heading.directive',
-  ],
+  jest: ['sprk-heading.directive'],
 };
 
 export const displayTwo = () => ({
@@ -87,13 +83,11 @@ export const displayTwo = () => ({
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h2>
-  `
+  `,
 });
 
 displayTwo.parameters = {
-  jest: [
-    'sprk-heading.directive',
-  ],
+  jest: ['sprk-heading.directive'],
 };
 
 export const displayThree = () => ({
@@ -103,13 +97,11 @@ export const displayThree = () => ({
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h3>
-  `
+  `,
 });
 
 displayThree.parameters = {
-  jest: [
-    'sprk-heading.directive',
-  ],
+  jest: ['sprk-heading.directive'],
 };
 
 export const displayFour = () => ({
@@ -119,13 +111,11 @@ export const displayFour = () => ({
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h4>
-  `
+  `,
 });
 
 displayFour.parameters = {
-  jest: [
-    'sprk-heading.directive',
-  ],
+  jest: ['sprk-heading.directive'],
 };
 
 export const displayFive = () => ({
@@ -135,13 +125,11 @@ export const displayFive = () => ({
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h5>
-  `
+  `,
 });
 
 displayFive.parameters = {
-  jest: [
-    'sprk-heading.directive',
-  ],
+  jest: ['sprk-heading.directive'],
 };
 
 export const displaySix = () => ({
@@ -151,13 +139,11 @@ export const displaySix = () => ({
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h6>
-  `
+  `,
 });
 
 displaySix.parameters = {
-  jest: [
-    'sprk-heading.directive',
-  ],
+  jest: ['sprk-heading.directive'],
 };
 
 export const displaySeven = () => ({
@@ -167,11 +153,9 @@ export const displaySeven = () => ({
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h6>
-  `
+  `,
 });
 
 displaySeven.parameters = {
-  jest: [
-    'sprk-heading.directive',
-  ],
+  jest: ['sprk-heading.directive'],
 };

@@ -13,13 +13,17 @@ export default {
     ),
   ],
   parameters: {
-    docs: { iframeHeight: 140 },
-    info: `${markdownDocumentationLinkBuilder('centered-column')}
+    docs: {
+      iframeHeight: 140,
+      description: {
+        component: `${markdownDocumentationLinkBuilder('centered-column')}
 - The \`sprk-o-CenteredColumn\` class can be applied to
 any parent element that
 is being used to contain the application contents within
 a maximum width.
     `,
+      },
+    },
   },
 };
 

@@ -13,7 +13,9 @@ export default {
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
 \`sprkButton\` can either render as a button (\`<button>\`)
@@ -43,7 +45,9 @@ receive interaction.
   - Use app state to conditionally render between button text and spinner.
   - Add \`isSpinning\` on sprkButton directive when spinner is present
 `,
-    docs: { iframeHeight: 100 },
+      },
+      iframeHeight: 100,
+    },
   },
 };
 

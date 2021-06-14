@@ -12,7 +12,9 @@ export default {
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('modal')}
 - There are two parts to a Modal
     - 1. Modal Trigger (typically in the form of a Button) - When
@@ -26,7 +28,9 @@ Each instance should have a unique \`data-id\` property.
 - Dismissing a Wait Modal is done programmatically.
 You must write your own function to toggle dismissal through the '(hide)' input.
     `,
-    docs: { iframeHeight: 450 },
+      },
+      iframeHeight: 450,
+    },
   },
 };
 

@@ -12,8 +12,12 @@ export default {
     ),
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('dictionary')}`,
-    docs: { iframeHeight: 500 },
+    docs: {
+      description: {
+        component: `${markdownDocumentationLinkBuilder('card')}`,
+      },
+      iframeHeight: 500,
+    },
   },
 };
 

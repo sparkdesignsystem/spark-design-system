@@ -18,7 +18,10 @@ export default {
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      iframeHeight: 60,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('link')}
 - Spark Link styles are for text-based links. Images that are links should not
 use Spark classes.
@@ -28,7 +31,8 @@ removed from Spark in an upcoming release. To update to the new version,
 replace any instance of the <code><sprk-link></code> component in your codebase
 with the new Directive syntax.
 `,
-    docs: { iframeHeight: 60 },
+      },
+    },
   },
 };
 

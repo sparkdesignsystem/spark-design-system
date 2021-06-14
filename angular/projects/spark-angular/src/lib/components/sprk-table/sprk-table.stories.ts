@@ -22,8 +22,12 @@ export default {
       SprkTableGroupedColumnDirective,
       SprkTableRowHeadingDirective,
     },
-    info: `${markdownDocumentationLinkBuilder('table')}`,
-    docs: { iframeHeight: 380 },
+    docs: {
+      iframeHeight: 380,
+      description: {
+        component: `${markdownDocumentationLinkBuilder('table')}`,
+      },
+    },
   },
 };
 

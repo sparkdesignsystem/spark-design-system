@@ -14,7 +14,9 @@ export default {
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('highlight-board')}
 ##### Accessibility
 - If the Buttons are being used to navigate
@@ -26,7 +28,9 @@ make sure to set \`imgAlt=""\` so the image will be hidden from assistive
 technology. For more information on how and when to add \`alt\` text to images,
 see this [alt text guide](https://webaim.org/techniques/alttext/#decorative).
 `,
-    docs: { iframeHeight: 600 },
+      },
+      iframeHeight: 600,
+    },
   },
 };
 

@@ -13,8 +13,12 @@ export default {
     ),
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('tooltip')}`,
-    docs: { iframeHeight: 160 },
+    docs: {
+      description: {
+        component: `${markdownDocumentationLinkBuilder('tooltip')}`,
+      },
+      iframeHeight: 160,
+    },
   },
 };
 

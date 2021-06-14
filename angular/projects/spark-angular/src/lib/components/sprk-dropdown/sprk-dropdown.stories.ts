@@ -15,13 +15,17 @@ export default {
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('dropdown')}
 - The Dropdown should have the \`aria-haspopup="true"\`
 attribute. This tells screen readers that the
 element has a popup menu.
-  `,
-    docs: { iframeHeight: 200 },
+       `,
+      },
+      iframeHeight: 200,
+    },
   },
 };
 

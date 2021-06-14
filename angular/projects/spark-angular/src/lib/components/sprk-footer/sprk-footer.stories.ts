@@ -11,13 +11,17 @@ export default {
   component: SprkFooterComponent,
   decorators: [storyWrapper((storyContent) => `<div>${storyContent}<div>`)],
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('footer')}
 - The Footer is a navigation landmark for
 accessibility tools. The attribute \`role=”contentinfo”\`
 must be present.
   `,
-    docs: { iframeHeight: 800 },
+      },
+      iframeHeight: 800,
+    },
   },
 };
 

@@ -13,8 +13,12 @@ export default {
     ),
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('divider')}`,
-    docs: { iframeHeight: 60 },
+    docs: {
+      iframeHeight: 60,
+      description: {
+        component: `${markdownDocumentationLinkBuilder('divider')}`,
+      },
+    },
   },
 };
 

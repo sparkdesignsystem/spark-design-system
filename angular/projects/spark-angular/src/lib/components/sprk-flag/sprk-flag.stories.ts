@@ -12,8 +12,9 @@ export default {
     ),
   ],
   parameters: {
-    docs: { iframeHeight: 200 },
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('flag')}
 - The Flag component has two slots to inject markup
 into the component template.
@@ -22,6 +23,9 @@ into the component template.
 - If you pass something into the Flag component that is not
 in one of the slots mentioned above, it will not render.
 `,
+      },
+      iframeHeight: 200,
+    },
   },
 };
 

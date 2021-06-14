@@ -20,7 +20,10 @@ export default {
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      iframeHeight: 400,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('autocomplete')}
 - Live demos of the Autocomplete are available on our
 [demo site](https://spark-testangular.netlify.app/autocomplete)
@@ -84,7 +87,8 @@ In order to keep the Spark Autocomplete flexible enough to use in a wide
     - The highlighted item is also identified by the value of
     \`aria-activedescendant\` on the input.
 `,
-    docs: { iframeHeight: 400 },
+      },
+    },
   },
 };
 

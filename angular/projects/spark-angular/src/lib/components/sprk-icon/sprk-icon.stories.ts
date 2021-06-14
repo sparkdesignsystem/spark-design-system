@@ -16,7 +16,9 @@ export default {
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('icon')}
 
 The icons in Spark are the property of Quicken
@@ -42,7 +44,9 @@ text.
 - All Icons contain a title attribute that screen readers will use to
 communicate the Icon’s meaning.
 `,
-    docs: { iframeHeight: 90 },
+      },
+      iframeHeight: 90,
+    },
   },
 };
 

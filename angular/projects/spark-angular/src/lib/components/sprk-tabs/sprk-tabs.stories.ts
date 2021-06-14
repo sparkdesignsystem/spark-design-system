@@ -24,7 +24,10 @@ export default {
       SprkTabsPanelDirective,
       SprkTabsButtonDirective,
     },
-    info: `
+    docs: {
+      iframeHeight: 300,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('tabs')}
 - The Tabs component makes use of the
 \`sprk-u-JavaScript\` class to provide a graceful
@@ -34,7 +37,8 @@ the \`<html>\` element of the page, The content of all
 Tabs panels will be visible. If \`sprk-u-JavaScript\` is present,
 only one content panel will be visible at a time.
 `,
-    docs: { iframeHeight: 300 },
+      },
+    },
   },
 };
 

@@ -19,7 +19,10 @@ export default {
     subcomponents: {
       SprkStackItemDirective,
     },
-    info: `
+    docs: {
+      iframeHeight: 180,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('stack')}
 - The \`itemSpacing\` @Input is not compatible with
 stack items with specific-column classes such
@@ -27,7 +30,8 @@ as \`sprk-o-Stack__item--half@xs\`. Use padding
 instead. See the "Stack/Split - Two Column With Padding"
 for an example.
 `,
-    docs: { iframeHeight: 180 },
+      },
+    },
   },
 };
 

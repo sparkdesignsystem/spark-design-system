@@ -12,7 +12,10 @@ export default {
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      iframeHeight: 70,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('pagination')}
 - The goToPage event includes the newly selected page
 in a property called “page”, while the goBack and
@@ -20,7 +23,8 @@ goForward events include this value in a property called
 “newPage”. This is further documented in
 [Issue 1730](https://github.com/sparkdesignsystem/spark-design-system/issues/1730).
 `,
-    docs: { iframeHeight: 70 },
+      },
+    },
   },
 };
 

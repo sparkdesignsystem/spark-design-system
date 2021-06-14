@@ -50,7 +50,9 @@ export default {
       SprkStackItemDirective,
       SprkStackComponent,
     },
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('masthead')}
 - You should configure the size of your own logo.
 By default, the logo will be automatically sized
@@ -81,7 +83,9 @@ so we add \`role=”banner”\` to the Masthead.
 - The Masthead will be "sticky" on small viewports in all browsers
 except for IE11.
 `,
-    docs: { iframeHeight: 300 },
+      },
+      iframeHeight: 300,
+    },
   },
 };
 

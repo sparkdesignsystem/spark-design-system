@@ -23,8 +23,12 @@ export default {
       SprkCardHeaderDirective,
       SprkCardMediaDirective,
     },
-    info: `${markdownDocumentationLinkBuilder('card')}`,
-    docs: { iframeHeight: 200 },
+    docs: {
+      description: {
+        component: `${markdownDocumentationLinkBuilder('card')}`,
+      },
+      iframeHeight: 200,
+    },
   },
 };
 
