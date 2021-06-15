@@ -37,12 +37,6 @@ addParameters({
 
 addParameters({
   docs: {
-    extractComponentDescription: (component, { info }) => {
-      if (info) {
-        return typeof info === 'string' ? info : info.markdown || info.text;
-      }
-      return null;
-    },
     container: ({ children, context }) => {
       const componentName = context.kind.split('/')[1];
       const isInputStory = componentName === 'Input';

@@ -8,8 +8,8 @@ describe('SprkToggleComponent', () => {
   let component: SprkToggleComponent;
   let fixture: ComponentFixture<SprkToggleComponent>;
   let element: HTMLElement;
-  let triggerElement;
-  let contentElement;
+  let triggerElement: HTMLButtonElement;
+  let contentElement: HTMLDivElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -21,9 +21,11 @@ describe('SprkToggleComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkToggleComponent);
     component = fixture.componentInstance;
+    fixture.detectChanges();
+    component.ngAfterContentInit();
     element = fixture.nativeElement.querySelector('div');
     triggerElement = element.querySelector('button');
-    contentElement = element.querySelector('button').nextElementSibling;
+    contentElement = element.querySelector('div');
   });
 
   it('should create itself', () => {
@@ -59,25 +61,17 @@ describe('SprkToggleComponent', () => {
   it('should add icon classes to icon when the toggle is opened and then closed', () => {
     component.triggerText = 'placeholder';
     element.querySelector('button').click();
+    fixture.detectChanges();
+    expect(
+      triggerElement.querySelector('.sprk-c-Icon').classList.toString(),
+    ).toEqual(
+      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open',
+    );
     element.querySelector('button').click();
     fixture.detectChanges();
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual('sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle');
-  });
-
-  it('should render open if isOpen is set to true', () => {
-    component.isOpen = true;
-    fixture.detectChanges();
-    expect(
-      element.querySelector('button .sprk-c-Icon').classList.toString(),
-    ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open',
-    );
-    expect(contentElement.getAttribute('style')).toContain(
-      'visibility:visible',
-    );
-    expect(triggerElement.getAttribute('aria-expanded')).toEqual('true');
   });
 
   // TODO: Remove `iconClass` in issue #1305
@@ -116,9 +110,9 @@ describe('SprkToggleComponent', () => {
   it('should add the correct classes if additionalClasses have values', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(element.classList.toString()).toEqual(
-      'sprk-c-Toggle sprk-u-pam sprk-u-man',
-    );
+    expect(element.classList.toString().includes('sprk-u-man')).toBe(true);
+    expect(element.classList.toString().includes('sprk-c-Toggle')).toBe(true);
+    expect(element.classList.toString().includes('sprk-u-pam')).toBe(true);
   });
 
   it('should add data-id when idString has a value', () => {
