@@ -4,6 +4,8 @@ import {
   SprkStackItem,
   SprkCard,
   SprkLink,
+  SprkHeading,
+  SprkText,
 } from '@sparkdesignsystem/spark-react';
 import Layout from '../components/layouts/Layout';
 import componentsMedia from '../images/components.svg';
@@ -13,178 +15,6 @@ import foundationsMedia from '../images/foundations.svg';
 import newsMedia from '../images/news-and-updates.svg';
 import utilitiesMedia from '../images/utilities.svg';
 import guidesMedia from '../images/guides.svg';
-
-const teaserDesigners = {
-  bodyText: `
-    Get started with Design by reading the principles
-    that we use in Spark Design System.
-  `,
-  cta: {
-    text: 'Go To Designer Basics',
-    ctaVariant: 'button',
-    ctaLinkElement: 'a',
-    buttonVariant: 'tertiary',
-    href: '/principles/design-principles',
-  },
-  media: {
-    href: '/principles/design-principles',
-    mediaLinkElement: 'a',
-    imgAlt: 'Go to Designer Basics',
-    imgSrc: designersMedia,
-    mediaVariant: 'img',
-  },
-  title: 'Designer Basics',
-  titleFirst: false,
-};
-
-const teaserDevelopers = {
-  bodyText: `
-    Learn how to install Spark’s
-    npm packages into the build
-    of your application. You’ll
-    also find support for setting
-    up Sass, React, Angular, and more.
-  `,
-  cta: {
-    text: 'Go To Developer Basics',
-    ctaVariant: 'button',
-    ctaLinkElement: 'a',
-    buttonVariant: 'tertiary',
-    href: '/installing-spark',
-  },
-  media: {
-    href: '/installing-spark',
-    mediaLinkElement: 'a',
-    imgAlt: 'Go to Developer Basics',
-    imgSrc: developersMedia,
-    mediaVariant: 'img',
-  },
-  title: 'Developer Basics',
-  titleFirst: false,
-};
-
-const teaserComponents = {
-  bodyText: `
-    Explore the library of Spark
-    components and supporting
-    documentation, including
-    design guidelines, code
-    samples, and configuration
-    options.
-  `,
-  cta: {
-    text: 'Go To Components',
-    ctaVariant: 'button',
-    ctaLinkElement: 'a',
-    buttonVariant: 'tertiary',
-    href: '/using-spark/components/button',
-  },
-  media: {
-    href: '/using-spark/components/button',
-    mediaLinkElement: 'a',
-    imgAlt: 'Go to Components',
-    imgSrc: componentsMedia,
-    mediaVariant: 'img',
-  },
-  title: 'Components',
-  titleFirst: false,
-};
-
-const teaserGuides = {
-  bodyText: `
-    Guidance on how to make design choices that
-    prioritize user experience. Get answers on topics
-    like layout, messaging, and placement.
-  `,
-  cta: {
-    text: 'Explore Guides',
-    ctaVariant: 'button',
-    buttonVariant: 'tertiary',
-    href: '/using-spark/guides',
-    ctaLinkElement: 'a',
-  },
-  media: {
-    href: '/using-spark/guides',
-    mediaLinkElement: 'a',
-    imgAlt: 'Explore Guides',
-    imgSrc: guidesMedia,
-    mediaVariant: 'img',
-  },
-  title: "'How To' Guides",
-  titleFirst: false,
-};
-
-const teaserFoundations = {
-  bodyText: `
-   Looking for our brand color palette,
-   typography guidelines, element spacing,
-    and other foundational style elements?
-    Start here.
-  `,
-  cta: {
-    text: 'Go To Foundations',
-    ctaVariant: 'button',
-    ctaLinkElement: 'a',
-    buttonVariant: 'tertiary',
-    href: '/using-spark/foundations/color',
-  },
-  media: {
-    href: '/using-spark/foundations/color',
-    mediaLinkElement: 'a',
-    imgAlt: 'Go to Foundations',
-    imgSrc: foundationsMedia,
-    mediaVariant: 'img',
-  },
-  title: 'Foundations',
-  titleFirst: false,
-};
-
-const teaserUtils = {
-  bodyText: `
-    CSS class utilities for overriding
-    values, enhancing accessibility,
-    theming, and more.
-  `,
-  cta: {
-    text: 'Go To Utilities',
-    ctaVariant: 'button',
-    ctaLinkElement: 'a',
-    buttonVariant: 'tertiary',
-    href: '/using-spark/foundations/css-utilities',
-  },
-  media: {
-    href: '/using-spark/foundations/css-utilities',
-    mediaLinkElement: 'a',
-    imgAlt: 'Go to Utilities',
-    imgSrc: utilitiesMedia,
-    mediaVariant: 'img',
-  },
-  title: 'Utilities',
-  titleFirst: false,
-};
-
-const teaserNews = {
-  bodyText: `
-    Get the latest release notes
-    and updates, as well as previous news and notes
-  `,
-  cta: {
-    text: 'Go To News',
-    ctaVariant: 'button',
-    ctaLinkElement: 'a',
-    buttonVariant: 'tertiary',
-    href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
-  },
-  media: {
-    href: 'https://github.com/sparkdesignsystem/spark-design-system/releases',
-    mediaLinkElement: 'a',
-    imgAlt: 'Go to News',
-    imgSrc: newsMedia,
-    mediaVariant: 'img',
-  },
-  title: 'News And Updates',
-  titleFirst: false,
-};
 
 const spacingBtwSections = 'huge';
 const spacingBtwHeadingAndContent = 'large';
@@ -212,54 +42,366 @@ const IndexPage = () => (
 
       <SprkStackItem>
         <div className="docs-o-Grid docs-o-Grid--home-page docs-o-Grid--large">
-          <SprkCard
-            additionalClasses="docs-c-Card"
-            variant="teaser"
-            teaserConfig={teaserDesigners}
-          />
+          <SprkCard additionalClasses="docs-c-Card">
+            <SprkStackItem>
+              <SprkLink
+                variant="unstyled"
+                href="/principles/design-principles"
+                analyticsString="teaser-media"
+              >
+                <img
+                  className="sprk-c-Card__media"
+                  alt="Go to Designer Basics"
+                  src={designersMedia}
+                />
+              </SprkLink>
+            </SprkStackItem>
 
-          <SprkCard
-            additionalClasses="docs-c-Card"
-            variant="teaser"
-            teaserConfig={teaserDevelopers}
-          />
+            <SprkStack
+              additionalClasses="sprk-o-Stack__item sprk-c-Card__content"
+              itemSpacing="large"
+            >
+              <SprkStackItem>
+                <SprkHeading element="h3" variant="displayFive">
+                  Designer Basics
+                </SprkHeading>
+              </SprkStackItem>
 
-          <SprkCard
-            additionalClasses="docs-c-Card"
-            variant="teaser"
-            teaserConfig={teaserComponents}
-          />
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  Get started with Design by reading the principles that we use
+                  that we use in Spark Design System.
+                </SprkText>
+              </SprkStackItem>
 
-          <SprkCard
-            additionalClasses="docs-c-Card"
-            variant="teaser"
-            teaserConfig={teaserGuides}
-          />
+              <SprkStack
+                additionalClasses="
+                  sprk-o-Stack__item
+                  sprk-o-Stack--end-column"
+              >
+                <SprkStackItem>
+                  <SprkLink
+                    variant="unstyled"
+                    additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+                    href="/principles/design-principles"
+                  >
+                    Go To Designer Basics
+                  </SprkLink>
+                </SprkStackItem>
+              </SprkStack>
+            </SprkStack>
+          </SprkCard>
 
-          <SprkCard
-            additionalClasses="docs-c-Card"
-            variant="teaser"
-            teaserConfig={teaserFoundations}
-          />
+          <SprkCard additionalClasses="docs-c-Card">
+            <SprkStackItem>
+              <SprkLink
+                variant="unstyled"
+                href="/installing-spark"
+                analyticsString="teaser-media"
+              >
+                <img
+                  className="sprk-c-Card__media"
+                  alt="Go to Developer Basics"
+                  src={developersMedia}
+                />
+              </SprkLink>
+            </SprkStackItem>
 
-          <SprkCard
-            additionalClasses="docs-c-Card"
-            variant="teaser"
-            teaserConfig={teaserUtils}
-          />
+            <SprkStack
+              additionalClasses="sprk-o-Stack__item sprk-c-Card__content"
+              itemSpacing="large"
+            >
+              <SprkStackItem>
+                <SprkHeading element="h3" variant="displayFive">
+                  Developer Basics
+                </SprkHeading>
+              </SprkStackItem>
 
-          <SprkCard
-            additionalClasses="docs-c-Card"
-            variant="teaser"
-            teaserConfig={teaserNews}
-          />
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  Learn how to install Spark’s npm packages into the build of
+                  your application. You’ll also find support for setting up
+                  Sass, React, Angular, and more.
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStack
+                additionalClasses="
+                  sprk-o-Stack__item
+                  sprk-o-Stack--end-column"
+              >
+                <SprkStackItem>
+                  <SprkLink
+                    variant="unstyled"
+                    additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+                    href="/installing-spark"
+                  >
+                    Go To Developer Basics
+                  </SprkLink>
+                </SprkStackItem>
+              </SprkStack>
+            </SprkStack>
+          </SprkCard>
+
+          <SprkCard additionalClasses="docs-c-Card">
+            <SprkStackItem>
+              <SprkLink
+                variant="unstyled"
+                href="/using-spark/components/button"
+                analyticsString="teaser-media"
+              >
+                <img
+                  className="sprk-c-Card__media"
+                  alt="Go To Components"
+                  src={componentsMedia}
+                />
+              </SprkLink>
+            </SprkStackItem>
+
+            <SprkStack
+              additionalClasses="sprk-o-Stack__item sprk-c-Card__content"
+              itemSpacing="large"
+            >
+              <SprkStackItem>
+                <SprkHeading element="h3" variant="displayFive">
+                  Components
+                </SprkHeading>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  Explore the library of Spark components and supporting
+                  documentation, including design guidelines, code samples, and
+                  configuration options.
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStack
+                additionalClasses="
+                  sprk-o-Stack__item
+                  sprk-o-Stack--end-column"
+              >
+                <SprkStackItem>
+                  <SprkLink
+                    variant="unstyled"
+                    additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+                    href="/using-spark/components/button"
+                  >
+                    Go To Components
+                  </SprkLink>
+                </SprkStackItem>
+              </SprkStack>
+            </SprkStack>
+          </SprkCard>
+
+          <SprkCard additionalClasses="docs-c-Card">
+            <SprkStackItem>
+              <SprkLink
+                variant="unstyled"
+                href="/using-spark/guides"
+                analyticsString="teaser-media"
+              >
+                <img
+                  className="sprk-c-Card__media"
+                  alt="Explore Guides"
+                  src={guidesMedia}
+                />
+              </SprkLink>
+            </SprkStackItem>
+
+            <SprkStack
+              additionalClasses="sprk-o-Stack__item sprk-c-Card__content"
+              itemSpacing="large"
+            >
+              <SprkStackItem>
+                <SprkHeading element="h3" variant="displayFive">
+                  &apos;How To&apos; Guides
+                </SprkHeading>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  Guidance on how to make design choices that prioritize user
+                  experience. Get answers on topics like layout, messaging, and
+                  placement.
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStack
+                additionalClasses="
+                  sprk-o-Stack__item
+                  sprk-o-Stack--end-column"
+              >
+                <SprkStackItem>
+                  <SprkLink
+                    variant="unstyled"
+                    additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+                    href="/using-spark/guides"
+                  >
+                    Explore Guides
+                  </SprkLink>
+                </SprkStackItem>
+              </SprkStack>
+            </SprkStack>
+          </SprkCard>
+
+          <SprkCard additionalClasses="docs-c-Card">
+            <SprkStackItem>
+              <SprkLink
+                variant="unstyled"
+                href="/using-spark/foundations/color"
+                analyticsString="teaser-media"
+              >
+                <img
+                  className="sprk-c-Card__media"
+                  alt="Go To Foundations"
+                  src={foundationsMedia}
+                />
+              </SprkLink>
+            </SprkStackItem>
+
+            <SprkStack
+              additionalClasses="sprk-o-Stack__item sprk-c-Card__content"
+              itemSpacing="large"
+            >
+              <SprkStackItem>
+                <SprkHeading element="h3" variant="displayFive">
+                  Foundations
+                </SprkHeading>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  Looking for our brand color palette, typography guidelines,
+                  element spacing, and other foundational style elements? Start
+                  here.
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStack
+                additionalClasses="
+                  sprk-o-Stack__item
+                  sprk-o-Stack--end-column"
+              >
+                <SprkStackItem>
+                  <SprkLink
+                    variant="unstyled"
+                    additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+                    href="/using-spark/foundations/color"
+                  >
+                    Go To Foundations
+                  </SprkLink>
+                </SprkStackItem>
+              </SprkStack>
+            </SprkStack>
+          </SprkCard>
+
+          <SprkCard additionalClasses="docs-c-Card">
+            <SprkStackItem>
+              <SprkLink
+                variant="unstyled"
+                href="/using-spark/foundations/css-utilities"
+              >
+                <img
+                  className="sprk-c-Card__media"
+                  alt="Go To Utilities"
+                  src={utilitiesMedia}
+                />
+              </SprkLink>
+            </SprkStackItem>
+
+            <SprkStack
+              additionalClasses="sprk-o-Stack__item sprk-c-Card__content"
+              itemSpacing="large"
+            >
+              <SprkStackItem>
+                <SprkHeading element="h3" variant="displayFive">
+                  Utilities
+                </SprkHeading>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  CSS class utilities for overriding values, enhancing
+                  accessibility, theming, and more.
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStack
+                additionalClasses="
+                  sprk-o-Stack__item
+                  sprk-o-Stack--end-column"
+              >
+                <SprkStackItem>
+                  <SprkLink
+                    variant="unstyled"
+                    additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+                    href="/using-spark/foundations/css-utilities"
+                  >
+                    Go To Utilities
+                  </SprkLink>
+                </SprkStackItem>
+              </SprkStack>
+            </SprkStack>
+          </SprkCard>
+
+          <SprkCard additionalClasses="docs-c-Card">
+            <SprkStackItem>
+              <SprkLink
+                variant="unstyled"
+                href="https://github.com/sparkdesignsystem/spark-design-system/releases"
+              >
+                <img
+                  className="sprk-c-Card__media"
+                  alt="Go To News"
+                  src={newsMedia}
+                />
+              </SprkLink>
+            </SprkStackItem>
+
+            <SprkStack
+              additionalClasses="sprk-o-Stack__item sprk-c-Card__content"
+              itemSpacing="large"
+            >
+              <SprkStackItem>
+                <SprkHeading element="h3" variant="displayFive">
+                  News And Updates
+                </SprkHeading>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  Get the latest release notes and updates, as well as previous
+                  news and notes.
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStack
+                additionalClasses="
+                  sprk-o-Stack__item
+                  sprk-o-Stack--end-column"
+              >
+                <SprkStackItem>
+                  <SprkLink
+                    variant="unstyled"
+                    additionalClasses="sprk-c-Button sprk-c-Button--secondary"
+                    href="https://github.com/sparkdesignsystem/spark-design-system/releases"
+                  >
+                    Go To News
+                  </SprkLink>
+                </SprkStackItem>
+              </SprkStack>
+            </SprkStack>
+          </SprkCard>
         </div>
       </SprkStackItem>
 
       <SprkStackItem>
         <SprkStack itemSpacing={spacingBtwHeadingAndContent}>
           <SprkStackItem>
-            <h2 className="sprk-b-TypeDisplayTwo">Want To Contribute?</h2>
+            <SprkHeading element="h2" variant="displayTwo">
+              Want To Contribute?
+            </SprkHeading>
           </SprkStackItem>
 
           <SprkStackItem>

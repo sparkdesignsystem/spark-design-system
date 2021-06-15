@@ -9,6 +9,8 @@ import {
   SprkButton,
   SprkLink,
   SprkPromo,
+  SprkHeading,
+  SprkText,
 } from '@sparkdesignsystem/spark-react';
 
 # Using Spark
@@ -16,87 +18,111 @@ import {
   <SprkStackItem>
     <SprkStack itemSpacing="medium">
       <SprkStackItem>
-        <h2 className="sprk-b-TypeDisplayThree">
+        <SprkHeading element="h2" variant="displayThree">
           For Developers
-        </h2>
+        </SprkHeading>
       </SprkStackItem>
       <SprkStackItem>
-        <p className="sprk-b-TypeBodyTwo sprk-u-mbm sprk-u-Measure">
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
           For every Spark component, we provide usage guidelines as well as developer documentation.
-        </p>
-        <p className="sprk-b-TypeBodyTwo sprk-u-Measure">
+        </SprkText>
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-Measure">
           There are Storybook sandboxes for Spark HTML, Angular, and React components.
-        </p>
+        </SprkText>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
   <SprkStackItem>
     <div className="docs-o-Grid docs-o-Grid--three-col docs-o-Grid--large">
-      <SprkCard additionalContentClasses="sprk-o-Stack sprk-o-Stack--large">
-        <h3 className="sprk-b-TypeDisplayFive sprk-o-Stack__item">
-          HTML Components
-        </h3>
-        <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          Explore the technical documentation for the HTML Spark components.
-        </p>
-        <div className="sprk-o-Stack__item">
-          <SprkButton
-            variant="secondary"
-            element="a"
-            href="https://html.sparkdesignsystem.com/"
-          >
-            HTML Storybook
-          </SprkButton>
-        </div>
+      <SprkCard>
+        <SprkStack itemSpacing="large" additionalClasses="sprk-o-Stack__item sprk-c-Card__content">
+          <SprkStackItem>
+            <SprkHeading element="h3" variant="displayFive">
+              HTML Components
+            </SprkHeading>
+          </SprkStackItem>
+          <SprkStackItem>
+            <SprkText variant="bodyTwo" additionalClasses="sprk-o-Stack__item">
+              Explore the technical documentation for the HTML Spark components.
+            </SprkText>
+          </SprkStackItem>
+          <SprkStack additionalClasses="sprk-o-Stack__item sprk-o-Stack--end-column">
+            <SprkStackItem>
+              <SprkButton
+                variant="secondary"
+                element="a"
+                href="https://html.sparkdesignsystem.com/"
+              >
+                HTML Storybook
+              </SprkButton>
+            </SprkStackItem>
+          </SprkStack>
+        </SprkStack>
       </SprkCard>
-      <SprkCard additionalContentClasses="sprk-o-Stack sprk-o-Stack--large">
-        <h3 className="sprk-b-TypeDisplayFive sprk-o-Stack__item">
-          Angular Components
-        </h3>
-        <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          Explore the technical documentation for the Angular Spark components.
-        </p>
-        <div className="sprk-o-Stack__item">
-          <SprkButton
-            variant="secondary"
-            element="a"
-            href="https://angular.sparkdesignsystem.com/"
-          >
-            Angular Storybook
-          </SprkButton>
-        </div>
+      <SprkCard>
+        <SprkStack itemSpacing="large" additionalClasses="sprk-o-Stack__item sprk-c-Card__content">
+          <SprkStackItem>
+            <SprkHeading element="h3" variant="displayFive">
+              Angular Components
+            </SprkHeading>
+          </SprkStackItem>
+          <SprkStackItem>
+            <SprkText variant="bodyTwo">
+              Explore the technical documentation for the Angular Spark components.
+            </SprkText>
+          </SprkStackItem>
+          <SprkStack additionalClasses="sprk-o-Stack__item sprk-o-Stack--end-column">
+            <SprkStackItem>
+              <SprkButton
+                variant="secondary"
+                element="a"
+                href="https://angular.sparkdesignsystem.com/"
+              >
+                Angular Storybook
+              </SprkButton>
+            </SprkStackItem>
+          </SprkStack>
+        </SprkStack>
       </SprkCard>
-      <SprkCard additionalContentClasses="sprk-o-Stack sprk-o-Stack--large">
-        <h3 className="sprk-b-TypeDisplayFive sprk-o-Stack__item">
-          React Components
-        </h3>
-        <p className="sprk-b-TypeBodyTwo sprk-o-Stack__item">
-          Explore the technical documentation for the React Spark components.
-        </p>
-        <div className="sprk-o-Stack__item">
-          <SprkButton
-            variant="secondary"
-            element="a"
-            href="https://react.sparkdesignsystem.com/"
-          >
-            React Storybook
-          </SprkButton>
-        </div>
+      <SprkCard>
+        <SprkStack itemSpacing="large" additionalClasses="sprk-o-Stack__item sprk-c-Card__content">
+          <SprkStackItem>
+            <SprkHeading element="h3" variant="displayFive">
+              React Components
+            </SprkHeading>
+          </SprkStackItem>
+          <SprkStackItem>
+            <SprkText variant="bodyTwo">
+              Explore the technical documentation for the React Spark components.
+            </SprkText>
+          </SprkStackItem>
+          <SprkStack additionalClasses="sprk-o-Stack__item sprk-o-Stack--end-column">
+            <SprkStackItem>
+              <SprkButton
+                variant="secondary"
+                element="a"
+                href="https://react.sparkdesignsystem.com/"
+              >
+                React Storybook
+              </SprkButton>
+            </SprkStackItem>
+          </SprkStack>
+        </SprkStack>
       </SprkCard>
     </div>
   </SprkStackItem>
   <SprkStackItem>
     <SprkStack itemSpacing="medium">
       <SprkStackItem>
-        <h2 className="sprk-b-TypeDisplayThree">
+        <SprkHeading element="h2" variant="displayThree">
           For Designers
-        </h2>
+        </SprkHeading>
       </SprkStackItem>
       <SprkStackItem>
-        <p className="sprk-b-TypeBodyTwo sprk-u-mbm sprk-u-Measure">
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
           Spark components were built to solve a majority of your design solutions. Review our component guidelines to learn when and how to use them.
-        </p>
-        <p className="sprk-b-TypeBodyTwo sprk-u-Measure">
+        </SprkText>
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-Measure">
           To access the Spark UI Kit, email&nbsp;
           <SprkLink
             element="a"
@@ -104,7 +130,7 @@ import {
           >
             sparkdesignsystem@quickenloans.com
           </SprkLink>
-        </p>
+        </SprkText>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
