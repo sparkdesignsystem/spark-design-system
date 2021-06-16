@@ -1,7 +1,7 @@
 import { SprkDropdownModule } from './sprk-dropdown.module';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
-// @ts-ignore
+// @ts-ignore prettier-ignore
 import {
   moduleMetadata,
   Meta,

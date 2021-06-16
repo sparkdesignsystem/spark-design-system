@@ -1,5 +1,5 @@
 import { SprkIconModule } from './sprk-icon.module';
-// @ts-ignore
+// @ts-ignore prettier-ignore
 import {
   moduleMetadata,
   Meta,

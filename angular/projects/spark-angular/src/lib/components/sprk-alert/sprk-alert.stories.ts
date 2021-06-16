@@ -1,7 +1,7 @@
 import { SprkAlertModule } from './sprk-alert.module';
 import { SprkAlertComponent } from './sprk-alert.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-// @ts-ignore
+// @ts-ignore prettier-ignore
 import {
   moduleMetadata,
   Meta,

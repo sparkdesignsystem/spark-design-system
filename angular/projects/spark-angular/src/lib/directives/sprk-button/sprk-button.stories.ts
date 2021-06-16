@@ -1,5 +1,5 @@
 import { SprkButtonModule } from './sprk-button.module';
-// @ts-ignore
+// @ts-ignore prettier-ignore
 import {
   moduleMetadata,
   Meta,
