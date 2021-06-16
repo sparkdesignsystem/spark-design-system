@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkTableModule } from './sprk-table.module';
 import { SprkTableComponent } from './sprk-table.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -11,8 +16,11 @@ export default {
   title: 'Components/Table',
   component: SprkTableComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkTableModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
@@ -23,20 +31,18 @@ export default {
       SprkTableRowHeadingDirective,
     },
     docs: {
+      source: {
+        type: 'code',
+      },
       iframeHeight: 380,
       description: {
         component: `${markdownDocumentationLinkBuilder('table')}`,
       },
     },
   },
-};
-
-const modules = {
-  imports: [SprkTableModule],
-};
+} as Meta;
 
 export const columnComparison = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-table idString="table-1">
       <thead sprkTableHead>
@@ -77,7 +83,6 @@ columnComparison.parameters = {
 };
 
 export const secondary = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-table
       idString="table-2"
@@ -121,7 +126,6 @@ secondary.parameters = {
 };
 
 export const groupedColumns = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-table idString="table-3">
       <thead sprkTableHead>
@@ -179,7 +183,6 @@ groupedColumns.parameters = {
 };
 
 export const rowComparison = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-table idString="table-4">
       <thead sprkTableHead>
@@ -230,7 +233,6 @@ rowComparison.parameters = {
 };
 
 export const secondaryRowComparison = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-table idString="table-5">
       <tbody>

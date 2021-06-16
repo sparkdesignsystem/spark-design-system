@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkModalModule } from './sprk-modal.module';
 import { SprkModalComponent } from './sprk-modal.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -7,12 +12,18 @@ export default {
   title: 'Components/Modal',
   component: SprkModalComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkModalModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       description: {
         component: `
 ${markdownDocumentationLinkBuilder('modal')}
@@ -32,14 +43,9 @@ You must write your own function to toggle dismissal through the '(hide)' input.
       iframeHeight: 450,
     },
   },
-};
-
-const modules = {
-  imports: [SprkModalModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-modal
       [(isVisible)]="choiceVisible"
@@ -64,7 +70,6 @@ defaultStory.parameters = {
 };
 
 export const info = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-modal
       [(isVisible)]="infoVisible"
@@ -87,7 +92,6 @@ info.parameters = {
 };
 
 export const wait = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-modal
       [(isVisible)]="waitVisible"

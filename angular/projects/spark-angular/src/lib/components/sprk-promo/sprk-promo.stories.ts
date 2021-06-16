@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkPromoModule } from './sprk-promo.module';
 import { SprkPromoComponent } from './sprk-promo.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -9,35 +14,36 @@ export default {
   title: 'Components/Promo',
   component: SprkPromoComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkPromoModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkPromoComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       iframeHeight: 430,
       description: {
         component: `${markdownDocumentationLinkBuilder('promo')}`,
       },
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkPromoModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkPromoComponent,
-      },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-promo idString="default-promo" hasBorder="true">
       <div sprkStackItem sprkPromoContent>
@@ -85,7 +91,6 @@ defaultStory.parameters = {
 };
 
 export const flag = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-promo idString="flag-promo" hasBorder="true" isFlag="true" additionalClasses="sprk-o-Stack--split@s">
       <a href="#nogo" sprkStackItem class="sprk-o-Stack__item--fourth@s">
@@ -118,7 +123,6 @@ flag.parameters = {
 };
 
 export const withImage = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-promo idString="image-promo" hasBorder="true" additionalClasses="sprk-o-Stack--split@s">
       <a href="#nogo" sprkStackItem class="sprk-o-Stack__item--half@s">
@@ -172,7 +176,6 @@ withImage.parameters = {
 };
 
 export const withReversedImage = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-promo idString="rev-image-promo" hasBorder="true" additionalClasses="sprk-o-Stack--split@s">
       <div sprkStackItem sprkPromoContent class="sprk-o-Stack__item--half@s">

@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
@@ -23,11 +28,21 @@ export default {
     SprkFieldErrorDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkIconInputContainerModule,
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -47,22 +62,9 @@ ${markdownDocumentationLinkBuilder('input')}
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkIconInputContainerModule,
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    FormsModule,
-  ],
-};
+} as Meta;
 
 export const searchInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
@@ -106,7 +108,6 @@ searchInput.parameters = {
 };
 
 export const invalidSearchInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
@@ -161,7 +162,6 @@ invalidSearchInput.parameters = {
 };
 
 export const disabledSearchInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
@@ -207,7 +207,6 @@ disabledSearchInput.parameters = {
 };
 
 export const legacyStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
       <label
@@ -249,7 +248,6 @@ legacyStory.parameters = {
 };
 
 export const legacyInvalidSearchInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
       <label
@@ -302,7 +300,6 @@ legacyInvalidSearchInput.parameters = {
 };
 
 export const legacyDisabledSearchInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
       <label

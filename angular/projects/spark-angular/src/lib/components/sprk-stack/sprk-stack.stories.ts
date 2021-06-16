@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
@@ -10,9 +15,11 @@ export default {
   title: 'Components/Stack',
   component: SprkStackComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkStackModule, SprkStackItemModule, SprkTextModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box sb-decorate">${story}</div>`,
     ),
   ],
   parameters: {
@@ -20,6 +27,9 @@ export default {
       SprkStackItemDirective,
     },
     docs: {
+      source: {
+        type: 'code',
+      },
       iframeHeight: 180,
       description: {
         component: `
@@ -33,14 +43,9 @@ for an example.
       },
     },
   },
-};
-
-const modules = {
-  imports: [SprkStackModule, SprkStackItemModule, SprkTextModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack>
       <div sprkStackItem></div>
@@ -56,7 +61,6 @@ defaultStory.parameters = {
 };
 
 export const stackSplit = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack
       itemSpacing='medium'
@@ -75,7 +79,6 @@ defaultStory.parameters = {
 };
 
 export const stackSplitTwoCol = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt='tiny'>
       <div
@@ -97,7 +100,6 @@ stackSplitTwoCol.parameters = {
 };
 
 export const stackSplitTwoColWithPadding = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt='tiny'>
       <div
@@ -127,7 +129,6 @@ stackSplitTwoColWithPadding.parameters = {
 };
 
 export const stackSplitThreeCol = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -153,7 +154,6 @@ stackSplitThreeCol.parameters = {
 };
 
 export const stackSplitFourCol = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -183,7 +183,6 @@ stackSplitFourCol.parameters = {
 };
 
 export const stackSplitFiveCol = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -217,7 +216,6 @@ stackSplitFiveCol.parameters = {
 };
 
 export const stackSplitSixCol = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -255,7 +253,6 @@ stackSplitSixCol.parameters = {
 };
 
 export const stackSplitLayoutThreeFourths = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -277,7 +274,6 @@ stackSplitLayoutThreeFourths.parameters = {
 };
 
 export const stackSplitLayoutThreeFifths = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -299,7 +295,6 @@ stackSplitLayoutThreeFifths.parameters = {
 };
 
 export const stackSplitLayoutThreeTenths = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -321,7 +316,6 @@ stackSplitLayoutThreeTenths.parameters = {
 };
 
 export const stackSplitLayoutMixed = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div

@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkBoxDirective } from './sprk-box.directive';
 import { SprkBoxModule } from './sprk-box.module';
 
@@ -6,22 +11,24 @@ export default {
   title: 'Components/Box',
   component: SprkBoxDirective,
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkBoxModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box sb-decorate">${story}</div>`,
     ),
   ],
   parameters: {
-    docs: { iframeHeight: 100 },
+    docs: {
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 100,
+    },
   },
-};
-
-const modules = {
-  imports: [SprkBoxModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <div sprkBox>
       Box

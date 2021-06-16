@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkTextareaModule } from '../../directives/inputs/sprk-textarea/sprk-textarea.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
@@ -19,11 +24,21 @@ export default {
     SprkLabelDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkTextareaContainerModule,
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkTextareaModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -43,22 +58,9 @@ ${markdownDocumentationLinkBuilder('input')}
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkTextareaContainerModule,
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkTextareaModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    FormsModule,
-  ],
-};
+} as Meta;
 
 export const textarea = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-textarea-container>
       <label for="textarea-1" sprkLabel>Description</label>
@@ -85,7 +87,6 @@ textarea.parameters = {
 };
 
 export const invalidTextarea = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-textarea-container>
       <label for="textarea-1" sprkLabel>Description</label>
@@ -124,7 +125,6 @@ invalidTextarea.parameters = {
 };
 
 export const disabledTextarea = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-textarea-container>
       <label

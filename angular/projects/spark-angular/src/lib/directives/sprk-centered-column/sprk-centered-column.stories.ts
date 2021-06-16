@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkCenteredColumnDirective } from './sprk-centered-column.directive';
 import { SprkCenteredColumnModule } from './sprk-centered-column.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -7,13 +12,18 @@ export default {
   title: 'Components/Centered Column',
   component: SprkCenteredColumnDirective,
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkCenteredColumnModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box sb-decorate">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       iframeHeight: 140,
       description: {
         component: `${markdownDocumentationLinkBuilder('centered-column')}
@@ -25,14 +35,9 @@ a maximum width.
       },
     },
   },
-};
-
-const modules = {
-  imports: [SprkCenteredColumnModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <div sprkCenteredColumn idString="centered-column">
     </div>

@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
@@ -44,11 +49,31 @@ export default {
     SprkRadioInputDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkRadioGroupModule,
+        SprkRadioItemModule,
+        FormsModule,
+        SprkRadioInputModule,
+        SprkRadioLabelModule,
+        SprkFieldsetModule,
+        SprkLegendModule,
+        SprkLabelModule,
+        SprkFieldErrorModule,
+        SprkHelperTextModule,
+        SprkSelectionItemContainerModule,
+        SprkSelectionInputModule,
+        SprkSelectionContainerModule,
+        SprkSelectionLabelModule,
+        SprkIconModule,
+        SprkStackItemModule,
+        SprkStackModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -73,32 +98,9 @@ and sprkLegend directive to group together all related choices.
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkRadioGroupModule,
-    SprkRadioItemModule,
-    FormsModule,
-    SprkRadioInputModule,
-    SprkRadioLabelModule,
-    SprkFieldsetModule,
-    SprkLegendModule,
-    SprkLabelModule,
-    SprkFieldErrorModule,
-    SprkHelperTextModule,
-    SprkSelectionItemContainerModule,
-    SprkSelectionInputModule,
-    SprkSelectionContainerModule,
-    SprkSelectionLabelModule,
-    SprkIconModule,
-    SprkStackItemModule,
-    SprkStackModule,
-  ],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
    <sprk-radio-group>
      <fieldset sprkFieldset>
@@ -179,7 +181,6 @@ defaultStory.parameters = {
 };
 
 export const defaultHelperText = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-radio-group>
       <fieldset sprkFieldset>
@@ -261,7 +262,6 @@ defaultHelperText.parameters = {
 };
 
 export const invalidRadioButton = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-radio-group>
      <fieldset sprkFieldset>
@@ -353,7 +353,6 @@ invalidRadioButton.parameters = {
 invalidRadioButton.storyName = 'Invalid';
 
 export const disabledRadioButton = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-radio-group>
       <fieldset sprkFieldset>
@@ -440,7 +439,6 @@ disabledRadioButton.parameters = {
 disabledRadioButton.storyName = 'Disabled';
 
 export const huge = () => ({
-  moduleMetadata: modules,
   template: `
    <sprk-radio-group variant="huge">
       <fieldset sprkFieldset>
@@ -526,7 +524,6 @@ huge.parameters = {
 };
 
 export const hugeHelperText = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-radio-group variant="huge">
       <fieldset sprkFieldset>
@@ -614,7 +611,6 @@ hugeHelperText.parameters = {
 };
 
 export const hugeInvalid = () => ({
-  moduleMetadata: modules,
   template: `
    <sprk-radio-group variant="huge">
       <fieldset sprkFieldset>
@@ -711,7 +707,6 @@ hugeInvalid.parameters = {
 };
 
 export const hugeDisabled = () => ({
-  moduleMetadata: modules,
   template: `
    <sprk-radio-group variant="huge">
       <fieldset sprkFieldset>
@@ -803,7 +798,6 @@ hugeDisabled.parameters = {
 };
 
 export const hugeLayoutTwo = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-radio-group variant="huge">
     <fieldset sprkFieldset>
@@ -877,7 +871,6 @@ hugeLayoutTwo.parameters = {
 };
 
 export const hugeLayoutFour = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-radio-group variant="huge">
     <fieldset sprkFieldset>
@@ -1003,7 +996,6 @@ hugeLayoutFour.parameters = {
 };
 
 export const hugeLayoutFive = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-radio-group variant="huge">
     <fieldset sprkFieldset>
@@ -1155,7 +1147,6 @@ hugeLayoutFive.parameters = {
 };
 
 export const hugeLayoutSix = () => ({
-  moduleMetadata: modules,
   template: `
    <sprk-radio-group variant="huge">
     <fieldset sprkFieldset>
@@ -1329,7 +1320,6 @@ hugeLayoutSix.parameters = {
 };
 
 export const legacyRadio = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-selection-container>
       <label sprkLabel>Radio Group Label</label>
@@ -1403,7 +1393,6 @@ legacyRadio.parameters = {
 };
 
 export const legacyInvalidRadio = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-selection-container>
       <label sprkLabel>Radio Group Label</label>
@@ -1486,7 +1475,6 @@ legacyInvalidRadio.parameters = {
 };
 
 export const legacyDisabledRadio = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-selection-container>
       <label class="sprk-b-Label--disabled" sprkLabel>Radio Group Label</label>

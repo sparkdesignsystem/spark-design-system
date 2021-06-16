@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkOrderedListModule } from './sprk-ordered-list.module';
 import { SprkUnorderedListModule } from '../sprk-unordered-list/sprk-unordered-list.module';
 import { SprkOrderedListComponent } from '../sprk-ordered-list/sprk-ordered-list.component';
@@ -11,9 +16,15 @@ export default {
   title: 'Components/List',
   component: SprkUnorderedListComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sprk-u-mlm">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkOrderedListModule,
+        SprkUnorderedListModule,
+        SprkListItemModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box sprk-u-mlm">${story}</div>`,
     ),
   ],
   parameters: {
@@ -22,19 +33,21 @@ export default {
       SprkUnorderedListComponent,
       SprkListItemComponent,
     },
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('list')}
     `,
-    docs: { iframeHeight: 100 },
+      },
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 100,
+    },
   },
-};
-
-const modules = {
-  imports: [SprkOrderedListModule, SprkUnorderedListModule, SprkListItemModule],
-};
+} as Meta;
 
 export const unordered = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-unordered-list idString="unordered-list-1">
       <sprk-list-item idString="list-item-1">
@@ -55,7 +68,6 @@ unordered.parameters = {
 };
 
 export const ordered = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-ordered-list idString="ordered-list-1">
       <sprk-list-item idString="list-item-4">
@@ -76,7 +88,6 @@ ordered.parameters = {
 };
 
 export const indented = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-unordered-list
       listType="indented"
@@ -100,7 +111,6 @@ indented.parameters = {
 };
 
 export const bare = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-unordered-list
       listType="bare"

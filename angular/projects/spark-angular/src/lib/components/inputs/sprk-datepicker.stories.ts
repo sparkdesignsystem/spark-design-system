@@ -1,4 +1,3 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
@@ -10,6 +9,12 @@ import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sp
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { FormsModule } from '@angular/forms';
@@ -24,11 +29,22 @@ export default {
     SprkIconComponent,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        SprkDatepickerModule,
+        SprkIconInputContainerModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -58,23 +74,9 @@ the Inputs table below for available customization options.
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    SprkDatepickerModule,
-    SprkIconInputContainerModule,
-    FormsModule,
-  ],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
@@ -115,7 +117,6 @@ defaultStory.parameters = {
 };
 
 export const invalidDatePicker = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
@@ -167,7 +168,6 @@ invalidDatePicker.parameters = {
 };
 
 export const disabledDatePicker = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
@@ -209,7 +209,6 @@ disabledDatePicker.parameters = {
 };
 
 export const legacyStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
       <label for="legacy-datepicker" sprkLabel>
@@ -250,7 +249,6 @@ legacyStory.parameters = {
 };
 
 export const legacyInvalidDatePicker = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
       <label for="legacy-invalid-datepicker" sprkLabel>
@@ -302,7 +300,6 @@ legacyInvalidDatePicker.parameters = {
 };
 
 export const legacyDisabledDatePicker = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
       <label for="legacy-disabled-datepicker" class="sprk-b-Label--disabled" sprkLabel>

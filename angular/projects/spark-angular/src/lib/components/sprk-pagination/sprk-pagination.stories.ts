@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkPaginationModule } from './sprk-pagination.module';
 import { SprkPaginationComponent } from './sprk-pagination.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -7,12 +12,18 @@ export default {
   title: 'Components/Pagination',
   component: SprkPaginationComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkPaginationModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       iframeHeight: 70,
       description: {
         component: `
@@ -26,14 +37,9 @@ goForward events include this value in a property called
       },
     },
   },
-};
-
-const modules = {
-  imports: [SprkPaginationModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-pagination
       [totalItems]="3"
@@ -51,7 +57,6 @@ defaultStory.parameters = {
 };
 
 export const pager = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-pagination
       paginationType="pager"

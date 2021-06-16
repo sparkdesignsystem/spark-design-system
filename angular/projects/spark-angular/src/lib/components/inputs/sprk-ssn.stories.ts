@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
@@ -29,11 +34,23 @@ export default {
     SprkFieldErrorDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        SprkCheckboxInputModule,
+        SprkCheckboxLabelModule,
+        SprkCheckboxItemModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -62,24 +79,9 @@ ${markdownDocumentationLinkBuilder('input')}
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    SprkCheckboxInputModule,
-    SprkCheckboxLabelModule,
-    SprkCheckboxItemModule,
-    FormsModule,
-  ],
-};
+} as Meta;
 
 export const SSNInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="ssn-input" sprkLabel>SSN Input</label>
@@ -123,7 +125,6 @@ SSNInput.parameters = {
 };
 
 export const invalidSSNInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="ssn-input" sprkLabel>SSN Input</label>
@@ -178,7 +179,6 @@ invalidSSNInput.parameters = {
 };
 
 export const disabledSSNInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label isDisabled="true" for="ssn-input" sprkLabel>SSN Input</label>

@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
@@ -23,11 +28,21 @@ export default {
     SprkFieldErrorDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        SprkHelperTextModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -49,22 +64,9 @@ ${markdownDocumentationLinkBuilder('input')}
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    SprkHelperTextModule,
-    FormsModule,
-  ],
-};
+} as Meta;
 
 export const helperText = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="helper-input" sprkLabel>
@@ -99,7 +101,6 @@ helperText.parameters = {
 };
 
 export const invalidHelperText = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="invalid-helper-input" sprkLabel>

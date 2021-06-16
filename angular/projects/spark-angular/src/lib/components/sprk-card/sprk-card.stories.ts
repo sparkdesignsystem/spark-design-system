@@ -1,20 +1,36 @@
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkCardModule } from './sprk-card.module';
 import { SprkCardComponent } from './sprk-card.component';
 import { SprkCardContentDirective } from './directives/sprk-card-content/sprk-card-content.directive';
 import { SprkCardMediaDirective } from './directives/sprk-card-media/sprk-card-media.directive';
 import { SprkCardHeaderDirective } from './directives/sprk-card-header/sprk-card-header.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 
 export default {
   title: 'Components/Card',
   component: SprkCardComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sprk-o-Box--large">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkCardModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkCardComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
@@ -24,29 +40,18 @@ export default {
       SprkCardMediaDirective,
     },
     docs: {
+      source: {
+        type: 'code',
+      },
       description: {
         component: `${markdownDocumentationLinkBuilder('card')}`,
       },
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkCardModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkCardComponent,
-      },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="default">
       <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
@@ -71,7 +76,6 @@ defaultStory.parameters = {
 };
 
 export const standout = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="standout" isStandout="true">
       <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
@@ -94,7 +98,6 @@ standout.parameters = {
 };
 
 export const highlightedHeader = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="highlighted-header" isStandout="true">
       <sprk-stack sprkCardHeader sprkStackItem itemSpacing="medium">
@@ -142,7 +145,6 @@ highlightedHeader.parameters = {
 };
 
 export const teaser = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="teaser">
       <a
@@ -205,7 +207,6 @@ teaser.parameters = {
 };
 
 export const teaserIcon = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="teaser-icon">
       <sprk-stack
@@ -274,7 +275,6 @@ teaserIcon.parameters = {
 };
 
 export const teaserWithDifferentElementOrder = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="teaser-diff-order">
       <h3 sprkHeading sprkCardContent variant="displayFive" sprkStackItem>
@@ -321,24 +321,24 @@ export const teaserWithDifferentElementOrder = () => ({
   `,
 });
 
-(teaserWithDifferentElementOrder.storyName =
-  'Teaser With Different Element Order'),
-  (teaserWithDifferentElementOrder.parameters = {
-    docs: { iframeHeight: 550 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-card-media.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-    ],
-  });
+teaserWithDifferentElementOrder.storyName =
+  'Teaser With Different Element Order';
+
+teaserWithDifferentElementOrder.parameters = {
+  docs: { iframeHeight: 550 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-content.directive',
+    'sprk-card-media.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+  ],
+};
 
 export const twoUpCards = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack
       itemSpacing="large"
@@ -465,7 +465,6 @@ twoUpCards.parameters = {
 };
 
 export const threeUpCards = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack
       itemSpacing="large"
@@ -642,7 +641,6 @@ threeUpCards.parameters = {
 };
 
 export const fourUpCards = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack
       itemSpacing="large"

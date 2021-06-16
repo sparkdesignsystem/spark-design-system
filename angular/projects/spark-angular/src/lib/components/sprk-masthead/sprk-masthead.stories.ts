@@ -2,6 +2,8 @@
 /* tslint:disable: max-line-length */
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+// @ts-ignore
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkMastheadModule } from './sprk-masthead.module';
 import { SprkMastheadComponent } from './sprk-masthead.component';
@@ -31,6 +33,26 @@ import { SprkMastheadNavItemsDirective } from './directives/sprk-masthead-nav-it
 export default {
   title: 'Components/Masthead',
   component: SprkMastheadComponent,
+  decorators: [
+    moduleMetadata({
+      imports: [
+        SprkMastheadModule,
+        SprkHighlightBoardModule,
+        SprkCardModule,
+        SprkTextModule,
+        SprkHeadingModule,
+        SprkBoxModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkMastheadComponent,
+          },
+        ]),
+        BrowserAnimationsModule,
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+  ],
   parameters: {
     subcomponents: {
       SprkMastheadAccordionComponent,
@@ -51,6 +73,9 @@ export default {
       SprkStackComponent,
     },
     docs: {
+      source: {
+        type: 'code',
+      },
       description: {
         component: `
 ${markdownDocumentationLinkBuilder('masthead')}
@@ -87,7 +112,7 @@ except for IE11.
       iframeHeight: 300,
     },
   },
-};
+} as Meta;
 
 const logoSvg = `
     <title>Spark Design System Logo</title>
@@ -321,27 +346,7 @@ const bodyContent = `
   </main>
 `;
 
-const modules = {
-  imports: [
-    SprkMastheadModule,
-    SprkHighlightBoardModule,
-    SprkCardModule,
-    SprkTextModule,
-    SprkHeadingModule,
-    SprkBoxModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkMastheadComponent,
-      },
-    ]),
-    BrowserAnimationsModule,
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
-
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-masthead>
       <div sprkMastheadBranding sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
@@ -582,7 +587,6 @@ defaultStory.parameters = {
 };
 
 export const extended = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-masthead>
       <div sprkMastheadBranding sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
@@ -1095,7 +1099,6 @@ extended.parameters = {
 };
 
 export const extendedWithExampleContent = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-masthead>
       <div sprkMastheadBranding sprkStackItem class="sprk-o-Stack__item--center-column@xxs">
@@ -1607,7 +1610,6 @@ extendedWithExampleContent.parameters = {
 };
 
 export const withoutCollapsibleNav = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-masthead additionalClasses="sprk-o-Stack--split@xxs sprk-o-Box sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-o-Stack--medium">
       <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">

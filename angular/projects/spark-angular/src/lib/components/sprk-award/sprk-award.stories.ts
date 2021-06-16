@@ -1,22 +1,41 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAwardModule } from './sprk-award.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { SprkAwardComponent } from './sprk-award.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 export default {
   title: 'Components/Award',
   component: SprkAwardComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sprk-o-CenteredColumn">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkAwardModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkAwardComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       description: {
         component: `${markdownDocumentationLinkBuilder('award')}`,
       },
@@ -25,22 +44,7 @@ export default {
   },
 };
 
-const modules = {
-  imports: [
-    SprkAwardModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkAwardComponent,
-      },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
-
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-award
       splitAt="tiny"

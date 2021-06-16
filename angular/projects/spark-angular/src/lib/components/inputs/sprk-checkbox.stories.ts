@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
 import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
@@ -41,11 +46,31 @@ export default {
     SprkCheckboxInputDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkCheckboxGroupModule,
+        SprkCheckboxItemModule,
+        SprkCheckboxInputModule,
+        SprkCheckboxLabelModule,
+        SprkFieldsetModule,
+        SprkLegendModule,
+        SprkLabelModule,
+        SprkFieldErrorModule,
+        SprkHelperTextModule,
+        SprkSelectionItemContainerModule,
+        SprkSelectionInputModule,
+        SprkSelectionContainerModule,
+        SprkSelectionLabelModule,
+        SprkIconModule,
+        SprkStackItemModule,
+        SprkStackModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -70,32 +95,9 @@ and sprkLegend directive to group together all related choices.
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkCheckboxGroupModule,
-    SprkCheckboxItemModule,
-    SprkCheckboxInputModule,
-    SprkCheckboxLabelModule,
-    SprkFieldsetModule,
-    SprkLegendModule,
-    SprkLabelModule,
-    SprkFieldErrorModule,
-    SprkHelperTextModule,
-    SprkSelectionItemContainerModule,
-    SprkSelectionInputModule,
-    SprkSelectionContainerModule,
-    SprkSelectionLabelModule,
-    SprkIconModule,
-    SprkStackItemModule,
-    SprkStackModule,
-    FormsModule,
-  ],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group>
       <fieldset sprkFieldset>
@@ -176,7 +178,6 @@ defaultStory.parameters = {
 };
 
 export const defaultHelperText = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group>
       <fieldset sprkFieldset>
@@ -260,7 +261,6 @@ defaultHelperText.parameters = {
 };
 
 export const invalidCheckbox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group>
       <fieldset sprkFieldset>
@@ -352,7 +352,6 @@ invalidCheckbox.parameters = {
 };
 
 export const disabledCheckbox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group>
       <fieldset sprkFieldset>
@@ -439,7 +438,6 @@ disabledCheckbox.parameters = {
 };
 
 export const huge = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -524,7 +522,6 @@ huge.parameters = {
 };
 
 export const hugeHelperText = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -612,7 +609,6 @@ huge.hugeHelperText = {
 };
 
 export const hugeInvalid = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -708,7 +704,6 @@ hugeInvalid.hugeHelperText = {
 };
 
 export const hugeDisabled = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -799,7 +794,6 @@ hugeInvalid.hugeHelperText = {
 };
 
 export const hugeLayoutTwo = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -872,7 +866,6 @@ hugeLayoutTwo.parameters = {
 };
 
 export const hugeLayoutFour = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -997,7 +990,6 @@ hugeLayoutFour.parameters = {
 };
 
 export const hugeLayoutFive = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -1148,7 +1140,6 @@ hugeLayoutFive.parameters = {
 };
 
 export const hugeLayoutSix = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -1321,7 +1312,6 @@ hugeLayoutSix.parameters = {
 };
 
 export const legacyStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-selection-container>
       <label sprkLabel>
@@ -1404,7 +1394,6 @@ legacyStory.parameters = {
 };
 
 export const legacyInvalidStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-selection-container>
       <label sprkLabel>
@@ -1496,7 +1485,6 @@ legacyInvalidStory.parameters = {
 };
 
 export const legacyDisabledStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-selection-container>
       <label class="sprk-b-Label--disabled" sprkLabel>

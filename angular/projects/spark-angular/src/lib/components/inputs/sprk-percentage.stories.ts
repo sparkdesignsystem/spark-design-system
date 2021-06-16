@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
@@ -23,11 +28,21 @@ export default {
     SprkFieldErrorDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        SprkIconInputContainerModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -47,22 +62,9 @@ ${markdownDocumentationLinkBuilder('input')}
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    SprkIconInputContainerModule,
-    FormsModule,
-  ],
-};
+} as Meta;
 
 export const percentageInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="
@@ -99,7 +101,6 @@ percentageInput.parameters = {
 };
 
 export const invalidPercentageInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="
@@ -147,7 +148,6 @@ invalidPercentageInput.parameters = {
 };
 
 export const disabledPercentageInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="
@@ -185,7 +185,6 @@ disabledPercentageInput.parameters = {
 };
 
 export const legacyStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
       <label for="legacy-percentage" sprkLabel>Percentage</label>
@@ -217,7 +216,6 @@ legacyStory.parameters = {
 };
 
 export const legacyInvalidPercentageInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
       <label for="legacy-invalid-percentage" sprkLabel>Percentage</label>
@@ -260,7 +258,6 @@ legacyInvalidPercentageInput.parameters = {
 };
 
 export const legacyDisabledPercentageInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container iconContainerClasses="sprk-b-InputContainer__icon-container--narrow">
       <label

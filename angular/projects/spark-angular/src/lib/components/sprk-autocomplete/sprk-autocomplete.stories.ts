@@ -1,11 +1,15 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAutocompleteModule } from './sprk-autocomplete.module';
 import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkAutocompleteResultsDirective } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
 import { SprkAutocompleteInputContainerDirective } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
-
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 export default {
   title: 'Components/Autocomplete',
   component: SprkAutocompleteComponent,
@@ -15,12 +19,18 @@ export default {
     SprkAutocompleteInputContainerDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkAutocompleteModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       iframeHeight: 400,
       description: {
         component: `
@@ -90,14 +100,9 @@ In order to keep the Spark Autocomplete flexible enough to use in a wide
       },
     },
   },
-};
-
-const modules = {
-  imports: [SprkAutocompleteModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete isOpen="true">
     <sprk-input-container>
@@ -171,7 +176,6 @@ defaultStory.parameters = {
 defaultStory.storyName = 'Default';
 
 export const defaultInvalid = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete>
     <sprk-input-container>
@@ -252,7 +256,6 @@ defaultInvalid.parameters = {
 };
 
 export const defaultDisabled = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete>
     <sprk-input-container>
@@ -328,7 +331,6 @@ defaultDisabled.parameters = {
 };
 
 export const hugeStory = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete isOpen="true">
     <sprk-input-container variant="huge">
@@ -404,7 +406,6 @@ hugeStory.parameters = {
 hugeStory.storyName = 'Huge';
 
 export const hugeInvalid = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete>
     <sprk-input-container variant="huge">
@@ -488,7 +489,6 @@ hugeInvalid.parameters = {
 hugeInvalid.storyName = 'Huge Invalid';
 
 export const hugeDisabled = () => ({
-  moduleMetadata: modules,
   template: `
   <sprk-autocomplete>
     <sprk-input-container variant="huge">

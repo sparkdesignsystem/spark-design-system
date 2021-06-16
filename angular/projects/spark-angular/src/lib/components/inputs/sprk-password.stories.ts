@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
@@ -41,11 +46,27 @@ export default {
     SprkSelectionInputDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        FormsModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        SprkCheckboxInputModule,
+        SprkCheckboxLabelModule,
+        SprkCheckboxItemModule,
+        SprkSelectionContainerModule,
+        SprkSelectionItemContainerModule,
+        SprkSelectionInputModule,
+        SprkSelectionLabelModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -68,28 +89,9 @@ ${markdownDocumentationLinkBuilder('input')}
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    FormsModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    SprkCheckboxInputModule,
-    SprkCheckboxLabelModule,
-    SprkCheckboxItemModule,
-    SprkSelectionContainerModule,
-    SprkSelectionItemContainerModule,
-    SprkSelectionInputModule,
-    SprkSelectionLabelModule,
-  ],
-};
+} as Meta;
 
 export const passwordInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="password" sprkLabel>Password</label>
@@ -122,7 +124,6 @@ passwordInput.parameters = {
 };
 
 export const invalidPasswordInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="invalid-password" sprkLabel>Password</label>
@@ -172,7 +173,6 @@ invalidPasswordInput.parameters = {
 };
 
 export const disabledPasswordInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="disabled-password" isDisabled="true" sprkLabel>Password</label>
@@ -212,7 +212,6 @@ disabledPasswordInput.parameters = {
 };
 
 export const legacy = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label sprkLabel>Password</label>
@@ -244,7 +243,6 @@ legacy.parameters = {
 };
 
 export const legacyInvalidPasswordInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label sprkLabel>Password</label>
@@ -291,7 +289,6 @@ legacyInvalidPasswordInput.parameters = {
 };
 
 export const legacyDisabledPasswordInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label class="sprk-b-Label--disabled" sprkLabel>Password</label>

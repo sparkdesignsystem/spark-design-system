@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkHeadingModule } from './sprk-heading.module';
 import { SprkHeadingDirective } from './sprk-heading.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -8,12 +13,18 @@ export default {
   title: 'Foundations/Typography',
   component: SprkHeadingDirective,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkHeadingModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       iframeHeight: 200,
       description: {
         component: `
@@ -42,14 +53,9 @@ correct type classes applied.
       },
     },
   },
-};
-
-const modules = {
-  imports: [SprkHeadingModule],
-};
+} as Meta;
 
 export const pageTitle = () => ({
-  moduleMetadata: modules,
   template: `
     <h1 sprkHeading variant="displayTwo" isPageTitle="true">
       The Quick Brown Fox
@@ -63,7 +69,6 @@ pageTitle.parameters = {
 };
 
 export const displayOne = () => ({
-  moduleMetadata: modules,
   template: `
     <h1 sprkHeading variant="displayOne">
       The Quick Brown Fox
@@ -77,7 +82,6 @@ displayOne.parameters = {
 };
 
 export const displayTwo = () => ({
-  moduleMetadata: modules,
   template: `
     <h2 sprkHeading variant="displayTwo">
       The Quick Brown Fox
@@ -91,7 +95,6 @@ displayTwo.parameters = {
 };
 
 export const displayThree = () => ({
-  moduleMetadata: modules,
   template: `
     <h3 sprkHeading variant="displayThree">
       The Quick Brown Fox
@@ -105,7 +108,6 @@ displayThree.parameters = {
 };
 
 export const displayFour = () => ({
-  moduleMetadata: modules,
   template: `
     <h4 sprkHeading variant="displayFour">
       The Quick Brown Fox
@@ -119,7 +121,6 @@ displayFour.parameters = {
 };
 
 export const displayFive = () => ({
-  moduleMetadata: modules,
   template: `
     <h5 sprkHeading variant="displayFive">
       The Quick Brown Fox
@@ -133,7 +134,6 @@ displayFive.parameters = {
 };
 
 export const displaySix = () => ({
-  moduleMetadata: modules,
   template: `
     <h6 sprkHeading variant="displaySix">
       The Quick Brown Fox
@@ -147,7 +147,6 @@ displaySix.parameters = {
 };
 
 export const displaySeven = () => ({
-  moduleMetadata: modules,
   template: `
     <h6 sprkHeading variant="displaySeven">
       The Quick Brown Fox

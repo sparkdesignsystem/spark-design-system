@@ -1,15 +1,22 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkDividerDirective } from './sprk-divider.directive';
 import { SprkDividerDirectiveModule } from './sprk-divider.module';
 import { SprkDividerModule } from '../../components/sprk-divider/sprk-divider.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 export default {
   title: 'Components/Divider',
   component: SprkDividerDirective,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkDividerDirectiveModule, SprkDividerModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
@@ -20,14 +27,9 @@ export default {
       },
     },
   },
-};
-
-const modules = {
-  imports: [SprkDividerDirectiveModule, SprkDividerModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <div sprkDivider idString="divider-1"></div>
   `,
@@ -40,7 +42,6 @@ defaultStory.parameters = {
 };
 
 export const deprecated = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-divider idString="divider-2"></sprk-divider>
   `,

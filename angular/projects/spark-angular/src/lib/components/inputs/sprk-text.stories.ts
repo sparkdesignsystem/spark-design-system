@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
@@ -23,11 +28,21 @@ export default {
     SprkFieldErrorDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkHugeInputContainerModule,
+        SprkFieldErrorModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -47,22 +62,9 @@ ${markdownDocumentationLinkBuilder('input')}
       },
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkHugeInputContainerModule,
-    SprkFieldErrorModule,
-    FormsModule,
-  ],
-};
+} as Meta;
 
 export const textInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="text" sprkLabel>Text Input Label</label>
@@ -89,7 +91,6 @@ textInput.parameters = {
 };
 
 export const invalidTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="invalid-text" sprkLabel>Text Input Label</label>
@@ -128,7 +129,6 @@ invalidTextInput.parameters = {
 };
 
 export const disabledTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="disabled-text" isDisabled="true" sprkLabel>Text Input Label</label>
@@ -156,7 +156,6 @@ disabledTextInput.parameters = {
 };
 
 export const hugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <input
@@ -185,7 +184,6 @@ hugeTextInput.parameters = {
 };
 
 export const invalidHugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <input
@@ -226,7 +224,6 @@ invalidHugeTextInput.parameters = {
 };
 
 export const disabledHugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <input
@@ -256,7 +253,6 @@ disabledHugeTextInput.parameters = {
 };
 
 export const legacyHugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <input
@@ -284,7 +280,6 @@ legacyHugeTextInput.parameters = {
 };
 
 export const legacyInvalidHugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <input
@@ -324,7 +319,6 @@ legacyInvalidHugeTextInput.parameters = {
 };
 
 export const legacyDisabledHugeTextInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <input

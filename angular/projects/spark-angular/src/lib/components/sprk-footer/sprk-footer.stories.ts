@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkFooterModule } from './sprk-footer.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
@@ -9,9 +14,29 @@ import { APP_BASE_HREF } from '@angular/common';
 export default {
   title: 'Components/Footer',
   component: SprkFooterComponent,
-  decorators: [storyWrapper((storyContent) => `<div>${storyContent}<div>`)],
+  decorators: [
+    moduleMetadata({
+      imports: [
+        SprkFooterModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkFooterComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
+    ),
+  ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       description: {
         component: `
 ${markdownDocumentationLinkBuilder('footer')}
@@ -23,24 +48,9 @@ must be present.
       iframeHeight: 800,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkFooterModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkFooterComponent,
-      },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-footer
       idString="footer-1"

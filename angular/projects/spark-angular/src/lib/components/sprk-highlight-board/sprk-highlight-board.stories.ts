@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkHighlightBoardModule } from './sprk-highlight-board.module';
 import { SprkHighlightBoardComponent } from './sprk-highlight-board.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -9,12 +14,27 @@ export default {
   title: 'Components/Highlight Board',
   component: SprkHighlightBoardComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkHighlightBoardModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkHighlightBoardComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       description: {
         component: `
 ${markdownDocumentationLinkBuilder('highlight-board')}
@@ -32,23 +52,9 @@ see this [alt text guide](https://webaim.org/techniques/alttext/#decorative).
       iframeHeight: 600,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkHighlightBoardModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkHighlightBoardComponent,
-      },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-highlight-board
       heading="Hello, Welcome To Spark Design System"
@@ -71,7 +77,6 @@ defaultStory.parameters = {
 };
 
 export const noImage = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-highlight-board
       heading="Hello, Welcome To Spark Design System"
@@ -90,7 +95,6 @@ noImage.parameters = {
 };
 
 export const stacked = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-highlight-board
       heading="Hello, Welcome To Spark Design System"

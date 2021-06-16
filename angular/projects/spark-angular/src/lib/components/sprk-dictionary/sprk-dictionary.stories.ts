@@ -1,32 +1,38 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkDictionaryModule } from './sprk-dictionary.module';
 import { SprkDictionaryComponent } from './sprk-dictionary.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 
 export default {
   title: 'Components/Dictionary',
   component: SprkDictionaryComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkDictionaryModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       description: {
         component: `${markdownDocumentationLinkBuilder('card')}`,
       },
       iframeHeight: 500,
     },
   },
-};
-
-const modules = {
-  imports: [SprkDictionaryModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-dictionary
      idString="dictionary-default"
@@ -49,7 +55,6 @@ defaultStory.parameters = {
 };
 
 export const striped = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-dictionary
      variant="striped"

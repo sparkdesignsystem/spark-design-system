@@ -1,5 +1,10 @@
 import { SprkIconModule } from './sprk-icon.module';
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkIconComponent } from './sprk-icon.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import {
@@ -11,12 +16,18 @@ export default {
   title: 'Components/Icons',
   component: SprkIconComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkIconModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       description: {
         component: `
 ${markdownDocumentationLinkBuilder('icon')}
@@ -48,14 +59,9 @@ communicate the Icon’s meaning.
       iframeHeight: 90,
     },
   },
-};
-
-const modules = {
-  imports: [SprkIconModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon
       iconType="access"
@@ -83,7 +89,6 @@ export const gallery = () => {
   }, 100);
 
   return {
-    moduleMetadata: modules,
     template: `
       <ul class="sbdocs-gallery-container sprk-o-Stack sprk-o-Stack--split@xs"></ul>
     `,

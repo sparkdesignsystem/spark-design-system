@@ -1,7 +1,12 @@
 import { SprkDropdownModule } from './sprk-dropdown.module';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
@@ -10,12 +15,28 @@ export default {
   title: 'Components/Dropdown',
   component: SprkDropdownComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkDropdownModule,
+        SprkLinkDirectiveModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkDropdownComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       description: {
         component: `
 ${markdownDocumentationLinkBuilder('dropdown')}
@@ -27,24 +48,9 @@ element has a popup menu.
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkDropdownModule,
-    SprkLinkDirectiveModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkDropdownComponent,
-      },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-dropdown
       screenReaderText="Description of default dropdown"
@@ -73,7 +79,6 @@ defaultStory.parameters = {
 };
 
 export const informational = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-dropdown
       variant="informational"

@@ -1,5 +1,10 @@
 import { SprkButtonModule } from './sprk-button.module';
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkButtonDirective } from './sprk-button.directive';
 import { SprkSpinnerModule } from '../../directives/sprk-spinner/sprk-spinner.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -8,8 +13,11 @@ export default {
   title: 'Components/Button',
   component: SprkButtonDirective,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkButtonModule, SprkSpinnerModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
@@ -47,16 +55,14 @@ receive interaction.
 `,
       },
       iframeHeight: 100,
+      source: {
+        type: 'code',
+      },
     },
   },
-};
-
-const modules = {
-  imports: [SprkButtonModule, SprkSpinnerModule],
-};
+} as Meta;
 
 export const primary = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       idString="button-primary"
@@ -72,7 +78,6 @@ primary.parameters = {
 };
 
 export const secondary = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       variant="secondary"
@@ -89,7 +94,6 @@ secondary.parameters = {
 };
 
 export const tertiary = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       variant="tertiary"
@@ -106,7 +110,6 @@ tertiary.parameters = {
 };
 
 export const disabled = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       disabled
@@ -123,7 +126,6 @@ disabled.parameters = {
 };
 
 export const disabledSecondary = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       disabled
@@ -141,7 +143,6 @@ disabledSecondary.parameters = {
 };
 
 export const disabledTertiary = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       disabled
@@ -160,7 +161,6 @@ disabledTertiary.parameters = {
 
 export const spinning = () => {
   return {
-    moduleMetadata: modules,
     template: `
       <button
         idString="button-spinning"
@@ -180,7 +180,6 @@ spinning.parameters = {
 
 export const spinningSecondary = () => {
   return {
-    moduleMetadata: modules,
     template: `
       <button
         variant="secondary"
@@ -200,7 +199,6 @@ spinningSecondary.parameters = {
 
 export const spinningTertiary = () => {
   return {
-    moduleMetadata: modules,
     template: `
       <button
         variant="tertiary"
@@ -220,7 +218,6 @@ spinningTertiary.parameters = {
 
 export const fullWidthAtSmallViewport = () => {
   return {
-    moduleMetadata: modules,
     template: `
       <button
         class="sprk-c-Button--full@s"
@@ -241,7 +238,6 @@ fullWidthAtSmallViewport.parameters = {
 
 export const fullWidthAtExtraSmallViewport = () => {
   return {
-    moduleMetadata: modules,
     template: `
       <button
         class="sprk-c-Button--full@xs"

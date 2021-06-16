@@ -1,5 +1,5 @@
 import React from 'react';
-import { addDecorator, addParameters } from '@storybook/angular';
+import { addDecorator } from '@storybook/angular';
 import '../src/polyfills';
 import { withTests } from '@storybook/addon-jest';
 import results from '../src/.jest-test-results.json';
@@ -23,9 +23,12 @@ addDecorator(
   }),
 );
 
-addParameters({
-  docs: {
-    theme: sparkTheme,
+export const parameters = {
+  a11y: {
+    element: '#root',
+    config: {},
+    options: {},
+    manual: false,
   },
   options: {
     storySort: (a, b) =>
@@ -33,10 +36,8 @@ addParameters({
         ? 0
         : a[1].id.localeCompare(b[1].id, { numeric: true }),
   },
-});
-
-addParameters({
   docs: {
+    theme: sparkTheme,
     container: ({ children, context }) => {
       const componentName = context.kind.split('/')[1];
       const isInputStory = componentName === 'Input';
@@ -95,14 +96,5 @@ addParameters({
       }
     },
     extractProps,
-  },
-});
-
-export const parameters = {
-  a11y: {
-    element: '#root',
-    config: {},
-    options: {},
-    manual: false,
   },
 };

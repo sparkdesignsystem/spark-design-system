@@ -1,18 +1,28 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAlertModule } from './sprk-alert.module';
 import { SprkAlertComponent } from './sprk-alert.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 export default {
   title: 'Components/Alert',
   component: SprkAlertComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkAlertModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       iframeHeight: 120,
       description: {
         component: `${markdownDocumentationLinkBuilder('alert')}
@@ -23,24 +33,14 @@ the user that their attention is needed.
       },
     },
   },
-};
-
-const modules = {
-  imports: [SprkAlertModule],
-};
+} as Meta;
 
 export const info = () => ({
-  moduleMetadata: modules,
-  props: {
-    variant: 'info',
-    idString: 'alert-info-1',
-    analyticsString: 'test',
-  },
   template: `
     <sprk-alert
-      [variant]="variant"
-      [idString]="idString"
-      [analyticsString]="analyticsString"
+      variant="info"
+      idString="alert-info-1"
+      analyticsString="test"
     >
       This is important information.
     </sprk-alert>`,
@@ -51,17 +51,11 @@ info.parameters = {
 };
 
 export const success = () => ({
-  moduleMetadata: modules,
-  props: {
-    variant: 'success',
-    idString: 'alert-success-1',
-    analyticsString: 'test',
-  },
   template: `
     <sprk-alert
-      [variant]="variant"
-      [idString]="idString"
-      [analyticsString]="analyticsString"
+      variant="success"
+      idString="alert-success-1"
+      analyticsString="test"
     >
       This is a success message.
     </sprk-alert>
@@ -73,17 +67,11 @@ success.parameters = {
 };
 
 export const fail = () => ({
-  moduleMetadata: modules,
-  props: {
-    variant: 'fail',
-    idString: 'alert-fail-1',
-    analyticsString: 'test',
-  },
   template: `
     <sprk-alert
-      [variant]="variant"
-      [idString]="idString"
-      [analyticsString]="analyticsString"
+      variant="fail"
+      idString="alert-fail-1"
+      analyticsString="test"
     >
       This is a failure message to alert
       that something was not successful.
@@ -97,19 +85,12 @@ fail.parameters = {
 };
 
 export const noDismissButton = () => ({
-  moduleMetadata: modules,
-  props: {
-    variant: 'success',
-    idString: 'no-dismiss',
-    analyticsString: 'test',
-    isDismissible: false,
-  },
   template: `
     <sprk-alert
-      [variant]="variant"
-      [idString]="idString"
-      [analyticsString]="analyticsString"
-      [isDismissible]="isDismissible"
+      variant="success"
+      idString="no-dismiss"
+      analyticsString="test"
+      [isDismissible]="false"
     >
       This Success Alert has no dismiss button.
     </sprk-alert>

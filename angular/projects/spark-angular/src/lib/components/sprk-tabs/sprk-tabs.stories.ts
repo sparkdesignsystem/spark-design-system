@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkTabsModule } from './sprk-tabs.module';
 import { SprkTabsPanelModule } from '../../directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.module';
 import { SprkTabsButtonModule } from '../../directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.module';
@@ -14,9 +19,18 @@ export default {
   title: 'Components/Tabs',
   component: SprkTabsComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sprk-u-JavaScript">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkTabsModule,
+        SprkTabsPanelModule,
+        SprkTabsButtonModule,
+        SprkTabbedNavigationModule,
+        SprkTabbedNavigationPanelModule,
+        SprkTabbedNavigationTabModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
@@ -25,6 +39,9 @@ export default {
       SprkTabsButtonDirective,
     },
     docs: {
+      source: {
+        type: 'code',
+      },
       iframeHeight: 300,
       description: {
         component: `
@@ -40,14 +57,9 @@ only one content panel will be visible at a time.
       },
     },
   },
-};
-
-const modules = {
-  imports: [SprkTabsModule, SprkTabsPanelModule, SprkTabsButtonModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-tabs idString="tabs-1">
       <button
@@ -98,16 +110,7 @@ defaultStory.parameters = {
   ],
 };
 
-const modules_deprecated = {
-  imports: [
-    SprkTabbedNavigationModule,
-    SprkTabbedNavigationPanelModule,
-    SprkTabbedNavigationTabModule,
-  ],
-};
-
 export const deprecated = () => ({
-  moduleMetadata: modules_deprecated,
   template: `
     <sprk-tabbed-navigation idString="tabs-1">
       <button

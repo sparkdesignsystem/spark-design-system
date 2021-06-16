@@ -1,17 +1,29 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAccordionModule } from './sprk-accordion.module';
 import { SprkAccordionItemModule } from '../sprk-accordion-item/sprk-accordion-item.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkAccordionComponent } from './sprk-accordion.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { SprkAccordionItemComponent } from '../sprk-accordion-item/sprk-accordion-item.component';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 
 export default {
   title: 'Components/Accordion',
   component: SprkAccordionComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkAccordionModule,
+        SprkAccordionItemModule,
+        BrowserAnimationsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
@@ -20,7 +32,7 @@ export default {
     },
     docs: {
       source: {
-        type: 'code'
+        type: 'code',
       },
       description: {
         component: `
@@ -36,21 +48,12 @@ consider using
 the [Toggle Component](/docs/components-toggle--default-story) instead.
         `,
       },
-      iframeHeight: 420
+      iframeHeight: 420,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkAccordionModule,
-    SprkAccordionItemModule,
-    BrowserAnimationsModule,
-  ],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-accordion>
       <sprk-accordion-item

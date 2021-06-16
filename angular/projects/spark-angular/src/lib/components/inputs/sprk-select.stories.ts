@@ -1,4 +1,9 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// @ts-ignore
+import {
+  moduleMetadata,
+  Meta,
+  componentWrapperDecorator,
+} from '@storybook/angular';
 import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { SprkSelectDirective } from '../../directives/inputs/sprk-select/sprk-select.directive';
@@ -26,11 +31,23 @@ export default {
     SprkHugeInputContainerComponent,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkIconModule,
+        SprkSelectModule,
+        SprkFieldErrorModule,
+        SprkHugeInputContainerModule,
+        SprkFieldErrorModule,
+        SprkInputModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -50,24 +67,9 @@ ${markdownDocumentationLinkBuilder('input')}
       iframeHeight: 200,
     },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkIconModule,
-    SprkSelectModule,
-    SprkFieldErrorModule,
-    SprkHugeInputContainerModule,
-    SprkFieldErrorModule,
-    SprkInputModule,
-    FormsModule,
-  ],
-};
+} as Meta;
 
 export const selectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label sprkLabel for="select-normal-1">Select Box Label</label>
@@ -107,7 +109,6 @@ selectBox.parameters = {
 };
 
 export const invalidSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label sprkLabel for="select-error-1">Select Box Label</label>
@@ -158,7 +159,6 @@ invalidSelectBox.parameters = {
 };
 
 export const disabledSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label isDisabled="true" sprkLabel for="select-normal-1">Select Box Label</label>
@@ -199,7 +199,6 @@ disabledSelectBox.parameters = {
 };
 
 export const hugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <select
@@ -245,7 +244,6 @@ hugeSelectBox.parameters = {
 };
 
 export const invalidHugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <select
@@ -303,7 +301,6 @@ invalidHugeSelectBox.parameters = {
 };
 
 export const disabledHugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container variant="huge">
       <select
@@ -350,7 +347,6 @@ disabledHugeSelectBox.parameters = {
 };
 
 export const legacyHugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <select
@@ -395,7 +391,6 @@ legacyHugeSelectBox.parameters = {
 };
 
 export const legacyInvalidHugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <select
@@ -452,7 +447,6 @@ legacyInvalidHugeSelectBox.parameters = {
 };
 
 export const legacyDisabledHugeSelectBox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-huge-input-container>
       <select
