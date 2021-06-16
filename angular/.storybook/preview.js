@@ -30,6 +30,8 @@ export const parameters = {
     options: {},
     manual: false,
   },
+  viewMode: 'docs',
+  previewTabs: { 'storybook/docs/panel': { index: -1 } },
   options: {
     storySort: (a, b) =>
       a[1].kind === b[1].kind
