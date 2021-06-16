@@ -1,9 +1,6 @@
-// @ts-ignore prettier-ignore
-import {
-  moduleMetadata,
-  Meta,
-  componentWrapperDecorator,
-} from '@storybook/angular';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkOrderedListModule } from './sprk-ordered-list.module';
 import { SprkUnorderedListModule } from '../sprk-unordered-list/sprk-unordered-list.module';
 import { SprkOrderedListComponent } from '../sprk-ordered-list/sprk-ordered-list.component';

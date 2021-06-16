@@ -1,12 +1,9 @@
 import { SprkDropdownModule } from './sprk-dropdown.module';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
-// @ts-ignore prettier-ignore
-import {
-  moduleMetadata,
-  Meta,
-  componentWrapperDecorator,
-} from '@storybook/angular';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';

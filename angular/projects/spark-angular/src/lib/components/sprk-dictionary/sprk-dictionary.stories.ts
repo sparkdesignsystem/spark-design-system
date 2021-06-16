@@ -1,12 +1,9 @@
 import { SprkDictionaryModule } from './sprk-dictionary.module';
 import { SprkDictionaryComponent } from './sprk-dictionary.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-// @ts-ignore prettier-ignore
-import {
-  moduleMetadata,
-  Meta,
-  componentWrapperDecorator,
-} from '@storybook/angular';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 
 export default {
   title: 'Components/Dictionary',

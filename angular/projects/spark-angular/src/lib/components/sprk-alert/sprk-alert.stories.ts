@@ -1,12 +1,9 @@
 import { SprkAlertModule } from './sprk-alert.module';
 import { SprkAlertComponent } from './sprk-alert.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-// @ts-ignore prettier-ignore
-import {
-  moduleMetadata,
-  Meta,
-  componentWrapperDecorator,
-} from '@storybook/angular';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 export default {
   title: 'Components/Alert',
   component: SprkAlertComponent,

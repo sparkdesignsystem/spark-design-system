@@ -1,9 +1,6 @@
-// @ts-ignore prettier-ignore
-import {
-  moduleMetadata,
-  Meta,
-  componentWrapperDecorator,
-} from '@storybook/angular';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkLinkDirective } from './sprk-link.directive';
 import { SprkIconModule } from '../../components/sprk-icon/sprk-icon.module';
 import { SprkLinkDirectiveModule } from './sprk-link.module';

@@ -1,9 +1,6 @@
-// @ts-ignore prettier-ignore
-import {
-  moduleMetadata,
-  Meta,
-  componentWrapperDecorator,
-} from '@storybook/angular';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkTextareaModule } from '../../directives/inputs/sprk-textarea/sprk-textarea.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';

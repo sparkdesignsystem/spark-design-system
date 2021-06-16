@@ -9,12 +9,9 @@ import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sp
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
-// @ts-ignore prettier-ignore
-import {
-  moduleMetadata,
-  Meta,
-  componentWrapperDecorator,
-} from '@storybook/angular';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { FormsModule } from '@angular/forms';

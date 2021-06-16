@@ -2,12 +2,9 @@ import { SprkDividerDirective } from './sprk-divider.directive';
 import { SprkDividerDirectiveModule } from './sprk-divider.module';
 import { SprkDividerModule } from '../../components/sprk-divider/sprk-divider.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-// @ts-ignore prettier-ignore
-import {
-  moduleMetadata,
-  Meta,
-  componentWrapperDecorator,
-} from '@storybook/angular';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 export default {
   title: 'Components/Divider',
   component: SprkDividerDirective,

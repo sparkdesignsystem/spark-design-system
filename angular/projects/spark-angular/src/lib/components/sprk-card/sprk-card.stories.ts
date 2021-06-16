@@ -6,12 +6,9 @@ import { SprkCardContentDirective } from './directives/sprk-card-content/sprk-ca
 import { SprkCardMediaDirective } from './directives/sprk-card-media/sprk-card-media.directive';
 import { SprkCardHeaderDirective } from './directives/sprk-card-header/sprk-card-header.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-// @ts-ignore prettier-ignore
-import {
-  moduleMetadata,
-  Meta,
-  componentWrapperDecorator,
-} from '@storybook/angular';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 
 export default {
   title: 'Components/Card',

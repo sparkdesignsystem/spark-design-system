@@ -1,9 +1,6 @@
-// @ts-ignore prettier-ignore
-import {
-  moduleMetadata,
-  Meta,
-  componentWrapperDecorator,
-} from '@storybook/angular';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkTabsModule } from './sprk-tabs.module';
 import { SprkTabsPanelModule } from '../../directives/sprk-tabs/sprk-tabs-panel/sprk-tabs-panel.module';
 import { SprkTabsButtonModule } from '../../directives/sprk-tabs/sprk-tabs-button/sprk-tabs-button.module';
