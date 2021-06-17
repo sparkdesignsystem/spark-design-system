@@ -39,6 +39,10 @@ export const parameters = {
         : a[1].id.localeCompare(b[1].id, { numeric: true }),
   },
   docs: {
+    source: {
+      type: 'code',
+    },
+    inlineStories: true,
     theme: sparkTheme,
     container: ({ children, context }) => {
       const componentName = context.kind.split('/')[1];
@@ -100,3 +104,7 @@ export const parameters = {
     extractProps,
   },
 };
+
+// TODO: Watch this issue for an update for bug fix
+// that prevents first load going to doc page
+// https://github.com/storybookjs/storybook/issues/13128

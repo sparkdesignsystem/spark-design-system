@@ -25,6 +25,7 @@ export default {
       source: {
         type: 'code',
       },
+      inlineStories: false,
       description: {
         component: `
 ${markdownDocumentationLinkBuilder('icon')}
