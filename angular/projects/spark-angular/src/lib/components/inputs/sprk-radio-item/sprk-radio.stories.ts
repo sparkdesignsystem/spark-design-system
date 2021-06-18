@@ -115,7 +115,7 @@ export const defaultStory = () => ({
             for="radio-1"
             sprkRadioLabel
           >
-            Item 1
+            Radio Item 1
           </label>
        </sprk-radio-item>
        <sprk-radio-item>
@@ -133,7 +133,7 @@ export const defaultStory = () => ({
            for="radio-2"
            sprkRadioLabel
          >
-          Item 2
+          Radio Item 2
          </label>
        </sprk-radio-item>
        <sprk-radio-item>
@@ -151,7 +151,7 @@ export const defaultStory = () => ({
            for="radio-3"
            sprkRadioLabel
          >
-           Item 3
+           Radio Item 3
          </label>
        </sprk-radio-item>
      </fieldset>
@@ -197,7 +197,7 @@ export const defaultHelperText = () => ({
             for="invalid-radio-1"
             sprkRadioLabel
           >
-            Item 1
+            Radio Item 1
           </label>
         </sprk-radio-item>
         <sprk-radio-item>
@@ -215,7 +215,7 @@ export const defaultHelperText = () => ({
             for="invalid-radio-2"
             sprkRadioLabel
           >
-            Item 2
+            Radio Item 2
           </label>
         </sprk-radio-item>
         <sprk-radio-item>
@@ -233,7 +233,7 @@ export const defaultHelperText = () => ({
             for="invalid-radio-3"
             sprkRadioLabel
           >
-            Item 3
+            Radio Item 3
           </label>
         </sprk-radio-item>
       </fieldset>
@@ -281,7 +281,7 @@ export const invalidRadioButton = () => ({
             for="invalid-radio-1"
             sprkRadioLabel
           >
-            Item 1
+            Radio Item 1
           </label>
         </sprk-radio-item>
         <sprk-radio-item>
@@ -299,7 +299,7 @@ export const invalidRadioButton = () => ({
             for="invalid-radio-2"
             sprkRadioLabel
           >
-            Item 2
+            Radio Item 2
           </label>
         </sprk-radio-item>
         <sprk-radio-item>
@@ -317,7 +317,7 @@ export const invalidRadioButton = () => ({
             for="invalid-radio-3"
             sprkRadioLabel
           >
-            Item 3
+            Radio Item 3
           </label>
         </sprk-radio-item>
       </fieldset>
@@ -376,7 +376,7 @@ export const disabledRadioButton = () => ({
             sprkRadioLabel
             isDisabled="true"
           >
-            Item 1
+            Radio Item 1
           </label>
       </sprk-radio-item>
       <sprk-radio-item>
@@ -396,7 +396,7 @@ export const disabledRadioButton = () => ({
             sprkRadioLabel
             isDisabled="true"
           >
-            Item 2
+            Radio Item 2
           </label>
       </sprk-radio-item>
       <sprk-radio-item>
@@ -416,7 +416,7 @@ export const disabledRadioButton = () => ({
             sprkRadioLabel
             isDisabled="true"
           >
-            Item 3
+            Radio Item 3
           </label>
         </sprk-radio-item>
       </fieldset>
@@ -464,7 +464,7 @@ export const huge = () => ({
             sprkRadioLabel
             variant="huge"
           >
-            Item 1
+            Radio Item 1
           </label>
        </sprk-radio-item>
        <sprk-radio-item variant="huge">
@@ -484,7 +484,7 @@ export const huge = () => ({
            sprkRadioLabel
            variant="huge"
          >
-            Item 2
+            Radio Item 2
          </label>
        </sprk-radio-item>
        <sprk-radio-item variant="huge">
@@ -504,7 +504,7 @@ export const huge = () => ({
             sprkRadioLabel
             variant="huge"
           >
-            Item 3
+            Radio Item 3
           </label>
        </sprk-radio-item>
      </fieldset>
@@ -552,7 +552,7 @@ export const hugeHelperText = () => ({
             sprkRadioLabel
             variant="huge"
           >
-            Item 1
+            Radio Item 1
           </label>
         </sprk-radio-item>
         <sprk-radio-item variant="huge">
@@ -572,7 +572,7 @@ export const hugeHelperText = () => ({
             sprkRadioLabel
             variant="huge"
           >
-            Item 2
+            Radio Item 2
           </label>
         </sprk-radio-item>
         <sprk-radio-item variant="huge">
@@ -592,7 +592,7 @@ export const hugeHelperText = () => ({
             sprkRadioLabel
             variant="huge"
           >
-            Item 3
+            Radio Item 3
           </label>
         </sprk-radio-item>
       </fieldset>
@@ -642,7 +642,7 @@ export const hugeInvalid = () => ({
             sprkRadioLabel
             variant="huge"
           >
-            Item 1
+            Radio Item 1
           </label>
         </sprk-radio-item>
         <sprk-radio-item variant="huge">
@@ -662,7 +662,7 @@ export const hugeInvalid = () => ({
             sprkRadioLabel
             variant="huge"
           >
-            Item 2
+            Radio Item 2
           </label>
         </sprk-radio-item>
         <sprk-radio-item variant="huge">
@@ -682,7 +682,7 @@ export const hugeInvalid = () => ({
             sprkRadioLabel
             variant="huge"
           >
-            Item 3
+            Radio Item 3
           </label>
         </sprk-radio-item>
       </fieldset>
@@ -743,7 +743,7 @@ export const hugeDisabled = () => ({
             isDisabled="true"
             variant="huge"
           >
-            Item 1
+            Radio Item 1
           </label>
         </sprk-radio-item>
         <sprk-radio-item variant="huge">
@@ -765,7 +765,7 @@ export const hugeDisabled = () => ({
             isDisabled="true"
             variant="huge"
           >
-            Item 2
+            Radio Item 2
           </label>
         </sprk-radio-item>
         <sprk-radio-item variant="huge">
@@ -787,7 +787,7 @@ export const hugeDisabled = () => ({
             isDisabled="true"
             variant="huge"
           >
-            Item 3
+            Radio Item 3
           </label>
         </sprk-radio-item>
      </fieldset>
@@ -837,7 +837,7 @@ export const hugeLayoutTwo = () => ({
               sprkRadioLabel
               variant="huge"
             >
-              Item 1
+              Radio Item 1
             </label>
           </sprk-radio-item>
         </div>
@@ -859,7 +859,7 @@ export const hugeLayoutTwo = () => ({
               sprkRadioLabel
               variant="huge"
             >
-              Item 2
+              Radio Item 2
             </label>
           </sprk-radio-item>
         </div>
@@ -914,7 +914,7 @@ export const hugeLayoutFour = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 1
+                  Radio Item 1
                 </label>
               </sprk-radio-item>
             </div>
@@ -936,7 +936,7 @@ export const hugeLayoutFour = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 2
+                  Radio Item 2
                 </label>
               </sprk-radio-item>
             </div>
@@ -962,7 +962,7 @@ export const hugeLayoutFour = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 3
+                  Radio Item 3
                 </label>
               </sprk-radio-item>
             </div>
@@ -984,7 +984,7 @@ export const hugeLayoutFour = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 4
+                  Radio Item 4
                 </label>
               </sprk-radio-item>
             </div>
@@ -1041,7 +1041,7 @@ export const hugeLayoutFive = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 1
+                  Radio Item 1
                 </label>
               </sprk-radio-item>
             </div>
@@ -1063,7 +1063,7 @@ export const hugeLayoutFive = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 2
+                  Radio Item 2
                 </label>
               </sprk-radio-item>
             </div>
@@ -1089,7 +1089,7 @@ export const hugeLayoutFive = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 3
+                  Radio Item 3
                 </label>
               </sprk-radio-item>
             </div>
@@ -1111,7 +1111,7 @@ export const hugeLayoutFive = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 4
+                  Radio Item 4
                 </label>
               </sprk-radio-item>
             </div>
@@ -1137,7 +1137,7 @@ export const hugeLayoutFive = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 5
+                  Radio Item 5
                 </label>
               </sprk-radio-item>
             </div>
@@ -1194,7 +1194,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 1
+                  Radio Item 1
                 </label>
               </sprk-radio-item>
             </div>
@@ -1216,7 +1216,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 2
+                  Radio Item 2
                 </label>
               </sprk-radio-item>
             </div>
@@ -1242,7 +1242,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 3
+                  Radio Item 3
                 </label>
               </sprk-radio-item>
             </div>
@@ -1264,7 +1264,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 4
+                  Radio Item 4
                 </label>
               </sprk-radio-item>
             </div>
@@ -1290,7 +1290,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 5
+                  Radio Item 5
                 </label>
               </sprk-radio-item>
             </div>
@@ -1312,7 +1312,7 @@ export const hugeLayoutSix = () => ({
                   sprkRadioLabel
                   variant="huge"
                 >
-                  Item 6
+                  Radio Item 6
                 </label>
               </sprk-radio-item>
             </div>
@@ -1360,7 +1360,7 @@ export const legacyRadio = () => ({
           for="radio-1"
           sprkSelectionLabel
         >
-          Item 1
+          Radio Item 1
         </label>
       </sprk-selection-item-container>
       <sprk-selection-item-container>
@@ -1378,7 +1378,7 @@ export const legacyRadio = () => ({
           for="radio-2"
           sprkSelectionLabel
         >
-          Item 2
+          Radio Item 2
         </label>
       </sprk-selection-item-container>
       <sprk-selection-item-container>
@@ -1396,7 +1396,7 @@ export const legacyRadio = () => ({
           for="radio-3"
           sprkSelectionLabel
         >
-          Item 3
+          Radio Item 3
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>
@@ -1435,7 +1435,7 @@ export const legacyInvalidRadio = () => ({
           for="radio-1"
           sprkSelectionLabel
         >
-          Item 1
+          Radio Item 1
         </label>
       </sprk-selection-item-container>
       <sprk-selection-item-container>
@@ -1453,7 +1453,7 @@ export const legacyInvalidRadio = () => ({
           for="radio-2"
           sprkSelectionLabel
         >
-          Item 2
+          Radio Item 2
         </label>
       </sprk-selection-item-container>
       <sprk-selection-item-container>
@@ -1471,7 +1471,7 @@ export const legacyInvalidRadio = () => ({
           for="radio-3"
           sprkSelectionLabel
         >
-          Item 3
+          Radio Item 3
         </label>
       </sprk-selection-item-container>
       <span sprkFieldError>
@@ -1521,7 +1521,7 @@ export const legacyDisabledRadio = () => ({
           for="radio-1"
           sprkSelectionLabel
         >
-          Item 1
+          Radio Item 1
         </label>
       </sprk-selection-item-container>
       <sprk-selection-item-container>
@@ -1541,7 +1541,7 @@ export const legacyDisabledRadio = () => ({
           for="radio-2"
           sprkSelectionLabel
         >
-          Item 2
+          Radio Item 2
         </label>
       </sprk-selection-item-container>
       <sprk-selection-item-container>
@@ -1561,7 +1561,7 @@ export const legacyDisabledRadio = () => ({
           for="radio-3"
           sprkSelectionLabel
         >
-          Item 3
+          Radio Item 3
         </label>
       </sprk-selection-item-container>
     </sprk-selection-container>

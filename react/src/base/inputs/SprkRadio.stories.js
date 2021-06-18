@@ -47,7 +47,7 @@ and <code>SprkRadioItem</code> components.
 export const defaultStory = () => (
   <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
@@ -65,7 +65,7 @@ defaultStory.story = {
 export const defaultHelperText = () => (
   <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
@@ -87,7 +87,7 @@ defaultHelperText.story = {
 export const invalidRadioButton = () => (
   <SprkRadioGroup>
     <SprkFieldset ariaDescribedBy="invalid-radio">
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
@@ -113,7 +113,7 @@ invalidRadioButton.story = {
 export const disabledRadioButton = () => (
   <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend isDisabled>Group Label Name</SprkLegend>
+      <SprkLegend isDisabled>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio" isDisabled>
         Radio Item 1
       </SprkRadioItem>
@@ -137,7 +137,7 @@ disabledRadioButton.story = {
 export const huge = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
@@ -161,7 +161,7 @@ huge.story = {
 export const hugeHelperText = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset ariaDescribedBy="huge-radio-helper-text">
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
@@ -188,7 +188,7 @@ hugeHelperText.story = {
 export const hugeInvalid = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset ariaDescribedBy="invalid-huge-radio">
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
@@ -220,7 +220,7 @@ hugeInvalid.story = {
 export const hugeDisabled = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend isDisabled>Group Label Name</SprkLegend>
+      <SprkLegend isDisabled>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 1
       </SprkRadioItem>
@@ -244,7 +244,7 @@ hugeDisabled.story = {
 export const hugeLayoutTwo = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -275,7 +275,7 @@ hugeLayoutTwo.story = {
 export const hugeLayoutFour = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -319,7 +319,7 @@ hugeLayoutFour.story = {
 export const hugeLayoutFive = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -381,7 +381,7 @@ hugeLayoutFive.story = {
 export const hugeLayoutSix = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
