@@ -10,6 +10,7 @@ import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStac
 import SprkFieldError from './SprkFieldError/SprkFieldError';
 import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import SprkCheckboxRecreate from './SprkCheckboxRecreate';
 
 export default {
   title: 'Components/Input/Checkbox',
@@ -44,6 +45,8 @@ and <code>SprkLegend</code> to group together all related choices.
     `,
   },
 };
+export const recreate = () => <SprkCheckboxRecreate />;
+
 export const defaultStory = () => (
   <SprkCheckboxGroup>
     <SprkFieldset>
