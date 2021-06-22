@@ -247,7 +247,7 @@ export const deprecated = () => ({
       idString="link-5"
       analyticsString="object.action.event"
     >
-      Deprecated Web Component Link
+      Deprecated Component Link
     </sprk-link>
   `,
 });

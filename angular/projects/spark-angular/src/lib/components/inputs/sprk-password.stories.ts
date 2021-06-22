@@ -139,7 +139,7 @@ export const invalidPasswordInput = () => ({
         <input
           type="checkbox"
           sprkCheckboxInput
-          id="show-password"
+          id="show-password-1"
         />
         <label for="show-password" sprkCheckboxLabel>Show Password</label>
       </sprk-checkbox-item>
@@ -186,10 +186,10 @@ export const disabledPasswordInput = () => ({
         <input
           type="checkbox"
           sprkCheckboxInput
-          id="show-password"
+          id="show-password-2"
           disabled
         />
-        <label isDisabled="true" for="show-password" sprkCheckboxLabel>Show Password</label>
+        <label isDisabled="true" for="show-password-2" sprkCheckboxLabel>Show Password</label>
       </sprk-checkbox-item>
     </sprk-input-container>
   `,
@@ -219,9 +219,9 @@ export const legacy = () => ({
         <input
           type="checkbox"
           sprkSelectionInput
-          id="show-password"
+          id="show-password-3"
         />
-        <label for="show-password" sprkSelectionLabel>Show Password</label>
+        <label for="show-password-3" sprkSelectionLabel>Show Password</label>
       </sprk-selection-item-container>
     </sprk-input-container>
   `,
@@ -256,9 +256,9 @@ export const legacyInvalidPasswordInput = () => ({
         <input
           type="checkbox"
           sprkSelectionInput
-          id="show-password"
+          id="show-password-4"
         />
-        <label for="show-password" sprkSelectionLabel>Show Password</label>
+        <label for="show-password-4" sprkSelectionLabel>Show Password</label>
       </sprk-selection-item-container>
       <span sprkFieldError>
         <sprk-icon
@@ -296,10 +296,10 @@ export const legacyDisabledPasswordInput = () => ({
         <input
           type="checkbox"
           sprkSelectionInput
-          id="show-password"
+          id="show-password-5"
           disabled
         />
-        <label class="sprk-b-Label--disabled" for="show-password" sprkSelectionLabel>Show Password</label>
+        <label class="sprk-b-Label--disabled" for="show-password-5" sprkSelectionLabel>Show Password</label>
       </sprk-selection-item-container>
     </sprk-input-container>
   `,

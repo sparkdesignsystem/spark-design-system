@@ -61,7 +61,7 @@ export const unordered = () => ({
 });
 
 unordered.parameters = {
-  jest: ['sprk-unordered-list', 'sprk-list-item'],
+  jest: ['sprk-unordered-list.component', 'sprk-list-item.component'],
 };
 
 export const ordered = () => ({
@@ -81,7 +81,7 @@ export const ordered = () => ({
 });
 
 ordered.parameters = {
-  jest: ['sprk-ordered-list', 'sprk-list-item'],
+  jest: ['sprk-ordered-list.component', 'sprk-list-item.component'],
 };
 
 export const indented = () => ({
@@ -127,5 +127,5 @@ export const bare = () => ({
 });
 
 bare.parameters = {
-  jest: ['sprk-unordered-list', 'sprk-list-item'],
+  jest: ['sprk-unordered-list.component', 'sprk-list-item.component'],
 };

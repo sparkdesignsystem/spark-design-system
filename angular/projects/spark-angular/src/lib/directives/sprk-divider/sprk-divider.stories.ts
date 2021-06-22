@@ -35,7 +35,7 @@ export const defaultStory = () => ({
 defaultStory.storyName = 'Default';
 
 defaultStory.parameters = {
-  jest: ['sprk-divider-column.directive'],
+  jest: ['sprk-divider.directive'],
 };
 
 export const deprecated = () => ({
@@ -47,5 +47,5 @@ export const deprecated = () => ({
 deprecated.storyName = 'Component (Deprecated)';
 
 deprecated.parameters = {
-  jest: ['sprk-divider-column.directive'],
+  jest: ['sprk-divider.directive'],
 };
