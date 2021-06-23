@@ -79,14 +79,17 @@ export default {
   },
   parameters: {
     docs: {
+      source: {
+        type: 'code',
+      },
       description: {
         component: `
 ${markdownDocumentationLinkBuilder('input')}
 - To update to the new version, replace checkboxes with our
-new implementation using <code>sprk-checkbox-group</code>
-and <code>sprk-checkbox-item</code> components.
-- Use <sprk-checkbox-group>, sprkFieldset directive,
-and sprkLegend directive to group together all related choices.
+new implementation using \`<sprk-checkbox-group>\`
+and \`<sprk-checkbox-item>\` components.
+- Use the \`<sprk-checkbox-group>\`, \`sprkFieldset\` directive,
+and \`sprkLegend\` directive to group together all related choices.
     `,
       },
       iframeHeight: 200,

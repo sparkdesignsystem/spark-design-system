@@ -86,10 +86,10 @@ export default {
         component: `
 ${markdownDocumentationLinkBuilder('input')}
 - To update to the new version, replace radio with our
-new implementation using <code>sprk-radio-group</code>
-and <code>sprk-radio-item</code> components.
-- Use <sprk-radio-group>, sprkFieldset directive,
-and sprkLegend directive to group together all related choices.
+new implementation using \`<sprk-radio-group>\`
+and \`<sprk-radio-item>\` components.
+- Use the \`<sprk-radio-group>\`, \`sprkFieldset\` directive,
+and \`sprkLegend\` directive to group together all related choices.
     `,
       },
       iframeHeight: 200,

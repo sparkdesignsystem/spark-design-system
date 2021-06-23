@@ -7,7 +7,7 @@ import '!style-loader!css-loader!sass-loader!../../storybook-utilities/storybook
 import '../../storybook-utilities/icon-utilities/icon-loader';
 import { setCompodocJson, extractProps } from '@storybook/addon-docs/angular';
 import docJson from '../documentation.json';
-import { DocsContainer } from '@storybook/addon-docs/blocks';
+import { DocsContainer } from '@storybook/addon-docs';
 import SprkTable from '../../react/src/base/tables/SprkTable';
 import { configClassModifierJsonProcessor } from '../../storybook-utilities/configClassModifierJsonProcessor';
 import AdditionalInputInfo from '../../storybook-utilities/components/AdditionalInputInfo';
