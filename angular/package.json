@@ -60,7 +60,7 @@
     "@storybook/addon-google-analytics": "^6.2.9",
     "@storybook/addon-jest": "^6.2.9",
     "@storybook/addons": "^6.2.9",
-    "@storybook/angular": "^6.2.9",
+    "@storybook/angular": "^6.3.0",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/theming": "^6.2.9",
     "@types/jest": "^25.2.3",
