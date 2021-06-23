@@ -7,4 +7,7 @@ module.exports = {
     '@storybook/addon-google-analytics',
   ],
   stories: ['../projects/spark-angular/src/lib/**/*.stories.ts'],
+  features: {
+    postcss: false,
+  },
 };
