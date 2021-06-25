@@ -1,6 +1,6 @@
 module.exports = {
   addons: [
-    '@storybook/addon-docs/preset',
+    '@storybook/addon-docs',
     '@storybook/preset-scss',
     '@storybook/addon-a11y',
     '@storybook/addon-jest',
