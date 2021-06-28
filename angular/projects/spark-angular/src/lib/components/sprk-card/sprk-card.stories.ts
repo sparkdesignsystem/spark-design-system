@@ -17,12 +17,15 @@ export default {
     moduleMetadata({
       imports: [
         SprkCardModule,
-        RouterModule.forRoot([
-          {
-            path: 'iframe.html',
-            component: SprkCardComponent,
-          },
-        ]),
+        RouterModule.forRoot(
+          [
+            {
+              path: 'iframe.html',
+              component: SprkCardComponent,
+            },
+          ],
+          { relativeLinkResolution: 'legacy' },
+        ),
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),

@@ -62,7 +62,7 @@
       "prefix": "sprk",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/spark-angular/tsconfig.lib.json",
             "project": "projects/spark-angular/ng-package.json"

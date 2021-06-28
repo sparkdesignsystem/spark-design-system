@@ -14,12 +14,15 @@ export default {
     moduleMetadata({
       imports: [
         SprkPromoModule,
-        RouterModule.forRoot([
-          {
-            path: 'iframe.html',
-            component: SprkPromoComponent,
-          },
-        ]),
+        RouterModule.forRoot(
+          [
+            {
+              path: 'iframe.html',
+              component: SprkPromoComponent,
+            },
+          ],
+          { relativeLinkResolution: 'legacy' },
+        ),
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),

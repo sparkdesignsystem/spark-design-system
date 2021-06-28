@@ -14,12 +14,15 @@ export default {
     moduleMetadata({
       imports: [
         SprkHighlightBoardModule,
-        RouterModule.forRoot([
-          {
-            path: 'iframe.html',
-            component: SprkHighlightBoardComponent,
-          },
-        ]),
+        RouterModule.forRoot(
+          [
+            {
+              path: 'iframe.html',
+              component: SprkHighlightBoardComponent,
+            },
+          ],
+          { relativeLinkResolution: 'legacy' },
+        ),
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),
