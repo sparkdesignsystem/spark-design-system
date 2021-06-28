@@ -26,6 +26,7 @@
     "@sparkdesignsystem/spark-styles": "^3.0.0",
     "focus-visible": "5.0.2",
     "lodash": "^4.17.21",
-    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9"
+    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9",
+    "tslib": "^2.0.0"
   }
 }
