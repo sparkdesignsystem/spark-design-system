@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/sparkdesignsystem/spark-design-system",
   "devDependencies": {
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
     "style-dictionary": "2.10.1"
   },
   "publishConfig": {
