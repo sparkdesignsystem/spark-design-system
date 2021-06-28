@@ -38,7 +38,6 @@
     "focus-visible": "5.0.2",
     "rxjs": "~6.5.4",
     "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9",
-    "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -77,6 +76,7 @@
     "sassdoc": "^2.7.1",
     "style-loader": "^0.23.1",
     "ts-node": "~7.0.0",
+    "tslib": "^2.3.0",
     "tslint": "~5.15.0",
     "typescript": "3.6.4",
     "whatwg-fetch": "^3.0.0"
