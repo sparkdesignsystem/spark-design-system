@@ -1,12 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
-import {
-  SprkUnorderedListComponent
-} from '../sprk-unordered-list/sprk-unordered-list.component';
-import {
-  SprkListItemComponent
-} from '../sprk-list-item/sprk-list-item.component';
+import { SprkUnorderedListComponent } from '../sprk-unordered-list/sprk-unordered-list.component';
+import { SprkListItemComponent } from '../sprk-list-item/sprk-list-item.component';
 import { SprkPaginationComponent } from './sprk-pagination.component';
 
 describe('SprkPaginationComponent', () => {
@@ -14,17 +10,19 @@ describe('SprkPaginationComponent', () => {
   let fixture: ComponentFixture<SprkPaginationComponent>;
   let element;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkPaginationComponent,
-        SprkUnorderedListComponent,
-        SprkIconComponent,
-        SprkLinkDirective,
-        SprkListItemComponent
-      ]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkPaginationComponent,
+          SprkUnorderedListComponent,
+          SprkIconComponent,
+          SprkLinkDirective,
+          SprkListItemComponent,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkPaginationComponent);
@@ -68,10 +66,10 @@ describe('SprkPaginationComponent', () => {
     component.analyticsStringLinkPrev = 'previous';
     fixture.detectChanges();
     expect(
-      element.querySelector('.sprk-b-Link').hasAttribute('data-analytics')
+      element.querySelector('.sprk-b-Link').hasAttribute('data-analytics'),
     ).toEqual(true);
     expect(
-      element.querySelector('.sprk-b-Link').getAttribute('data-analytics')
+      element.querySelector('.sprk-b-Link').getAttribute('data-analytics'),
     ).toEqual('previous');
   });
 
@@ -83,13 +81,13 @@ describe('SprkPaginationComponent', () => {
     expect(item.getAttribute('data-analytics')).toEqual('foo');
   });
 
-  it('should emit pageClick when an individual page is clicked', done => {
+  it('should emit pageClick when an individual page is clicked', (done) => {
     let called = false;
     component.currentPage = 2;
     component.totalItems = 3;
     component.itemsPerPage = 1;
     fixture.detectChanges();
-    component.pageClick.subscribe(g => {
+    component.pageClick.subscribe((g) => {
       called = true;
       done();
     });
@@ -99,7 +97,7 @@ describe('SprkPaginationComponent', () => {
     expect(called).toEqual(true);
   });
 
-  it('should emit previousClick when prev link is clicked', done => {
+  it('should emit previousClick when prev link is clicked', (done) => {
     let called = false;
     const expectedPage = 2;
     const expectedNewPage = 1;
@@ -110,7 +108,7 @@ describe('SprkPaginationComponent', () => {
     component.totalItems = 3;
     component.itemsPerPage = 1;
 
-    component.previousClick.subscribe(g => {
+    component.previousClick.subscribe((g) => {
       called = true;
       actualPage = g.page;
       actualNewPage = g.newPage;
@@ -127,7 +125,7 @@ describe('SprkPaginationComponent', () => {
     expect(actualNewPage).toEqual(expectedNewPage);
   });
 
-  it('should emit nextClick when next link is clicked', done => {
+  it('should emit nextClick when next link is clicked', (done) => {
     let called = false;
     const expectedPage = 2;
     const expectedNewPage = 3;
@@ -138,7 +136,7 @@ describe('SprkPaginationComponent', () => {
     component.totalItems = 3;
     component.itemsPerPage = 1;
 
-    component.nextClick.subscribe(g => {
+    component.nextClick.subscribe((g) => {
       called = true;
       actualPage = g.page;
       actualNewPage = g.newPage;
@@ -160,7 +158,7 @@ describe('SprkPaginationComponent', () => {
     component.idString = testString;
     fixture.detectChanges();
     expect(element.querySelector('nav').getAttribute('data-id')).toEqual(
-      testString
+      testString,
     );
   });
 
@@ -178,11 +176,13 @@ describe('SprkPaginationComponent', () => {
 
     // expect 1 page
     expect(element.querySelectorAll('.sprk-c-Pagination__link').length).toEqual(
-      1
+      1,
     );
     // expect 1 selected page with text 1
     expect(
-      element.querySelector('.sprk-c-Pagination__link--current').textContent.trim()
+      element
+        .querySelector('.sprk-c-Pagination__link--current')
+        .textContent.trim(),
     ).toEqual('1');
   });
 
@@ -214,15 +214,15 @@ describe('SprkPaginationComponent', () => {
     fixture.detectChanges();
 
     expect(
-      element.querySelectorAll('a.sprk-c-Pagination__icon').length
+      element.querySelectorAll('a.sprk-c-Pagination__icon').length,
     ).toEqual(2); // 2 chevrons
     expect(
-      element.querySelectorAll('a.sprk-c-Pagination__link').length
+      element.querySelectorAll('a.sprk-c-Pagination__link').length,
     ).toEqual(3); // 3 pages
     expect(
       Array.from(element.querySelectorAll('a')).filter(
-        (x: HTMLLIElement) => x.textContent === '...'
-      ).length
+        (x: HTMLLIElement) => x.textContent === '...',
+      ).length,
     ).toEqual(0); // 0 chevrons
   });
 
@@ -235,15 +235,15 @@ describe('SprkPaginationComponent', () => {
     fixture.detectChanges();
 
     expect(
-      element.querySelectorAll('a.sprk-c-Pagination__icon').length
+      element.querySelectorAll('a.sprk-c-Pagination__icon').length,
     ).toEqual(2); // 2 chevrons
     expect(
-      element.querySelectorAll('a.sprk-c-Pagination__link').length
+      element.querySelectorAll('a.sprk-c-Pagination__link').length,
     ).toEqual(3); // 3 pages
     expect(
       Array.from(element.querySelectorAll('li')).filter(
-        (x: HTMLLIElement) => x.textContent.trim() === str
-      ).length
+        (x: HTMLLIElement) => x.textContent.trim() === str,
+      ).length,
     ).toEqual(2); // 2 ellipses
 
     // < 1 ... 4 5 >
@@ -252,8 +252,8 @@ describe('SprkPaginationComponent', () => {
     fixture.detectChanges();
     expect(
       Array.from(element.querySelectorAll('li')).filter(
-        (x: HTMLLIElement) => x.textContent.trim() === str
-      ).length
+        (x: HTMLLIElement) => x.textContent.trim() === str,
+      ).length,
     ).toEqual(1); // 1 ellipsis
   });
 
@@ -287,15 +287,15 @@ describe('SprkPaginationComponent', () => {
 
     const str = '...';
     expect(
-      element.querySelectorAll('a.sprk-c-Pagination__icon').length
+      element.querySelectorAll('a.sprk-c-Pagination__icon').length,
     ).toEqual(2); // 2 chevrons
     expect(
-      element.querySelectorAll('a.sprk-c-Pagination__link').length
+      element.querySelectorAll('a.sprk-c-Pagination__link').length,
     ).toEqual(3); // 3 pages
     expect(
       Array.from(element.querySelectorAll('li')).filter(
-        (x: HTMLLIElement) => x.textContent.trim() === str
-      ).length
+        (x: HTMLLIElement) => x.textContent.trim() === str,
+      ).length,
     ).toEqual(2); // 2 ellipses
 
     // < 1 ... 4 5 >
@@ -303,8 +303,8 @@ describe('SprkPaginationComponent', () => {
     fixture.detectChanges();
     expect(
       Array.from(element.querySelectorAll('li')).filter(
-        (x: HTMLLIElement) => x.textContent.trim() === str
-      ).length
+        (x: HTMLLIElement) => x.textContent.trim() === str,
+      ).length,
     ).toEqual(1); // 1 ellipsis
   });
 
@@ -317,15 +317,15 @@ describe('SprkPaginationComponent', () => {
     fixture.detectChanges();
 
     expect(
-      element.querySelectorAll('a.sprk-c-Pagination__icon').length
+      element.querySelectorAll('a.sprk-c-Pagination__icon').length,
     ).toEqual(2); // 2 chevrons
     expect(
-      element.querySelectorAll('a.sprk-c-Pagination__link').length
+      element.querySelectorAll('a.sprk-c-Pagination__link').length,
     ).toEqual(3); // 3 pages
     expect(
       Array.from(element.querySelectorAll('a')).filter(
-        (x: HTMLLIElement) => x.textContent.trim() === str
-      ).length
+        (x: HTMLLIElement) => x.textContent.trim() === str,
+      ).length,
     ).toEqual(0); // 0 chevrons
   });
 

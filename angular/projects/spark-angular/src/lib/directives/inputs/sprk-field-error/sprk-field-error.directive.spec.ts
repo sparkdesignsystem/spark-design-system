@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkFieldErrorDirective } from './sprk-field-error.directive';
 
 @Component({
@@ -17,16 +17,18 @@ describe('Spark Field Error Directive', () => {
   let fixture: ComponentFixture<TestComponent>;
   let spanElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkFieldErrorDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkFieldErrorDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    spanElement = fixture.nativeElement.querySelector('span');
-  }));
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      spanElement = fixture.nativeElement.querySelector('span');
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

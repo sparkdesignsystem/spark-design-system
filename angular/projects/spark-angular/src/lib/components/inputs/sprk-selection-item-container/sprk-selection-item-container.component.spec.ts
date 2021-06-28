@@ -1,6 +1,6 @@
 /* global document describe it */
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkSelectionInputDirective } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.directive';
 import { SprkSelectionLabelDirective } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.directive';
@@ -13,7 +13,7 @@ import { SprkSelectionItemContainerComponent } from './sprk-selection-item-conta
       <input type="checkbox" sprkSelectionInput />
       <label sprkSelectionLabel>Item 1</label>
     </sprk-selection-item-container>
-  `
+  `,
 })
 class TestComponent1 {}
 
@@ -24,7 +24,7 @@ class TestComponent1 {}
       <input type="radio" sprkSelectionInput />
       <label sprkSelectionLabel for="item-1">Item 1</label>
     </sprk-selection-item-container>
-  `
+  `,
 })
 class TestComponent2 {}
 
@@ -35,7 +35,7 @@ class TestComponent2 {}
       <input id="item-1" type="checkbox" sprkSelectionInput />
       <label for="item-test" sprkSelectionLabel>Item 1</label>
     </sprk-selection-item-container>
-  `
+  `,
 })
 class TestComponent3 {}
 
@@ -46,7 +46,7 @@ class TestComponent3 {}
       <input id="item-1" type="checkbox" sprkSelectionInput />
       <label for="item-1" sprkSelectionLabel>Item 1</label>
     </sprk-selection-item-container>
-  `
+  `,
 })
 class TestComponent4 {}
 
@@ -66,18 +66,10 @@ describe('SprkSelectionItemContainerComponent', () => {
   let fixture3: ComponentFixture<TestComponent3>;
   let fixture4: ComponentFixture<TestComponent4>;
 
-  let selectionItemContainerFixture1: ComponentFixture<
-    SprkSelectionItemContainerComponent
-  >;
-  let selectionItemContainerFixture2: ComponentFixture<
-    SprkSelectionItemContainerComponent
-  >;
-  let selectionItemContainerFixture3: ComponentFixture<
-    SprkSelectionItemContainerComponent
-  >;
-  let selectionItemContainerFixture4: ComponentFixture<
-    SprkSelectionItemContainerComponent
-  >;
+  let selectionItemContainerFixture1: ComponentFixture<SprkSelectionItemContainerComponent>;
+  let selectionItemContainerFixture2: ComponentFixture<SprkSelectionItemContainerComponent>;
+  let selectionItemContainerFixture3: ComponentFixture<SprkSelectionItemContainerComponent>;
+  let selectionItemContainerFixture4: ComponentFixture<SprkSelectionItemContainerComponent>;
 
   let selectionItemContainerElement1: HTMLElement;
   let selectionItemContainerElement2: HTMLElement;
@@ -94,19 +86,21 @@ describe('SprkSelectionItemContainerComponent', () => {
   let selectionInputElement3: HTMLElement;
   let selectionInputElement4: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkSelectionLabelDirective,
-        SprkSelectionInputDirective,
-        SprkSelectionItemContainerComponent,
-        TestComponent1,
-        TestComponent2,
-        TestComponent3,
-        TestComponent4,
-      ]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkSelectionLabelDirective,
+          SprkSelectionInputDirective,
+          SprkSelectionItemContainerComponent,
+          TestComponent1,
+          TestComponent2,
+          TestComponent3,
+          TestComponent4,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   let spy;
   beforeEach(() => {
@@ -123,16 +117,16 @@ describe('SprkSelectionItemContainerComponent', () => {
     component4 = fixture4.componentInstance;
 
     selectionItemContainerFixture1 = TestBed.createComponent(
-      SprkSelectionItemContainerComponent
+      SprkSelectionItemContainerComponent,
     );
     selectionItemContainerFixture2 = TestBed.createComponent(
-      SprkSelectionItemContainerComponent
+      SprkSelectionItemContainerComponent,
     );
     selectionItemContainerFixture3 = TestBed.createComponent(
-      SprkSelectionItemContainerComponent
+      SprkSelectionItemContainerComponent,
     );
     selectionItemContainerFixture4 = TestBed.createComponent(
-      SprkSelectionItemContainerComponent
+      SprkSelectionItemContainerComponent,
     );
 
     selectionItemContainerComponent1 =
@@ -155,16 +149,16 @@ describe('SprkSelectionItemContainerComponent', () => {
     fixture4.detectChanges();
 
     selectionItemContainerElement1 = selectionItemContainerFixture1.nativeElement.querySelector(
-      'div'
+      'div',
     );
     selectionItemContainerElement2 = selectionItemContainerFixture2.nativeElement.querySelector(
-      'div'
+      'div',
     );
     selectionItemContainerElement3 = selectionItemContainerFixture3.nativeElement.querySelector(
-      'div'
+      'div',
     );
     selectionItemContainerElement4 = selectionItemContainerFixture4.nativeElement.querySelector(
-      'div'
+      'div',
     );
 
     selectionInputElement1 = fixture1.debugElement.query(By.css('input'))
@@ -200,7 +194,7 @@ describe('SprkSelectionItemContainerComponent', () => {
     selectionItemContainerComponent1.additionalClasses = 'sprk-u-man';
     selectionItemContainerFixture1.detectChanges();
     expect(selectionItemContainerElement1.classList.toString()).toEqual(
-      'sprk-b-SelectionContainer sprk-u-man'
+      'sprk-b-SelectionContainer sprk-u-man',
     );
   });
 
@@ -211,33 +205,39 @@ describe('SprkSelectionItemContainerComponent', () => {
 
   it('should set the for attr of the label and the id of the input when they are not supplied', () => {
     expect(selectionLabelElement1.getAttribute('for')).toEqual(
-      selectionInputElement1.id
+      selectionInputElement1.id,
     );
   });
 
   it('should add the checkbox classes to the input and the label if the type is checkbox', () => {
-    expect(selectionInputElement1.classList.contains('sprk-b-Checkbox__input'))
-      .toBe(true);
-    expect(selectionLabelElement1.classList.contains('sprk-b-Checkbox__label'))
-      .toBe(true);
+    expect(
+      selectionInputElement1.classList.contains('sprk-b-Checkbox__input'),
+    ).toBe(true);
+    expect(
+      selectionLabelElement1.classList.contains('sprk-b-Checkbox__label'),
+    ).toBe(true);
   });
 
   it('should add the radio classes to the input and the label if the type is radio', () => {
-    expect(selectionInputElement2.classList.contains('sprk-b-Radio__input'))
-      .toBe(true);
-    expect(selectionLabelElement2.classList.contains('sprk-b-Radio__label'))
-      .toBe(true);
+    expect(
+      selectionInputElement2.classList.contains('sprk-b-Radio__input'),
+    ).toBe(true);
+    expect(
+      selectionLabelElement2.classList.contains('sprk-b-Radio__label'),
+    ).toBe(true);
   });
 
-  it('should console.warn if for and id both exist but don\'t match', () => {
-    expect(console.warn).toHaveBeenNthCalledWith(2,
-      `Spark Design System Warning - The value of 'for' (item-test) on the label should match the 'id' on the input (item-1).`
+  it("should console.warn if for and id both exist but don't match", () => {
+    expect(console.warn).toHaveBeenNthCalledWith(
+      2,
+      `Spark Design System Warning - The value of 'for' (item-test) on the label should match the 'id' on the input (item-1).`,
     );
   });
 
   it('should console.warn if for exists but the id does not', () => {
-    expect(console.warn).toHaveBeenNthCalledWith(1,
-      'Spark Design System Warning - The value of \'for\' (item-1) on the label expects a matching \'id\' on the input.'
+    expect(console.warn).toHaveBeenNthCalledWith(
+      1,
+      "Spark Design System Warning - The value of 'for' (item-1) on the label expects a matching 'id' on the input.",
     );
   });
 });

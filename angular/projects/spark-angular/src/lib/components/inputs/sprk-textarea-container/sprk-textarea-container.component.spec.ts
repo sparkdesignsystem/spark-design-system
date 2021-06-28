@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
@@ -101,20 +101,22 @@ describe('SprkTextareaContainerComponent', () => {
   let inputElement4: HTMLElement;
   let errorElement4: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkTextareaContainerComponent,
-        SprkLabelDirective,
-        SprkTextareaDirective,
-        SprkFieldErrorDirective,
-        TestComponent1,
-        TestComponent2,
-        TestComponent3,
-        TestComponent4,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkTextareaContainerComponent,
+          SprkLabelDirective,
+          SprkTextareaDirective,
+          SprkFieldErrorDirective,
+          TestComponent1,
+          TestComponent2,
+          TestComponent3,
+          TestComponent4,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     testFixture1 = TestBed.createComponent(TestComponent1);

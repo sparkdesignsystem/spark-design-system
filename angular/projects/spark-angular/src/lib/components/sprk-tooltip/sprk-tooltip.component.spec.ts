@@ -1,5 +1,5 @@
 /* global document beforeEach afterEach describe it window */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkTooltipComponent } from './sprk-tooltip.component';
 import { Component } from '@angular/core';
@@ -31,17 +31,19 @@ describe('SprkTooltipComponent', () => {
   let wrappedTriggerElement;
 
   let spy;
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkTooltipComponent,
-        SprkIconComponent,
-        WrappedTooltipComponent,
-      ],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkTooltipComponent,
+          SprkIconComponent,
+          WrappedTooltipComponent,
+        ],
+      }).compileComponents();
 
-    spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
-  }));
+      spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkTooltipComponent);

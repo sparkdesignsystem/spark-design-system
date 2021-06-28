@@ -1,4 +1,4 @@
-import { TestBed, ComponentFixture, async } from '@angular/core/testing';
+import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import {
   isUpPressed,
@@ -21,11 +21,13 @@ describe('keypress', () => {
   let component: Test1Component;
   let componentFixture: ComponentFixture<Test1Component>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [Test1Component],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [Test1Component],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     componentFixture = TestBed.createComponent(Test1Component);

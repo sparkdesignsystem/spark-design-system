@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
 import { SprkAutocompleteResultsDirective } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
@@ -62,19 +62,21 @@ describe('SprkAutocompleteComponent', () => {
   let dynamicTestFixture;
   let dynamicTestAutocomplete;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkAutocompleteComponent,
-        WrappedAutocompleteComponent,
-        SprkAutocompleteInputContainerDirective,
-        SprkAutocompleteResultsDirective,
-        SprkAutocompleteResultDirective,
-        SprkInputDirective,
-        DynamicComponent,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkAutocompleteComponent,
+          WrappedAutocompleteComponent,
+          SprkAutocompleteInputContainerDirective,
+          SprkAutocompleteResultsDirective,
+          SprkAutocompleteResultDirective,
+          SprkInputDirective,
+          DynamicComponent,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   let spy;
   beforeEach(() => {

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkCarouselItemComponent } from './sprk-carousel-item.component';
 
 describe('SprkCarouselItemComponent', () => {
@@ -6,11 +6,13 @@ describe('SprkCarouselItemComponent', () => {
   let fixture: ComponentFixture<SprkCarouselItemComponent>;
   let carouselElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkCarouselItemComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkCarouselItemComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkCarouselItemComponent);

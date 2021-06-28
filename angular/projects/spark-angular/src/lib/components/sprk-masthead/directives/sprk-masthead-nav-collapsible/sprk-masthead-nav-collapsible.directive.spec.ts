@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkMastheadNavCollapsibleDirective } from './sprk-masthead-nav-collapsible.directive';
 
 @Component({
@@ -24,17 +24,19 @@ describe('SprkMastheadNavCollapsibleDirective', () => {
   let el: HTMLElement;
   let el2: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkMastheadNavCollapsibleDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkMastheadNavCollapsibleDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    el = fixture.nativeElement.querySelectorAll('nav')[0];
-    el2 = fixture.nativeElement.querySelectorAll('nav')[1];
-  }));
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      el = fixture.nativeElement.querySelectorAll('nav')[0];
+      el2 = fixture.nativeElement.querySelectorAll('nav')[1];
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkAutocompleteInputContainerDirective } from './sprk-autocomplete-input-container.directive';
 
 @Component({
@@ -14,18 +14,20 @@ describe('Spark Autocomplete Input Container Directive', () => {
   let element: HTMLElement;
   let element2: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkAutocompleteInputContainerDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkAutocompleteInputContainerDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelectorAll('div')[0];
-    element2 = fixture.nativeElement.querySelectorAll('div')[1];
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
+      element = fixture.nativeElement.querySelectorAll('div')[0];
+      element2 = fixture.nativeElement.querySelectorAll('div')[1];
 
-    fixture.detectChanges();
-  }));
+      fixture.detectChanges();
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

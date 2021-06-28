@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkStepperComponent } from './sprk-stepper.component';
 
 describe('SprkStepperComponent', () => {
@@ -6,11 +6,13 @@ describe('SprkStepperComponent', () => {
   let fixture: ComponentFixture<SprkStepperComponent>;
   let stepperElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkStepperComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkStepperComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkStepperComponent);
@@ -39,7 +41,7 @@ describe('SprkStepperComponent', () => {
     component.hasDarkBg = true;
     fixture.detectChanges();
     expect(
-      stepperElement.classList.contains('sprk-c-Stepper--has-dark-bg')
+      stepperElement.classList.contains('sprk-c-Stepper--has-dark-bg'),
     ).toEqual(true);
   });
 
@@ -47,7 +49,7 @@ describe('SprkStepperComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-c-Stepper sprk-u-pam sprk-u-man'
+      'sprk-c-Stepper sprk-u-pam sprk-u-man',
     );
   });
 

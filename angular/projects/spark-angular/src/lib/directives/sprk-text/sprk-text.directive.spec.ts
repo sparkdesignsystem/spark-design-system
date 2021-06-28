@@ -1,5 +1,5 @@
-import { Component, DebugElement } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkTextDirective } from './sprk-text.directive';
 
 @Component({
@@ -21,19 +21,21 @@ describe('Spark Text Directive', () => {
   let el3: HTMLElement;
   let el4: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkTextDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkTextDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    el1 = fixture.nativeElement.querySelector('p');
-    el2 = fixture.nativeElement.querySelector('h1');
-    el3 = fixture.nativeElement.querySelector('cite');
-    el4 = fixture.nativeElement.querySelector('small');
-  }));
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      el1 = fixture.nativeElement.querySelector('p');
+      el2 = fixture.nativeElement.querySelector('h1');
+      el3 = fixture.nativeElement.querySelector('cite');
+      el4 = fixture.nativeElement.querySelector('small');
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results.directive';
 
 @Component({
@@ -21,18 +21,20 @@ describe('Spark Autocomplete Results Directive', () => {
   let element: HTMLElement;
   let emptyElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkAutocompleteResultsDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkAutocompleteResultsDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelectorAll('ul')[0];
-    emptyElement = fixture.nativeElement.querySelectorAll('ul')[1];
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
+      element = fixture.nativeElement.querySelectorAll('ul')[0];
+      emptyElement = fixture.nativeElement.querySelectorAll('ul')[1];
 
-    fixture.detectChanges();
-  }));
+      fixture.detectChanges();
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

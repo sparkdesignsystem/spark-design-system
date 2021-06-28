@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkMastheadBrandingDirective } from './sprk-masthead-branding.directive';
 
 @Component({
@@ -19,17 +19,19 @@ describe('SprkMastheadBrandingDirective', () => {
   let el: HTMLElement;
   let el2: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkMastheadBrandingDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkMastheadBrandingDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    el = fixture.nativeElement.querySelector('div');
-    el2 = fixture.nativeElement.querySelectorAll('div')[1];
-  }));
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      el = fixture.nativeElement.querySelector('div');
+      el2 = fixture.nativeElement.querySelectorAll('div')[1];
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

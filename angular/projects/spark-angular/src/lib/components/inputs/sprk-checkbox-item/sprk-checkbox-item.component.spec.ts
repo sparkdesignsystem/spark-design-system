@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkCheckboxInputDirective } from '../../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
 import { SprkCheckboxLabelDirective } from '../../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.directive';
@@ -85,19 +85,21 @@ describe('SprkCheckboxItemComponent', () => {
   let checkboxInputElement3: HTMLElement;
   let checkboxInputElement4: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkCheckboxLabelDirective,
-        SprkCheckboxInputDirective,
-        SprkCheckboxItemComponent,
-        Test1Component,
-        Test2Component,
-        Test3Component,
-        Test4Component,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkCheckboxLabelDirective,
+          SprkCheckboxInputDirective,
+          SprkCheckboxItemComponent,
+          Test1Component,
+          Test2Component,
+          Test3Component,
+          Test4Component,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   let spy;
   beforeEach(() => {

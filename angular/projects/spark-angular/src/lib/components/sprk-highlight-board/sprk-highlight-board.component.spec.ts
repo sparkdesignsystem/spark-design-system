@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SprkStackComponent } from '../sprk-stack/sprk-stack.component';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
@@ -11,18 +11,20 @@ describe('SprkHighlightBoardComponent', () => {
   let fixture: ComponentFixture<SprkHighlightBoardComponent>;
   let element: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [
-        SprkHighlightBoardComponent,
-        SprkStackComponent,
-        SprkLinkDirective,
-        SprkStackItemDirective,
-        SprkHeadingDirective,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [RouterTestingModule],
+        declarations: [
+          SprkHighlightBoardComponent,
+          SprkStackComponent,
+          SprkLinkDirective,
+          SprkStackItemDirective,
+          SprkHeadingDirective,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkHighlightBoardComponent);

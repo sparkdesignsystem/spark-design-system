@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkLegendDirective } from './sprk-legend.directive';
 
 @Component({
@@ -23,17 +23,21 @@ describe('SprkLegendDirective', () => {
   let legendElement: HTMLElement;
   let disabledLegendElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkLegendDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkLegendDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    legendElement = fixture.nativeElement.querySelector('legend');
-    disabledLegendElement = fixture.nativeElement.querySelectorAll('legend')[1];
-  }));
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      legendElement = fixture.nativeElement.querySelector('legend');
+      disabledLegendElement = fixture.nativeElement.querySelectorAll(
+        'legend',
+      )[1];
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

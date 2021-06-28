@@ -1,5 +1,5 @@
 import { Component, DebugElement } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkTextareaDirective } from './sprk-textarea.directive';
 
@@ -21,18 +21,20 @@ describe('Spark Textarea Directive', () => {
   let fixture: ComponentFixture<TestComponent>;
   let textareaElement: DebugElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkTextareaDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkTextareaDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
 
-    fixture.detectChanges();
+      fixture.detectChanges();
 
-    textareaElement = fixture.debugElement.query(By.css('#textarea'));
-  }));
+      textareaElement = fixture.debugElement.query(By.css('#textarea'));
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

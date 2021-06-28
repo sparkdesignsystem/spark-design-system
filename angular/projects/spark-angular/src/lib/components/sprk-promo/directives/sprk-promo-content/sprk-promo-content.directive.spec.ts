@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkPromoContentDirective } from './sprk-promo-content.directive';
 
 @Component({
@@ -17,18 +17,20 @@ describe('Spark Promo Content Directive', () => {
   let contentElement0: HTMLElement;
   let contentElement1: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkPromoContentDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkPromoContentDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
 
-    fixture.detectChanges();
-    contentElement0 = fixture.nativeElement.querySelector('div');
-    contentElement1 = fixture.nativeElement.querySelectorAll('div')[1];
-  }));
+      fixture.detectChanges();
+      contentElement0 = fixture.nativeElement.querySelector('div');
+      contentElement1 = fixture.nativeElement.querySelectorAll('div')[1];
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

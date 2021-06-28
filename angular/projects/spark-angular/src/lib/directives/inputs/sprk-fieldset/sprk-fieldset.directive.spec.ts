@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkFieldsetDirective } from './sprk-fieldset.directive';
 
 @Component({
@@ -21,16 +21,18 @@ describe('SprkFieldsetDirective', () => {
   let fixture: ComponentFixture<TestComponent>;
   let fieldsetElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkFieldsetDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkFieldsetDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    fieldsetElement = fixture.nativeElement.querySelector('fieldset');
-  }));
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      fieldsetElement = fixture.nativeElement.querySelector('fieldset');
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

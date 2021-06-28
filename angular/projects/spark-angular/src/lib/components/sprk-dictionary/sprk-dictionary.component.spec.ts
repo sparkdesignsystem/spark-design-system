@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkDictionaryComponent } from './sprk-dictionary.component';
 import { Component } from '@angular/core';
 
@@ -32,13 +32,15 @@ describe('SprkAngularDictionaryComponent', () => {
   let wrappedElement: HTMLElement;
 
   let spy;
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkDictionaryComponent, WrappedDictionaryComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkDictionaryComponent, WrappedDictionaryComponent],
+      }).compileComponents();
 
-    spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
-  }));
+      spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkDictionaryComponent);

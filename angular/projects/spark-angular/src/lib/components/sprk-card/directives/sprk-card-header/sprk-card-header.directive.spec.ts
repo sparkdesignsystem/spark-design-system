@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkCardHeaderDirective } from './sprk-card-header.directive';
 
 @Component({
@@ -17,18 +17,20 @@ describe('Spark Card Header Directive', () => {
   let headerElement0: HTMLElement;
   let headerElement1: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkCardHeaderDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkCardHeaderDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
 
-    fixture.detectChanges();
-    headerElement0 = fixture.nativeElement.querySelector('div');
-    headerElement1 = fixture.nativeElement.querySelectorAll('div')[1];
-  }));
+      fixture.detectChanges();
+      headerElement0 = fixture.nativeElement.querySelector('div');
+      headerElement1 = fixture.nativeElement.querySelectorAll('div')[1];
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkSpinnerDirective } from './sprk-spinner.directive';
 
 @Component({
@@ -30,22 +30,24 @@ describe('Spark Spinner Directive', () => {
   let spinner5Element: HTMLElement;
   let spinner6Element: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkSpinnerDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkSpinnerDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
 
-    fixture.detectChanges();
-    spinner1Element = fixture.nativeElement.querySelectorAll('div')[0];
-    spinner2Element = fixture.nativeElement.querySelectorAll('div')[1];
-    spinner3Element = fixture.nativeElement.querySelectorAll('div')[2];
-    spinner4Element = fixture.nativeElement.querySelectorAll('div')[3];
-    spinner5Element = fixture.nativeElement.querySelectorAll('div')[4];
-    spinner6Element = fixture.nativeElement.querySelectorAll('div')[5];
-  }));
+      fixture.detectChanges();
+      spinner1Element = fixture.nativeElement.querySelectorAll('div')[0];
+      spinner2Element = fixture.nativeElement.querySelectorAll('div')[1];
+      spinner3Element = fixture.nativeElement.querySelectorAll('div')[2];
+      spinner4Element = fixture.nativeElement.querySelectorAll('div')[3];
+      spinner5Element = fixture.nativeElement.querySelectorAll('div')[4];
+      spinner6Element = fixture.nativeElement.querySelectorAll('div')[5];
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

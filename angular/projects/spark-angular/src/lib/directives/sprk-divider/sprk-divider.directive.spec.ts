@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkDividerDirective } from './sprk-divider.directive';
 
 @Component({
@@ -13,17 +13,19 @@ describe('Spark Divider Directive', () => {
   let fixture: ComponentFixture<TestComponent>;
   let element: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkDividerDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkDividerDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
 
-    fixture.detectChanges();
-    element = fixture.nativeElement.querySelectorAll('div')[0];
-  }));
+      fixture.detectChanges();
+      element = fixture.nativeElement.querySelectorAll('div')[0];
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

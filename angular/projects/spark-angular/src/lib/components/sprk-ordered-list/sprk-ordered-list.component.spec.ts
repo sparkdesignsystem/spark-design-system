@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkOrderedListComponent } from './sprk-ordered-list.component';
 import { SprkOrderedListModule } from './sprk-ordered-list.module';
 import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
@@ -19,7 +19,7 @@ import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
         Content
       </sprk-list-item>
     </sprk-ordered-list>
-  `
+  `,
 })
 class SprkTestingComponent {}
 
@@ -33,12 +33,14 @@ describe('SprkOrderedListComponent', () => {
   let listItem;
   let noId;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkTestingComponent],
-      imports: [SprkListItemModule, SprkOrderedListModule]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkTestingComponent],
+        imports: [SprkListItemModule, SprkOrderedListModule],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkOrderedListComponent);
@@ -101,7 +103,7 @@ describe('SprkOrderedListComponent', () => {
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
     expect(listItem.hasAttribute('data-analytics')).toEqual(true);
     expect(listItem.getAttribute('data-analytics')).toEqual(
-      'test-analytics-string'
+      'test-analytics-string',
     );
   });
 

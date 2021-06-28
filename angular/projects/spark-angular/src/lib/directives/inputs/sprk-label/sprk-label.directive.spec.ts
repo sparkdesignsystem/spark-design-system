@@ -1,5 +1,5 @@
 import { Component, DebugElement } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkLabelDirective } from './sprk-label.directive';
 
@@ -30,19 +30,21 @@ describe('SprkLabelDirective', () => {
   let labelHidden: HTMLElement;
   let labelMonetary: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkLabelDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkLabelDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    label = fixture.debugElement.query(By.css('label'));
-    labelDisabled = fixture.nativeElement.querySelectorAll('label')[1];
-    labelHidden = fixture.nativeElement.querySelectorAll('label')[2];
-    labelMonetary = fixture.nativeElement.querySelectorAll('label')[3];
-  }));
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      label = fixture.debugElement.query(By.css('label'));
+      labelDisabled = fixture.nativeElement.querySelectorAll('label')[1];
+      labelHidden = fixture.nativeElement.querySelectorAll('label')[2];
+      labelMonetary = fixture.nativeElement.querySelectorAll('label')[3];
+    }),
+  );
 
   it('should add the correct label classes to the applied element', () => {
     expect(label.nativeElement.classList.contains('sprk-b-Label')).toEqual(

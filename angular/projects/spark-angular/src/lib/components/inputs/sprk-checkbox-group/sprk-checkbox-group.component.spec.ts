@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkCheckboxInputDirective } from '../../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
@@ -66,27 +66,31 @@ describe('SprkCheckboxGroupComponent', () => {
   let checkboxItemContainerElements2;
   let errorElement2: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkCheckboxItemComponent,
-        SprkCheckboxInputDirective,
-        SprkCheckboxLabelDirective,
-        SprkLegendDirective,
-        SprkFieldsetDirective,
-        SprkFieldErrorDirective,
-        SprkCheckboxGroupComponent,
-        TestComponent,
-        Test2Component,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkCheckboxItemComponent,
+          SprkCheckboxInputDirective,
+          SprkCheckboxLabelDirective,
+          SprkLegendDirective,
+          SprkFieldsetDirective,
+          SprkFieldErrorDirective,
+          SprkCheckboxGroupComponent,
+          TestComponent,
+          Test2Component,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
 
-    checkboxContainerFixture = TestBed.createComponent(SprkCheckboxGroupComponent);
+    checkboxContainerFixture = TestBed.createComponent(
+      SprkCheckboxGroupComponent,
+    );
     checkboxContainerComponent = checkboxContainerFixture.componentInstance;
     checkboxContainerComponent.ngAfterContentInit();
     fixture.detectChanges();
@@ -102,7 +106,9 @@ describe('SprkCheckboxGroupComponent', () => {
     fixture2 = TestBed.createComponent(Test2Component);
     component2 = fixture2.componentInstance;
 
-    checkboxContainerFixture2 = TestBed.createComponent(SprkCheckboxGroupComponent);
+    checkboxContainerFixture2 = TestBed.createComponent(
+      SprkCheckboxGroupComponent,
+    );
     checkboxContainerComponent2 = checkboxContainerFixture2.componentInstance;
     checkboxContainerComponent2.ngAfterContentInit();
     fixture2.detectChanges();
@@ -123,7 +129,9 @@ describe('SprkCheckboxGroupComponent', () => {
   it('should add classes when additionalClasses has a value', () => {
     checkboxContainerComponent.additionalClasses = 'sprk-u-man';
     checkboxContainerFixture.detectChanges();
-    expect(checkboxContainerElement.classList.toString()).toContain('sprk-u-man');
+    expect(checkboxContainerElement.classList.toString()).toContain(
+      'sprk-u-man',
+    );
   });
 
   it('should add huge variant class when variant is huge', () => {
@@ -138,14 +146,18 @@ describe('SprkCheckboxGroupComponent', () => {
     checkboxContainerComponent.variant = undefined;
     checkboxContainerFixture.detectChanges();
     expect(
-      checkboxContainerElement.classList.contains('sprk-b-InputContainer--huge'),
+      checkboxContainerElement.classList.contains(
+        'sprk-b-InputContainer--huge',
+      ),
     ).toBe(false);
   });
 
   it('should add the value of idString to data-id on the element', () => {
     checkboxContainerComponent.idString = 'test-id-str';
     checkboxContainerFixture.detectChanges();
-    expect(checkboxContainerElement.getAttribute('data-id')).toBe('test-id-str');
+    expect(checkboxContainerElement.getAttribute('data-id')).toBe(
+      'test-id-str',
+    );
   });
 
   it('should generate an error id if needed', () => {

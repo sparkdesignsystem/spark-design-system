@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
@@ -9,12 +9,14 @@ describe('SparkCardComponent', () => {
   let fixture: ComponentFixture<SprkCardComponent>;
   let element: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [SprkLinkDirectiveModule, SprkIconModule, RouterTestingModule],
-      declarations: [SprkCardComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [SprkLinkDirectiveModule, SprkIconModule, RouterTestingModule],
+        declarations: [SprkCardComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkCardComponent);

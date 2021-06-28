@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
@@ -186,25 +186,27 @@ describe('SprkInputContainerComponent', () => {
   let inputElement7: HTMLElement;
   let errorElement7: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkLabelDirective,
-        SprkInputDirective,
-        SprkSelectDirective,
-        SprkFieldErrorDirective,
-        Test1Component,
-        Test2Component,
-        Test3Component,
-        Test4Component,
-        Test5Component,
-        Test6Component,
-        Test7Component,
-        SprkInputContainerComponent,
-        SprkIconComponent,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkLabelDirective,
+          SprkInputDirective,
+          SprkSelectDirective,
+          SprkFieldErrorDirective,
+          Test1Component,
+          Test2Component,
+          Test3Component,
+          Test4Component,
+          Test5Component,
+          Test6Component,
+          Test7Component,
+          SprkInputContainerComponent,
+          SprkIconComponent,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     testFixture1 = TestBed.createComponent(Test1Component);

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkPromoMediaDirective } from './sprk-promo-media.directive';
 
 @Component({
@@ -17,18 +17,20 @@ describe('Spark Promo Media Directive', () => {
   let element0: HTMLElement;
   let element1: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkPromoMediaDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkPromoMediaDirective, TestComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
+      fixture = TestBed.createComponent(TestComponent);
+      component = fixture.componentInstance;
 
-    fixture.detectChanges();
-    element0 = fixture.nativeElement.querySelector('img');
-    element1 = fixture.nativeElement.querySelectorAll('img')[1];
-  }));
+      fixture.detectChanges();
+      element0 = fixture.nativeElement.querySelector('img');
+      element1 = fixture.nativeElement.querySelectorAll('img')[1];
+    }),
+  );
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
