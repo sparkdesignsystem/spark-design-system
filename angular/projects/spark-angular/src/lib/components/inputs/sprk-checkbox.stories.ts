@@ -596,7 +596,7 @@ export const hugeHelperText = () => ({
   `,
 });
 
-huge.hugeHelperText = {
+hugeHelperText.parameters = {
   jest: [
     'sprk-checkbox-input.directive',
     'sprk-checkbox-label.directive',
@@ -690,7 +690,7 @@ export const hugeInvalid = () => ({
   `,
 });
 
-hugeInvalid.hugeHelperText = {
+hugeInvalid.parameters = {
   jest: [
     'sprk-checkbox-input.directive',
     'sprk-checkbox-label.directive',
@@ -781,7 +781,7 @@ export const hugeDisabled = () => ({
   `,
 });
 
-hugeInvalid.hugeHelperText = {
+hugeDisabled.parameters = {
   jest: [
     'sprk-checkbox-input.directive',
     'sprk-checkbox-label.directive',
