@@ -1,7 +1,7 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkAlertComponent } from './sprk-alert.component';
 import { Component } from '@angular/core';
+import { SprkAlertModule } from './sprk-alert.module';
 
 @Component({
   selector: `sprk-test`,
@@ -32,11 +32,8 @@ describe('SprkAlertComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [
-          SprkAlertComponent,
-          SprkIconComponent,
-          WrappedAlertComponent,
-        ],
+        imports: [SprkAlertModule],
+        declarations: [WrappedAlertComponent],
       }).compileComponents();
     }),
   );

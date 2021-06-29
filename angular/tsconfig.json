@@ -6,6 +6,7 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "module": "es2020",
@@ -25,6 +26,9 @@
       ]
     }
   },
+  "typeRoots": [
+    "node_modules/@types"
+  ],
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
