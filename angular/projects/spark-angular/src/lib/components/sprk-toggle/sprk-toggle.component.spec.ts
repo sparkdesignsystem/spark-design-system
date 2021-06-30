@@ -179,7 +179,7 @@ describe('SprkToggleComponent', () => {
     component.titleFontClass = 'test-1 test-2';
     fixture.detectChanges();
     expect(triggerElement.classList.toString()).toContain(
-      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+      'sprk-c-Toggle__trigger sprk-b-Type--crop-none test-1 test-2',
     );
   });
 
@@ -187,7 +187,7 @@ describe('SprkToggleComponent', () => {
     component.triggerTextAdditionalClasses = 'test-1 test-2';
     fixture.detectChanges();
     expect(triggerElement.classList.toString()).toContain(
-      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+      'sprk-c-Toggle__trigger sprk-b-Type--crop-none test-1 test-2',
     );
   });
 
@@ -197,7 +197,7 @@ describe('SprkToggleComponent', () => {
     component.titleFontClass = 'test-3 test-4';
     fixture.detectChanges();
     expect(triggerElement.classList.toString()).toContain(
-      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+      'sprk-c-Toggle__trigger sprk-b-Type--crop-none test-1 test-2',
     );
   });
 
