@@ -114,23 +114,26 @@ describe('SprkDropdownComponent', () => {
     ).toEqual(1);
   });
 
-  it('should emit open and closed events when dropdown is opened or closed', (done) => {
+  it('should emit open event when dropdown is opened', (done) => {
     let openEventEmitted = false;
-    let closedEventEmitted = false;
-
+    wrapperComponent.isOpen = false;
+    fixture.detectChanges();
     dropdownComponent.openedEvent.subscribe((g) => {
       openEventEmitted = true;
       done();
     });
+    dropdownTriggerElement.click();
+    expect(openEventEmitted).toEqual(true);
+  });
+
+  it('should emit closed event when dropdown is closed', (done) => {
+    let closedEventEmitted = false;
+    wrapperComponent.isOpen = true;
+    fixture.detectChanges();
     dropdownComponent.closedEvent.subscribe((g) => {
       closedEventEmitted = true;
       done();
     });
-
-    dropdownTriggerElement.click();
-    expect(openEventEmitted).toEqual(true);
-    expect(closedEventEmitted).toEqual(false);
-
     dropdownTriggerElement.click();
     expect(closedEventEmitted).toEqual(true);
   });

@@ -77,23 +77,25 @@ describe('SprkMastheadSelectorComponent', () => {
     expect(mastheadSelectorComponent).toBeTruthy();
   });
 
-  it('should emit open and closed events when selector is opened or closed', (done) => {
+  it('should emit open event when selector is opened', (done) => {
     let openEventEmitted = false;
-    let closedEventEmitted = false;
 
     mastheadSelectorComponent.openedEvent.subscribe((g) => {
       openEventEmitted = true;
       done();
     });
+
+    mastheadSelectorTriggerElement.click();
+    expect(openEventEmitted).toEqual(true);
+  });
+
+  it('should emit closed event when selector is closed', (done) => {
+    let closedEventEmitted = false;
+    mastheadSelectorTriggerElement.click();
     mastheadSelectorComponent.closedEvent.subscribe((g) => {
       closedEventEmitted = true;
       done();
     });
-
-    mastheadSelectorTriggerElement.click();
-    expect(openEventEmitted).toEqual(true);
-    expect(closedEventEmitted).toEqual(false);
-
     mastheadSelectorTriggerElement.click();
     expect(closedEventEmitted).toEqual(true);
   });

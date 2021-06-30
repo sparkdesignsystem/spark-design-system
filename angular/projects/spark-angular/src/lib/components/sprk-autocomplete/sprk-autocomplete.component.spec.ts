@@ -3,7 +3,7 @@ import { SprkAutocompleteComponent } from './sprk-autocomplete.component';
 import { SprkAutocompleteResultsDirective } from './directives/sprk-autocomplete-results/sprk-autocomplete-results.directive';
 import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-result/sprk-autocomplete-result.directive';
 import { SprkAutocompleteInputContainerDirective } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 
 @Component({
@@ -44,7 +44,7 @@ class WrappedAutocompleteComponent {}
   `,
 })
 class DynamicComponent {
-  public itemSelectedEvent;
+  public itemSelectedEvent: any;
   public list = ['item1', 'item2', 'item3', 'item4'];
   public newList = ['item1', 'item2', 'item3', 'item4', 'new_id'];
   changeMe(): void {
@@ -55,8 +55,8 @@ class DynamicComponent {
 describe('SprkAutocompleteComponent', () => {
   let component: SprkAutocompleteComponent;
   let fixture: ComponentFixture<WrappedAutocompleteComponent>;
-  let resultsElement;
-  let inputElement;
+  let resultsElement: ElementRef<any>;
+  let inputElement: ElementRef<any>;
 
   let dynamicTestComponent;
   let dynamicTestFixture;
@@ -139,20 +139,6 @@ describe('SprkAutocompleteComponent', () => {
     });
     component.showResults();
     expect(called).toEqual(true);
-    done();
-  });
-
-  it('should not emit openedEvent when calling showResults if results does not exist', (done) => {
-    let called = false;
-    component.results = undefined;
-    fixture.detectChanges();
-    component.openedEvent.subscribe((g) => {
-      called = true;
-      done();
-    });
-    component.showResults();
-    expect(called).toEqual(false);
-    done();
   });
 
   it('should add the correct attributes in hideResults', () => {
@@ -187,20 +173,6 @@ describe('SprkAutocompleteComponent', () => {
     });
     component.hideResults();
     expect(called).toEqual(true);
-    done();
-  });
-
-  it('should not emit closedEvent when calling hideResults if results does not exist', (done) => {
-    let called = false;
-    component.results = undefined;
-    fixture.detectChanges();
-    component.closedEvent.subscribe((g) => {
-      called = true;
-      done();
-    });
-    component.hideResults();
-    expect(called).toEqual(false);
-    done();
   });
 
   it('should not set input attributes when calling hideResults() with no input', () => {
@@ -505,7 +477,7 @@ describe('SprkAutocompleteComponent', () => {
     component.input = undefined;
     fixture.detectChanges();
 
-    let testItem = component.resultItems.toArray()[1];
+    const testItem = component.resultItems.toArray()[1];
     component.highlightListItem(testItem);
 
     fixture.detectChanges();
@@ -541,28 +513,6 @@ describe('SprkAutocompleteComponent', () => {
 
     expect(called).toEqual(true);
     expect(value).toEqual('item1');
-    done();
-  });
-
-  it('should not emit itemSelectedEvent when pressing Enter if no item is highlighted', (done) => {
-    let called = false;
-    component.showResults();
-
-    component.itemSelectedEvent.subscribe((g) => {
-      called = true;
-      done();
-    });
-
-    fixture.detectChanges();
-
-    document.dispatchEvent(
-      new KeyboardEvent('keydown', {
-        key: 'Enter',
-      }),
-    );
-
-    expect(called).toEqual(false);
-    done();
   });
 
   it('should call calculateResultsWidth on resize', () => {
@@ -880,11 +830,10 @@ describe('SprkAutocompleteComponent', () => {
 
     expect(called).toEqual(true);
     expect(value).toEqual('item1');
-    done();
   });
 
   it('should not set the click event on the list items if itemSelectedEvent is not set', (done) => {
-    let called = false;
+    const called = false;
 
     component.itemSelectedEvent = undefined;
     component.isOpen = true;
@@ -959,44 +908,27 @@ describe('SprkAutocompleteComponent', () => {
   it('should set the click event on the list items when the results are changed', (done) => {
     let called = false;
     let value = -1;
-
     dynamicTestAutocomplete.itemSelectedEvent.subscribe((itemId) => {
       called = true;
       value = itemId;
       done();
     });
-
     dynamicTestFixture.detectChanges();
-
     // expect the length to be 4
     expect(dynamicTestComponent.list.length).toEqual(4);
     expect(
       dynamicTestFixture.nativeElement.querySelectorAll('li').length,
     ).toEqual(4);
-
-    // click the last item in the list
-    dynamicTestFixture.nativeElement
-      .querySelectorAll('li')[3]
-      .dispatchEvent(new Event('click'));
-
-    dynamicTestFixture.detectChanges();
-
-    expect(called).toEqual(true);
-    expect(value).toEqual('item4');
-
     // change the dataset used to populate the result items
     const dynamicTestElement = dynamicTestFixture.nativeElement;
     const changeButton = dynamicTestElement.querySelector('.changeButton');
     changeButton.click();
     dynamicTestFixture.detectChanges();
-
     // click one of the new items and verify the id that is returned
     dynamicTestFixture.nativeElement.querySelectorAll('li')[4].click();
-
     // expect the length to be 5
     expect(dynamicTestComponent.list.length).toEqual(5);
     expect(called).toEqual(true);
     expect(value).toEqual('new_id');
-    done();
   });
 });

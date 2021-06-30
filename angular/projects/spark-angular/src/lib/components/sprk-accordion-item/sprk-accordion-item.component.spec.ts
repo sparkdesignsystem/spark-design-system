@@ -319,23 +319,24 @@ describe('SprkAccordionItemComponent', () => {
     ).toEqual('#exclamation');
   });
 
-  it('should emit open and closed events when toggled', (done) => {
+  it('should emit open event when toggled open', (done) => {
     let openEventEmitted = false;
-    let closedEventEmitted = false;
-
     component.openedEvent.subscribe((g) => {
       openEventEmitted = true;
       done();
     });
+    accordionItemTriggerElement.click();
+    expect(openEventEmitted).toEqual(true);
+  });
+
+  it('should emit closed event when toggled shut', (done) => {
+    component.isOpen = true;
+    fixture.detectChanges();
+    let closedEventEmitted = false;
     component.closedEvent.subscribe((g) => {
       closedEventEmitted = true;
       done();
     });
-
-    accordionItemTriggerElement.click();
-    expect(openEventEmitted).toEqual(true);
-    expect(closedEventEmitted).toEqual(false);
-
     accordionItemTriggerElement.click();
     expect(closedEventEmitted).toEqual(true);
   });

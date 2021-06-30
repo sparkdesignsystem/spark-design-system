@@ -10,4 +10,15 @@ module.exports = {
   features: {
     postcss: false,
   },
+  core: {
+    builder: 'webpack5',
+  },
+  babel: async (options) => ({
+    ...options,
+    // any extra options you want to set
+    presets: [
+      ['@babel/preset-env', { targets: { node: 'current' } }],
+      ['@babel/preset-react', { targets: { node: 'current' } }], // add this
+    ],
+  }),
 };
