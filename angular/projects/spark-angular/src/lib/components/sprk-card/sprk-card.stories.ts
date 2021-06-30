@@ -210,7 +210,7 @@ export const teaserIcon = () => ({
         sprkCardContent
         itemSpacing="large"
         sprkStackItem
-        additionalClasses="sprk-u-TextAlign--center"
+        additionalClasses="sprk-b-Type--center"
       >
         <a
           sprkLink
