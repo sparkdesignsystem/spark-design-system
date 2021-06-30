@@ -113,7 +113,7 @@ body {
 
 .sb-show-main .sb-decorate .sprk-o-CenteredColumn,
 .sb-show-main .sb-decorate .sprk-o-Box,
-.sb-show-main .sb-decorate .sprk-o-Stack__item {
+.sb-show-main .sb-decorate .sprk-o-Stack.sprk-o-Stack__item {
   background-color: $sprk-black-tint-40;
   border: 2px solid $sprk-black;
   height: 4rem;
