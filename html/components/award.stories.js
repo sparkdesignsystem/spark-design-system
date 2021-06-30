@@ -26,21 +26,22 @@ export const defaultStory = () => {
   >
     <h2
       class="
-        sprk-o-Stack__item 
-        sprk-o-Stack__item--center-column 
-        sprk-b-TypeDisplayFive 
-        sprk-b-Measure 
-        sprk-b-Measure--narrow 
-        sprk-u-TextAlign--center
+        sprk-o-Stack__item
+        sprk-o-Stack__item--center-column
+        sprk-b-TypeDisplayFive
+        sprk-b-Measure
+        sprk-b-Measure--narrow
+        sprk-b-Type--center
       ">
       Award Component Heading
     </h2>
 
-    <div 
+    <div
       class="
-        sprk-o-Stack__item 
-        sprk-o-Stack__item--center-column 
-        sprk-o-Stack sprk-o-Stack--medium 
+        sprk-o-Stack__item
+        sprk-o-Stack__item--center-column
+        sprk-o-Stack
+        sprk-o-Stack--medium
         sprk-o-Stack--split@s
       ">
       <a
@@ -53,12 +54,12 @@ export const defaultStory = () => {
           src="https://spark-assets.netlify.app/spark-logo-updated.svg" />
       </a>
 
-      <a 
+      <a
         class="
-          sprk-o-Stack__item 
-          sprk-o-Stack__item--flex@s 
+          sprk-o-Stack__item
+          sprk-o-Stack__item--flex@s
           sprk-o-Stack
-        " 
+        "
         href="#nogo">
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
@@ -73,9 +74,9 @@ export const defaultStory = () => {
     >
       <button
         class="
-          sprk-c-Toggle__trigger 
-          sprk-b-TypeBodyThree 
-          sprk-u-TextCrop--none
+          sprk-c-Toggle__trigger
+          sprk-b-TypeBodyThree
+          sprk-b-Type--crop-none
         "
         data-sprk-toggle="trigger">
           <svg

@@ -188,7 +188,7 @@ export const teaserWithDifferentElementOrder = () =>
           sprk-o-Stack__item
           sprk-c-Card__content
           sprk-b-TypeDisplayFive
-          "
+        "
         >
         Teaser Card Title
       </h3>
@@ -286,7 +286,8 @@ export const twoUpCards = () =>
           <div class="
             sprk-o-Stack__item
             sprk-o-Stack
-            sprk-o-Stack--end-column"
+            sprk-o-Stack--end-column
+          "
           >
             <a
               href="#nogo"
@@ -392,12 +393,13 @@ export const threeUpCards = () =>
         >
           <a
             href="#nogo"
-            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--center-all"
             aria-label="Learn More"
           >
             <svg
               aria-hidden="true"
               class="
+                sprk-o-Stack__item
                 sprk-c-Icon
                 sprk-c-Icon--xl
               "
@@ -461,13 +463,15 @@ export const threeUpCards = () =>
         >
           <a
             href="#nogo"
-            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--center-all"
             aria-label="Learn More"
           >
             <svg
               class="
+                sprk-o-Stack__item
                 sprk-c-Icon
-                sprk-c-Icon--xl"
+                sprk-c-Icon--xl
+              "
               height="75"
               aria-hidden="true"
               viewBox="0 0 220.63 197.62"
@@ -522,14 +526,16 @@ export const threeUpCards = () =>
         >
           <a
             href="#nogo"
-            class="sprk-u-AbsoluteCenter sprk-o-Stack__item"
+            class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--center-all"
             aria-label="Learn More"
           >
             <svg
               aria-hidden="true"
               class="
+                sprk-o-Stack__item
                 sprk-c-Icon
-                sprk-c-Icon--xl"
+                sprk-c-Icon--xl
+              "
               height="75" viewBox="0 0 220.63 197.62">
               <use xlink:href="#call-team-member" />
             </svg>
@@ -620,7 +626,8 @@ export const fourUpCards = () =>
         class="
           sprk-o-Stack__item
           sprk-o-Stack__item--flex@xl
-          sprk-c-Card sprk-o-Stack
+          sprk-c-Card
+          sprk-o-Stack
         "
         data-id="card-four-up-2"
       >
@@ -644,7 +651,8 @@ export const fourUpCards = () =>
           <div class="
             sprk-o-Stack__item
             sprk-o-Stack
-            sprk-o-Stack--end-column"
+            sprk-o-Stack--end-column
+          "
           >
             <div class="sprk-o-Stack__item">
               <a href="#nogo" class="sprk-c-Button sprk-c-Button--secondary">

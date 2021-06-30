@@ -95,9 +95,9 @@ export const informational = () => {
           >Make a selection...</span>
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
-            sprk-c-Icon--stroke-current-color 
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
             sprk-u-mls
           "
           viewBox="0 0 100 100">
@@ -160,7 +160,7 @@ export const informational = () => {
       </ul>
 
       <div
-        class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
+        class="sprk-c-Dropdown__footer sprk-b-Type--center"
       >
         <a class="sprk-c-Button sprk-c-Button--secondary" href="#nogo">
           Go Elsewhere

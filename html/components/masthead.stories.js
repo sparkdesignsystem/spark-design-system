@@ -640,7 +640,7 @@ export const extended = () => {
                 <div
                   class="
                     sprk-c-Masthead__selector-footer
-                    sprk-u-TextAlign--center
+                    sprk-b-Type--center
                   "
                 >
                   <a
@@ -792,7 +792,7 @@ export const extended = () => {
                 class="
                   sprk-c-Dropdown
                   sprk-u-Display--none
-                  sprk-u-TextAlign--left
+                  sprk-b-Type--left
                 "
                 data-sprk-dropdown="dropdown03"
               >
@@ -878,7 +878,7 @@ export const extended = () => {
                 class="
                   sprk-c-Dropdown
                   sprk-u-Display--none
-                  sprk-u-TextAlign--left
+                  sprk-b-Type--left
                 "
                 data-sprk-dropdown="dropdown04"
               >

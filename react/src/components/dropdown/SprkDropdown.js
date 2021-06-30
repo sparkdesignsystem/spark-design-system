@@ -292,7 +292,7 @@ class SprkDropdown extends Component {
               })}
             </ul>
             {footer && (
-              <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
+              <div className="sprk-c-Dropdown__footer sprk-b-Type--center">
                 {footer}
               </div>
             )}

@@ -710,7 +710,7 @@ export const extended = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-2"
                 triggerText="Item Two"
@@ -739,7 +739,7 @@ export const extended = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-4"
                 triggerText="Item Four"
@@ -1223,7 +1223,7 @@ export const extendedWithExampleContent = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-2"
                 triggerText="Item Two"
@@ -1252,7 +1252,7 @@ export const extendedWithExampleContent = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-4"
                 triggerText="Item Four"

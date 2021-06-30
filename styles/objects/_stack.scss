@@ -15,6 +15,12 @@
   width: 100%;
 }
 
+/// Centers children of the Stack.
+.sprk-o-Stack--center-all {
+  align-items: center;
+  justify-content: center;
+}
+
 /// When placed on a container, its children will be
 /// centered along the main-axis of the container.
 .sprk-o-Stack--center-row {
@@ -388,7 +394,7 @@
     &.sprk-o-Stack--misc-d > .sprk-o-Stack__item {
       margin-right: $sprk-stack-spacing-misc-d;
     }
-    
+
     /* stylelint-enable selector-class-pattern */
     > .sprk-o-Stack__item--sixth\@xxs {
       flex: 0 0 16.666666667%;

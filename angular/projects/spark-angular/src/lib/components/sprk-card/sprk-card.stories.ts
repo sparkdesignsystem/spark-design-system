@@ -219,7 +219,7 @@ export const teaserIcon = () => ({
           sprkStackItem
           aria-label="Title"
           analyticsString="teaser-icon-media"
-          class="sprk-u-AbsoluteCenter"
+          class="sprk-o-Stack sprk-o-Stack--center-all"
         >
           <sprk-icon
             iconName="call-team-member"

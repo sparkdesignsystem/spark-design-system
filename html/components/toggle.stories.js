@@ -26,9 +26,9 @@ export const defaultStory = () => {
     >
       <button
         class="
-          sprk-c-Toggle__trigger 
-          sprk-b-TypeBodyThree 
-          sprk-u-TextCrop--none
+          sprk-c-Toggle__trigger
+          sprk-b-TypeBodyThree
+          sprk-b-Type--crop-none
         "
         data-sprk-toggle="trigger"
       >

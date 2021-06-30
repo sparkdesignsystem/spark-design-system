@@ -60,7 +60,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
             sprkLink
             *ngIf="selector && (!title || !heading)"
             variant="plain"
-            class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column sprk-u-Width-100"
+            class="sprk-o-Stack sprk-o-Stack--split@xxs sprk-o-Stack--center-column"
             (click)="toggle($event)"
             [attr.aria-label]="selector"
             href="#"

@@ -32,7 +32,8 @@ const SprkAward = (props) => {
           sprk-b-TypeDisplayFive
           sprk-b-Measure
           sprk-b-Measure--narrow
-          sprk-u-TextAlign--center"
+          sprk-b-Type--center
+        "
       >
         {heading}
       </h2>

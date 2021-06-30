@@ -1,11 +1,11 @@
 {
-  "typography":{
+  "typography": {
     "breakpoint": {
       "comment": "The breakpoint used for typography.",
       "value": "54rem",
       "attributes": {
-          "category": "size"
-        },
+        "category": "size"
+      },
       "file": "typography",
       "themable": true
     }
@@ -18,6 +18,35 @@
     },
     "file": "typography",
     "themable": true
+  },
+  "type": {
+    "right": {
+      "comment": "The text align right value.",
+      "value": "right",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "typography",
+      "themable": true
+    },
+    "left": {
+      "comment": "The text align left value.",
+      "value": "left",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "typography",
+      "themable": true
+    },
+    "center": {
+      "comment": "The text align center value.",
+      "value": "center",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "typography",
+      "themable": true
+    }
   },
   "narrow-measure": {
     "comment": "The max-width value for the narrow measure.",

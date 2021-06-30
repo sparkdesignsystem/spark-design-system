@@ -106,7 +106,7 @@ class SprkMastheadDropdown extends Component {
         {isOpen && (
           <div
             className={classNames(
-              'sprk-c-Dropdown sprk-u-TextAlign--left',
+              'sprk-c-Dropdown sprk-b-Type--left',
               additionalClasses,
             )}
           >

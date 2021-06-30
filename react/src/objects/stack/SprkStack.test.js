@@ -12,6 +12,11 @@ describe('SprkStack:', () => {
     expect(wrapper.html()).toEqual('<div class="sprk-o-Stack"></div>');
   });
 
+  it('should add Stack Item class if isStackItem is true', () => {
+    const wrapper = shallow(<SprkStack isStackItem />);
+    expect(wrapper.html()).toEqual('<div class="sprk-o-Stack sprk-o-Stack__item"></div>');
+  });
+
   it(
     'should set the tiny spacing class in addition to the base class when' +
       ' itemSpacing is "tiny"',

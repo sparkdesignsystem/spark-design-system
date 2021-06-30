@@ -197,7 +197,7 @@ export class SprkToggleComponent implements AfterContentInit {
     const additionalClasses =
       this.triggerTextAdditionalClasses || this.titleFontClass;
     const classArray: string[] = [
-      'sprk-c-Toggle__trigger sprk-u-TextCrop--none',
+      'sprk-c-Toggle__trigger sprk-b-Type--crop-none',
       additionalClasses,
     ];
     return classArray.join(' ');
