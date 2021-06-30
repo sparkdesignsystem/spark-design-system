@@ -31,6 +31,7 @@
   <color name="sprk_card_shadow_color_standout">#1a000000</color><!-- The box shadow color of the Standout Card variant on narrow viewports. -->
   <color name="sprk_card_shadow_color_standout_wide_viewport">#1a000000</color><!-- The box shadow color of the Standout Card variant on wide viewports. -->
   <color name="sprk_card_header_bg_color">#ff603aa1</color><!-- The background color of the header area for the Highlighted Header Card. -->
+  <color name="sprk_card_highlighted_heading_color">#ffffffff</color><!-- The color of the highlighted heading for the Highlighted Header Card. -->
   <color name="sprk_card_header_text_color">#ffffffff</color><!-- The text color for the Highlighted Header Card. -->
   <color name="sprk_red">#ffc8102e</color><!-- Red for key branded moments throughout the product as our primary brand color. -->
   <color name="sprk_deep_red">#ff76232f</color><!-- Darkest red for key branded moments throughout the product. -->

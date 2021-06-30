@@ -102,7 +102,7 @@ export const highlightedHeader = () => ({
           sprkHeading
           sprkStackItem
           variant="displaySeven"
-          class="sprk-u-Color--white"
+          class="sprk-c-Card__highlighted-heading"
         >
           Description
         </h3>
@@ -111,7 +111,7 @@ export const highlightedHeader = () => ({
           sprkHeading
           sprkStackItem
           variant="displayFive"
-          class="sprk-u-Color--white"
+          class="sprk-c-Card__highlighted-heading"
         >
           Card Title
         </h4>

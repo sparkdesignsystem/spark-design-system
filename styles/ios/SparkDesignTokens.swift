@@ -125,6 +125,7 @@ public class SparkDesignTokens {
     public static let sprkBtnTextColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkCardHeaderBgColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkCardHeaderTextColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
+    public static let sprkCardHighlightedHeadingColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkCardShadowColorStandout = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha:0.1)
     public static let sprkCardShadowColorStandoutWideViewport = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha:0.1)
     public static let sprkCardShadowColorWideViewport = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha:0.08)

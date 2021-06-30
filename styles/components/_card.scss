@@ -34,6 +34,10 @@
   color: $sprk-card-header-text-color;
 }
 
+.sprk-c-Card__highlighted-heading {
+  color: $sprk-card-highlighted-heading-color;
+}
+
 .sprk-c-Card__media,
 .sprk-c-Card__header {
   border-radius: $sprk-card-border-radius $sprk-card-border-radius 0 0;

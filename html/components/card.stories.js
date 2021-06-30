@@ -80,7 +80,7 @@ export const highlightedHeader = () =>
           class="
             sprk-b-TypeDisplaySeven
             sprk-o-Stack__item
-            sprk-u-Color--white
+            sprk-c-Card__highlighted-heading
           "
         >
           Description
@@ -88,8 +88,9 @@ export const highlightedHeader = () =>
 
         <h4
           class="
-            sprk-b-TypeDisplayFive sprk-o-Stack__item
-            sprk-u-Color--white
+            sprk-b-TypeDisplayFive
+            sprk-o-Stack__item
+            sprk-c-Card__highlighted-heading
           "
         >
           Card Title
@@ -386,7 +387,7 @@ export const threeUpCards = () =>
             sprk-c-Card__content
             sprk-o-Stack
             sprk-o-Stack--large
-            sprk-u-TextAlign--center
+            sprk-b-Type--center
           "
         >
           <a
@@ -455,7 +456,7 @@ export const threeUpCards = () =>
             sprk-c-Card__content
             sprk-o-Stack
             sprk-o-Stack--large
-            sprk-u-TextAlign--center
+            sprk-b-Type--center
           "
         >
           <a
@@ -516,7 +517,7 @@ export const threeUpCards = () =>
             sprk-c-Card__content
             sprk-o-Stack
             sprk-o-Stack--large
-            sprk-u-TextAlign--center
+            sprk-b-Type--center
           "
         >
           <a
