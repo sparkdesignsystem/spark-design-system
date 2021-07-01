@@ -288,6 +288,15 @@
           "file": "settings",
           "themable": true
         },
+        "icon-margin": {
+          "comment": "The margin for the icon in the selector in the Masthead.",
+          "value": " 0 {space.s.value} 0 {space.s.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
         "container-position": {
           "comment": "The position setting of the Selector in the Masthead.",
           "value": "relative",

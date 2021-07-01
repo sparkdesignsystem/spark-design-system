@@ -672,7 +672,7 @@ export const extended = () => ({
               triggerIconName="user"
               triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
               iconAdditionalClasses="sprk-c-Icon--xl"
-              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              additionalClasses="sprk-c-Masthead__dropdown"
               screenReaderText="User Account"
             >
             </sprk-dropdown>

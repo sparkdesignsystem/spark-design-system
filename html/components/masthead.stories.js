@@ -789,7 +789,7 @@ export const extended = () => {
               <div
                 class="
                   sprk-c-Dropdown
-                  sprk-u-Display--none
+                  sprk-c-Dropdown--is-hidden
                   sprk-b-Type--left
                 "
                 data-sprk-dropdown="dropdown03"
@@ -875,7 +875,7 @@ export const extended = () => {
               <div
                 class="
                   sprk-c-Dropdown
-                  sprk-u-Display--none
+                  sprk-c-Dropdown--is-hidden
                   sprk-b-Type--left
                 "
                 data-sprk-dropdown="dropdown04"

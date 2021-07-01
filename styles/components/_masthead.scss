@@ -205,6 +205,10 @@
   position: $sprk-masthead-selector-container-position;
 }
 
+.sprk-c-Masthead__selector-icon {
+  margin: $sprk-masthead-selector-icon-margin;
+}
+
 // Selector has 100% default width
 // then grows to size of content on larger views
 .sprk-c-Masthead__selector {
