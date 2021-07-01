@@ -229,6 +229,7 @@
   <string name="sprk_masthead_selector_hover_border">2px solid #ff603aa1</string><!-- The border of the Selector when hovered, found in a Masthead with Extended Navigation. -->
   <string name="sprk_masthead_transition">all 0.3s ease-in</string><!-- The transition applied to the Masthead. -->
   <string name="sprk_masthead_translate_y">translateY(-100%)</string><!-- The transform length that gets applied when the Masthead scrolls out of view on narrow screens. -->
+  <string name="sprk_masthead_accordion_icon_leading_margin">0 8.00dp 0 0</string><!-- The margin for the leading Masthead accordion icon -->
   <string name="sprk_masthead_accordion_active_left_border">3px solid #ffc8102e</string><!-- The left border of the active item in the navigation links when masthead is on narrow viewports. -->
   <string name="sprk_masthead_accordion_item_text_align">left</string><!-- The text alignment of the items in the navigation links when masthead is on narrow viewports. -->
   <string name="sprk_masthead_accordion_item_background">transparent</string><!-- The background of the items in the navigation links when masthead is on narrow viewports. -->
@@ -237,6 +238,7 @@
   <string name="sprk_big_nav_item_border_bottom">0.125rem solid transparent</string><!-- The border bottom of the big navigation items in the Masthead Extended. -->
   <string name="sprk_big_nav_item_open_border_bottom">0.125rem solid #ffc8102e</string><!-- The border bottom of open big navigation items in the Masthead Extended. -->
   <string name="sprk_menu_icon_transition">transform 0.3s ease-in-out, opacity 0.2s ease-in-out</string><!-- The transition on the menu icon that turns the menu icon into an 'X'. -->
+  <string name="sprk_modal_display_hidden">none</string><!-- The value for the display property when Modal is hidden. -->
   <string name="sprk_modal_shadow">0 4px 5px rgba(0, 0, 0, 0.6)</string><!-- The box shadow on the Modal. -->
   <string name="sprk_promo_border">1px solid #ffa4a4a3</string><!-- The border of the Promo component. -->
   <string name="sprk_promo_margin">0 auto</string><!-- The margin of the Promo component. -->

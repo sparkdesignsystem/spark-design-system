@@ -484,6 +484,10 @@
   flex: 0 0 auto;
 }
 
+.sprk-c-MastheadAccordion__icon--leading {
+  margin: $sprk-masthead-accordion-icon-leading-margin;
+}
+
 .sprk-c-MastheadAccordion__summary {
   align-items: center;
   color: $sprk-masthead-accordion-font-color;

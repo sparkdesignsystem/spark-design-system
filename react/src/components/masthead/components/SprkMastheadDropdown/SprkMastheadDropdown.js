@@ -78,7 +78,7 @@ class SprkMastheadDropdown extends Component {
         <SprkLink
           variant="simple"
           additionalClasses={classNames(
-            { 'sprk-u-mrs': variant === 'informational' },
+            { 'sprk-b-Link__icon': variant === 'informational' },
             'sprk-c-Masthead__link',
             'sprk-c-Masthead__link--big-nav',
             additionalTriggerClasses,
@@ -97,7 +97,7 @@ class SprkMastheadDropdown extends Component {
             additionalClasses={classNames(
               `sprk-c-Icon--filled-current-color
               sprk-c-Icon--stroke-current-color
-              sprk-u-mls`,
+              sprk-c-Dropdown__trigger-icon`,
               additionalIconClasses,
             )}
             iconName={iconName}

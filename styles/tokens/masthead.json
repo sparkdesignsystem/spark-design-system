@@ -583,6 +583,17 @@
         "themable": true
       },
       "accordion": {
+        "icon": {
+          "leading-margin": {
+            "comment": "The margin for the leading Masthead accordion icon",
+            "value": "0 {space.s.value} 0 0",
+            "attributes": {
+              "category": "content"
+            },
+            "file": "settings",
+            "themable": true
+          }
+        },
         "active": {
           "left-border": {
             "comment": "The left border of the active item in the navigation links when masthead is on narrow viewports.",

@@ -526,7 +526,8 @@ export const defaultStory = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 (555) 555-5555
@@ -548,7 +549,8 @@ export const defaultStory = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Talk To Us
@@ -921,7 +923,8 @@ export const extended = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 (555) 555-5555
@@ -943,7 +946,8 @@ export const extended = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Talk To Us
@@ -965,7 +969,8 @@ export const extended = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Settings
@@ -1431,7 +1436,8 @@ export const extendedWithExampleContent = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 (555) 555-5555
@@ -1453,7 +1459,8 @@ export const extendedWithExampleContent = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Talk To Us
@@ -1475,7 +1482,8 @@ export const extendedWithExampleContent = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Settings

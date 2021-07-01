@@ -357,7 +357,8 @@ export const defaultStory = () => {
                     sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   viewBox="0 0 64 64"
                 >
@@ -385,7 +386,8 @@ export const defaultStory = () => {
                     sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   viewBox="0 0 64 64"
                 >
@@ -611,7 +613,7 @@ export const extended = () => {
                 <ul class="sprk-c-Masthead__selector-dropdown-links">
                   <li class="sprk-c-Masthead__selector-dropdown-item">
                     <a
-                      class="sprk-c-Masthead__selector-dropdown-link sprk-u-ptm"
+                      class="sprk-c-Masthead__selector-dropdown-link"
                       href="#nogo"
                       data-sprk-dropdown-choice="Selection Choice Title 1"
                       role="option"
@@ -778,7 +780,7 @@ export const extended = () => {
                     sprk-c-Icon
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
-                    sprk-u-mls
+                    sprk-c-Dropdown__trigger-icon
                   "
                   viewBox="0 0 64 64"
                 >
@@ -864,7 +866,7 @@ export const extended = () => {
                     sprk-c-Icon
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
-                    sprk-u-mls
+                    sprk-c-Dropdown__trigger-icon
                   "
                   viewBox="0 0 64 64"
                 >
@@ -1068,7 +1070,6 @@ export const extended = () => {
                   sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
-                  sprk-u-mls
                 "
                 data-sprk-toggle="icon"
                 viewBox="0 0 64 64"
@@ -1238,7 +1239,8 @@ export const extended = () => {
                     sprk-c-Icon
                     sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   viewBox="0 0 64 64"
                 >
@@ -1257,7 +1259,8 @@ export const extended = () => {
                     sprk-c-Icon
                     sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   viewBox="0 0 64 64"
                 >
@@ -1286,7 +1289,8 @@ export const extended = () => {
                     sprk-c-Icon
                     sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   viewBox="0 0 64 64"
                 >
