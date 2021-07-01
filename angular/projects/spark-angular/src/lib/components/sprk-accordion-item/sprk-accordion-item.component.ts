@@ -291,7 +291,8 @@ export class SprkAccordionItemComponent implements OnInit {
     const classArray: string[] = [
       'sprk-c-Icon--filled-current-color',
       'sprk-c-Icon--xl',
-      'sprk-u-mrs',
+      'sprk-c-Accordion__icon',
+      'sprk-c-Accordion__icon--leading',
     ];
 
     if (this.leadingIconAdditionalClasses) {
