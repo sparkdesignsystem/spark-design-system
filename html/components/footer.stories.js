@@ -481,8 +481,7 @@ export const defaultStory = () => {
         <span
           class="
             sprk-c-Divider
-            sprk-u-mvn
-            sprk-u-mhm
+            sprk-c-Footer__divider
           "
           data-id="divider-1">
         </span>
@@ -551,7 +550,7 @@ export const defaultStory = () => {
                       sprk-c-Icon
                       sprk-c-Icon--xl
                       sprk-c-Icon--toggle
-                      sprk-u-mrs
+                      sprk-c-Toggle__trigger-icon
                     "
                     data-sprk-toggle="icon" viewBox="0 0 100 100">
                     <use xlink:href="#chevron-down-circle"></use>
@@ -559,12 +558,10 @@ export const defaultStory = () => {
                   My Award Disclaimer
                 </button>
 
-                <div data-sprk-toggle="content">
+                <div class="sprk-c-Toggle__content" data-sprk-toggle="content">
                   <p
                     class="
                       sprk-b-TypeBodyFour
-                      sprk-u-pts
-                      sprk-u-pbs
                       sprk-c-Footer__text
                     ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

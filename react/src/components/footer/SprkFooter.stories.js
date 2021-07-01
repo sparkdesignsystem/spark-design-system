@@ -78,7 +78,7 @@ export const defaultStory = () => (
         links: [
           {
             href: '#nogo',
-            text: 'About This.',
+            text: 'About This',
             analyticsString: 'about-this-link',
             element: 'a',
           },

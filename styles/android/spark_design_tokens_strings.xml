@@ -67,6 +67,9 @@
   <string name="sprk_dropdown_border_style">solid</string><!-- The border style of the Dropdown. -->
   <string name="sprk_dropdown_border">1.00dp solid #fff7f7f7</string><!-- The border of the Dropdown. -->
   <string name="sprk_dropdown_shadow">0 0 40px 2px rgba(0, 0, 0, 0.1)</string><!-- The box shadow of the Dropdown. -->
+  <string name="sprk_dropdown_trigger_icon_margin">0 0 0 8.00dp</string><!-- The default margin on the icon inside the Dropdown trigger. -->
+  <string name="sprk_dropdown_trigger_informational_margin">0 8.00dp 0 0</string><!-- The default margin on the informational trigger for the Dropdown. -->
+  <string name="sprk_footer_divider_margin">0 16.00dp 0 16.00dp</string><!-- Margin value for the Divider in the Footer. -->
   <string name="sprk_footer_trigger_font_weight">normal</string><!-- Toggle trigger font-weight on the Footer. -->
   <string name="sprk_footer_trigger_hover_font_weight">normal</string><!-- Toggle trigger hover font-weight on the Footer. -->
   <string name="sprk_footer_trigger_hover_text_decoration">underline</string><!-- Toggle trigger hover text decoration on the Footer. -->

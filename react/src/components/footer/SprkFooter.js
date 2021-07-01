@@ -5,6 +5,7 @@ import uniqueId from 'lodash/uniqueId';
 import SprkIcon from '../icons/SprkIcon';
 import SprkFooterGlobalSection from './components/SprkFooterGlobalSection/SprkFooterGlobalSection';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
+import SprkDivider from '../dividers/SprkDivider';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 
 class SprkFooter extends Component {
@@ -145,7 +146,7 @@ class SprkFooter extends Component {
             </div>
           </div>
 
-          <span className="sprk-c-Divider sprk-u-mvn sprk-u-mhm" />
+          <SprkDivider element="span" additionalClasses="sprk-c-Footer__divider" />
 
           <div
             className="sprk-o-Stack__item

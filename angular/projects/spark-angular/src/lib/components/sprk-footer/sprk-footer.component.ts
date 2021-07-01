@@ -219,7 +219,8 @@ import {
         </div>
 
         <span
-          class="sprk-c-Divider sprk-u-mvn sprk-u-mhm"
+          sprkDivider
+          class="sprk-c-Footer__divider"
           data-id="divider-1"
         ></span>
 

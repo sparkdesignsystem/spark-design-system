@@ -18,6 +18,15 @@
       "file": "settings",
       "themable": true
     },
+    "divider-margin": {
+      "comment": "Margin value for the Divider in the Footer.",
+      "value": "0 {space.m.value} 0 {space.m.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "link": {
       "color": {
         "comment": "Link color on the Footer.",
