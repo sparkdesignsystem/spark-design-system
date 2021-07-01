@@ -69,6 +69,10 @@
   <string name="sprk_dropdown_shadow">0 0 40px 2px rgba(0, 0, 0, 0.1)</string><!-- The box shadow of the Dropdown. -->
   <string name="sprk_dropdown_trigger_icon_margin">0 0 0 8.00dp</string><!-- The default margin on the icon inside the Dropdown trigger. -->
   <string name="sprk_dropdown_trigger_informational_margin">0 8.00dp 0 0</string><!-- The default margin on the informational trigger for the Dropdown. -->
+  <string name="sprk_footer_awards_media_margin">0 0 16.00dp 0</string><!-- Margin setting for the awards media section in the Footer. -->
+  <string name="sprk_footer_global_links_padding">16.00dp 64.00dp 16.00dp 16.00dp</string><!-- Padding setting for the global links section in the Footer. -->
+  <string name="sprk_footer_local_links_padding">16.00dp 24.00dp 16.00dp 16.00dp</string><!-- Padding setting for the local links section in the Footer. -->
+  <string name="sprk_footer_awards_padding">40.00dp 16.00dp 16.00dp 16.00dp</string><!-- Padding setting for the awards section in the Footer. -->
   <string name="sprk_footer_divider_margin">0 16.00dp 0 16.00dp</string><!-- Margin value for the Divider in the Footer. -->
   <string name="sprk_footer_trigger_font_weight">normal</string><!-- Toggle trigger font-weight on the Footer. -->
   <string name="sprk_footer_trigger_hover_font_weight">normal</string><!-- Toggle trigger hover font-weight on the Footer. -->

@@ -13,8 +13,24 @@
   color: $sprk-footer-text-color;
 }
 
+.sprk-c-Footer__awards {
+  padding: $sprk-footer-awards-padding;
+}
+
+.sprk-c-Footer__awards-media {
+  margin: $sprk-footer-awards-media-margin;
+}
+
 .sprk-c-Footer__divider {
   margin: $sprk-footer-divider-margin;
+}
+
+.sprk-c-Footer__global-links {
+  padding: $sprk-footer-global-links-padding;
+}
+
+.sprk-c-Footer__local-links {
+  padding: $sprk-footer-local-links-padding;
 }
 
 .sprk-c-Footer__link {

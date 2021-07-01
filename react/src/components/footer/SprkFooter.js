@@ -80,12 +80,13 @@ class SprkFooter extends Component {
                   linkColumnsHasIds.map((column) => (
                     <div
                       key={column.id}
-                      className="sprk-o-Stack__item
+                      className="
+                        sprk-o-Stack__item
                         sprk-o-Stack__item--third@m
-                        sprk-o-Box
-                        sprk-u-PaddingRight--a
+                        sprk-c-Footer__local-links
                         sprk-o-Stack
-                        sprk-o-Stack--large"
+                        sprk-o-Stack--large
+                      "
                     >
                       <h3
                         className="
@@ -149,11 +150,12 @@ class SprkFooter extends Component {
           <SprkDivider element="span" additionalClasses="sprk-c-Footer__divider" />
 
           <div
-            className="sprk-o-Stack__item
-            sprk-o-Stack
-            sprk-o-Stack--misc-b
-            sprk-o-Box
-            sprk-u-PaddingTop--b"
+            className="
+              sprk-o-Stack__item
+              sprk-o-Stack
+              sprk-o-Stack--misc-b
+              sprk-c-Footer__awards
+            "
           >
             {Object.keys(awards).length > 1 && (
               <SprkFooterAwards awards={awards} />

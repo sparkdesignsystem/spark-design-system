@@ -46,8 +46,7 @@ export const defaultStory = () => {
               sprk-o-Stack__item--three-tenths@m
               sprk-o-Stack
               sprk-o-Stack--misc-b
-              sprk-o-Box
-              sprk-u-prh
+              sprk-c-Footer__global-links
             ">
             <h3
               class="
@@ -148,8 +147,7 @@ export const defaultStory = () => {
                 class="
                   sprk-o-Stack__item
                   sprk-o-Stack__item--third@m
-                  sprk-o-Box
-                  sprk-u-PaddingRight--a
+                  sprk-c-Footer__local-links
                   sprk-o-Stack
                   sprk-o-Stack--large
                 ">
@@ -491,8 +489,7 @@ export const defaultStory = () => {
             sprk-o-Stack__item
             sprk-o-Stack
             sprk-o-Stack--misc-b
-            sprk-o-Box
-            sprk-u-PaddingTop--b
+            sprk-c-Footer__awards
           ">
           <div
             class="
@@ -500,7 +497,8 @@ export const defaultStory = () => {
               sprk-o-Stack
               sprk-o-Stack--large
             "
-            data-id="award-1">
+            data-id="award-1"
+          >
             <h3
               class="
                 sprk-o-Stack__item
@@ -516,7 +514,7 @@ export const defaultStory = () => {
                 sprk-o-Stack
                 sprk-o-Stack--medium
                 sprk-o-Stack--split@s
-                sprk-u-mbm
+                sprk-c-Footer__awards-media
               ">
               <div class="sprk-o-Stack__item">
                 <a href="#nogo">
