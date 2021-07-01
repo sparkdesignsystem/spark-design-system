@@ -29,7 +29,12 @@ export const defaultStory = () => {
       aria-haspopup="listbox"
       aria-label="Dropdown example description"
     >
-      <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mls" viewBox="0 0 100 100">
+      <svg class="
+        sprk-c-Icon
+        sprk-c-Icon--l
+        sprk-c-Dropdown__trigger-icon
+      "
+      viewBox="0 0 100 100">
         <use xlink:href="#settings" />
       </svg>
     </a>
@@ -84,7 +89,12 @@ export const informational = () => {
 
   return `
     <a
-      class="sprk-c-Dropdown__trigger sprk-b-Link sprk-b-Link--plain sprk-u-mrs"
+      class="
+        sprk-c-Dropdown__trigger
+        sprk-b-Link
+        sprk-b-Link--plain
+        sprk-c-Dropdown__trigger--informational
+      "
       href="#nogo"
       data-sprk-dropdown-trigger="dropdown02"
       aria-haspopup="listbox"
@@ -98,7 +108,7 @@ export const informational = () => {
             sprk-c-Icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
-            sprk-u-mls
+            sprk-c-Dropdown__trigger-icon
           "
           viewBox="0 0 100 100">
           <use xlink:href="#chevron-down" />

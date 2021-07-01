@@ -86,6 +86,14 @@
   }
 }
 
+.sprk-c-Dropdown__trigger--informational {
+  margin: $sprk-dropdown-trigger-informational-margin;
+}
+
+.sprk-c-Dropdown__trigger-icon {
+  margin: $sprk-dropdown-trigger-icon-margin;
+}
+
 /// Adds styles to indicate that the dropdown
 /// link is currently active.
 .sprk-c-Dropdown__link--active {

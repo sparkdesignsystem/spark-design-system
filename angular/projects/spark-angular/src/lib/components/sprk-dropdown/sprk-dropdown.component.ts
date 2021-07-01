@@ -36,9 +36,11 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
         <span class="sprk-u-ScreenReaderText">{{ screenReaderText }}</span>
         <sprk-icon
           [iconName]="triggerIconName || triggerIconType"
-          additionalClasses="sprk-u-mls sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color {{
-            iconAdditionalClasses || additionalIconClasses
-          }}"
+          additionalClasses="
+            sprk-c-Dropdown__trigger-icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
+            {{ iconAdditionalClasses || additionalIconClasses }}"
         ></sprk-icon>
       </a>
 
@@ -78,7 +80,7 @@ import { ISprkDropdownChoice } from './sprk-dropdown.interfaces';
               additionalClasses="
                 sprk-c-Icon--filled-current-color
                 sprk-c-Icon--stroke-current-color
-                sprk-u-mls
+                sprk-c-Dropdown__trigger-icon
                 sprk-c-Icon--toggle
                 {{ iconAdditionalClasses || additionalIconClasses }}
               "

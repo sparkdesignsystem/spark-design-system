@@ -35,7 +35,7 @@ describe('SprkToggleComponent', () => {
   it('clicking should show body text', () => {
     element.querySelector('button').click();
     fixture.detectChanges();
-    expect(element.querySelector('div.sprk-u-pts.sprk-u-pbs')).toBeTruthy();
+    expect(element.querySelector('div.sprk-c-Toggle__content')).toBeTruthy();
   });
 
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
@@ -54,7 +54,7 @@ describe('SprkToggleComponent', () => {
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open',
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle sprk-c-Icon--open',
     );
   });
 
@@ -65,7 +65,7 @@ describe('SprkToggleComponent', () => {
     expect(
       triggerElement.querySelector('.sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open',
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle sprk-c-Icon--open',
     );
     element.querySelector('button').click();
     fixture.detectChanges();
@@ -81,7 +81,7 @@ describe('SprkToggleComponent', () => {
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle test',
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle test',
     );
   });
 
@@ -91,7 +91,7 @@ describe('SprkToggleComponent', () => {
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle test',
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle test',
     );
   });
 
@@ -103,7 +103,7 @@ describe('SprkToggleComponent', () => {
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle should-add',
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle should-add',
     );
   });
 
@@ -171,7 +171,7 @@ describe('SprkToggleComponent', () => {
     fixture.detectChanges();
     expect(
       element.querySelector('.sprk-c-Toggle__content').classList.toString(),
-    ).toContain('sprk-u-pts sprk-u-pbs sprk-c-Toggle__content test-1 test-2');
+    ).toContain('sprk-c-Toggle__content test-1 test-2');
   });
 
   // TODO: Remove `titleFontClass` in issue #1305
