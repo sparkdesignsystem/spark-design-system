@@ -235,8 +235,8 @@ export const defaultStory = () => {
                   sprk-o-Stack__item
                   sprk-o-Stack__item--third@m
                   sprk-o-Box
-                  sprk-u-PaddingRight--a
-                  sprk-o-Stack sprk-o-Stack--large
+                  sprk-o-Stack
+                  sprk-o-Stack--large
                 ">
                 <h3
                   class="

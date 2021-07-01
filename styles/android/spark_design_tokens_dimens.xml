@@ -163,6 +163,7 @@
   <dimen name="sprk_list_indented_margin_left">32.00dp</dimen><!-- The default margin left indentation on Lists. -->
   <dimen name="sprk_masthead_menu_icon_width">32.00dp</dimen><!-- The width of the menu icon on narrow viewports in the Masthead. -->
   <dimen name="sprk_masthead_menu_icon_height">32.00dp</dimen><!-- The height of the menu icon on narrow viewports in the Masthead. -->
+  <dimen name="sprk_masthead_dropdown_right">0.00dp</dimen><!-- The right value of the dropdown in the Masthead. -->
   <dimen name="sprk_masthead_content_padding">8.00dp</dimen><!-- The padding around the content section in the Masthead on wide viewports. -->
   <dimen name="sprk_masthead_content_padding_wide">16.00dp</dimen><!-- The padding of the Masthead content, menu, and branding sections. -->
   <dimen name="sprk_masthead_content_item_padding_top">8.00dp</dimen><!-- The padding top around the content items in the content section of the Masthead. -->

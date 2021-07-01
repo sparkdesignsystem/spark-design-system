@@ -623,7 +623,7 @@ export const extended = () => ({
       >
         <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
           <sprk-stack additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row">
-            <div sprkStackItem class="sprk-u-Position--relative">
+            <div sprkStackItem class="sprk-c-Masthead__selector-container">
               <sprk-masthead-selector
                 triggerText="Choose One"
                 heading="Choose One"
@@ -1135,7 +1135,7 @@ export const extendedWithExampleContent = () => ({
       >
         <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
           <sprk-stack additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row">
-            <div sprkStackItem class="sprk-u-Position--relative">
+            <div sprkStackItem class="sprk-c-Masthead__selector-container">
               <sprk-masthead-selector
                 triggerText="Choose One"
                 heading="Choose One"
@@ -1184,7 +1184,7 @@ export const extendedWithExampleContent = () => ({
               triggerIconName="user"
               triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
               iconAdditionalClasses="sprk-c-Icon--xl"
-              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              additionalClasses="sprk-c-Masthead__dropdown"
               screenReaderText="User Account"
             >
             </sprk-dropdown>

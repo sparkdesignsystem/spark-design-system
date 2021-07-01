@@ -576,6 +576,7 @@ public class SparkDesignTokens {
     public static let sprkMastheadContentItemPaddingTopWide = CGFloat(8.00)
     public static let sprkMastheadContentPadding = CGFloat(8.00)
     public static let sprkMastheadContentPaddingWide = CGFloat(16.00)
+    public static let sprkMastheadDropdownRight = CGFloat(0.00)
     public static let sprkMastheadLogoMaxWidth = CGFloat(192.00)
     public static let sprkMastheadLogoMinWidth = CGFloat(174.00)
     public static let sprkMastheadMenuIconHeight = CGFloat(32.00)

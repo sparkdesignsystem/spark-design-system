@@ -243,7 +243,7 @@ export const defaultStory = () => {
       </div>
 
       <nav
-        class="sprk-c-Masthead__narrow-nav sprk-u-Display--none"
+        class="sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed"
         data-sprk-mobile-nav="mobileNav"
         role="navigation"
         data-id="navigation-narrow-1"
@@ -533,7 +533,7 @@ export const extended = () => {
               sprk-o-Stack--center-column sprk-o-Stack--center-row
             "
           >
-            <div class="sprk-o-Stack__item sprk-u-Position--relative">
+            <div class="sprk-o-Stack__item sprk-c-Masthead__selector-container">
               <a
                 class="
                   sprk-c-Masthead__selector
@@ -568,9 +568,9 @@ export const extended = () => {
               </a>
 
               <div
-                class="sprk-c-Masthead__selector-dropdown sprk-u-Display--none"
+                class="sprk-c-Masthead__selector-dropdown sprk-c-Dropdown--is-hidden"
                 data-sprk-dropdown="dropdown-selector-wide"
-                >
+              >
                 <div class="sprk-c-Masthead__selector-dropdown-header">
                   <a
                     class="
@@ -580,7 +580,6 @@ export const extended = () => {
                       sprk-o-Stack
                       sprk-o-Stack--split@xxs
                       sprk-o-Stack--center-column
-                      sprk-u-Width-100
                     "
                     href="#nogo"
                     aria-haspopup="true"
@@ -703,9 +702,8 @@ export const extended = () => {
               <div
                 class="
                   sprk-c-Dropdown
-                  sprk-u-Display--none
-                  sprk-u-Right--zero
-                  sprk-u-mrm
+                  sprk-c-Dropdown--is-hidden
+                  sprk-c-Masthead__dropdown
                 "
                 data-sprk-dropdown="dropdown02"
               >
@@ -922,8 +920,8 @@ export const extended = () => {
       </div>
       <nav
         class="
-          sprk-c-Masthead__narrow-nav
-          sprk-u-Display--none
+          sprk-c-Masthead__nav-collapsible
+          sprk-c-Masthead__nav-collapsible--is-collapsed
         "
         data-sprk-mobile-nav="mobileNav2"
         role="navigation"
@@ -965,7 +963,7 @@ export const extended = () => {
           </div>
 
           <div
-            class="sprk-c-Masthead__selector-dropdown sprk-u-Display--none"
+            class="sprk-c-Masthead__selector-dropdown sprk-c-Dropdown--is-hidden"
             data-sprk-dropdown="dropdown-selector"
           >
             <div class="sprk-c-Masthead__selector-dropdown-header">
@@ -977,7 +975,6 @@ export const extended = () => {
                   sprk-o-Stack
                   sprk-o-Stack--split@xxs
                   sprk-o-Stack--center-column
-                  sprk-u-Width-100
                 "
                 href="#nogo"
                 aria-haspopup="true"

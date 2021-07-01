@@ -26,6 +26,26 @@
         "file": "settings",
         "themable": true
       },
+      "dropdown": {
+        "margin": {
+          "comment": "The margin color of the dropdown in the Masthead.",
+          "value": "0 {space.m.value} 0 0",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "right": {
+          "comment": "The right value of the dropdown in the Masthead.",
+          "value": "0",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "settings",
+          "themable": true
+        }
+      },
       "content": {
         "padding": {
           "comment": "The padding around the content section in the Masthead on wide viewports.",
@@ -262,6 +282,15 @@
         "border": {
           "comment": "The border of the Selector, found in a Masthead with Extended Navigation.",
           "value": "2px solid {black-tint.30.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "container-position": {
+          "comment": "The position setting of the Selector in the Masthead.",
+          "value": "relative",
           "attributes": {
             "category": "content"
           },
