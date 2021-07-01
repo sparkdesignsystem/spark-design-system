@@ -37,7 +37,7 @@ export const defaultStory = () => {
             sprk-c-Icon
             sprk-c-Icon--xl
             sprk-c-Icon--toggle
-            sprk-u-mrs
+            sprk-c-Toggle__trigger-icon
           "
           data-sprk-toggle="icon"
           viewBox="0 0 64 64"
@@ -48,8 +48,8 @@ export const defaultStory = () => {
         My Disclaimer
       </button>
 
-      <div data-sprk-toggle="content">
-        <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
+      <div class="sprk-c-Toggle__content" data-sprk-toggle="content">
+        <p class="sprk-b-TypeBodyFour">
           This is an example of disclaimer content.
           The aria-expanded="true" attribute
           will be viewable in the DOM on

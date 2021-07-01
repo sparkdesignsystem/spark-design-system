@@ -148,6 +148,7 @@
   <dimen name="sprk_layer_height_m">32000.00dp</dimen><!-- The medium z-index value setting. -->
   <dimen name="sprk_layer_height_l">48000.00dp</dimen><!-- The large z-index value setting. -->
   <dimen name="sprk_layer_height_xl">159984.00dp</dimen><!-- The extra large z-index value setting. -->
+  <dimen name="sprk_link_icon_margin">0 8.00dp 0 0</dimen><!-- The default margin on icons inside Links. -->
   <dimen name="sprk_link_underline_width">2.00dp</dimen><!-- The width of the underline on Links. -->
   <dimen name="sprk_link_simple_hover_underline_width">2.00dp</dimen><!-- The underline width value of Simple Links on hover. -->
   <dimen name="sprk_link_simple_underline_width">2.00dp</dimen><!-- The underline width value of Simple Links. -->
@@ -268,10 +269,13 @@
   <dimen name="sprk_table_secondary_row_comp_row_spacing">0.00dp</dimen><!-- The distance between the borders of adjacent cells in the Secondary Row Comparison Table (horizontal | vertical). -->
   <dimen name="sprk_table_secondary_row_comp_border_width">1.00dp</dimen><!-- The width of the borders in the Secondary Row Comparison Table cells. -->
   <dimen name="sprk_tab_navigation_breakpoint">736.00dp</dimen><!-- The breakpoint at which the tabs go from stacked layout to side by side in Tabbed Navigation. -->
+  <dimen name="sprk_toggle_trigger_icon_margin">0 8.00dp 0 0</dimen><!-- The default margin on the icon inside the Toggle trigger. -->
   <dimen name="sprk_toggle_trigger_padding_top">0.00dp</dimen><!-- The padding top for Toggle Trigger. -->
   <dimen name="sprk_toggle_trigger_padding_right">0.00dp</dimen><!-- The padding right for Toggle Trigger. -->
   <dimen name="sprk_toggle_trigger_padding_bottom">0.00dp</dimen><!-- The padding bottom for Toggle Trigger. -->
   <dimen name="sprk_toggle_trigger_padding_left">0.00dp</dimen><!-- The padding left for Toggle Trigger. -->
+  <dimen name="sprk_toggle_content_padding_top">8.00dp</dimen><!-- The padding top for the content in the Toggle. -->
+  <dimen name="sprk_toggle_content_padding_bottom">8.00dp</dimen><!-- The padding bottom for the content in the Toggle. -->
   <dimen name="sprk_tooltip_caret_offset">16.00dp</dimen><!-- The space that the Tooltip's caret is offset from the edge. -->
   <dimen name="sprk_tooltip_caret_width">16.00dp</dimen><!-- The width of the tooltip caret. -->
   <dimen name="sprk_tooltip_trigger_hover_offset">16.00dp</dimen><!-- The surrounding hover area around the trigger when the Tooltip is visible. -->

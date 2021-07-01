@@ -78,9 +78,10 @@ export const defaultStory = () => {
           sprk-b-TypeBodyThree
           sprk-b-Type--crop-none
         "
-        data-sprk-toggle="trigger">
+        data-sprk-toggle="trigger"
+      >
           <svg
-            class="sprk-c-Icon sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs"
+            class="sprk-c-Icon sprk-c-Icon--xl sprk-c-Icon--toggle sprk-c-Toggle__trigger-icon"
             data-sprk-toggle="icon"
             viewBox="0 0 64 64"
           >

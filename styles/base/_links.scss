@@ -101,11 +101,13 @@
   }
 }
 
-.sprk-b-Link--has-icon .sprk-c-Icon {
+.sprk-b-Link--has-icon .sprk-c-Icon,
+.sprk-b-Link--has-icon .sprk-b-Link__icon {
   color: $sprk-link-has-icon-color-icon;
   fill: $sprk-link-has-icon-fill;
   stroke: $sprk-link-has-icon-stroke;
   transition: $sprk-link-has-icon-transition;
+  margin: $sprk-link-icon-margin;
 }
 
 .sprk-b-Link--has-icon:hover .sprk-c-Icon,

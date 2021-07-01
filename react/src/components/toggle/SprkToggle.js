@@ -54,11 +54,11 @@ class SprkToggle extends Component {
     const containerClasses = classnames('sprk-c-Toggle', additionalClasses);
 
     const titleClasses = classnames(
-      'sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-u-TextCrop--none',
+      'sprk-c-Toggle__trigger sprk-b-TypeBodyThree sprk-b-Type--crop-none',
       triggerTextAdditionalClasses,
     );
     const iconClasses = classnames(
-      'sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs',
+      'sprk-c-Icon--xl sprk-c-Icon--toggle sprk-c-Toggle__trigger-icon',
       { 'sprk-c-Icon--open': isOpen },
       iconAdditionalClasses,
     );
