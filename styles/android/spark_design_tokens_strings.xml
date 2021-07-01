@@ -61,6 +61,7 @@
   <string name="sprk_dictionary_border">1px solid #fff7f7f7</string><!-- The border surrounding the Dictionary. -->
   <string name="sprk_divider_border_style">solid</string><!-- The style value of border for Dividers. -->
   <string name="sprk_divider_border">2.00dp solid #ffe6e6e6</string><!-- The value of border for Dividers. -->
+  <string name="sprk_dropdown_display_hidden">none</string><!-- The display value of dropdown when hidden. -->
   <string name="sprk_dropdown_active_border">2.5px solid #ff603aa1</string><!-- The left border of the Dropdown item that is active. -->
   <string name="sprk_dropdown_active_box_shadow">-1px 0 0 0 #ff603aa1</string><!-- The box-shadow of the Dropdown item that is active. -->
   <string name="sprk_dropdown_border_style">solid</string><!-- The border style of the Dropdown. -->

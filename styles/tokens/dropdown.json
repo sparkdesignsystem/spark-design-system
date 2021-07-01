@@ -1,5 +1,14 @@
   {
     "dropdown": {
+      "display-hidden": {
+        "comment": "The display value of dropdown when hidden.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "active": {
         "background-color": {
           "comment": "Background color of the Dropdown items that are active or hovered.",

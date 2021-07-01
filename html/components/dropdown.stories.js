@@ -35,7 +35,7 @@ export const defaultStory = () => {
     </a>
 
     <div
-      class="sprk-c-Dropdown sprk-u-Display--none"
+      class="sprk-c-Dropdown sprk-c-Dropdown--is-hidden"
       data-sprk-dropdown="dropdown01"
       data-id="dropdown-1"
     >
@@ -106,7 +106,7 @@ export const informational = () => {
     </a>
 
     <div
-      class="sprk-c-Dropdown sprk-u-Display--none"
+      class="sprk-c-Dropdown sprk-c-Dropdown--is-hidden"
       data-sprk-dropdown="dropdown02"
       data-id="dropdown-2"
     >
