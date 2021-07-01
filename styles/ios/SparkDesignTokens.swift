@@ -195,6 +195,7 @@ public class SparkDesignTokens {
     public static let sprkPurpleLightest = UIColor(red: 0.906, green: 0.886, blue: 0.949, alpha:1)
     public static let sprkPurpleNavy = UIColor(red: 0.110, green: 0.004, blue: 0.322, alpha:1)
     public static let sprkRed = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
+    public static let sprkStepperDarkBg = UIColor(red: 0.235, green: 0.192, blue: 0.455, alpha:1)
     public static let sprkStepperIconBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkStepperIconBorderColorSelected = UIColor(red: 0.235, green: 0.192, blue: 0.455, alpha:1)
     public static let sprkStepperIconBorderColorSelectedDarkBg = UIColor(red: 0.906, green: 0.886, blue: 0.949, alpha:1)

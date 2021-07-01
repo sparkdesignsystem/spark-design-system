@@ -89,7 +89,7 @@ const SprkAward = (props) => {
           analyticsString={disclaimerAnalytics}
           additionalClasses="sprk-o-Stack__item"
         >
-          <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
+          <p className="sprk-b-TypeBodyFour">
             {disclaimerText}
           </p>
         </SprkToggle>
