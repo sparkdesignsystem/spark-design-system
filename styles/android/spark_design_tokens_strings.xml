@@ -172,6 +172,7 @@
   <string name="sprk_checkbox_checkmark_border_bottom">2px solid #ffffffff</string><!-- The border settings to create the right portion of the checkmark. -->
   <string name="sprk_checkbox_checkmark_transform">rotate(-45deg)</string><!-- The rotation setting to create the checkmark. -->
   <string name="sprk_link_transition">0.3s</string><!-- The transition timing for hover, active and focus styles on Links. -->
+  <string name="sprk_link_icon_margin">0 8.00dp 0 0</string><!-- The default margin on icons inside Links. -->
   <string name="sprk_link_text_decoration">none</string><!-- The text decoration on Links. -->
   <string name="sprk_link_border_bottom_style">solid</string><!-- The border style of the underline on Links. -->
   <string name="sprk_link_border_bottom">2.00dp solid #ff603aa1</string><!-- The style of the underline on Links. -->
@@ -254,6 +255,7 @@
   <string name="sprk_tab_navigation_btn_active_border_bottom">3px solid #ffc8102e</string><!-- The button tab bottom border of the currently active tab in Tabbed Navigation. -->
   <string name="sprk_tab_navigation_btn_border_bottom">3px solid #fff7f7f7</string><!-- The border on the bottom of the button tabs in Tabbed Navigation. -->
   <string name="sprk_tab_navigation_btn_hover_border_bottom">3px solid #ff603aa1</string><!-- The border on the bottom of the button tabs on hover in Tabbed Navigation. -->
+  <string name="sprk_toggle_trigger_icon_margin">0 8.00dp 0 0</string><!-- The default margin on the icon inside the Toggle trigger. -->
   <string name="sprk_toggle_trigger_border_top">none</string><!-- The top border style for Toggle Trigger. -->
   <string name="sprk_toggle_trigger_border_right">none</string><!-- The right border style for Toggle Trigger. -->
   <string name="sprk_toggle_trigger_border_bottom">0.00dp solid transparent</string><!-- The bottom border style for Toggle Trigger. -->

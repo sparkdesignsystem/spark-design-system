@@ -550,7 +550,6 @@ public class SparkDesignTokens {
     public static let sprkLineHeightDisplayTwoWide = CGFloat(16.00)
     public static let sprkLinkDisabledUnderlineWidth = CGFloat(0.00)
     public static let sprkLinkHasIconUnderlineWidth = CGFloat(0.00)
-    public static let sprkLinkIconMargin = 0 CGFloat(8.00) 0 0
     public static let sprkLinkInlineLightHoverUnderlineWidth = CGFloat(2.00)
     public static let sprkLinkInlineLightUnderlineWidth = CGFloat(2.00)
     public static let sprkLinkLightHoverAfterLeft = CGFloat(0.00)
@@ -711,7 +710,6 @@ public class SparkDesignTokens {
     public static let sprkTextareaWidth = CGFloat(1600.00)
     public static let sprkToggleContentPaddingBottom = CGFloat(8.00)
     public static let sprkToggleContentPaddingTop = CGFloat(8.00)
-    public static let sprkToggleTriggerIconMargin = 0 CGFloat(8.00) 0 0
     public static let sprkToggleTriggerPaddingBottom = CGFloat(0.00)
     public static let sprkToggleTriggerPaddingLeft = CGFloat(0.00)
     public static let sprkToggleTriggerPaddingRight = CGFloat(0.00)

@@ -15,6 +15,10 @@
   justify-content: center;
 }
 
+.sprk-c-Alert--is-hidden {
+  display: none;
+}
+
 /// Styles the alert as an information alert.
 .sprk-c-Alert--info {
   background-color: $sprk-alert-bg-color-info;
