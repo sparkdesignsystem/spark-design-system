@@ -1,31 +1,33 @@
-import { storyWrapper } from '../../../../../../../.storybook/helpers/storyWrapper';
-import { SprkLabelModule } from '../../../directives/inputs/sprk-label/sprk-label.module';
-import { SprkSelectionContainerModule } from '../sprk-selection-container/sprk-selection-container.module';
-import { SprkSelectionItemContainerModule } from '../sprk-selection-item-container/sprk-selection-item-container.module';
-import { SprkSelectionLabelModule } from '../../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
-import { SprkSelectionInputModule } from '../../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
-import { SprkFieldErrorModule } from '../../../directives/inputs/sprk-field-error/sprk-field-error.module';
-import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
-import { SprkIconModule } from '../../sprk-icon/sprk-icon.module';
-import { SprkStackItemModule } from '../../../directives/sprk-stack-item/sprk-stack-item.module';
-import { SprkStackModule } from '../../sprk-stack/sprk-stack.module';
-import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.directive';
-import { SprkLegendDirective } from '../../../directives/inputs/sprk-legend/sprk-legend.directive';
-import { SprkFieldsetModule } from '../../../directives/inputs/sprk-fieldset/sprk-fieldset.module';
-import { SprkLegendModule } from '../../../directives/inputs/sprk-legend/sprk-legend.module';
-import { SprkCheckboxLabelModule } from '../../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.module';
-import { SprkCheckboxLabelDirective } from '../../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.directive';
-import { SprkCheckboxInputModule } from '../../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
-import { SprkCheckboxInputDirective } from '../../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
-import { SprkCheckboxGroupComponent } from '../sprk-checkbox-group/sprk-checkbox-group.component';
-import { SprkCheckboxItemComponent } from './sprk-checkbox-item.component';
-import { SprkCheckboxGroupModule } from '../sprk-checkbox-group/sprk-checkbox-group.module';
-import { SprkCheckboxItemModule } from './sprk-checkbox-item.module';
-import { SprkLabelDirective } from '../../../directives/inputs/sprk-label/sprk-label.directive';
-import { SprkHelperTextDirective } from '../../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
-import { SprkHelperTextModule } from '../../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
-
-import { markdownDocumentationLinkBuilder } from '../../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { SprkLabelModule } from '../../directives/inputs/sprk-label/sprk-label.module';
+import { SprkSelectionContainerModule } from './sprk-selection-container/sprk-selection-container.module';
+import { SprkSelectionItemContainerModule } from './sprk-selection-item-container/sprk-selection-item-container.module';
+import { SprkSelectionLabelModule } from '../../directives/inputs/sprk-selection-label/sprk-selection-label.module';
+import { SprkSelectionInputModule } from '../../directives/inputs/sprk-selection-input/sprk-selection-input.module';
+import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/sprk-field-error.module';
+import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
+import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
+import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
+import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
+import { SprkFieldsetDirective } from '../../directives/inputs/sprk-fieldset/sprk-fieldset.directive';
+import { SprkLegendDirective } from '../../directives/inputs/sprk-legend/sprk-legend.directive';
+import { SprkFieldsetModule } from '../../directives/inputs/sprk-fieldset/sprk-fieldset.module';
+import { SprkLegendModule } from '../../directives/inputs/sprk-legend/sprk-legend.module';
+import { SprkCheckboxLabelModule } from '../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.module';
+import { SprkCheckboxLabelDirective } from '../../directives/inputs/sprk-checkbox-label/sprk-checkbox-label.directive';
+import { SprkCheckboxInputModule } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
+import { SprkCheckboxInputDirective } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
+import { SprkCheckboxGroupComponent } from './sprk-checkbox-group/sprk-checkbox-group.component';
+import { SprkCheckboxItemComponent } from './sprk-checkbox-item/sprk-checkbox-item.component';
+import { SprkCheckboxGroupModule } from './sprk-checkbox-group/sprk-checkbox-group.module';
+import { SprkCheckboxItemModule } from './sprk-checkbox-item/sprk-checkbox-item.module';
+import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
+import { SprkHelperTextDirective } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.directive';
+import { SprkHelperTextModule } from '../../directives/inputs/sprk-helper-text/sprk-helper-text.module';
+import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Checkbox',
@@ -41,11 +43,31 @@ export default {
     SprkCheckboxInputDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkCheckboxGroupModule,
+        SprkCheckboxItemModule,
+        SprkCheckboxInputModule,
+        SprkCheckboxLabelModule,
+        SprkFieldsetModule,
+        SprkLegendModule,
+        SprkLabelModule,
+        SprkFieldErrorModule,
+        SprkHelperTextModule,
+        SprkSelectionItemContainerModule,
+        SprkSelectionInputModule,
+        SprkSelectionContainerModule,
+        SprkSelectionLabelModule,
+        SprkIconModule,
+        SprkStackItemModule,
+        SprkStackModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -56,124 +78,106 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
-- Spark checkboxes have been refactored. The version that uses <sprk-selection-container> and <sprk-selection-item-container> will be permanently removed in our Fall 2020 release.
 - To update to the new version, replace checkboxes with our
-new implementation using <code>sprk-checkbox-group</code>
-and <code>sprk-checkbox-item</code> components.
-- Use <sprk-checkbox-group>, sprkFieldset directive,
-and sprkLegend directive to group together all related choices.
+new implementation using \`<sprk-checkbox-group>\`
+and \`<sprk-checkbox-item>\` components.
+- Use the \`<sprk-checkbox-group>\`, \`sprkFieldset\` directive,
+and \`sprkLegend\` directive to group together all related choices.
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
-};
+} as Meta;
 
-const modules = {
-  imports: [
-    SprkCheckboxGroupModule,
-    SprkCheckboxItemModule,
-    SprkCheckboxInputModule,
-    SprkCheckboxLabelModule,
-    SprkFieldsetModule,
-    SprkLegendModule,
-    SprkLabelModule,
-    SprkFieldErrorModule,
-    SprkHelperTextModule,
-    SprkSelectionItemContainerModule,
-    SprkSelectionInputModule,
-    SprkSelectionContainerModule,
-    SprkSelectionLabelModule,
-    SprkIconModule,
-    SprkStackItemModule,
-    SprkStackModule,
+export const defaultStory = () => ({
+  template: `
+    <sprk-checkbox-group>
+      <fieldset sprkFieldset>
+        <legend sprkLegend>
+          Checkbox Group Label
+        </legend>
+        <sprk-checkbox-item>
+          <input
+            type="checkbox"
+            value="1"
+            name="checkbox_input"
+            [(ngModel)]="checkbox_input1"
+            sprkCheckboxInput
+            #checkboxInput1="ngModel"
+            idString="checkbox-1"
+            id="checkbox-1"
+          >
+          <label
+            for="checkbox-1"
+            sprkCheckboxLabel
+          >
+            Checkbox Item 1
+          </label>
+        </sprk-checkbox-item>
+        <sprk-checkbox-item>
+          <input
+            type="checkbox"
+            value="2"
+            name="checkbox_input"
+            [(ngModel)]="checkbox_input2"
+            sprkCheckboxInput
+            #checkboxInput2="ngModel"
+            idString="checkbox-2"
+            id="checkbox-2"
+          >
+          <label
+            for="checkbox-2"
+            sprkCheckboxLabel
+          >
+          Checkbox Item 2
+          </label>
+        </sprk-checkbox-item>
+        <sprk-checkbox-item>
+          <input
+            type="checkbox"
+            value="3"
+            name="checkbox_input"
+            [(ngModel)]="checkbox_input3"
+            sprkCheckboxInput
+            #checkboxInput3="ngModel"
+            idString="checkbox-3"
+            id="checkbox-3"
+          >
+          <label
+            for="checkbox-3"
+            sprkCheckboxLabel
+          >
+            Checkbox Item 3
+          </label>
+        </sprk-checkbox-item>
+      </fieldset>
+    </sprk-checkbox-group>
+  `,
+});
+
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
   ],
 };
 
-export const defaultStory = () => ({
-  moduleMetadata: modules,
-  template: `
-    <sprk-checkbox-group>
-      <fieldset sprkFieldset>
-        <legend sprkLegend>
-          Checkbox Group Label
-        </legend>
-        <sprk-checkbox-item>
-          <input
-            type="checkbox"
-            value="1"
-            name="checkbox_input"
-            [(ngModel)]="checkbox_input1"
-            sprkCheckboxInput
-            #checkboxInput1="ngModel"
-            idString="checkbox-1"
-            id="checkbox-1"
-          >
-          <label
-            for="checkbox-1"
-            sprkCheckboxLabel
-          >
-            Checkbox Item 1
-          </label>
-        </sprk-checkbox-item>
-        <sprk-checkbox-item>
-          <input
-            type="checkbox"
-            value="2"
-            name="checkbox_input"
-            [(ngModel)]="checkbox_input2"
-            sprkCheckboxInput
-            #checkboxInput2="ngModel"
-            idString="checkbox-2"
-            id="checkbox-2"
-          >
-          <label
-            for="checkbox-2"
-            sprkCheckboxLabel
-          >
-          Checkbox Item 2
-          </label>
-        </sprk-checkbox-item>
-        <sprk-checkbox-item>
-          <input
-            type="checkbox"
-            value="3"
-            name="checkbox_input"
-            [(ngModel)]="checkbox_input3"
-            sprkCheckboxInput
-            #checkboxInput3="ngModel"
-            idString="checkbox-3"
-            id="checkbox-3"
-          >
-          <label
-            for="checkbox-3"
-            sprkCheckboxLabel
-          >
-            Checkbox Item 3
-          </label>
-        </sprk-checkbox-item>
-      </fieldset>
-    </sprk-checkbox-group>
-  `,
-});
-
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
-};
-
 export const defaultHelperText = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group>
       <fieldset sprkFieldset>
@@ -242,23 +246,21 @@ export const defaultHelperText = () => ({
   `,
 });
 
-defaultHelperText.story = {
-  name: 'Default Helper Text',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+defaultHelperText.storyName = 'Default Helper Text';
+
+defaultHelperText.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const invalidCheckbox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group>
       <fieldset sprkFieldset>
@@ -334,24 +336,22 @@ export const invalidCheckbox = () => ({
   `,
 });
 
-invalidCheckbox.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidCheckbox.storyName = 'Invalid';
+
+invalidCheckbox.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledCheckbox = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group>
       <fieldset sprkFieldset>
@@ -423,23 +423,21 @@ export const disabledCheckbox = () => ({
   `,
 });
 
-disabledCheckbox.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+disabledCheckbox.storyName = 'Disabled';
+
+disabledCheckbox.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const huge = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -511,23 +509,19 @@ export const huge = () => ({
   `,
 });
 
-huge.story = {
-  name: 'Huge',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+huge.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeHelperText = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -602,23 +596,19 @@ export const hugeHelperText = () => ({
   `,
 });
 
-hugeHelperText.story = {
-  name: 'Huge Helper Text',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeHelperText.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeInvalid = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -700,23 +690,20 @@ export const hugeInvalid = () => ({
   `,
 });
 
-hugeInvalid.story = {
-  name: 'Huge Invalid',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeInvalid.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const hugeDisabled = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -794,24 +781,19 @@ export const hugeDisabled = () => ({
   `,
 });
 
-hugeDisabled.story = {
-  name: 'Huge Disabled',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-      'sprk-field-error.directive',
-    ],
-  },
+hugeDisabled.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeLayoutTwo = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -869,23 +851,21 @@ export const hugeLayoutTwo = () => ({
   `,
 });
 
-hugeLayoutTwo.story = {
-  name: 'Huge Layout - Two',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeLayoutTwo.storyName = 'Huge Layout - Two';
+
+hugeLayoutTwo.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeLayoutFour = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -995,23 +975,21 @@ export const hugeLayoutFour = () => ({
   `,
 });
 
-hugeLayoutFour.story = {
-  name: 'Huge Layout - Four',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeLayoutFour.storyName = 'Huge Layout - Four';
+
+hugeLayoutFour.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeLayoutFive = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -1147,23 +1125,21 @@ export const hugeLayoutFive = () => ({
   `,
 });
 
-hugeLayoutFive.story = {
-  name: 'Huge Layout - Five',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeLayoutFive.storyName = 'Huge Layout - Five';
+
+hugeLayoutFive.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const hugeLayoutSix = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-checkbox-group variant="huge">
       <fieldset sprkFieldset>
@@ -1321,23 +1297,21 @@ export const hugeLayoutSix = () => ({
   `,
 });
 
-hugeLayoutSix.story = {
-  name: 'Huge Layout - Six',
-  parameters: {
-    jest: [
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-fieldset.directive',
-      'sprk-legend.directive',
-      'sprk-label.directive',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-group.component',
-    ],
-  },
+hugeLayoutSix.storyName = 'Huge Layout - Six';
+
+hugeLayoutSix.parameters = {
+  jest: [
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-fieldset.directive',
+    'sprk-legend.directive',
+    'sprk-label.directive',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-group.component',
+  ],
 };
 
 export const legacyStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-selection-container>
       <label sprkLabel>
@@ -1407,21 +1381,19 @@ export const legacyStory = () => ({
   `,
 });
 
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-selection-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-selection-input.directive',
-      'sprk-selection-label.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyStory.storyName = 'Legacy (Deprecated)';
+
+legacyStory.parameters = {
+  jest: [
+    'sprk-selection-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-selection-input.directive',
+    'sprk-selection-label.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-selection-container>
       <label sprkLabel>
@@ -1499,22 +1471,20 @@ export const legacyInvalidStory = () => ({
   `,
 });
 
-legacyInvalidStory.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-selection-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-selection-input.directive',
-      'sprk-selection-label.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidStory.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidStory.parameters = {
+  jest: [
+    'sprk-selection-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-selection-input.directive',
+    'sprk-selection-label.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-selection-container>
       <label class="sprk-b-Label--disabled" sprkLabel>
@@ -1590,15 +1560,14 @@ export const legacyDisabledStory = () => ({
   `,
 });
 
-legacyDisabledStory.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-selection-container.component',
-      'sprk-selection-item-container.component',
-      'sprk-selection-input.directive',
-      'sprk-selection-label.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledStory.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledStory.parameters = {
+  jest: [
+    'sprk-selection-container.component',
+    'sprk-selection-item-container.component',
+    'sprk-selection-input.directive',
+    'sprk-selection-label.directive',
+    'sprk-label.directive',
+  ],
 };

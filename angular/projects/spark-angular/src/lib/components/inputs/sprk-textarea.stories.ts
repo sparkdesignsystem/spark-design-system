@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkTextareaModule } from '../../directives/inputs/sprk-textarea/sprk-textarea.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
@@ -9,6 +11,7 @@ import { SprkFieldErrorModule } from '../../directives/inputs/sprk-field-error/s
 import { SprkTextareaDirective } from '../../directives/inputs/sprk-textarea/sprk-textarea.directive';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Textarea',
@@ -18,11 +21,21 @@ export default {
     SprkLabelDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkTextareaContainerModule,
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkTextareaModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -33,26 +46,18 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkTextareaContainerModule,
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkTextareaModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-  ],
-};
+} as Meta;
 
 export const textarea = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-textarea-container>
       <label for="textarea-1" sprkLabel>Description</label>
@@ -68,19 +73,17 @@ export const textarea = () => ({
   `,
 });
 
-textarea.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-textarea-container.component',
-      'sprk-textarea.directive',
-      'sprk-label.directive',
-    ],
-  },
+textarea.storyName = 'Default';
+
+textarea.parameters = {
+  jest: [
+    'sprk-textarea-container.component',
+    'sprk-textarea.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidTextarea = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-textarea-container>
       <label for="textarea-1" sprkLabel>Description</label>
@@ -107,20 +110,18 @@ export const invalidTextarea = () => ({
   `,
 });
 
-invalidTextarea.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-textarea-container.component',
-      'sprk-field-error.directive',
-      'sprk-textarea.directive',
-      'sprk-label.directive',
-    ],
-  },
+invalidTextarea.storyName = 'Invalid';
+
+invalidTextarea.parameters = {
+  jest: [
+    'sprk-textarea-container.component',
+    'sprk-field-error.directive',
+    'sprk-textarea.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const disabledTextarea = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-textarea-container>
       <label
@@ -143,13 +144,12 @@ export const disabledTextarea = () => ({
   `,
 });
 
-disabledTextarea.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-textarea-container.component',
-      'sprk-textarea.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledTextarea.storyName = 'Disabled';
+
+disabledTextarea.parameters = {
+  jest: [
+    'sprk-textarea-container.component',
+    'sprk-textarea.directive',
+    'sprk-label.directive',
+  ],
 };
