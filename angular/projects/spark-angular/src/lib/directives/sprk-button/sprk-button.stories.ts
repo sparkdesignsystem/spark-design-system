@@ -48,7 +48,7 @@ in addition to the \`sprk-is-Disabled\` class so that it doesn’t
 receive interaction.
 - Spinner state requires additional engineering.
   - Use app state to conditionally render between button text and spinner.
-  - Add \`isSpinning\` on sprkButton directive when spinner is present
+  - Add \`isSpinning\` on sprkButton directive when spinner is present.
 `,
       },
       iframeHeight: 100,
