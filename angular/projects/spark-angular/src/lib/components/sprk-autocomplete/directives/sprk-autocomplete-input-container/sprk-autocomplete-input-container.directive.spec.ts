@@ -19,15 +19,17 @@ describe('Spark Autocomplete Input Container Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkAutocompleteInputContainerDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      element = fixture.nativeElement.querySelectorAll('div')[0];
-      element2 = fixture.nativeElement.querySelectorAll('div')[1];
-
-      fixture.detectChanges();
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    element = fixture.nativeElement.querySelectorAll('div')[0];
+    element2 = fixture.nativeElement.querySelectorAll('div')[1];
+
+    fixture.detectChanges();
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

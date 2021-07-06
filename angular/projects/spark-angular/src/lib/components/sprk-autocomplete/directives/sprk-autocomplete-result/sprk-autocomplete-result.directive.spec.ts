@@ -30,21 +30,23 @@ describe('Spark Autocomplete Result Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkAutocompleteResultDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      element = fixture.nativeElement.querySelectorAll('li')[0];
-      emptyElement = fixture.nativeElement.querySelectorAll('li')[1];
-
-      directiveElement = fixture.debugElement
-        .query(By.directive(SprkAutocompleteResultDirective))
-        .injector.get(
-          SprkAutocompleteResultDirective,
-        ) as SprkAutocompleteResultDirective;
-
-      fixture.detectChanges();
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    element = fixture.nativeElement.querySelectorAll('li')[0];
+    emptyElement = fixture.nativeElement.querySelectorAll('li')[1];
+
+    directiveElement = fixture.debugElement
+      .query(By.directive(SprkAutocompleteResultDirective))
+      .injector.get(
+        SprkAutocompleteResultDirective,
+      ) as SprkAutocompleteResultDirective;
+
+    fixture.detectChanges();
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
