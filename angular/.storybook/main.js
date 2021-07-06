@@ -27,6 +27,9 @@ module.exports = {
       alias: {
         ...config.resolve.alias,
         path: require.resolve('path-browserify'),
+        'lodash/uniqueId': require.resolve(
+          '../../react/node_modules/lodash.uniqueid',
+        ),
       },
     };
 
