@@ -210,7 +210,7 @@ describe('SprkTable:', () => {
     expect(wrapper.find('thead tr').length).toBe(0);
   });
 
-  it('should not render a tr element if the rows prop is not provided', () => {
+  it('should not render a tr element if the rows prop is not supplied', () => {
     const wrapper = shallow(<SprkTable />);
     expect(wrapper.find('tbody tr').length).toBe(0);
   });
