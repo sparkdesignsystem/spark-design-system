@@ -70,7 +70,7 @@ const IndexPage = () => (
               <SprkStackItem>
                 <SprkText variant="bodyTwo">
                   Get started with Design by reading the principles that we use
-                  that we use in Spark Design System.
+                  in Spark Design System.
                 </SprkText>
               </SprkStackItem>
 

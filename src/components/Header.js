@@ -168,7 +168,7 @@ const Header = ({ setContext }) => {
       utilityContents={utilityItems}
       navLink={
         // eslint-disable-next-line max-len
-        <SprkInputContainer additionalClasses="docs-header-search sprk-u-Width-100">
+        <SprkInputContainer additionalClasses="docs-header-search">
           <div className="sprk-b-InputContainer__icon-container">
             <SprkLabel htmlFor="inline-search" isHidden>
               Search

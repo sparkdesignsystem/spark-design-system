@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .docs-masthead .sprk-b-InputContainer {
   margin-bottom: 0;
 }
@@ -25,6 +26,13 @@
  * wraps masthead in extra container
  * that breaks our masthead in iOS Safari.
  */
+
 .docs-masthead .sprk-c-Masthead__narrow-nav {
   height: auto;
 }
+
+.docs-header-search {
+  width: 100%;
+}
+
+/* stylelint-enable selector-class-pattern */
