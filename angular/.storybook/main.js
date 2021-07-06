@@ -21,4 +21,16 @@ module.exports = {
       ['@babel/preset-react', { targets: { node: 'current' } }], // add this
     ],
   }),
+  webpackFinal: (config) => {
+    // Workaround for @storybook/addon-jest on Webpack 5, Issue #14856
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        ...config.resolve.alias,
+        path: require.resolve('path-browserify'),
+      },
+    };
+
+    return config;
+  },
 };

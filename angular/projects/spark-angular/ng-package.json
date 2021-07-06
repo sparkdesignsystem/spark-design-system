@@ -11,7 +11,7 @@
     },
     "entryFile": "src/public-api.ts"
   },
-  "whitelistedNonPeerDependencies": [
+  "allowedNonPeerDependencies": [
     "lodash",
     "tiny-date-picker",
     "focus-visible",
