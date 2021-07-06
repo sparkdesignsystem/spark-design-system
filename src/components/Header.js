@@ -45,7 +45,7 @@ const Header = ({ setContext }) => {
       additionalClasses="sprk-c-Masthead__link"
       variant="simple"
       element={Link}
-      to="/principles/design-principles"
+      to="/principles/accessibility-guidelines"
     >
       Principles
     </SprkLink>,

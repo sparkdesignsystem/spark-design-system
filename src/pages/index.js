@@ -46,7 +46,7 @@ const IndexPage = () => (
             <SprkStackItem>
               <SprkLink
                 variant="unstyled"
-                href="/principles/design-principles"
+                href="/using-spark/foundations/color-usage"
                 analyticsString="teaser-media"
               >
                 <img
@@ -83,7 +83,7 @@ const IndexPage = () => (
                   <SprkLink
                     variant="unstyled"
                     additionalClasses="sprk-c-Button sprk-c-Button--secondary"
-                    href="/principles/design-principles"
+                    href="/using-spark/foundations/color-usage"
                   >
                     Go To Designer Basics
                   </SprkLink>

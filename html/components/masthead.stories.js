@@ -42,6 +42,10 @@ the big nav, to display the navigation items.
 tools. The attribute \`role=”banner”\` must be present.
 - The Masthead will be "sticky" on small viewports in all browsers
 except for IE11.
+- To see how Masthead fits into the page as a whole, see
+our \`kitchen-sink\` starter repo for examples:
+  - [Masthead](https://github.com/sparkdesignsystem/spark-starter-html/blob/kitchen-sink/src/pages/masthead.html)
+  - [Masthead Extended](https://github.com/sparkdesignsystem/spark-starter-html/blob/kitchen-sink/src/pages/masthead-extended.html)
 `,
   },
 };
