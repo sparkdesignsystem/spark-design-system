@@ -1,6 +1,5 @@
 import React from 'react';
 import SprkSelectionInput from './SprkSelectionInput/SprkSelectionInput';
-import SprkErrorContainer from './SprkErrorContainer/SprkErrorContainer';
 import SprkRadioGroup from './SprkRadio/SprkRadioGroup/SprkRadioGroup';
 import SprkRadioItem from './SprkRadio/SprkRadioItem/SprkRadioItem';
 import SprkFieldset from './SprkFieldset/SprkFieldset';
@@ -8,6 +7,8 @@ import SprkLegend from './SprkLegend/SprkLegend';
 import SprkHelperText from './SprkHelperText/SprkHelperText';
 import SprkStack from '../../objects/stack/SprkStack';
 import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
+import SprkFieldError from './SprkFieldError/SprkFieldError';
+import SprkIcon from '../../components/icons/SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 
 export default {
@@ -16,7 +17,6 @@ export default {
   component: SprkRadioGroup,
   parameters: {
     subcomponents: {
-      SprkErrorContainer,
       SprkRadioGroup,
       SprkRadioItem,
       SprkFieldset,
@@ -25,7 +25,8 @@ export default {
       SprkSelectionInput,
     },
     jest: [
-      'SprkErrorContainer',
+      'SprkFieldError',
+      'SprkIcon',
       'SprkRadioGroup',
       'SprkRadio',
       'SprkFieldset',
@@ -35,12 +36,10 @@ export default {
     info: `
     ${markdownDocumentationLinkBuilder('input')}
 - Spark radios have been refactored into a compositional style component.
-The version that uses <code>SprkSelectionInput</code> will be permanently
-removed in our Fall 2020 release.
-- To update to the new version, replace radios implemented by
+To update to the new version, replace radios implemented by
 the <code>SprkSelectionInput</code> component with our
 new implementation using <code>SprkRadioGroup</code>
-and <code>SprkRadio</code> components.
+and <code>SprkRadioItem</code> components.
     `,
   },
 };
@@ -48,7 +47,7 @@ and <code>SprkRadio</code> components.
 export const defaultStory = () => (
   <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
@@ -66,12 +65,15 @@ defaultStory.story = {
 export const defaultHelperText = () => (
   <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
       <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
     </SprkFieldset>
-    <SprkHelperText>Input Helper Text</SprkHelperText>
+
+    <SprkHelperText id="radio-helper-text">
+      Optional helper text, used to clarify the field&apos;s intent.
+    </SprkHelperText>
   </SprkRadioGroup>
 );
 
@@ -84,13 +86,20 @@ defaultHelperText.story = {
 
 export const invalidRadioButton = () => (
   <SprkRadioGroup>
-    <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
-    <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
-    <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
-    <SprkErrorContainer
-      id="radio-error-container"
-      message="There is an error on this field"
-    />
+    <SprkFieldset ariaDescribedBy="invalid-radio">
+      <SprkLegend>Radio Group Label</SprkLegend>
+      <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
+      <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
+    </SprkFieldset>
+    <SprkFieldError id="invalid-radio">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkRadioGroup>
 );
 
@@ -104,7 +113,7 @@ invalidRadioButton.story = {
 export const disabledRadioButton = () => (
   <SprkRadioGroup>
     <SprkFieldset>
-      <SprkLegend isDisabled>Group Label Name</SprkLegend>
+      <SprkLegend isDisabled>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio" isDisabled>
         Radio Item 1
       </SprkRadioItem>
@@ -128,7 +137,7 @@ disabledRadioButton.story = {
 export const huge = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
@@ -151,8 +160,8 @@ huge.story = {
 
 export const hugeHelperText = () => (
   <SprkRadioGroup variant="huge">
-    <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+    <SprkFieldset ariaDescribedBy="huge-radio-helper-text">
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
@@ -163,7 +172,7 @@ export const hugeHelperText = () => (
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
-    <SprkHelperText>
+    <SprkHelperText id="huge-radio-helper-text">
       Optional helper text, used to clarify the field&#x27;s intent.
     </SprkHelperText>
   </SprkRadioGroup>
@@ -178,8 +187,8 @@ hugeHelperText.story = {
 
 export const hugeInvalid = () => (
   <SprkRadioGroup variant="huge">
-    <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+    <SprkFieldset ariaDescribedBy="invalid-huge-radio">
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio" variant="huge">
         Radio Item 1
       </SprkRadioItem>
@@ -190,10 +199,14 @@ export const hugeInvalid = () => (
         Radio Item 3
       </SprkRadioItem>
     </SprkFieldset>
-    <SprkErrorContainer
-      id="radio-huge-error-container"
-      message="There is an error on this field"
-    />
+    <SprkFieldError id="invalid-huge-radio">
+      <SprkIcon
+        iconName="exclamation-filled"
+        additionalClasses="sprk-b-ErrorIcon"
+        aria-hidden="true"
+      />
+      <div className="sprk-b-ErrorText">There is an error on this field.</div>
+    </SprkFieldError>
   </SprkRadioGroup>
 );
 
@@ -205,9 +218,9 @@ hugeInvalid.story = {
 };
 
 export const hugeDisabled = () => (
-  <SprkRadioGroup variant="huge" isDisabled>
+  <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend isDisabled>Group Label Name</SprkLegend>
+      <SprkLegend isDisabled>Radio Group Label</SprkLegend>
       <SprkRadioItem name="radio" variant="huge" isDisabled>
         Radio Item 1
       </SprkRadioItem>
@@ -231,7 +244,7 @@ hugeDisabled.story = {
 export const hugeLayoutTwo = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -262,7 +275,7 @@ hugeLayoutTwo.story = {
 export const hugeLayoutFour = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -306,7 +319,7 @@ hugeLayoutFour.story = {
 export const hugeLayoutFive = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">
@@ -368,7 +381,7 @@ hugeLayoutFive.story = {
 export const hugeLayoutSix = () => (
   <SprkRadioGroup variant="huge">
     <SprkFieldset>
-      <SprkLegend>Group Label Name</SprkLegend>
+      <SprkLegend>Radio Group Label</SprkLegend>
       <SprkStack itemSpacing="medium">
         <SprkStackItem>
           <SprkStack splitAt="small" itemSpacing="medium">

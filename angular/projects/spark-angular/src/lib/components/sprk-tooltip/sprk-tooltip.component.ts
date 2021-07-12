@@ -16,7 +16,7 @@ import { uniqueId } from 'lodash';
   selector: 'sprk-tooltip',
   template: `
     <span
-      class="sprk-c-Tooltip__container"
+      [ngClass]="getContainerClasses()"
       [attr.data-id]="idString"
       #containerElement
     >
@@ -53,7 +53,7 @@ import { uniqueId } from 'lodash';
 export class SprkTooltipComponent implements AfterViewInit, OnChanges {
   constructor(private renderer: Renderer2) {}
   /**
-   * Whether or not the tooltip is toggled open.
+   * Whether or not the Tooltip is toggled open.
    */
   @Input()
   isToggled = false;
@@ -63,6 +63,11 @@ export class SprkTooltipComponent implements AfterViewInit, OnChanges {
    */
   @Input()
   triggerIconType = 'question-filled';
+  /**
+   * The vertical alignment of the Tooltip. By default, the Tooltip will not have any vertical alignment set.
+   */
+  @Input()
+  verticalAlignment: 'baseline' | 'top' | 'middle' | 'bottom';
   /**
    * The icon to use for the trigger element.
    */
@@ -75,11 +80,17 @@ export class SprkTooltipComponent implements AfterViewInit, OnChanges {
   @Input()
   analyticsString: string;
   /**
-   * Expects a space separated string of classes to be added to the tooltip
+   * Expects a space separated string of classes to be added to the Tooltip
    * element.
    */
   @Input()
   additionalClasses: string;
+  /**
+   * Expects a space separated string of classes to be added to the Tooltip
+   * container.
+   */
+  @Input()
+  containerAdditionalClasses: string;
   /**
    * Expects a space separated string of classes to be added to the svg icon.
    */
@@ -93,20 +104,20 @@ export class SprkTooltipComponent implements AfterViewInit, OnChanges {
   @Input()
   idString: string;
   /**
-   * Optional: the unique ID to use for the tooltip element. If an ID is not
+   * Optional: the unique ID to use for the Tooltip element. If an ID is not
    * provided, a unique ID will be created automatically.
    */
   @Input()
   id = uniqueId(`sprk_tooltip_`);
 
   /**
-   * Emitted when the tooltip is toggled open.
+   * Emitted when the Tooltip is toggled open.
    */
   @Output()
   openedEvent = new EventEmitter<any>();
 
   /**
-   * Emitted when the tooltip is toggled closed.
+   * Emitted when the Tooltip is toggled closed.
    */
   @Output()
   closedEvent = new EventEmitter<any>();
@@ -283,6 +294,37 @@ export class SprkTooltipComponent implements AfterViewInit, OnChanges {
       this.additionalClasses.split(' ').forEach((className) => {
         classArray.push(className);
       });
+    }
+
+    return classArray.join(' ');
+  }
+
+  /**
+   * @ignore
+   */
+  getContainerClasses(): string {
+    const classArray: string[] = ['sprk-c-Tooltip__container'];
+
+    if (this.containerAdditionalClasses) {
+      this.containerAdditionalClasses.split(' ').forEach((className) => {
+        classArray.push(className);
+      });
+    }
+
+    if (this.verticalAlignment === 'top') {
+      classArray.push('sprk-c-Tooltip__container--top');
+    }
+
+    if (this.verticalAlignment === 'middle') {
+      classArray.push('sprk-c-Tooltip__container--middle');
+    }
+
+    if (this.verticalAlignment === 'bottom') {
+      classArray.push('sprk-c-Tooltip__container--bottom');
+    }
+
+    if (this.verticalAlignment === 'baseline') {
+      classArray.push('sprk-c-Tooltip__container--baseline');
     }
 
     return classArray.join(' ');

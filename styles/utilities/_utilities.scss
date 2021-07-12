@@ -160,6 +160,12 @@
   max-width: 100% !important;
 }
 
+/// Changes the width of the element to `auto`.
+/// @group width
+.sprk-u-Width--auto {
+  width: auto !important;
+}
+
 //
 // Alignment
 ///
@@ -519,6 +525,7 @@
 .sprk-u-BackgroundColor--black {
   background-color: $sprk-black !important;
 }
+
 /// Sets the background color to black tinted at 90%.
 /// @group color
 .sprk-u-BackgroundColor--black-tint-90 {
@@ -564,6 +571,7 @@
 .sprk-u-BackgroundColor--black-tint-10 {
   background-color: $sprk-black-tint-10 !important;
 }
+
 /// Sets the background color to gray.
 /// @group color
 .sprk-u-BackgroundColor--gray {

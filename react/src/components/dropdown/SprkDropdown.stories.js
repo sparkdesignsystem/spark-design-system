@@ -71,7 +71,7 @@ export const informational = () => (
           variant="secondary"
           additionalClasses="sprk-c-Button--compact"
           onClick={() => {
-            console.log('Clicked!');
+            console.log('Clicked');
           }}
         >
           Go Elsewhere

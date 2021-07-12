@@ -1,7 +1,9 @@
 import { SprkDropdownModule } from './sprk-dropdown.module';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkDropdownComponent } from './sprk-dropdown.component';
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
@@ -10,40 +12,45 @@ export default {
   title: 'Components/Dropdown',
   component: SprkDropdownComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkDropdownModule,
+        SprkLinkDirectiveModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkDropdownComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('dropdown')}
 - The Dropdown should have the \`aria-haspopup="true"\`
 attribute. This tells screen readers that the
 element has a popup menu.
-  `,
-    docs: { iframeHeight: 200 },
-  },
-};
-
-const modules = {
-  imports: [
-    SprkDropdownModule,
-    SprkLinkDirectiveModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkDropdownComponent,
+       `,
       },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+      iframeHeight: 200,
+    },
+  },
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-dropdown
-      screenReaderText="Description of default dropdown."
+      screenReaderText="Description of default dropdown"
       heading="My Choices"
       triggerIconName="settings"
       triggerAdditionalClasses="sprk-b-Link--plain"
@@ -62,15 +69,13 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-dropdown.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-dropdown.component'],
 };
 
 export const informational = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-dropdown
       variant="informational"
@@ -116,9 +121,7 @@ export const informational = () => ({
   `,
 });
 
-informational.story = {
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: ['sprk-dropdown.component'],
-  },
+informational.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: ['sprk-dropdown.component'],
 };

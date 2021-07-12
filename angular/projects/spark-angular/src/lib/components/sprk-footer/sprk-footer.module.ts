@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
+import { SprkTextModule } from '../../directives/sprk-text/sprk-text.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.module';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
@@ -16,9 +17,16 @@ import { SprkFooterComponent } from './sprk-footer.component';
     SprkStackItemModule,
     SprkToggleModule,
     SprkLinkDirectiveModule,
+    SprkTextModule,
     RouterModule,
   ],
   declarations: [SprkFooterComponent],
-  exports: [SprkFooterComponent],
+  exports: [
+    SprkStackModule,
+    SprkStackItemModule,
+    SprkLinkDirectiveModule,
+    SprkTextModule,
+    SprkFooterComponent,
+  ],
 })
 export class SprkFooterModule {}

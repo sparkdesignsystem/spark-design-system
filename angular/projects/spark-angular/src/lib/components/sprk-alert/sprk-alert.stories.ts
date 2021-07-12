@@ -1,33 +1,38 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkAlertModule } from './sprk-alert.module';
 import { SprkAlertComponent } from './sprk-alert.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 export default {
   title: 'Components/Alert',
   component: SprkAlertComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkAlertModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
-    info: `
-${markdownDocumentationLinkBuilder('alert')}
+    docs: {
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 120,
+      description: {
+        component: `${markdownDocumentationLinkBuilder('alert')}
 - \`role=”alert”\` is required so that
 assistive technologies can inform
 the user that their attention is needed.
-`,
-    docs: { iframeHeight: 120 },
+        `,
+      },
+    },
   },
-};
-
-const modules = {
-  imports: [SprkAlertModule],
-};
+} as Meta;
 
 export const info = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-alert
       variant="info"
@@ -35,42 +40,35 @@ export const info = () => ({
       analyticsString="test"
     >
       This is important information.
-    </sprk-alert>
-  `,
+    </sprk-alert>`,
 });
 
-info.story = {
-  parameters: {
-    jest: ['sprk-alert.component'],
-  },
+info.parameters = {
+  jest: ['sprk-alert.component'],
 };
 
 export const success = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-alert
       variant="success"
       idString="alert-success-1"
-      analyticsString="object.action.event"
+      analyticsString="test"
     >
       This is a success message.
     </sprk-alert>
   `,
 });
 
-success.story = {
-  parameters: {
-    jest: ['sprk-alert.component'],
-  },
+success.parameters = {
+  jest: ['sprk-alert.component'],
 };
 
 export const fail = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-alert
       variant="fail"
       idString="alert-fail-1"
-      analyticsString="object.action.event"
+      analyticsString="test"
     >
       This is a failure message to alert
       that something was not successful.
@@ -78,29 +76,24 @@ export const fail = () => ({
   `,
 });
 
-fail.story = {
-  parameters: {
-    docs: { iframeHeight: 235 },
-    jest: ['sprk-alert.component'],
-  },
+fail.parameters = {
+  docs: { iframeHeight: 235 },
+  jest: ['sprk-alert.component'],
 };
 
 export const noDismissButton = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-alert
       variant="success"
+      idString="no-dismiss"
+      analyticsString="test"
       [isDismissible]="false"
-      idString="alert-success-2"
-      analyticsString="object.action.event"
     >
       This Success Alert has no dismiss button.
     </sprk-alert>
   `,
 });
 
-noDismissButton.story = {
-  parameters: {
-    jest: ['sprk-alert.component'],
-  },
+noDismissButton.parameters = {
+  jest: ['sprk-alert.component'],
 };

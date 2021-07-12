@@ -21,7 +21,7 @@ export const defaultStory = () => {
   return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
 
@@ -111,7 +111,7 @@ export const defaultHelperText = () => {
   return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
         <div
@@ -199,7 +199,7 @@ export const invalidRadioButton = () => {
   return `
     <div class="sprk-b-InputContainer">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
 
@@ -273,6 +273,8 @@ export const invalidRadioButton = () => {
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -404,7 +406,7 @@ export const huge = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
 
@@ -495,7 +497,7 @@ export const hugeHelperText = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
         <div
@@ -595,7 +597,7 @@ export const hugeInvalid = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
         <div
@@ -675,6 +677,8 @@ export const hugeInvalid = () => {
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -810,7 +814,7 @@ export const hugeLayoutTwo = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
 
@@ -895,7 +899,7 @@ export const hugeLayoutFour = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
 
@@ -1044,7 +1048,7 @@ export const hugeLayoutFive = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
         <div class="sprk-o-Stack sprk-o-Stack--medium">
@@ -1227,7 +1231,7 @@ export const hugeLayoutSix = () => {
   return `
     <div class="sprk-b-InputContainer sprk-b-InputContainer--huge">
       <fieldset class="sprk-b-Fieldset">
-        <legend class="sprk-b-Legend">
+        <legend class="sprk-b-Legend sprk-b-Label">
           Radio Group Label
         </legend>
 

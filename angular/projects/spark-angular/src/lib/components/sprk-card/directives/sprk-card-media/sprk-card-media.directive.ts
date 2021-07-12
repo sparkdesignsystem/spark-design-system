@@ -16,7 +16,7 @@ export class SprkCardMediaDirective {
   @Input()
   idString: string;
 
-  @HostBinding('class.sprk-c-Card__media') true;
+  @HostBinding('class.sprk-c-Card__media') cardMediaClass = true;
 
   /**
    * @ignore

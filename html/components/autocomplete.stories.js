@@ -113,6 +113,7 @@ export const defaultStory = () => {
           "
           viewBox="0 0 64 64"
           aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#search" />
         </svg>
@@ -122,7 +123,6 @@ export const defaultStory = () => {
           class="
                 sprk-b-TextInput
                 sprk-b-TextInput--has-svg-icon
-                sprk-u-Width-100
               "
           id="autocomplete-input"
           type="text"
@@ -249,6 +249,7 @@ export const defaultInvalid = () => {
           "
           viewBox="0 0 64 64"
           aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#search" />
         </svg>
@@ -259,7 +260,6 @@ export const defaultInvalid = () => {
             sprk-b-TextInput
             sprk-b-TextInput--error
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="autocomplete-input-invalid"
           type="text"
@@ -347,6 +347,8 @@ export const defaultInvalid = () => {
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -394,6 +396,7 @@ export const defaultDisabled = () => {
           "
           viewBox="0 0 64 64"
           aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#search" />
         </svg>
@@ -403,7 +406,6 @@ export const defaultDisabled = () => {
           class="
                 sprk-b-TextInput
                 sprk-b-TextInput--has-svg-icon
-                sprk-u-Width-100
               "
           id="autocomplete-input-disabled"
           type="text"
@@ -522,12 +524,14 @@ export const hugeStory = () => {
           sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
         "
-        viewBox="0 0 64 64" aria-hidden="true"
+        viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#search" />
       </svg>
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="text-input-huge"
         type="text"
         placeholder="Search for a Fruit"
@@ -657,12 +661,14 @@ export const hugeInvalid = () => {
           sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
         "
-        viewBox="0 0 64 64" aria-hidden="true"
+        viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#search" />
       </svg>
       <input
-        class="sprk-b-TextInput sprk-b-TextInput--error sprk-u-Width-100"
+        class="sprk-b-TextInput sprk-b-TextInput--error"
         id="autocomplete-huge-invalid"
         type="text"
         placeholder="Search for a Fruit"
@@ -759,6 +765,8 @@ export const hugeInvalid = () => {
       <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -803,12 +811,14 @@ export const hugeDisabled = () => {
           sprk-c-Icon--filled-current-color
           sprk-c-Icon--stroke-current-color
         "
-        viewBox="0 0 64 64" aria-hidden="true"
+        viewBox="0 0 64 64"
+        aria-hidden="true"
+        focusable="false"
       >
         <use xlink:href="#search" />
       </svg>
       <input
-        class="sprk-b-TextInput sprk-u-Width-100"
+        class="sprk-b-TextInput"
         id="autocomplete-input-huge-disabled"
         type="text"
         placeholder="Search for a Fruit"

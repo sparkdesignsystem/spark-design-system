@@ -16,6 +16,7 @@ public class SparkDesignTokens {
     public static let sprkAlertLineHeight = 1.5
     public static let sprkAutocompleteResultFontSize = CGFloat(16.00)
     public static let sprkAutocompleteResultPadding = CGFloat(16.00)
+    public static let sprkAutocompleteResultsHiddenDisplay = none
     public static let sprkBigNavActiveColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkBigNavBg = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkBigNavItemActiveColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
@@ -167,6 +168,9 @@ public class SparkDesignTokens {
     public static let sprkLinkHasIconHoverColorText = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkLinkHasIconVisitedColorText = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHoverColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
+    public static let sprkLinkInlineLightColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
+    public static let sprkLinkInlineLightHoverColor = UIColor(red: 0.871, green: 0.694, blue: 0.992, alpha:1)
+    public static let sprkLinkInlineLightHoverUnderlineColor = UIColor(red: 0.871, green: 0.694, blue: 0.992, alpha:1)
     public static let sprkLinkLightColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkLinkLightHoverColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkLinkLightHoverUnderlineColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
@@ -304,6 +308,9 @@ public class SparkDesignTokens {
     public static let sprkLinkHasIconStroke = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconVisitedFill = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkLinkHasIconVisitedStroke = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
+    public static let sprkLinkInlineLightFontWeight = "300"
+    public static let sprkLinkInlineLightHoverCursor = pointer
+    public static let sprkLinkInlineLightHoverFontWeight = "300"
     public static let sprkLinkLightFontWeight = "300"
     public static let sprkLinkLightHoverFontWeight = "300"
     public static let sprkLinkSimpleFontWeight = "300"
@@ -487,7 +494,7 @@ public class SparkDesignTokens {
     public static let sprkFontSizeDisplayFive = CGFloat(20.00)
     public static let sprkFontSizeDisplayFour = CGFloat(26.00)
     public static let sprkFontSizeDisplayOne = CGFloat(44.00)
-    public static let sprkFontSizeDisplayOneWide = CGFloat(54.00)
+    public static let sprkFontSizeDisplayOneWide = CGFloat(44.00)
     public static let sprkFontSizeDisplaySeven = CGFloat(16.00)
     public static let sprkFontSizeDisplaySix = CGFloat(20.00)
     public static let sprkFontSizeDisplayThree = CGFloat(28.00)
@@ -542,6 +549,8 @@ public class SparkDesignTokens {
     public static let sprkLineHeightDisplayTwoWide = CGFloat(16.00)
     public static let sprkLinkDisabledUnderlineWidth = CGFloat(0.00)
     public static let sprkLinkHasIconUnderlineWidth = CGFloat(0.00)
+    public static let sprkLinkInlineLightHoverUnderlineWidth = CGFloat(2.00)
+    public static let sprkLinkInlineLightUnderlineWidth = CGFloat(2.00)
     public static let sprkLinkLightHoverAfterLeft = CGFloat(0.00)
     public static let sprkLinkLightHoverAfterWidth = CGFloat(1600.00)
     public static let sprkLinkLightHoverUnderlineWidth = CGFloat(2.00)
@@ -557,7 +566,7 @@ public class SparkDesignTokens {
     public static let sprkMastheadBreakpoint = CGFloat(864.00)
     public static let sprkMastheadColumnWidth = CGFloat(1424.00)
     public static let sprkMastheadContentItemPaddingBottom = CGFloat(8.00)
-    public static let sprkMastheadContentItemPaddingBottomWide = CGFloat(16.00)
+    public static let sprkMastheadContentItemPaddingBottomWide = CGFloat(8.00)
     public static let sprkMastheadContentItemPaddingLeft = CGFloat(8.00)
     public static let sprkMastheadContentItemPaddingLeftWide = CGFloat(16.00)
     public static let sprkMastheadContentItemPaddingRight = CGFloat(8.00)
@@ -627,6 +636,7 @@ public class SparkDesignTokens {
     public static let sprkSelectArrowOffsetX = CGFloat(19.00)
     public static let sprkSelectArrowOffsetY = CGFloat(-31.00)
     public static let sprkSelectInputHugePaddingRight = CGFloat(45.00)
+    public static let sprkSelectWidth = CGFloat(1600.00)
     public static let sprkSpaceH = CGFloat(64.00)
     public static let sprkSpaceInsetL = CGFloat(32.00)
     public static let sprkSpaceInsetM = CGFloat(16.00)
@@ -693,8 +703,10 @@ public class SparkDesignTokens {
     public static let sprkTextInputHugeBorderWidth = CGFloat(2.00)
     public static let sprkTextInputHugeFocusBorderWidth = CGFloat(2.00)
     public static let sprkTextInputHugeHeight = CGFloat(64.00)
+    public static let sprkTextInputWidth = CGFloat(1600.00)
     public static let sprkTextareaMinHeight = CGFloat(125.00)
     public static let sprkTextareaPadding = CGFloat(16.00)
+    public static let sprkTextareaWidth = CGFloat(1600.00)
     public static let sprkToggleTriggerPaddingBottom = CGFloat(0.00)
     public static let sprkToggleTriggerPaddingLeft = CGFloat(0.00)
     public static let sprkToggleTriggerPaddingRight = CGFloat(0.00)

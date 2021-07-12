@@ -1,20 +1,33 @@
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkCardModule } from './sprk-card.module';
 import { SprkCardComponent } from './sprk-card.component';
 import { SprkCardContentDirective } from './directives/sprk-card-content/sprk-card-content.directive';
 import { SprkCardMediaDirective } from './directives/sprk-card-media/sprk-card-media.directive';
 import { SprkCardHeaderDirective } from './directives/sprk-card-header/sprk-card-header.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 
 export default {
   title: 'Components/Card',
   component: SprkCardComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box sprk-o-Box--large">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkCardModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkCardComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
@@ -23,26 +36,19 @@ export default {
       SprkCardHeaderDirective,
       SprkCardMediaDirective,
     },
-    info: `${markdownDocumentationLinkBuilder('card')}`,
-    docs: { iframeHeight: 200 },
-  },
-};
-
-const modules = {
-  imports: [
-    SprkCardModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkCardComponent,
+    docs: {
+      source: {
+        type: 'code',
       },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+      description: {
+        component: `${markdownDocumentationLinkBuilder('card')}`,
+      },
+      iframeHeight: 200,
+    },
+  },
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="default">
       <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
@@ -54,21 +60,19 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: [
+    'sprk-card.component',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+  ],
 };
 
 export const standout = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="standout" isStandout="true">
       <sprk-stack sprkCardContent sprkStackItem itemSpacing="medium">
@@ -80,20 +84,17 @@ export const standout = () => ({
   `,
 });
 
-standout.story = {
-  parameters: {
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-    ],
-  },
+standout.parameters = {
+  jest: [
+    'sprk-card.component',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+  ],
 };
 
 export const highlightedHeader = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="highlighted-header" isStandout="true">
       <sprk-stack sprkCardHeader sprkStackItem itemSpacing="medium">
@@ -127,24 +128,20 @@ export const highlightedHeader = () => ({
   `,
 });
 
-highlightedHeader.story = {
-  name: 'Highlighted Header',
-  parameters: {
-    docs: { iframeHeight: 300 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-header.component',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-    ],
-  },
+highlightedHeader.parameters = {
+  docs: { iframeHeight: 300 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-header.component',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+  ],
 };
 
 export const teaser = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="teaser">
       <a
@@ -192,25 +189,21 @@ export const teaser = () => ({
  `,
 });
 
-teaser.story = {
-  name: 'Teaser',
-  parameters: {
-    docs: { iframeHeight: 550 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-card-media.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-    ],
-  },
+teaser.parameters = {
+  docs: { iframeHeight: 550 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-content.directive',
+    'sprk-card-media.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+  ],
 };
 
 export const teaserIcon = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="teaser-icon">
       <sprk-stack
@@ -262,25 +255,23 @@ export const teaserIcon = () => ({
  `,
 });
 
-teaserIcon.story = {
-  name: 'Teaser With Icon',
-  parameters: {
-    docs: { iframeHeight: 550 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-      'sprk-icon.component',
-    ],
-  },
+teaserIcon.storyName = 'Teaser With Icon';
+
+teaserIcon.parameters = {
+  docs: { iframeHeight: 550 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+    'sprk-icon.component',
+  ],
 };
 
 export const teaserWithDifferentElementOrder = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-card idString="teaser-diff-order">
       <h3 sprkHeading sprkCardContent variant="displayFive" sprkStackItem>
@@ -327,27 +318,24 @@ export const teaserWithDifferentElementOrder = () => ({
   `,
 });
 
-teaserWithDifferentElementOrder.story = {
-  name: 'Teaser With Different Element Order',
-  parameters: {
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-card-media.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-    ],
-    docs: {
-      iframeHeight: 550,
-    },
-  },
+teaserWithDifferentElementOrder.storyName =
+  'Teaser With Different Element Order';
+
+teaserWithDifferentElementOrder.parameters = {
+  docs: { iframeHeight: 550 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-content.directive',
+    'sprk-card-media.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+  ],
 };
 
 export const twoUpCards = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack
       itemSpacing="large"
@@ -457,25 +445,23 @@ export const twoUpCards = () => ({
   `,
 });
 
-twoUpCards.story = {
-  name: 'Card Layout - Two Up',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-card-media.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-    ],
-  },
+twoUpCards.storyName = 'Card Layout - Two Up';
+
+twoUpCards.parameters = {
+  docs: { iframeHeight: 550 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-media.directive',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+  ],
 };
 
 export const threeUpCards = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack
       itemSpacing="large"
@@ -635,25 +621,23 @@ export const threeUpCards = () => ({
   `,
 });
 
-threeUpCards.story = {
-  name: 'Card Layout - Three Up',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-media.directive',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-    ],
-  },
+threeUpCards.storyName = 'Card Layout - Three Up';
+
+threeUpCards.parameters = {
+  docs: { iframeHeight: 600 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-media.directive',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+  ],
 };
 
 export const fourUpCards = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack
       itemSpacing="large"
@@ -863,19 +847,18 @@ export const fourUpCards = () => ({
   `,
 });
 
-fourUpCards.story = {
-  name: 'Card Layout - Four Up',
-  parameters: {
-    docs: { iframeHeight: 600 },
-    jest: [
-      'sprk-card.component',
-      'sprk-card-content.directive',
-      'sprk-stack.component',
-      'sprk-card-media.directive',
-      'sprk-stack-item.directive',
-      'sprk-text.directive',
-      'sprk-heading.directive',
-      'sprk-link.directive',
-    ],
-  },
+threeUpCards.storyName = 'Card Layout - Four Up';
+
+threeUpCards.parameters = {
+  docs: { iframeHeight: 600 },
+  jest: [
+    'sprk-card.component',
+    'sprk-card-media.directive',
+    'sprk-card-content.directive',
+    'sprk-stack.component',
+    'sprk-stack-item.directive',
+    'sprk-text.directive',
+    'sprk-heading.directive',
+    'sprk-link.directive',
+  ],
 };

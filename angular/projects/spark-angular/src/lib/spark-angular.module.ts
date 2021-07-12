@@ -1,8 +1,3 @@
-import { environment } from '../environment/environment';
-if (typeof window !== 'undefined') {
-  window['sprk'] = { version: { angular: environment.version } } || {};
-}
-
 // tslint:disable:max-line-length
 import { NgModule } from '@angular/core';
 import { SprkFormatterDateModule } from './directives/inputs/formatters/sprk-formatter-date/sprk-formatter-date.module';
@@ -84,6 +79,8 @@ import { SprkDividerDirectiveModule } from './directives/sprk-divider/sprk-divid
 import { SprkSpinnerModule } from './directives/sprk-spinner/sprk-spinner.module';
 import { SprkTextareaModule } from './directives/inputs/sprk-textarea/sprk-textarea.module';
 import { SprkCardHeaderModule } from './components/sprk-card/directives/sprk-card-header/sprk-card-header.module';
+import { SprkAutocompleteModule } from './components/sprk-autocomplete/sprk-autocomplete.module';
+
 @NgModule({
   exports: [
     SprkAlertModule,
@@ -165,6 +162,7 @@ import { SprkCardHeaderModule } from './components/sprk-card/directives/sprk-car
     SprkDividerDirectiveModule,
     SprkSpinnerModule,
     SprkTextareaModule,
+    SprkAutocompleteModule,
   ],
 })
 export class SparkAngularModule {}

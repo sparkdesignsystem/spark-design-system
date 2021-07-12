@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkFlagModule } from './sprk-flag.module';
 import { SprkFlagComponent } from './sprk-flag.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -7,15 +9,20 @@ export default {
   title: 'Components/Flag',
   component: SprkFlagComponent,
   decorators: [
-    storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+    moduleMetadata({
+      imports: [SprkFlagModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
+    ),
   ],
   parameters: {
-    docs: { iframeHeight: 200 },
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('flag')}
 - The Flag component has two slots to inject markup
 into the component template.
@@ -24,17 +31,13 @@ into the component template.
 - If you pass something into the Flag component that is not
 in one of the slots mentioned above, it will not render.
 `,
+      },
+      iframeHeight: 200,
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkFlagModule,
-  ],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-flag>
       <img
@@ -47,18 +50,16 @@ export const defaultStory = () => ({
         Suspendisse id inventore integer eum non enim diam habitant.
       </p>
     </sprk-flag>
-  `
+  `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-flag.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-flag.component'],
 };
 
 export const reversed = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-flag
       [isReversed]="true"
@@ -73,17 +74,14 @@ export const reversed = () => ({
         Suspendisse id inventore integer eum non enim diam habitant.
       </p>
     </sprk-flag>
-  `
+  `,
 });
 
-reversed.story = {
-  parameters: {
-    jest: ['sprk-flag.component'],
-  },
+reversed.parameters = {
+  jest: ['sprk-flag.component'],
 };
 
 export const stacked = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-flag
       [isStacked]="true"
@@ -98,11 +96,9 @@ export const stacked = () => ({
         Suspendisse id inventore integer eum non enim diam habitant.
       </p>
     </sprk-flag>
-  `
+  `,
 });
 
-stacked.story = {
-  parameters: {
-    jest: ['sprk-flag.component'],
-  },
+stacked.parameters = {
+  jest: ['sprk-flag.component'],
 };

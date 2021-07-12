@@ -44,7 +44,7 @@ export const defaultStory = () => {
     >
       <label
         for="datepicker"
-        class="sprk-b-Label sprk-b-Label--with-icon"
+        class="sprk-b-Label"
       >
         Date
       </label>
@@ -52,12 +52,13 @@ export const defaultStory = () => {
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-b-InputContainer__icon
             sprk-c-Icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#calendar" />
         </svg>
@@ -66,7 +67,6 @@ export const defaultStory = () => {
           class="
             sprk-b-TextInput
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="datepicker"
           data-id="datepicker-input"
@@ -103,7 +103,7 @@ export const invalidDatePicker = () => {
     >
       <label
         for="datepicker"
-        class="sprk-b-Label sprk-b-Label--with-icon"
+        class="sprk-b-Label"
       >
         Date
       </label>
@@ -111,12 +111,13 @@ export const invalidDatePicker = () => {
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-b-InputContainer__icon
             sprk-c-Icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#calendar" />
         </svg>
@@ -126,7 +127,6 @@ export const invalidDatePicker = () => {
             sprk-b-TextInput
             sprk-b-TextInput--error
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="datepicker"
           data-id="datepicker-input"
@@ -144,6 +144,8 @@ export const invalidDatePicker = () => {
         <svg
           class="sprk-c-Icon sprk-b-ErrorIcon"
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#exclamation-filled" />
         </svg>
@@ -174,7 +176,7 @@ export const disabledDatePicker = () => {
     >
       <label
         for="datepicker"
-        class="sprk-b-Label sprk-b-Label--disabled sprk-b-Label--with-icon"
+        class="sprk-b-Label sprk-b-Label--disabled"
       >
         Date
       </label>
@@ -182,12 +184,13 @@ export const disabledDatePicker = () => {
       <div class="sprk-b-TextInputIconContainer">
         <svg
           class="
-            sprk-b-InputContainer__icon
             sprk-c-Icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
           "
           viewBox="0 0 64 64"
+          aria-hidden="true"
+          focusable="false"
         >
           <use xlink:href="#calendar" />
         </svg>
@@ -196,7 +199,6 @@ export const disabledDatePicker = () => {
           class="
             sprk-b-TextInput
             sprk-b-TextInput--has-svg-icon
-            sprk-u-Width-100
           "
           id="datepicker"
           data-id="datepicker-input"

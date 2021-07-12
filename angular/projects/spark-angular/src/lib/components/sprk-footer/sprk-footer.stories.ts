@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkFooterModule } from './sprk-footer.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
@@ -10,37 +12,42 @@ export default {
   title: 'Components/Footer',
   component: SprkFooterComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [
+        SprkFooterModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkFooterComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('footer')}
 - The Footer is a navigation landmark for
 accessibility tools. The attribute \`role=”contentinfo”\`
 must be present.
   `,
-    docs: { iframeHeight: 800 },
-  },
-};
-
-const modules = {
-  imports: [
-    SprkFooterModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkFooterComponent,
       },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+      iframeHeight: 800,
+    },
+  },
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-footer
       idString="footer-1"
@@ -261,13 +268,26 @@ export const defaultStory = () => ({
         }
       ]"
     >
+      <sprk-stack
+        additional-disclaimer-slot
+        itemSpacing="large"
+        sprkStackItem
+      >
+        <p
+          sprkStackItem
+          sprkText
+          variant="bodyFour"
+          class="sprk-c-Footer__text"
+        >
+          Sed ut perspiciatis unde omnis iste natus error sit <a href="#nogo" sprkLink class="sprk-b-Link--inline-light"> inline link</a> accusantium doloremque laudantium
+        </p>
+      </sprk-stack>
     </sprk-footer>
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-footer.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-footer.component'],
 };
