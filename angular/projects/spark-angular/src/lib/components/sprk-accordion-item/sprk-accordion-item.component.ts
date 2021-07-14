@@ -220,10 +220,7 @@ export class SprkAccordionItemComponent implements OnInit {
    * @ignore
    */
   getClasses(): string {
-    const classArray: string[] = [
-      'sprk-c-Accordion__item',
-      'sprk-u-Overflow--hidden',
-    ];
+    const classArray: string[] = ['sprk-c-Accordion__item'];
 
     if (this.isOpen) {
       classArray.push('sprk-c-Accordion__item--open');
@@ -291,7 +288,8 @@ export class SprkAccordionItemComponent implements OnInit {
     const classArray: string[] = [
       'sprk-c-Icon--filled-current-color',
       'sprk-c-Icon--xl',
-      'sprk-u-mrs',
+      'sprk-c-Accordion__icon',
+      'sprk-c-Accordion__icon--leading',
     ];
 
     if (this.leadingIconAdditionalClasses) {

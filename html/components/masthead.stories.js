@@ -42,6 +42,10 @@ the big nav, to display the navigation items.
 tools. The attribute \`role=”banner”\` must be present.
 - The Masthead will be "sticky" on small viewports in all browsers
 except for IE11.
+- To see how Masthead fits into the page as a whole, see
+our \`kitchen-sink\` starter repo for examples:
+  - [Masthead](https://github.com/sparkdesignsystem/spark-starter-html/blob/kitchen-sink/src/pages/masthead.html)
+  - [Masthead Extended](https://github.com/sparkdesignsystem/spark-starter-html/blob/kitchen-sink/src/pages/masthead-extended.html)
 `,
   },
 };
@@ -239,7 +243,7 @@ export const defaultStory = () => {
       </div>
 
       <nav
-        class="sprk-c-Masthead__narrow-nav sprk-u-Display--none"
+        class="sprk-c-Masthead__nav-collapsible sprk-c-Masthead__nav-collapsible--is-collapsed"
         data-sprk-mobile-nav="mobileNav"
         role="navigation"
         data-id="navigation-narrow-1"
@@ -353,7 +357,8 @@ export const defaultStory = () => {
                     sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   viewBox="0 0 64 64"
                 >
@@ -381,7 +386,8 @@ export const defaultStory = () => {
                     sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   viewBox="0 0 64 64"
                 >
@@ -529,7 +535,7 @@ export const extended = () => {
               sprk-o-Stack--center-column sprk-o-Stack--center-row
             "
           >
-            <div class="sprk-o-Stack__item sprk-u-Position--relative">
+            <div class="sprk-o-Stack__item sprk-c-Masthead__selector-container">
               <a
                 class="
                   sprk-c-Masthead__selector
@@ -564,9 +570,9 @@ export const extended = () => {
               </a>
 
               <div
-                class="sprk-c-Masthead__selector-dropdown sprk-u-Display--none"
+                class="sprk-c-Masthead__selector-dropdown sprk-c-Dropdown--is-hidden"
                 data-sprk-dropdown="dropdown-selector-wide"
-                >
+              >
                 <div class="sprk-c-Masthead__selector-dropdown-header">
                   <a
                     class="
@@ -576,7 +582,6 @@ export const extended = () => {
                       sprk-o-Stack
                       sprk-o-Stack--split@xxs
                       sprk-o-Stack--center-column
-                      sprk-u-Width-100
                     "
                     href="#nogo"
                     aria-haspopup="true"
@@ -608,7 +613,7 @@ export const extended = () => {
                 <ul class="sprk-c-Masthead__selector-dropdown-links">
                   <li class="sprk-c-Masthead__selector-dropdown-item">
                     <a
-                      class="sprk-c-Masthead__selector-dropdown-link sprk-u-ptm"
+                      class="sprk-c-Masthead__selector-dropdown-link"
                       href="#nogo"
                       data-sprk-dropdown-choice="Selection Choice Title 1"
                       role="option"
@@ -636,7 +641,7 @@ export const extended = () => {
                 <div
                   class="
                     sprk-c-Masthead__selector-footer
-                    sprk-u-TextAlign--center
+                    sprk-b-Type--center
                   "
                 >
                   <a
@@ -699,9 +704,8 @@ export const extended = () => {
               <div
                 class="
                   sprk-c-Dropdown
-                  sprk-u-Display--none
-                  sprk-u-Right--zero
-                  sprk-u-mrm
+                  sprk-c-Dropdown--is-hidden
+                  sprk-c-Masthead__dropdown
                 "
                 data-sprk-dropdown="dropdown02"
               >
@@ -776,7 +780,7 @@ export const extended = () => {
                     sprk-c-Icon
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
-                    sprk-u-mls
+                    sprk-c-Dropdown__trigger-icon
                   "
                   viewBox="0 0 64 64"
                 >
@@ -787,8 +791,8 @@ export const extended = () => {
               <div
                 class="
                   sprk-c-Dropdown
-                  sprk-u-Display--none
-                  sprk-u-TextAlign--left
+                  sprk-c-Dropdown--is-hidden
+                  sprk-b-Type--left
                 "
                 data-sprk-dropdown="dropdown03"
               >
@@ -862,7 +866,7 @@ export const extended = () => {
                     sprk-c-Icon
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
-                    sprk-u-mls
+                    sprk-c-Dropdown__trigger-icon
                   "
                   viewBox="0 0 64 64"
                 >
@@ -873,8 +877,8 @@ export const extended = () => {
               <div
                 class="
                   sprk-c-Dropdown
-                  sprk-u-Display--none
-                  sprk-u-TextAlign--left
+                  sprk-c-Dropdown--is-hidden
+                  sprk-b-Type--left
                 "
                 data-sprk-dropdown="dropdown04"
               >
@@ -918,8 +922,8 @@ export const extended = () => {
       </div>
       <nav
         class="
-          sprk-c-Masthead__narrow-nav
-          sprk-u-Display--none
+          sprk-c-Masthead__nav-collapsible
+          sprk-c-Masthead__nav-collapsible--is-collapsed
         "
         data-sprk-mobile-nav="mobileNav2"
         role="navigation"
@@ -961,7 +965,7 @@ export const extended = () => {
           </div>
 
           <div
-            class="sprk-c-Masthead__selector-dropdown sprk-u-Display--none"
+            class="sprk-c-Masthead__selector-dropdown sprk-c-Dropdown--is-hidden"
             data-sprk-dropdown="dropdown-selector"
           >
             <div class="sprk-c-Masthead__selector-dropdown-header">
@@ -973,7 +977,6 @@ export const extended = () => {
                   sprk-o-Stack
                   sprk-o-Stack--split@xxs
                   sprk-o-Stack--center-column
-                  sprk-u-Width-100
                 "
                 href="#nogo"
                 aria-haspopup="true"
@@ -1067,7 +1070,6 @@ export const extended = () => {
                   sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
                   sprk-c-MastheadAccordion__icon
-                  sprk-u-mls
                 "
                 data-sprk-toggle="icon"
                 viewBox="0 0 64 64"
@@ -1237,7 +1239,8 @@ export const extended = () => {
                     sprk-c-Icon
                     sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   viewBox="0 0 64 64"
                 >
@@ -1256,7 +1259,8 @@ export const extended = () => {
                     sprk-c-Icon
                     sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   viewBox="0 0 64 64"
                 >
@@ -1285,7 +1289,8 @@ export const extended = () => {
                     sprk-c-Icon
                     sprk-c-Icon--xl
                     sprk-c-Icon--filled-current-color
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   viewBox="0 0 64 64"
                 >

@@ -154,7 +154,10 @@ class SprkDropdown extends Component {
           variant="plain"
           additionalClasses={classNames(
             'sprk-c-Dropdown__trigger',
-            { 'sprk-u-mrs': variant === 'informational' },
+            {
+              'sprk-c-Dropdown__trigger--informational':
+                variant === 'informational',
+            },
             triggerAdditionalClasses,
           )}
           aria-expanded={isOpen}
@@ -176,7 +179,7 @@ class SprkDropdown extends Component {
                   `
                   sprk-c-Icon--filled-current-color
                   sprk-c-Icon--stroke-current-color
-                  sprk-u-mls
+                  sprk-c-Dropdown__trigger-icon
                 `,
                 )}
                 iconName={iconName}
@@ -292,7 +295,7 @@ class SprkDropdown extends Component {
               })}
             </ul>
             {footer && (
-              <div className="sprk-c-Dropdown__footer sprk-u-TextAlign--center">
+              <div className="sprk-c-Dropdown__footer sprk-b-Type--center">
                 {footer}
               </div>
             )}

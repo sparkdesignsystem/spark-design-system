@@ -24,8 +24,10 @@ export const info = () => {
   return `
     <div
       class="sprk-c-Alert sprk-c-Alert--info"
-      role="alert" data-sprk-alert="container"
-      data-id="alert-info-1" data-analytics="object.action.event"
+      role="alert"
+      data-sprk-alert="container"
+      data-id="alert-info-1"
+      data-analytics="object.action.event"
     >
       <div class="sprk-c-Alert__content">
         <svg

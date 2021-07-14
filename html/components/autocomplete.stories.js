@@ -56,12 +56,12 @@ In order to keep the Spark Autocomplete flexible enough to use in a wide
     - Update the contents of the associated \`aria-live\` element.
   - Showing the list
     - Set \`aria-expanded\` to \`true\` on the input container.
-    - Remove \`sprk-u-Display--none\` from the results list.
+    - Remove \`sprk-c-Autocomplete__results--is-hidden\` from the results list.
   - Hiding the list
     - Remove \`aria-selected\` from the active list item.
     - Remove \`aria-activedescendant\` from the input.
     - Set \`aria-expanded\` to false on the input container.
-    - Add \`sprk-u-Display--none\` to the results list.
+    - Add \`sprk-c-Autocomplete__results--is-hidden\` to the results list.
   - Selecting an item in the list by clicking it or pressing the Enter key.
     - The highlighted item is identified by the value of
     \`aria-activedescendant\` on the input.
@@ -274,7 +274,7 @@ export const defaultInvalid = () => {
 
       <ul
         data-sprk-autocomplete="results"
-        class="sprk-c-Autocomplete__results sprk-u-Display--none"
+        class="sprk-c-Autocomplete__results sprk-c-Autocomplete__results--is-hidden"
         role="listbox"
         aria-labelledby="autocomplete-label"
       >
@@ -420,7 +420,7 @@ export const defaultDisabled = () => {
 
       <ul
         data-sprk-autocomplete="results"
-        class="sprk-c-Autocomplete__results sprk-u-Display--none"
+        class="sprk-c-Autocomplete__results sprk-c-Autocomplete__results--is-hidden"
         role="listbox"
         aria-labelledby="autocomplete-label"
       >
@@ -691,7 +691,7 @@ export const hugeInvalid = () => {
     </div>
 
     <ul
-      class="sprk-c-Autocomplete__results sprk-u-Display--none"
+      class="sprk-c-Autocomplete__results sprk-c-Autocomplete__results--is-hidden"
       role="listbox"
       aria-labelledby="autocomplete-huge-label-invalid"
       data-sprk-autocomplete="results"
@@ -841,7 +841,7 @@ export const hugeDisabled = () => {
     </div>
 
     <ul
-      class="sprk-c-Autocomplete__results sprk-u-Display--none"
+      class="sprk-c-Autocomplete__results sprk-c-Autocomplete__results--is-hidden"
       role="listbox"
       aria-labelledby="input-label-huge"
       data-sprk-autocomplete="results"

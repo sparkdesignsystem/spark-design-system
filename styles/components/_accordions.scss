@@ -32,6 +32,10 @@
   flex: 0 0 auto;
 }
 
+.sprk-c-Accordion__icon--leading {
+  margin: $sprk-accordion-icon-leading-margin;
+}
+
 .sprk-c-Accordion__summary {
   align-items: center;
   background-color: $sprk-accordion-summary-background-color;

@@ -69,7 +69,7 @@ export const stackSplit = () => ({
   `,
 });
 
-stackSplit.storyName = 'Stack/Split - Spaced Item';
+stackSplit.storyName = 'Stack/Split - Spaced Items';
 
 defaultStory.parameters = {
   jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
@@ -317,25 +317,27 @@ export const stackSplitLayoutMixed = () => ({
     <sprk-stack splitAt="tiny">
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--fourth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--fourth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           fourth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--half@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--half@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           half
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--fourth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--fourth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           fourth
         </p>
       </div>
@@ -344,33 +346,36 @@ export const stackSplitLayoutMixed = () => ({
     <sprk-stack splitAt="tiny">
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--sixth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           sixth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--sixth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           sixth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--sixth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           sixth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--flex@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           flex
         </p>
       </div>
@@ -379,33 +384,36 @@ export const stackSplitLayoutMixed = () => ({
     <sprk-stack splitAt="tiny">
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--two-fifths@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--two-fifths@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           two-fifths
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--fifth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           fifth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--fifth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           fifth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--fifth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           fifth
         </p>
       </div>
@@ -419,27 +427,29 @@ export const stackSplitLayoutMixed = () => ({
         <sprk-stack splitAt="tiny">
           <div
             sprkStackItem
-            class="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter"
+            class="sprk-o-Stack sprk-o-Stack__item--flex@xs sprk-o-Stack--center-all"
           >
-            <p class="sprk-b-TypeBodyOne">
+            <p sprkStackItem class="sprk-b-TypeBodyOne">
               Nested Item (flex)
             </p>
           </div>
+
           <div
             sprkStackItem
-            class="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter"
+            class="sprk-o-Stack sprk-o-Stack__item--flex@xs sprk-o-Stack--center-all"
           >
-            <p class="sprk-b-TypeBodyOne">
+            <p sprkStackItem class="sprk-b-TypeBodyOne">
               Nested Item (flex)
             </p>
           </div>
         </sprk-stack>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--half@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--half@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           half
         </p>
       </div>
@@ -448,17 +458,18 @@ export const stackSplitLayoutMixed = () => ({
     <sprk-stack splitAt="tiny">
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--two-fifths@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--two-fifths@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           two-fifths
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--three-fifths@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--three-fifths@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           three-fifths
         </p>
       </div>

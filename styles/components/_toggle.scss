@@ -8,7 +8,6 @@
 
 // Future proofing classes that don't have styles right now but might later.
 // .sprk-c-Toggle
-// .sprk-c-Toggle__content
 .sprk-c-Toggle__trigger {
   border-bottom: $sprk-toggle-trigger-border-bottom;
   text-decoration: $sprk-toggle-trigger-text-decoration;
@@ -39,6 +38,15 @@
   &:focus:not(.focus-visible) {
     outline: none;
   }
+}
+
+.sprk-c-Toggle__content {
+  padding-top: $sprk-toggle-content-padding-top;
+  padding-bottom: $sprk-toggle-content-padding-bottom;
+}
+
+.sprk-c-Toggle__trigger-icon {
+  margin: $sprk-toggle-trigger-icon-margin;
 }
 
 /// A toggle with a smaller font.

@@ -67,7 +67,7 @@ export const highlightedHeader = () => (
         <SprkHeading
           element="h3"
           variant="displaySeven"
-          additionalClasses="sprk-u-Color--white"
+          additionalClasses="sprk-c-Card__highlighted-heading"
         >
           Description
         </SprkHeading>
@@ -77,7 +77,7 @@ export const highlightedHeader = () => (
         <SprkHeading
           element="h4"
           variant="displayFive"
-          additionalClasses="sprk-u-Color--white"
+          additionalClasses="sprk-c-Card__highlighted-heading"
         >
           Card Title
         </SprkHeading>
@@ -154,7 +154,7 @@ export const teaserWithIcon = () => (
       additionalClasses="
         sprk-o-Stack__item
         sprk-c-Card__content
-        sprk-u-TextAlign--center
+        sprk-b-Type--center
       "
     >
       <SprkStackItem>

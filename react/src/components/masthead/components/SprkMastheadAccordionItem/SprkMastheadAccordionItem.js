@@ -155,7 +155,8 @@ class SprkMastheadAccordionItem extends Component {
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                   iconName={leadingIcon}
                 />

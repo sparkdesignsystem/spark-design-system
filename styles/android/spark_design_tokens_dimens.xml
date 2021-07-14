@@ -163,6 +163,7 @@
   <dimen name="sprk_list_indented_margin_left">32.00dp</dimen><!-- The default margin left indentation on Lists. -->
   <dimen name="sprk_masthead_menu_icon_width">32.00dp</dimen><!-- The width of the menu icon on narrow viewports in the Masthead. -->
   <dimen name="sprk_masthead_menu_icon_height">32.00dp</dimen><!-- The height of the menu icon on narrow viewports in the Masthead. -->
+  <dimen name="sprk_masthead_dropdown_right">0.00dp</dimen><!-- The right value of the dropdown in the Masthead. -->
   <dimen name="sprk_masthead_content_padding">8.00dp</dimen><!-- The padding around the content section in the Masthead on wide viewports. -->
   <dimen name="sprk_masthead_content_padding_wide">16.00dp</dimen><!-- The padding of the Masthead content, menu, and branding sections. -->
   <dimen name="sprk_masthead_content_item_padding_top">8.00dp</dimen><!-- The padding top around the content items in the content section of the Masthead. -->
@@ -272,6 +273,8 @@
   <dimen name="sprk_toggle_trigger_padding_right">0.00dp</dimen><!-- The padding right for Toggle Trigger. -->
   <dimen name="sprk_toggle_trigger_padding_bottom">0.00dp</dimen><!-- The padding bottom for Toggle Trigger. -->
   <dimen name="sprk_toggle_trigger_padding_left">0.00dp</dimen><!-- The padding left for Toggle Trigger. -->
+  <dimen name="sprk_toggle_content_padding_top">8.00dp</dimen><!-- The padding top for the content in the Toggle. -->
+  <dimen name="sprk_toggle_content_padding_bottom">8.00dp</dimen><!-- The padding bottom for the content in the Toggle. -->
   <dimen name="sprk_tooltip_caret_offset">16.00dp</dimen><!-- The space that the Tooltip's caret is offset from the edge. -->
   <dimen name="sprk_tooltip_caret_width">16.00dp</dimen><!-- The width of the tooltip caret. -->
   <dimen name="sprk_tooltip_trigger_hover_offset">16.00dp</dimen><!-- The surrounding hover area around the trigger when the Tooltip is visible. -->
@@ -282,6 +285,8 @@
   <dimen name="sprk_tooltip_animation_offset">8.00dp</dimen><!-- The distance the tooltip should move during its animation. -->
   <dimen name="sprk_typography_breakpoint">864.00dp</dimen><!-- The breakpoint used for typography. -->
   <dimen name="sprk_measure">640.00dp</dimen><!-- The max-width value for the .sprk-u-Measure class. -->
+  <dimen name="sprk_type_crop_none_margin_bottom">0.00dp</dimen><!-- The margin bottom value for the crop none helper class. -->
+  <dimen name="sprk_type_crop_none_margin_top">0.00dp</dimen><!-- The margin top value for the crop none helper class. -->
   <dimen name="sprk_narrow_measure">400.00dp</dimen><!-- The max-width value for the narrow measure. -->
   <dimen name="sprk_page_title_mark_width">32.00dp</dimen><!-- The width of the Page Title mark. -->
   <dimen name="sprk_page_title_mark_height">5.00dp</dimen><!-- The height of the Page Title mark. -->

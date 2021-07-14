@@ -14,7 +14,7 @@ import { Component, Input } from '@angular/core';
           sprk-o-Stack__item
           sprk-b-TypeDisplayFive
           sprk-b-Measure sprk-b-Measure--narrow
-          sprk-u-TextAlign--center
+          sprk-b-Type--center
           sprk-o-Stack__item--center-column
         "
       >

@@ -1,7 +1,7 @@
 import getElements from '../utilities/getElements';
 
 const dismissAlert = (alert) => {
-  alert.classList.add('sprk-u-Display--none');
+  alert.classList.add('sprk-c-Alert--is-hidden');
 };
 
 const bindUIEvents = (element) => {

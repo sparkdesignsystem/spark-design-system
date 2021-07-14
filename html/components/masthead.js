@@ -26,9 +26,9 @@ let direction = scrollYDirection();
 const toggleMenu = (scrollDirection) => {
   const masthead = document.querySelector('[data-sprk-masthead]');
   if (scrollDirection === 'down') {
-    masthead.classList.add('sprk-c-Masthead--hidden');
+    masthead.classList.add('sprk-c-Masthead--is-hidden');
   } else {
-    masthead.classList.remove('sprk-c-Masthead--hidden');
+    masthead.classList.remove('sprk-c-Masthead--is-hidden');
   }
 };
 
@@ -55,7 +55,7 @@ const toggleScrollEvent = (isMenuVisible) => {
   if (!isMenuVisible) {
     const masthead = document.querySelector('[data-sprk-masthead]');
     if (masthead) {
-      masthead.classList.remove('sprk-c-Masthead--hidden');
+      masthead.classList.remove('sprk-c-Masthead--is-hidden');
     }
   }
   if (isMenuVisible) {
@@ -83,7 +83,7 @@ const toggleMobileNav = (iconContainer, nav, masthead) => {
   iconContainer
     .querySelector('svg')
     .classList.toggle('sprk-c-Menu__icon--open');
-  nav.classList.toggle('sprk-u-Display--none');
+  nav.classList.toggle('sprk-c-Masthead__nav-collapsible--is-collapsed');
 
   toggleAriaExpanded(iconContainer);
 };
@@ -100,7 +100,7 @@ const hideMobileNavs = () => {
   document.body.classList.remove('sprk-u-Height--100');
   document.documentElement.classList.remove('sprk-u-Height--100');
   getElements('[data-sprk-mobile-nav]', (item) => {
-    item.classList.add('sprk-u-Display--none');
+    item.classList.add('sprk-c-Masthead__nav-collapsible--is-collapsed');
   });
   getElements('.sprk-c-Menu__icon--open', (item) => {
     item.classList.remove('sprk-c-Menu__icon--open');
@@ -138,7 +138,7 @@ const bindUIEvents = () => {
     // init aria-expanded
     if (!element.hasAttribute('aria-expanded')) {
       // If it doesn't have it then set it to the initial value
-      const isOpen = !nav.classList.contains('sprk-u-Display--none');
+      const isOpen = !nav.classList.contains('sprk-c-Masthead__nav-collapsible--is-collapsed');
 
       if (isOpen) {
         element.setAttribute('aria-expanded', 'true');
@@ -184,7 +184,7 @@ const bindUIEvents = () => {
 
     mainLayout.addEventListener('focusin', () => {
       const isOpen = !document
-        .querySelector('.sprk-c-Masthead__narrow-nav')
+        .querySelector('.sprk-c-Masthead__nav-collapsible')
         .classList.contains('sprk-u-HideWhenJs');
       focusTrap(isOpen, nav);
     });

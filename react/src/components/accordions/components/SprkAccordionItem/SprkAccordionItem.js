@@ -72,7 +72,8 @@ class SprkAccordionItem extends Component {
     const leadingIconClasses = classnames(
       'sprk-c-Icon--filled-current-color',
       'sprk-c-Icon--xl',
-      'sprk-u-mrs',
+      'sprk-c-Accordion__icon',
+      'sprk-c-Accordion__icon--leading',
       leadingIconAdditionalClasses,
     );
 

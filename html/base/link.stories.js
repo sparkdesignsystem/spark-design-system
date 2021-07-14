@@ -79,7 +79,7 @@ export const iconWithTextLink = () =>
         class="
           sprk-c-Icon
           sprk-c-Icon--xl
-          sprk-u-mrs
+          sprk-b-Link__icon
           sprk-c-Icon--filled-current-color
         "
         viewBox="0 0 100 100"
@@ -153,7 +153,7 @@ export const disabledIconWithTextLink = () =>
         class="
           sprk-c-Icon
           sprk-c-Icon--xl
-          sprk-u-mrs
+          sprk-b-Link__icon
           sprk-c-Icon--filled-current-color
         "
         viewBox="0 0 100 100"
