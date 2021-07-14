@@ -32,13 +32,19 @@ const setSpinning = (element, options) => {
   const spinningAriaLabel = options.ariaLabel || 'Loading';
   const ariaValueText = options.ariaValueText || 'Loading';
   const role = options.role || 'progressbar';
+  const doNotDisable = options.doNotDisable || false;
 
   el.classList.add('sprk-c-Button--has-spinner');
   el.setAttribute('aria-label', spinningAriaLabel);
   el.setAttribute('data-sprk-spinner-text', el.textContent);
-  el.setAttribute('disabled', '');
   el.setAttribute('data-sprk-has-spinner', 'true');
   el.setAttribute('style', `width: ${width}px`);
+
+  // This flag should be used for submit buttons so that
+  // the disabled attribute does not suppress the submit behavior.
+  if (!doNotDisable) {
+    el.setAttribute('disabled', '');
+  }
 
   el.innerHTML = `
     <div
@@ -77,6 +83,37 @@ const spinners = () => {
     options.ariaValueText = spinnerContainer.getAttribute(
       'data-sprk-aria-valuetext',
     );
+
+    spinnerContainer.addEventListener('click', (e) => {
+      if (!e.target.hasAttribute('data-sprk-has-spinner')) {
+        setSpinning(e.target, options);
+      }
+    });
+  });
+
+  /**
+   * This selector is exactly the same as data-sprk-spinner="click" except
+   * the disabled attribute will not be added to the button when it is
+   * spinning.
+   */
+  getElements('[data-sprk-spinner="is-not-disabled"]', (spinnerContainer) => {
+    const options = {};
+    options.size = spinnerContainer.getAttribute('data-sprk-spinner-size');
+    // TODO: Deprecate lightness option in favor of variant - issue #1292
+    options.lightness = spinnerContainer.getAttribute(
+      'data-sprk-spinner-lightness',
+    );
+    options.ariaLabel = spinnerContainer.getAttribute(
+      'data-sprk-spinner-aria-label',
+    );
+    options.variant = spinnerContainer.getAttribute(
+      'data-sprk-spinner-variant',
+    );
+    options.role = spinnerContainer.getAttribute('data-sprk-spinner-role');
+    options.ariaValueText = spinnerContainer.getAttribute(
+      'data-sprk-aria-valuetext',
+    );
+    options.doNotDisable = true;
 
     spinnerContainer.addEventListener('click', (e) => {
       if (!e.target.hasAttribute('data-sprk-has-spinner')) {
