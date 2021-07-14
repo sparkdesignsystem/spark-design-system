@@ -40,15 +40,7 @@ for an example.
       },
     },
   },
-<<<<<<< HEAD
 } as Meta;
-=======
-};
-
-const modules = {
-  imports: [SprkStackModule, SprkStackItemModule, SprkTextModule],
-};
->>>>>>> stack story updates
 
 export const defaultStory = () => ({
   template: `
