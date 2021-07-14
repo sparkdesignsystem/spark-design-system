@@ -71,7 +71,9 @@ describe('SprkToggleComponent', () => {
     fixture.detectChanges();
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
-    ).toEqual('sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle');
+    ).toEqual(
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle',
+    );
   });
 
   // TODO: Remove `iconClass` in issue #1305
