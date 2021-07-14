@@ -115,10 +115,6 @@ export const defaultStory = () => ({
               href: '#nogo'
             },
             {
-              text: 'About That',
-              href: '#nogo'
-            },
-            {
               text: 'Disclosures and Other Things',
               href: '#nogo',
               analyticsString: 'Link to Sub Item 1'
@@ -223,7 +219,7 @@ export const defaultStory = () => ({
         }
       ]"
 
-      awardsHeading="Awards"
+      awardsHeading="Awards Heading Title"
       [awards]="[
         {
           href: '#nogo',

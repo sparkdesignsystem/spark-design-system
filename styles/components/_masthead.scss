@@ -83,6 +83,11 @@
   }
 }
 
+.sprk-c-Masthead__dropdown {
+  margin: $sprk-masthead-dropdown-margin;
+  right: $sprk-masthead-dropdown-right;
+}
+
 // When open, adjust box shadow and border styles
 .sprk-c-Masthead--open .sprk-c-Masthead__content,
 .sprk-c-Masthead--is-open .sprk-c-Masthead__content {
@@ -194,6 +199,14 @@
   .sprk-c-Icon {
     color: $sprk-masthead-simple-link-icon-hover-color;
   }
+}
+
+.sprk-c-Masthead__selector-container {
+  position: $sprk-masthead-selector-container-position;
+}
+
+.sprk-c-Masthead__selector-icon {
+  margin: $sprk-masthead-selector-icon-margin;
 }
 
 // Selector has 100% default width
@@ -469,6 +482,10 @@
 
 .sprk-c-MastheadAccordion__icon {
   flex: 0 0 auto;
+}
+
+.sprk-c-MastheadAccordion__icon--leading {
+  margin: $sprk-masthead-accordion-icon-leading-margin;
 }
 
 .sprk-c-MastheadAccordion__summary {

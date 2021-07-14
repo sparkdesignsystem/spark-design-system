@@ -14,7 +14,7 @@ export default {
 
 export const defaultStory = () => (
   <SprkToggle triggerText="My Disclaimer" analyticsString="toggle-1">
-    <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
+    <p className="sprk-b-TypeBodyFour">
       This is an example of disclaimer content. The
       aria-expanded=&quot;true&quot; attribute will be viewable in the DOM on
       the toggle link when this content is shown. When this content is hidden

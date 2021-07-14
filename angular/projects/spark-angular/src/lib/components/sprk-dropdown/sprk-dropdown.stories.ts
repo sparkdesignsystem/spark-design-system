@@ -105,7 +105,7 @@ export const informational = () => ({
     ]"
     >
       <div
-        class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
+        class="sprk-c-Dropdown__footer sprk-b-Type--center"
         sprkDropdownFooter
       >
         <a

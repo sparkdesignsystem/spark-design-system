@@ -86,7 +86,7 @@ describe('SprkStepper:', () => {
   });
 
   it('should have the correct structure with a dark background', () => {
-    const expected = 'div.sprk-u-BackgroundColor--purple-dark';
+    const expected = 'div.sprk-c-Stepper__container-dark';
 
     const wrapper = mount(
       <SprkStepper hasDarkBackground>

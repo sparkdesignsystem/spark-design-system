@@ -1,7 +1,6 @@
 import React from 'react';
 import SprkFooter from './SprkFooter';
 import SprkLink from '../../base/links/SprkLink';
-import SprkStack from '../../objects/stack/SprkStack';
 import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
@@ -78,7 +77,7 @@ export const defaultStory = () => (
         links: [
           {
             href: '#nogo',
-            text: 'About This.',
+            text: 'About This',
             analyticsString: 'about-this-link',
             element: 'a',
           },

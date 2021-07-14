@@ -26,7 +26,7 @@ const hideList = (autocompleteContainer, inputEl) => {
       listEl.querySelectorAll('[data-sprk-autocomplete="result"]'),
       activeClass,
     );
-    listEl.classList.add('sprk-u-Display--none');
+    listEl.classList.add('sprk-c-Autocomplete__results--is-hidden');
     inputEl.removeAttribute('aria-activedescendant');
     inputEl.parentNode.setAttribute('aria-expanded', false);
   }

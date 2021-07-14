@@ -15,7 +15,7 @@ const SprkMastheadNarrowNav = ({
   <>
     {isOpen && (
       <nav
-        className="sprk-c-Masthead__narrow-nav"
+        className="sprk-c-Masthead__nav-collapsible"
         role="navigation"
         data-id={idString}
         id={narrowNavId}
@@ -37,6 +37,11 @@ SprkMastheadNarrowNav.propTypes = {
    * serving as a unique selector for automated tools.
    */
   idString: PropTypes.string,
+  /**
+   * Assigned to the `id` attribute
+   * on the nav element.
+   */
+  narrowNavId: PropTypes.string,
   /**
    * If `true`, will render the Narrow Navigation.
    */

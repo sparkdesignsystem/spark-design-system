@@ -83,54 +83,54 @@ describe('Autocomplete tests', () => {
   });
 
   it('should set aria-expanded="false" when the list is closed', () => {
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(false);
 
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 27;
     document.dispatchEvent(escKeyEvent);
 
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(true);
     expect(inputEl.parentNode.getAttribute('aria-expanded')).toEqual('false');
   });
 
   it('should close the search results if escape is pressed', () => {
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(false);
 
     const escKeyEvent = new window.Event('keydown');
     escKeyEvent.keyCode = 27;
     document.dispatchEvent(escKeyEvent);
 
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(true);
   });
 
   it('should close the search results if document is clicked', () => {
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(false);
 
     document.dispatchEvent(new window.Event('click'));
 
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(true);
   });
 
   it('should close the search results if an outside element is clicked', () => {
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(false);
 
     outsideElement.click();
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(true);
   });
 
   it(`it should not close the search results if search
   results are clicked`, () => {
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(false);
 
     listEl.dispatchEvent(new window.Event('click'));
 
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(false);
   });
 
   it('it should not close the search results if input is clicked', () => {
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(false);
     inputEl.click();
-    expect(listEl.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(listEl.classList.contains('sprk-c-Autocomplete__results--is-hidden')).toBe(false);
   });
 
   it('should move visual focus with down arrow', () => {
@@ -171,7 +171,7 @@ describe('Autocomplete tests', () => {
 
   it(`should not move visual focus with down arrow if the
   list is hidden`, () => {
-    listEl.classList.add('sprk-u-Display--none');
+    listEl.classList.add('sprk-c-Autocomplete__results--is-hidden');
 
     expect(
       listItem1.classList.contains('sprk-c-Autocomplete__result--active'),
@@ -223,7 +223,7 @@ describe('Autocomplete tests', () => {
   });
 
   it('should not move visual focus with up arrow if the list is hidden', () => {
-    listEl.classList.add('sprk-u-Display--none');
+    listEl.classList.add('sprk-c-Autocomplete__results--is-hidden');
 
     expect(
       listItem3.classList.contains('sprk-c-Autocomplete__result--active'),

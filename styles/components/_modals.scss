@@ -75,3 +75,8 @@
   color: $sprk-black-tint-50;
   flex: 0 1 auto;
 }
+
+.sprk-c-Modal--is-hidden,
+.sprk-c-ModalMask--is-hidden {
+  display: $sprk-modal-display-hidden;
+}
