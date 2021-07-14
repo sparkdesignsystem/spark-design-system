@@ -3,7 +3,10 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import {
   SprkMasthead,
-  SprkTextInput,
+  SprkInput,
+  SprkLabel,
+  SprkIcon,
+  SprkInputContainer,
   SprkLink,
 } from '@sparkdesignsystem/spark-react';
 import SiteLogo from './site-logo';
@@ -42,17 +45,28 @@ const Header = ({ setContext }) => {
       additionalClasses="sprk-c-Masthead__link"
       variant="simple"
       element={Link}
-      to="/principles/design-principles"
+      to="/principles/accessibility-guidelines"
     >
       Principles
     </SprkLink>,
-    <SprkTextInput
-      additionalClasses="docs-header-search--wide sprk-u-mbn"
-      leadingIcon="search"
-      hiddenLabel
-      name="InlineSearch"
-      placeholder="Search"
-    />,
+    <SprkInputContainer additionalClasses="docs-header-search--wide sprk-u-mbn">
+      <div className="sprk-b-InputContainer__icon-container">
+        <SprkLabel htmlFor="inline-search" isHidden>
+          Search
+        </SprkLabel>
+        <SprkIcon
+          iconName="search"
+          additionalClasses="sprk-b-InputContainer__icon"
+          aria-hidden="true"
+        />
+        <SprkInput
+          id="inline-search"
+          additionalClasses="sprk-b-TextInput--has-svg-icon"
+          type="search"
+          placeholder="Search"
+        />
+      </div>
+    </SprkInputContainer>,
   ];
 
   const installingSparkPages = useInstallingSparkData().map((page) => ({
@@ -153,13 +167,25 @@ const Header = ({ setContext }) => {
       additionalClasses="docs-masthead"
       utilityContents={utilityItems}
       navLink={
-        <SprkTextInput
-          additionalClasses="docs-header-search sprk-u-Width-100"
-          leadingIcon="search"
-          hiddenLabel
-          name="InlineSearch"
-          placeholder="Search"
-        />
+        // eslint-disable-next-line max-len
+        <SprkInputContainer additionalClasses="docs-header-search">
+          <div className="sprk-b-InputContainer__icon-container">
+            <SprkLabel htmlFor="inline-search" isHidden>
+              Search
+            </SprkLabel>
+            <SprkIcon
+              iconName="search"
+              additionalClasses="sprk-b-InputContainer__icon"
+              aria-hidden="true"
+            />
+            <SprkInput
+              id="inline-search"
+              additionalClasses="sprk-b-TextInput--has-svg-icon"
+              type="search"
+              placeholder="Search"
+            />
+          </div>
+        </SprkInputContainer>
       }
       narrowNavLinks={narrowNavLinks}
     />

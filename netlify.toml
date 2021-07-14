@@ -4,11 +4,6 @@
   status = 301
 
 [[redirects]]
-  from = "/gettingstarted/design-principles"
-  to = "/principles/design-principles"
-  status = 301
-
-[[redirects]]
   from = "/gettingstarted/html"
   to = "/installing-spark/html"
   status = 301
