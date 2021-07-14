@@ -16,9 +16,7 @@ export default {
     SprkAutocompleteInputContainerDirective,
   },
   decorators: [
-    moduleMetadata({
-      imports: [SprkAutocompleteModule],
-    }),
+    moduleMetadata({}),
     componentWrapperDecorator(
       (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
@@ -120,6 +118,7 @@ export const defaultStory = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -193,6 +192,7 @@ export const defaultInvalid = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -274,6 +274,7 @@ export const defaultDisabled = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -342,6 +343,7 @@ export const hugeStory = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -407,7 +409,6 @@ export const hugeInvalid = () => ({
   <sprk-autocomplete>
     <sprk-input-container variant="huge">
       <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
-
       <div
         sprkAutocompleteInputContainer
         aria-labelledby="autocomplete-label5"
@@ -417,6 +418,7 @@ export const hugeInvalid = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
@@ -490,7 +492,6 @@ export const hugeDisabled = () => ({
   <sprk-autocomplete>
     <sprk-input-container variant="huge">
       <div aria-live="polite" class="sprk-u-ScreenReaderText"></div>
-
       <div
         sprkAutocompleteInputContainer
         aria-labelledby="autocomplete-label6"
@@ -500,6 +501,7 @@ export const hugeDisabled = () => ({
         <sprk-icon
           iconName="search"
           additionalClasses="
+            sprk-b-InputContainer__icon
             sprk-b-InlineSearch__icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color

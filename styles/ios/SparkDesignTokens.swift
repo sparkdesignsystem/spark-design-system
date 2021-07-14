@@ -17,6 +17,7 @@ public class SparkDesignTokens {
     public static let sprkAutocompleteResultFontSize = CGFloat(16.00)
     public static let sprkAutocompleteResultPadding = CGFloat(16.00)
     public static let sprkAutocompleteResultsHiddenDisplay = none
+    public static let sprkAutocompleteResultsZIndex = 0
     public static let sprkBigNavActiveColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkBigNavBg = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkBigNavItemActiveColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
@@ -287,7 +288,7 @@ public class SparkDesignTokens {
     public static let sprkInputHugeTransitionDelay = "0s"
     public static let sprkInputIconOffsetX = CGFloat(16.00)
     public static let sprkInputIconOffsetY = CGFloat(16.00)
-    public static let sprkInputIconZIndex = CGFloat(16.00)
+    public static let sprkInputIconZIndex = 0
     public static let sprkInputTextIconFontWeight = 700
     public static let sprkInputTextIconOffsetX = CGFloat(16.00)
     public static let sprkInputTextIconZIndex = CGFloat(16.00)
@@ -515,9 +516,9 @@ public class SparkDesignTokens {
     public static let sprkInputContainerHugeMaxWidth = CGFloat(600.00)
     public static let sprkInputContainerNarrowMaxWidth = CGFloat(104.00)
     public static let sprkInputErrorTextFontSize = CGFloat(13.00)
+    public static let sprkInputHasIconMarginRightLeft = CGFloat(71.00)
+    public static let sprkInputHasIconMarginRightTop = CGFloat(16.00)
     public static let sprkInputHasIconPaddingRight = CGFloat(0.00)
-    public static let sprkInputHasIconRightLeft = CGFloat(71.00)
-    public static let sprkInputHasIconRightTop = CGFloat(38.00)
     public static let sprkInputHugeFontSize = CGFloat(20.00)
     public static let sprkInputHugeHeight = CGFloat(64.00)
     public static let sprkInputHugeIconOffsetTop = CGFloat(800.00)
