@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkInputDirective } from '../../directives/inputs/sprk-input/sprk-input.directive';
 import { SprkLabelDirective } from '../../directives/inputs/sprk-label/sprk-label.directive';
@@ -10,6 +12,7 @@ import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-c
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
 import { SprkFieldErrorDirective } from '../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Monetary',
@@ -20,11 +23,21 @@ export default {
     SprkFieldErrorDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        SprkIconInputContainerModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -35,7 +48,9 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
 - In order to use Angular form validation on these inputs, add a pattern
 attribute containing a regular expression to the input.
@@ -48,23 +63,13 @@ $1,234.56) is non-numeric.
 - The value of this field may contain special characters ($ ,) which
 you may need to remove before submitting the form.
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    SprkIconInputContainerModule,
-  ],
-};
+} as Meta;
 
 export const monetaryInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="
@@ -89,19 +94,17 @@ export const monetaryInput = () => ({
   `,
 });
 
-monetaryInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+monetaryInput.storyName = 'Default';
+
+monetaryInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidMonetaryInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="
@@ -136,20 +139,18 @@ export const invalidMonetaryInput = () => ({
   `,
 });
 
-invalidMonetaryInput.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidMonetaryInput.storyName = 'Invalid';
+
+invalidMonetaryInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledMonetaryInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="
@@ -175,19 +176,17 @@ export const disabledMonetaryInput = () => ({
   `,
 });
 
-disabledMonetaryInput.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledMonetaryInput.storyName = 'Disabled';
+
+disabledMonetaryInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container
       iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
@@ -209,19 +208,17 @@ export const legacyStory = () => ({
   `,
 });
 
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyStory.storyName = 'Legacy (Deprecated)';
+
+legacyStory.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const legacyInvalidMonetaryInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container
       iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
@@ -253,20 +250,18 @@ export const legacyInvalidMonetaryInput = () => ({
   `,
 });
 
-legacyInvalidMonetaryInput.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidMonetaryInput.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidMonetaryInput.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledMonetaryInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container
       iconContainerClasses="sprk-b-TextInputIconContainer--has-text-icon"
@@ -293,13 +288,12 @@ export const legacyDisabledMonetaryInput = () => ({
   `,
 });
 
-legacyDisabledMonetaryInput.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+legacyDisabledMonetaryInput.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledMonetaryInput.parameters = {
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };

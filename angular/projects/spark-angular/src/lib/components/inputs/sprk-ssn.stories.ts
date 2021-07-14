@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
@@ -15,6 +17,7 @@ import { SprkCheckboxLabelDirective } from '../../directives/inputs/sprk-checkbo
 import { SprkCheckboxInputModule } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.module';
 import { SprkCheckboxInputDirective } from '../../directives/inputs/sprk-checkbox-input/sprk-checkbox-input.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/SSN',
@@ -28,11 +31,23 @@ export default {
     SprkFieldErrorDirective,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        SprkCheckboxInputModule,
+        SprkCheckboxLabelModule,
+        SprkCheckboxItemModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -43,7 +58,9 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
 (-) which you may need to remove before submitting the form.
@@ -55,25 +72,13 @@ ${markdownDocumentationLinkBuilder('input')}
   input, it should reformat to having the first three numbers,
   a dash, the next two numbers, a dash, and the last four numbers.
     `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    SprkCheckboxInputModule,
-    SprkCheckboxLabelModule,
-    SprkCheckboxItemModule,
-  ],
-};
+} as Meta;
 
 export const SSNInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="ssn-input" sprkLabel>SSN Input</label>
@@ -103,22 +108,20 @@ export const SSNInput = () => ({
   `,
 });
 
-SSNInput.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+SSNInput.storyName = 'Default';
+
+SSNInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const invalidSSNInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label for="ssn-input" sprkLabel>SSN Input</label>
@@ -159,22 +162,20 @@ export const invalidSSNInput = () => ({
   `,
 });
 
-invalidSSNInput.story = {
-  name: 'Invalid',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+invalidSSNInput.storyName = 'Invalid';
+
+invalidSSNInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };
 
 export const disabledSSNInput = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <label isDisabled="true" for="ssn-input" sprkLabel>SSN Input</label>
@@ -206,16 +207,15 @@ export const disabledSSNInput = () => ({
   `,
 });
 
-disabledSSNInput.story = {
-  name: 'Disabled',
-  parameters: {
-    jest: [
-      'sprk-input-container.component',
-      'sprk-checkbox-item.component',
-      'sprk-checkbox-input.directive',
-      'sprk-checkbox-label.directive',
-      'sprk-input.directive',
-      'sprk-label.directive',
-    ],
-  },
+disabledSSNInput.storyName = 'Disabled';
+
+disabledSSNInput.parameters = {
+  jest: [
+    'sprk-input-container.component',
+    'sprk-checkbox-item.component',
+    'sprk-checkbox-input.directive',
+    'sprk-checkbox-label.directive',
+    'sprk-input.directive',
+    'sprk-label.directive',
+  ],
 };

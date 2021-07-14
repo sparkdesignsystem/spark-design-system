@@ -1,20 +1,30 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkHeadingModule } from './sprk-heading.module';
 import { SprkHeadingDirective } from './sprk-heading.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+export * from '../sprk-text/sprk-text.stories';
 
 export default {
   title: 'Foundations/Typography',
   component: SprkHeadingDirective,
   decorators: [
-    storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${storyContent}<div>`
-      )
-    )
+    moduleMetadata({
+      imports: [SprkHeadingModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
+    ),
   ],
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 200,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('typography', 'foundations')}
 
 ##### Line-height Collision
@@ -37,156 +47,111 @@ whitespace removed. Heading elements have this cropping
 automatically applied, where body copy will need the
 correct type classes applied.
 `,
-    docs: { iframeHeight: 200 },
+      },
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkHeadingModule,
-  ],
-};
+} as Meta;
 
 export const pageTitle = () => ({
-  moduleMetadata: modules,
   template: `
     <h1 sprkHeading variant="displayTwo" isPageTitle="true">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h1>
-  `
+  `,
 });
 
-pageTitle.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+pageTitle.parameters = {
+  jest: ['sprk-heading.directive'],
 };
 
 export const displayOne = () => ({
-  moduleMetadata: modules,
   template: `
     <h1 sprkHeading variant="displayOne">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h1>
-  `
+  `,
 });
 
-displayOne.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displayOne.parameters = {
+  jest: ['sprk-heading.directive'],
 };
 
 export const displayTwo = () => ({
-  moduleMetadata: modules,
   template: `
     <h2 sprkHeading variant="displayTwo">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h2>
-  `
+  `,
 });
 
-displayTwo.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displayTwo.parameters = {
+  jest: ['sprk-heading.directive'],
 };
 
 export const displayThree = () => ({
-  moduleMetadata: modules,
   template: `
     <h3 sprkHeading variant="displayThree">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h3>
-  `
+  `,
 });
 
-displayThree.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displayThree.parameters = {
+  jest: ['sprk-heading.directive'],
 };
 
 export const displayFour = () => ({
-  moduleMetadata: modules,
   template: `
     <h4 sprkHeading variant="displayFour">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h4>
-  `
+  `,
 });
 
-displayFour.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displayFour.parameters = {
+  jest: ['sprk-heading.directive'],
 };
 
 export const displayFive = () => ({
-  moduleMetadata: modules,
   template: `
     <h5 sprkHeading variant="displayFive">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h5>
-  `
+  `,
 });
 
-displayFive.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displayFive.parameters = {
+  jest: ['sprk-heading.directive'],
 };
 
 export const displaySix = () => ({
-  moduleMetadata: modules,
   template: `
     <h6 sprkHeading variant="displaySix">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h6>
-  `
+  `,
 });
 
-displaySix.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displaySix.parameters = {
+  jest: ['sprk-heading.directive'],
 };
 
 export const displaySeven = () => ({
-  moduleMetadata: modules,
   template: `
     <h6 sprkHeading variant="displaySeven">
       The Quick Brown Fox
       Jumps Over the Lazy Dog
     </h6>
-  `
+  `,
 });
 
-displaySeven.story = {
-  parameters: {
-    jest: [
-      'sprk-heading.directive',
-    ],
-  },
+displaySeven.parameters = {
+  jest: ['sprk-heading.directive'],
 };

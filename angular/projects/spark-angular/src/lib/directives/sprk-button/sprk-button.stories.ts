@@ -1,5 +1,7 @@
 import { SprkButtonModule } from './sprk-button.module';
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkButtonDirective } from './sprk-button.directive';
 import { SprkSpinnerModule } from '../../directives/sprk-spinner/sprk-spinner.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -8,12 +10,17 @@ export default {
   title: 'Components/Button',
   component: SprkButtonDirective,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkButtonModule, SprkSpinnerModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('button')}
 ##### When to Use \`<button>\` vs. \`<a>\`
 \`sprkButton\` can either render as a button (\`<button>\`)
@@ -41,18 +48,18 @@ in addition to the \`sprk-is-Disabled\` class so that it doesn’t
 receive interaction.
 - Spinner state requires additional engineering.
   - Use app state to conditionally render between button text and spinner.
-  - Add \`isSpinning\` on sprkButton directive when spinner is present
+  - Add \`isSpinning\` on sprkButton directive when spinner is present.
 `,
-    docs: { iframeHeight: 100 },
+      },
+      iframeHeight: 100,
+      source: {
+        type: 'code',
+      },
+    },
   },
-};
-
-const modules = {
-  imports: [SprkButtonModule, SprkSpinnerModule],
-};
+} as Meta;
 
 export const primary = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       idString="button-primary"
@@ -63,14 +70,11 @@ export const primary = () => ({
   `,
 });
 
-primary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+primary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const secondary = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       variant="secondary"
@@ -82,14 +86,11 @@ export const secondary = () => ({
   `,
 });
 
-secondary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+secondary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const tertiary = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       variant="tertiary"
@@ -101,14 +102,11 @@ export const tertiary = () => ({
   `,
 });
 
-tertiary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+tertiary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const disabled = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       disabled
@@ -120,14 +118,11 @@ export const disabled = () => ({
   `,
 });
 
-disabled.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+disabled.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const disabledSecondary = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       disabled
@@ -140,14 +135,11 @@ export const disabledSecondary = () => ({
   `,
 });
 
-disabledSecondary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+disabledSecondary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const disabledTertiary = () => ({
-  moduleMetadata: modules,
   template: `
     <button
       disabled
@@ -160,15 +152,12 @@ export const disabledTertiary = () => ({
   `,
 });
 
-disabledTertiary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+disabledTertiary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const spinning = () => {
   return {
-    moduleMetadata: modules,
     template: `
       <button
         idString="button-spinning"
@@ -182,15 +171,12 @@ export const spinning = () => {
   };
 };
 
-spinning.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+spinning.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const spinningSecondary = () => {
   return {
-    moduleMetadata: modules,
     template: `
       <button
         variant="secondary"
@@ -204,15 +190,12 @@ export const spinningSecondary = () => {
   };
 };
 
-spinningSecondary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+spinningSecondary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const spinningTertiary = () => {
   return {
-    moduleMetadata: modules,
     template: `
       <button
         variant="tertiary"
@@ -226,15 +209,12 @@ export const spinningTertiary = () => {
   };
 };
 
-spinningTertiary.story = {
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+spinningTertiary.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const fullWidthAtSmallViewport = () => {
   return {
-    moduleMetadata: modules,
     template: `
       <button
         class="sprk-c-Button--full@s"
@@ -247,16 +227,14 @@ export const fullWidthAtSmallViewport = () => {
   };
 };
 
-fullWidthAtSmallViewport.story = {
-  name: 'Full Width at Small Viewport',
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+fullWidthAtSmallViewport.storyName = 'Full Width at Small Viewport';
+
+fullWidthAtSmallViewport.parameters = {
+  jest: ['sprk-button.directive'],
 };
 
 export const fullWidthAtExtraSmallViewport = () => {
   return {
-    moduleMetadata: modules,
     template: `
       <button
         class="sprk-c-Button--full@xs"
@@ -269,9 +247,8 @@ export const fullWidthAtExtraSmallViewport = () => {
   };
 };
 
-fullWidthAtExtraSmallViewport.story = {
-  name: 'Full Width at Extra Small Viewport',
-  parameters: {
-    jest: ['sprk-button.directive'],
-  },
+fullWidthAtExtraSmallViewport.storyName = 'Full Width at Extra Small Viewport';
+
+fullWidthAtExtraSmallViewport.parameters = {
+  jest: ['sprk-button.directive'],
 };

@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkModalModule } from './sprk-modal.module';
 import { SprkModalComponent } from './sprk-modal.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -7,12 +9,21 @@ export default {
   title: 'Components/Modal',
   component: SprkModalComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkModalModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      inlineStories: false,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('modal')}
 - There are two parts to a Modal
     - 1. Modal Trigger (typically in the form of a Button) - When
@@ -26,16 +37,13 @@ Each instance should have a unique \`data-id\` property.
 - Dismissing a Wait Modal is done programmatically.
 You must write your own function to toggle dismissal through the '(hide)' input.
     `,
-    docs: { iframeHeight: 450 },
+      },
+      iframeHeight: 450,
+    },
   },
-};
-
-const modules = {
-  imports: [SprkModalModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-modal
       [(isVisible)]="choiceVisible"
@@ -53,15 +61,13 @@ export const defaultStory = () => ({
   },
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-modal.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-modal.component'],
 };
 
 export const info = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-modal
       [(isVisible)]="infoVisible"
@@ -79,14 +85,11 @@ export const info = () => ({
   },
 });
 
-info.story = {
-  parameters: {
-    jest: ['sprk-modal.component'],
-  },
+info.parameters = {
+  jest: ['sprk-modal.component'],
 };
 
 export const wait = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-modal
       [(isVisible)]="waitVisible"
@@ -106,8 +109,6 @@ export const wait = () => ({
   },
 });
 
-wait.story = {
-  parameters: {
-    jest: ['sprk-modal.component'],
-  },
+wait.parameters = {
+  jest: ['sprk-modal.component'],
 };
