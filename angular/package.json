@@ -39,7 +39,7 @@
     "focus-visible": "5.0.2",
     "replace": "^1.1.1",
     "rxjs": "~6.5.4",
-    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9",
+    "tiny-date-picker": "git+https://github.com/sparkdesignsystem/tiny-date-picker.git#v3.2.9",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

@@ -66,7 +66,7 @@
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.6.2",
     "react-animate-height": "^2.0.20",
-    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9",
+    "tiny-date-picker": "git+https://github.com/sparkdesignsystem/tiny-date-picker.git#v3.2.9",
     "warning": "^4.0.3"
   }
 }
