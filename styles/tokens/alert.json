@@ -9,6 +9,15 @@
       "file": "settings",
       "themable": true
     },
+    "display-hidden": {
+      "comment": "Value for display for the hidden Alert component.",
+      "value": "none",
+      "attributes": {
+        "category": "contemt"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "border-color": {
       "comment": "Value for border color on the Alert component.",
       "value": "{gray.value}",

@@ -285,6 +285,8 @@
   <dimen name="sprk_tooltip_animation_offset">8.00dp</dimen><!-- The distance the tooltip should move during its animation. -->
   <dimen name="sprk_typography_breakpoint">864.00dp</dimen><!-- The breakpoint used for typography. -->
   <dimen name="sprk_measure">640.00dp</dimen><!-- The max-width value for the .sprk-u-Measure class. -->
+  <dimen name="sprk_type_crop_none_margin_bottom">0.00dp</dimen><!-- The margin bottom value for the crop none helper class. -->
+  <dimen name="sprk_type_crop_none_margin_top">0.00dp</dimen><!-- The margin top value for the crop none helper class. -->
   <dimen name="sprk_narrow_measure">400.00dp</dimen><!-- The max-width value for the narrow measure. -->
   <dimen name="sprk_page_title_mark_width">32.00dp</dimen><!-- The width of the Page Title mark. -->
   <dimen name="sprk_page_title_mark_height">5.00dp</dimen><!-- The height of the Page Title mark. -->

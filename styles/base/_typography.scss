@@ -289,8 +289,8 @@ body,
 .sprk-b-Type--crop-none {
   &::before,
   &::after {
-    content: none;
-    margin-bottom: 0;
-    margin-top: 0;
+    content: $sprk-type-crop-none-content;
+    margin-bottom: $sprk-type-crop-none-margin-bottom;
+    margin-top: $sprk-type-crop-none-margin-top;
   }
 }

@@ -29,6 +29,35 @@
       "file": "typography",
       "themable": true
     },
+    "crop-none": {
+      "content": {
+        "comment": "The content value for the crop none helper class.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "typography",
+        "themable": true
+      },
+      "margin-bottom": {
+        "comment": "The margin bottom value for the crop none helper class.",
+        "value": "0",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      },
+      "margin-top": {
+        "comment": "The margin top value for the crop none helper class.",
+        "value": "0",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      }
+    },
     "left": {
       "comment": "The text align left value.",
       "value": "left",

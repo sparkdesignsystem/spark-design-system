@@ -1,7 +1,7 @@
   {
     "dropdown": {
       "display-hidden": {
-        "comment": "The display value of dropdown when hidden.",
+        "comment": "The display value of Dropdown when hidden.",
         "value": "none",
         "attributes": {
           "category": "content"

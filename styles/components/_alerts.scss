@@ -16,7 +16,7 @@
 }
 
 .sprk-c-Alert--is-hidden {
-  display: none;
+  display: $sprk-alert-display-hidden;
 }
 
 /// Styles the alert as an information alert.

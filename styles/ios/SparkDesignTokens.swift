@@ -206,6 +206,7 @@ public class SparkDesignTokens {
     public static let sprkWhite = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkWisteria = UIColor(red: 0.871, green: 0.694, blue: 0.992, alpha:1)
     public static let sprkYellow = UIColor(red: 0.929, green: 0.639, blue: 0.008, alpha:1)
+    public static let sprkAlertDisplayHidden = none
     public static let sprkDatePickerArrowColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkDatePickerBackground = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkDatePickerDayColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
@@ -724,6 +725,8 @@ public class SparkDesignTokens {
     public static let sprkTooltipMinWidth = CGFloat(60.00)
     public static let sprkTooltipTriggerHoverOffset = CGFloat(16.00)
     public static let sprkTooltipTriggerPadding = CGFloat(0.00)
+    public static let sprkTypeCropNoneMarginBottom = CGFloat(0.00)
+    public static let sprkTypeCropNoneMarginTop = CGFloat(0.00)
     public static let sprkTypeDisplayOneBreakpoint = CGFloat(700.00)
     public static let sprkTypeDisplayThreeBreakpoint = CGFloat(700.00)
     public static let sprkTypeDisplayTwoBreakpoint = CGFloat(700.00)
