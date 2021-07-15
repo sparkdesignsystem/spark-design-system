@@ -213,6 +213,56 @@ spinningTertiary.parameters = {
   jest: ['sprk-button.directive'],
 };
 
+export const compact = () => ({
+  template: `
+    <button
+      idString="button-compact"
+      sprkButton
+      additionalClasses="sprk-c-Button--compact" 
+    >
+      Button
+    </button>
+  `,
+});
+
+compact.parameters = {
+  jest: ['sprk-button.directive'],
+};
+
+export const compactSecondary = () => ({
+  template: `
+    <button
+      variant="secondary"
+      idString="button-compact-secondary"
+      sprkButton
+      additionalClasses="sprk-c-Button--compact" 
+    >
+      Button
+    </button>
+  `,
+});
+
+compactSecondary.parameters = {
+  jest: ['sprk-button.directive'],
+};
+
+export const compactTertiary = () => ({
+  template: `
+    <button
+      variant="tertiary"
+      idString="button-compact-tertiary"
+      sprkButton
+      additionalClasses="sprk-c-Button--compact" 
+    >
+      Button
+    </button>
+  `,
+});
+
+compactTertiary.parameters = {
+  jest: ['sprk-button.directive'],
+};
+
 export const fullWidthAtSmallViewport = () => {
   return {
     template: `

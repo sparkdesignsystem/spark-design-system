@@ -134,9 +134,41 @@ export const spinningTertiary = () => (
   </SprkButton>
 );
 
+export const compact = () => (
+  <SprkButton
+    idString="button-12"
+    analyticsString="button-4-analytics"
+    additionalClasses="sprk-c-Button--compact"
+  >
+    Button
+  </SprkButton>
+);
+
+export const compactSecondary = () => (
+  <SprkButton
+    variant="secondary"
+    idString="button-13"
+    analyticsString="button-16-analytics"
+    additionalClasses="sprk-c-Button--compact"
+  >
+    Button
+  </SprkButton>
+);
+
+export const compactTertiary = () => (
+  <SprkButton
+    variant="tertiary"
+    idString="button-14"
+    analyticsString="button-17-analytics"
+    additionalClasses="sprk-c-Button--compact"
+  >
+    Button
+  </SprkButton>
+);
+
 export const fullWidthAtSmallViewport = () => (
   <SprkButton
-    idString="button-13"
+    idString="button-15"
     analyticsString="button-13-analytics"
     additionalClasses="sprk-c-Button--full@s"
   >
@@ -146,7 +178,7 @@ export const fullWidthAtSmallViewport = () => (
 
 export const fullWidthAtExtraSmallViewport = () => (
   <SprkButton
-    idString="button-14"
+    idString="button-16"
     analyticsString="button-14-analytics"
     additionalClasses="sprk-c-Button--full@xs"
   >
@@ -158,7 +190,7 @@ export const asALinkElement = () => (
   <SprkButton
     element="a"
     href="#nogo"
-    idString="button-15"
+    idString="button-17"
     analyticsString="button-15-analytics"
   >
     Button
