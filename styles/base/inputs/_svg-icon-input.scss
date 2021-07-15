@@ -1,7 +1,6 @@
 ////
 /// @group input
 ////
-
 .sprk-b-TextInputIconContainer,
 .sprk-b-InputContainer__icon-container {
   position: relative;
@@ -12,24 +11,19 @@
   max-width: $sprk-input-container-narrow-max-width;
 }
 
-// TODO: .sprk-b-InputContainer__icon-container .sprk-c-Icon is a fallback to be deprecated later
-.sprk-b-InputContainer__icon-container .sprk-c-Icon,
-.sprk-b-TextInputIconContainer .sprk-c-Icon,
+.sprk-b-InputContainer__icon-container .sprk-b-InputContainer__icon,
+.sprk-b-TextInputIconContainer .sprk-b-InputContainer__icon,
 .sprk-b-InputContainer__icon {
   margin-left: $sprk-input-icon-offset-x;
-  // TODO: We should be using margin bottom, not margin top
   margin-top: $sprk-input-icon-offset-y;
   position: absolute;
   z-index: $sprk-input-icon-z-index;
 }
 
-// Specificity needed to override {.sprk-b-TextInputIconContainer .sprk-c-Icon}
-/// For a SVG icon inside of input that is positioned to the right.
 /// @name .sprk-b-InputContainer__icon--right
 .sprk-b-InputContainer__icon-container .sprk-b-InputContainer__icon--right {
-  top: $sprk-input-has-icon-right-top;
-  left: $sprk-input-has-icon-right-left;
-  margin: 0;
+  margin-top: $sprk-input-has-icon-margin-right-top;
+  margin-left: $sprk-input-has-icon-margin-right-left;
   fill: $sprk-icon-filled-fill-color;
 }
 

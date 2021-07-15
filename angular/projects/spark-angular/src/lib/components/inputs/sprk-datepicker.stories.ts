@@ -82,7 +82,7 @@ export const defaultStory = () => ({
         </label>
         <sprk-icon
           iconName="calendar"
-          additionalClasses="sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
         ></sprk-icon>
@@ -122,7 +122,7 @@ export const invalidDatePicker = () => ({
         </label>
         <sprk-icon
           iconName="calendar"
-          additionalClasses="sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
         ></sprk-icon>
@@ -173,7 +173,7 @@ export const disabledDatePicker = () => ({
         </label>
         <sprk-icon
           iconName="calendar"
-          additionalClasses="sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
         ></sprk-icon>
@@ -213,7 +213,7 @@ export const legacyStory = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
       ></sprk-icon>
@@ -253,7 +253,7 @@ export const legacyInvalidDatePicker = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
       ></sprk-icon>
@@ -304,7 +304,7 @@ export const legacyDisabledDatePicker = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
       ></sprk-icon>
