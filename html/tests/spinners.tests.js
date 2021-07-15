@@ -15,7 +15,7 @@ describe('spinners init', () => {
     sinon.spy(document, 'querySelectorAll');
     spinners();
     expect(document.querySelectorAll.getCall(0).args[0]).toBe(
-      '[data-sprk-spinner="click"]',
+      '[data-sprk-spinner]',
     );
   });
 });
