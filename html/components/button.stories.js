@@ -202,6 +202,36 @@ spinningTertiary.story = {
   },
 };
 
+export const compact = () =>
+  `
+  <button 
+    class="sprk-c-Button sprk-c-Button--compact" 
+    data-id="button-compact"
+  > 
+    Button
+  </button>
+`;
+
+export const compactSecondary = () =>
+  `
+  <button 
+    class="sprk-c-Button sprk-c-Button--secondary sprk-c-Button--compact" 
+    data-id="button-compact-secondary"
+  > 
+    Button
+  </button>
+`;
+
+export const compactTertiary = () =>
+  `
+  <button 
+    class="sprk-c-Button sprk-c-Button--tertiary sprk-c-Button--compact" 
+    data-id="button-compact-tertiary"
+  > 
+    Button
+  </button>
+`;
+
 export const fullWidthAtSmallViewport = () =>
   `
   <button
