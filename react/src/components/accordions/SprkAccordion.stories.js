@@ -21,6 +21,7 @@ the [Toggle Component](/docs/components-toggle--default-story) instead.
 export const defaultStory = () => (
   <SprkAccordion>
     <SprkAccordionItem
+      isOpen
       heading="This is an accordion heading"
       contentAdditionalClasses="sprk-o-Stack sprk-o-Stack--medium"
     >

@@ -33,7 +33,7 @@ export const defaultStory = () => {
 
   return `
 <ul class="sprk-c-Accordion sprk-o-VerticalList">
-  <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
+  <li class="sprk-c-Accordion__item sprk-c-Accordion__item--open" data-sprk-toggle="container">
     <button
       class="sprk-c-Accordion__summary"
       data-id="accordion-item-1"
