@@ -16,7 +16,9 @@ export default {
     SprkAutocompleteInputContainerDirective,
   },
   decorators: [
-    moduleMetadata({}),
+    moduleMetadata({
+      imports: [SprkAutocompleteModule],
+    }),
     componentWrapperDecorator(
       (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
