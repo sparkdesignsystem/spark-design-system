@@ -32,7 +32,7 @@ const setSpinning = (element, options) => {
   const spinningAriaLabel = options.ariaLabel || 'Loading';
   const ariaValueText = options.ariaValueText || 'Loading';
   const role = options.role || 'progressbar';
-  const doNotDisable = options.doNotDisable || false;
+  const hasDoNotDisable = options.hasDoNotDisable || false;
 
   el.classList.add('sprk-c-Button--has-spinner');
   el.setAttribute('aria-label', spinningAriaLabel);
@@ -42,7 +42,7 @@ const setSpinning = (element, options) => {
 
   // This flag should be used for submit buttons so that
   // the disabled attribute does not suppress the submit behavior.
-  if (!doNotDisable) {
+  if (!hasDoNotDisable) {
     el.setAttribute('disabled', '');
   }
 
@@ -72,7 +72,7 @@ const spinners = () => {
     const options = {};
 
     if (spinnerType === 'is-not-disabled') {
-      options.doNotDisable = true;
+      options.hasDoNotDisable = true;
     }
 
     options.size = spinnerContainer.getAttribute('data-sprk-spinner-size');
