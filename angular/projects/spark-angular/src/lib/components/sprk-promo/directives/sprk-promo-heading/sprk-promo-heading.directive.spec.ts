@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkPromoHeadingDirective } from './sprk-promo-heading.directive';
 
 @Component({
@@ -17,18 +17,22 @@ describe('Spark Promo Heading Directive', () => {
   let element0: HTMLElement;
   let element1: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkPromoHeadingDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkPromoHeadingDirective, TestComponent],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
 
     fixture.detectChanges();
     element0 = fixture.nativeElement.querySelector('h3');
     element1 = fixture.nativeElement.querySelectorAll('h3')[1];
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

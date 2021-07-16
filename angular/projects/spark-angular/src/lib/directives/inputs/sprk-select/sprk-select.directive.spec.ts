@@ -1,5 +1,5 @@
 import { Component, DebugElement } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkSelectDirective } from './sprk-select.directive';
 
@@ -32,11 +32,15 @@ describe('Spark Select Directive', () => {
   let hugeSelectHiddenOptionElement: DebugElement;
   let hugeSelectOptionOneElement: DebugElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkSelectDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkSelectDirective, TestComponent],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
 
@@ -58,7 +62,7 @@ describe('Spark Select Directive', () => {
     hugeSelectOptionOneElement = fixture.debugElement.query(
       By.css('#option-1'),
     );
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

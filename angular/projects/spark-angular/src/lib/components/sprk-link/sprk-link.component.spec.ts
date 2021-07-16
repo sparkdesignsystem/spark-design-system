@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SprkLinkComponent } from './sprk-link.component';
 
@@ -7,12 +7,14 @@ describe('SprkLinkComponent', () => {
   let fixture: ComponentFixture<SprkLinkComponent>;
   let linkElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [SprkLinkComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [RouterTestingModule],
+        declarations: [SprkLinkComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkLinkComponent);
@@ -41,7 +43,7 @@ describe('SprkLinkComponent', () => {
   it('should add the correct class if linkType is icon', () => {
     component.linkType = 'icon';
     expect(component.getClasses()).toEqual(
-      'sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon'
+      'sprk-b-Link sprk-b-Link--simple sprk-b-Link--has-icon',
     );
   });
 
@@ -64,7 +66,7 @@ describe('SprkLinkComponent', () => {
     component.linkType = 'simple';
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     expect(component.getClasses()).toEqual(
-      'sprk-b-Link sprk-b-Link--simple sprk-u-pam sprk-u-man'
+      'sprk-b-Link sprk-b-Link--simple sprk-u-pam sprk-u-man',
     );
   });
 
@@ -73,7 +75,7 @@ describe('SprkLinkComponent', () => {
     fixture.detectChanges();
     expect(linkElement.hasAttribute('data-analytics')).toEqual(true);
     expect(linkElement.getAttribute('data-analytics')).toEqual(
-      'Product: Link: Link 1'
+      'Product: Link: Link 1',
     );
   });
 
@@ -102,7 +104,7 @@ describe('SprkLinkComponent', () => {
     fixture.detectChanges();
     expect(component.getPathWithoutHash(hash)).toEqual('links');
     expect(component.getPathWithoutHash(url)).toEqual(
-      'https://www.sparkdesignsystem.com/links'
+      'https://www.sparkdesignsystem.com/links',
     );
   });
 

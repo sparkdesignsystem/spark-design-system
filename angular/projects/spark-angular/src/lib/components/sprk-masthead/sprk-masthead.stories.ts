@@ -42,12 +42,15 @@ export default {
         SprkTextModule,
         SprkHeadingModule,
         SprkBoxModule,
-        RouterModule.forRoot([
-          {
-            path: 'iframe.html',
-            component: SprkMastheadComponent,
-          },
-        ]),
+        RouterModule.forRoot(
+          [
+            {
+              path: 'iframe.html',
+              component: SprkMastheadComponent,
+            },
+          ],
+          { relativeLinkResolution: 'legacy' },
+        ),
         BrowserAnimationsModule,
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],

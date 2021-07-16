@@ -7,7 +7,7 @@ import { SprkTableRowHeadingDirective } from './sprk-table-row-heading.directive
   template: `
     <th additionalClasses="sprk-u-man" sprkTableRowHeading></th>
     <th sprkTableRowHeading></th>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -19,9 +19,11 @@ describe('SprkTableRowHeadingDirective', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestComponent, SprkTableRowHeadingDirective]
+      declarations: [TestComponent, SprkTableRowHeadingDirective],
     }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     element1 = fixture.nativeElement.querySelectorAll('th')[0];

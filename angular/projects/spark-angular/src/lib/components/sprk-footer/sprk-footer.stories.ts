@@ -16,12 +16,15 @@ export default {
       imports: [
         SprkFooterModule,
         BrowserAnimationsModule,
-        RouterModule.forRoot([
-          {
-            path: 'iframe.html',
-            component: SprkFooterComponent,
-          },
-        ]),
+        RouterModule.forRoot(
+          [
+            {
+              path: 'iframe.html',
+              component: SprkFooterComponent,
+            },
+          ],
+          { relativeLinkResolution: 'legacy' },
+        ),
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),

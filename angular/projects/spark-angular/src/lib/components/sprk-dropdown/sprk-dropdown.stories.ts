@@ -16,12 +16,15 @@ export default {
       imports: [
         SprkDropdownModule,
         SprkLinkDirectiveModule,
-        RouterModule.forRoot([
-          {
-            path: 'iframe.html',
-            component: SprkDropdownComponent,
-          },
-        ]),
+        RouterModule.forRoot(
+          [
+            {
+              path: 'iframe.html',
+              component: SprkDropdownComponent,
+            },
+          ],
+          { relativeLinkResolution: 'legacy' },
+        ),
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),

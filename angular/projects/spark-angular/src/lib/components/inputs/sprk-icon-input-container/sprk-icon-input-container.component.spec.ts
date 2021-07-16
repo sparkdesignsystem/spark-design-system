@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkInputDirective } from '../../../directives/inputs/sprk-input/sprk-input.directive';
@@ -37,17 +37,19 @@ describe('SparkIconInputContainerComponent', () => {
   let inputElement: HTMLElement;
   let errorElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkLabelDirective,
-        SprkInputDirective,
-        SprkFieldErrorDirective,
-        TestComponent,
-        SprkIconInputContainerComponent,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkLabelDirective,
+          SprkInputDirective,
+          SprkFieldErrorDirective,
+          TestComponent,
+          SprkIconInputContainerComponent,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     testFixture = TestBed.createComponent(TestComponent);

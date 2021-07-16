@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
@@ -11,12 +11,18 @@ describe('SprkToggleComponent', () => {
   let triggerElement: HTMLButtonElement;
   let contentElement: HTMLDivElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
-      declarations: [SprkToggleComponent, SprkIconComponent, SprkLinkDirective],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [BrowserAnimationsModule],
+        declarations: [
+          SprkToggleComponent,
+          SprkIconComponent,
+          SprkLinkDirective,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkToggleComponent);
@@ -215,22 +221,27 @@ describe('SprkToggleComponent', () => {
     );
   });
 
-  it('should emit open and closed events when toggled', (done) => {
+  it('should emit open event when toggled open', (done) => {
     let openEventEmitted = false;
-    let closedEventEmitted = false;
 
     component.openedEvent.subscribe((g) => {
       openEventEmitted = true;
       done();
     });
+
+    element.querySelector('button').click();
+    expect(openEventEmitted).toEqual(true);
+  });
+
+  it('should emit closed event when toggled shut', (done) => {
+    component.isOpen = true;
+    fixture.detectChanges();
+    let closedEventEmitted = false;
+
     component.closedEvent.subscribe((g) => {
       closedEventEmitted = true;
       done();
     });
-
-    element.querySelector('button').click();
-    expect(openEventEmitted).toEqual(true);
-    expect(closedEventEmitted).toEqual(false);
 
     element.querySelector('button').click();
     expect(closedEventEmitted).toEqual(true);

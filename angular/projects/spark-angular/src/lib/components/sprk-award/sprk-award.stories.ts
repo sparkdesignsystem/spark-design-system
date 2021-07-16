@@ -15,12 +15,15 @@ export default {
       imports: [
         SprkAwardModule,
         BrowserAnimationsModule,
-        RouterModule.forRoot([
-          {
-            path: 'iframe.html',
-            component: SprkAwardComponent,
-          },
-        ]),
+        RouterModule.forRoot(
+          [
+            {
+              path: 'iframe.html',
+              component: SprkAwardComponent,
+            },
+          ],
+          { relativeLinkResolution: 'legacy' },
+        ),
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),

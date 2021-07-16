@@ -1,5 +1,5 @@
 import { Component, DebugElement } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkInputDirective } from './sprk-input.directive';
 
@@ -37,11 +37,15 @@ describe('Spark Input Directive', () => {
   let selectElement: DebugElement;
   let textareaElement: DebugElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkInputDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkInputDirective, TestComponent],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
 
@@ -56,7 +60,7 @@ describe('Spark Input Directive', () => {
     inputElementNoValue = fixture.debugElement.query(By.css('#no-value'));
     selectElement = fixture.debugElement.query(By.css('#select'));
     textareaElement = fixture.debugElement.query(By.css('#textarea'));
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

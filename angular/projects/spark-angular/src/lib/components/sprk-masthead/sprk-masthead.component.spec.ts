@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
@@ -533,31 +533,33 @@ describe('SprkMastheadComponent', () => {
     url: '/test',
   };
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule, RouterTestingModule.withRoutes([])],
-      providers: [{ provide: Router, useValue: routerStub }],
-      declarations: [
-        SprkMastheadComponent,
-        SprkIconComponent,
-        SprkLinkDirective,
-        SprkDropdownComponent,
-        SprkMastheadAccordionComponent,
-        SprkMastheadAccordionItemComponent,
-        SprkMastheadSelectorComponent,
-        SprkStackComponent,
-        Test1Component,
-        Test2Component,
-        SprkStackItemDirective,
-        SprkMastheadNavItemsDirective,
-        SprkMastheadNavItemDirective,
-        SprkMastheadLinkDirective,
-        SprkMastheadNavCollapsibleDirective,
-        SprkMastheadNavCollapsibleButtonComponent,
-        SprkMastheadBrandingDirective,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [BrowserAnimationsModule, RouterTestingModule.withRoutes([])],
+        providers: [{ provide: Router, useValue: routerStub }],
+        declarations: [
+          SprkMastheadComponent,
+          SprkIconComponent,
+          SprkLinkDirective,
+          SprkDropdownComponent,
+          SprkMastheadAccordionComponent,
+          SprkMastheadAccordionItemComponent,
+          SprkMastheadSelectorComponent,
+          SprkStackComponent,
+          Test1Component,
+          Test2Component,
+          SprkStackItemDirective,
+          SprkMastheadNavItemsDirective,
+          SprkMastheadNavItemDirective,
+          SprkMastheadLinkDirective,
+          SprkMastheadNavCollapsibleDirective,
+          SprkMastheadNavCollapsibleButtonComponent,
+          SprkMastheadBrandingDirective,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     componentFixture = TestBed.createComponent(Test1Component);

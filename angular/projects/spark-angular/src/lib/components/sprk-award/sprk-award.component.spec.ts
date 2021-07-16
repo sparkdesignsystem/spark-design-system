@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkLinkDirective } from '../../directives/sprk-link/sprk-link.directive';
 import { SprkAwardComponent } from './sprk-award.component';
@@ -13,19 +13,21 @@ describe('SprkAwardComponent', () => {
   let fixture: ComponentFixture<SprkAwardComponent>;
   let element: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule, RouterTestingModule],
-      declarations: [
-        SprkAwardComponent,
-        SprkLinkDirective,
-        SprkToggleComponent,
-        SprkStackComponent,
-        SprkStackItemDirective,
-        SprkIconComponent,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [BrowserAnimationsModule, RouterTestingModule],
+        declarations: [
+          SprkAwardComponent,
+          SprkLinkDirective,
+          SprkToggleComponent,
+          SprkStackComponent,
+          SprkStackItemDirective,
+          SprkIconComponent,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkAwardComponent);

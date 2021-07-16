@@ -70,6 +70,7 @@ const addSparkDependencies = (_options: Schema): Rule => {
 const addSparkModule = (options: Schema): Rule => {
   return (tree: Tree, _context: SchematicContext) => {
     const workspace = getWorkspace(tree);
+    // @ts-ignore
     const project = getProjectFromWorkspace(workspace, options.project);
 
     addModuleImportToRootModule(
@@ -90,6 +91,7 @@ const addSparkModule = (options: Schema): Rule => {
 const addAnimationsModule = (options: Schema): Rule => {
   return (tree: Tree, context: SchematicContext) => {
     const workspace = getWorkspace(tree);
+    // @ts-ignore
     const project = getProjectFromWorkspace(workspace, options.project);
     const appModulePath = getAppModulePath(tree, getProjectMainFile(project));
 
@@ -124,6 +126,7 @@ const addAnimationsModule = (options: Schema): Rule => {
 const addSparkStyles = (options: Schema): Rule => {
   return (tree: Tree, context: SchematicContext) => {
     const workspace = getWorkspace(tree);
+    // @ts-ignore
     const project = getProjectFromWorkspace(workspace, options.project);
     const styleFilePath = getProjectStyleFile(project);
     const logger = context.logger;
@@ -169,6 +172,7 @@ const addSparkStyles = (options: Schema): Rule => {
 const addSparkClass = (options: Schema): Rule => {
   return (tree: Tree, context: SchematicContext) => {
     const workspace = getWorkspace(tree);
+    // @ts-ignore
     const project = getProjectFromWorkspace(workspace, options.project);
     const projectIndexFiles = getProjectIndexFiles(project);
     const logger = context.logger;

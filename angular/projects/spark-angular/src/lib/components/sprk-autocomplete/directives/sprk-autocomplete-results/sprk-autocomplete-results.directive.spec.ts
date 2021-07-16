@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results.directive';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SprkAutocompleteResultsModule } from './sprk-autocomplete-results.module';
 
 @Component({
   selector: 'sprk-test',
@@ -9,8 +9,12 @@ import { SprkAutocompleteResultsDirective } from './sprk-autocomplete-results.di
       sprkAutocompleteResults
       analyticsString="results1"
       idString="resultsId1"
-    ></ul>
-    <ul sprkAutocompleteResults></ul>
+    >
+      <li>test</li>
+    </ul>
+    <ul sprkAutocompleteResults>
+      <li>test</li>
+    </ul>
   `,
 })
 class TestComponent {}
@@ -21,18 +25,23 @@ describe('Spark Autocomplete Results Directive', () => {
   let element: HTMLElement;
   let emptyElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkAutocompleteResultsDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [SprkAutocompleteResultsModule],
+        declarations: [TestComponent],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
-    element = fixture.nativeElement.querySelectorAll('ul')[0];
+    element = fixture.nativeElement.querySelector('ul');
     emptyElement = fixture.nativeElement.querySelectorAll('ul')[1];
 
     fixture.detectChanges();
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

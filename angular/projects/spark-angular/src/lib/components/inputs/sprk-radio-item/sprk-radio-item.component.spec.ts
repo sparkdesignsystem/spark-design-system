@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkRadioInputDirective } from '../../../directives/inputs/sprk-radio-input/sprk-radio-input.directive';
 import { SprkRadioLabelDirective } from '../../../directives/inputs/sprk-radio-label/sprk-radio-label.directive';
@@ -85,19 +85,21 @@ describe('SprkRadioItemComponent', () => {
   let radioInputElement3: HTMLElement;
   let radioInputElement4: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkRadioLabelDirective,
-        SprkRadioInputDirective,
-        SprkRadioItemComponent,
-        Test1Component,
-        Test2Component,
-        Test3Component,
-        Test4Component,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkRadioLabelDirective,
+          SprkRadioInputDirective,
+          SprkRadioItemComponent,
+          Test1Component,
+          Test2Component,
+          Test3Component,
+          Test4Component,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   let spy;
   beforeEach(() => {

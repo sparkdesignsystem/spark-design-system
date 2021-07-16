@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SprkStepperStepComponent } from './sprk-stepper-step.component';
 import { SprkLinkComponent } from '../../sprk-link/sprk-link.component';
@@ -10,12 +10,14 @@ describe('SprkStepperStepComponent', () => {
   let stepTriggerElement: HTMLElement;
   let contentElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [SprkStepperStepComponent, SprkLinkComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [RouterTestingModule],
+        declarations: [SprkStepperStepComponent, SprkLinkComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkStepperStepComponent);
@@ -43,8 +45,8 @@ describe('SprkStepperStepComponent', () => {
     fixture.detectChanges();
     expect(
       contentElement.classList.contains(
-        'sprk-c-Stepper__step-content--has-description'
-      )
+        'sprk-c-Stepper__step-content--has-description',
+      ),
     ).toEqual(true);
   });
 
@@ -52,7 +54,7 @@ describe('SprkStepperStepComponent', () => {
     component.isDefaultActive = true;
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-c-Stepper__step sprk-c-Stepper__step--selected'
+      'sprk-c-Stepper__step sprk-c-Stepper__step--selected',
     );
   });
 
@@ -60,7 +62,7 @@ describe('SprkStepperStepComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-c-Stepper__step sprk-u-pam sprk-u-man'
+      'sprk-c-Stepper__step sprk-u-pam sprk-u-man',
     );
   });
 
@@ -69,7 +71,7 @@ describe('SprkStepperStepComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(component.getClasses()).toEqual(
-      'sprk-c-Stepper__step sprk-u-pam sprk-u-man sprk-c-Stepper__step--selected'
+      'sprk-c-Stepper__step sprk-u-pam sprk-u-man sprk-c-Stepper__step--selected',
     );
   });
 

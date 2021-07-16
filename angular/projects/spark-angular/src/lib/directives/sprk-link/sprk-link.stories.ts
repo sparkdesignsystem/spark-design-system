@@ -21,12 +21,15 @@ export default {
         SprkBoxModule,
         SprkIconModule,
         SprkLinkModule,
-        RouterModule.forRoot([
-          {
-            path: 'iframe.html',
-            component: SprkLinkComponent,
-          },
-        ]),
+        RouterModule.forRoot(
+          [
+            {
+              path: 'iframe.html',
+              component: SprkLinkComponent,
+            },
+          ],
+          { relativeLinkResolution: 'legacy' },
+        ),
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),

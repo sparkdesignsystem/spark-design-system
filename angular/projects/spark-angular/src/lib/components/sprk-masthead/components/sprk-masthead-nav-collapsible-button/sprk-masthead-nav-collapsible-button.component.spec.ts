@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkMastheadNavCollapsibleButtonComponent } from './sprk-masthead-nav-collapsible-button.component';
 
 @Component({
@@ -34,11 +34,18 @@ describe('SprkMastheadNavCollapsibleButtonComponent', () => {
   let svgEl: SVGSVGElement;
   let svgEl2: SVGSVGElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkMastheadNavCollapsibleButtonComponent, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkMastheadNavCollapsibleButtonComponent,
+          TestComponent,
+        ],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     fixture2 = TestBed.createComponent(
       SprkMastheadNavCollapsibleButtonComponent,
@@ -52,7 +59,7 @@ describe('SprkMastheadNavCollapsibleButtonComponent', () => {
     el3 = fixture2.nativeElement.querySelector('button');
     svgEl = el.querySelector('svg');
     svgEl2 = el2.querySelector('svg');
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

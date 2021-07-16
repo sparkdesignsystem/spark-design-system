@@ -7,7 +7,7 @@ import { SprkTableHeadDirective } from './sprk-table-head.directive';
   template: `
     <thead additionalClasses="sprk-u-man" sprkTableHead></thead>
     <thead sprkTableHead></thead>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -19,9 +19,11 @@ describe('SprkTableHeadDirective', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestComponent, SprkTableHeadDirective]
+      declarations: [TestComponent, SprkTableHeadDirective],
     }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     element1 = fixture.nativeElement.querySelectorAll('thead')[0];

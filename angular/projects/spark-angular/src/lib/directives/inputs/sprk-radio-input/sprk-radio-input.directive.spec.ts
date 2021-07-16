@@ -31,7 +31,7 @@ describe('SprkRadioInputDirective', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let inputElement: DebugElement;
-  let itemElement: HTMLElement;
+  let itemElement: HTMLInputElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({

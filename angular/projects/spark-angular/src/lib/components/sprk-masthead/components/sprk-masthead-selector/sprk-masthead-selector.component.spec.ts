@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { SprkIconComponent } from '../../../sprk-icon/sprk-icon.component';
@@ -42,17 +42,19 @@ describe('SprkMastheadSelectorComponent', () => {
   let mastheadSelectorComponent: SprkMastheadSelectorComponent;
   let mastheadSelectorTriggerElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [
-        SprkMastheadSelectorComponent,
-        SprkIconComponent,
-        SprkLinkDirective,
-        TestWrapperComponent,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [RouterTestingModule],
+        declarations: [
+          SprkMastheadSelectorComponent,
+          SprkIconComponent,
+          SprkLinkDirective,
+          TestWrapperComponent,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TestWrapperComponent);
@@ -75,23 +77,25 @@ describe('SprkMastheadSelectorComponent', () => {
     expect(mastheadSelectorComponent).toBeTruthy();
   });
 
-  it('should emit open and closed events when selector is opened or closed', (done) => {
+  it('should emit open event when selector is opened', (done) => {
     let openEventEmitted = false;
-    let closedEventEmitted = false;
 
     mastheadSelectorComponent.openedEvent.subscribe((g) => {
       openEventEmitted = true;
       done();
     });
+
+    mastheadSelectorTriggerElement.click();
+    expect(openEventEmitted).toEqual(true);
+  });
+
+  it('should emit closed event when selector is closed', (done) => {
+    let closedEventEmitted = false;
+    mastheadSelectorTriggerElement.click();
     mastheadSelectorComponent.closedEvent.subscribe((g) => {
       closedEventEmitted = true;
       done();
     });
-
-    mastheadSelectorTriggerElement.click();
-    expect(openEventEmitted).toEqual(true);
-    expect(closedEventEmitted).toEqual(false);
-
     mastheadSelectorTriggerElement.click();
     expect(closedEventEmitted).toEqual(true);
   });

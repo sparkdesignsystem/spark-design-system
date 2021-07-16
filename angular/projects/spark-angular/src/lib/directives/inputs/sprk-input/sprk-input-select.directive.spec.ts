@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkInputDirective } from './sprk-input.directive';
 
 /**
@@ -16,13 +16,17 @@ describe('Spark Input Directive', () => {
   let component: TestSelectComponent;
   let selectComponent: TestSelectComponent;
   let selectFixture: ComponentFixture<TestSelectComponent>;
-  let selectElement: HTMLElement;
+  let selectElement: HTMLInputElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkInputDirective, TestSelectComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkInputDirective, TestSelectComponent],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     selectFixture = TestBed.createComponent(TestSelectComponent);
     component = selectFixture.componentInstance;
 
@@ -31,7 +35,7 @@ describe('Spark Input Directive', () => {
 
     selectFixture.detectChanges();
     selectElement = selectFixture.nativeElement.querySelector('select');
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

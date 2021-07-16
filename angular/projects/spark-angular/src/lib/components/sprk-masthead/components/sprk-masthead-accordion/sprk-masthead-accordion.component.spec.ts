@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkIconComponent } from '../../../sprk-icon/sprk-icon.component';
 import { SprkLinkDirective } from '../../../../directives/sprk-link/sprk-link.directive';
 import { SprkMastheadAccordionComponent } from './sprk-masthead-accordion.component';
@@ -9,15 +9,17 @@ describe('SprkMastheadAccordionComponent', () => {
   let accordionElement: HTMLElement;
   let accordionNavElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkMastheadAccordionComponent,
-        SprkIconComponent,
-        SprkLinkDirective,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkMastheadAccordionComponent,
+          SprkIconComponent,
+          SprkLinkDirective,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkMastheadAccordionComponent);

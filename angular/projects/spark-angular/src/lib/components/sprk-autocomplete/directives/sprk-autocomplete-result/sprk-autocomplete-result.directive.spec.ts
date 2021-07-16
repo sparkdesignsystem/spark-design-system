@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkAutocompleteResultDirective } from './sprk-autocomplete-result.directive';
 import { By } from '@angular/platform-browser';
 
@@ -25,11 +25,15 @@ describe('Spark Autocomplete Result Directive', () => {
   let emptyElement: HTMLElement;
   let directiveElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkAutocompleteResultDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkAutocompleteResultDirective, TestComponent],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelectorAll('li')[0];
@@ -42,7 +46,7 @@ describe('Spark Autocomplete Result Directive', () => {
       ) as SprkAutocompleteResultDirective;
 
     fixture.detectChanges();
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

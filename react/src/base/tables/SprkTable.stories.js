@@ -163,15 +163,15 @@ export const rowComparison = () => (
     columns={[
       {
         name: 'data1',
-        header: 'Column',
+        header: 'Column Heading',
       },
       {
         name: 'data2',
-        header: 'Column',
+        header: 'Column Heading',
       },
       {
         name: 'data3',
-        header: 'Column',
+        header: 'Column Heading',
       },
     ]}
     rows={[

@@ -21,7 +21,7 @@ class TestComponent {
 describe('SprkDatePickerDirective', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let inputElement: HTMLElement;
+  let inputElement: HTMLInputElement;
 
   it('should stand up, even if TinyDatePicker is not defined', () => {
     TestBed.configureTestingModule({

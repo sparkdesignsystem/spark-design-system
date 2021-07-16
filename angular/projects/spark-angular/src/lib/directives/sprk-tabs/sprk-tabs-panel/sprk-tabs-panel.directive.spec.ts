@@ -26,7 +26,9 @@ describe('Spark Tabs Panel Directive', () => {
     TestBed.configureTestingModule({
       declarations: [TestComponent, SprkTabsPanelDirective],
     }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');

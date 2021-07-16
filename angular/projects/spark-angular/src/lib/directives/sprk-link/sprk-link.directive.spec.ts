@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkLinkDirective } from './sprk-link.directive';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -33,12 +33,16 @@ describe('SprkLink Directive', () => {
   let linkLight: HTMLElement;
   let linkHasIcon: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [SprkLinkDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [RouterTestingModule],
+        declarations: [SprkLinkDirective, TestComponent],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
 
@@ -53,7 +57,7 @@ describe('SprkLink Directive', () => {
     linkUnstyled = fixture.nativeElement.querySelectorAll('a')[6];
     linkLight = fixture.nativeElement.querySelectorAll('a')[7];
     linkHasIcon = fixture.nativeElement.querySelectorAll('a')[8];
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkAccordionComponent } from './sprk-accordion.component';
 
@@ -7,11 +7,13 @@ describe('SprkAccordionComponent', () => {
   let fixture: ComponentFixture<SprkAccordionComponent>;
   let accordionElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkAccordionComponent, SprkIconComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkAccordionComponent, SprkIconComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkAccordionComponent);

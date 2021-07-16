@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkDividerComponent } from './sprk-divider.component';
 
 describe('SprkDividerComponent', () => {
@@ -6,11 +6,13 @@ describe('SprkDividerComponent', () => {
   let fixture: ComponentFixture<SprkDividerComponent>;
   let dividerElement: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkDividerComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkDividerComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkDividerComponent);
@@ -26,7 +28,7 @@ describe('SprkDividerComponent', () => {
   it('should add the correct classes if additionalClasses are supplied', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     expect(component.getClasses()).toEqual(
-      'sprk-c-Divider sprk-u-pam sprk-u-man'
+      'sprk-c-Divider sprk-u-pam sprk-u-man',
     );
   });
 

@@ -9,9 +9,11 @@ describe('Spark Table Component', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SprkTableComponent]
+      declarations: [SprkTableComponent],
     }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(SprkTableComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');
