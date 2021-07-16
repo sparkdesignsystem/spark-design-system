@@ -7,7 +7,7 @@ import { SprkTableGroupedColumnDirective } from './sprk-table-grouped-column.dir
   template: `
     <th additionalClasses="sprk-u-man" sprkTableGroupedColumn></th>
     <th sprkTableGroupedColumn></th>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -19,9 +19,11 @@ describe('SprkTableGroupedColumnDirective', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestComponent, SprkTableGroupedColumnDirective]
+      declarations: [TestComponent, SprkTableGroupedColumnDirective],
     }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     element1 = fixture.nativeElement.querySelectorAll('th')[0];
@@ -36,7 +38,7 @@ describe('SprkTableGroupedColumnDirective', () => {
   it('should add classes if additionalClasses has a value', () => {
     expect(element1.classList.contains('sprk-u-man')).toEqual(true);
     expect(element2.classList.toString()).toEqual(
-      'sprk-b-Table__grouped-column'
+      'sprk-b-Table__grouped-column',
     );
   });
 });

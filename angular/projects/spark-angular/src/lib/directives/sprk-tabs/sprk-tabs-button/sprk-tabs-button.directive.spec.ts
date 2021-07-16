@@ -30,7 +30,9 @@ describe('Spark Tabs Button Directive', () => {
     TestBed.configureTestingModule({
       declarations: [SprkTabsButtonDirective, TestComponent],
     }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('button');

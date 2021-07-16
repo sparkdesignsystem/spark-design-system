@@ -26,10 +26,6 @@ describe('Spark Card Media Directive', () => {
   );
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkCardMediaDirective, TestComponent],
-    }).compileComponents();
-
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
 

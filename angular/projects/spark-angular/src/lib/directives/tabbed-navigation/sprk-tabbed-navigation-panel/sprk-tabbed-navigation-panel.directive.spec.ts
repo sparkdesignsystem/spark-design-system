@@ -6,7 +6,7 @@ import { SprkTabbedNavigationPanelDirective } from './sprk-tabbed-navigation-pan
   selector: 'sprk-test-component',
   template: `
     <div additionalClasses="sprk-u-man" sprkTabbedNavigationPanel>Panel</div>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -17,9 +17,11 @@ describe('Spark Tabbed Navigation Panel Directive', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestComponent, SprkTabbedNavigationPanelDirective]
+      declarations: [TestComponent, SprkTabbedNavigationPanelDirective],
     }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');

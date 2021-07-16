@@ -27,7 +27,9 @@ describe('Spark Tabbed Navigation Tab Directive', () => {
     TestBed.configureTestingModule({
       declarations: [SprkTabbedNavigationTabDirective, TestComponent],
     }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('button');
