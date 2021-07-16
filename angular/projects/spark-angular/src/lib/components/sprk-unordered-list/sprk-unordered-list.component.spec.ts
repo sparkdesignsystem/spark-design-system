@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkUnorderedListComponent } from './sprk-unordered-list.component';
 import { SprkUnorderedListModule } from './sprk-unordered-list.module';
 import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
@@ -19,7 +19,7 @@ import { SprkListItemModule } from '../sprk-list-item/sprk-list-item.module';
         Content
       </sprk-list-item>
     </sprk-unordered-list>
-  `
+  `,
 })
 class TestingComponent {}
 
@@ -33,12 +33,14 @@ describe('SprkUnorderedListComponent', () => {
   let listItem;
   let noId;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [TestingComponent],
-      imports: [SprkListItemModule, SprkUnorderedListModule]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [TestingComponent],
+        imports: [SprkListItemModule, SprkUnorderedListModule],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkUnorderedListComponent);
@@ -85,7 +87,7 @@ describe('SprkUnorderedListComponent', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
     expect(element.classList.toString()).toEqual(
-      'sprk-b-List sprk-b-List--bare sprk-u-pam sprk-u-man'
+      'sprk-b-List sprk-b-List--bare sprk-u-pam sprk-u-man',
     );
   });
 
@@ -110,7 +112,7 @@ describe('SprkUnorderedListComponent', () => {
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
     expect(listItem.hasAttribute('data-analytics')).toEqual(true);
     expect(listItem.getAttribute('data-analytics')).toEqual(
-      'test-analytics-string'
+      'test-analytics-string',
     );
   });
 
