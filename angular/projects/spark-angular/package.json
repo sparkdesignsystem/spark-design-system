@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
-  "version": "14.0.0",
+  "version": "14.0.1-alpha.0",
   "author": "Quicken Loans",
   "license": "MIT",
   "scripts": {
@@ -26,6 +26,6 @@
     "@sparkdesignsystem/spark-styles": "^3.0.0",
     "focus-visible": "5.0.2",
     "lodash": "^4.17.21",
-    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9"
+    "tiny-date-picker": "git+https://github.com/sparkdesignsystem/tiny-date-picker.git#v3.2.9"
   }
 }

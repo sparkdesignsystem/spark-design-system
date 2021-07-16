@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark",
-  "version": "17.0.0",
+  "version": "17.0.1-alpha.0",
   "description": "Spark is the main package for the Spark Design System. This package contains the JavaScript and components that make up the basic interfaces for Quicken Loans Fintech products.",
   "main": "es5/sparkExports.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "lodash": "^4.17.21",
     "lory.js": "^2.5.3",
     "object-fit-images": "^3.2.4",
-    "tiny-date-picker": "github:sparkdesignsystem/tiny-date-picker#v3.2.9"
+    "tiny-date-picker": "git+https://github.com/sparkdesignsystem/tiny-date-picker.git#v3.2.9"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",
