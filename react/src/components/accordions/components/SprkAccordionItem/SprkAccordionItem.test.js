@@ -23,7 +23,7 @@ describe('SprkAccordionItem:', () => {
         test
       </SprkAccordionItem>,
     );
-    expect(wrapper.state().isOpen).toBe(true);
+    expect(wrapper.state().isItemOpen).toBe(true);
   });
 
   it('should default to open if isDefaultOpen is true', () => {
@@ -32,18 +32,18 @@ describe('SprkAccordionItem:', () => {
         test
       </SprkAccordionItem>,
     );
-    expect(wrapper.state().isOpen).toBe(true);
+    expect(wrapper.state().isItemOpen).toBe(true);
   });
 
   it('should toggle open on click', () => {
     const wrapper = mount(
       <SprkAccordionItem heading="test">test</SprkAccordionItem>,
     );
-    expect(wrapper.state().isOpen).toBe(false);
+    expect(wrapper.state().isItemOpen).toBe(false);
     wrapper.find('button').simulate('click');
-    expect(wrapper.state().isOpen).toBe(true);
+    expect(wrapper.state().isItemOpen).toBe(true);
     wrapper.find('button').simulate('click');
-    expect(wrapper.state().isOpen).toBe(false);
+    expect(wrapper.state().isItemOpen).toBe(false);
   });
 
   it('should add a class to icon when opened', () => {

@@ -11,7 +11,7 @@ class SprkAccordionItem extends Component {
     // TODO: Remove isDefaultOpen in future issue #1299
     const { isDefaultOpen, isOpen = isDefaultOpen } = this.props;
     this.state = {
-      isOpen: isOpen || false,
+      isItemOpen: isOpen || false,
       height: isOpen ? 'auto' : 0,
     };
     this.toggle = this.toggle.bind(this);
@@ -21,8 +21,8 @@ class SprkAccordionItem extends Component {
     const { onToggle } = this.props;
     e.preventDefault();
     this.setState((prevState) => ({
-      isOpen: !prevState.isOpen,
-      height: !prevState.isOpen ? 'auto' : 0,
+      isItemOpen: !prevState.isItemOpen,
+      height: !prevState.isItemOpen ? 'auto' : 0,
     }));
     if (onToggle) onToggle(e);
   }
@@ -47,19 +47,21 @@ class SprkAccordionItem extends Component {
       iconNameClosed,
       leadingIcon,
       leadingIconAdditionalClasses,
+      isOpen,
+      isDefaultOpen,
       ...other
     } = this.props;
-    const { isOpen, height } = this.state;
+    const { isItemOpen, height } = this.state;
 
     const iconClasses = classnames(
       'sprk-c-Icon--toggle sprk-c-Accordion__icon sprk-c-Icon--xl',
-      { 'sprk-c-Icon--open': isOpen },
+      { 'sprk-c-Icon--open': isItemOpen },
       iconAdditionalClasses,
     );
 
     const itemClassNames = classnames(
       'sprk-c-Accordion__item',
-      { 'sprk-c-Accordion__item--open': isOpen },
+      { 'sprk-c-Accordion__item--open': isItemOpen },
       additionalClasses,
     );
 
@@ -86,7 +88,7 @@ class SprkAccordionItem extends Component {
           additionalClasses="sprk-c-Accordion__summary"
           data-analytics={analyticsString}
           onClick={this.toggle}
-          aria-expanded={isOpen ? 'true' : 'false'}
+          aria-expanded={isItemOpen ? 'true' : 'false'}
         >
           {leadingIcon && (
             <SprkIcon
@@ -96,7 +98,7 @@ class SprkAccordionItem extends Component {
           )}
           <h3 className={headingClassNames}>{heading}</h3>
           <SprkIcon
-            iconName={isOpen ? iconNameOpen : iconNameClosed}
+            iconName={isItemOpen ? iconNameOpen : iconNameClosed}
             additionalClasses={iconClasses}
           />
         </SprkLink>
