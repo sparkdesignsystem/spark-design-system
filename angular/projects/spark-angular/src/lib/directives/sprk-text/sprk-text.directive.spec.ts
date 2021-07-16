@@ -26,16 +26,18 @@ describe('Spark Text Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkTextDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-      el1 = fixture.nativeElement.querySelector('p');
-      el2 = fixture.nativeElement.querySelector('h1');
-      el3 = fixture.nativeElement.querySelector('cite');
-      el4 = fixture.nativeElement.querySelector('small');
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    el1 = fixture.nativeElement.querySelector('p');
+    el2 = fixture.nativeElement.querySelector('h1');
+    el3 = fixture.nativeElement.querySelector('cite');
+    el4 = fixture.nativeElement.querySelector('small');
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

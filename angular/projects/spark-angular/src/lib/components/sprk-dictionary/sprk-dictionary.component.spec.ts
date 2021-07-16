@@ -37,12 +37,11 @@ describe('SprkAngularDictionaryComponent', () => {
       TestBed.configureTestingModule({
         declarations: [SprkDictionaryComponent, WrappedDictionaryComponent],
       }).compileComponents();
-
-      spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
     }),
   );
 
   beforeEach(() => {
+    spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
     fixture = TestBed.createComponent(SprkDictionaryComponent);
     component = fixture.componentInstance;
     element = fixture.nativeElement.querySelector('div');

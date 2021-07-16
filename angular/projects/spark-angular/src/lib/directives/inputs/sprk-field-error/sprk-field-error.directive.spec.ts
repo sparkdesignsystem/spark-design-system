@@ -22,13 +22,15 @@ describe('Spark Field Error Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkFieldErrorDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-      spanElement = fixture.nativeElement.querySelector('span');
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    spanElement = fixture.nativeElement.querySelector('span');
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

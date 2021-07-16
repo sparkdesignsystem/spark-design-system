@@ -29,15 +29,17 @@ describe('SprkCheckboxLabelDirective', () => {
       TestBed.configureTestingModule({
         declarations: [SprkCheckboxLabelDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-      labelElement = fixture.nativeElement.querySelector('label');
-      itemElement = fixture.nativeElement.querySelectorAll('label')[1];
-      disabledElement = fixture.nativeElement.querySelectorAll('label')[2];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    labelElement = fixture.nativeElement.querySelector('label');
+    itemElement = fixture.nativeElement.querySelectorAll('label')[1];
+    disabledElement = fixture.nativeElement.querySelectorAll('label')[2];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

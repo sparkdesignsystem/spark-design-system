@@ -22,15 +22,21 @@ describe('Spark Card Media Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkCardMediaDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-
-      fixture.detectChanges();
-      mediaElement0 = fixture.nativeElement.querySelector('img');
-      mediaElement1 = fixture.nativeElement.querySelectorAll('img')[1];
     }),
   );
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [SprkCardMediaDirective, TestComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
+    mediaElement0 = fixture.nativeElement.querySelector('img');
+    mediaElement1 = fixture.nativeElement.querySelectorAll('img')[1];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

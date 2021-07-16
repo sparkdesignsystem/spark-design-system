@@ -22,15 +22,17 @@ describe('Spark Stack Item Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkStackItemDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-
-      fixture.detectChanges();
-      item1Element = fixture.nativeElement.querySelectorAll('div')[0];
-      item2Element = fixture.nativeElement.querySelectorAll('div')[1];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
+    item1Element = fixture.nativeElement.querySelectorAll('div')[0];
+    item2Element = fixture.nativeElement.querySelectorAll('div')[1];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

@@ -30,10 +30,6 @@ describe('SprkFieldsetDirective', () => {
   );
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkFieldsetDirective, TestComponent],
-    }).compileComponents();
-
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

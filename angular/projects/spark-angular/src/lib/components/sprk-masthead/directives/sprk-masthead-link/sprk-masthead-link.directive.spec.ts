@@ -24,14 +24,16 @@ describe('SprkMastheadLinkDirective', () => {
       TestBed.configureTestingModule({
         declarations: [SprkMastheadLinkDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-      el = fixture.nativeElement.querySelector('a');
-      el2 = fixture.nativeElement.querySelectorAll('a')[1];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    el = fixture.nativeElement.querySelector('a');
+    el2 = fixture.nativeElement.querySelectorAll('a')[1];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

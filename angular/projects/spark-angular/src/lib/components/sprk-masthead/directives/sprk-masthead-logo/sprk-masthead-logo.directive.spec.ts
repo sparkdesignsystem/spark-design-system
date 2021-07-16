@@ -24,14 +24,16 @@ describe('SprkMastheadLogoDirective', () => {
       TestBed.configureTestingModule({
         declarations: [SprkMastheadLogoDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-      el = fixture.nativeElement.querySelector('div');
-      el2 = fixture.nativeElement.querySelectorAll('div')[1];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    el = fixture.nativeElement.querySelector('div');
+    el2 = fixture.nativeElement.querySelectorAll('div')[1];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

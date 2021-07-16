@@ -22,15 +22,17 @@ describe('Spark Card Content Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkCardContentDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-
-      fixture.detectChanges();
-      contentElement0 = fixture.nativeElement.querySelector('div');
-      contentElement1 = fixture.nativeElement.querySelectorAll('div')[1];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
+    contentElement0 = fixture.nativeElement.querySelector('div');
+    contentElement1 = fixture.nativeElement.querySelectorAll('div')[1];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

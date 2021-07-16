@@ -42,22 +42,24 @@ describe('SprkMastheadNavCollapsibleButtonComponent', () => {
           TestComponent,
         ],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      fixture2 = TestBed.createComponent(
-        SprkMastheadNavCollapsibleButtonComponent,
-      );
-      component = fixture.componentInstance;
-      component2 = fixture2.componentInstance;
-      fixture.detectChanges();
-      fixture2.detectChanges();
-      el = fixture.nativeElement.querySelector('button');
-      el2 = fixture.nativeElement.querySelectorAll('button')[1];
-      el3 = fixture2.nativeElement.querySelector('button');
-      svgEl = el.querySelector('svg');
-      svgEl2 = el2.querySelector('svg');
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    fixture2 = TestBed.createComponent(
+      SprkMastheadNavCollapsibleButtonComponent,
+    );
+    component = fixture.componentInstance;
+    component2 = fixture2.componentInstance;
+    fixture.detectChanges();
+    fixture2.detectChanges();
+    el = fixture.nativeElement.querySelector('button');
+    el2 = fixture.nativeElement.querySelectorAll('button')[1];
+    el3 = fixture2.nativeElement.querySelector('button');
+    svgEl = el.querySelector('svg');
+    svgEl2 = el2.querySelector('svg');
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

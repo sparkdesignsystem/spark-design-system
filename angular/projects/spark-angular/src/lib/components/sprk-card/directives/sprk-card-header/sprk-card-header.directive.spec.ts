@@ -22,15 +22,17 @@ describe('Spark Card Header Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkCardHeaderDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-
-      fixture.detectChanges();
-      headerElement0 = fixture.nativeElement.querySelector('div');
-      headerElement1 = fixture.nativeElement.querySelectorAll('div')[1];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
+    headerElement0 = fixture.nativeElement.querySelector('div');
+    headerElement1 = fixture.nativeElement.querySelectorAll('div')[1];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();
