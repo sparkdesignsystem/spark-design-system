@@ -23,17 +23,19 @@ describe('Spark Input Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkInputDirective, TestSelectComponent],
       }).compileComponents();
-
-      selectFixture = TestBed.createComponent(TestSelectComponent);
-      component = selectFixture.componentInstance;
-
-      selectFixture = TestBed.createComponent(TestSelectComponent);
-      selectComponent = selectFixture.componentInstance;
-
-      selectFixture.detectChanges();
-      selectElement = selectFixture.nativeElement.querySelector('select');
     }),
   );
+
+  beforeEach(() => {
+    selectFixture = TestBed.createComponent(TestSelectComponent);
+    component = selectFixture.componentInstance;
+
+    selectFixture = TestBed.createComponent(TestSelectComponent);
+    selectComponent = selectFixture.componentInstance;
+
+    selectFixture.detectChanges();
+    selectElement = selectFixture.nativeElement.querySelector('select');
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

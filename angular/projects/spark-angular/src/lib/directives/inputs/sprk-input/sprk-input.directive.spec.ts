@@ -42,23 +42,25 @@ describe('Spark Input Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkInputDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-
-      fixture.detectChanges();
-      inputElementWithValue = fixture.debugElement.query(By.css('#with-value'));
-      hugeInputElementWithValue = fixture.debugElement.query(
-        By.css('#huge-input-value'),
-      );
-      hugeInputElementNoValue = fixture.debugElement.query(
-        By.css('#huge-input-no-value'),
-      );
-      inputElementNoValue = fixture.debugElement.query(By.css('#no-value'));
-      selectElement = fixture.debugElement.query(By.css('#select'));
-      textareaElement = fixture.debugElement.query(By.css('#textarea'));
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
+    inputElementWithValue = fixture.debugElement.query(By.css('#with-value'));
+    hugeInputElementWithValue = fixture.debugElement.query(
+      By.css('#huge-input-value'),
+    );
+    hugeInputElementNoValue = fixture.debugElement.query(
+      By.css('#huge-input-no-value'),
+    );
+    inputElementNoValue = fixture.debugElement.query(By.css('#no-value'));
+    selectElement = fixture.debugElement.query(By.css('#select'));
+    textareaElement = fixture.debugElement.query(By.css('#textarea'));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

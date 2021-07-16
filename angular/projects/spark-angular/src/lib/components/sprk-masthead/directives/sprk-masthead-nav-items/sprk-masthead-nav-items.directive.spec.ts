@@ -24,14 +24,16 @@ describe('SprkMastheadNavItemsDirective', () => {
       TestBed.configureTestingModule({
         declarations: [SprkMastheadNavItemsDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-      el = fixture.nativeElement.querySelector('nav');
-      el2 = fixture.nativeElement.querySelectorAll('nav')[1];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    el = fixture.nativeElement.querySelector('nav');
+    el2 = fixture.nativeElement.querySelectorAll('nav')[1];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

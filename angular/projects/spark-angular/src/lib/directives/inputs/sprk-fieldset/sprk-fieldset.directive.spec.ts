@@ -26,13 +26,19 @@ describe('SprkFieldsetDirective', () => {
       TestBed.configureTestingModule({
         declarations: [SprkFieldsetDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-      fieldsetElement = fixture.nativeElement.querySelector('fieldset');
     }),
   );
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [SprkFieldsetDirective, TestComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    fieldsetElement = fixture.nativeElement.querySelector('fieldset');
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

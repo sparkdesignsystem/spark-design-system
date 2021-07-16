@@ -40,12 +40,11 @@ describe('SprkTooltipComponent', () => {
           WrappedTooltipComponent,
         ],
       }).compileComponents();
-
-      spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
     }),
   );
 
   beforeEach(() => {
+    spy = jest.spyOn(console, 'warn').mockImplementationOnce(() => {});
     fixture = TestBed.createComponent(SprkTooltipComponent);
     component = fixture.componentInstance;
     containerElement = fixture.nativeElement.querySelector('span');

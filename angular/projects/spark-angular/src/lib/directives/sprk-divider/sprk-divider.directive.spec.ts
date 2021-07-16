@@ -18,14 +18,16 @@ describe('Spark Divider Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkDividerDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-
-      fixture.detectChanges();
-      element = fixture.nativeElement.querySelectorAll('div')[0];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
+    element = fixture.nativeElement.querySelectorAll('div')[0];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

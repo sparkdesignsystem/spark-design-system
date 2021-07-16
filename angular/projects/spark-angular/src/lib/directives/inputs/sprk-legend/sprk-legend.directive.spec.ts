@@ -28,16 +28,16 @@ describe('SprkLegendDirective', () => {
       TestBed.configureTestingModule({
         declarations: [SprkLegendDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-      legendElement = fixture.nativeElement.querySelector('legend');
-      disabledLegendElement = fixture.nativeElement.querySelectorAll(
-        'legend',
-      )[1];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    legendElement = fixture.nativeElement.querySelector('legend');
+    disabledLegendElement = fixture.nativeElement.querySelectorAll('legend')[1];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

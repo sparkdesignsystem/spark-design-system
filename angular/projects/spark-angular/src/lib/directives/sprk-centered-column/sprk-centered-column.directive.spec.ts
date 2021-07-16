@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkCenteredColumnDirective } from './sprk-centered-column.directive';
 
 @Component({
@@ -15,17 +15,21 @@ describe('Spark Centered Column Directive', () => {
   let fixture: ComponentFixture<TestComponent>;
   let element: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkCenteredColumnDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkCenteredColumnDirective, TestComponent],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
 
     fixture.detectChanges();
     element = fixture.nativeElement.querySelectorAll('div')[0];
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

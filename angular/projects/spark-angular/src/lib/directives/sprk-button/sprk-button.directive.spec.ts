@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkButtonDirective } from './sprk-button.directive';
 import { SprkSpinnerDirective } from '../sprk-spinner/sprk-spinner.directive';
 
@@ -48,11 +48,19 @@ describe('Spark Button Directive', () => {
   // TODO: Remove this test is for checking if new spinner directive is being used #3561
   let button6Element: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkButtonDirective, SprkSpinnerDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkButtonDirective,
+          SprkSpinnerDirective,
+          TestComponent,
+        ],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
     component = fixture.componentInstance;
 
@@ -63,7 +71,7 @@ describe('Spark Button Directive', () => {
     button4Element = fixture.nativeElement.querySelectorAll('button')[3];
     button5Element = fixture.nativeElement.querySelectorAll('button')[4];
     button6Element = fixture.nativeElement.querySelectorAll('button')[5];
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

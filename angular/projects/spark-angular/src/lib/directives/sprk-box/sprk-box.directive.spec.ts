@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SprkBoxDirective } from './sprk-box.directive';
 
 @Component({
@@ -55,15 +55,18 @@ describe('Spark Box Directive', () => {
   let item19Element: HTMLElement;
   let item20Element: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SprkBoxDirective, TestComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SprkBoxDirective, TestComponent],
+      }).compileComponents();
+    }),
+  );
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-
     fixture.detectChanges();
+    component = fixture.componentInstance;
     item0Element = fixture.nativeElement.querySelectorAll('div')[0];
     item1Element = fixture.nativeElement.querySelectorAll('div')[1];
     item2Element = fixture.nativeElement.querySelectorAll('div')[2];
@@ -85,7 +88,7 @@ describe('Spark Box Directive', () => {
     item18Element = fixture.nativeElement.querySelectorAll('div')[18];
     item19Element = fixture.nativeElement.querySelectorAll('div')[19];
     item20Element = fixture.nativeElement.querySelectorAll('div')[20];
-  }));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

@@ -26,15 +26,17 @@ describe('Spark Textarea Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkTextareaDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-
-      fixture.detectChanges();
-
-      textareaElement = fixture.debugElement.query(By.css('#textarea'));
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
+
+    textareaElement = fixture.debugElement.query(By.css('#textarea'));
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

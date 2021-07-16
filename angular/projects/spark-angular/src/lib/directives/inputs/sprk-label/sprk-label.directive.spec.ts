@@ -35,16 +35,18 @@ describe('SprkLabelDirective', () => {
       TestBed.configureTestingModule({
         declarations: [SprkLabelDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-      label = fixture.debugElement.query(By.css('label'));
-      labelDisabled = fixture.nativeElement.querySelectorAll('label')[1];
-      labelHidden = fixture.nativeElement.querySelectorAll('label')[2];
-      labelMonetary = fixture.nativeElement.querySelectorAll('label')[3];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    label = fixture.debugElement.query(By.css('label'));
+    labelDisabled = fixture.nativeElement.querySelectorAll('label')[1];
+    labelHidden = fixture.nativeElement.querySelectorAll('label')[2];
+    labelMonetary = fixture.nativeElement.querySelectorAll('label')[3];
+  });
 
   it('should add the correct label classes to the applied element', () => {
     expect(label.nativeElement.classList.contains('sprk-b-Label')).toEqual(

@@ -22,13 +22,15 @@ describe('Spark Helper Text Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkHelperTextDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-      spanElement1 = fixture.nativeElement.querySelectorAll('span')[0];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    spanElement1 = fixture.nativeElement.querySelectorAll('span')[0];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

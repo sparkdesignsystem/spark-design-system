@@ -22,15 +22,17 @@ describe('Spark Promo Subheading Directive', () => {
       TestBed.configureTestingModule({
         declarations: [SprkPromoSubheadingDirective, TestComponent],
       }).compileComponents();
-
-      fixture = TestBed.createComponent(TestComponent);
-      component = fixture.componentInstance;
-
-      fixture.detectChanges();
-      element0 = fixture.nativeElement.querySelector('p');
-      element1 = fixture.nativeElement.querySelectorAll('p')[1];
     }),
   );
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TestComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
+    element0 = fixture.nativeElement.querySelector('p');
+    element1 = fixture.nativeElement.querySelectorAll('p')[1];
+  });
 
   it('should create itself', () => {
     expect(component).toBeTruthy();

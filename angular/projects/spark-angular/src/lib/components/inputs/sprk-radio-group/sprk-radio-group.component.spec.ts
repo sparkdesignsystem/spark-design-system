@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { SprkFieldErrorDirective } from '../../../directives/inputs/sprk-field-error/sprk-field-error.directive';
 import { SprkRadioInputDirective } from '../../../directives/inputs/sprk-radio-input/sprk-radio-input.directive';
@@ -27,7 +27,7 @@ import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/
     </sprk-radio-group>
   `,
 })
-class TestComponent { }
+class TestComponent {}
 
 @Component({
   selector: 'sprk-test-2',
@@ -42,7 +42,7 @@ class TestComponent { }
     </sprk-radio-group>
   `,
 })
-class Test2Component { }
+class Test2Component {}
 
 describe('SprkRadioGroupComponent', () => {
   let component: TestComponent;
@@ -61,21 +61,23 @@ describe('SprkRadioGroupComponent', () => {
   let radioItemContainerElements2;
   let errorElement2: HTMLElement;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        SprkRadioItemComponent,
-        SprkRadioInputDirective,
-        SprkRadioLabelDirective,
-        SprkLegendDirective,
-        SprkFieldsetDirective,
-        SprkFieldErrorDirective,
-        SprkRadioGroupComponent,
-        TestComponent,
-        Test2Component,
-      ],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          SprkRadioItemComponent,
+          SprkRadioInputDirective,
+          SprkRadioLabelDirective,
+          SprkLegendDirective,
+          SprkFieldsetDirective,
+          SprkFieldErrorDirective,
+          SprkRadioGroupComponent,
+          TestComponent,
+          Test2Component,
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TestComponent);
