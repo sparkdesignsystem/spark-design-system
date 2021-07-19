@@ -4,13 +4,6 @@
   "version": "15.0.0-alpha.0.0",
   "author": "Quicken Loans",
   "license": "MIT",
-  "scripts": {
-    "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
-    "copy:schemas": "cp schematics/ng-add/schema.json ../../dist/spark-angular/schematics/ng-add/schema.json",
-    "copy:collection": "cp schematics/collection.json ../../dist/spark-angular/schematics/collection.json",
-    "postbuild": "npm run copy:schemas && npm run copy:collection"
-  },
-  "schematics": "./schematics/collection.json",
   "peerDependencies": {
     "@angular/animations": ">=9.0.0 <= 12.1.1",
     "@angular/common": ">=9.0.0 <= 12.1.1",
