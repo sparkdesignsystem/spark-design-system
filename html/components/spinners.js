@@ -40,8 +40,8 @@ const setSpinning = (element, options) => {
   el.setAttribute('data-sprk-has-spinner', 'true');
   el.setAttribute('style', `width: ${width}px`);
 
-  // This flag should be used for submit buttons so that
-  // the disabled attribute does not suppress the submit behavior.
+  // This flag should be used for submit buttons so that the
+  // disabled attribute does not suppress the submit behavior.
   if (!hasDoNotDisable) {
     el.setAttribute('disabled', '');
   }
