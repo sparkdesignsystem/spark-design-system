@@ -218,7 +218,7 @@ export const compact = () => ({
     <button
       idString="button-compact"
       sprkButton
-      additionalClasses="sprk-c-Button--compact" 
+      class="sprk-c-Button--compact" 
     >
       Button
     </button>
@@ -235,7 +235,7 @@ export const compactSecondary = () => ({
       variant="secondary"
       idString="button-compact-secondary"
       sprkButton
-      additionalClasses="sprk-c-Button--compact" 
+      class="sprk-c-Button--compact" 
     >
       Button
     </button>
@@ -252,7 +252,7 @@ export const compactTertiary = () => ({
       variant="tertiary"
       idString="button-compact-tertiary"
       sprkButton
-      additionalClasses="sprk-c-Button--compact" 
+      class="sprk-c-Button--compact" 
     >
       Button
     </button>
