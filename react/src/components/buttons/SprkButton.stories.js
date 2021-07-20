@@ -73,8 +73,8 @@ export const tertiary = () => (
 export const disabled = () => (
   <SprkButton
     isDisabled
-    idString="button-5"
-    analyticsString="button-5-analytics"
+    idString="button-4"
+    analyticsString="button-4-analytics"
   >
     Button
   </SprkButton>
@@ -84,8 +84,8 @@ export const disabledSecondary = () => (
   <SprkButton
     isDisabled
     variant="secondary"
-    idString="button-6"
-    analyticsString="button-6-analytics"
+    idString="button-5"
+    analyticsString="button-5-analytics"
   >
     Button
   </SprkButton>
@@ -95,8 +95,8 @@ export const disabledTertiary = () => (
   <SprkButton
     isDisabled
     variant="tertiary"
-    idString="button-7"
-    analyticsString="button-7-analytics"
+    idString="button-6"
+    analyticsString="button-6-analytics"
   >
     Button
   </SprkButton>
@@ -104,8 +104,8 @@ export const disabledTertiary = () => (
 
 export const spinning = () => (
   <SprkButton
-    idString="button-9"
-    analyticsString="button-9-analytics"
+    idString="button-7"
+    analyticsString="button-7-analytics"
     isSpinning
   >
     <SprkSpinner />
@@ -115,8 +115,8 @@ export const spinning = () => (
 export const spinningSecondary = () => (
   <SprkButton
     variant="secondary"
-    idString="button-10"
-    analyticsString="button-10-analytics"
+    idString="button-8"
+    analyticsString="button-8-analytics"
     isSpinning
   >
     <SprkSpinner variant="secondary" />
@@ -126,8 +126,8 @@ export const spinningSecondary = () => (
 export const spinningTertiary = () => (
   <SprkButton
     variant="tertiary"
-    idString="button-11"
-    analyticsString="button-11-analytics"
+    idString="button-9"
+    analyticsString="button-9-analytics"
     isSpinning
   >
     <SprkSpinner variant="secondary" />
@@ -136,8 +136,8 @@ export const spinningTertiary = () => (
 
 export const compact = () => (
   <SprkButton
-    idString="button-12"
-    analyticsString="button-4-analytics"
+    idString="button-10"
+    analyticsString="button-10-analytics"
     additionalClasses="sprk-c-Button--compact"
   >
     Button
@@ -147,8 +147,8 @@ export const compact = () => (
 export const compactSecondary = () => (
   <SprkButton
     variant="secondary"
-    idString="button-13"
-    analyticsString="button-16-analytics"
+    idString="button-11"
+    analyticsString="button-11-analytics"
     additionalClasses="sprk-c-Button--compact"
   >
     Button
@@ -158,8 +158,8 @@ export const compactSecondary = () => (
 export const compactTertiary = () => (
   <SprkButton
     variant="tertiary"
-    idString="button-14"
-    analyticsString="button-17-analytics"
+    idString="button-12"
+    analyticsString="button-12-analytics"
     additionalClasses="sprk-c-Button--compact"
   >
     Button
@@ -168,7 +168,7 @@ export const compactTertiary = () => (
 
 export const fullWidthAtSmallViewport = () => (
   <SprkButton
-    idString="button-15"
+    idString="button-13"
     analyticsString="button-13-analytics"
     additionalClasses="sprk-c-Button--full@s"
   >
@@ -178,7 +178,7 @@ export const fullWidthAtSmallViewport = () => (
 
 export const fullWidthAtExtraSmallViewport = () => (
   <SprkButton
-    idString="button-16"
+    idString="button-14"
     analyticsString="button-14-analytics"
     additionalClasses="sprk-c-Button--full@xs"
   >
@@ -190,7 +190,7 @@ export const asALinkElement = () => (
   <SprkButton
     element="a"
     href="#nogo"
-    idString="button-17"
+    idString="button-15"
     analyticsString="button-15-analytics"
   >
     Button
