@@ -26,7 +26,6 @@
   <string name="sprk_autocomplete_results_border">1.00dp solid #fff7f7f7</string><!-- The border of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_overflow_y">scroll</string><!-- The overflow-y behavior of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_shadow">0 0 40px 2px rgba(0, 0, 0, 0.1)</string><!-- The box shadow of the Autocomplete results. -->
-  <string name="sprk_autocomplete_results_z_index">32000.00dp</string><!-- The z-index of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_last_child_border_bottom">none</string><!-- The border-bottom of the last Autocomplete result. -->
   <string name="sprk_autocomplete_result_border_bottom">1px solid #ffd2d1d1</string><!-- The border-bottom of the Autocomplete results. -->
   <string name="sprk_autocomplete_result_hover_cursor">pointer</string><!-- The cursor of the hovered Autocomplete results. -->
