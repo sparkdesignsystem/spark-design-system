@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import _ from 'lodash';
+import { cpuUsage } from 'process';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
 import { SprkModalComponent } from './sprk-modal.component';
 
@@ -41,6 +43,12 @@ describe('SprkModalComponent', () => {
 
   it('should show the modal when isVisible is true', () => {
     expect(modalElement.classList.contains('sprk-c-Modal')).toEqual(true);
+  });
+
+  it('should add additionalClasses if present', () => {
+    component.additionalClasses = 'test';
+    fixture.detectChanges();
+    expect(modalElement.classList.contains('test')).toEqual(true);
   });
 
   it('should not show the modal when isVisible is false', () => {
