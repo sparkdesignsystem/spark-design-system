@@ -120,10 +120,7 @@
         },
         "z-index": {
           "comment": "The z-index of the Autocomplete results.",
-          "value": "{layer.height.m.value}",
-          "attributes": {
-            "category": "content"
-          },
+          "value": "0",
           "file": "settings",
           "themable": true
         },
