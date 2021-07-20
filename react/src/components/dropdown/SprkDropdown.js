@@ -231,6 +231,7 @@ class SprkDropdown extends Component {
                   value,
                   // eslint-disable-next-line no-shadow
                   idString,
+                  isDefault,
                   ...choicesRest
                 } = choice;
                 const TagName = element || 'a';
