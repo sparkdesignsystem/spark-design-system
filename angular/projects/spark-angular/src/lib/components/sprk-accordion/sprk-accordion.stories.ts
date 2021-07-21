@@ -52,7 +52,7 @@ the [Toggle Component](/docs/components-toggle--default-story) instead.
 
 export const defaultStory = () => ({
   template: `
-    <sprk-accordion>
+    <sprk-accordion additionalClasses="sprk-c-Accordion--no-top-border">
       <sprk-accordion-item
         heading="This is an accordion heading"
         additionalClasses="sprk-u-mbs"

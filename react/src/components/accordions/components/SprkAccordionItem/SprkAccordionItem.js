@@ -117,8 +117,8 @@ class SprkAccordionItem extends Component {
 }
 
 SprkAccordionItem.defaultProps = {
-  iconNameOpen: 'chevron-up-circle',
-  iconNameClosed: 'chevron-up-circle',
+  iconNameOpen: 'chevron-down-circle',
+  iconNameClosed: 'chevron-down-circle',
 };
 
 SprkAccordionItem.propTypes = {

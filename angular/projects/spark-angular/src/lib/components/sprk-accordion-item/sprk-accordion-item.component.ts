@@ -109,7 +109,7 @@ export class SprkAccordionItemComponent implements OnInit {
    * a closed Accordion Item.
    */
   @Input()
-  iconTypeClosed = 'chevron-up-circle';
+  iconTypeClosed = 'chevron-down-circle';
   /**
    * The name of the icon to use for a closed Accordion Item.
    */
@@ -122,7 +122,7 @@ export class SprkAccordionItemComponent implements OnInit {
    * an open Accordion Item.
    */
   @Input()
-  iconTypeOpen = 'chevron-up-circle';
+  iconTypeOpen = 'chevron-down-circle';
   /**
    * The name of the icon to use for an open Accordion Item.
    */

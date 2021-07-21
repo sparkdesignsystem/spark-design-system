@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+.sprk-c-Accordion--no-top-border {
+  border-top: none;
+}
+
 /// Adds style to accordion items that
 /// have been toggled open by Spark JS.
 /// @name .sprk-c-Accordion__item--open

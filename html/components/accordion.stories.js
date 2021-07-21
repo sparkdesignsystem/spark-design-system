@@ -32,7 +32,9 @@ export const defaultStory = () => {
   }, []);
 
   return `
-<ul class="sprk-c-Accordion sprk-o-VerticalList">
+<ul 
+  class="sprk-c-Accordion sprk-c-Accordion--no-top-border sprk-o-VerticalList"
+>
   <li class="sprk-c-Accordion__item" data-sprk-toggle="container">
     <button
       class="sprk-c-Accordion__summary"
@@ -54,7 +56,7 @@ export const defaultStory = () => {
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
           <use
-            xlink:href="#chevron-up-circle"
+            xlink:href="#chevron-down-circle"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
     </button>
@@ -93,7 +95,7 @@ export const defaultStory = () => {
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
           <use
-            xlink:href="#chevron-up-circle"
+            xlink:href="#chevron-down-circle"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
     </button>
@@ -130,7 +132,7 @@ export const defaultStory = () => {
           data-sprk-toggle="icon"
           viewBox="0 0 64 64">
           <use
-            xlink:href="#chevron-up-circle"
+            xlink:href="#chevron-down-circle"
             data-sprk-toggle="accordionIconUseElement"></use>
         </svg>
     </button>
