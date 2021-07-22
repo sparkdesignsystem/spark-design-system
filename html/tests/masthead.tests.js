@@ -33,8 +33,8 @@ describe('masthead init', () => {
 
     // Create narrow nav
     nav = document.createElement('nav');
-    nav.classList.add('sprk-u-Display--none');
-    nav.classList.add('sprk-c-Masthead__narrow-nav');
+    nav.classList.add('sprk-c-Masthead__nav-collapsible--is-collapsed');
+    nav.classList.add('sprk-c-Masthead__nav-collapsible');
     nav.setAttribute('data-sprk-mobile-nav', 'mobileNav');
 
     // Add nav to masthead
@@ -84,7 +84,7 @@ describe('masthead init', () => {
 
   it('should init aria-expanded as open correctly', () => {
     expect(iconContainer.getAttribute('aria-expanded')).toBe(null);
-    nav.classList.remove('sprk-u-Display--none');
+    nav.classList.remove('sprk-c-Masthead__nav-collapsible--is-collapsed');
 
     masthead();
 
@@ -232,7 +232,7 @@ describe('masthead UI Events tests', () => {
     navItem = document.createElement('button');
     // Add navItem to nav
     nav.appendChild(navItem);
-    nav.classList.add('sprk-u-Display--none');
+    nav.classList.add('sprk-c-Masthead__nav-collapsible--is-collapsed');
     nav.setAttribute('data-sprk-mobile-nav', 'mobileNav');
 
     // Add nav to masthead
@@ -289,7 +289,7 @@ describe('masthead UI Events tests', () => {
     event = new window.Event('click');
     iconContainer.dispatchEvent(event);
     expect(mastheadDiv.classList.contains('sprk-c-Masthead--open')).toBe(true);
-    expect(nav.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(nav.classList.contains('sprk-c-Masthead__nav-collapsible--is-collapsed')).toBe(false);
   });
 
   it(`should close the dropdown box when selector
@@ -357,7 +357,7 @@ describe('masthead UI Events tests', () => {
     event = new window.Event('scroll');
     window.dispatchEvent(event);
     toggleMenu('down');
-    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).toBe(
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--is-hidden')).toBe(
       true,
     );
   });
@@ -366,7 +366,7 @@ describe('masthead UI Events tests', () => {
     event = new window.Event('scroll');
     window.dispatchEvent(event);
     toggleMenu('up');
-    expect(mastheadDiv.classList.contains('sprk-c-Masthead--hidden')).toBe(
+    expect(mastheadDiv.classList.contains('sprk-c-Masthead--is-hidden')).toBe(
       false,
     );
   });
@@ -430,16 +430,16 @@ describe('masthead UI Events tests', () => {
   });
 
   it('should close the nav when clicked and the nav is already open', () => {
-    nav.classList.remove('sprk-u-Display--none');
+    nav.classList.remove('sprk-c-Masthead__nav-collapsible--is-collapsed');
     event = new window.Event('click');
     iconContainer.dispatchEvent(event);
-    expect(nav.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(nav.classList.contains('sprk-c-Masthead__nav-collapsible--is-collapsed')).toBe(true);
   });
 
   it(`should do nothing when focusin is triggered on a narrow
       viewport when the nav is closed`, () => {
     iconContainer.focus();
-    nav.classList.add('sprk-c-Masthead__narrow-nav');
+    nav.classList.add('sprk-c-Masthead__nav-collapsible');
     nav.classList.add('sprk-u-HideWhenJs');
     event = new window.Event('focusin');
     main.dispatchEvent(event);
@@ -449,17 +449,17 @@ describe('masthead UI Events tests', () => {
   it(`should focus on the first nav item when focusin is triggered
       on a narrow viewport when the nav is open`, () => {
     iconContainer.focus();
-    nav.classList.add('sprk-c-Masthead__narrow-nav');
+    nav.classList.add('sprk-c-Masthead__nav-collapsible');
     event = new window.Event('focusin');
     main.dispatchEvent(event);
     expect(document.activeElement).toEqual(navItem);
   });
 
   it('should hide the navs if orientationchange is fired', () => {
-    nav.classList.remove('sprk-u-Display--none');
+    nav.classList.remove('sprk-c-Masthead__nav-collapsible--is-collapsed');
     event = new window.Event('orientationchange');
     window.dispatchEvent(event);
-    expect(nav.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(nav.classList.contains('sprk-c-Masthead__nav-collapsible--is-collapsed')).toBe(true);
   });
 });
 
@@ -476,7 +476,7 @@ describe('toggleMobileNav tests', () => {
     main = document.createElement('div');
     nav = document.createElement('div');
     main.setAttribute('data-sprk-masthead', null);
-    nav.classList.add('sprk-u-Display--none');
+    nav.classList.add('sprk-c-Masthead__nav-collapsible--is-collapsed');
     nav.setAttribute('data-sprk-mobile-nav', 'mobileNav');
     iconContainer = document.createElement('div');
     icon = document.createElement('svg');
@@ -495,10 +495,10 @@ describe('toggleMobileNav tests', () => {
     document.body.classList.remove('sprk-u-Height--100');
   });
 
-  it(`should toggle the class sprk-u-Display--none on the
+  it(`should toggle the class sprk-c-Masthead__nav-collapsible--is-collapsed on the
       nav element and the open class on the icon`, () => {
     toggleMobileNav(iconContainer, nav, mastheadDiv);
-    expect(nav.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(nav.classList.contains('sprk-c-Masthead__nav-collapsible--is-collapsed')).toBe(false);
     expect(icon.classList.contains('sprk-c-Menu__icon--open')).toBe(true);
     expect(
       document
@@ -511,7 +511,7 @@ describe('toggleMobileNav tests', () => {
         .getElementsByTagName('body')[0]
         .classList.contains('sprk-u-Overflow--hidden'),
     ).toBe(false);
-    expect(nav.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(nav.classList.contains('sprk-c-Masthead__nav-collapsible--is-collapsed')).toBe(true);
     expect(icon.classList.contains('sprk-c-Menu__icon--open')).toBe(false);
   });
 
@@ -590,7 +590,7 @@ describe('hideMobileNavs tests', () => {
         .getElementsByTagName('body')[0]
         .classList.contains('sprk-u-Overflow--hidden'),
     ).toBe(false);
-    expect(nav.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(nav.classList.contains('sprk-c-Masthead__nav-collapsible--is-collapsed')).toBe(true);
     expect(icon.classList.contains('sprk-c-Menu__icon--open')).toBe(false);
   });
 });
@@ -652,7 +652,7 @@ describe('masthead no selector test', () => {
     navItem = document.createElement('button');
     // Add navItem to nav
     nav.appendChild(navItem);
-    nav.classList.add('sprk-u-Display--none');
+    nav.classList.add('sprk-c-Masthead__nav-collapsible--is-collapsed');
     nav.setAttribute('data-sprk-mobile-nav', 'mobileNav');
 
     // Add nav to masthead

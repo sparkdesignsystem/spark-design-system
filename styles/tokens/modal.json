@@ -29,6 +29,15 @@
         "file": "settings",
         "themable": true
       },
+      "display-hidden": {
+        "comment": "The value for the display property when Modal is hidden.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "color": {
         "comment": "The background color of the Modal.",
         "value": "{white.value}",

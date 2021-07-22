@@ -80,17 +80,6 @@ const links = [
     text: 'Item 2',
     to: '#nogo',
   },
-  {
-    element: SprkLink,
-    text: 'Item 3',
-    subNavLinks: [
-      {
-        element: 'a',
-        text: 'Placeholder',
-        to: '#nogo',
-      },
-    ],
-  },
 ];
 
 const addedNarrowNavLinks = [
@@ -175,7 +164,7 @@ const utilityItems = [
     element="a"
     href="#nogo"
     variant="secondary"
-    additionalClasses="sprk-u-Right--zero sprk-c-Button--compact"
+    additionalClasses="sprk-c-Button--compact"
   >
     Sign In
   </SprkButton>,

@@ -26,21 +26,22 @@ export const defaultStory = () => {
   >
     <h2
       class="
-        sprk-o-Stack__item 
-        sprk-o-Stack__item--center-column 
-        sprk-b-TypeDisplayFive 
-        sprk-b-Measure 
-        sprk-b-Measure--narrow 
-        sprk-u-TextAlign--center
+        sprk-o-Stack__item
+        sprk-o-Stack__item--center-column
+        sprk-b-TypeDisplayFive
+        sprk-b-Measure
+        sprk-b-Measure--narrow
+        sprk-b-Type--center
       ">
       Award Component Heading
     </h2>
 
-    <div 
+    <div
       class="
-        sprk-o-Stack__item 
-        sprk-o-Stack__item--center-column 
-        sprk-o-Stack sprk-o-Stack--medium 
+        sprk-o-Stack__item
+        sprk-o-Stack__item--center-column
+        sprk-o-Stack
+        sprk-o-Stack--medium
         sprk-o-Stack--split@s
       ">
       <a
@@ -53,12 +54,12 @@ export const defaultStory = () => {
           src="https://spark-assets.netlify.app/spark-logo-updated.svg" />
       </a>
 
-      <a 
+      <a
         class="
-          sprk-o-Stack__item 
-          sprk-o-Stack__item--flex@s 
+          sprk-o-Stack__item
+          sprk-o-Stack__item--flex@s
           sprk-o-Stack
-        " 
+        "
         href="#nogo">
         <img
           class="sprk-o-Stack__item sprk-o-Stack__item--center-column"
@@ -73,13 +74,19 @@ export const defaultStory = () => {
     >
       <button
         class="
-          sprk-c-Toggle__trigger 
-          sprk-b-TypeBodyThree 
-          sprk-u-TextCrop--none
+          sprk-c-Toggle__trigger
+          sprk-b-TypeBodyThree
+          sprk-b-Type--crop-none
         "
-        data-sprk-toggle="trigger">
+        data-sprk-toggle="trigger"
+      >
           <svg
-            class="sprk-c-Icon sprk-c-Icon--xl sprk-c-Icon--toggle sprk-u-mrs"
+            class="
+              sprk-c-Icon
+              sprk-c-Icon--xl
+              sprk-c-Icon--toggle
+              sprk-c-Toggle__trigger-icon
+            "
             data-sprk-toggle="icon"
             viewBox="0 0 64 64"
           >
@@ -88,8 +95,8 @@ export const defaultStory = () => {
           My Disclaimer
       </button>
 
-      <div data-sprk-toggle="content">
-        <p class="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
+      <div class="sprk-c-Toggle__content" data-sprk-toggle="content">
+        <p class="sprk-b-TypeBodyFour">
           This is an example of disclaimer content.
           The aria-expanded="true" attribute will be
           viewable in the DOM on the toggle link when this

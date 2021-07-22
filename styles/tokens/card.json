@@ -105,6 +105,15 @@
         "file": "settings",
         "themable": true
       },
+      "highlighted-heading-color": {
+        "comment": "The color of the highlighted heading for the Highlighted Header Card.",
+        "value": "{white.value}",
+         "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "header-text-color": {
         "comment": "The text color for the Highlighted Header Card.",
         "value": "{white.value}",

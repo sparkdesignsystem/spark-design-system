@@ -10,7 +10,6 @@
   max-width: $sprk-stepper-max-width;
   position: relative;
 }
-
 .sprk-c-Stepper__slider {
   position: absolute;
   top: 0;
@@ -32,6 +31,10 @@
   .sprk-c-Stepper__step-icon {
     transition: opacity $sprk-stepper-slide-timing ease;
   }
+}
+
+.sprk-c-Stepper__container-dark {
+  background-color: $sprk-stepper-dark-bg;
 }
 
 .sprk-c-Stepper__slider--active .sprk-c-Stepper__step-heading,

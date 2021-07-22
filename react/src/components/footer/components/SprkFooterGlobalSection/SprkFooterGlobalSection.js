@@ -16,7 +16,13 @@ class SprkFooterGlobalSection extends Component {
     const { globalItems } = this.props;
     const { globalItemsHasIds } = this.state;
     return (
-      <div className="sprk-o-Stack__item sprk-o-Stack__item--three-tenths@m sprk-o-Stack sprk-o-Stack--misc-b sprk-o-Box sprk-u-prh">
+      <div className="
+            sprk-o-Stack__item
+            sprk-o-Stack__item--three-tenths@m
+            sprk-o-Stack
+            sprk-o-Stack--misc-b
+            sprk-c-Footer__global-links
+          ">
         <h3 className="sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text">
           {globalItems.heading}
         </h3>
@@ -72,7 +78,11 @@ SprkFooterGlobalSection.propTypes = {
   globalItems: PropTypes.shape({
     /** Main headline for the global section. */
     heading: PropTypes.string,
-    /** Object used to configure each item in global items section such as `mediaType`, `src`, `description` etc. */
+    /**
+     * Object used to configure each item in
+     * global items section such as
+     * `mediaType`, `src`, `description` etc.
+     */
     items: PropTypes.arrayOf(
       PropTypes.shape({
         /** The type of media element to render. */
@@ -98,7 +108,8 @@ SprkFooterGlobalSection.propTypes = {
         /** The description of the image */
         description: PropTypes.string,
         /**
-         * Assigned to the `data-analytics` attribute serving as a unique selector for outside libraries to capture data.
+         * Assigned to the `data-analytics` attribute serving
+         * as a unique selector for outside libraries to capture data.
          */
         analyticsString: PropTypes.string,
         /**

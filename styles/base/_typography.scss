@@ -267,3 +267,30 @@ body,
     }
   }
 }
+
+// Type Helpers
+.sprk-b-Type--center {
+  text-align: $sprk-type-center;
+}
+
+.sprk-b-Type--left {
+  text-align: $sprk-type-left;
+}
+
+.sprk-b-Type--right {
+  text-align: $sprk-type-right;
+}
+
+/// When placed on an element that contains text or any of
+/// the typography classes, it will remove the text cropping
+/// and the negative margins applied by the crop.
+/// NOTE: There is also a util available that utilizes !important if you
+/// need that instead, `.sprk-u-TextCrop--none`
+.sprk-b-Type--crop-none {
+  &::before,
+  &::after {
+    content: $sprk-type-crop-none-content;
+    margin-bottom: $sprk-type-crop-none-margin-bottom;
+    margin-top: $sprk-type-crop-none-margin-top;
+  }
+}

@@ -526,7 +526,8 @@ export const defaultStory = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 (555) 555-5555
@@ -548,7 +549,8 @@ export const defaultStory = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Talk To Us
@@ -623,7 +625,7 @@ export const extended = () => ({
       >
         <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
           <sprk-stack additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row">
-            <div sprkStackItem class="sprk-u-Position--relative">
+            <div sprkStackItem class="sprk-c-Masthead__selector-container">
               <sprk-masthead-selector
                 triggerText="Choose One"
                 heading="Choose One"
@@ -672,7 +674,7 @@ export const extended = () => ({
               triggerIconName="user"
               triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
               iconAdditionalClasses="sprk-c-Icon--xl"
-              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              additionalClasses="sprk-c-Masthead__dropdown"
               screenReaderText="User Account"
             >
             </sprk-dropdown>
@@ -710,7 +712,7 @@ export const extended = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-2"
                 triggerText="Item Two"
@@ -739,7 +741,7 @@ export const extended = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-4"
                 triggerText="Item Four"
@@ -921,7 +923,8 @@ export const extended = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 (555) 555-5555
@@ -943,7 +946,8 @@ export const extended = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Talk To Us
@@ -965,7 +969,8 @@ export const extended = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Settings
@@ -1135,7 +1140,7 @@ export const extendedWithExampleContent = () => ({
       >
         <div sprkStackItem class="sprk-o-Stack__item--flex@xxs">
           <sprk-stack additionalClasses="sprk-o-Stack--center-column sprk-o-Stack--center-row">
-            <div sprkStackItem class="sprk-u-Position--relative">
+            <div sprkStackItem class="sprk-c-Masthead__selector-container">
               <sprk-masthead-selector
                 triggerText="Choose One"
                 heading="Choose One"
@@ -1184,7 +1189,7 @@ export const extendedWithExampleContent = () => ({
               triggerIconName="user"
               triggerAdditionalClasses="sprk-b-Link--plain sprk-c-Masthead__link"
               iconAdditionalClasses="sprk-c-Icon--xl"
-              additionalClasses="sprk-u-Right--zero sprk-u-mrm"
+              additionalClasses="sprk-c-Masthead__dropdown"
               screenReaderText="User Account"
             >
             </sprk-dropdown>
@@ -1223,7 +1228,7 @@ export const extendedWithExampleContent = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-2"
                 triggerText="Item Two"
@@ -1252,7 +1257,7 @@ export const extendedWithExampleContent = () => ({
               <sprk-dropdown
                 [choices]="item2NavBarDropdownChoices"
                 triggerAdditionalClasses="sprk-b-Link--simple sprk-c-Masthead__link sprk-c-Masthead__link--nav-bar"
-                additionalClasses="sprk-u-TextAlign--left"
+                additionalClasses="sprk-b-Type--left"
                 triggerIconName="chevron-down"
                 analyticsString="nav-bar-item-4"
                 triggerText="Item Four"
@@ -1431,7 +1436,8 @@ export const extendedWithExampleContent = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 (555) 555-5555
@@ -1453,7 +1459,8 @@ export const extendedWithExampleContent = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Talk To Us
@@ -1475,7 +1482,8 @@ export const extendedWithExampleContent = () => ({
                     sprk-c-Icon--filled-current-color
                     sprk-c-Icon--stroke-current-color
                     sprk-c-Icon--xl
-                    sprk-u-mrs
+                    sprk-c-MastheadAccordion__icon
+                    sprk-c-MastheadAccordion__icon--leading
                   "
                 ></sprk-icon>
                 Settings

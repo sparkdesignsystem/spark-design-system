@@ -22,7 +22,7 @@ then they should be \`<button>\` elements.
 
 export const defaultStory = () => `
     <div
-     class="sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image sprk-u-mbm"
+     class="sprk-c-HighlightBoard sprk-c-HighlightBoard--has-image"
      data-id="highlightboard-1"
     >
       <img
@@ -86,7 +86,7 @@ defaultStory.story = {
 
 export const noImage = () => `
   <div
-   class="sprk-c-HighlightBoard sprk-u-mbm"
+   class="sprk-c-HighlightBoard"
    data-id="highlightboard-2"
   >
     <div class="
@@ -138,11 +138,11 @@ noImage.story = {
 
 export const stacked = () => `
   <div
-   class="
-     sprk-c-HighlightBoard
-     sprk-c-HighlightBoard--has-image
-     sprk-c-HighlightBoard--stacked
-     sprk-u-mbm"
+    class="
+      sprk-c-HighlightBoard
+      sprk-c-HighlightBoard--has-image
+      sprk-c-HighlightBoard--stacked
+    "
    data-id="highlightboard-3"
   >
     <img

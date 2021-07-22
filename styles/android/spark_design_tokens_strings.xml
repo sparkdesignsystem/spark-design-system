@@ -3,6 +3,7 @@
 
 <resources>
   <string name="sprk_accordion_border">2px solid rgb(230, 230, 230)</string><!-- The border of Accordions. -->
+  <string name="sprk_accordion_icon_leading_margin">0 8.00dp 0 0</string><!-- The margin of leading icon in Accordions. -->
   <string name="sprk_accordion_summary_text_decoration">none</string><!-- The text decoration of the Accordion item summary. -->
   <string name="sprk_accordion_summary_text_align">left</string><!-- The text-align value of the Accordion item summary. -->
   <string name="sprk_accordion_summary_active_text_decoration">none</string><!-- The text decoration of the Accordion item summary when active. -->
@@ -25,7 +26,6 @@
   <string name="sprk_autocomplete_results_border">1.00dp solid #fff7f7f7</string><!-- The border of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_overflow_y">scroll</string><!-- The overflow-y behavior of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_shadow">0 0 40px 2px rgba(0, 0, 0, 0.1)</string><!-- The box shadow of the Autocomplete results. -->
-  <string name="sprk_autocomplete_results_z_index">32000.00dp</string><!-- The z-index of the Autocomplete results. -->
   <string name="sprk_autocomplete_results_last_child_border_bottom">none</string><!-- The border-bottom of the last Autocomplete result. -->
   <string name="sprk_autocomplete_result_border_bottom">1px solid #ffd2d1d1</string><!-- The border-bottom of the Autocomplete results. -->
   <string name="sprk_autocomplete_result_hover_cursor">pointer</string><!-- The cursor of the hovered Autocomplete results. -->
@@ -61,11 +61,19 @@
   <string name="sprk_dictionary_border">1px solid #fff7f7f7</string><!-- The border surrounding the Dictionary. -->
   <string name="sprk_divider_border_style">solid</string><!-- The style value of border for Dividers. -->
   <string name="sprk_divider_border">2.00dp solid #ffe6e6e6</string><!-- The value of border for Dividers. -->
+  <string name="sprk_dropdown_display_hidden">none</string><!-- The display value of Dropdown when hidden. -->
   <string name="sprk_dropdown_active_border">2.5px solid #ff603aa1</string><!-- The left border of the Dropdown item that is active. -->
   <string name="sprk_dropdown_active_box_shadow">-1px 0 0 0 #ff603aa1</string><!-- The box-shadow of the Dropdown item that is active. -->
   <string name="sprk_dropdown_border_style">solid</string><!-- The border style of the Dropdown. -->
   <string name="sprk_dropdown_border">1.00dp solid #fff7f7f7</string><!-- The border of the Dropdown. -->
   <string name="sprk_dropdown_shadow">0 0 40px 2px rgba(0, 0, 0, 0.1)</string><!-- The box shadow of the Dropdown. -->
+  <string name="sprk_dropdown_trigger_icon_margin">0 0 0 8.00dp</string><!-- The default margin on the icon inside the Dropdown trigger. -->
+  <string name="sprk_dropdown_trigger_informational_margin">0 8.00dp 0 0</string><!-- The default margin on the informational trigger for the Dropdown. -->
+  <string name="sprk_footer_awards_media_margin">0 0 16.00dp 0</string><!-- Margin setting for the awards media section in the Footer. -->
+  <string name="sprk_footer_global_links_padding">16.00dp 64.00dp 16.00dp 16.00dp</string><!-- Padding setting for the global links section in the Footer. -->
+  <string name="sprk_footer_local_links_padding">16.00dp 24.00dp 16.00dp 16.00dp</string><!-- Padding setting for the local links section in the Footer. -->
+  <string name="sprk_footer_awards_padding">40.00dp 16.00dp 16.00dp 16.00dp</string><!-- Padding setting for the awards section in the Footer. -->
+  <string name="sprk_footer_divider_margin">0 16.00dp 0 16.00dp</string><!-- Margin value for the Divider in the Footer. -->
   <string name="sprk_footer_trigger_font_weight">normal</string><!-- Toggle trigger font-weight on the Footer. -->
   <string name="sprk_footer_trigger_hover_font_weight">normal</string><!-- Toggle trigger hover font-weight on the Footer. -->
   <string name="sprk_footer_trigger_hover_text_decoration">underline</string><!-- Toggle trigger hover text decoration on the Footer. -->
@@ -172,6 +180,7 @@
   <string name="sprk_checkbox_checkmark_border_bottom">2px solid #ffffffff</string><!-- The border settings to create the right portion of the checkmark. -->
   <string name="sprk_checkbox_checkmark_transform">rotate(-45deg)</string><!-- The rotation setting to create the checkmark. -->
   <string name="sprk_link_transition">0.3s</string><!-- The transition timing for hover, active and focus styles on Links. -->
+  <string name="sprk_link_icon_margin">0 8.00dp 0 0</string><!-- The default margin on icons inside Links. -->
   <string name="sprk_link_text_decoration">none</string><!-- The text decoration on Links. -->
   <string name="sprk_link_border_bottom_style">solid</string><!-- The border style of the underline on Links. -->
   <string name="sprk_link_border_bottom">2.00dp solid #ff603aa1</string><!-- The style of the underline on Links. -->
@@ -198,6 +207,7 @@
   <string name="sprk_link_has_icon_visited_border_bottom">0.00dp solid transparent</string><!-- The border settings for Links with icons in the hover state. -->
   <string name="sprk_link_disabled_border_bottom">0.00dp solid #ff8d8d8c</string><!-- The underline settings for the disabled Link. -->
   <string name="sprk_link_disabled_hover_border_bottom">0.00dp solid #ff8d8d8c</string><!-- The underline settings for the disabled Link. -->
+  <string name="sprk_masthead_dropdown_margin">0 16.00dp 0 0</string><!-- The margin color of the dropdown in the Masthead. -->
   <string name="sprk_masthead_border_bottom_style">solid</string><!-- The bottom border style on the Masthead. -->
   <string name="sprk_masthead_border_bottom">1.00dp solid #fff7f7f7</string><!-- The bottom border on the Masthead. -->
   <string name="sprk_masthead_site_links_border_right">2px solid #ffbababa</string><!-- The right border on the site links in the Masthead. -->
@@ -205,6 +215,8 @@
   <string name="sprk_masthead_shadow_wide">none</string><!-- The box shadow of the Masthead in wide viewports. -->
   <string name="sprk_masthead_shadow_scroll">0 0 40px rgba(0, 0, 0, 0.1)</string><!-- The Masthead shadow that gets applied when the page is scrolled. -->
   <string name="sprk_masthead_selector_border">2px solid #ffbababa</string><!-- The border of the Selector, found in a Masthead with Extended Navigation. -->
+  <string name="sprk_masthead_selector_icon_margin"> 0 8.00dp 0 8.00dp</string><!-- The margin for the icon in the selector in the Masthead. -->
+  <string name="sprk_masthead_selector_container_position">relative</string><!-- The position setting of the Selector in the Masthead. -->
   <string name="sprk_masthead_selector_dropdown_z_index">32000.00dp</string><!-- The z-index of the Selector Dropdown, found in a Masthead with Extended Navigation. -->
   <string name="sprk_masthead_selector_dropdown_link_padding">16.00dp 24.00dp</string><!-- The padding of the Selector Dropdown links, found in a Masthead with Extended Navigation. -->
   <string name="sprk_masthead_selector_dropdown_text_decoration">none</string><!-- The text decoration of the Selector Dropdown, found in a Masthead with Extended Navigation. -->
@@ -216,6 +228,7 @@
   <string name="sprk_masthead_selector_hover_border">2px solid #ff603aa1</string><!-- The border of the Selector when hovered, found in a Masthead with Extended Navigation. -->
   <string name="sprk_masthead_transition">all 0.3s ease-in</string><!-- The transition applied to the Masthead. -->
   <string name="sprk_masthead_translate_y">translateY(-100%)</string><!-- The transform length that gets applied when the Masthead scrolls out of view on narrow screens. -->
+  <string name="sprk_masthead_accordion_icon_leading_margin">0 8.00dp 0 0</string><!-- The margin for the leading Masthead accordion icon -->
   <string name="sprk_masthead_accordion_active_left_border">3px solid #ffc8102e</string><!-- The left border of the active item in the navigation links when masthead is on narrow viewports. -->
   <string name="sprk_masthead_accordion_item_text_align">left</string><!-- The text alignment of the items in the navigation links when masthead is on narrow viewports. -->
   <string name="sprk_masthead_accordion_item_background">transparent</string><!-- The background of the items in the navigation links when masthead is on narrow viewports. -->
@@ -224,6 +237,7 @@
   <string name="sprk_big_nav_item_border_bottom">0.125rem solid transparent</string><!-- The border bottom of the big navigation items in the Masthead Extended. -->
   <string name="sprk_big_nav_item_open_border_bottom">0.125rem solid #ffc8102e</string><!-- The border bottom of open big navigation items in the Masthead Extended. -->
   <string name="sprk_menu_icon_transition">transform 0.3s ease-in-out, opacity 0.2s ease-in-out</string><!-- The transition on the menu icon that turns the menu icon into an 'X'. -->
+  <string name="sprk_modal_display_hidden">none</string><!-- The value for the display property when Modal is hidden. -->
   <string name="sprk_modal_shadow">0 4px 5px rgba(0, 0, 0, 0.6)</string><!-- The box shadow on the Modal. -->
   <string name="sprk_promo_border">1px solid #ffa4a4a3</string><!-- The border of the Promo component. -->
   <string name="sprk_promo_margin">0 auto</string><!-- The margin of the Promo component. -->
@@ -254,6 +268,7 @@
   <string name="sprk_tab_navigation_btn_active_border_bottom">3px solid #ffc8102e</string><!-- The button tab bottom border of the currently active tab in Tabbed Navigation. -->
   <string name="sprk_tab_navigation_btn_border_bottom">3px solid #fff7f7f7</string><!-- The border on the bottom of the button tabs in Tabbed Navigation. -->
   <string name="sprk_tab_navigation_btn_hover_border_bottom">3px solid #ff603aa1</string><!-- The border on the bottom of the button tabs on hover in Tabbed Navigation. -->
+  <string name="sprk_toggle_trigger_icon_margin">0 8.00dp 0 0</string><!-- The default margin on the icon inside the Toggle trigger. -->
   <string name="sprk_toggle_trigger_border_top">none</string><!-- The top border style for Toggle Trigger. -->
   <string name="sprk_toggle_trigger_border_right">none</string><!-- The right border style for Toggle Trigger. -->
   <string name="sprk_toggle_trigger_border_bottom">0.00dp solid transparent</string><!-- The bottom border style for Toggle Trigger. -->
@@ -270,6 +285,10 @@
   <string name="sprk_tooltip_text_align">left</string><!-- The text align for the tooltip. -->
   <string name="sprk_tooltip_preferred_width">max-content</string><!-- The preferred width of the tooltip. -->
   <string name="sprk_tooltip_transition">all 200ms ease-out</string><!-- The transition applied to the tooltip. -->
+  <string name="sprk_type_right">right</string><!-- The text align right value. -->
+  <string name="sprk_type_crop_none_content">none</string><!-- The content value for the crop none helper class. -->
+  <string name="sprk_type_left">left</string><!-- The text align left value. -->
+  <string name="sprk_type_center">center</string><!-- The text align center value. -->
   <string name="sprk_webfonts">''</string><!-- Expects a Sass List containing one or more nested Sass Lists. The nested lists should each contain: A List of urls to download a font, the name of the font and the weight of the font. -->
   <string name="sprk_page_title_mark_padding">0 0 24.00dp</string><!-- Amount of padding between the mark and the text on the page title mark. -->
   <string name="sprk_page_title_mark_padding_wide_viewport">0 0 16.00dp</string><!-- Amount of padding between the mark and the text on a large viewport (using $sprk-typography-breakpoint). -->
