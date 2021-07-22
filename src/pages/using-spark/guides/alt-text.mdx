@@ -21,8 +21,8 @@ UX Writers, designers and developers can use this **Alternative Text Guide** as 
 
 #### Accessibility Benefits
 
-- Screen readers read alt text in place of images. This allows the image to be accessible to users with visual impairment.
-- When an image fails to load or if content is blocked, the alt text will appear in place of it.
+- Screen readers read alt-text in place of images. This allows the image to be accessible to users with visual impairment.
+- When an image fails to load or if content is blocked, the alt-text will appear in it's place.
 - It gives images a text to display so search engines can read it without altering the meaning of the screen.
 
 <SprkDivider element="span" additionalClasses="sprk-u-mvs" />
@@ -97,7 +97,7 @@ Images and graphics make content visually pleasant and easier to understand.
 
 ### Images
 
-Not all images on the web need the same alt text. It’s important to consider the context and purpose of the image when writing the text description. 
+Not all images on the web need the same alt-text. It’s important to consider the context and purpose of the image when writing the text description. 
 
 Images can be active, informative or decorative.
 
@@ -112,7 +112,7 @@ Images can be active, informative or decorative.
 #### Guidelines
 
 <div class="sprk-b-TableContainer" data-id="table-2">
-  <table class="sprk-b-Table--secondary sprk-b-Table--spacing-medium sprk-b-Table--striped-odd">
+  <table class="sprk-b-Table--secondary sprk-b-Table--spacing-medium">
     <thead>
       <tr>
         <th>If The Image Is ...</th>
@@ -149,7 +149,7 @@ Images can be active, informative or decorative.
 <h3 class="sprk-b-TypeDisplayFour sprk-u-mbs sprk-u-Measure">Guidelines</h3>
 
 <div class="sprk-b-TableContainer" data-id="table-2">
-  <table class="sprk-b-Table--secondary sprk-b-Table--spacing-medium sprk-b-Table--striped-odd">
+  <table class="sprk-b-Table--secondary sprk-b-Table--spacing-medium">
     <thead>
       <tr>
         <th>If The Icon Is ...</th>
@@ -159,26 +159,28 @@ Images can be active, informative or decorative.
     </thead>
     <tbody>
       <tr>
-        <td>Image</td>
-        <td>An icon that is added as an inline image, <strong>must</strong> have an alt attribute.</td>
-        <td>Help the user understand what the icon image conveys.</td>
+        <td>Added as an inline image</td>
+        <td>An icon that appears as an inline image, <strong>must</strong> have an alt attribute.</td>
+        <td>Help the user understand what the icon image conveys</td>
       </tr>
       <tr>
-        <td>Decorative</td>
-        <td>It must have an alt attribute.</td>
-        <td>Be Empty or null ("")</td>
+        <td>For decoration</td>
+        <td>Set the alt attribute to empty or null ("").</td>
+        <td>No alternative text needed</td>
       </tr>
       <tr>
-        <td rowspan="4">Is added using CSS</td>
-        <td>It will never have an "alt attribute" because it's intended for image elements. </td>
-        <td>Provide context for users.</td>
+        <td>Added using CSS and is <strong>not</strong> used as an image</td>
+        <td>The icon doesn't need to have an alt attribute or alternative text, instead add contextual text.</td>
+        <td>Give users contextual text accompanying the icon.</td>
       </tr>
       <tr>
-        <td>If the icon is purely <strong>decorative</strong>, like a fancy bullet list icon.</td>
-        <td>Be Empty or null ("")</td>
+        <td>Added using CSS and is purely <strong>decorative</strong></td>
+        <td>Set the alt attribute to empty or null (""). For example, a fancy bullet list icon.</td>
+        <td>No alternative text needed.</td>
       </tr>
       <tr>
-        <td>If the icon is purely <strong>functional</strong>, like a magnifying glass. </td>
+        <td>Added using CSS and is purely <strong>functional</strong></td>
+        <td>Set the alt attribute to empty or null (""). For example, a magnifying glass icon.</td>
         <td>Provide contextual text accompanying the icon or add a visually hidden string for screen readers.</td>
       </tr>
     </tbody>
@@ -190,7 +192,7 @@ Images can be active, informative or decorative.
 <h3 class="sprk-b-TypeDisplayFour sprk-u-mbs sprk-u-Measure">Examples</h3>
 
 <div class="sprk-b-TableContainer" data-id="table-2">
-  <table class="sprk-b-Table--secondary sprk-b-Table--spacing-medium sprk-b-Table--striped-odd">
+  <table class="sprk-b-Table--secondary sprk-b-Table--spacing-medium">
     <thead>
       <tr>
         <th>Icon Image</th>
@@ -203,7 +205,7 @@ Images can be active, informative or decorative.
       <tr>
         <td><SprkIcon iconName="question" additionalClasses="sprk-c-Icon--xl" /></td>
         <td>An image of a question mark icon.</td>
-        <td>Give users context about what the icon is trying to communicate</td>
+        <td>Give users context about what the icon is trying to communicate.</td>
         <td>alt= "Get more information." </td>
       </tr>
       <tr>
@@ -225,10 +227,10 @@ Scalable Vector Graphics or SVG is an XML-based vector graphics format that spec
 > SVG files are text files containing source code that, when interpreted, draws the desired image. 
 
 Here are some **benefits** of using SVGs: 
-- They can be easily styled and animated.  
+- They are easy to style and animate.  
 - They are great for responsive design because they decrease the screen load time. 
 
-For additional information, visit <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg"> Developer Mozilla SVGs documentation</a>. 
+For more information, visit <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg"> Developer Mozilla SVGs documentation</a>. 
 
 <SprkDivider element="span" additionalClasses="sprk-u-mvl" />
 
@@ -244,7 +246,7 @@ SVG files are ideal for:
 <h3 class="sprk-b-TypeDisplayFour sprk-u-mbs sprk-u-Measure">Guidelines</h3>
 
 <div class="sprk-b-TableContainer" data-id="table-2">
-  <table class="sprk-b-Table--secondary sprk-b-Table--spacing-medium sprk-b-Table--striped-odd">
+  <table class="sprk-b-Table--secondary sprk-b-Table--spacing-medium">
     <thead>
       <tr>
         <th>If The SVG Is ...</th>
@@ -255,8 +257,8 @@ SVG files are ideal for:
     <tbody>
       <tr>
         <td>Acting as an image</td>
-        <td>It must have alt text using the alt attribute</td>
-        <td>Give users context about what the SVG image is conveying</td>
+        <td>It must have alt-text using the alt attribute.</td>
+        <td>Give users context about what the SVG image is conveying.</td>
       </tr>
       <tr>
         <td>Intended as an image source</td>
@@ -265,13 +267,13 @@ SVG files are ideal for:
       </tr>
       <tr>
         <td>Acting as the SVG source</td>
-        <td>Must have a title</td>
-        <td>Help users understand what the images is trying to communicate</td>
+        <td>Must have a title.</td>
+        <td>Help users understand what the images is trying to communicate.</td>
       </tr>
       <tr>
         <td>An inline SVG</td>
-        <td>Add the alt text using the (title=" ") element within the SVG image</td>
-        <td>Give users a brief description or advisory information of the graphic  </td>
+        <td>Add the alt-text using the (title=" ") element within the SVG image.</td>
+        <td>Give users a brief description or advisory information of the graphic.</td>
       </tr>
     </tbody>
   </table>
@@ -281,14 +283,14 @@ SVG files are ideal for:
 
 <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Writing Effective Alt Text Copy</h2>
 
-Alt text should be determined by the author depending on the usage, context, and content of the image.
+The author determines what the alt-text should be depending on the usage, context, and content of the image.
 
 > As a UX Writer, imagine what you would say when reading the screen to someone over the phone without mentioning that there is an image on the screen.
 
 <h3 class="sprk-b-TypeDisplayThree sprk-u-mbl sprk-u-Measure">Guidelines</h3>
 
 - <strong>Determine what information or what the function of the image is.</strong> Copy should describe an image’s purpose or what information it communicates. 
-- <strong>Choose the appropriate alternative text for the type of image. </strong> If the image has no informative value, treat them as decorative images. 
+- <strong>Choose the appropriate alternative text for the image type. </strong> If the image has no informative value, treat them as decorative images. 
 - <strong>Describe the image as specifically as possible. </strong> Include the most valuable information at the beginning and provide meaningful descriptions. 
 - <strong>Keep it as short as possible. </strong> Be concise and avoid keyword stuffing.
 - <strong>Use punctuation.</strong>
@@ -296,11 +298,12 @@ Alt text should be determined by the author depending on the usage, context, and
     data-id="unordered-list-2">
     <li>Use sentence case.</li>
     <li>Add space characters between the image and adjacent text to avoid having words running together when a screen reader reads them.</li>
-    <li>Include a period at the end of the alt text – even if it is not a complete sentence. The period will provide a slight pause when read by the screen reader.</li>
+    <li>Include a period at the end of the alt-text – even if it's not a complete sentence. The period will provide a slight pause when read by the screen reader.</li>
     <li>If using a null (empty) alternative text (alt="") to hide decorative images, make sure that there is no space character between the quotes.</li>
-  </ul>
+</ul>
 
-**Don’t**
+<h3 class="sprk-b-TypeDisplayFour sprk-u-mbm sprk-u-Measure">What Not To Do</h3>
+
 - Don’t use full sentences unless needed for clarity. 
 - Don’t include phrases like “image of” or “picture of.” 
 - Don’t include copyright or source information.
@@ -309,23 +312,23 @@ Alt text should be determined by the author depending on the usage, context, and
 
 <h3 class="sprk-b-TypeDisplayFour sprk-u-mbm sprk-u-Measure">Examples</h3>
 
-<p class="sprk-b-TypeBodyTwo sprk-u-mbn sprk-u-Measure">Use these examples as a guideline to create the best alt text copy.
+<p class="sprk-b-TypeBodyTwo sprk-u-mbn sprk-u-Measure">Use these examples as a guideline to create the best alt-text copy.
 The examples on the table below, describe the image of a rooster.</p>
 
 <div class="sprk-b-TableContainer" data-id="table-2">
-  <table class="sprk-b-Table--secondary sprk-b-Table--spacing-medium sprk-b-Table--striped-odd">
+  <table class="sprk-b-Table--secondary sprk-b-Table--spacing-medium">
     <thead>
       <tr>
-        <th>This Is An Ok Example</th>
-        <th>This Is A Better Example</th>
-        <th>This Is The Best Example</th>
+        <th>Average Example</th>
+        <th>Better Example</th>
+        <th><SprkIcon iconName="check-mark" additionalClasses="sprk-c-Icon--xl" /> Best Example</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>“Rooster”</td>
-        <td>“Rooster crowing“</td>
-        <td>"Red-crested rooster crowing"</td>
+        <td>alt=“Rooster.”</td>
+        <td>alt=“Rooster crowing.“</td>
+        <td><SprkIcon iconName="check-mark" additionalClasses="sprk-c-Icon--xl" /> alt="Red-crested rooster crowing."</td>
       </tr>
     </tbody>
   </table>
