@@ -129,7 +129,7 @@ export const defaultStory = () => ({
           imgSrc:
             'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
           analyticsString: 'link-1',
-          imgAlt: 'Rocket Mortgage by Quicken Loans Logo'
+          imgAlt: 'Rocket Mortgage Logo'
         },
         {
           text: 'Get a personal loan to consolidate debt, renovate your home and more',

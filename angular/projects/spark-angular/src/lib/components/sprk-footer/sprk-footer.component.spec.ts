@@ -90,7 +90,7 @@ describe('SprkFooterComponent', () => {
         text: 'Test Text',
         href: '/alert',
         imgSrc: 'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
-        imgAlt: 'Rocket Mortgage by Quicken Loans Logo',
+        imgAlt: 'Rocket Mortgage Logo',
       },
     ];
     fixture.detectChanges();
@@ -104,7 +104,7 @@ describe('SprkFooterComponent', () => {
         text: 'Test Text',
         routerLink: '/alert-router',
         imgSrc: 'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
-        imgAlt: 'Rocket Mortgage by Quicken Loans Logo',
+        imgAlt: 'Rocket Mortgage by Rocket Mortgage Logo',
       },
     ];
     fixture.detectChanges();

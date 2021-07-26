@@ -39,7 +39,7 @@
       "pre-commit": "lint-staged"
     }
   },
-  "author": "Quicken Loans",
+  "author": "Rocket Mortgage",
   "bugs": {
     "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"
   },

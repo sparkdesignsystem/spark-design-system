@@ -1,7 +1,6 @@
 import React from 'react';
 import SprkFooter from './SprkFooter';
 import SprkLink from '../../base/links/SprkLink';
-import SprkStack from '../../objects/stack/SprkStack';
 import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
@@ -37,7 +36,7 @@ export const defaultStory = () => (
         {
           mediaType: 'image',
           src: 'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
-          altText: 'Rocket Mortgage by Quicken Loans Logo',
+          altText: 'Rocket Mortgage Logo',
           description:
             "Buy a home, refinance, or manage your mortgage online with America's largest mortgage lender",
           element: 'a',

@@ -2,14 +2,13 @@
 
 # Spark Design System React
 
-Welcome to the Spark Design System React, a product of [Quicken Loans](https://github.com/quickenloans).
+Welcome to the Spark Design System React, a product of [Rocket Mortgage](https://github.com/quickenloans).
 
 Spark Design System is where we collect our best solutions for how to design and build unified digital experiences for the Rocket brands.
 
 * [Spark](https://www.npmjs.com/package/@sparkdesignsystem/spark) contains the basic patterns and components that make up
-  the visual and interaction design of the Quicken Loans family of
+  the visual and interaction design of the Rocket Mortgage family of
   Fintech products. If your application is expected to look and behave
-  like a Quicken Loans application, this package is the starting point.
   When the Spark Sass and JS setup files are imported into an application you will receive code for all of Spark.
 
 ## Getting Started
@@ -118,7 +117,7 @@ JavaScript to ensure maintainability and scalability.
 * Spark uses [ESLint](https://eslint.org/) for JS linting.
 * ESLint is setup to use the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
   and Spark JS coding conventions come from there.
-* We follow JS recommendations from the [Quicken Loans JS Concord Group](https://github.com/QuickenLoans/js-concord/blob/master/rfc/cgr-0001-style-and-lint.md).
+* We follow JS recommendations from the [Rocket Mortgage JS Concord Group](https://github.com/QuickenLoans/js-concord/blob/master/rfc/cgr-0001-style-and-lint.md).
 * Data attributes on DOM elements is the chosen method for DOM selection.
 
 #### React and Angular
