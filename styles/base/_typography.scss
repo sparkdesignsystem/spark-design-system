@@ -125,6 +125,20 @@ h4,
   font-family: $sprk-font-family-display-four;
   font-size: $sprk-font-size-display-four;
   font-weight: $sprk-font-weight-display-four;
+
+  @media screen and (min-width: $sprk-type-display-four-breakpoint) {
+    /* prettier-ignore */
+
+    @include TextCrop(
+      $sprk-text-crop-line-height: $sprk-line-height-display-four-wide,
+      $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+      $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+      $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-display-four-wide) * 16),
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-four
+    );
+
+    font-size: $sprk-font-size-display-four-wide;
+  }
 }
 
 h5,
@@ -143,6 +157,20 @@ h5,
   font-family: $sprk-font-family-display-five;
   font-size: $sprk-font-size-display-five;
   font-weight: $sprk-font-weight-display-five;
+
+  @media screen and (min-width: $sprk-type-display-five-breakpoint) {
+    /* prettier-ignore */
+
+    @include TextCrop(
+      $sprk-text-crop-line-height: $sprk-line-height-display-five-wide,
+      $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+      $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+      $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-display-five-wide) * 16),
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-five
+    );
+
+    font-size: $sprk-font-size-display-five-wide;
+  }
 }
 
 h6,
@@ -162,6 +190,20 @@ h6,
   font-size: $sprk-font-size-display-six;
   font-weight: $sprk-font-weight-display-six;
   line-height: $sprk-line-height-display-six;
+
+  @media screen and (min-width: $sprk-type-display-six-breakpoint) {
+    /* prettier-ignore */
+
+    @include TextCrop(
+      $sprk-text-crop-line-height: $sprk-line-height-display-six-wide,
+      $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+      $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+      $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-display-six-wide) * 16),
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-six
+    );
+
+    font-size: $sprk-font-size-display-six-wide;
+  }
 }
 
 .sprk-b-TypeDisplaySeven {
@@ -180,6 +222,20 @@ h6,
   font-size: $sprk-font-size-display-seven;
   font-weight: $sprk-font-weight-display-seven;
   line-height: $sprk-line-height-display-seven;
+
+  @media screen and (min-width: $sprk-type-display-seven-breakpoint) {
+    /* prettier-ignore */
+
+    @include TextCrop(
+      $sprk-text-crop-line-height: $sprk-line-height-display-seven-wide,
+      $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
+      $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
+      $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-display-seven-wide) * 16),
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-seven
+    );
+
+    font-size: $sprk-font-size-display-seven-wide;
+  }
 }
 
 .sprk-b-TypeBodyOne {
