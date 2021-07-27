@@ -89,7 +89,7 @@ describe('SprkFooterComponent', () => {
       {
         text: 'Test Text',
         href: '/alert',
-        imgSrc: 'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
+        imgSrc: 'https://spark-assets.netlify.app/rocket.svg',
         imgAlt: 'Rocket Mortgage Logo',
       },
     ];
@@ -103,7 +103,7 @@ describe('SprkFooterComponent', () => {
       {
         text: 'Test Text',
         routerLink: '/alert-router',
-        imgSrc: 'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
+        imgSrc: 'https://spark-assets.netlify.app/rocket.svg',
         imgAlt: 'Rocket Mortgage by Rocket Mortgage Logo',
       },
     ];

@@ -127,7 +127,7 @@ export const defaultStory = () => ({
           text: 'Buy a home, refinance, or manage your mortgage online with America&#8217;s largest mortgage lender',
           href: '#nogo',
           imgSrc:
-            'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
+            'https://spark-assets.netlify.app/rocket.svg',
           analyticsString: 'link-1',
           imgAlt: 'Rocket Mortgage Logo'
         },

@@ -35,7 +35,7 @@ export const defaultStory = () => (
       items: [
         {
           mediaType: 'image',
-          src: 'https://spark-assets.netlify.app/rocket-by-ql-white.svg',
+          src: 'https://spark-assets.netlify.app/rocket.svg',
           altText: 'Rocket Mortgage Logo',
           description:
             "Buy a home, refinance, or manage your mortgage online with America's largest mortgage lender",
