@@ -598,7 +598,16 @@
         "themable": true
       },
       "four": {
-        "comment": "The line-height of the TypeDisplayFour.",
+        "comment": "The line-height of the TypeDisplayFour font when the viewport is narrower than $sprk-font-size-display-four-breakpoint.",
+        "value": "1.23",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      },
+      "four-wide": {
+        "comment": "The line-height of the TypeDisplayFour font when the viewport is wider than $sprk-font-size-display-four-breakpoint.",
         "value": "1.23",
         "attributes": {
           "category": "size"
@@ -607,7 +616,16 @@
         "themable": true
       },
       "five": {
-        "comment": "The line-height of the TypeDisplayFive.",
+        "comment": "The line-height of the TypeDisplayFive font when the viewport is narrower than $sprk-font-size-display-five-breakpoint.",
+        "value": "1.2",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      },
+      "five-wide": {
+        "comment": "The line-height of the TypeDisplayFive font when the viewport is wider than $sprk-font-size-display-five-breakpoint.",
         "value": "1.2",
         "attributes": {
           "category": "size"
@@ -616,14 +634,32 @@
         "themable": true
       },
       "six": {
-        "comment": "The line-height of the TypeDisplaySix.",
+        "comment": "The line-height of the TypeDisplaySix font when the viewport is narrower than $sprk-font-size-display-six-breakpoint.",
         "value": "1.2",
         "file": "typography",
         "themable": true
       },
+      "six-wide": {
+        "comment": "The line-height of the TypeDisplaySix font when the viewport is wider than $sprk-font-size-display-six-breakpoint.",
+        "value": "1.2",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      },
       "seven": {
-        "comment": "The line-height of the TypeDisplaySeven.",
+        "comment": "The line-height of the TypeDisplaySeven font when the viewport is narrower than $sprk-font-size-display-seven-breakpoint.",
         "value": "1",
+        "file": "typography",
+        "themable": true
+      },
+      "seven-wide": {
+        "comment": "The line-height of the TypeDisplaySeven font when the viewport is wider than $sprk-font-size-display-seven-breakpoint.",
+        "value": "1",
+        "attributes": {
+          "category": "size"
+        },
         "file": "typography",
         "themable": true
       }
