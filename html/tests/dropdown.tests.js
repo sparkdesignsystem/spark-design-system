@@ -28,7 +28,7 @@ describe('Dropdown tests', () => {
     trigger.appendChild(triggerText);
     dropdown = document.createElement('div');
     dropdown.setAttribute('data-sprk-dropdown', '01');
-    dropdown.classList.add('sprk-u-Display--none');
+    dropdown.classList.add('sprk-c-Dropdown--is-hidden');
 
     choice1 = document.createElement('a');
     choice1.setAttribute('data-sprk-dropdown-choice', 'choice1');
@@ -58,7 +58,7 @@ describe('Dropdown tests', () => {
 
     dropdown2 = document.createElement('div');
     dropdown2.setAttribute('data-sprk-dropdown', '02');
-    dropdown2.classList.add('sprk-u-Display--none');
+    dropdown2.classList.add('sprk-c-Dropdown--is-hidden');
 
     choice2 = document.createElement('a');
     choice2.setAttribute('data-sprk-dropdown-choice', 'choice2');
@@ -73,27 +73,35 @@ describe('Dropdown tests', () => {
     document.body.innerHTML = '';
   });
 
-  it(`should remove the hide class and add open 
+  it(`should remove the hide class and add open
       class when show is called`, () => {
-    dropdown.classList.add('sprk-u-Display--none');
+    dropdown.classList.add('sprk-c-Dropdown--is-hidden');
     showDropDown(dropdown);
-    expect(dropdown.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--is-hidden')).toBe(
+      false,
+    );
     expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
   });
 
-  it(`should add the hide class and remove the 
+  it(`should add the hide class and remove the
       open class when hide is called`, () => {
     hideDropDown(dropdown);
-    expect(dropdown.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--is-hidden')).toBe(
+      true,
+    );
     expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
   });
 
   it('toggle should toggle the hide class and open class', () => {
     toggleDropDown(dropdown);
-    expect(dropdown.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--is-hidden')).toBe(
+      false,
+    );
     expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
     toggleDropDown(dropdown);
-    expect(dropdown.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(dropdown.classList.contains('sprk-c-Dropdown--is-hidden')).toBe(
+      true,
+    );
     expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
   });
 
@@ -118,7 +126,7 @@ describe('Dropdown tests', () => {
     expect(triggerText.textContent).toBe('choice1');
   });
 
-  it(`should not update the trigger text if the trigger 
+  it(`should not update the trigger text if the trigger
       does not have a text-container and a choice is clicked`, () => {
     dropdowns();
     trigger2.click();
@@ -126,7 +134,7 @@ describe('Dropdown tests', () => {
     expect(triggerText2.textContent).toBe('trigger');
   });
 
-  it(`should not change the trigger text if something 
+  it(`should not change the trigger text if something
       is clicked outside the dropdown`, () => {
     dropdowns();
     trigger.click();
@@ -143,7 +151,7 @@ describe('Dropdown tests', () => {
     expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
   });
 
-  it(`should not close the dropdown if a key 
+  it(`should not close the dropdown if a key
       that is not esc is pressed`, () => {
     dropdowns();
     trigger.click();
@@ -153,7 +161,7 @@ describe('Dropdown tests', () => {
     expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(true);
   });
 
-  it(`should close the dropdown if an element 
+  it(`should close the dropdown if an element
       outside the dropdown is focused`, () => {
     dropdowns();
     trigger.click();
@@ -161,7 +169,7 @@ describe('Dropdown tests', () => {
     expect(dropdown.classList.contains('sprk-c-Dropdown--open')).toBe(false);
   });
 
-  it(`should not close the dropdown if an element 
+  it(`should not close the dropdown if an element
       inside the dropdown is focused`, () => {
     dropdowns();
     trigger.click();

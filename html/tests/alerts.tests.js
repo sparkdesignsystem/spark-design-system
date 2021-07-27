@@ -12,6 +12,7 @@ describe('Alert tests', () => {
     containerNoDismiss = document.createElement('div');
     containerNoDismiss.setAttribute('data-sprk-alert', 'container');
     container.setAttribute('data-sprk-alert', 'container');
+    container.classList.add('sprk-c-Alert');
     dismissElement = document.createElement('button');
     dismissElement.setAttribute('data-sprk-alert', 'dismiss');
     container.append(dismissElement);
@@ -26,7 +27,7 @@ describe('Alert tests', () => {
 
   it('should hide alert', () => {
     dismissAlert(container);
-    expect(container.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(container.classList.toString()).toBe('sprk-c-Alert sprk-c-Alert--is-hidden');
   });
 
   it('should call getElements once with the correct selector', () => {
@@ -45,13 +46,13 @@ describe('Alert tests', () => {
     bindUIEvents(container);
     event = new window.Event('click');
     dismissElement.dispatchEvent(event);
-    expect(container.classList.contains('sprk-u-Display--none')).toBe(true);
+    expect(container.classList.toString()).toBe('sprk-c-Alert sprk-c-Alert--is-hidden');
   });
 
   it('should not hide alert on click if no dismiss button found', () => {
     bindUIEvents(containerNoDismiss);
     event = new window.Event('click');
     dismissElement.dispatchEvent(event);
-    expect(container.classList.contains('sprk-u-Display--none')).toBe(false);
+    expect(container.classList.contains('sprk-c-Alert--is-hidden')).toBe(false);
   });
 });

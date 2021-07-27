@@ -197,7 +197,7 @@ export class SprkToggleComponent implements AfterContentInit {
     const additionalClasses =
       this.triggerTextAdditionalClasses || this.titleFontClass;
     const classArray: string[] = [
-      'sprk-c-Toggle__trigger sprk-u-TextCrop--none',
+      'sprk-c-Toggle__trigger sprk-b-Type--crop-none',
       additionalClasses,
     ];
     return classArray.join(' ');
@@ -210,7 +210,7 @@ export class SprkToggleComponent implements AfterContentInit {
     // TODO: Remove `iconClass` in issue #1305
     const additionalClasses = this.iconAdditionalClasses || this.iconClass;
     const classArray: string[] = [
-      'sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle',
+      'sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle',
       this.iconStateClass,
     ];
     if (additionalClasses) {
@@ -226,7 +226,7 @@ export class SprkToggleComponent implements AfterContentInit {
    */
   getContentClasses(): string {
     const classArray: string[] = [
-      'sprk-u-pts sprk-u-pbs sprk-c-Toggle__content',
+      'sprk-c-Toggle__content',
     ];
     if (this.contentAdditionalClasses) {
       this.contentAdditionalClasses.split(' ').forEach((className) => {

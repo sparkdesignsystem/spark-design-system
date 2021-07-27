@@ -29,13 +29,18 @@ export const defaultStory = () => {
       aria-haspopup="listbox"
       aria-label="Dropdown example description"
     >
-      <svg class="sprk-c-Icon sprk-c-Icon--l sprk-u-mls" viewBox="0 0 100 100">
+      <svg class="
+        sprk-c-Icon
+        sprk-c-Icon--l
+        sprk-c-Dropdown__trigger-icon
+      "
+      viewBox="0 0 100 100">
         <use xlink:href="#settings" />
       </svg>
     </a>
 
     <div
-      class="sprk-c-Dropdown sprk-u-Display--none"
+      class="sprk-c-Dropdown sprk-c-Dropdown--is-hidden"
       data-sprk-dropdown="dropdown01"
       data-id="dropdown-1"
     >
@@ -84,7 +89,12 @@ export const informational = () => {
 
   return `
     <a
-      class="sprk-c-Dropdown__trigger sprk-b-Link sprk-b-Link--plain sprk-u-mrs"
+      class="
+        sprk-c-Dropdown__trigger
+        sprk-b-Link
+        sprk-b-Link--plain
+        sprk-c-Dropdown__trigger--informational
+      "
       href="#nogo"
       data-sprk-dropdown-trigger="dropdown02"
       aria-haspopup="listbox"
@@ -95,10 +105,10 @@ export const informational = () => {
           >Make a selection...</span>
         <svg
           class="
-            sprk-c-Icon 
-            sprk-c-Icon--filled-current-color 
-            sprk-c-Icon--stroke-current-color 
-            sprk-u-mls
+            sprk-c-Icon
+            sprk-c-Icon--filled-current-color
+            sprk-c-Icon--stroke-current-color
+            sprk-c-Dropdown__trigger-icon
           "
           viewBox="0 0 100 100">
           <use xlink:href="#chevron-down" />
@@ -106,7 +116,7 @@ export const informational = () => {
     </a>
 
     <div
-      class="sprk-c-Dropdown sprk-u-Display--none"
+      class="sprk-c-Dropdown sprk-c-Dropdown--is-hidden"
       data-sprk-dropdown="dropdown02"
       data-id="dropdown-2"
     >
@@ -160,7 +170,7 @@ export const informational = () => {
       </ul>
 
       <div
-        class="sprk-c-Dropdown__footer sprk-u-TextAlign--center"
+        class="sprk-c-Dropdown__footer sprk-b-Type--center"
       >
         <a class="sprk-c-Button sprk-c-Button--secondary" href="#nogo">
           Go Elsewhere

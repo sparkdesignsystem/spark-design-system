@@ -10,6 +10,7 @@ const SprkStack = (props) => {
     additionalClasses,
     idString,
     analyticsString,
+    isStackItem,
     ...other
   } = props;
 
@@ -30,6 +31,7 @@ const SprkStack = (props) => {
     'sprk-o-Stack--split@m': splitAt === 'medium',
     'sprk-o-Stack--split@l': splitAt === 'large',
     'sprk-o-Stack--split@xl': splitAt === 'huge',
+    'sprk-o-Stack__item': isStackItem,
   });
 
   return (
@@ -46,6 +48,7 @@ const SprkStack = (props) => {
 
 SprkStack.propTypes = {
   children: PropTypes.node,
+
   /**
    * Determines when the layout will switch `flex-direction` from `column` to
    * `row` based on breakpoint.
@@ -59,6 +62,7 @@ SprkStack.propTypes = {
     'huge',
     '',
   ]),
+
   /**
    * Determines spacing between items.
    */
@@ -78,21 +82,30 @@ SprkStack.propTypes = {
     'miscD',
     '',
   ]),
+
   /**
    * Assigned to the `data-id` attribute serving as a unique selector for
    * automated tools.
    */
   idString: PropTypes.string,
+
   /**
    * Assigned to the `data-analytics` attribute serving as a unique selector
    * for outside libraries to capture data.
    */
   analyticsString: PropTypes.string,
+
   /**
    * A space-separated string of classes to add to the outermost container of
    * the component.
    */
   additionalClasses: PropTypes.string,
+
+  /**
+   * Use in cases of nested Stack components where the Stack is also
+   * a Stack item.
+   */
+  isStackItem: PropTypes.bool,
 };
 
 export default SprkStack;
