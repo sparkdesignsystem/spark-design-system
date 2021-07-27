@@ -778,6 +778,50 @@
         "file": "typography",
         "themable": true
       }
+    },
+    "four": {
+      "breakpoint": {
+        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-four to $sprk-font-size-display-four-wide.",
+        "value": "43.75rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      }
+    },
+    "five": {
+      "breakpoint": {
+        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-five to $sprk-font-size-display-five-wide.",
+        "value": "43.75rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      }
+    },
+    "six": {
+      "breakpoint": {
+        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-six to $sprk-font-size-display-six-wide.",
+        "value": "43.75rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      }
+    },
+    "seven": {
+      "breakpoint": {
+        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-seven to $sprk-font-size-display-seven-wide.",
+        "value": "43.75rem",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      }
     }
   }
 }
