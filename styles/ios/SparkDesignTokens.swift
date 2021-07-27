@@ -297,6 +297,10 @@ public class SparkDesignTokens {
     public static let sprkInputTextIconZIndex = CGFloat(16.00)
     public static let sprkLabelDisabledColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkLabelFontWeight = 400
+    public static let sprkLineHeightBodyFourWide = 1.84
+    public static let sprkLineHeightBodyOneWide = 1.6
+    public static let sprkLineHeightBodyThreeWide = 2
+    public static let sprkLineHeightBodyTwoWide = 1.6
     public static let sprkLineHeightDisplayOneWide = 1.03
     public static let sprkLineHeightDisplaySeven = 1
     public static let sprkLineHeightDisplaySix = 1.2
@@ -492,9 +496,13 @@ public class SparkDesignTokens {
     public static let sprkFlagGutterTiny = CGFloat(4.00)
     public static let sprkFlagStackedBreakpoint = CGFloat(400.00)
     public static let sprkFontSizeBodyFour = CGFloat(13.00)
+    public static let sprkFontSizeBodyFourWide = CGFloat(13.00)
     public static let sprkFontSizeBodyOne = CGFloat(16.00)
+    public static let sprkFontSizeBodyOneWide = CGFloat(16.00)
     public static let sprkFontSizeBodyThree = CGFloat(16.00)
+    public static let sprkFontSizeBodyThreeWide = CGFloat(16.00)
     public static let sprkFontSizeBodyTwo = CGFloat(16.00)
+    public static let sprkFontSizeBodyTwoWide = CGFloat(16.00)
     public static let sprkFontSizeDisplayFive = CGFloat(20.00)
     public static let sprkFontSizeDisplayFiveWide = CGFloat(34.00)
     public static let sprkFontSizeDisplayFour = CGFloat(26.00)

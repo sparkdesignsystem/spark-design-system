@@ -300,10 +300,10 @@
   <dimen name="sprk_line_height_display_five_wide">19.20dp</dimen><!-- The line-height of the TypeDisplayFive font when the viewport is wider than $sprk-font-size-display-five-breakpoint. -->
   <dimen name="sprk_line_height_display_six_wide">19.20dp</dimen><!-- The line-height of the TypeDisplaySix font when the viewport is wider than $sprk-font-size-display-six-breakpoint. -->
   <dimen name="sprk_line_height_display_seven_wide">16.00dp</dimen><!-- The line-height of the TypeDisplaySeven font when the viewport is wider than $sprk-font-size-display-seven-breakpoint. -->
-  <dimen name="sprk_line_height_body_one">25.60dp</dimen><!-- The line-height of the TypeBodyOne. -->
-  <dimen name="sprk_line_height_body_two">25.60dp</dimen><!-- The line-height of the TypeBodyTwo. -->
-  <dimen name="sprk_line_height_body_three">32.00dp</dimen><!-- The line-height of the TypeBodyThree. -->
-  <dimen name="sprk_line_height_body_four">29.44dp</dimen><!-- The line-height of the TypeBodyFour. -->
+  <dimen name="sprk_line_height_body_one">25.60dp</dimen><!-- The line-height of the TypeBodyOne font when the viewport is narrower than $sprk-font-size-body-one-breakpoint. -->
+  <dimen name="sprk_line_height_body_two">25.60dp</dimen><!-- The line-height of the TypeBodyTwo font when the viewport is narrower than $sprk-font-size-body-two-breakpoint. -->
+  <dimen name="sprk_line_height_body_three">32.00dp</dimen><!-- The line-height of the TypeBodyThree font when the viewport is narrower than $sprk-font-size-body-three-breakpoint. -->
+  <dimen name="sprk_line_height_body_four">29.44dp</dimen><!-- The line-height of the TypeBodyFour font when the viewport is narrower than $sprk-font-size-body-four-breakpoint. -->
   <dimen name="sprk_line_height_collision_top_crop">80.00dp</dimen><!-- The top crop value for line height collision correction. -->
   <dimen name="sprk_line_height_collision_bottom_crop">80.00dp</dimen><!-- The bottom crop value for line height collision correction. -->
   <dimen name="sprk_type_crop_none_margin_bottom">0.00dp</dimen><!-- The margin bottom value for the crop none helper class. -->

@@ -25,9 +25,13 @@
   <dimen name="sprk_font_size_display_six_wide">34.00sp</dimen><!-- The size of TypeDisplaySix when the viewport is wider than $sprk-font-size-display-six-breakpoint. -->
   <dimen name="sprk_font_size_display_seven">16.00sp</dimen><!-- The size of TypeDisplaySeven when the viewport is narrower than $sprk-font-size-display-seven-breakpoint. -->
   <dimen name="sprk_font_size_display_seven_wide">34.00sp</dimen><!-- The size of TypeDisplaySeven when the viewport is wider than $sprk-font-size-display-seven-breakpoint. -->
-  <dimen name="sprk_font_size_body_one">16.00sp</dimen><!-- The size of TypeBodyOne. -->
-  <dimen name="sprk_font_size_body_two">16.00sp</dimen><!-- The size of TypeBodyTwo. -->
-  <dimen name="sprk_font_size_body_three">16.00sp</dimen><!-- The font size of TypeBodyThree. -->
-  <dimen name="sprk_font_size_body_four">13.00sp</dimen><!-- The font size of TypeBodyFour. -->
+  <dimen name="sprk_font_size_body_one">16.00sp</dimen><!-- The size of TypeBodyOne when the viewport is narrower than $sprk-font-size-body-one-breakpoint. -->
+  <dimen name="sprk_font_size_body_one_wide">16.00sp</dimen><!-- The size of TypeBodyOne when the viewport is wider than $sprk-font-size-body-one-breakpoint. -->
+  <dimen name="sprk_font_size_body_two">16.00sp</dimen><!-- The size of TypeBodyTwo when the viewport is narrower than $sprk-font-size-body-two-breakpoint. -->
+  <dimen name="sprk_font_size_body_two_wide">16.00sp</dimen><!-- The size of TypeBodyTwo when the viewport is wider than $sprk-font-size-body-two-breakpoint. -->
+  <dimen name="sprk_font_size_body_three">16.00sp</dimen><!-- The font size of TypeBodyThree when the viewport is narrower than $sprk-font-size-body-three-breakpoint. -->
+  <dimen name="sprk_font_size_body_three_wide">16.00sp</dimen><!-- The size of TypeBodyThree when the viewport is wider than $sprk-font-size-body-three-breakpoint. -->
+  <dimen name="sprk_font_size_body_four">13.00sp</dimen><!-- The font size of TypeBodyFour when the viewport is narrower than $sprk-font-size-body-four-breakpoint. -->
+  <dimen name="sprk_font_size_body_four_wide">13.00sp</dimen><!-- The size of TypeBodyFour when the viewport is wider than $sprk-font-size-body-four-breakpoint. -->
   
 </resources>

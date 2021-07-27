@@ -347,7 +347,17 @@
       },
       "body": {
         "one": {
-          "comment": "The size of TypeBodyOne.",
+          "comment": "The size of TypeBodyOne when the viewport is narrower than $sprk-font-size-body-one-breakpoint.",
+          "value": "1rem",
+          "file": "typography",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "themable": true
+        },
+        "one-wide": {
+          "comment": "The size of TypeBodyOne when the viewport is wider than $sprk-font-size-body-one-breakpoint.",
           "value": "1rem",
           "file": "typography",
           "attributes": {
@@ -357,7 +367,17 @@
           "themable": true
         },
         "two": {
-          "comment": "The size of TypeBodyTwo.",
+          "comment": "The size of TypeBodyTwo when the viewport is narrower than $sprk-font-size-body-two-breakpoint.",
+          "value": "1rem",
+          "file": "typography",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "themable": true
+        },
+        "two-wide": {
+          "comment": "The size of TypeBodyTwo when the viewport is wider than $sprk-font-size-body-two-breakpoint.",
           "value": "1rem",
           "file": "typography",
           "attributes": {
@@ -367,7 +387,17 @@
           "themable": true
         },
         "three": {
-          "comment": "The font size of TypeBodyThree.",
+          "comment": "The font size of TypeBodyThree when the viewport is narrower than $sprk-font-size-body-three-breakpoint.",
+          "value": "1rem",
+          "file": "typography",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "themable": true
+        },
+        "three-wide": {
+          "comment": "The size of TypeBodyThree when the viewport is wider than $sprk-font-size-body-three-breakpoint.",
           "value": "1rem",
           "file": "typography",
           "attributes": {
@@ -377,7 +407,17 @@
           "themable": true
         },
         "four": {
-          "comment": "The font size of TypeBodyFour.",
+          "comment": "The font size of TypeBodyFour when the viewport is narrower than $sprk-font-size-body-four-breakpoint.",
+          "value": "0.8125rem",
+          "file": "typography",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "themable": true
+        },
+        "four-wide": {
+          "comment": "The size of TypeBodyFour when the viewport is wider than $sprk-font-size-body-four-breakpoint.",
           "value": "0.8125rem",
           "file": "typography",
           "attributes": {
@@ -706,16 +746,22 @@
     },
     "body": {
       "one": {
-        "comment": "The line-height of the TypeBodyOne.",
+        "comment": "The line-height of the TypeBodyOne font when the viewport is narrower than $sprk-font-size-body-one-breakpoint.",
         "value": "1.6",
         "attributes": {
           "category": "size"
         },
+        "file": "typography",
+        "themable": true
+      },
+      "one-wide": {
+        "comment": "The line-height of the TypeBodyOne font when the viewport is wider than $sprk-font-size-body-one-breakpoint.",
+        "value": "1.6",
         "file": "typography",
         "themable": true
       },
       "two": {
-        "comment": "The line-height of the TypeBodyTwo.",
+        "comment": "The line-height of the TypeBodyTwo font when the viewport is narrower than $sprk-font-size-body-two-breakpoint.",
         "value": "1.6",
         "attributes": {
           "category": "size"
@@ -723,8 +769,14 @@
         "file": "typography",
         "themable": true
       },
+      "two-wide": {
+        "comment": "The line-height of the TypeBodyTwo font when the viewport is wider than $sprk-font-size-body-two-breakpoint.",
+        "value": "1.6",
+        "file": "typography",
+        "themable": true
+      },
       "three": {
-        "comment": "The line-height of the TypeBodyThree.",
+        "comment": "The line-height of the TypeBodyThree font when the viewport is narrower than $sprk-font-size-body-three-breakpoint.",
         "value": "2",
         "file": "typography",
         "attributes": {
@@ -732,13 +784,25 @@
         },
         "themable": true
       },
+      "three-wide": {
+        "comment": "The line-height of the TypeBodyThree font when the viewport is wider than $sprk-font-size-body-three-breakpoint.",
+        "value": "2",
+        "file": "typography",
+        "themable": true
+      },
       "four": {
-        "comment": "The line-height of the TypeBodyFour.",
+        "comment": "The line-height of the TypeBodyFour font when the viewport is narrower than $sprk-font-size-body-four-breakpoint.",
         "value": "1.84",
         "file": "typography",
         "attributes": {
           "category": "size"
         },
+        "themable": true
+      },
+      "four-wide": {
+        "comment": "The line-height of the TypeBodyFour font when the viewport is wider than $sprk-font-size-body-four-breakpoint.",
+        "value": "1.84",
+        "file": "typography",
         "themable": true
       }
     },
