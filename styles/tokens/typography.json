@@ -265,7 +265,7 @@
           "themable": true
         },
         "four": {
-          "comment": "The size of TypeDisplayFour.",
+          "comment": "The size of TypeDisplayFour when the viewport is narrower than $sprk-font-size-display-four-breakpoint.",
           "value": "1.625rem",
           "attributes": {
             "category": "size",
@@ -274,9 +274,29 @@
           "file": "typography",
           "themable": true
         },
+        "four-wide": {
+          "comment": "The size of TypeDisplayFour when the viewport is wider than $sprk-font-size-display-four-breakpoint.",
+          "value": "2.125rem",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "file": "typography",
+          "themable": true
+        },
         "five": {
-          "comment": "The size of TypeDisplayFive.",
+          "comment": "The size of TypeDisplayFive when the viewport is narrower than $sprk-font-size-display-five-breakpoint.",
           "value": "1.25rem",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "file": "typography",
+          "themable": true
+        },
+        "five-wide": {
+          "comment": "The size of TypeDisplayFive when the viewport is wider than $sprk-font-size-display-five-breakpoint.",
+          "value": "2.125rem",
           "attributes": {
             "category": "size",
             "type": "font"
@@ -285,7 +305,7 @@
           "themable": true
         },
         "six": {
-          "comment": "The size of TypeDisplaySix.",
+          "comment": "The size of TypeDisplaySix when the viewport is narrower than $sprk-font-size-display-six-breakpoint.",
           "value": "1.25rem",
           "attributes": {
             "category": "size",
@@ -294,9 +314,29 @@
           "file": "typography",
           "themable": true
         },
+        "six-wide": {
+          "comment": "The size of TypeDisplaySix when the viewport is wider than $sprk-font-size-display-six-breakpoint.",
+          "value": "2.125rem",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "file": "typography",
+          "themable": true
+        },
         "seven": {
-          "comment": "The size of TypeDisplaySeven.",
+          "comment": "The size of TypeDisplaySeven when the viewport is narrower than $sprk-font-size-display-seven-breakpoint.",
           "value": "1rem",
+          "attributes": {
+            "category": "size",
+            "type": "font"
+          },
+          "file": "typography",
+          "themable": true
+        },
+        "seven-wide": {
+          "comment": "The size of TypeDisplaySeven when the viewport is wider than $sprk-font-size-display-seven-breakpoint.",
+          "value": "2.125rem",
           "attributes": {
             "category": "size",
             "type": "font"
