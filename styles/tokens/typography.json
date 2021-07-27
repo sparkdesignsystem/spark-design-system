@@ -19,64 +19,6 @@
     "file": "typography",
     "themable": true
   },
-  "type": {
-    "right": {
-      "comment": "The text align right value.",
-      "value": "right",
-      "attributes": {
-        "category": "content"
-      },
-      "file": "typography",
-      "themable": true
-    },
-    "crop-none": {
-      "content": {
-        "comment": "The content value for the crop none helper class.",
-        "value": "none",
-        "attributes": {
-          "category": "content"
-        },
-        "file": "typography",
-        "themable": true
-      },
-      "margin-bottom": {
-        "comment": "The margin bottom value for the crop none helper class.",
-        "value": "0",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "typography",
-        "themable": true
-      },
-      "margin-top": {
-        "comment": "The margin top value for the crop none helper class.",
-        "value": "0",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "typography",
-        "themable": true
-      }
-    },
-    "left": {
-      "comment": "The text align left value.",
-      "value": "left",
-      "attributes": {
-        "category": "content"
-      },
-      "file": "typography",
-      "themable": true
-    },
-    "center": {
-      "comment": "The text align center value.",
-      "value": "center",
-      "attributes": {
-        "category": "content"
-      },
-      "file": "typography",
-      "themable": true
-    }
-  },
   "narrow-measure": {
     "comment": "The max-width value for the narrow measure.",
     "value": "25rem",
@@ -745,11 +687,38 @@
       }
     }
   },
-  "type-display": {
-    "one": {
-      "breakpoint": {
-        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-one to $sprk-font-size-display-one-wide.",
-        "value": "43.75rem",
+  "type": {
+    "right": {
+      "comment": "The text align right value.",
+      "value": "right",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "typography",
+      "themable": true
+    },
+    "crop-none": {
+      "content": {
+        "comment": "The content value for the crop none helper class.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "typography",
+        "themable": true
+      },
+      "margin-bottom": {
+        "comment": "The margin bottom value for the crop none helper class.",
+        "value": "0",
+        "attributes": {
+          "category": "size"
+        },
+        "file": "typography",
+        "themable": true
+      },
+      "margin-top": {
+        "comment": "The margin top value for the crop none helper class.",
+        "value": "0",
         "attributes": {
           "category": "size"
         },
@@ -757,70 +726,147 @@
         "themable": true
       }
     },
-    "two": {
-      "breakpoint": {
-        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-two to $sprk-font-size-display-two-wide.",
-        "value": "43.75rem",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "typography",
-        "themable": true
+    "left": {
+      "comment": "The text align left value.",
+      "value": "left",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "typography",
+      "themable": true
+    },
+    "center": {
+      "comment": "The text align center value.",
+      "value": "center",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "typography",
+      "themable": true
+    },
+    "display": {
+      "one": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-one to $sprk-font-size-display-one-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "two": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-two to $sprk-font-size-display-two-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "three": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-three to $sprk-font-size-display-three-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "four": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-four to $sprk-font-size-display-four-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "five": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-five to $sprk-font-size-display-five-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "six": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-six to $sprk-font-size-display-six-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "seven": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-seven to $sprk-font-size-display-seven-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
       }
     },
-    "three": {
-      "breakpoint": {
-        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-three to $sprk-font-size-display-three-wide.",
-        "value": "43.75rem",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "typography",
-        "themable": true
-      }
-    },
-    "four": {
-      "breakpoint": {
-        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-four to $sprk-font-size-display-four-wide.",
-        "value": "43.75rem",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "typography",
-        "themable": true
-      }
-    },
-    "five": {
-      "breakpoint": {
-        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-five to $sprk-font-size-display-five-wide.",
-        "value": "43.75rem",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "typography",
-        "themable": true
-      }
-    },
-    "six": {
-      "breakpoint": {
-        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-six to $sprk-font-size-display-six-wide.",
-        "value": "43.75rem",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "typography",
-        "themable": true
-      }
-    },
-    "seven": {
-      "breakpoint": {
-        "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-display-seven to $sprk-font-size-display-seven-wide.",
-        "value": "43.75rem",
-        "attributes": {
-          "category": "size"
-        },
-        "file": "typography",
-        "themable": true
+    "body": {
+      "one": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-body-one to $sprk-font-size-body-one-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "two": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-body-two to $sprk-font-size-body-two-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "three": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-body-three to $sprk-font-size-body-three-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
+      },
+      "four": {
+        "breakpoint": {
+          "comment": "The width of the viewport at which to switch the font size from $sprk-font-size-body-four to $sprk-font-size-body-four-wide.",
+          "value": "43.75rem",
+          "attributes": {
+            "category": "size"
+          },
+          "file": "typography",
+          "themable": true
+        }
       }
     }
   }
