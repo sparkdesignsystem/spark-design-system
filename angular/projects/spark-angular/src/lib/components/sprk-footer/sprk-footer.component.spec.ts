@@ -104,7 +104,7 @@ describe('SprkFooterComponent', () => {
         text: 'Test Text',
         routerLink: '/alert-router',
         imgSrc: 'https://spark-assets.netlify.app/rocket.svg',
-        imgAlt: 'Rocket Mortgage by Rocket Mortgage Logo',
+        imgAlt: 'Rocket Mortgage Logo',
       },
     ];
     fixture.detectChanges();
