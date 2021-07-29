@@ -19,7 +19,7 @@ the [Toggle Component](/docs/components-toggle--default-story) instead.
 };
 
 export const defaultStory = () => (
-  <SprkAccordion additionalClasses="sprk-c-Accordion--no-top-border">
+  <SprkAccordion>
     <SprkAccordionItem
       heading="This is an accordion heading"
       contentAdditionalClasses="sprk-o-Stack sprk-o-Stack--medium"
