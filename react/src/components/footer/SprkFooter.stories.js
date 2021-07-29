@@ -60,15 +60,6 @@ export const defaultStory = () => (
           element: 'a',
           mediaHref: '#nogo',
         },
-        {
-          mediaType: 'image',
-          src: 'https://spark-assets.netlify.app/rocket-hq-white.svg',
-          altText: 'Rocket HQ Logo',
-          description:
-            'Access tools and articles that can help you reach your financial goals',
-          element: 'a',
-          mediaHref: '#nogo',
-        },
       ],
     }}
     linkColumns={[

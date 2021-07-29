@@ -146,14 +146,6 @@ export const defaultStory = () => ({
             'https://spark-assets.netlify.app/rocket-homes-white.svg',
           imgAlt: 'Rocket Homes Logo',
           analyticsString: 'link-3'
-        },
-        {
-          text: 'Access tools and articles that can help you reach your financial goals',
-          href: '#nogo',
-          imgSrc:
-            'https://spark-assets.netlify.app/rocket-hq-white.svg',
-          analyticsString: 'link-4',
-          imgAlt: 'Rocket HQ Logo'
         }
       ]"
 
