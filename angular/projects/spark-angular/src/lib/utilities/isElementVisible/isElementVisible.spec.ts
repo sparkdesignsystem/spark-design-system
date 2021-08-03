@@ -23,6 +23,7 @@ class Test1Component {
 describe('isElementVisible', () => {
   let component: Test1Component;
   let componentFixture: ComponentFixture<Test1Component>;
+  let windowSpy;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -31,9 +32,14 @@ describe('isElementVisible', () => {
   }));
 
   beforeEach(() => {
+    windowSpy = jest.spyOn(window, 'window', 'get');
     componentFixture = TestBed.createComponent(Test1Component);
     component = componentFixture.componentInstance;
     componentFixture.detectChanges();
+  });
+
+  afterEach(() => {
+    windowSpy.mockRestore();
   });
 
   it('should return false for element with display: none', () => {
@@ -50,5 +56,11 @@ describe('isElementVisible', () => {
 
   it('should return true for element with visibility: visible', () => {
     expect(isElementVisible(component.elVisibilityVisible)).toEqual(true);
+  });
+
+  it('should not use window scope if window is undefined', () => {
+    windowSpy.mockImplementation(() => undefined);
+    expect(window).toBeUndefined();
+    expect(isElementVisible(component.elDisplayNone)).toEqual(undefined);
   });
 });
