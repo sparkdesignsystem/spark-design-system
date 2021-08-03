@@ -100,7 +100,7 @@
     "family": {
       "display": {
         "one": {
-          "comment": "The font-family, inc  luding fallbacks of TypeDisplayOne.",
+          "comment": "The font-family, including fallbacks of TypeDisplayOne.",
           "value": "RocketSansBold, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
