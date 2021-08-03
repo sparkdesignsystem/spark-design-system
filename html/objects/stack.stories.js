@@ -20,12 +20,10 @@ for an example.
 
 export const defaultStory = () =>
   `
-    <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@l">
+    <div class="sprk-o-Stack">
       <div class="sprk-o-Stack__item">
-      one
       </div>
       <div class="sprk-o-Stack__item">
-      two
       </div>
     </div>
   `;
