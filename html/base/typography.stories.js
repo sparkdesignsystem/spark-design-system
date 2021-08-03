@@ -43,41 +43,38 @@ correct type classes applied.
 };
 
 export const pageTitle = () => `
-  <h1 class="sprk-b-TypeDisplayOne sprk-b-PageTitle sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </h1>
   <h1 class="sprk-b-TypeDisplayOne sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    DisplayOne The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h1>
   <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    DisplayTwo The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h2>
   <h3 class="sprk-b-TypeDisplayThree sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    DisplayThree The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h3>
   <h4 class="sprk-b-TypeDisplayFour sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    DisplayFour The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h4>
   <h5 class="sprk-b-TypeDisplayFive sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    DisplayFive The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h5>
   <h6 class="sprk-b-TypeDisplaySix sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    DisplaySix The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h6>
-  <h7 class="sprk-b-TypeDisplaySeven sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </h7>
+  <h6 class="sprk-b-TypeDisplaySeven sprk-u-mbl">
+    DisplaySeven The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </h6>
   <p class="sprk-b-TypeBodyOne sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    BodyOne The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </p>
   <p class="sprk-b-TypeBodyTwo sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    BodyTwo The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </p>
   <p class="sprk-b-TypeBodyThree sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    BodyThree The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </p>
   <p class="sprk-b-TypeBodyFour sprk-u-mbl">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    BodyFour The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </p>
 `;
 
