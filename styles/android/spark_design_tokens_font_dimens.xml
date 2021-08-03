@@ -12,13 +12,13 @@
   <dimen name="sprk_date_picker_font_size">16.00sp</dimen><!-- The font size of the Date Picker popup. -->
   <dimen name="sprk_table_grouped_header_font_size">13.01sp</dimen><!-- The font size of the header in the Grouped Columns Table variant. -->
   <dimen name="sprk_font_size_display_one">40.00sp</dimen><!-- The size of TypeDisplayOne when the viewport is narrower than $sprk-font-size-display-one-breakpoint. -->
-  <dimen name="sprk_font_size_display_one_wide">40.00sp</dimen><!-- The size of TypeDisplayOne when the viewport is wider than $sprk-font-size-display-one-breakpoint. -->
+  <dimen name="sprk_font_size_display_one_wide">54.00sp</dimen><!-- The size of TypeDisplayOne when the viewport is wider than $sprk-font-size-display-one-breakpoint. -->
   <dimen name="sprk_font_size_display_two">32.00sp</dimen><!-- The size of TypeDisplayTwo when the viewport is narrower than $sprk-font-size-display-two-breakpoint. -->
-  <dimen name="sprk_font_size_display_two_wide">32.00sp</dimen><!-- The size of TypeDisplayTwo when the viewport is wider than $sprk-font-size-display-two-breakpoint. -->
+  <dimen name="sprk_font_size_display_two_wide">40.00sp</dimen><!-- The size of TypeDisplayTwo when the viewport is wider than $sprk-font-size-display-two-breakpoint. -->
   <dimen name="sprk_font_size_display_three">28.00sp</dimen><!-- The size of TypeDisplayThree when the viewport is narrower than $sprk-font-size-display-three-breakpoint. -->
-  <dimen name="sprk_font_size_display_three_wide">28.00sp</dimen><!-- The size of TypeDisplayThree when the viewport is wider than $sprk-font-size-display-three-breakpoint. -->
+  <dimen name="sprk_font_size_display_three_wide">34.00sp</dimen><!-- The size of TypeDisplayThree when the viewport is wider than $sprk-font-size-display-three-breakpoint. -->
   <dimen name="sprk_font_size_display_four">24.00sp</dimen><!-- The size of TypeDisplayFour when the viewport is narrower than $sprk-font-size-display-four-breakpoint. -->
-  <dimen name="sprk_font_size_display_four_wide">24.00sp</dimen><!-- The size of TypeDisplayFour when the viewport is wider than $sprk-font-size-display-four-breakpoint. -->
+  <dimen name="sprk_font_size_display_four_wide">26.00sp</dimen><!-- The size of TypeDisplayFour when the viewport is wider than $sprk-font-size-display-four-breakpoint. -->
   <dimen name="sprk_font_size_display_five">20.00sp</dimen><!-- The size of TypeDisplayFive when the viewport is narrower than $sprk-font-size-display-five-breakpoint. -->
   <dimen name="sprk_font_size_display_five_wide">20.00sp</dimen><!-- The size of TypeDisplayFive when the viewport is wider than $sprk-font-size-display-five-breakpoint. -->
   <dimen name="sprk_font_size_display_six">20.00sp</dimen><!-- The size of TypeDisplaySix when the viewport is narrower than $sprk-font-size-display-six-breakpoint. -->

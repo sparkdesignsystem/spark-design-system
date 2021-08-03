@@ -100,8 +100,8 @@
     "family": {
       "display": {
         "one": {
-          "comment": "The font-family, including fallbacks of TypeDisplayOne.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "comment": "The font-family, inc  luding fallbacks of TypeDisplayOne.",
+          "value": "RocketSansBold, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -110,7 +110,7 @@
         },
         "two": {
           "comment": "The font-family, including fallbacks of TypeDisplayTwo.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansBold, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -119,7 +119,7 @@
         },
         "three": {
           "comment": "The font-family, including fallbacks of TypeDisplayThree.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansLight, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -128,7 +128,7 @@
         },
         "four": {
           "comment": "The font-family, including fallbacks of TypeDisplayFour.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansBold, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -137,7 +137,7 @@
         },
         "five": {
           "comment": "The font-family, including fallbacks of TypeDisplayFive.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansMedium, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -146,7 +146,7 @@
         },
         "six": {
           "comment": "The font-family, including fallbacks of TypeDisplaySix.",
-          "value": "RocketSans, Helvetica, 'Helvetica Neue', Arial, sans-serif",
+          "value": "RocketSansLight, Helvetica, 'Helvetica Neue', Arial, sans-serif",
           "file": "typography",
           "attributes": {
             "category": "font"
@@ -216,7 +216,7 @@
         },
         "one-wide": {
           "comment": "The size of TypeDisplayOne when the viewport is wider than $sprk-font-size-display-one-breakpoint.",
-          "value": "2.5rem",
+          "value": "3.375rem",
           "file": "typography",
           "attributes": {
             "category": "size",
@@ -236,7 +236,7 @@
         },
         "two-wide": {
           "comment": "The size of TypeDisplayTwo when the viewport is wider than $sprk-font-size-display-two-breakpoint.",
-          "value": "2rem",
+          "value": "2.5rem",
           "attributes": {
             "category": "size",
             "type": "font"
@@ -256,7 +256,7 @@
         },
         "three-wide": {
           "comment": "The size of TypeDisplayThree when the viewport is wider than $sprk-font-size-display-three-breakpoint.",
-          "value": "1.75rem",
+          "value": "2.125rem",
           "attributes": {
             "category": "size",
             "type": "font"
@@ -276,7 +276,7 @@
         },
         "four-wide": {
           "comment": "The size of TypeDisplayFour when the viewport is wider than $sprk-font-size-display-four-breakpoint.",
-          "value": "1.5rem",
+          "value": "1.625rem",
           "attributes": {
             "category": "size",
             "type": "font"
@@ -465,7 +465,7 @@
         },
         "five": {
           "comment": "The weight of the TypeDisplayFive font.",
-          "value": "700",
+          "value": "500",
           "file": "typography",
           "themable": true
         },
@@ -485,7 +485,7 @@
       "body": {
         "one": {
           "comment": "The weight of the TypeBodyOne font.",
-          "value": "400",
+          "value": "500",
           "file": "typography",
           "themable": true
         },
@@ -628,7 +628,7 @@
     "display": {
       "one": {
         "comment": "The line-height of the TypeDisplayOne font when the viewport is narrower than $sprk-font-size-display-one-breakpoint.",
-        "value": "2.75",
+        "value": "2.75rem",
         "attributes": {
           "category": "size"
         },
@@ -637,13 +637,13 @@
       },
       "one-wide": {
         "comment": "The line-height of the TypeDisplayOne font when the viewport is wider than $sprk-font-size-display-one-breakpoint.",
-        "value": "2.75",
+        "value": "3.75rem",
         "file": "typography",
         "themable": true
       },
       "two": {
         "comment": "The line-height of the TypeDisplayTwo font when the viewport is narrower than $sprk-font-size-display-two-breakpoint.",
-        "value": "2.25",
+        "value": "2.25rem",
         "attributes": {
           "category": "size"
         },
@@ -652,7 +652,7 @@
       },
       "two-wide": {
         "comment": "The line-height of the TypeDisplayTwo font when the viewport is wider than $sprk-font-size-display-two-breakpoint.",
-        "value": "2.25",
+        "value": "3rem",
         "attributes": {
           "category": "size"
         },
@@ -661,7 +661,7 @@
       },
       "three": {
         "comment": "The line-height of the TypeDisplayThree font when the viewport is narrower than $sprk-font-size-display-three-breakpoint.",
-        "value": "2.25",
+        "value": "2.25rem",
         "attributes": {
           "category": "size"
         },
@@ -670,7 +670,7 @@
       },
       "three-wide": {
         "comment": "The line-height of the TypeDisplayThree font when the viewport is wider than $sprk-font-size-display-three-breakpoint.",
-        "value": "2.25",
+        "value": "2.75rem",
         "attributes": {
           "category": "size"
         },
@@ -679,7 +679,7 @@
       },
       "four": {
         "comment": "The line-height of the TypeDisplayFour font when the viewport is narrower than $sprk-font-size-display-four-breakpoint.",
-        "value": "2",
+        "value": "2rem",
         "attributes": {
           "category": "size"
         },
@@ -688,7 +688,7 @@
       },
       "four-wide": {
         "comment": "The line-height of the TypeDisplayFour font when the viewport is wider than $sprk-font-size-display-four-breakpoint.",
-        "value": "2",
+        "value": "2rem",
         "attributes": {
           "category": "size"
         },
@@ -697,7 +697,7 @@
       },
       "five": {
         "comment": "The line-height of the TypeDisplayFive font when the viewport is narrower than $sprk-font-size-display-five-breakpoint.",
-        "value": "1.625",
+        "value": "1.625rem",
         "attributes": {
           "category": "size"
         },
@@ -706,7 +706,7 @@
       },
       "five-wide": {
         "comment": "The line-height of the TypeDisplayFive font when the viewport is wider than $sprk-font-size-display-five-breakpoint.",
-        "value": "1.625",
+        "value": "1.625rem",
         "attributes": {
           "category": "size"
         },
@@ -715,13 +715,13 @@
       },
       "six": {
         "comment": "The line-height of the TypeDisplaySix font when the viewport is narrower than $sprk-font-size-display-six-breakpoint.",
-        "value": "1.5",
+        "value": "1.5rem",
         "file": "typography",
         "themable": true
       },
       "six-wide": {
         "comment": "The line-height of the TypeDisplaySix font when the viewport is wider than $sprk-font-size-display-six-breakpoint.",
-        "value": "1.5",
+        "value": "1.5rem",
         "attributes": {
           "category": "size"
         },
@@ -730,13 +730,13 @@
       },
       "seven": {
         "comment": "The line-height of the TypeDisplaySeven font when the viewport is narrower than $sprk-font-size-display-seven-breakpoint.",
-        "value": "1.375",
+        "value": "1.375rem",
         "file": "typography",
         "themable": true
       },
       "seven-wide": {
         "comment": "The line-height of the TypeDisplaySeven font when the viewport is wider than $sprk-font-size-display-seven-breakpoint.",
-        "value": "1.375",
+        "value": "1.25rem",
         "attributes": {
           "category": "size"
         },
@@ -747,7 +747,7 @@
     "body": {
       "one": {
         "comment": "The line-height of the TypeBodyOne font when the viewport is narrower than $sprk-font-size-body-one-breakpoint.",
-        "value": "1.5",
+        "value": "1.5rem",
         "attributes": {
           "category": "size"
         },
@@ -756,13 +756,13 @@
       },
       "one-wide": {
         "comment": "The line-height of the TypeBodyOne font when the viewport is wider than $sprk-font-size-body-one-breakpoint.",
-        "value": "1.5",
+        "value": "1.5rem",
         "file": "typography",
         "themable": true
       },
       "two": {
         "comment": "The line-height of the TypeBodyTwo font when the viewport is narrower than $sprk-font-size-body-two-breakpoint.",
-        "value": "1.5",
+        "value": "1.5rem",
         "attributes": {
           "category": "size"
         },
@@ -771,13 +771,13 @@
       },
       "two-wide": {
         "comment": "The line-height of the TypeBodyTwo font when the viewport is wider than $sprk-font-size-body-two-breakpoint.",
-        "value": "1.5",
+        "value": "1.5rem",
         "file": "typography",
         "themable": true
       },
       "three": {
         "comment": "The line-height of the TypeBodyThree font when the viewport is narrower than $sprk-font-size-body-three-breakpoint.",
-        "value": "1.25",
+        "value": "1.25rem",
         "file": "typography",
         "attributes": {
           "category": "size"
@@ -786,13 +786,13 @@
       },
       "three-wide": {
         "comment": "The line-height of the TypeBodyThree font when the viewport is wider than $sprk-font-size-body-three-breakpoint.",
-        "value": "1.25",
+        "value": "1.25rem",
         "file": "typography",
         "themable": true
       },
       "four": {
         "comment": "The line-height of the TypeBodyFour font when the viewport is narrower than $sprk-font-size-body-four-breakpoint.",
-        "value": "1.25",
+        "value": "1.25rem",
         "file": "typography",
         "attributes": {
           "category": "size"
@@ -801,7 +801,7 @@
       },
       "four-wide": {
         "comment": "The line-height of the TypeBodyFour font when the viewport is wider than $sprk-font-size-body-four-breakpoint.",
-        "value": "1.25",
+        "value": "1.25rem",
         "file": "typography",
         "themable": true
       }

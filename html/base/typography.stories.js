@@ -43,9 +43,42 @@ correct type classes applied.
 };
 
 export const pageTitle = () => `
-  <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+  <h1 class="sprk-b-TypeDisplayOne sprk-b-PageTitle sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h1>
+  <h1 class="sprk-b-TypeDisplayOne sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </h1>
+  <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </h2>
+  <h3 class="sprk-b-TypeDisplayThree sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </h3>
+  <h4 class="sprk-b-TypeDisplayFour sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </h4>
+  <h5 class="sprk-b-TypeDisplayFive sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </h5>
+  <h6 class="sprk-b-TypeDisplaySix sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </h6>
+  <h7 class="sprk-b-TypeDisplaySeven sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </h7>
+  <p class="sprk-b-TypeBodyOne sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </p>
+  <p class="sprk-b-TypeBodyTwo sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </p>
+  <p class="sprk-b-TypeBodyThree sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </p>
+  <p class="sprk-b-TypeBodyFour sprk-u-mbl">
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  </p>
 `;
 
 pageTitle.story = {
@@ -54,7 +87,7 @@ pageTitle.story = {
 
 export const displayOne = () => `
   <h1 class="sprk-b-TypeDisplayOne">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h1>
 `;
 
@@ -64,7 +97,7 @@ displayOne.story = {
 
 export const displayTwo = () => `
   <h1 class="sprk-b-TypeDisplayTwo">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h1>
 `;
 
@@ -74,7 +107,7 @@ displayTwo.story = {
 
 export const displayThree = () => `
   <h2 class="sprk-b-TypeDisplayThree">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h2>
 `;
 
@@ -84,7 +117,7 @@ displayThree.story = {
 
 export const displayFour = () => `
   <h3 class="sprk-b-TypeDisplayFour">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h3>
 `;
 
@@ -94,7 +127,7 @@ displayFour.story = {
 
 export const displayFive = () => `
   <h4 class="sprk-b-TypeDisplayFive">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h4>
 `;
 
@@ -104,7 +137,7 @@ displayFive.story = {
 
 export const displaySix = () => `
   <h5 class="sprk-b-TypeDisplaySix">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h5>
 `;
 
@@ -114,7 +147,7 @@ displaySix.story = {
 
 export const displaySeven = () => `
   <h6 class="sprk-b-TypeDisplaySeven">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </h6>
 `;
 
@@ -124,11 +157,11 @@ displaySeven.story = {
 
 export const bodyOne = () => `
   <p class="sprk-b-TypeBodyOne">Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
-  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
-  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
-  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
-  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur
+  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus
+  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse
+  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
+  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue
   dui eget dui.</p>
 `;
 
@@ -138,11 +171,11 @@ bodyOne.story = {
 
 export const bodyTwo = () => `
   <p class="sprk-b-TypeBodyTwo">Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
-  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
-  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
-  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
-  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur
+  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus
+  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse
+  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
+  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue
   dui eget dui.</p>
 `;
 
@@ -152,11 +185,11 @@ bodyTwo.story = {
 
 export const bodyThree = () => `
   <p class="sprk-b-TypeBodyThree">Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
-  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
-  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
-  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
-  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur
+  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus
+  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse
+  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
+  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue
   dui eget dui.</p>
 `;
 
@@ -166,11 +199,11 @@ bodyThree.story = {
 
 export const bodyFour = () => `
   <p class="sprk-b-TypeBodyFour">Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
-    risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
-    augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
-    sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
-    ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+    adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur
+    risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus
+    augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse
+    sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
+    ultricies auctor, velit nunc commodo sapien, pharetra maximus augue
     dui eget dui.</p>
 `;
 

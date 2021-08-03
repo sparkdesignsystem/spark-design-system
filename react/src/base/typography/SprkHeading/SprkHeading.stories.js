@@ -46,48 +46,48 @@ export const pageTitle = () => (
     isPageTitle
     idString="heading-page-title"
   >
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </SprkHeading>
 );
 
 export const displayOne = () => (
   <SprkHeading element="h1" variant="displayOne" idString="heading-one">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </SprkHeading>
 );
 
 export const displayTwo = () => (
   <SprkHeading element="h2" variant="displayTwo" idString="heading-two">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </SprkHeading>
 );
 
 export const displayThree = () => (
   <SprkHeading element="h3" variant="displayThree" idString="heading-three">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </SprkHeading>
 );
 
 export const displayFour = () => (
   <SprkHeading element="h4" variant="displayFour" idString="heading-four">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </SprkHeading>
 );
 
 export const displayFive = () => (
   <SprkHeading element="h5" variant="displayFive" idString="heading-five">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </SprkHeading>
 );
 
 export const displaySix = () => (
   <SprkHeading element="h6" variant="displaySix" idString="heading-six">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </SprkHeading>
 );
 
 export const displaySeven = () => (
   <SprkHeading element="h6" variant="displaySeven" idString="heading-seven">
-    The Quick Brown Fox Jumps Over the Lazy Dog
+    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
   </SprkHeading>
 );
