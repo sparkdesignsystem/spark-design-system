@@ -122,6 +122,7 @@
   <string name="sprk_select_error_box_shadow">0 0 0 1px #ffd47500</string><!-- The box shadow of the outer circle in the radio input when there is an error. -->
   <string name="sprk_select_moz_focusring_color">transparent</string><!-- The value for the Firefox specific -moz-focusring color setting. -->
   <string name="sprk_select_moz_focusring_text_shadow">0 0 0 #ff1c1b1a</string><!-- The value for the Firefox specific -moz-focusring text-shadow setting. -->
+  <string name="sprk_select_arrow_position">relative</string><!-- The position style of the icon in Selects. -->
   <string name="sprk_textarea_margin">0.00dp</string><!-- The margin surrounding Textarea. -->
   <string name="sprk_helper_margin">8.00dp 0 0 0</string><!-- The margin of the helper text for Inputs. -->
   <string name="sprk_selection_container_margin">0 0 16.00dp 0</string><!-- The margin of the selection container for Inputs. -->

@@ -1020,6 +1020,15 @@
       },
       "file": "settings",
       "themable": true
+    },
+    "arrow-position": {
+      "comment": "The position style of the icon in Selects.",
+      "value": "relative",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
     }
   },
   "textarea": {
