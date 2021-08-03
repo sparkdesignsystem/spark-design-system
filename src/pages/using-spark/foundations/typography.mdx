@@ -1,23 +1,27 @@
 ---
-  title: Typography
+title: Typography
 ---
+
 import ComponentPreview from '../../../components/ComponentPreview';
-import {
-  SprkDivider,
-} from '@sparkdesignsystem/spark-react';
+import { SprkDivider } from '@sparkdesignsystem/spark-react';
 
 # Typography
 
-Typography is fundamental to user experience.
+Typography is fundamental to our Rocket experiences. We use a custom developed typeface called Rocket Sans.
 
 Our guidelines optimize content hierarchy by using text sizes, line heights, colors, and font. These factors contribute to what makes content clear and appealing.
 
-** Combine these header and body styles to establish content hierarchy within your project. **
+Combine these header and body styles to establish content hierarchy within your project.
 
+IMAGE GOES HERE
 
-<SprkDivider element="span" additionalClasses="sprk-u-mbn sprk-u-mtl"/>
 <h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Table of Contents</h2>
-<ul>
+<ul class="sprk-b-List sprk-b-List--bare">
+  <li>
+    <a href="#size-charts">
+      Size Reference Charts
+    </a>
+  </li>
   <li>
     <a href="#headers">
       Headers
@@ -95,7 +99,181 @@ Our guidelines optimize content hierarchy by using text sizes, line heights, col
 
 </ul>
 
-<SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
+
+## Size Reference Charts
+
+Our typography has 7 display styles, 3 body copy styles, and 1 legal type size.
+The size reference chart is an example of typography when designing.
+However, when developing a page, reference the Storybook components below.
+
+<div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xl">
+  <div class="sprk-b-TableContainer sprk-o-Stack__item sprk-u-mtl">
+    <h5 class="sprk-b-TypeDisplayFive">Desktop</h5>
+    <table class="sprk-b-Table sprk-b-Table--spacing-medium">
+      <thead>
+        <tr>
+          <th>Scale Category</th>
+          <th>Weight</th>
+          <th>Size</th>
+          <th>Line Height</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>H1</td>
+          <td>Bold</td>
+          <td>54px</td>
+          <td>60px</td>
+        </tr>
+        <tr>
+          <td>H2</td>
+          <td>Bold</td>
+          <td>40px</td>
+          <td>48px</td>
+        </tr>
+        <tr>
+          <td>H3</td>
+          <td>Light</td>
+          <td>34px</td>
+          <td>44px</td>
+        </tr>
+        <tr>
+          <td>H4</td>
+          <td>Bold</td>
+          <td>26px</td>
+          <td>32px</td>
+        </tr>
+        <tr>
+          <td>H5</td>
+          <td>Bold</td>
+          <td>20px</td>
+          <td>26px</td>
+        </tr>
+        <tr>
+          <td>H6</td>
+          <td>Light</td>
+          <td>20px</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>H7</td>
+          <td>Bold</td>
+          <td>16px</td>
+          <td>20px</td>
+        </tr>
+        <tr>
+          <td>B1</td>
+          <td>Medium</td>
+          <td>16px</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>B2</td>
+          <td>Light</td>
+          <td>16px</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>B3</td>
+          <td>Light</td>
+          <td>14px</td>
+          <td>20px</td>
+        </tr>
+        <tr>
+          <td>Legal</td>
+          <td>Light</td>
+          <td>13px</td>
+          <td>20px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sprk-b-TableContainer sprk-o-Stack__item sprk-u-mtl">
+    <h5 class="sprk-b-TypeDisplayFive">Mobile</h5>
+    <table class="sprk-b-Table sprk-b-Table--spacing-medium">
+      <thead>
+        <tr>
+          <th>Scale Category</th>
+          <th>Weight</th>
+          <th>Size</th>
+          <th>Line Height</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>H1</td>
+          <td>Bold</td>
+          <td>40px</td>
+          <td>44px</td>
+        </tr>
+        <tr>
+          <td>H2</td>
+          <td>Bold</td>
+          <td>32px</td>
+          <td>36px</td>
+        </tr>
+        <tr>
+          <td>H3</td>
+          <td>Light</td>
+          <td>28px</td>
+          <td>36px</td>
+        </tr>
+        <tr>
+          <td>H4</td>
+          <td>Bold</td>
+          <td>24px</td>
+          <td>32px</td>
+        </tr>
+        <tr>
+          <td>H5</td>
+          <td>Bold</td>
+          <td>20px</td>
+          <td>26px</td>
+        </tr>
+        <tr>
+          <td>H6</td>
+          <td>Light</td>
+          <td>20px</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>H7</td>
+          <td>Bold</td>
+          <td>16px</td>
+          <td>22px</td>
+        </tr>
+        <tr>
+          <td>B1</td>
+          <td>Medium</td>
+          <td>16px</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>B2</td>
+          <td>Light</td>
+          <td>16px</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>B3</td>
+          <td>Light</td>
+          <td>14px</td>
+          <td>20px</td>
+        </tr>
+        <tr>
+          <td>Legal</td>
+          <td>Light</td>
+          <td>13px</td>
+          <td>20px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
 
 ## Headers
 
@@ -103,7 +281,9 @@ Our guidelines optimize content hierarchy by using text sizes, line heights, col
 
 Use one Page Title per page to serve as the main heading. They differentiate themselves from other headings with their red accent line.
 
-Use either [Display One](#display-one) or [Display Two](display-two) to style this heading.
+Use [Display One](#display-one) to style level 1, or top-level pages in your experience.
+
+Use [Display Two](display-two) to style level 2, an inner content page, or below pages in your experience.
 
 <ComponentPreview
   componentName="typography--page-title"
