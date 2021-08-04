@@ -67,8 +67,8 @@ const handleToggleClick = (
     toggleIconType(
       toggleIcon,
       toggleIconUse,
-      'chevron-up-circle',
-      'chevron-up-circle',
+      'chevron-down-circle',
+      'chevron-down-circle',
     );
   }
 

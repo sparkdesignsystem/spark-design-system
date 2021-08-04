@@ -11,6 +11,12 @@
   width: 100%;
 }
 
+/// Removes top border from accordion.
+/// @name .sprk-c-Accordion--no-top-border
+.sprk-c-Accordion--no-top-border {
+  border-top: $sprk-accordion-border-top-none;
+}
+
 /// Adds style to accordion items that
 /// have been toggled open by Spark JS.
 /// @name .sprk-c-Accordion__item--open
