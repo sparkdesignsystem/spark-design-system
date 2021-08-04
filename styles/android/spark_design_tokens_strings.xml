@@ -3,6 +3,7 @@
 
 <resources>
   <string name="sprk_accordion_border">2px solid rgb(230, 230, 230)</string><!-- The border of Accordions. -->
+  <string name="sprk_accordion_border_top_none">none</string><!-- The value of the top border of the Accordion when there is no top border. -->
   <string name="sprk_accordion_icon_leading_margin">0 8.00dp 0 0</string><!-- The margin of leading icon in Accordions. -->
   <string name="sprk_accordion_summary_text_decoration">none</string><!-- The text decoration of the Accordion item summary. -->
   <string name="sprk_accordion_summary_text_align">left</string><!-- The text-align value of the Accordion item summary. -->
