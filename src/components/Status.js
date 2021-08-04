@@ -6,12 +6,14 @@ import {
   SprkDivider,
   SprkToggle,
   SprkAccordion,
-  SprkAccordionItem
+  SprkAccordionItem,
+  SprkTooltip
 } from '@sparkdesignsystem/spark-react';
 
 const Status = ({
     statusName,
-    href
+    href,
+    additionalInfo
 }) => {
     if (statusName == "ready") {
         return (
@@ -49,6 +51,10 @@ const Status = ({
                 >
                     Under Review
                 </SprkLink>
+                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__yellow">
+                    {additionalInfo}
+                    
+                </SprkTooltip>
             </div>
         );
     } else if (statusName == "updated") {
@@ -68,13 +74,17 @@ const Status = ({
                 >
                     Updated
                 </SprkLink>
+                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__blue">
+                    {additionalInfo}
+                    
+                </SprkTooltip>
             </div>
         );
     } else if (statusName == "research") {
         return (
             <div>
                 <SprkIcon className="
-                    docs-c-status-Research 
+                    docs-status__Research 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="search"
@@ -86,7 +96,7 @@ const Status = ({
         return (
             <div>
                  <SprkIcon className="
-                    docs-c-status-Build 
+                    docs-status__Build 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="settings-filled"
@@ -98,7 +108,7 @@ const Status = ({
         return (
             <div class="sprk-u-Color--green">
                 <SprkIcon className="
-                    docs-c-status-LowPriority 
+                    docs-status__LowPriority 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="application-filled"
@@ -110,7 +120,7 @@ const Status = ({
         return (
             <div class="sprk-u-Color--red">
                 <SprkIcon className="
-                    docs-c-status-HighPriority 
+                    docs-status__HighPriority 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="application-filled"
@@ -122,7 +132,7 @@ const Status = ({
         return (
             <div class="sprk-u-Color--purple">
                 <SprkIcon className="
-                    docs-c-status-New 
+                    docs-status__New 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="vip-filled"

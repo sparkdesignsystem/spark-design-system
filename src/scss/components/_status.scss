@@ -9,6 +9,21 @@
     transition: $sprk-masthead-transition;
 }
 
+.docs-status-question-mark {
+    height: $sprk-icon-m;
+    width: $sprk-icon-m;
+    stroke-width: $sprk-icon-stroke-width;
+    margin-left: 10px;
+}
+.docs-status-question-mark__blue {
+    stroke: $sprk-blue;
+    fill: $sprk-blue;
+}
+.docs-status-question-mark__yellow {
+    stroke: $sprk-yellow;
+    fill: $sprk-yellow;
+}
+
 .docs-status__Ready {
     stroke: $sprk-green;
     fill: $sprk-green;
@@ -27,61 +42,34 @@
     margin-right: 10px;
 }
 
-.docs-c-status-New {
+.docs-status__New {
     stroke: $sprk-purple;
     fill: $sprk-purple;
     margin-right: 10px;
 }
 
-.docs-c-status-Research {
+.docs-status__Research {
     stroke: $sprk-black;
     fill: $sprk-black;
     margin-right: 10px;
 }
 
-.docs-c-status-Build {
+.docs-status__Build {
     stroke: $sprk-black;
     fill: $sprk-black;
     margin-right: 10px;
 }
 
-.docs-c-status-LowPriority {
+.docs-status__LowPriority {
     stroke: $sprk-green;
     fill: $sprk-green;
     margin-right: 10px;
 }
 
-.docs-c-status-HighPriority {
+.docs-status__HighPriority {
     stroke: $sprk-red;
     fill: $sprk-red;
     margin-right: 10px;
-}
-
-.docs-c-link {
-    color: $sprk-green;
-    border-bottom: $sprk-link-simple-border-bottom;
-    font-weight: $sprk-link-simple-font-weight;
-  
-    &:visited {
-      border-bottom: $sprk-link-simple-visited-border-bottom;
-    }
-  
-    &:hover,
-    &:active,
-    &:focus {
-      color: $sprk-green;
-      border-bottom: $sprk-link-simple-hover-border-bottom;
-    }
-}
-
-.docs-c-status-Yellow {
-    stroke: $sprk-yellow;
-    fill: $sprk-yellow;
-}
-
-.docs-c-status-Blue {
-    stroke: $sprk-blue;
-    fill: $sprk-blue;
 }
 
 /* stylelint-enable selector-class-pattern */
