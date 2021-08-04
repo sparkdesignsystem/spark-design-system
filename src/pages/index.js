@@ -77,10 +77,10 @@ const teaserComponents = {
     ctaVariant: 'button',
     ctaLinkElement: 'a',
     buttonVariant: 'tertiary',
-    href: '/using-spark/components/button',
+    href: '/using-spark/component-status',
   },
   media: {
-    href: '/using-spark/components/button',
+    href: '/using-spark/component-status',
     mediaLinkElement: 'a',
     imgAlt: 'Go to Components',
     imgSrc: componentsMedia,

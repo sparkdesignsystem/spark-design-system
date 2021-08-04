@@ -1,0 +1,471 @@
+---
+title: Component Status
+---
+
+import { SprkTable } from '@sparkdesignsystem/spark-react';
+import {
+  SprkLink,
+  SprkIcon,
+  SprkDivider,
+  SprkToggle,
+  SprkAccordion,
+  SprkAccordionItem
+} from '@sparkdesignsystem/spark-react';
+
+
+# Component Status
+
+Spark components have statuses that we change to reflect their state of completion in both the developer and design spaces. 
+
+<h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Table of Contents</h2>
+<ul>
+  <li>
+    <a href="#status">
+      Status
+    </a>
+    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mvs">
+      <li>
+        <a href="#built">
+          Built
+        </a>
+      </li>
+      <li>
+        <a href="#in-development">
+          In Development
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="#status-descriptions">
+      Status Descriptions
+    </a>
+  </li>
+  <li>
+    <a href="#contribute-to-spark">
+      Contribute to Spark
+    </a>
+  </li>
+</ul>
+
+## Status
+
+### Built
+
+<table class="
+    sprk-b-Table 
+    sprk-b-Table--secondary 
+    sprk-b-Table--spacing-small
+    ">
+    <thead>
+    <tr>
+        <th>Component</th>
+        <th>Design</th>
+        <th>HTML</th>
+        <th>Angular</th>
+        <th>React</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Accordion</td>
+        <td>
+            <SprkIcon className="
+                docs-status__Ready 
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="check-mark-filled"
+            />
+            <SprkLink
+                element="a"
+                href="/using-spark/components/accordion"
+                variant="simple"
+                additionalClasses="sprk-u-Color--green"
+            >
+                Ready
+            </SprkLink>
+        </td>
+        <td>Data 3</td>
+        <td>Data 4</td>
+        <td>Data 5</td>
+    </tr>
+    <tr>
+        <td>Alert</td>
+        <td>Data 2</td>
+        <td> 
+            <SprkIcon className="
+                docs-status__UnderReview
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="caution-filled"
+            />
+            <SprkLink
+                element="a"
+                href="https://html.sparkdesignsystem.com/?path=/story/components-alert--success"
+                variant="simple"
+                additionalClasses="sprk-u-Color--yellow"
+            >
+                Under Review
+            </SprkLink>
+        </td>
+        <td>Data 4</td>
+        <td>Data 5</td>
+    </tr>
+    <tr>
+        <td>Autocomplete</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+        <td>Data 4</td>
+        <td> 
+            <SprkIcon className="
+                docs-c-status-Updated
+                sprk-c-Icon--l"
+                iconName="recurring-update"
+            />
+            <SprkLink
+                element="a"
+                href=""
+                variant="simple"
+                additionalClasses="sprk-u-Color--blue"
+            >
+                Updated
+            </SprkLink>
+        </td>
+    </tr>
+    <tr>
+        <td>Award</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+        <td>
+            <SprkIcon className="
+                docs-status__UnderReview
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="caution-filled"
+            />
+            <SprkLink
+                element="a"
+                href="https://angular.sparkdesignsystem.com/?path=/story/components-award--default-story"
+                variant="simple"
+                additionalClasses="sprk-u-Color--yellow"
+            >
+                Under Review
+            </SprkLink>
+        </td>
+        <td>Data 5</td>
+    </tr>
+    <tr>
+        <td>Box</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+        <td>Data 4</td>
+        <td>Data 5</td>
+    </tr>
+    <tr>
+        <td>Button</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+        <td>Data 4</td>
+        <td>Data 5</td>
+    </tr>
+    <tr>
+        <td>Card</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+        <td>Centered Column</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+        <td>Dictionary</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+        <td>Divider</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+        <td>Dropdown</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+        <td>Flag</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+        <td>Footer</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+        <td>Highlight Board</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+        <td>Icon</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+         Input <SprkToggle triggerText="" analyticsString="toggle-1">
+           <tbody>
+            <tr>
+                <td>Icon</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+            </tbody>
+        </SprkToggle>
+    </tr>
+   
+    </tbody>
+</table>
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>    
+
+### In Development
+
+<table class="
+    sprk-b-Table 
+    sprk-b-Table--secondary 
+    sprk-b-Table--spacing-small
+    ">
+    <thead>
+    <tr>
+        <th>Component</th>
+        <th>Design</th>
+        <th>HTML</th>
+        <th>Angular</th>
+        <th>React</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+        <td>Data 4</td>
+        <td>Data 5</td>
+    </tr>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+        <td>Data 4</td>
+        <td>Data 5</td>
+    </tr>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+        <td>Data 4</td>
+        <td>Data 5</td>
+    </tr>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+        <td>Data 4</td>
+        <td>Data 5</td>
+    </tr>
+    </tbody>
+</table>
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
+
+## Status Descriptions
+
+<table class="
+    sprk-b-Table 
+    sprk-b-Table--secondary 
+    sprk-b-Table--spacing-small
+    ">
+    <thead>
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="sprk-u-Color--green">
+            <SprkIcon className="
+                docs-status__Ready 
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="check-mark-filled"
+            />
+            Ready
+        </td>
+        <td>The component is ready for designers and developers.</td>
+    </tr>
+    <tr>
+        <td class="sprk-u-Color--yellow">
+            <SprkIcon className="
+                docs-status__UnderReview 
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="caution-filled"
+            />
+            Under Review
+        </td>
+        <td>The component’s code, design, or usage is being re-examined.</td>
+    </tr>
+    <tr>
+        <td class="sprk-u-Color--blue">
+            <SprkIcon className="
+                docs-c-status-Updated 
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="recurring-update"
+            />
+            Updated
+        </td>
+        <td>Applied only to existing components in our library after they have been under review, updated, and re-published to the design system site within the past 6 months.</td>
+    </tr>
+    <tr>
+        <td class="sprk-u-Color--purple">
+            <SprkIcon className="
+                docs-c-status-New 
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="vip-filled"
+            />
+            New
+        </td>
+        <td>The component has been added to our library within the past 6 months.</td>
+    </tr>
+    <tr>
+        <td class="sprk-u-Color--black">
+            <SprkIcon className="
+                docs-c-status-Research 
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="search"
+            />
+            Research
+        </td>
+        <td>The component is in the design or engineering research phase.</td>
+    </tr>
+    <tr>
+        <td class="sprk-u-Color--black"> 
+            <SprkIcon className="
+                docs-c-status-Build 
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="settings-filled"
+            />
+            Build
+        </td>
+        <td>The component is being designed by our designers or built by our engineers.</td>
+    </tr>
+    <tr>
+        <td class="sprk-u-Color--green"> 
+            <SprkIcon className="
+                docs-c-status-LowPriority 
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="application-filled"
+            />
+            Low Priority
+        </td>
+        <td>The component has a low priority and is currently in our backlog.</td>
+    </tr>
+    <tr>
+        <td class="sprk-u-Color--red"> 
+            <SprkIcon className="
+                docs-c-status-HighPriority 
+                sprk-c-Icon--filled
+                sprk-c-Icon--l"
+                iconName="application-filled"
+            />
+            High Priority
+        </td>
+        <td>The component has a high priority and is currently in our backlog</td>
+    </tr>
+    </tbody>
+</table>
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
+
+## Contribute to Spark
+
+If you have any suggestions for new components or would like to help develop and build a new component, please submit a message in the text area below.
+
+<div class="sprk-b-InputContainer">
+    <label
+        for="textarea"
+        class="sprk-b-Label"
+    >
+    </label>
+    <textarea style="width: 100%"
+        class="sprk-b-TextArea"
+        id="textarea"
+        data-id="textarea"
+        aria-describedby="textarea--error-container"
+    ></textarea>
+    <div
+        class="sprk-b-ErrorContainer"
+        id="textarea--error-container"
+    ></div>
+    <button class="sprk-c-Button" data-id="button-primary">
+        Submit
+    </button>
+</div>
+
+<div class="sprk-u-TextAlign--right sprk-u-mbl">
+  <a class="sprk-b-Link" href="#table-of-contents">
+    Back to Table of Contents
+  </a>
+</div>
+
+<SprkLink
+  element="a"
+  href="/using-spark/foundations/color-accessibility"
+  variant="has-icon"
+>
+  <SprkIcon
+    additionalClasses="
+      sprk-u-mls
+      sprk-c-Icon--m
+      sprk-c-Icon--stroke-current-color"
+    iconName="check-mark"
+  />
+   Next: Color Accessibility
+</SprkLink>

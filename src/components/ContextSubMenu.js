@@ -5,7 +5,7 @@ import { SprkLink } from '@sparkdesignsystem/spark-react';
 
 function ContextSubMenu({ heading, collection, directory }) {
   const ProcessedSublinks = collection.filter(
-    (item) => item.node.parent.name !== 'guides',
+    ((item) => item.node.parent.name !== 'guides') || ((item) => item.node.parent.name !== 'component-status'),
   );
   return (
     <div className="docs-sub-menu">
@@ -13,10 +13,10 @@ function ContextSubMenu({ heading, collection, directory }) {
         <SprkLink
           element={Link}
           variant="simple"
-          to={
+          to={ 
             directory === 'guides'
-              ? '/using-spark/guides'
-              : `/using-spark/${directory}/${collection[0].node.parent.name}`
+              ? '/using-spark/guides' : directory === 'components' 
+              ? '/using-spark/component-status' : `/using-spark/${directory}/${collection[0].node.parent.name}`
           }
         >
           {heading}
