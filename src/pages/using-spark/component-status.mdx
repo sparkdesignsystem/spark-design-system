@@ -11,7 +11,8 @@ import {
   SprkAccordion,
   SprkAccordionItem
 } from '@sparkdesignsystem/spark-react';
-
+import ComponentPreview from '../../components/ComponentPreview'
+import Status from '../../components/Status'
 
 # Component Status
 
@@ -52,84 +53,71 @@ Spark components have statuses that we change to reflect their state of completi
 
 ### Built
 
+<div style="overflow: auto">
 <table class="
     sprk-b-Table 
     sprk-b-Table--secondary 
-    sprk-b-Table--spacing-small
-    ">
+    sprk-b-Table--spacing-small"
+>
     <thead>
-    <tr>
-        <th>Component</th>
-        <th>Design</th>
-        <th>HTML</th>
-        <th>Angular</th>
-        <th>React</th>
-    </tr>
+        <tr>
+            <th>Component</th>
+            <th>Design</th>
+            <th>HTML</th>
+            <th>Angular</th>
+            <th>React</th>
+        </tr>
     </thead>
     <tbody>
     <tr>
-        <td>Accordion</td>
         <td>
-            <SprkIcon className="
-                docs-status__Ready 
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="check-mark-filled"
-            />
             <SprkLink
                 element="a"
                 href="/using-spark/components/accordion"
                 variant="simple"
-                additionalClasses="sprk-u-Color--green"
             >
-                Ready
+                Accordion
             </SprkLink>
         </td>
-        <td>Data 3</td>
-        <td>Data 4</td>
-        <td>Data 5</td>
-    </tr>
-    <tr>
-        <td>Alert</td>
-        <td>Data 2</td>
-        <td> 
-            <SprkIcon className="
-                docs-status__UnderReview
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="caution-filled"
-            />
-            <SprkLink
-                element="a"
-                href="https://html.sparkdesignsystem.com/?path=/story/components-alert--success"
-                variant="simple"
-                additionalClasses="sprk-u-Color--yellow"
-            >
-                Under Review
-            </SprkLink>
+        <td>
+            <Status statusName="ready" href="/using-spark/components/accordion"/>
+        </td>
+        <td>
+            <Status/>
         </td>
         <td>Data 4</td>
         <td>Data 5</td>
     </tr>
     <tr>
-        <td>Autocomplete</td>
+        <td><SprkLink
+                element="a"
+                href="/using-spark/components/accordion"
+                variant="simple"
+            >
+                Alert
+            </SprkLink></td>
+        <td>Data 2</td>
+        <td> 
+            <Status statusName="underReview" href="https://html.sparkdesignsystem.com/?path=/story/components-alert--success"/>
+        </td>
+        <td>Data 4</td>
+        <td>Data 5</td>
+    </tr>
+    <tr>
+        <td>
+            <SprkLink
+                element="a"
+                href="/using-spark/components/accordion"
+                variant="simple"
+            >
+                Autocomplete
+            </SprkLink>
+        </td>
         <td>Data 2</td>
         <td>Data 3</td>
         <td>Data 4</td>
         <td> 
-            <SprkIcon className="
-                docs-c-status-Updated
-                sprk-c-Icon--l"
-                iconName="recurring-update"
-            />
-            <SprkLink
-                element="a"
-                href=""
-                variant="simple"
-                additionalClasses="sprk-u-Color--blue"
-            >
-                Updated
-            </SprkLink>
+            <Status statusName="updated"/>
         </td>
     </tr>
     <tr>
@@ -137,20 +125,10 @@ Spark components have statuses that we change to reflect their state of completi
         <td>Data 2</td>
         <td>Data 3</td>
         <td>
-            <SprkIcon className="
-                docs-status__UnderReview
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="caution-filled"
-            />
-            <SprkLink
-                element="a"
+            <Status 
+                statusName="underReview" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-award--default-story"
-                variant="simple"
-                additionalClasses="sprk-u-Color--yellow"
-            >
-                Under Review
-            </SprkLink>
+            />
         </td>
         <td>Data 5</td>
     </tr>
@@ -158,7 +136,9 @@ Spark components have statuses that we change to reflect their state of completi
         <td>Box</td>
         <td>Data 2</td>
         <td>Data 3</td>
-        <td>Data 4</td>
+        <td>
+            <Status statusName="underReview" href="https://angular.sparkdesignsystem.com/?path=/story/components-box--default-box"/>
+        </td>
         <td>Data 5</td>
     </tr>
     <tr>
@@ -177,6 +157,15 @@ Spark components have statuses that we change to reflect their state of completi
     </tr>
     <tr>
         <td>Centered Column</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+        <td>
+            Component <Status statusName="new"/>
+        </td>
         <td>Data</td>
         <td>Data</td>
         <td>Data</td>
@@ -247,6 +236,8 @@ Spark components have statuses that we change to reflect their state of completi
    
     </tbody>
 </table>
+</div>
+
 <div class="sprk-u-TextAlign--right sprk-u-mbl">
   <a class="sprk-b-Link" href="#table-of-contents">
     Back to Table of Contents
@@ -254,6 +245,8 @@ Spark components have statuses that we change to reflect their state of completi
 </div>    
 
 ### In Development
+
+Components under this section are currently in the backlog and in various stages of the design and development processes.
 
 <table class="
     sprk-b-Table 
@@ -271,28 +264,28 @@ Spark components have statuses that we change to reflect their state of completi
     </thead>
     <tbody>
     <tr>
-        <td>Data 1</td>
+        <td>Component 1</td>
         <td>Data 2</td>
         <td>Data 3</td>
         <td>Data 4</td>
         <td>Data 5</td>
     </tr>
     <tr>
-        <td>Data 1</td>
+        <td>Component 2</td>
         <td>Data 2</td>
         <td>Data 3</td>
         <td>Data 4</td>
         <td>Data 5</td>
     </tr>
     <tr>
-        <td>Data 1</td>
+        <td>Component 3</td>
         <td>Data 2</td>
         <td>Data 3</td>
         <td>Data 4</td>
         <td>Data 5</td>
     </tr>
     <tr>
-        <td>Data 1</td>
+        <td>Component 4</td>
         <td>Data 2</td>
         <td>Data 3</td>
         <td>Data 4</td>
@@ -347,7 +340,7 @@ Spark components have statuses that we change to reflect their state of completi
     <tr>
         <td class="sprk-u-Color--blue">
             <SprkIcon className="
-                docs-c-status-Updated 
+                docs-status__Updated 
                 sprk-c-Icon--filled
                 sprk-c-Icon--l"
                 iconName="recurring-update"
@@ -357,62 +350,32 @@ Spark components have statuses that we change to reflect their state of completi
         <td>Applied only to existing components in our library after they have been under review, updated, and re-published to the design system site within the past 6 months.</td>
     </tr>
     <tr>
-        <td class="sprk-u-Color--purple">
-            <SprkIcon className="
-                docs-c-status-New 
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="vip-filled"
-            />
-            New
+        <td>
+            <Status statusName="new"/>
         </td>
         <td>The component has been added to our library within the past 6 months.</td>
     </tr>
     <tr>
-        <td class="sprk-u-Color--black">
-            <SprkIcon className="
-                docs-c-status-Research 
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="search"
-            />
-            Research
+        <td>
+            <Status statusName="research"/>
         </td>
         <td>The component is in the design or engineering research phase.</td>
     </tr>
     <tr>
-        <td class="sprk-u-Color--black"> 
-            <SprkIcon className="
-                docs-c-status-Build 
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="settings-filled"
-            />
-            Build
+        <td> 
+            <Status statusName="build"/>
         </td>
         <td>The component is being designed by our designers or built by our engineers.</td>
     </tr>
     <tr>
-        <td class="sprk-u-Color--green"> 
-            <SprkIcon className="
-                docs-c-status-LowPriority 
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="application-filled"
-            />
-            Low Priority
+        <td> 
+            <Status statusName="lowPriority"/>
         </td>
         <td>The component has a low priority and is currently in our backlog.</td>
     </tr>
     <tr>
-        <td class="sprk-u-Color--red"> 
-            <SprkIcon className="
-                docs-c-status-HighPriority 
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="application-filled"
-            />
-            High Priority
+        <td> 
+            <Status statusName="highPriority"/>
         </td>
         <td>The component has a high priority and is currently in our backlog</td>
     </tr>

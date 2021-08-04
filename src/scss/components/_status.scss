@@ -1,5 +1,14 @@
 /* stylelint-disable selector-class-pattern */
 
+.sticky-table {
+    background-color: green;
+    background: green;
+    border-top: $sprk-masthead-border-bottom;
+    position: sticky; 
+    top: $sprk-masthead-border-bottom;
+    transition: $sprk-masthead-transition;
+}
+
 .docs-status__Ready {
     stroke: $sprk-green;
     fill: $sprk-green;
@@ -12,7 +21,7 @@
     margin-right: 10px;
 }
 
-.docs-c-status-Updated {
+.docs-status__Updated {
     stroke: $sprk-blue;
     fill: $sprk-blue;
     margin-right: 10px;

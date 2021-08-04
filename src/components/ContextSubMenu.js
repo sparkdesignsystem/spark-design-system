@@ -16,7 +16,8 @@ function ContextSubMenu({ heading, collection, directory }) {
           to={ 
             directory === 'guides'
               ? '/using-spark/guides' : directory === 'components' 
-              ? '/using-spark/component-status' : `/using-spark/${directory}/${collection[0].node.parent.name}`
+                ? '/using-spark/component-status'
+                : `/using-spark/${directory}/${collection[0].node.parent.name}`
           }
         >
           {heading}
