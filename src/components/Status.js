@@ -15,7 +15,7 @@ const Status = ({
     href,
     additionalInfo
 }) => {
-    if (statusName == "ready") {
+    if (statusName === "ready") {
         return (
             <div>
                 <SprkIcon className="
@@ -28,13 +28,13 @@ const Status = ({
                     element="a"
                     href={href}
                     variant="simple"
-                    additionalClasses="sprk-u-Color--green"
+                    additionalClasses="sprk-u-Color--green docs-link__green"
                 >
                     Ready
                 </SprkLink> 
             </div>
         );
-    } else if (statusName == "underReview") {
+    } else if (statusName === "underReview") {
         return (
             <div>
                 <SprkIcon className="
@@ -47,7 +47,7 @@ const Status = ({
                     element="a"
                     href={href}
                     variant="simple"
-                    additionalClasses="sprk-u-Color--yellow"
+                    additionalClasses="sprk-u-Color--yellow docs-link__yellow"
                 >
                     Under Review
                 </SprkLink>
@@ -57,7 +57,7 @@ const Status = ({
                 </SprkTooltip>
             </div>
         );
-    } else if (statusName == "updated") {
+    } else if (statusName === "updated") {
         return (
             <div>
                 <SprkIcon className="
@@ -70,7 +70,7 @@ const Status = ({
                     element="a"
                     href={href}
                     variant="simple"
-                    additionalClasses="sprk-u-Color--blue"
+                    additionalClasses="sprk-u-Color--blue docs-link__blue"
                 >
                     Updated
                 </SprkLink>
@@ -80,7 +80,7 @@ const Status = ({
                 </SprkTooltip>
             </div>
         );
-    } else if (statusName == "research") {
+    } else if (statusName === "research") {
         return (
             <div>
                 <SprkIcon className="
@@ -92,7 +92,7 @@ const Status = ({
                 Research
             </div>
         );
-    } else if (statusName == "build") {
+    } else if (statusName === "build") {
         return (
             <div>
                  <SprkIcon className="
@@ -104,9 +104,9 @@ const Status = ({
                 Build   
             </div>
         );
-    } else if (statusName == "lowPriority") {
+    } else if (statusName === "lowPriority") {
         return (
-            <div class="sprk-u-Color--green">
+            <div class="docs-status__lightGreen">
                 <SprkIcon className="
                     docs-status__LowPriority 
                     sprk-c-Icon--filled
@@ -116,7 +116,7 @@ const Status = ({
                 Low Priority
             </div>
         );
-    } else if (statusName == "highPriority") {
+    } else if (statusName === "highPriority") {
         return (
             <div class="sprk-u-Color--red">
                 <SprkIcon className="
@@ -128,7 +128,7 @@ const Status = ({
                 High Priority
             </div>
         );
-    } else if (statusName == "new") {
+    } else if (statusName === "new") {
         return (
             <div class="sprk-u-Color--purple">
                 <SprkIcon className="

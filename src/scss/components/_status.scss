@@ -9,6 +9,16 @@
     transition: $sprk-masthead-transition;
 }
 
+.docs-link__green:hover {
+    border-bottom: 2px solid $sprk-green;
+}
+.docs-link__yellow:hover {
+    border-bottom: 2px solid $sprk-yellow;
+}
+.docs-link__blue:hover {
+    border-bottom: 2px solid $sprk-blue;
+}
+
 .docs-status-question-mark {
     height: $sprk-icon-m;
     width: $sprk-icon-m;
@@ -61,9 +71,17 @@
 }
 
 .docs-status__LowPriority {
-    stroke: $sprk-green;
-    fill: $sprk-green;
+    stroke: #86BC3D;
+    fill: #86BC3D;
     margin-right: 10px;
+}
+
+.docs-status__lightGreen {
+    color: #487130;
+}
+
+.docs-status__Orange {
+    color: #B46417;
 }
 
 .docs-status__HighPriority {
