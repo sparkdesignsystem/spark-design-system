@@ -3,7 +3,36 @@ title: Typography
 ---
 
 import ComponentPreview from '../../../components/ComponentPreview';
-import { SprkDivider } from '@sparkdesignsystem/spark-react';
+import {
+  SprkStack,
+  SprkStackItem,
+  SprkButton,
+  SprkFlag,
+  SprkHeading,
+  SprkLink,
+  SprkInputContainer,
+  SprkLabel,
+  SprkInput,
+  SprkIcon,
+  SprkDivider,
+  SprkText,
+} from '@sparkdesignsystem/spark-react';
+
+import pageTitleDo from '../../../images/typography/pagetitles_do.png';
+import pageTitleDo2x from '../../../images/typography/pagetitles_do@2x.png';
+export const pageTitleDoSet = `${pageTitleDo} 560w, ${pageTitleDo2x} 1120w`;
+
+import pageTitleDont from '../../../images/typography/pagetitle_dont1.png';
+import pageTitleDont2x from '../../../images/typography/pagetitle_dont1@2x.png';
+export const pageTitleDontSet = `${pageTitleDont} 560w, ${pageTitleDont2x} 1120w`;
+
+import pageTitleDont2 from '../../../images/typography/pagetitle_dont2.png';
+import pageTitleDont2_2x from '../../../images/typography/pagetitle_dont2@2x.png';
+export const pageTitleDont2Set = `${pageTitleDont2} 560w, ${pageTitleDont2_2x} 1120w`;
+
+import specimen from '../../../images/typography/RocketTypeSpecimenGraphic-01.png';
+import specimen2x from '../../../images/typography/RocketTypeSpecimenGraphic-01@2x.png';
+export const specimenSet = `${specimen} 560w, ${specimen2x} 1120w`;
 
 # Typography
 
@@ -13,7 +42,15 @@ Our guidelines optimize content hierarchy by using text sizes, line heights, col
 
 Combine these header and body styles to establish content hierarchy within your project.
 
-IMAGE GOES HERE
+<img
+  srcset={specimenSet}
+  src={specimen}
+  sizes="(min-width: 1120px) 1120px,
+                (min-width: 1680px) 1680px,
+                560px"
+  alt="asdf."
+  class="sprk-u-Measure"
+/>
 
 <h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Table of Contents</h2>
 <ul class="sprk-b-List sprk-b-List--bare">
@@ -293,11 +330,105 @@ Use [Display Two](display-two) to style level 2, an inner content page, or below
   hasReact
   hasAngular
 />
+
 <div class="sprk-u-Measure">
   <a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
     Back to Table of Contents
   </a>
 </div>
+
+<SprkFlag
+  additionalClasses="sprk-o-Flag--middle sprk-u-mtl sprk-u-pvm"
+  media={
+    <SprkIcon
+      iconName="check-mark"
+      additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--green"
+    />
+  }
+>
+  <SprkHeading element="span" variant="displayFour">
+    Do
+  </SprkHeading>
+</SprkFlag>
+
+<img
+  srcset={pageTitleDoSet}
+  src={pageTitleDo}
+  sizes="(min-width: 1120px) 1120px,
+                (min-width: 1680px) 1680px,
+                560px"
+  alt="asdf."
+  class="sprk-u-Measure"
+/>
+
+<SprkText
+  variant="bodyTwo"
+  additionalClasses="sprk-u-Measure sprk-u-mvm"
+>
+  Use page titles at the top left of the page, and left-align the headline with the red line.
+</SprkText>
+
+<SprkFlag
+  additionalClasses="sprk-o-Flag--middle sprk-u-mtl sprk-u-pvm"
+  media={
+    <SprkIcon
+      iconName="close-circle"
+      additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--orange"
+    />
+  }
+>
+  <SprkHeading element="span" variant="displayFour">
+    Don't
+  </SprkHeading>
+</SprkFlag>
+
+<SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-mbl">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
+    <SprkStack>
+      <SprkStackItem additionalClasses="sprk-u-mbm">
+        <img
+          srcset={pageTitleDontSet}
+          src={pageTitleDont}
+          sizes="(min-width: 1120px) 1120px,
+                (min-width: 1680px) 1680px,
+                560px"
+          alt="asdf."
+        />
+      </SprkStackItem>
+      <SprkStackItem>
+        <SprkText
+          variant="bodyTwo"
+          additionalClasses="sprk-u-Measure sprk-u-mbm"
+        >
+          Do not center-align page titles.
+        </SprkText>
+      </SprkStackItem>
+    </SprkStack>
+
+  </SprkStackItem>
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
+    <SprkStack>
+      <SprkStackItem additionalClasses="sprk-u-mbm">
+        <img
+          srcset={pageTitleDont2Set}
+          src={pageTitleDont2}
+          sizes="(min-width: 1120px) 1120px,
+                    (min-width: 1680px) 1680px,
+                    560px"
+          alt="asdf."
+        />
+      </SprkStackItem>
+      <SprkStackItem>
+        <SprkText
+          variant="bodyTwo"
+          additionalClasses="sprk-u-Measure sprk-u-mbm"
+        >
+          To maintain content hierarchy, do not use multiple page titles on one page.
+        </SprkText>
+      </SprkStackItem>
+    </SprkStack>
+  </SprkStackItem>
+</SprkStack>
 
 ### Display One
 
