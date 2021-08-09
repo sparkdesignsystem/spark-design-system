@@ -43,39 +43,9 @@ correct type classes applied.
 };
 
 export const pageTitle = () => `
-  <h1 class="sprk-b-TypeDisplayOne sprk-u-mbl">
-    DisplayOne The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+  <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">
+    The Quick Brown Fox Jumps Over the Lazy Dog
   </h1>
-  <h2 class="sprk-b-TypeDisplayTwo sprk-u-mbl">
-    DisplayTwo The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </h2>
-  <h3 class="sprk-b-TypeDisplayThree sprk-u-mbl">
-    DisplayThree The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </h3>
-  <h4 class="sprk-b-TypeDisplayFour sprk-u-mbl">
-    DisplayFour The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </h4>
-  <h5 class="sprk-b-TypeDisplayFive sprk-u-mbl">
-    DisplayFive The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </h5>
-  <h6 class="sprk-b-TypeDisplaySix sprk-u-mbl">
-    DisplaySix The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </h6>
-  <h6 class="sprk-b-TypeDisplaySeven sprk-u-mbl">
-    DisplaySeven The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </h6>
-  <p class="sprk-b-TypeBodyOne sprk-u-mbl">
-    BodyOne The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </p>
-  <p class="sprk-b-TypeBodyTwo sprk-u-mbl">
-    BodyTwo The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </p>
-  <p class="sprk-b-TypeBodyThree sprk-u-mbl">
-    BodyThree The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </p>
-  <p class="sprk-b-TypeBodyFour sprk-u-mbl">
-    BodyFour The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
-  </p>
 `;
 
 pageTitle.story = {
@@ -84,7 +54,7 @@ pageTitle.story = {
 
 export const displayOne = () => `
   <h1 class="sprk-b-TypeDisplayOne">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    The Quick Brown Fox Jumps Over the Lazy Dog
   </h1>
 `;
 
@@ -94,7 +64,7 @@ displayOne.story = {
 
 export const displayTwo = () => `
   <h1 class="sprk-b-TypeDisplayTwo">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    The Quick Brown Fox Jumps Over the Lazy Dog
   </h1>
 `;
 
@@ -104,7 +74,7 @@ displayTwo.story = {
 
 export const displayThree = () => `
   <h2 class="sprk-b-TypeDisplayThree">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    The Quick Brown Fox Jumps Over the Lazy Dog
   </h2>
 `;
 
@@ -114,7 +84,7 @@ displayThree.story = {
 
 export const displayFour = () => `
   <h3 class="sprk-b-TypeDisplayFour">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    The Quick Brown Fox Jumps Over the Lazy Dog
   </h3>
 `;
 
@@ -124,7 +94,7 @@ displayFour.story = {
 
 export const displayFive = () => `
   <h4 class="sprk-b-TypeDisplayFive">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    The Quick Brown Fox Jumps Over the Lazy Dog
   </h4>
 `;
 
@@ -134,7 +104,7 @@ displayFive.story = {
 
 export const displaySix = () => `
   <h5 class="sprk-b-TypeDisplaySix">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    The Quick Brown Fox Jumps Over the Lazy Dog
   </h5>
 `;
 
@@ -144,7 +114,7 @@ displaySix.story = {
 
 export const displaySeven = () => `
   <h6 class="sprk-b-TypeDisplaySeven">
-    The spectacle before us was indeed sublime. Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.
+    The Quick Brown Fox Jumps Over the Lazy Dog
   </h6>
 `;
 
