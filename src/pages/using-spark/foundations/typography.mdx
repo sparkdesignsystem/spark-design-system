@@ -37,19 +37,20 @@ Our guidelines optimize content hierarchy by using text sizes, line heights, col
 
 Combine these header and body styles to establish content hierarchy within your project.
 
-<img
-  srcset={specimenSet}
-  src={specimen}
-  sizes="(min-width: 1120px) 1120px,
-                (min-width: 1680px) 1680px,
-                560px"
-  alt="Rocket Sans, created by Monotype in 2018. Our proprietary typeface,
-        Rocket Sans, is crisp, expressive, bold and confident. It's modern,
-        aligned to our brand ethos and approachable, without sacrificing
-        legibility and scalability. We use this custom built typeface for
-        all of our brand expressions."
-  class="sprk-u-Measure"
-/>
+<div class="sprk-u-Measure">
+  <img
+    srcset={specimenSet}
+    src={specimen}
+    sizes="(min-width: 1120px) 1120px,
+              (min-width: 1680px) 1680px,
+              560px"
+    alt="Rocket Sans, created by Monotype in 2018. Our proprietary typeface,
+      Rocket Sans, is crisp, expressive, bold and confident. It's modern,
+      aligned to our brand ethos and approachable, without sacrificing
+      legibility and scalability. We use this custom built typeface for
+      all of our brand expressions."
+  />
+</div>
 
 <h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Table of Contents</h2>
 <ul class="sprk-b-List sprk-b-List--bare">
@@ -350,21 +351,20 @@ Use [Display Two](display-two) to style level 2, an inner content page, or below
   </SprkHeading>
 </SprkFlag>
 
-<img
-  srcset={pageTitleDoSet}
-  src={pageTitleDo}
-  sizes="(min-width: 1120px) 1120px,
-                (min-width: 1680px) 1680px,
-                560px"
-  alt="A page layout featuring a primary and secondary heading. Each headline is left-aligned."
-  class="sprk-u-Measure"
-/>
+<div class="sprk-u-Measure">
+  <img
+    srcset={pageTitleDoSet}
+    src={pageTitleDo}
+    sizes="(min-width: 1120px) 1120px,
+                  (min-width: 1680px) 1680px,
+                  560px"
+    alt="A page layout featuring a primary and secondary heading. Each headline is left-aligned."
+  />
+</div>
 
-<SprkText
-  variant="bodyTwo"
-  additionalClasses="sprk-u-Measure sprk-u-mvm"
->
-  Use page titles at the top left of the page, and left-align the headline with the red line.
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-Measure sprk-u-mvm">
+  Use page titles at the top left of the page, and left-align the headline with
+  the red line.
 </SprkText>
 
 <SprkFlag
