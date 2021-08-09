@@ -45,6 +45,7 @@
   float: right;
   margin-top: $sprk-select-arrow-offset-y;
   margin-right: $sprk-select-arrow-offset-x;
+  position: $sprk-select-arrow-position;
 }
 
 .sprk-b-Select[disabled] {
