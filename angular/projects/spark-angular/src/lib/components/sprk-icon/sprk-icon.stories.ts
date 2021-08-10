@@ -30,8 +30,7 @@ export default {
         component: `
 ${markdownDocumentationLinkBuilder('icon')}
 
-The icons in Spark are the property of Quicken
-Loans and are not provided directly in our packages. You
+The icons in Spark are the property of Rocket Mortgage and are not provided directly in our packages. You
 will need to include the Icon yourself.
 
 #### Accessibility

@@ -2,7 +2,7 @@
   "name": "@sparkdesignsystem/spark-angular",
   "description": "A collection of Spark Design System components in Angular 6+",
   "version": "14.0.0",
-  "author": "Quicken Loans",
+  "author": "Rocket Mortgage",
   "license": "MIT",
   "scripts": {
     "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",

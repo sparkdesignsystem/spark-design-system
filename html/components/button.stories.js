@@ -47,7 +47,9 @@ after Spark's JavaScript functions run.
   spinning. Defaults to an empty string.
   - \`data-sprk-spinner-variant="primary|secondary|dark"\` – The variant
   for the spinning icon.
-
+  - \`data-sprk-spinner="is-not-disabled"\` – This is identical to
+  \`data-sprk-spinner="click"\` except the button will not be disabled when it
+  is clicked. This should be used for buttons that submit a form.
 
 ###### Example Spinner Implementation
 \`\`\`

@@ -69,7 +69,7 @@ const connectIcons = {
       element: 'a',
     },
     {
-      href: 'mailto:sparkdesignsystem@quickenloans.com',
+      href: 'mailto:sparkdesignsystem@rocketmortgage.com',
       name: 'email',
       screenReaderText: 'Spark Email',
       element: 'a',
@@ -81,7 +81,7 @@ const date = new Date();
 const year = date.getFullYear();
 const paragraphs = [
   {
-    text: `©2000 – ${year} Quicken Loans LLC. All rights reserved.`,
+    text: `©2000 – ${year} Rocket Mortgage LLC. All rights reserved.`,
   },
 ];
 
