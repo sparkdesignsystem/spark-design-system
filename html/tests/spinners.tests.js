@@ -15,7 +15,7 @@ describe('spinners init', () => {
     sinon.spy(document, 'querySelectorAll');
     spinners();
     expect(document.querySelectorAll.getCall(0).args[0]).toBe(
-      '[data-sprk-spinner="click"]',
+      '[data-sprk-spinner]',
     );
   });
 });
@@ -285,5 +285,49 @@ describe('cancelSpinning tests', () => {
     expect(
       spinnerContainer.classList.contains('sprk-c-Button--has-spinner'),
     ).toBe(false);
+  });
+});
+
+describe('spinners with is-not-disabled', () => {
+  let spinnerContainer;
+
+  beforeEach(() => {
+    spinnerContainer = document.createElement('button');
+    spinnerContainer.setAttribute('data-sprk-spinner', 'is-not-disabled');
+    spinnerContainer.textContent = 'Submit';
+
+    sinon.spy(spinnerContainer, 'addEventListener');
+    sinon.spy(spinnerContainer, 'setAttribute');
+
+    document.body.append(spinnerContainer);
+    spinners();
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = '';
+    spinnerContainer.addEventListener.restore();
+    spinnerContainer.setAttribute.restore();
+  });
+
+  it('should start spinning and not be disabled if its clicked', () => {
+    spinnerContainer.click();
+
+    expect(
+      spinnerContainer
+        .querySelector('div')
+        .classList.contains('sprk-c-Spinner--circle'),
+    ).toBe(true);
+
+    expect(spinnerContainer.hasAttribute('disabled')).toBe(false);
+  });
+
+  it('should not start spinning if its already spinning', () => {
+    spinnerContainer.setAttribute('data-sprk-has-spinner', 'true');
+
+    spinnerContainer.click();
+
+    expect(spinnerContainer.querySelector('div')).toBe(null);
+
+    expect(spinnerContainer.hasAttribute('disabled')).toBe(false);
   });
 });

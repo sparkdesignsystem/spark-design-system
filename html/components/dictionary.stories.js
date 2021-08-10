@@ -24,7 +24,7 @@ export const defaultStory = () =>
         sprk-b-Label
         sprk-b-Label--no-input">Email Address</dt>
       <dd class="
-        sprk-c-Dictionary__value">sparkdesignsystem@quickenloans.com</dd>
+        sprk-c-Dictionary__value">sparkdesignsystem@rocketmortgage.com</dd>
     </div>
     <div class="sprk-c-Dictionary__keyvaluepair">
       <dt class="
@@ -81,7 +81,7 @@ export const striped = () => `
             sprk-b-Label
             sprk-b-Label--no-input">Email Address</dt>
           <dd class="
-            sprk-c-Dictionary__value">sparkdesignsystem@quickenloans.com</dd>
+            sprk-c-Dictionary__value">sparkdesignsystem@rocketmortgage.com</dd>
         </div>
         <div class="sprk-c-Dictionary__keyvaluepair">
           <dt class="

@@ -60,7 +60,7 @@ export const defaultStory = () => {
             <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
               <div class="sprk-o-Stack__item">
                 <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.app/rocket-by-ql-white.svg" alt="Rocket Mortgage by Quicken Loans Logo">
+                  <img src="https://spark-assets.netlify.app/rocket.svg" alt="Rocket Mortgage Logo">
                 </a>
               </div>
 
@@ -108,24 +108,6 @@ export const defaultStory = () => {
                 ">
                 Get a real estate agent handpicked for you and
                 search the latest home listings
-              </p>
-            </div>
-
-            <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
-              <div class="sprk-o-Stack__item">
-                <a class="sprk-b-Link sprk-b-Link--plain" href="#nogo">
-                  <img src="https://spark-assets.netlify.app/rocket-hq-white.svg" alt="Rocket HQ Logo">
-                </a>
-              </div>
-
-              <p
-                class="
-                  sprk-o-Stack__item
-                  sprk-b-TypeBodyFour
-                  sprk-c-Footer__text
-                ">
-                Access tools and articles that can help
-                you reach your financial goals
               </p>
             </div>
           </div>
