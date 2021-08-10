@@ -146,6 +146,14 @@ export const defaultStory = () => ({
             'https://spark-assets.netlify.app/rocket-homes-white.svg',
           imgAlt: 'Rocket Homes Logo',
           analyticsString: 'link-3'
+        },
+        {
+          text: 'Find and buy the perfect car or truck from thousands of vehicles, all in one marketplace',
+          href: 'https://rocketauto.com',
+          imgSrc:
+            'https://spark-assets.netlify.app/rocket_auto.svg',
+          imgAlt: 'Rocket Auto Logo',
+          analyticsString: 'link-4'
         }
       ]"
 
