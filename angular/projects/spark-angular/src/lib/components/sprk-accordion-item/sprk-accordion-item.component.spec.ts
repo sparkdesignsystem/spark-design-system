@@ -109,31 +109,6 @@ describe('SprkAccordionItemComponent', () => {
     expect(component.isOpen).toEqual(false);
   });
 
-  // TODO - Remove as part of Issue 3597
-  it('should set the heading to title', () => {
-    component.title = 'This is a title';
-    fixture.detectChanges();
-    expect(accordionHeadingElement.textContent.trim()).toEqual(
-      'This is a title',
-    );
-  });
-
-  it('should set the heading to heading', () => {
-    component.heading = 'This is a title';
-    fixture.detectChanges();
-    expect(accordionHeadingElement.textContent.trim()).toEqual(
-      'This is a title',
-    );
-  });
-
-  // TODO - Remove as part of Issue 3597
-  it('should prefer heading over title', () => {
-    component.heading = 'heading';
-    component.title = 'title';
-    fixture.detectChanges();
-    expect(accordionHeadingElement.textContent.trim()).toEqual('heading');
-  });
-
   it('details should not be present if isOpen is false', () => {
     component.isOpen = false;
     fixture.detectChanges();
