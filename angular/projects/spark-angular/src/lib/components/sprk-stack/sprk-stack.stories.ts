@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkStackModule } from '../sprk-stack/sprk-stack.module';
 import { SprkStackItemModule } from '../../directives/sprk-stack-item/sprk-stack-item.module';
 import { SprkStackItemDirective } from '../../directives/sprk-stack-item/sprk-stack-item.directive';
@@ -10,17 +12,24 @@ export default {
   title: 'Components/Stack',
   component: SprkStackComponent,
   decorators: [
-    storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box sb-decorate">${ storyContent }<div>`
-      )
-    )
+    moduleMetadata({
+      imports: [SprkStackModule, SprkStackItemModule, SprkTextModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box sb-decorate">${story}</div>`,
+    ),
   ],
   parameters: {
     subcomponents: {
       SprkStackItemDirective,
     },
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 180,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('stack')}
 - The \`itemSpacing\` @Input is not compatible with
 stack items with specific-column classes such
@@ -28,40 +37,27 @@ as \`sprk-o-Stack__item--half@xs\`. Use padding
 instead. See the "Stack/Split - Two Column With Padding"
 for an example.
 `,
-    docs: { iframeHeight: 180 },
+      },
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkStackModule,
-    SprkStackItemModule,
-    SprkTextModule,
-  ],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack>
       <div sprkStackItem></div>
       <div sprkStackItem></div>
     </sprk-stack>
-  `
+  `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplit = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack
       itemSpacing='medium'
@@ -73,18 +69,13 @@ export const stackSplit = () => ({
   `,
 });
 
-stackSplit.story = {
-  name: 'Stack/Split - Spaced Items',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplit.storyName = 'Stack/Split - Spaced Items';
+
+defaultStory.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitTwoCol = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt='tiny'>
       <div
@@ -99,18 +90,13 @@ export const stackSplitTwoCol = () => ({
   `,
 });
 
-stackSplitTwoCol.story = {
-  name: 'Stack/Split - Two Column',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitTwoCol.storyName = 'Stack/Split - Two Column';
+
+stackSplitTwoCol.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitTwoColWithPadding = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt='tiny'>
       <div
@@ -133,18 +119,13 @@ export const stackSplitTwoColWithPadding = () => ({
   `,
 });
 
-stackSplitTwoColWithPadding.story = {
-  name: 'Stack/Split - Two Column With Padding',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitTwoColWithPadding.storyName = 'Stack/Split - Two Column With Padding';
+
+stackSplitTwoColWithPadding.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitThreeCol = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -163,18 +144,13 @@ export const stackSplitThreeCol = () => ({
   `,
 });
 
-stackSplitThreeCol.story = {
-  name: 'Stack/Split - Three Column',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitThreeCol.storyName = 'Stack/Split - Three Column';
+
+stackSplitThreeCol.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitFourCol = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -197,18 +173,13 @@ export const stackSplitFourCol = () => ({
   `,
 });
 
-stackSplitFourCol.story = {
-  name: 'Stack/Split - Four Column',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitFourCol.storyName = 'Stack/Split - Four Column';
+
+stackSplitFourCol.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitFiveCol = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -235,18 +206,13 @@ export const stackSplitFiveCol = () => ({
   `,
 });
 
-stackSplitFiveCol.story = {
-  name: 'Stack/Split - Five Column',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitFiveCol.storyName = 'Stack/Split - Five Column';
+
+stackSplitFiveCol.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitSixCol = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -277,18 +243,13 @@ export const stackSplitSixCol = () => ({
   `,
 });
 
-stackSplitSixCol.story = {
-  name: 'Stack/Split - Six Column',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitSixCol.storyName = 'Stack/Split - Six Column';
+
+stackSplitSixCol.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitLayoutThreeFourths = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -303,18 +264,13 @@ export const stackSplitLayoutThreeFourths = () => ({
   `,
 });
 
-stackSplitLayoutThreeFourths.story = {
-  name: 'Stack/Split - 75/25',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitLayoutThreeFourths.storyName = 'Stack/Split - 75/25';
+
+stackSplitLayoutThreeFourths.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitLayoutThreeFifths = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -329,18 +285,13 @@ export const stackSplitLayoutThreeFifths = () => ({
   `,
 });
 
-stackSplitLayoutThreeFifths.story = {
-  name: 'Stack/Split - 60/40',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitLayoutThreeFifths.storyName = 'Stack/Split - 60/40';
+
+stackSplitLayoutThreeFifths.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitLayoutThreeTenths = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
@@ -355,41 +306,38 @@ export const stackSplitLayoutThreeTenths = () => ({
   `,
 });
 
-stackSplitLayoutThreeTenths.story = {
-  name: 'Stack/Split - 30/70',
-  parameters: {
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitLayoutThreeTenths.storyName = 'Stack/Split - 30/70';
+
+stackSplitLayoutThreeTenths.parameters = {
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };
 
 export const stackSplitLayoutMixed = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-stack splitAt="tiny">
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--fourth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--fourth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           fourth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--half@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--half@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           half
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--fourth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--fourth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           fourth
         </p>
       </div>
@@ -398,33 +346,36 @@ export const stackSplitLayoutMixed = () => ({
     <sprk-stack splitAt="tiny">
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--sixth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           sixth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--sixth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           sixth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--sixth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--sixth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           sixth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--flex@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           flex
         </p>
       </div>
@@ -433,33 +384,36 @@ export const stackSplitLayoutMixed = () => ({
     <sprk-stack splitAt="tiny">
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--two-fifths@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--two-fifths@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           two-fifths
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--fifth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           fifth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--fifth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           fifth
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--fifth@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--fifth@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           fifth
         </p>
       </div>
@@ -473,27 +427,29 @@ export const stackSplitLayoutMixed = () => ({
         <sprk-stack splitAt="tiny">
           <div
             sprkStackItem
-            class="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter"
+            class="sprk-o-Stack sprk-o-Stack__item--flex@xs sprk-o-Stack--center-all"
           >
-            <p class="sprk-b-TypeBodyOne">
+            <p sprkStackItem class="sprk-b-TypeBodyOne">
               Nested Item (flex)
             </p>
           </div>
+
           <div
             sprkStackItem
-            class="sprk-o-Stack__item--flex@xs sprk-u-AbsoluteCenter"
+            class="sprk-o-Stack sprk-o-Stack__item--flex@xs sprk-o-Stack--center-all"
           >
-            <p class="sprk-b-TypeBodyOne">
+            <p sprkStackItem class="sprk-b-TypeBodyOne">
               Nested Item (flex)
             </p>
           </div>
         </sprk-stack>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--half@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--half@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           half
         </p>
       </div>
@@ -502,17 +458,18 @@ export const stackSplitLayoutMixed = () => ({
     <sprk-stack splitAt="tiny">
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--two-fifths@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--two-fifths@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           two-fifths
         </p>
       </div>
+
       <div
         sprkStackItem
-        class="sprk-o-Stack__item--three-fifths@xs sprk-u-AbsoluteCenter"
+        class="sprk-o-Stack sprk-o-Stack__item--three-fifths@xs sprk-o-Stack--center-all"
       >
-        <p class="sprk-b-TypeBodyOne">
+        <p sprkStackItem class="sprk-b-TypeBodyOne">
           three-fifths
         </p>
       </div>
@@ -520,13 +477,9 @@ export const stackSplitLayoutMixed = () => ({
   `,
 });
 
-stackSplitLayoutMixed.story = {
-  name: 'Stack/Split - Mixed Column',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-stack.component',
-      'sprk-stack-item.directive',
-    ],
-  },
+stackSplitLayoutMixed.storyName = 'Stack/Split - Mixed Column';
+
+stackSplitLayoutMixed.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: ['sprk-stack.component', 'sprk-stack-item.directive'],
 };

@@ -18,6 +18,51 @@
       "file": "settings",
       "themable": true
     },
+    "awards-media-margin": {
+      "comment": "Margin setting for the awards media section in the Footer.",
+      "value": "0 0 {space.m.value} 0",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "global-links-padding": {
+      "comment": "Padding setting for the global links section in the Footer.",
+      "value": "{space.m.value} {space.h.value} {space.m.value} {space.m.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "local-links-padding": {
+      "comment": "Padding setting for the local links section in the Footer.",
+      "value": "{space.m.value} {space.misc.a.value} {space.m.value} {space.m.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "awards-padding": {
+      "comment": "Padding setting for the awards section in the Footer.",
+      "value": "{space.misc.b.value} {space.m.value} {space.m.value} {space.m.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "divider-margin": {
+      "comment": "Margin value for the Divider in the Footer.",
+      "value": "0 {space.m.value} 0 {space.m.value}",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "link": {
       "color": {
         "comment": "Link color on the Footer.",

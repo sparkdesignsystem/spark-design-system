@@ -1,24 +1,31 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkBoxDirective } from './sprk-box.directive';
 import { SprkBoxModule } from './sprk-box.module';
 
 export default {
   title: 'Components/Box',
   component: SprkBoxDirective,
-  decorators: [storyWrapper(storyContent => `<div class="sprk-o-Box sb-decorate">${storyContent}<div>`)],
-  parameters: {
-    docs: { iframeHeight: 100 }
-  }
-};
-
-const modules = {
-  imports: [
-    SprkBoxModule,
+  decorators: [
+    moduleMetadata({
+      imports: [SprkBoxModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box sb-decorate">${story}</div>`,
+    ),
   ],
-};
+  parameters: {
+    docs: {
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 100,
+    },
+  },
+} as Meta;
 
-export const defaultBox = () => ({
-  moduleMetadata: modules,
+export const defaultStory = () => ({
   template: `
     <div sprkBox>
       Box
@@ -26,11 +33,8 @@ export const defaultBox = () => ({
   `,
 });
 
-defaultBox.story = {
-  name: 'Default',
-  parameters: {
-    jest: [
-      'sprk-box.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-box.directive'],
 };

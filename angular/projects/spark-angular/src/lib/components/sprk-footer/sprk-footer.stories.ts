@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkFooterModule } from './sprk-footer.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkFooterComponent } from './sprk-footer.component';
@@ -9,34 +11,43 @@ import { APP_BASE_HREF } from '@angular/common';
 export default {
   title: 'Components/Footer',
   component: SprkFooterComponent,
-  decorators: [storyWrapper((storyContent) => `<div>${storyContent}<div>`)],
+  decorators: [
+    moduleMetadata({
+      imports: [
+        SprkFooterModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot([
+          {
+            path: 'iframe.html',
+            component: SprkFooterComponent,
+          },
+        ]),
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
+    ),
+  ],
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('footer')}
 - The Footer is a navigation landmark for
 accessibility tools. The attribute \`role=”contentinfo”\`
 must be present.
   `,
-    docs: { iframeHeight: 800 },
-  },
-};
-
-const modules = {
-  imports: [
-    SprkFooterModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot([
-      {
-        path: 'iframe.html',
-        component: SprkFooterComponent,
       },
-    ]),
-  ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
-};
+      iframeHeight: 800,
+    },
+  },
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-footer
       idString="footer-1"
@@ -101,10 +112,6 @@ export const defaultStory = () => ({
             },
             {
               text: 'Opt Out',
-              href: '#nogo'
-            },
-            {
-              text: 'About That',
               href: '#nogo'
             },
             {
@@ -204,7 +211,7 @@ export const defaultStory = () => ({
         }
       ]"
 
-      awardsHeading="Awards"
+      awardsHeading="Awards Heading Title"
       [awards]="[
         {
           href: '#nogo',
@@ -267,9 +274,8 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-footer.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-footer.component'],
 };

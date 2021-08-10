@@ -1,21 +1,33 @@
 import { SprkIconModule } from './sprk-icon.module';
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkIconComponent } from './sprk-icon.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { getIcons, attachIcons } from '../../../../../../../storybook-utilities/icon-utilities/icon-name-util.js';
+import {
+  getIcons,
+  attachIcons,
+} from '../../../../../../../storybook-utilities/icon-utilities/icon-name-util.js';
 
 export default {
   title: 'Components/Icons',
   component: SprkIconComponent,
   decorators: [
-    storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+    moduleMetadata({
+      imports: [SprkIconModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
+    ),
   ],
   parameters: {
-    info: `
+    docs: {
+      source: {
+        type: 'code',
+      },
+      inlineStories: false,
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('icon')}
 
 The icons in Spark are the property of Rocket Mortgage and are not provided directly in our packages. You
@@ -40,18 +52,13 @@ text.
 - All Icons contain a title attribute that screen readers will use to
 communicate the Icon’s meaning.
 `,
-    docs: { iframeHeight: 90 },
+      },
+      iframeHeight: 90,
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkIconModule,
-  ],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon
       iconType="access"
@@ -61,11 +68,10 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-icon.component'],
-  }
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-icon.component'],
 };
 
 export const gallery = () => {
@@ -75,22 +81,20 @@ export const gallery = () => {
     });
   }
 
-  setTimeout(() => { attachIcons(getIcons()); }, 100);
+  setTimeout(() => {
+    attachIcons(getIcons());
+  }, 100);
 
   return {
-    moduleMetadata: modules,
     template: `
       <ul class="sbdocs-gallery-container sprk-o-Stack sprk-o-Stack--split@xs"></ul>
     `,
   };
 };
 
-gallery.story = {
-  name: 'Gallery',
-  parameters: {
-    docs: {
-      iframeHeight: 1000
-    },
-    jest: ['sprk-icon.component'],
-  }
+gallery.parameters = {
+  docs: {
+    iframeHeight: 1000,
+  },
+  jest: ['sprk-icon.component'],
 };

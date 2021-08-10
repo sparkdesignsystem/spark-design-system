@@ -43,6 +43,12 @@ describe('SprkModalComponent', () => {
     expect(modalElement.classList.contains('sprk-c-Modal')).toEqual(true);
   });
 
+  it('should add additionalClasses if present', () => {
+    component.additionalClasses = 'test';
+    fixture.detectChanges();
+    expect(modalElement.classList.contains('test')).toEqual(true);
+  });
+
   it('should not show the modal when isVisible is false', () => {
     component.isVisible = false;
     fixture.detectChanges();

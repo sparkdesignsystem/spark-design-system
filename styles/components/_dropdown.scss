@@ -5,7 +5,6 @@
 ////
 /// @group dropdown
 ////
-
 .sprk-c-Dropdown {
   background-color: $sprk-white;
   border: $sprk-dropdown-border;
@@ -18,6 +17,10 @@
   margin-top: $sprk-space-xs;
   width: auto;
   z-index: $sprk-layer-height-m;
+}
+
+.sprk-c-Dropdown--is-hidden {
+  display: $sprk-dropdown-display-hidden;
 }
 
 .sprk-c-Dropdown__header {
@@ -81,6 +84,14 @@
   &:focus {
     color: $sprk-dropdown-trigger-color-active;
   }
+}
+
+.sprk-c-Dropdown__trigger--informational {
+  margin: $sprk-dropdown-trigger-informational-margin;
+}
+
+.sprk-c-Dropdown__trigger-icon {
+  margin: $sprk-dropdown-trigger-icon-margin;
 }
 
 /// Adds styles to indicate that the dropdown

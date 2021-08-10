@@ -21,13 +21,21 @@ class SprkFooterAwards extends Component {
       <div className="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
         <h3
           className="
-          sprk-o-Stack__item sprk-b-TypeBodyOne sprk-c-Footer__text"
+            sprk-o-Stack__item
+            sprk-b-TypeBodyOne
+            sprk-c-Footer__text
+          "
         >
           {awards.heading}
         </h3>
         <div
-          className="sprk-o-Stack__item
-          sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@s sprk-u-mbm"
+          className="
+            sprk-o-Stack__item
+            sprk-o-Stack
+            sprk-o-Stack--medium
+            sprk-o-Stack--split@s
+            sprk-c-Footer__awards
+          "
         >
           {awardsImagesHasIds.map((image) => {
             const {
@@ -64,7 +72,8 @@ class SprkFooterAwards extends Component {
         >
           <p
             className="
-            sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs sprk-c-Footer__text"
+              sprk-b-TypeBodyFour sprk-c-Footer__text
+            "
           >
             {awards.disclaimerText}
           </p>

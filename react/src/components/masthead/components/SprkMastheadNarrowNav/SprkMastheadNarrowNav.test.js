@@ -17,7 +17,7 @@ describe('SprkMastheadNarrowNav:', () => {
   it('should render the nav if isOpen is true', () => {
     const links = [{ text: 'Item 1' }];
     const wrapper = mount(<SprkMastheadNarrowNav isOpen links={links} />);
-    expect(wrapper.find('.sprk-c-Masthead__narrow-nav').length).toBe(1);
+    expect(wrapper.find('.sprk-c-Masthead__nav-collapsible').length).toBe(1);
   });
 
   it('should render the selector if selector (and items) are defined', () => {

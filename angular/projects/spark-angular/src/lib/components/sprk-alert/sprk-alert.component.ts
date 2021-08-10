@@ -118,13 +118,13 @@ export class SprkAlertComponent implements OnChanges {
    * (i.e. `chevron-down`, instead of `chevron down`).
    */
   @Input()
-  dismissIconName: string = 'close';
+  dismissIconName = 'close';
   /**
    * If `true`, the Alert will be shown.
    * If `false`, the Alert will not be shown.
    */
   @Input()
-  isVisible: boolean = true;
+  isVisible = true;
   /**
    * Accepts a function to run when the
    * Alert is dismissed.

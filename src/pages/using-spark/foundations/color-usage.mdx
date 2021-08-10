@@ -60,23 +60,27 @@ import {
   SprkFlag,
   SprkHeading,
   SprkLink,
-  SprkTextInput,
-  SprkCard,
+  SprkInputContainer,
+  SprkLabel,
+  SprkInput,
   SprkIcon,
   SprkDivider,
+  SprkText,
 } from '@sparkdesignsystem/spark-react';
 
 
-<h1 class="docs-b-h1 sprk-b-PageTitle sprk-b-TypeDisplayOne sprk-u-mbl sprk-u-Measure">
+<SprkHeading isPageTitle variant="displayOne" additionalClasses="docs-b-h1 sprk-u-mbl sprk-u-Measure">
   Color Usage
-</h1>
+</SprkHeading>
 <blockquote class="docs-b-Blockquote sprk-u-mvl sprk-u-Measure">
   We've upgraded to the Orbit color palette in August 2020!
   Review this guide for new color guidelines.
 </blockquote>
 
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
-<h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Table of Contents</h2>
+<SprkHeading element="h2" variant="displayTwo" additionalClasses="docs-b-h2 sprk-u-mbl sprk-u-Measure">
+  Table of Contents
+</SprkHeading>
 <ul>
   <li>
     <a href="#our-color-story">
@@ -122,13 +126,15 @@ import {
   </li>
 </ul>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
-<h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Our Color Story</h2>
-<p>
+<SprkHeading element="h2" variant="displayTwo" additionalClasses="docs-b-h2 sprk-u-mbl sprk-u-Measure">
+  Our Color Story
+</SprkHeading>
+<SprkText additionalClasses="sprk-u-Measure sprk-u-mbm">
   The Orbit palette conveys the tapestry of colors seen from a rocket as it ascends into space. Our color choices capture the evolving hue and brilliance of the earth's atmospheres.
-</p>
-<p>
+</SprkText>
+<SprkText additionalClasses="sprk-u-Measure">
   We've employed color psychology and user testing to develop this palette. It's built for modern, human-centered, and accessible experiences.
-</p>
+</SprkText>
 <blockquote class="docs-b-Blockquote sprk-u-mvl sprk-u-Measure">
   Our color usage guidelines follow <a href="/using-spark/foundations/color-accessibility">WCAG 2.1 (Level AA)</a> contrast standards.
 </blockquote>
@@ -138,30 +144,33 @@ import {
   </a>
 </div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
-<h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">How to Apply Color</h2>
-<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+<SprkHeading element="h2" variant="displayTwo" additionalClasses="docs-b-h2 sprk-u-mbl sprk-u-Measure">
+  How to Apply Color
+</SprkHeading>
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbl sprk-u-Measure">
   When observing the amounts of colors used in a project, it should look similar to the color bar below.
-</p>
-<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+</SprkText>
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbl sprk-u-Measure">
   A well balanced color proportion leans towards primarily white backgrounds with black text, followed by intentionally placed interaction and brand colors.
-</p>
+</SprkText>
 <img
   srcset={howToApplyColorProportionallySet}
   src={howToApplyColorProportionally}
   sizes="550px"
   alt="Scale showing correct balance and proportions when using color."/>
-<h3>Rocket Red</h3>
+<SprkHeading element="h3" variant="displayThree" additionalClasses="docs-b-h3 sprk-u-mbm sprk-u-Measure">
+  Rocket Red
+</SprkHeading>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
   <ColorSwatch isCompact variableName="sprk-red" />
   <ColorSwatch isCompact variableName="sprk-deep-red" />
   <ColorSwatch isCompact variableName="sprk-mid-red" />
 </ColorSwatchGrid>
-<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbl sprk-u-Measure">
   Use Rocket Red for primary actions, like buttons and key elements. This primary color highlights the main actions on the page.
-</p>
+</SprkText>
 <div class="sprk-u-mbh sprk-u-mtl">
   <SprkButton additionalClasses="sprk-u-mrm">Button</SprkButton>
-  <SprkButton variant="secondary">Button</SprkButton>
 </div>
 <SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-mbl">
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
@@ -188,12 +197,12 @@ import {
           sizes="(min-width: 1120px) 1120px,
                 (min-width: 1680px) 1680px,
                 560px"
-          alt="Webpage with a Rocket Red primary button that is paired with a Orbit Purple secondary button."/>
+          alt="Webpage with a Rocket Red primary button."/>
       </SprkStackItem>
       <SprkStackItem>
-        <p>
+        <SprkText variant="displayTwo" additionalClasses="sprk-u-Measure sprk-u-mbm">
           After placing a primary button, use secondary or tertiary buttons to maintain a clear hierarchy between actions.
-        </p>
+        </SprkText>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
@@ -224,9 +233,9 @@ import {
           alt="Webpage with two Rocket Red primary buttons next to each other."/>
       </SprkStackItem>
       <SprkStackItem>
-        <p>
+        <SprkText variant="displayTwo" additionalClasses="sprk-u-Measure sprk-u-mbm">
           Overusing Rocket Red causes distraction from the main action. It's especially distracting when two primary buttons are close to each other.
-        </p>
+        </SprkText>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
@@ -237,7 +246,9 @@ import {
   </a>
 </div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
-<h3>Orbit Purple</h3>
+<SprkHeading element="h3" variant="displayThree" additionalClasses="docs-b-h3 sprk-u-mbm sprk-u-Measure">
+  Orbit Purple
+</SprkHeading>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
   <ColorSwatch isCompact variableName="sprk-purple" />
   <ColorSwatch isCompact variableName="sprk-purple-dark" />
@@ -245,10 +256,13 @@ import {
   <ColorSwatch isCompact variableName="sprk-purple-light" />
   <ColorSwatch hasOutline isCompact variableName="sprk-purple-lightest" />
 </ColorSwatchGrid>
-<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbl sprk-u-Measure">
   Use Purple to highlight interactive elements, like buttons, links, and active form fields. It can also spotlight important information.
-</p>
-<SprkStack splitAt="small" itemSpacing="huge" additionalClasses="sprk-o-Stack--end-column@s sprk-u-mbh">
+</SprkText>
+<SprkStack splitAt="small" itemSpacing="huge" additionalClasses="sprk-o-Stack--center-column sprk-u-mbh">
+  <SprkStackItem >
+    <SprkButton variant="secondary">Button</SprkButton>
+  </SprkStackItem>
   <SprkStackItem >
     <SprkButton variant="tertiary">Button</SprkButton>
   </SprkStackItem>
@@ -261,17 +275,18 @@ import {
     </SprkLink>
   </SprkStackItem>
   <SprkStackItem>
-    <label
+    <SprkInputContainer>
+    <SprkLabel
       for="text-input"
       class="sprk-b-Label"
     >
       Input
-    </label>
-    <input
-      class="sprk-b-TextInput sprk-u-Width-100"
+    </SprkLabel>
+    <SprkInput
       id="text-input"
       defaultValue="Focus to see styling"
     />
+    </SprkInputContainer>
   </SprkStackItem>
 </SprkStack>
 <SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-mbl">
@@ -302,9 +317,9 @@ import {
           alt="Webpage with an Orbit Purple field input to indicate interaction."/>
       </SprkStackItem>
       <SprkStackItem>
-        <p>
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
           Use Orbit Purple to call attention to interactive elements.
-        </p>
+        </SprkText>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
@@ -335,9 +350,9 @@ import {
           alt="Webpage with Purple text and an Orbit Purple background."/>
       </SprkStackItem>
       <SprkStackItem>
-        <p>
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
           Overusing Purple distracts from interactive elements on the page.
-        </p>
+        </SprkText>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
@@ -348,7 +363,9 @@ import {
   </a>
 </div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
-<h3>Neutral Colors</h3>
+<SprkHeading element="h3" variant="displayThree" additionalClasses="docs-b-h3 sprk-u-mbm sprk-u-Measure">
+  Neutral Colors
+</SprkHeading>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
   <ColorSwatch isCompact variableName="sprk-black" />
   <ColorSwatch isCompact variableName="sprk-black-tint-80" />
@@ -361,12 +378,12 @@ import {
   <ColorSwatch hasOutline isCompact variableName="sprk-black-tint-10" />
   <ColorSwatch hasOutline isCompact variableName="sprk-gray" />
 </ColorSwatchGrid>
-<p>
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
   Use for text, borders, and system icons.
-</p>
-<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+</SprkText>
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbl sprk-u-Measure">
   Most text should be black, with some additional shades of dark gray for content hierarchy. Follow <a href="/using-spark/foundations/color-accessibility">contrast accessibility standards</a> when considering anything but black text on white backgrounds.
-</p>
+</SprkText>
 <SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-mbl">
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
     <SprkStack>
@@ -395,9 +412,9 @@ import {
           alt="Webpage with headline text in Black, and body copy in corresponding shades of grey to indicate hierarchy."/>
       </SprkStackItem>
       <SprkStackItem>
-        <p>
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
           Most text should be black, with some additional darker shades of gray for content hierarchy.
-        </p>
+        </SprkText>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
@@ -428,9 +445,9 @@ import {
           alt="Webpage with headline and body copy text shown in several different semantic and brand colors."/>
       </SprkStackItem>
       <SprkStackItem>
-        <p>
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
           Don't use any other colors for text like shades of red, purple or semantic colors.
-        </p>
+        </SprkText>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
@@ -441,26 +458,28 @@ import {
   </a>
 </div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
-<h3>Semantic Colors</h3>
+<SprkHeading element="h3" variant="displayThree" additionalClasses="docs-b-h3 sprk-u-mbm sprk-u-Measure">
+  Semantic Colors
+</SprkHeading>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
   <ColorSwatch isCompact variableName="sprk-green" />
   <ColorSwatch isCompact variableName="sprk-blue" />
   <ColorSwatch isCompact variableName="sprk-orange" />
 </ColorSwatchGrid>
-<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbl sprk-u-Measure">
   Use to communicate the status of messages.
-</p>
+</SprkText>
 <ul>
   <li>Green: Success</li>
   <li>Blue: Informational</li>
   <li>Orange: Error, Warning, Urgent or Attention Needed</li>
 </ul>
-<p>
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
   Do not use semantic colors for large accents.
-</p>
-<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+</SprkText>
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbl sprk-u-Measure">
   Use the Error semantic color to present negative information and reserve Rocket Red for positive brand interactions.
-</p>
+</SprkText>
 <SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-mbl">
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
     <SprkStack>
@@ -489,9 +508,9 @@ import {
           alt="Webpage with a Rocket Red colored alert window, indicating an urgent message."/>
       </SprkStackItem>
       <SprkStackItem>
-        <p>
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-Measure sprk-u-mbm">
           Use appropriate semantic colors to indicate the status of messages, like an urgent alert.
-        </p>
+        </SprkText>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
@@ -522,9 +541,9 @@ import {
           alt="Webpage with a Semantic Warning color background."/>
       </SprkStackItem>
       <SprkStackItem>
-        <p>
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-Measure sprk-u-mbm">
           Use semantic colors to communicate status. Using them in other places, distracts users from focusing on vital information. Don't use them as accents or action colors.
-        </p>
+        </SprkText>
       </SprkStackItem>
     </SprkStack>
   </SprkStackItem>
@@ -535,23 +554,29 @@ import {
   </a>
 </div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
-<h3>Floods of Color</h3>
-<p>
+<SprkHeading element="h3" variant="displayThree" additionalClasses="docs-b-h3 sprk-u-mbm sprk-u-Measure">
+  Floods of Color
+</SprkHeading>
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
   Most content should have a white background. To create other sections of focus (for example for a <a href="/using-spark/components/stepper">Stepper</a> or <a href="/using-spark/components/footer">Footer</a>), use only these dark and light colors.
-</p>
+</SprkText>
 <img
   srcset={stepperExampleSet}
   src={stepperExample}
   sizes="550px"
   class="sprk-u-mbm"
   alt="Orbit Purple Screen that fills majority of space, paired with a step-by-step navigation bar and blank iPhone screen."/>
-<h4>Dark</h4>
+<SprkHeading element="h4" variant="displayFour" additionalClasses="sprk-u-mbm sprk-u-Measure">
+  Dark
+</SprkHeading>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
   <ColorSwatch isCompact variableName="sprk-black" />
   <ColorSwatch isCompact variableName="sprk-purple-dark" />
   <ColorSwatch isCompact variableName="sprk-purple-deep" />
 </ColorSwatchGrid>
-<h4>Light</h4>
+<SprkHeading element="h4" variant="displayFour" additionalClasses="sprk-u-mbm sprk-u-Measure">
+  Light
+</SprkHeading>
 <ColorSwatchGrid additionalClasses="sprk-u-mbl">
   <ColorSwatch isCompact hasOutline variableName="sprk-white" />
   <ColorSwatch isCompact hasOutline variableName="sprk-purple-lightest" />
@@ -563,10 +588,12 @@ import {
   </a>
 </div>
 <SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
-<h3>Charts and Graphs</h3>
-<p>
+<SprkHeading element="h3" variant="displayThree" additionalClasses="docs-b-h3 sprk-u-mbm sprk-u-Measure">
+  Charts and Graphs
+</SprkHeading>
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
   Use these shades of purple to communicate information hierarchy in charts and graphs.
-</p>
+</SprkText>
 <ColorSwatchGrid additionalClasses="sprk-u-mbm">
   <ColorSwatch isCompact variableName="sprk-purple-navy" />
   <ColorSwatch isCompact variableName="sprk-purple-deep" />
@@ -577,12 +604,12 @@ import {
   <ColorSwatch isCompact variableName="sprk-wisteria" />
   <ColorSwatch hasOutline isCompact variableName="sprk-magnolia" />
 </ColorSwatchGrid>
-<p>
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbm sprk-u-Measure">
   Use the <a href="#semantic-colors">orange semantic error color</a> to represent a negative element in the chart.
-</p>
-<p class="sprk-b-TypeBodyTwo sprk-u-mbl sprk-u-Measure">
+</SprkText>
+<SprkText variant="bodyTwo" additionalClasses="sprk-u-mbl sprk-u-Measure">
   Only use other semantic colors as accents to the Purple gradient palette.
-</p>
+</SprkText>
 
 <SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-Measure sprk-u-mbl">
   <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">

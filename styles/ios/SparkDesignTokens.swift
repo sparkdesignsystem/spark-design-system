@@ -17,6 +17,7 @@ public class SparkDesignTokens {
     public static let sprkAutocompleteResultFontSize = CGFloat(16.00)
     public static let sprkAutocompleteResultPadding = CGFloat(16.00)
     public static let sprkAutocompleteResultsHiddenDisplay = none
+    public static let sprkAutocompleteResultsZIndex = 0
     public static let sprkBigNavActiveColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
     public static let sprkBigNavBg = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkBigNavItemActiveColor = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
@@ -125,6 +126,7 @@ public class SparkDesignTokens {
     public static let sprkBtnTextColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkCardHeaderBgColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
     public static let sprkCardHeaderTextColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
+    public static let sprkCardHighlightedHeadingColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkCardShadowColorStandout = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha:0.1)
     public static let sprkCardShadowColorStandoutWideViewport = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha:0.1)
     public static let sprkCardShadowColorWideViewport = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha:0.08)
@@ -194,6 +196,7 @@ public class SparkDesignTokens {
     public static let sprkPurpleLightest = UIColor(red: 0.906, green: 0.886, blue: 0.949, alpha:1)
     public static let sprkPurpleNavy = UIColor(red: 0.110, green: 0.004, blue: 0.322, alpha:1)
     public static let sprkRed = UIColor(red: 0.784, green: 0.063, blue: 0.180, alpha:1)
+    public static let sprkStepperDarkBg = UIColor(red: 0.235, green: 0.192, blue: 0.455, alpha:1)
     public static let sprkStepperIconBorderColor = UIColor(red: 0.553, green: 0.553, blue: 0.549, alpha:1)
     public static let sprkStepperIconBorderColorSelected = UIColor(red: 0.235, green: 0.192, blue: 0.455, alpha:1)
     public static let sprkStepperIconBorderColorSelectedDarkBg = UIColor(red: 0.906, green: 0.886, blue: 0.949, alpha:1)
@@ -204,6 +207,7 @@ public class SparkDesignTokens {
     public static let sprkWhite = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkWisteria = UIColor(red: 0.871, green: 0.694, blue: 0.992, alpha:1)
     public static let sprkYellow = UIColor(red: 0.929, green: 0.639, blue: 0.008, alpha:1)
+    public static let sprkAlertDisplayHidden = none
     public static let sprkDatePickerArrowColor = UIColor(red: 0.110, green: 0.106, blue: 0.102, alpha:1)
     public static let sprkDatePickerBackground = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
     public static let sprkDatePickerDayColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha:1)
@@ -287,7 +291,7 @@ public class SparkDesignTokens {
     public static let sprkInputHugeTransitionDelay = "0s"
     public static let sprkInputIconOffsetX = CGFloat(16.00)
     public static let sprkInputIconOffsetY = CGFloat(16.00)
-    public static let sprkInputIconZIndex = CGFloat(16.00)
+    public static let sprkInputIconZIndex = 0
     public static let sprkInputTextIconFontWeight = 700
     public static let sprkInputTextIconOffsetX = CGFloat(16.00)
     public static let sprkInputTextIconZIndex = CGFloat(16.00)
@@ -515,9 +519,9 @@ public class SparkDesignTokens {
     public static let sprkInputContainerHugeMaxWidth = CGFloat(600.00)
     public static let sprkInputContainerNarrowMaxWidth = CGFloat(104.00)
     public static let sprkInputErrorTextFontSize = CGFloat(13.00)
+    public static let sprkInputHasIconMarginRightLeft = CGFloat(71.00)
+    public static let sprkInputHasIconMarginRightTop = CGFloat(16.00)
     public static let sprkInputHasIconPaddingRight = CGFloat(0.00)
-    public static let sprkInputHasIconRightLeft = CGFloat(71.00)
-    public static let sprkInputHasIconRightTop = CGFloat(38.00)
     public static let sprkInputHugeFontSize = CGFloat(20.00)
     public static let sprkInputHugeHeight = CGFloat(64.00)
     public static let sprkInputHugeIconOffsetTop = CGFloat(800.00)
@@ -575,6 +579,7 @@ public class SparkDesignTokens {
     public static let sprkMastheadContentItemPaddingTopWide = CGFloat(8.00)
     public static let sprkMastheadContentPadding = CGFloat(8.00)
     public static let sprkMastheadContentPaddingWide = CGFloat(16.00)
+    public static let sprkMastheadDropdownRight = CGFloat(0.00)
     public static let sprkMastheadLogoMaxWidth = CGFloat(192.00)
     public static let sprkMastheadLogoMinWidth = CGFloat(174.00)
     public static let sprkMastheadMenuIconHeight = CGFloat(32.00)
@@ -707,6 +712,8 @@ public class SparkDesignTokens {
     public static let sprkTextareaMinHeight = CGFloat(125.00)
     public static let sprkTextareaPadding = CGFloat(16.00)
     public static let sprkTextareaWidth = CGFloat(1600.00)
+    public static let sprkToggleContentPaddingBottom = CGFloat(8.00)
+    public static let sprkToggleContentPaddingTop = CGFloat(8.00)
     public static let sprkToggleTriggerPaddingBottom = CGFloat(0.00)
     public static let sprkToggleTriggerPaddingLeft = CGFloat(0.00)
     public static let sprkToggleTriggerPaddingRight = CGFloat(0.00)
@@ -719,6 +726,8 @@ public class SparkDesignTokens {
     public static let sprkTooltipMinWidth = CGFloat(60.00)
     public static let sprkTooltipTriggerHoverOffset = CGFloat(16.00)
     public static let sprkTooltipTriggerPadding = CGFloat(0.00)
+    public static let sprkTypeCropNoneMarginBottom = CGFloat(0.00)
+    public static let sprkTypeCropNoneMarginTop = CGFloat(0.00)
     public static let sprkTypeDisplayOneBreakpoint = CGFloat(700.00)
     public static let sprkTypeDisplayThreeBreakpoint = CGFloat(700.00)
     public static let sprkTypeDisplayTwoBreakpoint = CGFloat(700.00)

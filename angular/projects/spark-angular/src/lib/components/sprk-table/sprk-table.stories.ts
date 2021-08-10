@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkTableModule } from './sprk-table.module';
 import { SprkTableComponent } from './sprk-table.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -11,11 +13,12 @@ export default {
   title: 'Components/Table',
   component: SprkTableComponent,
   decorators: [
-    storyWrapper(
-      storyContent => (
-        `<div class="sprk-o-Box">${ storyContent }<div>`
-      )
-    )
+    moduleMetadata({
+      imports: [SprkTableModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
+    ),
   ],
   parameters: {
     subcomponents: {
@@ -24,19 +27,19 @@ export default {
       SprkTableGroupedColumnDirective,
       SprkTableRowHeadingDirective,
     },
-    info: `${markdownDocumentationLinkBuilder('table')}`,
-    docs: { iframeHeight: 380 },
+    docs: {
+      source: {
+        type: 'code',
+      },
+      iframeHeight: 380,
+      description: {
+        component: `${markdownDocumentationLinkBuilder('table')}`,
+      },
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkTableModule,
-  ],
-};
+} as Meta;
 
 export const columnComparison = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-table idString="table-1">
       <thead sprkTableHead>
@@ -72,17 +75,11 @@ export const columnComparison = () => ({
   `,
 });
 
-columnComparison.story = {
-  parameters: {
-    jest: [
-      'sprk-table.component',
-      'sprk-table-head.directive',
-    ],
-  },
+columnComparison.parameters = {
+  jest: ['sprk-table.component', 'sprk-table-head.directive'],
 };
 
 export const secondary = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-table
       idString="table-2"
@@ -121,17 +118,11 @@ export const secondary = () => ({
   `,
 });
 
-secondary.story = {
-  parameters: {
-    jest: [
-      'sprk-table.component',
-      'sprk-table-head.directive',
-    ],
-  },
+secondary.parameters = {
+  jest: ['sprk-table.component', 'sprk-table-head.directive'],
 };
 
 export const groupedColumns = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-table idString="table-3">
       <thead sprkTableHead>
@@ -180,18 +171,15 @@ export const groupedColumns = () => ({
   `,
 });
 
-groupedColumns.story = {
-  parameters: {
-    jest: [
-      'sprk-table.component',
-      'sprk-table-head.directive',
-      'sprk-table-grouped-column.directive',
-    ],
-  },
+groupedColumns.parameters = {
+  jest: [
+    'sprk-table.component',
+    'sprk-table-head.directive',
+    'sprk-table-grouped-column.directive',
+  ],
 };
 
 export const rowComparison = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-table idString="table-4">
       <thead sprkTableHead>
@@ -232,19 +220,16 @@ export const rowComparison = () => ({
   `,
 });
 
-rowComparison.story = {
-  parameters: {
-    jest: [
-      'sprk-table.component',
-      'sprk-table-head.directive',
-      'sprk-table-row-heading.directive',
-      'sprk-table-empty-heading.directive',
-    ],
-  },
+rowComparison.parameters = {
+  jest: [
+    'sprk-table.component',
+    'sprk-table-head.directive',
+    'sprk-table-row-heading.directive',
+    'sprk-table-empty-heading.directive',
+  ],
 };
 
 export const secondaryRowComparison = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-table idString="table-5">
       <tbody>
@@ -298,12 +283,10 @@ export const secondaryRowComparison = () => ({
   `,
 });
 
-secondaryRowComparison.story = {
-  parameters: {
-    jest: [
-      'sprk-table.component',
-      'sprk-table-head.directive',
-      'sprk-table-row-heading.directive',
-    ],
-  },
+secondaryRowComparison.parameters = {
+  jest: [
+    'sprk-table.component',
+    'sprk-table-head.directive',
+    'sprk-table-row-heading.directive',
+  ],
 };

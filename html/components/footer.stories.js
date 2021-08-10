@@ -46,8 +46,7 @@ export const defaultStory = () => {
               sprk-o-Stack__item--three-tenths@m
               sprk-o-Stack
               sprk-o-Stack--misc-b
-              sprk-o-Box
-              sprk-u-prh
+              sprk-c-Footer__global-links
             ">
             <h3
               class="
@@ -130,8 +129,7 @@ export const defaultStory = () => {
                 class="
                   sprk-o-Stack__item
                   sprk-o-Stack__item--third@m
-                  sprk-o-Box
-                  sprk-u-PaddingRight--a
+                  sprk-c-Footer__local-links
                   sprk-o-Stack
                   sprk-o-Stack--large
                 ">
@@ -219,8 +217,8 @@ export const defaultStory = () => {
                   sprk-o-Stack__item
                   sprk-o-Stack__item--third@m
                   sprk-o-Box
-                  sprk-u-PaddingRight--a
-                  sprk-o-Stack sprk-o-Stack--large
+                  sprk-o-Stack
+                  sprk-o-Stack--large
                 ">
                 <h3
                   class="
@@ -463,8 +461,7 @@ export const defaultStory = () => {
         <span
           class="
             sprk-c-Divider
-            sprk-u-mvn
-            sprk-u-mhm
+            sprk-c-Footer__divider
           "
           data-id="divider-1">
         </span>
@@ -474,8 +471,7 @@ export const defaultStory = () => {
             sprk-o-Stack__item
             sprk-o-Stack
             sprk-o-Stack--misc-b
-            sprk-o-Box
-            sprk-u-PaddingTop--b
+            sprk-c-Footer__awards
           ">
           <div
             class="
@@ -483,7 +479,8 @@ export const defaultStory = () => {
               sprk-o-Stack
               sprk-o-Stack--large
             "
-            data-id="award-1">
+            data-id="award-1"
+          >
             <h3
               class="
                 sprk-o-Stack__item
@@ -499,7 +496,7 @@ export const defaultStory = () => {
                 sprk-o-Stack
                 sprk-o-Stack--medium
                 sprk-o-Stack--split@s
-                sprk-u-mbm
+                sprk-c-Footer__awards-media
               ">
               <div class="sprk-o-Stack__item">
                 <a href="#nogo">
@@ -533,7 +530,7 @@ export const defaultStory = () => {
                       sprk-c-Icon
                       sprk-c-Icon--xl
                       sprk-c-Icon--toggle
-                      sprk-u-mrs
+                      sprk-c-Toggle__trigger-icon
                     "
                     data-sprk-toggle="icon" viewBox="0 0 100 100">
                     <use xlink:href="#chevron-down-circle"></use>
@@ -541,12 +538,10 @@ export const defaultStory = () => {
                   My Award Disclaimer
                 </button>
 
-                <div data-sprk-toggle="content">
+                <div class="sprk-c-Toggle__content" data-sprk-toggle="content">
                   <p
                     class="
                       sprk-b-TypeBodyFour
-                      sprk-u-pts
-                      sprk-u-pbs
                       sprk-c-Footer__text
                     ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -31,6 +31,7 @@
   <color name="sprk_card_shadow_color_standout">#1a000000</color><!-- The box shadow color of the Standout Card variant on narrow viewports. -->
   <color name="sprk_card_shadow_color_standout_wide_viewport">#1a000000</color><!-- The box shadow color of the Standout Card variant on wide viewports. -->
   <color name="sprk_card_header_bg_color">#ff603aa1</color><!-- The background color of the header area for the Highlighted Header Card. -->
+  <color name="sprk_card_highlighted_heading_color">#ffffffff</color><!-- The color of the highlighted heading for the Highlighted Header Card. -->
   <color name="sprk_card_header_text_color">#ffffffff</color><!-- The text color for the Highlighted Header Card. -->
   <color name="sprk_red">#ffc8102e</color><!-- Red for key branded moments throughout the product as our primary brand color. -->
   <color name="sprk_deep_red">#ff76232f</color><!-- Darkest red for key branded moments throughout the product. -->
@@ -103,6 +104,7 @@
   <color name="sprk_masthead_selector_dropdown_active_background_color">#fff7f7f7</color><!-- The background color of the Selector Dropdown items that are active or hovered. Found in a Masthead with Extended Navigation. -->
   <color name="sprk_masthead_mask_color">#80000000</color><!-- The color of the mask that gets applied when the Masthead Selector Dropdown is open on narrow screens. -->
   <color name="sprk_modal_mask_color">#59222222</color><!-- The color of the mask overlay that is shown behind the Modal. -->
+  <color name="sprk_stepper_dark_bg">#ff3c3174</color><!-- The background color of the Stepper with a dark background. -->
   <color name="sprk_stepper_icon_border_color">#ff8d8d8c</color><!-- The color of the border around the Stepper icon. -->
   <color name="sprk_stepper_icon_border_color_selected">#ff3c3174</color><!-- The color of the step icon when the step is selected in the Stepper. -->
   <color name="sprk_stepper_icon_border_color_selected_dark_bg">#ffe7e2f2</color><!-- The color of the step icon in front of a dark background when the step is selected in the Stepper. -->

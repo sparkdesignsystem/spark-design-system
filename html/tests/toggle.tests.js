@@ -171,7 +171,7 @@ describe('Toggle tests', () => {
       containerAccordion.classList.contains('sprk-c-Accordion__item--open'),
     ).toBe(true);
     expect(iconAccordionUseElement.getAttribute('xlink:href')).toBe(
-      '#chevron-up-circle',
+      '#chevron-down-circle',
     );
   });
 
@@ -192,7 +192,7 @@ describe('Toggle tests', () => {
       ),
     ).toBe(true);
     expect(iconAccordionUseElement.getAttribute('xlink:href')).toBe(
-      '#chevron-up-circle',
+      '#chevron-down-circle',
     );
   });
 

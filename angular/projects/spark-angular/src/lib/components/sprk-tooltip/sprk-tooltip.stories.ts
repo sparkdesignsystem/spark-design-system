@@ -1,4 +1,6 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkTooltipModule } from './sprk-tooltip.module';
 import { SprkTooltipComponent } from './sprk-tooltip.component';
@@ -8,22 +10,27 @@ export default {
   title: 'Components/Tooltip',
   component: SprkTooltipComponent,
   decorators: [
-    storyWrapper(
-      (storyContent) => `<div class="sprk-o-Box">${storyContent}<div>`,
+    moduleMetadata({
+      imports: [SprkTooltipModule, BrowserAnimationsModule],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">${story}</div>`,
     ),
   ],
   parameters: {
-    info: `${markdownDocumentationLinkBuilder('tooltip')}`,
-    docs: { iframeHeight: 160 },
+    docs: {
+      source: {
+        type: 'code',
+      },
+      description: {
+        component: `${markdownDocumentationLinkBuilder('tooltip')}`,
+      },
+      iframeHeight: 160,
+    },
   },
-};
-
-const modules = {
-  imports: [SprkTooltipModule, BrowserAnimationsModule],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-tooltip
       iconAdditionalClasses="sprk-c-Icon--filled"
@@ -34,9 +41,8 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    jest: ['sprk-tooltip.component'],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  jest: ['sprk-tooltip.component'],
 };

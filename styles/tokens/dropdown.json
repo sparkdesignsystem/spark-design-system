@@ -1,5 +1,14 @@
   {
     "dropdown": {
+      "display-hidden": {
+        "comment": "The display value of Dropdown when hidden.",
+        "value": "none",
+        "attributes": {
+          "category": "content"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "active": {
         "background-color": {
           "comment": "Background color of the Dropdown items that are active or hovered.",
@@ -128,6 +137,24 @@
         }
       },
       "trigger": {
+        "icon-margin": {
+          "comment": "The default margin on the icon inside the Dropdown trigger.",
+          "value": "0 0 0 {space.s.value}",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
+        "informational-margin": {
+          "comment": "The default margin on the informational trigger for the Dropdown.",
+          "value": "0 {space.s.value} 0 0",
+          "attributes": {
+            "category": "content"
+          },
+          "file": "settings",
+          "themable": true
+        },
         "color": {
           "comment": "The color of the Dropdown trigger.",
           "value": "{black.value}",

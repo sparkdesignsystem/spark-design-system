@@ -9,6 +9,15 @@
         "file": "settings",
         "themable": true
       },
+      "dark-bg": {
+        "comment": "The background color of the Stepper with a dark background.",
+        "value": "{purple-dark.value}",
+        "attributes": {
+          "category": "color"
+        },
+        "file": "settings",
+        "themable": true
+      },
       "breakpoint": {
         "comment": "The minimum width at which the Stepper switches between narrow and wide layouts.",
         "value": "{split.breakpoint.xl.value}",

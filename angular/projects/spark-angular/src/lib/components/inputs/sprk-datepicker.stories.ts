@@ -1,4 +1,3 @@
-import { storyWrapper } from '../../../../../../.storybook/helpers/storyWrapper';
 import { SprkInputModule } from '../../directives/inputs/sprk-input/sprk-input.module';
 import { SprkIconModule } from '../sprk-icon/sprk-icon.module';
 import { SprkIconComponent } from '../sprk-icon/sprk-icon.component';
@@ -10,8 +9,12 @@ import { SprkDatepickerModule } from '../../directives/inputs/sprk-datepicker/sp
 import { SprkInputContainerModule } from './sprk-input-container/sprk-input-container.module';
 import { SprkInputContainerComponent } from './sprk-input-container/sprk-input-container.component';
 import { SprkIconInputContainerModule } from './sprk-icon-input-container/sprk-icon-input-container.module';
+// prettier-ignore
+// @ts-ignore
+import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
 import { SprkDatepickerDirective } from '../../directives/inputs/sprk-datepicker/sprk-datepicker.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Components/Input/Date Picker',
@@ -23,11 +26,22 @@ export default {
     SprkIconComponent,
   },
   decorators: [
-    storyWrapper(
-      (storyContent) =>
-        `<div class="sprk-o-Box">
+    moduleMetadata({
+      imports: [
+        SprkInputContainerModule,
+        SprkLabelModule,
+        SprkInputModule,
+        SprkIconModule,
+        SprkFieldErrorModule,
+        SprkDatepickerModule,
+        SprkIconInputContainerModule,
+        FormsModule,
+      ],
+    }),
+    componentWrapperDecorator(
+      (story) => `<div class="sprk-o-Box">
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${storyContent}
+            ${story}
           </form>
         <div>`,
     ),
@@ -38,7 +52,9 @@ export default {
     },
   },
   parameters: {
-    info: `
+    docs: {
+      description: {
+        component: `
 ${markdownDocumentationLinkBuilder('input')}
 - The value of this field contains special characters
 (/) which you may need to remove before submitting the form.
@@ -51,24 +67,13 @@ the Inputs table below for available customization options.
   valid input, it should reformat to add commas and
   decimals to the hundredth place.
 `,
-    docs: { iframeHeight: 200 },
+      },
+      iframeHeight: 200,
+    },
   },
-};
-
-const modules = {
-  imports: [
-    SprkInputContainerModule,
-    SprkLabelModule,
-    SprkInputModule,
-    SprkIconModule,
-    SprkFieldErrorModule,
-    SprkDatepickerModule,
-    SprkIconInputContainerModule,
-  ],
-};
+} as Meta;
 
 export const defaultStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
@@ -77,7 +82,7 @@ export const defaultStory = () => ({
         </label>
         <sprk-icon
           iconName="calendar"
-          additionalClasses="sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
         ></sprk-icon>
@@ -97,20 +102,18 @@ export const defaultStory = () => ({
   `,
 });
 
-defaultStory.story = {
-  name: 'Default',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-input-container.component',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-    ],
-  },
+defaultStory.storyName = 'Default';
+
+defaultStory.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-input-container.component',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+  ],
 };
 
 export const invalidDatePicker = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
@@ -119,7 +122,7 @@ export const invalidDatePicker = () => ({
         </label>
         <sprk-icon
           iconName="calendar"
-          additionalClasses="sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
         ></sprk-icon>
@@ -149,21 +152,19 @@ export const invalidDatePicker = () => ({
   `,
 });
 
-invalidDatePicker.story = {
-  name: 'Invalid',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-input-container.component',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+invalidDatePicker.storyName = 'Invalid';
+
+invalidDatePicker.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-input-container.component',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const disabledDatePicker = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-input-container>
       <div class="sprk-b-InputContainer__icon-container">
@@ -172,7 +173,7 @@ export const disabledDatePicker = () => ({
         </label>
         <sprk-icon
           iconName="calendar"
-          additionalClasses="sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--stroke-current-color"
           sprk-input-icon
           ariaHidden="true"
         ></sprk-icon>
@@ -193,20 +194,18 @@ export const disabledDatePicker = () => ({
   `,
 });
 
-disabledDatePicker.story = {
-  name: 'Disabled',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-input-container.component',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-    ],
-  },
+disabledDatePicker.storyName = 'Disabled';
+
+disabledDatePicker.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-input-container.component',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+  ],
 };
 
 export const legacyStory = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
       <label for="legacy-datepicker" sprkLabel>
@@ -214,7 +213,7 @@ export const legacyStory = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
       ></sprk-icon>
@@ -234,21 +233,19 @@ export const legacyStory = () => ({
   `,
 });
 
-legacyStory.story = {
-  name: 'Legacy (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-    ],
-  },
+legacyStory.storyName = 'Legacy (Deprecated)';
+
+legacyStory.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+  ],
 };
 
 export const legacyInvalidDatePicker = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
       <label for="legacy-invalid-datepicker" sprkLabel>
@@ -256,7 +253,7 @@ export const legacyInvalidDatePicker = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
       ></sprk-icon>
@@ -286,22 +283,20 @@ export const legacyInvalidDatePicker = () => ({
   `,
 });
 
-legacyInvalidDatePicker.story = {
-  name: 'Legacy Invalid (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-      'sprk-field-error.directive',
-    ],
-  },
+legacyInvalidDatePicker.storyName = 'Legacy Invalid (Deprecated)';
+
+legacyInvalidDatePicker.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+    'sprk-field-error.directive',
+  ],
 };
 
 export const legacyDisabledDatePicker = () => ({
-  moduleMetadata: modules,
   template: `
     <sprk-icon-input-container>
       <label for="legacy-disabled-datepicker" class="sprk-b-Label--disabled" sprkLabel>
@@ -309,7 +304,7 @@ export const legacyDisabledDatePicker = () => ({
       </label>
       <sprk-icon
         iconType="calendar"
-        additionalClasses="sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
+        additionalClasses="sprk-b-InputContainer__icon sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color"
         sprk-input-icon
         ariaHidden="true"
       ></sprk-icon>
@@ -330,15 +325,14 @@ export const legacyDisabledDatePicker = () => ({
   `,
 });
 
-legacyDisabledDatePicker.story = {
-  name: 'Legacy Disabled (Deprecated)',
-  parameters: {
-    docs: { iframeHeight: 400 },
-    jest: [
-      'sprk-icon-input-container.component',
-      'sprk-input.directive',
-      'sprk-label.directive',
-      'sprk-datepicker.directive',
-    ],
-  },
+legacyDisabledDatePicker.storyName = 'Legacy Disabled (Deprecated)';
+
+legacyDisabledDatePicker.parameters = {
+  docs: { iframeHeight: 400 },
+  jest: [
+    'sprk-icon-input-container.component',
+    'sprk-input.directive',
+    'sprk-label.directive',
+    'sprk-datepicker.directive',
+  ],
 };

@@ -72,9 +72,10 @@ export const iconWithTextLink = () => (
   >
     <SprkIcon
       additionalClasses="
-            sprk-c-Icon--xl
-            sprk-u-mrs
-            sprk-c-Icon--filled-current-color"
+        sprk-c-Icon--xl
+        sprk-b-Link__icon
+        sprk-c-Icon--filled-current-color
+      "
       iconName="arrow-left"
     />
     Back
@@ -148,9 +149,10 @@ export const disabledIconWithTextLink = () => (
   >
     <SprkIcon
       additionalClasses="
-              sprk-c-Icon--xl
-              sprk-u-mrs
-              sprk-c-Icon--filled-current-color"
+        sprk-c-Icon--xl
+        sprk-b-Link__icon
+        sprk-c-Icon--filled-current-color
+      "
       iconName="arrow-left"
     />
     Back

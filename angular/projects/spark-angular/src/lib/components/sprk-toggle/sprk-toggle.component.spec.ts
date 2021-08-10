@@ -8,8 +8,8 @@ describe('SprkToggleComponent', () => {
   let component: SprkToggleComponent;
   let fixture: ComponentFixture<SprkToggleComponent>;
   let element: HTMLElement;
-  let triggerElement;
-  let contentElement;
+  let triggerElement: HTMLButtonElement;
+  let contentElement: HTMLDivElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -21,9 +21,11 @@ describe('SprkToggleComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SprkToggleComponent);
     component = fixture.componentInstance;
+    fixture.detectChanges();
+    component.ngAfterContentInit();
     element = fixture.nativeElement.querySelector('div');
     triggerElement = element.querySelector('button');
-    contentElement = element.querySelector('button').nextElementSibling;
+    contentElement = element.querySelector('div');
   });
 
   it('should create itself', () => {
@@ -33,7 +35,7 @@ describe('SprkToggleComponent', () => {
   it('clicking should show body text', () => {
     element.querySelector('button').click();
     fixture.detectChanges();
-    expect(element.querySelector('div.sprk-u-pts.sprk-u-pbs')).toBeTruthy();
+    expect(element.querySelector('div.sprk-c-Toggle__content')).toBeTruthy();
   });
 
   it('should set the data-analytics attribute given a value in the analyticsString Input', () => {
@@ -52,32 +54,26 @@ describe('SprkToggleComponent', () => {
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open',
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle sprk-c-Icon--open',
     );
   });
 
   it('should add icon classes to icon when the toggle is opened and then closed', () => {
     component.triggerText = 'placeholder';
     element.querySelector('button').click();
+    fixture.detectChanges();
+    expect(
+      triggerElement.querySelector('.sprk-c-Icon').classList.toString(),
+    ).toEqual(
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle sprk-c-Icon--open',
+    );
     element.querySelector('button').click();
     fixture.detectChanges();
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
-    ).toEqual('sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle');
-  });
-
-  it('should render open if isOpen is set to true', () => {
-    component.isOpen = true;
-    fixture.detectChanges();
-    expect(
-      element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle sprk-c-Icon--open',
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle',
     );
-    expect(contentElement.getAttribute('style')).toContain(
-      'visibility:visible',
-    );
-    expect(triggerElement.getAttribute('aria-expanded')).toEqual('true');
   });
 
   // TODO: Remove `iconClass` in issue #1305
@@ -87,7 +83,7 @@ describe('SprkToggleComponent', () => {
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle test',
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle test',
     );
   });
 
@@ -97,7 +93,7 @@ describe('SprkToggleComponent', () => {
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle test',
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle test',
     );
   });
 
@@ -109,16 +105,16 @@ describe('SprkToggleComponent', () => {
     expect(
       element.querySelector('button .sprk-c-Icon').classList.toString(),
     ).toEqual(
-      'sprk-c-Icon sprk-c-Icon--xl sprk-u-mrs sprk-c-Icon--toggle should-add',
+      'sprk-c-Icon sprk-c-Icon--xl sprk-c-Toggle__trigger-icon sprk-c-Icon--toggle should-add',
     );
   });
 
   it('should add the correct classes if additionalClasses have values', () => {
     component.additionalClasses = 'sprk-u-pam sprk-u-man';
     fixture.detectChanges();
-    expect(element.classList.toString()).toEqual(
-      'sprk-c-Toggle sprk-u-pam sprk-u-man',
-    );
+    expect(element.classList.toString().includes('sprk-u-man')).toBe(true);
+    expect(element.classList.toString().includes('sprk-c-Toggle')).toBe(true);
+    expect(element.classList.toString().includes('sprk-u-pam')).toBe(true);
   });
 
   it('should add data-id when idString has a value', () => {
@@ -177,7 +173,7 @@ describe('SprkToggleComponent', () => {
     fixture.detectChanges();
     expect(
       element.querySelector('.sprk-c-Toggle__content').classList.toString(),
-    ).toContain('sprk-u-pts sprk-u-pbs sprk-c-Toggle__content test-1 test-2');
+    ).toContain('sprk-c-Toggle__content test-1 test-2');
   });
 
   // TODO: Remove `titleFontClass` in issue #1305
@@ -185,7 +181,7 @@ describe('SprkToggleComponent', () => {
     component.titleFontClass = 'test-1 test-2';
     fixture.detectChanges();
     expect(triggerElement.classList.toString()).toContain(
-      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+      'sprk-c-Toggle__trigger sprk-b-Type--crop-none test-1 test-2',
     );
   });
 
@@ -193,7 +189,7 @@ describe('SprkToggleComponent', () => {
     component.triggerTextAdditionalClasses = 'test-1 test-2';
     fixture.detectChanges();
     expect(triggerElement.classList.toString()).toContain(
-      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+      'sprk-c-Toggle__trigger sprk-b-Type--crop-none test-1 test-2',
     );
   });
 
@@ -203,7 +199,7 @@ describe('SprkToggleComponent', () => {
     component.titleFontClass = 'test-3 test-4';
     fixture.detectChanges();
     expect(triggerElement.classList.toString()).toContain(
-      'sprk-c-Toggle__trigger sprk-u-TextCrop--none test-1 test-2',
+      'sprk-c-Toggle__trigger sprk-b-Type--crop-none test-1 test-2',
     );
   });
 

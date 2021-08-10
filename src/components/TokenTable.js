@@ -1,6 +1,11 @@
 import React, { useState, useCallback } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { SprkTable, SprkTextInput } from '@sparkdesignsystem/spark-react';
+import {
+  SprkTable,
+  SprkInputContainer,
+  SprkInput,
+  SprkLabel,
+} from '@sparkdesignsystem/spark-react';
 import debounce from 'lodash/debounce';
 
 const TokenTable = () => {
@@ -60,12 +65,15 @@ const TokenTable = () => {
 
   return (
     <>
-      <SprkTextInput
-        label="Filter Through Token List:"
-        name="text-input-label"
-        value={value}
-        onChange={handleChange}
-      />
+      <SprkInputContainer>
+        <SprkLabel htmlFor="filter-token">Filter Through Token List:</SprkLabel>
+        <SprkInput
+          id="filter-token"
+          type="text"
+          value={value}
+          onChange={handleChange}
+        />
+      </SprkInputContainer>
       {value.length > 0 && filteredData.length > 0 && (
         <p className="sprk-u-mbl">
           Showing results for

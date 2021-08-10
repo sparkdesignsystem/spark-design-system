@@ -18,6 +18,24 @@
       "file": "settings",
       "themable": true
     },
+    "border-top-none": {
+      "comment": "The value of the top border of the Accordion when there is no top border.",
+      "value": "none",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
+    "icon-leading-margin": {
+      "comment": "The margin of leading icon in Accordions.",
+      "value": "0 {space.s.value} 0 0",
+      "attributes": {
+        "category": "content"
+      },
+      "file": "settings",
+      "themable": true
+    },
     "summary": {
       "text": {
         "decoration": {
