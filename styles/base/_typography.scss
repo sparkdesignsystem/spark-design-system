@@ -102,7 +102,7 @@ h3,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-display-three-wide) * 16),
-      $sprk-text-crop-crop-line-height: $sprk-line-height-display-three
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-three-wide
     );
 
     font-size: $sprk-font-size-display-three-wide;
@@ -134,7 +134,7 @@ h4,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-display-four-wide) * 16),
-      $sprk-text-crop-crop-line-height: $sprk-line-height-display-four
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-four-wide
     );
 
     font-size: $sprk-font-size-display-four-wide;
@@ -166,7 +166,7 @@ h5,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-display-five-wide) * 16),
-      $sprk-text-crop-crop-line-height: $sprk-line-height-display-five
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-five-wide
     );
 
     font-size: $sprk-font-size-display-five-wide;
@@ -199,7 +199,7 @@ h6,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-display-six-wide) * 16),
-      $sprk-text-crop-crop-line-height: $sprk-line-height-display-six
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-six-wide
     );
 
     font-size: $sprk-font-size-display-six-wide;
@@ -231,7 +231,7 @@ h6,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-display-seven-wide) * 16),
-      $sprk-text-crop-crop-line-height: $sprk-line-height-display-seven
+      $sprk-text-crop-crop-line-height: $sprk-line-height-display-seven-wide
     );
 
     font-size: $sprk-font-size-display-seven-wide;
@@ -262,7 +262,7 @@ h6,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-body-one-wide) * 16),
-      $sprk-text-crop-crop-line-height: $sprk-line-height-body-one
+      $sprk-text-crop-crop-line-height: $sprk-line-height-body-one-wide
     );
 
     font-size: $sprk-font-size-body-one-wide;
@@ -295,7 +295,7 @@ body,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-body-two-wide) * 16),
-      $sprk-text-crop-crop-line-height: $sprk-line-height-body-two
+      $sprk-text-crop-crop-line-height: $sprk-line-height-body-two-wide
     );
 
     font-size: $sprk-font-size-body-two-wide;
@@ -326,7 +326,7 @@ body,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-body-three-wide) * 16),
-      $sprk-text-crop-crop-line-height: $sprk-line-height-body-three
+      $sprk-text-crop-crop-line-height: $sprk-line-height-body-three-wide
     );
 
     font-size: $sprk-font-size-body-three-wide;
@@ -357,7 +357,7 @@ body,
       $sprk-text-crop-top-crop: $sprk-line-height-collision-top-crop,
       $sprk-text-crop-bottom-crop: $sprk-line-height-collision-bottom-crop,
       $sprk-text-crop-crop-font-size: (strip-unit($sprk-font-size-body-four-wide) * 16),
-      $sprk-text-crop-crop-line-height: $sprk-line-height-body-four
+      $sprk-text-crop-crop-line-height: $sprk-line-height-body-four-wide
     );
 
     font-size: $sprk-font-size-body-four-wide;
