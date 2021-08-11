@@ -1,7 +1,7 @@
 {
   "name": "@sparkdesignsystem/spark",
-  "version": "17.0.0",
-  "description": "Spark is the main package for the Spark Design System. This package contains the JavaScript and components that make up the basic interfaces for Quicken Loans Fintech products.",
+  "version": "17.0.1",
+  "description": "Spark is the main package for the Spark Design System. This package contains the JavaScript and components that make up the basic interfaces for Rocket Mortgage Fintech products.",
   "main": "es5/sparkExports.js",
   "scripts": {
     "test": "npm run build-styles && jest --config ./jest-config.js --verbose=false",
@@ -21,7 +21,7 @@
     "type": "git",
     "url": "https://github.com/sparkdesignsystem/spark-design-system"
   },
-  "author": "Quicken Loans",
+  "author": "Rocket Mortgage",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sparkdesignsystem/spark-design-system/issues"

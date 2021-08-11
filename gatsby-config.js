@@ -3,7 +3,7 @@ module.exports = {
     title: 'Spark Design System',
     description:
       'Spark Design System is a system of patterns and components ' +
-      'used to create the user interface for the Quicken Loans family of ' +
+      'used to create the user interface for the Rocket Mortgage family of ' +
       'Fintech products.',
     author: '@SparkDesignSys',
   },
