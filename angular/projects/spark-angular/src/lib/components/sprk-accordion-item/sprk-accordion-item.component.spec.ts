@@ -48,34 +48,12 @@ describe('SprkAccordionItemComponent', () => {
     );
   });
 
-  // TODO - Remove as part of Issue 3597
-  it('should add classes if additionalHeadingClasses has a value', () => {
-    component.additionalHeadingClasses = 'sprk-u-man';
-    fixture.detectChanges();
-    expect(accordionHeadingElement.classList.contains('sprk-u-man')).toEqual(
-      true,
-    );
-  });
-
   it('should add classes if headingAdditionalClasses has a value', () => {
     component.headingAdditionalClasses = 'sprk-u-man';
     fixture.detectChanges();
     expect(accordionHeadingElement.classList.contains('sprk-u-man')).toEqual(
       true,
     );
-  });
-
-  // TODO - Remove as part of Issue 3597
-  it('should prefer headingAdditionalClasses over additionalHeadingClasses', () => {
-    component.headingAdditionalClasses = 'should-add';
-    component.additionalHeadingClasses = 'should-not-add';
-    fixture.detectChanges();
-    expect(accordionHeadingElement.classList.contains('should-add')).toEqual(
-      true,
-    );
-    expect(
-      accordionHeadingElement.classList.contains('should-not-add'),
-    ).toEqual(false);
   });
 
   it('should add an analytics data attribute if analyticsString has a value', () => {
@@ -128,15 +106,6 @@ describe('SprkAccordionItemComponent', () => {
     component.idString = null;
     fixture.detectChanges();
     expect(accordionItemElement.getAttribute('data-id')).toBeNull();
-  });
-
-  // TODO - Remove as part of Issue 3597
-  it('should set the active class if isActive is true', () => {
-    component.isActive = true;
-    fixture.detectChanges();
-    expect(
-      accordionItemElement.classList.contains('sprk-c-Accordion__item--active'),
-    ).toEqual(true);
   });
 
   it('should render with a button element', () => {
@@ -232,16 +201,6 @@ describe('SprkAccordionItemComponent', () => {
     expect(accordionContentsElement.classList.toString()).toContain(testString);
   });
 
-  // TODO - Remove as part of Issue 3597
-  it('should add closed icon from iconTypeClosed', () => {
-    component.isOpen = false;
-    component.iconTypeClosed = 'exclamation';
-    fixture.detectChanges();
-    expect(
-      accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
-    ).toEqual('#exclamation');
-  });
-
   it('should add closed icon from iconNameClosed', () => {
     component.isOpen = false;
     component.iconNameClosed = 'exclamation';
@@ -251,40 +210,8 @@ describe('SprkAccordionItemComponent', () => {
     ).toEqual('#exclamation');
   });
 
-  // TODO - Remove as part of Issue 3597
-  it('should prefer iconNameClosed over iconTypeClosed', () => {
-    component.isOpen = false;
-    component.iconTypeClosed = 'message';
-    component.iconNameClosed = 'exclamation';
-    fixture.detectChanges();
-    expect(
-      accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
-    ).toEqual('#exclamation');
-  });
-
-  // TODO - Remove as part of Issue 3597
-  it('should add open icon from iconTypeOpen', () => {
-    component.isOpen = true;
-    component.iconTypeOpen = 'exclamation';
-    fixture.detectChanges();
-    expect(
-      accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
-    ).toEqual('#exclamation');
-  });
-
   it('should add open icon from iconNameOpen', () => {
     component.isOpen = true;
-    component.iconNameOpen = 'exclamation';
-    fixture.detectChanges();
-    expect(
-      accordionSvgElement.querySelector('use').getAttribute('xlink:href'),
-    ).toEqual('#exclamation');
-  });
-
-  // TODO - Remove as part of Issue 3597
-  it('should prefer iconNameOpen over iconTypeOpen', () => {
-    component.isOpen = true;
-    component.iconTypeOpen = 'message';
     component.iconNameOpen = 'exclamation';
     fixture.detectChanges();
     expect(
