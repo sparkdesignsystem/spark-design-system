@@ -79,9 +79,9 @@ export const helperText = () => ({
         #textInput="ngModel"
         idString="text-input-1"
       >
-      <p sprkHelperText id="helper-text">
+      <div sprkHelperText id="helper-text">
         Optional helper text, used to clarify the field's intent.
-      </p>
+      </div>
     </sprk-input-container>
   `,
 });
@@ -115,9 +115,9 @@ export const invalidHelperText = () => ({
         class="sprk-b-TextInput--error"
         aria-invalid="true"
       >
-      <p sprkHelperText id="helper-text">
+      <div sprkHelperText id="helper-text">
         Optional helper text, used to clarify the field's intent.
-      </p>
+      </div>
       <span sprkFieldError id="helper-error">
         <sprk-icon
           iconName="exclamation-filled"

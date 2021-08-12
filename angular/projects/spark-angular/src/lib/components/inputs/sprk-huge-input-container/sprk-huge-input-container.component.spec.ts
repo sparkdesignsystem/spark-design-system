@@ -17,7 +17,9 @@ import { SprkHugeInputContainerComponent } from './sprk-huge-input-container.com
     <sprk-huge-input-container>
       <label sprkLabel>Label!</label>
       <input sprkInput />
-      <p sprkHelperText>Helper Text!</p>
+      <div sprkHelperText>
+        Optional helper text, used to clarify the field's intent.
+      </div>
       <span sprkFieldError>Error Message!</span>
     </sprk-huge-input-container>
   `,
