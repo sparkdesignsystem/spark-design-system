@@ -67,7 +67,7 @@ which you may need to remove before submitting the form.
 export const dateInput = () => ({
   template: `
     <sprk-input-container>
-      <label for="date" sprkLabel>Date Input (No Picker)</label>
+      <label for="date" sprkLabel>Date</label>
       <input
         id="date"
         name="date_input"
@@ -94,7 +94,7 @@ dateInput.parameters = {
 export const invalidDateInput = () => ({
   template: `
     <sprk-input-container>
-      <label for="invalid-date" sprkLabel>Date Input (No Picker)</label>
+      <label for="invalid-date" sprkLabel>Date</label>
       <input
         id="invalid-date"
         aria-describedby="date-error"
@@ -132,7 +132,7 @@ invalidDateInput.parameters = {
 export const disabledDateInput = () => ({
   template: `
     <sprk-input-container>
-      <label for="disabled-date" sprkLabel isDisabled="true">Date Input (No Picker)</label>
+      <label for="disabled-date" sprkLabel isDisabled="true">Date</label>
       <input
         id="disabled-date"
         disabled
