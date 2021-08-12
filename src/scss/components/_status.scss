@@ -95,7 +95,7 @@ tbody {
     height: $sprk-icon-m;
     width: $sprk-icon-m;
     stroke-width: $sprk-icon-stroke-width;
-    margin-left: 10px;
+    margin-left: 6px;
 }
 .docs-status-question-mark__blue {
     stroke: $sprk-blue;
@@ -109,19 +109,19 @@ tbody {
 .docs-status__Ready {
     stroke: $sprk-green;
     fill: $sprk-green;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 
 .docs-status__UnderReview {
     stroke: #d2752b;
     fill: #d2752b;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 
 .docs-status__Updated {
     stroke: $sprk-blue;
     fill: $sprk-blue;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 
 .docs-status__New {
