@@ -13,9 +13,7 @@ export default {
     moduleMetadata({
       imports: [SprkButtonModule, SprkSpinnerModule],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
+    componentWrapperDecorator((story) => `<div>${story}</div>`),
   ],
   parameters: {
     docs: {
@@ -218,7 +216,7 @@ export const compact = () => ({
     <button
       idString="button-compact"
       sprkButton
-      class="sprk-c-Button--compact" 
+      class="sprk-c-Button--compact"
     >
       Button
     </button>
@@ -235,7 +233,7 @@ export const compactSecondary = () => ({
       variant="secondary"
       idString="button-compact-secondary"
       sprkButton
-      class="sprk-c-Button--compact" 
+      class="sprk-c-Button--compact"
     >
       Button
     </button>
@@ -252,7 +250,7 @@ export const compactTertiary = () => ({
       variant="tertiary"
       idString="button-compact-tertiary"
       sprkButton
-      class="sprk-c-Button--compact" 
+      class="sprk-c-Button--compact"
     >
       Button
     </button>

@@ -21,7 +21,7 @@ export default {
       ],
     }),
     componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box sprk-u-mlm">${story}</div>`,
+      (story) => `<div class="sprk-u-mlm">${story}</div>`,
     ),
   ],
   parameters: {

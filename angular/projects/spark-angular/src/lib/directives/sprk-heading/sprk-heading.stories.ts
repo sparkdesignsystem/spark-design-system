@@ -13,9 +13,7 @@ export default {
     moduleMetadata({
       imports: [SprkHeadingModule],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
+    componentWrapperDecorator((story) => `<div>${story}</div>`),
   ],
   parameters: {
     docs: {

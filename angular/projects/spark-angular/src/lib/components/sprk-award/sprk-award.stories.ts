@@ -24,9 +24,7 @@ export default {
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
+    componentWrapperDecorator((story) => `<div>${story}</div>`),
   ],
   parameters: {
     docs: {

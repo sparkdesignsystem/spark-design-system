@@ -37,7 +37,7 @@ export default {
       ],
     }),
     componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">
+      (story) => `<div>
           <form (submit)="onSubmit($event)" #sampleForm="ngForm">
             ${story}
           </form>

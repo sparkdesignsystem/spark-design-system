@@ -12,9 +12,7 @@ export default {
     moduleMetadata({
       imports: [SprkPaginationModule],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
+    componentWrapperDecorator((story) => `<div>${story}</div>`),
   ],
   parameters: {
     docs: {

@@ -12,9 +12,7 @@ export default {
     moduleMetadata({
       imports: [SprkModalModule],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
+    componentWrapperDecorator((story) => `<div>${story}</div>`),
   ],
   parameters: {
     docs: {

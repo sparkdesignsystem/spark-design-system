@@ -11,9 +11,7 @@ export default {
     moduleMetadata({
       imports: [SprkAlertModule],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
+    componentWrapperDecorator((story) => `<div>${story}</div>`),
   ],
   parameters: {
     docs: {
