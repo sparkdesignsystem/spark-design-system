@@ -13,6 +13,8 @@ import {
 } from '@sparkdesignsystem/spark-react';
 import ComponentPreview from '../../components/ComponentPreview'
 import Status from '../../components/Status'
+import StickyTable from '../../components/StickyTable'
+import InputToggle from '../../components/InputToggle'
 
 # Component Status
 
@@ -53,21 +55,24 @@ Spark components have statuses that we change to reflect their state of completi
 
 ### Built
 
-<div style="overflow: auto">
-<table class="
-    sprk-b-Table 
-    sprk-b-Table--secondary 
-    sprk-b-Table--spacing-small"
->
+<SprkTable 
+    variant="html" 
+    additionalContainerClasses="overflow" 
+    additionalTableClasses="sprk-b-Table 
+            sprk-b-Table--secondary 
+            sprk-b-Table--spacing-medium
+            relative"
+> 
     <thead>
         <tr>
-            <th>Component</th>
-            <th>Design</th>
-            <th>HTML</th>
-            <th>Angular</th>
-            <th>React</th>
+            <th class="sticky">Component</th>
+            <th class="sticky">Design</th>
+            <th class="sticky">HTML</th>
+            <th class="sticky">Angular</th>
+            <th class="sticky">React</th>
         </tr>
     </thead>
+    
     <tbody>
     
     {/** Accordion **/}
@@ -77,6 +82,7 @@ Spark components have statuses that we change to reflect their state of completi
                 element="a"
                 href="/using-spark/components/accordion"
                 variant="simple"
+                additionalClasses="index"
             >
                 Accordion
             </SprkLink>
@@ -85,6 +91,7 @@ Spark components have statuses that we change to reflect their state of completi
             <Status 
                 statusName="ready" 
                 href="/using-spark/components/accordion"
+                additionalClasses="index"
             />
         </td>
         <td>
@@ -678,37 +685,646 @@ Spark components have statuses that we change to reflect their state of completi
     </tr>
     
     {/** Input **/}
-    <tr>
-        <td>Input</td>
+    <tr> 
+        <td class="wideRow" colspan="5">
+            <SprkToggle triggerText="Input (17 Variants)" analyticsString="input-toggle">
+                <SprkTable 
+                    variant="html" 
+                    additionalContainerClasses="overflow" 
+                    additionalTableClasses="sprk-b-Table 
+                            sprk-b-Table--secondary 
+                            sprk-b-Table--spacing-medium
+                            relative"
+                > 
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                    
+                        {/** Checkbox **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#checkbox"
+                                    variant="simple"
+                                >
+                                    Checkbox
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Huge Checkbox **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#huge-checkbox"
+                                    variant="simple"
+                                >
+                                    Huge Checkbox
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Date Input **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#date-input"
+                                    variant="simple"
+                                >
+                                    Date Input
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Date Picker **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#date-picker"
+                                    variant="simple"
+                                >
+                                    Date Picker
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Helper Text **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#helper-text"
+                                    variant="simple"
+                                >
+                                    Helper Text
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Text Input **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#text-input"
+                                    variant="simple"
+                                >
+                                    Text Input
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Huge Text Input **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#huge-text-input"
+                                    variant="simple"
+                                >
+                                    Huge Text Input
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Monetary Input **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#monetary-input"
+                                    variant="simple"
+                                >
+                                    Monetary Input
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Password Input **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#password-input"
+                                    variant="simple"
+                                >
+                                    Password Input
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Percentage Input **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#percentage-input"
+                                    variant="simple"
+                                >
+                                    Percentage Input
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Phone Input **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#phone-input"
+                                    variant="simple"
+                                >
+                                    Phone Input
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Radio Button **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#radio-button"
+                                    variant="simple"
+                                >
+                                    Radio Button
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Search Input **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#search-input"
+                                    variant="simple"
+                                >
+                                    Search Input
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Select Box **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#select-box"
+                                    variant="simple"
+                                >
+                                    Select Box
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Huge Select Box **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#huge-select-box"
+                                    variant="simple"
+                                >
+                                    Huge Select Box
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** SSN Input **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#ssn-input"
+                                    variant="simple"
+                                >
+                                    SSN Input
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                        {/** Text Area **/} 
+                        <tr>
+                            <td>
+                                <SprkLink
+                                    element="a"
+                                    href="https://sparkdesignsystem.com/using-spark/components/input#text-area"
+                                    variant="simple"
+                                >
+                                    Text Area
+                                </SprkLink>
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="components/link"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://html.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://angular.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                            <td>
+                                <Status 
+                                    statusName="ready" 
+                                    href="https://react.sparkdesignsystem.com/?path=/story/components-link--default-story"
+                                />
+                            </td>
+                        </tr>
+                    </tbody>
+                </SprkTable>
+            </SprkToggle>
+        </td>
     </tr>
-    {/*<tr>
-        <SprkToggle triggerText="Input" analyticsString="toggle-1">
-           <table class="
-                sprk-b-Table 
-                sprk-b-Table--secondary 
-                sprk-b-Table--spacing-small"
-            >
-                 <thead>
-                    <tr>
-                        <th>Component</th>
-                        <th>Design</th>
-                        <th>HTML</th>
-                        <th>Angular</th>
-                        <th>React</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>lolajdsghfaksdjhfkajsldhfkajlsdhfkajsdhfk</td>
-                        <td>Data</td>
-                        <td>Data</td>
-                        <td>Data</td>
-                        <td>Data</td>
-                    </tr>
-                </tbody>
-            </table>    
-        </SprkToggle>   
-    </tr> */}  
     
     {/** Link **/} 
     <tr>
@@ -1160,37 +1776,8 @@ Spark components have statuses that we change to reflect their state of completi
             />
         </td>
     </tr>
-    
-    </tbody>
-    
-</table>
-{/* Input test <SprkToggle triggerText="Input" analyticsString="toggle-1">
-    <table class="
-        sprk-b-Table 
-        sprk-b-Table--secondary 
-        sprk-b-Table--spacing-small"
-    >
-        <thead>
-            <tr>
-                <th>Component</th>
-                <th>Design</th>
-                <th>HTML</th>
-                <th>Angular</th>
-                <th>React</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Icon</td>
-            <td>Data</td>
-            <td>Data</td>
-            <td>Data</td>
-            <td>Data</td>
-        </tr>
-        </tbody>
-     </table>       
-</SprkToggle> */}
-</div>
+    </tbody>  
+</SprkTable>
 
 <div class="sprk-u-TextAlign--right sprk-u-mbl">
   <a class="sprk-b-Link" href="#table-of-contents">
@@ -1202,83 +1789,88 @@ Spark components have statuses that we change to reflect their state of completi
 
 Components under this section are currently in the backlog and in various stages of the design and development processes.
 
-<table class="
-    sprk-b-Table 
-    sprk-b-Table--secondary 
-    sprk-b-Table--spacing-small
-    ">
+<SprkTable 
+    variant="html" 
+    additionalContainerClasses="overflow" 
+    additionalTableClasses="sprk-b-Table 
+            sprk-b-Table--secondary 
+            sprk-b-Table--spacing-medium
+            relative"
+> 
     <thead>
-    <tr>
-        <th>Component</th>
-        <th>Design</th>
-        <th>HTML</th>
-        <th>Angular</th>
-        <th>React</th>
-    </tr>
+        <tr>
+            <th class="sticky">Component</th>
+            <th class="sticky">Design</th>
+            <th class="sticky">HTML</th>
+            <th class="sticky">Angular</th>
+            <th class="sticky">React</th>
+        </tr>
     </thead>
+    
     <tbody>
-    <tr>
-        <td>Component 1</td>
-        <td>
-            <Status statusName="ready"/>
-        </td>
-        <td>
-            <Status statusName="build"/>
-        </td>
-        <td>
-            <Status statusName="build"/>
-        </td>
-        <td>
-            <Status statusName="ready"/>
-        </td>
-    </tr>
-    <tr>
-        <td>Component 2</td>
-        <td>
-            <Status statusName="ready"/>
-        </td>
-        <td>
-            <Status statusName="research"/>
-        </td>
-        <td>
-            <Status statusName="research"/>
-        </td>
-        <td>
-            <Status statusName="build"/>
-        </td>
-    </tr>
-    <tr>
-        <td>Component 3</td>
-        <td>
-            <Status statusName="build"/>
-        </td>
-        <td>
-            <Status statusName="research"/>
-        </td>
-        <td>
-            <Status statusName="highPriority"/>
-        </td>
-        <td>
-            <Status statusName="highPriority"/>
-        </td>
-    </tr>
-    <tr>
-        <td>Component 4</td>
-        <td>
-            <Status statusName="lowPriority"/>
-        </td>
-        <td>
-            <Status statusName="lowPriority"/>
-        </td>
-        <td>
-            <Status statusName="lowPriority"/>
-        </td>
-        <td>
-            <Status statusName="lowPriority"/>
-        </td>
-    </tr>
+        <tr>
+            <td>Component 1</td>
+            <td>
+                <Status statusName="ready"/>
+            </td>
+            <td>
+                <Status statusName="build"/>
+            </td>
+            <td>
+                <Status statusName="build"/>
+            </td>
+            <td>
+                <Status statusName="ready"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Component 2</td>
+            <td>
+                <Status statusName="ready"/>
+            </td>
+            <td>
+                <Status statusName="research"/>
+            </td>
+            <td>
+                <Status statusName="research"/>
+            </td>
+            <td>
+                <Status statusName="build"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Component 3</td>
+            <td>
+                <Status statusName="build"/>
+            </td>
+            <td>
+                <Status statusName="research"/>
+            </td>
+            <td>
+                <Status statusName="highPriority"/>
+            </td>
+            <td>
+                <Status statusName="highPriority"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Component 4</td>
+            <td>
+                <Status statusName="lowPriority"/>
+            </td>
+            <td>
+                <Status statusName="lowPriority"/>
+            </td>
+            <td>
+                <Status statusName="lowPriority"/>
+            </td>
+            <td>
+                <Status statusName="lowPriority"/>
+            </td>
+        </tr>
     </tbody>
-</table>
+</SprkTable> 
+
 <div class="sprk-u-TextAlign--right sprk-u-mbl">
   <a class="sprk-b-Link" href="#table-of-contents">
     Back to Table of Contents
@@ -1375,28 +1967,10 @@ Components under this section are currently in the backlog and in various stages
 
 ## Contribute to Spark
 
-If you have any suggestions for new components or would like to help develop and build a new component, please submit a message in the text area below.
+If you have any suggestions for new components or would like to help develop and build a new component, please send us an email.
 
-<div class="sprk-b-InputContainer">
-    <label
-        for="textarea"
-        class="sprk-b-Label"
-    >
-    </label>
-    <textarea style="width: 100%"
-        class="sprk-b-TextArea"
-        id="textarea"
-        data-id="textarea"
-        aria-describedby="textarea--error-container"
-    ></textarea>
-    <div
-        class="sprk-b-ErrorContainer"
-        id="textarea--error-container"
-    ></div>
-    <button class="sprk-c-Button" data-id="button-primary">
-        Submit
-    </button>
-</div>
+
+<a class="sprk-c-Button" href="mailto:sparkdesignsystem@rocketmortgage.com" data-id="button-link-element"> Email Us </a>
 
 <div class="sprk-u-TextAlign--right sprk-u-mbl">
   <a class="sprk-b-Link" href="#table-of-contents">

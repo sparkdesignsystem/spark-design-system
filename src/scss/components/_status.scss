@@ -1,19 +1,91 @@
-/* stylelint-disable selector-class-pattern */
 
-.sticky-table {
-    background-color: green;
+
+/*.input-test {
+    background: rgb(177, 107, 177);
+    width: 100%;
+}*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table th, table td{
+    width:20px;
+}
+
+table td.wideRow, table th.wideRow{
+    //background: rgb(177, 107, 177);
+    
+}
+
+.overflow {
+    overflow: visible;
+}
+
+.sticky {
+    background: #fff;
+    position: sticky;
+    top: 102px;
+    z-index: 2;
+}
+
+
+.relative {
+    position: relative;
+    overflow: none !important;
+}
+
+.outer {
+    background: #fff;
+    position: relative;
+    z-index: $sprk-layer-height-m -1;
+}
+
+.inner {
+    z-index: $sprk-layer-height-m -5 !important;
+}
+
+.index {
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    position: sticky;
     background: green;
-    border-top: $sprk-masthead-border-bottom;
-    position: sticky; 
-    top: $sprk-masthead-border-bottom;
-    transition: $sprk-masthead-transition;
+    top: 300;
+    z-index: 100;
+  }
+
+div.table.thead.th {
+    background: #fff !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: $sprk-layer-height-m -3 !important;
+    text-align: left !important;
+}
+
+td {
+    z-index: $sprk-layer-height-m -20 !important;
+}
+tr {
+    z-index: $sprk-layer-height-m -20 !important;
+}
+
+.SprkLink {
+    z-index: $sprk-layer-height-m -20 !important;
+}
+
+tbody {
+    z-index: $sprk-layer-height-m -20 !important;
 }
 
 .docs-link__green:hover {
     border-bottom: 2px solid $sprk-green;
 }
 .docs-link__yellow:hover {
-    border-bottom: 2px solid $sprk-yellow;
+    border-bottom: 2px solid #B46417;
 }
 .docs-link__blue:hover {
     border-bottom: 2px solid $sprk-blue;
@@ -30,8 +102,8 @@
     fill: $sprk-blue;
 }
 .docs-status-question-mark__yellow {
-    stroke: $sprk-yellow;
-    fill: $sprk-yellow;
+    stroke: #d2752b;
+    fill: #d2752b;
 }
 
 .docs-status__Ready {
@@ -41,8 +113,8 @@
 }
 
 .docs-status__UnderReview {
-    stroke: $sprk-yellow;
-    fill: $sprk-yellow;
+    stroke: #d2752b;
+    fill: #d2752b;
     margin-right: 10px;
 }
 
@@ -81,7 +153,15 @@
 }
 
 .docs-status__Orange {
-    color: #B46417;
+    color: #d2752b;
+}
+
+.docs-status-text__Orange {
+    color: #b36525;
+}
+
+.docs-status-text__Orange:hover {
+    color: #b36525;
 }
 
 .docs-status__HighPriority {

@@ -36,22 +36,23 @@ const Status = ({
         );
     } else if (statusName === "underReview") {
         return (
-            <div>
+            <div class="z">
                 <SprkIcon className="
                     docs-status__UnderReview
                     sprk-c-Icon--filled
-                    sprk-c-Icon--l"
+                    sprk-c-Icon--l
+                    index"
                     iconName="caution-filled"
                 />
                 <SprkLink
                     element="a"
                     href={href}
                     variant="simple"
-                    additionalClasses="sprk-u-Color--yellow docs-link__yellow"
+                    additionalClasses="docs-status-text__Orange docs-link__yellow index"
                 >
                     Under Review
                 </SprkLink>
-                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__yellow">
+                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__yellow index">
                     {additionalInfo}
                     
                 </SprkTooltip>
@@ -70,11 +71,11 @@ const Status = ({
                     element="a"
                     href={href}
                     variant="simple"
-                    additionalClasses="sprk-u-Color--blue docs-link__blue"
+                    additionalClasses="sprk-u-Color--blue docs-link__blue index"
                 >
                     Updated
                 </SprkLink>
-                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__blue">
+                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__blue index">
                     {additionalInfo}
                     
                 </SprkTooltip>
