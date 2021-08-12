@@ -60,6 +60,15 @@ export const defaultStory = () => (
           element: 'a',
           mediaHref: '#nogo',
         },
+        {
+          mediaType: 'image',
+          src: 'https://spark-assets.netlify.app/rocket_auto.svg',
+          altText: 'Rocket Auto Logo',
+          description:
+            'Find and buy the perfect car or truck from thousands of vehicles, all in one marketplace',
+          element: 'a',
+          mediaHref: 'https://rocketauto.com',
+        },
       ],
     }}
     linkColumns={[
