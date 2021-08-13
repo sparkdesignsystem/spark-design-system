@@ -29,6 +29,8 @@ import specimen from '../../../images/typography/RocketTypeSpecimenGraphic-01.pn
 import specimen2x from '../../../images/typography/RocketTypeSpecimenGraphic-01@2x.png';
 export const specimenSet = `${specimen} 560w, ${specimen2x} 1120w`;
 
+import TypographyTable from '../../../components/TypographyTable';
+
 # Typography
 
 Typography is fundamental to our Rocket experiences. We use a custom developed typeface called Rocket Sans.
@@ -147,166 +149,12 @@ However, when developing a page, reference the Storybook components below.
 <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xl">
   <div class="sprk-b-TableContainer sprk-o-Stack__item sprk-u-mtl">
     <h3 class="sprk-b-TypeDisplayFive">Desktop</h3>
-    <table class="sprk-b-Table sprk-b-Table--spacing-medium">
-      <thead>
-        <tr>
-          <th>Scale Category</th>
-          <th>Weight</th>
-          <th>Size</th>
-          <th>Line Height</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>H1</td>
-          <td>Bold</td>
-          <td>54px</td>
-          <td>60px</td>
-        </tr>
-        <tr>
-          <td>H2</td>
-          <td>Bold</td>
-          <td>40px</td>
-          <td>48px</td>
-        </tr>
-        <tr>
-          <td>H3</td>
-          <td>Light</td>
-          <td>34px</td>
-          <td>44px</td>
-        </tr>
-        <tr>
-          <td>H4</td>
-          <td>Bold</td>
-          <td>26px</td>
-          <td>32px</td>
-        </tr>
-        <tr>
-          <td>H5</td>
-          <td>Bold</td>
-          <td>20px</td>
-          <td>26px</td>
-        </tr>
-        <tr>
-          <td>H6</td>
-          <td>Light</td>
-          <td>20px</td>
-          <td>24px</td>
-        </tr>
-        <tr>
-          <td>H7</td>
-          <td>Bold</td>
-          <td>16px</td>
-          <td>20px</td>
-        </tr>
-        <tr>
-          <td>B1</td>
-          <td>Medium</td>
-          <td>16px</td>
-          <td>24px</td>
-        </tr>
-        <tr>
-          <td>B2</td>
-          <td>Light</td>
-          <td>16px</td>
-          <td>24px</td>
-        </tr>
-        <tr>
-          <td>B3</td>
-          <td>Light</td>
-          <td>14px</td>
-          <td>20px</td>
-        </tr>
-        <tr>
-          <td>Legal</td>
-          <td>Light</td>
-          <td>13px</td>
-          <td>20px</td>
-        </tr>
-      </tbody>
-    </table>
+    <TypographyTable category="desktop" />
   </div>
 
   <div class="sprk-b-TableContainer sprk-o-Stack__item sprk-u-mtl">
     <h3 class="sprk-b-TypeDisplayFive">Mobile</h3>
-    <table class="sprk-b-Table sprk-b-Table--spacing-medium">
-      <thead>
-        <tr>
-          <th>Scale Category</th>
-          <th>Weight</th>
-          <th>Size</th>
-          <th>Line Height</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>H1</td>
-          <td>Bold</td>
-          <td>40px</td>
-          <td>44px</td>
-        </tr>
-        <tr>
-          <td>H2</td>
-          <td>Bold</td>
-          <td>32px</td>
-          <td>36px</td>
-        </tr>
-        <tr>
-          <td>H3</td>
-          <td>Light</td>
-          <td>28px</td>
-          <td>36px</td>
-        </tr>
-        <tr>
-          <td>H4</td>
-          <td>Bold</td>
-          <td>24px</td>
-          <td>32px</td>
-        </tr>
-        <tr>
-          <td>H5</td>
-          <td>Bold</td>
-          <td>20px</td>
-          <td>26px</td>
-        </tr>
-        <tr>
-          <td>H6</td>
-          <td>Light</td>
-          <td>20px</td>
-          <td>24px</td>
-        </tr>
-        <tr>
-          <td>H7</td>
-          <td>Bold</td>
-          <td>16px</td>
-          <td>22px</td>
-        </tr>
-        <tr>
-          <td>B1</td>
-          <td>Medium</td>
-          <td>16px</td>
-          <td>24px</td>
-        </tr>
-        <tr>
-          <td>B2</td>
-          <td>Light</td>
-          <td>16px</td>
-          <td>24px</td>
-        </tr>
-        <tr>
-          <td>B3</td>
-          <td>Light</td>
-          <td>14px</td>
-          <td>20px</td>
-        </tr>
-        <tr>
-          <td>Legal</td>
-          <td>Light</td>
-          <td>13px</td>
-          <td>20px</td>
-        </tr>
-      </tbody>
-    </table>
+    <TypographyTable category="mobile" />
   </div>
 </div>
 
