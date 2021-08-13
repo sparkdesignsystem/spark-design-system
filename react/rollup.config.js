@@ -1,7 +1,9 @@
-const path = require('path');
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
-import commonjs from "rollup-plugin-commonjs";
+import commonjs from 'rollup-plugin-commonjs';
+import { terser } from 'rollup-plugin-terser';
+
+const path = require('path');
 
 export default {
   external: ['react', 'react-dom'],
@@ -11,17 +13,18 @@ export default {
     format: 'commonjs',
     globals: {
       react: 'React',
-      'react-dom': 'ReactDOM'
-    }
+      'react-dom': 'ReactDOM',
+    },
   },
 
   plugins: [
     resolve(),
     commonjs({
-      exclude: path.resolve(__dirname, 'src/**/*.js')
+      exclude: path.resolve(__dirname, 'src/**/*.js'),
     }),
     babel({
-      exclude: path.resolve(__dirname, './node_modules')
-    })
-  ]
-}
+      exclude: path.resolve(__dirname, './node_modules'),
+    }),
+    terser(),
+  ],
+};
