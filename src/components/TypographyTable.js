@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SprkTable } from '@sparkdesignsystem/spark-react';
+import {
+  SprkTable,
+  SprkHeading,
+  SprkStack,
+  SprkStackItem,
+} from '@sparkdesignsystem/spark-react';
 
 const TypographyTable = (props) => {
   const columns = [
@@ -167,15 +172,23 @@ const TypographyTable = (props) => {
 
   return (
     <>
-      <SprkTable
-        additionalTableClasses="
-         sprk-b-Table--spacing-medium
-         sprk-b-Table--striped-even
-         sprk-u-mvl
-       "
-        columns={columns}
-        rows={rows}
-      />
+      <SprkStack itemSpacing="medium">
+        <SprkStackItem>
+          <SprkHeading variant="displayFive">
+            {category === 'desktop' ? 'Desktop' : 'Mobile'}
+          </SprkHeading>
+        </SprkStackItem>
+        <SprkStackItem>
+          <SprkTable
+            additionalTableClasses="
+              sprk-b-Table--spacing-medium
+              sprk-b-Table--striped-even
+            "
+            columns={columns}
+            rows={rows}
+          />
+        </SprkStackItem>
+      </SprkStack>
     </>
   );
 };
