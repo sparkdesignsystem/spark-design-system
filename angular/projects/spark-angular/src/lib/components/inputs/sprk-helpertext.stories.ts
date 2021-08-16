@@ -41,7 +41,7 @@ export default {
         <form (submit)="onSubmit($event)" #sampleForm="ngForm">
           ${story}
         </form>
-      `,
+       `,
     ),
   ],
   props: {
@@ -79,9 +79,9 @@ export const helperText = () => ({
         #textInput="ngModel"
         idString="text-input-1"
       >
-      <div sprkHelperText id="helper-text">
+      <p sprkHelperText id="helper-text">
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
     </sprk-input-container>
   `,
 });
@@ -115,9 +115,9 @@ export const invalidHelperText = () => ({
         class="sprk-b-TextInput--error"
         aria-invalid="true"
       >
-      <div sprkHelperText id="helper-text">
+      <p sprkHelperText id="helper-text">
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError id="helper-error">
         <sprk-icon
           iconName="exclamation-filled"

@@ -239,10 +239,10 @@ export const defaultHelperText = () => ({
           </label>
         </sprk-radio-item>
       </fieldset>
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the
         field's intent.
-      </div>
+      </p>
     </sprk-radio-group>
   `,
 });
@@ -588,10 +588,10 @@ export const hugeHelperText = () => ({
           </label>
         </sprk-radio-item>
       </fieldset>
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the
         field's intent.
-      </div>
+      </p>
     </sprk-radio-group>
   `,
 });

@@ -17,9 +17,9 @@ import { SprkSelectionContainerComponent } from './sprk-selection-container.comp
         <input type="checkbox" sprkSelectionInput />
         <label sprkSelectionLabel>Item 1</label>
       </sprk-selection-item-container>
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError>Error Message!</span>
     </sprk-selection-container>
   `,

@@ -21,9 +21,9 @@ import { SprkFieldsetDirective } from '../../../directives/inputs/sprk-fieldset/
           <input type="checkbox" sprkCheckboxInput />
           <label sprkCheckboxLabel>Item 1</label>
         </sprk-checkbox-item>
-        <div sprkHelperText>
+        <p sprkHelperText>
           Optional helper text, used to clarify the field's intent.
-        </div>
+        </p>
       </fieldset>
       <span sprkFieldError>Error Message!</span>
     </sprk-checkbox-group>
@@ -43,9 +43,9 @@ class TestComponent {}
           <input type="checkbox" sprkCheckboxInput />
           <label sprkCheckboxLabel>Item 1</label>
         </sprk-checkbox-item>
-        <div sprkHelperText>
+        <p sprkHelperText>
           Optional helper text, used to clarify the field's intent.
-        </div>
+        </p>
       </fieldset>
       <span sprkFieldError id="foo">Error Message!</span>
     </sprk-checkbox-group>

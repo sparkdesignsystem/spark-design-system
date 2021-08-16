@@ -13,9 +13,9 @@ import { SprkIconComponent } from '../../sprk-icon/sprk-icon.component';
     <sprk-input-container>
       <label sprkLabel>Label!</label>
       <input sprkInput />
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError>Error Message!</span>
     </sprk-input-container>
   `,
@@ -28,9 +28,9 @@ class Test1Component {}
     <sprk-input-container>
       <label sprkLabel for="example-for">Label!</label>
       <input sprkInput id="example-id" />
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError id="example-error">Error Message!</span>
     </sprk-input-container>
   `,
@@ -88,9 +88,9 @@ class Test4Component {}
     <sprk-input-container>
       <label sprkLabel>Label!</label>
       <input sprkInput id="example-id" />
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError>Error Message!</span>
     </sprk-input-container>
   `,
@@ -103,9 +103,9 @@ class Test5Component {}
     <sprk-input-container>
       <label sprkLabel for="example-for">Label!</label>
       <input sprkInput />
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError>Error Message!</span>
     </sprk-input-container>
   `,
@@ -118,9 +118,9 @@ class Test6Component {}
     <sprk-input-container>
       <label sprkLabel for="test-7">Label!</label>
       <input sprkInput id="test-7" />
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError>Error Message!</span>
     </sprk-input-container>
   `,

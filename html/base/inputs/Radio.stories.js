@@ -172,9 +172,9 @@ export const defaultHelperText = () => {
           </label>
         </div>
       </fieldset>
-      <div class="sprk-b-HelperText">
+      <p class="sprk-b-HelperText">
         Optional helper text, used to clarify the field&#x27;s intent.
-      </div>
+      </p>
       <div
         class="sprk-b-ErrorContainer"
         id="radio--error-container"
@@ -570,9 +570,9 @@ export const hugeHelperText = () => {
           </label>
         </div>
       </fieldset>
-      <div class="sprk-b-HelperText">
+      <p class="sprk-b-HelperText">
         Optional helper text, used to clarify the field&#x27;s intent.
-      </div>
+      </p>
       <div
         class="sprk-b-ErrorContainer"
         id="radio--error-container"

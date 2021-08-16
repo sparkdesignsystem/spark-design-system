@@ -11,9 +11,9 @@ import { SprkTextareaDirective } from '../../../directives/inputs/sprk-textarea/
     <sprk-textarea-container>
       <label sprkLabel>Label!</label>
       <textarea sprkTextarea></textarea>
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError>Error Message!</span>
     </sprk-textarea-container>
   `,
@@ -26,9 +26,9 @@ class TestComponent1 {}
     <sprk-textarea-container>
       <label sprkLabel>Label!</label>
       <textarea sprkTextarea id="example-id"></textarea>
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError>Error Message!</span>
     </sprk-textarea-container>
   `,
@@ -41,9 +41,9 @@ class TestComponent2 {}
     <sprk-textarea-container>
       <label sprkLabel for="example-for">Label!</label>
       <textarea sprkTextarea></textarea>
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError>Error Message!</span>
     </sprk-textarea-container>
   `,
@@ -56,9 +56,9 @@ class TestComponent3 {}
     <sprk-textarea-container>
       <label sprkLabel for="example-for">Label!</label>
       <textarea sprkTextarea id="example-id"></textarea>
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
       <span sprkFieldError id="example-error">Error Message!</span>
     </sprk-textarea-container>
   `,

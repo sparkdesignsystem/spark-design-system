@@ -239,9 +239,9 @@ export const defaultHelperText = () => ({
           </label>
         </sprk-checkbox-item>
       </fieldset>
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
     </sprk-checkbox-group>
   `,
 });
@@ -589,9 +589,9 @@ export const hugeHelperText = () => ({
           </label>
         </sprk-checkbox-item>
       </fieldset>
-      <div sprkHelperText>
+      <p sprkHelperText>
         Optional helper text, used to clarify the field's intent.
-      </div>
+      </p>
     </sprk-checkbox-group>
   `,
 });
