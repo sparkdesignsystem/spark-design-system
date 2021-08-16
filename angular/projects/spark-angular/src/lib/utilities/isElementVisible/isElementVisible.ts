@@ -10,13 +10,15 @@ export const isElementVisible = (elRef: ElementRef): boolean => {
   if (!elRef) {
     return;
   }
-  const elementDisplayValue = window.getComputedStyle(elRef.nativeElement)
-    .display;
-  const elementVisibilityValue = window.getComputedStyle(elRef.nativeElement)
-    .visibility;
-  const elementIsVisible =
-    elementDisplayValue === 'none' || elementVisibilityValue === 'hidden'
-      ? false
-      : true;
-  return elementIsVisible;
+  if (typeof window !== 'undefined') {
+    const elementDisplayValue = window.getComputedStyle(elRef.nativeElement)
+      .display;
+    const elementVisibilityValue = window.getComputedStyle(elRef.nativeElement)
+      .visibility;
+    const elementIsVisible =
+      elementDisplayValue === 'none' || elementVisibilityValue === 'hidden'
+        ? false
+        : true;
+    return elementIsVisible;
+  }
 };

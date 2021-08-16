@@ -20,7 +20,7 @@
     "build-storybook": "npm run prebuild:storybook && build-storybook -s ../storybook-utilities/favicon",
     "prepublishOnly": "npm run build"
   },
-  "author": "Quicken Loans",
+  "author": "Rocket Mortgage",
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.7.0",

@@ -32,13 +32,19 @@ const setSpinning = (element, options) => {
   const spinningAriaLabel = options.ariaLabel || 'Loading';
   const ariaValueText = options.ariaValueText || 'Loading';
   const role = options.role || 'progressbar';
+  const hasDoNotDisable = options.hasDoNotDisable || false;
 
   el.classList.add('sprk-c-Button--has-spinner');
   el.setAttribute('aria-label', spinningAriaLabel);
   el.setAttribute('data-sprk-spinner-text', el.textContent);
-  el.setAttribute('disabled', '');
   el.setAttribute('data-sprk-has-spinner', 'true');
   el.setAttribute('style', `width: ${width}px`);
+
+  // This flag should be used for submit buttons so that the
+  // disabled attribute does not suppress the submit behavior.
+  if (!hasDoNotDisable) {
+    el.setAttribute('disabled', '');
+  }
 
   el.innerHTML = `
     <div
@@ -60,8 +66,15 @@ const cancelSpinning = (element) => {
 };
 
 const spinners = () => {
-  getElements('[data-sprk-spinner="click"]', (spinnerContainer) => {
+  getElements('[data-sprk-spinner]', (spinnerContainer) => {
+    const spinnerType = spinnerContainer.getAttribute('data-sprk-spinner');
+
     const options = {};
+
+    if (spinnerType === 'is-not-disabled') {
+      options.hasDoNotDisable = true;
+    }
+
     options.size = spinnerContainer.getAttribute('data-sprk-spinner-size');
     // TODO: Deprecate lightness option in favor of variant - issue #1292
     options.lightness = spinnerContainer.getAttribute(

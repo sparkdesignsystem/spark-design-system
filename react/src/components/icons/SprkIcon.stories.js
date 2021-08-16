@@ -1,21 +1,22 @@
 import React, { useEffect } from 'react';
 import SprkIcon from './SprkIcon';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
-import { getIcons, attachIcons, createIconExample } from "../../../../storybook-utilities/icon-utilities/icon-name-util";
+import {
+  getIcons,
+  attachIcons,
+} from '../../../../storybook-utilities/icon-utilities/icon-name-util';
 
 export default {
   title: 'Components/Icons',
   component: SprkIcon,
-  decorators: [
-    story => <div className="sprk-o-Box">{story()}</div>
-  ],
+  decorators: [(story) => <div className="sprk-o-Box">{story()}</div>],
   parameters: {
     jest: ['SprkIcon'],
     info: `
 ${markdownDocumentationLinkBuilder('icon')}
 
-The icons in Spark are the property of Quicken
-Loans and are not provided directly in our packages. You
+The icons in Spark are the property of Rocket Mortgage 
+and are not provided directly in our packages. You
 will need to include the Icon yourself.
 
 #### Accessibility
@@ -57,10 +58,14 @@ export const gallery = () => {
     attachIcons(getIcons());
   });
 
-  return (<ul className="
-    sbdocs-gallery-container
-    sprk-o-Stack
-    sprk-o-Stack--split@xs"></ul>);
+  return (
+    <ul
+      className="
+        sbdocs-gallery-container
+        sprk-o-Stack
+        sprk-o-Stack--split@xs"
+    />
+  );
 };
 
 gallery.story = {
@@ -68,9 +73,7 @@ gallery.story = {
   parameters: {
     docs: {
       inlineStories: false,
-      iframeHeight: 1000
+      iframeHeight: 1000,
     },
-  }
+  },
 };
-
-
