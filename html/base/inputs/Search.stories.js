@@ -27,6 +27,7 @@ export const searchInput = () => `
             sprk-c-Icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
+            sprk-b-InputContainer__icon
           "
           viewBox="0 0 64 64"
           aria-hidden="true"
@@ -74,6 +75,7 @@ export const invalidSearchInput = () => `
             sprk-c-Icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
+            sprk-b-InputContainer__icon
           "
           viewBox="0 0 64 64"
           aria-hidden="true"
@@ -138,6 +140,7 @@ export const disabledSearchInput = () => `
             sprk-c-Icon
             sprk-c-Icon--filled-current-color
             sprk-c-Icon--stroke-current-color
+            sprk-b-InputContainer__icon
           "
           viewBox="0 0 64 64"
           aria-hidden="true"
