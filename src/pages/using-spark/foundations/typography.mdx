@@ -138,7 +138,7 @@ Combine these header and body styles to establish content hierarchy within your 
 
 </ul>
 
-<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
+<SprkDivider element="span"/>
 
 ## Size Reference Charts
 
@@ -147,18 +147,18 @@ The size reference chart is an example of typography when designing.
 However, when developing a page, reference the Storybook components below.
 
 <div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xl">
-  <div class="sprk-b-TableContainer sprk-o-Stack__item sprk-u-mtl">
+  <div class="sprk-b-TableContainer sprk-o-Stack__item">
     <h3 class="sprk-b-TypeDisplayFive">Desktop</h3>
     <TypographyTable category="desktop" />
   </div>
 
-  <div class="sprk-b-TableContainer sprk-o-Stack__item sprk-u-mtl">
+  <div class="sprk-b-TableContainer sprk-o-Stack__item">
     <h3 class="sprk-b-TypeDisplayFive">Mobile</h3>
     <TypographyTable category="mobile" />
   </div>
 </div>
 
-<SprkDivider element="span" additionalClasses="sprk-u-mvn" />
+<SprkDivider element="span" />
 
 ## Headers
 
@@ -200,21 +200,26 @@ Use Page Title with [Display Two](#display-two) to style primary headings on nes
   </SprkHeading>
 </SprkFlag>
 
-<div class="sprk-u-Measure">
-  <img
-    srcset={pageTitleDoSet}
-    src={pageTitleDo}
-    sizes="(min-width: 1120px) 1120px,
-                  (min-width: 1680px) 1680px,
-                  560px"
-    alt="A page layout featuring a primary and secondary heading. Each headline is left-aligned."
-  />
-</div>
-
-<SprkText variant="bodyTwo" additionalClasses="sprk-u-Measure sprk-u-mvm">
-  Use page titles at the top left of the page, and left-align the headline with
-  the red line.
-</SprkText>
+<SprkStack>
+  <SprkStackItem>
+    <div class="sprk-u-Measure">
+      <img
+        srcset={pageTitleDoSet}
+        src={pageTitleDo}
+        sizes="(min-width: 1120px) 1120px,
+                      (min-width: 1680px) 1680px,
+                      560px"
+        alt="A page layout featuring a primary and secondary heading. Each headline is left-aligned."
+      />
+    </div>
+  </SprkStackItem>
+  <SprkStackItem>
+    <SprkText variant="bodyTwo" additionalClasses="sprk-u-Measure">
+      Use page titles at the top left of the page, and left-align the headline with
+      the red line.
+    </SprkText>
+  </SprkStackItem>
+</SprkStack>
 
 <SprkFlag
   additionalClasses="sprk-o-Flag--middle sprk-u-mtl sprk-u-pvm"
@@ -231,10 +236,10 @@ Use Page Title with [Display Two](#display-two) to style primary headings on nes
   </SprkHeading>
 </SprkFlag>
 
-<SprkStack itemSpacing="medium" splitAt="small" additionalClasses="sprk-u-mbl">
-  <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
+<SprkStack itemSpacing="medium" splitAt="small">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s">
     <SprkStack>
-      <SprkStackItem additionalClasses="sprk-u-mbm">
+      <SprkStackItem>
         <img
           srcset={pageTitleDontSet}
           src={pageTitleDont}
@@ -247,7 +252,7 @@ Use Page Title with [Display Two](#display-two) to style primary headings on nes
       <SprkStackItem>
         <SprkText
           variant="bodyTwo"
-          additionalClasses="sprk-u-Measure sprk-u-mbm"
+          additionalClasses="sprk-u-Measure"
         >
           Do not center-align page titles.
         </SprkText>
@@ -255,9 +260,9 @@ Use Page Title with [Display Two](#display-two) to style primary headings on nes
     </SprkStack>
 
   </SprkStackItem>
-  <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s sprk-u-prm">
+  <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s">
     <SprkStack>
-      <SprkStackItem additionalClasses="sprk-u-mbm">
+      <SprkStackItem>
         <img
           srcset={pageTitleDont2Set}
           src={pageTitleDont2}
@@ -270,7 +275,7 @@ Use Page Title with [Display Two](#display-two) to style primary headings on nes
       <SprkStackItem>
         <SprkText
           variant="bodyTwo"
-          additionalClasses="sprk-u-Measure sprk-u-mbm"
+          additionalClasses="sprk-u-Measure"
         >
           To maintain content hierarchy, do not use multiple page titles on one page.
         </SprkText>
