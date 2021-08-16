@@ -13,7 +13,7 @@ export default {
     moduleMetadata({
       imports: [SprkHeadingModule],
     }),
-    componentWrapperDecorator((story) => `<div>${story}</div>`),
+    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {

@@ -12,7 +12,7 @@ export default {
     moduleMetadata({
       imports: [SprkFlagModule],
     }),
-    componentWrapperDecorator((story) => `<div>${story}</div>`),
+    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {

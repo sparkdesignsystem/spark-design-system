@@ -12,7 +12,7 @@ export default {
     moduleMetadata({
       imports: [SprkDictionaryModule],
     }),
-    componentWrapperDecorator((story) => `<div>${story}</div>`),
+    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {

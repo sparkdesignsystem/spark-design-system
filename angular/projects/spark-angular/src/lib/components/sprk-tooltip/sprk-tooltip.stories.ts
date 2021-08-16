@@ -13,7 +13,7 @@ export default {
     moduleMetadata({
       imports: [SprkTooltipModule, BrowserAnimationsModule],
     }),
-    componentWrapperDecorator((story) => `<div>${story}</div>`),
+    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {

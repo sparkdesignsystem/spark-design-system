@@ -12,7 +12,7 @@ export default {
     moduleMetadata({
       imports: [SprkPaginationModule],
     }),
-    componentWrapperDecorator((story) => `<div>${story}</div>`),
+    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {

@@ -33,11 +33,11 @@ export default {
       ],
     }),
     componentWrapperDecorator(
-      (story) => `<div>
-          <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${story}
-          </form>
-        <div>`,
+      (story) => `
+        <form (submit)="onSubmit($event)" #sampleForm="ngForm">
+          ${story}
+        </form>
+      `,
     ),
   ],
   props: {
