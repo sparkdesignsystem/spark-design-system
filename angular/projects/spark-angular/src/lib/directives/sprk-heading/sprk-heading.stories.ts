@@ -1,6 +1,6 @@
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { SprkHeadingModule } from './sprk-heading.module';
 import { SprkHeadingDirective } from './sprk-heading.directive';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';

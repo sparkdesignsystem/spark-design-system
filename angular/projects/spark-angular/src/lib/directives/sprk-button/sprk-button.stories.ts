@@ -1,7 +1,7 @@
 import { SprkButtonModule } from './sprk-button.module';
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { SprkButtonDirective } from './sprk-button.directive';
 import { SprkSpinnerModule } from '../../directives/sprk-spinner/sprk-spinner.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';

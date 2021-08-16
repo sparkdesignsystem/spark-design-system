@@ -3,7 +3,7 @@ import { SprkLinkDirectiveModule } from '../../directives/sprk-link/sprk-link.mo
 import { SprkDropdownComponent } from './sprk-dropdown.component';
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';

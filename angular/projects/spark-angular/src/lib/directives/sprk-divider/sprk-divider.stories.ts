@@ -4,7 +4,7 @@ import { SprkDividerModule } from '../../components/sprk-divider/sprk-divider.mo
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 export default {
   title: 'Components/Divider',
   component: SprkDividerDirective,

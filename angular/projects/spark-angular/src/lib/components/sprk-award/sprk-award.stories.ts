@@ -6,7 +6,7 @@ import { SprkAwardComponent } from './sprk-award.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 export default {
   title: 'Components/Award',
   component: SprkAwardComponent,
@@ -36,7 +36,7 @@ export default {
       iframeHeight: 400,
     },
   },
-};
+} as Meta;
 
 export const defaultStory = () => ({
   template: `

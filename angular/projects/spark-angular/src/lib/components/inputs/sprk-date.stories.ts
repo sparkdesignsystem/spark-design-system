@@ -62,7 +62,7 @@ which you may need to remove before submitting the form.
       iframeHeight: 200,
     },
   },
-};
+} as Meta;
 
 export const dateInput = () => ({
   template: `
