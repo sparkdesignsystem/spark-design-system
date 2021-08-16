@@ -17,7 +17,9 @@ import { SprkIconInputContainerComponent } from './sprk-icon-input-container.com
       <label sprkLabel>Label!</label>
       <div sprk-input-icon>Icon</div>
       <input sprkInput />
-      <p sprkHelperText>Helper Text!</p>
+      <p sprkHelperText>
+        Optional helper text, used to clarify the field's intent.
+      </p>
       <span sprkFieldError> <div class="sprk-b-ErrorText">Error</div> </span>
     </sprk-icon-input-container>
   `,

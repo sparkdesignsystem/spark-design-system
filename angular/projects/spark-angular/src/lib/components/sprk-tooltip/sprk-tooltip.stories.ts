@@ -13,9 +13,6 @@ export default {
     moduleMetadata({
       imports: [SprkTooltipModule, BrowserAnimationsModule],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
   ],
   parameters: {
     docs: {

@@ -68,11 +68,11 @@ export default {
       ],
     }),
     componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">
-          <form (submit)="onSubmit($event)" #sampleForm="ngForm">
-            ${story}
-          </form>
-        <div>`,
+      (story) => `
+        <form (submit)="onSubmit($event)" #sampleForm="ngForm">
+          ${story}
+        </form>
+      `,
     ),
   ],
   props: {

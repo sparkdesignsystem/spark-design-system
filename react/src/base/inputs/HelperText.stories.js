@@ -23,7 +23,7 @@ ${markdownDocumentationLinkBuilder('input')}
 
 export const helperText = () => (
   <SprkInputContainer>
-    <SprkLabel htmlFor="text-1">Text Input</SprkLabel>
+    <SprkLabel htmlFor="text-1">Text Input Label</SprkLabel>
     <SprkInput id="text-1" ariaDescribedBy="helper-text-1" />
     <SprkHelperText id="helper-text-1">
       Optional helper text, used to clarify the field&apos;s intent.
@@ -40,7 +40,7 @@ helperText.story = {
 
 export const invalidHelperText = () => (
   <SprkInputContainer>
-    <SprkLabel htmlFor="text-2">Text Input</SprkLabel>
+    <SprkLabel htmlFor="text-2">Text Input Label</SprkLabel>
     <SprkInput
       ariaDescribedBy="helper-text-2 invalid-helper"
       id="text-2"
@@ -76,7 +76,7 @@ invalidHelperText.story = {
 
 export const legacyHelperText = () => (
   <SprkTextInput
-    label="Text Input"
+    label="Text Input Label"
     name="helper-text-example"
     helperText="This is my helper text."
   />
@@ -91,7 +91,7 @@ legacyHelperText.story = {
 
 export const legacyInvalidHelperText = () => (
   <SprkTextInput
-    label="Text Input"
+    label="Text Input Label"
     name="helper-text-example"
     helperText="This is my helper text."
     errorMessage="There is an error on this field."

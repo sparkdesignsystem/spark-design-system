@@ -22,7 +22,7 @@ export default {
 
 export const textInput = () => (
   <SprkInputContainer>
-    <SprkLabel htmlFor="custom">Text Input</SprkLabel>
+    <SprkLabel htmlFor="custom">Text Input Label</SprkLabel>
     <SprkInput id="custom" type="text" />
   </SprkInputContainer>
 );

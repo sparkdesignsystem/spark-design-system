@@ -6,7 +6,7 @@ import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook
 import { SprkAccordionItemComponent } from '../sprk-accordion-item/sprk-accordion-item.component';
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 
 export default {
   title: 'Components/Accordion',
@@ -19,9 +19,6 @@ export default {
         BrowserAnimationsModule,
       ],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
   ],
   parameters: {
     subcomponents: {
