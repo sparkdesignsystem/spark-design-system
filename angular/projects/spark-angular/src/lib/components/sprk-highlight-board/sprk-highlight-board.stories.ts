@@ -23,7 +23,6 @@ export default {
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),
-    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {

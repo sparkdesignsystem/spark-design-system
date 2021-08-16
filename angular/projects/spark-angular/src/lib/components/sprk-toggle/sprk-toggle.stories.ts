@@ -13,7 +13,6 @@ export default {
     moduleMetadata({
       imports: [SprkToggleModule, BrowserAnimationsModule],
     }),
-    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {

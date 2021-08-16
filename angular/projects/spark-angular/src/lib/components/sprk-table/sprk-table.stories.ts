@@ -16,7 +16,6 @@ export default {
     moduleMetadata({
       imports: [SprkTableModule],
     }),
-    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     subcomponents: {

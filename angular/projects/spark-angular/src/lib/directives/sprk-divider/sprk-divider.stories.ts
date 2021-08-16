@@ -12,7 +12,6 @@ export default {
     moduleMetadata({
       imports: [SprkDividerDirectiveModule, SprkDividerModule],
     }),
-    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {

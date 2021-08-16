@@ -12,7 +12,6 @@ export default {
     moduleMetadata({
       imports: [SprkPaginationModule],
     }),
-    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {

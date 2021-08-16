@@ -19,7 +19,6 @@ export default {
         BrowserAnimationsModule,
       ],
     }),
-    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     subcomponents: {

@@ -13,7 +13,6 @@ export default {
     moduleMetadata({
       imports: [SprkButtonModule, SprkSpinnerModule],
     }),
-    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {

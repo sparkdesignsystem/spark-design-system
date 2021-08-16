@@ -19,7 +19,6 @@ export default {
     moduleMetadata({
       imports: [SprkAutocompleteModule],
     }),
-    componentWrapperDecorator((story) => `${story}`),
   ],
   parameters: {
     docs: {
