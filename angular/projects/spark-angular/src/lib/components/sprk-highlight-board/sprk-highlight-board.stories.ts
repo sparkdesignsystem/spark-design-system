@@ -1,6 +1,6 @@
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { SprkHighlightBoardModule } from './sprk-highlight-board.module';
 import { SprkHighlightBoardComponent } from './sprk-highlight-board.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -23,9 +23,6 @@ export default {
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
   ],
   parameters: {
     docs: {

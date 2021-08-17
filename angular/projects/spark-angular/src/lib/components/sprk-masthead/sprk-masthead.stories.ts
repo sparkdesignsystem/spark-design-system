@@ -72,6 +72,7 @@ export default {
       SprkStackItemDirective,
       SprkStackComponent,
     },
+    layout: 'fullscreen',
     docs: {
       source: {
         type: 'code',

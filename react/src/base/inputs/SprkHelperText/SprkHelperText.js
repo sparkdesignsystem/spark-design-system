@@ -14,7 +14,7 @@ const SprkHelperText = (props) => {
   } = props;
 
   return (
-    <div
+    <p
       className={classnames('sprk-b-HelperText', additionalClasses)}
       data-analytics={analyticsString}
       data-id={idString}
@@ -23,7 +23,7 @@ const SprkHelperText = (props) => {
       {...other}
     >
       {children}
-    </div>
+    </p>
   );
 };
 

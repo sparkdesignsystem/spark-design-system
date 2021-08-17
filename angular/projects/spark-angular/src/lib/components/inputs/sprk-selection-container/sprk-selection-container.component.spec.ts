@@ -17,10 +17,12 @@ import { SprkSelectionContainerComponent } from './sprk-selection-container.comp
         <input type="checkbox" sprkSelectionInput />
         <label sprkSelectionLabel>Item 1</label>
       </sprk-selection-item-container>
-      <p sprkHelperText>Helper Text!</p>
+      <p sprkHelperText>
+        Optional helper text, used to clarify the field's intent.
+      </p>
       <span sprkFieldError>Error Message!</span>
     </sprk-selection-container>
-  `
+  `,
 })
 class TestComponent {}
 
@@ -28,9 +30,7 @@ describe('SprkSelectionContainerComponent', () => {
   let component: TestComponent;
   let selectionContainerComponent: SprkSelectionContainerComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let selectionContainerFixture: ComponentFixture<
-    SprkSelectionContainerComponent
-  >;
+  let selectionContainerFixture: ComponentFixture<SprkSelectionContainerComponent>;
   let selectionContainerElement: HTMLElement;
   let selectionItemContainerElements;
   let errorElement: HTMLElement;
@@ -44,8 +44,8 @@ describe('SprkSelectionContainerComponent', () => {
         SprkLabelDirective,
         SprkFieldErrorDirective,
         SprkSelectionContainerComponent,
-        TestComponent
-      ]
+        TestComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -54,17 +54,17 @@ describe('SprkSelectionContainerComponent', () => {
     component = fixture.componentInstance;
 
     selectionContainerFixture = TestBed.createComponent(
-      SprkSelectionContainerComponent
+      SprkSelectionContainerComponent,
     );
     selectionContainerComponent = selectionContainerFixture.componentInstance;
     selectionContainerComponent.ngAfterContentInit();
     fixture.detectChanges();
 
     selectionContainerElement = selectionContainerFixture.nativeElement.querySelector(
-      'div'
+      'div',
     );
     selectionItemContainerElements = fixture.debugElement.queryAll(
-      By.css('sprk-selection-item-container')
+      By.css('sprk-selection-item-container'),
     );
     errorElement = fixture.debugElement.query(By.css('span')).nativeElement;
   });
@@ -77,16 +77,16 @@ describe('SprkSelectionContainerComponent', () => {
     selectionContainerComponent.additionalClasses = 'sprk-u-man';
     selectionContainerFixture.detectChanges();
     expect(selectionContainerElement.classList.toString()).toEqual(
-      'sprk-b-InputContainer sprk-u-man'
+      'sprk-b-InputContainer sprk-u-man',
     );
   });
 
   it('should map any inputs inside selection-item-containers to the field-error', () => {
-    selectionItemContainerElements.forEach(item => {
+    selectionItemContainerElements.forEach((item) => {
       expect(
         item.nativeElement
           .querySelector('input')
-          .getAttribute('aria-describedby')
+          .getAttribute('aria-describedby'),
       ).toEqual(errorElement.id);
     });
   });

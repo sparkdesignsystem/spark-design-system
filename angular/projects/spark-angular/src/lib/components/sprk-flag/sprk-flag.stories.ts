@@ -1,6 +1,6 @@
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { SprkFlagModule } from './sprk-flag.module';
 import { SprkFlagComponent } from './sprk-flag.component';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -12,9 +12,6 @@ export default {
     moduleMetadata({
       imports: [SprkFlagModule],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
   ],
   parameters: {
     docs: {

@@ -1,7 +1,7 @@
 import { SprkButtonModule } from './sprk-button.module';
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { SprkButtonDirective } from './sprk-button.directive';
 import { SprkSpinnerModule } from '../../directives/sprk-spinner/sprk-spinner.module';
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
@@ -13,9 +13,6 @@ export default {
     moduleMetadata({
       imports: [SprkButtonModule, SprkSpinnerModule],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
   ],
   parameters: {
     docs: {
@@ -218,7 +215,7 @@ export const compact = () => ({
     <button
       idString="button-compact"
       sprkButton
-      class="sprk-c-Button--compact" 
+      class="sprk-c-Button--compact"
     >
       Button
     </button>
@@ -235,7 +232,7 @@ export const compactSecondary = () => ({
       variant="secondary"
       idString="button-compact-secondary"
       sprkButton
-      class="sprk-c-Button--compact" 
+      class="sprk-c-Button--compact"
     >
       Button
     </button>
@@ -252,7 +249,7 @@ export const compactTertiary = () => ({
       variant="tertiary"
       idString="button-compact-tertiary"
       sprkButton
-      class="sprk-c-Button--compact" 
+      class="sprk-c-Button--compact"
     >
       Button
     </button>

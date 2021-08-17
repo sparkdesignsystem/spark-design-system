@@ -6,7 +6,7 @@ import { SprkAutocompleteResultDirective } from './directives/sprk-autocomplete-
 import { SprkAutocompleteInputContainerDirective } from './directives/sprk-autocomplete-input-container/sprk-autocomplete-input-container.directive';
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 export default {
   title: 'Components/Autocomplete',
   component: SprkAutocompleteComponent,
@@ -19,9 +19,6 @@ export default {
     moduleMetadata({
       imports: [SprkAutocompleteModule],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
   ],
   parameters: {
     docs: {

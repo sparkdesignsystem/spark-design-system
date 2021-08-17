@@ -8,7 +8,7 @@ import { SprkCardHeaderDirective } from './directives/sprk-card-header/sprk-card
 import { markdownDocumentationLinkBuilder } from '../../../../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 
 export default {
   title: 'Components/Card',
@@ -26,9 +26,6 @@ export default {
       ],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
   ],
   parameters: {
     subcomponents: {

@@ -32,9 +32,9 @@ export const helperText = () =>
         aria-invalid="true"
       >
 
-      <div class="sprk-b-HelperText">
+      <p class="sprk-b-HelperText">
         Optional helper text, used to clarify the field&#x27;s intent.
-      </div>
+      </p>
 
       <div
         class="sprk-b-ErrorContainer"
@@ -67,9 +67,9 @@ export const invalidHelperText = () =>
         aria-invalid="true"
       >
 
-      <div class="sprk-b-HelperText">
+      <p class="sprk-b-HelperText">
         Optional helper text, used to clarify the field&#x27;s intent.
-      </div>
+      </p>
 
       <div
         class="sprk-b-ErrorContainer"

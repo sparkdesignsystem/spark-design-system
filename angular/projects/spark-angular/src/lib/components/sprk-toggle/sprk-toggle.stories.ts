@@ -1,6 +1,6 @@
 // prettier-ignore
 // @ts-ignore
-import { moduleMetadata, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Meta } from '@storybook/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SprkToggleModule } from './sprk-toggle.module';
 import { SprkToggleComponent } from './sprk-toggle.component';
@@ -13,9 +13,6 @@ export default {
     moduleMetadata({
       imports: [SprkToggleModule, BrowserAnimationsModule],
     }),
-    componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box">${story}</div>`,
-    ),
   ],
   parameters: {
     docs: {

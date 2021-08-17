@@ -13,7 +13,7 @@ export default {
       imports: [SprkCenteredColumnModule],
     }),
     componentWrapperDecorator(
-      (story) => `<div class="sprk-o-Box sb-decorate">${story}</div>`,
+      (story) => `<div class="sb-decorate">${story}</div>`,
     ),
   ],
   parameters: {
