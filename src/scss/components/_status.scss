@@ -1,111 +1,4 @@
-
-
-/*.input-test {
-    background: rgb(177, 107, 177);
-    width: 100%;
-}*/
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-table th, table td{
-    width:20px;
-}
-
-table td.wideRow, table th.wideRow{
-    //background: rgb(177, 107, 177);
-    
-}
-
-.overflow {
-    overflow: visible;
-}
-
-.sticky {
-    background: #fff;
-    position: sticky;
-    top: 102px;
-    z-index: 2;
-}
-
-
-.relative {
-    position: relative;
-    overflow: none !important;
-}
-
-.outer {
-    background: #fff;
-    position: relative;
-    z-index: $sprk-layer-height-m -1;
-}
-
-.inner {
-    z-index: $sprk-layer-height-m -5 !important;
-}
-
-.index {
-    position: relative;
-    z-index: 1;
-}
-
-.header {
-    position: sticky;
-    background: green;
-    top: 300;
-    z-index: 100;
-  }
-
-div.table.thead.th {
-    background: #fff !important;
-    position: -webkit-sticky !important;
-    position: sticky !important;
-    top: 0 !important;
-    z-index: $sprk-layer-height-m -3 !important;
-    text-align: left !important;
-}
-
-td {
-    z-index: $sprk-layer-height-m -20 !important;
-}
-tr {
-    z-index: $sprk-layer-height-m -20 !important;
-}
-
-.SprkLink {
-    z-index: $sprk-layer-height-m -20 !important;
-}
-
-tbody {
-    z-index: $sprk-layer-height-m -20 !important;
-}
-
-.docs-link__green:hover {
-    border-bottom: 2px solid $sprk-green;
-}
-.docs-link__yellow:hover {
-    border-bottom: 2px solid #B46417;
-}
-.docs-link__blue:hover {
-    border-bottom: 2px solid $sprk-blue;
-}
-
-.docs-status-question-mark {
-    height: $sprk-icon-m;
-    width: $sprk-icon-m;
-    stroke-width: $sprk-icon-stroke-width;
-    margin-left: 6px;
-}
-.docs-status-question-mark__blue {
-    stroke: $sprk-blue;
-    fill: $sprk-blue;
-}
-.docs-status-question-mark__yellow {
-    stroke: #d2752b;
-    fill: #d2752b;
-}
-
+// Status icon styles
 .docs-status__Ready {
     stroke: $sprk-green;
     fill: $sprk-green;
@@ -127,27 +20,85 @@ tbody {
 .docs-status__New {
     stroke: $sprk-purple;
     fill: $sprk-purple;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 
 .docs-status__Research {
     stroke: $sprk-black;
     fill: $sprk-black;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 
 .docs-status__Build {
     stroke: $sprk-black;
     fill: $sprk-black;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 
 .docs-status__LowPriority {
     stroke: #86BC3D;
     fill: #86BC3D;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 
+.docs-status__HighPriority {
+    stroke: $sprk-red;
+    fill: $sprk-red;
+    margin-right: 4px;
+}
+
+
+// Status links hover colors
+.docs-link__green:hover {
+    border-bottom: 2px solid $sprk-green;
+}
+.docs-link__yellow:hover {
+    border-bottom: 2px solid #B46417;
+}
+.docs-link__blue:hover {
+    border-bottom: 2px solid $sprk-blue;
+}
+
+
+// Status additional info question mark styles
+.docs-status-question-mark {
+    height: $sprk-icon-m;
+    width: $sprk-icon-m;
+    stroke-width: $sprk-icon-stroke-width;
+    margin-left: 6px;
+}
+.docs-status-question-mark__blue {
+    stroke: $sprk-blue;
+    fill: $sprk-blue;
+}
+.docs-status-question-mark__yellow {
+    stroke: #d2752b;
+    fill: #d2752b;
+}
+
+
+// Sticky table headers styles
+.docs-status-overflow-visible {
+    overflow: visible;
+}
+
+.docs-status-sticky-header {
+    background: #fff;
+    position: sticky;
+    top: 102px;
+    z-index: 2;
+
+    @media all and (max-width: $sprk-masthead-breakpoint) {
+        top: 0px;
+    }
+}
+
+.docs-status-position-relative {
+    position: relative;
+}
+
+
+// Status custom colors
 .docs-status__lightGreen {
     color: #487130;
 }
@@ -164,10 +115,8 @@ tbody {
     color: #b36525;
 }
 
-.docs-status__HighPriority {
-    stroke: $sprk-red;
+.docs-status__Toggle--red {
     fill: $sprk-red;
-    margin-right: 10px;
 }
 
 /* stylelint-enable selector-class-pattern */

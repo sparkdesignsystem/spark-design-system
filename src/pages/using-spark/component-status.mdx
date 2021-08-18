@@ -2,19 +2,14 @@
 title: Component Status
 ---
 
-import { SprkTable } from '@sparkdesignsystem/spark-react';
 import {
+  SprkTable,
   SprkLink,
   SprkIcon,
-  SprkDivider,
-  SprkToggle,
-  SprkAccordion,
-  SprkAccordionItem
+  SprkToggle
 } from '@sparkdesignsystem/spark-react';
-import ComponentPreview from '../../components/ComponentPreview'
+
 import Status from '../../components/Status'
-import StickyTable from '../../components/StickyTable'
-import InputToggle from '../../components/InputToggle'
 
 # Component Status
 
@@ -57,19 +52,19 @@ Spark components have statuses that we change to reflect their state of completi
 
 <SprkTable 
     variant="html" 
-    additionalContainerClasses="overflow" 
+    additionalContainerClasses="docs-status-overflow-visible" 
     additionalTableClasses="sprk-b-Table 
             sprk-b-Table--secondary 
             sprk-b-Table--spacing-medium
-            relative"
+            docs-status-position-relative"
 > 
-    <thead>
+    <thead> 
         <tr>
-            <th class="sticky">Component</th>
-            <th class="sticky">Design</th>
-            <th class="sticky">HTML</th>
-            <th class="sticky">Angular</th>
-            <th class="sticky">React</th>
+            <th class="docs-status-sticky-header">Component</th>
+            <th class="docs-status-sticky-header">Design</th>
+            <th class="docs-status-sticky-header">HTML</th>
+            <th class="docs-status-sticky-header">Angular</th>
+            <th class="docs-status-sticky-header">React</th>
         </tr>
     </thead>
     
@@ -82,7 +77,6 @@ Spark components have statuses that we change to reflect their state of completi
                 element="a"
                 href="/using-spark/components/accordion"
                 variant="simple"
-                additionalClasses="index"
             >
                 Accordion
             </SprkLink>
@@ -91,7 +85,6 @@ Spark components have statuses that we change to reflect their state of completi
             <Status 
                 statusName="ready" 
                 href="/using-spark/components/accordion"
-                additionalClasses="index"
             />
         </td>
         <td>
@@ -133,7 +126,7 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td> 
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://html.sparkdesignsystem.com/?path=/story/components-alert--success"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
             />
@@ -162,6 +155,9 @@ Spark components have statuses that we change to reflect their state of completi
             >
                 Autocomplete
             </SprkLink>
+            <Status
+                statusName="new"
+            />
         </td>
         <td>
             <Status 
@@ -177,8 +173,9 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-autocomplete--default-story"
+                additionalInfo="This component was updated on 6/8/21 in Angular package version 14.0.0"
             />
         </td>
         <td> 
@@ -213,7 +210,7 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-award--default-story"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
             />
@@ -239,7 +236,7 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="updated" 
+                statusName="ready" 
                 href="components/box"
                 additionalInfo="This component was updated on MM/DD/YYYY in release XX.XX."
             />
@@ -252,7 +249,7 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-box--default-box"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
             />
@@ -278,27 +275,30 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="components/button"
+                additionalInfo="This component's design was updated on 4/12/2021 in package version 2.0.0"
             />
         </td>
         <td>
             <Status 
                 statusName="updated" 
                 href="https://html.sparkdesignsystem.com/?path=/story/components-button--primary"
-                additionalInfo="This component was updated on MM/DD/YYYY in release XX.XX."
+                additionalInfo="This component was updated on 7/20/2021 in Spark HTML package version 17.0.1"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-button--primary"
+                additionalInfo="This component was updated on 4/12/2021 in Angular package version 13.0.0"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://react.sparkdesignsystem.com/?path=/story/components-button--primary"
+                additionalInfo="This component was updated on 4/12/2021 in React package version 5.0.0"
             />
         </td>
     </tr>
@@ -328,14 +328,16 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-card--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in Angular package version 13.0.0"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://react.sparkdesignsystem.com/?path=/story/components-card--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in React package version 5.0.0"
             />
         </td>
     </tr>
@@ -371,50 +373,9 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://react.sparkdesignsystem.com/?path=/story/components-centered-column--default-story"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
-            />
-        </td>
-    </tr>
-    
-    {/** Component **/}
-    <tr>
-        <td>
-            <div style="display:inline;">
-                <SprkLink
-                    element="a"
-                    href=""
-                    variant="simple"
-                    
-                >
-                    Component 
-                </SprkLink>
-                <Status statusName="new" />
-            </div>
-        </td>
-        <td>
-            <Status 
-                statusName="ready" 
-                href=""
-            />
-        </td>
-        <td>
-            <Status 
-                statusName="ready" 
-                href=""
-            />
-        </td>
-        <td>
-            <Status 
-                statusName="ready" 
-                href=""
-            />
-        </td>
-        <td>
-            <Status 
-                statusName="ready" 
-                href=""
             />
         </td>
     </tr>
@@ -438,14 +399,14 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://html.sparkdesignsystem.com/?path=/story/components-dictionary--default-story"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
             />
         </td>
         <td>
             <Status 
-                statusName="updated" 
+                statusName="ready" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-dictionary--default-story"
                 additionalInfo="This component was updated on MM/DD/YYYY in release XX.XX."
             />
@@ -508,9 +469,9 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="updated" 
                 href="components/dropdown"
-                additionalInfo="This component has been under review since MM/DD/YYYY."
+                additionalInfo="This component's design was updated on 4/12/2021 in package version 2.0.0"
             />
         </td>
         <td>
@@ -521,14 +482,16 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-dropdown--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in Angular package version 13.0.0"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://react.sparkdesignsystem.com/?path=/story/components-dropdown--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in React package version 5.0.0"
             />
         </td>
     </tr>
@@ -564,7 +527,7 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://react.sparkdesignsystem.com/?path=/story/components-flag--default-story"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
             />
@@ -592,7 +555,7 @@ Spark components have statuses that we change to reflect their state of completi
             <Status 
                 statusName="updated" 
                 href="https://html.sparkdesignsystem.com/?path=/story/components-footer--default-story"
-                additionalInfo="This component was updated on MM/DD/YYYY in release XX.XX."
+                additionalInfo="This component was updated on 6/8/2021 in Spark HTML package release 17.0.0"
             />
         </td>
         <td>
@@ -628,20 +591,23 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://html.sparkdesignsystem.com/?path=/story/components-highlight-board--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in Spark HTML package version 16.0.0"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-highlight-board--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in Angular package version 13.0.0"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://react.sparkdesignsystem.com/?path=/story/components-highlight-board--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in React package version 5.0.0"
             />
         </td>
     </tr>
@@ -659,8 +625,9 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="components/icon"
+                additionalInfo="This component's design was updated on 4/12/2021 in package version 2.0.0"
             />
         </td>
         <td>
@@ -671,7 +638,7 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-icons--default-story"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
             />
@@ -687,14 +654,14 @@ Spark components have statuses that we change to reflect their state of completi
     {/** Input **/}
     <tr> 
         <td class="wideRow" colspan="5">
-            <SprkToggle triggerText="Input (17 Variants)" analyticsString="input-toggle">
+            <SprkToggle triggerText="Input (17 Variants)" analyticsString="input-toggle" iconAdditionalClasses="docs-status__Toggle--red sprk-c-Icon--filled">
                 <SprkTable 
                     variant="html" 
-                    additionalContainerClasses="overflow" 
+                    additionalContainerClasses="docs-status-overflow-visible" 
                     additionalTableClasses="sprk-b-Table 
                             sprk-b-Table--secondary 
                             sprk-b-Table--spacing-medium
-                            relative"
+                            docs-status-position-relative"
                 > 
                     <thead>
                         <tr>
@@ -1349,8 +1316,9 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="components/link"
+                additionalInfo="This component's design was updated on 4/12/2021 in package version 2.0.0"
             />
         </td>
         <td>
@@ -1392,7 +1360,7 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://html.sparkdesignsystem.com/?path=/story/components-list--unordered"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
             />
@@ -1424,26 +1392,30 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="components/masthead"
+                additionalInfo="This component's design was updated on 6/8/2021 in package version 3.0.0"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://html.sparkdesignsystem.com/?path=/story/components-masthead--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in Spark HTML package version 16.0.0"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-masthead--default-story"
+                additionalInfo="This component was updated on 6/8/2021 in Angular package version 14.0.0"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://react.sparkdesignsystem.com/?path=/story/components-masthead--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in React package version 5.0.0"
             />
         </td>
     </tr>
@@ -1461,7 +1433,7 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="updated" 
+                statusName="ready" 
                 href="components/modal"
                 additionalInfo="This component was updated on MM/DD/YYYY in release XX.XX."
             />
@@ -1474,7 +1446,7 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-modal--default-story"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
             />
@@ -1549,14 +1521,16 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-promo--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in Angular package version 13.0.0"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://react.sparkdesignsystem.com/?path=/story/components-promo--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in React package version 5.0.0"
             />
         </td>
     </tr>
@@ -1580,15 +1554,15 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="updated" 
+                statusName="ready" 
                 href="https://html.sparkdesignsystem.com/?path=/story/components-stack--default-story"
-                additionalInfo="This component was updated on MM/DD/YYYY in release XX.XX."
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-stack--default-story"
+                additionalInfo="This component was updated on 6/8/21 in Angular package version 14.0.0"
             />
         </td>
         <td>
@@ -1629,7 +1603,7 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://react.sparkdesignsystem.com/?path=/story/components-stepper--default-story"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
             />
@@ -1692,15 +1666,16 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="ready" 
                 href="https://html.sparkdesignsystem.com/?path=/story/components-tabs--default-story"
                 additionalInfo="This component has been under review since MM/DD/YYYY."
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-tabs--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in Angular package version 13.0.0"
             />
         </td>
         <td>
@@ -1724,9 +1699,9 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="underReview" 
+                statusName="updated" 
                 href="components/toggle"
-                additionalInfo="This component has been under review since MM/DD/YYYY."
+                additionalInfo="This component's design was updated on 4/12/2021 in package version 2.0.0"
             />
         </td>
         <td>
@@ -1768,21 +1743,23 @@ Spark components have statuses that we change to reflect their state of completi
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://html.sparkdesignsystem.com/?path=/story/components-tooltip--default-story"
+                additionalInfo="This component was updated on 4/12/2021 in Spark HTML package version 16.0.0"
             />
         </td>
         <td>
             <Status 
-                statusName="ready" 
+                statusName="updated" 
                 href="https://angular.sparkdesignsystem.com/?path=/story/components-tooltip--default-story"
+                additionalInfo="This component was updated on 6/8/21 in Angular package version 14.0.0"
             />
         </td>
         <td>
             <Status 
                 statusName="updated" 
                 href="https://react.sparkdesignsystem.com/?path=/story/components-tooltip--default-story"
-                additionalInfo="This component was updated on MM/DD/YYYY in release XX.XX."
+                additionalInfo="This component was updated on 6/8/21 in React package version 6.0.0"
             />
         </td>
     </tr>
@@ -1801,19 +1778,19 @@ Components under this section are currently in the backlog and in various stages
 
 <SprkTable 
     variant="html" 
-    additionalContainerClasses="overflow" 
+    additionalContainerClasses="docs-status-overflow-visible" 
     additionalTableClasses="sprk-b-Table 
             sprk-b-Table--secondary 
             sprk-b-Table--spacing-medium
-            relative"
+            docs-status-position-relative"
 > 
     <thead>
         <tr>
-            <th class="sticky">Component</th>
-            <th class="sticky">Design</th>
-            <th class="sticky">HTML</th>
-            <th class="sticky">Angular</th>
-            <th class="sticky">React</th>
+            <th class="docs-status-sticky-header">Component</th>
+            <th class="docs-status-sticky-header">Design</th>
+            <th class="docs-status-sticky-header">HTML</th>
+            <th class="docs-status-sticky-header">Angular</th>
+            <th class="docs-status-sticky-header">React</th>
         </tr>
     </thead>
     
@@ -1880,7 +1857,6 @@ Components under this section are currently in the backlog and in various stages
         </tr>
     </tbody>
 </SprkTable> 
-
 <div class="sprk-u-TextAlign--right sprk-u-mbl">
   <a class="sprk-b-Link" href="#table-of-contents">
     Back to Table of Contents
@@ -1901,74 +1877,75 @@ Components under this section are currently in the backlog and in various stages
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td class="sprk-u-Color--green">
-            <SprkIcon className="
-                docs-status__Ready 
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="check-mark-filled"
-            />
-            Ready
-        </td>
-        <td>The component is ready for designers and developers.</td>
-    </tr>
-    <tr>
-        <td class="sprk-u-Color--yellow">
-            <SprkIcon className="
-                docs-status__UnderReview 
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="caution-filled"
-            />
-            Under Review
-        </td>
-        <td>The component’s code, design, or usage is being re-examined.</td>
-    </tr>
-    <tr>
-        <td class="sprk-u-Color--blue">
-            <SprkIcon className="
-                docs-status__Updated 
-                sprk-c-Icon--filled
-                sprk-c-Icon--l"
-                iconName="recurring-update"
-            />
-            Updated
-        </td>
-        <td>Applied only to existing components in our library after they have been under review, updated, and re-published to the design system site within the past 6 months.</td>
-    </tr>
-    <tr>
-        <td>
-            <Status statusName="new"/>
-        </td>
-        <td>The component has been added to our library within the past 6 months.</td>
-    </tr>
-    <tr>
-        <td>
-            <Status statusName="research"/>
-        </td>
-        <td>The component is in the design or engineering research phase.</td>
-    </tr>
-    <tr>
-        <td> 
-            <Status statusName="build"/>
-        </td>
-        <td>The component is being designed by our designers or built by our engineers.</td>
-    </tr>
-    <tr>
-        <td> 
-            <Status statusName="lowPriority"/>
-        </td>
-        <td>The component has a low priority and is currently in our backlog.</td>
-    </tr>
-    <tr>
-        <td> 
-            <Status statusName="highPriority"/>
-        </td>
-        <td>The component has a high priority and is currently in our backlog</td>
-    </tr>
+        <tr>
+            <td class="sprk-u-Color--green">
+                <SprkIcon className="
+                    docs-status__Ready 
+                    sprk-c-Icon--filled
+                    sprk-c-Icon--l"
+                    iconName="check-mark-filled"
+                />
+                Ready
+            </td>
+            <td>The component is ready for designers and developers.</td>
+        </tr>
+        <tr>
+            <td class="sprk-u-Color--yellow">
+                <SprkIcon className="
+                    docs-status__UnderReview 
+                    sprk-c-Icon--filled
+                    sprk-c-Icon--l"
+                    iconName="caution-filled"
+                />
+                Under Review
+            </td>
+            <td>The component’s code, design, or usage is being re-examined.</td>
+        </tr>
+        <tr>
+            <td class="sprk-u-Color--blue">
+                <SprkIcon className="
+                    docs-status__Updated 
+                    sprk-c-Icon--filled
+                    sprk-c-Icon--l"
+                    iconName="recurring-update"
+                />
+                Updated
+            </td>
+            <td>Applied only to existing components in our library after they have been under review, updated, and re-published to the design system site within the past 6 months.</td>
+        </tr>
+        <tr>
+            <td>
+                <Status statusName="new"/>
+            </td>
+            <td>The component has been added to our library within the past 6 months.</td>
+        </tr>
+        <tr>
+            <td>
+                <Status statusName="research"/>
+            </td>
+            <td>The component is in the design or engineering research phase.</td>
+        </tr>
+        <tr>
+            <td> 
+                <Status statusName="build"/>
+            </td>
+            <td>The component is being designed by our designers or built by our engineers.</td>
+        </tr>
+        <tr>
+            <td> 
+                <Status statusName="lowPriority"/>
+            </td>
+            <td>The component has a low priority and is currently in our backlog.</td>
+        </tr>
+        <tr>
+            <td> 
+                <Status statusName="highPriority"/>
+            </td>
+            <td>The component has a high priority and is currently in our backlog</td>
+        </tr>
     </tbody>
 </table>
+
 <div class="sprk-u-TextAlign--right sprk-u-mbl">
   <a class="sprk-b-Link" href="#table-of-contents">
     Back to Table of Contents

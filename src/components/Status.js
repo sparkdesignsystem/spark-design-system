@@ -1,12 +1,7 @@
 import React from 'react';
-import { SprkTable } from '@sparkdesignsystem/spark-react';
 import {
   SprkLink,
   SprkIcon,
-  SprkDivider,
-  SprkToggle,
-  SprkAccordion,
-  SprkAccordionItem,
   SprkTooltip
 } from '@sparkdesignsystem/spark-react';
 
