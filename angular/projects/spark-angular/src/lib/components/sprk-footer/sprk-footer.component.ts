@@ -227,9 +227,11 @@ import {
                 </ul>
               </div>
             </div>
+            <div class="sprk-o-Stack__item">
+              <ng-content select="[appStoreLinksSlot]"></ng-content>
+            </div>
           </div>
         </div>
-
         <span
           sprkDivider
           class="sprk-c-Footer__divider"
