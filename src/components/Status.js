@@ -31,23 +31,22 @@ const Status = ({
         );
     } else if (statusName === "underReview") {
         return (
-            <div class="z">
+            <div>
                 <SprkIcon className="
                     docs-status__UnderReview
                     sprk-c-Icon--filled
-                    sprk-c-Icon--l
-                    index"
+                    sprk-c-Icon--l"
                     iconName="caution-filled"
                 />
                 <SprkLink
                     element="a"
                     href={href}
                     variant="simple"
-                    additionalClasses="docs-status-text__Orange docs-link__yellow index"
+                    additionalClasses="docs-status-text__Orange docs-link__yellow"
                 >
                     Under Review
                 </SprkLink>
-                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__yellow index">
+                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__yellow">
                     {additionalInfo}
                     
                 </SprkTooltip>
@@ -66,11 +65,11 @@ const Status = ({
                     element="a"
                     href={href}
                     variant="simple"
-                    additionalClasses="sprk-u-Color--blue docs-link__blue index"
+                    additionalClasses="sprk-u-Color--blue docs-link__blue"
                 >
                     Updated
                 </SprkLink>
-                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__blue index">
+                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__blue">
                     {additionalInfo}
                     
                 </SprkTooltip>
@@ -91,7 +90,7 @@ const Status = ({
     } else if (statusName === "build") {
         return (
             <div>
-                 <SprkIcon className="
+                <SprkIcon className="
                     docs-status__Build 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
