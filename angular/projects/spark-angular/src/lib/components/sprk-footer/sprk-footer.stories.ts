@@ -279,8 +279,8 @@ export const defaultStory = () => ({
               <img src="https://spark-assets.netlify.app/apple-store.svg" alt="Go to Apple Store"/>
             </a>
           </div>
-          <div sprkStackItem sprkLink>
-            <a href="#nogo">
+          <div sprkStackItem>
+            <a href="#nogo" sprkLink>
               <img src="https://spark-assets.netlify.app/google-play.svg" alt="Go to Google Play Store"/>
             </a>
           </div>
