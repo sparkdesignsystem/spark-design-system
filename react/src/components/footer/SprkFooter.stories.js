@@ -2,6 +2,7 @@ import React from 'react';
 import SprkFooter from './SprkFooter';
 import SprkLink from '../../base/links/SprkLink';
 import SprkStackItem from '../../objects/stack/components/SprkStackItem/SprkStackItem';
+import SprkStack from '../../objects/stack/SprkStack';
 import { markdownDocumentationLinkBuilder } from '../../../../storybook-utilities/markdownDocumentationLinkBuilder';
 import SprkFooterAwards from './components/SprkFooterAwards/SprkFooterAwards';
 import SprkFooterConnectIcons from './components/SprkFooterConnectIcons/SprkFooterConnectIcons';
@@ -250,6 +251,30 @@ export const defaultStory = () => (
           Sed ut perspiciatis unde omnis iste natus error sit <SprkLink href="#nogo" additionalClasses="sprk-b-Link--inline-light">inline link</SprkLink> accusantium doloremque laudantiu.
         </SprkText>
       </SprkStackItem>
+    }
+    appStoreLinks={
+      <SprkStack
+        additionalClasses="sprk-u-mlm"
+        splitAt="tiny"
+        itemSpacing="medium"
+      >
+        <SprkStackItem>
+          <SprkLink href="#nogo">
+            <img
+              src="https://spark-assets.netlify.app/apple-store.svg"
+              alt="Go to Apple Store"
+            />
+          </SprkLink>
+        </SprkStackItem>
+        <SprkStackItem>
+          <SprkLink href="#nogo">
+            <img
+              src="https://spark-assets.netlify.app/google-play.svg"
+              alt="Go to Google Play Store"
+            />
+          </SprkLink>
+        </SprkStackItem>
+      </SprkStack>
     }
   />
 );

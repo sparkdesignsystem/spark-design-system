@@ -454,6 +454,24 @@ export const defaultStory = () => {
                   </li>
                 </ul>
               </div>
+              <div
+              class="
+                sprk-o-Stack__item
+                sprk-o-Stack
+                sprk-o-Stack--medium
+                sprk-o-Stack--split@xs
+              ">
+                <div class="sprk-o-Stack__item">
+                  <a href="#nogo">
+                    <img src="https://spark-assets.netlify.app/apple-store.svg" alt="Go to Apple Store"/>
+                  </a>
+                </div>
+                <div class="sprk-o-Stack__item">
+                  <a href="#nogo">
+                    <img src="https://spark-assets.netlify.app/google-play.svg" alt="Go to Google Play Store"/>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

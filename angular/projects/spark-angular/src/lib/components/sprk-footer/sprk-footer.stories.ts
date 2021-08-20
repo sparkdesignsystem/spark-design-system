@@ -271,14 +271,18 @@ export const defaultStory = () => ({
       <div appStoreLinksSlot>
         <sprk-stack
           itemSpacing='medium'
-          splitAt='small'
-          additionalClasses="sprk-c-Footer__text"
+          splitAt='tiny'
+          additionalClasses="sprk-u-mlm"
         >
           <div sprkStackItem>
-            <img src="https://spark-assets.netlify.app/apple-store.svg" alt="Go to Apple Store"/>
+            <a href="#nogo" sprkLink>
+              <img src="https://spark-assets.netlify.app/apple-store.svg" alt="Go to Apple Store"/>
+            </a>
           </div>
-          <div sprkStackItem>
-            <img src="https://spark-assets.netlify.app/google-play.svg" alt="Go to Google Play Store"/>
+          <div sprkStackItem sprkLink>
+            <a href="#nogo">
+              <img src="https://spark-assets.netlify.app/google-play.svg" alt="Go to Google Play Store"/>
+            </a>
           </div>
         </sprk-stack>
       </div>
