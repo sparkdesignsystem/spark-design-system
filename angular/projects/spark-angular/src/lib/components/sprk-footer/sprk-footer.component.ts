@@ -227,9 +227,7 @@ import {
                 </ul>
               </div>
             </div>
-            <div class="sprk-o-Stack__item">
-              <ng-content select="[appStoreLinksSlot]"></ng-content>
-            </div>
+            <ng-content select="[appStoreLinksSlot]"></ng-content>
           </div>
         </div>
         <span
