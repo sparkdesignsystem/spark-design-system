@@ -1,47 +1,47 @@
 // Status icon styles
-.docs-status__Ready {
+.docs-status__ready {
     stroke: $sprk-green;
     fill: $sprk-green;
     margin-right: 4px;
 }
 
-.docs-status__UnderReview {
-    stroke: #d2752b;
-    fill: #d2752b;
-    margin-right: 4px;
-}
-
-.docs-status__Updated {
+.docs-status__updated {
     stroke: $sprk-blue;
     fill: $sprk-blue;
     margin-right: 4px;
 }
 
-.docs-status__New {
+.docs-status__under-review {
+    stroke: #d2752b;
+    fill: #d2752b;
+    margin-right: 4px;
+}
+
+.docs-status__new {
     stroke: $sprk-purple;
     fill: $sprk-purple;
     margin-right: 4px;
 }
 
-.docs-status__Research {
+.docs-status__research {
     stroke: $sprk-black;
     fill: $sprk-black;
     margin-right: 4px;
 }
 
-.docs-status__Build {
+.docs-status__build {
     stroke: $sprk-black;
     fill: $sprk-black;
     margin-right: 4px;
 }
 
-.docs-status__LowPriority {
+.docs-status__low-priority {
     stroke: #86BC3D;
     fill: #86BC3D;
     margin-right: 4px;
 }
 
-.docs-status__HighPriority {
+.docs-status__high-priority {
     stroke: $sprk-red;
     fill: $sprk-red;
     margin-right: 4px;
@@ -49,40 +49,40 @@
 
 
 // Status links hover colors
-.docs-link__green:hover {
+.docs-status__link--ready:hover {
     border-bottom: 2px solid $sprk-green;
 }
-.docs-link__yellow:hover {
-    border-bottom: 2px solid #B46417;
-}
-.docs-link__blue:hover {
+.docs-status__link--updated:hover {
     border-bottom: 2px solid $sprk-blue;
+}
+.docs-status__link--under-review:hover {
+    border-bottom: 2px solid #B46417;
 }
 
 
 // Status additional info question mark styles
-.docs-status-question-mark {
+.docs-status__tooltip {
     height: $sprk-icon-m;
     width: $sprk-icon-m;
     stroke-width: $sprk-icon-stroke-width;
     margin-left: 6px;
 }
-.docs-status-question-mark__blue {
+.docs-status__tooltip--updated {
     stroke: $sprk-blue;
     fill: $sprk-blue;
 }
-.docs-status-question-mark__yellow {
+.docs-status__tooltip--under-review {
     stroke: #d2752b;
     fill: #d2752b;
 }
 
 
 // Sticky table headers styles
-.docs-status-overflow-visible {
+.docs-status__table--overflow-visible {
     overflow: visible;
 }
 
-.docs-status-sticky-header {
+.docs-status__table--sticky-header {
     background: #fff;
     position: sticky;
     top: 102px;
@@ -93,7 +93,7 @@
     }
 }
 
-.docs-status-position-relative {
+.docs-status__table--position-relative {
     position: relative;
 }
 

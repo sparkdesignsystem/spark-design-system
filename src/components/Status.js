@@ -14,7 +14,7 @@ const Status = ({
         return (
             <div>
                 <SprkIcon className="
-                    docs-status__Ready 
+                    docs-status__ready 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="check-mark-filled"
@@ -23,7 +23,7 @@ const Status = ({
                     element="a"
                     href={href}
                     variant="simple"
-                    additionalClasses="sprk-u-Color--green docs-link__green"
+                    additionalClasses="sprk-u-Color--green docs-status__link--ready"
                 >
                     Ready
                 </SprkLink> 
@@ -33,7 +33,7 @@ const Status = ({
         return (
             <div>
                 <SprkIcon className="
-                    docs-status__UnderReview
+                    docs-status__under-review
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="caution-filled"
@@ -42,11 +42,11 @@ const Status = ({
                     element="a"
                     href={href}
                     variant="simple"
-                    additionalClasses="docs-status-text__Orange docs-link__yellow"
+                    additionalClasses="docs-status-text__Orange docs-status__link--under-review"
                 >
                     Under Review
                 </SprkLink>
-                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__yellow">
+                <SprkTooltip iconAdditionalClasses="docs-status__tooltip docs-status__tooltip--under-review">
                     {additionalInfo}
                     
                 </SprkTooltip>
@@ -56,7 +56,7 @@ const Status = ({
         return (
             <div>
                 <SprkIcon className="
-                    docs-status__Updated
+                    docs-status__updated
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="recurring-update"
@@ -65,11 +65,11 @@ const Status = ({
                     element="a"
                     href={href}
                     variant="simple"
-                    additionalClasses="sprk-u-Color--blue docs-link__blue"
+                    additionalClasses="sprk-u-Color--blue docs-status__link--updated"
                 >
                     Updated
                 </SprkLink>
-                <SprkTooltip iconAdditionalClasses="docs-status-question-mark docs-status-question-mark__blue">
+                <SprkTooltip iconAdditionalClasses="docs-status__tooltip docs-status__tooltip--updated">
                     {additionalInfo}
                     
                 </SprkTooltip>
@@ -79,7 +79,7 @@ const Status = ({
         return (
             <div>
                 <SprkIcon className="
-                    docs-status__Research 
+                    docs-status__research 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="search"
@@ -91,7 +91,7 @@ const Status = ({
         return (
             <div>
                 <SprkIcon className="
-                    docs-status__Build 
+                    docs-status__build 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="settings-filled"
@@ -103,7 +103,7 @@ const Status = ({
         return (
             <div class="docs-status__lightGreen">
                 <SprkIcon className="
-                    docs-status__LowPriority 
+                    docs-status__low-priority 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="application-filled"
@@ -115,7 +115,7 @@ const Status = ({
         return (
             <div class="sprk-u-Color--red">
                 <SprkIcon className="
-                    docs-status__HighPriority 
+                    docs-status__high-priority 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="application-filled"
@@ -127,7 +127,7 @@ const Status = ({
         return (
             <div class="sprk-u-Color--purple">
                 <SprkIcon className="
-                    docs-status__New 
+                    docs-status__new 
                     sprk-c-Icon--filled
                     sprk-c-Icon--l"
                     iconName="vip-filled"
