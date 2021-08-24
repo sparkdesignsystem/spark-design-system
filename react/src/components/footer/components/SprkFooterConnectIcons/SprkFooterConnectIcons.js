@@ -97,7 +97,7 @@ class SprkFooterConnectIcons extends Component {
 
 SprkFooterConnectIcons.propTypes = {
   /** An optional spot to pass in App Store links.
-   * Passed down from SprkFooter
+   * Passed down from SprkFooter.
    */
   appStoreLinks: PropTypes.node,
   /** Constructs the Connect Icon Section. */
