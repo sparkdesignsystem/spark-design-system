@@ -1,28 +1,75 @@
 ---
-  title: Typography
+title: Typography
 ---
+
 import ComponentPreview from '../../../components/ComponentPreview';
 import {
+  SprkStack,
+  SprkStackItem,
+  SprkFlag,
+  SprkHeading,
+  SprkIcon,
   SprkDivider,
+  SprkText,
 } from '@sparkdesignsystem/spark-react';
+
+import pageTitleDo from '../../../images/typography/pagetitles_do.png';
+import pageTitleDo2x from '../../../images/typography/pagetitles_do@2x.png';
+export const pageTitleDoSet = `${pageTitleDo} 560w, ${pageTitleDo2x} 1120w`;
+
+import pageTitleDont from '../../../images/typography/pagetitle_dont1.png';
+import pageTitleDont2x from '../../../images/typography/pagetitle_dont1@2x.png';
+export const pageTitleDontSet = `${pageTitleDont} 560w, ${pageTitleDont2x} 1120w`;
+
+import pageTitleDont2 from '../../../images/typography/pagetitle_dont2.png';
+import pageTitleDont2_2x from '../../../images/typography/pagetitle_dont2@2x.png';
+export const pageTitleDont2Set = `${pageTitleDont2} 560w, ${pageTitleDont2_2x} 1120w`;
+
+import specimen from '../../../images/typography/RocketTypeSpecimenGraphic-01.png';
+import specimen2x from '../../../images/typography/RocketTypeSpecimenGraphic-01@2x.png';
+export const specimenSet = `${specimen} 560w, ${specimen2x} 1120w`;
+
+import TypographyTable from '../../../components/TypographyTable';
 
 # Typography
 
-Typography is fundamental to user experience.
+Typography is fundamental to our Rocket experiences. We use a custom developed typeface called Rocket Sans.
 
 Our guidelines optimize content hierarchy by using text sizes, line heights, colors, and font. These factors contribute to what makes content clear and appealing.
 
-** Combine these header and body styles to establish content hierarchy within your project. **
+Combine these header and body styles to establish content hierarchy within your project.
 
+<div class="sprk-u-Measure">
+  <img
+    srcset={specimenSet}
+    src={specimen}
+    sizes="(min-width: 1120px) 1120px,
+              (min-width: 1680px) 1680px,
+              560px"
+    alt="Rocket Sans, created by Monotype in 2018. Our proprietary typeface,
+      Rocket Sans, is crisp, expressive, bold and confident. It's modern,
+      aligned to our brand ethos and approachable, without sacrificing
+      legibility and scalability. We use this custom built typeface for
+      all of our brand expressions."
+  />
+</div>
 
-<SprkDivider element="span" additionalClasses="sprk-u-mbn sprk-u-mtl"/>
-<h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-mbl sprk-u-Measure">Table of Contents</h2>
-<ul>
+<SprkStack itemSpacing="medium">
+  <SprkStackItem>
+    <h2 class="docs-b-h2 sprk-b-TypeDisplayTwo sprk-u-Measure">Table of Contents</h2>
+  </SprkStackItem>
+  <SprkStackItem>
+<ul class="sprk-b-List sprk-b-List--bare">
+  <li>
+    <a href="#size-reference-charts">
+      Size Reference Charts
+    </a>
+  </li>
   <li>
     <a href="#headers">
       Headers
     </a>
-    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mvs">
+    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure">
       <li>
         <a href="#page-title">
           Page Title
@@ -33,7 +80,7 @@ Our guidelines optimize content hierarchy by using text sizes, line heights, col
           Display One
         </a>
       </li>
-     <li>
+    <li>
         <a href="#display-two">
           Display Two
         </a>
@@ -69,7 +116,7 @@ Our guidelines optimize content hierarchy by using text sizes, line heights, col
     <a href="#body-text">
       Body Text
     </a>
-    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure sprk-u-mvs">
+    <ul class="sprk-b-List sprk-b-List--indented sprk-u-Measure">
       <li>
         <a href="#body-one">
           Body One
@@ -94,8 +141,28 @@ Our guidelines optimize content hierarchy by using text sizes, line heights, col
   </li>
 
 </ul>
+  </SprkStackItem>
+</SprkStack>
 
-<SprkDivider element="span" additionalClasses="sprk-u-mvn"/>
+<SprkDivider element="span"/>
+
+## Size Reference Charts
+
+Our typography has 7 display styles, 3 body copy styles, and 1 legal type size.
+The size reference chart is an example of typography when designing.
+However, when developing a page, reference the Storybook components below.
+
+<div class="sprk-o-Stack sprk-o-Stack--medium sprk-o-Stack--split@xl">
+  <div class="sprk-b-TableContainer sprk-o-Stack__item">
+    <TypographyTable category="desktop" />
+  </div>
+
+  <div class="sprk-b-TableContainer sprk-o-Stack__item">
+    <TypographyTable category="mobile" />
+  </div>
+</div>
+
+<SprkDivider element="span" />
 
 ## Headers
 
@@ -103,7 +170,9 @@ Our guidelines optimize content hierarchy by using text sizes, line heights, col
 
 Use one Page Title per page to serve as the main heading. They differentiate themselves from other headings with their red accent line.
 
-Use either [Display One](#display-one) or [Display Two](#display-two) to style this heading.
+Use Page Title with [Display One](#display-one) to style primary headings on top-level pages in your experience.
+
+Use Page Title with [Display Two](#display-two) to style primary headings on nested pages in your experience.
 
 <ComponentPreview
   componentName="typography--page-title"
@@ -113,11 +182,117 @@ Use either [Display One](#display-one) or [Display Two](#display-two) to style t
   hasReact
   hasAngular
 />
+
 <div class="sprk-u-Measure">
   <a class="sprk-b-Link sprk-u-Float--right" href="#table-of-contents">
     Back to Table of Contents
   </a>
 </div>
+
+<SprkStack itemSpacing="medium">
+  <SprkStackItem>
+    <SprkFlag
+      additionalClasses="sprk-o-Flag--middle"
+      media={
+        <SprkIcon
+          iconName="check-mark"
+          additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--green"
+          aria-hidden="true"
+        />
+      }
+    >
+      <SprkHeading element="span" variant="displayFour">
+        Do
+      </SprkHeading>
+    </SprkFlag>
+  </SprkStackItem>
+  <SprkStackItem>
+    <SprkStack itemSpacing="small">
+      <SprkStackItem>
+        <div class="sprk-u-Measure">
+          <img
+            srcset={pageTitleDoSet}
+            src={pageTitleDo}
+            sizes="(min-width: 1120px) 1120px,
+                          (min-width: 1680px) 1680px,
+                          560px"
+            alt="A page layout featuring a primary and secondary heading. Each headline is left-aligned."
+          />
+        </div>
+      </SprkStackItem>
+      <SprkStackItem>
+        <SprkText variant="bodyTwo" additionalClasses="sprk-u-Measure">
+          Use page titles at the top left of the page, and left-align the headline with
+          the red line.
+        </SprkText>
+      </SprkStackItem>
+    </SprkStack>
+  </SprkStackItem>
+  <SprkStackItem>
+    <SprkFlag
+      additionalClasses="sprk-o-Flag--middle"
+      media={
+        <SprkIcon
+          iconName="close-circle"
+          additionalClasses="sprk-c-Icon--l sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color sprk-u-Color--orange"
+          aria-hidden="true"
+        />
+      }
+    >
+      <SprkHeading element="span" variant="displayFour">
+        Don't
+      </SprkHeading>
+    </SprkFlag>
+  </SprkStackItem>
+  <SprkStackItem>
+    <SprkStack itemSpacing="medium" splitAt="small">
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s">
+        <SprkStack itemSpacing="small">
+          <SprkStackItem>
+            <img
+              srcset={pageTitleDontSet}
+              src={pageTitleDont}
+              sizes="(min-width: 1120px) 1120px,
+                    (min-width: 1680px) 1680px,
+                    560px"
+              alt="A page layout featuring a primary and secondary heading. The primary heading is center-aligned."
+            />
+          </SprkStackItem>
+          <SprkStackItem>
+            <SprkText
+              variant="bodyTwo"
+              additionalClasses="sprk-u-Measure"
+            >
+              Do not center-align page titles.
+            </SprkText>
+          </SprkStackItem>
+        </SprkStack>
+      </SprkStackItem>
+      <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s">
+        <SprkStack itemSpacing="small">
+          <SprkStackItem>
+            <img
+              srcset={pageTitleDont2Set}
+              src={pageTitleDont2}
+              sizes="(min-width: 1120px) 1120px,
+                        (min-width: 1680px) 1680px,
+                        560px"
+              alt="A page layout featuring two primary headings."
+            />
+          </SprkStackItem>
+          <SprkStackItem>
+            <SprkText
+              variant="bodyTwo"
+              additionalClasses="sprk-u-Measure"
+            >
+              To maintain content hierarchy, do not use multiple page titles on one page.
+            </SprkText>
+          </SprkStackItem>
+        </SprkStack>
+      </SprkStackItem>
+    </SprkStack>
+  </SprkStackItem>
+</SprkStack>
 
 ### Display One
 

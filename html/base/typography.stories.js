@@ -124,11 +124,11 @@ displaySeven.story = {
 
 export const bodyOne = () => `
   <p class="sprk-b-TypeBodyOne">Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
-  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
-  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
-  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
-  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur
+  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus
+  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse
+  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
+  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue
   dui eget dui.</p>
 `;
 
@@ -138,11 +138,11 @@ bodyOne.story = {
 
 export const bodyTwo = () => `
   <p class="sprk-b-TypeBodyTwo">Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
-  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
-  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
-  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
-  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur
+  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus
+  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse
+  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
+  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue
   dui eget dui.</p>
 `;
 
@@ -152,11 +152,11 @@ bodyTwo.story = {
 
 export const bodyThree = () => `
   <p class="sprk-b-TypeBodyThree">Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
-  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
-  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
-  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
-  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+  adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur
+  risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus
+  augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse
+  sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
+  ultricies auctor, velit nunc commodo sapien, pharetra maximus augue
   dui eget dui.</p>
 `;
 
@@ -166,11 +166,11 @@ bodyThree.story = {
 
 export const bodyFour = () => `
   <p class="sprk-b-TypeBodyFour">Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur 
-    risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus 
-    augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse 
-    sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu 
-    ultricies auctor, velit nunc commodo sapien, pharetra maximus augue 
+    adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur
+    risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus
+    augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse
+    sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu
+    ultricies auctor, velit nunc commodo sapien, pharetra maximus augue
     dui eget dui.</p>
 `;
 
