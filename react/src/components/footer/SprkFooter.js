@@ -142,10 +142,12 @@ class SprkFooter extends Component {
                   ))}
               </div>
 
-              {Object.keys(connectIcons).length > 1 && (
-                <SprkFooterConnectIcons connectIcons={connectIcons} />
+              {(Object.keys(connectIcons).length > 1 || appStoreLinks) && (
+                <SprkFooterConnectIcons
+                  connectIcons={connectIcons}
+                  appStoreLinks={appStoreLinks}
+                />
               )}
-              {appStoreLinks}
             </div>
           </div>
 
