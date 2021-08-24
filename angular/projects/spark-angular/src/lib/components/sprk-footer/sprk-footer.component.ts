@@ -156,7 +156,7 @@ import {
             </div>
 
             <div
-              *ngIf="socialLinks"
+              *ngIf="socialLinks || appStoreLinksSlot"
               class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Box"
             >
               <h3
@@ -165,9 +165,7 @@ import {
                 {{ connectHeading }}
               </h3>
 
-              <div
-                class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large sprk-o-Stack--split@m"
-              >
+              <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--large">
                 <ul
                   *ngIf="socialLinks"
                   class="
@@ -225,9 +223,9 @@ import {
                     </a>
                   </li>
                 </ul>
+                <ng-content select="[appStoreLinksSlot]"></ng-content>
               </div>
             </div>
-            <ng-content select="[appStoreLinksSlot]"></ng-content>
           </div>
         </div>
         <span

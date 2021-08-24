@@ -268,24 +268,26 @@ export const defaultStory = () => ({
           Sed ut perspiciatis unde omnis iste natus error sit <a href="#nogo" sprkLink class="sprk-b-Link--inline-light"> inline link</a> accusantium doloremque laudantium
         </p>
       </sprk-stack>
-      <div appStoreLinksSlot>
+      <sprk-stack
+        itemSpacing="medium"
+        splitAt="small"
+        appStoreLinksSlot
+      >
+      <div sprkStackItem>
+        <a href="#nogo" sprkLink>
+          <img src="https://spark-assets.netlify.app/apple-store.svg" alt="Go to Apple Store"/>
+        </a>
+      </div>
+      <div sprkStackItem>
+        <a href="#nogo" sprkLink>
+          <img src="https://spark-assets.netlify.app/google-play.svg" alt="Go to Google Play Store"/>
+        </a>
+      </div>
+    </sprk-stack>
+      <div class="sprk-o-Stack__item sprk-o-Stack--split@xxs sprk-o-Stack--medium" appStoreLinksSlot>
         <div sprkStackItem>
-          <sprk-stack
-            itemSpacing='medium'
-            splitAt='tiny'
-            additionalClasses="sprk-u-mlm"
-          >
-            <div sprkStackItem>
-              <a href="#nogo" sprkLink>
-                <img src="https://spark-assets.netlify.app/apple-store.svg" alt="Go to Apple Store"/>
-              </a>
-            </div>
-            <div sprkStackItem>
-              <a href="#nogo" sprkLink>
-                <img src="https://spark-assets.netlify.app/google-play.svg" alt="Go to Google Play Store"/>
-              </a>
-            </div>
-          </sprk-stack>
+        </div>
+        <div sprkStackItem>
         </div>
       </div>
     </sprk-footer>

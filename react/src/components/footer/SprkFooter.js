@@ -149,7 +149,10 @@ class SprkFooter extends Component {
             </div>
           </div>
 
-          <SprkDivider element="span" additionalClasses="sprk-c-Footer__divider" />
+          <SprkDivider
+            element="span"
+            additionalClasses="sprk-c-Footer__divider"
+          />
 
           <div
             className="
@@ -333,7 +336,7 @@ SprkFooter.propTypes = {
       ),
     }),
   ),
-  /** A node for App Store links. . */
+  /** An optional spot to pass in App Store links. */
   appStoreLinks: PropTypes.node,
   /** Constructs the Connect Icon Section. */
   connectIcons: PropTypes.shape({
