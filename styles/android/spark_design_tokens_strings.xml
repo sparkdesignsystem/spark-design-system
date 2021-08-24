@@ -287,17 +287,17 @@
   <string name="sprk_tooltip_text_align">left</string><!-- The text align for the tooltip. -->
   <string name="sprk_tooltip_preferred_width">max-content</string><!-- The preferred width of the tooltip. -->
   <string name="sprk_tooltip_transition">all 200ms ease-out</string><!-- The transition applied to the tooltip. -->
+  <string name="sprk_webfonts">''</string><!-- Expects a Sass List containing one or more nested Sass Lists. The nested lists should each contain: A List of urls to download a font, the name of the font and the weight of the font. -->
+  <string name="sprk_page_title_mark_padding">0 0 24.00dp</string><!-- Amount of padding between the mark and the text on the page title mark. -->
+  <string name="sprk_page_title_mark_padding_wide_viewport">0 0 16.00dp</string><!-- Amount of padding between the mark and the text on a large viewport (using $sprk-typography-breakpoint). -->
+  <string name="sprk_font_weight_display_one">700</string><!-- The weight of the TypeDisplayOne font. -->
+  <string name="sprk_font_weight_display_two">700</string><!-- The weight of the TypeDisplayTwo font. -->
+  <string name="sprk_font_weight_display_four">700</string><!-- The weight of the TypeDisplayFour font. -->
+  <string name="sprk_font_display">swap</string><!-- The supplied value will be set on all generated Font-face calls, as font-display. The default is 'swap.' -->
   <string name="sprk_type_right">right</string><!-- The text align right value. -->
   <string name="sprk_type_crop_none_content">none</string><!-- The content value for the crop none helper class. -->
   <string name="sprk_type_left">left</string><!-- The text align left value. -->
   <string name="sprk_type_center">center</string><!-- The text align center value. -->
-  <string name="sprk_webfonts">''</string><!-- Expects a Sass List containing one or more nested Sass Lists. The nested lists should each contain: A List of urls to download a font, the name of the font and the weight of the font. -->
-  <string name="sprk_page_title_mark_padding">0 0 24.00dp</string><!-- Amount of padding between the mark and the text on the page title mark. -->
-  <string name="sprk_page_title_mark_padding_wide_viewport">0 0 16.00dp</string><!-- Amount of padding between the mark and the text on a large viewport (using $sprk-typography-breakpoint). -->
-  <string name="sprk_font_weight_display_one">bold</string><!-- The weight of the TypeDisplayOne font. -->
-  <string name="sprk_font_weight_display_two">bold</string><!-- The weight of the TypeDisplayTwo font. -->
-  <string name="sprk_font_weight_display_four">bold</string><!-- The weight of the TypeDisplayFour font. -->
-  <string name="sprk_font_display">swap</string><!-- The supplied value will be set on all generated Font-face calls, as font-display. The default is 'swap.' -->
   <string name="sprk_vertical_list_delimiter">',\00A0'</string><!-- The delimiter between delimited items in Vertical List components. -->
   
 </resources>

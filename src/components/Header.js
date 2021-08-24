@@ -51,7 +51,7 @@ const Header = ({ setContext }) => {
     </SprkLink>,
     <SprkInputContainer additionalClasses="docs-header-search--wide sprk-u-mbn">
       <div className="sprk-b-InputContainer__icon-container">
-        <SprkLabel htmlFor="inline-search" isHidden>
+        <SprkLabel htmlFor="inline-search-wide" isHidden>
           Search
         </SprkLabel>
         <SprkIcon
@@ -60,7 +60,7 @@ const Header = ({ setContext }) => {
           aria-hidden="true"
         />
         <SprkInput
-          id="inline-search"
+          id="inline-search-wide"
           additionalClasses="sprk-b-TextInput--has-svg-icon"
           type="search"
           placeholder="Search"
