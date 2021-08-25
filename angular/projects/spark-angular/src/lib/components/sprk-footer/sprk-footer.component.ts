@@ -223,7 +223,7 @@ import {
                     </a>
                   </li>
                 </ul>
-                <ng-content select="[appStoreLinksSlot]"></ng-content>
+                <ng-content select="[app-slot]"></ng-content>
               </div>
             </div>
           </div>
