@@ -36,6 +36,7 @@ class SprkFooter extends Component {
       paragraphs,
       additionalIcons,
       additionalDisclaimer,
+      appStoreLinks,
     } = this.props;
 
     const {
@@ -141,13 +142,19 @@ class SprkFooter extends Component {
                   ))}
               </div>
 
-              {Object.keys(connectIcons).length > 1 && (
-                <SprkFooterConnectIcons connectIcons={connectIcons} />
+              {(Object.keys(connectIcons).length > 1 || appStoreLinks) && (
+                <SprkFooterConnectIcons
+                  connectIcons={connectIcons}
+                  appStoreLinks={appStoreLinks}
+                />
               )}
             </div>
           </div>
 
-          <SprkDivider element="span" additionalClasses="sprk-c-Footer__divider" />
+          <SprkDivider
+            element="span"
+            additionalClasses="sprk-c-Footer__divider"
+          />
 
           <div
             className="
@@ -331,6 +338,8 @@ SprkFooter.propTypes = {
       ),
     }),
   ),
+  /** An optional spot to pass in App Store links. */
+  appStoreLinks: PropTypes.node,
   /** Constructs the Connect Icon Section. */
   connectIcons: PropTypes.shape({
     /** The main headline for the section. */

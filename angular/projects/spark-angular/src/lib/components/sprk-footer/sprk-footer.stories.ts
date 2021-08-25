@@ -268,6 +268,22 @@ export const defaultStory = () => ({
           Sed ut perspiciatis unde omnis iste natus error sit <a href="#nogo" sprkLink class="sprk-b-Link--inline-light"> inline link</a> accusantium doloremque laudantium
         </p>
       </sprk-stack>
+      <sprk-stack
+        itemSpacing="medium"
+        splitAt="small"
+        appStoreLinksSlot
+      >
+        <div sprkStackItem>
+          <a href="#nogo" sprkLink>
+            <img src="https://spark-assets.netlify.app/apple-store.svg" alt="Go to Apple Store"/>
+          </a>
+        </div>
+        <div sprkStackItem>
+          <a href="#nogo" sprkLink>
+            <img src="https://spark-assets.netlify.app/google-play.svg" alt="Go to Google Play Store"/>
+          </a>
+        </div>
+      </sprk-stack>
     </sprk-footer>
   `,
 });

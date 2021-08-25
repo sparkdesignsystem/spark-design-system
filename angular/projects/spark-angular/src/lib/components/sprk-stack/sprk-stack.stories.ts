@@ -60,8 +60,8 @@ defaultStory.parameters = {
 export const stackSplit = () => ({
   template: `
     <sprk-stack
-      itemSpacing='medium'
-      splitAt='small'
+      itemSpacing="medium"
+      splitAt="small"
     >
       <div sprkStackItem>Item One</div>
       <div sprkStackItem>Item Two</div>
@@ -77,14 +77,14 @@ defaultStory.parameters = {
 
 export const stackSplitTwoCol = () => ({
   template: `
-    <sprk-stack splitAt='tiny'>
+    <sprk-stack splitAt="tiny">
       <div
         sprkStackItem
-        class='sprk-o-Stack__item--half@xs'
+        class="sprk-o-Stack__item--half@xs"
       ></div>
       <div
         sprkStackItem
-        class='sprk-o-Stack__item--half@xs'
+        class="sprk-o-Stack__item--half@xs"
       ></div>
     </sprk-stack>
   `,
@@ -98,10 +98,10 @@ stackSplitTwoCol.parameters = {
 
 export const stackSplitTwoColWithPadding = () => ({
   template: `
-    <sprk-stack splitAt='tiny'>
+    <sprk-stack splitAt="tiny">
       <div
         sprkStackItem
-        class='sprk-o-Stack__item--half@xs sprk-o-Box'
+        class="sprk-o-Stack__item--half@xs sprk-o-Box"
       >
         <p sprkText variant="bodyTwo">
           Example paragraph text inside item 1.
@@ -109,7 +109,7 @@ export const stackSplitTwoColWithPadding = () => ({
       </div>
       <div
         sprkStackItem
-        class='sprk-o-Stack__item--half@xs sprk-o-Box'
+        class="sprk-o-Stack__item--half@xs sprk-o-Box"
       >
         <p sprkText variant="bodyTwo">
           Example paragraph text inside item 2.
