@@ -52,26 +52,33 @@
 // Status links hover colors
 .docs-status__link--ready {
     color: $sprk-green;
-}
-.docs-status__link--ready:hover {
-    color: $sprk-green;
-    border-bottom: 2px solid $sprk-green;
-}
-.docs-status__link--updated {
-    color: $sprk-blue;
-}
-.docs-status__link--updated:hover {
-    color: $sprk-blue;
-    border-bottom: 2px solid $sprk-blue;
-}
-.docs-status__link--under-review {
-    color: #b36525;
-}
-.docs-status__link--under-review:hover {
-    color: #b36525;
-    border-bottom: 2px solid #B46417;
+
+    &:hover,
+    &:focus {
+        color: $sprk-green;
+        border-bottom: 2px solid $sprk-green;
+    }
 }
 
+.docs-status__link--updated {
+    color: $sprk-blue;
+
+    &:hover,
+    &:focus {
+        color: $sprk-blue;
+        border-bottom: 2px solid $sprk-blue;
+    }
+}
+
+.docs-status__link--under-review {
+    color: #b36525;
+
+    &:hover,
+    &:focus {
+        color: #b36525;
+        border-bottom: 2px solid #B46417;
+    }
+}
 
 // Status custom text colors
 .docs-status-text__under-review {

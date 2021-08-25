@@ -39,6 +39,7 @@ const Status = ({
         <div>
             <SprkIcon className={classNames}
                 iconName={getIconName()}
+                aria-hidden="true"
             />
             {getLink()}
         </div>
