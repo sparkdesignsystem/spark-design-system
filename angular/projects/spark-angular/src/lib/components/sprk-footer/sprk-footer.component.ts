@@ -299,6 +299,8 @@ import {
               </div>
             </div>
 
+            <ng-content select="[additional-award-slot]"></ng-content>
+
             <div
               *ngFor="let toggle of disclaimerToggle"
               class="sprk-o-Stack__item"

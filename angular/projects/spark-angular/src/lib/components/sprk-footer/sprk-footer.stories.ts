@@ -284,6 +284,18 @@ export const defaultStory = () => ({
           </a>
         </div>
       </sprk-stack>
+      <div
+        additional-award-slot
+        sprkStackItem
+      >
+        <p
+          sprkText
+          variant="bodyFour"
+          class="sprk-c-Footer__text"
+        >
+          Sed ut perspiciatis unde omnis iste natus error sit <a href="#nogo" sprkLink class="sprk-b-Link--inline-light"> inline link</a> accusantium doloremque laudantium
+        </p>
+      </div>
     </sprk-footer>
   `,
 });
