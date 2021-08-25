@@ -110,6 +110,24 @@ export const defaultStory = () => {
                 search the latest home listings
               </p>
             </div>
+
+            <div class="sprk-o-Stack__item sprk-o-Stack sprk-o-Stack--medium">
+              <div class="sprk-o-Stack__item">
+                <a class="sprk-b-Link sprk-b-Link--plain" href="https://rocketauto.com">
+                  <img src="https://spark-assets.netlify.app/rocket_auto.svg" alt="Rocket Auto Logo">
+                </a>
+              </div>
+
+              <p
+                class="
+                  sprk-o-Stack__item
+                  sprk-b-TypeBodyFour
+                  sprk-c-Footer__text
+              ">
+                Find and buy the perfect car or truck from
+                thousands of vehicles, all in one marketplace
+              </p>
+            </div>
           </div>
 
           <div
