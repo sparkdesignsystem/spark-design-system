@@ -36,6 +36,7 @@
 }
 
 .docs-status__low-priority {
+    color: #487130;
     stroke: #86BC3D;
     fill: #86BC3D;
     margin-right: 4px;
@@ -99,7 +100,7 @@
 
 
 // Status custom colors
-.docs-status__lightGreen {
+.docs-status__text--low-priority {
     color: #487130;
 }
 

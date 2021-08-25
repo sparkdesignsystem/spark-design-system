@@ -4,143 +4,105 @@ import {
   SprkIcon,
   SprkTooltip
 } from '@sparkdesignsystem/spark-react';
+import classnames from 'classnames';
 
 const Status = ({
     statusName,
     href,
     additionalInfo
 }) => {
-    if (statusName === "ready") {
-        return (
-            <div>
-                <SprkIcon className="
-                    docs-status__ready 
-                    sprk-c-Icon--filled
-                    sprk-c-Icon--l"
-                    iconName="check-mark-filled"
-                />
-                <SprkLink
-                    element="a"
-                    href={href}
-                    variant="simple"
-                    additionalClasses="sprk-u-Color--green docs-status__link--ready"
-                >
-                    Ready
-                </SprkLink> 
-            </div>
-        );
-    } else if (statusName === "underReview") {
-        return (
-            <div>
-                <SprkIcon className="
-                    docs-status__under-review
-                    sprk-c-Icon--filled
-                    sprk-c-Icon--l"
-                    iconName="caution-filled"
-                />
-                <SprkLink
-                    element="a"
-                    href={href}
-                    variant="simple"
-                    additionalClasses="docs-status-text__Orange docs-status__link--under-review"
-                >
-                    Under Review
-                </SprkLink>
-                <SprkTooltip iconAdditionalClasses="docs-status__tooltip docs-status__tooltip--under-review">
-                    {additionalInfo}
-                    
-                </SprkTooltip>
-            </div>
-        );
-    } else if (statusName === "updated") {
-        return (
-            <div>
-                <SprkIcon className="
-                    docs-status__updated
-                    sprk-c-Icon--filled
-                    sprk-c-Icon--l"
-                    iconName="recurring-update"
-                />
-                <SprkLink
-                    element="a"
-                    href={href}
-                    variant="simple"
-                    additionalClasses="sprk-u-Color--blue docs-status__link--updated"
-                >
-                    Updated
-                </SprkLink>
-                <SprkTooltip iconAdditionalClasses="docs-status__tooltip docs-status__tooltip--updated">
-                    {additionalInfo}
-                    
-                </SprkTooltip>
-            </div>
-        );
-    } else if (statusName === "research") {
-        return (
-            <div>
-                <SprkIcon className="
-                    docs-status__research 
-                    sprk-c-Icon--filled
-                    sprk-c-Icon--l"
-                    iconName="search"
-                />
-                Research
-            </div>
-        );
-    } else if (statusName === "build") {
-        return (
-            <div>
-                <SprkIcon className="
-                    docs-status__build 
-                    sprk-c-Icon--filled
-                    sprk-c-Icon--l"
-                    iconName="settings-filled"
-                />
-                Build   
-            </div>
-        );
-    } else if (statusName === "lowPriority") {
-        return (
-            <div class="docs-status__lightGreen">
-                <SprkIcon className="
-                    docs-status__low-priority 
-                    sprk-c-Icon--filled
-                    sprk-c-Icon--l"
-                    iconName="application-filled"
-                />
-                Low Priority
-            </div>
-        );
-    } else if (statusName === "highPriority") {
-        return (
-            <div class="sprk-u-Color--red">
-                <SprkIcon className="
-                    docs-status__high-priority 
-                    sprk-c-Icon--filled
-                    sprk-c-Icon--l"
-                    iconName="application-filled"
-                />
-                High Priority
-            </div>
-        );
-    } else if (statusName === "new") {
-        return (
-            <div class="sprk-u-Color--purple">
-                <SprkIcon className="
-                    docs-status__new 
-                    sprk-c-Icon--filled
-                    sprk-c-Icon--l"
-                    iconName="vip-filled"
-                />
-                New
-            </div>
-        );
-    }
+    
+    const classNames = classnames(`sprk-c-Icon--filled
+    sprk-c-Icon--l`, {
+        'docs-status__ready': statusName === 'ready',
+        'docs-status__under-review': statusName === 'underReview',
+        'docs-status__updated': statusName === 'updated',
+        'docs-status__research': statusName === 'research',
+        'docs-status__build': statusName === 'build',
+        'docs-status__low-priority': statusName === 'lowPriority',
+        'docs-status__high-priority': statusName === 'highPriority',
+        'docs-status__new': statusName === 'new',
+    });
+
     return (
         <div>
-            Awaiting Info
+            <SprkIcon className={classNames}
+                iconName={getIconName()}
+            />
+            {getLink()}
         </div>
     );
+
+    function getIconName() {
+        if (statusName === 'ready'){
+            return "check-mark-filled";
+        } 
+        if (statusName === 'underReview') {
+            return "caution-filled";
+        }
+        if (statusName === 'updated') {
+            return "recurring-update";
+        }
+        if (statusName === 'research') {
+            return "search";
+        }
+        if (statusName === 'build') {
+            return "settings-filled";
+        }
+        if (statusName === 'lowPriority') {
+            return "application-filled";
+        }
+        if (statusName === 'highPriority') {
+            return "application-filled";
+        }
+        if (statusName === 'new') {
+            return "vip-filled";
+        }
+    }
+
+    function getStatusText() {
+        if (statusName === 'ready'){
+            return "Ready";
+        } 
+        if (statusName === 'underReview') {
+            return "Under Review";
+        }
+        if (statusName === 'updated') {
+            return "Updated";
+        }
+        if (statusName === 'research') {
+            return "Research";
+        }
+        if (statusName === 'build') {
+            return "Build";
+        }
+        if (statusName === 'lowPriority') {
+            return "Low Priority";
+        }
+        if (statusName === 'highPriority') {
+            return "High Priority";
+        }
+        if (statusName === 'new') {
+            return "New";
+        }
+    }
+
+    function getLink() {
+        if (statusName === 'ready' || statusName === 'underReview' || statusName === 'updated') {
+            return <SprkLink
+                element="a"
+                href={href}
+                variant="simple"
+                additionalClasses="sprk-u-Color--green docs-status__link--ready"
+            >
+                {getStatusText()}
+            </SprkLink> ;
+        }
+        return getStatusText();
+    }
+    
 };
+
+
 
 export default Status;
