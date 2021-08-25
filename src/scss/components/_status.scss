@@ -50,18 +50,40 @@
 
 
 // Status links hover colors
+.docs-status__link--ready {
+    color: $sprk-green;
+}
 .docs-status__link--ready:hover {
+    color: $sprk-green;
     border-bottom: 2px solid $sprk-green;
 }
+.docs-status__link--updated {
+    color: $sprk-blue;
+}
 .docs-status__link--updated:hover {
+    color: $sprk-blue;
     border-bottom: 2px solid $sprk-blue;
 }
+.docs-status__link--under-review {
+    color: #b36525;
+}
 .docs-status__link--under-review:hover {
+    color: #b36525;
     border-bottom: 2px solid #B46417;
 }
 
 
-// Status additional info question mark styles
+// Status custom text colors
+.docs-status-text__under-review {
+    color: #b36525;
+}
+
+.docs-status__text--low-priority {
+    color: #487130;
+}
+
+
+// Status additional info tooltip styles
 .docs-status__tooltip {
     height: $sprk-icon-m;
     width: $sprk-icon-m;
@@ -96,24 +118,6 @@
 
 .docs-status__table--position-relative {
     position: relative;
-}
-
-
-// Status custom colors
-.docs-status__text--low-priority {
-    color: #487130;
-}
-
-.docs-status__Orange {
-    color: #d2752b;
-}
-
-.docs-status-text__Orange {
-    color: #b36525;
-}
-
-.docs-status-text__Orange:hover {
-    color: #b36525;
 }
 
 .docs-status__Toggle--red {

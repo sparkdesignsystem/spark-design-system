@@ -24,6 +24,17 @@ const Status = ({
         'docs-status__new': statusName === 'new',
     });
 
+    const textColor = classnames({
+        'docs-status__link--ready': statusName === 'ready',
+        'docs-status__link--under-review': statusName === 'underReview',
+        'docs-status__link--updated': statusName === 'updated',
+        'docs-status__research': statusName === 'research',
+        'docs-status__build': statusName === 'build',
+        'docs-status__text--low-priority': statusName === 'lowPriority',
+        'sprk-u-Color--red': statusName === 'highPriority',
+        'sprk-u-Color--purple': statusName === 'new'
+    });
+
     return (
         <div>
             <SprkIcon className={classNames}
@@ -93,16 +104,14 @@ const Status = ({
                 element="a"
                 href={href}
                 variant="simple"
-                additionalClasses="sprk-u-Color--green docs-status__link--ready"
+                additionalClasses={textColor}
             >
                 {getStatusText()}
             </SprkLink> ;
         }
-        return getStatusText();
+        return <span class={textColor}>{getStatusText()}</span>
+        
     }
-    
 };
-
-
 
 export default Status;
