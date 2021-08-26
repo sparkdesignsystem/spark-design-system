@@ -840,7 +840,7 @@ public class SparkDesignTokens {
     public static let sprkTooltipFontWeight = 300
     public static let sprkTooltipPadding = CGFloat(8.00)
     public static let sprkTooltipToggledIconBackgroundColor = UIColor(red: 0.376, green: 0.227, blue: 0.631, alpha:1)
-    public static let sprkTooltipZIndex = CGFloat(16.00)
+    public static let sprkTooltipZIndex = CGFloat(16000.00)
     public static let sprkUsingWebfonts = false
     public static let sprkVisibilityControlLabelFontSize = CGFloat(14.00)
 }
