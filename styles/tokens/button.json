@@ -73,7 +73,7 @@
       },
       "size": {
         "comment": "The font size of the Button component.",
-        "value": "inherit",
+        "value": "1rem",
         "attributes": {
           "category": "font"
         },
@@ -82,7 +82,7 @@
       },
       "family": {
         "comment": "The font family of the Button component.",
-        "value": "inherit",
+        "value": "RocketSansMedium, Helvetica, 'Helvetica Neue', Arial, sans-serif",
         "attributes": {
           "category": "font"
         },
