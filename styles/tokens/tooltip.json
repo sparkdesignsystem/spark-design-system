@@ -132,7 +132,7 @@
       },
       "z-index": {
         "comment": "The z-index of the tooltip.",
-        "value": "{layer.height.xs.value}",
+        "value": "{layer.height.s.value}",
         "file": "settings",
         "themable": true
       },
