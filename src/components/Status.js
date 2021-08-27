@@ -37,10 +37,8 @@ const Status = ({
 
     return (
         <div>
-            <SprkIcon className={classNames}
-                iconName={getIconName()}
-                aria-hidden="true"
-            />
+            
+            {getIcon()}
             {getLink()}
         </div>
     );
@@ -70,6 +68,23 @@ const Status = ({
         if (statusName === 'new') {
             return "vip-filled";
         }
+    }
+
+    function getIcon() {
+        if (statusName === 'ready' || statusName === 'underReview' || statusName === 'updated') {
+            return <SprkLink
+                analyticsString="link-icon"
+                href={href}
+                variant="hasIcon"
+            >
+                <SprkIcon className={classNames}
+                    iconName={getIconName()}
+                />
+            </SprkLink>
+        }
+        return <SprkIcon className={classNames}
+            iconName={getIconName()}
+        />    
     }
 
     function getStatusText() {
