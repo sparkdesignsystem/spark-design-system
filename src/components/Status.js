@@ -79,11 +79,13 @@ const Status = ({
             >
                 <SprkIcon className={classNames}
                     iconName={getIconName()}
+                    aria-hidden="true"
                 />
             </SprkLink>
         }
         return <SprkIcon className={classNames}
             iconName={getIconName()}
+            aria-hidden="true"
         />    
     }
 
