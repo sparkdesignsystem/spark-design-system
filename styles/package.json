@@ -1,6 +1,6 @@
 {
   "name": "@sparkdesignsystem/spark-styles",
-  "version": "4.0.0-alpha.1",
+  "version": "4.0.0",
   "description": "Styles for Spark Design System.",
   "main": "web/settings.js",
   "scripts": {
